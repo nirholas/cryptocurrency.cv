@@ -2,8 +2,16 @@
 /**
  * Free Crypto News MCP Server
  * 
- * Use with Claude Desktop or any MCP-compatible client.
+ * Supports multiple transports:
+ * - stdio: For Claude Desktop and local MCP clients
+ * - http: For ChatGPT Developer Mode and remote clients
+ * 
  * 100% FREE - no API keys required!
+ * 
+ * Usage:
+ *   node index.js              # stdio mode (default, for Claude Desktop)
+ *   node index.js --http       # HTTP/SSE mode (for ChatGPT Developer Mode)
+ *   node http-server.js        # HTTP-only server
  */
 
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
@@ -13,7 +21,8 @@ import {
   ListToolsRequestSchema,
 } from '@modelcontextprotocol/sdk/types.js';
 
-const API_BASE = 'https://free-crypto-news.vercel.app';
+const API_BASE = process.env.API_BASE || 'https://free-crypto-news.vercel.app';
+const TRANSPORT_MODE = process.argv.includes('--http') ? 'http' : 'stdio';
 
 // Create server
 const server = new Server(
@@ -28,11 +37,11 @@ const server = new Server(
   }
 );
 
-// Define tools
+// Define tools with readOnlyHint annotations for ChatGPT compatibility
 const tools = [
   {
     name: 'get_crypto_news',
-    description: 'Get latest crypto news from 7 major sources (CoinDesk, The Block, Decrypt, CoinTelegraph, Bitcoin Magazine, Blockworks, The Defiant)',
+    description: 'Get latest crypto news from 7 major sources (CoinDesk, The Block, Decrypt, CoinTelegraph, Bitcoin Magazine, Blockworks, The Defiant). Use this when the user wants general crypto news or headlines.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -47,16 +56,19 @@ const tools = [
         },
       },
     },
+    annotations: {
+      readOnlyHint: true,
+    },
   },
   {
     name: 'search_crypto_news',
-    description: 'Search crypto news by keywords across all sources',
+    description: 'Search crypto news by keywords across all sources. Use this when the user wants to find news about a specific topic, coin, or event.',
     inputSchema: {
       type: 'object',
       properties: {
         keywords: {
           type: 'string',
-          description: 'Comma-separated keywords to search for',
+          description: 'Comma-separated keywords to search for (e.g., "ethereum,ETF" or "SEC,regulation")',
         },
         limit: {
           type: 'number',
@@ -66,10 +78,13 @@ const tools = [
       },
       required: ['keywords'],
     },
+    annotations: {
+      readOnlyHint: true,
+    },
   },
   {
     name: 'get_defi_news',
-    description: 'Get DeFi-specific news (yield farming, DEXs, lending, protocols)',
+    description: 'Get DeFi-specific news (yield farming, DEXs, lending, protocols). Use this when the user asks about DeFi, decentralized finance, or specific DeFi protocols.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -79,11 +94,14 @@ const tools = [
           default: 10,
         },
       },
+    },
+    annotations: {
+      readOnlyHint: true,
     },
   },
   {
     name: 'get_bitcoin_news',
-    description: 'Get Bitcoin-specific news (BTC, Lightning Network, miners, ordinals)',
+    description: 'Get Bitcoin-specific news (BTC, Lightning Network, miners, ordinals). Use this when the user specifically asks about Bitcoin or BTC.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -94,10 +112,13 @@ const tools = [
         },
       },
     },
+    annotations: {
+      readOnlyHint: true,
+    },
   },
   {
     name: 'get_breaking_news',
-    description: 'Get breaking crypto news from the last 2 hours',
+    description: 'Get breaking crypto news from the last 2 hours. Use this when the user wants the most recent, urgent, or breaking news.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -108,26 +129,35 @@ const tools = [
         },
       },
     },
+    annotations: {
+      readOnlyHint: true,
+    },
   },
   {
     name: 'get_news_sources',
-    description: 'Get list of all available crypto news sources with their details',
+    description: 'Get list of all available crypto news sources with their details. Use this when the user asks what sources are available.',
     inputSchema: {
       type: 'object',
       properties: {},
+    },
+    annotations: {
+      readOnlyHint: true,
     },
   },
   {
     name: 'get_api_health',
-    description: 'Check the health status of the API and all RSS feed sources',
+    description: 'Check the health status of the API and all RSS feed sources. Use this for debugging or status checks.',
     inputSchema: {
       type: 'object',
       properties: {},
     },
+    annotations: {
+      readOnlyHint: true,
+    },
   },
   {
     name: 'get_trending_topics',
-    description: 'Get trending crypto topics with sentiment analysis (bullish/bearish/neutral)',
+    description: 'Get trending crypto topics with sentiment analysis (bullish/bearish/neutral). Use this when the user asks about trends or market sentiment.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -143,18 +173,24 @@ const tools = [
         },
       },
     },
+    annotations: {
+      readOnlyHint: true,
+    },
   },
   {
     name: 'get_crypto_stats',
-    description: 'Get analytics: articles per source, hourly distribution, category breakdown',
+    description: 'Get analytics: articles per source, hourly distribution, category breakdown. Use this when the user asks about news statistics.',
     inputSchema: {
       type: 'object',
       properties: {},
     },
+    annotations: {
+      readOnlyHint: true,
+    },
   },
   {
     name: 'analyze_news',
-    description: 'Get news with topic classification and sentiment analysis. Filter by topic or sentiment.',
+    description: 'Get news with topic classification and sentiment analysis. Filter by topic or sentiment. Use this when the user wants sentiment analysis.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -174,10 +210,13 @@ const tools = [
         },
       },
     },
+    annotations: {
+      readOnlyHint: true,
+    },
   },
   {
     name: 'get_archive',
-    description: 'Query historical crypto news archive. Search by date range, source, or keywords.',
+    description: 'Query historical crypto news archive. Search by date range, source, or keywords. Use this when the user asks about past news.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -204,18 +243,24 @@ const tools = [
         },
       },
     },
+    annotations: {
+      readOnlyHint: true,
+    },
   },
   {
     name: 'get_archive_stats',
-    description: 'Get statistics about the historical news archive',
+    description: 'Get statistics about the historical news archive. Use this when the user asks about available historical data.',
     inputSchema: {
       type: 'object',
       properties: {},
     },
+    annotations: {
+      readOnlyHint: true,
+    },
   },
   {
     name: 'find_original_sources',
-    description: 'Find the original sources of crypto news (who published it first before aggregators picked it up). Identifies if news came from official company announcements, government agencies, social media, or research firms.',
+    description: 'Find the original sources of crypto news (who published it first before aggregators picked it up). Identifies if news came from official company announcements, government agencies, social media, or research firms. Use this when the user wants to trace news origins.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -235,10 +280,13 @@ const tools = [
         },
       },
     },
+    annotations: {
+      readOnlyHint: true,
+    },
   },
   {
     name: 'get_portfolio_news',
-    description: 'Get news for specific cryptocurrencies in your portfolio, with optional price data from CoinGecko. Supports 40+ coins including BTC, ETH, SOL, ADA, XRP, DOGE, MATIC, AVAX, LINK, UNI, etc.',
+    description: 'Get news for specific cryptocurrencies with optional price data from CoinGecko. Supports 40+ coins including BTC, ETH, SOL, ADA, XRP, DOGE, etc. Use this when the user mentions specific coins.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -258,6 +306,9 @@ const tools = [
         },
       },
       required: ['coins'],
+    },
+    annotations: {
+      readOnlyHint: true,
     },
   },
 ];

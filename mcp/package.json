@@ -1,16 +1,19 @@
 {
   "name": "@nicholasrq/free-crypto-news-mcp",
   "version": "1.0.0",
-  "description": "MCP server for free crypto news - use with Claude Desktop",
+  "description": "MCP server for free crypto news - use with Claude Desktop or ChatGPT Developer Mode",
   "main": "index.js",
   "type": "module",
   "bin": {
     "free-crypto-news-mcp": "./index.js"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "start:http": "node http-server.js",
+    "start:stdio": "node index.js",
+    "dev": "node http-server.js"
   },
-  "keywords": ["mcp", "crypto", "news", "claude", "ai"],
+  "keywords": ["mcp", "crypto", "news", "claude", "chatgpt", "ai", "developer-mode"],
   "author": "nirholas",
   "license": "MIT",
   "dependencies": {
