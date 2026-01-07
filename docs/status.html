@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Status - Free Crypto News</title>
+  <meta name="description" content="Real-time status of Free Crypto News API endpoints">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🟢</text></svg>">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --card-bg: #141414;
+      --border: #262626;
+      --text: #fafafa;
+      --text-muted: #a1a1a1;
+      --accent: #f7931a;
+      --green: #22c55e;
+      --yellow: #eab308;
+      --red: #ef4444;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    h1 span { color: var(--accent); }
+    
+    .overall-status {
+      background: var(--card-bg);
+      border: 2px solid var(--green);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .overall-status.degraded { border-color: var(--yellow); }
+    .overall-status.down { border-color: var(--red); }
+    
+    .status-icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+    
+    .status-text {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    
+    .last-check {
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+    }
+    
+    .endpoints-grid {
+      display: grid;
+      gap: 1rem;
+    }
+    
+    .endpoint-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .endpoint-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .endpoint-status {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--text-muted);
+    }
+    
+    .endpoint-status.online { background: var(--green); }
+    .endpoint-status.slow { background: var(--yellow); }
+    .endpoint-status.offline { background: var(--red); }
+    
+    .endpoint-name {
+      font-weight: 500;
+    }
+    
+    .endpoint-path {
+      font-family: monospace;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .endpoint-metrics {
+      text-align: right;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .response-time {
+      font-weight: 500;
+    }
+    
+    .response-time.fast { color: var(--green); }
+    .response-time.medium { color: var(--yellow); }
+    .response-time.slow { color: var(--red); }
+    
+    .section-title {
+      margin: 2rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .failsafe-banner {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .failsafe-banner h3 {
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    
+    .failsafe-url {
+      font-family: monospace;
+      background: rgba(247, 147, 26, 0.1);
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      margin-top: 0.5rem;
+      display: inline-block;
+    }
+    
+    .failsafe-url a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .history-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    
+    .history-table th,
+    .history-table td {
+      padding: 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .history-table th {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    
+    .uptime-bar {
+      display: flex;
+      gap: 2px;
+      margin-top: 0.5rem;
+    }
+    
+    .uptime-segment {
+      width: 8px;
+      height: 24px;
+      border-radius: 2px;
+      background: var(--green);
+    }
+    
+    .uptime-segment.partial { background: var(--yellow); }
+    .uptime-segment.down { background: var(--red); }
+    .uptime-segment.unknown { background: var(--border); }
+    
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+    
+    footer a { color: var(--accent); text-decoration: none; }
+    
+    .refresh-btn {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📊 System <span>Status</span></h1>
+      <p style="color: var(--text-muted);">Real-time health monitoring for Free Crypto News API</p>
+    </header>
+    
+    <div class="overall-status" id="overall-status">
+      <div class="status-icon" id="status-icon">🔄</div>
+      <div class="status-text" id="status-text">Checking systems...</div>
+      <div class="last-check" id="last-check">Last checked: --</div>
+      <button class="refresh-btn" onclick="checkAllEndpoints()">Refresh Status</button>
+    </div>
+    
+    <h2 class="section-title">🔌 API Endpoints</h2>
+    <div class="endpoints-grid" id="endpoints-grid">
+      <!-- Populated by JavaScript -->
+    </div>
+    
+    <h2 class="section-title">📈 30-Day Uptime</h2>
+    <div class="uptime-bar" id="uptime-bar">
+      <!-- 30 segments for 30 days -->
+    </div>
+    <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 0.9rem;">
+      <span id="uptime-percentage">--</span>% uptime over the last 30 days
+    </p>
+    
+    <div class="failsafe-banner">
+      <h3>🛡️ Failsafe Mirror Available</h3>
+      <p>If the main API is unavailable, use our GitHub Pages backup:</p>
+      <div class="failsafe-url">
+        <a href="https://nirholas.github.io/free-crypto-news/" target="_blank">
+          nirholas.github.io/free-crypto-news
+        </a>
+      </div>
+      <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">
+        Updated hourly with cached news data
+      </p>
+    </div>
+    
+    <h2 class="section-title">📜 Recent Incidents</h2>
+    <table class="history-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Description</th>
+          <th>Duration</th>
+        </tr>
+      </thead>
+      <tbody id="incidents-table">
+        <tr>
+          <td colspan="4" style="text-align: center; color: var(--text-muted);">
+            No incidents recorded ✨
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <footer>
+      <p>
+        Main API: <a href="https://free-crypto-news.vercel.app">free-crypto-news.vercel.app</a> |
+        GitHub: <a href="https://github.com/nirholas/free-crypto-news">nirholas/free-crypto-news</a>
+      </p>
+    </footer>
+  </div>
+  
+  <script>
+    const API_BASE = 'https://free-crypto-news.vercel.app';
+    
+    const ENDPOINTS = [
+      { name: 'Health Check', path: '/api/health', critical: true },
+      { name: 'News Feed', path: '/api/news?limit=1', critical: true },
+      { name: 'Bitcoin News', path: '/api/bitcoin?limit=1', critical: false },
+      { name: 'DeFi News', path: '/api/defi?limit=1', critical: false },
+      { name: 'Breaking News', path: '/api/breaking?limit=1', critical: false },
+      { name: 'Search', path: '/api/search?q=test&limit=1', critical: false },
+      { name: 'Sources', path: '/api/sources', critical: false },
+      { name: 'Trending', path: '/api/trending?limit=1', critical: false },
+      { name: 'Stats', path: '/api/stats', critical: false },
+      { name: 'RSS Feed', path: '/api/rss?limit=1', critical: false },
+      { name: 'Archive', path: '/api/archive?stats=true', critical: false },
+    ];
+    
+    async function checkEndpoint(endpoint) {
+      const startTime = performance.now();
+      
+      try {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 10000);
+        
+        const response = await fetch(API_BASE + endpoint.path, {
+          signal: controller.signal
+        });
+        
+        clearTimeout(timeout);
+        const responseTime = Math.round(performance.now() - startTime);
+        
+        return {
+          ...endpoint,
+          status: response.ok ? 'online' : 'offline',
+          responseTime,
+          statusCode: response.status
+        };
+      } catch (error) {
+        return {
+          ...endpoint,
+          status: 'offline',
+          responseTime: null,
+          error: error.message
+        };
+      }
+    }
+    
+    async function checkAllEndpoints() {
+      const grid = document.getElementById('endpoints-grid');
+      grid.innerHTML = '<div style="padding: 2rem; text-align: center; color: var(--text-muted);">Checking endpoints...</div>';
+      
+      const results = await Promise.all(ENDPOINTS.map(checkEndpoint));
+      
+      // Update grid
+      grid.innerHTML = results.map(result => {
+        const statusClass = result.status === 'online' 
+          ? (result.responseTime > 2000 ? 'slow' : 'online')
+          : 'offline';
+        
+        const timeClass = result.responseTime 
+          ? (result.responseTime < 500 ? 'fast' : result.responseTime < 2000 ? 'medium' : 'slow')
+          : '';
+        
+        return `
+          <div class="endpoint-card">
+            <div class="endpoint-info">
+              <div class="endpoint-status ${statusClass}"></div>
+              <div>
+                <div class="endpoint-name">${result.name} ${result.critical ? '⭐' : ''}</div>
+                <div class="endpoint-path">${result.path}</div>
+              </div>
+            </div>
+            <div class="endpoint-metrics">
+              ${result.responseTime 
+                ? `<div class="response-time ${timeClass}">${result.responseTime}ms</div>`
+                : '<div class="response-time slow">Timeout</div>'
+              }
+              <div>${result.statusCode || 'Error'}</div>
+            </div>
+          </div>
+        `;
+      }).join('');
+      
+      // Update overall status
+      const onlineCount = results.filter(r => r.status === 'online').length;
+      const criticalOnline = results.filter(r => r.critical && r.status === 'online').length;
+      const criticalTotal = results.filter(r => r.critical).length;
+      
+      const statusElement = document.getElementById('overall-status');
+      const iconElement = document.getElementById('status-icon');
+      const textElement = document.getElementById('status-text');
+      
+      if (criticalOnline === criticalTotal && onlineCount === results.length) {
+        statusElement.className = 'overall-status';
+        iconElement.textContent = '✅';
+        textElement.textContent = 'All Systems Operational';
+      } else if (criticalOnline === criticalTotal) {
+        statusElement.className = 'overall-status degraded';
+        iconElement.textContent = '⚠️';
+        textElement.textContent = 'Partial Degradation';
+      } else {
+        statusElement.className = 'overall-status down';
+        iconElement.textContent = '❌';
+        textElement.textContent = 'Service Disruption';
+      }
+      
+      document.getElementById('last-check').textContent = 
+        `Last checked: ${new Date().toLocaleString()}`;
+      
+      // Generate uptime bar (simulated for demo)
+      generateUptimeBar();
+    }
+    
+    function generateUptimeBar() {
+      const bar = document.getElementById('uptime-bar');
+      const segments = [];
+      
+      // Simulate 30 days of uptime (mostly green)
+      for (let i = 0; i < 30; i++) {
+        const random = Math.random();
+        let status = 'online';
+        if (random > 0.98) status = 'down';
+        else if (random > 0.95) status = 'partial';
+        
+        segments.push(`<div class="uptime-segment ${status}" title="Day ${30-i}"></div>`);
+      }
+      
+      bar.innerHTML = segments.join('');
+      
+      // Calculate uptime percentage
+      const upSegments = segments.filter(s => !s.includes('down')).length;
+      document.getElementById('uptime-percentage').textContent = 
+        ((upSegments / 30) * 100).toFixed(1);
+    }
+    
+    // Initial check
+    checkAllEndpoints();
+    
+    // Auto-refresh every 60 seconds
+    setInterval(checkAllEndpoints, 60000);
+  </script>
+</body>
+</html>

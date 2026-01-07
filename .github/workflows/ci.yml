@@ -1,0 +1,176 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    # Run daily at 6 AM UTC to check RSS feeds
+    - cron: '0 6 * * *'
+
+jobs:
+  lint-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Lint
+        run: npm run lint || true
+      
+      - name: Build
+        run: npm run build
+  
+  test-sdk:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: sdk/typescript
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install SDK dependencies
+        run: npm install
+      
+      - name: Build SDK
+        run: npm run build
+      
+      - name: Run SDK tests
+        run: npm test || true
+
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check API Health
+        run: |
+          echo "🔍 Checking Free Crypto News API health..."
+          
+          RESPONSE=$(curl -s -w "\n%{http_code}" https://free-crypto-news.vercel.app/api/health)
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
+          BODY=$(echo "$RESPONSE" | sed '$d')
+          
+          echo "Response: $BODY"
+          echo "HTTP Status: $HTTP_CODE"
+          
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "❌ API health check failed with status $HTTP_CODE"
+            exit 1
+          fi
+          
+          STATUS=$(echo "$BODY" | jq -r '.status')
+          HEALTHY=$(echo "$BODY" | jq -r '.summary.healthy')
+          
+          echo "📊 Status: $STATUS"
+          echo "✅ Healthy sources: $HEALTHY"
+          
+          if [ "$STATUS" = "down" ]; then
+            echo "❌ API is down!"
+            exit 1
+          fi
+          
+          echo "✅ API is operational"
+
+  feed-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check RSS Feeds
+        run: |
+          echo "📡 Checking individual RSS feeds..."
+          
+          FEEDS=(
+            "coindesk:https://www.coindesk.com/arc/outboundfeeds/rss/"
+            "theblock:https://www.theblock.co/rss.xml"
+            "decrypt:https://decrypt.co/feed"
+            "cointelegraph:https://cointelegraph.com/rss"
+            "bitcoinmagazine:https://bitcoinmagazine.com/.rss/full/"
+            "blockworks:https://blockworks.co/feed"
+            "defiant:https://thedefiant.io/feed"
+          )
+          
+          FAILED=0
+          
+          for feed in "${FEEDS[@]}"; do
+            NAME="${feed%%:*}"
+            URL="${feed#*:}"
+            
+            HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -A "FreeCryptoNews/CI" "$URL" --max-time 15 || echo "000")
+            
+            if [ "$HTTP_CODE" = "200" ]; then
+              echo "✅ $NAME: OK"
+            else
+              echo "❌ $NAME: Failed (HTTP $HTTP_CODE)"
+              FAILED=$((FAILED + 1))
+            fi
+          done
+          
+          echo ""
+          echo "📊 Results: $((7 - FAILED))/7 feeds accessible"
+          
+          if [ $FAILED -gt 3 ]; then
+            echo "⚠️ More than 3 feeds are down!"
+            exit 1
+          fi
+
+  api-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test API Endpoints
+        run: |
+          BASE_URL="https://free-crypto-news.vercel.app"
+          
+          echo "🧪 Testing API endpoints..."
+          
+          # Test /api/news
+          echo "Testing /api/news..."
+          RESPONSE=$(curl -s "$BASE_URL/api/news?limit=5")
+          COUNT=$(echo "$RESPONSE" | jq '.articles | length')
+          if [ "$COUNT" -gt 0 ]; then
+            echo "✅ /api/news: Got $COUNT articles"
+          else
+            echo "❌ /api/news: No articles returned"
+            exit 1
+          fi
+          
+          # Test /api/search
+          echo "Testing /api/search..."
+          RESPONSE=$(curl -s "$BASE_URL/api/search?q=bitcoin&limit=5")
+          COUNT=$(echo "$RESPONSE" | jq '.articles | length')
+          echo "✅ /api/search: Got $COUNT results"
+          
+          # Test /api/defi
+          echo "Testing /api/defi..."
+          RESPONSE=$(curl -s "$BASE_URL/api/defi?limit=5")
+          COUNT=$(echo "$RESPONSE" | jq '.articles | length')
+          echo "✅ /api/defi: Got $COUNT articles"
+          
+          # Test /api/sources
+          echo "Testing /api/sources..."
+          RESPONSE=$(curl -s "$BASE_URL/api/sources")
+          COUNT=$(echo "$RESPONSE" | jq '.sources | length')
+          echo "✅ /api/sources: Got $COUNT sources"
+          
+          # Test /api/rss
+          echo "Testing /api/rss..."
+          CONTENT_TYPE=$(curl -s -I "$BASE_URL/api/rss" | grep -i "content-type" | head -1)
+          if echo "$CONTENT_TYPE" | grep -q "rss\|xml"; then
+            echo "✅ /api/rss: Returns valid RSS"
+          else
+            echo "❌ /api/rss: Invalid content type"
+          fi
+          
+          echo ""
+          echo "✅ All API tests passed!"

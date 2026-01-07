@@ -23,6 +23,10 @@ When users ask about crypto news:
 3. Use getDefiNews for DeFi-related queries
 4. Use getBitcoinNews for Bitcoin-related queries
 5. Use getBreakingNews for "what's happening now" queries
+6. Use getTrendingTopics for trending topics and sentiment
+7. Use analyzeNews for sentiment analysis
+8. Use getArchive for historical news
+9. Use findOriginalSources to trace news origins
 
 Always format the news nicely with:
 - 📰 Headline
@@ -31,10 +35,35 @@ Always format the news nicely with:
 - 📌 Source
 ```
 
+## Available Actions
+
+| Action | Description |
+|--------|-------------|
+| `getLatestNews` | Get latest crypto news |
+| `searchNews` | Search by keywords |
+| `getDefiNews` | DeFi-specific news |
+| `getBitcoinNews` | Bitcoin-specific news |
+| `getBreakingNews` | Breaking news (last 2h) |
+| `getTrendingTopics` | Trending topics with sentiment |
+| `getStats` | API statistics |
+| `analyzeNews` | News with sentiment analysis |
+| `getArchive` | Historical news archive |
+| `findOriginalSources` | Trace news origins |
+
 ## Test Prompts
 
+**Basic News:**
 - "What's the latest crypto news?"
 - "Any news about Ethereum ETF?"
 - "What's happening in DeFi?"
 - "Breaking crypto news"
 - "Bitcoin news from today"
+
+**Analytics:**
+- "What are the trending crypto topics?"
+- "Is market sentiment bullish or bearish?"
+- "Analyze recent news about Bitcoin"
+
+**Historical:**
+- "What crypto news happened last week?"
+- "Find the original source of the SEC news"

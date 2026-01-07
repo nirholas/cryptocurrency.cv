@@ -82,6 +82,50 @@ class CryptoNews:
     def get_sources(self) -> List[Dict]:
         """Get list of all news sources."""
         return self._request("/api/sources")["sources"]
+    
+    def get_trending(self, limit: int = 10, hours: int = 24) -> Dict:
+        """Get trending topics with sentiment."""
+        return self._request(f"/api/trending?limit={limit}&hours={hours}")
+    
+    def get_stats(self) -> Dict:
+        """Get API statistics and analytics."""
+        return self._request("/api/stats")
+    
+    def get_health(self) -> Dict:
+        """Check API health status."""
+        return self._request("/api/health")
+    
+    def analyze(self, limit: int = 20, topic: Optional[str] = None, sentiment: Optional[str] = None) -> Dict:
+        """Get news with topic classification and sentiment analysis."""
+        endpoint = f"/api/analyze?limit={limit}"
+        if topic:
+            endpoint += f"&topic={urllib.parse.quote(topic)}"
+        if sentiment:
+            endpoint += f"&sentiment={sentiment}"
+        return self._request(endpoint)
+    
+    def get_archive(self, date: Optional[str] = None, query: Optional[str] = None, limit: int = 50) -> Dict:
+        """Get archived historical news."""
+        params = [f"limit={limit}"]
+        if date:
+            params.append(f"date={date}")
+        if query:
+            params.append(f"q={urllib.parse.quote(query)}")
+        return self._request(f"/api/archive?{'&'.join(params)}")
+    
+    def get_origins(self, query: Optional[str] = None, category: Optional[str] = None, limit: int = 20) -> Dict:
+        """Find original sources of news."""
+        params = [f"limit={limit}"]
+        if query:
+            params.append(f"q={urllib.parse.quote(query)}")
+        if category:
+            params.append(f"category={category}")
+        return self._request(f"/api/origins?{'&'.join(params)}")
+    
+    def get_portfolio(self, coins: list, limit: int = 10, include_prices: bool = True) -> Dict:
+        """Get portfolio news with optional prices from CoinGecko."""
+        coins_param = ','.join(coins) if isinstance(coins, list) else coins
+        return self._request(f"/api/portfolio?coins={urllib.parse.quote(coins_param)}&limit={limit}&prices={str(include_prices).lower()}")
 
 
 # Convenience functions
@@ -93,6 +137,10 @@ def search_crypto_news(keywords: str, limit: int = 10) -> List[Dict]:
     """Quick function to search news."""
     return CryptoNews().search(keywords, limit)
 
+def get_trending_topics(limit: int = 10) -> List[Dict]:
+    """Quick function to get trending topics."""
+    return CryptoNews().get_trending(limit)["trending"]
+
 
 if __name__ == "__main__":
     # Demo
@@ -102,3 +150,9 @@ if __name__ == "__main__":
         print(f"\n📌 {article['title']}")
         print(f"   🔗 {article['link']}")
         print(f"   📰 {article['source']} • {article['timeAgo']}")
+    
+    print("\n\n📊 Trending Topics\n" + "=" * 50)
+    trending = news.get_trending(5)
+    for topic in trending["trending"]:
+        emoji = "🟢" if topic["sentiment"] == "bullish" else "🔴" if topic["sentiment"] == "bearish" else "⚪"
+        print(f"{emoji} {topic['topic']}: {topic['count']} mentions")

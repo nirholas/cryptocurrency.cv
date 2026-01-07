@@ -70,6 +70,54 @@ export class CryptoNews {
     const data = await this._fetch('/api/sources');
     return data.sources;
   }
+
+  /** Get trending topics */
+  async getTrending(limit = 10, hours = 24) {
+    return this._fetch(`/api/trending?limit=${limit}&hours=${hours}`);
+  }
+
+  /** Get API statistics */
+  async getStats() {
+    return this._fetch('/api/stats');
+  }
+
+  /** Check API health */
+  async getHealth() {
+    return this._fetch('/api/health');
+  }
+
+  /** Get news with topic classification and sentiment */
+  async analyze(limit = 20, topic = null, sentiment = null) {
+    let endpoint = `/api/analyze?limit=${limit}`;
+    if (topic) endpoint += `&topic=${encodeURIComponent(topic)}`;
+    if (sentiment) endpoint += `&sentiment=${sentiment}`;
+    return this._fetch(endpoint);
+  }
+
+  /** Get archived news */
+  async getArchive(date = null, query = null, limit = 50) {
+    let endpoint = '/api/archive?';
+    const params = [];
+    if (date) params.push(`date=${date}`);
+    if (query) params.push(`q=${encodeURIComponent(query)}`);
+    params.push(`limit=${limit}`);
+    return this._fetch(endpoint + params.join('&'));
+  }
+
+  /** Find original sources of news */
+  async getOrigins(query = null, category = null, limit = 20) {
+    let endpoint = '/api/origins?';
+    const params = [`limit=${limit}`];
+    if (query) params.push(`q=${encodeURIComponent(query)}`);
+    if (category) params.push(`category=${category}`);
+    return this._fetch(endpoint + params.join('&'));
+  }
+
+  /** Get portfolio news with optional prices */
+  async getPortfolio(coins, limit = 10, includePrices = true) {
+    const coinsParam = Array.isArray(coins) ? coins.join(',') : coins;
+    return this._fetch(`/api/portfolio?coins=${encodeURIComponent(coinsParam)}&limit=${limit}&prices=${includePrices}`);
+  }
 }
 
 // Convenience functions

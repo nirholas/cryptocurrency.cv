@@ -1,0 +1,274 @@
+{
+  "info": {
+    "_postman_id": "free-crypto-news-api",
+    "name": "Free Crypto News API",
+    "description": "🆓 100% FREE crypto news API. No API keys required!\n\nAggregates real-time news from 7 major crypto sources:\n- CoinDesk\n- The Block\n- Decrypt\n- CoinTelegraph\n- Bitcoin Magazine\n- Blockworks\n- The Defiant\n\nGitHub: https://github.com/nirholas/free-crypto-news",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://free-crypto-news.vercel.app",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "News",
+      "item": [
+        {
+          "name": "Get Latest News",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/news?limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "news"],
+              "query": [
+                { "key": "limit", "value": "10", "description": "Max articles (1-50)" },
+                { "key": "source", "value": "coindesk", "description": "Filter by source", "disabled": true },
+                { "key": "from", "value": "2025-01-01", "description": "Start date (ISO)", "disabled": true },
+                { "key": "to", "value": "2025-01-07", "description": "End date (ISO)", "disabled": true },
+                { "key": "page", "value": "1", "description": "Page number", "disabled": true },
+                { "key": "per_page", "value": "20", "description": "Items per page", "disabled": true }
+              ]
+            },
+            "description": "Get the latest crypto news from all 7 sources"
+          }
+        },
+        {
+          "name": "Search News",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/search?q=bitcoin,etf&limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "search"],
+              "query": [
+                { "key": "q", "value": "bitcoin,etf", "description": "Search keywords (comma-separated)" },
+                { "key": "limit", "value": "10", "description": "Max results (1-30)" }
+              ]
+            },
+            "description": "Search news by keywords across all sources"
+          }
+        },
+        {
+          "name": "Get DeFi News",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/defi?limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "defi"],
+              "query": [
+                { "key": "limit", "value": "10", "description": "Max articles (1-30)" }
+              ]
+            },
+            "description": "Get DeFi-specific news (yield farming, DEXs, lending, protocols)"
+          }
+        },
+        {
+          "name": "Get Bitcoin News",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/bitcoin?limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "bitcoin"],
+              "query": [
+                { "key": "limit", "value": "10", "description": "Max articles (1-30)" }
+              ]
+            },
+            "description": "Get Bitcoin-specific news (BTC, Lightning Network, miners)"
+          }
+        },
+        {
+          "name": "Get Breaking News",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/breaking?limit=5",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "breaking"],
+              "query": [
+                { "key": "limit", "value": "5", "description": "Max articles (1-20)" }
+              ]
+            },
+            "description": "Get breaking news from the last 2 hours"
+          }
+        },
+        {
+          "name": "Get Trending Topics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/trending?limit=10&hours=24",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "trending"],
+              "query": [
+                { "key": "limit", "value": "10", "description": "Max topics (1-20)" },
+                { "key": "hours", "value": "24", "description": "Time window (1-72)" }
+              ]
+            },
+            "description": "Get trending crypto topics with sentiment analysis"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Meta",
+      "item": [
+        {
+          "name": "List Sources",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/sources",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "sources"]
+            },
+            "description": "Get list of all news sources with status"
+          }
+        },
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/health",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "health"]
+            },
+            "description": "Check API health and RSS feed status"
+          }
+        },
+        {
+          "name": "Get Statistics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/stats",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "stats"]
+            },
+            "description": "Get analytics: articles per source, hourly distribution"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Feeds",
+      "item": [
+        {
+          "name": "RSS Feed",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/rss?feed=all&limit=20",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "rss"],
+              "query": [
+                { "key": "feed", "value": "all", "description": "Feed type: all, defi, bitcoin" },
+                { "key": "limit", "value": "20", "description": "Max articles" }
+              ]
+            },
+            "description": "Get aggregated RSS feed"
+          }
+        },
+        {
+          "name": "Atom Feed",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/atom?feed=all&limit=20",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "atom"],
+              "query": [
+                { "key": "feed", "value": "all", "description": "Feed type: all, defi, bitcoin" },
+                { "key": "limit", "value": "20", "description": "Max articles" }
+              ]
+            },
+            "description": "Get aggregated Atom feed"
+          }
+        },
+        {
+          "name": "OPML Export",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/opml",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "opml"]
+            },
+            "description": "Download OPML file with all sources for RSS readers"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Webhooks",
+      "item": [
+        {
+          "name": "Webhook Info",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/webhooks",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "webhooks"]
+            },
+            "description": "Get webhook registration info"
+          }
+        },
+        {
+          "name": "Register Webhook",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"url\": \"https://your-server.com/webhook\",\n  \"secret\": \"your-secret-key\",\n  \"events\": [\"breaking\"]\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/webhooks",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "webhooks"]
+            },
+            "description": "Register a webhook for news notifications"
+          }
+        },
+        {
+          "name": "Test Webhook Payload",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/webhooks?test=true",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "webhooks"],
+              "query": [
+                { "key": "test", "value": "true" }
+              ]
+            },
+            "description": "Get sample webhook payload"
+          }
+        }
+      ]
+    }
+  ]
+}

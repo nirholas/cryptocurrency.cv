@@ -62,6 +62,12 @@ export interface NewsResponse {
   totalCount: number;
   sources: string[];
   fetchedAt: string;
+  pagination?: {
+    page: number;
+    perPage: number;
+    totalPages: number;
+    hasMore: boolean;
+  };
 }
 
 export interface SourceInfo {
@@ -186,9 +192,35 @@ async function fetchMultipleSources(sourceKeys: SourceKey[]): Promise<NewsArticl
 // PUBLIC API FUNCTIONS
 // ═══════════════════════════════════════════════════════════════
 
+export interface NewsQueryOptions {
+  limit?: number;
+  source?: string;
+  from?: Date | string;
+  to?: Date | string;
+  page?: number;
+  perPage?: number;
+}
+
+function filterByDateRange(articles: NewsArticle[], from?: Date | string, to?: Date | string): NewsArticle[] {
+  let filtered = articles;
+  
+  if (from) {
+    const fromDate = typeof from === 'string' ? new Date(from) : from;
+    filtered = filtered.filter(a => new Date(a.pubDate) >= fromDate);
+  }
+  
+  if (to) {
+    const toDate = typeof to === 'string' ? new Date(to) : to;
+    filtered = filtered.filter(a => new Date(a.pubDate) <= toDate);
+  }
+  
+  return filtered;
+}
+
 export async function getLatestNews(
   limit: number = 10,
-  source?: string
+  source?: string,
+  options?: NewsQueryOptions
 ): Promise<NewsResponse> {
   const normalizedLimit = Math.min(Math.max(1, limit), 50);
   
@@ -199,14 +231,33 @@ export async function getLatestNews(
     sourceKeys = Object.keys(RSS_SOURCES) as SourceKey[];
   }
   
-  const articles = await fetchMultipleSources(sourceKeys);
+  let articles = await fetchMultipleSources(sourceKeys);
+  
+  // Apply date filtering
+  if (options?.from || options?.to) {
+    articles = filterByDateRange(articles, options.from, options.to);
+  }
+  
+  // Handle pagination
+  const page = options?.page || 1;
+  const perPage = options?.perPage || normalizedLimit;
+  const startIndex = (page - 1) * perPage;
+  const paginatedArticles = articles.slice(startIndex, startIndex + perPage);
   
   return {
-    articles: articles.slice(0, normalizedLimit),
+    articles: paginatedArticles,
     totalCount: articles.length,
     sources: sourceKeys.map(k => RSS_SOURCES[k].name),
     fetchedAt: new Date().toISOString(),
-  };
+    ...(options?.page && {
+      pagination: {
+        page,
+        perPage,
+        totalPages: Math.ceil(articles.length / perPage),
+        hasMore: startIndex + perPage < articles.length,
+      }
+    }),
+  } as NewsResponse;
 }
 
 export async function searchNews(

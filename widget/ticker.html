@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto News Ticker Widget</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    .crypto-ticker {
+      --ticker-bg: #0a0a0a;
+      --ticker-text: #fafafa;
+      --ticker-accent: #f7931a;
+      --ticker-muted: #a1a1a1;
+      --ticker-border: #262626;
+      --ticker-speed: 30s;
+      
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--ticker-bg);
+      border-top: 1px solid var(--ticker-border);
+      border-bottom: 1px solid var(--ticker-border);
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+    }
+    
+    .crypto-ticker-label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, var(--ticker-bg) 80%, transparent);
+      padding: 0 1.5rem 0 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      z-index: 10;
+      font-weight: 600;
+      color: var(--ticker-accent);
+    }
+    
+    .crypto-ticker-label::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #22c55e;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    
+    .crypto-ticker-track {
+      display: inline-flex;
+      animation: scroll var(--ticker-speed) linear infinite;
+      padding: 0.75rem 0;
+      padding-left: 140px;
+    }
+    
+    .crypto-ticker:hover .crypto-ticker-track {
+      animation-play-state: paused;
+    }
+    
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    
+    .crypto-ticker-item {
+      display: inline-flex;
+      align-items: center;
+      padding: 0 2rem;
+      border-right: 1px solid var(--ticker-border);
+    }
+    
+    .crypto-ticker-item:last-child {
+      border-right: none;
+    }
+    
+    .crypto-ticker-item a {
+      color: var(--ticker-text);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    
+    .crypto-ticker-item a:hover {
+      color: var(--ticker-accent);
+    }
+    
+    .crypto-ticker-source {
+      color: var(--ticker-muted);
+      font-size: 0.75rem;
+      margin-left: 0.75rem;
+      padding: 0.2rem 0.5rem;
+      background: var(--ticker-border);
+      border-radius: 4px;
+    }
+    
+    .crypto-ticker-time {
+      color: var(--ticker-muted);
+      font-size: 0.75rem;
+      margin-left: 0.5rem;
+    }
+    
+    /* Light theme variant */
+    .crypto-ticker.light {
+      --ticker-bg: #ffffff;
+      --ticker-text: #0a0a0a;
+      --ticker-muted: #6b7280;
+      --ticker-border: #e5e7eb;
+    }
+    
+    /* Compact variant */
+    .crypto-ticker.compact .crypto-ticker-track {
+      padding: 0.5rem 0;
+    }
+    
+    .crypto-ticker.compact .crypto-ticker-item a {
+      font-size: 0.8rem;
+    }
+    
+    /* Loading state */
+    .crypto-ticker-loading {
+      padding: 0.75rem 2rem 0.75rem 140px;
+      color: var(--ticker-muted);
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Basic Usage -->
+  <div id="news-ticker" class="crypto-ticker">
+    <div class="crypto-ticker-label">📰 CRYPTO</div>
+    <div class="crypto-ticker-track">
+      <div class="crypto-ticker-loading">Loading news...</div>
+    </div>
+  </div>
+  
+  <br><br>
+  
+  <!-- Light Theme -->
+  <div id="news-ticker-light" class="crypto-ticker light">
+    <div class="crypto-ticker-label">📰 CRYPTO</div>
+    <div class="crypto-ticker-track">
+      <div class="crypto-ticker-loading">Loading news...</div>
+    </div>
+  </div>
+  
+  <br><br>
+  
+  <!-- Compact -->
+  <div id="news-ticker-compact" class="crypto-ticker compact">
+    <div class="crypto-ticker-label">📰 NEWS</div>
+    <div class="crypto-ticker-track">
+      <div class="crypto-ticker-loading">Loading news...</div>
+    </div>
+  </div>
+
+  <script>
+    /**
+     * Crypto News Ticker Widget
+     * 
+     * Usage:
+     *   CryptoTicker.init('#news-ticker', { limit: 15, speed: 30 });
+     * 
+     * Options:
+     *   - limit: Number of articles (default: 15)
+     *   - speed: Animation duration in seconds (default: 30)
+     *   - category: 'all' | 'bitcoin' | 'defi' | 'breaking' (default: 'all')
+     *   - showSource: Show source badge (default: true)
+     *   - showTime: Show time ago (default: true)
+     */
+    const CryptoTicker = {
+      API_BASE: 'https://free-crypto-news.vercel.app',
+      
+      async init(selector, options = {}) {
+        const container = document.querySelector(selector);
+        if (!container) return;
+        
+        const config = {
+          limit: options.limit || 15,
+          speed: options.speed || 30,
+          category: options.category || 'all',
+          showSource: options.showSource !== false,
+          showTime: options.showTime !== false,
+        };
+        
+        // Set animation speed
+        container.style.setProperty('--ticker-speed', `${config.speed}s`);
+        
+        try {
+          const endpoint = config.category === 'all' 
+            ? '/api/news' 
+            : `/api/${config.category}`;
+          
+          const response = await fetch(`${this.API_BASE}${endpoint}?limit=${config.limit}`);
+          const data = await response.json();
+          
+          this.render(container, data.articles || [], config);
+        } catch (error) {
+          console.error('Crypto Ticker Error:', error);
+          const track = container.querySelector('.crypto-ticker-track');
+          if (track) {
+            track.innerHTML = '<div class="crypto-ticker-loading">Failed to load news</div>';
+          }
+        }
+      },
+      
+      render(container, articles, config) {
+        const track = container.querySelector('.crypto-ticker-track');
+        if (!track || !articles.length) return;
+        
+        const items = articles.map(article => `
+          <div class="crypto-ticker-item">
+            <a href="${this.escapeHtml(article.link)}" target="_blank" rel="noopener">
+              ${this.escapeHtml(this.truncate(article.title, 80))}
+            </a>
+            ${config.showSource ? `<span class="crypto-ticker-source">${this.escapeHtml(article.source)}</span>` : ''}
+            ${config.showTime ? `<span class="crypto-ticker-time">${this.escapeHtml(article.timeAgo)}</span>` : ''}
+          </div>
+        `).join('');
+        
+        // Duplicate items for seamless loop
+        track.innerHTML = items + items;
+      },
+      
+      escapeHtml(text) {
+        if (!text) return '';
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+      },
+      
+      truncate(text, maxLength) {
+        if (!text || text.length <= maxLength) return text;
+        return text.substring(0, maxLength) + '...';
+      }
+    };
+    
+    // Auto-initialize tickers on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      CryptoTicker.init('#news-ticker', { limit: 15, speed: 35 });
+      CryptoTicker.init('#news-ticker-light', { limit: 10, speed: 40, category: 'bitcoin' });
+      CryptoTicker.init('#news-ticker-compact', { limit: 20, speed: 25, category: 'breaking', showTime: false });
+    });
+  </script>
+  
+  <div style="padding: 2rem; font-family: sans-serif; color: #666;">
+    <h2>📰 Crypto News Ticker Widget</h2>
+    <p>Embed on any website with a single script tag.</p>
+    
+    <h3>Quick Embed</h3>
+    <pre style="background: #f5f5f5; padding: 1rem; border-radius: 8px; overflow-x: auto;">
+&lt;div id="crypto-ticker" class="crypto-ticker"&gt;
+  &lt;div class="crypto-ticker-label"&gt;📰 CRYPTO&lt;/div&gt;
+  &lt;div class="crypto-ticker-track"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script src="https://nirholas.github.io/free-crypto-news/widget/ticker.js"&gt;&lt;/script&gt;
+    </pre>
+    
+    <h3>Options</h3>
+    <pre style="background: #f5f5f5; padding: 1rem; border-radius: 8px;">
+CryptoTicker.init('#crypto-ticker', {
+  limit: 15,           // Number of articles
+  speed: 30,           // Animation duration (seconds)
+  category: 'all',     // 'all', 'bitcoin', 'defi', 'breaking'
+  showSource: true,    // Show source badge
+  showTime: true       // Show time ago
+});
+    </pre>
+  </div>
+</body>
+</html>

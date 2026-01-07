@@ -37,3 +37,6 @@ next-env.d.ts
 __pycache__/
 *.pyc
 .venv/
+
+# Copilot instructions (personal)
+.github/copilot-instructions.md

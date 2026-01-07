@@ -40,16 +40,64 @@ breaking = news.get_breaking()
 sources = news.get_sources()
 ```
 
+## Analytics & Trends
+
+```python
+# Trending topics with sentiment
+trending = news.get_trending(limit=10, hours=24)
+for topic in trending['trending']:
+    print(f"{topic['topic']}: {topic['sentiment']}")
+
+# API statistics
+stats = news.get_stats()
+
+# Sentiment analysis
+analysis = news.analyze(limit=20, topic='bitcoin', sentiment='bullish')
+print(f"Market: {analysis['summary']['overall_sentiment']}")
+```
+
+## Historical & Sources
+
+```python
+# Get archived news
+archive = news.get_archive(date='2024-01-15', query='SEC', limit=20)
+
+# Find original sources
+origins = news.get_origins(query='binance', category='exchange')
+for item in origins['items']:
+    print(f"{item['title']} - Original: {item['likely_original_source']}")
+```
+
+## Available Methods
+
+| Method | Description |
+|--------|-------------|
+| `get_latest(limit, source)` | Get latest news |
+| `search(keywords, limit)` | Search by keywords |
+| `get_defi(limit)` | DeFi news |
+| `get_bitcoin(limit)` | Bitcoin news |
+| `get_breaking(limit)` | Breaking news (last 2 hours) |
+| `get_sources()` | List all sources |
+| `get_trending(limit, hours)` | Trending topics |
+| `get_stats()` | API statistics |
+| `get_health()` | API health status |
+| `analyze(limit, topic, sentiment)` | News with sentiment analysis |
+| `get_archive(date, query, limit)` | Historical archive |
+| `get_origins(query, category, limit)` | Find original sources |
+
 ## Quick Functions
 
 ```python
-from crypto_news import get_crypto_news, search_crypto_news
+from crypto_news import get_crypto_news, search_crypto_news, get_trending_topics
 
 # One-liner to get news
 articles = get_crypto_news(10)
 
 # One-liner to search
 results = search_crypto_news("bitcoin etf")
+
+# One-liner for trending
+topics = get_trending_topics(5)
 ```
 
 ## Self-Hosted

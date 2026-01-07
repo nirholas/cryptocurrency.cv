@@ -1,0 +1,54 @@
+{
+  "name": "@nicholasrq/react-crypto-news",
+  "version": "1.0.0",
+  "description": "React components for Free Crypto News API - 100% free, no API keys!",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsup src/index.tsx --format cjs,esm --dts --external react",
+    "dev": "tsup src/index.tsx --format cjs,esm --dts --external react --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "react": "^18.2.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "react",
+    "crypto",
+    "news",
+    "bitcoin",
+    "ethereum",
+    "defi",
+    "web3",
+    "component",
+    "widget"
+  ],
+  "author": "nicholasrq",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nirholas/free-crypto-news.git",
+    "directory": "sdk/react"
+  },
+  "homepage": "https://free-crypto-news.vercel.app"
+}

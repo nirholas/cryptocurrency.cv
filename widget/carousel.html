@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto News Carousel Widget</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #121212; padding: 2rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    
+    .crypto-carousel {
+      --carousel-bg: #0a0a0a;
+      --carousel-card-bg: #141414;
+      --carousel-text: #fafafa;
+      --carousel-accent: #f7931a;
+      --carousel-muted: #a1a1a1;
+      --carousel-border: #262626;
+      
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--carousel-bg);
+      border-radius: 16px;
+      padding: 1.5rem;
+      max-width: 800px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .crypto-carousel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+    
+    .crypto-carousel-title {
+      color: var(--carousel-text);
+      font-size: 1.25rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .crypto-carousel-title span {
+      color: var(--carousel-accent);
+    }
+    
+    .crypto-carousel-nav {
+      display: flex;
+      gap: 0.5rem;
+    }
+    
+    .crypto-carousel-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      border: 1px solid var(--carousel-border);
+      background: var(--carousel-card-bg);
+      color: var(--carousel-text);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+    
+    .crypto-carousel-btn:hover {
+      border-color: var(--carousel-accent);
+      color: var(--carousel-accent);
+    }
+    
+    .crypto-carousel-btn:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+    
+    .crypto-carousel-viewport {
+      overflow: hidden;
+    }
+    
+    .crypto-carousel-track {
+      display: flex;
+      transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+    
+    .crypto-carousel-slide {
+      flex: 0 0 100%;
+      padding: 0 0.25rem;
+    }
+    
+    .crypto-carousel-card {
+      background: var(--carousel-card-bg);
+      border: 1px solid var(--carousel-border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      height: 100%;
+      transition: border-color 0.2s;
+    }
+    
+    .crypto-carousel-card:hover {
+      border-color: var(--carousel-accent);
+    }
+    
+    .crypto-carousel-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    
+    .crypto-carousel-source {
+      background: var(--carousel-accent);
+      color: #000;
+      padding: 0.25rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    
+    .crypto-carousel-time {
+      color: var(--carousel-muted);
+      font-size: 0.85rem;
+    }
+    
+    .crypto-carousel-card h3 {
+      color: var(--carousel-text);
+      font-size: 1.1rem;
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+    }
+    
+    .crypto-carousel-card h3 a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    .crypto-carousel-card h3 a:hover {
+      color: var(--carousel-accent);
+    }
+    
+    .crypto-carousel-card p {
+      color: var(--carousel-muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    
+    .crypto-carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    
+    .crypto-carousel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--carousel-border);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .crypto-carousel-dot.active {
+      background: var(--carousel-accent);
+      width: 24px;
+      border-radius: 4px;
+    }
+    
+    .crypto-carousel-loading {
+      text-align: center;
+      padding: 3rem;
+      color: var(--carousel-muted);
+    }
+    
+    /* Light theme */
+    .crypto-carousel.light {
+      --carousel-bg: #ffffff;
+      --carousel-card-bg: #f9fafb;
+      --carousel-text: #0a0a0a;
+      --carousel-muted: #6b7280;
+      --carousel-border: #e5e7eb;
+    }
+    
+    /* Grid variant - show multiple cards */
+    .crypto-carousel.grid .crypto-carousel-slide {
+      flex: 0 0 33.333%;
+    }
+    
+    @media (max-width: 768px) {
+      .crypto-carousel.grid .crypto-carousel-slide {
+        flex: 0 0 100%;
+      }
+    }
+    
+    /* Auto-play indicator */
+    .crypto-carousel-progress {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background: var(--carousel-accent);
+      border-radius: 0 0 16px 16px;
+      transition: width 0.1s linear;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Basic Carousel -->
+  <div id="news-carousel" class="crypto-carousel">
+    <div class="crypto-carousel-header">
+      <div class="crypto-carousel-title">📰 <span>Crypto</span> News</div>
+      <div class="crypto-carousel-nav">
+        <button class="crypto-carousel-btn" data-dir="prev">←</button>
+        <button class="crypto-carousel-btn" data-dir="next">→</button>
+      </div>
+    </div>
+    <div class="crypto-carousel-viewport">
+      <div class="crypto-carousel-track">
+        <div class="crypto-carousel-loading">Loading news...</div>
+      </div>
+    </div>
+    <div class="crypto-carousel-dots"></div>
+    <div class="crypto-carousel-progress"></div>
+  </div>
+  
+  <br><br>
+  
+  <!-- Light Theme Grid -->
+  <div id="news-carousel-grid" class="crypto-carousel light grid">
+    <div class="crypto-carousel-header">
+      <div class="crypto-carousel-title">🔥 <span>Breaking</span> News</div>
+      <div class="crypto-carousel-nav">
+        <button class="crypto-carousel-btn" data-dir="prev">←</button>
+        <button class="crypto-carousel-btn" data-dir="next">→</button>
+      </div>
+    </div>
+    <div class="crypto-carousel-viewport">
+      <div class="crypto-carousel-track">
+        <div class="crypto-carousel-loading">Loading news...</div>
+      </div>
+    </div>
+    <div class="crypto-carousel-dots"></div>
+  </div>
+
+  <script>
+    /**
+     * Crypto News Carousel Widget
+     * 
+     * Usage:
+     *   CryptoCarousel.init('#news-carousel', { limit: 6, autoPlay: true });
+     * 
+     * Options:
+     *   - limit: Number of articles (default: 6)
+     *   - category: 'all' | 'bitcoin' | 'defi' | 'breaking' (default: 'all')
+     *   - autoPlay: Auto-rotate slides (default: true)
+     *   - interval: Auto-play interval in ms (default: 5000)
+     *   - showDots: Show navigation dots (default: true)
+     */
+    const CryptoCarousel = {
+      API_BASE: 'https://free-crypto-news.vercel.app',
+      instances: new Map(),
+      
+      async init(selector, options = {}) {
+        const container = document.querySelector(selector);
+        if (!container) return;
+        
+        const config = {
+          limit: options.limit || 6,
+          category: options.category || 'all',
+          autoPlay: options.autoPlay !== false,
+          interval: options.interval || 5000,
+          showDots: options.showDots !== false,
+          slidesPerView: container.classList.contains('grid') ? 3 : 1,
+        };
+        
+        const instance = {
+          container,
+          config,
+          currentIndex: 0,
+          articles: [],
+          autoPlayTimer: null,
+          progressTimer: null,
+          progressStart: 0,
+        };
+        
+        this.instances.set(selector, instance);
+        
+        try {
+          const endpoint = config.category === 'all' 
+            ? '/api/news' 
+            : `/api/${config.category}`;
+          
+          const response = await fetch(`${this.API_BASE}${endpoint}?limit=${config.limit}`);
+          const data = await response.json();
+          
+          instance.articles = data.articles || [];
+          this.render(instance);
+          this.setupNavigation(instance);
+          
+          if (config.autoPlay) {
+            this.startAutoPlay(instance);
+          }
+        } catch (error) {
+          console.error('Crypto Carousel Error:', error);
+          const track = container.querySelector('.crypto-carousel-track');
+          if (track) {
+            track.innerHTML = '<div class="crypto-carousel-loading">Failed to load news</div>';
+          }
+        }
+      },
+      
+      render(instance) {
+        const { container, articles, config } = instance;
+        const track = container.querySelector('.crypto-carousel-track');
+        const dotsContainer = container.querySelector('.crypto-carousel-dots');
+        
+        if (!track || !articles.length) return;
+        
+        // Render slides
+        track.innerHTML = articles.map(article => `
+          <div class="crypto-carousel-slide">
+            <div class="crypto-carousel-card">
+              <div class="crypto-carousel-card-header">
+                <span class="crypto-carousel-source">${this.escapeHtml(article.source)}</span>
+                <span class="crypto-carousel-time">${this.escapeHtml(article.timeAgo)}</span>
+              </div>
+              <h3>
+                <a href="${this.escapeHtml(article.link)}" target="_blank" rel="noopener">
+                  ${this.escapeHtml(article.title)}
+                </a>
+              </h3>
+              ${article.description ? `<p>${this.escapeHtml(this.truncate(article.description, 150))}</p>` : ''}
+            </div>
+          </div>
+        `).join('');
+        
+        // Render dots
+        if (config.showDots && dotsContainer) {
+          const totalSlides = Math.ceil(articles.length / config.slidesPerView);
+          dotsContainer.innerHTML = Array(totalSlides).fill(0).map((_, i) => 
+            `<div class="crypto-carousel-dot ${i === 0 ? 'active' : ''}" data-index="${i}"></div>`
+          ).join('');
+        }
+      },
+      
+      setupNavigation(instance) {
+        const { container, config, articles } = instance;
+        
+        // Button navigation
+        container.querySelectorAll('.crypto-carousel-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const dir = btn.dataset.dir;
+            const totalSlides = Math.ceil(articles.length / config.slidesPerView);
+            
+            if (dir === 'next') {
+              instance.currentIndex = (instance.currentIndex + 1) % totalSlides;
+            } else {
+              instance.currentIndex = (instance.currentIndex - 1 + totalSlides) % totalSlides;
+            }
+            
+            this.goToSlide(instance, instance.currentIndex);
+            
+            // Reset autoplay timer
+            if (config.autoPlay) {
+              this.startAutoPlay(instance);
+            }
+          });
+        });
+        
+        // Dot navigation
+        container.querySelectorAll('.crypto-carousel-dot').forEach(dot => {
+          dot.addEventListener('click', () => {
+            const index = parseInt(dot.dataset.index);
+            this.goToSlide(instance, index);
+            
+            if (config.autoPlay) {
+              this.startAutoPlay(instance);
+            }
+          });
+        });
+        
+        // Pause on hover
+        container.addEventListener('mouseenter', () => {
+          if (instance.autoPlayTimer) {
+            clearInterval(instance.autoPlayTimer);
+            instance.autoPlayTimer = null;
+          }
+        });
+        
+        container.addEventListener('mouseleave', () => {
+          if (config.autoPlay) {
+            this.startAutoPlay(instance);
+          }
+        });
+      },
+      
+      goToSlide(instance, index) {
+        const { container, config } = instance;
+        const track = container.querySelector('.crypto-carousel-track');
+        const dots = container.querySelectorAll('.crypto-carousel-dot');
+        const progress = container.querySelector('.crypto-carousel-progress');
+        
+        instance.currentIndex = index;
+        
+        const slideWidth = 100 / config.slidesPerView;
+        track.style.transform = `translateX(-${index * slideWidth}%)`;
+        
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === index);
+        });
+        
+        if (progress) {
+          progress.style.width = '0%';
+        }
+      },
+      
+      startAutoPlay(instance) {
+        const { container, config, articles } = instance;
+        const progress = container.querySelector('.crypto-carousel-progress');
+        
+        if (instance.autoPlayTimer) {
+          clearInterval(instance.autoPlayTimer);
+        }
+        
+        const totalSlides = Math.ceil(articles.length / config.slidesPerView);
+        
+        // Progress animation
+        if (progress) {
+          progress.style.width = '0%';
+          let progressValue = 0;
+          const progressStep = 100 / (config.interval / 50);
+          
+          if (instance.progressTimer) {
+            clearInterval(instance.progressTimer);
+          }
+          
+          instance.progressTimer = setInterval(() => {
+            progressValue += progressStep;
+            progress.style.width = Math.min(progressValue, 100) + '%';
+          }, 50);
+        }
+        
+        instance.autoPlayTimer = setInterval(() => {
+          instance.currentIndex = (instance.currentIndex + 1) % totalSlides;
+          this.goToSlide(instance, instance.currentIndex);
+          
+          // Reset progress
+          if (progress) {
+            progress.style.width = '0%';
+          }
+        }, config.interval);
+      },
+      
+      escapeHtml(text) {
+        if (!text) return '';
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+      },
+      
+      truncate(text, maxLength) {
+        if (!text || text.length <= maxLength) return text;
+        return text.substring(0, maxLength) + '...';
+      }
+    };
+    
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      CryptoCarousel.init('#news-carousel', { limit: 6, autoPlay: true, interval: 5000 });
+      CryptoCarousel.init('#news-carousel-grid', { limit: 9, category: 'breaking', autoPlay: false });
+    });
+  </script>
+  
+  <div style="padding: 2rem; color: #999;">
+    <h2>📰 Crypto News Carousel Widget</h2>
+    <p>Rotating featured news for your website.</p>
+    
+    <h3>Quick Embed</h3>
+    <pre style="background: #1a1a1a; padding: 1rem; border-radius: 8px; overflow-x: auto; color: #ccc;">
+&lt;div id="crypto-carousel" class="crypto-carousel"&gt;
+  &lt;div class="crypto-carousel-header"&gt;
+    &lt;div class="crypto-carousel-title"&gt;📰 &lt;span&gt;Crypto&lt;/span&gt; News&lt;/div&gt;
+    &lt;div class="crypto-carousel-nav"&gt;
+      &lt;button class="crypto-carousel-btn" data-dir="prev"&gt;←&lt;/button&gt;
+      &lt;button class="crypto-carousel-btn" data-dir="next"&gt;→&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="crypto-carousel-viewport"&gt;
+    &lt;div class="crypto-carousel-track"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="crypto-carousel-dots"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script src="https://nirholas.github.io/free-crypto-news/widget/carousel.js"&gt;&lt;/script&gt;
+    </pre>
+  </div>
+</body>
+</html>

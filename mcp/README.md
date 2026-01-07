@@ -33,7 +33,7 @@ npm install
 
 4. Ask: *"Get me the latest crypto news"*
 
-## Available Tools
+## Available Tools (15 Total)
 
 | Tool | Description |
 |------|-------------|
@@ -42,14 +42,36 @@ npm install
 | `get_defi_news` | DeFi-specific news |
 | `get_bitcoin_news` | Bitcoin-specific news |
 | `get_breaking_news` | News from last 2 hours |
+| `get_news_sources` | List all available news sources |
+| `get_api_health` | Check API & feed health status |
+| `get_trending_topics` | Trending topics with sentiment analysis |
+| `get_crypto_stats` | Analytics & statistics |
+| `analyze_news` | News with topic classification & sentiment |
+| `get_archive` | Query historical news archive |
+| `get_archive_stats` | Archive statistics |
+| `find_original_sources` | Find where news originated |
+| `get_portfolio_news` | News for specific coins with prices |
 
 ## Example Prompts
 
+**Basic News:**
 - "Get me the latest crypto news"
 - "Search for news about Ethereum ETF"
 - "What's happening in DeFi?"
 - "Any breaking crypto news?"
 - "Bitcoin news from today"
+
+**Analytics & Trends:**
+- "What are the trending crypto topics?"
+- "What's the market sentiment today?"
+- "Analyze recent news for bullish signals"
+- "Show me crypto news statistics"
+
+**Historical & Sources:**
+- "Get news from last week about SEC"
+- "What are the archive statistics?"
+- "Find the original source of this Binance news"
+- "Which government agencies are making crypto news?"
 
 ## No API Key Required!
 
