@@ -7,7 +7,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "mcp:install": "cd mcp && npm install",
+    "mcp:start": "cd mcp && npm start",
+    "mcp:http": "cd mcp && npm run start:http",
+    "mcp:dev": "cd mcp && npm run dev"
   },
   "keywords": [
     "crypto",
