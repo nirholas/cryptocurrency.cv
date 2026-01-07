@@ -1,7 +1,306 @@
 {
-  "cachedAt": "2026-01-07T00:00:00.000Z",
-  "source": "failsafe-cache",
-  "count": 0,
-  "articles": [],
-  "message": "Cache will be populated by GitHub Actions workflow"
+  "articles": [
+    {
+      "title": "Elon Musk: Nvidia’s Self-Driving Tech Is Still Years From Challenging Tesla",
+      "link": "https://decrypt.co/353909/elon-musk-nvidias-self-driving-tech-still-years-challenging-tesla",
+      "description": "Tesla CEO Elon Musk argued that Nvidia’s software has arrived years earlier than legacy automakers can deploy it at scale.",
+      "pubDate": "2026-01-07T22:27:39.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "42m ago"
+    },
+    {
+      "title": "Polymarket Begins Rolling Out Fees in US App and Crypto Markets",
+      "link": "https://thedefiant.io/news/defi/polymarket-begins-rolling-out-fees-in-us-app-and-crypto-markets",
+      "pubDate": "2026-01-07T21:49:42.000Z",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
+      "category": "defi",
+      "timeAgo": "1h ago"
+    },
+    {
+      "title": "Wyoming&#39;s &#39;Frontier&#39; Stablecoin Debuts—Will It Offer Yield?",
+      "link": "https://decrypt.co/353910/wyoming-frontier-stablecoin-debuts-offer-yield",
+      "description": "The Wyoming Frontier Stable Token is now available to the public, four months after its official launch.",
+      "pubDate": "2026-01-07T21:30:22.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "1h ago"
+    },
+    {
+      "title": "Babylon receives $15M from a16z Crypto to expand Bitcoin-native lending",
+      "link": "<![CDATA[https://cointelegraph.com/news/babylon-raises-15m-from-a16z-crypto-to-unlock-bitcoin-for-staking-and-onchain-credit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "The investment was made through the purchase of BABY tokens to support the development of Babylon’s trustless Bitcoin collateral infrastructure.",
+      "pubDate": "2026-01-07T20:48:35.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "2h ago"
+    },
+    {
+      "title": "Clone-X NFTs Soar 200% as Nike Sells RTFKT",
+      "link": "https://thedefiant.io/news/nfts-and-web3/clone-x-nfts-soar-200-as-nike-sells-rtfkt",
+      "pubDate": "2026-01-07T20:42:10.000Z",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
+      "category": "defi",
+      "timeAgo": "2h ago"
+    },
+    {
+      "title": "Crypto Markets Edge Lower as Investors Weigh Macro Data",
+      "link": "https://thedefiant.io/news/markets/crypto-markets-edge-lower-as-investors-weigh-macro-data",
+      "pubDate": "2026-01-07T19:27:24.000Z",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
+      "category": "defi",
+      "timeAgo": "3h ago"
+    },
+    {
+      "title": "Here’s what happened in crypto today",
+      "link": "<![CDATA[https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+      "pubDate": "2026-01-07T18:59:02.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "4h ago"
+    },
+    {
+      "title": "Iran Accepting Crypto Payments for Weapons—But This May Not Help It Evade Sanctions",
+      "link": "https://decrypt.co/353868/iran-accepting-crypto-payments-for-weapons-but-this-may-not-help-it-evade-sanctions",
+      "description": "Iran’s Mindex website offers military equipment for purchase, with its FAQ now saying that buyers can contract to pay in crypto.",
+      "pubDate": "2026-01-07T17:53:32.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "5h ago"
+    },
+    {
+      "title": "Wyoming Launches First U.S. State-Issued Stablecoin",
+      "link": "https://thedefiant.io/news/defi/wyoming-launches-first-u-s-state-issued-stablecoin",
+      "pubDate": "2026-01-07T17:10:24.000Z",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
+      "category": "defi",
+      "timeAgo": "5h ago"
+    },
+    {
+      "title": "Bitcoin vs. luxury homes: How China’s wealthy are rethinking stores of value",
+      "link": "<![CDATA[https://cointelegraph.com/explained/bitcoin-vs-luxury-homes-how-china-s-wealthy-are-rethinking-stores-of-value?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "From Shenzhen Bay luxury homes to Bitcoin, affluent Chinese investors are reassessing stores of value as views on liquidity, mobility and risk continue to shift.",
+      "pubDate": "2026-01-07T16:42:47.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "6h ago"
+    },
+    {
+      "title": "Upexi targets higher-yield Solana treasury strategy for 2026 as holdings near 2.2 million SOL",
+      "link": "https://www.theblock.co/post/384647/upexi-higher-yield-solana-treasury-strategy-2026-holdings-2-2-million-sol?utm_source=rss&amp;utm_medium=rss",
+      "description": "Upexi continues to add SOL and reduce its share count through buybacks and insider purchases despite weak equity performance.",
+      "pubDate": "2026-01-07T16:21:27.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "6h ago"
+    },
+    {
+      "title": "The Protocol: Ledger customer data breached from Global-e platform",
+      "link": "https://www.coindesk.com/tech/2026/01/07/the-protocol-ledger-customer-data-breached-from-global-e-platform",
+      "description": "Also: Starknet goes down, Vitalik Buterin's goals for Ethereum and ETH staking queues cleared.",
+      "pubDate": "2026-01-07T16:20:38.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "6h ago"
+    },
+    {
+      "title": "A16z Crypto buys $15 million in BABY tokens to fund Babylon&#8217;s buildout of new BTCVaults",
+      "link": "https://www.theblock.co/post/384636/a16z-crypto-buys-15-million-in-baby-tokens-to-fund-babylons-buildout-of-new-btcvaults?utm_source=rss&amp;utm_medium=rss",
+      "description": "Babylon's vaults allow native Bitcoin to be verifiably locked as collateral while remaining on the Bitcoin blockchain.",
+      "pubDate": "2026-01-07T15:10:49.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "7h ago"
+    },
+    {
+      "title": "Former Brazil central bank official unveils real-pegged stablecoin with yield sharing",
+      "link": "https://www.coindesk.com/business/2026/01/07/former-brazil-central-bank-official-unveils-real-pegged-stablecoin-with-yield-sharing",
+      "description": "The stablecoin will be backed by Brazil's National Treasury bonds and offer exposure to the country's interest rate, currently 15%.",
+      "pubDate": "2026-01-07T14:14:32.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "8h ago"
+    },
+    {
+      "title": "CoinDesk 20 Performance Update: Uniswap (UNI) Falls 1.5% as Index Trades Lower",
+      "link": "https://www.coindesk.com/coindesk-indices/2026/01/07/coindesk-20-performance-update-uniswap-uni-falls-1-5-as-index-trades-lower",
+      "description": "Hedera (HBAR) was also among the underperformers, down 1.4% from Tuesday.",
+      "pubDate": "2026-01-07T14:13:18.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "8h ago"
+    },
+    {
+      "title": "CoinFlip launches payroll-based crypto investing benefit for US employees",
+      "link": "<![CDATA[https://cointelegraph.com/news/coinflip-payroll-crypto-investing-401k-retirement-trend?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "CoinFlip unveiled a payroll-based crypto investing option as employers and policymakers explore broader access to digital assets and retirement-linked investing.",
+      "pubDate": "2026-01-07T14:00:00.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "9h ago"
+    },
+    {
+      "title": "2025 crypto bear market was ‘repricing’ year for institutional capital: Analyst",
+      "link": "<![CDATA[https://cointelegraph.com/news/2025-crypto-bear-market-repricing-institutional-capital-analyst?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "DeFi and smart contract-tied cryptocurrencies fell by over 66% during 2025, but analysts are pointing to maturing digital asset valuations due to incoming institutional capital.",
+      "pubDate": "2026-01-07T13:47:43.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "9h ago"
+    },
+    {
+      "title": "Babylon Labs raises $15 million from a16z crypto to develop Bitcoin collateral infrastructure",
+      "link": "https://www.coindesk.com/business/2026/01/07/babylon-labs-raises-usd15-million-from-a16z-crypto-to-develop-bitcoin-collateral-infrastructure",
+      "description": "Funding will be used to build and scale Babylon Trustless BTCVaults, enabling native bitcoin to be used as onchain collateral without custodians or wrapping.",
+      "pubDate": "2026-01-07T13:43:09.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "9h ago"
+    },
+    {
+      "title": "J.P. Morgan’s Deposit Token to Be Issued Natively on Canton Network",
+      "link": "https://thedefiant.io/news/defi/j-p-morgan-s-deposit-token-to-be-issued-natively-on-canton-network",
+      "pubDate": "2026-01-07T13:00:13.000Z",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
+      "category": "defi",
+      "timeAgo": "10h ago"
+    },
+    {
+      "title": "Morgan Stanley adds Ethereum staking ETF filing to growing crypto lineup",
+      "link": "<![CDATA[https://cointelegraph.com/news/morgan-stanley-files-staking-eth-etf-third-crypto-fund?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "The investment banking giant is seeking to capture additional yield from the proposed ETF’s Ether holdings via staking, as institutional investors launch more regulated crypto funds.",
+      "pubDate": "2026-01-07T12:29:57.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "10h ago"
+    },
+    {
+      "title": "Morgan Stanley widens crypto bet with proposed spot Ethereum ETF after Bitcoin and Solana filings",
+      "link": "https://www.theblock.co/post/384603/morgan-stanley-spot-ethereum-etf?utm_source=rss&amp;utm_medium=rss",
+      "description": "Morgan Stanley has filed with the SEC for a spot Ethereum ETF that includes staking exposure hours after submitting BTC and SOL ETF filings.",
+      "pubDate": "2026-01-07T11:58:17.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "11h ago"
+    },
+    {
+      "title": "US Bankers Warn Stablecoin Yield Workarounds Threaten Local Lending",
+      "link": "https://decrypt.co/353818/us-bankers-warn-stablecoin-yield-workarounds-threaten-local-lending",
+      "description": "Industry figures argued that banks’ concerns are valid but exaggerated, urging the creation of comparable rules without stifling innovation.",
+      "pubDate": "2026-01-07T10:21:39.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "12h ago"
+    },
+    {
+      "title": "Bitcoin Dips to $92K as Liquidations Top $440M",
+      "link": "https://decrypt.co/353812/bitcoin-dips-to-92k-as-liquidations-top-440m",
+      "description": "Bitcoin has slipped from highs near $94,000 as selling pressure returned, exposing the rally’s thin leverage despite improving liquidity.",
+      "pubDate": "2026-01-07T03:54:43.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "19h ago"
+    },
+    {
+      "title": "Global Index Maker MSCI Defers Decision on Dropping Crypto-Focused Companies",
+      "link": "https://decrypt.co/353804/msci-defers-decision-dropping-crypto-focused-companies",
+      "description": "MSCI will keep crypto-heavy firms in its indexes through February, deferring changes after investor feedback raised classification concerns.",
+      "pubDate": "2026-01-07T00:15:36.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "22h ago"
+    },
+    {
+      "title": "Investors Eye Venezuela’s Bitcoin Stash Following Maduro’s Capture",
+      "link": "https://thedefiant.io/news/markets/investors-eye-venezuela-s-bitcoin-stash-following-maduro-s-capture",
+      "pubDate": "2026-01-06T23:10:13.000Z",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
+      "category": "defi",
+      "timeAgo": "23h ago"
+    },
+    {
+      "title": "MSCI Will Not Exclude Bitcoin Treasury Companies Like Michael Saylor’s Strategy From Global Indexes",
+      "link": "https://bitcoinmagazine.com/featured/msci-will-not-exclude-strategy-index",
+      "description": "Bitcoin Magazine\n\nMSCI Will Not Exclude Bitcoin Treasury Companies Like Michael Saylor’s Strategy From Global Indexes\nMSCI has ended its review of digital asset treasury companies and opted to keep th",
+      "pubDate": "2026-01-06T21:44:51.000Z",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
+      "category": "bitcoin",
+      "timeAgo": "yesterday"
+    },
+    {
+      "title": "Crypto Markets Trade Mixed as Bitcoin Pulls Back",
+      "link": "https://thedefiant.io/news/markets/crypto-markets-trade-mixed-as-bitcoin-pulls-back",
+      "pubDate": "2026-01-06T20:03:50.000Z",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
+      "category": "defi",
+      "timeAgo": "yesterday"
+    },
+    {
+      "title": "Kraken’s Ink Layer 2 Surpasses $500 Million in TVL",
+      "link": "https://thedefiant.io/news/blockchains/kraken-s-ink-layer-2-surpasses-usd500-million-in-tvl",
+      "pubDate": "2026-01-06T19:38:03.000Z",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
+      "category": "defi",
+      "timeAgo": "yesterday"
+    },
+    {
+      "title": "How Digital Asset Treasuries Went Mainstream in 2025",
+      "link": "https://thedefiant.io/news/tradfi-and-fintech/how-digital-asset-treasuries-went-mainstream-in-2025",
+      "pubDate": "2026-01-06T18:59:19.000Z",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
+      "category": "defi",
+      "timeAgo": "yesterday"
+    },
+    {
+      "title": "Ethereum’s “HTTP Moment” with Marissa Posner &amp;  Yoav Weiss",
+      "link": "https://thedefiant.io/podcasts-and-videos/podcast/ethereum-s-http-moment-with-marissa-posner-and-yoav-weiss",
+      "pubDate": "2026-01-06T17:50:53.000Z",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
+      "category": "defi",
+      "timeAgo": "yesterday"
+    }
+  ],
+  "totalCount": 122,
+  "sources": [
+    "Decrypt",
+    "The Defiant",
+    "CoinTelegraph",
+    "The Block",
+    "CoinDesk",
+    "Bitcoin Magazine"
+  ],
+  "fetchedAt": "2026-01-07T23:09:52.695Z",
+  "cachedAt": "2026-01-07T23:09:48.000Z",
+  "source": "failsafe-cache"
 }

@@ -1,7 +1,316 @@
 {
-  "cachedAt": "2026-01-07T00:00:00.000Z",
-  "source": "failsafe-cache",
-  "count": 0,
-  "articles": [],
-  "message": "Cache will be populated by GitHub Actions workflow"
+  "articles": [
+    {
+      "title": "Babylon receives $15M from a16z Crypto to expand Bitcoin-native lending",
+      "link": "<![CDATA[https://cointelegraph.com/news/babylon-raises-15m-from-a16z-crypto-to-unlock-bitcoin-for-staking-and-onchain-credit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "The investment was made through the purchase of BABY tokens to support the development of Babylon’s trustless Bitcoin collateral infrastructure.",
+      "pubDate": "2026-01-07T20:48:35.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "2h ago"
+    },
+    {
+      "title": "60K Bitcoin absorbed by accumulators as miners send it to exchanges: Will rally stall?",
+      "link": "<![CDATA[https://cointelegraph.com/news/60k-btc-absorbed-as-miners-back-off-will-bitcoin-s-rally-lose-steam?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Bitcoin accumulators absorbed 60,000 BTC, but miners sending their rewards to exchanges could lead to overhanging sell pressure.",
+      "pubDate": "2026-01-07T20:45:00.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "2h ago"
+    },
+    {
+      "title": "Bitcoin Price Teeters Near $90,000 as Early-2026 Rally Falters",
+      "link": "https://bitcoinmagazine.com/markets/bitcoin-price-teeters-at-91000",
+      "description": "Bitcoin Magazine\n\nBitcoin Price Teeters Near $90,000 as Early-2026 Rally Falters\nThe bitcoin price is hovering near $90,000 after pulling back from early-January highs as traders weighed fading moment",
+      "pubDate": "2026-01-07T20:30:24.000Z",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
+      "category": "bitcoin",
+      "timeAgo": "2h ago"
+    },
+    {
+      "title": "Top Self Custody Bitcoin Wallets for 2026",
+      "link": "https://bitcoinmagazine.com/business/top-self-custody-bitcoin-wallets-for-2026",
+      "description": "Bitcoin Magazine\n\nTop Self Custody Bitcoin Wallets for 2026\nAs Bitcoin enters a new cycle, self-custody remains essential. Leading options for 2026 include Phoenix Wallet for Lightning excellence, Col",
+      "pubDate": "2026-01-07T20:24:22.000Z",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
+      "category": "bitcoin",
+      "timeAgo": "2h ago"
+    },
+    {
+      "title": "Bitcoin averages 100% return after down years: Will the pattern repeat in 2026?",
+      "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-averages-100percent-return-after-down-years-will-the-pattern-repeat-in-2026?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "History shows Bitcoin’s rare down years have been followed by triple-digit rebounds, keeping 2026 firmly on traders’ watchlists.",
+      "pubDate": "2026-01-07T19:45:00.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "3h ago"
+    },
+    {
+      "title": "Alleged Crypto Scam Kingpin Arrested in Cambodia After $12 Billion Bitcoin Seizure",
+      "link": "https://decrypt.co/353897/alleged-crypto-scam-kingpin-arrested-cambodia-12-billion-bitcoin-seizure",
+      "description": "The alleged mastermind of a major crypto scam ring that stole billions was arrested in Cambodia this week and extradited to China.",
+      "pubDate": "2026-01-07T19:42:05.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "3h ago"
+    },
+    {
+      "title": "Here’s what happened in crypto today",
+      "link": "<![CDATA[https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+      "pubDate": "2026-01-07T18:59:02.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "4h ago"
+    },
+    {
+      "title": "Price predictions 1/7: BTC, ETH, XRP, BNB, SOL, DOGE, ADA, BCH, LINK, HYPE",
+      "link": "<![CDATA[https://cointelegraph.com/news/price-predictions-1-7-btc-eth-xrp-bnb-sol-doge-ada-bch-link-hype?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Bitcoin and select major altcoins are facing selling near their overhead resistance levels, but the pullback is expected to find support at the nearest moving averages.",
+      "pubDate": "2026-01-07T18:34:54.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "4h ago"
+    },
+    {
+      "title": "Strategy ($MSTR) Jumps 7% After MSCI Decides Against Excluding Bitcoin Treasury Firms",
+      "link": "https://bitcoinmagazine.com/markets/strategy-mstr-jumps-7-after-msci-news",
+      "description": "Bitcoin Magazine\n\nStrategy ($MSTR) Jumps 7% After MSCI Decides Against Excluding Bitcoin Treasury Firms\nStrategy shares (MSTR) jumped after MSCI decided not to exclude bitcoin-heavy firms from its ind",
+      "pubDate": "2026-01-07T18:15:34.000Z",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
+      "category": "bitcoin",
+      "timeAgo": "4h ago"
+    },
+    {
+      "title": "Alleged crypto scam boss linked to $15 billion bitcoin haul deported to China after Cambodia arrest",
+      "link": "https://www.theblock.co/post/384674/alleged-crypto-scam-boss-linked-15-billion-bitcoin-deported-china-cambodia-arrest?utm_source=rss&amp;utm_medium=rss",
+      "description": "The case has become a flashpoint in a broader dispute over the origin and ownership of billions of dollars’ worth of seized bitcoin.",
+      "pubDate": "2026-01-07T17:33:33.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "5h ago"
+    },
+    {
+      "title": "Dow Jones to Add Polymarket Prediction Data Across WSJ, Barron’s Platforms",
+      "link": "https://bitcoinmagazine.com/news/dow-jones-to-add-polymarket-data",
+      "description": "Bitcoin Magazine\n\nDow Jones to Add Polymarket Prediction Data Across WSJ, Barron’s Platforms\nDow Jones will integrate Polymarket’s real-time prediction market data across its major financial news plat",
+      "pubDate": "2026-01-07T17:28:57.000Z",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
+      "category": "bitcoin",
+      "timeAgo": "5h ago"
+    },
+    {
+      "title": "Riot Platforms offloads $161M in Bitcoin in December amid strategy shift",
+      "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-miner-riot-platforms-sells-161-million-btc-december?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "The Bitcoin miner sold 1,818 BTC and said it will end monthly production updates as it shifts toward a broader data center and infrastructure strategy.",
+      "pubDate": "2026-01-07T17:14:25.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "5h ago"
+    },
+    {
+      "title": "Bitcoin vs. luxury homes: How China’s wealthy are rethinking stores of value",
+      "link": "<![CDATA[https://cointelegraph.com/explained/bitcoin-vs-luxury-homes-how-china-s-wealthy-are-rethinking-stores-of-value?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "From Shenzhen Bay luxury homes to Bitcoin, affluent Chinese investors are reassessing stores of value as views on liquidity, mobility and risk continue to shift.",
+      "pubDate": "2026-01-07T16:42:47.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "6h ago"
+    },
+    {
+      "title": "Bitcoin 'not likely' to make new all-time high in 2026, says new research",
+      "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-not-likely-new-all-time-high-in-2026-new-research?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Bitcoin long-term short signals from trading tools led analysis to conclude that no new BTC price all-time high would come this year.",
+      "pubDate": "2026-01-07T16:42:26.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "6h ago"
+    },
+    {
+      "title": "First 2026 Dip! BTC at 92K! Morgan Stanley file for BTC, ETH &amp; SOL ETFs! Hyperliquid Airdrop Speculation!",
+      "link": "https://decrypt.co/videos/interviews/GVQVX2ND/first-2026-dip-btc-at-92k-morgan-stanley-file-for-btc-eth-sol-etfs-hyperliquid-airdrop-speculation",
+      "description": "Crypto majors fall for first time in 2026; BTC at $92k. Morgan Stanley files for BTC, ETH and SOL ETFs. US Senate schedules key vote for crypto market structure bill for next week. Hyperliquid release",
+      "pubDate": "2026-01-07T16:14:54.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "6h ago"
+    },
+    {
+      "title": "YouTube Rival Rumble Debuts Bitcoin, Tether Wallet for Crypto Creator Tips",
+      "link": "https://decrypt.co/353852/youtube-rival-rumble-debuts-bitcoin-tether-wallet-crypto-creator-tips",
+      "description": "Publicly traded video streaming firm Rumble released its crypto wallet built with help from stablecoin giant Tether and payments firm MoonPay.",
+      "pubDate": "2026-01-07T16:05:27.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "7h ago"
+    },
+    {
+      "title": "Crypto selloff accelerates, sending bitcoin back to $91,000",
+      "link": "https://www.coindesk.com/markets/2026/01/07/crypto-selloff-accelerates-sending-bitcoin-back-to-usd91-000",
+      "description": "Strategy is an outperformer following MSCI's decision not to exclude the stock from its indices, but any positive reaction was muted by the decline in BTC.",
+      "pubDate": "2026-01-07T15:46:48.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "7h ago"
+    },
+    {
+      "title": "A16z Crypto buys $15 million in BABY tokens to fund Babylon&#8217;s buildout of new BTCVaults",
+      "link": "https://www.theblock.co/post/384636/a16z-crypto-buys-15-million-in-baby-tokens-to-fund-babylons-buildout-of-new-btcvaults?utm_source=rss&amp;utm_medium=rss",
+      "description": "Babylon's vaults allow native Bitcoin to be verifiably locked as collateral while remaining on the Bitcoin blockchain.",
+      "pubDate": "2026-01-07T15:10:49.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "7h ago"
+    },
+    {
+      "title": "Rumble Launches Crypto Wallet With Tether Allowing Direct Creator Payments in Bitcoin and Crypto",
+      "link": "https://bitcoinmagazine.com/news/rumble-launches-crypto-wallet-with-tether",
+      "description": "Bitcoin Magazine\n\nRumble Launches Crypto Wallet With Tether Allowing Direct Creator Payments in Bitcoin and Crypto\nRumble on Wednesday announced the launch of a new digital wallet built in partnership",
+      "pubDate": "2026-01-07T14:59:32.000Z",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
+      "category": "bitcoin",
+      "timeAgo": "8h ago"
+    },
+    {
+      "title": "Bitcoin price falls despite 'really bullish' MSCI update: What went wrong?",
+      "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-price-falls-despite-bullish-msci-what-went-wrong?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "MSCI’s rule change on newly issued shares reshapes passive demand, raising questions over how Bitcoin-linked treasury companies fund future BTC purchases.",
+      "pubDate": "2026-01-07T14:43:02.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "8h ago"
+    },
+    {
+      "title": "Rumble introduces crypto wallet with Tether, allowing tips in BTC, USDT, XAUT",
+      "link": "https://www.coindesk.com/markets/2026/01/07/rumble-shares-jump-5-after-launching-crypto-wallet-with-tether",
+      "description": "Integrated into the Rumble app, the non-custodial wallet allows fans to tip content producers.",
+      "pubDate": "2026-01-07T14:12:27.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "8h ago"
+    },
+    {
+      "title": "BTC Inc Standardizes Bitcoin Operations Using BTCPay Server Across Events, Payroll, and Treasury",
+      "link": "https://bitcoinmagazine.com/news/btc-inc-standardizes-bitcoin-operations-using-btcpay-server-across-events-payroll-and-treasury",
+      "description": "Bitcoin Magazine\n\nBTC Inc Standardizes Bitcoin Operations Using BTCPay Server Across Events, Payroll, and Treasury\nBTC Inc has rebuilt its events, payroll, and treasury operations around the self-cust",
+      "pubDate": "2026-01-07T14:10:42.000Z",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
+      "category": "bitcoin",
+      "timeAgo": "8h ago"
+    },
+    {
+      "title": "Bitcoin ETFs Shed $243M as Crypto Market Rally Cools",
+      "link": "https://decrypt.co/353832/bitcoin-etfs-shed-243m-as-crypto-market-rally-cools",
+      "description": "Analysts called the outflows from spot Bitcoin ETFs a temporary repositioning rather than a structural shift in sentiment.",
+      "pubDate": "2026-01-07T13:54:45.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "9h ago"
+    },
+    {
+      "title": "Babylon Labs raises $15 million from a16z crypto to develop Bitcoin collateral infrastructure",
+      "link": "https://www.coindesk.com/business/2026/01/07/babylon-labs-raises-usd15-million-from-a16z-crypto-to-develop-bitcoin-collateral-infrastructure",
+      "description": "Funding will be used to build and scale Babylon Trustless BTCVaults, enabling native bitcoin to be used as onchain collateral without custodians or wrapping.",
+      "pubDate": "2026-01-07T13:43:09.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "9h ago"
+    },
+    {
+      "title": "Morning Minute: Morgan Stanley Files for Bitcoin, ETH and Solana ETFs",
+      "link": "https://decrypt.co/353827/morning-minute-morgan-stanley-files-for-bitcoin-eth-and-solana-etfs",
+      "description": "Major banks are beating down the doors to get into the crypto game, and Morgan Stanley just became the first major player to make an ETF move.",
+      "pubDate": "2026-01-07T13:39:35.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "9h ago"
+    },
+    {
+      "title": "Tether-backed Rumble launches crypto wallet, letting fans tip creators in bitcoin and USDT",
+      "link": "https://www.theblock.co/post/384625/tether-backed-rumble-crypto-wallet-bitcoin-usdt?utm_source=rss&amp;utm_medium=rss",
+      "description": "Rumble and Tether have launched a non-custodial crypto wallet that powers native tipping for creators using bitcoin, USDT, and Tether Gold.",
+      "pubDate": "2026-01-07T13:24:52.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "9h ago"
+    },
+    {
+      "title": "Morgan Stanley Adds Ethereum Trust To Planned Crypto ETF Lineup",
+      "link": "https://decrypt.co/353829/morgan-stanley-adds-ethereum-trust-to-planned-crypto-etf-lineup",
+      "description": "The bank has filed a Form S-1 with the U.S. SEC for an Ethereum Trust, on the heels of its applications for Bitcoin and Solana ETFs.",
+      "pubDate": "2026-01-07T13:03:18.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "10h ago"
+    },
+    {
+      "title": "Strategy’s STRC perpetual preferred stock returns to $100, may trigger more bitcoin buying",
+      "link": "https://www.coindesk.com/markets/2026/01/07/strategy-s-strc-perpetual-preferred-stock-returns-to-usd100-may-trigger-more-bitcoin-buying",
+      "description": "The bitcoin treasury company's perpetual preferred equity, STRC, hit $100 for the first time since early November.",
+      "pubDate": "2026-01-07T12:30:15.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "10h ago"
+    },
+    {
+      "title": "Riot sells $162 million in bitcoin as mining hashprice slumps back toward lows",
+      "link": "https://www.theblock.co/post/384598/riot-sells-bitcoin-mining-hashprice-slump?utm_source=rss&amp;utm_medium=rss",
+      "description": "Riot’s record December bitcoin sale reduced its treasury to 18,005 BTC as mining profitability remained under pressure.",
+      "pubDate": "2026-01-07T12:19:16.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "10h ago"
+    },
+    {
+      "title": "Morgan Stanley widens crypto bet with proposed spot Ethereum ETF after Bitcoin and Solana filings",
+      "link": "https://www.theblock.co/post/384603/morgan-stanley-spot-ethereum-etf?utm_source=rss&amp;utm_medium=rss",
+      "description": "Morgan Stanley has filed with the SEC for a spot Ethereum ETF that includes staking exposure hours after submitting BTC and SOL ETF filings.",
+      "pubDate": "2026-01-07T11:58:17.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "11h ago"
+    }
+  ],
+  "totalCount": 71,
+  "sources": [
+    "CoinTelegraph",
+    "Bitcoin Magazine",
+    "Decrypt",
+    "The Block",
+    "CoinDesk",
+    "The Defiant"
+  ],
+  "fetchedAt": "2026-01-07T23:09:52.385Z",
+  "cachedAt": "2026-01-07T23:09:48.000Z",
+  "source": "failsafe-cache"
 }
