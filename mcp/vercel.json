@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "http-server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "http-server.js"
+    }
+  ],
+  "env": {
+    "API_BASE": "https://free-crypto-news.vercel.app"
+  }
+}
