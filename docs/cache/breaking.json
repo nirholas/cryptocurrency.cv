@@ -1,6 +1,65 @@
 {
   "articles": [
     {
+      "title": "Here’s what happened in crypto today",
+      "link": "<![CDATA[https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+      "pubDate": "2026-01-08T17:49:19.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "18m ago"
+    },
+    {
+      "title": "Zcash Plunges 20% After Entire Core Team Exits Amid Dispute",
+      "link": "https://thedefiant.io/news/blockchains/zcash-plunges-20-after-entire-core-team-exits-amid-dispute",
+      "pubDate": "2026-01-08T17:44:48.000Z",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
+      "category": "defi",
+      "timeAgo": "23m ago"
+    },
+    {
+      "title": "Trump’s Second Term Creates Rare ‘Golden Window’ for Any Crypto Policy Progress: Report",
+      "link": "https://bitcoinmagazine.com/news/td-cowen-rare-golden-window-for-crypto",
+      "description": "Bitcoin Magazine\n\nTrump’s Second Term Creates Rare ‘Golden Window’ for Any Crypto Policy Progress: Report\nTD Cowen says Trump’s second term offers a rare chance for crypto progress in 2026, with dereg",
+      "pubDate": "2026-01-08T17:39:57.000Z",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
+      "category": "bitcoin",
+      "timeAgo": "28m ago"
+    },
+    {
+      "title": "Why South Korea is struggling to decide who can issue stablecoins",
+      "link": "<![CDATA[https://cointelegraph.com/news/why-south-korea-is-struggling-to-decide-who-can-issue-stablecoins?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "South Korea’s stablecoin rules are stalled as regulators clash over whether banks or fintechs should issue won-backed tokens.",
+      "pubDate": "2026-01-08T17:30:00.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "38m ago"
+    },
+    {
+      "title": "Google Just Overhauled Gmail With Gemini 3, Turning It Into an AI Assistant",
+      "link": "https://decrypt.co/353987/google-just-overhauled-gmail-gemini-3-ai-assistant",
+      "description": "Google integrated Gemini 3 into Gmail, transforming the inbox into an assistant with summaries, drafting tools, and new privacy controls.",
+      "pubDate": "2026-01-08T17:12:41.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "55m ago"
+    },
+    {
+      "title": "The ZCash situation explained! Interview with ZEC bull Mert! BTC below $90K! ZEC falls 19%!",
+      "link": "https://decrypt.co/videos/interviews/wmsgKRFW/the-zcash-situation-explained-interview-with-zec-bull-mert-btc-below-90k-zec-falls-19",
+      "description": "Crypto majors fell again yesterday as btc lost $90k; btc -2% at $89,900; eth -3% at $3,100, sol -3% at $134; xrp -7% to $2.08. Lit (+3%), wlfi (+3%) and xmr (+3%) led top movers. Zec fell 19% after th",
+      "pubDate": "2026-01-08T17:04:56.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "1h ago"
+    },
+    {
       "title": "$50K or $250K? Top crypto companies are divided on Bitcoin's trajectory in 2026",
       "link": "<![CDATA[https://cointelegraph.com/news/top-crypto-companies-split-bitcoin-2026-outlook?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "In the latest Cointelegraph video, we break down the 2026 Bitcoin forecasts from top crypto companies and the trends shaping the market ahead.",
@@ -8,7 +67,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "9m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Stand With Crypto: Primary goal for 2026 is crypto market structure",
@@ -18,7 +77,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "10m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Bank of America Upgrades Coinbase to &#39;Buy&#39; on Base Prospects, Tokenization Tailwinds",
@@ -28,7 +87,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "21m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "XRP ETFs see $40M of outflows after eight-week run of inflows",
@@ -38,7 +97,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "27m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Bitcoin vs. gold vs. silver in 2026: How investors are repricing scarcity",
@@ -48,7 +107,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "35m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Will a Supreme Court Ruling Against Trump Cause a Bitcoin Crash?",
@@ -58,7 +117,17 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "36m ago"
+      "timeAgo": "1h ago"
+    },
+    {
+      "title": "Privacy debate flares in crypto community days after Europe&#8217;s DAC8 tax regime takes effect",
+      "link": "https://www.theblock.co/post/384790/privacy-debate-flares-in-crypto-community-days-after-europes-dac8-tax-regime-takes-effect?utm_source=rss&amp;utm_medium=rss",
+      "description": "Europe’s new crypto tax reporting regime has taken effect, igniting a fierce debate over privacy as exchanges begin sharing user data.",
+      "pubDate": "2026-01-08T16:32:19.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "1h ago"
     },
     {
       "title": "Zcash governance clash tanked the token. Here's why it may not be as big as it seems.",
@@ -68,7 +137,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "40m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Bitcoin bounces to $90,500 after testing key support of $89,200",
@@ -78,7 +147,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "52m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Optimism Foundation proposes monthly OP token buybacks",
@@ -88,7 +157,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "52m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Monero retakes privacy crown as Zcash turmoil rattles rally",
@@ -98,7 +167,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "58m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Ethereum is the Linux of blockchain, says co-founder Vitalik Buterin",
@@ -108,7 +177,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "59m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Bitcoin on Exchanges Can Be Legally Seized in South Korea, Supreme Court Affirms",
@@ -118,78 +187,19 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "59m ago"
-    },
-    {
-      "title": "Crypto for Advisors: 2026: Crypto and Beyond",
-      "link": "https://www.coindesk.com/coindesk-indices/2026/01/07/crypto-for-advisors-2026-crypto-and-beyond",
-      "description": "2026 is here. The crypto year ahead: banks, stablecoins, tokenization. Discover why the biggest risk for advisors is now under-allocation.",
-      "pubDate": "2026-01-08T16:00:00.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Polygon Labs unveils ‘Open Money Stack’ to power borderless stablecoin payments",
-      "link": "https://www.coindesk.com/business/2026/01/08/polygon-labs-unveils-open-money-stack-to-power-borderless-stablecoin-payments",
-      "description": "The system will bring together various elements of the payment stack, including liquidity, orchestration, and regulatory controls.",
-      "pubDate": "2026-01-08T16:00:00.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Zcash governance in turmoil: How low can ZEC price go?",
-      "link": "<![CDATA[https://cointelegraph.com/news/zcash-governance-turmoil-how-low-can-zec-price-go?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Zcash's technical and fundamental catalysts raise the odds of ZEC price declining to as low as $200 in the coming weeks after core developers exited the project.",
-      "pubDate": "2026-01-08T15:53:03.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Bitcoin trader maintains $76K BTC price target as 2026 comeback fizzles",
-      "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-trader-maintains-76k-btc-price-target-as-2026-comeback-fizzles?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Bearish BTC price takes are back in full force as Bitcoin gave back the majority of its 2026 recovery, when bulls failed to overcome $95,000 resistance.",
-      "pubDate": "2026-01-08T15:26:32.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Optimism proposes OP token buybacks using 50% of superchain revenue",
-      "link": "https://www.coindesk.com/business/2026/01/08/optimism-proposes-op-token-buybacks-using-50-of-superchain-revenue",
-      "description": "Under the proposal, which is set to move to a governance vote on January 22, Optimism would begin monthly buybacks starting in February.",
-      "pubDate": "2026-01-08T15:15:00.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "JPMorgan says the crypto selloff may be nearing a bottom as ETF outflows ease",
-      "link": "https://www.coindesk.com/markets/2026/01/08/jpmorgan-says-the-crypto-selloff-may-be-nearing-a-bottom-as-etf-outflows-ease",
-      "description": "Flow and positioning data suggest the recent crypto market correction may be running out of steam, with early signs of stabilization across ETFs and derivatives.",
-      "pubDate": "2026-01-08T15:11:00.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
       "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 19,
   "sources": [
     "CoinTelegraph",
+    "The Defiant",
+    "Bitcoin Magazine",
     "Decrypt",
     "CoinDesk",
-    "Bitcoin Magazine",
     "The Block"
   ],
-  "fetchedAt": "2026-01-08T17:09:37.154Z",
-  "cachedAt": "2026-01-08T17:09:21.000Z",
+  "fetchedAt": "2026-01-08T18:08:05.933Z",
+  "cachedAt": "2026-01-08T18:07:46.000Z",
   "source": "failsafe-cache"
 }

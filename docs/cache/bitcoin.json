@@ -1,6 +1,36 @@
 {
   "articles": [
     {
+      "title": "Here’s what happened in crypto today",
+      "link": "<![CDATA[https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+      "pubDate": "2026-01-08T17:49:19.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "18m ago"
+    },
+    {
+      "title": "Trump’s Second Term Creates Rare ‘Golden Window’ for Any Crypto Policy Progress: Report",
+      "link": "https://bitcoinmagazine.com/news/td-cowen-rare-golden-window-for-crypto",
+      "description": "Bitcoin Magazine\n\nTrump’s Second Term Creates Rare ‘Golden Window’ for Any Crypto Policy Progress: Report\nTD Cowen says Trump’s second term offers a rare chance for crypto progress in 2026, with dereg",
+      "pubDate": "2026-01-08T17:39:57.000Z",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
+      "category": "bitcoin",
+      "timeAgo": "27m ago"
+    },
+    {
+      "title": "The ZCash situation explained! Interview with ZEC bull Mert! BTC below $90K! ZEC falls 19%!",
+      "link": "https://decrypt.co/videos/interviews/wmsgKRFW/the-zcash-situation-explained-interview-with-zec-bull-mert-btc-below-90k-zec-falls-19",
+      "description": "Crypto majors fell again yesterday as btc lost $90k; btc -2% at $89,900; eth -3% at $3,100, sol -3% at $134; xrp -7% to $2.08. Lit (+3%), wlfi (+3%) and xmr (+3%) led top movers. Zec fell 19% after th",
+      "pubDate": "2026-01-08T17:04:56.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "1h ago"
+    },
+    {
       "title": "$50K or $250K? Top crypto companies are divided on Bitcoin's trajectory in 2026",
       "link": "<![CDATA[https://cointelegraph.com/news/top-crypto-companies-split-bitcoin-2026-outlook?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "In the latest Cointelegraph video, we break down the 2026 Bitcoin forecasts from top crypto companies and the trends shaping the market ahead.",
@@ -8,7 +38,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "9m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Bitcoin vs. gold vs. silver in 2026: How investors are repricing scarcity",
@@ -18,7 +48,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "35m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Will a Supreme Court Ruling Against Trump Cause a Bitcoin Crash?",
@@ -28,7 +58,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "36m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Bitcoin bounces to $90,500 after testing key support of $89,200",
@@ -38,7 +68,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "52m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Bitcoin on Exchanges Can Be Legally Seized in South Korea, Supreme Court Affirms",
@@ -48,23 +78,13 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "59m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Bitcoin trader maintains $76K BTC price target as 2026 comeback fizzles",
       "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-trader-maintains-76k-btc-price-target-as-2026-comeback-fizzles?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "Bearish BTC price takes are back in full force as Bitcoin gave back the majority of its 2026 recovery, when bulls failed to overcome $95,000 resistance.",
       "pubDate": "2026-01-08T15:26:32.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Here’s what happened in crypto today",
-      "link": "<![CDATA[https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-      "pubDate": "2026-01-08T14:48:04.000Z",
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
@@ -78,7 +98,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "2h ago"
+      "timeAgo": "3h ago"
     },
     {
       "title": "Crypto Liquidations Top $477M as Bitcoin Slips Below $90K",
@@ -88,7 +108,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "Florida narrows scope of revived Bitcoin reserve proposal for 2026",
@@ -98,7 +118,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "Crypto Crime Soared to $154 Billion in 2025 as Russia, North Korea, and Iran Exploit Blockchain Tech",
@@ -108,7 +128,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Bitcoin slips back below $90,000 after early-2026 rally fades",
@@ -118,7 +138,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Florida revives push for bitcoin reserve with new 2026 bill",
@@ -128,7 +148,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Bitcoin falls below $90,000 as altcoins slide in thin trading: Crypto Markets Today",
@@ -138,7 +158,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "5h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "Bitcoin's market rhymes as identical November lows create familiar January setup",
@@ -148,7 +168,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "5h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "Bitcoin price may bottom at $88K next cycle if last CME gap stays open",
@@ -158,7 +178,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "XRP ETFs notch first outflows as nearly $600M exits Bitcoin, Ether funds",
@@ -168,7 +188,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "8h ago"
+      "timeAgo": "9h ago"
     },
     {
       "title": "Spot XRP ETFs see first net outflows since debut, worth $41 million",
@@ -178,7 +198,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "10h ago"
+      "timeAgo": "11h ago"
     },
     {
       "title": "Morgan Stanley’s Bitcoin ETF could offer strategic value beyond inflows, analysts say",
@@ -188,7 +208,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "11h ago"
+      "timeAgo": "12h ago"
     },
     {
       "title": "Bitcoin drops below $90,000 after early January pop as BTC ETFs see $480 million outflows",
@@ -198,7 +218,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "12h ago"
+      "timeAgo": "13h ago"
     },
     {
       "title": "XRP slips 5% as CNBC terms it 'hottest trade' of 2026 over bitcoin and ether",
@@ -208,7 +228,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "12h ago"
+      "timeAgo": "13h ago"
     },
     {
       "title": "Three Catalysts That Could Kickstart a Crypto Rally in 2026: Bitwise",
@@ -218,7 +238,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "13h ago"
+      "timeAgo": "14h ago"
     },
     {
       "title": "Bitcoin faces ‘boring sideways’ grind in coming months: CryptoQuant CEO",
@@ -228,7 +248,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "13h ago"
+      "timeAgo": "14h ago"
     },
     {
       "title": "Bitcoin Price Teeters Near $90,000 as Early-2026 Rally Falters",
@@ -238,7 +258,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "20h ago"
+      "timeAgo": "21h ago"
     },
     {
       "title": "Top Self Custody Bitcoin Wallets for 2026",
@@ -248,7 +268,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "20h ago"
+      "timeAgo": "21h ago"
     },
     {
       "title": "Alleged Crypto Scam Kingpin Arrested in Cambodia After $12 Billion Bitcoin Seizure",
@@ -258,7 +278,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "21h ago"
+      "timeAgo": "22h ago"
     },
     {
       "title": "Strategy ($MSTR) Jumps 7% After MSCI Decides Against Excluding Bitcoin Treasury Firms",
@@ -268,7 +288,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "22h ago"
+      "timeAgo": "23h ago"
     },
     {
       "title": "Alleged crypto scam boss linked to $15 billion bitcoin haul deported to China after Cambodia arrest",
@@ -278,39 +298,19 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "23h ago"
-    },
-    {
-      "title": "Dow Jones to Add Polymarket Prediction Data Across WSJ, Barron’s Platforms",
-      "link": "https://bitcoinmagazine.com/news/dow-jones-to-add-polymarket-data",
-      "description": "Bitcoin Magazine\n\nDow Jones to Add Polymarket Prediction Data Across WSJ, Barron’s Platforms\nDow Jones will integrate Polymarket’s real-time prediction market data across its major financial news plat",
-      "pubDate": "2026-01-07T17:28:57.000Z",
-      "source": "Bitcoin Magazine",
-      "sourceKey": "bitcoinmagazine",
-      "category": "bitcoin",
-      "timeAgo": "23h ago"
-    },
-    {
-      "title": "First 2026 Dip! BTC at 92K! Morgan Stanley file for BTC, ETH &amp; SOL ETFs! Hyperliquid Airdrop Speculation!",
-      "link": "https://decrypt.co/videos/interviews/GVQVX2ND/first-2026-dip-btc-at-92k-morgan-stanley-file-for-btc-eth-sol-etfs-hyperliquid-airdrop-speculation",
-      "description": "Crypto majors fall for first time in 2026; BTC at $92k. Morgan Stanley files for BTC, ETH and SOL ETFs. US Senate schedules key vote for crypto market structure bill for next week. Hyperliquid release",
-      "pubDate": "2026-01-07T16:14:54.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
       "timeAgo": "yesterday"
     }
   ],
-  "totalCount": 65,
+  "totalCount": 64,
   "sources": [
     "CoinTelegraph",
     "Bitcoin Magazine",
-    "CoinDesk",
     "Decrypt",
+    "CoinDesk",
     "The Block",
     "The Defiant"
   ],
-  "fetchedAt": "2026-01-08T17:09:28.330Z",
-  "cachedAt": "2026-01-08T17:09:21.000Z",
+  "fetchedAt": "2026-01-08T18:07:52.243Z",
+  "cachedAt": "2026-01-08T18:07:46.000Z",
   "source": "failsafe-cache"
 }
