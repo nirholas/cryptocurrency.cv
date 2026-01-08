@@ -48,7 +48,9 @@ interface PortfolioCoin {
 // Sanitize user-provided token query before using it in external requests
 function sanitizeSearchQuery(rawQuery: string): { value: string; isAddress: boolean } | null {
   const query = rawQuery.trim();
-  if (!query) {
+
+  // Reject empty or unreasonably long queries early to limit impact of tainted input
+  if (!query || query.length > 100) {
     return null;
   }
 
@@ -58,13 +60,17 @@ function sanitizeSearchQuery(rawQuery: string): { value: string; isAddress: bool
     return { value: query, isAddress: true };
   }
 
-  // For non-address searches, restrict to safe characters to avoid unexpected paths
-  const normalized = query
-    .toLowerCase()
-    .replace(/[^a-z0-9 _-]/g, '') // allow letters, digits, space, underscore, hyphen
-    .trim();
+  // For non-address searches, only allow expected token name/symbol characters.
+  // This prevents unexpected path/query manipulation in downstream requests.
+  const safePattern = /^[a-zA-Z0-9 _-]+$/;
+  if (!safePattern.test(query)) {
+    return null;
+  }
 
-  if (!normalized) {
+  const normalized = query.toLowerCase().trim();
+
+  // Require at least 2 characters after normalization to avoid meaningless lookups.
+  if (normalized.length < 2) {
     return null;
   }
 
