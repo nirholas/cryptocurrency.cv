@@ -1,13 +1,83 @@
 {
   "articles": [
     {
+      "title": "Zcash Plunges Double Digits After ECC Team ‘Constructively Discharged’",
+      "link": "https://decrypt.co/353948/zcash-plunges-double-digits-after-ecc-team-constructively-discharged",
+      "description": "In a statement, the board said that the disagreements stemmed from recent proposals to privatize the Zashi mobile wallet.",
+      "pubDate": "2026-01-08T13:00:18.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "18m ago"
+    },
+    {
+      "title": "Crypto Crime Soared to $154 Billion in 2025 as Russia, North Korea, and Iran Exploit Blockchain Tech",
+      "link": "https://bitcoinmagazine.com/news/crypto-crime-soared-to-154-billion-in-2025",
+      "description": "Bitcoin Magazine\n\nCrypto Crime Soared to $154 Billion in 2025 as Russia, North Korea, and Iran Exploit Blockchain Tech\nCrypto crime hit record highs in 2025, with illicit addresses receiving at least ",
+      "pubDate": "2026-01-08T13:00:00.000Z",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
+      "category": "bitcoin",
+      "timeAgo": "18m ago"
+    },
+    {
+      "title": "BNB falls below $885 as broader market pulls back and treasury tensions emerge",
+      "link": "https://www.coindesk.com/markets/2026/01/08/bnb-falls-below-usd885-as-broader-market-pulls-back-and-treasury-tensions-emerge",
+      "description": "The token's performance is likely impacted by a civil war within a major BNB treasury firm, where a shareholder is challenging the company's leadership.",
+      "pubDate": "2026-01-08T12:46:20.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "32m ago"
+    },
+    {
+      "title": "Florida revives push for bitcoin reserve with new 2026 bill",
+      "link": "https://www.coindesk.com/policy/2026/01/08/florida-revives-push-for-bitcoin-reserve-with-new-2026-bill",
+      "description": "House Bill 1039 would let Florida invest in crypto outside its treasury, reviving a withdrawn proposal and signaling the GOP’s growing embrace of ‘digital gold.’",
+      "pubDate": "2026-01-08T12:36:06.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "42m ago"
+    },
+    {
+      "title": "Binance expands into precious metals with gold, silver futures settled in USDT",
+      "link": "<![CDATA[https://cointelegraph.com/news/binance-gold-silver-perps-usdt-tradfi-settlement-layer?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Binance launched gold and silver perpetual futures settled in USDT, expanding crypto-denominated access to precious metals markets.",
+      "pubDate": "2026-01-08T12:32:48.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "45m ago"
+    },
+    {
+      "title": "Banks must upgrade their blockchain infrastructure",
+      "link": "<![CDATA[https://cointelegraph.com/news/banks-blockchain-infrastructure?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Banks risk falling behind if they cling to private blockchains. Upgrading to public, permissioned layer-2 infrastructure with ZK-proofs is essential for modern finance.",
+      "pubDate": "2026-01-08T12:30:00.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "48m ago"
+    },
+    {
+      "title": "Memecoins, DeFi lead declines as caution seeps in: Crypto Daybook Americas",
+      "link": "https://www.coindesk.com/daybook-us/2026/01/08/memecoins-defi-lead-declines-as-caution-seeps-in-crypto-daybook-americas",
+      "description": "Your day-ahead look for Jan. 8, 2026",
+      "pubDate": "2026-01-08T12:15:00.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "1h ago"
+    },
+    {
       "title": "Crypto Derivatives Market Reset After Oct. 10 Crash: BitMEX",
       "link": "https://thedefiant.io/news/cefi/crypto-derivatives-market-reset-after-oct-10-crash-bitmex",
       "pubDate": "2026-01-08T12:00:00.000Z",
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "10m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "October's crypto crash left market makers stuffed with coins, slowing trading: BitMEX",
@@ -17,7 +87,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "23m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "BNB treasury strategy sparks governance battle at CEA Industries",
@@ -27,17 +97,17 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "25m ago"
+      "timeAgo": "1h ago"
     },
     {
-      "title": "Bitcoin falls to $90,000 as altcoins slide in thin trading: Crypto Markets Today",
+      "title": "Bitcoin falls below $90,000 as altcoins slide in thin trading: Crypto Markets Today",
       "link": "https://www.coindesk.com/markets/2026/01/08/bitcoin-falls-to-usd90-000-as-altcoins-slide-in-thin-trading-crypto-markets-today",
       "description": "Bitcoin retreated to five-day lows during as repeated failures to break through $94,500 reinforced a tight trading range.",
       "pubDate": "2026-01-08T11:28:20.000Z",
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "42m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Bitcoin's market rhymes as identical November lows create familiar January setup",
@@ -47,7 +117,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "45m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Fireblocks Expands Into Crypto Accounting With TRES Finance Acquisition",
@@ -57,57 +127,18 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "49m ago"
-    },
-    {
-      "title": "Bybit’s Private Wealth Management delivered 20% returns amid a challenging 2025",
-      "link": "https://www.coindesk.com/business/2026/01/08/bybit-s-private-wealth-management-service-delivered-20-returns-despite-challenging-2025",
-      "description": "Bybit’s top performing fund saw returns of 20.3% APR driven by the exchange’s flagship high-yield USDT-based strategies.",
-      "pubDate": "2026-01-08T11:06:57.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Zcash developer team behind ECC quits after governance clash with Bootstrap board",
-      "link": "https://www.coindesk.com/tech/2026/01/08/zcash-developer-team-behind-ecc-quits-after-governance-clash-with-bootstrap-board",
-      "description": "ECC's CEO, Josh Swihart, claims the team was forced to leave because of changes that made their work untenable.",
-      "pubDate": "2026-01-08T11:03:29.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "India&#39;s Tax Department Echoes Reserve Bank&#39;s Concerns on Crypto",
-      "link": "https://decrypt.co/353942/indias-tax-department-echoes-reserve-banks-concerns-on-crypto",
-      "description": "Tax authorities flagged enforcement challenges with virtual digital assets ahead of the Union Budget presentation.",
-      "pubDate": "2026-01-08T10:45:31.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Bitcoin price may bottom at $88K next cycle if last CME gap stays open",
-      "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-price-bottom-88k-next-cycle-last-cme-gap-open?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Bitcoin filled one of two new futures gaps with a trip below $90,000 as analysis predicted a potential bottom level for the next BTC price cycle.",
-      "pubDate": "2026-01-08T10:20:25.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
       "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 10,
+  "totalCount": 13,
   "sources": [
-    "The Defiant",
-    "CoinDesk",
     "Decrypt",
-    "CoinTelegraph"
+    "Bitcoin Magazine",
+    "CoinDesk",
+    "CoinTelegraph",
+    "The Defiant"
   ],
-  "fetchedAt": "2026-01-08T12:10:46.313Z",
-  "cachedAt": "2026-01-08T12:10:30.000Z",
+  "fetchedAt": "2026-01-08T13:18:33.914Z",
+  "cachedAt": "2026-01-08T13:18:23.000Z",
   "source": "failsafe-cache"
 }
