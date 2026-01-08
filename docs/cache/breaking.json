@@ -1,14 +1,34 @@
 {
   "articles": [
     {
-      "title": "India tax authorities flag crypto risks amid regulatory uncertainty",
+      "title": "CZ-backed YZi Labs escalates fight over CEA’s ‘poison pill’ and BNB treasury strategy",
+      "link": "<![CDATA[https://cointelegraph.com/news/yzi-labs-escalates-fight-over-cea?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "YZi Labs is challenging CEA Industries’ newly adopted poison pill and bylaw changes, accusing the board of entrenchment and misrepresenting its commitment to a BNB treasury.",
+      "pubDate": "2026-01-08T09:52:22.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "15m ago"
+    },
+    {
+      "title": "BitMine buys $105M Ether to kick off 2026, still holds $915M in cash",
+      "link": "<![CDATA[https://cointelegraph.com/news/bitmine-buys-105m-eth-2026-915m-cash?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "The largest corporate ETH holder started 2026 with a $105 million Ether purchase, while surpassing $2.87 billion in staked Ether, seeking to generate passive yield on its holdings.",
+      "pubDate": "2026-01-08T09:27:30.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "40m ago"
+    },
+    {
+      "title": "India tax authorities warn crypto undermines tax enforcement",
       "link": "<![CDATA[https://cointelegraph.com/news/india-crypto-risks-taxes-regulatory-uncertainty?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "India’s tax authorities flagged risks from offshore exchanges, private wallets and DeFi tools that make tracking crypto income difficult.",
+      "description": "Officials told a parliamentary panel that private wallets, offshore exchanges and cross-border DeFi activity make tracking taxable crypto income difficult.",
       "pubDate": "2026-01-08T08:40:37.000Z",
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "29m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "XRP ETFs notch first outflows as nearly $600M exits Bitcoin, Ether funds",
@@ -18,14 +38,14 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "37m ago"
+      "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 2,
+  "totalCount": 4,
   "sources": [
     "CoinTelegraph"
   ],
-  "fetchedAt": "2026-01-08T09:09:41.694Z",
-  "cachedAt": "2026-01-08T09:09:23.000Z",
+  "fetchedAt": "2026-01-08T10:07:35.575Z",
+  "cachedAt": "2026-01-08T10:07:23.000Z",
   "source": "failsafe-cache"
 }
