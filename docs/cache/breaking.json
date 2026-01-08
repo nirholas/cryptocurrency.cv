@@ -1,6 +1,26 @@
 {
   "articles": [
     {
+      "title": "3 ‘checkpoints’ stand between a crypto all-time high in 2026: Bitwise",
+      "link": "<![CDATA[https://cointelegraph.com/news/3-checkpoints-stand-between-crypto-and-all-time-highs-in-2026-bitwise?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Bitwise’s Matt Hougan says that post-October liquidation stability, the passage of the CLARITY Act and steady equities must happen before crypto hits new highs.",
+      "pubDate": "2026-01-08T03:53:15.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "26m ago"
+    },
+    {
+      "title": "Three Catalysts That Could Kickstart a Crypto Rally in 2026: Bitwise",
+      "link": "https://decrypt.co/353925/three-catalysts-kickstart-crypto-rally-2026",
+      "description": "Bitcoin’s next rally hinges on market stability, with analysts pointing to calmer crypto conditions and progress on U.S. crypto legislation.",
+      "pubDate": "2026-01-08T03:44:43.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "35m ago"
+    },
+    {
       "title": "Bitcoin faces ‘boring sideways’ grind in coming months: CryptoQuant CEO",
       "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-price-boring-action-cryptoquant-forecast?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "CryptoQuant CEO Ki Young Ju says money flowing into Bitcoin has “dried up” for now, as traders are rotating back to traditional markets.",
@@ -8,7 +28,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "14m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Fireblocks buys crypto accounting platform TRES for $130M",
@@ -19,54 +39,14 @@
       "sourceKey": "cointelegraph",
       "category": "general",
       "timeAgo": "1h ago"
-    },
-    {
-      "title": "World Liberty Financial Applies for OCC Trust Bank Charter",
-      "link": "https://decrypt.co/353922/world-liberty-financial-applies-for-occ-trust-bank-charter",
-      "description": "World Liberty Financial is seeking to overcome a federal oversight hurdle, with only one other crypto firm having successfully done so.",
-      "pubDate": "2026-01-08T02:14:44.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "GENIUS Act changes would be a ‘national security trap’: Crypto execs",
-      "link": "<![CDATA[https://cointelegraph.com/news/genius-act-stablecoin-rewards-debate-crypto-industry-executives-banks-senate?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Pro-crypto lawyer John Deaton argued that banning yield on stablecoins would incentivize the use of China’s interest-bearing digital yuan, hurting the US dollar.",
-      "pubDate": "2026-01-08T01:58:54.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "OpenAI’s ChatGPT Health Push Raises Questions About Data Security",
-      "link": "https://decrypt.co/353919/openai-users-medical-data-ai-chatgpt-privacy-concerns",
-      "description": "The new feature lets users link medical records, while OpenAI emphasized encryption, data separation, and limits on health advice.",
-      "pubDate": "2026-01-08T01:55:03.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Wyoming rolls out state-backed FRNT stablecoin to the public",
-      "link": "<![CDATA[https://cointelegraph.com/news/wyoming-stablecoin-frnt-goes-live-to-public?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Wyoming’s Frontier Stable Token (FRNT) is “the first fiat-backed, fully-reserved stable token\" to be issued by a US public entity, says state Governor Mark Gordon.",
-      "pubDate": "2026-01-08T01:49:39.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 6,
+  "totalCount": 4,
   "sources": [
     "CoinTelegraph",
     "Decrypt"
   ],
-  "fetchedAt": "2026-01-08T03:34:23.646Z",
-  "cachedAt": "2026-01-08T03:34:13.000Z",
+  "fetchedAt": "2026-01-08T04:20:02.568Z",
+  "cachedAt": "2026-01-08T04:19:59.000Z",
   "source": "failsafe-cache"
 }
