@@ -5,6 +5,8 @@
  * Aggregates news from 7 major crypto sources.
  */
 
+import sanitizeHtml from 'sanitize-html';
+
 // RSS Feed URLs for crypto news sources
 const RSS_SOURCES = {
   coindesk: {
@@ -101,7 +103,7 @@ function parseRSSFeed(xml: string, sourceKey: string, sourceName: string, catego
     
     const title = (titleMatch?.[1] || titleMatch?.[2] || '').trim();
     const link = (linkMatch?.[1] || linkMatch?.[2] || '').trim();
-    const description = (descMatch?.[1] || descMatch?.[2] || '').replace(/<[^>]*>/g, '').trim().slice(0, 200);
+    const description = sanitizeDescription(descMatch?.[1] || descMatch?.[2] || '');
     const pubDateStr = pubDateMatch?.[1] || '';
     
     if (title && link) {
@@ -120,6 +122,19 @@ function parseRSSFeed(xml: string, sourceKey: string, sourceName: string, catego
   }
   
   return articles;
+}
+
+function sanitizeDescription(raw: string): string {
+  if (!raw) {
+    return '';
+  }
+
+  const sanitized = sanitizeHtml(raw, {
+    allowedTags: [],
+    allowedAttributes: {},
+  });
+
+  return sanitized.trim().slice(0, 200);
 }
 
 /**
