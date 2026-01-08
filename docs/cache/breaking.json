@@ -1,52 +1,31 @@
 {
   "articles": [
     {
-      "title": "Morgan Stanley’s Bitcoin ETF could offer strategic value beyond inflows, analysts say",
-      "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-etf-morgan-stanley-flows-reputational-procap-jeff-park?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Analysts say the bank’s late entry into spot Bitcoin ETFs may still carry reputational and strategic upside across its brokerage and crypto ambitions.",
-      "pubDate": "2026-01-08T06:06:47.000Z",
+      "title": "India tax authorities flag crypto risks amid regulatory uncertainty",
+      "link": "<![CDATA[https://cointelegraph.com/news/india-crypto-risks-taxes-regulatory-uncertainty?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "India’s tax authorities flagged risks from offshore exchanges, private wallets and DeFi tools that make tracking crypto income difficult.",
+      "pubDate": "2026-01-08T08:40:37.000Z",
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "29m ago"
     },
     {
-      "title": "Zcash devs split from Electric Coin Company, plan to create new firm",
-      "link": "<![CDATA[https://cointelegraph.com/news/zcash-devs-split-from-electric-coin-company-plan-to-create-new-firm?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Electric Coin Company CEO Josh Swihart says the firm's entire team left and will start a new company over disagreements with the nonprofit board that supports Zcash.",
-      "pubDate": "2026-01-08T06:00:02.000Z",
+      "title": "XRP ETFs notch first outflows as nearly $600M exits Bitcoin, Ether funds",
+      "link": "<![CDATA[https://cointelegraph.com/news/xrp-etfs-first-outflow-day-crypto-etf-selloff?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "XRP ETFs logged their first net outflow day since launch, breaking a multi-week inflow streak after more than $1 billion poured into the funds.",
+      "pubDate": "2026-01-08T08:32:39.000Z",
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Solana Accelerate to open Consensus Hong Kong in February",
-      "link": "https://www.coindesk.com/markets/2026/01/08/solana-accelerate-to-open-consensus-hong-kong-in-february",
-      "description": "CoinDesk and the Solana Foundation said the developer event will kick off Consensus Hong Kong on Feb. 11, setting the tone for a week focused on builders, capital, and policymakers.",
-      "pubDate": "2026-01-08T05:57:13.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "AI giant Anthropic raising $10B at $350B valuation: Report",
-      "link": "<![CDATA[https://cointelegraph.com/news/ai-giant-anthropic-raising-10b-at-350b-valuation-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Claude maker Anthropic is aiming to nearly double its valuation to $350 billion, with The Wall Street Journal reporting a planned $10 billion raise.",
-      "pubDate": "2026-01-08T05:35:10.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "37m ago"
     }
   ],
-  "totalCount": 4,
+  "totalCount": 2,
   "sources": [
-    "CoinTelegraph",
-    "CoinDesk"
+    "CoinTelegraph"
   ],
-  "fetchedAt": "2026-01-08T07:08:52.239Z",
-  "cachedAt": "2026-01-08T07:08:41.000Z",
+  "fetchedAt": "2026-01-08T09:09:41.694Z",
+  "cachedAt": "2026-01-08T09:09:23.000Z",
   "source": "failsafe-cache"
 }
