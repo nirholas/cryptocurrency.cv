@@ -1,6 +1,66 @@
 {
   "articles": [
     {
+      "title": "Fireblocks buys crypto accounting platform TRES for $130M",
+      "link": "<![CDATA[https://cointelegraph.com/news/fireblocks-buys-crypto-accounting-platform-tres-for-130m?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Fireblocks has expanded its institutional offering by buying TRES, a crypto accounting and tax compliance platform, as it looks to keep up with the use of stablecoins.",
+      "pubDate": "2026-01-08T02:24:43.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "17m ago"
+    },
+    {
+      "title": "World Liberty Financial Applies for OCC Trust Bank Charter",
+      "link": "https://decrypt.co/353922/world-liberty-financial-applies-for-occ-trust-bank-charter",
+      "description": "World Liberty Financial is seeking to overcome a federal oversight hurdle, with only one other crypto firm having successfully done so.",
+      "pubDate": "2026-01-08T02:14:44.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "27m ago"
+    },
+    {
+      "title": "GENIUS Act changes would be a ‘national security trap’: Crypto execs",
+      "link": "<![CDATA[https://cointelegraph.com/news/genius-act-stablecoin-rewards-debate-crypto-industry-executives-banks-senate?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Pro-crypto lawyer John Deaton argued that banning yield on stablecoins would incentivize the use of China’s interest-bearing digital yuan, hurting the US dollar.",
+      "pubDate": "2026-01-08T01:58:54.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "43m ago"
+    },
+    {
+      "title": "OpenAI’s ChatGPT Health Push Raises Questions About Data Security",
+      "link": "https://decrypt.co/353919/openai-users-medical-data-ai-chatgpt-privacy-concerns",
+      "description": "The new feature lets users link medical records, while OpenAI emphasized encryption, data separation, and limits on health advice.",
+      "pubDate": "2026-01-08T01:55:03.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "47m ago"
+    },
+    {
+      "title": "Wyoming rolls out state-backed FRNT stablecoin to the public",
+      "link": "<![CDATA[https://cointelegraph.com/news/wyoming-stablecoin-frnt-goes-live-to-public?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Wyoming’s Frontier Stable Token (FRNT) is “the first fiat-backed, fully-reserved stable token\" to be issued by a US public entity, says state Governor Mark Gordon.",
+      "pubDate": "2026-01-08T01:49:39.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "52m ago"
+    },
+    {
+      "title": "Sei warns USDC.n token holders to swap for &#8216;native&#8217; stablecoin ahead of planned upgrade",
+      "link": "https://www.theblock.co/post/384715/sei-warns-usdcn-token-holders-swap-native-stablecoin?utm_source=rss&amp;utm_medium=rss",
+      "description": "USDC.n served as the canonical representation of the popular stablecoin on the Sei Network before Circle issued a native version of the token.",
+      "pubDate": "2026-01-08T01:18:54.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "1h ago"
+    },
+    {
       "title": "Crypto credit is starting to look like cash savings accounts: Asia Morning Briefing",
       "link": "https://www.coindesk.com/markets/2026/01/08/crypto-credit-is-starting-to-look-like-cash-savings-accounts-asia-morning-briefing",
       "description": "Flowdesk says record demand met even deeper liquidity, suppressing volatility across staking, stablecoin lending, making crypto credit markets look more like traditional cash plumbing.",
@@ -8,25 +68,37 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "33m ago"
+      "timeAgo": "1h ago"
     },
     {
-      "title": "Trump’s World Liberty Financial applies for banking charter to expand USD1",
+      "title": "Ethereum rolls out final planned Blob Parameters Only fork as final step in Fusaka upgrade",
+      "link": "https://www.theblock.co/post/384709/ethereum-rolls-out-final-planned-blob-parameters-only-fork-as-final-step-in-fusaka-upgrade?utm_source=rss&amp;utm_medium=rss",
+      "description": "Fusaka, activated in early December, introduced the “Blob Parameters Only” upgrade mechanism to ramp up Ethereum's data availability.",
+      "pubDate": "2026-01-08T00:56:08.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "1h ago"
+    },
+    {
+      "title": "Trumps' World Liberty Financial applies for banking charter to expand USD1",
       "link": "<![CDATA[https://cointelegraph.com/news/world-liberty-files-banking-charter-expand-usd1?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "The Trumpfamily’s World Liberty Financial filed for a banking charter to gain greater control over its USD1 stablecoin and expand its adoption among institutions.",
+      "description": "The Trump family’s World Liberty Financial filed for a banking charter to gain greater control over its USD1 stablecoin and expand its adoption among institutions.",
       "pubDate": "2026-01-08T00:44:06.000Z",
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "50m ago"
+      "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 2,
+  "totalCount": 9,
   "sources": [
-    "CoinDesk",
-    "CoinTelegraph"
+    "CoinTelegraph",
+    "Decrypt",
+    "The Block",
+    "CoinDesk"
   ],
-  "fetchedAt": "2026-01-08T01:34:21.165Z",
-  "cachedAt": "2026-01-08T01:34:11.000Z",
+  "fetchedAt": "2026-01-08T02:42:29.421Z",
+  "cachedAt": "2026-01-08T02:42:19.000Z",
   "source": "failsafe-cache"
 }
