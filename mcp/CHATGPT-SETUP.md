@@ -8,6 +8,12 @@ Complete guide for using Free Crypto News MCP with ChatGPT Developer Mode.
 ✅ Developer Mode enabled in ChatGPT settings  
 ✅ Node.js 18+ installed
 
+## 🚀 Official MCP Server
+
+**Production URL:** `https://plugins.support/sse`
+
+No need to deploy! Use the official server or run locally for testing.
+
 ## Step 1: Enable Developer Mode
 
 1. Go to [ChatGPT Settings → Apps](https://chatgpt.com/#settings/Connectors)
@@ -90,7 +96,7 @@ fly deploy
 | **App Name** | Free Crypto News |
 | **Description** | Get real-time crypto news from 7 major sources |
 | **Protocol** | SSE (Server-Sent Events) |
-| **Endpoint URL** | `http://localhost:3001/sse` (local)<br/>or<br/>`https://your-app.railway.app/sse` (production) |
+| **Endpoint URL** | `https://plugins.support/sse` (official)<br/>or<br/>`http://localhost:3001/sse` (local) |
 | **Authentication** | No Authentication |
 
 4. Click **Create**

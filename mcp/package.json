@@ -8,7 +8,7 @@
     "free-crypto-news-mcp": "./index.js"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "node http-server.js",
     "start:http": "node http-server.js",
     "start:stdio": "node index.js",
     "dev": "node http-server.js"

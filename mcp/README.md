@@ -4,6 +4,8 @@ Use Free Crypto News with Claude Desktop **or** ChatGPT Developer Mode!
 
 ## 🚀 Quick Start
 
+**Live MCP Server:** `https://plugins.support/sse` (deployed on Railway)
+
 ### Option 1: Claude Desktop (stdio)
 
 1. Clone and install:
@@ -63,7 +65,7 @@ Server will start at `http://localhost:3001`
    - Configure the app:
      - **Name:** Free Crypto News
      - **Protocol:** SSE
-     - **Endpoint:** `http://localhost:3001/sse` (or your server URL)
+     - **Endpoint:** `https://plugins.support/sse` (or run locally)
      - **Authentication:** No Authentication
 
 4. Enable the app in a conversation:

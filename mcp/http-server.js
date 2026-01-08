@@ -15,7 +15,7 @@ import http from 'http';
 import { URL } from 'url';
 
 const API_BASE = process.env.API_BASE || 'https://free-crypto-news.vercel.app';
-const PORT = process.env.PORT || 3001;
+const PORT = parseInt(process.env.PORT) || 3001;
 
 // All tools with readOnlyHint annotations for ChatGPT
 const tools = [
