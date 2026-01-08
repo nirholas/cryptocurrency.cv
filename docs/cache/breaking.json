@@ -1,6 +1,66 @@
 {
   "articles": [
     {
+      "title": "Memecoin social buzz grows as traders return to risk assets",
+      "link": "<![CDATA[https://cointelegraph.com/news/memecoin-social-buzz-market-cap-risk-appetite?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Memecoins fell 65% over 2025 as risk-taking behavior dropped among traders, but the tokens are seeing gains as positive sentiment returns to crypto.",
+      "pubDate": "2026-01-08T04:58:25.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "10m ago"
+    },
+    {
+      "title": "XRP slips 5% as CNBC terms it 'hottest trade' of 2026 over bitcoin and ether",
+      "link": "https://www.coindesk.com/markets/2026/01/08/xrp-slips-5-as-cnbc-terms-it-hottest-trade-of-2026-over-bitcoin-and-ether",
+      "description": "Institutional demand through U.S.-listed spot XRP ETFs remains strong, with net inflows continuing into early January.",
+      "pubDate": "2026-01-08T04:45:10.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "23m ago"
+    },
+    {
+      "title": "Google, Character.AI Agree to Settle US Lawsuit Over Teen’s Suicide",
+      "link": "https://decrypt.co/353927/google-character-ai-settle-us-lawsuit-teens-suicide",
+      "description": "A lawsuit alleging an AI chatbot contributed to a teen’s suicide has been settled, closing a closely watched case over AI accountability.",
+      "pubDate": "2026-01-08T04:37:55.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "31m ago"
+    },
+    {
+      "title": "Kalshi CEO endorses bill banning insider trading on prediction markets",
+      "link": "https://www.theblock.co/post/384725/kalshi-ceo-endorses-insider-trading-ban?utm_source=rss&amp;utm_medium=rss",
+      "description": "Mansour distanced Kalshi from 'offshore, unregulated' prediction market platforms with alleged cases of insider trading.",
+      "pubDate": "2026-01-08T04:25:02.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "44m ago"
+    },
+    {
+      "title": "Solana Mobile to launch SKR token for Seeker phone on Jan. 21",
+      "link": "<![CDATA[https://cointelegraph.com/news/solana-mobile-launch-skr-token-jan-21-seeker-phone?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Solana Mobile will airdrop up to 20% of SKR tokens to users of its Seeker phone on Jan. 21, and introduce so-called Guardians to secure the network.",
+      "pubDate": "2026-01-08T04:22:26.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "46m ago"
+    },
+    {
+      "title": "Ethereum bumps blob capacity as it gears for Fusaka upgrade",
+      "link": "https://www.coindesk.com/tech/2026/01/08/ethereum-bumps-blob-capacity-as-it-gears-for-fusaka-upgrade",
+      "description": "Ethereum increased its data capacity per block, raising the blob target to 14 and the maximum blob limit to 21.",
+      "pubDate": "2026-01-08T04:21:37.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "47m ago"
+    },
+    {
       "title": "3 ‘checkpoints’ stand between a crypto all-time high in 2026: Bitwise",
       "link": "<![CDATA[https://cointelegraph.com/news/3-checkpoints-stand-between-crypto-and-all-time-highs-in-2026-bitwise?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "Bitwise’s Matt Hougan says that post-October liquidation stability, the passage of the CLARITY Act and steady equities must happen before crypto hits new highs.",
@@ -8,7 +68,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "26m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Three Catalysts That Could Kickstart a Crypto Rally in 2026: Bitwise",
@@ -18,7 +78,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "35m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Bitcoin faces ‘boring sideways’ grind in coming months: CryptoQuant CEO",
@@ -29,24 +89,16 @@
       "sourceKey": "cointelegraph",
       "category": "general",
       "timeAgo": "1h ago"
-    },
-    {
-      "title": "Fireblocks buys crypto accounting platform TRES for $130M",
-      "link": "<![CDATA[https://cointelegraph.com/news/fireblocks-buys-crypto-accounting-platform-tres-for-130m?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Fireblocks has expanded its institutional offering by buying TRES, a crypto accounting and tax compliance platform, as it looks to keep up with the use of stablecoins.",
-      "pubDate": "2026-01-08T02:24:43.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 4,
+  "totalCount": 9,
   "sources": [
     "CoinTelegraph",
-    "Decrypt"
+    "CoinDesk",
+    "Decrypt",
+    "The Block"
   ],
-  "fetchedAt": "2026-01-08T04:20:02.568Z",
-  "cachedAt": "2026-01-08T04:19:59.000Z",
+  "fetchedAt": "2026-01-08T05:09:04.138Z",
+  "cachedAt": "2026-01-08T05:08:37.000Z",
   "source": "failsafe-cache"
 }
