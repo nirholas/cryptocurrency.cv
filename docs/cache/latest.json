@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "title": "Trump-linked World Liberty Financial applies for federal bank charter",
+      "link": "https://www.coindesk.com/policy/2026/01/07/trump-linked-world-liberty-financial-applies-for-federal-bank-charter",
+      "description": "World Liberty Financial is trying to launch the World Liberty Trust Company, a stablecoin-focused national trust bank, it said Wednesday.",
+      "pubDate": "2026-01-07T23:16:04.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "1h ago"
+    },
+    {
       "title": "This is what's (currently) in the way of U.S. crypto market structure bill harmony",
       "link": "https://www.coindesk.com/news-analysis/2026/01/07/this-is-what-s-currently-in-the-way-of-u-s-crypto-market-structure-bill-harmony",
       "description": "Though consequential Senate committee votes may be coming, the talks over the bill's language haven't yet satisfied fundamental requests from Democrats.",
@@ -8,7 +18,37 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "23m ago"
+      "timeAgo": "1h ago"
+    },
+    {
+      "title": "Trump-backed World Liberty Financial seeks US bank charter to bring USD1 stablecoin fully onshore",
+      "link": "https://www.theblock.co/post/384708/trump-backed-world-liberty-financial-seeks-us-bank-charter-to-bring-usd1-stablecoin-fully-onshore?utm_source=rss&amp;utm_medium=rss",
+      "description": "The DeFi protocol said WLTC Holdings LLC filed an application to establish a national trust bank purpose-built for stablecoin operations.",
+      "pubDate": "2026-01-07T22:31:09.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "1h ago"
+    },
+    {
+      "title": "Solana Mobile Gears Up to Airdrop SKR Token to Seeker Phone Users—But Not Saga Owners",
+      "link": "https://decrypt.co/353912/solana-mobile-airdrop-skr-token-seeker-phone-users-not-saga-owners",
+      "description": "Solana Mobile announced it will airdrop its native ecosystem token, SKR, to Seeker device users and app developers on January 20.",
+      "pubDate": "2026-01-07T22:28:26.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "1h ago"
+    },
+    {
+      "title": "Elon Musk: Nvidia’s Self-Driving Tech Is Still Years From Challenging Tesla",
+      "link": "https://decrypt.co/353909/elon-musk-nvidias-self-driving-tech-still-years-challenging-tesla",
+      "description": "Tesla CEO Elon Musk argued that Nvidia’s software has arrived years earlier than legacy automakers can deploy it at scale.",
+      "pubDate": "2026-01-07T22:27:39.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "1h ago"
     },
     {
       "title": "Solana's stablecoin market cap surges by $900M in 24 hours",
@@ -18,7 +58,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Nike sells RTFKT digital collectibles unit to unnamed buyer: reports",
@@ -28,7 +68,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Crypto reps fly to US capitol this week to address market structure bill",
@@ -38,7 +78,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Polymarket Begins Rolling Out Fees in US App and Crypto Markets",
@@ -47,7 +87,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Gate becomes latest crypto exchange to embed AI market intelligence",
@@ -57,7 +97,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Wyoming&#39;s &#39;Frontier&#39; Stablecoin Debuts—Will It Offer Yield?",
@@ -67,7 +107,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Senate Agriculture Committee to follow Banking panel in crypto vote next week: report",
@@ -77,7 +117,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "2h ago"
+      "timeAgo": "3h ago"
     },
     {
       "title": "Babylon receives $15M from a16z Crypto to expand Bitcoin-native lending",
@@ -87,17 +127,17 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "2h ago"
+      "timeAgo": "3h ago"
     },
     {
-      "title": "60K Bitcoin absorbed by accumulators as miners send BTC to exchanges: Will the rally stall?",
+      "title": "60K Bitcoin absorbed by accumulators as miners send it to exchanges: Will rally stall?",
       "link": "<![CDATA[https://cointelegraph.com/news/60k-btc-absorbed-as-miners-back-off-will-bitcoin-s-rally-lose-steam?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "Bitcoin accumulators absorbed 60,000 BTC, but miners sending their rewards to exchanges could lead to overhanging sell pressure.",
       "pubDate": "2026-01-07T20:45:00.000Z",
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "2h ago"
+      "timeAgo": "3h ago"
     },
     {
       "title": "Clone-X NFTs Soar 200% as Nike Sells RTFKT",
@@ -106,7 +146,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "2h ago"
+      "timeAgo": "3h ago"
     },
     {
       "title": "Bitcoin Price Teeters Near $90,000 as Early-2026 Rally Falters",
@@ -116,7 +156,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "2h ago"
+      "timeAgo": "3h ago"
     },
     {
       "title": "Top Self Custody Bitcoin Wallets for 2026",
@@ -126,7 +166,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "2h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "Two Senate committees set Jan. 15 hearings to vote on sweeping crypto market structure legislation",
@@ -136,7 +176,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "2h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "Polymarket, Dow Jones deal puts prediction markets data in Wall Street Journal",
@@ -146,7 +186,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "Bitcoin averages 100% return after down years: Will the pattern repeat in 2026?",
@@ -156,7 +196,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "Alleged Crypto Scam Kingpin Arrested in Cambodia After $12 Billion Bitcoin Seizure",
@@ -166,7 +206,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "Trump Administration Flips the Food Pyramid With New Dietary Guidelines",
@@ -176,7 +216,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "Crypto Markets Edge Lower as Investors Weigh Macro Data",
@@ -185,7 +225,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "Crypto Advocates Renew Stablecoin Rewards Push as Market Structure Bill Nears Key Senate Vote",
@@ -195,7 +235,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Ray Dalio says 2026 US midterm elections could reverse Trump policies",
@@ -205,7 +245,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Here’s what happened in crypto today",
@@ -215,7 +255,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "The Daily: Ripple confirms no IPO plans, Flare unlocks XRP spot exposure on Hyperliquid, and more",
@@ -225,7 +265,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Solana Mobile sets Jan. 21 launch date for SKR token, confirms airdrop",
@@ -235,7 +275,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Price predictions 1/7: BTC, ETH, XRP, BNB, SOL, DOGE, ADA, BCH, LINK, HYPE",
@@ -245,7 +285,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "JPMorgan Is Launching JPM Coin on the Rising Canton Network",
@@ -255,7 +295,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "JPMorgan to issue its JPM stablecoin directly on privacy-focused Canton Network",
@@ -265,7 +305,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "Strategy ($MSTR) Jumps 7% After MSCI Decides Against Excluding Bitcoin Treasury Firms",
@@ -275,7 +315,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "4h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "&#8216;A milestone in financial innovation&#8217;: Wyoming issues first state-backed stablecoin on Solana",
@@ -285,7 +325,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "Iran Accepting Crypto Payments for Weapons—But This May Not Help It Evade Sanctions",
@@ -295,7 +335,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "5h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "Alleged crypto scam boss linked to $15 billion bitcoin haul deported to China after Cambodia arrest",
@@ -305,7 +345,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "5h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "Dow Jones to Add Polymarket Prediction Data Across WSJ, Barron’s Platforms",
@@ -315,7 +355,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "5h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "XRP spot trading is now live on Hyperliquid with Flare's FXRP listing",
@@ -325,7 +365,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "5h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "Trust Wallet’s $7M hack shows where crypto-friendly SMEs may be vulnerable",
@@ -335,7 +375,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "5h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Riot Platforms offloads $161M in Bitcoin in December amid strategy shift",
@@ -345,7 +385,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "5h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Wyoming Launches First U.S. State-Issued Stablecoin",
@@ -354,7 +394,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "5h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Flare launches first XRP spot exposure on Hyperliquid via FXRP",
@@ -364,7 +404,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Aptos' APT falls amid a decline in wider crypto markets",
@@ -374,7 +414,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Crypto Long & Short: 2026: The year institutions treat crypto as part of their core stack",
@@ -384,7 +424,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Tether, video platform Rumble launch non-custodial crypto wallet",
@@ -394,7 +434,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "BNB falls below $900 even after network upgrade, ecosystem developments as market declines",
@@ -404,7 +444,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Bitcoin vs. luxury homes: How China’s wealthy are rethinking stores of value",
@@ -414,7 +454,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Bitcoin 'not likely' to make new all-time high in 2026, says new research",
@@ -424,7 +464,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Blockchain Barely Gets a Mention as AI Dominates CES 2026 Trend Predictions",
@@ -434,7 +474,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Experts tip privacy tokens to continue outperforming in 2026",
@@ -444,7 +484,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Upexi targets higher-yield Solana treasury strategy for 2026 as holdings near 2.2 million SOL",
@@ -454,47 +494,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "6h ago"
-    },
-    {
-      "title": "The Protocol: Ledger customer data breached from Global-e platform",
-      "link": "https://www.coindesk.com/tech/2026/01/07/the-protocol-ledger-customer-data-breached-from-global-e-platform",
-      "description": "Also: Starknet goes down, Vitalik Buterin's goals for Ethereum and ETH staking queues cleared.",
-      "pubDate": "2026-01-07T16:20:38.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "6h ago"
-    },
-    {
-      "title": "Fireblocks expands into crypto financial reporting with $130 million TRES acquisition",
-      "link": "https://www.coindesk.com/business/2026/01/07/fireblocks-expands-into-crypto-financial-reporting-with-usd130-million-tres-acquisition",
-      "description": "TRES helps companies generate compliant financial records from blockchain activity, enabling them to meet audit standards and regulatory requirements.",
-      "pubDate": "2026-01-07T16:19:20.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "6h ago"
-    },
-    {
-      "title": "Polymarket to provide prediction data to Wall Street Journal, Barron&#8217;s in Dow Jones deal",
-      "link": "https://www.theblock.co/post/384646/polymarket-to-provide-prediction-data-to-wall-street-journal-barrons-in-dow-jones-deal?utm_source=rss&amp;utm_medium=rss",
-      "description": "Polymarket is also the exclusive prediction market partner for Yahoo Finance, while Kalshi is CNN's official partner.",
-      "pubDate": "2026-01-07T16:16:15.000Z",
-      "source": "The Block",
-      "sourceKey": "theblock",
-      "category": "general",
-      "timeAgo": "6h ago"
-    },
-    {
-      "title": "First 2026 Dip! BTC at 92K! Morgan Stanley file for BTC, ETH &amp; SOL ETFs! Hyperliquid Airdrop Speculation!",
-      "link": "https://decrypt.co/videos/interviews/GVQVX2ND/first-2026-dip-btc-at-92k-morgan-stanley-file-for-btc-eth-sol-etfs-hyperliquid-airdrop-speculation",
-      "description": "Crypto majors fall for first time in 2026; BTC at $92k. Morgan Stanley files for BTC, ETH and SOL ETFs. US Senate schedules key vote for crypto market structure bill for next week. Hyperliquid release",
-      "pubDate": "2026-01-07T16:14:54.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "8h ago"
     }
   ],
   "totalCount": 240,
@@ -507,7 +507,7 @@
     "Blockworks",
     "The Defiant"
   ],
-  "fetchedAt": "2026-01-07T23:09:51.912Z",
-  "cachedAt": "2026-01-07T23:09:48.000Z",
+  "fetchedAt": "2026-01-08T00:24:46.678Z",
+  "cachedAt": "2026-01-08T00:24:43.000Z",
   "source": "failsafe-cache"
 }

@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "title": "Trump-linked World Liberty Financial applies for federal bank charter",
+      "link": "https://www.coindesk.com/policy/2026/01/07/trump-linked-world-liberty-financial-applies-for-federal-bank-charter",
+      "description": "World Liberty Financial is trying to launch the World Liberty Trust Company, a stablecoin-focused national trust bank, it said Wednesday.",
+      "pubDate": "2026-01-07T23:16:04.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "1h ago"
+    },
+    {
       "title": "This is what's (currently) in the way of U.S. crypto market structure bill harmony",
       "link": "https://www.coindesk.com/news-analysis/2026/01/07/this-is-what-s-currently-in-the-way-of-u-s-crypto-market-structure-bill-harmony",
       "description": "Though consequential Senate committee votes may be coming, the talks over the bill's language haven't yet satisfied fundamental requests from Democrats.",
@@ -8,7 +18,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "23m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Trump-backed World Liberty Financial seeks US bank charter to bring USD1 stablecoin fully onshore",
@@ -18,7 +28,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "38m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Solana Mobile Gears Up to Airdrop SKR Token to Seeker Phone Users—But Not Saga Owners",
@@ -28,7 +38,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "41m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Elon Musk: Nvidia’s Self-Driving Tech Is Still Years From Challenging Tesla",
@@ -38,77 +48,16 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "42m ago"
-    },
-    {
-      "title": "Solana's stablecoin market cap surges by $900M in 24 hours",
-      "link": "<![CDATA[https://cointelegraph.com/news/solana-stablecoin-market-cap-surge-900m-24-hours?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Stablecoins are emerging as critical infrastructure across both decentralized and traditional financial applications worldwide.",
-      "pubDate": "2026-01-07T21:59:52.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Nike sells RTFKT digital collectibles unit to unnamed buyer: reports",
-      "link": "https://www.theblock.co/post/384701/next-chapter-rtfkt-nfts-nike-sells-digital-collectibles-unit-unnamed-buyer-reports?utm_source=rss&amp;utm_medium=rss",
-      "description": "Last year, RTFKT said it would wind down following several successful drops that have brought in nearly $50 million in lifetime earnings.",
-      "pubDate": "2026-01-07T21:55:34.000Z",
-      "source": "The Block",
-      "sourceKey": "theblock",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Crypto reps fly to US capitol this week to address market structure bill",
-      "link": "<![CDATA[https://cointelegraph.com/news/crypto-companies-dc-market-structure-bill?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "The Digital Chamber will facilitate engagement with representatives from several digital asset companies in Washington, D.C., on Thursday, ahead of a markup on a major crypto bill.",
-      "pubDate": "2026-01-07T21:50:58.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Polymarket Begins Rolling Out Fees in US App and Crypto Markets",
-      "link": "https://thedefiant.io/news/defi/polymarket-begins-rolling-out-fees-in-us-app-and-crypto-markets",
-      "pubDate": "2026-01-07T21:49:42.000Z",
-      "source": "The Defiant",
-      "sourceKey": "defiant",
-      "category": "defi",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Gate becomes latest crypto exchange to embed AI market intelligence",
-      "link": "<![CDATA[https://cointelegraph.com/news/gate-ai-powered-market-assistant-crypto-traders?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "The new GateAI feature offers automated market summaries and decision-support tools without enabling automated trading.",
-      "pubDate": "2026-01-07T21:40:46.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Wyoming&#39;s &#39;Frontier&#39; Stablecoin Debuts—Will It Offer Yield?",
-      "link": "https://decrypt.co/353910/wyoming-frontier-stablecoin-debuts-offer-yield",
-      "description": "The Wyoming Frontier Stable Token is now available to the public, four months after its official launch.",
-      "pubDate": "2026-01-07T21:30:22.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
       "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 10,
+  "totalCount": 5,
   "sources": [
     "CoinDesk",
     "The Block",
-    "Decrypt",
-    "CoinTelegraph",
-    "The Defiant"
+    "Decrypt"
   ],
-  "fetchedAt": "2026-01-07T23:10:02.827Z",
-  "cachedAt": "2026-01-07T23:09:48.000Z",
+  "fetchedAt": "2026-01-08T00:24:50.943Z",
+  "cachedAt": "2026-01-08T00:24:43.000Z",
   "source": "failsafe-cache"
 }
