@@ -424,14 +424,25 @@
         renderNews(data.articles || []);
         
       } catch (error) {
-        container.innerHTML = `
-          <div class="error">
-            <p>⚠️ Unable to load news</p>
-            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
-              ${error.message}. Try refreshing or check back later.
-            </p>
-          </div>
-        `;
+        // Build error UI safely without interpreting error.message as HTML
+        container.innerHTML = '';
+
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'error';
+
+        const titleP = document.createElement('p');
+        titleP.textContent = '⚠️ Unable to load news';
+        errorDiv.appendChild(titleP);
+
+        const detailP = document.createElement('p');
+        detailP.style.marginTop = '0.5rem';
+        detailP.style.fontSize = '0.9rem';
+        // Use textContent so any characters in error.message are treated as text, not HTML
+        detailP.textContent = (error && error.message ? error.message : 'An unexpected error occurred') +
+          '. Try refreshing or check back later.';
+        errorDiv.appendChild(detailP);
+
+        container.appendChild(errorDiv);
       }
     }
     
