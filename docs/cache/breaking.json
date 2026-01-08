@@ -1,6 +1,26 @@
 {
   "articles": [
     {
+      "title": "Trump says he won't rescue Sam Bankman-Fried with pardon",
+      "link": "https://www.coindesk.com/policy/2026/01/08/trump-says-he-won-t-rescue-sam-bankman-fried-with-pardon",
+      "description": "The president told the New York Times he won't pardon ex-FTX CEO SBF, nor will he be granting help to Sean Combs or Venezuela's Nicolás Maduro.",
+      "pubDate": "2026-01-08T22:43:14.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "22m ago"
+    },
+    {
+      "title": "Trump Says He Won’t Pardon Sam Bankman-Fried",
+      "link": "https://bitcoinmagazine.com/news/trump-says-he-wont-pardon-bankman-fried",
+      "description": "Bitcoin Magazine\n\nTrump Says He Won’t Pardon Sam Bankman-Fried\nPresident Donald Trump said he will not pardon former FTX CEO Sam Bankman-Fried, rejecting clemency for the convicted crypto executive.\nT",
+      "pubDate": "2026-01-08T22:24:20.000Z",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
+      "category": "bitcoin",
+      "timeAgo": "41m ago"
+    },
+    {
       "title": "Nexo to offer zero-interest crypto lending for BTC and ETH holders",
       "link": "<![CDATA[https://cointelegraph.com/news/nexo-zero-interest-crypto-btc-eth-holders?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "The offering expands Nexo’s structured lending products to Bitcoin and Ether holders amid a broader recovery in crypto-backed lending.",
@@ -8,7 +28,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "3m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Ethereum Treasury Firm SharpLink Stakes $170 Million of ETH on Linea",
@@ -18,7 +38,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "13m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Boston Dynamics Unveils First Commercial Atlas Humanoid Robot",
@@ -28,7 +48,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "21m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "CFTC issues no-action letter to Bitnomial, clearing way for event contracts",
@@ -38,7 +58,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "23m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Bitnomial wins U.S. regulator's nod on prediction markets push, joins growing crowd",
@@ -48,7 +68,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "29m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Donald Trump will not consider pardon for Sam Bankman-Fried: NYT",
@@ -58,7 +78,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "30m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Myriad Moves: Traders Bet on Zcash Rebound, But Aren&#39;t Buying Another Bitcoin All-Time High",
@@ -68,7 +88,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "48m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Optimism Foundation Proposes Using 50% of Revenue for Buybacks",
@@ -77,86 +97,18 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "59m ago"
-    },
-    {
-      "title": "White Whale Memecoin Surges Past $100 Million Valuation",
-      "link": "https://thedefiant.io/news/markets/white-whale-memecoin-surges-past-usd100-million-valuation",
-      "pubDate": "2026-01-08T20:56:36.000Z",
-      "source": "The Defiant",
-      "sourceKey": "defiant",
-      "category": "defi",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Bitcoin bulls chase $91K as early 2026 rally finds sustained volume",
-      "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-bulls-chase-dollar91k-as-early-2026-rally-finds-sustained-volume?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Bitcoin bulls are making a run on $91,000 as start-of-the-year trading volumes highlight the market’s expectation of a positive Q1.",
-      "pubDate": "2026-01-08T20:55:59.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Scientists Crammed a Computer Into a Robot the Size of a Grain of Salt",
-      "link": "https://decrypt.co/354020/scientists-crammed-computer-robot-size-grain-salt",
-      "description": "Researchers built autonomous robots the size of salt grains—with onboard computers, sensors, and motors that think and swim independently for months.",
-      "pubDate": "2026-01-08T20:44:03.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Truebit token price falls 99% after reports of $26M exploit",
-      "link": "<![CDATA[https://cointelegraph.com/news/truebit-token-price-fall-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "The TRU price fell to $0.0000000029 from $0.16  after the protocol reported a security incident and crypto sleuths tracked stolen Ether.",
-      "pubDate": "2026-01-08T20:18:36.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Temple Digital Group launches 24/7 institutional trading built on Canton",
-      "link": "<![CDATA[https://cointelegraph.com/news/temple-digital-group-24-7-institutional-trading-platform-canton?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "The platform offers a private, non-custodial venue for regulated institutions to trade cryptocurrencies and stablecoins.",
-      "pubDate": "2026-01-08T20:13:21.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "New York Lawmakers Target Prediction Markets as NHL&#39;s Rangers Ink Polymarket Deal",
-      "link": "https://decrypt.co/354043/new-york-lawmakers-target-prediction-markets-nhl-rangers-polymarket-deal",
-      "description": "A New York assemblyman reintroduced a bill that would restrict prediction markets, barring bets on individual sports matches, war, and more.",
-      "pubDate": "2026-01-08T20:12:37.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Bank of America upgrades Coinbase to 'buy' as exchange moves beyond crypto",
-      "link": "https://www.coindesk.com/markets/2026/01/08/bank-of-america-upgrades-coinbase-to-buy-as-exchange-moves-beyond-crypto",
-      "description": "Bank of America said it recommended investors buy Coinbase's stock, pointing to its new products including weekday equities trading and prediction markets.",
-      "pubDate": "2026-01-08T20:11:44.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
       "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 15,
+  "totalCount": 10,
   "sources": [
+    "CoinDesk",
+    "Bitcoin Magazine",
     "CoinTelegraph",
     "Decrypt",
-    "CoinDesk",
     "The Defiant"
   ],
-  "fetchedAt": "2026-01-08T22:06:14.142Z",
-  "cachedAt": "2026-01-08T22:05:59.000Z",
+  "fetchedAt": "2026-01-08T23:05:58.923Z",
+  "cachedAt": "2026-01-08T23:05:42.000Z",
   "source": "failsafe-cache"
 }
