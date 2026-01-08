@@ -1,6 +1,75 @@
 {
   "articles": [
     {
+      "title": "Crypto Derivatives Market Reset After Oct. 10 Crash: BitMEX",
+      "link": "https://thedefiant.io/news/cefi/crypto-derivatives-market-reset-after-oct-10-crash-bitmex",
+      "pubDate": "2026-01-08T12:00:00.000Z",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
+      "category": "defi",
+      "timeAgo": "10m ago"
+    },
+    {
+      "title": "October's crypto crash left market makers stuffed with coins, slowing trading: BitMEX",
+      "link": "https://www.coindesk.com/markets/2026/01/08/october-s-crypto-crash-left-market-makers-stuffed-with-coins-slowing-trading-bitmex",
+      "description": "BitMEX's annual report details the impact of the Oct crash on market liquidity, basis trades and other key issues.",
+      "pubDate": "2026-01-08T11:47:00.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "23m ago"
+    },
+    {
+      "title": "BNB treasury strategy sparks governance battle at CEA Industries",
+      "link": "https://www.coindesk.com/business/2026/01/08/bnb-treasury-strategy-sparks-governance-battle-at-cea-industries",
+      "description": "YZi accused CEA of mismanagement and poor communication, and is seeking changes to the board, disclosure of treasury holdings, and more.",
+      "pubDate": "2026-01-08T11:44:53.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "25m ago"
+    },
+    {
+      "title": "Bitcoin falls to $90,000 as altcoins slide in thin trading: Crypto Markets Today",
+      "link": "https://www.coindesk.com/markets/2026/01/08/bitcoin-falls-to-usd90-000-as-altcoins-slide-in-thin-trading-crypto-markets-today",
+      "description": "Bitcoin retreated to five-day lows during as repeated failures to break through $94,500 reinforced a tight trading range.",
+      "pubDate": "2026-01-08T11:28:20.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "42m ago"
+    },
+    {
+      "title": "Bitcoin's market rhymes as identical November lows create familiar January setup",
+      "link": "https://www.coindesk.com/markets/2026/01/08/bitcoin-s-market-rhymes-as-identical-november-lows-create-familiar-january-setup",
+      "description": "Structural demand, historical timing, and January inflection points collide in 2026.",
+      "pubDate": "2026-01-08T11:24:53.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "45m ago"
+    },
+    {
+      "title": "Fireblocks Expands Into Crypto Accounting With TRES Finance Acquisition",
+      "link": "https://decrypt.co/353945/fireblocks-expands-into-crypto-accounting-with-tres-finance-acquisition",
+      "description": "The deal links custody infrastructure with audit-ready reporting as firms face regulatory and capital markets pressure.",
+      "pubDate": "2026-01-08T11:21:08.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "49m ago"
+    },
+    {
+      "title": "Bybit’s Private Wealth Management delivered 20% returns amid a challenging 2025",
+      "link": "https://www.coindesk.com/business/2026/01/08/bybit-s-private-wealth-management-service-delivered-20-returns-despite-challenging-2025",
+      "description": "Bybit’s top performing fund saw returns of 20.3% APR driven by the exchange’s flagship high-yield USDT-based strategies.",
+      "pubDate": "2026-01-08T11:06:57.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "1h ago"
+    },
+    {
       "title": "Zcash developer team behind ECC quits after governance clash with Bootstrap board",
       "link": "https://www.coindesk.com/tech/2026/01/08/zcash-developer-team-behind-ecc-quits-after-governance-clash-with-bootstrap-board",
       "description": "ECC's CEO, Josh Swihart, claims the team was forced to leave because of changes that made their work untenable.",
@@ -8,7 +77,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "3m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "India&#39;s Tax Department Echoes Reserve Bank&#39;s Concerns on Crypto",
@@ -18,7 +87,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "21m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Bitcoin price may bottom at $88K next cycle if last CME gap stays open",
@@ -28,47 +97,17 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "46m ago"
-    },
-    {
-      "title": "Binance launches regulated TradFi perpetual contracts settled in USDT, starting with gold and silver",
-      "link": "https://www.theblock.co/post/384743/binance-gold-silver-perpetual-contracts-usdt-settled?utm_source=rss&amp;utm_medium=rss",
-      "description": "Binance has rolled out its first regulated TradFi perpetual futures, starting with USDT-settled gold and silver contracts.",
-      "pubDate": "2026-01-08T10:03:30.000Z",
-      "source": "The Block",
-      "sourceKey": "theblock",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "CZ-backed YZi Labs escalates fight over CEA’s ‘poison pill’ and BNB treasury strategy",
-      "link": "<![CDATA[https://cointelegraph.com/news/yzi-labs-escalates-fight-over-cea?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "YZi Labs is challenging CEA Industries’ newly adopted poison pill and bylaw changes, accusing the board of entrenchment and misrepresenting its commitment to a BNB treasury.",
-      "pubDate": "2026-01-08T09:52:22.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "BitMine buys $105M Ether to kick off 2026, still holds $915M in cash",
-      "link": "<![CDATA[https://cointelegraph.com/news/bitmine-buys-105m-eth-2026-915m-cash?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "The largest corporate ETH holder started 2026 with a $105 million Ether purchase, while surpassing $2.87 billion in staked Ether, seeking to generate passive yield on its holdings.",
-      "pubDate": "2026-01-08T09:27:30.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
       "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 6,
+  "totalCount": 10,
   "sources": [
+    "The Defiant",
     "CoinDesk",
     "Decrypt",
-    "CoinTelegraph",
-    "The Block"
+    "CoinTelegraph"
   ],
-  "fetchedAt": "2026-01-08T11:07:00.375Z",
-  "cachedAt": "2026-01-08T11:06:42.000Z",
+  "fetchedAt": "2026-01-08T12:10:46.313Z",
+  "cachedAt": "2026-01-08T12:10:30.000Z",
   "source": "failsafe-cache"
 }
