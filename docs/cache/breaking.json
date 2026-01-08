@@ -1,14 +1,14 @@
 {
   "articles": [
     {
-      "title": "Morgan Stanley’s Bitcoin ETF has ‘intangible benefit’ outside of flows: Exec",
+      "title": "Morgan Stanley’s Bitcoin ETF could offer strategic value beyond inflows, analysts say",
       "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-etf-morgan-stanley-flows-reputational-procap-jeff-park?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Morgan Stanley has an “intangible benefit” up its sleeve even if its spot Bitcoin ETF isn’t a huge success, says ProCap investment chief Jeff Park.",
+      "description": "Analysts say the bank’s late entry into spot Bitcoin ETFs may still carry reputational and strategic upside across its brokerage and crypto ambitions.",
       "pubDate": "2026-01-08T06:06:47.000Z",
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "2m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Zcash devs split from Electric Coin Company, plan to create new firm",
@@ -18,7 +18,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "9m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Solana Accelerate to open Consensus Hong Kong in February",
@@ -28,7 +28,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "12m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "AI giant Anthropic raising $10B at $350B valuation: Report",
@@ -38,87 +38,15 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "34m ago"
-    },
-    {
-      "title": "Bitcoin, ether ease after early January pop as markets price fed cuts",
-      "link": "https://www.coindesk.com/markets/2026/01/08/bitcoin-ether-ease-after-early-january-pop-as-markets-price-fed-cuts",
-      "description": "The crypto market's movements are influenced by expectations of Federal Reserve rate cuts and a rally in global government bonds.",
-      "pubDate": "2026-01-08T05:07:30.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Memecoin social buzz grows as traders return to risk assets",
-      "link": "<![CDATA[https://cointelegraph.com/news/memecoin-social-buzz-market-cap-risk-appetite?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Memecoins fell 65% over 2025 as risk-taking behavior dropped among traders, but the tokens are seeing gains as positive sentiment returns to crypto.",
-      "pubDate": "2026-01-08T04:58:25.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "XRP slips 5% as CNBC terms it 'hottest trade' of 2026 over bitcoin and ether",
-      "link": "https://www.coindesk.com/markets/2026/01/08/xrp-slips-5-as-cnbc-terms-it-hottest-trade-of-2026-over-bitcoin-and-ether",
-      "description": "Institutional demand through U.S.-listed spot XRP ETFs remains strong, with net inflows continuing into early January.",
-      "pubDate": "2026-01-08T04:45:10.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Google, Character.AI Agree to Settle US Lawsuit Over Teen’s Suicide",
-      "link": "https://decrypt.co/353927/google-character-ai-settle-us-lawsuit-teens-suicide",
-      "description": "A lawsuit alleging an AI chatbot contributed to a teen’s suicide has been settled, closing a closely watched case over AI accountability.",
-      "pubDate": "2026-01-08T04:37:55.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Kalshi CEO endorses bill banning insider trading on prediction markets",
-      "link": "https://www.theblock.co/post/384725/kalshi-ceo-endorses-insider-trading-ban?utm_source=rss&amp;utm_medium=rss",
-      "description": "Mansour distanced Kalshi from 'offshore, unregulated' prediction market platforms with alleged cases of insider trading.",
-      "pubDate": "2026-01-08T04:25:02.000Z",
-      "source": "The Block",
-      "sourceKey": "theblock",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Solana Mobile to launch SKR token for Seeker phone on Jan. 21",
-      "link": "<![CDATA[https://cointelegraph.com/news/solana-mobile-launch-skr-token-jan-21-seeker-phone?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Solana Mobile will airdrop up to 20% of SKR tokens to users of its Seeker phone on Jan. 21, and introduce so-called Guardians to secure the network.",
-      "pubDate": "2026-01-08T04:22:26.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Ethereum bumps blob capacity as it gears for Fusaka upgrade",
-      "link": "https://www.coindesk.com/tech/2026/01/08/ethereum-bumps-blob-capacity-as-it-gears-for-fusaka-upgrade",
-      "description": "Ethereum increased its data capacity per block, raising the blob target to 14 and the maximum blob limit to 21.",
-      "pubDate": "2026-01-08T04:21:37.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
       "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 11,
+  "totalCount": 4,
   "sources": [
     "CoinTelegraph",
-    "CoinDesk",
-    "Decrypt",
-    "The Block"
+    "CoinDesk"
   ],
-  "fetchedAt": "2026-01-08T06:09:16.031Z",
-  "cachedAt": "2026-01-08T06:09:05.000Z",
+  "fetchedAt": "2026-01-08T07:08:52.239Z",
+  "cachedAt": "2026-01-08T07:08:41.000Z",
   "source": "failsafe-cache"
 }
