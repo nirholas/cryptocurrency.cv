@@ -1,6 +1,26 @@
 {
   "articles": [
     {
+      "title": "Optimism proposes OP token buybacks using 50% of superchain revenue",
+      "link": "https://www.coindesk.com/business/2026/01/08/optimism-proposes-op-token-buybacks-using-50-of-superchain-revenue",
+      "description": "Under the proposal, which is set to move to a governance vote on January 22, Optimism would begin monthly buybacks starting in February.",
+      "pubDate": "2026-01-08T15:15:00.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "10m ago"
+    },
+    {
+      "title": "JPMorgan says the crypto selloff may be nearing a bottom as ETF outflows ease",
+      "link": "https://www.coindesk.com/markets/2026/01/08/jpmorgan-says-the-crypto-selloff-may-be-nearing-a-bottom-as-etf-outflows-ease",
+      "description": "Flow and positioning data suggest the recent crypto market correction may be running out of steam, with early signs of stabilization across ETFs and derivatives.",
+      "pubDate": "2026-01-08T15:11:00.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "14m ago"
+    },
+    {
       "title": "Polymarket user who won $400K on Maduro ouster bet quietly disappears",
       "link": "<![CDATA[https://cointelegraph.com/news/polymarket-user-who-won-400k-on-maduro-ouster-bet-quietly-disappears?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "The Polymarket account that profited on Nicholas Maduro's capture and ouster as president is inaccessible, adding to concerns over insider trading allegations on prediction markets.",
@@ -8,7 +28,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "17m ago"
+      "timeAgo": "34m ago"
     },
     {
       "title": "Here’s what happened in crypto today",
@@ -18,7 +38,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "19m ago"
+      "timeAgo": "37m ago"
     },
     {
       "title": "Zcash backer Bootstrap says split due to clash over nonprofit rules, Zashi future",
@@ -28,7 +48,17 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "29m ago"
+      "timeAgo": "47m ago"
+    },
+    {
+      "title": "Coincheck signs $112 million stock purchase agreement for majority stake in digital asset manager 3iQ",
+      "link": "https://www.theblock.co/post/384772/coincheck-3iq-stake?utm_source=rss&amp;utm_medium=rss",
+      "description": "The deal is expected to close in Q2 2026 and could give Coincheck ownership of 3iQ’s regulated crypto ETFs and fund platforms.",
+      "pubDate": "2026-01-08T14:26:45.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "58m ago"
     },
     {
       "title": "Florida Revives Bitcoin Reserve Push With New 2026 Bill",
@@ -38,7 +68,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "44m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Digital Finance Will Evolve Into ‘Foundational Infrastructure Layer’ in 2026: Moody’s",
@@ -48,7 +78,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "45m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "CoinDesk 20 Performance Update: Ripple (XRP) Drops 4.5% as Nearly All Assets Decline",
@@ -58,7 +88,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "54m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Tokenized Brazilian credit card debt offers 13% yield through BlackOpal's GemStone platform",
@@ -119,36 +149,17 @@
       "sourceKey": "decrypt",
       "category": "general",
       "timeAgo": "1h ago"
-    },
-    {
-      "title": "Crypto Liquidations Top $477M as Bitcoin Slips Below $90K",
-      "link": "https://decrypt.co/353953/crypto-liquidations-top-477m-as-bitcoin-slips-below-90k",
-      "description": "Bitcoin’s dip below $90,000 has triggered a liquidation spree as bullish momentum fades amid ETF outflows and thin liquidity.",
-      "pubDate": "2026-01-08T13:19:40.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Florida narrows scope of revived Bitcoin reserve proposal for 2026",
-      "link": "<![CDATA[https://cointelegraph.com/news/florida-bitcoin-only-crypto-reserve-bill-sb1038?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "The proposal reduces Florida’s crypto ambitions, effectively limiting eligible assets to Bitcoin and distancing it from pension exposure.",
-      "pubDate": "2026-01-08T13:15:15.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 14,
+  "totalCount": 15,
   "sources": [
+    "CoinDesk",
     "CoinTelegraph",
+    "The Block",
     "Bitcoin Magazine",
-    "Decrypt",
-    "CoinDesk"
+    "Decrypt"
   ],
-  "fetchedAt": "2026-01-08T15:07:48.701Z",
-  "cachedAt": "2026-01-08T15:07:37.000Z",
+  "fetchedAt": "2026-01-08T15:25:07.057Z",
+  "cachedAt": "2026-01-08T15:25:00.000Z",
   "source": "failsafe-cache"
 }

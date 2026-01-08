@@ -8,7 +8,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "19m ago"
+      "timeAgo": "36m ago"
     },
     {
       "title": "Florida Revives Bitcoin Reserve Push With New 2026 Bill",
@@ -18,7 +18,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "44m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Crypto Liquidations Top $477M as Bitcoin Slips Below $90K",
@@ -28,7 +28,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Florida narrows scope of revived Bitcoin reserve proposal for 2026",
@@ -38,7 +38,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Crypto Crime Soared to $154 Billion in 2025 as Russia, North Korea, and Iran Exploit Blockchain Tech",
@@ -88,7 +88,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "Bitcoin price may bottom at $88K next cycle if last CME gap stays open",
@@ -98,7 +98,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "XRP ETFs notch first outflows as nearly $600M exits Bitcoin, Ether funds",
@@ -168,7 +168,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "11h ago"
+      "timeAgo": "12h ago"
     },
     {
       "title": "Babylon receives $15M from a16z Crypto to expand Bitcoin-native lending",
@@ -208,7 +208,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "18h ago"
+      "timeAgo": "19h ago"
     },
     {
       "title": "Alleged Crypto Scam Kingpin Arrested in Cambodia After $12 Billion Bitcoin Seizure",
@@ -228,7 +228,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "20h ago"
+      "timeAgo": "21h ago"
     },
     {
       "title": "Alleged crypto scam boss linked to $15 billion bitcoin haul deported to China after Cambodia arrest",
@@ -258,7 +258,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "22h ago"
+      "timeAgo": "23h ago"
     },
     {
       "title": "YouTube Rival Rumble Debuts Bitcoin, Tether Wallet for Crypto Creator Tips",
@@ -267,16 +267,6 @@
       "pubDate": "2026-01-07T16:05:27.000Z",
       "source": "Decrypt",
       "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "23h ago"
-    },
-    {
-      "title": "A16z Crypto buys $15 million in BABY tokens to fund Babylon&#8217;s buildout of new BTCVaults",
-      "link": "https://www.theblock.co/post/384636/a16z-crypto-buys-15-million-in-baby-tokens-to-fund-babylons-buildout-of-new-btcvaults?utm_source=rss&amp;utm_medium=rss",
-      "description": "Babylon's vaults allow native Bitcoin to be verifiably locked as collateral while remaining on the Bitcoin blockchain.",
-      "pubDate": "2026-01-07T15:10:49.000Z",
-      "source": "The Block",
-      "sourceKey": "theblock",
       "category": "general",
       "timeAgo": "23h ago"
     },
@@ -299,9 +289,19 @@
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
       "timeAgo": "yesterday"
+    },
+    {
+      "title": "Bitcoin ETFs Shed $243M as Crypto Market Rally Cools",
+      "link": "https://decrypt.co/353832/bitcoin-etfs-shed-243m-as-crypto-market-rally-cools",
+      "description": "Analysts called the outflows from spot Bitcoin ETFs a temporary repositioning rather than a structural shift in sentiment.",
+      "pubDate": "2026-01-07T13:54:45.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "yesterday"
     }
   ],
-  "totalCount": 64,
+  "totalCount": 63,
   "sources": [
     "CoinTelegraph",
     "Bitcoin Magazine",
@@ -310,7 +310,7 @@
     "CoinDesk",
     "The Defiant"
   ],
-  "fetchedAt": "2026-01-08T15:07:42.652Z",
-  "cachedAt": "2026-01-08T15:07:37.000Z",
+  "fetchedAt": "2026-01-08T15:25:01.508Z",
+  "cachedAt": "2026-01-08T15:25:00.000Z",
   "source": "failsafe-cache"
 }
