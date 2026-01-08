@@ -1,6 +1,45 @@
 {
   "articles": [
     {
+      "title": "Florida Lawmakers Renew Push to Launch State Bitcoin Reserve",
+      "link": "https://decrypt.co/353995/florida-lawmakers-renew-push-launch-state-bitcoin-reserve",
+      "description": "Florida lawmakers introduced another bill for the creation of a strategic Bitcoin reserve, less than a year after two attempts were shelved.",
+      "pubDate": "2026-01-08T18:35:24.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "31m ago"
+    },
+    {
+      "title": "Bitcoin Extends Selloff as Investors Turn Cautious",
+      "link": "https://thedefiant.io/news/markets/bitcoin-extends-selloff-as-investors-turn-cautious",
+      "pubDate": "2026-01-08T18:33:08.000Z",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
+      "category": "defi",
+      "timeAgo": "33m ago"
+    },
+    {
+      "title": "Bitcoin Could Hit $2.9 Million by 2050, VanEck Says",
+      "link": "https://bitcoinmagazine.com/news/bitcoin-could-hit-2-9-million-by-2050",
+      "description": "Bitcoin Magazine\n\nBitcoin Could Hit $2.9 Million by 2050, VanEck Says\nVanEck’s new report projects that Bitcoin could reach $2.9 million by 2050 under a base-case scenario.\nThis post Bitcoin Could Hit",
+      "pubDate": "2026-01-08T18:18:26.000Z",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
+      "category": "bitcoin",
+      "timeAgo": "47m ago"
+    },
+    {
+      "title": "BlackRock adds $900M BTC as Bitcoin long-term selling falls to 2017 lows",
+      "link": "<![CDATA[https://cointelegraph.com/news/blackrock-adds-dollar900m-btc-as-bitcoin-long-term-selling-falls-to-2017-lows?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "BlackRock adds $900 million in Bitcoin as long-term holder selling drops to 2017 lows, pointing to early signs of BTC accumulation.",
+      "pubDate": "2026-01-08T18:05:00.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "1h ago"
+    },
+    {
       "title": "Here’s what happened in crypto today",
       "link": "<![CDATA[https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
@@ -8,7 +47,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "18m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Trump’s Second Term Creates Rare ‘Golden Window’ for Any Crypto Policy Progress: Report",
@@ -18,16 +57,6 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "27m ago"
-    },
-    {
-      "title": "The ZCash situation explained! Interview with ZEC bull Mert! BTC below $90K! ZEC falls 19%!",
-      "link": "https://decrypt.co/videos/interviews/wmsgKRFW/the-zcash-situation-explained-interview-with-zec-bull-mert-btc-below-90k-zec-falls-19",
-      "description": "Crypto majors fell again yesterday as btc lost $90k; btc -2% at $89,900; eth -3% at $3,100, sol -3% at $134; xrp -7% to $2.08. Lit (+3%), wlfi (+3%) and xmr (+3%) led top movers. Zec fell 19% after th",
-      "pubDate": "2026-01-08T17:04:56.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
       "timeAgo": "1h ago"
     },
     {
@@ -38,7 +67,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Bitcoin vs. gold vs. silver in 2026: How investors are repricing scarcity",
@@ -48,7 +77,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Will a Supreme Court Ruling Against Trump Cause a Bitcoin Crash?",
@@ -58,7 +87,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Bitcoin bounces to $90,500 after testing key support of $89,200",
@@ -68,7 +97,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Bitcoin on Exchanges Can Be Legally Seized in South Korea, Supreme Court Affirms",
@@ -78,7 +107,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Bitcoin trader maintains $76K BTC price target as 2026 comeback fizzles",
@@ -88,7 +117,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "2h ago"
+      "timeAgo": "3h ago"
     },
     {
       "title": "Florida Revives Bitcoin Reserve Push With New 2026 Bill",
@@ -98,7 +127,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "Crypto Liquidations Top $477M as Bitcoin Slips Below $90K",
@@ -108,7 +137,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Florida narrows scope of revived Bitcoin reserve proposal for 2026",
@@ -118,7 +147,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Crypto Crime Soared to $154 Billion in 2025 as Russia, North Korea, and Iran Exploit Blockchain Tech",
@@ -128,7 +157,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "5h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "Bitcoin slips back below $90,000 after early-2026 rally fades",
@@ -138,7 +167,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "5h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "Florida revives push for bitcoin reserve with new 2026 bill",
@@ -148,7 +177,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "5h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "Bitcoin falls below $90,000 as altcoins slide in thin trading: Crypto Markets Today",
@@ -158,7 +187,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Bitcoin's market rhymes as identical November lows create familiar January setup",
@@ -168,7 +197,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Bitcoin price may bottom at $88K next cycle if last CME gap stays open",
@@ -178,7 +207,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "7h ago"
+      "timeAgo": "8h ago"
     },
     {
       "title": "XRP ETFs notch first outflows as nearly $600M exits Bitcoin, Ether funds",
@@ -188,7 +217,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "9h ago"
+      "timeAgo": "10h ago"
     },
     {
       "title": "Spot XRP ETFs see first net outflows since debut, worth $41 million",
@@ -228,7 +257,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "13h ago"
+      "timeAgo": "14h ago"
     },
     {
       "title": "Three Catalysts That Could Kickstart a Crypto Rally in 2026: Bitwise",
@@ -238,7 +267,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "14h ago"
+      "timeAgo": "15h ago"
     },
     {
       "title": "Bitcoin faces ‘boring sideways’ grind in coming months: CryptoQuant CEO",
@@ -248,7 +277,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "14h ago"
+      "timeAgo": "15h ago"
     },
     {
       "title": "Bitcoin Price Teeters Near $90,000 as Early-2026 Rally Falters",
@@ -258,7 +287,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "21h ago"
+      "timeAgo": "22h ago"
     },
     {
       "title": "Top Self Custody Bitcoin Wallets for 2026",
@@ -268,49 +297,19 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "21h ago"
-    },
-    {
-      "title": "Alleged Crypto Scam Kingpin Arrested in Cambodia After $12 Billion Bitcoin Seizure",
-      "link": "https://decrypt.co/353897/alleged-crypto-scam-kingpin-arrested-cambodia-12-billion-bitcoin-seizure",
-      "description": "The alleged mastermind of a major crypto scam ring that stole billions was arrested in Cambodia this week and extradited to China.",
-      "pubDate": "2026-01-07T19:42:05.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
       "timeAgo": "22h ago"
-    },
-    {
-      "title": "Strategy ($MSTR) Jumps 7% After MSCI Decides Against Excluding Bitcoin Treasury Firms",
-      "link": "https://bitcoinmagazine.com/markets/strategy-mstr-jumps-7-after-msci-news",
-      "description": "Bitcoin Magazine\n\nStrategy ($MSTR) Jumps 7% After MSCI Decides Against Excluding Bitcoin Treasury Firms\nStrategy shares (MSTR) jumped after MSCI decided not to exclude bitcoin-heavy firms from its ind",
-      "pubDate": "2026-01-07T18:15:34.000Z",
-      "source": "Bitcoin Magazine",
-      "sourceKey": "bitcoinmagazine",
-      "category": "bitcoin",
-      "timeAgo": "23h ago"
-    },
-    {
-      "title": "Alleged crypto scam boss linked to $15 billion bitcoin haul deported to China after Cambodia arrest",
-      "link": "https://www.theblock.co/post/384674/alleged-crypto-scam-boss-linked-15-billion-bitcoin-deported-china-cambodia-arrest?utm_source=rss&amp;utm_medium=rss",
-      "description": "The case has become a flashpoint in a broader dispute over the origin and ownership of billions of dollars’ worth of seized bitcoin.",
-      "pubDate": "2026-01-07T17:33:33.000Z",
-      "source": "The Block",
-      "sourceKey": "theblock",
-      "category": "general",
-      "timeAgo": "yesterday"
     }
   ],
-  "totalCount": 64,
+  "totalCount": 54,
   "sources": [
-    "CoinTelegraph",
-    "Bitcoin Magazine",
     "Decrypt",
+    "The Defiant",
+    "Bitcoin Magazine",
+    "CoinTelegraph",
     "CoinDesk",
-    "The Block",
-    "The Defiant"
+    "The Block"
   ],
-  "fetchedAt": "2026-01-08T18:07:52.243Z",
-  "cachedAt": "2026-01-08T18:07:46.000Z",
+  "fetchedAt": "2026-01-08T19:06:25.757Z",
+  "cachedAt": "2026-01-08T19:06:18.000Z",
   "source": "failsafe-cache"
 }

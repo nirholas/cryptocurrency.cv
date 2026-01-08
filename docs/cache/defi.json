@@ -1,6 +1,25 @@
 {
   "articles": [
     {
+      "title": "Florida Lawmakers Renew Push to Launch State Bitcoin Reserve",
+      "link": "https://decrypt.co/353995/florida-lawmakers-renew-push-launch-state-bitcoin-reserve",
+      "description": "Florida lawmakers introduced another bill for the creation of a strategic Bitcoin reserve, less than a year after two attempts were shelved.",
+      "pubDate": "2026-01-08T18:35:24.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "31m ago"
+    },
+    {
+      "title": "Bitcoin Extends Selloff as Investors Turn Cautious",
+      "link": "https://thedefiant.io/news/markets/bitcoin-extends-selloff-as-investors-turn-cautious",
+      "pubDate": "2026-01-08T18:33:08.000Z",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
+      "category": "defi",
+      "timeAgo": "33m ago"
+    },
+    {
       "title": "Here’s what happened in crypto today",
       "link": "<![CDATA[https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
@@ -8,7 +27,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "18m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Zcash Plunges 20% After Entire Core Team Exits Amid Dispute",
@@ -17,7 +36,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "23m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Bitcoin vs. gold vs. silver in 2026: How investors are repricing scarcity",
@@ -27,7 +46,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Polygon Labs unveils ‘Open Money Stack’ to power borderless stablecoin payments",
@@ -37,7 +56,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "2h ago"
+      "timeAgo": "3h ago"
     },
     {
       "title": "Florida Revives Bitcoin Reserve Push With New 2026 Bill",
@@ -47,7 +66,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "Tokenized Brazilian credit card debt offers 13% yield through BlackOpal's GemStone platform",
@@ -57,7 +76,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "China’s interest-bearing digital yuan piles pressure on US stablecoin rules",
@@ -67,7 +86,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Crypto Liquidations Top $477M as Bitcoin Slips Below $90K",
@@ -77,7 +96,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Memecoins, DeFi lead declines as caution seeps in: Crypto Daybook Americas",
@@ -87,7 +106,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "5h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "Crypto Derivatives Market Reset After Oct. 10 Crash: BitMEX",
@@ -96,7 +115,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "October's crypto crash left market makers stuffed with coins, slowing trading: BitMEX",
@@ -106,7 +125,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Bybit’s Private Wealth Management delivered 20% returns amid a challenging 2025",
@@ -126,7 +145,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "8h ago"
+      "timeAgo": "9h ago"
     },
     {
       "title": "India tax authorities warn crypto undermines tax enforcement",
@@ -136,7 +155,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "9h ago"
+      "timeAgo": "10h ago"
     },
     {
       "title": "Solana Accelerate to open Consensus Hong Kong in February",
@@ -146,7 +165,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "12h ago"
+      "timeAgo": "13h ago"
     },
     {
       "title": "AI giant Anthropic raising $10B at $350B valuation: Report",
@@ -156,27 +175,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "12h ago"
-    },
-    {
-      "title": "GENIUS Act changes would be a ‘national security trap’: Crypto execs",
-      "link": "<![CDATA[https://cointelegraph.com/news/genius-act-stablecoin-rewards-debate-crypto-industry-executives-banks-senate?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Pro-crypto lawyer John Deaton argued that banning yield on stablecoins would incentivize the use of China’s interest-bearing digital yuan, hurting the US dollar.",
-      "pubDate": "2026-01-08T01:58:54.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "16h ago"
-    },
-    {
-      "title": "Crypto credit is starting to look like cash savings accounts: Asia Morning Briefing",
-      "link": "https://www.coindesk.com/markets/2026/01/08/crypto-credit-is-starting-to-look-like-cash-savings-accounts-asia-morning-briefing",
-      "description": "Flowdesk says record demand met even deeper liquidity, suppressing volatility across staking, stablecoin lending, making crypto credit markets look more like traditional cash plumbing.",
-      "pubDate": "2026-01-08T01:01:09.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "17h ago"
+      "timeAgo": "13h ago"
     },
     {
       "title": "Trump-backed World Liberty Financial seeks US bank charter to bring USD1 stablecoin fully onshore",
@@ -186,7 +185,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "19h ago"
+      "timeAgo": "20h ago"
     },
     {
       "title": "Elon Musk: Nvidia’s Self-Driving Tech Is Still Years From Challenging Tesla",
@@ -196,7 +195,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "19h ago"
+      "timeAgo": "20h ago"
     },
     {
       "title": "Polymarket Begins Rolling Out Fees in US App and Crypto Markets",
@@ -205,7 +204,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "20h ago"
+      "timeAgo": "21h ago"
     },
     {
       "title": "Wyoming&#39;s &#39;Frontier&#39; Stablecoin Debuts—Will It Offer Yield?",
@@ -215,7 +214,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "20h ago"
+      "timeAgo": "21h ago"
     },
     {
       "title": "Clone-X NFTs Soar 200% as Nike Sells RTFKT",
@@ -224,7 +223,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "21h ago"
+      "timeAgo": "22h ago"
     },
     {
       "title": "Crypto Markets Edge Lower as Investors Weigh Macro Data",
@@ -233,7 +232,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "22h ago"
+      "timeAgo": "23h ago"
     },
     {
       "title": "Iran Accepting Crypto Payments for Weapons—But This May Not Help It Evade Sanctions",
@@ -294,16 +293,16 @@
       "timeAgo": "yesterday"
     }
   ],
-  "totalCount": 124,
+  "totalCount": 122,
   "sources": [
-    "CoinTelegraph",
+    "Decrypt",
     "The Defiant",
+    "CoinTelegraph",
     "CoinDesk",
     "Bitcoin Magazine",
-    "Decrypt",
     "The Block"
   ],
-  "fetchedAt": "2026-01-08T18:07:52.846Z",
-  "cachedAt": "2026-01-08T18:07:46.000Z",
+  "fetchedAt": "2026-01-08T19:06:26.191Z",
+  "cachedAt": "2026-01-08T19:06:18.000Z",
   "source": "failsafe-cache"
 }
