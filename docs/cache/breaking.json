@@ -1,63 +1,32 @@
 {
   "articles": [
     {
-      "title": "Trump-linked World Liberty Financial applies for federal bank charter",
-      "link": "https://www.coindesk.com/policy/2026/01/07/trump-linked-world-liberty-financial-applies-for-federal-bank-charter",
-      "description": "World Liberty Financial is trying to launch the World Liberty Trust Company, a stablecoin-focused national trust bank, it said Wednesday.",
-      "pubDate": "2026-01-07T23:16:04.000Z",
+      "title": "Crypto credit is starting to look like cash savings accounts: Asia Morning Briefing",
+      "link": "https://www.coindesk.com/markets/2026/01/08/crypto-credit-is-starting-to-look-like-cash-savings-accounts-asia-morning-briefing",
+      "description": "Flowdesk says record demand met even deeper liquidity, suppressing volatility across staking, stablecoin lending, making crypto credit markets look more like traditional cash plumbing.",
+      "pubDate": "2026-01-08T01:01:09.000Z",
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "33m ago"
     },
     {
-      "title": "This is what's (currently) in the way of U.S. crypto market structure bill harmony",
-      "link": "https://www.coindesk.com/news-analysis/2026/01/07/this-is-what-s-currently-in-the-way-of-u-s-crypto-market-structure-bill-harmony",
-      "description": "Though consequential Senate committee votes may be coming, the talks over the bill's language haven't yet satisfied fundamental requests from Democrats.",
-      "pubDate": "2026-01-07T22:46:33.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
+      "title": "Trump’s World Liberty Financial applies for banking charter to expand USD1",
+      "link": "<![CDATA[https://cointelegraph.com/news/world-liberty-files-banking-charter-expand-usd1?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "The Trumpfamily’s World Liberty Financial filed for a banking charter to gain greater control over its USD1 stablecoin and expand its adoption among institutions.",
+      "pubDate": "2026-01-08T00:44:06.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Trump-backed World Liberty Financial seeks US bank charter to bring USD1 stablecoin fully onshore",
-      "link": "https://www.theblock.co/post/384708/trump-backed-world-liberty-financial-seeks-us-bank-charter-to-bring-usd1-stablecoin-fully-onshore?utm_source=rss&amp;utm_medium=rss",
-      "description": "The DeFi protocol said WLTC Holdings LLC filed an application to establish a national trust bank purpose-built for stablecoin operations.",
-      "pubDate": "2026-01-07T22:31:09.000Z",
-      "source": "The Block",
-      "sourceKey": "theblock",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Solana Mobile Gears Up to Airdrop SKR Token to Seeker Phone Users—But Not Saga Owners",
-      "link": "https://decrypt.co/353912/solana-mobile-airdrop-skr-token-seeker-phone-users-not-saga-owners",
-      "description": "Solana Mobile announced it will airdrop its native ecosystem token, SKR, to Seeker device users and app developers on January 20.",
-      "pubDate": "2026-01-07T22:28:26.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Elon Musk: Nvidia’s Self-Driving Tech Is Still Years From Challenging Tesla",
-      "link": "https://decrypt.co/353909/elon-musk-nvidias-self-driving-tech-still-years-challenging-tesla",
-      "description": "Tesla CEO Elon Musk argued that Nvidia’s software has arrived years earlier than legacy automakers can deploy it at scale.",
-      "pubDate": "2026-01-07T22:27:39.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "50m ago"
     }
   ],
-  "totalCount": 5,
+  "totalCount": 2,
   "sources": [
     "CoinDesk",
-    "The Block",
-    "Decrypt"
+    "CoinTelegraph"
   ],
-  "fetchedAt": "2026-01-08T00:24:50.943Z",
-  "cachedAt": "2026-01-08T00:24:43.000Z",
+  "fetchedAt": "2026-01-08T01:34:21.165Z",
+  "cachedAt": "2026-01-08T01:34:11.000Z",
   "source": "failsafe-cache"
 }
