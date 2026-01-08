@@ -45,17 +45,45 @@ interface PortfolioCoin {
   articles: NewsArticle[];
 }
 
+// Sanitize user-provided token query before using it in external requests
+function sanitizeSearchQuery(rawQuery: string): { value: string; isAddress: boolean } | null {
+  const query = rawQuery.trim();
+  if (!query) {
+    return null;
+  }
+
+  // Detect and validate contract addresses (EVM-style 0x-prefixed 40-hex chars)
+  const addressPattern = /^0x[0-9a-fA-F]{40}$/;
+  if (addressPattern.test(query)) {
+    return { value: query, isAddress: true };
+  }
+
+  // For non-address searches, restrict to safe characters to avoid unexpected paths
+  const normalized = query
+    .toLowerCase()
+    .replace(/[^a-z0-9 _-]/g, '') // allow letters, digits, space, underscore, hyphen
+    .trim();
+
+  if (!normalized) {
+    return null;
+  }
+
+  return { value: normalized, isAddress: false };
+}
+
 // Search DexScreener for any token
 async function searchDexScreener(query: string): Promise<TokenInfo | null> {
   try {
-    // Check if it's a contract address
-    const isAddress = query.startsWith('0x') || query.length > 30;
-    
+    const sanitized = sanitizeSearchQuery(query);
+    if (!sanitized) {
+      return null;
+    }
+
     let url: string;
-    if (isAddress) {
-      url = `${DEXSCREENER_API}/tokens/${query}`;
+    if (sanitized.isAddress) {
+      url = `${DEXSCREENER_API}/tokens/${sanitized.value}`;
     } else {
-      url = `${DEXSCREENER_API}/search?q=${encodeURIComponent(query)}`;
+      url = `${DEXSCREENER_API}/search?q=${encodeURIComponent(sanitized.value)}`;
     }
     
     const response = await fetch(url, {
