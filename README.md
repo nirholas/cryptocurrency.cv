@@ -26,8 +26,6 @@ We said no.
 | **Sources** | 7 | 1 | Varies |
 | **Self-host** | ✅ One click | No | No |
 
-*Fair use. Don't hammer it.
-
 ---
 
 ## Sources
