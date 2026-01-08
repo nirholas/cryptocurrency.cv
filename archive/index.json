@@ -1,9 +1,11 @@
 {
-  "lastUpdated": "2026-01-07T00:00:00.000Z",
-  "totalArticles": 0,
+  "lastUpdated": "2026-01-08T00:34:03.000Z",
+  "totalArticles": 50,
   "dateRange": {
-    "earliest": null,
-    "latest": null
+    "earliest": "2026-01-08",
+    "latest": "2026-01-08"
   },
-  "availableDates": []
+  "availableDates": [
+    "2026-01-08"
+  ]
 }
