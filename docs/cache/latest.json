@@ -1,6 +1,56 @@
 {
   "articles": [
     {
+      "title": "Fireblocks buys crypto accounting platform TRES for $130M",
+      "link": "<![CDATA[https://cointelegraph.com/news/fireblocks-buys-crypto-accounting-platform-tres-for-130m?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Fireblocks has expanded its institutional offering by buying TRES, a crypto accounting and tax compliance platform, as it looks to keep up with the use of stablecoins.",
+      "pubDate": "2026-01-08T02:24:43.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "1h ago"
+    },
+    {
+      "title": "World Liberty Financial Applies for OCC Trust Bank Charter",
+      "link": "https://decrypt.co/353922/world-liberty-financial-applies-for-occ-trust-bank-charter",
+      "description": "World Liberty Financial is seeking to overcome a federal oversight hurdle, with only one other crypto firm having successfully done so.",
+      "pubDate": "2026-01-08T02:14:44.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "1h ago"
+    },
+    {
+      "title": "GENIUS Act changes would be a ‘national security trap’: Crypto execs",
+      "link": "<![CDATA[https://cointelegraph.com/news/genius-act-stablecoin-rewards-debate-crypto-industry-executives-banks-senate?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Pro-crypto lawyer John Deaton argued that banning yield on stablecoins would incentivize the use of China’s interest-bearing digital yuan, hurting the US dollar.",
+      "pubDate": "2026-01-08T01:58:54.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "1h ago"
+    },
+    {
+      "title": "OpenAI’s ChatGPT Health Push Raises Questions About Data Security",
+      "link": "https://decrypt.co/353919/openai-users-medical-data-ai-chatgpt-privacy-concerns",
+      "description": "The new feature lets users link medical records, while OpenAI emphasized encryption, data separation, and limits on health advice.",
+      "pubDate": "2026-01-08T01:55:03.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "1h ago"
+    },
+    {
+      "title": "Wyoming rolls out state-backed FRNT stablecoin to the public",
+      "link": "<![CDATA[https://cointelegraph.com/news/wyoming-stablecoin-frnt-goes-live-to-public?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Wyoming’s Frontier Stable Token (FRNT) is “the first fiat-backed, fully-reserved stable token\" to be issued by a US public entity, says state Governor Mark Gordon.",
+      "pubDate": "2026-01-08T01:49:39.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "1h ago"
+    },
+    {
       "title": "Sei warns USDC.n token holders to swap for &#8216;native&#8217; stablecoin ahead of planned upgrade",
       "link": "https://www.theblock.co/post/384715/sei-warns-usdcn-token-holders-swap-native-stablecoin?utm_source=rss&amp;utm_medium=rss",
       "description": "USDC.n served as the canonical representation of the popular stablecoin on the Sei Network before Circle issued a native version of the token.",
@@ -8,7 +58,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Crypto credit is starting to look like cash savings accounts: Asia Morning Briefing",
@@ -18,7 +68,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Ethereum rolls out final planned Blob Parameters Only fork as final step in Fusaka upgrade",
@@ -28,7 +78,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Trumps' World Liberty Financial applies for banking charter to expand USD1",
@@ -38,7 +88,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Trump-linked World Liberty Financial applies for federal bank charter",
@@ -48,7 +98,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "This is what's (currently) in the way of U.S. crypto market structure bill harmony",
@@ -58,7 +108,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "Trump-backed World Liberty Financial seeks US bank charter to bring USD1 stablecoin fully onshore",
@@ -68,7 +118,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Solana Mobile Gears Up to Airdrop SKR Token to Seeker Phone Users—But Not Saga Owners",
@@ -78,7 +128,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Elon Musk: Nvidia’s Self-Driving Tech Is Still Years From Challenging Tesla",
@@ -88,7 +138,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Solana's stablecoin market cap surges by $900M in 24 hours",
@@ -98,7 +148,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Nike sells RTFKT digital collectibles unit to unnamed buyer: reports",
@@ -108,7 +158,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Crypto reps fly to US capitol this week to address market structure bill",
@@ -118,7 +168,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Polymarket Begins Rolling Out Fees in US App and Crypto Markets",
@@ -127,7 +177,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Gate becomes latest crypto exchange to embed AI market intelligence",
@@ -147,7 +197,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "5h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "Senate Agriculture Committee to follow Banking panel in crypto vote next week: report",
@@ -157,7 +207,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "5h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "Babylon receives $15M from a16z Crypto to expand Bitcoin-native lending",
@@ -167,7 +217,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "5h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "60K Bitcoin absorbed by accumulators as miners send it to exchanges: Will rally stall?",
@@ -177,7 +227,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "5h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "Clone-X NFTs Soar 200% as Nike Sells RTFKT",
@@ -196,7 +246,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Top Self Custody Bitcoin Wallets for 2026",
@@ -206,7 +256,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Two Senate committees set Jan. 15 hearings to vote on sweeping crypto market structure legislation",
@@ -216,7 +266,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Polymarket, Dow Jones deal puts prediction markets data in Wall Street Journal",
@@ -226,7 +276,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Bitcoin averages 100% return after down years: Will the pattern repeat in 2026?",
@@ -236,7 +286,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Alleged Crypto Scam Kingpin Arrested in Cambodia After $12 Billion Bitcoin Seizure",
@@ -265,7 +315,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "7h ago"
+      "timeAgo": "8h ago"
     },
     {
       "title": "Crypto Advocates Renew Stablecoin Rewards Push as Market Structure Bill Nears Key Senate Vote",
@@ -275,7 +325,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "7h ago"
+      "timeAgo": "8h ago"
     },
     {
       "title": "Ray Dalio says 2026 US midterm elections could reverse Trump policies",
@@ -285,7 +335,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "7h ago"
+      "timeAgo": "8h ago"
     },
     {
       "title": "Here’s what happened in crypto today",
@@ -295,7 +345,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "7h ago"
+      "timeAgo": "8h ago"
     },
     {
       "title": "The Daily: Ripple confirms no IPO plans, Flare unlocks XRP spot exposure on Hyperliquid, and more",
@@ -305,7 +355,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "7h ago"
+      "timeAgo": "8h ago"
     },
     {
       "title": "Solana Mobile sets Jan. 21 launch date for SKR token, confirms airdrop",
@@ -335,7 +385,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "8h ago"
+      "timeAgo": "9h ago"
     },
     {
       "title": "JPMorgan to issue its JPM stablecoin directly on privacy-focused Canton Network",
@@ -345,7 +395,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "8h ago"
+      "timeAgo": "9h ago"
     },
     {
       "title": "Strategy ($MSTR) Jumps 7% After MSCI Decides Against Excluding Bitcoin Treasury Firms",
@@ -355,7 +405,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "8h ago"
+      "timeAgo": "9h ago"
     },
     {
       "title": "&#8216;A milestone in financial innovation&#8217;: Wyoming issues first state-backed stablecoin on Solana",
@@ -365,7 +415,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "8h ago"
+      "timeAgo": "9h ago"
     },
     {
       "title": "Iran Accepting Crypto Payments for Weapons—But This May Not Help It Evade Sanctions",
@@ -375,7 +425,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "8h ago"
+      "timeAgo": "9h ago"
     },
     {
       "title": "Alleged crypto scam boss linked to $15 billion bitcoin haul deported to China after Cambodia arrest",
@@ -385,7 +435,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "9h ago"
+      "timeAgo": "10h ago"
     },
     {
       "title": "Dow Jones to Add Polymarket Prediction Data Across WSJ, Barron’s Platforms",
@@ -395,7 +445,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "9h ago"
+      "timeAgo": "10h ago"
     },
     {
       "title": "XRP spot trading is now live on Hyperliquid with Flare's FXRP listing",
@@ -405,7 +455,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "9h ago"
+      "timeAgo": "10h ago"
     },
     {
       "title": "Trust Wallet’s $7M hack shows where crypto-friendly SMEs may be vulnerable",
@@ -415,7 +465,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "9h ago"
+      "timeAgo": "10h ago"
     },
     {
       "title": "Riot Platforms offloads $161M in Bitcoin in December amid strategy shift",
@@ -425,7 +475,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "9h ago"
+      "timeAgo": "10h ago"
     },
     {
       "title": "Wyoming Launches First U.S. State-Issued Stablecoin",
@@ -434,7 +484,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "9h ago"
+      "timeAgo": "10h ago"
     },
     {
       "title": "Flare launches first XRP spot exposure on Hyperliquid via FXRP",
@@ -444,60 +494,10 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "9h ago"
-    },
-    {
-      "title": "Aptos' APT falls amid a decline in wider crypto markets",
-      "link": "https://www.coindesk.com/markets/2026/01/07/aptos-apt-falls-amid-a-decline-in-wider-crypto-markets",
-      "description": "The token retreated in quiet trading conditions as it remained tightly coupled with broader crypto market movements.",
-      "pubDate": "2026-01-07T17:02:21.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "9h ago"
-    },
-    {
-      "title": "Crypto Long & Short: 2026: The year institutions treat crypto as part of their core stack",
-      "link": "https://www.coindesk.com/coindesk-indices/2026/01/07/crypto-long-and-short-2026-the-year-institutions-treat-crypto-as-part-of-their-core-stack",
-      "description": "In this week’s Crypto Long & Short Newsletter, Adeniyi Abiodun predicts that 2026 is the year Wall Street starts building on blockchain, not around it. Then, Andy Baer’s first Vibe Check of the year, ",
-      "pubDate": "2026-01-07T17:00:00.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "9h ago"
-    },
-    {
-      "title": "Tether, video platform Rumble launch non-custodial crypto wallet",
-      "link": "<![CDATA[https://cointelegraph.com/news/tether-rumble-launch-non-custodial-crypto-wallet?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "The wallet is built to facilitate crypto payments to Rumble's content creators from users on its video streaming platform.",
-      "pubDate": "2026-01-07T16:55:01.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "9h ago"
-    },
-    {
-      "title": "BNB falls below $900 even after network upgrade, ecosystem developments as market declines",
-      "link": "https://www.coindesk.com/markets/2026/01/07/bnb-falls-below-usd900-even-after-network-upgrade-ecosystem-developments-as-market-declines",
-      "description": "The BNB Chain's layer-2 network, opBNB, recently completed a major upgrade, the Fourier hard fork, which doubled transaction throughput.",
-      "pubDate": "2026-01-07T16:45:33.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "9h ago"
-    },
-    {
-      "title": "Bitcoin vs. luxury homes: How China’s wealthy are rethinking stores of value",
-      "link": "<![CDATA[https://cointelegraph.com/explained/bitcoin-vs-luxury-homes-how-china-s-wealthy-are-rethinking-stores-of-value?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "From Shenzhen Bay luxury homes to Bitcoin, affluent Chinese investors are reassessing stores of value as views on liquidity, mobility and risk continue to shift.",
-      "pubDate": "2026-01-07T16:42:47.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "9h ago"
+      "timeAgo": "10h ago"
     }
   ],
-  "totalCount": 240,
+  "totalCount": 241,
   "sources": [
     "CoinDesk",
     "The Block",
@@ -507,7 +507,7 @@
     "Blockworks",
     "The Defiant"
   ],
-  "fetchedAt": "2026-01-08T02:42:23.942Z",
-  "cachedAt": "2026-01-08T02:42:19.000Z",
+  "fetchedAt": "2026-01-08T03:34:18.315Z",
+  "cachedAt": "2026-01-08T03:34:13.000Z",
   "source": "failsafe-cache"
 }
