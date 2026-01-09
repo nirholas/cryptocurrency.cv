@@ -1,6 +1,46 @@
 {
   "articles": [
     {
+      "title": "Crypto VC Giant Andreessen Horowitz Raises $15 Billion to Help America &#39;Win&#39; Tech Race",
+      "link": "https://decrypt.co/354146/crypto-vc-giant-andreessen-horowitz-raises-15-billion-help-america-win",
+      "description": "Major crypto investor Andreessen Horowitz raised $15 billion across multiple funds to propel technology bets and help boost America's prospects.",
+      "pubDate": "2026-01-09T18:05:52.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "3m ago"
+    },
+    {
+      "title": "BNY Debuts Tokenized Deposits for Institutions and &#39;Digital Natives&#39;",
+      "link": "https://decrypt.co/354136/bny-debuts-tokenized-deposits-institutions-digital-natives",
+      "description": "BNY, the world’s largest custodian bank, signaled that it will begin issuing digital representations of customers’ deposits on the blockchain.",
+      "pubDate": "2026-01-09T17:33:55.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "35m ago"
+    },
+    {
+      "title": "Price predictions 1/9: BTC, ETH, XRP, BNB, SOL, DOGE, ADA, BCH, LINK, HYPE",
+      "link": "<![CDATA[https://cointelegraph.com/news/price-predictions-1-9-btc-eth-xrp-bnb-sol-doge-ada-bch-link-hype?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Buyers are attempting to defend the near-term support in Bitcoin and select major altcoins, but the bears have not given up and continue to exert pressure near the intraday range highs.",
+      "pubDate": "2026-01-09T17:30:00.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "39m ago"
+    },
+    {
+      "title": "BNY launches tokenized deposits amid TradFi rush into blockchain and crypto",
+      "link": "<![CDATA[https://cointelegraph.com/news/bny-tokenized-deposits-bank-rush-blockchain-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "The service is available for institutional clients through an in-house permissioned blockchain, BNY said on Friday.",
+      "pubDate": "2026-01-09T17:03:54.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "1h ago"
+    },
+    {
       "title": "Crypto exchange OKX cuts institutional staff amid global restructuring",
       "link": "https://www.coindesk.com/business/2026/01/09/crypto-exchange-okx-cuts-institutional-staff-amid-global-restructuring",
       "description": "The exchange has overhauled its institutional business as part of a broader restructuring, with approximately one-third of its sales team exiting, according to one source.",
@@ -8,7 +48,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "22m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Ethereum co-founder reiterates support for Roman Storm, citing privacy",
@@ -18,7 +58,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "35m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Ethereum Founder Vitalik Buterin Backs Convicted Dev, Calls Privacy &#39;Essential Protection&#39;",
@@ -28,7 +68,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "36m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Security expert Bruce Schneier ‘guarantees’ governments are bulk spying with AI",
@@ -38,46 +78,16 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "52m ago"
-    },
-    {
-      "title": "How Stablecoins Are Rewiring Global Payments | Borderless CPO Alex Garn",
-      "link": "https://thedefiant.io/podcasts-and-videos/podcast/how-stablecoins-are-rewiring-global-payments-or-borderless-cpo-alex-garn",
-      "pubDate": "2026-01-09T15:50:56.000Z",
-      "source": "The Defiant",
-      "sourceKey": "defiant",
-      "category": "defi",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Ripple Gets Green Light From FCA to Scale Crypto Payments in the UK",
-      "link": "https://decrypt.co/354118/ripple-gets-green-light-fca-scale-crypto-payments-uk",
-      "description": "Ripple secured regulatory approval to scale its payments business from the UK's Financial Conduct Authority (FCA).",
-      "pubDate": "2026-01-09T15:48:52.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Altcoins Defy Bitcoin Slump as XRP, Solana Notch Double-Digit Gains",
-      "link": "https://decrypt.co/354116/altcoins-defy-bitcoin-slump-xrp-solana-double-digit-gains",
-      "description": "Experts note altcoins’ superior performance compared to Bitcoin is driven by ETF narratives and markets awaiting key U.S. economic data.",
-      "pubDate": "2026-01-09T15:11:24.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
       "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 7,
+  "totalCount": 8,
   "sources": [
-    "CoinDesk",
-    "CoinTelegraph",
     "Decrypt",
-    "The Defiant"
+    "CoinTelegraph",
+    "CoinDesk"
   ],
-  "fetchedAt": "2026-01-09T17:08:29.868Z",
-  "cachedAt": "2026-01-09T17:08:14.000Z",
+  "fetchedAt": "2026-01-09T18:09:04.984Z",
+  "cachedAt": "2026-01-09T18:08:51.000Z",
   "source": "failsafe-cache"
 }
