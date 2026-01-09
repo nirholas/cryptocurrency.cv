@@ -1,6 +1,66 @@
 {
   "articles": [
     {
+      "title": "Crypto market crash in October marked end of ‘easy yield’ era: BitMEX",
+      "link": "<![CDATA[https://cointelegraph.com/news/october-crypto-crash-ended-easy-yield-era-bitmex?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "BitMEX says the era of easy money via arbitrage trades likely died in the October crash, as a liquidation spiral left many market makers naked.",
+      "pubDate": "2026-01-09T06:03:22.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "6m ago"
+    },
+    {
+      "title": "Australian Regulator Flags Grok in Rising AI Image Abuse Complaints",
+      "link": "https://decrypt.co/354095/australian-regulator-flags-grok-ai-image-abuse-complaints",
+      "description": "Reports of non-consensual AI-generated sexual images doubled since late 2025, with some involving children, the Commissioner said.",
+      "pubDate": "2026-01-09T05:55:50.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "13m ago"
+    },
+    {
+      "title": "Builders behind popular Zcash wallet Zashi to launch new startup 'cashZ'",
+      "link": "https://www.coindesk.com/markets/2026/01/09/builders-behind-popular-zcash-wallet-zashi-to-launch-new-startup-cashz",
+      "description": "The Zcash protocol remains unaffected despite the governance clash and restructuring with Bootstrap.",
+      "pubDate": "2026-01-09T05:29:36.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "40m ago"
+    },
+    {
+      "title": "Masked Gunmen Tie Up Woman in France, Steal Crypto USB",
+      "link": "https://decrypt.co/354078/masked-gunmen-tie-up-woman-france-steal-usb-crypto",
+      "description": "France is becoming a European hotspot for crypto wrench attacks, with over 14 crypto-related attacks documented last year.",
+      "pubDate": "2026-01-09T05:14:44.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "54m ago"
+    },
+    {
+      "title": "Stablecoin flows could touch $56T by 2030: Bloomberg",
+      "link": "<![CDATA[https://cointelegraph.com/news/stablecoin-payment-flows-hit-56-trillion-2030?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Increased adoption of stablecoins by institutions and countries with economic instability could drive stablecoin payment flows to $56 trillion by 2030.",
+      "pubDate": "2026-01-09T05:14:02.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "55m ago"
+    },
+    {
+      "title": "Truebit token crashes 99.9% after hacker drains $26.6 million in ether",
+      "link": "https://www.coindesk.com/markets/2026/01/09/truebit-token-tru-crashes-99-9-after-usd26-6m-exploit-drains-8-535-eth",
+      "description": "The attack exploited a flaw in an older smart contract, allowing the attacker to buy TRU at no cost and sell it back to extract ether.",
+      "pubDate": "2026-01-09T05:09:37.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "1h ago"
+    },
+    {
       "title": "XRP slips to $2.12 after liquidations clear both sides of the futures book",
       "link": "https://www.coindesk.com/markets/2026/01/09/xrp-slips-to-usd2-12-after-liquidations-clear-both-sides-of-the-futures-book",
       "description": "Traders absorbed a two-step liquidation reset that left price trapped between $2.07 support and $2.17 resistance.",
@@ -8,46 +68,27 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "16m ago"
-    },
-    {
-      "title": "Bitcoin is now 56.7% green: Here’s how it could get even cleaner",
-      "link": "<![CDATA[https://cointelegraph.com/news/4-things-bitcoin-mining-can-do-for-climate-change-esg-expert?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Bitcoin mining is accelerating renewable energy deployment, replacing fossil-fuel heating, expanding energy access and cutting methane emissions at scale.",
-      "pubDate": "2026-01-09T04:06:14.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
       "timeAgo": "1h ago"
     },
     {
-      "title": "US Bitcoin ETFs Clock Three-Day Outflow Streak as Risk Appetite Cools",
-      "link": "https://decrypt.co/354073/bitcoin-etfs-three-day-outflow-streak-risk-appetite-cools",
-      "description": "Tactical de-risking and declining investor sentiment are the reasons behind the recent spot U.S. ETF outflows, Decrypt was told.",
-      "pubDate": "2026-01-09T03:46:47.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Zcash devs unveil ‘cashZ’ wallet after exiting Electric Coin Co",
-      "link": "<![CDATA[https://cointelegraph.com/news/zcash-developers-unveil-new-wallet-cashz-hours-after-exiting-electric-coin-co?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Employees who left the Electric Coin Company en masse on Wednesday are launching a new Zcash wallet, citing the need to return to cypherpunk principles and to scale faster.",
-      "pubDate": "2026-01-09T03:17:18.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
+      "title": "Consensys-backed SharpLink stakes $170 million in ETH on Linea",
+      "link": "https://www.theblock.co/post/384870/sharplink-stakes-eth-linea?utm_source=rss&amp;utm_medium=rss",
+      "description": "The latest deployment builds on its previously disclosed plan to stake $200 million in ETH across Linea and affiliated restaking partners.",
+      "pubDate": "2026-01-09T04:51:02.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
       "category": "general",
       "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 4,
+  "totalCount": 8,
   "sources": [
-    "CoinDesk",
     "CoinTelegraph",
-    "Decrypt"
+    "Decrypt",
+    "CoinDesk",
+    "The Block"
   ],
-  "fetchedAt": "2026-01-09T05:09:19.593Z",
-  "cachedAt": "2026-01-09T05:08:59.000Z",
+  "fetchedAt": "2026-01-09T06:09:41.660Z",
+  "cachedAt": "2026-01-09T06:09:23.000Z",
   "source": "failsafe-cache"
 }
