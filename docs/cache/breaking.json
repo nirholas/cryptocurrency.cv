@@ -1,6 +1,26 @@
 {
   "articles": [
     {
+      "title": "Zcash sees developer slowdown as ZEC extends two-month slide",
+      "link": "<![CDATA[https://cointelegraph.com/news/zcash-developer-activity-2021-governance-dispute?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Zcash developer activity has fallen to its lowest level since 2021 as a governance dispute weighs on sentiment and ZEC extends a two-month decline.",
+      "pubDate": "2026-01-09T10:54:53.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "11m ago"
+    },
+    {
+      "title": "Vulnerability found in Babylon staking code could slow block production",
+      "link": "<![CDATA[https://cointelegraph.com/news/babylon-code-vulnerability-block-production?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "A newly discovered vulnerability may enable malicious validators to omit the hash field when posting blocks, leading to validator crashes and slowing block production.",
+      "pubDate": "2026-01-09T10:14:17.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "52m ago"
+    },
+    {
       "title": "Bitcoin and Ether ETFs shed over $1B as early 2026 inflows reverse",
       "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-ether-etf-outflows-january-2026-pullback?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "After a brief January rebound, US spot Bitcoin and Ether ETFs saw heavy redemptions, extending a cautious trend that began after October’s market reset.",
@@ -8,55 +28,14 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "31m ago"
-    },
-    {
-      "title": "UK FCA to open crypto licensing gateway for companies in September 2026",
-      "link": "<![CDATA[https://cointelegraph.com/news/uk-crypto-september-2026-fca-licensing-gateway?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "UK crypto businesses must secure FCA authorization well before the crypto regime starts in October 2027 or face transitional restrictions on new services.",
-      "pubDate": "2026-01-09T09:02:21.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "South Korea’s top court says exchange‑held Bitcoin can be seized",
-      "link": "<![CDATA[https://cointelegraph.com/news/south-korea-exchange-held-bitcoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "The ruling confirms that Bitcoin in South Korean exchange accounts is an “object of seizure” under criminal law, aligning Seoul with US and EU enforcement practices.",
-      "pubDate": "2026-01-09T08:49:56.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "A ruble stablecoin outpaced market leaders last year despite international sanctions",
-      "link": "https://www.coindesk.com/markets/2026/01/09/a-ruble-stablecoin-outpaced-market-leaders-last-year-despite-international-sanctions",
-      "description": "A7A5, a ruble-linked stablecoin few outside Russia had heard of a year ago grew the most of any stablecoin, outpacing both USDT and USDC over the past 12 months.",
-      "pubDate": "2026-01-09T08:44:41.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Ethereum treasury firm SharpLink stakes $170M ETH on Linea network",
-      "link": "https://www.coindesk.com/markets/2026/01/09/ethereum-treasury-firm-sharplink-stakes-usd170m-eth-on-linea-network",
-      "description": "The strategy combines native Ethereum staking yield with restaking rewards and incentives from Linea and ether.fi, under a qualified custodian structure.",
-      "pubDate": "2026-01-09T08:32:29.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
       "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 5,
+  "totalCount": 3,
   "sources": [
-    "CoinTelegraph",
-    "CoinDesk"
+    "CoinTelegraph"
   ],
-  "fetchedAt": "2026-01-09T10:06:32.848Z",
-  "cachedAt": "2026-01-09T10:06:11.000Z",
+  "fetchedAt": "2026-01-09T11:06:23.937Z",
+  "cachedAt": "2026-01-09T11:06:03.000Z",
   "source": "failsafe-cache"
 }
