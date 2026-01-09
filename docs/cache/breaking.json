@@ -1,24 +1,34 @@
 {
   "articles": [
     {
+      "title": "Bitcoin is now 56.7% green: Here’s how it could get even cleaner",
+      "link": "<![CDATA[https://cointelegraph.com/news/4-things-bitcoin-mining-can-do-for-climate-change-esg-expert?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Bitcoin mining is accelerating renewable energy deployment, replacing fossil-fuel heating, expanding energy access and cutting methane emissions at scale.",
+      "pubDate": "2026-01-09T04:06:14.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "14m ago"
+    },
+    {
+      "title": "US Bitcoin ETFs Clock Three-Day Outflow Streak as Risk Appetite Cools",
+      "link": "https://decrypt.co/354073/bitcoin-etfs-three-day-outflow-streak-risk-appetite-cools",
+      "description": "Tactical de-risking and declining investor sentiment are the reasons behind the recent spot U.S. ETF outflows, Decrypt was told.",
+      "pubDate": "2026-01-09T03:46:47.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "34m ago"
+    },
+    {
       "title": "Zcash devs unveil ‘cashZ’ wallet after exiting Electric Coin Co",
       "link": "<![CDATA[https://cointelegraph.com/news/zcash-developers-unveil-new-wallet-cashz-hours-after-exiting-electric-coin-co?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Employees who left the Electric Coin Company en masse on Wednesday are launching a new Zcash wallet, citing the need to return to cypherpunk principles and faster scaling.",
+      "description": "Employees who left the Electric Coin Company en masse on Wednesday are launching a new Zcash wallet, citing the need to return to cypherpunk principles and to scale faster.",
       "pubDate": "2026-01-09T03:17:18.000Z",
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "17m ago"
-    },
-    {
-      "title": "Truebit&#8217;s native token TRU plunges 99.9% after $26 million exploit",
-      "link": "https://www.theblock.co/post/384861/truebit-26-million-exploit?utm_source=rss&amp;utm_medium=rss",
-      "description": "Ethereum-based Truebit suffered a $26.6 million exploit that reportedly targeted a vulnerability in a smart contract deployed five years ago.",
-      "pubDate": "2026-01-09T03:03:45.000Z",
-      "source": "The Block",
-      "sourceKey": "theblock",
-      "category": "general",
-      "timeAgo": "30m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Optimism floats OP buyback proposal using Superchain revenue",
@@ -28,7 +38,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "38m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Global sanctions fuel record flow to illicit crypto addresses",
@@ -39,56 +49,14 @@
       "sourceKey": "cointelegraph",
       "category": "general",
       "timeAgo": "1h ago"
-    },
-    {
-      "title": "Bitcoin to hit $2.9M by 2050 as it muscles into global trade: VanEck",
-      "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-hit-2-9m-2050-global-trade-vaneck?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "VanEck analysts said Bitcoin could handle 5–10% of global trade and make up 2.5% of central bank reserves by 2050, driving its strategic role as a monetary hedge.",
-      "pubDate": "2026-01-09T02:15:35.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Iran’s Internet Traffic Drops to &#39;Near Zero&#39; as Protests Intensify",
-      "link": "https://decrypt.co/354068/irans-internet-traffic-drops-near-zero-protests-intensify",
-      "description": "Cloudflare data shows a near-total blackout as demonstrations calling for regime change spread and authorities tighten control.",
-      "pubDate": "2026-01-09T02:00:28.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Trump Rules Out Pardon for FTX Founder Sam Bankman-Fried: NYT",
-      "link": "https://decrypt.co/354067/trump-wont-consider-pardoning-sam-bankman-fried",
-      "description": "Trump was responding to a reporter who also asked about pardon requests for other high-profile figures, including Sean “Diddy” Combs.",
-      "pubDate": "2026-01-09T01:44:35.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Bitcoin holds near $91,000 as market awaits Trump tariff ruling: Asia Morning Briefing",
-      "link": "https://www.coindesk.com/markets/2026/01/09/bitcoin-holds-near-usd91-000-as-market-awaits-trump-tariff-ruling-asia-morning-briefing",
-      "description": "Prediction markets see low odds of a clear Supreme Court ruling on tariffs, a setup that has previously triggered short-term volatility in bitcoin, which then stabilized.",
-      "pubDate": "2026-01-09T01:42:11.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 8,
+  "totalCount": 5,
   "sources": [
     "CoinTelegraph",
-    "The Block",
-    "Decrypt",
-    "CoinDesk"
+    "Decrypt"
   ],
-  "fetchedAt": "2026-01-09T03:34:29.136Z",
-  "cachedAt": "2026-01-09T03:34:15.000Z",
+  "fetchedAt": "2026-01-09T04:20:56.362Z",
+  "cachedAt": "2026-01-09T04:20:33.000Z",
   "source": "failsafe-cache"
 }
