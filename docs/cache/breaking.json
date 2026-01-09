@@ -1,32 +1,53 @@
 {
   "articles": [
     {
-      "title": "Bitcoin ETF optimism fades as three-day outflows streak erases early-month gains",
-      "link": "https://www.coindesk.com/markets/2026/01/09/bitcoin-etf-optimism-fades-as-three-day-outflows-streak-erases-early-month-gains",
-      "description": "Bitcoin ETFs have registered a net outflow of over $1 billion in three days.",
-      "pubDate": "2026-01-09T06:52:19.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Iran is cut off from the internet: Here’s how crypto could still work",
-      "link": "<![CDATA[https://cointelegraph.com/news/iran-cut-internet-could-citizens-still-use-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Protests began in Iran in response to worsening economic conditions and as the Iranian rial hit record lows against the US dollar.",
-      "pubDate": "2026-01-09T06:24:49.000Z",
+      "title": "UK FCA to open crypto licensing gateway for firms in September 2026",
+      "link": "<![CDATA[https://cointelegraph.com/news/uk-crypto-september-2026-fca-licensing-gateway?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "UK crypto firms must secure FCA authorization well before the crypto regime starts in October 2027 or face transitional restrictions on new services.",
+      "pubDate": "2026-01-09T09:02:21.000Z",
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "7m ago"
+    },
+    {
+      "title": "South Korea’s top court says exchange‑held Bitcoin can be seized",
+      "link": "<![CDATA[https://cointelegraph.com/news/south-korea-exchange-held-bitcoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "The ruling confirms that Bitcoin in South Korean exchange accounts is an “object of seizure” under criminal law, aligning Seoul with US and EU enforcement practices.",
+      "pubDate": "2026-01-09T08:49:56.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "20m ago"
+    },
+    {
+      "title": "A ruble stablecoin outpaced market leaders last year despite international sanctions",
+      "link": "https://www.coindesk.com/markets/2026/01/09/a-ruble-stablecoin-outpaced-market-leaders-last-year-despite-international-sanctions",
+      "description": "A7A5, a ruble-linked stablecoin few outside Russia had heard of a year ago grew the most of any stablecoin, outpacing both USDT and USDC over the past 12 months.",
+      "pubDate": "2026-01-09T08:44:41.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "25m ago"
+    },
+    {
+      "title": "Spot bitcoin ETFs extend negative streak, reporting $400 million in outflows",
+      "link": "https://www.theblock.co/post/384881/spot-bitcoin-etfs-extend-negative-streak?utm_source=rss&amp;utm_medium=rss",
+      "description": "Outflows continue to reflect portfolio rebalancing, profit-taking, and short-term caution amid market consolidation, one analyst noted.",
+      "pubDate": "2026-01-09T08:32:49.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "37m ago"
     }
   ],
-  "totalCount": 2,
+  "totalCount": 4,
   "sources": [
+    "CoinTelegraph",
     "CoinDesk",
-    "CoinTelegraph"
+    "The Block"
   ],
-  "fetchedAt": "2026-01-09T08:08:56.834Z",
-  "cachedAt": "2026-01-09T08:08:32.000Z",
+  "fetchedAt": "2026-01-09T09:10:12.855Z",
+  "cachedAt": "2026-01-09T09:09:17.000Z",
   "source": "failsafe-cache"
 }
