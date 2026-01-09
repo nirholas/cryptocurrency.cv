@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "title": "XRP slips to $2.12 after liquidations clear both sides of the futures book",
+      "link": "https://www.coindesk.com/markets/2026/01/09/xrp-slips-to-usd2-12-after-liquidations-clear-both-sides-of-the-futures-book",
+      "description": "Traders absorbed a two-step liquidation reset that left price trapped between $2.07 support and $2.17 resistance.",
+      "pubDate": "2026-01-09T04:52:25.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "16m ago"
+    },
+    {
       "title": "Bitcoin is now 56.7% green: Here’s how it could get even cleaner",
       "link": "<![CDATA[https://cointelegraph.com/news/4-things-bitcoin-mining-can-do-for-climate-change-esg-expert?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "Bitcoin mining is accelerating renewable energy deployment, replacing fossil-fuel heating, expanding energy access and cutting methane emissions at scale.",
@@ -8,7 +18,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "14m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "US Bitcoin ETFs Clock Three-Day Outflow Streak as Risk Appetite Cools",
@@ -18,7 +28,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "34m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Zcash devs unveil ‘cashZ’ wallet after exiting Electric Coin Co",
@@ -29,34 +39,15 @@
       "sourceKey": "cointelegraph",
       "category": "general",
       "timeAgo": "1h ago"
-    },
-    {
-      "title": "Optimism floats OP buyback proposal using Superchain revenue",
-      "link": "<![CDATA[https://cointelegraph.com/news/optimism-floats-op-buyback-proposal-using-superchain-revenue?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "A new plan would tie OP token value to network performance by using half of all Superchain fee revenue for systematic repurchases.",
-      "pubDate": "2026-01-09T02:55:41.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Global sanctions fuel record flow to illicit crypto addresses",
-      "link": "<![CDATA[https://cointelegraph.com/news/sanctions-illicit-crypto-transactions-record-2025?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "The Global Sanctions Inflation Index estimated there were just under 80,000 total sanctioned entities and persons globally as of May 2025.",
-      "pubDate": "2026-01-09T02:25:47.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 5,
+  "totalCount": 4,
   "sources": [
+    "CoinDesk",
     "CoinTelegraph",
     "Decrypt"
   ],
-  "fetchedAt": "2026-01-09T04:20:56.362Z",
-  "cachedAt": "2026-01-09T04:20:33.000Z",
+  "fetchedAt": "2026-01-09T05:09:19.593Z",
+  "cachedAt": "2026-01-09T05:08:59.000Z",
   "source": "failsafe-cache"
 }
