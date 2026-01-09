@@ -1,6 +1,35 @@
 {
   "articles": [
     {
+      "title": "Bitcoin holds $90K as ETFs wobble and institutions reposition: Finance Redefined",
+      "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-90k-etfs-institutions-reposition?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Bitcoin steadied near $90,000 as ETF flows turned negative, altcoins continued a valuation reset and DeFi markets showed pockets of renewed activity.",
+      "pubDate": "2026-01-09T19:00:00.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "6m ago"
+    },
+    {
+      "title": "Truebit Hack Wipes Out TRU in First Major Exploit of 2026",
+      "link": "https://thedefiant.io/news/hacks/truebit-hack-first-major-crypto-exploit-of-2026",
+      "pubDate": "2026-01-09T18:30:59.000Z",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
+      "category": "defi",
+      "timeAgo": "35m ago"
+    },
+    {
+      "title": "Bitcoin’s next super rally could depend on this key data point",
+      "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-s-next-super-rally-could-depend-on-this-key-data-point?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Long-term Bitcoin holders sold nearly $300 billion worth of BTC in 2025, but as this sell pressure declines, a bullish outlook for 2026 has emerged.",
+      "pubDate": "2026-01-09T18:30:00.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "36m ago"
+    },
+    {
       "title": "Crypto VC Giant Andreessen Horowitz Raises $15 Billion to Help America &#39;Win&#39; Tech Race",
       "link": "https://decrypt.co/354146/crypto-vc-giant-andreessen-horowitz-raises-15-billion-help-america-win",
       "description": "Major crypto investor Andreessen Horowitz raised $15 billion across multiple funds to propel technology bets and help boost America's prospects.",
@@ -8,7 +37,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "3m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "BNY Debuts Tokenized Deposits for Institutions and &#39;Digital Natives&#39;",
@@ -18,7 +47,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "35m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Price predictions 1/9: BTC, ETH, XRP, BNB, SOL, DOGE, ADA, BCH, LINK, HYPE",
@@ -28,66 +57,26 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "39m ago"
-    },
-    {
-      "title": "BNY launches tokenized deposits amid TradFi rush into blockchain and crypto",
-      "link": "<![CDATA[https://cointelegraph.com/news/bny-tokenized-deposits-bank-rush-blockchain-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "The service is available for institutional clients through an in-house permissioned blockchain, BNY said on Friday.",
-      "pubDate": "2026-01-09T17:03:54.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
       "timeAgo": "1h ago"
     },
     {
-      "title": "Crypto exchange OKX cuts institutional staff amid global restructuring",
-      "link": "https://www.coindesk.com/business/2026/01/09/crypto-exchange-okx-cuts-institutional-staff-amid-global-restructuring",
-      "description": "The exchange has overhauled its institutional business as part of a broader restructuring, with approximately one-third of its sales team exiting, according to one source.",
-      "pubDate": "2026-01-09T16:45:40.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Ethereum co-founder reiterates support for Roman Storm, citing privacy",
-      "link": "<![CDATA[https://cointelegraph.com/news/vitalik-buterin-support-roman-storm-privacy-concerns?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "The Tornado Cash developer was found guilty of operating an unlicensed transmitter business in August and could still be retried on two counts on which a jury deadlocked.",
-      "pubDate": "2026-01-09T16:33:24.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Ethereum Founder Vitalik Buterin Backs Convicted Dev, Calls Privacy &#39;Essential Protection&#39;",
-      "link": "https://decrypt.co/354121/ethereum-founder-vitalik-buterin-backs-convicted-dev-privacy-essential-protection",
-      "description": "Ethereum co-founder Vitalik Buterin publicly backed convicted Tornado Cash developer Roman Storm, calling privacy tools a human right.",
-      "pubDate": "2026-01-09T16:31:37.000Z",
+      "title": "ZEC Rebounds 11%! Trump says he won’t pardon Sam Bankman-Fried! Florida revisits it’s Strategic Bitcoin Reserve!",
+      "link": "https://decrypt.co/videos/interviews/72tPnqPX/zec-rebounds-11-trump-says-he-wont-pardon-sam-bankman-fried-florida-revisits-its-strategic-bitcoin-reserve",
+      "description": "Crypto majors are mostly flat ahead of today’s supreme court opinion on the trump tariffs; btc +1% at $90,300; eth 13% at $3,090, sol +3% at $138; xrp +1% to $2.10. Polygon (+11%), zec (+11%) and syru",
+      "pubDate": "2026-01-09T17:17:12.000Z",
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
       "timeAgo": "1h ago"
-    },
-    {
-      "title": "Security expert Bruce Schneier ‘guarantees’ governments are bulk spying with AI",
-      "link": "<![CDATA[https://cointelegraph.com/news/security-expert-bruce-schneier-guarantees-governments-are-bulk-spying-with-ai?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "From PRISM to AI, mass surveillance has only grown more powerful. Bruce Schneier warns the post-Snowden world may be entering an even darker phase.",
-      "pubDate": "2026-01-09T16:16:15.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 8,
+  "totalCount": 7,
   "sources": [
-    "Decrypt",
     "CoinTelegraph",
-    "CoinDesk"
+    "The Defiant",
+    "Decrypt"
   ],
-  "fetchedAt": "2026-01-09T18:09:04.984Z",
-  "cachedAt": "2026-01-09T18:08:51.000Z",
+  "fetchedAt": "2026-01-09T19:06:45.153Z",
+  "cachedAt": "2026-01-09T19:06:32.000Z",
   "source": "failsafe-cache"
 }
