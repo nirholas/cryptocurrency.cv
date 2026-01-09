@@ -1,14 +1,24 @@
 {
   "articles": [
     {
-      "title": "UK FCA to open crypto licensing gateway for firms in September 2026",
+      "title": "Bitcoin and Ether ETFs shed over $1B as early 2026 inflows reverse",
+      "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-ether-etf-outflows-january-2026-pullback?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "After a brief January rebound, US spot Bitcoin and Ether ETFs saw heavy redemptions, extending a cautious trend that began after October’s market reset.",
+      "pubDate": "2026-01-09T09:34:49.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "31m ago"
+    },
+    {
+      "title": "UK FCA to open crypto licensing gateway for companies in September 2026",
       "link": "<![CDATA[https://cointelegraph.com/news/uk-crypto-september-2026-fca-licensing-gateway?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "UK crypto firms must secure FCA authorization well before the crypto regime starts in October 2027 or face transitional restrictions on new services.",
+      "description": "UK crypto businesses must secure FCA authorization well before the crypto regime starts in October 2027 or face transitional restrictions on new services.",
       "pubDate": "2026-01-09T09:02:21.000Z",
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "7m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "South Korea’s top court says exchange‑held Bitcoin can be seized",
@@ -18,7 +28,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "20m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "A ruble stablecoin outpaced market leaders last year despite international sanctions",
@@ -28,26 +38,25 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "25m ago"
+      "timeAgo": "1h ago"
     },
     {
-      "title": "Spot bitcoin ETFs extend negative streak, reporting $400 million in outflows",
-      "link": "https://www.theblock.co/post/384881/spot-bitcoin-etfs-extend-negative-streak?utm_source=rss&amp;utm_medium=rss",
-      "description": "Outflows continue to reflect portfolio rebalancing, profit-taking, and short-term caution amid market consolidation, one analyst noted.",
-      "pubDate": "2026-01-09T08:32:49.000Z",
-      "source": "The Block",
-      "sourceKey": "theblock",
+      "title": "Ethereum treasury firm SharpLink stakes $170M ETH on Linea network",
+      "link": "https://www.coindesk.com/markets/2026/01/09/ethereum-treasury-firm-sharplink-stakes-usd170m-eth-on-linea-network",
+      "description": "The strategy combines native Ethereum staking yield with restaking rewards and incentives from Linea and ether.fi, under a qualified custodian structure.",
+      "pubDate": "2026-01-09T08:32:29.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "37m ago"
+      "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 4,
+  "totalCount": 5,
   "sources": [
     "CoinTelegraph",
-    "CoinDesk",
-    "The Block"
+    "CoinDesk"
   ],
-  "fetchedAt": "2026-01-09T09:10:12.855Z",
-  "cachedAt": "2026-01-09T09:09:17.000Z",
+  "fetchedAt": "2026-01-09T10:06:32.848Z",
+  "cachedAt": "2026-01-09T10:06:11.000Z",
   "source": "failsafe-cache"
 }
