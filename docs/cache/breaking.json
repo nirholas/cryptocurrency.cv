@@ -8,7 +8,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "41m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Asset manager VanEck explains how one bitcoin could be worth $2.9 million by 2050",
@@ -18,7 +18,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "51m ago"
+      "timeAgo": "1h ago"
     }
   ],
   "totalCount": 2,
@@ -26,7 +26,7 @@
     "CoinTelegraph",
     "CoinDesk"
   ],
-  "fetchedAt": "2026-01-10T06:08:13.423Z",
-  "cachedAt": "2026-01-10T06:08:01.000Z",
+  "fetchedAt": "2026-01-10T07:05:58.509Z",
+  "cachedAt": "2026-01-10T07:05:45.000Z",
   "source": "failsafe-cache"
 }
