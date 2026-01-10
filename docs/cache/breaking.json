@@ -1,21 +1,31 @@
 {
   "articles": [
     {
-      "title": "Spot Bitcoin ETFs lose $681M in first week of 2026 as risk appetite fades",
-      "link": "<![CDATA[https://cointelegraph.com/news/spot-bitcoin-etfs-lose-681m-first-week-2026-risk-off?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Spot Bitcoin ETFs reversed early inflows in 2026 and posted four straight days of outflows as fading rate-cut hopes and rising geopolitical risks pushed investors into risk-off positioning.",
-      "pubDate": "2026-01-10T09:12:11.000Z",
+      "title": "Here’s what happened in crypto today",
+      "link": "<![CDATA[https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+      "pubDate": "2026-01-10T12:58:32.000Z",
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "15m ago"
+    },
+    {
+      "title": "Betterment urges users to ignore ‘unauthorized’ crypto promotion message",
+      "link": "<![CDATA[https://cointelegraph.com/news/betterment-fake-crypto-promotion-triple-returns-warning?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "The message claimed Betterment would “triple” Bitcoin and Ether deposits sent within hours, urging users to transfer $10,000 to crypto wallets.",
+      "pubDate": "2026-01-10T12:42:39.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "31m ago"
     }
   ],
-  "totalCount": 1,
+  "totalCount": 2,
   "sources": [
     "CoinTelegraph"
   ],
-  "fetchedAt": "2026-01-10T11:05:34.069Z",
-  "cachedAt": "2026-01-10T11:05:18.000Z",
+  "fetchedAt": "2026-01-10T13:13:43.412Z",
+  "cachedAt": "2026-01-10T13:13:22.000Z",
   "source": "failsafe-cache"
 }
