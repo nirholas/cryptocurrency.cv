@@ -1,31 +1,21 @@
 {
   "articles": [
     {
-      "title": "A16z Crypto Shares Three Crypto Predictions for 2026",
-      "link": "https://thedefiant.io/news/research-and-opinion/a16z-crypto-shares-three-crypto-predictions-for-2026",
-      "pubDate": "2026-01-10T00:48:42.000Z",
-      "source": "The Defiant",
-      "sourceKey": "defiant",
-      "category": "defi",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Stablecoin card adoption will be a 'big theme' of 2026: Dragonfly exec",
-      "link": "<![CDATA[https://cointelegraph.com/news/stablecoin-card-adoption-to-take-off-in-2026-dragonfly?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Crypto venture capitalists have tipped stablecoin card adoption to take off in 2026 after fintech startup Rain secured $250 million in funding to push stablecoin payments.",
-      "pubDate": "2026-01-10T00:46:33.000Z",
+      "title": "A16z raises $15B, says crypto a 'key' to America winning next 100 years",
+      "link": "<![CDATA[https://cointelegraph.com/news/a16z-raises-15-billion-says-crypto-crucial-to-americas-future?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Crypto remains a key technology for maintaining America’s technological edge, according to a16z, which has raised another $15 billion to back American-aligned tech investments.",
+      "pubDate": "2026-01-10T02:56:33.000Z",
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "36m ago"
     }
   ],
-  "totalCount": 2,
+  "totalCount": 1,
   "sources": [
-    "The Defiant",
     "CoinTelegraph"
   ],
-  "fetchedAt": "2026-01-10T02:39:10.278Z",
-  "cachedAt": "2026-01-10T02:38:58.000Z",
+  "fetchedAt": "2026-01-10T03:33:10.161Z",
+  "cachedAt": "2026-01-10T03:32:51.000Z",
   "source": "failsafe-cache"
 }
