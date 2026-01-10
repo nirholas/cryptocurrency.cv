@@ -8,7 +8,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "5m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Bitcoiners celebrate 17th anniversary of Hal Finney's Bitcoin post",
@@ -18,25 +18,15 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "27m ago"
-    },
-    {
-      "title": "Bitfinex whales dump BTC longs as $135K Bitcoin price target reemerges",
-      "link": "<![CDATA[https://cointelegraph.com/news/bitfinex-whales-dump-btc-longs-135k-bitcoin-price-target?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Bitcoin whales began repeating a classic bull signal as they took BTC long positions off the table after a year of declining overall market exposure.",
-      "pubDate": "2026-01-10T17:13:28.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
       "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 3,
+  "totalCount": 2,
   "sources": [
     "CoinDesk",
     "CoinTelegraph"
   ],
-  "fetchedAt": "2026-01-10T19:05:17.323Z",
-  "cachedAt": "2026-01-10T19:05:01.000Z",
+  "fetchedAt": "2026-01-10T20:05:48.239Z",
+  "cachedAt": "2026-01-10T20:05:37.000Z",
   "source": "failsafe-cache"
 }
