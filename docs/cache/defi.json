@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "title": "Robinhood explains building an Ethereum layer-2: 'We wanted the security from Ethereum'",
+      "link": "https://www.coindesk.com/business/2026/01/10/robinhood-explains-building-an-ethereum-layer-2-we-wanted-the-security-from-ethereum",
+      "description": "CoinDesk sat down with Robinhood’s head of crypto, Johann Kerbrat, to get an update on its upcoming layer-2 network, its tokenized stocks program, and its staking offerings.",
+      "pubDate": "2026-01-10T19:00:00.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "5m ago"
+    },
+    {
       "title": "The Senate moves toward a market structure vote: State of Crypto",
       "link": "https://www.coindesk.com/policy/2026/01/10/the-senate-moves-toward-a-market-structure-vote-state-of-crypto",
       "description": "Lawmakers will (finally) vote on a market structure bill next week.",
@@ -8,7 +18,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Here’s what happened in crypto today",
@@ -18,7 +28,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "5h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "Anti-DeFi group runs ads urging public to pressure Senators on crypto bill: Report",
@@ -28,7 +38,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "12h ago"
+      "timeAgo": "13h ago"
     },
     {
       "title": "A16z Crypto Shares Three Crypto Predictions for 2026",
@@ -37,7 +47,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "17h ago"
+      "timeAgo": "18h ago"
     },
     {
       "title": "Memecoin Market Cratered More Than 60% in 2025: Report",
@@ -46,7 +56,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "17h ago"
+      "timeAgo": "18h ago"
     },
     {
       "title": "Nasdaq, CME Group join forces to launch Nasdaq-CME Crypto Index",
@@ -56,7 +66,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "20h ago"
+      "timeAgo": "21h ago"
     },
     {
       "title": "US lawmakers demand ethics safeguards for market structure bill: Report",
@@ -66,7 +76,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "21h ago"
+      "timeAgo": "22h ago"
     },
     {
       "title": "Crypto crowd could still walk away from U.S. market structure bill if DeFi needs unmet",
@@ -76,7 +86,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "22h ago"
+      "timeAgo": "23h ago"
     },
     {
       "title": "Crypto Markets Edge Lower After US Jobs Miss Expectations",
@@ -85,7 +95,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "22h ago"
+      "timeAgo": "23h ago"
     },
     {
       "title": "US lawmaker's bill would ban politically related prediction bets after Maduro wager",
@@ -95,7 +105,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "22h ago"
+      "timeAgo": "23h ago"
     },
     {
       "title": "World's largest custodial bank BNY to offer tokenized deposits for institutional investors",
@@ -105,7 +115,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "22h ago"
+      "timeAgo": "23h ago"
     },
     {
       "title": "Polygon Leads Altcoin Surge With 15% Rally",
@@ -114,7 +124,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "22h ago"
+      "timeAgo": "23h ago"
     },
     {
       "title": "Bitcoin holds $90K as ETFs wobble and institutions reposition: Finance Redefined",
@@ -124,7 +134,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "23h ago"
+      "timeAgo": "yesterday"
     },
     {
       "title": "Truebit Hack Wipes Out TRU in First Major Exploit of 2026",
@@ -133,7 +143,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "23h ago"
+      "timeAgo": "yesterday"
     },
     {
       "title": "How Stablecoins Are Rewiring Global Payments | Borderless CPO Alex Garn",
@@ -179,16 +189,6 @@
       "link": "https://www.coindesk.com/markets/2026/01/09/ethereum-treasury-firm-sharplink-stakes-usd170m-eth-on-linea-network",
       "description": "The strategy combines native Ethereum staking yield with restaking rewards and incentives from Linea and ether.fi, under a qualified custodian structure.",
       "pubDate": "2026-01-09T08:32:29.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "yesterday"
-    },
-    {
-      "title": "Builders behind popular Zcash wallet Zashi to launch new startup 'cashZ'",
-      "link": "https://www.coindesk.com/markets/2026/01/09/builders-behind-popular-zcash-wallet-zashi-to-launch-new-startup-cashz",
-      "description": "The Zcash protocol remains unaffected despite the governance clash and restructuring with Bootstrap.",
-      "pubDate": "2026-01-09T05:29:36.000Z",
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
@@ -260,7 +260,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "yesterday"
+      "timeAgo": "2d ago"
     },
     {
       "title": "Bitcoin Extends Selloff as Investors Turn Cautious",
@@ -269,7 +269,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "yesterday"
+      "timeAgo": "2d ago"
     },
     {
       "title": "Zcash Plunges 20% After Entire Core Team Exits Amid Dispute",
@@ -300,7 +300,7 @@
     "Decrypt",
     "Bitcoin Magazine"
   ],
-  "fetchedAt": "2026-01-10T18:07:33.347Z",
-  "cachedAt": "2026-01-10T18:07:26.000Z",
+  "fetchedAt": "2026-01-10T19:05:06.953Z",
+  "cachedAt": "2026-01-10T19:05:01.000Z",
   "source": "failsafe-cache"
 }
