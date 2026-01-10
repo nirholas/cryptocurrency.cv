@@ -1,6 +1,26 @@
 {
   "articles": [
     {
+      "title": "Here’s what happened in crypto today",
+      "link": "<![CDATA[https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+      "pubDate": "2026-01-10T21:36:30.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "29m ago"
+    },
+    {
+      "title": "Bitcoin mining difficulty falls in first adjustment of 2026",
+      "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-difficulty-falls-first-adjustment-2026?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "The Bitcoin mining difficulty continued to push through to new all-time highs in 2025 amid a turbulent year for the mining industry.",
+      "pubDate": "2026-01-10T21:22:20.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "43m ago"
+    },
+    {
       "title": "Bitcoiners celebrate 17th anniversary of Hal Finney's Bitcoin post",
       "link": "<![CDATA[https://cointelegraph.com/news/bitcoiners-celebrate-17th-anniversary-hal-finney-bitcoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "Many in the Bitcoin community continue to speculate that cryptographer Hal Finney was Bitcoin's pseudonymous creator, Satoshi Nakamoto.",
@@ -8,7 +28,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "2h ago"
+      "timeAgo": "3h ago"
     },
     {
       "title": "Bitfinex whales dump BTC longs as $135K Bitcoin price target reemerges",
@@ -18,7 +38,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "XRP ETFs hit record weekly volume as bitcoin, ether funds face $750 million in combined outflows",
@@ -28,7 +48,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Brazilian exchange Mercado Bitcoin outlines 6 crypto trends shaping markets in 2026",
@@ -38,17 +58,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "5h ago"
-    },
-    {
-      "title": "Here’s what happened in crypto today",
-      "link": "<![CDATA[https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-      "pubDate": "2026-01-10T12:58:32.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "8h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "Betterment urges users to ignore ‘unauthorized’ crypto promotion message",
@@ -58,7 +68,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "8h ago"
+      "timeAgo": "9h ago"
     },
     {
       "title": "Spot Bitcoin ETFs lose $681M in first week of 2026 as risk appetite fades",
@@ -68,7 +78,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "11h ago"
+      "timeAgo": "12h ago"
     },
     {
       "title": "Asset manager VanEck explains how one bitcoin could be worth $2.9 million by 2050",
@@ -78,7 +88,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "15h ago"
+      "timeAgo": "16h ago"
     },
     {
       "title": "Bitcoin tests key support as bulls reset to prepare for futures-led rally to $101.5K",
@@ -88,7 +98,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "22h ago"
+      "timeAgo": "23h ago"
     },
     {
       "title": "Bitcoin Whales Keep Buying as 100+ BTC Addresses Set New Record",
@@ -98,7 +108,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "23h ago"
+      "timeAgo": "yesterday"
     },
     {
       "title": "Wall Street’s crypto debate is over as banks go all-in on BTC, stablecoins, tokenized cash",
@@ -289,19 +299,9 @@
       "sourceKey": "coindesk",
       "category": "general",
       "timeAgo": "yesterday"
-    },
-    {
-      "title": "Spot bitcoin ETFs extend negative streak, reporting $400 million in outflows",
-      "link": "https://www.theblock.co/post/384881/spot-bitcoin-etfs-extend-negative-streak?utm_source=rss&amp;utm_medium=rss",
-      "description": "Outflows continue to reflect portfolio rebalancing, profit-taking, and short-term caution amid market consolidation, one analyst noted.",
-      "pubDate": "2026-01-09T08:32:49.000Z",
-      "source": "The Block",
-      "sourceKey": "theblock",
-      "category": "general",
-      "timeAgo": "yesterday"
     }
   ],
-  "totalCount": 71,
+  "totalCount": 72,
   "sources": [
     "CoinTelegraph",
     "The Block",
@@ -310,7 +310,7 @@
     "Decrypt",
     "The Defiant"
   ],
-  "fetchedAt": "2026-01-10T21:05:10.064Z",
-  "cachedAt": "2026-01-10T21:05:03.000Z",
+  "fetchedAt": "2026-01-10T22:05:34.997Z",
+  "cachedAt": "2026-01-10T22:05:29.000Z",
   "source": "failsafe-cache"
 }

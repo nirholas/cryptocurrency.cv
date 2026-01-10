@@ -1,6 +1,26 @@
 {
   "articles": [
     {
+      "title": "Here’s what happened in crypto today",
+      "link": "<![CDATA[https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+      "pubDate": "2026-01-10T21:36:30.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "29m ago"
+    },
+    {
+      "title": "Bitcoin mining difficulty falls in first adjustment of 2026",
+      "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-difficulty-falls-first-adjustment-2026?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "The Bitcoin mining difficulty continued to push through to new all-time highs in 2025 amid a turbulent year for the mining industry.",
+      "pubDate": "2026-01-10T21:22:20.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "43m ago"
+    },
+    {
       "title": "Starknet publishes post-mortem report after temporary network outage",
       "link": "<![CDATA[https://cointelegraph.com/news/starknet-post-mortem-report-outage?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "The outage was the second major network disruption in 2025, with both incidents requiring a block reorganization that rolled back some activity.",
@@ -8,14 +28,14 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "59m ago"
+      "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 1,
+  "totalCount": 3,
   "sources": [
     "CoinTelegraph"
   ],
-  "fetchedAt": "2026-01-10T21:05:22.616Z",
-  "cachedAt": "2026-01-10T21:05:03.000Z",
+  "fetchedAt": "2026-01-10T22:05:41.800Z",
+  "cachedAt": "2026-01-10T22:05:29.000Z",
   "source": "failsafe-cache"
 }

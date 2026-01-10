@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "title": "Here’s what happened in crypto today",
+      "link": "<![CDATA[https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+      "pubDate": "2026-01-10T21:36:30.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "29m ago"
+    },
+    {
       "title": "Robinhood explains building an Ethereum layer-2: 'We wanted the security from Ethereum'",
       "link": "https://www.coindesk.com/business/2026/01/10/robinhood-explains-building-an-ethereum-layer-2-we-wanted-the-security-from-ethereum",
       "description": "CoinDesk sat down with Robinhood’s head of crypto, Johann Kerbrat, to get an update on its upcoming layer-2 network, its tokenized stocks program, and its staking offerings.",
@@ -8,7 +18,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "2h ago"
+      "timeAgo": "3h ago"
     },
     {
       "title": "The Senate moves toward a market structure vote: State of Crypto",
@@ -18,17 +28,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "4h ago"
-    },
-    {
-      "title": "Here’s what happened in crypto today",
-      "link": "<![CDATA[https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-      "pubDate": "2026-01-10T12:58:32.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "8h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Anti-DeFi group runs ads urging public to pressure Senators on crypto bill: Report",
@@ -38,7 +38,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "15h ago"
+      "timeAgo": "16h ago"
     },
     {
       "title": "A16z Crypto Shares Three Crypto Predictions for 2026",
@@ -47,7 +47,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "20h ago"
+      "timeAgo": "21h ago"
     },
     {
       "title": "Memecoin Market Cratered More Than 60% in 2025: Report",
@@ -56,7 +56,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "20h ago"
+      "timeAgo": "21h ago"
     },
     {
       "title": "Nasdaq, CME Group join forces to launch Nasdaq-CME Crypto Index",
@@ -66,7 +66,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "23h ago"
+      "timeAgo": "yesterday"
     },
     {
       "title": "US lawmakers demand ethics safeguards for market structure bill: Report",
@@ -221,7 +221,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "yesterday"
+      "timeAgo": "2d ago"
     },
     {
       "title": "White Whale Memecoin Surges Past $100 Million Valuation",
@@ -293,14 +293,14 @@
   ],
   "totalCount": 122,
   "sources": [
-    "CoinDesk",
     "CoinTelegraph",
+    "CoinDesk",
     "The Defiant",
     "The Block",
     "Decrypt",
     "Bitcoin Magazine"
   ],
-  "fetchedAt": "2026-01-10T21:05:10.674Z",
-  "cachedAt": "2026-01-10T21:05:03.000Z",
+  "fetchedAt": "2026-01-10T22:05:35.352Z",
+  "cachedAt": "2026-01-10T22:05:29.000Z",
   "source": "failsafe-cache"
 }
