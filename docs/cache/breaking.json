@@ -1,74 +1,40 @@
 {
   "articles": [
     {
-      "title": "Bitcoin tests key support as bulls reset to prepare for futures-led rally to $101.5K",
-      "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-tests-key-support-as-bulls-reset-to-prepare-for-futures-led-rally-to-dollar101-5k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Bitcoin traders’ risk sentiment turned bullish, with the proof being in this week’s futures-led advance to $95,000. Will bulls make another attempt after retesting a key underlying support level?",
-      "pubDate": "2026-01-09T22:09:21.000Z",
+      "title": "A16z Crypto Shares Three Crypto Predictions for 2026",
+      "link": "https://thedefiant.io/news/research-and-opinion/a16z-crypto-shares-three-crypto-predictions-for-2026",
+      "pubDate": "2026-01-10T00:48:42.000Z",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
+      "category": "defi",
+      "timeAgo": "45m ago"
+    },
+    {
+      "title": "Stablecoin card adoption will be a 'big theme' of 2026: Dragonfly exec",
+      "link": "<![CDATA[https://cointelegraph.com/news/stablecoin-card-adoption-to-take-off-in-2026-dragonfly?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Crypto venture capitalists have tipped stablecoin card adoption to take off in 2026 after fintech startup Rain secured $250 million in funding to push stablecoin payments.",
+      "pubDate": "2026-01-10T00:46:33.000Z",
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "56m ago"
+      "timeAgo": "47m ago"
     },
     {
-      "title": "Bitcoin Whales Keep Buying as 100+ BTC Addresses Set New Record",
-      "link": "https://bitcoinmagazine.com/news/bitcoin-whales-keep-buying-bitcoin",
-      "description": "Bitcoin Magazine\n\nBitcoin Whales Keep Buying as 100+ BTC Addresses Set New Record\nBitcoin whale accumulation hit a record high as 100+ BTC addresses surged, even as bitcoin consolidates near $90,000 a",
-      "pubDate": "2026-01-09T21:46:31.000Z",
-      "source": "Bitcoin Magazine",
-      "sourceKey": "bitcoinmagazine",
-      "category": "bitcoin",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Nasdaq, CME Group join forces to launch Nasdaq-CME Crypto Index",
-      "link": "<![CDATA[https://cointelegraph.com/news/nasdaq-cme-group-nasdaq-cme-crypto-index?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Cryptocurrency index benchmarks and crypto index investment vehicles will grow in popularity as market complexity increases, analysts say.",
-      "pubDate": "2026-01-09T21:40:40.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Should Politicians Be Able to Use Prediction Markets? House Bill Proposes Ban",
-      "link": "https://decrypt.co/354167/should-politicians-use-prediction-markets-house-bill-proposes-ban",
-      "description": "Rep. Ritchie Torres introduced legislation to ban government officials from prediction markets, citing insider information concerns.",
-      "pubDate": "2026-01-09T21:36:57.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Colombia advances crypto tax rules as global reporting standards take shape",
-      "link": "<![CDATA[https://cointelegraph.com/news/colombia-advances-crypto-tax-rules-global-reporting-standards-take-shape?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "New rules from Colombia’s tax authority require crypto service providers to collect and share user and transaction data.",
-      "pubDate": "2026-01-09T21:35:22.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Senate Republicans race toward crypto vote on bill with uncertain Democratic buy-in",
-      "link": "https://www.coindesk.com/policy/2026/01/09/senate-republicans-race-toward-crypto-vote-on-draft-bill-with-uncertain-democratic-buy-in",
-      "description": "While Senator Cynthia Lummis hints about a circulating Banking Committee draft, the Agriculture Committee says it's still hoping for a bipartisan version.",
-      "pubDate": "2026-01-09T21:08:09.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
+      "title": "Memecoin Market Cratered More Than 60% in 2025: Report",
+      "link": "https://thedefiant.io/news/research-and-opinion/memecoin-market-cratered-more-than-60-in-2025-report",
+      "pubDate": "2026-01-10T00:32:50.000Z",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
+      "category": "defi",
       "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 6,
+  "totalCount": 3,
   "sources": [
-    "CoinTelegraph",
-    "Bitcoin Magazine",
-    "Decrypt",
-    "CoinDesk"
+    "The Defiant",
+    "CoinTelegraph"
   ],
-  "fetchedAt": "2026-01-09T23:05:53.799Z",
-  "cachedAt": "2026-01-09T23:05:42.000Z",
+  "fetchedAt": "2026-01-10T01:34:31.572Z",
+  "cachedAt": "2026-01-10T01:34:18.000Z",
   "source": "failsafe-cache"
 }
