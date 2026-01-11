@@ -8,7 +8,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "Here’s what happened in crypto today",
@@ -18,7 +18,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "5h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "Samson Mow tips Elon Musk will ‘go hard’ into Bitcoin in 2026",
@@ -28,7 +28,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "11h ago"
+      "timeAgo": "12h ago"
     },
     {
       "title": "Bitcoin mining difficulty falls in first adjustment of 2026",
@@ -38,7 +38,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "20h ago"
+      "timeAgo": "21h ago"
     },
     {
       "title": "Bitcoiners celebrate 17th anniversary of Hal Finney's Bitcoin post",
@@ -48,7 +48,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "23h ago"
+      "timeAgo": "yesterday"
     },
     {
       "title": "Bitfinex whales dump BTC longs as $135K Bitcoin price target reemerges",
@@ -178,7 +178,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "yesterday"
+      "timeAgo": "2d ago"
     },
     {
       "title": "The Daily: Cathie Wood says US government may soon start buying bitcoin, Ripple secures FCA authorization, and more",
@@ -188,7 +188,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "yesterday"
+      "timeAgo": "2d ago"
     },
     {
       "title": "Bitcoin’s next super rally could depend on this key data point",
@@ -198,7 +198,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "yesterday"
+      "timeAgo": "2d ago"
     },
     {
       "title": "Price predictions 1/9: BTC, ETH, XRP, BNB, SOL, DOGE, ADA, BCH, LINK, HYPE",
@@ -281,16 +281,6 @@
       "timeAgo": "2d ago"
     },
     {
-      "title": "Bitcoin holds near $90,000 as trading volumes shrink, altcoins diverge: Crypto Markets Today",
-      "link": "https://www.coindesk.com/markets/2026/01/09/bitcoin-holds-near-usd90-000-as-trading-volumes-shrink-altcoins-diverge-crypto-markets-today",
-      "description": "Bitcoin remained near $90,000 as trading volumes fell. Thin liquidity fueled choppy price action across major cryptocurrencies, while altcoins were mixed.",
-      "pubDate": "2026-01-09T11:37:14.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "2d ago"
-    },
-    {
       "title": "Spot bitcoin ETFs extend negative streak, reporting $400 million in outflows",
       "link": "https://www.theblock.co/post/384881/spot-bitcoin-etfs-extend-negative-streak?utm_source=rss&amp;utm_medium=rss",
       "description": "Outflows continue to reflect portfolio rebalancing, profit-taking, and short-term caution amid market consolidation, one analyst noted.",
@@ -299,9 +289,19 @@
       "sourceKey": "theblock",
       "category": "general",
       "timeAgo": "2d ago"
+    },
+    {
+      "title": "US Bitcoin ETFs Clock Three-Day Outflow Streak as Risk Appetite Cools",
+      "link": "https://decrypt.co/354073/bitcoin-etfs-three-day-outflow-streak-risk-appetite-cools",
+      "description": "Tactical de-risking and declining investor sentiment are the reasons behind the recent spot U.S. ETF outflows, Decrypt was told.",
+      "pubDate": "2026-01-09T03:46:47.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "2d ago"
     }
   ],
-  "totalCount": 70,
+  "totalCount": 69,
   "sources": [
     "CoinTelegraph",
     "The Block",
@@ -310,7 +310,7 @@
     "Decrypt",
     "The Defiant"
   ],
-  "fetchedAt": "2026-01-11T18:07:38.832Z",
+  "fetchedAt": "2026-01-11T19:05:03.329Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -332,6 +332,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-11T18:07:32.000Z",
+  "cachedAt": "2026-01-11T19:04:57.000Z",
   "source": "failsafe-cache"
 }

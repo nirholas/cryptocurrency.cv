@@ -1,21 +1,31 @@
 {
   "articles": [
     {
-      "title": "Ethereum treasury company BitMine crosses 1 million staked ETH milestone",
-      "link": "<![CDATA[https://cointelegraph.com/news/ethereum-bitmine-1-million-staked-eth?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "BitMine Immersion Technologies is the largest Ethereum treasury company by holdings, with over 4 million ETH in its corporate treasury.",
-      "pubDate": "2026-01-11T16:46:14.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
+      "title": "JPMorgan downplays stablecoin threat as local bankers warn of $6.6T risk",
+      "link": "https://www.coindesk.com/policy/2026/01/11/jpmorgan-downplays-stablecoin-threat-as-local-bankers-warn-of-usd6-6t-risk",
+      "description": "The ABA sent a letter to the U.S. Senate, saying stablecoins that offer yields will affect its banking members ability to grant loans, but JPMorgan disagrees.",
+      "pubDate": "2026-01-11T19:00:00.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "5m ago"
+    },
+    {
+      "title": "Elon Musks's X teases crypto-aware ‘smart cashtags’ just day after community backlash",
+      "link": "https://www.coindesk.com/tech/2026/01/11/x-s-head-of-product-teases-crypto-aware-smart-cashtags-one-day-after-crypto-twitter-backlash",
+      "description": "Nikita Bier, X’s head of product, outlined plans for asset-aware Smart Cashtags a day after criticism from parts of the crypto community over a now-deleted post.",
+      "pubDate": "2026-01-11T18:11:05.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "54m ago"
     }
   ],
-  "totalCount": 1,
+  "totalCount": 2,
   "sources": [
-    "CoinTelegraph"
+    "CoinDesk"
   ],
-  "fetchedAt": "2026-01-11T18:07:54.338Z",
+  "fetchedAt": "2026-01-11T19:05:11.653Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -37,6 +47,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-11T18:07:32.000Z",
+  "cachedAt": "2026-01-11T19:04:57.000Z",
   "source": "failsafe-cache"
 }

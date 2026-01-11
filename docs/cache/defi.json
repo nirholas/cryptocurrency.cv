@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "title": "JPMorgan downplays stablecoin threat as local bankers warn of $6.6T risk",
+      "link": "https://www.coindesk.com/policy/2026/01/11/jpmorgan-downplays-stablecoin-threat-as-local-bankers-warn-of-usd6-6t-risk",
+      "description": "The ABA sent a letter to the U.S. Senate, saying stablecoins that offer yields will affect its banking members ability to grant loans, but JPMorgan disagrees.",
+      "pubDate": "2026-01-11T19:00:00.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "5m ago"
+    },
+    {
       "title": "As the market tanks, crypto’s new gold rush is…gold",
       "link": "https://www.coindesk.com/opinion/2026/01/09/as-the-market-tanks-crypto-s-new-gold-rush-is-gold",
       "description": "The huge spike in onchain gold signals is that DeFi investors are planning to stay in DeFi, even when the tide turns, argues RAAC founder Kevin Rusher.",
@@ -8,7 +18,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "Ethereum co-founder Vitalik Buterin warns decentralized stablecoins still have deep flaws",
@@ -18,7 +28,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Here’s what happened in crypto today",
@@ -28,7 +38,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "5h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "Robinhood explains building an Ethereum layer-2: 'We wanted the security from Ethereum'",
@@ -38,7 +48,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "23h ago"
+      "timeAgo": "yesterday"
     },
     {
       "title": "The Senate moves toward a market structure vote: State of Crypto",
@@ -154,7 +164,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "yesterday"
+      "timeAgo": "2d ago"
     },
     {
       "title": "Truebit Hack Wipes Out TRU in First Major Exploit of 2026",
@@ -163,7 +173,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "yesterday"
+      "timeAgo": "2d ago"
     },
     {
       "title": "How Stablecoins Are Rewiring Global Payments | Borderless CPO Alex Garn",
@@ -179,16 +189,6 @@
       "link": "https://www.coindesk.com/coindesk-indices/2026/01/09/coindesk-20-performance-update-index-trades-flat-as-polygon-gains-11-2",
       "description": "Polkadot (DOT) dropped 1.4% and Ripple (XRP) fell 0.9% from Thursday.",
       "pubDate": "2026-01-09T14:09:55.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "2d ago"
-    },
-    {
-      "title": "Bitcoin holds near $90,000 as trading volumes shrink, altcoins diverge: Crypto Markets Today",
-      "link": "https://www.coindesk.com/markets/2026/01/09/bitcoin-holds-near-usd90-000-as-trading-volumes-shrink-altcoins-diverge-crypto-markets-today",
-      "description": "Bitcoin remained near $90,000 as trading volumes fell. Thin liquidity fueled choppy price action across major cryptocurrencies, while altcoins were mixed.",
-      "pubDate": "2026-01-09T11:37:14.000Z",
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
@@ -260,7 +260,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "2d ago"
+      "timeAgo": "3d ago"
     },
     {
       "title": "Bitcoin Extends Selloff as Investors Turn Cautious",
@@ -269,7 +269,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "2d ago"
+      "timeAgo": "3d ago"
     },
     {
       "title": "Zcash Plunges 20% After Entire Core Team Exits Amid Dispute",
@@ -300,7 +300,7 @@
     "Decrypt",
     "Bitcoin Magazine"
   ],
-  "fetchedAt": "2026-01-11T18:07:39.322Z",
+  "fetchedAt": "2026-01-11T19:05:03.810Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -322,6 +322,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-11T18:07:32.000Z",
+  "cachedAt": "2026-01-11T19:04:57.000Z",
   "source": "failsafe-cache"
 }
