@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "title": "Tennessee sends cease-and-desist letters to Kalshi, Polymarket, Crypto.com",
+      "link": "<![CDATA[https://cointelegraph.com/news/tennessee-orders-kalshi-polymarket-crypto-com-halt-sports-betting?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Tennessee regulator warned that failure to comply could trigger steep fines, court injunctions and potential law enforcement referrals for for further investigation.",
+      "pubDate": "2026-01-11T07:03:33.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "1h ago"
+    },
+    {
       "title": "Samson Mow tips Elon Musk will 'go hard' into Bitcoin in 2026",
       "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-elon-musk-adoption-jan3-samson-mow?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "Jan3 founder Samson Mow’s predictions are among the more bullish outlooks compared with most recent forecasts from other crypto market participants.",
@@ -8,14 +18,14 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "46m ago"
+      "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 1,
+  "totalCount": 2,
   "sources": [
     "CoinTelegraph"
   ],
-  "fetchedAt": "2026-01-11T07:06:59.434Z",
-  "cachedAt": "2026-01-11T07:06:43.000Z",
+  "fetchedAt": "2026-01-11T08:07:39.027Z",
+  "cachedAt": "2026-01-11T08:07:21.000Z",
   "source": "failsafe-cache"
 }
