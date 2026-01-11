@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "title": "Ethereum treasury company BitMine crosses 1 million staked ETH milestone",
+      "link": "<![CDATA[https://cointelegraph.com/news/ethereum-bitmine-1-million-staked-eth?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "BitMine Immersion Technologies is the largest Ethereum treasury company by holdings, with over 4 million ETH in its corporate treasury.",
+      "pubDate": "2026-01-11T16:46:14.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "18m ago"
+    },
+    {
       "title": "Monero's XMR hits $500 for the first time since 2021 as rival Zcash fumbles",
       "link": "<![CDATA[https://cointelegraph.com/news/monero-xmr-hits-500-first-time-since-2021-zcash-fumbles?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "History shows XMR has repeatedly failed near record highs, risking another sharp pullback unless it decisively breaks above $500–$520.",
@@ -8,7 +18,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "9m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Walmart and Google bet on AI agents to reshape how people shop online",
@@ -18,35 +28,15 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "11m ago"
-    },
-    {
-      "title": "As the market tanks, crypto’s new gold rush is…gold",
-      "link": "https://www.coindesk.com/opinion/2026/01/09/as-the-market-tanks-crypto-s-new-gold-rush-is-gold",
-      "description": "The huge spike in onchain gold signals is that DeFi investors are planning to stay in DeFi, even when the tide turns, argues RAAC founder Kevin Rusher.",
-      "pubDate": "2026-01-11T15:00:00.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Bitcoin bear market still in play as power law sees $65K 'do-or-die' price",
-      "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-four-year-cycle-in-play-power-law-65k-retest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Bitcoin power law analysis concluded that price may face a new battle around $65,000 if BTC spends 2026 as a year of consolidation.",
-      "pubDate": "2026-01-11T14:37:48.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
       "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 4,
+  "totalCount": 3,
   "sources": [
     "CoinTelegraph",
     "CoinDesk"
   ],
-  "fetchedAt": "2026-01-11T16:06:49.329Z",
+  "fetchedAt": "2026-01-11T17:05:07.518Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -68,6 +58,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-11T16:06:33.000Z",
+  "cachedAt": "2026-01-11T17:04:56.000Z",
   "source": "failsafe-cache"
 }

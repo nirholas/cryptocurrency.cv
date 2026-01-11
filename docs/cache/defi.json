@@ -8,7 +8,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Ethereum co-founder Vitalik Buterin warns decentralized stablecoins still have deep flaws",
@@ -18,7 +18,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "2h ago"
+      "timeAgo": "3h ago"
     },
     {
       "title": "Here’s what happened in crypto today",
@@ -28,7 +28,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "Robinhood explains building an Ethereum layer-2: 'We wanted the security from Ethereum'",
@@ -38,7 +38,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "21h ago"
+      "timeAgo": "22h ago"
     },
     {
       "title": "The Senate moves toward a market structure vote: State of Crypto",
@@ -48,7 +48,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "23h ago"
+      "timeAgo": "yesterday"
     },
     {
       "title": "Anti-DeFi group runs ads urging public to pressure Senators on crypto bill: Report",
@@ -296,7 +296,7 @@
     "Bitcoin Magazine",
     "Decrypt"
   ],
-  "fetchedAt": "2026-01-11T16:06:39.729Z",
+  "fetchedAt": "2026-01-11T17:05:02.566Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -318,6 +318,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-11T16:06:33.000Z",
+  "cachedAt": "2026-01-11T17:04:56.000Z",
   "source": "failsafe-cache"
 }
