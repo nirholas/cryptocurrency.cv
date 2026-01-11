@@ -1,14 +1,24 @@
 {
   "articles": [
     {
-      "title": "JPMorgan downplays stablecoin threat as local bankers warn of $6.6T risk",
+      "title": "India tightens KYC requirements for crypto user onboarding",
+      "link": "<![CDATA[https://cointelegraph.com/news/india-tighten-kyc-crypto-user-onboarding?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Tax and other regulatory agencies in India claim that cryptocurrencies and permissionless blockchain tech undermine tax collection.",
+      "pubDate": "2026-01-11T19:35:31.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "31m ago"
+    },
+    {
+      "title": "JPMorgan downplays stablecoin threat as local bankers warn of $6.6 trillion risk",
       "link": "https://www.coindesk.com/policy/2026/01/11/jpmorgan-downplays-stablecoin-threat-as-local-bankers-warn-of-usd6-6t-risk",
       "description": "The ABA sent a letter to the U.S. Senate, saying stablecoins that offer yields will affect its banking members ability to grant loans, but JPMorgan disagrees.",
       "pubDate": "2026-01-11T19:00:00.000Z",
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "5m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Elon Musks's X teases crypto-aware ‘smart cashtags’ just day after community backlash",
@@ -18,14 +28,15 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "54m ago"
+      "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 2,
+  "totalCount": 3,
   "sources": [
+    "CoinTelegraph",
     "CoinDesk"
   ],
-  "fetchedAt": "2026-01-11T19:05:11.653Z",
+  "fetchedAt": "2026-01-11T20:06:32.998Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -47,6 +58,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-11T19:04:57.000Z",
+  "cachedAt": "2026-01-11T20:06:07.000Z",
   "source": "failsafe-cache"
 }
