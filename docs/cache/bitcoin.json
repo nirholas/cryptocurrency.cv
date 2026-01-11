@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "title": "Bitcoin bear market still in play as power law sees $65K 'do-or-die' price",
+      "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-four-year-cycle-in-play-power-law-65k-retest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Bitcoin power law analysis concluded that price may face a new battle around $65,000 if BTC spends 2026 as a year of consolidation.",
+      "pubDate": "2026-01-11T14:37:48.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "27m ago"
+    },
+    {
       "title": "Here’s what happened in crypto today",
       "link": "<![CDATA[https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
@@ -8,7 +18,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Samson Mow tips Elon Musk will ‘go hard’ into Bitcoin in 2026",
@@ -18,7 +28,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "7h ago"
+      "timeAgo": "8h ago"
     },
     {
       "title": "Bitcoin mining difficulty falls in first adjustment of 2026",
@@ -28,7 +38,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "16h ago"
+      "timeAgo": "17h ago"
     },
     {
       "title": "Bitcoiners celebrate 17th anniversary of Hal Finney's Bitcoin post",
@@ -38,7 +48,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "19h ago"
+      "timeAgo": "20h ago"
     },
     {
       "title": "Bitfinex whales dump BTC longs as $135K Bitcoin price target reemerges",
@@ -48,7 +58,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "20h ago"
+      "timeAgo": "21h ago"
     },
     {
       "title": "XRP ETFs hit record weekly volume as bitcoin, ether funds face $750 million in combined outflows",
@@ -58,7 +68,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "21h ago"
+      "timeAgo": "22h ago"
     },
     {
       "title": "Brazilian exchange Mercado Bitcoin outlines 6 crypto trends shaping markets in 2026",
@@ -68,7 +78,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "22h ago"
+      "timeAgo": "23h ago"
     },
     {
       "title": "Betterment urges users to ignore ‘unauthorized’ crypto promotion message",
@@ -127,16 +137,6 @@
       "pubDate": "2026-01-09T21:00:00.000Z",
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "yesterday"
-    },
-    {
-      "title": "Bitcoin Price Could Surge to $53 Million by 2050, Says VanEck—Here&#39;s Why",
-      "link": "https://decrypt.co/354168/bitcoin-price-could-surge-53-million-2050-vaneck-heres-why",
-      "description": "Could Bitcoin be worth more than $50 million per coin in 24 years? VanEck just put out its most bullish price prediction yet.",
-      "pubDate": "2026-01-09T20:13:38.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
       "category": "general",
       "timeAgo": "yesterday"
     },
@@ -211,16 +211,6 @@
       "timeAgo": "yesterday"
     },
     {
-      "title": "Altcoins Defy Bitcoin Slump as XRP, Solana Notch Double-Digit Gains",
-      "link": "https://decrypt.co/354116/altcoins-defy-bitcoin-slump-xrp-solana-double-digit-gains",
-      "description": "Experts note altcoins’ superior performance compared to Bitcoin is driven by ETF narratives and markets awaiting key U.S. economic data.",
-      "pubDate": "2026-01-09T15:11:24.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "yesterday"
-    },
-    {
       "title": "This Investor Thinks the United States Could Start Buying Bitcoin in 2026",
       "link": "https://bitcoinmagazine.com/news/the-united-states-is-going-to-buy-bitcoin",
       "description": "Bitcoin Magazine\n\nThis Investor Thinks the United States Could Start Buying Bitcoin in 2026\nCathie Wood thinks that with crypto now a durable political issue, President Trump may move the U.S. beyond ",
@@ -228,7 +218,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "yesterday"
+      "timeAgo": "2d ago"
     },
     {
       "title": "South Korea Preparing to Approve Spot Bitcoin ETFs in Crypto Policy Pivot",
@@ -238,7 +228,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "yesterday"
+      "timeAgo": "2d ago"
     },
     {
       "title": "Vexl: Empowering Peer-to-Peer Bitcoin Exchange Through Social Networks",
@@ -248,7 +238,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "yesterday"
+      "timeAgo": "2d ago"
     },
     {
       "title": "U.S. added 50,000 jobs in December as unemployment rate fell to 4.4%",
@@ -299,9 +289,19 @@
       "sourceKey": "theblock",
       "category": "general",
       "timeAgo": "2d ago"
+    },
+    {
+      "title": "Cathie Wood says US gov&#8217;t may &#8216;start buying&#8217; to stock national bitcoin reserve",
+      "link": "https://www.theblock.co/post/384854/cathie-wood-us-national-bitcoin-reserve?utm_source=rss&amp;utm_medium=rss",
+      "description": "The founder of ARK Invest said crypto was 'part of the reason [Trump] won the presidency,' and could be a politically salient midterm topic.",
+      "pubDate": "2026-01-09T00:39:09.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "2d ago"
     }
   ],
-  "totalCount": 70,
+  "totalCount": 62,
   "sources": [
     "CoinTelegraph",
     "The Block",
@@ -310,7 +310,7 @@
     "Decrypt",
     "The Defiant"
   ],
-  "fetchedAt": "2026-01-11T14:05:11.329Z",
+  "fetchedAt": "2026-01-11T15:05:30.601Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -332,6 +332,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-11T14:05:05.000Z",
+  "cachedAt": "2026-01-11T15:05:24.000Z",
   "source": "failsafe-cache"
 }

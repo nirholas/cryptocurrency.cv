@@ -1,6 +1,26 @@
 {
   "articles": [
     {
+      "title": "As the market tanks, crypto’s new gold rush is…gold",
+      "link": "https://www.coindesk.com/opinion/2026/01/09/as-the-market-tanks-crypto-s-new-gold-rush-is-gold",
+      "description": "The huge spike in onchain gold signals is that DeFi investors are planning to stay in DeFi, even when the tide turns, argues RAAC founder Kevin Rusher.",
+      "pubDate": "2026-01-11T15:00:00.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "5m ago"
+    },
+    {
+      "title": "Bitcoin bear market still in play as power law sees $65K 'do-or-die' price",
+      "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-four-year-cycle-in-play-power-law-65k-retest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Bitcoin power law analysis concluded that price may face a new battle around $65,000 if BTC spends 2026 as a year of consolidation.",
+      "pubDate": "2026-01-11T14:37:48.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "27m ago"
+    },
+    {
       "title": "Ethereum co-founder Vitalik Buterin warns decentralized stablecoins still have deep flaws",
       "link": "https://www.coindesk.com/tech/2026/01/11/ethereum-co-founder-vitalik-buterin-warns-decentralized-stablecoins-still-have-deep-flaws",
       "description": "The Ethereum co-founder argues that price benchmarks, oracle security and staking incentives remain unresolved challenges for decentralized stablecoins.",
@@ -8,45 +28,15 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "44m ago"
-    },
-    {
-      "title": "Ethereum’s future hinges on zero-knowledge proofs, EF director says",
-      "link": "https://www.coindesk.com/business/2026/01/11/ethereum-s-future-hinges-on-zero-knowledge-proofs-ef-director-says",
-      "description": "In a recent interview with CoinDesk, Ethereum Foundation co-executive director Hsiao-Wei Wang described zero-knowledge as part of Ethereum’s midterm roadmap, pointing to “many amazing breakthroughs” i",
-      "pubDate": "2026-01-11T13:00:00.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Here’s what happened in crypto today",
-      "link": "<![CDATA[https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-      "pubDate": "2026-01-11T12:19:04.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Russians ask government hotlines whether pensions are paid in crypto",
-      "link": "<![CDATA[https://cointelegraph.com/news/russians-ask-pensions-paid-in-crypto-social-fund?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Crypto-related questions about pension payments are reaching Russia’s Social Fund hotline, suggesting digital assets are entering mainstream financial concerns.",
-      "pubDate": "2026-01-11T12:13:48.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
       "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 4,
+  "totalCount": 3,
   "sources": [
     "CoinDesk",
     "CoinTelegraph"
   ],
-  "fetchedAt": "2026-01-11T14:05:19.401Z",
+  "fetchedAt": "2026-01-11T15:05:37.435Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -68,6 +58,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-11T14:05:05.000Z",
+  "cachedAt": "2026-01-11T15:05:24.000Z",
   "source": "failsafe-cache"
 }
