@@ -8,7 +8,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "2h ago"
+      "timeAgo": "3h ago"
     },
     {
       "title": "Ethereum co-founder Vitalik Buterin warns decentralized stablecoins still have deep flaws",
@@ -18,7 +18,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "Here’s what happened in crypto today",
@@ -28,7 +28,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Robinhood explains building an Ethereum layer-2: 'We wanted the security from Ethereum'",
@@ -38,7 +38,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "22h ago"
+      "timeAgo": "23h ago"
     },
     {
       "title": "The Senate moves toward a market structure vote: State of Crypto",
@@ -205,6 +205,16 @@
       "timeAgo": "2d ago"
     },
     {
+      "title": "Wall Street, Crypto Leaders Make &#39;Progress&#39; on Crypto Bill in Private Meeting: Sources",
+      "link": "https://decrypt.co/354064/wall-street-crypto-market-structure-bill-private-meeting",
+      "description": "Leaders of a major Wall Street trade group and DeFi-focused crypto leaders are trying to hash out key disagreements before the market structure bill faces a do-or-die Senate vote next week.",
+      "pubDate": "2026-01-08T23:37:54.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "2d ago"
+    },
+    {
       "title": "Optimism Foundation Proposes Using 50% of Revenue for Buybacks",
       "link": "https://thedefiant.io/news/blockchains/optimism-foundation-proposes-using-50-of-revenue-for-buybacks",
       "pubDate": "2026-01-08T21:07:14.000Z",
@@ -223,6 +233,36 @@
       "timeAgo": "2d ago"
     },
     {
+      "title": "Scientists Crammed a Computer Into a Robot the Size of a Grain of Salt",
+      "link": "https://decrypt.co/354020/scientists-crammed-computer-robot-size-grain-salt",
+      "description": "Researchers built autonomous robots the size of salt grains—with onboard computers, sensors, and motors that think and swim independently for months.",
+      "pubDate": "2026-01-08T20:44:03.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "2d ago"
+    },
+    {
+      "title": "New York Lawmakers Target Prediction Markets as NHL&#39;s Rangers Ink Polymarket Deal",
+      "link": "https://decrypt.co/354043/new-york-lawmakers-target-prediction-markets-nhl-rangers-polymarket-deal",
+      "description": "A New York assemblyman reintroduced a bill that would restrict prediction markets, barring bets on individual sports matches, war, and more.",
+      "pubDate": "2026-01-08T20:12:37.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "2d ago"
+    },
+    {
+      "title": "Florida Lawmakers Renew Push to Launch State Bitcoin Reserve",
+      "link": "https://decrypt.co/353995/florida-lawmakers-renew-push-launch-state-bitcoin-reserve",
+      "description": "Florida lawmakers introduced another bill for the creation of a strategic Bitcoin reserve, less than a year after two attempts were shelved.",
+      "pubDate": "2026-01-08T18:35:24.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "2d ago"
+    },
+    {
       "title": "Bitcoin Extends Selloff as Investors Turn Cautious",
       "link": "https://thedefiant.io/news/markets/bitcoin-extends-selloff-as-investors-turn-cautious",
       "pubDate": "2026-01-08T18:33:08.000Z",
@@ -238,7 +278,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "2d ago"
+      "timeAgo": "3d ago"
     },
     {
       "title": "Florida Revives Bitcoin Reserve Push With New 2026 Bill",
@@ -249,54 +289,18 @@
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
       "timeAgo": "3d ago"
-    },
-    {
-      "title": "Crypto Derivatives Market Reset After Oct. 10 Crash: BitMEX",
-      "link": "https://thedefiant.io/news/cefi/crypto-derivatives-market-reset-after-oct-10-crash-bitmex",
-      "pubDate": "2026-01-08T12:00:00.000Z",
-      "source": "The Defiant",
-      "sourceKey": "defiant",
-      "category": "defi",
-      "timeAgo": "3d ago"
-    },
-    {
-      "title": "Polymarket Begins Rolling Out Fees in US App and Crypto Markets",
-      "link": "https://thedefiant.io/news/defi/polymarket-begins-rolling-out-fees-in-us-app-and-crypto-markets",
-      "pubDate": "2026-01-07T21:49:42.000Z",
-      "source": "The Defiant",
-      "sourceKey": "defiant",
-      "category": "defi",
-      "timeAgo": "3d ago"
-    },
-    {
-      "title": "Clone-X NFTs Soar 200% as Nike Sells RTFKT",
-      "link": "https://thedefiant.io/news/nfts-and-web3/clone-x-nfts-soar-200-as-nike-sells-rtfkt",
-      "pubDate": "2026-01-07T20:42:10.000Z",
-      "source": "The Defiant",
-      "sourceKey": "defiant",
-      "category": "defi",
-      "timeAgo": "3d ago"
-    },
-    {
-      "title": "Crypto Markets Edge Lower as Investors Weigh Macro Data",
-      "link": "https://thedefiant.io/news/markets/crypto-markets-edge-lower-as-investors-weigh-macro-data",
-      "pubDate": "2026-01-07T19:27:24.000Z",
-      "source": "The Defiant",
-      "sourceKey": "defiant",
-      "category": "defi",
-      "timeAgo": "3d ago"
     }
   ],
-  "totalCount": 117,
+  "totalCount": 122,
   "sources": [
     "CoinDesk",
     "CoinTelegraph",
     "The Defiant",
     "The Block",
-    "Bitcoin Magazine",
-    "Decrypt"
+    "Decrypt",
+    "Bitcoin Magazine"
   ],
-  "fetchedAt": "2026-01-11T17:05:02.566Z",
+  "fetchedAt": "2026-01-11T18:07:39.322Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -318,6 +322,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-11T17:04:56.000Z",
+  "cachedAt": "2026-01-11T18:07:32.000Z",
   "source": "failsafe-cache"
 }

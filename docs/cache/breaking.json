@@ -8,35 +8,14 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "18m ago"
-    },
-    {
-      "title": "Monero's XMR hits $500 for the first time since 2021 as rival Zcash fumbles",
-      "link": "<![CDATA[https://cointelegraph.com/news/monero-xmr-hits-500-first-time-since-2021-zcash-fumbles?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "History shows XMR has repeatedly failed near record highs, risking another sharp pullback unless it decisively breaks above $500–$520.",
-      "pubDate": "2026-01-11T15:57:24.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Walmart and Google bet on AI agents to reshape how people shop online",
-      "link": "https://www.coindesk.com/tech/2026/01/11/walmart-and-google-bet-on-ai-agents-to-reshape-how-people-shop-online",
-      "description": "The retail giant said a new Gemini integration reflects a broader shift from search-based shopping to AI systems that can act on a customer’s behalf.",
-      "pubDate": "2026-01-11T15:55:23.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
       "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 3,
+  "totalCount": 1,
   "sources": [
-    "CoinTelegraph",
-    "CoinDesk"
+    "CoinTelegraph"
   ],
-  "fetchedAt": "2026-01-11T17:05:07.518Z",
+  "fetchedAt": "2026-01-11T18:07:54.338Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -58,6 +37,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-11T17:04:56.000Z",
+  "cachedAt": "2026-01-11T18:07:32.000Z",
   "source": "failsafe-cache"
 }
