@@ -1,27 +1,27 @@
 {
   "version": "2.0.0",
   "total_articles": 10,
-  "total_fetches": 5,
+  "total_fetches": 6,
   "first_fetch": "2026-01-11T08:06:30.767Z",
-  "last_fetch": "2026-01-11T09:17:23.044Z",
+  "last_fetch": "2026-01-11T10:11:19.614Z",
   "daily_counts": {
     "2026-01-11": 10
   },
   "features_used": {
-    "marketData": 4,
-    "onChain": 4,
-    "social": 4,
-    "predictions": 4,
-    "clustering": 4,
-    "reliability": 4
+    "marketData": 5,
+    "onChain": 5,
+    "social": 5,
+    "predictions": 5,
+    "clustering": 5,
+    "reliability": 5
   },
   "sources": {},
   "tickers": {},
   "latest_market": {
-    "btc_price": 90652,
-    "eth_price": 3099.35,
+    "btc_price": 90573,
+    "eth_price": 3100.1,
     "fear_greed": 29,
     "total_tvl": null,
-    "timestamp": "2026-01-11T09:17:17.807Z"
+    "timestamp": "2026-01-11T10:11:14.711Z"
   }
 }
