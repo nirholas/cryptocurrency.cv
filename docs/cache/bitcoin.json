@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "title": "ETH-BTC ratio bottomed in April, mirrors 2019 cycle: Analyst",
+      "link": "<![CDATA[https://cointelegraph.com/news/eth-btc-bottom-april-mirror-2019-cycle?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "The Ethereum ecosystem continues to see increased development and value locked in tokenized assets, according to market analyst Michaël van de Poppe.",
+      "pubDate": "2026-01-11T20:59:28.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "5m ago"
+    },
+    {
       "title": "Bitcoin bear market still in play as power law sees $65K 'do-or-die' price",
       "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-four-year-cycle-in-play-power-law-65k-retest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "Bitcoin power law analysis concluded that price may face a new battle around $65,000 if BTC spends 2026 as a year of consolidation.",
@@ -8,7 +18,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "5h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "Here’s what happened in crypto today",
@@ -18,7 +28,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "7h ago"
+      "timeAgo": "8h ago"
     },
     {
       "title": "Samson Mow tips Elon Musk will ‘go hard’ into Bitcoin in 2026",
@@ -28,7 +38,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "13h ago"
+      "timeAgo": "14h ago"
     },
     {
       "title": "Bitcoin mining difficulty falls in first adjustment of 2026",
@@ -38,7 +48,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "22h ago"
+      "timeAgo": "23h ago"
     },
     {
       "title": "Bitcoiners celebrate 17th anniversary of Hal Finney's Bitcoin post",
@@ -138,7 +148,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "yesterday"
+      "timeAgo": "2d ago"
     },
     {
       "title": "Bitcoin Price Could Surge to $53 Million by 2050, Says VanEck—Here&#39;s Why",
@@ -148,7 +158,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "yesterday"
+      "timeAgo": "2d ago"
     },
     {
       "title": "Bitcoin pulls back to $90,000 as early Friday rally attempt fails",
@@ -187,26 +197,6 @@
       "pubDate": "2026-01-09T18:36:40.000Z",
       "source": "The Block",
       "sourceKey": "theblock",
-      "category": "general",
-      "timeAgo": "2d ago"
-    },
-    {
-      "title": "Bitcoin’s next super rally could depend on this key data point",
-      "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-s-next-super-rally-could-depend-on-this-key-data-point?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Long-term Bitcoin holders sold nearly $300 billion worth of BTC in 2025, but as this sell pressure declines, a bullish outlook for 2026 has emerged.",
-      "pubDate": "2026-01-09T18:30:00.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "2d ago"
-    },
-    {
-      "title": "Price predictions 1/9: BTC, ETH, XRP, BNB, SOL, DOGE, ADA, BCH, LINK, HYPE",
-      "link": "<![CDATA[https://cointelegraph.com/news/price-predictions-1-9-btc-eth-xrp-bnb-sol-doge-ada-bch-link-hype?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Buyers are attempting to defend the near-term support in Bitcoin and select major altcoins, but the bears have not given up and continue to exert pressure near the intraday range highs.",
-      "pubDate": "2026-01-09T17:30:00.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
       "category": "general",
       "timeAgo": "2d ago"
     },
@@ -299,9 +289,19 @@
       "sourceKey": "decrypt",
       "category": "general",
       "timeAgo": "2d ago"
+    },
+    {
+      "title": "Cathie Wood says US gov&#8217;t may &#8216;start buying&#8217; to stock national bitcoin reserve",
+      "link": "https://www.theblock.co/post/384854/cathie-wood-us-national-bitcoin-reserve?utm_source=rss&amp;utm_medium=rss",
+      "description": "The founder of ARK Invest said crypto was 'part of the reason [Trump] won the presidency,' and could be a politically salient midterm topic.",
+      "pubDate": "2026-01-09T00:39:09.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "2d ago"
     }
   ],
-  "totalCount": 69,
+  "totalCount": 68,
   "sources": [
     "CoinTelegraph",
     "The Block",
@@ -310,7 +310,7 @@
     "Decrypt",
     "The Defiant"
   ],
-  "fetchedAt": "2026-01-11T20:06:13.908Z",
+  "fetchedAt": "2026-01-11T21:05:11.486Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -332,6 +332,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-11T20:06:07.000Z",
+  "cachedAt": "2026-01-11T21:05:05.000Z",
   "source": "failsafe-cache"
 }
