@@ -1,6 +1,26 @@
 {
   "articles": [
     {
+      "title": "Monero's XMR hits $500 for the first time since 2021 as rival Zcash fumbles",
+      "link": "<![CDATA[https://cointelegraph.com/news/monero-xmr-hits-500-first-time-since-2021-zcash-fumbles?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "History shows XMR has repeatedly failed near record highs, risking another sharp pullback unless it decisively breaks above $500–$520.",
+      "pubDate": "2026-01-11T15:57:24.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "9m ago"
+    },
+    {
+      "title": "Walmart and Google bet on AI agents to reshape how people shop online",
+      "link": "https://www.coindesk.com/tech/2026/01/11/walmart-and-google-bet-on-ai-agents-to-reshape-how-people-shop-online",
+      "description": "The retail giant said a new Gemini integration reflects a broader shift from search-based shopping to AI systems that can act on a customer’s behalf.",
+      "pubDate": "2026-01-11T15:55:23.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "11m ago"
+    },
+    {
       "title": "As the market tanks, crypto’s new gold rush is…gold",
       "link": "https://www.coindesk.com/opinion/2026/01/09/as-the-market-tanks-crypto-s-new-gold-rush-is-gold",
       "description": "The huge spike in onchain gold signals is that DeFi investors are planning to stay in DeFi, even when the tide turns, argues RAAC founder Kevin Rusher.",
@@ -8,7 +28,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "5m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Bitcoin bear market still in play as power law sees $65K 'do-or-die' price",
@@ -18,25 +38,15 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "27m ago"
-    },
-    {
-      "title": "Ethereum co-founder Vitalik Buterin warns decentralized stablecoins still have deep flaws",
-      "link": "https://www.coindesk.com/tech/2026/01/11/ethereum-co-founder-vitalik-buterin-warns-decentralized-stablecoins-still-have-deep-flaws",
-      "description": "The Ethereum co-founder argues that price benchmarks, oracle security and staking incentives remain unresolved challenges for decentralized stablecoins.",
-      "pubDate": "2026-01-11T13:20:31.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
       "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 3,
+  "totalCount": 4,
   "sources": [
-    "CoinDesk",
-    "CoinTelegraph"
+    "CoinTelegraph",
+    "CoinDesk"
   ],
-  "fetchedAt": "2026-01-11T15:05:37.435Z",
+  "fetchedAt": "2026-01-11T16:06:49.329Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -58,6 +68,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-11T15:05:24.000Z",
+  "cachedAt": "2026-01-11T16:06:33.000Z",
   "source": "failsafe-cache"
 }
