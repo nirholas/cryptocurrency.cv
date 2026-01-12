@@ -1,6 +1,26 @@
 {
   "articles": [
     {
+      "title": "Monero Sets New Record Price as Privacy Trade Re-Emerges",
+      "link": "https://decrypt.co/354222/monero-sets-new-record-price-privacy-trade-re-emerges",
+      "description": "Monero’s push to a record high follows renewed interest in privacy-focused coins, even as uneven liquidity complicates price signals.",
+      "pubDate": "2026-01-12T00:33:38.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "1h ago"
+    },
+    {
+      "title": "X Plans ‘Smart Cashtags’ to Link Crypto and Stock Tickers to Live Prices",
+      "link": "https://decrypt.co/354215/x-smart-cashtags-link-crypto-stock-tickers-live-prices",
+      "description": "X is developing a feature that turns ticker symbols in posts into links for real-time pricing and asset-specific information.",
+      "pubDate": "2026-01-11T23:20:23.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "2h ago"
+    },
+    {
       "title": "Here’s what happened in crypto today",
       "link": "<![CDATA[https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
@@ -8,7 +28,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "ETH-BTC ratio bottomed in April, mirrors 2019 cycle: Analyst",
@@ -18,7 +38,17 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
+    },
+    {
+      "title": "UK committee chairs push for crypto political donations ban, adding pressure to Labour government",
+      "link": "https://www.theblock.co/post/385016/uk-committee-chairs-push-for-crypto-political-donations-ban-adding-pressure-to-labour-government?utm_source=rss&amp;utm_medium=rss",
+      "description": "Reform UK became the first UK political party to accept crypto donations in May 2025, though a £9m donation from a crypto investor was made in fiat.",
+      "pubDate": "2026-01-11T20:20:40.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "5h ago"
     },
     {
       "title": "India tightens KYC requirements for crypto user onboarding",
@@ -28,7 +58,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "JPMorgan downplays stablecoin threat as local bankers warn of $6.6 trillion risk",
@@ -38,7 +68,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "5h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "Elon Musks's X teases crypto-aware ‘smart cashtags’ just day after community backlash",
@@ -48,7 +78,17 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
+    },
+    {
+      "title": "Vitalik Buterin says decentralized stablecoins still face three unsolved problems",
+      "link": "https://www.theblock.co/post/385013/vitalik-buterin-says-decentralized-stablecoins-still-face-three-unsolved-problems?utm_source=rss&amp;utm_medium=rss",
+      "description": "Buterin suggested that long-term stablecoin sustainability may require independence from the dollar entirely, given the possibility of future debasement.",
+      "pubDate": "2026-01-11T16:56:04.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "8h ago"
     },
     {
       "title": "Ethereum treasury company BitMine crosses 1 million staked ETH milestone",
@@ -58,7 +98,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "7h ago"
+      "timeAgo": "8h ago"
     },
     {
       "title": "Monero's XMR hits $500 for the first time since 2021 as rival Zcash fumbles",
@@ -68,7 +108,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "8h ago"
+      "timeAgo": "9h ago"
     },
     {
       "title": "Walmart and Google bet on AI agents to reshape how people shop online",
@@ -78,7 +118,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "8h ago"
+      "timeAgo": "9h ago"
     },
     {
       "title": "As the market tanks, crypto’s new gold rush is…gold",
@@ -88,7 +128,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "9h ago"
+      "timeAgo": "10h ago"
     },
     {
       "title": "Bitcoin bear market still in play as power law sees $65K 'do-or-die' price",
@@ -98,7 +138,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "9h ago"
+      "timeAgo": "10h ago"
     },
     {
       "title": "Ethereum co-founder Vitalik Buterin warns decentralized stablecoins still have deep flaws",
@@ -108,7 +148,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "11h ago"
+      "timeAgo": "12h ago"
     },
     {
       "title": "Ethereum’s future hinges on zero-knowledge proofs, EF director says",
@@ -118,7 +158,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "11h ago"
+      "timeAgo": "12h ago"
     },
     {
       "title": "Russians ask government hotlines whether pensions are paid in crypto",
@@ -128,7 +168,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "12h ago"
+      "timeAgo": "13h ago"
     },
     {
       "title": "CryptoQuant founder slams X for penalizing crypto content instead of bots",
@@ -138,7 +178,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "14h ago"
+      "timeAgo": "15h ago"
     },
     {
       "title": "Tennessee sends cease-and-desist letters to Kalshi, Polymarket, Crypto.com",
@@ -148,7 +188,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "17h ago"
+      "timeAgo": "18h ago"
     },
     {
       "title": "Samson Mow tips Elon Musk will ‘go hard’ into Bitcoin in 2026",
@@ -158,7 +198,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "18h ago"
+      "timeAgo": "19h ago"
     },
     {
       "title": "Ethereum sentiment mirrors levels seen before ‘major run’: Santiment",
@@ -168,7 +208,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "20h ago"
+      "timeAgo": "21h ago"
     },
     {
       "title": "Iran&#8217;s Revolutionary Guard moved $1 billion through UK-registered crypto exchanges, report finds",
@@ -367,7 +407,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "yesterday"
+      "timeAgo": "2d ago"
     },
     {
       "title": "Stablecoin card adoption will be a 'big theme' of 2026: Dragonfly exec",
@@ -377,7 +417,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "yesterday"
+      "timeAgo": "2d ago"
     },
     {
       "title": "Memecoin Market Cratered More Than 60% in 2025: Report",
@@ -386,7 +426,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "yesterday"
+      "timeAgo": "2d ago"
     },
     {
       "title": "Bitcoin tests key support as bulls reset to prepare for futures-led rally to $101.5K",
@@ -457,46 +497,6 @@
       "sourceKey": "cointelegraph",
       "category": "general",
       "timeAgo": "2d ago"
-    },
-    {
-      "title": "Wall Street’s crypto debate is over as banks go all-in on BTC, stablecoins, tokenized cash",
-      "link": "<![CDATA[https://cointelegraph.com/news/wall-street-banks-crypto-etfs-tokenized-cash?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Big banks aren’t debating crypto anymore — they’re building it. From tokenized cash to ETFs, Wall Street is quietly going onchain.",
-      "pubDate": "2026-01-09T21:00:00.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "2d ago"
-    },
-    {
-      "title": "Insiders Say DeepSeek V4 Will Beat Claude and ChatGPT at Coding, Launch Within Weeks",
-      "link": "https://decrypt.co/354177/insiders-say-deepseek-v4-beat-claude-chatgpt-coding-launching-weeks",
-      "description": "DeepSeek's upcoming V4 model could outperform Claude and ChatGPT in coding tasks, according to insiders—with its purported release nearing.",
-      "pubDate": "2026-01-09T20:52:34.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "2d ago"
-    },
-    {
-      "title": "&#39;Baldur&#39;s Gate 3&#39; Game Studio Says &#39;Divinity&#39; Won&#39;t Include AI-Generated Art",
-      "link": "https://decrypt.co/354154/baldurs-gate-3-game-studio-says-divinity-wont-include-ai-generated-art",
-      "description": "Larian Studios head Swen Vincke said the upcoming RPG Divinity will not use generative AI art, though the studio still sees benefits to the tech.",
-      "pubDate": "2026-01-09T20:31:02.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "2d ago"
-    },
-    {
-      "title": "CLARITY Act hinges on bipartisan support, and here are the numbers: Analyst",
-      "link": "<![CDATA[https://cointelegraph.com/news/clarity-act-hinges-bipartisan-support-numbers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "The crypto market structure bill is unlikely to come up for a second vote in 2026 if it fails to pass in a vote next week, analyst Alex Thorn said.",
-      "pubDate": "2026-01-09T20:23:33.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "2d ago"
     }
   ],
   "totalCount": 238,
@@ -509,7 +509,7 @@
     "Blockworks",
     "The Defiant"
   ],
-  "fetchedAt": "2026-01-12T00:25:42.672Z",
+  "fetchedAt": "2026-01-12T01:35:26.156Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -531,6 +531,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-12T00:25:37.000Z",
+  "cachedAt": "2026-01-12T01:35:20.000Z",
   "source": "failsafe-cache"
 }

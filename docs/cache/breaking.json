@@ -1,21 +1,32 @@
 {
   "articles": [
     {
-      "title": "X Plans ‘Smart Cashtags’ to Link Crypto and Stock Tickers to Live Prices",
-      "link": "https://decrypt.co/354215/x-smart-cashtags-link-crypto-stock-tickers-live-prices",
-      "description": "X is developing a feature that turns ticker symbols in posts into links for real-time pricing and asset-specific information.",
-      "pubDate": "2026-01-11T23:20:23.000Z",
+      "title": "X to roll out 'Smart Cashtags' for crypto, stocks next month",
+      "link": "<![CDATA[https://cointelegraph.com/news/x-building-smart-cashtags-tracking-crypto-stock-prices?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Smart Cashtags will enable users to track real-time price movements of crypto tokens and stocks, building on X’s long-term vision to become an Everything App.",
+      "pubDate": "2026-01-12T00:49:05.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "46m ago"
+    },
+    {
+      "title": "Monero Sets New Record Price as Privacy Trade Re-Emerges",
+      "link": "https://decrypt.co/354222/monero-sets-new-record-price-privacy-trade-re-emerges",
+      "description": "Monero’s push to a record high follows renewed interest in privacy-focused coins, even as uneven liquidity complicates price signals.",
+      "pubDate": "2026-01-12T00:33:38.000Z",
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
       "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 1,
+  "totalCount": 2,
   "sources": [
+    "CoinTelegraph",
     "Decrypt"
   ],
-  "fetchedAt": "2026-01-12T00:25:51.221Z",
+  "fetchedAt": "2026-01-12T01:35:34.305Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -37,6 +48,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-12T00:25:37.000Z",
+  "cachedAt": "2026-01-12T01:35:20.000Z",
   "source": "failsafe-cache"
 }
