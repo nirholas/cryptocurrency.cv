@@ -1,6 +1,66 @@
 {
   "articles": [
     {
+      "title": "Dubai bans privacy tokens, tightens stablecoin rules in crypto reset",
+      "link": "https://www.coindesk.com/policy/2026/01/12/dubai-bans-privacy-tokens-tightens-stablecoin-rules-in-crypto-reset",
+      "description": "Dubai's financial regulator said privacy-focused assets are incompatible with global compliance norms as it moves to a firm-led token suitability model and sharper stablecoin classifications.",
+      "pubDate": "2026-01-12T09:36:42.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "30m ago"
+    },
+    {
+      "title": "Coinbase pushes back against banks to keep rewarding users for holding stablecoins",
+      "link": "https://www.coindesk.com/business/2026/01/12/coinbase-pushes-back-against-banks-to-keep-rewarding-users-for-holding-stablecoins",
+      "description": "Disagreements over stablecoin rewards have frayed bipartisan support for the bill, with traders estimating a 68-70% chance of passage this year.",
+      "pubDate": "2026-01-12T09:27:34.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "40m ago"
+    },
+    {
+      "title": "Adam Back-backed Bitcoin treasury Future Holdings set for takeover by H100",
+      "link": "<![CDATA[https://cointelegraph.com/news/adam-back-future-holdings-h100-acquisition-switzerland?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Adam Back-backed Bitcoin treasury Future Holdings has agreed to a takeover proposal from Sweden-listed H100 Group as it eyes expansion into Switzerland.",
+      "pubDate": "2026-01-12T09:26:35.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "41m ago"
+    },
+    {
+      "title": "Bitcoin treasury firms linked to Adam Back sign preliminary agreement to combine",
+      "link": "https://www.coindesk.com/markets/2026/01/12/bitcoin-treasury-firms-linked-to-adam-back-sign-preliminary-agreement-to-combine",
+      "description": "The proposed deal would take Sweden-based H100 into Switzerland and deepen its institutional bitcoin treasury strategy.",
+      "pubDate": "2026-01-12T09:22:03.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "45m ago"
+    },
+    {
+      "title": "Bitcoin's early gains fade fast as prices fall back below $91,000",
+      "link": "https://www.coindesk.com/markets/2026/01/12/bitcoin-s-early-gains-fade-fast-as-prices-fall-back-below-usd91-000",
+      "description": "Risk sentiment deteriorates as safe havens outperform and equities weaken.",
+      "pubDate": "2026-01-12T09:17:50.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "49m ago"
+    },
+    {
+      "title": "Stablecoins, sanctions and surveillance: Why 2025 reshaped crypto’s regulatory reality",
+      "link": "<![CDATA[https://cointelegraph.com/news/stablecoins-sanctions-and-surveillance-why-2025-reshaped-crypto-s-regulatory-reality?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "From record onchain volumes to geopolitics-driven crypto crime, 2025 structurally shifted how regulators and institutions engaged with digital assets, with stablecoins at the center.",
+      "pubDate": "2026-01-12T09:14:30.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "53m ago"
+    },
+    {
       "title": "Fed rate cuts under fire: 5 things to know in Bitcoin this week",
       "link": "<![CDATA[https://cointelegraph.com/news/fed-rate-cuts-under-fire-5-things-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "Bitcoin injected volatility as legal action against the Federal Reserve combined with market nerves over geopolitics at the start of a key week for inflation data.",
@@ -8,7 +68,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "9m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "SEC delays PENGU and T. Rowe crypto ETFs as Grayscale seeks options green light",
@@ -18,36 +78,15 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "21m ago"
-    },
-    {
-      "title": "Tether freezes $182 million in USDT tied to five Tron addresses",
-      "link": "https://www.theblock.co/post/385051/tether-freezes-182-million-usdt?utm_source=rss&amp;utm_medium=rss",
-      "description": "Tether froze $182 million in USDT across five Tron wallets, highlighting enforcement as stablecoins dominate illicit crypto flows.",
-      "pubDate": "2026-01-12T08:06:21.000Z",
-      "source": "The Block",
-      "sourceKey": "theblock",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "South Korea proposes 5% limit for listed firms’ crypto exposure",
-      "link": "https://www.coindesk.com/markets/2026/01/12/south-korea-proposes-5-limit-for-listed-firms-crypto-exposure",
-      "description": "The proposed guidelines would allow eligible firms to invest in the top 20 cryptocurrencies by market value.",
-      "pubDate": "2026-01-12T07:15:54.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
       "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 4,
+  "totalCount": 8,
   "sources": [
-    "CoinTelegraph",
-    "The Block",
-    "CoinDesk"
+    "CoinDesk",
+    "CoinTelegraph"
   ],
-  "fetchedAt": "2026-01-12T09:11:30.655Z",
+  "fetchedAt": "2026-01-12T10:07:36.984Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -69,6 +108,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-12T09:11:14.000Z",
+  "cachedAt": "2026-01-12T10:07:21.000Z",
   "source": "failsafe-cache"
 }

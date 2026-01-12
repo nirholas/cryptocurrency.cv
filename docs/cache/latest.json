@@ -1,6 +1,66 @@
 {
   "articles": [
     {
+      "title": "Dubai bans privacy tokens, tightens stablecoin rules in crypto reset",
+      "link": "https://www.coindesk.com/policy/2026/01/12/dubai-bans-privacy-tokens-tightens-stablecoin-rules-in-crypto-reset",
+      "description": "Dubai's financial regulator said privacy-focused assets are incompatible with global compliance norms as it moves to a firm-led token suitability model and sharper stablecoin classifications.",
+      "pubDate": "2026-01-12T09:36:42.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "30m ago"
+    },
+    {
+      "title": "Coinbase pushes back against banks to keep rewarding users for holding stablecoins",
+      "link": "https://www.coindesk.com/business/2026/01/12/coinbase-pushes-back-against-banks-to-keep-rewarding-users-for-holding-stablecoins",
+      "description": "Disagreements over stablecoin rewards have frayed bipartisan support for the bill, with traders estimating a 68-70% chance of passage this year.",
+      "pubDate": "2026-01-12T09:27:34.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "39m ago"
+    },
+    {
+      "title": "Adam Back-backed Bitcoin treasury Future Holdings set for takeover by H100",
+      "link": "<![CDATA[https://cointelegraph.com/news/adam-back-future-holdings-h100-acquisition-switzerland?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Adam Back-backed Bitcoin treasury Future Holdings has agreed to a takeover proposal from Sweden-listed H100 Group as it eyes expansion into Switzerland.",
+      "pubDate": "2026-01-12T09:26:35.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "40m ago"
+    },
+    {
+      "title": "Bitcoin treasury firms linked to Adam Back sign preliminary agreement to combine",
+      "link": "https://www.coindesk.com/markets/2026/01/12/bitcoin-treasury-firms-linked-to-adam-back-sign-preliminary-agreement-to-combine",
+      "description": "The proposed deal would take Sweden-based H100 into Switzerland and deepen its institutional bitcoin treasury strategy.",
+      "pubDate": "2026-01-12T09:22:03.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "45m ago"
+    },
+    {
+      "title": "Bitcoin's early gains fade fast as prices fall back below $91,000",
+      "link": "https://www.coindesk.com/markets/2026/01/12/bitcoin-s-early-gains-fade-fast-as-prices-fall-back-below-usd91-000",
+      "description": "Risk sentiment deteriorates as safe havens outperform and equities weaken.",
+      "pubDate": "2026-01-12T09:17:50.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "49m ago"
+    },
+    {
+      "title": "Stablecoins, sanctions and surveillance: Why 2025 reshaped crypto’s regulatory reality",
+      "link": "<![CDATA[https://cointelegraph.com/news/stablecoins-sanctions-and-surveillance-why-2025-reshaped-crypto-s-regulatory-reality?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "From record onchain volumes to geopolitics-driven crypto crime, 2025 structurally shifted how regulators and institutions engaged with digital assets, with stablecoins at the center.",
+      "pubDate": "2026-01-12T09:14:30.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "52m ago"
+    },
+    {
       "title": "Fed rate cuts under fire: 5 things to know in Bitcoin this week",
       "link": "<![CDATA[https://cointelegraph.com/news/fed-rate-cuts-under-fire-5-things-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "Bitcoin injected volatility as legal action against the Federal Reserve combined with market nerves over geopolitics at the start of a key week for inflation data.",
@@ -8,7 +68,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "9m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "SEC delays PENGU and T. Rowe crypto ETFs as Grayscale seeks options green light",
@@ -18,7 +78,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "20m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Tether freezes $182 million in USDT tied to five Tron addresses",
@@ -28,7 +88,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "South Korea proposes 5% limit for listed firms’ crypto exposure",
@@ -38,7 +98,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Tether’s role in Venezuela, Iran highlights the duality of stablecoins",
@@ -48,7 +108,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "2h ago"
+      "timeAgo": "3h ago"
     },
     {
       "title": "Most US debanking cases stem from government pressure, report says",
@@ -68,7 +128,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "South Korea to lift ban on corporate crypto investment: Report",
@@ -78,7 +138,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "Bitcoin, privacy coins rally as Trump-Powell conflict escalates",
@@ -88,7 +148,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "South Korean authorities seek 5% cap on corporate crypto investments: report",
@@ -98,7 +158,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "​​Top UK Labour lawmakers push to ban political donations made in crypto",
@@ -108,7 +168,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "Bitcoin rises 1%, Nasdaq futures and dollar drop as Trump-Powell feud escalates",
@@ -118,7 +178,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "Ethereum needs better decentralized stablecoins: Vitalik Buterin",
@@ -138,7 +198,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Crypto YouTube views sink to lowest level since early 2021, ‘it’s not just X'",
@@ -148,7 +208,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "5h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "Bitcoin Shrugs Off Powell Probe as DOJ Targets Fed Chair",
@@ -158,7 +218,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "5h ago"
+      "timeAgo": "6h ago"
     },
     {
       "title": "Coinbase may reconsider support for US market structure bill: Bloomberg",
@@ -168,7 +228,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Memecoins hit hardest in rough year that saw 11.6M tokens fail",
@@ -178,7 +238,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Fed’s Powell says DOJ probe reflects ‘pressure’ over rate policy independence",
@@ -188,7 +248,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Prediction markets downplay Powell exit risk despite DOJ probe: Asia Morning Briefing",
@@ -198,7 +258,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Coinbase could pull CLARITY Act support over stablecoin rewards ban",
@@ -208,7 +268,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "The Funding: Why token buybacks are suddenly back in focus",
@@ -218,7 +278,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "X to roll out ‘Smart Cashtags’ for crypto, stocks next month",
@@ -228,7 +288,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "8h ago"
+      "timeAgo": "9h ago"
     },
     {
       "title": "Monero Sets New Record Price as Privacy Trade Re-Emerges",
@@ -238,7 +298,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "8h ago"
+      "timeAgo": "9h ago"
     },
     {
       "title": "X Plans ‘Smart Cashtags’ to Link Crypto and Stock Tickers to Live Prices",
@@ -248,7 +308,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "9h ago"
+      "timeAgo": "10h ago"
     },
     {
       "title": "Here’s what happened in crypto today",
@@ -258,7 +318,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "11h ago"
+      "timeAgo": "12h ago"
     },
     {
       "title": "ETH-BTC ratio bottomed in April, mirrors 2019 cycle: Analyst",
@@ -268,7 +328,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "12h ago"
+      "timeAgo": "13h ago"
     },
     {
       "title": "UK committee chairs push for crypto political donations ban, adding pressure to Labour government",
@@ -278,7 +338,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "12h ago"
+      "timeAgo": "13h ago"
     },
     {
       "title": "India tightens KYC requirements for crypto user onboarding",
@@ -288,7 +348,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "13h ago"
+      "timeAgo": "14h ago"
     },
     {
       "title": "JPMorgan downplays stablecoin threat as local bankers warn of $6.6 trillion risk",
@@ -298,7 +358,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "14h ago"
+      "timeAgo": "15h ago"
     },
     {
       "title": "Elon Musks's X teases crypto-aware ‘smart cashtags’ just day after community backlash",
@@ -318,7 +378,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "16h ago"
+      "timeAgo": "17h ago"
     },
     {
       "title": "Ethereum treasury company BitMine crosses 1 million staked ETH milestone",
@@ -328,7 +388,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "16h ago"
+      "timeAgo": "17h ago"
     },
     {
       "title": "Monero’s XMR hits $500 for the first time since 2021 as rival Zcash fumbles",
@@ -338,7 +398,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "17h ago"
+      "timeAgo": "18h ago"
     },
     {
       "title": "Walmart and Google bet on AI agents to reshape how people shop online",
@@ -348,7 +408,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "17h ago"
+      "timeAgo": "18h ago"
     },
     {
       "title": "As the market tanks, crypto’s new gold rush is…gold",
@@ -358,7 +418,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "18h ago"
+      "timeAgo": "19h ago"
     },
     {
       "title": "Bitcoin bear market still in play as power law sees $65K ‘do-or-die’ price",
@@ -368,7 +428,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "18h ago"
+      "timeAgo": "19h ago"
     },
     {
       "title": "Ethereum co-founder Vitalik Buterin warns decentralized stablecoins still have deep flaws",
@@ -378,7 +438,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "19h ago"
+      "timeAgo": "20h ago"
     },
     {
       "title": "Ethereum’s future hinges on zero-knowledge proofs, EF director says",
@@ -388,7 +448,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "20h ago"
+      "timeAgo": "21h ago"
     },
     {
       "title": "Russians ask government hotlines whether pensions are paid in crypto",
@@ -398,7 +458,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "20h ago"
+      "timeAgo": "21h ago"
     },
     {
       "title": "CryptoQuant founder slams X for penalizing crypto content instead of bots",
@@ -408,7 +468,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "22h ago"
+      "timeAgo": "23h ago"
     },
     {
       "title": "Tennessee sends cease-and-desist letters to Kalshi, Polymarket, Crypto.com",
@@ -439,66 +499,6 @@
       "sourceKey": "cointelegraph",
       "category": "general",
       "timeAgo": "yesterday"
-    },
-    {
-      "title": "Iran&#8217;s Revolutionary Guard moved $1 billion through UK-registered crypto exchanges, report finds",
-      "link": "https://www.theblock.co/post/385006/irans-revolutionary-guard-moved-1-billion-through-uk-registered-crypto-exchanges-report-finds?utm_source=rss&amp;utm_medium=rss",
-      "description": "The vast majority of the transactions were conducted using Tether's USDT stablecoin on the Tron network, the analysis by TRM Labs found.",
-      "pubDate": "2026-01-10T21:59:10.000Z",
-      "source": "The Block",
-      "sourceKey": "theblock",
-      "category": "general",
-      "timeAgo": "yesterday"
-    },
-    {
-      "title": "Bitcoin mining difficulty falls in first adjustment of 2026",
-      "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-difficulty-falls-first-adjustment-2026?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Bitcoin mining difficulty, which hit repeated highs in 2025, recorded a slight decline in its first network adjustment of 2026.",
-      "pubDate": "2026-01-10T21:22:20.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "yesterday"
-    },
-    {
-      "title": "Starknet publishes post-mortem report after temporary network outage",
-      "link": "<![CDATA[https://cointelegraph.com/news/starknet-post-mortem-report-outage?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "The outage was the second major network disruption in 2025, with both incidents requiring a block reorganization that rolled back some activity.",
-      "pubDate": "2026-01-10T20:06:00.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "yesterday"
-    },
-    {
-      "title": "Robinhood explains building an Ethereum layer-2: 'We wanted the security from Ethereum'",
-      "link": "https://www.coindesk.com/business/2026/01/10/robinhood-explains-building-an-ethereum-layer-2-we-wanted-the-security-from-ethereum",
-      "description": "CoinDesk sat down with Robinhood’s head of crypto, Johann Kerbrat, to get an update on its upcoming layer-2 network, its tokenized stocks program, and its staking offerings.",
-      "pubDate": "2026-01-10T19:00:00.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "yesterday"
-    },
-    {
-      "title": "Polymarket faces first state-level cease-and-desist from Tennessee, weeks after US relaunch: report",
-      "link": "https://www.theblock.co/post/385002/polymarket-faces-first-state-level-cease-and-desist-from-tennessee-weeks-after-us-relaunch-report?utm_source=rss&amp;utm_medium=rss",
-      "description": "Tennessee's Sports Wagering Council sent cease-and-desist letters to Kalshi, Polymarket, and Crypto.com threatening potential criminal prosecution.",
-      "pubDate": "2026-01-10T18:54:26.000Z",
-      "source": "The Block",
-      "sourceKey": "theblock",
-      "category": "general",
-      "timeAgo": "yesterday"
-    },
-    {
-      "title": "Bitcoiners celebrate 17th anniversary of Hal Finney's Bitcoin post",
-      "link": "<![CDATA[https://cointelegraph.com/news/bitcoiners-celebrate-17th-anniversary-hal-finney-bitcoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Many in the Bitcoin community continue to speculate that cryptographer Hal Finney was Bitcoin's pseudonymous creator, Satoshi Nakamoto.",
-      "pubDate": "2026-01-10T18:37:35.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "yesterday"
     }
   ],
   "totalCount": 238,
@@ -511,7 +511,7 @@
     "Blockworks",
     "The Defiant"
   ],
-  "fetchedAt": "2026-01-12T09:11:18.924Z",
+  "fetchedAt": "2026-01-12T10:07:26.518Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -533,6 +533,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-12T09:11:14.000Z",
+  "cachedAt": "2026-01-12T10:07:21.000Z",
   "source": "failsafe-cache"
 }
