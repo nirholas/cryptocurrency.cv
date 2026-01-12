@@ -1,6 +1,56 @@
 {
   "articles": [
     {
+      "title": "Gold, Silver Hit New Highs as Bitcoin Trades Flat Ahead of Key Macroeconomic Events",
+      "link": "https://decrypt.co/354236/gold-silver-hit-new-highs-as-bitcoin-trades-flat-ahead-of-key-macroeconomic-events",
+      "description": "Precious metals hit new highs as political pressure on the Federal Reserve spurred a safe-haven rush ahead of critical U.S. inflation data.",
+      "pubDate": "2026-01-12T14:44:10.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "24m ago"
+    },
+    {
+      "title": "Strategy ($MSTR) Just Spent $1.25 Billion on 13,627 Bitcoin, Pushing BTC Holdings to 687,410",
+      "link": "https://bitcoinmagazine.com/featured/strategy-mstr-buys-13627-bitcoin",
+      "description": "Bitcoin Magazine\n\nStrategy ($MSTR) Just Spent $1.25 Billion on 13,627 Bitcoin, Pushing BTC Holdings to 687,410\nStrategy added 13,627 bitcoin for $1.25 billion last week, lifting its total holdings to ",
+      "pubDate": "2026-01-12T14:34:36.000Z",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
+      "category": "bitcoin",
+      "timeAgo": "33m ago"
+    },
+    {
+      "title": "Crypto custody company BitGo seeks up to $201 million in US IPO",
+      "link": "<![CDATA[https://cointelegraph.com/news/bitgo-custody-launches-ipo-201-million?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "BitGo is looking to raise as much as $201 million in an IPO, targeting a $1.96 billion valuation with over $90 billion in assets under custody and top US banks leading the deal.",
+      "pubDate": "2026-01-12T14:23:27.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "45m ago"
+    },
+    {
+      "title": "Strategy makes biggest Bitcoin purchase since July 2025, adds $1.25B in BTC",
+      "link": "<![CDATA[https://cointelegraph.com/news/strategy-adds-13627-bitcoin-1-25b-buy-2026?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Strategy added 13,627 Bitcoin in a $1.25 billion purchase last week, extending its lead as the world’s largest corporate BTC holder despite recent paper losses.",
+      "pubDate": "2026-01-12T14:14:41.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "53m ago"
+    },
+    {
+      "title": "CoinDesk 20 Performance Update: Solana (SOL) Gains 3.1% as Index Trades Flat",
+      "link": "https://www.coindesk.com/coindesk-indices/2026/01/12/coindesk-20-performance-update-solana-sol-gains-3-1-as-index-trades-flat",
+      "description": "Ethereum (ETH) joined Solana (SOL) as a top performer, rising 0.9% over the weekend.",
+      "pubDate": "2026-01-12T14:12:43.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "55m ago"
+    },
+    {
       "title": "Charles Hoskinson doubts CLARITY Act timeline, says Trump crypto czar should quit",
       "link": "<![CDATA[https://cointelegraph.com/news/charles-hoskinson-doubts-clarity-act-urges-david-sacks-exit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "Cardano founder Charles Hoskinson said the CLARITY Act may not pass this quarter, and criticized US crypto laws for favoring big banks over innovation.",
@@ -8,7 +58,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "9m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Bank of Italy models Ethereum risks if ETH value collapsed",
@@ -18,7 +68,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "22m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Standard Chartered said to plan crypto brokerage, trims ETH forecast",
@@ -28,7 +78,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "32m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Standard Chartered says &#8216;2026 will be the year of Ethereum&#8217; as bank backs ETH outperformance",
@@ -38,7 +88,7 @@
       "source": "The Block",
       "sourceKey": "theblock",
       "category": "general",
-      "timeAgo": "34m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "XRP stays pinned near $2.05 as the range tightens into a make-or-break zone",
@@ -48,7 +98,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "40m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Morning Minute: a16z Raises $15B, Targets AI &amp;#038; Crypto",
@@ -58,7 +108,17 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "45m ago"
+      "timeAgo": "1h ago"
+    },
+    {
+      "title": "Vitalik Buterin lays out 'walkaway test' for a quantum safe Ethereum",
+      "link": "https://www.coindesk.com/tech/2026/01/12/vitalik-buterin-lays-out-walkaway-test-for-a-quantum-safe-ethereum",
+      "description": "Buterin emphasizes the importance of quantum resistance and scalability, aiming for the Ethereum blockchain to handle thousands of transactions per second.",
+      "pubDate": "2026-01-12T13:15:43.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "1h ago"
     },
     {
       "title": "Strategy makes largest bitcoin purchase since July, adds 13,627 BTC",
@@ -68,117 +128,18 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "56m ago"
-    },
-    {
-      "title": "&#8216;Big orange&#8217;: Michael Saylor&#8217;s Strategy buys another 13,627 bitcoin for $1.25 billion following MSCI indexing decision",
-      "link": "https://www.theblock.co/post/385084/michael-saylors-strategy-buys-more-bitcoin-following-dat-msci-decision?utm_source=rss&amp;utm_medium=rss",
-      "description": "Strategy's holdings account for more than 3% of the total 21 million bitcoin supply — worth around $62 billion.",
-      "pubDate": "2026-01-12T13:06:08.000Z",
-      "source": "The Block",
-      "sourceKey": "theblock",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Standard Chartered prepares crypto prime brokerage push: Bloomberg",
-      "link": "https://www.theblock.co/post/385093/standard-chartered-crypto-prime-brokerage?utm_source=rss&amp;utm_medium=rss",
-      "description": "Standard Chartered is reportedly preparing a crypto prime brokerage business to be housed within its SC Ventures unit.",
-      "pubDate": "2026-01-12T13:01:12.000Z",
-      "source": "The Block",
-      "sourceKey": "theblock",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "VelaFi raises $20 million in Series B to expand stablecoin payments infrastructure",
-      "link": "https://www.coindesk.com/business/2026/01/12/velafi-raises-usd20-million-in-series-b-to-expand-stablecoin-payments-infrastructure",
-      "description": "The LatAm-based company said the funding will support expansion across the U.S. and Asia.",
-      "pubDate": "2026-01-12T13:00:00.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Here’s what happened in crypto today",
-      "link": "<![CDATA[https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-      "pubDate": "2026-01-12T12:57:35.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Tether freezes $182 million in USDT stablecoin across five Tron blockchain wallets",
-      "link": "https://www.coindesk.com/markets/2026/01/12/tether-freezes-usd182-million-in-usdt-stablecoin-across-five-tron-blockchain-wallets",
-      "description": "The freezes were part of Tether's policy to comply with U.S. Treasury sanctions and were executed in a coordinated manner.",
-      "pubDate": "2026-01-12T12:46:38.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "BNB slides to $900 as traders look to havens",
-      "link": "https://www.coindesk.com/markets/2026/01/12/bnb-slides-to-usd900-as-traders-look-to-havens",
-      "description": "The token's price action shows signs of indecision, with a tight trading range and fading selling pressure.",
-      "pubDate": "2026-01-12T12:46:25.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "What is Crypto.com?",
-      "link": "https://www.theblock.co/learn/384949/what-is-crypto-com?utm_source=rss&amp;utm_medium=rss",
-      "description": "Crypto.com is a popular centralized crypto exchange that is also tied to the multi-layer Cronos ecosystem and the CRO token.",
-      "pubDate": "2026-01-12T12:33:10.000Z",
-      "source": "The Block",
-      "sourceKey": "theblock",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Quantum computing threatens the $2 trillion Bitcoin network. BTQ Technologies says it has a defense.",
-      "link": "https://www.coindesk.com/tech/2026/01/12/quantum-computing-threatens-the-usd2-trillion-bitcoin-network-btq-technologies-says-it-has-a-defense",
-      "description": "Post-quantum cryptography specialist BTQ Technologies has introduced ‘Bitcoin Quantum,’ a permissionless fork and testnet of the largest cryptocurrency.",
-      "pubDate": "2026-01-12T12:30:00.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Seventy economists urge EU to ‘let the public interest prevail’ on digital euro",
-      "link": "<![CDATA[https://cointelegraph.com/news/70-economists-eu-lawmakers-digital-euro?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Economists urge EU lawmakers to back a public digital euro, warning that private stablecoins and foreign payment companies threaten Europe’s monetary sovereignty.",
-      "pubDate": "2026-01-12T12:29:10.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Bitcoin fails haven test as Justice Dept. subpoenas Powell: Crypto Daybook Americas",
-      "link": "https://www.coindesk.com/daybook-us/2026/01/12/bitcoin-fails-haven-test-as-justice-dept-subpoenas-powell-crypto-daybook-americas",
-      "description": "Your day-ahead look for Jan. 12, 2026",
-      "pubDate": "2026-01-12T12:15:16.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
       "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 13,
   "sources": [
+    "Decrypt",
+    "Bitcoin Magazine",
     "CoinTelegraph",
-    "The Block",
     "CoinDesk",
-    "Decrypt"
+    "The Block"
   ],
-  "fetchedAt": "2026-01-12T14:08:54.628Z",
+  "fetchedAt": "2026-01-12T15:08:28.591Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -200,6 +161,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-12T14:08:42.000Z",
+  "cachedAt": "2026-01-12T15:08:11.000Z",
   "source": "failsafe-cache"
 }
