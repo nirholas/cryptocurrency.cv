@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "title": "Privacy tokens rally as XMR breaks all-time high",
+      "link": "https://www.coindesk.com/markets/2026/01/12/privacy-tokens-rally-as-xmr-breaks-all-time-high",
+      "description": "XMR, ZEC, SOL and other alts are rallying as BTC remains rangebound",
+      "pubDate": "2026-01-12T04:31:23.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "41m ago"
+    },
+    {
       "title": "Crypto YouTube views sink to 5-year lows, ‘it’s not just X’",
       "link": "<![CDATA[https://cointelegraph.com/news/crypto-youtube-viewership-sinks-2021-lows-as-retail-interest-evaporates?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "Crypto content viewership on YouTube has plunged over the past three months, signaling bear market conditions as retail interest in crypto continues to decline.",
@@ -8,7 +18,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "29m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Bitcoin Shrugs Off Powell Probe as DOJ Targets Fed Chair",
@@ -18,7 +28,17 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "46m ago"
+      "timeAgo": "1h ago"
+    },
+    {
+      "title": "Coinbase may reconsider support for US market structure bill: Bloomberg",
+      "link": "https://www.theblock.co/post/385028/coinbase-market-structure-bill?utm_source=rss&amp;utm_medium=rss",
+      "description": "Coinbase may withdraw its support from the market structure bill if it imposes broader limits on stablecoin rewards, Bloomberg reported.",
+      "pubDate": "2026-01-12T03:07:01.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "2h ago"
     },
     {
       "title": "Memecoins hit hardest in rough year that saw 11.6M tokens fail",
@@ -28,7 +48,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Fed’s Powell links DOJ probe to his defiance of Trump on rates",
@@ -38,7 +58,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Prediction markets downplay Powell exit risk despite DOJ probe: Asia Morning Briefing",
@@ -61,6 +81,16 @@
       "timeAgo": "2h ago"
     },
     {
+      "title": "The Funding: Why token buybacks are suddenly back in focus",
+      "link": "https://www.theblock.co/post/385023/the-funding-token-buybacks-crypto?utm_source=rss&amp;utm_medium=rss",
+      "description": "In this edition, we explore why token buybacks are back in the spotlight, when they work, and when teams should think twice.",
+      "pubDate": "2026-01-12T02:15:42.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "2h ago"
+    },
+    {
       "title": "X to roll out ‘Smart Cashtags’ for crypto, stocks next month",
       "link": "<![CDATA[https://cointelegraph.com/news/x-building-smart-cashtags-tracking-crypto-stock-prices?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "Smart Cashtags will enable users to track real-time price movements of crypto tokens and stocks, building on X’s long-term vision to become an Everything App.",
@@ -68,7 +98,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "Monero Sets New Record Price as Privacy Trade Re-Emerges",
@@ -78,7 +108,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "X Plans ‘Smart Cashtags’ to Link Crypto and Stock Tickers to Live Prices",
@@ -108,7 +138,17 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "7h ago"
+      "timeAgo": "8h ago"
+    },
+    {
+      "title": "UK committee chairs push for crypto political donations ban, adding pressure to Labour government",
+      "link": "https://www.theblock.co/post/385016/uk-committee-chairs-push-for-crypto-political-donations-ban-adding-pressure-to-labour-government?utm_source=rss&amp;utm_medium=rss",
+      "description": "Reform UK became the first UK political party to accept crypto donations in May 2025, though a £9m donation from a crypto investor was made in fiat.",
+      "pubDate": "2026-01-11T20:20:40.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "8h ago"
     },
     {
       "title": "India tightens KYC requirements for crypto user onboarding",
@@ -118,7 +158,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "8h ago"
+      "timeAgo": "9h ago"
     },
     {
       "title": "JPMorgan downplays stablecoin threat as local bankers warn of $6.6 trillion risk",
@@ -128,7 +168,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "9h ago"
+      "timeAgo": "10h ago"
     },
     {
       "title": "Elon Musks's X teases crypto-aware ‘smart cashtags’ just day after community backlash",
@@ -138,7 +178,17 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "10h ago"
+      "timeAgo": "11h ago"
+    },
+    {
+      "title": "Vitalik Buterin says decentralized stablecoins still face three unsolved problems",
+      "link": "https://www.theblock.co/post/385013/vitalik-buterin-says-decentralized-stablecoins-still-face-three-unsolved-problems?utm_source=rss&amp;utm_medium=rss",
+      "description": "Buterin suggested that long-term stablecoin sustainability may require independence from the dollar entirely, given the possibility of future debasement.",
+      "pubDate": "2026-01-11T16:56:04.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "12h ago"
     },
     {
       "title": "Ethereum treasury company BitMine crosses 1 million staked ETH milestone",
@@ -148,7 +198,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "11h ago"
+      "timeAgo": "12h ago"
     },
     {
       "title": "Monero's XMR hits $500 for the first time since 2021 as rival Zcash fumbles",
@@ -158,7 +208,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "12h ago"
+      "timeAgo": "13h ago"
     },
     {
       "title": "Walmart and Google bet on AI agents to reshape how people shop online",
@@ -168,7 +218,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "12h ago"
+      "timeAgo": "13h ago"
     },
     {
       "title": "As the market tanks, crypto’s new gold rush is…gold",
@@ -178,7 +228,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "13h ago"
+      "timeAgo": "14h ago"
     },
     {
       "title": "Bitcoin bear market still in play as power law sees $65K 'do-or-die' price",
@@ -188,7 +238,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "13h ago"
+      "timeAgo": "14h ago"
     },
     {
       "title": "Ethereum co-founder Vitalik Buterin warns decentralized stablecoins still have deep flaws",
@@ -208,7 +258,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "15h ago"
+      "timeAgo": "16h ago"
     },
     {
       "title": "Russians ask government hotlines whether pensions are paid in crypto",
@@ -238,7 +288,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "21h ago"
+      "timeAgo": "22h ago"
     },
     {
       "title": "Samson Mow tips Elon Musk will ‘go hard’ into Bitcoin in 2026",
@@ -449,54 +499,6 @@
       "sourceKey": "cointelegraph",
       "category": "general",
       "timeAgo": "2d ago"
-    },
-    {
-      "title": "A16z Crypto Shares Three Crypto Predictions for 2026",
-      "link": "https://thedefiant.io/news/research-and-opinion/a16z-crypto-shares-three-crypto-predictions-for-2026",
-      "pubDate": "2026-01-10T00:48:42.000Z",
-      "source": "The Defiant",
-      "sourceKey": "defiant",
-      "category": "defi",
-      "timeAgo": "2d ago"
-    },
-    {
-      "title": "Stablecoin card adoption will be a 'big theme' of 2026: Dragonfly exec",
-      "link": "<![CDATA[https://cointelegraph.com/news/stablecoin-card-adoption-to-take-off-in-2026-dragonfly?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Crypto venture capitalists have tipped stablecoin card adoption to take off in 2026 after fintech startup Rain secured $250 million in funding to push stablecoin payments.",
-      "pubDate": "2026-01-10T00:46:33.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "2d ago"
-    },
-    {
-      "title": "Memecoin Market Cratered More Than 60% in 2025: Report",
-      "link": "https://thedefiant.io/news/research-and-opinion/memecoin-market-cratered-more-than-60-in-2025-report",
-      "pubDate": "2026-01-10T00:32:50.000Z",
-      "source": "The Defiant",
-      "sourceKey": "defiant",
-      "category": "defi",
-      "timeAgo": "2d ago"
-    },
-    {
-      "title": "Bitcoin tests key support as bulls reset to prepare for futures-led rally to $101.5K",
-      "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-tests-key-support-as-bulls-reset-to-prepare-for-futures-led-rally-to-dollar101-5k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Bitcoin traders’ risk sentiment turned bullish, with the proof being in this week’s futures-led advance to $95,000. Will bulls make another attempt after retesting a key underlying support level?",
-      "pubDate": "2026-01-09T22:09:21.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "2d ago"
-    },
-    {
-      "title": "Bitcoin Whales Keep Buying as 100+ BTC Addresses Set New Record",
-      "link": "https://bitcoinmagazine.com/news/bitcoin-whales-keep-buying-bitcoin",
-      "description": "Bitcoin Magazine\n\nBitcoin Whales Keep Buying as 100+ BTC Addresses Set New Record\nBitcoin whale accumulation hit a record high as 100+ BTC addresses surged, even as bitcoin consolidates near $90,000 a",
-      "pubDate": "2026-01-09T21:46:31.000Z",
-      "source": "Bitcoin Magazine",
-      "sourceKey": "bitcoinmagazine",
-      "category": "bitcoin",
-      "timeAgo": "2d ago"
     }
   ],
   "totalCount": 238,
@@ -509,7 +511,7 @@
     "Blockworks",
     "The Defiant"
   ],
-  "fetchedAt": "2026-01-12T04:25:32.745Z",
+  "fetchedAt": "2026-01-12T05:12:57.219Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -531,6 +533,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-12T04:25:32.000Z",
+  "cachedAt": "2026-01-12T05:12:56.000Z",
   "source": "failsafe-cache"
 }

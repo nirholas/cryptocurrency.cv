@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "title": "Privacy tokens rally as XMR breaks all-time high",
+      "link": "https://www.coindesk.com/markets/2026/01/12/privacy-tokens-rally-as-xmr-breaks-all-time-high",
+      "description": "XMR, ZEC, SOL and other alts are rallying as BTC remains rangebound",
+      "pubDate": "2026-01-12T04:31:23.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "41m ago"
+    },
+    {
       "title": "Bitcoin Shrugs Off Powell Probe as DOJ Targets Fed Chair",
       "link": "https://decrypt.co/354224/bitcoin-powell-probe-doj-fed-chair",
       "description": "Experts note Bitcoin’s hedge narrative could strengthen if ​​Fed Chair Jerome Powell’s criminal investigation is successful.",
@@ -8,7 +18,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "46m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Here’s what happened in crypto today",
@@ -28,7 +38,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "7h ago"
+      "timeAgo": "8h ago"
     },
     {
       "title": "Bitcoin bear market still in play as power law sees $65K 'do-or-die' price",
@@ -38,7 +48,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "13h ago"
+      "timeAgo": "14h ago"
     },
     {
       "title": "Samson Mow tips Elon Musk will ‘go hard’ into Bitcoin in 2026",
@@ -281,16 +291,6 @@
       "timeAgo": "3d ago"
     },
     {
-      "title": "Cathie Wood says US gov&#8217;t may &#8216;start buying&#8217; to stock national bitcoin reserve",
-      "link": "https://www.theblock.co/post/384854/cathie-wood-us-national-bitcoin-reserve?utm_source=rss&amp;utm_medium=rss",
-      "description": "The founder of ARK Invest said crypto was 'part of the reason [Trump] won the presidency,' and could be a politically salient midterm topic.",
-      "pubDate": "2026-01-09T00:39:09.000Z",
-      "source": "The Block",
-      "sourceKey": "theblock",
-      "category": "general",
-      "timeAgo": "3d ago"
-    },
-    {
       "title": "Trump Says He Won’t Pardon Sam Bankman-Fried",
       "link": "https://bitcoinmagazine.com/news/trump-says-he-wont-pardon-bankman-fried",
       "description": "Bitcoin Magazine\n\nTrump Says He Won’t Pardon Sam Bankman-Fried\nPresident Donald Trump said he will not pardon former FTX CEO Sam Bankman-Fried, rejecting clemency for the convicted crypto executive.\nT",
@@ -303,14 +303,14 @@
   ],
   "totalCount": 66,
   "sources": [
+    "CoinDesk",
     "Decrypt",
     "CoinTelegraph",
     "The Block",
-    "CoinDesk",
     "Bitcoin Magazine",
     "The Defiant"
   ],
-  "fetchedAt": "2026-01-12T04:25:33.134Z",
+  "fetchedAt": "2026-01-12T05:12:57.713Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -332,6 +332,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-12T04:25:32.000Z",
+  "cachedAt": "2026-01-12T05:12:56.000Z",
   "source": "failsafe-cache"
 }

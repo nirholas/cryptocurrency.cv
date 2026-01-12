@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "title": "Privacy tokens rally as XMR breaks all-time high",
+      "link": "https://www.coindesk.com/markets/2026/01/12/privacy-tokens-rally-as-xmr-breaks-all-time-high",
+      "description": "XMR, ZEC, SOL and other alts are rallying as BTC remains rangebound",
+      "pubDate": "2026-01-12T04:31:23.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "41m ago"
+    },
+    {
       "title": "Crypto YouTube views sink to 5-year lows, ‘it’s not just X’",
       "link": "<![CDATA[https://cointelegraph.com/news/crypto-youtube-viewership-sinks-2021-lows-as-retail-interest-evaporates?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "Crypto content viewership on YouTube has plunged over the past three months, signaling bear market conditions as retail interest in crypto continues to decline.",
@@ -8,7 +18,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "29m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Bitcoin Shrugs Off Powell Probe as DOJ Targets Fed Chair",
@@ -18,35 +28,16 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "46m ago"
-    },
-    {
-      "title": "Memecoins hit hardest in rough year that saw 11.6M tokens fail",
-      "link": "<![CDATA[https://cointelegraph.com/news/crypto-project-failures-record-2025-memecoin-turbulence?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Memecoin launchpads such as pump.fun flooded the market in 2025 with millions of “low effort” coins, leading to a record number of crypto token failures.",
-      "pubDate": "2026-01-12T02:49:01.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Fed’s Powell links DOJ probe to his defiance of Trump on rates",
-      "link": "<![CDATA[https://cointelegraph.com/news/fed-powell-says-doj-probe-due-defying-trump-interest-rates?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Federal Reserve Chair Jerome Powell says his refusal to drop interest rates led to Donald Trump opening a criminal investigation over renovations to the central bank’s headquarters.",
-      "pubDate": "2026-01-12T02:41:34.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
       "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 4,
+  "totalCount": 3,
   "sources": [
+    "CoinDesk",
     "CoinTelegraph",
     "Decrypt"
   ],
-  "fetchedAt": "2026-01-12T04:25:40.015Z",
+  "fetchedAt": "2026-01-12T05:13:03.458Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -68,6 +59,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-12T04:25:32.000Z",
+  "cachedAt": "2026-01-12T05:12:56.000Z",
   "source": "failsafe-cache"
 }
