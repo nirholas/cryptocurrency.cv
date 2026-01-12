@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "title": "Fed’s Powell links DOJ probe to his defiance of Trump on rates",
+      "link": "<![CDATA[https://cointelegraph.com/news/fed-powell-says-doj-probe-due-defying-trump-interest-rates?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Federal Reserve Chair Jerome Powell says his refusal to drop interest rates led to Donald Trump opening a criminal investigation over renovations to the central bank’s headquarters.",
+      "pubDate": "2026-01-12T02:41:34.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "6m ago"
+    },
+    {
       "title": "Monero Sets New Record Price as Privacy Trade Re-Emerges",
       "link": "https://decrypt.co/354222/monero-sets-new-record-price-privacy-trade-re-emerges",
       "description": "Monero’s push to a record high follows renewed interest in privacy-focused coins, even as uneven liquidity complicates price signals.",
@@ -8,7 +18,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Here’s what happened in crypto today",
@@ -18,7 +28,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "JPMorgan downplays stablecoin threat as local bankers warn of $6.6 trillion risk",
@@ -28,7 +38,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "As the market tanks, crypto’s new gold rush is…gold",
@@ -38,7 +48,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "10h ago"
+      "timeAgo": "11h ago"
     },
     {
       "title": "Ethereum co-founder Vitalik Buterin warns decentralized stablecoins still have deep flaws",
@@ -48,7 +58,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "12h ago"
+      "timeAgo": "13h ago"
     },
     {
       "title": "Robinhood explains building an Ethereum layer-2: 'We wanted the security from Ethereum'",
@@ -135,16 +145,6 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "2d ago"
-    },
-    {
-      "title": "US lawmaker’s bill targets political prediction bets after Maduro wager",
-      "link": "<![CDATA[https://cointelegraph.com/news/ritchie-torres-bill-elected-officials-prediction-markets-bets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "The bill came after a Polymarket user netted more than $400,000 on a contract related to the removal of then-Venezuelan President Nicolás Maduro, fueling concerns about insider trading.",
-      "pubDate": "2026-01-09T19:55:31.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
       "timeAgo": "2d ago"
     },
     {
@@ -293,14 +293,14 @@
   ],
   "totalCount": 122,
   "sources": [
-    "Decrypt",
     "CoinTelegraph",
+    "Decrypt",
     "CoinDesk",
     "The Defiant",
     "The Block",
     "Bitcoin Magazine"
   ],
-  "fetchedAt": "2026-01-12T01:35:26.964Z",
+  "fetchedAt": "2026-01-12T02:48:30.231Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -322,6 +322,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-12T01:35:20.000Z",
+  "cachedAt": "2026-01-12T02:48:23.000Z",
   "source": "failsafe-cache"
 }
