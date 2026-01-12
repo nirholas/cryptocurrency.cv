@@ -1,14 +1,94 @@
 {
   "articles": [
     {
-      "title": "Dubai free zone shifts crypto token vetting to licensed firms",
+      "title": "Strategy makes largest bitcoin purchase since July, adds 13,627 BTC",
+      "link": "https://www.coindesk.com/markets/2026/01/12/strategy-makes-largest-bitcoin-purchase-since-july-adds-13-627-btc",
+      "description": "Strategy purchased 13,267 BTC for $1.25 billion via the use of common stock and it's perpetual preferred equity STRC.",
+      "pubDate": "2026-01-12T13:12:07.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "7m ago"
+    },
+    {
+      "title": "VelaFi raises $20 million in Series B to expand stablecoin payments infrastructure",
+      "link": "https://www.coindesk.com/business/2026/01/12/velafi-raises-usd20-million-in-series-b-to-expand-stablecoin-payments-infrastructure",
+      "description": "The LatAm-based company said the funding will support expansion across the U.S. and Asia.",
+      "pubDate": "2026-01-12T13:00:00.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "19m ago"
+    },
+    {
+      "title": "Here’s what happened in crypto today",
+      "link": "<![CDATA[https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+      "pubDate": "2026-01-12T12:57:35.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "21m ago"
+    },
+    {
+      "title": "Tether freezes $182 million in USDT stablecoin across five Tron blockchain wallets",
+      "link": "https://www.coindesk.com/markets/2026/01/12/tether-freezes-usd182-million-in-usdt-stablecoin-across-five-tron-blockchain-wallets",
+      "description": "The freezes were part of Tether's policy to comply with U.S. Treasury sanctions and were executed in a coordinated manner.",
+      "pubDate": "2026-01-12T12:46:38.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "32m ago"
+    },
+    {
+      "title": "BNB slides to $900 as traders look to havens",
+      "link": "https://www.coindesk.com/markets/2026/01/12/bnb-slides-to-usd900-as-traders-look-to-havens",
+      "description": "The token's price action shows signs of indecision, with a tight trading range and fading selling pressure.",
+      "pubDate": "2026-01-12T12:46:25.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "32m ago"
+    },
+    {
+      "title": "Quantum computing threatens the $2 trillion Bitcoin network. BTQ Technologies says it has a defense.",
+      "link": "https://www.coindesk.com/tech/2026/01/12/quantum-computing-threatens-the-usd2-trillion-bitcoin-network-btq-technologies-says-it-has-a-defense",
+      "description": "Post-quantum cryptography specialist BTQ Technologies has introduced ‘Bitcoin Quantum,’ a permissionless fork and testnet of the largest cryptocurrency.",
+      "pubDate": "2026-01-12T12:30:00.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "49m ago"
+    },
+    {
+      "title": "Seventy economists urge EU to ‘let the public interest prevail’ on digital euro",
+      "link": "<![CDATA[https://cointelegraph.com/news/70-economists-eu-lawmakers-digital-euro?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Economists urge EU lawmakers to back a public digital euro, warning that private stablecoins and foreign payment companies threaten Europe’s monetary sovereignty.",
+      "pubDate": "2026-01-12T12:29:10.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "50m ago"
+    },
+    {
+      "title": "Bitcoin fails haven test as Justice Dept. subpoenas Powell: Crypto Daybook Americas",
+      "link": "https://www.coindesk.com/daybook-us/2026/01/12/bitcoin-fails-haven-test-as-justice-dept-subpoenas-powell-crypto-daybook-americas",
+      "description": "Your day-ahead look for Jan. 12, 2026",
+      "pubDate": "2026-01-12T12:15:16.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "1h ago"
+    },
+    {
+      "title": "Dubai free zone shifts crypto token vetting to licensed companies",
       "link": "<![CDATA[https://cointelegraph.com/news/dubai-difc-dfsa-crypto-token-suitability-rule-change?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "DFSA’s new company-led suitability model and AML expectations would make it difficult for licensed firms to justify supporting privacy-focused assets.",
+      "description": "DFSA’s new company-led suitability model and AML expectations may make it difficult for licensed entities to justify supporting privacy-focused assets.",
       "pubDate": "2026-01-12T12:00:59.000Z",
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "9m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Bitcoin pares Powell-fueled spike as privacy coins outperform: Crypto Markets Today",
@@ -18,45 +98,15 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "30m ago"
-    },
-    {
-      "title": "Crypto funds bleed $454M in outflows as Fed rate-cut hopes fade",
-      "link": "<![CDATA[https://cointelegraph.com/news/crypto-etp-454-million-outflows-fed-rate-cut-hopes-fade?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Bitcoin led with $405 million of outflows last week, with the US shedding $569 million, as several altcoins and European funds posted modest inflows.",
-      "pubDate": "2026-01-12T10:59:30.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "UK lawmakers push to ban crypto political donations over foreign interference fears",
-      "link": "https://www.coindesk.com/policy/2026/01/12/uk-lawmakers-push-to-ban-crypto-political-donations-over-foreign-interference-fears",
-      "description": "They argue that cryptocurrency's opacity and traceability issues make it a threat to democratic integrity, citing an intelligence report election interference.",
-      "pubDate": "2026-01-12T10:42:24.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "OKX founder defends asset freezes after user admits buying KYC accounts",
-      "link": "<![CDATA[https://cointelegraph.com/news/okx-founder-account-freeze-policy-kyc-accounts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Star Xu defended freezing $40,000 in stablecoins after a user admitted buying verified accounts, with the exchange citing strict KYC and AML obligations.",
-      "pubDate": "2026-01-12T10:37:42.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
       "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 5,
+  "totalCount": 10,
   "sources": [
-    "CoinTelegraph",
-    "CoinDesk"
+    "CoinDesk",
+    "CoinTelegraph"
   ],
-  "fetchedAt": "2026-01-12T12:10:35.778Z",
+  "fetchedAt": "2026-01-12T13:19:13.857Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -78,6 +128,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-12T12:10:24.000Z",
+  "cachedAt": "2026-01-12T13:18:56.000Z",
   "source": "failsafe-cache"
 }

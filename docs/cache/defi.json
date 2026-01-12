@@ -1,6 +1,26 @@
 {
   "articles": [
     {
+      "title": "Here’s what happened in crypto today",
+      "link": "<![CDATA[https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+      "pubDate": "2026-01-12T12:57:35.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "21m ago"
+    },
+    {
+      "title": "Seventy economists urge EU to ‘let the public interest prevail’ on digital euro",
+      "link": "<![CDATA[https://cointelegraph.com/news/70-economists-eu-lawmakers-digital-euro?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Economists urge EU lawmakers to back a public digital euro, warning that private stablecoins and foreign payment companies threaten Europe’s monetary sovereignty.",
+      "pubDate": "2026-01-12T12:29:10.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "49m ago"
+    },
+    {
       "title": "UK lawmakers push to ban crypto political donations over foreign interference fears",
       "link": "https://www.coindesk.com/policy/2026/01/12/uk-lawmakers-push-to-ban-crypto-political-donations-over-foreign-interference-fears",
       "description": "They argue that cryptocurrency's opacity and traceability issues make it a threat to democratic integrity, citing an intelligence report election interference.",
@@ -8,7 +28,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "1h ago"
+      "timeAgo": "2h ago"
     },
     {
       "title": "Veteran trader Peter Brandt hints at silver-like bull run in Monero",
@@ -18,7 +38,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "2h ago"
+      "timeAgo": "3h ago"
     },
     {
       "title": "​​Top UK Labour lawmakers push to ban political donations made in crypto",
@@ -28,7 +48,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Monero Sets New Record Price as Privacy Trade Re-Emerges",
@@ -38,17 +58,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "11h ago"
-    },
-    {
-      "title": "Here’s what happened in crypto today",
-      "link": "<![CDATA[https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-      "pubDate": "2026-01-11T21:14:22.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "14h ago"
+      "timeAgo": "12h ago"
     },
     {
       "title": "JPMorgan downplays stablecoin threat as local bankers warn of $6.6 trillion risk",
@@ -58,7 +68,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "17h ago"
+      "timeAgo": "18h ago"
     },
     {
       "title": "Ethereum treasury company BitMine crosses 1 million staked ETH milestone",
@@ -68,7 +78,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "19h ago"
+      "timeAgo": "20h ago"
     },
     {
       "title": "As the market tanks, crypto’s new gold rush is…gold",
@@ -78,7 +88,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "21h ago"
+      "timeAgo": "22h ago"
     },
     {
       "title": "Ethereum co-founder Vitalik Buterin warns decentralized stablecoins still have deep flaws",
@@ -88,27 +98,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "22h ago"
-    },
-    {
-      "title": "Robinhood explains building an Ethereum layer-2: 'We wanted the security from Ethereum'",
-      "link": "https://www.coindesk.com/business/2026/01/10/robinhood-explains-building-an-ethereum-layer-2-we-wanted-the-security-from-ethereum",
-      "description": "CoinDesk sat down with Robinhood’s head of crypto, Johann Kerbrat, to get an update on its upcoming layer-2 network, its tokenized stocks program, and its staking offerings.",
-      "pubDate": "2026-01-10T19:00:00.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "yesterday"
-    },
-    {
-      "title": "The Senate moves toward a market structure vote: State of Crypto",
-      "link": "https://www.coindesk.com/policy/2026/01/10/the-senate-moves-toward-a-market-structure-vote-state-of-crypto",
-      "description": "Lawmakers will (finally) vote on a market structure bill next week.",
-      "pubDate": "2026-01-10T17:00:00.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "yesterday"
+      "timeAgo": "23h ago"
     },
     {
       "title": "A16z Crypto Shares Three Crypto Predictions for 2026",
@@ -286,17 +276,26 @@
       "sourceKey": "defiant",
       "category": "defi",
       "timeAgo": "4d ago"
+    },
+    {
+      "title": "Crypto Markets Edge Lower as Investors Weigh Macro Data",
+      "link": "https://thedefiant.io/news/markets/crypto-markets-edge-lower-as-investors-weigh-macro-data",
+      "pubDate": "2026-01-07T19:27:24.000Z",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
+      "category": "defi",
+      "timeAgo": "4d ago"
     }
   ],
-  "totalCount": 118,
+  "totalCount": 117,
   "sources": [
-    "CoinDesk",
     "CoinTelegraph",
+    "CoinDesk",
     "Decrypt",
     "The Defiant",
     "Bitcoin Magazine"
   ],
-  "fetchedAt": "2026-01-12T12:10:25.742Z",
+  "fetchedAt": "2026-01-12T13:19:02.944Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -318,6 +317,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-12T12:10:24.000Z",
+  "cachedAt": "2026-01-12T13:18:56.000Z",
   "source": "failsafe-cache"
 }
