@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "title": "Bitcoin Shrugs Off Powell Probe as DOJ Targets Fed Chair",
+      "link": "https://decrypt.co/354224/bitcoin-powell-probe-doj-fed-chair",
+      "description": "Experts note Bitcoin’s hedge narrative could strengthen if ​​Fed Chair Jerome Powell’s criminal investigation is successful.",
+      "pubDate": "2026-01-12T03:39:25.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "46m ago"
+    },
+    {
       "title": "Here’s what happened in crypto today",
       "link": "<![CDATA[https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
@@ -8,7 +18,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "ETH-BTC ratio bottomed in April, mirrors 2019 cycle: Analyst",
@@ -18,7 +28,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Bitcoin bear market still in play as power law sees $65K 'do-or-die' price",
@@ -28,7 +38,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "12h ago"
+      "timeAgo": "13h ago"
     },
     {
       "title": "Samson Mow tips Elon Musk will ‘go hard’ into Bitcoin in 2026",
@@ -38,7 +48,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "21h ago"
+      "timeAgo": "22h ago"
     },
     {
       "title": "Bitcoin mining difficulty falls in first adjustment of 2026",
@@ -138,16 +148,6 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "2d ago"
-    },
-    {
-      "title": "Wall Street’s crypto debate is over as banks go all-in on BTC, stablecoins, tokenized cash",
-      "link": "<![CDATA[https://cointelegraph.com/news/wall-street-banks-crypto-etfs-tokenized-cash?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Big banks aren’t debating crypto anymore — they’re building it. From tokenized cash to ETFs, Wall Street is quietly going onchain.",
-      "pubDate": "2026-01-09T21:00:00.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
       "timeAgo": "2d ago"
     },
     {
@@ -278,7 +278,17 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "2d ago"
+      "timeAgo": "3d ago"
+    },
+    {
+      "title": "Cathie Wood says US gov&#8217;t may &#8216;start buying&#8217; to stock national bitcoin reserve",
+      "link": "https://www.theblock.co/post/384854/cathie-wood-us-national-bitcoin-reserve?utm_source=rss&amp;utm_medium=rss",
+      "description": "The founder of ARK Invest said crypto was 'part of the reason [Trump] won the presidency,' and could be a politically salient midterm topic.",
+      "pubDate": "2026-01-09T00:39:09.000Z",
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "category": "general",
+      "timeAgo": "3d ago"
     },
     {
       "title": "Trump Says He Won’t Pardon Sam Bankman-Fried",
@@ -289,28 +299,18 @@
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
       "timeAgo": "3d ago"
-    },
-    {
-      "title": "Myriad Moves: Traders Bet on Zcash Rebound, But Aren&#39;t Buying Another Bitcoin All-Time High",
-      "link": "https://decrypt.co/354044/myriad-moves-traders-bet-zcash-rebound-arent-buying-bitcoin-high",
-      "description": "Top markets on Myriad this week include predictions on a new Bitcoin all-time high, Ethereum’s next move, and whether Zcash will bounce back.",
-      "pubDate": "2026-01-08T21:17:38.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "3d ago"
     }
   ],
-  "totalCount": 65,
+  "totalCount": 66,
   "sources": [
+    "Decrypt",
     "CoinTelegraph",
     "The Block",
     "CoinDesk",
     "Bitcoin Magazine",
-    "Decrypt",
     "The Defiant"
   ],
-  "fetchedAt": "2026-01-12T03:36:52.058Z",
+  "fetchedAt": "2026-01-12T04:25:33.134Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -332,6 +332,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-12T03:36:43.000Z",
+  "cachedAt": "2026-01-12T04:25:32.000Z",
   "source": "failsafe-cache"
 }

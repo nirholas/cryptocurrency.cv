@@ -1,14 +1,24 @@
 {
   "articles": [
     {
-      "title": "Coinbase may reconsider support for US market structure bill: Bloomberg",
-      "link": "https://www.theblock.co/post/385028/coinbase-market-structure-bill?utm_source=rss&amp;utm_medium=rss",
-      "description": "Coinbase may withdraw its support from the market structure bill if it imposes broader limits on stablecoin rewards, Bloomberg reported.",
-      "pubDate": "2026-01-12T03:07:01.000Z",
-      "source": "The Block",
-      "sourceKey": "theblock",
+      "title": "Crypto YouTube views sink to 5-year lows, ‘it’s not just X’",
+      "link": "<![CDATA[https://cointelegraph.com/news/crypto-youtube-viewership-sinks-2021-lows-as-retail-interest-evaporates?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Crypto content viewership on YouTube has plunged over the past three months, signaling bear market conditions as retail interest in crypto continues to decline.",
+      "pubDate": "2026-01-12T03:56:22.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
       "category": "general",
       "timeAgo": "29m ago"
+    },
+    {
+      "title": "Bitcoin Shrugs Off Powell Probe as DOJ Targets Fed Chair",
+      "link": "https://decrypt.co/354224/bitcoin-powell-probe-doj-fed-chair",
+      "description": "Experts note Bitcoin’s hedge narrative could strengthen if ​​Fed Chair Jerome Powell’s criminal investigation is successful.",
+      "pubDate": "2026-01-12T03:39:25.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "46m ago"
     },
     {
       "title": "Memecoins hit hardest in rough year that saw 11.6M tokens fail",
@@ -18,7 +28,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "47m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Fed’s Powell links DOJ probe to his defiance of Trump on rates",
@@ -28,46 +38,15 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "55m ago"
-    },
-    {
-      "title": "Prediction markets downplay Powell exit risk despite DOJ probe: Asia Morning Briefing",
-      "link": "https://www.coindesk.com/markets/2026/01/12/prediction-markets-downplay-powell-exit-risk-despite-doj-probe-asia-morning-briefing",
-      "description": "Traders on Polymarket and Kalshi are shrugging off the idea that a criminal investigation into the chair of the Federal Reserve would have him removed from his role early.",
-      "pubDate": "2026-01-12T02:18:14.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Coinbase could pull CLARITY Act support over stablecoin rewards ban",
-      "link": "<![CDATA[https://cointelegraph.com/news/coinbase-could-pull-clarity-act-support-over-stablecoin-rewards-ban?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "The crypto-focused markets structure bill is set to be discussed at a markup session on Thursday. On the line is the ability for stablecoin issuers to offer rewards via crypto exchanges.",
-      "pubDate": "2026-01-12T02:16:28.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "The Funding: Why token buybacks are suddenly back in focus",
-      "link": "https://www.theblock.co/post/385023/the-funding-token-buybacks-crypto?utm_source=rss&amp;utm_medium=rss",
-      "description": "In this edition, we explore why token buybacks are back in the spotlight, when they work, and when teams should think twice.",
-      "pubDate": "2026-01-12T02:15:42.000Z",
-      "source": "The Block",
-      "sourceKey": "theblock",
-      "category": "general",
       "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 6,
+  "totalCount": 4,
   "sources": [
-    "The Block",
     "CoinTelegraph",
-    "CoinDesk"
+    "Decrypt"
   ],
-  "fetchedAt": "2026-01-12T03:37:00.482Z",
+  "fetchedAt": "2026-01-12T04:25:40.015Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -89,6 +68,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-12T03:36:43.000Z",
+  "cachedAt": "2026-01-12T04:25:32.000Z",
   "source": "failsafe-cache"
 }
