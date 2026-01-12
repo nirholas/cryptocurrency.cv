@@ -1,13 +1,32 @@
 {
   "articles": [
     {
+      "title": "Dubai Bans Privacy Tokens on Regulated Exchanges",
+      "link": "https://thedefiant.io/news/regulation/dubai-bans-privacy-tokens-on-regulated-exchanges",
+      "pubDate": "2026-01-12T19:24:20.000Z",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
+      "category": "defi",
+      "timeAgo": "42m ago"
+    },
+    {
+      "title": "Staking goes mainstream: what 2026 could look like for ether investors",
+      "link": "https://www.coindesk.com/markets/2026/01/07/staking-goes-mainstream-what-2026-could-look-like-for-ether-investors",
+      "description": "From fully staked ETFs to customizable institutional vaults, staking is evolving from a secondary consideration into a foundational pillar of Ethereum’s market structure.",
+      "pubDate": "2026-01-12T19:13:50.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "53m ago"
+    },
+    {
       "title": "Crypto Markets Stagnate as Gold and Silver Rally to New Highs",
       "link": "https://thedefiant.io/news/markets/crypto-markets-flat-metals-rally-jan-12-2026",
       "pubDate": "2026-01-12T18:10:17.000Z",
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "57m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "World Liberty Financial rolls out lending platform for its USD1 stablecoin",
@@ -17,7 +36,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "2h ago"
+      "timeAgo": "3h ago"
     },
     {
       "title": "Wall Street broker Benchmark says this could be a pivotal week for digital assets",
@@ -27,7 +46,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "Trump-linked World Liberty brings $3.4B stablecoin into crypto lending markets",
@@ -37,7 +56,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "Buterin Calls for Ethereum Updates to Ensure Blockchain Outlasts Its Developers",
@@ -46,7 +65,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "3h ago"
+      "timeAgo": "4h ago"
     },
     {
       "title": "CoinDesk 20 Performance Update: Solana (SOL) Gains 3.1% as Index Trades Flat",
@@ -56,17 +75,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "4h ago"
-    },
-    {
-      "title": "&#8216;Big orange&#8217;: Michael Saylor&#8217;s Strategy buys another 13,627 bitcoin for $1.25 billion following MSCI indexing decision",
-      "link": "https://www.theblock.co/post/385084/michael-saylors-strategy-buys-more-bitcoin-following-dat-msci-decision?utm_source=rss&amp;utm_medium=rss",
-      "description": "Strategy's holdings account for more than 3% of the total 21 million bitcoin supply — worth around $62 billion.",
-      "pubDate": "2026-01-12T13:06:08.000Z",
-      "source": "The Block",
-      "sourceKey": "theblock",
-      "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Here’s what happened in crypto today",
@@ -76,7 +85,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "6h ago"
+      "timeAgo": "7h ago"
     },
     {
       "title": "Seventy economists urge EU to ‘let the public interest prevail’ on digital euro",
@@ -85,16 +94,6 @@
       "pubDate": "2026-01-12T12:29:10.000Z",
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "6h ago"
-    },
-    {
-      "title": "Vitalik Buterin outlines conditions for a self-sustaining, quantum-safe Ethereum",
-      "link": "https://www.theblock.co/post/385074/vitalik-buterin-outlines-conditions-for-ossifiable-quantum-safe-ethereum?utm_source=rss&amp;utm_medium=rss",
-      "description": "Buterin outlined a framework for making Ethereum’s base layer ossifiable, emphasizing quantum resistance and protocol independence.",
-      "pubDate": "2026-01-12T11:56:11.000Z",
-      "source": "The Block",
-      "sourceKey": "theblock",
       "category": "general",
       "timeAgo": "7h ago"
     },
@@ -106,7 +105,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "8h ago"
+      "timeAgo": "9h ago"
     },
     {
       "title": "Veteran trader Peter Brandt hints at silver-like bull run in Monero",
@@ -116,7 +115,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "9h ago"
+      "timeAgo": "10h ago"
     },
     {
       "title": "​​Top UK Labour lawmakers push to ban political donations made in crypto",
@@ -126,7 +125,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "13h ago"
+      "timeAgo": "14h ago"
     },
     {
       "title": "Monero Sets New Record Price as Privacy Trade Re-Emerges",
@@ -136,7 +135,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "18h ago"
+      "timeAgo": "19h ago"
     },
     {
       "title": "A16z Crypto Shares Three Crypto Predictions for 2026",
@@ -163,7 +162,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "2d ago"
+      "timeAgo": "3d ago"
     },
     {
       "title": "Polygon Leads Altcoin Surge With 15% Rally",
@@ -172,7 +171,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "2d ago"
+      "timeAgo": "3d ago"
     },
     {
       "title": "Truebit Hack Wipes Out TRU in First Major Exploit of 2026",
@@ -241,16 +240,6 @@
       "timeAgo": "3d ago"
     },
     {
-      "title": "Florida Lawmakers Renew Push to Launch State Bitcoin Reserve",
-      "link": "https://decrypt.co/353995/florida-lawmakers-renew-push-launch-state-bitcoin-reserve",
-      "description": "Florida lawmakers introduced another bill for the creation of a strategic Bitcoin reserve, less than a year after two attempts were shelved.",
-      "pubDate": "2026-01-08T18:35:24.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "4d ago"
-    },
-    {
       "title": "Bitcoin Extends Selloff as Investors Turn Cautious",
       "link": "https://thedefiant.io/news/markets/bitcoin-extends-selloff-as-investors-turn-cautious",
       "pubDate": "2026-01-08T18:33:08.000Z",
@@ -285,17 +274,25 @@
       "sourceKey": "defiant",
       "category": "defi",
       "timeAgo": "4d ago"
+    },
+    {
+      "title": "Clone-X NFTs Soar 200% as Nike Sells RTFKT",
+      "link": "https://thedefiant.io/news/nfts-and-web3/clone-x-nfts-soar-200-as-nike-sells-rtfkt",
+      "pubDate": "2026-01-07T20:42:10.000Z",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
+      "category": "defi",
+      "timeAgo": "4d ago"
     }
   ],
-  "totalCount": 117,
+  "totalCount": 115,
   "sources": [
     "The Defiant",
     "CoinDesk",
     "CoinTelegraph",
-    "The Block",
     "Decrypt"
   ],
-  "fetchedAt": "2026-01-12T19:07:21.757Z",
+  "fetchedAt": "2026-01-12T20:07:00.700Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -317,6 +314,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-12T19:07:14.000Z",
+  "cachedAt": "2026-01-12T20:06:55.000Z",
   "source": "failsafe-cache"
 }

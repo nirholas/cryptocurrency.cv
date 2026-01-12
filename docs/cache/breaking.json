@@ -1,6 +1,85 @@
 {
   "articles": [
     {
+      "title": "Bakkt stock surges 20% after move on stablecoin payments strategy",
+      "link": "<![CDATA[https://cointelegraph.com/news/bakkt-acquire-stablecoin-payments-infrastructure-provider?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "With Bakkt's share price surging following the announcement, the stock deal could be worth about $178 million.",
+      "pubDate": "2026-01-12T19:59:10.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "7m ago"
+    },
+    {
+      "title": "Bitcoin Price Climbs Near $92,000 as the Federal Reserve and DOJ Showdown",
+      "link": "https://bitcoinmagazine.com/markets/bitcoin-price-climbs-near-92000-fed-doj",
+      "description": "Bitcoin Magazine\n\nBitcoin Price Climbs Near $92,000 as the Federal Reserve and DOJ Showdown\nThe bitcoin price climbed toward $92,000 as escalating tensions between the DOJ and Federal Reserve rattled ",
+      "pubDate": "2026-01-12T19:53:04.000Z",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
+      "category": "bitcoin",
+      "timeAgo": "14m ago"
+    },
+    {
+      "title": "Ethereum Shouldn&#39;t Delay Preparing for Quantum Computing Threat, Says Vitalik Buterin",
+      "link": "https://decrypt.co/354304/ethereum-shouldnt-delay-preparing-quantum-threat-says-vitalik-buterin",
+      "description": "Ethereum co-founder Vitalik Buterin says the network should be able to function for decades without relying on constant upgrades, including resisting future quantum computers.",
+      "pubDate": "2026-01-12T19:50:28.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "16m ago"
+    },
+    {
+      "title": "Former &#39;Bitcoin Mayor&#39; Eric Adams Reveals NYC Token to Fight &#39;Antisemitism and Anti-Americanism&#39;",
+      "link": "https://decrypt.co/354297/former-bitcoin-mayor-eric-adams-nyc-token-fight-antisemitism-anti-americanism",
+      "description": "Eric Adams, the recently departed former mayor of New York City, endorsed a cryptocurrency called \"NYC Token\" from Times Square on Monday.",
+      "pubDate": "2026-01-12T19:34:16.000Z",
+      "source": "Decrypt",
+      "sourceKey": "decrypt",
+      "category": "general",
+      "timeAgo": "32m ago"
+    },
+    {
+      "title": "Dubai Bans Privacy Tokens on Regulated Exchanges",
+      "link": "https://thedefiant.io/news/regulation/dubai-bans-privacy-tokens-on-regulated-exchanges",
+      "pubDate": "2026-01-12T19:24:20.000Z",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
+      "category": "defi",
+      "timeAgo": "42m ago"
+    },
+    {
+      "title": "Bitcoin ‘OG whales’ sell $286M, but odds of $100K BTC remain high",
+      "link": "<![CDATA[https://cointelegraph.com/news/bitcoin-whales-sell-dollar286m-but-odds-of-dollar100k-btc-high?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "Bitcoin whales sold $286 million of BTC in January, but a slowdown in the distribution and accelerating bullish momentum could send BTC to $100,000 before the end of the month.",
+      "pubDate": "2026-01-12T19:15:00.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "52m ago"
+    },
+    {
+      "title": "Staking goes mainstream: what 2026 could look like for ether investors",
+      "link": "https://www.coindesk.com/markets/2026/01/07/staking-goes-mainstream-what-2026-could-look-like-for-ether-investors",
+      "description": "From fully staked ETFs to customizable institutional vaults, staking is evolving from a secondary consideration into a foundational pillar of Ethereum’s market structure.",
+      "pubDate": "2026-01-12T19:13:50.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "53m ago"
+    },
+    {
+      "title": "Breaking the Blackout: Iranian Protestors Use Freedom Tech to Bypass Regime Crackdown",
+      "link": "https://bitcoinmagazine.com/news/iranian-protestors-turn-to-censorship-resistant-freedom-tech-during-internet-blackout",
+      "description": "Bitcoin Magazine\n\nBreaking the Blackout: Iranian Protestors Use Freedom Tech to Bypass Regime Crackdown\nAs Iran imposes sweeping internet restrictions, protestors are turning to Bitcoin-linked apps li",
+      "pubDate": "2026-01-12T19:09:27.000Z",
+      "source": "Bitcoin Magazine",
+      "sourceKey": "bitcoinmagazine",
+      "category": "bitcoin",
+      "timeAgo": "57m ago"
+    },
+    {
       "title": "Crypto Firm BitGo Targets Nearly $2 Billion Valuation in US IPO Filing",
       "link": "https://decrypt.co/354270/crypto-firm-bitgo-targets-2-billion-valuation-us-ipo-filing",
       "description": "Private crypto wallet and custody firm BitGo filed for an initial public offering in the U.S. with aims to raise as much as $200 million.",
@@ -8,7 +87,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "13m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "CFTC to tap Tyler Winklevoss, other crypto CEOs as first members of innovation panel",
@@ -18,7 +97,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "15m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Apple Taps Google&#39;s Gemini to Power AI Models After &#39;Apple Intelligence&#39; Stumbles",
@@ -28,7 +107,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "28m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Stablecoin platform VelaFi secures $20M to scale cross-border settlement rails",
@@ -38,7 +117,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "41m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Bitcoin, Ethereum ETFs Shed Nearly All 2026 Gains as Rate Cut Hopes Fade",
@@ -48,7 +127,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "41m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Crypto infrastructure firm Bakkt jumps 17% on deeper stablecoin payments push with new deal",
@@ -58,7 +137,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "56m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Price predictions 1/12: SPX, DXY, BTC, ETH, XRP, BNB, SOL, DOGE, ADA, BCH",
@@ -68,7 +147,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "56m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Crypto Markets Stagnate as Gold and Silver Rally to New Highs",
@@ -77,7 +156,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "57m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Two UK-Registered Companies Moved $1B in Stablecoins for Iran: Report",
@@ -87,98 +166,18 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "58m ago"
-    },
-    {
-      "title": "Crypto enters round 2 of institutional adoption led by Morgan Stanley: Binance",
-      "link": "<![CDATA[https://cointelegraph.com/news/crypto-second-phase-institutional-adoption-binance-research?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Binance Research said crypto markets are entering a new phase, as institutional allocation and strategic positioning begin to outweigh retail-driven momentum.",
-      "pubDate": "2026-01-12T18:04:24.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Bitcoin Bears Hold $94K Resistance as Price Drops to $90,891 Weekly Close",
-      "link": "https://bitcoinmagazine.com/markets/bitcoin-bears-hold-94k-resistance-as-price-drops-to-90891-weekly-close",
-      "description": "Bitcoin Magazine\n\nBitcoin Bears Hold $94K Resistance as Price Drops to $90,891 Weekly Close\nBitcoin closed the week at $90,891 after failing to break $94,000 resistance, forming a doji candle signalin",
-      "pubDate": "2026-01-12T18:02:10.000Z",
-      "source": "Bitcoin Magazine",
-      "sourceKey": "bitcoinmagazine",
-      "category": "bitcoin",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "NEAR rises 5.7% to $1.73 before giving back gains",
-      "link": "https://www.coindesk.com/markets/2026/01/12/near-rises-5-7-to-usd1-73-before-giving-back-gains",
-      "description": "The layer 1 blockchain token advanced on moderately elevated volume but underperformed key benchmarks, raising sustainability questions.",
-      "pubDate": "2026-01-12T17:46:02.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Coinbase May Drop Support for CLARITY Act Over Stablecoin Conflicts",
-      "link": "https://bitcoinmagazine.com/news/coinbase-may-drop-support-for-clarity-act",
-      "description": "Bitcoin Magazine\n\nCoinbase May Drop Support for CLARITY Act Over Stablecoin Conflicts\nCoinbase may drop support for the CLARITY Act if it limits its lucrative stablecoin reward programs.\nThis post Coi",
-      "pubDate": "2026-01-12T17:42:43.000Z",
-      "source": "Bitcoin Magazine",
-      "sourceKey": "bitcoinmagazine",
-      "category": "bitcoin",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Tennessee Demands Polymarket, Kalshi and Crypto.com End Sports Prediction Markets",
-      "link": "https://decrypt.co/354256/tennessee-demands-polymarket-kalshi-crypto-com-end-sports-prediction-markets",
-      "description": "Polymarket and other leading prediction market platforms were ordered to immediately close all sports-related markets in the state and refund pending wagers.",
-      "pubDate": "2026-01-12T17:39:40.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Adam Back-Linked H100 Moves to Buy Bitcoin Treasury Future Holdings",
-      "link": "https://bitcoinmagazine.com/news/h100-moves-to-buy-future-holdings",
-      "description": "Bitcoin Magazine\n\nAdam Back-Linked H100 Moves to Buy Bitcoin Treasury Future Holdings\nH100 Group plans to acquire Swiss Bitcoin treasury Future Holdings, expanding its European institutional bitcoin p",
-      "pubDate": "2026-01-12T17:33:17.000Z",
-      "source": "Bitcoin Magazine",
-      "sourceKey": "bitcoinmagazine",
-      "category": "bitcoin",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Polygon Foundation CEO Touts &#39;Benefits&#39; of Holding POL as Active Addresses Slide",
-      "link": "https://decrypt.co/354227/polygon-foundation-ceo-touts-benefits-of-holding-pol-as-active-addresses-slide",
-      "description": "Polygon’s daily revenue has jumped to levels around $200,000, while its active address count has slipped since December.",
-      "pubDate": "2026-01-12T17:22:00.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "A16z raise $15B! Jerome Powell vs Trump! Crypto remains flat! Special Guest: Dudas!",
-      "link": "https://decrypt.co/videos/interviews/0y90noNs/a16z-raise-15b-jerome-powell-vs-trump-crypto-remains-flat-special-guest-dudas",
-      "description": "Crypto majors are mostly flat headed into Monday open; btc even at $90,600; eth +1% at $3,110, sol +2% at $140; xrp -2% to $2.04. Ip (+20%) and xmr (+15%) led top movers; xmr hit a new ath at $590. Fe",
-      "pubDate": "2026-01-12T17:15:46.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
       "timeAgo": "1h ago"
     }
   ],
   "totalCount": 17,
   "sources": [
-    "Decrypt",
-    "CoinDesk",
     "CoinTelegraph",
+    "Bitcoin Magazine",
+    "Decrypt",
     "The Defiant",
-    "Bitcoin Magazine"
+    "CoinDesk"
   ],
-  "fetchedAt": "2026-01-12T19:07:30.589Z",
+  "fetchedAt": "2026-01-12T20:07:06.302Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -200,6 +199,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-12T19:07:14.000Z",
+  "cachedAt": "2026-01-12T20:06:55.000Z",
   "source": "failsafe-cache"
 }
