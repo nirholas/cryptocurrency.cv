@@ -1,6 +1,35 @@
 {
   "articles": [
     {
+      "title": "Developer shields pitched in standalone bill as Senate nears market-structure unveiling",
+      "link": "https://www.coindesk.com/policy/2026/01/12/developer-shields-pitched-in-standalone-bill-as-senate-nears-market-structure-unveiling",
+      "description": "Senator Cynthia Lummis introduced a standalone bill to press a key point on how blockchain software developers are treated, though crypto market structure observers await the big show.",
+      "pubDate": "2026-01-12T21:00:00.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "6m ago"
+    },
+    {
+      "title": "3 ETH price charts predict a sharp move to $4K is brewing",
+      "link": "<![CDATA[https://cointelegraph.com/news/3-eth-price-charts-predict-a-sharp-move-to-dollar4k-is-brewing?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
+      "description": "ETH’s recent rally was driven by spot demand and a healthy use of futures market leverage, potentially setting Ether up for a follow-up move to $4,000.",
+      "pubDate": "2026-01-12T20:45:00.000Z",
+      "source": "CoinTelegraph",
+      "sourceKey": "cointelegraph",
+      "category": "general",
+      "timeAgo": "21m ago"
+    },
+    {
+      "title": "Lighter Token Struggles as Farmers Transition to Alternative Exchanges",
+      "link": "https://thedefiant.io/news/defi/lighter-token-struggles-as-farmers-transition-to-alternative-exchanges",
+      "pubDate": "2026-01-12T20:33:05.000Z",
+      "source": "The Defiant",
+      "sourceKey": "defiant",
+      "category": "defi",
+      "timeAgo": "33m ago"
+    },
+    {
       "title": "Bakkt stock surges 20% after move on stablecoin payments strategy",
       "link": "<![CDATA[https://cointelegraph.com/news/bakkt-acquire-stablecoin-payments-infrastructure-provider?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "With Bakkt's share price surging following the announcement, the stock deal could be worth about $178 million.",
@@ -8,7 +37,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "7m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Bitcoin Price Climbs Near $92,000 as the Federal Reserve and DOJ Showdown",
@@ -18,7 +47,7 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "14m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Ethereum Shouldn&#39;t Delay Preparing for Quantum Computing Threat, Says Vitalik Buterin",
@@ -28,7 +57,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "16m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Former &#39;Bitcoin Mayor&#39; Eric Adams Reveals NYC Token to Fight &#39;Antisemitism and Anti-Americanism&#39;",
@@ -38,7 +67,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "32m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Dubai Bans Privacy Tokens on Regulated Exchanges",
@@ -47,7 +76,7 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "42m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Bitcoin ‘OG whales’ sell $286M, but odds of $100K BTC remain high",
@@ -57,7 +86,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "52m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Staking goes mainstream: what 2026 could look like for ether investors",
@@ -67,7 +96,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "53m ago"
+      "timeAgo": "1h ago"
     },
     {
       "title": "Breaking the Blackout: Iranian Protestors Use Freedom Tech to Bypass Regime Crackdown",
@@ -77,107 +106,18 @@
       "source": "Bitcoin Magazine",
       "sourceKey": "bitcoinmagazine",
       "category": "bitcoin",
-      "timeAgo": "57m ago"
-    },
-    {
-      "title": "Crypto Firm BitGo Targets Nearly $2 Billion Valuation in US IPO Filing",
-      "link": "https://decrypt.co/354270/crypto-firm-bitgo-targets-2-billion-valuation-us-ipo-filing",
-      "description": "Private crypto wallet and custody firm BitGo filed for an initial public offering in the U.S. with aims to raise as much as $200 million.",
-      "pubDate": "2026-01-12T18:54:30.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "CFTC to tap Tyler Winklevoss, other crypto CEOs as first members of innovation panel",
-      "link": "https://www.coindesk.com/policy/2026/01/12/cftc-to-use-tyler-winklevoss-other-crypto-ceos-as-first-members-of-innovation-panel",
-      "description": "Mike Selig, chairman of the Commodity Futures Trading Commission, is settling in with the revamping of a new innovation panel with many crypto names.",
-      "pubDate": "2026-01-12T18:52:23.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Apple Taps Google&#39;s Gemini to Power AI Models After &#39;Apple Intelligence&#39; Stumbles",
-      "link": "https://decrypt.co/354283/apple-taps-googles-gemini-power-ai-models-apple-intelligence-stumbles",
-      "description": "Apple says its next generation of AI models will be based on Google’s Gemini, marking a reset after its in-house effort failed to compete.",
-      "pubDate": "2026-01-12T18:39:21.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Stablecoin platform VelaFi secures $20M to scale cross-border settlement rails",
-      "link": "<![CDATA[https://cointelegraph.com/news/stablecoin-payments-velafi-20m-funding-settlement-rails?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "The funding will support expansion of enterprise payment and settlement services across Latin America, the United States and Asia.",
-      "pubDate": "2026-01-12T18:26:00.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Bitcoin, Ethereum ETFs Shed Nearly All 2026 Gains as Rate Cut Hopes Fade",
-      "link": "https://decrypt.co/354246/bitcoin-ethereum-etfs-shed-nearly-all-2026-gains-rate-cut-hopes-fade",
-      "description": "Bitcoin and Ethereum ETFs are surrendering nearly all 2026 gains as fading Fed rate cut hopes drive sizable crypto fund outflows.",
-      "pubDate": "2026-01-12T18:25:49.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Crypto infrastructure firm Bakkt jumps 17% on deeper stablecoin payments push with new deal",
-      "link": "https://www.coindesk.com/business/2026/01/12/bakkt-jumps-17-on-deeper-stablecoin-payments-push-with-new-acquisition-deal",
-      "description": "The firm said it has agreed to acquire Distributed Technologies Research, a blockchain-based payment infrastructure provider.",
-      "pubDate": "2026-01-12T18:10:58.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Price predictions 1/12: SPX, DXY, BTC, ETH, XRP, BNB, SOL, DOGE, ADA, BCH",
-      "link": "<![CDATA[https://cointelegraph.com/news/price-predictions-1-12-spx-dxy-btc-eth-xrp-bnb-sol-doge-ada-bch?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
-      "description": "Bitcoin and several major altcoins bounced off their strong support levels, but charts and trading volume suggest bears will continue to sell at the range highs.",
-      "pubDate": "2026-01-12T18:10:56.000Z",
-      "source": "CoinTelegraph",
-      "sourceKey": "cointelegraph",
-      "category": "general",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Crypto Markets Stagnate as Gold and Silver Rally to New Highs",
-      "link": "https://thedefiant.io/news/markets/crypto-markets-flat-metals-rally-jan-12-2026",
-      "pubDate": "2026-01-12T18:10:17.000Z",
-      "source": "The Defiant",
-      "sourceKey": "defiant",
-      "category": "defi",
-      "timeAgo": "1h ago"
-    },
-    {
-      "title": "Two UK-Registered Companies Moved $1B in Stablecoins for Iran: Report",
-      "link": "https://decrypt.co/354260/two-uk-registered-companies-moved-1b-in-stablecoins-for-iran-report",
-      "description": "The two companies transferred a total of $619.1 million in funds to wallets linked to Iran’s Islamic Revolutionary Guard Corps in 2024.",
-      "pubDate": "2026-01-12T18:09:30.000Z",
-      "source": "Decrypt",
-      "sourceKey": "decrypt",
-      "category": "general",
       "timeAgo": "1h ago"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 11,
   "sources": [
+    "CoinDesk",
     "CoinTelegraph",
-    "Bitcoin Magazine",
-    "Decrypt",
     "The Defiant",
-    "CoinDesk"
+    "Bitcoin Magazine",
+    "Decrypt"
   ],
-  "fetchedAt": "2026-01-12T20:07:06.302Z",
+  "fetchedAt": "2026-01-12T21:06:10.359Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -199,6 +139,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-12T20:06:55.000Z",
+  "cachedAt": "2026-01-12T21:05:56.000Z",
   "source": "failsafe-cache"
 }
