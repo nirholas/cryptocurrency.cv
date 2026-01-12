@@ -1,6 +1,26 @@
 {
   "articles": [
     {
+      "title": "UK lawmakers push to ban crypto political donations over foreign interference fears",
+      "link": "https://www.coindesk.com/policy/2026/01/12/uk-lawmakers-push-to-ban-crypto-political-donations-over-foreign-interference-fears",
+      "description": "They argue that cryptocurrency's opacity and traceability issues make it a threat to democratic integrity, citing an intelligence report election interference.",
+      "pubDate": "2026-01-12T10:42:24.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "24m ago"
+    },
+    {
+      "title": "Veteran trader Peter Brandt hints at silver-like bull run in Monero",
+      "link": "https://www.coindesk.com/markets/2026/01/12/veteran-trader-peter-brandt-hints-at-silver-like-breakout-in-monero",
+      "description": "Monero set fresh records earlier Monday, driven by renewed interest in privacy and upcoming protocol upgrades.",
+      "pubDate": "2026-01-12T09:35:55.000Z",
+      "source": "CoinDesk",
+      "sourceKey": "coindesk",
+      "category": "general",
+      "timeAgo": "1h ago"
+    },
+    {
       "title": "​​Top UK Labour lawmakers push to ban political donations made in crypto",
       "link": "<![CDATA[https://cointelegraph.com/news/uk-lawmakers-push-ban-political-donations-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound]]>",
       "description": "The chairs of seven UK government committees have asked for a ban on crypto donations to be added to an elections bill set to be introduced soon.",
@@ -8,7 +28,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "4h ago"
+      "timeAgo": "5h ago"
     },
     {
       "title": "Monero Sets New Record Price as Privacy Trade Re-Emerges",
@@ -18,7 +38,7 @@
       "source": "Decrypt",
       "sourceKey": "decrypt",
       "category": "general",
-      "timeAgo": "9h ago"
+      "timeAgo": "10h ago"
     },
     {
       "title": "Here’s what happened in crypto today",
@@ -28,7 +48,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "12h ago"
+      "timeAgo": "13h ago"
     },
     {
       "title": "JPMorgan downplays stablecoin threat as local bankers warn of $6.6 trillion risk",
@@ -38,7 +58,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "15h ago"
+      "timeAgo": "16h ago"
     },
     {
       "title": "Ethereum treasury company BitMine crosses 1 million staked ETH milestone",
@@ -48,7 +68,7 @@
       "source": "CoinTelegraph",
       "sourceKey": "cointelegraph",
       "category": "general",
-      "timeAgo": "17h ago"
+      "timeAgo": "18h ago"
     },
     {
       "title": "As the market tanks, crypto’s new gold rush is…gold",
@@ -58,7 +78,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "19h ago"
+      "timeAgo": "20h ago"
     },
     {
       "title": "Ethereum co-founder Vitalik Buterin warns decentralized stablecoins still have deep flaws",
@@ -68,7 +88,7 @@
       "source": "CoinDesk",
       "sourceKey": "coindesk",
       "category": "general",
-      "timeAgo": "20h ago"
+      "timeAgo": "21h ago"
     },
     {
       "title": "Robinhood explains building an Ethereum layer-2: 'We wanted the security from Ethereum'",
@@ -106,16 +126,6 @@
       "source": "The Defiant",
       "sourceKey": "defiant",
       "category": "defi",
-      "timeAgo": "2d ago"
-    },
-    {
-      "title": "Crypto crowd could still walk away from U.S. market structure bill if DeFi needs unmet",
-      "link": "https://www.coindesk.com/policy/2026/01/09/crypto-crowd-could-still-walk-away-from-u-s-market-structure-bill-if-defi-needs-unmet",
-      "description": "There are red-line demands from decentralized finance — and backed by the rest of crypto — that remain unknowns as senators finish the draft they'll vote on.",
-      "pubDate": "2026-01-09T20:01:12.000Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
       "timeAgo": "2d ago"
     },
     {
@@ -276,26 +286,17 @@
       "sourceKey": "defiant",
       "category": "defi",
       "timeAgo": "4d ago"
-    },
-    {
-      "title": "Crypto Markets Edge Lower as Investors Weigh Macro Data",
-      "link": "https://thedefiant.io/news/markets/crypto-markets-edge-lower-as-investors-weigh-macro-data",
-      "pubDate": "2026-01-07T19:27:24.000Z",
-      "source": "The Defiant",
-      "sourceKey": "defiant",
-      "category": "defi",
-      "timeAgo": "4d ago"
     }
   ],
-  "totalCount": 117,
+  "totalCount": 118,
   "sources": [
+    "CoinDesk",
     "CoinTelegraph",
     "Decrypt",
-    "CoinDesk",
     "The Defiant",
     "Bitcoin Magazine"
   ],
-  "fetchedAt": "2026-01-12T10:07:27.513Z",
+  "fetchedAt": "2026-01-12T11:06:24.159Z",
   "lang": "en",
   "availableLanguages": [
     "en",
@@ -317,6 +318,6 @@
     "th",
     "id"
   ],
-  "cachedAt": "2026-01-12T10:07:21.000Z",
+  "cachedAt": "2026-01-12T11:06:17.000Z",
   "source": "failsafe-cache"
 }
