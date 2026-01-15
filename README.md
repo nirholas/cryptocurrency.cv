@@ -1082,3 +1082,5 @@ MIT © 2025 [nich](https://github.com/nirholas)
   <b>Stop paying for crypto news APIs.</b><br>
   <sub>Made with 💜 for the community</sub>
 </p>
+
+
