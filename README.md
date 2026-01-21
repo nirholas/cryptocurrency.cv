@@ -15,11 +15,6 @@
 > ⭐ **If you find this useful, please star the repo!** It helps others discover this project and motivates continued development.
 
 ---
-
-🚨 **January 19, 2026 UPDATE:** All free resources from Vercel have been used. I will need to consider rate limiting, a freemium API, or find sponsorship to pay for the upkeep. I do not mind paying here and there but unfortunately it will cut off the ability for me to develop. I apologize if you were using the API and it went down, you may host your own on Vercel, Railway, locally, and numerous other ways as well. If you need assistance deploying this repo, please let me know and I will be glad to assist you. Will update the README when I get the API going again 🚨
-
----
-
 Get real-time crypto news from 7 major sources with one API call.
 
 > 🌍 **Available in 18 languages:** [中文](locales/README/index.zh-CN.md) | [日本語](locales/README/index.ja-JP.md) | [한국어](locales/README/index.ko-KR.md) | [Español](locales/README/index.es-ES.md) | [Français](locales/README/index.fr-FR.md) | [Deutsch](locales/README/index.de-DE.md) | [Português](locales/README/index.pt-BR.md) | [Русский](locales/README/index.ru-RU.md) | [العربية](locales/README/index.ar.md) | [More...](locales/)
