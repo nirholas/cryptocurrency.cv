@@ -1,6 +1,24 @@
 # 🆓 Free Crypto News API
 
-🚨 January 19, 2026 UPDATE: All free resources from Vercel have been used. I will need to consider rate limiting, a freemium API, or find sponsorship to pay for the upkeep. I do not mind paying here and there but unfortunately it will cut off the ability for me to develop. I apologize if you were using the API and it went down, you may host your own on Vercel, Railway, locally, and numerous other ways as well. If you need assistance deploying this repo, please let me know and I will be glad to assist you. Will update the README when I get the API going again 🚨
+<p align="center">
+  <a href="https://github.com/nirholas/free-crypto-news/stargazers"><img src="https://img.shields.io/github/stars/nirholas/free-crypto-news?style=for-the-badge&logo=github&color=yellow" alt="GitHub Stars"></a>
+  <a href="https://github.com/nirholas/free-crypto-news/blob/main/LICENSE"><img src="https://img.shields.io/github/license/nirholas/free-crypto-news?style=for-the-badge&color=blue" alt="License"></a>
+  <a href="https://github.com/nirholas/free-crypto-news/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/nirholas/free-crypto-news/ci.yml?style=for-the-badge&logo=github-actions&label=CI" alt="CI Status"></a>
+  <a href="https://github.com/nirholas/free-crypto-news/issues"><img src="https://img.shields.io/github/issues/nirholas/free-crypto-news?style=for-the-badge&color=orange" alt="Issues"></a>
+  <a href="https://github.com/nirholas/free-crypto-news/pulls"><img src="https://img.shields.io/github/issues-pr/nirholas/free-crypto-news?style=for-the-badge&color=purple" alt="Pull Requests"></a>
+</p>
+
+<p align="center">
+  <img src=".github/demo.svg" alt="Free Crypto News API Demo" width="700">
+</p>
+
+> ⭐ **If you find this useful, please star the repo!** It helps others discover this project and motivates continued development.
+
+---
+
+🚨 **January 19, 2026 UPDATE:** All free resources from Vercel have been used. I will need to consider rate limiting, a freemium API, or find sponsorship to pay for the upkeep. I do not mind paying here and there but unfortunately it will cut off the ability for me to develop. I apologize if you were using the API and it went down, you may host your own on Vercel, Railway, locally, and numerous other ways as well. If you need assistance deploying this repo, please let me know and I will be glad to assist you. Will update the README when I get the API going again 🚨
+
+---
 
 Get real-time crypto news from 7 major sources with one API call.
 
@@ -23,6 +41,61 @@ That's it. It just works.
 | **Rate Limit** | Unlimited* | 100-1000/day | Limited |
 | **Sources** | 7 | 1 | Varies |
 | **Self-host** | ✅ One click | No | No |
+| **PWA** | ✅ Installable | No | No |
+| **MCP** | ✅ Claude + ChatGPT | No | No |
+
+---
+
+## 📱 Progressive Web App (PWA)
+
+Free Crypto News is a **fully installable PWA** that works offline!
+
+### Features
+
+| Feature | Description |
+|---------|-------------|
+| 📲 **Installable** | Add to home screen on any device |
+| 📴 **Offline Mode** | Read cached news without internet |
+| 🔔 **Push Notifications** | Get breaking news alerts |
+| ⚡ **Lightning Fast** | Aggressive caching strategies |
+| 🔄 **Background Sync** | Auto-updates when back online |
+| 🎯 **App Shortcuts** | Quick access to Latest, Breaking, Bitcoin |
+| 📤 **Share Target** | Share links directly to the app |
+
+### Install the App
+
+**Desktop (Chrome/Edge):**
+1. Visit [free-crypto-news.vercel.app](https://free-crypto-news.vercel.app)
+2. Click the install icon (⊕) in the address bar
+3. Click "Install"
+
+**iOS Safari:**
+1. Visit the site in Safari
+2. Tap Share (📤) → "Add to Home Screen"
+
+**Android Chrome:**
+1. Visit the site
+2. Tap the install banner or Menu → "Install app"
+
+### Service Worker Caching
+
+The PWA uses smart caching strategies:
+
+| Content | Strategy | Cache Duration |
+|---------|----------|----------------|
+| API responses | Network-first | 5 minutes |
+| Static assets | Cache-first | 7 days |
+| Images | Cache-first | 30 days |
+| Navigation | Network-first + offline fallback | 24 hours |
+
+### Generate PNG Icons
+
+SVG icons work in modern browsers. For legacy support:
+
+```bash
+npm install sharp
+npm run pwa:icons
+```
 
 ---
 
@@ -64,6 +137,22 @@ We aggregate from **7 trusted outlets**:
 | `/api/origins` | Find original news sources |
 | `/api/portfolio` | Portfolio-based news + prices |
 
+### 🤖 AI-Powered Endpoints (FREE via Groq)
+
+| Endpoint | Description |
+|----------|-------------|
+| `/api/summarize` | AI summaries of articles |
+| `/api/ask?q=...` | Ask questions about crypto news |
+| `/api/digest` | AI-generated daily news digest |
+| `/api/sentiment` | Deep sentiment analysis per article |
+| `/api/entities` | Extract people, companies, tickers |
+| `/api/narratives` | Identify market narratives & themes |
+| `/api/signals` | News-based trading signals (educational) |
+| `/api/factcheck` | Extract & verify claims |
+| `/api/clickbait` | Detect clickbait headlines |
+
+> 💡 AI endpoints require `GROQ_API_KEY` (free at [console.groq.com](https://console.groq.com/keys))
+
 ## SDKs & Components
 
 | Package | Description |
@@ -94,6 +183,19 @@ We aggregate from **7 trusted outlets**:
 | `sentiment` | `/api/analyze` | bullish/bearish/neutral |
 | `feed` | `/api/rss`, `/api/atom` | all/defi/bitcoin |
 
+### AI Endpoint Parameters
+
+| Parameter | Endpoints | Description |
+|-----------|-----------|-------------|
+| `q` | `/api/ask` | Question to ask about news |
+| `style` | `/api/summarize` | brief/detailed/bullet |
+| `period` | `/api/digest` | 6h/12h/24h |
+| `type` | `/api/entities` | ticker/person/company/protocol |
+| `threshold` | `/api/clickbait` | Min clickbait score (0-100) |
+| `asset` | `/api/sentiment` | Filter by ticker (BTC, ETH) |
+| `emerging` | `/api/narratives` | true = only new narratives |
+| `min_confidence` | `/api/signals` | Min confidence (0-100) |
+
 ---
 
 ## Response Format
@@ -113,6 +215,55 @@ We aggregate from **7 trusted outlets**:
   "totalCount": 150,
   "fetchedAt": "2025-01-02T14:30:00Z"
 }
+```
+
+---
+
+## 🤖 AI Endpoint Examples
+
+**Ask questions about crypto news:**
+```bash
+curl "https://free-crypto-news.vercel.app/api/ask?q=What%20is%20happening%20with%20Bitcoin%20today"
+```
+
+**Get AI-powered summaries:**
+```bash
+curl "https://free-crypto-news.vercel.app/api/summarize?limit=5&style=brief"
+```
+
+**Daily digest:**
+```bash
+curl "https://free-crypto-news.vercel.app/api/digest?period=24h"
+```
+
+**Deep sentiment analysis:**
+```bash
+curl "https://free-crypto-news.vercel.app/api/sentiment?asset=BTC"
+```
+
+**Extract entities (people, companies, tickers):**
+```bash
+curl "https://free-crypto-news.vercel.app/api/entities?type=person"
+```
+
+**Identify market narratives:**
+```bash
+curl "https://free-crypto-news.vercel.app/api/narratives?emerging=true"
+```
+
+**News-based trading signals:**
+```bash
+curl "https://free-crypto-news.vercel.app/api/signals?min_confidence=70"
+```
+
+**Fact-check claims:**
+```bash
+curl "https://free-crypto-news.vercel.app/api/factcheck?type=prediction"
+```
+
+**Detect clickbait:**
+```bash
+curl "https://free-crypto-news.vercel.app/api/clickbait?threshold=50"
 ```
 
 ---
@@ -273,9 +424,27 @@ Full schema: [`chatgpt/openapi.yaml`](chatgpt/openapi.yaml)
 
 ---
 
-## 🔮 Claude Desktop (MCP)
+## 🔮 MCP Server (Claude Desktop & ChatGPT Developer Mode)
 
-Add crypto news to Claude Desktop.
+The MCP server provides **11 tools** for AI assistants to access crypto news.
+
+### Available Tools
+
+| Tool | Description |
+|------|-------------|
+| `get_crypto_news` | Latest news from 7 sources |
+| `search_crypto_news` | Search by keywords |
+| `get_defi_news` | DeFi-specific news |
+| `get_bitcoin_news` | Bitcoin-specific news |
+| `get_breaking_news` | Breaking news (last 2 hours) |
+| `get_news_sources` | List all sources |
+| `get_api_health` | API health check |
+| `get_trending_topics` | Trending topics with sentiment |
+| `get_crypto_stats` | Analytics & statistics |
+| `analyze_news` | News with sentiment analysis |
+| `get_market_context` | Market data context |
+
+### Option 1: Claude Desktop (stdio)
 
 **1. Clone & install:**
 ```bash
@@ -285,7 +454,8 @@ cd free-crypto-news/mcp && npm install
 
 **2. Add to config**
 
-**Edit** `~/Library/Application Support/Claude/claude_desktop_config.json`:
+**Mac:** `~/Library/Application Support/Claude/claude_desktop_config.json`  
+**Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
 
 ```json
 {
@@ -298,14 +468,26 @@ cd free-crypto-news/mcp && npm install
 }
 ```
 
-**Restart Claude.** Ask: *"Get me the latest crypto news"*
+**3. Restart Claude.** Ask: *"Get me the latest crypto news"*
 
-Or run locally:
+### Option 2: ChatGPT Developer Mode (HTTP/SSE)
+
+**Live Server:** `https://plugins.support/sse`
+
+**Or run locally:**
 ```bash
-cd mcp && npm install && node index.js
+cd free-crypto-news/mcp
+npm install
+npm run start:http  # Starts on port 3001
 ```
 
-Full code: [`mcp/`](mcp/)
+**In ChatGPT:**
+1. Enable Developer Mode in Settings → Apps → Advanced
+2. Create new app with protocol: **SSE**
+3. Endpoint: `https://plugins.support/sse` (or `http://localhost:3001/sse`)
+4. No authentication needed
+
+Full documentation: [`mcp/README.md`](mcp/README.md)
 
 ---
 
@@ -451,8 +633,8 @@ Open http://localhost:3000/api/news
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `OPENAI_API_KEY` | - | Enables i18n auto-translation (18 languages) |
-| `OPENAI_PROXY_URL` | `api.openai.com` | Custom OpenAI endpoint |
+| `GROQ_API_KEY` | - | Enables i18n auto-translation (18 languages). **FREE!** Get yours at [console.groq.com/keys](https://console.groq.com/keys) |
+| `FEATURE_TRANSLATION` | `false` | Set to `true` to enable real-time translation |
 | `REDDIT_CLIENT_ID` | - | Enables Reddit social signals |
 | `REDDIT_CLIENT_SECRET` | - | Reddit OAuth secret |
 | `X_AUTH_TOKEN` | - | X/Twitter signals via [XActions](https://github.com/nirholas/XActions) |
@@ -475,7 +657,8 @@ Open http://localhost:3000/api/news
 For full functionality, add these secrets to your repository:
 
 ```
-OPENAI_API_KEY      # For i18n translations
+GROQ_API_KEY        # For i18n translations (FREE! https://console.groq.com/keys)
+FEATURE_TRANSLATION # Set to 'true' to enable translations
 REDDIT_CLIENT_ID    # For Reddit data (register at reddit.com/prefs/apps)
 REDDIT_CLIENT_SECRET
 X_AUTH_TOKEN        # For X/Twitter (from XActions login)
@@ -903,7 +1086,7 @@ Building the definitive open crypto intelligence platform.
 - [ ] Relationship extraction (who did what to whom)
 
 ### Multi-Lingual
-- [x] i18n workflow with 18 languages (auto-translation via OpenAI)
+- [x] i18n workflow with 18 languages (auto-translation via Groq - FREE!)
 - [x] Translated README and docs
 - [ ] Korean sources (Crypto primers, etc.)
 - [ ] Chinese sources (8btc, etc.)
@@ -1068,6 +1251,20 @@ Every day we delay proper archiving is data lost forever.
 
 ---
 
+## 🤝 Contributing
+
+We welcome contributions! Whether it's:
+
+- 🐛 Bug fixes
+- ✨ New features
+- 📰 Adding news sources
+- 📖 Improving documentation
+- 🌍 Translations
+
+Please read our [**Contributing Guide**](CONTRIBUTING.md) to get started.
+
+---
+
 # License
 
 MIT © 2025 [nich](https://github.com/nirholas)
@@ -1079,4 +1276,12 @@ MIT © 2025 [nich](https://github.com/nirholas)
   <sub>Made with 💜 for the community</sub>
 </p>
 
+<p align="center">
+  <br>
+  ⭐ <b>Found this useful? Give it a star!</b> ⭐<br>
+  <sub>It helps others discover this project and keeps development going</sub><br><br>
+  <a href="https://github.com/nirholas/free-crypto-news/stargazers">
+    <img src="https://img.shields.io/github/stars/nirholas/free-crypto-news?style=social" alt="Star on GitHub">
+  </a>
+</p>
 
