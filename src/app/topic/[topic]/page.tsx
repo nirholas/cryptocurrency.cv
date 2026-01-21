@@ -11,7 +11,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 interface Props {
-  params: { topic: string };
+  params: Promise<{ topic: string }>;
 }
 
 // Topic definitions with keywords
@@ -116,18 +116,19 @@ const topicInfo: Record<string, {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const topic = topicInfo[params.topic];
+  const { topic } = await params;
+  const info = topicInfo[topic];
   
   return {
-    title: topic?.title || params.topic,
-    description: topic?.description || `Latest news about ${params.topic}`,
+    title: info?.title || topic,
+    description: info?.description || `Latest news about ${topic}`,
   };
 }
 
 export const revalidate = 300; // 5 minutes
 
 export default async function TopicPage({ params }: Props) {
-  const { topic } = params;
+  const { topic } = await params;
   const info = topicInfo[topic];
   
   const keywords = info?.keywords.join(',') || topic;
