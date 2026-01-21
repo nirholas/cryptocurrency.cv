@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Maskable icon with safe zone padding (circular safe area is 80% = 409.6px diameter centered) -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="coinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f7931a"/>
+      <stop offset="50%" style="stop-color:#ffb84d"/>
+      <stop offset="100%" style="stop-color:#f7931a"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Full bleed background -->
+  <rect width="512" height="512" fill="url(#bgGrad)"/>
+  
+  <!-- Content within safe zone (centered, scaled down) -->
+  <g transform="translate(256, 256) scale(0.7) translate(-256, -256)">
+    <!-- Bitcoin symbol circle -->
+    <circle cx="256" cy="200" r="110" fill="url(#coinGrad)"/>
+    <circle cx="256" cy="200" r="90" fill="none" stroke="#0a0a0a" stroke-width="6" opacity="0.3"/>
+    
+    <!-- Bitcoin B symbol -->
+    <g fill="#0a0a0a">
+      <rect x="225" y="120" width="14" height="160" rx="3"/>
+      <rect x="278" y="120" width="14" height="18" rx="3"/>
+      <rect x="278" y="262" width="14" height="18" rx="3"/>
+      <path d="M239 138 h35 c26 0 44 18 44 40 c0 18-13 32-26 36 c18 4 30 22 30 40 c0 26-22 44-48 44 h-35 v-26 h30 c13 0 22-9 22-22 s-9-22-22-22 h-30 v-22 h26 c13 0 19-9 19-19 s-6-20-19-20 h-26 z"/>
+    </g>
+    
+    <!-- NEWS text -->
+    <text x="256" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="56" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="6">
+      NEWS
+    </text>
+  </g>
+</svg>

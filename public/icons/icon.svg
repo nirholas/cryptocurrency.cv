@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="coinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f7931a"/>
+      <stop offset="50%" style="stop-color:#ffb84d"/>
+      <stop offset="100%" style="stop-color:#f7931a"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="url(#bgGrad)"/>
+  
+  <!-- Decorative grid lines -->
+  <g opacity="0.1" stroke="#f7931a" stroke-width="1">
+    <line x1="0" y1="128" x2="512" y2="128"/>
+    <line x1="0" y1="256" x2="512" y2="256"/>
+    <line x1="0" y1="384" x2="512" y2="384"/>
+    <line x1="128" y1="0" x2="128" y2="512"/>
+    <line x1="256" y1="0" x2="256" y2="512"/>
+    <line x1="384" y1="0" x2="384" y2="512"/>
+  </g>
+  
+  <!-- Bitcoin symbol circle -->
+  <circle cx="256" cy="220" r="120" fill="url(#coinGrad)" filter="url(#shadow)"/>
+  <circle cx="256" cy="220" r="100" fill="none" stroke="#0a0a0a" stroke-width="8" opacity="0.3"/>
+  
+  <!-- Bitcoin B symbol -->
+  <g fill="#0a0a0a" filter="url(#glow)">
+    <!-- Vertical bars -->
+    <rect x="220" y="130" width="16" height="180" rx="4"/>
+    <rect x="276" y="130" width="16" height="20" rx="4"/>
+    <rect x="276" y="270" width="16" height="20" rx="4"/>
+    
+    <!-- B shape -->
+    <path d="M236 150 h40 c30 0 50 20 50 45 c0 20-15 35-30 40 c20 5 35 25 35 45 c0 30-25 50-55 50 h-40 v-30 h35 c15 0 25-10 25-25 s-10-25-25-25 h-35 v-25 h30 c15 0 22-10 22-22 s-7-23-22-23 h-30 z"/>
+  </g>
+  
+  <!-- NEWS text -->
+  <text x="256" y="400" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="8">
+    NEWS
+  </text>
+  
+  <!-- FREE badge -->
+  <g transform="translate(380, 80)">
+    <circle r="40" fill="#10b981"/>
+    <text y="6" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle">FREE</text>
+  </g>
+  
+  <!-- Subtle corner accents -->
+  <path d="M0 96 L0 0 L96 0" fill="none" stroke="#f7931a" stroke-width="4" opacity="0.5"/>
+  <path d="M512 416 L512 512 L416 512" fill="none" stroke="#f7931a" stroke-width="4" opacity="0.5"/>
+</svg>
