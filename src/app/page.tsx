@@ -77,7 +77,7 @@ export default async function Home() {
                     </h2>
                     <Link 
                       href="/read" 
-                      className="text-sm font-medium text-brand-600 hover:text-brand-700 transition-colors focus-ring rounded px-2 py-1 -mr-2"
+                      className="text-sm font-medium text-brand-700 hover:text-brand-800 transition-colors focus-ring rounded px-2 py-1 -mr-2"
                     >
                       View All →
                     </Link>
@@ -103,7 +103,7 @@ export default async function Home() {
                     >
                       <span className="text-xl" aria-hidden="true">🔍</span>
                       <div>
-                        <p className="font-medium text-gray-900 group-hover:text-brand-600 transition-colors">Search News</p>
+                        <p className="font-medium text-gray-900 group-hover:text-brand-700 transition-colors">Search News</p>
                         <p className="text-xs text-gray-500">Find specific topics</p>
                       </div>
                     </Link>
@@ -113,7 +113,7 @@ export default async function Home() {
                     >
                       <span className="text-xl" aria-hidden="true">📖</span>
                       <div>
-                        <p className="font-medium text-gray-900 group-hover:text-brand-600 transition-colors">Full Reader</p>
+                        <p className="font-medium text-gray-900 group-hover:text-brand-700 transition-colors">Full Reader</p>
                         <p className="text-xs text-gray-500">AI summaries</p>
                       </div>
                     </Link>
@@ -123,7 +123,7 @@ export default async function Home() {
                     >
                       <span className="text-xl" aria-hidden="true">💻</span>
                       <div>
-                        <p className="font-medium text-gray-900 group-hover:text-brand-600 transition-colors">Code Examples</p>
+                        <p className="font-medium text-gray-900 group-hover:text-brand-700 transition-colors">Code Examples</p>
                         <p className="text-xs text-gray-500">Integrate with API</p>
                       </div>
                     </Link>
@@ -133,7 +133,7 @@ export default async function Home() {
                     >
                       <span className="text-xl" aria-hidden="true">📡</span>
                       <div>
-                        <p className="font-medium text-gray-900 group-hover:text-brand-600 transition-colors">RSS Feed</p>
+                        <p className="font-medium text-gray-900 group-hover:text-brand-700 transition-colors">RSS Feed</p>
                         <p className="text-xs text-gray-500">Subscribe to updates</p>
                       </div>
                     </a>

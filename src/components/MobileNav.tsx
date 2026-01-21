@@ -152,7 +152,7 @@ export function MobileNav() {
             <Link
               href="/about"
               onClick={closeMenu}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-brand-600 text-white text-sm font-medium rounded-lg hover:bg-brand-700 active:scale-95 transition-all focus-ring"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-brand-700 text-white text-sm font-medium rounded-lg hover:bg-brand-800 active:scale-95 transition-all focus-ring"
             >
               Get Started
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

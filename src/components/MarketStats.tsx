@@ -19,7 +19,7 @@ export default async function MarketStats() {
         </h3>
         <Link 
           href="/markets" 
-          className="text-sm font-medium text-brand-600 hover:text-brand-700 transition-colors focus-ring rounded px-2 py-1 -mr-2"
+          className="text-sm font-medium text-brand-700 hover:text-brand-800 transition-colors focus-ring rounded px-2 py-1 -mr-2"
         >
           View All →
         </Link>

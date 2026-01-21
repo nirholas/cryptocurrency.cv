@@ -41,7 +41,7 @@ export default function CategoryNav({ activeCategory = '' }: CategoryNavProps) {
                   flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap 
                   transition-all duration-200 focus-ring
                   ${isActive 
-                    ? 'bg-brand-600 text-white shadow-md' 
+                    ? 'bg-brand-700 text-white shadow-md' 
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100 active:scale-95'
                   }
                 `}

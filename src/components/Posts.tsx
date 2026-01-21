@@ -51,7 +51,7 @@ export default function Posts({ articles, externalLinks = false }: Props) {
               >
                 {article.source}
               </span>
-              <h3 className="text-base font-semibold mt-3 text-gray-900 group-hover:text-brand-600 transition-colors line-clamp-3 leading-snug">
+              <h3 className="text-base font-semibold mt-3 text-gray-900 group-hover:text-brand-700 transition-colors line-clamp-3 leading-snug">
                 {article.title}
               </h3>
             </div>

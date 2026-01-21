@@ -102,8 +102,8 @@ const combinations = [
   { fg: 'gray-700', bg: 'white', name: 'Secondary text on white' },
   { fg: 'gray-600', bg: 'white', name: 'Muted text on white' },
   { fg: 'gray-500', bg: 'white', name: 'Placeholder text on white' },
-  { fg: 'brand-600', bg: 'white', name: 'Brand link on white' },
-  { fg: 'brand-700', bg: 'white', name: 'Brand dark on white' },
+  { fg: 'brand-700', bg: 'white', name: 'Brand link on white' },
+  { fg: 'brand-800', bg: 'white', name: 'Brand dark on white' },
   
   // Text on gray backgrounds
   { fg: 'gray-900', bg: 'gray-50', name: 'Primary text on gray-50' },
@@ -112,9 +112,9 @@ const combinations = [
   { fg: 'gray-400', bg: 'gray-900', name: 'Muted text on dark' },
   
   // Brand combinations
-  { fg: 'white', bg: 'brand-600', name: 'White on brand button' },
+  { fg: 'white', bg: 'brand-700', name: 'White on brand button' },
   { fg: 'brand-900', bg: 'brand-50', name: 'Dark brand on light brand' },
-  { fg: 'brand-700', bg: 'brand-100', name: 'Brand text on brand bg' },
+  { fg: 'brand-800', bg: 'brand-100', name: 'Brand text on brand bg' },
   
   // Semantic colors - Updated for WCAG compliance
   { fg: 'success', bg: 'white', name: 'Success text on white' },
