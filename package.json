@@ -1,5 +1,5 @@
 {
-  "name":  "free-crypto-news",
+  "name": "free-crypto-news",
   "version": "1.0.0",
   "description": "🆓 100% FREE crypto news API.  No API keys.  No rate limits. No BS.",
   "private": true,
@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "pwa:icons": "node scripts/generate-pwa-icons.js",
     "mcp:install": "cd mcp && npm install",
     "mcp:start": "cd mcp && npm start",
     "mcp:http": "cd mcp && npm run start:http",
@@ -27,24 +28,27 @@
     "defi",
     "free",
     "rss",
-    "aggregator"
+    "aggregator",
+    "pwa"
   ],
-  "author":  "nirholas",
+  "author": "nirholas",
   "license": "MIT",
   "dependencies": {
     "next": "^16.1.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
-    "sanitize-html":  "^2.17.0"
+    "sanitize-html": "^2.17.0",
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.18",
-    "@types/node": "^25.0.3",
-    "@types/react": "^19.2.7",
+    "@types/node": "^25.0.9",
+    "@types/react": "^19.2.9",
+    "@types/react-dom": "^19.2.3",
     "@types/sanitize-html": "^2.13.0",
     "postcss": "^8.4.31",
     "tailwindcss": "^4.1.18",
-    "typescript":  "^5.0.0"
+    "typescript": "^5.0.0"
   },
   "engines": {
     "node": ">=18.0.0"
