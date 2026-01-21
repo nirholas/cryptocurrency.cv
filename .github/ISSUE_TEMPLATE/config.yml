@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 Documentation
+    url: https://free-crypto-news.vercel.app/api/docs
+    about: Check the API documentation before opening an issue
+  - name: 💬 Discussions
+    url: https://github.com/nirholas/free-crypto-news/discussions
+    about: Ask questions and share ideas in Discussions
+  - name: 📚 Examples
+    url: https://github.com/nirholas/free-crypto-news/tree/main/examples
+    about: Browse integration examples
