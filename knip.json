@@ -1,0 +1,31 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "entry": [
+    "src/app/**/*.tsx",
+    "src/app/**/*.ts",
+    "src/components/**/*.tsx",
+    "src/lib/**/*.ts"
+  ],
+  "project": [
+    "src/**/*.{ts,tsx}"
+  ],
+  "ignore": [
+    "examples/**",
+    "sdk/**",
+    "widget/**",
+    "mcp/**",
+    "scripts/**",
+    "public/**"
+  ],
+  "ignoreDependencies": [
+    "@axe-core/cli",
+    "eslint-plugin-jsx-a11y",
+    "lighthouse",
+    "pa11y",
+    "stylelint",
+    "stylelint-config-standard",
+    "@typescript-eslint/parser",
+    "@typescript-eslint/eslint-plugin",
+    "@eslint/eslintrc"
+  ]
+}

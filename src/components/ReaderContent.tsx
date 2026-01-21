@@ -100,7 +100,11 @@ function ArticleCard({
       {/* Header - Always visible */}
       <div 
         onClick={onToggle}
-        className="p-5 cursor-pointer hover:bg-gray-50 transition"
+        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onToggle(); } }}
+        role="button"
+        tabIndex={0}
+        className="p-5 cursor-pointer hover:bg-gray-50 transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-500"
+        aria-expanded={isExpanded}
       >
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1">

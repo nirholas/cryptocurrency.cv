@@ -91,12 +91,60 @@ export default function Hero() {
             </div>
           </div>
           
-          {/* Hero Visual */}
+          {/* Hero Visual - API Response Preview */}
           <div className="hidden lg:flex items-center justify-center" aria-hidden="true">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-black/10 to-transparent rounded-3xl blur-2xl scale-110" />
-              <div className="relative text-[10rem] leading-none animate-bounce-subtle">
-                📰
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent rounded-3xl blur-3xl scale-110" />
+              
+              {/* Stacked cards effect */}
+              <div className="absolute -top-4 -left-4 w-72 h-48 bg-black/20 backdrop-blur-sm rounded-2xl border border-black/30 rotate-[-6deg]" />
+              <div className="absolute -top-2 -left-2 w-72 h-48 bg-black/30 backdrop-blur-sm rounded-2xl border border-black/40 rotate-[-3deg]" />
+              
+              {/* Main card - API response preview */}
+              <div className="relative w-72 bg-gray-900/90 backdrop-blur-md rounded-2xl border border-gray-700 overflow-hidden shadow-2xl">
+                {/* Terminal header */}
+                <div className="flex items-center gap-2 px-4 py-3 bg-gray-800/80 border-b border-gray-700">
+                  <div className="flex gap-1.5">
+                    <div className="w-3 h-3 rounded-full bg-red-500/80" />
+                    <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
+                    <div className="w-3 h-3 rounded-full bg-green-500/80" />
+                  </div>
+                  <span className="text-xs text-gray-400 font-mono ml-2">api/news</span>
+                </div>
+                
+                {/* Code preview */}
+                <div className="p-4 font-mono text-xs leading-relaxed">
+                  <div className="text-gray-500">{"{"}</div>
+                  <div className="ml-3">
+                    <span className="text-purple-400">&quot;articles&quot;</span>
+                    <span className="text-gray-500">: [</span>
+                  </div>
+                  <div className="ml-6 text-gray-500">{"{"}</div>
+                  <div className="ml-9">
+                    <span className="text-blue-400">&quot;title&quot;</span>
+                    <span className="text-gray-500">: </span>
+                    <span className="text-green-400">&quot;BTC hits...&quot;</span>
+                  </div>
+                  <div className="ml-9">
+                    <span className="text-blue-400">&quot;source&quot;</span>
+                    <span className="text-gray-500">: </span>
+                    <span className="text-green-400">&quot;CoinDesk&quot;</span>
+                  </div>
+                  <div className="ml-6 text-gray-500">{"},"}</div>
+                  <div className="ml-6 text-gray-600">...</div>
+                  <div className="ml-3 text-gray-500">]</div>
+                  <div className="text-gray-500">{"}"}</div>
+                </div>
+                
+                {/* Status bar */}
+                <div className="px-4 py-2 bg-gray-800/50 border-t border-gray-700 flex items-center justify-between">
+                  <span className="text-xs text-green-400 flex items-center gap-1.5">
+                    <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                    200 OK
+                  </span>
+                  <span className="text-xs text-gray-400">~45ms</span>
+                </div>
               </div>
             </div>
           </div>

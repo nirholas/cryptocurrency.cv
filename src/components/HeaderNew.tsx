@@ -102,7 +102,6 @@ export default function HeaderNew() {
                 type="search"
                 name="q"
                 placeholder="Search news..."
-                autoFocus
                 className="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
               />
               <button
