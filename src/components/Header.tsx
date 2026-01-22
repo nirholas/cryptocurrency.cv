@@ -179,38 +179,85 @@ const navItems = [
   },
 ];
 
-// Mega Menu Component - Compact dropdown
+// Mega Menu Component - Refined design
 function MegaMenu({ item, isOpen }: { item: typeof navItems[0]; isOpen: boolean }) {
   if (!item.megaMenu || !isOpen) return null;
 
+  const sectionCount = item.megaMenu.sections.length;
+  const hasMultipleSections = sectionCount > 1;
+
   return (
     <div 
-      className="absolute top-full left-0 min-w-[280px] bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 shadow-xl rounded-lg z-50 mega-menu-enter mt-1"
+      className="absolute top-full left-1/2 -translate-x-1/2 mt-2 z-50"
       role="menu"
       aria-label={`${item.label} submenu`}
     >
-      <div className="p-2">
-        {item.megaMenu.sections.map((section, idx) => (
-          <div key={idx} className={idx > 0 ? 'mt-2 pt-2 border-t border-gray-100 dark:border-slate-800' : ''}>
-            <h3 className="text-[10px] font-semibold text-gray-400 dark:text-slate-500 uppercase tracking-wider px-2 py-1">
-              {section.title}
-            </h3>
-            <ul>
-              {section.links.map((link, linkIdx) => (
-                <li key={linkIdx}>
-                  <Link
-                    href={link.href}
-                    className="flex items-center gap-2 px-2 py-1.5 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-800 rounded-md transition-colors text-sm"
-                    role="menuitem"
-                  >
-                    <span className="text-sm" aria-hidden="true">{link.icon}</span>
-                    <span>{link.label}</span>
-                  </Link>
-                </li>
+      {/* Arrow pointer */}
+      <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 rotate-45 bg-white dark:bg-slate-800 border-l border-t border-gray-200 dark:border-slate-700" />
+      
+      <div 
+        className={`relative bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl shadow-2xl overflow-hidden ${
+          hasMultipleSections ? 'min-w-[480px]' : 'min-w-[320px]'
+        }`}
+        style={{
+          animation: 'menuFadeIn 200ms ease-out forwards',
+        }}
+      >
+        <div className="flex">
+          {/* Links Section */}
+          <div className={`${hasMultipleSections ? 'flex-1 p-4' : 'p-4'}`}>
+            <div className={hasMultipleSections ? 'grid grid-cols-2 gap-4' : ''}>
+              {item.megaMenu.sections.map((section, idx) => (
+                <div key={idx}>
+                  <h3 className="text-[11px] font-semibold text-gray-400 dark:text-slate-500 uppercase tracking-wider mb-2 px-2">
+                    {section.title}
+                  </h3>
+                  <ul className="space-y-0.5">
+                    {section.links.map((link, linkIdx) => (
+                      <li key={linkIdx}>
+                        <Link
+                          href={link.href}
+                          className="flex items-center gap-2.5 px-2 py-2 text-gray-700 dark:text-slate-200 hover:text-brand-600 dark:hover:text-brand-400 hover:bg-gray-50 dark:hover:bg-slate-700/50 rounded-lg transition-all duration-150 group"
+                          role="menuitem"
+                        >
+                          <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-gray-100 dark:bg-slate-700 group-hover:bg-brand-100 dark:group-hover:bg-brand-900/30 group-hover:scale-105 transition-all duration-150 text-base">
+                            {link.icon}
+                          </span>
+                          <span className="font-medium text-sm">{link.label}</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
-        ))}
+
+          {/* Featured Card - Right side */}
+          <div className="w-48 bg-gradient-to-br from-brand-500 to-brand-600 dark:from-brand-600 dark:to-brand-700 p-4 flex flex-col justify-between">
+            <div>
+              <div className="w-10 h-10 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-3">
+                <span className="text-xl text-white">{item.icon}</span>
+              </div>
+              <h4 className="font-semibold text-white text-sm mb-1">
+                {item.megaMenu.featured.title}
+              </h4>
+              <p className="text-white/80 text-xs leading-relaxed">
+                {item.megaMenu.featured.description}
+              </p>
+            </div>
+            <Link
+              href={item.megaMenu.featured.href}
+              className="inline-flex items-center gap-1.5 text-xs font-semibold text-white hover:text-white/90 transition-colors mt-3 group"
+              role="menuitem"
+            >
+              Explore
+              <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
