@@ -38,13 +38,19 @@
  * | `g s` | Go to Sources |
  * | `g b` | Go to Bookmarks |
  * | `g r` | Go to Read Later |
+ * | `g w` | Go to Watchlist |
+ * | `g p` | Go to Portfolio |
+ * | `g c` | Go to Compare |
+ * | `g ,` | Go to Settings |
  * 
  * ### Actions
  * | Key | Action |
  * |-----|--------|
- * | `/` | Focus search input |
+ * | `/` or `Cmd+K` | Open search |
  * | `d` | Toggle dark mode |
  * | `?` | Show shortcuts help modal |
+ * | `w` | Toggle watchlist (on coin page) |
+ * | `a` | Open alert modal (on coin page) |
  * 
  * @see {@link https://docs.free-crypto-news.com/user-guide#keyboard-shortcuts User Guide}
  */
@@ -57,6 +63,8 @@ import { useTheme } from './ThemeProvider';
 interface ShortcutsContextType {
   showHelp: boolean;
   setShowHelp: (show: boolean) => void;
+  openSearch: boolean;
+  setOpenSearch: (open: boolean) => void;
 }
 
 const ShortcutsContext = createContext<ShortcutsContextType | undefined>(undefined);
@@ -75,6 +83,7 @@ interface KeyboardShortcutsProviderProps {
 
 export function KeyboardShortcutsProvider({ children }: KeyboardShortcutsProviderProps) {
   const [showHelp, setShowHelp] = useState(false);
+  const [openSearch, setOpenSearch] = useState(false);
   const [gPressed, setGPressed] = useState(false);
   const router = useRouter();
   const { toggleTheme } = useTheme();
@@ -91,6 +100,13 @@ export function KeyboardShortcutsProvider({ children }: KeyboardShortcutsProvide
       if (e.key === 'Escape') {
         target.blur();
       }
+      return;
+    }
+
+    // Cmd+K or Ctrl+K to open search
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      setOpenSearch(true);
       return;
     }
 
@@ -118,6 +134,22 @@ export function KeyboardShortcutsProvider({ children }: KeyboardShortcutsProvide
           e.preventDefault();
           router.push('/read');
           return;
+        case 'w':
+          e.preventDefault();
+          router.push('/watchlist');
+          return;
+        case 'p':
+          e.preventDefault();
+          router.push('/portfolio');
+          return;
+        case 'c':
+          e.preventDefault();
+          router.push('/compare');
+          return;
+        case ',':
+          e.preventDefault();
+          router.push('/settings');
+          return;
       }
     }
 
@@ -129,12 +161,7 @@ export function KeyboardShortcutsProvider({ children }: KeyboardShortcutsProvide
 
       case '/':
         e.preventDefault();
-        const searchInput = document.querySelector<HTMLInputElement>('[data-search-input]');
-        if (searchInput) {
-          searchInput.focus();
-        } else {
-          router.push('/search');
-        }
+        setOpenSearch(true);
         break;
 
       case '?':
@@ -144,6 +171,7 @@ export function KeyboardShortcutsProvider({ children }: KeyboardShortcutsProvide
 
       case 'Escape':
         setShowHelp(false);
+        setOpenSearch(false);
         setGPressed(false);
         break;
 
@@ -151,6 +179,22 @@ export function KeyboardShortcutsProvider({ children }: KeyboardShortcutsProvide
         if (!e.metaKey && !e.ctrlKey) {
           e.preventDefault();
           toggleTheme();
+        }
+        break;
+
+      case 'w':
+        // Toggle watchlist on coin pages - dispatch custom event
+        if (!e.metaKey && !e.ctrlKey && !e.altKey) {
+          const event = new CustomEvent('toggleWatchlist');
+          window.dispatchEvent(event);
+        }
+        break;
+
+      case 'a':
+        // Open alert modal on coin pages - dispatch custom event
+        if (!e.metaKey && !e.ctrlKey && !e.altKey) {
+          const event = new CustomEvent('openAlertModal');
+          window.dispatchEvent(event);
         }
         break;
 
@@ -194,7 +238,7 @@ export function KeyboardShortcutsProvider({ children }: KeyboardShortcutsProvide
   }, [handleKeyDown]);
 
   return (
-    <ShortcutsContext.Provider value={{ showHelp, setShowHelp }}>
+    <ShortcutsContext.Provider value={{ showHelp, setShowHelp, openSearch, setOpenSearch }}>
       {children}
       {showHelp && <ShortcutsHelp onClose={() => setShowHelp(false)} />}
     </ShortcutsContext.Provider>
@@ -208,7 +252,8 @@ function ShortcutsHelp({ onClose }: { onClose: () => void }) {
       { keys: ['j'], description: 'Next article' },
       { keys: ['k'], description: 'Previous article' },
       { keys: ['Enter'], description: 'Open article' },
-      { keys: ['/'], description: 'Focus search' },
+      { keys: ['⌘/Ctrl', 'K'], description: 'Open search', separator: '+' },
+      { keys: ['/'], description: 'Open search' },
     ]},
     { category: 'Go to', items: [
       { keys: ['g', 'h'], description: 'Home' },
@@ -216,9 +261,15 @@ function ShortcutsHelp({ onClose }: { onClose: () => void }) {
       { keys: ['g', 's'], description: 'Sources' },
       { keys: ['g', 'b'], description: 'Bookmarks' },
       { keys: ['g', 'r'], description: 'Reader' },
+      { keys: ['g', 'w'], description: 'Watchlist' },
+      { keys: ['g', 'p'], description: 'Portfolio' },
+      { keys: ['g', 'c'], description: 'Compare' },
+      { keys: ['g', ','], description: 'Settings' },
     ]},
     { category: 'Actions', items: [
       { keys: ['d'], description: 'Toggle dark mode' },
+      { keys: ['w'], description: 'Toggle watchlist (coin page)' },
+      { keys: ['a'], description: 'Add price alert (coin page)' },
       { keys: ['?'], description: 'Show shortcuts' },
       { keys: ['Esc'], description: 'Close dialog' },
     ]},
@@ -265,7 +316,9 @@ function ShortcutsHelp({ onClose }: { onClose: () => void }) {
                             {key}
                           </kbd>
                           {i < shortcut.keys.length - 1 && (
-                            <span className="text-gray-400 mx-1">then</span>
+                            <span className="text-gray-400 mx-1">
+                              {'separator' in shortcut ? shortcut.separator : 'then'}
+                            </span>
                           )}
                         </span>
                       ))}

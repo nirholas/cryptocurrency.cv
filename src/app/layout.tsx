@@ -7,6 +7,11 @@ import { OfflineIndicator } from '@/components/OfflineIndicator';
 import { BookmarksProvider } from '@/components/BookmarksProvider';
 import { ThemeProvider, ThemeScript } from '@/components/ThemeProvider';
 import { KeyboardShortcutsProvider } from '@/components/KeyboardShortcuts';
+import { WatchlistProvider } from '@/components/watchlist';
+import { AlertsProvider } from '@/components/alerts';
+import { PortfolioProvider } from '@/components/portfolio';
+import { GlobalSearch } from '@/components/GlobalSearch';
+import { ToastProvider } from '@/components/Toast';
 
 export const viewport: Viewport = {
   themeColor: [
@@ -168,16 +173,25 @@ export default function RootLayout({
           Skip to main content
         </a>
         <ThemeProvider>
-          <KeyboardShortcutsProvider>
-            <BookmarksProvider>
-              <PWAProvider>
-                {children}
-                <InstallPrompt />
-                <UpdatePrompt />
-                <OfflineIndicator />
-              </PWAProvider>
-            </BookmarksProvider>
-          </KeyboardShortcutsProvider>
+          <ToastProvider>
+            <KeyboardShortcutsProvider>
+              <WatchlistProvider>
+                <AlertsProvider>
+                  <PortfolioProvider>
+                    <BookmarksProvider>
+                      <PWAProvider>
+                        {children}
+                        <GlobalSearch />
+                        <InstallPrompt />
+                        <UpdatePrompt />
+                        <OfflineIndicator />
+                      </PWAProvider>
+                    </BookmarksProvider>
+                  </PortfolioProvider>
+                </AlertsProvider>
+              </WatchlistProvider>
+            </KeyboardShortcutsProvider>
+          </ToastProvider>
         </ThemeProvider>
       </body>
     </html>

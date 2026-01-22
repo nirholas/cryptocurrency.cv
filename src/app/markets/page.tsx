@@ -1,235 +1,381 @@
 /**
  * Markets Page
- * Full market data dashboard with prices, charts, and DeFi data
+ * Comprehensive markets dashboard for browsing, filtering, and discovering cryptocurrencies
  */
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { 
-  getTopCoins, 
-  getTrending, 
-  getGlobalMarketData, 
+import { Suspense } from 'react';
+import {
+  getTopCoins,
+  getTrending,
+  getGlobalMarketData,
   getFearGreedIndex,
-  getTopProtocols,
-  formatPrice, 
-  formatNumber, 
-  formatPercent,
-  getFearGreedColor,
-  getFearGreedBgColor,
+  type TokenPrice,
 } from '@/lib/market-data';
 import type { Metadata } from 'next';
-import Link from 'next/link';
+
+// Components
+import GlobalStatsBar from './components/GlobalStatsBar';
+import TrendingSection from './components/TrendingSection';
+import CategoryTabs from './components/CategoryTabs';
+import SearchAndFilters from './components/SearchAndFilters';
+import CoinsTable from './components/CoinsTable';
+import type { SortField, SortOrder } from './components/SortableHeader';
 
 export const metadata: Metadata = {
   title: 'Crypto Markets - Free Crypto News',
-  description: 'Live cryptocurrency prices, market data, DeFi protocols, and market analysis.',
+  description: 'Live cryptocurrency prices, market data, charts, and analytics. Browse and discover cryptocurrencies.',
+  openGraph: {
+    title: 'Crypto Markets - Free Crypto News',
+    description: 'Live cryptocurrency prices, market data, charts, and analytics.',
+  },
 };
 
 export const revalidate = 60; // Revalidate every minute
 
-export default async function MarketsPage() {
-  const [coins, trending, global, fearGreed, protocols] = await Promise.all([
-    getTopCoins(50),
+// Define valid sort fields
+const VALID_SORT_FIELDS: SortField[] = [
+  'market_cap_rank',
+  'current_price',
+  'price_change_percentage_1h_in_currency',
+  'price_change_percentage_24h',
+  'price_change_percentage_7d_in_currency',
+  'market_cap',
+  'total_volume',
+  'circulating_supply',
+];
+
+interface MarketsPageProps {
+  searchParams: Promise<{
+    page?: string;
+    sort?: string;
+    order?: string;
+    category?: string;
+    search?: string;
+    price?: string;
+    marketCap?: string;
+    change?: string;
+    perPage?: string;
+  }>;
+}
+
+// Filter coins based on URL params
+function filterCoins(
+  coins: TokenPrice[],
+  params: {
+    search?: string;
+    price?: string;
+    marketCap?: string;
+    change?: string;
+  }
+): TokenPrice[] {
+  let filtered = [...coins];
+
+  // Search filter
+  if (params.search) {
+    const query = params.search.toLowerCase();
+    filtered = filtered.filter(
+      (coin) =>
+        coin.name.toLowerCase().includes(query) ||
+        coin.symbol.toLowerCase().includes(query)
+    );
+  }
+
+  // Price range filter
+  if (params.price && params.price !== 'all') {
+    filtered = filtered.filter((coin) => {
+      const price = coin.current_price;
+      switch (params.price) {
+        case '0-1':
+          return price >= 0 && price < 1;
+        case '1-10':
+          return price >= 1 && price < 10;
+        case '10-100':
+          return price >= 10 && price < 100;
+        case '100+':
+          return price >= 100;
+        default:
+          return true;
+      }
+    });
+  }
+
+  // Market cap filter
+  if (params.marketCap && params.marketCap !== 'all') {
+    filtered = filtered.filter((coin) => {
+      const cap = coin.market_cap;
+      switch (params.marketCap) {
+        case '1b+':
+          return cap >= 1_000_000_000;
+        case '100m+':
+          return cap >= 100_000_000;
+        case '10m+':
+          return cap >= 10_000_000;
+        case '<10m':
+          return cap < 10_000_000;
+        default:
+          return true;
+      }
+    });
+  }
+
+  // 24h change filter
+  if (params.change && params.change !== 'all') {
+    filtered = filtered.filter((coin) => {
+      const change = coin.price_change_percentage_24h || 0;
+      switch (params.change) {
+        case 'gainers':
+          return change > 0;
+        case 'losers':
+          return change < 0;
+        default:
+          return true;
+      }
+    });
+  }
+
+  return filtered;
+}
+
+// Sort coins based on URL params
+function sortCoins(
+  coins: TokenPrice[],
+  sortField: SortField,
+  order: SortOrder
+): TokenPrice[] {
+  const sorted = [...coins];
+
+  sorted.sort((a, b) => {
+    let aValue: number;
+    let bValue: number;
+
+    switch (sortField) {
+      case 'market_cap_rank':
+        aValue = a.market_cap_rank || 9999;
+        bValue = b.market_cap_rank || 9999;
+        break;
+      case 'current_price':
+        aValue = a.current_price || 0;
+        bValue = b.current_price || 0;
+        break;
+      case 'price_change_percentage_24h':
+        aValue = a.price_change_percentage_24h || 0;
+        bValue = b.price_change_percentage_24h || 0;
+        break;
+      case 'price_change_percentage_7d_in_currency':
+        aValue = a.price_change_percentage_7d_in_currency || 0;
+        bValue = b.price_change_percentage_7d_in_currency || 0;
+        break;
+      case 'market_cap':
+        aValue = a.market_cap || 0;
+        bValue = b.market_cap || 0;
+        break;
+      case 'total_volume':
+        aValue = a.total_volume || 0;
+        bValue = b.total_volume || 0;
+        break;
+      case 'circulating_supply':
+        aValue = a.circulating_supply || 0;
+        bValue = b.circulating_supply || 0;
+        break;
+      default:
+        aValue = a.market_cap_rank || 9999;
+        bValue = b.market_cap_rank || 9999;
+    }
+
+    if (order === 'asc') {
+      return aValue - bValue;
+    }
+    return bValue - aValue;
+  });
+
+  return sorted;
+}
+
+export default async function MarketsPage({ searchParams }: MarketsPageProps) {
+  const params = await searchParams;
+  
+  // Parse URL params
+  const currentPage = Math.max(1, parseInt(params.page || '1', 10));
+  const sortField = (
+    VALID_SORT_FIELDS.includes(params.sort as SortField) 
+      ? params.sort 
+      : 'market_cap_rank'
+  ) as SortField;
+  const sortOrder = (params.order === 'asc' ? 'asc' : 'desc') as SortOrder;
+  const perPage = [20, 50, 100].includes(parseInt(params.perPage || '50', 10))
+    ? parseInt(params.perPage || '50', 10)
+    : 50;
+  const category = params.category || 'all';
+
+  // Fetch data in parallel
+  const [allCoins, trending, global, fearGreed] = await Promise.all([
+    getTopCoins(250), // Get more coins for filtering
     getTrending(),
     getGlobalMarketData(),
     getFearGreedIndex(),
-    getTopProtocols(20),
   ]);
 
+  // Apply filters
+  let filteredCoins = filterCoins(allCoins, {
+    search: params.search,
+    price: params.price,
+    marketCap: params.marketCap,
+    change: params.change,
+  });
+
+  // Apply sorting
+  filteredCoins = sortCoins(filteredCoins, sortField, sortOrder);
+
+  // Pagination
+  const totalCount = filteredCoins.length;
+  const startIndex = (currentPage - 1) * perPage;
+  const paginatedCoins = filteredCoins.slice(startIndex, startIndex + perPage);
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
       <div className="max-w-7xl mx-auto">
         <Header />
-        
-        <main className="px-4 py-8">
+
+        {/* Global Stats Bar */}
+        <GlobalStatsBar global={global} fearGreed={fearGreed} />
+
+        <main className="px-4 py-6">
           {/* Page Header */}
-          <div className="mb-8">
-            <h1 className="text-4xl font-bold mb-2">📊 Crypto Markets</h1>
-            <p className="text-gray-600">
-              Live cryptocurrency prices and market data
+          <div className="mb-6">
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+              📊 Cryptocurrency Markets
+            </h1>
+            <p className="text-gray-600 dark:text-gray-400">
+              Live prices, charts, and market data for {totalCount.toLocaleString()} cryptocurrencies
             </p>
           </div>
 
-          {/* Global Stats */}
-          {global && (
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              <div className="bg-white rounded-xl p-4 border">
-                <p className="text-gray-500 text-sm">Total Market Cap</p>
-                <p className="text-xl font-bold">${formatNumber(global.total_market_cap?.usd)}</p>
-                <p className={`text-sm ${global.market_cap_change_percentage_24h_usd >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                  {formatPercent(global.market_cap_change_percentage_24h_usd)} (24h)
-                </p>
-              </div>
-              <div className="bg-white rounded-xl p-4 border">
-                <p className="text-gray-500 text-sm">24h Volume</p>
-                <p className="text-xl font-bold">${formatNumber(global.total_volume?.usd)}</p>
-              </div>
-              <div className="bg-white rounded-xl p-4 border">
-                <p className="text-gray-500 text-sm">BTC Dominance</p>
-                <p className="text-xl font-bold">{global.market_cap_percentage?.btc?.toFixed(1)}%</p>
-              </div>
-              {fearGreed && (
-                <div className="bg-white rounded-xl p-4 border">
-                  <p className="text-gray-500 text-sm">Fear & Greed</p>
-                  <div className="flex items-center gap-2">
-                    <span className={`text-xl font-bold ${getFearGreedColor(Number(fearGreed.value))}`}>
-                      {fearGreed.value}
-                    </span>
-                    <span className="text-sm text-gray-500">({fearGreed.value_classification})</span>
-                  </div>
-                  <div className="h-1.5 bg-gray-200 rounded-full mt-2 overflow-hidden">
-                    <div 
-                      className={`h-full ${getFearGreedBgColor(Number(fearGreed.value))}`}
-                      style={{ width: `${fearGreed.value}%` }}
-                    />
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
-
           {/* Trending Section */}
-          {trending.length > 0 && (
-            <div className="mb-8">
-              <h2 className="text-lg font-bold mb-4">🔥 Trending</h2>
-              <div className="flex gap-3 overflow-x-auto pb-2">
-                {trending.slice(0, 7).map((coin) => (
-                  <div
-                    key={coin.id}
-                    className="flex-shrink-0 bg-white border rounded-lg p-3 flex items-center gap-3"
-                  >
-                    <img src={coin.thumb} alt={coin.name} className="w-8 h-8 rounded-full" />
-                    <div>
-                      <span className="font-medium">{coin.symbol.toUpperCase()}</span>
-                      <span className="text-gray-500 text-sm ml-2">#{coin.market_cap_rank}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+          <Suspense fallback={<TrendingSectionSkeleton />}>
+            <TrendingSection trending={trending} coins={allCoins} />
+          </Suspense>
 
-          {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Coins Table (2/3 width) */}
-            <div className="lg:col-span-2">
-              <div className="bg-white rounded-xl border overflow-hidden">
-                <div className="p-4 border-b">
-                  <h2 className="font-bold text-lg">Top Cryptocurrencies</h2>
-                </div>
-                <div className="overflow-x-auto">
-                  <table className="w-full">
-                    <thead>
-                      <tr className="border-b bg-gray-50">
-                        <th className="text-left text-gray-500 text-sm font-medium p-4">#</th>
-                        <th className="text-left text-gray-500 text-sm font-medium p-4">Coin</th>
-                        <th className="text-right text-gray-500 text-sm font-medium p-4">Price</th>
-                        <th className="text-right text-gray-500 text-sm font-medium p-4 hidden sm:table-cell">24h</th>
-                        <th className="text-right text-gray-500 text-sm font-medium p-4 hidden md:table-cell">7d</th>
-                        <th className="text-right text-gray-500 text-sm font-medium p-4 hidden lg:table-cell">Market Cap</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {coins.map((coin) => (
-                        <tr key={coin.id} className="border-b hover:bg-gray-50 transition">
-                          <td className="p-4 text-gray-500">{coin.market_cap_rank}</td>
-                          <td className="p-4">
-                            <div className="flex items-center gap-3">
-                              {coin.image && (
-                                <img src={coin.image} alt={coin.name} className="w-8 h-8 rounded-full" />
-                              )}
-                              <div>
-                                <span className="font-medium">{coin.name}</span>
-                                <span className="text-gray-500 text-sm ml-2">{coin.symbol.toUpperCase()}</span>
-                              </div>
-                            </div>
-                          </td>
-                          <td className="p-4 text-right font-medium">{formatPrice(coin.current_price)}</td>
-                          <td className={`p-4 text-right hidden sm:table-cell ${coin.price_change_percentage_24h >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                            {formatPercent(coin.price_change_percentage_24h)}
-                          </td>
-                          <td className={`p-4 text-right hidden md:table-cell ${(coin.price_change_percentage_7d_in_currency || 0) >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                            {formatPercent(coin.price_change_percentage_7d_in_currency)}
-                          </td>
-                          <td className="p-4 text-right text-gray-500 hidden lg:table-cell">${formatNumber(coin.market_cap)}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
+          {/* Category Tabs */}
+          <Suspense fallback={<CategoryTabsSkeleton />}>
+            <CategoryTabs activeCategory={category} />
+          </Suspense>
 
-            {/* Sidebar (1/3 width) */}
-            <div className="space-y-6">
-              {/* DeFi Protocols */}
-              <div className="bg-white rounded-xl border overflow-hidden">
-                <div className="p-4 border-b">
-                  <h2 className="font-bold text-lg">🏦 Top DeFi Protocols</h2>
-                  <p className="text-gray-500 text-sm">By Total Value Locked</p>
-                </div>
-                <div className="divide-y">
-                  {protocols.slice(0, 10).map((protocol, index) => (
-                    <div key={protocol.id} className="flex items-center justify-between p-4 hover:bg-gray-50 transition">
-                      <div className="flex items-center gap-3">
-                        <span className="text-gray-400 text-sm w-5">{index + 1}</span>
-                        {protocol.logo && (
-                          <img src={protocol.logo} alt={protocol.name} className="w-6 h-6 rounded-full" />
-                        )}
-                        <div>
-                          <span className="font-medium">{protocol.name}</span>
-                          <span className="text-gray-500 text-xs block">{protocol.category}</span>
-                        </div>
-                      </div>
-                      <div className="text-right">
-                        <span className="font-medium">${formatNumber(protocol.tvl)}</span>
-                        {protocol.change_1d && (
-                          <span className={`text-xs block ${protocol.change_1d >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                            {formatPercent(protocol.change_1d)}
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+          {/* Search and Filters */}
+          <Suspense fallback={<SearchFiltersSkeleton />}>
+            <SearchAndFilters coins={allCoins} />
+          </Suspense>
 
-              {/* Quick Links */}
-              <div className="bg-white rounded-xl border p-4">
-                <h3 className="font-bold mb-3">📰 Related News</h3>
-                <div className="space-y-2">
-                  <Link href="/category/markets" className="block text-blue-600 hover:underline">
-                    Market Analysis →
-                  </Link>
-                  <Link href="/category/defi" className="block text-blue-600 hover:underline">
-                    DeFi News →
-                  </Link>
-                  <Link href="/category/bitcoin" className="block text-blue-600 hover:underline">
-                    Bitcoin News →
-                  </Link>
-                </div>
-              </div>
+          {/* Coins Table */}
+          <Suspense fallback={<TableSkeleton />}>
+            <CoinsTable
+              coins={paginatedCoins}
+              totalCount={totalCount}
+              currentPage={currentPage}
+              itemsPerPage={perPage}
+              currentSort={sortField}
+              currentOrder={sortOrder}
+              showWatchlist={true}
+            />
+          </Suspense>
 
-              {/* Data Attribution */}
-              <div className="text-center text-gray-500 text-sm">
-                <p>
-                  Market data from{' '}
-                  <a href="https://www.coingecko.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                    CoinGecko
-                  </a>
-                </p>
-                <p className="mt-1">
-                  DeFi data from{' '}
-                  <a href="https://defillama.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                    DeFiLlama
-                  </a>
-                </p>
-              </div>
-            </div>
+          {/* Data Attribution */}
+          <div className="mt-8 text-center text-gray-500 dark:text-gray-400 text-sm">
+            <p>
+              Market data provided by{' '}
+              <a
+                href="https://www.coingecko.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                CoinGecko
+              </a>
+              {' • '}
+              Updates every minute
+            </p>
           </div>
         </main>
-        
+
         <Footer />
+      </div>
+    </div>
+  );
+}
+
+// Skeleton Components for Suspense
+function TrendingSectionSkeleton() {
+  return (
+    <div className="grid md:grid-cols-2 gap-4 mb-6">
+      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4">
+        <div className="h-6 w-32 bg-gray-200 dark:bg-gray-700 rounded mb-3 animate-pulse" />
+        <div className="flex gap-2">
+          {[1, 2, 3, 4, 5].map((i) => (
+            <div
+              key={i}
+              className="h-10 w-24 bg-gray-100 dark:bg-gray-700 rounded-lg animate-pulse"
+            />
+          ))}
+        </div>
+      </div>
+      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4">
+        <div className="h-6 w-32 bg-gray-200 dark:bg-gray-700 rounded mb-3 animate-pulse" />
+        <div className="space-y-2">
+          {[1, 2, 3, 4, 5].map((i) => (
+            <div
+              key={i}
+              className="h-8 bg-gray-100 dark:bg-gray-700 rounded animate-pulse"
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function CategoryTabsSkeleton() {
+  return (
+    <div className="flex gap-2 mb-4 overflow-hidden">
+      {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+        <div
+          key={i}
+          className="h-10 w-24 bg-gray-100 dark:bg-gray-700 rounded-full animate-pulse flex-shrink-0"
+        />
+      ))}
+    </div>
+  );
+}
+
+function SearchFiltersSkeleton() {
+  return (
+    <div className="flex flex-wrap gap-3 mb-4">
+      <div className="h-10 w-64 bg-gray-100 dark:bg-gray-700 rounded-xl animate-pulse" />
+      <div className="h-10 w-32 bg-gray-100 dark:bg-gray-700 rounded-lg animate-pulse" />
+      <div className="h-10 w-32 bg-gray-100 dark:bg-gray-700 rounded-lg animate-pulse" />
+      <div className="h-10 w-32 bg-gray-100 dark:bg-gray-700 rounded-lg animate-pulse" />
+    </div>
+  );
+}
+
+function TableSkeleton() {
+  return (
+    <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+      <div className="p-4 border-b border-gray-200 dark:border-gray-700">
+        <div className="h-6 w-48 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+      </div>
+      <div className="divide-y divide-gray-100 dark:divide-gray-800">
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
+          <div key={i} className="flex items-center gap-4 p-4">
+            <div className="h-4 w-8 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+            <div className="h-8 w-8 bg-gray-200 dark:bg-gray-700 rounded-full animate-pulse" />
+            <div className="h-4 w-32 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+            <div className="h-4 w-20 bg-gray-200 dark:bg-gray-700 rounded animate-pulse ml-auto" />
+            <div className="h-4 w-16 bg-gray-200 dark:bg-gray-700 rounded animate-pulse hidden sm:block" />
+            <div className="h-4 w-16 bg-gray-200 dark:bg-gray-700 rounded animate-pulse hidden md:block" />
+            <div className="h-4 w-24 bg-gray-200 dark:bg-gray-700 rounded animate-pulse hidden lg:block" />
+          </div>
+        ))}
       </div>
     </div>
   );

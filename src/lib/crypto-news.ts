@@ -471,3 +471,120 @@ export async function getBitcoinNews(limit: number = 10): Promise<NewsResponse> 
 export async function getEthereumNews(limit: number = 10): Promise<NewsResponse> {
   return getNewsByCategory('ethereum', limit);
 }
+
+// ═══════════════════════════════════════════════════════════════
+// INTERNATIONAL NEWS INTEGRATION
+// ═══════════════════════════════════════════════════════════════
+
+// Re-export international news functions for convenience
+export {
+  getInternationalNews,
+  getNewsByLanguage,
+  getNewsByRegion,
+  getInternationalSources,
+  getSourceHealthStats,
+  INTERNATIONAL_SOURCES,
+  KOREAN_SOURCES,
+  CHINESE_SOURCES,
+  JAPANESE_SOURCES,
+  SPANISH_SOURCES,
+  SOURCES_BY_LANGUAGE,
+  SOURCES_BY_REGION,
+} from './international-sources';
+
+export type {
+  InternationalSource,
+  InternationalArticle,
+  InternationalNewsResponse,
+  InternationalNewsOptions,
+} from './international-sources';
+
+// Re-export translation functions
+export {
+  translateInternationalArticles,
+  translateInternationalNewsResponse,
+  isTranslationAvailable,
+  getInternationalTranslationCacheStats,
+  clearInternationalTranslationCache,
+} from './source-translator';
+
+/**
+ * Get combined news from both English and international sources
+ * Returns a mixed feed sorted by publication date
+ */
+export async function getGlobalNews(
+  limit: number = 20,
+  options?: {
+    includeInternational?: boolean;
+    translateInternational?: boolean;
+    languages?: ('ko' | 'zh' | 'ja' | 'es')[];
+  }
+): Promise<NewsResponse & { internationalCount: number }> {
+  const { 
+    includeInternational = true, 
+    translateInternational = false,
+    languages,
+  } = options || {};
+
+  const normalizedLimit = Math.min(Math.max(1, limit), 100);
+
+  // Fetch English news
+  const englishNews = await getLatestNews(normalizedLimit);
+  
+  if (!includeInternational) {
+    return {
+      ...englishNews,
+      internationalCount: 0,
+    };
+  }
+
+  // Import dynamically to avoid circular dependencies
+  const { getInternationalNews: fetchIntlNews } = await import('./international-sources');
+  const { translateInternationalNewsResponse: translateIntlNews, isTranslationAvailable: checkTranslation } = await import('./source-translator');
+
+  // Fetch international news
+  let intlNews = await fetchIntlNews({
+    language: languages?.length === 1 ? languages[0] : 'all',
+    limit: Math.ceil(normalizedLimit / 2),
+  });
+
+  // Translate if requested and available
+  if (translateInternational && checkTranslation()) {
+    try {
+      intlNews = await translateIntlNews(intlNews);
+    } catch (error) {
+      console.warn('Failed to translate international news:', error);
+    }
+  }
+
+  // Filter by specific languages if provided
+  let intlArticles = intlNews.articles;
+  if (languages && languages.length > 0) {
+    intlArticles = intlArticles.filter(a => languages.includes(a.language as 'ko' | 'zh' | 'ja' | 'es'));
+  }
+
+  // Convert international articles to standard format
+  const convertedIntlArticles: NewsArticle[] = intlArticles.map(article => ({
+    title: article.titleEnglish || article.title,
+    link: article.link,
+    description: article.descriptionEnglish || article.description,
+    pubDate: article.pubDate,
+    source: article.source,
+    sourceKey: article.sourceKey,
+    category: article.category,
+    timeAgo: article.timeAgo,
+  }));
+
+  // Merge and sort by date
+  const allArticles = [...englishNews.articles, ...convertedIntlArticles]
+    .sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime())
+    .slice(0, normalizedLimit);
+
+  return {
+    articles: allArticles,
+    totalCount: englishNews.totalCount + intlNews.total,
+    sources: [...englishNews.sources, ...new Set(intlArticles.map(a => a.source))],
+    fetchedAt: new Date().toISOString(),
+    internationalCount: convertedIntlArticles.length,
+  };
+}

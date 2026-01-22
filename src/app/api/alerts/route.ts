@@ -1,5 +1,7 @@
 /**
  * Alerts API
+ * 
+ * Supports both legacy user-based alerts and enhanced rule-based alerts.
  */
 
 import { NextRequest, NextResponse } from 'next/server';
@@ -13,7 +15,15 @@ import {
   checkPriceAlerts,
   checkKeywordAlerts,
   getAlertStats,
+  // Enhanced alert rule functions
+  getAllAlertRules,
+  createAlertRule,
+  evaluateAllAlerts,
+  getEnhancedAlertStats,
+  testTriggerAlert,
+  getAlertEvents,
 } from '@/lib/alerts';
+import type { AlertCondition, AlertChannel } from '@/lib/alert-rules';
 
 export const runtime = 'edge';
 
@@ -39,12 +49,46 @@ export async function GET(request: NextRequest) {
     });
   }
 
-  // Get stats (admin)
-  if (action === 'stats') {
-    return NextResponse.json(getAlertStats());
+  // Evaluate enhanced alert rules
+  if (action === 'evaluate') {
+    const events = await evaluateAllAlerts();
+    return NextResponse.json({
+      evaluated: true,
+      eventsTriggered: events.length,
+      events,
+    });
   }
 
-  // Get user alerts
+  // Get stats (admin)
+  if (action === 'stats') {
+    const legacyStats = getAlertStats();
+    const enhancedStats = getEnhancedAlertStats();
+    return NextResponse.json({
+      legacy: legacyStats,
+      enhanced: enhancedStats,
+    });
+  }
+
+  // List all enhanced alert rules
+  if (action === 'rules' || action === 'list') {
+    const alerts = getAllAlertRules();
+    return NextResponse.json({
+      alerts,
+      total: alerts.length,
+    });
+  }
+
+  // Get recent alert events
+  if (action === 'events') {
+    const limit = parseInt(searchParams.get('limit') || '100', 10);
+    const events = getAlertEvents(limit);
+    return NextResponse.json({
+      events,
+      total: events.length,
+    });
+  }
+
+  // Get user alerts (legacy)
   if (userId) {
     const alerts = getUserAlerts(userId);
     const history = getAlertHistory(userId);
@@ -55,45 +99,57 @@ export async function GET(request: NextRequest) {
     });
   }
 
+  // Default: return all alert rules
+  const alerts = getAllAlertRules();
   return NextResponse.json({
-    message: 'Alerts API',
-    endpoints: {
-      getUserAlerts: 'GET /api/alerts?userId=xxx',
-      createPriceAlert: 'POST /api/alerts { type: "price", ... }',
-      createKeywordAlert: 'POST /api/alerts { type: "keyword", ... }',
-      deleteAlert: 'DELETE /api/alerts?alertId=xxx',
-      toggleAlert: 'PATCH /api/alerts { alertId, active }',
-      checkAlerts: 'GET /api/alerts?action=check (cron)',
-    },
-    examples: {
-      priceAlert: {
-        type: 'price',
-        userId: 'user_123',
-        coin: 'Bitcoin',
-        coinId: 'bitcoin',
-        condition: 'above',
-        threshold: 100000,
-        notifyVia: ['push', 'email'],
-      },
-      keywordAlert: {
-        type: 'keyword',
-        userId: 'user_123',
-        keywords: ['bitcoin', 'etf', 'sec'],
-        sources: ['coindesk', 'theblock'],
-        notifyVia: ['push'],
-      },
-    },
+    alerts,
+    total: alerts.length,
   });
 }
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { type, userId, ...options } = body;
+    const { type, userId, name, condition, channels, webhookUrl, cooldown, ...options } = body;
 
+    // Enhanced alert rule creation
+    if (type === 'rule' || condition) {
+      if (!name || typeof name !== 'string') {
+        return NextResponse.json(
+          { error: 'name is required for alert rules' },
+          { status: 400 }
+        );
+      }
+
+      if (!condition || typeof condition !== 'object') {
+        return NextResponse.json(
+          { error: 'condition object is required for alert rules' },
+          { status: 400 }
+        );
+      }
+
+      const alertChannels: AlertChannel[] = Array.isArray(channels) 
+        ? channels.filter((c: string) => c === 'websocket' || c === 'webhook')
+        : ['websocket'];
+
+      try {
+        const alert = createAlertRule(name, condition as AlertCondition, alertChannels, {
+          webhookUrl,
+          cooldown: typeof cooldown === 'number' ? cooldown : undefined,
+        });
+        return NextResponse.json({ alert }, { status: 201 });
+      } catch (error) {
+        return NextResponse.json(
+          { error: error instanceof Error ? error.message : 'Invalid alert rule' },
+          { status: 400 }
+        );
+      }
+    }
+
+    // Legacy user-based alerts
     if (!userId) {
       return NextResponse.json(
-        { error: 'userId is required' },
+        { error: 'userId is required for legacy alerts, or use type: "rule" with condition' },
         { status: 400 }
       );
     }
@@ -123,7 +179,7 @@ export async function POST(request: NextRequest) {
     }
 
     return NextResponse.json(
-      { error: 'type must be "price" or "keyword"' },
+      { error: 'type must be "price", "keyword", or "rule"' },
       { status: 400 }
     );
   } catch (error) {
@@ -136,7 +192,7 @@ export async function POST(request: NextRequest) {
 
 export async function DELETE(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
-  const alertId = searchParams.get('alertId');
+  const alertId = searchParams.get('alertId') || searchParams.get('id');
 
   if (!alertId) {
     return NextResponse.json(
@@ -145,7 +201,13 @@ export async function DELETE(request: NextRequest) {
     );
   }
 
-  const success = await deleteAlert(alertId);
+  // Try legacy alerts first, then enhanced alert rules
+  const { deleteAlertRule } = await import('@/lib/alerts');
+  let success = await deleteAlert(alertId);
+  
+  if (!success) {
+    success = deleteAlertRule(alertId);
+  }
 
   return NextResponse.json({
     success,
@@ -165,14 +227,14 @@ export async function PATCH(request: NextRequest) {
       );
     }
 
-    const success = await toggleAlert(alertId, active);
-
-    return NextResponse.json({
-      success,
-      message: success ? `Alert ${active ? 'enabled' : 'disabled'}` : 'Alert not found',
-    });
-  } catch (error) {
-    return NextResponse.json(
+    // Try legacy alerts first, then enhanced alert rules
+    const { updateAlertRule } = await import('@/lib/alerts');
+    let success = await toggleAlert(alertId, active);
+    
+    if (!success) {
+      const updated = updateAlertRule(alertId, { enabled: active });
+      success = updated !== null;
+    }
       { error: 'Invalid request body' },
       { status: 400 }
     );

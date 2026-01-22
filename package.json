@@ -69,7 +69,8 @@
     "recharts": "^2.15.4",
     "redis": "^5.10.0",
     "sanitize-html": "^2.17.0",
-    "sharp": "^0.34.5"
+    "sharp": "^0.34.5",
+    "swr": "^2.3.8"
   },
   "devDependencies": {
     "@axe-core/cli": "^4.11.0",
