@@ -47,6 +47,7 @@
   },
   "homepage": "https://github.com/nirholas/free-crypto-news#readme",
   "devDependencies": {
+    "@types/node": "^25.0.10",
     "tsup": "^8.0.0",
     "typescript": "^5.0.0",
     "vitest": "^4.0.16"

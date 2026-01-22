@@ -1,7 +1,7 @@
 {
   "name": "free-crypto-news",
-  "version": "1.0.0",
-  "description": "🆓 100% FREE crypto news API.  No API keys.  No rate limits. No BS.",
+  "version": "1.0.1",
+  "description": "Real-time crypto news aggregator with AI analysis, 12+ sources, sentiment tracking, and full market data. Works with Claude, ChatGPT, Discord, Telegram & more.",
   "private": false,
   "scripts": {
     "dev": "next dev",
