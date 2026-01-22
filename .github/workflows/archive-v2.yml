@@ -15,9 +15,13 @@ on:
 permissions:
   contents: write
 
+# DISABLED - Actions disabled for this repo to save costs
+# To re-enable, remove 'if: false' from the job
+
 jobs:
   archive:
     runs-on: ubuntu-latest
+    if: false # DISABLED - remove this line to enable
     timeout-minutes: 15
     
     steps:
