@@ -8,6 +8,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **International News Sources** - 12 new sources from Korea, China, Japan, and Latin America
+  - Korean: Block Media, TokenPost, CoinDesk Korea
+  - Chinese: 8BTC (巴比特), Jinse Finance (金色财经), Odaily (星球日报)
+  - Japanese: CoinPost, CoinDesk Japan, Cointelegraph Japan
+  - Spanish: Cointelegraph Español, Diario Bitcoin, CriptoNoticias
+- **Auto-Translation** - Translate international news to English using Groq AI
+- **`GET /api/news/international`** - New endpoint with language/region filtering
+- **Translation Caching** - 7-day cache for translated content
+- **Source Health Monitoring** - Track availability of international sources
+- **`getGlobalNews()`** - Combined English + international news feed
+- **AI Daily Brief** - Comprehensive daily crypto news digest at `/api/ai/brief` with market overview, top stories, sector analysis, and risk alerts
+- **AI Bull vs Bear Debate** - Generate balanced bull/bear perspectives at `/api/ai/debate` for any article or topic
+- **AI Counter-Arguments** - Challenge claims with structured counter-arguments at `/api/ai/counter` including assumption analysis and alternative interpretations
 - **Keyboard Shortcuts** - Power user navigation with `j`/`k` for articles, `/` for search, `g+h/t/s/b` for quick access, `d` for dark mode, `?` for help modal
 - **Reading Progress Bar** - Visual scroll indicator on article pages with gradient styling
 - **Search Autocomplete** - Real-time search suggestions with 300ms debounce and keyboard navigation

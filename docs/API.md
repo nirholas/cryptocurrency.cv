@@ -10,6 +10,7 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
 
 - [News Endpoints](#news-endpoints)
   - [GET /api/news](#get-apinews)
+  - [GET /api/news/international](#get-apinewsinternational)
   - [GET /api/bitcoin](#get-apibitcoin)
   - [GET /api/defi](#get-apidefi)
   - [GET /api/breaking](#get-apibreaking)
@@ -34,6 +35,10 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
 - [Market Data](#market-data)
   - [GET /api/sources](#get-apisources)
   - [GET /api/stats](#get-apistats)
+- [Analytics & Intelligence](#analytics--intelligence)
+  - [GET /api/analytics/headlines](#get-apianalyticsheadlines)
+  - [GET /api/analytics/credibility](#get-apianalyticscredibility)
+  - [GET /api/analytics/anomalies](#get-apianalyticsanomalies)
 - [Feed Formats](#feed-formats)
   - [GET /api/rss](#get-apirss)
   - [GET /api/atom](#get-apiatom)
@@ -102,6 +107,94 @@ curl "https://free-crypto-news.vercel.app/api/news?limit=5&source=coindesk"
   "responseTime": "245ms"
 }
 ```
+
+---
+
+### GET /api/news/international
+
+Fetch news from international crypto news sources with optional translation to English.
+
+**Supported Sources (12 total):**
+
+| Region | Language | Sources |
+|--------|----------|--------|
+| 🇰🇷 Korea | Korean (ko) | Block Media, TokenPost, CoinDesk Korea |
+| 🇨🇳 China | Chinese (zh) | 8BTC (巴比特), Jinse Finance (金色财经), Odaily (星球日报) |
+| 🇯🇵 Japan | Japanese (ja) | CoinPost, CoinDesk Japan, Cointelegraph Japan |
+| 🇪🇸 Latin America | Spanish (es) | Cointelegraph Español, Diario Bitcoin, CriptoNoticias |
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `language` | string | all | Filter by language: `ko`, `zh`, `ja`, `es`, or `all` |
+| `region` | string | all | Filter by region: `asia`, `latam`, or `all` |
+| `translate` | boolean | false | Translate titles/descriptions to English |
+| `limit` | integer | 20 | Number of articles (1-100) |
+| `sources` | boolean | false | Return source info instead of articles |
+
+**Example - Get Korean news:**
+
+```bash
+curl "https://free-crypto-news.vercel.app/api/news/international?language=ko&limit=10"
+```
+
+**Example - Get all Asian news with translation:**
+
+```bash
+curl "https://free-crypto-news.vercel.app/api/news/international?region=asia&translate=true"
+```
+
+**Example - Get source information:**
+
+```bash
+curl "https://free-crypto-news.vercel.app/api/news/international?sources=true"
+```
+
+**Response:**
+
+```json
+{
+  "articles": [
+    {
+      "id": "blockmedia-abc123",
+      "title": "비트코인 가격 상승",
+      "titleEnglish": "Bitcoin Price Rises",
+      "description": "비트코인이 새로운 고점에 도달...",
+      "descriptionEnglish": "Bitcoin reaches new highs...",
+      "link": "https://blockmedia.co.kr/...",
+      "source": "Block Media",
+      "sourceKey": "blockmedia",
+      "language": "ko",
+      "pubDate": "2026-01-22T10:30:00Z",
+      "category": "general",
+      "region": "asia",
+      "timeAgo": "2h ago"
+    }
+  ],
+  "meta": {
+    "total": 45,
+    "languages": ["ko", "zh", "ja"],
+    "regions": ["asia"],
+    "translationEnabled": true,
+    "translationAvailable": true,
+    "translated": true
+  },
+  "_links": {
+    "self": "/api/news/international?language=all&region=asia&limit=20&translate=true",
+    "sources": "/api/news/international?sources=true"
+  },
+  "_meta": {
+    "responseTimeMs": 1250
+  }
+}
+```
+
+**Translation Notes:**
+- Translation requires `GROQ_API_KEY` environment variable
+- Translations are cached for 7 days
+- Rate limited to 1 translation request per second
+- Original text is always preserved alongside translations
 
 ---
 
@@ -722,6 +815,216 @@ API usage statistics and metrics.
   "cacheHitRate": "94.2%"
 }
 ```
+
+---
+
+## Analytics & Intelligence
+
+Advanced analytics features for tracking headline evolution, source credibility, and anomaly detection.
+
+### GET /api/analytics/headlines
+
+Track how article headlines change over time.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `hours` | integer | 24 | Time window to look back (1-168) |
+| `changesOnly` | boolean | false | Only return headlines that changed |
+
+**Example:**
+
+```bash
+curl "https://free-crypto-news.vercel.app/api/analytics/headlines?hours=24&changesOnly=true"
+```
+
+**Response:**
+
+```json
+{
+  "tracked": [
+    {
+      "articleId": "art_abc123",
+      "originalTitle": "Bitcoin Hits $100K",
+      "currentTitle": "Bitcoin Surges Past $100K Milestone",
+      "changes": [
+        {
+          "title": "Bitcoin Surges Past $100K Milestone",
+          "detectedAt": "2026-01-22T14:30:00Z",
+          "changeType": "moderate",
+          "sentiment_shift": "more_positive"
+        }
+      ],
+      "totalChanges": 1,
+      "firstSeen": "2026-01-22T12:00:00Z",
+      "lastChecked": "2026-01-22T14:30:00Z",
+      "url": "https://example.com/article",
+      "source": "CoinDesk"
+    }
+  ],
+  "recentChanges": [
+    {
+      "articleId": "art_abc123",
+      "from": "Bitcoin Hits $100K",
+      "to": "Bitcoin Surges Past $100K Milestone",
+      "changedAt": "2026-01-22T14:30:00Z"
+    }
+  ],
+  "stats": {
+    "totalTracked": 150,
+    "withChanges": 12,
+    "avgChangesPerArticle": 0.08
+  },
+  "generatedAt": "2026-01-22T15:00:00Z"
+}
+```
+
+---
+
+### GET /api/analytics/credibility
+
+Get credibility scores for news sources based on accuracy, timeliness, consistency, and bias.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `source` | string | all | Specific source key (optional) |
+| `sortBy` | string | score | Sort by: `score`, `accuracy`, `timeliness` |
+
+**Example:**
+
+```bash
+curl "https://free-crypto-news.vercel.app/api/analytics/credibility?sortBy=accuracy"
+```
+
+**Response:**
+
+```json
+{
+  "sources": [
+    {
+      "source": "The Block",
+      "sourceKey": "theblock",
+      "overallScore": 88,
+      "metrics": {
+        "accuracy": 88,
+        "timeliness": 85,
+        "consistency": 90,
+        "bias": {
+          "score": 0.1,
+          "confidence": 0.75
+        },
+        "clickbait": 0.12
+      },
+      "articleCount": 245,
+      "lastUpdated": "2026-01-22T15:00:00Z",
+      "trend": "stable"
+    }
+  ],
+  "averageScore": 78.5,
+  "topSources": ["The Block", "CoinDesk", "Blockworks"],
+  "bottomSources": ["NewsBTC", "Bitcoinist", "CryptoPotato"],
+  "generatedAt": "2026-01-22T15:00:00Z"
+}
+```
+
+**Metrics Explained:**
+
+| Metric | Range | Description |
+|--------|-------|-------------|
+| `accuracy` | 0-100 | Factual accuracy score |
+| `timeliness` | 0-100 | Publishing speed |
+| `consistency` | 0-100 | Quality consistency |
+| `bias.score` | -1 to 1 | Bearish (-1) to bullish (+1) |
+| `clickbait` | 0-1 | Higher = more clickbait |
+
+---
+
+### GET /api/analytics/anomalies
+
+Detect unusual patterns in news flow including volume spikes, coordinated publishing, and sentiment shifts.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `hours` | integer | 24 | Time window (1-168) |
+| `severity` | string | all | Filter: `high`, `medium`, `low` |
+
+**Example:**
+
+```bash
+curl "https://free-crypto-news.vercel.app/api/analytics/anomalies?hours=24&severity=high"
+```
+
+**Response:**
+
+```json
+{
+  "anomalies": [
+    {
+      "id": "anomaly_volume_spike_abc123",
+      "type": "volume_spike",
+      "severity": "high",
+      "detectedAt": "2026-01-22T14:00:00Z",
+      "description": "Article volume is 4.2 standard deviations above normal",
+      "data": {
+        "expected": 12,
+        "actual": 48,
+        "deviation": 4.2,
+        "affectedEntities": ["all_sources"]
+      },
+      "possibleCauses": [
+        "Major market event or breaking news",
+        "Multiple coordinated announcements",
+        "Market crash or major price movement"
+      ]
+    },
+    {
+      "id": "anomaly_coordinated_publishing_def456",
+      "type": "coordinated_publishing",
+      "severity": "medium",
+      "detectedAt": "2026-01-22T13:30:00Z",
+      "description": "5 sources published similar headlines within 5 minutes",
+      "data": {
+        "expected": 1,
+        "actual": 5,
+        "deviation": 5,
+        "affectedEntities": ["CoinDesk", "The Block", "Decrypt", "CoinTelegraph", "Blockworks"]
+      },
+      "possibleCauses": [
+        "Press release distribution",
+        "Major announcement from project or company"
+      ]
+    }
+  ],
+  "summary": {
+    "totalAnomalies": 2,
+    "bySeverity": { "high": 1, "medium": 1, "low": 0 },
+    "byType": { "volume_spike": 1, "coordinated_publishing": 1 }
+  },
+  "systemHealth": {
+    "normalArticleRate": 11.5,
+    "currentRate": 48,
+    "activeSources": 12,
+    "totalSources": 12
+  },
+  "generatedAt": "2026-01-22T15:00:00Z"
+}
+```
+
+**Anomaly Types:**
+
+| Type | Description |
+|------|-------------|
+| `volume_spike` | Article volume >3 std dev above normal |
+| `coordinated_publishing` | Multiple sources publish similar headlines within 5 min |
+| `sentiment_shift` | Market sentiment shifts >40% |
+| `ticker_surge` | Ticker mentions spike 5x above baseline |
+| `source_outage` | Source silent for >12 hours |
+| `unusual_timing` | Publishing at unusual hours |
 
 ---
 

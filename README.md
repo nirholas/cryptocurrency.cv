@@ -31,7 +31,8 @@ curl https://free-crypto-news.vercel.app/api/news
 | **Price** | 🆓 Free forever | $29-299/mo | Paid |
 | **API Key** | ❌ None needed | Required | Required |
 | **Rate Limit** | Unlimited* | 100-1000/day | Limited |
-| **Sources** | 7 | 1 | Varies |
+| **Sources** | 12 English + 12 International | 1 | Varies |
+| **International** | 🌏 KO, ZH, JA, ES + translation | No | No |
 | **Self-host** | ✅ One click | No | No |
 | **PWA** | ✅ Installable | No | No |
 | **MCP** | ✅ Claude + ChatGPT | No | No |
@@ -53,6 +54,45 @@ npm install && npm run dev
 
 ---
 
+## 🌍 International News Sources
+
+Get crypto news from **12 international sources** in Korean, Chinese, Japanese, and Spanish — with automatic English translation!
+
+### Supported Sources
+
+| Region | Sources |
+|--------|---------|
+| 🇰🇷 **Korea** | Block Media, TokenPost, CoinDesk Korea |
+| 🇨🇳 **China** | 8BTC (巴比特), Jinse Finance (金色财经), Odaily (星球日报) |
+| 🇯🇵 **Japan** | CoinPost, CoinDesk Japan, Cointelegraph Japan |
+| 🇪🇸 **Latin America** | Cointelegraph Español, Diario Bitcoin, CriptoNoticias |
+
+### Quick Examples
+
+```bash
+# Get all international news
+curl "https://free-crypto-news.vercel.app/api/news/international"
+
+# Get Korean news with English translation
+curl "https://free-crypto-news.vercel.app/api/news/international?language=ko&translate=true"
+
+# Get Asian region news
+curl "https://free-crypto-news.vercel.app/api/news/international?region=asia&limit=20"
+```
+
+### Features
+
+- ✅ **Auto-translation** to English via Groq AI
+- ✅ **7-day translation cache** for efficiency
+- ✅ **Original + English** text preserved
+- ✅ **Rate-limited** (1 req/sec) to respect APIs
+- ✅ **Fallback handling** for unavailable sources
+- ✅ **Deduplication** across sources
+
+See [API docs](docs/API.md#get-apinewsinternational) for full details.
+
+---
+
 ## 📱 Progressive Web App (PWA)
 
 Free Crypto News is a **fully installable PWA** that works offline!
@@ -68,6 +108,7 @@ Free Crypto News is a **fully installable PWA** that works offline!
 | 🔄 **Background Sync** | Auto-updates when back online |
 | 🎯 **App Shortcuts** | Quick access to Latest, Breaking, Bitcoin |
 | 📤 **Share Target** | Share links directly to the app |
+| 🚨 **Real-Time Alerts** | Configurable alerts for price & news conditions |
 
 ### Install the App
 
@@ -179,6 +220,18 @@ We aggregate from **7 trusted outlets**:
 
 > 💡 AI endpoints require `GROQ_API_KEY` (free at [console.groq.com](https://console.groq.com/keys))
 
+### 📊 Analytics & Intelligence Endpoints
+
+| Endpoint | Description |
+|----------|-------------|
+| `/api/analytics/headlines` | Track headline changes over time |
+| `/api/analytics/credibility` | Source credibility scores |
+| `/api/analytics/anomalies` | Detect unusual news patterns |
+
+> 🔍 Analytics endpoints help detect coordinated publishing, sentiment shifts, volume spikes, and source reliability.
+
+> 💡 AI endpoints require `GROQ_API_KEY` (free at [console.groq.com](https://console.groq.com/keys))
+
 ## SDKs & Components
 
 | Package | Description |
@@ -222,6 +275,8 @@ We aggregate from **7 trusted outlets**:
 | `asset` | `/api/sentiment` | Filter by ticker (BTC, ETH) |
 | `emerging` | `/api/narratives` | true = only new narratives |
 | `min_confidence` | `/api/signals` | Min confidence (0-100) |
+| `date` | `/api/ai/brief` | Date for brief (YYYY-MM-DD) |
+| `format` | `/api/ai/brief` | full/summary |
 
 ---
 
@@ -291,6 +346,27 @@ curl "https://free-crypto-news.vercel.app/api/factcheck?type=prediction"
 **Detect clickbait:**
 ```bash
 curl "https://free-crypto-news.vercel.app/api/clickbait?threshold=50"
+```
+
+### 🆕 AI Products
+
+**Daily Brief** - Comprehensive crypto news digest:
+```bash
+curl "https://free-crypto-news.vercel.app/api/ai/brief?format=full"
+```
+
+**Bull vs Bear Debate** - Generate balanced perspectives:
+```bash
+curl -X POST "https://free-crypto-news.vercel.app/api/ai/debate" \
+  -H "Content-Type: application/json" \
+  -d '{"topic": "Bitcoin reaching $200k in 2026"}'
+```
+
+**Counter-Arguments** - Challenge any claim:
+```bash
+curl -X POST "https://free-crypto-news.vercel.app/api/ai/counter" \
+  -H "Content-Type: application/json" \
+  -d '{"claim": "Ethereum will flip Bitcoin by market cap"}'
 ```
 
 ---
@@ -1121,9 +1197,11 @@ Building the definitive open crypto intelligence platform.
 - [ ] Spanish sources
 
 ### Real-Time Features
-- [ ] WebSocket streaming
+- [x] WebSocket streaming
+- [x] Configurable alert system (8 condition types)
+- [x] Alert WebSocket subscriptions
+- [x] Alert webhook delivery
 - [ ] Faster webhook delivery
-- [ ] Real-time alert conditions
 
 ## 📋 Medium-Term (Q2-Q3 2026)
 

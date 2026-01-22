@@ -235,6 +235,13 @@ export async function PATCH(request: NextRequest) {
       const updated = updateAlertRule(alertId, { enabled: active });
       success = updated !== null;
     }
+
+    return NextResponse.json({
+      success,
+      message: success ? `Alert ${active ? 'enabled' : 'disabled'}` : 'Alert not found',
+    });
+  } catch (error) {
+    return NextResponse.json(
       { error: 'Invalid request body' },
       { status: 400 }
     );

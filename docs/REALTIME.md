@@ -1,6 +1,6 @@
 # 🔌 Real-Time Features Guide
 
-Guide for WebSocket, Server-Sent Events (SSE), and real-time news updates.
+Guide for WebSocket, Server-Sent Events (SSE), real-time news updates, and configurable alerts.
 
 ---
 
@@ -9,6 +9,7 @@ Guide for WebSocket, Server-Sent Events (SSE), and real-time news updates.
 - [Overview](#overview)
 - [Server-Sent Events (SSE)](#server-sent-events-sse)
 - [WebSocket Server](#websocket-server)
+- [Alert System](#alert-system)
 - [Client Integration](#client-integration)
 - [Push Notifications](#push-notifications)
 - [Webhooks](#webhooks)
@@ -23,7 +24,8 @@ Free Crypto News supports multiple real-time delivery methods:
 | Method | Best For | Supported Platforms |
 |--------|----------|---------------------|
 | **SSE** | Simple streaming | Vercel, Cloudflare, all Edge |
-| **WebSocket** | Bi-directional, subscriptions | Railway, Render, VPS |
+| **WebSocket** | Bi-directional, subscriptions, alerts | Railway, Render, VPS |
+| **Alerts** | Configurable conditions, webhooks | All platforms |
 | **Push** | Mobile/browser notifications | All with service worker |
 | **Webhooks** | Server-to-server | Any backend |
 
@@ -232,11 +234,14 @@ ws.onclose = () => {
 |------|-----------|-------------|
 | `subscribe` | Client → Server | Set subscription filters |
 | `unsubscribe` | Client → Server | Remove filters |
+| `subscribe_alerts` | Client → Server | Subscribe to alert notifications |
+| `unsubscribe_alerts` | Client → Server | Unsubscribe from alerts |
 | `ping` | Client → Server | Keep-alive |
 | `news` | Server → Client | News articles |
-| `price` | Server → Client | Price updates |
-| `alert` | Server → Client | Breaking alerts |
+| `breaking` | Server → Client | Breaking news |
+| `alert` | Server → Client | Alert events |
 | `pong` | Server → Client | Keep-alive response |
+| `alerts_subscribed` | Server → Client | Confirmation of alert subscription |
 
 **Subscribe Message:**
 
@@ -274,9 +279,251 @@ ws.onclose = () => {
 # Health check
 curl https://your-ws-server.railway.app/health
 
-# Statistics
+# Statistics (includes alert subscribers)
 curl https://your-ws-server.railway.app/stats
 ```
+
+---
+
+## Alert System
+
+Configurable alerts for price movements, breaking news, and custom conditions with WebSocket and webhook delivery.
+
+### Alert Condition Types
+
+| Type | Description | Example |
+|------|-------------|---------|
+| `price_above` | Price exceeds threshold | BTC > $100,000 |
+| `price_below` | Price drops below threshold | ETH < $2,000 |
+| `price_change_pct` | Percentage change in timeframe | SOL +10% in 24h |
+| `volume_spike` | Volume exceeds multiplier of baseline | BTC volume 3x normal |
+| `breaking_news` | Breaking news with optional keywords | News with "SEC", "ETF" |
+| `ticker_mention` | Ticker mentioned with optional sentiment | BTC with sentiment > 0.5 |
+| `whale_movement` | Large transfers above threshold | Transfers > $10M |
+| `fear_greed_change` | Fear & Greed index change | Change >= 10 points |
+
+### Create Alert Rule
+
+```bash
+curl -X POST https://free-crypto-news.vercel.app/api/alerts \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "BTC Above 100k",
+    "condition": {
+      "type": "price_above",
+      "coin": "bitcoin",
+      "threshold": 100000
+    },
+    "channels": ["websocket", "webhook"],
+    "webhookUrl": "https://your-server.com/alerts",
+    "cooldown": 300
+  }'
+```
+
+**Response:**
+
+```json
+{
+  "alert": {
+    "id": "alert_1737507600_abc123def",
+    "name": "BTC Above 100k",
+    "condition": {
+      "type": "price_above",
+      "coin": "bitcoin",
+      "threshold": 100000
+    },
+    "channels": ["websocket", "webhook"],
+    "webhookUrl": "https://your-server.com/alerts",
+    "cooldown": 300,
+    "enabled": true,
+    "createdAt": "2026-01-22T00:00:00.000Z"
+  }
+}
+```
+
+### Alert Condition Examples
+
+**Price Above:**
+
+```json
+{
+  "type": "price_above",
+  "coin": "bitcoin",
+  "threshold": 100000
+}
+```
+
+**Price Change Percentage:**
+
+```json
+{
+  "type": "price_change_pct",
+  "coin": "ethereum",
+  "threshold": 10,
+  "timeframe": "24h"
+}
+```
+
+**Volume Spike:**
+
+```json
+{
+  "type": "volume_spike",
+  "coin": "solana",
+  "multiplier": 3
+}
+```
+
+**Breaking News with Keywords:**
+
+```json
+{
+  "type": "breaking_news",
+  "keywords": ["SEC", "ETF", "regulation"]
+}
+```
+
+**Ticker Mention with Sentiment:**
+
+```json
+{
+  "type": "ticker_mention",
+  "ticker": "BTC",
+  "minSentiment": 0.5
+}
+```
+
+**Fear & Greed Change:**
+
+```json
+{
+  "type": "fear_greed_change",
+  "threshold": 10
+}
+```
+
+### Alert API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/alerts` | List all alert rules |
+| POST | `/api/alerts` | Create alert rule |
+| GET | `/api/alerts?action=evaluate` | Trigger alert evaluation |
+| GET | `/api/alerts?action=stats` | Get alert statistics |
+| GET | `/api/alerts?action=events` | Get recent alert events |
+| GET | `/api/alerts/[id]` | Get single alert |
+| PUT | `/api/alerts/[id]` | Update alert |
+| PATCH | `/api/alerts/[id]` | Enable/disable alert |
+| DELETE | `/api/alerts/[id]` | Delete alert |
+| POST | `/api/alerts/[id]?action=test` | Test trigger alert |
+
+### Subscribe to Alerts via WebSocket
+
+```javascript
+const ws = new WebSocket('wss://your-ws-server.railway.app');
+
+ws.onopen = () => {
+  // Subscribe to all alerts
+  ws.send(JSON.stringify({
+    type: 'subscribe_alerts',
+    payload: { ruleIds: ['*'] }
+  }));
+
+  // Or subscribe to specific alerts
+  ws.send(JSON.stringify({
+    type: 'subscribe_alerts',
+    payload: { ruleIds: ['alert_123', 'alert_456'] }
+  }));
+};
+
+ws.onmessage = (event) => {
+  const message = JSON.parse(event.data);
+  
+  if (message.type === 'alert') {
+    const alertEvent = message.data;
+    console.log(`🚨 Alert: ${alertEvent.ruleName}`);
+    console.log(`Severity: ${alertEvent.severity}`);
+    console.log(`Value: ${alertEvent.data.currentValue}`);
+  }
+};
+```
+
+### Alert Event Structure
+
+When an alert triggers, this event is broadcast:
+
+```json
+{
+  "type": "alert",
+  "data": {
+    "id": "evt_1737507600_xyz789",
+    "ruleId": "alert_123",
+    "ruleName": "BTC Above 100k",
+    "condition": {
+      "type": "price_above",
+      "coin": "bitcoin",
+      "threshold": 100000
+    },
+    "triggeredAt": "2026-01-22T10:30:00.000Z",
+    "data": {
+      "currentValue": 105000,
+      "threshold": 100000,
+      "context": {
+        "coinId": "bitcoin",
+        "coinName": "Bitcoin",
+        "symbol": "btc",
+        "change24h": 5.2
+      }
+    },
+    "severity": "warning"
+  },
+  "timestamp": "2026-01-22T10:30:00.000Z"
+}
+```
+
+### Severity Levels
+
+| Severity | Description |
+|----------|-------------|
+| `critical` | Large deviation (>10% price, >5x volume) |
+| `warning` | Moderate deviation (5-10% price, 3-5x volume) |
+| `info` | Small deviation or informational |
+
+### Webhook Delivery
+
+Alert webhooks are sent as POST requests:
+
+```json
+{
+  "type": "alert",
+  "event": {
+    "id": "evt_1737507600_xyz789",
+    "ruleId": "alert_123",
+    "ruleName": "BTC Above 100k",
+    "condition": { "type": "price_above", "coin": "bitcoin", "threshold": 100000 },
+    "triggeredAt": "2026-01-22T10:30:00.000Z",
+    "data": { "currentValue": 105000, "threshold": 100000 },
+    "severity": "warning"
+  },
+  "timestamp": "2026-01-22T10:30:00.000Z"
+}
+```
+
+**Headers:**
+
+```
+Content-Type: application/json
+X-Alert-Event-Id: evt_1737507600_xyz789
+X-Alert-Rule-Id: alert_123
+```
+
+### Cooldown
+
+Each alert has a configurable cooldown period (in seconds) to prevent spam:
+
+- Default: 300 seconds (5 minutes)
+- After triggering, the rule won't evaluate again until cooldown passes
+- Test triggers (`?action=test`) do not affect cooldown
 
 ---
 

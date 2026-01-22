@@ -24,8 +24,8 @@ import {
   determineSeverity,
   getConditionDescription,
 } from '@/lib/alert-rules';
-import * as fs from 'fs';
-import * as path from 'path';
+// Note: fs/path removed for Edge Runtime compatibility
+// Using in-memory storage only (use external DB for persistence)
 
 // Types
 export interface PriceAlert {
@@ -365,9 +365,8 @@ export function getAlertStats(): {
 // Re-export types from alert-rules
 export type { AlertRule, AlertCondition, AlertEvent, AlertChannel } from '@/lib/alert-rules';
 
-// Storage path for alerts
-const DATA_DIR = process.env.DATA_DIR || 'data';
-const ALERTS_FILE = path.join(DATA_DIR, 'alerts.json');
+// In-memory storage (Edge Runtime compatible)
+// For persistence, use external database (e.g., Vercel KV, Upstash Redis)
 
 // In-memory cache for alert rules
 let alertRulesCache: Map<string, AlertRule> = new Map();
@@ -375,51 +374,22 @@ let alertEventsCache: AlertEvent[] = [];
 let lastFearGreedValue: number | null = null;
 let volumeBaseline: Map<string, number> = new Map();
 
-// Initialize storage
-function ensureDataDir(): void {
-  try {
-    if (!fs.existsSync(DATA_DIR)) {
-      fs.mkdirSync(DATA_DIR, { recursive: true });
-    }
-  } catch {
-    // May fail in edge runtime, use in-memory only
-  }
-}
-
 /**
- * Load alert rules from file storage
+ * Load alert rules from storage (in-memory only for Edge Runtime)
  */
 export function loadAlertRules(): AlertRule[] {
-  try {
-    ensureDataDir();
-    if (fs.existsSync(ALERTS_FILE)) {
-      const data = fs.readFileSync(ALERTS_FILE, 'utf-8');
-      const parsed = JSON.parse(data);
-      alertRulesCache = new Map(parsed.rules.map((r: AlertRule) => [r.id, r]));
-      alertEventsCache = parsed.events || [];
-      return Array.from(alertRulesCache.values());
-    }
-  } catch (error) {
-    console.error('Error loading alert rules:', error);
-  }
-  return [];
+  // In Edge Runtime, we only use in-memory cache
+  // Data will be lost on cold starts - use external DB for persistence
+  return Array.from(alertRulesCache.values());
 }
 
 /**
- * Save alert rules to file storage
+ * Save alert rules to storage (in-memory only for Edge Runtime)
  */
 export function saveAlertRules(): void {
-  try {
-    ensureDataDir();
-    const data = {
-      rules: Array.from(alertRulesCache.values()),
-      events: alertEventsCache.slice(0, 1000), // Keep last 1000 events
-      updatedAt: new Date().toISOString(),
-    };
-    fs.writeFileSync(ALERTS_FILE, JSON.stringify(data, null, 2));
-  } catch (error) {
-    console.error('Error saving alert rules:', error);
-  }
+  // In Edge Runtime, data is kept in memory only
+  // For persistence, integrate with Vercel KV, Upstash Redis, or similar
+  // The in-memory cache is already updated by create/update/delete operations
 }
 
 /**

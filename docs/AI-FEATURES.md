@@ -17,6 +17,10 @@ Advanced AI capabilities for news analysis, summarization, and insights.
   - [Question Generation](#question-generation)
   - [Categorization](#categorization)
   - [Translation](#translation)
+- [AI Products](#ai-products)
+  - [Daily Brief](#daily-brief)
+  - [Bull vs Bear Debate](#bull-vs-bear-debate)
+  - [Counter-Arguments](#counter-arguments)
 - [SDK Usage](#sdk-usage)
 - [Best Practices](#best-practices)
 
@@ -35,6 +39,9 @@ Free Crypto News provides AI-powered features for deeper news analysis:
 | **Question Generation** | Generate follow-up questions |
 | **Categorization** | Auto-categorize articles |
 | **Translation** | Translate content to any language |
+| **Daily Brief** | Comprehensive daily crypto news digest |
+| **Bull vs Bear Debate** | Generate balanced perspectives on any topic |
+| **Counter-Arguments** | Challenge claims with counter-arguments |
 
 ---
 
@@ -541,6 +548,258 @@ function ArticleAnalysis({ article }) {
   );
 }
 ```
+
+---
+
+## AI Products
+
+Advanced AI-powered products for comprehensive market analysis.
+
+### Daily Brief
+
+Generate a comprehensive daily digest of crypto news with market overview, top stories, sector analysis, and risk alerts.
+
+**Endpoint:** `GET /api/ai/brief`
+
+**Query Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `date` | string | today | Date in YYYY-MM-DD format |
+| `format` | string | `full` | `full` or `summary` |
+
+**Request:**
+
+```bash
+curl "https://free-crypto-news.vercel.app/api/ai/brief?date=2026-01-22&format=full"
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "brief": {
+    "date": "2026-01-22",
+    "executiveSummary": "Crypto markets showed strength today with BTC leading...",
+    "marketOverview": {
+      "sentiment": "bullish",
+      "btcTrend": "upward",
+      "keyMetrics": {
+        "fearGreedIndex": 65,
+        "btcDominance": 52.5,
+        "totalMarketCap": "$2.5T"
+      }
+    },
+    "topStories": [
+      {
+        "headline": "Bitcoin ETF sees record inflows",
+        "summary": "Institutional demand continues to grow...",
+        "impact": "high",
+        "relatedTickers": ["BTC"]
+      }
+    ],
+    "sectorsInFocus": [
+      {
+        "sector": "DeFi",
+        "trend": "up",
+        "reason": "TVL increasing across major protocols"
+      }
+    ],
+    "upcomingEvents": [
+      {
+        "event": "Fed Meeting",
+        "date": "2026-01-28",
+        "potentialImpact": "Could affect risk asset sentiment"
+      }
+    ],
+    "riskAlerts": ["Regulatory uncertainty in EU markets"],
+    "generatedAt": "2026-01-22T10:30:00Z"
+  }
+}
+```
+
+**Caching:** Briefs are cached for 1 hour.
+
+---
+
+### Bull vs Bear Debate
+
+Generate balanced bull and bear perspectives on any article or topic.
+
+**Endpoint:** `POST /api/ai/debate`
+
+**Request Body:**
+
+```json
+{
+  "article": {
+    "title": "Article title",
+    "content": "Article content..."
+  },
+  // OR
+  "topic": "Bitcoin reaching $200k in 2026"
+}
+```
+
+**Request:**
+
+```bash
+curl -X POST "https://free-crypto-news.vercel.app/api/ai/debate" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "topic": "Bitcoin reaching $200k in 2026"
+  }'
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "debate": {
+    "topic": "Bitcoin reaching $200k in 2026",
+    "bullCase": {
+      "thesis": "Bitcoin is positioned for significant gains due to institutional adoption and supply dynamics.",
+      "arguments": [
+        "ETF inflows continue at record pace",
+        "Post-halving supply shock in effect",
+        "Corporate treasury adoption accelerating"
+      ],
+      "supportingEvidence": [
+        "BlackRock ETF holds over 500k BTC",
+        "On-chain metrics show accumulation"
+      ],
+      "priceTarget": "$200,000",
+      "timeframe": "12 months",
+      "confidence": 0.7
+    },
+    "bearCase": {
+      "thesis": "Macro headwinds and regulatory uncertainty pose significant risks.",
+      "arguments": [
+        "Fed policy remains restrictive",
+        "Regulatory crackdown intensifying",
+        "Technical resistance at $120k"
+      ],
+      "supportingEvidence": [
+        "Rising interest rates globally",
+        "SEC enforcement actions"
+      ],
+      "priceTarget": "$80,000",
+      "timeframe": "6 months",
+      "confidence": 0.5
+    },
+    "neutralAnalysis": {
+      "keyUncertainties": [
+        "Fed policy direction",
+        "Regulatory clarity timeline"
+      ],
+      "whatToWatch": [
+        "ETF flow data",
+        "On-chain accumulation metrics"
+      ],
+      "consensus": "Market divided with slight bullish bias"
+    },
+    "generatedAt": "2026-01-22T10:30:00Z"
+  }
+}
+```
+
+**Caching:** Debates are cached for 24 hours.
+
+---
+
+### Counter-Arguments
+
+Challenge any claim with structured counter-arguments, assumption analysis, and alternative interpretations.
+
+**Endpoint:** `POST /api/ai/counter`
+
+**Request Body:**
+
+```json
+{
+  "claim": "Bitcoin will replace the US dollar by 2030",
+  "context": "Optional additional context about the claim"
+}
+```
+
+**Request:**
+
+```bash
+curl -X POST "https://free-crypto-news.vercel.app/api/ai/counter" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "claim": "Bitcoin will replace the US dollar by 2030"
+  }'
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "counter": {
+    "originalClaim": "Bitcoin will replace the US dollar by 2030",
+    "counterArguments": [
+      {
+        "argument": "The US dollar is backed by the world's largest economy and military, providing stability Bitcoin cannot match.",
+        "type": "factual",
+        "strength": "strong"
+      },
+      {
+        "argument": "Bitcoin's volatility makes it unsuitable as a medium of exchange for everyday transactions.",
+        "type": "logical",
+        "strength": "strong"
+      },
+      {
+        "argument": "The claim ignores the regulatory power governments have to resist monetary displacement.",
+        "type": "contextual",
+        "strength": "moderate"
+      },
+      {
+        "argument": "Bitcoin could coexist with fiat as a store of value without replacing it.",
+        "type": "alternative",
+        "strength": "moderate"
+      }
+    ],
+    "assumptions": [
+      {
+        "assumption": "Governments will not effectively regulate or ban Bitcoin",
+        "challenge": "Many governments have already shown willingness to restrict crypto"
+      },
+      {
+        "assumption": "Bitcoin can scale to handle global transaction volume",
+        "challenge": "Current throughput is ~7 TPS vs Visa's 65,000 TPS"
+      }
+    ],
+    "alternativeInterpretations": [
+      "Bitcoin may become a reserve asset alongside gold rather than replacing fiat",
+      "Stablecoins may bridge the gap between crypto and traditional finance"
+    ],
+    "missingContext": [
+      "Network effects of existing monetary systems",
+      "Central bank digital currency (CBDC) development"
+    ],
+    "overallAssessment": {
+      "claimStrength": "weak",
+      "mainVulnerability": "Underestimates institutional inertia and regulatory resistance"
+    },
+    "generatedAt": "2026-01-22T10:30:00Z"
+  }
+}
+```
+
+**Counter-Argument Types:**
+
+| Type | Description |
+|------|-------------|
+| `factual` | Disputes facts or data in the claim |
+| `logical` | Identifies logical fallacies or reasoning errors |
+| `contextual` | Points out missing context or oversimplifications |
+| `alternative` | Presents alternative explanations |
+
+**Caching:** Counter-arguments are cached for 24 hours.
 
 ---
 
