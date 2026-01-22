@@ -2,7 +2,8 @@
  * @fileoverview Unit tests for BookmarkButton component
  */
 
-import { describe, it, expect, vi } from 'vitest';
+/// <reference types="vitest/globals" />
+import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import BookmarkButton from './BookmarkButton';
 

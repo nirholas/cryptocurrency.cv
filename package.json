@@ -28,7 +28,21 @@
     "archive:collect": "node scripts/archive/collect.js",
     "archive:enhanced": "node scripts/archive/collect-enhanced.js",
     "archive:migrate": "node scripts/archive/migrate.js",
-    "archive:stats": "node scripts/archive/stats.js"
+    "archive:stats": "node scripts/archive/stats.js",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:headed": "playwright test --headed",
+    "analyze": "ANALYZE=true next build",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,yaml,yml,md}": [
+      "prettier --write"
+    ]
   },
   "keywords": [
     "crypto",
@@ -44,15 +58,27 @@
   "author": "nirholas",
   "license": "MIT",
   "dependencies": {
+    "@types/recharts": "^1.8.29",
+    "framer-motion": "^12.28.1",
+    "lucide-react": "^0.562.0",
     "next": "^16.1.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
+    "recharts": "^2.15.4",
+    "redis": "^5.10.0",
     "sanitize-html": "^2.17.0",
     "sharp": "^0.34.5"
   },
   "devDependencies": {
     "@axe-core/cli": "^4.11.0",
     "@eslint/eslintrc": "^3.3.3",
+    "@next/bundle-analyzer": "^16.1.4",
+    "@playwright/test": "^1.57.0",
+    "@storybook/addon-a11y": "^10.2.0",
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/addon-links": "^10.2.0",
+    "@storybook/nextjs": "^10.2.0",
+    "@storybook/react": "^10.2.0",
     "@tailwindcss/postcss": "^4.1.18",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
@@ -60,16 +86,20 @@
     "@types/node": "^25.0.9",
     "@types/react": "^19.2.9",
     "@types/react-dom": "^19.2.3",
+    "@types/redis": "^4.0.10",
     "@types/sanitize-html": "^2.13.0",
     "@typescript-eslint/eslint-plugin": "^8.53.1",
     "@typescript-eslint/parser": "^8.53.1",
     "@vitejs/plugin-react": "^5.1.2",
     "@vitest/ui": "^4.0.17",
     "eslint-plugin-jsx-a11y": "^6.10.2",
+    "husky": "^9.1.7",
     "jsdom": "^27.4.0",
     "lighthouse": "^13.0.1",
+    "lint-staged": "^16.2.7",
     "pa11y": "^9.0.1",
     "postcss": "^8.4.31",
+    "storybook": "^10.2.0",
     "stylelint": "^17.0.0",
     "stylelint-config-standard": "^40.0.0",
     "tailwindcss": "^4.1.18",

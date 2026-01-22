@@ -179,6 +179,59 @@ export function isAnalyticsEnabled(): boolean {
   return analyticsEnabled;
 }
 
+/**
+ * Track API call (server-side)
+ */
+export function trackAPICall(data: {
+  endpoint: string;
+  method: string;
+  statusCode: number;
+  responseTime: number;
+  userAgent?: string;
+  ip?: string;
+  timestamp?: Date;
+}): void {
+  // Server-side tracking - would typically send to monitoring service
+  if (process.env.NODE_ENV === 'development') {
+    console.log('[API]', data.method, data.endpoint, `${data.responseTime}ms`, data.statusCode);
+  }
+}
+
+/**
+ * Get dashboard stats (server-side)
+ */
+export function getDashboardStats(): Record<string, number | string> {
+  // In production, this would query actual metrics
+  return {
+    totalRequests: 0,
+    uniqueUsers: 0,
+    avgResponseTime: 0,
+    errorRate: 0,
+    uptime: '100%',
+    lastUpdated: new Date().toISOString(),
+  };
+}
+
+/**
+ * Get system health (server-side)
+ */
+export async function getSystemHealth(): Promise<Record<string, unknown>> {
+  // In production, this would check actual system health
+  return {
+    status: 'healthy',
+    services: {
+      api: 'up',
+      database: 'up',
+      cache: 'up',
+    },
+    memory: {
+      used: process.memoryUsage?.().heapUsed || 0,
+      total: process.memoryUsage?.().heapTotal || 0,
+    },
+    timestamp: new Date().toISOString(),
+  };
+}
+
 // Flush queue when back online
 if (typeof window !== 'undefined') {
   window.addEventListener('online', () => {

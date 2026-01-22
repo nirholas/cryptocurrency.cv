@@ -1,264 +1,56 @@
 /**
- * @fileoverview Animated Components with Framer Motion
- * 
- * Micro-animations for polished UI interactions.
- * 
- * @module components/Animations
- * 
- * @features
- * - Fade in/out transitions
- * - Slide animations
- * - Scale effects
- * - Stagger children
- * - Loading shimmer
+ * Reusable Animation Components using Framer Motion
  */
+
 'use client';
 
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { ReactNode } from 'react';
 
-interface AnimatedProps {
-  children: ReactNode;
-  className?: string;
-  delay?: number;
-}
-
-/**
- * Fade in animation using CSS
- */
-export function FadeIn({ children, className = '', delay = 0 }: AnimatedProps) {
-  return (
-    <div
-      className={`animate-fadeIn ${className}`}
-      style={{ animationDelay: `${delay}ms` }}
-    >
-      {children}
-    </div>
-  );
-}
-
-/**
- * Slide up animation
- */
-export function SlideUp({ children, className = '', delay = 0 }: AnimatedProps) {
-  return (
-    <div
-      className={`animate-slideUp ${className}`}
-      style={{ animationDelay: `${delay}ms` }}
-    >
-      {children}
-    </div>
-  );
-}
-
-/**
- * Scale in animation
- */
-export function ScaleIn({ children, className = '', delay = 0 }: AnimatedProps) {
-  return (
-    <div
-      className={`animate-scaleIn ${className}`}
-      style={{ animationDelay: `${delay}ms` }}
-    >
-      {children}
-    </div>
-  );
-}
-
-/**
- * Staggered children animation
- */
-interface StaggerProps {
-  children: ReactNode[];
-  className?: string;
-  staggerDelay?: number;
-}
-
-export function Stagger({ children, className = '', staggerDelay = 50 }: StaggerProps) {
-  return (
-    <div className={className}>
-      {children.map((child, index) => (
-        <div
-          key={index}
-          className="animate-fadeIn"
-          style={{ animationDelay: `${index * staggerDelay}ms` }}
-        >
-          {child}
-        </div>
-      ))}
-    </div>
-  );
-}
-
-/**
- * Shimmer loading effect
- */
-export function Shimmer({ className = '' }: { className?: string }) {
-  return (
-    <div className={`relative overflow-hidden bg-gray-200 dark:bg-gray-700 ${className}`}>
-      <div className="absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-    </div>
-  );
-}
-
-/**
- * Pulse animation for live indicators
- */
-export function Pulse({ className = '' }: { className?: string }) {
-  return (
-    <span className={`relative flex h-3 w-3 ${className}`}>
-      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-      <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500" />
-    </span>
-  );
-}
-
-/**
- * Bounce animation for attention
- */
-export function Bounce({ children, className = '' }: AnimatedProps) {
-  return (
-    <div className={`animate-bounce ${className}`}>
-      {children}
-    </div>
-  );
-}
-
-/**
- * Spin animation for loading
- */
-export function Spin({ className = 'w-5 h-5' }: { className?: string }) {
-  return (
-    <svg
-      className={`animate-spin text-brand-600 ${className}`}
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-    >
-      <circle
-        className="opacity-25"
-        cx="12"
-        cy="12"
-        r="10"
-        stroke="currentColor"
-        strokeWidth="4"
-      />
-      <path
-        className="opacity-75"
-        fill="currentColor"
-        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-      />
-    </svg>
-  );
-}
-
-/**
- * Counter animation - animates number changes
- */
-interface CounterProps {
-  value: number;
-  duration?: number;
-  className?: string;
-}
-
-export function Counter({ value, className = '' }: CounterProps) {
-  return (
-    <span className={`tabular-nums ${className}`}>
-      {value.toLocaleString()}
-    </span>
-  );
-}
-
-/**
- * Typewriter effect for text
- */
-interface TypewriterProps {
-  text: string;
-  speed?: number;
-  className?: string;
-}
-
-export function Typewriter({ text, className = '' }: TypewriterProps) {
-  return (
-    <span className={`inline-block overflow-hidden whitespace-nowrap border-r-2 border-current animate-typewriter ${className}`}>
-      {text}
-    </span>
-  );
-}
-
-/**
- * Hover lift effect wrapper
- */
-export function HoverLift({ children, className = '' }: AnimatedProps) {
-  return (
-    <div className={`transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg ${className}`}>
-      {children}
-    </div>
-  );
-}
-
-/**
- * Hover glow effect wrapper
- */
-export function HoverGlow({ children, className = '' }: AnimatedProps) {
-  return (
-    <div className={`transition-shadow duration-200 hover:shadow-xl hover:shadow-brand-500/20 ${className}`}>
-      {children}
-    </div>
-  );
-}
-
-// ============================================================================
-// FRAMER MOTION COMPONENTS (merged from animations.tsx)
-// ============================================================================
-
-// Re-export framer-motion for convenience
-export { motion, AnimatePresence } from 'framer-motion';
-import { motion, AnimatePresence, Variants } from 'framer-motion';
-
 // Animation variants
-export const fadeInVariant: Variants = {
+export const fadeIn: Variants = {
   initial: { opacity: 0 },
   animate: { opacity: 1 },
   exit: { opacity: 0 },
 };
 
-export const fadeInUpVariant: Variants = {
+export const fadeInUp: Variants = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
   exit: { opacity: 0, y: -20 },
 };
 
-export const fadeInDownVariant: Variants = {
+export const fadeInDown: Variants = {
   initial: { opacity: 0, y: -20 },
   animate: { opacity: 1, y: 0 },
   exit: { opacity: 0, y: 20 },
 };
 
-export const fadeInLeftVariant: Variants = {
+export const fadeInLeft: Variants = {
   initial: { opacity: 0, x: -20 },
   animate: { opacity: 1, x: 0 },
   exit: { opacity: 0, x: 20 },
 };
 
-export const fadeInRightVariant: Variants = {
+export const fadeInRight: Variants = {
   initial: { opacity: 0, x: 20 },
   animate: { opacity: 1, x: 0 },
   exit: { opacity: 0, x: -20 },
 };
 
-export const scaleInVariant: Variants = {
+export const scaleIn: Variants = {
   initial: { opacity: 0, scale: 0.9 },
   animate: { opacity: 1, scale: 1 },
   exit: { opacity: 0, scale: 0.9 },
 };
 
-export const slideInFromBottomVariant: Variants = {
+export const slideInFromBottom: Variants = {
   initial: { y: '100%' },
   animate: { y: 0 },
   exit: { y: '100%' },
 };
 
-export const staggerContainerVariant: Variants = {
+export const staggerContainer: Variants = {
   initial: {},
   animate: {
     transition: {
@@ -267,26 +59,26 @@ export const staggerContainerVariant: Variants = {
   },
 };
 
-export const staggerItemVariant: Variants = {
+export const staggerItem: Variants = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
 };
 
-// Framer Motion Components
-interface MotionAnimatedProps {
+// Motion Components
+interface MotionProps {
   children: ReactNode;
   className?: string;
   delay?: number;
   duration?: number;
 }
 
-export function MotionFadeIn({ children, className, delay = 0, duration = 0.4 }: MotionAnimatedProps) {
+export function FadeIn({ children, className, delay = 0, duration = 0.4 }: MotionProps) {
   return (
     <motion.div
       initial="initial"
       animate="animate"
       exit="exit"
-      variants={fadeInVariant}
+      variants={fadeIn}
       transition={{ duration, delay, ease: 'easeOut' }}
       className={className}
     >
@@ -295,13 +87,13 @@ export function MotionFadeIn({ children, className, delay = 0, duration = 0.4 }:
   );
 }
 
-export function MotionFadeInUp({ children, className, delay = 0, duration = 0.4 }: MotionAnimatedProps) {
+export function FadeInUp({ children, className, delay = 0, duration = 0.4 }: MotionProps) {
   return (
     <motion.div
       initial="initial"
       animate="animate"
       exit="exit"
-      variants={fadeInUpVariant}
+      variants={fadeInUp}
       transition={{ duration, delay, ease: 'easeOut' }}
       className={className}
     >
@@ -310,13 +102,13 @@ export function MotionFadeInUp({ children, className, delay = 0, duration = 0.4 
   );
 }
 
-export function MotionFadeInDown({ children, className, delay = 0, duration = 0.4 }: MotionAnimatedProps) {
+export function FadeInDown({ children, className, delay = 0, duration = 0.4 }: MotionProps) {
   return (
     <motion.div
       initial="initial"
       animate="animate"
       exit="exit"
-      variants={fadeInDownVariant}
+      variants={fadeInDown}
       transition={{ duration, delay, ease: 'easeOut' }}
       className={className}
     >
@@ -325,13 +117,13 @@ export function MotionFadeInDown({ children, className, delay = 0, duration = 0.
   );
 }
 
-export function MotionScaleIn({ children, className, delay = 0, duration = 0.3 }: MotionAnimatedProps) {
+export function ScaleIn({ children, className, delay = 0, duration = 0.3 }: MotionProps) {
   return (
     <motion.div
       initial="initial"
       animate="animate"
       exit="exit"
-      variants={scaleInVariant}
+      variants={scaleIn}
       transition={{ duration, delay, ease: 'easeOut' }}
       className={className}
     >
@@ -340,13 +132,13 @@ export function MotionScaleIn({ children, className, delay = 0, duration = 0.3 }
   );
 }
 
-interface MotionStaggerProps {
+interface StaggerProps {
   children: ReactNode;
   className?: string;
   staggerDelay?: number;
 }
 
-export function MotionStaggerContainer({ children, className, staggerDelay = 0.1 }: MotionStaggerProps) {
+export function StaggerContainer({ children, className, staggerDelay = 0.1 }: StaggerProps) {
   return (
     <motion.div
       initial="initial"
@@ -366,9 +158,9 @@ export function MotionStaggerContainer({ children, className, staggerDelay = 0.1
   );
 }
 
-export function MotionStaggerItem({ children, className }: { children: ReactNode; className?: string }) {
+export function StaggerItem({ children, className }: { children: ReactNode; className?: string }) {
   return (
-    <motion.div variants={staggerItemVariant} className={className}>
+    <motion.div variants={staggerItem} className={className}>
       {children}
     </motion.div>
   );
@@ -395,13 +187,13 @@ export function PageTransition({ children, className }: PageTransitionProps) {
 }
 
 // Card Hover Animation
-interface HoverCardMotionProps {
+interface HoverCardProps {
   children: ReactNode;
   className?: string;
   scale?: number;
 }
 
-export function HoverCardMotion({ children, className, scale = 1.02 }: HoverCardMotionProps) {
+export function HoverCard({ children, className, scale = 1.02 }: HoverCardProps) {
   return (
     <motion.div
       whileHover={{ scale, y: -4 }}
@@ -490,7 +282,7 @@ export function SlideInPanel({
 }
 
 // Number Counter Animation
-interface AnimatedCounterProps {
+interface CounterProps {
   value: number;
   duration?: number;
   className?: string;
@@ -500,10 +292,11 @@ interface AnimatedCounterProps {
 
 export function AnimatedCounter({
   value,
+  duration = 1,
   className,
   prefix = '',
   suffix = '',
-}: AnimatedCounterProps) {
+}: CounterProps) {
   return (
     <motion.span
       initial={{ opacity: 0 }}
@@ -530,12 +323,12 @@ export function AnimatedCounter({
 }
 
 // Skeleton Loading Animation
-interface AnimatedSkeletonProps {
+interface SkeletonProps {
   className?: string;
   count?: number;
 }
 
-export function AnimatedSkeleton({ className, count = 1 }: AnimatedSkeletonProps) {
+export function AnimatedSkeleton({ className, count = 1 }: SkeletonProps) {
   return (
     <>
       {Array.from({ length: count }).map((_, i) => (
@@ -556,14 +349,14 @@ export function AnimatedSkeleton({ className, count = 1 }: AnimatedSkeletonProps
   );
 }
 
-// Animated Tooltip
-interface AnimatedTooltipProps {
+// Tooltip with animation
+interface TooltipProps {
   children: ReactNode;
   content: string;
   position?: 'top' | 'bottom' | 'left' | 'right';
 }
 
-export function AnimatedTooltip({ children, content, position = 'top' }: AnimatedTooltipProps) {
+export function AnimatedTooltip({ children, content, position = 'top' }: TooltipProps) {
   const positionClasses = {
     top: 'bottom-full left-1/2 -translate-x-1/2 mb-2',
     bottom: 'top-full left-1/2 -translate-x-1/2 mt-2',
@@ -587,3 +380,6 @@ export function AnimatedTooltip({ children, content, position = 'top' }: Animate
     </motion.div>
   );
 }
+
+// Re-export AnimatePresence for convenience
+export { AnimatePresence, motion };

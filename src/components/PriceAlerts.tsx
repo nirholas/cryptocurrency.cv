@@ -39,7 +39,7 @@ export function PriceAlerts() {
   const [direction, setDirection] = useState<'above' | 'below'>('above');
   const [currentPrices, setCurrentPrices] = useState<PriceData>({});
   const [triggeredAlerts, setTriggeredAlerts] = useState<PriceAlert[]>([]);
-  const checkInterval = useRef<NodeJS.Timeout>();
+  const checkInterval = useRef<NodeJS.Timeout | undefined>(undefined);
 
   // Load alerts from localStorage
   useEffect(() => {

@@ -39,6 +39,14 @@
     "node_modules",
     "sdk",
     "mcp",
-    "examples"
+    "examples",
+    "raycast",
+    "extension",
+    "alfred",
+    "cli",
+    "e2e",
+    "stories",
+    "playwright.config.ts",
+    ".storybook"
   ]
 }
