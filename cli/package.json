@@ -1,0 +1,29 @@
+{
+  "name": "crypto-news-cli",
+  "version": "1.0.0",
+  "description": "Command-line interface for Free Crypto News API",
+  "main": "index.js",
+  "bin": {
+    "crypto-news": "./index.js"
+  },
+  "keywords": [
+    "crypto",
+    "cryptocurrency",
+    "news",
+    "bitcoin",
+    "ethereum",
+    "cli",
+    "terminal"
+  ],
+  "author": "Free Crypto News",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nirholas/free-crypto-news.git",
+    "directory": "cli"
+  },
+  "homepage": "https://github.com/nirholas/free-crypto-news#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

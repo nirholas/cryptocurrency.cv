@@ -1,0 +1,610 @@
+# 🚀 Deployment Guide
+
+Complete guide to deploying Free Crypto News to various platforms.
+
+---
+
+## Table of Contents
+
+- [Quick Deploy](#quick-deploy)
+- [Vercel (Recommended)](#vercel-recommended)
+- [Railway](#railway)
+- [Docker](#docker)
+- [Self-Hosted](#self-hosted)
+- [Environment Variables](#environment-variables)
+- [Domain Setup](#domain-setup)
+- [Monitoring](#monitoring)
+- [Troubleshooting](#troubleshooting)
+
+---
+
+## Quick Deploy
+
+### One-Click Deploy
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/nirholas/free-crypto-news)
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/free-crypto-news)
+
+---
+
+## Vercel (Recommended)
+
+Vercel is the recommended platform for Free Crypto News due to its Edge Functions and global CDN.
+
+### Method 1: GitHub Integration
+
+1. **Fork the repository**
+   ```bash
+   # Or clone and push to your own repo
+   git clone https://github.com/nirholas/free-crypto-news.git
+   cd free-crypto-news
+   ```
+
+2. **Connect to Vercel**
+   - Go to [vercel.com/new](https://vercel.com/new)
+   - Import your GitHub repository
+   - Vercel auto-detects Next.js settings
+
+3. **Configure Environment Variables** (optional)
+   ```
+   GROQ_API_KEY=gsk_...  # For AI features
+   ```
+
+4. **Deploy**
+   - Click "Deploy"
+   - Wait ~2 minutes for build
+   - Your app is live at `your-project.vercel.app`
+
+### Method 2: Vercel CLI
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Login
+vercel login
+
+# Deploy
+cd free-crypto-news
+vercel
+
+# Production deploy
+vercel --prod
+```
+
+### Vercel Configuration
+
+The project includes `vercel.json` for optimal settings:
+
+```json
+{
+  "framework": "nextjs",
+  "regions": ["iad1", "sfo1", "cdg1", "hnd1"],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, OPTIONS" }
+      ]
+    }
+  ]
+}
+```
+
+### Vercel Edge Config (Optional)
+
+For dynamic configuration without redeploying:
+
+```javascript
+// src/lib/config.ts
+import { get } from '@vercel/edge-config';
+
+export async function getConfig() {
+  return {
+    featuredSource: await get('featuredSource') || 'coindesk',
+    maxArticles: await get('maxArticles') || 100,
+  };
+}
+```
+
+---
+
+## Railway
+
+Railway is a great alternative with generous free tier.
+
+### Deploy Steps
+
+1. **Create Railway Account**
+   - Sign up at [railway.app](https://railway.app)
+
+2. **New Project from GitHub**
+   ```
+   Railway Dashboard → New Project → Deploy from GitHub repo
+   ```
+
+3. **Configure Build**
+   ```
+   Build Command: npm run build
+   Start Command: npm start
+   ```
+
+4. **Environment Variables**
+   ```
+   NODE_ENV=production
+   GROQ_API_KEY=gsk_...  # Optional
+   ```
+
+5. **Generate Domain**
+   - Settings → Domains → Generate Domain
+   - Or add custom domain
+
+### Railway.toml
+
+```toml
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "npm start"
+healthcheckPath = "/api/health"
+healthcheckTimeout = 30
+
+[env]
+NODE_ENV = "production"
+```
+
+---
+
+## Docker
+
+### Dockerfile
+
+```dockerfile
+# Base image
+FROM node:20-alpine AS base
+WORKDIR /app
+
+# Dependencies
+FROM base AS deps
+COPY package*.json ./
+RUN npm ci --only=production
+
+# Build
+FROM base AS builder
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+RUN npm run build
+
+# Production
+FROM base AS runner
+ENV NODE_ENV=production
+ENV PORT=3000
+
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
+
+EXPOSE 3000
+CMD ["node", "server.js"]
+```
+
+### Docker Compose
+
+```yaml
+# docker-compose.yml
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - GROQ_API_KEY=${GROQ_API_KEY}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+```
+
+### Build & Run
+
+```bash
+# Build image
+docker build -t free-crypto-news .
+
+# Run container
+docker run -p 3000:3000 -e GROQ_API_KEY=gsk_... free-crypto-news
+
+# Or with docker-compose
+docker-compose up -d
+```
+
+### Docker Hub
+
+```bash
+# Tag and push
+docker tag free-crypto-news yourusername/free-crypto-news:latest
+docker push yourusername/free-crypto-news:latest
+```
+
+---
+
+## Self-Hosted
+
+### Prerequisites
+
+- Node.js 18+ (20 recommended)
+- npm or pnpm
+- 512MB+ RAM
+- Reverse proxy (nginx/caddy)
+
+### Installation
+
+```bash
+# Clone repository
+git clone https://github.com/nirholas/free-crypto-news.git
+cd free-crypto-news
+
+# Install dependencies
+npm install
+
+# Build for production
+npm run build
+
+# Start server
+npm start
+```
+
+### PM2 (Process Manager)
+
+```bash
+# Install PM2
+npm install -g pm2
+
+# Start with PM2
+pm2 start npm --name "crypto-news" -- start
+
+# Auto-restart on reboot
+pm2 startup
+pm2 save
+
+# View logs
+pm2 logs crypto-news
+
+# Monitor
+pm2 monit
+```
+
+### ecosystem.config.js
+
+```javascript
+module.exports = {
+  apps: [{
+    name: 'crypto-news',
+    script: 'npm',
+    args: 'start',
+    instances: 'max',
+    exec_mode: 'cluster',
+    env: {
+      NODE_ENV: 'production',
+      PORT: 3000,
+    },
+    env_production: {
+      GROQ_API_KEY: 'gsk_...',
+    },
+  }],
+};
+```
+
+### Nginx Reverse Proxy
+
+```nginx
+# /etc/nginx/sites-available/crypto-news
+server {
+    listen 80;
+    server_name news.yourdomain.com;
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name news.yourdomain.com;
+
+    ssl_certificate /etc/letsencrypt/live/news.yourdomain.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/news.yourdomain.com/privkey.pem;
+
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    # Cache static assets
+    location /_next/static {
+        proxy_pass http://localhost:3000;
+        add_header Cache-Control "public, max-age=31536000, immutable";
+    }
+}
+```
+
+### Caddy (Alternative)
+
+```
+# Caddyfile
+news.yourdomain.com {
+    reverse_proxy localhost:3000
+    encode gzip
+    
+    header /api/* {
+        Access-Control-Allow-Origin *
+        Cache-Control "public, s-maxage=300"
+    }
+}
+```
+
+---
+
+## Environment Variables
+
+### Required
+
+None! The API works without any configuration.
+
+### Optional
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `NODE_ENV` | Environment mode | `development` |
+| `PORT` | Server port | `3000` |
+| `GROQ_API_KEY` | Groq API key for AI features | - |
+| `GOOGLE_CLOUD_API_KEY` | Translation API | - |
+
+### Example .env.local
+
+```bash
+# .env.local (development)
+NODE_ENV=development
+
+# AI Features (optional)
+GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxx
+
+# Translation (optional)
+GOOGLE_CLOUD_API_KEY=AIzaxxxxxxxxxxxxxxxxxx
+```
+
+### Production Environment
+
+```bash
+# Set in your hosting platform's dashboard
+# or via CLI:
+
+# Vercel
+vercel env add GROQ_API_KEY
+
+# Railway
+railway variables set GROQ_API_KEY=gsk_...
+
+# Docker
+docker run -e GROQ_API_KEY=gsk_... ...
+```
+
+---
+
+## Domain Setup
+
+### Custom Domain on Vercel
+
+1. Go to Project Settings → Domains
+2. Add your domain: `news.yourdomain.com`
+3. Configure DNS:
+   ```
+   Type: CNAME
+   Name: news
+   Value: cname.vercel-dns.com
+   ```
+4. SSL is automatic
+
+### Custom Domain on Railway
+
+1. Settings → Domains → Custom Domain
+2. Add DNS records:
+   ```
+   Type: CNAME
+   Name: news
+   Value: your-project.up.railway.app
+   ```
+
+### Cloudflare Setup
+
+1. Add site to Cloudflare
+2. Update nameservers
+3. Add DNS record:
+   ```
+   Type: CNAME
+   Name: news
+   Target: your-deployment.vercel.app
+   Proxy: ON (orange cloud)
+   ```
+4. SSL/TLS → Full (strict)
+
+---
+
+## Monitoring
+
+### Health Checks
+
+```bash
+# Basic health check
+curl https://your-domain.com/api/health
+
+# Expected response
+{
+  "status": "ok",
+  "timestamp": "2026-01-22T12:00:00Z",
+  "version": "2.0.0"
+}
+```
+
+### Uptime Monitoring
+
+Recommended services:
+- [UptimeRobot](https://uptimerobot.com) (free)
+- [Better Uptime](https://betteruptime.com)
+- [Pingdom](https://pingdom.com)
+
+Configure to check:
+- `GET /api/health` every 5 minutes
+- Alert on non-200 response
+
+### Analytics
+
+```javascript
+// next.config.js
+module.exports = {
+  // Vercel Analytics (automatic)
+  // Or add custom analytics
+  async headers() {
+    return [{
+      source: '/:path*',
+      headers: [
+        { key: 'X-Analytics-Id', value: 'your-analytics-id' }
+      ]
+    }];
+  }
+};
+```
+
+### Error Tracking
+
+```javascript
+// src/app/error.tsx
+'use client';
+
+export default function Error({ error, reset }) {
+  // Report to Sentry, LogRocket, etc.
+  useEffect(() => {
+    reportError(error);
+  }, [error]);
+
+  return (
+    <div>
+      <h2>Something went wrong!</h2>
+      <button onClick={() => reset()}>Try again</button>
+    </div>
+  );
+}
+```
+
+---
+
+## Troubleshooting
+
+### Common Issues
+
+#### Build Fails
+
+```bash
+# Clear cache and rebuild
+rm -rf .next node_modules
+npm install
+npm run build
+```
+
+#### Memory Issues
+
+```bash
+# Increase Node memory
+NODE_OPTIONS="--max-old-space-size=4096" npm run build
+```
+
+#### Edge Runtime Errors
+
+```typescript
+// Ensure compatibility
+export const runtime = 'edge';  // Must be at top of route file
+```
+
+#### CORS Issues
+
+```typescript
+// src/app/api/[...route]/route.ts
+export async function OPTIONS() {
+  return new Response(null, {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type',
+    },
+  });
+}
+```
+
+#### Rate Limiting
+
+If you hit rate limits on upstream APIs:
+
+```typescript
+// Implement exponential backoff
+async function fetchWithRetry(url, retries = 3) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      return await fetch(url);
+    } catch (err) {
+      await new Promise(r => setTimeout(r, Math.pow(2, i) * 1000));
+    }
+  }
+  throw new Error('Max retries exceeded');
+}
+```
+
+### Logs
+
+```bash
+# Vercel
+vercel logs your-project.vercel.app
+
+# Railway
+railway logs
+
+# Docker
+docker logs crypto-news
+
+# PM2
+pm2 logs crypto-news
+```
+
+### Support
+
+- 📖 [Documentation](README.md)
+- 💬 [GitHub Discussions](https://github.com/nirholas/free-crypto-news/discussions)
+- 🐛 [Report Issues](https://github.com/nirholas/free-crypto-news/issues)
+
+---
+
+## Security Checklist
+
+Before going to production:
+
+- [ ] Remove any test API keys
+- [ ] Set `NODE_ENV=production`
+- [ ] Enable HTTPS only
+- [ ] Configure CSP headers
+- [ ] Set up rate limiting
+- [ ] Enable error tracking
+- [ ] Set up uptime monitoring
+- [ ] Review CORS settings
+- [ ] Test health endpoint
+- [ ] Document any custom configuration

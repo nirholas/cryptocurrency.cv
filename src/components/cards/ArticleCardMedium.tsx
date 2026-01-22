@@ -1,8 +1,38 @@
 /**
- * ArticleCardMedium Component
- * Premium vertical card with animated gradients and glassmorphism
+ * @module ArticleCardMedium
+ * @description Premium vertical article card with animated gradients and glassmorphism.
+ * Ideal for main news feed grids with 200px image area.
+ *
+ * @features
+ * - Source-specific gradient backgrounds with mesh effects
+ * - Image zoom on hover with smooth transitions
+ * - Glassmorphism overlays with backdrop blur
+ * - Category and read time badges
+ * - Optional bookmark button and sentiment badge
+ * - Reduced motion support
+ *
+ * @example
+ * ```tsx
+ * <ArticleCardMedium
+ *   article={{
+ *     title: "Ethereum 2.0 Staking Milestone",
+ *     source: "CoinTelegraph",
+ *     url: "/article/456",
+ *     timeAgo: "4 hours ago",
+ *     imageUrl: "https://..."
+ *   }}
+ *   showBookmark
+ *   showSentiment
+ * />
+ * ```
+ *
+ * @see {@link ArticleCardLarge} for featured/Editor's Picks
+ * @see {@link ArticleCardSmall} for sidebar/trending lists
  */
 
+'use client';
+
+import { memo, useMemo } from 'react';
 import Link from 'next/link';
 import { generateArticleId } from '@/lib/archive-v2';
 
@@ -97,7 +127,7 @@ const defaultStyle = {
   glow: 'group-hover:shadow-gray-500/25',
 };
 
-export default function ArticleCardMedium({ article, externalLink = false }: ArticleCardMediumProps) {
+function ArticleCardMedium({ article, externalLink = false }: ArticleCardMediumProps) {
   const articleId = article.id || generateArticleId(article.link);
   const href = externalLink ? article.link : `/article/${articleId}`;
   const style = sourceStyles[article.source] || defaultStyle;
@@ -227,3 +257,9 @@ export default function ArticleCardMedium({ article, externalLink = false }: Art
     </article>
   );
 }
+
+/**
+ * Memoized ArticleCardMedium component
+ * Only re-renders when article data changes
+ */
+export default memo(ArticleCardMedium);

@@ -1,19 +1,39 @@
 /**
- * ArticleCardList Component
- * Full-width horizontal card for "More Stories" sections
- * Small image left, title, source, time, and brief description
- * 
- * Enhanced with:
- * - Real image support with lazy loading
- * - Bookmark button
- * - Quick share button
- * - Sentiment indicators
- * - Reading progress
+ * @module ArticleCardList
+ * @description Full-width horizontal article card for "More Stories" sections.
+ * Features thumbnail, metadata, and optional reading progress indicator.
+ *
+ * @features
+ * - Left-aligned thumbnail with lazy loading
+ * - Source-specific accent colors
+ * - Bookmark and share buttons
+ * - Sentiment badges (bullish/bearish/neutral)
+ * - Reading progress bar for returning users
  * - Reduced motion support
+ *
+ * @example
+ * ```tsx
+ * <ArticleCardList
+ *   article={{
+ *     title: "DeFi Protocol Analysis",
+ *     source: "Decrypt",
+ *     url: "/article/789",
+ *     timeAgo: "6 hours ago",
+ *     readProgress: 65
+ *   }}
+ *   showBookmark
+ *   showShare
+ *   showProgress
+ * />
+ * ```
+ *
+ * @see {@link ArticleCardLarge} for featured content
+ * @see {@link ArticleCardMedium} for grid layouts
  */
 
 'use client';
 
+import { memo, useMemo } from 'react';
 import Link from 'next/link';
 import { generateArticleId } from '@/lib/archive-v2';
 import { Article, getSourceColors } from './cardUtils';
@@ -34,7 +54,7 @@ interface ArticleCardListProps {
   animationDelay?: number;
 }
 
-export default function ArticleCardList({ 
+function ArticleCardList({ 
   article, 
   externalLink = false,
   showBookmark = true,
@@ -167,3 +187,9 @@ export default function ArticleCardList({
     </article>
   );
 }
+
+/**
+ * Memoized ArticleCardList component
+ * Only re-renders when article data changes
+ */
+export default memo(ArticleCardList);

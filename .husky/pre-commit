@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+/**
+ * Pre-commit hook script
+ * Runs lint-staged for code quality checks
+ */
+
+const { execSync } = require('child_process');
+
+console.log('🔍 Running pre-commit checks...\n');
+
+try {
+  // Run lint-staged
+  execSync('npx lint-staged', { stdio: 'inherit' });
+  
+  console.log('\n✅ Pre-commit checks passed!\n');
+  process.exit(0);
+} catch (error) {
+  console.error('\n❌ Pre-commit checks failed. Please fix the errors and try again.\n');
+  process.exit(1);
+}

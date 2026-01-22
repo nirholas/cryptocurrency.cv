@@ -18,6 +18,14 @@ This document covers the internal React components used in the Free Crypto News 
   - [CardLink](#cardlink)
 - [Breaking News](#breaking-news)
   - [BreakingNewsTicker](#breakingnewsticker)
+- [Feedback & Notifications](#feedback--notifications)
+  - [Toast](#toast)
+  - [EmptyState](#emptystate)
+  - [ErrorBoundary](#errorboundary)
+- [Accessibility & UX](#accessibility--ux)
+  - [BackToTop](#backtotop)
+  - [ScrollRestoration](#scrollrestoration)
+  - [FocusManagement](#focusmanagement)
 - [Keyboard Shortcuts](#keyboard-shortcuts)
 
 ---
@@ -391,6 +399,254 @@ const breakingNews = [
   rotateInterval={6000}
   pauseOnHover={true}
 />
+```
+
+---
+
+## Feedback & Notifications
+
+### Toast
+
+**File:** `src/components/Toast.tsx`
+
+Toast notification system for user feedback.
+
+#### Features
+
+- **Multiple toast types**: success, error, warning, info
+- **Auto-dismiss** with progress bar
+- **Action buttons** for undo/retry
+- **Configurable position** and max count
+- **Accessible** with ARIA live regions
+
+#### Setup
+
+Wrap your app with `ToastProvider`:
+
+```tsx
+import { ToastProvider } from '@/components/Toast';
+
+export default function Layout({ children }) {
+  return (
+    <ToastProvider position="bottom-right" maxToasts={5}>
+      {children}
+    </ToastProvider>
+  );
+}
+```
+
+#### Usage
+
+```tsx
+import { useToast, useToastActions } from '@/components/Toast';
+
+function MyComponent() {
+  const { addToast } = useToast();
+  const toast = useToastActions();
+
+  // Quick methods
+  toast.success('Saved!', 'Your changes have been saved.');
+  toast.error('Error', 'Something went wrong.');
+  toast.warning('Warning', 'This action cannot be undone.');
+  toast.info('Info', 'New articles available.');
+
+  // Full control
+  addToast({
+    type: 'success',
+    title: 'Article bookmarked',
+    message: 'View in your bookmarks',
+    duration: 5000,
+    action: {
+      label: 'Undo',
+      onClick: () => removeBookmark(),
+    },
+  });
+}
+```
+
+---
+
+### EmptyState
+
+**File:** `src/components/EmptyState.tsx`
+
+Empty state placeholders for no-data scenarios.
+
+#### Variants
+
+| Variant | Icon | Use Case |
+|---------|------|----------|
+| `default` | 📭 | Generic empty content |
+| `search` | 🔍 | No search results |
+| `bookmarks` | 🔖 | Empty bookmarks |
+| `error` | ⚠️ | Failed to load |
+| `offline` | 📡 | No connection |
+| `loading` | ⏳ | Loading state |
+
+#### Usage
+
+```tsx
+import { EmptyState, SearchEmptyState, BookmarksEmptyState } from '@/components/EmptyState';
+
+// Generic
+<EmptyState
+  variant="search"
+  title="No results"
+  description="Try different keywords"
+  action={{ label: 'Clear', onClick: clearSearch }}
+/>
+
+// Pre-configured variants
+<SearchEmptyState query="bitcoin" onClear={clearSearch} />
+<BookmarksEmptyState />
+<OfflineEmptyState onRetry={retry} />
+<LoadingState message="Fetching articles..." />
+```
+
+---
+
+### ErrorBoundary
+
+**File:** `src/components/ErrorBoundary.tsx`
+
+Graceful error handling for component failures.
+
+#### Features
+
+- **Catches render errors** in child components
+- **Custom fallback** UI support
+- **Error callback** for logging
+- **Reset functionality** to retry
+- **HOC wrapper** available
+
+#### Usage
+
+```tsx
+import { ErrorBoundary, withErrorBoundary } from '@/components/ErrorBoundary';
+
+// As component wrapper
+<ErrorBoundary
+  onError={(error, info) => logError(error)}
+  fallback={<CustomErrorUI />}
+>
+  <RiskyComponent />
+</ErrorBoundary>
+
+// As higher-order component
+const SafeComponent = withErrorBoundary(RiskyComponent, {
+  showReset: true,
+  onError: logError,
+});
+```
+
+---
+
+## Accessibility & UX
+
+### BackToTop
+
+**File:** `src/components/BackToTop.tsx`
+
+Floating button to scroll back to top with progress indicator.
+
+#### Features
+
+- **Shows after scrolling** past threshold
+- **Circular progress ring** showing scroll position
+- **Keyboard support** (Home key)
+- **Smooth scrolling** option
+
+#### Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `threshold` | `number` | `400` | Scroll distance before showing |
+| `smooth` | `boolean` | `true` | Use smooth scrolling |
+| `bottomOffset` | `string` | `'6rem'` | Position from bottom |
+| `rightOffset` | `string` | `'1.5rem'` | Position from right |
+
+#### Usage
+
+```tsx
+import { BackToTop } from '@/components/BackToTop';
+
+// In your layout
+<BackToTop threshold={300} smooth />
+```
+
+---
+
+### ScrollRestoration
+
+**File:** `src/components/ScrollRestoration.tsx`
+
+Handles scroll and focus management on route changes.
+
+#### Components
+
+| Component | Description |
+|-----------|-------------|
+| `ScrollRestoration` | Scrolls to top on navigation |
+| `RouteAnnouncer` | Announces page changes to screen readers |
+| `NavigationAccessibility` | Combined accessibility features |
+
+#### Usage
+
+```tsx
+import { NavigationAccessibility } from '@/components/ScrollRestoration';
+
+// In your layout
+<NavigationAccessibility
+  scrollToTop={true}
+  smoothScroll={false}
+  focusMainContent={true}
+  announceRoutes={true}
+/>
+```
+
+---
+
+### FocusManagement
+
+**File:** `src/components/FocusManagement.tsx`
+
+Focus trap and roving focus utilities for accessibility.
+
+#### Hooks
+
+| Hook | Description |
+|------|-------------|
+| `useFocusTrap` | Trap focus within a container (modals) |
+| `useRovingFocus` | Arrow key navigation for lists |
+
+#### Usage
+
+```tsx
+import { useFocusTrap, useRovingFocus, FocusTrap } from '@/components/FocusManagement';
+
+// Hook usage
+function Modal({ isOpen }) {
+  const containerRef = useRef(null);
+  useFocusTrap(containerRef, isOpen, {
+    onEscape: closeModal,
+  });
+  return <div ref={containerRef}>...</div>;
+}
+
+// Component usage
+<FocusTrap active={isOpen} onEscape={close}>
+  <ModalContent />
+</FocusTrap>
+
+// Roving focus for menus
+function Menu() {
+  const containerRef = useRef(null);
+  const { handleKeyDown } = useRovingFocus(containerRef, {
+    orientation: 'vertical',
+    loop: true,
+  });
+  return <ul ref={containerRef} onKeyDown={handleKeyDown}>...</ul>;
+}
 ```
 
 ---

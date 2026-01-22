@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>bundleid</key>
+    <string>com.free-crypto-news.alfred</string>
+    <key>category</key>
+    <string>News</string>
+    <key>createdby</key>
+    <string>Free Crypto News</string>
+    <key>description</key>
+    <string>Get real-time crypto news from 7 trusted sources</string>
+    <key>name</key>
+    <string>Free Crypto News</string>
+    <key>readme</key>
+    <string>
+# Free Crypto News Alfred Workflow
+
+Get crypto news directly from Alfred.
+
+## Keywords
+
+- `cn` - Latest news
+- `cn breaking` - Breaking news
+- `cn bitcoin` - Bitcoin news
+- `cn defi` - DeFi news
+- `cn search [query]` - Search news
+- `cn trending` - Trending topics
+
+## Actions
+
+- Press Enter to open in browser
+- Press Cmd+C to copy link
+    </string>
+    <key>version</key>
+    <string>1.0.0</string>
+    <key>webaddress</key>
+    <string>https://github.com/nirholas/free-crypto-news</string>
+</dict>
+</plist>

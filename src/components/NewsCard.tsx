@@ -1,6 +1,39 @@
 /**
- * News Card - Versatile article card for news grids
- * Supports compact and expanded variants
+ * @fileoverview News Card Component
+ * 
+ * A versatile article card component with multiple display variants.
+ * Used throughout the application for displaying news articles in
+ * various layouts and contexts.
+ * 
+ * @module components/NewsCard
+ * @requires next/link
+ * @requires @/lib/archive-v2
+ * @requires @/lib/reading-time
+ * 
+ * @example
+ * // Default card (for grids)
+ * <NewsCard article={article} />
+ * 
+ * // Compact card (for sidebars)
+ * <NewsCard article={article} variant="compact" priority={1} />
+ * 
+ * // Horizontal card (for lists)
+ * <NewsCard article={article} variant="horizontal" showDescription={true} />
+ * 
+ * @variants
+ * - `default` - Full card with border, shadow, and description
+ * - `compact` - Minimal card with optional priority number
+ * - `horizontal` - Wide card with left accent bar
+ * 
+ * @features
+ * - Source-specific color coding
+ * - Reading time estimates
+ * - Keyboard navigation support via `data-article` attribute
+ * - Dark mode compatible
+ * - Accessible focus states
+ * - Smooth hover animations
+ * 
+ * @see {@link ./cards/ArticleCardLarge} For premium featured cards
  */
 'use client';
 

@@ -7,7 +7,7 @@
 
 import sanitizeHtml from 'sanitize-html';
 
-// RSS Feed URLs for crypto news sources
+// RSS Feed URLs for crypto news sources (12 sources)
 const RSS_SOURCES = {
   coindesk: {
     name: 'CoinDesk',
@@ -43,6 +43,32 @@ const RSS_SOURCES = {
     name: 'The Defiant',
     url: 'https://thedefiant.io/feed',
     category: 'defi',
+  },
+  // New sources added
+  bitcoinist: {
+    name: 'Bitcoinist',
+    url: 'https://bitcoinist.com/feed/',
+    category: 'bitcoin',
+  },
+  cryptoslate: {
+    name: 'CryptoSlate',
+    url: 'https://cryptoslate.com/feed/',
+    category: 'general',
+  },
+  newsbtc: {
+    name: 'NewsBTC',
+    url: 'https://www.newsbtc.com/feed/',
+    category: 'general',
+  },
+  cryptonews: {
+    name: 'Crypto.news',
+    url: 'https://crypto.news/feed/',
+    category: 'general',
+  },
+  cryptopotato: {
+    name: 'CryptoPotato',
+    url: 'https://cryptopotato.com/feed/',
+    category: 'general',
   },
 } as const;
 

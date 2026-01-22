@@ -35,7 +35,15 @@ export {
   ArticleGridSkeleton
 } from './CardSkeletons';
 
-// Utilities and types
+// Re-export skeleton components with shorter aliases
+export {
+  ArticleCardLargeSkeleton as CardSkeletonLarge,
+  ArticleCardMediumSkeleton as CardSkeletonMedium,
+  ArticleCardSmallSkeleton as CardSkeletonSmall,
+  ArticleCardListSkeleton as CardSkeletonList,
+} from './CardSkeletons';
+
+// Utilities and types from cardUtils
 export { 
   sourceGradients,
   sourceColors,
@@ -45,3 +53,22 @@ export {
   estimateReadTime,
   type Article
 } from './cardUtils';
+
+// Type definitions for SDK/external use
+export type {
+  ArticleSentiment,
+  NewsSource,
+  CardVariant,
+  SourceColorConfig,
+  SentimentColorConfig,
+  ArticleCardLargeProps,
+  ArticleCardMediumProps,
+  ArticleCardSmallProps,
+  ArticleCardListProps,
+  CardImageProps,
+  PostsProps,
+  CardSkeletonProps,
+  SourceGradientMap,
+  SourceColorMap,
+  SentimentColorMap,
+} from './types';

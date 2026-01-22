@@ -1,9 +1,33 @@
 /**
- * Reading Time Calculator
- * Estimates reading time based on word count
+ * @fileoverview Reading Time Calculator Utilities
+ * 
+ * Functions for calculating and estimating article reading times.
+ * Uses industry-standard 200 WPM average adult reading speed.
+ * 
+ * @module lib/reading-time
+ * 
+ * @example
+ * import { calculateReadingTime, estimateReadingTime, getReadingTimeBadgeColor } from '@/lib/reading-time';
+ * 
+ * // From full article text
+ * const fullTime = calculateReadingTime(articleContent);
+ * console.log(fullTime.text); // "5 min read"
+ * 
+ * // Estimate from metadata only
+ * const estimated = estimateReadingTime(title, description);
+ * console.log(estimated.text); // "~3 min read"
+ * 
+ * // Get badge styling
+ * const colorClass = getReadingTimeBadgeColor(5);
+ * // "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400"
  */
 
-const WORDS_PER_MINUTE = 200; // Average adult reading speed
+/**
+ * Average adult reading speed in words per minute.
+ * Based on research showing most adults read 200-250 WPM.
+ * @constant {number}
+ */
+const WORDS_PER_MINUTE = 200;
 
 export interface ReadingTimeResult {
   minutes: number;

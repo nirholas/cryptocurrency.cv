@@ -1,9 +1,36 @@
 /**
- * ArticleCardSmall Component
- * Premium compact card for sidebar trending lists
- * Subtle animations with glassmorphism effects
+ * @module ArticleCardSmall
+ * @description Compact article card for sidebar trending lists and widgets.
+ * Features optional rank badges for numbered lists.
+ *
+ * @features
+ * - Source-specific accent colors
+ * - Rank badges with gold/silver/bronze styling for top 3
+ * - Bookmark button on hover
+ * - Compact design for sidebar placement
+ * - Glassmorphism effects
+ * - Reduced motion support
+ *
+ * @example
+ * ```tsx
+ * // In a trending sidebar
+ * {articles.map((article, idx) => (
+ *   <ArticleCardSmall
+ *     key={article.id}
+ *     article={article}
+ *     rank={idx + 1}
+ *     showBookmark
+ *   />
+ * ))}
+ * ```
+ *
+ * @see {@link ArticleCardLarge} for featured/Editor's Picks
+ * @see {@link ArticleCardMedium} for main grid layouts
  */
 
+'use client';
+
+import { memo, useMemo } from 'react';
 import Link from 'next/link';
 import { generateArticleId } from '@/lib/archive-v2';
 import CardBookmarkButton from './CardBookmarkButton';
@@ -50,7 +77,7 @@ function getRankStyle(rank: number): string {
   return 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400';
 }
 
-export default function ArticleCardSmall({ 
+function ArticleCardSmall({ 
   article, 
   externalLink = false,
   rank,
@@ -169,3 +196,9 @@ export default function ArticleCardSmall({
     </article>
   );
 }
+
+/**
+ * Memoized ArticleCardSmall component
+ * Only re-renders when article or rank changes
+ */
+export default memo(ArticleCardSmall);

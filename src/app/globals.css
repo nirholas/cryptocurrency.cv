@@ -54,6 +54,85 @@
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  
+  /* ============================================
+     ARTICLE CARD DESIGN TOKENS
+     ============================================ */
+  
+  /* Card Dimensions */
+  --card-large-height: 320px;
+  --card-medium-image-height: 200px;
+  --card-small-height: auto;
+  --card-list-thumbnail: 80px;
+  
+  /* Card Border Radius */
+  --card-radius-sm: 0.5rem;
+  --card-radius-md: 0.75rem;
+  --card-radius-lg: 1rem;
+  --card-radius-xl: 1.25rem;
+  
+  /* Card Transitions */
+  --card-transition-duration: 300ms;
+  --card-transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Source Colors - CoinDesk */
+  --source-coindesk-primary: #3b82f6;
+  --source-coindesk-secondary: #6366f1;
+  --source-coindesk-glow: rgba(59, 130, 246, 0.3);
+  
+  /* Source Colors - CoinTelegraph */
+  --source-cointelegraph-primary: #f97316;
+  --source-cointelegraph-secondary: #ef4444;
+  --source-cointelegraph-glow: rgba(249, 115, 22, 0.3);
+  
+  /* Source Colors - Decrypt */
+  --source-decrypt-primary: #10b981;
+  --source-decrypt-secondary: #14b8a6;
+  --source-decrypt-glow: rgba(16, 185, 129, 0.3);
+  
+  /* Source Colors - The Block */
+  --source-theblock-primary: #a855f7;
+  --source-theblock-secondary: #8b5cf6;
+  --source-theblock-glow: rgba(168, 85, 247, 0.3);
+  
+  /* Source Colors - Bitcoin Magazine */
+  --source-btcmag-primary: #f59e0b;
+  --source-btcmag-secondary: #eab308;
+  --source-btcmag-glow: rgba(245, 158, 11, 0.3);
+  
+  /* Source Colors - CryptoNews */
+  --source-cryptonews-primary: #22c55e;
+  --source-cryptonews-secondary: #10b981;
+  --source-cryptonews-glow: rgba(34, 197, 94, 0.3);
+  
+  /* Source Colors - Bitcoinist */
+  --source-bitcoinist-primary: #f43f5e;
+  --source-bitcoinist-secondary: #e11d48;
+  --source-bitcoinist-glow: rgba(244, 63, 94, 0.3);
+  
+  /* Sentiment Colors */
+  --sentiment-bullish-bg: rgba(16, 185, 129, 0.1);
+  --sentiment-bullish-text: #10b981;
+  --sentiment-bearish-bg: rgba(239, 68, 68, 0.1);
+  --sentiment-bearish-text: #ef4444;
+  --sentiment-neutral-bg: rgba(107, 114, 128, 0.1);
+  --sentiment-neutral-text: #6b7280;
+  
+  /* Card Hover Effects */
+  --card-hover-scale: 1.02;
+  --card-hover-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --card-glow-opacity: 0.3;
+  
+  /* Reading Progress */
+  --progress-height: 3px;
+  --progress-bg: rgba(59, 130, 246, 0.2);
+  --progress-fill: #3b82f6;
+}
+
+/* Dark mode card overrides */
+.dark {
+  --card-hover-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
+  --progress-bg: rgba(59, 130, 246, 0.3);
 }
 
 /* Base Styles */

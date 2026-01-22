@@ -1,6 +1,29 @@
 /**
- * Theme Toggle Button
- * Animated sun/moon toggle for dark mode
+ * @fileoverview Theme Toggle Button Component
+ * 
+ * An animated toggle button for switching between light and dark modes.
+ * Features smooth CSS transitions for icon rotation and scaling.
+ * 
+ * @module components/ThemeToggle
+ * @requires ./ThemeProvider
+ * 
+ * @example
+ * // In a header component
+ * import ThemeToggle from '@/components/ThemeToggle';
+ * 
+ * <ThemeToggle className="ml-4" />
+ * 
+ * @features
+ * - Animated sun/moon icons with smooth transitions
+ * - Accessible with proper ARIA labels
+ * - Keyboard focusable with visible focus ring
+ * - Integrates with `d` keyboard shortcut
+ * - Persists preference to localStorage
+ * 
+ * @accessibility
+ * - `aria-label` describes current action
+ * - `title` provides tooltip
+ * - Focus ring for keyboard navigation
  */
 'use client';
 

@@ -1,6 +1,32 @@
 /**
- * Reading Progress Bar
- * Shows scroll progress on article pages
+ * @fileoverview Reading Progress Bar Component
+ * 
+ * Displays a visual indicator of scroll progress on article pages.
+ * Uses a throttled scroll listener for performance and a gradient
+ * background for visual appeal.
+ * 
+ * @module components/ReadingProgress
+ * 
+ * @example
+ * // In an article page
+ * import ReadingProgress from '@/components/ReadingProgress';
+ * 
+ * export default function ArticlePage() {
+ *   return (
+ *     <>
+ *       <ReadingProgress />
+ *       <article>...</article>
+ *     </>
+ *   );
+ * }
+ * 
+ * @features
+ * - Throttled scroll listener (requestAnimationFrame)
+ * - Gradient progress bar (brand-500 to amber-500)
+ * - Fixed position at top of viewport
+ * - Accessible with ARIA progressbar role
+ * - Responsive to window resize
+ * - Dark mode compatible
  */
 'use client';
 

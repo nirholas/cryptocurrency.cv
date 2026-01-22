@@ -1,6 +1,36 @@
 /**
- * Search Autocomplete
- * Debounced search input with suggestions dropdown
+ * @fileoverview Search Autocomplete Component
+ * 
+ * A debounced search input with real-time suggestions dropdown.
+ * Supports keyboard navigation and integrates with the global
+ * keyboard shortcuts system.
+ * 
+ * @module components/SearchAutocomplete
+ * @requires next/navigation
+ * 
+ * @example
+ * // In a header component
+ * import SearchAutocomplete from '@/components/SearchAutocomplete';
+ * 
+ * <SearchAutocomplete
+ *   placeholder="Search news..."
+ *   className="w-64"
+ *   onSearch={(query) => console.log('Searched:', query)}
+ * />
+ * 
+ * @features
+ * - 300ms debounce to prevent API spam
+ * - Keyboard navigation (↑/↓/Enter/Escape)
+ * - Click outside to close dropdown
+ * - Loading state indicator
+ * - Source badges on results
+ * - Mobile responsive
+ * - Integrates with `/` keyboard shortcut via `data-search-input`
+ * 
+ * @keyboard
+ * - `↑` / `↓` - Navigate suggestions
+ * - `Enter` - Select highlighted suggestion or submit query
+ * - `Escape` - Close dropdown and blur input
  */
 'use client';
 

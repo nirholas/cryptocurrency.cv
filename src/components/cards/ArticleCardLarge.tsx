@@ -1,9 +1,39 @@
 /**
- * ArticleCardLarge Component
- * Premium horizontal card with animated mesh backgrounds
- * Designed for Editor's Picks and featured sections
+ * @module ArticleCardLarge
+ * @description Premium horizontal article card with animated mesh gradient backgrounds.
+ * Designed for Editor's Picks and featured news sections with 320px height.
+ *
+ * @features
+ * - Source-specific mesh gradient backgrounds (CoinDesk, Decrypt, etc.)
+ * - Animated floating orbs with reduced-motion support
+ * - Glassmorphism effects with backdrop blur
+ * - Responsive layout (stacked on mobile, horizontal on desktop)
+ * - Optional bookmark and share buttons
+ * - Sentiment indicator badges
+ *
+ * @example
+ * ```tsx
+ * <ArticleCardLarge
+ *   article={{
+ *     title: "Bitcoin Breaks $100K",
+ *     source: "CoinDesk",
+ *     url: "/article/123",
+ *     timeAgo: "2 hours ago"
+ *   }}
+ *   showBookmark
+ *   showShare
+ *   showSentiment
+ * />
+ * ```
+ *
+ * @see {@link ArticleCardMedium} for grid layouts
+ * @see {@link ArticleCardSmall} for sidebar/trending lists
+ * @see {@link ArticleCardList} for "More Stories" sections
  */
 
+'use client';
+
+import { memo, useMemo } from 'react';
 import Link from 'next/link';
 import { generateArticleId } from '@/lib/archive-v2';
 
@@ -107,7 +137,7 @@ function getReadingTime(text: string | undefined): string {
   return minutes + ' min';
 }
 
-export default function ArticleCardLarge({ article, externalLink = false }: ArticleCardLargeProps) {
+function ArticleCardLarge({ article, externalLink = false }: ArticleCardLargeProps) {
   const articleId = article.id || generateArticleId(article.link);
   const href = externalLink ? article.link : '/article/' + articleId;
   const style = sourceStyles[article.source] || defaultStyle;
@@ -234,3 +264,9 @@ export default function ArticleCardLarge({ article, externalLink = false }: Arti
     </article>
   );
 }
+
+/**
+ * Memoized ArticleCardLarge component
+ * Only re-renders when article data changes
+ */
+export default memo(ArticleCardLarge);

@@ -1,11 +1,14 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import Link from 'next/link';
 import { MobileNav } from './MobileNav';
 import { ThemeToggle } from './ThemeProvider';
 import { SearchModal } from './SearchModal';
 import { CommandPalette } from './CommandPalette';
+
+// Lazy load PriceWidget
+const PriceWidget = lazy(() => import('./PriceWidget'));
 
 // Navigation items with mega menu content
 const navItems = [
@@ -407,6 +410,13 @@ export default function Header() {
 
           {/* Actions */}
           <div className="flex items-center gap-1">
+            {/* Price Widget - Desktop only */}
+            <div className="hidden xl:block mr-2">
+              <Suspense fallback={<div className="w-48 h-6 bg-gray-100 dark:bg-gray-800 rounded animate-pulse" />}>
+                <PriceWidget variant="compact" />
+              </Suspense>
+            </div>
+
             {/* Search Button */}
             <button
               onClick={() => setIsSearchOpen(true)}

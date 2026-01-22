@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Crypto News - Options</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
+      min-height: 100vh;
+      padding: 40px;
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+    
+    .subtitle {
+      color: #64748b;
+      margin-bottom: 32px;
+    }
+    
+    .section {
+      background: #1e293b;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    
+    .section h2 {
+      font-size: 16px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #334155;
+    }
+    
+    .option {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #334155;
+    }
+    
+    .option:last-child {
+      border-bottom: none;
+    }
+    
+    .option-info {
+      flex: 1;
+    }
+    
+    .option-label {
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    
+    .option-desc {
+      font-size: 13px;
+      color: #64748b;
+    }
+    
+    .toggle {
+      position: relative;
+      width: 48px;
+      height: 28px;
+    }
+    
+    .toggle input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    .toggle-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #334155;
+      border-radius: 28px;
+      transition: 0.3s;
+    }
+    
+    .toggle-slider:before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 4px;
+      bottom: 4px;
+      background: #f1f5f9;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+    
+    .toggle input:checked + .toggle-slider {
+      background: #f59e0b;
+    }
+    
+    .toggle input:checked + .toggle-slider:before {
+      transform: translateX(20px);
+    }
+    
+    .btn {
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 500;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    
+    .btn-primary {
+      background: #f59e0b;
+      color: #0f172a;
+    }
+    
+    .btn-primary:hover {
+      background: #d97706;
+    }
+    
+    .btn-secondary {
+      background: #334155;
+      color: #f1f5f9;
+    }
+    
+    .btn-secondary:hover {
+      background: #475569;
+    }
+    
+    .footer {
+      text-align: center;
+      margin-top: 32px;
+      color: #64748b;
+      font-size: 13px;
+    }
+    
+    .footer a {
+      color: #f59e0b;
+      text-decoration: none;
+    }
+    
+    .saved {
+      color: #22c55e;
+      font-size: 14px;
+      margin-left: 12px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .saved.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>⚙️ Settings</h1>
+    <p class="subtitle">Configure your Free Crypto News extension</p>
+    
+    <div class="section">
+      <h2>Notifications</h2>
+      
+      <div class="option">
+        <div class="option-info">
+          <div class="option-label">Breaking News Alerts</div>
+          <div class="option-desc">Get notified when breaking news is published</div>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="notifications" checked>
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h2>Display</h2>
+      
+      <div class="option">
+        <div class="option-info">
+          <div class="option-label">Show Source Badges</div>
+          <div class="option-desc">Display colored badges for news sources</div>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="showSource" checked>
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+      
+      <div class="option">
+        <div class="option-info">
+          <div class="option-label">Compact Mode</div>
+          <div class="option-desc">Show more articles in less space</div>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="compactMode">
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h2>Data</h2>
+      
+      <div class="option">
+        <div class="option-info">
+          <div class="option-label">Clear Cache</div>
+          <div class="option-desc">Remove all cached news data</div>
+        </div>
+        <button class="btn btn-secondary" id="clearCache">Clear</button>
+      </div>
+    </div>
+    
+    <div style="display: flex; align-items: center;">
+      <button class="btn btn-primary" id="save">Save Settings</button>
+      <span class="saved" id="saved">✓ Saved!</span>
+    </div>
+    
+    <div class="footer">
+      <p>Free Crypto News Extension v1.0.0</p>
+      <p><a href="https://github.com/nirholas/free-crypto-news" target="_blank">GitHub</a> • <a href="https://free-crypto-news.vercel.app" target="_blank">Website</a></p>
+    </div>
+  </div>
+  
+  <script src="options.js"></script>
+</body>
+</html>

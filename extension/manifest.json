@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Free Crypto News",
+  "version": "1.0.0",
+  "description": "Real-time crypto news from 7 trusted sources. 100% FREE - No API keys required.",
+  "permissions": [
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://free-crypto-news.vercel.app/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html"
+}

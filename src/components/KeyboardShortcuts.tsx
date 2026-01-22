@@ -1,17 +1,52 @@
 /**
- * Keyboard Shortcuts Provider
- * Global keyboard navigation for power users
+ * @fileoverview Keyboard Shortcuts Provider
  * 
- * Shortcuts:
- * - j/k: Navigate between articles
- * - /: Focus search
- * - g h: Go home
- * - g t: Go to trending
- * - g s: Go to sources
- * - g b: Go to bookmarks
- * - ?: Show shortcuts help
- * - Escape: Close modals/dialogs
- * - d: Toggle dark mode
+ * Provides global keyboard navigation for power users. Wraps the application
+ * to enable keyboard-driven navigation throughout all pages.
+ * 
+ * @module components/KeyboardShortcuts
+ * @requires next/navigation
+ * @requires ./ThemeProvider
+ * 
+ * @example
+ * // In layout.tsx
+ * import { KeyboardShortcutsProvider } from '@/components/KeyboardShortcuts';
+ * 
+ * export default function Layout({ children }) {
+ *   return (
+ *     <KeyboardShortcutsProvider>
+ *       {children}
+ *     </KeyboardShortcutsProvider>
+ *   );
+ * }
+ * 
+ * ## Keyboard Shortcuts
+ * 
+ * ### Navigation
+ * | Key | Action |
+ * |-----|--------|
+ * | `j` | Select next article |
+ * | `k` | Select previous article |
+ * | `Enter` | Open selected article |
+ * | `Escape` | Close modal / blur input |
+ * 
+ * ### Quick Access (g + key)
+ * | Key | Action |
+ * |-----|--------|
+ * | `g h` | Go to Home |
+ * | `g t` | Go to Trending |
+ * | `g s` | Go to Sources |
+ * | `g b` | Go to Bookmarks |
+ * | `g r` | Go to Read Later |
+ * 
+ * ### Actions
+ * | Key | Action |
+ * |-----|--------|
+ * | `/` | Focus search input |
+ * | `d` | Toggle dark mode |
+ * | `?` | Show shortcuts help modal |
+ * 
+ * @see {@link https://docs.free-crypto-news.com/user-guide#keyboard-shortcuts User Guide}
  */
 'use client';
 
