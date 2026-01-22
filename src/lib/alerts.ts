@@ -655,7 +655,7 @@ export async function evaluateCondition(
           
           // Check sentiment if specified
           if (condition.minSentiment !== undefined) {
-            const sentiment = (article as Record<string, unknown>).sentiment;
+            const sentiment = (article as unknown as Record<string, unknown>).sentiment;
             if (typeof sentiment === 'number' && sentiment < condition.minSentiment) {
               return false;
             }
