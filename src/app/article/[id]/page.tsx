@@ -5,6 +5,7 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ReadingProgress from '@/components/ReadingProgress';
 import { 
   getArticleById, 
   getRelatedArticles,
@@ -16,6 +17,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArticleContent } from '@/components/ArticleContent';
 import { RelatedArticles } from '@/components/RelatedArticles';
+import { ArticleStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -103,26 +105,41 @@ export default async function ArticlePage({ params }: Props) {
   
   const relatedArticles = await getRelatedArticles(article, 6);
   const sentiment = sentimentConfig[article.sentiment.label] || sentimentConfig.neutral;
+  const articleUrl = `https://free-crypto-news.vercel.app/article/${id}`;
+  
+  // Breadcrumb data for structured data
+  const breadcrumbs = [
+    { name: 'Home', url: 'https://free-crypto-news.vercel.app' },
+    { name: article.source, url: `https://free-crypto-news.vercel.app/source/${article.source_key}` },
+    { name: article.title.slice(0, 50) + (article.title.length > 50 ? '...' : ''), url: articleUrl },
+  ];
   
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+      {/* Structured Data for SEO */}
+      <ArticleStructuredData article={article} url={articleUrl} />
+      <BreadcrumbStructuredData items={breadcrumbs} />
+      
+      {/* Reading Progress Bar */}
+      <ReadingProgress />
+      
       <div className="max-w-7xl mx-auto">
         <Header />
         
-        <main className="px-4 py-8">
+        <main id="main-content" className="px-4 py-8">
           {/* Breadcrumb */}
-          <nav className="mb-6 text-sm">
-            <ol className="flex items-center gap-2 text-gray-500">
+          <nav aria-label="Breadcrumb" className="mb-6 text-sm">
+            <ol className="flex items-center gap-2 text-gray-500 dark:text-slate-400">
               <li>
-                <Link href="/" className="hover:text-gray-900">Home</Link>
+                <Link href="/" className="hover:text-gray-900 dark:hover:text-white transition-colors">Home</Link>
               </li>
-              <li>/</li>
+              <li aria-hidden="true">/</li>
               <li>
-                <Link href={`/source/${article.source_key}`} className="hover:text-gray-900">
+                <Link href={`/source/${article.source_key}`} className="hover:text-gray-900 dark:hover:text-white transition-colors">
                   {article.source}
                 </Link>
               </li>
-              <li>/</li>
+              <li aria-hidden="true">/</li>
               <li className="text-gray-900 truncate max-w-xs">{article.title}</li>
             </ol>
           </nav>

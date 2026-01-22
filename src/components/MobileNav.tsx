@@ -1,39 +1,115 @@
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import { categories } from '@/lib/categories';
 
+// Navigation sections for mobile
+const mainNavItems = [
+  { href: '/', label: 'Home', icon: '🏠' },
+  { href: '/markets', label: 'Markets', icon: '📈' },
+  { href: '/defi', label: 'DeFi Dashboard', icon: '🏦' },
+  { href: '/trending', label: 'Trending', icon: '🔥' },
+  { href: '/movers', label: 'Top Movers', icon: '🚀' },
+  { href: '/sources', label: 'News Sources', icon: '📚' },
+  { href: '/topics', label: 'Topics', icon: '🏷️' },
+  { href: '/search', label: 'Search', icon: '🔍' },
+];
+
+const resourceLinks = [
+  { href: '/examples', label: 'Code Examples', icon: '💻' },
+  { href: '/about', label: 'About', icon: 'ℹ️' },
+];
+
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [expandedSection, setExpandedSection] = useState<string | null>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const openButtonRef = useRef<HTMLButtonElement>(null);
 
   // Close menu on escape key
   const handleEscape = useCallback((e: KeyboardEvent) => {
-    if (e.key === 'Escape') setIsOpen(false);
+    if (e.key === 'Escape') {
+      setIsOpen(false);
+      openButtonRef.current?.focus();
+    }
+  }, []);
+
+  // Close on outside click
+  const handleClickOutside = useCallback((e: MouseEvent) => {
+    if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+      setIsOpen(false);
+    }
   }, []);
 
   // Prevent body scroll when menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      document.body.style.paddingRight = 'var(--scrollbar-width, 0px)';
       document.addEventListener('keydown', handleEscape);
+      document.addEventListener('mousedown', handleClickOutside);
+      // Focus the close button when menu opens
+      setTimeout(() => closeButtonRef.current?.focus(), 100);
     } else {
       document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
     }
     return () => {
       document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
       document.removeEventListener('keydown', handleEscape);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [isOpen, handleEscape]);
+  }, [isOpen, handleEscape, handleClickOutside]);
 
-  const closeMenu = () => setIsOpen(false);
+  // Focus trap
+  useEffect(() => {
+    if (!isOpen || !menuRef.current) return;
+
+    const focusableElements = menuRef.current.querySelectorAll<HTMLElement>(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+
+    const handleTabKey = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return;
+
+      if (e.shiftKey) {
+        if (document.activeElement === firstElement) {
+          e.preventDefault();
+          lastElement?.focus();
+        }
+      } else {
+        if (document.activeElement === lastElement) {
+          e.preventDefault();
+          firstElement?.focus();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleTabKey);
+    return () => document.removeEventListener('keydown', handleTabKey);
+  }, [isOpen]);
+
+  const closeMenu = () => {
+    setIsOpen(false);
+    openButtonRef.current?.focus();
+  };
+
+  const toggleSection = (section: string) => {
+    setExpandedSection(expandedSection === section ? null : section);
+  };
 
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       {/* Menu Button */}
       <button
+        ref={openButtonRef}
         onClick={() => setIsOpen(!isOpen)}
-        className="relative p-2.5 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-xl transition-colors focus-ring"
+        className="relative p-2.5 text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-800 rounded-xl transition-colors focus-ring"
         aria-label={isOpen ? 'Close menu' : 'Open menu'}
         aria-expanded={isOpen}
         aria-controls="mobile-menu"
@@ -56,7 +132,7 @@ export function MobileNav() {
 
       {/* Backdrop Overlay */}
       <div 
-        className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity duration-300 ${
+        className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-opacity duration-300 ${
           isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
         onClick={closeMenu}
@@ -64,23 +140,28 @@ export function MobileNav() {
       />
 
       {/* Slide-in Menu */}
-      <nav
+      <div
+        ref={menuRef}
         id="mobile-menu"
-        className={`fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-out overflow-y-auto ${
+        className={`fixed top-0 right-0 h-full w-full sm:w-96 sm:max-w-[85vw] bg-white dark:bg-slate-900 shadow-2xl z-50 transform transition-transform duration-300 ease-out overflow-hidden flex flex-col ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
-        aria-label="Mobile navigation"
         role="dialog"
         aria-modal="true"
+        aria-label="Mobile navigation"
       >
         {/* Menu Header */}
-        <div className="sticky top-0 bg-white border-b border-gray-100 px-4 py-4 flex items-center justify-between">
-          <span className="font-bold text-lg bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
-            Menu
-          </span>
+        <div className="sticky top-0 bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-slate-800 px-5 py-4 flex items-center justify-between z-10">
+          <div className="flex items-center gap-2.5">
+            <span className="text-xl" aria-hidden="true">📰</span>
+            <span className="font-bold text-lg bg-gradient-to-r from-brand-600 to-brand-500 dark:from-amber-400 dark:to-amber-500 bg-clip-text text-transparent">
+              Crypto News
+            </span>
+          </div>
           <button
+            ref={closeButtonRef}
             onClick={closeMenu}
-            className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors focus-ring"
+            className="p-2 text-gray-500 dark:text-slate-400 hover:text-gray-700 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-800 rounded-lg transition-colors focus-ring"
             aria-label="Close menu"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -89,70 +170,121 @@ export function MobileNav() {
           </button>
         </div>
 
-        <div className="px-4 py-6 space-y-6">
-          {/* Main Navigation */}
-          <div className="space-y-1">
-            <NavLink href="/" onClick={closeMenu} icon="🏠">Home</NavLink>
-            <NavLink href="/markets" onClick={closeMenu} icon="📈">Markets</NavLink>
-            <NavLink href="/defi" onClick={closeMenu} icon="🏦">DeFi Dashboard</NavLink>
-            <NavLink href="/trending" onClick={closeMenu} icon="🔥">Trending</NavLink>
-            <NavLink href="/movers" onClick={closeMenu} icon="🚀">Top Movers</NavLink>
-            <NavLink href="/sources" onClick={closeMenu} icon="📚">News Sources</NavLink>
-            <NavLink href="/topics" onClick={closeMenu} icon="🏷️">Topics</NavLink>
-            <NavLink href="/search" onClick={closeMenu} icon="🔍">Search</NavLink>
-          </div>
-
-          {/* Categories Section */}
-          <div>
-            <h2 className="px-3 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">
-              Categories
-            </h2>
-            <div className="grid grid-cols-2 gap-1 mt-2">
-              {categories.map((cat) => (
+        {/* Scrollable Content */}
+        <nav className="flex-1 overflow-y-auto overscroll-contain" aria-label="Mobile navigation">
+          <div className="px-4 py-6 space-y-6">
+            {/* Main Navigation */}
+            <div className="space-y-1">
+              {mainNavItems.map((item) => (
                 <Link
-                  key={cat.slug}
-                  href={`/category/${cat.slug}`}
+                  key={item.href}
+                  href={item.href}
                   onClick={closeMenu}
-                  className="flex items-center gap-2 px-3 py-2.5 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors focus-ring text-sm"
+                  className="flex items-center gap-3 px-4 py-3.5 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl transition-colors focus-ring"
                 >
-                  <span aria-hidden="true">{cat.icon}</span>
-                  <span>{cat.name}</span>
+                  <span className="text-xl w-7 text-center" aria-hidden="true">{item.icon}</span>
+                  <span className="font-medium">{item.label}</span>
                 </Link>
               ))}
             </div>
-          </div>
 
-          {/* Resources Section */}
-          <div>
-            <h2 className="px-3 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">
-              Resources
-            </h2>
-            <div className="space-y-1 mt-2">
-              <NavLink href="/examples" onClick={closeMenu} icon="💻">Code Examples</NavLink>
-              <NavLink href="/about" onClick={closeMenu} icon="ℹ️">About</NavLink>
-              <a
-                href="https://github.com/nirholas/free-crypto-news"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 px-3 py-3 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-colors focus-ring"
+            {/* Categories Section - Collapsible */}
+            <div>
+              <button
+                onClick={() => toggleSection('categories')}
+                className="w-full flex items-center justify-between px-4 py-2 text-xs font-semibold text-gray-400 dark:text-slate-500 uppercase tracking-wider hover:text-gray-600 dark:hover:text-slate-400 transition-colors focus-ring rounded-lg"
+                aria-expanded={expandedSection === 'categories'}
               >
-                <span className="text-lg" aria-hidden="true">⭐</span>
-                <span className="font-medium">GitHub</span>
-                <svg className="w-4 h-4 ml-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                <span>Categories</span>
+                <svg 
+                  className={`w-4 h-4 transition-transform duration-200 ${expandedSection === 'categories' ? 'rotate-180' : ''}`}
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
-              </a>
+              </button>
+              <div 
+                className={`grid grid-cols-2 gap-1 mt-2 overflow-hidden transition-all duration-300 ${
+                  expandedSection === 'categories' ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                }`}
+              >
+                {categories.map((cat) => (
+                  <Link
+                    key={cat.slug}
+                    href={`/category/${cat.slug}`}
+                    onClick={closeMenu}
+                    className="flex items-center gap-2.5 px-3 py-3 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl transition-colors focus-ring text-sm"
+                  >
+                    <span className="text-base" aria-hidden="true">{cat.icon}</span>
+                    <span className="font-medium">{cat.name}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Resources Section - Collapsible */}
+            <div>
+              <button
+                onClick={() => toggleSection('resources')}
+                className="w-full flex items-center justify-between px-4 py-2 text-xs font-semibold text-gray-400 dark:text-slate-500 uppercase tracking-wider hover:text-gray-600 dark:hover:text-slate-400 transition-colors focus-ring rounded-lg"
+                aria-expanded={expandedSection === 'resources'}
+              >
+                <span>Resources</span>
+                <svg 
+                  className={`w-4 h-4 transition-transform duration-200 ${expandedSection === 'resources' ? 'rotate-180' : ''}`}
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div 
+                className={`space-y-1 mt-2 overflow-hidden transition-all duration-300 ${
+                  expandedSection === 'resources' ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'
+                }`}
+              >
+                {resourceLinks.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={closeMenu}
+                    className="flex items-center gap-3 px-4 py-3 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl transition-colors focus-ring"
+                  >
+                    <span className="text-lg" aria-hidden="true">{item.icon}</span>
+                    <span className="font-medium">{item.label}</span>
+                  </Link>
+                ))}
+                <a
+                  href="https://github.com/nirholas/free-crypto-news"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 px-4 py-3 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl transition-colors focus-ring"
+                >
+                  <span className="text-lg" aria-hidden="true">⭐</span>
+                  <span className="font-medium">GitHub</span>
+                  <svg className="w-4 h-4 ml-auto text-gray-400 dark:text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
+        </nav>
 
-          {/* API CTA */}
-          <div className="bg-gradient-to-br from-brand-50 to-brand-100/50 rounded-2xl p-4 border border-brand-200/50">
-            <h3 className="font-semibold text-brand-900 mb-1">Free Crypto API</h3>
-            <p className="text-sm text-brand-700/80 mb-3">No keys required. Start building today.</p>
+        {/* Footer CTA */}
+        <div className="sticky bottom-0 bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-slate-800 p-4">
+          <div className="bg-gradient-to-br from-brand-50 to-brand-100 dark:from-brand-900/30 dark:to-brand-800/30 rounded-2xl p-4 border border-brand-200/50 dark:border-brand-700/50">
+            <h3 className="font-semibold text-brand-900 dark:text-brand-100 mb-1">Free Crypto API</h3>
+            <p className="text-sm text-brand-700/80 dark:text-brand-300/80 mb-3">No keys required. Start building today.</p>
             <Link
               href="/about"
               onClick={closeMenu}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-brand-700 text-white text-sm font-medium rounded-lg hover:bg-brand-800 active:scale-95 transition-all focus-ring"
+              className="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-700 dark:bg-brand-600 text-white text-sm font-medium rounded-xl hover:bg-brand-800 dark:hover:bg-brand-500 active:scale-95 transition-all focus-ring shadow-md hover:shadow-lg"
             >
               Get Started
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -161,25 +293,7 @@ export function MobileNav() {
             </Link>
           </div>
         </div>
-      </nav>
+      </div>
     </div>
-  );
-}
-
-function NavLink({ href, onClick, icon, children }: { 
-  href: string; 
-  onClick: () => void; 
-  icon: string; 
-  children: React.ReactNode 
-}) {
-  return (
-    <Link
-      href={href}
-      onClick={onClick}
-      className="flex items-center gap-3 px-3 py-3 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-colors focus-ring"
-    >
-      <span className="text-lg" aria-hidden="true">{icon}</span>
-      <span className="font-medium">{children}</span>
-    </Link>
   );
 }

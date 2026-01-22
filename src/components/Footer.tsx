@@ -1,34 +1,69 @@
+/**
+ * Footer Component
+ * Premium footer with gradient mesh background
+ */
+
 import Link from 'next/link';
 import { categories } from '@/lib/categories';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white mt-16" role="contentinfo">
-      {/* Gradient divider */}
-      <div className="h-1 bg-gradient-to-r from-brand-500 via-amber-500 to-orange-500" aria-hidden="true" />
+    <footer className="relative bg-gray-900 text-white mt-16 overflow-hidden" role="contentinfo">
+      {/* Animated gradient mesh background */}
+      <div 
+        className="absolute inset-0 opacity-30"
+        style={{
+          background: `
+            radial-gradient(ellipse at 10% 90%, rgba(245, 158, 11, 0.3) 0%, transparent 50%),
+            radial-gradient(ellipse at 90% 10%, rgba(251, 191, 36, 0.2) 0%, transparent 50%),
+            radial-gradient(ellipse at 50% 50%, rgba(217, 119, 6, 0.15) 0%, transparent 60%)
+          `
+        }}
+        aria-hidden="true"
+      />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {/* Brand */}
+      {/* Grid pattern overlay */}
+      <div 
+        className="absolute inset-0 opacity-[0.02] bg-[length:60px_60px]"
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, white 1px, transparent 1px),
+            linear-gradient(to bottom, white 1px, transparent 1px)
+          `
+        }}
+        aria-hidden="true"
+      />
+      
+      {/* Gradient divider with glow */}
+      <div className="relative">
+        <div className="h-1.5 bg-gradient-to-r from-brand-400 via-amber-500 to-orange-500" aria-hidden="true" />
+        <div className="absolute inset-0 h-1.5 bg-gradient-to-r from-brand-400 via-amber-500 to-orange-500 blur-sm" aria-hidden="true" />
+      </div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16">
+          {/* Brand Section */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="inline-flex items-center gap-2 text-xl font-bold mb-4 focus-ring rounded">
-              <span aria-hidden="true">📰</span>
-              <span className="bg-gradient-to-r from-brand-400 to-amber-400 bg-clip-text text-transparent">
+            <Link href="/" className="inline-flex items-center gap-3 text-2xl font-black mb-6 focus-ring rounded group">
+              <span aria-hidden="true" className="text-3xl">📰</span>
+              <span className="bg-gradient-to-r from-brand-400 via-amber-400 to-orange-400 bg-clip-text text-transparent group-hover:from-brand-300 group-hover:to-orange-300 transition-all duration-300">
                 Crypto News
               </span>
             </Link>
-            <p className="text-gray-400 text-sm mb-6 leading-relaxed max-w-xs">
+            <p className="text-gray-400 text-base mb-8 leading-relaxed max-w-sm">
               100% free crypto news aggregator. No API keys required. Built for developers, traders & AI agents.
             </p>
+            
+            {/* Social Links */}
             <div className="flex gap-3">
               <a
                 href="https://github.com/nirholas/free-crypto-news"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 bg-gray-800 rounded-xl hover:bg-gray-700 hover:scale-105 active:scale-95 transition-all focus-ring"
+                className="group p-3 bg-gray-800/80 rounded-xl hover:bg-brand-500 hover:scale-110 active:scale-95 transition-all duration-300 focus-ring border border-gray-700/50 hover:border-brand-400"
                 aria-label="View on GitHub"
               >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <svg className="w-5 h-5 text-gray-400 group-hover:text-black transition-colors" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
                 </svg>
               </a>
@@ -37,16 +72,19 @@ export default function Footer() {
 
           {/* Categories */}
           <nav aria-label="Categories">
-            <h3 className="font-semibold text-white mb-4">Categories</h3>
-            <ul className="space-y-2.5">
+            <h3 className="font-bold text-white text-lg mb-6 flex items-center gap-2">
+              <span className="w-8 h-0.5 bg-gradient-to-r from-brand-500 to-transparent" aria-hidden="true" />
+              Categories
+            </h3>
+            <ul className="space-y-3">
               {categories.slice(0, 6).map((cat) => (
                 <li key={cat.slug}>
                   <Link 
-                    href={`/category/${cat.slug}`} 
-                    className="text-sm text-gray-400 hover:text-white transition-colors inline-flex items-center gap-2 focus-ring rounded px-1 -mx-1"
+                    href={'/category/' + cat.slug} 
+                    className="group text-gray-400 hover:text-white transition-colors inline-flex items-center gap-3 focus-ring rounded px-1 -mx-1"
                   >
-                    <span aria-hidden="true">{cat.icon}</span>
-                    {cat.name}
+                    <span aria-hidden="true" className="text-lg group-hover:scale-110 transition-transform">{cat.icon}</span>
+                    <span className="text-sm font-medium">{cat.name}</span>
                   </Link>
                 </li>
               ))}
@@ -55,88 +93,79 @@ export default function Footer() {
 
           {/* Resources */}
           <nav aria-label="Resources">
-            <h3 className="font-semibold text-white mb-4">Resources</h3>
-            <ul className="space-y-2.5">
-              <li>
-                <Link href="/markets" className="text-sm text-gray-400 hover:text-white transition-colors inline-flex items-center gap-2 focus-ring rounded px-1 -mx-1">
-                  <span aria-hidden="true">📈</span> Markets
-                </Link>
-              </li>
-              <li>
-                <Link href="/defi" className="text-sm text-gray-400 hover:text-white transition-colors inline-flex items-center gap-2 focus-ring rounded px-1 -mx-1">
-                  <span aria-hidden="true">🏦</span> DeFi Dashboard
-                </Link>
-              </li>
-              <li>
-                <Link href="/movers" className="text-sm text-gray-400 hover:text-white transition-colors inline-flex items-center gap-2 focus-ring rounded px-1 -mx-1">
-                  <span aria-hidden="true">🚀</span> Top Movers
-                </Link>
-              </li>
-              <li>
-                <Link href="/trending" className="text-sm text-gray-400 hover:text-white transition-colors inline-flex items-center gap-2 focus-ring rounded px-1 -mx-1">
-                  <span aria-hidden="true">🔥</span> Trending
-                </Link>
-              </li>
-              <li>
-                <Link href="/sources" className="text-sm text-gray-400 hover:text-white transition-colors inline-flex items-center gap-2 focus-ring rounded px-1 -mx-1">
-                  <span aria-hidden="true">📚</span> Sources
-                </Link>
-              </li>
-              <li>
-                <Link href="/topics" className="text-sm text-gray-400 hover:text-white transition-colors inline-flex items-center gap-2 focus-ring rounded px-1 -mx-1">
-                  <span aria-hidden="true">🏷️</span> Topics
-                </Link>
-              </li>
+            <h3 className="font-bold text-white text-lg mb-6 flex items-center gap-2">
+              <span className="w-8 h-0.5 bg-gradient-to-r from-brand-500 to-transparent" aria-hidden="true" />
+              Resources
+            </h3>
+            <ul className="space-y-3">
+              {[
+                { href: '/markets', icon: '📈', label: 'Markets' },
+                { href: '/defi', icon: '🏦', label: 'DeFi Dashboard' },
+                { href: '/movers', icon: '🚀', label: 'Top Movers' },
+                { href: '/trending', icon: '🔥', label: 'Trending' },
+                { href: '/sources', icon: '📚', label: 'Sources' },
+                { href: '/topics', icon: '🏷️', label: 'Topics' },
+              ].map((item) => (
+                <li key={item.href}>
+                  <Link 
+                    href={item.href}
+                    className="group text-gray-400 hover:text-white transition-colors inline-flex items-center gap-3 focus-ring rounded px-1 -mx-1"
+                  >
+                    <span aria-hidden="true" className="text-lg group-hover:scale-110 transition-transform">{item.icon}</span>
+                    <span className="text-sm font-medium">{item.label}</span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
 
-          {/* API */}
+          {/* API Endpoints */}
           <nav aria-label="API Endpoints">
-            <h3 className="font-semibold text-white mb-4">API</h3>
-            <ul className="space-y-2.5">
-              <li>
-                <a href="/api/news" className="text-sm text-gray-400 hover:text-brand-400 transition-colors font-mono focus-ring rounded px-1 -mx-1">
-                  /api/news
-                </a>
-              </li>
-              <li>
-                <a href="/api/bitcoin" className="text-sm text-gray-400 hover:text-brand-400 transition-colors font-mono focus-ring rounded px-1 -mx-1">
-                  /api/bitcoin
-                </a>
-              </li>
-              <li>
-                <a href="/api/defi" className="text-sm text-gray-400 hover:text-brand-400 transition-colors font-mono focus-ring rounded px-1 -mx-1">
-                  /api/defi
-                </a>
-              </li>
-              <li>
-                <a href="/api/breaking" className="text-sm text-gray-400 hover:text-brand-400 transition-colors font-mono focus-ring rounded px-1 -mx-1">
-                  /api/breaking
-                </a>
-              </li>
-              <li>
-                <a href="/api/sources" className="text-sm text-gray-400 hover:text-brand-400 transition-colors font-mono focus-ring rounded px-1 -mx-1">
-                  /api/sources
-                </a>
-              </li>
+            <h3 className="font-bold text-white text-lg mb-6 flex items-center gap-2">
+              <span className="w-8 h-0.5 bg-gradient-to-r from-brand-500 to-transparent" aria-hidden="true" />
+              API
+            </h3>
+            <ul className="space-y-3">
+              {[
+                '/api/news',
+                '/api/bitcoin', 
+                '/api/defi',
+                '/api/breaking',
+                '/api/sources',
+              ].map((endpoint) => (
+                <li key={endpoint}>
+                  <a 
+                    href={endpoint}
+                    className="group text-gray-400 hover:text-brand-400 transition-colors font-mono text-sm focus-ring rounded inline-flex items-center gap-2"
+                  >
+                    <span className="text-brand-500/50 group-hover:text-brand-400 transition-colors">→</span>
+                    {endpoint}
+                  </a>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-gray-800 mt-10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-          <p>
-            <span className="text-brand-500">MIT Licensed</span> • Made by{' '}
-            <a 
-              href="https://github.com/nirholas" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors focus-ring rounded"
-            >
-              nich
-            </a>
+        <div className="border-t border-gray-800/50 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-gray-500 text-sm flex items-center gap-2">
+            <span className="inline-flex items-center gap-1.5 bg-brand-500/10 text-brand-400 px-3 py-1 rounded-full text-xs font-semibold">
+              MIT Licensed
+            </span>
+            <span>•</span>
+            <span>Made with 💛 by{' '}
+              <a 
+                href="https://github.com/nirholas" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors focus-ring rounded font-medium"
+              >
+                nich
+              </a>
+            </span>
           </p>
-          <p className="text-center md:text-right text-gray-600">
+          <p className="text-center md:text-right text-gray-600 text-sm">
             Data from CoinDesk, The Block, Decrypt & more
           </p>
         </div>

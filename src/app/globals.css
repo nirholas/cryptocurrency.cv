@@ -276,37 +276,188 @@ body {
 .stagger-children > *:nth-child(8) { animation-delay: 350ms; }
 .stagger-children > *:nth-child(9) { animation-delay: 400ms; }
 
+/* Mega Menu Animations */
+@keyframes megaMenuFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes megaMenuItemSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mega-menu-enter {
+  animation: megaMenuFadeIn 200ms ease-out forwards;
+}
+
+.mega-menu-item {
+  animation: megaMenuItemSlide 250ms ease-out backwards;
+}
+
+.mega-menu-item:nth-child(1) { animation-delay: 50ms; }
+.mega-menu-item:nth-child(2) { animation-delay: 100ms; }
+.mega-menu-item:nth-child(3) { animation-delay: 150ms; }
+.mega-menu-item:nth-child(4) { animation-delay: 200ms; }
+.mega-menu-item:nth-child(5) { animation-delay: 250ms; }
+.mega-menu-item:nth-child(6) { animation-delay: 300ms; }
+
+/* Command Palette Animations */
+@keyframes commandPaletteFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.command-palette-enter {
+  animation: commandPaletteFadeIn 150ms ease-out forwards;
+}
+
 /* Ring Focus for Interactive Elements */
 .focus-ring {
   @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2;
 }
 
-/* Dark Mode Support */
+/* ============================================
+   DARK MODE SUPPORT
+   Class-based dark mode for ThemeProvider
+   ============================================ */
+
+/* Dark Mode CSS Variables */
+.dark {
+  /* Background Colors */
+  --color-bg-primary: #0f172a;
+  --color-bg-secondary: #1e293b;
+  --color-bg-tertiary: #334155;
+  --color-bg-elevated: #1e293b;
+  
+  /* Text Colors - Dark Mode WCAG compliant */
+  --color-text-primary: #f1f5f9;     /* slate-100: 14.72:1 on dark */
+  --color-text-secondary: #cbd5e1;   /* slate-300: 10.31:1 on dark */
+  --color-text-muted: #94a3b8;       /* slate-400: 6.12:1 on dark */
+  --color-text-placeholder: #64748b; /* slate-500: 4.56:1 on dark */
+  
+  /* Border Colors */
+  --color-border: #334155;
+  --color-border-light: #475569;
+  
+  /* Shadows - deeper for dark mode */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.3);
+  
+  /* Semantic Colors - Dark Mode */
+  --color-success: #10b981;
+  --color-success-light: #34d399;
+  --color-danger: #f87171;
+  --color-danger-light: #fca5a5;
+  --color-warning: #fbbf24;
+  --color-warning-light: #fcd34d;
+  
+  color-scheme: dark;
+}
+
+/* Dark mode base styles */
+.dark body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Dark mode skeleton loading */
+.dark .skeleton {
+  background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+  background-size: 200% 100%;
+}
+
+/* Dark mode glass effect */
+.dark .glass {
+  background: rgba(15, 23, 42, 0.8);
+}
+
+/* Dark mode gradient text */
+.dark .gradient-text {
+  background: linear-gradient(135deg, var(--color-brand-400) 0%, var(--color-brand-500) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Dark mode focus ring */
+.dark :focus-visible {
+  outline-color: var(--color-brand-400);
+}
+
+/* Dark mode card hover */
+.dark .card-hover:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+}
+
+/* Dark mode price colors - brighter for visibility */
+.dark .price-up {
+  color: #34d399;
+}
+
+.dark .price-down {
+  color: #f87171;
+}
+
+/* System preference fallback (when no class is set) */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not(.light) {
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
   }
   
-  ::-webkit-scrollbar-track {
+  :root:not(.light) ::-webkit-scrollbar-track {
     background: #1e293b;
   }
   
-  ::-webkit-scrollbar-thumb {
+  :root:not(.light) ::-webkit-scrollbar-thumb {
     background: #475569;
   }
   
-  ::-webkit-scrollbar-thumb:hover {
+  :root:not(.light) ::-webkit-scrollbar-thumb:hover {
     background: #64748b;
   }
   
-  .skeleton {
+  :root:not(.light) .skeleton {
     background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
     background-size: 200% 100%;
   }
   
-  .glass {
+  :root:not(.light) .glass {
     background: rgba(15, 23, 42, 0.8);
   }
 }

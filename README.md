@@ -80,6 +80,16 @@ The PWA uses smart caching strategies:
 | Images | Cache-first | 30 days |
 | Navigation | Network-first + offline fallback | 24 hours |
 
+### Keyboard Shortcuts
+
+| Shortcut | Action |
+|----------|--------|
+| `⌘K` / `Ctrl+K` | Open search |
+| `⌘⇧P` / `Ctrl+Shift+P` | Open command palette |
+| `↑` `↓` | Navigate results |
+| `Enter` | Select item |
+| `Escape` | Close modal |
+
 ### Generate PNG Icons
 
 SVG icons work in modern browsers. For legacy support:
@@ -155,6 +165,7 @@ We aggregate from **7 trusted outlets**:
 | [JavaScript](sdk/javascript/) | Browser & Node.js SDK |
 | [Go](sdk/go/) | Go client library |
 | [PHP](sdk/php/) | PHP SDK |
+| [UI Components](docs/components.md) | Internal navigation & search components |
 
 **Base URL:** `https://free-crypto-news.vercel.app`
 

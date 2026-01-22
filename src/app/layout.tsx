@@ -5,6 +5,8 @@ import { InstallPrompt } from '@/components/InstallPrompt';
 import { UpdatePrompt } from '@/components/UpdatePrompt';
 import { OfflineIndicator } from '@/components/OfflineIndicator';
 import { BookmarksProvider } from '@/components/BookmarksProvider';
+import { ThemeProvider, ThemeScript } from '@/components/ThemeProvider';
+import { KeyboardShortcutsProvider } from '@/components/KeyboardShortcuts';
 
 export const viewport: Viewport = {
   themeColor: [
@@ -144,8 +146,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" dir="ltr">
+    <html lang="en" dir="ltr" suppressHydrationWarning>
       <head>
+        {/* Theme Script - prevents flash of wrong theme */}
+        <ThemeScript />
+        
         {/* Preconnect to external resources */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -157,19 +162,23 @@ export default function RootLayout({
         <link rel="apple-touch-startup-image" href="/splash/apple-splash-dark.png" media="(prefers-color-scheme: dark)" />
         <link rel="apple-touch-startup-image" href="/splash/apple-splash-light.png" media="(prefers-color-scheme: light)" />
       </head>
-      <body className="bg-gray-50 dark:bg-gray-950 antialiased min-h-screen">
+      <body className="bg-gray-50 dark:bg-slate-900 antialiased min-h-screen text-gray-900 dark:text-slate-100 transition-colors duration-200">
         {/* Skip Link for Accessibility */}
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
-        <BookmarksProvider>
-          <PWAProvider>
-            {children}
-            <InstallPrompt />
-            <UpdatePrompt />
-            <OfflineIndicator />
-          </PWAProvider>
-        </BookmarksProvider>
+        <ThemeProvider>
+          <KeyboardShortcutsProvider>
+            <BookmarksProvider>
+              <PWAProvider>
+                {children}
+                <InstallPrompt />
+                <UpdatePrompt />
+                <OfflineIndicator />
+              </PWAProvider>
+            </BookmarksProvider>
+          </KeyboardShortcutsProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
