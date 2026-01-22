@@ -22,11 +22,18 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
   - [GET /api/summarize](#get-apisummarize)
   - [GET /api/ask](#get-apiask)
   - [POST /api/ai](#post-apiai)
+  - [GET /api/ai/brief](#get-apiaibrief)
+  - [POST /api/ai/debate](#post-apiaidebate)
+  - [POST /api/ai/counter](#post-apiaicounter)
 - [Real-Time Endpoints](#real-time-endpoints)
   - [GET /api/sse](#get-apisse)
   - [GET /api/ws](#get-apiws)
 - [User Features](#user-features)
   - [POST /api/alerts](#post-apialerts)
+  - [GET /api/alerts](#get-apialerts)
+  - [GET /api/alerts/[id]](#get-apialertsid)
+  - [PUT /api/alerts/[id]](#put-apialertsid)
+  - [DELETE /api/alerts/[id]](#delete-apialertsid)
   - [POST /api/newsletter](#post-apinewsletter)
   - [POST /api/portfolio](#post-apiportfolio)
   - [POST /api/webhooks](#post-apiwebhooks)
@@ -507,6 +514,160 @@ curl -X POST "https://free-crypto-news.vercel.app/api/ai" \
 
 ---
 
+### GET /api/ai/brief
+
+Generate a comprehensive daily crypto news brief.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `date` | string | today | Date in YYYY-MM-DD format |
+| `format` | string | full | `full` or `summary` |
+
+**Example:**
+
+```bash
+curl "https://free-crypto-news.vercel.app/api/ai/brief?date=2026-01-22&format=full"
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "brief": {
+    "date": "2026-01-22",
+    "executiveSummary": "Crypto markets showed strength with BTC leading...",
+    "marketOverview": {
+      "sentiment": "bullish",
+      "btcTrend": "upward",
+      "keyMetrics": {
+        "fearGreedIndex": 65,
+        "btcDominance": 52.5,
+        "totalMarketCap": "$2.5T"
+      }
+    },
+    "topStories": [...],
+    "sectorsInFocus": [...],
+    "upcomingEvents": [...],
+    "riskAlerts": [...],
+    "generatedAt": "2026-01-22T10:30:00Z"
+  }
+}
+```
+
+---
+
+### POST /api/ai/debate
+
+Generate balanced bull vs bear perspectives on any article or topic.
+
+**Request Body:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `article` | object | No* | Article to debate (`title` and `content`) |
+| `topic` | string | No* | Topic to debate |
+
+*At least one of `article` or `topic` is required.
+
+**Example:**
+
+```bash
+curl -X POST "https://free-crypto-news.vercel.app/api/ai/debate" \
+  -H "Content-Type: application/json" \
+  -d '{"topic": "Bitcoin reaching $200k in 2026"}'
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "debate": {
+    "topic": "Bitcoin reaching $200k in 2026",
+    "bullCase": {
+      "thesis": "Bitcoin is positioned for significant gains...",
+      "arguments": [...],
+      "supportingEvidence": [...],
+      "priceTarget": "$200,000",
+      "timeframe": "12 months",
+      "confidence": 0.7
+    },
+    "bearCase": {
+      "thesis": "Macro headwinds pose significant risks...",
+      "arguments": [...],
+      "supportingEvidence": [...],
+      "priceTarget": "$80,000",
+      "timeframe": "6 months",
+      "confidence": 0.5
+    },
+    "neutralAnalysis": {
+      "keyUncertainties": [...],
+      "whatToWatch": [...],
+      "consensus": "Market divided with slight bullish bias"
+    },
+    "generatedAt": "2026-01-22T10:30:00Z"
+  }
+}
+```
+
+---
+
+### POST /api/ai/counter
+
+Challenge any claim with structured counter-arguments.
+
+**Request Body:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `claim` | string | Yes | The claim to challenge |
+| `context` | string | No | Additional context |
+
+**Example:**
+
+```bash
+curl -X POST "https://free-crypto-news.vercel.app/api/ai/counter" \
+  -H "Content-Type: application/json" \
+  -d '{"claim": "Bitcoin will replace the US dollar by 2030"}'
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "counter": {
+    "originalClaim": "Bitcoin will replace the US dollar by 2030",
+    "counterArguments": [
+      {
+        "argument": "The US dollar is backed by the world's largest economy...",
+        "type": "factual",
+        "strength": "strong"
+      },
+      ...
+    ],
+    "assumptions": [
+      {
+        "assumption": "Governments will not effectively regulate Bitcoin",
+        "challenge": "Many governments have already shown willingness to restrict crypto"
+      }
+    ],
+    "alternativeInterpretations": [...],
+    "missingContext": [...],
+    "overallAssessment": {
+      "claimStrength": "weak",
+      "mainVulnerability": "Underestimates institutional inertia"
+    },
+    "generatedAt": "2026-01-22T10:30:00Z"
+  }
+}
+```
+
+---
+
 ## Real-Time Endpoints
 
 ### GET /api/sse
@@ -563,46 +724,149 @@ WebSocket connection info (for standalone WS server).
 
 ### POST /api/alerts
 
-Create price or keyword alerts.
+Create configurable alert rules with various conditions.
 
-**Request Body:**
+**Alert Condition Types:**
 
-```json
-{
-  "action": "create",
-  "type": "price",
-  "userId": "user-123",
-  "coinId": "bitcoin",
-  "condition": "above",
-  "targetPrice": 100000
-}
-```
+| Type | Description |
+|------|-------------|
+| `price_above` | Price exceeds threshold |
+| `price_below` | Price drops below threshold |
+| `price_change_pct` | Percentage change in 1h or 24h |
+| `volume_spike` | Volume exceeds multiplier of baseline |
+| `breaking_news` | Breaking news with optional keywords |
+| `ticker_mention` | Ticker mentioned with optional sentiment filter |
+| `whale_movement` | Large transfers above USD threshold |
+| `fear_greed_change` | Fear & Greed index change |
 
-**Or for keyword alerts:**
+**Create Alert Rule:**
 
-```json
-{
-  "action": "create",
-  "type": "keyword",
-  "userId": "user-123",
-  "keywords": ["SEC", "ETF", "regulation"]
-}
+```bash
+curl -X POST https://free-crypto-news.vercel.app/api/alerts \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "BTC Above 100k",
+    "condition": {
+      "type": "price_above",
+      "coin": "bitcoin",
+      "threshold": 100000
+    },
+    "channels": ["websocket", "webhook"],
+    "webhookUrl": "https://your-server.com/alerts",
+    "cooldown": 300
+  }'
 ```
 
 **Response:**
 
 ```json
 {
-  "success": true,
   "alert": {
-    "id": "alert-abc123",
-    "type": "price",
-    "coinId": "bitcoin",
-    "condition": "above",
-    "targetPrice": 100000,
-    "triggered": false
+    "id": "alert_1737507600_abc123def",
+    "name": "BTC Above 100k",
+    "condition": {
+      "type": "price_above",
+      "coin": "bitcoin",
+      "threshold": 100000
+    },
+    "channels": ["websocket", "webhook"],
+    "webhookUrl": "https://your-server.com/alerts",
+    "cooldown": 300,
+    "enabled": true,
+    "createdAt": "2026-01-22T00:00:00.000Z"
   }
 }
+```
+
+**Legacy User-Based Alerts (still supported):**
+
+```json
+{
+  "type": "price",
+  "userId": "user-123",
+  "coinId": "bitcoin",
+  "condition": "above",
+  "threshold": 100000
+}
+```
+
+### GET /api/alerts
+
+List all alert rules or get user alerts.
+
+**Query Parameters:**
+
+| Parameter | Description |
+|-----------|-------------|
+| `action=evaluate` | Trigger alert evaluation |
+| `action=stats` | Get alert statistics |
+| `action=events` | Get recent alert events |
+| `userId=xxx` | Get legacy user alerts |
+
+**Example:**
+
+```bash
+curl "https://free-crypto-news.vercel.app/api/alerts"
+```
+
+**Response:**
+
+```json
+{
+  "alerts": [
+    {
+      "id": "alert_123",
+      "name": "BTC Above 100k",
+      "condition": { "type": "price_above", "coin": "bitcoin", "threshold": 100000 },
+      "channels": ["websocket"],
+      "cooldown": 300,
+      "enabled": true,
+      "createdAt": "2026-01-22T00:00:00.000Z"
+    }
+  ],
+  "total": 1
+}
+```
+
+### GET /api/alerts/[id]
+
+Get a single alert rule.
+
+```bash
+curl "https://free-crypto-news.vercel.app/api/alerts/alert_123"
+```
+
+### PUT /api/alerts/[id]
+
+Update an alert rule.
+
+```bash
+curl -X PUT https://free-crypto-news.vercel.app/api/alerts/alert_123 \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "BTC Above 120k",
+    "condition": {
+      "type": "price_above",
+      "coin": "bitcoin",
+      "threshold": 120000
+    }
+  }'
+```
+
+### DELETE /api/alerts/[id]
+
+Delete an alert rule.
+
+```bash
+curl -X DELETE https://free-crypto-news.vercel.app/api/alerts/alert_123
+```
+
+### POST /api/alerts/[id]?action=test
+
+Test trigger an alert (for testing webhooks).
+
+```bash
+curl -X POST "https://free-crypto-news.vercel.app/api/alerts/alert_123?action=test"
 ```
 
 ---

@@ -8,19 +8,92 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- **International News Sources** - 12 new sources from Korea, China, Japan, and Latin America
-  - Korean: Block Media, TokenPost, CoinDesk Korea
-  - Chinese: 8BTC (巴比特), Jinse Finance (金色财经), Odaily (星球日报)
-  - Japanese: CoinPost, CoinDesk Japan, Cointelegraph Japan
-  - Spanish: Cointelegraph Español, Diario Bitcoin, CriptoNoticias
+
+#### AI Intelligence (Jan 22, 2026)
+- **Event Classification** - `/api/classify` with 13 event types (funding, hack, regulation, partnership, product launch, acquisition, legal, market movement, security, network upgrade, governance, research, opinion)
+- **Claim Extraction** - `/api/claims` extracts factual claims with attribution, verifiability analysis, and confidence scores
+- **AI Daily Brief** - `/api/ai/brief` generates comprehensive daily crypto news digest with market overview, top stories, sector analysis, and risk alerts
+- **AI Bull vs Bear Debate** - `/api/ai/debate` creates balanced bull/bear perspectives for any article or topic
+- **AI Counter-Arguments** - `/api/ai/counter` challenges claims with structured counter-arguments including assumption analysis and alternative interpretations
+
+#### Analytics & Intelligence (Jan 22, 2026)
+- **Anomaly Detection** - `/api/analytics/anomalies` detects unusual coverage patterns, volume spikes, and sentiment shifts
+- **Source Credibility** - `/api/analytics/credibility` provides credibility scoring for news sources based on accuracy, speed, and bias
+- **Headline Tracking** - `/api/analytics/headlines` tracks headline changes and mutations over time
+
+#### International News (Jan 22, 2026)
+- **12 International Sources** - Korean (Block Media, TokenPost, CoinDesk Korea), Chinese (8BTC, Jinse Finance, Odaily), Japanese (CoinPost, CoinDesk Japan, Cointelegraph Japan), Spanish (Cointelegraph Español, Diario Bitcoin, CriptoNoticias)
 - **Auto-Translation** - Translate international news to English using Groq AI
 - **`GET /api/news/international`** - New endpoint with language/region filtering
 - **Translation Caching** - 7-day cache for translated content
 - **Source Health Monitoring** - Track availability of international sources
 - **`getGlobalNews()`** - Combined English + international news feed
-- **AI Daily Brief** - Comprehensive daily crypto news digest at `/api/ai/brief` with market overview, top stories, sector analysis, and risk alerts
-- **AI Bull vs Bear Debate** - Generate balanced bull/bear perspectives at `/api/ai/debate` for any article or topic
-- **AI Counter-Arguments** - Challenge claims with structured counter-arguments at `/api/ai/counter` including assumption analysis and alternative interpretations
+
+#### Market Data Pages (Jan 22, 2026)
+- **Markets Hub** - `/markets` with comprehensive market overview, global stats bar, and coin tables
+- **Trending Coins** - `/markets/trending` shows trending cryptocurrencies
+- **Top Gainers** - `/markets/gainers` lists top performing coins (24h)
+- **Top Losers** - `/markets/losers` lists worst performing coins (24h)
+- **New Coins** - `/markets/new` shows recently listed coins
+- **Exchanges** - `/markets/exchanges` and `/markets/exchanges/[id]` for exchange data and volume
+- **Categories** - `/markets/categories` and `/markets/categories/[id]` for market categories (DeFi, Layer 1, etc.)
+
+#### Market Data API (Jan 22, 2026)
+- **`/api/market/coins`** - List all coins with market data
+- **`/api/market/categories`** - Market categories
+- **`/api/market/exchanges`** - Exchange listings
+- **`/api/market/search`** - Search coins
+- **`/api/market/compare`** - Compare multiple coins
+- **`/api/market/history/[coinId]`** - Historical price data
+- **`/api/market/ohlc/[coinId]`** - OHLC candlestick data
+- **`/api/market/snapshot/[coinId]`** - Real-time coin snapshot
+- **`/api/market/social/[coinId]`** - Social metrics for coin
+- **`/api/market/tickers/[coinId]`** - Trading pairs for coin
+- **`/api/market/defi`** - DeFi protocol TVL data
+- **`/api/market/derivatives`** - Derivatives market data
+- **`/api/charts`** - Chart data for visualizations
+
+#### Coin Detail Pages (Jan 22, 2026)
+- **Coin Pages** - `/coin/[coinId]` with comprehensive coin information
+- **Price Charts** - Interactive price charts with multiple timeframes (24h, 7d, 30d, 1y, all)
+- **Market Stats** - Market cap, volume, supply, rankings
+- **Developer Stats** - GitHub activity and developer metrics
+- **Historical Data** - Historical price tables with CSV export
+- **Markets Table** - All trading pairs and exchanges for a coin
+- **Coin Converter** - Real-time currency converter
+- **Related News** - News feed filtered by coin
+- **Price Statistics** - ATH, ATL, price changes across timeframes
+
+#### Portfolio Management (Jan 22, 2026)
+- **Portfolio Page** - `/portfolio` with holdings tracking and P&L
+- **Add Holdings Modal** - Easy portfolio entry with coin search
+- **Portfolio Summary** - Total value, 24h change, allocation breakdown
+- **Holdings Table** - Sortable table with quantity, value, cost basis, P&L
+- **Portfolio Provider** - React context for portfolio state management
+
+#### Watchlist (Jan 22, 2026)
+- **Watchlist Page** - `/watchlist` for tracking favorite coins
+- **Watchlist Button** - One-click add/remove from any coin card
+- **Watchlist Export** - Export to CSV/JSON
+- **Watchlist Mini Widget** - Compact sidebar component
+- **Watchlist Provider** - React context for watchlist state
+
+#### Alerts System (Jan 22, 2026)
+- **Price Alerts** - Set alerts for price targets (above/below threshold)
+- **Alert Rules Engine** - Configurable alert conditions with multiple rule types
+- **Alert Modal** - User-friendly alert creation interface
+- **Alerts List** - View and manage all alerts with enable/disable
+- **Alerts Provider** - React context for alert state management
+- **`/api/alerts/[id]`** - Individual alert CRUD operations
+
+#### Additional Features (Jan 22, 2026)
+- **Global Search** - Enhanced search with keyboard shortcuts (Cmd/Ctrl+K)
+- **Coin Compare** - `/compare` page to compare multiple cryptocurrencies side-by-side
+- **Settings Page** - `/settings` for user preferences and notification settings
+- **Empty States** - Polished empty state components for all lists
+- **Agent Prompts Guide** - `docs/AGENT-PROMPTS.md` for AI agent integration patterns
+
+#### Previous Additions
 - **Keyboard Shortcuts** - Power user navigation with `j`/`k` for articles, `/` for search, `g+h/t/s/b` for quick access, `d` for dark mode, `?` for help modal
 - **Reading Progress Bar** - Visual scroll indicator on article pages with gradient styling
 - **Search Autocomplete** - Real-time search suggestions with 300ms debounce and keyboard navigation
@@ -37,6 +110,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Source Sections** - News organized by outlet with distinct branding
 - **Trending Sidebar** - Compact trending topics panel
 - **Dark Mode** - Enhanced dark mode styling across all components
+- **WebSocket Server** - Enhanced with portfolio, watchlist, and alert real-time subscriptions
+- **Alerts API** - Extended `/api/alerts` with more condition types and webhook delivery
 
 ### Fixed
 - Template literal syntax errors in `ArticleCardLarge.tsx`, `Footer.tsx`, `BreakingNewsBanner.tsx`

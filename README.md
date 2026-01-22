@@ -203,6 +203,7 @@ We aggregate from **7 trusted outlets**:
 | `/api/push` | Web Push notifications |
 | `/api/origins` | Find original news sources |
 | `/api/portfolio` | Portfolio-based news + prices |
+| `/api/news/international` | International sources with translation |
 
 ### 🤖 AI-Powered Endpoints (FREE via Groq)
 
@@ -217,20 +218,72 @@ We aggregate from **7 trusted outlets**:
 | `/api/signals` | News-based trading signals (educational) |
 | `/api/factcheck` | Extract & verify claims |
 | `/api/clickbait` | Detect clickbait headlines |
+| `/api/classify` | Event classification (13 types) |
+| `/api/claims` | Claim extraction with attribution |
+| `/api/ai/brief` | AI-generated article briefs |
+| `/api/ai/counter` | Counter-arguments generation |
+| `/api/ai/debate` | AI debate on crypto topics |
 
-> 💡 AI endpoints require `GROQ_API_KEY` (free at [console.groq.com](https://console.groq.com/keys))
-
-### 📊 Analytics & Intelligence Endpoints
+### 📊 Analytics & Intelligence
 
 | Endpoint | Description |
 |----------|-------------|
-| `/api/analytics/headlines` | Track headline changes over time |
-| `/api/analytics/credibility` | Source credibility scores |
-| `/api/analytics/anomalies` | Detect unusual news patterns |
+| `/api/analytics/anomalies` | Detect unusual coverage patterns |
+| `/api/analytics/credibility` | Source credibility scoring |
+| `/api/analytics/headlines` | Headline tracking & mutations |
 
-> 🔍 Analytics endpoints help detect coordinated publishing, sentiment shifts, volume spikes, and source reliability.
+### 📈 Market Data
+
+| Endpoint | Description |
+|----------|-------------|
+| `/api/market/coins` | List all coins with market data |
+| `/api/market/trending` | Trending cryptocurrencies |
+| `/api/market/categories` | Market categories |
+| `/api/market/exchanges` | Exchange listings |
+| `/api/market/search` | Search coins |
+| `/api/market/compare` | Compare multiple coins |
+| `/api/market/history/[coinId]` | Historical price data |
+| `/api/market/ohlc/[coinId]` | OHLC candlestick data |
+| `/api/market/snapshot/[coinId]` | Real-time coin snapshot |
+| `/api/market/social/[coinId]` | Social metrics for coin |
+| `/api/market/tickers/[coinId]` | Trading pairs for coin |
+| `/api/charts` | Chart data for visualizations |
 
 > 💡 AI endpoints require `GROQ_API_KEY` (free at [console.groq.com](https://console.groq.com/keys))
+
+---
+
+## 🖥️ Web App Pages
+
+The web app includes comprehensive pages for market data, portfolio management, and more:
+
+### Market Data
+| Page | Description |
+|------|-------------|
+| `/markets` | Market overview with global stats and coin tables |
+| `/markets/trending` | Trending cryptocurrencies |
+| `/markets/gainers` | Top performing coins (24h) |
+| `/markets/losers` | Worst performing coins (24h) |
+| `/markets/new` | Recently listed coins |
+| `/markets/exchanges` | Exchange rankings by volume |
+| `/markets/exchanges/[id]` | Individual exchange details |
+| `/markets/categories` | Market categories (DeFi, Layer 1, etc.) |
+| `/markets/categories/[id]` | Category breakdown |
+
+### Coin Details
+| Page | Description |
+|------|-------------|
+| `/coin/[coinId]` | Comprehensive coin page with charts, stats, news |
+| `/compare` | Compare multiple cryptocurrencies side-by-side |
+
+### User Features
+| Page | Description |
+|------|-------------|
+| `/portfolio` | Portfolio management with holdings tracking |
+| `/watchlist` | Watchlist with price alerts |
+| `/settings` | User preferences and notifications |
+
+---
 
 ## SDKs & Components
 
@@ -785,7 +838,8 @@ PRs welcome! Ideas:
 - [ ] More news sources (Korean, Chinese, Japanese, Spanish)
 - [x] ~~Sentiment analysis~~ ✅ Done
 - [x] ~~Topic classification~~ ✅ Done
-- [ ] WebSocket real-time feed
+- [x] ~~WebSocket real-time feed~~ ✅ Done
+- [x] ~~Configurable alert system~~ ✅ Done
 - [ ] Rust / Ruby SDKs
 - [ ] Mobile app (React Native)
 
@@ -1184,17 +1238,17 @@ Building the definitive open crypto intelligence platform.
 - [ ] Full article extraction (where legally permissible)
 - [ ] AI-powered summarization (1-sentence, 1-paragraph)
 - [ ] Advanced entity extraction with AI
-- [ ] Event classification (funding, hack, regulation, etc.)
-- [ ] Claim extraction (factual claims as structured data)
+- [x] Event classification (funding, hack, regulation, etc.) ✅
+- [x] Claim extraction (factual claims as structured data) ✅
 - [ ] Relationship extraction (who did what to whom)
 
 ### Multi-Lingual
 - [x] i18n workflow with 18 languages (auto-translation via Groq - FREE!)
 - [x] Translated README and docs
-- [ ] Korean sources (Crypto primers, etc.)
-- [ ] Chinese sources (8btc, etc.)
-- [ ] Japanese sources
-- [ ] Spanish sources
+- [x] Korean sources ✅
+- [x] Chinese sources ✅
+- [x] Japanese sources ✅
+- [x] Spanish sources ✅
 
 ### Real-Time Features
 - [x] WebSocket streaming
