@@ -189,36 +189,27 @@ function MegaMenu({ item, isOpen }: { item: typeof navItems[0]; isOpen: boolean 
       role="menu"
       aria-label={`${item.label} submenu`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-8">
-        <div className="grid grid-cols-12 gap-8">
+      <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="grid grid-cols-12 gap-6">
           {/* Menu Sections */}
-          <div className="col-span-8 grid grid-cols-2 gap-8">
+          <div className="col-span-8 grid grid-cols-3 gap-6">
             {item.megaMenu.sections.map((section, idx) => (
               <div key={idx} className="mega-menu-item">
-                <h3 className="text-xs font-semibold text-gray-400 dark:text-slate-500 uppercase tracking-wider mb-4">
+                <h3 className="text-xs font-semibold text-gray-400 dark:text-slate-500 uppercase tracking-wider mb-2">
                   {section.title}
                 </h3>
-                <ul className="space-y-1">
+                <ul className="space-y-0.5">
                   {section.links.map((link, linkIdx) => (
                     <li key={linkIdx} className="mega-menu-item" style={{ animationDelay: `${(idx * 3 + linkIdx) * 40 + 80}ms` }}>
                       <Link
                         href={link.href}
-                        className="flex items-center gap-3 px-3 py-2.5 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 rounded-lg transition-all duration-200 group"
+                        className="flex items-center gap-2 px-2 py-1.5 text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800 rounded-lg transition-all duration-200 group text-sm"
                         role="menuitem"
                       >
-                        <span className="text-lg group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
+                        <span className="text-base group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
                           {link.icon}
                         </span>
                         <span className="font-medium">{link.label}</span>
-                        <svg 
-                          className="w-4 h-4 ml-auto opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-brand-500" 
-                          fill="none" 
-                          stroke="currentColor" 
-                          viewBox="0 0 24 24"
-                          aria-hidden="true"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
                       </Link>
                     </li>
                   ))}
@@ -229,14 +220,16 @@ function MegaMenu({ item, isOpen }: { item: typeof navItems[0]; isOpen: boolean 
           
           {/* Featured Section */}
           <div className="col-span-4 mega-menu-item" style={{ animationDelay: '150ms' }}>
-            <div className="bg-gradient-to-br from-brand-50 to-brand-100 dark:from-brand-900/20 dark:to-brand-800/20 rounded-2xl p-6 border border-brand-200/50 dark:border-brand-700/50 hover:shadow-lg transition-shadow duration-300">
-              <div className="w-10 h-10 rounded-xl bg-brand-500/10 dark:bg-brand-400/10 flex items-center justify-center mb-4">
-                <span className="text-xl" aria-hidden="true">{item.icon}</span>
+            <div className="bg-gradient-to-br from-brand-50 to-brand-100 dark:from-brand-900/20 dark:to-brand-800/20 rounded-xl p-4 border border-brand-200/50 dark:border-brand-700/50 hover:shadow-lg transition-shadow duration-300">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-8 h-8 rounded-lg bg-brand-500/10 dark:bg-brand-400/10 flex items-center justify-center">
+                  <span className="text-lg" aria-hidden="true">{item.icon}</span>
+                </div>
+                <h3 className="font-semibold text-brand-900 dark:text-brand-100">
+                  {item.megaMenu.featured.title}
+                </h3>
               </div>
-              <h3 className="font-semibold text-brand-900 dark:text-brand-100 mb-2">
-                {item.megaMenu.featured.title}
-              </h3>
-              <p className="text-sm text-brand-700 dark:text-brand-300 mb-4">
+              <p className="text-sm text-brand-700 dark:text-brand-300 mb-3">
                 {item.megaMenu.featured.description}
               </p>
               <Link
