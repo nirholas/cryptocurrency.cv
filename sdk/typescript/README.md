@@ -5,13 +5,13 @@
 ## Installation
 
 ```bash
-npm install @nicholasrq/crypto-news
+npm install @nirholas/crypto-news
 ```
 
 ## Usage
 
 ```typescript
-import { CryptoNews } from '@nicholasrq/crypto-news';
+import { CryptoNews } from '@nirholas/crypto-news';
 
 const client = new CryptoNews();
 
@@ -67,7 +67,7 @@ origins.items.forEach(item => {
 ## Convenience Functions
 
 ```typescript
-import { getCryptoNews, searchCryptoNews, getDefiNews } from '@nicholasrq/crypto-news';
+import { getCryptoNews, searchCryptoNews, getDefiNews } from '@nirholas/crypto-news';
 
 const news = await getCryptoNews(10);
 const results = await searchCryptoNews('bitcoin');
@@ -90,7 +90,7 @@ import type {
   AnalyzeResponse,
   ArchiveResponse,
   OriginsResponse
-} from '@nicholasrq/crypto-news';
+} from '@nirholas/crypto-news';
 ```
 
 ## Custom Configuration

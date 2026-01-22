@@ -2,7 +2,7 @@
   "name": "free-crypto-news",
   "version": "1.0.0",
   "description": "🆓 100% FREE crypto news API.  No API keys.  No rate limits. No BS.",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",

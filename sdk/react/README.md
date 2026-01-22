@@ -5,13 +5,13 @@ Drop-in React components for crypto news. **100% FREE - no API keys!**
 ## Installation
 
 ```bash
-npm install @nicholasrq/react-crypto-news
+npm install @nirholas/react-crypto-news
 ```
 
 ## Quick Start
 
 ```tsx
-import { CryptoNews } from '@nicholasrq/react-crypto-news';
+import { CryptoNews } from '@nirholas/react-crypto-news';
 
 function App() {
   return <CryptoNews limit={10} />;
@@ -82,7 +82,7 @@ Main news component with multiple display variants.
 Fetch news for custom UI:
 
 ```tsx
-import { useCryptoNews } from '@nicholasrq/react-crypto-news';
+import { useCryptoNews } from '@nirholas/react-crypto-news';
 
 function CustomNews() {
   const { articles, loading, error, refresh } = useCryptoNews({
@@ -113,7 +113,7 @@ function CustomNews() {
 Search news by keywords:
 
 ```tsx
-import { useSearchNews } from '@nicholasrq/react-crypto-news';
+import { useSearchNews } from '@nirholas/react-crypto-news';
 
 function SearchResults({ query }) {
   const { articles, loading } = useSearchNews(query, { limit: 20 });
@@ -129,7 +129,7 @@ function SearchResults({ query }) {
 Get trending topics:
 
 ```tsx
-import { useTrendingTopics } from '@nicholasrq/react-crypto-news';
+import { useTrendingTopics } from '@nirholas/react-crypto-news';
 
 function Trending() {
   const { topics, loading } = useTrendingTopics({ limit: 10, hours: 24 });
@@ -209,7 +209,7 @@ import type {
   TrendingTopic,
   UseCryptoNewsOptions,
   CryptoNewsProps 
-} from '@nicholasrq/react-crypto-news';
+} from '@nirholas/react-crypto-news';
 ```
 
 ## Examples

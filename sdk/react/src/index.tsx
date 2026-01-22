@@ -5,7 +5,7 @@
  * 
  * @example
  * ```tsx
- * import { CryptoNews, useCryptoNews } from '@nicholasrq/react-crypto-news';
+ * import { CryptoNews, useCryptoNews } from '@nirholas/react-crypto-news';
  * 
  * // Simple usage
  * <CryptoNews limit={10} />

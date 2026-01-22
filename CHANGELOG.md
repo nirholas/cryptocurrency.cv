@@ -125,8 +125,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Archive V2 System** - JSONL-based article storage with enhanced metadata
 - **AI-Powered Endpoints** - `/api/sentiment`, `/api/factcheck`, `/api/clickbait` using Groq
 - **MCP Server** - Model Context Protocol integration for Claude Desktop and ChatGPT
-- **TypeScript SDK** - Published to npm as `@nicholasrq/crypto-news`
-- **React SDK** - Component library at `@nicholasrq/react-crypto-news`
+- **TypeScript SDK** - Published to npm as `@nirholas/crypto-news`
+- **React SDK** - Component library at `@nirholas/react-crypto-news`
 - **Trending Topics** - `/api/trending` endpoint with sentiment analysis
 - **Market Context** - `/api/market` endpoint with price data
 

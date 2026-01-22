@@ -6,7 +6,7 @@
  * 
  * @example
  * ```typescript
- * import { CryptoNews } from '@nicholasrq/crypto-news';
+ * import { CryptoNews } from '@nirholas/crypto-news';
  * 
  * const client = new CryptoNews();
  * const articles = await client.getLatest(10);

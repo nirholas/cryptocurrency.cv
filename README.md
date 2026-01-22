@@ -478,11 +478,11 @@ print(news["articles"][0]["title"])
 ### TypeScript SDK (npm)
 
 ```bash
-npm install @nicholasrq/crypto-news
+npm install @nirholas/crypto-news
 ```
 
 ```typescript
-import { CryptoNews } from '@nicholasrq/crypto-news';
+import { CryptoNews } from '@nirholas/crypto-news';
 
 const client = new CryptoNews();
 
@@ -924,7 +924,7 @@ Returns articles per source, hourly distribution, and category breakdown.
 
 | Language | Install |
 |----------|---------|
-| TypeScript | `npm install @nicholasrq/crypto-news` |
+| TypeScript | `npm install @nirholas/crypto-news` |
 | Python | `curl -O .../sdk/python/crypto_news.py` |
 | Go | `go get github.com/nirholas/free-crypto-news/sdk/go` |
 | PHP | `curl -O .../sdk/php/CryptoNews.php` |
