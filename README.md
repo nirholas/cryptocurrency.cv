@@ -38,6 +38,21 @@ curl https://free-crypto-news.vercel.app/api/news
 
 ---
 
+## 🌿 Branches
+
+| Branch | Description |
+|--------|-------------|
+| `main` | Stable production branch — Original API-focused design |
+| `redesign/pro-news-ui` | Premium UI redesign — CoinDesk/CoinTelegraph-style with dark mode, enhanced components, SEO structured data, and full PWA support |
+
+To try the redesign locally:
+```bash
+git checkout redesign/pro-news-ui
+npm install && npm run dev
+```
+
+---
+
 ## 📱 Progressive Web App (PWA)
 
 Free Crypto News is a **fully installable PWA** that works offline!
@@ -82,13 +97,22 @@ The PWA uses smart caching strategies:
 
 ### Keyboard Shortcuts
 
+Power through news with keyboard navigation:
+
 | Shortcut | Action |
 |----------|--------|
-| `⌘K` / `Ctrl+K` | Open search |
-| `⌘⇧P` / `Ctrl+Shift+P` | Open command palette |
-| `↑` `↓` | Navigate results |
-| `Enter` | Select item |
+| `j` / `k` | Next / previous article |
+| `/` | Focus search |
+| `Enter` | Open selected article |
+| `d` | Toggle dark mode |
+| `g h` | Go to Home |
+| `g t` | Go to Trending |
+| `g s` | Go to Sources |
+| `g b` | Go to Bookmarks |
+| `?` | Show all shortcuts |
 | `Escape` | Close modal |
+
+📖 **Full user guide:** [docs/USER-GUIDE.md](docs/USER-GUIDE.md)
 
 ### Generate PNG Icons
 
@@ -1265,6 +1289,18 @@ We welcome contributions! Whether it's:
 - 🌍 Translations
 
 Please read our [**Contributing Guide**](CONTRIBUTING.md) to get started.
+
+---
+
+## 📚 Documentation
+
+| Document | Description |
+|----------|-------------|
+| [User Guide](docs/USER-GUIDE.md) | End-user features, keyboard shortcuts, PWA |
+| [Developer Guide](docs/DEVELOPER-GUIDE.md) | Architecture, components, extending the app |
+| [Contributing](CONTRIBUTING.md) | How to contribute |
+| [Changelog](CHANGELOG.md) | Version history |
+| [Security](SECURITY.md) | Security policy |
 
 ---
 
