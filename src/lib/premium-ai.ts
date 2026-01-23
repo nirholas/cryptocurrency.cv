@@ -9,7 +9,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { getTopCoins, getCoinDetails } from '@/lib/market-data';
-import { getNews } from '@/lib/crypto-news';
+import { getLatestNews } from '@/lib/crypto-news';
 
 // =============================================================================
 // TYPES
@@ -105,7 +105,7 @@ export async function analyzeSentiment(request: NextRequest): Promise<NextRespon
     // Get market data and news
     const [coinData, news] = await Promise.all([
       getCoinDetails(coin),
-      getNews({ limit: 10 }),
+      getLatestNews(10),
     ]);
 
     if (!coinData) {
@@ -299,7 +299,7 @@ export async function generateSummary(request: NextRequest): Promise<NextRespons
   try {
     const [coinData, news] = await Promise.all([
       getCoinDetails(coin),
-      getNews({ limit: 5 }),
+      getLatestNews(5),
     ]);
 
     if (!coinData) {
