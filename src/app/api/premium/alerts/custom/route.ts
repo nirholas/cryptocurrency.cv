@@ -189,7 +189,7 @@ async function handler(
     for (const rule of rules) {
       const details = coinData.get(rule.coinId);
       const currentPrice =
-        prices[rule.coinId]?.usd || details?.market_data?.current_price?.usd || 0;
+        prices[rule.coinId]?.price || details?.market_data?.current_price?.usd || 0;
       const priceChange24h = details?.market_data?.price_change_percentage_24h || 0;
       const volume24h = details?.market_data?.total_volume?.usd || 0;
       const avgVolume = volume24h * 0.8; // Simplified average
