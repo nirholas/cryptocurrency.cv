@@ -136,6 +136,7 @@ class MemoryCache {
 export const newsCache = new MemoryCache(500);      // RSS feed cache
 export const aiCache = new MemoryCache(200);        // AI response cache
 export const translationCache = new MemoryCache(300); // Translation cache
+export const cache = new MemoryCache(500);          // General purpose cache (for binance.ts, derivatives.ts)
 
 /**
  * Cache wrapper for async functions

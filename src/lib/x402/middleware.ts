@@ -16,7 +16,7 @@ import { x402Server } from './server';
 import { createRoutes, isPricedRoute, getRoutePrice } from './routes';
 import { getTierFromApiKey, checkTierRateLimit } from './rate-limit';
 import { API_TIERS, API_PRICING } from './pricing';
-import { PAYMENT_ADDRESS, CURRENT_NETWORK } from './config';
+import { PAYMENT_ADDRESS, CURRENT_NETWORK, getAcceptedAssets } from './config';
 
 // =============================================================================
 // MIDDLEWARE CONFIGURATION
@@ -74,7 +74,7 @@ export async function hybridAuthMiddleware(
             tier: tier,
             limit: rateLimit.limit,
             resetAt: new Date(rateLimit.resetAt).toISOString(),
-            upgrade: 'https://crypto-data-aggregator.vercel.app/pricing',
+            upgrade: '/pricing',
           },
           {
             status: 429,
@@ -98,7 +98,7 @@ export async function hybridAuthMiddleware(
       {
         error: 'Invalid API Key',
         message: 'The provided API key is invalid or expired',
-        docs: 'https://crypto-data-aggregator.vercel.app/docs/api',
+        docs: '/docs/api',
       },
       { status: 401 }
     );
@@ -131,29 +131,36 @@ export async function hybridAuthMiddleware(
 
 /**
  * Create a 402 Payment Required response
- * Follows x402 protocol specification
+ * Follows x402 protocol specification with multi-chain support
+ * 
+ * Best practices from top facilitators:
+ * - Multi-chain accepts (Dexter supports 40+ chains)
+ * - v2 protocol headers (PAYMENT-SIGNATURE)
+ * - Resource metadata for Bazaar discovery
  */
 export function create402Response(endpoint: string, price: string): NextResponse {
   const requestId = crypto.randomUUID();
   const priceNum = parseFloat(price.replace('$', ''));
   const priceInUSDC = Math.round(priceNum * 1e6); // USDC has 6 decimals
 
+  // Multi-chain accepts - advertise all supported networks
+  const accepts = getAcceptedAssets(priceInUSDC).map((asset) => ({
+    ...asset,
+    resource: endpoint,
+    description: `API access: ${endpoint}`,
+    mimeType: 'application/json',
+    paymentNonce: requestId,
+  }));
+
   const paymentRequirements = {
     x402Version: 2,
-    accepts: [
-      {
-        scheme: 'exact',
-        network: CURRENT_NETWORK,
-        maxAmountRequired: priceInUSDC.toString(),
-        resource: endpoint,
-        description: `API access: ${endpoint}`,
-        mimeType: 'application/json',
-        payTo: PAYMENT_ADDRESS,
-        paymentNonce: requestId,
-        // Token info (USDC on Base)
-        asset: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',
-      },
-    ],
+    accepts,
+    // Bazaar discovery metadata (best practice from top facilitators)
+    resource: {
+      endpoint,
+      mimeType: 'application/json',
+      description: `Crypto news API: ${endpoint}`,
+    },
   };
 
   return NextResponse.json(
@@ -163,11 +170,12 @@ export function create402Response(endpoint: string, price: string): NextResponse
       price: price,
       priceUSDC: priceInUSDC,
       endpoint: endpoint,
+      supportedNetworks: accepts.map((a) => a.network),
       paymentMethods: [
         {
           type: 'x402',
-          description: 'Pay per request with USDC on Base',
-          network: CURRENT_NETWORK,
+          description: 'Pay per request with USDC',
+          networks: ['Base Mainnet', 'Base Sepolia'],
           docs: 'https://docs.x402.org',
         },
         {
@@ -178,7 +186,7 @@ export function create402Response(endpoint: string, price: string): NextResponse
             price: t.priceDisplay,
             requests: t.rateLimit,
           })),
-          url: 'https://crypto-data-aggregator.vercel.app/pricing',
+          url: '/pricing',
         },
       ],
       x402: paymentRequirements,
@@ -186,10 +194,14 @@ export function create402Response(endpoint: string, price: string): NextResponse
     {
       status: 402,
       headers: {
+        // v1 compatibility
         'X-Payment-Required': 'true',
         'X-Price-USD': price,
         'X-Network': CURRENT_NETWORK,
         'WWW-Authenticate': `X402 realm="${endpoint}"`,
+        // v2 headers (best practice from top facilitators)
+        'X-X402-Version': '2',
+        'X-Accepts-Networks': 'eip155:8453,eip155:84532',
       },
     }
   );

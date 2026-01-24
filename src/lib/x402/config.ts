@@ -84,9 +84,144 @@ if (
 export const USDC_ADDRESSES: Record<string, `0x${string}`> = {
   'eip155:8453': '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913', // Base Mainnet
   'eip155:84532': '0x036CbD53842c5426634e7929541eC2318f3dCF7e', // Base Sepolia
+  'eip155:137': '0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359', // Polygon Mainnet
+  'eip155:1': '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', // Ethereum Mainnet
 };
 
 /**
  * Get USDC address for current network
  */
 export const USDC_ADDRESS = USDC_ADDRESSES[CURRENT_NETWORK];
+
+// =============================================================================
+// MULTI-CHAIN SUPPORT (x402 Best Practice)
+// =============================================================================
+
+/**
+ * Solana payment addresses
+ * For Solana networks, use base58 encoded addresses
+ */
+export const SOLANA_PAYMENT_ADDRESS =
+  process.env.X402_SOLANA_PAYMENT_ADDRESS || '';
+
+/**
+ * Solana USDC mint addresses
+ */
+export const SOLANA_USDC_ADDRESSES = {
+  'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp': 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', // Mainnet
+  'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1': '4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU', // Devnet
+} as const;
+
+/**
+ * Supported networks for payment acceptance
+ * Top facilitators like Dexter support 40+ chains - we start with the most common
+ */
+export const SUPPORTED_NETWORKS: NetworkId[] = [
+  NETWORKS.BASE_MAINNET,
+  NETWORKS.BASE_SEPOLIA,
+  ...(SOLANA_PAYMENT_ADDRESS ? [NETWORKS.SOLANA_MAINNET] : []),
+];
+
+/**
+ * Payment configuration for multi-chain accepts
+ * Used in 402 responses to advertise all accepted payment methods
+ */
+export interface PaymentAsset {
+  network: NetworkId | string;
+  asset: `0x${string}` | string;
+  decimals: number;
+  symbol: string;
+  type: 'evm' | 'solana';
+}
+
+export const ACCEPTED_ASSETS: PaymentAsset[] = [
+  // EVM Networks
+  {
+    network: NETWORKS.BASE_MAINNET,
+    asset: USDC_ADDRESSES['eip155:8453'],
+    decimals: 6,
+    symbol: 'USDC',
+    type: 'evm',
+  },
+  {
+    network: NETWORKS.BASE_SEPOLIA,
+    asset: USDC_ADDRESSES['eip155:84532'],
+    decimals: 6,
+    symbol: 'USDC',
+    type: 'evm',
+  },
+  // Solana Networks (conditionally added)
+  ...(SOLANA_PAYMENT_ADDRESS
+    ? [
+        {
+          network: NETWORKS.SOLANA_MAINNET,
+          asset: SOLANA_USDC_ADDRESSES['solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp'],
+          decimals: 6,
+          symbol: 'USDC',
+          type: 'solana' as const,
+        },
+      ]
+    : []),
+];
+
+/**
+ * Get payment address for a specific network
+ */
+export function getPaymentAddress(network: string): string {
+  if (network.startsWith('solana:')) {
+    return SOLANA_PAYMENT_ADDRESS;
+  }
+  return PAYMENT_ADDRESS;
+}
+
+/**
+ * Get all accepted assets for multi-chain 402 responses
+ */
+export function getAcceptedAssets(priceUSDC: number): Array<{
+  scheme: string;
+  network: string;
+  maxAmountRequired: string;
+  asset: string;
+  payTo: string;
+}> {
+  return ACCEPTED_ASSETS.map((a) => ({
+    scheme: 'exact',
+    network: a.network,
+    maxAmountRequired: priceUSDC.toString(),
+    asset: a.asset,
+    payTo: getPaymentAddress(a.network),
+  }));
+}
+
+// =============================================================================
+// NETWORK UTILITIES
+// =============================================================================
+
+/**
+ * Check if a network is EVM-based
+ */
+export function isEvmNetwork(network: string): boolean {
+  return network.startsWith('eip155:');
+}
+
+/**
+ * Check if a network is Solana-based
+ */
+export function isSolanaNetwork(network: string): boolean {
+  return network.startsWith('solana:');
+}
+
+/**
+ * Get network display name
+ */
+export function getNetworkDisplayName(network: string): string {
+  const names: Record<string, string> = {
+    'eip155:8453': 'Base',
+    'eip155:84532': 'Base Sepolia',
+    'eip155:137': 'Polygon',
+    'eip155:1': 'Ethereum',
+    'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp': 'Solana',
+    'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1': 'Solana Devnet',
+  };
+  return names[network] || network;
+}

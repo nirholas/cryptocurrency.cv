@@ -31,13 +31,24 @@ const navItems = [
             { label: 'Top Movers', href: '/movers', icon: '🚀' },
             { label: 'Market Overview', href: '/markets', icon: '📊' },
             { label: 'Trending', href: '/trending', icon: '🔥' },
+            { label: 'Heatmap', href: '/heatmap', icon: '🗺️' },
+            { label: 'Dominance', href: '/dominance', icon: '🥧' },
           ],
         },
         {
           title: 'Analysis',
           links: [
             { label: 'Sentiment', href: '/sentiment', icon: '🎯' },
-            { label: 'Technical', href: '/category/analysis', icon: '📉' },
+            { label: 'Screener', href: '/screener', icon: '🔍' },
+            { label: 'Correlation', href: '/correlation', icon: '🔗' },
+            { label: 'Liquidations', href: '/liquidations', icon: '💥' },
+          ],
+        },
+        {
+          title: 'Tools',
+          links: [
+            { label: 'Calculator', href: '/calculator', icon: '🧮' },
+            { label: 'Social Buzz', href: '/buzz', icon: '📣' },
           ],
         },
       ],
@@ -63,10 +74,12 @@ const navItems = [
           ],
         },
         {
-          title: 'Resources',
+          title: 'Tools',
           links: [
             { label: 'DeFi Dashboard', href: '/defi', icon: '📊' },
-            { label: 'Protocol News', href: '/category/defi', icon: '📰' },
+            { label: 'Gas Tracker', href: '/gas', icon: '⛽' },
+            { label: 'Liquidations', href: '/liquidations', icon: '💥' },
+            { label: 'Calculator', href: '/calculator', icon: '🧮' },
           ],
         },
       ],
@@ -124,7 +137,7 @@ const navItems = [
           title: 'Ecosystem',
           links: [
             { label: 'ETH Price', href: '/coin/ethereum', icon: '💹' },
-            { label: 'Gas Tracker', href: '/defi', icon: '⛽' },
+            { label: 'Gas Tracker', href: '/gas', icon: '⛽' },
           ],
         },
       ],
@@ -176,6 +189,36 @@ const navItems = [
         title: 'Regulatory Updates',
         description: 'Crypto regulation and policy news',
         href: '/category/regulation',
+      },
+    },
+  },
+  { 
+    label: 'AI', 
+    href: '/ai/oracle',
+    icon: '✨',
+    megaMenu: {
+      sections: [
+        {
+          title: 'AI Products',
+          links: [
+            { label: 'The Oracle', href: '/ai/oracle', icon: '🔮' },
+            { label: 'The Brief', href: '/ai/brief', icon: '📋' },
+            { label: 'The Debate', href: '/ai/debate', icon: '⚖️' },
+            { label: 'The Counter', href: '/ai/counter', icon: '🔍' },
+          ],
+        },
+        {
+          title: 'Analysis',
+          links: [
+            { label: 'Sentiment', href: '/sentiment', icon: '🎯' },
+            { label: 'AI Digest', href: '/digest', icon: '📰' },
+          ],
+        },
+      ],
+      featured: {
+        title: 'Ask The Oracle',
+        description: 'Natural language queries over all crypto data',
+        href: '/ai/oracle',
       },
     },
   },

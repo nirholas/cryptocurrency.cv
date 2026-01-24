@@ -61,6 +61,7 @@
   "author": "nirholas",
   "license": "MIT",
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@types/recharts": "^1.8.29",
     "@vercel/kv": "^3.0.0",
     "@x402/core": "^2.2.0",

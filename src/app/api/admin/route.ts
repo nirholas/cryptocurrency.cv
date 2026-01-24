@@ -1,27 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getDashboardStats, getSystemHealth, trackAPICall } from '@/lib/analytics';
+import { requireAdminAuth } from '@/lib/admin-auth';
 
 export const runtime = 'nodejs';
 
-// Simple admin authentication (use proper auth in production)
-const ADMIN_TOKEN = process.env.ADMIN_TOKEN || 'dev-admin-token';
-
-function isAuthorized(request: NextRequest): boolean {
-  const authHeader = request.headers.get('Authorization');
-  if (!authHeader) return false;
-  
-  const token = authHeader.replace('Bearer ', '');
-  return token === ADMIN_TOKEN;
-}
-
 export async function GET(request: NextRequest) {
-  // Check authorization
-  if (!isAuthorized(request)) {
-    return NextResponse.json(
-      { error: 'Unauthorized' },
-      { status: 401 }
-    );
-  }
+  // Check authorization using centralized admin auth
+  const authError = requireAdminAuth(request);
+  if (authError) return authError;
 
   const startTime = Date.now();
   
@@ -83,12 +69,8 @@ export async function GET(request: NextRequest) {
 
 // POST endpoint to track custom events
 export async function POST(request: NextRequest) {
-  if (!isAuthorized(request)) {
-    return NextResponse.json(
-      { error: 'Unauthorized' },
-      { status: 401 }
-    );
-  }
+  const authError = requireAdminAuth(request);
+  if (authError) return authError;
 
   try {
     const body = await request.json();

@@ -26,7 +26,17 @@ export {
   PAYMENT_ADDRESS,
   USDC_ADDRESS,
   USDC_ADDRESSES,
+  SUPPORTED_NETWORKS,
+  ACCEPTED_ASSETS,
+  SOLANA_PAYMENT_ADDRESS,
+  SOLANA_USDC_ADDRESSES,
+  getAcceptedAssets,
+  getPaymentAddress,
+  isEvmNetwork,
+  isSolanaNetwork,
+  getNetworkDisplayName,
   type NetworkId,
+  type PaymentAsset,
 } from './config';
 
 // Pricing
@@ -75,3 +85,34 @@ export {
   middlewareConfig,
   PROTECTED_ROUTES,
 } from './middleware';
+
+// Features (for pricing page, developer portal, etc.)
+export {
+  FREE_ENDPOINTS,
+  PREMIUM_ENDPOINTS,
+  FEATURE_COMPARISON,
+  SUBSCRIPTION_TIERS,
+  PAY_PER_REQUEST,
+  ENDPOINT_CATEGORIES,
+  getFreeEndpointCount,
+  getPremiumEndpointCount,
+  getPremiumEndpointsByCategory,
+  getCheapestPrice,
+  getMostExpensivePrice,
+  type EndpointInfo,
+  type PremiumEndpointInfo,
+  type FeatureComparison,
+  type TierInfo,
+  type PayPerRequestInfo,
+} from './features';
+
+// Lifecycle Hooks (analytics, monitoring)
+export {
+  paymentHooks,
+  setupVercelAnalytics,
+  setupPostHogTracking,
+  setupDiscordNotifications,
+  type PaymentEvent,
+  type VerifyEvent,
+  type SettleEvent,
+} from './hooks';

@@ -138,3 +138,73 @@ API_URL = 'https://your-instance.vercel.app'
 - [Real-Time Guide](../docs/REALTIME.md)
 - [SDK Documentation](../sdk/)
 
+---
+
+## x402 Payment Examples
+
+For **premium API access**, we support x402 micropayments using USDC on Base (and Solana when configured).
+
+### x402-client.ts (TypeScript/JavaScript)
+
+Use the official `@x402/fetch` package for seamless payments.
+
+**Setup:**
+```bash
+npm install @x402/fetch ethers
+export WALLET_PRIVATE_KEY=your-private-key
+npx ts-node x402-client.ts
+```
+
+**Features:**
+- Automatic payment handling with `payFetch()`
+- Multi-endpoint examples
+- Manual 402 handling example
+- Wallet balance checking
+
+### x402-client.py (Python)
+
+Python implementation of x402 payment flow.
+
+**Setup:**
+```bash
+pip install requests eth-account web3
+export WALLET_PRIVATE_KEY=your-private-key
+python x402-client.py
+```
+
+**Features:**
+- Parse 402 payment requirements
+- Create payment signatures
+- Auto-retry with payment headers
+- API discovery via `.well-known/x402`
+
+### x402-client.go (Go)
+
+Go implementation for server-side integrations.
+
+**Setup:**
+```bash
+go get github.com/ethereum/go-ethereum
+export WALLET_PRIVATE_KEY=your-private-key
+go run x402-client.go
+```
+
+**Features:**
+- ECDSA signature creation
+- 402 response parsing
+- Payment header injection
+- Endpoint discovery
+
+### x402 Pricing
+
+| Endpoint | Price |
+|----------|-------|
+| `/api/v1/news` | $0.001 |
+| `/api/v1/coins` | $0.002 |
+| `/api/v1/trending` | $0.001 |
+| `/api/v1/market-data` | $0.002 |
+| `/api/v1/analysis` | $0.005 |
+| `/api/v1/export` | $0.01 |
+
+Check all endpoints at: `https://free-crypto-news.vercel.app/api/.well-known/x402`
+

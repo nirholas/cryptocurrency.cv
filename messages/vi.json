@@ -367,5 +367,37 @@
     "title": "Tin Tức Crypto Miễn Phí - Tổng Hợp Tin Tức Tiền Điện Tử Thời Gian Thực",
     "description": "Cập nhật tin tức tiền điện tử mới nhất từ các nguồn đáng tin cậy. Cập nhật thời gian thực, tóm tắt AI và phân tích thị trường.",
     "keywords": "tin tức crypto, tiền điện tử, bitcoin, ethereum, blockchain, defi, nft"
+  },
+  "heatmap": {
+    "title": "Crypto Heatmap",
+    "description": "Visual market cap and price change heatmap"
+  },
+  "calculator": {
+    "title": "Crypto Calculator",
+    "description": "Convert between cryptocurrencies"
+  },
+  "gas": {
+    "title": "Gas Tracker",
+    "description": "Real-time Ethereum gas prices"
+  },
+  "screener": {
+    "title": "Crypto Screener",
+    "description": "Filter and find cryptocurrencies"
+  },
+  "correlation": {
+    "title": "Correlation Matrix",
+    "description": "Crypto price correlations"
+  },
+  "dominance": {
+    "title": "Dominance Chart",
+    "description": "Bitcoin and altcoin market dominance"
+  },
+  "liquidations": {
+    "title": "Liquidations",
+    "description": "Real-time crypto liquidations"
+  },
+  "buzz": {
+    "title": "Social Buzz",
+    "description": "Crypto social media trends"
   }
 }

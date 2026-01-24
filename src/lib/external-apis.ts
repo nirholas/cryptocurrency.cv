@@ -9,17 +9,61 @@
  * @module external-apis
  */
 
-const COINCAP_BASE = 'https://api.coincap.io/v2';
-const COINPAPRIKA_BASE = 'https://api.coinpaprika.com/v1';
-const COINLORE_BASE = 'https://api.coinlore.net/api';
+// =============================================================================
+// API ENDPOINTS
+// =============================================================================
+
+export const EXTERNAL_APIS = {
+  COINCAP: 'https://api.coincap.io/v2',
+  COINPAPRIKA: 'https://api.coinpaprika.com/v1',
+  COINLORE: 'https://api.coinlore.net/api',
+  BINANCE: 'https://api.binance.com/api/v3',
+  BINANCE_FUTURES: 'https://fapi.binance.com',
+  BYBIT: 'https://api.bybit.com/v5',
+  DYDX: 'https://api.dydx.exchange/v3',
+  OKX: 'https://www.okx.com/api/v5',
+  MEMPOOL: 'https://mempool.space/api',
+  BLOCKCHAIN_INFO: 'https://blockchain.info',
+  LLAMA_YIELDS: 'https://yields.llama.fi',
+} as const;
+
+const COINCAP_BASE = EXTERNAL_APIS.COINCAP;
+const COINPAPRIKA_BASE = EXTERNAL_APIS.COINPAPRIKA;
+const COINLORE_BASE = EXTERNAL_APIS.COINLORE;
 
 // Cache for API responses
 const cache = new Map<string, { data: unknown; timestamp: number }>();
-const CACHE_TTL = 30000; // 30 seconds
+
+/**
+ * Cache TTL configuration (in seconds)
+ * Different data types have different freshness requirements
+ */
+export const CACHE_TTL = {
+  ticker: 10,         // Price tickers - need to be fresh
+  trades: 5,          // Recent trades - very fresh
+  orderbook: 5,       // Order book - very fresh
+  ohlc: 60,           // Candlestick data - 1 minute
+  historical_7d: 300, // Weekly historical - 5 minutes
+  historical_1d: 60,  // Daily historical - 1 minute
+  static: 3600,       // Static data (exchange info) - 1 hour
+  funding: 60,        // Funding rates - 1 minute
+  openInterest: 30,   // Open interest - 30 seconds
+  prices: 30,         // General prices
+  fees: 60,           // Network fees
+  blocks: 60,         // Block data
+  mempool: 30,        // Mempool data
+  markets: 60,        // Markets data
+  global: 60,         // Global stats
+  search: 300,        // Search results
+  yields: 300,        // DeFi yields
+} as const;
+
+// Legacy constant for backwards compatibility
+const CACHE_TTL_MS = 30000; // 30 seconds in milliseconds
 
 function getCached<T>(key: string): T | null {
   const entry = cache.get(key);
-  if (entry && Date.now() - entry.timestamp < CACHE_TTL) {
+  if (entry && Date.now() - entry.timestamp < CACHE_TTL_MS) {
     return entry.data as T;
   }
   return null;
@@ -27,6 +71,169 @@ function getCached<T>(key: string): T | null {
 
 function setCache(key: string, data: unknown): void {
   cache.set(key, { data, timestamp: Date.now() });
+}
+
+// =============================================================================
+// BINANCE TYPES (for binance.ts)
+// =============================================================================
+
+export interface BinanceTicker {
+  symbol: string;
+  priceChange: string;
+  priceChangePercent: string;
+  weightedAvgPrice: string;
+  prevClosePrice: string;
+  lastPrice: string;
+  lastQty: string;
+  bidPrice: string;
+  bidQty: string;
+  askPrice: string;
+  askQty: string;
+  openPrice: string;
+  highPrice: string;
+  lowPrice: string;
+  volume: string;
+  quoteVolume: string;
+  openTime: number;
+  closeTime: number;
+  firstId: number;
+  lastId: number;
+  count: number;
+}
+
+export interface BinanceFundingRate {
+  symbol: string;
+  fundingRate: string;
+  fundingTime: number;
+  markPrice: string;
+}
+
+export interface BinanceOpenInterest {
+  symbol: string;
+  openInterest: string;
+  time: number;
+}
+
+// =============================================================================
+// DYDX TYPES (for derivatives.ts)
+// =============================================================================
+
+export interface DydxMarket {
+  market: string;
+  status: string;
+  baseAsset: string;
+  quoteAsset: string;
+  stepSize: string;
+  tickSize: string;
+  indexPrice: string;
+  oraclePrice: string;
+  priceChange24H: string;
+  nextFundingRate: string;
+  nextFundingAt: string;
+  minOrderSize: string;
+  type: string;
+  initialMarginFraction: string;
+  maintenanceMarginFraction: string;
+  transferMarginFraction: string;
+  volume24H: string;
+  trades24H: string;
+  openInterest: string;
+  incrementalInitialMarginFraction: string;
+  incrementalPositionSize: string;
+  maxPositionSize: string;
+  baselinePositionSize: string;
+  assetResolution: string;
+  syntheticAssetId: string;
+}
+
+// =============================================================================
+// MEMPOOL TYPES (for bitcoin-onchain.ts)
+// =============================================================================
+
+export interface MempoolFees {
+  fastestFee: number;
+  halfHourFee: number;
+  hourFee: number;
+  economyFee: number;
+  minimumFee: number;
+}
+
+export interface MempoolBlock {
+  blockSize: number;
+  blockVSize: number;
+  nTx: number;
+  totalFees: number;
+  medianFee: number;
+  feeRange: number[];
+}
+
+// =============================================================================
+// COINPAPRIKA TYPES (for coinpaprika.ts)
+// =============================================================================
+
+export interface CoinPaprikaTicker {
+  id: string;
+  name: string;
+  symbol: string;
+  rank: number;
+  circulating_supply: number;
+  total_supply: number;
+  max_supply: number | null;
+  beta_value: number;
+  first_data_at: string;
+  last_updated: string;
+  quotes: {
+    USD: {
+      price: number;
+      volume_24h: number;
+      volume_24h_change_24h: number;
+      market_cap: number;
+      market_cap_change_24h: number;
+      percent_change_1h: number;
+      percent_change_24h: number;
+      percent_change_7d: number;
+      percent_change_30d: number;
+      percent_change_1y: number;
+      ath_price: number;
+      ath_date: string;
+      percent_from_price_ath: number;
+    };
+  };
+}
+
+// =============================================================================
+// DEFI LLAMA TYPES (for defi-yields.ts)
+// =============================================================================
+
+export interface LlamaYieldPool {
+  pool: string;
+  chain: string;
+  project: string;
+  symbol: string;
+  tvlUsd: number;
+  apyBase: number | null;
+  apyReward: number | null;
+  apy: number;
+  rewardTokens: string[] | null;
+  stablecoin: boolean;
+  ilRisk: string;
+  exposure: string;
+  predictions: {
+    predictedClass: string;
+    predictedProbability: number;
+    binnedConfidence: number;
+  };
+  poolMeta: string | null;
+  mu: number;
+  sigma: number;
+  count: number;
+  outlier: boolean;
+  underlyingTokens: string[] | null;
+  il7d: number | null;
+  apyBase7d: number | null;
+  apyMean30d: number | null;
+  volumeUsd1d: number | null;
+  volumeUsd7d: number | null;
 }
 
 // =============================================================================

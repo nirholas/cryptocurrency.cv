@@ -66,7 +66,7 @@ const keyStore = new Map<string, APIKey>();
  */
 function generateAPIKey(): string {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  const prefix = 'cda_'; // crypto-data-aggregator
+  const prefix = 'fcn_'; // free-crypto-news
   let key = prefix;
   for (let i = 0; i < 32; i++) {
     key += chars.charAt(Math.floor(Math.random() * chars.length));

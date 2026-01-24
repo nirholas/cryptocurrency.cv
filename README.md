@@ -306,6 +306,18 @@ The web app includes comprehensive pages for market data, portfolio management, 
 | `/markets/categories` | Market categories (DeFi, Layer 1, etc.) |
 | `/markets/categories/[id]` | Category breakdown |
 
+### Market Tools
+| Page | Description |
+|------|-------------|
+| `/calculator` | Crypto calculator with conversion & P/L |
+| `/gas` | Ethereum gas tracker with cost estimates |
+| `/heatmap` | Market heatmap visualization |
+| `/screener` | Advanced coin screener with filters |
+| `/correlation` | Price correlation matrix (7/30/90 days) |
+| `/dominance` | Market cap dominance chart |
+| `/liquidations` | Real-time liquidations feed |
+| `/buzz` | Social buzz & trending sentiment |
+
 ### Coin Details
 | Page | Description |
 |------|-------------|
@@ -1262,11 +1274,39 @@ Building the definitive open crypto intelligence platform.
 - [x] Prediction market tracking (Polymarket, Manifold)
 - [x] AI training data exporter
 - [x] Analytics engine with daily/weekly digests
+- [x] Market data visualization components (Heatmap, Dominance, Correlation)
+- [x] Advanced coin screener with filters
+- [x] Live WebSocket price updates
+- [x] Crypto calculator & converter
+- [x] Gas tracker (Ethereum)
+- [x] Social buzz & sentiment dashboard
+- [x] Liquidations feed (real-time)
+- [x] Data export (CSV/JSON)
+- [x] Multi-currency selector
+- [x] Admin usage dashboard
+- [x] API key management system (self-service registration)
+- [x] Tiered API access (Free/Pro/Enterprise)
+- [x] Admin key management endpoints
+- [x] Admin usage statistics dashboard
+- [x] Subscription expiry cron job
+- [x] Webhook testing endpoint
+- [x] Centralized admin authentication
+- [x] CoinCap API integration (free market data)
+- [x] CoinPaprika API integration (free market data)
+- [x] Bitcoin on-chain data (Mempool.space)
+- [x] DeFi yields integration (Llama.fi)
+- [x] Real-time price WebSocket (CoinCap)
+- [x] x402 micropayments infrastructure (Base L2)
 
 ## 🔨 In Progress
 
 - [ ] Full test of enhanced collection pipeline
-- [ ] LunarCrush / Santiment social metrics
+- [ ] LunarCrush / Santiment social metrics integration
+- [x] Wire up new market tools to navigation ✅
+- [ ] x402 payment flow testing (Base Sepolia)
+- [ ] TradingView chart embeds
+- [ ] Portfolio performance charts
+- [x] The Oracle: Natural language queries over all data ✅
 
 ## 📋 Short-Term (Q1 2026)
 
@@ -1277,6 +1317,15 @@ Building the definitive open crypto intelligence platform.
 - [x] Event classification (funding, hack, regulation, etc.) ✅
 - [x] Claim extraction (factual claims as structured data) ✅
 - [ ] Relationship extraction (who did what to whom)
+
+### API Infrastructure
+- [x] Self-service API key registration ✅
+- [x] Tiered rate limiting (Free/Pro/Enterprise) ✅
+- [x] Usage tracking & statistics ✅
+- [x] Admin management dashboard ✅
+- [x] Webhook delivery system ✅
+- [ ] API key analytics & insights
+- [ ] Usage-based billing integration
 
 ### Multi-Lingual
 - [x] i18n workflow with 18 languages (auto-translation via Groq - FREE!)
@@ -1291,13 +1340,34 @@ Building the definitive open crypto intelligence platform.
 - [x] Configurable alert system (8 condition types)
 - [x] Alert WebSocket subscriptions
 - [x] Alert webhook delivery
+- [x] Live price components with flash animations ✅
 - [ ] Faster webhook delivery
+
+### Market Tools
+- [x] Crypto calculator with profit/loss ✅
+- [x] Ethereum gas tracker ✅
+- [x] Market heatmap visualization ✅
+- [x] Correlation matrix (7/30/90 day) ✅
+- [x] Market dominance chart ✅
+- [x] Advanced screener with filters ✅
+- [x] Liquidations feed ✅
+- [x] Social buzz metrics ✅
 
 ## 📋 Medium-Term (Q2-Q3 2026)
 
+### x402 Premium Features
+- [x] x402 payment protocol integration ✅
+- [x] Pay-per-request micropayments (USDC on Base) ✅
+- [x] Payment provider React component ✅
+- [x] Payment button component ✅
+- [x] Payment lifecycle hooks ✅
+- [x] Premium endpoint definitions ✅
+- [ ] Full payment flow E2E testing
+- [ ] Mainnet deployment
+
 ### Intelligence Layer (Partial - In Progress)
 - [x] Story clustering (group related articles) ✅
-- [ ] Headline mutation tracking (detect changes)
+- [x] Headline mutation tracking (detect changes) ✅
 - [x] Source first-mover tracking (who breaks news) ✅
 - [x] Coordinated narrative detection ✅
 - [ ] Prediction tracking & accuracy scoring
@@ -1305,22 +1375,33 @@ Building the definitive open crypto intelligence platform.
 
 ### Social Intelligence (Partial - In Progress)
 - [x] X/Twitter integration via XActions (browser automation - FREE!) ✅
+- [x] Social buzz dashboard (trending coins, sentiment) ✅
 - [ ] Discord public channel monitoring
 - [ ] Telegram channel aggregation
 - [ ] Influencer reliability scoring
 
 ### On-Chain Correlation (Partial - In Progress)
+- [x] Bitcoin on-chain data (Mempool.space integration) ✅
 - [ ] Link news to on-chain events
 - [x] Whale movement correlation (structure ready) ✅
 - [x] DEX volume correlation ✅
 - [x] Bridge volume tracking ✅
+- [x] Liquidations feed integration ✅
 - [ ] Coverage gap analysis (what's NOT being covered)
 
 ### AI Products
-- [ ] **The Oracle**: Natural language queries over all data
-- [ ] **The Brief**: Personalized AI-generated digests
-- [ ] **The Debate**: Multi-perspective synthesis
-- [ ] **The Counter**: Fact-checking as a service
+- [x] **The Oracle**: Natural language queries over all data ✅
+- [x] **The Brief**: Personalized AI-generated digests ✅
+- [x] **The Debate**: Multi-perspective synthesis ✅
+- [x] **The Counter**: Fact-checking as a service ✅
+
+### Portfolio & Watchlist
+- [x] Portfolio tracking with holdings table ✅
+- [x] Portfolio summary with P/L ✅
+- [x] Watchlist with export ✅
+- [x] Price alerts system ✅
+- [ ] Portfolio performance charts
+- [ ] Tax report generation
 
 ## 📋 Long-Term (2027+)
 
@@ -1337,6 +1418,7 @@ Building the definitive open crypto intelligence platform.
 - [ ] Source network forensics
 
 ### Formats & Access (Partial - In Progress)
+- [x] CSV/JSON export for all data types ✅
 - [ ] Parquet exports for analytics
 - [ ] SQLite monthly exports
 - [x] Embedding vectors for semantic search (export ready) ✅
@@ -1347,6 +1429,13 @@ Building the definitive open crypto intelligence platform.
 - [ ] Academic citation network
 - [ ] AI training data licensing
 - [ ] Prediction registry (timestamped predictions with outcomes)
+
+### Advanced Trading Tools
+- [ ] TradingView integration
+- [ ] Multi-exchange order book aggregation
+- [ ] Arbitrage opportunity scanner
+- [ ] Options flow tracking
+- [ ] Funding rate dashboard
 
 ---
 

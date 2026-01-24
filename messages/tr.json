@@ -367,5 +367,37 @@
     "title": "Ücretsiz Kripto Haberleri - Gerçek zamanlı Kripto Para Haberleri Toplayıcısı",
     "description": "Güvenilir kaynaklardan en son kripto para haberleriyle güncel kalın. Gerçek zamanlı güncellemeler, AI özetleri ve piyasa analizi.",
     "keywords": "kripto haberleri, kripto para, bitcoin, ethereum, blockchain, defi, nft"
+  },
+  "heatmap": {
+    "title": "Crypto Heatmap",
+    "description": "Visual market cap and price change heatmap"
+  },
+  "calculator": {
+    "title": "Crypto Calculator",
+    "description": "Convert between cryptocurrencies"
+  },
+  "gas": {
+    "title": "Gas Tracker",
+    "description": "Real-time Ethereum gas prices"
+  },
+  "screener": {
+    "title": "Crypto Screener",
+    "description": "Filter and find cryptocurrencies"
+  },
+  "correlation": {
+    "title": "Correlation Matrix",
+    "description": "Crypto price correlations"
+  },
+  "dominance": {
+    "title": "Dominance Chart",
+    "description": "Bitcoin and altcoin market dominance"
+  },
+  "liquidations": {
+    "title": "Liquidations",
+    "description": "Real-time crypto liquidations"
+  },
+  "buzz": {
+    "title": "Social Buzz",
+    "description": "Crypto social media trends"
   }
 }
