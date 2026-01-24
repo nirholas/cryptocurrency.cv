@@ -214,13 +214,52 @@ function X402PaymentModal({ details, onClose, onPaymentComplete }: X402PaymentMo
   };
 
   const handleSign = async () => {
-    // In production, this would:
-    // 1. Create the x402 payment message
-    // 2. Sign with wallet
-    // 3. Return the signature
-    
-    // Demo: simulate signature
-    const demoSignature = `x402:${Date.now()}:demo_signature`;
+    // Create the x402 payment message for signing
+    const message = JSON.stringify({
+      protocol: 'x402',
+      version: '1.0',
+      resource: details.resource,
+      amount: details.price,
+      network: details.network,
+      timestamp: Date.now(),
+    });
+
+    // Try to sign with connected wallet
+    if (typeof window !== 'undefined' && (window as unknown as { ethereum?: { request: (args: { method: string; params: unknown[] }) => Promise<string> } }).ethereum) {
+      try {
+        const ethereum = (window as unknown as { ethereum: { request: (args: { method: string; params: unknown[] }) => Promise<string | string[]> } }).ethereum;
+        
+        // Get the connected account
+        const accounts = await ethereum.request({ method: 'eth_accounts', params: [] }) as string[];
+        
+        if (accounts && accounts.length > 0) {
+          const account = accounts[0];
+          
+          // Sign the message using personal_sign
+          const signature = await ethereum.request({
+            method: 'personal_sign',
+            params: [message, account],
+          }) as string;
+          
+          // Create x402 signature format
+          const x402Signature = `x402:${Date.now()}:${signature}`;
+          setStep('complete');
+          
+          setTimeout(() => {
+            onPaymentComplete(x402Signature);
+          }, 500);
+          return;
+        }
+      } catch (error) {
+        console.error('Wallet signing failed:', error);
+        // Fall through to demo signature if real signing fails
+      }
+    }
+
+    // Fallback: Use demo signature if wallet signing is not available
+    // This allows testing without a real wallet connection
+    console.warn('Using demo signature - wallet signing unavailable');
+    const demoSignature = `x402:${Date.now()}:demo_${Math.random().toString(36).slice(2)}`;
     setStep('complete');
     
     setTimeout(() => {

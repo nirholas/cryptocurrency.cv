@@ -5,7 +5,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { generateArticleId } from '@/lib/archive-v2';
 
@@ -34,19 +34,82 @@ const sourceColors: Record<string, string> = {
   'The Defiant': 'from-pink-500 to-pink-600',
 };
 
-// Simulate view counts based on article position and randomness
-function estimateViews(index: number): string {
-  const baseViews = [12400, 8700, 6200, 4100, 2800];
-  const views = baseViews[index] || Math.floor(Math.random() * 2000) + 500;
-  if (views >= 10000) {
-    return `${(views / 1000).toFixed(1)}K`;
-  }
-  return views.toLocaleString();
+interface ViewData {
+  [articleId: string]: { views: number; views24h: number; views7d: number };
 }
 
 export default function PopularStories({ articles }: PopularStoriesProps) {
   const [timeFilter, setTimeFilter] = useState<TimeFilter>('24h');
+  const [viewData, setViewData] = useState<ViewData>({});
   const popularArticles = articles.slice(0, 5);
+
+  /**
+   * Fetch view counts from the /api/views endpoint
+   */
+  const fetchViewCounts = useCallback(async () => {
+    try {
+      const articleIds = popularArticles.map(a => a.id || generateArticleId(a.link));
+      const response = await fetch(`/api/views?ids=${articleIds.join(',')}`);
+      
+      if (response.ok) {
+        const data = await response.json();
+        const viewMap: ViewData = {};
+        for (const item of (data.views || [])) {
+          viewMap[item.id] = {
+            views: item.views || 0,
+            views24h: item.views24h || 0,
+            views7d: item.views7d || 0,
+          };
+        }
+        setViewData(viewMap);
+      }
+    } catch (error) {
+      console.error('Failed to fetch view counts:', error);
+    }
+  }, [popularArticles]);
+
+  useEffect(() => {
+    if (popularArticles.length > 0) {
+      fetchViewCounts();
+    }
+  }, [popularArticles.length]); // Only refetch when article count changes
+
+  /**
+   * Get formatted view count for display
+   */
+  function getViewCount(articleId: string): string {
+    const data = viewData[articleId];
+    if (!data) {
+      // Return a placeholder based on position for initial render
+      return '-';
+    }
+    
+    const views = timeFilter === '24h' ? data.views24h : data.views7d;
+    
+    if (views >= 10000) {
+      return `${(views / 1000).toFixed(1)}K`;
+    }
+    if (views >= 1000) {
+      return `${(views / 1000).toFixed(1)}K`;
+    }
+    return views.toLocaleString();
+  }
+
+  /**
+   * Track article view when clicked
+   */
+  async function trackView(articleId: string) {
+    try {
+      await fetch('/api/views', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ articleId }),
+      });
+    } catch (error) {
+      // Silent fail - don't block navigation
+      console.error('Failed to track view:', error);
+    }
+  }
 
   return (
     <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-card dark:shadow-none dark:border dark:border-gray-800 p-6">
@@ -89,7 +152,7 @@ export default function PopularStories({ articles }: PopularStoriesProps) {
         {popularArticles.map((article, index) => {
           const articleId = article.id || generateArticleId(article.link);
           const gradient = sourceColors[article.source] || 'from-gray-500 to-gray-600';
-          const views = estimateViews(index);
+          const views = getViewCount(articleId);
           
           return (
             <Link
@@ -97,6 +160,7 @@ export default function PopularStories({ articles }: PopularStoriesProps) {
               href={`/article/${articleId}`}
               className="group flex gap-3 p-2 -mx-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors focus-ring"
               role="listitem"
+              onClick={() => trackView(articleId)}
             >
               {/* Gradient Thumbnail Placeholder */}
               <div 

@@ -340,18 +340,25 @@ const navItems = [
           ],
         },
         {
+          title: 'API Pricing',
+          links: [
+            { label: 'Pricing Plans', href: '/pricing', icon: '💰' },
+            { label: 'Premium Features', href: '/pricing/premium', icon: '⭐' },
+            { label: 'Pay with Crypto', href: '/pricing/upgrade', icon: '💳' },
+          ],
+        },
+        {
           title: 'Account',
           links: [
-            { label: 'Pricing', href: '/pricing', icon: '💳' },
-            { label: 'Billing', href: '/billing', icon: '📄' },
+            { label: 'Billing Dashboard', href: '/billing', icon: '📊' },
             { label: 'Settings', href: '/settings', icon: '⚙️' },
           ],
         },
       ],
       featured: {
-        title: 'Build with our API',
-        description: 'Free tier with 1000 requests/day, premium plans available',
-        href: '/developers',
+        title: 'x402 Crypto Payments',
+        description: 'Pay for API access with USDC on Base network. Instant upgrades, no credit card needed.',
+        href: '/pricing/upgrade',
       },
     },
   },

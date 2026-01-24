@@ -616,6 +616,232 @@ const RSS_SOURCES = {
     url: 'https://tether.to/en/news/feed/',
     category: 'stablecoin',
   },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // INSTITUTIONAL RESEARCH & VC INSIGHTS
+  // ═══════════════════════════════════════════════════════════════
+  galaxy_research: {
+    name: 'Galaxy Digital Research',
+    url: 'https://www.galaxy.com/insights/feed/',
+    category: 'institutional',
+  },
+  pantera_capital: {
+    name: 'Pantera Capital',
+    url: 'https://panteracapital.com/feed/',
+    category: 'institutional',
+  },
+  multicoin_capital: {
+    name: 'Multicoin Capital',
+    url: 'https://multicoin.capital/feed/',
+    category: 'institutional',
+  },
+  placeholder_vc: {
+    name: 'Placeholder VC',
+    url: 'https://www.placeholder.vc/blog?format=rss',
+    category: 'institutional',
+  },
+  variant_fund: {
+    name: 'Variant Fund',
+    url: 'https://variant.fund/writing/rss',
+    category: 'institutional',
+  },
+  dragonfly_research: {
+    name: 'Dragonfly Research',
+    url: 'https://medium.com/feed/dragonfly-research',
+    category: 'institutional',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // ASSET MANAGERS & ETF ISSUERS
+  // ═══════════════════════════════════════════════════════════════
+  grayscale_insights: {
+    name: 'Grayscale Insights',
+    url: 'https://grayscale.com/insights/feed/',
+    category: 'etf',
+  },
+  bitwise_research: {
+    name: 'Bitwise Research',
+    url: 'https://bitwiseinvestments.com/feed/',
+    category: 'etf',
+  },
+  vaneck_blog: {
+    name: 'VanEck Blog',
+    url: 'https://www.vaneck.com/us/en/blogs/rss/',
+    category: 'etf',
+  },
+  coinshares_research: {
+    name: 'CoinShares Research',
+    url: 'https://blog.coinshares.com/feed',
+    category: 'etf',
+  },
+  ark_invest: {
+    name: 'ARK Invest',
+    url: 'https://ark-invest.com/articles/feed/',
+    category: 'etf',
+  },
+  twentyone_shares: {
+    name: '21Shares Research',
+    url: 'https://21shares.com/research/feed/',
+    category: 'etf',
+  },
+  wisdomtree_blog: {
+    name: 'WisdomTree Blog',
+    url: 'https://www.wisdomtree.com/blog/feed',
+    category: 'etf',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // DERIVATIVES & OPTIONS MARKET
+  // ═══════════════════════════════════════════════════════════════
+  deribit_insights: {
+    name: 'Deribit Insights',
+    url: 'https://insights.deribit.com/feed/',
+    category: 'derivatives',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // ON-CHAIN ANALYTICS & DATA PROVIDERS
+  // ═══════════════════════════════════════════════════════════════
+  kaiko_research: {
+    name: 'Kaiko Research',
+    url: 'https://blog.kaiko.com/rss/',
+    category: 'onchain',
+  },
+  intotheblock: {
+    name: 'IntoTheBlock',
+    url: 'https://medium.com/feed/intotheblock',
+    category: 'onchain',
+  },
+  coin_metrics: {
+    name: 'Coin Metrics',
+    url: 'https://coinmetrics.substack.com/feed',
+    category: 'onchain',
+  },
+  thetie_research: {
+    name: 'The Tie Research',
+    url: 'https://blog.thetie.io/feed/',
+    category: 'onchain',
+  },
+  woobull: {
+    name: 'Willy Woo (Woobull)',
+    url: 'https://woobull.com/feed/',
+    category: 'onchain',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // FINTECH & PAYMENTS NEWS
+  // ═══════════════════════════════════════════════════════════════
+  finextra: {
+    name: 'Finextra',
+    url: 'https://www.finextra.com/rss/headlines.aspx',
+    category: 'fintech',
+  },
+  pymnts_crypto: {
+    name: 'PYMNTS Crypto',
+    url: 'https://www.pymnts.com/cryptocurrency/feed/',
+    category: 'fintech',
+  },
+  fintech_futures: {
+    name: 'Fintech Futures',
+    url: 'https://www.fintechfutures.com/feed/',
+    category: 'fintech',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // MACRO ANALYSIS & INDEPENDENT RESEARCHERS
+  // ═══════════════════════════════════════════════════════════════
+  lyn_alden: {
+    name: 'Lyn Alden',
+    url: 'https://www.lynalden.com/feed/',
+    category: 'macro',
+  },
+  alhambra_partners: {
+    name: 'Alhambra Partners',
+    url: 'https://www.alhambrapartners.com/feed/',
+    category: 'macro',
+  },
+  macro_voices: {
+    name: 'Macro Voices',
+    url: 'https://www.macrovoices.com/feed',
+    category: 'macro',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // QUANT & SYSTEMATIC TRADING RESEARCH
+  // ═══════════════════════════════════════════════════════════════
+  aqr_insights: {
+    name: 'AQR Insights',
+    url: 'https://www.aqr.com/Insights/feed',
+    category: 'quant',
+  },
+  two_sigma_insights: {
+    name: 'Two Sigma Insights',
+    url: 'https://www.twosigma.com/insights/rss/',
+    category: 'quant',
+  },
+  man_institute: {
+    name: 'Man Institute',
+    url: 'https://www.man.com/maninstitute/feed',
+    category: 'quant',
+  },
+  alpha_architect: {
+    name: 'Alpha Architect',
+    url: 'https://alphaarchitect.com/feed/',
+    category: 'quant',
+  },
+  quantstart: {
+    name: 'QuantStart',
+    url: 'https://www.quantstart.com/articles/rss/',
+    category: 'quant',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // ADDITIONAL CRYPTO JOURNALISM
+  // ═══════════════════════════════════════════════════════════════
+  unchained_crypto: {
+    name: 'Unchained Crypto',
+    url: 'https://unchainedcrypto.com/feed/',
+    category: 'journalism',
+  },
+  dl_news: {
+    name: 'DL News',
+    url: 'https://www.dlnews.com/feed/',
+    category: 'journalism',
+  },
+  protos: {
+    name: 'Protos',
+    url: 'https://protos.com/feed/',
+    category: 'journalism',
+  },
+  daily_gwei: {
+    name: 'The Daily Gwei',
+    url: 'https://thedailygwei.substack.com/feed',
+    category: 'ethereum',
+  },
+  week_in_ethereum: {
+    name: 'Week in Ethereum',
+    url: 'https://weekinethereumnews.com/feed/',
+    category: 'ethereum',
+  },
+  wu_blockchain: {
+    name: 'Wu Blockchain',
+    url: 'https://wublock.substack.com/feed',
+    category: 'asia',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // TRADITIONAL FINANCE BLOGS
+  // ═══════════════════════════════════════════════════════════════
+  goldman_insights: {
+    name: 'Goldman Sachs Insights',
+    url: 'https://www.goldmansachs.com/insights/feed.rss',
+    category: 'tradfi',
+  },
+  bny_mellon: {
+    name: 'BNY Mellon Aerial View',
+    url: 'https://www.bnymellon.com/us/en/insights/aerial-view-magazine.rss',
+    category: 'tradfi',
+  },
 } as const;
 
 type SourceKey = keyof typeof RSS_SOURCES;
@@ -795,6 +1021,7 @@ async function fetchMultipleSources(sourceKeys: SourceKey[]): Promise<NewsArticl
 export interface NewsQueryOptions {
   limit?: number;
   source?: string;
+  category?: string;
   from?: Date | string;
   to?: Date | string;
   page?: number;
@@ -827,6 +1054,21 @@ export async function getLatestNews(
   let sourceKeys: SourceKey[];
   if (source && source in RSS_SOURCES) {
     sourceKeys = [source as SourceKey];
+  } else if (options?.category) {
+    // Filter sources by category
+    sourceKeys = (Object.keys(RSS_SOURCES) as SourceKey[]).filter(
+      key => RSS_SOURCES[key].category === options.category
+    );
+    // If no sources match the category, return empty
+    if (sourceKeys.length === 0) {
+      return {
+        articles: [],
+        totalCount: 0,
+        sources: [],
+        fetchedAt: new Date().toISOString(),
+        category: options.category,
+      } as NewsResponse;
+    }
   } else {
     sourceKeys = Object.keys(RSS_SOURCES) as SourceKey[];
   }
@@ -849,6 +1091,7 @@ export async function getLatestNews(
     totalCount: articles.length,
     sources: sourceKeys.map(k => RSS_SOURCES[k].name),
     fetchedAt: new Date().toISOString(),
+    ...(options?.category && { category: options.category }),
     ...(options?.page && {
       pagination: {
         page,
@@ -1000,6 +1243,58 @@ export async function getSources(): Promise<{ sources: SourceInfo[] }> {
     sources: sourceChecks
       .filter((r): r is PromiseFulfilledResult<SourceInfo> => r.status === 'fulfilled')
       .map(r => r.value),
+  };
+}
+
+/**
+ * Get all available news categories with source counts
+ */
+export function getCategories(): { 
+  categories: Array<{ 
+    id: string; 
+    name: string; 
+    description: string;
+    sourceCount: number;
+  }> 
+} {
+  const categoryMeta: Record<string, { name: string; description: string }> = {
+    general: { name: 'General', description: 'Broad crypto industry news' },
+    bitcoin: { name: 'Bitcoin', description: 'Bitcoin-specific news and analysis' },
+    defi: { name: 'DeFi', description: 'Decentralized finance protocols and yields' },
+    nft: { name: 'NFTs', description: 'Non-fungible tokens and digital collectibles' },
+    research: { name: 'Research', description: 'Deep-dive analysis and reports' },
+    institutional: { name: 'Institutional', description: 'VC and institutional investor insights' },
+    etf: { name: 'ETFs', description: 'Crypto ETF and asset manager news' },
+    derivatives: { name: 'Derivatives', description: 'Options, futures, and structured products' },
+    onchain: { name: 'On-Chain', description: 'Blockchain data and analytics' },
+    fintech: { name: 'Fintech', description: 'Financial technology and payments' },
+    macro: { name: 'Macro', description: 'Macroeconomic analysis and commentary' },
+    quant: { name: 'Quant', description: 'Quantitative and systematic trading research' },
+    journalism: { name: 'Investigative', description: 'In-depth journalism and exposés' },
+    ethereum: { name: 'Ethereum', description: 'Ethereum ecosystem news' },
+    asia: { name: 'Asia', description: 'Asian market coverage' },
+    tradfi: { name: 'TradFi', description: 'Traditional finance institutions' },
+    mainstream: { name: 'Mainstream', description: 'Major media crypto coverage' },
+    mining: { name: 'Mining', description: 'Bitcoin mining and hashrate' },
+    gaming: { name: 'Gaming', description: 'Blockchain gaming and metaverse' },
+    altl1: { name: 'Alt L1s', description: 'Alternative layer-1 blockchains' },
+    stablecoin: { name: 'Stablecoins', description: 'Stablecoin and CBDC news' },
+  };
+  
+  // Count sources per category
+  const sourceCounts: Record<string, number> = {};
+  for (const key of Object.keys(RSS_SOURCES) as SourceKey[]) {
+    const cat = RSS_SOURCES[key].category;
+    sourceCounts[cat] = (sourceCounts[cat] || 0) + 1;
+  }
+  
+  return {
+    categories: Object.entries(categoryMeta).map(([id, meta]) => ({
+      id,
+      name: meta.name,
+      description: meta.description,
+      sourceCount: sourceCounts[id] || 0,
+    })).filter(c => c.sourceCount > 0).sort((a, b) => b.sourceCount - a.sourceCount),
   };
 }
 

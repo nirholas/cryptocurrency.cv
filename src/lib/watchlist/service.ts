@@ -275,9 +275,17 @@ async function saveWatchlist(userId: string, watchlist: Watchlist): Promise<void
 
 /**
  * Get default user ID from session/cookie
- * In production, this would come from authentication
+ * In production, this would come from authentication.
+ * 
+ * Falls back to 'default-user' for:
+ * - Anonymous users without cookies
+ * - Development/testing environments
+ * - Users without API keys
+ * 
+ * The API route layer handles API key-based user identification before
+ * this fallback is reached (see /api/watchlist/route.ts).
  */
 export function getDefaultUserId(): string {
-  // For demo/development, use a default user
+  // Default user for anonymous access - data will be shared across all anonymous users
   return 'default-user';
 }

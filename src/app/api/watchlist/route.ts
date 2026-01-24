@@ -30,8 +30,19 @@ import {
 // Helper to get user ID
 // =============================================================================
 
-async function getUserId(): Promise<string> {
+async function getUserId(request?: NextRequest): Promise<string> {
   try {
+    // First, try API key from headers (for authenticated API access)
+    if (request) {
+      const apiKey = request.headers.get('X-API-Key') || request.headers.get('x-api-key');
+      if (apiKey && apiKey.startsWith('fcn_')) {
+        // Use a hash of the API key prefix as user ID for privacy
+        const keyPrefix = apiKey.substring(0, 20);
+        return `api:${Buffer.from(keyPrefix).toString('base64').substring(0, 16)}`;
+      }
+    }
+    
+    // Next, try cookie-based user ID
     const cookieStore = await cookies();
     const userIdCookie = cookieStore.get('watchlist-user-id');
     return userIdCookie?.value || getDefaultUserId();
@@ -47,7 +58,7 @@ async function getUserId(): Promise<string> {
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
-    const userId = await getUserId();
+    const userId = await getUserId(request);
     
     // Check if specific coin is in watchlist
     const checkCoinId = searchParams.get('check');
@@ -121,7 +132,7 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    const userId = await getUserId();
+    const userId = await getUserId(request);
     const body = await request.json();
     
     const { coinId, symbol, name, priceAtAdd, notes, toggle, bulk } = body;
@@ -189,7 +200,7 @@ export async function POST(request: NextRequest) {
 
 export async function DELETE(request: NextRequest) {
   try {
-    const userId = await getUserId();
+    const userId = await getUserId(request);
     const { searchParams } = new URL(request.url);
     
     // Clear entire watchlist
@@ -237,7 +248,7 @@ export async function DELETE(request: NextRequest) {
 
 export async function PUT(request: NextRequest) {
   try {
-    const userId = await getUserId();
+    const userId = await getUserId(request);
     const body = await request.json();
     
     const { coinId, notes } = body;

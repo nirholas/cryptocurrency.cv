@@ -43,45 +43,72 @@ const quickActions = [
   { label: 'News Sources', href: '/sources', icon: '📚', description: 'Browse by source' },
 ];
 
-// Mock function to simulate live search - in production, replace with actual API call
+// Category icons mapping
+const categoryIcons: Record<string, string> = {
+  bitcoin: '₿',
+  ethereum: 'Ξ',
+  defi: '🏦',
+  nft: '🎨',
+  regulation: '⚖️',
+  markets: '📈',
+  analysis: '📊',
+  trading: '📉',
+  technology: '⚙️',
+  general: '📰',
+};
+
+/**
+ * Fetch search results from the /api/search endpoint
+ * Integrates with the real crypto news search API
+ */
 async function fetchSearchResults(query: string): Promise<SearchResult[]> {
-  // Simulate API delay
-  await new Promise(resolve => setTimeout(resolve, 200));
-  
   if (!query.trim()) return [];
   
-  // Mock results based on query
-  const mockResults: SearchResult[] = [
-    {
-      id: '1',
-      title: `${query} - Latest developments and analysis`,
-      category: 'bitcoin',
-      categoryIcon: '₿',
-      source: 'CoinDesk',
-      date: '2 hours ago',
-      url: `/search?q=${encodeURIComponent(query)}`,
-    },
-    {
-      id: '2',
-      title: `Breaking: ${query} sees major institutional interest`,
-      category: 'markets',
-      categoryIcon: '📈',
-      source: 'Bloomberg',
-      date: '4 hours ago',
-      url: `/search?q=${encodeURIComponent(query)}`,
-    },
-    {
-      id: '3',
-      title: `How ${query} is reshaping the crypto landscape`,
-      category: 'analysis',
-      categoryIcon: '📊',
-      source: 'CryptoSlate',
-      date: '1 day ago',
-      url: `/search?q=${encodeURIComponent(query)}`,
-    },
-  ];
-  
-  return mockResults;
+  try {
+    const response = await fetch(
+      `/api/search?q=${encodeURIComponent(query)}&limit=10`,
+      {
+        headers: {
+          'Accept': 'application/json',
+        },
+      }
+    );
+    
+    if (!response.ok) {
+      console.error('Search API error:', response.status);
+      return [];
+    }
+    
+    const data = await response.json();
+    
+    if (!data.articles || !Array.isArray(data.articles)) {
+      return [];
+    }
+    
+    // Transform API response to SearchResult format
+    return data.articles.map((article: {
+      title: string;
+      link: string;
+      source: string;
+      category?: string;
+      timeAgo?: string;
+      pubDate?: string;
+    }, index: number) => {
+      const category = (article.category || 'general').toLowerCase();
+      return {
+        id: String(index + 1),
+        title: article.title,
+        category: category,
+        categoryIcon: categoryIcons[category] || '📰',
+        source: article.source,
+        date: article.timeAgo || article.pubDate || '',
+        url: article.link,
+      };
+    });
+  } catch (error) {
+    console.error('Failed to fetch search results:', error);
+    return [];
+  }
 }
 
 export function SearchModal({ isOpen, onClose }: SearchModalProps) {

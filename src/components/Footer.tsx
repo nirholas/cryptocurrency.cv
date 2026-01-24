@@ -130,16 +130,16 @@ export default function Footer() {
           <nav aria-label="Tools">
             <h3 className="font-bold text-white text-lg mb-6 flex items-center gap-2">
               <span className="w-8 h-0.5 bg-gradient-to-r from-brand-500 to-transparent" aria-hidden="true" />
-              Tools
+              Tools & API
             </h3>
             <ul className="space-y-3">
               {[
+                { href: '/developers', icon: '👨‍💻', label: 'Developer Portal' },
+                { href: '/pricing', icon: '💰', label: 'API Pricing' },
+                { href: '/pricing/upgrade', icon: '💳', label: 'Pay with Crypto' },
+                { href: '/billing', icon: '📊', label: 'Billing' },
                 { href: '/arbitrage', icon: '🔄', label: 'Arbitrage' },
                 { href: '/predictions', icon: '🎯', label: 'Predictions' },
-                { href: '/options', icon: '📈', label: 'Options Flow' },
-                { href: '/analytics', icon: '📊', label: 'Analytics' },
-                { href: '/developers', icon: '👨‍💻', label: 'Developers' },
-                { href: '/pricing', icon: '💳', label: 'Pricing' },
               ].map((item) => (
                 <li key={item.href}>
                   <Link 

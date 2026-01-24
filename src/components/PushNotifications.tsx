@@ -104,7 +104,7 @@ export function PushNotifications() {
     localStorage.removeItem('notification-history');
   };
 
-  // Simulate receiving notifications (in real app, this would be from a push service)
+  // Check for breaking news and show notifications
   useEffect(() => {
     if (permission !== 'granted') return;
 
@@ -118,15 +118,15 @@ export function PushNotifications() {
           const article = data.articles[0];
           const lastNotified = localStorage.getItem('last-notified-article');
           
-          if (article.url !== lastNotified) {
-            // New breaking article
-            // Uncomment to enable auto-notifications:
-            // showNotification(
-            //   '🚨 Breaking News',
-            //   article.title,
-            //   article.url
-            // );
-            localStorage.setItem('last-notified-article', article.url);
+          if (article.url !== lastNotified && article.link !== lastNotified) {
+            // New breaking article - show notification
+            const articleUrl = article.url || article.link;
+            showNotification(
+              '🚨 Breaking News',
+              article.title,
+              articleUrl
+            );
+            localStorage.setItem('last-notified-article', articleUrl);
           }
         }
       } catch (error) {
@@ -134,6 +134,9 @@ export function PushNotifications() {
       }
     };
 
+    // Initial check
+    checkBreakingNews();
+    
     const interval = setInterval(checkBreakingNews, 5 * 60 * 1000); // Every 5 minutes
     return () => clearInterval(interval);
   }, [permission]);

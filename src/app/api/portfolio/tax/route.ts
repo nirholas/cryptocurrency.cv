@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { db } from '@/lib/database';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs'; // Changed from 'edge' to support database operations
 
 /**
  * Portfolio Tax Report Generation API
@@ -105,8 +106,57 @@ interface Form8949Entry {
 // Cost basis calculation methods
 type CostBasisMethod = 'FIFO' | 'LIFO' | 'HIFO' | 'SPEC_ID';
 
-// In-memory storage for demo (use database in production)
-const portfolioTransactions: Map<string, Transaction[]> = new Map();
+// Database key prefix for portfolio transactions
+const TX_KEY_PREFIX = 'portfolio:tax:';
+
+// In-memory cache for performance (backed by database)
+const portfolioTransactionsCache: Map<string, { transactions: Transaction[]; lastSync: number }> = new Map();
+const CACHE_TTL = 60 * 1000; // 1 minute cache
+
+/**
+ * Get transactions from database with caching
+ */
+async function getPortfolioTransactions(portfolioId: string): Promise<Transaction[]> {
+  const cached = portfolioTransactionsCache.get(portfolioId);
+  if (cached && Date.now() - cached.lastSync < CACHE_TTL) {
+    return cached.transactions;
+  }
+  
+  try {
+    const transactions = await db.get<Transaction[]>(`${TX_KEY_PREFIX}${portfolioId}`);
+    if (transactions) {
+      portfolioTransactionsCache.set(portfolioId, { 
+        transactions, 
+        lastSync: Date.now() 
+      });
+      return transactions;
+    }
+  } catch (error) {
+    console.warn('Failed to fetch transactions from database:', error);
+  }
+  
+  return [];
+}
+
+/**
+ * Save transactions to database
+ */
+async function savePortfolioTransactions(portfolioId: string, transactions: Transaction[]): Promise<void> {
+  try {
+    await db.set(`${TX_KEY_PREFIX}${portfolioId}`, transactions);
+    portfolioTransactionsCache.set(portfolioId, { 
+      transactions, 
+      lastSync: Date.now() 
+    });
+  } catch (error) {
+    console.warn('Failed to save transactions to database:', error);
+    // Still update cache for this request
+    portfolioTransactionsCache.set(portfolioId, { 
+      transactions, 
+      lastSync: Date.now() 
+    });
+  }
+}
 
 /**
  * GET: Generate tax report
@@ -119,18 +169,18 @@ export async function GET(request: NextRequest) {
   const costBasisMethod = (searchParams.get('method')?.toUpperCase() as CostBasisMethod) || 'FIFO';
   const format = searchParams.get('format') || 'json'; // json, csv, form8949
   
-  // Get stored transactions or return empty array (user must POST transactions first)
-  let transactions = portfolioTransactions.get(portfolioId);
-  if (!transactions || transactions.length === 0) {
+  // Get stored transactions from database
+  let transactions = await getPortfolioTransactions(portfolioId);
+  if (transactions.length === 0) {
     transactions = getEmptyTransactions();
-    portfolioTransactions.set(portfolioId, transactions);
+    await savePortfolioTransactions(portfolioId, transactions);
   }
   
   // Filter to tax year
   const yearStart = new Date(`${taxYear}-01-01T00:00:00Z`);
   const yearEnd = new Date(`${taxYear}-12-31T23:59:59Z`);
   
-  const yearTransactions = transactions.filter(tx => {
+  const yearTransactions = transactions.filter((tx: Transaction) => {
     const txDate = new Date(tx.timestamp);
     return txDate >= yearStart && txDate <= yearEnd;
   });
@@ -194,10 +244,10 @@ export async function POST(request: NextRequest) {
       notes: body.notes,
     };
     
-    // Add to portfolio
-    const existing = portfolioTransactions.get(portfolioId) || [];
+    // Add to portfolio (get existing and append)
+    const existing = await getPortfolioTransactions(portfolioId);
     existing.push(transaction);
-    portfolioTransactions.set(portfolioId, existing);
+    await savePortfolioTransactions(portfolioId, existing);
     
     return NextResponse.json({
       message: 'Transaction recorded',
@@ -219,7 +269,13 @@ export async function DELETE(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const portfolioId = searchParams.get('portfolio_id') || 'demo';
   
-  portfolioTransactions.delete(portfolioId);
+  // Clear from both cache and database
+  portfolioTransactionsCache.delete(portfolioId);
+  try {
+    await db.delete(`${TX_KEY_PREFIX}${portfolioId}`);
+  } catch {
+    // Ignore errors on delete
+  }
   
   return NextResponse.json({
     message: 'Portfolio transactions cleared',

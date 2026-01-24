@@ -4,6 +4,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
+import { db } from '@/lib/database';
 
 interface SocialMessage {
   id: string;
@@ -41,9 +42,45 @@ interface MonitoringResult {
   lastUpdated: string;
 }
 
-// In-memory storage for demo (use Redis/DB in production)
-const monitoredChannels: ChannelConfig[] = [];
+// Storage configuration
+// - Channel configs are persisted to database for durability
+// - Message cache is in-memory for real-time performance (ephemeral by design)
+const CHANNEL_CONFIG_KEY = 'social:monitor:channels';
+
+// In-memory caches (backed by database where appropriate)
+let channelConfigCache: ChannelConfig[] | null = null;
 const messageCache: SocialMessage[] = [];
+const MAX_MESSAGE_CACHE = 1000; // Keep last 1000 messages in memory
+
+/**
+ * Load channel configs from database
+ */
+async function getChannelConfigs(): Promise<ChannelConfig[]> {
+  if (channelConfigCache !== null) {
+    return channelConfigCache;
+  }
+  
+  try {
+    const configs = await db.get<ChannelConfig[]>(CHANNEL_CONFIG_KEY);
+    channelConfigCache = configs || [];
+    return channelConfigCache;
+  } catch {
+    channelConfigCache = [];
+    return channelConfigCache;
+  }
+}
+
+/**
+ * Save channel configs to database
+ */
+async function saveChannelConfigs(configs: ChannelConfig[]): Promise<void> {
+  channelConfigCache = configs;
+  try {
+    await db.set(CHANNEL_CONFIG_KEY, configs);
+  } catch (error) {
+    console.warn('Failed to persist channel configs:', error);
+  }
+}
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
@@ -138,6 +175,8 @@ export async function GET(request: NextRequest) {
       .sort((a, b) => b.avgEngagement - a.avgEngagement)
       .slice(0, 10);
 
+    const monitoredChannels = await getChannelConfigs();
+    
     const result: MonitoringResult = {
       platform: platform || 'all',
       channels: monitoredChannels.filter((c) => c.enabled).length,
@@ -175,6 +214,7 @@ export async function POST(request: NextRequest) {
         enabled: true,
       };
 
+      const monitoredChannels = await getChannelConfigs();
       const existingIndex = monitoredChannels.findIndex(
         (c) => c.channelId === config.channelId && c.platform === config.platform
       );
@@ -184,6 +224,8 @@ export async function POST(request: NextRequest) {
       } else {
         monitoredChannels.push(config);
       }
+      
+      await saveChannelConfigs(monitoredChannels);
 
       return NextResponse.json({
         success: true,
@@ -193,12 +235,14 @@ export async function POST(request: NextRequest) {
     }
 
     if (action === 'remove_channel') {
+      const monitoredChannels = await getChannelConfigs();
       const index = monitoredChannels.findIndex(
         (c) => c.channelId === channel.channelId
       );
 
       if (index >= 0) {
         monitoredChannels.splice(index, 1);
+        await saveChannelConfigs(monitoredChannels);
         return NextResponse.json({
           success: true,
           message: 'Channel removed from monitoring',

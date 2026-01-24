@@ -14,6 +14,7 @@ import {
   ExclamationTriangleIcon,
   ArrowUpRightIcon,
 } from '@heroicons/react/24/outline';
+import { useApiKeyStandalone } from '@/hooks/useApiKey';
 
 interface UsageWidgetProps {
   variant?: 'compact' | 'detailed';
@@ -29,16 +30,22 @@ interface UsageData {
 }
 
 export default function UsageWidget({ variant = 'compact', className = '' }: UsageWidgetProps) {
+  const { apiKey } = useApiKeyStandalone();
   const [usage, setUsage] = useState<UsageData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchUsage = async () => {
+      // Skip if no API key is stored
+      if (!apiKey) {
+        setIsLoading(false);
+        return;
+      }
+
       try {
         const response = await fetch('/api/billing/usage', {
           headers: {
-            'x-api-key-id': 'key_demo123',
-            'x-billing-tier': 'pro',
+            'X-API-Key': apiKey,
           },
         });
 
@@ -48,7 +55,7 @@ export default function UsageWidget({ variant = 'compact', className = '' }: Usa
             current: data.summary.totalRequests,
             limit: data.summary.limit,
             percentage: data.summary.usagePercentage,
-            tier: 'pro',
+            tier: data.tier || 'pro',
             daysRemaining: data.period?.daysRemaining || 15,
           });
         }
@@ -64,7 +71,7 @@ export default function UsageWidget({ variant = 'compact', className = '' }: Usa
     // Refresh every 5 minutes
     const interval = setInterval(fetchUsage, 5 * 60 * 1000);
     return () => clearInterval(interval);
-  }, []);
+  }, [apiKey]);
 
   const formatNumber = (num: number) => {
     if (num >= 1000000) return `${(num / 1000000).toFixed(1)}M`;
@@ -86,14 +93,30 @@ export default function UsageWidget({ variant = 'compact', className = '' }: Usa
     );
   }
 
-  // Fallback data
-  const displayUsage = usage || {
-    current: 23456,
-    limit: 50000,
-    percentage: 47,
-    tier: 'pro',
-    daysRemaining: 15,
-  };
+  // No fallback - show empty state if no data
+  if (!usage) {
+    if (variant === 'compact') {
+      return (
+        <Link
+          href="/billing"
+          className={`flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors ${className}`}
+        >
+          <ChartBarIcon className="w-4 h-4 text-gray-400" />
+          <span className="text-sm text-gray-500 dark:text-gray-400">No data</span>
+        </Link>
+      );
+    }
+    return (
+      <div className={`bg-white dark:bg-slate-800 rounded-xl p-4 border border-gray-200 dark:border-slate-700 ${className}`}>
+        <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400">
+          <ChartBarIcon className="w-5 h-5" />
+          <span className="text-sm">Sign in to view usage</span>
+        </div>
+      </div>
+    );
+  }
+
+  const displayUsage = usage;
 
   const statusColor = getStatusColor(displayUsage.percentage);
 

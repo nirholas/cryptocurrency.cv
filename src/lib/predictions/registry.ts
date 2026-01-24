@@ -10,9 +10,11 @@
  * - Leaderboard by predictor accuracy
  * - Category-based prediction organization
  * - Public audit trail
+ * - Persistent storage with KV database
  */
 
 import { createHash } from 'crypto';
+import { db } from '../database';
 
 // =============================================================================
 // Types
@@ -147,14 +149,146 @@ export interface LeaderboardEntry {
 }
 
 // =============================================================================
-// Storage (In-memory for demo, would use database in production)
+// Storage Configuration
 // =============================================================================
 
-const predictions = new Map<string, Prediction>();
-const predictors = new Map<string, Predictor>();
+// Key prefixes for database storage
+const DB_KEYS = {
+  prediction: 'predictions:',
+  predictor: 'predictors:',
+  predictorIndex: 'idx:predictor:',
+  assetIndex: 'idx:asset:',
+  categoryIndex: 'idx:category:',
+  allPredictions: 'predictions:all',
+  allPredictors: 'predictors:all',
+} as const;
+
+// In-memory cache for fast lookups (synced with database)
+const predictionsCache = new Map<string, Prediction>();
+const predictorsCache = new Map<string, Predictor>();
 const predictionsByPredictor = new Map<string, Set<string>>();
 const predictionsByAsset = new Map<string, Set<string>>();
 const predictionsByCategory = new Map<PredictionCategory, Set<string>>();
+
+// Track if cache is initialized from database
+let cacheInitialized = false;
+
+/**
+ * Initialize cache from database on first access
+ */
+async function ensureCacheInitialized(): Promise<void> {
+  if (cacheInitialized) return;
+  
+  try {
+    // Load all prediction IDs from database
+    const predictionIds = await db.get<string[]>(DB_KEYS.allPredictions);
+    if (predictionIds && predictionIds.length > 0) {
+      // Load predictions in batches
+      const predictions = await db.mget<Prediction>(
+        predictionIds.map(id => `${DB_KEYS.prediction}${id}`)
+      );
+      
+      for (let i = 0; i < predictionIds.length; i++) {
+        const prediction = predictions[i];
+        if (prediction) {
+          // Convert date strings back to Date objects
+          prediction.createdAt = new Date(prediction.createdAt);
+          prediction.deadline = new Date(prediction.deadline);
+          if (prediction.resolvedAt) prediction.resolvedAt = new Date(prediction.resolvedAt);
+          if (prediction.outcome?.verifiedAt) {
+            prediction.outcome.verifiedAt = new Date(prediction.outcome.verifiedAt);
+          }
+          
+          predictionsCache.set(predictionIds[i], prediction);
+          
+          // Rebuild indices
+          if (!predictionsByPredictor.has(prediction.predictorId)) {
+            predictionsByPredictor.set(prediction.predictorId, new Set());
+          }
+          predictionsByPredictor.get(prediction.predictorId)!.add(predictionIds[i]);
+          
+          if (prediction.targetAsset) {
+            const assetKey = prediction.targetAsset.toUpperCase();
+            if (!predictionsByAsset.has(assetKey)) {
+              predictionsByAsset.set(assetKey, new Set());
+            }
+            predictionsByAsset.get(assetKey)!.add(predictionIds[i]);
+          }
+          
+          if (!predictionsByCategory.has(prediction.category)) {
+            predictionsByCategory.set(prediction.category, new Set());
+          }
+          predictionsByCategory.get(prediction.category)!.add(predictionIds[i]);
+        }
+      }
+    }
+    
+    // Load all predictor IDs from database
+    const predictorIds = await db.get<string[]>(DB_KEYS.allPredictors);
+    if (predictorIds && predictorIds.length > 0) {
+      const predictors = await db.mget<Predictor>(
+        predictorIds.map(id => `${DB_KEYS.predictor}${id}`)
+      );
+      
+      for (let i = 0; i < predictorIds.length; i++) {
+        const predictor = predictors[i];
+        if (predictor) {
+          predictor.joinedAt = new Date(predictor.joinedAt);
+          if (predictor.lastPredictionAt) {
+            predictor.lastPredictionAt = new Date(predictor.lastPredictionAt);
+          }
+          predictorsCache.set(predictorIds[i], predictor);
+        }
+      }
+    }
+    
+    cacheInitialized = true;
+  } catch (error) {
+    console.warn('Failed to initialize predictions cache from database:', error);
+    // Continue with empty cache - will populate as predictions are created
+    cacheInitialized = true;
+  }
+}
+
+/**
+ * Persist a prediction to the database
+ */
+async function persistPrediction(prediction: Prediction): Promise<void> {
+  try {
+    // Save the prediction
+    await db.set(`${DB_KEYS.prediction}${prediction.id}`, prediction);
+    
+    // Update the all predictions index
+    const allPredictions = await db.get<string[]>(DB_KEYS.allPredictions) || [];
+    if (!allPredictions.includes(prediction.id)) {
+      allPredictions.push(prediction.id);
+      await db.set(DB_KEYS.allPredictions, allPredictions);
+    }
+  } catch (error) {
+    console.warn('Failed to persist prediction to database:', error);
+    // Cache will still have the data
+  }
+}
+
+/**
+ * Persist a predictor to the database
+ */
+async function persistPredictor(predictor: Predictor): Promise<void> {
+  try {
+    // Save the predictor
+    await db.set(`${DB_KEYS.predictor}${predictor.id}`, predictor);
+    
+    // Update the all predictors index
+    const allPredictors = await db.get<string[]>(DB_KEYS.allPredictors) || [];
+    if (!allPredictors.includes(predictor.id)) {
+      allPredictors.push(predictor.id);
+      await db.set(DB_KEYS.allPredictors, allPredictors);
+    }
+  } catch (error) {
+    console.warn('Failed to persist predictor to database:', error);
+    // Cache will still have the data
+  }
+}
 
 // =============================================================================
 // Core Functions
@@ -215,6 +349,8 @@ export async function registerPrediction(input: {
   stakeAmount?: number;
   source?: string;
 }): Promise<Prediction> {
+  await ensureCacheInitialized();
+  
   const now = new Date();
   const id = generatePredictionId();
   
@@ -259,7 +395,7 @@ export async function registerPrediction(input: {
   const prediction: Prediction = { ...predictionBase, hash };
   
   // Store prediction
-  predictions.set(id, prediction);
+  predictionsCache.set(id, prediction);
   
   // Update indices
   if (!predictionsByPredictor.has(input.predictorId)) {
@@ -283,6 +419,9 @@ export async function registerPrediction(input: {
   // Update predictor stats
   await updatePredictorStats(input.predictorId, input.predictorName, input.predictorType);
   
+  // Persist to database
+  await persistPrediction(prediction);
+  
   return prediction;
 }
 
@@ -290,7 +429,9 @@ export async function registerPrediction(input: {
  * Get a prediction by ID
  */
 export async function getPrediction(id: string): Promise<Prediction | null> {
-  const prediction = predictions.get(id);
+  await ensureCacheInitialized();
+  
+  const prediction = predictionsCache.get(id);
   if (prediction) {
     // Increment views
     prediction.views++;
@@ -319,7 +460,9 @@ export async function resolvePrediction(
   },
   verifiedBy: string
 ): Promise<Prediction> {
-  const prediction = predictions.get(id);
+  await ensureCacheInitialized();
+  
+  const prediction = predictionsCache.get(id);
   if (!prediction) {
     throw new Error(`Prediction ${id} not found`);
   }
@@ -348,10 +491,13 @@ export async function resolvePrediction(
     notes: outcome.notes,
   };
   
-  predictions.set(id, prediction);
+  predictionsCache.set(id, prediction);
+  
+  // Persist updated prediction
+  await persistPrediction(prediction);
   
   // Update predictor stats
-  const predictor = predictors.get(prediction.predictorId);
+  const predictor = predictorsCache.get(prediction.predictorId);
   if (predictor) {
     predictor.pendingPredictions--;
     if (outcome.status === 'correct') {
@@ -376,7 +522,10 @@ export async function resolvePrediction(
       ? (correctCategoryPredictions / resolvedCategoryPredictions.length) * 100
       : 0;
     
-    predictors.set(prediction.predictorId, predictor);
+    predictorsCache.set(prediction.predictorId, predictor);
+    
+    // Persist updated predictor
+    await persistPredictor(predictor);
   }
   
   return prediction;
@@ -389,11 +538,13 @@ export async function getPredictionsByPredictor(
   predictorId: string,
   options?: { status?: PredictionStatus; limit?: number }
 ): Promise<Prediction[]> {
+  await ensureCacheInitialized();
+  
   const predictionIds = predictionsByPredictor.get(predictorId);
   if (!predictionIds) return [];
   
   let results = Array.from(predictionIds)
-    .map(id => predictions.get(id))
+    .map(id => predictionsCache.get(id))
     .filter((p): p is Prediction => p !== undefined);
   
   if (options?.status) {
@@ -416,11 +567,13 @@ export async function getPredictionsByAsset(
   asset: string,
   options?: { status?: PredictionStatus; limit?: number }
 ): Promise<Prediction[]> {
+  await ensureCacheInitialized();
+  
   const predictionIds = predictionsByAsset.get(asset.toUpperCase());
   if (!predictionIds) return [];
   
   let results = Array.from(predictionIds)
-    .map(id => predictions.get(id))
+    .map(id => predictionsCache.get(id))
     .filter((p): p is Prediction => p !== undefined);
   
   if (options?.status) {
@@ -443,11 +596,13 @@ export async function getPredictionsByCategory(
   category: PredictionCategory,
   options?: { status?: PredictionStatus; limit?: number }
 ): Promise<Prediction[]> {
+  await ensureCacheInitialized();
+  
   const predictionIds = predictionsByCategory.get(category);
   if (!predictionIds) return [];
   
   let results = Array.from(predictionIds)
-    .map(id => predictions.get(id))
+    .map(id => predictionsCache.get(id))
     .filter((p): p is Prediction => p !== undefined);
   
   if (options?.status) {
@@ -467,7 +622,9 @@ export async function getPredictionsByCategory(
  * Get recent predictions
  */
 export async function getRecentPredictions(limit = 50): Promise<Prediction[]> {
-  return Array.from(predictions.values())
+  await ensureCacheInitialized();
+  
+  return Array.from(predictionsCache.values())
     .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime())
     .slice(0, limit);
 }
@@ -476,10 +633,12 @@ export async function getRecentPredictions(limit = 50): Promise<Prediction[]> {
  * Get trending predictions (by engagement)
  */
 export async function getTrendingPredictions(limit = 20): Promise<Prediction[]> {
+  await ensureCacheInitialized();
+  
   const now = Date.now();
   const oneWeekAgo = now - 7 * 24 * 60 * 60 * 1000;
   
-  return Array.from(predictions.values())
+  return Array.from(predictionsCache.values())
     .filter(p => p.createdAt.getTime() >= oneWeekAgo && p.status === 'pending')
     .sort((a, b) => {
       const scoreA = a.upvotes - a.downvotes + a.comments * 2 + a.views * 0.1;
@@ -493,10 +652,12 @@ export async function getTrendingPredictions(limit = 20): Promise<Prediction[]> 
  * Get expiring predictions (deadline within 24h)
  */
 export async function getExpiringPredictions(hoursUntilDeadline = 24): Promise<Prediction[]> {
+  await ensureCacheInitialized();
+  
   const now = Date.now();
   const cutoff = now + hoursUntilDeadline * 60 * 60 * 1000;
   
-  return Array.from(predictions.values())
+  return Array.from(predictionsCache.values())
     .filter(p => 
       p.status === 'pending' && 
       p.deadline.getTime() > now &&
@@ -512,7 +673,9 @@ export async function votePrediction(
   id: string,
   vote: 'up' | 'down'
 ): Promise<Prediction> {
-  const prediction = predictions.get(id);
+  await ensureCacheInitialized();
+  
+  const prediction = predictionsCache.get(id);
   if (!prediction) {
     throw new Error(`Prediction ${id} not found`);
   }
@@ -523,7 +686,11 @@ export async function votePrediction(
     prediction.downvotes++;
   }
   
-  predictions.set(id, prediction);
+  predictionsCache.set(id, prediction);
+  
+  // Persist vote update
+  await persistPrediction(prediction);
+  
   return prediction;
 }
 
@@ -539,7 +706,7 @@ async function updatePredictorStats(
   name: string,
   type: 'user' | 'influencer' | 'analyst' | 'ai'
 ): Promise<void> {
-  let predictor = predictors.get(id);
+  let predictor = predictorsCache.get(id);
   
   if (!predictor) {
     predictor = {
@@ -569,14 +736,18 @@ async function updatePredictorStats(
   predictor.pendingPredictions++;
   predictor.lastPredictionAt = new Date();
   
-  predictors.set(id, predictor);
+  predictorsCache.set(id, predictor);
+  
+  // Persist predictor update
+  await persistPredictor(predictor);
 }
 
 /**
  * Get predictor by ID
  */
 export async function getPredictor(id: string): Promise<Predictor | null> {
-  return predictors.get(id) || null;
+  await ensureCacheInitialized();
+  return predictorsCache.get(id) || null;
 }
 
 /**
@@ -587,10 +758,12 @@ export async function getLeaderboard(options?: {
   category?: PredictionCategory;
   limit?: number;
 }): Promise<PredictionLeaderboard> {
+  await ensureCacheInitialized();
+  
   const timeframe = options?.timeframe || 'all';
   const limit = options?.limit || 50;
   
-  let allPredictors = Array.from(predictors.values());
+  let allPredictors = Array.from(predictorsCache.values());
   
   // Filter by minimum predictions for reliability
   allPredictors = allPredictors.filter(p => 
@@ -635,7 +808,8 @@ export async function getPredictionStats(): Promise<{
   topPredictors: Predictor[];
   recentResolutions: Prediction[];
 }> {
-  const allPredictions = Array.from(predictions.values());
+  await ensureCacheInitialized();
+  const allPredictions = Array.from(predictionsCache.values());
   const resolved = allPredictions.filter(p => 
     ['correct', 'incorrect', 'partially_correct'].includes(p.status)
   );
@@ -646,7 +820,7 @@ export async function getPredictionStats(): Promise<{
     byCategory[category] = predictionsByCategory.get(category)?.size || 0;
   }
   
-  const topPredictors = Array.from(predictors.values())
+  const topPredictors = Array.from(predictorsCache.values())
     .filter(p => p.correctPredictions + p.incorrectPredictions >= 3)
     .sort((a, b) => b.overallAccuracy - a.overallAccuracy)
     .slice(0, 10);

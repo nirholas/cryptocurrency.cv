@@ -190,7 +190,10 @@ async function calculateBreakdown(): Promise<FearGreedResponse['breakdown']> {
       volatility: { value: Math.round(volatilityValue), weight: 25 },
       marketMomentum: { value: Math.round(momentumValue), weight: 25 },
       socialMedia: { value: Math.round(socialValue), weight: 15 },
-      surveys: { value: 50, weight: 15 }, // Placeholder - surveys not publicly available
+      // Surveys: Set to neutral (50) as proprietary survey data is not publicly available.
+      // The neutral value ensures this component doesn't skew the index while maintaining
+      // the weighted calculation structure. Weight of 15% reflects reduced confidence.
+      surveys: { value: 50, weight: 15 },
       dominance: { value: Math.round(dominanceValue), weight: 10 },
       trends: { value: Math.round(trendsValue), weight: 10 },
     };

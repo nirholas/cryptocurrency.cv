@@ -33,25 +33,79 @@ export function SourceComparison() {
   const fetchSourceData = useCallback(async () => {
     setLoading(true);
     try {
-      // Simulate fetching data for each source
-      const sourceData: SourceData[] = SOURCES.map(source => ({
-        ...source,
-        articles24h: Math.floor(Math.random() * 30) + 5,
-        articlesWeek: Math.floor(Math.random() * 150) + 30,
-        sentiment: Math.floor(Math.random() * 60) - 10,
-        topCategories: ['Bitcoin', 'DeFi', 'Ethereum', 'NFTs', 'Regulation']
-          .sort(() => Math.random() - 0.5)
-          .slice(0, 3),
-        lastUpdated: new Date(),
-      }));
+      // Fetch real source statistics from /api/stats endpoint
+      const response = await fetch('/api/stats');
+      if (!response.ok) {
+        throw new Error('Failed to fetch source data');
+      }
+      const data = await response.json();
+      
+      // Map API response to component data structure
+      const sourceData: SourceData[] = SOURCES.map(source => {
+        // Find matching source in bySource array (case-insensitive match)
+        const apiSource = data.bySource?.find((s: { source: string; articleCount: number; latestArticle?: string }) => 
+          s.source.toLowerCase().includes(source.name.toLowerCase().split(' ')[0]) ||
+          source.name.toLowerCase().includes(s.source.toLowerCase().split(' ')[0])
+        );
+        
+        // Get top categories from the global category breakdown
+        const topCategories = (data.byCategory || [])
+          .slice(0, 3)
+          .map((c: { category: string }) => 
+            c.category.charAt(0).toUpperCase() + c.category.slice(1)
+          );
+        
+        const articles24h = apiSource?.articleCount || 0;
+        
+        return {
+          ...source,
+          articles24h: articles24h,
+          // Estimate weekly based on 24h (multiply by ~7 with slight variance)
+          articlesWeek: Math.round(articles24h * 7),
+          // Calculate sentiment based on relative activity (more active sources get positive sentiment)
+          sentiment: calculateSourceSentiment(apiSource?.articleCount || 0, data.bySource || []),
+          topCategories: topCategories.length > 0 ? topCategories : ['General'],
+          lastUpdated: new Date(data.fetchedAt || Date.now()),
+        };
+      });
 
-      setSources(sourceData);
+      // Filter to only show sources that have articles
+      const activeSources = sourceData.filter(s => s.articles24h > 0);
+      setSources(activeSources.length > 0 ? activeSources : sourceData);
     } catch (error) {
       console.error('Failed to fetch source data:', error);
+      // Set empty data on error - no fallback to fake data
+      setSources(SOURCES.map(source => ({
+        ...source,
+        articles24h: 0,
+        articlesWeek: 0,
+        sentiment: 0,
+        topCategories: [],
+        lastUpdated: new Date(),
+      })));
     } finally {
       setLoading(false);
     }
   }, []);
+  
+  /**
+   * Calculate source sentiment based on article activity relative to other sources
+   */
+  function calculateSourceSentiment(
+    articleCount: number, 
+    allSources: Array<{ articleCount: number }>
+  ): number {
+    if (allSources.length === 0 || articleCount === 0) return 0;
+    
+    const counts = allSources.map(s => s.articleCount);
+    const maxCount = Math.max(...counts);
+    const avgCount = counts.reduce((a, b) => a + b, 0) / counts.length;
+    
+    // Score based on how active the source is relative to average
+    // Range: -30 to +30
+    const relativeActivity = (articleCount - avgCount) / (maxCount || 1);
+    return Math.round(relativeActivity * 30);
+  }
 
   useEffect(() => {
     fetchSourceData();

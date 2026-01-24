@@ -50,9 +50,10 @@ const aiItems = [
 const resourceLinks = [
   { href: '/developers', label: 'Developer Portal', icon: '👨‍💻' },
   { href: '/examples', label: 'Code Examples', icon: '💻' },
-  { href: '/pricing', label: 'Pricing', icon: '💳' },
+  { href: '/pricing', label: 'API Pricing', icon: '💰' },
+  { href: '/pricing/upgrade', label: 'Pay with Crypto', icon: '💳' },
+  { href: '/billing', label: 'Billing', icon: '📊' },
   { href: '/settings', label: 'Settings', icon: '⚙️' },
-  { href: '/about', label: 'About', icon: 'ℹ️' },
 ];
 
 export function MobileNav() {

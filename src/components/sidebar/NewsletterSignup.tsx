@@ -34,21 +34,27 @@ export default function NewsletterSignup() {
 
     setStatus('loading');
 
-    // Simulate API call - replace with actual newsletter service
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // In production, you would call your newsletter API here:
-      // await fetch('/api/newsletter/subscribe', {
-      //   method: 'POST',
-      //   body: JSON.stringify({ email }),
-      // });
+      const response = await fetch('/api/newsletter/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: email.trim() }),
+      });
 
-      setStatus('success');
-      setEmail('');
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setStatus('success');
+        setEmail('');
+      } else {
+        setStatus('error');
+        setErrorMessage(data.message || 'Something went wrong. Please try again.');
+      }
     } catch {
       setStatus('error');
-      setErrorMessage('Something went wrong. Please try again.');
+      setErrorMessage('Network error. Please check your connection and try again.');
     }
   }, [email, honeypot]);
 

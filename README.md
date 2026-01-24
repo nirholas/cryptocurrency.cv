@@ -170,8 +170,9 @@ npm run pwa:icons
 
 ## Sources
 
-We aggregate from **7 trusted outlets**:
+We aggregate from **120+ trusted outlets** across multiple categories:
 
+### 📰 Tier 1 News Outlets
 - 🟠 **CoinDesk** — General crypto news
 - 🔵 **The Block** — Institutional & research
 - 🟢 **Decrypt** — Web3 & culture
@@ -180,6 +181,33 @@ We aggregate from **7 trusted outlets**:
 - 🟣 **Blockworks** — DeFi & institutions
 - 🔴 **The Defiant** — DeFi native
 
+### 🏦 Institutional Research
+- **Galaxy Digital** — Institutional-grade research
+- **Grayscale** — Market reports
+- **CoinShares** — Weekly fund flows
+- **Pantera Capital** — Blockchain letters
+- **Multicoin Capital** — Investment thesis
+- **ARK Invest** — Innovation research
+
+### 📊 On-Chain Analytics
+- **Glassnode** — On-chain metrics
+- **Messari** — Protocol research
+- **Kaiko** — Market microstructure
+- **CryptoQuant** — Exchange flows
+- **Coin Metrics** — Network data
+
+### 🎯 Macro & Quant
+- **Lyn Alden** — Macro analysis
+- **AQR Insights** — Quantitative research
+- **Two Sigma** — Data science
+- **Deribit Insights** — Options/derivatives
+
+### 💼 Traditional Finance
+- **Bloomberg Crypto** — Mainstream coverage
+- **Reuters Crypto** — Wire service
+- **Goldman Sachs** — Bank research
+- **Finextra** — Fintech news
+
 ---
 
 ## Endpoints
@@ -187,10 +215,38 @@ We aggregate from **7 trusted outlets**:
 | Endpoint | Description |
 |----------|-------------|
 | `/api/news` | Latest from all sources |
+| `/api/news?category=institutional` | Filter by category |
+| `/api/news/categories` | List all categories |
 | `/api/search?q=bitcoin` | Search by keywords |
 | `/api/defi` | DeFi-specific news |
 | `/api/bitcoin` | Bitcoin-specific news |
 | `/api/breaking` | Last 2 hours only |
+
+### 📂 Category Filter
+
+Filter news by specialized categories:
+
+```bash
+# Get institutional/VC research
+curl "https://free-crypto-news.vercel.app/api/news?category=institutional"
+
+# Get on-chain analytics news
+curl "https://free-crypto-news.vercel.app/api/news?category=onchain"
+
+# Get ETF and asset manager news
+curl "https://free-crypto-news.vercel.app/api/news?category=etf"
+
+# Get macro economic analysis
+curl "https://free-crypto-news.vercel.app/api/news?category=macro"
+
+# Get quantitative research
+curl "https://free-crypto-news.vercel.app/api/news?category=quant"
+
+# List all available categories
+curl "https://free-crypto-news.vercel.app/api/news/categories"
+```
+
+Available categories: `general`, `bitcoin`, `defi`, `nft`, `research`, `institutional`, `etf`, `derivatives`, `onchain`, `fintech`, `macro`, `quant`, `journalism`, `ethereum`, `asia`, `tradfi`, `mainstream`, `mining`, `gaming`, `altl1`, `stablecoin`
 
 ### 🌍 API Translation (18 Languages)
 

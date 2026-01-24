@@ -660,7 +660,7 @@ const rateLimitState: RateLimitState = {
 };
 
 const RATE_LIMIT_WINDOW = 60000; // 1 minute window
-const MAX_REQUESTS_PER_WINDOW = 25; // Conservative limit for free tier
+const MAX_REQUESTS_PER_WINDOW = 50; // Allow more requests since we have fallbacks
 
 /**
  * Check if we can make a request based on rate limiting
@@ -721,11 +721,12 @@ export class MarketDataError extends Error {
  * Fetch with timeout, rate limiting, and error handling
  * @param url - URL to fetch
  * @param timeout - Timeout in milliseconds
+ * @param skipRateLimit - Skip internal rate limit check (for fallback APIs)
  * @returns Response object
  */
-async function fetchWithTimeout(url: string, timeout = 10000): Promise<Response> {
-  // Check rate limit before making request
-  if (!canMakeRequest()) {
+async function fetchWithTimeout(url: string, timeout = 10000, skipRateLimit = false): Promise<Response> {
+  // Check rate limit before making request (only for primary CoinGecko API)
+  if (!skipRateLimit && url.includes('coingecko.com') && !canMakeRequest()) {
     throw new MarketDataError('Rate limit exceeded. Please try again later.', 429, true);
   }
   
@@ -733,7 +734,9 @@ async function fetchWithTimeout(url: string, timeout = 10000): Promise<Response>
   const timeoutId = setTimeout(() => controller.abort(), timeout);
 
   try {
-    recordRequest();
+    if (!skipRateLimit && url.includes('coingecko.com')) {
+      recordRequest();
+    }
     
     const response = await fetch(url, {
       signal: controller.signal,
@@ -746,8 +749,10 @@ async function fetchWithTimeout(url: string, timeout = 10000): Promise<Response>
     
     // Handle rate limiting from API
     if (response.status === 429) {
-      handleRateLimitError(response.headers.get('retry-after') || undefined);
-      throw new MarketDataError('Rate limited by CoinGecko API', 429, true);
+      if (url.includes('coingecko.com')) {
+        handleRateLimitError(response.headers.get('retry-after') || undefined);
+      }
+      throw new MarketDataError('Rate limited by API', 429, true);
     }
     
     return response;
@@ -1169,7 +1174,8 @@ export async function getCoinDetails(coinId: string) {
     );
     
     if (!response.ok) {
-      throw new Error('Failed to fetch coin details');
+      console.warn(`CoinGecko failed for ${coinId}, trying fallback...`);
+      return await getCoinDetailsFallback(coinId);
     }
     
     const data = await response.json();
@@ -1177,6 +1183,108 @@ export async function getCoinDetails(coinId: string) {
     return data;
   } catch (error) {
     console.error('Error fetching coin details:', error);
+    // Try fallback source
+    return await getCoinDetailsFallback(coinId);
+  }
+}
+
+/**
+ * Fallback: Get coin details from CoinPaprika API
+ * @param coinId - Coin ID (will be mapped to CoinPaprika format)
+ * @returns Coin details in CoinGecko-compatible format
+ */
+async function getCoinDetailsFallback(coinId: string): Promise<Record<string, unknown> | null> {
+  try {
+    // CoinPaprika uses different IDs, try common mappings
+    const paprikaIdMap: Record<string, string> = {
+      'bitcoin': 'btc-bitcoin',
+      'ethereum': 'eth-ethereum',
+      'solana': 'sol-solana',
+      'ripple': 'xrp-xrp',
+      'cardano': 'ada-cardano',
+      'dogecoin': 'doge-dogecoin',
+      'polkadot': 'dot-polkadot',
+      'avalanche-2': 'avax-avalanche',
+      'chainlink': 'link-chainlink',
+      'polygon': 'matic-polygon',
+      'matic-network': 'matic-polygon',
+      'litecoin': 'ltc-litecoin',
+      'uniswap': 'uni-uniswap',
+      'binancecoin': 'bnb-binance-coin',
+      'tron': 'trx-tron',
+      'shiba-inu': 'shib-shiba-inu',
+      'wrapped-bitcoin': 'wbtc-wrapped-bitcoin',
+      'dai': 'dai-dai',
+      'tether': 'usdt-tether',
+      'usd-coin': 'usdc-usd-coin',
+    };
+    
+    const paprikaId = paprikaIdMap[coinId] || `${coinId.split('-')[0]}-${coinId}`;
+    
+    // Fetch coin info and ticker in parallel
+    const [coinResponse, tickerResponse] = await Promise.all([
+      fetchWithTimeout(`${COINPAPRIKA_BASE}/coins/${paprikaId}`),
+      fetchWithTimeout(`${COINPAPRIKA_BASE}/tickers/${paprikaId}`),
+    ]);
+    
+    if (!coinResponse.ok || !tickerResponse.ok) {
+      console.error(`CoinPaprika fallback also failed for ${coinId}`);
+      return null;
+    }
+    
+    const [coinInfo, tickerInfo] = await Promise.all([
+      coinResponse.json(),
+      tickerResponse.json(),
+    ]);
+    
+    // Transform to CoinGecko-compatible format
+    const quotes = tickerInfo.quotes?.USD || {};
+    
+    const result = {
+      id: coinId,
+      symbol: coinInfo.symbol?.toLowerCase() || coinId,
+      name: coinInfo.name || coinId,
+      image: {
+        large: coinInfo.logo || `https://static.coinpaprika.com/coin/${paprikaId}/logo.png`,
+        small: coinInfo.logo || `https://static.coinpaprika.com/coin/${paprikaId}/logo.png`,
+        thumb: coinInfo.logo || `https://static.coinpaprika.com/coin/${paprikaId}/logo.png`,
+      },
+      market_cap_rank: tickerInfo.rank || null,
+      categories: coinInfo.tags?.map((t: { name: string }) => t.name) || [],
+      description: { en: coinInfo.description || '' },
+      links: {
+        homepage: coinInfo.links?.website ? [coinInfo.links.website] : [],
+        blockchain_site: coinInfo.links?.explorer ? [coinInfo.links.explorer] : [],
+        twitter_screen_name: coinInfo.links?.twitter?.[0]?.replace('https://twitter.com/', '') || '',
+        subreddit_url: coinInfo.links?.reddit?.[0] || '',
+      },
+      genesis_date: coinInfo.started_at?.split('T')[0] || null,
+      market_data: {
+        current_price: { usd: quotes.price || 0 },
+        price_change_percentage_24h: quotes.percent_change_24h || 0,
+        price_change_percentage_1h_in_currency: { usd: quotes.percent_change_1h || 0 },
+        price_change_percentage_7d: quotes.percent_change_7d || 0,
+        price_change_percentage_30d: quotes.percent_change_30d || 0,
+        price_change_percentage_1y: quotes.percent_change_1y || 0,
+        market_cap: { usd: quotes.market_cap || 0 },
+        total_volume: { usd: quotes.volume_24h || 0 },
+        high_24h: { usd: quotes.price * (1 + Math.abs(quotes.percent_change_24h || 0) / 100) },
+        low_24h: { usd: quotes.price * (1 - Math.abs(quotes.percent_change_24h || 0) / 100) },
+        ath: { usd: quotes.ath_price || quotes.price },
+        ath_date: { usd: quotes.ath_date || new Date().toISOString() },
+        ath_change_percentage: { usd: quotes.percent_from_price_ath || 0 },
+        circulating_supply: tickerInfo.circulating_supply || 0,
+        total_supply: tickerInfo.total_supply || null,
+        max_supply: tickerInfo.max_supply || null,
+      },
+      last_updated: tickerInfo.last_updated || new Date().toISOString(),
+    };
+    
+    // Cache the fallback result
+    setCache(`coin-${coinId}`, result, CACHE_TTL.global);
+    return result;
+  } catch (error) {
+    console.error('CoinPaprika fallback error:', error);
     return null;
   }
 }

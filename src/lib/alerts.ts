@@ -778,9 +778,59 @@ export async function evaluateCondition(
       }
 
       case 'whale_movement': {
-        // Whale movements would typically come from on-chain data providers
-        // This is a placeholder that could be connected to Whale Alert API
-        // For now, return not triggered
+        // Fetch real whale transaction data
+        const coin = condition.asset?.toLowerCase() || 'bitcoin';
+        const minThreshold = condition.threshold || 1000000; // Default $1M
+        
+        try {
+          // Fetch from our whale alerts API
+          const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+          const response = await fetch(
+            `${baseUrl}/api/premium/alerts/whales?coins=${coin}&minThreshold=${minThreshold}`,
+            { 
+              cache: 'no-store',
+              headers: { 'Content-Type': 'application/json' }
+            }
+          );
+          
+          if (response.ok) {
+            const data = await response.json();
+            const transactions = data.transactions || [];
+            
+            // Filter transactions above threshold
+            const significantTxs = transactions.filter(
+              (tx: { valueUsd: number }) => tx.valueUsd >= minThreshold
+            );
+            
+            if (significantTxs.length > 0) {
+              const largestTx = significantTxs.reduce(
+                (max: { valueUsd: number }, tx: { valueUsd: number }) => 
+                  tx.valueUsd > max.valueUsd ? tx : max,
+                significantTxs[0]
+              );
+              
+              return {
+                triggered: true,
+                currentValue: largestTx.valueUsd,
+                context: {
+                  coin,
+                  transactionCount: significantTxs.length,
+                  largestTransaction: {
+                    amount: largestTx.amount,
+                    valueUsd: largestTx.valueUsd,
+                    signal: largestTx.signal,
+                    significance: largestTx.significance,
+                  },
+                  netFlow: data.stats?.[0]?.netFlow24h || 0,
+                  flowSignal: data.stats?.[0]?.flowSignal || 'neutral',
+                },
+              };
+            }
+          }
+        } catch (error) {
+          console.error('Error fetching whale data:', error);
+        }
+        
         return { triggered: false, currentValue: 0 };
       }
 

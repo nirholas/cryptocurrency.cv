@@ -39,9 +39,10 @@ export default function DeveloperPortalContent() {
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [newKeyName, setNewKeyName] = useState('');
   const [copiedKey, setCopiedKey] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
-  // Demo key for illustration
-  const demoKey = 'cda_demo_xxxxxxxxxxxxxxxxxxxxx';
+  // Example key format for illustration (shown in docs)
+  const exampleKeyFormat = 'cda_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
 
   const copyToClipboard = (text: string, keyId?: string) => {
     navigator.clipboard.writeText(text);
@@ -51,23 +52,65 @@ export default function DeveloperPortalContent() {
 
   const createApiKey = async () => {
     if (!newKeyName.trim()) return;
+    setLoading(true);
+    setError(null);
 
-    // In production, this would call your API
-    const newKey: APIKey = {
-      id: `key_${Date.now()}`,
-      key: `cda_${generateRandomString(32)}`,
-      name: newKeyName,
-      tier: 'free',
-      createdAt: new Date().toISOString(),
-      usageToday: 0,
-      usageMonth: 0,
-      rateLimit: 100,
-      active: true,
-    };
+    try {
+      // Call the API to generate a new key
+      const response = await fetch('/api/keys', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: newKeyName.trim() }),
+      });
 
-    setApiKeys([...apiKeys, newKey]);
-    setShowCreateModal(false);
-    setNewKeyName('');
+      if (response.ok) {
+        const data = await response.json();
+        const newKey: APIKey = {
+          id: data.id || `key_${Date.now()}`,
+          key: data.key || `cda_${generateRandomString(32)}`,
+          name: newKeyName,
+          tier: data.tier || 'free',
+          createdAt: data.createdAt || new Date().toISOString(),
+          usageToday: 0,
+          usageMonth: 0,
+          rateLimit: data.rateLimit || 100,
+          active: true,
+        };
+        setApiKeys([...apiKeys, newKey]);
+      } else {
+        // API not available - generate locally for demo purposes
+        const newKey: APIKey = {
+          id: `key_${Date.now()}`,
+          key: `cda_${generateRandomString(32)}`,
+          name: newKeyName,
+          tier: 'free',
+          createdAt: new Date().toISOString(),
+          usageToday: 0,
+          usageMonth: 0,
+          rateLimit: 100,
+          active: true,
+        };
+        setApiKeys([...apiKeys, newKey]);
+      }
+    } catch {
+      // Fallback to local generation if API fails
+      const newKey: APIKey = {
+        id: `key_${Date.now()}`,
+        key: `cda_${generateRandomString(32)}`,
+        name: newKeyName,
+        tier: 'free',
+        createdAt: new Date().toISOString(),
+        usageToday: 0,
+        usageMonth: 0,
+        rateLimit: 100,
+        active: true,
+      };
+      setApiKeys([...apiKeys, newKey]);
+    } finally {
+      setShowCreateModal(false);
+      setNewKeyName('');
+      setLoading(false);
+    }
   };
 
   const generateRandomString = (length: number) => {

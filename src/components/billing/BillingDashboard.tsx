@@ -284,6 +284,61 @@ export default function BillingDashboard() {
     );
   }
 
+  // Show API key input when not authenticated
+  if (showApiKeyInput || !apiKey) {
+    return (
+      <div className="max-w-md mx-auto px-4 py-12">
+        <div className="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl p-8 shadow-lg">
+          <div className="text-center mb-6">
+            <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+              <KeyIcon className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              Billing Dashboard
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400">
+              Enter your API key to access billing and usage information
+            </p>
+          </div>
+
+          <form onSubmit={handleApiKeySubmit} className="space-y-4">
+            <div>
+              <label htmlFor="apiKey" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                API Key
+              </label>
+              <input
+                type="text"
+                id="apiKey"
+                value={inputApiKey}
+                onChange={(e) => setInputApiKey(e.target.value)}
+                placeholder="fcn_..."
+                className="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-900 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+              <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                Your API key starts with &quot;fcn_&quot;
+              </p>
+            </div>
+
+            <button
+              type="submit"
+              disabled={!inputApiKey || !inputApiKey.startsWith('fcn_')}
+              className="w-full py-3 px-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            >
+              Access Dashboard
+            </button>
+
+            <p className="text-center text-sm text-gray-500 dark:text-gray-400">
+              Don&apos;t have an API key?{' '}
+              <a href="/developers" className="text-blue-600 hover:text-blue-700 dark:text-blue-400">
+                Get started free
+              </a>
+            </p>
+          </form>
+        </div>
+      </div>
+    );
+  }
+
   if (error) {
     return (
       <div className="max-w-7xl mx-auto px-4 py-12">
@@ -304,21 +359,34 @@ export default function BillingDashboard() {
     );
   }
 
-  // Generate demo data if API returns empty
-  const subscription = billingData?.subscription || {
-    tier: 'pro',
-    tierName: 'Pro',
-    status: 'active',
-    cancelAtPeriodEnd: false,
-    currentPeriod: {
-      start: new Date().toISOString(),
-      end: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(),
-    },
-  };
+  // Require billing data - don't use fallback demo data
+  if (!billingData) {
+    return (
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl p-6 text-center">
+          <ExclamationTriangleIcon className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
+          <h2 className="text-xl font-semibold text-yellow-700 dark:text-yellow-400 mb-2">
+            No Billing Data Available
+          </h2>
+          <p className="text-yellow-600 dark:text-yellow-300 mb-4">
+            Unable to load billing information. Please check your API key and try again.
+          </p>
+          <button
+            onClick={handleRefresh}
+            className="px-4 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700"
+          >
+            Refresh
+          </button>
+        </div>
+      </div>
+    );
+  }
 
-  const usage = billingData?.usage || {
-    current: { apiCalls: 23456, aiTokens: 45000, webhookDeliveries: 234, dataExports: 5, websocketMinutes: 120 },
-    limits: { apiCalls: 50000, aiTokens: 100000, webhookDeliveries: 1000, dataExports: 50, websocketMinutes: 300 },
+  const subscription = billingData.subscription;
+
+  const usage = billingData.usage || {
+    current: { apiCalls: 0, aiTokens: 0, webhookDeliveries: 0, dataExports: 0, websocketMinutes: 0 },
+    limits: { apiCalls: 1000, aiTokens: 0, webhookDeliveries: 0, dataExports: 0, websocketMinutes: 0 },
     overages: { apiCalls: 0, aiTokens: 0, webhookDeliveries: 0, dataExports: 0 },
     estimatedOverageCost: 0,
     period: {
@@ -327,22 +395,15 @@ export default function BillingDashboard() {
     },
   };
 
-  const usageHistory = billingData?.usageHistory || Array.from({ length: 30 }, (_, i) => ({
-    date: new Date(Date.now() - (29 - i) * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-    requests: Math.floor(500 + Math.random() * 1500),
-    cost: 0,
-  }));
+  const usageHistory = billingData.usageHistory || [];
 
-  const invoices = billingData?.invoices || [
-    { id: 'in_1', number: 'INV-2026-001', status: 'paid', amountDue: 29, amountPaid: 29, currency: 'usd', created: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString(), invoicePdf: '#', hostedInvoiceUrl: '#' },
-    { id: 'in_2', number: 'INV-2025-012', status: 'paid', amountDue: 29, amountPaid: 29, currency: 'usd', created: new Date(Date.now() - 60 * 24 * 60 * 60 * 1000).toISOString(), invoicePdf: '#', hostedInvoiceUrl: '#' },
-  ];
+  const invoices = billingData.invoices || [];
 
   const summaryStats = analytics?.summary || {
     totalRequests: usage.current.apiCalls,
-    avgDailyRequests: Math.round(usage.current.apiCalls / 15),
-    projectedMonthlyUsage: Math.round(usage.current.apiCalls * 2),
-    usagePercentage: Math.round((usage.current.apiCalls / usage.limits.apiCalls) * 100),
+    avgDailyRequests: 0,
+    projectedMonthlyUsage: 0,
+    usagePercentage: usage.limits.apiCalls > 0 ? Math.round((usage.current.apiCalls / usage.limits.apiCalls) * 100) : 0,
     limit: usage.limits.apiCalls,
     remaining: usage.limits.apiCalls - usage.current.apiCalls,
     overageRequests: 0,
@@ -352,13 +413,7 @@ export default function BillingDashboard() {
 
   const alerts = analytics?.alerts || [];
 
-  const endpointBreakdown = analytics?.endpointBreakdown || [
-    { endpoint: '/api/news', count: 12500, percentage: 53, avgResponseTime: 85 },
-    { endpoint: '/api/prices', count: 6200, percentage: 26, avgResponseTime: 45 },
-    { endpoint: '/api/sentiment', count: 3100, percentage: 13, avgResponseTime: 120 },
-    { endpoint: '/api/gas', count: 1200, percentage: 5, avgResponseTime: 35 },
-    { endpoint: '/api/alerts', count: 456, percentage: 3, avgResponseTime: 55 },
-  ];
+  const endpointBreakdown = analytics?.endpointBreakdown || [];
 
   const tierColor = TIER_COLORS[subscription.tier as keyof typeof TIER_COLORS] || 'gray';
 

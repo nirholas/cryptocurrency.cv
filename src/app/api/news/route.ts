@@ -6,16 +6,34 @@ import { jsonResponse, errorResponse, withTiming } from '@/lib/api-utils';
 export const runtime = 'edge';
 export const revalidate = 300; // 5 minutes
 
+// Valid news categories
+const VALID_CATEGORIES = [
+  'general', 'bitcoin', 'defi', 'nft', 'research', 'institutional', 
+  'etf', 'derivatives', 'onchain', 'fintech', 'macro', 'quant',
+  'journalism', 'ethereum', 'asia', 'tradfi', 'mainstream', 'mining',
+  'gaming', 'altl1', 'stablecoin'
+];
+
 export async function GET(request: NextRequest) {
   const startTime = Date.now();
   const searchParams = request.nextUrl.searchParams;
   const limit = parseInt(searchParams.get('limit') || '10');
   const source = searchParams.get('source') || undefined;
+  const category = searchParams.get('category') || undefined;
   const from = searchParams.get('from') || undefined;
   const to = searchParams.get('to') || undefined;
   const page = searchParams.get('page') ? parseInt(searchParams.get('page')!) : undefined;
   const perPage = searchParams.get('per_page') ? parseInt(searchParams.get('per_page')!) : undefined;
   const lang = searchParams.get('lang') || 'en';
+  
+  // Validate category parameter
+  if (category && !VALID_CATEGORIES.includes(category)) {
+    return errorResponse(
+      'Invalid category',
+      `Category '${category}' is not valid. Valid categories: ${VALID_CATEGORIES.join(', ')}`,
+      400
+    );
+  }
   
   // Validate language parameter
   if (lang !== 'en' && !isLanguageSupported(lang)) {
@@ -27,7 +45,7 @@ export async function GET(request: NextRequest) {
   }
   
   try {
-    const data = await getLatestNews(limit, source, { from, to, page, perPage });
+    const data = await getLatestNews(limit, source, { from, to, page, perPage, category });
     
     // Translate articles if language is not English
     let articles = data.articles;
@@ -48,6 +66,7 @@ export async function GET(request: NextRequest) {
       articles,
       lang: translatedLang,
       availableLanguages: Object.keys(SUPPORTED_LANGUAGES),
+      availableCategories: VALID_CATEGORIES,
     }, startTime);
     
     return jsonResponse(responseData, {
