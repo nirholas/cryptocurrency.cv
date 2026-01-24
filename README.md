@@ -2131,7 +2131,7 @@ MIT © 2025 [nich](https://github.com/nirholas)
 <p align="center">
   <br>
   ⭐ <b>Found this useful? Give it a star!</b> ⭐<br>
-  <sub>It helps others discover this project and keeps development going</sub><br><br>
+  <sub>It helps others discover this project and keeps development going. Please contribute to the repo, it's beneficial for everyone when you make fixes directly to this repo rather than JUST your own. Thanks!</sub><br><br>
   <a href="https://github.com/nirholas/free-crypto-news/stargazers">
     <img src="https://img.shields.io/github/stars/nirholas/free-crypto-news?style=social" alt="Star on GitHub">
   </a>
