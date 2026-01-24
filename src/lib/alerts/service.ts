@@ -77,8 +77,11 @@ const inMemoryAlertById = new Map<string, PriceAlert>();
 /**
  * Generate unique alert ID
  */
+// Import crypto for secure ID generation
+import { randomUUID } from 'crypto';
+
 function generateAlertId(): string {
-  return `alert_${Date.now().toString(36)}_${Math.random().toString(36).substring(2, 8)}`;
+  return `alert_${randomUUID()}`;
 }
 
 /**

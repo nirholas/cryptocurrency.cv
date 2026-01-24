@@ -119,10 +119,10 @@ export async function GET(request: NextRequest) {
   const costBasisMethod = (searchParams.get('method')?.toUpperCase() as CostBasisMethod) || 'FIFO';
   const format = searchParams.get('format') || 'json'; // json, csv, form8949
   
-  // Get or generate demo transactions
+  // Get stored transactions or return empty array (user must POST transactions first)
   let transactions = portfolioTransactions.get(portfolioId);
   if (!transactions || transactions.length === 0) {
-    transactions = generateDemoTransactions(taxYear);
+    transactions = getEmptyTransactions();
     portfolioTransactions.set(portfolioId, transactions);
   }
   
@@ -484,63 +484,8 @@ function getForm8949Instructions(jurisdiction: string): object {
   };
 }
 
-function generateDemoTransactions(taxYear: number): Transaction[] {
-  // Generate realistic demo transactions for a tax year
-  const transactions: Transaction[] = [];
-  const assets = ['BTC', 'ETH', 'SOL'];
-  
-  // Generate some buys early in the year
-  for (let month = 1; month <= 12; month++) {
-    if (Math.random() > 0.5) {
-      const asset = assets[Math.floor(Math.random() * assets.length)];
-      const basePrice = asset === 'BTC' ? 40000 : asset === 'ETH' ? 2500 : 100;
-      
-      transactions.push({
-        id: `tx_demo_${month}_buy`,
-        type: 'buy',
-        asset,
-        amount: Math.random() * 2 + 0.1,
-        price: basePrice * (0.8 + Math.random() * 0.4),
-        fee: Math.random() * 10,
-        feeAsset: 'USD',
-        timestamp: `${taxYear}-${month.toString().padStart(2, '0')}-${Math.floor(Math.random() * 28 + 1).toString().padStart(2, '0')}T10:00:00Z`,
-        source: 'coinbase',
-      });
-    }
-    
-    // Some sells later in the year
-    if (month > 6 && Math.random() > 0.7) {
-      const asset = assets[Math.floor(Math.random() * assets.length)];
-      const basePrice = asset === 'BTC' ? 45000 : asset === 'ETH' ? 3000 : 120;
-      
-      transactions.push({
-        id: `tx_demo_${month}_sell`,
-        type: 'sell',
-        asset,
-        amount: Math.random() + 0.1,
-        price: basePrice * (0.8 + Math.random() * 0.4),
-        fee: Math.random() * 10,
-        feeAsset: 'USD',
-        timestamp: `${taxYear}-${month.toString().padStart(2, '0')}-${Math.floor(Math.random() * 28 + 1).toString().padStart(2, '0')}T14:00:00Z`,
-        source: 'coinbase',
-      });
-    }
-    
-    // Occasional staking rewards
-    if (month % 3 === 0) {
-      transactions.push({
-        id: `tx_demo_${month}_stake`,
-        type: 'stake',
-        asset: 'ETH',
-        amount: 0.001 + Math.random() * 0.01,
-        price: 2800,
-        timestamp: `${taxYear}-${month.toString().padStart(2, '0')}-15T00:00:00Z`,
-        source: 'lido',
-      });
-    }
-  }
-  
-  return transactions.sort((a, b) => 
-    new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime()
-  );
+function getEmptyTransactions(): Transaction[] {
+  // Return empty transactions - user must provide real transaction data
+  // via POST endpoint or connect to exchange APIs
+  return [];
 }

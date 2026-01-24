@@ -332,16 +332,19 @@ export function validateCondition(condition: AlertCondition): { valid: boolean; 
   return { valid: true };
 }
 
+// Import crypto for secure ID generation
+import { randomUUID } from 'crypto';
+
 /**
- * Generate a unique alert ID
+ * Generate a unique alert ID using cryptographic randomness
  */
 export function generateAlertId(): string {
-  return `alert_${Date.now()}_${Math.random().toString(36).substring(2, 11)}`;
+  return `alert_${randomUUID()}`;
 }
 
 /**
- * Generate a unique event ID
+ * Generate a unique event ID using cryptographic randomness
  */
 export function generateEventId(): string {
-  return `evt_${Date.now()}_${Math.random().toString(36).substring(2, 11)}`;
+  return `evt_${randomUUID()}`;
 }

@@ -387,11 +387,12 @@ async function fetchCurrentPrices(
     }
 
     return prices;
-  } catch {
-    // Return mock prices on error
+  } catch (error) {
+    console.error('Failed to fetch prices from CoinGecko:', error);
+    // Return zeros on error - no fake data
     return coinIds.reduce(
       (acc, id) => {
-        acc[id] = id === 'bitcoin' ? 98000 : id === 'ethereum' ? 3400 : 100;
+        acc[id] = 0;
         return acc;
       },
       {} as Record<string, number>

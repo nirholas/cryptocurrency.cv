@@ -43,25 +43,49 @@ src/lib/x402/
 # Required in production
 X402_PAYMENT_ADDRESS=0xYourWalletAddress
 
-# Optional - defaults to CDP in production
+# Optional - defaults to CDP in production, x402.org in development
 X402_FACILITATOR_URL=https://api.cdp.coinbase.com/platform/v2/x402
 
-# Optional - override network
+# Optional - override network (auto-detected from VERCEL_ENV/NODE_ENV)
 X402_NETWORK=eip155:8453
+
+# Optional - force testnet even in production
+X402_TESTNET=true
 
 # Optional - Solana support
 X402_SOLANA_PAYMENT_ADDRESS=YourSolanaAddress
 ```
 
+### Environment Auto-Detection
+
+The x402 configuration automatically detects the correct network:
+
+| Environment | Network | Facilitator | Detection |
+|-------------|---------|-------------|-----------|
+| `VERCEL_ENV=production` | Base Mainnet | CDP | Vercel production deployment |
+| `NODE_ENV=production` | Base Mainnet | CDP | Other production environments |
+| `X402_TESTNET=true` | Base Sepolia | x402.org | Force testnet in any environment |
+| Development | Base Sepolia | x402.org | Local development |
+
 ### Supported Networks
 
 | Network | Chain ID | Status |
 |---------|----------|--------|
-| Base Mainnet | eip155:8453 | ✅ Active |
-| Base Sepolia | eip155:84532 | ✅ Active (testnet) |
+| Base Mainnet | eip155:8453 | ✅ Active (production default) |
+| Base Sepolia | eip155:84532 | ✅ Active (development default) |
 | Polygon | eip155:137 | 🔧 Ready |
 | Ethereum | eip155:1 | 🔧 Ready |
 | Solana Mainnet | solana:5eykt4... | 🔧 Ready (needs X402_SOLANA_PAYMENT_ADDRESS) |
+
+### Production Deployment Checklist
+
+Before deploying x402 to mainnet:
+
+- [ ] Set `X402_PAYMENT_ADDRESS` to your wallet address
+- [ ] Verify environment auto-detection is correct (`/api/v1/x402`)
+- [ ] Test payment flow on Base Sepolia first
+- [ ] Set up wallet monitoring on BaseScan
+- [ ] Review pricing configuration
 
 ## Usage
 

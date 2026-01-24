@@ -27,16 +27,13 @@ export async function GET(request: NextRequest) {
 
   // Check if KV is configured
   if (!isKvConfigured()) {
-    // Return demo data if KV not configured
-    return NextResponse.json({
-      tier: 'free',
-      usageToday: 0,
-      usageMonth: 0,
-      limit: 100,
-      remaining: 100,
-      resetAt: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
-      note: 'KV storage not configured - showing demo data',
-    });
+    return NextResponse.json(
+      {
+        error: 'Storage not configured',
+        message: 'KV storage is required for API key validation',
+      },
+      { status: 503 }
+    );
   }
 
   // Validate API key

@@ -2,6 +2,7 @@
 
 import InfluencerLeaderboard from '@/components/InfluencerLeaderboard';
 
+/** Dashboard component for influencer reliability tracking */
 export function InfluencersDashboard() {
   return (
     <div className="space-y-8">

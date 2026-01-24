@@ -35,8 +35,11 @@ export interface PushPayload {
 const subscriptions = new Map<string, PushSubscription>();
 
 // Generate ID
+// Import crypto for secure ID generation
+import { randomUUID } from 'crypto';
+
 function generateId(): string {
-  return `push_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  return `push_${randomUUID()}`;
 }
 
 /**

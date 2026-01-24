@@ -1390,22 +1390,60 @@ export async function getMarks(
   labelFontColor: string[];
   minSize: number[];
 }> {
-  // Return some sample marks
-  const marks = {
-    id: [1, 2, 3],
-    time: [
-      from + Math.floor((to - from) * 0.25),
-      from + Math.floor((to - from) * 0.5),
-      from + Math.floor((to - from) * 0.75),
-    ],
-    color: ['green', 'blue', 'red'],
-    text: ['Positive news', 'Market update', 'Important event'],
-    label: ['N', 'U', 'E'],
-    labelFontColor: ['white', 'white', 'white'],
-    minSize: [20, 20, 20],
-  };
+  // Fetch real news marks from our API
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL || ''}/api/news?limit=10`,
+      { next: { revalidate: 300 } }
+    );
+    
+    if (response.ok) {
+      const data = await response.json();
+      const articles = data.articles || [];
+      
+      const marks = {
+        id: [] as number[],
+        time: [] as number[],
+        color: [] as string[],
+        text: [] as string[],
+        label: [] as string[],
+        labelFontColor: [] as string[],
+        minSize: [] as number[],
+      };
+      
+      articles.forEach((article: { publishedAt?: string; date?: string; title?: string; sentiment?: string | number }, i: number) => {
+        const articleTime = Math.floor(new Date(article.publishedAt || article.date || Date.now()).getTime() / 1000);
+        if (articleTime >= from && articleTime <= to) {
+          let color = 'blue';
+          if (article.sentiment === 'positive' || (typeof article.sentiment === 'number' && article.sentiment > 0.3)) color = 'green';
+          else if (article.sentiment === 'negative' || (typeof article.sentiment === 'number' && article.sentiment < -0.3)) color = 'red';
+          
+          marks.id.push(i + 1);
+          marks.time.push(articleTime);
+          marks.color.push(color);
+          marks.text.push(article.title || 'News');
+          marks.label.push((article.title || 'N').charAt(0).toUpperCase());
+          marks.labelFontColor.push('white');
+          marks.minSize.push(20);
+        }
+      });
+      
+      return marks;
+    }
+  } catch (error) {
+    console.error('Failed to fetch news marks:', error);
+  }
   
-  return marks;
+  // Return empty marks if no data
+  return {
+    id: [],
+    time: [],
+    color: [],
+    text: [],
+    label: [],
+    labelFontColor: [],
+    minSize: [],
+  };
 }
 
 /**
@@ -1413,8 +1451,8 @@ export async function getMarks(
  */
 export async function getTimescaleMarks(
   _symbol: string,
-  from: number,
-  to: number,
+  _from: number,
+  _to: number,
   _resolution?: string
 ): Promise<Array<{
   id: string;
@@ -1423,22 +1461,8 @@ export async function getTimescaleMarks(
   label: string;
   tooltip: string;
 }>> {
-  return [
-    {
-      id: 'mark1',
-      time: from + Math.floor((to - from) * 0.3),
-      color: 'blue',
-      label: 'A',
-      tooltip: 'Market announcement',
-    },
-    {
-      id: 'mark2',
-      time: from + Math.floor((to - from) * 0.7),
-      color: 'green',
-      label: 'B',
-      tooltip: 'Positive development',
-    },
-  ];
+  // Return empty array - timescale marks should come from real events
+  return [];
 }
 
 /**

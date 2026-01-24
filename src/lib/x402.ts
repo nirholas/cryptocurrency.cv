@@ -36,14 +36,28 @@ export const PAYMENT_ADDRESS = process.env.X402_PAYMENT_ADDRESS as `0x${string}`
 export const FACILITATOR_URL = process.env.X402_FACILITATOR_URL || 'https://x402.org/facilitator';
 
 /**
+ * Check if we're in production environment
+ * Uses VERCEL_ENV (Vercel deployments) or falls back to NODE_ENV
+ */
+export const IS_PRODUCTION =
+  process.env.VERCEL_ENV === 'production' || process.env.NODE_ENV === 'production';
+
+/**
+ * Check if we're explicitly in testnet mode
+ */
+export const IS_TESTNET = process.env.X402_TESTNET === 'true' || !IS_PRODUCTION;
+
+/**
  * Network configuration
  * - Production: Base mainnet (eip155:8453)
  * - Development: Base Sepolia testnet (eip155:84532)
+ * Priority: X402_NETWORK env var > VERCEL_ENV > NODE_ENV
  */
 export const NETWORK =
-  process.env.NODE_ENV === 'production'
+  (process.env.X402_NETWORK as 'eip155:8453' | 'eip155:84532') ||
+  (IS_PRODUCTION && !process.env.X402_TESTNET
     ? 'eip155:8453' // Base mainnet
-    : 'eip155:84532'; // Base Sepolia testnet
+    : 'eip155:84532'); // Base Sepolia testnet
 
 /**
  * Network identifiers for x402
@@ -54,6 +68,25 @@ export const NETWORKS = {
 } as const;
 
 export type NetworkId = (typeof NETWORKS)[keyof typeof NETWORKS];
+
+/**
+ * Current network (alias for NETWORK)
+ */
+export const CURRENT_NETWORK = NETWORK;
+
+/**
+ * Get human-readable network display name
+ */
+export function getNetworkDisplayName(networkId: string = NETWORK): string {
+  switch (networkId) {
+    case 'eip155:8453':
+      return 'Base Mainnet';
+    case 'eip155:84532':
+      return 'Base Sepolia';
+    default:
+      return networkId;
+  }
+}
 
 /**
  * USDC contract addresses by network

@@ -58,72 +58,41 @@ interface PortfolioExport {
  */
 async function handler(
   request: NextRequest
-): Promise<NextResponse<PortfolioExport | string | { error: string }>> {
+): Promise<NextResponse<PortfolioExport | string | { error: string; message?: string }>> {
   const searchParams = request.nextUrl.searchParams;
   const format = (searchParams.get('format') || 'json') as 'json' | 'csv';
+  const portfolioId = searchParams.get('portfolio_id');
 
   try {
-    // In a real implementation, this would fetch from a database
-    // For demo, we return sample data structure
+    // Require a portfolio ID to export real data
+    if (!portfolioId) {
+      return NextResponse.json(
+        { 
+          error: 'Portfolio ID required',
+          message: 'Provide portfolio_id parameter to export your portfolio data'
+        },
+        { status: 400 }
+      );
+    }
+    
+    // In production, fetch portfolio from database
+    // For now, return empty structure indicating no data
     const exportData: PortfolioExport = {
       format,
       exportedAt: new Date().toISOString(),
       portfolio: {
-        totalValue: 10000,
-        totalCost: 8500,
-        totalPnL: 1500,
-        totalPnLPercent: 17.65,
-        holdings: [
-          {
-            coinId: 'bitcoin',
-            symbol: 'BTC',
-            name: 'Bitcoin',
-            quantity: 0.15,
-            avgBuyPrice: 35000,
-            currentPrice: 42000,
-            value: 6300,
-            pnl: 1050,
-            pnlPercent: 20,
-            allocation: 63,
-          },
-          {
-            coinId: 'ethereum',
-            symbol: 'ETH',
-            name: 'Ethereum',
-            quantity: 1.5,
-            avgBuyPrice: 2000,
-            currentPrice: 2466.67,
-            value: 3700,
-            pnl: 700,
-            pnlPercent: 23.33,
-            allocation: 37,
-          },
-        ],
-        transactions: [
-          {
-            id: 'tx-001',
-            coinId: 'bitcoin',
-            type: 'buy',
-            quantity: 0.15,
-            price: 35000,
-            total: 5250,
-            date: '2025-01-15T10:30:00Z',
-          },
-          {
-            id: 'tx-002',
-            coinId: 'ethereum',
-            type: 'buy',
-            quantity: 1.5,
-            price: 2000,
-            total: 3000,
-            date: '2025-01-10T14:20:00Z',
-          },
-        ],
+        totalValue: 0,
+        totalCost: 0,
+        totalPnL: 0,
+        totalPnLPercent: 0,
+        holdings: [],
+        transactions: [],
       },
       meta: {
         premium: true,
         generatedBy: 'Crypto Data Aggregator',
         version: '1.0.0',
+        portfolio: portfolioId,
       },
     };
 

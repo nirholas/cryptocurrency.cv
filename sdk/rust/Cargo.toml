@@ -1,0 +1,53 @@
+[package]
+name = "fcn-sdk"
+version = "0.2.0"
+edition = "2021"
+authors = ["Free Crypto News Contributors"]
+description = "Production-ready Rust SDK for the Free Crypto News API with async/await, WebSocket streaming, and retry support"
+license = "MIT"
+repository = "https://github.com/AustinKelsay/free-crypto-news"
+documentation = "https://free-crypto-news.vercel.app/api/docs"
+keywords = ["cryptocurrency", "news", "api", "sdk", "bitcoin", "trading", "defi"]
+categories = ["api-bindings", "web-programming::http-client", "asynchronous"]
+readme = "README.md"
+
+[dependencies]
+reqwest = { version = "0.11", features = ["json", "gzip"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
+tokio = { version = "1", features = ["full", "sync"] }
+tokio-tungstenite = { version = "0.21", optional = true }
+futures-util = { version = "0.3", optional = true }
+urlencoding = "2.1"
+tracing = { version = "0.1", optional = true }
+chrono = { version = "0.4", features = ["serde"] }
+async-trait = "0.1"
+backoff = { version = "0.4", features = ["tokio"] }
+
+[dev-dependencies]
+tokio-test = "0.4"
+tracing-subscriber = "0.3"
+mockito = "1.2"
+
+[features]
+default = ["websocket"]
+websocket = ["tokio-tungstenite", "futures-util"]
+tracing = ["dep:tracing"]
+full = ["websocket", "tracing"]
+
+[[example]]
+name = "basic"
+path = "examples/basic.rs"
+
+[[example]]
+name = "advanced"
+path = "examples/advanced.rs"
+
+[[example]]
+name = "streaming"
+path = "examples/streaming.rs"
+
+[[example]]
+name = "portfolio"
+path = "examples/portfolio.rs"

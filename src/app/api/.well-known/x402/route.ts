@@ -10,10 +10,18 @@
  */
 
 import { NextResponse } from 'next/server';
-import { PAYMENT_ADDRESS, NETWORKS, NETWORK } from '@/lib/x402';
+import {
+  PAYMENT_ADDRESS,
+  NETWORKS,
+  CURRENT_NETWORK,
+  FACILITATOR_URL,
+  IS_PRODUCTION,
+  IS_TESTNET,
+  getNetworkDisplayName,
+} from '@/lib/x402/config';
 
-export const dynamic = 'force-static';
-export const revalidate = 3600; // 1 hour
+export const dynamic = 'force-dynamic'; // Dynamic to reflect current config
+export const revalidate = 60; // Revalidate every minute
 
 // Simplified route definitions for discovery
 const DISCOVERABLE_ENDPOINTS = [
@@ -29,12 +37,20 @@ const DISCOVERABLE_ENDPOINTS = [
   { method: 'GET', path: '/api/v1/export', price: '$0.01', description: 'Bulk data export' },
 ];
 
-const SUPPORTED_NETWORKS = [NETWORKS.BASE_MAINNET, NETWORKS.BASE_SEPOLIA];
+// Only advertise networks we're currently accepting
+const ACTIVE_NETWORKS = IS_TESTNET ? [NETWORKS.BASE_SEPOLIA] : [NETWORKS.BASE_MAINNET];
+
+// Include both if explicitly configured for multi-network
+const ALL_SUPPORTED_NETWORKS = [NETWORKS.BASE_MAINNET, NETWORKS.BASE_SEPOLIA];
 
 export async function GET() {
+  // Check if payment is properly configured
+  const isConfigured =
+    PAYMENT_ADDRESS && PAYMENT_ADDRESS !== '0x0000000000000000000000000000000000000000';
+
   const resources = DISCOVERABLE_ENDPOINTS.map((ep) => ({
     ...ep,
-    network: NETWORKS.BASE_MAINNET,
+    network: CURRENT_NETWORK,
     payTo: PAYMENT_ADDRESS,
     mimeType: 'application/json',
   }));
@@ -42,9 +58,19 @@ export async function GET() {
   // Categorize endpoints for AI agent discoverability
   const categories = [
     { name: 'News', icon: '📰', endpoints: resources.filter((r) => r.path.includes('news')) },
-    { name: 'Market Data', icon: '📊', endpoints: resources.filter((r) => r.path.includes('coin') || r.path.includes('market')) },
+    {
+      name: 'Market Data',
+      icon: '📊',
+      endpoints: resources.filter((r) => r.path.includes('coin') || r.path.includes('market')),
+    },
     { name: 'DeFi', icon: '🔗', endpoints: resources.filter((r) => r.path.includes('defi')) },
-    { name: 'AI Analysis', icon: '🤖', endpoints: resources.filter((r) => r.path.includes('analysis') || r.path.includes('sentiment')) },
+    {
+      name: 'AI Analysis',
+      icon: '🤖',
+      endpoints: resources.filter(
+        (r) => r.path.includes('analysis') || r.path.includes('sentiment')
+      ),
+    },
     { name: 'Alerts', icon: '🔔', endpoints: resources.filter((r) => r.path.includes('alert')) },
     { name: 'Export', icon: '📦', endpoints: resources.filter((r) => r.path.includes('export')) },
   ].filter((c) => c.endpoints.length > 0);
@@ -55,7 +81,8 @@ export async function GET() {
       x402Version: 2,
       provider: {
         name: 'Free Crypto News API',
-        description: 'Real-time cryptocurrency news, prices, and market data via x402 micropayments',
+        description:
+          'Real-time cryptocurrency news, prices, and market data via x402 micropayments',
         url: 'https://free-crypto-news.vercel.app',
         docs: 'https://free-crypto-news.vercel.app/docs',
         github: 'https://github.com/nirholas/free-crypto-news',
@@ -64,10 +91,20 @@ export async function GET() {
       // Payment configuration
       payment: {
         payTo: PAYMENT_ADDRESS,
-        networks: SUPPORTED_NETWORKS,
-        preferredNetwork: NETWORK,
+        configured: isConfigured,
+        networks: ALL_SUPPORTED_NETWORKS,
+        activeNetwork: CURRENT_NETWORK,
+        activeNetworkName: getNetworkDisplayName(CURRENT_NETWORK),
+        preferredNetwork: IS_TESTNET ? NETWORKS.BASE_SEPOLIA : NETWORKS.BASE_MAINNET,
         asset: 'USDC',
-        facilitator: process.env.X402_FACILITATOR_URL,
+        facilitator: FACILITATOR_URL,
+      },
+
+      // Environment info (helpful for clients)
+      environment: {
+        production: IS_PRODUCTION,
+        testnet: IS_TESTNET,
+        mode: IS_PRODUCTION ? (IS_TESTNET ? 'production-testnet' : 'production-mainnet') : 'development',
       },
 
       // Pricing summary
@@ -108,14 +145,16 @@ response = x402.get('https://free-crypto-news.vercel.app/api/v1/news', wallet=wa
       // Metadata
       _meta: {
         generatedAt: new Date().toISOString(),
-        cacheSeconds: 3600,
+        cacheSeconds: 60,
       },
     },
     {
       headers: {
-        'Cache-Control': 'public, max-age=3600, s-maxage=3600',
+        'Cache-Control': 'public, max-age=60, s-maxage=60',
         'Content-Type': 'application/json',
         'X-X402-Version': '2',
+        'X-X402-Network': CURRENT_NETWORK,
+        'X-X402-Environment': IS_PRODUCTION ? 'production' : 'development',
       },
     }
   );

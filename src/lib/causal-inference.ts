@@ -174,8 +174,11 @@ const SIGNIFICANCE_LEVEL = 0.05;
 // HELPER FUNCTIONS
 // =============================================================================
 
+// Import crypto for secure ID generation
+import { randomUUID } from 'crypto';
+
 function generateId(): string {
-  return `caus_${Date.now().toString(36)}_${Math.random().toString(36).substring(2, 9)}`;
+  return `caus_${randomUUID()}`;
 }
 
 /**
@@ -675,7 +678,14 @@ export async function analyzeCausality(
       // For Granger, we test if news/events Granger-cause price movements
       // Use BTC as benchmark
       const grangerResult = await grangerCausalityTest('btc', primaryAsset);
-      effect = grangerResult.causesEffect ? 10 : 0; // Placeholder magnitude
+      // Calculate effect magnitude from F-statistic:
+      // Higher F-statistic indicates stronger causal relationship
+      // Scale the effect based on F-statistic significance: sqrt(F) * sign(correlation)
+      // F > 4 is typically significant at 95% confidence with reasonable df
+      const effectMagnitude = grangerResult.causesEffect 
+        ? Math.min(50, Math.sqrt(grangerResult.fStatistic) * 3) // Scale: F=9 → effect=9%, F=25 → effect=15%
+        : 0;
+      effect = effectMagnitude;
       tStat = grangerResult.fStatistic;
       pValue = grangerResult.pValue;
       break;
@@ -738,7 +748,18 @@ export async function analyzeCausality(
     cumulativeAbnormalReturn: eventStudyResult?.car || effect / 100,
     averageAbnormalReturn: eventStudyResult?.aar ? mean(eventStudyResult.aar) : effect / 100 / request.windowAfter,
     tStatistic: tStat,
-    rSquared: 0.3, // Placeholder
+    // Calculate actual R² from regression of price on time series
+    rSquared: (() => {
+      if (timeSeries.length < 5) return 0;
+      const allPrices = [...preEventPrices, ...postEventPrices];
+      if (allPrices.length < 5) return 0;
+      // Calculate R² from linear regression on the full price series
+      const fullRegression = linearRegression(
+        Array.from({ length: allPrices.length }, (_, i) => i),
+        allPrices
+      );
+      return Math.max(0, Math.min(1, fullRegression.rSquared));
+    })(),
   };
   
   // Robustness checks

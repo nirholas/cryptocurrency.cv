@@ -504,28 +504,58 @@ export async function scanTriangularArbitrage(exchange = 'binance'): Promise<Tri
   ];
   
   for (const path of paths) {
-    // Simulate finding rates
-    // In production, fetch real order book data
-    const step1Rate = 1 + (Math.random() - 0.5) * 0.002;
-    const step2Rate = 1 + (Math.random() - 0.5) * 0.002;
-    const step3Rate = 1 + (Math.random() - 0.5) * 0.002;
-    
-    const profitPercent = (step1Rate * step2Rate * step3Rate - 1) * 100;
-    
-    if (profitPercent > 0.05) {
-      opportunities.push({
-        id: `tri_${exchange}_${path.join('_')}`,
-        exchange,
-        path,
-        pairs: [`${path[0]}${path[1]}`, `${path[1]}${path[2]}`, `${path[2]}${path[0]}`],
-        profitPercent,
-        steps: [
-          { pair: `${path[0]}${path[1]}`, action: 'buy', rate: step1Rate },
-          { pair: `${path[1]}${path[2]}`, action: 'sell', rate: step2Rate },
-          { pair: `${path[2]}${path[0]}`, action: 'sell', rate: step3Rate },
-        ],
-        timestamp: new Date(),
-      });
+    try {
+      // Fetch real ticker data from Binance
+      const pairs = [
+        `${path[0]}${path[1]}`,
+        `${path[1]}${path[2]}`,
+        `${path[2]}${path[0]}`,
+      ];
+      
+      const tickerResponses = await Promise.all(
+        pairs.map(pair => 
+          fetch(`https://api.binance.com/api/v3/ticker/bookTicker?symbol=${pair}`)
+            .then(r => r.ok ? r.json() : null)
+            .catch(() => null)
+        )
+      );
+      
+      // Skip if any ticker failed
+      if (tickerResponses.some(r => !r)) continue;
+      
+      const [ticker1, ticker2, ticker3] = tickerResponses;
+      
+      // Calculate rates using bid/ask for realistic execution
+      const step1Rate = parseFloat(ticker1.askPrice); // Buy first pair
+      const step2Rate = parseFloat(ticker2.bidPrice); // Sell second pair
+      const step3Rate = parseFloat(ticker3.bidPrice); // Sell third pair
+      
+      // Calculate triangular profit
+      // Start with 1 USDT -> BTC -> ETH -> USDT
+      const afterStep1 = 1 / step1Rate; // Amount of path[0]
+      const afterStep2 = afterStep1 * step2Rate; // Amount of path[1]
+      const afterStep3 = afterStep2 * step3Rate; // Back to USDT
+      
+      const profitPercent = (afterStep3 - 1) * 100;
+      
+      if (profitPercent > 0.05) {
+        opportunities.push({
+          id: `tri_${exchange}_${path.join('_')}`,
+          exchange,
+          path,
+          pairs,
+          profitPercent,
+          steps: [
+            { pair: pairs[0], action: 'buy', rate: step1Rate },
+            { pair: pairs[1], action: 'sell', rate: step2Rate },
+            { pair: pairs[2], action: 'sell', rate: step3Rate },
+          ],
+          timestamp: new Date(),
+        });
+      }
+    } catch {
+      // Skip this path if API fails
+      continue;
     }
   }
   
@@ -538,53 +568,94 @@ export async function scanTriangularArbitrage(exchange = 'binance'): Promise<Tri
 export async function scanCrossChainArbitrage(): Promise<CrossChainArbitrage[]> {
   const opportunities: CrossChainArbitrage[] = [];
   
-  const tokens = ['ETH', 'USDC', 'USDT', 'WBTC'];
+  const tokens = [
+    { symbol: 'ETH', geckoId: 'ethereum' },
+    { symbol: 'WBTC', geckoId: 'wrapped-bitcoin' },
+  ];
+  
   const chains = [
-    { name: 'Ethereum', dex: 'Uniswap', bridgeFee: 10, bridgeTime: '10-15 min' },
-    { name: 'Arbitrum', dex: 'GMX', bridgeFee: 2, bridgeTime: '1-5 min' },
-    { name: 'Optimism', dex: 'Velodrome', bridgeFee: 2, bridgeTime: '1-5 min' },
-    { name: 'Base', dex: 'Aerodrome', bridgeFee: 1, bridgeTime: '1-5 min' },
-    { name: 'Polygon', dex: 'QuickSwap', bridgeFee: 0.5, bridgeTime: '5-10 min' },
+    { name: 'Ethereum', dex: 'Uniswap', chainId: 'ethereum', bridgeFee: 10, bridgeTime: '10-15 min' },
+    { name: 'Arbitrum', dex: 'GMX', chainId: 'arbitrum-one', bridgeFee: 2, bridgeTime: '1-5 min' },
+    { name: 'Optimism', dex: 'Velodrome', chainId: 'optimistic-ethereum', bridgeFee: 2, bridgeTime: '1-5 min' },
+    { name: 'Base', dex: 'Aerodrome', chainId: 'base', bridgeFee: 1, bridgeTime: '1-5 min' },
+    { name: 'Polygon', dex: 'QuickSwap', chainId: 'polygon-pos', bridgeFee: 0.5, bridgeTime: '5-10 min' },
   ];
   
   for (const token of tokens) {
-    for (let i = 0; i < chains.length; i++) {
-      for (let j = i + 1; j < chains.length; j++) {
-        const source = chains[i];
-        const dest = chains[j];
-        
-        // Simulate price differences
-        const basePrice = token === 'ETH' ? 3850 : token === 'WBTC' ? 98500 : 1;
-        const sourcePrice = basePrice * (1 + (Math.random() - 0.5) * 0.01);
-        const destPrice = basePrice * (1 + (Math.random() - 0.5) * 0.01);
-        
-        const bridgeFee = source.bridgeFee + dest.bridgeFee;
-        const gasCost = 5 + Math.random() * 10;
-        
-        const profitAbsolute = Math.abs(destPrice - sourcePrice) * 10 - bridgeFee - gasCost;
-        const profitPercent = (profitAbsolute / (sourcePrice * 10)) * 100;
-        
-        if (profitPercent > 0.1) {
-          const isBuyOnSource = sourcePrice < destPrice;
-          
-          opportunities.push({
-            id: `xchain_${token}_${source.name}_${dest.name}`,
-            token,
-            sourceChain: isBuyOnSource ? source.name : dest.name,
-            destChain: isBuyOnSource ? dest.name : source.name,
-            sourceDex: isBuyOnSource ? source.dex : dest.dex,
-            destDex: isBuyOnSource ? dest.dex : source.dex,
-            buyPrice: Math.min(sourcePrice, destPrice),
-            sellPrice: Math.max(sourcePrice, destPrice),
-            bridgeFee,
-            gasCost,
-            netProfit: profitAbsolute,
-            profitPercent,
-            bridgeTime: `${source.bridgeTime}`,
-            timestamp: new Date(),
-          });
+    try {
+      // Fetch prices across chains from CoinGecko
+      const response = await fetch(
+        `https://api.coingecko.com/api/v3/coins/${token.geckoId}?localization=false&tickers=true&market_data=true`,
+        { next: { revalidate: 30 } }
+      );
+      
+      if (!response.ok) continue;
+      
+      const data = await response.json();
+      const basePrice = data.market_data?.current_price?.usd || 0;
+      
+      if (basePrice === 0) continue;
+      
+      // Get DEX prices from tickers
+      const dexPrices: Record<string, number> = {};
+      for (const ticker of data.tickers || []) {
+        const exchange = ticker.market?.identifier?.toLowerCase();
+        const chain = chains.find(c => 
+          c.dex.toLowerCase() === exchange ||
+          ticker.market?.name?.toLowerCase().includes(c.dex.toLowerCase())
+        );
+        if (chain && ticker.last) {
+          dexPrices[chain.name] = ticker.last;
         }
       }
+      
+      // Use base price for chains without specific DEX price
+      for (const chain of chains) {
+        if (!dexPrices[chain.name]) {
+          dexPrices[chain.name] = basePrice;
+        }
+      }
+      
+      // Compare prices between chains
+      for (let i = 0; i < chains.length; i++) {
+        for (let j = i + 1; j < chains.length; j++) {
+          const source = chains[i];
+          const dest = chains[j];
+          
+          const sourcePrice = dexPrices[source.name];
+          const destPrice = dexPrices[dest.name];
+          
+          const bridgeFee = source.bridgeFee + dest.bridgeFee;
+          const gasCost = 8; // Estimated gas in USD
+          
+          const profitAbsolute = Math.abs(destPrice - sourcePrice) * 10 - bridgeFee - gasCost;
+          const profitPercent = (profitAbsolute / (sourcePrice * 10)) * 100;
+          
+          if (profitPercent > 0.1) {
+            const isBuyOnSource = sourcePrice < destPrice;
+            
+            opportunities.push({
+              id: `xchain_${token.symbol}_${source.name}_${dest.name}`,
+              token: token.symbol,
+              sourceChain: isBuyOnSource ? source.name : dest.name,
+              destChain: isBuyOnSource ? dest.name : source.name,
+              sourceDex: isBuyOnSource ? source.dex : dest.dex,
+              destDex: isBuyOnSource ? dest.dex : source.dex,
+              buyPrice: Math.min(sourcePrice, destPrice),
+              sellPrice: Math.max(sourcePrice, destPrice),
+              bridgeFee,
+              gasCost,
+              netProfit: profitAbsolute,
+              profitPercent,
+              bridgeTime: `${source.bridgeTime}`,
+              timestamp: new Date(),
+            });
+          }
+        }
+      }
+    } catch {
+      // Skip this token if API fails
+      continue;
     }
   }
   

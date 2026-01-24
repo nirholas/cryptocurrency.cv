@@ -238,7 +238,26 @@ function generateSuggestedAngle(coverage: CoverageData): string {
     `Expert perspectives on ${coverage.topic} trends`,
   ];
 
-  return topicAngles[Math.floor(Math.random() * topicAngles.length)];
+  // Deterministic selection based on coverage data characteristics
+  // Uses coverage score, article count, and source diversity to select the most relevant angle
+  // This ensures consistent, reproducible suggestions based on actual gap severity
+  let angleIndex = 0;
+  
+  if (coverage.coverageScore < 30) {
+    // Low coverage - suggest foundational analysis
+    angleIndex = 0;
+  } else if (coverage.sources.length < 2) {
+    // Limited source diversity - suggest expert perspectives for broader view
+    angleIndex = Math.min(2, topicAngles.length - 1);
+  } else if (coverage.averageAge > 48) {
+    // Stale coverage - suggest market impact update
+    angleIndex = Math.min(1, topicAngles.length - 1);
+  } else {
+    // Moderate coverage - rotate based on article count for variety
+    angleIndex = coverage.articleCount % topicAngles.length;
+  }
+
+  return topicAngles[angleIndex];
 }
 
 /**

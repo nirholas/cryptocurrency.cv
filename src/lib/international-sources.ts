@@ -1,12 +1,14 @@
 /**
  * International Crypto News Sources
  * 
- * Aggregates news from 70+ international crypto news sources across:
- * - Korean, Chinese, Japanese (East Asia) - 16 sources
+ * Aggregates news from 85+ international crypto news sources across:
+ * - Korean, Chinese, Japanese (East Asia) - 22 sources
  * - Indonesian, Vietnamese, Thai (Southeast Asia) - 7 sources  
  * - Spanish, Portuguese (Latin America) - 10 sources
  * - German, French, Russian, Turkish, Italian, Dutch, Polish (Europe) - 21 sources
  * - Arabic (Middle East & North Africa) - 2 sources
+ * - Hindi/Indian - 5 sources
+ * - Persian/Farsi (Iran) - 4 sources
  * 
  * Supports automatic translation to English via the source-translator module.
  */
@@ -23,7 +25,7 @@ export interface InternationalSource {
   name: string;
   url: string;
   rss: string;
-  language: 'ko' | 'zh' | 'ja' | 'es' | 'pt' | 'de' | 'fr' | 'ru' | 'tr' | 'it' | 'id' | 'nl' | 'pl' | 'vi' | 'th' | 'ar';
+  language: 'ko' | 'zh' | 'ja' | 'es' | 'pt' | 'de' | 'fr' | 'ru' | 'tr' | 'it' | 'id' | 'nl' | 'pl' | 'vi' | 'th' | 'ar' | 'hi' | 'fa';
   category: string;
   region: 'asia' | 'europe' | 'latam' | 'mena' | 'sea';
   encoding?: string;
@@ -112,6 +114,33 @@ const KOREAN_SOURCES: InternationalSource[] = [
     category: 'general',
     region: 'asia',
   },
+  {
+    key: 'cryptoquant_blog',
+    name: 'CryptoQuant Blog',
+    url: 'https://cryptoquant.com/blog',
+    rss: 'https://cryptoquant.com/blog/feed/',
+    language: 'ko',
+    category: 'analysis',
+    region: 'asia',
+  },
+  {
+    key: 'cobak',
+    name: 'Cobak',
+    url: 'https://cobak.co.kr',
+    rss: 'https://cobak.co.kr/feed/',
+    language: 'ko',
+    category: 'general',
+    region: 'asia',
+  },
+  {
+    key: 'upbit_blog',
+    name: 'Upbit Blog',
+    url: 'https://upbit.com/service_center/notice',
+    rss: 'https://upbit.com/service_center/notice/feed/',
+    language: 'ko',
+    category: 'exchange',
+    region: 'asia',
+  },
 ];
 
 const CHINESE_SOURCES: InternationalSource[] = [
@@ -177,6 +206,33 @@ const CHINESE_SOURCES: InternationalSource[] = [
     rss: 'https://foresightnews.pro/rss',
     language: 'zh',
     category: 'general',
+    region: 'asia',
+  },
+  {
+    key: 'blockbeats',
+    name: 'BlockBeats (律动)',
+    url: 'https://www.theblockbeats.info',
+    rss: 'https://www.theblockbeats.info/rss',
+    language: 'zh',
+    category: 'general',
+    region: 'asia',
+  },
+  {
+    key: 'marsbit',
+    name: 'MarsBit (火星财经)',
+    url: 'https://news.marsbit.co',
+    rss: 'https://news.marsbit.co/rss',
+    language: 'zh',
+    category: 'general',
+    region: 'asia',
+  },
+  {
+    key: 'wublockchain',
+    name: 'Wu Blockchain',
+    url: 'https://wublock.substack.com',
+    rss: 'https://wublock.substack.com/feed',
+    language: 'zh',
+    category: 'analysis',
     region: 'asia',
   },
 ];
@@ -673,6 +729,99 @@ const ARABIC_SOURCES: InternationalSource[] = [
   },
 ];
 
+// ═══════════════════════════════════════════════════════════════
+// NEW: HINDI / INDIAN SOURCES
+// ═══════════════════════════════════════════════════════════════
+const HINDI_SOURCES: InternationalSource[] = [
+  {
+    key: 'coinswitch',
+    name: 'CoinSwitch Kuber Blog',
+    url: 'https://coinswitch.co/blog',
+    rss: 'https://coinswitch.co/blog/feed',
+    language: 'hi',
+    category: 'general',
+    region: 'asia',
+  },
+  {
+    key: 'coindcx',
+    name: 'CoinDCX Blog',
+    url: 'https://coindcx.com/blog',
+    rss: 'https://coindcx.com/blog/feed/',
+    language: 'hi',
+    category: 'general',
+    region: 'asia',
+  },
+  {
+    key: 'wazirx',
+    name: 'WazirX Blog',
+    url: 'https://wazirx.com/blog',
+    rss: 'https://wazirx.com/blog/feed/',
+    language: 'hi',
+    category: 'general',
+    region: 'asia',
+  },
+  {
+    key: 'zebpay',
+    name: 'ZebPay Blog',
+    url: 'https://zebpay.com/blog',
+    rss: 'https://zebpay.com/blog/feed/',
+    language: 'hi',
+    category: 'general',
+    region: 'asia',
+  },
+  {
+    key: 'cryptonewsindia',
+    name: 'Crypto News India',
+    url: 'https://cryptonewsindia.com',
+    rss: 'https://cryptonewsindia.com/feed/',
+    language: 'hi',
+    category: 'general',
+    region: 'asia',
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════
+// NEW: PERSIAN / FARSI SOURCES
+// ═══════════════════════════════════════════════════════════════
+const PERSIAN_SOURCES: InternationalSource[] = [
+  {
+    key: 'arzdigital',
+    name: 'Arz Digital (ارز دیجیتال)',
+    url: 'https://arzdigital.com',
+    rss: 'https://arzdigital.com/feed/',
+    language: 'fa',
+    category: 'general',
+    region: 'mena',
+  },
+  {
+    key: 'mihanblockchain',
+    name: 'Mihan Blockchain (میهن بلاکچین)',
+    url: 'https://mihanblockchain.com',
+    rss: 'https://mihanblockchain.com/feed/',
+    language: 'fa',
+    category: 'general',
+    region: 'mena',
+  },
+  {
+    key: 'ramzarz',
+    name: 'Ramz Arz (رمزارز)',
+    url: 'https://ramzarz.news',
+    rss: 'https://ramzarz.news/feed/',
+    language: 'fa',
+    category: 'general',
+    region: 'mena',
+  },
+  {
+    key: 'nobitex',
+    name: 'Nobitex Blog',
+    url: 'https://nobitex.ir/blog',
+    rss: 'https://nobitex.ir/blog/feed/',
+    language: 'fa',
+    category: 'general',
+    region: 'mena',
+  },
+];
+
 // All international sources combined
 export const INTERNATIONAL_SOURCES: InternationalSource[] = [
   ...KOREAN_SOURCES,
@@ -691,6 +840,8 @@ export const INTERNATIONAL_SOURCES: InternationalSource[] = [
   ...VIETNAMESE_SOURCES,
   ...THAI_SOURCES,
   ...ARABIC_SOURCES,
+  ...HINDI_SOURCES,
+  ...PERSIAN_SOURCES,
 ];
 
 // Source lookup by language
@@ -711,14 +862,16 @@ export const SOURCES_BY_LANGUAGE: Record<string, InternationalSource[]> = {
   vi: VIETNAMESE_SOURCES,
   th: THAI_SOURCES,
   ar: ARABIC_SOURCES,
+  hi: HINDI_SOURCES,
+  fa: PERSIAN_SOURCES,
 };
 
 // Source lookup by region
 export const SOURCES_BY_REGION: Record<string, InternationalSource[]> = {
-  asia: [...KOREAN_SOURCES, ...CHINESE_SOURCES, ...JAPANESE_SOURCES],
+  asia: [...KOREAN_SOURCES, ...CHINESE_SOURCES, ...JAPANESE_SOURCES, ...HINDI_SOURCES],
   latam: [...SPANISH_SOURCES, ...PORTUGUESE_SOURCES],
   europe: [...GERMAN_SOURCES, ...FRENCH_SOURCES, ...RUSSIAN_SOURCES, ...TURKISH_SOURCES, ...ITALIAN_SOURCES, ...DUTCH_SOURCES, ...POLISH_SOURCES],
-  mena: ARABIC_SOURCES,
+  mena: [...ARABIC_SOURCES, ...PERSIAN_SOURCES],
   sea: [...INDONESIAN_SOURCES, ...VIETNAMESE_SOURCES, ...THAI_SOURCES],
 };
 

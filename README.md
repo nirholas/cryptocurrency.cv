@@ -267,6 +267,62 @@ curl "https://free-crypto-news.vercel.app/api/bitcoin?lang=zh-CN"
 | `/api/analytics/anomalies` | Detect unusual coverage patterns |
 | `/api/analytics/credibility` | Source credibility scoring |
 | `/api/analytics/headlines` | Headline tracking & mutations |
+| `/api/analytics/usage` | API key usage analytics & insights |
+| `/api/analytics/influencers` | Influencer credibility scoring |
+
+### 🔗 Relationship & Entity Analysis
+
+| Endpoint | Description |
+|----------|-------------|
+| `/api/relationships` | Extract "who did what to whom" from news |
+| `/api/predictions` | Track predictions & accuracy scoring |
+| `/api/onchain/events` | Link news to on-chain events |
+
+### 💼 Portfolio Tools
+
+| Endpoint | Description |
+|----------|-------------|
+| `/api/portfolio` | Portfolio-based news + prices |
+| `/api/portfolio/performance` | Performance charts, P&L, risk metrics |
+| `/api/portfolio/tax` | Tax report generation (Form 8949) |
+
+### 🔔 Social Intelligence
+
+| Endpoint | Description |
+|----------|-------------|
+| `/api/social/discord` | Discord channel monitoring |
+| `/api/social/x/lists` | Manage X/Twitter influencer lists |
+| `/api/social/x/sentiment` | X sentiment from custom influencer lists |
+
+### 🐦 X/Twitter Sentiment (No API Key!)
+
+Automated X/Twitter sentiment analysis without paid API:
+
+```bash
+# Get sentiment from default crypto influencers
+curl https://fcn.dev/api/social/x/sentiment
+
+# Create custom influencer list
+curl -X POST https://fcn.dev/api/social/x/lists \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "ETH Builders",
+    "users": [
+      {"username": "VitalikButerin", "category": "founder", "weight": 0.9},
+      {"username": "sassal0x", "category": "influencer", "weight": 0.8}
+    ]
+  }'
+
+# Get sentiment from your list
+curl https://fcn.dev/api/social/x/sentiment?list=list_xxx
+```
+
+**Features:**
+- ✅ **No API key required** - Uses Nitter RSS feeds
+- ✅ **Automated cron** - Updates every 30 minutes
+- ✅ **Custom lists** - Track your own influencers
+- ✅ **AI analysis** - Groq-powered sentiment scoring
+- ✅ **Webhook alerts** - Discord/Slack/Telegram notifications
 
 ### 📈 Market Data
 
@@ -888,7 +944,7 @@ PRs welcome! Ideas:
 - [x] ~~Topic classification~~ ✅ Done
 - [x] ~~WebSocket real-time feed~~ ✅ Done
 - [x] ~~Configurable alert system~~ ✅ Done
-- [ ] Rust / Ruby SDKs
+- [x] Rust / Ruby SDKs ✅
 - [ ] Mobile app (React Native)
 
 ---
@@ -977,6 +1033,8 @@ Returns articles per source, hourly distribution, and category breakdown.
 | Go | `go get github.com/nirholas/free-crypto-news/sdk/go` |
 | PHP | `curl -O .../sdk/php/CryptoNews.php` |
 | JavaScript | `curl -O .../sdk/javascript/crypto-news.js` |
+| Rust | `cargo add fcn-sdk` |
+| Ruby | `gem install fcn-sdk` |
 
 See [`/sdk`](./sdk) for documentation.
 
@@ -1259,7 +1317,7 @@ Building the definitive open crypto intelligence platform.
 - [x] Real-time aggregation from 7 sources
 - [x] REST API with multiple endpoints
 - [x] RSS/Atom feeds
-- [x] SDKs (Python, JavaScript, TypeScript, Go, PHP, React)
+- [x] SDKs (Python, JavaScript, TypeScript, Go, PHP, React, Rust, Ruby)
 - [x] MCP server for AI assistants
 - [x] Embeddable widgets
 - [x] Archive v2 with enrichment
@@ -1316,7 +1374,7 @@ Building the definitive open crypto intelligence platform.
 - [x] Advanced entity extraction with AI ✅
 - [x] Event classification (funding, hack, regulation, etc.) ✅
 - [x] Claim extraction (factual claims as structured data) ✅
-- [x] Relationship extraction (who did what to whom)
+- [x] Relationship extraction (who did what to whom) ✅
 
 ### API Infrastructure
 - [x] Self-service API key registration ✅
@@ -1386,7 +1444,7 @@ Building the definitive open crypto intelligence platform.
 
 ### On-Chain Correlation (Partial - In Progress)
 - [x] Bitcoin on-chain data (Mempool.space integration) ✅
-- [x] Link news to on-chain events
+- [x] Link news to on-chain events ✅
 - [x] Whale movement correlation (structure ready) ✅
 - [x] DEX volume correlation ✅
 - [x] Bridge volume tracking ✅
@@ -1405,7 +1463,7 @@ Building the definitive open crypto intelligence platform.
 - [x] Watchlist with export ✅
 - [x] Price alerts system ✅
 - [x] Portfolio performance charts ✅
-- [x] Tax report generation
+- [x] Tax report generation ✅
 
 ## 📋 Long-Term (2027+)
 

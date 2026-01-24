@@ -295,8 +295,11 @@ export const BUILTIN_STRATEGIES: Strategy[] = [
 // HELPER FUNCTIONS
 // =============================================================================
 
+// Import crypto for secure ID generation
+import { randomUUID } from 'crypto';
+
 function generateId(): string {
-  return `bt_${Date.now().toString(36)}_${Math.random().toString(36).substring(2, 9)}`;
+  return `bt_${randomUUID()}`;
 }
 
 function calculateSharpe(returns: number[], riskFreeRate: number = 0.02): number {
@@ -362,58 +365,91 @@ interface HistoricalDataPoint {
 }
 
 /**
- * Generate simulated historical data based on real market data patterns
+ * Fetch real historical data from CoinGecko or data providers
  */
 async function getHistoricalData(
   asset: string,
   startDate: string,
   endDate: string
 ): Promise<HistoricalDataPoint[]> {
-  // In a production environment, this would fetch from a historical data provider
-  // For now, we generate realistic data based on current market data
-  
   const start = new Date(startDate);
   const end = new Date(endDate);
   const days = Math.ceil((end.getTime() - start.getTime()) / (24 * 60 * 60 * 1000));
   
-  // Get current price as baseline
-  const coins = await getTopCoins(100);
-  const coin = coins.find(c => c.symbol.toUpperCase() === asset.toUpperCase());
-  const basePrice = coin?.current_price || 50000;
+  // Map asset symbol to CoinGecko ID
+  const symbolToGecko: Record<string, string> = {
+    'BTC': 'bitcoin',
+    'ETH': 'ethereum',
+    'SOL': 'solana',
+    'BNB': 'binancecoin',
+    'XRP': 'ripple',
+    'ADA': 'cardano',
+    'DOGE': 'dogecoin',
+    'AVAX': 'avalanche-2',
+    'DOT': 'polkadot',
+    'LINK': 'chainlink',
+  };
   
-  const data: HistoricalDataPoint[] = [];
-  let currentPrice = basePrice;
+  const geckoId = symbolToGecko[asset.toUpperCase()] || asset.toLowerCase();
   
-  for (let d = 0; d < days; d++) {
-    const date = new Date(start);
-    date.setDate(date.getDate() + d);
+  try {
+    // Fetch historical market data from CoinGecko
+    const response = await fetch(
+      `https://api.coingecko.com/api/v3/coins/${geckoId}/market_chart/range?vs_currency=usd&from=${Math.floor(start.getTime() / 1000)}&to=${Math.floor(end.getTime() / 1000)}`,
+      { next: { revalidate: 3600 } }
+    );
     
-    // Generate hourly data
-    for (let h = 0; h < 24; h++) {
-      const timestamp = new Date(date);
-      timestamp.setHours(h);
+    if (response.ok) {
+      const data = await response.json();
+      const prices = data.prices || [];
+      const volumes = data.total_volumes || [];
       
-      // Simulate price movement with realistic volatility
-      const volatility = 0.02; // 2% hourly volatility
-      const drift = 0.0001; // Slight upward drift
-      const randomWalk = (Math.random() - 0.5) * 2 * volatility;
-      currentPrice = currentPrice * (1 + drift + randomWalk);
+      const result: HistoricalDataPoint[] = [];
       
-      // Simulate sentiment and news
-      const sentiment = (Math.random() - 0.5) * 2; // -1 to 1
-      const newsCount = Math.floor(Math.random() * 10);
+      for (let i = 0; i < prices.length; i++) {
+        const [timestamp, price] = prices[i];
+        const volume = volumes[i]?.[1] || 0;
+        
+        result.push({
+          timestamp: new Date(timestamp).toISOString(),
+          price,
+          volume,
+          sentiment: undefined, // Not available from price API
+          newsCount: undefined,
+        });
+      }
       
-      data.push({
-        timestamp: timestamp.toISOString(),
-        price: currentPrice,
-        volume: basePrice * 1000000 * (0.5 + Math.random()),
-        sentiment,
-        newsCount,
-      });
+      return result;
     }
+  } catch (error) {
+    console.error('Failed to fetch historical data from CoinGecko:', error);
   }
   
-  return data;
+  // Fallback: Try Binance for more granular data
+  try {
+    const binanceSymbol = `${asset.toUpperCase()}USDT`;
+    const response = await fetch(
+      `https://api.binance.com/api/v3/klines?symbol=${binanceSymbol}&interval=1h&startTime=${start.getTime()}&endTime=${end.getTime()}&limit=1000`,
+      { next: { revalidate: 3600 } }
+    );
+    
+    if (response.ok) {
+      const data = await response.json();
+      return data.map((kline: [number, string, string, string, string, string]) => ({
+        timestamp: new Date(kline[0]).toISOString(),
+        price: parseFloat(kline[4]), // Close price
+        volume: parseFloat(kline[5]), // Volume
+        sentiment: undefined,
+        newsCount: undefined,
+      }));
+    }
+  } catch {
+    // Binance may not have the pair
+  }
+  
+  // Return empty array if no data available
+  console.warn(`No historical data available for ${asset} from ${startDate} to ${endDate}`);
+  return [];
 }
 
 // =============================================================================

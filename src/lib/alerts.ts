@@ -14,6 +14,7 @@
 import { getTopCoins, getFearGreedIndex } from '@/lib/market-data';
 import { getLatestNews, getBreakingNews } from '@/lib/crypto-news';
 import { db } from '@/lib/database';
+import { generateShortId } from '@/lib/utils/id';
 import {
   AlertRule,
   AlertCondition,
@@ -143,11 +144,6 @@ async function saveAlertHistoryForUser(userId: string, notifications: AlertNotif
   await db.saveDocument(ALERT_HISTORY_COLLECTION, userId, { notifications: notifications.slice(0, 100) });
 }
 
-// Generate IDs
-function generateId(prefix: string): string {
-  return `${prefix}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-}
-
 /**
  * Create a price alert
  */
@@ -162,7 +158,7 @@ export async function createPriceAlert(
   }
 ): Promise<PriceAlert> {
   const alert: PriceAlert = {
-    id: generateId('pa'),
+    id: generateShortId('pa'),
     userId,
     coin: options.coin,
     coinId: options.coinId,
@@ -190,7 +186,7 @@ export async function createKeywordAlert(
   }
 ): Promise<KeywordAlert> {
   const alert: KeywordAlert = {
-    id: generateId('ka'),
+    id: generateShortId('ka'),
     userId,
     keywords: options.keywords.map(k => k.toLowerCase()),
     sources: options.sources,

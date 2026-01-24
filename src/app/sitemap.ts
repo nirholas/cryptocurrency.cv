@@ -6,6 +6,7 @@
  */
 
 import { MetadataRoute } from 'next';
+import { getAllSlugs, CATEGORIES } from '@/lib/blog';
 
 const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://free-crypto-news.vercel.app';
 
@@ -97,6 +98,46 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: now,
     changeFrequency: 'weekly',
     priority: 0.5,
+  });
+
+  // Add blog pages for each locale
+  const blogSlugs = getAllSlugs();
+  for (const locale of locales) {
+    // Blog index
+    entries.push({
+      url: `${BASE_URL}/${locale}/blog`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 0.8,
+    });
+    
+    // Individual blog posts (high priority for SEO)
+    for (const slug of blogSlugs) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/blog/${slug}`,
+        lastModified: now,
+        changeFrequency: 'weekly',
+        priority: 0.9,
+      });
+    }
+    
+    // Blog categories
+    for (const category of Object.keys(CATEGORIES)) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/blog/category/${category}`,
+        lastModified: now,
+        changeFrequency: 'weekly',
+        priority: 0.7,
+      });
+    }
+  }
+  
+  // Blog RSS feed
+  entries.push({
+    url: `${BASE_URL}/blog/feed.xml`,
+    lastModified: now,
+    changeFrequency: 'daily',
+    priority: 0.6,
   });
 
   return entries;

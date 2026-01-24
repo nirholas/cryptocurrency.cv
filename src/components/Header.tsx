@@ -295,6 +295,37 @@ const navItems = [
     },
   },
   {
+    label: 'Learn',
+    href: '/blog',
+    icon: '📚',
+    megaMenu: {
+      sections: [
+        {
+          title: 'Guides',
+          links: [
+            { label: 'Crypto Blog', href: '/blog', icon: '📝' },
+            { label: 'Bitcoin Guide', href: '/blog/what-is-bitcoin', icon: '₿' },
+            { label: 'Ethereum vs Bitcoin', href: '/blog/ethereum-vs-bitcoin', icon: '⚖️' },
+            { label: 'DeFi Guide', href: '/blog/defi-beginners-guide', icon: '🏦' },
+          ],
+        },
+        {
+          title: 'Tutorials',
+          links: [
+            { label: 'Technical Analysis', href: '/blog/how-to-read-crypto-charts', icon: '📈' },
+            { label: 'Security Guide', href: '/blog/crypto-security-guide', icon: '🔒' },
+            { label: 'Layer 2 Explained', href: '/blog/layer-2-explained', icon: '🔗' },
+          ],
+        },
+      ],
+      featured: {
+        title: 'Crypto Education',
+        description: 'Free guides and tutorials for beginners and experts',
+        href: '/blog',
+      },
+    },
+  },
+  {
     label: 'Developers',
     href: '/developers',
     icon: '🛠️',

@@ -21,48 +21,40 @@ import {
 
 export const runtime = 'edge';
 
-// Sample article data for demonstration
-function getSampleArticles(): ArticleForTracing[] {
-  const now = Date.now();
-  return [
-    {
-      id: 'article-1',
-      sourceId: 'coindesk',
-      title: 'Bitcoin Hits New All-Time High',
-      content: 'Bitcoin has reached a new all-time high of $100,000 as institutional adoption continues to grow.',
-      publishedAt: new Date(now - 3600000),
-    },
-    {
-      id: 'article-2',
-      sourceId: 'cointelegraph',
-      title: 'BTC Surges to $100K',
-      content: 'Bitcoin has reached a new all-time high of $100,000 as institutional adoption continues to grow rapidly.',
-      publishedAt: new Date(now - 3500000),
-    },
-    {
-      id: 'article-3',
-      sourceId: 'decrypt',
-      title: 'Bitcoin Price Hits Historic $100,000',
-      content: 'In a historic moment for cryptocurrency, Bitcoin has surpassed $100,000 for the first time.',
-      publishedAt: new Date(now - 3400000),
-      citations: ['coindesk'],
-    },
-    {
-      id: 'article-4',
-      sourceId: 'theblock',
-      title: 'Ethereum Upgrade Delayed',
-      content: 'The next Ethereum upgrade has been delayed by two weeks due to testing issues.',
-      publishedAt: new Date(now - 7200000),
-    },
-    {
-      id: 'article-5',
-      sourceId: 'coindesk',
-      title: 'ETH Upgrade Pushed Back',
-      content: 'Ethereum developers have announced a two-week delay for the upcoming network upgrade.',
-      publishedAt: new Date(now - 7100000),
-      citations: ['theblock'],
-    },
-  ];
+// Fetch real articles for forensics analysis
+async function getRealArticles(): Promise<ArticleForTracing[]> {
+  try {
+    // Fetch from our actual news API
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL || '';
+    const response = await fetch(`${baseUrl}/api/news?limit=100`, {
+      next: { revalidate: 300 },
+    });
+    
+    if (response.ok) {
+      const data = await response.json();
+      const articles = data.articles || [];
+      
+      return articles.map((article: {
+        id: string;
+        sourceKey?: string;
+        source?: string;
+        title: string;
+        description?: string;
+        pubDate?: string;
+        publishedAt?: string;
+      }) => ({
+        id: article.id,
+        sourceId: article.sourceKey || article.source?.toLowerCase().replace(/\s+/g, '') || 'unknown',
+        title: article.title,
+        content: article.description || '',
+        publishedAt: new Date(article.pubDate || article.publishedAt || Date.now()),
+      }));
+    }
+  } catch (error) {
+    console.error('Failed to fetch articles for forensics:', error);
+  }
+  
+  return [];
 }
 
 export async function GET(request: NextRequest) {
@@ -73,7 +65,14 @@ export async function GET(request: NextRequest) {
     const articleId = searchParams.get('article');
 
     const analyzer = createForensicsAnalyzer();
-    const articles = getSampleArticles();
+    const articles = await getRealArticles();
+    
+    if (articles.length === 0) {
+      return NextResponse.json({
+        success: false,
+        error: 'No articles available for forensics analysis',
+      }, { status: 404 });
+    }
 
     switch (action) {
       case 'report': {

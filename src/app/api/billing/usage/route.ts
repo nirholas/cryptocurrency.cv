@@ -214,6 +214,17 @@ export async function POST(request: NextRequest) {
 // Helper functions
 
 function generateHourlyBreakdown(apiKeyId: string): HourlyUsage[] {
+  // First check if we have real analytics data
+  const storedAnalytics = analyticsStore.get(apiKeyId);
+  
+  if (storedAnalytics && storedAnalytics.hourlyUsage.length > 0) {
+    // Return real collected data
+    return storedAnalytics.hourlyUsage
+      .slice(-24) // Last 24 hours
+      .sort((a, b) => new Date(a.hour).getTime() - new Date(b.hour).getTime());
+  }
+  
+  // Return empty hourly breakdown if no data collected yet
   const now = new Date();
   const hours: HourlyUsage[] = [];
 
@@ -221,34 +232,15 @@ function generateHourlyBreakdown(apiKeyId: string): HourlyUsage[] {
     const hour = new Date(now);
     hour.setHours(now.getHours() - i, 0, 0, 0);
     
-    // In production, fetch from time-series database
-    // For now, generate realistic data based on time of day
-    const baseTraffic = getBaseTrafficForHour(hour.getHours());
-    const variance = 0.2; // 20% variance
-    const requests = Math.round(baseTraffic * (1 + (Math.random() - 0.5) * variance));
-    const errors = Math.round(requests * 0.005); // 0.5% error rate
-    const avgLatency = 50 + Math.random() * 100; // 50-150ms
-
     hours.push({
       hour: hour.toISOString(),
-      requests,
-      errors,
-      avgLatency: Math.round(avgLatency),
+      requests: 0,
+      errors: 0,
+      avgLatency: 0,
     });
   }
 
   return hours;
-}
-
-function getBaseTrafficForHour(hour: number): number {
-  // Traffic pattern: low at night, peaks during business hours
-  const patterns: Record<number, number> = {
-    0: 100, 1: 80, 2: 60, 3: 50, 4: 50, 5: 60,
-    6: 100, 7: 200, 8: 400, 9: 600, 10: 700, 11: 750,
-    12: 800, 13: 750, 14: 700, 15: 650, 16: 600, 17: 550,
-    18: 500, 19: 450, 20: 400, 21: 350, 22: 250, 23: 150,
-  };
-  return patterns[hour] || 100;
 }
 
 function generateEndpointBreakdown(
@@ -256,12 +248,8 @@ function generateEndpointBreakdown(
   totalRequests: number
 ): UsageBreakdown[] {
   if (topEndpoints.length === 0) {
-    // Return default breakdown
-    return [
-      { endpoint: '/api/news', method: 'GET', count: 0, percentage: 0, avgResponseTime: 85, errorRate: 0.2 },
-      { endpoint: '/api/prices', method: 'GET', count: 0, percentage: 0, avgResponseTime: 45, errorRate: 0.1 },
-      { endpoint: '/api/sentiment', method: 'GET', count: 0, percentage: 0, avgResponseTime: 120, errorRate: 0.5 },
-    ];
+    // Return empty breakdown when no data
+    return [];
   }
 
   return topEndpoints.map(ep => ({
@@ -269,8 +257,8 @@ function generateEndpointBreakdown(
     method: 'GET',
     count: ep.count,
     percentage: totalRequests > 0 ? Math.round((ep.count / totalRequests) * 100) : 0,
-    avgResponseTime: 50 + Math.random() * 150,
-    errorRate: Math.random() * 2, // 0-2% error rate
+    avgResponseTime: 0, // Will be populated from real analytics when available
+    errorRate: 0, // Will be populated from real analytics when available
   }));
 }
 

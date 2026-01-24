@@ -22,11 +22,24 @@ export const NETWORKS = {
 export type NetworkId = (typeof NETWORKS)[keyof typeof NETWORKS];
 
 /**
+ * Check if we're in production environment
+ * Uses VERCEL_ENV (Vercel deployments) or falls back to NODE_ENV
+ */
+export const IS_PRODUCTION =
+  process.env.VERCEL_ENV === 'production' || process.env.NODE_ENV === 'production';
+
+/**
+ * Check if we're explicitly in testnet mode
+ */
+export const IS_TESTNET = process.env.X402_TESTNET === 'true' || !IS_PRODUCTION;
+
+/**
  * Current network based on environment
+ * Priority: X402_NETWORK env var > VERCEL_ENV > NODE_ENV
  */
 export const CURRENT_NETWORK: NetworkId =
   (process.env.X402_NETWORK as NetworkId) ||
-  (process.env.NODE_ENV === 'production' ? NETWORKS.BASE_MAINNET : NETWORKS.BASE_SEPOLIA);
+  (IS_PRODUCTION && !process.env.X402_TESTNET ? NETWORKS.BASE_MAINNET : NETWORKS.BASE_SEPOLIA);
 
 // =============================================================================
 // FACILITATOR CONFIGURATION
@@ -48,10 +61,12 @@ export const FACILITATORS = {
 
 /**
  * Active facilitator URL
+ * - Production: Uses CDP (Coinbase Developer Platform) facilitator
+ * - Development/Testnet: Uses x402.org public facilitator (no setup required)
  */
 export const FACILITATOR_URL =
   process.env.X402_FACILITATOR_URL ||
-  (process.env.NODE_ENV === 'production' ? FACILITATORS.CDP : FACILITATORS.X402_ORG);
+  (IS_PRODUCTION ? FACILITATORS.CDP : FACILITATORS.X402_ORG);
 
 // =============================================================================
 // PAYMENT ADDRESS
@@ -68,10 +83,11 @@ export const PAYMENT_ADDRESS =
 // Warn if not configured in production
 if (
   typeof window === 'undefined' &&
-  process.env.NODE_ENV === 'production' &&
+  IS_PRODUCTION &&
   PAYMENT_ADDRESS === '0x0000000000000000000000000000000000000000'
 ) {
   console.error('[x402] CRITICAL: X402_PAYMENT_ADDRESS not set! Configure your wallet address.');
+  console.error('[x402] Payments will fail in production. Set X402_PAYMENT_ADDRESS in environment.');
 }
 
 // =============================================================================

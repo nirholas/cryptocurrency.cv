@@ -30,6 +30,8 @@ export {
   ACCEPTED_ASSETS,
   SOLANA_PAYMENT_ADDRESS,
   SOLANA_USDC_ADDRESSES,
+  IS_PRODUCTION,
+  IS_TESTNET,
   getAcceptedAssets,
   getPaymentAddress,
   isEvmNetwork,
@@ -63,7 +65,14 @@ export {
 } from './routes';
 
 // Server
-export { x402Server, facilitatorClient, isServerConfigured, getServerStatus } from './server';
+export {
+  x402Server,
+  facilitatorClient,
+  isServerConfigured,
+  getServerStatus,
+  validateConfig,
+  type ConfigValidation,
+} from './server';
 
 // Rate Limiting
 export {

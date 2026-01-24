@@ -594,6 +594,125 @@ pm2 logs crypto-news
 
 ---
 
+## x402 Micropayments (Mainnet Deployment)
+
+Enable cryptocurrency micropayments for premium API access using the x402 protocol.
+
+### Overview
+
+x402 uses HTTP 402 Payment Required to enable pay-per-request API access with USDC on Base. Clients pay micropayments (typically $0.001-$0.05) per API call, settled on-chain.
+
+### Environment Variables
+
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `X402_PAYMENT_ADDRESS` | Your wallet address (receives USDC) | **Yes** for mainnet |
+| `X402_NETWORK` | Network: `eip155:8453` (Base) or `eip155:84532` (Sepolia) | No (auto-detected) |
+| `X402_FACILITATOR_URL` | Facilitator service URL | No (uses CDP) |
+| `X402_TESTNET` | Set to `true` to force testnet even in production | No |
+| `X402_SOLANA_PAYMENT_ADDRESS` | Solana wallet address (for multi-chain) | No |
+
+### Mainnet Deployment Checklist
+
+Before deploying x402 to production:
+
+- [ ] **Generate a secure wallet address** for receiving payments
+- [ ] Set `X402_PAYMENT_ADDRESS` to your wallet address
+- [ ] Verify network auto-detection works (production uses Base Mainnet)
+- [ ] Test with Base Sepolia first (`X402_TESTNET=true`)
+- [ ] Set up monitoring for payment transactions
+- [ ] Configure webhook for payment notifications (optional)
+- [ ] Review pricing in `src/lib/x402-config.ts`
+
+### Quick Setup
+
+```bash
+# 1. Set your payment address (CRITICAL)
+vercel env add X402_PAYMENT_ADDRESS
+# Enter your Ethereum/Base wallet address: 0xYourWalletAddress
+
+# 2. Optionally set facilitator (defaults to CDP in production)
+vercel env add X402_FACILITATOR_URL
+# Enter: https://api.cdp.coinbase.com/platform/v2/x402
+
+# 3. Deploy
+vercel --prod
+```
+
+### Network Auto-Detection
+
+The x402 configuration automatically detects the environment:
+
+| Environment | Network | Facilitator |
+|-------------|---------|-------------|
+| Production (`VERCEL_ENV=production`) | Base Mainnet | CDP |
+| Preview/Development | Base Sepolia | x402.org |
+| `X402_TESTNET=true` | Base Sepolia | x402.org |
+
+### Supported Facilitators
+
+| Facilitator | URL | Notes |
+|-------------|-----|-------|
+| CDP (Coinbase) | `https://api.cdp.coinbase.com/platform/v2/x402` | Default for production |
+| x402.org | `https://x402.org/facilitator` | Default for testnet |
+| PayAI | `https://facilitator.payai.network` | Multi-chain support |
+
+### Testing Before Mainnet
+
+1. **Deploy to Vercel Preview** (auto-uses testnet):
+   ```bash
+   vercel
+   ```
+
+2. **Test the discovery endpoint**:
+   ```bash
+   curl https://your-preview.vercel.app/api/.well-known/x402
+   ```
+
+3. **Verify 402 responses**:
+   ```bash
+   curl -v https://your-preview.vercel.app/api/v1/coins
+   # Should return HTTP 402 with payment instructions
+   ```
+
+4. **Test payment flow with testnet USDC**:
+   - Get testnet USDC from [Base Sepolia Faucet](https://www.alchemy.com/faucets/base-sepolia)
+   - Use the x402 client examples in `/examples/`
+
+### Monitoring Payments
+
+After deployment, monitor payments:
+
+```bash
+# View transactions on BaseScan
+https://basescan.org/address/YOUR_PAYMENT_ADDRESS
+
+# Use x402scan for protocol-level analytics
+https://x402scan.com/
+```
+
+### Pricing Configuration
+
+Edit `src/lib/x402-config.ts` to adjust pricing:
+
+```typescript
+export const PREMIUM_PRICING = {
+  '/api/premium/ai/sentiment': { price: 0.02 },  // $0.02 per request
+  '/api/premium/whales/transactions': { price: 0.05 },
+  // ...
+};
+```
+
+### Security Considerations
+
+- Never expose your private key - only the payment ADDRESS is needed
+- Use a dedicated wallet for receiving API payments
+- Monitor for unusual transaction patterns
+- Consider using a multi-sig for large payment volumes
+- Set up alerts for payment failures
+
+---
+
 ## Security Checklist
 
 Before going to production:
@@ -608,3 +727,5 @@ Before going to production:
 - [ ] Review CORS settings
 - [ ] Test health endpoint
 - [ ] Document any custom configuration
+- [ ] Set `X402_PAYMENT_ADDRESS` for micropayments
+- [ ] Test x402 payment flow end-to-end

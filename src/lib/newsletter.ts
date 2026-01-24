@@ -76,13 +76,16 @@ async function findSubscriberByToken(token: string): Promise<Subscriber | null> 
   return all.find(s => s.unsubscribeToken === token || s.verificationToken === token) || null;
 }
 
-// Generate tokens
+// Import crypto for secure ID generation
+import { randomUUID } from 'crypto';
+
+// Generate tokens using cryptographic randomness
 function generateToken(): string {
-  return Math.random().toString(36).substring(2) + Date.now().toString(36);
+  return randomUUID().replace(/-/g, '') + randomUUID().replace(/-/g, '').substring(0, 8);
 }
 
 function generateId(): string {
-  return `sub_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  return `sub_${randomUUID()}`;
 }
 
 /**

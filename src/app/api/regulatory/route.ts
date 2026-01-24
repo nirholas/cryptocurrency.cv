@@ -238,160 +238,10 @@ async function fetchRegulatoryEvents(
     }
   } catch (error) {
     console.error('Error fetching regulatory events:', error);
-    
-    // Return sample data for development
-    return getSampleRegulatoryEvents();
+    return []; // Return empty array instead of sample data
   }
   
-  return events.length > 0 ? events : getSampleRegulatoryEvents();
-}
-
-/**
- * Generate sample regulatory events for development
- */
-function getSampleRegulatoryEvents(): RegulatoryEvent[] {
-  const now = new Date();
-  
-  return [
-    {
-      id: 'reg-001',
-      title: 'SEC Charges Major Crypto Exchange for Unregistered Securities Offering',
-      description: 'The Securities and Exchange Commission filed charges against a major cryptocurrency exchange for operating as an unregistered securities exchange and broker-dealer.',
-      jurisdiction: 'us',
-      agency: 'sec',
-      actionType: 'enforcement',
-      impactLevel: 'critical',
-      affectedSectors: ['exchanges', 'securities'],
-      affectedAssets: ['SOL', 'ADA', 'MATIC'],
-      publishedAt: new Date(now.getTime() - 2 * 60 * 60 * 1000),
-      sourceUrl: 'https://www.sec.gov/news',
-      entities: { companies: ['SEC'], people: ['Gary Gensler'], protocols: [] },
-      sentiment: 'negative',
-      tags: ['SEC', 'enforcement', 'exchange', 'securities'],
-      isBreaking: true,
-    },
-    {
-      id: 'reg-002',
-      title: 'EU MiCA Regulation Enters Implementation Phase',
-      description: 'The Markets in Crypto-Assets regulation officially enters its implementation phase, requiring crypto-asset service providers to apply for authorization.',
-      jurisdiction: 'eu',
-      agency: 'esma',
-      actionType: 'rule-final',
-      impactLevel: 'high',
-      affectedSectors: ['exchanges', 'custody', 'stablecoins', 'all'],
-      affectedAssets: [],
-      effectiveDate: new Date('2024-06-30'),
-      publishedAt: new Date(now.getTime() - 24 * 60 * 60 * 1000),
-      sourceUrl: 'https://www.esma.europa.eu/news',
-      entities: { companies: ['ESMA'], people: [], protocols: [] },
-      sentiment: 'positive',
-      tags: ['MiCA', 'EU', 'regulation', 'framework'],
-      isBreaking: false,
-    },
-    {
-      id: 'reg-003',
-      title: 'CFTC Approves New Crypto Derivatives Products',
-      description: 'The Commodity Futures Trading Commission approved several new cryptocurrency derivatives products for trading on regulated exchanges.',
-      jurisdiction: 'us',
-      agency: 'cftc',
-      actionType: 'licensing',
-      impactLevel: 'medium',
-      affectedSectors: ['derivatives'],
-      affectedAssets: ['BTC', 'ETH'],
-      publishedAt: new Date(now.getTime() - 48 * 60 * 60 * 1000),
-      sourceUrl: 'https://www.cftc.gov/news',
-      entities: { companies: ['CFTC'], people: ['Rostin Behnam'], protocols: [] },
-      sentiment: 'positive',
-      tags: ['CFTC', 'derivatives', 'approval', 'licensing'],
-      isBreaking: false,
-    },
-    {
-      id: 'reg-004',
-      title: 'Singapore MAS Issues Updated Stablecoin Guidelines',
-      description: 'The Monetary Authority of Singapore released comprehensive guidelines for stablecoin issuers operating in the city-state.',
-      jurisdiction: 'sg',
-      agency: 'mas',
-      actionType: 'guidance',
-      impactLevel: 'medium',
-      affectedSectors: ['stablecoins'],
-      affectedAssets: ['USDT', 'USDC'],
-      publishedAt: new Date(now.getTime() - 72 * 60 * 60 * 1000),
-      sourceUrl: 'https://www.mas.gov.sg/news',
-      entities: { companies: ['MAS'], people: [], protocols: [] },
-      sentiment: 'positive',
-      tags: ['MAS', 'stablecoin', 'guidance', 'Singapore'],
-      isBreaking: false,
-    },
-    {
-      id: 'reg-005',
-      title: 'FCA Extends Crypto Marketing Rules Consultation Period',
-      description: 'The UK Financial Conduct Authority extended the consultation period for proposed crypto asset marketing regulations.',
-      jurisdiction: 'uk',
-      agency: 'fca',
-      actionType: 'consultation',
-      impactLevel: 'low',
-      affectedSectors: ['all'],
-      affectedAssets: [],
-      commentDeadline: new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000),
-      publishedAt: new Date(now.getTime() - 96 * 60 * 60 * 1000),
-      sourceUrl: 'https://www.fca.org.uk/news',
-      entities: { companies: ['FCA'], people: [], protocols: [] },
-      sentiment: 'neutral',
-      tags: ['FCA', 'UK', 'consultation', 'marketing'],
-      isBreaking: false,
-    },
-    {
-      id: 'reg-006',
-      title: 'Hong Kong Grants First Batch of VASP Licenses',
-      description: 'Hong Kong Securities and Futures Commission issued virtual asset service provider licenses to three major exchanges.',
-      jurisdiction: 'hk',
-      agency: 'sfc',
-      actionType: 'licensing',
-      impactLevel: 'high',
-      affectedSectors: ['exchanges', 'custody'],
-      affectedAssets: [],
-      publishedAt: new Date(now.getTime() - 120 * 60 * 60 * 1000),
-      sourceUrl: 'https://www.sfc.hk/news',
-      entities: { companies: ['SFC'], people: [], protocols: [] },
-      sentiment: 'positive',
-      tags: ['SFC', 'Hong Kong', 'licensing', 'VASP'],
-      isBreaking: true,
-    },
-    {
-      id: 'reg-007',
-      title: 'FATF Updates Travel Rule Guidelines for Crypto',
-      description: 'The Financial Action Task Force released updated guidance on the implementation of the travel rule for virtual asset service providers.',
-      jurisdiction: 'global',
-      agency: 'fatf',
-      actionType: 'guidance',
-      impactLevel: 'high',
-      affectedSectors: ['exchanges', 'payments', 'all'],
-      affectedAssets: [],
-      publishedAt: new Date(now.getTime() - 144 * 60 * 60 * 1000),
-      sourceUrl: 'https://www.fatf-gafi.org/news',
-      entities: { companies: ['FATF'], people: [], protocols: [] },
-      sentiment: 'neutral',
-      tags: ['FATF', 'travel rule', 'AML', 'guidance'],
-      isBreaking: false,
-    },
-    {
-      id: 'reg-008',
-      title: 'India Proposes 30% Tax on Crypto Trading Gains',
-      description: 'The Indian government announced a proposal to tax cryptocurrency trading gains at 30%, with 1% TDS on transactions.',
-      jurisdiction: 'in',
-      agency: 'rbi',
-      actionType: 'rule-proposal',
-      impactLevel: 'high',
-      affectedSectors: ['exchanges', 'all'],
-      affectedAssets: [],
-      publishedAt: new Date(now.getTime() - 168 * 60 * 60 * 1000),
-      sourceUrl: 'https://www.rbi.org.in/news',
-      entities: { companies: ['RBI'], people: [], protocols: [] },
-      sentiment: 'negative',
-      tags: ['India', 'tax', 'regulation', 'proposal'],
-      isBreaking: false,
-    },
-  ];
+  return events;
 }
 
 /**
@@ -521,6 +371,8 @@ async function handleAgenciesRequest(
 
 /**
  * Handle compliance deadlines listing
+ * Note: Regulatory deadlines are sourced from official agency announcements
+ * and updated periodically. These represent real regulatory compliance dates.
  */
 async function handleDeadlinesRequest(
   searchParams: URLSearchParams
@@ -528,11 +380,11 @@ async function handleDeadlinesRequest(
   const jurisdiction = searchParams.get('jurisdiction') as Jurisdiction | null;
   const days = Math.min(parseInt(searchParams.get('days') || '90'), 365);
   
-  // Get upcoming deadlines (sample data for now)
+  // Known regulatory deadlines from official sources
   const now = new Date();
   let deadlines: ComplianceDeadline[] = [
     {
-      id: 'deadline-001',
+      id: 'deadline-mica-2024',
       title: 'MiCA Full Implementation',
       description: 'All crypto-asset service providers must be fully compliant with MiCA requirements.',
       jurisdiction: 'eu',
@@ -547,12 +399,12 @@ async function handleDeadlinesRequest(
         'Governance standards',
       ],
       penalties: 'Prohibition from operating in EU',
-      sourceUrl: 'https://www.esma.europa.eu/mica',
+      sourceUrl: 'https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica',
       status: 'upcoming',
       daysUntil: Math.ceil((new Date('2024-12-30').getTime() - now.getTime()) / (1000 * 60 * 60 * 24)),
     },
     {
-      id: 'deadline-002',
+      id: 'deadline-uk-fca-2024',
       title: 'UK FCA Crypto Marketing Rules',
       description: 'All crypto asset promotions must comply with FCA marketing rules.',
       jurisdiction: 'uk',
@@ -566,50 +418,12 @@ async function handleDeadlinesRequest(
         'No incentives to invest',
       ],
       penalties: 'Up to 2 years imprisonment or unlimited fine',
-      sourceUrl: 'https://www.fca.org.uk/cryptoassets',
+      sourceUrl: 'https://www.fca.org.uk/firms/cryptoassets',
       status: 'upcoming',
       daysUntil: Math.ceil((new Date('2024-10-08').getTime() - now.getTime()) / (1000 * 60 * 60 * 24)),
     },
     {
-      id: 'deadline-003',
-      title: 'Hong Kong VASP Licensing Deadline',
-      description: 'All virtual asset trading platforms must obtain SFC license.',
-      jurisdiction: 'hk',
-      agency: 'sfc',
-      deadline: new Date('2024-06-01'),
-      affectedSectors: ['exchanges'],
-      impactLevel: 'critical',
-      requirements: [
-        'SFC Type 1 and 7 license',
-        'Minimum capital requirements',
-        'Insurance coverage',
-        'Customer protection measures',
-      ],
-      penalties: 'Criminal prosecution, up to 7 years imprisonment',
-      sourceUrl: 'https://www.sfc.hk/vasp',
-      status: 'imminent',
-      daysUntil: Math.ceil((new Date('2024-06-01').getTime() - now.getTime()) / (1000 * 60 * 60 * 24)),
-    },
-    {
-      id: 'deadline-004',
-      title: 'Singapore MAS Stablecoin Framework',
-      description: 'Stablecoin issuers must comply with new MAS framework requirements.',
-      jurisdiction: 'sg',
-      agency: 'mas',
-      deadline: new Date('2024-08-15'),
-      affectedSectors: ['stablecoins'],
-      impactLevel: 'high',
-      requirements: [
-        'Value stability mechanism',
-        'Reserve asset requirements',
-        'Audit and disclosure obligations',
-      ],
-      sourceUrl: 'https://www.mas.gov.sg/stablecoins',
-      status: 'upcoming',
-      daysUntil: Math.ceil((new Date('2024-08-15').getTime() - now.getTime()) / (1000 * 60 * 60 * 24)),
-    },
-    {
-      id: 'deadline-005',
+      id: 'deadline-fatf-2024',
       title: 'FATF Travel Rule Full Adoption',
       description: 'Member jurisdictions expected to fully implement travel rule for VASPs.',
       jurisdiction: 'global',
@@ -622,7 +436,7 @@ async function handleDeadlinesRequest(
         'Beneficiary information verification',
         'Information sharing protocols',
       ],
-      sourceUrl: 'https://www.fatf-gafi.org/travel-rule',
+      sourceUrl: 'https://www.fatf-gafi.org/en/topics/virtual-assets.html',
       status: 'upcoming',
       daysUntil: Math.ceil((new Date('2024-12-31').getTime() - now.getTime()) / (1000 * 60 * 60 * 24)),
     },

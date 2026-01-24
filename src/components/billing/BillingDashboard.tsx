@@ -27,7 +27,9 @@ import {
   CpuChipIcon,
   GlobeAltIcon,
   SparklesIcon,
+  KeyIcon,
 } from '@heroicons/react/24/outline';
+import { useApiKeyStandalone } from '@/hooks/useApiKey';
 import {
   AreaChart,
   Area,
@@ -153,20 +155,28 @@ const TIER_COLORS = {
 const CHART_COLORS = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6'];
 
 export default function BillingDashboard() {
+  const { apiKey, setApiKey: saveApiKey, clearApiKey } = useApiKeyStandalone();
   const [billingData, setBillingData] = useState<BillingData | null>(null);
   const [analytics, setAnalytics] = useState<UsageAnalytics | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'overview' | 'usage' | 'invoices'>('overview');
   const [isRefreshing, setIsRefreshing] = useState(false);
+  const [inputApiKey, setInputApiKey] = useState('');
+  const [showApiKeyInput, setShowApiKeyInput] = useState(false);
 
   const fetchBillingData = useCallback(async () => {
+    // If no API key, show input form instead of using demo data
+    if (!apiKey) {
+      setIsLoading(false);
+      setShowApiKeyInput(true);
+      return;
+    }
+
     try {
-      // In production, these would come from authenticated session
-      const headers = {
-        'x-stripe-customer-id': 'cus_demo123',
-        'x-api-key-id': 'key_demo123',
-        'x-billing-tier': 'pro',
+      // Use the stored API key for authenticated requests
+      const headers: Record<string, string> = {
+        'X-API-Key': apiKey,
       };
 
       const [billingRes, usageRes] = await Promise.all([
@@ -185,12 +195,13 @@ export default function BillingDashboard() {
 
       setBillingData(billing);
       setAnalytics(usage);
+      setShowApiKeyInput(false);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred');
     } finally {
       setIsLoading(false);
     }
-  }, []);
+  }, [apiKey]);
 
   useEffect(() => {
     fetchBillingData();
@@ -203,12 +214,17 @@ export default function BillingDashboard() {
   };
 
   const handleManageSubscription = async () => {
+    if (!apiKey) {
+      setShowApiKeyInput(true);
+      return;
+    }
+
     try {
       const response = await fetch('/api/billing', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'x-stripe-customer-id': 'cus_demo123',
+          'X-API-Key': apiKey,
         },
         body: JSON.stringify({ action: 'portal' }),
       });
@@ -220,6 +236,22 @@ export default function BillingDashboard() {
     } catch (err) {
       console.error('Failed to open billing portal:', err);
     }
+  };
+
+  const handleApiKeySubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (inputApiKey && inputApiKey.startsWith('fcn_')) {
+      saveApiKey(inputApiKey);
+      setInputApiKey('');
+      setIsLoading(true);
+    }
+  };
+
+  const handleLogout = () => {
+    clearApiKey();
+    setBillingData(null);
+    setAnalytics(null);
+    setShowApiKeyInput(true);
   };
 
   const formatDate = (dateString: string) => {

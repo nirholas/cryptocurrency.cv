@@ -551,27 +551,57 @@ function detectTriangularArbitrage(
       const [a, b, c] = path;
       
       const abSymbol = `${a}USDT`;
-      const bcSymbol = `${b}${a}`;
+      const baSymbol = `${b}${a}`; // e.g., ETH/BTC
       const caSymbol = `${c}USDT`;
       
       const abPrice = prices.get(abSymbol);
+      const baPrice = prices.get(baSymbol);
       const caPrice = prices.get(caSymbol);
       
+      // Skip if we don't have all required pairs - no simulated data
       if (!abPrice || !caPrice) continue;
 
       // Calculate triangular rate
       // Start with 1000 USDT
       const startAmount = 1000;
       
-      // Buy A with USDT
+      // Buy A with USDT (e.g., buy BTC with USDT)
       const aAmount = startAmount / abPrice.askPrice;
       
-      // This is simplified - full implementation would need B/A pair
-      // For demonstration, using approximation
-      const bAmount = aAmount * 0.999; // Simulated conversion
+      // Convert A to B using the B/A pair if available
+      // If B/A pair not available, try A/B pair inverse
+      let bAmount: number;
+      let hasRealRate = false;
       
-      // Sell C for USDT
-      const endAmount = bAmount * caPrice.bidPrice * 0.998; // Including slippage
+      if (baPrice) {
+        // We have B/A pair (e.g., ETH/BTC) - buy B with A
+        bAmount = aAmount * baPrice.bidPrice * 0.999; // 0.1% slippage
+        hasRealRate = true;
+      } else {
+        // Try to find the inverse pair A/B
+        const abAltSymbol = `${a}${b}`;
+        const abAltPrice = prices.get(abAltSymbol);
+        if (abAltPrice) {
+          // Sell A for B using A/B pair
+          bAmount = aAmount / abAltPrice.askPrice * 0.999;
+          hasRealRate = true;
+        } else {
+          // No real pair data available - skip this triangular opportunity
+          continue;
+        }
+      }
+      
+      // Only proceed with real exchange rate data
+      if (!hasRealRate) continue;
+      
+      // Sell C for USDT (but we have B, so we need B → USDT)
+      // The path naming is confusing - let's use B to sell for USDT
+      const bUsdtSymbol = `${b}USDT`;
+      const bUsdtPrice = prices.get(bUsdtSymbol);
+      
+      if (!bUsdtPrice) continue; // Need real price data
+      
+      const endAmount = bAmount * bUsdtPrice.bidPrice * 0.999; // Including slippage
 
       const profit = endAmount - startAmount;
       const profitPercent = (profit / startAmount) * 100;

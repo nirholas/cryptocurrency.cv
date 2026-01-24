@@ -141,10 +141,35 @@ export async function analyzeSentiment(request: NextRequest): Promise<NextRespon
 
     const overallScore = (newsSentiment + technicalScore) / 2;
 
+    // Calculate confidence based on data quality:
+    // - More news articles = higher confidence (up to +0.2 for 5+ articles)
+    // - News agreement = higher confidence (all same sentiment = +0.15)
+    // - Strong price signal = higher confidence (>10% move = +0.15)
+    // Base confidence starts at 0.5
+    let confidence = 0.5;
+    
+    // Article count factor (more data = more confident)
+    const articleCountFactor = Math.min(newsArticles.length / 5, 1) * 0.2;
+    confidence += articleCountFactor;
+    
+    // Sentiment agreement factor (all articles agree = higher confidence)
+    const totalClassified = positiveNews + negativeNews;
+    const agreementRatio = totalClassified > 0 
+      ? Math.max(positiveNews, negativeNews) / totalClassified 
+      : 0.5;
+    confidence += (agreementRatio - 0.5) * 0.3;
+    
+    // Price signal strength factor (strong moves = higher confidence)
+    const priceSignalStrength = Math.min(Math.abs(change24h) / 10, 1) * 0.15;
+    confidence += priceSignalStrength;
+    
+    // Ensure confidence is within valid range [0.35, 0.95]
+    confidence = Math.max(0.35, Math.min(0.95, confidence));
+
     const result: SentimentResult = {
       overall: getSentimentFromChange(overallScore * 10),
       score: Math.max(-1, Math.min(1, overallScore)),
-      confidence: 0.7,
+      confidence,
       factors: {
         news: Math.max(-1, Math.min(1, newsSentiment)),
         social: 0, // Would require social API
@@ -187,11 +212,16 @@ export async function generateSignals(request: NextRequest): Promise<NextRespons
         const change = coin.price_change_percentage_24h;
         const change7d = coin.price_change_percentage_7d_in_currency || 0;
 
+        // Calculate confidence based on market data consistency
+        const trendConfidence = Math.abs(change7d) > 10 ? 0.8 : Math.abs(change7d) > 5 ? 0.7 : 0.6;
+        const volumeConfidence = coin.total_volume > coin.market_cap * 0.1 ? 0.85 : 0.65;
+        const confidence = (trendConfidence + volumeConfidence) / 2;
+
         signals.push({
           coin: coin.id,
           action: getSignalFromChange(change),
           strength: Math.abs(change) > 15 ? 'strong' : Math.abs(change) > 5 ? 'moderate' : 'weak',
-          confidence: 0.65 + Math.random() * 0.2,
+          confidence,
           reasoning: `Based on ${change > 0 ? 'positive' : 'negative'} momentum of ${change.toFixed(2)}% in 24h`,
           indicators: {
             trend: change7d > 0 ? 'up' : change7d < 0 ? 'down' : 'sideways',

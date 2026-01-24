@@ -396,28 +396,49 @@ export async function getMarks(
   to: number,
   resolution: string
 ): Promise<UDFMark[]> {
-  // In production, fetch from news API and convert to marks
+  // Ignore resolution for linting
+  void resolution;
+  
   const marks: UDFMark[] = [];
+  const normalized = normalizeSymbol(symbol);
+  const baseSymbol = normalized.replace('/USD', '').toLowerCase();
   
-  // Example: Add sample news marks
-  const sampleNews = [
-    { time: from + 3600, text: 'SEC Announcement', color: 'yellow' as const },
-    { time: from + 7200, text: 'Major Exchange Listing', color: 'green' as const },
-    { time: from + 14400, text: 'Whale Alert: Large Transfer', color: 'blue' as const },
-  ];
-  
-  for (const news of sampleNews) {
-    if (news.time >= from && news.time <= to) {
-      marks.push({
-        id: `mark_${news.time}`,
-        time: news.time,
-        color: news.color,
-        text: news.text,
-        label: news.text.charAt(0),
-        labelFontColor: 'white',
-        minSize: 20,
-      });
+  try {
+    // Fetch news related to the symbol from our API
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL || ''}/api/news?q=${baseSymbol}&limit=10`,
+      { next: { revalidate: 300 } }
+    );
+    
+    if (response.ok) {
+      const data = await response.json();
+      const articles = data.articles || [];
+      
+      for (const article of articles) {
+        const articleTime = Math.floor(new Date(article.publishedAt || article.date).getTime() / 1000);
+        
+        if (articleTime >= from && articleTime <= to) {
+          // Determine color based on sentiment
+          let color: 'red' | 'green' | 'blue' | 'yellow' = 'blue';
+          if (article.sentiment === 'positive' || article.sentiment > 0.3) color = 'green';
+          else if (article.sentiment === 'negative' || article.sentiment < -0.3) color = 'red';
+          else if (article.title?.toLowerCase().includes('regulation') || 
+                   article.title?.toLowerCase().includes('sec')) color = 'yellow';
+          
+          marks.push({
+            id: `mark_${articleTime}_${article.id || Math.random().toString(36)}`,
+            time: articleTime,
+            color,
+            text: article.title || 'News Update',
+            label: (article.title || 'N').charAt(0).toUpperCase(),
+            labelFontColor: 'white',
+            minSize: 20,
+          });
+        }
+      }
     }
+  } catch (error) {
+    console.error('Failed to fetch news marks:', error);
   }
   
   return marks;
@@ -483,32 +504,108 @@ interface Quote {
 }
 
 async function fetchQuote(symbol: string): Promise<Quote> {
-  // In production, fetch from exchange API
-  // For now, generate realistic mock data
-  const basePrice = getBasePrice(symbol);
-  const volatility = 0.02;
-  const randomChange = (Math.random() - 0.5) * volatility;
+  const normalized = normalizeSymbol(symbol);
+  const baseSymbol = normalized.replace('/USD', '').toUpperCase();
   
-  const lastPrice = basePrice * (1 + randomChange);
-  const open = basePrice * (1 + (Math.random() - 0.5) * volatility);
-  const high = Math.max(lastPrice, open) * (1 + Math.random() * 0.01);
-  const low = Math.min(lastPrice, open) * (1 - Math.random() * 0.01);
-  const prevClose = basePrice;
-  const change = lastPrice - prevClose;
-  const spread = basePrice * 0.0001;
+  try {
+    // Fetch from Binance API for real-time quotes
+    const binanceSymbol = `${baseSymbol}USDT`;
+    const response = await fetch(
+      `https://api.binance.com/api/v3/ticker/24hr?symbol=${binanceSymbol}`,
+      { next: { revalidate: 5 } }
+    );
+    
+    if (response.ok) {
+      const data = await response.json();
+      const lastPrice = parseFloat(data.lastPrice);
+      const open = parseFloat(data.openPrice);
+      const prevClose = parseFloat(data.prevClosePrice);
+      const change = lastPrice - prevClose;
+      
+      return {
+        lastPrice: round(lastPrice, 2),
+        bid: round(parseFloat(data.bidPrice), 2),
+        ask: round(parseFloat(data.askPrice), 2),
+        open: round(open, 2),
+        high: round(parseFloat(data.highPrice), 2),
+        low: round(parseFloat(data.lowPrice), 2),
+        prevClose: round(prevClose, 2),
+        change: round(change, 2),
+        changePercent: round(parseFloat(data.priceChangePercent), 2),
+        volume: parseFloat(data.volume),
+      };
+    }
+  } catch (error) {
+    console.error('Failed to fetch quote from Binance:', error);
+  }
   
+  // Fallback to CoinGecko for less common pairs
+  try {
+    const geckoId = symbolToGeckoId(baseSymbol);
+    const response = await fetch(
+      `https://api.coingecko.com/api/v3/simple/price?ids=${geckoId}&vs_currencies=usd&include_24hr_change=true&include_24hr_vol=true`,
+      { next: { revalidate: 60 } }
+    );
+    
+    if (response.ok) {
+      const data = await response.json();
+      const coinData = data[geckoId];
+      if (coinData) {
+        const lastPrice = coinData.usd;
+        const change24h = coinData.usd_24h_change || 0;
+        const prevClose = lastPrice / (1 + change24h / 100);
+        
+        return {
+          lastPrice: round(lastPrice, 2),
+          bid: round(lastPrice * 0.9999, 2),
+          ask: round(lastPrice * 1.0001, 2),
+          open: round(prevClose, 2),
+          high: round(lastPrice * 1.02, 2),
+          low: round(lastPrice * 0.98, 2),
+          prevClose: round(prevClose, 2),
+          change: round(lastPrice - prevClose, 2),
+          changePercent: round(change24h, 2),
+          volume: coinData.usd_24h_vol || 0,
+        };
+      }
+    }
+  } catch (error) {
+    console.error('Failed to fetch quote from CoinGecko:', error);
+  }
+  
+  // Return empty quote if no data available
   return {
-    lastPrice: round(lastPrice, 2),
-    bid: round(lastPrice - spread / 2, 2),
-    ask: round(lastPrice + spread / 2, 2),
-    open: round(open, 2),
-    high: round(high, 2),
-    low: round(low, 2),
-    prevClose: round(prevClose, 2),
-    change: round(change, 2),
-    changePercent: round((change / prevClose) * 100, 2),
-    volume: Math.floor(Math.random() * 1000000000),
+    lastPrice: 0,
+    bid: 0,
+    ask: 0,
+    open: 0,
+    high: 0,
+    low: 0,
+    prevClose: 0,
+    change: 0,
+    changePercent: 0,
+    volume: 0,
   };
+}
+
+function symbolToGeckoId(symbol: string): string {
+  const mapping: Record<string, string> = {
+    'BTC': 'bitcoin',
+    'ETH': 'ethereum',
+    'SOL': 'solana',
+    'BNB': 'binancecoin',
+    'XRP': 'ripple',
+    'ADA': 'cardano',
+    'DOGE': 'dogecoin',
+    'AVAX': 'avalanche-2',
+    'DOT': 'polkadot',
+    'LINK': 'chainlink',
+    'MATIC': 'matic-network',
+    'ATOM': 'cosmos',
+    'UNI': 'uniswap',
+    'LTC': 'litecoin',
+  };
+  return mapping[symbol.toUpperCase()] || symbol.toLowerCase();
 }
 
 async function fetchHistoricalBars(
@@ -518,39 +615,52 @@ async function fetchHistoricalBars(
   resolution: string,
   countback?: number
 ): Promise<UDFBar[]> {
-  const bars: UDFBar[] = [];
-  const intervalMs = resolutionToMs(resolution);
-  const basePrice = getBasePrice(symbol);
+  const normalized = normalizeSymbol(symbol);
+  const baseSymbol = normalized.replace('/USD', '').toUpperCase();
+  const binanceSymbol = `${baseSymbol}USDT`;
   
-  // Calculate number of bars
-  const maxBars = countback || Math.min(5000, Math.ceil((to - from) * 1000 / intervalMs));
-  let time = from;
-  let price = basePrice;
+  // Map TradingView resolution to Binance interval
+  const intervalMap: Record<string, string> = {
+    '1': '1m',
+    '5': '5m',
+    '15': '15m',
+    '30': '30m',
+    '60': '1h',
+    '120': '2h',
+    '240': '4h',
+    '360': '6h',
+    '720': '12h',
+    'D': '1d',
+    'W': '1w',
+    'M': '1M',
+  };
+  const interval = intervalMap[resolution] || '1d';
+  const limit = countback || Math.min(1000, Math.ceil((to - from) / resolutionToMs(resolution) * 1000));
   
-  for (let i = 0; i < maxBars && time <= to; i++) {
-    const volatility = 0.005; // 0.5% per bar
-    const change = (Math.random() - 0.5) * volatility * 2;
+  try {
+    // Fetch from Binance Klines API
+    const response = await fetch(
+      `https://api.binance.com/api/v3/klines?symbol=${binanceSymbol}&interval=${interval}&startTime=${from * 1000}&endTime=${to * 1000}&limit=${limit}`,
+      { next: { revalidate: 60 } }
+    );
     
-    const open = price;
-    const close = price * (1 + change);
-    const high = Math.max(open, close) * (1 + Math.random() * volatility);
-    const low = Math.min(open, close) * (1 - Math.random() * volatility);
-    const volume = Math.floor(Math.random() * 10000 + 1000);
-    
-    bars.push({
-      t: time,
-      o: round(open, 2),
-      h: round(high, 2),
-      l: round(low, 2),
-      c: round(close, 2),
-      v: volume,
-    });
-    
-    price = close;
-    time += Math.floor(intervalMs / 1000);
+    if (response.ok) {
+      const data = await response.json();
+      return data.map((kline: [number, string, string, string, string, string]) => ({
+        t: Math.floor(kline[0] / 1000), // Convert ms to seconds
+        o: round(parseFloat(kline[1]), 2),
+        h: round(parseFloat(kline[2]), 2),
+        l: round(parseFloat(kline[3]), 2),
+        c: round(parseFloat(kline[4]), 2),
+        v: parseFloat(kline[5]),
+      }));
+    }
+  } catch (error) {
+    console.error('Failed to fetch klines from Binance:', error);
   }
   
-  return bars;
+  // Return empty array if no data available
+  return [];
 }
 
 function resolutionToMs(resolution: string): number {
@@ -569,23 +679,6 @@ function resolutionToMs(resolution: string): number {
     'M': 30 * 24 * 60 * 60 * 1000,
   };
   return map[resolution] || map['D'];
-}
-
-function getBasePrice(symbol: string): number {
-  const prices: Record<string, number> = {
-    'BTC/USD': 67500,
-    'ETH/USD': 3450,
-    'SOL/USD': 175,
-    'BNB/USD': 580,
-    'XRP/USD': 0.52,
-    'ADA/USD': 0.45,
-    'DOGE/USD': 0.12,
-    'AVAX/USD': 35,
-    'DOT/USD': 7.5,
-    'LINK/USD': 15,
-  };
-  const normalized = normalizeSymbol(symbol);
-  return prices[normalized] || 100;
 }
 
 function round(value: number, decimals: number): number {

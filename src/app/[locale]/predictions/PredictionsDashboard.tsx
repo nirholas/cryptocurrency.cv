@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useCallback } from 'react';
 
+/** Dashboard component for price predictions and leaderboards */
+
 // =============================================================================
 // Types
 // =============================================================================

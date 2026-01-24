@@ -41,11 +41,20 @@ export const payToAddress: Address = (process.env.X402_PAY_TO_ADDRESS ||
 export const facilitatorUrl = process.env.X402_FACILITATOR_URL || 'https://x402.org/facilitator';
 
 /**
+ * Check if we're in production environment
+ * Uses VERCEL_ENV (Vercel deployments) or falls back to NODE_ENV
+ */
+export const isProduction =
+  process.env.VERCEL_ENV === 'production' || process.env.NODE_ENV === 'production';
+
+/**
  * Network configuration
  * - eip155:84532 = Base Sepolia (testnet) - Use for development
  * - eip155:8453 = Base Mainnet - Use for production
+ * Priority: X402_NETWORK env var > VERCEL_ENV/production detection
  */
-export const defaultNetwork = (process.env.X402_NETWORK || 'eip155:84532') as
+export const defaultNetwork = (process.env.X402_NETWORK ||
+  (isProduction && process.env.X402_TESTNET !== 'true' ? 'eip155:8453' : 'eip155:84532')) as
   | 'eip155:84532'
   | 'eip155:8453'
   | 'eip155:1';
@@ -53,7 +62,7 @@ export const defaultNetwork = (process.env.X402_NETWORK || 'eip155:84532') as
 /**
  * Whether we're in testnet mode
  */
-export const isTestnet = defaultNetwork === 'eip155:84532';
+export const isTestnet = defaultNetwork === 'eip155:84532' || process.env.X402_TESTNET === 'true';
 
 // ============================================================================
 // Server Initialization

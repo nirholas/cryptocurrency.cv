@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "crons": [
+    {
+      "path": "/api/cron/x-sentiment",
+      "schedule": "0,30 * * * *"
+    }
+  ],
+  "functions": {
+    "src/app/api/cron/x-sentiment/route.ts": {
+      "maxDuration": 300
+    },
+    "src/app/api/social/x/sentiment/route.ts": {
+      "maxDuration": 60
+    }
+  }
+}

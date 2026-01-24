@@ -69,68 +69,132 @@ interface WhaleAlertsResponse {
 }
 
 /**
- * Generate simulated whale transactions
- * In production, this would integrate with blockchain APIs
+ * Fetch real whale transactions from Whale Alert API
  */
-function generateWhaleTransactions(
+async function fetchWhaleTransactions(
   coins: string[],
   coinPrices: Map<string, number>,
   minThreshold: number
-): WhaleTransaction[] {
+): Promise<WhaleTransaction[]> {
   const transactions: WhaleTransaction[] = [];
-  const now = Date.now();
-  const addressTypes: Array<'exchange' | 'whale' | 'unknown'> = ['exchange', 'whale', 'unknown'];
-  const exchanges = ['binance', 'coinbase', 'kraken', 'okx', 'bybit'];
-
-  for (const coin of coins) {
-    const price = coinPrices.get(coin) || 1;
-    const baseAmount = minThreshold / price;
-
-    // Generate 3-8 transactions per coin
-    const txCount = 3 + Math.floor(Math.random() * 6);
-
-    for (let i = 0; i < txCount; i++) {
-      const multiplier = 1 + Math.random() * 10; // 1x to 11x threshold
-      const amount = baseAmount * multiplier;
-      const valueUsd = amount * price;
-
-      const fromType = addressTypes[Math.floor(Math.random() * addressTypes.length)];
-      const toType = addressTypes[Math.floor(Math.random() * addressTypes.length)];
-
-      let signal: 'bullish' | 'bearish' | 'neutral' = 'neutral';
-      if (fromType === 'exchange' && toType !== 'exchange') {
-        signal = 'bullish'; // Withdrawal from exchange
-      } else if (fromType !== 'exchange' && toType === 'exchange') {
-        signal = 'bearish'; // Deposit to exchange
+  const apiKey = process.env.WHALE_ALERT_API_KEY;
+  
+  // Map coin names to Whale Alert symbols
+  const coinToSymbol: Record<string, string> = {
+    'bitcoin': 'btc',
+    'ethereum': 'eth',
+    'ripple': 'xrp',
+    'tether': 'usdt',
+    'usdc': 'usdc',
+    'binancecoin': 'bnb',
+    'dogecoin': 'doge',
+    'cardano': 'ada',
+    'solana': 'sol',
+    'polkadot': 'dot',
+  };
+  
+  if (apiKey) {
+    // Use Whale Alert API
+    try {
+      const now = Math.floor(Date.now() / 1000);
+      const response = await fetch(
+        `https://api.whale-alert.io/v1/transactions?api_key=${apiKey}&min_value=${minThreshold}&start=${now - 86400}`,
+        { next: { revalidate: 60 } }
+      );
+      
+      if (response.ok) {
+        const data = await response.json();
+        for (const tx of data.transactions || []) {
+          const coinId = Object.keys(coinToSymbol).find(k => coinToSymbol[k] === tx.symbol.toLowerCase());
+          if (!coinId || !coins.includes(coinId)) continue;
+          
+          const price = coinPrices.get(coinId) || 1;
+          const valueUsd = tx.amount_usd || tx.amount * price;
+          
+          if (valueUsd < minThreshold) continue;
+          
+          const fromType = tx.from?.owner_type === 'exchange' ? 'exchange' : 
+                          tx.from?.owner_type === 'unknown' ? 'unknown' : 'whale';
+          const toType = tx.to?.owner_type === 'exchange' ? 'exchange' : 
+                        tx.to?.owner_type === 'unknown' ? 'unknown' : 'whale';
+          
+          let signal: 'bullish' | 'bearish' | 'neutral' = 'neutral';
+          if (fromType === 'exchange' && toType !== 'exchange') signal = 'bullish';
+          else if (fromType !== 'exchange' && toType === 'exchange') signal = 'bearish';
+          
+          const multiplier = valueUsd / minThreshold;
+          const significance: 'low' | 'medium' | 'high' | 'critical' =
+            multiplier > 8 ? 'critical' : multiplier > 5 ? 'high' : multiplier > 2 ? 'medium' : 'low';
+          
+          transactions.push({
+            id: tx.id || `${tx.hash}-${tx.timestamp}`,
+            coin: coinId,
+            amount: tx.amount,
+            valueUsd: Math.round(valueUsd),
+            fromType: fromType as 'exchange' | 'whale' | 'unknown',
+            toType: toType as 'exchange' | 'whale' | 'unknown',
+            fromAddress: tx.from?.address || 'unknown',
+            toAddress: tx.to?.address || 'unknown',
+            timestamp: tx.timestamp * 1000,
+            txHash: tx.hash || '',
+            significance,
+            signal,
+          });
+        }
       }
-
-      const significance: 'low' | 'medium' | 'high' | 'critical' =
-        multiplier > 8 ? 'critical' : multiplier > 5 ? 'high' : multiplier > 2 ? 'medium' : 'low';
-
-      transactions.push({
-        id: `${coin}-${now}-${i}`,
-        coin,
-        amount: Math.round(amount * 1000) / 1000,
-        valueUsd: Math.round(valueUsd),
-        fromType,
-        toType,
-        fromAddress:
-          fromType === 'exchange'
-            ? `${exchanges[Math.floor(Math.random() * exchanges.length)]}-hot-wallet`
-            : `0x${Math.random().toString(16).slice(2, 10)}...${Math.random().toString(16).slice(2, 6)}`,
-        toAddress:
-          toType === 'exchange'
-            ? `${exchanges[Math.floor(Math.random() * exchanges.length)]}-deposit`
-            : `0x${Math.random().toString(16).slice(2, 10)}...${Math.random().toString(16).slice(2, 6)}`,
-        timestamp: now - Math.floor(Math.random() * 86400000), // Last 24h
-        txHash: `0x${Math.random().toString(16).slice(2)}${Math.random().toString(16).slice(2)}`,
-        significance,
-        signal,
-      });
+    } catch (error) {
+      console.error('Whale Alert API error:', error);
+    }
+  }
+  
+  // Fallback to Blockchair API for Bitcoin and Ethereum if no Whale Alert data
+  if (transactions.length === 0) {
+    for (const coin of coins) {
+      const price = coinPrices.get(coin) || 1;
+      const minAmount = minThreshold / price;
+      
+      // Try Blockchair for large transactions
+      try {
+        const chain = coin === 'bitcoin' ? 'bitcoin' : coin === 'ethereum' ? 'ethereum' : null;
+        if (!chain) continue;
+        
+        const response = await fetch(
+          `https://api.blockchair.com/${chain}/transactions?a=time,value&q=value(${Math.floor(minAmount * 1e8)}..)&s=time(desc)&limit=10`,
+          { next: { revalidate: 120 } }
+        );
+        
+        if (response.ok) {
+          const data = await response.json();
+          for (const tx of data.data || []) {
+            const amount = chain === 'bitcoin' ? tx.value / 1e8 : tx.value / 1e18;
+            const valueUsd = amount * price;
+            
+            const multiplier = valueUsd / minThreshold;
+            const significance: 'low' | 'medium' | 'high' | 'critical' =
+              multiplier > 8 ? 'critical' : multiplier > 5 ? 'high' : multiplier > 2 ? 'medium' : 'low';
+            
+            transactions.push({
+              id: `${coin}-${tx.time}-${transactions.length}`,
+              coin,
+              amount: Math.round(amount * 1000) / 1000,
+              valueUsd: Math.round(valueUsd),
+              fromType: 'unknown',
+              toType: 'unknown',
+              fromAddress: 'unknown',
+              toAddress: 'unknown',
+              timestamp: new Date(tx.time).getTime(),
+              txHash: tx.hash || '',
+              significance,
+              signal: 'neutral',
+            });
+          }
+        }
+      } catch {
+        // Blockchair may not respond
+      }
     }
   }
 
-  // Sort by timestamp descending
   return transactions.sort((a, b) => b.timestamp - a.timestamp);
 }
 
@@ -170,19 +234,66 @@ function calculateWhaleStats(transactions: WhaleTransaction[], coin: string): Wh
 }
 
 /**
- * Generate concentration data (simulated)
+ * Fetch real concentration data from on-chain APIs
  */
-function generateConcentrationData(): ConcentrationData {
-  return {
-    top10HoldersPercent: 25 + Math.random() * 30,
-    top50HoldersPercent: 45 + Math.random() * 25,
-    top100HoldersPercent: 55 + Math.random() * 25,
-    concentrationTrend: ['increasing', 'decreasing', 'stable'][Math.floor(Math.random() * 3)] as
-      | 'increasing'
-      | 'decreasing'
-      | 'stable',
-    giniCoefficient: 0.65 + Math.random() * 0.25,
-  };
+async function fetchConcentrationData(coin: string): Promise<ConcentrationData | null> {
+  // Try IntoTheBlock API for holder concentration
+  try {
+    const apiKey = process.env.INTOTHEBLOCK_API_KEY;
+    if (apiKey) {
+      const response = await fetch(
+        `https://api.intotheblock.com/v1/ownership/${coin}`,
+        {
+          headers: { 'Authorization': `Bearer ${apiKey}` },
+          next: { revalidate: 3600 },
+        }
+      );
+      
+      if (response.ok) {
+        const data = await response.json();
+        return {
+          top10HoldersPercent: data.top10Holders?.percentage || 0,
+          top50HoldersPercent: data.top50Holders?.percentage || 0,
+          top100HoldersPercent: data.top100Holders?.percentage || 0,
+          concentrationTrend: data.trend || 'stable',
+          giniCoefficient: data.giniCoefficient || 0,
+        };
+      }
+    }
+  } catch {
+    // IntoTheBlock may not respond
+  }
+  
+  // Try Nansen or Glassnode alternatives
+  try {
+    const apiKey = process.env.GLASSNODE_API_KEY;
+    if (apiKey && (coin === 'bitcoin' || coin === 'ethereum')) {
+      const symbol = coin === 'bitcoin' ? 'BTC' : 'ETH';
+      const response = await fetch(
+        `https://api.glassnode.com/v1/metrics/distribution/balance_1pct_holders?a=${symbol}&api_key=${apiKey}`,
+        { next: { revalidate: 3600 } }
+      );
+      
+      if (response.ok) {
+        const data = await response.json();
+        const latestData = data[data.length - 1];
+        if (latestData) {
+          return {
+            top10HoldersPercent: latestData.v || 0,
+            top50HoldersPercent: 0, // Not available from this endpoint
+            top100HoldersPercent: 0,
+            concentrationTrend: 'stable',
+            giniCoefficient: 0,
+          };
+        }
+      }
+    }
+  } catch {
+    // Glassnode may not respond
+  }
+  
+  // Return null if no data available
+  return null;
 }
 
 /**
@@ -210,14 +321,16 @@ async function handler(
     });
     await Promise.all(pricePromises);
 
-    // Generate whale transactions
-    const transactions = generateWhaleTransactions(coins, coinPrices, minThreshold);
+    // Fetch real whale transactions
+    const transactions = await fetchWhaleTransactions(coins, coinPrices, minThreshold);
 
     // Calculate stats for each coin
     const stats = coins.map((coin) => calculateWhaleStats(transactions, coin));
 
-    // Generate concentration data if requested
-    const concentration = includeConcentration ? generateConcentrationData() : undefined;
+    // Fetch concentration data if requested
+    const concentration = includeConcentration 
+      ? await fetchConcentrationData(coins[0]) || undefined
+      : undefined;
 
     return NextResponse.json(
       {
