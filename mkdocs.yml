@@ -149,6 +149,7 @@ nav:
   - API Reference:
     - Overview: API.md
     - Real-Time: REALTIME.md
+    - Premium API: PREMIUM.md
   
   - Guides:
     - User Guide: USER-GUIDE.md
@@ -156,7 +157,10 @@ nav:
     - AI Features: AI-FEATURES.md
     - Admin Dashboard: ADMIN.md
     - Components: COMPONENTS.md
+    - React Hooks: HOOKS.md
+    - Library Modules: LIBRARIES.md
     - Testing: TESTING.md
+    - Database: DATABASE.md
   
   - SDKs:
     - Overview: sdks/index.md
@@ -169,6 +173,7 @@ nav:
   
   - Integrations:
     - Overview: integrations/index.md
+    - Data APIs: integrations/data-apis.md
     - MCP Server: integrations/mcp.md
     - ChatGPT Plugin: integrations/chatgpt.md
     - Browser Extension: integrations/extension.md
@@ -186,8 +191,10 @@ nav:
   - Deployment:
     - Self-Hosting: DEPLOYMENT.md
     - Architecture: ARCHITECTURE.md
+    - Scalability: SCALABILITY.md
   
   - Community:
     - Contributing: CONTRIBUTING.md
     - Security: SECURITY.md
+    - Agent Prompts: AGENT-PROMPTS.md
     - Agent Prompts: AGENT-PROMPTS.md

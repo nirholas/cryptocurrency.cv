@@ -11,6 +11,7 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
 - [News Endpoints](#news-endpoints)
   - [GET /api/news](#get-apinews)
   - [GET /api/news/international](#get-apinewsinternational)
+  - [GET /api/news/categories](#get-apinewscategories)
   - [GET /api/bitcoin](#get-apibitcoin)
   - [GET /api/defi](#get-apidefi)
   - [GET /api/breaking](#get-apibreaking)
@@ -25,6 +26,49 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
   - [GET /api/ai/brief](#get-apiaibrief)
   - [POST /api/ai/debate](#post-apiaidebate)
   - [POST /api/ai/counter](#post-apiaicounter)
+- [Trading & Market APIs](#trading--market-apis)
+  - [GET /api/arbitrage](#get-apiarbitrage)
+  - [GET /api/signals](#get-apisignals)
+  - [GET /api/funding](#get-apifunding)
+  - [GET /api/options](#get-apioptions)
+  - [GET /api/liquidations](#get-apiliquidations)
+  - [GET /api/whale-alerts](#get-apiwhale-alerts)
+  - [GET /api/orderbook](#get-apiorderbook)
+  - [GET /api/fear-greed](#get-apifear-greed)
+- [AI Analysis APIs](#ai-analysis-apis)
+  - [GET /api/narratives](#get-apinarratives)
+  - [GET /api/entities](#get-apientities)
+  - [GET /api/claims](#get-apiclaims)
+  - [GET /api/clickbait](#get-apiclickbait)
+  - [GET /api/origins](#get-apiorigins)
+  - [GET /api/relationships](#get-apirelationships)
+- [Research & Analytics APIs](#research--analytics-apis)
+  - [GET /api/regulatory](#get-apiregulatory)
+  - [GET /api/academic](#get-apiacademic)
+  - [GET /api/citations](#get-apicitations)
+  - [GET /api/coverage-gap](#get-apicoverage-gap)
+- [Social Intelligence APIs](#social-intelligence-apis)
+  - [GET /api/social](#get-apisocial)
+  - [GET /api/social/x/sentiment](#get-apisocialxsentiment)
+  - [GET /api/influencers](#get-apiinfluencers)
+- [Premium API Endpoints](#premium-api-endpoints)
+  - [GET /api/premium](#get-apipremium)
+  - [GET /api/premium/ai/signals](#get-apipremiumaisignals)
+  - [GET /api/premium/whales/transactions](#get-apipremiumwhalestransactions)
+  - [GET /api/premium/screener/advanced](#get-apipremiumscreeneradvanced)
+  - [GET /api/premium/smart-money](#get-apipremiumsmart-money)
+- [Portfolio APIs](#portfolio-apis)
+  - [POST /api/portfolio](#post-apiportfolio)
+  - [GET /api/portfolio/performance](#get-apiportfolioperformance)
+  - [GET /api/portfolio/tax](#get-apiportfoliotax)
+- [Market Data APIs](#market-data-apis)
+  - [GET /api/market/coins](#get-apimarketcoins)
+  - [GET /api/market/ohlc/[coinId]](#get-apimarketohlccoinid)
+  - [GET /api/market/exchanges](#get-apimarketexchanges)
+  - [GET /api/market/derivatives](#get-apimarketderivatives)
+- [DeFi APIs](#defi-apis)
+  - [GET /api/defi/protocol-health](#get-apidefiprotocol-health)
+  - [GET /api/onchain/events](#get-apionchanevents)
 - [Real-Time Endpoints](#real-time-endpoints)
   - [GET /api/sse](#get-apisse)
   - [GET /api/ws](#get-apiws)
@@ -35,13 +79,9 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
   - [PUT /api/alerts/[id]](#put-apialertsid)
   - [DELETE /api/alerts/[id]](#delete-apialertsid)
   - [POST /api/newsletter](#post-apinewsletter)
-  - [POST /api/portfolio](#post-apiportfolio)
   - [POST /api/webhooks](#post-apiwebhooks)
 - [Admin Endpoints](#admin-endpoints)
   - [GET /api/admin](#get-apiadmin)
-- [Market Data](#market-data)
-  - [GET /api/sources](#get-apisources)
-  - [GET /api/stats](#get-apistats)
 - [Archive Endpoints](#archive-endpoints)
   - [GET /api/archive](#get-apiarchive)
   - [GET /api/archive/status](#get-apiarchivestatus)
@@ -51,41 +91,7 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
   - [GET /api/analytics/headlines](#get-apianalyticsheadlines)
   - [GET /api/analytics/credibility](#get-apianalyticscredibility)
   - [GET /api/analytics/anomalies](#get-apianalyticsanomalies)
-  - [GET /api/fear-greed](#get-apifear-greed)
-- [Content Verification](#content-verification)
-  - [GET /api/factcheck](#get-apifactcheck)
-  - [GET /api/detect/ai-content](#get-apidetectai-content)
-  - [GET /api/clickbait](#get-apiclickbait)
-  - [GET /api/claims](#get-apiclaims)
-- [Social & Influencers](#social--influencers)
-  - [GET /api/social/feed](#get-apisocialfeed)
-  - [GET /api/social/trending](#get-apisocialtrending)
-  - [GET /api/influencers](#get-apiinfluencers)
-- [Market & Trading](#market--trading)
-  - [GET /api/market/prices](#get-apimarketprices)
-  - [GET /api/market/dominance](#get-apimarketdominance)
-  - [GET /api/liquidations](#get-apiliquidations)
-  - [GET /api/whale-alerts](#get-apiwhale-alerts)
-  - [GET /api/options](#get-apioptions)
-  - [GET /api/funding](#get-apifunding)
-  - [GET /api/arbitrage](#get-apiarbitrage)
-  - [GET /api/orderbook](#get-apiorderbook)
-  - [GET /api/signals](#get-apisignals)
-- [Research & Deep Dives](#research--deep-dives)
-  - [GET /api/research](#get-apiresearch)
-  - [GET /api/research/backtest](#get-apiresearchbacktest)
-  - [GET /api/narratives](#get-apinarratives)
-  - [GET /api/regulatory](#get-apiregulatory)
-  - [GET /api/onchain](#get-apionchain)
-  - [GET /api/academic](#get-apiacademic)
-  - [GET /api/citations](#get-apicitations)
-  - [GET /api/predictions](#get-apipredictions)
-- [AI Agents & Oracle](#ai-agents--oracle)
-  - [GET /api/oracle](#get-apioracle)
-  - [GET /api/ai/agent](#get-apiaiagent)
-- [Social Monitoring](#social-monitoring)
-  - [GET /api/social/monitor](#get-apisocialmonitor)
-  - [GET /api/social/influencer-score](#get-apisocialinfluencer-score)
+- [V1 API (Legacy)](#v1-api-legacy)
 - [Storage & Export](#storage--export)
   - [GET /api/storage/cas](#get-apistoragecas)
   - [GET /api/export](#get-apiexport)
@@ -1842,6 +1848,1052 @@ Cache status and management.
 
 ---
 
+## Trading & Market APIs
+
+### GET /api/arbitrage
+
+Scan for cross-exchange arbitrage opportunities.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `pairs` | string | BTC,ETH | Comma-separated trading pairs |
+| `minSpread` | number | 0.5 | Minimum spread percentage |
+| `exchanges` | string | all | Filter by exchanges |
+
+**Example:**
+
+```bash
+curl "https://free-crypto-news.vercel.app/api/arbitrage?pairs=BTC,ETH&minSpread=1"
+```
+
+**Response:**
+
+```json
+{
+  "opportunities": [
+    {
+      "pair": "BTC/USDT",
+      "buyExchange": "Binance",
+      "sellExchange": "Coinbase",
+      "buyPrice": 98500,
+      "sellPrice": 99200,
+      "spreadPercent": 0.71,
+      "potentialProfit": 700,
+      "volume24h": 15000000,
+      "lastUpdated": "2026-01-22T12:30:00Z"
+    }
+  ],
+  "scanTime": "145ms"
+}
+```
+
+---
+
+### GET /api/signals
+
+AI-generated trading signals based on news sentiment and market data.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `asset` | string | BTC | Asset to analyze |
+| `timeframe` | string | 4h | Signal timeframe: 1h, 4h, 1d |
+
+**Response:**
+
+```json
+{
+  "asset": "BTC",
+  "signal": "buy",
+  "confidence": 0.78,
+  "factors": [
+    { "type": "sentiment", "value": "bullish", "weight": 0.4 },
+    { "type": "technical", "value": "breakout", "weight": 0.3 },
+    { "type": "onchain", "value": "accumulation", "weight": 0.3 }
+  ],
+  "priceTarget": 105000,
+  "stopLoss": 94000,
+  "riskReward": 2.1,
+  "generatedAt": "2026-01-22T12:30:00Z"
+}
+```
+
+---
+
+### GET /api/funding
+
+Funding rates across perpetual exchanges.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `symbol` | string | BTCUSDT | Trading pair |
+| `exchanges` | string | all | Filter exchanges |
+
+**Response:**
+
+```json
+{
+  "rates": [
+    {
+      "exchange": "Binance",
+      "symbol": "BTCUSDT",
+      "fundingRate": 0.0012,
+      "nextFundingTime": "2026-01-22T16:00:00Z",
+      "markPrice": 98750,
+      "openInterest": 45000000000
+    },
+    {
+      "exchange": "Bybit",
+      "symbol": "BTCUSDT",
+      "fundingRate": 0.0015,
+      "nextFundingTime": "2026-01-22T16:00:00Z"
+    }
+  ],
+  "avgFundingRate": 0.00135,
+  "sentiment": "bullish"
+}
+```
+
+---
+
+### GET /api/options
+
+Options flow data from major derivatives exchanges.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `asset` | string | BTC | Underlying asset |
+| `exchange` | string | deribit | deribit, okx, bybit |
+| `type` | string | all | call, put, or all |
+
+**Response:**
+
+```json
+{
+  "flows": [
+    {
+      "exchange": "Deribit",
+      "asset": "BTC",
+      "type": "call",
+      "strike": 120000,
+      "expiry": "2026-03-28",
+      "premium": 2500,
+      "size": 100,
+      "impliedVol": 65.5,
+      "timestamp": "2026-01-22T12:25:00Z"
+    }
+  ],
+  "putCallRatio": 0.65,
+  "maxPain": 95000,
+  "totalVolume": 125000000
+}
+```
+
+---
+
+### GET /api/liquidations
+
+Real-time and historical liquidation data.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `symbol` | string | all | Trading pair filter |
+| `side` | string | all | long, short, or all |
+| `minValue` | number | 10000 | Minimum USD value |
+| `period` | string | 1h | 1h, 4h, 24h |
+
+**Response:**
+
+```json
+{
+  "liquidations": [
+    {
+      "exchange": "Binance",
+      "symbol": "BTCUSDT",
+      "side": "long",
+      "quantity": 2.5,
+      "price": 97500,
+      "value": 243750,
+      "timestamp": "2026-01-22T12:28:00Z"
+    }
+  ],
+  "summary": {
+    "totalLongs": 45000000,
+    "totalShorts": 12000000,
+    "netLiquidations": "long",
+    "largestSingle": 2500000
+  }
+}
+```
+
+---
+
+### GET /api/whale-alerts
+
+Large blockchain transactions and whale movements.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `asset` | string | all | BTC, ETH, USDT, etc. |
+| `minValue` | number | 1000000 | Minimum USD value |
+| `type` | string | all | transfer, exchange_in, exchange_out |
+
+**Response:**
+
+```json
+{
+  "alerts": [
+    {
+      "txHash": "abc123...",
+      "asset": "BTC",
+      "amount": 500,
+      "valueUsd": 49500000,
+      "from": "unknown wallet",
+      "to": "Coinbase",
+      "type": "exchange_in",
+      "timestamp": "2026-01-22T12:20:00Z",
+      "sentiment": "bearish"
+    }
+  ],
+  "hourlyFlow": {
+    "exchangeInflow": 125000000,
+    "exchangeOutflow": 95000000,
+    "netFlow": "inflow"
+  }
+}
+```
+
+---
+
+### GET /api/orderbook
+
+Aggregated order book depth across exchanges.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `symbol` | string | BTCUSDT | Trading pair |
+| `depth` | number | 20 | Number of levels |
+| `exchanges` | string | all | Comma-separated exchanges |
+
+**Response:**
+
+```json
+{
+  "symbol": "BTCUSDT",
+  "bids": [
+    { "price": 98500, "quantity": 15.5, "exchanges": ["Binance", "Coinbase"] }
+  ],
+  "asks": [
+    { "price": 98550, "quantity": 12.3, "exchanges": ["Binance", "Kraken"] }
+  ],
+  "spread": 0.05,
+  "imbalance": 0.12,
+  "aggregatedAt": "2026-01-22T12:30:00Z"
+}
+```
+
+---
+
+### GET /api/fear-greed
+
+Crypto Fear & Greed Index.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `days` | number | 1 | Historical days (1-365) |
+
+**Response:**
+
+```json
+{
+  "value": 72,
+  "classification": "Greed",
+  "previousClose": 68,
+  "change": 4,
+  "history": [
+    { "date": "2026-01-21", "value": 68, "classification": "Greed" }
+  ],
+  "components": {
+    "volatility": 25,
+    "momentum": 80,
+    "social": 75,
+    "dominance": 55,
+    "trends": 70
+  }
+}
+```
+
+---
+
+## AI Analysis APIs
+
+### GET /api/narratives
+
+AI-detected narrative clusters in crypto news.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `period` | string | 24h | Time window: 6h, 12h, 24h, 7d |
+| `limit` | number | 10 | Number of narratives |
+
+**Response:**
+
+```json
+{
+  "narratives": [
+    {
+      "id": "etf-adoption",
+      "title": "Bitcoin ETF Institutional Adoption",
+      "summary": "Major institutions increasing BTC exposure through ETFs",
+      "sentiment": "bullish",
+      "strength": 0.89,
+      "articleCount": 45,
+      "tickers": ["BTC", "GBTC", "IBIT"],
+      "keyPhrases": ["institutional buying", "ETF inflows", "BlackRock"],
+      "trendDirection": "rising"
+    }
+  ],
+  "emergingNarratives": [...],
+  "fadingNarratives": [...]
+}
+```
+
+---
+
+### GET /api/entities
+
+Named entity recognition in news articles.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `url` | string | - | Article URL to analyze |
+| `text` | string | - | Raw text to analyze |
+
+**Response:**
+
+```json
+{
+  "entities": [
+    { "text": "BlackRock", "type": "ORGANIZATION", "count": 5 },
+    { "text": "Bitcoin", "type": "CRYPTO_ASSET", "count": 12 },
+    { "text": "Gary Gensler", "type": "PERSON", "count": 3 },
+    { "text": "SEC", "type": "REGULATOR", "count": 8 }
+  ],
+  "relationships": [
+    { "subject": "BlackRock", "predicate": "filed", "object": "ETF application" }
+  ]
+}
+```
+
+---
+
+### GET /api/claims
+
+Extract and verify claims from articles.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `url` | string | required | Article URL |
+
+**Response:**
+
+```json
+{
+  "claims": [
+    {
+      "text": "Bitcoin hash rate reached all-time high",
+      "type": "factual",
+      "verifiable": true,
+      "confidence": 0.95,
+      "sources": ["blockchain.com", "glassnode.com"]
+    },
+    {
+      "text": "BTC will reach $200K by end of year",
+      "type": "prediction",
+      "verifiable": false,
+      "confidence": 0.30
+    }
+  ]
+}
+```
+
+---
+
+### GET /api/clickbait
+
+Detect clickbait and sensationalism in headlines.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `headline` | string | required | Headline to analyze |
+
+**Response:**
+
+```json
+{
+  "isClickbait": false,
+  "score": 0.23,
+  "factors": {
+    "sensationalWords": 0,
+    "exaggeration": false,
+    "emotionalManipulation": false,
+    "misleadingClaims": false
+  },
+  "suggestion": "Headline appears factual and balanced"
+}
+```
+
+---
+
+### GET /api/origins
+
+Detect original source of a news story.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `url` | string | required | Article URL |
+
+**Response:**
+
+```json
+{
+  "originalSource": {
+    "url": "https://sec.gov/news/...",
+    "title": "SEC Press Release",
+    "publishedAt": "2026-01-22T09:00:00Z",
+    "type": "primary_source"
+  },
+  "derivedFrom": [
+    {
+      "url": "https://coindesk.com/...",
+      "publishedAt": "2026-01-22T09:15:00Z",
+      "similarity": 0.85
+    }
+  ],
+  "isOriginal": false,
+  "propagationChain": [...]
+}
+```
+
+---
+
+### GET /api/relationships
+
+Extract "who did what" relationships from articles.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `url` | string | required | Article URL |
+
+**Response:**
+
+```json
+{
+  "relationships": [
+    {
+      "subject": "BlackRock",
+      "action": "purchased",
+      "object": "500 BTC",
+      "context": "for iShares ETF",
+      "confidence": 0.92
+    },
+    {
+      "subject": "SEC",
+      "action": "approved",
+      "object": "spot Bitcoin ETF",
+      "context": "historic ruling",
+      "confidence": 0.98
+    }
+  ]
+}
+```
+
+---
+
+## Research & Analytics APIs
+
+### GET /api/regulatory
+
+Regulatory news and intelligence.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `jurisdiction` | string | all | us, eu, uk, asia, all |
+| `type` | string | all | ruling, proposal, enforcement |
+
+**Response:**
+
+```json
+{
+  "updates": [
+    {
+      "title": "SEC Approves Spot Bitcoin ETF",
+      "jurisdiction": "US",
+      "regulator": "SEC",
+      "type": "ruling",
+      "impact": "high",
+      "affectedAssets": ["BTC", "ETH"],
+      "summary": "Historic approval opens door to institutional investment",
+      "sourceUrl": "https://sec.gov/...",
+      "date": "2026-01-22"
+    }
+  ],
+  "upcomingDeadlines": [...],
+  "sentimentByJurisdiction": {
+    "US": "positive",
+    "EU": "neutral",
+    "Asia": "mixed"
+  }
+}
+```
+
+---
+
+### GET /api/academic
+
+Academic research access for researchers.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `tier` | string | basic | basic, researcher, institution |
+| `format` | string | json | json, csv, parquet |
+
+**Response:**
+
+```json
+{
+  "access": {
+    "tier": "researcher",
+    "dailyLimit": 10000,
+    "features": ["historical", "bulk_export", "raw_data"],
+    "formats": ["json", "csv", "parquet"]
+  },
+  "endpoints": {
+    "historical": "/api/academic/historical",
+    "bulk": "/api/academic/bulk",
+    "stream": "/api/academic/stream"
+  }
+}
+```
+
+---
+
+### GET /api/citations
+
+Citation network for research articles.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `articleId` | string | required | Article ID or URL |
+
+**Response:**
+
+```json
+{
+  "article": {
+    "id": "abc123",
+    "title": "Bitcoin ETF Analysis",
+    "citations": 15
+  },
+  "citedBy": [
+    { "title": "Market Impact Study", "url": "...", "date": "2026-01-23" }
+  ],
+  "references": [
+    { "title": "SEC Filing", "url": "...", "type": "primary" }
+  ]
+}
+```
+
+---
+
+### GET /api/coverage-gap
+
+Analyze topics with insufficient news coverage.
+
+**Response:**
+
+```json
+{
+  "underreported": [
+    {
+      "topic": "Layer 2 Security Audits",
+      "currentCoverage": 3,
+      "expectedCoverage": 15,
+      "gap": 0.80,
+      "suggestedAngles": [...]
+    }
+  ],
+  "overreported": [
+    {
+      "topic": "Bitcoin Price Predictions",
+      "coverageRatio": 3.5
+    }
+  ]
+}
+```
+
+---
+
+## Social Intelligence APIs
+
+### GET /api/social
+
+Aggregated social media sentiment.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `asset` | string | BTC | Asset to analyze |
+| `platforms` | string | all | twitter, discord, telegram, reddit |
+
+**Response:**
+
+```json
+{
+  "asset": "BTC",
+  "overallSentiment": 0.72,
+  "platforms": {
+    "twitter": { "sentiment": 0.75, "volume": 125000, "trending": true },
+    "discord": { "sentiment": 0.68, "messages": 45000 },
+    "telegram": { "sentiment": 0.70, "messages": 32000 },
+    "reddit": { "sentiment": 0.65, "posts": 1200, "comments": 15000 }
+  },
+  "topInfluencers": [...],
+  "viralPosts": [...]
+}
+```
+
+---
+
+### GET /api/social/x/sentiment
+
+X (Twitter) sentiment via Nitter scraping (no API key required).
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `query` | string | bitcoin | Search query |
+| `accounts` | string | - | Comma-separated accounts to monitor |
+
+**Response:**
+
+```json
+{
+  "query": "bitcoin",
+  "sentiment": {
+    "overall": 0.68,
+    "bullish": 0.45,
+    "bearish": 0.12,
+    "neutral": 0.43
+  },
+  "volume": {
+    "tweets": 15000,
+    "engagement": 250000,
+    "trending": true
+  },
+  "topTweets": [...],
+  "scrapedAt": "2026-01-22T12:30:00Z"
+}
+```
+
+---
+
+### GET /api/influencers
+
+Crypto influencer tracking and scoring.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `platform` | string | all | twitter, youtube, all |
+| `limit` | number | 20 | Number of influencers |
+
+**Response:**
+
+```json
+{
+  "influencers": [
+    {
+      "name": "PlanB",
+      "handle": "@100trillionUSD",
+      "platform": "twitter",
+      "followers": 1800000,
+      "credibilityScore": 0.72,
+      "accuracy": 0.65,
+      "recentPredictions": [...],
+      "sentiment": "bullish"
+    }
+  ]
+}
+```
+
+---
+
+## Premium API Endpoints
+
+Premium endpoints require authentication via API key.
+
+### Authentication
+
+Include your API key in the header:
+
+```bash
+curl -H "Authorization: Bearer YOUR_API_KEY" \
+  "https://free-crypto-news.vercel.app/api/premium/..."
+```
+
+---
+
+### GET /api/premium
+
+Get premium subscription status.
+
+**Response:**
+
+```json
+{
+  "subscription": {
+    "tier": "pro",
+    "status": "active",
+    "features": ["advanced_signals", "whale_alerts", "priority_support"],
+    "usage": { "requests": 5000, "limit": 50000 },
+    "expiresAt": "2026-02-22T00:00:00Z"
+  }
+}
+```
+
+---
+
+### GET /api/premium/ai/signals
+
+Advanced AI trading signals with backtesting.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `assets` | string | all | Comma-separated assets |
+| `strategy` | string | momentum | momentum, mean_reversion, trend |
+| `backtest` | boolean | false | Include historical performance |
+
+---
+
+### GET /api/premium/whales/transactions
+
+Real-time whale transaction feed.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `minValue` | number | 100000 | Minimum USD value |
+| `assets` | string | all | Asset filter |
+| `realtime` | boolean | false | WebSocket stream |
+
+---
+
+### GET /api/premium/screener/advanced
+
+Advanced token screener with custom filters.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `filters` | object | - | Custom filter criteria |
+| `sort` | string | volume | Sort field |
+| `limit` | number | 50 | Results limit |
+
+---
+
+### GET /api/premium/smart-money
+
+Smart money wallet tracking.
+
+**Response:**
+
+```json
+{
+  "wallets": [
+    {
+      "address": "0x...",
+      "label": "Galaxy Digital",
+      "holdings": [...],
+      "recentTrades": [...],
+      "pnl30d": 12.5
+    }
+  ]
+}
+```
+
+---
+
+## Portfolio APIs
+
+### POST /api/portfolio
+
+Create or update portfolio.
+
+**Request Body:**
+
+```json
+{
+  "name": "Main Portfolio",
+  "holdings": [
+    { "asset": "BTC", "quantity": 2.5, "avgPrice": 45000 },
+    { "asset": "ETH", "quantity": 10, "avgPrice": 2500 }
+  ]
+}
+```
+
+---
+
+### GET /api/portfolio/performance
+
+Portfolio performance analytics.
+
+**Response:**
+
+```json
+{
+  "totalValue": 350000,
+  "totalCost": 287500,
+  "pnl": 62500,
+  "pnlPercent": 21.74,
+  "breakdown": [...],
+  "allocation": {
+    "BTC": 0.70,
+    "ETH": 0.30
+  }
+}
+```
+
+---
+
+### GET /api/portfolio/tax
+
+Tax reporting data.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `year` | number | current | Tax year |
+| `jurisdiction` | string | US | Tax jurisdiction |
+
+---
+
+## V1 API (Legacy)
+
+The `/api/v1/*` endpoints provide backwards compatibility.
+
+### GET /api/v1/coins
+
+Legacy coin data endpoint.
+
+### GET /api/v1/global
+
+Global market data.
+
+### GET /api/v1/trending
+
+Trending coins.
+
+### GET /api/v1/defi
+
+DeFi protocol data.
+
+### GET /api/v1/gas
+
+Ethereum gas prices.
+
+---
+
+## Market Data APIs
+
+### GET /api/market/coins
+
+Detailed coin market data.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `ids` | string | - | Comma-separated coin IDs |
+| `vs_currency` | string | usd | Quote currency |
+| `order` | string | market_cap_desc | Sort order |
+| `per_page` | number | 100 | Results per page |
+
+---
+
+### GET /api/market/ohlc/[coinId]
+
+OHLC candlestick data.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `days` | number | 1 | Historical days |
+| `interval` | string | auto | 1m, 5m, 1h, 1d |
+
+---
+
+### GET /api/market/exchanges
+
+Exchange data and rankings.
+
+**Response:**
+
+```json
+{
+  "exchanges": [
+    {
+      "id": "binance",
+      "name": "Binance",
+      "volume24h": 15000000000,
+      "trustScore": 10,
+      "pairs": 1500
+    }
+  ]
+}
+```
+
+---
+
+### GET /api/market/derivatives
+
+Derivatives market overview.
+
+**Response:**
+
+```json
+{
+  "openInterest": 45000000000,
+  "volume24h": 120000000000,
+  "topPairs": [...],
+  "fundingRates": [...]
+}
+```
+
+---
+
+## DeFi APIs
+
+### GET /api/defi/protocol-health
+
+DeFi protocol health monitoring.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `protocol` | string | all | Protocol name |
+| `chain` | string | all | Blockchain filter |
+
+**Response:**
+
+```json
+{
+  "protocols": [
+    {
+      "name": "Aave",
+      "chain": "Ethereum",
+      "tvl": 12500000000,
+      "healthScore": 0.95,
+      "auditStatus": "audited",
+      "risks": ["smart_contract", "oracle"],
+      "recentEvents": [...]
+    }
+  ]
+}
+```
+
+---
+
+### GET /api/onchain/events
+
+On-chain events and alerts.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `chain` | string | ethereum | Blockchain |
+| `type` | string | all | Event type filter |
+
+---
+
+## News Categories
+
+### GET /api/news/categories
+
+List all available news categories.
+
+**Response:**
+
+```json
+{
+  "categories": [
+    { "id": "general", "name": "General", "sourceCount": 25 },
+    { "id": "bitcoin", "name": "Bitcoin", "sourceCount": 15 },
+    { "id": "defi", "name": "DeFi", "sourceCount": 12 },
+    { "id": "nft", "name": "NFT", "sourceCount": 8 },
+    { "id": "research", "name": "Research", "sourceCount": 18 },
+    { "id": "institutional", "name": "Institutional", "sourceCount": 10 },
+    { "id": "etf", "name": "ETF", "sourceCount": 6 },
+    { "id": "derivatives", "name": "Derivatives", "sourceCount": 5 },
+    { "id": "onchain", "name": "On-Chain", "sourceCount": 7 },
+    { "id": "fintech", "name": "Fintech", "sourceCount": 8 },
+    { "id": "macro", "name": "Macro", "sourceCount": 6 },
+    { "id": "quant", "name": "Quant", "sourceCount": 4 },
+    { "id": "journalism", "name": "Journalism", "sourceCount": 5 }
+  ],
+  "totalCategories": 21,
+  "totalSources": 120
+}
+```
+
+Use the category parameter in `/api/news?category=defi` to filter by category.
+
+---
+
 ## Common Parameters
 
 ### Language Support
@@ -1948,6 +3000,42 @@ X-RateLimit-Reset: 1706012400
 2. **Use pagination** - Don't fetch all articles at once
 3. **Respect cache headers** - Check `Cache-Control` before re-fetching
 4. **Handle errors gracefully** - Implement exponential backoff
+
+---
+
+## Internal Data APIs
+
+For developers extending the codebase, we provide 10+ professional data API integrations:
+
+| API | File | Best For |
+|-----|------|----------|
+| DefiLlama | `src/lib/apis/defillama.ts` | DeFi TVL, yields, protocols |
+| L2Beat | `src/lib/apis/l2beat.ts` | Layer 2 analytics, risk |
+| Glassnode | `src/lib/apis/glassnode.ts` | On-chain metrics |
+| CryptoQuant | `src/lib/apis/cryptoquant.ts` | Exchange flows |
+| LunarCrush | `src/lib/apis/lunarcrush.ts` | Social sentiment |
+| Messari | `src/lib/apis/messari.ts` | Research-grade data |
+| The Graph | `src/lib/apis/thegraph.ts` | DeFi subgraphs |
+| NFT Markets | `src/lib/apis/nft-markets.ts` | NFT collections |
+| News Feeds | `src/lib/apis/news-feeds.ts` | Aggregated news |
+| CoinMarketCap | `src/lib/apis/coinmarketcap.ts` | Market rankings |
+
+### Usage
+
+```typescript
+import { defillama, glassnode, l2beat } from '@/lib/apis';
+
+// Get DeFi TVL data
+const defi = await defillama.getDefiSummary();
+
+// Get on-chain health
+const health = await glassnode.getOnChainHealthAssessment('BTC');
+
+// Get L2 ecosystem
+const l2 = await l2beat.getL2Summary();
+```
+
+[:material-arrow-right: Full Data API Documentation](integrations/data-apis.md)
 
 ---
 

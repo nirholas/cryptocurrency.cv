@@ -50,6 +50,7 @@ interface PortfolioExport {
     premium: true;
     generatedBy: string;
     version: string;
+    portfolio?: string;
   };
 }
 

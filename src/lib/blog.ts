@@ -4,11 +4,55 @@
  * Handles blog post loading, parsing, and metadata extraction.
  * Supports Markdown with YAML frontmatter.
  * 
+ * Content can be loaded from:
+ * 1. External files in /content/blog/*.md (preferred)
+ * 2. Inline BLOG_POSTS_RAW (fallback for Edge Runtime)
+ * 
  * @module blog
  */
 
 import matter from 'gray-matter';
 import readingTime from 'reading-time';
+import fs from 'fs';
+import path from 'path';
+
+// =============================================================================
+// FILE SYSTEM LOADING
+// =============================================================================
+
+/**
+ * Load blog posts from external markdown files
+ * Falls back gracefully in Edge Runtime where fs is not available
+ */
+function loadExternalPosts(): Record<string, string> {
+  try {
+    // Check if we're in a Node.js environment with fs access
+    if (typeof process !== 'undefined' && process.cwd) {
+      const contentDir = path.join(process.cwd(), 'content', 'blog');
+      
+      if (fs.existsSync(contentDir)) {
+        const files = fs.readdirSync(contentDir);
+        const posts: Record<string, string> = {};
+        
+        for (const file of files) {
+          if (file.endsWith('.md')) {
+            const slug = file.replace('.md', '');
+            const filePath = path.join(contentDir, file);
+            const content = fs.readFileSync(filePath, 'utf-8');
+            posts[slug] = content;
+          }
+        }
+        
+        return posts;
+      }
+    }
+  } catch (error) {
+    // Silently fail - we'll use inline posts as fallback
+    console.warn('Could not load external blog posts, using inline fallback');
+  }
+  
+  return {};
+}
 
 // =============================================================================
 // TYPES
@@ -146,10 +190,15 @@ export const CATEGORIES: Record<BlogCategory, { name: string; description: strin
 
 // =============================================================================
 // BLOG POSTS DATA
-// Stored inline for Edge Runtime compatibility
+// Inline posts serve as fallback for Edge Runtime compatibility
+// External posts in /content/blog/*.md take precedence when available
 // =============================================================================
 
-const BLOG_POSTS_RAW: Record<string, string> = {
+// Load external posts from /content/blog/*.md
+const EXTERNAL_POSTS = loadExternalPosts();
+
+// Inline posts (fallback for Edge Runtime)
+const INLINE_POSTS: Record<string, string> = {
   'what-is-bitcoin': `---
 title: "What is Bitcoin? A Complete Beginner's Guide for 2026"
 description: "Learn everything about Bitcoin - how it works, why it matters, and how to get started. Updated for 2026 with the latest developments."
@@ -914,6 +963,13 @@ Layer 2 solutions make Ethereum usable for everyday transactions while maintaini
 
 *Track L2 activity on [Free Crypto News](/defi).*
 `,
+};
+
+// Merge external posts (priority) with inline posts (fallback)
+// External posts take precedence to allow content editing without code changes
+const BLOG_POSTS_RAW: Record<string, string> = {
+  ...INLINE_POSTS,
+  ...EXTERNAL_POSTS,
 };
 
 // =============================================================================

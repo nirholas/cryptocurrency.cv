@@ -9,6 +9,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+#### Blog Content System Improvements (Jan 25, 2026)
+- **External Markdown Files** - Blog posts now load from `/content/blog/*.md` files for easier content management
+- **Blog Admin Dashboard** - `/admin/blog` page with post listing, statistics, and category filtering
+- **Blog API Endpoint** - `/api/blog/posts` returns all post metadata for admin and integrations
+- **`/blog` Redirect** - Root `/blog` now redirects to `/en/blog` (default locale)
+- **10 New Blog Posts**:
+  - `what-is-bitcoin.md` - Complete Bitcoin beginner's guide
+  - `ethereum-explained.md` - Ethereum and smart contracts guide
+  - `defi-explained.md` - DeFi protocols and yield farming
+  - `crypto-security-guide.md` - Security best practices
+  - `how-to-buy-crypto.md` - Step-by-step buying guide
+  - `layer2-scaling-guide.md` - L2 solutions comparison
+  - `crypto-trading-strategies.md` - Trading and technical analysis
+  - `nfts-explained.md` - NFT use cases and marketplaces
+  - `stablecoins-explained.md` - Stablecoin types and safety
+  - `crypto-wallet-guide.md` - Hot vs cold storage
+- **Content README** - `/content/blog/README.md` with frontmatter template and guidelines
+
 #### Changelog Automation & Documentation (Jan 25, 2026)
 - **`generate-changelog.sh`** - Shell script to generate changelog from git history in Keep a Changelog format
 - **`analyze-commits.js`** - Node.js tool to compare commits against CHANGELOG.md, find missing entries

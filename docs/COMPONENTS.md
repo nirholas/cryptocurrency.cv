@@ -1118,8 +1118,656 @@ import { ChartSkeleton } from '@/components/charts';
 
 ---
 
+## Dashboard Components
+
+### AIMarketAgentDashboard
+
+AI-powered market analysis dashboard with autonomous agent.
+
+**File:** `src/components/AIMarketAgentDashboard.tsx`
+
+```tsx
+import AIMarketAgentDashboard from '@/components/AIMarketAgentDashboard';
+
+<AIMarketAgentDashboard
+  assets={['BTC', 'ETH']}
+  autoRefresh={true}
+  refreshInterval={60000}
+/>
+```
+
+**Features:**
+- Real-time AI market analysis
+- Multi-asset tracking
+- Sentiment gauges
+- Signal generation
+- Natural language queries
+
+---
+
+### ArbitrageDashboard
+
+Cross-exchange arbitrage opportunity scanner.
+
+**File:** `src/components/ArbitrageDashboard.tsx`
+
+```tsx
+import ArbitrageDashboard from '@/components/ArbitrageDashboard';
+
+<ArbitrageDashboard
+  pairs={['BTC/USDT', 'ETH/USDT']}
+  minSpread={0.5}
+  exchanges={['binance', 'coinbase', 'kraken']}
+/>
+```
+
+**Props:**
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `pairs` | string[] | [] | Trading pairs to scan |
+| `minSpread` | number | 0.5 | Minimum spread % to display |
+| `exchanges` | string[] | all | Exchanges to include |
+| `autoRefresh` | boolean | true | Enable auto-refresh |
+
+---
+
+### OptionsFlowDashboard
+
+Real-time options flow visualization.
+
+**File:** `src/components/OptionsFlowDashboard.tsx`
+
+```tsx
+import OptionsFlowDashboard from '@/components/OptionsFlowDashboard';
+
+<OptionsFlowDashboard
+  asset="BTC"
+  exchanges={['deribit', 'okx']}
+  showMaxPain={true}
+/>
+```
+
+**Features:**
+- Options flow table with filtering
+- Put/Call ratio visualization
+- Max pain indicator
+- Implied volatility chart
+- Large premium alerts
+
+---
+
+### WhaleAlertsDashboard
+
+Large blockchain transaction monitoring.
+
+**File:** `src/components/WhaleAlertsDashboard.tsx`
+
+```tsx
+import WhaleAlertsDashboard from '@/components/WhaleAlertsDashboard';
+
+<WhaleAlertsDashboard
+  minValue={1000000}
+  assets={['BTC', 'ETH', 'USDT']}
+  showExchangeFlow={true}
+/>
+```
+
+**Props:**
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `minValue` | number | 1000000 | Min USD value to display |
+| `assets` | string[] | all | Assets to track |
+| `showExchangeFlow` | boolean | true | Show exchange in/out flow |
+| `soundAlerts` | boolean | false | Play sound on new alerts |
+
+---
+
+### LiquidationsFeed
+
+Real-time liquidation event feed.
+
+**File:** `src/components/LiquidationsFeed.tsx`
+
+```tsx
+import LiquidationsFeed from '@/components/LiquidationsFeed';
+
+<LiquidationsFeed
+  minValue={10000}
+  maxItems={50}
+  animate={true}
+/>
+```
+
+**Features:**
+- Real-time liquidation events
+- Long/short visualization
+- Exchange breakdown
+- Cumulative totals
+- Animated entry effects
+
+---
+
+### OrderBookDashboard
+
+Aggregated order book visualization.
+
+**File:** `src/components/OrderBookDashboard.tsx`
+
+```tsx
+import OrderBookDashboard from '@/components/OrderBookDashboard';
+
+<OrderBookDashboard
+  symbol="BTCUSDT"
+  depth={20}
+  showImbalance={true}
+/>
+```
+
+**Features:**
+- Multi-exchange aggregation
+- Depth visualization
+- Bid/ask imbalance indicator
+- Spread monitoring
+- Price level clustering
+
+---
+
+### SentimentDashboard
+
+Multi-source sentiment analysis dashboard.
+
+**File:** `src/components/SentimentDashboard.tsx`
+
+```tsx
+import SentimentDashboard from '@/components/SentimentDashboard';
+
+<SentimentDashboard
+  asset="BTC"
+  sources={['news', 'social', 'onchain']}
+  showHistory={true}
+/>
+```
+
+**Props:**
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `asset` | string | 'BTC' | Asset to analyze |
+| `sources` | string[] | all | Sentiment sources |
+| `showHistory` | boolean | true | Show historical chart |
+| `period` | string | '24h' | Time period |
+
+---
+
+### SocialIntelligenceDashboard
+
+Social media monitoring across platforms.
+
+**File:** `src/components/SocialIntelligenceDashboard.tsx`
+
+```tsx
+import SocialIntelligenceDashboard from '@/components/SocialIntelligenceDashboard';
+
+<SocialIntelligenceDashboard
+  platforms={['twitter', 'discord', 'telegram', 'reddit']}
+  topics={['bitcoin', 'ethereum']}
+/>
+```
+
+**Features:**
+- Multi-platform aggregation
+- Trending topics detection
+- Influencer tracking
+- Viral content alerts
+- Sentiment by platform
+
+---
+
+### RegulatoryDashboard
+
+Regulatory news and impact tracking.
+
+**File:** `src/components/RegulatoryDashboard.tsx`
+
+```tsx
+import RegulatoryDashboard from '@/components/RegulatoryDashboard';
+
+<RegulatoryDashboard
+  jurisdictions={['US', 'EU', 'UK']}
+  showImpactScores={true}
+/>
+```
+
+---
+
+### ProtocolHealthDashboard
+
+DeFi protocol health monitoring.
+
+**File:** `src/components/ProtocolHealthDashboard.tsx`
+
+```tsx
+import ProtocolHealthDashboard from '@/components/ProtocolHealthDashboard';
+
+<ProtocolHealthDashboard
+  protocols={['aave', 'compound', 'uniswap']}
+  showRiskMetrics={true}
+/>
+```
+
+**Features:**
+- TVL tracking
+- Health score visualization
+- Risk indicators
+- Audit status
+- Recent events timeline
+
+---
+
+### FundingRates
+
+Perpetual futures funding rate display.
+
+**File:** `src/components/FundingRates.tsx`
+
+```tsx
+import FundingRates from '@/components/FundingRates';
+
+<FundingRates
+  symbols={['BTCUSDT', 'ETHUSDT']}
+  showPrediction={true}
+/>
+```
+
+---
+
+### CorrelationMatrix
+
+Asset correlation heatmap.
+
+**File:** `src/components/CorrelationMatrix.tsx`
+
+```tsx
+import CorrelationMatrix from '@/components/CorrelationMatrix';
+
+<CorrelationMatrix
+  assets={['BTC', 'ETH', 'SOL', 'SPY', 'GOLD']}
+  period="30d"
+/>
+```
+
+---
+
+## AI Components
+
+### OracleChat
+
+AI chat interface for market questions.
+
+**File:** `src/components/OracleChat.tsx`
+
+```tsx
+import OracleChat from '@/components/OracleChat';
+
+<OracleChat
+  initialQuestion="What's driving BTC price today?"
+  showSuggestions={true}
+/>
+```
+
+**Props:**
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `initialQuestion` | string | - | Pre-filled question |
+| `showSuggestions` | boolean | true | Show suggested questions |
+| `maxHistory` | number | 10 | Chat history length |
+| `model` | string | 'gpt-4' | AI model to use |
+
+**Features:**
+- Natural language queries
+- Context-aware responses
+- Source citations
+- Follow-up suggestions
+- Response streaming
+
+---
+
+### TheOracle
+
+Full-page AI oracle experience.
+
+**File:** `src/components/TheOracle.tsx`
+
+```tsx
+import TheOracle from '@/components/TheOracle';
+
+<TheOracle showBackground={true} />
+```
+
+---
+
+## Alert Components
+
+### PriceAlerts
+
+Price alert configuration and display.
+
+**File:** `src/components/alerts/PriceAlerts.tsx`
+
+```tsx
+import PriceAlerts from '@/components/alerts/PriceAlerts';
+
+<PriceAlerts
+  onAlertCreate={(alert) => console.log(alert)}
+  showActive={true}
+/>
+```
+
+**Features:**
+- Create price alerts
+- Multiple conditions (above, below, percent change)
+- Notification preferences
+- Alert history
+- Bulk management
+
+---
+
+### WhaleAlerts
+
+Whale alert configuration.
+
+**File:** `src/components/alerts/WhaleAlerts.tsx`
+
+```tsx
+import WhaleAlerts from '@/components/alerts/WhaleAlerts';
+
+<WhaleAlerts
+  minValue={1000000}
+  assets={['BTC', 'ETH']}
+/>
+```
+
+---
+
+### NotificationSettings
+
+Push notification preferences.
+
+**File:** `src/components/NotificationSettings.tsx`
+
+```tsx
+import NotificationSettings from '@/components/NotificationSettings';
+
+<NotificationSettings
+  categories={['breaking', 'whales', 'signals']}
+/>
+```
+
+---
+
+### PushNotifications
+
+Push notification permission and management.
+
+**File:** `src/components/PushNotifications.tsx`
+
+```tsx
+import PushNotifications from '@/components/PushNotifications';
+
+<PushNotifications
+  requestOnMount={false}
+  showBanner={true}
+/>
+```
+
+---
+
+## Payment Components
+
+### X402PaymentButton
+
+Cryptocurrency payment button using X402 protocol.
+
+**File:** `src/components/x402/X402PaymentButton.tsx`
+
+```tsx
+import X402PaymentButton from '@/components/x402/X402PaymentButton';
+
+<X402PaymentButton
+  amount={100}
+  currency="BTC"
+  onSuccess={(txHash) => console.log('Paid:', txHash)}
+  onError={(err) => console.error(err)}
+/>
+```
+
+**Props:**
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `amount` | number | required | Amount in satoshis |
+| `currency` | string | 'BTC' | BTC, ETH, USDC |
+| `label` | string | 'Pay' | Button label |
+| `onSuccess` | function | - | Success callback |
+| `onError` | function | - | Error callback |
+
+---
+
+## Utility Components
+
+### CryptoCalculator
+
+Cryptocurrency unit converter.
+
+**File:** `src/components/CryptoCalculator.tsx`
+
+```tsx
+import CryptoCalculator from '@/components/CryptoCalculator';
+
+<CryptoCalculator
+  defaultFrom="BTC"
+  defaultTo="USD"
+/>
+```
+
+---
+
+### GasTracker
+
+Ethereum gas price tracker.
+
+**File:** `src/components/GasTracker.tsx`
+
+```tsx
+import GasTracker from '@/components/GasTracker';
+
+<GasTracker
+  showHistory={true}
+  showPrediction={true}
+/>
+```
+
+**Features:**
+- Real-time gas prices
+- Speed estimates (slow, standard, fast)
+- Historical chart
+- Transaction cost estimator
+
+---
+
+### Screener
+
+Token screening with filters.
+
+**File:** `src/components/Screener.tsx`
+
+```tsx
+import Screener from '@/components/Screener';
+
+<Screener
+  defaultFilters={{
+    marketCapMin: 100000000,
+    volume24hMin: 10000000
+  }}
+/>
+```
+
+---
+
+### InfluencerLeaderboard
+
+Crypto influencer rankings.
+
+**File:** `src/components/InfluencerLeaderboard.tsx`
+
+```tsx
+import InfluencerLeaderboard from '@/components/InfluencerLeaderboard';
+
+<InfluencerLeaderboard
+  platform="twitter"
+  metric="accuracy"
+  limit={20}
+/>
+```
+
+---
+
+### SocialBuzz
+
+Social media trending topics.
+
+**File:** `src/components/SocialBuzz.tsx`
+
+```tsx
+import SocialBuzz from '@/components/SocialBuzz';
+
+<SocialBuzz
+  platforms={['twitter', 'reddit']}
+  limit={10}
+/>
+```
+
+---
+
+## Admin Components
+
+### AdminDashboard
+
+Main admin interface.
+
+**File:** `src/components/admin/AdminDashboard.tsx`
+
+```tsx
+import AdminDashboard from '@/components/admin/AdminDashboard';
+
+<AdminDashboard />
+```
+
+**Features:**
+- System metrics
+- User management
+- API key management
+- Cache controls
+- Error logs
+
+---
+
+### BillingManagement
+
+Subscription and billing UI.
+
+**File:** `src/components/billing/BillingManagement.tsx`
+
+```tsx
+import BillingManagement from '@/components/billing/BillingManagement';
+
+<BillingManagement userId="user_123" />
+```
+
+---
+
+## Portfolio Components
+
+### PortfolioDashboard
+
+Portfolio tracking and analytics.
+
+**File:** `src/components/portfolio/PortfolioDashboard.tsx`
+
+```tsx
+import PortfolioDashboard from '@/components/portfolio/PortfolioDashboard';
+
+<PortfolioDashboard
+  showPerformance={true}
+  showAllocation={true}
+/>
+```
+
+---
+
+### WatchlistManager
+
+Cryptocurrency watchlist management.
+
+**File:** `src/components/watchlist/WatchlistManager.tsx`
+
+```tsx
+import WatchlistManager from '@/components/watchlist/WatchlistManager';
+
+<WatchlistManager
+  maxItems={50}
+  showAlerts={true}
+/>
+```
+
+---
+
+## Component Best Practices
+
+### Lazy Loading
+
+```tsx
+import dynamic from 'next/dynamic';
+
+const HeavyChart = dynamic(
+  () => import('@/components/charts/HeavyChart'),
+  { 
+    loading: () => <ChartSkeleton />,
+    ssr: false 
+  }
+);
+```
+
+### Error Boundaries
+
+```tsx
+import { ErrorBoundary } from '@/components/ErrorBoundary';
+
+<ErrorBoundary fallback={<ErrorFallback />}>
+  <RiskyComponent />
+</ErrorBoundary>
+```
+
+### Testing Components
+
+```tsx
+import { render, screen } from '@testing-library/react';
+import PriceAlerts from '@/components/alerts/PriceAlerts';
+
+test('renders price alerts', () => {
+  render(<PriceAlerts />);
+  expect(screen.getByText('Price Alerts')).toBeInTheDocument();
+});
+```
+
+---
+
 ## Related Documentation
 
 - [Architecture Overview](../ARCHITECTURE.md)
 - [API Reference](API.md)
+- [Hooks](./HOOKS.md)
 - [Contributing Guide](../CONTRIBUTING.md)

@@ -53,6 +53,8 @@ const navItems = [
             { label: 'Social Buzz', href: '/buzz', icon: '📣' },
             { label: 'Charts', href: '/charts', icon: '📈' },
             { label: 'Top Movers', href: '/movers', icon: '🚀' },
+            { label: 'Search', href: '/search', icon: '🔍' },
+            { label: 'Topics', href: '/topics', icon: '🏷️' },
           ],
         },
       ],
@@ -312,6 +314,7 @@ const navItems = [
             { label: 'Bitcoin Guide', href: '/blog/what-is-bitcoin', icon: '₿' },
             { label: 'Ethereum vs Bitcoin', href: '/blog/ethereum-vs-bitcoin', icon: '⚖️' },
             { label: 'DeFi Guide', href: '/blog/defi-beginners-guide', icon: '🏦' },
+            { label: 'About Us', href: '/about', icon: 'ℹ️' },
           ],
         },
         {
@@ -357,6 +360,8 @@ const navItems = [
           links: [
             { label: 'Billing Dashboard', href: '/billing', icon: '📊' },
             { label: 'Settings', href: '/settings', icon: '⚙️' },
+            { label: 'Install App', href: '/install', icon: '📲' },
+            { label: 'Reading List', href: '/read', icon: '📖' },
           ],
         },
       ],

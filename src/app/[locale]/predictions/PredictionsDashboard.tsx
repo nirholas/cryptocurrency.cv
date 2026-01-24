@@ -54,7 +54,7 @@ interface LeaderboardEntry {
 
 type TabType = 'create' | 'my-predictions' | 'leaderboard';
 
-export function PredictionsDashboard() {
+export default function PredictionsDashboard() {
   const [activeTab, setActiveTab] = useState<TabType>('create');
   const [predictions, setPredictions] = useState<Prediction[]>([]);
   const [userStats, setUserStats] = useState<UserStats | null>(null);
@@ -538,5 +538,3 @@ export function PredictionsDashboard() {
     </div>
   );
 }
-
-export default PredictionsDashboard;

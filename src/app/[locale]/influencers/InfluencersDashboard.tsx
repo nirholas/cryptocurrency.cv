@@ -3,7 +3,7 @@
 import InfluencerLeaderboard from '@/components/InfluencerLeaderboard';
 
 /** Dashboard component for influencer reliability tracking */
-export function InfluencersDashboard() {
+export default function InfluencersDashboard() {
   return (
     <div className="space-y-8">
       <InfluencerLeaderboard 
@@ -14,5 +14,3 @@ export function InfluencersDashboard() {
     </div>
   );
 }
-
-export default InfluencersDashboard;
