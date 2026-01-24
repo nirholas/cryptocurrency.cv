@@ -48,9 +48,12 @@ const coinMeta: Record<string, { name: string; symbol: string; keywords: string[
   'matic-network': { name: 'Polygon', symbol: 'MATIC', keywords: ['polygon', 'matic'] },
 };
 
+const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://free-crypto-news.vercel.app';
+
 // Generate metadata for SEO
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { coinId } = await params;
+  const { coinId, locale } = await params;
+  const canonicalUrl = `${BASE_URL}/en/coin/${coinId}`;
   
   try {
     const coinData = await getCoinDetails(coinId);
@@ -74,8 +77,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       openGraph: {
         title: `${name} Price: ${formatPrice(price)} | ${symbol}`,
         description: `${symbol} ${formatPercent(change24h)} in 24h. Market Cap: $${formatNumber(coinData.market_data?.market_cap?.usd)}`,
-        images: coinData.image?.large ? [{ url: coinData.image.large, width: 250, height: 250, alt: name }] : [],
+        images: coinData.image?.large ? [{ url: coinData.image.large, width: 250, height: 250, alt: `${name} (${symbol}) cryptocurrency logo` }] : [],
         type: 'website',
+        url: canonicalUrl,
+        locale: locale?.replace('-', '_') || 'en',
       },
       twitter: {
         card: 'summary',
@@ -84,7 +89,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         images: coinData.image?.large ? [coinData.image.large] : [],
       },
       alternates: {
-        canonical: `/coin/${coinId}`,
+        canonical: canonicalUrl,
+      },
+      robots: {
+        index: true,
+        follow: true,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
       },
     };
   } catch {
@@ -92,6 +103,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
       title: `${meta?.name || coinId} Price & News | Free Crypto News`,
       description: `Latest ${meta?.name || coinId} news, price, and market data.`,
+      alternates: {
+        canonical: canonicalUrl,
+      },
     };
   }
 }

@@ -7,7 +7,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
-import { generateArticleId } from '@/lib/archive-v2';
+import { generateArticleId, generateArticleSlug } from '@/lib/archive-v2';
 
 interface Article {
   title: string;
@@ -151,13 +151,14 @@ export default function PopularStories({ articles }: PopularStoriesProps) {
       <div className="space-y-3" role="list" aria-label="Most read articles">
         {popularArticles.map((article, index) => {
           const articleId = article.id || generateArticleId(article.link);
+          const articleSlug = generateArticleSlug(article.title, article.pubDate);
           const gradient = sourceColors[article.source] || 'from-gray-500 to-gray-600';
           const views = getViewCount(articleId);
           
           return (
             <Link
               key={articleId}
-              href={`/article/${articleId}`}
+              href={`/article/${articleSlug}`}
               className="group flex gap-3 p-2 -mx-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors focus-ring"
               role="listitem"
               onClick={() => trackView(articleId)}

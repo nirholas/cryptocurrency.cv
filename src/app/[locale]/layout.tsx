@@ -17,6 +17,7 @@ import { AlertsProvider } from '@/components/alerts';
 import { PortfolioProvider } from '@/components/portfolio';
 import { GlobalSearch } from '@/components/GlobalSearch';
 import { ToastProvider } from '@/components/Toast';
+import { AlternateLinks } from '@/components/AlternateLinks';
 import { locales, isRtlLocale, type Locale } from '@/i18n/config';
 
 export const viewport: Viewport = {
@@ -183,6 +184,9 @@ export default async function LocaleLayout({ children, params }: Props) {
       <head>
         {/* Theme Script - prevents flash of wrong theme */}
         <ThemeScript />
+        
+        {/* Alternate language links for SEO */}
+        <AlternateLinks currentLocale={locale} currentPath="" />
         
         {/* Preconnect to external resources */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

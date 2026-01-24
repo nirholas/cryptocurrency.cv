@@ -34,6 +34,7 @@ export const maxDuration = 60;
 
 interface ArchiveArticle {
   id: string;
+  slug: string;  // SEO-friendly URL slug
   schema_version: string;
   title: string;
   link: string;
@@ -104,6 +105,28 @@ function extractTickers(text: string): string[] {
 }
 
 /**
+ * Generate SEO-friendly slug from article title and date
+ */
+function generateSlug(title: string, date?: string): string {
+  let slug = title
+    .toLowerCase()
+    .replace(/['']/g, '')
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '')
+    .slice(0, 60)
+    .replace(/-$/, '');
+  
+  if (date) {
+    const dateStr = new Date(date).toISOString().split('T')[0];
+    slug = `${slug}-${dateStr}`;
+  }
+  
+  return slug || 'untitled';
+}
+
+/**
  * Transform raw article to archive format
  */
 function transformArticle(article: NewsArticle): ArchiveArticle {
@@ -112,6 +135,7 @@ function transformArticle(article: NewsArticle): ArchiveArticle {
 
   return {
     id: generateId(article.link),
+    slug: generateSlug(article.title, article.pubDate),
     schema_version: '2.0.0',
     title: article.title,
     link: article.link,

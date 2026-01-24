@@ -4,7 +4,7 @@
  */
 
 import Link from 'next/link';
-import { generateArticleId } from '@/lib/archive-v2';
+import { generateArticleId, generateArticleSlug } from '@/lib/archive-v2';
 
 interface Article {
   title: string;
@@ -61,12 +61,13 @@ export default function TrendingNews({
       <div className="space-y-1" role="list" aria-label="Trending news articles">
         {trendingArticles.map((article, index) => {
           const articleId = article.id || generateArticleId(article.link);
+          const articleSlug = generateArticleSlug(article.title, article.pubDate);
           const sourceColor = sourceColors[article.source] || 'bg-gray-500';
           
           return (
             <Link
               key={articleId}
-              href={`/article/${articleId}`}
+              href={`/article/${articleSlug}`}
               className="group flex items-start gap-3 p-3 -mx-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors focus-ring"
               role="listitem"
             >

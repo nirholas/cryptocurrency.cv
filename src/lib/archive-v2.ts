@@ -508,17 +508,40 @@ export function isLegacyId(identifier: string): boolean {
 }
 
 /**
- * Get a single article by ID
+ * Get a single article by ID or slug
+ * Supports both legacy hash IDs (e.g., "3a9f8b2c1d4e5f67") and SEO slugs (e.g., "bitcoin-hits-ath-2026-01-24")
  * First checks the archive, then falls back to live RSS feeds
  */
-export async function getArticleById(id: string): Promise<EnrichedArticle | null> {
+export async function getArticleById(idOrSlug: string): Promise<EnrichedArticle | null> {
   try {
+    const isLegacy = isLegacyId(idOrSlug);
+    const { baseSlug, date } = !isLegacy ? parseArticleSlug(idOrSlug) : { baseSlug: '', date: undefined };
+    
+    // Helper to match article by ID or slug
+    const matchArticle = (article: EnrichedArticle): boolean => {
+      if (isLegacy) {
+        return article.id === idOrSlug;
+      }
+      // Match by slug (with or without date)
+      if (article.slug === idOrSlug) return true;
+      // Generate slug from title and try to match
+      const generatedSlug = generateArticleSlug(article.title, article.pub_date || article.first_seen);
+      if (generatedSlug === idOrSlug) return true;
+      // Try matching base slug (without date)
+      const generatedBaseSlug = generateArticleSlug(article.title);
+      if (date && generatedBaseSlug === baseSlug) {
+        const articleDate = new Date(article.pub_date || article.first_seen).toISOString().split('T')[0];
+        return articleDate === date;
+      }
+      return false;
+    };
+    
     // Get current month's articles from archive
     const now = new Date();
     const yearMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
     const articles = await getArchiveV2Month(yearMonth);
     
-    const article = articles.find(a => a.id === id);
+    const article = articles.find(matchArticle);
     if (article) return article;
     
     // Try previous month if not found
@@ -526,12 +549,18 @@ export async function getArticleById(id: string): Promise<EnrichedArticle | null
     const prevYearMonth = `${prevMonth.getFullYear()}-${String(prevMonth.getMonth() + 1).padStart(2, '0')}`;
     const prevArticles = await getArchiveV2Month(prevYearMonth);
     
-    const archivedArticle = prevArticles.find(a => a.id === id);
+    const archivedArticle = prevArticles.find(matchArticle);
     if (archivedArticle) return archivedArticle;
     
-    // Fallback: fetch from live RSS feeds and find by matching ID
+    // Fallback: fetch from live RSS feeds and find by matching ID or slug
     const liveNews = await getLatestNews(100);
-    const liveArticle = liveNews.articles.find(a => generateArticleId(a.link) === id);
+    const liveArticle = liveNews.articles.find(a => {
+      if (isLegacy) {
+        return generateArticleId(a.link) === idOrSlug;
+      }
+      const liveSlug = generateArticleSlug(a.title, a.pubDate);
+      return liveSlug === idOrSlug;
+    });
     
     if (liveArticle) {
       // Convert NewsArticle to EnrichedArticle format
@@ -550,6 +579,7 @@ export async function getArticleById(id: string): Promise<EnrichedArticle | null
 function newsArticleToEnriched(article: NewsArticle): EnrichedArticle {
   return {
     id: generateArticleId(article.link),
+    slug: generateArticleSlug(article.title, article.pubDate),
     schema_version: '2.0',
     title: article.title,
     link: article.link,

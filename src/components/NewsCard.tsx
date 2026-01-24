@@ -39,7 +39,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { generateArticleId } from '@/lib/archive-v2';
+import { generateArticleSlug } from '@/lib/archive-v2';
 import { estimateReadingTime } from '@/lib/reading-time';
 
 interface Article {
@@ -72,7 +72,7 @@ const defaultStyle = { bg: 'bg-gray-600', light: 'bg-gray-50', text: 'text-gray-
 
 export default function NewsCard({ article, variant = 'default', showDescription = true, priority }: NewsCardProps) {
   const t = useTranslations('news');
-  const articleId = generateArticleId(article.link);
+  const articleSlug = generateArticleSlug(article.title, article.pubDate);
   const style = sourceColors[article.source] || defaultStyle;
 
   const readingTime = estimateReadingTime(article.title, article.description);
@@ -81,7 +81,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
     return (
       <article className="group" data-article>
         <Link 
-          href={`/article/${articleId}`}
+          href={`/article/${articleSlug}`}
           className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
         >
           {priority && (
@@ -109,7 +109,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
     return (
       <article className="group" data-article>
         <Link 
-          href={`/article/${articleId}`}
+          href={`/article/${articleSlug}`}
           className="flex gap-5 p-4 bg-white dark:bg-slate-800 rounded-xl border border-gray-100 dark:border-slate-700 hover:border-brand-200 dark:hover:border-amber-500/50 hover:shadow-lg dark:hover:shadow-xl transition-all focus:outline-none focus:ring-2 focus:ring-brand-500"
         >
           {/* Left accent */}
@@ -151,7 +151,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
   return (
     <article className="group h-full" data-article>
       <Link 
-        href={`/article/${articleId}`}
+        href={`/article/${articleSlug}`}
         className="block h-full bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden hover:shadow-xl dark:hover:shadow-2xl hover:border-brand-200 dark:hover:border-amber-500/50 hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
       >
         <div className="p-5 h-full flex flex-col">

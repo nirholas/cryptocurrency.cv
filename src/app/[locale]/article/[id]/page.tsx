@@ -10,6 +10,7 @@ import {
   getArticleById, 
   getRelatedArticles,
   toNewsArticle,
+  generateArticleSlug,
   type EnrichedArticle 
 } from '@/lib/archive-v2';
 import type { Metadata } from 'next';
@@ -23,6 +24,8 @@ interface Props {
   params: Promise<{ id: string }>;
 }
 
+const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://free-crypto-news.vercel.app';
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const article = await getArticleById(id);
@@ -34,21 +37,35 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
   
+  const canonicalUrl = `${BASE_URL}/en/article/${id}`;
+  
   return {
     title: article.title,
     description: article.description || `Read the full article from ${article.source}`,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title: article.title,
       description: article.description || `Read the full article from ${article.source}`,
+      url: canonicalUrl,
       type: 'article',
       publishedTime: article.pub_date || article.first_seen,
+      modifiedTime: article.last_seen || article.pub_date || article.first_seen,
       authors: [article.source],
       tags: [...article.tickers, ...article.tags],
+      section: 'Cryptocurrency',
     },
     twitter: {
       card: 'summary_large_image',
       title: article.title,
       description: article.description || `Read the full article from ${article.source}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   };
 }
@@ -105,7 +122,10 @@ export default async function ArticlePage({ params }: Props) {
   
   const relatedArticles = await getRelatedArticles(article, 6);
   const sentiment = sentimentConfig[article.sentiment.label] || sentimentConfig.neutral;
-  const articleUrl = `https://free-crypto-news.vercel.app/article/${id}`;
+  
+  // Use SEO-friendly slug for URL, fallback to id if no slug
+  const articleSlug = article.slug || generateArticleSlug(article.title, article.pub_date || article.first_seen);
+  const articleUrl = `https://free-crypto-news.vercel.app/article/${articleSlug}`;
   
   // Breadcrumb data for structured data
   const breadcrumbs = [
@@ -340,7 +360,7 @@ export default async function ArticlePage({ params }: Props) {
                 <h2 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">📤 Share</h2>
                 <div className="flex flex-wrap gap-2">
                   <a
-                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(article.title)}&url=${encodeURIComponent(`https://free-crypto-news.vercel.app/article/${article.id}`)}`}
+                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(article.title)}&url=${encodeURIComponent(articleUrl)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 py-2 px-4 bg-black dark:bg-white text-white dark:text-black rounded-lg text-center text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition"
@@ -348,7 +368,7 @@ export default async function ArticlePage({ params }: Props) {
                     𝕏 Post
                   </a>
                   <a
-                    href={`https://t.me/share/url?url=${encodeURIComponent(`https://free-crypto-news.vercel.app/article/${article.id}`)}&text=${encodeURIComponent(article.title)}`}
+                    href={`https://t.me/share/url?url=${encodeURIComponent(articleUrl)}&text=${encodeURIComponent(article.title)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 py-2 px-4 bg-blue-500 text-white rounded-lg text-center text-sm font-medium hover:bg-blue-600 transition"
@@ -358,7 +378,7 @@ export default async function ArticlePage({ params }: Props) {
                 </div>
                 <button
                   className="w-full mt-3 py-2 px-4 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-slate-300 rounded-lg text-sm font-medium hover:bg-gray-200 dark:hover:bg-slate-600 transition"
-                  data-copy-url={`https://free-crypto-news.vercel.app/article/${article.id}`}
+                  data-copy-url={articleUrl}
                 >
                   📋 Copy Link
                 </button>

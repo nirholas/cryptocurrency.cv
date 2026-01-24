@@ -5,7 +5,7 @@
 'use client';
 
 import Link from 'next/link';
-import { generateArticleId } from '@/lib/archive-v2';
+import { generateArticleSlug } from '@/lib/archive-v2';
 
 interface Article {
   title: string;
@@ -60,13 +60,13 @@ export default function EditorsPicks({ articles }: EditorsPicksProps) {
 
       <div className="grid md:grid-cols-3 gap-6">
         {picks.map((article, index) => {
-          const articleId = generateArticleId(article.link);
+          const articleSlug = generateArticleSlug(article.title, article.pubDate);
           const style = sourceColors[article.source] || defaultStyle;
 
           return (
             <article key={article.link} className="group">
               <Link 
-                href={`/article/${articleId}`}
+                href={`/article/${articleSlug}`}
                 className="block h-full"
               >
                 <div className="relative h-full bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden hover:shadow-xl dark:hover:shadow-2xl hover:border-brand-200 dark:hover:border-amber-500/50 hover:-translate-y-1 transition-all duration-300">

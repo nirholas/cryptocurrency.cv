@@ -16,7 +16,8 @@ const mainNavItems = [
   { href: '/trending', label: 'Trending', icon: '🔥' },
   { href: '/movers', label: 'Top Movers', icon: '🚀' },
   { href: '/sources', label: 'News Sources', icon: '📚' },
-  { href: '/topics', label: 'Topics', icon: '🏷️' },
+  { href: '/topics', label: 'Topics', icon: '📂' },
+  { href: '/tags', label: 'Tags', icon: '🏷️' },
   { href: '/search', label: 'Search', icon: '🔍' },
 ];
 

@@ -4,7 +4,7 @@
  */
 
 import Link from 'next/link';
-import { generateArticleId } from '@/lib/archive-v2';
+import { generateArticleId, generateArticleSlug } from '@/lib/archive-v2';
 
 interface Article {
   title: string;
@@ -70,12 +70,13 @@ export default function EditorsPicks({ articles }: EditorsPicksProps) {
       <div className="space-y-4" role="list" aria-label="Editor's picks">
         {picks.map((article, index) => {
           const articleId = article.id || generateArticleId(article.link);
+          const articleSlug = generateArticleSlug(article.title, article.pubDate);
           const colors = sourceColors[article.source] || { dot: 'bg-gray-500', bg: 'bg-gray-500/10' };
           
           return (
             <Link
               key={articleId}
-              href={`/article/${articleId}`}
+              href={`/article/${articleSlug}`}
               className="group block p-4 -mx-4 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-200 focus-ring"
               role="listitem"
             >

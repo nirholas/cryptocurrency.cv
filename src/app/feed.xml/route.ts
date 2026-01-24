@@ -24,11 +24,26 @@ function escapeXml(text: string): string {
     .replace(/'/g, '&apos;');
 }
 
-function generateArticleId(url: string): string {
-  const hash = url.split('').reduce((acc, char) => {
-    return ((acc << 5) - acc + char.charCodeAt(0)) | 0;
-  }, 0);
-  return Math.abs(hash).toString(36);
+/**
+ * Generate SEO-friendly slug from article title and date
+ */
+function generateArticleSlug(title: string, date?: string): string {
+  let slug = title
+    .toLowerCase()
+    .replace(/['']/g, '')
+    .replace(/[^a-z0-9\\s-]/g, '')
+    .replace(/\\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '')
+    .slice(0, 60)
+    .replace(/-$/, '');
+  
+  if (date) {
+    const dateStr = new Date(date).toISOString().split('T')[0];
+    slug = `${slug}-${dateStr}`;
+  }
+  
+  return slug || 'untitled';
 }
 
 export async function GET() {
@@ -49,9 +64,9 @@ export async function GET() {
 
     const rssItems = articles
       .map((article) => {
-        const articleId = generateArticleId(article.link);
+        const articleSlug = generateArticleSlug(article.title, article.pubDate);
         const pubDate = new Date(article.pubDate).toUTCString();
-        const internalLink = `${BASE_URL}/article/${articleId}`;
+        const internalLink = `${BASE_URL}/article/${articleSlug}`;
 
         return `
     <item>

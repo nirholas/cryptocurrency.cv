@@ -7,6 +7,7 @@
 
 import { MetadataRoute } from 'next';
 import { getAllSlugs, CATEGORIES } from '@/lib/blog';
+import { getAllTags } from '@/lib/tags';
 
 const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://free-crypto-news.vercel.app';
 
@@ -139,6 +140,28 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: 'daily',
     priority: 0.6,
   });
+
+  // Add tag pages for SEO
+  const allTags = getAllTags();
+  for (const locale of locales) {
+    // Tags index page
+    entries.push({
+      url: `${BASE_URL}/${locale}/tags`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 0.8,
+    });
+    
+    // Individual tag pages (important for SEO)
+    for (const tag of allTags) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/tags/${tag.slug}`,
+        lastModified: now,
+        changeFrequency: 'hourly',
+        priority: Math.min(0.9, 0.6 + (tag.priority / 250)), // Higher priority tags get higher sitemap priority
+      });
+    }
+  }
 
   return entries;
 }

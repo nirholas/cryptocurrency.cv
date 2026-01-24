@@ -235,3 +235,127 @@ export function NewsListStructuredData({
     />
   );
 }
+
+/**
+ * SoftwareApplication structured data (for API/Developer pages)
+ */
+export function APIStructuredData() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Free Crypto News API',
+    applicationCategory: 'DeveloperApplication',
+    operatingSystem: 'All',
+    description: '100% free crypto news API. No API keys required. No rate limits. Real-time cryptocurrency news aggregation from 120+ sources.',
+    url: 'https://free-crypto-news.vercel.app/developers',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+    featureList: [
+      'Real-time news from 120+ sources',
+      'AI-powered analysis',
+      'Market data integration',
+      'WebSocket streaming',
+      'Multiple language support',
+    ],
+    author: {
+      '@type': 'Organization',
+      name: 'Free Crypto News',
+      url: 'https://free-crypto-news.vercel.app',
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+    />
+  );
+}
+
+/**
+ * FinancialProduct structured data (for crypto coin pages)
+ */
+export function CryptoAssetStructuredData({
+  name,
+  symbol,
+  price,
+  priceChange24h,
+  marketCap,
+  image,
+  url,
+}: {
+  name: string;
+  symbol: string;
+  price: number;
+  priceChange24h?: number;
+  marketCap?: number;
+  image?: string;
+  url: string;
+}) {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'FinancialProduct',
+    name: `${name} (${symbol.toUpperCase()})`,
+    description: `${name} cryptocurrency - real-time price, news, and market data`,
+    url,
+    provider: {
+      '@type': 'Organization',
+      name: 'Free Crypto News',
+    },
+    ...(image && { image }),
+    offers: {
+      '@type': 'Offer',
+      price: price.toString(),
+      priceCurrency: 'USD',
+      priceValidUntil: new Date(Date.now() + 60000).toISOString(), // Valid for 1 minute
+      availability: 'https://schema.org/InStock',
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+    />
+  );
+}
+
+/**
+ * VideoObject structured data (for pages with embedded videos)
+ */
+export function VideoStructuredData({
+  name,
+  description,
+  thumbnailUrl,
+  uploadDate,
+  duration,
+  embedUrl,
+}: {
+  name: string;
+  description: string;
+  thumbnailUrl: string;
+  uploadDate: string;
+  duration?: string;
+  embedUrl?: string;
+}) {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name,
+    description,
+    thumbnailUrl,
+    uploadDate,
+    ...(duration && { duration }),
+    ...(embedUrl && { embedUrl }),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+    />
+  );
+}
