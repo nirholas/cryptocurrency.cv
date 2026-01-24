@@ -9,6 +9,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+#### SEO & URL Improvements (Jan 24, 2026)
+- **SEO-Friendly Article Slugs** - Article URLs now use readable slugs like `/article/bitcoin-hits-new-ath-2026-01-24` instead of hash IDs
+- **Backwards Compatibility** - Both legacy hash IDs and new slugs work, enabling gradual migration
+- **Tags System** - Comprehensive 50+ tag taxonomy for crypto news with:
+  - Tags index page at `/tags` with category navigation
+  - Individual tag pages at `/tags/{slug}` for Bitcoin, Ethereum, DeFi, NFTs, etc.
+  - Auto-tagging based on article content
+  - Tag-based structured data for Google
+- **Enhanced Structured Data**:
+  - `APIStructuredData` - SoftwareApplication schema for developer pages
+  - `CryptoAssetStructuredData` - FinancialProduct schema for coin pages
+  - `VideoStructuredData` - VideoObject schema for video embeds
+  - Tag page CollectionPage schema
+- **hreflang Alternate Links** - `AlternateLinks` component for international SEO with 18 locale support
+- **SEO Image Component** - `SEOImage` wrapper with required alt text, fallback handling, and captions
+- **SEO Utilities** - `src/lib/seo.ts` with metadata generators for articles, coins, and categories
+- **Google Search Console** - Verification endpoint at `/google[token].html`
+- **News Sitemap** - Google News-specific sitemap at `/news-sitemap.xml` with hreflang alternates
+- **Robots.txt Improvements** - Multiple sitemaps, AI bot rules (GPTBot, ChatGPT-User)
+- **Article Bookmarks** - Save articles for later with localStorage persistence
+- **View Tracking Integration** - Track article views with `/api/views` endpoint
+
 #### Blog Content System Improvements (Jan 25, 2026)
 - **External Markdown Files** - Blog posts now load from `/content/blog/*.md` files for easier content management
 - **Blog Admin Dashboard** - `/admin/blog` page with post listing, statistics, and category filtering

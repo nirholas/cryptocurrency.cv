@@ -82,7 +82,8 @@
     "sanitize-html": "^2.17.0",
     "sharp": "^0.34.5",
     "stripe": "^20.2.0",
-    "swr": "^2.3.8"
+    "swr": "^2.3.8",
+    "web-vitals": "^5.1.0"
   },
   "devDependencies": {
     "@axe-core/cli": "^4.11.0",

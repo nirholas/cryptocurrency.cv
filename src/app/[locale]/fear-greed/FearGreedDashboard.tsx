@@ -93,7 +93,7 @@ export default function FearGreedDashboard() {
       <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-8">
         <div className="flex flex-col lg:flex-row gap-8 items-center">
           <div className="flex-shrink-0">
-            <FearGreedIndex size="lg" showLabel />
+            <FearGreedIndex showBreakdown showHistory historyDays={30} />
           </div>
           <div className="flex-1 space-y-4">
             <div>

@@ -6,7 +6,9 @@ This document outlines the SEO implementation and best practices for Free Crypto
 
 ### ✅ Sitemap
 
-**File:** `src/app/sitemap.ts`
+**Files:** 
+- `src/app/sitemap.ts` - Main sitemap
+- `src/app/news-sitemap.xml/route.ts` - Google News sitemap
 
 Dynamic sitemap generation supporting:
 
@@ -15,6 +17,7 @@ Dynamic sitemap generation supporting:
 - **22 top cryptocurrencies** with hourly updates
 - **Blog posts** with weekly updates
 - **API documentation** pages
+- **Google News sitemap** with `<news:news>` tags for fast news indexing
 
 ```typescript
 // Example sitemap entry
@@ -35,6 +38,7 @@ Configured rules for:
 - **AI bots** (GPTBot, ChatGPT-User) - allowed access to public APIs
 - **Search engines** (Googlebot, Bingbot) - with crawl delays
 - **Protected paths** - `/api/`, `/admin/`, `/_next/`
+- **Multiple sitemaps** - main sitemap and news sitemap
 
 ### ✅ Structured Data (JSON-LD)
 
@@ -73,6 +77,52 @@ Configured metadata:
 - **hreflang tags** for all 18 locales
 - **x-default** fallback to English
 - **Proper locale mapping** (zh-CN → zh-Hans)
+
+---
+
+## Performance Components
+
+### Core Web Vitals Monitoring
+
+**File:** `src/components/WebVitals.tsx`
+
+Measures and reports:
+
+- **LCP** - Largest Contentful Paint (target: < 2.5s)
+- **FID** - First Input Delay (target: < 100ms)
+- **CLS** - Cumulative Layout Shift (target: < 0.1)
+- **FCP** - First Contentful Paint
+- **TTFB** - Time to First Byte
+- **INP** - Interaction to Next Paint
+
+```tsx
+// Add to layout.tsx
+import { WebVitals } from '@/components/WebVitals';
+
+// In your component
+<WebVitals />
+```
+
+### Resource Hints
+
+**File:** `src/components/ResourceHints.tsx`
+
+Provides:
+
+- **Preconnect** - Establish early connections
+- **DNS Prefetch** - Resolve DNS for future navigations
+- **Preload** - Fetch critical resources early
+
+### SEO Image Component
+
+**File:** `src/components/SEOImage.tsx`
+
+Features:
+
+- Enforced alt text (required prop)
+- Fallback image on load failure
+- Proper lazy loading
+- Caption and credit support
 
 ---
 
@@ -274,8 +324,11 @@ When creating new pages, ensure:
 
 ## Future Improvements
 
-1. **Google News Publisher Center** - Submit for Google News inclusion
-2. **AMP Pages** - For news articles (optional)
-3. **Video SEO** - If adding video content
-4. **Local SEO** - If targeting specific regions
-5. **News Sitemap** - Dedicated sitemap for news articles with `<news:news>` tags
+1. ~~**Google News Sitemap**~~ ✅ Implemented
+2. ~~**Canonical URLs**~~ ✅ Implemented on article and coin pages
+3. ~~**Image Optimization**~~ ✅ WebP/AVIF formats configured
+4. ~~**Core Web Vitals Monitoring**~~ ✅ Implemented
+5. **Google News Publisher Center** - Submit for Google News inclusion
+6. **AMP Pages** - For news articles (optional)
+7. **Video SEO** - If adding video content
+8. **Local SEO** - If targeting specific regions

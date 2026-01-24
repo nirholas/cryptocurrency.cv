@@ -49,7 +49,6 @@ export function ResourceHints({
           key={`preconnect-${href}`}
           rel="preconnect"
           href={href}
-          crossOrigin="anonymous"
         />
       ))}
       
@@ -70,7 +69,6 @@ export function ResourceHints({
           href={resource.href}
           as={resource.as}
           type={resource.type}
-          crossOrigin={resource.crossOrigin}
         />
       ))}
     </>
@@ -108,9 +106,6 @@ export function PreloadLCPImage({
       rel="preload"
       as="image"
       href={src}
-      imageSrcSet={srcSet}
-      imageSizes={sizes}
-      fetchPriority="high"
     />
   );
 }

@@ -1,6 +1,6 @@
 /**
  * Individual Tag Page
- * Displays news articles for a specific tag with SEO optimization
+ * Displays news articles for a specific tag with SEO optimization and pagination
  */
 
 import React from 'react';
@@ -10,6 +10,7 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Pagination from '@/components/Pagination';
 import { 
   getTagBySlug, 
   getRelatedTags, 
@@ -20,8 +21,11 @@ import {
 } from '@/lib/tags';
 import { fetchNews, type NewsArticle } from '@/lib/crypto-news';
 
+const ARTICLES_PER_PAGE = 20;
+
 interface PageProps {
   params: Promise<{ slug: string; locale: string }>;
+  searchParams: Promise<{ page?: string }>;
 }
 
 // Generate static params for all tags
@@ -74,7 +78,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 // Filter articles by tag
 async function getArticlesForTag(tag: Tag): Promise<NewsArticle[]> {
-  const response = await fetchNews({ limit: 100 });
+  const response = await fetchNews(100);
   
   // Filter articles that match this tag's keywords
   return response.articles.filter(article => {
@@ -161,17 +165,23 @@ function TagInfo({ tag }: { tag: Tag }) {
   );
 }
 
-export default async function TagPage({ params }: PageProps) {
+export default async function TagPage({ params, searchParams }: PageProps) {
   const { slug } = await params;
+  const { page } = await searchParams;
   const tag = getTagBySlug(slug);
   
   if (!tag) {
     notFound();
   }
   
-  const articles = await getArticlesForTag(tag);
+  const currentPage = Math.max(1, parseInt(page || '1', 10));
+  const allArticles = await getArticlesForTag(tag);
+  const totalPages = Math.ceil(allArticles.length / ARTICLES_PER_PAGE);
+  const startIndex = (currentPage - 1) * ARTICLES_PER_PAGE;
+  const articles = allArticles.slice(startIndex, startIndex + ARTICLES_PER_PAGE);
+  
   const relatedTags = getRelatedTags(slug);
-  const structuredData = generateTagStructuredData(tag, articles.length);
+  const structuredData = generateTagStructuredData(tag, allArticles.length);
   
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-slate-900">

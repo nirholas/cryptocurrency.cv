@@ -6,6 +6,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ReadingProgress from '@/components/ReadingProgress';
+import ViewTracker from '@/components/ViewTracker';
 import { 
   getArticleById, 
   getRelatedArticles,
@@ -39,6 +40,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   
   const canonicalUrl = `${BASE_URL}/en/article/${id}`;
   
+  // Generate dynamic OG image URL for viral sharing
+  const pubDate = article.pub_date || article.first_seen;
+  const formattedDate = pubDate ? new Date(pubDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '';
+  const ogImageUrl = `${BASE_URL}/api/og?title=${encodeURIComponent(article.title)}&source=${encodeURIComponent(article.source)}&date=${encodeURIComponent(formattedDate)}`;
+  
   return {
     title: article.title,
     description: article.description || `Read the full article from ${article.source}`,
@@ -55,11 +61,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       authors: [article.source],
       tags: [...article.tickers, ...article.tags],
       section: 'Cryptocurrency',
+      images: [{
+        url: ogImageUrl,
+        width: 1200,
+        height: 630,
+        alt: article.title,
+      }],
     },
     twitter: {
       card: 'summary_large_image',
       title: article.title,
       description: article.description || `Read the full article from ${article.source}`,
+      images: [ogImageUrl],
     },
     robots: {
       index: true,
@@ -142,6 +155,9 @@ export default async function ArticlePage({ params }: Props) {
       
       {/* Reading Progress Bar */}
       <ReadingProgress />
+      
+      {/* View Tracking */}
+      <ViewTracker articleId={article.id} articleTitle={article.title} />
       
       <div className="max-w-7xl mx-auto">
         <Header />

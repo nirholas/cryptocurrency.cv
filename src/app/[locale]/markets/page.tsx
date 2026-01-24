@@ -22,16 +22,53 @@ import TrendingSection from './components/TrendingSection';
 import CategoryTabs from './components/CategoryTabs';
 import SearchAndFilters from './components/SearchAndFilters';
 import CoinsTable from './components/CoinsTable';
+import { AnomalyAlertsBanner } from '@/components/AnomalyAlertsBanner';
 import type { SortField, SortOrder } from './components/SortableHeader';
 
-export const metadata: Metadata = {
-  title: 'Crypto Markets - Free Crypto News',
-  description: 'Live cryptocurrency prices, market data, charts, and analytics. Browse and discover cryptocurrencies.',
-  openGraph: {
-    title: 'Crypto Markets - Free Crypto News',
-    description: 'Live cryptocurrency prices, market data, charts, and analytics.',
-  },
-};
+const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://free-crypto-news.vercel.app';
+
+export async function generateMetadata(): Promise<Metadata> {
+  // Fetch current market data for dynamic OG image
+  try {
+    const [global, fearGreed] = await Promise.all([
+      getGlobalMarketData(),
+      getFearGreedIndex(),
+    ]);
+    
+    const btcPrice = global?.total_market_cap?.btc 
+      ? `$${(global.total_market_cap.usd / global.total_market_cap.btc * 1).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
+      : '$0';
+    const btcChange = (global?.market_cap_change_percentage_24h_usd ?? 0).toFixed(2);
+    
+    const ogImageUrl = `${BASE_URL}/api/og/market?type=overview&btc=${encodeURIComponent(btcPrice)}&btc_change=${btcChange}&fear_greed=${fearGreed?.value ?? 50}&fear_greed_label=${encodeURIComponent(fearGreed?.value_classification ?? 'Neutral')}`;
+
+    return {
+      title: 'Crypto Markets - Free Crypto News',
+      description: 'Live cryptocurrency prices, market data, charts, and analytics. Browse and discover cryptocurrencies.',
+      openGraph: {
+        title: 'Crypto Markets - Free Crypto News',
+        description: 'Live cryptocurrency prices, market data, charts, and analytics.',
+        images: [{
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: 'Crypto Markets Overview',
+        }],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Crypto Markets - Free Crypto News',
+        description: 'Live cryptocurrency prices and market data',
+        images: [ogImageUrl],
+      },
+    };
+  } catch {
+    return {
+      title: 'Crypto Markets - Free Crypto News',
+      description: 'Live cryptocurrency prices, market data, charts, and analytics.',
+    };
+  }
+}
 
 export const revalidate = 60; // Revalidate every minute
 
@@ -247,6 +284,9 @@ export default async function MarketsPage({ params: pageParams, searchParams }: 
         <GlobalStatsBar global={global} fearGreed={fearGreed} />
 
         <main className="px-4 py-6">
+          {/* Market Anomaly Alerts */}
+          <AnomalyAlertsBanner maxAlerts={2} className="mb-6" />
+          
           {/* Page Header */}
           <div className="mb-6">
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">

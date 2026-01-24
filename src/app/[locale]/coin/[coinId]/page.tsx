@@ -25,7 +25,7 @@ import {
 import CoinPageClient from './CoinPageClient';
 
 interface Props {
-  params: Promise<{ coinId: string }>;
+  params: Promise<{ coinId: string; locale: string }>;
   searchParams: Promise<{ tab?: string }>;
 }
 
@@ -69,6 +69,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const change24h = coinData.market_data?.price_change_percentage_24h || 0;
     const symbol = coinData.symbol?.toUpperCase() || '';
     const name = coinData.name || coinId;
+    
+    // Generate dynamic OG image for viral sharing
+    const ogImageUrl = `${BASE_URL}/api/og/coin?name=${encodeURIComponent(name)}&symbol=${encodeURIComponent(symbol)}&price=${encodeURIComponent(formatPrice(price))}&change=${encodeURIComponent(change24h.toFixed(2))}`;
 
     return {
       title: `${name} (${symbol}) Price, Chart & Market Cap | Free Crypto News`,
@@ -77,16 +80,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       openGraph: {
         title: `${name} Price: ${formatPrice(price)} | ${symbol}`,
         description: `${symbol} ${formatPercent(change24h)} in 24h. Market Cap: $${formatNumber(coinData.market_data?.market_cap?.usd)}`,
-        images: coinData.image?.large ? [{ url: coinData.image.large, width: 250, height: 250, alt: `${name} (${symbol}) cryptocurrency logo` }] : [],
+        images: [{ 
+          url: ogImageUrl, 
+          width: 1200, 
+          height: 630, 
+          alt: `${name} (${symbol}) price chart - ${formatPrice(price)}` 
+        }],
         type: 'website',
         url: canonicalUrl,
         locale: locale?.replace('-', '_') || 'en',
       },
       twitter: {
-        card: 'summary',
+        card: 'summary_large_image',
         title: `${name} (${symbol}) - ${formatPrice(price)}`,
         description: `${symbol} ${formatPercent(change24h)} in 24h`,
-        images: coinData.image?.large ? [coinData.image.large] : [],
+        images: [ogImageUrl],
       },
       alternates: {
         canonical: canonicalUrl,

@@ -36,6 +36,7 @@ export const maxDuration = 60;
 // For production, use KV store or database
 interface ArchiveEntry {
   id: string;
+  slug: string;
   title: string;
   link: string;
   source: string;
@@ -83,7 +84,29 @@ function verifyCronAuth(request: NextRequest): boolean {
 }
 
 /**
- * Generate a unique ID for an article
+ * Generate SEO-friendly slug from article title and date
+ */
+function generateArticleSlug(title: string, date?: string): string {
+  let slug = title
+    .toLowerCase()
+    .replace(/['']/g, '')
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '')
+    .slice(0, 60)
+    .replace(/-$/, '');
+  
+  if (date) {
+    const dateStr = new Date(date).toISOString().split('T')[0];
+    slug = `${slug}-${dateStr}`;
+  }
+  
+  return slug || 'untitled';
+}
+
+/**
+ * Generate a unique ID for an article (legacy, for backwards compatibility)
  */
 function generateArticleId(article: NewsArticle): string {
   const normalizedUrl = article.link
@@ -136,6 +159,7 @@ async function archiveArticles(articles: NewsArticle[]): Promise<{
 
   for (const article of articles) {
     const id = generateArticleId(article);
+    const slug = generateArticleSlug(article.title, article.pubDate);
 
     if (seenIds.has(id)) {
       duplicates++;
@@ -145,6 +169,7 @@ async function archiveArticles(articles: NewsArticle[]): Promise<{
 
     entries.push({
       id,
+      slug,
       title: article.title,
       link: article.link,
       source: article.source,
