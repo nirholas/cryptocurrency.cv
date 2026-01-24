@@ -1138,7 +1138,11 @@ export function generateIntelligenceSummary(
     }
   }
   
-  const trendingTopics = Array.from(topicCounts.entries())
+  const trendingTopics: {
+    topic: string;
+    mentions: number;
+    sentiment: 'positive' | 'negative' | 'neutral';
+  }[] = Array.from(topicCounts.entries())
     .map(([topic, data]) => ({
       topic,
       mentions: data.count,

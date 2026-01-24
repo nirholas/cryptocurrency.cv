@@ -347,64 +347,160 @@ export async function analyzeWallet(request: NextRequest): Promise<NextResponse>
   }
 
   try {
-    // In production, query:
-    // - Etherscan/Basescan for balances
-    // - DeBank for DeFi positions
-    // - Nansen for labels
-    // - Historical transaction data
-
-    // Mock wallet analysis
-    const analysis = {
-      address,
-      chain,
-      label: KNOWN_EXCHANGES[address.toLowerCase()] || null,
-      isExchange: !!KNOWN_EXCHANGES[address.toLowerCase()],
-      isContract: Math.random() > 0.8,
-
-      // Balance information
+    // Fetch real data from blockchain APIs
+    let analysis: {
+      address: string;
+      chain: string;
+      label: string | null;
+      isExchange: boolean;
+      isContract: boolean;
       balance: {
-        total_usd: Math.floor(Math.random() * 100_000_000),
-        tokens: [
-          { symbol: 'ETH', amount: Math.random() * 1000, usd: Math.random() * 4_000_000 },
-          { symbol: 'USDC', amount: Math.random() * 5_000_000, usd: Math.random() * 5_000_000 },
-          { symbol: 'WBTC', amount: Math.random() * 50, usd: Math.random() * 5_000_000 },
-        ],
-      },
-
-      // Activity metrics
+        total_usd: number;
+        tokens: { symbol: string; amount: number; usd: number }[];
+      };
       activity: {
-        firstSeen: new Date(
-          Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000 * 3
-        ).toISOString(),
-        lastActive: new Date(Date.now() - Math.random() * 24 * 60 * 60 * 1000).toISOString(),
-        transactionCount: Math.floor(Math.random() * 10000),
-        uniqueInteractions: Math.floor(Math.random() * 500),
-      },
-
-      // DeFi positions (if applicable)
+        firstSeen: string | null;
+        lastActive: string | null;
+        transactionCount: number;
+        uniqueInteractions: number;
+      };
       defi: {
-        protocols: ['Uniswap', 'Aave', 'Compound'].slice(0, Math.floor(Math.random() * 4)),
-        totalValueLocked: Math.random() * 10_000_000,
-        positions: [],
-      },
-
-      // Related wallets
-      relatedWallets: [
-        {
-          address: `0x${Math.random().toString(16).slice(2, 42)}`,
-          relationship: 'frequent_interaction',
-        },
-        { address: `0x${Math.random().toString(16).slice(2, 42)}`, relationship: 'funding_source' },
-      ],
-
-      // Risk indicators
+        protocols: string[];
+        totalValueLocked: number;
+        positions: unknown[];
+      };
+      relatedWallets: { address: string; relationship: string }[];
       risk: {
-        score: Math.floor(Math.random() * 100),
-        flags: [] as string[],
-        isWhitelisted: false,
-        isBlacklisted: false,
-      },
+        score: number;
+        flags: string[];
+        isWhitelisted: boolean;
+        isBlacklisted: boolean;
+      };
     };
+
+    // Check if it's a known exchange
+    const knownLabel = KNOWN_EXCHANGES[address.toLowerCase()] || null;
+    const isExchange = !!knownLabel;
+
+    if (isValidEthAddress && ETHERSCAN_API_KEY) {
+      // Fetch from Etherscan
+      const [balanceResponse, txResponse] = await Promise.all([
+        fetch(
+          `https://api.etherscan.io/api?module=account&action=balance&address=${address}&tag=latest&apikey=${ETHERSCAN_API_KEY}`,
+          { next: { revalidate: 60 } }
+        ),
+        fetch(
+          `https://api.etherscan.io/api?module=account&action=txlist&address=${address}&startblock=0&endblock=99999999&page=1&offset=100&sort=desc&apikey=${ETHERSCAN_API_KEY}`,
+          { next: { revalidate: 60 } }
+        ),
+      ]);
+
+      const balanceData = await balanceResponse.json();
+      const txData = await txResponse.json();
+
+      // Get ETH price
+      const priceResponse = await fetch(
+        'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
+        { next: { revalidate: 60 } }
+      );
+      const priceData = await priceResponse.json();
+      const ethPrice = priceData.ethereum?.usd || 3000;
+
+      const balanceWei = parseFloat(balanceData.result || '0');
+      const balanceEth = balanceWei / 1e18;
+      const balanceUsd = balanceEth * ethPrice;
+
+      // Parse transaction data
+      const transactions = txData.status === '1' ? txData.result || [] : [];
+      const uniqueAddresses = new Set<string>();
+      transactions.forEach((tx: { from: string; to: string }) => {
+        if (tx.from?.toLowerCase() !== address.toLowerCase()) {
+          uniqueAddresses.add(tx.from);
+        }
+        if (tx.to?.toLowerCase() !== address.toLowerCase()) {
+          uniqueAddresses.add(tx.to);
+        }
+      });
+
+      const firstTx = transactions.length > 0 ? transactions[transactions.length - 1] : null;
+      const lastTx = transactions.length > 0 ? transactions[0] : null;
+
+      analysis = {
+        address,
+        chain,
+        label: knownLabel,
+        isExchange,
+        isContract: false, // Would need separate API call to check
+
+        balance: {
+          total_usd: balanceUsd,
+          tokens: [{ symbol: 'ETH', amount: balanceEth, usd: balanceUsd }],
+        },
+
+        activity: {
+          firstSeen: firstTx ? new Date(parseInt(firstTx.timeStamp) * 1000).toISOString() : null,
+          lastActive: lastTx ? new Date(parseInt(lastTx.timeStamp) * 1000).toISOString() : null,
+          transactionCount: transactions.length,
+          uniqueInteractions: uniqueAddresses.size,
+        },
+
+        defi: {
+          protocols: [],
+          totalValueLocked: 0,
+          positions: [],
+        },
+
+        relatedWallets: Array.from(uniqueAddresses)
+          .slice(0, 5)
+          .map((addr) => ({
+            address: addr,
+            relationship: 'interaction',
+          })),
+
+        risk: {
+          score: isExchange ? 10 : 50,
+          flags: [],
+          isWhitelisted: isExchange,
+          isBlacklisted: false,
+        },
+      };
+    } else {
+      // Minimal data when API key not available
+      analysis = {
+        address,
+        chain,
+        label: knownLabel,
+        isExchange,
+        isContract: false,
+
+        balance: {
+          total_usd: 0,
+          tokens: [],
+        },
+
+        activity: {
+          firstSeen: null,
+          lastActive: null,
+          transactionCount: 0,
+          uniqueInteractions: 0,
+        },
+
+        defi: {
+          protocols: [],
+          totalValueLocked: 0,
+          positions: [],
+        },
+
+        relatedWallets: [],
+
+        risk: {
+          score: 50,
+          flags: ETHERSCAN_API_KEY ? [] : ['Limited data - API key not configured'],
+          isWhitelisted: isExchange,
+          isBlacklisted: false,
+        },
+      };
+    }
 
     return NextResponse.json({
       analysis,
@@ -434,79 +530,129 @@ export async function getSmartMoney(request: NextRequest): Promise<NextResponse>
   const timeframe = searchParams.get('timeframe') || '24h';
 
   try {
-    // Smart money categories
+    // Fetch real whale transactions to derive smart money data
+    const transactions = await fetchRealWhaleTransactions(100, WHALE_THRESHOLD, undefined, undefined);
+
+    // Analyze transactions to derive smart money signals
+    const inflowTxs = transactions.filter(tx => tx.type === 'exchange_inflow');
+    const outflowTxs = transactions.filter(tx => tx.type === 'exchange_outflow');
+
+    const ethInflow = inflowTxs.filter(tx => tx.token.symbol === 'ETH').reduce((sum, tx) => sum + tx.amount, 0);
+    const ethOutflow = outflowTxs.filter(tx => tx.token.symbol === 'ETH').reduce((sum, tx) => sum + tx.amount, 0);
+    const btcInflow = inflowTxs.filter(tx => tx.token.symbol === 'BTC').reduce((sum, tx) => sum + tx.amount, 0);
+    const btcOutflow = outflowTxs.filter(tx => tx.token.symbol === 'BTC').reduce((sum, tx) => sum + tx.amount, 0);
+
+    const totalInflowUsd = inflowTxs.reduce((sum, tx) => sum + tx.amountUsd, 0);
+    const totalOutflowUsd = outflowTxs.reduce((sum, tx) => sum + tx.amountUsd, 0);
+
+    // Determine accumulation vs distribution
+    const netFlow = totalOutflowUsd - totalInflowUsd;
+    const isAccumulation = netFlow > 0;
+
+    // Find largest transactions
+    const largestBuy = outflowTxs.sort((a, b) => b.amountUsd - a.amountUsd)[0];
+    const largestSell = inflowTxs.sort((a, b) => b.amountUsd - a.amountUsd)[0];
+
+    // Analyze by token
+    const tokenFlows: Record<string, { inflow: number; outflow: number }> = {};
+    transactions.forEach(tx => {
+      const symbol = tx.token.symbol;
+      if (!tokenFlows[symbol]) {
+        tokenFlows[symbol] = { inflow: 0, outflow: 0 };
+      }
+      if (tx.type === 'exchange_inflow') {
+        tokenFlows[symbol].inflow += tx.amountUsd;
+      } else if (tx.type === 'exchange_outflow') {
+        tokenFlows[symbol].outflow += tx.amountUsd;
+      }
+    });
+
+    // Determine accumulating vs distributing tokens
+    const accumulating: string[] = [];
+    const distributing: string[] = [];
+    const neutral: string[] = [];
+
+    Object.entries(tokenFlows).forEach(([symbol, flow]) => {
+      const net = flow.outflow - flow.inflow;
+      if (net > flow.inflow * 0.2) {
+        accumulating.push(symbol);
+      } else if (net < -flow.outflow * 0.2) {
+        distributing.push(symbol);
+      } else {
+        neutral.push(symbol);
+      }
+    });
+
     const smartMoneyData = {
-      // Top fund/VC wallets activity
+      // Institution activity derived from whale transactions
       institutions: {
-        netBuying: Math.random() > 0.5,
-        volume24h: Math.floor(Math.random() * 100_000_000),
-        topBuys: [
-          { token: 'ETH', amount: Math.random() * 10000, usd: Math.random() * 40_000_000 },
-          { token: 'SOL', amount: Math.random() * 100000, usd: Math.random() * 20_000_000 },
-          { token: 'LINK', amount: Math.random() * 500000, usd: Math.random() * 10_000_000 },
-        ],
-        topSells: [{ token: 'BTC', amount: Math.random() * 500, usd: Math.random() * 50_000_000 }],
+        netBuying: isAccumulation,
+        volume24h: totalInflowUsd + totalOutflowUsd,
+        topBuys: outflowTxs.slice(0, 3).map(tx => ({
+          token: tx.token.symbol,
+          amount: tx.amount,
+          usd: tx.amountUsd,
+        })),
+        topSells: inflowTxs.slice(0, 3).map(tx => ({
+          token: tx.token.symbol,
+          amount: tx.amount,
+          usd: tx.amountUsd,
+        })),
       },
 
       // Whale accumulation/distribution
       whaleActivity: {
-        accumulationPhase: Math.random() > 0.4,
+        accumulationPhase: isAccumulation,
         distribution: {
-          accumulating: ['ETH', 'SOL', 'AVAX'],
-          distributing: ['DOGE', 'SHIB'],
-          neutral: ['BTC'],
+          accumulating,
+          distributing,
+          neutral,
         },
-        largestBuy: {
-          token: 'ETH',
-          amount: 5000,
-          usd: 20_000_000,
-          wallet: '0x...',
-        },
-        largestSell: {
-          token: 'BTC',
-          amount: 200,
-          usd: 20_000_000,
-          wallet: '0x...',
-        },
+        largestBuy: largestBuy ? {
+          token: largestBuy.token.symbol,
+          amount: largestBuy.amount,
+          usd: largestBuy.amountUsd,
+          wallet: largestBuy.to.address.slice(0, 10) + '...',
+        } : null,
+        largestSell: largestSell ? {
+          token: largestSell.token.symbol,
+          amount: largestSell.amount,
+          usd: largestSell.amountUsd,
+          wallet: largestSell.from.address.slice(0, 10) + '...',
+        } : null,
       },
 
       // Exchange netflow
       exchangeFlow: {
-        btc: { inflow: Math.random() * 1000, outflow: Math.random() * 1500, net: 0 },
-        eth: { inflow: Math.random() * 20000, outflow: Math.random() * 15000, net: 0 },
-        usdt: { inflow: Math.random() * 100_000_000, outflow: Math.random() * 80_000_000, net: 0 },
-      },
-
-      // DeFi smart money
-      defiActivity: {
-        topProtocolInflows: [
-          { protocol: 'Aave', usd: Math.random() * 50_000_000 },
-          { protocol: 'Uniswap', usd: Math.random() * 30_000_000 },
-          { protocol: 'Lido', usd: Math.random() * 100_000_000 },
-        ],
-        newPositions: Math.floor(Math.random() * 1000),
-        closedPositions: Math.floor(Math.random() * 800),
+        btc: { inflow: btcInflow, outflow: btcOutflow, net: btcOutflow - btcInflow },
+        eth: { inflow: ethInflow, outflow: ethOutflow, net: ethOutflow - ethInflow },
+        total: { inflow: totalInflowUsd, outflow: totalOutflowUsd, net: netFlow },
       },
 
       // Signals
       signals: {
-        overallSentiment: Math.random() > 0.5 ? 'accumulation' : 'distribution',
-        confidence: Math.floor(Math.random() * 40) + 60,
+        overallSentiment: isAccumulation ? 'accumulation' : 'distribution',
+        confidence: transactions.length > 50 ? 85 : transactions.length > 20 ? 70 : 50,
         keyInsights: [
-          'Large ETH accumulation by institutional wallets',
-          'Exchange reserves declining for BTC',
-          'Smart money rotating into L2 tokens',
-        ],
+          netFlow > 0 
+            ? `Net ${(netFlow / 1e6).toFixed(1)}M USD flowing out of exchanges (bullish)`
+            : `Net ${(Math.abs(netFlow) / 1e6).toFixed(1)}M USD flowing into exchanges (bearish)`,
+          accumulating.length > 0 
+            ? `Accumulation detected in: ${accumulating.join(', ')}`
+            : 'No significant accumulation detected',
+          transactions.length > 0
+            ? `${transactions.length} whale transactions analyzed`
+            : 'Limited whale activity in timeframe',
+        ].filter(Boolean),
+      },
+
+      // Data quality indicator
+      dataQuality: {
+        transactionsAnalyzed: transactions.length,
+        dataSource: 'Blockchair, Etherscan',
+        lastUpdated: new Date().toISOString(),
       },
     };
-
-    // Calculate net flows
-    smartMoneyData.exchangeFlow.btc.net =
-      smartMoneyData.exchangeFlow.btc.outflow - smartMoneyData.exchangeFlow.btc.inflow;
-    smartMoneyData.exchangeFlow.eth.net =
-      smartMoneyData.exchangeFlow.eth.outflow - smartMoneyData.exchangeFlow.eth.inflow;
-    smartMoneyData.exchangeFlow.usdt.net =
-      smartMoneyData.exchangeFlow.usdt.outflow - smartMoneyData.exchangeFlow.usdt.inflow;
 
     return NextResponse.json({
       ...smartMoneyData,

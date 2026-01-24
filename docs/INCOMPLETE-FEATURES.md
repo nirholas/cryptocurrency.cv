@@ -6,99 +6,82 @@ This document tracks features that are not yet fully implemented or still use mo
 
 ---
 
-## 🔴 High Priority - Features Using Mock Data
+## ✅ Recently Fixed
 
 ### 1. Export API (`src/app/api/export/route.ts`)
-**Status:** Uses mock data generators instead of real data sources
-- `generateMockNewsData()` - Returns fake news articles
-- `generateMockMarketData()` - Returns fake market data
-- `generateMockPredictions()` - Returns fake predictions
-- `generateMockSocialData()` - Returns fake social metrics
-
-**Fix Required:** Connect to real database/API sources to fetch actual data for export.
+**Status:** ✅ FIXED - Uses real data sources
+- Now uses `getLatestNews()` for real news articles
+- Uses `getTopCoins()` for real market data
+- Uses `getRecentPredictions()` for real predictions
+- Uses `getSocialTrends()` for real social metrics
 
 ---
 
-### 2. Export Service (`src/lib/exports/service.ts`)
-**Status:** Uses mock data and placeholder formats
-- `fetchDataForExport()` returns simulated data (line 342)
-- Parquet format is a placeholder (line 416)
-- SQLite format is a placeholder (line 426)
-
-**Fix Required:** 
-- Implement actual data fetching from database
-- Install and integrate `parquet-wasm` for Parquet output
-- Install and integrate `sql.js` for SQLite output
+### 2. Social Metrics Service (`src/lib/social/metrics.ts`)
+**Status:** ✅ FIXED - Returns null/empty when API keys not configured
+- Removed mock data fallbacks
+- Returns `null` for missing metrics instead of fake data
+- Returns empty array for trends when API keys not set
+- UI should handle empty states appropriately
 
 ---
 
-### 3. Social Metrics Service (`src/lib/social/metrics.ts`)
-**Status:** Falls back to mock data when API keys not configured
-- `generateMockMetrics()` function (line 400)
-- `generateMockInfluencers()` function (line 430)
-- `generateMockTrends()` function (line 446)
-- Returns mock data when `LUNARCRUSH_API_KEY` or `SANTIMENT_API_KEY` not set
-
-**Fix Required:** Either require API keys or clearly indicate data is simulated in UI.
+### 3. Admin License Panel (`src/app/[locale]/admin/AdminLicensePanel.tsx`)
+**Status:** ✅ FIXED - Now uses real API data
+- Removed second useEffect that overwrote API data with mock
+- Now exclusively uses `/api/admin/licenses` endpoint
+- Endpoint uses Vercel KV for real data storage
 
 ---
 
-### 4. Trading Funding Rates (`src/lib/trading/funding-rates.ts`)
-**Status:** Uses mock data in development
-- `generateMockFundingRates()` function (line 209)
-- Falls back to mock when not in production (line 300)
-- Historical funding rates are mock only (line 448)
-
-**Fix Required:** Implement real historical data fetching from exchanges.
+### 4. Premium Whale Tracking (`src/lib/premium-whales.ts`)
+**Status:** ✅ FIXED - Uses real blockchain APIs
+- Replaced `generateMockWhaleTransactions()` with real Blockchair/Etherscan API calls
+- `analyzeWallet()` now fetches real balance and transaction data from Etherscan
+- `getSmartMoney()` derives insights from real whale transaction data
 
 ---
 
-### 5. Trading Arbitrage (`src/lib/trading/arbitrage.ts`)
-**Status:** Uses mock prices
-- `generateMockPrices()` function (line 173)
-- Falls back to mock data (line 166)
-
-**Fix Required:** Integrate real exchange price APIs.
-
----
-
-### 6. Admin License Panel (`src/app/[locale]/admin/AdminLicensePanel.tsx`)
-**Status:** Uses hardcoded mock data
-- `mockData` object with fake license/revenue data (line 49)
-- No actual API call to fetch real data
-
-**Fix Required:** Create API endpoint `/api/admin/licenses` to fetch real license data from database.
+### 5. Watchlist Feature
+**Status:** ✅ ALREADY IMPLEMENTED
+- Full implementation in `src/lib/watchlist.ts`
+- WatchlistProvider context in `src/components/watchlist/`
+- Dedicated watchlist page at `/watchlist`
+- Uses localStorage for persistence
+- Integrated in coin pages via `handleWatchlistToggle`
 
 ---
 
-## 🟡 Medium Priority - Incomplete Feature Integrations
-
-### 7. Watchlist Feature
-**Locations:**
-- `src/app/[locale]/coin/[coinId]/CoinPageClient.tsx` (line 138)
-  - `// TODO: Integrate with watchlist feature`
-- `src/app/[locale]/markets/components/CoinRow.tsx` (line 133)
-  - `// TODO: Implement watchlist functionality`
-
-**Fix Required:** 
-- Create watchlist database storage (Vercel KV or database)
-- Create API endpoints: `/api/watchlist` (GET, POST, DELETE)
-- Implement UI state management for watchlist
+### 6. Price Alerts Feature
+**Status:** ✅ ALREADY IMPLEMENTED
+- Full implementation in `src/lib/alerts.ts`
+- API endpoints at `/api/alerts` (GET, POST, DELETE)
+- Supports price threshold and keyword alerts
+- In-memory storage (use external DB for production persistence)
+- Integrated in coin pages via `handleCreateAlert`
 
 ---
 
-### 8. Price Alerts Feature
-**Location:** `src/app/[locale]/coin/[coinId]/CoinPageClient.tsx`
-- Line 143: `// TODO: Integrate with price alerts feature`
-- Line 372: `// TODO: Implement alert creation`
+## 🟡 Medium Priority - Remaining Items
 
-**Fix Required:**
-- Create alerts database storage
-- Create API endpoints: `/api/alerts` (GET, POST, DELETE)
-- Implement background job for price monitoring
-- Add push notification integration
+### 1. Export Service Formats (`src/lib/exports/service.ts`)
+**Status:** Parquet and SQLite formats are placeholders
+- Parquet format needs `parquet-wasm` integration
+- SQLite format needs `sql.js` integration
+- JSON and CSV formats work correctly
+
+**Fix Required:** Install and integrate format libraries for Parquet and SQLite.
 
 ---
+
+### 2. Alerts Persistence
+**Status:** Alerts use in-memory storage
+- Works for demo/development
+- Data lost on server restart
+
+**Fix Required:** Integrate with Vercel KV or external database for persistent storage.
+
+------
 
 ### 9. Influencer Storage (Production)
 **Location:** `src/app/api/influencers/route.ts` (line 169)
