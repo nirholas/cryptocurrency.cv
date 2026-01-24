@@ -228,7 +228,7 @@ export default async function TagPage({ params, searchParams }: PageProps) {
                   {tag.name} News
                 </h1>
                 <p className="text-gray-600 dark:text-slate-400 mt-1">
-                  {articles.length} articles • Updated in real-time
+                  {allArticles.length} articles • Page {currentPage} of {totalPages}
                 </p>
               </div>
             </div>
@@ -242,6 +242,16 @@ export default async function TagPage({ params, searchParams }: PageProps) {
                   {articles.map((article, index) => (
                     <ArticleCard key={`${article.link}-${index}`} article={article} />
                   ))}
+                  
+                  {/* Pagination */}
+                  {totalPages > 1 && (
+                    <Pagination
+                      currentPage={currentPage}
+                      totalPages={totalPages}
+                      basePath={`/tags/${tag.slug}`}
+                      className="mt-8"
+                    />
+                  )}
                 </div>
               ) : (
                 <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-12 text-center">

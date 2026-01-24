@@ -28,7 +28,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     }
     
     // Get articles matching this tag
-    const response = await fetchNews({ limit: 50 });
+    const response = await fetchNews(50);
     const matchingArticles = response.articles.filter(article => {
       const articleTags = extractTagsFromArticle(article);
       return articleTags.some(t => t.slug === tag.slug);

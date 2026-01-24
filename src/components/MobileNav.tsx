@@ -30,6 +30,8 @@ const tradingItems = [
   { href: '/predictions', label: 'Predictions', icon: '🎯' },
   { href: '/screener', label: 'Screener', icon: '🔍' },
   { href: '/sentiment', label: 'Fear & Greed', icon: '😱' },
+  { href: '/backtest', label: 'Backtest', icon: '🧪' },
+  { href: '/onchain', label: 'On-chain Events', icon: '⛓️' },
 ];
 
 const analyticsItems = [
@@ -38,6 +40,8 @@ const analyticsItems = [
   { href: '/protocol-health', label: 'Protocol Health', icon: '🏥' },
   { href: '/coverage-gap', label: 'Coverage Gaps', icon: '🔎' },
   { href: '/influencers', label: 'Influencer Tracker', icon: '👥' },
+  { href: '/narratives', label: 'Narratives', icon: '💬' },
+  { href: '/funding', label: 'Funding Rounds', icon: '💸' },
   { href: '/portfolio', label: 'Portfolio Tracker', icon: '💼' },
   { href: '/watchlist', label: 'Watchlist', icon: '👁️' },
   { href: '/bookmarks', label: 'Bookmarks', icon: '🔖' },
@@ -53,6 +57,9 @@ const aiItems = [
   { href: '/ai-agent', label: 'AI Market Agent', icon: '🤖' },
   { href: '/digest', label: 'AI Digest', icon: '📰' },
   { href: '/sentiment', label: 'Sentiment', icon: '🎯' },
+  { href: '/factcheck', label: 'Fact Check', icon: '✅' },
+  { href: '/clickbait', label: 'Clickbait Detector', icon: '⚠️' },
+  { href: '/entities', label: 'Entity Explorer', icon: '🔗' },
 ];
 
 const resourceLinks = [
@@ -65,6 +72,9 @@ const resourceLinks = [
   { href: '/settings', label: 'Settings', icon: '⚙️' },
   { href: '/about', label: 'About Us', icon: 'ℹ️' },
   { href: '/read', label: 'Reading List', icon: '📖' },
+  { href: '/citations', label: 'Citations', icon: '📖' },
+  { href: '/claims', label: 'Claims Tracker', icon: '📋' },
+  { href: '/origins', label: 'Story Origins', icon: '🔍' },
 ];
 
 export function MobileNav() {
