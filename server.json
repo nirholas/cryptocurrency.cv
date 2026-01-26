@@ -1,9 +1,24 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.nirholas/free-crypto-news",
-  "version": "1.0.0",
-  "title": "Crypto News Aggregator",
-  "description": "Free crypto news aggregator MCP - Bitcoin Ethereum DeFi Solana altcoins feeds",
-  "keywords": ["crypto", "news", "bitcoin", "ethereum", "defi", "aggregator"],
-  "repository": {"url": "https://github.com/nirholas/free-crypto-news", "source": "github"}
+  "title": "Free Crypto News",
+  "description": "Free crypto news aggregator MCP - Bitcoin, Ethereum, DeFi, Solana, altcoins feeds",
+  "repository": {
+    "url": "https://github.com/nirholas/free-crypto-news",
+    "source": "github"
+  },
+  "version": "1.0.1",
+  "icons": {
+    "light": "https://raw.githubusercontent.com/nirholas/g1t/d9a0ee206b8136472c04384905999369f198b3c9/milady.svg",
+    "dark": "https://raw.githubusercontent.com/nirholas/g1t/d9a0ee206b8136472c04384905999369f198b3c9/bg.svg"
+  },
+  "packages": {
+    "npm": "free-crypto-news"
+  },
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "keywords": ["crypto", "news", "bitcoin", "ethereum", "defi", "solana", "altcoins", "aggregator", "mcp", "ai"],
+      "category": "News"
+    }
+  }
 }
