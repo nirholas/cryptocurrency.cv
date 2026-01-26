@@ -2,22 +2,58 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.nirholas/free-crypto-news",
   "title": "Free Crypto News",
-  "description": "Free crypto news aggregator MCP - Bitcoin, Ethereum, DeFi, Solana, altcoins feeds",
+  "description": "Free crypto news aggregator MCP - Bitcoin, Ethereum, DeFi, Solana, altcoins. 12+ sources, sentiment analysis, real-time feeds.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "nich",
+      "url": "https://github.com/nirholas"
+    }
+  ],
   "repository": {
     "url": "https://github.com/nirholas/free-crypto-news",
     "source": "github"
   },
   "version": "1.0.1",
-  "icons": {
-    "light": "https://raw.githubusercontent.com/nirholas/g1t/d9a0ee206b8136472c04384905999369f198b3c9/milady.svg",
-    "dark": "https://raw.githubusercontent.com/nirholas/g1t/d9a0ee206b8136472c04384905999369f198b3c9/bg.svg"
+  "links": {
+    "homepage": "https://github.com/nirholas/free-crypto-news",
+    "bugs": "https://github.com/nirholas/free-crypto-news/issues",
+    "npm": "https://www.npmjs.com/package/free-crypto-news"
   },
-  "packages": {
-    "npm": "free-crypto-news"
-  },
+  "icons": [
+    {
+      "url": "https://raw.githubusercontent.com/nirholas/g1t/d9a0ee206b8136472c04384905999369f198b3c9/milady.svg",
+      "type": "svg"
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "free-crypto-news",
+      "version": "1.0.1",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": []
+    }
+  ],
   "_meta": {
     "io.modelcontextprotocol.registry/publisher-provided": {
-      "keywords": ["crypto", "news", "bitcoin", "ethereum", "defi", "solana", "altcoins", "aggregator", "mcp", "ai"],
+      "keywords": [
+        "crypto",
+        "news",
+        "bitcoin",
+        "ethereum",
+        "defi",
+        "solana",
+        "altcoins",
+        "aggregator",
+        "sentiment",
+        "rss",
+        "mcp",
+        "ai"
+      ],
       "category": "News"
     }
   }
