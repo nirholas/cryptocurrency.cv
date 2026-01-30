@@ -163,7 +163,7 @@ export default function DeveloperPortalContent() {
 
       {/* Tab Content */}
       <div className="min-h-[600px]">
-        {activeTab === 'quickstart' && <QuickStartTab copyToClipboard={copyToClipboard} />}
+        {activeTab === 'quickstart' && <QuickStartTab copyToClipboard={copyToClipboard} setActiveTab={setActiveTab} />}
         {activeTab === 'keys' && (
           <APIKeysTab
             apiKeys={apiKeys}
@@ -185,7 +185,7 @@ export default function DeveloperPortalContent() {
 }
 
 // Quick Start Tab
-function QuickStartTab({ copyToClipboard }: { copyToClipboard: (text: string) => void }) {
+function QuickStartTab({ copyToClipboard, setActiveTab }: { copyToClipboard: (text: string) => void; setActiveTab: (tab: 'quickstart' | 'keys' | 'usage' | 'docs') => void }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -257,19 +257,15 @@ function QuickStartTab({ copyToClipboard }: { copyToClipboard: (text: string) =>
           Create an API key to access premium market data, analytics, and AI features.
         </p>
 
-        <a
-          href="#keys"
-          onClick={(e) => {
-            e.preventDefault();
-            document.querySelector('[data-tab="keys"]')?.dispatchEvent(new Event('click'));
-          }}
+        <button
+          onClick={() => setActiveTab('keys')}
           className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-black px-6 py-3 rounded-xl font-semibold transition-all"
         >
           Create Free API Key
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
-        </a>
+        </button>
       </div>
 
       {/* Step 3: Use Premium Endpoints */}
