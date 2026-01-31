@@ -12,7 +12,7 @@ import { LanguageSwitcher } from './LanguageSwitcher';
 // Lazy load PriceWidget
 const PriceWidget = lazy(() => import('./PriceWidget'));
 
-// Navigation items with mega menu content
+// Navigation items with mega menu content - consolidated for better UX
 const navItems = [
   { 
     label: 'Home', 
