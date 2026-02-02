@@ -1,0 +1,333 @@
+# Free Crypto News - Complete API Reference
+
+This is the full documentation for AI agents and LLMs.
+
+## About
+
+Free Crypto News is a 100% free, open-source cryptocurrency news aggregator API. No API keys, no rate limits, no authentication required.
+
+**Base URL:** https://news-crypto.vercel.app
+
+---
+
+## News Endpoints
+
+### GET /api/news
+Get latest cryptocurrency news articles.
+
+**Parameters:**
+- `limit` (int, default: 20, max: 100) - Number of articles
+- `page` (int, default: 1) - Page number
+- `category` (string) - Filter by category: bitcoin, ethereum, defi, nft, regulation, altcoins
+- `source` (string) - Filter by source name
+- `lang` (string) - Language code: en, zh, ko, ja, es, etc.
+
+**Response:**
+```json
+{
+  "data": [
+    {
+      "id": "abc123",
+      "title": "Bitcoin Hits New All-Time High",
+      "description": "BTC surges past $100,000...",
+      "url": "https://example.com/article",
+      "source": "CoinDesk",
+      "publishedAt": "2026-02-02T10:30:00Z",
+      "category": "bitcoin",
+      "sentiment": "bullish",
+      "imageUrl": "https://..."
+    }
+  ],
+  "meta": { "total": 1000, "page": 1, "limit": 20 }
+}
+```
+
+### GET /api/news/[id]
+Get a single article by ID.
+
+### GET /api/search
+Search news articles.
+
+**Parameters:**
+- `q` (string, required) - Search query
+- `limit` (int) - Number of results
+- `from` (ISO date) - Start date
+- `to` (ISO date) - End date
+- `source` (string) - Filter by source
+
+### GET /api/trending
+Get trending topics and tickers.
+
+**Response:**
+```json
+{
+  "topics": ["ETF approval", "Layer 2", "Memecoin"],
+  "tickers": ["BTC", "ETH", "SOL", "DOGE"],
+  "hashtags": ["#Bitcoin", "#Ethereum", "#DeFi"]
+}
+```
+
+### GET /api/breaking
+Get breaking news alerts.
+
+### GET /api/sources
+List all available news sources.
+
+---
+
+## AI Analysis Endpoints
+
+### GET /api/ai/sentiment
+Get AI-analyzed sentiment for an asset.
+
+**Parameters:**
+- `asset` (string, required) - Asset symbol (BTC, ETH, etc.)
+- `period` (string) - Time period: 1h, 24h, 7d
+
+**Response:**
+```json
+{
+  "asset": "BTC",
+  "sentiment": "bullish",
+  "score": 0.72,
+  "confidence": 0.85,
+  "signals": {
+    "news": 0.8,
+    "social": 0.65,
+    "technical": 0.7
+  }
+}
+```
+
+### GET /api/ai/brief
+AI-generated daily market intelligence brief.
+
+### POST /api/ai/summarize
+Summarize article content.
+
+**Body:**
+```json
+{
+  "url": "https://example.com/article",
+  "maxLength": 200
+}
+```
+
+### POST /api/ai/debate
+Generate bull vs bear analysis.
+
+**Body:**
+```json
+{
+  "topic": "Will Bitcoin reach $200k in 2026?"
+}
+```
+
+### POST /api/ai/counter
+Fact-check claims and generate counter-arguments.
+
+**Body:**
+```json
+{
+  "claim": "Ethereum will flip Bitcoin by 2027",
+  "context": "Market cap comparison"
+}
+```
+
+---
+
+## Market Data Endpoints
+
+### GET /api/market/coins
+Top cryptocurrencies by market cap.
+
+**Parameters:**
+- `limit` (int, default: 100)
+- `page` (int)
+- `category` (string) - defi, nft, layer-1, meme, etc.
+
+### GET /api/market/coin/[id]
+Detailed data for a specific coin.
+
+**Response:**
+```json
+{
+  "id": "bitcoin",
+  "symbol": "BTC",
+  "name": "Bitcoin",
+  "price": 98500.00,
+  "marketCap": 1950000000000,
+  "volume24h": 45000000000,
+  "change24h": 2.5,
+  "change7d": 8.2,
+  "ath": 109000,
+  "athDate": "2025-12-15",
+  "circulatingSupply": 19800000,
+  "maxSupply": 21000000
+}
+```
+
+### GET /api/market/fear-greed
+Fear & Greed Index.
+
+**Response:**
+```json
+{
+  "value": 72,
+  "classification": "Greed",
+  "previousValue": 68,
+  "change": 4
+}
+```
+
+### GET /api/market/global
+Global crypto market statistics.
+
+### GET /api/market/ohlc/[id]
+OHLC (candlestick) price data.
+
+**Parameters:**
+- `days` (int) - Number of days: 1, 7, 14, 30, 90, 180, 365
+
+---
+
+## Trading Endpoints
+
+### GET /api/signals
+AI-generated trading signals.
+
+**Response:**
+```json
+{
+  "signals": [
+    {
+      "asset": "BTC",
+      "type": "buy",
+      "strength": "strong",
+      "price": 98500,
+      "target": 105000,
+      "stopLoss": 94000,
+      "confidence": 0.78,
+      "reason": "Golden cross on 4H chart"
+    }
+  ]
+}
+```
+
+### GET /api/whale-alerts
+Large transaction alerts.
+
+**Parameters:**
+- `minValue` (int, default: 1000000) - Minimum USD value
+
+### GET /api/liquidations
+Exchange liquidation data.
+
+### GET /api/funding
+Perpetual futures funding rates.
+
+### GET /api/arbitrage
+Cross-exchange arbitrage opportunities.
+
+---
+
+## Real-time Streaming
+
+### GET /api/sse/news
+Server-sent events stream for live news.
+
+```javascript
+const eventSource = new EventSource('https://news-crypto.vercel.app/api/sse/news');
+eventSource.onmessage = (event) => {
+  const article = JSON.parse(event.data);
+  console.log('New article:', article.title);
+};
+```
+
+### GET /api/sse/prices
+Live price updates via SSE.
+
+### WebSocket
+```javascript
+const ws = new WebSocket('wss://news-crypto.vercel.app/ws');
+ws.onmessage = (event) => {
+  const data = JSON.parse(event.data);
+};
+```
+
+---
+
+## Export Formats
+
+### GET /api/rss
+RSS 2.0 feed.
+
+### GET /api/atom
+Atom feed.
+
+### GET /api/opml
+OPML export of all sources.
+
+### GET /api/export/csv
+Export news as CSV.
+
+### GET /api/export/json
+Export news as JSON.
+
+---
+
+## Utility Endpoints
+
+### GET /api/health
+API health check.
+
+### GET /api/stats
+API usage statistics.
+
+### GET /api/openapi.json
+OpenAPI 3.1 specification.
+
+---
+
+## SDKs
+
+Official SDKs are available:
+
+- **Python:** `pip install free-crypto-news`
+- **JavaScript/TypeScript:** `npm install @nirholas/crypto-news`
+- **React:** `npm install @nirholas/react-crypto-news`
+- **Go:** `go get github.com/nirholas/free-crypto-news-go`
+- **Rust:** Add `fcn-sdk = "0.2"` to Cargo.toml
+
+---
+
+## Rate Limits
+
+There are no rate limits for public endpoints. Premium endpoints (x402) require micropayments.
+
+---
+
+## Self-Hosting
+
+```bash
+git clone https://github.com/nirholas/free-crypto-news
+cd free-crypto-news
+npm install
+npm run dev
+```
+
+Deploy to Vercel, Railway, or any Node.js host.
+
+---
+
+## License
+
+MIT License - Free for commercial and personal use.
+
+---
+
+## Support
+
+- GitHub: https://github.com/nirholas/free-crypto-news
+- Issues: https://github.com/nirholas/free-crypto-news/issues
+- Documentation: https://news-crypto.vercel.app/docs

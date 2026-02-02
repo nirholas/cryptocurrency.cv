@@ -201,9 +201,13 @@ nav:
     - CLI: integrations/cli.md
     - Postman: integrations/postman.md
     - Mobile App: integrations/mobile.md
+    - Web3 & Blockchain: integrations/web3.md
+    - Smart Contracts: integrations/smart-contracts.md
   
   - Examples:
     - Overview: examples/index.md
+    - React Components: examples/react.md
+    - Rust Examples: examples/rust.md
     - Discord Bot: examples/discord.md
     - Slack Bot: examples/slack.md
     - Telegram Bot: examples/telegram.md

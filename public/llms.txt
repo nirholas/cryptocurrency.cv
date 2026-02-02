@@ -1,0 +1,127 @@
+# Free Crypto News API
+
+> Real-time cryptocurrency news aggregator with AI analysis, 200+ sources, and full market data.
+
+## Quick Start
+
+```bash
+curl https://news-crypto.vercel.app/api/news
+```
+
+No API key required. No rate limits. Free forever.
+
+## Core Endpoints
+
+### News
+- GET /api/news - Latest crypto news (limit, category, source params)
+- GET /api/news/[id] - Single article by ID
+- GET /api/search?q={query} - Search news articles
+- GET /api/trending - Trending topics and tickers
+- GET /api/breaking - Breaking news alerts
+
+### AI Features
+- GET /api/ai/sentiment?asset=BTC - Asset sentiment analysis
+- GET /api/ai/brief - AI-generated daily market brief
+- POST /api/ai/summarize - Summarize article content
+- POST /api/ai/debate - Bull vs bear analysis on any topic
+- POST /api/ai/counter - Fact-check and counter-argument generation
+
+### Market Data
+- GET /api/market/coins - Top cryptocurrencies by market cap
+- GET /api/market/coin/{id} - Detailed coin data
+- GET /api/market/fear-greed - Fear & Greed Index
+- GET /api/market/global - Global market statistics
+- GET /api/market/ohlc/{id} - OHLC price data
+
+### Trading
+- GET /api/signals - AI trading signals
+- GET /api/whale-alerts - Large transaction alerts
+- GET /api/liquidations - Exchange liquidation data
+- GET /api/funding - Perpetual funding rates
+- GET /api/arbitrage - Cross-exchange arbitrage opportunities
+
+### Real-time
+- GET /api/sse/news - Server-sent events for live news
+- GET /api/sse/prices - Live price updates
+- WebSocket: wss://news-crypto.vercel.app/ws
+
+## Response Format
+
+All endpoints return JSON:
+
+```json
+{
+  "data": [...],
+  "meta": {
+    "total": 100,
+    "page": 1,
+    "limit": 20
+  }
+}
+```
+
+## Integration Examples
+
+### Python
+```python
+import requests
+response = requests.get("https://news-crypto.vercel.app/api/news")
+news = response.json()
+```
+
+### JavaScript
+```javascript
+const response = await fetch("https://news-crypto.vercel.app/api/news");
+const news = await response.json();
+```
+
+## AI Agent Integration
+
+### MCP Server (Claude Desktop)
+```json
+{
+  "mcpServers": {
+    "crypto-news": {
+      "command": "npx",
+      "args": ["@anthropic-ai/mcp-server-crypto-news"]
+    }
+  }
+}
+```
+
+### ChatGPT Plugin
+OpenAPI spec: https://news-crypto.vercel.app/chatgpt/openapi.yaml
+
+### LangChain Tool
+```python
+from langchain.tools import Tool
+
+crypto_news = Tool(
+    name="CryptoNews",
+    func=lambda q: requests.get(f"https://news-crypto.vercel.app/api/search?q={q}").json(),
+    description="Search cryptocurrency news"
+)
+```
+
+## Features
+
+- 200+ news sources (130 English + 75 international)
+- 42 languages supported
+- AI-powered sentiment analysis
+- Real-time WebSocket streaming
+- No API key required
+- Self-hostable (MIT license)
+- MCP server for Claude
+- ChatGPT plugin ready
+
+## Links
+
+- Website: https://news-crypto.vercel.app
+- GitHub: https://github.com/nirholas/free-crypto-news
+- Documentation: https://news-crypto.vercel.app/docs
+- OpenAPI: https://news-crypto.vercel.app/api/openapi.json
+
+## Contact
+
+- GitHub Issues: https://github.com/nirholas/free-crypto-news/issues
+- License: MIT

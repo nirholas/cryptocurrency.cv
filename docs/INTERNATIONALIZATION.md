@@ -1,31 +1,311 @@
 # 🌍 Internationalization (i18n) Guide
 
-Free Crypto News supports **18 languages** with full UI translations, API response translation, and localized documentation.
+Free Crypto News supports **100+ languages** with full UI translations, API response translation, real-time content translation, and localized documentation.
 
 ---
 
-## Supported Languages
+## 🌐 Language Coverage
+
+### Total Languages: 100+
+
+We support the widest language coverage of any crypto news aggregator, covering:
+
+- **7 RTL languages**: Arabic, Persian/Farsi, Hebrew, Kurdish, Pashto, Urdu, Yiddish
+- **15 Regional groupings**: Europe, Asia, Middle East, Africa, Americas, South Asia, Southeast Asia, Pacific & Oceania, Central Asia, Caribbean, Nordic, Baltics, Balkans, Caucasus
+- **Native script display**: All languages displayed in their native writing systems
+
+### Core Languages (Top 20 by Users)
 
 | Code | Language | Native Name | Direction | Status |
 |------|----------|-------------|-----------|--------|
 | `en` | English | English | LTR | ✅ Complete |
 | `es` | Spanish | Español | LTR | ✅ Complete |
-| `fr` | French | Français | LTR | ✅ Complete |
-| `de` | German | Deutsch | LTR | ✅ Complete |
-| `pt` | Portuguese | Português | LTR | ✅ Complete |
-| `ja` | Japanese | 日本語 | LTR | ✅ Complete |
 | `zh-CN` | Chinese (Simplified) | 简体中文 | LTR | ✅ Complete |
 | `zh-TW` | Chinese (Traditional) | 繁體中文 | LTR | ✅ Complete |
-| `ko` | Korean | 한국어 | LTR | ✅ Complete |
+| `hi` | Hindi | हिन्दी | LTR | ✅ Complete |
 | `ar` | Arabic | العربية | RTL | ✅ Complete |
+| `pt` | Portuguese | Português | LTR | ✅ Complete |
+| `bn` | Bengali | বাংলা | LTR | ✅ Complete |
 | `ru` | Russian | Русский | LTR | ✅ Complete |
+| `ja` | Japanese | 日本語 | LTR | ✅ Complete |
+| `ko` | Korean | 한국어 | LTR | ✅ Complete |
+| `fr` | French | Français | LTR | ✅ Complete |
+| `de` | German | Deutsch | LTR | ✅ Complete |
 | `it` | Italian | Italiano | LTR | ✅ Complete |
-| `nl` | Dutch | Nederlands | LTR | ✅ Complete |
-| `pl` | Polish | Polski | LTR | ✅ Complete |
 | `tr` | Turkish | Türkçe | LTR | ✅ Complete |
 | `vi` | Vietnamese | Tiếng Việt | LTR | ✅ Complete |
 | `th` | Thai | ไทย | LTR | ✅ Complete |
 | `id` | Indonesian | Bahasa Indonesia | LTR | ✅ Complete |
+| `fa` | Persian | فارسی | RTL | ✅ Complete |
+| `he` | Hebrew | עברית | RTL | ✅ Complete |
+
+### All Supported Languages by Region
+
+<details>
+<summary><b>🇪🇺 Europe (25 languages)</b></summary>
+
+| Code | Language | Native Name |
+|------|----------|-------------|
+| `en` | English | English |
+| `de` | German | Deutsch |
+| `fr` | French | Français |
+| `es` | Spanish | Español |
+| `it` | Italian | Italiano |
+| `pt` | Portuguese | Português |
+| `nl` | Dutch | Nederlands |
+| `pl` | Polish | Polski |
+| `ru` | Russian | Русский |
+| `uk` | Ukrainian | Українська |
+| `cs` | Czech | Čeština |
+| `sk` | Slovak | Slovenčina |
+| `hu` | Hungarian | Magyar |
+| `ro` | Romanian | Română |
+| `bg` | Bulgarian | Български |
+| `hr` | Croatian | Hrvatski |
+| `sr` | Serbian | Српски |
+| `sl` | Slovenian | Slovenščina |
+| `mk` | Macedonian | Македонски |
+| `bs` | Bosnian | Bosanski |
+| `sq` | Albanian | Shqip |
+| `el` | Greek | Ελληνικά |
+| `be` | Belarusian | Беларуская |
+| `ga` | Irish | Gaeilge |
+| `cy` | Welsh | Cymraeg |
+
+</details>
+
+<details>
+<summary><b>🇯🇵 Asia (15 languages)</b></summary>
+
+| Code | Language | Native Name |
+|------|----------|-------------|
+| `zh-CN` | Chinese (Simplified) | 简体中文 |
+| `zh-TW` | Chinese (Traditional) | 繁體中文 |
+| `ja` | Japanese | 日本語 |
+| `ko` | Korean | 한국어 |
+| `mn` | Mongolian | Монгол |
+| `vi` | Vietnamese | Tiếng Việt |
+| `th` | Thai | ไทย |
+| `id` | Indonesian | Bahasa Indonesia |
+| `ms` | Malay | Bahasa Melayu |
+| `tl` | Filipino | Tagalog |
+| `my` | Burmese | မြန်မာ |
+| `km` | Khmer | ខ្មែរ |
+| `lo` | Lao | ລາວ |
+
+</details>
+
+<details>
+<summary><b>🇮🇳 South Asia (10 languages)</b></summary>
+
+| Code | Language | Native Name |
+|------|----------|-------------|
+| `hi` | Hindi | हिन्दी |
+| `bn` | Bengali | বাংলা |
+| `ta` | Tamil | தமிழ் |
+| `te` | Telugu | తెలుగు |
+| `mr` | Marathi | मराठी |
+| `gu` | Gujarati | ગુજરાતી |
+| `kn` | Kannada | ಕನ್ನಡ |
+| `ml` | Malayalam | മലയാളം |
+| `pa` | Punjabi | ਪੰਜਾਬੀ |
+| `ur` | Urdu | اردو |
+| `si` | Sinhala | සිංහල |
+| `ne` | Nepali | नेपाली |
+
+</details>
+
+<details>
+<summary><b>🇸🇦 Middle East (7 languages)</b></summary>
+
+| Code | Language | Native Name | Direction |
+|------|----------|-------------|-----------|
+| `ar` | Arabic | العربية | RTL |
+| `fa` | Persian | فارسی | RTL |
+| `he` | Hebrew | עברית | RTL |
+| `tr` | Turkish | Türkçe | LTR |
+| `ku` | Kurdish | Kurdî | RTL |
+| `ps` | Pashto | پښتو | RTL |
+
+</details>
+
+<details>
+<summary><b>🌍 Africa (15 languages)</b></summary>
+
+| Code | Language | Native Name |
+|------|----------|-------------|
+| `sw` | Swahili | Kiswahili |
+| `am` | Amharic | አማርኛ |
+| `ha` | Hausa | Hausa |
+| `yo` | Yoruba | Yorùbá |
+| `ig` | Igbo | Igbo |
+| `zu` | Zulu | isiZulu |
+| `xh` | Xhosa | isiXhosa |
+| `af` | Afrikaans | Afrikaans |
+| `sn` | Shona | chiShona |
+| `rw` | Kinyarwanda | Kinyarwanda |
+| `so` | Somali | Soomaali |
+| `mg` | Malagasy | Malagasy |
+| `ny` | Chichewa | Chichewa |
+| `lg` | Luganda | Luganda |
+
+</details>
+
+<details>
+<summary><b>🌎 Americas (5 languages)</b></summary>
+
+| Code | Language | Native Name |
+|------|----------|-------------|
+| `en` | English | English |
+| `es` | Spanish | Español |
+| `pt` | Portuguese | Português |
+| `fr` | French | Français |
+| `ht` | Haitian Creole | Kreyòl Ayisyen |
+
+</details>
+
+<details>
+<summary><b>🏝️ Pacific & Oceania</b></summary>
+
+| Code | Language | Native Name |
+|------|----------|-------------|
+| `mi` | Māori | Te Reo Māori |
+| `sm` | Samoan | Gagana Samoa |
+| `to` | Tongan | Lea Faka-Tonga |
+| `fj` | Fijian | Vosa Vakaviti |
+
+</details>
+
+---
+
+## 🔄 Real-time Translation API
+
+For dynamic content that can't be pre-translated, we provide a real-time translation API.
+
+### Translation Endpoint
+
+```bash
+# Translate single text
+curl -X POST "https://news-crypto.vercel.app/api/translate" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "text": "Bitcoin reaches new all-time high",
+    "targetLocale": "ja",
+    "context": "cryptocurrency news headline"
+  }'
+
+# Response
+{
+  "original": "Bitcoin reaches new all-time high",
+  "translation": "ビットコインが史上最高値を更新",
+  "locale": "ja",
+  "language": "Japanese"
+}
+```
+
+### Batch Translation
+
+```bash
+# Translate multiple texts at once
+curl -X POST "https://news-crypto.vercel.app/api/translate" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "texts": [
+      "Bitcoin price surges",
+      "Ethereum update released",
+      "DeFi protocols gain traction"
+    ],
+    "targetLocale": "ko",
+    "context": "cryptocurrency headlines"
+  }'
+
+# Response
+{
+  "translations": [
+    "비트코인 가격 급등",
+    "이더리움 업데이트 출시",
+    "DeFi 프로토콜 인기 상승"
+  ],
+  "locale": "ko",
+  "language": "Korean",
+  "count": 3
+}
+```
+
+### Supported Features
+
+| Feature | Description |
+|---------|-------------|
+| **Single Translation** | Translate one text at a time |
+| **Batch Translation** | Translate up to 50 texts in one request |
+| **Context Awareness** | Provide context for better translations |
+| **Caching** | Translations are cached for 1 hour |
+| **100+ Languages** | All supported UI languages |
+
+### Translation Libraries
+
+```typescript
+// Using the content translation library
+import { translateText, translateBatch, translateArticle } from '@/lib/content-translation';
+
+// Single text
+const translated = await translateText(
+  'Breaking: Bitcoin hits $100k',
+  'es'
+);
+
+// Batch translation
+const headlines = await translateBatch(
+  ['Headline 1', 'Headline 2'],
+  'fr'
+);
+
+// Full article translation
+const article = await translateArticle({
+  title: 'Bitcoin Analysis',
+  description: 'In-depth look at BTC',
+  content: 'Full article content...',
+}, 'de');
+```
+
+---
+
+## 🛠️ API Response Translation
+
+All API responses can be translated using the `Accept-Language` header or `lang` query parameter.
+
+### Using Headers
+
+```bash
+# Get news in Spanish
+curl -H "Accept-Language: es" "https://news-crypto.vercel.app/api/news"
+
+# Get market data in Japanese
+curl -H "Accept-Language: ja" "https://news-crypto.vercel.app/api/markets"
+```
+
+### Using Query Parameter
+
+```bash
+# Get news in Arabic
+curl "https://news-crypto.vercel.app/api/news?lang=ar"
+
+# Get AI brief in Korean
+curl "https://news-crypto.vercel.app/api/ai/brief?lang=ko"
+```
+
+### Localized Error Messages
+
+```typescript
+import { createLocalizedError, getErrorMessage } from '@/lib/api-translations';
+
+// Returns error in user's language
+return createLocalizedError('notFound', locale, 404);
+
+// Get translated message
+const msg = getErrorMessage('rateLimited', 'ja');
+// Returns: "レート制限を超えました。後でもう一度お試しください。"
+```
 
 ---
 

@@ -29,9 +29,12 @@ Check out our **[Complete Tutorials](../docs/tutorials/index.md)** — 19 step-b
 | [Python](#python) | 12 files | 150+ | ✅ Complete |
 | [JavaScript](#javascript) | 10 files | 120+ | ✅ Complete |
 | [TypeScript](#typescript) | 1 SDK file | 80+ | ✅ Complete |
-| [React](#react) | 5 files | 50+ | ✅ **NEW** |
-| [Rust](#rust) | 5 files | 40+ | ✅ **NEW** |
+| [React](#react) | 5 files | 50+ | ✅ Complete |
+| [Rust](#rust) | 5 files | 40+ | ✅ Complete |
 | [Go](#go) | 1 client file | 60+ | ✅ Complete |
+| [C# / .NET](#c--net) | 1 file | 30+ | ✅ **NEW** |
+| [Swift](#swift) | 1 file | 30+ | ✅ **NEW** |
+| [Kotlin](#kotlin) | 1 file | 30+ | ✅ **NEW** |
 | [cURL](#curl) | 1 script | 100+ | ✅ Complete |
 | [AI Agents](agents/) | 5 agents | LangChain | ✅ Complete |
 
@@ -303,7 +306,100 @@ func main() {
 
 ---
 
-## 🔧 cURL
+## � C# / .NET
+
+### Quick Start
+
+```csharp
+using FreeCryptoNews;
+
+using var client = new CryptoNewsClient();
+
+// Get latest news
+var news = await client.GetNewsAsync(10);
+foreach (var article in news.Data)
+{
+    Console.WriteLine($"📰 {article.Title}");
+}
+
+// Get Fear & Greed
+var fg = await client.GetFearGreedAsync();
+Console.WriteLine($"😰 {fg.Classification}: {fg.Value}");
+
+// Get sentiment
+var sentiment = await client.GetSentimentAsync("BTC");
+Console.WriteLine($"🎯 {sentiment.Label}");
+```
+
+Run examples:
+```bash
+cd examples/csharp
+dotnet run
+```
+
+---
+
+## 🍎 Swift
+
+### Quick Start
+
+```swift
+let client = CryptoNewsClient()
+
+// Get latest news
+let news = try await client.getNews(limit: 10)
+for article in news {
+    print("📰 \(article.title)")
+}
+
+// Get Fear & Greed
+let fg = try await client.getFearGreed()
+print("😰 \(fg.classification): \(fg.value)")
+
+// Get sentiment
+let sentiment = try await client.getSentiment(asset: "BTC")
+print("🎯 \(sentiment.label)")
+```
+
+Run examples:
+```bash
+cd examples/swift
+swift run
+```
+
+---
+
+## 🟣 Kotlin
+
+### Quick Start
+
+```kotlin
+val client = CryptoNewsClient()
+
+// Get latest news
+val news = client.getNews(10)
+news.forEach { println("📰 ${it.title}") }
+
+// Get Fear & Greed
+val fg = client.getFearGreed()
+println("😰 ${fg.classification}: ${fg.value}")
+
+// Get sentiment
+val sentiment = client.getSentiment("BTC")
+println("🎯 ${sentiment.label}")
+
+client.close()
+```
+
+Run examples:
+```bash
+cd examples/kotlin
+./gradlew run
+```
+
+---
+
+## �🔧 cURL
 
 ### Quick Start
 

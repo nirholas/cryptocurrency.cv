@@ -194,6 +194,13 @@ export function MobileNav() {
     };
   }, [isOpen, handleEscape, handleClickOutside]);
 
+  // Listen for custom event from BottomNav "More" button
+  useEffect(() => {
+    const handleOpenMobileNav = () => setIsOpen(true);
+    window.addEventListener('open-mobile-nav', handleOpenMobileNav);
+    return () => window.removeEventListener('open-mobile-nav', handleOpenMobileNav);
+  }, []);
+
   // Focus trap
   useEffect(() => {
     if (!isOpen || !menuRef.current) return;

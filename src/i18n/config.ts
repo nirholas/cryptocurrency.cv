@@ -217,6 +217,11 @@ export function isRtlLocale(locale: Locale): boolean {
   return rtlLocales.includes(locale);
 }
 
+// Get RTL languages array
+export function getRtlLanguages(): Locale[] {
+  return rtlLocales;
+}
+
 // Get locale direction
 export function getLocaleDirection(locale: Locale): 'ltr' | 'rtl' {
   return isRtlLocale(locale) ? 'rtl' : 'ltr';

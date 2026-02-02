@@ -23,14 +23,67 @@ export default function robots(): MetadataRoute.Robots {
           '/*.json$',        // JSON files (except sitemap)
         ],
       },
+      // OpenAI bots
       {
         userAgent: 'GPTBot',
-        allow: ['/api/news', '/api/search', '/api/trending'], // Allow AI to access public APIs
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt'],
       },
       {
         userAgent: 'ChatGPT-User',
-        allow: ['/api/news', '/api/search', '/api/trending'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt'],
       },
+      // Anthropic bots (Claude)
+      {
+        userAgent: 'Claude-Web',
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt'],
+      },
+      {
+        userAgent: 'ClaudeBot',
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt'],
+      },
+      {
+        userAgent: 'anthropic-ai',
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt'],
+      },
+      // xAI bots (Grok)
+      {
+        userAgent: 'Grok',
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt'],
+      },
+      {
+        userAgent: 'xAI-Grok',
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt'],
+      },
+      // Google AI bots (Gemini)
+      {
+        userAgent: 'Google-Extended',
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt'],
+      },
+      // Meta AI
+      {
+        userAgent: 'FacebookBot',
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt'],
+      },
+      {
+        userAgent: 'Meta-ExternalAgent',
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt'],
+      },
+      // Perplexity AI
+      {
+        userAgent: 'PerplexityBot',
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt'],
+      },
+      // Cohere
+      {
+        userAgent: 'cohere-ai',
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt'],
+      },
+      // You.com
+      {
+        userAgent: 'YouBot',
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt'],
+      },
+      // Search engines
       {
         userAgent: 'Googlebot',
         allow: '/',
