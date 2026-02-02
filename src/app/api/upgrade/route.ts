@@ -230,9 +230,9 @@ export async function POST(request: NextRequest) {
     },
 
     payment: {
-      settlementId: paymentResult.settlementId,
       amount: `$${upgradeConfig.price}`,
       description: upgradeConfig.description,
+      verified: true,
     },
 
     subscription: {

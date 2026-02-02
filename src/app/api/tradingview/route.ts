@@ -27,7 +27,8 @@ import {
   generateWidgetConfig,
 } from '@/lib/tradingview';
 
-export const runtime = 'edge';
+// Use Node.js runtime since tradingview.ts imports database.ts which requires fs/path modules
+export const runtime = 'nodejs';
 
 // =============================================================================
 // GET - Handle all TradingView UDF requests
