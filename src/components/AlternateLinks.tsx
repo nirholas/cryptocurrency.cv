@@ -14,29 +14,23 @@ interface AlternateLinksProps {
 }
 
 /**
- * Maps locales to their hreflang values
+ * Maps locales to their hreflang values where they differ from the locale code
  * hreflang uses language-region format (e.g., zh-CN, zh-TW)
+ * Most locales map directly to themselves, only special cases are listed here
  */
-const hreflangMap: Record<Locale, string> = {
-  'en': 'en',
-  'es': 'es',
-  'fr': 'fr',
-  'de': 'de',
-  'ja': 'ja',
-  'ko': 'ko',
+const hreflangOverrides: Partial<Record<Locale, string>> = {
   'zh-CN': 'zh-Hans',
   'zh-TW': 'zh-Hant',
-  'pt': 'pt',
-  'ru': 'ru',
-  'ar': 'ar',
-  'it': 'it',
-  'nl': 'nl',
-  'pl': 'pl',
-  'tr': 'tr',
-  'id': 'id',
-  'th': 'th',
-  'vi': 'vi',
+  'pt-BR': 'pt-BR',
 };
+
+/**
+ * Get the hreflang value for a locale
+ * Falls back to the locale code if no override exists
+ */
+function getHreflang(locale: Locale): string {
+  return hreflangOverrides[locale] || locale;
+}
 
 /**
  * Generates hreflang alternate links for all supported locales
@@ -52,7 +46,7 @@ export function AlternateLinks({ currentLocale, currentPath }: AlternateLinksPro
         <link
           key={locale}
           rel="alternate"
-          hrefLang={hreflangMap[locale] || locale}
+          hrefLang={getHreflang(locale)}
           href={`${BASE_URL}/${locale}${cleanPath ? `/${cleanPath}` : ''}`}
         />
       ))}
@@ -76,7 +70,7 @@ export function getAlternateLanguages(path: string = '') {
   const languages: Record<string, string> = {};
   
   locales.forEach((locale) => {
-    const hreflang = hreflangMap[locale] || locale;
+    const hreflang = getHreflang(locale);
     languages[hreflang] = `${BASE_URL}/${locale}${cleanPath ? `/${cleanPath}` : ''}`;
   });
   

@@ -13,7 +13,8 @@ import {
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 
-export const runtime = 'edge';
+// Use Node.js runtime since order-book.ts imports database.ts which requires fs/path modules
+export const runtime = 'nodejs';
 export const revalidate = 0; // Real-time data, no caching
 
 const DEFAULT_EXCHANGES: Exchange[] = ['binance', 'coinbase', 'kraken', 'okx', 'bybit'];
