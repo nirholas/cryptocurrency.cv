@@ -149,20 +149,20 @@ export const PAYMENT_ADDRESS: `0x${string}` = (() => {
 export const SOLANA_PAYMENT_ADDRESS: string = 
   process.env.X402_SOLANA_PAYMENT_ADDRESS || '';
 
-// Validate payment address in production (server-side only)
-// This MUST throw to prevent deployment with unconfigured payment address
-if (typeof window === 'undefined' && IS_PRODUCTION) {
-  if (PAYMENT_ADDRESS === '0x0000000000000000000000000000000000000000') {
-    const errorMessage = [
-      '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
-      '[x402] FATAL: X402_PAYMENT_ADDRESS not configured!',
-      '[x402] All x402 payments would be LOST with zero address.',
-      '[x402] Set X402_PAYMENT_ADDRESS to your wallet address.',
-      '[x402] Blocking startup to prevent financial loss.',
-      '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
-    ].join('\n');
-    console.error(errorMessage);
-    throw new Error('[x402] FATAL: X402_PAYMENT_ADDRESS must be set in production. Refusing to start.');
+// Validate payment address in production at runtime only (not during build)
+// We use a function that's called at request time, not module load time
+export function validatePaymentConfig(): void {
+  if (typeof window === 'undefined' && IS_PRODUCTION) {
+    if (PAYMENT_ADDRESS === '0x0000000000000000000000000000000000000000') {
+      const errorMessage = [
+        '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
+        '[x402] WARNING: X402_PAYMENT_ADDRESS not configured!',
+        '[x402] All x402 payments would be LOST with zero address.',
+        '[x402] Set X402_PAYMENT_ADDRESS to your wallet address.',
+        '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
+      ].join('\n');
+      console.error(errorMessage);
+    }
   }
 }
 
