@@ -14,7 +14,8 @@ import {
   type PineScriptPlot,
 } from '@/lib/tradingview';
 
-export const runtime = 'edge';
+// Use Node.js runtime since tradingview.ts imports database.ts which requires fs/path modules
+export const runtime = 'nodejs';
 export const revalidate = 60;
 
 /**
