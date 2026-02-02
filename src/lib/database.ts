@@ -318,7 +318,9 @@ class FileBackend extends MemoryBackend {
     
     try {
       const fs = await import(/* webpackIgnore: true */ 'fs/promises');
-      const path = await import(/* webpackIgnore: true */ 'path');
+      const pathModule = await import(/* webpackIgnore: true */ 'path');
+      // Handle both ESM default export and CommonJS module
+      const path = pathModule.default || pathModule;
       
       const dir = path.dirname(this.filePath);
       await fs.mkdir(dir, { recursive: true });

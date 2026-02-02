@@ -136,7 +136,7 @@ ${JSON.stringify(articlesForAnalysis, null, 2)}`;
       }
     );
   } catch (error) {
-    const logger = createRequestLogger('/api/signals');
+    const logger = createRequestLogger(request);
     logger.error('Signal generation error', { error });
     return ApiError.internal('Failed to generate signals', error);
   }
