@@ -92,8 +92,12 @@ function createX402Server(): x402ResourceServer {
   return server;
 }
 
-// Export singleton (backward compatibility)
-export const x402Server = getX402Server();
+// Export lazy singleton (backward compatibility) - avoids initialization during build
+export const x402Server = new Proxy({} as x402ResourceServer, {
+  get(_, prop) {
+    return (getX402Server() as unknown as Record<string | symbol, unknown>)[prop];
+  },
+});
 
 // =============================================================================
 // SERVER UTILITIES

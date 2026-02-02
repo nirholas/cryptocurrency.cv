@@ -40,7 +40,9 @@ export const IS_DEVELOPMENT =
  */
 export const IS_BUILD_TIME = 
   process.env.NEXT_PHASE === 'phase-production-build' ||
-  process.env.npm_lifecycle_event === 'build';
+  process.env.npm_lifecycle_event === 'build' ||
+  process.env.CI === 'true' ||
+  (process.env.VERCEL === '1' && process.env.VERCEL_ENV === undefined);
 
 // =============================================================================
 // NETWORK CONFIGURATION (CAIP-2 Standard)

@@ -62,8 +62,11 @@ function createHttpServer(): x402HTTPResourceServer {
   return server;
 }
 
+// Lazy singleton pattern to avoid initialization during build
+let _httpServerInstance: x402HTTPResourceServer | null = null;
+
 /**
- * x402 HTTP Resource Server instance
+ * Get the x402 HTTP Resource Server instance (lazy initialization)
  *
  * This is the main server instance that handles:
  * - Hybrid auth via onProtectedRequest hook (API key bypass)
@@ -71,7 +74,19 @@ function createHttpServer(): x402HTTPResourceServer {
  * - Payment verification via facilitator
  * - Payment settlement after successful responses
  */
-export const httpServer = createHttpServer();
+export function getHttpServer(): x402HTTPResourceServer {
+  if (!_httpServerInstance) {
+    _httpServerInstance = createHttpServer();
+  }
+  return _httpServerInstance;
+}
+
+// For backwards compatibility - lazy getter
+export const httpServer = new Proxy({} as x402HTTPResourceServer, {
+  get(_, prop) {
+    return (getHttpServer() as unknown as Record<string | symbol, unknown>)[prop];
+  },
+});
 
 // =============================================================================
 // API KEY VALIDATION HELPERS
