@@ -23,7 +23,7 @@ import {
   type PredictionTimeframe,
   type PredictionStatus,
 } from '@/lib/predictions';
-import { checkRateLimit, rateLimitResponse, type RateLimitResult } from '@/lib/rate-limit';
+import { checkRateLimit, getRateLimitErrorResponse, type RateLimitResult } from '@/lib/ratelimit';
 
 // =============================================================================
 // VALIDATION

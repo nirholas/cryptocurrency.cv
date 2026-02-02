@@ -9,15 +9,22 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { hybridAuthMiddleware } from '@/lib/x402';
+import { ApiError } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
 
 const ENDPOINT = '/api/v1/trending';
 
 export async function GET(request: NextRequest) {
+  const logger = createRequestLogger(request);
+  const startTime = Date.now();
+
   // Check authentication
   const authResponse = await hybridAuthMiddleware(request, ENDPOINT);
   if (authResponse) return authResponse;
 
   try {
+    logger.info('Fetching trending coins');
+
     const response = await fetch('https://api.coingecko.com/api/v3/search/trending', {
       headers: {
         Accept: 'application/json',
@@ -90,6 +97,8 @@ export async function GET(request: NextRequest) {
           })
         ) || [];
 
+    logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
+
     return NextResponse.json(
       {
         success: true,
@@ -112,11 +121,7 @@ export async function GET(request: NextRequest) {
       }
     );
   } catch (error) {
-    console.error('[API] /v1/trending error:', error);
-
-    return NextResponse.json(
-      { success: false, error: 'Failed to fetch trending data' },
-      { status: 502 }
-    );
+    logger.error('Failed to fetch trending data', error);
+    return ApiError.upstream('CoinGecko', error);
   }
 }

@@ -10,10 +10,15 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { hybridAuthMiddleware } from '@/lib/x402';
+import { ApiError } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
 
 const ENDPOINT = '/api/v1/export';
 
 export async function GET(request: NextRequest) {
+  const logger = createRequestLogger(request);
+  const startTime = Date.now();
+
   // Check authentication
   const authResponse = await hybridAuthMiddleware(request, ENDPOINT);
   if (authResponse) return authResponse;
@@ -25,21 +30,17 @@ export async function GET(request: NextRequest) {
 
   // Validate format
   if (!['json', 'csv'].includes(format)) {
-    return NextResponse.json(
-      { success: false, error: 'Invalid format. Use: json or csv' },
-      { status: 400 }
-    );
+    return ApiError.badRequest('Invalid format. Use: json or csv');
   }
 
   // Validate type
   if (!['coins', 'defi'].includes(type)) {
-    return NextResponse.json(
-      { success: false, error: 'Invalid type. Use: coins or defi' },
-      { status: 400 }
-    );
+    return ApiError.badRequest('Invalid type. Use: coins or defi');
   }
 
   try {
+    logger.info('Exporting data', { format, type, limit });
+
     let data: Record<string, unknown>[];
 
     if (type === 'coins') {
@@ -94,6 +95,8 @@ export async function GET(request: NextRequest) {
       const csv = convertToCSV(data);
       const filename = `${type}-export-${new Date().toISOString().split('T')[0]}.csv`;
 
+      logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
+
       return new NextResponse(csv, {
         headers: {
           'Content-Type': 'text/csv; charset=utf-8',
@@ -104,6 +107,8 @@ export async function GET(request: NextRequest) {
     }
 
     // Return JSON format
+    logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
+
     return NextResponse.json(
       {
         success: true,
@@ -123,9 +128,8 @@ export async function GET(request: NextRequest) {
       }
     );
   } catch (error) {
-    console.error('[API] /v1/export error:', error);
-
-    return NextResponse.json({ success: false, error: 'Failed to export data' }, { status: 502 });
+    logger.error('Failed to export data', error, { format, type });
+    return ApiError.upstream(type === 'coins' ? 'CoinGecko' : 'DefiLlama', error);
   }
 }
 

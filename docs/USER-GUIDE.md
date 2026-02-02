@@ -250,7 +250,7 @@ When offline, you'll see:
 **A:** No! Everything works without signing up. Bookmarks are saved locally.
 
 ### Q: Is there an API?
-**A:** Yes! See the [API Documentation](../README.md) for full details.
+**A:** Yes! See the [API Documentation](API.md) for full details.
 
 ### Q: How often is news updated?
 **A:** Every few minutes. Breaking news appears within minutes of publication.
@@ -266,5 +266,5 @@ When offline, you'll see:
 ## 🆘 Getting Help
 
 - **GitHub Issues**: [Report bugs or request features](https://github.com/nirholas/free-crypto-news/issues)
-- **API Docs**: See [README.md](../README.md)
-- **Contributing**: See [CONTRIBUTING.md](../CONTRIBUTING.md)
+- **API Docs**: See [API.md](API.md)
+- **Contributing**: See [CONTRIBUTING.md](CONTRIBUTING.md)

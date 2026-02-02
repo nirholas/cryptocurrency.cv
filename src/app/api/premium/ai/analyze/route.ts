@@ -15,8 +15,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { withX402 } from '@x402/next';
-import { x402Server, getRouteConfig } from '@/lib/x402-server';
+import { withX402 } from '@/lib/x402';
 import { getCoinDetails, getHistoricalPrices, getFearGreedIndex } from '@/lib/market-data';
 import { callGroq, parseGroqJson, isGroqConfigured, type GroqMessage } from '@/lib/groq';
 
@@ -461,4 +460,4 @@ async function handler(
  * POST /api/premium/ai/analyze
  * Body: { "coinId": "bitcoin", "analysisType": "full", "timeframe": "30d" }
  */
-export const POST = withX402(handler, getRouteConfig('/api/premium/ai/analyze'), x402Server);
+export const POST = withX402('/api/premium/ai/analyze', handler);

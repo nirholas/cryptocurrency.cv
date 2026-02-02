@@ -67,8 +67,8 @@ function UpgradeContent() {
 
   // Load key info when API key is provided
   const loadKeyInfo = async () => {
-    if (!apiKey || !apiKey.startsWith('fcn_')) {
-      setError('Please enter a valid API key (starts with fcn_)');
+    if (!apiKey || !apiKey.startsWith('cda_')) {
+      setError('Please enter a valid API key (starts with cda_)');
       return;
     }
 
@@ -337,7 +337,7 @@ function UpgradeContent() {
               type="text"
               value={apiKey}
               onChange={(e) => setApiKey(e.target.value)}
-              placeholder="fcn_free_..."
+              placeholder="cda_free_..."
               className="flex-1 min-w-[200px] px-4 py-2 border-2 border-neutral-200 dark:border-neutral-800 rounded-lg bg-white dark:bg-black text-black dark:text-white focus:border-black dark:focus:border-white outline-none font-mono"
             />
             <button

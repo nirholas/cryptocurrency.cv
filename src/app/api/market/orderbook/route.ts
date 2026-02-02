@@ -5,11 +5,13 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { checkRateLimit, rateLimitResponse } from '@/lib/rate-limit';
+import { checkRateLimitByRequest, rateLimitResponse } from '@/lib/rate-limit';
 import { 
   orderBook,
   type Exchange,
 } from '@/lib/order-book';
+import { ApiError } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
 
 export const runtime = 'edge';
 export const revalidate = 0; // Real-time data, no caching
@@ -22,7 +24,9 @@ const DEFAULT_EXCHANGES: Exchange[] = ['binance', 'coinbase', 'kraken', 'okx', '
  * Get aggregated order book or depth chart data
  */
 export async function GET(request: NextRequest) {
-  const rateLimitResult = await checkRateLimit(request);
+  const logger = createRequestLogger(request);
+  const startTime = Date.now();
+  const rateLimitResult = checkRateLimitByRequest(request);
   if (!rateLimitResult.allowed) {
     return rateLimitResponse(rateLimitResult);
   }
@@ -34,10 +38,8 @@ export async function GET(request: NextRequest) {
     const exchangesParam = searchParams.get('exchanges');
 
     if (!symbol) {
-      return NextResponse.json(
-        { error: 'Symbol is required (e.g., BTC, ETH)' },
-        { status: 400 }
-      );
+      logger.error('Symbol parameter missing');
+      return ApiError.badRequest('Symbol is required (e.g., BTC, ETH)');
     }
 
     const exchanges = exchangesParam
@@ -50,15 +52,15 @@ export async function GET(request: NextRequest) {
     ) as Exchange[];
 
     if (validExchanges.length === 0) {
-      return NextResponse.json(
-        { error: 'No valid exchanges provided' },
-        { status: 400 }
-      );
+      logger.error('No valid exchanges provided', { exchangesParam });
+      return ApiError.badRequest('No valid exchanges provided');
     }
 
     if (action === 'aggregate') {
+      logger.info('Aggregating order books', { symbol, exchanges: validExchanges });
       const aggregated = await orderBook.aggregateOrderBooks(symbol, validExchanges);
       
+      logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
       return NextResponse.json({
         symbol: aggregated.symbol,
         timestamp: aggregated.timestamp,
@@ -73,7 +75,9 @@ export async function GET(request: NextRequest) {
     }
 
     if (action === 'depth') {
+      logger.info('Fetching depth chart data', { symbol, exchanges: validExchanges });
       const depthData = await orderBook.getDepthChartData(symbol, validExchanges);
+      logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
       return NextResponse.json(depthData);
     }
 
@@ -81,14 +85,14 @@ export async function GET(request: NextRequest) {
       const exchange = validExchanges[0];
       const depth = parseInt(searchParams.get('depth') || '25');
       
+      logger.info('Fetching single order book', { symbol, exchange, depth });
       const book = await orderBook.fetchOrderBook(symbol, exchange, depth);
       if (!book) {
-        return NextResponse.json(
-          { error: `Failed to fetch order book from ${exchange}` },
-          { status: 500 }
-        );
+        logger.error('Failed to fetch order book', { exchange, symbol });
+        return ApiError.upstream(exchange, new Error('Failed to fetch order book'));
       }
 
+      logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
       return NextResponse.json({
         orderBook: {
           symbol: book.symbol,
@@ -103,8 +107,10 @@ export async function GET(request: NextRequest) {
     }
 
     if (action === 'nbbo') {
+      logger.info('Fetching NBBO data', { symbol, exchanges: validExchanges });
       const aggregated = await orderBook.aggregateOrderBooks(symbol, validExchanges);
       
+      logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
       return NextResponse.json({
         symbol: aggregated.symbol,
         timestamp: aggregated.timestamp,
@@ -114,8 +120,10 @@ export async function GET(request: NextRequest) {
     }
 
     if (action === 'metrics') {
+      logger.info('Fetching order book metrics', { symbol, exchanges: validExchanges });
       const aggregated = await orderBook.aggregateOrderBooks(symbol, validExchanges);
       
+      logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
       return NextResponse.json({
         symbol: aggregated.symbol,
         timestamp: aggregated.timestamp,
@@ -124,8 +132,10 @@ export async function GET(request: NextRequest) {
     }
 
     if (action === 'whales') {
+      logger.info('Fetching whale orders and price walls', { symbol, exchanges: validExchanges });
       const aggregated = await orderBook.aggregateOrderBooks(symbol, validExchanges);
       
+      logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
       return NextResponse.json({
         symbol: aggregated.symbol,
         timestamp: aggregated.timestamp,
@@ -136,8 +146,10 @@ export async function GET(request: NextRequest) {
 
     if (action === 'snapshots') {
       const limit = parseInt(searchParams.get('limit') || '20');
+      logger.info('Listing order book snapshots', { symbol, limit });
       const snapshots = await orderBook.listSnapshots({ symbol, limit });
       
+      logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
       return NextResponse.json({
         snapshots: snapshots.map(s => ({
           id: s.id,
@@ -151,6 +163,7 @@ export async function GET(request: NextRequest) {
       });
     }
 
+    logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
     return NextResponse.json({
       availableActions: [
         'aggregate',
@@ -163,11 +176,8 @@ export async function GET(request: NextRequest) {
       ],
     });
   } catch (error) {
-    console.error('Order book API error:', error);
-    return NextResponse.json(
-      { error: 'Failed to fetch order book data' },
-      { status: 500 }
-    );
+    logger.error('Failed to fetch order book data', error);
+    return ApiError.internal('Failed to fetch order book data', error);
   }
 }
 
@@ -177,7 +187,9 @@ export async function GET(request: NextRequest) {
  * Calculate smart routes or save snapshots
  */
 export async function POST(request: NextRequest) {
-  const rateLimitResult = await checkRateLimit(request);
+  const logger = createRequestLogger(request);
+  const startTime = Date.now();
+  const rateLimitResult = checkRateLimitByRequest(request);
   if (!rateLimitResult.allowed) {
     return rateLimitResponse(rateLimitResult);
   }
@@ -195,30 +207,25 @@ export async function POST(request: NextRequest) {
       };
 
       if (!symbol || !orderType || !quantity) {
-        return NextResponse.json(
-          { error: 'Symbol, orderType (buy/sell), and quantity are required' },
-          { status: 400 }
-        );
+        logger.error('Missing required parameters for smart-route', { symbol, orderType, quantity });
+        return ApiError.badRequest('Symbol, orderType (buy/sell), and quantity are required');
       }
 
       if (!['buy', 'sell'].includes(orderType)) {
-        return NextResponse.json(
-          { error: 'orderType must be "buy" or "sell"' },
-          { status: 400 }
-        );
+        logger.error('Invalid orderType', { orderType });
+        return ApiError.badRequest('orderType must be "buy" or "sell"');
       }
 
       if (quantity <= 0) {
-        return NextResponse.json(
-          { error: 'Quantity must be positive' },
-          { status: 400 }
-        );
+        logger.error('Invalid quantity', { quantity });
+        return ApiError.badRequest('Quantity must be positive');
       }
 
       const validExchanges = exchanges?.filter(e => 
         ['binance', 'coinbase', 'kraken', 'bitfinex', 'bitstamp', 'okx', 'bybit', 'kucoin', 'huobi', 'gemini'].includes(e)
       ) as Exchange[] | undefined;
 
+      logger.info('Calculating smart route', { symbol, orderType, quantity });
       const recommendation = await orderBook.calculateSmartRoute(
         symbol,
         orderType,
@@ -226,6 +233,7 @@ export async function POST(request: NextRequest) {
         validExchanges || DEFAULT_EXCHANGES
       );
 
+      logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
       return NextResponse.json({
         success: true,
         recommendation,
@@ -239,16 +247,15 @@ export async function POST(request: NextRequest) {
       };
 
       if (!symbol) {
-        return NextResponse.json(
-          { error: 'Symbol is required' },
-          { status: 400 }
-        );
+        logger.error('Symbol required for snapshot');
+        return ApiError.badRequest('Symbol is required');
       }
 
       const validExchanges = exchanges?.filter(e => 
         ['binance', 'coinbase', 'kraken', 'bitfinex', 'bitstamp', 'okx', 'bybit', 'kucoin', 'huobi', 'gemini'].includes(e)
       ) as Exchange[] | undefined;
 
+      logger.info('Saving order book snapshot', { symbol });
       const aggregated = await orderBook.aggregateOrderBooks(
         symbol,
         validExchanges || DEFAULT_EXCHANGES
@@ -256,6 +263,7 @@ export async function POST(request: NextRequest) {
 
       const snapshot = await orderBook.saveSnapshot(aggregated);
 
+      logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
       return NextResponse.json({
         success: true,
         snapshot: {
@@ -270,20 +278,18 @@ export async function POST(request: NextRequest) {
       const { id } = body;
 
       if (!id) {
-        return NextResponse.json(
-          { error: 'Snapshot ID is required' },
-          { status: 400 }
-        );
+        logger.error('Snapshot ID required');
+        return ApiError.badRequest('Snapshot ID is required');
       }
 
+      logger.info('Retrieving snapshot', { id });
       const snapshot = await orderBook.getSnapshot(id);
       if (!snapshot) {
-        return NextResponse.json(
-          { error: 'Snapshot not found' },
-          { status: 404 }
-        );
+        logger.error('Snapshot not found', { id });
+        return ApiError.notFound('Snapshot not found');
       }
 
+      logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
       return NextResponse.json({ snapshot });
     }
 
@@ -294,16 +300,15 @@ export async function POST(request: NextRequest) {
       };
 
       if (!symbol) {
-        return NextResponse.json(
-          { error: 'Symbol is required' },
-          { status: 400 }
-        );
+        logger.error('Symbol required for comparison');
+        return ApiError.badRequest('Symbol is required');
       }
 
       const validExchanges = exchanges?.filter(e => 
         ['binance', 'coinbase', 'kraken', 'bitfinex', 'bitstamp', 'okx', 'bybit', 'kucoin', 'huobi', 'gemini'].includes(e)
       ) as Exchange[] | undefined;
 
+      logger.info('Comparing exchanges', { symbol, exchanges: validExchanges || DEFAULT_EXCHANGES });
       const aggregated = await orderBook.aggregateOrderBooks(
         symbol,
         validExchanges || DEFAULT_EXCHANGES
@@ -329,6 +334,7 @@ export async function POST(request: NextRequest) {
         (a, b) => (b.bidLiquidity + b.askLiquidity) - (a.bidLiquidity + a.askLiquidity)
       );
 
+      logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
       return NextResponse.json({
         symbol,
         timestamp: aggregated.timestamp,
@@ -348,15 +354,10 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    return NextResponse.json(
-      { error: 'Invalid action. Supported: smart-route, save-snapshot, get-snapshot, compare-exchanges' },
-      { status: 400 }
-    );
+    logger.error('Invalid action for POST request', { action });
+    return ApiError.badRequest('Invalid action. Supported: smart-route, save-snapshot, get-snapshot, compare-exchanges');
   } catch (error) {
-    console.error('Order book POST error:', error);
-    return NextResponse.json(
-      { error: 'Failed to process order book request' },
-      { status: 500 }
-    );
+    logger.error('Failed to process order book request', error);
+    return ApiError.internal('Failed to process order book request', error);
   }
 }

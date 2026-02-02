@@ -567,7 +567,6 @@ curl -H "Authorization: Bearer YOUR_API_KEY" \
 
 ## Related Documentation
 
-- [API Reference](./API.md) - Complete API docs
-- [Webhooks](./webhooks.md) - Webhook configuration
-- [SDKs](./sdks/index.md) - Client libraries
-- [X402 Payments](./X402-IMPLEMENTATION.md) - Crypto payments
+- [API Reference](API.md) - Complete API docs
+- [Webhooks](API.md#post-apiwebhooks) - Webhook configuration
+- [SDKs](sdks/index.md) - Client libraries

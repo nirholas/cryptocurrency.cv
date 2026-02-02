@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { promptGroqJson, isGroqConfigured } from '@/lib/groq';
+import { ApiError } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -134,10 +136,8 @@ ${JSON.stringify(articlesForAnalysis, null, 2)}`;
       }
     );
   } catch (error) {
-    console.error('Signal generation error:', error);
-    return NextResponse.json(
-      { error: 'Failed to generate signals', details: String(error) },
-      { status: 500 }
-    );
+    const logger = createRequestLogger('/api/signals');
+    logger.error('Signal generation error', { error });
+    return ApiError.internal('Failed to generate signals', error);
   }
 }

@@ -15,8 +15,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { withX402 } from '@x402/next';
-import { x402Server, getRouteConfig } from '@/lib/x402-server';
+import { withX402 } from '@/lib/x402';
 import { getCoinDetails, getPricesForCoins } from '@/lib/market-data';
 
 export const runtime = 'nodejs';
@@ -303,8 +302,4 @@ async function handler(
  * POST /api/premium/alerts/custom
  * Body: { "rules": [...] }
  */
-export const POST = withX402(
-  handler,
-  getRouteConfig('/api/premium/alerts/custom' as any),
-  x402Server
-);
+export const POST = withX402('/api/premium/alerts/custom', handler);

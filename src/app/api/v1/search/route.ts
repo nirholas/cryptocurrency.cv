@@ -9,10 +9,15 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { hybridAuthMiddleware } from '@/lib/x402';
+import { ApiError } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
 
 const ENDPOINT = '/api/v1/search';
 
 export async function GET(request: NextRequest) {
+  const logger = createRequestLogger(request);
+  const startTime = Date.now();
+
   // Check authentication
   const authResponse = await hybridAuthMiddleware(request, ENDPOINT);
   if (authResponse) return authResponse;
@@ -21,13 +26,12 @@ export async function GET(request: NextRequest) {
   const query = searchParams.get('q') || searchParams.get('query');
 
   if (!query || query.length < 1) {
-    return NextResponse.json(
-      { success: false, error: 'Search query is required. Use ?q=bitcoin' },
-      { status: 400 }
-    );
+    return ApiError.badRequest('Search query is required. Use ?q=bitcoin');
   }
 
   try {
+    logger.info('Searching cryptocurrencies', { query });
+
     const response = await fetch(
       `https://api.coingecko.com/api/v3/search?query=${encodeURIComponent(query)}`,
       {
@@ -96,6 +100,8 @@ export async function GET(request: NextRequest) {
           thumb: n.thumb,
         })) || [];
 
+    logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
+
     return NextResponse.json(
       {
         success: true,
@@ -125,8 +131,7 @@ export async function GET(request: NextRequest) {
       }
     );
   } catch (error) {
-    console.error('[API] /v1/search error:', error);
-
-    return NextResponse.json({ success: false, error: 'Search failed' }, { status: 502 });
+    logger.error('Search failed', error);
+    return ApiError.upstream('CoinGecko', error);
   }
 }

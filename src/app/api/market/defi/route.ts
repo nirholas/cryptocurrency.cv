@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getGlobalDeFiData, GlobalDeFi } from '@/lib/market-data';
+import { getGlobalDeFiData } from '@/lib/market-data';
+import { ApiError, type ApiErrorResponse } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
+import type { GlobalDeFi } from '@/lib/market-data';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -13,18 +16,21 @@ export const revalidate = 300;
  * GET /api/market/defi
  */
 export async function GET(
-  _request: NextRequest
-): Promise<NextResponse<GlobalDeFi | { error: string; message: string }>> {
+  request: NextRequest
+): Promise<NextResponse> {
+  const logger = createRequestLogger(request);
+  const startTime = Date.now();
+  
   try {
+    logger.info('Fetching global DeFi data');
     const data = await getGlobalDeFiData();
     
     if (!data) {
-      return NextResponse.json(
-        { error: 'Failed to fetch DeFi data', message: 'No data available' },
-        { status: 500 }
-      );
+      logger.error('No DeFi data available');
+      return ApiError.internal('No DeFi data available');
     }
     
+    logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
     return NextResponse.json(data, {
       headers: {
         'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
@@ -32,10 +38,7 @@ export async function GET(
       },
     });
   } catch (error) {
-    console.error('Error in DeFi route:', error);
-    return NextResponse.json(
-      { error: 'Failed to fetch DeFi data', message: String(error) },
-      { status: 500 }
-    );
+    logger.error('Failed to fetch DeFi data', error);
+    return ApiError.internal('Failed to fetch DeFi data', error);
   }
 }

@@ -1,21 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { searchNews } from '@/lib/crypto-news';
 import { translateArticles, isLanguageSupported, SUPPORTED_LANGUAGES } from '@/lib/translate';
+import { validateQuery } from '@/lib/validation-middleware';
+import { searchQuerySchema } from '@/lib/schemas';
+import { ApiError } from '@/lib/api-error';
 
 export const runtime = 'edge';
 
 export async function GET(request: NextRequest) {
-  const searchParams = request.nextUrl.searchParams;
-  const q = searchParams.get('q');
-  const limit = parseInt(searchParams.get('limit') || '10');
-  const lang = searchParams.get('lang') || 'en';
-  
-  if (!q) {
-    return NextResponse.json(
-      { error: 'Missing required parameter: q (keywords)' },
-      { status: 400 }
-    );
+  // Validate query parameters
+  const validation = validateQuery(request, searchQuerySchema);
+  if (!validation.success) {
+    return validation.error;
   }
+  
+  const { q: sanitizedQuery, limit, lang } = validation.data;
   
   // Validate language parameter
   if (lang !== 'en' && !isLanguageSupported(lang)) {
@@ -30,7 +29,7 @@ export async function GET(request: NextRequest) {
   }
   
   try {
-    const data = await searchNews(q, limit);
+    const data = await searchNews(sanitizedQuery, limit);
     
     // Translate articles if language is not English
     let articles = data.articles;

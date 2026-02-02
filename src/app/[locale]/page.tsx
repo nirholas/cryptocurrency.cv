@@ -14,11 +14,11 @@ import NewsCard from '@/components/NewsCard';
 import TrendingSidebar from '@/components/TrendingSidebar';
 import SourceSections from '@/components/SourceSections';
 import { WebsiteStructuredData, OrganizationStructuredData, NewsListStructuredData } from '@/components/StructuredData';
-import { getLatestNews, getBreakingNews } from '@/lib/crypto-news';
+import { getLatestNews, getBreakingNews, getTrendingNews, getSourceCount } from '@/lib/crypto-news';
 import { categories } from '@/lib/categories';
 import { Link } from '@/i18n/navigation';
 
-export const revalidate = 300; // Revalidate every 5 minutes
+export const revalidate = 60; // Revalidate every minute for fresher content
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -32,17 +32,27 @@ export default async function Home({ params }: Props) {
   const tCommon = await getTranslations('common');
   const tNews = await getTranslations('news');
 
-  const [newsData, breakingData] = await Promise.all([
+  const [newsData, breakingData, trendingData] = await Promise.all([
     getLatestNews(50), // Get more articles for the redesigned layout
     getBreakingNews(5),
+    getTrendingNews(10), // Get top 10 trending articles
   ]);
 
-  // Split articles for different sections
-  const heroArticle = newsData.articles[0];
-  const editorsPicks = newsData.articles.slice(1, 4); // Articles 2-4
-  const latestNews = newsData.articles.slice(4, 16); // Articles 5-16 (12 articles)
-  const trendingArticles = newsData.articles.slice(0, 10); // Top 10 for sidebar
-  const sourceArticles = newsData.articles.slice(16); // Rest for source sections
+  // Get dynamic source count
+  const sourceCount = getSourceCount();
+
+  // Use trending articles for hero and featured sections
+  const heroArticle = trendingData.articles[0]; // Top trending article as hero
+  const editorsPicks = trendingData.articles.slice(1, 4); // Articles 2-4 from trending
+  
+  // Deduplicate: exclude trending articles from latest news to avoid showing same content
+  const trendingLinks = new Set(trendingData.articles.map(a => a.link));
+  const latestNews = newsData.articles
+    .filter(article => !trendingLinks.has(article.link))
+    .slice(0, 12); // First 12 unique latest articles
+  
+  const trendingArticles = trendingData.articles.slice(0, 10); // Top 10 for sidebar
+  const sourceArticles = newsData.articles.slice(12); // Rest for source sections
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
@@ -94,8 +104,8 @@ export default async function Home({ params }: Props) {
           </div>
         </nav>
 
-        {/* Editor's Picks Section */}
-        <section className="px-4 sm:px-6 lg:px-8 mb-12" aria-label="Editor's Picks">
+        {/* Trending Stories Section */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-12" aria-label="Trending Stories">
           <EditorsPicks articles={editorsPicks} />
         </section>
 
@@ -174,7 +184,7 @@ export default async function Home({ params }: Props) {
                 Build with Free Crypto News
               </h2>
               <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-                No API keys required. No rate limits. Get real-time news from 7 major crypto sources.
+                No API keys required. No rate limits. Get real-time news from {sourceCount}+ crypto sources.
               </p>
               
               <div className="flex flex-wrap justify-center gap-4">
@@ -223,7 +233,7 @@ export default async function Home({ params }: Props) {
                   <svg className="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span>7 News Sources</span>
+                  <span>{sourceCount}+ News Sources</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <svg className="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">

@@ -284,9 +284,9 @@ app.run_polling()
 | AI features | [AI-FEATURES.md](./AI-FEATURES.md) |
 | Real-time streaming | [REALTIME.md](./REALTIME.md) |
 | Component library | [COMPONENTS.md](./COMPONENTS.md) |
-| Testing guide | [TESTING.md](./TESTING.md) |
-| Architecture | [ARCHITECTURE.md](../ARCHITECTURE.md) |
-| Admin dashboard | [ADMIN.md](./ADMIN.md) |
+| Testing guide | [TESTING.md](TESTING.md) |
+| Architecture | [ARCHITECTURE.md](ARCHITECTURE.md) |
+| Admin dashboard | [ADMIN.md](ADMIN.md) |
 
 ---
 

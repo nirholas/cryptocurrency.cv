@@ -78,7 +78,7 @@ function printBreaking(article) {
 function printHelp() {
   console.log(`
 ${COLORS.bright}Free Crypto News CLI${COLORS.reset}
-${COLORS.dim}Real-time crypto news from 7 sources${COLORS.reset}
+${COLORS.dim}Real-time crypto news from 130+ sources${COLORS.reset}
 
 ${COLORS.bright}USAGE${COLORS.reset}
   crypto-news [options]

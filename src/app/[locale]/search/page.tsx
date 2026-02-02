@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Search - Free Crypto News',
-  description: 'Search crypto news from 7 major sources. Find articles about Bitcoin, Ethereum, DeFi, and more.',
+  description: 'Search crypto news from 130+ sources. Find articles about Bitcoin, Ethereum, DeFi, and more.',
 };
 
 type Props = {

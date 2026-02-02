@@ -1,174 +1,191 @@
+/**
+ * Health Check Endpoint
+ * 
+ * Provides system health status including:
+ * - API availability
+ * - Database connectivity
+ * - External service status
+ * - Cache status
+ * - x402 facilitator status
+ */
+
 import { NextResponse } from 'next/server';
-import { newsCache, marketCache, aiCache, globalCache } from '@/lib/distributed-cache';
-import { sentry } from '@/lib/sentry';
+import { kv } from '@vercel/kv';
 
 export const runtime = 'edge';
+export const revalidate = 0; // Always fresh
 
-// System metrics for scalability monitoring
-interface SystemMetrics {
-  cache: {
-    news: { hits: number; misses: number; staleHits: number; errors: number; backend: string };
-    market: { hits: number; misses: number; staleHits: number; errors: number; backend: string };
-    ai: { hits: number; misses: number; staleHits: number; errors: number; backend: string };
-    global: { hits: number; misses: number; staleHits: number; errors: number; backend: string };
-  };
-  monitoring: {
-    sentry: boolean;
-    environment: string;
-    release: string;
+interface HealthCheck {
+  status: 'healthy' | 'degraded' | 'unhealthy';
+  message?: string;
+  responseTime?: number;
+}
+
+interface HealthResponse {
+  status: 'healthy' | 'degraded' | 'unhealthy';
+  timestamp: string;
+  version: string;
+  uptime: number;
+  checks: {
+    api: HealthCheck;
+    cache: HealthCheck;
+    x402Facilitator: HealthCheck;
+    externalAPIs: HealthCheck;
   };
 }
 
-// Comprehensive RSS source health check list (all 35+ sources)
-const RSS_SOURCES = {
-  // Tier 1: Major News Outlets
-  coindesk: 'https://www.coindesk.com/arc/outboundfeeds/rss/',
-  theblock: 'https://www.theblock.co/rss.xml',
-  decrypt: 'https://decrypt.co/feed',
-  cointelegraph: 'https://cointelegraph.com/rss',
-  bitcoinmagazine: 'https://bitcoinmagazine.com/.rss/full/',
-  blockworks: 'https://blockworks.co/feed',
-  defiant: 'https://thedefiant.io/feed',
-  // Tier 2: Established Sources
-  bitcoinist: 'https://bitcoinist.com/feed/',
-  cryptoslate: 'https://cryptoslate.com/feed/',
-  newsbtc: 'https://www.newsbtc.com/feed/',
-  cryptonews: 'https://crypto.news/feed/',
-  cryptopotato: 'https://cryptopotato.com/feed/',
-  // DeFi & Web3
-  rekt: 'https://rekt.news/rss.xml',
-  // Research & Analysis
-  messari: 'https://messari.io/rss',
-  ambcrypto: 'https://ambcrypto.com/feed/',
-  beincrypto: 'https://beincrypto.com/feed/',
-  u_today: 'https://u.today/rss',
-  cryptobriefing: 'https://cryptobriefing.com/feed/',
-  // Asia-Pacific
-  forkast: 'https://forkast.news/feed/',
-  coingape: 'https://coingape.com/feed/',
-} as const;
-
-interface SourceHealth {
-  source: string;
-  status: 'healthy' | 'degraded' | 'down';
-  responseTime: number;
-  lastArticle?: string;
-  error?: string;
+/**
+ * Check cache (Vercel KV) connectivity
+ */
+async function checkCache(): Promise<HealthCheck> {
+  const start = Date.now();
+  
+  try {
+    // Try to set and get a test key
+    await kv.set('health:check', Date.now(), { ex: 10 });
+    const result = await kv.get('health:check');
+    
+    if (result) {
+      return {
+        status: 'healthy',
+        responseTime: Date.now() - start,
+      };
+    }
+    
+    return {
+      status: 'degraded',
+      message: 'Cache accessible but returned unexpected result',
+      responseTime: Date.now() - start,
+    };
+  } catch (error) {
+    return {
+      status: 'unhealthy',
+      message: error instanceof Error ? error.message : 'Cache unavailable',
+      responseTime: Date.now() - start,
+    };
+  }
 }
 
+/**
+ * Check x402 facilitator status
+ */
+async function checkX402Facilitator(): Promise<HealthCheck> {
+  const start = Date.now();
+  const facilitatorUrl = process.env.X402_FACILITATOR_URL || 'https://x402.org/facilitator';
+  
+  try {
+    const response = await fetch(`${facilitatorUrl}/health`, {
+      method: 'GET',
+      signal: AbortSignal.timeout(5000), // 5 second timeout
+    });
+    
+    if (response.ok) {
+      return {
+        status: 'healthy',
+        responseTime: Date.now() - start,
+      };
+    }
+    
+    return {
+      status: 'degraded',
+      message: `Facilitator returned ${response.status}`,
+      responseTime: Date.now() - start,
+    };
+  } catch (error) {
+    return {
+      status: 'unhealthy',
+      message: error instanceof Error ? error.message : 'Facilitator unreachable',
+      responseTime: Date.now() - start,
+    };
+  }
+}
+
+/**
+ * Check external APIs (CoinGecko, etc.)
+ */
+async function checkExternalAPIs(): Promise<HealthCheck> {
+  const start = Date.now();
+  
+  try {
+    // Quick check to CoinGecko ping endpoint
+    const response = await fetch('https://api.coingecko.com/api/v3/ping', {
+      method: 'GET',
+      signal: AbortSignal.timeout(5000),
+    });
+    
+    if (response.ok) {
+      return {
+        status: 'healthy',
+        responseTime: Date.now() - start,
+      };
+    }
+    
+    return {
+      status: 'degraded',
+      message: 'External API responding slowly or with errors',
+      responseTime: Date.now() - start,
+    };
+  } catch (error) {
+    return {
+      status: 'degraded',
+      message: 'External APIs may be slow or unavailable',
+      responseTime: Date.now() - start,
+    };
+  }
+}
+
+/**
+ * GET /api/health
+ */
 export async function GET() {
   const startTime = Date.now();
   
-  const healthChecks = await Promise.allSettled(
-    Object.entries(RSS_SOURCES).map(async ([key, url]): Promise<SourceHealth> => {
-      const checkStart = Date.now();
-      try {
-        const response = await fetch(url, {
-          headers: {
-            'Accept': 'application/rss+xml, application/xml, text/xml',
-            'User-Agent': 'FreeCryptoNews/1.0 HealthCheck',
-          },
-          signal: AbortSignal.timeout(10000), // 10s timeout
-        });
-        
-        const responseTime = Date.now() - checkStart;
-        
-        if (!response.ok) {
-          return {
-            source: key,
-            status: 'down',
-            responseTime,
-            error: `HTTP ${response.status}`,
-          };
-        }
-        
-        const xml = await response.text();
-        
-        // Check if we got valid RSS
-        const hasItems = xml.includes('<item>') || xml.includes('<entry>');
-        const titleMatch = xml.match(/<title>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?<\/title>/);
-        
-        if (!hasItems) {
-          return {
-            source: key,
-            status: 'degraded',
-            responseTime,
-            error: 'No articles found in feed',
-          };
-        }
-        
-        return {
-          source: key,
-          status: responseTime > 5000 ? 'degraded' : 'healthy',
-          responseTime,
-          lastArticle: titleMatch?.[1]?.slice(0, 100),
-        };
-      } catch (error) {
-        return {
-          source: key,
-          status: 'down',
-          responseTime: Date.now() - checkStart,
-          error: error instanceof Error ? error.message : 'Unknown error',
-        };
-      }
-    })
-  );
-  
-  const sources = healthChecks
-    .filter((r): r is PromiseFulfilledResult<SourceHealth> => r.status === 'fulfilled')
-    .map(r => r.value);
-  
-  const healthyCount = sources.filter(s => s.status === 'healthy').length;
-  const degradedCount = sources.filter(s => s.status === 'degraded').length;
-  const downCount = sources.filter(s => s.status === 'down').length;
-  
-  // Overall status
-  let overallStatus: 'healthy' | 'degraded' | 'down';
-  if (healthyCount >= 5) {
-    overallStatus = 'healthy';
-  } else if (healthyCount >= 3) {
-    overallStatus = 'degraded';
-  } else {
-    overallStatus = 'down';
-  }
-  
-  // Collect system metrics
-  const sentryConfig = sentry.getConfig();
-  const systemMetrics: SystemMetrics = {
-    cache: {
-      news: newsCache.getStats(),
-      market: marketCache.getStats(),
-      ai: aiCache.getStats(),
-      global: globalCache.getStats(),
+  // Run all health checks in parallel
+  const [cache, x402, external] = await Promise.all([
+    checkCache(),
+    checkX402Facilitator(),
+    checkExternalAPIs(),
+  ]);
+
+  const checks = {
+    api: {
+      status: 'healthy' as const,
+      responseTime: Date.now() - startTime,
     },
-    monitoring: {
-      sentry: sentryConfig.enabled,
-      environment: sentryConfig.environment,
-      release: sentryConfig.release,
-    },
+    cache,
+    x402Facilitator: x402,
+    externalAPIs: external,
   };
 
-  const result = {
+  // Determine overall status
+  const unhealthyCount = Object.values(checks).filter(c => c.status === 'unhealthy').length;
+  const degradedCount = Object.values(checks).filter(c => c.status === 'degraded').length;
+  
+  let overallStatus: 'healthy' | 'degraded' | 'unhealthy';
+  if (unhealthyCount > 0) {
+    overallStatus = 'unhealthy';
+  } else if (degradedCount > 0) {
+    overallStatus = 'degraded';
+  } else {
+    overallStatus = 'healthy';
+  }
+
+  const response: HealthResponse = {
     status: overallStatus,
     timestamp: new Date().toISOString(),
-    totalResponseTime: Date.now() - startTime,
-    summary: {
-      healthy: healthyCount,
-      degraded: degradedCount,
-      down: downCount,
-      total: sources.length,
-    },
-    system: systemMetrics,
-    sources,
+    version: process.env.NEXT_PUBLIC_APP_VERSION || '1.0.0',
+    uptime: process.uptime ? process.uptime() : 0,
+    checks,
   };
-  
-  const statusCode = overallStatus === 'down' ? 503 : 200;
-  
-  return NextResponse.json(result, {
+
+  // Return appropriate status code
+  const statusCode = overallStatus === 'healthy' ? 200 : 
+                     overallStatus === 'degraded' ? 200 : 503;
+
+  return NextResponse.json(response, {
     status: statusCode,
     headers: {
-      'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120',
-      'Access-Control-Allow-Origin': '*',
+      'Cache-Control': 'no-store, no-cache, must-revalidate',
     },
   });
 }

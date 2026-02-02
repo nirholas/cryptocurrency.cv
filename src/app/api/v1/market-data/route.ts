@@ -9,15 +9,22 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { hybridAuthMiddleware } from '@/lib/x402';
+import { ApiError } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
 
 const ENDPOINT = '/api/v1/market-data';
 
 export async function GET(request: NextRequest) {
+  const logger = createRequestLogger(request);
+  const startTime = Date.now();
+
   // Check authentication
   const authResponse = await hybridAuthMiddleware(request, ENDPOINT);
   if (authResponse) return authResponse;
 
   try {
+    logger.info('Fetching global market data');
+
     // Fetch global data and trending in parallel
     const [globalResponse, trendingResponse] = await Promise.all([
       fetch('https://api.coingecko.com/api/v3/global', {
@@ -84,6 +91,8 @@ export async function GET(request: NextRequest) {
     const totalMarketCapUsd = global?.total_market_cap?.usd || 0;
     const totalVolumeUsd = global?.total_volume?.usd || 0;
 
+    logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
+
     return NextResponse.json(
       {
         success: true,
@@ -116,11 +125,7 @@ export async function GET(request: NextRequest) {
       }
     );
   } catch (error) {
-    console.error('[API] /v1/market-data error:', error);
-
-    return NextResponse.json(
-      { success: false, error: 'Failed to fetch market data' },
-      { status: 502 }
-    );
+    logger.error('Failed to fetch market data', error);
+    return ApiError.upstream('CoinGecko', error);
   }
 }

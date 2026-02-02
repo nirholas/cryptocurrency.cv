@@ -6,8 +6,7 @@
  */
 
 import { NextResponse } from 'next/server';
-import { getPremiumPricingInfo } from '@/lib/x402-middleware';
-import { PREMIUM_CATEGORIES } from '@/lib/x402-config';
+import { getPremiumPricingInfo, PREMIUM_CATEGORIES } from '@/lib/x402';
 
 export const runtime = 'edge';
 

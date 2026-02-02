@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
+import { usePayment } from './x402/PaymentProvider';
 
 interface X402PaymentButtonProps {
   endpoint: string;
@@ -20,6 +21,10 @@ interface PaymentDetails {
   network: string;
   accepts: string;
   resource: string;
+  /** Maximum amount in minor units (e.g., 6 decimals for USDC) */
+  maxAmountRequired?: string;
+  /** Deadline for payment validity */
+  validUntil?: string;
 }
 
 /**
@@ -183,88 +188,75 @@ export default function X402PaymentButton({
 interface X402PaymentModalProps {
   details: PaymentDetails;
   onClose: () => void;
-  onPaymentComplete: (signature: string) => void;
+  onPaymentComplete: (signature: string, txHash?: string) => void;
 }
 
 function X402PaymentModal({ details, onClose, onPaymentComplete }: X402PaymentModalProps) {
-  const [step, setStep] = useState<'details' | 'connect' | 'sign' | 'complete'>('details');
-  const [walletConnected, setWalletConnected] = useState(false);
+  const [step, setStep] = useState<'details' | 'connect' | 'sign' | 'processing' | 'complete'>('details');
+  const [error, setError] = useState<string | null>(null);
+  const [txHash, setTxHash] = useState<string | null>(null);
+  
+  // Use the PaymentProvider for wallet interactions
+  const { isConnected, address, connect, executePayment } = usePayment();
 
   const networkNames: Record<string, string> = {
     'eip155:8453': 'Base Mainnet',
     'eip155:84532': 'Base Sepolia',
     'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp': 'Solana Mainnet',
   };
+  
+  const blockExplorers: Record<string, string> = {
+    'eip155:8453': 'https://basescan.org/tx/',
+    'eip155:84532': 'https://sepolia.basescan.org/tx/',
+    'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp': 'https://explorer.solana.com/tx/',
+  };
 
   const handleConnectWallet = async () => {
-    // In production, integrate with wagmi, ethers, or other wallet libraries
-    if (typeof window !== 'undefined' && (window as unknown as { ethereum?: unknown }).ethereum) {
-      try {
-        // Request account access
-        await (window as unknown as { ethereum: { request: (args: { method: string }) => Promise<unknown> } }).ethereum.request({ method: 'eth_requestAccounts' });
-        setWalletConnected(true);
+    setError(null);
+    try {
+      await connect();
+      if (isConnected) {
         setStep('sign');
-      } catch {
-        console.error('Wallet connection failed');
       }
-    } else {
-      // No wallet detected
-      alert('Please install MetaMask or another Web3 wallet');
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to connect wallet');
     }
   };
 
   const handleSign = async () => {
-    // Create the x402 payment message for signing
-    const message = JSON.stringify({
-      protocol: 'x402',
-      version: '1.0',
-      resource: details.resource,
-      amount: details.price,
-      network: details.network,
-      timestamp: Date.now(),
-    });
-
-    // Try to sign with connected wallet
-    if (typeof window !== 'undefined' && (window as unknown as { ethereum?: { request: (args: { method: string; params: unknown[] }) => Promise<string> } }).ethereum) {
-      try {
-        const ethereum = (window as unknown as { ethereum: { request: (args: { method: string; params: unknown[] }) => Promise<string | string[]> } }).ethereum;
-        
-        // Get the connected account
-        const accounts = await ethereum.request({ method: 'eth_accounts', params: [] }) as string[];
-        
-        if (accounts && accounts.length > 0) {
-          const account = accounts[0];
-          
-          // Sign the message using personal_sign
-          const signature = await ethereum.request({
-            method: 'personal_sign',
-            params: [message, account],
-          }) as string;
-          
-          // Create x402 signature format
-          const x402Signature = `x402:${Date.now()}:${signature}`;
-          setStep('complete');
-          
-          setTimeout(() => {
-            onPaymentComplete(x402Signature);
-          }, 500);
-          return;
-        }
-      } catch (error) {
-        console.error('Wallet signing failed:', error);
-        // Fall through to demo signature if real signing fails
-      }
-    }
-
-    // Fallback: Use demo signature if wallet signing is not available
-    // This allows testing without a real wallet connection
-    console.warn('Using demo signature - wallet signing unavailable');
-    const demoSignature = `x402:${Date.now()}:demo_${Math.random().toString(36).slice(2)}`;
-    setStep('complete');
+    setError(null);
+    setStep('processing');
     
-    setTimeout(() => {
-      onPaymentComplete(demoSignature);
-    }, 1000);
+    try {
+      // Parse amount in proper format for x402 payment
+      const priceNum = parseFloat(details.price.replace(/[^0-9.]/g, ''));
+      const amountInMinorUnits = Math.round(priceNum * 1_000_000).toString(); // USDC has 6 decimals
+      
+      // Execute actual ERC-20 transfer using PaymentProvider
+      // This should use EIP-3009 transferWithAuthorization in production
+      const result = await executePayment({
+        to: details.payTo,
+        amount: amountInMinorUnits,
+        network: details.network,
+      });
+      
+      if (result.success && result.txHash) {
+        setTxHash(result.txHash);
+        setStep('complete');
+        
+        // Create x402 payment header with transaction proof
+        const x402Payment = `x402:${result.txHash}:${Date.now()}`;
+        
+        setTimeout(() => {
+          onPaymentComplete(x402Payment, result.txHash);
+        }, 1500);
+      } else {
+        throw new Error(result.error || 'Payment failed');
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Payment failed');
+      setStep('sign');
+    }
   };
 
   return (
@@ -416,6 +408,17 @@ function X402PaymentModal({ details, onClose, onPaymentComplete }: X402PaymentMo
                 </div>
               </div>
 
+              {error && (
+                <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4">
+                  <div className="flex items-center gap-2 text-red-800 dark:text-red-200">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-sm">{error}</span>
+                  </div>
+                </div>
+              )}
+
               <button
                 onClick={handleSign}
                 className="w-full bg-amber-500 hover:bg-amber-600 text-black font-semibold py-3 rounded-xl transition-all"
@@ -432,6 +435,36 @@ function X402PaymentModal({ details, onClose, onPaymentComplete }: X402PaymentMo
             </div>
           )}
 
+          {step === 'processing' && (
+            <div className="space-y-6 text-center">
+              <div className="flex justify-center">
+                <svg className="animate-spin h-12 w-12 text-amber-500" fill="none" viewBox="0 0 24 24">
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  />
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  Processing Payment...
+                </h4>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  Please confirm the transaction in your wallet
+                </p>
+              </div>
+            </div>
+          )}
+
           {step === 'complete' && (
             <div className="space-y-6 text-center">
               <div className="text-6xl">✅</div>
@@ -440,9 +473,22 @@ function X402PaymentModal({ details, onClose, onPaymentComplete }: X402PaymentMo
                   Payment Complete!
                 </h4>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Fetching your data...
+                  {txHash ? 'Transaction confirmed. Fetching your data...' : 'Fetching your data...'}
                 </p>
               </div>
+              {txHash && blockExplorers[details.network] && (
+                <a
+                  href={`${blockExplorers[details.network]}${txHash}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-blue-500 hover:text-blue-400 text-sm"
+                >
+                  View on Block Explorer
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              )}
               <div className="flex justify-center">
                 <svg className="animate-spin h-8 w-8 text-amber-500" fill="none" viewBox="0 0 24 24">
                   <circle

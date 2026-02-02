@@ -2,202 +2,190 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://news-crypto.vercel.app/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/ADMIN/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
-         <loc>https://news-crypto.vercel.app/AGENT-PROMPTS-COMPARISON/</loc>
-         <lastmod>2026-01-24</lastmod>
-    </url>
-    <url>
-         <loc>https://news-crypto.vercel.app/AGENT-PROMPTS/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <loc>https://news-crypto.vercel.app/AGENTS/</loc>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/AI-FEATURES/</loc>
-         <lastmod>2026-01-24</lastmod>
-    </url>
-    <url>
-         <loc>https://news-crypto.vercel.app/API-BACKEND-COMPARISON/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/API/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/ARCHITECTURE/</loc>
-         <lastmod>2026-01-24</lastmod>
-    </url>
-    <url>
-         <loc>https://news-crypto.vercel.app/CDA-ARCHITECTURE-COMPLETE/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/CHANGELOG/</loc>
-         <lastmod>2026-01-24</lastmod>
-    </url>
-    <url>
-         <loc>https://news-crypto.vercel.app/COMPONENT-COMPARISON/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/COMPONENTS/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/CONTRIBUTING/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
+    </url>
+    <url>
+         <loc>https://news-crypto.vercel.app/DATABASE/</loc>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/DEPLOYMENT/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/DEVELOPER-GUIDE/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
-         <loc>https://news-crypto.vercel.app/FEATURE-MIGRATION-GUIDE/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <loc>https://news-crypto.vercel.app/FEATURES/</loc>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
-         <loc>https://news-crypto.vercel.app/FEATURE-PARITY-CHECKLIST/</loc>
-         <lastmod>2026-01-24</lastmod>
-    </url>
-    <url>
-         <loc>https://news-crypto.vercel.app/INCOMPLETE-FEATURES/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <loc>https://news-crypto.vercel.app/HOOKS/</loc>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/INTERNATIONALIZATION/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
+    </url>
+    <url>
+         <loc>https://news-crypto.vercel.app/LIBRARIES/</loc>
+         <lastmod>2026-02-02</lastmod>
+    </url>
+    <url>
+         <loc>https://news-crypto.vercel.app/PREMIUM/</loc>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/QUICKSTART/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/REALTIME/</loc>
-         <lastmod>2026-01-24</lastmod>
-    </url>
-    <url>
-         <loc>https://news-crypto.vercel.app/REPO-COMPARISON-ANALYSIS/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/SCALABILITY/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/SECURITY/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
+    </url>
+    <url>
+         <loc>https://news-crypto.vercel.app/SEO/</loc>
+         <lastmod>2026-02-02</lastmod>
+    </url>
+    <url>
+         <loc>https://news-crypto.vercel.app/SOURCES/</loc>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/TESTING/</loc>
-         <lastmod>2026-01-24</lastmod>
-    </url>
-    <url>
-         <loc>https://news-crypto.vercel.app/TRADING-BOT-RESEARCH/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/USER-GUIDE/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
-         <loc>https://news-crypto.vercel.app/X402-IMPLEMENTATION/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <loc>https://news-crypto.vercel.app/WELL-KNOWN/</loc>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
-         <loc>https://news-crypto.vercel.app/components/</loc>
-         <lastmod>2026-01-24</lastmod>
-    </url>
-    <url>
-         <loc>https://news-crypto.vercel.app/i18n-agent-prompts/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <loc>https://news-crypto.vercel.app/X402/</loc>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/examples/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/examples/discord/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/examples/langchain/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/examples/slack/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/examples/telegram/</loc>
-         <lastmod>2026-01-24</lastmod>
-    </url>
-    <url>
-         <loc>https://news-crypto.vercel.app/includes/abbreviations/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/integrations/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/integrations/alfred/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/integrations/chatgpt/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
+    </url>
+    <url>
+         <loc>https://news-crypto.vercel.app/integrations/data-apis/</loc>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/integrations/extension/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/integrations/mcp/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/integrations/raycast/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/integrations/widgets/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/sdks/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/sdks/go/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/sdks/javascript/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/sdks/php/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/sdks/python/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/sdks/react/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
     <url>
          <loc>https://news-crypto.vercel.app/sdks/typescript/</loc>
-         <lastmod>2026-01-24</lastmod>
+         <lastmod>2026-02-02</lastmod>
     </url>
 </urlset>

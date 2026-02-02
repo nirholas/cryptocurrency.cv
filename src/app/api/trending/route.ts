@@ -1,8 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
+import { ApiError } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
 
 export const runtime = 'edge';
-export const revalidate = 300; // 5 minutes
+export const revalidate = 60; // 1 minute for fresher content
 
 interface TrendingTopic {
   topic: string;
@@ -59,9 +61,13 @@ function analyzeSentiment(text: string): 'bullish' | 'bearish' | 'neutral' {
 }
 
 export async function GET(request: NextRequest) {
+  const logger = createRequestLogger(request);
+  const startTime = Date.now();
   const searchParams = request.nextUrl.searchParams;
   const limit = Math.min(parseInt(searchParams.get('limit') || '10'), 20);
   const hours = Math.min(parseInt(searchParams.get('hours') || '24'), 72);
+  
+  logger.info('Fetching trending topics', { limit, hours });
   
   try {
     // Fetch recent news
@@ -101,6 +107,8 @@ export async function GET(request: NextRequest) {
       .sort((a, b) => b.count - a.count)
       .slice(0, limit);
     
+    logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
+    
     return NextResponse.json({
       trending,
       timeWindow: `${hours}h`,
@@ -113,9 +121,7 @@ export async function GET(request: NextRequest) {
       },
     });
   } catch (error) {
-    return NextResponse.json(
-      { error: 'Failed to get trending topics', message: String(error) },
-      { status: 500 }
-    );
+    logger.error('Failed to get trending topics', error);
+    return ApiError.internal('Failed to get trending topics', error);
   }
 }

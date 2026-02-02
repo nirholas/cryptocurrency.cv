@@ -9,6 +9,8 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { hybridAuthMiddleware } from '@/lib/x402';
+import { ApiError } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
 
 const ENDPOINT = '/api/v1/coin';
 
@@ -16,6 +18,9 @@ export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ coinId: string }> }
 ) {
+  const logger = createRequestLogger(request);
+  const startTime = Date.now();
+
   // Check authentication
   const authResponse = await hybridAuthMiddleware(request, ENDPOINT);
   if (authResponse) return authResponse;
@@ -23,10 +28,12 @@ export async function GET(
   const { coinId } = await params;
 
   if (!coinId || coinId.length < 1) {
-    return NextResponse.json({ success: false, error: 'Coin ID is required' }, { status: 400 });
+    return ApiError.badRequest('Coin ID is required');
   }
 
   try {
+    logger.info('Fetching coin data', { coinId });
+
     const response = await fetch(
       `https://api.coingecko.com/api/v3/coins/${coinId}?localization=false&tickers=true&market_data=true&community_data=true&developer_data=false&sparkline=true`,
       {
@@ -40,10 +47,7 @@ export async function GET(
 
     if (!response.ok) {
       if (response.status === 404) {
-        return NextResponse.json(
-          { success: false, error: 'Coin not found', coinId },
-          { status: 404 }
-        );
+        return ApiError.notFound(`Coin not found: ${coinId}`);
       }
       throw new Error(`Upstream API error: ${response.status}`);
     }
@@ -101,6 +105,8 @@ export async function GET(
       last_updated: data.last_updated,
     };
 
+    logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
+
     return NextResponse.json(
       {
         success: true,
@@ -119,15 +125,7 @@ export async function GET(
       }
     );
   } catch (error) {
-    console.error(`[API] /v1/coin/${coinId} error:`, error);
-
-    return NextResponse.json(
-      {
-        success: false,
-        error: 'Failed to fetch coin data',
-        coinId,
-      },
-      { status: 502 }
-    );
+    logger.error('Failed to fetch coin data', error, { coinId });
+    return ApiError.upstream('CoinGecko', error);
   }
 }

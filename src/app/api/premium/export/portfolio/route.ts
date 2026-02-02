@@ -11,8 +11,9 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { withX402 } from '@x402/next';
-import { x402Server, getRouteConfig } from '@/lib/x402-server';
+import { withX402 } from '@/lib/x402';
+import { ApiError } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
 
 export const runtime = 'nodejs';
 
@@ -60,20 +61,18 @@ interface PortfolioExport {
 async function handler(
   request: NextRequest
 ): Promise<NextResponse<PortfolioExport | string | { error: string; message?: string }>> {
-  const searchParams = request.nextUrl.searchParams;
-  const format = (searchParams.get('format') || 'json') as 'json' | 'csv';
-  const portfolioId = searchParams.get('portfolio_id');
-
+  const logger = createRequestLogger(request);
+  const startTime = Date.now();
+  
   try {
+    logger.info('Processing portfolio export request');
+    const searchParams = request.nextUrl.searchParams;
+    const format = (searchParams.get('format') || 'json') as 'json' | 'csv';
+    const portfolioId = searchParams.get('portfolio_id');
+
     // Require a portfolio ID to export real data
     if (!portfolioId) {
-      return NextResponse.json(
-        { 
-          error: 'Portfolio ID required',
-          message: 'Provide portfolio_id parameter to export your portfolio data'
-        },
-        { status: 400 }
-      );
+      return ApiError.badRequest('Portfolio ID required. Provide portfolio_id parameter to export your portfolio data');
     }
     
     // In production, fetch portfolio from database
@@ -127,6 +126,8 @@ async function handler(
       );
       const csv = [headers.join(','), ...rows].join('\n');
 
+      logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
+      
       return new NextResponse(csv, {
         headers: {
           'Content-Type': 'text/csv',
@@ -135,6 +136,8 @@ async function handler(
       });
     }
 
+    logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
+    
     return NextResponse.json(exportData, {
       headers: {
         'Content-Type': 'application/json',
@@ -142,8 +145,8 @@ async function handler(
       },
     });
   } catch (error) {
-    console.error('Error exporting portfolio:', error);
-    return NextResponse.json({ error: 'Failed to export portfolio' }, { status: 500 });
+    logger.error('Portfolio export failed', error);
+    return ApiError.internal('Failed to export portfolio', error);
   }
 }
 
@@ -155,4 +158,4 @@ async function handler(
  * Query parameters:
  * - format: 'json' | 'csv' (default: 'json')
  */
-export const GET = withX402(handler, getRouteConfig('/api/premium/export/portfolio'), x402Server);
+export const GET = withX402('/api/premium/export/portfolio', handler);

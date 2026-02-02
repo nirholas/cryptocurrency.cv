@@ -2,6 +2,8 @@
  * Input validation and sanitization utilities
  */
 
+import { ValidationError } from './api-error';
+
 // Max lengths for various inputs
 export const MAX_LENGTHS = {
   query: 200,
@@ -297,3 +299,222 @@ export function validateApiRequest(
 
   return { ok: true };
 }
+
+// ============================================
+// Enhanced Validation Utilities (Agent 2)
+// ============================================
+
+/**
+ * Validate required string parameter
+ */
+export function validateRequired(
+  value: unknown,
+  fieldName: string
+): { valid: true; value: string } | { valid: false; error: ValidationError } {
+  if (value === undefined || value === null || value === '') {
+    return {
+      valid: false,
+      error: {
+        field: fieldName,
+        message: `${fieldName} is required`,
+        received: value,
+        expected: 'non-empty string',
+      },
+    };
+  }
+
+  if (typeof value !== 'string') {
+    return {
+      valid: false,
+      error: {
+        field: fieldName,
+        message: `${fieldName} must be a string`,
+        received: typeof value,
+        expected: 'string',
+      },
+    };
+  }
+
+  return { valid: true, value };
+}
+
+/**
+ * Validate number in range (enhanced version)
+ */
+export function validateNumberRange(
+  value: unknown,
+  fieldName: string,
+  options: { min?: number; max?: number; integer?: boolean } = {}
+): { valid: true; value: number } | { valid: false; error: ValidationError } {
+  const num = typeof value === 'string' ? parseFloat(value) : value;
+
+  if (typeof num !== 'number' || isNaN(num)) {
+    return {
+      valid: false,
+      error: {
+        field: fieldName,
+        message: `${fieldName} must be a valid number`,
+        received: value,
+        expected: 'number',
+      },
+    };
+  }
+
+  if (options.integer && !Number.isInteger(num)) {
+    return {
+      valid: false,
+      error: {
+        field: fieldName,
+        message: `${fieldName} must be an integer`,
+        received: num,
+        expected: 'integer',
+      },
+    };
+  }
+
+  if (options.min !== undefined && num < options.min) {
+    return {
+      valid: false,
+      error: {
+        field: fieldName,
+        message: `${fieldName} must be >= ${options.min}`,
+        received: num,
+        expected: `>= ${options.min}`,
+      },
+    };
+  }
+
+  if (options.max !== undefined && num > options.max) {
+    return {
+      valid: false,
+      error: {
+        field: fieldName,
+        message: `${fieldName} must be <= ${options.max}`,
+        received: num,
+        expected: `<= ${options.max}`,
+      },
+    };
+  }
+
+  return { valid: true, value: num };
+}
+
+/**
+ * Validate enum value
+ */
+export function validateEnum<T extends string>(
+  value: unknown,
+  fieldName: string,
+  allowedValues: readonly T[]
+): { valid: true; value: T } | { valid: false; error: ValidationError } {
+  if (typeof value !== 'string') {
+    return {
+      valid: false,
+      error: {
+        field: fieldName,
+        message: `${fieldName} must be a string`,
+        received: typeof value,
+        expected: 'string',
+      },
+    };
+  }
+
+  if (!allowedValues.includes(value as T)) {
+    return {
+      valid: false,
+      error: {
+        field: fieldName,
+        message: `${fieldName} must be one of: ${allowedValues.join(', ')}`,
+        received: value,
+        expected: allowedValues.join(' | '),
+      },
+    };
+  }
+
+  return { valid: true, value: value as T };
+}
+
+/**
+ * Validate array
+ */
+export function validateArray<T>(
+  value: unknown,
+  fieldName: string,
+  itemValidator?: (item: unknown, index: number) => { valid: true } | { valid: false; error: ValidationError }
+): { valid: true; value: T[] } | { valid: false; error: ValidationError } {
+  if (!Array.isArray(value)) {
+    return {
+      valid: false,
+      error: {
+        field: fieldName,
+        message: `${fieldName} must be an array`,
+        received: typeof value,
+        expected: 'array',
+      },
+    };
+  }
+
+  if (itemValidator) {
+    for (let i = 0; i < value.length; i++) {
+      const result = itemValidator(value[i], i);
+      if (!result.valid) {
+        return {
+          valid: false,
+          error: {
+            ...result.error,
+            field: `${fieldName}[${i}].${result.error.field}`,
+          },
+        };
+      }
+    }
+  }
+
+  return { valid: true, value: value as T[] };
+}
+
+/**
+ * Validate email
+ */
+export function validateEmail(
+  value: unknown,
+  fieldName: string
+): { valid: true; value: string } | { valid: false; error: ValidationError } {
+  if (typeof value !== 'string') {
+    return {
+      valid: false,
+      error: {
+        field: fieldName,
+        message: `${fieldName} must be a string`,
+        received: typeof value,
+        expected: 'string',
+      },
+    };
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(value)) {
+    return {
+      valid: false,
+      error: {
+        field: fieldName,
+        message: `${fieldName} must be a valid email address`,
+        received: value,
+        expected: 'email@example.com',
+      },
+    };
+  }
+
+  return { valid: true, value };
+}
+
+/**
+ * Collect all validation errors
+ */
+export function collectValidationErrors(
+  validators: Array<{ valid: boolean; error?: ValidationError }>
+): ValidationError[] {
+  return validators
+    .filter((v): v is { valid: false; error: ValidationError } => !v.valid)
+    .map(v => v.error);
+}
+

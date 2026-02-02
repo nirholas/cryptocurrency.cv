@@ -10,6 +10,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getTopCoins, getCoinDetails } from '@/lib/market-data';
 import { getLatestNews } from '@/lib/crypto-news';
+import { validateQuery } from '@/lib/validation-middleware';
+import { aiSignalsQuerySchema } from '@/lib/schemas';
 
 // =============================================================================
 // TYPES
@@ -197,8 +199,20 @@ export async function analyzeSentiment(request: NextRequest): Promise<NextRespon
  * Generate trading signals
  */
 export async function generateSignals(request: NextRequest): Promise<NextResponse> {
+  // Validate query parameters - note: using 'coins' instead of 'coin' for backwards compatibility
   const searchParams = request.nextUrl.searchParams;
-  const coins = searchParams.get('coins')?.split(',') || ['bitcoin', 'ethereum'];
+  const coinsParam = searchParams.get('coins');
+  const coins = coinsParam?.split(',') || ['bitcoin', 'ethereum'];
+  
+  // Validate individual coin parameter if provided
+  const coinParam = searchParams.get('coin');
+  if (coinParam) {
+    // Use the aiSignalsQuerySchema for single coin validation
+    const validation = validateQuery(request, aiSignalsQuerySchema);
+    if (!validation.success) {
+      return validation.error;
+    }
+  }
 
   try {
     const topCoins = await getTopCoins(100);

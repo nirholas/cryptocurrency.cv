@@ -725,7 +725,7 @@ pm2 logs crypto-news
 
 ### Support
 
-- 📖 [Documentation](README.md)
+- 📖 [Documentation](index.md)
 - 💬 [GitHub Discussions](https://github.com/nirholas/free-crypto-news/discussions)
 - 🐛 [Report Issues](https://github.com/nirholas/free-crypto-news/issues)
 

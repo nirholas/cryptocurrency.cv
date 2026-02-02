@@ -15,9 +15,10 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { withX402 } from '@x402/next';
-import { x402Server, getRouteConfig } from '@/lib/x402-server';
+import { withX402 } from '@/lib/x402';
 import { getTopProtocols, getTopChains } from '@/lib/market-data';
+import { ApiError } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
 
 export const runtime = 'nodejs';
 
@@ -202,4 +203,4 @@ async function handler(
  * GET /api/premium/defi/protocols?category=DEX&chains=true
  * GET /api/premium/defi/protocols?chain=Ethereum&minTvl=1000000000
  */
-export const GET = withX402(handler, getRouteConfig('/api/premium/defi/protocols'), x402Server);
+export const GET = withX402('/api/premium/defi/protocols', handler);

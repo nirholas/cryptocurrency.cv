@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Full Reader - Free Crypto News',
-  description: 'Read full crypto news articles from 7 major sources with AI-powered summaries and analysis.',
+  description: 'Read full crypto news articles from 130+ sources with AI-powered summaries and analysis.',
 };
 
 export const revalidate = 300; // Revalidate every 5 minutes

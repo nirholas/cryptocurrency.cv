@@ -67,10 +67,24 @@ interface PaymentContextValue {
   // Payment actions
   checkAccess: (route: string) => boolean;
   getAccessExpiry: (route: string) => number | null;
+  executePayment: (params: ExecutePaymentParams) => Promise<PaymentResult>;
 
   // Config
   targetChainId: number;
   isTestnet: boolean;
+}
+
+// Payment execution types
+interface ExecutePaymentParams {
+  to: string;
+  amount: string;  // Amount in minor units (e.g., 6 decimals for USDC)
+  network: string; // CAIP-2 network ID
+}
+
+interface PaymentResult {
+  success: boolean;
+  txHash?: string;
+  error?: string;
 }
 
 // =============================================================================
@@ -394,6 +408,78 @@ export function PaymentProvider({ children, testnet = true }: PaymentProviderPro
     [accessPasses]
   );
 
+  // Execute a USDC payment (ERC-20 transfer)
+  const executePayment = useCallback(
+    async (params: ExecutePaymentParams): Promise<PaymentResult> => {
+      const ethereum = window.ethereum;
+      if (!ethereum || !wallet.address) {
+        return { success: false, error: 'Wallet not connected' };
+      }
+
+      if (!wallet.isCorrectChain) {
+        return { success: false, error: 'Please switch to the correct network' };
+      }
+
+      const usdcAddress = USDC_ADDRESSES[targetChainId];
+      if (!usdcAddress) {
+        return { success: false, error: `USDC not supported on chain ${targetChainId}` };
+      }
+
+      try {
+        // ERC-20 transfer function signature: transfer(address to, uint256 amount)
+        const transferFunctionSelector = '0xa9059cbb';
+        
+        // Pad address to 32 bytes (remove 0x, pad to 64 chars)
+        const paddedAddress = params.to.slice(2).toLowerCase().padStart(64, '0');
+        
+        // Pad amount to 32 bytes (convert to hex, pad to 64 chars)
+        const amountBigInt = BigInt(params.amount);
+        const paddedAmount = amountBigInt.toString(16).padStart(64, '0');
+        
+        // Construct the data payload
+        const data = `${transferFunctionSelector}${paddedAddress}${paddedAmount}`;
+
+        // Send the transaction
+        const txHash = await ethereum.request({
+          method: 'eth_sendTransaction',
+          params: [
+            {
+              from: wallet.address,
+              to: usdcAddress,
+              data,
+              // Gas will be estimated by the wallet
+            },
+          ],
+        });
+
+        // Record the payment
+        const paymentRecord: PaymentRecord = {
+          txHash: txHash as string,
+          amount: params.amount,
+          route: 'x402-payment',
+          timestamp: Date.now(),
+          network: params.network,
+        };
+        setPayments((prev) => [...prev, paymentRecord]);
+
+        // Update balances after payment
+        await updateBalances(wallet.address, targetChainId);
+
+        return { success: true, txHash: txHash as string };
+      } catch (e) {
+        const err = e as { message?: string; code?: number };
+        
+        // User rejected
+        if (err.code === 4001) {
+          return { success: false, error: 'Transaction rejected by user' };
+        }
+        
+        return { success: false, error: err.message || 'Transaction failed' };
+      }
+    },
+    [wallet, targetChainId, updateBalances]
+  );
+
   // Check if user has any active premium access
   const isPremium = accessPasses.some((pass) => pass.expiresAt > Date.now());
 
@@ -409,6 +495,7 @@ export function PaymentProvider({ children, testnet = true }: PaymentProviderPro
     isPremium,
     checkAccess,
     getAccessExpiry,
+    executePayment,
     targetChainId,
     isTestnet: testnet,
   };

@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { compareCoins, CompareData } from '@/lib/market-data';
+import { validateQuery } from '@/lib/validation-middleware';
+import { marketCompareQuerySchema2 } from '@/lib/schemas';
+import { ApiError } from '@/lib/api-error';
 
 export const runtime = 'edge';
 export const revalidate = 30;
@@ -19,33 +22,24 @@ export const revalidate = 30;
 export async function GET(
   request: NextRequest
 ): Promise<NextResponse<CompareData | { error: string; message: string }>> {
-  const searchParams = request.nextUrl.searchParams;
-  const idsParam = searchParams.get('ids') || '';
-  
-  if (!idsParam) {
-    return NextResponse.json(
-      { error: 'Missing coin IDs', message: 'Provide comma-separated coin IDs in the "ids" parameter' },
-      { status: 400 }
-    );
+  // Validate query parameters
+  const validation = validateQuery(request, marketCompareQuerySchema2);
+  if (!validation.success) {
+    return validation.error;
   }
   
+  const { ids: idsParam } = validation.data;
   const coinIds = idsParam
     .split(',')
     .map(id => id.trim().toLowerCase())
     .filter(id => id.length > 0);
   
   if (coinIds.length === 0) {
-    return NextResponse.json(
-      { error: 'No valid coin IDs', message: 'Provide at least one valid coin ID' },
-      { status: 400 }
-    );
+    return ApiError.badRequest('No valid coin IDs provided');
   }
   
   if (coinIds.length > 25) {
-    return NextResponse.json(
-      { error: 'Too many coins', message: 'Maximum 25 coins can be compared at once' },
-      { status: 400 }
-    );
+    return ApiError.badRequest('Maximum 25 coins can be compared at once');
   }
   
   try {

@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { ApiError } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
 
 export const runtime = 'edge';
 
@@ -16,10 +18,7 @@ export async function POST(request: NextRequest) {
     const { text, url, type = 'paragraph' } = body;
 
     if (!text?.trim() && !url?.trim()) {
-      return NextResponse.json(
-        { error: 'Either text or url is required' },
-        { status: 400 }
-      );
+      return ApiError.badRequest('Either text or url is required');
     }
 
     // If URL provided, fetch the content

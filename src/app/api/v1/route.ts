@@ -13,12 +13,8 @@ import {
   FACILITATOR_URL,
   PAYMENT_ADDRESS,
   NETWORKS,
+  CURRENT_NETWORK,
 } from '@/lib/x402';
-
-// Get network from environment
-const CURRENT_NETWORK =
-  process.env.X402_NETWORK ||
-  (process.env.NODE_ENV === 'production' ? NETWORKS.BASE_MAINNET : NETWORKS.BASE_SEPOLIA);
 
 export const dynamic = 'force-static';
 export const revalidate = 3600; // Revalidate every hour

@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getExchanges, Exchange } from '@/lib/market-data';
+import { ApiError, type ApiErrorResponse } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
 
 export const runtime = 'edge';
 export const revalidate = 3600;
@@ -19,7 +21,9 @@ export const revalidate = 3600;
  */
 export async function GET(
   request: NextRequest
-): Promise<NextResponse<Exchange[] | { error: string; message: string }>> {
+): Promise<NextResponse> {
+  const logger = createRequestLogger(request);
+  const startTime = Date.now();
   const searchParams = request.nextUrl.searchParams;
   
   // Parse pagination parameters
@@ -30,22 +34,20 @@ export async function GET(
   const page = parseInt(searchParams.get('page') || '1', 10);
   
   if (isNaN(perPage) || perPage < 1) {
-    return NextResponse.json(
-      { error: 'Invalid per_page parameter', message: 'per_page must be a positive number' },
-      { status: 400 }
-    );
+    logger.error('Invalid per_page parameter', { perPage: searchParams.get('per_page') });
+    return ApiError.badRequest('per_page must be a positive number');
   }
   
   if (isNaN(page) || page < 1) {
-    return NextResponse.json(
-      { error: 'Invalid page parameter', message: 'Page must be a positive number' },
-      { status: 400 }
-    );
+    logger.error('Invalid page parameter', { page: searchParams.get('page') });
+    return ApiError.badRequest('Page must be a positive number');
   }
   
   try {
+    logger.info('Fetching exchanges', { perPage, page });
     const data = await getExchanges(perPage, page);
     
+    logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
     return NextResponse.json(data, {
       headers: {
         'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=7200',
@@ -53,10 +55,7 @@ export async function GET(
       },
     });
   } catch (error) {
-    console.error('Error in exchanges route:', error);
-    return NextResponse.json(
-      { error: 'Failed to fetch exchanges', message: String(error) },
-      { status: 500 }
-    );
+    logger.error('Failed to fetch exchanges', error);
+    return ApiError.internal('Failed to fetch exchanges', error);
   }
 }

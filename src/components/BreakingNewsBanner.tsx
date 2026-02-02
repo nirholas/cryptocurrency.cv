@@ -1,9 +1,12 @@
 /**
  * Breaking News Banner
  * Premium urgent news banner with dramatic animations
+ * Links to internal article pages for better user engagement and SEO
  */
 
+import Link from 'next/link';
 import { NewsArticle } from '@/lib/crypto-news';
+import { generateArticleSlug } from '@/lib/archive-v2';
 
 interface BreakingNewsBannerProps {
   articles: NewsArticle[];
@@ -13,6 +16,8 @@ export default function BreakingNewsBanner({ articles }: BreakingNewsBannerProps
   const breakingArticle = articles[0];
   
   if (!breakingArticle) return null;
+
+  const articleSlug = generateArticleSlug(breakingArticle.title, breakingArticle.pubDate);
 
   return (
     <div 
@@ -49,16 +54,14 @@ export default function BreakingNewsBanner({ articles }: BreakingNewsBannerProps
             </span>
           </span>
           
-          {/* News headline with hover effect */}
-          <a
-            href={breakingArticle.link}
-            target="_blank"
-            rel="noopener noreferrer"
+          {/* News headline - links to internal article page */}
+          <Link
+            href={`/article/${articleSlug}`}
             className="group flex-1 text-sm sm:text-base font-semibold text-white hover:text-white/90 truncate focus:outline-none focus:underline transition-all"
-            aria-label={'Breaking news: ' + breakingArticle.title + ' (opens in new tab)'}
+            aria-label={`Breaking news: ${breakingArticle.title}`}
           >
             <span className="group-hover:underline underline-offset-2">{breakingArticle.title}</span>
-          </a>
+          </Link>
           
           {/* Time indicator with icon */}
           <span className="text-red-100 text-xs whitespace-nowrap hidden sm:flex items-center gap-1.5 bg-red-700/50 backdrop-blur-sm rounded-full px-3 py-1">
@@ -68,15 +71,15 @@ export default function BreakingNewsBanner({ articles }: BreakingNewsBannerProps
             <time>{breakingArticle.timeAgo}</time>
           </span>
           
-          {/* External link with arrow */}
+          {/* Arrow indicator for internal link */}
           <svg 
-            className="w-5 h-5 text-red-200 flex-shrink-0 hidden sm:block transform transition-transform duration-300 hover:translate-x-0.5 hover:-translate-y-0.5" 
+            className="w-5 h-5 text-red-200 flex-shrink-0 hidden sm:block" 
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"
             aria-hidden="true"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </div>
       </div>

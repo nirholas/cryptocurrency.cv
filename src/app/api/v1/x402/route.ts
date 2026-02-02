@@ -20,8 +20,9 @@ import {
   IS_PRODUCTION,
   IS_TESTNET,
   getNetworkDisplayName,
-} from '@/lib/x402/config';
-import { validateConfig, getServerStatus } from '@/lib/x402/server';
+  validateConfig,
+  getServerStatus,
+} from '@/lib/x402';
 
 export const dynamic = 'force-dynamic';
 

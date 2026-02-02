@@ -978,13 +978,359 @@ function getTimeAgo(date: Date): string {
 
 import { newsCache, withCache } from './cache';
 
+// ═══════════════════════════════════════════════════════════════
+// API SOURCES (more reliable than RSS)
+// ═══════════════════════════════════════════════════════════════
+
+interface ApiSource {
+  name: string;
+  url: string;
+  category: string;
+  parser: (data: unknown) => NewsArticle[];
+}
+
+const API_SOURCES: Record<string, ApiSource> = {
+  // CryptoCompare News API (free, no key needed for basic usage)
+  cryptocompare: {
+    name: 'CryptoCompare',
+    url: 'https://min-api.cryptocompare.com/data/v2/news/?lang=EN&sortOrder=latest',
+    category: 'general',
+    parser: (data: unknown) => {
+      const response = data as { Data?: Array<{
+        title: string;
+        url: string;
+        body: string;
+        published_on: number;
+        source: string;
+        categories: string;
+      }> };
+      if (!response.Data) return [];
+      return response.Data.slice(0, 20).map(item => ({
+        title: item.title,
+        link: item.url,
+        description: item.body?.slice(0, 200),
+        pubDate: new Date(item.published_on * 1000).toISOString(),
+        source: item.source || 'CryptoCompare',
+        sourceKey: 'cryptocompare',
+        category: item.categories?.split('|')[0]?.toLowerCase() || 'general',
+        timeAgo: getTimeAgo(new Date(item.published_on * 1000)),
+      }));
+    },
+  },
+  
+  // CoinGecko Status Updates (free)
+  coingecko_updates: {
+    name: 'CoinGecko Updates',
+    url: 'https://api.coingecko.com/api/v3/status_updates',
+    category: 'general',
+    parser: (data: unknown) => {
+      const response = data as { status_updates?: Array<{
+        description: string;
+        created_at: string;
+        project: { name: string };
+        user_title: string;
+      }> };
+      if (!response.status_updates) return [];
+      return response.status_updates.slice(0, 10).map(item => ({
+        title: `${item.project?.name}: ${item.user_title || 'Update'}`,
+        link: `https://www.coingecko.com`,
+        description: item.description?.slice(0, 200),
+        pubDate: new Date(item.created_at).toISOString(),
+        source: 'CoinGecko',
+        sourceKey: 'coingecko_updates',
+        category: 'general',
+        timeAgo: getTimeAgo(new Date(item.created_at)),
+      }));
+    },
+  },
+  
+  // CoinPaprika News (free)
+  coinpaprika: {
+    name: 'CoinPaprika',
+    url: 'https://api.coinpaprika.com/v1/coins/btc-bitcoin/events',
+    category: 'bitcoin',
+    parser: (data: unknown) => {
+      const events = data as Array<{
+        name: string;
+        description: string;
+        date: string;
+        link: string;
+      }>;
+      if (!Array.isArray(events)) return [];
+      return events.slice(0, 10).map(item => ({
+        title: item.name,
+        link: item.link || 'https://coinpaprika.com',
+        description: item.description?.slice(0, 200),
+        pubDate: new Date(item.date).toISOString(),
+        source: 'CoinPaprika',
+        sourceKey: 'coinpaprika',
+        category: 'bitcoin',
+        timeAgo: getTimeAgo(new Date(item.date)),
+      }));
+    },
+  },
+  
+  // Messari News (free, no API key for public endpoints)
+  messari: {
+    name: 'Messari',
+    url: 'https://data.messari.io/api/v1/news',
+    category: 'research',
+    parser: (data: unknown) => {
+      const response = data as { data?: Array<{
+        title: string;
+        url: string;
+        content: string;
+        published_at: string;
+        author: { name: string };
+        tags: Array<{ name: string }>;
+      }> };
+      if (!response.data) return [];
+      return response.data.slice(0, 20).map(item => ({
+        title: item.title,
+        link: item.url,
+        description: item.content?.slice(0, 200),
+        pubDate: new Date(item.published_at).toISOString(),
+        source: 'Messari',
+        sourceKey: 'messari',
+        category: item.tags?.[0]?.name?.toLowerCase() || 'research',
+        timeAgo: getTimeAgo(new Date(item.published_at)),
+      }));
+    },
+  },
+  
+  // CoinCap News (free)
+  coincap: {
+    name: 'CoinCap',
+    url: 'https://api.coincap.io/v2/assets?limit=10',
+    category: 'markets',
+    parser: (data: unknown) => {
+      // CoinCap doesn't have news, but we can generate market updates
+      const response = data as { data?: Array<{
+        name: string;
+        symbol: string;
+        priceUsd: string;
+        changePercent24Hr: string;
+      }> };
+      if (!response.data) return [];
+      // Only return significant movers (>5% change)
+      const movers = response.data.filter(a => Math.abs(parseFloat(a.changePercent24Hr || '0')) > 5);
+      return movers.slice(0, 5).map(item => {
+        const change = parseFloat(item.changePercent24Hr || '0');
+        const direction = change > 0 ? '📈' : '📉';
+        return {
+          title: `${direction} ${item.name} (${item.symbol}) ${change > 0 ? '+' : ''}${change.toFixed(1)}% in 24h`,
+          link: `https://coincap.io/assets/${item.name.toLowerCase()}`,
+          description: `${item.name} is trading at $${parseFloat(item.priceUsd).toLocaleString()}`,
+          pubDate: new Date().toISOString(),
+          source: 'CoinCap',
+          sourceKey: 'coincap',
+          category: 'markets',
+          timeAgo: 'just now',
+        };
+      });
+    },
+  },
+  
+  // LunarCrush Galaxy Score (free tier)
+  lunarcrush: {
+    name: 'LunarCrush',
+    url: 'https://lunarcrush.com/api4/public/coins/list?sort=galaxy_score&limit=5',
+    category: 'social',
+    parser: (data: unknown) => {
+      const response = data as { data?: Array<{
+        name: string;
+        symbol: string;
+        galaxy_score: number;
+        alt_rank: number;
+        social_volume: number;
+      }> };
+      if (!response.data) return [];
+      return response.data.slice(0, 5).map(item => ({
+        title: `🌙 ${item.name} (${item.symbol}) Galaxy Score: ${item.galaxy_score}`,
+        link: `https://lunarcrush.com/coins/${item.symbol.toLowerCase()}`,
+        description: `Social volume: ${item.social_volume?.toLocaleString() || 'N/A'}, Alt Rank: #${item.alt_rank}`,
+        pubDate: new Date().toISOString(),
+        source: 'LunarCrush',
+        sourceKey: 'lunarcrush',
+        category: 'social',
+        timeAgo: 'just now',
+      }));
+    },
+  },
+  
+  // CoinDesk Wire (public news feed)
+  coindesk_wire: {
+    name: 'CoinDesk',
+    url: 'https://www.coindesk.com/arc/outboundfeeds/rss/',
+    category: 'general',
+    parser: () => [], // RSS-based, handled by RSS_SOURCES
+  },
+  
+  // Fear & Greed Index (Alternative.me - free)
+  fear_greed: {
+    name: 'Fear & Greed',
+    url: 'https://api.alternative.me/fng/?limit=1',
+    category: 'sentiment',
+    parser: (data: unknown) => {
+      const response = data as { data?: Array<{
+        value: string;
+        value_classification: string;
+        timestamp: string;
+      }> };
+      if (!response.data?.[0]) return [];
+      const item = response.data[0];
+      const emoji = parseInt(item.value) < 25 ? '😨' : parseInt(item.value) < 50 ? '😟' : parseInt(item.value) < 75 ? '😊' : '🤑';
+      return [{
+        title: `${emoji} Crypto Fear & Greed Index: ${item.value} (${item.value_classification})`,
+        link: 'https://alternative.me/crypto/fear-and-greed-index/',
+        description: `The market sentiment is currently "${item.value_classification}" with a score of ${item.value}/100`,
+        pubDate: new Date(parseInt(item.timestamp) * 1000).toISOString(),
+        source: 'Alternative.me',
+        sourceKey: 'fear_greed',
+        category: 'sentiment',
+        timeAgo: getTimeAgo(new Date(parseInt(item.timestamp) * 1000)),
+      }];
+    },
+  },
+  
+  // Blockchain.com Stats (free)
+  blockchain_stats: {
+    name: 'Blockchain Stats',
+    url: 'https://api.blockchain.info/stats',
+    category: 'bitcoin',
+    parser: (data: unknown) => {
+      const stats = data as {
+        market_price_usd: number;
+        hash_rate: number;
+        n_tx: number;
+        timestamp: number;
+      };
+      if (!stats.market_price_usd) return [];
+      return [{
+        title: `₿ Bitcoin Network: ${(stats.hash_rate / 1e18).toFixed(1)} EH/s hashrate, ${stats.n_tx.toLocaleString()} txs today`,
+        link: 'https://www.blockchain.com/explorer/charts',
+        description: `BTC price: $${stats.market_price_usd.toLocaleString()}`,
+        pubDate: new Date(stats.timestamp).toISOString(),
+        source: 'Blockchain.com',
+        sourceKey: 'blockchain_stats',
+        category: 'bitcoin',
+        timeAgo: getTimeAgo(new Date(stats.timestamp)),
+      }];
+    },
+  },
+  
+  // Etherscan Gas Tracker (free)
+  etherscan_gas: {
+    name: 'Etherscan Gas',
+    url: 'https://api.etherscan.io/api?module=gastracker&action=gasoracle',
+    category: 'ethereum',
+    parser: (data: unknown) => {
+      const response = data as { result?: {
+        SafeGasPrice: string;
+        ProposeGasPrice: string;
+        FastGasPrice: string;
+      } };
+      if (!response.result?.SafeGasPrice) return [];
+      const { SafeGasPrice, ProposeGasPrice, FastGasPrice } = response.result;
+      return [{
+        title: `⛽ ETH Gas: 🐢 ${SafeGasPrice} | 🚶 ${ProposeGasPrice} | 🚀 ${FastGasPrice} Gwei`,
+        link: 'https://etherscan.io/gastracker',
+        description: `Current Ethereum gas prices. Fast: ${FastGasPrice} Gwei, Standard: ${ProposeGasPrice} Gwei, Safe: ${SafeGasPrice} Gwei`,
+        pubDate: new Date().toISOString(),
+        source: 'Etherscan',
+        sourceKey: 'etherscan_gas',
+        category: 'ethereum',
+        timeAgo: 'just now',
+      }];
+    },
+  },
+  
+  // Mempool.space Bitcoin Fees (free)
+  mempool_fees: {
+    name: 'Mempool Fees',
+    url: 'https://mempool.space/api/v1/fees/recommended',
+    category: 'bitcoin',
+    parser: (data: unknown) => {
+      const fees = data as {
+        fastestFee: number;
+        halfHourFee: number;
+        hourFee: number;
+        economyFee: number;
+      };
+      if (!fees.fastestFee) return [];
+      return [{
+        title: `₿ BTC Fees: ⚡ ${fees.fastestFee} | ⏱️ ${fees.halfHourFee} | 🕐 ${fees.hourFee} sat/vB`,
+        link: 'https://mempool.space',
+        description: `Fastest: ${fees.fastestFee} sat/vB, 30min: ${fees.halfHourFee} sat/vB, 1hr: ${fees.hourFee} sat/vB, Economy: ${fees.economyFee} sat/vB`,
+        pubDate: new Date().toISOString(),
+        source: 'Mempool.space',
+        sourceKey: 'mempool_fees',
+        category: 'bitcoin',
+        timeAgo: 'just now',
+      }];
+    },
+  },
+};
+
+/**
+ * Fetch from API source with caching
+ */
+async function fetchApiSource(sourceKey: string): Promise<NewsArticle[]> {
+  const cacheKey = `api:${sourceKey}`;
+  
+  return withCache(newsCache, cacheKey, 120, async () => { // 2 min cache for APIs
+    const source = API_SOURCES[sourceKey];
+    if (!source) return [];
+    
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 8000);
+      
+      const response = await fetch(source.url, {
+        headers: {
+          'Accept': 'application/json',
+          'User-Agent': 'FreeCryptoNews/1.0',
+        },
+        signal: controller.signal,
+        next: { revalidate: 120 },
+      });
+      
+      clearTimeout(timeoutId);
+      
+      if (!response.ok) return [];
+      
+      const data = await response.json();
+      return source.parser(data);
+    } catch {
+      // Silent fail - APIs are supplementary
+      return [];
+    }
+  });
+}
+
+/**
+ * Fetch all API sources
+ */
+async function fetchAllApiSources(): Promise<NewsArticle[]> {
+  const apiKeys = Object.keys(API_SOURCES);
+  const results = await Promise.allSettled(apiKeys.map(fetchApiSource));
+  
+  const articles: NewsArticle[] = [];
+  for (const result of results) {
+    if (result.status === 'fulfilled') {
+      articles.push(...result.value);
+    }
+  }
+  return articles;
+}
+
 /**
  * Fetch RSS feed from a source with caching
  */
 async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
   const cacheKey = `feed:${sourceKey}`;
   
-  return withCache(newsCache, cacheKey, 180, async () => {
+  return withCache(newsCache, cacheKey, 60, async () => { // Reduced to 60s for fresher content
     const source = RSS_SOURCES[sourceKey];
     
     try {
@@ -997,42 +1343,168 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
           'User-Agent': 'FreeCryptoNews/1.0 (github.com/nirholas/free-crypto-news)',
         },
         signal: controller.signal,
-        next: { revalidate: 300 },
+        next: { revalidate: 60 }, // Reduced to 60s
       });
       
       clearTimeout(timeoutId);
       
       if (!response.ok) {
-        console.warn(`Failed to fetch ${source.name}: ${response.status}`);
+        // Only log in development, not every failed fetch
+        if (process.env.NODE_ENV === 'development' && process.env.DEBUG_RSS) {
+          console.warn(`Failed to fetch ${source.name}: ${response.status}`);
+        }
         return [];
       }
       
       const xml = await response.text();
       return parseRSSFeed(xml, sourceKey, source.name, source.category);
     } catch (error) {
-      console.warn(`Error fetching ${source.name}:`, error);
+      // Only log non-abort errors in production, or all errors with DEBUG_RSS
+      const isAbortError = error instanceof Error && error.name === 'AbortError';
+      if (process.env.DEBUG_RSS || (!isAbortError && process.env.NODE_ENV === 'production')) {
+        console.warn(`Error fetching ${source.name}:`, isAbortError ? 'timeout' : error);
+      }
       return [];
     }
   });
 }
 
 /**
- * Fetch from multiple sources in parallel with concurrency limit
+ * Source reputation scores (0-100)
+ * Higher scores = more reputable/mainstream sources
  */
-async function fetchMultipleSources(sourceKeys: SourceKey[]): Promise<NewsArticle[]> {
-  // Fetch all sources in parallel
-  const results = await Promise.allSettled(
-    sourceKeys.map(key => fetchFeed(key))
-  );
+const SOURCE_REPUTATION_SCORES: Record<string, number> = {
+  // Tier 1: Mainstream US sources (95-100)
+  'Bloomberg Crypto': 100,
+  'Reuters Crypto': 100,
+  'CNBC Crypto': 95,
+  'Forbes Crypto': 95,
+  'Yahoo Finance Crypto': 90,
+  'WSJ Crypto': 100,
   
+  // Tier 2: Major crypto-native US sources (85-90)
+  'CoinDesk': 90,
+  'The Block': 88,
+  'Blockworks': 85,
+  'Decrypt': 85,
+  
+  // Tier 3: Established crypto sources (75-80)
+  'CoinTelegraph': 80,
+  'Bitcoin Magazine': 78,
+  'CryptoSlate': 75,
+  'The Defiant': 75,
+  
+  // Tier 4: Specialized/niche sources (60-70)
+  'Messari': 70,
+  'Bankless': 68,
+  'Unchained Crypto': 65,
+  'DL News': 65,
+  
+  // Fintech sources (deprioritized - 30-40)
+  'Finextra': 35,
+  'PYMNTS Crypto': 35,
+  'Fintech Futures': 30,
+  
+  // Default score for other sources
+  'default': 50,
+};
+
+/**
+ * Crypto relevance keywords for content scoring
+ */
+const CRYPTO_KEYWORDS = [
+  'bitcoin', 'btc', 'ethereum', 'eth', 'crypto', 'blockchain', 'defi', 'nft',
+  'altcoin', 'token', 'mining', 'wallet', 'exchange', 'trading', 'stablecoin',
+  'satoshi', 'web3', 'dao', 'dapp', 'smart contract', 'layer 2', 'rollup',
+  'price', 'bull', 'bear', 'halving', 'node', 'validator', 'staking'
+];
+
+/**
+ * Calculate trending score for an article
+ * Combines recency, source reputation, and crypto relevance
+ * Updated: Prioritize reputation over recency to prevent low-quality sources dominating
+ */
+function calculateTrendingScore(article: NewsArticle): number {
+  const now = Date.now();
+  const pubTime = new Date(article.pubDate).getTime();
+  const ageInHours = (now - pubTime) / (1000 * 60 * 60);
+  
+  // Recency score: exponential decay (100 at 0 hours, ~50 at 3 hours, ~25 at 6 hours)
+  // But cap max benefit at 80 to prevent very new articles from dominating
+  const recencyScore = Math.min(80, Math.max(0, 100 * Math.exp(-ageInHours / 3)));
+  
+  // Source reputation score - this is now more important
+  const reputationScore = SOURCE_REPUTATION_SCORES[article.source] || SOURCE_REPUTATION_SCORES['default'];
+  
+  // Crypto relevance score: check title and description for crypto keywords
+  const searchText = `${article.title} ${article.description || ''}`.toLowerCase();
+  const keywordMatches = CRYPTO_KEYWORDS.filter(keyword => searchText.includes(keyword)).length;
+  const relevanceScore = Math.min(100, keywordMatches * 15); // 15 points per keyword, max 100
+  
+  // Strong penalty for fintech/payments-only content that lacks crypto keywords
+  const isFintech = ['finextra', 'pymnts', 'fintech'].some(term => 
+    article.source.toLowerCase().includes(term)
+  );
+  // If it's fintech AND has no crypto keywords, apply heavy penalty
+  const hasCryptoRelevance = keywordMatches >= 2;
+  const fintechPenalty = isFintech ? (hasCryptoRelevance ? 0.6 : 0.25) : 1.0;
+  
+  // Combined score: 55% reputation, 25% recency, 20% relevance
+  // Reputation matters most to keep quality sources in top positions
+  const baseScore = (reputationScore * 0.55) + (recencyScore * 0.25) + (relevanceScore * 0.2);
+  return baseScore * fintechPenalty;
+}
+
+/**
+ * Fetch sources in batches with concurrency limit to prevent network overload
+ */
+async function fetchWithConcurrency<T>(
+  items: T[],
+  fn: (item: T) => Promise<NewsArticle[]>,
+  concurrency: number = 15
+): Promise<NewsArticle[]> {
   const articles: NewsArticle[] = [];
-  for (const result of results) {
-    if (result.status === 'fulfilled') {
-      articles.push(...result.value);
+  
+  for (let i = 0; i < items.length; i += concurrency) {
+    const batch = items.slice(i, i + concurrency);
+    const results = await Promise.allSettled(batch.map(fn));
+    
+    for (const result of results) {
+      if (result.status === 'fulfilled') {
+        articles.push(...result.value);
+      }
+      // Silently ignore rejected promises - already logged in fetchFeed
     }
   }
   
-  return articles.sort((a, b) => 
+  return articles;
+}
+
+/**
+ * Fetch from multiple sources in parallel with concurrency limit
+ * Now includes both RSS feeds and API sources for better reliability
+ */
+async function fetchMultipleSources(sourceKeys: SourceKey[]): Promise<NewsArticle[]> {
+  // Fetch RSS and API sources in parallel
+  const [rssArticles, apiArticles] = await Promise.all([
+    // RSS feeds with concurrency limit
+    fetchWithConcurrency(sourceKeys, fetchFeed, 15),
+    // API sources (always fetch these as they're more reliable)
+    fetchAllApiSources(),
+  ]);
+  
+  // Combine and deduplicate by title similarity
+  const allArticles = [...rssArticles, ...apiArticles];
+  const seen = new Set<string>();
+  const deduped = allArticles.filter(article => {
+    // Normalize title for dedup
+    const normalized = article.title.toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 50);
+    if (seen.has(normalized)) return false;
+    seen.add(normalized);
+    return true;
+  });
+  
+  return deduped.sort((a, b) => 
     new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime()
   );
 }
@@ -1173,6 +1645,64 @@ export async function getBreakingNews(limit: number = 5): Promise<NewsResponse> 
     articles: recentArticles.slice(0, normalizedLimit),
     totalCount: recentArticles.length,
     sources: [...new Set(recentArticles.map(a => a.source))],
+    fetchedAt: new Date().toISOString(),
+  };
+}
+
+/**
+ * Get trending news articles
+ * Prioritizes reputable US sources and recent articles
+ */
+export async function getTrendingNews(limit: number = 10): Promise<NewsResponse> {
+  const normalizedLimit = Math.min(Math.max(1, limit), 50);
+  
+  // Get recent articles (last 24 hours)
+  const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000);
+  
+  const allArticles = await fetchMultipleSources(Object.keys(RSS_SOURCES) as SourceKey[]);
+  
+  const recentArticles = allArticles.filter(article => 
+    article && article.pubDate && new Date(article.pubDate) > oneDayAgo
+  );
+  
+  // Score and sort by trending score
+  const scoredArticles = recentArticles.map(article => ({
+    article,
+    score: calculateTrendingScore(article),
+  }));
+  
+  scoredArticles.sort((a, b) => b.score - a.score);
+  
+  // Fintech sources (lower quality for crypto news)
+  const fintechSources = ['finextra', 'pymnts', 'fintech futures'];
+  
+  // Ensure source diversity: stricter limits on low-quality sources
+  const trendingArticles: NewsArticle[] = [];
+  const sourceCounts = new Map<string, number>();
+  let fintechCount = 0;
+  
+  for (const item of scoredArticles) {
+    if (trendingArticles.length >= normalizedLimit) break;
+    
+    const sourceCount = sourceCounts.get(item.article.source) || 0;
+    const isFintech = fintechSources.some(s => item.article.source.toLowerCase().includes(s));
+    
+    // Fintech sources: max 1 article total across all fintech sources
+    // Regular sources: max 2 articles per source
+    const maxForThisSource = isFintech ? 1 : 2;
+    const exceedsFintechLimit = isFintech && fintechCount >= 1;
+    
+    if (sourceCount < maxForThisSource && !exceedsFintechLimit) {
+      trendingArticles.push(item.article);
+      sourceCounts.set(item.article.source, sourceCount + 1);
+      if (isFintech) fintechCount++;
+    }
+  }
+  
+  return {
+    articles: trendingArticles,
+    totalCount: scoredArticles.length,
+    sources: [...new Set(trendingArticles.map(a => a.source))],
     fetchedAt: new Date().toISOString(),
   };
 }
@@ -1457,3 +1987,24 @@ export async function getGlobalNews(
  * Alias for getLatestNews for backward compatibility
  */
 export const fetchNews = getLatestNews;
+
+/**
+ * Get the total count of configured news sources
+ * Use this for accurate source count in UI instead of hardcoding numbers
+ */
+export function getSourceCount(): number {
+  return Object.keys(RSS_SOURCES).length;
+}
+
+/**
+ * Get source metadata for a specific source key
+ */
+export function getSourceInfo(sourceKey: string): { name: string; url: string; category: string } | null {
+  const source = RSS_SOURCES[sourceKey as SourceKey];
+  if (!source) return null;
+  return {
+    name: source.name,
+    url: source.url,
+    category: source.category,
+  };
+}

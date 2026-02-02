@@ -14,8 +14,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { withX402 } from '@x402/next';
-import { x402Server, getRouteConfig } from '@/lib/x402-server';
+import { withX402 } from '@/lib/x402';
 import { getCoinDetails } from '@/lib/market-data';
 
 export const runtime = 'nodejs';
@@ -374,4 +373,4 @@ async function handler(
  * GET /api/premium/alerts/whales?coins=bitcoin,ethereum&minThreshold=5000000
  * GET /api/premium/alerts/whales?coins=bitcoin&concentration=true
  */
-export const GET = withX402(handler, getRouteConfig('/api/premium/alerts/whales'), x402Server);
+export const GET = withX402('/api/premium/alerts/whales', handler);

@@ -5,7 +5,7 @@
 'use client';
 
 import Link from 'next/link';
-import { generateArticleId } from '@/lib/archive-v2';
+import { generateArticleSlug } from '@/lib/archive-v2';
 
 interface Article {
   title: string;
@@ -28,18 +28,22 @@ const sourceColors: Record<string, { bg: string; text: string; accent: string }>
   'Bitcoin Magazine': { bg: 'bg-amber-500', text: 'text-amber-600', accent: 'from-amber-500/20' },
   'Blockworks': { bg: 'bg-indigo-600', text: 'text-indigo-600', accent: 'from-indigo-600/20' },
   'The Defiant': { bg: 'bg-pink-600', text: 'text-pink-600', accent: 'from-pink-600/20' },
+  'Bloomberg Crypto': { bg: 'bg-blue-700', text: 'text-blue-700', accent: 'from-blue-700/20' },
+  'Reuters Crypto': { bg: 'bg-orange-600', text: 'text-orange-600', accent: 'from-orange-600/20' },
+  'CNBC Crypto': { bg: 'bg-sky-600', text: 'text-sky-600', accent: 'from-sky-600/20' },
+  'Forbes Crypto': { bg: 'bg-red-700', text: 'text-red-700', accent: 'from-red-700/20' },
 };
 
 const defaultStyle = { bg: 'bg-gray-600', text: 'text-gray-600', accent: 'from-gray-600/20' };
 
 export default function HeroArticle({ article }: HeroArticleProps) {
-  const articleId = generateArticleId(article.link);
+  const articleSlug = generateArticleSlug(article.title, article.pubDate);
   const style = sourceColors[article.source] || defaultStyle;
 
   return (
     <section className="relative">
       <Link 
-        href={`/article/${articleId}`}
+        href={`/article/${articleSlug}`}
         className="group block relative overflow-hidden bg-gray-900 rounded-none md:rounded-3xl"
       >
         {/* Background gradient overlay */}

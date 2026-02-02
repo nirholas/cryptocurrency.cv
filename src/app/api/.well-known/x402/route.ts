@@ -18,7 +18,7 @@ import {
   IS_PRODUCTION,
   IS_TESTNET,
   getNetworkDisplayName,
-} from '@/lib/x402/config';
+} from '@/lib/x402';
 
 export const dynamic = 'force-dynamic'; // Dynamic to reflect current config
 export const revalidate = 60; // Revalidate every minute

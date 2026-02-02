@@ -1,6 +1,6 @@
 # 🏗️ Architecture Overview
 
-This document describes the architecture of Free Crypto News, a Next.js application that aggregates crypto news from 7 major sources.
+This document describes the architecture of Free Crypto News, a Next.js application that aggregates crypto news from 130+ sources across 21 categories.
 
 ---
 
@@ -631,6 +631,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup and guidelines.
 
 ## Related Documentation
 
-- [API Reference](docs/API.md)
+- [API Reference](API.md)
 - [Deployment Guide](DEPLOYMENT.md)
-- [Component Documentation](docs/COMPONENTS.md)
+- [Component Documentation](COMPONENTS.md)

@@ -15,7 +15,7 @@ Use the Free Crypto News API in your Custom GPT!
 Add this to your GPT's instructions:
 
 ```
-You are a crypto news assistant. You have access to real-time crypto news from 7 major sources.
+You are a crypto news assistant. You have access to real-time crypto news from 130+ sources.
 
 When users ask about crypto news:
 1. Use getLatestNews for general news

@@ -1,6 +1,7 @@
 /**
- * Editor's Picks - Horizontal row of 3 medium article cards
+ * Trending Stories - Horizontal row of 3 medium article cards
  * Secondary featured section below the hero
+ * Shows top trending articles based on source reputation and recency
  */
 'use client';
 
@@ -44,7 +45,7 @@ export default function EditorsPicks({ articles }: EditorsPicksProps) {
         <div className="flex items-center gap-3">
           <div className="w-1 h-8 bg-brand-500 rounded-full" />
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
-            Editor&apos;s Picks
+            🔥 Trending Stories
           </h2>
         </div>
         <Link 

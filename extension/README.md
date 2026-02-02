@@ -4,7 +4,7 @@ Get real-time crypto news directly in your browser toolbar.
 
 ## Features
 
-- 📰 **Latest News** - Real-time crypto news from 7 sources
+- 📰 **Latest News** - Real-time crypto news from 130+ sources
 - 🔴 **Breaking News** - Urgent news alerts
 - ₿ **Bitcoin Tab** - Bitcoin-specific news
 - 🔷 **DeFi Tab** - DeFi-specific news

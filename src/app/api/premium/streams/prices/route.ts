@@ -14,9 +14,10 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { withX402 } from '@x402/next';
-import { x402Server, getRouteConfig } from '@/lib/x402-server';
+import { withX402 } from '@/lib/x402';
 import { getPricesForCoins } from '@/lib/market-data';
+import { ApiError } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -25,9 +26,14 @@ export const dynamic = 'force-dynamic';
  * Handler for real-time price stream
  */
 async function handler(request: NextRequest): Promise<NextResponse> {
-  const searchParams = request.nextUrl.searchParams;
-  const coins = searchParams.get('coins')?.split(',').slice(0, 20) || ['bitcoin', 'ethereum'];
-  const interval = Math.max(1000, parseInt(searchParams.get('interval') || '2000', 10));
+  const logger = createRequestLogger(request);
+  const startTime = Date.now();
+  
+  try {
+    logger.info('Starting SSE price stream');
+    const searchParams = request.nextUrl.searchParams;
+    const coins = searchParams.get('coins')?.split(',').slice(0, 20) || ['bitcoin', 'ethereum'];
+    const interval = Math.max(1000, parseInt(searchParams.get('interval') || '2000', 10));
 
   // Create SSE stream
   const encoder = new TextEncoder();
@@ -59,6 +65,7 @@ async function handler(request: NextRequest): Promise<NextResponse> {
 
           controller.enqueue(encoder.encode(`data: ${JSON.stringify(priceUpdate)}\n\n`));
         } catch (error) {
+          logger.error('Failed to fetch prices in stream', error);
           const errorMsg = {
             type: 'error',
             message: 'Failed to fetch prices',
@@ -108,6 +115,8 @@ async function handler(request: NextRequest): Promise<NextResponse> {
     },
   });
 
+  logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
+  
   return new NextResponse(stream, {
     headers: {
       'Content-Type': 'text/event-stream',
@@ -116,6 +125,10 @@ async function handler(request: NextRequest): Promise<NextResponse> {
       'X-Accel-Buffering': 'no',
     },
   });
+  } catch (error) {
+    logger.error('Stream initialization failed', error);
+    return ApiError.internal('Failed to start price stream', error);
+  }
 }
 
 /**
@@ -136,4 +149,4 @@ async function handler(request: NextRequest): Promise<NextResponse> {
  * @example
  * GET /api/premium/streams/prices?coins=bitcoin,ethereum,solana&interval=1000
  */
-export const GET = withX402(handler, getRouteConfig('/api/premium/streams/prices'), x402Server);
+export const GET = withX402('/api/premium/streams/prices', handler);

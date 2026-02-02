@@ -2,6 +2,8 @@ import { NextRequest } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { promptGroqJsonCached, isGroqConfigured } from '@/lib/groq';
 import { jsonResponse, errorResponse, withTiming } from '@/lib/api-utils';
+import { ApiError } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
 
 export const runtime = 'edge';
 export const revalidate = 60; // 1 minute cache
@@ -98,7 +100,8 @@ ${JSON.stringify(articlesToSummarize, null, 2)}`;
       request,
     });
   } catch (error) {
-    console.error('Summarization error:', error);
-    return errorResponse('Failed to summarize articles', String(error));
+    const logger = createRequestLogger('/api/summarize');
+    logger.error('Summarization error', { error });
+    return ApiError.internal('Failed to summarize articles', error);
   }
 }

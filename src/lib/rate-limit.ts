@@ -1,9 +1,56 @@
+/**
+ * DEPRECATED: Legacy Rate Limiting Module
+ *
+ * ⚠️ This module is DEPRECATED and should not be used in new code.
+ * It uses in-memory rate limiting which:
+ * - Resets on server restart
+ * - Doesn't work across multiple instances
+ * - Has race conditions
+ *
+ * Use @/lib/ratelimit instead, which provides:
+ * - Distributed rate limiting via Upstash
+ * - Atomic operations (no race conditions)
+ * - Sliding window algorithm
+ * - Persistent across restarts
+ *
+ * @deprecated Use @/lib/ratelimit instead
+ * @module lib/rate-limit
+ */
+
 import { NextRequest, NextResponse } from 'next/server';
+import { kv } from '@vercel/kv';
+
+console.warn(
+  '[DEPRECATED] rate-limit.ts is deprecated. Use @/lib/ratelimit for distributed rate limiting.'
+);
 
 /**
- * Simple rate limiter using in-memory store
- * For production, use Redis or similar
+ * Enhanced Rate Limiting Module
+ *
+ * Provides both in-memory and distributed (Vercel KV/Redis) rate limiting.
+ *
+ * Features:
+ * - Sliding window rate limiting
+ * - Distributed support via Vercel KV
+ * - Fallback to in-memory when KV is unavailable
+ * - Multiple rate limit checking
+ *
+ * @module lib/rate-limit
  */
+
+// =============================================================================
+// TYPES
+// =============================================================================
+
+/**
+ * Result from distributed rate limit check
+ */
+export interface DistributedRateLimitResult {
+  allowed: boolean;
+  limit: number;
+  remaining: number;
+  resetAt: number;
+}
 
 // Custom error class for rate limiting
 export class RateLimitError extends Error {
@@ -74,7 +121,11 @@ export interface RateLimitResult {
   limit: number;
 }
 
-export function checkRateLimit(request: NextRequest): RateLimitResult {
+/**
+ * Check rate limit for a request using in-memory store
+ * @deprecated Use checkRateLimitByKey for distributed rate limiting
+ */
+export function checkRateLimitByRequest(request: NextRequest): RateLimitResult {
   const clientIP = getClientIP(request);
   const now = Date.now();
   
@@ -153,7 +204,7 @@ export function withRateLimit(
   handler: (request: NextRequest) => Promise<NextResponse>
 ): (request: NextRequest) => Promise<NextResponse> {
   return async (request: NextRequest) => {
-    const result = checkRateLimit(request);
+    const result = checkRateLimitByRequest(request);
     
     if (!result.allowed) {
       return rateLimitResponse(result);
@@ -206,3 +257,197 @@ export const rateLimiter = {
     rateLimitStore.delete(key);
   }
 };
+
+// =============================================================================
+// DISTRIBUTED RATE LIMITING (VERCEL KV / REDIS)
+// =============================================================================
+
+/**
+ * Check rate limit with sliding window using Vercel KV
+ *
+ * Uses Redis sorted sets for accurate sliding window rate limiting.
+ * Falls back to in-memory on KV errors for resilience.
+ *
+ * @param key - Unique identifier (e.g., "free:123.456.789.0:/api/news")
+ * @param limit - Maximum requests allowed
+ * @param windowSeconds - Time window in seconds (default: 3600 = 1 hour)
+ * @returns Rate limit result with allowed status and metadata
+ *
+ * @example
+ * const result = await checkRateLimit('free:192.168.1.1:/api/news', 100, 3600);
+ * if (!result.allowed) {
+ *   return new Response('Rate limited', { status: 429 });
+ * }
+ */
+export async function checkRateLimit(
+  key: string,
+  limit: number,
+  windowSeconds = 3600
+): Promise<DistributedRateLimitResult> {
+  const now = Date.now();
+  const windowMs = windowSeconds * 1000;
+  const windowStart = now - windowMs;
+  const resetAt = now + windowMs;
+
+  try {
+    // Use Redis sorted set for sliding window
+    const kvKey = `ratelimit:${key}`;
+
+    // Remove old entries outside the window
+    await kv.zremrangebyscore(kvKey, 0, windowStart);
+
+    // Get current count
+    const count = (await kv.zcard(kvKey)) || 0;
+
+    if (count >= limit) {
+      return {
+        allowed: false,
+        limit,
+        remaining: 0,
+        resetAt,
+      };
+    }
+
+    // Add current request with timestamp as score
+    const member = `${now}:${Math.random().toString(36).substring(2)}`;
+    await kv.zadd(kvKey, { score: now, member });
+
+    // Set TTL on the key to auto-cleanup
+    await kv.expire(kvKey, windowSeconds);
+
+    return {
+      allowed: true,
+      limit,
+      remaining: Math.max(0, limit - (count + 1)),
+      resetAt,
+    };
+  } catch (error) {
+    // Log error but don't fail the request
+    console.error('[RateLimit] KV error, falling back to allow:', error);
+
+    // On error, allow request (fail-open for availability)
+    return {
+      allowed: true,
+      limit,
+      remaining: limit,
+      resetAt,
+    };
+  }
+}
+
+/**
+ * Reset rate limit for a specific key
+ *
+ * @param key - The rate limit key to reset
+ */
+export async function resetRateLimit(key: string): Promise<void> {
+  try {
+    await kv.del(`ratelimit:${key}`);
+  } catch (error) {
+    console.error('[RateLimit] Reset error:', error);
+  }
+}
+
+/**
+ * Get current rate limit status without incrementing counter
+ *
+ * Useful for checking remaining quota before making a request.
+ *
+ * @param key - Unique identifier
+ * @param limit - Maximum requests allowed
+ * @param windowSeconds - Time window in seconds
+ * @returns Current rate limit status
+ */
+export async function getRateLimitStatus(
+  key: string,
+  limit: number,
+  windowSeconds = 3600
+): Promise<DistributedRateLimitResult> {
+  const now = Date.now();
+  const windowMs = windowSeconds * 1000;
+  const windowStart = now - windowMs;
+  const resetAt = now + windowMs;
+
+  try {
+    const kvKey = `ratelimit:${key}`;
+
+    // Remove old entries
+    await kv.zremrangebyscore(kvKey, 0, windowStart);
+
+    // Get current count
+    const count = (await kv.zcard(kvKey)) || 0;
+
+    return {
+      allowed: count < limit,
+      limit,
+      remaining: Math.max(0, limit - count),
+      resetAt,
+    };
+  } catch (error) {
+    console.error('[RateLimit] Status check error:', error);
+
+    return {
+      allowed: true,
+      limit,
+      remaining: limit,
+      resetAt,
+    };
+  }
+}
+
+/**
+ * Check multiple rate limits simultaneously
+ *
+ * Useful for implementing tiered rate limits (e.g., per-endpoint + global).
+ * Returns the most restrictive result.
+ *
+ * @param checks - Array of rate limit checks to perform
+ * @returns The most restrictive rate limit result
+ *
+ * @example
+ * const result = await checkMultipleRateLimits([
+ *   { key: 'ip:192.168.1.1:/api/news', limit: 100, window: 3600 },
+ *   { key: 'global:192.168.1.1', limit: 1000, window: 86400 },
+ * ]);
+ */
+export async function checkMultipleRateLimits(
+  checks: Array<{
+    key: string;
+    limit: number;
+    window?: number;
+  }>
+): Promise<DistributedRateLimitResult> {
+  const results = await Promise.all(
+    checks.map(({ key, limit, window }) => checkRateLimit(key, limit, window))
+  );
+
+  // If any limit is exceeded, return that result
+  const exceeded = results.find((r) => !r.allowed);
+  if (exceeded) {
+    return exceeded;
+  }
+
+  // Return the most restrictive remaining count
+  return results.reduce((min, curr) =>
+    curr.remaining < min.remaining ? curr : min
+  );
+}
+
+/**
+ * Create a rate limit key with consistent format
+ *
+ * @param tier - Rate limit tier (e.g., 'free', 'pro')
+ * @param identifier - Client identifier (e.g., IP address)
+ * @param endpoint - Optional endpoint path
+ * @returns Formatted rate limit key
+ */
+export function createRateLimitKey(
+  tier: string,
+  identifier: string,
+  endpoint?: string
+): string {
+  if (endpoint) {
+    return `${tier}:${identifier}:${endpoint}`;
+  }
+  return `${tier}:${identifier}`;
+}

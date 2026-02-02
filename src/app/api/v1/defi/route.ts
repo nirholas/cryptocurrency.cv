@@ -9,10 +9,15 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { hybridAuthMiddleware } from '@/lib/x402';
+import { ApiError } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
 
 const ENDPOINT = '/api/v1/defi';
 
 export async function GET(request: NextRequest) {
+  const logger = createRequestLogger(request);
+  const startTime = Date.now();
+
   // Check authentication
   const authResponse = await hybridAuthMiddleware(request, ENDPOINT);
   if (authResponse) return authResponse;
@@ -23,6 +28,8 @@ export async function GET(request: NextRequest) {
   const category = searchParams.get('category');
 
   try {
+    logger.info('Fetching DeFi protocols', { limit, chain, category });
+
     const response = await fetch('https://api.llama.fi/protocols', {
       headers: {
         Accept: 'application/json',
@@ -102,6 +109,8 @@ export async function GET(request: NextRequest) {
     const categories = [...new Set(protocols.map((p: { category: string }) => p.category))];
     const chains = [...new Set(protocols.flatMap((p: { chains?: string[] }) => p.chains || []))];
 
+    logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
+
     return NextResponse.json(
       {
         success: true,
@@ -127,12 +136,8 @@ export async function GET(request: NextRequest) {
       }
     );
   } catch (error) {
-    console.error('[API] /v1/defi error:', error);
-
-    return NextResponse.json(
-      { success: false, error: 'Failed to fetch DeFi data' },
-      { status: 502 }
-    );
+    logger.error('Failed to fetch DeFi data', error);
+    return ApiError.upstream('DefiLlama', error);
   }
 }
 

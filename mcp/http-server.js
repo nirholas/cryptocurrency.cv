@@ -21,7 +21,7 @@ const PORT = parseInt(process.env.PORT) || 3001;
 const tools = [
   {
     name: 'get_crypto_news',
-    description: 'Get latest crypto news from 7 major sources (CoinDesk, The Block, Decrypt, CoinTelegraph, Bitcoin Magazine, Blockworks, The Defiant). Use this when the user wants general crypto news or headlines.',
+    description: 'Get latest crypto news from 130+ sources including CoinDesk, The Block, Decrypt, Bloomberg, Reuters, and more. Use this when the user wants general crypto news or headlines.',
     inputSchema: {
       type: 'object',
       properties: {

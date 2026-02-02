@@ -100,7 +100,7 @@ All tools are marked as **read-only** for ChatGPT Developer Mode (no confirmatio
 
 | Tool | Description |
 |------|-------------|
-| `get_crypto_news` | Latest news from all 7 sources |
+| `get_crypto_news` | Latest news from all 130+ sources |
 | `search_crypto_news` | Search by keywords |
 | `get_defi_news` | DeFi-specific news |
 | `get_bitcoin_news` | Bitcoin-specific news |

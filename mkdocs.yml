@@ -129,6 +129,12 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
+# Exclude archive folder and reference docs from build
+exclude_docs: |
+  archive/
+  includes/abbreviations.md
+  x402-llms-full-txt.md
+
 plugins:
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
@@ -137,6 +143,8 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       type: timeago
+      fallback_to_build_date: true
+      enable_parallel_processing: false
   - glightbox
   - tags
 
@@ -144,17 +152,26 @@ nav:
   - Home:
     - Welcome: index.md
     - Quick Start: QUICKSTART.md
+    - Features: FEATURES.md
     - Changelog: CHANGELOG.md
   
   - API Reference:
     - Overview: API.md
     - Real-Time: REALTIME.md
     - Premium API: PREMIUM.md
+    - x402 Payments: X402.md
+    - Well-Known Endpoints: WELL-KNOWN.md
+  
+  - AI & Agents:
+    - Agents & Skills: AGENTS.md
+    - AI Features: AI-FEATURES.md
+    - MCP Server: integrations/mcp.md
+    - ChatGPT Plugin: integrations/chatgpt.md
   
   - Guides:
     - User Guide: USER-GUIDE.md
     - Developer Guide: DEVELOPER-GUIDE.md
-    - AI Features: AI-FEATURES.md
+    - News Sources: SOURCES.md
     - SEO Guide: SEO.md
     - Admin Dashboard: ADMIN.md
     - Components: COMPONENTS.md
@@ -175,8 +192,6 @@ nav:
   - Integrations:
     - Overview: integrations/index.md
     - Data APIs: integrations/data-apis.md
-    - MCP Server: integrations/mcp.md
-    - ChatGPT Plugin: integrations/chatgpt.md
     - Browser Extension: integrations/extension.md
     - Alfred Workflow: integrations/alfred.md
     - Raycast: integrations/raycast.md
@@ -193,9 +208,8 @@ nav:
     - Self-Hosting: DEPLOYMENT.md
     - Architecture: ARCHITECTURE.md
     - Scalability: SCALABILITY.md
+    - Internationalization: INTERNATIONALIZATION.md
   
   - Community:
     - Contributing: CONTRIBUTING.md
     - Security: SECURITY.md
-    - Agent Prompts: AGENT-PROMPTS.md
-    - Agent Prompts: AGENT-PROMPTS.md

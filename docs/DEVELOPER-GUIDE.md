@@ -7,10 +7,10 @@ Technical documentation for developers working on or extending Free Crypto News.
 - [Architecture Overview](#architecture-overview)
 - [Project Structure](#project-structure)
 - [Core Components](#core-components)
-- [Providers & Context](#providers--context)
+- [Providers & Context](#providers-context)
 - [Utilities](#utilities)
 - [API Routes](#api-routes)
-- [Scripts & Automation](#scripts--automation)
+- [Scripts & Automation](#scripts-automation)
 - [Styling](#styling)
 - [Testing](#testing)
 - [Extending the App](#extending-the-app)
@@ -462,7 +462,7 @@ node scripts/analyze-commits.js --update
 node scripts/commit-stats.js
 ```
 
-📚 **Full documentation:** [scripts/CHANGELOG-AUTOMATION.md](../scripts/CHANGELOG-AUTOMATION.md)
+📚 **Full documentation:** [scripts/CHANGELOG-AUTOMATION.md](https://github.com/nirholas/free-crypto-news/blob/main/scripts/CHANGELOG-AUTOMATION.md)
 
 ### Accessibility Audits
 
@@ -494,7 +494,7 @@ node scripts/archive/collect.js
 node scripts/archive/stats.js
 ```
 
-📚 **All scripts:** [scripts/README.md](../scripts/README.md)
+📚 **All scripts:** [scripts/README.md](https://github.com/nirholas/free-crypto-news/blob/main/scripts/README.md)
 
 ---
 
@@ -627,4 +627,4 @@ See existing SDKs in `sdk/` for patterns:
 
 ## 🤝 Contributing
 
-See [CONTRIBUTING.md](../CONTRIBUTING.md) for guidelines.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.

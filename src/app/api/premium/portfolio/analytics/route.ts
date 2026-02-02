@@ -16,8 +16,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { withX402 } from '@x402/next';
-import { x402Server, getRouteConfig } from '@/lib/x402-server';
+import { withX402 } from '@/lib/x402';
 import { getHistoricalPrices, getCoinDetails } from '@/lib/market-data';
 
 export const runtime = 'nodejs';
@@ -420,8 +419,4 @@ async function handler(
  * POST /api/premium/portfolio/analytics
  * Body: { "holdings": [...], "period": "90d" }
  */
-export const POST = withX402(
-  handler,
-  getRouteConfig('/api/premium/portfolio/analytics'),
-  x402Server
-);
+export const POST = withX402('/api/premium/portfolio/analytics', handler);

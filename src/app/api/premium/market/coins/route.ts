@@ -14,9 +14,10 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { withX402 } from '@x402/next';
-import { x402Server, getRouteConfig } from '@/lib/x402-server';
+import { withX402 } from '@/lib/x402';
 import { getTopCoins, getCoinDetails, TokenPrice } from '@/lib/market-data';
+import { ApiError } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
 
 export const runtime = 'nodejs'; // Required for x402
 
@@ -57,11 +58,15 @@ interface PremiumCoinsResponse {
 async function handler(
   request: NextRequest
 ): Promise<NextResponse<PremiumCoinsResponse | { error: string; message: string }>> {
-  const searchParams = request.nextUrl.searchParams;
-  const limit = Math.min(parseInt(searchParams.get('limit') || '100', 10), 500);
-  const includeDetails = searchParams.get('details') === 'true';
-
+  const logger = createRequestLogger(request);
+  const startTime = Date.now();
+  
   try {
+    logger.info('Processing premium coins request');
+    const searchParams = request.nextUrl.searchParams;
+    const limit = Math.min(parseInt(searchParams.get('limit') || '100', 10), 500);
+    const includeDetails = searchParams.get('details') === 'true';
+
     // Fetch base coin data with higher limit
     const coins = await getTopCoins(limit);
 
@@ -101,6 +106,8 @@ async function handler(
       extendedCoins = [...detailedCoins, ...coins.slice(20)];
     }
 
+    logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
+    
     return NextResponse.json(
       {
         coins: extendedCoins,
@@ -119,11 +126,8 @@ async function handler(
       }
     );
   } catch (error) {
-    console.error('Error in premium coins route:', error);
-    return NextResponse.json(
-      { error: 'Failed to fetch premium coin data', message: String(error) },
-      { status: 500 }
-    );
+    logger.error('Premium coins request failed', error);
+    return ApiError.internal('Failed to fetch premium coin data', error);
   }
 }
 
@@ -140,4 +144,4 @@ async function handler(
  * GET /api/premium/market/coins?limit=500
  * GET /api/premium/market/coins?limit=50&details=true
  */
-export const GET = withX402(handler, getRouteConfig('/api/premium/market/coins'), x402Server);
+export const GET = withX402('/api/premium/market/coins', handler);

@@ -1,5 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getCoinsList, getTopCoins, CoinListItem, TokenPrice } from '@/lib/market-data';
+import { ApiError, type ApiErrorResponse } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
+import { validateQuery } from '@/lib/validation-middleware';
+import { marketCoinsQuerySchema } from '@/lib/schemas';
 
 export const runtime = 'edge';
 export const revalidate = 3600;
@@ -30,15 +34,25 @@ interface TopCoinsResponse {
  */
 export async function GET(
   request: NextRequest
-): Promise<NextResponse<CoinsListResponse | TopCoinsResponse | { error: string; message: string }>> {
-  const searchParams = request.nextUrl.searchParams;
-  const type = searchParams.get('type') || 'top';
+): Promise<NextResponse<CoinsListResponse | TopCoinsResponse | ApiErrorResponse>> {
+  const logger = createRequestLogger(request);
+  const startTime = Date.now();
+  
+  // Validate query parameters
+  const validation = validateQuery(request, marketCoinsQuerySchema);
+  if (!validation.success) {
+    return validation.error;
+  }
+  
+  const { type, limit: validatedLimit } = validation.data;
   
   try {
     if (type === 'list') {
       // Return full coins list for autocomplete
+      logger.info('Fetching coins list for autocomplete');
       const coins = await getCoinsList();
       
+      logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
       return NextResponse.json(
         { coins, total: coins.length },
         {
@@ -51,20 +65,12 @@ export async function GET(
     }
     
     // Default: return top coins by market cap
-    const limit = Math.min(
-      parseInt(searchParams.get('limit') || '100', 10),
-      250
-    );
+    const limit = validatedLimit;
     
-    if (isNaN(limit) || limit < 1) {
-      return NextResponse.json(
-        { error: 'Invalid limit parameter', message: 'Limit must be a positive number' },
-        { status: 400 }
-      );
-    }
-    
+    logger.info('Fetching top coins', { limit });
     const coins = await getTopCoins(limit);
     
+    logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
     return NextResponse.json(
       { coins, total: coins.length },
       {
@@ -75,10 +81,7 @@ export async function GET(
       }
     );
   } catch (error) {
-    console.error('Error in coins route:', error);
-    return NextResponse.json(
-      { error: 'Failed to fetch coins', message: String(error) },
-      { status: 500 }
-    );
+    logger.error('Failed to fetch coins', error);
+    return ApiError.internal('Failed to fetch coins', error);
   }
 }

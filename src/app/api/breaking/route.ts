@@ -1,14 +1,30 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getBreakingNews } from '@/lib/crypto-news';
 import { translateArticles, isLanguageSupported, SUPPORTED_LANGUAGES } from '@/lib/translate';
+import { validateQuery } from '@/lib/validation-middleware';
+import { breakingNewsQuerySchema } from '@/lib/schemas';
+import { ApiError } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
 
 export const runtime = 'edge';
 export const revalidate = 60; // 1 minute for breaking news
 
 export async function GET(request: NextRequest) {
-  const searchParams = request.nextUrl.searchParams;
-  const limit = parseInt(searchParams.get('limit') || '5');
-  const lang = searchParams.get('lang') || 'en';
+  const logger = createRequestLogger(request);
+  const startTime = Date.now();
+  
+  logger.info('Fetching breaking news');
+  
+  // Validate query parameters using Zod schema
+  const validation = validateQuery(request, breakingNewsQuerySchema);
+  if (!validation.success) {
+    return validation.error;
+  }
+  
+  const { limit, priority } = validation.data;
+  
+  // Note: lang parameter support could be added to schema if needed
+  const lang = request.nextUrl.searchParams.get('lang') || 'en';
   
   // Validate language parameter
   if (lang !== 'en' && !isLanguageSupported(lang)) {
@@ -34,7 +50,7 @@ export async function GET(request: NextRequest) {
         articles = await translateArticles(articles, lang);
         translatedLang = lang;
       } catch (translateError) {
-        console.error('Translation failed:', translateError);
+        logger.error('Translation failed', translateError);
       }
     }
     
@@ -53,9 +69,7 @@ export async function GET(request: NextRequest) {
       }
     );
   } catch (error) {
-    return NextResponse.json(
-      { error: 'Failed to fetch breaking news', message: String(error) },
-      { status: 500 }
-    );
+    logger.error('Failed to fetch breaking news', error);
+    return ApiError.internal('Failed to fetch breaking news', error);
   }
 }

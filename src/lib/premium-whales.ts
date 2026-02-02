@@ -6,7 +6,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { PREMIUM_PRICING } from '@/lib/x402-config';
+import { PREMIUM_PRICING } from '@/lib/x402';
 
 export const runtime = 'edge';
 

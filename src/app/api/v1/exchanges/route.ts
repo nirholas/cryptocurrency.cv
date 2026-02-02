@@ -9,10 +9,15 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { hybridAuthMiddleware } from '@/lib/x402';
+import { ApiError } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
 
 const ENDPOINT = '/api/v1/exchanges';
 
 export async function GET(request: NextRequest) {
+  const logger = createRequestLogger(request);
+  const startTime = Date.now();
+
   // Check authentication
   const authResponse = await hybridAuthMiddleware(request, ENDPOINT);
   if (authResponse) return authResponse;
@@ -22,6 +27,8 @@ export async function GET(request: NextRequest) {
   const perPage = Math.min(100, Math.max(1, parseInt(searchParams.get('per_page') || '50')));
 
   try {
+    logger.info('Fetching exchanges', { page, perPage });
+
     const response = await fetch(
       `https://api.coingecko.com/api/v3/exchanges?per_page=${perPage}&page=${page}`,
       {
@@ -69,6 +76,8 @@ export async function GET(request: NextRequest) {
       })
     );
 
+    logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
+
     return NextResponse.json(
       {
         success: true,
@@ -89,11 +98,7 @@ export async function GET(request: NextRequest) {
       }
     );
   } catch (error) {
-    console.error('[API] /v1/exchanges error:', error);
-
-    return NextResponse.json(
-      { success: false, error: 'Failed to fetch exchanges' },
-      { status: 502 }
-    );
+    logger.error('Failed to fetch exchanges', error);
+    return ApiError.upstream('CoinGecko', error);
   }
 }

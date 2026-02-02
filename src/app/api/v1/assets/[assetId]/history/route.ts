@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getCoinCapHistory } from '@/lib/external-apis';
+import { ApiError } from '@/lib/api-error';
+import { logger } from '@/lib/logger';
 
 export const runtime = 'edge';
 export const revalidate = 60;
@@ -20,6 +22,7 @@ export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ assetId: string }> }
 ) {
+  const startTime = Date.now();
   const { assetId } = await params;
   const searchParams = request.nextUrl.searchParams;
   const interval = (searchParams.get('interval') || 'h1') as
@@ -34,6 +37,8 @@ export async function GET(
     | 'd1';
 
   try {
+    logger.info('Fetching asset history', { assetId, interval });
+
     const history = await getCoinCapHistory(assetId, interval);
 
     // Transform to standard format
@@ -42,6 +47,8 @@ export async function GET(
       date: point.date,
       price: parseFloat(point.priceUsd),
     }));
+
+    logger.info('Asset history fetched successfully', { assetId, dataPoints: data.length, duration: Date.now() - startTime });
 
     return NextResponse.json(
       {
@@ -59,10 +66,7 @@ export async function GET(
       }
     );
   } catch (error) {
-    console.error('Error fetching asset history:', error);
-    return NextResponse.json(
-      { error: 'Failed to fetch asset history', message: String(error) },
-      { status: 500 }
-    );
+    logger.error('Failed to fetch asset history', error, { assetId, interval });
+    return ApiError.internal('Failed to fetch asset history', error);
   }
 }

@@ -15,8 +15,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { withX402 } from '@x402/next';
-import { x402Server, getRouteConfig } from '@/lib/x402-server';
+import { withX402 } from '@/lib/x402';
 import { db } from '@/lib/database';
 
 export const runtime = 'nodejs';
@@ -101,7 +100,7 @@ async function countKeys(): Promise<number> {
  */
 function generateAPIKey(): string {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  const prefix = 'fcn_'; // free-crypto-news
+  const prefix = 'cda_'; // crypto data API
   let key = prefix;
   for (let i = 0; i < 32; i++) {
     key += chars.charAt(Math.floor(Math.random() * chars.length));
@@ -274,7 +273,7 @@ async function handler(request: NextRequest): Promise<NextResponse> {
  * @example
  * GET /api/premium/api-keys
  */
-export const GET = withX402(handler, getRouteConfig('/api/premium/api-keys'), x402Server);
+export const GET = withX402('/api/premium/api-keys', handler);
 
 /**
  * POST /api/premium/api-keys
@@ -292,4 +291,4 @@ export const GET = withX402(handler, getRouteConfig('/api/premium/api-keys'), x4
  * POST /api/premium/api-keys
  * Body: { "name": "Production Key", "permissions": [...] }
  */
-export const POST = withX402(handler, getRouteConfig('/api/premium/api-keys'), x402Server);
+export const POST = withX402('/api/premium/api-keys', handler);

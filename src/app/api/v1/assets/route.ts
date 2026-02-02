@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAggregatedAssets, getCoinCapAsset, getCoinCapHistory } from '@/lib/external-apis';
+import { ApiError } from '@/lib/api-error';
+import { logger } from '@/lib/logger';
 
 export const runtime = 'edge';
 export const revalidate = 30;
@@ -20,14 +22,20 @@ export const revalidate = 30;
  * GET /api/v1/assets?id=bitcoin    # Single asset
  */
 export async function GET(request: NextRequest) {
+  const startTime = Date.now();
   const searchParams = request.nextUrl.searchParams;
   const id = searchParams.get('id');
   const limit = Math.min(parseInt(searchParams.get('limit') || '100', 10), 250);
 
   try {
     if (id) {
+      logger.info('Fetching single asset', { id });
+
       // Fetch single asset
       const asset = await getCoinCapAsset(id);
+
+      logger.info('Asset fetched successfully', { id, duration: Date.now() - startTime });
+
       return NextResponse.json(
         {
           data: {
@@ -56,8 +64,12 @@ export async function GET(request: NextRequest) {
       );
     }
 
+    logger.info('Fetching aggregated assets', { limit });
+
     // Fetch aggregated assets
     const assets = await getAggregatedAssets(limit);
+
+    logger.info('Assets fetched successfully', { count: assets.length, duration: Date.now() - startTime });
 
     return NextResponse.json(
       {
@@ -73,10 +85,7 @@ export async function GET(request: NextRequest) {
       }
     );
   } catch (error) {
-    console.error('Error fetching assets:', error);
-    return NextResponse.json(
-      { error: 'Failed to fetch assets', message: String(error) },
-      { status: 500 }
-    );
+    logger.error('Failed to fetch assets', error, { id, limit });
+    return ApiError.internal('Failed to fetch assets', error);
   }
 }

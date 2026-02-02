@@ -1,93 +1,169 @@
 /**
- * x402 Configuration
- *
- * Central configuration for x402 payment protocol
+ * x402 Configuration - SINGLE SOURCE OF TRUTH
+ * 
+ * All x402 configuration constants must be imported from this file.
+ * DO NOT define x402 constants anywhere else in the codebase.
+ * 
+ * @module lib/x402/config
  * @see https://docs.x402.org
  */
+
+// =============================================================================
+// ENVIRONMENT DETECTION
+// =============================================================================
+
+/**
+ * Production environment detection
+ * Checks Vercel deployment environment first, then NODE_ENV
+ */
+export const IS_PRODUCTION = 
+  process.env.VERCEL_ENV === 'production' || 
+  process.env.NODE_ENV === 'production';
+
+/**
+ * Testnet mode detection
+ * Explicit testnet flag OR non-production environment
+ */
+export const IS_TESTNET = 
+  process.env.X402_TESTNET === 'true' || 
+  !IS_PRODUCTION;
+
+/**
+ * Development mode detection
+ */
+export const IS_DEVELOPMENT = 
+  process.env.NODE_ENV === 'development';
 
 // =============================================================================
 // NETWORK CONFIGURATION (CAIP-2 Standard)
 // =============================================================================
 
+/**
+ * Supported network identifiers following CAIP-2 standard
+ * @see https://chainagnostic.org/CAIPs/caip-2
+ */
 export const NETWORKS = {
-  // EVM Networks
+  // EVM Networks (eip155:chainId)
   BASE_MAINNET: 'eip155:8453',
   BASE_SEPOLIA: 'eip155:84532',
-
-  // Solana Networks
+  
+  // Solana Networks (solana:genesisHash)
   SOLANA_MAINNET: 'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp',
   SOLANA_DEVNET: 'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1',
 } as const;
 
 export type NetworkId = (typeof NETWORKS)[keyof typeof NETWORKS];
+export type EvmNetworkId = 'eip155:8453' | 'eip155:84532';
+export type SolanaNetworkId = 'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp' | 'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1';
 
 /**
- * Check if we're in production environment
- * Uses VERCEL_ENV (Vercel deployments) or falls back to NODE_ENV
+ * Current active network
+ * Priority: X402_NETWORK env > production detection > default to testnet
  */
-export const IS_PRODUCTION =
-  process.env.VERCEL_ENV === 'production' || process.env.NODE_ENV === 'production';
+export const CURRENT_NETWORK: NetworkId = (() => {
+  // Explicit network override
+  if (process.env.X402_NETWORK) {
+    return process.env.X402_NETWORK as NetworkId;
+  }
+  // Production uses mainnet (unless explicitly testnet)
+  if (IS_PRODUCTION && !IS_TESTNET) {
+    return NETWORKS.BASE_MAINNET;
+  }
+  // Default to testnet
+  return NETWORKS.BASE_SEPOLIA;
+})();
 
 /**
- * Check if we're explicitly in testnet mode
+ * List of all supported networks for multi-network support
  */
-export const IS_TESTNET = process.env.X402_TESTNET === 'true' || !IS_PRODUCTION;
-
-/**
- * Current network based on environment
- * Priority: X402_NETWORK env var > VERCEL_ENV > NODE_ENV
- */
-export const CURRENT_NETWORK: NetworkId =
-  (process.env.X402_NETWORK as NetworkId) ||
-  (IS_PRODUCTION && !process.env.X402_TESTNET ? NETWORKS.BASE_MAINNET : NETWORKS.BASE_SEPOLIA);
+export const SUPPORTED_NETWORKS: NetworkId[] = [
+  NETWORKS.BASE_MAINNET,
+  NETWORKS.BASE_SEPOLIA,
+  NETWORKS.SOLANA_MAINNET,
+  NETWORKS.SOLANA_DEVNET,
+];
 
 // =============================================================================
 // FACILITATOR CONFIGURATION
 // =============================================================================
 
+/**
+ * Known facilitator endpoints
+ * Facilitators handle payment verification and settlement
+ */
 export const FACILITATORS = {
-  /** x402.org - Testnet only, no setup required */
+  /** x402.org - Testnet only, no setup required, free */
   X402_ORG: 'https://x402.org/facilitator',
-
-  /** CDP Facilitator - Production ready, requires CDP API keys */
+  
+  /** CDP (Coinbase Developer Platform) - Production ready */
   CDP: 'https://api.cdp.coinbase.com/platform/v2/x402',
-
-  /** PayAI - Multi-chain support (Solana, Base, Polygon, etc.) */
+  
+  /** PayAI - Multi-chain support (Solana, Base, Polygon, Avalanche) */
   PAYAI: 'https://facilitator.payai.network',
-
+  
   /** x402.rs - Community Rust implementation */
   X402_RS: 'https://facilitator.x402.rs',
 } as const;
 
+export type FacilitatorId = keyof typeof FACILITATORS;
+
 /**
  * Active facilitator URL
- * - Production: Uses CDP (Coinbase Developer Platform) facilitator
- * - Development/Testnet: Uses x402.org public facilitator (no setup required)
+ * - Production: CDP facilitator (requires CDP API keys)
+ * - Development: x402.org public facilitator (free, no setup)
  */
-export const FACILITATOR_URL =
-  process.env.X402_FACILITATOR_URL ||
-  (IS_PRODUCTION ? FACILITATORS.CDP : FACILITATORS.X402_ORG);
+export const FACILITATOR_URL: string = (() => {
+  // Explicit override
+  if (process.env.X402_FACILITATOR_URL) {
+    return process.env.X402_FACILITATOR_URL;
+  }
+  // Production uses CDP
+  if (IS_PRODUCTION && !IS_TESTNET) {
+    return FACILITATORS.CDP;
+  }
+  // Default to x402.org for testing
+  return FACILITATORS.X402_ORG;
+})();
 
 // =============================================================================
-// PAYMENT ADDRESS
+// PAYMENT ADDRESS CONFIGURATION
 // =============================================================================
 
 /**
- * Payment receiving address (your wallet)
- * CRITICAL: Set X402_PAYMENT_ADDRESS in production!
+ * EVM payment receiving address (your wallet)
+ * 
+ * CRITICAL: Set X402_PAYMENT_ADDRESS in production environment!
+ * Payments will fail if this is the zero address.
  */
-export const PAYMENT_ADDRESS =
-  (process.env.X402_PAYMENT_ADDRESS as `0x${string}`) ||
-  ('0x0000000000000000000000000000000000000000' as `0x${string}`);
+export const PAYMENT_ADDRESS: `0x${string}` = (() => {
+  const addr = process.env.X402_PAYMENT_ADDRESS;
+  if (addr && /^0x[a-fA-F0-9]{40}$/.test(addr)) {
+    return addr as `0x${string}`;
+  }
+  return '0x0000000000000000000000000000000000000000' as `0x${string}`;
+})();
 
-// Warn if not configured in production
-if (
-  typeof window === 'undefined' &&
-  IS_PRODUCTION &&
-  PAYMENT_ADDRESS === '0x0000000000000000000000000000000000000000'
-) {
-  console.error('[x402] CRITICAL: X402_PAYMENT_ADDRESS not set! Configure your wallet address.');
-  console.error('[x402] Payments will fail in production. Set X402_PAYMENT_ADDRESS in environment.');
+/**
+ * Solana payment receiving address
+ */
+export const SOLANA_PAYMENT_ADDRESS: string = 
+  process.env.X402_SOLANA_PAYMENT_ADDRESS || '';
+
+// Validate payment address in production (server-side only)
+// This MUST throw to prevent deployment with unconfigured payment address
+if (typeof window === 'undefined' && IS_PRODUCTION) {
+  if (PAYMENT_ADDRESS === '0x0000000000000000000000000000000000000000') {
+    const errorMessage = [
+      '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
+      '[x402] FATAL: X402_PAYMENT_ADDRESS not configured!',
+      '[x402] All x402 payments would be LOST with zero address.',
+      '[x402] Set X402_PAYMENT_ADDRESS to your wallet address.',
+      '[x402] Blocking startup to prevent financial loss.',
+      '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
+    ].join('\n');
+    console.error(errorMessage);
+    throw new Error('[x402] FATAL: X402_PAYMENT_ADDRESS must be set in production. Refusing to start.');
+  }
 }
 
 // =============================================================================
@@ -96,148 +172,119 @@ if (
 
 /**
  * USDC token addresses by network
+ * USDC implements EIP-3009 (transferWithAuthorization) required for x402
  */
-export const USDC_ADDRESSES: Record<string, `0x${string}`> = {
-  'eip155:8453': '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913', // Base Mainnet
+export const USDC_ADDRESSES: Record<EvmNetworkId, `0x${string}`> = {
+  'eip155:8453': '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',  // Base Mainnet
   'eip155:84532': '0x036CbD53842c5426634e7929541eC2318f3dCF7e', // Base Sepolia
-  'eip155:137': '0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359', // Polygon Mainnet
-  'eip155:1': '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', // Ethereum Mainnet
+};
+
+/**
+ * Solana USDC addresses by network
+ */
+export const SOLANA_USDC_ADDRESSES: Record<SolanaNetworkId, string> = {
+  'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp': 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', // Mainnet
+  'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1': '4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU',   // Devnet
 };
 
 /**
  * Get USDC address for current network
  */
-export const USDC_ADDRESS = USDC_ADDRESSES[CURRENT_NETWORK];
-
-// =============================================================================
-// MULTI-CHAIN SUPPORT (x402 Best Practice)
-// =============================================================================
+export const USDC_ADDRESS: `0x${string}` = 
+  USDC_ADDRESSES[CURRENT_NETWORK as EvmNetworkId] || USDC_ADDRESSES['eip155:84532'];
 
 /**
- * Solana payment addresses
- * For Solana networks, use base58 encoded addresses
- */
-export const SOLANA_PAYMENT_ADDRESS =
-  process.env.X402_SOLANA_PAYMENT_ADDRESS || '';
-
-/**
- * Solana USDC mint addresses
- */
-export const SOLANA_USDC_ADDRESSES = {
-  'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp': 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', // Mainnet
-  'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1': '4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU', // Devnet
-} as const;
-
-/**
- * Supported networks for payment acceptance
- * Top facilitators like Dexter support 40+ chains - we start with the most common
- */
-export const SUPPORTED_NETWORKS: NetworkId[] = [
-  NETWORKS.BASE_MAINNET,
-  NETWORKS.BASE_SEPOLIA,
-  ...(SOLANA_PAYMENT_ADDRESS ? [NETWORKS.SOLANA_MAINNET] : []),
-];
-
-/**
- * Payment configuration for multi-chain accepts
- * Used in 402 responses to advertise all accepted payment methods
+ * Accepted payment assets configuration
  */
 export interface PaymentAsset {
-  network: NetworkId | string;
-  asset: `0x${string}` | string;
-  decimals: number;
   symbol: string;
-  type: 'evm' | 'solana';
+  address: string;
+  decimals: number;
+  network: NetworkId;
 }
 
 export const ACCEPTED_ASSETS: PaymentAsset[] = [
-  // EVM Networks
   {
+    symbol: 'USDC',
+    address: USDC_ADDRESSES['eip155:8453'],
+    decimals: 6,
     network: NETWORKS.BASE_MAINNET,
-    asset: USDC_ADDRESSES['eip155:8453'],
-    decimals: 6,
-    symbol: 'USDC',
-    type: 'evm',
   },
   {
-    network: NETWORKS.BASE_SEPOLIA,
-    asset: USDC_ADDRESSES['eip155:84532'],
-    decimals: 6,
     symbol: 'USDC',
-    type: 'evm',
+    address: USDC_ADDRESSES['eip155:84532'],
+    decimals: 6,
+    network: NETWORKS.BASE_SEPOLIA,
   },
-  // Solana Networks (conditionally added)
-  ...(SOLANA_PAYMENT_ADDRESS
-    ? [
-        {
-          network: NETWORKS.SOLANA_MAINNET,
-          asset: SOLANA_USDC_ADDRESSES['solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp'],
-          decimals: 6,
-          symbol: 'USDC',
-          type: 'solana' as const,
-        },
-      ]
-    : []),
 ];
+
+// =============================================================================
+// HELPER FUNCTIONS
+// =============================================================================
+
+/**
+ * Check if x402 payments are properly configured
+ */
+export function isX402Enabled(): boolean {
+  return PAYMENT_ADDRESS !== '0x0000000000000000000000000000000000000000';
+}
+
+/**
+ * Check if a network ID is an EVM network
+ */
+export function isEvmNetwork(networkId: string): networkId is EvmNetworkId {
+  return networkId.startsWith('eip155:');
+}
+
+/**
+ * Check if a network ID is a Solana network
+ */
+export function isSolanaNetwork(networkId: string): networkId is SolanaNetworkId {
+  return networkId.startsWith('solana:');
+}
+
+/**
+ * Get human-readable network display name
+ */
+export function getNetworkDisplayName(networkId: NetworkId = CURRENT_NETWORK): string {
+  const names: Record<NetworkId, string> = {
+    'eip155:8453': 'Base Mainnet',
+    'eip155:84532': 'Base Sepolia (Testnet)',
+    'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp': 'Solana Mainnet',
+    'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1': 'Solana Devnet',
+  };
+  return names[networkId] || networkId;
+}
+
+/**
+ * Get accepted assets for a specific network
+ */
+export function getAcceptedAssets(networkId: NetworkId = CURRENT_NETWORK): PaymentAsset[] {
+  return ACCEPTED_ASSETS.filter(asset => asset.network === networkId);
+}
 
 /**
  * Get payment address for a specific network
  */
-export function getPaymentAddress(network: string): string {
-  if (network.startsWith('solana:')) {
+export function getPaymentAddress(networkId: NetworkId = CURRENT_NETWORK): string {
+  if (isSolanaNetwork(networkId)) {
     return SOLANA_PAYMENT_ADDRESS;
   }
   return PAYMENT_ADDRESS;
 }
 
 /**
- * Get all accepted assets for multi-chain 402 responses
+ * Get configuration summary for debugging
  */
-export function getAcceptedAssets(priceUSDC: number): Array<{
-  scheme: string;
-  network: string;
-  maxAmountRequired: string;
-  asset: string;
-  payTo: string;
-}> {
-  return ACCEPTED_ASSETS.map((a) => ({
-    scheme: 'exact',
-    network: a.network,
-    maxAmountRequired: priceUSDC.toString(),
-    asset: a.asset,
-    payTo: getPaymentAddress(a.network),
-  }));
-}
-
-// =============================================================================
-// NETWORK UTILITIES
-// =============================================================================
-
-/**
- * Check if a network is EVM-based
- */
-export function isEvmNetwork(network: string): boolean {
-  return network.startsWith('eip155:');
-}
-
-/**
- * Check if a network is Solana-based
- */
-export function isSolanaNetwork(network: string): boolean {
-  return network.startsWith('solana:');
-}
-
-/**
- * Get network display name
- */
-export function getNetworkDisplayName(network: string): string {
-  const names: Record<string, string> = {
-    'eip155:8453': 'Base',
-    'eip155:84532': 'Base Sepolia',
-    'eip155:137': 'Polygon',
-    'eip155:1': 'Ethereum',
-    'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp': 'Solana',
-    'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1': 'Solana Devnet',
+export function getConfigSummary(): Record<string, unknown> {
+  return {
+    environment: IS_PRODUCTION ? 'production' : 'development',
+    testnet: IS_TESTNET,
+    network: CURRENT_NETWORK,
+    networkName: getNetworkDisplayName(),
+    facilitator: FACILITATOR_URL,
+    paymentAddress: PAYMENT_ADDRESS,
+    usdcAddress: USDC_ADDRESS,
+    x402Enabled: isX402Enabled(),
   };
-  return names[network] || network;
 }

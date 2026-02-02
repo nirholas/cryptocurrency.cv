@@ -1975,7 +1975,7 @@ The MCP server provides **14 tools** for AI assistants to access crypto news.
 
 | Tool                    | Description                    |
 | ----------------------- | ------------------------------ |
-| `get_crypto_news`       | Latest news from 7 sources     |
+| `get_crypto_news`       | Latest news from 130+ sources  |
 | `search_crypto_news`    | Search by keywords             |
 | `get_defi_news`         | DeFi-specific news             |
 | `get_bitcoin_news`      | Bitcoin-specific news          |
@@ -2048,7 +2048,7 @@ import requests
 
 @tool
 def get_crypto_news(limit: int = 5) -> str:
-    """Get latest cryptocurrency news from 7 sources."""
+    """Get latest cryptocurrency news from 130+ sources."""
     r = requests.get(f"https://news-crypto.vercel.app/api/news?limit={limit}")
     return "\n".join([f"• {a['title']} ({a['source']})" for a in r.json()["articles"]])
 

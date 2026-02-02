@@ -49,8 +49,8 @@ interface ApiKeyProviderProps {
 // Constants
 // ============================================================================
 
-const STORAGE_KEY = 'fcn_api_key';
-const KEY_INFO_CACHE_KEY = 'fcn_key_info';
+const STORAGE_KEY = 'cda_api_key';
+const KEY_INFO_CACHE_KEY = 'cda_key_info';
 const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
 
 // ============================================================================
@@ -168,8 +168,8 @@ export function ApiKeyProvider({ children }: ApiKeyProviderProps) {
 
   // Set API key and persist to localStorage
   const setApiKey = useCallback((key: string) => {
-    if (!key || !key.startsWith('fcn_')) {
-      setError('Invalid API key format (must start with fcn_)');
+    if (!key || !key.startsWith('cda_')) {
+      setError('Invalid API key format (must start with cda_)');
       return;
     }
     

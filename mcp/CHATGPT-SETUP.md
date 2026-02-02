@@ -94,7 +94,7 @@ fly deploy
 | Field | Value |
 |-------|-------|
 | **App Name** | Free Crypto News |
-| **Description** | Get real-time crypto news from 7 major sources |
+| **Description** | Get real-time crypto news from 130+ sources |
 | **Protocol** | SSE (Server-Sent Events) |
 | **Endpoint URL** | `https://plugins.support/sse` (official)<br/>or<br/>`http://localhost:3001/sse` (local) |
 | **Authentication** | No Authentication |

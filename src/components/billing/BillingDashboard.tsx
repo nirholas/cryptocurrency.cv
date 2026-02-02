@@ -240,7 +240,7 @@ export default function BillingDashboard() {
 
   const handleApiKeySubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (inputApiKey && inputApiKey.startsWith('fcn_')) {
+    if (inputApiKey && inputApiKey.startsWith('cda_')) {
       saveApiKey(inputApiKey);
       setInputApiKey('');
       setIsLoading(true);
@@ -311,17 +311,17 @@ export default function BillingDashboard() {
                 id="apiKey"
                 value={inputApiKey}
                 onChange={(e) => setInputApiKey(e.target.value)}
-                placeholder="fcn_..."
+                placeholder="cda_..."
                 className="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-900 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                Your API key starts with &quot;fcn_&quot;
+                Your API key starts with &quot;cda_&quot;
               </p>
             </div>
 
             <button
               type="submit"
-              disabled={!inputApiKey || !inputApiKey.startsWith('fcn_')}
+              disabled={!inputApiKey || !inputApiKey.startsWith('cda_')}
               className="w-full py-3 px-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
               Access Dashboard

@@ -46,7 +46,7 @@ export async function GET(request: NextRequest) {
   <div class="header-banner">
     <h1>🆓 Free Crypto News API</h1>
     <p>100% FREE • No API Keys • No Rate Limits</p>
-    <span class="badge">7 Sources • Real-time News</span>
+    <span class="badge">130+ Sources • Real-time News</span>
   </div>
   <div id="swagger-ui"></div>
   <script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-bundle.js"></script>

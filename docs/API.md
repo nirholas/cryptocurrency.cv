@@ -27,7 +27,7 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
   - [GET /api/ai/brief](#get-apiaibrief)
   - [POST /api/ai/debate](#post-apiaidebate)
   - [POST /api/ai/counter](#post-apiaicounter)
-- [Trading & Market APIs](#trading--market-apis)
+- [Trading & Market APIs](#trading-market-apis)
   - [GET /api/arbitrage](#get-apiarbitrage)
   - [GET /api/signals](#get-apisignals)
   - [GET /api/funding](#get-apifunding)
@@ -46,7 +46,7 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
   - [GET /api/clickbait](#get-apiclickbait)
   - [GET /api/origins](#get-apiorigins)
   - [GET /api/relationships](#get-apirelationships)
-- [Research & Analytics APIs](#research--analytics-apis)
+- [Research & Analytics APIs](#research-analytics-apis)
   - [GET /api/regulatory](#get-apiregulatory)
   - [GET /api/predictions](#get-apipredictions)
   - [GET /api/influencers](#get-apiinfluencers)
@@ -78,7 +78,7 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
   - [GET /api/market/derivatives](#get-apimarketderivatives)
 - [DeFi APIs](#defi-apis)
   - [GET /api/defi/protocol-health](#get-apidefiprotocol-health)
-  - [GET /api/onchain/events](#get-apionchanevents)
+  - [GET /api/onchain/events](#get-apionchainevents)
 - [Real-Time Endpoints](#real-time-endpoints)
   - [GET /api/sse](#get-apisse)
   - [GET /api/ws](#get-apiws)
@@ -102,12 +102,12 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
   - [GET /api/archive/status](#get-apiarchivestatus)
   - [GET /api/cron/archive](#get-apicronarchive)
   - [POST /api/archive/webhook](#post-apiarchivewebhook)
-- [Analytics & Intelligence](#analytics--intelligence)
+- [Analytics & Intelligence](#analytics-intelligence)
   - [GET /api/analytics/headlines](#get-apianalyticsheadlines)
   - [GET /api/analytics/credibility](#get-apianalyticscredibility)
   - [GET /api/analytics/anomalies](#get-apianalyticsanomalies)
 - [V1 API (Legacy)](#v1-api-legacy)
-- [Storage & Export](#storage--export)
+- [Storage & Export](#storage-export)
   - [GET /api/storage/cas](#get-apistoragecas)
   - [GET /api/export](#get-apiexport)
   - [GET /api/export/jobs](#get-apiexportjobs)
@@ -121,10 +121,10 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
   - [GET /api/health](#get-apihealth)
   - [GET /api/cache](#get-apicache)
   - [DELETE /api/cache](#delete-apicache)
-- [Tags & Discovery](#tags--discovery)
+- [Tags & Discovery](#tags-discovery)
   - [GET /api/tags](#get-apitags)
   - [GET /api/tags/[slug]](#get-apitagsslug)
-- [Gateway & Integration](#gateway--integration)
+- [Gateway & Integration](#gateway-integration)
   - [POST /api/gateway](#post-apigateway)
 - [API Key Management](#api-key-management)
   - [GET /api/register](#get-apiregister)
@@ -4460,21 +4460,90 @@ const l2 = await l2beat.getL2Summary();
 
 ---
 
+## TradingView UDF API
+
+Universal Data Feed (UDF) protocol for TradingView charting integration.
+
+### GET /api/tradingview
+
+TradingView widget configuration and data.
+
+| Action | Description |
+|--------|-------------|
+| `?action=config` | Server configuration |
+| `?action=time` | Server time |
+| `?action=symbols&symbol=BTC` | Symbol resolution |
+| `?action=search&query=bitcoin` | Symbol search |
+| `?action=history&symbol=BTC&from=...&to=...&resolution=D` | Historical OHLCV |
+| `?action=quotes&symbols=BTC,ETH` | Real-time quotes |
+| `?action=marks&symbol=BTC&from=...&to=...` | Chart marks (news) |
+
+---
+
+## Watchlist API
+
+User watchlist management with local storage fallback.
+
+### GET /api/watchlist
+
+Get user's watchlist.
+
+| Parameter | Description |
+|-----------|-------------|
+| `check` | Check if specific coin is watched |
+| `prices` | Include current prices |
+
+### POST /api/watchlist
+
+Add coin to watchlist.
+
+```json
+{ "coinId": "bitcoin", "notes": "Long-term hold" }
+```
+
+### DELETE /api/watchlist
+
+Remove coin from watchlist.
+
+```json
+{ "coinId": "bitcoin" }
+```
+
+---
+
+## Billing API
+
+Subscription and billing management (authenticated).
+
+### GET /api/billing
+
+Get current subscription status.
+
+### POST /api/billing/subscribe
+
+Create new subscription.
+
+### POST /api/billing/cancel
+
+Cancel subscription.
+
+---
+
 ## SDKs
 
 Official SDKs are available for quick integration:
 
-- [Python SDK](../sdk/python/README.md)
-- [JavaScript SDK](../sdk/javascript/README.md)
-- [TypeScript SDK](../sdk/typescript/README.md)
-- [React Hooks](../sdk/react/README.md)
-- [Go SDK](../sdk/go/README.md)
-- [PHP SDK](../sdk/php/README.md)
+- [Python SDK](sdks/python.md)
+- [JavaScript SDK](sdks/javascript.md)
+- [TypeScript SDK](sdks/typescript.md)
+- [React Hooks](sdks/react.md)
+- [Go SDK](sdks/go.md)
+- [PHP SDK](sdks/php.md)
 
 ---
 
 ## Need Help?
 
-- 📖 [Main Documentation](../README.md)
+- 📖 [Main Documentation](index.md)
 - 💬 [GitHub Discussions](https://github.com/nirholas/free-crypto-news/discussions)
 - 🐛 [Report Issues](https://github.com/nirholas/free-crypto-news/issues)

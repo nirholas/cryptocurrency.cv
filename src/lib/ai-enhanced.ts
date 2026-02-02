@@ -97,7 +97,7 @@ async function aiComplete(
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${config.apiKey}`,
       ...(config.provider === 'openrouter' && {
-        'HTTP-Referer': process.env.VERCEL_URL || 'http://localhost:3000',
+        'HTTP-Referer': process.env.VERCEL_URL || 'https://news-crypto.vercel.app',
         'X-Title': 'Crypto News AI',
       }),
     },

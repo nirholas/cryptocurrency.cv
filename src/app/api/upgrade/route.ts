@@ -16,12 +16,10 @@ import {
   extractApiKey,
 } from '@/lib/api-keys';
 import {
-  createPaymentRequired,
-  verifyX402Payment,
   create402Response,
-  isX402Enabled,
   PAYMENT_ADDRESS,
-  NETWORK,
+  CURRENT_NETWORK as NETWORK,
+  isX402Enabled,
 } from '@/lib/x402';
 
 export const runtime = 'nodejs';

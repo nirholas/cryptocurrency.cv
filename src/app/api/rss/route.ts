@@ -72,7 +72,7 @@ export async function GET(request: NextRequest) {
       default:
         data = await getLatestNews(limit);
         title = 'Free Crypto News - All Sources';
-        description = 'Crypto news aggregated from 7 top sources - 100% FREE';
+        description = 'Crypto news aggregated from 130+ top sources - 100% FREE';
         feedUrl = 'https://news-crypto.vercel.app/api/rss';
     }
     

@@ -121,7 +121,7 @@ export default function OraclePage() {
             </h1>
             <p className="text-xl text-gray-600 dark:text-slate-400 max-w-2xl mx-auto mb-8">
               Ask me anything about crypto markets, news, and trends. 
-              I have access to real-time data from 7+ news sources and live market feeds.
+              I have access to real-time data from 130+ news sources and live market feeds.
             </p>
             
             {/* Example Queries */}

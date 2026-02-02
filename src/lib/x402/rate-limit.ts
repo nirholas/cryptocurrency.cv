@@ -1,101 +1,59 @@
 /**
- * Rate Limiting for API Key Users
+ * Rate Limiting for x402 API Key Users
  *
- * Implements rate limiting for subscription-based API access
- * x402 pay-per-request users bypass rate limits
+ * This module re-exports rate limiting functionality from the central
+ * @/lib/ratelimit module, which uses @upstash/ratelimit for:
+ * - Atomic operations (no race conditions)
+ * - Sliding window algorithm (fair rate limiting)
+ * - Distributed state across all instances
+ *
+ * x402 pay-per-request users bypass rate limits entirely.
+ *
+ * @module lib/x402/rate-limit
  */
 
-import { API_TIERS, ApiTier } from './pricing';
+import { API_TIERS, type ApiTier } from './pricing';
+import {
+  checkRateLimit as checkUpstashRateLimit,
+  checkTierRateLimit as checkUpstashTierRateLimit,
+  getUsage as getUpstashUsage,
+  resetRateLimit as resetUpstashRateLimit,
+  isRedisConfigured,
+  type RateLimitResult,
+  type TierConfig,
+} from '@/lib/ratelimit';
+
+// Re-export types
+export type { RateLimitResult };
 
 // =============================================================================
-// RATE LIMIT STORE
+// RATE LIMIT FUNCTIONS (using @upstash/ratelimit)
 // =============================================================================
-
-interface RateLimitRecord {
-  count: number;
-  resetAt: number;
-}
 
 /**
- * In-memory rate limit store
+ * Check rate limit for an identifier
  *
- * NOTE: In production, use Redis or similar for:
- * - Distributed rate limiting across instances
- * - Persistence across restarts
- * - Better memory management
+ * Uses @upstash/ratelimit for atomic, distributed rate limiting.
+ * No race conditions, fair sliding window algorithm.
+ *
+ * @param identifier - API key ID or unique identifier
+ * @param limit - Maximum requests per day
  */
-const rateLimitStore = new Map<string, RateLimitRecord>();
-
-// Cleanup old records periodically
-if (typeof setInterval !== 'undefined') {
-  setInterval(
-    () => {
-      const now = Date.now();
-      for (const [key, record] of rateLimitStore.entries()) {
-        if (record.resetAt < now) {
-          rateLimitStore.delete(key);
-        }
-      }
-    },
-    60 * 60 * 1000
-  ); // Every hour
-}
-
-// =============================================================================
-// RATE LIMIT FUNCTIONS
-// =============================================================================
-
-export interface RateLimitResult {
-  allowed: boolean;
-  remaining: number;
-  resetAt: number;
-  limit: number;
-}
-
-/**
- * Check rate limit for an identifier (usually API key)
- */
-export function checkRateLimit(identifier: string, limit: number): RateLimitResult {
-  const now = Date.now();
-  const windowMs = 24 * 60 * 60 * 1000; // 24 hours
-
-  const record = rateLimitStore.get(identifier);
-
-  // No record or expired - create new window
-  if (!record || record.resetAt < now) {
-    rateLimitStore.set(identifier, { count: 1, resetAt: now + windowMs });
-    return {
-      allowed: true,
-      remaining: limit - 1,
-      resetAt: now + windowMs,
-      limit,
-    };
-  }
-
-  // Check if limit exceeded
-  if (record.count >= limit) {
-    return {
-      allowed: false,
-      remaining: 0,
-      resetAt: record.resetAt,
-      limit,
-    };
-  }
-
-  // Increment count
-  record.count++;
-  return {
-    allowed: true,
-    remaining: limit - record.count,
-    resetAt: record.resetAt,
-    limit,
-  };
+export async function checkRateLimit(identifier: string, limit: number): Promise<RateLimitResult> {
+  return checkUpstashRateLimit(identifier, {
+    name: 'custom',
+    requestsPerDay: limit,
+    requestsPerMinute: Math.max(1, Math.floor(limit / 100)), // 1% of daily limit per minute
+  });
 }
 
 /**
  * Check rate limit for a specific API tier
+ *
+ * @param apiKey - API key ID
+ * @param tier - Tier name (free, pro, enterprise)
  */
-export function checkTierRateLimit(apiKey: string, tier: ApiTier): RateLimitResult {
+export async function checkTierRateLimit(apiKey: string, tier: ApiTier): Promise<RateLimitResult> {
   const tierConfig = API_TIERS[tier];
 
   // Unlimited tier
@@ -108,73 +66,74 @@ export function checkTierRateLimit(apiKey: string, tier: ApiTier): RateLimitResu
     };
   }
 
-  return checkRateLimit(apiKey, tierConfig.requestsPerDay);
+  return checkUpstashRateLimit(apiKey, {
+    name: tierConfig.name,
+    requestsPerDay: tierConfig.requestsPerDay,
+    requestsPerMinute: tierConfig.requestsPerMinute,
+  });
 }
 
 /**
- * Get current usage for an identifier
+ * Get current usage for an identifier without incrementing
  */
-export function getUsage(identifier: string): { count: number; resetAt: number } | null {
-  const record = rateLimitStore.get(identifier);
+export async function getUsage(
+  identifier: string,
+  tier: ApiTier
+): Promise<{ count: number; resetAt: number } | null> {
+  const tierConfig = API_TIERS[tier];
 
-  if (!record || record.resetAt < Date.now()) {
-    return null;
+  const result = await getUpstashUsage(identifier, {
+    name: tierConfig.name,
+    requestsPerDay: tierConfig.requestsPerDay,
+    requestsPerMinute: tierConfig.requestsPerMinute,
+  });
+
+  if (!result) return null;
+
+  return {
+    count: result.used,
+    resetAt: result.resetAt,
+  };
+}
+
+/**
+ * Reset rate limit for an identifier
+ */
+export async function resetRateLimit(identifier: string, tier: ApiTier): Promise<void> {
+  const tierConfig = API_TIERS[tier];
+
+  await resetUpstashRateLimit(identifier, {
+    name: tierConfig.name,
+    requestsPerDay: tierConfig.requestsPerDay,
+    requestsPerMinute: tierConfig.requestsPerMinute,
+  });
+}
+
+/**
+ * Get rate limit headers for HTTP responses
+ */
+export function getRateLimitHeaders(result: RateLimitResult): Record<string, string> {
+  if (result.limit === -1) {
+    return {
+      'X-RateLimit-Limit': 'unlimited',
+      'X-RateLimit-Remaining': 'unlimited',
+    };
   }
 
-  return { count: record.count, resetAt: record.resetAt };
-}
-
-/**
- * Reset rate limit for an identifier (for testing or admin purposes)
- */
-export function resetRateLimit(identifier: string): void {
-  rateLimitStore.delete(identifier);
+  return {
+    'X-RateLimit-Limit': result.limit.toString(),
+    'X-RateLimit-Remaining': Math.max(0, result.remaining).toString(),
+    'X-RateLimit-Reset': result.resetAt.toString(),
+    'Retry-After':
+      result.remaining <= 0 ? Math.ceil((result.resetAt - Date.now()) / 1000).toString() : '0',
+  };
 }
 
 // =============================================================================
-// API KEY VALIDATION
+// UTILITIES
 // =============================================================================
 
 /**
- * Get API tier from API key
- *
- * In production, implement proper key validation:
- * 1. Look up key in database
- * 2. Verify key is active and not revoked
- * 3. Check subscription status
- * 4. Return tier and user info
+ * Check if Redis/Upstash is configured
  */
-export function getTierFromApiKey(apiKey: string | null): ApiTier | null {
-  if (!apiKey) return null;
-
-  // Demo implementation using key prefixes
-  // Replace with database lookup in production
-  if (apiKey.startsWith('ent_') && apiKey.length >= 32) return 'enterprise';
-  if (apiKey.startsWith('pro_') && apiKey.length >= 32) return 'pro';
-  if (apiKey.startsWith('free_') && apiKey.length >= 32) return 'free';
-
-  return null;
-}
-
-/**
- * Validate API key format
- */
-export function isValidApiKeyFormat(apiKey: string): boolean {
-  // API keys should be: prefix_randomstring (min 32 chars total)
-  const pattern = /^(ent|pro|free)_[a-zA-Z0-9]{28,}$/;
-  return pattern.test(apiKey);
-}
-
-/**
- * Generate a demo API key (for testing only)
- */
-export function generateDemoApiKey(tier: ApiTier): string {
-  const prefix = tier === 'enterprise' ? 'ent' : tier === 'pro' ? 'pro' : 'free';
-  const random = Array.from({ length: 28 }, () =>
-    'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'.charAt(
-      Math.floor(Math.random() * 62)
-    )
-  ).join('');
-
-  return `${prefix}_${random}`;
-}
+export { isRedisConfigured };

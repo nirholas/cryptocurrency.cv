@@ -317,7 +317,7 @@ API_BASE = "https://news-crypto.vercel.app"
 
 @tool
 def get_crypto_news(limit: int = 5) -> str:
-    """Get the latest cryptocurrency news from 7 major sources."""
+    """Get the latest cryptocurrency news from 130+ sources."""
     response = requests.get(f"{API_BASE}/api/news?limit={limit}")
     data = response.json()
     

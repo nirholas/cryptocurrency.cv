@@ -14,9 +14,10 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { withX402 } from '@x402/next';
-import { x402Server, getRouteConfig } from '@/lib/x402-server';
+import { withX402 } from '@/lib/x402';
 import { getHistoricalPrices, getOHLC } from '@/lib/market-data';
+import { ApiError } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
 
 export const runtime = 'nodejs';
 
@@ -82,20 +83,21 @@ function getDaysFromRange(range: string): number {
 async function handler(
   request: NextRequest
 ): Promise<NextResponse<PremiumHistoryResponse | { error: string; message: string }>> {
-  const searchParams = request.nextUrl.searchParams;
-  const coinId = searchParams.get('coinId');
-  const range = searchParams.get('range') || '1y';
-  const currency = searchParams.get('currency') || 'usd';
-  const includeOHLC = searchParams.get('ohlc') === 'true';
-
-  if (!coinId) {
-    return NextResponse.json(
-      { error: 'Missing parameter', message: 'coinId is required' },
-      { status: 400 }
-    );
-  }
-
+  const logger = createRequestLogger(request);
+  const startTime = Date.now();
+  
   try {
+    logger.info('Processing premium history request');
+    const searchParams = request.nextUrl.searchParams;
+    const coinId = searchParams.get('coinId');
+    const range = searchParams.get('range') || '1y';
+    const currency = searchParams.get('currency') || 'usd';
+    const includeOHLC = searchParams.get('ohlc') === 'true';
+
+    if (!coinId) {
+      return ApiError.badRequest('coinId is required');
+    }
+
     const days = getDaysFromRange(range);
 
     // Fetch historical prices
@@ -141,6 +143,8 @@ async function handler(
     const toDate = new Date();
     const fromDate = new Date(toDate.getTime() - days * 24 * 60 * 60 * 1000);
 
+    logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
+    
     return NextResponse.json(
       {
         coinId,
@@ -167,11 +171,8 @@ async function handler(
       }
     );
   } catch (error) {
-    console.error('Error in premium history route:', error);
-    return NextResponse.json(
-      { error: 'Failed to fetch historical data', message: String(error) },
-      { status: 500 }
-    );
+    logger.error('Premium history request failed', error);
+    return ApiError.internal('Failed to fetch historical data', error);
   }
 }
 
@@ -190,4 +191,4 @@ async function handler(
  * GET /api/premium/market/history?coinId=bitcoin&range=5y
  * GET /api/premium/market/history?coinId=ethereum&range=1y&ohlc=true
  */
-export const GET = withX402(handler, getRouteConfig('/api/premium/market/history'), x402Server);
+export const GET = withX402('/api/premium/market/history', handler);

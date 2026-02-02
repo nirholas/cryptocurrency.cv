@@ -2,13 +2,19 @@
  * API Key Management System
  *
  * Handles generation, validation, and rate limiting of API keys.
- * Uses Vercel KV for persistent storage.
+ * Uses Vercel KV for persistent storage and @upstash/ratelimit for
+ * atomic, distributed rate limiting with sliding window algorithm.
  *
  * @module lib/api-keys
  */
 
 import { kv } from '@vercel/kv';
 import { sendWebhook, webhookPayloads } from './webhooks';
+import {
+  checkRateLimit as checkUpstashRateLimit,
+  isRedisConfigured,
+  type RateLimitResult as UpstashRateLimitResult,
+} from './ratelimit';
 
 // ============================================================================
 // Edge-compatible crypto utilities (using Web Crypto API)
@@ -85,29 +91,33 @@ export interface RateLimitResult {
 }
 
 // ============================================================================
-// Configuration
+// Configuration - Derived from Single Source of Truth
 // ============================================================================
 
-export const API_KEY_TIERS = {
-  free: {
-    name: 'Free',
-    requestsPerDay: 100,
-    requestsPerMinute: 10,
-    features: ['market:read', 'trending:read', 'search:read'],
-  },
-  pro: {
-    name: 'Pro',
-    requestsPerDay: 10000,
-    requestsPerMinute: 100,
-    features: ['market:read', 'market:premium', 'defi:read', 'historical:read', 'export:json'],
-  },
-  enterprise: {
-    name: 'Enterprise',
-    requestsPerDay: -1, // Unlimited
-    requestsPerMinute: 1000,
-    features: ['*'], // All permissions
-  },
-} as const;
+import { API_TIERS, type TierConfig } from '@/lib/x402/pricing';
+
+/**
+ * API_KEY_TIERS is derived from API_TIERS (the single source of truth).
+ * Maps permission scopes to the 'features' field for backward compatibility.
+ * 
+ * @deprecated Import API_TIERS from '@/lib/x402/pricing' directly for new code.
+ */
+export const API_KEY_TIERS = Object.fromEntries(
+  Object.entries(API_TIERS).map(([tier, config]) => [
+    tier,
+    {
+      name: config.name,
+      requestsPerDay: config.requestsPerDay,
+      requestsPerMinute: config.requestsPerMinute,
+      features: config.permissions, // Map permissions to features for backward compat
+    },
+  ])
+) as Record<string, {
+  name: string;
+  requestsPerDay: number;
+  requestsPerMinute: number;
+  features: readonly string[];
+}>;
 
 // Key prefixes for different tiers
 const KEY_PREFIXES = {
@@ -339,11 +349,19 @@ export async function revokeApiKey(keyId: string, email: string): Promise<boolea
 }
 
 // ============================================================================
-// Rate Limiting
+// Rate Limiting (using @upstash/ratelimit for atomic operations)
 // ============================================================================
 
 /**
  * Check and update rate limit for a key
+ *
+ * Uses @upstash/ratelimit for:
+ * - Atomic operations (no race conditions)
+ * - Sliding window algorithm (fair rate limiting)
+ * - Distributed state across all instances
+ * - DDoS protection
+ *
+ * Also triggers webhook notifications at 90% and 100% thresholds.
  */
 export async function checkRateLimit(keyData: ApiKeyData): Promise<RateLimitResult> {
   const tierConfig = API_KEY_TIERS[keyData.tier];
@@ -358,114 +376,86 @@ export async function checkRateLimit(keyData: ApiKeyData): Promise<RateLimitResu
     };
   }
 
-  if (!isKvConfigured()) {
-    // If KV not configured, allow but warn
-    return {
-      allowed: true,
-      remaining: tierConfig.requestsPerDay,
-      limit: tierConfig.requestsPerDay,
-      resetAt: Date.now() + 86400000,
-    };
-  }
+  // Use @upstash/ratelimit for atomic rate limiting
+  const result = await checkUpstashRateLimit(keyData.id, {
+    name: tierConfig.name,
+    requestsPerDay: tierConfig.requestsPerDay,
+    requestsPerMinute: tierConfig.requestsPerMinute,
+  });
+
+  // Send webhook notifications for rate limit thresholds
+  await sendRateLimitNotifications(keyData, result, tierConfig);
+
+  return result;
+}
+
+/**
+ * Send webhook notifications when rate limit thresholds are hit
+ */
+async function sendRateLimitNotifications(
+  keyData: ApiKeyData,
+  result: RateLimitResult,
+  tierConfig: (typeof API_KEY_TIERS)[keyof typeof API_KEY_TIERS]
+): Promise<void> {
+  // Skip if KV not configured (can't track notifications)
+  if (!isKvConfigured() || !isRedisConfigured()) return;
 
   const today = new Date().toISOString().split('T')[0];
-  const usageKey = `${KV_PREFIX.usage}${keyData.id}:${today}`;
   const notifiedKey = `${KV_PREFIX.usage}notified:${keyData.id}:${today}`;
 
   try {
-    // Get current usage
-    const currentUsage = (await kv.get<number>(usageKey)) || 0;
+    const used = tierConfig.requestsPerDay - result.remaining;
+    const percentage = Math.round((used / tierConfig.requestsPerDay) * 100);
 
-    if (currentUsage >= tierConfig.requestsPerDay) {
-      // Calculate reset time (midnight UTC)
-      const tomorrow = new Date();
-      tomorrow.setUTCHours(24, 0, 0, 0);
-
-      // Check if we've already notified about 100% limit today
-      const notified = await kv.get<{ at90: boolean; at100: boolean }>(notifiedKey);
-      if (!notified?.at100) {
-        // Send rate limit webhook (100%)
-        sendWebhook(
-          'key.usage.limit',
-          webhookPayloads.keyUsageLimit({
-            keyId: keyData.id,
-            keyPrefix: keyData.keyPrefix,
-            tier: keyData.tier,
-            usage: currentUsage,
-            limit: tierConfig.requestsPerDay,
-            percentage: 100,
-            limitType: '100%',
-          })
-        ).catch((err) => {
-          console.error('[API Keys] Failed to send key.usage.limit webhook:', err);
-        });
-
-        // Mark as notified
-        await kv.set(notifiedKey, { ...notified, at100: true });
-        await kv.expire(notifiedKey, 90000);
-      }
-
-      return {
-        allowed: false,
-        remaining: 0,
-        limit: tierConfig.requestsPerDay,
-        resetAt: tomorrow.getTime(),
-      };
-    }
-
-    // Increment usage (atomic)
-    const newUsage = await kv.incr(usageKey);
-
-    // Set expiry on first use (25 hours to be safe)
-    if (newUsage === 1) {
-      await kv.expire(usageKey, 90000);
-    }
-
-    // Check if we've hit 90% threshold
-    const threshold90 = Math.floor(tierConfig.requestsPerDay * 0.9);
-    if (newUsage >= threshold90 && newUsage < tierConfig.requestsPerDay) {
-      const notified = await kv.get<{ at90: boolean; at100: boolean }>(notifiedKey);
-      if (!notified?.at90) {
-        // Send rate limit webhook (90%)
-        sendWebhook(
-          'key.usage.limit',
-          webhookPayloads.keyUsageLimit({
-            keyId: keyData.id,
-            keyPrefix: keyData.keyPrefix,
-            tier: keyData.tier,
-            usage: newUsage,
-            limit: tierConfig.requestsPerDay,
-            percentage: Math.round((newUsage / tierConfig.requestsPerDay) * 100),
-            limitType: '90%',
-          })
-        ).catch((err) => {
-          console.error('[API Keys] Failed to send key.usage.limit webhook:', err);
-        });
-
-        // Mark as notified
-        await kv.set(notifiedKey, { ...notified, at90: true });
-        await kv.expire(notifiedKey, 90000);
-      }
-    }
-
-    const tomorrow = new Date();
-    tomorrow.setUTCHours(24, 0, 0, 0);
-
-    return {
-      allowed: true,
-      remaining: tierConfig.requestsPerDay - newUsage,
-      limit: tierConfig.requestsPerDay,
-      resetAt: tomorrow.getTime(),
+    // Get current notification state
+    const notified = (await kv.get<{ at90: boolean; at100: boolean }>(notifiedKey)) || {
+      at90: false,
+      at100: false,
     };
+
+    // Check 100% threshold
+    if (!result.allowed && !notified.at100) {
+      sendWebhook(
+        'key.usage.limit',
+        webhookPayloads.keyUsageLimit({
+          keyId: keyData.id,
+          keyPrefix: keyData.keyPrefix,
+          tier: keyData.tier,
+          usage: used,
+          limit: tierConfig.requestsPerDay,
+          percentage: 100,
+          limitType: '100%',
+        })
+      ).catch((err) => {
+        console.error('[API Keys] Failed to send key.usage.limit webhook:', err);
+      });
+
+      await kv.set(notifiedKey, { ...notified, at100: true });
+      await kv.expire(notifiedKey, 90000);
+    }
+    // Check 90% threshold
+    else if (percentage >= 90 && percentage < 100 && !notified.at90) {
+      sendWebhook(
+        'key.usage.limit',
+        webhookPayloads.keyUsageLimit({
+          keyId: keyData.id,
+          keyPrefix: keyData.keyPrefix,
+          tier: keyData.tier,
+          usage: used,
+          limit: tierConfig.requestsPerDay,
+          percentage,
+          limitType: '90%',
+        })
+      ).catch((err) => {
+        console.error('[API Keys] Failed to send key.usage.limit webhook:', err);
+      });
+
+      await kv.set(notifiedKey, { ...notified, at90: true });
+      await kv.expire(notifiedKey, 90000);
+    }
   } catch (error) {
-    console.error('Rate limit check failed:', error);
-    // On error, allow the request
-    return {
-      allowed: true,
-      remaining: tierConfig.requestsPerDay,
-      limit: tierConfig.requestsPerDay,
-      resetAt: Date.now() + 86400000,
-    };
+    // Non-fatal - don't fail the request if notifications fail
+    console.error('[API Keys] Failed to send rate limit notifications:', error);
   }
 }
 

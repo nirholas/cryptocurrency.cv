@@ -1,156 +1,245 @@
 /**
- * Centralized Logger Utility
- *
+ * Structured Logging System
+ * 
  * Provides consistent logging across the application with:
- * - Environment-aware output (suppresses debug in production)
- * - Structured log format for better debugging
- * - Named loggers for different modules
- *
- * @module lib/logger
+ * - Log levels (debug, info, warn, error)
+ * - Structured JSON output
+ * - Request context tracking
+ * - Performance timing
  */
 
-type LogLevel = 'debug' | 'info' | 'warn' | 'error';
+import { NextRequest } from 'next/server';
+
+export enum LogLevel {
+  DEBUG = 'debug',
+  INFO = 'info',
+  WARN = 'warn',
+  ERROR = 'error',
+}
+
+interface LogContext {
+  requestId?: string;
+  userId?: string;
+  endpoint?: string;
+  method?: string;
+  ip?: string;
+  userAgent?: string;
+  [key: string]: unknown;
+}
 
 interface LogEntry {
   level: LogLevel;
-  module: string;
   message: string;
-  data?: unknown;
   timestamp: string;
+  context?: LogContext;
+  error?: {
+    message: string;
+    stack?: string;
+    code?: string;
+  };
+  duration?: number;
+  meta?: Record<string, unknown>;
 }
-
-// ============================================================================
-// Configuration
-// ============================================================================
-
-const isProduction = process.env.NODE_ENV === 'production';
-const isDebugEnabled = process.env.DEBUG === 'true' || process.env.DEBUG === '1';
 
 /**
- * Minimum log level based on environment
- * Production: info and above
- * Development: debug and above (all)
+ * Format log entry as JSON
  */
-const LOG_LEVELS: Record<LogLevel, number> = {
-  debug: 0,
-  info: 1,
-  warn: 2,
-  error: 3,
-};
-
-const minLevel: LogLevel = isProduction && !isDebugEnabled ? 'info' : 'debug';
-
-// ============================================================================
-// Logger Implementation
-// ============================================================================
-
-function shouldLog(level: LogLevel): boolean {
-  return LOG_LEVELS[level] >= LOG_LEVELS[minLevel];
+function formatLogEntry(entry: LogEntry): string {
+  return JSON.stringify(entry);
 }
 
-function formatMessage(entry: LogEntry): string {
-  const prefix = `[${entry.module}]`;
-  return `${prefix} ${entry.message}`;
-}
+/**
+ * Logger class
+ */
+class Logger {
+  private context: LogContext = {};
 
-function logToConsole(entry: LogEntry): void {
-  if (!shouldLog(entry.level)) return;
+  /**
+   * Set context for subsequent logs
+   */
+  setContext(context: LogContext): void {
+    this.context = { ...this.context, ...context };
+  }
 
-  const message = formatMessage(entry);
+  /**
+   * Clear context
+   */
+  clearContext(): void {
+    this.context = {};
+  }
 
-  switch (entry.level) {
-    case 'debug':
-      if (entry.data !== undefined) {
-        console.debug(message, entry.data);
+  /**
+   * Get context from NextRequest
+   */
+  setRequestContext(request: NextRequest): void {
+    this.setContext({
+      requestId: request.headers.get('x-request-id') || undefined,
+      endpoint: request.nextUrl.pathname,
+      method: request.method,
+      ip: request.headers.get('x-forwarded-for')?.split(',')[0]?.trim(),
+      userAgent: request.headers.get('user-agent') || undefined,
+    });
+  }
+
+  /**
+   * Log debug message
+   */
+  debug(message: string, meta?: Record<string, unknown>): void {
+    if (process.env.NODE_ENV === 'development') {
+      const entry: LogEntry = {
+        level: LogLevel.DEBUG,
+        message,
+        timestamp: new Date().toISOString(),
+        context: this.context,
+        meta,
+      };
+      console.debug(formatLogEntry(entry));
+    }
+  }
+
+  /**
+   * Log info message
+   */
+  info(message: string, meta?: Record<string, unknown>): void {
+    const entry: LogEntry = {
+      level: LogLevel.INFO,
+      message,
+      timestamp: new Date().toISOString(),
+      context: this.context,
+      meta,
+    };
+    console.log(formatLogEntry(entry));
+  }
+
+  /**
+   * Log warning message
+   */
+  warn(message: string, meta?: Record<string, unknown>): void {
+    const entry: LogEntry = {
+      level: LogLevel.WARN,
+      message,
+      timestamp: new Date().toISOString(),
+      context: this.context,
+      meta,
+    };
+    console.warn(formatLogEntry(entry));
+  }
+
+  /**
+   * Log error message
+   */
+  error(message: string, error?: Error | unknown, meta?: Record<string, unknown>): void {
+    const entry: LogEntry = {
+      level: LogLevel.ERROR,
+      message,
+      timestamp: new Date().toISOString(),
+      context: this.context,
+      meta,
+    };
+
+    if (error) {
+      if (error instanceof Error) {
+        entry.error = {
+          message: error.message,
+          stack: error.stack,
+          code: (error as any).code,
+        };
       } else {
-        console.debug(message);
+        entry.error = {
+          message: String(error),
+        };
       }
-      break;
-    case 'info':
-      if (entry.data !== undefined) {
-        console.info(message, entry.data);
-      } else {
-        console.info(message);
-      }
-      break;
-    case 'warn':
-      if (entry.data !== undefined) {
-        console.warn(message, entry.data);
-      } else {
-        console.warn(message);
-      }
-      break;
-    case 'error':
-      if (entry.data !== undefined) {
-        console.error(message, entry.data);
-      } else {
-        console.error(message);
-      }
-      break;
+    }
+
+    console.error(formatLogEntry(entry));
+  }
+
+  /**
+   * Log request with timing
+   */
+  request(
+    method: string,
+    path: string,
+    status: number,
+    duration: number,
+    meta?: Record<string, unknown>
+  ): void {
+    const entry: LogEntry = {
+      level: status >= 500 ? LogLevel.ERROR : status >= 400 ? LogLevel.WARN : LogLevel.INFO,
+      message: `${method} ${path} ${status}`,
+      timestamp: new Date().toISOString(),
+      context: this.context,
+      duration,
+      meta: {
+        ...meta,
+        method,
+        path,
+        status,
+      },
+    };
+    console.log(formatLogEntry(entry));
+  }
+
+  /**
+   * Create child logger with additional context
+   */
+  child(context: LogContext): Logger {
+    const childLogger = new Logger();
+    childLogger.setContext({ ...this.context, ...context });
+    return childLogger;
   }
 }
 
-// ============================================================================
-// Public API
-// ============================================================================
+// Export singleton logger
+export const logger = new Logger();
 
 /**
- * Create a logger for a specific module
- *
- * @example
- * const log = createLogger('WebSocket');
- * log.info('Connection established');
- * log.debug('Received message', { type: 'price' });
- * log.error('Connection failed', error);
+ * Create logger for specific request
  */
-export function createLogger(module: string) {
-  return {
-    debug(message: string, data?: unknown): void {
-      logToConsole({
-        level: 'debug',
-        module,
-        message,
-        data,
-        timestamp: new Date().toISOString(),
-      });
-    },
-
-    info(message: string, data?: unknown): void {
-      logToConsole({
-        level: 'info',
-        module,
-        message,
-        data,
-        timestamp: new Date().toISOString(),
-      });
-    },
-
-    warn(message: string, data?: unknown): void {
-      logToConsole({
-        level: 'warn',
-        module,
-        message,
-        data,
-        timestamp: new Date().toISOString(),
-      });
-    },
-
-    error(message: string, data?: unknown): void {
-      logToConsole({
-        level: 'error',
-        module,
-        message,
-        data,
-        timestamp: new Date().toISOString(),
-      });
-    },
-  };
+export function createRequestLogger(request: NextRequest): Logger {
+  const requestLogger = new Logger();
+  requestLogger.setRequestContext(request);
+  return requestLogger;
 }
 
 /**
- * Default application logger
+ * Measure execution time
  */
-export const logger = createLogger('App');
+export function measureTime<T>(
+  fn: () => T | Promise<T>,
+  label: string
+): Promise<{ result: T; duration: number }> {
+  const start = Date.now();
+  
+  const execute = async () => {
+    const result = await fn();
+    const duration = Date.now() - start;
+    
+    logger.debug(`${label} completed`, { duration });
+    
+    return { result, duration };
+  };
+
+  return execute();
+}
+
+// Legacy compatibility export
+export function createLogger(module: string) {
+  return {
+    debug(message: string, data?: unknown): void {
+      logger.debug(`[${module}] ${message}`, data as Record<string, unknown>);
+    },
+    info(message: string, data?: unknown): void {
+      logger.info(`[${module}] ${message}`, data as Record<string, unknown>);
+    },
+    warn(message: string, data?: unknown): void {
+      logger.warn(`[${module}] ${message}`, data as Record<string, unknown>);
+    },
+    error(message: string, data?: unknown): void {
+      logger.error(`[${module}] ${message}`, data instanceof Error ? data : undefined, typeof data === 'object' ? data as Record<string, unknown> : undefined);
+    },
+  };
+}
 
 /**
  * Pre-configured loggers for common modules

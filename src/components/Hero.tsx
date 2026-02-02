@@ -73,7 +73,7 @@ export default function Hero() {
             
             {/* Enhanced Description */}
             <p className="text-xl sm:text-2xl text-black/80 leading-relaxed max-w-xl font-medium">
-              Real-time news from <strong className="font-bold">7 sources</strong>. No API keys. No rate limits. 
+              Real-time news from <strong className="font-bold">130+ sources</strong>. No API keys. No rate limits. 
               Built for <span className="underline decoration-black/30 decoration-2 underline-offset-4">developers</span>, <span className="underline decoration-black/30 decoration-2 underline-offset-4">traders</span> & <span className="underline decoration-black/30 decoration-2 underline-offset-4">AI agents</span>.
             </p>
             

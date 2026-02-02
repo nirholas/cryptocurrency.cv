@@ -2,11 +2,15 @@ import { NextRequest } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { translateArticles, isLanguageSupported, SUPPORTED_LANGUAGES } from '@/lib/translate';
 import { jsonResponse, errorResponse, withTiming } from '@/lib/api-utils';
+import { validateQuery } from '@/lib/validation-middleware';
+import { newsQuerySchema } from '@/lib/schemas';
+import { ApiError } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
 
 export const runtime = 'edge';
-export const revalidate = 300; // 5 minutes
+export const revalidate = 60; // 1 minute for fresher content
 
-// Valid news categories
+// Valid news categories (kept for backward compatibility)
 const VALID_CATEGORIES = [
   'general', 'bitcoin', 'defi', 'nft', 'research', 'institutional', 
   'etf', 'derivatives', 'onchain', 'fintech', 'macro', 'quant',
@@ -15,27 +19,20 @@ const VALID_CATEGORIES = [
 ];
 
 export async function GET(request: NextRequest) {
+  const logger = createRequestLogger(request);
   const startTime = Date.now();
-  const searchParams = request.nextUrl.searchParams;
-  const limit = parseInt(searchParams.get('limit') || '10');
-  const source = searchParams.get('source') || undefined;
-  const category = searchParams.get('category') || undefined;
-  const from = searchParams.get('from') || undefined;
-  const to = searchParams.get('to') || undefined;
-  const page = searchParams.get('page') ? parseInt(searchParams.get('page')!) : undefined;
-  const perPage = searchParams.get('per_page') ? parseInt(searchParams.get('per_page')!) : undefined;
-  const lang = searchParams.get('lang') || 'en';
   
-  // Validate category parameter
-  if (category && !VALID_CATEGORIES.includes(category)) {
-    return errorResponse(
-      'Invalid category',
-      `Category '${category}' is not valid. Valid categories: ${VALID_CATEGORIES.join(', ')}`,
-      400
-    );
+  logger.info('Fetching news');
+  
+  // Validate query parameters using Zod schema
+  const validation = validateQuery(request, newsQuerySchema);
+  if (!validation.success) {
+    return validation.error;
   }
   
-  // Validate language parameter
+  const { limit, source, category, from, to, page, per_page, lang } = validation.data;
+  
+  // Validate language parameter (additional check beyond schema)
   if (lang !== 'en' && !isLanguageSupported(lang)) {
     return errorResponse(
       'Unsupported language',
@@ -45,7 +42,7 @@ export async function GET(request: NextRequest) {
   }
   
   try {
-    const data = await getLatestNews(limit, source, { from, to, page, perPage, category });
+    const data = await getLatestNews(limit, source, { from, to, page, perPage: per_page, category });
     
     // Translate articles if language is not English
     let articles = data.articles;
@@ -56,7 +53,7 @@ export async function GET(request: NextRequest) {
         articles = await translateArticles(articles, lang);
         translatedLang = lang;
       } catch (translateError) {
-        console.error('Translation failed:', translateError);
+        logger.error('Translation failed', translateError);
         // Continue with original articles on translation failure
       }
     }
@@ -75,6 +72,7 @@ export async function GET(request: NextRequest) {
       request,
     });
   } catch (error) {
-    return errorResponse('Failed to fetch news', String(error));
+    logger.error('Failed to fetch news', error);
+    return ApiError.internal('Failed to fetch news', error);
   }
 }

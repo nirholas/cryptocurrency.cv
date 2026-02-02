@@ -56,7 +56,7 @@ export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams;
     const action = searchParams.get('action') || 'events';
     const headersList = await headers();
-    const host = headersList.get('host') || 'localhost:3000';
+    const host = headersList.get('host') || 'news-crypto.vercel.app';
     const baseUrl = process.env.NODE_ENV === 'production' 
       ? `https://${host}` 
       : `http://${host}`;

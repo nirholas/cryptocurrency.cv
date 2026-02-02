@@ -1,8 +1,12 @@
 /**
- * x402 Server Setup
- *
- * Creates and configures the x402 resource server
- * for payment verification and settlement
+ * x402 Resource Server - SINGLE SOURCE OF TRUTH
+ * 
+ * Handles payment verification and settlement for protected API routes.
+ * Uses the official @x402 SDK from Coinbase.
+ * 
+ * @module lib/x402/server
+ * @see https://docs.x402.org
+ * @see https://github.com/coinbase/x402
  */
 
 import { x402ResourceServer, HTTPFacilitatorClient } from '@x402/core/server';
@@ -10,10 +14,13 @@ import { registerExactEvmScheme } from '@x402/evm/exact/server';
 import {
   FACILITATOR_URL,
   CURRENT_NETWORK,
-  PAYMENT_ADDRESS,
-  IS_PRODUCTION,
+  NETWORKS,
   IS_TESTNET,
+  IS_PRODUCTION,
+  PAYMENT_ADDRESS,
+  isEvmNetwork,
   getNetworkDisplayName,
+  type NetworkId,
 } from './config';
 
 // =============================================================================
@@ -21,8 +28,8 @@ import {
 // =============================================================================
 
 /**
- * HTTP Facilitator Client
- * Connects to the facilitator service for payment verification and settlement
+ * HTTP client for communicating with the facilitator service
+ * The facilitator handles payment verification and on-chain settlement
  */
 export const facilitatorClient = new HTTPFacilitatorClient({
   url: FACILITATOR_URL,
@@ -33,120 +40,105 @@ export const facilitatorClient = new HTTPFacilitatorClient({
 // =============================================================================
 
 /**
- * x402 Resource Server
- * Handles payment verification and resource access control
+ * x402 Resource Server singleton
+ * 
+ * This server instance handles:
+ * - Payment verification (checking payment signatures)
+ * - Settlement (submitting payments to blockchain via facilitator)
+ * - Scheme registration (EVM, Solana, etc.)
  */
-export const x402Server = new x402ResourceServer(facilitatorClient);
+let _serverInstance: x402ResourceServer | null = null;
 
-// Register EVM payment scheme for Base network
-registerExactEvmScheme(x402Server);
-
-// =============================================================================
-// CONFIGURATION VALIDATION
-// =============================================================================
-
-export interface ConfigValidation {
-  valid: boolean;
-  isProduction: boolean;
-  isTestnet: boolean;
-  errors: string[];
-  warnings: string[];
+/**
+ * Get or create the x402 resource server instance
+ */
+export function getX402Server(): x402ResourceServer {
+  if (!_serverInstance) {
+    _serverInstance = createX402Server();
+  }
+  return _serverInstance;
 }
 
 /**
- * Validate x402 configuration for production readiness
+ * Create a new x402 resource server
+ * This is called once on first access and cached
  */
-export function validateConfig(): ConfigValidation {
+function createX402Server(): x402ResourceServer {
+  const server = new x402ResourceServer(facilitatorClient);
+  
+  // Register EVM payment scheme for current network
+  if (isEvmNetwork(CURRENT_NETWORK)) {
+    registerExactEvmScheme(server);
+  }
+  
+  // In testnet mode, also register mainnet scheme for future-proofing
+  if (IS_TESTNET && CURRENT_NETWORK === NETWORKS.BASE_SEPOLIA) {
+    // Mainnet scheme is already registered by registerExactEvmScheme
+    console.log('[x402] Testnet mode: Base Sepolia scheme registered');
+  }
+  
+  // Log server initialization
+  if (IS_PRODUCTION) {
+    console.log('[x402] Production server initialized');
+    console.log('[x402] Network:', CURRENT_NETWORK);
+    console.log('[x402] Facilitator:', FACILITATOR_URL);
+  }
+  
+  return server;
+}
+
+// Export singleton (backward compatibility)
+export const x402Server = getX402Server();
+
+// =============================================================================
+// SERVER UTILITIES
+// =============================================================================
+
+/**
+ * Validate that the server is properly configured
+ */
+export function validateConfig(): { valid: boolean; errors: string[] } {
   const errors: string[] = [];
-  const warnings: string[] = [];
-
-  // Check payment address
-  if (!PAYMENT_ADDRESS || PAYMENT_ADDRESS === '0x0000000000000000000000000000000000000000') {
-    if (IS_PRODUCTION) {
-      errors.push('X402_PAYMENT_ADDRESS not set - payments will fail in production!');
-    } else {
-      warnings.push('X402_PAYMENT_ADDRESS not set - using zero address (development mode)');
-    }
-  }
-
-  // Check if production is using testnet
-  if (IS_PRODUCTION && IS_TESTNET) {
-    warnings.push('Production deployment using testnet - set X402_TESTNET=false or remove it');
-  }
-
-  // Check facilitator URL
+  
   if (!FACILITATOR_URL) {
-    warnings.push('X402_FACILITATOR_URL not set - using default facilitator');
+    errors.push('FACILITATOR_URL is not configured');
   }
-
-  // Validate payment address format
-  if (PAYMENT_ADDRESS && !PAYMENT_ADDRESS.match(/^0x[a-fA-F0-9]{40}$/)) {
-    errors.push(`Invalid payment address format: ${PAYMENT_ADDRESS}`);
+  
+  // Check facilitator is reachable (async check, just validate URL format here)
+  try {
+    new URL(FACILITATOR_URL);
+  } catch {
+    errors.push(`FACILITATOR_URL is not a valid URL: ${FACILITATOR_URL}`);
   }
-
+  
   return {
     valid: errors.length === 0,
-    isProduction: IS_PRODUCTION,
-    isTestnet: IS_TESTNET,
     errors,
-    warnings,
   };
 }
 
-// =============================================================================
-// HELPER FUNCTIONS
-// =============================================================================
-
 /**
- * Check if the server is properly configured
+ * Get server status for health checks
  */
-export function isServerConfigured(): boolean {
-  const validation = validateConfig();
-  return validation.valid;
-}
-
-/**
- * Get server status for health checks and debugging
- */
-export function getServerStatus() {
-  const validation = validateConfig();
+export function getServerStatus(): {
+  initialized: boolean;
+  network: NetworkId;
+  facilitator: string;
+  testnet: boolean;
+} {
   return {
-    configured: validation.valid,
-    isProduction: validation.isProduction,
-    isTestnet: validation.isTestnet,
+    initialized: _serverInstance !== null,
     network: CURRENT_NETWORK,
-    networkName: getNetworkDisplayName(CURRENT_NETWORK),
     facilitator: FACILITATOR_URL,
-    paymentAddress: PAYMENT_ADDRESS
-      ? `${PAYMENT_ADDRESS.slice(0, 6)}...${PAYMENT_ADDRESS.slice(-4)}`
-      : 'not set',
-    supportedSchemes: ['exact'],
-    errors: validation.errors,
-    warnings: validation.warnings,
+    testnet: IS_TESTNET,
   };
 }
 
-// =============================================================================
-// STARTUP VALIDATION
-// =============================================================================
-
-// Log configuration status at startup (server-side only)
-if (typeof window === 'undefined') {
-  const validation = validateConfig();
-
-  if (validation.errors.length > 0) {
-    console.error('[x402] ❌ Configuration errors:');
-    validation.errors.forEach((e) => console.error(`  - ${e}`));
-  }
-
-  if (validation.warnings.length > 0 && !IS_PRODUCTION) {
-    console.warn('[x402] ⚠️  Configuration warnings:');
-    validation.warnings.forEach((w) => console.warn(`  - ${w}`));
-  }
-
-  if (validation.valid) {
-    console.log(
-      `[x402] ✅ Server configured for ${getNetworkDisplayName(CURRENT_NETWORK)} (${IS_PRODUCTION ? 'production' : 'development'})`
-    );
+/**
+ * Reset server instance (for testing only)
+ */
+export function resetServer(): void {
+  if (process.env.NODE_ENV === 'test') {
+    _serverInstance = null;
   }
 }

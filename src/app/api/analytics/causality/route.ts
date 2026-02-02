@@ -5,7 +5,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { checkRateLimit, rateLimitResponse } from '@/lib/rate-limit';
+import { checkRateLimit, getRateLimitErrorResponse } from '@/lib/ratelimit';
 import { 
   analyzeCausality, 
   assessNewsImpact, 

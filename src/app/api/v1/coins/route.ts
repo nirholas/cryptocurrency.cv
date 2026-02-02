@@ -9,25 +9,35 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { hybridAuthMiddleware } from '@/lib/x402';
+import { ApiError } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
+import { validateQuery } from '@/lib/validation-middleware';
+import { v1CoinsQuerySchema } from '@/lib/schemas';
 
 const ENDPOINT = '/api/v1/coins';
 
 export async function GET(request: NextRequest) {
+  const logger = createRequestLogger(request);
+  const startTime = Date.now();
+
   // Check authentication (API key or x402 payment)
   const authResponse = await hybridAuthMiddleware(request, ENDPOINT);
   if (authResponse) return authResponse;
 
-  // Parse query parameters
-  const searchParams = request.nextUrl.searchParams;
-  const page = Math.max(1, parseInt(searchParams.get('page') || '1'));
-  const perPage = Math.min(250, Math.max(1, parseInt(searchParams.get('per_page') || '100')));
-  const order = searchParams.get('order') || 'market_cap_desc';
-  const ids = searchParams.get('ids');
-  const sparkline = searchParams.get('sparkline') === 'true';
+  // Validate query parameters using Zod schema
+  const validation = validateQuery(request, v1CoinsQuerySchema);
+  if (!validation.success) {
+    return validation.error;
+  }
+  
+  const { page, per_page, order, ids, sparkline } = validation.data;
+  const sparklineBoolean = sparkline === 'true';
 
   try {
+    logger.info('Fetching coins data', { page, per_page, order });
+
     // Build CoinGecko API URL
-    let url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=${order}&per_page=${perPage}&page=${page}&sparkline=${sparkline}&price_change_percentage=24h,7d,30d`;
+    let url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=${order}&per_page=${per_page}&page=${page}&sparkline=${sparklineBoolean}&price_change_percentage=24h,7d,30d`;
 
     if (ids) {
       url += `&ids=${ids}`;
@@ -47,6 +57,8 @@ export async function GET(request: NextRequest) {
 
     const data = await response.json();
 
+    logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
+
     return NextResponse.json(
       {
         success: true,
@@ -54,10 +66,10 @@ export async function GET(request: NextRequest) {
         meta: {
           endpoint: ENDPOINT,
           page,
-          perPage,
+          perPage: per_page,
           count: data.length,
           total: 10000, // Approximate total coins
-          hasMore: data.length === perPage,
+          hasMore: data.length === per_page,
           timestamp: new Date().toISOString(),
         },
       },
@@ -69,15 +81,7 @@ export async function GET(request: NextRequest) {
       }
     );
   } catch (error) {
-    console.error('[API] /v1/coins error:', error);
-
-    return NextResponse.json(
-      {
-        success: false,
-        error: 'Failed to fetch coin data',
-        message: error instanceof Error ? error.message : 'Unknown error',
-      },
-      { status: 502 }
-    );
+    logger.error('Failed to fetch coin data', error);
+    return ApiError.upstream('CoinGecko', error);
   }
 }

@@ -1767,7 +1767,7 @@ test('renders price alerts', () => {
 
 ## Related Documentation
 
-- [Architecture Overview](../ARCHITECTURE.md)
+- [Architecture Overview](ARCHITECTURE.md)
 - [API Reference](API.md)
-- [Hooks](./HOOKS.md)
-- [Contributing Guide](../CONTRIBUTING.md)
+- [Hooks](HOOKS.md)
+- [Contributing Guide](CONTRIBUTING.md)

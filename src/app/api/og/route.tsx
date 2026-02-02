@@ -125,7 +125,7 @@ export async function GET(request: NextRequest) {
             </span>
             <div style={{ display: 'flex', gap: '8px' }}>
               <span style={{ color: '#22c55e', fontSize: '18px' }}>● LIVE</span>
-              <span style={{ color: '#64748b', fontSize: '18px' }}>7 Sources</span>
+              <span style={{ color: '#64748b', fontSize: '18px' }}>130+ Sources</span>
             </div>
           </div>
         </div>

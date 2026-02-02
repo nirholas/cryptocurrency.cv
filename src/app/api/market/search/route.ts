@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { searchCoins, SearchResult } from '@/lib/market-data';
+import { ApiError, type ApiErrorResponse } from '@/lib/api-error';
+import { createRequestLogger } from '@/lib/logger';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -18,20 +20,22 @@ export const revalidate = 300;
  */
 export async function GET(
   request: NextRequest
-): Promise<NextResponse<SearchResult | { error: string; message: string }>> {
+): Promise<NextResponse> {
+  const logger = createRequestLogger(request);
+  const startTime = Date.now();
   const searchParams = request.nextUrl.searchParams;
   const query = searchParams.get('q') || '';
   
   if (!query || query.length < 2) {
-    return NextResponse.json(
-      { error: 'Invalid query', message: 'Search query must be at least 2 characters' },
-      { status: 400 }
-    );
+    logger.error('Invalid search query', { query });
+    return ApiError.badRequest('Search query must be at least 2 characters');
   }
   
   try {
+    logger.info('Searching coins', { query });
     const data = await searchCoins(query);
     
+    logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
     return NextResponse.json(data, {
       headers: {
         'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
@@ -39,10 +43,7 @@ export async function GET(
       },
     });
   } catch (error) {
-    console.error('Error in search route:', error);
-    return NextResponse.json(
-      { error: 'Search failed', message: String(error) },
-      { status: 500 }
-    );
+    logger.error('Search failed', error);
+    return ApiError.internal('Search failed', error);
   }
 }

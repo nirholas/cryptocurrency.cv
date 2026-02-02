@@ -4,6 +4,8 @@ import {
   getCoinPaprikaGlobal,
   getCoinLoreGlobal,
 } from '@/lib/external-apis';
+import { ApiError } from '@/lib/api-error';
+import { logger } from '@/lib/logger';
 
 export const runtime = 'edge';
 export const revalidate = 60;
@@ -18,8 +20,14 @@ export const revalidate = 60;
  * GET /api/v1/global
  */
 export async function GET() {
+  const startTime = Date.now();
+
   try {
+    logger.info('Fetching global market data');
+
     const globalData = await getAggregatedGlobalData();
+
+    logger.info('Global market data fetched successfully', { duration: Date.now() - startTime });
 
     return NextResponse.json(
       {
@@ -45,11 +53,8 @@ export async function GET() {
       }
     );
   } catch (error) {
-    console.error('Error fetching global data:', error);
-    return NextResponse.json(
-      { error: 'Failed to fetch global data', message: String(error) },
-      { status: 500 }
-    );
+    logger.error('Failed to fetch global data', error);
+    return ApiError.internal('Failed to fetch global data', error);
   }
 }
 

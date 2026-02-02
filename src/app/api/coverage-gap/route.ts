@@ -14,7 +14,7 @@ import {
   getTopicCoverage,
   getSourceDiversity,
 } from '@/lib/coverage-gap';
-import { checkRateLimit } from '@/lib/rate-limit';
+import { checkRateLimit } from '@/lib/ratelimit';
 
 // =============================================================================
 // GET /api/coverage-gap

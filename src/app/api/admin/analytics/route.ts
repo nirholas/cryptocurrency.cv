@@ -1,10 +1,13 @@
 /**
  * @fileoverview API Key Analytics Endpoint
  * Provides insights on API usage patterns, top consumers, and trends
+ * 
+ * Uses Vercel KV for persistent storage across Edge instances.
+ * Falls back to in-memory for development without KV configured.
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { isAdminAuthorized, requireAdminAuth } from '@/lib/admin-auth';
+import { requireAdminAuth } from '@/lib/admin-auth';
 
 interface UsageRecord {
   apiKey: string;
@@ -14,18 +17,62 @@ interface UsageRecord {
   statusCode: number;
 }
 
-interface KeyAnalytics {
-  apiKey: string;
-  totalRequests: number;
-  avgResponseTime: number;
-  errorRate: number;
-  topEndpoints: { endpoint: string; count: number }[];
-  requestsByHour: { hour: number; count: number }[];
-  lastSeen: string;
+// In-memory fallback for development
+const memoryStore: UsageRecord[] = [];
+let kvAvailable: boolean | null = null;
+
+// Helper to check if KV is available
+async function isKvAvailable(): Promise<boolean> {
+  if (kvAvailable !== null) return kvAvailable;
+  
+  try {
+    if (!process.env.KV_REST_API_URL || !process.env.KV_REST_API_TOKEN) {
+      kvAvailable = false;
+      return false;
+    }
+    const { kv } = await import('@vercel/kv');
+    await kv.ping();
+    kvAvailable = true;
+    return true;
+  } catch {
+    kvAvailable = false;
+    return false;
+  }
 }
 
-// Mock usage data store (in production, use Redis or database)
-const usageStore: UsageRecord[] = [];
+// Get usage records from KV or memory
+async function getUsageRecords(startTime: number, apiKey?: string | null): Promise<UsageRecord[]> {
+  if (await isKvAvailable()) {
+    try {
+      const { kv } = await import('@vercel/kv');
+      // Get all keys matching the pattern
+      const keys = await kv.keys('analytics:usage:*');
+      if (keys.length === 0) return [];
+      
+      const records: UsageRecord[] = [];
+      // Batch fetch in groups of 100
+      for (let i = 0; i < keys.length; i += 100) {
+        const batch = keys.slice(i, i + 100);
+        const values = await kv.mget<UsageRecord[]>(...batch);
+        values.forEach((record) => {
+          if (record && record.timestamp >= startTime) {
+            if (!apiKey || record.apiKey === apiKey) {
+              records.push(record);
+            }
+          }
+        });
+      }
+      return records;
+    } catch (error) {
+      console.warn('[Analytics] KV fetch failed, using memory:', error);
+    }
+  }
+  
+  // Fallback to memory
+  return memoryStore.filter(
+    (r) => r.timestamp >= startTime && (!apiKey || r.apiKey === apiKey)
+  );
+}
 
 export async function GET(request: NextRequest) {
   // Verify admin authentication
@@ -49,10 +96,8 @@ export async function GET(request: NextRequest) {
 
   const startTime = now - periodMs;
 
-  // Filter usage records
-  const filteredRecords = usageStore.filter(
-    (r) => r.timestamp >= startTime && (!apiKey || r.apiKey === apiKey)
-  );
+  // Get usage records from KV or memory
+  const filteredRecords = await getUsageRecords(startTime, apiKey);
 
   // Aggregate analytics
   const analytics = aggregateAnalytics(filteredRecords, period);
@@ -170,12 +215,26 @@ function aggregateAnalytics(records: UsageRecord[], period: string) {
   };
 }
 
-// Record usage (called from middleware)
-export function recordUsage(record: UsageRecord) {
-  usageStore.push(record);
+// Record usage - stores in KV for persistence across Edge instances
+export async function recordUsage(record: UsageRecord): Promise<void> {
+  const key = `analytics:usage:${record.timestamp}:${Math.random().toString(36).slice(2, 8)}`;
+  const ttl = 7 * 24 * 60 * 60; // 7 days in seconds
+  
+  if (await isKvAvailable()) {
+    try {
+      const { kv } = await import('@vercel/kv');
+      await kv.set(key, record, { ex: ttl });
+      return;
+    } catch (error) {
+      console.warn('[Analytics] KV write failed, using memory:', error);
+    }
+  }
+  
+  // Fallback to memory
+  memoryStore.push(record);
   // Keep only last 7 days of data
   const cutoff = Date.now() - 7 * 24 * 60 * 60 * 1000;
-  while (usageStore.length > 0 && usageStore[0].timestamp < cutoff) {
-    usageStore.shift();
+  while (memoryStore.length > 0 && memoryStore[0].timestamp < cutoff) {
+    memoryStore.shift();
   }
 }

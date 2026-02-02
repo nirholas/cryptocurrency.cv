@@ -12,8 +12,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { withX402 } from '@x402/next';
-import { x402Server, getRouteConfig } from '@/lib/x402-server';
+import { withX402 } from '@/lib/x402';
 import { getTopCoins, TokenPrice } from '@/lib/market-data';
 
 export const runtime = 'nodejs';
@@ -152,4 +151,4 @@ async function handler(request: NextRequest): Promise<NextResponse<ScreenerRespo
  * - between: Value between [min, max]
  * - contains: String contains (case-insensitive)
  */
-export const POST = withX402(handler, getRouteConfig('/api/premium/analytics/screener'), x402Server);
+export const POST = withX402('/api/premium/analytics/screener', handler);

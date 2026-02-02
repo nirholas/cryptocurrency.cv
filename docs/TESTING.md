@@ -55,7 +55,7 @@ npm run test:coverage
 
 ### Configuration
 
-See [vitest.config.ts](../vitest.config.ts):
+See [vitest.config.ts](https://github.com/nirholas/free-crypto-news/blob/main/vitest.config.ts):
 
 ```typescript
 import { defineConfig } from 'vitest/config';
@@ -267,7 +267,7 @@ npm run test:e2e:headed
 
 ### Configuration
 
-See [playwright.config.ts](../playwright.config.ts):
+See [playwright.config.ts](https://github.com/nirholas/free-crypto-news/blob/main/playwright.config.ts):
 
 ```typescript
 import { defineConfig, devices } from '@playwright/test';

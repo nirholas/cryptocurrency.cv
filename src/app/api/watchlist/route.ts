@@ -35,7 +35,7 @@ async function getUserId(request?: NextRequest): Promise<string> {
     // First, try API key from headers (for authenticated API access)
     if (request) {
       const apiKey = request.headers.get('X-API-Key') || request.headers.get('x-api-key');
-      if (apiKey && apiKey.startsWith('fcn_')) {
+      if (apiKey && apiKey.startsWith('cda_')) {
         // Use a hash of the API key prefix as user ID for privacy
         const keyPrefix = apiKey.substring(0, 20);
         return `api:${Buffer.from(keyPrefix).toString('base64').substring(0, 16)}`;

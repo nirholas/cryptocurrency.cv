@@ -7,11 +7,11 @@ Documentation for the Admin Dashboard and analytics system.
 ## Table of Contents
 
 - [Overview](#overview)
-- [Access & Authentication](#access--authentication)
+- [Access & Authentication](#access-authentication)
 - [Dashboard Features](#dashboard-features)
 - [API Endpoints](#api-endpoints)
 - [Analytics Tracking](#analytics-tracking)
-- [Alerts & Monitoring](#alerts--monitoring)
+- [Alerts & Monitoring](#alerts-monitoring)
 
 ---
 

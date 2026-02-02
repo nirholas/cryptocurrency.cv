@@ -1,6 +1,6 @@
 /**
- * Editor's Picks Sidebar Widget
- * Curated articles from different sources
+ * Trending Stories Sidebar Widget
+ * Top trending articles from different sources based on reputation and recency
  */
 
 import Link from 'next/link';
@@ -60,14 +60,14 @@ export default function EditorsPicks({ articles }: EditorsPicksProps) {
     <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-card dark:shadow-none dark:border dark:border-gray-800 p-6">
       {/* Header */}
       <div className="flex items-center gap-2 mb-5">
-        <span className="text-xl" aria-hidden="true">⭐</span>
+        <span className="text-xl" aria-hidden="true">🔥</span>
         <h3 className="font-bold text-lg text-gray-900 dark:text-white">
-          Editor's Picks
+          Trending
         </h3>
       </div>
 
       {/* Picks List */}
-      <div className="space-y-4" role="list" aria-label="Editor's picks">
+      <div className="space-y-4" role="list" aria-label="Trending stories">
         {picks.map((article, index) => {
           const articleId = article.id || generateArticleId(article.link);
           const articleSlug = generateArticleSlug(article.title, article.pubDate);

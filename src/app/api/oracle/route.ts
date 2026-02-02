@@ -223,7 +223,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     let isAuthenticated = false;
     let userId = validation.data.userId;
 
-    if (apiKey && apiKey.startsWith('fcn_')) {
+    if (apiKey && apiKey.startsWith('cda_')) {
       // Valid API key format - consider authenticated
       isAuthenticated = true;
       userId = userId || `api_${apiKey.substring(0, 12)}`;
