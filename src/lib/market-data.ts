@@ -2074,7 +2074,7 @@ export async function getDerivativesTickers(): Promise<DerivativeTicker[]> {
 // =============================================================================
 
 export function formatPrice(price: number | null | undefined): string {
-  if (price == null) return '$0.00';
+  if (price == null || typeof price !== 'number' || isNaN(price)) return '$0.00';
   if (price >= 1000) {
     return '$' + price.toLocaleString('en-US', { maximumFractionDigits: 0 });
   }
@@ -2085,7 +2085,7 @@ export function formatPrice(price: number | null | undefined): string {
 }
 
 export function formatNumber(num: number | null | undefined): string {
-  if (num == null) return '0';
+  if (num == null || typeof num !== 'number' || isNaN(num)) return '0';
   if (num >= 1e12) return (num / 1e12).toFixed(2) + 'T';
   if (num >= 1e9) return (num / 1e9).toFixed(2) + 'B';
   if (num >= 1e6) return (num / 1e6).toFixed(2) + 'M';
@@ -2094,7 +2094,7 @@ export function formatNumber(num: number | null | undefined): string {
 }
 
 export function formatPercent(num: number | null | undefined): string {
-  if (num == null) return '0.00%';
+  if (num == null || typeof num !== 'number' || isNaN(num) || typeof num !== 'number' || isNaN(num)) return '0.00%';
   const sign = num >= 0 ? '+' : '';
   return sign + num.toFixed(2) + '%';
 }
