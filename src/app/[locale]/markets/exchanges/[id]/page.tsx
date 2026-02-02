@@ -7,11 +7,26 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
-import { formatNumber, formatPrice } from '@/lib/market-data';
+import { formatNumber, formatPrice, getExchanges } from '@/lib/market-data';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { locales } from '@/i18n/config';
 
 export const revalidate = 300;
+
+/**
+ * Generate static params for all locale + exchange combinations
+ */
+export async function generateStaticParams() {
+  const exchanges = await getExchanges(50, 1);
+  
+  return locales.flatMap((locale) =>
+    exchanges.map((exchange) => ({
+      locale,
+      id: exchange.id,
+    }))
+  );
+}
 
 interface Ticker {
   base: string;

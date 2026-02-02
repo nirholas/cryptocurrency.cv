@@ -131,6 +131,19 @@ export interface ArchiveV2Stats {
   daily_counts: Record<string, number>;
 }
 
+/**
+ * Get all archived article slugs for static page generation
+ * Returns slugs from KV archive for SEO
+ */
+export async function getAllArchivedArticleIds(): Promise<string[]> {
+  try {
+    const { getAllArticleSlugs } = await import('./archive-service');
+    return await getAllArticleSlugs(5000);
+  } catch {
+    return [];
+  }
+}
+
 export interface ArchiveV2Index {
   bySource: Record<string, string[]>;
   byTicker: Record<string, string[]>;
@@ -509,53 +522,59 @@ export function isLegacyId(identifier: string): boolean {
 
 /**
  * Get a single article by ID or slug
- * Supports both legacy hash IDs (e.g., "3a9f8b2c1d4e5f67") and SEO slugs (e.g., "bitcoin-hits-ath-2026-01-24")
- * First checks the archive, then falls back to live RSS feeds
+ * Uses KV archive as primary source, live RSS as fallback for new articles
  */
 export async function getArticleById(idOrSlug: string): Promise<EnrichedArticle | null> {
   try {
+    // Primary: KV-based archive service
+    const { getArticleById: kvGetById, getArticleBySlug: kvGetBySlug } = await import('./archive-service');
+    
     const isLegacy = isLegacyId(idOrSlug);
-    const { baseSlug, date } = !isLegacy ? parseArticleSlug(idOrSlug) : { baseSlug: '', date: undefined };
+    const kvArticle = isLegacy 
+      ? await kvGetById(idOrSlug)
+      : await kvGetBySlug(idOrSlug);
     
-    // Helper to match article by ID or slug
-    const matchArticle = (article: EnrichedArticle): boolean => {
-      if (isLegacy) {
-        return article.id === idOrSlug;
-      }
-      // Match by slug (with or without date)
-      if (article.slug === idOrSlug) return true;
-      // Generate slug from title and try to match
-      const generatedSlug = generateArticleSlug(article.title, article.pub_date || article.first_seen);
-      if (generatedSlug === idOrSlug) return true;
-      // Try matching base slug (without date)
-      const generatedBaseSlug = generateArticleSlug(article.title);
-      if (date && generatedBaseSlug === baseSlug) {
-        const articleDate = new Date(article.pub_date || article.first_seen).toISOString().split('T')[0];
-        return articleDate === date;
-      }
-      return false;
-    };
+    if (kvArticle) {
+      // Convert ArchivedArticle to EnrichedArticle format
+      return {
+        id: kvArticle.id,
+        slug: kvArticle.slug,
+        schema_version: '2.0.0',
+        title: kvArticle.title,
+        link: kvArticle.link,
+        canonical_link: kvArticle.canonicalLink,
+        description: kvArticle.description,
+        source: kvArticle.source,
+        source_key: kvArticle.sourceKey,
+        category: kvArticle.category,
+        pub_date: kvArticle.pubDate,
+        first_seen: kvArticle.archivedAt,
+        last_seen: kvArticle.lastSeen,
+        fetch_count: kvArticle.fetchCount,
+        tickers: kvArticle.tickers,
+        entities: kvArticle.entities,
+        tags: kvArticle.tags,
+        sentiment: kvArticle.sentiment,
+        market_context: kvArticle.marketContext ? {
+          btc_price: kvArticle.marketContext.btcPrice,
+          eth_price: kvArticle.marketContext.ethPrice,
+          fear_greed_index: kvArticle.marketContext.fearGreedIndex,
+        } : null,
+        content_hash: kvArticle.contentHash,
+        meta: {
+          word_count: kvArticle.wordCount,
+          has_numbers: /\d/.test(kvArticle.title),
+          is_breaking: kvArticle.isBreaking,
+          is_opinion: kvArticle.isOpinion,
+        },
+      };
+    }
     
-    // Get current month's articles from archive
-    const now = new Date();
-    const yearMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
-    const articles = await getArchiveV2Month(yearMonth);
-    
-    const article = articles.find(matchArticle);
-    if (article) return article;
-    
-    // Try previous month if not found
-    const prevMonth = new Date(now.getFullYear(), now.getMonth() - 1, 1);
-    const prevYearMonth = `${prevMonth.getFullYear()}-${String(prevMonth.getMonth() + 1).padStart(2, '0')}`;
-    const prevArticles = await getArchiveV2Month(prevYearMonth);
-    
-    const archivedArticle = prevArticles.find(matchArticle);
-    if (archivedArticle) return archivedArticle;
-    
-    // Fallback: fetch from live RSS feeds and find by matching ID or slug
+    // Fallback for very new articles: check live RSS
+    const isLegacyId2 = isLegacyId(idOrSlug);
     const liveNews = await getLatestNews(100);
     const liveArticle = liveNews.articles.find(a => {
-      if (isLegacy) {
+      if (isLegacyId2) {
         return generateArticleId(a.link) === idOrSlug;
       }
       const liveSlug = generateArticleSlug(a.title, a.pubDate);
@@ -563,7 +582,6 @@ export async function getArticleById(idOrSlug: string): Promise<EnrichedArticle 
     });
     
     if (liveArticle) {
-      // Convert NewsArticle to EnrichedArticle format
       return newsArticleToEnriched(liveArticle);
     }
     

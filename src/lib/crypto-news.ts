@@ -131,6 +131,7 @@ const RSS_SOURCES = {
     name: 'NFT Evening',
     url: 'https://nftevening.com/feed/',
     category: 'nft',
+    skipCache: true, // Feed exceeds 2MB Next.js cache limit
   },
   
   // ═══════════════════════════════════════════════════════════════
@@ -571,6 +572,7 @@ const RSS_SOURCES = {
     name: 'DappRadar Blog',
     url: 'https://dappradar.com/blog/feed',
     category: 'nft',
+    skipCache: true, // Feed exceeds 2MB Next.js cache limit
   },
   
   // ═══════════════════════════════════════════════════════════════
@@ -691,6 +693,7 @@ const RSS_SOURCES = {
     name: 'VanEck Blog',
     url: 'https://www.vaneck.com/us/en/blogs/rss/',
     category: 'etf',
+    skipCache: true, // Feed exceeds 2MB Next.js cache limit (~18MB)
   },
   coinshares_research: {
     name: 'CoinShares Research',
@@ -1337,14 +1340,18 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout
       
-      const response = await fetch(source.url, {
+      // Use no-store for large feeds that exceed Next.js 2MB cache limit
+      const fetchOptions: RequestInit & { next?: { revalidate: number } } = {
         headers: {
           'Accept': 'application/rss+xml, application/xml, text/xml',
           'User-Agent': 'FreeCryptoNews/1.0 (github.com/nirholas/free-crypto-news)',
         },
         signal: controller.signal,
-        next: { revalidate: 60 }, // Reduced to 60s
-      });
+        ...(source.skipCache
+          ? { cache: 'no-store' as const }
+          : { next: { revalidate: 60 } }), // 60s revalidation for normal feeds
+      };
+      const response = await fetch(source.url, fetchOptions);
       
       clearTimeout(timeoutId);
       
@@ -1484,13 +1491,13 @@ async function fetchWithConcurrency<T>(
  * Fetch from multiple sources in parallel with concurrency limit
  * Now includes both RSS feeds and API sources for better reliability
  */
-async function fetchMultipleSources(sourceKeys: SourceKey[]): Promise<NewsArticle[]> {
-  // Fetch RSS and API sources in parallel
+async function fetchMultipleSources(sourceKeys: SourceKey[], includeApiSources: boolean = true): Promise<NewsArticle[]> {
+  // Fetch RSS and optionally API sources in parallel
   const [rssArticles, apiArticles] = await Promise.all([
     // RSS feeds with concurrency limit
     fetchWithConcurrency(sourceKeys, fetchFeed, 15),
-    // API sources (always fetch these as they're more reliable)
-    fetchAllApiSources(),
+    // Only fetch API sources if not filtering by specific RSS source
+    includeApiSources ? fetchAllApiSources() : Promise.resolve([]),
   ]);
   
   // Combine and deduplicate by title similarity
@@ -1547,8 +1554,12 @@ export async function getLatestNews(
   const normalizedLimit = Math.min(Math.max(1, limit), 50);
   
   let sourceKeys: SourceKey[];
+  let includeApiSources = true;
+  
   if (source && source in RSS_SOURCES) {
     sourceKeys = [source as SourceKey];
+    // Don't mix in API sources when filtering by a specific RSS source
+    includeApiSources = false;
   } else if (options?.category) {
     // Filter sources by category
     sourceKeys = (Object.keys(RSS_SOURCES) as SourceKey[]).filter(
@@ -1568,7 +1579,7 @@ export async function getLatestNews(
     sourceKeys = Object.keys(RSS_SOURCES) as SourceKey[];
   }
   
-  let articles = await fetchMultipleSources(sourceKeys);
+  let articles = await fetchMultipleSources(sourceKeys, includeApiSources);
   
   // Apply date filtering
   if (options?.from || options?.to) {

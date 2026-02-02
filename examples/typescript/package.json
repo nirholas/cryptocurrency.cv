@@ -1,0 +1,42 @@
+{
+  "name": "@crypto-news/typescript-sdk",
+  "version": "1.0.0",
+  "description": "TypeScript SDK for Free Crypto News API",
+  "main": "dist/sdk.js",
+  "types": "dist/sdk.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nirholas/free-crypto-news.git"
+  },
+  "keywords": [
+    "crypto",
+    "news",
+    "api",
+    "sdk",
+    "typescript",
+    "bitcoin",
+    "ethereum"
+  ],
+  "author": "Free Crypto News Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

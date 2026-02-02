@@ -1,0 +1,42 @@
+{
+  "name": "@crypto-news/examples",
+  "version": "1.0.0",
+  "description": "Free Crypto News API - JavaScript/Node.js Examples",
+  "main": "index.js",
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nirholas/free-crypto-news.git"
+  },
+  "keywords": [
+    "crypto",
+    "news",
+    "api",
+    "bitcoin",
+    "ethereum",
+    "defi",
+    "nft",
+    "market-data",
+    "sentiment-analysis"
+  ],
+  "author": "Free Crypto News Team",
+  "license": "MIT",
+  "scripts": {
+    "news": "node news.js",
+    "ai": "node ai.js",
+    "market": "node market.js",
+    "trading": "node trading.js",
+    "streaming": "node streaming.js",
+    "all": "node news.js && node ai.js && node market.js && node trading.js"
+  },
+  "dependencies": {
+    "eventsource": "^2.0.2",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -6,7 +6,7 @@ Connect Free Crypto News to your favorite tools and platforms. **100% FREE** - n
 
 | Category | Integrations | Description |
 |----------|--------------|-------------|
-| **AI Assistants** | MCP Server, ChatGPT Plugin | 14 tools for Claude/ChatGPT |
+| **AI Assistants** | MCP Server, ChatGPT Plugin | 40 tools for Claude/ChatGPT |
 | **SDKs** | 8 languages | Python, JS, TS, Go, Rust, Ruby, PHP, React |
 | **Desktop** | Raycast, Alfred | macOS productivity tools |
 | **Browser** | Chrome Extension | News in your browser toolbar |
@@ -26,7 +26,7 @@ Access DeFi TVL, on-chain metrics, social sentiment, NFT data, and more from Def
 
 | Integration | Description | Tools | Setup Time |
 |-------------|-------------|-------|------------|
-| [MCP Server](mcp.md) | Claude Desktop & ChatGPT Developer Mode | 14 tools | 5 min |
+| [MCP Server](mcp.md) | Claude Desktop & ChatGPT Developer Mode | 40 tools | 5 min |
 | [ChatGPT Plugin](chatgpt.md) | ChatGPT Actions/Plugin | 6 endpoints | 10 min |
 
 ## SDKs (8 Languages)
@@ -49,7 +49,8 @@ Access DeFi TVL, on-chain metrics, social sentiment, NFT data, and more from Def
 | [Browser Extension](extension.md) | Chrome/Firefox extension | 2 min |
 | [Alfred Workflow](alfred.md) | macOS Alfred integration | 2 min |
 | [Raycast](raycast.md) | macOS Raycast commands | 2 min |
-| [CLI](https://github.com/nirholas/free-crypto-news/tree/main/cli) | Terminal interface | 1 min |
+| [CLI](cli.md) | Terminal interface | 1 min |
+| [Postman](postman.md) | API testing collection | 2 min |
 
 ## Embeddable Widgets
 
@@ -81,7 +82,7 @@ Access 10+ professional crypto data sources.
 </div>
 
 <div class="card" markdown>
-### :robot: MCP Server
+### :robot: MCP Server40
 Connect Claude Desktop to real-time crypto news with 14 tools.
 
 [:material-arrow-right: Setup Guide](mcp.md)

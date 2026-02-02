@@ -26,6 +26,8 @@
     "i18n:translate": "npx tsx scripts/i18n/translate.ts",
     "i18n:validate": "npx tsx scripts/i18n/validate.ts",
     "i18n:watch": "npx tsx scripts/i18n/watch.ts",
+    "docs:translate": "node scripts/translate-docs.js",
+    "docs:translate:api": "node scripts/translate-docs.js --file docs/API.md --locales zh-CN,es,de,ja,ko",
     "archive:collect": "node scripts/archive/collect.js",
     "archive:enhanced": "node scripts/archive/collect-enhanced.js",
     "archive:migrate": "node scripts/archive/migrate.js",
@@ -36,22 +38,12 @@
     "audit:ui": "playwright test e2e/ui-audit.spec.ts --project=chromium",
     "audit:ui:headed": "playwright test e2e/ui-audit.spec.ts --project=chromium --headed",
     "analyze": "ANALYZE=true next build",
-    "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "docs:install": "pip install -r docs/requirements.txt",
     "docs:dev": "mkdocs serve -a localhost:8000",
     "docs:build": "mkdocs build",
     "docs:deploy": "mkdocs gh-deploy --force"
-  },
-  "lint-staged": {
-    "*.{ts,tsx,js,jsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{json,yaml,yml,md}": [
-      "prettier --write"
-    ]
   },
   "keywords": [
     "crypto",
@@ -105,7 +97,7 @@
     "@storybook/addon-essentials": "^8.6.14",
     "@storybook/addon-interactions": "^8.6.14",
     "@storybook/addon-links": "^8.6.14",
-    "@storybook/nextjs": "^7.0.14",
+    "@storybook/nextjs": "^10.2.3",
     "@storybook/react": "^8.6.14",
     "@tailwindcss/postcss": "^4.1.18",
     "@testing-library/dom": "^10.4.1",
@@ -121,10 +113,8 @@
     "@vitejs/plugin-react": "^5.1.2",
     "@vitest/ui": "^4.0.17",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "husky": "^9.1.7",
     "jsdom": "^27.4.0",
     "lighthouse": "^13.0.1",
-    "lint-staged": "^16.2.7",
     "pa11y": "^9.0.1",
     "postcss": "^8.4.31",
     "storybook": "^8.6.14",

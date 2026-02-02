@@ -138,6 +138,92 @@
   --progress-bg: rgba(59, 130, 246, 0.3);
 }
 
+/* ============================================
+   STANDARDIZED ANIMATION UTILITIES
+   Use these classes for consistent timing
+   ============================================ */
+
+/* Transition durations - use instead of arbitrary values */
+.transition-fast {
+  transition-duration: var(--duration-fast); /* 150ms */
+}
+
+.transition-normal {
+  transition-duration: var(--duration-normal); /* 200ms */
+}
+
+.transition-slow {
+  transition-duration: var(--duration-slow); /* 300ms */
+}
+
+/* Pre-built transitions for common patterns */
+.transition-colors-fast {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--duration-fast);
+}
+
+.transition-transform-fast {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--duration-fast);
+}
+
+.transition-opacity-fast {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--duration-fast);
+}
+
+.transition-all-normal {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--duration-normal);
+}
+
+/* Entrance animations */
+.animate-enter {
+  animation: enter var(--duration-normal) ease-out forwards;
+}
+
+.animate-exit {
+  animation: exit var(--duration-fast) ease-in forwards;
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes exit {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Base Styles */
 html {
   scroll-behavior: smooth;

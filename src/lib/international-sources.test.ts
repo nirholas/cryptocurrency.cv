@@ -63,8 +63,8 @@ describe('International Sources', () => {
       expect(SPANISH_SOURCES.every((s) => s.language === 'es')).toBe(true);
     });
 
-    it('should have 75 total international sources', () => {
-      expect(INTERNATIONAL_SOURCES).toHaveLength(75);
+    it('should have 76 total international sources', () => {
+      expect(INTERNATIONAL_SOURCES).toHaveLength(76);
     });
 
     it('should have valid URLs for all sources', () => {
@@ -90,7 +90,7 @@ describe('International Sources', () => {
     it('should correctly map sources by region', () => {
       expect(SOURCES_BY_REGION['asia']).toHaveLength(30); // 9 Korean + 10 Chinese + 6 Japanese + 5 Hindi
       expect(SOURCES_BY_REGION['latam']).toHaveLength(10); // 5 Spanish + 5 Portuguese
-      expect(SOURCES_BY_REGION['europe']).toHaveLength(23); // 4 German + 4 French + 3 Russian + 3 Turkish + 3 Italian + 2 Dutch + 2 Polish
+      expect(SOURCES_BY_REGION['europe']).toHaveLength(23); // 4 German + 4 French + 3 Russian + 3 Turkish + 3 Italian + 3 Dutch + 3 Polish
       expect(SOURCES_BY_REGION['mena']).toHaveLength(6); // 2 Arabic + 4 Persian
       expect(SOURCES_BY_REGION['sea']).toHaveLength(7); // 3 Indonesian + 2 Vietnamese + 2 Thai
     });

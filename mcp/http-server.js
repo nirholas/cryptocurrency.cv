@@ -291,6 +291,235 @@ const tools = [
       readOnlyHint: true,
     },
   },
+  // Market Data Tools
+  {
+    name: 'get_market_data',
+    description: 'Get live cryptocurrency prices, market caps, volume, and 24h changes from CoinGecko. Use this when the user asks about prices or market data.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        coins: {
+          type: 'string',
+          description: 'Comma-separated coin IDs (e.g., "bitcoin,ethereum,solana")',
+          default: 'bitcoin,ethereum,solana',
+        },
+        currency: {
+          type: 'string',
+          description: 'Fiat currency for prices (usd, eur, gbp, etc.)',
+          default: 'usd',
+        },
+      },
+    },
+    annotations: {
+      readOnlyHint: true,
+    },
+  },
+  {
+    name: 'get_fear_greed_index',
+    description: 'Get the Crypto Fear & Greed Index. Measures market sentiment from 0 (Extreme Fear) to 100 (Extreme Greed). Use this when the user asks about market sentiment or Fear & Greed.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        days: {
+          type: 'number',
+          description: 'Number of days of historical data (1-365)',
+          default: 7,
+        },
+      },
+    },
+    annotations: {
+      readOnlyHint: true,
+    },
+  },
+  {
+    name: 'get_gas_prices',
+    description: 'Get current Ethereum gas prices (low, medium, high, base fee). Use this when the user asks about ETH gas or transaction fees.',
+    inputSchema: {
+      type: 'object',
+      properties: {},
+    },
+    annotations: {
+      readOnlyHint: true,
+    },
+  },
+  {
+    name: 'get_regulatory_news',
+    description: 'Get regulatory and legal news about crypto (SEC, CFTC, government, legislation). Use this when the user asks about regulation, laws, or government actions.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        region: {
+          type: 'string',
+          description: 'Filter by region: us, eu, asia, global',
+          enum: ['us', 'eu', 'asia', 'global'],
+        },
+        limit: {
+          type: 'number',
+          description: 'Maximum articles (1-30)',
+          default: 10,
+        },
+      },
+    },
+    annotations: {
+      readOnlyHint: true,
+    },
+  },
+  {
+    name: 'get_whale_alerts',
+    description: 'Get large cryptocurrency transactions (whale movements). Use this when the user asks about whales, large transfers, or institutional moves.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        min_usd: {
+          type: 'number',
+          description: 'Minimum transaction value in USD',
+          default: 1000000,
+        },
+        limit: {
+          type: 'number',
+          description: 'Maximum alerts (1-50)',
+          default: 10,
+        },
+      },
+    },
+    annotations: {
+      readOnlyHint: true,
+    },
+  },
+  {
+    name: 'get_funding_rates',
+    description: 'Get perpetual futures funding rates across exchanges. Positive = longs pay shorts. Use this when the user asks about derivatives, funding, or leveraged positions.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        symbol: {
+          type: 'string',
+          description: 'Trading pair (e.g., BTCUSDT, ETHUSDT)',
+          default: 'BTCUSDT',
+        },
+      },
+    },
+    annotations: {
+      readOnlyHint: true,
+    },
+  },
+  {
+    name: 'get_liquidations',
+    description: 'Get recent liquidation data from crypto exchanges. Use this when the user asks about liquidations, margin calls, or "who got rekt".',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        hours: {
+          type: 'number',
+          description: 'Hours to look back (1-24)',
+          default: 24,
+        },
+      },
+    },
+    annotations: {
+      readOnlyHint: true,
+    },
+  },
+  {
+    name: 'get_defi_yields',
+    description: 'Get top DeFi yields from lending, staking, and liquidity protocols. Use this when the user asks about DeFi yields, APY, or earning opportunities.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        chain: {
+          type: 'string',
+          description: 'Blockchain to filter by (ethereum, bsc, polygon, arbitrum, solana, avalanche)',
+        },
+        limit: {
+          type: 'number',
+          description: 'Maximum results (1-50)',
+          default: 10,
+        },
+      },
+    },
+    annotations: {
+      readOnlyHint: true,
+    },
+  },
+  {
+    name: 'get_ai_market_brief',
+    description: 'Get an AI-generated market brief summarizing key events, sentiment, and what to watch. Use this when the user wants a quick market overview or summary.',
+    inputSchema: {
+      type: 'object',
+      properties: {},
+    },
+    annotations: {
+      readOnlyHint: true,
+    },
+  },
+  {
+    name: 'compare_coins',
+    description: 'Compare multiple cryptocurrencies side-by-side (price, market cap, volume, 24h change). Use this when the user wants to compare coins.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        coins: {
+          type: 'string',
+          description: 'Comma-separated coin IDs (e.g., "bitcoin,ethereum,solana")',
+        },
+      },
+      required: ['coins'],
+    },
+    annotations: {
+      readOnlyHint: true,
+    },
+  },
+  {
+    name: 'get_exchange_flows',
+    description: 'Get exchange inflow/outflow data for major cryptocurrencies. Inflow = selling pressure, Outflow = accumulation. Use this when the user asks about exchange flows or accumulation.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        coin: {
+          type: 'string',
+          description: 'Coin to check (bitcoin, ethereum)',
+          default: 'bitcoin',
+        },
+      },
+    },
+    annotations: {
+      readOnlyHint: true,
+    },
+  },
+  {
+    name: 'get_token_unlocks',
+    description: 'Get upcoming token unlock schedules. Large unlocks can create selling pressure. Use this when the user asks about token unlocks, vesting, or potential sell pressure.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        limit: {
+          type: 'number',
+          description: 'Maximum results (1-50)',
+          default: 10,
+        },
+      },
+    },
+    annotations: {
+      readOnlyHint: true,
+    },
+  },
+  {
+    name: 'get_social_sentiment',
+    description: 'Get social media sentiment analysis for cryptocurrencies (Twitter, Reddit mentions and sentiment). Use this when the user asks about social sentiment or community buzz.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        coin: {
+          type: 'string',
+          description: 'Coin to analyze (bitcoin, ethereum, solana, etc.)',
+          default: 'bitcoin',
+        },
+      },
+    },
+    annotations: {
+      readOnlyHint: true,
+    },
+  },
 ];
 
 // Build API URL from tool name and arguments
@@ -324,6 +553,32 @@ function buildUrl(name, args = {}) {
       return `${API_BASE}/api/origins?limit=${args.limit || 10}${args.search ? `&q=${encodeURIComponent(args.search)}` : ''}${args.source_type ? `&source_type=${args.source_type}` : ''}`;
     case 'get_portfolio_news':
       return `${API_BASE}/api/portfolio?coins=${encodeURIComponent(args.coins || '')}&limit=${args.limit || 10}&prices=${args.prices !== false}`;
+    case 'get_market_data':
+      return `${API_BASE}/api/market?coins=${encodeURIComponent(args.coins || 'bitcoin,ethereum,solana')}&currency=${args.currency || 'usd'}`;
+    case 'get_fear_greed_index':
+      return `${API_BASE}/api/fear-greed?days=${args.days || 7}`;
+    case 'get_gas_prices':
+      return `${API_BASE}/api/gas`;
+    case 'get_regulatory_news':
+      return `${API_BASE}/api/regulatory?limit=${args.limit || 10}${args.region ? `&region=${args.region}` : ''}`;
+    case 'get_whale_alerts':
+      return `${API_BASE}/api/whales?limit=${args.limit || 10}&min_usd=${args.min_usd || 1000000}`;
+    case 'get_funding_rates':
+      return `${API_BASE}/api/funding?symbol=${args.symbol || 'BTCUSDT'}`;
+    case 'get_liquidations':
+      return `${API_BASE}/api/liquidations?hours=${args.hours || 24}`;
+    case 'get_defi_yields':
+      return `${API_BASE}/api/yields?limit=${args.limit || 10}${args.chain ? `&chain=${args.chain}` : ''}`;
+    case 'get_ai_market_brief':
+      return `${API_BASE}/api/ai/brief`;
+    case 'compare_coins':
+      return `${API_BASE}/api/compare?coins=${encodeURIComponent(args.coins || '')}`;
+    case 'get_exchange_flows':
+      return `${API_BASE}/api/flows?coin=${args.coin || 'bitcoin'}`;
+    case 'get_token_unlocks':
+      return `${API_BASE}/api/unlocks?limit=${args.limit || 10}`;
+    case 'get_social_sentiment':
+      return `${API_BASE}/api/social?coin=${args.coin || 'bitcoin'}`;
     default:
       throw new Error(`Unknown tool: ${name}`);
   }
@@ -411,6 +666,109 @@ function formatResponse(name, data) {
     return {
       summary: data.summary,
       portfolio: data.portfolio,
+    };
+  }
+
+  // Handle market data
+  if (name === 'get_market_data') {
+    return {
+      currency: data.currency || 'usd',
+      coins: data.coins || data,
+    };
+  }
+
+  // Handle fear & greed
+  if (name === 'get_fear_greed_index') {
+    return {
+      current: data.current || data,
+      history: data.history,
+    };
+  }
+
+  // Handle gas prices
+  if (name === 'get_gas_prices') {
+    return {
+      network: 'ethereum',
+      prices: data,
+    };
+  }
+
+  // Handle regulatory news
+  if (name === 'get_regulatory_news') {
+    return {
+      region: data.region || 'global',
+      articles: data.articles || data,
+    };
+  }
+
+  // Handle whale alerts
+  if (name === 'get_whale_alerts') {
+    return {
+      alerts: data.alerts || data,
+      summary: data.summary,
+    };
+  }
+
+  // Handle funding rates
+  if (name === 'get_funding_rates') {
+    return {
+      symbol: data.symbol,
+      rates: data.rates || data,
+    };
+  }
+
+  // Handle liquidations
+  if (name === 'get_liquidations') {
+    return {
+      timeframe: data.timeframe,
+      total: data.total,
+      liquidations: data.liquidations || data,
+    };
+  }
+
+  // Handle DeFi yields
+  if (name === 'get_defi_yields') {
+    return {
+      chain: data.chain || 'all',
+      yields: data.yields || data,
+    };
+  }
+
+  // Handle AI market brief
+  if (name === 'get_ai_market_brief') {
+    return {
+      brief: data.brief || data,
+      generatedAt: data.generatedAt,
+    };
+  }
+
+  // Handle coin comparison
+  if (name === 'compare_coins') {
+    return {
+      comparison: data.comparison || data,
+    };
+  }
+
+  // Handle exchange flows
+  if (name === 'get_exchange_flows') {
+    return {
+      coin: data.coin,
+      flows: data.flows || data,
+    };
+  }
+
+  // Handle token unlocks
+  if (name === 'get_token_unlocks') {
+    return {
+      upcoming: data.unlocks || data,
+    };
+  }
+
+  // Handle social sentiment
+  if (name === 'get_social_sentiment') {
+    return {
+      coin: data.coin,
+      sentiment: data.sentiment || data,
     };
   }
 

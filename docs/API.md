@@ -27,6 +27,15 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
   - [GET /api/ai/brief](#get-apiaibrief)
   - [POST /api/ai/debate](#post-apiaidebate)
   - [POST /api/ai/counter](#post-apiaicounter)
+  - [GET /api/ai/synthesize](#get-apiaisynthesize)
+  - [GET /api/ai/explain](#get-apiaiexplain)
+  - [POST /api/ai/portfolio-news](#post-apiaiportfolio-news)
+  - [GET /api/ai/correlation](#get-apiaicorrelation)
+  - [GET /api/ai/flash-briefing](#get-apiaiflash-briefing)
+  - [GET /api/ai/narratives](#get-apiainarratives)
+  - [GET /api/ai/cross-lingual](#get-apiaicross-lingual)
+  - [GET /api/ai/source-quality](#get-apiaisource-quality)
+  - [GET /api/ai/research](#get-apiairesearch)
 - [Trading & Market APIs](#trading-market-apis)
   - [GET /api/arbitrage](#get-apiarbitrage)
   - [GET /api/signals](#get-apisignals)
@@ -119,8 +128,10 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
   - [GET /api/opml](#get-apiopml)
 - [Utility Endpoints](#utility-endpoints)
   - [GET /api/health](#get-apihealth)
+  - [GET /api/stats](#get-apistats)
   - [GET /api/cache](#get-apicache)
   - [DELETE /api/cache](#delete-apicache)
+  - [GET /status](#get-status)
 - [Tags & Discovery](#tags-discovery)
   - [GET /api/tags](#get-apitags)
   - [GET /api/tags/[slug]](#get-apitagsslug)
@@ -798,6 +809,487 @@ curl -X POST "https://news-crypto.vercel.app/api/ai/counter" \
       "mainVulnerability": "Underestimates institutional inertia"
     },
     "generatedAt": "2026-01-22T10:30:00Z"
+  }
+}
+```
+
+---
+
+### GET /api/ai/synthesize
+
+Auto-clusters duplicate news articles and synthesizes them into comprehensive summaries.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `limit` | integer | 5 | Number of stories to synthesize (max 10) |
+| `threshold` | float | 0.4 | Similarity threshold for clustering |
+
+**Example:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/ai/synthesize?limit=5"
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "synthesizedStories": [
+    {
+      "headline": "SEC Approves Spot Bitcoin ETF Applications",
+      "summary": "The SEC approved multiple spot Bitcoin ETF applications from major asset managers...",
+      "keyFacts": ["11 ETFs approved simultaneously", "BlackRock's iShares leads volume", "Trading begins tomorrow"],
+      "sourceCount": 8,
+      "sources": [
+        {"name": "CoinDesk", "url": "..."},
+        {"name": "The Block", "url": "..."}
+      ],
+      "sentiment": "bullish",
+      "confidence": 0.92,
+      "marketImpact": "high",
+      "relatedCoins": ["BTC", "ETH"],
+      "disagreements": ["Some sources report 10 ETFs, others 11"]
+    }
+  ],
+  "clustersFound": 12,
+  "articlesAnalyzed": 100,
+  "generatedAt": "2026-02-02T10:30:00Z"
+}
+```
+
+---
+
+### GET /api/ai/explain
+
+AI-powered explanation for why a topic is trending with full context.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `topic` | string | **required** | Topic to explain (e.g., "Bitcoin", "ETF", "Solana") |
+| `includePrice` | boolean | false | Include price change context |
+
+**Example:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/ai/explain?topic=Bitcoin&includePrice=true"
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "explanation": {
+    "topic": "Bitcoin",
+    "whyTrending": "ETF approval driving unprecedented institutional interest",
+    "background": "After years of SEC rejections, spot Bitcoin ETFs were finally approved...",
+    "keyEvents": [
+      {"event": "SEC approves 11 spot ETFs", "date": "2024-01-10", "significance": "Historic regulatory milestone"}
+    ],
+    "marketImplications": "Opens Bitcoin to traditional investment portfolios",
+    "sentiment": "bullish",
+    "priceContext": "Up 15% in 24 hours following approval",
+    "whatToWatch": ["ETF trading volume", "Institutional inflows", "SEC commentary"],
+    "relatedTopics": ["ETF", "SEC", "Institutions"]
+  },
+  "articleCount": 45,
+  "recentHeadlines": ["...", "..."],
+  "generatedAt": "2026-02-02T10:30:00Z"
+}
+```
+
+---
+
+### POST /api/ai/portfolio-news
+
+Scores news articles by relevance to your portfolio holdings.
+
+**Request Body:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `holdings` | array | Yes | Array of holdings with symbol, name, allocation |
+
+**Example:**
+
+```bash
+curl -X POST "https://news-crypto.vercel.app/api/ai/portfolio-news" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "holdings": [
+      {"symbol": "BTC", "name": "Bitcoin", "allocation": 0.5},
+      {"symbol": "ETH", "name": "Ethereum", "allocation": 0.3},
+      {"symbol": "SOL", "name": "Solana", "allocation": 0.2}
+    ]
+  }'
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "portfolioSize": 3,
+  "articlesAnalyzed": 50,
+  "relevantArticles": 12,
+  "byUrgency": {
+    "immediate": 2,
+    "important": 5,
+    "informational": 5
+  },
+  "articles": {
+    "immediate": [
+      {
+        "articleTitle": "Solana Network Outage Reported",
+        "relevanceScore": 95,
+        "relevantHoldings": [
+          {"symbol": "SOL", "impact": "negative", "reason": "Direct impact on Solana holdings"}
+        ],
+        "urgency": "immediate",
+        "actionSuggestion": "Monitor network status before trading"
+      }
+    ],
+    "important": [...],
+    "informational": [...]
+  },
+  "generatedAt": "2026-02-02T10:30:00Z"
+}
+```
+
+---
+
+### GET /api/ai/correlation
+
+Detects potential correlations between news articles and price movements.
+
+**Example:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/ai/correlation"
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "correlations": [
+    {
+      "article": "SEC Chair Hints at Ethereum ETF Approval",
+      "coin": "ETH",
+      "priceMove": 8.5,
+      "confidence": 0.85,
+      "explanation": "Regulatory news directly impacted price",
+      "timing": "News came 15 mins before price surge"
+    }
+  ],
+  "summary": "Strong correlation between regulatory news and large-cap price movements today",
+  "significantMovers": [
+    {"symbol": "ETH", "price": 3500, "change1h": 5.2, "change24h": 12.3}
+  ],
+  "articlesAnalyzed": 50,
+  "coinsAnalyzed": 50,
+  "generatedAt": "2026-02-02T10:30:00Z"
+}
+```
+
+---
+
+### GET /api/ai/flash-briefing
+
+Ultra-short AI-generated summary of top crypto stories. Perfect for voice assistants or quick updates.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `stories` | integer | 5 | Number of stories to include (max 10) |
+
+**Example:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/ai/flash-briefing?stories=3"
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "briefing": "Crypto markets are buzzing today with Bitcoin pushing past $100k and major ETF inflows continuing.",
+  "stories": [
+    {
+      "headline": "Bitcoin Breaks $100k",
+      "oneLineSummary": "BTC hits all-time high on institutional demand",
+      "sentiment": "bullish"
+    },
+    {
+      "headline": "Ethereum L2 TVL Hits Record",
+      "oneLineSummary": "Layer 2 networks now hold $50B in value",
+      "sentiment": "bullish"
+    }
+  ],
+  "marketMood": "bullish",
+  "articlesAnalyzed": 50,
+  "generatedAt": "2026-02-02T10:30:00Z"
+}
+```
+
+---
+
+### GET /api/ai/narratives
+
+Tracks crypto narratives through their lifecycle: emerging, growing, peak, declining.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `predict` | string | - | Optional: Get prediction for specific narrative |
+
+**Example:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/ai/narratives"
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "activeNarratives": [
+    {
+      "id": "bitcoin-etf",
+      "name": "Bitcoin ETF",
+      "lifecycle": "peak",
+      "strength": 95,
+      "velocity": 0.1,
+      "sentiment": 0.8,
+      "relatedCoins": ["BTC"],
+      "prediction": {
+        "nextPhase": "Narrative will stabilize as ETF becomes normalized",
+        "confidence": 0.7,
+        "timeframe": "2-4 weeks",
+        "reasoning": "Initial excitement fading as trading volume stabilizes"
+      }
+    }
+  ],
+  "emergingNarratives": [
+    {
+      "id": "ai-crypto",
+      "name": "AI + Crypto Convergence",
+      "lifecycle": "emerging",
+      "strength": 45,
+      "velocity": 0.6
+    }
+  ],
+  "decliningNarratives": [...],
+  "marketCycle": {
+    "cyclePhase": "markup",
+    "confidence": 0.7,
+    "dominantNarratives": ["Bitcoin ETF", "Institutional Adoption"],
+    "historicalAnalog": "Similar to Q4 2020 - Early 2021 bull run"
+  },
+  "generatedAt": "2026-02-02T10:30:00Z"
+}
+```
+
+---
+
+### GET /api/ai/cross-lingual
+
+Detects when Asian/European sources break news before Western sources. Identifies regional sentiment divergence.
+
+**Example:**
+
+```bash
+curl "https://news-crypto.vercel.app/api/ai/cross-lingual"
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "alphaSignals": [
+    {
+      "topic": "New Binance regulatory compliance",
+      "firstRegion": "asia",
+      "firstSource": "Block Media (Korea)",
+      "confidence": 0.85,
+      "potentialImpact": "medium",
+      "summary": "First reported 2 hours before English sources",
+      "relatedCoins": ["BNB"]
+    }
+  ],
+  "regionalSentiments": [
+    {
+      "region": "asia",
+      "overallSentiment": "bullish",
+      "confidence": 0.75,
+      "topTopics": ["Bitcoin ETF", "Korean adoption"],
+      "divergenceFromGlobal": 0.15
+    }
+  ],
+  "divergenceAlerts": [
+    {
+      "topic": "Altcoin season",
+      "asianSentiment": "bullish",
+      "westernSentiment": "neutral",
+      "significance": "Asian traders may be front-running altcoin moves"
+    }
+  ],
+  "articleCounts": {
+    "asia": 45,
+    "europe": 30,
+    "anglosphere": 80,
+    "total": 175
+  },
+  "generatedAt": "2026-02-02T10:30:00Z"
+}
+```
+
+---
+
+### GET /api/ai/source-quality
+
+AI-powered scoring of news sources and clickbait detection.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `source` | string | - | Analyze specific source quality |
+| `category` | string | - | Rank sources for a category |
+| `clickbait` | boolean | false | Detect clickbait across all articles |
+
+**Example:**
+
+```bash
+# Analyze specific source
+curl "https://news-crypto.vercel.app/api/ai/source-quality?source=CoinDesk"
+
+# Detect clickbait
+curl "https://news-crypto.vercel.app/api/ai/source-quality?clickbait=true"
+```
+
+**Response (source analysis):**
+
+```json
+{
+  "success": true,
+  "sourceQuality": {
+    "sourceName": "CoinDesk",
+    "overallScore": 85,
+    "accuracyScore": 88,
+    "speedScore": 82,
+    "originalityScore": 90,
+    "clickbaitScore": 15,
+    "strengths": ["Original reporting", "Fast breaking news", "Reliable sources"],
+    "weaknesses": ["Occasional sponsored content"],
+    "bestFor": ["Breaking news", "Regulatory coverage", "Market analysis"],
+    "trustLevel": "high",
+    "verificationStatus": "verified"
+  }
+}
+```
+
+**Response (clickbait detection):**
+
+```json
+{
+  "success": true,
+  "articlesAnalyzed": 50,
+  "clickbaitCount": 8,
+  "clickbaitPercentage": "16.0",
+  "averageClickbaitScore": "25.3",
+  "worstOffenders": [
+    {
+      "title": "YOU WON'T BELIEVE What Bitcoin Did Next!!!",
+      "source": "CryptoHype",
+      "isClickbait": true,
+      "score": 85,
+      "reasons": ["Sensational keywords", "Excessive punctuation", "Curiosity gap"]
+    }
+  ]
+}
+```
+
+---
+
+### GET /api/ai/research
+
+Deep-dive research on any crypto topic with comprehensive analysis.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `topic` | string | **required** | Topic to research |
+| `mode` | string | full | `full` for complete report, `quick` for quick take |
+| `compare` | string | - | Compare two assets: `BTC,ETH` |
+| `contrarian` | boolean | false | Find contrarian opportunities |
+
+**Examples:**
+
+```bash
+# Full research report
+curl "https://news-crypto.vercel.app/api/ai/research?topic=Solana"
+
+# Quick take
+curl "https://news-crypto.vercel.app/api/ai/research?topic=DeFi&mode=quick"
+
+# Compare assets
+curl "https://news-crypto.vercel.app/api/ai/research?compare=BTC,ETH"
+
+# Contrarian opportunities
+curl "https://news-crypto.vercel.app/api/ai/research?contrarian=true"
+```
+
+**Response (full report):**
+
+```json
+{
+  "success": true,
+  "report": {
+    "topic": "Solana",
+    "executiveSummary": "Solana is experiencing renewed institutional interest following network stability improvements and DeFi growth...",
+    "newsAnalysis": {
+      "totalArticles": 35,
+      "sentimentBreakdown": {"bullish": 60, "bearish": 15, "neutral": 25},
+      "keyThemes": ["Network reliability", "DeFi growth", "NFT marketplace"],
+      "recentDevelopments": [
+        {"date": "2026-02-01", "event": "Solana TVL hits $10B", "significance": "high"}
+      ]
+    },
+    "investmentThesis": {
+      "bullCase": {
+        "summary": "Technical improvements and ecosystem growth position Solana for continued gains",
+        "arguments": ["Improved uptime", "Growing DeFi TVL", "Institutional adoption"],
+        "priceTarget": "$300-400",
+        "confidence": 0.65
+      },
+      "bearCase": {
+        "summary": "Competition and past reliability issues remain concerns",
+        "arguments": ["Ethereum L2 competition", "Historical outages", "Centralization concerns"],
+        "confidence": 0.55
+      },
+      "verdict": "bullish"
+    },
+    "risks": [
+      {"risk": "Network outage", "severity": "high", "probability": 0.2, "mitigation": "Monitor uptime stats"}
+    ],
+    "opportunities": [
+      {"opportunity": "DeFi TVL growth", "timeframe": "medium term", "potentialReturn": "50-100%", "confidence": 0.6}
+    ],
+    "confidence": 0.7,
+    "disclaimer": "This is AI-generated research for informational purposes only..."
   }
 }
 ```
@@ -2294,6 +2786,32 @@ Clear all caches (news, AI, and translation).
   "timestamp": "2026-01-22T12:30:00Z"
 }
 ```
+
+---
+
+### GET /status
+
+Visual system status dashboard showing real-time health of all services.
+
+**URL:** `https://news-crypto.vercel.app/status`
+
+This is a **UI page** (not a JSON API) that displays:
+
+| Section | Description |
+|---------|-------------|
+| **Overall Status** | Green/Yellow/Red indicator with system state |
+| **Service Status** | Health of API, Cache, External APIs, x402 Facilitator |
+| **System Metrics** | Version, uptime, active sources, 24h article count |
+| **API Endpoints** | Status of all major endpoints |
+| **News Sources** | Top 10 sources with article counts and last update time |
+
+**Use Cases:**
+- Monitor service health before integrating
+- Debug connectivity issues
+- Verify sources are active
+- Check system uptime
+
+For programmatic health checks, use [GET /api/health](#get-apihealth) instead.
 
 ---
 

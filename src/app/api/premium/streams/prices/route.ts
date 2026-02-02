@@ -39,6 +39,21 @@ async function handler(request: NextRequest): Promise<NextResponse> {
   const encoder = new TextEncoder();
   let isActive = true;
 
+  // Helper to safely enqueue data to the controller
+  const safeEnqueue = (controller: ReadableStreamDefaultController, data: Uint8Array): boolean => {
+    if (!isActive || controller.desiredSize === null) {
+      isActive = false;
+      return false;
+    }
+    try {
+      controller.enqueue(data);
+      return true;
+    } catch {
+      isActive = false;
+      return false;
+    }
+  };
+
   const stream = new ReadableStream({
     async start(controller) {
       // Send initial connection message
@@ -48,7 +63,7 @@ async function handler(request: NextRequest): Promise<NextResponse> {
         interval,
         timestamp: Date.now(),
       };
-      controller.enqueue(encoder.encode(`data: ${JSON.stringify(connectMsg)}\n\n`));
+      if (!safeEnqueue(controller, encoder.encode(`data: ${JSON.stringify(connectMsg)}\n\n`))) return;
 
       // Heartbeat and price update loop
       const updatePrices = async () => {
@@ -63,15 +78,27 @@ async function handler(request: NextRequest): Promise<NextResponse> {
             timestamp: Date.now(),
           };
 
-          controller.enqueue(encoder.encode(`data: ${JSON.stringify(priceUpdate)}\n\n`));
+          if (!safeEnqueue(controller, encoder.encode(`data: ${JSON.stringify(priceUpdate)}\n\n`))) return;
         } catch (error) {
+          if (!isActive) return;
+          
+          // Suppress controller closed errors
+          const isControllerClosed = error instanceof TypeError && 
+            (error.message.includes('Controller is already closed') || 
+             error.message.includes('Invalid state'));
+          
+          if (isControllerClosed) {
+            isActive = false;
+            return;
+          }
+          
           logger.error('Failed to fetch prices in stream', error);
           const errorMsg = {
             type: 'error',
             message: 'Failed to fetch prices',
             timestamp: Date.now(),
           };
-          controller.enqueue(encoder.encode(`data: ${JSON.stringify(errorMsg)}\n\n`));
+          safeEnqueue(controller, encoder.encode(`data: ${JSON.stringify(errorMsg)}\n\n`));
         }
 
         if (isActive) {
@@ -89,11 +116,8 @@ async function handler(request: NextRequest): Promise<NextResponse> {
           return;
         }
         const heartbeat = { type: 'heartbeat', timestamp: Date.now() };
-        try {
-          controller.enqueue(encoder.encode(`data: ${JSON.stringify(heartbeat)}\n\n`));
-        } catch {
+        if (!safeEnqueue(controller, encoder.encode(`data: ${JSON.stringify(heartbeat)}\n\n`))) {
           clearInterval(heartbeatInterval);
-          isActive = false;
         }
       }, 30000);
 
@@ -102,8 +126,8 @@ async function handler(request: NextRequest): Promise<NextResponse> {
         isActive = false;
         clearInterval(heartbeatInterval);
         const endMsg = { type: 'session_ended', reason: 'timeout', timestamp: Date.now() };
+        safeEnqueue(controller, encoder.encode(`data: ${JSON.stringify(endMsg)}\n\n`));
         try {
-          controller.enqueue(encoder.encode(`data: ${JSON.stringify(endMsg)}\n\n`));
           controller.close();
         } catch {
           // Stream already closed

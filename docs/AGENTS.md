@@ -10,18 +10,18 @@ Free Crypto News provides multiple integration points for AI agents:
 
 | Integration | Protocol | Tools/Actions | Use Case |
 |-------------|----------|---------------|----------|
-| **MCP Server** | Model Context Protocol | 14 tools | Claude, ChatGPT Dev Mode |
+| **MCP Server** | Model Context Protocol | 40 tools | Claude, ChatGPT Dev Mode |
 | **ChatGPT Plugin** | OpenAI Actions | 6 endpoints | ChatGPT Plus/Enterprise |
 | **LangChain Tools** | LangChain | 5 tools | Custom AI agents |
 | **x402 Discovery** | x402 Protocol | 10 paid endpoints | Autonomous payments |
 
 ---
 
-## MCP Server (14 Tools)
+## MCP Server (40 Tools)
 
-The Model Context Protocol server provides 14 read-only tools for AI assistants.
+The Model Context Protocol server provides 40 read-only tools for AI assistants across 6 categories.
 
-### Available Tools
+### Core News Tools (11)
 
 | Tool | Description | Parameters |
 |------|-------------|------------|
@@ -29,16 +29,67 @@ The Model Context Protocol server provides 14 read-only tools for AI assistants.
 | `search_crypto_news` | Search by keywords | `keywords`, `limit` |
 | `get_defi_news` | DeFi-specific news | `limit` |
 | `get_bitcoin_news` | Bitcoin-specific news | `limit` |
+| `get_ethereum_news` | Ethereum-specific news | `limit` |
+| `get_altcoin_news` | Altcoin news | `limit` |
 | `get_breaking_news` | News from last 2 hours | `limit` |
-| `get_trending_topics` | Trending with sentiment | `limit` |
-| `get_fear_greed_index` | Market sentiment index | - |
-| `get_market_data` | Prices and market caps | `coins` |
-| `get_portfolio_news` | News for coin list | `coins`, `limit` |
-| `get_historical_news` | Archive search | `query`, `startDate`, `endDate` |
+| `get_nft_news` | NFT-specific news | `limit` |
+| `analyze_news` | News with sentiment | `limit` |
 | `get_news_sources` | List all sources | - |
-| `find_original_source` | Find article origin | `url` |
-| `get_coin_analysis` | AI analysis for coin | `coin` |
-| `get_market_summary` | AI market overview | - |
+| `get_api_health` | API health status | - |
+
+### Analytics & Sentiment (7)
+
+| Tool | Description | Parameters |
+|------|-------------|------------|
+| `get_trending_topics` | Trending with sentiment | `limit` |
+| `get_crypto_stats` | Analytics breakdown | - |
+| `get_ai_sentiment` | AI-powered sentiment | `topic` |
+| `get_ai_summary` | AI-generated summary | `topic` |
+| `get_market_sentiment` | Market sentiment indicators | - |
+| `get_fear_greed` | Fear & Greed Index | - |
+| `get_social_sentiment` | Social media sentiment | `coin` |
+
+### Trading & Market Data (9)
+
+| Tool | Description | Parameters |
+|------|-------------|------------|
+| `get_prices` | Real-time prices | `coins` |
+| `get_markets` | Top 100 markets | - |
+| `get_ticker` | 24h ticker data | `symbol` |
+| `get_orderbook` | Live orderbook | `symbol` |
+| `get_arbitrage` | Arbitrage opportunities | - |
+| `get_options_data` | Options market data | `symbol` |
+| `get_funding_rates` | Futures funding rates | - |
+| `get_liquidations` | Liquidation events | - |
+| `get_whale_alerts` | Large transactions | - |
+
+### DeFi & Token Tools (4)
+
+| Tool | Description | Parameters |
+|------|-------------|------------|
+| `get_stablecoin_data` | Stablecoin metrics | - |
+| `get_defi_yields` | DeFi yields | - |
+| `get_gas_prices` | Ethereum gas | - |
+| `get_tvl_rankings` | DeFi TVL rankings | - |
+
+### Archive & Research (4)
+
+| Tool | Description | Parameters |
+|------|-------------|------------|
+| `get_archive` | Historical news | `query`, `startDate`, `endDate` |
+| `get_archive_stats` | Archive statistics | - |
+| `find_original_sources` | Find article origin | `url` |
+| `get_events_calendar` | Upcoming events | - |
+
+### Alerts & Monitoring (5)
+
+| Tool | Description | Parameters |
+|------|-------------|------------|
+| `get_portfolio_news` | News for coin list | `coins`, `limit` |
+| `get_alerts` | Custom alerts | - |
+| `get_rss_feeds` | RSS feed URLs | - |
+| `get_regulatory_news` | Regulatory updates | `jurisdiction` |
+| `get_market_data` | Prices and market caps | `coins` |
 
 ### Tool Annotations
 

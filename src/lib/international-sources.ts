@@ -642,6 +642,15 @@ const DUTCH_SOURCES: InternationalSource[] = [
     category: 'general',
     region: 'europe',
   },
+  {
+    key: 'blox_nl',
+    name: 'Blox',
+    url: 'https://blox.nl',
+    rss: 'https://blox.nl/nieuws/feed/',
+    language: 'nl',
+    category: 'general',
+    region: 'europe',
+  },
 ];
 
 // ═══════════════════════════════════════════════════════════════
@@ -664,6 +673,15 @@ const POLISH_SOURCES: InternationalSource[] = [
     rss: 'https://bitcoin.pl/feed/',
     language: 'pl',
     category: 'bitcoin',
+    region: 'europe',
+  },
+  {
+    key: 'comparic',
+    name: 'Comparic',
+    url: 'https://comparic.pl',
+    rss: 'https://comparic.pl/feed/',
+    language: 'pl',
+    category: 'trading',
     region: 'europe',
   },
 ];

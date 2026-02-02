@@ -10,6 +10,8 @@
   <a href="https://github.com/nirholas/free-crypto-news/stargazers"><img src="https://img.shields.io/github/stars/nirholas/free-crypto-news?style=for-the-badge&logo=github&color=yellow" alt="نجوم GitHub"></a>
   <a href="https://github.com/nirholas/free-crypto-news/blob/main/LICENSE"><img src="https://img.shields.io/github/license/nirholas/free-crypto-news?style=for-the-badge&color=blue" alt="الترخيص"></a>
   <a href="https://github.com/nirholas/free-crypto-news/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/nirholas/free-crypto-news/ci.yml?style=for-the-badge&logo=github-actions&label=CI" alt="حالة CI"></a>
+  <a href="https://github.com/nirholas/free-crypto-news/issues"><img src="https://img.shields.io/github/issues/nirholas/free-crypto-news?style=for-the-badge&color=orange" alt="المشاكل"></a>
+  <a href="https://github.com/nirholas/free-crypto-news/pulls"><img src="https://img.shields.io/github/issues-pr/nirholas/free-crypto-news?style=for-the-badge&color=purple" alt="طلبات السحب"></a>
 </p>
 
 <p align="center">
@@ -19,19 +21,23 @@
 > ⭐ **إذا وجدت هذا مفيدًا، يرجى إعطاء نجمة للمستودع!** هذا يساعد الآخرين على اكتشاف هذا المشروع ويحفز على التطوير المستمر.
 
 ---
+
 احصل على أخبار العملات المشفرة في الوقت الفعلي من 7 مصادر رئيسية باستدعاء API واحد.
 
 ```bash
 curl https://news-crypto.vercel.app/api/news
 ```
+
 ---
+
+## المقارنة
 
 | | Free Crypto News | CryptoPanic | أخرى |
 |---|---|---|---|
 | **السعر** | 🆓 مجاني للأبد | $29-299/شهر | مدفوع |
 | **مفتاح API** | ❌ غير مطلوب | مطلوب | مطلوب |
 | **حد الطلبات** | غير محدود* | 100-1000/يوم | محدود |
-| **المصادر** | 130+ إنجليزي + 75 دولي | 1 | متنوع |
+| **المصادر** | 12 إنجليزي + 12 دولي | 1 | متنوع |
 | **التدويل** | 🌏 كوري، صيني، ياباني، إسباني + ترجمة | لا | لا |
 | **استضافة ذاتية** | ✅ نشر بنقرة واحدة | لا | لا |
 | **PWA** | ✅ قابل للتثبيت | لا | لا |
@@ -39,9 +45,24 @@ curl https://news-crypto.vercel.app/api/news
 
 ---
 
+## 🌿 الفروع
+
+| الفرع | الوصف |
+|--------|-------------|
+| `main` | فرع الإنتاج المستقر — التصميم الأصلي المركز على API |
+| `redesign/pro-news-ui` | إعادة تصميم واجهة المستخدم المتقدمة — أسلوب CoinDesk/CoinTelegraph مع الوضع الداكن والمكونات المحسنة وبيانات SEO المهيكلة ودعم PWA الكامل |
+
+لاختبار إعادة التصميم محليًا:
+```bash
+git checkout redesign/pro-news-ui
+npm install && npm run dev
+```
+
+---
+
 ## 🌍 مصادر الأخبار الدولية
 
-احصل على أخبار العملات المشفرة من **75 مصدرًا دوليًا** بـ 18 لغة — مترجمة تلقائيًا للإنجليزية!
+احصل على أخبار العملات المشفرة من **12 مصدرًا دوليًا** بالكورية والصينية واليابانية والإسبانية — مترجمة تلقائيًا للإنجليزية!
 
 ### المصادر المدعومة
 
@@ -74,11 +95,13 @@ curl "https://news-crypto.vercel.app/api/news/international?region=asia&limit=20
 - ✅ **تراجع سلس** للمصادر غير المتاحة
 - ✅ **إزالة التكرار** عبر المصادر
 
+راجع [وثائق API](docs/API.md#get-apinewsinternational) للتفاصيل الكاملة.
+
 ---
 
 ## 📱 تطبيق ويب تقدمي (PWA)
 
-Free Crypto News هو **PWA قابل للتثبيت بالكامل** مع دعم دون اتصال!
+Free Crypto News هو **PWA قابل للتثبيت بالكامل** يعمل دون اتصال.
 
 ### الميزات
 
@@ -89,6 +112,9 @@ Free Crypto News هو **PWA قابل للتثبيت بالكامل** مع دعم
 | 🔔 **إشعارات الدفع** | تلقي تنبيهات الأخبار العاجلة |
 | ⚡ **سريع جدًا** | استراتيجيات تخزين مؤقت عدوانية |
 | 🔄 **مزامنة في الخلفية** | تحديث تلقائي عند العودة للاتصال |
+| 🎯 **اختصارات** | وصول سريع للأحدث والشائع وبيتكوين |
+| 📤 **مشاركة** | مشاركة الروابط مباشرة في التطبيق |
+| 🚨 **تنبيهات فورية** | تنبيهات قابلة للتكوين للسعر وشروط الأخبار |
 
 ### تثبيت التطبيق
 
@@ -104,6 +130,36 @@ Free Crypto News هو **PWA قابل للتثبيت بالكامل** مع دعم
 **Android Chrome:**
 1. قم بزيارة الموقع
 2. اضغط على لافتة التثبيت أو القائمة → "تثبيت التطبيق"
+
+### تخزين Service Worker المؤقت
+
+يستخدم PWA استراتيجيات تخزين ذكية:
+
+| المحتوى | الاستراتيجية | مدة التخزين |
+|---------|----------|----------------|
+| استجابات API | Network-first | 5 دقائق |
+| الأصول الثابتة | Cache-first | 7 أيام |
+| الصور | Cache-first | 30 يومًا |
+| التنقل | Network-first + احتياطي دون اتصال | 24 ساعة |
+
+### اختصارات لوحة المفاتيح
+
+تنقل سريع عبر الأخبار باستخدام لوحة المفاتيح:
+
+| الاختصار | الإجراء |
+|----------|--------|
+| `j` / `k` | المقال التالي / السابق |
+| `/` | تركيز البحث |
+| `Enter` | فتح المقال المحدد |
+| `d` | تبديل الوضع الداكن |
+| `g h` | الذهاب للرئيسية |
+| `g t` | الذهاب للشائع |
+| `g s` | الذهاب للمصادر |
+| `g b` | الذهاب للمفضلة |
+| `?` | عرض جميع الاختصارات |
+| `Escape` | إغلاق النافذة المنبثقة |
+
+📖 **دليل المستخدم الكامل:** [docs/USER-GUIDE.md](docs/USER-GUIDE.md)
 
 ---
 
@@ -133,69 +189,175 @@ Free Crypto News هو **PWA قابل للتثبيت بالكامل** مع دعم
 | `/api/trending` | المواضيع الرائجة مع تحليل المشاعر |
 | `/api/analyze` | الأخبار مع تصنيف المواضيع |
 | `/api/stats` | التحليلات والإحصائيات |
+| `/api/sources` | قائمة جميع المصادر |
+| `/api/health` | حالة صحة API والخلاصات |
+| `/api/rss` | خلاصة RSS مجمعة |
+| `/api/atom` | خلاصة Atom مجمعة |
+| `/api/opml` | تصدير OPML لقارئات RSS |
+| `/api/docs` | وثائق API تفاعلية |
+| `/api/webhooks` | تسجيل webhooks |
+| `/api/archive` | أرشيف الأخبار التاريخية |
+| `/api/push` | إشعارات Web Push |
+| `/api/origins` | العثور على المصدر الأصلي للأخبار |
+| `/api/portfolio` | أخبار مبنية على المحفظة + الأسعار |
+| `/api/news/international` | مصادر دولية مع ترجمة |
 
 ### 🤖 نقاط نهاية مدعومة بالذكاء الاصطناعي (مجاني عبر Groq)
 
 | نقطة النهاية | الوصف |
 |----------|-------------|
-| `/api/summarize` | تلخيص AI للمقالات |
-| `/api/ask?q=...` | اسأل أسئلة عن أخبار العملات المشفرة |
 | `/api/digest` | ملخص يومي مُنشأ بالذكاء الاصطناعي |
-| `/api/sentiment` | تحليل مشاعر عميق لكل مقال |
+| `/api/sentiment` | تحليل مشاعر السوق |
+| `/api/summarize?url=` | تلخيص أي URL |
+| `/api/ask` | اسأل الذكاء الاصطناعي عن أخبار العملات المشفرة |
+| `/api/entities` | استخراج الكيانات المذكورة |
+| `/api/claims` | التحقق من الادعاءات |
+| `/api/clickbait` | اكتشاف العناوين المضللة |
+
+### 💹 نقاط نهاية السوق
+
+| نقطة النهاية | الوصف |
+|----------|-------------|
+| `/api/fear-greed` | مؤشر الخوف والطمع مع بيانات تاريخية |
+| `/api/arbitrage` | فرص المراجحة عبر البورصات |
+| `/api/signals` | إشارات تداول تقنية |
+| `/api/funding` | معدلات التمويل عبر بورصات المشتقات |
+| `/api/options` | تدفق الخيارات وأقصى ألم |
+| `/api/liquidations` | بيانات التصفية في الوقت الفعلي |
+| `/api/whale-alerts` | تتبع صفقات الحيتان |
+| `/api/orderbook` | بيانات دفتر الطلبات المجمعة |
 
 ---
 
-## حزم SDK والمكونات
+## البداية السريعة
 
-| الحزمة | الوصف |
-|---------|-------------|
-| [React](sdk/react/) | مكون `<CryptoNews />` جاهز للاستخدام |
-| [TypeScript](sdk/typescript/) | حزمة TypeScript SDK كاملة |
-| [Python](sdk/python/) | عميل Python بدون تبعيات |
-| [JavaScript](sdk/javascript/) | حزمة SDK للمتصفح و Node.js |
-| [Go](sdk/go/) | مكتبة عميل Go |
-| [PHP](sdk/php/) | حزمة PHP SDK |
-
-**عنوان URL الأساسي:** `https://news-crypto.vercel.app`
-
----
-
-# الاستضافة الذاتية
-
-## نشر بنقرة واحدة
-
-[![انشر مع Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnirholas%2Ffree-crypto-news)
-
-## يدوي
+### استخدام cURL
 
 ```bash
-git clone https://github.com/nirholas/free-crypto-news.git
-cd free-crypto-news
-pnpm install
-pnpm dev
+# الحصول على آخر الأخبار
+curl "https://news-crypto.vercel.app/api/news"
+
+# البحث في الأخبار
+curl "https://news-crypto.vercel.app/api/search?q=ethereum"
+
+# الحصول على ملخص AI
+curl "https://news-crypto.vercel.app/api/digest"
+
+# الحصول على مؤشر الخوف والطمع
+curl "https://news-crypto.vercel.app/api/fear-greed"
 ```
 
-افتح http://localhost:3000/api/news
+### استخدام JavaScript
+
+```javascript
+// الحصول على آخر الأخبار
+const response = await fetch('https://news-crypto.vercel.app/api/news');
+const data = await response.json();
+
+console.log(data.articles);
+// [{ title, link, source, pubDate, timeAgo, ... }, ...]
+```
+
+### استخدام Python
+
+```python
+import requests
+
+# الحصول على آخر الأخبار
+response = requests.get('https://news-crypto.vercel.app/api/news')
+data = response.json()
+
+for article in data['articles'][:5]:
+    print(f"• {article['title']} ({article['source']})")
+```
 
 ---
 
-# الترخيص
+## الاستضافة الذاتية
 
-MIT © 2025 [nich](https://github.com/nirholas)
+### نشر بنقرة واحدة
+
+[![انشر مع Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/nirholas/free-crypto-news)
+[![انشر مع Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/nirholas/free-crypto-news)
+
+### التثبيت المحلي
+
+```bash
+# استنساخ المستودع
+git clone https://github.com/nirholas/free-crypto-news.git
+cd free-crypto-news
+
+# تثبيت التبعيات
+npm install
+
+# تشغيل خادم التطوير
+npm run dev
+
+# افتح http://localhost:3000
+```
+
+### متغيرات البيئة
+
+```env
+# اختياري: لميزات AI (مجاني من groq.com)
+GROQ_API_KEY=gsk_your_key_here
+
+# اختياري: التحليلات
+NEXT_PUBLIC_ANALYTICS_ID=your_id
+```
+
+---
+
+## الوثائق
+
+| الوثيقة | الوصف |
+|---|---|
+| [📚 مرجع API](docs/API.md) | وثائق نقاط النهاية الكاملة |
+| [🏗️ الهندسة](docs/ARCHITECTURE.md) | تصميم النظام |
+| [🚀 النشر](docs/DEPLOYMENT.md) | دليل الإنتاج |
+| [🧪 الاختبار](docs/TESTING.md) | دليل الاختبار |
+| [🔐 الأمان](docs/SECURITY.md) | سياسة الأمان |
+| [📖 دليل المستخدم](docs/USER-GUIDE.md) | دليل PWA والميزات |
+| [💻 دليل المطور](docs/DEVELOPER-GUIDE.md) | وثائق المساهمين |
+
+---
+
+## المساهمة
+
+المساهمات مرحب بها! راجع [CONTRIBUTING.md](CONTRIBUTING.md) للإرشادات.
+
+```bash
+# Fork المستودع
+# إنشاء فرع الميزة
+git checkout -b feature/amazing-feature
+
+# تنفيذ التغييرات
+git commit -m 'Add amazing feature'
+
+# الدفع وإنشاء Pull Request
+git push origin feature/amazing-feature
+```
+
+---
+
+## الترخيص
+
+MIT License - راجع ملف [LICENSE](LICENSE).
+
+---
+
+## التواصل
+
+- 🐛 **الأخطاء**: [GitHub Issues](https://github.com/nirholas/free-crypto-news/issues)
+- 💬 **النقاشات**: [GitHub Discussions](https://github.com/nirholas/free-crypto-news/discussions)
+- 🐦 **Twitter**: [@nirholas](https://twitter.com/nirholas)
 
 ---
 
 <p align="center">
-  <b>توقف عن الدفع مقابل واجهات برمجة تطبيقات أخبار العملات المشفرة.</b><br>
-  <sub>صُنع بـ 💜 للمجتمع</sub>
-</p>
-
-<p align="center">
+  صُنع بـ ❤️ لمجتمع العملات المشفرة
   <br>
-  ⭐ <b>وجدته مفيدًا؟ أعطنا نجمة!</b> ⭐<br>
-  <a href="https://github.com/nirholas/free-crypto-news/stargazers">
-    <img src="https://img.shields.io/github/stars/nirholas/free-crypto-news?style=social" alt="نجم على GitHub">
-  </a>
+  <a href="https://news-crypto.vercel.app">news-crypto.vercel.app</a>
 </p>
 
 </div>

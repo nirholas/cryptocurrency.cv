@@ -8,6 +8,7 @@ import Footer from '@/components/Footer';
 import { 
   getChainBySlug, 
   getTopProtocols,
+  getTopChains,
   formatNumber, 
 } from '@/lib/market-data';
 import { searchNews } from '@/lib/crypto-news';
@@ -16,6 +17,7 @@ import ProtocolImage from '@/components/ProtocolImage';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { locales } from '@/i18n/config';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -44,6 +46,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export const revalidate = 300; // Revalidate every 5 minutes
+
+/**
+ * Generate static params for all locale + chain combinations
+ */
+export async function generateStaticParams() {
+  const chains = await getTopChains(30);
+  
+  return locales.flatMap((locale) =>
+    chains.map((chain) => ({
+      locale,
+      slug: chain.gecko_id || chain.name.toLowerCase().replace(/\s+/g, '-'),
+    }))
+  );
+}
 
 export default async function ChainPage({ params }: Props) {
   const { slug } = await params;

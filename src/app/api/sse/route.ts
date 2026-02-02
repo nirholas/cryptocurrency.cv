@@ -24,6 +24,24 @@ export async function GET(request: NextRequest) {
   let lastArticleId = '';
   let isConnected = true;
 
+  // Helper to safely enqueue data to the controller
+  const safeEnqueue = (controller: ReadableStreamDefaultController, data: Uint8Array): boolean => {
+    // Check both our flag and the controller's state
+    // desiredSize is null when the stream is closed or errored
+    if (!isConnected || controller.desiredSize === null) {
+      isConnected = false;
+      return false;
+    }
+    try {
+      controller.enqueue(data);
+      return true;
+    } catch {
+      // Controller is closed, mark as disconnected (silently - this is expected)
+      isConnected = false;
+      return false;
+    }
+  };
+
   const stream = new ReadableStream({
     async start(controller) {
       // Send initial connection event
@@ -32,7 +50,7 @@ export async function GET(request: NextRequest) {
         timestamp: new Date().toISOString(),
         config: { sources, categories, includeBreaking },
       })}\n\n`;
-      controller.enqueue(encoder.encode(connectEvent));
+      if (!safeEnqueue(controller, encoder.encode(connectEvent))) return;
 
       // Polling function
       const pollNews = async () => {
@@ -62,7 +80,7 @@ export async function GET(request: NextRequest) {
                   articles: articles.slice(0, 5),
                   timestamp: new Date().toISOString(),
                 })}\n\n`;
-                controller.enqueue(encoder.encode(newsEvent));
+                if (!safeEnqueue(controller, encoder.encode(newsEvent))) return;
               }
             }
           }
@@ -76,7 +94,7 @@ export async function GET(request: NextRequest) {
                 articles: breaking.articles,
                 timestamp: new Date().toISOString(),
               })}\n\n`;
-              controller.enqueue(encoder.encode(breakingEvent));
+              if (!safeEnqueue(controller, encoder.encode(breakingEvent))) return;
             }
           }
 
@@ -84,15 +102,27 @@ export async function GET(request: NextRequest) {
           const heartbeat = `event: heartbeat\ndata: ${JSON.stringify({
             timestamp: new Date().toISOString(),
           })}\n\n`;
-          controller.enqueue(encoder.encode(heartbeat));
+          if (!safeEnqueue(controller, encoder.encode(heartbeat))) return;
 
         } catch (error) {
+          if (!isConnected) return;
+          
+          // Suppress controller closed errors - these are expected when clients disconnect
+          const isControllerClosed = error instanceof TypeError && 
+            (error.message.includes('Controller is already closed') || 
+             error.message.includes('Invalid state'));
+          
+          if (isControllerClosed) {
+            isConnected = false;
+            return;
+          }
+          
           console.error('SSE poll error:', error);
           const errorEvent = `event: error\ndata: ${JSON.stringify({
             message: 'Error fetching news',
             timestamp: new Date().toISOString(),
           })}\n\n`;
-          controller.enqueue(encoder.encode(errorEvent));
+          safeEnqueue(controller, encoder.encode(errorEvent));
         }
 
         // Schedule next poll
@@ -101,8 +131,9 @@ export async function GET(request: NextRequest) {
         }
       };
 
-      // Start polling
-      await pollNews();
+      // Start polling asynchronously - don't block the stream from returning
+      // Use setTimeout to defer the first poll so the stream returns immediately
+      setTimeout(() => pollNews(), 0);
     },
     cancel() {
       isConnected = false;

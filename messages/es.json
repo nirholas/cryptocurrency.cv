@@ -1,6 +1,6 @@
 {
   "common": {
-    "appName": "Free Crypto News",
+    "appName": "Noticias de Criptomonedas Gratis",
     "tagline": "Agregador de noticias de criptomonedas en tiempo real",
     "loading": "Cargando...",
     "error": "Algo salió mal",
@@ -27,7 +27,7 @@
     "showMore": "Mostrar más",
     "showLess": "Mostrar menos",
     "noResults": "No se encontraron resultados",
-    "poweredBy": "Desarrollado por {name}"
+    "poweredBy": "Proporcionado por {name}"
   },
   "nav": {
     "home": "Inicio",
@@ -39,25 +39,25 @@
     "defi": "DeFi",
     "digest": "Resumen",
     "search": "Buscar",
-    "bookmarks": "Marcadores",
-    "watchlist": "Lista de seguimiento",
-    "portfolio": "Portafolio",
+    "bookmarks": "Favoritos",
+    "watchlist": "Lista de vigilancia",
+    "portfolio": "Cartera",
     "settings": "Configuración",
     "about": "Acerca de",
     "compare": "Comparar",
     "sentiment": "Sentimiento",
-    "movers": "Mayores movimientos"
+    "movers": "Principales variaciones"
   },
   "home": {
     "hero": {
-      "title": "Free Crypto News",
-      "subtitle": "Noticias de criptomonedas agregadas en tiempo real de fuentes confiables",
+      "title": "Noticias de criptomonedas gratuitas",
+      "subtitle": "Noticias de criptomonedas en tiempo real agregadas de fuentes confiables",
       "cta": "Comenzar a leer"
     },
     "latestNews": "Últimas noticias",
     "breakingNews": "Noticias de última hora",
-    "trendingTopics": "Temas en tendencia",
-    "topSources": "Principales fuentes",
+    "trendingTopics": "Temas tendencia",
+    "topSources": "Fuentes principales",
     "marketOverview": "Resumen del mercado"
   },
   "news": {
@@ -83,58 +83,58 @@
   },
   "article": {
     "summary": "Resumen",
-    "aiSummary": "Resumen con IA",
+    "aiSummary": "Resumen de IA",
     "keyPoints": "Puntos clave",
     "sentiment": "Sentimiento",
-    "readingTime": "{minutes} min de lectura",
-    "bookmark": "Guardar",
-    "bookmarked": "Guardado",
+    "readingTime": "{minutes} minutos de lectura",
+    "bookmark": "Marcar",
+    "bookmarked": "Marcado",
     "removeBookmark": "Eliminar marcador",
     "shareArticle": "Compartir artículo",
     "copyLink": "Copiar enlace",
     "openOriginal": "Abrir original",
     "relatedCoins": "Monedas relacionadas",
-    "mentionedEntities": "Mencionados",
+    "mentionedEntities": "Entidades mencionadas",
     "factCheck": "Verificación de hechos",
     "clickbaitScore": "Puntuación de clickbait"
   },
   "markets": {
     "price": "Precio",
-    "change24h": "Cambio 24h",
-    "change7d": "Cambio 7d",
+    "change24h": "Cambio de 24h",
+    "change7d": "Cambio de 7d",
     "marketCap": "Capitalización de mercado",
     "volume": "Volumen",
-    "volume24h": "Volumen 24h",
-    "circulatingSupply": "Suministro circulante",
-    "totalSupply": "Suministro total",
-    "maxSupply": "Suministro máximo",
-    "rank": "Ranking",
+    "volume24h": "Volumen de 24h",
+    "circulatingSupply": "Oferta en circulación",
+    "totalSupply": "Oferta total",
+    "maxSupply": "Oferta máxima",
+    "rank": "Clasificación",
     "allTimeHigh": "Máximo histórico",
     "allTimeLow": "Mínimo histórico",
-    "athDate": "Fecha ATH",
-    "atlDate": "Fecha ATL",
-    "fromAth": "Desde ATH",
-    "fromAtl": "Desde ATL",
+    "athDate": "Fecha del máximo histórico",
+    "atlDate": "Fecha del mínimo histórico",
+    "fromAth": "Desde el máximo histórico",
+    "fromAtl": "Desde el mínimo histórico",
     "priceChart": "Gráfico de precios",
     "tradingView": "TradingView",
-    "converter": "Convertidor",
+    "converter": "Conversor",
     "convert": "Convertir",
     "amount": "Cantidad",
-    "from": "De",
-    "to": "A"
+    "from": "Desde",
+    "to": "Hacia"
   },
   "coin": {
     "about": "Acerca de {name}",
     "description": "Descripción",
     "statistics": "Estadísticas",
-    "priceStatistics": "Estadísticas de precio",
+    "priceStatistics": "Estadísticas de precios",
     "historicalData": "Datos históricos",
     "markets": "Mercados",
     "news": "Noticias",
-    "social": "Social",
+    "social": "Redes sociales",
     "links": "Enlaces",
     "website": "Sitio web",
-    "whitepaper": "Whitepaper",
+    "whitepaper": "Documento blanco",
     "explorer": "Explorador",
     "github": "GitHub",
     "twitter": "Twitter",
@@ -152,32 +152,32 @@
     "suggestions": "Sugerencias",
     "searchResults": "Resultados de búsqueda para \"{query}\"",
     "resultsCount": "{count} resultados",
-    "noResultsFor": "Sin resultados para \"{query}\"",
-    "tryDifferent": "Intenta con un término de búsqueda diferente"
+    "noResultsFor": "No hay resultados para \"{query}\"",
+    "tryDifferent": "Intenta un término de búsqueda diferente"
   },
   "bookmarks": {
-    "title": "Marcadores",
+    "title": "Favoritos",
     "saved": "Artículos guardados",
-    "empty": "Aún no hay marcadores",
+    "empty": "No hay favoritos aún",
     "emptyDescription": "Los artículos que guardes aparecerán aquí",
     "removeAll": "Eliminar todos",
-    "confirmRemoveAll": "¿Eliminar todos los marcadores?"
+    "confirmRemoveAll": "¿Eliminar todos los favoritos?"
   },
   "watchlist": {
     "title": "Lista de seguimiento",
     "empty": "Tu lista de seguimiento está vacía",
-    "emptyDescription": "Añade monedas para seguir sus precios",
-    "addCoin": "Añadir moneda",
-    "removeCoin": "Eliminar de la lista",
-    "addedToWatchlist": "Añadido a la lista de seguimiento",
+    "emptyDescription": "Agrega monedas para rastrear sus precios",
+    "addCoin": "Agregar moneda",
+    "removeCoin": "Eliminar de la lista de seguimiento",
+    "addedToWatchlist": "Agregado a la lista de seguimiento",
     "removedFromWatchlist": "Eliminado de la lista de seguimiento"
   },
   "portfolio": {
-    "title": "Portafolio",
+    "title": "Cartera",
     "totalValue": "Valor total",
     "totalChange": "Cambio total",
     "holdings": "Tenencias",
-    "addHolding": "Añadir tenencia",
+    "addHolding": "Agregar tenencia",
     "editHolding": "Editar tenencia",
     "removeHolding": "Eliminar tenencia",
     "coin": "Moneda",
@@ -185,13 +185,13 @@
     "buyPrice": "Precio de compra",
     "currentPrice": "Precio actual",
     "value": "Valor",
-    "profit": "Ganancia/Pérdida",
+    "profit": "Beneficio/Pérdida",
     "allocation": "Asignación",
-    "empty": "Aún no hay tenencias",
-    "emptyDescription": "Añade tus tenencias de criptomonedas para seguir tu portafolio"
+    "empty": "No hay tenencias aún",
+    "emptyDescription": "Agrega tus tenencias de criptomonedas para rastrear tu cartera"
   },
   "settings": {
-    "title": "Configuración",
+    "title": "Configuraciones",
     "appearance": "Apariencia",
     "theme": "Tema",
     "light": "Claro",
@@ -201,17 +201,17 @@
     "selectLanguage": "Seleccionar idioma",
     "notifications": "Notificaciones",
     "pushNotifications": "Notificaciones push",
-    "emailNotifications": "Notificaciones por correo",
-    "breakingNewsAlerts": "Alertas de última hora",
+    "emailNotifications": "Notificaciones por correo electrónico",
+    "breakingNewsAlerts": "Alertas de noticias urgentes",
     "priceAlerts": "Alertas de precio",
     "privacy": "Privacidad",
-    "analytics": "Analíticas",
+    "analytics": "Análisis",
     "clearData": "Borrar datos",
     "clearCache": "Borrar caché",
     "exportData": "Exportar datos",
     "about": "Acerca de",
     "version": "Versión",
-    "changelog": "Historial de cambios",
+    "changelog": "Registro de cambios",
     "feedback": "Comentarios",
     "reportBug": "Reportar un error"
   },
@@ -227,14 +227,14 @@
       "general": "General",
       "defi": "DeFi",
       "nft": "NFT",
-      "trading": "Trading",
+      "trading": "Negociación",
       "regulation": "Regulación",
       "technology": "Tecnología"
     }
   },
   "topics": {
     "title": "Temas",
-    "trending": "Temas en tendencia",
+    "trending": "Temas tendencia",
     "popular": "Temas populares",
     "all": "Todos los temas",
     "bitcoin": "Bitcoin",
@@ -251,36 +251,36 @@
   "digest": {
     "title": "Resumen diario",
     "aiGenerated": "Resumen generado por IA",
-    "topStories": "Principales historias",
+    "topStories": "Historias principales",
     "marketSummary": "Resumen del mercado",
     "whatHappened": "Qué pasó hoy",
     "keyTakeaways": "Puntos clave",
     "generateNew": "Generar nuevo resumen",
-    "lastGenerated": "Última generación {time}"
+    "lastGenerated": "Último generado {time}"
   },
   "sentiment": {
     "title": "Sentimiento del mercado",
     "overall": "Sentimiento general",
-    "bullish": "Alcista",
-    "bearish": "Bajista",
+    "bullish": "Optimista",
+    "bearish": "Pesimista",
     "neutral": "Neutral",
     "fearGreed": "Índice de miedo y codicia",
     "fear": "Miedo",
     "greed": "Codicia",
     "extreme": "Extremo",
     "socialSentiment": "Sentimiento social",
-    "newsSentiment": "Sentimiento de noticias"
+    "newsSentiment": "Sentimiento de las noticias"
   },
   "compare": {
     "title": "Comparar monedas",
-    "selectCoins": "Selecciona monedas para comparar",
-    "addCoin": "Añadir moneda",
+    "selectCoins": "Seleccionar monedas para comparar",
+    "addCoin": "Agregar moneda",
     "removeCoin": "Eliminar",
     "comparison": "Comparación",
     "vsLabel": "vs"
   },
   "movers": {
-    "title": "Mayores movimientos",
+    "title": "Principales variaciones",
     "gainers": "Mayores ganancias",
     "losers": "Mayores pérdidas",
     "period": "Período",
@@ -290,7 +290,7 @@
   },
   "defi": {
     "title": "Noticias DeFi",
-    "tvl": "Valor total bloqueado",
+    "tvl": "Valor Total Bloqueado",
     "protocols": "Protocolos",
     "yields": "Rendimientos",
     "liquidations": "Liquidaciones"
@@ -307,8 +307,8 @@
     "copyLink": "Copiar enlace"
   },
   "footer": {
-    "copyright": "© {year} Free Crypto News. Todos los derechos reservados.",
-    "disclaimer": "No es asesoramiento financiero. Siempre haz tu propia investigación.",
+    "copyright": "© {year} Noticias de Crypto Gratis. Todos los derechos reservados.",
+    "disclaimer": "No es asesoramiento financiero. Siempre realice su propia investigación.",
     "privacy": "Política de privacidad",
     "terms": "Términos de servicio",
     "contact": "Contacto",
@@ -319,85 +319,149 @@
   },
   "errors": {
     "notFound": "Página no encontrada",
-    "notFoundDescription": "La página que buscas no existe.",
+    "notFoundDescription": "La página que busca no existe.",
     "serverError": "Error del servidor",
-    "serverErrorDescription": "Algo salió mal de nuestro lado.",
+    "serverErrorDescription": "Algo salió mal en nuestro fin.",
     "networkError": "Error de red",
-    "networkErrorDescription": "Por favor verifica tu conexión a internet.",
+    "networkErrorDescription": "Por favor, verifique su conexión a Internet.",
     "unauthorized": "No autorizado",
     "forbidden": "Prohibido",
     "rateLimited": "Demasiadas solicitudes",
-    "goHome": "Ir al inicio"
+    "goHome": "Ir a la página de inicio"
   },
   "pwa": {
-    "install": "Instalar aplicación",
-    "installPrompt": "Instala Free Crypto News para una mejor experiencia",
+    "install": "Instalar Aplicación",
+    "installPrompt": "Instalar Noticias de Criptomonedas Gratis para una mejor experiencia",
     "installButton": "Instalar",
-    "notNow": "Ahora no",
-    "offline": "Estás sin conexión",
-    "offlineDescription": "Algunas funciones pueden no estar disponibles"
+    "notNow": "No ahora",
+    "offline": "Estás desconectado",
+    "offlineDescription": "Algunas características pueden no estar disponibles"
   },
   "time": {
-    "justNow": "Justo ahora",
-    "minutesAgo": "Hace {count} minuto",
-    "minutesAgo_plural": "Hace {count} minutos",
-    "hoursAgo": "Hace {count} hora",
-    "hoursAgo_plural": "Hace {count} horas",
-    "daysAgo": "Hace {count} día",
-    "daysAgo_plural": "Hace {count} días",
-    "weeksAgo": "Hace {count} semana",
-    "weeksAgo_plural": "Hace {count} semanas",
-    "monthsAgo": "Hace {count} mes",
-    "monthsAgo_plural": "Hace {count} meses",
-    "yearsAgo": "Hace {count} año",
-    "yearsAgo_plural": "Hace {count} años"
+    "justNow": "Ahora mismo",
+    "minutesAgo": "{count} minuto atrás",
+    "minutesAgo_plural": "{count} minutos atrás",
+    "hoursAgo": "{count} hora atrás",
+    "hoursAgo_plural": "{count} horas atrás",
+    "daysAgo": "{count} día atrás",
+    "daysAgo_plural": "{count} días atrás",
+    "weeksAgo": "{count} semana atrás",
+    "weeksAgo_plural": "{count} semanas atrás",
+    "monthsAgo": "{count} mes atrás",
+    "monthsAgo_plural": "{count} meses atrás",
+    "yearsAgo": "{count} año atrás",
+    "yearsAgo_plural": "{count} años atrás"
   },
   "a11y": {
     "skipToContent": "Saltar al contenido",
     "openMenu": "Abrir menú",
     "closeMenu": "Cerrar menú",
-    "toggleTheme": "Cambiar tema",
+    "toggleTheme": "Alternar tema",
     "previousPage": "Página anterior",
     "nextPage": "Página siguiente",
     "expandSection": "Expandir sección",
-    "collapseSection": "Contraer sección",
-    "externalLink": "Abre en nueva pestaña"
+    "collapseSection": "Colapsar sección",
+    "externalLink": "Abre en una nueva pestaña"
+  },
+  "ai": {
+    "brief": {
+      "title": "El Resumen",
+      "description": "Resumen diario de inteligencia de mercado y noticias de criptomonedas impulsado por IA",
+      "executiveSummary": "Resumen Ejecutivo",
+      "marketOverview": "Visión general del mercado",
+      "sentiment": "Sentimiento",
+      "btcTrend": "Tendencia de BTC",
+      "fearGreed": "Miedo y Codicia",
+      "btcDominance": "Dominio de BTC",
+      "totalCap": "Capitalización total",
+      "topStories": "Historias principales",
+      "sectorsInFocus": "Sectores en Foco",
+      "upcomingEvents": "Próximos Eventos",
+      "riskAlerts": "Alertas de Riesgo",
+      "generatedAt": "Generado en {time}",
+      "unavailable": "Resumen Diario No Disponible",
+      "configureAI": "Las características de IA requieren una clave de API (GROQ_API_KEY, OPENAI_API_KEY, etc.)"
+    },
+    "debate": {
+      "title": "El Debate",
+      "description": "Análisis de toro vs oso impulsado por IA sobre cualquier tema de criptomonedas",
+      "enterTopic": "Ingrese un tema para debatir",
+      "topicPlaceholder": "p. ej., ¿Alcanzará Bitcoin los $200k en 2026?",
+      "generate": "Debatir",
+      "generating": "Generando...",
+      "popularTopics": "Temas Populares",
+      "bullCase": "Caso a Favor",
+      "bearCase": "Caso en Contra",
+      "neutralAnalysis": "Análisis Neutral",
+      "confidence": "{percent}% de confianza",
+      "arguments": "Argumentos",
+      "priceTarget": "Objetivo de Precio",
+      "consensus": "Consenso",
+      "keyUncertainties": "Incertidumbres Clave",
+      "whatToWatch": "Qué Observar"
+    },
+    "counter": {
+      "title": "El Contraste",
+      "description": "Generación de contra-argumentos y verificación de hechos impulsada por IA",
+      "enterClaim": "Ingrese una afirmación para desafiar",
+      "claimPlaceholder": "p. ej., Bitcoin alcanzará $1 millón para 2030",
+      "contextLabel": "Contexto adicional (opcional)",
+      "contextPlaceholder": "Agregue cualquier contexto, fuente o información de fondo relevante...",
+      "challenge": "Desafiar Esta Afirmación",
+      "analyzing": "Analizando...",
+      "tryClaims": "Intenta estas afirmaciones",
+      "originalClaim": "Afirmación Original",
+      "overallAssessment": "Evaluación General",
+      "claimStrength": "Fuerza de la Afirmación",
+      "mainVulnerability": "Vulnerabilidad Principal",
+      "counterArguments": "Contra-Argumentos",
+      "hiddenAssumptions": "Suposiciones Ocultas",
+      "alternativeInterpretations": "Interpretaciones Alternativas",
+      "missingContext": "Contexto Faltante",
+      "strong": "Fuerte",
+      "moderate": "Moderado",
+      "weak": "Débil",
+      "factual": "Fáctico",
+      "logical": "Lógico",
+      "contextual": "Contextual",
+      "alternative": "Alternativo"
+    }
   },
   "metadata": {
-    "title": "Free Crypto News - Agregador de noticias de criptomonedas en tiempo real",
-    "description": "Mantente actualizado con las últimas noticias de criptomonedas de fuentes confiables. Actualizaciones en tiempo real, resúmenes con IA y análisis de mercado.",
-    "keywords": "noticias cripto, criptomonedas, bitcoin, ethereum, blockchain, defi, nft"
+    "title": "Noticias de Crypto Gratis - Agregador de Noticias de Criptomonedas en Tiempo Real",
+    "description": "Mantente actualizado con las últimas noticias de criptomonedas de fuentes confiables. Actualizaciones en tiempo real, resúmenes de IA y análisis de mercado.",
+    "keywords": "noticias de crypto, criptomoneda, bitcoin, ethereum, blockchain, defi, nft"
   },
   "heatmap": {
-    "title": "Crypto Heatmap",
-    "description": "Visual market cap and price change heatmap"
+    "title": "Mapa de Calor de Crypto",
+    "description": "Mapa de calor de capitalización de mercado y cambio de precio"
   },
   "calculator": {
-    "title": "Crypto Calculator",
-    "description": "Convert between cryptocurrencies"
+    "title": "Calculadora de Crypto",
+    "description": "Convierte entre criptomonedas"
   },
   "gas": {
-    "title": "Gas Tracker",
-    "description": "Real-time Ethereum gas prices"
+    "title": "Seguimiento de Gas",
+    "description": "Precios de gas de Ethereum en tiempo real"
   },
   "screener": {
-    "title": "Crypto Screener",
-    "description": "Filter and find cryptocurrencies"
+    "title": "Filtrador de Crypto",
+    "description": "Filtrar y encontrar criptomonedas"
   },
   "correlation": {
-    "title": "Correlation Matrix",
-    "description": "Crypto price correlations"
+    "title": "Matriz de Correlación",
+    "description": "Correlaciones de precios de criptomonedas"
   },
   "dominance": {
-    "title": "Dominance Chart",
-    "description": "Bitcoin and altcoin market dominance"
+    "title": "Gráfico de Dominancia",
+    "description": "Dominancia del mercado de Bitcoin y criptomonedas alternativas"
   },
   "liquidations": {
-    "title": "Liquidations",
-    "description": "Real-time crypto liquidations"
+    "title": "Liquidaciones",
+    "description": "Liquidaciones de criptomonedas en tiempo real"
   },
   "buzz": {
-    "title": "Social Buzz",
-    "description": "Crypto social media trends"
+    "title": "Tendencias en las Redes Sociales",
+    "description": "Tendencias de criptomonedas en las redes sociales"
   }
 }

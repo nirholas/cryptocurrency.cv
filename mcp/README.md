@@ -94,9 +94,11 @@ railway up
 # In ChatGPT app settings, use: https://your-app.railway.app/sse
 ```
 
-## 📋 Available Tools (14 Total)
+## 📋 Available Tools (40 Total)
 
 All tools are marked as **read-only** for ChatGPT Developer Mode (no confirmation prompts needed).
+
+### 📰 News Tools
 
 | Tool | Description |
 |------|-------------|
@@ -104,57 +106,125 @@ All tools are marked as **read-only** for ChatGPT Developer Mode (no confirmatio
 | `search_crypto_news` | Search by keywords |
 | `get_defi_news` | DeFi-specific news |
 | `get_bitcoin_news` | Bitcoin-specific news |
+| `get_ethereum_news` | Ethereum-specific news |
+| `get_altcoin_news` | Altcoin news (non-BTC/ETH) |
+| `get_nft_news` | NFT collections, drops, art |
 | `get_breaking_news` | News from last 2 hours |
-| `get_news_sources` | List all available news sources |
-| `get_api_health` | Check API & feed health status |
-| `get_trending_topics` | Trending topics with sentiment analysis |
-| `get_crypto_stats` | Analytics & statistics |
-| `analyze_news` | News with topic classification & sentiment |
-| `get_archive` | Query historical news archive |
-| `get_archive_stats` | Archive statistics |
-| `find_original_sources` | Find where news originated |
+| `get_regulatory_news` | SEC, CFTC, global regulation news |
+| `get_news_sources` | List all available sources |
 | `get_portfolio_news` | News for specific coins with prices |
+| `get_rss_feeds` | Get RSS feed URLs for categories |
+
+### 📊 Market Data Tools
+
+| Tool | Description |
+|------|-------------|
+| `get_market_data` | Live prices, market cap, volume |
+| `get_fear_greed_index` | Fear & Greed sentiment (0-100) |
+| `get_gas_prices` | Ethereum gas fees |
+| `compare_coins` | Side-by-side coin comparison |
+| `get_funding_rates` | Perpetual futures funding rates |
+| `get_liquidations` | Exchange liquidation data |
+| `get_stablecoin_data` | Stablecoin market caps and peg status |
+| `get_options_data` | Options OI, max pain, put/call ratio |
+
+### 🔄 Trading Tools
+
+| Tool | Description |
+|------|-------------|
+| `get_arbitrage` | Cross-exchange arbitrage opportunities |
+| `get_orderbook` | Order book depth and liquidity |
+| `get_whale_alerts` | Large transaction alerts |
+| `get_exchange_flows` | Exchange inflow/outflow |
+
+### 🔗 DeFi & Token Tools
+
+| Tool | Description |
+|------|-------------|
+| `get_defi_yields` | Top DeFi yield opportunities |
+| `get_token_unlocks` | Upcoming token unlock schedules |
+| `get_events_calendar` | Conferences, forks, launches |
+
+### 🤖 AI & Analytics Tools
+
+| Tool | Description |
+|------|-------------|
+| `get_ai_sentiment` | AI sentiment for specific asset |
+| `get_ai_summary` | AI-generated news summary |
+| `get_ai_market_brief` | AI market overview |
+| `get_trending_topics` | Trending topics with sentiment |
+| `get_crypto_stats` | News analytics & statistics |
+| `analyze_news` | Topic classification & sentiment |
+| `get_social_sentiment` | Twitter/Reddit/Telegram sentiment |
+| `find_original_sources` | Trace news origins |
+
+### 📚 Archive & System Tools
+
+| Tool | Description |
+|------|-------------|
+| `get_archive` | Query historical news |
+| `get_archive_stats` | Archive statistics |
+| `get_api_health` | API & feed health status |
+| `get_alerts` | Active price/news alerts |
 
 ## 💬 Example Prompts
 
 ### Claude Desktop
 
-**Basic News:**
+**News & Search:**
 - "Get me the latest crypto news"
 - "Search for news about Ethereum ETF"
 - "What's happening in DeFi?"
 - "Any breaking crypto news?"
-- "Bitcoin news from today"
+- "Show me regulatory news from the SEC"
 
-**Analytics & Trends:**
+**Market Data:**
+- "What's the Bitcoin price right now?"
+- "Check the Fear & Greed Index"
+- "What are the current Ethereum gas prices?"
+- "Compare Bitcoin, Ethereum, and Solana"
+- "Show me the funding rates for BTC"
+
+**On-Chain & Whales:**
+- "Any recent whale alerts over $10M?"
+- "Show me exchange flows for Bitcoin"
+- "What token unlocks are coming up?"
+- "Get the latest liquidation data"
+
+**DeFi & Yields:**
+- "What are the top DeFi yields on Ethereum?"
+- "Show me staking opportunities on Solana"
+- "DeFi news from this week"
+
+**Analytics & Sentiment:**
 - "What are the trending crypto topics?"
-- "What's the market sentiment today?"
+- "What's the market sentiment on Twitter?"
+- "Give me an AI market brief"
 - "Analyze recent news for bullish signals"
-- "Show me crypto news statistics"
 
-**Historical & Sources:**
-- "Get news from last week about SEC"
-- "What are the archive statistics?"
-- "Find the original source of this Binance news"
-- "Which government agencies are making crypto news?"
+**Portfolio & Historical:**
+- "Get news for BTC, ETH, SOL with prices"
+- "Search the archive for SEC news from last month"
+- "Find the original source of this Binance story"
 
 ### ChatGPT Developer Mode
 
 For ChatGPT, be explicit about using the app and tool names:
 
-**Basic Usage:**
-- "Use the Free Crypto News app's `get_crypto_news` tool to show me the latest headlines"
-- "Use `search_crypto_news` to find news about 'SEC regulation'. Do not use built-in browsing."
-- "Call the `get_breaking_news` tool to show urgent crypto news from the last 2 hours"
+**Market Analysis:**
+- "Use `get_market_data` with coins='bitcoin,ethereum' to show me current prices"
+- "Call `get_fear_greed_index` to check market sentiment"
+- "Use `get_funding_rates` with symbol='BTCUSDT' to analyze derivatives positioning"
 
-**Analytics:**
-- "Use `get_trending_topics` from Free Crypto News to show what's trending in crypto right now"
-- "Call `analyze_news` with sentiment filter set to 'bullish' to find positive crypto news"
-- "Use the `get_crypto_stats` tool to show me news distribution by source"
+**Whale Tracking:**
+- "Use `get_whale_alerts` with min_usd=10000000 to find big moves"
+- "Call `get_exchange_flows` for Bitcoin to see accumulation patterns"
+- "Use `get_liquidations` to check how much got rekt today"
 
-**Portfolio Tracking:**
-- "Use `get_portfolio_news` with coins='btc,eth,sol' to get news for my portfolio with prices"
-- "Call `get_bitcoin_news` only (do not use other tools) to show Bitcoin-specific news"
+**News & Portfolio:**
+- "Use `get_portfolio_news` with coins='btc,eth,sol' to get news for my holdings"
+- "Call `get_regulatory_news` with region='us' for SEC-related news"
+- "Use `get_breaking_news` only (no other tools) to show urgent updates"
 
 **Best Practices for ChatGPT:**
 - Always mention the app name: "Free Crypto News"
@@ -166,13 +236,18 @@ For ChatGPT, be explicit about using the app and tool names:
 
 - **100% Free** - No API keys required
 - **Dual Transport** - Works with both Claude (stdio) and ChatGPT (HTTP/SSE)
-- **14 Tools** - Comprehensive crypto news coverage
+- **40 Tools** - The most comprehensive crypto MCP server
 - **Read-Only** - All tools marked as safe for ChatGPT (no confirmation prompts)
-- **Real-Time** - Breaking news from last 2 hours
-- **Sentiment Analysis** - Bullish/bearish/neutral classification
+- **Real-Time** - Breaking news, live prices, whale alerts
+- **Market Data** - Prices, fear/greed, gas, funding rates, options
+- **Trading** - Arbitrage opportunities, order books, liquidations
+- **On-Chain** - Exchange flows, whale alerts, token unlocks
+- **AI-Powered** - Sentiment analysis, summaries, market briefs
+- **Social Tracking** - Twitter, Reddit, Telegram sentiment
 - **Historical Archive** - Query past news by date/source
 - **Portfolio Tracking** - Get news for specific coins with prices
 - **Original Sources** - Trace where news actually originated
+- **Events Calendar** - Conferences, hard forks, launches
 
 ## 🛠️ Technical Details
 

@@ -30,14 +30,16 @@ describe('cardUtils', () => {
       ];
       expectedSources.forEach((source) => {
         expect(sourceGradients[source]).toBeDefined();
-        expect(sourceGradients[source]).toContain('linear-gradient');
+        // Gradients use Tailwind classes (from-*, via-*, to-*)
+        expect(sourceGradients[source]).toMatch(/from-/);
       });
     });
 
-    it('should have valid CSS gradient format', () => {
+    it('should have valid Tailwind gradient format', () => {
       Object.values(sourceGradients).forEach((gradient) => {
-        expect(gradient).toMatch(/^linear-gradient\(/);
-        expect(gradient).toMatch(/deg/);
+        // Tailwind gradient classes: from-color via-color to-color
+        expect(gradient).toMatch(/^from-/);
+        expect(gradient).toMatch(/to-/);
       });
     });
   });
@@ -88,19 +90,19 @@ describe('cardUtils', () => {
     it('should return correct gradient for known source', () => {
       const gradient = getSourceGradient('CoinDesk');
       expect(gradient).toBe(sourceGradients['CoinDesk']);
-      expect(gradient).toContain('linear-gradient');
+      expect(gradient).toMatch(/from-/);
     });
 
     it('should return default gradient for unknown source', () => {
       const gradient = getSourceGradient('Unknown Source');
       expect(gradient).toBeDefined();
-      expect(gradient).toContain('linear-gradient');
+      expect(gradient).toMatch(/from-/);
     });
 
     it('should handle empty string', () => {
       const gradient = getSourceGradient('');
       expect(gradient).toBeDefined();
-      expect(gradient).toContain('linear-gradient');
+      expect(gradient).toMatch(/from-/);
     });
 
     it('should be case-sensitive', () => {

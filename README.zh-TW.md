@@ -8,6 +8,8 @@
   <a href="https://github.com/nirholas/free-crypto-news/stargazers"><img src="https://img.shields.io/github/stars/nirholas/free-crypto-news?style=for-the-badge&logo=github&color=yellow" alt="GitHub 星標"></a>
   <a href="https://github.com/nirholas/free-crypto-news/blob/main/LICENSE"><img src="https://img.shields.io/github/license/nirholas/free-crypto-news?style=for-the-badge&color=blue" alt="授權"></a>
   <a href="https://github.com/nirholas/free-crypto-news/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/nirholas/free-crypto-news/ci.yml?style=for-the-badge&logo=github-actions&label=CI" alt="CI 狀態"></a>
+  <a href="https://github.com/nirholas/free-crypto-news/issues"><img src="https://img.shields.io/github/issues/nirholas/free-crypto-news?style=for-the-badge&color=orange" alt="Issues"></a>
+  <a href="https://github.com/nirholas/free-crypto-news/pulls"><img src="https://img.shields.io/github/issues-pr/nirholas/free-crypto-news?style=for-the-badge&color=purple" alt="Pull Requests"></a>
 </p>
 
 <p align="center">
@@ -17,12 +19,16 @@
 > ⭐ **如果您覺得有用，請給倉庫點星！** 這有助於其他人發現這個專案並激勵持續開發。
 
 ---
+
 透過一次 API 呼叫從 7 個主要來源獲取即時加密貨幣新聞。
 
 ```bash
 curl https://news-crypto.vercel.app/api/news
 ```
+
 ---
+
+## 比較
 
 | | Free Crypto News | CryptoPanic | 其他 |
 |---|---|---|---|
@@ -37,9 +43,24 @@ curl https://news-crypto.vercel.app/api/news
 
 ---
 
+## 🌿 分支
+
+| 分支 | 描述 |
+|--------|-------------|
+| `main` | 穩定生產分支 — 原始以 API 為中心的設計 |
+| `redesign/pro-news-ui` | 高級 UI 重新設計 — CoinDesk/CoinTelegraph 風格，深色模式，增強組件，SEO 結構化數據和完整 PWA 支援 |
+
+在本地測試重新設計：
+```bash
+git checkout redesign/pro-news-ui
+npm install && npm run dev
+```
+
+---
+
 ## 🌍 國際新聞來源
 
-從 18 種語言的 **75 個國際來源**獲取加密貨幣新聞 — 自動翻譯成英語！
+從 **12 個國際來源**獲取加密貨幣新聞，包括韓語、中文、日語和西班牙語 — 自動翻譯成英語！
 
 ### 支援的來源
 
@@ -72,11 +93,13 @@ curl "https://news-crypto.vercel.app/api/news/international?region=asia&limit=20
 - ✅ 不可用來源的**備用處理**
 - ✅ 跨來源**去重**
 
+查看 [API 文檔](docs/API.md#get-apinewsinternational) 了解完整詳情。
+
 ---
 
 ## 📱 漸進式 Web 應用程式（PWA）
 
-Free Crypto News 是一個**完全可安裝的 PWA**，支援離線使用！
+Free Crypto News 是一個**完全可安裝的 PWA**，支援離線使用。
 
 ### 功能
 
@@ -87,6 +110,9 @@ Free Crypto News 是一個**完全可安裝的 PWA**，支援離線使用！
 | 🔔 **推播通知** | 接收突發新聞提醒 |
 | ⚡ **閃電般快速** | 積極的快取策略 |
 | 🔄 **背景同步** | 重新上線時自動更新 |
+| 🎯 **快捷鍵** | 快速訪問最新、熱門、比特幣 |
+| 📤 **分享** | 直接分享連結到應用程式 |
+| 🚨 **即時警報** | 可配置的價格和新聞條件警報 |
 
 ### 安裝應用程式
 
@@ -102,6 +128,36 @@ Free Crypto News 是一個**完全可安裝的 PWA**，支援離線使用！
 **Android Chrome：**
 1. 造訪網站
 2. 點擊安裝橫幅或選單 →「安裝應用程式」
+
+### Service Worker 快取
+
+PWA 使用智慧快取策略：
+
+| 內容 | 策略 | 快取時間 |
+|---------|----------|----------------|
+| API 回應 | Network-first | 5 分鐘 |
+| 靜態資源 | Cache-first | 7 天 |
+| 圖片 | Cache-first | 30 天 |
+| 導航 | Network-first + 離線備用 | 24 小時 |
+
+### 鍵盤快捷鍵
+
+使用鍵盤快速導航新聞：
+
+| 快捷鍵 | 動作 |
+|----------|--------|
+| `j` / `k` | 下一篇 / 上一篇 |
+| `/` | 焦點搜尋 |
+| `Enter` | 打開選中的文章 |
+| `d` | 切換深色模式 |
+| `g h` | 前往首頁 |
+| `g t` | 前往趨勢 |
+| `g s` | 前往來源 |
+| `g b` | 前往書籤 |
+| `?` | 顯示所有快捷鍵 |
+| `Escape` | 關閉彈窗 |
+
+📖 **完整用戶指南：** [docs/USER-GUIDE.md](docs/USER-GUIDE.md)
 
 ---
 
@@ -131,67 +187,173 @@ Free Crypto News 是一個**完全可安裝的 PWA**，支援離線使用！
 | `/api/trending` | 帶情緒的趨勢話題 |
 | `/api/analyze` | 帶主題分類的新聞 |
 | `/api/stats` | 分析與統計 |
+| `/api/sources` | 列出所有來源 |
+| `/api/health` | API 與 Feed 健康狀態 |
+| `/api/rss` | 聚合 RSS feed |
+| `/api/atom` | 聚合 Atom feed |
+| `/api/opml` | RSS 閱讀器的 OPML 匯出 |
+| `/api/docs` | 互動式 API 文檔 |
+| `/api/webhooks` | 註冊 webhooks |
+| `/api/archive` | 歷史新聞存檔 |
+| `/api/push` | Web Push 通知 |
+| `/api/origins` | 尋找新聞原始來源 |
+| `/api/portfolio` | 基於投資組合的新聞 + 價格 |
+| `/api/news/international` | 帶翻譯的國際來源 |
 
 ### 🤖 AI 驅動端點（透過 Groq 免費）
 
 | 端點 | 描述 |
 |----------|-------------|
-| `/api/summarize` | 文章的 AI 摘要 |
-| `/api/ask?q=...` | 詢問有關加密貨幣新聞的問題 |
 | `/api/digest` | AI 生成的每日摘要 |
-| `/api/sentiment` | 每篇文章的深度情緒分析 |
+| `/api/sentiment` | 市場情緒分析 |
+| `/api/summarize?url=` | 總結任何 URL |
+| `/api/ask` | 詢問 AI 有關加密新聞 |
+| `/api/entities` | 提取提到的實體 |
+| `/api/claims` | 驗證聲明 |
+| `/api/clickbait` | 檢測點擊誘餌 |
+
+### 💹 市場端點
+
+| 端點 | 描述 |
+|----------|-------------|
+| `/api/fear-greed` | 恐懼與貪婪指數及歷史數據 |
+| `/api/arbitrage` | 跨交易所套利機會 |
+| `/api/signals` | 技術交易信號 |
+| `/api/funding` | 衍生品交易所資金費率 |
+| `/api/options` | 期權流和最大痛點 |
+| `/api/liquidations` | 即時清算數據 |
+| `/api/whale-alerts` | 追蹤巨鯨交易 |
+| `/api/orderbook` | 聚合訂單簿數據 |
 
 ---
 
-## SDK 與元件
+## 快速開始
 
-| 套件 | 描述 |
-|---------|-------------|
-| [React](sdk/react/) | `<CryptoNews />` 即插即用元件 |
-| [TypeScript](sdk/typescript/) | 完整的 TypeScript SDK |
-| [Python](sdk/python/) | 零依賴 Python 客戶端 |
-| [JavaScript](sdk/javascript/) | 瀏覽器和 Node.js SDK |
-| [Go](sdk/go/) | Go 客戶端函式庫 |
-| [PHP](sdk/php/) | PHP SDK |
-
-**基礎 URL：** `https://news-crypto.vercel.app`
-
----
-
-# 自託管
-
-## 一鍵部署
-
-[![使用 Vercel 部署](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnirholas%2Ffree-crypto-news)
-
-## 手動
+### 使用 cURL
 
 ```bash
-git clone https://github.com/nirholas/free-crypto-news.git
-cd free-crypto-news
-pnpm install
-pnpm dev
+# 獲取最新新聞
+curl "https://news-crypto.vercel.app/api/news"
+
+# 搜尋新聞
+curl "https://news-crypto.vercel.app/api/search?q=ethereum"
+
+# 獲取 AI 摘要
+curl "https://news-crypto.vercel.app/api/digest"
+
+# 獲取恐懼與貪婪指數
+curl "https://news-crypto.vercel.app/api/fear-greed"
 ```
 
-開啟 http://localhost:3000/api/news
+### 使用 JavaScript
+
+```javascript
+// 獲取最新新聞
+const response = await fetch('https://news-crypto.vercel.app/api/news');
+const data = await response.json();
+
+console.log(data.articles);
+// [{ title, link, source, pubDate, timeAgo, ... }, ...]
+```
+
+### 使用 Python
+
+```python
+import requests
+
+# 獲取最新新聞
+response = requests.get('https://news-crypto.vercel.app/api/news')
+data = response.json()
+
+for article in data['articles'][:5]:
+    print(f"• {article['title']} ({article['source']})")
+```
 
 ---
 
-# 授權
+## 自託管
 
-MIT © 2025 [nich](https://github.com/nirholas)
+### 一鍵部署
+
+[![使用 Vercel 部署](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/nirholas/free-crypto-news)
+[![使用 Railway 部署](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/nirholas/free-crypto-news)
+
+### 本地安裝
+
+```bash
+# 克隆倉庫
+git clone https://github.com/nirholas/free-crypto-news.git
+cd free-crypto-news
+
+# 安裝依賴
+npm install
+
+# 運行開發伺服器
+npm run dev
+
+# 打開 http://localhost:3000
+```
+
+### 環境變數
+
+```env
+# 可選：用於 AI 功能（從 groq.com 免費獲取）
+GROQ_API_KEY=gsk_your_key_here
+
+# 可選：分析
+NEXT_PUBLIC_ANALYTICS_ID=your_id
+```
+
+---
+
+## 文檔
+
+| 文檔 | 描述 |
+|---|---|
+| [📚 API 參考](docs/API.md) | 完整端點文檔 |
+| [🏗️ 架構](docs/ARCHITECTURE.md) | 系統設計 |
+| [🚀 部署](docs/DEPLOYMENT.md) | 生產指南 |
+| [🧪 測試](docs/TESTING.md) | 測試指南 |
+| [🔐 安全](docs/SECURITY.md) | 安全政策 |
+| [📖 用戶指南](docs/USER-GUIDE.md) | PWA 和功能指南 |
+| [💻 開發者指南](docs/DEVELOPER-GUIDE.md) | 貢獻者文檔 |
+
+---
+
+## 貢獻
+
+歡迎貢獻！請參閱 [CONTRIBUTING.md](CONTRIBUTING.md) 了解指南。
+
+```bash
+# Fork 倉庫
+# 創建功能分支
+git checkout -b feature/amazing-feature
+
+# 提交更改
+git commit -m 'Add amazing feature'
+
+# 推送並創建 Pull Request
+git push origin feature/amazing-feature
+```
+
+---
+
+## 授權
+
+MIT License - 請參閱 [LICENSE](LICENSE) 文件。
+
+---
+
+## 聯繫
+
+- 🐛 **Bugs**: [GitHub Issues](https://github.com/nirholas/free-crypto-news/issues)
+- 💬 **討論**: [GitHub Discussions](https://github.com/nirholas/free-crypto-news/discussions)
+- 🐦 **Twitter**: [@nirholas](https://twitter.com/nirholas)
 
 ---
 
 <p align="center">
-  <b>停止為加密貨幣新聞 API 付費。</b><br>
-  <sub>用 💜 為社群打造</sub>
-</p>
-
-<p align="center">
+  用 ❤️ 為加密貨幣社群打造
   <br>
-  ⭐ <b>覺得有用？請點星！</b> ⭐<br>
-  <a href="https://github.com/nirholas/free-crypto-news/stargazers">
-    <img src="https://img.shields.io/github/stars/nirholas/free-crypto-news?style=social" alt="在 GitHub 上點星">
-  </a>
+  <a href="https://news-crypto.vercel.app">news-crypto.vercel.app</a>
 </p>

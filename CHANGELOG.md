@@ -9,6 +9,76 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+#### AI Agent Templates (Feb 2, 2026)
+- **5 Production-Ready AI Agent Templates** in `examples/agents/`:
+  - **Trading Bot** (`trading-bot.py`) - AI-powered trading signal generator:
+    - Three strategies: aggressive, moderate, conservative
+    - LangChain tools for news fetching and sentiment analysis
+    - Rich console output with colored signal tables
+    - Market scanning with top coin analysis
+  - **Research Assistant** (`research-assistant.py`) - Deep crypto research:
+    - Interactive mode with follow-up questions
+    - Multi-depth research (quick/standard/deep)
+    - Report generation with markdown export
+    - Source citation tracking
+  - **Alert Bot** (`alert-bot.py`) - Real-time news alerts:
+    - Keyword-based filtering
+    - Multi-channel delivery (Telegram, Discord, Slack, Webhook)
+    - Whale movement tracking
+    - Configurable cooldowns
+  - **Digest Bot** (`digest-bot.py`) - Scheduled AI news digests:
+    - Hourly/daily/weekly frequencies
+    - HTML email templates with executive summaries
+    - APScheduler for cron-based delivery
+    - Multi-format output (Markdown, HTML, JSON)
+  - **Sentiment Tracker** (`sentiment-tracker.py`) - Live sentiment dashboard:
+    - VADER + LLM hybrid sentiment scoring
+    - Real-time terminal dashboard with Rich
+    - Historical trend visualization with plotext
+    - Alert triggers on significant changes
+
+#### UI/UX Improvements (Feb 2, 2026)
+- **Page Loading Skeletons** - Comprehensive skeleton loading states for smooth navigation:
+  - Homepage skeleton with hero, categories, news grid, and sidebar
+  - Search page skeleton with filters and results
+  - Article page skeleton with breadcrumbs, header, and content
+  - Category page skeleton with filters and pagination
+  - Developers page skeleton with hero and tabs
+  - Markets page skeleton (already existed)
+- **Swipe-to-Close Mobile Navigation** - Touch gesture support for mobile menu:
+  - Swipe right to close (80px threshold or 0.3px/ms velocity)
+  - Visual swipe indicator bar
+  - Smooth transform animation during gesture
+- **News Card Action Buttons** - Quick actions on hover/touch:
+  - Bookmark button with visual feedback
+  - Share button with Web Share API + clipboard fallback
+  - "Link copied!" toast confirmation
+- **Horizontal Scroll Indicators** - `ScrollIndicator` component:
+  - Fade gradients on scroll edges
+  - Arrow buttons that appear when content is scrollable
+  - Scroll-snap support for smooth scrolling
+  - Applied to categories navigation on homepage
+- **Standardized Animation System** - Consistent animation timing:
+  - CSS custom properties: `--duration-fast` (150ms), `--duration-normal` (200ms), `--duration-slow` (300ms)
+  - Utility classes: `.transition-fast`, `.transition-normal`, `.transition-slow`
+  - Pre-built transitions: `.transition-colors-fast`, `.transition-all-normal`
+  - Entrance/exit animations: `.animate-enter`, `.animate-exit`
+  - `prefers-reduced-motion` accessibility support
+
+#### Status Page & Developer Portal (Feb 2, 2026)
+- **System Status Page** - Real-time health dashboard at `/status`:
+  - Service status indicators (API, Cache, External APIs, x402)
+  - System metrics (version, uptime, sources, articles)
+  - API endpoints table with status badges
+  - Top news sources with activity indicators
+- **Redesigned Developer Portal** - Complete rewrite at `/developers`:
+  - Interactive API playground with live testing
+  - Multi-language code examples (cURL, JavaScript, Python, Go)
+  - Filterable endpoints table (All/Free/AI/Market)
+  - SDK installation cards with copy buttons
+  - API key management with modal
+  - Modern dark gradient design with Framer Motion animations
+
 #### SEO & URL Improvements (Jan 24, 2026)
 - **SEO-Friendly Article Slugs** - Article URLs now use readable slugs like `/article/bitcoin-hits-new-ath-2026-01-24` instead of hash IDs
 - **Backwards Compatibility** - Both legacy hash IDs and new slugs work, enabling gradual migration

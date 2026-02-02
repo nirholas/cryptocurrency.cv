@@ -111,8 +111,54 @@ font-family: var(--font-geist-sans), system-ui, sans-serif;
 
 ### Animations
 
+**File:** `src/app/globals.css`
+
+#### Animation Duration Tokens
+
+Use CSS custom properties for consistent timing:
+
 ```css
-/* Custom animations defined in globals.css */
+:root {
+  --duration-fast: 150ms;    /* Quick interactions */
+  --duration-normal: 200ms;  /* Standard transitions */
+  --duration-slow: 300ms;    /* Emphasis animations */
+}
+```
+
+#### Transition Utility Classes
+
+```css
+/* Duration utilities */
+.transition-fast { transition-duration: var(--duration-fast); }
+.transition-normal { transition-duration: var(--duration-normal); }
+.transition-slow { transition-duration: var(--duration-slow); }
+
+/* Pre-built transitions */
+.transition-colors-fast { 
+  transition-property: color, background-color, border-color;
+  transition-duration: var(--duration-fast);
+}
+.transition-all-normal {
+  transition-property: all;
+  transition-duration: var(--duration-normal);
+}
+```
+
+#### Entrance/Exit Animations
+
+```css
+/* Animate elements entering/exiting */
+.animate-enter {
+  animation: enter var(--duration-normal) ease-out forwards;
+}
+.animate-exit {
+  animation: exit var(--duration-fast) ease-in forwards;
+}
+```
+
+#### Keyframe Animations
+
+```css
 @keyframes shimmer {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
@@ -123,9 +169,22 @@ font-family: var(--font-geist-sans), system-ui, sans-serif;
   50% { transform: translateY(-10px); }
 }
 
-@keyframes pulse-glow {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; }
+@keyframes enter {
+  from { opacity: 0; transform: scale(0.95) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+```
+
+#### Reduced Motion Support
+
+All animations respect `prefers-reduced-motion`:
+
+```css
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 ```
 
@@ -201,6 +260,47 @@ import Hero from '@/components/Hero';
 ---
 
 ## Article Cards
+
+### NewsCard
+
+Versatile news card component with bookmark and share actions.
+
+**File:** `src/components/NewsCard.tsx`
+
+```tsx
+import NewsCard from '@/components/NewsCard';
+
+// Default card (for grids)
+<NewsCard article={article} />
+
+// Compact card (for sidebars)
+<NewsCard article={article} variant="compact" priority={1} />
+
+// Horizontal card (for lists)
+<NewsCard article={article} variant="horizontal" showDescription={true} />
+```
+
+**Props:**
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `article` | Article | - | Article data object |
+| `variant` | 'default' \| 'compact' \| 'horizontal' | 'default' | Card layout style |
+| `showDescription` | boolean | true | Show article description |
+| `priority` | number | - | Ranking number (compact only) |
+
+**Features:**
+- Three variants: default, compact, horizontal
+- Source-specific color coding
+- Reading time estimates
+- **Bookmark button** - Save/unsave with visual feedback
+- **Share button** - Web Share API with clipboard fallback
+- "Link copied!" toast confirmation
+- Hover animations (lift, shadow)
+- Dark mode compatible
+- Accessible focus states
+
+---
 
 ### ArticleCardLarge
 
@@ -380,22 +480,65 @@ import CategoryNav from '@/components/CategoryNav';
 
 ### MobileNav
 
-Slide-out mobile navigation drawer.
+Slide-out mobile navigation drawer with swipe-to-close gesture support.
 
 **File:** `src/components/MobileNav.tsx`
 
 ```tsx
-import MobileNav from '@/components/MobileNav';
+import { MobileNav } from '@/components/MobileNav';
 
-<MobileNav isOpen={isOpen} onClose={() => setIsOpen(false)} />
+// MobileNav manages its own open/close state internally
+<MobileNav />
+```
+
+**Features:**
+- Slide-in from right
+- Swipe-to-close gesture (swipe right to dismiss)
+- 80px threshold or 0.3px/ms velocity to trigger close
+- Visual swipe indicator bar
+- Focus trap for accessibility
+- Body scroll lock when open
+- ESC key to close
+- Collapsible navigation sections
+- Language switcher integration
+
+---
+
+### ScrollIndicator
+
+Horizontal scroll container with fade gradients and arrow navigation.
+
+**File:** `src/components/ScrollIndicator.tsx`
+
+```tsx
+import { ScrollIndicator, ScrollSnapItem } from '@/components/ScrollIndicator';
+
+<ScrollIndicator showArrows={true} arrowSize="md">
+  <div className="flex gap-2">
+    {items.map((item) => (
+      <ScrollSnapItem key={item.id}>
+        <ItemCard {...item} />
+      </ScrollSnapItem>
+    ))}
+  </div>
+</ScrollIndicator>
 ```
 
 **Props:**
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `isOpen` | boolean | ✅ | Drawer visibility |
-| `onClose` | function | ✅ | Close handler |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `children` | ReactNode | - | Scrollable content |
+| `className` | string | '' | Additional classes |
+| `showArrows` | boolean | true | Show arrow buttons |
+| `arrowSize` | 'sm' \| 'md' \| 'lg' | 'md' | Arrow button size |
+
+**Features:**
+- Fade gradients appear when content is scrollable
+- Left/right arrow buttons with smooth scroll
+- Scroll-snap support with `ScrollSnapItem` wrapper
+- ResizeObserver for dynamic content
+- Hidden scrollbar with smooth scrolling
 
 ---
 
@@ -567,6 +710,26 @@ import ThemeToggle from '@/components/ThemeToggle';
 ---
 
 ## Loading States
+
+### Page Loading Skeletons
+
+Next.js `loading.tsx` files that show during route navigation.
+
+**Files:**
+- `src/app/[locale]/loading.tsx` - Homepage skeleton
+- `src/app/[locale]/search/loading.tsx` - Search page skeleton
+- `src/app/[locale]/article/[slug]/loading.tsx` - Article page skeleton
+- `src/app/[locale]/category/[slug]/loading.tsx` - Category page skeleton
+- `src/app/[locale]/developers/loading.tsx` - Developers page skeleton
+- `src/app/[locale]/markets/loading.tsx` - Markets page skeleton
+
+**Features:**
+- Full page layout matching actual content
+- Shimmer animation on skeleton elements
+- Consistent with dark mode
+- Maintains layout stability (no CLS)
+
+---
 
 ### LoadingSpinner
 

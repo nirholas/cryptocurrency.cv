@@ -281,7 +281,8 @@ describe('AI Enhanced Utilities', () => {
         }),
       });
 
-      const result = await summarizeArticle('Title', 'Content');
+      // Use unique title to avoid cache hits from previous tests
+      const result = await summarizeArticle('Anthropic Test Title ' + Date.now(), 'Anthropic Content');
 
       expect(result).toBe('Anthropic summary');
       expect(mockFetch.mock.calls[0][0]).toBe('https://api.anthropic.com/v1/messages');
@@ -290,7 +291,8 @@ describe('AI Enhanced Utilities', () => {
 
   describe('Error handling', () => {
     it('throws error when no AI provider configured', async () => {
-      await expect(summarizeArticle('Title', 'Content'))
+      // Use unique title to avoid cache hits
+      await expect(summarizeArticle('No Provider Test ' + Date.now(), 'Content'))
         .rejects.toThrow('No AI provider configured');
     });
 
@@ -303,7 +305,8 @@ describe('AI Enhanced Utilities', () => {
         text: async () => 'Internal error',
       });
 
-      await expect(summarizeArticle('Title', 'Content'))
+      // Use unique title to avoid cache hits
+      await expect(summarizeArticle('API Failure Test ' + Date.now(), 'Content'))
         .rejects.toThrow('AI API error');
     });
   });

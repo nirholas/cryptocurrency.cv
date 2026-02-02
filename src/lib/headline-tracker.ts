@@ -380,6 +380,8 @@ export function getArticleEvolution(url: string): HeadlineEvolution | null {
  */
 export function clearTracking(): void {
   trackedHeadlines.clear();
+  // Also clear cache entries related to headline tracking
+  newsCache.clear();
 }
 
 /**

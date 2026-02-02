@@ -92,7 +92,8 @@ describe('crypto-news utilities', () => {
     it('should parse ISO date strings', () => {
       const isoDate = '2024-01-15T10:30:00Z';
       const date = new Date(isoDate);
-      expect(date.toISOString()).toBe(isoDate);
+      // toISOString() always returns milliseconds (e.g., .000Z)
+      expect(date.toISOString()).toBe('2024-01-15T10:30:00.000Z');
     });
 
     it('should parse RFC 2822 date strings', () => {

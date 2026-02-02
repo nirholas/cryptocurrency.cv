@@ -2,11 +2,18 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "crons": [
     {
+      "path": "/api/cron/archive-kv",
+      "schedule": "0 * * * *"
+    },
+    {
       "path": "/api/cron/x-sentiment",
       "schedule": "0 0 * * *"
     }
   ],
   "functions": {
+    "src/app/api/cron/archive-kv/route.ts": {
+      "maxDuration": 60
+    },
     "src/app/api/cron/x-sentiment/route.ts": {
       "maxDuration": 300
     },

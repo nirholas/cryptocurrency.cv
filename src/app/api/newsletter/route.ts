@@ -11,7 +11,8 @@ import {
   getSubscriberStats 
 } from '@/lib/newsletter';
 
-export const runtime = 'edge';
+// Use Node.js runtime because newsletter.ts uses crypto and database.ts uses fs
+export const runtime = 'nodejs';
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;

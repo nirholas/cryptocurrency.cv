@@ -29,9 +29,18 @@ test.describe('API Endpoints', () => {
     test('should filter by source', async ({ request }) => {
       const response = await request.get('/api/news?source=coindesk');
       
-      if (response.ok()) {
-        const data = await response.json();
-        // All articles should be from CoinDesk
+      expect(response.ok()).toBeTruthy();
+      
+      const data = await response.json();
+      expect(data).toHaveProperty('articles');
+      expect(data).toHaveProperty('sources');
+      
+      // When filtering by source, the sources array should only contain that source
+      if (data.articles.length > 0) {
+        expect(data.sources).toHaveLength(1);
+        expect(data.sources[0].toLowerCase()).toContain('coindesk');
+        
+        // All returned articles should be from CoinDesk
         for (const article of data.articles) {
           expect(article.source.toLowerCase()).toContain('coindesk');
         }
@@ -79,13 +88,14 @@ test.describe('API Endpoints', () => {
   });
 
   test.describe('GET /api/trending', () => {
-    test('should return trending articles', async ({ request }) => {
+    test('should return trending topics', async ({ request }) => {
       const response = await request.get('/api/trending');
       
       expect(response.ok()).toBeTruthy();
       
       const data = await response.json();
-      expect(data).toHaveProperty('articles');
+      expect(data).toHaveProperty('trending');
+      expect(Array.isArray(data.trending)).toBeTruthy();
     });
   });
 
@@ -136,12 +146,26 @@ test.describe('API Endpoints', () => {
 
 test.describe('Newsletter API', () => {
   test('should accept valid email subscription', async ({ request }) => {
+    // Use unique email to avoid conflicts with previous test runs
+    const uniqueEmail = `test-${Date.now()}@example.com`;
+    
     const response = await request.post('/api/newsletter', {
-      data: { email: 'test@example.com' },
+      data: { email: uniqueEmail },
     });
     
-    // Should either succeed or indicate already subscribed
-    expect([200, 201, 409]).toContain(response.status());
+    const data = await response.json();
+    
+    // New subscription should succeed with 201, or return 409 if email exists
+    if (response.status() === 201) {
+      expect(data.success).toBe(true);
+      expect(data.message).toBeDefined();
+    } else if (response.status() === 409) {
+      // Already subscribed is acceptable
+      expect(data.message).toContain('subscribed');
+    } else {
+      // Any other status should be documented
+      expect([200, 201, 409]).toContain(response.status());
+    }
   });
 
   test('should reject invalid email', async ({ request }) => {
@@ -154,10 +178,42 @@ test.describe('Newsletter API', () => {
 });
 
 test.describe('SSE Endpoint', () => {
-  test('should return event stream', async ({ request }) => {
-    const response = await request.get('/api/sse');
+  test('should return event stream', async ({ page, baseURL }) => {
+    // Navigate to any page first to establish browser context
+    await page.goto('/');
     
-    expect(response.ok()).toBeTruthy();
-    expect(response.headers()['content-type']).toContain('text/event-stream');
+    // Use page.evaluate to run fetch in browser context where SSE works properly
+    const result = await page.evaluate(async (url) => {
+      const controller = new AbortController();
+      
+      try {
+        const response = await fetch(`${url}/api/sse`, {
+          signal: controller.signal,
+        });
+        
+        const contentType = response.headers.get('content-type');
+        const ok = response.ok;
+        
+        // Read just the first chunk to verify stream is working
+        const reader = response.body?.getReader();
+        let firstChunk = '';
+        if (reader) {
+          const { value } = await reader.read();
+          if (value) {
+            firstChunk = new TextDecoder().decode(value);
+          }
+        }
+        
+        controller.abort();
+        return { ok, contentType, firstChunk };
+      } catch (error) {
+        controller.abort();
+        throw error;
+      }
+    }, baseURL);
+    
+    expect(result.ok).toBe(true);
+    expect(result.contentType).toContain('text/event-stream');
+    expect(result.firstChunk).toContain('event:');
   });
 });

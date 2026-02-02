@@ -17,6 +17,37 @@ vi.mock('next/navigation', () => ({
   useParams: () => ({}),
 }));
 
+// Mock next-intl
+vi.mock('next-intl', () => ({
+  useTranslations: () => (key: string) => key,
+  useLocale: () => 'en',
+  useMessages: () => ({}),
+  useFormatter: () => ({
+    dateTime: (date: Date) => date.toISOString(),
+    number: (num: number) => String(num),
+    relativeTime: () => 'just now',
+  }),
+  useNow: () => new Date(),
+  useTimeZone: () => 'UTC',
+  NextIntlClientProvider: ({ children }: { children: React.ReactNode }) => children,
+}));
+
+// Mock next-intl/navigation
+vi.mock('next-intl/navigation', () => ({
+  useRouter: () => ({
+    push: vi.fn(),
+    replace: vi.fn(),
+    prefetch: vi.fn(),
+    back: vi.fn(),
+    forward: vi.fn(),
+  }),
+  usePathname: () => '/',
+  Link: ({ children, href, ...props }: { children: React.ReactNode; href: string; [key: string]: unknown }) => 
+    React.createElement('a', { href, ...props }, children),
+  redirect: vi.fn(),
+  permanentRedirect: vi.fn(),
+}));
+
 // Mock next/link
 vi.mock('next/link', () => ({
   default: function MockLink({ children, href, ...props }: { children: React.ReactNode; href: string; [key: string]: unknown }) {

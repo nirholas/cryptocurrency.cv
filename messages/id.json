@@ -1,18 +1,18 @@
 {
   "common": {
     "appName": "Berita Crypto Gratis",
-    "tagline": "Agregator berita cryptocurrency waktu nyata",
-    "loading": "Memuat...",
+    "tagline": "Pengumpul berita cryptocurrency waktu nyata",
+    "loading": "Sedang memuat...",
     "error": "Terjadi kesalahan",
     "retry": "Coba lagi",
     "cancel": "Batal",
     "confirm": "Konfirmasi",
     "save": "Simpan",
     "delete": "Hapus",
-    "edit": "Edit",
+    "edit": "Sunting",
     "close": "Tutup",
     "back": "Kembali",
-    "next": "Selanjutnya",
+    "next": "Berikutnya",
     "previous": "Sebelumnya",
     "search": "Cari",
     "filter": "Saring",
@@ -20,38 +20,38 @@
     "refresh": "Segarkan",
     "share": "Bagikan",
     "copy": "Salin",
-    "copied": "Disalin!",
+    "copied": "Tersalin!",
     "viewAll": "Lihat semua",
-    "seeMore": "Lihat lebih banyak",
-    "seeLess": "Lihat lebih sedikit",
-    "showMore": "Tampilkan lebih banyak",
-    "showLess": "Tampilkan lebih sedikit",
+    "seeMore": "Lihat lebih",
+    "seeLess": "Lihat kurang",
+    "showMore": "Tampilkan lebih",
+    "showLess": "Tampilkan kurang",
     "noResults": "Tidak ada hasil ditemukan",
-    "poweredBy": "Ditenagai oleh {name}"
+    "poweredBy": "Didukung oleh {name}"
   },
   "nav": {
     "home": "Beranda",
     "news": "Berita",
     "markets": "Pasar",
-    "trending": "Tren",
+    "trending": "Trending",
     "sources": "Sumber",
     "topics": "Topik",
     "defi": "DeFi",
-    "digest": "Rangkuman",
+    "digest": "Ringkasan",
     "search": "Cari",
-    "bookmarks": "Tandai",
-    "watchlist": "Daftar Tonton",
+    "bookmarks": "Tanda Buku",
+    "watchlist": "Daftar Pantauan",
     "portfolio": "Portofolio",
     "settings": "Pengaturan",
     "about": "Tentang",
     "compare": "Bandingkan",
     "sentiment": "Sentimen",
-    "movers": "Penggerak Teratas"
+    "movers": "Top Movers"
   },
   "home": {
     "hero": {
       "title": "Berita Crypto Gratis",
-      "subtitle": "Berita cryptocurrency teragregasi waktu nyata dari sumber terpercaya",
+      "subtitle": "Berita cryptocurrency agregat waktu nyata dari sumber terpercaya",
       "cta": "Mulai Membaca"
     },
     "latestNews": "Berita Terbaru",
@@ -69,45 +69,45 @@
     "publishedAt": "Diterbitkan {time}",
     "timeAgo": "{time} yang lalu",
     "relatedNews": "Berita Terkait",
-    "breakingAlert": "Penting",
+    "breakingAlert": "Terkini",
     "sponsored": "Disponsori",
     "opinion": "Opini",
     "analysis": "Analisis",
-    "filterBySource": "Saring berdasarkan sumber",
-    "filterByTopic": "Saring berdasarkan topik",
-    "filterByDate": "Saring berdasarkan tanggal",
-    "sortByDate": "Urutkan berdasarkan tanggal",
-    "sortByRelevance": "Urutkan berdasarkan relevansi",
-    "newest": "Terbaru terlebih dahulu",
-    "oldest": "Terlama terlebih dahulu"
+    "filterBySource": "Filter oleh sumber",
+    "filterByTopic": "Filter oleh topik",
+    "filterByDate": "Filter oleh tanggal",
+    "sortByDate": "Urutkan oleh tanggal",
+    "sortByRelevance": "Urutkan oleh relevansi",
+    "newest": "Terbaru dahulu",
+    "oldest": "Terlama dahulu"
   },
   "article": {
     "summary": "Ringkasan",
     "aiSummary": "Ringkasan AI",
-    "keyPoints": "Poin Penting",
+    "keyPoints": "Poin Kunci",
     "sentiment": "Sentimen",
     "readingTime": "{minutes} menit baca",
     "bookmark": "Tandai",
-    "bookmarked": "Telah ditandai",
-    "removeBookmark": "Hapus tanda",
+    "bookmarked": "Tertandai",
+    "removeBookmark": "Hapus tandai",
     "shareArticle": "Bagikan artikel",
     "copyLink": "Salin tautan",
-    "openOriginal": "Buka yang asli",
+    "openOriginal": "Buka asli",
     "relatedCoins": "Koin Terkait",
     "mentionedEntities": "Disebutkan",
-    "factCheck": "Pemeriksaan Fakta",
-    "clickbaitScore": "Skor Clickbait"
+    "factCheck": "Periksa Fakta",
+    "clickbaitScore": "Skor Klik"
   },
   "markets": {
     "price": "Harga",
-    "change24h": "Perubahan 24 jam",
-    "change7d": "Perubahan 7 hari",
+    "change24h": "Perubahan 24j",
+    "change7d": "Perubahan 7h",
     "marketCap": "Kapitalisasi Pasar",
     "volume": "Volume",
-    "volume24h": "Volume 24 jam",
-    "circulatingSupply": "Pasokan Beredar",
-    "totalSupply": "Total Pasokan",
-    "maxSupply": "Maksimal Pasokan",
+    "volume24h": "Volume 24j",
+    "circulatingSupply": "Pasokan yang Beredar",
+    "totalSupply": "Pasokan Total",
+    "maxSupply": "Pasokan Maksimum",
     "rank": "Peringkat",
     "allTimeHigh": "Tertinggi Sepanjang Masa",
     "allTimeLow": "Terendah Sepanjang Masa",
@@ -134,8 +134,8 @@
     "social": "Sosial",
     "links": "Tautan",
     "website": "Situs Web",
-    "whitepaper": "Whitepaper",
-    "explorer": "Penjelajah",
+    "whitepaper": "Dokumen Putih",
+    "explorer": "Pencari",
     "github": "GitHub",
     "twitter": "Twitter",
     "reddit": "Reddit",
@@ -153,42 +153,42 @@
     "searchResults": "Hasil pencarian untuk \"{query}\"",
     "resultsCount": "{count} hasil",
     "noResultsFor": "Tidak ada hasil untuk \"{query}\"",
-    "tryDifferent": "Coba istilah pencarian yang berbeda"
+    "tryDifferent": "Coba kata kunci yang berbeda"
   },
   "bookmarks": {
-    "title": "Bookmark",
+    "title": "Tanda Buku",
     "saved": "Artikel Tersimpan",
-    "empty": "Belum ada bookmark",
-    "emptyDescription": "Artikel yang Anda bookmark akan muncul di sini",
+    "empty": "Belum ada tanda buku",
+    "emptyDescription": "Artikel yang Anda tandai akan muncul di sini",
     "removeAll": "Hapus semua",
-    "confirmRemoveAll": "Hapus semua bookmark?"
+    "confirmRemoveAll": "Hapus semua tanda buku?"
   },
   "watchlist": {
-    "title": "Daftar Pantau",
-    "empty": "Daftar pantau Anda kosong",
-    "emptyDescription": "Tambahkan koin untuk melacak harga mereka",
-    "addCoin": "Tambahkan koin",
-    "removeCoin": "Hapus dari daftar pantau",
-    "addedToWatchlist": "Ditambahkan ke daftar pantau",
+    "title": "Daftar Pantauan",
+    "empty": "Daftar pantauan Anda kosong",
+    "emptyDescription": "Tambahkan koin untuk melacak harga",
+    "addCoin": "Tambah koin",
+    "removeCoin": "Hapus dari daftar pantauan",
+    "addedToWatchlist": "Ditambahkan ke daftar pantauan",
     "removedFromWatchlist": "Dihapus dari daftar pantauan"
   },
   "portfolio": {
     "title": "Portofolio",
     "totalValue": "Nilai Total",
     "totalChange": "Perubahan Total",
-    "holdings": "Kepemilikan",
-    "addHolding": "Tambahkan kepemilikan",
-    "editHolding": "Edit kepemilikan",
-    "removeHolding": "Hapus kepemilikan",
+    "holdings": "Pemilikan",
+    "addHolding": "Tambah pemilikan",
+    "editHolding": "Edit pemilikan",
+    "removeHolding": "Hapus pemilikan",
     "coin": "Koin",
-    "quantity": "Kuantitas",
+    "quantity": "Jumlah",
     "buyPrice": "Harga beli",
     "currentPrice": "Harga saat ini",
     "value": "Nilai",
-    "profit": "Keuntungan/Kerugian",
+    "profit": "Keuntungan/Rugi",
     "allocation": "Alokasi",
-    "empty": "Belum ada kepemilikan",
-    "emptyDescription": "Tambahkan kepemilikan kripto Anda untuk melacak portofolio Anda"
+    "empty": "Belum ada holding",
+    "emptyDescription": "Tambahkan holding crypto Anda untuk melacak portofolio"
   },
   "settings": {
     "title": "Pengaturan",
@@ -202,8 +202,8 @@
     "notifications": "Notifikasi",
     "pushNotifications": "Notifikasi push",
     "emailNotifications": "Notifikasi email",
-    "breakingNewsAlerts": "Pemberitahuan berita terkini",
-    "priceAlerts": "Pemberitahuan harga",
+    "breakingNewsAlerts": "Peringatan berita terbaru",
+    "priceAlerts": "Peringatan harga",
     "privacy": "Privasi",
     "analytics": "Analitik",
     "clearData": "Hapus data",
@@ -234,7 +234,7 @@
   },
   "topics": {
     "title": "Topik",
-    "trending": "Topik Trending",
+    "trending": "Topik Terkini",
     "popular": "Topik Populer",
     "all": "Semua Topik",
     "bitcoin": "Bitcoin",
@@ -242,31 +242,31 @@
     "defi": "DeFi",
     "nft": "NFT",
     "regulation": "Regulasi",
-    "altcoins": "Altcoin",
-    "stablecoins": "Stablecoin",
-    "mining": "Penambangan",
+    "altcoins": "Altcoins",
+    "stablecoins": "Stablecoins",
+    "mining": "Pertambangan",
     "security": "Keamanan",
     "adoption": "Adopsi"
   },
   "digest": {
     "title": "Ringkasan Harian",
     "aiGenerated": "Ringkasan yang Dihasilkan AI",
-    "topStories": "Berita Teratas",
+    "topStories": "Berita Utama",
     "marketSummary": "Ringkasan Pasar",
     "whatHappened": "Apa yang terjadi hari ini",
     "keyTakeaways": "Poin Penting",
-    "generateNew": "Hasilkan ringkasan baru",
-    "lastGenerated": "Terakhir dihasilkan {time}"
+    "generateNew": "Buat ringkasan baru",
+    "lastGenerated": "Terakhir dibuat {time}"
   },
   "sentiment": {
     "title": "Sentimen Pasar",
     "overall": "Sentimen Keseluruhan",
-    "bullish": "Optimis",
-    "bearish": "Pesimis",
+    "bullish": "Bullish",
+    "bearish": "Bearish",
     "neutral": "Netral",
-    "fearGreed": "Indeks Ketakutan & Keserakahan",
-    "fear": "Ketakutan",
-    "greed": "Keserakahan",
+    "fearGreed": "Indeks Takut & Serakah",
+    "fear": "Takut",
+    "greed": "Serakah",
     "extreme": "Ekstrem",
     "socialSentiment": "Sentimen Sosial",
     "newsSentiment": "Sentimen Berita"
@@ -274,15 +274,15 @@
   "compare": {
     "title": "Bandingkan Koin",
     "selectCoins": "Pilih koin untuk dibandingkan",
-    "addCoin": "Tambahkan koin",
+    "addCoin": "Tambah koin",
     "removeCoin": "Hapus",
     "comparison": "Perbandingan",
     "vsLabel": "vs"
   },
   "movers": {
-    "title": "Pergerakan Teratas",
-    "gainers": "Pemenang Teratas",
-    "losers": "Kalah Teratas",
+    "title": "Top Movers",
+    "gainers": "Top Pemenang",
+    "losers": "Top Yang Kalah",
     "period": "Periode",
     "hour": "1 Jam",
     "day": "24 Jam",
@@ -290,9 +290,9 @@
   },
   "defi": {
     "title": "Berita DeFi",
-    "tvl": "Total Nilai Terkunci",
+    "tvl": "Nilai Total yang Terkunci",
     "protocols": "Protokol",
-    "yields": "Hasil",
+    "yields": "Yields",
     "liquidations": "Likuidasi"
   },
   "share": {
@@ -307,8 +307,8 @@
     "copyLink": "Salin tautan"
   },
   "footer": {
-    "copyright": "© {year} Berita Crypto Gratis. Semua hak dilindungi.",
-    "disclaimer": "Bukan nasihat keuangan. Selalu lakukan riset Anda sendiri.",
+    "copyright": " {year} Berita Crypto Gratis. Hak cipta dilindungi.",
+    "disclaimer": "Bukan saran keuangan. Selalu lakukan penelitian Anda sendiri.",
     "privacy": "Kebijakan Privasi",
     "terms": "Syarat Layanan",
     "contact": "Kontak",
@@ -321,24 +321,24 @@
     "notFound": "Halaman tidak ditemukan",
     "notFoundDescription": "Halaman yang Anda cari tidak ada.",
     "serverError": "Kesalahan server",
-    "serverErrorDescription": "Ada yang salah di pihak kami.",
+    "serverErrorDescription": "Terjadi kesalahan di sisi kami.",
     "networkError": "Kesalahan jaringan",
-    "networkErrorDescription": "Silakan periksa koneksi internet Anda.",
-    "unauthorized": "Tidak sah",
+    "networkErrorDescription": "Periksa koneksi internet Anda.",
+    "unauthorized": "Tidak diizinkan",
     "forbidden": "Dilarang",
     "rateLimited": "Terlalu banyak permintaan",
-    "goHome": "Kembali ke beranda"
+    "goHome": "Kembali ke halaman utama"
   },
   "pwa": {
     "install": "Pasang Aplikasi",
-    "installPrompt": "Pasang Berita Crypto Gratis untuk pengalaman yang lebih baik",
+    "installPrompt": "Pasang Free Crypto News untuk pengalaman yang lebih baik",
     "installButton": "Pasang",
-    "notNow": "Tidak sekarang",
+    "notNow": "Nanti",
     "offline": "Anda sedang offline",
     "offlineDescription": "Beberapa fitur mungkin tidak tersedia"
   },
   "time": {
-    "justNow": "Baru saja sekarang",
+    "justNow": "Baru saja",
     "minutesAgo": "{count} menit yang lalu",
     "minutesAgo_plural": "{count} menit yang lalu",
     "hoursAgo": "{count} jam yang lalu",
@@ -353,7 +353,7 @@
     "yearsAgo_plural": "{count} tahun yang lalu"
   },
   "a11y": {
-    "skipToContent": "Lompat ke konten",
+    "skipToContent": "Lewati ke konten",
     "openMenu": "Buka menu",
     "closeMenu": "Tutup menu",
     "toggleTheme": "Ganti tema",
@@ -361,43 +361,107 @@
     "nextPage": "Halaman berikutnya",
     "expandSection": "Perluas bagian",
     "collapseSection": "Tutup bagian",
-    "externalLink": "Membuka di tab baru"
+    "externalLink": "Dibuka di tab baru"
+  },
+  "ai": {
+    "brief": {
+      "title": "Ringkasan",
+      "description": "Ringkasan intelijen pasar harian dan berita crypto yang ditenagai oleh AI",
+      "executiveSummary": "Ringkasan Eksekutif",
+      "marketOverview": "Tinjauan Pasar",
+      "sentiment": "Sentimen",
+      "btcTrend": "Tren BTC",
+      "fearGreed": "Takut & Serakah",
+      "btcDominance": "Dominasi BTC",
+      "totalCap": "Kapitalisasi Total",
+      "topStories": "Berita Teratas",
+      "sectorsInFocus": "Sektor yang Diperhatikan",
+      "upcomingEvents": "Acara Mendatang",
+      "riskAlerts": "Peringatan Risiko",
+      "generatedAt": "Dibuat pada {time}",
+      "unavailable": "Ringkasan Harian Tidak Tersedia",
+      "configureAI": "Fitur AI memerlukan kunci API (GROQ_API_KEY, OPENAI_API_KEY, dll.)"
+    },
+    "debate": {
+      "title": "Debat",
+      "description": "Analisis banteng vs beruang yang ditenagai AI pada topik crypto apa pun",
+      "enterTopic": "Masukkan topik untuk didiskusikan",
+      "topicPlaceholder": "misalnya, Apakah Bitcoin akan mencapai $200k pada 2026?",
+      "generate": "Debat",
+      "generating": "Menghasilkan...",
+      "popularTopics": "Topik Populer",
+      "bullCase": "Kasus Banteng",
+      "bearCase": "Kasus Beruang",
+      "neutralAnalysis": "Analisis Netral",
+      "confidence": "{percent}% yakin",
+      "arguments": "Argumen",
+      "priceTarget": "Target Harga",
+      "consensus": "Kesepakatan",
+      "keyUncertainties": "Ketidakpastian Kunci",
+      "whatToWatch": "Apa yang Perlu Diperhatikan"
+    },
+    "counter": {
+      "title": "The Counter",
+      "description": "Penghasilan kontra-argumen dan pemeriksaan fakta yang ditenagai AI",
+      "enterClaim": "Masukkan klaim untuk ditantang",
+      "claimPlaceholder": "misalnya, Bitcoin akan mencapai $1 juta pada 2030",
+      "contextLabel": "Konteks tambahan (opsional)",
+      "contextPlaceholder": "Tambahkan konteks relevan, sumber, atau informasi latar belakang...",
+      "challenge": "Tantang Klaim Ini",
+      "analyzing": "Menganalisis...",
+      "tryClaims": "Coba klaim ini",
+      "originalClaim": "Klaim Asli",
+      "overallAssessment": "Penilaian Keseluruhan",
+      "claimStrength": "Kekuatan Klaim",
+      "mainVulnerability": "Kerentanan Utama",
+      "counterArguments": "Argumen Kontra",
+      "hiddenAssumptions": "Asumsi Tersembunyi",
+      "alternativeInterpretations": "Interpretasi Alternatif",
+      "missingContext": "Konteks yang Hilang",
+      "strong": "Kuat",
+      "moderate": "Moderat",
+      "weak": "Lemah",
+      "factual": "Faktual",
+      "logical": "Logis",
+      "contextual": "Kontekstual",
+      "alternative": "Alternatif"
+    }
   },
   "metadata": {
-    "title": "Berita Crypto Gratis - Agregator Berita Cryptocurrency Waktu Nyata",
-    "description": "Tetap terupdate dengan berita cryptocurrency terbaru dari sumber terpercaya. Pembaruan waktu nyata, ringkasan AI, dan analisis pasar.",
+    "title": "Berita Crypto Gratis - Pengumpul Berita Cryptocurrency Waktu Nyata",
+    "description": "Tetap mendapatkan informasi dengan berita cryptocurrency terbaru dari sumber terpercaya. Pembaruan waktu nyata, ringkasan AI, dan analisis pasar.",
     "keywords": "berita crypto, cryptocurrency, bitcoin, ethereum, blockchain, defi, nft"
   },
   "heatmap": {
-    "title": "Crypto Heatmap",
-    "description": "Visual market cap and price change heatmap"
+    "title": "Peta Panas Crypto",
+    "description": "Peta panas kapitalisasi pasar dan perubahan harga"
   },
   "calculator": {
-    "title": "Crypto Calculator",
-    "description": "Convert between cryptocurrencies"
+    "title": "Kalkulator Crypto",
+    "description": "Mengkonversi antara cryptocurrency"
   },
   "gas": {
-    "title": "Gas Tracker",
-    "description": "Real-time Ethereum gas prices"
+    "title": "Pelacak Gas",
+    "description": "Harga gas Ethereum waktu nyata"
   },
   "screener": {
-    "title": "Crypto Screener",
-    "description": "Filter and find cryptocurrencies"
+    "title": "Screener Crypto",
+    "description": "Filter dan temukan cryptocurrency"
   },
   "correlation": {
-    "title": "Correlation Matrix",
-    "description": "Crypto price correlations"
+    "title": "Matriks Korelasi",
+    "description": "Korelasi harga crypto"
   },
   "dominance": {
-    "title": "Dominance Chart",
-    "description": "Bitcoin and altcoin market dominance"
+    "title": "Grafik Dominasi",
+    "description": "Dominasi pasar bitcoin dan altcoin"
   },
   "liquidations": {
-    "title": "Liquidations",
-    "description": "Real-time crypto liquidations"
+    "title": "Likuidasi",
+    "description": "Likuidasi crypto waktu nyata"
   },
   "buzz": {
-    "title": "Social Buzz",
-    "description": "Crypto social media trends"
+    "title": "Gemerlap Sosial",
+    "description": "Tren media sosial crypto"
   }
 }

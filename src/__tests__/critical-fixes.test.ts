@@ -139,9 +139,10 @@ describe('Critical Agent Fixes', () => {
     });
 
     it('should not export deprecated getTierFromApiKey', async () => {
-      const x402Exports = await import('@/lib/x402');
+      // Import only the pricing module to avoid next/server import issues in test
+      const pricingExports = await import('@/lib/x402/pricing');
       
-      expect(x402Exports).not.toHaveProperty('getTierFromApiKey');
+      expect(pricingExports).not.toHaveProperty('getTierFromApiKey');
     });
 
     it('should validate API keys properly (not prefix-based)', async () => {

@@ -94,16 +94,70 @@ Get crypto news from **75 international sources** across 18 languages — with a
 
 ### Quick Examples
 
+**cURL:**
 ```bash
-# Get all international news
-curl "https://news-crypto.vercel.app/api/news/international"
+# Get latest news
+curl "https://news-crypto.vercel.app/api/news?limit=10"
 
-# Get Korean news with English translation
+# Get Bitcoin sentiment
+curl "https://news-crypto.vercel.app/api/ai/sentiment?asset=BTC"
+
+# Search articles
+curl "https://news-crypto.vercel.app/api/search?q=ethereum%20upgrade"
+
+# Get international news with translation
 curl "https://news-crypto.vercel.app/api/news/international?language=ko&translate=true"
-
-# Get Asian region news
-curl "https://news-crypto.vercel.app/api/news/international?region=asia&limit=20"
 ```
+
+**Python:**
+```python
+import requests
+
+BASE_URL = "https://news-crypto.vercel.app"
+
+# Get latest news
+news = requests.get(f"{BASE_URL}/api/news?limit=10").json()
+for article in news["articles"]:
+    print(f"• {article['title']} ({article['source']})")
+
+# Get Bitcoin sentiment analysis
+sentiment = requests.get(f"{BASE_URL}/api/ai/sentiment?asset=BTC").json()
+print(f"BTC Sentiment: {sentiment['label']} ({sentiment['score']:.2f})")
+
+# Get Fear & Greed Index
+fg = requests.get(f"{BASE_URL}/api/market/fear-greed").json()
+print(f"Market: {fg['classification']} ({fg['value']}/100)")
+
+# Stream real-time updates
+import sseclient
+response = requests.get(f"{BASE_URL}/api/stream", stream=True)
+client = sseclient.SSEClient(response)
+for event in client.events():
+    print(f"New: {event.data}")
+```
+
+**JavaScript:**
+```javascript
+const BASE_URL = 'https://news-crypto.vercel.app';
+
+// Get latest news
+const news = await fetch(`${BASE_URL}/api/news?limit=10`).then(r => r.json());
+news.articles.forEach(a => console.log(`• ${a.title} (${a.source})`));
+
+// Get AI-powered summary
+const summary = await fetch(`${BASE_URL}/api/summarize?style=bullet`).then(r => r.json());
+console.log(summary.summary);
+
+// Stream real-time updates
+const events = new EventSource(`${BASE_URL}/api/stream`);
+events.onmessage = (e) => console.log('New:', JSON.parse(e.data).title);
+
+// Ask questions about crypto news
+const answer = await fetch(`${BASE_URL}/api/ask?q=What's happening with Bitcoin?`).then(r => r.json());
+console.log(answer.response);
+```
+
+📚 **[Full Tutorials & Examples](docs/tutorials/index.md)** — 19 comprehensive guides covering 150+ endpoints with complete working code.
 
 ### Features
 
@@ -279,6 +333,19 @@ The web interface provides rich, interactive pages for exploring crypto data:
 | `/charts`     | Advanced charting           |
 | `/analytics`  | Usage analytics             |
 | `/regulatory` | Regulatory tracking         |
+| `/status`     | System health dashboard     |
+
+### 🎨 UI/UX Features
+
+| Feature | Description |
+| ------- | ----------- |
+| Skeleton Loading | Full-page loading skeletons during navigation |
+| Swipe Gestures | Swipe-to-close mobile navigation |
+| Bookmark/Share | Quick action buttons on news cards |
+| Scroll Indicators | Fade edges + arrows for horizontal scroll |
+| Dark Mode | System-aware with flash prevention |
+| Reduced Motion | Respects `prefers-reduced-motion` |
+| Accessibility | Skip links, focus rings, ARIA labels |
 
 ---
 
@@ -462,6 +529,7 @@ curl "https://news-crypto.vercel.app/api/bitcoin?lang=zh-CN"
 | `/api/stats` | Analytics & statistics |
 | `/api/sources` | List all sources |
 | `/api/health` | API & feed health status |
+| `/status` | System status dashboard (UI) |
 | `/api/rss` | Aggregated RSS feed |
 | `/api/atom` | Aggregated Atom feed |
 | `/api/opml` | OPML export for RSS readers |
@@ -1094,7 +1162,7 @@ The web app includes **95+ pages** for market data, portfolio management, AI too
 
 ### 🔌 Platform Integrations
 
-**Total Integrations:** 8 official SDKs + 5 platform integrations + 11 integration examples
+**Total Integrations:** 8 official SDKs + 5 platform integrations + 200+ code examples
 
 | Integration                    | Description                               | Documentation                           | Status          |
 | ------------------------------ | ----------------------------------------- | --------------------------------------- | --------------- |
@@ -1115,7 +1183,63 @@ The web app includes **95+ pages** for market data, portfolio management, AI too
 | Ticker      | JavaScript | Scrolling header ticker |
 | Carousel    | JavaScript | Featured news rotator   |
 
-**Integration Examples (11 Complete):**
+### 🚀 Code Examples & SDKs (200+ Examples)
+
+Complete examples for all 184 API endpoints across 5 languages:
+
+| Language | Files | Functions | Description |
+|----------|-------|-----------|-------------|
+| [Python](examples/python/) | 12 files | 150+ | Full SDK with all endpoints |
+| [JavaScript](examples/javascript/) | 11 files | 120+ | Node.js & browser examples |
+| [TypeScript](examples/typescript/) | 3 files | 80+ | Type-safe SDK |
+| [Go](examples/go/) | 1 file | 60+ | Go client library |
+| [cURL](examples/curl/) | 1 file | 100+ | Shell script examples |
+
+**Python Example Files:**
+- `news.py` - News feeds, search, categories (13 functions)
+- `ai.py` - Sentiment, summarization, NLP (20 functions)
+- `market.py` - Coins, OHLC, exchanges (16 functions)
+- `trading.py` - Arbitrage, signals, funding (10 functions)
+- `social.py` - Twitter, Reddit, Discord (15 functions)
+- `blockchain.py` - DeFi, NFT, on-chain (17 functions)
+- `regulatory.py` - ETF, SEC, regulations (14 functions)
+- `analytics.py` - Trends, correlations (15 functions)
+- `feeds.py` - RSS, exports, webhooks (13 functions)
+- `portfolio.py` - Alerts, watchlists (15 functions)
+- `premium.py` - Premium tier features (12 functions)
+
+**Quick Start (Python):**
+```python
+import requests
+BASE_URL = "https://news-crypto.vercel.app"
+
+# Get latest news
+news = requests.get(f"{BASE_URL}/api/news?limit=10").json()
+
+# Get Bitcoin sentiment
+sentiment = requests.get(f"{BASE_URL}/api/ai/sentiment?asset=BTC").json()
+print(f"BTC: {sentiment['label']} ({sentiment['score']:.2f})")
+
+# Get Fear & Greed
+fg = requests.get(f"{BASE_URL}/api/market/fear-greed").json()
+print(f"Market: {fg['classification']} ({fg['value']})")
+```
+
+**Quick Start (JavaScript):**
+```javascript
+const BASE_URL = 'https://news-crypto.vercel.app';
+
+// Get latest news
+const news = await fetch(`${BASE_URL}/api/news?limit=10`).then(r => r.json());
+
+// Stream real-time updates
+const events = new EventSource(`${BASE_URL}/api/stream`);
+events.onmessage = (e) => console.log('New:', JSON.parse(e.data).title);
+```
+
+📚 **[Full Examples Documentation](examples/README.md)** | **[API Tutorial](docs/EXAMPLES.md)**
+
+**Bot Integration Examples:**
 
 | Example          | Language   | File                          | Purpose                   |
 | ---------------- | ---------- | ----------------------------- | ------------------------- |
@@ -1131,27 +1255,55 @@ The web app includes **95+ pages** for market data, portfolio management, AI too
 | x402 TypeScript  | TypeScript | `examples/x402-client.ts`     | Payment protocol          |
 | x402 Go          | Go         | `examples/x402-client.go`     | Payment protocol          |
 
+### 📖 Complete API Tutorials
+
+Step-by-step tutorials with full working code for every API endpoint:
+
+| Tutorial | Endpoints Covered | Description |
+|----------|-------------------|-------------|
+| [News Basics](docs/tutorials/news-basics.md) | `/api/news`, `/api/latest`, `/api/breaking`, `/api/trending` | Fetching, filtering, and paginating news articles |
+| [Search & Filtering](docs/tutorials/search-filtering.md) | `/api/search`, `/api/news?source=`, `/api/categories` | Full-text search, source filtering, category browsing |
+| [Archive & Export](docs/tutorials/archive-export.md) | `/api/archive`, `/api/export`, `/api/rss`, `/api/atom` | Historical data access, bulk exports, RSS/Atom feeds |
+| [International News](docs/tutorials/international-news.md) | `/api/news/international`, `/api/sources/international`, `/api/languages`, `/api/regions` | Multi-language news with auto-translation |
+| [AI Sentiment](docs/tutorials/ai-sentiment.md) | `/api/ai/sentiment`, `/api/ai/sentiment/history`, `/api/ai/sentiment/market` | Real-time sentiment analysis for any asset |
+| [AI Features](docs/tutorials/ai-features.md) | `/api/ask`, `/api/summarize`, `/api/digest`, `/api/entities`, `/api/narratives`, `/api/signals` | Q&A, summarization, NER, narratives, trading signals |
+| [Trading Signals](docs/tutorials/trading-signals.md) | `/api/trading/arbitrage`, `/api/trading/signals`, `/api/trading/funding` | Arbitrage opportunities, AI signals, funding rates |
+| [Market Data](docs/tutorials/market-data.md) | `/api/market/coins`, `/api/market/ohlc`, `/api/market/fear-greed`, `/api/market/dominance` | Price data, OHLCV, market indicators |
+| [DeFi & NFT](docs/tutorials/defi-nft.md) | `/api/defi`, `/api/defi/protocols`, `/api/defi/yields`, `/api/nft`, `/api/nft/collections` | DeFi protocols, yield farming, NFT analytics |
+| [Analytics & Research](docs/tutorials/analytics-research.md) | `/api/analytics/trends`, `/api/analytics/correlations`, `/api/research` | Market analytics, correlation analysis, research tools |
+| [Social Intelligence](docs/tutorials/social-intelligence.md) | `/api/social/twitter`, `/api/social/reddit`, `/api/social/discord` | Social media monitoring and sentiment |
+| [Portfolio & Watchlist](docs/tutorials/portfolio-watchlist.md) | `/api/portfolio`, `/api/watchlist`, `/api/alerts` | Portfolio tracking, watchlists, price alerts |
+| [Premium Features](docs/tutorials/premium-features.md) | `/api/premium/*`, `/api/x402/*` | Premium API access, x402 micropayments |
+| [Real-time SSE](docs/tutorials/realtime-sse.md) | `/api/stream`, `/api/prices/stream` | Server-Sent Events for live updates |
+| [User Alerts](docs/tutorials/user-alerts.md) | `/api/alerts`, `/api/notifications` | Push notifications, price alerts, webhooks |
+| [Webhooks & Integrations](docs/tutorials/webhooks-integrations.md) | `/api/webhooks`, `/api/webhooks/events` | Webhook management, event subscriptions |
+| [Utility Endpoints](docs/tutorials/utility-endpoints.md) | `/api/health`, `/api/status`, `/api/sources`, `/api/categories`, `/api/config` | Health checks, system status, metadata |
+| [Article Extraction](docs/tutorials/article-extraction.md) | `/api/extract`, `/api/extract/batch`, `/api/ai/detect` | Full article content, batch extraction, AI detection |
+
+📚 **[View All Tutorials](docs/tutorials/index.md)** — Complete documentation covering 150+ endpoints with Python, JavaScript, TypeScript, and cURL examples.
+
 **MCP Server Modes:**
 
 - **stdio:** For Claude Desktop (local)
 - **HTTP/SSE:** For ChatGPT Developer Mode (remote)
-- **Tools:** 14 tools available for AI assistants
+- **Tools:** 40 tools available for AI assistants
 
 ### 📚 Documentation
 
-| Document                                             | Description                  |
-| ---------------------------------------------------- | ---------------------------- |
-| [API Reference](docs/API.md)                         | Full API documentation       |
-| [AI Features](docs/AI-FEATURES.md)                   | AI endpoint documentation    |
-| [Architecture](docs/CDA-ARCHITECTURE-COMPLETE.md)    | System architecture          |
-| [Developer Guide](docs/DEVELOPER-GUIDE.md)           | Contributing & development   |
-| [Quickstart](docs/QUICKSTART.md)                     | Getting started guide        |
-| [User Guide](docs/USER-GUIDE.md)                     | End-user documentation       |
-| [Internationalization](docs/INTERNATIONALIZATION.md) | i18n & localization          |
-| [Real-Time](docs/REALTIME.md)                        | SSE & WebSocket guide        |
-| [x402 Payments](docs/X402-IMPLEMENTATION.md)         | Micropayments implementation |
-| [Testing](docs/TESTING.md)                           | Test coverage & strategies   |
-| [Deployment](DEPLOYMENT.md)                          | Deployment guide             |
+| Document                                             | Description                        |
+| ---------------------------------------------------- | ---------------------------------- |
+| [API Reference](docs/API.md)                         | Full API documentation             |
+| [**Tutorials**](docs/tutorials/index.md)             | **19 step-by-step guides with code** |
+| [AI Features](docs/AI-FEATURES.md)                   | AI endpoint documentation          |
+| [Architecture](docs/CDA-ARCHITECTURE-COMPLETE.md)    | System architecture                |
+| [Developer Guide](docs/DEVELOPER-GUIDE.md)           | Contributing & development         |
+| [Quickstart](docs/QUICKSTART.md)                     | Getting started guide              |
+| [User Guide](docs/USER-GUIDE.md)                     | End-user documentation             |
+| [Internationalization](docs/INTERNATIONALIZATION.md) | i18n & localization                |
+| [Real-Time](docs/REALTIME.md)                        | SSE & WebSocket guide              |
+| [x402 Payments](docs/X402-IMPLEMENTATION.md)         | Micropayments implementation       |
+| [Testing](docs/TESTING.md)                           | Test coverage & strategies         |
+| [Deployment](DEPLOYMENT.md)                          | Deployment guide                   |
 
 **Base URL:** `https://news-crypto.vercel.app`
 
@@ -1969,7 +2121,7 @@ Full schema: [`chatgpt/openapi.yaml`](chatgpt/openapi.yaml)
 
 ## 🔮 MCP Server (Claude Desktop & ChatGPT Developer Mode)
 
-The MCP server provides **14 tools** for AI assistants to access crypto news.
+The MCP server provides **40 tools** for AI assistants to access crypto news.
 
 ### Available Tools
 
@@ -2608,6 +2760,19 @@ https://nirholas.github.io/free-crypto-news/
 
 ### Status Page
 
+View real-time system health at:
+
+```
+https://news-crypto.vercel.app/status
+```
+
+The status page shows:
+- ✅ Service health (API, Cache, External APIs, x402 Facilitator)
+- 📊 System metrics (version, uptime, active sources)
+- 📰 News source activity (articles per source in last 24h)
+- 🔗 API endpoint status
+
+**Legacy static status page:**
 ```
 https://nirholas.github.io/free-crypto-news/status.html
 ```

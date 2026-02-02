@@ -1,10 +1,15 @@
 'use client';
 
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useRef, type TouchEvent as ReactTouchEvent } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { categories } from '@/lib/categories';
 import { LanguageSwitcher } from './LanguageSwitcher';
+
+// Swipe threshold in pixels - user must swipe at least this far to close
+const SWIPE_THRESHOLD = 80;
+// Minimum velocity to trigger close (pixels per millisecond)
+const SWIPE_VELOCITY_THRESHOLD = 0.3;
 
 // Navigation sections for mobile
 const mainNavItems = [
@@ -86,6 +91,72 @@ export function MobileNav() {
   const menuRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const openButtonRef = useRef<HTMLButtonElement>(null);
+
+  // Swipe state for touch gestures
+  const [swipeOffset, setSwipeOffset] = useState(0);
+  const [isSwiping, setIsSwiping] = useState(false);
+  const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null);
+  const isHorizontalSwipeRef = useRef<boolean | null>(null);
+
+  // Handle touch start
+  const handleTouchStart = useCallback((e: ReactTouchEvent<HTMLDivElement>) => {
+    const touch = e.touches[0];
+    touchStartRef.current = {
+      x: touch.clientX,
+      y: touch.clientY,
+      time: Date.now()
+    };
+    isHorizontalSwipeRef.current = null;
+    setIsSwiping(false);
+  }, []);
+
+  // Handle touch move
+  const handleTouchMove = useCallback((e: ReactTouchEvent<HTMLDivElement>) => {
+    if (!touchStartRef.current) return;
+    
+    const touch = e.touches[0];
+    const deltaX = touch.clientX - touchStartRef.current.x;
+    const deltaY = touch.clientY - touchStartRef.current.y;
+
+    // Determine if this is a horizontal or vertical swipe (only once per gesture)
+    if (isHorizontalSwipeRef.current === null) {
+      if (Math.abs(deltaX) > 10 || Math.abs(deltaY) > 10) {
+        isHorizontalSwipeRef.current = Math.abs(deltaX) > Math.abs(deltaY);
+      }
+    }
+
+    // Only handle horizontal swipes to the right (closing gesture)
+    if (isHorizontalSwipeRef.current && deltaX > 0) {
+      setIsSwiping(true);
+      setSwipeOffset(deltaX);
+      // Prevent vertical scrolling while swiping horizontally
+      e.preventDefault();
+    }
+  }, []);
+
+  // Handle touch end
+  const handleTouchEnd = useCallback(() => {
+    if (!touchStartRef.current || !isSwiping) {
+      touchStartRef.current = null;
+      isHorizontalSwipeRef.current = null;
+      return;
+    }
+
+    const elapsed = Date.now() - touchStartRef.current.time;
+    const velocity = swipeOffset / elapsed;
+
+    // Close if swiped far enough or fast enough
+    if (swipeOffset > SWIPE_THRESHOLD || velocity > SWIPE_VELOCITY_THRESHOLD) {
+      setIsOpen(false);
+      openButtonRef.current?.focus();
+    }
+
+    // Reset swipe state
+    setSwipeOffset(0);
+    setIsSwiping(false);
+    touchStartRef.current = null;
+    isHorizontalSwipeRef.current = null;
+  }, [isSwiping, swipeOffset]);
 
   // Close menu on escape key
   const handleEscape = useCallback((e: KeyboardEvent) => {
@@ -198,17 +269,27 @@ export function MobileNav() {
         aria-hidden="true"
       />
 
-      {/* Slide-in Menu */}
+      {/* Slide-in Menu with swipe-to-close */}
       <div
         ref={menuRef}
         id="mobile-menu"
-        className={`fixed top-0 right-0 h-full w-full sm:w-96 sm:max-w-[85vw] bg-white dark:bg-slate-900 shadow-2xl z-50 transform transition-transform duration-300 ease-out overflow-hidden flex flex-col ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed top-0 right-0 h-full w-full sm:w-96 sm:max-w-[85vw] bg-white dark:bg-slate-900 shadow-2xl z-50 overflow-hidden flex flex-col ${
+          isSwiping ? '' : 'transition-transform duration-300 ease-out'
+        } ${
+          isOpen ? '' : 'translate-x-full'
         }`}
+        style={{
+          transform: isOpen ? `translateX(${swipeOffset}px)` : undefined
+        }}
         role="dialog"
         aria-modal="true"
         aria-label="Mobile navigation"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
+        {/* Swipe indicator bar */}
+        <div className="absolute top-1/2 left-2 -translate-y-1/2 w-1 h-16 bg-gray-300 dark:bg-slate-600 rounded-full opacity-50" aria-hidden="true" />
         {/* Menu Header */}
         <div className="sticky top-0 bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-slate-800 px-5 py-4 flex items-center justify-between z-10">
           <div className="flex items-center gap-2.5">

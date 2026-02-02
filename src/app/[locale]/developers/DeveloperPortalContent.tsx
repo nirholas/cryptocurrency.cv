@@ -1,14 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import {
-  FREE_ENDPOINTS,
-  PREMIUM_ENDPOINTS,
-  SUBSCRIPTION_TIERS,
-  getFreeEndpointCount,
-  getPremiumEndpointCount,
-} from '@/lib/x402/features';
+import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
+
+// =============================================================================
+// TYPES
+// =============================================================================
 
 interface APIKey {
   id: string;
@@ -16,422 +14,809 @@ interface APIKey {
   name: string;
   tier: string;
   createdAt: string;
-  lastUsed?: string;
   usageToday: number;
   usageMonth: number;
   rateLimit: number;
   active: boolean;
 }
 
-interface UsageStats {
-  today: number;
-  week: number;
-  month: number;
-  limit: number;
-  endpoints: { path: string; count: number }[];
+interface HealthStatus {
+  status: 'healthy' | 'degraded' | 'unhealthy';
+  latency?: number;
 }
 
+// =============================================================================
+// CONSTANTS
+// =============================================================================
+
+const ENDPOINTS = {
+  free: [
+    { method: 'GET', path: '/api/news', desc: 'Latest crypto news from 200+ sources', example: '?limit=10&category=bitcoin' },
+    { method: 'GET', path: '/api/breaking', desc: 'Breaking news updates', example: '' },
+    { method: 'GET', path: '/api/trending', desc: 'Trending topics & narratives', example: '' },
+    { method: 'GET', path: '/api/search', desc: 'Full-text article search', example: '?q=ethereum+ETF' },
+    { method: 'GET', path: '/api/bitcoin', desc: 'Bitcoin-specific news feed', example: '' },
+    { method: 'GET', path: '/api/defi', desc: 'DeFi news and updates', example: '' },
+    { method: 'GET', path: '/api/sentiment', desc: 'Market sentiment analysis', example: '' },
+    { method: 'GET', path: '/api/fear-greed', desc: 'Fear & Greed Index', example: '' },
+    { method: 'GET', path: '/api/sources', desc: 'List all news sources', example: '' },
+    { method: 'GET', path: '/api/health', desc: 'API health status', example: '' },
+    { method: 'GET', path: '/api/stats', desc: 'Usage statistics', example: '' },
+    { method: 'GET', path: '/api/rss', desc: 'RSS feed output', example: '' },
+  ],
+  ai: [
+    { method: 'POST', path: '/api/ai', desc: 'Unified AI endpoint (7 actions)', example: '' },
+    { method: 'GET', path: '/api/digest', desc: 'AI-generated news digest', example: '?period=24h' },
+    { method: 'GET', path: '/api/summarize', desc: 'Article summarization', example: '?url=...' },
+    { method: 'GET', path: '/api/ask', desc: 'Ask questions about crypto', example: '?q=What+is+ETH+staking' },
+    { method: 'GET', path: '/api/entities', desc: 'Entity extraction', example: '' },
+    { method: 'GET', path: '/api/narratives', desc: 'Market narrative detection', example: '' },
+    { method: 'GET', path: '/api/factcheck', desc: 'Claim verification', example: '' },
+    { method: 'POST', path: '/api/detect/ai-content', desc: 'AI content detection', example: '' },
+  ],
+  market: [
+    { method: 'GET', path: '/api/market/coins', desc: 'Top coins by market cap', example: '?limit=100' },
+    { method: 'GET', path: '/api/fear-greed', desc: 'Fear & Greed Index', example: '' },
+    { method: 'GET', path: '/api/whale-alerts', desc: 'Large transaction alerts', example: '' },
+    { method: 'GET', path: '/api/liquidations', desc: 'Liquidation data', example: '' },
+    { method: 'GET', path: '/api/funding', desc: 'Funding rates', example: '' },
+    { method: 'GET', path: '/api/arbitrage', desc: 'Arbitrage opportunities', example: '' },
+  ],
+};
+
+const CODE_EXAMPLES = {
+  curl: `# Get latest news
+curl "https://news-crypto.vercel.app/api/news?limit=5"
+
+# Search for Bitcoin ETF news
+curl "https://news-crypto.vercel.app/api/search?q=bitcoin+ETF"
+
+# Get AI digest
+curl "https://news-crypto.vercel.app/api/digest?period=24h"`,
+
+  javascript: `// Using fetch
+const response = await fetch('https://news-crypto.vercel.app/api/news?limit=5');
+const { articles } = await response.json();
+
+articles.forEach(article => {
+  console.log(\`[\${article.source}] \${article.title}\`);
+});
+
+// Using the SDK
+import { CryptoNews } from '@cryptonews/sdk';
+
+const client = new CryptoNews();
+const news = await client.getLatest({ limit: 5, category: 'bitcoin' });`,
+
+  python: `import requests
+
+# Get latest news
+response = requests.get('https://news-crypto.vercel.app/api/news', 
+    params={'limit': 5, 'category': 'bitcoin'})
+data = response.json()
+
+for article in data['articles']:
+    print(f"[{article['source']}] {article['title']}")
+
+# Using the SDK
+from cryptonews import CryptoNews
+
+client = CryptoNews()
+news = client.get_latest(limit=5, category='bitcoin')`,
+
+  go: `package main
+
+import (
+    "encoding/json"
+    "fmt"
+    "net/http"
+)
+
+func main() {
+    resp, _ := http.Get("https://news-crypto.vercel.app/api/news?limit=5")
+    defer resp.Body.Close()
+    
+    var data map[string]interface{}
+    json.NewDecoder(resp.Body).Decode(&data)
+    
+    articles := data["articles"].([]interface{})
+    for _, a := range articles {
+        article := a.(map[string]interface{})
+        fmt.Printf("[%s] %s\\n", article["source"], article["title"])
+    }
+}`,
+};
+
+const SDK_INSTALL = {
+  npm: 'npm install @cryptonews/sdk',
+  yarn: 'yarn add @cryptonews/sdk',
+  pnpm: 'pnpm add @cryptonews/sdk',
+  pip: 'pip install cryptonews',
+  go: 'go get github.com/nirholas/cryptonews-go',
+};
+
+// =============================================================================
+// MAIN COMPONENT
+// =============================================================================
+
 export default function DeveloperPortalContent() {
-  const [activeTab, setActiveTab] = useState<'quickstart' | 'keys' | 'usage' | 'docs'>('quickstart');
+  const [activeSection, setActiveSection] = useState<'start' | 'endpoints' | 'sdks' | 'keys'>('start');
+  const [copiedText, setCopiedText] = useState<string | null>(null);
+  const [selectedLang, setSelectedLang] = useState<'curl' | 'javascript' | 'python' | 'go'>('curl');
+  const [health, setHealth] = useState<HealthStatus>({ status: 'healthy', latency: 45 });
   const [apiKeys, setApiKeys] = useState<APIKey[]>([]);
-  const [usage, setUsage] = useState<UsageStats | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [showCreateModal, setShowCreateModal] = useState(false);
+  const [showKeyModal, setShowKeyModal] = useState(false);
   const [newKeyName, setNewKeyName] = useState('');
-  const [copiedKey, setCopiedKey] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [tryItEndpoint, setTryItEndpoint] = useState('/api/news?limit=3');
+  const [tryItResponse, setTryItResponse] = useState<string | null>(null);
+  const [tryItLoading, setTryItLoading] = useState(false);
 
-  // Example key format for illustration (shown in docs)
-  const exampleKeyFormat = 'cda_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+  // Fetch health on mount
+  useEffect(() => {
+    const checkHealth = async () => {
+      const start = Date.now();
+      try {
+        const res = await fetch('/api/health');
+        const data = await res.json();
+        setHealth({
+          status: data.status || 'healthy',
+          latency: Date.now() - start,
+        });
+      } catch {
+        setHealth({ status: 'degraded', latency: 0 });
+      }
+    };
+    checkHealth();
+  }, []);
 
-  const copyToClipboard = (text: string, keyId?: string) => {
+  const copyToClipboard = (text: string, id: string) => {
     navigator.clipboard.writeText(text);
-    setCopiedKey(keyId || 'demo');
-    setTimeout(() => setCopiedKey(null), 2000);
+    setCopiedText(id);
+    setTimeout(() => setCopiedText(null), 2000);
   };
 
   const createApiKey = async () => {
     if (!newKeyName.trim()) return;
-    setLoading(true);
-    setError(null);
+    
+    const newKey: APIKey = {
+      id: `key_${Date.now()}`,
+      key: `fcn_${generateRandomString(32)}`,
+      name: newKeyName,
+      tier: 'free',
+      createdAt: new Date().toISOString(),
+      usageToday: 0,
+      usageMonth: 0,
+      rateLimit: 1000,
+      active: true,
+    };
+    
+    setApiKeys([...apiKeys, newKey]);
+    setShowKeyModal(false);
+    setNewKeyName('');
+  };
 
+  const tryEndpoint = async () => {
+    setTryItLoading(true);
+    setTryItResponse(null);
+    
     try {
-      // Call the API to generate a new key
-      const response = await fetch('/api/keys', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: newKeyName.trim() }),
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        const newKey: APIKey = {
-          id: data.id || `key_${Date.now()}`,
-          key: data.key || `cda_${generateRandomString(32)}`,
-          name: newKeyName,
-          tier: data.tier || 'free',
-          createdAt: data.createdAt || new Date().toISOString(),
-          usageToday: 0,
-          usageMonth: 0,
-          rateLimit: data.rateLimit || 100,
-          active: true,
-        };
-        setApiKeys([...apiKeys, newKey]);
-      } else {
-        // API not available - generate locally for demo purposes
-        const newKey: APIKey = {
-          id: `key_${Date.now()}`,
-          key: `cda_${generateRandomString(32)}`,
-          name: newKeyName,
-          tier: 'free',
-          createdAt: new Date().toISOString(),
-          usageToday: 0,
-          usageMonth: 0,
-          rateLimit: 100,
-          active: true,
-        };
-        setApiKeys([...apiKeys, newKey]);
-      }
-    } catch {
-      // Fallback to local generation if API fails
-      const newKey: APIKey = {
-        id: `key_${Date.now()}`,
-        key: `cda_${generateRandomString(32)}`,
-        name: newKeyName,
-        tier: 'free',
-        createdAt: new Date().toISOString(),
-        usageToday: 0,
-        usageMonth: 0,
-        rateLimit: 100,
-        active: true,
-      };
-      setApiKeys([...apiKeys, newKey]);
+      const res = await fetch(tryItEndpoint);
+      const data = await res.json();
+      setTryItResponse(JSON.stringify(data, null, 2));
+    } catch (err) {
+      setTryItResponse(`Error: ${err}`);
     } finally {
-      setShowCreateModal(false);
-      setNewKeyName('');
-      setLoading(false);
+      setTryItLoading(false);
     }
   };
 
-  const generateRandomString = (length: number) => {
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    return Array.from({ length }, () => chars.charAt(Math.floor(Math.random() * chars.length))).join(
-      ''
-    );
-  };
-
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      {/* Hero */}
-      <div className="text-center mb-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Developer Portal
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Access {getFreeEndpointCount()} free endpoints instantly. Unlock{' '}
-            {getPremiumEndpointCount()} premium endpoints with an API key.
-          </p>
-        </motion.div>
-      </div>
-
-      {/* Tab Navigation */}
-      <div className="flex flex-wrap justify-center gap-2 mb-8">
-        {[
-          { id: 'quickstart', label: '🚀 Quick Start', icon: '🚀' },
-          { id: 'keys', label: '🔑 API Keys', icon: '🔑' },
-          { id: 'usage', label: '📊 Usage', icon: '📊' },
-          { id: 'docs', label: '📚 Docs', icon: '📚' },
-        ].map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id as typeof activeTab)}
-            className={`px-6 py-3 rounded-xl font-medium transition-all ${
-              activeTab === tab.id
-                ? 'bg-amber-500 text-black'
-                : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
-            }`}
+    <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(251,191,36,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.1),transparent_50%)]" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 relative">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center"
           >
-            {tab.label}
-          </button>
-        ))}
+            {/* Status Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-full mb-8">
+              <span className={`w-2 h-2 rounded-full animate-pulse ${
+                health.status === 'healthy' ? 'bg-green-500' : 
+                health.status === 'degraded' ? 'bg-yellow-500' : 'bg-red-500'
+              }`} />
+              <span className="text-sm text-gray-300">
+                API {health.status === 'healthy' ? 'Operational' : 'Degraded'}
+              </span>
+              {health.latency && (
+                <span className="text-xs text-gray-500">• {health.latency}ms</span>
+              )}
+              <Link href="/status" className="text-xs text-amber-500 hover:text-amber-400 ml-2">
+                View Status →
+              </Link>
+            </div>
+
+            <h1 className="text-5xl md:text-6xl font-black text-white mb-6">
+              Build with <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">Crypto News</span>
+            </h1>
+            
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+              Free API with <strong className="text-white">200+ sources</strong>, 
+              <strong className="text-white"> AI analysis</strong>, and 
+              <strong className="text-white"> real-time updates</strong>. 
+              No API key required. Start in seconds.
+            </p>
+
+            {/* Quick Stats */}
+            <div className="flex flex-wrap justify-center gap-8 mb-12">
+              {[
+                { value: '200+', label: 'News Sources' },
+                { value: '50+', label: 'Free Endpoints' },
+                { value: '18', label: 'Languages' },
+                { value: '∞', label: 'Free Requests' },
+              ].map((stat) => (
+                <div key={stat.label} className="text-center">
+                  <div className="text-3xl font-bold text-white">{stat.value}</div>
+                  <div className="text-sm text-gray-500">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Quick Try */}
+            <div className="max-w-2xl mx-auto">
+              <div className="bg-gray-900 border border-gray-700 rounded-xl overflow-hidden">
+                <div className="flex items-center gap-2 px-4 py-2 bg-gray-800/50 border-b border-gray-700">
+                  <div className="flex gap-1.5">
+                    <div className="w-3 h-3 rounded-full bg-red-500/80" />
+                    <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
+                    <div className="w-3 h-3 rounded-full bg-green-500/80" />
+                  </div>
+                  <span className="text-xs text-gray-500 ml-2">Terminal</span>
+                </div>
+                <div className="p-4">
+                  <div className="flex items-center gap-2 font-mono text-sm">
+                    <span className="text-green-400">$</span>
+                    <span className="text-gray-300">curl</span>
+                    <span className="text-amber-400">&quot;https://news-crypto.vercel.app/api/news?limit=3&quot;</span>
+                    <button
+                      onClick={() => copyToClipboard('curl "https://news-crypto.vercel.app/api/news?limit=3"', 'hero-curl')}
+                      className="ml-auto px-2 py-1 text-xs text-gray-500 hover:text-white transition-colors"
+                    >
+                      {copiedText === 'hero-curl' ? '✓ Copied' : 'Copy'}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
 
-      {/* Tab Content */}
-      <div className="min-h-[600px]">
-        {activeTab === 'quickstart' && <QuickStartTab copyToClipboard={copyToClipboard} setActiveTab={setActiveTab} />}
-        {activeTab === 'keys' && (
-          <APIKeysTab
-            apiKeys={apiKeys}
-            setApiKeys={setApiKeys}
-            showCreateModal={showCreateModal}
-            setShowCreateModal={setShowCreateModal}
-            newKeyName={newKeyName}
-            setNewKeyName={setNewKeyName}
-            createApiKey={createApiKey}
-            copiedKey={copiedKey}
-            copyToClipboard={copyToClipboard}
-          />
-        )}
-        {activeTab === 'usage' && <UsageTab usage={usage} />}
-        {activeTab === 'docs' && <DocsTab />}
+      {/* Navigation */}
+      <div className="sticky top-16 z-40 bg-gray-900/80 backdrop-blur-lg border-b border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <nav className="flex gap-1 py-2 overflow-x-auto">
+            {[
+              { id: 'start', label: '🚀 Quick Start' },
+              { id: 'endpoints', label: '📡 Endpoints' },
+              { id: 'sdks', label: '📦 SDKs' },
+              { id: 'keys', label: '🔑 API Keys' },
+            ].map((item) => (
+              <button
+                key={item.id}
+                onClick={() => setActiveSection(item.id as typeof activeSection)}
+                className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all ${
+                  activeSection === item.id
+                    ? 'bg-amber-500 text-black'
+                    : 'text-gray-400 hover:text-white hover:bg-gray-800'
+                }`}
+              >
+                {item.label}
+              </button>
+            ))}
+            <div className="flex-1" />
+            <Link 
+              href="/docs/API" 
+              className="px-4 py-2 text-sm font-medium text-gray-400 hover:text-white flex items-center gap-1"
+            >
+              Full Docs <span className="text-xs">↗</span>
+            </Link>
+          </nav>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <AnimatePresence mode="wait">
+          {activeSection === 'start' && (
+            <QuickStartSection 
+              key="start"
+              selectedLang={selectedLang}
+              setSelectedLang={setSelectedLang}
+              copiedText={copiedText}
+              copyToClipboard={copyToClipboard}
+              tryItEndpoint={tryItEndpoint}
+              setTryItEndpoint={setTryItEndpoint}
+              tryItResponse={tryItResponse}
+              tryItLoading={tryItLoading}
+              tryEndpoint={tryEndpoint}
+            />
+          )}
+          {activeSection === 'endpoints' && (
+            <EndpointsSection 
+              key="endpoints"
+              copiedText={copiedText}
+              copyToClipboard={copyToClipboard}
+            />
+          )}
+          {activeSection === 'sdks' && (
+            <SDKsSection 
+              key="sdks"
+              copiedText={copiedText}
+              copyToClipboard={copyToClipboard}
+            />
+          )}
+          {activeSection === 'keys' && (
+            <APIKeysSection 
+              key="keys"
+              apiKeys={apiKeys}
+              setApiKeys={setApiKeys}
+              copiedText={copiedText}
+              copyToClipboard={copyToClipboard}
+              showKeyModal={showKeyModal}
+              setShowKeyModal={setShowKeyModal}
+              newKeyName={newKeyName}
+              setNewKeyName={setNewKeyName}
+              createApiKey={createApiKey}
+            />
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );
 }
 
-// Quick Start Tab
-function QuickStartTab({ copyToClipboard, setActiveTab }: { copyToClipboard: (text: string) => void; setActiveTab: (tab: 'quickstart' | 'keys' | 'usage' | 'docs') => void }) {
+// =============================================================================
+// QUICK START SECTION
+// =============================================================================
+
+function QuickStartSection({ 
+  selectedLang, 
+  setSelectedLang, 
+  copiedText, 
+  copyToClipboard,
+  tryItEndpoint,
+  setTryItEndpoint,
+  tryItResponse,
+  tryItLoading,
+  tryEndpoint,
+}: {
+  selectedLang: 'curl' | 'javascript' | 'python' | 'go';
+  setSelectedLang: (lang: 'curl' | 'javascript' | 'python' | 'go') => void;
+  copiedText: string | null;
+  copyToClipboard: (text: string, id: string) => void;
+  tryItEndpoint: string;
+  setTryItEndpoint: (endpoint: string) => void;
+  tryItResponse: string | null;
+  tryItLoading: boolean;
+  tryEndpoint: () => void;
+}) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-      className="space-y-8"
+      exit={{ opacity: 0, y: -20 }}
+      className="space-y-12"
     >
-      {/* Step 1: Free Endpoints */}
-      <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
-        <div className="flex items-center gap-4 mb-6">
-          <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">
-            1
+      {/* Step 1: No Setup Required */}
+      <div className="grid lg:grid-cols-2 gap-8">
+        <div>
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-black font-bold text-sm">1</div>
+            <h2 className="text-2xl font-bold text-white">No Setup Required</h2>
           </div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-            Try Free Endpoints (No Auth Required)
-          </h2>
+          <p className="text-gray-400 mb-6">
+            Our API is completely free and requires no authentication for most endpoints. 
+            Just make a request and get data instantly.
+          </p>
+          
+          <div className="space-y-3">
+            {[
+              { icon: '✓', text: 'No API key needed for 50+ endpoints' },
+              { icon: '✓', text: 'No rate limits for reasonable usage' },
+              { icon: '✓', text: 'CORS enabled - works from any domain' },
+              { icon: '✓', text: 'JSON responses with consistent format' },
+            ].map((item) => (
+              <div key={item.text} className="flex items-center gap-3 text-gray-300">
+                <span className="text-green-500">{item.icon}</span>
+                <span>{item.text}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <p className="text-gray-600 dark:text-gray-300 mb-6">
-          Start immediately with our free endpoints. No API key needed!
-        </p>
-
-        <div className="grid md:grid-cols-2 gap-4 mb-6">
-          {[
-            { endpoint: '/api/news', desc: 'Get latest crypto news' },
-            { endpoint: '/api/breaking', desc: 'Breaking news updates' },
-            { endpoint: '/api/trending', desc: 'Trending topics' },
-            { endpoint: '/api/sentiment', desc: 'Market sentiment' },
-          ].map((item) => (
-            <div
-              key={item.endpoint}
-              className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 transition-all"
-              onClick={() => copyToClipboard(`curl https://news-crypto.vercel.app${item.endpoint}`)}
-            >
-              <code className="text-amber-500 font-mono text-sm">{item.endpoint}</code>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{item.desc}</p>
+        {/* Interactive Try It */}
+        <div className="bg-gray-800/50 border border-gray-700 rounded-xl overflow-hidden">
+          <div className="px-4 py-3 bg-gray-800 border-b border-gray-700 flex items-center justify-between">
+            <span className="text-sm font-medium text-white">🧪 Try it live</span>
+            <span className="text-xs text-gray-500">Results appear below</span>
+          </div>
+          <div className="p-4 space-y-4">
+            <div className="flex gap-2">
+              <input
+                type="text"
+                value={tryItEndpoint}
+                onChange={(e) => setTryItEndpoint(e.target.value)}
+                className="flex-1 px-3 py-2 bg-gray-900 border border-gray-700 rounded-lg text-white font-mono text-sm focus:outline-none focus:border-amber-500"
+                placeholder="/api/news?limit=5"
+              />
+              <button
+                onClick={tryEndpoint}
+                disabled={tryItLoading}
+                className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-black font-semibold rounded-lg transition-colors disabled:opacity-50"
+              >
+                {tryItLoading ? 'Loading...' : 'Send'}
+              </button>
             </div>
-          ))}
+            
+            <div className="bg-gray-900 rounded-lg p-3 h-48 overflow-auto font-mono text-xs">
+              {tryItResponse ? (
+                <pre className="text-green-400 whitespace-pre-wrap">{tryItResponse.slice(0, 2000)}{tryItResponse.length > 2000 ? '...' : ''}</pre>
+              ) : (
+                <span className="text-gray-500">Response will appear here...</span>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Step 2: Code Examples */}
+      <div>
+        <div className="flex items-center gap-3 mb-6">
+          <div className="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-black font-bold text-sm">2</div>
+          <h2 className="text-2xl font-bold text-white">Copy & Paste Code</h2>
         </div>
 
-        <div className="bg-gray-900 rounded-xl p-4 font-mono text-sm">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-gray-400"># Example request</span>
+        <div className="bg-gray-800/50 border border-gray-700 rounded-xl overflow-hidden">
+          {/* Language Tabs */}
+          <div className="flex border-b border-gray-700">
+            {(['curl', 'javascript', 'python', 'go'] as const).map((lang) => (
+              <button
+                key={lang}
+                onClick={() => setSelectedLang(lang)}
+                className={`px-4 py-3 text-sm font-medium transition-colors ${
+                  selectedLang === lang
+                    ? 'bg-gray-700 text-white'
+                    : 'text-gray-400 hover:text-white'
+                }`}
+              >
+                {lang === 'curl' ? 'cURL' : lang.charAt(0).toUpperCase() + lang.slice(1)}
+              </button>
+            ))}
+            <div className="flex-1" />
             <button
-              onClick={() => copyToClipboard('curl https://news-crypto.vercel.app/api/news?limit=5')}
-              className="text-xs text-amber-500 hover:text-amber-400"
+              onClick={() => copyToClipboard(CODE_EXAMPLES[selectedLang], `code-${selectedLang}`)}
+              className="px-4 py-3 text-sm text-gray-400 hover:text-white transition-colors"
             >
-              Copy
+              {copiedText === `code-${selectedLang}` ? '✓ Copied!' : 'Copy'}
             </button>
           </div>
-          <code className="text-green-400">
-            curl https://news-crypto.vercel.app/api/news?limit=5
-          </code>
-        </div>
-      </div>
 
-      {/* Step 2: Get API Key */}
-      <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
-        <div className="flex items-center gap-4 mb-6">
-          <div className="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center text-black font-bold">
-            2
-          </div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-            Get an API Key (For Premium Endpoints)
-          </h2>
-        </div>
-
-        <p className="text-gray-600 dark:text-gray-300 mb-6">
-          Create an API key to access premium market data, analytics, and AI features.
-        </p>
-
-        <button
-          onClick={() => setActiveTab('keys')}
-          className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-black px-6 py-3 rounded-xl font-semibold transition-all"
-        >
-          Create Free API Key
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-      </div>
-
-      {/* Step 3: Use Premium Endpoints */}
-      <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
-        <div className="flex items-center gap-4 mb-6">
-          <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
-            3
-          </div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-            Access Premium Endpoints
-          </h2>
-        </div>
-
-        <p className="text-gray-600 dark:text-gray-300 mb-6">
-          Use your API key in the header or query parameter:
-        </p>
-
-        <div className="bg-gray-900 rounded-xl p-4 font-mono text-sm space-y-4">
-          <div>
-            <div className="text-gray-400 mb-1"># Using header (recommended)</div>
-            <code className="text-green-400">
-              curl -H &quot;X-API-Key: YOUR_API_KEY&quot; \<br />
-              &nbsp;&nbsp;https://news-crypto.vercel.app/api/v1/coins
-            </code>
-          </div>
-          <div>
-            <div className="text-gray-400 mb-1"># Using query parameter</div>
-            <code className="text-green-400">
-              curl &quot;https://news-crypto.vercel.app/api/v1/coins?api_key=YOUR_API_KEY&quot;
-            </code>
-          </div>
-        </div>
-      </div>
-
-      {/* Step 4: x402 Pay-Per-Request */}
-      <div
-        className="bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-blue-500/20"
-        id="x402"
-      >
-        <div className="flex items-center gap-4 mb-6">
-          <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold">
-            ⚡
-          </div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-            Alternative: Pay-Per-Request with x402
-          </h2>
-        </div>
-
-        <p className="text-gray-600 dark:text-gray-300 mb-6">
-          No subscription needed! Pay for each request with USDC on Base network. Perfect for AI
-          agents and occasional users.
-        </p>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          <div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">How it works:</h3>
-            <ol className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
-              <li className="flex items-start gap-2">
-                <span className="text-amber-500">1.</span>
-                Request a premium endpoint without auth
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-amber-500">2.</span>
-                Get 402 response with price and payment details
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-amber-500">3.</span>
-                Sign payment with your wallet
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-amber-500">4.</span>
-                Include X-PAYMENT header in your request
-              </li>
-            </ol>
-          </div>
-
-          <div className="bg-gray-900 rounded-xl p-4 font-mono text-xs overflow-x-auto">
-            <pre className="text-blue-400">
-              {`// 402 Response
-{
-  "error": "Payment Required",
-  "price": "$0.001",
-  "payTo": "0x...",
-  "network": "eip155:8453",
-  "accepts": "x402"
-}`}
+          {/* Code Block */}
+          <div className="p-6 font-mono text-sm overflow-x-auto">
+            <pre className="text-gray-300">
+              {CODE_EXAMPLES[selectedLang].split('\n').map((line, i) => (
+                <div key={i} className={line.startsWith('#') || line.startsWith('//') ? 'text-gray-500' : ''}>
+                  {line}
+                </div>
+              ))}
             </pre>
           </div>
         </div>
+      </div>
 
-        <div className="mt-6">
-          <a
-            href="https://docs.x402.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:text-blue-400 font-medium text-sm"
+      {/* Quick Links */}
+      <div className="grid md:grid-cols-3 gap-4">
+        {[
+          { icon: '📖', title: 'Full API Reference', desc: 'Complete endpoint documentation', href: '/docs/API' },
+          { icon: '⚡', title: 'Real-time Streaming', desc: 'SSE and WebSocket docs', href: '/docs/REALTIME' },
+          { icon: '🤖', title: 'AI Features', desc: 'Sentiment, summaries, entities', href: '/docs/AI-FEATURES' },
+        ].map((card) => (
+          <Link
+            key={card.title}
+            href={card.href}
+            className="p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-amber-500/50 transition-all group"
           >
-            Learn more about x402 protocol →
-          </a>
+            <div className="text-2xl mb-2">{card.icon}</div>
+            <div className="font-semibold text-white group-hover:text-amber-500 transition-colors">{card.title}</div>
+            <div className="text-sm text-gray-500">{card.desc}</div>
+          </Link>
+        ))}
+      </div>
+    </motion.div>
+  );
+}
+
+// =============================================================================
+// ENDPOINTS SECTION
+// =============================================================================
+
+function EndpointsSection({ copiedText, copyToClipboard }: { copiedText: string | null; copyToClipboard: (text: string, id: string) => void }) {
+  const [filter, setFilter] = useState<'all' | 'free' | 'ai' | 'market'>('all');
+
+  const filteredEndpoints = filter === 'all' 
+    ? [...ENDPOINTS.free, ...ENDPOINTS.ai, ...ENDPOINTS.market]
+    : ENDPOINTS[filter];
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      className="space-y-8"
+    >
+      <div className="flex items-center justify-between flex-wrap gap-4">
+        <div>
+          <h2 className="text-2xl font-bold text-white">API Endpoints</h2>
+          <p className="text-gray-400">Browse all available endpoints</p>
+        </div>
+        
+        <div className="flex gap-2">
+          {[
+            { id: 'all', label: 'All' },
+            { id: 'free', label: '🆓 Free' },
+            { id: 'ai', label: '🤖 AI' },
+            { id: 'market', label: '📊 Market' },
+          ].map((f) => (
+            <button
+              key={f.id}
+              onClick={() => setFilter(f.id as typeof filter)}
+              className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+                filter === f.id
+                  ? 'bg-amber-500 text-black'
+                  : 'bg-gray-800 text-gray-400 hover:text-white'
+              }`}
+            >
+              {f.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="bg-gray-800/50 border border-gray-700 rounded-xl overflow-hidden">
+        <div className="overflow-x-auto">
+          <table className="w-full">
+            <thead>
+              <tr className="border-b border-gray-700 bg-gray-800/50">
+                <th className="text-left p-4 text-sm font-semibold text-white">Method</th>
+                <th className="text-left p-4 text-sm font-semibold text-white">Endpoint</th>
+                <th className="text-left p-4 text-sm font-semibold text-white">Description</th>
+                <th className="text-right p-4 text-sm font-semibold text-white">Action</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-800">
+              {filteredEndpoints.map((endpoint) => (
+                <tr key={endpoint.path} className="hover:bg-gray-800/30 transition-colors">
+                  <td className="p-4">
+                    <span className={`px-2 py-1 rounded text-xs font-bold ${
+                      endpoint.method === 'GET' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'
+                    }`}>
+                      {endpoint.method}
+                    </span>
+                  </td>
+                  <td className="p-4">
+                    <code className="text-amber-400 font-mono text-sm">{endpoint.path}</code>
+                    {endpoint.example && (
+                      <code className="text-gray-500 font-mono text-xs ml-1">{endpoint.example}</code>
+                    )}
+                  </td>
+                  <td className="p-4 text-sm text-gray-400">{endpoint.desc}</td>
+                  <td className="p-4 text-right">
+                    <button
+                      onClick={() => copyToClipboard(
+                        `curl "https://news-crypto.vercel.app${endpoint.path}${endpoint.example}"`,
+                        endpoint.path
+                      )}
+                      className="text-xs text-gray-500 hover:text-white transition-colors"
+                    >
+                      {copiedText === endpoint.path ? '✓ Copied' : 'Copy cURL'}
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="text-center">
+        <Link href="/docs/API" className="text-amber-500 hover:text-amber-400 font-medium">
+          View all 100+ endpoints in full documentation →
+        </Link>
+      </div>
+    </motion.div>
+  );
+}
+
+// =============================================================================
+// SDKS SECTION  
+// =============================================================================
+
+function SDKsSection({ copiedText, copyToClipboard }: { copiedText: string | null; copyToClipboard: (text: string, id: string) => void }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      className="space-y-8"
+    >
+      <div className="text-center mb-8">
+        <h2 className="text-2xl font-bold text-white mb-2">Official SDKs</h2>
+        <p className="text-gray-400">Use our SDKs for type-safe, ergonomic API access</p>
+      </div>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { 
+            lang: 'JavaScript / TypeScript', 
+            icon: '🟨', 
+            install: SDK_INSTALL.npm,
+            package: '@cryptonews/sdk',
+            docs: '/docs/sdks/javascript',
+            features: ['Full TypeScript support', 'Browser & Node.js', 'Auto-retry & caching'],
+          },
+          { 
+            lang: 'Python', 
+            icon: '🐍', 
+            install: SDK_INSTALL.pip,
+            package: 'cryptonews',
+            docs: '/docs/sdks/python',
+            features: ['Type hints', 'Async support', 'Pandas integration'],
+          },
+          { 
+            lang: 'Go', 
+            icon: '🐹', 
+            install: SDK_INSTALL.go,
+            package: 'cryptonews-go',
+            docs: '/docs/sdks/go',
+            features: ['Idiomatic Go', 'Context support', 'Concurrent-safe'],
+          },
+        ].map((sdk) => (
+          <div key={sdk.lang} className="bg-gray-800/50 border border-gray-700 rounded-xl overflow-hidden">
+            <div className="p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-2xl">{sdk.icon}</span>
+                <h3 className="text-lg font-bold text-white">{sdk.lang}</h3>
+              </div>
+              
+              <div className="bg-gray-900 rounded-lg p-3 mb-4 font-mono text-sm flex items-center justify-between">
+                <code className="text-green-400">{sdk.install}</code>
+                <button
+                  onClick={() => copyToClipboard(sdk.install, sdk.package)}
+                  className="text-xs text-gray-500 hover:text-white"
+                >
+                  {copiedText === sdk.package ? '✓' : 'Copy'}
+                </button>
+              </div>
+
+              <ul className="space-y-2">
+                {sdk.features.map((f) => (
+                  <li key={f} className="flex items-center gap-2 text-sm text-gray-400">
+                    <span className="text-green-500">✓</span>
+                    {f}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="border-t border-gray-700 p-4">
+              <Link href={sdk.docs} className="text-sm text-amber-500 hover:text-amber-400">
+                View documentation →
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Community SDKs */}
+      <div className="bg-gray-800/30 border border-gray-700 rounded-xl p-6">
+        <h3 className="text-lg font-bold text-white mb-4">Community & Integrations</h3>
+        <div className="grid md:grid-cols-4 gap-4">
+          {[
+            { name: 'MCP Server', desc: 'Claude & ChatGPT', href: '/mcp' },
+            { name: 'Discord Bot', desc: 'Example bot', href: '/examples' },
+            { name: 'Telegram Bot', desc: 'Python example', href: '/examples' },
+            { name: 'Chrome Extension', desc: 'Browser news', href: '/extension' },
+          ].map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className="p-4 bg-gray-800/50 rounded-lg hover:bg-gray-800 transition-colors"
+            >
+              <div className="font-medium text-white">{item.name}</div>
+              <div className="text-xs text-gray-500">{item.desc}</div>
+            </Link>
+          ))}
         </div>
       </div>
     </motion.div>
   );
 }
 
-// API Keys Tab
-function APIKeysTab({
-  apiKeys,
+// =============================================================================
+// API KEYS SECTION
+// =============================================================================
+
+function APIKeysSection({ 
+  apiKeys, 
   setApiKeys,
-  showCreateModal,
-  setShowCreateModal,
+  copiedText, 
+  copyToClipboard,
+  showKeyModal,
+  setShowKeyModal,
   newKeyName,
   setNewKeyName,
   createApiKey,
-  copiedKey,
-  copyToClipboard,
-}: {
+}: { 
   apiKeys: APIKey[];
   setApiKeys: React.Dispatch<React.SetStateAction<APIKey[]>>;
-  showCreateModal: boolean;
-  setShowCreateModal: (show: boolean) => void;
+  copiedText: string | null;
+  copyToClipboard: (text: string, id: string) => void;
+  showKeyModal: boolean;
+  setShowKeyModal: (show: boolean) => void;
   newKeyName: string;
   setNewKeyName: (name: string) => void;
   createApiKey: () => void;
-  copiedKey: string | null;
-  copyToClipboard: (text: string, keyId?: string) => void;
 }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-      className="space-y-6"
+      exit={{ opacity: 0, y: -20 }}
+      className="space-y-8"
     >
-      {/* Create Key Button */}
-      <div className="flex justify-between items-center">
+      {/* Info Banner */}
+      <div className="bg-green-500/10 border border-green-500/30 rounded-xl p-6">
+        <div className="flex items-start gap-4">
+          <span className="text-2xl">💡</span>
+          <div>
+            <h3 className="font-semibold text-green-400 mb-1">API keys are optional!</h3>
+            <p className="text-gray-400 text-sm">
+              Most endpoints work without authentication. API keys are only needed for 
+              higher rate limits, premium features, or usage tracking.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Create/List Keys */}
+      <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Your API Keys</h2>
-          <p className="text-gray-600 dark:text-gray-400">
-            Manage your API keys for programmatic access
-          </p>
+          <h2 className="text-2xl font-bold text-white">Your API Keys</h2>
+          <p className="text-gray-400 text-sm">Manage keys for premium access</p>
         </div>
         <button
-          onClick={() => setShowCreateModal(true)}
-          className="bg-amber-500 hover:bg-amber-600 text-black px-6 py-3 rounded-xl font-semibold transition-all flex items-center gap-2"
+          onClick={() => setShowKeyModal(true)}
+          className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-black font-semibold rounded-lg transition-colors flex items-center gap-2"
         >
-          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-          </svg>
-          Create New Key
+          <span>+</span> Create Key
         </button>
       </div>
 
-      {/* Keys List */}
       {apiKeys.length === 0 ? (
-        <div className="bg-white dark:bg-gray-800 rounded-2xl p-12 text-center border border-gray-200 dark:border-gray-700">
-          <div className="text-6xl mb-4">🔑</div>
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-            No API Keys Yet
-          </h3>
-          <p className="text-gray-600 dark:text-gray-400 mb-6">
-            Create your first API key to access premium endpoints
+        <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-12 text-center">
+          <div className="text-5xl mb-4">🔑</div>
+          <h3 className="text-xl font-semibold text-white mb-2">No API Keys Yet</h3>
+          <p className="text-gray-400 mb-6 max-w-md mx-auto">
+            Create an API key to unlock higher rate limits and premium features.
           </p>
           <button
-            onClick={() => setShowCreateModal(true)}
-            className="bg-amber-500 hover:bg-amber-600 text-black px-6 py-3 rounded-xl font-semibold transition-all"
+            onClick={() => setShowKeyModal(true)}
+            className="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-black font-semibold rounded-lg transition-colors"
           >
             Create Your First Key
           </button>
@@ -439,128 +824,104 @@ function APIKeysTab({
       ) : (
         <div className="space-y-4">
           {apiKeys.map((key) => (
-            <div
-              key={key.id}
-              className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700"
-            >
+            <div key={key.id} className="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white">{key.name}</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                  <h3 className="font-semibold text-white">{key.name}</h3>
+                  <p className="text-sm text-gray-500">
                     Created {new Date(key.createdAt).toLocaleDateString()}
                   </p>
                 </div>
-                <span
-                  className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    key.active
-                      ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
-                      : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400'
-                  }`}
-                >
-                  {key.active ? 'Active' : 'Inactive'}
+                <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs font-medium rounded">
+                  Active
                 </span>
               </div>
 
-              <div className="flex items-center gap-3 mb-4">
-                <code className="flex-1 bg-gray-100 dark:bg-gray-700 px-4 py-2 rounded-lg font-mono text-sm text-gray-800 dark:text-gray-200">
-                  {key.key.slice(0, 20)}...
+              <div className="flex items-center gap-2 mb-4">
+                <code className="flex-1 px-3 py-2 bg-gray-900 rounded-lg font-mono text-sm text-gray-300">
+                  {key.key.slice(0, 24)}•••••••••
                 </code>
                 <button
                   onClick={() => copyToClipboard(key.key, key.id)}
-                  className="px-4 py-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg transition-all"
+                  className="px-3 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm transition-colors"
                 >
-                  {copiedKey === key.id ? '✓ Copied' : 'Copy'}
+                  {copiedText === key.id ? '✓ Copied' : 'Copy'}
                 </button>
               </div>
 
-              <div className="grid grid-cols-3 gap-4 text-sm">
-                <div>
-                  <span className="text-gray-500 dark:text-gray-400">Tier:</span>
-                  <span className="ml-2 text-gray-900 dark:text-white capitalize">{key.tier}</span>
-                </div>
-                <div>
-                  <span className="text-gray-500 dark:text-gray-400">Today:</span>
-                  <span className="ml-2 text-gray-900 dark:text-white">
-                    {key.usageToday} / {key.rateLimit}
-                  </span>
-                </div>
-                <div>
-                  <span className="text-gray-500 dark:text-gray-400">This month:</span>
-                  <span className="ml-2 text-gray-900 dark:text-white">{key.usageMonth}</span>
-                </div>
-              </div>
-
-              <div className="flex gap-2 mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
-                <button className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
-                  Regenerate
-                </button>
-                <span className="text-gray-300 dark:text-gray-600">|</span>
-                <button className="text-sm text-red-500 hover:text-red-600">Revoke</button>
+              <div className="flex gap-4 text-sm text-gray-400">
+                <span>Tier: <strong className="text-white">{key.tier}</strong></span>
+                <span>Today: <strong className="text-white">{key.usageToday}</strong></span>
+                <span>Limit: <strong className="text-white">{key.rateLimit}/day</strong></span>
               </div>
             </div>
           ))}
         </div>
       )}
 
-      {/* Tier Info */}
-      <div className="bg-gray-50 dark:bg-gray-800/50 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
-        <h3 className="font-semibold text-gray-900 dark:text-white mb-4">API Key Tiers</h3>
+      {/* Tier Comparison */}
+      <div className="bg-gray-800/30 border border-gray-700 rounded-xl p-6">
+        <h3 className="text-lg font-bold text-white mb-4">API Key Tiers</h3>
         <div className="grid md:grid-cols-3 gap-4">
-          {SUBSCRIPTION_TIERS.map((tier) => (
-            <div
-              key={tier.id}
-              className="bg-white dark:bg-gray-800 rounded-xl p-4 border border-gray-200 dark:border-gray-700"
-            >
-              <h4 className="font-medium text-gray-900 dark:text-white">{tier.name}</h4>
-              <p className="text-sm text-gray-500 dark:text-gray-400">{tier.rateLimit}</p>
-              <p className="text-amber-500 font-semibold mt-2">{tier.priceMonthly}</p>
+          {[
+            { name: 'Free', price: '$0', limit: '1,000/day', features: ['Basic endpoints', 'Standard rate limit'] },
+            { name: 'Pro', price: '$29/mo', limit: '50,000/day', features: ['All endpoints', 'Priority support', 'Webhooks'] },
+            { name: 'Enterprise', price: 'Custom', limit: 'Unlimited', features: ['Dedicated support', 'SLA', 'Custom integrations'] },
+          ].map((tier) => (
+            <div key={tier.name} className="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
+              <div className="font-semibold text-white">{tier.name}</div>
+              <div className="text-2xl font-bold text-amber-500 mb-2">{tier.price}</div>
+              <div className="text-sm text-gray-500 mb-3">{tier.limit} requests</div>
+              <ul className="space-y-1">
+                {tier.features.map((f) => (
+                  <li key={f} className="text-xs text-gray-400 flex items-center gap-1">
+                    <span className="text-green-500">✓</span> {f}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
         <div className="mt-4 text-center">
-          <a href="/pricing" className="text-amber-500 hover:text-amber-400 font-medium text-sm">
-            View full pricing details →
-          </a>
+          <Link href="/pricing" className="text-amber-500 hover:text-amber-400 text-sm">
+            View full pricing →
+          </Link>
         </div>
       </div>
 
-      {/* Create Modal */}
-      {showCreateModal && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+      {/* Modal */}
+      {showKeyModal && (
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-white dark:bg-gray-800 rounded-2xl p-8 max-w-md w-full mx-4"
+            className="bg-gray-800 border border-gray-700 rounded-xl p-6 max-w-md w-full"
           >
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-              Create New API Key
-            </h3>
-
+            <h3 className="text-xl font-bold text-white mb-4">Create API Key</h3>
+            
             <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Key Name
-              </label>
+              <label className="block text-sm font-medium text-gray-300 mb-2">Key Name</label>
               <input
                 type="text"
                 value={newKeyName}
                 onChange={(e) => setNewKeyName(e.target.value)}
                 placeholder="e.g., My Trading Bot"
-                className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-amber-500"
               />
             </div>
 
             <div className="flex gap-3">
               <button
-                onClick={() => setShowCreateModal(false)}
-                className="flex-1 px-4 py-3 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded-xl font-medium transition-all"
+                onClick={() => setShowKeyModal(false)}
+                className="flex-1 px-4 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg font-medium transition-colors"
               >
                 Cancel
               </button>
               <button
                 onClick={createApiKey}
-                className="flex-1 px-4 py-3 bg-amber-500 hover:bg-amber-600 text-black rounded-xl font-semibold transition-all"
+                className="flex-1 px-4 py-3 bg-amber-500 hover:bg-amber-600 text-black rounded-lg font-semibold transition-colors"
               >
-                Create Key
+                Create
               </button>
             </div>
           </motion.div>
@@ -570,233 +931,11 @@ function APIKeysTab({
   );
 }
 
-// Usage Tab
-function UsageTab({ usage }: { usage: UsageStats | null }) {
-  // Demo usage data
-  const demoUsage: UsageStats = {
-    today: 47,
-    week: 312,
-    month: 1248,
-    limit: 10000,
-    endpoints: [
-      { path: '/api/v1/coins', count: 423 },
-      { path: '/api/v1/market-data', count: 312 },
-      { path: '/api/v1/trending', count: 189 },
-      { path: '/api/v1/historical', count: 156 },
-      { path: '/api/news', count: 98 },
-    ],
-  };
+// =============================================================================
+// UTILITIES
+// =============================================================================
 
-  const data = usage || demoUsage;
-  const usagePercent = (data.month / data.limit) * 100;
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-      className="space-y-6"
-    >
-      {/* Usage Overview */}
-      <div className="grid md:grid-cols-4 gap-4">
-        <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-          <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">Today</h3>
-          <p className="text-3xl font-bold text-gray-900 dark:text-white">{data.today}</p>
-        </div>
-        <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-          <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">This Week</h3>
-          <p className="text-3xl font-bold text-gray-900 dark:text-white">{data.week}</p>
-        </div>
-        <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-          <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">This Month</h3>
-          <p className="text-3xl font-bold text-gray-900 dark:text-white">{data.month}</p>
-        </div>
-        <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-          <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">Limit</h3>
-          <p className="text-3xl font-bold text-amber-500">{data.limit.toLocaleString()}</p>
-        </div>
-      </div>
-
-      {/* Usage Bar */}
-      <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="font-semibold text-gray-900 dark:text-white">Monthly Usage</h3>
-          <span className="text-sm text-gray-500 dark:text-gray-400">
-            {data.month.toLocaleString()} / {data.limit.toLocaleString()} requests
-          </span>
-        </div>
-        <div className="h-4 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
-          <div
-            className={`h-full rounded-full transition-all ${
-              usagePercent > 80
-                ? 'bg-red-500'
-                : usagePercent > 50
-                  ? 'bg-amber-500'
-                  : 'bg-green-500'
-            }`}
-            style={{ width: `${Math.min(usagePercent, 100)}%` }}
-          />
-        </div>
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-          {(data.limit - data.month).toLocaleString()} requests remaining this month
-        </p>
-      </div>
-
-      {/* Top Endpoints */}
-      <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-        <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Top Endpoints</h3>
-        <div className="space-y-3">
-          {data.endpoints.map((endpoint, i) => (
-            <div key={endpoint.path} className="flex items-center gap-4">
-              <span className="text-sm text-gray-400 w-6">{i + 1}</span>
-              <code className="flex-1 text-sm font-mono text-gray-900 dark:text-white">
-                {endpoint.path}
-              </code>
-              <span className="text-sm text-gray-500 dark:text-gray-400">
-                {endpoint.count} calls
-              </span>
-              <div className="w-24 h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
-                <div
-                  className="h-full bg-amber-500 rounded-full"
-                  style={{ width: `${(endpoint.count / data.endpoints[0].count) * 100}%` }}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </motion.div>
-  );
-}
-
-// Docs Tab
-function DocsTab() {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-      className="space-y-6"
-    >
-      <div className="text-center mb-8">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">API Documentation</h2>
-        <p className="text-gray-600 dark:text-gray-400">
-          Explore our comprehensive documentation and SDKs
-        </p>
-      </div>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <DocCard
-          icon="📖"
-          title="API Reference"
-          description="Complete REST API documentation with examples"
-          link="/docs/API"
-        />
-        <DocCard
-          icon="🚀"
-          title="Quick Start Guide"
-          description="Get up and running in 5 minutes"
-          link="/docs/QUICKSTART"
-        />
-        <DocCard
-          icon="⚡"
-          title="Real-time API"
-          description="SSE and WebSocket streaming documentation"
-          link="/docs/REALTIME"
-        />
-        <DocCard
-          icon="🤖"
-          title="AI Features"
-          description="AI-powered analysis and insights"
-          link="/docs/AI-FEATURES"
-        />
-        <DocCard
-          icon="💳"
-          title="x402 Integration"
-          description="Pay-per-request with crypto micropayments"
-          link="https://docs.x402.org"
-          external
-        />
-        <DocCard
-          icon="🔧"
-          title="SDKs"
-          description="JavaScript, Python, Go, and more"
-          link="/docs/sdks"
-        />
-      </div>
-
-      {/* Endpoints Reference */}
-      <div className="mt-12" id="free-endpoints">
-        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
-          All Free Endpoints ({FREE_ENDPOINTS.length})
-        </h3>
-        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead className="bg-gray-50 dark:bg-gray-700/50">
-                <tr>
-                  <th className="text-left p-4 text-sm font-semibold text-gray-900 dark:text-white">
-                    Endpoint
-                  </th>
-                  <th className="text-left p-4 text-sm font-semibold text-gray-900 dark:text-white">
-                    Description
-                  </th>
-                  <th className="text-left p-4 text-sm font-semibold text-gray-900 dark:text-white">
-                    Rate Limit
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-100 dark:divide-gray-700">
-                {FREE_ENDPOINTS.map((endpoint) => (
-                  <tr key={endpoint.path} className="hover:bg-gray-50 dark:hover:bg-gray-700/30">
-                    <td className="p-4">
-                      <code className="text-sm font-mono text-green-600 dark:text-green-400">
-                        {endpoint.method} {endpoint.path}
-                      </code>
-                    </td>
-                    <td className="p-4 text-sm text-gray-600 dark:text-gray-400">
-                      {endpoint.description}
-                    </td>
-                    <td className="p-4 text-sm text-gray-500 dark:text-gray-500">
-                      {endpoint.rateLimit}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  );
-}
-
-function DocCard({
-  icon,
-  title,
-  description,
-  link,
-  external,
-}: {
-  icon: string;
-  title: string;
-  description: string;
-  link: string;
-  external?: boolean;
-}) {
-  return (
-    <a
-      href={link}
-      target={external ? '_blank' : undefined}
-      rel={external ? 'noopener noreferrer' : undefined}
-      className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:border-amber-500/50 transition-all group"
-    >
-      <div className="text-3xl mb-3">{icon}</div>
-      <h3 className="font-semibold text-gray-900 dark:text-white mb-1 group-hover:text-amber-500 transition-colors">
-        {title}
-        {external && <span className="text-xs ml-1">↗</span>}
-      </h3>
-      <p className="text-sm text-gray-600 dark:text-gray-400">{description}</p>
-    </a>
-  );
+function generateRandomString(length: number): string {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  return Array.from({ length }, () => chars.charAt(Math.floor(Math.random() * chars.length))).join('');
 }

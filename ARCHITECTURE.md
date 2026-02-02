@@ -23,7 +23,7 @@ This document describes the architecture of Free Crypto News, a Next.js applicat
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                          CLIENTS                                     │
+│                          CLIENTS                                    │
 ├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤
 │   Web App   │   PWA       │   Bots      │   SDKs      │   MCP       │
 │  (Next.js)  │  (Offline)  │ (Discord/   │ (Python/JS/ │  (Claude/   │

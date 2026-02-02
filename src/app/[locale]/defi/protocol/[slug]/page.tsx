@@ -17,6 +17,7 @@ import ProtocolImage from '@/components/ProtocolImage';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { locales } from '@/i18n/config';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -46,6 +47,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export const revalidate = 300; // Revalidate every 5 minutes
+
+/**
+ * Generate static params for all locale + protocol combinations
+ */
+export async function generateStaticParams() {
+  const protocols = await getTopProtocols(50);
+  
+  return locales.flatMap((locale) =>
+    protocols.map((protocol) => ({
+      locale,
+      slug: protocol.slug || protocol.name.toLowerCase().replace(/\s+/g, '-'),
+    }))
+  );
+}
 
 export default async function ProtocolPage({ params }: Props) {
   const { slug } = await params;

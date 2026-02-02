@@ -12,6 +12,7 @@ import {
   getRelatedArticles,
   toNewsArticle,
   generateArticleSlug,
+  getAllArchivedArticleIds,
   type EnrichedArticle 
 } from '@/lib/archive-v2';
 import type { Metadata } from 'next';
@@ -26,6 +27,15 @@ interface Props {
 }
 
 const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://news-crypto.vercel.app';
+
+/**
+ * Generate static params for all archived articles
+ * This enables static generation for every article page
+ */
+export async function generateStaticParams() {
+  const articleIds = await getAllArchivedArticleIds();
+  return articleIds.map(id => ({ id }));
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;

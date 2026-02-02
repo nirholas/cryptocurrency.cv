@@ -13,6 +13,7 @@ import EditorsPicks from '@/components/EditorsPicks';
 import NewsCard from '@/components/NewsCard';
 import TrendingSidebar from '@/components/TrendingSidebar';
 import SourceSections from '@/components/SourceSections';
+import { ScrollIndicator } from '@/components/ScrollIndicator';
 import { WebsiteStructuredData, OrganizationStructuredData, NewsListStructuredData } from '@/components/StructuredData';
 import { getLatestNews, getBreakingNews, getTrendingNews, getSourceCount } from '@/lib/crypto-news';
 import { categories } from '@/lib/categories';
@@ -85,23 +86,26 @@ export default async function Home({ params }: Props) {
           </section>
         )}
 
-        {/* Categories Navigation */}
+        {/* Categories Navigation with scroll indicators */}
         <nav 
-          className="px-4 sm:px-6 lg:px-8 mb-8 overflow-x-auto scrollbar-hide"
+          className="px-4 sm:px-6 lg:px-8 mb-8"
           aria-label="News categories"
         >
-          <div className="flex gap-2 pb-2 min-w-max">
-            {categories.map((cat) => (
-              <Link
-                key={cat.slug}
-                href={`/category/${cat.slug}`}
-                className={`flex items-center gap-2 px-4 py-2.5 rounded-full whitespace-nowrap bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-brand-300 dark:hover:border-amber-500 hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all duration-200 text-sm focus-ring ${cat.color}`}
-              >
-                <span aria-hidden="true">{cat.icon}</span>
-                <span className="text-gray-700 dark:text-slate-300 font-medium">{cat.name}</span>
-              </Link>
-            ))}
-          </div>
+          <ScrollIndicator showArrows={true} arrowSize="sm">
+            <div className="flex gap-2 pb-2 min-w-max">
+              {categories.map((cat) => (
+                <Link
+                  key={cat.slug}
+                  href={`/category/${cat.slug}`}
+                  className={`flex items-center gap-2 px-4 py-2.5 rounded-full whitespace-nowrap bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-brand-300 dark:hover:border-amber-500 hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all duration-200 text-sm focus-ring ${cat.color}`}
+                  style={{ scrollSnapAlign: 'start' }}
+                >
+                  <span aria-hidden="true">{cat.icon}</span>
+                  <span className="text-gray-700 dark:text-slate-300 font-medium">{cat.name}</span>
+                </Link>
+              ))}
+            </div>
+          </ScrollIndicator>
         </nav>
 
         {/* Trending Stories Section */}
@@ -133,8 +137,8 @@ export default async function Home({ params }: Props) {
                 </Link>
               </div>
 
-              {/* News Grid - 2 columns on medium, 3 on large */}
-              <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
+              {/* News Grid - 2 columns on medium, 3 on large, 4 on 2xl when no sidebar */}
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {latestNews.map((article) => (
                   <NewsCard 
                     key={article.link} 

@@ -118,12 +118,12 @@ Best for high-performance services. Full struct types and error handling.
 </div>
 
 <div class="card" markdown>
-### [:fontawesome-brands-rust: Rust](https://github.com/nirholas/free-crypto-news/tree/main/sdk/rust)
+### [:fontawesome-brands-rust: Rust](rust.md)
 Best for performance-critical apps. Async/await with Tokio, WebSocket streaming.
 </div>
 
 <div class="card" markdown>
-### [:fontawesome-solid-gem: Ruby](https://github.com/nirholas/free-crypto-news/tree/main/sdk/ruby)
+### [:fontawesome-solid-gem: Ruby](ruby.md)
 Best for Ruby on Rails and Sinatra apps. Thread-safe with retries.
 </div>
 

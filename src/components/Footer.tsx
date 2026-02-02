@@ -158,6 +158,7 @@ export default function Footer() {
         {/* Additional Links Row */}
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-wrap gap-4 justify-center text-sm text-gray-400">
+            <Link href="/status" className="hover:text-white transition-colors">🟢 Status</Link>
             <Link href="/sources" className="hover:text-white transition-colors">📚 Sources</Link>
             <Link href="/topics" className="hover:text-white transition-colors">🏷️ Topics</Link>
             <Link href="/trending" className="hover:text-white transition-colors">🔥 Trending</Link>

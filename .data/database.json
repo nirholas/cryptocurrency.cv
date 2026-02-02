@@ -1,0 +1,17 @@
+{
+  "fcn:newsletter_subscribers:sub_038a8f51-c6e8-4fc2-b50b-13b49268ee5e": {
+    "value": "{\"id\":\"sub_038a8f51-c6e8-4fc2-b50b-13b49268ee5e\",\"data\":{\"id\":\"sub_038a8f51-c6e8-4fc2-b50b-13b49268ee5e\",\"email\":\"test@example.com\",\"frequency\":\"daily\",\"categories\":[],\"sources\":[],\"verified\":false,\"createdAt\":\"2026-02-02T07:29:40.129Z\",\"unsubscribeToken\":\"9313c6a528334e15bc30ae37e2de08e25001e690\",\"verificationToken\":\"5fa867c35a514286b87197a67f0fb0cb495778cc\"},\"createdAt\":\"2026-02-02T07:29:40.129Z\",\"updatedAt\":\"2026-02-02T07:29:40.130Z\",\"version\":1,\"metadata\":{\"email\":\"test@example.com\",\"frequency\":\"daily\",\"verified\":false}}"
+  },
+  "fcn:newsletter_subscribers:_index": {
+    "value": "[{\"score\":1770017153821,\"member\":\"sub_e94df16a-eb82-409d-9f66-74ad330ae48e\"},{\"score\":1770017513503,\"member\":\"sub_215ffe75-fdf0-412c-8959-c29153c8ab74\"},{\"score\":1770017513864,\"member\":\"sub_5b4fef2e-a06c-4f0a-81b9-131ef00d074d\"}]"
+  },
+  "fcn:newsletter_subscribers:sub_e94df16a-eb82-409d-9f66-74ad330ae48e": {
+    "value": "{\"id\":\"sub_e94df16a-eb82-409d-9f66-74ad330ae48e\",\"data\":{\"id\":\"sub_e94df16a-eb82-409d-9f66-74ad330ae48e\",\"email\":\"test@example.com\",\"frequency\":\"daily\",\"categories\":[],\"sources\":[],\"verified\":false,\"createdAt\":\"2026-02-02T07:25:53.820Z\",\"unsubscribeToken\":\"48e96f94986e47989b26e8990ac8a0662f313f56\",\"verificationToken\":\"23f1dc7984eb4908bf3c4594f01a2b2c15afdeed\"},\"createdAt\":\"2026-02-02T07:25:53.821Z\",\"updatedAt\":\"2026-02-02T07:25:53.821Z\",\"version\":1,\"metadata\":{\"email\":\"test@example.com\",\"frequency\":\"daily\",\"verified\":false}}"
+  },
+  "fcn:newsletter_subscribers:sub_215ffe75-fdf0-412c-8959-c29153c8ab74": {
+    "value": "{\"id\":\"sub_215ffe75-fdf0-412c-8959-c29153c8ab74\",\"data\":{\"id\":\"sub_215ffe75-fdf0-412c-8959-c29153c8ab74\",\"email\":\"test-1770017513442@example.com\",\"frequency\":\"daily\",\"categories\":[],\"sources\":[],\"verified\":false,\"createdAt\":\"2026-02-02T07:31:53.503Z\",\"unsubscribeToken\":\"eacbbb3f58a34964a57e7f6c2d5c7681353088d6\",\"verificationToken\":\"11e6bd314dd3472cbbad894e7502b012cf3ba742\"},\"createdAt\":\"2026-02-02T07:31:53.503Z\",\"updatedAt\":\"2026-02-02T07:31:53.503Z\",\"version\":1,\"metadata\":{\"email\":\"test-1770017513442@example.com\",\"frequency\":\"daily\",\"verified\":false}}"
+  },
+  "fcn:newsletter_subscribers:sub_5b4fef2e-a06c-4f0a-81b9-131ef00d074d": {
+    "value": "{\"id\":\"sub_5b4fef2e-a06c-4f0a-81b9-131ef00d074d\",\"data\":{\"id\":\"sub_5b4fef2e-a06c-4f0a-81b9-131ef00d074d\",\"email\":\"test-1770017513820@example.com\",\"frequency\":\"daily\",\"categories\":[],\"sources\":[],\"verified\":false,\"createdAt\":\"2026-02-02T07:31:53.863Z\",\"unsubscribeToken\":\"27fd101a565e4ae3b397cb487379cb80109d57e9\",\"verificationToken\":\"6be5b62714b549649a45bc460f727bb2840f2bb4\"},\"createdAt\":\"2026-02-02T07:31:53.863Z\",\"updatedAt\":\"2026-02-02T07:31:53.863Z\",\"version\":1,\"metadata\":{\"email\":\"test-1770017513820@example.com\",\"frequency\":\"daily\",\"verified\":false}}"
+  }
+}

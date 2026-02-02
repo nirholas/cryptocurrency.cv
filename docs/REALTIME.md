@@ -185,7 +185,21 @@ if __name__ == '__main__':
 
 ## WebSocket Server
 
-For full bi-directional communication with subscriptions.
+Full bi-directional communication with subscriptions, live prices, whale alerts, and topic channels.
+
+### Features (v2.0)
+
+| Feature | Update Interval | Description |
+|---------|-----------------|-------------|
+| 📰 **News Streaming** | 30s | Real-time news from 130+ sources |
+| 🚨 **Breaking News** | 30s | Urgent breaking news alerts |
+| 💰 **Price Streaming** | 10s | Live prices (BTC, ETH, SOL, etc.) |
+| 🐳 **Whale Alerts** | 60s | Large transactions ($1M+) |
+| 😱 **Fear & Greed** | 5m | Market sentiment index |
+| 📺 **Topic Channels** | Real-time | Bitcoin, DeFi, NFT, Regulation, etc. |
+| 🔔 **Custom Alerts** | 30s | Your own alert rules |
+| ⚡ **Compression** | - | WebSocket per-message deflate |
+| 🛡️ **Rate Limiting** | - | 60 messages/minute protection |
 
 ### Standalone Server
 
@@ -199,9 +213,24 @@ node ws-server.js
 **Environment Variables:**
 
 ```env
-WS_PORT=8080
-NEWS_API_URL=https://news-crypto.vercel.app
-POLL_INTERVAL=30000
+PORT=8080
+NEWS_API=https://news-crypto.vercel.app
+```
+
+### HTTP Endpoints
+
+```bash
+# Health check
+curl http://localhost:8080/health
+
+# Server statistics
+curl http://localhost:8080/stats
+
+# Available topic channels
+curl http://localhost:8080/channels
+
+# Current price cache
+curl http://localhost:8080/prices
 ```
 
 ### WebSocket Protocol
@@ -214,13 +243,44 @@ const ws = new WebSocket('wss://your-ws-server.railway.app');
 ws.onopen = () => {
   console.log('Connected to WebSocket');
   
-  // Subscribe to specific sources
+  // Subscribe to news filters
   ws.send(JSON.stringify({
     type: 'subscribe',
-    sources: ['coindesk', 'theblock'],
-    categories: ['defi', 'bitcoin'],
-    coins: ['BTC', 'ETH'],
-    keywords: ['SEC', 'ETF'],
+    payload: {
+      sources: ['coindesk', 'theblock'],
+      categories: ['defi', 'bitcoin'],
+      coins: ['BTC', 'ETH'],
+      keywords: ['SEC', 'ETF'],
+    }
+  }));
+  
+  // Join topic channels
+  ws.send(JSON.stringify({
+    type: 'join_channel',
+    payload: { channel: 'bitcoin' }
+  }));
+  
+  ws.send(JSON.stringify({
+    type: 'join_channel',
+    payload: { channel: 'defi' }
+  }));
+  
+  // Enable live price streaming
+  ws.send(JSON.stringify({
+    type: 'stream_prices',
+    payload: { enabled: true }
+  }));
+  
+  // Enable whale alerts
+  ws.send(JSON.stringify({
+    type: 'stream_whales',
+    payload: { enabled: true }
+  }));
+  
+  // Enable Fear & Greed updates
+  ws.send(JSON.stringify({
+    type: 'stream_sentiment',
+    payload: { enabled: true }
   }));
 };
 
@@ -229,13 +289,25 @@ ws.onmessage = (event) => {
   
   switch (message.type) {
     case 'news':
-      handleNewsUpdate(message.articles);
+      handleNewsUpdate(message.payload.articles);
       break;
-    case 'price':
-      handlePriceUpdate(message.prices);
+    case 'breaking':
+      handleBreakingNews(message.payload.articles);
+      break;
+    case 'topic':
+      handleTopicNews(message.payload.channel, message.payload.articles);
+      break;
+    case 'prices':
+      handlePriceUpdate(message.payload.prices);
+      break;
+    case 'whales':
+      handleWhaleAlert(message.payload.alerts);
+      break;
+    case 'sentiment':
+      handleSentiment(message.payload);
       break;
     case 'alert':
-      handleAlert(message.alert);
+      handleAlert(message.data);
       break;
   }
 };
@@ -250,18 +322,101 @@ ws.onclose = () => {
 
 | Type | Direction | Description |
 |------|-----------|-------------|
-| `subscribe` | Client → Server | Set subscription filters |
-| `unsubscribe` | Client → Server | Remove filters |
-| `subscribe_alerts` | Client → Server | Subscribe to alert notifications |
+| `subscribe` | Client → Server | Set news subscription filters |
+| `unsubscribe` | Client → Server | Remove news filters |
+| `join_channel` | Client → Server | Join a topic channel |
+| `leave_channel` | Client → Server | Leave a topic channel |
+| `stream_prices` | Client → Server | Enable/disable price streaming |
+| `stream_whales` | Client → Server | Enable/disable whale alerts |
+| `stream_sentiment` | Client → Server | Enable/disable sentiment updates |
+| `subscribe_alerts` | Client → Server | Subscribe to custom alerts |
 | `unsubscribe_alerts` | Client → Server | Unsubscribe from alerts |
 | `ping` | Client → Server | Keep-alive |
 | `news` | Server → Client | News articles |
 | `breaking` | Server → Client | Breaking news |
-| `alert` | Server → Client | Alert events |
+| `topic` | Server → Client | Topic channel news |
+| `prices` | Server → Client | Live price updates |
+| `whales` | Server → Client | Whale transaction alerts |
+| `sentiment` | Server → Client | Fear & Greed Index |
+| `alert` | Server → Client | Custom alert events |
 | `pong` | Server → Client | Keep-alive response |
-| `alerts_subscribed` | Server → Client | Confirmation of alert subscription |
+| `rate_limited` | Server → Client | Rate limit warning |
 
-**Subscribe Message:**
+### Available Topic Channels
+
+| Channel | Name | Keywords |
+|---------|------|----------|
+| `bitcoin` | Bitcoin | bitcoin, btc, lightning, ordinals |
+| `ethereum` | Ethereum | ethereum, eth, vitalik, layer2 |
+| `defi` | DeFi | defi, yield, lending, dex, amm |
+| `nft` | NFTs | nft, opensea, blur, digital art |
+| `regulation` | Regulation | sec, regulation, cftc, lawsuit |
+| `stablecoins` | Stablecoins | usdt, usdc, stablecoin, tether |
+| `altcoins` | Altcoins | solana, cardano, polkadot, avalanche |
+| `exchanges` | Exchanges | binance, coinbase, kraken, exchange |
+| `markets` | Markets | price, rally, crash, bull, bear |
+| `whales` | Whales | whale, accumulation, institutional |
+
+### Price Update Payload
+
+```json
+{
+  "type": "prices",
+  "payload": {
+    "prices": {
+      "bitcoin": {
+        "usd": 98500,
+        "usd_24h_change": 2.5,
+        "usd_market_cap": 1950000000000
+      },
+      "ethereum": {
+        "usd": 3450,
+        "usd_24h_change": -1.2,
+        "usd_market_cap": 415000000000
+      }
+    }
+  },
+  "timestamp": "2026-02-02T10:00:00Z"
+}
+```
+
+### Whale Alert Payload
+
+```json
+{
+  "type": "whales",
+  "payload": {
+    "alerts": [
+      {
+        "hash": "0x123...",
+        "amount": 1500,
+        "symbol": "BTC",
+        "usd_value": 147750000,
+        "from": "Binance",
+        "to": "Unknown Wallet"
+      }
+    ],
+    "isNew": true
+  },
+  "timestamp": "2026-02-02T10:00:00Z"
+}
+```
+
+### Sentiment Payload
+
+```json
+{
+  "type": "sentiment",
+  "payload": {
+    "value": 72,
+    "classification": "Greed",
+    "timestamp": "2026-02-02T00:00:00Z"
+  },
+  "timestamp": "2026-02-02T10:00:00Z"
+}
+```
+
+### Subscribe Message:
 
 ```json
 {

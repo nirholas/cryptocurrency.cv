@@ -4,7 +4,7 @@ The Model Context Protocol (MCP) server allows AI assistants like Claude and Cha
 
 ## Overview
 
-**14 Tools** for comprehensive crypto news access. All tools are marked as **read-only** for ChatGPT compatibility (no confirmation prompts).
+**40 Tools** for comprehensive crypto news access. All tools are marked as **read-only** for ChatGPT compatibility (no confirmation prompts).
 
 MCP enables AI models to:
 
@@ -66,26 +66,78 @@ Add to your Claude Desktop configuration (`~/Library/Application Support/Claude/
 }
 ```
 
-## Available Tools (14 Total)
+## Available Tools (40 Total)
 
 All tools are marked as **read-only** for ChatGPT Developer Mode compatibility (no confirmation prompts).
 
+### 📰 Core News Tools
+
 | Tool | Description |
 |------|-------------|
-| `get_crypto_news` | Get latest news from all 7 sources (CoinDesk, The Block, Decrypt, CoinTelegraph, Bitcoin Magazine, Blockworks, The Defiant) |
+| `get_crypto_news` | Get latest news from all 130+ sources |
 | `search_crypto_news` | Search news by comma-separated keywords |
 | `get_defi_news` | DeFi-specific news (yield farming, DEXs, lending, protocols) |
 | `get_bitcoin_news` | Bitcoin-specific news (BTC, Lightning Network, miners, ordinals) |
 | `get_breaking_news` | Breaking news from the last 2 hours |
 | `get_news_sources` | List all available news sources with details |
 | `get_api_health` | Check API & feed health status |
+| `analyze_news` | News with topic classification and sentiment analysis |
+| `get_ethereum_news` | Ethereum-specific news (ETH, L2s, smart contracts) |
+| `get_altcoin_news` | Altcoin news (SOL, ADA, DOT, AVAX, etc.) |
+| `get_nft_news` | NFT-specific news and market updates |
+
+### 📊 Analytics & Sentiment
+
+| Tool | Description |
+|------|-------------|
 | `get_trending_topics` | Trending topics with sentiment analysis (bullish/bearish/neutral) |
 | `get_crypto_stats` | Analytics: articles per source, hourly distribution, category breakdown |
-| `analyze_news` | News with topic classification and sentiment analysis |
+| `get_ai_sentiment` | AI-powered market sentiment analysis with confidence scores |
+| `get_ai_summary` | AI-generated news summaries and key insights |
+| `get_market_sentiment` | Real-time market sentiment indicators |
+| `get_fear_greed` | Fear & Greed Index data |
+| `get_social_sentiment` | Social media sentiment from Twitter/Reddit |
+
+### 📈 Trading & Market Data
+
+| Tool | Description |
+|------|-------------|
+| `get_prices` | Real-time cryptocurrency prices from CoinGecko |
+| `get_markets` | Top 100 markets by market cap |
+| `get_ticker` | 24h ticker data (price, volume, change%) |
+| `get_orderbook` | Live orderbook data (bids/asks/depth) |
+| `get_arbitrage` | Cross-exchange arbitrage opportunities |
+| `get_options_data` | Options market data (calls, puts, IV) |
+| `get_funding_rates` | Perpetual futures funding rates |
+| `get_liquidations` | Recent liquidation events |
+| `get_whale_alerts` | Large transaction monitoring |
+
+### 🪙 DeFi & Token Tools
+
+| Tool | Description |
+|------|-------------|
+| `get_stablecoin_data` | Stablecoin metrics (supply, peg, volume) |
+| `get_defi_yields` | DeFi yield farming opportunities |
+| `get_gas_prices` | Ethereum gas price tracker |
+| `get_tvl_rankings` | DeFi TVL rankings by protocol |
+
+### 📚 Archive & Research
+
+| Tool | Description |
+|------|-------------|
 | `get_archive` | Query historical news archive by date range, source, or keywords |
 | `get_archive_stats` | Statistics about the historical news archive |
 | `find_original_sources` | Find where news originated (official, press-release, social, government) |
+| `get_events_calendar` | Upcoming crypto events, launches, and conferences |
+
+### 🔔 Alerts & Monitoring
+
+| Tool | Description |
+|------|-------------|
 | `get_portfolio_news` | News for specific cryptocurrencies with CoinGecko price data |
+| `get_alerts` | Custom price and news alerts |
+| `get_rss_feeds` | RSS feed URLs for various sources |
+| `get_regulatory_news` | Regulatory updates by jurisdiction |
 
 ### Tool Parameters
 
@@ -248,7 +300,7 @@ Ensure the SSE endpoint is reachable and returns proper MCP responses.
 
 - **100% Free** - No API keys required
 - **Dual Transport** - Works with both Claude (stdio) and ChatGPT (HTTP/SSE)
-- **14 Tools** - Comprehensive crypto news coverage
+- **40 Tools** - Comprehensive crypto news coverage
 - **Read-Only** - All tools marked as safe for ChatGPT (no confirmation prompts)
 - **Real-Time** - Breaking news from last 2 hours
 - **Sentiment Analysis** - Bullish/bearish/neutral classification
