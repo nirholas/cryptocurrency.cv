@@ -78,7 +78,6 @@ curl https://news-crypto.vercel.app/api/news
 | Branch                 | Description                                                                                                                       |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | `main`                 | Stable production branch — Original API-focused design                                                                            |
-| `redesign/pro-news-ui` | Premium UI redesign — CoinDesk/CoinTelegraph-style with dark mode, enhanced components, SEO structured data, and full PWA support |
 
 To try the redesign locally:
 
