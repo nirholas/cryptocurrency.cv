@@ -1347,7 +1347,7 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
           'User-Agent': 'FreeCryptoNews/1.0 (github.com/nirholas/free-crypto-news)',
         },
         signal: controller.signal,
-        ...('skipCache' in source && source.skipCache
+        ...('skipCache' in source && 'skipCache' in source && source.skipCache
           ? { cache: 'no-store' as const }
           : { next: { revalidate: 60 } }), // 60s revalidation for normal feeds
       };
