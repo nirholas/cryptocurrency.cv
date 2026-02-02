@@ -11,7 +11,8 @@ import {
   type ContentIdentifier,
 } from '@/lib/content-addressable';
 
-export const runtime = 'edge';
+// Use Node.js runtime since content-addressable.ts uses database.ts which requires fs/path modules
+export const runtime = 'nodejs';
 export const revalidate = 0; // No caching for CAS
 
 /**

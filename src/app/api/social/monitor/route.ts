@@ -6,6 +6,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/database';
 
+// Use Node.js runtime since database.ts requires fs/path modules
+export const runtime = 'nodejs';
+
 interface SocialMessage {
   id: string;
   platform: 'discord' | 'telegram' | 'twitter';

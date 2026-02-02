@@ -35,6 +35,9 @@ import {
 import { isGroqConfigured } from '@/lib/groq';
 import { db } from '@/lib/database';
 
+// Use Node.js runtime since database.ts requires fs/path modules
+export const runtime = 'nodejs';
+
 // =============================================================================
 // TYPES
 // =============================================================================

@@ -817,6 +817,9 @@ export function isV1PricedEndpoint(endpoint: string): boolean {
  * Get premium pricing info for documentation/API responses
  */
 export function getPremiumPricingInfo() {
+  // Import dynamically to avoid circular dependency issues
+  const { CURRENT_NETWORK, PAYMENT_ADDRESS, isX402Enabled } = require('./config');
+  
   return {
     endpoints: Object.entries(PREMIUM_PRICING).map(([path, config]) => ({
       path,
@@ -828,6 +831,13 @@ export function getPremiumPricingInfo() {
       rateLimit: `${config.rateLimit}/min`,
     })),
     categories: PREMIUM_CATEGORIES,
+    paymentInfo: {
+      protocol: 'x402',
+      network: CURRENT_NETWORK,
+      enabled: isX402Enabled(),
+      address: PAYMENT_ADDRESS || 'Not configured',
+      documentation: 'https://docs.x402.org',
+    },
     documentation: {
       x402: 'https://docs.x402.org',
       api: '/api/v1',

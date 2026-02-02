@@ -1,5 +1,0 @@
-// DEPRECATED: This file is replaced by proxy.ts in Next.js 16+
-// Delete this file - kept only as placeholder during migration
-
-// Re-export from proxy.ts to avoid breaking any imports
-export { default, config } from './proxy';
