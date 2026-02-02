@@ -3,7 +3,7 @@ import CoverageGapDashboard from './CoverageGapDashboard';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'Metadata' });
+  const t = await getTranslations({ locale, namespace: 'metadata' });
   
   return {
     title: `Coverage Gap Analysis | ${t('title')}`,

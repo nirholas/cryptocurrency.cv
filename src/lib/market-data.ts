@@ -2073,30 +2073,36 @@ export async function getDerivativesTickers(): Promise<DerivativeTicker[]> {
 // UTILITY FUNCTIONS
 // =============================================================================
 
-export function formatPrice(price: number | null | undefined): string {
-  if (price == null || typeof price !== 'number' || isNaN(price)) return '$0.00';
-  if (price >= 1000) {
-    return '$' + price.toLocaleString('en-US', { maximumFractionDigits: 0 });
+export function formatPrice(price: number | string | null | undefined): string {
+  if (price == null) return '$0.00';
+  const p = typeof price === 'string' ? parseFloat(price) : price;
+  if (typeof p !== 'number' || !isFinite(p)) return '$0.00';
+  if (p >= 1000) {
+    return '$' + p.toLocaleString('en-US', { maximumFractionDigits: 0 });
   }
-  if (price >= 1) {
-    return '$' + price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  if (p >= 1) {
+    return '$' + p.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   }
-  return '$' + price.toLocaleString('en-US', { minimumFractionDigits: 4, maximumFractionDigits: 6 });
+  return '$' + p.toLocaleString('en-US', { minimumFractionDigits: 4, maximumFractionDigits: 6 });
 }
 
-export function formatNumber(num: number | null | undefined): string {
-  if (num == null || typeof num !== 'number' || isNaN(num)) return '0';
-  if (num >= 1e12) return (num / 1e12).toFixed(2) + 'T';
-  if (num >= 1e9) return (num / 1e9).toFixed(2) + 'B';
-  if (num >= 1e6) return (num / 1e6).toFixed(2) + 'M';
-  if (num >= 1e3) return (num / 1e3).toFixed(2) + 'K';
-  return num.toFixed(2);
+export function formatNumber(num: number | string | null | undefined): string {
+  if (num == null) return '0';
+  const n = typeof num === 'string' ? parseFloat(num) : num;
+  if (typeof n !== 'number' || !isFinite(n)) return '0';
+  if (n >= 1e12) return (n / 1e12).toFixed(2) + 'T';
+  if (n >= 1e9) return (n / 1e9).toFixed(2) + 'B';
+  if (n >= 1e6) return (n / 1e6).toFixed(2) + 'M';
+  if (n >= 1e3) return (n / 1e3).toFixed(2) + 'K';
+  return n.toFixed(2);
 }
 
-export function formatPercent(num: number | null | undefined): string {
-  if (num == null || typeof num !== 'number' || isNaN(num) || typeof num !== 'number' || isNaN(num)) return '0.00%';
-  const sign = num >= 0 ? '+' : '';
-  return sign + num.toFixed(2) + '%';
+export function formatPercent(num: number | string | null | undefined): string {
+  if (num == null) return '0.00%';
+  const n = typeof num === 'string' ? parseFloat(num) : num;
+  if (typeof n !== 'number' || !isFinite(n)) return '0.00%';
+  const sign = n >= 0 ? '+' : '';
+  return sign + n.toFixed(2) + '%';
 }
 
 export function getFearGreedColor(value: number): string {

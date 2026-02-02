@@ -66,16 +66,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 
     const price = coinData.market_data?.current_price?.usd || 0;
-    const change24h = coinData.market_data?.price_change_percentage_24h || 0;
+    const change24h = Number(coinData.market_data?.price_change_percentage_24h) || 0;
     const symbol = coinData.symbol?.toUpperCase() || '';
     const name = coinData.name || coinId;
     
     // Generate dynamic OG image for viral sharing
-    const ogImageUrl = `${BASE_URL}/api/og/coin?name=${encodeURIComponent(name)}&symbol=${encodeURIComponent(symbol)}&price=${encodeURIComponent(formatPrice(price))}&change=${encodeURIComponent(change24h.toFixed(2))}`;
+    const ogImageUrl = `${BASE_URL}/api/og/coin?name=${encodeURIComponent(name)}&symbol=${encodeURIComponent(symbol)}&price=${encodeURIComponent(formatPrice(price))}&change=${encodeURIComponent(formatPercent(change24h))}`;
 
     return {
       title: `${name} (${symbol}) Price, Chart & Market Cap | Free Crypto News`,
-      description: `Get ${name} (${symbol}) price, market cap, trading volume, chart, and info. ${name} is currently trading at ${formatPrice(price)} with a ${change24h >= 0 ? '+' : ''}${change24h.toFixed(2)}% change in 24h.`,
+      description: `Get ${name} (${symbol}) price, market cap, trading volume, chart, and info. ${name} is currently trading at ${formatPrice(price)} with a ${formatPercent(change24h)} change in 24h.`,
       keywords: [name.toLowerCase(), symbol.toLowerCase(), `${symbol} price`, `${name} news`, 'cryptocurrency', 'crypto'],
       openGraph: {
         title: `${name} Price: ${formatPrice(price)} | ${symbol}`,

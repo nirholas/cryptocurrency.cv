@@ -25,17 +25,20 @@ interface PriceStatisticsProps {
   priceChange1y?: number;
 }
 
-function formatPrice(price: number): string {
-  if (price >= 1000) {
-    return '$' + price.toLocaleString('en-US', { maximumFractionDigits: 0 });
+function formatPrice(price: number | string | null | undefined): string {
+  if (price == null) return '$0.00';
+  const p = typeof price === 'string' ? parseFloat(price) : price;
+  if (typeof p !== 'number' || !isFinite(p)) return '$0.00';
+  if (p >= 1000) {
+    return '$' + p.toLocaleString('en-US', { maximumFractionDigits: 0 });
   }
-  if (price >= 1) {
-    return '$' + price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  if (p >= 1) {
+    return '$' + p.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   }
-  if (price >= 0.01) {
-    return '$' + price.toFixed(4);
+  if (p >= 0.01) {
+    return '$' + p.toFixed(4);
   }
-  return '$' + price.toFixed(8);
+  return '$' + p.toFixed(8);
 }
 
 function formatDate(dateString: string): string {
@@ -47,10 +50,12 @@ function formatDate(dateString: string): string {
   });
 }
 
-function formatPercent(num: number | null | undefined): string {
+function formatPercent(num: number | string | null | undefined): string {
   if (num == null) return '-';
-  const sign = num >= 0 ? '+' : '';
-  return sign + num.toFixed(2) + '%';
+  const n = typeof num === 'string' ? parseFloat(num) : num;
+  if (typeof n !== 'number' || !isFinite(n)) return '-';
+  const sign = n >= 0 ? '+' : '';
+  return sign + n.toFixed(2) + '%';
 }
 
 interface RangeBarProps {
