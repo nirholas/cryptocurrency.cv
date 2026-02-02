@@ -106,7 +106,6 @@ export async function GET() {
       validation: {
         valid: validation.valid,
         errors: validation.errors,
-        warnings: validation.warnings,
       },
       docs: {
         api: '/api/v1',

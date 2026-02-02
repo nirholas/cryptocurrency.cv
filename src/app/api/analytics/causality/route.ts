@@ -17,7 +17,8 @@ import {
   type CausalMethod,
 } from '@/lib/causal-inference';
 
-export const runtime = 'edge';
+// Use Node.js runtime since causal-inference.ts imports database.ts which requires fs/path modules
+export const runtime = 'nodejs';
 export const revalidate = 60;
 
 /**

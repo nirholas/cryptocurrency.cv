@@ -97,8 +97,9 @@ export const x402Server = getX402Server();
 /**
  * Validate that the server is properly configured
  */
-export function validateConfig(): { valid: boolean; errors: string[] } {
+export function validateConfig(): { valid: boolean; errors: string[]; warnings: string[] } {
   const errors: string[] = [];
+  const warnings: string[] = [];
   
   if (!FACILITATOR_URL) {
     errors.push('FACILITATOR_URL is not configured');
@@ -110,10 +111,16 @@ export function validateConfig(): { valid: boolean; errors: string[] } {
   } catch {
     errors.push(`FACILITATOR_URL is not a valid URL: ${FACILITATOR_URL}`);
   }
+
+  // Add warnings for non-critical issues
+  if (!PAYMENT_ADDRESS || PAYMENT_ADDRESS === '0x0000000000000000000000000000000000000000') {
+    warnings.push('PAYMENT_ADDRESS is not set - payments will not work');
+  }
   
   return {
     valid: errors.length === 0,
     errors,
+    warnings,
   };
 }
 
