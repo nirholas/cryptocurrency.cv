@@ -10,6 +10,9 @@ import CategoryNav from '@/components/CategoryNav';
 import { getNewsByCategory } from '@/lib/crypto-news';
 import type { Metadata } from 'next';
 
+// Enable on-demand ISR for categories not pre-rendered
+export const dynamicParams = true;
+
 interface Props {
   params: Promise<{ category: string }>;
 }
@@ -119,6 +122,10 @@ export default async function CategoryPage({ params }: Props) {
 
 // Generate static paths for common categories
 export async function generateStaticParams() {
+  // Skip during Vercel build - use ISR instead
+  if (process.env.VERCEL_ENV || process.env.CI) {
+    return [];
+  }
   return Object.keys(categoryInfo).map((category) => ({
     category,
   }));

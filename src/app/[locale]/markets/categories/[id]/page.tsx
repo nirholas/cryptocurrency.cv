@@ -106,7 +106,12 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   };
 }
 
+export const dynamicParams = true;
+
 export function generateStaticParams() {
+  if (process.env.VERCEL_ENV || process.env.CI) {
+    return [];
+  }
   return Object.keys(CATEGORY_META).map((id) => ({ id }));
 }
 

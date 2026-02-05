@@ -14,10 +14,17 @@ import { locales } from '@/i18n/config';
 
 export const revalidate = 300;
 
+// Enable on-demand ISR for exchanges not pre-rendered
+export const dynamicParams = true;
+
 /**
  * Generate static params for all locale + exchange combinations
  */
 export async function generateStaticParams() {
+  // Skip during Vercel build - use ISR instead
+  if (process.env.VERCEL_ENV || process.env.CI) {
+    return [];
+  }
   const exchanges = await getExchanges(50, 1);
   
   return locales.flatMap((locale) =>

@@ -19,6 +19,9 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n/config';
 
+// Enable on-demand ISR for chains not pre-rendered
+export const dynamicParams = true;
+
 interface Props {
   params: Promise<{ slug: string }>;
 }
@@ -51,6 +54,10 @@ export const revalidate = 300; // Revalidate every 5 minutes
  * Generate static params for all locale + chain combinations
  */
 export async function generateStaticParams() {
+  // Skip during Vercel build - use ISR instead
+  if (process.env.VERCEL_ENV || process.env.CI) {
+    return [];
+  }
   const chains = await getTopChains(30);
   
   return locales.flatMap((locale) =>

@@ -10,6 +10,9 @@ import { searchNews } from '@/lib/crypto-news';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+// Enable on-demand ISR for topics not pre-rendered
+export const dynamicParams = true;
+
 interface Props {
   params: Promise<{ topic: string }>;
 }
@@ -199,6 +202,10 @@ export default async function TopicPage({ params }: Props) {
 
 // Generate static paths
 export async function generateStaticParams() {
+  // Skip during Vercel build - use ISR instead
+  if (process.env.VERCEL_ENV || process.env.CI) {
+    return [];
+  }
   return Object.keys(topicInfo).map((topic) => ({
     topic,
   }));

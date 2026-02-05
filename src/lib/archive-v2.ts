@@ -136,6 +136,10 @@ export interface ArchiveV2Stats {
  * Returns slugs from KV archive for SEO
  */
 export async function getAllArchivedArticleIds(): Promise<string[]> {
+  // Skip during Vercel build to avoid loading large JSON files
+  if (process.env.VERCEL_ENV || process.env.CI) {
+    return [];
+  }
   try {
     const { getAllArticleSlugs } = await import('./archive-service');
     return await getAllArticleSlugs(5000);

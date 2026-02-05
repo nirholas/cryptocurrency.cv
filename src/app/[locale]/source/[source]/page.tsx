@@ -10,6 +10,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+// Enable on-demand ISR for sources not pre-rendered
+export const dynamicParams = true;
+
 // Source metadata - 82 sources total (7 English + 75 International)
 const sourceInfo: Record<string, {
   name: string;
@@ -826,6 +829,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export function generateStaticParams() {
+  // Skip during Vercel build - use ISR instead
+  if (process.env.VERCEL_ENV || process.env.CI) {
+    return [];
+  }
   return Object.keys(sourceInfo).map(source => ({ source }));
 }
 

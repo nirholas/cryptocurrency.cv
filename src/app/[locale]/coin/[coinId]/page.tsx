@@ -24,6 +24,9 @@ import {
 } from '@/lib/market-data';
 import CoinPageClient from './CoinPageClient';
 
+// Enable on-demand ISR for coins not pre-rendered
+export const dynamicParams = true;
+
 interface Props {
   params: Promise<{ coinId: string; locale: string }>;
   searchParams: Promise<{ tab?: string }>;
@@ -335,6 +338,10 @@ export default async function CoinPage({ params, searchParams }: Props) {
 
 // Generate static paths for popular coins
 export async function generateStaticParams() {
+  // Skip during Vercel build - use ISR instead
+  if (process.env.VERCEL_ENV || process.env.CI) {
+    return [];
+  }
   return Object.keys(coinMeta).map((coinId) => ({
     coinId,
   }));
