@@ -355,7 +355,7 @@ export function RAGChat({
                       {conv.title || 'Untitled conversation'}
                     </p>
                     <p className="text-xs text-gray-500 mt-0.5">
-                      {conv.messageCount || (conv.messages?.length || 0)} messages
+                      {conv.messages?.length || 0} messages
                     </p>
                     
                     {/* Delete button */}
@@ -571,7 +571,7 @@ export function RAGChat({
                     onFeedback={(rating) => handleFeedback(message.id, rating)}
                     showFeedback={message.role === 'assistant' && !message.isStreaming}
                     onRegenerate={handleRegenerate}
-                    onEdit={handleEditMessage}
+                    onEdit={(newContent) => handleEditMessage(message.id, newContent)}
                     showConfidence={settings.showConfidence}
                     isLastAssistant={message.role === 'assistant' && index === lastAssistantIndex}
                   />
@@ -659,6 +659,7 @@ export function RAGChat({
             <SettingsPanel
               settings={settings}
               onSettingsChange={handleSettingsChange}
+              isOpen={true}
               onClose={() => setSettingsOpen(false)}
             />
           </div>
@@ -667,7 +668,7 @@ export function RAGChat({
 
       {/* Keyboard Shortcuts Modal */}
       {shortcutsOpen && (
-        <KeyboardShortcuts onClose={() => setShortcutsOpen(false)} />
+        <KeyboardShortcuts isOpen={true} onClose={() => setShortcutsOpen(false)} />
       )}
 
       {/* Message Search Modal */}

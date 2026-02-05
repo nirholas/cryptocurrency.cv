@@ -259,7 +259,6 @@ export {
 // ═══════════════════════════════════════════════════════════════
 
 export {
-  selfRAGPipeline,
   gradeRetrieval,
   gradeRetrievals,
   generateWithReflection,
@@ -270,10 +269,9 @@ export {
 
 export type {
   RetrievalGrade,
-  ReflectionResult,
+  GenerationResult,
   HallucinationCheck,
-  CRAGAction,
-  SelfRAGConfig,
+  RetrievalAction,
   SelfRAGResult,
 } from './self-rag';
 
@@ -282,7 +280,6 @@ export type {
 // ═══════════════════════════════════════════════════════════════
 
 export {
-  contextualCompressor,
   extractRelevantSentences,
   compressDocument,
   compressDocuments,
@@ -292,8 +289,8 @@ export {
 
 export type {
   CompressedDocument,
-  ExtractedFact,
-  CompressionConfig,
+  ExtractedSentence,
+  KeyFact,
   AssembledContext,
 } from './contextual-compression';
 
@@ -302,7 +299,6 @@ export type {
 // ═══════════════════════════════════════════════════════════════
 
 export {
-  answerAttributionPipeline,
   extractClaims,
   findSupportingQuote,
   generateAttributedAnswer,
@@ -311,12 +307,9 @@ export {
 } from './answer-attribution';
 
 export type {
-  ExtractedClaim,
-  SourceQuote,
   AttributedAnswer,
   Citation,
   SourceHighlight,
-  CitationDisplay,
 } from './answer-attribution';
 
 // ═══════════════════════════════════════════════════════════════

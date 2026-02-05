@@ -258,8 +258,10 @@ export async function POST(request: NextRequest) {
 
       if (verifyResult && 'valid' in verifyResult && verifyResult.valid) {
         paymentValid = true;
-        payerAddress = paymentData.payer || (verifyResult as Record<string, unknown>).payer as string || 'unknown';
-        transactionHash = paymentData.transactionHash || (verifyResult as Record<string, unknown>).transactionHash as string || '';
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const vr = verifyResult as any;
+        payerAddress = paymentData.payer || vr.payer || 'unknown';
+        transactionHash = paymentData.transactionHash || vr.transactionHash || '';
       } else if (verifyResult && 'error' in verifyResult) {
         verificationError = verifyResult.error || 'Payment verification failed';
       } else {

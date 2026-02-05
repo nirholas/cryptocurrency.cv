@@ -209,14 +209,14 @@ class VectorStore {
     
     // Source filter
     if (filter.sources && filter.sources.length > 0) {
-      if (!filter.sources.includes(meta.source) && !filter.sources.includes(meta.sourceKey)) {
+      if (!filter.sources.includes(meta.source) && !filter.sources.includes(meta.sourceKey || '')) {
         return false;
       }
     }
     
     // Category filter
     if (filter.categories && filter.categories.length > 0) {
-      if (!filter.categories.includes(meta.category)) {
+      if (!filter.categories.includes(meta.category || '')) {
         return false;
       }
     }
@@ -253,7 +253,8 @@ class VectorStore {
     
     for (const doc of documents) {
       sources.add(doc.metadata.source);
-      categories.add(doc.metadata.category);
+      const category = doc.metadata.category;
+      if (category) categories.add(category);
       
       const pubDate = doc.metadata.pubDate.split('T')[0];
       if (!earliestDate || pubDate < earliestDate) earliestDate = pubDate;

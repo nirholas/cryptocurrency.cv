@@ -98,12 +98,12 @@ class MemoryVectorStore {
       }
     }
     if (filter.currencies?.length) {
-      if (!filter.currencies.some(c => meta.currencies.includes(c.toUpperCase()))) {
+      if (!filter.currencies.some(c => (meta.currencies || []).includes(c.toUpperCase()))) {
         return false;
       }
     }
     if (filter.sources?.length) {
-      if (!filter.sources.includes(meta.source) && !filter.sources.includes(meta.sourceKey)) {
+      if (!filter.sources.includes(meta.source) && !filter.sources.includes(meta.sourceKey || '')) {
         return false;
       }
     }
@@ -118,7 +118,7 @@ class MemoryVectorStore {
 
     for (const doc of docs) {
       sources.add(doc.metadata.source);
-      categories.add(doc.metadata.category);
+      if (doc.metadata.category) categories.add(doc.metadata.category);
       const date = doc.metadata.pubDate.split('T')[0];
       if (!earliest || date < earliest) earliest = date;
       if (!latest || date > latest) latest = date;
@@ -187,10 +187,10 @@ export class RedisVectorStore {
       await client.zAdd(INDEX_BY_DATE, { score: timestamp, value: doc.id });
 
       // Add to source index
-      await client.sAdd(`${INDEX_BY_SOURCE}${doc.metadata.sourceKey}`, doc.id);
+      await client.sAdd(`${INDEX_BY_SOURCE}${doc.metadata.sourceKey || 'unknown'}`, doc.id);
 
       // Add to currency indexes
-      for (const currency of doc.metadata.currencies) {
+      for (const currency of doc.metadata.currencies || []) {
         await client.sAdd(`${INDEX_BY_CURRENCY}${currency}`, doc.id);
       }
     } catch (error) {
@@ -289,7 +289,7 @@ export class RedisVectorStore {
         const currencyIds = new Set<string>();
         for (const currency of filter.currencies) {
           const ids = await client.sMembers(`${INDEX_BY_CURRENCY}${currency}`);
-          ids.forEach(id => currencyIds.add(id));
+          ids.forEach((id: string) => currencyIds.add(id));
         }
         candidateIds = candidateIds.filter(id => currencyIds.has(id));
       }
@@ -299,9 +299,9 @@ export class RedisVectorStore {
         const sourceIds = new Set<string>();
         for (const source of filter.sources) {
           const ids = await client.sMembers(`${INDEX_BY_SOURCE}${source}`);
-          ids.forEach(id => sourceIds.add(id));
+          ids.forEach((id: string) => sourceIds.add(id));
         }
-        candidateIds = candidateIds.filter(id => sourceIds.has(id));
+        candidateIds = candidateIds.filter((id: string) => sourceIds.has(id));
       }
 
       // Score candidates
@@ -371,7 +371,7 @@ export class RedisVectorStore {
 
       // Get unique sources
       const sourceKeys = await client.keys(`${INDEX_BY_SOURCE}*`);
-      const sources = sourceKeys.map(k => k.replace(INDEX_BY_SOURCE, ''));
+      const sources = sourceKeys.map((k: string) => k.replace(INDEX_BY_SOURCE, ''));
 
       return {
         totalDocuments: count,

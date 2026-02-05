@@ -112,7 +112,7 @@ export function applySourceCredibility(
   weight: number = 0.15
 ): SearchResult[] {
   return results.map(result => {
-    const credibility = getSourceCredibility(result.document.metadata.sourceKey);
+    const credibility = getSourceCredibility(result.document.metadata.sourceKey || '');
     const adjustedScore = result.score * (1 - weight) + credibility * weight;
     return { ...result, score: adjustedScore };
   }).sort((a, b) => b.score - a.score);
@@ -308,7 +308,7 @@ export function diversifyBySources(
   const diversified: SearchResult[] = [];
 
   for (const result of results) {
-    const source = result.document.metadata.sourceKey;
+    const source = result.document.metadata.sourceKey || result.document.metadata.source;
     const count = sourceCounts.get(source) || 0;
 
     if (count < maxPerSource) {
