@@ -220,12 +220,12 @@ export async function POST(request: NextRequest) {
       }
 
       // Verify the payment via facilitator
-      const verifyRequest = {
-        paymentHeader: paymentHeader,
+      const paymentRequirements = {
         resource: '/api/upgrade',
         payTo: PAYMENT_ADDRESS || '',
         maxAmountRequired: priceInUSDC.toString(),
         network: NETWORK,
+        scheme: 'exact',
         accepts: acceptedAssets.map((asset) => ({
           scheme: 'exact',
           network: NETWORK,
@@ -235,13 +235,31 @@ export async function POST(request: NextRequest) {
         })),
       };
 
+      // Decode payment header into PaymentPayload format
+      let paymentPayload: { x402Version: string; payload: unknown };
+      try {
+        const decoded = Buffer.from(paymentHeader, 'base64').toString('utf-8');
+        const parsed = JSON.parse(decoded);
+        paymentPayload = {
+          x402Version: parsed.x402Version || '1',
+          payload: parsed.payload || parsed,
+        };
+      } catch {
+        // If decoding fails, wrap raw signature as payload
+        paymentPayload = {
+          x402Version: '1',
+          payload: { signature: paymentHeader },
+        };
+      }
+
       // Call facilitator to verify payment signature
-      const verifyResult = await facilitatorClient.verify(verifyRequest);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const verifyResult = await facilitatorClient.verify(paymentPayload as any, paymentRequirements as any) as any;
 
       if (verifyResult && 'valid' in verifyResult && verifyResult.valid) {
         paymentValid = true;
-        payerAddress = paymentData.payer || verifyResult.payer || 'unknown';
-        transactionHash = paymentData.transactionHash || verifyResult.transactionHash || '';
+        payerAddress = paymentData.payer || (verifyResult as Record<string, unknown>).payer as string || 'unknown';
+        transactionHash = paymentData.transactionHash || (verifyResult as Record<string, unknown>).transactionHash as string || '';
       } else if (verifyResult && 'error' in verifyResult) {
         verificationError = verifyResult.error || 'Payment verification failed';
       } else {

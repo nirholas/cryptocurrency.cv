@@ -291,22 +291,28 @@ declare global {
     readonly confidence: number;
   }
 
-  class SpeechRecognition extends EventTarget {
+  interface SpeechRecognition extends EventTarget {
     continuous: boolean;
     interimResults: boolean;
     lang: string;
-    onstart: ((this: SpeechRecognition, ev: Event) => any) | null;
-    onresult: ((this: SpeechRecognition, ev: SpeechRecognitionEvent) => any) | null;
-    onend: ((this: SpeechRecognition, ev: Event) => any) | null;
-    onerror: ((this: SpeechRecognition, ev: Event) => any) | null;
+    onstart: ((this: SpeechRecognition, ev: Event) => unknown) | null;
+    onresult: ((this: SpeechRecognition, ev: SpeechRecognitionEvent) => unknown) | null;
+    onend: ((this: SpeechRecognition, ev: Event) => unknown) | null;
+    onerror: ((this: SpeechRecognition, ev: Event) => unknown) | null;
     start(): void;
     stop(): void;
     abort(): void;
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
+  interface SpeechRecognitionConstructor {
+    new (): SpeechRecognition;
+    prototype: SpeechRecognition;
+  }
+
   interface Window {
-    SpeechRecognition: typeof SpeechRecognition;
-    webkitSpeechRecognition: typeof SpeechRecognition;
+    SpeechRecognition: SpeechRecognitionConstructor;
+    webkitSpeechRecognition: SpeechRecognitionConstructor;
   }
 }
 

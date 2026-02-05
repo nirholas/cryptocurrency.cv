@@ -186,7 +186,7 @@ export async function POST(request: NextRequest) {
           role: 'assistant',
           content: fullResponse,
           metadata: {
-            documentsUsed: rerankedResults.slice(0, 5).map(d => d.id),
+            documentsUsed: rerankedResults.slice(0, 5).map(d => d.document.id),
             cryptosDiscussed: processedQuery.classification.entities,
           },
         });
@@ -198,22 +198,22 @@ export async function POST(request: NextRequest) {
         send('complete', {
           answer: fullResponse,
           sources: rerankedResults.slice(0, 5).map(d => ({
-            id: d.id,
-            title: d.title,
-            source: d.source,
-            url: d.url,
-            publishedAt: d.publishedAt,
+            id: d.document.id,
+            title: d.document.metadata.title,
+            source: d.document.metadata.source,
+            url: d.document.metadata.url,
+            publishedAt: d.document.metadata.pubDate,
             score: d.score,
-            snippet: d.content.substring(0, 200),
+            snippet: d.document.content.substring(0, 200),
           })),
           confidence,
           suggestions: followUpSuggestions,
           relatedArticles: rerankedResults.slice(5, 9).map(d => ({
-            id: d.id,
-            title: d.title,
-            source: d.source,
-            url: d.url,
-            publishedAt: d.publishedAt,
+            id: d.document.id,
+            title: d.document.metadata.title,
+            source: d.document.metadata.source,
+            url: d.document.metadata.url,
+            publishedAt: d.document.metadata.pubDate,
             relevanceScore: d.score,
           })),
           metadata: {
@@ -319,8 +319,9 @@ function calculateConfidence(
   const now = new Date();
   const recencyScores = results.map(r => {
     const d = r.document;
-    if (!d.publishedAt) return 0.5;
-    const pubDate = d.publishedAt instanceof Date ? d.publishedAt : new Date(d.publishedAt);
+    const pubDateStr = d.metadata?.pubDate;
+    if (!pubDateStr) return 0.5;
+    const pubDate = new Date(pubDateStr);
     const daysDiff = (now.getTime() - pubDate.getTime()) / (1000 * 60 * 60 * 24);
     if (daysDiff < 1) return 1;
     if (daysDiff < 7) return 0.9;
@@ -328,8 +329,8 @@ function calculateConfidence(
     if (daysDiff < 90) return 0.5;
     return 0.3;
   });
-  const recency = recencyScores.length > 0 
-    ? recencyScores.reduce((a, b) => a + b) / recencyScores.length 
+  const recency: number = recencyScores.length > 0 
+    ? recencyScores.reduce((a, b) => a + b, 0) / recencyScores.length 
     : 0.5;
   
   // Consistency: check if response length is reasonable for the query
@@ -358,7 +359,7 @@ function calculateConfidence(
   // Add warnings based on factors
   if (sourceQuality < 0.5) warnings.push('Source relevance is limited');
   if (recency < 0.5) warnings.push('Information may be outdated');
-  if (documents.length < 2) warnings.push('Limited source coverage');
+  if (results.length < 2) warnings.push('Limited source coverage');
   
   // Determine level
   let level: 'high' | 'medium' | 'low' | 'uncertain';
