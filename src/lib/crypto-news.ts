@@ -131,7 +131,7 @@ const RSS_SOURCES = {
     name: 'NFT Evening',
     url: 'https://nftevening.com/feed/',
     category: 'nft',
-    skipCache: true, // Feed exceeds 2MB Next.js cache limit
+    disabled: true, // Disabled: skipCache breaks static generation
   },
   
   // ═══════════════════════════════════════════════════════════════
@@ -188,6 +188,7 @@ const RSS_SOURCES = {
     name: 'Week in Ethereum',
     url: 'https://weekinethereumnews.com/feed/',
     category: 'ethereum',
+    disabled: true, // Disabled: SSL certificate error
   },
   etherscan: {
     name: 'Etherscan Blog',
@@ -1331,10 +1332,16 @@ async function fetchAllApiSources(): Promise<NewsArticle[]> {
  * Fetch RSS feed from a source with caching
  */
 async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
+  const source = RSS_SOURCES[sourceKey];
+  
+  // Skip disabled sources
+  if ('disabled' in source && source.disabled) {
+    return [];
+  }
+  
   const cacheKey = `feed:${sourceKey}`;
   
   return withCache(newsCache, cacheKey, 60, async () => { // Reduced to 60s for fresher content
-    const source = RSS_SOURCES[sourceKey];
     
     try {
       const controller = new AbortController();

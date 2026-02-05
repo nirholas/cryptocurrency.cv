@@ -1,0 +1,41 @@
+# Exclude large archive data files from deployment
+# These are served from GitHub raw content instead
+archive/articles/
+archive/search/article-meta.json
+archive/search/title-index.json
+archive/indexes/by-date.json
+archive/indexes/by-ticker.json
+archive/indexes/by-source.json
+
+# Development files
+.devcontainer/
+.github/
+alfred/
+chatgpt/
+copilot-extension/
+e2e/
+examples/
+mcp/
+mobile/
+postman/
+raycast/
+scripts/
+sdk/
+site/
+stories/
+terminal/
+widget/
+docs/
+
+# Test files
+*.test.ts
+*.test.tsx
+*.spec.ts
+vitest.config.ts
+vitest.setup.ts
+playwright.config.ts
+playwright-report/
+
+# Build artifacts
+.next/
+node_modules/

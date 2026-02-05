@@ -28,13 +28,17 @@ interface Props {
 
 const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://news-crypto.vercel.app';
 
+// Enable on-demand ISR for articles not pre-rendered
+export const dynamicParams = true;
+
 /**
- * Generate static params for all archived articles
- * This enables static generation for every article page
+ * Generate static params for recent articles only
+ * Other articles are generated on-demand via ISR
  */
 export async function generateStaticParams() {
+  // Only pre-render a small subset; rest uses ISR
   const articleIds = await getAllArchivedArticleIds();
-  return articleIds.map(id => ({ id }));
+  return articleIds.slice(0, 100).map(id => ({ id }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
