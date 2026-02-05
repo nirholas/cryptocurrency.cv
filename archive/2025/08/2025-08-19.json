@@ -1,0 +1,998 @@
+{
+  "date": "2025-08-19",
+  "fetchedAt": "2026-02-05T07:27:08.609Z",
+  "articleCount": 74,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Thumzup Acquires Dogehash, Shifts Focus to Crypto Mining",
+      "link": "https://cryptopanic.com/news/litecoin/24378099/Thumzup-Acquires-Dogehash-Shifts-Focus-to-Crypto-Mining",
+      "pubDate": "2025-08-19T23:09:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "LTC"
+      ]
+    },
+    {
+      "title": "XLM’s Grim Price Outlook Faces One Unlikely Chance of Recovery",
+      "link": "https://cryptopanic.com/news/stellar/24379832/XLMs-Grim-Price-Outlook-Faces-One-Unlikely-Chance-of-Recovery",
+      "pubDate": "2025-08-19T23:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "$OKB Jumps Over 6% After 65M Token Burn and ‘X Layer’ Launch",
+      "link": "https://cryptopanic.com/news/okb/24377231/OKB-Jumps-Over-6-After-65M-Token-Burn-and-X-Layer-Launch",
+      "pubDate": "2025-08-19T22:42:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ]
+    },
+    {
+      "title": "China’s DeepSeek AI Predicts The Price of XRP, XLM, and DOGE This August",
+      "link": "https://cryptopanic.com/news/stellar/24376984/Chinas-DeepSeek-AI-Predicts-The-Price-of-XRP-XLM-and-DOGE-This-August",
+      "pubDate": "2025-08-19T22:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "DOGE"
+      ]
+    },
+    {
+      "title": "What is Stellar and How Does it Work? Can XLM Flip XRP in 2025?",
+      "link": "https://cryptopanic.com/news/stellar/24374759/What-is-Stellar-and-How-Does-it-Work-Can-XLM-Flip-XRP-in-2025",
+      "pubDate": "2025-08-19T21:41:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Toyota Blockchain Lab Proposes Mobility Orchestration Network, Builds Prototype On Avalanche",
+      "link": "https://cryptopanic.com/news/avalanche-2/24374753/Toyota-Blockchain-Lab-Proposes-Mobility-Orchestration-Network-Builds-Prototype-On-Avalanche",
+      "pubDate": "2025-08-19T21:24:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "MON"
+      ]
+    },
+    {
+      "title": "Polkadot brings capital markets division to Wall Street",
+      "link": "https://cryptopanic.com/news/polkadot/24374325/Polkadot-brings-capital-markets-division-to-Wall-Street",
+      "pubDate": "2025-08-19T21:20:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Polkadot Establishes Institutional Division for Web3 Adoption",
+      "link": "https://cryptopanic.com/news/polkadot/24372972/Polkadot-Establishes-Institutional-Division-for-Web3-Adoption",
+      "pubDate": "2025-08-19T21:08:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Anthony Scaramucci’s SkyBridge Capital Taps Tokeny to Tokenise $300M on Avalanche",
+      "link": "https://cryptopanic.com/news/avalanche-2/24372091/Anthony-Scaramuccis-SkyBridge-Capital-Taps-Tokeny-to-Tokenise-300M-on-Avalanche",
+      "pubDate": "2025-08-19T20:49:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "SkyBridge Capital to Tokenize $300M on Avalanche Blockchain",
+      "link": "https://cryptopanic.com/news/avalanche-2/24371746/SkyBridge-Capital-to-Tokenize-300M-on-Avalanche-Blockchain",
+      "pubDate": "2025-08-19T20:39:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "The Daily: Ethereum ETFs hold 5% of ETH supply, Thumzup acquiring Dogecoin and Litecoin miner, Wyoming launches stablecoin, and more",
+      "link": "https://cryptopanic.com/news/litecoin/24370523/The-Daily-Ethereum-ETFs-hold-5-of-ETH-supply-Thumzup-acquiring-Dogecoin-and-Litecoin-miner-Wyoming-launches-stablecoin-and-more",
+      "pubDate": "2025-08-19T20:18:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DOGE",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Bitcoin at risk of a 51% attack from two miners",
+      "link": "https://cryptopanic.com/news/monero/24370872/Bitcoin-at-risk-of-a-51-attack-from-two-miners",
+      "pubDate": "2025-08-19T20:09:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XMR",
+        "USA"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polkadot eyes Wall Street investors to close gap with Ethereum, Solana",
+      "link": "https://cryptopanic.com/news/polkadot/24369279/Polkadot-eyes-Wall-Street-investors-to-close-gap-with-Ethereum-Solana",
+      "pubDate": "2025-08-19T20:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "DOT"
+      ]
+    },
+    {
+      "title": "Scaramucci’s SkyBridge eyes tokenizing $300 million on Avalanche blockchain: Fortune",
+      "link": "https://cryptopanic.com/news/avalanche-2/24368774/Scaramuccis-SkyBridge-eyes-tokenizing-300-million-on-Avalanche-blockchain-Fortune",
+      "pubDate": "2025-08-19T19:30:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "AVAX",
+        "PEOPLE"
+      ]
+    },
+    {
+      "title": "Spin To Win: ApeCoin Launches Wheel Of Fate On ApeChain",
+      "link": "https://cryptopanic.com/news/apecoin/24372101/Spin-To-Win-ApeCoin-Launches-Wheel-Of-Fate-On-ApeChain",
+      "pubDate": "2025-08-19T19:09:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "APE"
+      ]
+    },
+    {
+      "title": "Polkadot Launches Capital Markets-Focused Division to Bridge TradFi with Crypto",
+      "link": "https://cryptopanic.com/news/polkadot/24367117/Polkadot-Launches-Capital-Markets-Focused-Division-to-Bridge-TradFi-with-Crypto",
+      "pubDate": "2025-08-19T19:07:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Scaramucci to tokenize $300M in assets, nearly doubling Avalanche's RWA base",
+      "link": "https://cryptopanic.com/news/avalanche-2/24366658/Scaramucci-to-tokenize-300M-in-assets-nearly-doubling-Avalanche039s-RWA-base",
+      "pubDate": "2025-08-19T18:56:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "RWA"
+      ]
+    },
+    {
+      "title": "Bitcone's Blockchain Network Polygon Chosen for Wyoming's Stablecoin",
+      "link": "https://cryptopanic.com/news/avalanche-2/24379985/Bitcones-Blockchain-Network-Polygon-Chosen-for-Wyomings-Stablecoin",
+      "pubDate": "2025-08-19T18:43:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "AVAX",
+        "CONE"
+      ]
+    },
+    {
+      "title": "First State-Backed Stablecoin Just Went Live – Here’s What You Need to Know",
+      "link": "https://cryptopanic.com/news/avalanche-2/24366565/First-State-Backed-Stablecoin-Just-Went-Live-Heres-What-You-Need-to-Know",
+      "pubDate": "2025-08-19T18:31:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Solana and Avalanche Hold Flat While This Low Cap Token Gains 250% in 30 Days",
+      "link": "https://cryptopanic.com/news/avalanche-2/24366552/Solana-and-Avalanche-Hold-Flat-While-This-Low-Cap-Token-Gains-250-in-30-Days",
+      "pubDate": "2025-08-19T18:30:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Scaramucci's Skybridge Capital to Tokenize $300M in Hedge Funds on Avalanche",
+      "link": "https://cryptopanic.com/news/avalanche-2/24368585/Scaramuccis-Skybridge-Capital-to-Tokenize-300M-in-Hedge-Funds-on-Avalanche",
+      "pubDate": "2025-08-19T18:20:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Cold Wallet Surges Past $6.21M as Bitcoin Cash and XRP Ignite Bullish Signals",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/24365947/Cold-Wallet-Surges-Past-621M-as-Bitcoin-Cash-and-XRP-Ignite-Bullish-Signals",
+      "pubDate": "2025-08-19T18:09:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "BCH"
+      ]
+    },
+    {
+      "title": "BlockDAG’s Referral Bonus & $376M Presale Leave Stellar & Sui Forecasts Behind",
+      "link": "https://cryptopanic.com/news/stellar/24365621/BlockDAGs-Referral-Bonus-376M-Presale-Leave-Stellar-Sui-Forecasts-Behind",
+      "pubDate": "2025-08-19T18:04:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Crypto Founder Predicts The Collapse Of Bitcoin In This Timeframe",
+      "link": "https://cryptopanic.com/news/monero/24365381/Crypto-Founder-Predicts-The-Collapse-Of-Bitcoin-In-This-Timeframe",
+      "pubDate": "2025-08-19T18:00:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "XMR"
+      ]
+    },
+    {
+      "title": "World Computer Hacker League 2025 Draws Global Attention with 11,774 Registrants and 1,554 Project Submissions",
+      "link": "https://cryptopanic.com/news/internet-computer/24365286/World-Computer-Hacker-League-2025-Draws-Global-Attention-with-11774-Registrants-and-1554-Project-Submissions",
+      "pubDate": "2025-08-19T17:42:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ]
+    },
+    {
+      "title": "SkyBridge Capital Bets Big on Tokenization With $300M Move on Avalanche",
+      "link": "https://cryptopanic.com/news/avalanche-2/24365273/SkyBridge-Capital-Bets-Big-on-Tokenization-With-300M-Move-on-Avalanche",
+      "pubDate": "2025-08-19T17:33:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Trump Jr.'s crypto stock pick crashes 45%",
+      "link": "https://cryptopanic.com/news/litecoin/24365221/Trump-Jrs-crypto-stock-pick-crashes-45",
+      "pubDate": "2025-08-19T16:58:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Wyoming State Debuts US Dollar Stablecoin On Seven Blockchains",
+      "link": "https://cryptopanic.com/news/avalanche-2/24364759/Wyoming-State-Debuts-US-Dollar-Stablecoin-On-Seven-Blockchains",
+      "pubDate": "2025-08-19T16:54:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Trump Jr.-Linked Thumzup Expands Into Dogecoin, Litecoin Mining With Dogehash Deal",
+      "link": "https://cryptopanic.com/news/litecoin/24363970/Trump-Jr-Linked-Thumzup-Expands-Into-Dogecoin-Litecoin-Mining-With-Dogehash-Deal",
+      "pubDate": "2025-08-19T16:30:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Polkadot launches capital markets division to court Wall Street",
+      "link": "https://cryptopanic.com/news/polkadot/24362963/Polkadot-launches-capital-markets-division-to-court-Wall-Street",
+      "pubDate": "2025-08-19T16:03:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "ICP Weakens as Selling Pressure Builds Near Critical Support",
+      "link": "https://cryptopanic.com/news/internet-computer/24363861/ICP-Weakens-as-Selling-Pressure-Builds-Near-Critical-Support",
+      "pubDate": "2025-08-19T16:01:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "XLM Plunges 2% Amid High-Volume Selling Pressure",
+      "link": "https://cryptopanic.com/news/stellar/24363382/XLM-Plunges-2-Amid-High-Volume-Selling-Pressure",
+      "pubDate": "2025-08-19T15:57:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Ethereum Outshining Bitcoin Again as Crucial Metric Flips Bullish",
+      "link": "https://cryptopanic.com/news/bitcoin/24362554/Ethereum-Outshining-Bitcoin-Again-as-Crucial-Metric-Flips-Bullish",
+      "pubDate": "2025-08-19T15:47:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Ethereum has jumped against Bitcoin in sustained push to reclaim its ATH",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ATH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Wyoming launches first state-backed stablecoin on seven blockchains",
+      "link": "https://cryptopanic.com/news/avalanche-2/24361988/Wyoming-launches-first-state-backed-stablecoin-on-seven-blockchains",
+      "pubDate": "2025-08-19T15:15:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "SkyBridge Capital Tokenizes $300 Million of Fund Assets on Avalanche",
+      "link": "https://cryptopanic.com/news/avalanche-2/24363278/SkyBridge-Capital-Tokenizes-300-Million-of-Fund-Assets-on-Avalanche",
+      "pubDate": "2025-08-19T15:05:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "XRP and Litecoin Rise as Pepeto Presale Leads the Pack as The Best Crypto to Buy Now",
+      "link": "https://cryptopanic.com/news/litecoin/24365295/XRP-and-Litecoin-Rise-as-Pepeto-Presale-Leads-the-Pack-as-The-Best-Crypto-to-Buy-Now",
+      "pubDate": "2025-08-19T15:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Ethereum Leads $3.75 Billion Crypto Inflows, XRP And Solana Join The Party",
+      "link": "https://cryptopanic.com/news/litecoin/24361002/Ethereum-Leads-375-Billion-Crypto-Inflows-XRP-And-Solana-Join-The-Party",
+      "pubDate": "2025-08-19T15:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Polkadot Targets Financial Institutions with a New Division Launch",
+      "link": "https://cryptopanic.com/news/polkadot/24362558/Polkadot-Targets-Financial-Institutions-with-a-New-Division-Launch",
+      "pubDate": "2025-08-19T14:46:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Top Crypto Coins 2025: BlockDAG, Stellar, Ondo Finance & Hyperliquid",
+      "link": "https://cryptopanic.com/news/stellar/24362486/Top-Crypto-Coins-2025-BlockDAG-Stellar-Ondo-Finance-Hyperliquid",
+      "pubDate": "2025-08-19T14:37:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "ONDO",
+        "HYPE"
+      ]
+    },
+    {
+      "title": "Top 3 Crypto's to Purchase Today Before Crypto Market Hit $4.5T Market Cap - Pepe Coin, Uniswap or Coldware",
+      "link": "https://cryptopanic.com/news/uniswap/24363883/Top-3-Cryptos-to-Purchase-Today-Before-Crypto-Market-Hit-45T-Market-Cap-Pepe-Coin-Uniswap-or-Coldware",
+      "pubDate": "2025-08-19T14:25:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "PEPE"
+      ]
+    },
+    {
+      "title": "Altcoins update: Polkadot launches institutional arm, Robinhood lists SUI",
+      "link": "https://cryptopanic.com/news/polkadot/24360645/Altcoins-update-Polkadot-launches-institutional-arm-Robinhood-lists-SUI",
+      "pubDate": "2025-08-19T14:14:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "LINK",
+        "SUI"
+      ]
+    },
+    {
+      "title": "SkyBridge Capital to Tokenize $300 Million in Assets on Avalanche Blockchain",
+      "link": "https://cryptopanic.com/news/avalanche-2/24361301/SkyBridge-Capital-to-Tokenize-300-Million-in-Assets-on-Avalanche-Blockchain",
+      "pubDate": "2025-08-19T14:10:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "SharpLink purchases $667M in Ether at near record prices",
+      "link": "https://cryptopanic.com/news/ethereum/24358862/SharpLink-purchases-667M-in-Ether-at-near-record-prices",
+      "pubDate": "2025-08-19T14:02:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "SharpLink bought $667 million in Ether at near-record highs, lifting its holdings to $3. 2 billion as institutional ETH accumulation accelerates.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Trump Jr.-backed Thumzup crypto treasury company pursues all stock deal with Dogecoin and Litecoin miner",
+      "link": "https://cryptopanic.com/news/litecoin/24358686/Trump-Jr-backed-Thumzup-crypto-treasury-company-pursues-all-stock-deal-with-Dogecoin-and-Litecoin-miner",
+      "pubDate": "2025-08-19T13:55:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Analyst Warns XLM Price Today Could Be Heading for a Breakdown",
+      "link": "https://cryptopanic.com/news/stellar/24360960/Analyst-Warns-XLM-Price-Today-Could-Be-Heading-for-a-Breakdown",
+      "pubDate": "2025-08-19T13:49:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Stablecoin yen giapponese: JPYC launches 1:1 on Ethereum, Avalanche, and Polygon",
+      "link": "https://cryptopanic.com/news/avalanche-2/24362484/Stablecoin-yen-giapponese-JPYC-launches-11-on-Ethereum-Avalanche-and-Polygon",
+      "pubDate": "2025-08-19T13:29:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AVAX",
+        "Z"
+      ]
+    },
+    {
+      "title": "Wyoming becomes first U.S. state to launch government-issued stablecoin",
+      "link": "https://cryptopanic.com/news/avalanche-2/24358035/Wyoming-becomes-first-US-state-to-launch-government-issued-stablecoin",
+      "pubDate": "2025-08-19T13:26:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Wyoming’s Frontier stable token (FRNT) launches on Avalanche, becoming the first state-issued stablecoin",
+      "link": "https://cryptopanic.com/news/avalanche-2/24358004/Wyomings-Frontier-stable-token-FRNT-launches-on-Avalanche-becoming-the-first-state-issued-stablecoin",
+      "pubDate": "2025-08-19T13:25:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Institutional Pulse: XRP, Stellar & Algorand Touted to Power Tomorrow’s Government Liquidity",
+      "link": "https://cryptopanic.com/news/stellar/24356913/Institutional-Pulse-XRP-Stellar-Algorand-Touted-to-Power-Tomorrows-Government-Liquidity",
+      "pubDate": "2025-08-19T13:10:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XLM",
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Circle Gateway Launches on Mainnet for Cross-Chain Liquidity",
+      "link": "https://cryptopanic.com/news/avalanche-2/24358330/Circle-Gateway-Launches-on-Mainnet-for-Cross-Chain-Liquidity",
+      "pubDate": "2025-08-19T13:07:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDC",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Crypto’s Biggest Names Launch Tax-Exempt Nonprofit ‘Education’ in DC — But There’s a Catch",
+      "link": "https://cryptopanic.com/news/uniswap/24356183/Cryptos-Biggest-Names-Launch-Tax-Exempt-Nonprofit-Education-in-DC-But-Theres-a-Catch",
+      "pubDate": "2025-08-19T13:01:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Is Stellar About to Explode or Collapse? All Eyes on $0.40 as Major Upgrade Approaches",
+      "link": "https://cryptopanic.com/news/stellar/24355930/Is-Stellar-About-to-Explode-or-Collapse-All-Eyes-on-040-as-Major-Upgrade-Approaches",
+      "pubDate": "2025-08-19T12:57:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "OKB Price Prediction: How Far Can OKB Price Go After 177% Weekly Spike?",
+      "link": "https://cryptopanic.com/news/okb/24355931/OKB-Price-Prediction-How-Far-Can-OKB-Price-Go-After-177-Weekly-Spike",
+      "pubDate": "2025-08-19T12:57:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "OKB"
+      ]
+    },
+    {
+      "title": "Polkadot Launches Institutional Division to Bridge Traditional Finance and Web3",
+      "link": "https://cryptopanic.com/news/polkadot/24358322/Polkadot-Launches-Institutional-Division-to-Bridge-Traditional-Finance-and-Web3",
+      "pubDate": "2025-08-19T12:13:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "RWA"
+      ]
+    },
+    {
+      "title": "Polkadot Launches Institutional Arm to Bridge Wall Street and Web3",
+      "link": "https://cryptopanic.com/news/polkadot/24355886/Polkadot-Launches-Institutional-Arm-to-Bridge-Wall-Street-and-Web3",
+      "pubDate": "2025-08-19T12:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Wyoming's 'Frontier' Stablecoin Debuts on Ethereum, Solana and Avalanche",
+      "link": "https://cryptopanic.com/news/avalanche-2/24353165/Wyomings-Frontier-Stablecoin-Debuts-on-Ethereum-Solana-and-Avalanche",
+      "pubDate": "2025-08-19T11:46:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "JPYC to Launch First Yen Stablecoin in Japan",
+      "link": "https://cryptopanic.com/news/avalanche-2/24353009/JPYC-to-Launch-First-Yen-Stablecoin-in-Japan",
+      "pubDate": "2025-08-19T11:30:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Coinbase, Uniswap Back American Innovation Project",
+      "link": "https://cryptopanic.com/news/uniswap/24355925/Coinbase-Uniswap-Back-American-Innovation-Project",
+      "pubDate": "2025-08-19T10:55:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Stellar Invests in UK-Based Archax to Expand Participation in the Tokenized RWA Space",
+      "link": "https://cryptopanic.com/news/stellar/24347169/Stellar-Invests-in-UK-Based-Archax-to-Expand-Participation-in-the-Tokenized-RWA-Space",
+      "pubDate": "2025-08-19T09:30:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "RWA"
+      ]
+    },
+    {
+      "title": "Bitcoin Price Settles at $115K After Trump-Zelenskyy Meeting, OKB Eyes New ATH: Market Watch",
+      "link": "https://cryptopanic.com/news/okb/24346330/Bitcoin-Price-Settles-at-115K-After-Trump-Zelenskyy-Meeting-OKB-Eyes-New-ATH-Market-Watch",
+      "pubDate": "2025-08-19T09:18:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "OKB"
+      ]
+    },
+    {
+      "title": "Nonprofit American Innovation Project backed by Coinbase, Uniswap, others launches to educate US lawmakers on crypto",
+      "link": "https://cryptopanic.com/news/uniswap/24344831/Nonprofit-American-Innovation-Project-backed-by-Coinbase-Uniswap-others-launches-to-educate-US-lawmakers-on-crypto",
+      "pubDate": "2025-08-19T09:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "GAL",
+        "A"
+      ]
+    },
+    {
+      "title": "Stellar poised for recovery amid Paxos' PYUSD NOC, Archax partnership",
+      "link": "https://cryptopanic.com/news/stellar/24353080/Stellar-poised-for-recovery-amid-Paxos-PYUSD-NOC-Archax-partnership",
+      "pubDate": "2025-08-19T08:41:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "PYUSD"
+      ]
+    },
+    {
+      "title": "Stellar (XLM) Stumbles: Bearish Crossover and Weak Sentiment Put $0.39 Support to the Test",
+      "link": "https://cryptopanic.com/news/stellar/24344640/Stellar-XLM-Stumbles-Bearish-Crossover-and-Weak-Sentiment-Put-039-Support-to-the-Test",
+      "pubDate": "2025-08-19T08:34:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "HTX Kicks Off “Weekly Check-in & Win” Event with Exciting Prizes, Including the New Apple Watch Series 10",
+      "link": "https://cryptopanic.com/news/huobi-token/24347585/HTX-Kicks-Off-Weekly-Check-in-Win-Event-with-Exciting-Prizes-Including-the-New-Apple-Watch-Series-10",
+      "pubDate": "2025-08-19T08:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "HT"
+      ]
+    },
+    {
+      "title": "Avalanche Network Sees Big Growth Even as Price Pulls Back: Why You Should be Bullish on AVAX",
+      "link": "https://cryptopanic.com/news/avalanche-2/24343054/Avalanche-Network-Sees-Big-Growth-Even-as-Price-Pulls-Back-Why-You-Should-be-Bullish-on-AVAX",
+      "pubDate": "2025-08-19T08:10:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "North Korea’s Lazarus Group Tied to $23M UK Crypto Heist on Lykke",
+      "link": "https://cryptopanic.com/news/dai/24341891/North-Koreas-Lazarus-Group-Tied-to-23M-UK-Crypto-Heist-on-Lykke",
+      "pubDate": "2025-08-19T07:31:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DAI"
+      ]
+    },
+    {
+      "title": "Is Aave on the Verge of Cracking Under Its Own DeFi Power?",
+      "link": "https://cryptopanic.com/news/aave/24344723/Is-Aave-on-the-Verge-of-Cracking-Under-Its-Own-DeFi-Power",
+      "pubDate": "2025-08-19T07:24:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Avalanche Price Forecast: AVAX slips below $24 as momentum turns bearish",
+      "link": "https://cryptopanic.com/news/avalanche-2/24353079/Avalanche-Price-Forecast-AVAX-slips-below-24-as-momentum-turns-bearish",
+      "pubDate": "2025-08-19T06:12:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Why is Crypto Market Down Today? Bitcoin, Ethereum, XRP News, Litecoin Price and More",
+      "link": "https://cryptopanic.com/news/litecoin/24339810/Why-is-Crypto-Market-Down-Today-Bitcoin-Ethereum-XRP-News-Litecoin-Price-and-More",
+      "pubDate": "2025-08-19T05:48:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "XMR Price Climbs Amid Doubts Over Qubic’s 51% Attack Success Claim",
+      "link": "https://cryptopanic.com/news/monero/24337689/XMR-Price-Climbs-Amid-Doubts-Over-Qubics-51-Attack-Success-Claim",
+      "pubDate": "2025-08-19T05:30:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "SEC Pushes Back Decision on Seven Crypto ETFs to October 2025",
+      "link": "https://cryptopanic.com/news/litecoin/24339769/SEC-Pushes-Back-Decision-on-Seven-Crypto-ETFs-to-October-2025",
+      "pubDate": "2025-08-19T05:29:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Qubic to target Dogecoin after 51% attack on Monero – Should you be worried?",
+      "link": "https://cryptopanic.com/news/monero/24336414/Qubic-to-target-Dogecoin-after-51-attack-on-Monero-Should-you-be-worried",
+      "pubDate": "2025-08-19T04:37:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "XMR"
+      ]
+    },
+    {
+      "title": "Crypto Gainers Today: Altcoins AB, OKB, POL rise in a soft market",
+      "link": "https://cryptopanic.com/news/okb/24353074/Crypto-Gainers-Today-Altcoins-AB-OKB-POL-rise-in-a-soft-market",
+      "pubDate": "2025-08-19T03:42:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OKB",
+        "POL",
+        "AB"
+      ]
+    },
+    {
+      "title": "JPYC Registers as Funds Transfer Operator for Yen Stablecoin Deployment",
+      "link": "https://cryptopanic.com/news/avalanche-2/24342420/JPYC-Registers-as-Funds-Transfer-Operator-for-Yen-Stablecoin-Deployment",
+      "pubDate": "2025-08-19T00:43:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AVAX"
+      ]
+    }
+  ]
+}

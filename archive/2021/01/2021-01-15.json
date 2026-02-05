@@ -1,0 +1,436 @@
+{
+  "date": "2021-01-15",
+  "fetchedAt": "2026-02-05T07:27:06.905Z",
+  "articleCount": 28,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Kraken to halt XRP trading for U.S. users starting Jan. 29",
+      "link": "https://cryptopanic.com/news/ripple/11158046/Kraken-to-halt-XRP-trading-for-US-users-starting-Jan-29",
+      "pubDate": "2021-01-15T23:00:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "U.S. based Kraken users will be unable to trade XRP from Jan. 29 at 5 p.m. PT, according to a statement from the exchange.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Kraken to Halt XRP Trading for US Residents",
+      "link": "https://cryptopanic.com/news/ripple/11158028/Kraken-to-Halt-XRP-Trading-for-US-Residents",
+      "pubDate": "2021-01-15T22:45:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Clients residing outside the U.S. will be unaffected.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Ethereum is Looking “Ridiculously Bullish” as Analysts Eye a Move to All-Time Highs",
+      "link": "https://cryptopanic.com/news/chainlink/11157622/Ethereum-is-Looking-Ridiculously-Bullish-as-Analysts-Eye-a-Move-to-All-Time-Highs",
+      "pubDate": "2021-01-15T22:00:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Bitcoin has been facing some immense turbulence as of late, but it has yet to have any grave impact on altcoins Most major altcoins have been decoupling from the benchmark cryptocurrency, with ETH gaining against its BTC pair while Chainlink sees fresh all-time highs This momentum is being slowed slightly by Bitcoin’s present weakness, but it remains unclear as to whether this will reverse the...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Mark Cuban, Raoul Pal Talk DeFi, Target $20,000 Ethereum",
+      "link": "https://cryptopanic.com/news/11156399/Mark-Cuban-Raoul-Pal-Talk-DeFi-Target-20000-Ethereum",
+      "pubDate": "2021-01-15T19:49:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Mark Cuban and Raoul Pal have shared their predictions on the future of the crypto space. Pal suggested that he thinks Ether could hit as high as $20,000. Ethereum Drawing Institutional Interest Mark Cuban and Raoul Pal are the latest big players to share their thoughts on crypto’s future. The renowned investors engaged in discussions on Twitter this week, discussing Bitcoin,...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "How are Chainlink’s whales propping up its price?",
+      "link": "https://cryptopanic.com/news/chainlink/11156308/How-are-Chainlinks-whales-propping-up-its-price",
+      "pubDate": "2021-01-15T19:30:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Chainlink was one of the market’s star performers as 2020 came to a close. In fact, it would seem that its bullish momentum on the price charts has continued into 2021 as well, with LINK rising on the charts by over 18 percent in the last 7 days alone. With a trading price of over […]",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Chainlink Hits All-Time High Price, Crashes 20% 3 Hours Later",
+      "link": "https://cryptopanic.com/news/11155950/Chainlink-Hits-All-Time-High-Price-Crashes-20-3-Hours-Later",
+      "pubDate": "2021-01-15T18:49:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "LINK Marines stormed the crypto market today, taking Chainlink’s price to new heights. But their march could not be sustained.",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Yearn Finance proposal to mint 1000 YFI tokens to reward core devs faces opposition",
+      "link": "https://cryptopanic.com/news/11155672/Yearn-Finance-proposal-to-mint-1000-YFI-tokens-to-reward-core-devs-faces-opposition",
+      "pubDate": "2021-01-15T18:30:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "YFI"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Don't miss the @bizcasualpod episode with @tyler &amp; @cameron dropping on Monday, 1/18 to find out what our founders…",
+      "link": "https://cryptopanic.com/news/11155255/Dont-miss-the-bizcasualpod-episode-with-tyler-amp-cameron-dropping-on-Monday-118-to-find-out-what-our-founders",
+      "pubDate": "2021-01-15T18:04:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    },
+    {
+      "title": "EOS Might Be Highly Undervalued Due to Amount of BTC It Holds, Says Arca CIO",
+      "link": "https://cryptopanic.com/news/11154358/EOS-Might-Be-Highly-Undervalued-Due-to-Amount-of-BTC-It-Holds-Says-Arca-CIO",
+      "pubDate": "2021-01-15T16:29:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Jeff Dorman, CIO of investment management firm Arca, has revealed he believes it may be possible to get exposure to bitcoin at a 47% discount to current prices, by investing in an altcoin he believes might “be the best risk/reward in digital assets.” In a tweet thread, Dorman first pointed out that EOS has been […]",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We are excited to announce the next MTO project @RaiFinance. Participants will have the chance to get $197,500 wort…",
+      "link": "https://cryptopanic.com/news/11153611/We-are-excited-to-announce-the-next-MTO-project-RaiFinance-Participants-will-have-the-chance-to-get-197500-wort",
+      "pubDate": "2021-01-15T15:50:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STPT"
+      ]
+    },
+    {
+      "title": "Chainlink Hits All-Time Highs, LINK Bulls Enter Price Discovery",
+      "link": "https://cryptopanic.com/news/chainlink/11153408/Chainlink-Hits-All-Time-Highs-LINK-Bulls-Enter-Price-Discovery",
+      "pubDate": "2021-01-15T15:36:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Chainlink has just hit all-time highs and entered price discovery mode. Despite the bullish move, a particular technical indicator suggests that LINK’s new uptrend has just begun. Chainlink Rises to New All-Time Highs Chainlink made headlines following LINK’s impressive price action over the past three days. As buying pressure skyrocketed, the decentralized oracles token saw its...",
+      "currencies": [
+        "ETH",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Chainlink (LINK) Just Hit New All-Time High, and It Didn't Need David Portnoy This Time Around",
+      "link": "https://cryptopanic.com/news/chainlink/11152747/Chainlink-LINK-Just-Hit-New-All-Time-High-and-It-Didnt-Need-David-Portnoy-This-Time-Around",
+      "pubDate": "2021-01-15T14:48:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Chainlink is defying \"bubble\" skeptics with its new all-time high",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "50,000 XWC Waiving at You! @ATokenOfficial",
+      "link": "https://cryptopanic.com/news/11152495/50000-XWC-Waiving-at-You-ATokenOfficial",
+      "pubDate": "2021-01-15T14:32:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XWC"
+      ]
+    },
+    {
+      "title": "50,000 XWC Waiving at You! @ ATokenOfficial",
+      "link": "https://cryptopanic.com/news/11152466/50000-XWC-Waiving-at-You-ATokenOfficial",
+      "pubDate": "2021-01-15T14:30:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XWC"
+      ]
+    },
+    {
+      "title": "Almost 100 Million XRP Shifted by Ripple, Bitfinex and Coinbase",
+      "link": "https://cryptopanic.com/news/ripple/11152511/Almost-100-Million-XRP-Shifted-by-Ripple-Bitfinex-and-Coinbase",
+      "pubDate": "2021-01-15T14:29:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Crypto tracker Whale Alert has reported that nearly 100 million XRP coins have been moved by Ripple and two top-tier cryptocurrency exchanges, Bitfinex and Coinbase",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "🦜 pTokens open up access to broader #blockchain ecosystems and make the process of minting a pTokenised asset incre…",
+      "link": "https://cryptopanic.com/news/11152157/pTokens-open-up-access-to-broader-blockchain-ecosystems-and-make-the-process-of-minting-a-pTokenised-asset-incre",
+      "pubDate": "2021-01-15T14:05:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PLTC"
+      ]
+    },
+    {
+      "title": "LINK Skyrockets 30% To Break ATH Above $20: Chainlink Price Analysis",
+      "link": "https://cryptopanic.com/news/chainlink/11152013/LINK-Skyrockets-30-To-Break-ATH-Above-20-Chainlink-Price-Analysis",
+      "pubDate": "2021-01-15T13:47:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Chainlink saw a strong 30% price surge today and created a new ATH at $22.82. Against Bitcoin, LINK rebounded from 40,000 SAT and is now trading above the April 2020 highs.",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Neutrino to integrate Chainlink Proof of Reserve oracle",
+      "link": "https://cryptopanic.com/news/chainlink/11151564/Neutrino-to-integrate-Chainlink-Proof-of-Reserve-oracle",
+      "pubDate": "2021-01-15T13:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Neutrino protocol is the latest project to announce an integration with the Chainlink network, an update that comes on the back of a long line of developments in the latter’s ecosystem. This integration will help Neutrino transfer its stablecoin Neutrino Dollar [USDN], along with other tokens, between the two blockchains. Chainlink’s Proof of Reserve oracle […]",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polkadot’s DOT is now the fourth largest coin in terms of market cap, surpassing XRP",
+      "link": "https://cryptopanic.com/news/polkadot/11151099/Polkadots-DOT-is-now-the-fourth-largest-coin-in-terms-of-market-cap-surpassing-XRP",
+      "pubDate": "2021-01-15T12:15:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Polkadot's DOT token has become the fourth-largest coin in terms of market capitalization, surpassing the embattled XRP.",
+      "currencies": [
+        "XRP",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "What is a #limit_order? Basically, a limit order is a #sale or #purchase order that is based on the #order_book a…",
+      "link": "https://cryptopanic.com/news/11150840/What-is-a-limit_order-Basically-a-limit-order-is-a-sale-or-purchase-order-that-is-based-on-the-order_book-a",
+      "pubDate": "2021-01-15T11:50:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "DeFi Boom Before Dawn -- dYdX＆XWC Livestreaming--AMA Review",
+      "link": "https://cryptopanic.com/news/11150245/DeFi-Boom-Before-Dawn-dYdXXWC-Livestreaming-AMA-Review",
+      "pubDate": "2021-01-15T10:14:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "XWC"
+      ]
+    },
+    {
+      "title": "Yearn Finance (YFI) is 700x Scarcer than Bitcoin – Crypto Analyst",
+      "link": "https://cryptopanic.com/news/11149938/Yearn-Finance-YFI-is-700x-Scarcer-than-Bitcoin-Crypto-Analyst",
+      "pubDate": "2021-01-15T09:16:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Quick take: The supply of Yearn Finance (YFI) is 700 times lower than that of Bitcoin Like Bitcoin, YFI is valued at the $30k area with a current value of $32,300 The project has lately merged or partnered with several DeFi projects Yearn Finance is a DeFi project to watch moving forward The digital asset of Yearn Finance (YFI) is scarcer than Bitcoin. This fact was observed and highlighted by...",
+      "currencies": [
+        "BTC",
+        "YFI"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @Lition_Block: To carry on the initial goal to blend the public #blockchain &amp; the private blockchain use-cases, we would like to update…",
+      "link": "https://cryptopanic.com/news/11149873/RT-Lition_Block-To-carry-on-the-initial-goal-to-blend-the-public-blockchain-amp-the-private-blockchain-use-cases-we-would-like-to-update",
+      "pubDate": "2021-01-15T09:09:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "Bitcoin Stalls Below $39K As Polkadot Surges to $15 And Becomes 4th Largest Crypto (Market Watch)",
+      "link": "https://cryptopanic.com/news/polkadot/11149754/Bitcoin-Stalls-Below-39K-As-Polkadot-Surges-to-15-And-Becomes-4th-Largest-Crypto-Market-Watch",
+      "pubDate": "2021-01-15T08:46:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "While BTC remains below $39,000, Polkadot has stolen the show with a massive double-digit surge and a new all-time high of nearly $15.",
+      "currencies": [
+        "BTC",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DOT flip: Polkadot overtakes XRP to become the fourth largest cryptocurrency",
+      "link": "https://cryptopanic.com/news/polkadot/11147647/DOT-flip-Polkadot-overtakes-XRP-to-become-the-fourth-largest-cryptocurrency",
+      "pubDate": "2021-01-15T03:26:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "DOT is on fire today as it surges up the market cap charts to fourth spot.",
+      "currencies": [
+        "XRP",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Altcoins and Bitcoins moving in the same direction. Why? Will Bitcoin consolidation result in funds flowing to Altc…",
+      "link": "https://cryptopanic.com/news/11147569/Altcoins-and-Bitcoins-moving-in-the-same-direction-Why-Will-Bitcoin-consolidation-result-in-funds-flowing-to-Altc",
+      "pubDate": "2021-01-15T03:18:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Did you stake your $HYN to earn $RP? How many $RP did you receive from the airdrop?",
+      "link": "https://cryptopanic.com/news/11147501/Did-you-stake-your-HYN-to-earn-RP-How-many-RP-did-you-receive-from-the-airdrop",
+      "pubDate": "2021-01-15T03:08:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "The $pETH on $EOS liquidity program launched with @DefiboxOfficial ends on January 20, 2021, with 12100 $PNT bein…",
+      "link": "https://cryptopanic.com/news/11147127/The-pETH-on-EOS-liquidity-program-launched-with-DefiboxOfficial-ends-on-January-20-2021-with-12100-PNT-bein",
+      "pubDate": "2021-01-15T02:10:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "EOS",
+        "PLTC"
+      ]
+    }
+  ]
+}

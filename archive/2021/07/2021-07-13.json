@@ -1,0 +1,481 @@
+{
+  "date": "2021-07-13",
+  "fetchedAt": "2026-02-05T07:27:06.515Z",
+  "articleCount": 32,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bram has a new blog post explaining a vision for DeFi in Chia - @bramcohen",
+      "link": "https://cryptopanic.com/news/12318409/Bram-has-a-new-blog-post-explaining-a-vision-for-DeFi-in-Chia-bramcohen",
+      "pubDate": "2021-07-13T23:36:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "XCH"
+      ]
+    },
+    {
+      "title": "Baby Doge Plunges 40% As Hype Dies Down",
+      "link": "https://cryptopanic.com/news/dogecoin/12316923/Baby-Doge-Plunges-40-As-Hype-Dies-Down",
+      "pubDate": "2021-07-13T23:00:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Baby Doge, a precocious meme coin spawn off from Dogecoin, has seen a 40% price loss in just a week. The coin which came into prominence after the Elon Musk tweet has now seen massive price dips as the hype dies down. The price of the coin has continuously since it peaked back at the […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @RichardHeartWin: Like if you want me to do a livestream within the next hour.",
+      "link": "https://cryptopanic.com/news/12319342/RT-RichardHeartWin-Like-if-you-want-me-to-do-a-livestream-within-the-next-hour",
+      "pubDate": "2021-07-13T22:36:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "Bulls largely absent as Bitcoin price slips to the bottom of its range near $32K",
+      "link": "https://cryptopanic.com/news/near/12316832/Bulls-largely-absent-as-Bitcoin-price-slips-to-the-bottom-of-its-range-near-32K",
+      "pubDate": "2021-07-13T22:11:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Traders appear to be sitting on their hands even as Bitcoin price drops closer to a critical support level at $32,000.",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "yahoo! finance interviews creator of Bitcoin Cash",
+      "link": "https://cryptopanic.com/news/ecash/12322045/yahoo-finance-interviews-creator-of-Bitcoin-Cash",
+      "pubDate": "2021-07-13T21:53:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH",
+        "XEC"
+      ]
+    },
+    {
+      "title": "Uniswap takes next step toward adopting Layer 2 tech with alpha launch on Optimism",
+      "link": "https://cryptopanic.com/news/12316548/Uniswap-takes-next-step-toward-adopting-Layer-2-tech-with-alpha-launch-on-Optimism",
+      "pubDate": "2021-07-13T20:12:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Uniswap said Tuesday that it is moving one step closer to bringing the popular decentralized exchange onto the layer-two protocol known as Optimistic Ethereum. The post Uniswap takes next step toward adopting Layer 2 tech with alpha launch on Optimism appeared first on The Block.",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Our team has been working with validators to resolve a memory issue with our validator's servers, we are rolling ba…",
+      "link": "https://cryptopanic.com/news/12317972/Our-team-has-been-working-with-validators-to-resolve-a-memory-issue-with-our-validators-servers-we-are-rolling-ba",
+      "pubDate": "2021-07-13T19:15:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "RT @nknX_org: In ONE HOUR NKNx will go down for an update to version 3.0. Make sure your account is migrated - if you didn't do it yet plea…",
+      "link": "https://cryptopanic.com/news/12320225/RT-nknX_org-In-ONE-HOUR-NKNx-will-go-down-for-an-update-to-version-30-Make-sure-your-account-is-migrated-if-you-didnt-do-it-yet-plea",
+      "pubDate": "2021-07-13T18:47:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ONE",
+        "NKN"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: So far I've seen a fake pulse telegram group and a fake website... I truly despise these scum. Here's a pic of some of…",
+      "link": "https://cryptopanic.com/news/12319343/RT-RichardHeartWin-So-far-Ive-seen-a-fake-pulse-telegram-group-and-a-fake-website-I-truly-despise-these-scum-Heres-a-pic-of-some-of",
+      "pubDate": "2021-07-13T18:26:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "Coinbase Wallet Starts Offering Support for Polygon Network",
+      "link": "https://cryptopanic.com/news/matic-network/12316200/Coinbase-Wallet-Starts-Offering-Support-for-Polygon-Network",
+      "pubDate": "2021-07-13T17:54:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Coinbase is diving deeper into DeFi by integrating Polygon into its non-custodial wallet",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Uniswap Grantees Slammed for Dumping $10M in UNI",
+      "link": "https://cryptopanic.com/news/uniswap/12316166/Uniswap-Grantees-Slammed-for-Dumping-10M-in-UNI",
+      "pubDate": "2021-07-13T17:42:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "-",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "PancakeSwap Of Polygon? DinoSwap Raises $4.7m From Top DeFi Funds And MATIC Founder",
+      "link": "https://cryptopanic.com/news/matic-network/12316095/PancakeSwap-Of-Polygon-DinoSwap-Raises-47m-From-Top-DeFi-Funds-And-MATIC-Founder",
+      "pubDate": "2021-07-13T17:16:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "DinoSwap, which is positioning to become the next PancakeSwap but on Polygon (MATIC), raised $4,7 million from leading DeFi funds.",
+      "currencies": [
+        "MATIC",
+        "CAKE"
+      ],
+      "votes": {
+        "positive": 44,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Here is our second installment on #EnergyPills, our way of keeping the community informed about general market stat…",
+      "link": "https://cryptopanic.com/news/12318844/Here-is-our-second-installment-on-EnergyPills-our-way-of-keeping-the-community-informed-about-general-market-stat",
+      "pubDate": "2021-07-13T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "Asia’s Liquid Exchange Adds USDC on Stellar as Global Stablecoin Demand Jumps",
+      "link": "https://cryptopanic.com/news/12315798/Asias-Liquid-Exchange-Adds-USDC-on-Stellar-as-Global-Stablecoin-Demand-Jumps",
+      "pubDate": "2021-07-13T15:35:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "During Q1 2021, $869 billion in stablecoin transactions occurred globally, making it the category with the highest transaction volume and demand during that time frame, data from Chainalysis showed",
+      "currencies": [
+        "USDC",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "To our wonderful Reef Finance  community, before the public mainnet launch, we took time to compile a Reef Chain…",
+      "link": "https://cryptopanic.com/news/12320879/To-our-wonderful-Reef-Finance-community-before-the-public-mainnet-launch-we-took-time-to-compile-a-Reef-Chain",
+      "pubDate": "2021-07-13T15:29:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ]
+    },
+    {
+      "title": "Mark your calendars to get the latest RIF updates from @anarancio! 🧑‍",
+      "link": "https://cryptopanic.com/news/12320830/Mark-your-calendars-to-get-the-latest-RIF-updates-from-anarancio",
+      "pubDate": "2021-07-13T14:52:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RIF"
+      ]
+    },
+    {
+      "title": "Elon Musk-Backed Dogecoin Spearheads $30 Billion Meme-Coin Market",
+      "link": "https://cryptopanic.com/news/dogecoin/12315568/Elon-Musk-Backed-Dogecoin-Spearheads-30-Billion-Meme-Coin-Market",
+      "pubDate": "2021-07-13T14:21:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin, which shocked many after attaining a market capitalization of over $50 billion equaling with Barclays Bank, is still maintaining its position as a pilot to many other meme coins which together have a market capitalization of over $31 billion according to CoinMarketCap data. With a market valuation of over $26 billion, DOGE holds a […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Dogecoin Down 36% Over Past Month In Ongoing Slump",
+      "link": "https://cryptopanic.com/news/dogecoin/12315483/Dogecoin-Down-36-Over-Past-Month-In-Ongoing-Slump",
+      "pubDate": "2021-07-13T14:08:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "One of the most popular meme coins during this market’s latest bull run has fallen on hard times, plunging over 36% in the past month.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @ErmanTjiputra:  Thank you @mogulofficial_ and @James_Pratt7 for an engaging and thought-provoking discussion over “Synergies between #…",
+      "link": "https://cryptopanic.com/news/12317616/RT-ErmanTjiputra-Thank-you-mogulofficial_-and-James_Pratt7-for-an-engaging-and-thought-provoking-discussion-over-Synergies-between?mtm_campaign=API-OFA",
+      "pubDate": "2021-07-13T14:04:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AIOZ"
+      ]
+    },
+    {
+      "title": "Parachains Gain Liftoff as Moonriver Makes Kusama Debut",
+      "link": "https://cryptopanic.com/news/polkadot/12314978/Parachains-Gain-Liftoff-as-Moonriver-Makes-Kusama-Debut",
+      "pubDate": "2021-07-13T11:30:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Polkadot is inching closer to primetime following the commencement of parachain auctions on Kusama. Kusama is the sister network of Polkadot, serving as a testbed where much of the innovation is unfolding. Similarly, Moonbeam has its own sister that serves as its own Kusama analog: Moonriver. This week, sister network Moonriver completed the first part […]",
+      "currencies": [
+        "DOT",
+        "KSM"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BandChain is currently under maintenance as of block #7486289 to upgrade from Phase 1 (GuanYu) to Phase 2 (Laozi)…",
+      "link": "https://cryptopanic.com/news/12317973/BandChain-is-currently-under-maintenance-as-of-block-7486289-to-upgrade-from-Phase-1-GuanYu-to-Phase-2-Laozi",
+      "pubDate": "2021-07-13T11:02:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "Ethereum DeFi Ecosystem Has Hit 3 Million Users",
+      "link": "https://cryptopanic.com/news/uniswap/12314848/Ethereum-DeFi-Ecosystem-Has-Hit-3-Million-Users",
+      "pubDate": "2021-07-13T10:45:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "-",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano: 14-Year-Old Asks for $ADA Allowance, Nami Wallet, ADA/BTC Price Action",
+      "link": "https://cryptopanic.com/news/12314799/Cardano-14-Year-Old-Asks-for-ADA-Allowance-Nami-Wallet-ADABTC-Price-Action",
+      "pubDate": "2021-07-13T10:19:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "This article looks at the latest news regarding Cardano and its ecosystem as of 13 July 2021. Yesterday, the operator of the NEO stake pool (which was launched in mid April and is based in the Netherlands) revealed that their 14 year old son had written a note requesting that his allowance be paid in […]",
+      "currencies": [
+        "ADA",
+        "NEO"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "IOTA's NFT Marketplace Goes Live in Testnet: What Has Been Achieved So Far?",
+      "link": "https://cryptopanic.com/news/12314766/IOTAs-NFT-Marketplace-Goes-Live-in-Testnet-What-Has-Been-Achieved-So-Far",
+      "pubDate": "2021-07-13T10:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "First-ever market for digital collectibles has released its MVP on IOTA DLT",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Glitzkoin CEO confirms that, he supports all Altcoins and believes that they can make an impact. Reiterates the 30/…",
+      "link": "https://cryptopanic.com/news/12319260/Glitzkoin-CEO-confirms-that-he-supports-all-Altcoins-and-believes-that-they-can-make-an-impact-Reiterates-the-30",
+      "pubDate": "2021-07-13T08:52:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "RT @MoralisWeb3: .@InsureToken is using Moralis to manage user profiles across chains, get historical and real-time on chain transactions,…",
+      "link": "https://cryptopanic.com/news/12314465/RT-MoralisWeb3-InsureToken-is-using-Moralis-to-manage-user-profiles-across-chains-get-historical-and-real-time-on-chain-transactions",
+      "pubDate": "2021-07-13T07:14:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SURE"
+      ]
+    },
+    {
+      "title": "Bitcoin outflows near $7M in ‘quietest’ crypto trading week for nine months",
+      "link": "https://cryptopanic.com/news/near/12312960/Bitcoin-outflows-near-7M-in-quietest-crypto-trading-week-for-nine-months",
+      "pubDate": "2021-07-13T07:02:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Cryptocurrency investment products saw a total outflow of US$4 million last week in the “quietest trading week since October 2020,” according to digital asset investment firm CoinShares’ weekly digital asset fund flows report. Fast facts Cryptocurrency markets remained soft, with Bitcoin seeing US$6.9 million of outflows. Trading volumes in investment products totaled just US$1.58bn for […]",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "RT @buyaladdinapp: 🤩 The #Buyaladdin's 100 x 100 x 100 #ABBC Event continues! Join now and you can win awesome rewards. To join, download t…",
+      "link": "https://cryptopanic.com/news/12317712/RT-buyaladdinapp-The-Buyaladdins-100-x-100-x-100-ABBC-Event-continues-Join-now-and-you-can-win-awesome-rewards-To-join-download-t",
+      "pubDate": "2021-07-13T06:30:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ABBC"
+      ]
+    },
+    {
+      "title": "RT @ommfinance: To help Omm become the leading cross-chain money market, we’ve formed a strategic partnership with some large investment fu…",
+      "link": "https://cryptopanic.com/news/12317977/RT-ommfinance-To-help-Omm-become-the-leading-cross-chain-money-market-weve-formed-a-strategic-partnership-with-some-large-investment-fu",
+      "pubDate": "2021-07-13T06:00:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "Hop Protocol launches USDC bridge between Ethereum, Polygon, and xDai",
+      "link": "https://cryptopanic.com/news/12310111/Hop-Protocol-launches-USDC-bridge-between-Ethereum-Polygon-and-xDai",
+      "pubDate": "2021-07-13T04:03:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Hop plans to roll out support for additional crypto assets and layer-two networks in the coming weeks.",
+      "currencies": [
+        "USDC",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Analyst Predicts All-Time Highs for Two Altcoins, Maps Out Path Ahead for Cardano, Polkadot and Chainlink",
+      "link": "https://cryptopanic.com/news/12310157/Crypto-Analyst-Predicts-All-Time-Highs-for-Two-Altcoins-Maps-Out-Path-Ahead-for-Cardano-Polkadot-and-Chainlink",
+      "pubDate": "2021-07-13T03:58:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "A prominent crypto strategist and trader is predicting new all-time highs for two low-cap altcoins as he outlines the potential paths ahead for Cardano, Polkadot and Chainlink. The pseudonymous crypto analyst known as Capo tells his 138,200 Twitter followers that he’s keeping a close watch on the price action of Phala Network (PHA), a privacy-preserving […]",
+      "currencies": [
+        "DOT",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Here comes the rewards to LP stakers! The pool will be opening within 2.5 hours. Please join LP with WETH-CBK LP to…",
+      "link": "https://cryptopanic.com/news/12311048/Here-comes-the-rewards-to-LP-stakers-The-pool-will-be-opening-within-25-hours-Please-join-LP-with-WETH-CBK-LP-to?mtm_campaign=API-OFA",
+      "pubDate": "2021-07-13T02:26:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "CBK"
+      ]
+    }
+  ]
+}

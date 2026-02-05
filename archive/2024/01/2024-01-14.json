@@ -1,0 +1,268 @@
+{
+  "date": "2024-01-14",
+  "fetchedAt": "2026-02-05T07:27:08.080Z",
+  "articleCount": 16,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin price crumbles after spot ETF approval, but ICP, TIA, MNT, SEI and altcoins rebound",
+      "link": "https://cryptopanic.com/news/19175189/Bitcoin-price-crumbles-after-spot-ETF-approval-but-ICP-TIA-MNT-SEI-and-altcoins-rebound",
+      "pubDate": "2024-01-14T23:16:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ICP",
+        "SEI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Samson Mow believes Bitcoin will surge to $1 million ‘within days or weeks’ once supply crunch hits",
+      "link": "https://cryptopanic.com/news/19175112/Samson-Mow-believes-Bitcoin-will-surge-to-1-million-within-days-or-weeks-once-supply-crunch-hits",
+      "pubDate": "2024-01-14T22:11:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "JAN3 CEO and Bitcoin bull Samson Mow believes that Bitcoin will see a significant supply shock in the coming days that could potentially cause its price to surge to $1 million within a matter of ‘days or weeks.’ The forecast hinges on a perceived supply shock driven by demand from the recently approved Bitcoin ETFs […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "How To Buy, Sell, And Trade Tokens On The BSC Network",
+      "link": "https://cryptopanic.com/news/19175104/How-To-Buy-Sell-And-Trade-Tokens-On-The-BSC-Network",
+      "pubDate": "2024-01-14T22:00:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The captivating Binance Smart Chain (BSC) Network has morphed into a powerful force within the blockchain ecosystem, offering various benefits and opportunities for users and developers alike. Introduced by Binance, a top player in the global cryptocurrency exchange realm, BSC provides a robust and efficient infrastructure for decentralized applications (dApps) and digital asset transactions....",
+      "currencies": [
+        "ETH",
+        "BNB",
+        "SOL",
+        "CAKE",
+        "INJ",
+        "TIA",
+        "SEI"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP gets ditched by Hong Kong Virtual Asset Consortium",
+      "link": "https://cryptopanic.com/news/19175081/XRP-gets-ditched-by-Hong-Kong-Virtual-Asset-Consortium",
+      "pubDate": "2024-01-14T21:23:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The crypto world is never short of surprises, and the recent shuffle in the Hong Kong Virtual Asset Consortium’s (HKVAC) crypto indexes is a testament to the dynamic and often unpredictable nature of this digital economy. Ripple’s XRP, once a frontrunner in the global crypto race, finds itself edged out of the HKVAC’s top five […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 6
+      }
+    },
+    {
+      "title": "BREAKING: Whale Alert Claims More Than $100 Billion XRP Deposited on Cryptocurrency Exchanges – But What’s the Truth?",
+      "link": "https://cryptopanic.com/news/19175032/BREAKING-Whale-Alert-Claims-More-Than-100-Billion-XRP-Deposited-on-Cryptocurrency-Exchanges-But-Whats-the-Truth",
+      "pubDate": "2024-01-14T20:39:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "According to breaking information, it was claimed that a large amount of XRP tokens were sent to cryptocurrency exchanges Binance and Bitfinex. Continue Reading: BREAKING: Whale Alert Claims More Than $100 Billion XRP Deposited on Cryptocurrency Exchanges – But What’s the Truth?",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "How To Buy And Trade Tokens On The SEI Network",
+      "link": "https://cryptopanic.com/news/19174954/How-To-Buy-And-Trade-Tokens-On-The-SEI-Network",
+      "pubDate": "2024-01-14T19:00:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "SOL",
+        "FLOW",
+        "INJ",
+        "TIA",
+        "SEI"
+      ]
+    },
+    {
+      "title": "How Actions by Celsius, FTX, Alameda Research, and Rising Token Unlocks May Trigger Crypto Sell-Off",
+      "link": "https://cryptopanic.com/news/19174992/How-Actions-by-Celsius-FTX-Alameda-Research-and-Rising-Token-Unlocks-May-Trigger-Crypto-Sell-Off",
+      "pubDate": "2024-01-14T18:54:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "UNI",
+        "AXS",
+        "LDO",
+        "SEI"
+      ]
+    },
+    {
+      "title": "Brace for strong XRP correction; Here’s why",
+      "link": "https://cryptopanic.com/news/19174897/Brace-for-strong-XRP-correction-Heres-why",
+      "pubDate": "2024-01-14T17:32:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Although the general cryptocurrency space is experiencing a bearish trend, primarily attributed to the diminishing excitement surrounding the Bitcoin exchange-traded … Continue reading",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Top Tokens Under $0.5 with Great Growth Potential for Q1 2024",
+      "link": "https://cryptopanic.com/news/19174812/Top-Tokens-Under-05-with-Great-Growth-Potential-for-Q1-2024?mtm_campaign=API-OFA",
+      "pubDate": "2024-01-14T16:28:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "BONK",
+        "SEI",
+        "BLUR"
+      ]
+    },
+    {
+      "title": "13 Days’ Worth of BTC Disappears as BlackRock Drains Supply",
+      "link": "https://cryptopanic.com/news/19174783/13-Days-Worth-of-BTC-Disappears-as-BlackRock-Drains-Supply",
+      "pubDate": "2024-01-14T16:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "BlackRock's Bitcoin accumulation has sparked a seismic shift which has hinted at a possible supply squeeze within market dynamics.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Venture Capitalist Arthur Cheong Names Top Altcoin Picks, Including Synthetix (SNX), Aave and One Additional Crypto",
+      "link": "https://cryptopanic.com/news/19174741/Venture-Capitalist-Arthur-Cheong-Names-Top-Altcoin-Picks-Including-Synthetix-SNX-Aave-and-One-Additional-Crypto",
+      "pubDate": "2024-01-14T15:30:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "AXS"
+      ]
+    },
+    {
+      "title": "ENS price booms 40% in 7 days: Do predictions foretell a correction?",
+      "link": "https://cryptopanic.com/news/19174543/ENS-price-booms-40-in-7-days-Do-predictions-foretell-a-correction",
+      "pubDate": "2024-01-14T12:30:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ENS"
+      ]
+    },
+    {
+      "title": "Quant Is Declining But Will Probably Reach The $108 Low Again",
+      "link": "https://cryptopanic.com/news/19174693/Quant-Is-Declining-But-Will-Probably-Reach-The-108-Low-Again",
+      "pubDate": "2024-01-14T11:48:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QNT"
+      ]
+    },
+    {
+      "title": "Genesis Global Trading Exits New York Following Landmark Court Settlement",
+      "link": "https://cryptopanic.com/news/19174411/Genesis-Global-Trading-Exits-New-York-Following-Landmark-Court-Settlement",
+      "pubDate": "2024-01-14T10:26:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "BlackRock Drains 13 Days’ BTC Worth, Triggering Supply Crunch Worries",
+      "link": "https://cryptopanic.com/news/19174301/BlackRock-Drains-13-Days-BTC-Worth-Triggering-Supply-Crunch-Worries",
+      "pubDate": "2024-01-14T08:18:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "In a recent post on X, pro-Bitcoin advocate “InvestAnswers” unveiled a startling revelation about BlackRock’s substantial Bitcoin acquisitions, sparking concerns of a looming supply crunch. According to the post, BlackRock, one of the world’s largest asset management firms, absorbed a staggering 11,500 BTC from the market in just two days. Given that approximately 900 BTCs […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Hedera Network commits over $400 million in HBAR",
+      "link": "https://cryptopanic.com/news/19174087/Hedera-Network-commits-over-400-million-in-HBAR",
+      "pubDate": "2024-01-14T03:48:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Shaking up the crypto world with a bold move, the Hedera Global Governing Council has earmarked a colossal sum of 4.86 billion Hedera HBAR, translating to roughly $400 million, for pushing the boundaries of decentralized governance and network development. This isn’t just a financial strategy; it’s a statement – Hedera is here to play the […]",
+      "currencies": [
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,558 @@
+{
+  "date": "2025-06-12",
+  "fetchedAt": "2026-02-05T07:27:08.632Z",
+  "articleCount": 39,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Top 3 DEX Tokens to Watch for the Third Week of June 2025",
+      "link": "https://cryptopanic.com/news/uniswap/22521570/Top-3-DEX-Tokens-to-Watch-for-the-Third-Week-of-June-2025",
+      "pubDate": "2025-06-12T23:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "UNI",
+        "CAKE"
+      ]
+    },
+    {
+      "title": "4 Best Altcoins You Might Regret Missing This Month: BlockDAG, Polkadot, Chainlink, & Aptos!",
+      "link": "https://cryptopanic.com/news/polkadot/22519764/4-Best-Altcoins-You-Might-Regret-Missing-This-Month-BlockDAG-Polkadot-Chainlink-Aptos",
+      "pubDate": "2025-06-12T22:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "LINK",
+        "APT"
+      ]
+    },
+    {
+      "title": "Ethereum ETFs just beat Bitcoin’s inflows – Here’s why it matters",
+      "link": "https://cryptopanic.com/news/bitcoin/22517770/Ethereum-ETFs-just-beat-Bitcoins-inflows-Heres-why-it-matters",
+      "pubDate": "2025-06-12T20:00:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Have we entered the altseason territory sooner than we thought?",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Is BlockDAG the Best Crypto to Buy Today? How It Stacks Up Against Cosmos, Litecoin & Polkadot",
+      "link": "https://cryptopanic.com/news/polkadot/22517549/Is-BlockDAG-the-Best-Crypto-to-Buy-Today-How-It-Stacks-Up-Against-Cosmos-Litecoin-Polkadot",
+      "pubDate": "2025-06-12T20:00:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "LTC",
+        "STX"
+      ]
+    },
+    {
+      "title": "Web3 ai Poised for Long-Term Crypto Gains as XMR and Pi Rebound",
+      "link": "https://cryptopanic.com/news/monero/22516152/Web3-ai-Poised-for-Long-Term-Crypto-Gains-as-XMR-and-Pi-Rebound",
+      "pubDate": "2025-06-12T18:30:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "PI"
+      ]
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 13 June 2025: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/decentraland/22518598/Spell-Wallet-Daily-Puzzle-13-June-2025-Earn-Reward-of-1-MANA",
+      "pubDate": "2025-06-12T18:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "Litecoin Forecast Eyes $150, But Investors Flock to Ozak AI for Bigger 2025 Returns",
+      "link": "https://cryptopanic.com/news/litecoin/22516156/Litecoin-Forecast-Eyes-150-But-Investors-Flock-to-Ozak-AI-for-Bigger-2025-Returns",
+      "pubDate": "2025-06-12T18:29:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Building a Portfolio for Q3: Why Combining Chainlink (LINK) and POL (ex-MATIC) Could Be a Winning Strategy",
+      "link": "https://cryptopanic.com/news/polkadot/22515080/Building-a-Portfolio-for-Q3-Why-Combining-Chainlink-LINK-and-POL-ex-MATIC-Could-Be-a-Winning-Strategy",
+      "pubDate": "2025-06-12T18:03:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "LINK",
+        "POL"
+      ]
+    },
+    {
+      "title": "Top Crypto Platforms to Watch in 2025: BlockDAG, AVAX, NEAR, and XMR",
+      "link": "https://cryptopanic.com/news/near/22513464/Top-Crypto-Platforms-to-Watch-in-2025-BlockDAG-AVAX-NEAR-and-XMR",
+      "pubDate": "2025-06-12T17:00:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "NEAR",
+        "XMR"
+      ]
+    },
+    {
+      "title": "NEAR sees 46M users in Q2, yet its price struggles at $2.80 – Why?",
+      "link": "https://cryptopanic.com/news/near/22513351/NEAR-sees-46M-users-in-Q2-yet-its-price-struggles-at-280-Why",
+      "pubDate": "2025-06-12T16:30:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "NEAR"
+      ]
+    },
+    {
+      "title": "World Liberty promised AAVE lending six months ago — so where is it?",
+      "link": "https://cryptopanic.com/news/aave/22512671/World-Liberty-promised-AAVE-lending-six-months-ago-so-where-is-it",
+      "pubDate": "2025-06-12T16:09:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "BAY Miner Enables Users to Generate $18,500 Per Day Using XRP and DOGE",
+      "link": "https://cryptopanic.com/news/litecoin/22511962/BAY-Miner-Enables-Users-to-Generate-18500-Per-Day-Using-XRP-and-DOGE",
+      "pubDate": "2025-06-12T16:00:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "DOGE"
+      ]
+    },
+    {
+      "title": "Litecoin's (LTC) Bollinger Bands Paint Grim Rebound Outlook",
+      "link": "https://cryptopanic.com/news/litecoin/22511936/Litecoins-LTC-Bollinger-Bands-Paint-Grim-Rebound-Outlook",
+      "pubDate": "2025-06-12T15:51:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "These Altcoins to Go Live on Coinbase Today: How Will Prices React?",
+      "link": "https://cryptopanic.com/news/pancakeswap-token/22511891/These-Altcoins-to-Go-Live-on-Coinbase-Today-How-Will-Prices-React",
+      "pubDate": "2025-06-12T15:45:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CAKE",
+        "FARTCOIN"
+      ]
+    },
+    {
+      "title": "BlackRock accumulates $570M in Ethereum, signalling confidence in blockchain future",
+      "link": "https://cryptopanic.com/news/ethereum/22511710/BlackRock-accumulates-570M-in-Ethereum-signalling-confidence-in-blockchain-future",
+      "pubDate": "2025-06-12T15:27:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "12-6-2025 – Data unearthed by Arkham reveals that wallets linked to BlackRock have been steadily amassing Ethereum over the past fortnight. With a disciplined daily acquisition strategy, the financial giant has secured a staggering $570 million worth of the cryptocurrency, underscoring its growing appetite for digital assets. This bold move signals a deepening confidence in [.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "NEAR Protocol Plunges 9% as Volatility Spikes Despite User Growth",
+      "link": "https://cryptopanic.com/news/near/22511948/NEAR-Protocol-Plunges-9-as-Volatility-Spikes-Despite-User-Growth",
+      "pubDate": "2025-06-12T15:03:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Polkadot Price Forecast to Hit $15—But Ozak AI’s Presale Momentum Points Toward 100x Returns",
+      "link": "https://cryptopanic.com/news/polkadot/22509977/Polkadot-Price-Forecast-to-Hit-15But-Ozak-AIs-Presale-Momentum-Points-Toward-100x-Returns",
+      "pubDate": "2025-06-12T14:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Best Crypto Presale to Buy as AI Coins Boom – RNDR, Nexchain & NEAR Are Trending",
+      "link": "https://cryptopanic.com/news/near/22508275/Best-Crypto-Presale-to-Buy-as-AI-Coins-Boom-RNDR-Nexchain-NEAR-Are-Trending",
+      "pubDate": "2025-06-12T13:53:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Bitrue exploiter sends more ETH to Tornado Cash",
+      "link": "https://cryptopanic.com/news/dai/22506355/Bitrue-exploiter-sends-more-ETH-to-Tornado-Cash",
+      "pubDate": "2025-06-12T12:54:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DAI",
+        "TORN"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Etherealize's Bull Case for ETH",
+      "link": "https://cryptopanic.com/news/bitcoin/22506883/Etherealizes-Bull-Case-for-ETH",
+      "pubDate": "2025-06-12T12:38:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Op-Ed: Wall Street understands the value of BTC. Here's how institutions should think about the opportunity to own ETH.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 12 June 2025: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/decentraland/22509524/Spell-Wallet-Daily-Puzzle-12-June-2025-Earn-Reward-of-1-MANA",
+      "pubDate": "2025-06-12T12:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "Ethereum leads $336M liquidation wave with heavy long losses",
+      "link": "https://cryptopanic.com/news/ethereum/22504536/Ethereum-leads-336M-liquidation-wave-with-heavy-long-losses",
+      "pubDate": "2025-06-12T11:42:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "In the 24 hours between June 11 and 12, the crypto market saw $336. 84 in liquidations, with over 114,000 traders rekt as leveraged positions were flushed out across most exchanges.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Coinbase, BiT Global Settle wBTC Delisting Dispute in Court",
+      "link": "https://cryptopanic.com/news/wrapped-bitcoin/22497878/Coinbase-BiT-Global-Settle-wBTC-Delisting-Dispute-in-Court",
+      "pubDate": "2025-06-12T11:38:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "WBTC"
+      ]
+    },
+    {
+      "title": "HTX Launches TRX Options, Empowering Users with Flexible and Diversified Trading Strategies",
+      "link": "https://cryptopanic.com/news/huobi-token/22506352/HTX-Launches-TRX-Options-Empowering-Users-with-Flexible-and-Diversified-Trading-Strategies",
+      "pubDate": "2025-06-12T11:37:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "HT"
+      ]
+    },
+    {
+      "title": "Ethereum Leverage At All-Time High as BlackRock Ramps Up Accumulation",
+      "link": "https://cryptopanic.com/news/ethereum/22504601/Ethereum-Leverage-At-All-Time-High-as-BlackRock-Ramps-Up-Accumulation",
+      "pubDate": "2025-06-12T11:31:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum (ETH) is making headlines as leveraged bets and institutional inflows converge. This synergy has pushed the network’s futures market to new extremes. Analysts are monitoring Ethereum amid talk of an altcoin summer, with ETH floated as a likely frontrunner. Leverage and Institutions Drive Ethereum’s Market Momentum According to blockchain analytics firm Glassnode, Ethereum futures open interest has hit an all-time high (ATH), topping $20 billion, even as ETH’s spot price hovers below the",
+      "currencies": [
+        "ETH",
+        "ATH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Ethereum futures open interest hits $20B all-time high: Will ETH price follow?",
+      "link": "https://cryptopanic.com/news/ethereum/22504489/Ethereum-futures-open-interest-hits-20B-all-time-high-Will-ETH-price-follow",
+      "pubDate": "2025-06-12T11:27:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum futures data shows momentum, with ETH price more than doubling since April lows, increasing the chance of a rally to $4,000 in the coming weeks.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Russian Devices Hijacked for Covert Crypto Mining & Key Theft",
+      "link": "https://cryptopanic.com/news/monero/22503426/Russian-Devices-Hijacked-for-Covert-Crypto-Mining-Key-Theft",
+      "pubDate": "2025-06-12T11:07:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XMR"
+      ]
+    },
+    {
+      "title": "Offering Free Rewards: 12 Best and Trustworthy Bitcoin Cloud Mining Platforms in 2025",
+      "link": "https://cryptopanic.com/news/litecoin/22502882/Offering-Free-Rewards-12-Best-and-Trustworthy-Bitcoin-Cloud-Mining-Platforms-in-2025",
+      "pubDate": "2025-06-12T10:51:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Uniswap: record volume of $88 billion, UNI aims for $12",
+      "link": "https://cryptopanic.com/news/uniswap/22508068/Uniswap-record-volume-of-88-billion-UNI-aims-for-12",
+      "pubDate": "2025-06-12T10:30:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "DEFI",
+        "Z"
+      ]
+    },
+    {
+      "title": "Solana Price Prediction As Spot SOL Crypto ETFs Now Set To Launch In July",
+      "link": "https://cryptopanic.com/news/solana/22508064/Solana-Price-Prediction-As-Spot-SOL-Crypto-ETFs-Now-Set-To-Launch-In-July",
+      "pubDate": "2025-06-12T10:20:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The U. S. Securities and Exchange Commission has requested spot Solana ETF applicants to submit updated S-1 filings, a key regulatory milestone signalling imminent approval, likely in early July itself. Bloomberg ETF analysts Eric Balchunas and James Seyffart have also said that an Altcoin ETF Summer is on the cards, with Solana leading the way. As […]",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "FioBit: The Best Free Bitcoin and Dogecoin Cloud Mining Platform Regulated in the USA",
+      "link": "https://cryptopanic.com/news/litecoin/22501243/FioBit-The-Best-Free-Bitcoin-and-Dogecoin-Cloud-Mining-Platform-Regulated-in-the-USA",
+      "pubDate": "2025-06-12T09:46:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "BCH"
+      ]
+    },
+    {
+      "title": "ALGO Tests Resistance, SUI DEX Volume Hits $12M, but Web3 ai’s 1,747% ROI Makes It the Crypto with Most Potential",
+      "link": "https://cryptopanic.com/news/algorand/22500140/ALGO-Tests-Resistance-SUI-DEX-Volume-Hits-12M-but-Web3-ais-1747-ROI-Makes-It-the-Crypto-with-Most-Potential",
+      "pubDate": "2025-06-12T09:05:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ALGO",
+        "SUI"
+      ]
+    },
+    {
+      "title": "DeFi revival? Uniswap blasts past $88 billion in volume as UNI targets $12",
+      "link": "https://cryptopanic.com/news/uniswap/22496602/DeFi-revival-Uniswap-blasts-past-88-billion-in-volume-as-UNI-targets-12",
+      "pubDate": "2025-06-12T07:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Solana ETF Approval Odds Soar as Wall Street Eyes Altcoin Season",
+      "link": "https://cryptopanic.com/news/solana/22500630/Solana-ETF-Approval-Odds-Soar-as-Wall-Street-Eyes-Altcoin-Season",
+      "pubDate": "2025-06-12T07:00:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Excitement is building around the possibility of U. S. regulators approving a spot Solana ETF, potentially as early as this summer.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Algorand’s 66% transaction surge and low volatility: Is ALGO set to soar?",
+      "link": "https://cryptopanic.com/news/algorand/22493350/Algorands-66-transaction-surge-and-low-volatility-Is-ALGO-set-to-soar",
+      "pubDate": "2025-06-12T04:00:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Litecoin Price Forecast: LTC struggles below resistance, bearish bets hit monthly high",
+      "link": "https://cryptopanic.com/news/litecoin/22494101/Litecoin-Price-Forecast-LTC-struggles-below-resistance-bearish-bets-hit-monthly-high",
+      "pubDate": "2025-06-12T03:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Coinbase to list Fartcoin, SQD, and CAKE",
+      "link": "https://cryptopanic.com/news/pancakeswap-token/22494094/Coinbase-to-list-Fartcoin-SQD-and-CAKE",
+      "pubDate": "2025-06-12T03:00:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "CAKE",
+        "FARTCOIN",
+        "SQD"
+      ]
+    },
+    {
+      "title": "Neo SPCC updates NeoGo to v0.110.0 with TestNet state fix",
+      "link": "https://cryptopanic.com/news/neo/22491546/Neo-SPCC-updates-NeoGo-to-v01100-with-TestNet-state-fix",
+      "pubDate": "2025-06-12T01:18:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "DWF Labs’ Andrei Grachev Challenges Near Protocol to Cut Inflation of NEAR By 50% To Attract More Investment",
+      "link": "https://cryptopanic.com/news/near/22490344/DWF-Labs-Andrei-Grachev-Challenges-Near-Protocol-to-Cut-Inflation-of-NEAR-By-50-To-Attract-More-Investment",
+      "pubDate": "2025-06-12T00:08:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "date": "2019-01-30",
+  "fetchedAt": "2026-02-05T07:27:06.969Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "How to Store & Secure Crypto on a Ledger Nano S [2020 Expert Guide]",
+      "link": "https://cryptopanic.com/news/4428251/How-to-Store-Secure-Crypto-on-a-Ledger-Nano-S-2020-Expert-Guide",
+      "pubDate": "2019-01-30T20:27:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XEM",
+        "XNO"
+      ]
+    },
+    {
+      "title": "IOTA Joins Forces with Denmark's Energy Giant",
+      "link": "https://cryptopanic.com/news/4426155/IOTA-Joins-Forces-with-Denmarks-Energy-Giant",
+      "pubDate": "2019-01-30T17:19:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron [TRX] Price Action: Is a More Bearish Price Structure Forming?",
+      "link": "https://cryptopanic.com/news/4425542/Tron-TRX-Price-Action-Is-a-More-Bearish-Price-Structure-Forming",
+      "pubDate": "2019-01-30T16:14:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ex-Tron (?) Employee: Justin Sun and Binance’s CZ Pumping TRX, BNB on Fake BTT ICO",
+      "link": "https://cryptopanic.com/news/4424514/Ex-Tron-Employee-Justin-Sun-and-Binances-CZ-Pumping-TRX-BNB-on-Fake-BTT-ICO",
+      "pubDate": "2019-01-30T14:10:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    }
+  ]
+}

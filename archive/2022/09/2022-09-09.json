@@ -1,0 +1,1103 @@
+{
+  "date": "2022-09-09",
+  "fetchedAt": "2026-02-05T07:27:07.620Z",
+  "articleCount": 64,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "$White Dapp is officially live.",
+      "link": "https://cryptopanic.com/news/16292699/White-Dapp-is-officially-live?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-09T23:53:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WHITE"
+      ]
+    },
+    {
+      "title": "Terra Comeback? LUNA Surges 166% After LUNA Classic’s Own Rise",
+      "link": "https://cryptopanic.com/news/16286078/Terra-Comeback-LUNA-Surges-166-After-LUNA-Classics-Own-Rise?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-09T21:46:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "LUNA is crypto’s largest gainer today among the top 100 coins—and it comes right after LUNA Classic had its own unexpected ascent.",
+      "currencies": [
+        "LUNA"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 18
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Shiba Inu Credential Leak Could Have Led to “Theft, Token Embezzlement, Disruption of Services”",
+      "link": "https://cryptopanic.com/news/16286049/Shiba-Inu-Credential-Leak-Could-Have-Led-to-Theft-Token-Embezzlement-Disruption-of-Services",
+      "pubDate": "2022-09-09T21:33:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The team behind Shiba Inu token (SHIBA) reportedly leaked its AWS credentials for more than two days in August. Shiba Inu quietly leaked key credentials last month.Security firm PingSafe published a report on September 8 detailing its findings. It said that on Aug. 22, it discovered that a commit in Shiba Inu's public GitHub repository displayed credentials related to the project's Amazon Web...",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "ETHW vs. ETC: Which way would miners choose going forward?",
+      "link": "https://cryptopanic.com/news/16286045/ETHW-vs-ETC-Which-way-would-miners-choose-going-forward",
+      "pubDate": "2022-09-09T21:30:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC",
+        "RVN"
+      ]
+    },
+    {
+      "title": "RT @MTower8: Latest NASA news - USDD SUN is born #TRON @justinsuntron #USDD #StableCoin #BBTMemeWars #FlyWithTuru",
+      "link": "https://cryptopanic.com/news/usdd/16292378/RT-MTower8-Latest-NASA-news-USDD-SUN-is-born-TRON-justinsuntron-USDD-StableCoin-BBTMemeWars-FlyWithTuru",
+      "pubDate": "2022-09-09T20:41:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDD",
+        "TURU"
+      ]
+    },
+    {
+      "title": "We're pleased to announce that RJ Williams, CEO of @younghollywood, has joined Theta's Metachain Advisory Council.…",
+      "link": "https://cryptopanic.com/news/16292053/Were-pleased-to-announce-that-RJ-Williams-CEO-of-younghollywood-has-joined-Thetas-Metachain-Advisory-Council",
+      "pubDate": "2022-09-09T19:31:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "LUNA’s price more than triples, pushing market cap near $1 billion",
+      "link": "https://cryptopanic.com/news/16285728/LUNAs-price-more-than-triples-pushing-market-cap-near-1-billion",
+      "pubDate": "2022-09-09T19:16:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "While it's unclear what caused LUNA's spike, a researcher at The Block suggests that ATOM's pump earlier Friday morning could be connected.",
+      "currencies": [
+        "USTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Major Ethereum (ETH) Competitor Makes Cosmic Leap As Metaverse Tokens ApeCoin, Flow, and Axie Infinity Rally",
+      "link": "https://cryptopanic.com/news/axie-infinity/16285673/Major-Ethereum-ETH-Competitor-Makes-Cosmic-Leap-As-Metaverse-Tokens-ApeCoin-Flow-and-Axie-Infinity-Rally",
+      "pubDate": "2022-09-09T19:00:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ATOM"
+      ]
+    },
+    {
+      "title": "Let's take some time for a quick lesson on data analysis. Are you familiar with survivorship bias? What other examp…",
+      "link": "https://cryptopanic.com/news/16292771/Lets-take-some-time-for-a-quick-lesson-on-data-analysis-Are-you-familiar-with-survivorship-bias-What-other-examp",
+      "pubDate": "2022-09-09T18:52:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XYO"
+      ]
+    },
+    {
+      "title": "Our friends at @WeatherXM are building community-powered weather stations using @Helium️",
+      "link": "https://cryptopanic.com/news/helium/16289426/Our-friends-at-WeatherXM-are-building-community-powered-weather-stations-using-Helium",
+      "pubDate": "2022-09-09T18:52:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ]
+    },
+    {
+      "title": "What makes #cryptocurrency adoption happen faster in some regions of the world than others? Right now, it's happeni…",
+      "link": "https://cryptopanic.com/news/pax-gold/16287403/What-makes-cryptocurrency-adoption-happen-faster-in-some-regions-of-the-world-than-others-Right-now-its-happeni",
+      "pubDate": "2022-09-09T18:34:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BUSD",
+        "PAXG",
+        "BKRW"
+      ]
+    },
+    {
+      "title": "Great to see that one of the vaults created in the very beginning of NFTX is being used by the @squiggleDAO as part…",
+      "link": "https://cryptopanic.com/news/16290626/Great-to-see-that-one-of-the-vaults-created-in-the-very-beginning-of-NFTX-is-being-used-by-the-squiggleDAO-as-part?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-09T18:29:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "SOLO",
+        "META",
+        "MASK",
+        "BEAM",
+        "ANIME",
+        "WHALE",
+        "ALPACA",
+        "DUCK",
+        "PUNK",
+        "UWU",
+        "NFTX",
+        "PUNK-BASIC",
+        "PUNK-FEMALE",
+        "PUNK-ATTR-4",
+        "PUNK-ATTR-5",
+        "PUNK-ZOMBIE",
+        "AVASTR",
+        "COOL",
+        "BAYC",
+        "KITTY",
+        "BERRY",
+        "FACE",
+        "HYPER",
+        "MINUTE",
+        "PATH",
+        "WAIFU",
+        "BGAN",
+        "BUNNY",
+        "BONSAI",
+        "CARD",
+        "MOONCAT",
+        "GLYPH",
+        "MEEB",
+        "SQGL",
+        "BAKC",
+        "ENERGY",
+        "RINGER",
+        "MANEKI",
+        "SPUNK",
+        "PASTA",
+        "PUPS",
+        "TOSHIMON",
+        "SODIUM",
+        "CNHPD",
+        "PHUNK",
+        "HDPUNK",
+        "KONGZ",
+        "MORPH",
+        "WIZARD",
+        "COLLECTIVE",
+        "KAMAX",
+        "TOPDOG",
+        "DFNORM",
+        "CLOCK",
+        "CITIES",
+        "LONDON",
+        "MILADY"
+      ]
+    },
+    {
+      "title": "New project on RLY Protocol.",
+      "link": "https://cryptopanic.com/news/16291346/New-project-on-RLY-Protocol",
+      "pubDate": "2022-09-09T18:08:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RLY"
+      ]
+    },
+    {
+      "title": "Terra (LUNA) Explodes 204% in Just 24 Hours As Bitcoin Blasts Above $21,000",
+      "link": "https://cryptopanic.com/news/16285535/Terra-LUNA-Explodes-204-in-Just-24-Hours-As-Bitcoin-Blasts-Above-21000",
+      "pubDate": "2022-09-09T18:05:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Stablecoin issuer Terra (LUNA) is seeing a massive price increase months after the protocol’s stablecoin depegged from the US dollar and lost over 99.9% of its value. The Ethereum (ETH) competitor exploded from $1.96 to $5.94, an over 200% increase, in just 24 hours after Terra Luna Classic (LUNC), its rebranded version, announced support for […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @B2029org: Bitcoin Days Berlin — We are feeling excited to represent the original Bitcoin at Blockchain Week. Check out our events at…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/16287466/RT-B2029org-Bitcoin-Days-Berlin-We-are-feeling-excited-to-represent-the-original-Bitcoin-at-Blockchain-Week-Check-out-our-events-at",
+      "pubDate": "2022-09-09T17:54:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "The @PwCUS 2022 US Metaverse survey confirms that 66% of executives report that their companies are actively engage…",
+      "link": "https://cryptopanic.com/news/16285352/The-PwCUS-2022-US-Metaverse-survey-confirms-that-66-of-executives-report-that-their-companies-are-actively-engage",
+      "pubDate": "2022-09-09T17:10:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "Chainalysis and Law Enforcement Seize $30,000,000 Worth of Crypto Stolen in Axie Infinity (AXS) Hack",
+      "link": "https://cryptopanic.com/news/axie-infinity/16285317/Chainalysis-and-Law-Enforcement-Seize-30000000-Worth-of-Crypto-Stolen-in-Axie-Infinity-AXS-Hack",
+      "pubDate": "2022-09-09T16:55:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "Interest in keyword ‘buy bitcoin’ on Google Search drops to a 2-year low",
+      "link": "https://cryptopanic.com/news/bitcoin/16285207/Interest-in-keyword-buy-bitcoin-on-Google-Search-drops-to-a-2-year-low",
+      "pubDate": "2022-09-09T16:22:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin (BTC) has been on a downwards trend since the start of the year, recording a significant sell-off while struggling... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Terra ($LUNA) Price Mysteriously Surges Over 200% as Trading Volume Explodes",
+      "link": "https://cryptopanic.com/news/16285152/Terra-LUNA-Price-Mysteriously-Surges-Over-200-as-Trading-Volume-Explodes",
+      "pubDate": "2022-09-09T16:12:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The price of Terra’s $LUNA tokens has mysteriously shot up over the last few hours to now trade above the $5.9 mark, leaving most traders puzzled as to what is going on with the price of the cryptocurrency. According to data from CryptoCompare, Terra’s trading volume suddenly exploded from around $6 million to over $200 […]",
+      "currencies": [
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "The ETH2 Merge is coming! The Merge is a significant upgrade for all ERC20 tokens, including DENT. Starting on Sep…",
+      "link": "https://cryptopanic.com/news/16285101/The-ETH2-Merge-is-coming-The-Merge-is-a-significant-upgrade-for-all-ERC20-tokens-including-DENT-Starting-on-Sep",
+      "pubDate": "2022-09-09T16:09:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "RT @quagliero: Give it a watch/listen as I explain (poorly) what @NFTX_ is and what we’re working on.",
+      "link": "https://cryptopanic.com/news/16290627/RT-quagliero-Give-it-a-watchlisten-as-I-explain-poorly-what-NFTX_-is-and-what-were-working-on?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-09T16:07:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "SOLO",
+        "META",
+        "MASK",
+        "BEAM",
+        "ANIME",
+        "WHALE",
+        "ALPACA",
+        "DUCK",
+        "PUNK",
+        "UWU",
+        "NFTX",
+        "PUNK-BASIC",
+        "PUNK-FEMALE",
+        "PUNK-ATTR-4",
+        "PUNK-ATTR-5",
+        "PUNK-ZOMBIE",
+        "AVASTR",
+        "COOL",
+        "BAYC",
+        "KITTY",
+        "BERRY",
+        "FACE",
+        "HYPER",
+        "MINUTE",
+        "PATH",
+        "WAIFU",
+        "BGAN",
+        "BUNNY",
+        "BONSAI",
+        "CARD",
+        "MOONCAT",
+        "GLYPH",
+        "MEEB",
+        "SQGL",
+        "BAKC",
+        "ENERGY",
+        "RINGER",
+        "MANEKI",
+        "SPUNK",
+        "PASTA",
+        "PUPS",
+        "TOSHIMON",
+        "SODIUM",
+        "CNHPD",
+        "PHUNK",
+        "HDPUNK",
+        "KONGZ",
+        "MORPH",
+        "WIZARD",
+        "COLLECTIVE",
+        "KAMAX",
+        "TOPDOG",
+        "DFNORM",
+        "CLOCK",
+        "CITIES",
+        "LONDON",
+        "MILADY"
+      ]
+    },
+    {
+      "title": "Take 15 minutes out of your day and listen to the superstar @quagliero break down NFTX in simple terms.",
+      "link": "https://cryptopanic.com/news/16290628/Take-15-minutes-out-of-your-day-and-listen-to-the-superstar-quagliero-break-down-NFTX-in-simple-terms?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-09T16:06:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "SOLO",
+        "META",
+        "MASK",
+        "BEAM",
+        "ANIME",
+        "WHALE",
+        "ALPACA",
+        "DUCK",
+        "PUNK",
+        "UWU",
+        "NFTX",
+        "PUNK-BASIC",
+        "PUNK-FEMALE",
+        "PUNK-ATTR-4",
+        "PUNK-ATTR-5",
+        "PUNK-ZOMBIE",
+        "AVASTR",
+        "COOL",
+        "BAYC",
+        "KITTY",
+        "BERRY",
+        "FACE",
+        "HYPER",
+        "MINUTE",
+        "PATH",
+        "WAIFU",
+        "BGAN",
+        "BUNNY",
+        "BONSAI",
+        "CARD",
+        "MOONCAT",
+        "GLYPH",
+        "MEEB",
+        "SQGL",
+        "BAKC",
+        "ENERGY",
+        "RINGER",
+        "MANEKI",
+        "SPUNK",
+        "PASTA",
+        "PUPS",
+        "TOSHIMON",
+        "SODIUM",
+        "CNHPD",
+        "PHUNK",
+        "HDPUNK",
+        "KONGZ",
+        "MORPH",
+        "WIZARD",
+        "COLLECTIVE",
+        "KAMAX",
+        "TOPDOG",
+        "DFNORM",
+        "CLOCK",
+        "CITIES",
+        "LONDON",
+        "MILADY"
+      ]
+    },
+    {
+      "title": "Exchange Relists Terra’s ‘Dead’ LUNA Classic Helping LUNC Price Pump",
+      "link": "https://cryptopanic.com/news/16285149/Exchange-Relists-Terras-Dead-LUNA-Classic-Helping-LUNC-Price-Pump",
+      "pubDate": "2022-09-09T16:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Luna Classic (LUNC) has increased by nearly fivefold over the past three weeks but has reached an important confluence of Fib resistance levels.",
+      "currencies": [
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "We're extremely excited to announce our first Energy Web Twitter Live event, where we dive into Energy Web's techno…",
+      "link": "https://cryptopanic.com/news/16288647/Were-extremely-excited-to-announce-our-first-Energy-Web-Twitter-Live-event-where-we-dive-into-Energy-Webs-techno",
+      "pubDate": "2022-09-09T15:57:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EWT"
+      ]
+    },
+    {
+      "title": "\"Undisclosed Project\" Teaser",
+      "link": "https://cryptopanic.com/news/16285838/Undisclosed-Project-Teaser",
+      "pubDate": "2022-09-09T15:25:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SPS"
+      ]
+    },
+    {
+      "title": "Optimism (OP) Flashes Double-digit Gains, Can Bulls Push Price To $2?",
+      "link": "https://cryptopanic.com/news/helium/16284908/Optimism-OP-Flashes-Double-digit-Gains-Can-Bulls-Push-Price-To-2",
+      "pubDate": "2022-09-09T15:19:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "HNT"
+      ]
+    },
+    {
+      "title": "Lava skin soo hot  🥵",
+      "link": "https://cryptopanic.com/news/16288199/Lava-skin-soo-hot?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-09T14:52:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BORG"
+      ]
+    },
+    {
+      "title": "Ravencoin (RVN) Beats Market with Whopping 20% Price Spike: Crypto Market Review, September 9",
+      "link": "https://cryptopanic.com/news/16284760/Ravencoin-RVN-Beats-Market-with-Whopping-20-Price-Spike-Crypto-Market-Review-September-9",
+      "pubDate": "2022-09-09T14:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "RVN"
+      ]
+    },
+    {
+      "title": "We can confirm that @IcedKnife is fcking diamond hand.  True ape",
+      "link": "https://cryptopanic.com/news/16288200/We-can-confirm-that-IcedKnife-is-fcking-diamond-hand-True-ape?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-09T14:34:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BORG"
+      ]
+    },
+    {
+      "title": "Terra 2.0 (LUNA) Pumps 260% as Terra Classic (LUNC) Falls",
+      "link": "https://cryptopanic.com/news/16284757/Terra-20-LUNA-Pumps-260-as-Terra-Classic-LUNC-Falls",
+      "pubDate": "2022-09-09T14:29:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Terra 2.0 Luna is on a rampage today as it soars up to almost $8 increasing in price by over 250% in the last 6 hours. Whilst Terra Luna achieves euphoric highs Terra Luna Classic is facing a bearish reversal down to $0.00044 from recent highs of $0.000593. Is the Terra 2.0 Luna pump deleterious for LUNC and will Terra Luna climb higher? ... Read More: Terra 2.0 (LUNA) Pumps...",
+      "currencies": [
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "RT @CryptoDiffer: Crypto Events Recap, September 8-9 $BNB $FTT $RON $AXS $SAND $COIN $CVX $OCEAN $TVK $WIDI $HBB",
+      "link": "https://cryptopanic.com/news/axie-infinity/16292228/RT-CryptoDiffer-Crypto-Events-Recap-September-8-9-BNB-FTT-RON-AXS-SAND-COIN-CVX-OCEAN-TVK-WIDI-HBB",
+      "pubDate": "2022-09-09T14:08:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FTT",
+        "SAND",
+        "TVK"
+      ]
+    },
+    {
+      "title": "4 Crypto Tokens Reap Hashpower From The Merge, ETC Secures Most of the Hashrate Leaving ETH",
+      "link": "https://cryptopanic.com/news/16284636/4-Crypto-Tokens-Reap-Hashpower-From-The-Merge-ETC-Secures-Most-of-the-Hashrate-Leaving-ETH",
+      "pubDate": "2022-09-09T14:01:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC",
+        "RVN"
+      ]
+    },
+    {
+      "title": "Looks bullish asf. Appreciate you fam. One of the strongest  hands in the space 🤝 Announcement coming soon... Floo…",
+      "link": "https://cryptopanic.com/news/16288201/Looks-bullish-asf-Appreciate-you-fam-One-of-the-strongest-hands-in-the-space-Announcement-coming-soon-Floo?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-09T13:25:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BORG"
+      ]
+    },
+    {
+      "title": "#DidYouKnow There’s a limit to how many bitcoins can exist in the market: 21 million. As of this moment, 17 million…",
+      "link": "https://cryptopanic.com/news/16288466/DidYouKnow-Theres-a-limit-to-how-many-bitcoins-can-exist-in-the-market-21-million-As-of-this-moment-17-million?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-09T13:05:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "DHN"
+      ]
+    },
+    {
+      "title": "Attending @themetaweek Dubai next week? Make sure to catch Theta's @wes_levitt on the panel \"Metaverse Architecture…",
+      "link": "https://cryptopanic.com/news/16292054/Attending-themetaweek-Dubai-next-week-Make-sure-to-catch-Thetas-wes_levitt-on-the-panel-Metaverse-Architecture",
+      "pubDate": "2022-09-09T13:04:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "LUNA Classic, Ravencoin, Cosmos, Ethereum Classic and Chainlink – Biggest Weekly Gainers",
+      "link": "https://cryptopanic.com/news/16284472/LUNA-Classic-Ravencoin-Cosmos-Ethereum-Classic-and-Chainlink-Biggest-Weekly-Gainers",
+      "pubDate": "2022-09-09T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Be[in]Crypto takes a look at the five cryptocurrencies that increased the most last week, more specifically, from Sept 2 to Sept 9.",
+      "currencies": [
+        "ETH",
+        "LINK",
+        "ETC",
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "LUNA Explodes 150% in an Hour as Volatility Ramps Up",
+      "link": "https://cryptopanic.com/news/16284318/LUNA-Explodes-150-in-an-Hour-as-Volatility-Ramps-Up",
+      "pubDate": "2022-09-09T12:38:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "LUNA's price exploded by a whopping 150% in less than an hour as the overall volatility for the cryptocurrency ramped up.",
+      "currencies": [
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 20,
+        "negative": 36
+      }
+    },
+    {
+      "title": "Cardalonia Scores It’s First Exchange Listing, Set To Overtake Decentraland (MANA) and Sandbox (SAND) As $LONIA Token Holders Prepare For Land Presale",
+      "link": "https://cryptopanic.com/news/16284283/Cardalonia-Scores-Its-First-Exchange-Listing-Set-To-Overtake-Decentraland-MANA-and-Sandbox-SAND-As-LONIA-Token-Holders-Prepare-For-Land-Presale",
+      "pubDate": "2022-09-09T12:24:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Cardalonia, an NFT-powered Play to earn Metaverse project building on the Cardano blockchain has announced the listing of it’s utility token $LONIA on P2PB2B, an Estonian-based cryptocurrency exchange and one of the top 100 exchanges by trading volume according to Coinmarketcap. The $LONIA token listing partnership with p2pb2b.com will enable trading of $LONIA tokens, the utility token of...",
+      "currencies": [
+        "ADA",
+        "MANA"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Metaverse Project Cardalonia Scores It’s First Exchange Listing, Set To Become The SandBox Of Cardano Blockchain",
+      "link": "https://cryptopanic.com/news/16284240/Metaverse-Project-Cardalonia-Scores-Its-First-Exchange-Listing-Set-To-Become-The-SandBox-Of-Cardano-Blockchain",
+      "pubDate": "2022-09-09T12:19:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardalonia, a new metaverse project on the Cardano blockchain is poised to join the likes of well-known cryptocurrency projects Decentraland (MANA) and Sandbox (SAND) as one of the most sought after metaverse projects. Cardalonia, a Play to earn Metaverse project building on the Cardano blockchain has announced the listing of it’s utility token $LONIA on […]",
+      "currencies": [
+        "ADA",
+        "MANA",
+        "SAND"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "RT @itsnewtom: Floor went X3 in a few hours, only 48 listed. Maybe they know something you don't? Don't wait anon 🤝",
+      "link": "https://cryptopanic.com/news/16288202/RT-itsnewtom-Floor-went-X3-in-a-few-hours-only-48-listed-Maybe-they-know-something-you-dont-Dont-wait-anon?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-09T12:15:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BORG"
+      ]
+    },
+    {
+      "title": "THE AXIECON STAGE IS SET FOR @Renz_BDAO & @CTJeth’s data-driven deep dive into Axie Infinity powered by…",
+      "link": "https://cryptopanic.com/news/axie-infinity/16287632/THE-AXIECON-STAGE-IS-SET-FOR-Renz_BDAO-amp-CTJeths-data-driven-deep-dive-into-Axie-Infinity-powered-by",
+      "pubDate": "2022-09-09T12:10:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "AXS",
+        "BREED"
+      ]
+    },
+    {
+      "title": "Ok that was fast. Only 48 listed. Floor is 1 $SOL.",
+      "link": "https://cryptopanic.com/news/16288203/Ok-that-was-fast-Only-48-listed-Floor-is-1-SOL?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-09T12:00:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BORG"
+      ]
+    },
+    {
+      "title": "Cosmos, OKB, Ravencoin Prices Pump as Crypto Market Sentiment Improves",
+      "link": "https://cryptopanic.com/news/16284133/Cosmos-OKB-Ravencoin-Prices-Pump-as-Crypto-Market-Sentiment-Improves",
+      "pubDate": "2022-09-09T11:39:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ATOM",
+        "OKB",
+        "RVN"
+      ]
+    },
+    {
+      "title": "Charles Hoskinson Says Bitcoin Should Adopt Cardano's Ofelimous Protocol to Survive",
+      "link": "https://cryptopanic.com/news/bitcoin/16284102/Charles-Hoskinson-Says-Bitcoin-Should-Adopt-Cardanos-Ofelimous-Protocol-to-Survive",
+      "pubDate": "2022-09-09T11:33:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "IOG founder recommends that Bitcoin adopt Ofelimous protocol developed by Cardano, here's why",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tornado Cash used to launder $500,000 stolen from DAO Maker last year: security firms",
+      "link": "https://cryptopanic.com/news/16284039/Tornado-Cash-used-to-launder-500000-stolen-from-DAO-Maker-last-year-security-firms",
+      "pubDate": "2022-09-09T11:10:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "An Ethereum address connected to last year’s hack of DAO Maker has laundered 500,000 DAI stablecoin through Tornado Cash, two security firms said.",
+      "currencies": [
+        "ETH",
+        "DAI",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "AMA is live now at @Poloniex 's Telegram channel. See you there!",
+      "link": "https://cryptopanic.com/news/16292223/AMA-is-live-now-at-Poloniex-s-Telegram-channel-See-you-there?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-09T11:03:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LON",
+        "imBTC"
+      ]
+    },
+    {
+      "title": "Terra Classic (LUNC), Ravencoin (RVN), ApeCoin (APE) take the top 3 spots because…",
+      "link": "https://cryptopanic.com/news/16283904/Terra-Classic-LUNC-Ravencoin-RVN-ApeCoin-APE-take-the-top-3-spots-because",
+      "pubDate": "2022-09-09T10:30:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "APE",
+        "RVN"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ready to stake with #USDD and @ConvexFinance? Enjoy high rewards with the USDD/FRAXBP pool NOW! Start here: …",
+      "link": "https://cryptopanic.com/news/usdd/16292397/Ready-to-stake-with-USDD-and-ConvexFinance-Enjoy-high-rewards-with-the-USDDFRAXBP-pool-NOW-Start-here",
+      "pubDate": "2022-09-09T09:56:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDD"
+      ]
+    },
+    {
+      "title": "Website and App all back online following the handover of domains",
+      "link": "https://cryptopanic.com/news/16290456/Website-and-App-all-back-online-following-the-handover-of-domains",
+      "pubDate": "2022-09-09T09:31:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HERO"
+      ]
+    },
+    {
+      "title": "US$30 mln seized from North Korea hacking group: report",
+      "link": "https://cryptopanic.com/news/axie-infinity/16282319/US30-mln-seized-from-North-Korea-hacking-group-report",
+      "pubDate": "2022-09-09T09:15:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Crypto Trader Says One DeFi Altcoin Is an ‘Absolute Steal’, Updates Outlook on Compound and Axie Infinity",
+      "link": "https://cryptopanic.com/news/axie-infinity/16282346/Crypto-Trader-Says-One-DeFi-Altcoin-Is-an-Absolute-Steal-Updates-Outlook-on-Compound-and-Axie-Infinity",
+      "pubDate": "2022-09-09T09:15:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "AXS"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "$RVN coins are designed as internal currency within the network and must be burnt in order to issue token assets on…",
+      "link": "https://cryptopanic.com/news/16281899/RVN-coins-are-designed-as-internal-currency-within-the-network-and-must-be-burnt-in-order-to-issue-token-assets-on",
+      "pubDate": "2022-09-09T09:07:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RVN"
+      ]
+    },
+    {
+      "title": "In our ever expanding desire of being part of the NFT gaming in all its forms, we are happy to announce that our ho…",
+      "link": "https://cryptopanic.com/news/16281387/In-our-ever-expanding-desire-of-being-part-of-the-NFT-gaming-in-all-its-forms-we-are-happy-to-announce-that-our-ho",
+      "pubDate": "2022-09-09T08:32:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "RAD"
+      ]
+    },
+    {
+      "title": "CEO of $4,500,000,000 Crypto Fund Says Bitcoin Has Bottomed Out and Is Ready To Rally – Here Are His Targets",
+      "link": "https://cryptopanic.com/news/bitcoin/16278731/CEO-of-4500000000-Crypto-Fund-Says-Bitcoin-Has-Bottomed-Out-and-Is-Ready-To-Rally-Here-Are-His-Targets",
+      "pubDate": "2022-09-09T07:04:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The founder and CEO of crypto asset fund Pantera Capital, Dan Morehead, is expressing bullish sentiment on Bitcoin (BTC). Morehead says in a Bloomberg interview that Bitcoin bottomed out in June and is on the cusp of a bull market as it has now surpassed the average period of a bear cycle. “You know we’ve […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @NFTpatroller: Top Gainers of the Day Category: Play To Earn Coins $DEP $AXS $MANA $TLM $DG $GHST ️ Follow @CoinPatrolCom #Top…",
+      "link": "https://cryptopanic.com/news/axie-infinity/16288227/RT-NFTpatroller-Top-Gainers-of-the-Day-Category-Play-To-Earn-Coins-DEP-AXS-MANA-TLM-DG-GHST-Follow-CoinPatrolCom-Top",
+      "pubDate": "2022-09-09T06:41:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "MANA",
+        "AXS",
+        "DEP"
+      ]
+    },
+    {
+      "title": "While most were panicking at $BTC crash Cyborgs were buying $SOL dip to play the bounce 🤝 Hunting bear and bulls 🦾…",
+      "link": "https://cryptopanic.com/news/16277819/While-most-were-panicking-at-BTC-crash-Cyborgs-were-buying-SOL-dip-to-play-the-bounce-Hunting-bear-and-bulls?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-09T06:36:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "BORG"
+      ]
+    },
+    {
+      "title": "🤩 We've reached a new HIGH! #USDD pools have a total TVL of over $57 Million! USDD/3CRV MAX APY over 16% USDDFR…",
+      "link": "https://cryptopanic.com/news/usdd/16282595/Weve-reached-a-new-HIGH-USDD-pools-have-a-total-TVL-of-over-57-Million-USDD3CRV-MAX-APY-over-16-USDDFR",
+      "pubDate": "2022-09-09T06:29:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "USDD"
+      ]
+    },
+    {
+      "title": "Here’s why Terra Classic price has soared by 250% in September",
+      "link": "https://cryptopanic.com/news/16276400/Heres-why-Terra-Classic-price-has-soared-by-250-in-September",
+      "pubDate": "2022-09-09T05:34:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The hype around Terra Classic’s staking service and new token-burning feature is helping fuel the LUNC rally.",
+      "currencies": [
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "SHIB could dethrone DOGE sooner than expected- Decoding ‘why’",
+      "link": "https://cryptopanic.com/news/16276356/SHIB-could-dethrone-DOGE-sooner-than-expected-Decoding-why",
+      "pubDate": "2022-09-09T05:30:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "For the past few months, Shiba Inu [SHIB] has been the better performer among the top two meme cryptocurrencies. Its closest competitor, Dogecoin [DOGE], which still has a greater market value, had failed to match up within the same timeframe. Despite getting the support of the world’s richest man, Elon Musk, DOGE seems to have […]",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Helium Coin Price Bloats 30% – Can HNT Expand Past $5?",
+      "link": "https://cryptopanic.com/news/helium/16276084/Helium-Coin-Price-Bloats-30-Can-HNT-Expand-Past-5",
+      "pubDate": "2022-09-09T05:16:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "HNT",
+        "FTM"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Cardano ($ADA) Becomes a Top Holding for $BNB Whales as Vasil Hard Fork Approaches",
+      "link": "https://cryptopanic.com/news/16276024/Cardano-ADA-Becomes-a-Top-Holding-for-BNB-Whales-as-Vasil-Hard-Fork-Approaches",
+      "pubDate": "2022-09-09T04:31:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano ($ADA) has regained its position as one of the top 10 holdings of whales on the BNB Chain (which was formerly known as the Binance Smart Chain) as investors are betting on the cryptocurrency ahead of its highly anticipated Vasil hard fork. According to a tweet shared by whale monitoring service WhaleStats, Cardano has entered the […]",
+      "currencies": [
+        "BNB",
+        "ADA",
+        "XCN"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Don't forget to join @Poloniex 's campaign and win your share of 3000 $LON!",
+      "link": "https://cryptopanic.com/news/16282401/Dont-forget-to-join-Poloniex-s-campaign-and-win-your-share-of-3000-LON?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-09T04:11:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LON",
+        "imBTC"
+      ]
+    },
+    {
+      "title": "Bitcoin and Ethereum Eye Fresh Surge, LUNC Extends Rally",
+      "link": "https://cryptopanic.com/news/16275943/Bitcoin-and-Ethereum-Eye-Fresh-Surge-LUNC-Extends-Rally",
+      "pubDate": "2022-09-09T03:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin price remained stable and climbed above USD 19,000. BTC is currently (04:00 UTC) eyeing an upside break above the USD 19,500 resistance. If the bulls succeed, the price could rise 4%-5%. Similarly, most major altcoins might start a steady increase. ETH might climb further above USD 1,650 and test USD 1,700. XRP is approaching the USD 0.35 resistance. ADA cleared the USD 0.48...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "ADA",
+        "XRP",
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Asia banking giant DBS jumps into The Sandbox metaverse",
+      "link": "https://cryptopanic.com/news/16275843/Asia-banking-giant-DBS-jumps-into-The-Sandbox-metaverse",
+      "pubDate": "2022-09-09T03:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The Singapore-based bank said it will buy land in the metaverse to create the ‘DBS BetterWorld’ and build a virtual community.",
+      "currencies": [
+        "SAND"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

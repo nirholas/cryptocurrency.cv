@@ -1,0 +1,59 @@
+{
+  "date": "2019-03-10",
+  "fetchedAt": "2026-02-05T07:27:06.987Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @flightradar24: We are following reports that Ethiopian Airlines flight #ET302 to Nairobi has crashed after take off from Addis Ababa.…",
+      "link": "https://cryptopanic.com/news/4794353/RT-flightradar24-We-are-following-reports-that-Ethiopian-Airlines-flight-ET302-to-Nairobi-has-crashed-after-take-off-from-Addis-Ababa",
+      "pubDate": "2019-03-10T23:16:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "AVINOC"
+      ]
+    },
+    {
+      "title": "What is TRON? What is TRX? A Must-Read 2019 Guide Packed Full of Info",
+      "link": "https://cryptopanic.com/news/4791267/What-is-TRON-What-is-TRX-A-Must-Read-2019-Guide-Packed-Full-of-Info",
+      "pubDate": "2019-03-10T13:19:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "TRX",
+        "EOS",
+        "XNO"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Stellar’s Lumens [XLM] & Ripple’s XRP Price Action – XLM Rises Above Ascending Triangle",
+      "link": "https://cryptopanic.com/news/stellar/4790110/Stellars-Lumens-XLM-Ripples-XRP-Price-Action-XLM-Rises-Above-Ascending-Triangle",
+      "pubDate": "2019-03-10T10:09:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

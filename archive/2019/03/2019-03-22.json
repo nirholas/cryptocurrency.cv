@@ -1,0 +1,59 @@
+{
+  "date": "2019-03-22",
+  "fetchedAt": "2026-02-05T07:27:07.000Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA Price Prediction: Did the Price Just Break Out From the Symmetrical Triangle?",
+      "link": "https://cryptopanic.com/news/4904113/IOTA-Price-Prediction-Did-the-Price-Just-Break-Out-From-the-Symmetrical-Triangle",
+      "pubDate": "2019-03-22T15:04:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron (TRX) Has New Major Upgrades to Release in Q2 This Year, Misha Lederman Tweets",
+      "link": "https://cryptopanic.com/news/tron/4903761/Tron-TRX-Has-New-Major-Upgrades-to-Release-in-Q2-This-Year-Misha-Lederman-Tweets",
+      "pubDate": "2019-03-22T14:14:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "[UPD] #XRPArmy Marching Along Twitter – Ripple Waiting to Sell Lion Share of XRP When Price Skyrockets: Research",
+      "link": "https://cryptopanic.com/news/ripple/4902863/UPD-XRPArmy-Marching-Along-Twitter-Ripple-Waiting-to-Sell-Lion-Share-of-XRP-When-Price-Skyrockets-Research",
+      "pubDate": "2019-03-22T12:37:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

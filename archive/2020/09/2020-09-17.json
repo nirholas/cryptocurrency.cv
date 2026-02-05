@@ -1,0 +1,49 @@
+{
+  "date": "2020-09-17",
+  "fetchedAt": "2026-02-05T07:27:06.983Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "We are excited to announce that our #Paycoin global app is soon to be released! Stay tuned for more updates!",
+      "link": "https://cryptopanic.com/news/9998259/We-are-excited-to-announce-that-our-Paycoin-global-app-is-soon-to-be-released-Stay-tuned-for-more-updates?mtm_campaign=API-OFA",
+      "pubDate": "2020-09-17T05:07:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PCI"
+      ]
+    },
+    {
+      "title": "Way2Bit have signed a collaboration on mobile game business contract with KAI-ENTERTAINMENT, a global game develope…",
+      "link": "https://cryptopanic.com/news/9996862/Way2Bit-have-signed-a-collaboration-on-mobile-game-business-contract-with-KAI-ENTERTAINMENT-a-global-game-develope",
+      "pubDate": "2020-09-17T01:21:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BORA"
+      ]
+    },
+    {
+      "title": "Uniswap Launches Governance Token in Bid to Keep Up With Rival AMM SushiSwap",
+      "link": "https://cryptopanic.com/news/uniswap/9996723/Uniswap-Launches-Governance-Token-in-Bid-to-Keep-Up-With-Rival-AMM-SushiSwap",
+      "pubDate": "2020-09-17T00:46:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

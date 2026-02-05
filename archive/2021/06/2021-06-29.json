@@ -1,0 +1,722 @@
+{
+  "date": "2021-06-29",
+  "fetchedAt": "2026-02-05T07:27:06.516Z",
+  "articleCount": 46,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @ThetaDrop: Hey THETA community! We need YOUR help to jump start our new ThetaDrop Instagram account. It would mean a lot to us if you…",
+      "link": "https://cryptopanic.com/news/theta-token/12230747/RT-ThetaDrop-Hey-THETA-community-We-need-YOUR-help-to-jump-start-our-new-ThetaDrop-Instagram-account-It-would-mean-a-lot-to-us-if-you",
+      "pubDate": "2021-06-29T22:04:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "RT @Mr_Blockchain22: #Developers Did you know that the $XDC #protocol has been added to @gitcoin? You get funding and resources to build on…",
+      "link": "https://cryptopanic.com/news/12228555/RT-Mr_Blockchain22-Developers-Did-you-know-that-the-XDC-protocol-has-been-added-to-gitcoin-You-get-funding-and-resources-to-build-on",
+      "pubDate": "2021-06-29T21:56:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XDC"
+      ]
+    },
+    {
+      "title": "Revolut enables Polkadot (DOT) trading for its 15 million users",
+      "link": "https://cryptopanic.com/news/polkadot/12225643/Revolut-enables-Polkadot-DOT-trading-for-its-15-million-users",
+      "pubDate": "2021-06-29T21:53:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "One of the most prominent UK challenger banks, Revolut, has added Polkadot (DOT) cryptocurrency trading to its app. The news was... Continue reading",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Theta Wallet v3.0.1 released to enable TFuel staking at block height 10,968,061 on June 30",
+      "link": "https://cryptopanic.com/news/theta-token/12230748/Theta-Wallet-v301-released-to-enable-TFuel-staking-at-block-height-10968061-on-June-30",
+      "pubDate": "2021-06-29T21:22:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Coinbase will pay users 4% interest on USDC holdings",
+      "link": "https://cryptopanic.com/news/12225555/Coinbase-will-pay-users-4-interest-on-USDC-holdings",
+      "pubDate": "2021-06-29T21:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "The announced yields represent the exchange increasing interest for USDC holders by more than 2,500% since it was lowered significantly last June.",
+      "currencies": [
+        "USDC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "YouTuber Sent Dogecoin to Space In Elon Musk Tribute",
+      "link": "https://cryptopanic.com/news/dogecoin/12225532/YouTuber-Sent-Dogecoin-to-Space-In-Elon-Musk-Tribute",
+      "pubDate": "2021-06-29T21:01:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "-",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @CreamdotFinance: We are excited to announce that C.R.E.A.M. Finance will be launching our money markets on @0xPolygon!",
+      "link": "https://cryptopanic.com/news/12230337/RT-CreamdotFinance-We-are-excited-to-announce-that-CREAM-Finance-will-be-launching-our-money-markets-on-0xPolygon",
+      "pubDate": "2021-06-29T19:00:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "Altcoins bag double-digit gains as Bitcoin price approaches $37,000",
+      "link": "https://cryptopanic.com/news/12225233/Altcoins-bag-double-digit-gains-as-Bitcoin-price-approaches-37000",
+      "pubDate": "2021-06-29T18:58:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "MATIC, SUSHI and CAKE soar after Bitcoin bulls finally press the price above the $35,000 resistance.",
+      "currencies": [
+        "BTC",
+        "CAKE",
+        "SUSHI"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "BIC’s Video News Show: Top 5 Altcoins For July",
+      "link": "https://cryptopanic.com/news/tron/12225127/BICs-Video-News-Show-Top-5-Altcoins-For-July",
+      "pubDate": "2021-06-29T18:02:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "In this episode of the BeInCrypto video news show, host Jessica Walker looks at our list of five top altcoins for the month of July. All five have one thing in common, they’ve all grown with double digits in the last week but the story behind each of them is different.",
+      "currencies": [
+        "SOL",
+        "TRX",
+        "ICP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SoftBank-Backed Travel Booking Platform Adds Dogecoin as Payment Option",
+      "link": "https://cryptopanic.com/news/dogecoin/12225111/SoftBank-Backed-Travel-Booking-Platform-Adds-Dogecoin-as-Payment-Option",
+      "pubDate": "2021-06-29T17:58:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "GetYourGuide wants you to spend your Dogecoin holdings on globetrotting",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @binance: #Binance Will Support the @hiveblocks $HIVE, @Theta_Network $THETA and @Filecoin $FIL Network Upgrades & Hard Forks",
+      "link": "https://cryptopanic.com/news/theta-token/12230749/RT-binance-Binance-Will-Support-the-hiveblocks-HIVE-Theta_Network-THETA-and-Filecoin-FIL-Network-Upgrades-amp-Hard-Forks",
+      "pubDate": "2021-06-29T17:56:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "FIL",
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Ethereum Classic, Dfinity’s ICP Lead Rising Crypto Market",
+      "link": "https://cryptopanic.com/news/12225076/Ethereum-Classic-Dfinitys-ICP-Lead-Rising-Crypto-Market",
+      "pubDate": "2021-06-29T17:45:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The entire cryptocurrency market is up nearly 5% over the last 24 hours, with Ethereum Classic and ICP posting sizable gains.",
+      "currencies": [
+        "ETH",
+        "ETC",
+        "ICP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Our Co-CEOs, @LeBigzer and Nicolas, as well as @ramijames will be hosting a Twitter Spaces session at 1pm UTC tomor…",
+      "link": "https://cryptopanic.com/news/12231017/Our-Co-CEOs-LeBigzer-and-Nicolas-as-well-as-ramijames-will-be-hosting-a-Twitter-Spaces-session-at-1pm-UTC-tomor",
+      "pubDate": "2021-06-29T17:29:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "UOS"
+      ]
+    },
+    {
+      "title": "Coinbase to Start Offering 4% Yield on USDC",
+      "link": "https://cryptopanic.com/news/12224932/Coinbase-to-Start-Offering-4-Yield-on-USDC",
+      "pubDate": "2021-06-29T16:46:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "-",
+      "currencies": [
+        "USDC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    },
+    {
+      "title": "THE BRIDGE HAS BEEN MADE! #SAFEMOON VIA @pNetworkDeFi",
+      "link": "https://cryptopanic.com/news/12230377/THE-BRIDGE-HAS-BEEN-MADE-SAFEMOON-VIA-pNetworkDeFi",
+      "pubDate": "2021-06-29T16:22:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "-",
+      "currencies": [
+        "SAFEMOON"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple’s Lead Lawyer Tells How Big The SEC Battle Is And Why Coinbase Shouldn’t Be Comfortable Listing Dogecoin Over XRP",
+      "link": "https://cryptopanic.com/news/dogecoin/12224766/Ripples-Lead-Lawyer-Tells-How-Big-The-SEC-Battle-Is-And-Why-Coinbase-Shouldnt-Be-Comfortable-Listing-Dogecoin-Over-XRP",
+      "pubDate": "2021-06-29T15:41:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "After spending a significant part of his professional legal career crawling up the legal ranks and later offering legal services for traditional financial institutions, Ripple’s lead lawyer, Stuart Alderoty tells it all to Protocol, his exciting two years as a front line lawyer in the biggest legal battle rocking the crypto space. How Big Is […]",
+      "currencies": [
+        "XRP",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Elon Musk Wants Crypto Enthusiasts To Support New Dogecoin Change Proposal",
+      "link": "https://cryptopanic.com/news/dogecoin/12224764/Elon-Musk-Wants-Crypto-Enthusiasts-To-Support-New-Dogecoin-Change-Proposal",
+      "pubDate": "2021-06-29T15:10:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Tesla CEO and the world’s second-richest person Elon Musk is backing a proposal that seeks to introduce a new fee structure and policy for Dogecoin (DOGE). The billionaire tells his 57.5 million Twitter followers that it is “important to support” the proposal put forth by core Dogecoin developer Patrick Lodder. The proposal titled “Fee Policy […]",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 47
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin (BTC) Attempts to Regain Key Support Area at $34,700",
+      "link": "https://cryptopanic.com/news/near/12224628/Bitcoin-BTC-Attempts-to-Regain-Key-Support-Area-at-34700",
+      "pubDate": "2021-06-29T15:07:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin (BTC) has again approached an important support area near $34,700. After revisiting the $30,000 level last weekend, the price is trying to resume the uptrend.",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "CoinMarketCap launches token swap feature that uses Uniswap",
+      "link": "https://cryptopanic.com/news/12224639/CoinMarketCap-launches-token-swap-feature-that-uses-Uniswap",
+      "pubDate": "2021-06-29T15:05:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Check new article with insights from STASIS CEO @gregoryklumov to know more about #stablecoin regulation.…",
+      "link": "https://cryptopanic.com/news/12230338/Check-new-article-with-insights-from-STASIS-CEO-gregoryklumov-to-know-more-about-stablecoin-regulation",
+      "pubDate": "2021-06-29T14:44:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "RT @WuBlockchain: According to Binance’s announcement, Binance will support the upgrade of the Bitcoin Cash ABC (BCHA) brand to eCash (XEC)…",
+      "link": "https://cryptopanic.com/news/ecash/12227472/RT-WuBlockchain-According-to-Binances-announcement-Binance-will-support-the-upgrade-of-the-Bitcoin-Cash-ABC-BCHA-brand-to-eCash-XEC",
+      "pubDate": "2021-06-29T14:16:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH",
+        "XEC",
+        "BCHABC"
+      ]
+    },
+    {
+      "title": "For all your cross chain $Form needs  erc &lt;&gt; bsc with no pain.",
+      "link": "https://cryptopanic.com/news/12228459/For-all-your-cross-chain-Form-needs-erc-ltgt-bsc-with-no-pain?mtm_campaign=API-OFA",
+      "pubDate": "2021-06-29T14:09:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FORM"
+      ]
+    },
+    {
+      "title": "RT @binance: #Binance Will Support the @Bitcoin_ABC $BCHA Rebrand to eCash $XEC & Redenomination Plan",
+      "link": "https://cryptopanic.com/news/ecash/12227473/RT-binance-Binance-Will-Support-the-Bitcoin_ABC-BCHA-Rebrand-to-eCash-XEC-amp-Redenomination-Plan",
+      "pubDate": "2021-06-29T14:06:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC",
+        "BCHA",
+        "BCHABC"
+      ]
+    },
+    {
+      "title": "1/ Reef Finance  welcomes the latest project to build on Reef, @relitefinance! Relite is a cross-chain protocol us…",
+      "link": "https://cryptopanic.com/news/12230201/1-Reef-Finance-welcomes-the-latest-project-to-build-on-Reef-relitefinance-Relite-is-a-cross-chain-protocol-us",
+      "pubDate": "2021-06-29T13:58:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Electric Car Designed by Tesla Competitor to Start Mining Bitcoin and Dogecoin Today",
+      "link": "https://cryptopanic.com/news/dogecoin/12224357/Electric-Car-Designed-by-Tesla-Competitor-to-Start-Mining-Bitcoin-and-Dogecoin-Today",
+      "pubDate": "2021-06-29T13:43:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Spiritus will be the very first car in the world to mine cryptocurrencies",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 27,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "1/  BandChain Phase 2 Proposal is here, the final step before the Mainnet upgrade! After months of development to…",
+      "link": "https://cryptopanic.com/news/12227368/1-BandChain-Phase-2-Proposal-is-here-the-final-step-before-the-Mainnet-upgrade-After-months-of-development-to",
+      "pubDate": "2021-06-29T13:37:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "Fetch.ai brings AI-powered tools to combat impermanent loss in AMMs and DEXs",
+      "link": "https://cryptopanic.com/news/uniswap/12224284/Fetchai-brings-AI-powered-tools-to-combat-impermanent-loss-in-AMMs-and-DEXs",
+      "pubDate": "2021-06-29T13:28:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Fetch.ai, a Cambridge-based artificial intelligence lab building an open-access decentralized machine learning network for smart infrastructure, announced today the launch of its DeFi Agents toolkit. Utilizing a user-friendly DeFi app, users will now, for the first time, be able to automatically withdraw liquidity from any Uniswap V2 and PancakeSwap pool based on predefined conditions. To...",
+      "currencies": [
+        "UNI",
+        "CAKE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin ABC 0.23.7 is now available! This second release compatible with the eCash rebrand comes with some networ…",
+      "link": "https://cryptopanic.com/news/ecash/12227474/Bitcoin-ABC-0237-is-now-available-This-second-release-compatible-with-the-eCash-rebrand-comes-with-some-networ",
+      "pubDate": "2021-06-29T13:24:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC",
+        "BCHABC"
+      ]
+    },
+    {
+      "title": "Bitcoin Consolidates Around $35,000, Other Cryptocurrencies Including Ether, Polkadot, XRP And Cardano Post Considerable Gains",
+      "link": "https://cryptopanic.com/news/ripple/12224119/Bitcoin-Consolidates-Around-35000-Other-Cryptocurrencies-Including-Ether-Polkadot-XRP-And-Cardano-Post-Considerable-Gains",
+      "pubDate": "2021-06-29T12:37:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Despite the continued clampdowns on cryptocurrency exchanges and companies around the world, including the recent ban on Binance’s regulated operations in the U.K.,the market is on the rise, with 24-hour gains ranging from 3.5% to 13% for tokens in the top 10.",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Join our CEO @ErmanTjiputra for an #AMA session in the $AIOZ Telegram to discuss mainnet, webRTC, roadmap &amp; more!…",
+      "link": "https://cryptopanic.com/news/12227046/Join-our-CEO-ErmanTjiputra-for-an-AMA-session-in-the-AIOZ-Telegram-to-discuss-mainnet-webRTC-roadmap-amp-more?mtm_campaign=API-OFA",
+      "pubDate": "2021-06-29T12:22:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AIOZ"
+      ]
+    },
+    {
+      "title": "Why is Polygon so Popular?",
+      "link": "https://cryptopanic.com/news/matic-network/12224066/Why-is-Polygon-so-Popular",
+      "pubDate": "2021-06-29T12:12:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "These are the top reasons why Polygon has experienced enormous growth, with investors of the likes of Mark Cuban throwing their support behind the project",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "#Binance Will Support the @hiveblocks $HIVE, @Theta_Network $THETA and @Filecoin $FIL Network Upgrades & Hard Forks",
+      "link": "https://cryptopanic.com/news/theta-token/12227452/Binance-Will-Support-the-hiveblocks-HIVE-Theta_Network-THETA-and-Filecoin-FIL-Network-Upgrades-amp-Hard-Forks",
+      "pubDate": "2021-06-29T11:11:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "FIL",
+        "THETA"
+      ]
+    },
+    {
+      "title": "Erik Voorhees Bets on Ethereum DEXs, THORChain",
+      "link": "https://cryptopanic.com/news/12223891/Erik-Voorhees-Bets-on-Ethereum-DEXs-THORChain",
+      "pubDate": "2021-06-29T11:08:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Erik Voorhees, a prominent figure in the cryptocurrency space, is expressing strong support for decentralized exchanges (DEXs) on the Ethereum blockchain and THORChain. His endorsement highlights the growing importance of decentralized trading platforms in the crypto ecosystem, emphasizing their potential to offer more user control and security compared to traditional exchanges.",
+      "currencies": [
+        "ETH",
+        "RUNE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Cash ABC Rebrand to eCash (XEC) on July 1 to Be Supported by Binance",
+      "link": "https://cryptopanic.com/news/12223901/Bitcoin-Cash-ABC-Rebrand-to-eCash-XEC-on-July-1-to-Be-Supported-by-Binance",
+      "pubDate": "2021-06-29T11:05:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Binance has announced that it will support the rebrand of Bitcoin Cash ABC to eCash (XEC) and its redenomination plan of 1 BCHA:1 million XEC",
+      "currencies": [
+        "BCH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "key fed officer for supervision Quarles sounds very bullish towards stablecoins, believing they can be regulated op…",
+      "link": "https://cryptopanic.com/news/12223680/key-fed-officer-for-supervision-Quarles-sounds-very-bullish-towards-stablecoins-believing-they-can-be-regulated-op",
+      "pubDate": "2021-06-29T09:50:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XWC"
+      ]
+    },
+    {
+      "title": "Ethereum’s institutional outflows hit record US$50M, CoinShares data says",
+      "link": "https://cryptopanic.com/news/cardano/12223506/Ethereums-institutional-outflows-hit-record-US50M-CoinShares-data-says",
+      "pubDate": "2021-06-29T08:38:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum is bearing the brunt of negative sentiment on crypto, with net outflows from institutional products related to the token hitting a record of US$50 million last week.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @MintClubPro: Mint Club Pre-sign up finished with huge success! #MintClub #MINT #BinanceSmartChain",
+      "link": "https://cryptopanic.com/news/12228662/RT-MintClubPro-Mint-Club-Pre-sign-up-finished-with-huge-success-MintClub-MINT-BinanceSmartChain",
+      "pubDate": "2021-06-29T08:10:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "HUNT"
+      ]
+    },
+    {
+      "title": "Compound Finance to Launch DeFi Treasury for Institutions",
+      "link": "https://cryptopanic.com/news/12220883/Compound-Finance-to-Launch-DeFi-Treasury-for-Institutions",
+      "pubDate": "2021-06-29T06:32:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The Compound decentralized finance (DeFi) lending platform has announced a treasury product for businesses and institutions. The post Compound Finance to Launch DeFi Treasury for Institutions appeared first on BeInCrypto.",
+      "currencies": [
+        "COMP"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Institutional Demand for Bitcoin and Ethereum Runs Out of Steam on Grayscale: Analysis",
+      "link": "https://cryptopanic.com/news/ethereum/12220144/Institutional-Demand-for-Bitcoin-and-Ethereum-Runs-Out-of-Steam-on-Grayscale-Analysis",
+      "pubDate": "2021-06-29T06:08:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The primary catalyst for the 2021 crypto market bull run appears to be running out of steam as institutional demand for Bitcoin-related investment products slows down.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @climbingK: Korean pear on#TADAfresh! We have opened a connection of Korean product and its first batch is almost sold out! Team will br…",
+      "link": "https://cryptopanic.com/news/12221251/RT-climbingK-Korean-pear-onTADAfresh-We-have-opened-a-connection-of-Korean-product-and-its-first-batch-is-almost-sold-out-Team-will-br",
+      "pubDate": "2021-06-29T05:23:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "MVL"
+      ]
+    },
+    {
+      "title": "Institutions turn bearish on ETH as record $50M exits Ether investment products",
+      "link": "https://cryptopanic.com/news/ethereum/12218991/Institutions-turn-bearish-on-ETH-as-record-50M-exits-Ether-investment-products",
+      "pubDate": "2021-06-29T05:03:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ether investment products have suffered record outflows this past week, while Bitcoin flows have begun to stabilize.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 11
+      }
+    },
+    {
+      "title": "inSure #DeFi launches Liquidity Mining Program with +5% $SURE in Monthly Rewards! We continue incentivizing our loy…",
+      "link": "https://cryptopanic.com/news/12223373/inSure-DeFi-launches-Liquidity-Mining-Program-with-5-SURE-in-Monthly-Rewards-We-continue-incentivizing-our-loy",
+      "pubDate": "2021-06-29T04:29:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SURE"
+      ]
+    },
+    {
+      "title": "From Aave to Yearn: These Are DeFi's Blue-Chip Tokens",
+      "link": "https://cryptopanic.com/news/12218860/From-Aave-to-Yearn-These-Are-DeFis-Blue-Chip-Tokens",
+      "pubDate": "2021-06-29T03:26:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "As the DeFi space grows, so do rug pulls and scams. Decrypt has identified the DeFi projects that have the best reputation and investor trust—for now.",
+      "currencies": [
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 4
+      }
+    },
+    {
+      "title": "TA: Bitcoin Stuck Near $35K, What Could Trigger A Strong Rally",
+      "link": "https://cryptopanic.com/news/near/12218838/TA-Bitcoin-Stuck-Near-35K-What-Could-Trigger-A-Strong-Rally",
+      "pubDate": "2021-06-29T03:08:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin price climbed higher and it settled above the $34,000 level against the US Dollar. BTC is likely to continue higher if it settles above $35,000 in the near term. Bitcoin started a fresh increase above the $33,500 and $34,000 resistance levels. The price is now trading nicely above $34,000 and the 100 hourly simple […]",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Ankr’s StakeFi launches Avalanche (AVAX) Staking and Bonds",
+      "link": "https://cryptopanic.com/news/12218794/Ankrs-StakeFi-launches-Avalanche-AVAX-Staking-and-Bonds",
+      "pubDate": "2021-06-29T02:43:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Following the launch of ETH2 Internet Bonds a few months ago, StakeFi, Ankr’s Internet Bond launchpad, has announced the launch of the Avalanche Bond (aAVAXb), wrapped under an ERC-20 token. StakeFi will enable any user holding AVAX tokens on the Avalanche network to stake and receive the AVAX Internet Bond (aAVAXb) in exchange, either on […]",
+      "currencies": [
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Dogecoin (DOGE) developer proposes 50x reduction in fees, wins Elon Musk approval",
+      "link": "https://cryptopanic.com/news/dogecoin/12218640/Dogecoin-DOGE-developer-proposes-50x-reduction-in-fees-wins-Elon-Musk-approval",
+      "pubDate": "2021-06-29T01:00:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Developer Ross Nichol is publicizing plans to reform the fee policy on controversial meme token Dogecoin.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 24
+      }
+    }
+  ]
+}

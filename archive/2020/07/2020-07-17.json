@@ -1,0 +1,25 @@
+{
+  "date": "2020-07-17",
+  "fetchedAt": "2026-02-05T07:27:06.942Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA Readying for Chrysalis Phase 1; Hornet, Pollen, and IRI Updated",
+      "link": "https://cryptopanic.com/news/9385245/IOTA-Readying-for-Chrysalis-Phase-1-Hornet-Pollen-and-IRI-Updated",
+      "pubDate": "2020-07-17T18:00:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

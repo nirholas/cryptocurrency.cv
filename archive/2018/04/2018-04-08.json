@@ -1,0 +1,25 @@
+{
+  "date": "2018-04-08",
+  "fetchedAt": "2026-02-05T07:27:06.961Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Japan on the Verge of Legalizing Initial Coin Offerings (ICOs)",
+      "link": "https://cryptopanic.com/news/1599068/Japan-on-the-Verge-of-Legalizing-Initial-Coin-Offerings-ICOs",
+      "pubDate": "2018-04-08T06:00:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XVG"
+      ],
+      "votes": {
+        "positive": 21,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

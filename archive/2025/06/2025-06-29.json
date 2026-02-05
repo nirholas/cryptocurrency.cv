@@ -1,0 +1,135 @@
+{
+  "date": "2025-06-29",
+  "fetchedAt": "2026-02-05T07:27:08.674Z",
+  "articleCount": 9,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin aims for highest weekly close: Will HYPE, BCH, LINK, and SEI follow?",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22914509/Bitcoin-aims-for-highest-weekly-close-Will-HYPE-BCH-LINK-and-SEI-follow",
+      "pubDate": "2025-06-29T21:21:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH",
+        "HYPE"
+      ]
+    },
+    {
+      "title": "Vitalik Buterin says pluralistic ZK digital IDs are the ‘best realistic solution’ to preserve privacy",
+      "link": "https://cryptopanic.com/news/ethereum/22914060/Vitalik-Buterin-says-pluralistic-ZK-digital-IDs-are-the-best-realistic-solution-to-preserve-privacy",
+      "pubDate": "2025-06-29T20:30:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum co-founder Vitalik Buterin believes that one-per-person digital ID systems, despite using zero-knowledge proofs (ZK proofs), carry risks to privacy. ZK proof wrapped IDs offered by World ID (formerly Worldcoin) using biometric data and ZK proofs have been gaining traction, recently crossing 10 million users.",
+      "currencies": [
+        "ETH",
+        "WLD",
+        "ZK"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Binance to Update Collateral Ratios for Portfolio Margin Assets",
+      "link": "https://cryptopanic.com/news/thorchain/22911441/Binance-to-Update-Collateral-Ratios-for-Portfolio-Margin-Assets",
+      "pubDate": "2025-06-29T14:48:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "CAKE",
+        "CRV",
+        "OP"
+      ]
+    },
+    {
+      "title": "Litecoin Coils for a Breakout — But Will It Pop or Fizzle?",
+      "link": "https://cryptopanic.com/news/litecoin/22910871/Litecoin-Coils-for-a-Breakout-But-Will-It-Pop-or-Fizzle",
+      "pubDate": "2025-06-29T14:14:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ]
+    },
+    {
+      "title": "'Unfortunate': Solana Co-Founder Reacts to Polkadot's Downfall",
+      "link": "https://cryptopanic.com/news/polkadot/22909020/Unfortunate-Solana-Co-Founder-Reacts-to-Polkadots-Downfall",
+      "pubDate": "2025-06-29T11:02:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "DOT"
+      ]
+    },
+    {
+      "title": "Litecoin Could Be ‘Just Weeks Away’ From Third-Ever Golden Cross — Expert",
+      "link": "https://cryptopanic.com/news/litecoin/22910430/Litecoin-Could-Be-Just-Weeks-Away-From-Third-Ever-Golden-Cross-Expert",
+      "pubDate": "2025-06-29T10:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Quant Network (QNT) Review: The Future of Cross-Chain Communication?",
+      "link": "https://cryptopanic.com/news/quant-network/22906828/Quant-Network-QNT-Review-The-Future-of-Cross-Chain-Communication",
+      "pubDate": "2025-06-29T09:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QNT"
+      ]
+    },
+    {
+      "title": "Uniswap Card's Data Collection Practices Highlighted",
+      "link": "https://cryptopanic.com/news/uniswap/22908466/Uniswap-Cards-Data-Collection-Practices-Highlighted",
+      "pubDate": "2025-06-29T08:33:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "IP"
+      ]
+    },
+    {
+      "title": "Polkadot’s ecosystem decay and DOT’s collapse – Is this the end of the road?",
+      "link": "https://cryptopanic.com/news/polkadot/22902368/Polkadots-ecosystem-decay-and-DOTs-collapse-Is-this-the-end-of-the-road",
+      "pubDate": "2025-06-29T00:00:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

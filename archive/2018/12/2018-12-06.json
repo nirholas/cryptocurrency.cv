@@ -1,0 +1,41 @@
+{
+  "date": "2018-12-06",
+  "fetchedAt": "2026-02-05T07:27:07.891Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "BitGo Multi Signature Wallet Announces Support for Stellar Lumens",
+      "link": "https://cryptopanic.com/news/stellar/3897730/BitGo-Multi-Signature-Wallet-Announces-Support-for-Stellar-Lumens",
+      "pubDate": "2018-12-06T15:29:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "This is huge!!! EOSETH, EOSBTC, EOSUSDT coming on Betdice plus lots of other improvements.",
+      "link": "https://cryptopanic.com/news/3892803/This-is-huge-EOSETH-EOSBTC-EOSUSDT-coming-on-Betdice-plus-lots-of-other-improvements",
+      "pubDate": "2018-12-06T03:40:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 9
+      }
+    }
+  ]
+}

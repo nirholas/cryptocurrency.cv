@@ -1,0 +1,26 @@
+{
+  "date": "2018-04-16",
+  "fetchedAt": "2026-02-05T07:27:06.961Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "The Best Cryptos for the Week of Apr. 16, 2018 (HIRE, KMD, XRP, UTK, and XVG)",
+      "link": "https://cryptopanic.com/news/1672653/The-Best-Cryptos-for-the-Week-of-Apr-16-2018-HIRE-KMD-XRP-UTK-and-XVG",
+      "pubDate": "2018-04-16T10:00:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XVG"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2017-11-13",
+  "fetchedAt": "2026-02-05T07:27:06.817Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Cash Hard Forks In Bid to Ease Mining Difficulties",
+      "link": "https://cryptopanic.com/news/443996/Bitcoin-Cash-Hard-Forks-In-Bid-to-Ease-Mining-Difficulties",
+      "pubDate": "2017-11-13T22:30:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    }
+  ]
+}

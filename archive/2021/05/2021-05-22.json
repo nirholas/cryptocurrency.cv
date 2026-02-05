@@ -1,0 +1,262 @@
+{
+  "date": "2021-05-22",
+  "fetchedAt": "2026-02-05T07:27:06.874Z",
+  "articleCount": 17,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "THETA, Aave, EOS Price Analysis: 22 May",
+      "link": "https://cryptopanic.com/news/theta-token/11985055/THETA-Aave-EOS-Price-Analysis-22-May",
+      "pubDate": "2021-05-22T21:00:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "AAVE",
+        "EOS"
+      ]
+    },
+    {
+      "title": "XRP lawsuit: Will the court compel Ripple to disclose legal advice docs?",
+      "link": "https://cryptopanic.com/news/ripple/11985008/XRP-lawsuit-Will-the-court-compel-Ripple-to-disclose-legal-advice-docs",
+      "pubDate": "2021-05-22T18:33:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The SEC v. Ripple lawsuit has been gaining recognition from people outside the crypto-space lately. Judge Netburn ruled this week that the SEC could continue sending out requests to foreign governments seeking Ripple’s documents from business partners. In the latest developments, the issue presented in Friday’s hearing was whether or not the SEC could get […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano (ADA) Claims Fourth Spot as Binance Coin (BNB) Slips",
+      "link": "https://cryptopanic.com/news/11984955/Cardano-ADA-Claims-Fourth-Spot-as-Binance-Coin-BNB-Slips",
+      "pubDate": "2021-05-22T16:47:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano (ADA) has climbed to fourth spot, overtaking Binance Coin (BNB)",
+      "currencies": [
+        "BNB",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 88,
+        "negative": 7
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "STP 11 is now live. Come vote!",
+      "link": "https://cryptopanic.com/news/11985385/STP-11-is-now-live-Come-vote",
+      "pubDate": "2021-05-22T16:30:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTCST"
+      ]
+    },
+    {
+      "title": "Restorative Rebase 🧙‍️is now in effect for τDoge. See details here",
+      "link": "https://cryptopanic.com/news/11985386/Restorative-Rebase-is-now-in-effect-for-Doge-See-details-here",
+      "pubDate": "2021-05-22T16:12:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTCST"
+      ]
+    },
+    {
+      "title": "Here’s one major reason why MATIC has withstood current market volatility",
+      "link": "https://cryptopanic.com/news/matic-network/11984942/Heres-one-major-reason-why-MATIC-has-withstood-current-market-volatility",
+      "pubDate": "2021-05-22T16:00:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Although Bitcoin [BTC] faces rough tides in the crypto market, the altcoin MATIC has been holding strong. Before the market crashed, MATIC’s price surged by 274%, from $0.76 to $2.87. However, given Bitcoin’s correlation with the altcoins, MATIC collapsed by 64% and its value dropped to $1.01. Despite this drop, the token was quick to recover, […]",
+      "currencies": [
+        "BTC",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 45,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "1/ Join top teams in the Substrate Polkadot ecosystem to discuss: Building a Substrate Standalone Chain vs a Polkad…",
+      "link": "https://cryptopanic.com/news/11987054/1-Join-top-teams-in-the-Substrate-Polkadot-ecosystem-to-discuss-Building-a-Substrate-Standalone-Chain-vs-a-Polkad",
+      "pubDate": "2021-05-22T15:37:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "DOT",
+        "REEF"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Checkout this awesome app for blogging on @safenetworktech! We want to hear about what you’re building too.…",
+      "link": "https://cryptopanic.com/news/11986528/Checkout-this-awesome-app-for-blogging-on-safenetworktech-We-want-to-hear-about-what-youre-building-too",
+      "pubDate": "2021-05-22T14:42:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "Everything you need to know about Binance Coin’s trump card",
+      "link": "https://cryptopanic.com/news/11984896/Everything-you-need-to-know-about-Binance-Coins-trump-card",
+      "pubDate": "2021-05-22T14:00:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "The collective cryptocurrency market is in a state of freefall again. Certain assets are tumbling at an excess of 50% from their all-time high. During such a market dilemma, the age-old question arises from an investment standpoint: which coins should I invest in? While the popularity votes always lean towards Bitcoin and Ethereum, 2021 has […]",
+      "currencies": [
+        "BTC",
+        "BNB"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Red Bull Racing Partners with Tezos Blockchain for NFT Collection",
+      "link": "https://cryptopanic.com/news/11984792/Red-Bull-Racing-Partners-with-Tezos-Blockchain-for-NFT-Collection",
+      "pubDate": "2021-05-22T10:33:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "Red Bull Racing is becoming the latest Formula One (F1) to get in on the crypto space. As they forge a new partnership with blockchain network Tezos, they have also announced a new collection of NFTs.",
+      "currencies": [
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple, Coinbase and a Bunch of Other Top Exchanges Move 64 Million XRP",
+      "link": "https://cryptopanic.com/news/ripple/11984439/Ripple-Coinbase-and-a-Bunch-of-Other-Top-Exchanges-Move-64-Million-XRP",
+      "pubDate": "2021-05-22T07:33:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Data provided by a popular blockchain sleuth shows that Ripple and several top-tier exchanges led by Coinbase have recently transferred an amount close to 64 million XRP",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 10
+      }
+    },
+    {
+      "title": "The market is volatile, but here at $AERGO, we are focusing on our big projects this year: DTT Alliance (Consortiu…",
+      "link": "https://cryptopanic.com/news/11985245/The-market-is-volatile-but-here-at-AERGO-we-are-focusing-on-our-big-projects-this-year-DTT-Alliance-Consortiu",
+      "pubDate": "2021-05-22T06:37:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "RT @btsfav: #DeFinitely 57 - The News in #DeFi",
+      "link": "https://cryptopanic.com/news/11984004/RT-btsfav-DeFinitely-57-The-News-in-DeFi",
+      "pubDate": "2021-05-22T06:05:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "To further demonstrate #BTCST's priority on hashrate stability, community vote ️ STP 11 is coming to ensure that…",
+      "link": "https://cryptopanic.com/news/11981001/To-further-demonstrate-BTCSTs-priority-on-hashrate-stability-community-vote-STP-11-is-coming-to-ensure-that",
+      "pubDate": "2021-05-22T05:18:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTCST"
+      ]
+    },
+    {
+      "title": "Ex-Ripple exec Jed McCaleb dumped over $310 million in XRP this month",
+      "link": "https://cryptopanic.com/news/ripple/11980636/Ex-Ripple-exec-Jed-McCaleb-dumped-over-310-million-in-XRP-this-month",
+      "pubDate": "2021-05-22T04:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Jed McCaleb, former CTO and co-founder of payment network Ripple (XRP) and current CEO of Stellar (XLM), has sold roughly 275 million XRP since early May as part of his daily “dumping.” The great XRP dump According to blockchain explorer XRPScan, McCaleb received just over 442 million XRP from Ripple on May 2.",
+      "currencies": [
+        "XRP",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 36
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Received attractive listing offers for the GTN token from, a dozen of the top exchanges. Thanking all of them for r…",
+      "link": "https://cryptopanic.com/news/11982198/Received-attractive-listing-offers-for-the-GTN-token-from-a-dozen-of-the-top-exchanges-Thanking-all-of-them-for-r",
+      "pubDate": "2021-05-22T02:10:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Ripple Co-Founder Jed McCaled Cashed Out 265 Million XRP So Far This Month",
+      "link": "https://cryptopanic.com/news/ripple/11980582/Ripple-Co-Founder-Jed-McCaled-Cashed-Out-265-Million-XRP-So-Far-This-Month",
+      "pubDate": "2021-05-22T00:19:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Jed McCaleb, one of the co-founders of fintech firm Ripple, has sold an estimated 265 million XRP so far this month, and still has around 389 million XRP tokens on his ‘~tacostand’ account, according to XRPScan. McCaleb is said to have started working on Ripple back in 2011, and was part of its founding team […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

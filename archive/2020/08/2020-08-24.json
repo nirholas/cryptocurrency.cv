@@ -1,0 +1,43 @@
+{
+  "date": "2020-08-24",
+  "fetchedAt": "2026-02-05T07:27:06.863Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "VeChain (VET) Adopted by NSF International for COVID-19 Safety Certification",
+      "link": "https://cryptopanic.com/news/9769949/VeChain-VET-Adopted-by-NSF-International-for-COVID-19-Safety-Certification",
+      "pubDate": "2020-08-24T18:07:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polkadot vs Ethereum Price Prediction: How High Can DOT and ETH Go? | Token Metrics Live Stream",
+      "link": "https://cryptopanic.com/news/polkadot/9761682/Polkadot-vs-Ethereum-Price-Prediction-How-High-Can-DOT-and-ETH-Go-Token-Metrics-Live-Stream",
+      "pubDate": "2020-08-24T01:46:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

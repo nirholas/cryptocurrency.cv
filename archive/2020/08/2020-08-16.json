@@ -1,0 +1,47 @@
+{
+  "date": "2020-08-16",
+  "fetchedAt": "2026-02-05T07:27:06.668Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "WBTC Are Being Tokenized on Ethereum Faster Than Bitcoin is Mined",
+      "link": "https://cryptopanic.com/news/9693211/WBTC-Are-Being-Tokenized-on-Ethereum-Faster-Than-Bitcoin-is-Mined",
+      "pubDate": "2020-08-16T20:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "WBTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Market Watch: LINK Records $20 ATH While Bitcoin Stuck Below The $12K Resistance",
+      "link": "https://cryptopanic.com/news/9689500/Market-Watch-LINK-Records-20-ATH-While-Bitcoin-Stuck-Below-The-12K-Resistance",
+      "pubDate": "2020-08-16T08:00:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX",
+        "LINK",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

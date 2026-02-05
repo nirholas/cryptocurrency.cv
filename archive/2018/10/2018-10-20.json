@@ -1,0 +1,26 @@
+{
+  "date": "2018-10-20",
+  "fetchedAt": "2026-02-05T07:27:06.999Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tron’s Project Atlas Aims High With Plans to Usher in a New Internet",
+      "link": "https://cryptopanic.com/news/tron/3405520/Trons-Project-Atlas-Aims-High-With-Plans-to-Usher-in-a-New-Internet",
+      "pubDate": "2018-10-20T16:19:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

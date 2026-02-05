@@ -1,0 +1,26 @@
+{
+  "date": "2018-01-29",
+  "fetchedAt": "2026-02-05T07:27:06.948Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Top Coins for the Week Beginning Jan 29 (ICX, STRAT, NEO, TNC, DBC, and XRB)",
+      "link": "https://cryptopanic.com/news/926036/Top-Coins-for-the-Week-Beginning-Jan-29-ICX-STRAT-NEO-TNC-DBC-and-XRB",
+      "pubDate": "2018-01-29T19:15:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO",
+        "XNO"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "date": "2019-03-20",
+  "fetchedAt": "2026-02-05T07:27:06.991Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @MyCryptoStats: Woohoo! @stakeshare StakeShare $SSX has just been added to #MCS. Check it out at #crypto #BTC #…",
+      "link": "https://cryptopanic.com/news/11330475/RT-MyCryptoStats-Woohoo-stakeshare-StakeShare-SSX-has-just-been-added-to-MCS-Check-it-out-at-crypto-BTC",
+      "pubDate": "2019-03-20T17:04:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "SSX"
+      ]
+    },
+    {
+      "title": "comming soon #swap for $npc in #cryptoexchange @Escodex and you can buy #masternodes for you financial freedom",
+      "link": "https://cryptopanic.com/news/11446109/comming-soon-swap-for-npc-in-cryptoexchange-Escodex-and-you-can-buy-masternodes-for-you-financial-freedom?mtm_campaign=API-OFA",
+      "pubDate": "2019-03-20T12:50:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "NPC"
+      ]
+    }
+  ]
+}

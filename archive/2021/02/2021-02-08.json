@@ -1,0 +1,281 @@
+{
+  "date": "2021-02-08",
+  "fetchedAt": "2026-02-05T07:27:06.935Z",
+  "articleCount": 19,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "We would be freaked out, but we’re building @safenetworktech to solve problems like this w/ true #data ownership, p…",
+      "link": "https://cryptopanic.com/news/11463942/We-would-be-freaked-out-but-were-building-safenetworktech-to-solve-problems-like-this-w-true-data-ownership-p",
+      "pubDate": "2021-02-08T22:05:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "Introducing IOTA Oracles",
+      "link": "https://cryptopanic.com/news/11461341/Introducing-IOTA-Oracles",
+      "pubDate": "2021-02-08T20:53:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Oracles are an exciting frontier in the world of distributed ledger technology. They are designed to securely bridge between the digital and the physical world in a decentralized, permissionless way. As IOTA expands, it’s important that the proper tooling is available to support organizations and engineers looking to bring",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 34,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DOGE is 'not a bad look' for crypto users, says Mark Cuban as price surges another 8%",
+      "link": "https://cryptopanic.com/news/dogecoin/11461322/DOGE-is-not-a-bad-look-for-crypto-users-says-Mark-Cuban-as-price-surges-another-8",
+      "pubDate": "2021-02-08T20:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The billionaire described the token as “the lowest cost economics teaching tool available” on the market.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Today let's take a look at the upcoming MarketSquare Hubs. A simple way to connect with, learn about, and follow your favorite projects.",
+      "link": "https://cryptopanic.com/news/11461545/Today-lets-take-a-look-at-the-upcoming-MarketSquare-Hubs-A-simple-way-to-connect-with-learn-about-and-follow-your-favorite-projects",
+      "pubDate": "2021-02-08T18:27:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Why Ark is heavily undervalued",
+      "link": "https://cryptopanic.com/news/11460943/Why-Ark-is-heavily-undervalued",
+      "pubDate": "2021-02-08T17:02:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Cardano (ADA) Skyrockets As Ethereum Gas Fees Shoot to New Highs",
+      "link": "https://cryptopanic.com/news/polkadot/11460990/Cardano-ADA-Skyrockets-As-Ethereum-Gas-Fees-Shoot-to-New-Highs",
+      "pubDate": "2021-02-08T17:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "One of ADA’s largest one-day gain, 20%, was witnessed yesterday, where it broke the strong critical level of $0.50. Today, ADA is trading at $0.68 with a market cap of $21.7 billion at the time of writing. Just the Beginning? Cardano has gained an audience as one of the top-performing altcoins in 2021. Its priceRead More",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @SotRos25: Who thinks @BittrexExchange should relist $MAID? Would you start using this exchange again if they did? (Note: MAID is curren…",
+      "link": "https://cryptopanic.com/news/11463944/RT-SotRos25-Who-thinks-BittrexExchange-should-relist-MAID-Would-you-start-using-this-exchange-again-if-they-did-Note-MAID-is-curren",
+      "pubDate": "2021-02-08T15:01:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "RT @btsfav: If you have problems with #Binance go to #FTX #bitcoin",
+      "link": "https://cryptopanic.com/news/11464838/RT-btsfav-If-you-have-problems-with-Binance-go-to-FTX-bitcoin",
+      "pubDate": "2021-02-08T14:06:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "Tesla Reveals $1.5 Billion Bitcoin Investment, Enables BTC Payments",
+      "link": "https://cryptopanic.com/news/dogecoin/11460517/Tesla-Reveals-15-Billion-Bitcoin-Investment-Enables-BTC-Payments",
+      "pubDate": "2021-02-08T13:30:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Tesla disclosed a $1.5 billion Bitcoin investment made in January and enabled BTC payments. Tesla Dips its Toes in Bitcoin In one of the most significant pieces of Bitcoin news of the year, Tesla has finally disclosed its Bitcoin investment worth $1.5 billion. An SEC filing revealed that Tesla made the BTC investment in January as a part of their “alternative reserve assets” investment...",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 29,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano Now Fourth Biggest Crypto, Overtaking Ripple",
+      "link": "https://cryptopanic.com/news/polkadot/11460191/Cardano-Now-Fourth-Biggest-Crypto-Overtaking-Ripple",
+      "pubDate": "2021-02-08T10:47:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "A bullish week for Cardano has pushed its market cap to $21 billion, making it the fourth-largest cryptocurrency. Green Candles for Cardano Cardano’s ADA currency rallied over 90% last week, briefly hitting a high of $0.70 Sunday. It’s now trading at $0.66, which puts its market cap at $21.1 billion. Source: TradingView It’s become the fourth-largest cryptocurrency by market...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 25,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto exchange legislation will benefit the exchanges, crypto promoters and crypto exchange users. These laws shou…",
+      "link": "https://cryptopanic.com/news/11463464/Crypto-exchange-legislation-will-benefit-the-exchanges-crypto-promoters-and-crypto-exchange-users-These-laws-shou",
+      "pubDate": "2021-02-08T09:25:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "[ARK Weekly Discussion Thread] - February 08, 2021",
+      "link": "https://cryptopanic.com/news/11496667/ARK-Weekly-Discussion-Thread-February-08-2021",
+      "pubDate": "2021-02-08T09:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Elon Musk Shills Dogecoin, Because He’s Late to Bitcoin Party: Peter Schiff",
+      "link": "https://cryptopanic.com/news/dogecoin/11460050/Elon-Musk-Shills-Dogecoin-Because-Hes-Late-to-Bitcoin-Party-Peter-Schiff",
+      "pubDate": "2021-02-08T08:55:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Vocal Bitcoin hater claims that at the moment Dogecoin is playing the role of the leading crypto better than Bitcoin thanks to Elon Musk, the biggest public DOGE fan",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "#JoeBiden has entered the #White_House while promising USD 1.9 billion financial assistance for #Coronavirus pand…",
+      "link": "https://cryptopanic.com/news/11462843/JoeBiden-has-entered-the-White_House-while-promising-USD-19-billion-financial-assistance-for-Coronavirus-pand",
+      "pubDate": "2021-02-08T08:32:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "Sushiswap Enables 300% APR Reward for New Yearn Finance Vault",
+      "link": "https://cryptopanic.com/news/11459994/Sushiswap-Enables-300-APR-Reward-for-New-Yearn-Finance-Vault",
+      "pubDate": "2021-02-08T08:07:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The highest yielding pool on Sushiswap leverages the extra returns from a new Yearn Finance vault, locking Curve Finance’s governance token forever. Yearn Finance Rewards Come at a Cost The partnership between Yearn and Sushiswap has enabled lucrative SUSHI rewards for the liquidity provider (LP) token of the new pool, yveCRV. The entire process involves three DeFi platforms:...",
+      "currencies": [
+        "BTC",
+        "CRV",
+        "COMP",
+        "YFI",
+        "SUSHI"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @TomoChainStatus: There is an issue with TomoScan's database. It will take around two weeks to crawl the chain data. TomoScan will not s…",
+      "link": "https://cryptopanic.com/news/11465022/RT-TomoChainStatus-There-is-an-issue-with-TomoScans-database-It-will-take-around-two-weeks-to-crawl-the-chain-data-TomoScan-will-not-s",
+      "pubDate": "2021-02-08T08:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "SOMESING signs MOU with Milk Partners to expand its blockchain business",
+      "link": "https://cryptopanic.com/news/11459428/SOMESING-signs-MOU-with-Milk-Partners-to-expand-its-blockchain-business",
+      "pubDate": "2021-02-08T06:34:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SSX"
+      ]
+    },
+    {
+      "title": "MovieBloc Online Q&amp;A Event, prize pool $500USD",
+      "link": "https://cryptopanic.com/news/11459112/MovieBloc-Online-QampA-Event-prize-pool-500USD",
+      "pubDate": "2021-02-08T05:41:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MBL"
+      ]
+    },
+    {
+      "title": "RT @LuaSwap: Almost $800k trading volume (Ethereum version only) during the weekend and 4,000 followers on Twitter. What a great start to…",
+      "link": "https://cryptopanic.com/news/11459646/RT-LuaSwap-Almost-800k-trading-volume-Ethereum-version-only-during-the-weekend-and-4000-followers-on-Twitter-What-a-great-start-to",
+      "pubDate": "2021-02-08T03:48:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    }
+  ]
+}

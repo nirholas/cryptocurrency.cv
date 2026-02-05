@@ -1,0 +1,37 @@
+{
+  "date": "2018-08-29",
+  "fetchedAt": "2026-02-05T07:27:06.986Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "EOS Price Is the Big Winner Among Large Cap Cryptocurrencies",
+      "link": "https://cryptopanic.com/news/3002435/EOS-Price-Is-the-Big-Winner-Among-Large-Cap-Cryptocurrencies",
+      "pubDate": "2018-08-29T14:54:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Great article by @ankitagg2302 explaining $MCT #NEO #SmartEconomy",
+      "link": "https://cryptopanic.com/news/3056009/Great-article-by-ankitagg2302-explaining-MCT-NEO-SmartEconomy",
+      "pubDate": "2018-08-29T12:31:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MCT"
+      ]
+    }
+  ]
+}

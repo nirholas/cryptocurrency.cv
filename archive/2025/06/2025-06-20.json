@@ -1,0 +1,659 @@
+{
+  "date": "2025-06-20",
+  "fetchedAt": "2026-02-05T07:27:08.675Z",
+  "articleCount": 46,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Analysts slap over 90% chance of approval on altcoin ETFs including XRP and Litecoin following SEC's engagement",
+      "link": "https://cryptopanic.com/news/litecoin/22729036/Analysts-slap-over-90-chance-of-approval-on-altcoin-ETFs-including-XRP-and-Litecoin-following-SECs-engagement",
+      "pubDate": "2025-06-20T22:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "LTC"
+      ]
+    },
+    {
+      "title": "XRP joins Solana and Litecoin in top ETF approval tier",
+      "link": "https://cryptopanic.com/news/ripple/22717470/XRP-joins-Solana-and-Litecoin-in-top-ETF-approval-tier",
+      "pubDate": "2025-06-20T21:54:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "XRP has moved into the top tier of ETF approval prospects, next to Litecoin and Solana, as industry experts now see a 95% chance that the SEC will authorize a spot ETF tied to the fourth-largest crypto asset. Bloomberg ETF analysts James Seyffart and Eric Balchunas have lifted their approval odds for multiple spot crypto ETFs to 90% or above this year due to a growing dialogue between issuers and the SEC. https://twitter. com/JSeyff/status/1936117896347803748Spot XRP ETFs, which previously saw a",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Analysts Believe These Altcoin ETFs Have a 90% Chance of Approval",
+      "link": "https://cryptopanic.com/news/polkadot/22718240/Analysts-Believe-These-Altcoin-ETFs-Have-a-90-Chance-of-Approval",
+      "pubDate": "2025-06-20T21:38:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Uniswap, Morpho and others collaborate on Web3SOC, a framework for determining a DeFi project’s ‘readiness for institutional partnerships’",
+      "link": "https://cryptopanic.com/news/uniswap/22717135/Uniswap-Morpho-and-others-collaborate-on-Web3SOC-a-framework-for-determining-a-DeFi-projects-readiness-for-institutional-partnerships",
+      "pubDate": "2025-06-20T21:12:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI",
+        "PEOPLE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Onchain Gold Trading Volume Hits Record High",
+      "link": "https://cryptopanic.com/news/pax-gold/22716582/Onchain-Gold-Trading-Volume-Hits-Record-High",
+      "pubDate": "2025-06-20T20:51:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PAXG"
+      ]
+    },
+    {
+      "title": "Solana’s price run might stall as ETH gains institutional favor",
+      "link": "https://cryptopanic.com/news/ethereum/22716579/Solanas-price-run-might-stall-as-ETH-gains-institutional-favor",
+      "pubDate": "2025-06-20T20:44:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Solana’s price run might stall as ETH gains institutional favor",
+      "currencies": [
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "US crypto ETF approval odds surge to ‘90% or higher’ — Bloomberg analysts",
+      "link": "https://cryptopanic.com/news/litecoin/22715602/US-crypto-ETF-approval-odds-surge-to-90-or-higher-Bloomberg-analysts",
+      "pubDate": "2025-06-20T19:24:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "DOGE"
+      ]
+    },
+    {
+      "title": "Filecoin is building the 'Airbnb for file storage', says exec",
+      "link": "https://cryptopanic.com/news/filecoin/22715421/Filecoin-is-building-the-Airbnb-for-file-storage-says-exec",
+      "pubDate": "2025-06-20T19:13:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "Cardano and NEAR Face Downtrend and Unstaked Emerges as AI’s Layer-0 Powerhouse",
+      "link": "https://cryptopanic.com/news/near/22714706/Cardano-and-NEAR-Face-Downtrend-and-Unstaked-Emerges-as-AIs-Layer-0-Powerhouse",
+      "pubDate": "2025-06-20T19:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Bitcoin Cools, But Forks Are on Fire as BCH and BSV Torch the Charts: Analysis",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22714544/Bitcoin-Cools-But-Forks-Are-on-Fire-as-BCH-and-BSV-Torch-the-Charts-Analysis",
+      "pubDate": "2025-06-20T18:25:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH",
+        "BSV"
+      ]
+    },
+    {
+      "title": "Price predictions 6/20: BTC, ETH, XRP, BNB, SOL, DOGE, ADA, HYPE, BCH, SUI",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22714473/Price-predictions-620-BTC-ETH-XRP-BNB-SOL-DOGE-ADA-HYPE-BCH-SUI",
+      "pubDate": "2025-06-20T18:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "What Crypto Whales are Buying Amid Geopolitical Tensions",
+      "link": "https://cryptopanic.com/news/litecoin/22714656/What-Crypto-Whales-are-Buying-Amid-Geopolitical-Tensions",
+      "pubDate": "2025-06-20T17:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DOGE",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Gas, blobs and EIPs: Fusaka to boost Ethereum’s performance",
+      "link": "https://cryptopanic.com/news/ethereum/22713490/Gas-blobs-and-EIPs-Fusaka-to-boost-Ethereums-performance",
+      "pubDate": "2025-06-20T17:02:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Upcoming Ethereum fork is shaping up as a focused, low-risk upgrade to tighten execution-layer performance",
+      "currencies": [
+        "ETH",
+        "DEFI"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Tokenized Assets ‘Expand Participation in Equity’ and Bring Wall Street On-Chain: Exodus",
+      "link": "https://cryptopanic.com/news/algorand/22711208/Tokenized-Assets-Expand-Participation-in-Equity-and-Bring-Wall-Street-On-Chain-Exodus",
+      "pubDate": "2025-06-20T15:47:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Is Ethereum (ETH) The Most Obvious Trade in 2025?",
+      "link": "https://cryptopanic.com/news/ethereum/22711136/Is-Ethereum-ETH-The-Most-Obvious-Trade-in-2025",
+      "pubDate": "2025-06-20T15:31:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "\"The question is not if, but when the next rally starts,\" one analyst claimed.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Upexi CEO and CSO break down their Solana treasury strategy",
+      "link": "https://cryptopanic.com/news/solana/22711057/Upexi-CEO-and-CSO-break-down-their-Solana-treasury-strategy",
+      "pubDate": "2025-06-20T15:17:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Upexi execs discuss their MicroStrategy-style crypto treasury model that's focused solely on Solana.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Bitcoin Cash Surges To $500 As Trading Volume Spikes",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22709695/Bitcoin-Cash-Surges-To-500-As-Trading-Volume-Spikes",
+      "pubDate": "2025-06-20T14:30:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ]
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 21 June 2025: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/decentraland/22712375/Spell-Wallet-Daily-Puzzle-21-June-2025-Earn-Reward-of-1-MANA",
+      "pubDate": "2025-06-20T14:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "From XRP to Solana: Multi-Billion Dollar ETF Wave Set to Reshape Crypto Access This Autumn",
+      "link": "https://cryptopanic.com/news/cardano/22708571/From-XRP-to-Solana-Multi-Billion-Dollar-ETF-Wave-Set-to-Reshape-Crypto-Access-This-Autumn",
+      "pubDate": "2025-06-20T14:02:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "As market optimism heightens in anticipation of the approval of multiple altcoin-based ETFs, the bullish outlook for alternative coins has intensified.",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cantina Introduces Web3SOC Framework for DeFi Project Evaluation",
+      "link": "https://cryptopanic.com/news/uniswap/22709671/Cantina-Introduces-Web3SOC-Framework-for-DeFi-Project-Evaluation",
+      "pubDate": "2025-06-20T13:21:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "HJB MINER launches new high-yield investment opportunities, investors can earn more than $10,000 per day",
+      "link": "https://cryptopanic.com/news/litecoin/22706949/HJB-MINER-launches-new-high-yield-investment-opportunities-investors-can-earn-more-than-10000-per-day",
+      "pubDate": "2025-06-20T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Solana DEX Jupiter suspends DAO voting until 2026 to focus on DeFi growth",
+      "link": "https://cryptopanic.com/news/solana/22706922/Solana-DEX-Jupiter-suspends-DAO-voting-until-2026-to-focus-on-DeFi-growth",
+      "pubDate": "2025-06-20T12:54:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Jupiter exec Kash Dhanda announced a pause on DAO governance voting until 2026, citing the need to prioritize growth and product execution.",
+      "currencies": [
+        "SOL",
+        "DAO",
+        "JUP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin SV (BSV) price forecast: BSV to rally towards $40 amid bullish conditions",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22707143/Bitcoin-SV-BSV-price-forecast-BSV-to-rally-towards-40-amid-bullish-conditions",
+      "pubDate": "2025-06-20T12:46:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH",
+        "BSV"
+      ]
+    },
+    {
+      "title": "No Hype, No Headlines: Bitcoin Cash Quietly Becomes a Top 2025 Performer",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22708233/No-Hype-No-Headlines-Bitcoin-Cash-Quietly-Becomes-a-Top-2025-Performer",
+      "pubDate": "2025-06-20T12:24:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Ethereum (ETH) Golden Cross Just Received Another Confirmation",
+      "link": "https://cryptopanic.com/news/ethereum/22706536/Ethereum-ETH-Golden-Cross-Just-Received-Another-Confirmation",
+      "pubDate": "2025-06-20T12:18:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum ready for golden cross confirmation, and most recent price surge confirms it",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "12% of users opt for LTC or TRX to pay for VPN services in crypto",
+      "link": "https://cryptopanic.com/news/litecoin/22705852/12-of-users-opt-for-LTC-or-TRX-to-pay-for-VPN-services-in-crypto",
+      "pubDate": "2025-06-20T12:08:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash Price Hit Monthly High as Volume Soars 101%",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22706817/Bitcoin-Cash-Price-Hit-Monthly-High-as-Volume-Soars-101",
+      "pubDate": "2025-06-20T11:14:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash Price Prediction: Can BCH Break $600 and Go Higher?",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22704521/Bitcoin-Cash-Price-Prediction-Can-BCH-Break-600-and-Go-Higher",
+      "pubDate": "2025-06-20T11:09:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "OKB hits $54.7 after 42.4 mln token burn – Can it break through $56?",
+      "link": "https://cryptopanic.com/news/okb/22704079/OKB-hits-547-after-424-mln-token-burn-Can-it-break-through-56",
+      "pubDate": "2025-06-20T11:00:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ]
+    },
+    {
+      "title": "Why is Bitcoin Cash Price up Today?",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22703775/Why-is-Bitcoin-Cash-Price-up-Today",
+      "pubDate": "2025-06-20T10:23:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ]
+    },
+    {
+      "title": "Crypto Price Analysis 6-20: BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, RIPPLE: XRP, POLKADOT: DOT, JUPITER: JUP",
+      "link": "https://cryptopanic.com/news/polkadot/22703205/Crypto-Price-Analysis-6-20-BITCOIN-BTC-ETHEREUM-ETH-SOLANA-SOL-RIPPLE-XRP-POLKADOT-DOT-JUPITER-JUP",
+      "pubDate": "2025-06-20T10:11:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Through BAY Miner, DOGE and XRP mining plans allow users to easily earn $8,615 per day",
+      "link": "https://cryptopanic.com/news/litecoin/22704247/Through-BAY-Miner-DOGE-and-XRP-mining-plans-allow-users-to-easily-earn-8615-per-day",
+      "pubDate": "2025-06-20T10:05:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Binance to Suspend Zilliqa Network Transactions for Upgrade",
+      "link": "https://cryptopanic.com/news/zilliqa/22703105/Binance-to-Suspend-Zilliqa-Network-Transactions-for-Upgrade",
+      "pubDate": "2025-06-20T10:01:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ZIL"
+      ]
+    },
+    {
+      "title": "Peter Schiff Says He Intends To Launch Gold-Backed Stablecoins, Deems Dollar As A 'Flawed' Fiat Currency",
+      "link": "https://cryptopanic.com/news/pax-gold/22703606/Peter-Schiff-Says-He-Intends-To-Launch-Gold-Backed-Stablecoins-Deems-Dollar-As-A-Flawed-Fiat-Currency",
+      "pubDate": "2025-06-20T10:01:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "PAXG",
+        "A"
+      ]
+    },
+    {
+      "title": "SEC Opens Public Comment on Franklin Templeton’s XRP and Solana ETF Proposals",
+      "link": "https://cryptopanic.com/news/ripple/22696868/SEC-Opens-Public-Comment-on-Franklin-Templetons-XRP-and-Solana-ETF-Proposals",
+      "pubDate": "2025-06-20T10:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Catenaa, Friday, June 20,2025- The US Securities and Exchange Commission has initiated public comment periods for two cryptocurrency exchange-traded fund proposals from asset manager Franklin Templeton, pushing the review deadline to late July. The SEC announced Tuesday that it is formally considering rule changes to allow the Chicago Board Options Exchange (Cboe BZX) to list […]",
+      "currencies": [
+        "XRP",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Cash price forecast: Will BCH rally above $500 soon",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22701798/Bitcoin-Cash-price-forecast-Will-BCH-rally-above-500-soon",
+      "pubDate": "2025-06-20T08:56:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash social activity and price hit a peak for 2025",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22699309/Bitcoin-Cash-social-activity-and-price-hit-a-peak-for-2025",
+      "pubDate": "2025-06-20T07:45:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ]
+    },
+    {
+      "title": "North Korea Targets Crypto Professionals With New Malware in Hiring Scams",
+      "link": "https://cryptopanic.com/news/uniswap/22697710/North-Korea-Targets-Crypto-Professionals-With-New-Malware-in-Hiring-Scams",
+      "pubDate": "2025-06-20T06:13:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash (BCH) Pops 8% Higher — Can The Momentum Continue?",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22696563/Bitcoin-Cash-BCH-Pops-8-Higher-Can-The-Momentum-Continue",
+      "pubDate": "2025-06-20T05:08:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "These Cheap Bitcoin Plays Are Spiking As BTC Struggles Amid Rising Geopolitical Heat",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22695434/These-Cheap-Bitcoin-Plays-Are-Spiking-As-BTC-Struggles-Amid-Rising-Geopolitical-Heat",
+      "pubDate": "2025-06-20T03:46:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH",
+        "BSV"
+      ]
+    },
+    {
+      "title": "Top Crypto Gainers: OKB, Sei, Bitcoin Cash – Altcoins shine through amid market volatility",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22696875/Top-Crypto-Gainers-OKB-Sei-Bitcoin-Cash-Altcoins-shine-through-amid-market-volatility",
+      "pubDate": "2025-06-20T03:08:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH",
+        "OKB",
+        "SEI"
+      ]
+    },
+    {
+      "title": "Here’s Why Solana Might Outshine Ethereum in the Long Run",
+      "link": "https://cryptopanic.com/news/ethereum/22694775/Heres-Why-Solana-Might-Outshine-Ethereum-in-the-Long-Run",
+      "pubDate": "2025-06-20T03:00:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Qubetics is the Top Crypto to Buy as Presale Enters Final Stage, While AAVE Drops and Kaspa Holds Ground",
+      "link": "https://cryptopanic.com/news/aave/22694577/Qubetics-is-the-Top-Crypto-to-Buy-as-Presale-Enters-Final-Stage-While-AAVE-Drops-and-Kaspa-Holds-Ground",
+      "pubDate": "2025-06-20T02:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "KAS"
+      ]
+    },
+    {
+      "title": "Flamingo Finance launches THE FLOCK, sunsets FLM Hodlers program",
+      "link": "https://cryptopanic.com/news/neo/22693933/Flamingo-Finance-launches-THE-FLOCK-sunsets-FLM-Hodlers-program",
+      "pubDate": "2025-06-20T01:06:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO",
+        "FLM",
+        "FLOCK"
+      ]
+    },
+    {
+      "title": "BlockDAG Attracts Millions To Presale With $0.0018 Entry & 2,660% ROI as Uniswap & Filecoin Watch Key Levels",
+      "link": "https://cryptopanic.com/news/uniswap/22693410/BlockDAG-Attracts-Millions-To-Presale-With-00018-Entry-2660-ROI-as-Uniswap-Filecoin-Watch-Key-Levels",
+      "pubDate": "2025-06-20T01:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "FIL"
+      ]
+    },
+    {
+      "title": "Polkadot hits KEY support – Assessing the odds of DOT’s bullish reversal",
+      "link": "https://cryptopanic.com/news/polkadot/22692928/Polkadot-hits-KEY-support-Assessing-the-odds-of-DOTs-bullish-reversal",
+      "pubDate": "2025-06-20T00:00:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    }
+  ]
+}

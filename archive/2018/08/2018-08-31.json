@@ -1,0 +1,26 @@
+{
+  "date": "2018-08-31",
+  "fetchedAt": "2026-02-05T07:27:08.126Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Yahoo! Finance Now Allows Users to Trade Cryptocurrencies",
+      "link": "https://cryptopanic.com/news/3007629/Yahoo-Finance-Now-Allows-Users-to-Trade-Cryptocurrencies",
+      "pubDate": "2018-08-31T12:29:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ICX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

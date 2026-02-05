@@ -1,0 +1,77 @@
+{
+  "date": "2019-01-22",
+  "fetchedAt": "2026-02-05T07:27:06.978Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Taiwanese ‘Crypto Congressman’ Praises IOTA for Focusing on Real-World Adoption",
+      "link": "https://cryptopanic.com/news/4348899/Taiwanese-Crypto-Congressman-Praises-IOTA-for-Focusing-on-Real-World-Adoption",
+      "pubDate": "2019-01-22T18:44:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron Price Analysis: TRX Is Best Performer Among Top 10 Cryptocurrencies",
+      "link": "https://cryptopanic.com/news/tron/4347460/Tron-Price-Analysis-TRX-Is-Best-Performer-Among-Top-10-Cryptocurrencies",
+      "pubDate": "2019-01-22T16:29:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron Releases Weekly Report: DApps, TRX Listings, Wallet Progress, and Other Developments",
+      "link": "https://cryptopanic.com/news/4345874/Tron-Releases-Weekly-Report-DApps-TRX-Listings-Wallet-Progress-and-Other-Developments",
+      "pubDate": "2019-01-22T13:29:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron Kicks Ethereum and EOS’ Ass on DApp Field: Report",
+      "link": "https://cryptopanic.com/news/tron/4343975/Tron-Kicks-Ethereum-and-EOS-Ass-on-DApp-Field-Report",
+      "pubDate": "2019-01-22T08:54:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

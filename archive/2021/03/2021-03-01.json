@@ -1,0 +1,600 @@
+{
+  "date": "2021-03-01",
+  "fetchedAt": "2026-02-05T07:27:06.807Z",
+  "articleCount": 39,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ripple Co-Founder Jed McCaleb Cashes out Another 135 Million XRP",
+      "link": "https://cryptopanic.com/news/ripple/11557799/Ripple-Co-Founder-Jed-McCaleb-Cashes-out-Another-135-Million-XRP",
+      "pubDate": "2021-03-01T23:49:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Jed McCaleb, one of the co-founder of Ripple, has sold an estimated 135 million XRP tokens over the last few weeks, and has around 30.5 million tokens left in his “tacostand” account, according to data from XRPScan. McCaleb is said to have started working on Ripple back in 2011, and was part of its founding […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Delegate friendsoflittleyus has launched their webshop platform, complete with custom relay@home products and real-time ARK payments!",
+      "link": "https://cryptopanic.com/news/11557728/Delegate-friendsoflittleyus-has-launched-their-webshop-platform-complete-with-custom-relayhome-products-and-real-time-ARK-payments",
+      "pubDate": "2021-03-01T23:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Matic, xDai (STAKE) and Loopring (LRC) rally as Ethereum gas fees rise",
+      "link": "https://cryptopanic.com/news/uniswap/11557711/Matic-xDai-STAKE-and-Loopring-LRC-rally-as-Ethereum-gas-fees-rise",
+      "pubDate": "2021-03-01T22:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Soaring Etheruem gas costs are driving investors and protocols to take a closer look at layer-two solutions like Matic, Loopring and xDai.",
+      "currencies": [
+        "ETH",
+        "UNI",
+        "SUSHI"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Trust the Nu process",
+      "link": "https://cryptopanic.com/news/11557645/Trust-the-Nu-process",
+      "pubDate": "2021-03-01T22:02:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Staking NU",
+      "link": "https://cryptopanic.com/news/11562912/Staking-NU",
+      "pubDate": "2021-03-01T21:17:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Wolfram Blockchain Labs Adds Support For Tezos On Its Platform Following Cardano",
+      "link": "https://cryptopanic.com/news/11557502/Wolfram-Blockchain-Labs-Adds-Support-For-Tezos-On-Its-Platform-Following-Cardano",
+      "pubDate": "2021-03-01T20:01:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "It has been announced that Wolfram Blockchain Labs (WBL) will be teaming up with Tezos. This is only a few months after a similar partnership was struck with Cardano. Thanks to this new partnership, Wolfram users and developers will be able to make use of the Tezos network, boosting blockchain interoperability. The Wolfram Blockchain offers […]",
+      "currencies": [
+        "ADA",
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Dogecoin Struggles to Resume Uptrend Despite Renewal",
+      "link": "https://cryptopanic.com/news/dogecoin/11557473/Dogecoin-Struggles-to-Resume-Uptrend-Despite-Renewal",
+      "pubDate": "2021-03-01T19:40:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin has entered the spotlight once again as developers have released a new protocol upgrade. However, DOGE sits beneath a supply barrier that may prevent prices from rising. Preparing Dogecoin for Mass Adoption The developers behind Dogecoin have realized that the cryptocurrency’s design must be further refined to live up to the bullish momentum it has seen since the beginning of...",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "CasinoCoin to migrate to XRP Ledger amidst rebranding",
+      "link": "https://cryptopanic.com/news/ripple/11557429/CasinoCoin-to-migrate-to-XRP-Ledger-amidst-rebranding",
+      "pubDate": "2021-03-01T19:28:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "CryptoNinjas » CasinoCoin to migrate to XRP Ledger amidst rebranding CasinoCoin, an open-source cryptocurrency project designed for the online gambling industry, recently announced it is under new management. With that, the project will move forward with a rebranding; while also moving its token and platform to the XRP Ledger. Back on January 19th, 2021, the project put out a statement...",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "ADA & DOT Get Another Push From FD7",
+      "link": "https://cryptopanic.com/news/polkadot/11557424/ADA-DOT-Get-Another-Push-From-FD7",
+      "pubDate": "2021-03-01T18:51:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The micro-fund will make annual investments between $1 million and $5 million across 50 companies specializing in developing ADA and DOT. Roughly 30% of these companies will receive secondary investment of $5 million to $20 million, depending on their growth, the announcement read. ADA and DOT’s Benefit The company noted it was bullish on non-fungible … Continued",
+      "currencies": [
+        "ADA",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Nu listed on Dodo exchange",
+      "link": "https://cryptopanic.com/news/11557323/Nu-listed-on-Dodo-exchange",
+      "pubDate": "2021-03-01T18:31:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "NuCypher's response to the Coindesk senior reporter",
+      "link": "https://cryptopanic.com/news/11557266/NuCyphers-response-to-the-Coindesk-senior-reporter",
+      "pubDate": "2021-03-01T18:02:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Nu outperforming every other coin on coinbase last couple of hours",
+      "link": "https://cryptopanic.com/news/11557267/Nu-outperforming-every-other-coin-on-coinbase-last-couple-of-hours",
+      "pubDate": "2021-03-01T18:02:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Join Major League Hacking for another free ARK workshop this Thursday, March 4th at 5pm EST. Learn how to interact with blockchain technology and create your own blockchain-based taco shop!",
+      "link": "https://cryptopanic.com/news/11561250/Join-Major-League-Hacking-for-another-free-ARK-workshop-this-Thursday-March-4th-at-5pm-EST-Learn-how-to-interact-with-blockchain-technology-and-create-your-own-blockchain-based-taco-shop",
+      "pubDate": "2021-03-01T17:53:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Tomochain stole 25k tomo (40-50k USD) from me while im dying of liver failure. I need this money to stay alive.",
+      "link": "https://cryptopanic.com/news/11557210/Tomochain-stole-25k-tomo-40-50k-USD-from-me-while-im-dying-of-liver-failure-I-need-this-money-to-stay-alive",
+      "pubDate": "2021-03-01T17:31:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "Report Tomo to the FTC.",
+      "link": "https://cryptopanic.com/news/11557095/Report-Tomo-to-the-FTC",
+      "pubDate": "2021-03-01T16:31:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "Horizen to integrate IOTA Oracles on its sidechain protocol Zendoo",
+      "link": "https://cryptopanic.com/news/11557111/Horizen-to-integrate-IOTA-Oracles-on-its-sidechain-protocol-Zendoo",
+      "pubDate": "2021-03-01T16:18:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "CryptoNinjas » Horizen to integrate IOTA Oracles on its sidechain protocol Zendoo Horizen, a technology platform that enables businesses and developers to create their own public or private blockchains, today announced a partnership with IOTA, an open-sourced, feeless data and value transfer protocol. This partnership will extend the functionality of the newly launched IOTA Oracles and...",
+      "currencies": [
+        "MIOTA",
+        "ZEN"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BAT vs RSR – Which Coin Will Perform Better in March?",
+      "link": "https://cryptopanic.com/news/11557074/BAT-vs-RSR-Which-Coin-Will-Perform-Better-in-March",
+      "pubDate": "2021-03-01T16:16:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "These two coins are chosen since they both have similar price movement, having just broken out from long-term resistance areas and then validating them as support. BAT In the beginning of the year, BAT broke out from a long-term descending resistance line that had been in place for more than two years and reclaimed the … Continued",
+      "currencies": [
+        "BAT",
+        "RSR"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Fuck tomochain",
+      "link": "https://cryptopanic.com/news/11557040/Fuck-tomochain",
+      "pubDate": "2021-03-01T16:02:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "Stop stealing you cunts.",
+      "link": "https://cryptopanic.com/news/11557042/Stop-stealing-you-cunts",
+      "pubDate": "2021-03-01T16:02:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "Tomochain?",
+      "link": "https://cryptopanic.com/news/11557041/Tomochain",
+      "pubDate": "2021-03-01T16:02:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "IOTA and Horizen Partner to Expand IOTA Oracles To New Blockchains",
+      "link": "https://cryptopanic.com/news/11556969/IOTA-and-Horizen-Partner-to-Expand-IOTA-Oracles-To-New-Blockchains",
+      "pubDate": "2021-03-01T14:59:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Creating opportunities for interoperability between distributed networks has always been a key goal for the IOTA Foundation. Up until now, we have focused much of our attention on building the protocol and defining the specifications for Chrysalis and Coordicide (IOTA 2.0). Due to our new architecture, we can now",
+      "currencies": [
+        "MIOTA",
+        "ZEN"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Horizen and IOTA Partner to Expand IOTA Oracles and Zendoo",
+      "link": "https://cryptopanic.com/news/11556913/Horizen-and-IOTA-Partner-to-Expand-IOTA-Oracles-and-Zendoo",
+      "pubDate": "2021-03-01T14:52:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "currencies": [
+        "MIOTA",
+        "ZEN"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "This project going forward",
+      "link": "https://cryptopanic.com/news/11556848/This-project-going-forward",
+      "pubDate": "2021-03-01T14:31:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "YOU STOLE A DYING MAN'S MONEY.",
+      "link": "https://cryptopanic.com/news/11556783/YOU-STOLE-A-DYING-MANS-MONEY",
+      "pubDate": "2021-03-01T14:02:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "Ripple Price Analysis: After 22% Weekly Plunge, Did XRP Find Support at Critical Zone?",
+      "link": "https://cryptopanic.com/news/ripple/11556604/Ripple-Price-Analysis-After-22-Weekly-Plunge-Did-XRP-Find-Support-at-Critical-Zone",
+      "pubDate": "2021-03-01T12:30:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP is down by 222% last week but has found reliable support at the .618 Fib around $0.4. Against Bitcoin, XRP has been trading sideways for the past five days.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Google Finance Adds Bitcoin, Ethereum, Litecoin, and Bitcoin Cash",
+      "link": "https://cryptopanic.com/news/11556584/Google-Finance-Adds-Bitcoin-Ethereum-Litecoin-and-Bitcoin-Cash",
+      "pubDate": "2021-03-01T12:18:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Google Finance has now added a crypto market tab to its business tool. Google Finance Recognizes Crypto The search engine has added a fifth “Crypto” tab on Google Finance—along with the U.S., Europe, Asian Markets, and Currencies. The application imports the price data from Coinbase. The section lists an ”about” widget for the four cryptocurrencies in BTC, ETH, LTC, and BCH...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple Unlocks 1 Billion XRP As Coin Trades in $0.43 Range",
+      "link": "https://cryptopanic.com/news/ripple/11556538/Ripple-Unlocks-1-Billion-XRP-As-Coin-Trades-in-043-Range",
+      "pubDate": "2021-03-01T11:56:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple fintech giant has again unleashed a whopping one billion XRP from escrow, despite all the recent turmoil with the SEC lawsuit",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 11
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "$250M Fund to Invest in Polkadot and Cardano Launched in India",
+      "link": "https://cryptopanic.com/news/polkadot/11556508/250M-Fund-to-Invest-in-Polkadot-and-Cardano-Launched-in-India",
+      "pubDate": "2021-03-01T11:36:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Crypto investment fund opens an office in India and sets up a $250 million endeavor to invest in Cardano and Polkadot.",
+      "currencies": [
+        "ADA",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 34,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Fantom brushes off network outage with another 50% price surge",
+      "link": "https://cryptopanic.com/news/11556481/Fantom-brushes-off-network-outage-with-another-50-price-surge",
+      "pubDate": "2021-03-01T11:28:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "With over 3,000% growth since the turn of the year, even a recent network outage couldn't stop Fantom's bullish surge.",
+      "currencies": [
+        "FTM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The Future of Crypto Exchanges Is Decentralized, Says Binance CEO",
+      "link": "https://cryptopanic.com/news/uniswap/11556484/The-Future-of-Crypto-Exchanges-Is-Decentralized-Says-Binance-CEO",
+      "pubDate": "2021-03-01T11:27:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "DeFi users are looking to alternative networks after Ethereum gas fees have once again hit new highs. This time, the Binance Smart Chain has entered center stage. Binance Smart Chain Riding The DeFi Craze Users only have to pay a few cents for a simple transaction on the Binance Smart Chain (BSC), compared to more than $30 on Ethereum last month. At the time of press, the average...",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tether Gets 500 BTC Ransom: Sender Threats to Leak Harmful Documents",
+      "link": "https://cryptopanic.com/news/11556335/Tether-Gets-500-BTC-Ransom-Sender-Threats-to-Leak-Harmful-Documents",
+      "pubDate": "2021-03-01T09:41:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT"
+      ]
+    },
+    {
+      "title": "Vitalik Buterin Proposes Stopping Ethereum Gas Refunds",
+      "link": "https://cryptopanic.com/news/uniswap/11556318/Vitalik-Buterin-Proposes-Stopping-Ethereum-Gas-Refunds",
+      "pubDate": "2021-03-01T09:31:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum’s co-creator, Vitalik Buterin, has posted a proposal to remove gas refunds in the blockchain’s London update. Vitalik Buterin Seeks Refund Removal Buterin posted a proposal, titled EIP-3298, on Ethereum’s Github page this week. He suggests removing gas refunds for the “SSTORE” and “SELFDESTRUCT” functions in Ethereum’s London update. Ethereum currently allows users to...",
+      "currencies": [
+        "ETH",
+        "UNI",
+        "CAKE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "[ARK Weekly Discussion Thread] - March 01, 2021",
+      "link": "https://cryptopanic.com/news/11588940/ARK-Weekly-Discussion-Thread-March-01-2021",
+      "pubDate": "2021-03-01T09:00:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Top Ten Aspiring Crypto Coins For March",
+      "link": "https://cryptopanic.com/news/11556258/Top-Ten-Aspiring-Crypto-Coins-For-March",
+      "pubDate": "2021-03-01T08:34:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "1. Cardano (ADA) Current Price: $1.29 Market Cap: $41 billion Market Cap Rank: #3 On March 1, the ”Mary” hard fork for ADA is expected to be launched, making it one of the most important events for this month. The upgrade is expected to bring Cardano closer to realizing its potential in regards to NFTs, … Continued",
+      "currencies": [
+        "ADA",
+        "THETA",
+        "XEM"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Inflation v.s. Deflation",
+      "link": "https://cryptopanic.com/news/11559512/Inflation-vs-Deflation",
+      "pubDate": "2021-03-01T07:49:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Loopring DEX Launches Layer 2 Bitcoin Trading Pools",
+      "link": "https://cryptopanic.com/news/11555567/Loopring-DEX-Launches-Layer-2-Bitcoin-Trading-Pools",
+      "pubDate": "2021-03-01T06:17:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "In a tweet declaring that the exchange has had no Bitcoin trading pairs for so long, Loopring announced the launch of four new pools for wrapped BTC on Layer 2. Traders on the DEX now have access to wrapped Bitcoin, three stablecoins (DAI, USDC, and USDT), automated market maker pools, and order book pairs. The … Continued",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "MKR",
+        "LRC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dubai-Based FD7 Ventures Launches New $250 Million Fund Focused on Cardano and Polkadot",
+      "link": "https://cryptopanic.com/news/polkadot/11554969/Dubai-Based-FD7-Ventures-Launches-New-250-Million-Fund-Focused-on-Cardano-and-Polkadot",
+      "pubDate": "2021-03-01T06:02:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Developers in India who build on Cardano and Polkadot could get $250 million from this Dubai fund",
+      "currencies": [
+        "ADA",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 29,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "TA: Ethereum Bears Keep Pushing, Why ETH Could Face Hurdles Near $1,500",
+      "link": "https://cryptopanic.com/news/11554296/TA-Ethereum-Bears-Keep-Pushing-Why-ETH-Could-Face-Hurdles-Near-1500",
+      "pubDate": "2021-03-01T05:18:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "USA Ark Exchanges?",
+      "link": "https://cryptopanic.com/news/11557028/USA-Ark-Exchanges",
+      "pubDate": "2021-03-01T01:05:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    }
+  ]
+}

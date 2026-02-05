@@ -1,0 +1,366 @@
+{
+  "date": "2025-07-15",
+  "fetchedAt": "2026-02-05T07:27:08.673Z",
+  "articleCount": 25,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Uniswap President Mary-Catherine Lader steps down after 4 years",
+      "link": "https://cryptopanic.com/news/uniswap/23317073/Uniswap-President-Mary-Catherine-Lader-steps-down-after-4-years",
+      "pubDate": "2025-07-15T21:35:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Solana RWA Growth Outpaces Ethereum in 2025",
+      "link": "https://cryptopanic.com/news/ethereum/23317029/Solana-RWA-Growth-Outpaces-Ethereum-in-2025",
+      "pubDate": "2025-07-15T21:24:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The fastest growing niche in DeFi is taking over both Ethereum and Solana.",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "RWA"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Cash Price Prediction: BCH Outperforms Bitcoin in 2025 – Could It Flip BTC This Cycle?",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/23317030/Bitcoin-Cash-Price-Prediction-BCH-Outperforms-Bitcoin-in-2025-Could-It-Flip-BTC-This-Cycle",
+      "pubDate": "2025-07-15T21:21:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH",
+        "ATH"
+      ]
+    },
+    {
+      "title": "Vitalik Buterin Breaks Silence On Ethereum L2 Design, Here’s All",
+      "link": "https://cryptopanic.com/news/ethereum/23316759/Vitalik-Buterin-Breaks-Silence-On-Ethereum-L2-Design-Heres-All",
+      "pubDate": "2025-07-15T21:14:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Key Insights: Vitalik Buterin, Ethereum co-founder, has reiterated his beliefs in the approach that developers need to take regarding the creation of Layer2 (L2) systems. Buterin stated the need to reduce complexity in L2 architecture and depend more robustly on the base security properties of Ethereum Layer1 (L1).",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana Firedancer dev sheds light on the project’s difficulties",
+      "link": "https://cryptopanic.com/news/solana/23316982/Solana-Firedancer-dev-sheds-light-on-the-projects-difficulties",
+      "pubDate": "2025-07-15T21:12:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Firedancer has yet to go fully live, but its progress has been “pretty impressive,” a dev said",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Top Crypto to Invest in Now: BlockDAG, Chainlink, Polkadot, and Litecoin Show July Potential",
+      "link": "https://cryptopanic.com/news/polkadot/23314721/Top-Crypto-to-Invest-in-Now-BlockDAG-Chainlink-Polkadot-and-Litecoin-Show-July-Potential",
+      "pubDate": "2025-07-15T20:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "LTC",
+        "LINK"
+      ]
+    },
+    {
+      "title": "Can ‘Solana Killer’ Sui (SUI) Break $10 In 2025? Volume Is Soaring For These Altcoins",
+      "link": "https://cryptopanic.com/news/litecoin/23313664/Can-Solana-Killer-Sui-SUI-Break-10-In-2025-Volume-Is-Soaring-For-These-Altcoins",
+      "pubDate": "2025-07-15T19:01:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LTC",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Cronos’ 11% drop: Just a short-term correction, or is something bigger coming?",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/23310645/Cronos-11-drop-Just-a-short-term-correction-or-is-something-bigger-coming",
+      "pubDate": "2025-07-15T16:30:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "MultiBank Group Announces 7 Million MBG Tokens Sold Out in Under One Hour During Initial Pre-Sale",
+      "link": "https://cryptopanic.com/news/uniswap/23309166/MultiBank-Group-Announces-7-Million-MBG-Tokens-Sold-Out-in-Under-One-Hour-During-Initial-Pre-Sale",
+      "pubDate": "2025-07-15T15:35:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "MultiBank Group Announces 7 Million $MBG Tokens Sold Out in Under One Hour During Initial Pre-Sale",
+      "link": "https://cryptopanic.com/news/uniswap/23309136/MultiBank-Group-Announces-7-Million-MBG-Tokens-Sold-Out-in-Under-One-Hour-During-Initial-Pre-Sale",
+      "pubDate": "2025-07-15T15:31:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Crypto Price Analysis 7-15: BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, TONCOIN: TON, LITECOIN: LTC, BITTENSOR: TAO",
+      "link": "https://cryptopanic.com/news/litecoin/23307625/Crypto-Price-Analysis-7-15-BITCOIN-BTC-ETHEREUM-ETH-SOLANA-SOL-TONCOIN-TON-LITECOIN-LTC-BITTENSOR-TAO",
+      "pubDate": "2025-07-15T14:53:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "HAiO Sells Out 4 IDOs Ahead of KuCoin Listing on July 16",
+      "link": "https://cryptopanic.com/news/kucoin-shares/23307529/HAiO-Sells-Out-4-IDOs-Ahead-of-KuCoin-Listing-on-July-16",
+      "pubDate": "2025-07-15T14:44:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "Best Crypto To Buy In 2025 Instead Of Dogecoin: Uniswap, Litecoin and Remittix",
+      "link": "https://cryptopanic.com/news/litecoin/23307387/Best-Crypto-To-Buy-In-2025-Instead-Of-Dogecoin-Uniswap-Litecoin-and-Remittix",
+      "pubDate": "2025-07-15T14:30:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "LTC",
+        "UNI"
+      ]
+    },
+    {
+      "title": "BTC Bull Token Unlock Triggers 30% Price Drop as Staked BTCBULL Tokens Become Claimable",
+      "link": "https://cryptopanic.com/news/uniswap/23306398/BTC-Bull-Token-Unlock-Triggers-30-Price-Drop-as-Staked-BTCBULL-Tokens-Become-Claimable",
+      "pubDate": "2025-07-15T14:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "UNI"
+      ]
+    },
+    {
+      "title": "Ethereum becomes preferred treasury asset for tech-savvy firms: Ray Youssef",
+      "link": "https://cryptopanic.com/news/ethereum/23304879/Ethereum-becomes-preferred-treasury-asset-for-tech-savvy-firms-Ray-Youssef",
+      "pubDate": "2025-07-15T13:09:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The NoOnes CEO told Cointelegraph that corporations are increasingly adding Ethereum to their treasuries, drawn by its utility, staking yield and dominance in tokenized assets protocols.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 7
+      }
+    },
+    {
+      "title": "What Uniswap Did for ERC Tokens, Pepe Dollar Does for Meme coins—Why Ethereum (ETH) OGs Are Watching $PEPD",
+      "link": "https://cryptopanic.com/news/uniswap/23303940/What-Uniswap-Did-for-ERC-Tokens-Pepe-Dollar-Does-for-Meme-coinsWhy-Ethereum-ETH-OGs-Are-Watching-PEPD",
+      "pubDate": "2025-07-15T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI",
+        "PEPE"
+      ]
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 15 July 2025: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/decentraland/23306737/Spell-Wallet-Daily-Puzzle-15-July-2025-Earn-Reward-of-1-MANA",
+      "pubDate": "2025-07-15T12:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "Vision Coin Listing Date One Day Away: What Will Be Listing Price",
+      "link": "https://cryptopanic.com/news/kucoin-shares/23305867/Vision-Coin-Listing-Date-One-Day-Away-What-Will-Be-Listing-Price",
+      "pubDate": "2025-07-15T12:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "NYSE Approves ProShares Ultra XRP ETF Listing on July 15",
+      "link": "https://cryptopanic.com/news/ripple/23300087/NYSE-Approves-ProShares-Ultra-XRP-ETF-Listing-on-July-15",
+      "pubDate": "2025-07-15T10:29:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "ProShares Ultra XRP ETF gains NYSE Arca approval, expanding XRP trading options on July 15.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Ethereum DeFi connects to TON and Telegram with Tac mainnet launch",
+      "link": "https://cryptopanic.com/news/ethereum/23299608/Ethereum-DeFi-connects-to-TON-and-Telegram-with-Tac-mainnet-launch",
+      "pubDate": "2025-07-15T10:08:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Telegram is opening up to Ethereum DeFi with the mainnet launch of Tac, a layer-1 network designed to connect EVM DApps to TON and Telegram ecosystems.",
+      "currencies": [
+        "ETH",
+        "TON"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 6
+      }
+    },
+    {
+      "title": "The Easiest Way to Mine Crypto in 2025: Use DNSBTC Cloud Mining To Easily Mine BTC, LTC, DOGE As Passive Income",
+      "link": "https://cryptopanic.com/news/litecoin/23296796/The-Easiest-Way-to-Mine-Crypto-in-2025-Use-DNSBTC-Cloud-Mining-To-Easily-Mine-BTC-LTC-DOGE-As-Passive-Income",
+      "pubDate": "2025-07-15T08:27:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "LTC"
+      ]
+    },
+    {
+      "title": "2 Tokens Below $0.10 That Will Outpace Dogecoin (DOGE) and Turn $450 into $15,000 in 15 Weeks",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/23292410/2-Tokens-Below-010-That-Will-Outpace-Dogecoin-DOGE-and-Turn-450-into-15000-in-15-Weeks",
+      "pubDate": "2025-07-15T05:45:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "CRO",
+        "PEPE"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Uniswap Remains a Trading Giant, But Lightchain AI Becomes the Speculator Favorite This Cycle",
+      "link": "https://cryptopanic.com/news/uniswap/23292305/Uniswap-Remains-a-Trading-Giant-But-Lightchain-AI-Becomes-the-Speculator-Favorite-This-Cycle",
+      "pubDate": "2025-07-15T05:14:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "No More 80% BDAG Unlock as BlockDAG’s BEAT VESTING PASS Ends Today, LTC Eyes $354, & PEPE Hints at Possible Reversal",
+      "link": "https://cryptopanic.com/news/litecoin/23288628/No-More-80-BDAG-Unlock-as-BlockDAGs-BEAT-VESTING-PASS-Ends-Today-LTC-Eyes-354-PEPE-Hints-at-Possible-Reversal",
+      "pubDate": "2025-07-15T02:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "PEPE"
+      ]
+    },
+    {
+      "title": "HBAR Eyes Big Gains, FIL Jumps 9%, & BlockDAG Crosses $338.5M: $0.0016 GLOBAL LAUNCH Release Price Ends Soon!",
+      "link": "https://cryptopanic.com/news/filecoin/23286812/HBAR-Eyes-Big-Gains-FIL-Jumps-9-BlockDAG-Crosses-3385M-00016-GLOBAL-LAUNCH-Release-Price-Ends-Soon",
+      "pubDate": "2025-07-15T00:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HBAR",
+        "FIL"
+      ]
+    }
+  ]
+}

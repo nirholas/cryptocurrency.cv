@@ -1,0 +1,594 @@
+{
+  "date": "2025-07-01",
+  "fetchedAt": "2026-02-05T07:27:08.640Z",
+  "articleCount": 43,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "China’s DeepSeek AI Predicts the Price of XRP, Solana and Bitcoin Cash",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22971951/Chinas-DeepSeek-AI-Predicts-the-Price-of-XRP-Solana-and-Bitcoin-Cash",
+      "pubDate": "2025-07-01T22:44:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "SOL"
+      ]
+    },
+    {
+      "title": "VeChain Struggles to Regain Steam After December Peak",
+      "link": "https://cryptopanic.com/news/vechain/22971937/VeChain-Struggles-to-Regain-Steam-After-December-Peak",
+      "pubDate": "2025-07-01T22:42:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ]
+    },
+    {
+      "title": "Qubetics Sees Strong Buy Pressure At $2 While Theta And Vechain Developments Position Them Among Best Cryptos to Invest in Today",
+      "link": "https://cryptopanic.com/news/vechain/22969910/Qubetics-Sees-Strong-Buy-Pressure-At-2-While-Theta-And-Vechain-Developments-Position-Them-Among-Best-Cryptos-to-Invest-in-Today",
+      "pubDate": "2025-07-01T20:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ]
+    },
+    {
+      "title": "U.S. SEC Approves First Solana, XRP, and Cardano ETF: Is the Altcoin Summer Next?",
+      "link": "https://cryptopanic.com/news/bitcoin/22969426/US-SEC-Approves-First-Solana-XRP-and-Cardano-ETF-Is-the-Altcoin-Summer-Next",
+      "pubDate": "2025-07-01T20:03:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Ethereum Community Foundation raises ‘millions’ to drive value to ETH by funding ‘immutable and tokenless’ projects",
+      "link": "https://cryptopanic.com/news/ethereum/22968439/Ethereum-Community-Foundation-raises-millions-to-drive-value-to-ETH-by-funding-immutable-and-tokenless-projects",
+      "pubDate": "2025-07-01T19:04:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The foundation's mandate is to support the institutional adoption of Ethereum infrastructure and, ultimately, boost the price of ETH.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Bloomberg Sees Green Light Ahead for Major Altcoin ETFs",
+      "link": "https://cryptopanic.com/news/litecoin/22967843/Bloomberg-Sees-Green-Light-Ahead-for-Major-Altcoin-ETFs",
+      "pubDate": "2025-07-01T18:30:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "LTC"
+      ]
+    },
+    {
+      "title": "SEC approves Grayscale’s mixed crypto fund, signaling momentum for other ETF proposals",
+      "link": "https://cryptopanic.com/news/litecoin/22966649/SEC-approves-Grayscales-mixed-crypto-fund-signaling-momentum-for-other-ETF-proposals",
+      "pubDate": "2025-07-01T17:18:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "DOGE"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash Has Reached a 7-Month High—Analysts Explain the Rally",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22965526/Bitcoin-Cash-Has-Reached-a-7-Month-HighAnalysts-Explain-the-Rally",
+      "pubDate": "2025-07-01T16:58:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ]
+    },
+    {
+      "title": "Tuttle’s new ETFs could offer 2x gains or losses on SOL, TRUMP, XRP, and more starting July 16",
+      "link": "https://cryptopanic.com/news/polkadot/22965446/Tuttles-new-ETFs-could-offer-2x-gains-or-losses-on-SOL-TRUMP-XRP-and-more-starting-July-16",
+      "pubDate": "2025-07-01T16:46:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 02 July 2025: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/decentraland/22967848/Spell-Wallet-Daily-Puzzle-02-July-2025-Earn-Reward-of-1-MANA",
+      "pubDate": "2025-07-01T16:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "Bloomberg Analysts Predict 95% Chance of Solana, Litecoin, XRP ETF Approvals in 2025",
+      "link": "https://cryptopanic.com/news/litecoin/22963986/Bloomberg-Analysts-Predict-95-Chance-of-Solana-Litecoin-XRP-ETF-Approvals-in-2025",
+      "pubDate": "2025-07-01T15:27:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Tuttle Capital targets July 16 to launch 10 leveraged crypto ETFs, including XRP, BNB, TRUMP, and more",
+      "link": "https://cryptopanic.com/news/polkadot/22963104/Tuttle-Capital-targets-July-16-to-launch-10-leveraged-crypto-ETFs-including-XRP-BNB-TRUMP-and-more",
+      "pubDate": "2025-07-01T15:05:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "XRP",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash (BCH) Suddenly up 12%: Two Reasons",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22962948/Bitcoin-Cash-BCH-Suddenly-up-12-Two-Reasons",
+      "pubDate": "2025-07-01T15:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ]
+    },
+    {
+      "title": "Analysts Now See Near-Certain Approval for Solana, XRP & Litecoin Spot ETFs",
+      "link": "https://cryptopanic.com/news/litecoin/22962623/Analysts-Now-See-Near-Certain-Approval-for-Solana-XRP-Litecoin-Spot-ETFs",
+      "pubDate": "2025-07-01T14:59:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Santiment Data Reveals the Top Performing Hidden Cryptos of June",
+      "link": "https://cryptopanic.com/news/okb/22961210/Santiment-Data-Reveals-the-Top-Performing-Hidden-Cryptos-of-June",
+      "pubDate": "2025-07-01T14:01:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "OKB"
+      ]
+    },
+    {
+      "title": "Institutional Investors Pump Millions into Ethereum ETFs",
+      "link": "https://cryptopanic.com/news/ethereum/22960943/Institutional-Investors-Pump-Millions-into-Ethereum-ETFs",
+      "pubDate": "2025-07-01T13:47:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Fidelity’s FETH ETF saw a $25. 7 million inflow on June 30, adding over 10,000 ETH just days after a $28.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 5
+      }
+    },
+    {
+      "title": "VeChain Launches $15M StarGate Staking Program Following SEC Crypto Guidance",
+      "link": "https://cryptopanic.com/news/vechain/22962364/VeChain-Launches-15M-StarGate-Staking-Program-Following-SEC-Crypto-Guidance",
+      "pubDate": "2025-07-01T13:25:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ]
+    },
+    {
+      "title": "Stacks Expands sBTC and STX to Multiple Blockchains",
+      "link": "https://cryptopanic.com/news/blockstack/22962429/Stacks-Expands-sBTC-and-STX-to-Multiple-Blockchains",
+      "pubDate": "2025-07-01T13:16:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "SUI"
+      ]
+    },
+    {
+      "title": "VeChain Kicksoff $15M StarGate Staking Program After SEC’s Staking Clarity",
+      "link": "https://cryptopanic.com/news/vechain/22959310/VeChain-Kicksoff-15M-StarGate-Staking-Program-After-SECs-Staking-Clarity",
+      "pubDate": "2025-07-01T13:00:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "VET",
+        "NFT",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "XRP, SOL, LTC Lead Crypto ETF Charge At 95% Odds",
+      "link": "https://cryptopanic.com/news/litecoin/22961899/XRP-SOL-LTC-Lead-Crypto-ETF-Charge-At-95-Odds",
+      "pubDate": "2025-07-01T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "LTC"
+      ]
+    },
+    {
+      "title": "VeChain: new StarGate staking program with a $15 million bonus in six months",
+      "link": "https://cryptopanic.com/news/vechain/22962413/VeChain-new-StarGate-staking-program-with-a-15-million-bonus-in-six-months",
+      "pubDate": "2025-07-01T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET",
+        "DEFI",
+        "Z"
+      ]
+    },
+    {
+      "title": "Algorand Blockchain Steps Up With Wormhole Integration, Eyes Multichain Expansion",
+      "link": "https://cryptopanic.com/news/algorand/22962428/Algorand-Blockchain-Steps-Up-With-Wormhole-Integration-Eyes-Multichain-Expansion",
+      "pubDate": "2025-07-01T12:59:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash Breaks Out: Can the Rally Hit $1,700?",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22959271/Bitcoin-Cash-Breaks-Out-Can-the-Rally-Hit-1700",
+      "pubDate": "2025-07-01T12:54:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ]
+    },
+    {
+      "title": "Crypto Price Analysis 7-1: BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, DOGECOIN: DOGE, JUPITER: JUP, UNISWAP: UNI",
+      "link": "https://cryptopanic.com/news/uniswap/22959308/Crypto-Price-Analysis-7-1-BITCOIN-BTC-ETHEREUM-ETH-SOLANA-SOL-DOGECOIN-DOGE-JUPITER-JUP-UNISWAP-UNI",
+      "pubDate": "2025-07-01T12:52:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash Price Skyrockets to 8-Month High – What’s Next?",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22957543/Bitcoin-Cash-Price-Skyrockets-to-8-Month-High-Whats-Next",
+      "pubDate": "2025-07-01T11:38:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ]
+    },
+    {
+      "title": "Litecoin Price Prediction: Analysts Eye $96 Breakout as Golden Cross Nears",
+      "link": "https://cryptopanic.com/news/litecoin/22956070/Litecoin-Price-Prediction-Analysts-Eye-96-Breakout-as-Golden-Cross-Nears",
+      "pubDate": "2025-07-01T10:46:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash Price Forecast: Bullish momentum holds as BCH eyes potential channel breakout",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22960693/Bitcoin-Cash-Price-Forecast-Bullish-momentum-holds-as-BCH-eyes-potential-channel-breakout",
+      "pubDate": "2025-07-01T10:46:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH",
+        "A"
+      ]
+    },
+    {
+      "title": "Bitcoin Isn't Crypto? Analyst Willy Woo Slams Grouping BTC With Altcoins As 'Dumbest' Idea",
+      "link": "https://cryptopanic.com/news/litecoin/22956073/Bitcoin-Isnt-Crypto-Analyst-Willy-Woo-Slams-Grouping-BTC-With-Altcoins-As-Dumbest-Idea",
+      "pubDate": "2025-07-01T10:36:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Algorand to Integrate Wormhole's Native Token Transfer Standard",
+      "link": "https://cryptopanic.com/news/algorand/22957633/Algorand-to-Integrate-Wormholes-Native-Token-Transfer-Standard",
+      "pubDate": "2025-07-01T09:37:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Analysts Give 95% Chance for Solana, XRP & LTC ETF Approval",
+      "link": "https://cryptopanic.com/news/litecoin/22954337/Analysts-Give-95-Chance-for-Solana-XRP-LTC-ETF-Approval",
+      "pubDate": "2025-07-01T09:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Good News for XRP, Litecoin and Solana: Analysts Raise ETF Approval Odds to 95%",
+      "link": "https://cryptopanic.com/news/polkadot/22952700/Good-News-for-XRP-Litecoin-and-Solana-Analysts-Raise-ETF-Approval-Odds-to-95",
+      "pubDate": "2025-07-01T09:00:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "DOGE, ADA, DOT, HBAR, and AVAX spot ETF odds rise to 90%, as analysts see an “altcoin ETF summer” coming soon.",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SEC Likely to Approve Litecoin and XRP Spot ETFs",
+      "link": "https://cryptopanic.com/news/litecoin/22952516/SEC-Likely-to-Approve-Litecoin-and-XRP-Spot-ETFs",
+      "pubDate": "2025-07-01T08:25:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Crypto ETFs Heating Up: Multi-Asset Approval Wave Could Start July 2",
+      "link": "https://cryptopanic.com/news/litecoin/22952430/Crypto-ETFs-Heating-Up-Multi-Asset-Approval-Wave-Could-Start-July-2",
+      "pubDate": "2025-07-01T08:20:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Analysis of the crypto Filecoin, Aave, and Solana",
+      "link": "https://cryptopanic.com/news/filecoin/22955966/Analysis-of-the-crypto-Filecoin-Aave-and-Solana",
+      "pubDate": "2025-07-01T08:10:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "FIL",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash Rockets to 8-Month High – Is July Setting Up for More Gains?",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22951843/Bitcoin-Cash-Rockets-to-8-Month-High-Is-July-Setting-Up-for-More-Gains",
+      "pubDate": "2025-07-01T07:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ]
+    },
+    {
+      "title": "Bloomberg Analysts See 95% Chance of Solana, Litecoin, XRP ETF Approvals This Year",
+      "link": "https://cryptopanic.com/news/litecoin/22949374/Bloomberg-Analysts-See-95-Chance-of-Solana-Litecoin-XRP-ETF-Approvals-This-Year",
+      "pubDate": "2025-07-01T06:17:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Spot crypto ETF approval odds jump to 95% for XRP, SOL, and LTC ahead of US SEC decision on GDLC fund",
+      "link": "https://cryptopanic.com/news/litecoin/22952054/Spot-crypto-ETF-approval-odds-jump-to-95-for-XRP-SOL-and-LTC-ahead-of-US-SEC-decision-on-GDLC-fund",
+      "pubDate": "2025-07-01T05:45:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Analysts raise chance of SOL, XRP and LTC ETF approval to 95%",
+      "link": "https://cryptopanic.com/news/litecoin/22946581/Analysts-raise-chance-of-SOL-XRP-and-LTC-ETF-approval-to-95",
+      "pubDate": "2025-07-01T03:39:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Top Crypto Gainers: BCH, ALGO, XMR – Made in USA and privacy coins lead the smoldering market recovery",
+      "link": "https://cryptopanic.com/news/monero/22949383/Top-Crypto-Gainers-BCH-ALGO-XMR-Made-in-USA-and-privacy-coins-lead-the-smoldering-market-recovery",
+      "pubDate": "2025-07-01T03:09:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "BCH",
+        "ALGO"
+      ]
+    },
+    {
+      "title": "TradFi could move onchain due to ‘horrible banking experiences’",
+      "link": "https://cryptopanic.com/news/aave/22946488/TradFi-could-move-onchain-due-to-horrible-banking-experiences",
+      "pubDate": "2025-07-01T03:09:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "SEC Likely to Approve LTC, SOL, and XRP Spot ETFs in 2025",
+      "link": "https://cryptopanic.com/news/litecoin/22951000/SEC-Likely-to-Approve-LTC-SOL-and-XRP-Spot-ETFs-in-2025",
+      "pubDate": "2025-07-01T02:33:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash eyes $585, long-term target remains $1,509",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22945705/Bitcoin-Cash-eyes-585-long-term-target-remains-1509",
+      "pubDate": "2025-07-01T02:09:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Significant Ethereum Purchase Detected by On-chain Monitoring",
+      "link": "https://cryptopanic.com/news/dai/22950379/Significant-Ethereum-Purchase-Detected-by-On-chain-Monitoring",
+      "pubDate": "2025-07-01T01:03:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DAI"
+      ]
+    }
+  ]
+}

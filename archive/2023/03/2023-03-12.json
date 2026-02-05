@@ -1,0 +1,624 @@
+{
+  "date": "2023-03-12",
+  "fetchedAt": "2026-02-05T07:27:07.577Z",
+  "articleCount": 47,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Circle USDC operations will resume when U.S. banks open Monday: CEO Allaire",
+      "link": "https://cryptopanic.com/news/17860711/Circle-USDC-operations-will-resume-when-US-banks-open-Monday-CEO-Allaire",
+      "pubDate": "2023-03-12T23:46:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Circle USDC reserves are \"safe and secure\" and liquidity operations will resume at banking open tomorrow, CEO Jeremy Allaire said on Twitter.",
+      "currencies": [
+        "USDC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Circle Scrambles to Right USDC After Signature Bank Failure",
+      "link": "https://cryptopanic.com/news/17860704/Circle-Scrambles-to-Right-USDC-After-Signature-Bank-Failure",
+      "pubDate": "2023-03-12T23:38:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "USDC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Statement from Paxos: The protection and safety of customer assets is Paxos’ top priority, which is why we always t…",
+      "link": "https://cryptopanic.com/news/17861692/Statement-from-Paxos-The-protection-and-safety-of-customer-assets-is-Paxos-top-priority-which-is-why-we-always-t",
+      "pubDate": "2023-03-12T23:34:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BUSD",
+        "USDP",
+        "PAXG"
+      ]
+    },
+    {
+      "title": "RT @saylor: #Bitcoin is the only stable coin.",
+      "link": "https://cryptopanic.com/news/thorchain/17864784/RT-saylor-Bitcoin-is-the-only-stable-coin",
+      "pubDate": "2023-03-12T23:01:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "RUNE"
+      ]
+    },
+    {
+      "title": "RT @TheRuneRanger: Yesterday was the highest volume day on Thorchain since the start of February",
+      "link": "https://cryptopanic.com/news/thorchain/17864785/RT-TheRuneRanger-Yesterday-was-the-highest-volume-day-on-Thorchain-since-the-start-of-February",
+      "pubDate": "2023-03-12T22:59:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RUNE"
+      ]
+    },
+    {
+      "title": "THORChain seems safer than some banks today. Proof of funds is provided every block! $RUNE",
+      "link": "https://cryptopanic.com/news/thorchain/17864786/THORChain-seems-safer-than-some-banks-today-Proof-of-funds-is-provided-every-block-RUNE",
+      "pubDate": "2023-03-12T22:59:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "RUNE"
+      ]
+    },
+    {
+      "title": "RT @s1lverboxThor: I will show you how you can stay sane and keep 100% of your assets in own custody: Step 1 - Research @THORChain Step 2…",
+      "link": "https://cryptopanic.com/news/thorchain/17864787/RT-s1lverboxThor-I-will-show-you-how-you-can-stay-sane-and-keep-100-of-your-assets-in-own-custody-Step-1-Research-THORChain-Step-2",
+      "pubDate": "2023-03-12T22:57:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RUNE"
+      ]
+    },
+    {
+      "title": "RT @ErasureStaked: 1,079,284 $NMR is staked on Numerai's main tournament, up 1,095 $NMR compared to yesterday. The average 1 Year return is…",
+      "link": "https://cryptopanic.com/news/17860550/RT-ErasureStaked-1079284-NMR-is-staked-on-Numerais-main-tournament-up-1095-NMR-compared-to-yesterday-The-average-1-Year-return-is",
+      "pubDate": "2023-03-12T22:50:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NMR"
+      ]
+    },
+    {
+      "title": "RT @beardmars: Reminder that all stablecoin/fiat trading pairs accessible through @Gemini ActiveTrader/API are 0bps maker, 1bps taker, rega…",
+      "link": "https://cryptopanic.com/news/17862793/RT-beardmars-Reminder-that-all-stablecoinfiat-trading-pairs-accessible-through-Gemini-ActiveTraderAPI-are-0bps-maker-1bps-taker-rega",
+      "pubDate": "2023-03-12T21:57:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    },
+    {
+      "title": "Bitcoin Rises on Report Government Weighing Plan to Protect All Silicon Valley Bank Depositors",
+      "link": "https://cryptopanic.com/news/bitcoin/17860327/Bitcoin-Rises-on-Report-Government-Weighing-Plan-to-Protect-All-Silicon-Valley-Bank-Depositors",
+      "pubDate": "2023-03-12T21:00:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "-",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Are you an @ETHGlobal hacker interested in working with RWA assets your parents have heard of? UMA is there for you…",
+      "link": "https://cryptopanic.com/news/17865031/Are-you-an-ETHGlobal-hacker-interested-in-working-with-RWA-assets-your-parents-have-heard-of-UMA-is-there-for-you",
+      "pubDate": "2023-03-12T21:00:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "UMA"
+      ]
+    },
+    {
+      "title": "RT @CielProtocol: It's time to strike gold with Ciel Protocol ! Starting March 31, you can earn $PAXG and eleven other rewards. Don't…",
+      "link": "https://cryptopanic.com/news/pax-gold/17864986/RT-CielProtocol-Its-time-to-strike-gold-with-Ciel-Protocol-Starting-March-31-you-can-earn-PAXG-and-eleven-other-rewards-Dont",
+      "pubDate": "2023-03-12T20:06:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PAXG",
+        "TRFX"
+      ]
+    },
+    {
+      "title": "RT @CaygeonEh: Call the Banners might be the most organic game ever made and it’s incredibly dear to my heart. Here’s our story. 🧵",
+      "link": "https://cryptopanic.com/news/17861381/RT-CaygeonEh-Call-the-Banners-might-be-the-most-organic-game-ever-made-and-its-incredibly-dear-to-my-heart-Heres-our-story?mtm_campaign=API-OFA",
+      "pubDate": "2023-03-12T20:03:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "AGLD"
+      ]
+    },
+    {
+      "title": "Crypto Platform Huobi Exchanged $100,000,000 USDC for DAI During Stablecoin Depegging Scare: On-Chain Data",
+      "link": "https://cryptopanic.com/news/17860213/Crypto-Platform-Huobi-Exchanged-100000000-USDC-for-DAI-During-Stablecoin-Depegging-Scare-On-Chain-Data",
+      "pubDate": "2023-03-12T20:00:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Crypto exchange Huobi converted $100 million worth of USD Coin (USDC) to Dai (DAI) as uncertainty spread in the stablecoin market this weekend, on-chain data shows. According to blockchain tracking firm Lookonchain, Huobi made the large transaction early on Saturday morning. “It appears that one of Huobi’s wallets also exchanged 100 million USDC for 100 […]",
+      "currencies": [
+        "USDC",
+        "DAI",
+        "HT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "RT @sinaEstavi: Break the Matrix",
+      "link": "https://cryptopanic.com/news/17861797/RT-sinaEstavi-Break-the-Matrix",
+      "pubDate": "2023-03-12T19:57:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BRG"
+      ]
+    },
+    {
+      "title": "What would you do if you found yourself face-to-face with this Beast?",
+      "link": "https://cryptopanic.com/news/17865307/What-would-you-do-if-you-found-yourself-face-to-face-with-this-Beast?mtm_campaign=API-OFA",
+      "pubDate": "2023-03-12T19:16:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WILD"
+      ]
+    },
+    {
+      "title": "RT @m_h_d_v: Starting in 20 min ‍️",
+      "link": "https://cryptopanic.com/news/17863284/RT-m_h_d_v-Starting-in-20-min",
+      "pubDate": "2023-03-12T19:07:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "Noob here. How do I buy Hi on the app?",
+      "link": "https://cryptopanic.com/news/18000852/Noob-here-How-do-I-buy-Hi-on-the-app",
+      "pubDate": "2023-03-12T18:50:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HI"
+      ]
+    },
+    {
+      "title": "The Hive team at Tomodachi White Day 5",
+      "link": "https://cryptopanic.com/news/17862932/The-Hive-team-at-Tomodachi-White-Day-5",
+      "pubDate": "2023-03-12T18:33:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HIVE"
+      ]
+    },
+    {
+      "title": "USDC Volatility Lifts Bitcoin's Coinbase Premium to 3-Year High",
+      "link": "https://cryptopanic.com/news/17860071/USDC-Volatility-Lifts-Bitcoins-Coinbase-Premium-to-3-Year-High",
+      "pubDate": "2023-03-12T18:32:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Coinbase premium is usually taken to represent stronger buying pressure from stateside investors. But that's not the case this time.",
+      "currencies": [
+        "BTC",
+        "USDC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "What is the easiest way to transfer funds from IMX into Hive/Splinterlands?",
+      "link": "https://cryptopanic.com/news/17860979/What-is-the-easiest-way-to-transfer-funds-from-IMX-into-HiveSplinterlands",
+      "pubDate": "2023-03-12T17:50:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "IMX",
+        "SPS"
+      ]
+    },
+    {
+      "title": "Bitcoin Price to Plunge Back Below $4,000, Peter Schiff Predicts",
+      "link": "https://cryptopanic.com/news/bitcoin/17859770/Bitcoin-Price-to-Plunge-Back-Below-4000-Peter-Schiff-Predicts",
+      "pubDate": "2023-03-12T16:59:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @andreimmarinica: Curiosity and excitement for building. That's the spirit that echoed in the @MultiversX community at The Bucharest Hac…",
+      "link": "https://cryptopanic.com/news/elrond-erd-2/17863680/RT-andreimmarinica-Curiosity-and-excitement-for-building-Thats-the-spirit-that-echoed-in-the-MultiversX-community-at-The-Bucharest-Hac",
+      "pubDate": "2023-03-12T16:42:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EGLD",
+        "WEGLD"
+      ]
+    },
+    {
+      "title": "Where do the top traders get their information? On BITFINEX ALPHA! - Insights from the best quant traders - In-dept…",
+      "link": "https://cryptopanic.com/news/leo-token/17859648/Where-do-the-top-traders-get-their-information-On-BITFINEX-ALPHA-Insights-from-the-best-quant-traders-In-dept",
+      "pubDate": "2023-03-12T16:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LEO",
+        "QNT"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: Set your clocks an hour ahead, it's spring forward time.",
+      "link": "https://cryptopanic.com/news/17864441/RT-RichardHeartWin-Set-your-clocks-an-hour-ahead-its-spring-forward-time?mtm_campaign=API-OFA",
+      "pubDate": "2023-03-12T15:08:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SATS"
+      ]
+    },
+    {
+      "title": "#SatoshsVision Staking Frontend integration for staking almost done, gitbook in the works, and audit underway. Thanks for your patience!",
+      "link": "https://cryptopanic.com/news/17864442/SatoshsVision-Staking-Frontend-integration-for-staking-almost-done-gitbook-in-the-works-and-audit-underway-Thanks-for-your-patience?mtm_campaign=API-OFA",
+      "pubDate": "2023-03-12T15:01:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SATS"
+      ]
+    },
+    {
+      "title": "⭐️Prizes of 96220 $BNX for CyberChess 8th week’s ranked mode in season 3 have just been distributed to 7051 players…",
+      "link": "https://cryptopanic.com/news/17862098/Prizes-of-96220-BNX-for-CyberChess-8th-weeks-ranked-mode-in-season-3-have-just-been-distributed-to-7051-players",
+      "pubDate": "2023-03-12T14:49:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BNX"
+      ]
+    },
+    {
+      "title": "RT @sasha35625: Finally things will start falling into place for #waves ecosystem next week- - New bridges coming to Waves - $power airdrop…",
+      "link": "https://cryptopanic.com/news/waves/17859476/RT-sasha35625-Finally-things-will-start-falling-into-place-for-waves-ecosystem-next-week-New-bridges-coming-to-Waves-power-airdrop",
+      "pubDate": "2023-03-12T14:15:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WAVES"
+      ]
+    },
+    {
+      "title": "To be precise, ETC still has a very promising future. The top 1 and top 2 addresses holding ETC have not sold their…",
+      "link": "https://cryptopanic.com/news/ethereum-classic/17865255/To-be-precise-ETC-still-has-a-very-promising-future-The-top-1-and-top-2-addresses-holding-ETC-have-not-sold-their",
+      "pubDate": "2023-03-12T14:11:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETC",
+        "WETC",
+        "HEBE"
+      ]
+    },
+    {
+      "title": "🇹🇷 Turkish delight! We’ve painted Istanbul - #Bitfinex Green! Proud to have our app in Turkish and promoting…",
+      "link": "https://cryptopanic.com/news/leo-token/17859431/Turkish-delight-Weve-painted-Istanbul-Bitfinex-Green-Proud-to-have-our-app-in-Turkish-and-promoting",
+      "pubDate": "2023-03-12T14:00:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LEO"
+      ]
+    },
+    {
+      "title": "Just over 2 hours left #multiversX community. Remember buying ANY NFT over 0.1 $EGLD qualifies you for 10,000…",
+      "link": "https://cryptopanic.com/news/elrond-erd-2/17864739/Just-over-2-hours-left-multiversX-community-Remember-buying-ANY-NFT-over-01-EGLD-qualifies-you-for-10000",
+      "pubDate": "2023-03-12T13:19:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "EGLD",
+        "RARE"
+      ]
+    },
+    {
+      "title": "1/5 The last few days have been quite rough for crypto and stablecoins in particular. However, $DJED held its peg t…",
+      "link": "https://cryptopanic.com/news/17861848/15-The-last-few-days-have-been-quite-rough-for-crypto-and-stablecoins-in-particular-However-DJED-held-its-peg-t",
+      "pubDate": "2023-03-12T12:31:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "COTI"
+      ]
+    },
+    {
+      "title": "Add some spice to your investment game! ️ Mix up your portfolio with a dash of residential AND commercial real est…",
+      "link": "https://cryptopanic.com/news/17862379/Add-some-spice-to-your-investment-game-Mix-up-your-portfolio-with-a-dash-of-residential-AND-commercial-real-est",
+      "pubDate": "2023-03-12T12:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DASH"
+      ]
+    },
+    {
+      "title": "Stay ahead of the game with #D2T! Access #crypto signals powered by technical indicators and Quant developers…",
+      "link": "https://cryptopanic.com/news/quant-network/17862152/Stay-ahead-of-the-game-with-D2T-Access-crypto-signals-powered-by-technical-indicators-and-Quant-developers",
+      "pubDate": "2023-03-12T12:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QNT",
+        "D2T"
+      ]
+    },
+    {
+      "title": "Chiliz distances itself from recent crypto drama but CHZ was…",
+      "link": "https://cryptopanic.com/news/chiliz/17859011/Chiliz-distances-itself-from-recent-crypto-drama-but-CHZ-was",
+      "pubDate": "2023-03-12T11:30:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHZ"
+      ]
+    },
+    {
+      "title": "You can receive 10% crypto cashback each time you spend digitalbits $xdb at selected @OfficialASRoma stores. 🤔",
+      "link": "https://cryptopanic.com/news/17862243/You-can-receive-10-crypto-cashback-each-time-you-spend-digitalbits-xdb-at-selected-OfficialASRoma-stores",
+      "pubDate": "2023-03-12T10:30:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XDB"
+      ]
+    },
+    {
+      "title": "RT @x404web: I have always followed @AIBCsummit with great interest, since all the brightest ideas and new trends appear there, and i'm gl…",
+      "link": "https://cryptopanic.com/news/17857710/RT-x404web-I-have-always-followed-AIBCsummit-with-great-interest-since-all-the-brightest-ideas-and-new-trends-appear-there-and-im-gl",
+      "pubDate": "2023-03-12T08:09:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "We present the #TOP100 $ALTS that you can find on Kanga! #77 on @CoinMarketCap - @AxieInfinity $AXS Market c…",
+      "link": "https://cryptopanic.com/news/axie-infinity/17863162/We-present-the-TOP100-ALTS-that-you-can-find-on-Kanga-77-on-CoinMarketCap-AxieInfinity-AXS-Market-c",
+      "pubDate": "2023-03-12T08:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS",
+        "KNG"
+      ]
+    },
+    {
+      "title": "DAI and USDD Stablecoins Are Affected Negatively by Circle's USDC Instability VISIT:-",
+      "link": "https://cryptopanic.com/news/usdd/17855873/DAI-and-USDD-Stablecoins-Are-Affected-Negatively-by-Circles-USDC-Instability-VISIT-",
+      "pubDate": "2023-03-12T05:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "DAI",
+        "CMN"
+      ]
+    },
+    {
+      "title": "JUST IN: $QNT @quant_network once again a MOST USED smart contract among top 100 #ETH whales in 24hrs We've also…",
+      "link": "https://cryptopanic.com/news/quant-network/17855443/JUST-IN-QNT-quant_network-once-again-a-MOST-USED-smart-contract-among-top-100-ETH-whales-in-24hrs-Weve-also",
+      "pubDate": "2023-03-12T05:00:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "QNT",
+        "BBW"
+      ]
+    },
+    {
+      "title": "USDC Holder Forks Over $2 Million For $0.05 USDT In Desperate Move To Evade Crypto Crash",
+      "link": "https://cryptopanic.com/news/17855015/USDC-Holder-Forks-Over-2-Million-For-005-USDT-In-Desperate-Move-To-Evade-Crypto-Crash",
+      "pubDate": "2023-03-12T04:00:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @realSidhuJag: Now is even more pressing time to try to discover algorithmic stability on blockchain aka “money”. We shouldn’t give up…",
+      "link": "https://cryptopanic.com/news/17854993/RT-realSidhuJag-Now-is-even-more-pressing-time-to-try-to-discover-algorithmic-stability-on-blockchain-aka-money-We-shouldnt-give-up",
+      "pubDate": "2023-03-12T03:47:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SYS"
+      ]
+    },
+    {
+      "title": "Quant bounced after hitting January lows, bulls can sustain recovery if…",
+      "link": "https://cryptopanic.com/news/quant-network/17854982/Quant-bounced-after-hitting-January-lows-bulls-can-sustain-recovery-if",
+      "pubDate": "2023-03-12T03:30:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "QNT"
+      ]
+    },
+    {
+      "title": "Duo Dash is here! Team up with your friend and start trading to win up to 2,000 USDT. Don't miss your chance to b…",
+      "link": "https://cryptopanic.com/news/17857617/Duo-Dash-is-here-Team-up-with-your-friend-and-start-trading-to-win-up-to-2000-USDT-Dont-miss-your-chance-to-b",
+      "pubDate": "2023-03-12T03:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "DASH"
+      ]
+    },
+    {
+      "title": "Duo Dash is here! Team up with your friend and start trading to win up to 2,000 USDT. Don't miss your chance to b…",
+      "link": "https://cryptopanic.com/news/dash/17857617/Duo-Dash-is-here-Team-up-with-your-friend-and-start-trading-to-win-up-to-2000-USDT-Dont-miss-your-chance-to-b",
+      "pubDate": "2023-03-12T03:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "DASH",
+        "PROB"
+      ]
+    },
+    {
+      "title": "Our partners at @ETHGlobal started a summit series called \"Pragma,\" the first of which will be on April 13th in Tok…",
+      "link": "https://cryptopanic.com/news/17858316/Our-partners-at-ETHGlobal-started-a-summit-series-called-Pragma-the-first-of-which-will-be-on-April-13th-in-Tok",
+      "pubDate": "2023-03-12T02:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "UMA"
+      ]
+    },
+    {
+      "title": "Is there any point in staking for the card if you aren't based in Europe?",
+      "link": "https://cryptopanic.com/news/17861072/Is-there-any-point-in-staking-for-the-card-if-you-arent-based-in-Europe",
+      "pubDate": "2023-03-12T01:27:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HI"
+      ]
+    }
+  ]
+}

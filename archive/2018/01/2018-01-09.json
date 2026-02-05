@@ -1,0 +1,25 @@
+{
+  "date": "2018-01-09",
+  "fetchedAt": "2026-02-05T07:27:08.686Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "$35 Million: Smart Contracts Platform Mobius Completes ICO Presale",
+      "link": "https://cryptopanic.com/news/stellar/758418/35-Million-Smart-Contracts-Platform-Mobius-Completes-ICO-Presale",
+      "pubDate": "2018-01-09T14:00:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "date": "2019-07-19",
+  "fetchedAt": "2026-02-05T07:27:06.789Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Binance to Launch Stellar (XLM) Staking and Airdrop 9,500,000 XLM",
+      "link": "https://cryptopanic.com/news/6076594/Binance-to-Launch-Stellar-XLM-Staking-and-Airdrop-9500000-XLM",
+      "pubDate": "2019-07-19T10:00:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

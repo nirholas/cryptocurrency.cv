@@ -1,0 +1,26 @@
+{
+  "date": "2018-03-09",
+  "fetchedAt": "2026-02-05T07:27:06.813Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Return of the ‘Bearwhale’: Around a Fifth of Mt. Gox’s “Missing” Bitcoin Dumped",
+      "link": "https://cryptopanic.com/news/1330992/Return-of-the-Bearwhale-Around-a-Fifth-of-Mt-Goxs-Missing-Bitcoin-Dumped",
+      "pubDate": "2018-03-09T21:45:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "date": "2019-06-24",
+  "fetchedAt": "2026-02-05T07:27:06.997Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Google Chrome Is a Data-Sucking Monster, Brave Browser Offers an Alternative",
+      "link": "https://cryptopanic.com/news/5825903/Google-Chrome-Is-a-Data-Sucking-Monster-Brave-Browser-Offers-an-Alternative",
+      "pubDate": "2019-06-24T20:09:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BAT"
+      ],
+      "votes": {
+        "positive": 29,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano and Tron Fight for Top 10 Spot – Cardano Favored",
+      "link": "https://cryptopanic.com/news/tron/5818996/Cardano-and-Tron-Fight-for-Top-10-Spot-Cardano-Favored",
+      "pubDate": "2019-06-24T03:57:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2018-12-30",
+  "fetchedAt": "2026-02-05T07:27:07.893Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bosch: So werden Sie zum IOTA Experten!",
+      "link": "https://cryptopanic.com/news/4119855/Bosch-So-werden-Sie-zum-IOTA-Experten",
+      "pubDate": "2018-12-30T20:20:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "date": "2019-05-30",
+  "fetchedAt": "2026-02-05T07:27:06.906Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "EOS Now Available on Coinbase. Will It Affect the Coin’s Price?",
+      "link": "https://cryptopanic.com/news/5576841/EOS-Now-Available-on-Coinbase-Will-It-Affect-the-Coins-Price",
+      "pubDate": "2019-05-30T18:35:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Coinbase opens up EOS trading to all U.S. customers, except those in New York",
+      "link": "https://cryptopanic.com/news/eos/5576551/Coinbase-opens-up-EOS-trading-to-all-US-customers-except-those-in-New-York",
+      "pubDate": "2019-05-30T18:20:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Paxos deploys new feature to allow fast creation, transfer of PAX between wallets",
+      "link": "https://cryptopanic.com/news/5572998/Paxos-deploys-new-feature-to-allow-fast-creation-transfer-of-PAX-between-wallets",
+      "pubDate": "2019-05-30T15:01:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "Bitcoin SV Price Keeps Pumping as Calvin Ayre Predicts BSV to Absorb All Other Crypto",
+      "link": "https://cryptopanic.com/news/5568408/Bitcoin-SV-Price-Keeps-Pumping-as-Calvin-Ayre-Predicts-BSV-to-Absorb-All-Other-Crypto",
+      "pubDate": "2019-05-30T10:15:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ]
+    }
+  ]
+}

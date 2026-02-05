@@ -1,0 +1,26 @@
+{
+  "date": "2017-09-29",
+  "fetchedAt": "2026-02-05T07:27:07.000Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Edward Snowden: Zcash Is 'Most Interesting Bitcoin Alternative'",
+      "link": "https://cryptopanic.com/news/monero/44932/Edward-Snowden-Zcash-Is-Most-Interesting-Bitcoin-Alternative",
+      "pubDate": "2017-09-29T13:30:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XMR",
+        "ZEC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 4
+      }
+    }
+  ]
+}

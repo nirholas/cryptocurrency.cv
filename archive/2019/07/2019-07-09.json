@@ -1,0 +1,55 @@
+{
+  "date": "2019-07-09",
+  "fetchedAt": "2026-02-05T07:27:07.574Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Thank You @SimplePOSPool for #listing #npccoin $npc #Masternode #Masternodes…",
+      "link": "https://cryptopanic.com/news/11446102/Thank-You-SimplePOSPool-for-listing-npccoin-npc-Masternode-Masternodes?mtm_campaign=API-OFA",
+      "pubDate": "2019-07-09T22:28:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NPC"
+      ]
+    },
+    {
+      "title": "Tether loaned USDT to investors and illegally traded in New York, say investigators",
+      "link": "https://cryptopanic.com/news/5971735/Tether-loaned-USDT-to-investors-and-illegally-traded-in-New-York-say-investigators",
+      "pubDate": "2019-07-09T10:28:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "How to onboard your folks to crypto #1: from gold to petroyuan & de-dollarization",
+      "link": "https://cryptopanic.com/news/tether/5968608/How-to-onboard-your-folks-to-crypto-1-from-gold-to-petroyuan-de-dollarization",
+      "pubDate": "2019-07-09T05:33:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

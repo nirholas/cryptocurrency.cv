@@ -1,0 +1,117 @@
+{
+  "date": "2019-10-29",
+  "fetchedAt": "2026-02-05T07:27:06.680Z",
+  "articleCount": 7,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Samsung adds TRON support to Blockchain Keystore development kit",
+      "link": "https://cryptopanic.com/news/tron/6998742/Samsung-adds-TRON-support-to-Blockchain-Keystore-development-kit",
+      "pubDate": "2019-10-29T21:19:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron (TRX) rises 7 percent on Samsung Blockchain Keystore support",
+      "link": "https://cryptopanic.com/news/6998575/Tron-TRX-rises-7-percent-on-Samsung-Blockchain-Keystore-support",
+      "pubDate": "2019-10-29T20:55:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Litecoin’s falling hash rate is a worrying sign",
+      "link": "https://cryptopanic.com/news/6996748/Litecoins-falling-hash-rate-is-a-worrying-sign",
+      "pubDate": "2019-10-29T17:55:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Samsung Adds Support for Tron Network to Blockchain Dapp Store",
+      "link": "https://cryptopanic.com/news/tron/6994152/Samsung-Adds-Support-for-Tron-Network-to-Blockchain-Dapp-Store",
+      "pubDate": "2019-10-29T13:35:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Samsung Unveils TRX dApp Building Tools for TRON Blockchain Support",
+      "link": "https://cryptopanic.com/news/tron/6994044/Samsung-Unveils-TRX-dApp-Building-Tools-for-TRON-Blockchain-Support",
+      "pubDate": "2019-10-29T13:25:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Kraken Cryptocurrency Exchange Lists OmiseGO (OMG) and PAX Gold (PAXG)",
+      "link": "https://cryptopanic.com/news/6992897/Kraken-Cryptocurrency-Exchange-Lists-OmiseGO-OMG-and-PAX-Gold-PAXG",
+      "pubDate": "2019-10-29T11:25:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDP",
+        "OMG"
+      ]
+    },
+    {
+      "title": "It's Official: Tron CEO Justin Sun Confirms Much-Hyped Partnership with Samsung",
+      "link": "https://cryptopanic.com/news/6991732/Its-Official-Tron-CEO-Justin-Sun-Confirms-Much-Hyped-Partnership-with-Samsung",
+      "pubDate": "2019-10-29T08:43:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    }
+  ]
+}

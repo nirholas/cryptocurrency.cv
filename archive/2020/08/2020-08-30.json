@@ -1,0 +1,26 @@
+{
+  "date": "2020-08-30",
+  "fetchedAt": "2026-02-05T07:27:06.973Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ethereum Classic (ETC) Sees Another 51 Percent Attack as Developers Scrambling to Secure Blockchain",
+      "link": "https://cryptopanic.com/news/9825126/Ethereum-Classic-ETC-Sees-Another-51-Percent-Attack-as-Developers-Scrambling-to-Secure-Blockchain",
+      "pubDate": "2020-08-30T10:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

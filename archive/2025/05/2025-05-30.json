@@ -1,0 +1,496 @@
+{
+  "date": "2025-05-30",
+  "fetchedAt": "2026-02-05T07:27:08.636Z",
+  "articleCount": 37,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Can Web3 ai Beat Aave and UNI in the Bull Market? Here’s What Analysts Say",
+      "link": "https://cryptopanic.com/news/uniswap/22219576/Can-Web3-ai-Beat-Aave-and-UNI-in-the-Bull-Market-Heres-What-Analysts-Say",
+      "pubDate": "2025-05-30T23:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Jamie Dimon says U.S. should stockpile bullets and tanks, not Bitcoin",
+      "link": "https://cryptopanic.com/news/bitcoin/22219560/Jamie-Dimon-says-US-should-stockpile-bullets-and-tanks-not-Bitcoin",
+      "pubDate": "2025-05-30T22:37:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ]
+    },
+    {
+      "title": "Uniswap Rally Loading—Here’s Why The Next Move Could Be Explosive",
+      "link": "https://cryptopanic.com/news/uniswap/22219338/Uniswap-Rally-LoadingHeres-Why-The-Next-Move-Could-Be-Explosive",
+      "pubDate": "2025-05-30T21:30:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Senator Cynthia Lummis' son-in-law is not a fan of Ripple",
+      "link": "https://cryptopanic.com/news/bitcoin/22219096/Senator-Cynthia-Lummis-son-in-law-is-not-a-fan-of-Ripple",
+      "pubDate": "2025-05-30T20:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Ripple CEO Brad Garlinghouse recently decried Sen. Cynthia Lummis cancelling a meeting with him.",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Disney Offers Free NFTs To Streaming Subscribers: How 'Passionate' Fans Can Get New Digital Collectibles",
+      "link": "https://cryptopanic.com/news/flow/22219147/Disney-Offers-Free-NFTs-To-Streaming-Subscribers-How-Passionate-Fans-Can-Get-New-Digital-Collectibles",
+      "pubDate": "2025-05-30T20:06:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "FLOW",
+        "DIS"
+      ]
+    },
+    {
+      "title": "Canary Capital Seeks SEC Approval For Staked CRO ETF Offering Passive Crypto Exposure",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/22218460/Canary-Capital-Seeks-SEC-Approval-For-Staked-CRO-ETF-Offering-Passive-Crypto-Exposure",
+      "pubDate": "2025-05-30T19:47:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Hyperliquid Price Prediction: HYPE Set To Replace Binance, Coinbase, Kraken, Uniswap & Jupiter! Why & How?!",
+      "link": "https://cryptopanic.com/news/uniswap/22218089/Hyperliquid-Price-Prediction-HYPE-Set-To-Replace-Binance-Coinbase-Kraken-Uniswap-Jupiter-Why-How",
+      "pubDate": "2025-05-30T19:20:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "JUP",
+        "HYPE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Top Cryptos to Invest in 2025: Web3 ai, Monero, Solana, & Polkadot",
+      "link": "https://cryptopanic.com/news/polkadot/22217068/Top-Cryptos-to-Invest-in-2025-Web3-ai-Monero-Solana-Polkadot",
+      "pubDate": "2025-05-30T19:00:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "DOT",
+        "XMR"
+      ]
+    },
+    {
+      "title": "CRO ETF? Canary Capital Files for US Cronos Fund as Altcoin Interest Intensifies",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/22217005/CRO-ETF-Canary-Capital-Files-for-US-Cronos-Fund-as-Altcoin-Interest-Intensifies",
+      "pubDate": "2025-05-30T18:38:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Web3 ai Offers 10,000x Gains, Monero Rises 150% & SHIB Surges",
+      "link": "https://cryptopanic.com/news/monero/22216982/Web3-ai-Offers-10000x-Gains-Monero-Rises-150-SHIB-Surges",
+      "pubDate": "2025-05-30T18:30:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "XMR"
+      ]
+    },
+    {
+      "title": "Canary Staked CRO ETF Files S-1 with US SEC",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/22215713/Canary-Staked-CRO-ETF-Files-S-1-with-US-SEC",
+      "pubDate": "2025-05-30T17:26:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Top Crypto to Buy Now: BlockDAG, VeChain, Kaspa, & Aave Lead the Way in 2025",
+      "link": "https://cryptopanic.com/news/vechain/22214554/Top-Crypto-to-Buy-Now-BlockDAG-VeChain-Kaspa-Aave-Lead-the-Way-in-2025",
+      "pubDate": "2025-05-30T17:00:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "VET",
+        "AAVE",
+        "KAS"
+      ]
+    },
+    {
+      "title": "Top 3 DePIN networks: Coldware, PI or THETA , expert predicts 11,000% gains before altcoin bull market",
+      "link": "https://cryptopanic.com/news/theta-token/22213827/Top-3-DePIN-networks-Coldware-PI-or-THETA-expert-predicts-11000-gains-before-altcoin-bull-market",
+      "pubDate": "2025-05-30T15:53:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "PI"
+      ]
+    },
+    {
+      "title": "🇺🇸 CanaryFunds has submitted a registration statement to the U.S. SECGov for the first spot CRO ETF in the U.S., with Crypto.com serving as custodian and liquidity provider of the fund.",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/22220718/CanaryFunds-has-submitted-a-registration-statement-to-the-US-SECGov-for-the-first-spot-CRO-ETF-in-the-US-with-Cryptocom-serving-as-custodian-and-liquidity-provider-of-the-fund",
+      "pubDate": "2025-05-30T15:42:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRO",
+        "MCO"
+      ]
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 31 May 2025: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/decentraland/22215735/Spell-Wallet-Daily-Puzzle-31-May-2025-Earn-Reward-of-1-MANA",
+      "pubDate": "2025-05-30T15:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "Canary Files S-1 With SEC for First US Staked CRO ETF, Acting as Custodian and Liquidity Provider",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/22211310/Canary-Files-S-1-With-SEC-for-First-US-Staked-CRO-ETF-Acting-as-Custodian-and-Liquidity-Provider",
+      "pubDate": "2025-05-30T14:13:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Crypto Price Analysis 5-30: BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, CELESTIA: TIA, INTERNET COMPUTER: ICP, FILECOIN: FIL",
+      "link": "https://cryptopanic.com/news/filecoin/22210291/Crypto-Price-Analysis-5-30-BITCOIN-BTC-ETHEREUM-ETH-SOLANA-SOL-CELESTIA-TIA-INTERNET-COMPUTER-ICP-FILECOIN-FIL",
+      "pubDate": "2025-05-30T13:38:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "CoinDesk 20 Performance Update: NEAR Drops 5.4% as Almost All Assets Trade Lower",
+      "link": "https://cryptopanic.com/news/near/22210266/CoinDesk-20-Performance-Update-NEAR-Drops-54-as-Almost-All-Assets-Trade-Lower",
+      "pubDate": "2025-05-30T13:34:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Canary’s US Spot CRO ETF Takes Step Forward With S-1 Filing",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/22210180/Canarys-US-Spot-CRO-ETF-Takes-Step-Forward-With-S-1-Filing",
+      "pubDate": "2025-05-30T13:30:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "How Stacks is looking to power a second wave of Bitcoin DeFi",
+      "link": "https://cryptopanic.com/news/blockstack/22210146/How-Stacks-is-looking-to-power-a-second-wave-of-Bitcoin-DeFi",
+      "pubDate": "2025-05-30T13:19:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "STX",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "Coldware, Cardano, Monero - Best 3 Cryptocurrencies Enhancing Investors' Portfolios 300%",
+      "link": "https://cryptopanic.com/news/monero/22209999/Coldware-Cardano-Monero-Best-3-Cryptocurrencies-Enhancing-Investors-Portfolios-300",
+      "pubDate": "2025-05-30T13:18:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "XMR"
+      ]
+    },
+    {
+      "title": "Top AI tokens Bittensor, NEAR, ICP flip bearish as uncertainty surrounding US tariffs bites",
+      "link": "https://cryptopanic.com/news/near/22210759/Top-AI-tokens-Bittensor-NEAR-ICP-flip-bearish-as-uncertainty-surrounding-US-tariffs-bites",
+      "pubDate": "2025-05-30T12:58:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "NEAR",
+        "ICP",
+        "TAO"
+      ]
+    },
+    {
+      "title": "Canary Capital seeks SEC approval to launch first staked spot CRO ETF in the US",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/22208595/Canary-Capital-seeks-SEC-approval-to-launch-first-staked-spot-CRO-ETF-in-the-US",
+      "pubDate": "2025-05-30T12:40:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "CRO",
+        "S"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash Slumps 4% as $400 Support Faces Heavy Selling Pressure",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22208687/Bitcoin-Cash-Slumps-4-as-400-Support-Faces-Heavy-Selling-Pressure",
+      "pubDate": "2025-05-30T12:26:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Canary Capital Files For Cronos (CRO) ETF With US SEC, Price Recap",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/22207212/Canary-Capital-Files-For-Cronos-CRO-ETF-With-US-SEC-Price-Recap",
+      "pubDate": "2025-05-30T12:02:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Liquidium debuts cross-chain lending to unlock over $4 billion idle Bitcoin in DeFi",
+      "link": "https://cryptopanic.com/news/internet-computer/22206910/Liquidium-debuts-cross-chain-lending-to-unlock-over-4-billion-idle-Bitcoin-in-DeFi",
+      "pubDate": "2025-05-30T11:35:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Canary Files for First-Ever Staked CRO ETF",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/22205254/Canary-Files-for-First-Ever-Staked-CRO-ETF",
+      "pubDate": "2025-05-30T10:39:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Canary Staked CRO ETF Files for SEC Approval to List on Exchange",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/22205336/Canary-Staked-CRO-ETF-Files-for-SEC-Approval-to-List-on-Exchange",
+      "pubDate": "2025-05-30T10:37:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Canary Capital files S-1 for staked Cronos ETF as SEC softens stance on staking",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/22205237/Canary-Capital-files-S-1-for-staked-Cronos-ETF-as-SEC-softens-stance-on-staking",
+      "pubDate": "2025-05-30T10:36:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Canary's CRO ETF Seeks SEC Approval for U.S. Listing",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/22205196/Canarys-CRO-ETF-Seeks-SEC-Approval-for-US-Listing",
+      "pubDate": "2025-05-30T10:26:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Canary Capital Files With SEC for Staked CRO ETF",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/22204881/Canary-Capital-Files-With-SEC-for-Staked-CRO-ETF",
+      "pubDate": "2025-05-30T10:17:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Altcoin to Watch in June 2025! Vechain $VET $VTHO $B3TR",
+      "link": "https://cryptopanic.com/news/vechain/22205059/Altcoin-to-Watch-in-June-2025-Vechain-VET-VTHO-B3TR",
+      "pubDate": "2025-05-30T10:01:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET",
+        "VTHO",
+        "B3TR"
+      ]
+    },
+    {
+      "title": "Uniswap's UNI Slides 8% Despite Upgrade Optimism",
+      "link": "https://cryptopanic.com/news/uniswap/22203734/Uniswaps-UNI-Slides-8-Despite-Upgrade-Optimism",
+      "pubDate": "2025-05-30T09:46:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Unilabs Finance (UNIL) Stuns With 30% Weekly Growth, Better Option than Vechain & Cardano?",
+      "link": "https://cryptopanic.com/news/vechain/22214410/Unilabs-Finance-UNIL-Stuns-With-30-Weekly-Growth-Better-Option-than-Vechain-Cardano",
+      "pubDate": "2025-05-30T09:11:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "VET"
+      ]
+    },
+    {
+      "title": "How PancakeSwap Is Thriving in DeFi While CAKE Struggles to Keep Up",
+      "link": "https://cryptopanic.com/news/pancakeswap-token/22203652/How-PancakeSwap-Is-Thriving-in-DeFi-While-CAKE-Struggles-to-Keep-Up",
+      "pubDate": "2025-05-30T09:03:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "CAKE",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "Ethereum Foundation Becomes Major Railgun Validator, Backs Aave",
+      "link": "https://cryptopanic.com/news/aave/22198898/Ethereum-Foundation-Becomes-Major-Railgun-Validator-Backs-Aave",
+      "pubDate": "2025-05-30T06:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "PancakeSwap Records $138 Billion in Monthly Volume, Surpasses Uniswap",
+      "link": "https://cryptopanic.com/news/uniswap/22192890/PancakeSwap-Records-138-Billion-in-Monthly-Volume-Surpasses-Uniswap",
+      "pubDate": "2025-05-30T00:28:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "UNI"
+      ]
+    }
+  ]
+}

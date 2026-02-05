@@ -1,0 +1,25 @@
+{
+  "date": "2018-10-23",
+  "fetchedAt": "2026-02-05T07:27:06.964Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitfinex Is Publishing Data for a Tether Market That Doesn't Exist",
+      "link": "https://cryptopanic.com/news/3437374/Bitfinex-Is-Publishing-Data-for-a-Tether-Market-That-Doesnt-Exist",
+      "pubDate": "2018-10-23T18:30:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

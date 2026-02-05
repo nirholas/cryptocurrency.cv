@@ -1,0 +1,32 @@
+{
+  "date": "2019-10-22",
+  "fetchedAt": "2026-02-05T07:27:06.990Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "PoS Will Make Ethereum More Secure Than Bitcoin, Says Vitalik Buterin,After the proof-of-stake (PoS) consensus algo…",
+      "link": "https://cryptopanic.com/news/7505267/PoS-Will-Make-Ethereum-More-Secure-Than-Bitcoin-Says-Vitalik-ButerinAfter-the-proof-of-stake-PoS-consensus-algo",
+      "pubDate": "2019-10-22T13:16:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "RKN"
+      ]
+    },
+    {
+      "title": "Enterprise Ethereum Alliance (EEA) created a token system to encourage the active contribution of member organizati…",
+      "link": "https://cryptopanic.com/news/7505277/Enterprise-Ethereum-Alliance-EEA-created-a-token-system-to-encourage-the-active-contribution-of-member-organizati",
+      "pubDate": "2019-10-22T12:58:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "RKN"
+      ]
+    }
+  ]
+}

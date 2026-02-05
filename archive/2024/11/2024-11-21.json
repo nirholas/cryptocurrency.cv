@@ -1,0 +1,1905 @@
+{
+  "date": "2024-11-21",
+  "fetchedAt": "2026-02-05T07:27:08.343Z",
+  "articleCount": 135,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Crypto market maker B2C2 taps PV01 to issue its first corporate bond on Ethereum",
+      "link": "https://cryptopanic.com/news/20293847/Crypto-market-maker-B2C2-taps-PV01-to-issue-its-first-corporate-bond-on-Ethereum?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T23:03:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDC",
+        "GAL"
+      ]
+    },
+    {
+      "title": "The 6 Pillars of Realms World on Starknet",
+      "link": "https://cryptopanic.com/news/20293713/The-6-Pillars-of-Realms-World-on-Starknet?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T22:23:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STRK"
+      ]
+    },
+    {
+      "title": "MicroStrategy completes its $3 billion debt offering to buy more bitcoin",
+      "link": "https://cryptopanic.com/news/20293712/MicroStrategy-completes-its-3-billion-debt-offering-to-buy-more-bitcoin?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T22:22:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "PEOPLE"
+      ]
+    },
+    {
+      "title": "Bitcoin, Ethereum, Dogecoin Prepping For An Early Thanksgiving: 'BTC Is Currently (Less Than) One ETH Away From $100,000,' Says Trader",
+      "link": "https://cryptopanic.com/news/20293708/Bitcoin-Ethereum-Dogecoin-Prepping-For-An-Early-Thanksgiving-BTC-Is-Currently-Less-Than-One-ETH-Away-From-100000-Says-Trader?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T22:04:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "SOL",
+        "DOGE",
+        "SHIB",
+        "STRK",
+        "ARB",
+        "OP"
+      ]
+    },
+    {
+      "title": "PNUT price prediction: Will $1 be defended after a 50% retracement?",
+      "link": "https://cryptopanic.com/news/20293538/PNUT-price-prediction-Will-1-be-defended-after-a-50-retracement?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T22:00:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "PNUT",
+        "MEME"
+      ]
+    },
+    {
+      "title": "The Graph introduces GRC-20 standard for Web3 data structure",
+      "link": "https://cryptopanic.com/news/20293491/The-Graph-introduces-GRC-20-standard-for-Web3-data-structure?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T21:59:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GRT"
+      ]
+    },
+    {
+      "title": "If You Invested $1,000 In Ethereum At Launch, Here's How Much You'd Have Today",
+      "link": "https://cryptopanic.com/news/20293585/If-You-Invested-1000-In-Ethereum-At-Launch-Heres-How-Much-Youd-Have-Today?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T21:49:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "Sui Network Suffers First Major Outage in 2-Hour Blackout",
+      "link": "https://cryptopanic.com/news/20293444/Sui-Network-Suffers-First-Major-Outage-in-2-Hour-Blackout?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T21:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The network was recently plunged into a multi-hour blackout, raising reliability concerns.",
+      "currencies": [
+        "SUI"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "US CFPB finalizes its rule for large nonbank firms offering digital payments, but excludes crypto",
+      "link": "https://cryptopanic.com/news/20293410/US-CFPB-finalizes-its-rule-for-large-nonbank-firms-offering-digital-payments-but-excludes-crypto?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T21:23:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "GAL"
+      ]
+    },
+    {
+      "title": "How The DAO Hack Changed Blockchain Security",
+      "link": "https://cryptopanic.com/news/20293355/How-The-DAO-Hack-Changed-Blockchain-Security?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T21:10:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DAO"
+      ]
+    },
+    {
+      "title": "Trump’s proposed Crypto Advisory Council could establish US bitcoin reserve: report",
+      "link": "https://cryptopanic.com/news/20293203/Trumps-proposed-Crypto-Advisory-Council-could-establish-US-bitcoin-reserve-report?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T21:01:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "PEOPLE",
+        "GAL"
+      ]
+    },
+    {
+      "title": "Crypto Trader Says One Top-50 Altcoin Could Go Up by Over 100%, Updates Outlook on Bitcoin and Ethereum",
+      "link": "https://cryptopanic.com/news/20293204/Crypto-Trader-Says-One-Top-50-Altcoin-Could-Go-Up-by-Over-100-Updates-Outlook-on-Bitcoin-and-Ethereum?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T21:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "STX"
+      ]
+    },
+    {
+      "title": "Cathie Wood's $3.8 Million Bitcoin Vision Met With Doubt: 83% Say Not By 2030",
+      "link": "https://cryptopanic.com/news/20293358/Cathie-Woods-38-Million-Bitcoin-Vision-Met-With-Doubt-83-Say-Not-By-2030?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T20:55:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "WOO",
+        "ARK"
+      ]
+    },
+    {
+      "title": "Whales Fuel $ADA Rally: Cardano’s Market Cap Surpasses $28 Billion as Large Transactions Surge",
+      "link": "https://cryptopanic.com/news/20293152/Whales-Fuel-ADA-Rally-Cardanos-Market-Cap-Surpasses-28-Billion-as-Large-Transactions-Surge?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T20:49:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The price of the native token of smart contract platform Cardano ($ADA) has surged by more than 41% over the past week to now trade at around $0.8 per token, giving it a total market capitalization above the $28 billion mark. According to popular cryptocurrency analyst Ali Martinez, the price rise came amid an increase […]",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Texas judge tosses out SEC’s expanded ‘broker’ rule, which broke with 90 years of legal tradition to rope in crypto traders",
+      "link": "https://cryptopanic.com/news/20293039/Texas-judge-tosses-out-SECs-expanded-broker-rule-which-broke-with-90-years-of-legal-tradition-to-rope-in-crypto-traders?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T20:07:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "GAL"
+      ]
+    },
+    {
+      "title": "Donald Trump’s media company files trademark application for ‘TruthFi’, a crypto payments service",
+      "link": "https://cryptopanic.com/news/20292921/Donald-Trumps-media-company-files-trademark-application-for-TruthFi-a-crypto-payments-service?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T20:02:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PEOPLE"
+      ]
+    },
+    {
+      "title": "Injective’s TVL soars 61%: Is it enough to offset retail sell-offs?",
+      "link": "https://cryptopanic.com/news/20292914/Injectives-TVL-soars-61-Is-it-enough-to-offset-retail-sell-offs?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T20:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "INJ"
+      ]
+    },
+    {
+      "title": "SEC edges closer to Solana ETF approval amid political shifts",
+      "link": "https://cryptopanic.com/news/20292919/SEC-edges-closer-to-Solana-ETF-approval-amid-political-shifts?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T20:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Fox Business reporter Eleanor Terrett has claimed that the SEC is quietly engaging with several issuers about approving a Solana ETF.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Layer-2 Teams Welcome Proposal to Overhaul Blockchain",
+      "link": "https://cryptopanic.com/news/20292833/Ethereum-Layer-2-Teams-Welcome-Proposal-to-Overhaul-Blockchain?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T19:44:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MATIC",
+        "BEAM"
+      ]
+    },
+    {
+      "title": "Why Litecoin Is Moving",
+      "link": "https://cryptopanic.com/news/20292850/Why-Litecoin-Is-Moving?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T19:42:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "TRON’s Justin Sun Acquires Viral Art for $6.2 Million, Causes Banana Gun to Spike",
+      "link": "https://cryptopanic.com/news/20293040/TRONs-Justin-Sun-Acquires-Viral-Art-for-62-Million-Causes-Banana-Gun-to-Spike?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T19:25:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TRX",
+        "NFT",
+        "ZIG",
+        "BANANA"
+      ]
+    },
+    {
+      "title": "GMT DAO Launches Groundbreaking Burn Initiative With a Target of up to 600 Million GMT",
+      "link": "https://cryptopanic.com/news/20292754/GMT-DAO-Launches-Groundbreaking-Burn-Initiative-With-a-Target-of-up-to-600-Million-GMT?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T19:19:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GMT",
+        "DAO"
+      ]
+    },
+    {
+      "title": "Former CFTC Chair Chris Giancarlo a top contender for White House ‘crypto czar’: Fox Business",
+      "link": "https://cryptopanic.com/news/20292753/Former-CFTC-Chair-Chris-Giancarlo-a-top-contender-for-White-House-crypto-czar-Fox-Business?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T19:16:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "GAL"
+      ]
+    },
+    {
+      "title": "Litecoin Price Prediction: LTC Price Bullish Reversal Eyes To Hit $100?",
+      "link": "https://cryptopanic.com/news/20292717/Litecoin-Price-Prediction-LTC-Price-Bullish-Reversal-Eyes-To-Hit-100?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T19:09:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "The Daily: Gary Gensler to leave SEC on Jan. 20, regulator now ‘engaging’ on spot Solana ETFs and more",
+      "link": "https://cryptopanic.com/news/20292705/The-Daily-Gary-Gensler-to-leave-SEC-on-Jan-20-regulator-now-engaging-on-spot-Solana-ETFs-and-more?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T19:06:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The following article is adapted from The Block’s newsletter, The Daily, which comes out on weekday afternoons.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "NFT",
+        "PEOPLE",
+        "SUI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "From Quant to Just a Chill Guy: How Crypto Degeneracy Hinders Adoption",
+      "link": "https://cryptopanic.com/news/20292702/From-Quant-to-Just-a-Chill-Guy-How-Crypto-Degeneracy-Hinders-Adoption?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T19:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "QNT"
+      ]
+    },
+    {
+      "title": "Sui Crypto Integrates FDUSD To Drive Ecosystem Liquidity",
+      "link": "https://cryptopanic.com/news/20292714/Sui-Crypto-Integrates-FDUSD-To-Drive-Ecosystem-Liquidity?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T19:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SUI",
+        "FDUSD"
+      ]
+    },
+    {
+      "title": "The 4 Top Cryptos for Long-Term Investment: How Polkadot, Dogecoin, XRP & BlockDAG Stack Up",
+      "link": "https://cryptopanic.com/news/20292360/The-4-Top-Cryptos-for-Long-Term-Investment-How-Polkadot-Dogecoin-XRP-BlockDAG-Stack-Up?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T18:29:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "DOGE",
+        "DOT"
+      ]
+    },
+    {
+      "title": "Best Crypto to Buy Now November 21 – FLOKI, RAY, FIL",
+      "link": "https://cryptopanic.com/news/20293042/Best-Crypto-to-Buy-Now-November-21-FLOKI-RAY-FIL?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T18:26:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FIL",
+        "RAY",
+        "FLOKI"
+      ]
+    },
+    {
+      "title": "TUSD up to 99.7% backed by speculative assets despite SEC settlement",
+      "link": "https://cryptopanic.com/news/20292341/TUSD-up-to-997-backed-by-speculative-assets-despite-SEC-settlement?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T18:17:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "TUSD"
+      ]
+    },
+    {
+      "title": "SEC Chair Gary Gensler to step down as Trump signals pro-crypto agenda",
+      "link": "https://cryptopanic.com/news/20292118/SEC-Chair-Gary-Gensler-to-step-down-as-Trump-signals-pro-crypto-agenda?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T18:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "PEOPLE",
+        "GAL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Cash surges 15% in 24 hours, hits 7-month high: Is $620 next?",
+      "link": "https://cryptopanic.com/news/20292043/Bitcoin-Cash-surges-15-in-24-hours-hits-7-month-high-Is-620-next?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T18:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Bitcoin SV Price Prediction: Will BSV Price Smash $100 This Weekend?",
+      "link": "https://cryptopanic.com/news/20292014/Bitcoin-SV-Price-Prediction-Will-BSV-Price-Smash-100-This-Weekend?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T17:47:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ]
+    },
+    {
+      "title": "Dell’s EPS Expected to Rise by 9% as Firm Set to Report Fiscal Q3 Results",
+      "link": "https://cryptopanic.com/news/20291721/Dells-EPS-Expected-to-Rise-by-9-as-Firm-Set-to-Report-Fiscal-Q3-Results?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T17:04:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EPS"
+      ]
+    },
+    {
+      "title": "Solana ETF Negotiations with SEC are “Progressing”, Approval Within Reach",
+      "link": "https://cryptopanic.com/news/20291902/Solana-ETF-Negotiations-with-SEC-are-Progressing-Approval-Within-Reach?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T17:01:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The SEC is quietly meeting with several issuers to discuss approving a Solana ETF, claims Fox Business reporter Eleanor Terrett. With Trump’s impending pro-crypto administration, the SEC seems more inclined to approve such a product. However, anti-crypto figure Gary Gensler is still nominally in charge of the SEC, and public progress might not begin until 2025. Solana ETF Approval Is Getting...",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Prom Launches Mainnet to Join Blockchain Scalability Pioneers",
+      "link": "https://cryptopanic.com/news/20295411/Prom-Launches-Mainnet-to-Join-Blockchain-Scalability-Pioneers?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T17:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PROM"
+      ]
+    },
+    {
+      "title": "Solana price hits $250 for the first time in three years amid SEC progress on Solana ETF applications",
+      "link": "https://cryptopanic.com/news/20291577/Solana-price-hits-250-for-the-first-time-in-three-years-amid-SEC-progress-on-Solana-ETF-applications?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T16:44:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Solana's SOL token surged to $250, its highest level since November 2021, on Thursday morning. The surge comes as discussions between SEC staff and Solana ETF issuers are making progress.The fourth-largest crypto asset is now just 4% away from its all-time high of $260 set in November 2021, based on data from CoinGecko. If the current bullish momentum continues, Solana will soon surpass its...",
+      "currencies": [
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Price Almost Hits $98,000: Key Reasons Behind The Rally",
+      "link": "https://cryptopanic.com/news/20291524/Bitcoin-Price-Almost-Hits-98000-Key-Reasons-Behind-The-Rally?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T16:30:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "ARK"
+      ]
+    },
+    {
+      "title": "Cardano TVL nears $600 mln: How SNEK memecoin helped its rise",
+      "link": "https://cryptopanic.com/news/20291533/Cardano-TVL-nears-600-mln-How-SNEK-memecoin-helped-its-rise?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T16:30:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "SNEK"
+      ]
+    },
+    {
+      "title": "GOAT Price Shows Weakening Momentum After Reaching Top 10 Meme Coins Ranking",
+      "link": "https://cryptopanic.com/news/20291900/GOAT-Price-Shows-Weakening-Momentum-After-Reaching-Top-10-Meme-Coins-Ranking?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T16:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MOG",
+        "GOAT"
+      ]
+    },
+    {
+      "title": "Optimism (OP) Outperforming Crypto Market With 17% Surge",
+      "link": "https://cryptopanic.com/news/20291508/Optimism-OP-Outperforming-Crypto-Market-With-17-Surge?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T16:27:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "OP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Nvidia Aggressively Bought, Russia Fires First Intercontinental Ballistic Missile, Adani Indicted",
+      "link": "https://cryptopanic.com/news/20291548/Nvidia-Aggressively-Bought-Russia-Fires-First-Intercontinental-Ballistic-Missile-Adani-Indicted?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T16:24:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "META"
+      ]
+    },
+    {
+      "title": "Jito Token Holders Slated for Payday Under TipRouter Proposal",
+      "link": "https://cryptopanic.com/news/20291433/Jito-Token-Holders-Slated-for-Payday-Under-TipRouter-Proposal?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T16:09:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "JTO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "TikTok Meme Coins The New Craze? Teenager Launches $QUANT On Stream and Goes Viral",
+      "link": "https://cryptopanic.com/news/20292293/TikTok-Meme-Coins-The-New-Craze-Teenager-Launches-QUANT-On-Stream-and-Goes-Viral?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T16:09:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QNT",
+        "PEPE"
+      ]
+    },
+    {
+      "title": "Sui Price Down Following Network’s First Major Outage",
+      "link": "https://cryptopanic.com/news/20291406/Sui-Price-Down-Following-Networks-First-Major-Outage?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T16:07:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Sui Network experienced its first major outage Thursday, grinding the network to a halt for two hours due to a bug.",
+      "currencies": [
+        "SUI"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Polygon: 3 key factors that could trigger a ‘hated rally’ for POL",
+      "link": "https://cryptopanic.com/news/20291223/Polygon-3-key-factors-that-could-trigger-a-hated-rally-for-POL?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T16:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MATIC"
+      ]
+    },
+    {
+      "title": "Polygon’s Sandeep Nailwal warns memecoin rug pulls like QUANT may invite regulatory crackdown",
+      "link": "https://cryptopanic.com/news/20291141/Polygons-Sandeep-Nailwal-warns-memecoin-rug-pulls-like-QUANT-may-invite-regulatory-crackdown?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T15:59:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MATIC",
+        "QNT"
+      ]
+    },
+    {
+      "title": "Polygon’s Whale Activity Surges, But Can It Pull MATIC Out of the Woods?",
+      "link": "https://cryptopanic.com/news/20291148/Polygons-Whale-Activity-Surges-But-Can-It-Pull-MATIC-Out-of-the-Woods?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T15:59:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Analyst Predicts Big Dogecoin Rally After DOGE Prints Bullish Pattern – Here’s His Price Target",
+      "link": "https://cryptopanic.com/news/20291037/Crypto-Analyst-Predicts-Big-Dogecoin-Rally-After-DOGE-Prints-Bullish-Pattern-Heres-His-Price-Target?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T15:30:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "MATIC",
+        "WIF"
+      ]
+    },
+    {
+      "title": "STX all set for a 25% breakout: Watch out for THESE price levels",
+      "link": "https://cryptopanic.com/news/20291046/STX-all-set-for-a-25-breakout-Watch-out-for-THESE-price-levels?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T15:30:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "STX"
+      ]
+    },
+    {
+      "title": "Is Bitcoin Cash Joining the Rally? BCH Price Up 17% In A Day",
+      "link": "https://cryptopanic.com/news/20291449/Is-Bitcoin-Cash-Joining-the-Rally-BCH-Price-Up-17-In-A-Day?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T15:28:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Solana Spot ETF Applications Progress as SEC Reviews Forms",
+      "link": "https://cryptopanic.com/news/20291096/Solana-Spot-ETF-Applications-Progress-as-SEC-Reviews-Forms?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T15:28:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "SEC evaluates Solana Spot ETF applications from VanEck, 21Shares, and Canary Funds, with Bitwise preparing to join the process soon.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Brett Coin Price Surges 165% Amid Strong Market Sentiment",
+      "link": "https://cryptopanic.com/news/20291036/Brett-Coin-Price-Surges-165-Amid-Strong-Market-Sentiment?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T15:27:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BRETT"
+      ]
+    },
+    {
+      "title": "CoinDesk 20 Index Sees Significant Gains",
+      "link": "https://cryptopanic.com/news/20291132/CoinDesk-20-Index-Sees-Significant-Gains?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T15:23:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XLM",
+        "BCH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "CoinDesk 20 Performance Update: BCH Gains 13.1%, Leading Index Higher from Wednesday",
+      "link": "https://cryptopanic.com/news/20290932/CoinDesk-20-Performance-Update-BCH-Gains-131-Leading-Index-Higher-from-Wednesday?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T15:01:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "BCH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "Popcat Price Dips, New Meme Coin Launch Catslap Goes Viral: Best Crypto to Buy Now?",
+      "link": "https://cryptopanic.com/news/20291447/Popcat-Price-Dips-New-Meme-Coin-Launch-Catslap-Goes-Viral-Best-Crypto-to-Buy-Now?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T14:57:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "POPCAT"
+      ]
+    },
+    {
+      "title": "Scroll Integrates with Fireblocks to Enhance Security and Accessibility for $SCR Token and Ecosystem",
+      "link": "https://cryptopanic.com/news/20290499/Scroll-Integrates-with-Fireblocks-to-Enhance-Security-and-Accessibility-for-SCR-Token-and-Ecosystem?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T14:41:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "SCR"
+      ]
+    },
+    {
+      "title": "QUANT pumps 71K% in 6 hours as teenager’s failed rugpull angers crypto community",
+      "link": "https://cryptopanic.com/news/20290476/QUANT-pumps-71K-in-6-hours-as-teenagers-failed-rugpull-angers-crypto-community?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T14:30:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "QNT"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash (BCH) Jumps 10%, Becomes the Day’s Top Gainer",
+      "link": "https://cryptopanic.com/news/20290765/Bitcoin-Cash-BCH-Jumps-10-Becomes-the-Days-Top-Gainer?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T14:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ]
+    },
+    {
+      "title": "BLUM Daily Video Codes 22 November 2024: Earn 250 BP Points",
+      "link": "https://cryptopanic.com/news/20291470/BLUM-Daily-Video-Codes-22-November-2024-Earn-250-BP-Points?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T14:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGS"
+      ]
+    },
+    {
+      "title": "Cats Youtube Code Today November 22, 2024: Boost Your Earnings",
+      "link": "https://cryptopanic.com/news/20291153/Cats-Youtube-Code-Today-November-22-2024-Boost-Your-Earnings?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS",
+        "TON"
+      ]
+    },
+    {
+      "title": "IOST Foundation Proposes PayFi and DePIN Upgrade",
+      "link": "https://cryptopanic.com/news/20291120/IOST-Foundation-Proposes-PayFi-and-DePIN-Upgrade?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T13:50:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "IOST"
+      ]
+    },
+    {
+      "title": "Toncoin Trading at $5.5, TON Price Rebound in View as Bithumb Unveils Listing",
+      "link": "https://cryptopanic.com/news/20295406/Toncoin-Trading-at-55-TON-Price-Rebound-in-View-as-Bithumb-Unveils-Listing?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T13:50:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TON",
+        "METIS"
+      ]
+    },
+    {
+      "title": "A new DEX standard with first-ever Drawing Tools integration",
+      "link": "https://cryptopanic.com/news/20290118/A-new-DEX-standard-with-first-ever-Drawing-Tools-integration?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T13:31:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BNT",
+        "DAO"
+      ]
+    },
+    {
+      "title": "Why These Altcoins Are Trending Today — November 21",
+      "link": "https://cryptopanic.com/news/20290056/Why-These-Altcoins-Are-Trending-Today-November-21?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T13:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "OP",
+        "CHILLGUY",
+        "MODE",
+        "SLERF"
+      ]
+    },
+    {
+      "title": "‘L2s Don’t Compromise Ethereum’s Cypherpunk Vision but Make It True‘",
+      "link": "https://cryptopanic.com/news/20290040/L2s-Dont-Compromise-Ethereums-Cypherpunk-Vision-but-Make-It-True?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T13:11:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "STRK"
+      ]
+    },
+    {
+      "title": "Binance Listing Sends SLERF and SCRT Prices To New Height",
+      "link": "https://cryptopanic.com/news/20289930/Binance-Listing-Sends-SLERF-and-SCRT-Prices-To-New-Height?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T13:10:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SCRT"
+      ]
+    },
+    {
+      "title": "Neo partners with Palmera to launch first multisig Safe accounts on Neo X",
+      "link": "https://cryptopanic.com/news/20289562/Neo-partners-with-Palmera-to-launch-first-multisig-Safe-accounts-on-Neo-X?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T12:55:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Bitcoin ETFs Break Records as BTC Reaches All-Time High",
+      "link": "https://cryptopanic.com/news/20290461/Bitcoin-ETFs-Break-Records-as-BTC-Reaches-All-Time-High?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T12:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ARK"
+      ]
+    },
+    {
+      "title": "Litecoin (LTC) Forms Rare Golden Cross, Potential Scenarios",
+      "link": "https://cryptopanic.com/news/20289386/Litecoin-LTC-Forms-Rare-Golden-Cross-Potential-Scenarios?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T12:19:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "POLKADOT Price Analysis 11-21: $6 A Bridge Too Far For DOT",
+      "link": "https://cryptopanic.com/news/20290101/POLKADOT-Price-Analysis-11-21-6-A-Bridge-Too-Far-For-DOT?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T12:10:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Binance Futures Listing Catapults SLERF and SCRT Prices, Sparks Market Frenzy",
+      "link": "https://cryptopanic.com/news/20289551/Binance-Futures-Listing-Catapults-SLERF-and-SCRT-Prices-Sparks-Market-Frenzy?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T12:09:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SCRT"
+      ]
+    },
+    {
+      "title": "Bybit Launches Gold & FX Treasure Hunt Competition: Embark on a Quest for Real Gold Rewards",
+      "link": "https://cryptopanic.com/news/20289060/Bybit-Launches-Gold-FX-Treasure-Hunt-Competition-Embark-on-a-Quest-for-Real-Gold-Rewards?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T11:58:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FX"
+      ]
+    },
+    {
+      "title": "Prom Mainnet Launches with ZK-Proof Transactions",
+      "link": "https://cryptopanic.com/news/20291624/Prom-Mainnet-Launches-with-ZK-Proof-Transactions?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T11:58:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZK"
+      ]
+    },
+    {
+      "title": "Nayib Bukele tweet pumps Chill Guy memecoin amid creator’s legal threats",
+      "link": "https://cryptopanic.com/news/20289050/Nayib-Bukele-tweet-pumps-Chill-Guy-memecoin-amid-creators-legal-threats?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T11:56:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "As bitcoin rallied, Nayib Bukele tweeted the Just A Chill Guy meme. Immediately, Solana traders pumped that memecoin 65% within 90 minutes. The post Nayib Bukele tweet pumps Chill Guy memecoin amid creator’s legal threats appeared first on Protos.",
+      "currencies": [
+        "BTC",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Is Polygon Crypto On The Verge Of A Bullish Rally? Analyst Weighs In",
+      "link": "https://cryptopanic.com/news/20289051/Is-Polygon-Crypto-On-The-Verge-Of-A-Bullish-Rally-Analyst-Weighs-In?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T11:54:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Chinese Court Declares Bitcoin and Crypto Ownership Legal",
+      "link": "https://cryptopanic.com/news/20289040/Chinese-Court-Declares-Bitcoin-and-Crypto-Ownership-Legal?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T11:51:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "China's High Court rules cryptocurrencies as commodities with limited legal use but reaffirms strict bans on token fundraising and business transactions.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 33,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Justin Sun enters the banana zone with $6.2 million purchase of ‘Comedian’ artwork",
+      "link": "https://cryptopanic.com/news/20288936/Justin-Sun-enters-the-banana-zone-with-62-million-purchase-of-Comedian-artwork?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T11:34:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "NFT",
+        "PEOPLE"
+      ]
+    },
+    {
+      "title": "Crypto Community’s Revenge: Solana Memecoin Rug-Pulled By Gen Z Trader Hits $80 Million Market Cap",
+      "link": "https://cryptopanic.com/news/20288924/Crypto-Communitys-Revenge-Solana-Memecoin-Rug-Pulled-By-Gen-Z-Trader-Hits-80-Million-Market-Cap?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T11:30:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "SOL",
+        "QNT",
+        "APT",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Shoe Carnival Reports Q3 Fiscal 2024: Adjusted EPS at $0.71, Revenue Miss",
+      "link": "https://cryptopanic.com/news/20288910/Shoe-Carnival-Reports-Q3-Fiscal-2024-Adjusted-EPS-at-071-Revenue-Miss?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T11:30:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EPS"
+      ]
+    },
+    {
+      "title": "After Bitcoin, This Altcoin Could Pump Next According to Social Trends: Santiment",
+      "link": "https://cryptopanic.com/news/20288884/After-Bitcoin-This-Altcoin-Could-Pump-Next-According-to-Social-Trends-Santiment?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T11:27:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Sui Mainnet Experiences Two-Hour Block Production Halt",
+      "link": "https://cryptopanic.com/news/20288986/Sui-Mainnet-Experiences-Two-Hour-Block-Production-Halt?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T11:24:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "According to Foresight News, data from Suiscan indicates that the Sui mainnet has experienced a halt in block production for two hours. The most recent transaction was recorded at block height 82,174,771 at 17:15 UTC+8 today. This pause in block production has raised concerns among users and developers who rely on the Sui network for various blockchain activities. The interruption could...",
+      "currencies": [
+        "SUI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Solana Ecosystem Continues to Gain Market Share from Ethereum",
+      "link": "https://cryptopanic.com/news/20288877/Solana-Ecosystem-Continues-to-Gain-Market-Share-from-Ethereum?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T11:21:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The Layer 1 blockchain’s key metrics are growing at a parabolic pace, with DEX volumes more than double those of Ethereum.",
+      "currencies": [
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Spot Trading Goes Live on Arkham Exchange—Here’s What You Need to Know",
+      "link": "https://cryptopanic.com/news/20288798/Spot-Trading-Goes-Live-on-Arkham-ExchangeHeres-What-You-Need-to-Know?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T11:09:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ARKM"
+      ]
+    },
+    {
+      "title": "JUST IN: $98,000 #Bitcoin",
+      "link": "https://cryptopanic.com/news/20288849/JUST-IN-98000-Bitcoin?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T11:06:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "-",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "This kid's living in 3023!",
+      "link": "https://cryptopanic.com/news/quant-network/20290546/This-kids-living-in-3023",
+      "pubDate": "2024-11-21T11:00:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "QNT"
+      ]
+    },
+    {
+      "title": "Legacy Crypto Tokens Outperform as Bitcoin Crosses $95,000",
+      "link": "https://cryptopanic.com/news/20288888/Legacy-Crypto-Tokens-Outperform-as-Bitcoin-Crosses-95000?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T11:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH",
+        "BSV",
+        "BTT"
+      ]
+    },
+    {
+      "title": "Crypto Price Analysis 11-21 BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, TONCOIN: TON, THETA NETWORK: THETA, JUPITER: JUP, HELIUM: HNT",
+      "link": "https://cryptopanic.com/news/20288487/Crypto-Price-Analysis-11-21-BITCOIN-BTC-ETHEREUM-ETH-SOLANA-SOL-TONCOIN-TON-THETA-NETWORK-THETA-JUPITER-JUP-HELIUM-HNT?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T10:53:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "HNT",
+        "THETA",
+        "TON",
+        "JUP"
+      ]
+    },
+    {
+      "title": "‘Solana killer’ Sui down, no blocks produced for more than 1 hour",
+      "link": "https://cryptopanic.com/news/20288466/Solana-killer-Sui-down-no-blocks-produced-for-more-than-1-hour?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T10:48:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "SUI"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Litecoin Price to See New High As 2021 Buyers Near Breakeven?",
+      "link": "https://cryptopanic.com/news/20288791/Litecoin-Price-to-See-New-High-As-2021-Buyers-Near-Breakeven?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T10:41:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "News on Crypto Currency: Bitcoin Nears $100K, Market Soars",
+      "link": "https://cryptopanic.com/news/20289427/News-on-Crypto-Currency-Bitcoin-Nears-100K-Market-Soars?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T10:31:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XLM",
+        "BCH",
+        "BSV",
+        "BTG"
+      ]
+    },
+    {
+      "title": "Litecoin Distances Itself from Lester Memecoin",
+      "link": "https://cryptopanic.com/news/20288357/Litecoin-Distances-Itself-from-Lester-Memecoin?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T10:18:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Bithumb Lists TON and METIS, Boosting Korean Market Accessibility",
+      "link": "https://cryptopanic.com/news/20288298/Bithumb-Lists-TON-and-METIS-Boosting-Korean-Market-Accessibility?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T10:08:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TON",
+        "METIS"
+      ]
+    },
+    {
+      "title": "Ethereum Classic: Forecasting ETC’s near-term potential amid this bull run",
+      "link": "https://cryptopanic.com/news/20288074/Ethereum-Classic-Forecasting-ETCs-near-term-potential-amid-this-bull-run?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T10:00:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "Trump Plans White House Crypto Advisor Role",
+      "link": "https://cryptopanic.com/news/20287859/Trump-Plans-White-House-Crypto-Advisor-Role?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T09:31:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "President-elect Trump considers creating a White House crypto advisor role to shape pro-Bitcoin policies and strengthen ties with regulators.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance Market Update: Top Stories November 21, 2024",
+      "link": "https://cryptopanic.com/news/20288981/Binance-Market-Update-Top-Stories-November-21-2024?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T09:30:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "ADA",
+        "XRP",
+        "SOL",
+        "DOGE",
+        "WBTC",
+        "TRX",
+        "SHIB",
+        "DGB",
+        "TON"
+      ]
+    },
+    {
+      "title": "Looking for advice",
+      "link": "https://cryptopanic.com/news/blockstack/20288864/Looking-for-advice",
+      "pubDate": "2024-11-21T09:22:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "STX"
+      ]
+    },
+    {
+      "title": "Celestia: Can growth in TIA’s active users halt its decline to $3.7?",
+      "link": "https://cryptopanic.com/news/20287605/Celestia-Can-growth-in-TIAs-active-users-halt-its-decline-to-37?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T09:00:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TIA"
+      ]
+    },
+    {
+      "title": "Solana ETF: Bitwise Enters the Race for SOL ETF in Delaware",
+      "link": "https://cryptopanic.com/news/20288479/Solana-ETF-Bitwise-Enters-the-Race-for-SOL-ETF-in-Delaware?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T08:56:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "SOL",
+        "LTC"
+      ]
+    },
+    {
+      "title": "PNUT Price Falls 30% in One Week, Yet Path to Recovery Remains Possible",
+      "link": "https://cryptopanic.com/news/20287495/PNUT-Price-Falls-30-in-One-Week-Yet-Path-to-Recovery-Remains-Possible?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T08:45:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "PNUT",
+        "00"
+      ]
+    },
+    {
+      "title": "BCH Price Surges Past $500: Eyes $541 and New 52W High",
+      "link": "https://cryptopanic.com/news/20287463/BCH-Price-Surges-Past-500-Eyes-541-and-New-52W-High?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T08:40:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "North Korea to blame for 342,000 ETH Upbit hack in 2019, South Korean police say",
+      "link": "https://cryptopanic.com/news/20287454/North-Korea-to-blame-for-342000-ETH-Upbit-hack-in-2019-South-Korean-police-say?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T08:35:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "GAL"
+      ]
+    },
+    {
+      "title": "FLARE Challenges $0.021 Amid V-Shaped Recovery, Targets $0.052",
+      "link": "https://cryptopanic.com/news/20287456/FLARE-Challenges-0021-Amid-V-Shaped-Recovery-Targets-0052?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T08:35:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FLR"
+      ]
+    },
+    {
+      "title": "‘Just a chill guy’ artist threatens legal action against for-profit activities using their art",
+      "link": "https://cryptopanic.com/news/20287453/Just-a-chill-guy-artist-threatens-legal-action-against-for-profit-activities-using-their-art?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T08:33:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "PEOPLE",
+        "GAL"
+      ]
+    },
+    {
+      "title": "What is the native cryptocurrency of Polkadot? Get 5k $DRP Coins",
+      "link": "https://cryptopanic.com/news/20288370/What-is-the-native-cryptocurrency-of-Polkadot-Get-5k-DRP-Coins?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T08:25:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Don’t Expect a Bitcoin Dip Before Big Break of $100,000, According to Quant Analyst PlanB – Here’s Why",
+      "link": "https://cryptopanic.com/news/20287343/Dont-Expect-a-Bitcoin-Dip-Before-Big-Break-of-100000-According-to-Quant-Analyst-PlanB-Heres-Why?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T08:04:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "QNT"
+      ]
+    },
+    {
+      "title": "Cosmos [ATOM]: Traders should watch for this key price movement",
+      "link": "https://cryptopanic.com/news/20287161/Cosmos-ATOM-Traders-should-watch-for-this-key-price-movement?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T08:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ]
+    },
+    {
+      "title": "Bitwise Files for Solana ETF as Donald Trump Era Sparks Crypto Optimism",
+      "link": "https://cryptopanic.com/news/20287493/Bitwise-Files-for-Solana-ETF-as-Donald-Trump-Era-Sparks-Crypto-Optimism?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T07:40:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "XRP",
+        "SOL",
+        "AVAX",
+        "HBAR",
+        "ETHW"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Educational Byte: How to and why create your own oracle on Obyte?",
+      "link": "https://cryptopanic.com/news/20287129/Educational-Byte-How-to-and-why-create-your-own-oracle-on-Obyte?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T07:32:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DAG"
+      ]
+    },
+    {
+      "title": "🇩🇪German government sold 50,000 #Bitcoin at $55,000 #Bitcoin is up 85% since then. Missed out on a cool $2.35 BILLION.",
+      "link": "https://cryptopanic.com/news/bitcoin/20287003/German-government-sold-50000-Bitcoin-at-55000-Bitcoin-is-up-85-since-then-Missed-out-on-a-cool-235-BILLION",
+      "pubDate": "2024-11-21T07:15:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ]
+    },
+    {
+      "title": "Worldcoin’s biometric gamble is a privacy time bomb",
+      "link": "https://cryptopanic.com/news/20286787/Worldcoins-biometric-gamble-is-a-privacy-time-bomb?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T07:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WLD",
+        "ZK"
+      ]
+    },
+    {
+      "title": "Crypto Price Today (Nov 21st, 2024): Bitcoin Hits Fresh ATH | BCH & BSV Follow BTC!",
+      "link": "https://cryptopanic.com/news/20286700/Crypto-Price-Today-Nov-21st-2024-Bitcoin-Hits-Fresh-ATH-BCH-BSV-Follow-BTC?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T06:49:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH",
+        "BSV"
+      ]
+    },
+    {
+      "title": "Maker whale activity surges by 1400% – Time for MKR’s price to break out?",
+      "link": "https://cryptopanic.com/news/20286657/Maker-whale-activity-surges-by-1400-Time-for-MKRs-price-to-break-out?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T06:30:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Litecoin’s Meme Coin Gambit and The Rise of $LESTER memecoin",
+      "link": "https://cryptopanic.com/news/20286638/Litecoins-Meme-Coin-Gambit-and-The-Rise-of-LESTER-memecoin?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T06:24:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Teen Developer Bags $30K Profit With Quant",
+      "link": "https://cryptopanic.com/news/20286629/Teen-Developer-Bags-30K-Profit-With-Quant?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T06:20:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "QNT"
+      ]
+    },
+    {
+      "title": "Mnemonics Pre Market Price: Binance, Bybit, Bitget, MEXC",
+      "link": "https://cryptopanic.com/news/20287351/Mnemonics-Pre-Market-Price-Binance-Bybit-Bitget-MEXC?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T06:08:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "IO",
+        "XT"
+      ]
+    },
+    {
+      "title": "Justin Sun paid $6M for a banana taped to a wall and now plans to eat it",
+      "link": "https://cryptopanic.com/news/20286455/Justin-Sun-paid-6M-for-a-banana-taped-to-a-wall-and-now-plans-to-eat-it?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T06:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "BAN"
+      ]
+    },
+    {
+      "title": "Walrus Is Very Possibly the #1 Sui Ecosystem Altcoin Gem!",
+      "link": "https://cryptopanic.com/news/20286380/Walrus-Is-Very-Possibly-the-1-Sui-Ecosystem-Altcoin-Gem?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T05:52:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL",
+        "ICP",
+        "AR",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Coinbase scammer claims earning 5 figures a week targeting crypto CEOs",
+      "link": "https://cryptopanic.com/news/20286374/Coinbase-scammer-claims-earning-5-figures-a-week-targeting-crypto-CEOs?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T05:43:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Memefi Pre Market Price Beats Major Tokens in Trading Volume",
+      "link": "https://cryptopanic.com/news/20287031/Memefi-Pre-Market-Price-Beats-Major-Tokens-in-Trading-Volume?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T05:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TON",
+        "GRASS",
+        "EIGEN",
+        "HMSTR",
+        "DOGS",
+        "SCR",
+        "CATI",
+        "MAJOR"
+      ]
+    },
+    {
+      "title": "Barry Silbert Of Digital Currency Group Ventures Into Decentralized AI With Eyes On Bittensor Network",
+      "link": "https://cryptopanic.com/news/20286318/Barry-Silbert-Of-Digital-Currency-Group-Ventures-Into-Decentralized-AI-With-Eyes-On-Bittensor-Network?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T05:11:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TAO"
+      ]
+    },
+    {
+      "title": "Litecoin (LTC) at a Crossroads: Can It Rebound and Rally?",
+      "link": "https://cryptopanic.com/news/20286289/Litecoin-LTC-at-a-Crossroads-Can-It-Rebound-and-Rally?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T05:08:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "LTC"
+      ]
+    },
+    {
+      "title": "MemeFi Listing Date on Bitget Set for Nov 22 Before OKX Withdraw",
+      "link": "https://cryptopanic.com/news/20286712/MemeFi-Listing-Date-on-Bitget-Set-for-Nov-22-Before-OKX-Withdraw?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T05:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SUI",
+        "BGB",
+        "00"
+      ]
+    },
+    {
+      "title": "Render (RNDR) Price Eyes $10 After Breaking Key Resistance",
+      "link": "https://cryptopanic.com/news/20286078/Render-RNDR-Price-Eyes-10-After-Breaking-Key-Resistance?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T04:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "RENDER"
+      ]
+    },
+    {
+      "title": "QNT’s latest breakout can push altcoin’s price to THIS level…",
+      "link": "https://cryptopanic.com/news/20286067/QNTs-latest-breakout-can-push-altcoins-price-to-THIS-level?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T04:30:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "QNT"
+      ]
+    },
+    {
+      "title": "MoonPay Breaks November 2023 Record for Solana Transactions in One Day",
+      "link": "https://cryptopanic.com/news/20286072/MoonPay-Breaks-November-2023-Record-for-Solana-Transactions-in-One-Day?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T04:10:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "PNUT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 21 November 2024: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/20286379/Spell-Wallet-Daily-Puzzle-21-November-2024-Earn-Reward-of-1-MANA?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T03:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "NEAR rallies 12% in 7 days: Is $8 on the cards?",
+      "link": "https://cryptopanic.com/news/20285679/NEAR-rallies-12-in-7-days-Is-8-on-the-cards?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T03:00:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Bitcoin Price Uptrend Holds: Steady Climb Toward New Highs",
+      "link": "https://cryptopanic.com/news/20285611/Bitcoin-Price-Uptrend-Holds-Steady-Climb-Toward-New-Highs?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T02:41:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "TUSD"
+      ]
+    },
+    {
+      "title": "CVX crypto soars 20% in 24 hours – Is $5 the next target?",
+      "link": "https://cryptopanic.com/news/20285470/CVX-crypto-soars-20-in-24-hours-Is-5-the-next-target?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T02:00:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CVX"
+      ]
+    },
+    {
+      "title": "DCG launches Yuma to fuel decentralized AI innovation with Bittensor",
+      "link": "https://cryptopanic.com/news/20285394/DCG-launches-Yuma-to-fuel-decentralized-AI-innovation-with-Bittensor?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T01:30:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TAO"
+      ]
+    },
+    {
+      "title": "‘Very Strong Moves’ – Analyst Sees Rallies for Solana Rival, Updates Forecast for Two Ethereum-Based Altcoins",
+      "link": "https://cryptopanic.com/news/20285196/Very-Strong-Moves-Analyst-Sees-Rallies-for-Solana-Rival-Updates-Forecast-for-Two-Ethereum-Based-Altcoins?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T01:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "LINK",
+        "OP",
+        "SEI"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Is Polygon (MATIC) Headed For $1 Owing To “Disbelief Rally”?",
+      "link": "https://cryptopanic.com/news/20285116/Is-Polygon-MATIC-Headed-For-1-Owing-To-Disbelief-Rally?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T00:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MATIC"
+      ]
+    },
+    {
+      "title": "POPCAT – Why a new ATH is possible despite 22% fall in memecoin’s value",
+      "link": "https://cryptopanic.com/news/20285110/POPCAT-Why-a-new-ATH-is-possible-despite-22-fall-in-memecoins-value?mtm_campaign=API-OFA",
+      "pubDate": "2024-11-21T00:30:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ATH",
+        "POPCAT",
+        "MEME"
+      ]
+    },
+    {
+      "title": "Coinbase Global Inc. (COIN) Stock Analysis as of November 20, 2024",
+      "link": "https://cryptopanic.com/news/wrapped-bitcoin/20288858/Coinbase-Global-Inc-COIN-Stock-Analysis-as-of-November-20-2024",
+      "pubDate": "2024-11-21T00:21:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "WBTC",
+        "00"
+      ]
+    }
+  ]
+}

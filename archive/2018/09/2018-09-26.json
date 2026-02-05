@@ -1,0 +1,75 @@
+{
+  "date": "2018-09-26",
+  "fetchedAt": "2026-02-05T07:27:06.989Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Google Ad Ban Reversal + XRP & XLM Drama - Today's Crypto News",
+      "link": "https://cryptopanic.com/news/stellar/3153146/Google-Ad-Ban-Reversal-XRP-XLM-Drama-Todays-Crypto-News",
+      "pubDate": "2018-09-26T21:20:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Back Among Top-Performing Cryptocurrencies With 20% Price Gain",
+      "link": "https://cryptopanic.com/news/3148464/XRP-Back-Among-Top-Performing-Cryptocurrencies-With-20-Price-Gain",
+      "pubDate": "2018-09-26T13:33:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Q&A - How Much XRP Should You Have?, EOS Or Litecoin? And OmiseGo, EOS Or Cardano?",
+      "link": "https://cryptopanic.com/news/eos/3147188/Crypto-QA-How-Much-XRP-Should-You-Have-EOS-Or-Litecoin-And-OmiseGo-EOS-Or-Cardano",
+      "pubDate": "2018-09-26T11:56:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "CTC‘s application needs to deploy a blockchain node. The node program will join the blockchain network automaticall…",
+      "link": "https://cryptopanic.com/news/3143733/CTCs-application-needs-to-deploy-a-blockchain-node-The-node-program-will-join-the-blockchain-network-automaticall",
+      "pubDate": "2018-09-26T06:29:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CTC"
+      ]
+    }
+  ]
+}

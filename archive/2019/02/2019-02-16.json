@@ -1,0 +1,25 @@
+{
+  "date": "2019-02-16",
+  "fetchedAt": "2026-02-05T07:27:06.997Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "GRID X BitTorrent Cards Are About to Launch on Presale",
+      "link": "https://cryptopanic.com/news/tron/4584315/GRID-X-BitTorrent-Cards-Are-About-to-Launch-on-Presale",
+      "pubDate": "2019-02-16T10:13:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

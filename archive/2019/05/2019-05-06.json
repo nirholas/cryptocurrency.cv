@@ -1,0 +1,54 @@
+{
+  "date": "2019-05-06",
+  "fetchedAt": "2026-02-05T07:27:06.965Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitfinex Prices Are now Excluded from CoinMarketCap",
+      "link": "https://cryptopanic.com/news/5332836/Bitfinex-Prices-Are-now-Excluded-from-CoinMarketCap",
+      "pubDate": "2019-05-06T12:55:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "We are excited to announce that it will enable customer payments with the $PAX in booking 450,000+ lodgings all ove…",
+      "link": "https://cryptopanic.com/news/5331403/We-are-excited-to-announce-that-it-will-enable-customer-payments-with-the-PAX-in-booking-450000-lodgings-all-ove",
+      "pubDate": "2019-05-06T09:42:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "XRP Price Prediction Is $0.50+ in Summer 2019 and 100% Short-term Profits. Jump on the Bandwagon!",
+      "link": "https://cryptopanic.com/news/ripple/5329969/XRP-Price-Prediction-Is-050-in-Summer-2019-and-100-Short-term-Profits-Jump-on-the-Bandwagon",
+      "pubDate": "2019-05-06T04:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    }
+  ]
+}

@@ -1,0 +1,724 @@
+{
+  "date": "2023-08-30",
+  "fetchedAt": "2026-02-05T07:27:07.612Z",
+  "articleCount": 53,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Several exchanges show alarming fall in Bitcoin holdings",
+      "link": "https://cryptopanic.com/news/18870218/Several-exchanges-show-alarming-fall-in-Bitcoin-holdings",
+      "pubDate": "2023-08-30T23:00:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "HT"
+      ]
+    },
+    {
+      "title": "PEPE, SOL, STX Steal Spotlight from BTC Amid Grayscale Court Victory",
+      "link": "https://cryptopanic.com/news/18870172/PEPE-SOL-STX-Steal-Spotlight-from-BTC-Amid-Grayscale-Court-Victory",
+      "pubDate": "2023-08-30T22:11:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "STX"
+      ]
+    },
+    {
+      "title": "Can HBAR bears save prices from falling below $0.05?",
+      "link": "https://cryptopanic.com/news/18870110/Can-HBAR-bears-save-prices-from-falling-below-005",
+      "pubDate": "2023-08-30T21:30:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Grayscale’s SEC Victory May Render Alameda’s Redemptions Lawsuit Unnecessary, Bloomberg Analysts Say",
+      "link": "https://cryptopanic.com/news/18870070/Grayscales-SEC-Victory-May-Render-Alamedas-Redemptions-Lawsuit-Unnecessary-Bloomberg-Analysts-Say",
+      "pubDate": "2023-08-30T20:49:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "RNDR"
+      ]
+    },
+    {
+      "title": "Chiliz: This update could set the pace for more demand as CHZ bottoms out",
+      "link": "https://cryptopanic.com/news/18870028/Chiliz-This-update-could-set-the-pace-for-more-demand-as-CHZ-bottoms-out",
+      "pubDate": "2023-08-30T20:30:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "CHZ’s MVRV ratio just bounced back from its bottom range. This confirmed that there was significant accumulation in the last few days, hence the upside reflected the profitability of those that bought at recent lows.",
+      "currencies": [
+        "CHZ"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "dYdX Unlocks $14.02 Million in DYDK Tokens for Community and Trader Rewards",
+      "link": "https://cryptopanic.com/news/18870006/dYdX-Unlocks-1402-Million-in-DYDK-Tokens-for-Community-and-Trader-Rewards",
+      "pubDate": "2023-08-30T20:15:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DYDX"
+      ]
+    },
+    {
+      "title": "Save a Tree, Use Web3",
+      "link": "https://cryptopanic.com/news/18869980/Save-a-Tree-Use-Web3",
+      "pubDate": "2023-08-30T20:03:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "XRP Poised For Bullish Breakout: Inverted Hammer Formation Signals Rise Above $0.8 Resistance",
+      "link": "https://cryptopanic.com/news/18869859/XRP-Poised-For-Bullish-Breakout-Inverted-Hammer-Formation-Signals-Rise-Above-08-Resistance",
+      "pubDate": "2023-08-30T19:00:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XRP",
+        "BUSD"
+      ]
+    },
+    {
+      "title": "Binance Urges Users to Convert BUSD Holdings as Support Ends in 2024",
+      "link": "https://cryptopanic.com/news/18869864/Binance-Urges-Users-to-Convert-BUSD-Holdings-as-Support-Ends-in-2024",
+      "pubDate": "2023-08-30T18:52:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BUSD"
+      ]
+    },
+    {
+      "title": "XDC Hits Weekly High Amid US Treasury Token Offering Debut",
+      "link": "https://cryptopanic.com/news/18869771/XDC-Hits-Weekly-High-Amid-US-Treasury-Token-Offering-Debut",
+      "pubDate": "2023-08-30T18:37:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XDC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Circle Introduces USDC Payment To Chilean Customers With This New Partnership",
+      "link": "https://cryptopanic.com/news/18869770/Circle-Introduces-USDC-Payment-To-Chilean-Customers-With-This-New-Partnership",
+      "pubDate": "2023-08-30T18:00:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Robinhood Wallet Now Supports Bitcoin, Dogecoin; Ethereum Swaps Enabled",
+      "link": "https://cryptopanic.com/news/18869715/Robinhood-Wallet-Now-Supports-Bitcoin-Dogecoin-Ethereum-Swaps-Enabled",
+      "pubDate": "2023-08-30T18:00:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LUNC"
+      ]
+    },
+    {
+      "title": "Tokenization of Horse Syndicate Is Not a Fantasy, Says Industry Executive",
+      "link": "https://cryptopanic.com/news/18869847/Tokenization-of-Horse-Syndicate-Is-Not-a-Fantasy-Says-Industry-Executive",
+      "pubDate": "2023-08-30T17:49:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "GT"
+      ]
+    },
+    {
+      "title": "Why Bitcoin Cash is the biggest winner in Grayscale’s victory",
+      "link": "https://cryptopanic.com/news/18869710/Why-Bitcoin-Cash-is-the-biggest-winner-in-Grayscales-victory",
+      "pubDate": "2023-08-30T17:30:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Axie Infinity (AXS) Retests $5 – Will Long-Term Holders Trigger a Reversal?",
+      "link": "https://cryptopanic.com/news/18869683/Axie-Infinity-AXS-Retests-5-Will-Long-Term-Holders-Trigger-a-Reversal",
+      "pubDate": "2023-08-30T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "XRP May Have Just Become One Of The Biggest Threats to Big Banks Following Ripple’s Historic SEC Win",
+      "link": "https://cryptopanic.com/news/18869604/XRP-May-Have-Just-Become-One-Of-The-Biggest-Threats-to-Big-Banks-Following-Ripples-Historic-SEC-Win",
+      "pubDate": "2023-08-30T16:29:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Historically, the banking industry's dominance over global transactions has been unassailable. However, the emergence of blockchain technology and the potential harboured by cryptocurrencies like XRP have set in motion a seismic shift that is upending this age-old paradigm.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Cash price outlook: Sellers pounce after BCH spike above $220",
+      "link": "https://cryptopanic.com/news/18869495/Bitcoin-Cash-price-outlook-Sellers-pounce-after-BCH-spike-above-220",
+      "pubDate": "2023-08-30T16:08:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BlockFi wants to convert some of its crypto assets to stablecoins",
+      "link": "https://cryptopanic.com/news/18869593/BlockFi-wants-to-convert-some-of-its-crypto-assets-to-stablecoins",
+      "pubDate": "2023-08-30T15:05:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Whale Forfeits $732k Moving Coins to Binance; InQubeta Breaks $2.4 Million Barrier",
+      "link": "https://cryptopanic.com/news/18869317/Whale-Forfeits-732k-Moving-Coins-to-Binance-InQubeta-Breaks-24-Million-Barrier",
+      "pubDate": "2023-08-30T14:53:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "LDO"
+      ]
+    },
+    {
+      "title": "Binance Delists Trading Pairs, While Japan Gets 100 New Ones",
+      "link": "https://cryptopanic.com/news/18869316/Binance-Delists-Trading-Pairs-While-Japan-Gets-100-New-Ones",
+      "pubDate": "2023-08-30T14:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BUSD",
+        "EOS"
+      ]
+    },
+    {
+      "title": "Shiba Inu Layer 2 Poised for Massive Takeoff, Here's When",
+      "link": "https://cryptopanic.com/news/18869314/Shiba-Inu-Layer-2-Poised-for-Massive-Takeoff-Heres-When",
+      "pubDate": "2023-08-30T14:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Excitement remains for prospects of Shiba Inu Layer 2 blockchain",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Huobi seeing increased outflows to competitors according to new reliance metrics",
+      "link": "https://cryptopanic.com/news/18869269/Huobi-seeing-increased-outflows-to-competitors-according-to-new-reliance-metrics",
+      "pubDate": "2023-08-30T14:37:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FTT",
+        "HT"
+      ]
+    },
+    {
+      "title": "ApeCoin: Why further losses remain likely",
+      "link": "https://cryptopanic.com/news/18869260/ApeCoin-Why-further-losses-remain-likely",
+      "pubDate": "2023-08-30T14:30:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "APE"
+      ]
+    },
+    {
+      "title": "$0.001 SHIB Price ‘Closer Than Ever’ As Shiba Inu’s Shibarium Bridge Sees Skyrocketing Numbers",
+      "link": "https://cryptopanic.com/news/18869246/0001-SHIB-Price-Closer-Than-Ever-As-Shiba-Inus-Shibarium-Bridge-Sees-Skyrocketing-Numbers",
+      "pubDate": "2023-08-30T14:29:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "After a chaotic start, Shibarium is now fully functional. Both the Shibarium mainnet and connecting bridge were briefly paused due to software bugs that caused over $1.7 million in customer assets to be stuck.",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Stacks and Toncoin lead the bull cycle as global crypto market cap surge",
+      "link": "https://cryptopanic.com/news/18869180/Stacks-and-Toncoin-lead-the-bull-cycle-as-global-crypto-market-cap-surge",
+      "pubDate": "2023-08-30T14:09:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH",
+        "STX",
+        "TON"
+      ]
+    },
+    {
+      "title": "Binance To Delist Eight BUSD Trading Pairs Soon, End Full BUSD Support By 2024",
+      "link": "https://cryptopanic.com/news/18869147/Binance-To-Delist-Eight-BUSD-Trading-Pairs-Soon-End-Full-BUSD-Support-By-2024",
+      "pubDate": "2023-08-30T14:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BUSD",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash Surges 19% Following Grayscale Win Against SEC, with Wall Street Memes Also Pumping",
+      "link": "https://cryptopanic.com/news/18869319/Bitcoin-Cash-Surges-19-Following-Grayscale-Win-Against-SEC-with-Wall-Street-Memes-Also-Pumping",
+      "pubDate": "2023-08-30T13:58:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "BCH"
+      ]
+    },
+    {
+      "title": "213 Million TrueUSD Stablecoins Minted At Unknown Wallets",
+      "link": "https://cryptopanic.com/news/18869131/213-Million-TrueUSD-Stablecoins-Minted-At-Unknown-Wallets",
+      "pubDate": "2023-08-30T13:49:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "TUSD"
+      ]
+    },
+    {
+      "title": "Ethereum Tops $1,700 Following Economic Data; Stacks Emerges As Top Gainer",
+      "link": "https://cryptopanic.com/news/18869135/Ethereum-Tops-1700-Following-Economic-Data-Stacks-Emerges-As-Top-Gainer",
+      "pubDate": "2023-08-30T13:38:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "STX"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash (BCH) Jumps 15%, This Was Main Trigger",
+      "link": "https://cryptopanic.com/news/18869104/Bitcoin-Cash-BCH-Jumps-15-This-Was-Main-Trigger",
+      "pubDate": "2023-08-30T13:31:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ]
+    },
+    {
+      "title": "Terra Luna Classic L1TF All Set For v2.2.0 Core Upgrade, LUNC Price Jumps 5%",
+      "link": "https://cryptopanic.com/news/18868973/Terra-Luna-Classic-L1TF-All-Set-For-v220-Core-Upgrade-LUNC-Price-Jumps-5",
+      "pubDate": "2023-08-30T13:27:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LUNC"
+      ]
+    },
+    {
+      "title": "EOS And Binance Make Crypto Waves In the Land Of The Rising Sun",
+      "link": "https://cryptopanic.com/news/18869090/EOS-And-Binance-Make-Crypto-Waves-In-the-Land-Of-The-Rising-Sun",
+      "pubDate": "2023-08-30T13:22:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "EOS"
+      ]
+    },
+    {
+      "title": "Why Litecoin (LTC) Price Might Stay Below $100 Amid Crypto Market Rebound",
+      "link": "https://cryptopanic.com/news/18869120/Why-Litecoin-LTC-Price-Might-Stay-Below-100-Amid-Crypto-Market-Rebound",
+      "pubDate": "2023-08-30T13:08:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC",
+        "BCH",
+        "TON"
+      ]
+    },
+    {
+      "title": "Cosmos votes on liquid staking plan in bid to boost DeFi",
+      "link": "https://cryptopanic.com/news/18869092/Cosmos-votes-on-liquid-staking-plan-in-bid-to-boost-DeFi",
+      "pubDate": "2023-08-30T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ]
+    },
+    {
+      "title": "Bitcoin Insider Trading Suspicions Take Root Following Grayscale Win, What’s Happening?",
+      "link": "https://cryptopanic.com/news/18868967/Bitcoin-Insider-Trading-Suspicions-Take-Root-Following-Grayscale-Win-Whats-Happening",
+      "pubDate": "2023-08-30T12:45:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BCH"
+      ]
+    },
+    {
+      "title": "AGIX, RNDR, FET May Benefit From Nvidia’s Latest AI Push",
+      "link": "https://cryptopanic.com/news/18868913/AGIX-RNDR-FET-May-Benefit-From-Nvidias-Latest-AI-Push",
+      "pubDate": "2023-08-30T12:25:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RNDR"
+      ]
+    },
+    {
+      "title": "EOS Secures Regulatory Approval in Japan, Accelerating East Asian Market Expansion",
+      "link": "https://cryptopanic.com/news/18869122/EOS-Secures-Regulatory-Approval-in-Japan-Accelerating-East-Asian-Market-Expansion",
+      "pubDate": "2023-08-30T12:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ]
+    },
+    {
+      "title": "Ethereum and Ethereum Classic Prices Pump Following Grayscale Victory, With LPX Token Also Surging",
+      "link": "https://cryptopanic.com/news/18868781/Ethereum-and-Ethereum-Classic-Prices-Pump-Following-Grayscale-Victory-With-LPX-Token-Also-Surging",
+      "pubDate": "2023-08-30T11:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "EOS Tokens Approved for Trading on Japanese Exchanges Starting September",
+      "link": "https://cryptopanic.com/news/18868734/EOS-Tokens-Approved-for-Trading-on-Japanese-Exchanges-Starting-September",
+      "pubDate": "2023-08-30T11:19:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "EOS"
+      ]
+    },
+    {
+      "title": "The King of All Markets: Liquidity",
+      "link": "https://cryptopanic.com/news/flow/18869463/The-King-of-All-Markets-Liquidity",
+      "pubDate": "2023-08-30T11:04:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDC",
+        "UNI"
+      ]
+    },
+    {
+      "title": "EOS Wins Whitelist Approval From Japanese Regulators",
+      "link": "https://cryptopanic.com/news/18868783/EOS-Wins-Whitelist-Approval-From-Japanese-Regulators",
+      "pubDate": "2023-08-30T11:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ]
+    },
+    {
+      "title": "Lido (LDO) Price Inks Gains Alongside TVL Rise – What Traders Should Expect",
+      "link": "https://cryptopanic.com/news/18868674/Lido-LDO-Price-Inks-Gains-Alongside-TVL-Rise-What-Traders-Should-Expect",
+      "pubDate": "2023-08-30T10:50:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "BCH",
+        "LDO"
+      ]
+    },
+    {
+      "title": "Fantom DEX volume surges, proves one exit is not the end",
+      "link": "https://cryptopanic.com/news/18868624/Fantom-DEX-volume-surges-proves-one-exit-is-not-the-end",
+      "pubDate": "2023-08-30T10:30:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FTM"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash (BCH) Price Reclaims $200 – But How High Can It Go?",
+      "link": "https://cryptopanic.com/news/18868598/Bitcoin-Cash-BCH-Price-Reclaims-200-But-How-High-Can-It-Go",
+      "pubDate": "2023-08-30T10:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "EOS rallies 9% following landmark regulatory approval in Japan",
+      "link": "https://cryptopanic.com/news/18868402/EOS-rallies-9-following-landmark-regulatory-approval-in-Japan",
+      "pubDate": "2023-08-30T09:00:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ]
+    },
+    {
+      "title": "EOS expands into East Asia markets with regulatory approval in Japan",
+      "link": "https://cryptopanic.com/news/18868370/EOS-expands-into-East-Asia-markets-with-regulatory-approval-in-Japan",
+      "pubDate": "2023-08-30T08:57:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ]
+    },
+    {
+      "title": "Binance to Delist 9 BUSD Margin Trading Pairs in September, Here’s Why",
+      "link": "https://cryptopanic.com/news/18868380/Binance-to-Delist-9-BUSD-Margin-Trading-Pairs-in-September-Heres-Why",
+      "pubDate": "2023-08-30T08:54:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BUSD"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash (BCH) Records Surprising 15% Rally – What’s Behind It?",
+      "link": "https://cryptopanic.com/news/18868340/Bitcoin-Cash-BCH-Records-Surprising-15-Rally-Whats-Behind-It",
+      "pubDate": "2023-08-30T08:32:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MATIC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "EOS Network's Token Receives Trading Approval in Japan, EOS Surges Nearly 10%",
+      "link": "https://cryptopanic.com/news/18868148/EOS-Networks-Token-Receives-Trading-Approval-in-Japan-EOS-Surges-Nearly-10",
+      "pubDate": "2023-08-30T06:49:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ]
+    },
+    {
+      "title": "EOS secures regulatory approval in Japan, will trade against yen",
+      "link": "https://cryptopanic.com/news/18868080/EOS-secures-regulatory-approval-in-Japan-will-trade-against-yen",
+      "pubDate": "2023-08-30T06:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ]
+    },
+    {
+      "title": "Lido loses all its Q2 gains; LDO traders can expect this in coming days",
+      "link": "https://cryptopanic.com/news/18867931/Lido-loses-all-its-Q2-gains-LDO-traders-can-expect-this-in-coming-days",
+      "pubDate": "2023-08-30T03:30:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LDO"
+      ]
+    },
+    {
+      "title": "Neo to host WalletConnect workshop and panel featuring previous hackathon participants",
+      "link": "https://cryptopanic.com/news/18867824/Neo-to-host-WalletConnect-workshop-and-panel-featuring-previous-hackathon-participants",
+      "pubDate": "2023-08-30T01:10:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Cardano Bulls Charge Toward $0.27: Fakeout or Breakout?",
+      "link": "https://cryptopanic.com/news/18867799/Cardano-Bulls-Charge-Toward-027-Fakeout-or-Breakout",
+      "pubDate": "2023-08-30T00:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "A glimmer of optimism emerges on the horizon as Cardano Bulls reclaim control.",
+      "currencies": [
+        "ADA",
+        "OP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    }
+  ]
+}

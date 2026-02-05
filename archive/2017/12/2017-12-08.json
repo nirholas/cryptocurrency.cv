@@ -1,0 +1,26 @@
+{
+  "date": "2017-12-08",
+  "fetchedAt": "2026-02-05T07:27:06.999Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Mining Outranks Entire Countries in Energy Consumption",
+      "link": "https://cryptopanic.com/news/monero/538754/Bitcoin-Mining-Outranks-Entire-Countries-in-Energy-Consumption",
+      "pubDate": "2017-12-08T14:00:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XMR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

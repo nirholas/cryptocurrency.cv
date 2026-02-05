@@ -1,0 +1,572 @@
+{
+  "date": "2021-03-31",
+  "fetchedAt": "2026-02-05T07:27:06.759Z",
+  "articleCount": 36,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Stop Searching. Start Earning.",
+      "link": "https://cryptopanic.com/news/11702586/Stop-Searching-Start-Earning",
+      "pubDate": "2021-03-31T22:02:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Aave Will Build on Polygon’s Scalable Layer 2 Platform",
+      "link": "https://cryptopanic.com/news/matic-network/11702489/Aave-Will-Build-on-Polygons-Scalable-Layer-2-Platform",
+      "pubDate": "2021-03-31T20:49:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Decentralized lending platform Aave says that it will scale its DeFi platform beyond the Ethereum blockchain by also joining several sidechains, including Polygon. Aave Explores Polygon According to Aave, Ethereum’s exorbitant gas fees are a problem. Though it acknowledges high fees are a feature of “a successful public blockchain” because they indicate users are willing to pay the...",
+      "currencies": [
+        "ETH",
+        "ATOM",
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 26,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Delegate Brohan Looking for Voters!!",
+      "link": "https://cryptopanic.com/news/11751818/Delegate-Brohan-Looking-for-Voters",
+      "pubDate": "2021-03-31T20:23:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "XRP Ledger based exchange Sologenic launches its new DEX",
+      "link": "https://cryptopanic.com/news/ripple/11702376/XRP-Ledger-based-exchange-Sologenic-launches-its-new-DEX",
+      "pubDate": "2021-03-31T19:25:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "CryptoNinjas » XRP Ledger based exchange Sologenic launches its new DEX Sologenic, an XRP Ledger (XRPL) based tokenization ecosystem that facilitates investing and trading between crypto and non-blockchain assets, today announced the launch of its Sologenic Decentralized Exchange (DEX). The new DEX enables users to trade cryptocurrencies, tokenized assets such as stocks, ETFs, and...",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ten Biggest Gainers in March",
+      "link": "https://cryptopanic.com/news/11702374/Ten-Biggest-Gainers-in-March",
+      "pubDate": "2021-03-31T19:16:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MANA",
+        "FIL",
+        "THETA",
+        "CHZ",
+        "ENJ",
+        "ONE",
+        "HOT",
+        "ANKR",
+        "DENT"
+      ]
+    },
+    {
+      "title": "This Privacy Coin Will Witness 300% Gains by the End of the Year, According to Coin Bureau",
+      "link": "https://cryptopanic.com/news/11702414/This-Privacy-Coin-Will-Witness-300-Gains-by-the-End-of-the-Year-According-to-Coin-Bureau",
+      "pubDate": "2021-03-31T19:00:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XMR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "MarketSquare is Complete! Watch our recap video on what you can expect as we head towards launch.",
+      "link": "https://cryptopanic.com/news/11702333/MarketSquare-is-Complete-Watch-our-recap-video-on-what-you-can-expect-as-we-head-towards-launch",
+      "pubDate": "2021-03-31T19:00:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Will Ethereum Miners Engage In A 51% Attack To Maintain High Profits?",
+      "link": "https://cryptopanic.com/news/ethereum/11702365/Will-Ethereum-Miners-Engage-In-A-51-Attack-To-Maintain-High-Profits",
+      "pubDate": "2021-03-31T18:55:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A proposed modification of how Ethereum miners are being compensated will result in a profit decrease as high as 60%. Miners started to organise online forums to oppose the change, with minor effects so far.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Grayscale Reports Over $3 Billion Increase in AUM in Just Four Days",
+      "link": "https://cryptopanic.com/news/chainlink/11702330/Grayscale-Reports-Over-3-Billion-Increase-in-AUM-in-Just-Four-Days",
+      "pubDate": "2021-03-31T18:44:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "In just four days, Grayscale increased its total AUM by over $3 billion, following the addition of five new trusts for tokens like Chainlink (LINK) and Basic Attention Token (BAT)",
+      "currencies": [
+        "BTC",
+        "LINK",
+        "BAT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Price analysis 3/31: BTC, ETH, BNB, ADA, DOT, XRP, UNI, THETA, LTC, LINK",
+      "link": "https://cryptopanic.com/news/11702289/Price-analysis-331-BTC-ETH-BNB-ADA-DOT-XRP-UNI-THETA-LTC-LINK",
+      "pubDate": "2021-03-31T18:14:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin’s recovery from its recent lows and the stellar performance from altcoins signal that bulls are confident BTC will retest its all-time high.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "ADA",
+        "XRP",
+        "DOT",
+        "LTC",
+        "LINK",
+        "UNI",
+        "XLM",
+        "THETA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "DeFi platforms Zapper and Aave announce Polygon sidechain integrations",
+      "link": "https://cryptopanic.com/news/matic-network/11702243/DeFi-platforms-Zapper-and-Aave-announce-Polygon-sidechain-integrations",
+      "pubDate": "2021-03-31T17:55:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Two DeFi heavyweights will be integrating the one-time Ethereum competitor.",
+      "currencies": [
+        "ETH",
+        "MATIC",
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Yesterday's blog post surfaced in this article by Bloomberg @crypto. The intersection of #DeFi and the world of…",
+      "link": "https://cryptopanic.com/news/11704499/Yesterdays-blog-post-surfaced-in-this-article-by-Bloomberg-crypto-The-intersection-of-DeFi-and-the-world-of",
+      "pubDate": "2021-03-31T17:36:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "MFT"
+      ]
+    },
+    {
+      "title": "The BambooGarden Fund is now accepting proposals! Learn about specific proposal areas &amp; share how you can help buil…",
+      "link": "https://cryptopanic.com/news/11704909/The-BambooGarden-Fund-is-now-accepting-proposals-Learn-about-specific-proposal-areas-amp-share-how-you-can-help-buil",
+      "pubDate": "2021-03-31T16:59:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "Top Ten Aspiring Crypto Coins For April",
+      "link": "https://cryptopanic.com/news/11702179/Top-Ten-Aspiring-Crypto-Coins-For-April",
+      "pubDate": "2021-03-31T16:50:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Ethereum (ETH) Current Price: $1716 Market Cap: $214 Billion Market Cap Rank #2 Ethereum is a decentralized open-source blockchain that employs its native currency, Ether (ETH). More importantly, ETH is a platform for several other cryptocurrencies. It enables the execution of smart contracts and the construction of decentralized applications (dApps). Besides smart contracts and dApps, …...",
+      "currencies": [
+        "ETH",
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BitTorrent soars 30% to new all-time high, $5B market cap: What's behind the rally?",
+      "link": "https://cryptopanic.com/news/tron/11702146/BitTorrent-soars-30-to-new-all-time-high-5B-market-cap-Whats-behind-the-rally",
+      "pubDate": "2021-03-31T16:45:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The price of BTT, the native token of BitTorrent, hit a new all-time high to reach a $5.2 billion valuation.",
+      "currencies": [
+        "TRX",
+        "BTT"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Here’s why this might be a good time to buy THETA",
+      "link": "https://cryptopanic.com/news/11702130/Heres-why-this-might-be-a-good-time-to-buy-THETA",
+      "pubDate": "2021-03-31T16:30:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Though THETA is not listed on Binance U.S or Coinbase, its performance of late has caught many eyeballs. Despite the bullishness of its recent price action, however, THETA’s market capitalization dropped by nearly 4%, with its 24-hour trade volume falling by nearly 45%. Now, while this isn’t exactly good news, what it also indicates is […]",
+      "currencies": [
+        "THETA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Enjin raises nearly $19 million to build Polkadot-based blockchain for NFTs",
+      "link": "https://cryptopanic.com/news/polkadot/11701940/Enjin-raises-nearly-19-million-to-build-Polkadot-based-blockchain-for-NFTs",
+      "pubDate": "2021-03-31T15:00:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "Enjin has raised $18.9 million to build a Polkadot-based blockchain network, dubbed Efinity, especially for NFTs.",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 41,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Enjin Launches New NFT Blockchain on Polkadot",
+      "link": "https://cryptopanic.com/news/polkadot/11701968/Enjin-Launches-New-NFT-Blockchain-on-Polkadot",
+      "pubDate": "2021-03-31T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "The Polkadot ecosystem welcomes a new NFT network launched by Enjin. The new platform will foster blockchain interoperability, increasing the liquidity of both protocols. Enjin Launches NFT Blockchain on Polkadot Enjin is ready to launch a next-generation NFT blockchain on the Polkadot network after an $18.9 million private sale. Dubbed Efinity, it will enable highly scalable...",
+      "currencies": [
+        "BTC",
+        "DOT",
+        "ENJ"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Enjin secures $18.9M funding for Polkadot-based NFT blockchain",
+      "link": "https://cryptopanic.com/news/polkadot/11701967/Enjin-secures-189M-funding-for-Polkadot-based-NFT-blockchain",
+      "pubDate": "2021-03-31T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "Amid the expanding nonfungible token metaverse, Enjin is set to debut the first-ever NFT blockchain built on Polkadot.",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @Crypturd: @HifiFinance @inversebrah I still don’t think we’ve realized the true use cases for NFTs. Sure, art is cool, but what about u…",
+      "link": "https://cryptopanic.com/news/11704500/RT-Crypturd-HifiFinance-inversebrah-I-still-dont-think-weve-realized-the-true-use-cases-for-NFTs-Sure-art-is-cool-but-what-about-u",
+      "pubDate": "2021-03-31T14:16:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "MFT"
+      ]
+    },
+    {
+      "title": "Will GRT Finally Break Out?",
+      "link": "https://cryptopanic.com/news/11701824/Will-GRT-Finally-Break-Out",
+      "pubDate": "2021-03-31T13:54:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Despite the ongoing decrease, GRT has broken out from a descending wedge. It has likely begun an upward movement which could potentially take it all the way to $4. Descending Wedge GRT has been moving downwards since Feb. 12, when it reached an all-time high price of $3.88. However, the decrease took the shape of … Continued",
+      "currencies": [
+        "GRT"
+      ],
+      "votes": {
+        "positive": 22,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Goldman Sachs Plans Suite of Bitcoin Products for Q2",
+      "link": "https://cryptopanic.com/news/near/11701670/Goldman-Sachs-Plans-Suite-of-Bitcoin-Products-for-Q2",
+      "pubDate": "2021-03-31T12:32:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Mary Rich, Goldman Sachs’ head of digital assets of private wealth management division, told CNBC this morning that the bank plans to launch a “full-spectrum” of investments in Bitcoin and other digital assets. Goldman Follows Morgan Stanley into Bitcoin Goldman Sachs, which commands over $1.8 trillion in assets, plans to offer BTC investment via “physical bitcoin, derivatives or traditional investment vehicles,” according to Rich. The move from Goldman comes days within Morgan Stanley’s announc",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Where to find hashsum to verify download",
+      "link": "https://cryptopanic.com/news/ecash/12211608/Where-to-find-hashsum-to-verify-download",
+      "pubDate": "2021-03-31T12:21:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Ethereum Improvement Proposal 1559: Is the squeeze worth the juice?",
+      "link": "https://cryptopanic.com/news/ethereum/11701609/Ethereum-Improvement-Proposal-1559-Is-the-squeeze-worth-the-juice",
+      "pubDate": "2021-03-31T12:03:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "What the planned EIP-1559 could mean for Ethereum, DeFi and miners.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "The world’s first global #eSIM mobile data reseller platform has been released",
+      "link": "https://cryptopanic.com/news/11702347/The-worlds-first-global-eSIM-mobile-data-reseller-platform-has-been-released",
+      "pubDate": "2021-03-31T11:36:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "When i try withdrawing CHF or send BTC!!",
+      "link": "https://cryptopanic.com/news/11701554/When-i-try-withdrawing-CHF-or-send-BTC",
+      "pubDate": "2021-03-31T11:31:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "CHSB"
+      ]
+    },
+    {
+      "title": "Ripple CTO Explains Why XRP Does Not Use Proof-of-Work Consensus Like Bitcoin",
+      "link": "https://cryptopanic.com/news/ripple/11701401/Ripple-CTO-Explains-Why-XRP-Does-Not-Use-Proof-of-Work-Consensus-Like-Bitcoin",
+      "pubDate": "2021-03-31T09:44:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "In a recent interview, Ripple CTO David Schwartz talked about the advantages of XRP Ledger’s consensus mechanism over Bitcoin’s Proof-of-Work (PoW) consensus mechanisms. The Ripple CTO’s comments about Bitcoin and XRP came during a Zoom call with TechRadar Pro a few days ago. Schwartz said that miners’ involvement in Bitcoin’s PoW consensus process means that […]",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "🤍 88 $WHITE (~$275,000) have just been distributed among the 59 Keybase private chat members who have not sold a s…",
+      "link": "https://cryptopanic.com/news/11706516/88-WHITE-275000-have-just-been-distributed-among-the-59-Keybase-private-chat-members-who-have-not-sold-a-s?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-31T09:43:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "WHITE"
+      ]
+    },
+    {
+      "title": "Ripple’s ‘reflexive request’ to seal docs at odds with public access principles: SEC",
+      "link": "https://cryptopanic.com/news/ripple/11701321/Ripples-reflexive-request-to-seal-docs-at-odds-with-public-access-principles-SEC",
+      "pubDate": "2021-03-31T09:05:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "There has been a new development in the ongoing lawsuit filed by the U.S Securities and Exchange Commission against San Francisco-based Ripple Labs. More specifically, the plaintiffs have now responded to Ripple requesting that some of the documents attached to its letters to the court remain sealed. At the time, the blockchain firm had argued […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Despite Uncertainty in the US, Ripple Finds Traction in the East",
+      "link": "https://cryptopanic.com/news/ripple/11701295/Despite-Uncertainty-in-the-US-Ripple-Finds-Traction-in-the-East",
+      "pubDate": "2021-03-31T08:48:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "While the SEC vs. Ripple case continues to unravel, the distributed ledger startup makes significant strides to expand its business throughout Southeast Asia, helping XRP regain bullish momentum. Ripple Grows Across Eastern Markets Ripple seems unaffected by the repercussions of the U.S. Securities and Exchange Commission’s lawsuit. Although some cryptocurrency exchanges opted...",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Well-grounded ensures success! Will Whitecoin be the next 1000x coin?#XWC #Whitecoin #Blockchain",
+      "link": "https://cryptopanic.com/news/11706515/Well-grounded-ensures-success-Will-Whitecoin-be-the-next-1000x-coinXWC-Whitecoin-Blockchain",
+      "pubDate": "2021-03-31T08:46:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XWC"
+      ]
+    },
+    {
+      "title": "127 Million XRP Moved by Ripple and Binance Crypto Giants",
+      "link": "https://cryptopanic.com/news/ripple/11701258/127-Million-XRP-Moved-by-Ripple-and-Binance-Crypto-Giants",
+      "pubDate": "2021-03-31T08:04:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Recently published data has it that Ripple and Binance giants along with a smaller exchange transferred almost $72 million between each other",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Atlas-HECO Cross-Chain asset transaction on #MDEX has been integrated in Titan. The integrated feature encourages c…",
+      "link": "https://cryptopanic.com/news/11704537/Atlas-HECO-Cross-Chain-asset-transaction-on-MDEX-has-been-integrated-in-Titan-The-integrated-feature-encourages-c",
+      "pubDate": "2021-03-31T07:11:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Can the crypto market break out of its comfort zone? Hopefully 2021 and 2022, will see a significant increase in th…",
+      "link": "https://cryptopanic.com/news/11699049/Can-the-crypto-market-break-out-of-its-comfort-zone-Hopefully-2021-and-2022-will-see-a-significant-increase-in-th",
+      "pubDate": "2021-03-31T04:12:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Do Not Ignore Ethereum If You Want To Get Rich",
+      "link": "https://cryptopanic.com/news/ethereum/11697509/DO-NOT-IGNORE-ETHEREUM-IF-YOU-WANT-TO-GET-RICH",
+      "pubDate": "2021-03-31T01:04:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "✅Check out the first drop tomorrow at 12PM PST on https://superfarm.com ✅Follow EllioTrades on Twitter: https://twitter.com/elliotrades ✅Join my telegram to chat with me directly: https://t.me/elliotradescrypto 0:00 Intro 1:05 Diamond Hand Rewards 3:00 BTC bigger than CAD 3:25 QE Infinity 4:34 Exponential Rise in M1 5:30 My view on innovation 7:34 DO NOT IGNORE ETH 9:30 L2 NFTs? 11:09 Day 1 Genesis Drop 13:30 Rarity overview 16:12 NFTs with Utility 16:50 Outro #Crypto #Bitcoin #Ethereum DISCLAIM",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Rank: #77 - 1000% GAIN PER MONTH FOR 6 MONTHS! LFG!!! DENT",
+      "link": "https://cryptopanic.com/news/11701197/Rank-77-1000-GAIN-PER-MONTH-FOR-6-MONTHS-LFG-DENT",
+      "pubDate": "2021-03-31T00:41:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    }
+  ]
+}

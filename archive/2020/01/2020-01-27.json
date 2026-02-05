@@ -1,0 +1,87 @@
+{
+  "date": "2020-01-27",
+  "fetchedAt": "2026-02-05T07:27:06.977Z",
+  "articleCount": 5,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin (BTC) Loses to IOTA (MIOTA) on Energy Saving With 5.6 Mln Transactions Against One",
+      "link": "https://cryptopanic.com/news/7767176/Bitcoin-BTC-Loses-to-IOTA-MIOTA-on-Energy-Saving-With-56-Mln-Transactions-Against-One",
+      "pubDate": "2020-01-27T17:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Gold Suffers Another 51% Attack with $72,000 Double-Spent",
+      "link": "https://cryptopanic.com/news/7764688/Bitcoin-Gold-Suffers-Another-51-Attack-with-72000-Double-Spent",
+      "pubDate": "2020-01-27T13:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BTG"
+      ]
+    },
+    {
+      "title": "Bad Actors Rent Hashing Power to Hit Bitcoin Gold With New 51% Attacks",
+      "link": "https://cryptopanic.com/news/7763772/Bad-Actors-Rent-Hashing-Power-to-Hit-Bitcoin-Gold-With-New-51-Attacks",
+      "pubDate": "2020-01-27T10:45:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BTG"
+      ]
+    },
+    {
+      "title": "IOTA (MIOTA) Tangle Technology Uses Far Less Energy Than Bitcoin (BTC)",
+      "link": "https://cryptopanic.com/news/7763677/IOTA-MIOTA-Tangle-Technology-Uses-Far-Less-Energy-Than-Bitcoin-BTC",
+      "pubDate": "2020-01-27T10:30:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Justin Sun and Tron’s Use of Kobe Bryant’s Death For Self Promotion Drags Mixed Feelings From The Crypto Community",
+      "link": "https://cryptopanic.com/news/tron/7763600/Justin-Sun-and-Trons-Use-of-Kobe-Bryants-Death-For-Self-Promotion-Drags-Mixed-Feelings-From-The-Crypto-Community",
+      "pubDate": "2020-01-27T10:16:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 13
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

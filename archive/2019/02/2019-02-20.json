@@ -1,0 +1,27 @@
+{
+  "date": "2019-02-20",
+  "fetchedAt": "2026-02-05T07:27:06.997Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Which Cryptocurrencies to Hold in 2019?",
+      "link": "https://cryptopanic.com/news/tron/4617721/Which-Cryptocurrencies-to-Hold-in-2019",
+      "pubDate": "2019-02-20T11:57:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

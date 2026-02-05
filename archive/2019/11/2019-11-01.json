@@ -1,0 +1,38 @@
+{
+  "date": "2019-11-01",
+  "fetchedAt": "2026-02-05T07:27:06.996Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "\"Machine learning is progressing faster than you think and will become more broadly available on shorter timescales…",
+      "link": "https://cryptopanic.com/news/7026294/Machine-learning-is-progressing-faster-than-you-think-and-will-become-more-broadly-available-on-shorter-timescales?mtm_campaign=API-OFA",
+      "pubDate": "2019-11-01T12:34:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DEEP"
+      ]
+    },
+    {
+      "title": "Justin Sun on TRON-Samsung Partnership, End of Crypto Winter & Next Bitcoin ATH: Exclusive Interview",
+      "link": "https://cryptopanic.com/news/tron/7024112/Justin-Sun-on-TRON-Samsung-Partnership-End-of-Crypto-Winter-Next-Bitcoin-ATH-Exclusive-Interview",
+      "pubDate": "2019-11-01T07:20:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

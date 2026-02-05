@@ -1,0 +1,386 @@
+{
+  "date": "2023-10-15",
+  "fetchedAt": "2026-02-05T07:27:07.046Z",
+  "articleCount": 26,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "FTX Estate Stakes 5.5 Million SOL, Amid Liquidation Fears",
+      "link": "https://cryptopanic.com/news/ftx-token/18970661/FTX-Estate-Stakes-55-Million-SOL-Amid-Liquidation-Fears",
+      "pubDate": "2023-10-15T23:35:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "FTT"
+      ]
+    },
+    {
+      "title": "COZ updates Mamba SDK to v2.1.0",
+      "link": "https://cryptopanic.com/news/18970597/COZ-updates-Mamba-SDK-to-v210",
+      "pubDate": "2023-10-15T22:57:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Neo commits US $1 million to boost Hong Kong’s web3 development",
+      "link": "https://cryptopanic.com/news/18970596/Neo-commits-US-1-million-to-boost-Hong-Kongs-web3-development",
+      "pubDate": "2023-10-15T22:55:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "The 12-Year Evolution of Litecoin and Its Most Influential Wallets",
+      "link": "https://cryptopanic.com/news/18970587/The-12-Year-Evolution-of-Litecoin-and-Its-Most-Influential-Wallets",
+      "pubDate": "2023-10-15T22:30:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "XRP",
+        "LTC"
+      ]
+    },
+    {
+      "title": "EDWARD SNOWDEN: BITCOIN IS A WORLD STARTING IDEA | Bitcoin Amsterdam 2023",
+      "link": "https://cryptopanic.com/news/bitcoin/18970570/EDWARD-SNOWDEN-BITCOIN-IS-A-WORLD-STARTING-IDEA-Bitcoin-Amsterdam-2023",
+      "pubDate": "2023-10-15T21:59:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Uncover the veiled narrative of the mainstream media and march towards a future where privacy isn't a luxury, but a basic right. With Edward Snowden leading the charge, we dissect the role of Bitcoin in steering us away from NSA and WEF surveillance and control. We unfold the potential of a decentralized, private future. Join us as we navigate through the digital jungle, aiming to reclaim what's rightfully ours. You don't want to miss this one!! There is no second best!! #bitcoin #btc #edwardsno",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Thorchain DEX surpasses volume milestone, how did RUNE react?",
+      "link": "https://cryptopanic.com/news/18970540/Thorchain-DEX-surpasses-volume-milestone-how-did-RUNE-react",
+      "pubDate": "2023-10-15T21:30:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "RUNE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ApeCoin (APE) Set For Upcoming Token Unlock, Bearish Pressure To Worsen?",
+      "link": "https://cryptopanic.com/news/18970493/ApeCoin-APE-Set-For-Upcoming-Token-Unlock-Bearish-Pressure-To-Worsen",
+      "pubDate": "2023-10-15T20:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MATIC",
+        "APE"
+      ]
+    },
+    {
+      "title": "Bitcoin signals potential range expansion— Will SOL, LDO, ICP and VET follow?",
+      "link": "https://cryptopanic.com/news/18970423/Bitcoin-signals-potential-range-expansion-Will-SOL-LDO-ICP-and-VET-follow",
+      "pubDate": "2023-10-15T18:30:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "VET",
+        "ICP",
+        "LDO"
+      ]
+    },
+    {
+      "title": "New Documentary Exposes the Turbulent Downfall of FTX and Sam Bankman-Fried",
+      "link": "https://cryptopanic.com/news/ftx-token/18970290/New-Documentary-Exposes-the-Turbulent-Downfall-of-FTX-and-Sam-Bankman-Fried",
+      "pubDate": "2023-10-15T16:00:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "Cardano (ADA) Set To Explode: Crypto Analyst Uses Historical Data To Predict 2,300% Surge",
+      "link": "https://cryptopanic.com/news/18970291/Cardano-ADA-Set-To-Explode-Crypto-Analyst-Uses-Historical-Data-To-Predict-2300-Surge",
+      "pubDate": "2023-10-15T16:00:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Many investors have been left dissatisfied with Cardano’s performance this year due to the huge decline in the value of ADA, the native cryptocurrency of the blockchain. On-chain data shows that the percentage of Cardano (ADA) addresses that have been lost is already over 94%, and data points to the possibility of further losses soon. […]",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 12
+      }
+    },
+    {
+      "title": "Bitcoin News: Recent Data Signals Rising Accumulation Among BTC Investors",
+      "link": "https://cryptopanic.com/news/18970283/Bitcoin-News-Recent-Data-Signals-Rising-Accumulation-Among-BTC-Investors",
+      "pubDate": "2023-10-15T16:00:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "WBTC",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "I asked ChatGPT how Litecoin is going to fare in the future",
+      "link": "https://cryptopanic.com/news/18970184/I-asked-ChatGPT-how-Litecoin-is-going-to-fare-in-the-future",
+      "pubDate": "2023-10-15T14:22:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "ChatGPT has absurdly high expectations for Filecoin in 2023",
+      "link": "https://cryptopanic.com/news/18970185/ChatGPT-has-absurdly-high-expectations-for-Filecoin-in-2023",
+      "pubDate": "2023-10-15T14:20:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "Terraform Labs Accuses Citadel Securities of Destabilizing its UST Stablecoin",
+      "link": "https://cryptopanic.com/news/18970153/Terraform-Labs-Accuses-Citadel-Securities-of-Destabilizing-its-UST-Stablecoin",
+      "pubDate": "2023-10-15T13:49:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "LUNC"
+      ]
+    },
+    {
+      "title": "I asked ChatGPT to look into Polkadot’s price performance for the next year",
+      "link": "https://cryptopanic.com/news/18970151/I-asked-ChatGPT-to-look-into-Polkadots-price-performance-for-the-next-year",
+      "pubDate": "2023-10-15T13:42:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Highest Crypto Gainers of the Week; LOOM, TWT, KLAY Price Analysis",
+      "link": "https://cryptopanic.com/news/18970116/Highest-Crypto-Gainers-of-the-Week-LOOM-TWT-KLAY-Price-Analysis",
+      "pubDate": "2023-10-15T13:12:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "KLAY"
+      ]
+    },
+    {
+      "title": "Here’s potential XRP price range if Ripple wins against the SEC",
+      "link": "https://cryptopanic.com/news/18970105/Heres-potential-XRP-price-range-if-Ripple-wins-against-the-SEC",
+      "pubDate": "2023-10-15T13:04:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The price of XRP has been shrouded in uncertainty due to the ongoing legal battle between Ripple and the U.S. … Continued",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Inside FTX Crypto Courtroom Drama: The First 2 Weeks of the Wild SBF Trial",
+      "link": "https://cryptopanic.com/news/ftx-token/18970007/Inside-FTX-Crypto-Courtroom-Drama-The-First-2-Weeks-of-the-Wild-SBF-Trial",
+      "pubDate": "2023-10-15T11:25:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "Countdown starts now? BTC crosses key bullish indicator for second time in history",
+      "link": "https://cryptopanic.com/news/18969971/Countdown-starts-now-BTC-crosses-key-bullish-indicator-for-second-time-in-history",
+      "pubDate": "2023-10-15T11:00:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The value of Bitcoin (BTC) has recently experienced a correction, but the maiden cryptocurrency continues to trade in the familiar … Continued",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Weekly Cryptocurrency Market Analysis: Altcoins Recover A Little To Break The Sideways Trend",
+      "link": "https://cryptopanic.com/news/18970158/Weekly-Cryptocurrency-Market-Analysis-Altcoins-Recover-A-Little-To-Break-The-Sideways-Trend",
+      "pubDate": "2023-10-15T10:33:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO",
+        "PAXG",
+        "TWT"
+      ]
+    },
+    {
+      "title": "Can Ethereum (ETH) price rebound next week?",
+      "link": "https://cryptopanic.com/news/18969921/Can-Ethereum-ETH-price-rebound-next-week",
+      "pubDate": "2023-10-15T09:47:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum’s (ETH) value has experienced another decline this week, dropping to $1,557. This represents a 5% decline over the course … Continued",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "XRP Has Done It... It Finally SURPASSED Bitcoin And Ethereum",
+      "link": "https://cryptopanic.com/news/bitcoin/18969922/XRP-Has-Done-It-It-Finally-SURPASSED-Bitcoin-And-Ethereum",
+      "pubDate": "2023-10-15T09:30:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "In what assumed would have been the most popular news story of the day, it appears that a payment company has finally announced support for an altcoin that we haven't heard about in a while. It looks like XRP has finally passed Bitcoin and Ethereum. The Gemini twins are in the news over Genesis lending allegations and The US SEC has made a decision on the ARK21 Invest BTC ETF Articles: https://news.bitcoin.com/moneygram-introduces-non-custodial-crypto-wallet-for-cross-border-payments/ https://cr",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "$461 Solana (SOL) Price Target on the Table if Ethereum (ETH) Does This Next Bull Cycle: InvestAnswers",
+      "link": "https://cryptopanic.com/news/18969893/461-Solana-SOL-Price-Target-on-the-Table-if-Ethereum-ETH-Does-This-Next-Bull-Cycle-InvestAnswers",
+      "pubDate": "2023-10-15T09:15:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A closely followed crypto analyst says that traders may be underestimating Solana’s (SOL) potential in the next bull market. In a new strategy session, the host of InvestAnswers says that his base-case thesis for SOL is that it should reach 10% of Ethereum’s (ETH) market cap during the next market expansion. Under the presumption that […]",
+      "currencies": [
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano Founder Takes Jab at XRP Community",
+      "link": "https://cryptopanic.com/news/18969894/Cardano-Founder-Takes-Jab-at-XRP-Community",
+      "pubDate": "2023-10-15T09:13:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano's Hoskinson has mocked pervasive and baseless nature of such conspiratorial claims",
+      "currencies": [
+        "ADA",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Cardano Founder Dismisses ETHGate Theory Rumors: Report",
+      "link": "https://cryptopanic.com/news/18969804/Cardano-Founder-Dismisses-ETHGate-Theory-Rumors-Report",
+      "pubDate": "2023-10-15T07:04:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The crypto space, fully open to controversies and scandals, recently caught attention with Cardano founder Charles Hoskinson’s contentious comments on the ETHGate Conspiracy Theory. In a recent AMA session on October 8, Hoskinson, who is also a co-founder of Ethereum, dispelled the ETHGate theory, arguing that the Securities and Exchange Commission’s (SEC) stance on Ether […]",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Frax Finance forays into the RWA space – What now?",
+      "link": "https://cryptopanic.com/news/18969683/Frax-Finance-forays-into-the-RWA-space-What-now",
+      "pubDate": "2023-10-15T02:30:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FRAX"
+      ]
+    }
+  ]
+}

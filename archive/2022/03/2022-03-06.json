@@ -1,0 +1,777 @@
+{
+  "date": "2022-03-06",
+  "fetchedAt": "2026-02-05T07:27:06.760Z",
+  "articleCount": 52,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Here’s What’s Coming for Bitcoin Now That BTC Is Below $40,000, According to Top Crypto Analyst",
+      "link": "https://cryptopanic.com/news/bitcoin/14493611/Heres-Whats-Coming-for-Bitcoin-Now-That-BTC-Is-Below-40000-According-to-Top-Crypto-Analyst",
+      "pubDate": "2022-03-06T23:05:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A closely followed crypto strategist and trader says Bitcoin’s recent correction below $40,000 has set the stage for BTC to rally to $50,000 in the coming weeks. Pseudonymous analyst Credible tells his 312,900 Twitter followers that Bitcoin’s rejection at $45,069 on March 2nd indicates that BTC is now trading inside a triangle pattern while carving […] The post Here’s What’s Coming for Bitcoin Now That BTC Is Below $40,000, According to Top Crypto Analyst appeared first on The Daily Hodl.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 11
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "All the lowdown on the FUD around FTM, YFI after Cronje’s exit",
+      "link": "https://cryptopanic.com/news/14493540/All-the-lowdown-on-the-FUD-around-FTM-YFI-after-Cronjes-exit",
+      "pubDate": "2022-03-06T23:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "In the crypto industry, where personalities reign supreme, hirings and firings are a huge deal. As of press time, several crypto and DeFi communities were dealt a shocking blow when two major players announced that they were stepping out of the game – possibly for good. Sing, my angel of DeFi! The Fantom, Yearn, and […]",
+      "currencies": [
+        "FTM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "What events would you like to see AscendEX attend in 2022?",
+      "link": "https://cryptopanic.com/news/14494548/What-events-would-you-like-to-see-AscendEX-attend-in-2022",
+      "pubDate": "2022-03-06T22:59:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ASD"
+      ]
+    },
+    {
+      "title": "Which of the \"Fiend\" Units is more useful?",
+      "link": "https://cryptopanic.com/news/14501213/Which-of-the-Fiend-Units-is-more-useful",
+      "pubDate": "2022-03-06T21:49:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SPS"
+      ]
+    },
+    {
+      "title": "Top 5 cryptocurrencies to watch this week: BTC, XRP, NEAR, XMR, WAVES",
+      "link": "https://cryptopanic.com/news/14493409/Top-5-cryptocurrencies-to-watch-this-week-BTC-XRP-NEAR-XMR-WAVES",
+      "pubDate": "2022-03-06T21:32:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "NEAR",
+        "XMR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @CENNZnet: Pushing into new frontiers of the #Metaverse and #Web3 requires an ambitious tech roadmap and that’s exactly what we’ve got!…",
+      "link": "https://cryptopanic.com/news/14494808/RT-CENNZnet-Pushing-into-new-frontiers-of-the-Metaverse-and-Web3-requires-an-ambitious-tech-roadmap-and-thats-exactly-what-weve-got",
+      "pubDate": "2022-03-06T20:55:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CENNZ"
+      ]
+    },
+    {
+      "title": "RT @TheRealPrazz: For everything @ZillazNFT currently does and has coming in the books..... and its been around for a bit now... its ridic…",
+      "link": "https://cryptopanic.com/news/14497559/RT-TheRealPrazz-For-everything-ZillazNFT-currently-does-and-has-coming-in-the-books-and-its-been-around-for-a-bit-now-its-ridic",
+      "pubDate": "2022-03-06T20:33:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "RAD"
+      ]
+    },
+    {
+      "title": "The unknown reason why Cardano is looking forward to 17 March",
+      "link": "https://cryptopanic.com/news/cardano/14493288/The-unknown-reason-why-Cardano-is-looking-forward-to-17-March",
+      "pubDate": "2022-03-06T20:00:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano and its fundamentals continue to be a major attraction for investors and developers despite its lukewarm performance over the last six months. Now, unlike other altcoins, Cardano’s downfall began three months prior to the rest of the market. Even so, investors are hoping that it could come to an end soon. Project Catalyst Project […]",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 6
+      }
+    },
+    {
+      "title": "What is Solana, and how does it work?",
+      "link": "https://cryptopanic.com/news/14493237/What-is-Solana-and-how-does-it-work",
+      "pubDate": "2022-03-06T19:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana’s ambitious design aims to solve the blockchain trilemma; however, it still suffers from various drawbacks such as its vulnerability to centralization.",
+      "currencies": [
+        "ETH",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "The FUTURE is being built right in front of your eyes.",
+      "link": "https://cryptopanic.com/news/14511641/The-FUTURE-is-being-built-right-in-front-of-your-eyes",
+      "pubDate": "2022-03-06T18:39:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RACA"
+      ]
+    },
+    {
+      "title": "Cardano In The ‘Very Final Stages’ Of Its First Major Code Drop For 2022 Amid Expectations “To Grow Even More”",
+      "link": "https://cryptopanic.com/news/cardano/14493134/Cardano-In-The-Very-Final-Stages-Of-Its-First-Major-Code-Drop-For-2022-Amid-Expectations-To-Grow-Even-More",
+      "pubDate": "2022-03-06T18:38:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Upgrades that are in the offing include key elements of the scaling plan like pipelining, new Plutus CIPs, UTXO on-disk storage, and Hydra. These combined with further parameter adjustments will increase throughput and optimize the blockchain.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 34,
+        "negative": 8
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tomorrow we'll be speaking on the morning show! Do not miss it",
+      "link": "https://cryptopanic.com/news/14497560/Tomorrow-well-be-speaking-on-the-morning-show-Do-not-miss-it",
+      "pubDate": "2022-03-06T18:29:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RAD"
+      ]
+    },
+    {
+      "title": "Ex-Goldman Exec on Why Majority of His Portfolio Is in Ethereum Instead of Bitcoin",
+      "link": "https://cryptopanic.com/news/14493037/Ex-Goldman-Exec-on-Why-Majority-of-His-Portfolio-Is-in-Ethereum-Instead-of-Bitcoin",
+      "pubDate": "2022-03-06T17:32:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "In a recent interview, former Goldman Sachs executive Raoul Pal explained why despite being “very bullish” on Bitcoin at first, he later came to the conclusion that Ethereum would outperform Bitcoin. Prior to founding macro economic and investment strategy research service Global Macro Investor (GMI) in 2005, Pal co-managed the GLG Global Macro Fund in London for global asset management firm...",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "0.5 Bitcoin Now Gets You a Beach House in Albania Claims Nomad Capitalist",
+      "link": "https://cryptopanic.com/news/14493026/05-Bitcoin-Now-Gets-You-a-Beach-House-in-Albania-Claims-Nomad-Capitalist",
+      "pubDate": "2022-03-06T17:25:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Just half a bitcoin is now enough to get you a picturesque view on the sunny beaches of Saranda near Albania’s border with Greece. From there you can view Corfu,...",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The full story behind the ‘Cardano > BTC, ETH in transaction volume’ narrative",
+      "link": "https://cryptopanic.com/news/cardano/14492982/The-full-story-behind-the-Cardano-BTC-ETH-in-transaction-volume-narrative",
+      "pubDate": "2022-03-06T17:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "It’s always been hard to rank different blockchains thanks to the diverse ways in which their speeds and activities are measured. But now, one blockchain is under the microscope due to what some claim is a discrepancy in its transaction volumes. Messari-ing around with numbers The controversy began with Messari’s ‘Chains Activity’ chart, showing “estimated […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Fantom Foundation Responds To Andre Conje’s Departure",
+      "link": "https://cryptopanic.com/news/14492985/Fantom-Foundation-Responds-To-Andre-Conjes-Departure",
+      "pubDate": "2022-03-06T17:00:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Fantom Foundation has responded to the news of Andre Conje exiting crypto. The announcement which came early on Sunday saw Anton Nell and Andre Conje announce their departure from crypto and decentralized finance (DeFi) and any contribution thereof. This had sent shocked the community as it came seemingly out of nowhere, leaving many questioning the […]",
+      "currencies": [
+        "FTM",
+        "YFI"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Join us for the threshold cryptography.",
+      "link": "https://cryptopanic.com/news/14498276/Join-us-for-the-threshold-cryptography",
+      "pubDate": "2022-03-06T16:18:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "T"
+      ]
+    },
+    {
+      "title": "YFI, FTM Tank After Andre Cronje, Anton Nell Claim They're Leaving Crypto",
+      "link": "https://cryptopanic.com/news/14492910/YFI-FTM-Tank-After-Andre-Cronje-Anton-Nell-Claim-Theyre-Leaving-Crypto",
+      "pubDate": "2022-03-06T16:16:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Both YFI and FTM plummeted by double digits immediately following the announcement.",
+      "currencies": [
+        "FTM"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "web3 is forging a new model of business, creation, and ownership for entrepreneurs, creators, and community members…",
+      "link": "https://cryptopanic.com/news/14497582/web3-is-forging-a-new-model-of-business-creation-and-ownership-for-entrepreneurs-creators-and-community-members",
+      "pubDate": "2022-03-06T16:05:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RLY"
+      ]
+    },
+    {
+      "title": "Solana, ETC and FTM Price Analysis : 06 March",
+      "link": "https://cryptopanic.com/news/14492871/Solana-ETC-and-FTM-Price-Analysis-06-March",
+      "pubDate": "2022-03-06T16:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "ETC",
+        "FTM"
+      ]
+    },
+    {
+      "title": "In your opinion, what hurdles does Web3 need to overcome in order to achieve virtually universal adoption like the…",
+      "link": "https://cryptopanic.com/news/14498758/In-your-opinion-what-hurdles-does-Web3-need-to-overcome-in-order-to-achieve-virtually-universal-adoption-like-the",
+      "pubDate": "2022-03-06T16:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XYO"
+      ]
+    },
+    {
+      "title": "RT @noszyiv: $ACH presents in @CopaDelRey_ES @RealBetis WeACH. The future of cryptocurrency payments.",
+      "link": "https://cryptopanic.com/news/14494191/RT-noszyiv-ACH-presents-in-CopaDelRey_ES-RealBetis-WeACH-The-future-of-cryptocurrency-payments",
+      "pubDate": "2022-03-06T15:44:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ACH"
+      ]
+    },
+    {
+      "title": "Andre Cronje Leaves Defi",
+      "link": "https://cryptopanic.com/news/ethereum/14492824/Andre-Cronje-Leaves-Defi",
+      "pubDate": "2022-03-06T15:32:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "“My code has no proxies, no human components, no admin functions, no DAO control, no multisig or timelocks, its pure simple execution… Code has no trust assumptions, only humans do.”...",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 43
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Here’s When Crypto Analyst Benjamin Cowen Will Flip Bullish on Altcoins Once Again",
+      "link": "https://cryptopanic.com/news/bitcoin/14492878/Heres-When-Crypto-Analyst-Benjamin-Cowen-Will-Flip-Bullish-on-Altcoins-Once-Again",
+      "pubDate": "2022-03-06T15:30:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Popular crypto analyst Benjamin Cowen says he’s looking at a few signals that could indicate investors’ risk appetite for altcoins. In a new interview on crypto channel InvestAnswers, Cowen says that he has not added to his altcoin holdings in the last three months due to the current macroeconomic backdrop. “I think that when Bitcoin’s […] The post Here’s When Crypto Analyst Benjamin Cowen Will Flip Bullish on Altcoins Once Again appeared first on The Daily Hodl.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @tech_eu: On 9 March at our #TechEUOnline: #Fintech event, we'll take a look at today's crypto asset ecosystem with @Bitstamp Chief Grow…",
+      "link": "https://cryptopanic.com/news/14498419/RT-tech_eu-On-9-March-at-our-TechEUOnline-Fintech-event-well-take-a-look-at-todays-crypto-asset-ecosystem-with-Bitstamp-Chief-Grow",
+      "pubDate": "2022-03-06T15:19:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "UTK"
+      ]
+    },
+    {
+      "title": "A whole lot of Ethereum [ETH] in your portfolio? Here are your LAMBO chances",
+      "link": "https://cryptopanic.com/news/ethereum/14492780/A-whole-lot-of-Ethereum-ETH-in-your-portfolio-Here-are-your-LAMBO-chances",
+      "pubDate": "2022-03-06T15:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "“With public sentiment, nothing can fail. Without it, nothing can succeed” It seems, Abraham Lincoln summarized the emotions of the crypto-market long back. While the king coin has been garnering a lot of investors’ interest of late, Ethereum looks complacent in this regard. Well, the painful gas fee could be one of the reasons. Undeniably, […]",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Mortgage ?s",
+      "link": "https://cryptopanic.com/news/14499885/Mortgage-s",
+      "pubDate": "2022-03-06T14:53:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SPS"
+      ]
+    },
+    {
+      "title": "Monero Leads Altcoin Rally on Market with 9% Price Increase, As XRP Follows",
+      "link": "https://cryptopanic.com/news/monero/14492786/Monero-Leads-Altcoin-Rally-on-Market-with-9-Price-Increase-As-XRP-Follows",
+      "pubDate": "2022-03-06T14:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Monero suddenly gets first place in altcoin rally with an impressive price increase",
+      "currencies": [
+        "XRP",
+        "XMR"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "This Shiba Inu Whale Just Grabbed 42 Billion SHIB Tokens",
+      "link": "https://cryptopanic.com/news/shiba-inu/14492744/This-Shiba-Inu-Whale-Just-Grabbed-42-Billion-SHIB-Tokens",
+      "pubDate": "2022-03-06T14:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Anonymous Shiba Inu whale buys 42 billion tokens worth approximately $1 million",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Axie Infinity: In demand, yes, but is it delivering well enough",
+      "link": "https://cryptopanic.com/news/ethereum/14492680/Axie-Infinity-In-demand-yes-but-is-it-delivering-well-enough",
+      "pubDate": "2022-03-06T14:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Axie Infinity brought GameFi and NFTs to prominence with its play-to-earn model. Ergo, it is not surprising that to date, it stands to be the most sought-after NFT. Alas, in a market where NFTs are becoming the next big thing, can Axie continue to keep its crown? Axie Infinity is still at #1 According to […]",
+      "currencies": [
+        "ETH",
+        "AXS"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "About 70% of circulating #FX delegated on #FXCore to secure the #blockchain #network, making it one of the highest…",
+      "link": "https://cryptopanic.com/news/14495729/About-70-of-circulating-FX-delegated-on-FXCore-to-secure-the-blockchain-network-making-it-one-of-the-highest",
+      "pubDate": "2022-03-06T13:57:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FX"
+      ]
+    },
+    {
+      "title": "Terra Is Now DeFi's Network of Choice After Ethereum",
+      "link": "https://cryptopanic.com/news/terra-luna/14492654/Terra-Is-Now-DeFis-Network-of-Choice-After-Ethereum",
+      "pubDate": "2022-03-06T13:54:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The latest rise in the price of LUNA, Terra's native token, has made Terra the second-largest home for all things DeFi.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Starting Splinterlands now. / March 2022",
+      "link": "https://cryptopanic.com/news/14493535/Starting-Splinterlands-now-March-2022",
+      "pubDate": "2022-03-06T13:27:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SPS"
+      ]
+    },
+    {
+      "title": "Yes we had over 84,000% voting rate and target reaching record. Now $MV will be listed on @MEXC_Global tomorrow 3/7…",
+      "link": "https://cryptopanic.com/news/14495864/Yes-we-had-over-84000-voting-rate-and-target-reaching-record-Now-MV-will-be-listed-on-MEXC_Global-tomorrow-37",
+      "pubDate": "2022-03-06T12:35:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MV"
+      ]
+    },
+    {
+      "title": "Malaysia’s Bitcoin miners steal electricity worth $550 million as utility firm steps in",
+      "link": "https://cryptopanic.com/news/bitcoin/14492528/Malaysias-Bitcoin-miners-steal-electricity-worth-550-million-as-utility-firm-steps-in",
+      "pubDate": "2022-03-06T12:25:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Amid rising energy theft cases for Bitcoin mining in Malaysia, the country’s electricity utility company is proposing new means to... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 17
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "DeFi Tokens Tank as Devs Quit",
+      "link": "https://cryptopanic.com/news/14492530/DeFi-Tokens-Tank-as-Devs-Quit",
+      "pubDate": "2022-03-06T12:25:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The native tokens of Yearn.Finance, Solidly, Fantom and other Andre Cronje-related projects have taken a beating after Andre Cronje’s sudden departure",
+      "currencies": [
+        "FTM"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 41
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Valve President Explains Why They Removed Bitcoin As a Payment Method on Steam",
+      "link": "https://cryptopanic.com/news/bitcoin/14492483/Valve-President-Explains-Why-They-Removed-Bitcoin-As-a-Payment-Method-on-Steam",
+      "pubDate": "2022-03-06T11:24:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Recently, Gabe Newell, Co-Founder and President of video game company Valve Corporation, the developer of the software distribution platform Steam, explained why his firm had to stop accepting Bitcoin as a payment method on Steam. Steam is “a video game digital distribution service by Valve” that was “launched as a standalone software client in September 2003 as a way for Valve to […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "XRP Sees Huge Accumulation By Whales — Is A Groundbreaking Ripple Win In SEC Case Looking Likely?",
+      "link": "https://cryptopanic.com/news/ripple/14492446/XRP-Sees-Huge-Accumulation-By-Whales-Is-A-Groundbreaking-Ripple-Win-In-SEC-Case-Looking-Likely",
+      "pubDate": "2022-03-06T11:01:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Crypto whales are scooping up a large chunk of XRP coins with accumulations running into hundreds of millions of dollars in the last 7 days.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 24,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin heading to 36K, analysis says amid warning global stocks ‘look expensive’",
+      "link": "https://cryptopanic.com/news/bitcoin/14492422/Bitcoin-heading-to-36K-analysis-says-amid-warning-global-stocks-look-expensive",
+      "pubDate": "2022-03-06T10:46:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A cataclysmic breakdown in global equities is not off the table for this year, with a “stagflationary shock” already in the making.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 10
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Aid for Ukraine DAO Raises Funds in Partnership With FTX",
+      "link": "https://cryptopanic.com/news/14492421/Aid-for-Ukraine-DAO-Raises-Funds-in-Partnership-With-FTX",
+      "pubDate": "2022-03-06T10:25:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Solana co-founder Anatoly Yakovenko, a Ukrainian by birth, adds a DAO to the disaster relief fund efforts in his home country that Russian troops have beset.",
+      "currencies": [
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Coin Bureau: “No-Brainer” That Helium ($HNT) Will One Day Be “A Top Cryptocurrency”",
+      "link": "https://cryptopanic.com/news/14492401/Coin-Bureau-No-Brainer-That-Helium-HNT-Will-One-Day-Be-A-Top-Cryptocurrency",
+      "pubDate": "2022-03-06T10:22:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Recently, popular crypto analysis show Coin Bureau explained why little-known $HNT, the native token of Helium blockchain, could one day become a cryptoasset. According to its developer documentation, the Helium Blockchain, which was officially launched on 29 July 2019, is “based on a new, novel work algorithm called Proof of Coverage (PoC), and rewards miners […]",
+      "currencies": [
+        "HNT"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Rival Terra (LUNA), Cosmos (ATOM) and Three Additional Altcoins Bullish for This Month: Crypto Strategist",
+      "link": "https://cryptopanic.com/news/terra-luna/14490780/Ethereum-Rival-Terra-LUNA-Cosmos-ATOM-and-Three-Additional-Altcoins-Bullish-for-This-Month-Crypto-Strategist",
+      "pubDate": "2022-03-06T08:04:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A widely followed crypto analyst is naming Terra (LUNA), Cosmos (ATOM) and three additional crypto assets as his top altcoin picks for the month of March. Trader Jason Pizzino tells his 261,000 YouTube subscribers that decentralized finance (DeFi) payment network Terra looks strong after rallying from a low of $43 to nearly $100 in a little […]",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Each of your videos and positive comments about Gunfire Hero is contributing to the game being spread much more w…",
+      "link": "https://cryptopanic.com/news/14490878/Each-of-your-videos-and-positive-comments-about-Gunfire-Hero-is-contributing-to-the-game-being-spread-much-more-w",
+      "pubDate": "2022-03-06T06:30:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HERO"
+      ]
+    },
+    {
+      "title": "My honored Knights we set up another record at @MEXC_Global for reaching the 500% target in 10mins!! The voting is…",
+      "link": "https://cryptopanic.com/news/14488730/My-honored-Knights-we-set-up-another-record-at-MEXC_Global-for-reaching-the-500-target-in-10mins-The-voting-is",
+      "pubDate": "2022-03-06T05:28:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MV"
+      ]
+    },
+    {
+      "title": "Wherever Fiddich goes, he spreads extreme cold. Water freezes at zero degrees Celsius and becomes ice. Ice stays as…",
+      "link": "https://cryptopanic.com/news/14489958/Wherever-Fiddich-goes-he-spreads-extreme-cold-Water-freezes-at-zero-degrees-Celsius-and-becomes-ice-Ice-stays-as?mtm_campaign=API-OFA",
+      "pubDate": "2022-03-06T04:09:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ORBR"
+      ]
+    },
+    {
+      "title": "Another wild Saturday night over here!",
+      "link": "https://cryptopanic.com/news/14487394/Another-wild-Saturday-night-over-here",
+      "pubDate": "2022-03-06T03:29:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ASD"
+      ]
+    },
+    {
+      "title": "RT @bobrasX: Four new components are currently in development and will be added to the Sologenic ecosystem and DEX soon. We will reveal the…",
+      "link": "https://cryptopanic.com/news/14490742/RT-bobrasX-Four-new-components-are-currently-in-development-and-will-be-added-to-the-Sologenic-ecosystem-and-DEX-soon-We-will-reveal-the",
+      "pubDate": "2022-03-06T03:06:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOLO"
+      ]
+    },
+    {
+      "title": "1/ We're glad to onboard Cloud Sync ️, a function to let users back up their encrypted private keys &amp; passphrases…",
+      "link": "https://cryptopanic.com/news/14487740/1-Were-glad-to-onboard-Cloud-Sync-a-function-to-let-users-back-up-their-encrypted-private-keys-amp-passphrases",
+      "pubDate": "2022-03-06T03:03:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "C98"
+      ]
+    },
+    {
+      "title": "1 hour to go for the #Kickstarter event on #MEXCGlobal !! Vote with your $MX on #GensoKishi Metaverse and get your…",
+      "link": "https://cryptopanic.com/news/14488731/1-hour-to-go-for-the-Kickstarter-event-on-MEXCGlobal-Vote-with-your-MX-on-GensoKishi-Metaverse-and-get-your",
+      "pubDate": "2022-03-06T02:02:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MV"
+      ]
+    },
+    {
+      "title": "\"They had their assets in the bank frozen. Oh, but there's the problem. It is not your asset. If you put your money…",
+      "link": "https://cryptopanic.com/news/14486741/They-had-their-assets-in-the-bank-frozen-Oh-but-theres-the-problem-It-is-not-your-asset-If-you-put-your-money",
+      "pubDate": "2022-03-06T01:28:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "-",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Maybe I'm just not getting something... But what is the reason for Bitcoin Gold or Bitcoin Diamond to exist?",
+      "link": "https://cryptopanic.com/news/14486916/Maybe-Im-just-not-getting-something-But-what-is-the-reason-for-Bitcoin-Gold-or-Bitcoin-Diamond-to-exist",
+      "pubDate": "2022-03-06T00:38:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTG"
+      ]
+    },
+    {
+      "title": "You can only hold one. Which are you choosing? 🤔",
+      "link": "https://cryptopanic.com/news/14487396/You-can-only-hold-one-Which-are-you-choosing",
+      "pubDate": "2022-03-06T00:14:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ASD"
+      ]
+    }
+  ]
+}

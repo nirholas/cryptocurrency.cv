@@ -1,0 +1,174 @@
+{
+  "date": "2020-11-20",
+  "fetchedAt": "2026-02-05T07:27:06.879Z",
+  "articleCount": 11,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @whale_alert: 11,217,351 #BUSD (11,217,351 USD) transferred from PAX Treasury to unknown wallet Tx",
+      "link": "https://cryptopanic.com/news/paxos-standard/10598041/RT-whale_alert-11217351-BUSD-11217351-USD-transferred-from-PAX-Treasury-to-unknown-wallet-Tx",
+      "pubDate": "2020-11-20T22:17:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PAX",
+        "1MT"
+      ]
+    },
+    {
+      "title": "XRP Utility Fork Incoming – Here’s How to Prepare for the Highly Anticipated Flare Airdrop",
+      "link": "https://cryptopanic.com/news/10598073/XRP-Utility-Fork-Incoming-Heres-How-to-Prepare-for-the-Highly-Anticipated-Flare-Airdrop",
+      "pubDate": "2020-11-20T22:15:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Market Wrap: Bitcoin Hits $18.8K as Total Crypto Locked in DeFi Passes $14B",
+      "link": "https://cryptopanic.com/news/10597719/Market-Wrap-Bitcoin-Hits-188K-as-Total-Crypto-Locked-in-DeFi-Passes-14B",
+      "pubDate": "2020-11-20T21:25:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "XRP",
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The IOTA Foundation receives @tmforumorg Outstanding Catalyst award for contributions to the acceleration of…",
+      "link": "https://cryptopanic.com/news/10594857/The-IOTA-Foundation-receives-tmforumorg-Outstanding-Catalyst-award-for-contributions-to-the-acceleration-of",
+      "pubDate": "2020-11-20T16:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @BitcoinKingom: PAX A920 XPOS is the Product that helps #Crypto Make Sense to everyday people. We are witnessing Real Crypto Adoption no…",
+      "link": "https://cryptopanic.com/news/paxos-standard/10594613/RT-BitcoinKingom-PAX-A920-XPOS-is-the-Product-that-helps-Crypto-Make-Sense-to-everyday-people-We-are-witnessing-Real-Crypto-Adoption-no",
+      "pubDate": "2020-11-20T15:32:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "NPXS",
+        "PXS",
+        "NPXSXEM"
+      ]
+    },
+    {
+      "title": "IOTA (MIOTA) Making Steady Progress in Chrysalis Phase 2 Development",
+      "link": "https://cryptopanic.com/news/10592697/IOTA-MIOTA-Making-Steady-Progress-in-Chrysalis-Phase-2-Development",
+      "pubDate": "2020-11-20T12:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ERC20 $HYN has been no longer valid for mainnet function. You have to create a wallet in Titan to receive Atlas…",
+      "link": "https://cryptopanic.com/news/10592058/ERC20-HYN-has-been-no-longer-valid-for-mainnet-function-You-have-to-create-a-wallet-in-Titan-to-receive-Atlas",
+      "pubDate": "2020-11-20T10:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Ether hits $500 for the first time since June 2018, outperforming Bitcoin YTD",
+      "link": "https://cryptopanic.com/news/litecoin/10591753/Ether-hits-500-for-the-first-time-since-June-2018-outperforming-Bitcoin-YTD",
+      "pubDate": "2020-11-20T09:29:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Will the China Construction Bank plan, make the world's 2nd largest bank a major Bitcoin holder?…",
+      "link": "https://cryptopanic.com/news/10591465/Will-the-China-Construction-Bank-plan-make-the-worlds-2nd-largest-bank-a-major-Bitcoin-holder",
+      "pubDate": "2020-11-20T08:39:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Bigger Than Netflix? Filecoin Hits 1 Exabyte of Storage",
+      "link": "https://cryptopanic.com/news/10589727/Bigger-Than-Netflix-Filecoin-Hits-1-Exabyte-of-Storage",
+      "pubDate": "2020-11-20T03:11:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "RT @whale_alert: 19,680,315 #BUSD (19,680,315 USD) minted at PAX Treasury Tx",
+      "link": "https://cryptopanic.com/news/paxos-standard/10589503/RT-whale_alert-19680315-BUSD-19680315-USD-minted-at-PAX-Treasury-Tx",
+      "pubDate": "2020-11-20T02:38:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PAX",
+        "1MT"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "date": "2024-01-07",
+  "fetchedAt": "2026-02-05T07:27:08.060Z",
+  "articleCount": 10,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Why Bitcoin ETF Approval Will Not Be a ‘Sell the News’ Event — Analysts",
+      "link": "https://cryptopanic.com/news/19156649/Why-Bitcoin-ETF-Approval-Will-Not-Be-a-Sell-the-News-Event-Analysts",
+      "pubDate": "2024-01-07T22:48:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Speculation is stirring within the cryptocurrency community regarding the anticipated decision on the Bitcoin exchange-traded fund (ETF) this week. ARK 21Shares awaits a decision on Wednesday, intensifying discussions about the potential impacts of both approval and denial on Bitcoin’s price. Predictions vary, with expectations of a price increase upon approval and potential declines...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin ETF sees 5% SEC rejection probability; optimism grows",
+      "link": "https://cryptopanic.com/news/19156612/Bitcoin-ETF-sees-5-SEC-rejection-probability-optimism-grows",
+      "pubDate": "2024-01-07T22:14:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The United States Securities and Exchange Commission (SEC) is on the verge of making a pivotal decision regarding approving Bitcoin ETF. This potential regulatory shift generates significant interest and optimism within the cryptocurrency and investment communities. Bloomberg’s leading Bitcoin ETF analysts, Eric Balchunas, and James Seyffart, have highlighted a noticeable decrease in the...",
+      "currencies": [
+        "BTC",
+        "OP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ICP, ARB, STX and MKR flash signs as traders anticipate a spot Bitcoin ETF approval",
+      "link": "https://cryptopanic.com/news/19156542/ICP-ARB-STX-and-MKR-flash-signs-as-traders-anticipate-a-spot-Bitcoin-ETF-approval",
+      "pubDate": "2024-01-07T20:42:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ICP",
+        "MKR",
+        "STX"
+      ]
+    },
+    {
+      "title": "Pushd (PUSHD) attracts investors from Tether (USDT) and First Digital USD (FDUSD) as the presale stage one sells out in record time",
+      "link": "https://cryptopanic.com/news/19156368/Pushd-PUSHD-attracts-investors-from-Tether-USDT-and-First-Digital-USD-FDUSD-as-the-presale-stage-one-sells-out-in-record-time",
+      "pubDate": "2024-01-07T18:00:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "FDUSD"
+      ]
+    },
+    {
+      "title": "Likelihood Of Spot XRP ETF In View Amid Grayscale’s Latest Move and Ripple’s Big Win Against SEC",
+      "link": "https://cryptopanic.com/news/19156214/Likelihood-Of-Spot-XRP-ETF-In-View-Amid-Grayscales-Latest-Move-and-Ripples-Big-Win-Against-SEC",
+      "pubDate": "2024-01-07T15:21:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The inclusion of XRP has rekindled speculation about the imminent launch of an XRP ETF, signalling significant market movements.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Akash Who? Lesser-Known Altcoin Rules Weekend’s Top 100 List With 40% Rally",
+      "link": "https://cryptopanic.com/news/19155910/Akash-Who-Lesser-Known-Altcoin-Rules-Weekends-Top-100-List-With-40-Rally",
+      "pubDate": "2024-01-07T11:02:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "MATIC",
+        "AKT"
+      ]
+    },
+    {
+      "title": "5 Altcoins to Watch Next Week: UNI, VET, SUSHI, MATIC, BAND Lead the Charge",
+      "link": "https://cryptopanic.com/news/19155899/5-Altcoins-to-Watch-Next-Week-UNI-VET-SUSHI-MATIC-BAND-Lead-the-Charge",
+      "pubDate": "2024-01-07T10:58:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MATIC",
+        "UNI",
+        "VET"
+      ]
+    },
+    {
+      "title": "Better Markets Warns U.S. SEC to Reject Bitcoin ETF",
+      "link": "https://cryptopanic.com/news/19155876/Better-Markets-Warns-US-SEC-to-Reject-Bitcoin-ETF",
+      "pubDate": "2024-01-07T10:32:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin ETFs Near Approval, But Better Markets Warns SEC of Risks and Urges Rejection Due to Fraud Concerns.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 11
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin SV Surges 100%, Borroe Finance Boasts Enormous Growth",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/19155765/Bitcoin-SV-Surges-100-Borroe-Finance-Boasts-Enormous-Growth",
+      "pubDate": "2024-01-07T08:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ]
+    },
+    {
+      "title": "Better Markets Jeers Bitcoin After SEC Unofficially Approves ETF",
+      "link": "https://cryptopanic.com/news/bitcoin/19155582/Better-Markets-Jeers-Bitcoin-After-SEC-Unofficially-Approves-ETF",
+      "pubDate": "2024-01-07T02:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Better Markets is unhappy with Bitcoin ETFs securing a win and is urging the SEC to shut it down.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

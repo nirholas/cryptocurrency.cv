@@ -1,0 +1,26 @@
+{
+  "date": "2018-11-11",
+  "fetchedAt": "2026-02-05T07:27:06.999Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Interstellar Announces Pre-Release of Its Bulletproofs Implementation",
+      "link": "https://cryptopanic.com/news/monero/3635861/Interstellar-Announces-Pre-Release-of-Its-Bulletproofs-Implementation",
+      "pubDate": "2018-11-11T17:00:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "XMR"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

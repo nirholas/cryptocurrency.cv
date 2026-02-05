@@ -1,0 +1,444 @@
+{
+  "date": "2021-07-06",
+  "fetchedAt": "2026-02-05T07:27:06.750Z",
+  "articleCount": 30,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @nghiacc: Imaging bringing 1M XEC each to 1M people. This brilliant tech can come to hands of many people. They will be taken care by go…",
+      "link": "https://cryptopanic.com/news/ecash/12368723/RT-nghiacc-Imaging-bringing-1M-XEC-each-to-1M-people-This-brilliant-tech-can-come-to-hands-of-many-people-They-will-be-taken-care-by-go",
+      "pubDate": "2021-07-06T22:16:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: Saw someone market sell 21,000,000 HEX in a single market order today. They used 1inch and got $1,781,879 USDC for the…",
+      "link": "https://cryptopanic.com/news/12273877/RT-RichardHeartWin-Saw-someone-market-sell-21000000-HEX-in-a-single-market-order-today-They-used-1inch-and-got-1781879-USDC-for-the",
+      "pubDate": "2021-07-06T22:14:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "HEX"
+      ]
+    },
+    {
+      "title": "RT @Bitcoin_ABC: Want to use Bitcoin ABC to mine eCash? Learn how to use Bitcoin ABC, in combination with @ViaBTC open source software, t…",
+      "link": "https://cryptopanic.com/news/ecash/12368726/RT-Bitcoin_ABC-Want-to-use-Bitcoin-ABC-to-mine-eCash-Learn-how-to-use-Bitcoin-ABC-in-combination-with-ViaBTC-open-source-software-t",
+      "pubDate": "2021-07-06T22:03:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Want to use Bitcoin ABC to mine eCash? Learn how to use Bitcoin ABC, in combination with @ViaBTC open source soft…",
+      "link": "https://cryptopanic.com/news/ecash/12272737/Want-to-use-Bitcoin-ABC-to-mine-eCash-Learn-how-to-use-Bitcoin-ABC-in-combination-with-ViaBTC-open-source-soft",
+      "pubDate": "2021-07-06T22:01:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC",
+        "BCHABC"
+      ]
+    },
+    {
+      "title": "RT @nknX_org: Thanks to your help we were able to improve NKNx v3 beta even more and decided to announce the release-date. NKNx V3 will rep…",
+      "link": "https://cryptopanic.com/news/12274745/RT-nknX_org-Thanks-to-your-help-we-were-able-to-improve-NKNx-v3-beta-even-more-and-decided-to-announce-the-release-date-NKNx-V3-will-rep",
+      "pubDate": "2021-07-06T21:34:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NKN"
+      ]
+    },
+    {
+      "title": "Our #TELxAMA with @P4Cap is now live on YouTube #TelcoinV3",
+      "link": "https://cryptopanic.com/news/12275966/Our-TELxAMA-with-P4Cap-is-now-live-on-YouTube-TelcoinV3",
+      "pubDate": "2021-07-06T21:31:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "US congressman buys Dogecoin, Ethereum and Cardano amid bull market",
+      "link": "https://cryptopanic.com/news/dogecoin/12271479/US-congressman-buys-Dogecoin-Ethereum-and-Cardano-amid-bull-market",
+      "pubDate": "2021-07-06T21:18:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Over the last two months, Congressman Barry Moore purchased a range of cryptocurrencies but according to current prices, he's in the red.",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Alabama Congressman Buys Dogecoin, Cardano, and Ethereum",
+      "link": "https://cryptopanic.com/news/dogecoin/12271278/Alabama-Congressman-Buys-Dogecoin-Cardano-and-Ethereum",
+      "pubDate": "2021-07-06T19:41:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Barry Moore has become only the second U.S. congressman to publicly disclose Dogecoin buys",
+      "currencies": [
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 21,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ADA, DOGE overtake BTC as the most popular cryptocurrencies for US eToro users",
+      "link": "https://cryptopanic.com/news/dogecoin/12271169/ADA-DOGE-overtake-BTC-as-the-most-popular-cryptocurrencies-for-US-eToro-users",
+      "pubDate": "2021-07-06T19:08:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin, the so-called king of cryptocurrencies, has seen its popularity decline among U.S.-based eToro users over the past 12 months. Despite more volatility, altcoins are growing in popularity.",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Glitzkoin GTN confidently marches up, touches $0.26 multiple times in the past 24 hours. 30 day max $0.28 and min $…",
+      "link": "https://cryptopanic.com/news/12273813/Glitzkoin-GTN-confidently-marches-up-touches-026-multiple-times-in-the-past-24-hours-30-day-max-028-and-min",
+      "pubDate": "2021-07-06T17:36:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "BIC’s Video News Show: VeChain’s Growing Reach",
+      "link": "https://cryptopanic.com/news/12270742/BICs-Video-News-Show-VeChains-Growing-Reach",
+      "pubDate": "2021-07-06T16:07:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "In this episode of the BeInCrypto video news show, host Jessica Walker sees if VeChain has the potential for a serious rebound. In this video, we'll talk about the idea and team behind VeChain, as well the latest news about its partnerships and adoption across the world.",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Following the May 2021 massive panic crypto selloff, something very impressive happened: nothing. DeFi protocols co…",
+      "link": "https://cryptopanic.com/news/12273983/Following-the-May-2021-massive-panic-crypto-selloff-something-very-impressive-happened-nothing-DeFi-protocols-co",
+      "pubDate": "2021-07-06T16:03:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "MFT"
+      ]
+    },
+    {
+      "title": "RT @eCashOfficial: eCash trading is live at Coinex exchange! Good job @coinexcom for the consistently reliable s…",
+      "link": "https://cryptopanic.com/news/ecash/12272738/RT-eCashOfficial-eCash-trading-is-live-at-Coinex-exchange-Good-job-coinexcom-for-the-consistently-reliable-s",
+      "pubDate": "2021-07-06T16:01:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XEC",
+        "BCHABC"
+      ]
+    },
+    {
+      "title": "eCash trading is live at Coinex exchange! Good job @coinexcom for the consistently relia…",
+      "link": "https://cryptopanic.com/news/ecash/12368728/eCash-trading-is-live-at-Coinex-exchange-Good-job-coinexcom-for-the-consistently-relia",
+      "pubDate": "2021-07-06T16:01:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "magic internet money is the future",
+      "link": "https://cryptopanic.com/news/12276139/magic-internet-money-is-the-future",
+      "pubDate": "2021-07-06T14:50:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "Reef Finance  and @opendaoprotocol are thrilled to share that $REEF token is now approved as collateral for mintin…",
+      "link": "https://cryptopanic.com/news/12275363/Reef-Finance-and-opendaoprotocol-are-thrilled-to-share-that-REEF-token-is-now-approved-as-collateral-for-mintin",
+      "pubDate": "2021-07-06T12:16:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Check out the transcript of #RSK Co-Founder @dieguito's AMA with the @kucoincom community, deep-diving into RIF!…",
+      "link": "https://cryptopanic.com/news/12275281/Check-out-the-transcript-of-RSK-Co-Founder-dieguitos-AMA-with-the-kucoincom-community-deep-diving-into-RIF",
+      "pubDate": "2021-07-06T11:24:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RIF"
+      ]
+    },
+    {
+      "title": "Aave Up 16% On News of Aave Pro Launch",
+      "link": "https://cryptopanic.com/news/12269839/Aave-Up-16-On-News-of-Aave-Pro-Launch",
+      "pubDate": "2021-07-06T11:16:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The price of Aave has shot up after the DeFi lending project confirmed that its institutional investor platform Aave Pro will launch in July.",
+      "currencies": [
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "PancakeSwap Soars After 5.3 Million CAKE Burned",
+      "link": "https://cryptopanic.com/news/12269752/PancakeSwap-Soars-After-53-Million-CAKE-Burned",
+      "pubDate": "2021-07-06T10:37:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "PancakeSwap has experienced a significant increase in value following the burning of 5.3 million CAKE tokens. This strategic move is aimed at reducing supply and potentially enhancing the token's market value, leading to a surge in demand among investors.",
+      "currencies": [
+        "CAKE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "MovieBloc Monthly Newsletter- June 2021",
+      "link": "https://cryptopanic.com/news/12274656/MovieBloc-Monthly-Newsletter-June-2021",
+      "pubDate": "2021-07-06T09:26:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MBL"
+      ]
+    },
+    {
+      "title": "Bitcoin To Sail Past $140,000 After BTC Clears This Hurdle, Says Celsius Network CEO",
+      "link": "https://cryptopanic.com/news/12269560/Bitcoin-To-Sail-Past-140000-After-BTC-Clears-This-Hurdle-Says-Celsius-Network-CEO",
+      "pubDate": "2021-07-06T09:00:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Celsius Network chief executive Alex Mashinsky predicts Bitcoin can soar above $140,000 this cycle but only after surviving one last sell-off event. The head of the crypto lending and borrowing platform tells his 106,700 followers that Bitcoin has so far survived two massive bearish catalysts in a short amount of time. “We have seen two […]",
+      "currencies": [
+        "BTC",
+        "CEL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "eCash blockchain explorer",
+      "link": "https://cryptopanic.com/news/ecash/12291402/eCash-blockchain-explorer",
+      "pubDate": "2021-07-06T08:35:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": ".@P4Cap will be hosting a walkthrough video followed by a community AMA on YouTube Live at 2.30pm PST today. Please…",
+      "link": "https://cryptopanic.com/news/12275967/P4Cap-will-be-hosting-a-walkthrough-video-followed-by-a-community-AMA-on-YouTube-Live-at-230pm-PST-today-Please",
+      "pubDate": "2021-07-06T08:33:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "DOGE and DeFi Avoided by Australian Crypto Fund with 119% of YTD Returns in 2021",
+      "link": "https://cryptopanic.com/news/dogecoin/12269099/DOGE-and-DeFi-Avoided-by-Australian-Crypto-Fund-with-119-of-YTD-Returns-in-2021",
+      "pubDate": "2021-07-06T07:57:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "$75-Million crypto managing fund from Australia posts 119% year-to-date returns without touching DeFi coins or DOGE",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @RichardHeartWin: Hey #longevity community. So far about $8M in donations have indicated they'll donate so far. Wanted a good excuse to…",
+      "link": "https://cryptopanic.com/news/12273878/RT-RichardHeartWin-Hey-longevity-community-So-far-about-8M-in-donations-have-indicated-theyll-donate-so-far-Wanted-a-good-excuse-to",
+      "pubDate": "2021-07-06T07:23:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "Thanks for supporting XEC! @CoinBene",
+      "link": "https://cryptopanic.com/news/ecash/12368730/Thanks-for-supporting-XEC-CoinBene",
+      "pubDate": "2021-07-06T07:10:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Cardano (ADA) partners with crypto lending player Nexo",
+      "link": "https://cryptopanic.com/news/12267766/Cardano-ADA-partners-with-crypto-lending-player-Nexo",
+      "pubDate": "2021-07-06T07:00:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Global blockchain engineering company and the developer team behind the Cardano (ADA) blockchain, Input Output Hong Kong (IOHK), partnered up with a cryptocurrency lending platform Nexo.",
+      "currencies": [
+        "ADA",
+        "NEXO"
+      ],
+      "votes": {
+        "positive": 35,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "YouTuber accused of engineering multi-million-dollar pump-n-dump via Uniswap",
+      "link": "https://cryptopanic.com/news/uniswap/12265060/YouTuber-accused-of-engineering-multi-million-dollar-pump-n-dump-via-Uniswap",
+      "pubDate": "2021-07-06T04:20:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The YouTuber denied accusations he has rug-pulled on his followers while asserting that Million token is a “social project” that “should not be considered an investment.”",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "The crypto market doesn’t care about Dogecoin shill Elon Musk’s tweets anymore",
+      "link": "https://cryptopanic.com/news/dogecoin/12265016/The-crypto-market-doesnt-care-about-Dogecoin-shill-Elon-Musks-tweets-anymore",
+      "pubDate": "2021-07-06T04:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "It appears that Tesla and SpaceX CEO Elon Musk is gradually losing his influence over the cryptocurrency market, judging by the lack of any meaningful impact on prices his crypto-focused tweets are making lately.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 35,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DeFi Boosts Market As Bitcoin Taps on $35K – eToro Crypto Roundup",
+      "link": "https://cryptopanic.com/news/12265022/DeFi-Boosts-Market-As-Bitcoin-Taps-on-35K-eToro-Crypto-Roundup",
+      "pubDate": "2021-07-06T03:25:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Compound jumps 40% while Aave and Uniswap enjoy 20% gains. As Ethereum has pushed almost 10% higher this week, Bitcoin has drifted sideways on mixed headlines. The Chinese clampdown on mining continues to drive uncertainty in the market, along with the ramp up of regulatory discussion in the US. Yet this is matched by equal […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "UNI",
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,531 @@
+{
+  "date": "2023-09-30",
+  "fetchedAt": "2026-02-05T07:27:07.052Z",
+  "articleCount": 35,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Can NEAR stay above $1?",
+      "link": "https://cryptopanic.com/news/18939665/Can-NEAR-stay-above-1",
+      "pubDate": "2023-09-30T22:30:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "‘I Won’t Tell if You Don’t’ — SEC Unearths Alleged Scheme by Do Kwon to Fabricate Terra Transactions",
+      "link": "https://cryptopanic.com/news/18939658/I-Wont-Tell-if-You-Dont-SEC-Unearths-Alleged-Scheme-by-Do-Kwon-to-Fabricate-Terra-Transactions",
+      "pubDate": "2023-09-30T22:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "RNDR"
+      ]
+    },
+    {
+      "title": "XRP Lawsuit: John Deaton Concurs “The SEC Harmed a Lot of Innocent People” Pursuing the Ripple Case",
+      "link": "https://cryptopanic.com/news/18939648/XRP-Lawsuit-John-Deaton-Concurs-The-SEC-Harmed-a-Lot-of-Innocent-People-Pursuing-the-Ripple-Case",
+      "pubDate": "2023-09-30T21:43:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "John Deaton, a prominent pro-Ripple lawyer representing over 75,000 individuals affected by the SEC v. Ripple case, has spoken out against the U.S. Securities and Exchange Commission's (SEC) actions in the lawsuit against Ripple Labs and co-defendants.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Shiba Inu (SHIB) Negatively Correlates With Bitcoin (BTC), What This Implies",
+      "link": "https://cryptopanic.com/news/18939640/Shiba-Inu-SHIB-Negatively-Correlates-With-Bitcoin-BTC-What-This-Implies",
+      "pubDate": "2023-09-30T21:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Shiba Inu continues to focus on utility as its fundamental value",
+      "currencies": [
+        "BTC",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Here’s Why Tottenham Launched the Spurs Digital Fan Token",
+      "link": "https://cryptopanic.com/news/18939631/Heres-Why-Tottenham-Launched-the-Spurs-Digital-Fan-Token",
+      "pubDate": "2023-09-30T21:23:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHZ"
+      ]
+    },
+    {
+      "title": "Will NEAR’s ICC partnership boost the protocol’s adoption?",
+      "link": "https://cryptopanic.com/news/18939601/Will-NEARs-ICC-partnership-boost-the-protocols-adoption",
+      "pubDate": "2023-09-30T20:30:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "AtomicDEX Upgrade for MMTools Pro Traders",
+      "link": "https://cryptopanic.com/news/dash/19389124/AtomicDEX-Upgrade-for-MMTools-Pro-Traders",
+      "pubDate": "2023-09-30T20:26:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "LTC",
+        "NENG"
+      ]
+    },
+    {
+      "title": "This Week in Coins: ETF Hype Pumps Ethereum and Bitcoin as Chainlink and Bitcoin Cash Surge",
+      "link": "https://cryptopanic.com/news/18939573/This-Week-in-Coins-ETF-Hype-Pumps-Ethereum-and-Bitcoin-as-Chainlink-and-Bitcoin-Cash-Surge",
+      "pubDate": "2023-09-30T20:01:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LINK",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Vitalik Buterin Published a Blog Post on the Future of Ethereum – Here are the Details",
+      "link": "https://cryptopanic.com/news/18939548/Vitalik-Buterin-Published-a-Blog-Post-on-the-Future-of-Ethereum-Here-are-the-Details",
+      "pubDate": "2023-09-30T19:33:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum founder Vitalik Buterin published a technically detailed blog post about the future of the coin. Continue Reading: Vitalik Buterin Published a Blog Post on the Future of Ethereum – Here are the Details",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "SEC Drops Bombshell: Terra Founder Do Kwon Chat History Leaked",
+      "link": "https://cryptopanic.com/news/18939524/SEC-Drops-Bombshell-Terra-Founder-Do-Kwon-Chat-History-Leaked",
+      "pubDate": "2023-09-30T19:00:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "FTX Exploiter Transfers 5,000 ETH Ahead Of Ether Futures ETF Launch",
+      "link": "https://cryptopanic.com/news/18939397/FTX-Exploiter-Transfers-5000-ETH-Ahead-Of-Ether-Futures-ETF-Launch",
+      "pubDate": "2023-09-30T16:30:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "RUNE"
+      ]
+    },
+    {
+      "title": "MKR up +20% in September: Are more gains likely?",
+      "link": "https://cryptopanic.com/news/18939393/MKR-up-20-in-September-Are-more-gains-likely",
+      "pubDate": "2023-09-30T16:30:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Ager-Hanssen Exits nChain, Ignites ‘Faketoshi’ Claims Against Wright",
+      "link": "https://cryptopanic.com/news/18939362/Ager-Hanssen-Exits-nChain-Ignites-Faketoshi-Claims-Against-Wright",
+      "pubDate": "2023-09-30T16:05:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ]
+    },
+    {
+      "title": "‘FTX Drainer’ Resurfaces: Moves $8M ETH to Defi Platforms",
+      "link": "https://cryptopanic.com/news/18939360/FTX-Drainer-Resurfaces-Moves-8M-ETH-to-Defi-Platforms",
+      "pubDate": "2023-09-30T16:00:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "FTT",
+        "RUNE"
+      ]
+    },
+    {
+      "title": "Crypto CEO Very Bullish On XRP Price, Sets Make Or Break Point",
+      "link": "https://cryptopanic.com/news/18939300/Crypto-CEO-Very-Bullish-On-XRP-Price-Sets-Make-Or-Break-Point",
+      "pubDate": "2023-09-30T15:00:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Following its victory against the US Securities and Exchange Commission, the XRP price has been displaying bullish sentiments, effectively gaining the attention of long-term investors seeking to buy and hold to gain more profits. In light of this, a crypto CEO has disclosed his insights on XRP’s bullish outlook, acknowledging the prospects of a bull run in the future. Crypto CEO Concedes...",
+      "currencies": [
+        "XRP",
+        "MKR",
+        "CRV"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "What’s behind GMX’s rising V2 traction?",
+      "link": "https://cryptopanic.com/news/18939252/Whats-behind-GMXs-rising-V2-traction?mtm_campaign=API-OFA",
+      "pubDate": "2023-09-30T14:30:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "GMX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "U.S. dollar lost 99.5% of its value against Bitcoin in the last 10 years",
+      "link": "https://cryptopanic.com/news/18939167/US-dollar-lost-995-of-its-value-against-Bitcoin-in-the-last-10-years",
+      "pubDate": "2023-09-30T13:27:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The U.S. dollar (USD) is reportedly one of the strongest fiat currencies in a long time. In the last decade, … Continued",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Self-Proclaimed Satoshi Craig Wright Slammed by Former Colleague: Details",
+      "link": "https://cryptopanic.com/news/18939161/Self-Proclaimed-Satoshi-Craig-Wright-Slammed-by-Former-Colleague-Details",
+      "pubDate": "2023-09-30T13:13:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "‘Black Swan’ author: Kiyosaki should ‘stop bullshitting’ about finance",
+      "link": "https://cryptopanic.com/news/18939108/Black-Swan-author-Kiyosaki-should-stop-bullshitting-about-finance",
+      "pubDate": "2023-09-30T12:51:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Best-selling author Nassim Nicholas Taleb, renowned for his book ‘Black Swan,’ has taken issue with the views expressed by financial … Continued",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "The Most Impressive Highlights From The Cardano Development Report",
+      "link": "https://cryptopanic.com/news/18939058/The-Most-Impressive-Highlights-From-The-Cardano-Development-Report",
+      "pubDate": "2023-09-30T12:00:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Behind the scenes, Cardano (ADA) has been actively building and introducing exciting innovations to its blockchain and ecosystem. This is evident in the latest weekly development report shared by Essential Cardano. Cardano: Highlights From The Report One of the notable highlights from the report includes the updates being made to Cardano’s Lace wallet. This week, the team is said to have...",
+      "currencies": [
+        "ADA",
+        "TRX",
+        "CRV"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Crypto Trader Says One Mid-Cap Altcoin ‘Looks Very Healthy’, Updates Outlook on Bitcoin, Ethereum and Solana",
+      "link": "https://cryptopanic.com/news/18939039/Crypto-Trader-Says-One-Mid-Cap-Altcoin-Looks-Very-Healthy-Updates-Outlook-on-Bitcoin-Ethereum-and-Solana",
+      "pubDate": "2023-09-30T11:45:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "INJ"
+      ]
+    },
+    {
+      "title": "Ripple to unlock 1 billion XRP tomorrow – what to expect?",
+      "link": "https://cryptopanic.com/news/18939016/Ripple-to-unlock-1-billion-XRP-tomorrow-what-to-expect",
+      "pubDate": "2023-09-30T11:40:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "On the first day of every month, Ripple unlocks 1 billion XRP tokens from an escrow system programmed within the … Continued",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "3 Cryptos That Could Hit New All-Time Highs in October",
+      "link": "https://cryptopanic.com/news/18938998/3-Cryptos-That-Could-Hit-New-All-Time-Highs-in-October",
+      "pubDate": "2023-09-30T11:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "OKB",
+        "INJ",
+        "TON"
+      ]
+    },
+    {
+      "title": "October Surge Predicted For Altcoins BCH, LINK, MKR, and RUNE",
+      "link": "https://cryptopanic.com/news/18938928/October-Surge-Predicted-For-Altcoins-BCH-LINK-MKR-and-RUNE",
+      "pubDate": "2023-09-30T10:31:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LINK",
+        "BCH",
+        "MKR",
+        "RUNE"
+      ]
+    },
+    {
+      "title": "LINK, MATIC, ETH Rise as Altcoin Market Gets Capital Injection",
+      "link": "https://cryptopanic.com/news/18938881/LINK-MATIC-ETH-Rise-as-Altcoin-Market-Gets-Capital-Injection",
+      "pubDate": "2023-09-30T09:48:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "MATIC",
+        "LINK",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Idris Elba Partners with Stellar Development Foundation Amidst Crypto’s Troubled Waters",
+      "link": "https://cryptopanic.com/news/18938859/Idris-Elba-Partners-with-Stellar-Development-Foundation-Amidst-Cryptos-Troubled-Waters",
+      "pubDate": "2023-09-30T09:14:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Tron TVL Balloons To Over $15 Billion: DeFi Growth Evident?",
+      "link": "https://cryptopanic.com/news/18938836/Tron-TVL-Balloons-To-Over-15-Billion-DeFi-Growth-Evident",
+      "pubDate": "2023-09-30T09:10:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "XRP",
+        "TRX",
+        "MKR",
+        "CRV"
+      ]
+    },
+    {
+      "title": "Terra Classic Rally Continues. Could Inqubeta See 1000% Growth on Dex Launch?",
+      "link": "https://cryptopanic.com/news/18938915/Terra-Classic-Rally-Continues-Could-Inqubeta-See-1000-Growth-on-Dex-Launch",
+      "pubDate": "2023-09-30T09:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FLOW",
+        "LUNC"
+      ]
+    },
+    {
+      "title": "Crypto Daily Roundup, 30 Sep: Signs of crypto market recovery",
+      "link": "https://cryptopanic.com/news/18947500/Crypto-Daily-Roundup-30-Sep-Signs-of-crypto-market-recovery",
+      "pubDate": "2023-09-30T08:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "SHIB",
+        "MATIC",
+        "MKR",
+        "GT"
+      ]
+    },
+    {
+      "title": "Is a Crypto-DAG Platform Vulnerable to Hacking? Understanding the Security Risks",
+      "link": "https://cryptopanic.com/news/18938746/Is-a-Crypto-DAG-Platform-Vulnerable-to-Hacking-Understanding-the-Security-Risks",
+      "pubDate": "2023-09-30T07:27:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ]
+    },
+    {
+      "title": "Aave Poised For Multi-Chain Governance Overhaul",
+      "link": "https://cryptopanic.com/news/18938707/Aave-Poised-For-Multi-Chain-Governance-Overhaul",
+      "pubDate": "2023-09-30T05:55:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Savings DAI Surpasses $1B TVL, But DAI Remains In Decline",
+      "link": "https://cryptopanic.com/news/18938618/Savings-DAI-Surpasses-1B-TVL-But-DAI-Remains-In-Decline",
+      "pubDate": "2023-09-30T03:48:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "DAI"
+      ]
+    },
+    {
+      "title": "24 Crypto Update, 29 Sep: Crypto market remained relatively stable",
+      "link": "https://cryptopanic.com/news/18938693/24-Crypto-Update-29-Sep-Crypto-market-remained-relatively-stable",
+      "pubDate": "2023-09-30T01:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDC",
+        "MATIC",
+        "LTC",
+        "FLOW",
+        "MKR",
+        "GALA"
+      ]
+    },
+    {
+      "title": "Top-35 Altcoin Ignores Crypto Market Doldrums and Surges by Nearly 45% in the Past Month Amid Spike in Activity",
+      "link": "https://cryptopanic.com/news/18938509/Top-35-Altcoin-Ignores-Crypto-Market-Doldrums-and-Surges-by-Nearly-45-in-the-Past-Month-Amid-Spike-in-Activity",
+      "pubDate": "2023-09-30T00:00:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "GMX Paid A Hefty Prize Because Of This Flaw",
+      "link": "https://cryptopanic.com/news/18938505/GMX-Paid-A-Hefty-Prize-Because-Of-This-Flaw?mtm_campaign=API-OFA",
+      "pubDate": "2023-09-30T00:00:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "GMX"
+      ]
+    }
+  ]
+}

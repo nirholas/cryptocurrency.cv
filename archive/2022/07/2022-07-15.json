@@ -1,0 +1,548 @@
+{
+  "date": "2022-07-15",
+  "fetchedAt": "2026-02-05T07:27:07.568Z",
+  "articleCount": 35,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @draper_u: We’re excited to jump into the #metaverse with #CEEK! Our partnership will assist Game Developers and VR Builders in creating…",
+      "link": "https://cryptopanic.com/news/15779866/RT-draper_u-Were-excited-to-jump-into-the-metaverse-with-CEEK-Our-partnership-will-assist-Game-Developers-and-VR-Builders-in-creating",
+      "pubDate": "2022-07-15T23:54:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CEEK"
+      ]
+    },
+    {
+      "title": "Exciting times",
+      "link": "https://cryptopanic.com/news/15779868/Exciting-times",
+      "pubDate": "2022-07-15T22:10:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CEEK"
+      ]
+    },
+    {
+      "title": "Surging Ethereum Scaling Solution Altcoin Chosen for Disney Accelerator Program",
+      "link": "https://cryptopanic.com/news/15778305/Surging-Ethereum-Scaling-Solution-Altcoin-Chosen-for-Disney-Accelerator-Program",
+      "pubDate": "2022-07-15T22:05:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The Walt Disney Company is announcing plans to support a surging crypto project through its new accelerator program. Polygon (MATIC) is one of six participants in the 2022 Disney Accelerator class, which will focus, in part, on non-fungible token (NFT) development. “This year’s Disney Accelerator class is focused on building the future of immersive experiences […]",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Stablecoin Issuer Circle Reveals Comprehensive Breakdown of USD Coin Reserves in Push Toward Transparency",
+      "link": "https://cryptopanic.com/news/15778306/Stablecoin-Issuer-Circle-Reveals-Comprehensive-Breakdown-of-USD-Coin-Reserves-in-Push-Toward-Transparency",
+      "pubDate": "2022-07-15T22:01:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "Stablecoin issuer Circle is unveiling a full breakdown of its USD Coin (USDC) reserves as part of its commitment to increase transparency. According to a new company blog post, Circle is issuing its first ever monthly breakdown of USDC reserve assets to demonstrate the stablecoin’s full backing and peg to the US Dollar. “Today we […]",
+      "currencies": [
+        "USDC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Circle Claims USDC Stablecoin Is Now Fully Backed by Cash, US Treasuries",
+      "link": "https://cryptopanic.com/news/15778080/Circle-Claims-USDC-Stablecoin-Is-Now-Fully-Backed-by-Cash-US-Treasuries",
+      "pubDate": "2022-07-15T20:23:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "Circle's latest report follows a move from fellow stablecoin issuer Paxos last week to release a detailed breakdown of all assets held in reserve.",
+      "currencies": [
+        "USDC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogecoin Braces For Impact As Elon Musk’s $44 Billion Twitter Acquisition Deal Heads South",
+      "link": "https://cryptopanic.com/news/15777972/Dogecoin-Braces-For-Impact-As-Elon-Musks-44-Billion-Twitter-Acquisition-Deal-Heads-South",
+      "pubDate": "2022-07-15T19:43:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Less than three months since Elon Musk declared interest in purchasing Twitter and receiving backing from various crypto firms, the dream ever to hold the social media giant under his thralls is fizzling, throwing DOGE adherents into a muddle.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Price analysis 7/15: BTC, ETH, BNB, XRP, ADA, SOL, DOGE, DOT,  SHIB, AVAX",
+      "link": "https://cryptopanic.com/news/15777889/Price-analysis-715-BTC-ETH-BNB-XRP-ADA-SOL-DOGE-DOT-SHIB-AVAX",
+      "pubDate": "2022-07-15T19:14:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin and many altcoins are back at key overhead resistance levels, but will bulls gather enough momentum to produce a sustained breakout?",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "XRP",
+        "DOGE",
+        "DOT",
+        "AVAX",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Price analysis 7/15: BTC, ETH, BNB, XRP, ADA, SOL, DOGE, DOT, SHIB, AVAX",
+      "link": "https://cryptopanic.com/news/polkadot/15777889/Price-analysis-715-BTC-ETH-BNB-XRP-ADA-SOL-DOGE-DOT-SHIB-AVAX",
+      "pubDate": "2022-07-15T19:14:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin and many altcoins are back at key overhead resistance levels, but will bulls gather enough momentum to produce a sustained breakout?",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ukrainian Charity Uses Crypto Actively, Says Donations Have Risen During Bear Market",
+      "link": "https://cryptopanic.com/news/15777863/Ukrainian-Charity-Uses-Crypto-Actively-Says-Donations-Have-Risen-During-Bear-Market",
+      "pubDate": "2022-07-15T19:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The Serhiy Prytula Charity Foundation, an organization raising money for Ukraine’s war effort against Russia, has used crypto actively in its fundraising and is seeing donations rise in crypto terms even as the market has fallen from its highs.... Read More: Ukrainian Charity Uses Crypto Actively, Says Donations Have Risen During Bear Market",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "What are the ways to become a part of KLAYTN ecosystem? Let’s find out here David Shin head of global adoption…",
+      "link": "https://cryptopanic.com/news/klay-token/15782138/What-are-the-ways-to-become-a-part-of-KLAYTN-ecosystem-Lets-find-out-here-David-Shin-head-of-global-adoption",
+      "pubDate": "2022-07-15T17:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "LCX"
+      ]
+    },
+    {
+      "title": "@dotbitHQ",
+      "link": "https://cryptopanic.com/news/15777583/dotbitHQ",
+      "pubDate": "2022-07-15T17:20:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SC"
+      ]
+    },
+    {
+      "title": "RT @AbrahamMuheize: I need some love and retweets on this one, I’m excited to announce I’ll be hosting CEO’s on @NewToTheStreet Twitter Spa…",
+      "link": "https://cryptopanic.com/news/15782150/RT-AbrahamMuheize-I-need-some-love-and-retweets-on-this-one-Im-excited-to-announce-Ill-be-hosting-CEOs-on-NewToTheStreet-Twitter-Spa?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-15T16:11:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDL",
+        "LGCY"
+      ]
+    },
+    {
+      "title": "Cardano founder says blockchain can ‘radically’ transform how governments operate",
+      "link": "https://cryptopanic.com/news/15777233/Cardano-founder-says-blockchain-can-radically-transform-how-governments-operate",
+      "pubDate": "2022-07-15T15:37:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "As it grows exponentially, the blockchain and crypto industry opens plenty of possibilities to change the world as we know... Continue reading",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 27,
+        "negative": 6
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "7 largest U.S. crypto mining firms use enough electricity to power Houston, Congress finds",
+      "link": "https://cryptopanic.com/news/bitcoin/15777234/7-largest-US-crypto-mining-firms-use-enough-electricity-to-power-Houston-Congress-finds",
+      "pubDate": "2022-07-15T15:32:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "A new Congressional investigation has highlighted the impact of energy consumption by cryptocurrency mining companies in the United States. The... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @BitcoinAssn: Are you a #university student interested in sustainability? Take on @CBCat_io's #SDG challenge: #decarbonisation with #blo…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/15779657/RT-BitcoinAssn-Are-you-a-university-student-interested-in-sustainability-Take-on-CBCat_ios-SDG-challenge-decarbonisation-with-blo",
+      "pubDate": "2022-07-15T14:59:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "Coin Bureau Host Explains When He Expects $AAVE To ‘Rise to Astronomical Heights’",
+      "link": "https://cryptopanic.com/news/15776981/Coin-Bureau-Host-Explains-When-He-Expects-AAVE-To-Rise-to-Astronomical-Heights",
+      "pubDate": "2022-07-15T14:12:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Recently, the popular psuedonymous host of crypto market commentary show Coin Bureau talked about $AAVE, which is the governance token of non-custodial liquidity protocol Aave. Aave is “a decentralised non-custodial liquidity market protocol where users can participate as depositors or borrowers.” Depositors “provide liquidity to the market to earn a passive income,” while borrowers “are able...",
+      "currencies": [
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @coingecko: Be inspired by the NFTs at @klaytn_official gallery featuring works by 23 artists",
+      "link": "https://cryptopanic.com/news/klay-token/15782068/RT-coingecko-Be-inspired-by-the-NFTs-at-klaytn_official-gallery-featuring-works-by-23-artists",
+      "pubDate": "2022-07-15T13:39:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "Feat. @MusicArt_nft @bullish_art @canonicxyz @DuroDogs @FabriikX @nftonshow @nftyjigs @BlockPressApp @rarecandyio…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/15779658/Feat-MusicArt_nft-bullish_art-canonicxyz-DuroDogs-FabriikX-nftonshow-nftyjigs-BlockPressApp-rarecandyio",
+      "pubDate": "2022-07-15T13:36:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "ADA, DOGE and SHIB Can Now Be Sent and Swapped at More Than 6,000 ATMs Through This Feature",
+      "link": "https://cryptopanic.com/news/15776826/ADA-DOGE-and-SHIB-Can-Now-Be-Sent-and-Swapped-at-More-Than-6000-ATMs-Through-This-Feature",
+      "pubDate": "2022-07-15T13:34:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Customers can send or swap coins, initiate sale with cash procedure",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polygon’s MATIC Blasts Through Resistance, Targets $1",
+      "link": "https://cryptopanic.com/news/15776751/Polygons-MATIC-Blasts-Through-Resistance-Targets-1",
+      "pubDate": "2022-07-15T13:10:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "MATICs price action has stolen the crypto spotlight after the Walt Disney Company chose Polygon to participate in its accelerator program. Polygons MATIC Overcomes Resistance MATIC appears to be breaking...",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "U.S. and South Korean investigators will exchange data while Terra probe proceeds",
+      "link": "https://cryptopanic.com/news/15776563/US-and-South-Korean-investigators-will-exchange-data-while-Terra-probe-proceeds",
+      "pubDate": "2022-07-15T12:28:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Recently, South Korea’s Minister of Justice Han Dong-hoon made a trip to New York to meet with US officials to... Continue reading The post U.S. and South Korean investigators will exchange data while Terra probe proceeds appeared first on Finbold.",
+      "currencies": [
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tezos co-founder says it is ‘completely unsurprising’ Celsius would go bankrupt",
+      "link": "https://cryptopanic.com/news/15776503/Tezos-co-founder-says-it-is-completely-unsurprising-Celsius-would-go-bankrupt",
+      "pubDate": "2022-07-15T12:05:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Kathleen Breitman, the co-founder of decentralized open-source blockchain platform Tezos, has said the current happenings in the crypto market, like... Continue reading",
+      "currencies": [
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "This ‘Undervalued’ DeFi Altcoin Is Primed To Rise to Astronomical Heights, According to Coin Bureau Host",
+      "link": "https://cryptopanic.com/news/15776450/This-Undervalued-DeFi-Altcoin-Is-Primed-To-Rise-to-Astronomical-Heights-According-to-Coin-Bureau-Host",
+      "pubDate": "2022-07-15T11:45:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "A widely followed crypto analyst says decentralized borrowing and lending protocol Aave is bound to surge once the bear market is over. In a new video, pseudonymous Coin Bureau host Guy tells his 2.08 million subscribers that AAVE remains undervalued during the current market downturn. “Today, Aave’s ecosystem reserve only holds 1.7. million AAVE, according […]",
+      "currencies": [
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Bitcoin and Ethereum Gain Momentum, Market Turns Green",
+      "link": "https://cryptopanic.com/news/15776448/Bitcoin-and-Ethereum-Gain-Momentum-Market-Turns-Green",
+      "pubDate": "2022-07-15T11:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin price settled above the USD 20,000 pivot level. BTC gained pace for a move above the USD 20,500 resistance zone. It is currently (11:26 UTC) up 5.7% and might rise further above the USD 21,200 resistance. Similarly, most major altcoins are gaining bullish momentum. ETH rallied 13% and cleared the USD 1,200 level. XRP is aiming for a move above the USD 0.35 resistance zone. ADA...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "ADA",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "GMT at Risk as STEPN Network Activity Plummets",
+      "link": "https://cryptopanic.com/news/15776362/GMT-at-Risk-as-STEPN-Network-Activity-Plummets",
+      "pubDate": "2022-07-15T11:14:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Web3 “move-to-earn” app STEPN hasnt registered any new users on its BNB chain version in the past three days while activity from existing users continues to decline. STEPN at Risk...",
+      "currencies": [
+        "BNB",
+        "GMT",
+        "XCN"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "50 fintech leaders predict Cardano trading above $0.60 by the end of 2022",
+      "link": "https://cryptopanic.com/news/15776329/50-fintech-leaders-predict-Cardano-trading-above-060-by-the-end-of-2022",
+      "pubDate": "2022-07-15T11:01:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "There has been a lot of speculation about the price of Cardano (ADA) and what it will trade at by... Continue reading",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Beyond the hype, #NFTs have value propositions across different industries and sectors. Important for adoption are…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/15779659/Beyond-the-hype-NFTs-have-value-propositions-across-different-industries-and-sectors-Important-for-adoption-are",
+      "pubDate": "2022-07-15T10:01:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "ECB report likens PoW to fossil fuel cars, PoS to electric vehicles",
+      "link": "https://cryptopanic.com/news/bitcoin/15775456/ECB-report-likens-PoW-to-fossil-fuel-cars-PoS-to-electric-vehicles",
+      "pubDate": "2022-07-15T09:41:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "European Central Bank researchers anticipate a clash between the green transition policies and Bitcoin investors.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Shiba Inu Finally Listed by Top US Exchange, Bittrex",
+      "link": "https://cryptopanic.com/news/15775504/Shiba-Inu-Finally-Listed-by-Top-US-Exchange-Bittrex",
+      "pubDate": "2022-07-15T09:41:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Shiba Inu has finally been listed by top US exchange, Bittrex",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @PsyFinance: Head over to the link below to bid on BTC, ETH, SOL, SRM and stSOL options by 0930 UTC (~20 minutes from now)!",
+      "link": "https://cryptopanic.com/news/15783438/RT-PsyFinance-Head-over-to-the-link-below-to-bid-on-BTC-ETH-SOL-SRM-and-stSOL-options-by-0930-UTC-20-minutes-from-now",
+      "pubDate": "2022-07-15T09:07:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "SRM"
+      ]
+    },
+    {
+      "title": "We had the pleasure of hosting Ivy, Marketing Lead at @ATTA_protocol, for an #AMA session where she answered questi…",
+      "link": "https://cryptopanic.com/news/klay-token/15782069/We-had-the-pleasure-of-hosting-Ivy-Marketing-Lead-at-ATTA_protocol-for-an-AMA-session-where-she-answered-questi",
+      "pubDate": "2022-07-15T08:00:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "RT @Metaegg_io: Trending Soon (14th JUL 2022) by Our Mathematical algorithmic technology analyzes on-chain data, trading volumes, and price…",
+      "link": "https://cryptopanic.com/news/15770017/RT-Metaegg_io-Trending-Soon-14th-JUL-2022-by-Our-Mathematical-algorithmic-technology-analyzes-on-chain-data-trading-volumes-and-price",
+      "pubDate": "2022-07-15T05:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CRTS"
+      ]
+    },
+    {
+      "title": "#Klaytn is now supported on @tatum_io with their unified framework! Create DApps easily without starting from scrat…",
+      "link": "https://cryptopanic.com/news/klay-token/15772038/Klaytn-is-now-supported-on-tatum_io-with-their-unified-framework-Create-DApps-easily-without-starting-from-scrat",
+      "pubDate": "2022-07-15T03:00:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "Thrilled to collaborate with 'Hidden Singer 7', a legendary variety-music TV Show, to recruit talented singers…",
+      "link": "https://cryptopanic.com/news/15773849/Thrilled-to-collaborate-with-Hidden-Singer-7-a-legendary-variety-music-TV-Show-to-recruit-talented-singers",
+      "pubDate": "2022-07-15T01:40:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SSX"
+      ]
+    },
+    {
+      "title": "RT @bettechentt: Another key milestone to level up unified multichain liquidity via $aUSD. KSM/KAR generated aUSD on Karura/Kusama can be u…",
+      "link": "https://cryptopanic.com/news/15771979/RT-bettechentt-Another-key-milestone-to-level-up-unified-multichain-liquidity-via-aUSD-KSMKAR-generated-aUSD-on-KaruraKusama-can-be-u",
+      "pubDate": "2022-07-15T00:35:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "KSM",
+        "ACA"
+      ]
+    }
+  ]
+}

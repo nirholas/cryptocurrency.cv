@@ -1,0 +1,562 @@
+{
+  "date": "2023-11-05",
+  "fetchedAt": "2026-02-05T07:27:07.034Z",
+  "articleCount": 39,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Moonstone Research Study Etches Doubts on Monero’s Privacy; Crypto Community Reacts",
+      "link": "https://cryptopanic.com/news/19017724/Moonstone-Research-Study-Etches-Doubts-on-Moneros-Privacy-Crypto-Community-Reacts",
+      "pubDate": "2023-11-05T23:30:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "These Are the 20 Active Spot Bitcoin ETFs Worldwide, With a Combined Value of $4.16 Billion",
+      "link": "https://cryptopanic.com/news/19017740/These-Are-the-20-Active-Spot-Bitcoin-ETFs-Worldwide-With-a-Combined-Value-of-416-Billion",
+      "pubDate": "2023-11-05T23:23:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETC",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Charles Hoskinson Praises Cardano, Calls It The “Root of Trust” For the Entire Crypto Industry",
+      "link": "https://cryptopanic.com/news/19017706/Charles-Hoskinson-Praises-Cardano-Calls-It-The-Root-of-Trust-For-the-Entire-Crypto-Industry",
+      "pubDate": "2023-11-05T22:52:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Charles Hoskinson, Cardano Co-founder and CEO of Input Output Global (IOG) has lauded Cardano, describing it as the \"foundation of trust\" for the entire cryptocurrency industry.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "This Is the One and Only Thing that Could Kill Bitcoin",
+      "link": "https://cryptopanic.com/news/19017562/This-Is-the-One-and-Only-Thing-that-Could-Kill-Bitcoin",
+      "pubDate": "2023-11-05T18:52:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "As Bitcoin continues to thrive, reaching new yearly heights and gaining mainstream adoption, Arthur Hayes, the former CEO of BitMEX, voiced a concern that could potentially throttle Bitcoin’s defining essence. Hayes’ discourse sheds light on a scenario where the institutional custody of Bitcoin could morph it from a tool of financial freedom to an institutionalized asset, thereby...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "MultiversX Price Prediction: What’s Next For $EGLD After 40% Jump?",
+      "link": "https://cryptopanic.com/news/19017538/MultiversX-Price-Prediction-Whats-Next-For-EGLD-After-40-Jump",
+      "pubDate": "2023-11-05T18:29:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "EGLD"
+      ]
+    },
+    {
+      "title": "Monero’s community wallet loses all funds after attack",
+      "link": "https://cryptopanic.com/news/19017523/Moneros-community-wallet-loses-all-funds-after-attack",
+      "pubDate": "2023-11-05T18:07:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "How a Ripple IPO Could Signal a Watershed Moment for XRP",
+      "link": "https://cryptopanic.com/news/19017525/How-a-Ripple-IPO-Could-Signal-a-Watershed-Moment-for-XRP",
+      "pubDate": "2023-11-05T18:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Amid growing speculation about Ripple's potential Initial Public Offering, XRP investors ponder the impact on the cryptocurrency's future.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Stablecoin Activity Takes Crown From DeFi in Q3: Report",
+      "link": "https://cryptopanic.com/news/19017439/Stablecoin-Activity-Takes-Crown-From-DeFi-in-Q3-Report",
+      "pubDate": "2023-11-05T16:43:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "UNI"
+      ]
+    },
+    {
+      "title": "A costly mistake on Uniswap: User’s $700,000 loss leads to MEV Bot’s minimal gain",
+      "link": "https://cryptopanic.com/news/19017426/A-costly-mistake-on-Uniswap-Users-700000-loss-leads-to-MEV-Bots-minimal-gain",
+      "pubDate": "2023-11-05T16:31:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "CRV"
+      ]
+    },
+    {
+      "title": "Monero (XMR) Crowdfunding Wallet Reportedly Drained by Hackers",
+      "link": "https://cryptopanic.com/news/19017412/Monero-XMR-Crowdfunding-Wallet-Reportedly-Drained-by-Hackers",
+      "pubDate": "2023-11-05T16:11:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Security breach unveiled: Monero’s CCS wallet drained of $460,000",
+      "link": "https://cryptopanic.com/news/19017390/Security-breach-unveiled-Moneros-CCS-wallet-drained-of-460000",
+      "pubDate": "2023-11-05T16:03:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Speculations Arise Around Baldur’s Gate 3 Xbox Release Schedule",
+      "link": "https://cryptopanic.com/news/19017328/Speculations-Arise-Around-Baldurs-Gate-3-Xbox-Release-Schedule",
+      "pubDate": "2023-11-05T14:40:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GT"
+      ]
+    },
+    {
+      "title": "I asked ChatGPT when Litecoin would hit $100",
+      "link": "https://cryptopanic.com/news/19017262/I-asked-ChatGPT-when-Litecoin-would-hit-100",
+      "pubDate": "2023-11-05T14:22:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "ChatGPT expects Filecoin’s price to be a massive $300 by year end",
+      "link": "https://cryptopanic.com/news/19017263/ChatGPT-expects-Filecoins-price-to-be-a-massive-300-by-year-end",
+      "pubDate": "2023-11-05T14:20:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "United Nations warns ‘Bitcoin has concerning impacts on climate, water, and land’",
+      "link": "https://cryptopanic.com/news/19017234/United-Nations-warns-Bitcoin-has-concerning-impacts-on-climate-water-and-land",
+      "pubDate": "2023-11-05T13:59:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A recent study conducted by the United Nations has raised concerns about the possible impact of Bitcoin (BTC) on the … Continued",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ethereum Touches $1,900",
+      "link": "https://cryptopanic.com/news/19017236/Ethereum-Touches-1900",
+      "pubDate": "2023-11-05T13:59:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum has suddenly gained on bitcoin with its ratio rising from 0.052 to near 0.054 while its dollar price touched $1,900. We look at why.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Charlie Munger Says He’s Concerned About the Recent Surge in Bitcoin Price",
+      "link": "https://cryptopanic.com/news/19017223/Charlie-Munger-Says-Hes-Concerned-About-the-Recent-Surge-in-Bitcoin-Price",
+      "pubDate": "2023-11-05T13:44:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Berkshire Hathaway's vice chairman, Charlie Munger, talked about Bitcoin again in his latest statement. Continue Reading: Charlie Munger Says He’s Concerned About the Recent Surge in Bitcoin Price",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Here’s what ChatGPT thinks about Polkadot’s future",
+      "link": "https://cryptopanic.com/news/19017218/Heres-what-ChatGPT-thinks-about-Polkadots-future",
+      "pubDate": "2023-11-05T13:42:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "4 altcoins to buy amid heating up markets",
+      "link": "https://cryptopanic.com/news/19017151/4-altcoins-to-buy-amid-heating-up-markets",
+      "pubDate": "2023-11-05T12:51:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The cryptocurrency market is again heating up, led by Bitcoin (BTC), after the flagship digital asset reclaimed the $35,000 mark. … Continued",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Shiba Inu Whales Bet Big As Shibarium Grows – Road To $0.1?",
+      "link": "https://cryptopanic.com/news/19017146/Shiba-Inu-Whales-Bet-Big-As-Shibarium-Grows-Road-To-01",
+      "pubDate": "2023-11-05T12:48:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "LINK",
+        "RUNE"
+      ]
+    },
+    {
+      "title": "How Monero has become the latest victim of exploit",
+      "link": "https://cryptopanic.com/news/19017133/How-Monero-has-become-the-latest-victim-of-exploit",
+      "pubDate": "2023-11-05T12:30:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Solana welcomes Render Network (RNDR): Incentive program and strategic migration",
+      "link": "https://cryptopanic.com/news/19017117/Solana-welcomes-Render-Network-RNDR-Incentive-program-and-strategic-migration",
+      "pubDate": "2023-11-05T12:10:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Render Network’s recent strategic decision to transition to the Solana (SOL) blockchain is a move that promises enhanced scalability and speed, crucial attributes in the world of AI and crypto operations In the constantly evolving landscape of blockchain and cryptocurrency, Render Network (RNDR), a leading AI cryptocurrency, is making waves with a series of groundbreaking ... Read more",
+      "currencies": [
+        "SOL",
+        "RNDR"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Highest Crypto Gainers of the Week; CAKE, EGLD, IMX Price Analysis",
+      "link": "https://cryptopanic.com/news/19017062/Highest-Crypto-Gainers-of-the-Week-CAKE-EGLD-IMX-Price-Analysis",
+      "pubDate": "2023-11-05T11:12:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "IMX"
+      ]
+    },
+    {
+      "title": "Monero (XMR) Wallet Hacked: Is Coin No Longer Safe?",
+      "link": "https://cryptopanic.com/news/19017021/Monero-XMR-Wallet-Hacked-Is-Coin-No-Longer-Safe",
+      "pubDate": "2023-11-05T10:33:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Uniswap: Stuck between MEV bots and sandwich attacks",
+      "link": "https://cryptopanic.com/news/19017018/Uniswap-Stuck-between-MEV-bots-and-sandwich-attacks",
+      "pubDate": "2023-11-05T10:30:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Butter Finance introduces the veCAKE model to boost decentralized governance and yields",
+      "link": "https://cryptopanic.com/news/19017007/Butter-Finance-introduces-the-veCAKE-model-to-boost-decentralized-governance-and-yields",
+      "pubDate": "2023-11-05T10:25:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CAKE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Aave Freezes Assets on Numerous Chains: Are Funds Safe?",
+      "link": "https://cryptopanic.com/news/19016981/Aave-Freezes-Assets-on-Numerous-Chains-Are-Funds-Safe",
+      "pubDate": "2023-11-05T09:54:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Aave Protocol Halts Certain Market Operations Due To Bug Report",
+      "link": "https://cryptopanic.com/news/19016962/Aave-Protocol-Halts-Certain-Market-Operations-Due-To-Bug-Report",
+      "pubDate": "2023-11-05T09:39:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "AVAX",
+        "MATIC",
+        "AAVE",
+        "RUNE"
+      ]
+    },
+    {
+      "title": "Learning New Distributed Ledger (DLT) Types — Beyond Blockchain",
+      "link": "https://cryptopanic.com/news/19016973/Learning-New-Distributed-Ledger-DLT-Types-Beyond-Blockchain",
+      "pubDate": "2023-11-05T08:56:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "DOGE",
+        "XMR",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Monero Wallet Hacked $460,000 Lost",
+      "link": "https://cryptopanic.com/news/19016925/Monero-Wallet-Hacked-460000-Lost",
+      "pubDate": "2023-11-05T08:41:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "SushiSwap surges 80%, this cohort joins the party",
+      "link": "https://cryptopanic.com/news/19016916/SushiSwap-surges-80-this-cohort-joins-the-party",
+      "pubDate": "2023-11-05T08:30:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SUSHI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Aave Intel Detects Protocol Bug, What Users Need to Know",
+      "link": "https://cryptopanic.com/news/19016886/Aave-Intel-Detects-Protocol-Bug-What-Users-Need-to-Know",
+      "pubDate": "2023-11-05T07:48:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Shiba Inu price outlook: What’s the target for 2024?",
+      "link": "https://cryptopanic.com/news/19016882/Shiba-Inu-price-outlook-Whats-the-target-for-2024",
+      "pubDate": "2023-11-05T07:21:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The crypto world’s darling meme coin, Shiba Inu, hasn’t had its day in the sun this past year. With the 2023 market treating other cryptocurrencies like Bitcoin and Solana to a sumptuous feast of over 100% gains, Shiba Inu has been left scavenging for scraps, witnessing a meager 3% decrease. The anticipated Shibarium platform’s debut ... Read more",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Monerujo Wallet User Drains Monero’s CCS Wallet: Report",
+      "link": "https://cryptopanic.com/news/19016870/Monerujo-Wallet-User-Drains-Moneros-CCS-Wallet-Report",
+      "pubDate": "2023-11-05T07:20:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Aave exposed to vulnerability: All you need to know",
+      "link": "https://cryptopanic.com/news/19016843/Aave-exposed-to-vulnerability-All-you-need-to-know",
+      "pubDate": "2023-11-05T06:30:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "What Render’s latest update and Solana’s migration mean for RNDR holders",
+      "link": "https://cryptopanic.com/news/19016807/What-Renders-latest-update-and-Solanas-migration-mean-for-RNDR-holders",
+      "pubDate": "2023-11-05T04:30:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "RNDR"
+      ]
+    },
+    {
+      "title": "A look at what lies ahead for the Tron network",
+      "link": "https://cryptopanic.com/news/19016758/A-look-at-what-lies-ahead-for-the-Tron-network",
+      "pubDate": "2023-11-05T02:30:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ]
+    },
+    {
+      "title": "Former SEC Official Warns SBF Conviction Is ‘Just the Tip of the Iceberg’ for All of Crypto",
+      "link": "https://cryptopanic.com/news/19016759/Former-SEC-Official-Warns-SBF-Conviction-Is-Just-the-Tip-of-the-Iceberg-for-All-of-Crypto",
+      "pubDate": "2023-11-05T02:30:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "Polkadot 2.0 is almost here – Time to buy DOT?",
+      "link": "https://cryptopanic.com/news/19016722/Polkadot-20-is-almost-here-Time-to-buy-DOT",
+      "pubDate": "2023-11-05T00:30:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Polkadot's journey unfolds with Polkadot 1.0 completion and a 12% DOT staking increase. While challenges arise, developers and bullish trends hint at brighter days ahead.",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "date": "2018-04-18",
+  "fetchedAt": "2026-02-05T07:27:06.995Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Pornhub Prefers Verge Over Litecoin but Signals Wider Acceptance of Crypto",
+      "link": "https://cryptopanic.com/news/litecoin/1697477/Pornhub-Prefers-Verge-Over-Litecoin-but-Signals-Wider-Acceptance-of-Crypto",
+      "pubDate": "2018-04-18T23:45:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "LTC",
+        "XVG"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "date": "2018-06-29",
+  "fetchedAt": "2026-02-05T07:27:08.685Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Could Tron[TRX] and Cardano [ADA] Strike a New Partnership?",
+      "link": "https://cryptopanic.com/news/tron/2399616/Could-TronTRX-and-Cardano-ADA-Strike-a-New-Partnership",
+      "pubDate": "2018-06-29T16:14:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

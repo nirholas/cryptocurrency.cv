@@ -1,0 +1,26 @@
+{
+  "date": "2018-02-26",
+  "fetchedAt": "2026-02-05T07:27:06.963Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Dutch Bank ING Confirms Bitcoin Exchange Bitfinex As A Customer",
+      "link": "https://cryptopanic.com/news/1210640/Dutch-Bank-ING-Confirms-Bitcoin-Exchange-Bitfinex-As-A-Customer",
+      "pubDate": "2018-02-26T21:05:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

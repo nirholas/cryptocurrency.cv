@@ -1,0 +1,26 @@
+{
+  "date": "2019-06-28",
+  "fetchedAt": "2026-02-05T07:27:08.685Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Chainlink goes live on Coinbase",
+      "link": "https://cryptopanic.com/news/chainlink/5870047/Chainlink-goes-live-on-Coinbase",
+      "pubDate": "2019-06-28T17:19:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

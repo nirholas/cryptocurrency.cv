@@ -1,0 +1,43 @@
+{
+  "date": "2018-02-03",
+  "fetchedAt": "2026-02-05T07:27:06.972Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA’s Tangle Protocol to Transform Taipei into a Smart City",
+      "link": "https://cryptopanic.com/news/974257/IOTAs-Tangle-Protocol-to-Transform-Taipei-into-a-Smart-City",
+      "pubDate": "2018-02-03T15:30:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple's XRP Worst Hit By January Market Decline",
+      "link": "https://cryptopanic.com/news/974032/Ripples-XRP-Worst-Hit-By-January-Market-Decline",
+      "pubDate": "2018-02-03T12:40:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

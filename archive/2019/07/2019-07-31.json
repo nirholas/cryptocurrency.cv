@@ -1,0 +1,25 @@
+{
+  "date": "2019-07-31",
+  "fetchedAt": "2026-02-05T07:27:07.884Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "UK court strikes down Craig Wright’s Roger Ver defamation lawsuit",
+      "link": "https://cryptopanic.com/news/6194762/UK-court-strikes-down-Craig-Wrights-Roger-Ver-defamation-lawsuit",
+      "pubDate": "2019-07-31T13:39:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

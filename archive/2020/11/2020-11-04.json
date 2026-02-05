@@ -1,0 +1,25 @@
+{
+  "date": "2020-11-04",
+  "fetchedAt": "2026-02-05T07:27:06.940Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA Foundation Chosen as Partner for Japanese Advanced Data Storage Project",
+      "link": "https://cryptopanic.com/news/10442601/IOTA-Foundation-Chosen-as-Partner-for-Japanese-Advanced-Data-Storage-Project",
+      "pubDate": "2020-11-04T18:30:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

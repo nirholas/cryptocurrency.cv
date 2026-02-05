@@ -1,0 +1,401 @@
+{
+  "date": "2024-03-24",
+  "fetchedAt": "2026-02-05T07:27:08.083Z",
+  "articleCount": 25,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin price aims for a bullish weekly open — Will DOGE, TON, STX and FTM follow?",
+      "link": "https://cryptopanic.com/news/19352375/Bitcoin-price-aims-for-a-bullish-weekly-open-Will-DOGE-TON-STX-and-FTM-follow",
+      "pubDate": "2024-03-24T22:51:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "FTM",
+        "STX",
+        "TON"
+      ]
+    },
+    {
+      "title": "ADA at $10 Price In View As Cardano Surpasses Ethereum (ETH), Other Top Blockchains In Developer Activity",
+      "link": "https://cryptopanic.com/news/19352246/ADA-at-10-Price-In-View-As-Cardano-Surpasses-Ethereum-ETH-Other-Top-Blockchains-In-Developer-Activity",
+      "pubDate": "2024-03-24T20:09:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Cardano (ADA) has emerged as a leader in developer activity, surpassing Ethereum (ETH) and other major blockchain networks.",
+      "currencies": [
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Turkish Citizens Seek Refuge in Gold and Stablecoins Amid Surging 67% Inflation Rate",
+      "link": "https://cryptopanic.com/news/19352235/Turkish-Citizens-Seek-Refuge-in-Gold-and-Stablecoins-Amid-Surging-67-Inflation-Rate",
+      "pubDate": "2024-03-24T20:00:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "XAUT"
+      ]
+    },
+    {
+      "title": "Crypto market’s weekly winners and losers – TON, FTM, BONK, JUP",
+      "link": "https://cryptopanic.com/news/19352134/Crypto-markets-weekly-winners-and-losers-TON-FTM-BONK-JUP",
+      "pubDate": "2024-03-24T19:00:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FTM",
+        "TON",
+        "BONK",
+        "JUP"
+      ]
+    },
+    {
+      "title": "3 best Solana tokens to invest in 2024",
+      "link": "https://cryptopanic.com/news/19352103/3-best-Solana-tokens-to-invest-in-2024",
+      "pubDate": "2024-03-24T18:13:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "RAY",
+        "JUP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Shiba Inu Bulls Optimism For $0.001 SHIB Price In Sight As Shibarium Proves To Be Memecoin Game-Changer",
+      "link": "https://cryptopanic.com/news/19352088/Shiba-Inu-Bulls-Optimism-For-0001-SHIB-Price-In-Sight-As-Shibarium-Proves-To-Be-Memecoin-Game-Changer",
+      "pubDate": "2024-03-24T18:00:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The Shiba Inu community is in high spirits as Shibarium, its Layer-2 scaling solution, achieves a significant feat by processing over...",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 5
+      }
+    },
+    {
+      "title": "BlockDAG’s $7.8 Presale and Technological Edge Spearhead Crypto Innovation, Surpassing Dogecoin Futures and Quant",
+      "link": "https://cryptopanic.com/news/19352022/BlockDAGs-78-Presale-and-Technological-Edge-Spearhead-Crypto-Innovation-Surpassing-Dogecoin-Futures-and-Quant",
+      "pubDate": "2024-03-24T17:00:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "QNT"
+      ]
+    },
+    {
+      "title": "BlockDAG Presale: Surging Past DOT & KAVA’s Market Hurdles",
+      "link": "https://cryptopanic.com/news/19352034/BlockDAG-Presale-Surging-Past-DOT-KAVAs-Market-Hurdles",
+      "pubDate": "2024-03-24T17:00:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "KAVA"
+      ]
+    },
+    {
+      "title": "Aptos [APT]: Up by 75% and….? Here’s why holders should be wary",
+      "link": "https://cryptopanic.com/news/19351960/Aptos-APT-Up-by-75-and-Heres-why-holders-should-be-wary",
+      "pubDate": "2024-03-24T16:00:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "APT"
+      ]
+    },
+    {
+      "title": "Here’s Why Dogecoin Rallies 40%, Beating Cardano, Shiba Inu",
+      "link": "https://cryptopanic.com/news/19351935/Heres-Why-Dogecoin-Rallies-40-Beating-Cardano-Shiba-Inu",
+      "pubDate": "2024-03-24T15:41:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin emerged as a standout performer this week, knocking out Cardano. DOGE has surged 39.68% from a low of about $0.125 to as high as $0.1746. Meanwhile, its closest rival in the meme space, Shiba Inu, saw a 3.18% gain. In the last few days, Dogecoin (Doge) has emerged as a standout performer, taking the […]",
+      "currencies": [
+        "ADA",
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin ETFs Bleed For One Week Straight – Can Price Recover To $73,000?",
+      "link": "https://cryptopanic.com/news/19351922/Bitcoin-ETFs-Bleed-For-One-Week-Straight-Can-Price-Recover-To-73000",
+      "pubDate": "2024-03-24T15:30:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "FTM"
+      ]
+    },
+    {
+      "title": "Shiba Inu’s (SHIB) Shibarium TVL Surges 170% in Two Days",
+      "link": "https://cryptopanic.com/news/19351950/Shiba-Inus-SHIB-Shibarium-TVL-Surges-170-in-Two-Days?mtm_campaign=API-OFA",
+      "pubDate": "2024-03-24T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "SHIB",
+        "BONE"
+      ]
+    },
+    {
+      "title": "Terra founder Do Kwon released in Montenegro",
+      "link": "https://cryptopanic.com/news/19351853/Terra-founder-Do-Kwon-released-in-Montenegro",
+      "pubDate": "2024-03-24T14:38:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "9 Cryptocurrencies to Keep On Your Watchlist This Week: Price Analysis",
+      "link": "https://cryptopanic.com/news/19351781/9-Cryptocurrencies-to-Keep-On-Your-Watchlist-This-Week-Price-Analysis",
+      "pubDate": "2024-03-24T13:47:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "XLM",
+        "ALGO",
+        "FIL",
+        "BTT",
+        "XEC",
+        "INJ",
+        "SUI"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Coinbase’s Base Hits $2 Billion TVL: Airdrops, Meme Coins to Watch",
+      "link": "https://cryptopanic.com/news/19351783/Coinbases-Base-Hits-2-Billion-TVL-Airdrops-Meme-Coins-to-Watch?mtm_campaign=API-OFA",
+      "pubDate": "2024-03-24T13:08:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "TOSHI"
+      ]
+    },
+    {
+      "title": "Eyes On Toncoin: Speculation Rises After 40% Weekly Surge – What Comes Next?",
+      "link": "https://cryptopanic.com/news/19351718/Eyes-On-Toncoin-Speculation-Rises-After-40-Weekly-Surge-What-Comes-Next",
+      "pubDate": "2024-03-24T13:00:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "FTM",
+        "TON"
+      ]
+    },
+    {
+      "title": "Dogecoin Surpasses Cardano by Market Cap Yet Again",
+      "link": "https://cryptopanic.com/news/19351626/Dogecoin-Surpasses-Cardano-by-Market-Cap-Yet-Again",
+      "pubDate": "2024-03-24T11:39:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "DOGE"
+      ]
+    },
+    {
+      "title": "Yield Guild Games: Pioneering the Future of On-Chain Guilds and Digital Artistry",
+      "link": "https://cryptopanic.com/news/19351595/Yield-Guild-Games-Pioneering-the-Future-of-On-Chain-Guilds-and-Digital-Artistry",
+      "pubDate": "2024-03-24T11:07:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AXS",
+        "NFT"
+      ]
+    },
+    {
+      "title": "Milei Moneda Could Offer Significant Upside Potential Amid Weak Price Action on Stacks and OKB",
+      "link": "https://cryptopanic.com/news/19351535/Milei-Moneda-Could-Offer-Significant-Upside-Potential-Amid-Weak-Price-Action-on-Stacks-and-OKB",
+      "pubDate": "2024-03-24T10:00:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "STX",
+        "OKB"
+      ]
+    },
+    {
+      "title": "Top Analyst’s Bold Prediction: XRP Set To Skyrocket 1,500%",
+      "link": "https://cryptopanic.com/news/19351435/Top-Analysts-Bold-Prediction-XRP-Set-To-Skyrocket-1500",
+      "pubDate": "2024-03-24T08:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "XRP",
+        "SOL",
+        "FTM",
+        "BONK"
+      ]
+    },
+    {
+      "title": "Dogecoin (DOGE) Jumps 7% Daily, Bitcoin (BTC) Stalls at $64K (Weekend Watch)",
+      "link": "https://cryptopanic.com/news/19351387/Dogecoin-DOGE-Jumps-7-Daily-Bitcoin-BTC-Stalls-at-64K-Weekend-Watch",
+      "pubDate": "2024-03-24T07:05:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "BCH",
+        "ICP",
+        "OKB"
+      ]
+    },
+    {
+      "title": "BDAG Leads in Crypto Surge 2024, Eclipsing Quant & PulseChain",
+      "link": "https://cryptopanic.com/news/19351341/BDAG-Leads-in-Crypto-Surge-2024-Eclipsing-Quant-PulseChain",
+      "pubDate": "2024-03-24T06:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "QNT"
+      ]
+    },
+    {
+      "title": "Incoming MATIC Surge: Analyst Predicts $15 Price Target",
+      "link": "https://cryptopanic.com/news/19351326/Incoming-MATIC-Surge-Analyst-Predicts-15-Price-Target",
+      "pubDate": "2024-03-24T05:27:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "SOL",
+        "MATIC",
+        "FTM"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin’s buying frenzy raises concerns among experts",
+      "link": "https://cryptopanic.com/news/19351275/Bitcoins-buying-frenzy-raises-concerns-among-experts",
+      "pubDate": "2024-03-24T02:31:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Decentralized Oracle Network Chainlink Leads the Crypto Space in Terms of Recent Development Activity: Santiment",
+      "link": "https://cryptopanic.com/news/19351216/Decentralized-Oracle-Network-Chainlink-Leads-the-Crypto-Space-in-Terms-of-Recent-Development-Activity-Santiment",
+      "pubDate": "2024-03-24T00:00:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The decentralized oracle network Chainlink (LINK) is ahead of all other crypto projects in terms of recent development activity, according to the analytics firm Santiment. Santiment notes that Chainlink is at the top of the list with an average of 451.23 notable GitHub events over the past 30 days. The smart contract platform Cardano (ADA) […]",
+      "currencies": [
+        "ADA",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

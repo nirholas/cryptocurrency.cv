@@ -1,0 +1,81 @@
+{
+  "date": "2019-01-26",
+  "fetchedAt": "2026-02-05T07:27:07.855Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "TRON Price Prediction: How Long Will TRX Continue the Rally?",
+      "link": "https://cryptopanic.com/news/4386447/TRON-Price-Prediction-How-Long-Will-TRX-Continue-the-Rally",
+      "pubDate": "2019-01-26T17:49:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron Price Action: TRX Enters a Key Trading Zone",
+      "link": "https://cryptopanic.com/news/4385631/Tron-Price-Action-TRX-Enters-a-Key-Trading-Zone",
+      "pubDate": "2019-01-26T15:19:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Price Predictions for the Top 5 Penny Cryptocurrencies: XRP, XLM, TRX, ADA & IOTA",
+      "link": "https://cryptopanic.com/news/4385251/Price-Predictions-for-the-Top-5-Penny-Cryptocurrencies-XRP-XLM-TRX-ADA-IOTA",
+      "pubDate": "2019-01-26T14:09:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "XRP",
+        "TRX",
+        "XLM",
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "TRON Dapp Weekly Report: Dapps Are Becoming an Significant Part of the TRON Ecosystem",
+      "link": "https://cryptopanic.com/news/4384773/TRON-Dapp-Weekly-Report-Dapps-Are-Becoming-an-Significant-Part-of-the-TRON-Ecosystem",
+      "pubDate": "2019-01-26T12:29:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

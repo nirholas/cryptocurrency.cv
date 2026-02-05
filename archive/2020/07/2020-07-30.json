@@ -1,0 +1,25 @@
+{
+  "date": "2020-07-30",
+  "fetchedAt": "2026-02-05T07:27:06.942Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA’s New Pollen Minor Version Records 10,000 TPS Amidst Improved Features",
+      "link": "https://cryptopanic.com/news/9510180/IOTAs-New-Pollen-Minor-Version-Records-10000-TPS-Amidst-Improved-Features",
+      "pubDate": "2020-07-30T18:07:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

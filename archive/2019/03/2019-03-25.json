@@ -1,0 +1,37 @@
+{
+  "date": "2019-03-25",
+  "fetchedAt": "2026-02-05T07:27:06.971Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "TRON Founder Justin Sun Probably Fakes Twitter Followers",
+      "link": "https://cryptopanic.com/news/4932443/TRON-Founder-Justin-Sun-Probably-Fakes-Twitter-Followers",
+      "pubDate": "2019-03-25T21:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ]
+    },
+    {
+      "title": "Tron (TRX) Listed by eToro, Still Gets Taken Over by Cardano (ADA)",
+      "link": "https://cryptopanic.com/news/tron/4922916/Tron-TRX-Listed-by-eToro-Still-Gets-Taken-Over-by-Cardano-ADA",
+      "pubDate": "2019-03-25T09:26:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    }
+  ]
+}

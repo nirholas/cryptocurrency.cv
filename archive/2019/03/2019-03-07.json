@@ -1,0 +1,26 @@
+{
+  "date": "2019-03-07",
+  "fetchedAt": "2026-02-05T07:27:06.976Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin SV Now Accepted at All POS Terminals Thanks to Zeux Platform and Its ZeuxCoin",
+      "link": "https://cryptopanic.com/news/4765318/Bitcoin-SV-Now-Accepted-at-All-POS-Terminals-Thanks-to-Zeux-Platform-and-Its-ZeuxCoin",
+      "pubDate": "2019-03-07T14:13:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

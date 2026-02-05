@@ -1,0 +1,25 @@
+{
+  "date": "2019-10-08",
+  "fetchedAt": "2026-02-05T07:27:07.884Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Cash down to $228 after continued sell offs",
+      "link": "https://cryptopanic.com/news/6802007/Bitcoin-Cash-down-to-228-after-continued-sell-offs",
+      "pubDate": "2019-10-08T21:24:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    }
+  ]
+}

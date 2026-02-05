@@ -1,0 +1,38 @@
+{
+  "date": "2020-09-14",
+  "fetchedAt": "2026-02-05T07:27:06.947Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @PaxosGlobal: Greenlisted by @NYDFS, Paxos stablecoins hold the highest regulatory standards in the space. Check out our August attestat…",
+      "link": "https://cryptopanic.com/news/9972173/RT-PaxosGlobal-Greenlisted-by-NYDFS-Paxos-stablecoins-hold-the-highest-regulatory-standards-in-the-space-Check-out-our-August-attestat",
+      "pubDate": "2020-09-14T18:39:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "How I Lost $80,000 Worth Of Ethereum In 2 Minutes",
+      "link": "https://cryptopanic.com/news/9969019/How-I-Lost-80000-Worth-Of-Ethereum-In-2-Minutes",
+      "pubDate": "2020-09-14T13:09:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "NEO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

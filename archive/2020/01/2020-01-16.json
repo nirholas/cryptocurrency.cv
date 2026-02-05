@@ -1,0 +1,37 @@
+{
+  "date": "2020-01-16",
+  "fetchedAt": "2026-02-05T07:27:06.977Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Oman’s Largest Port Joins Blockchain #Shipping Platform TradeLens-a blockchain supply chain platform founded by…",
+      "link": "https://cryptopanic.com/news/7666224/Omans-Largest-Port-Joins-Blockchain-Shipping-Platform-TradeLens-a-blockchain-supply-chain-platform-founded-by",
+      "pubDate": "2020-01-16T12:54:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LOCUS"
+      ]
+    },
+    {
+      "title": "IOTA (MIOTA) Set for Widespread Adoption by Top German Software Firm",
+      "link": "https://cryptopanic.com/news/7664180/IOTA-MIOTA-Set-for-Widespread-Adoption-by-Top-German-Software-Firm",
+      "pubDate": "2020-01-16T07:00:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 27,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

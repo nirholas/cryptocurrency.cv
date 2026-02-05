@@ -1,0 +1,232 @@
+{
+  "date": "2022-07-30",
+  "fetchedAt": "2026-02-05T07:27:07.624Z",
+  "articleCount": 13,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Polygon Unique Addresses Grew 12% in Q2 Despite Market Crash",
+      "link": "https://cryptopanic.com/news/15917296/Polygon-Unique-Addresses-Grew-12-in-Q2-Despite-Market-Crash",
+      "pubDate": "2022-07-30T20:05:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The massive growth of bridge aggregators has indicated a possible wave of user migration from Ethereum to Polygon",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Can DogeCoin [DOGE]’s surge in network activity mean something for its price",
+      "link": "https://cryptopanic.com/news/15917214/Can-DogeCoin-DOGEs-surge-in-network-activity-mean-something-for-its-price",
+      "pubDate": "2022-07-30T19:30:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "In the last two months, the popular meme coin, Dogecoin [DOGE], logged a 256% uptick in the number of unique addresses that traded the Elon-backed coin daily, as per latest data. #Dogecoin price dropped ~15% in the last 2 months, from $0.082 to $0.068. Meanwhile, the # of new daily $DOGE addresses surged by 265%, […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Shiba Inu: Long-Term Holders Are Increasing as Investors Shift Focus",
+      "link": "https://cryptopanic.com/news/15916478/Shiba-Inu-Long-Term-Holders-Are-Increasing-as-Investors-Shift-Focus",
+      "pubDate": "2022-07-30T13:42:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Shiba Inu holders' composition has shifted dramatically",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Erik Voorhees Predicts Crypto Uprising as Financial Systems Crumble",
+      "link": "https://cryptopanic.com/news/15916425/Erik-Voorhees-Predicts-Crypto-Uprising-as-Financial-Systems-Crumble",
+      "pubDate": "2022-07-30T13:18:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The crypto industry has grown massively in the past years, with increasing mass adoption being fueled by the global economic downturn brought on by the pandemic. The effects of the pandemic have eased up a bit, but the crypto adoption rate has surged nonetheless, as fresh concerns about financial systems surface. A notable American entrepreneur […]",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "XRP",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$1.7 billion inflows Ethereum Classic market cap in a week as ETC gains momentum",
+      "link": "https://cryptopanic.com/news/15916422/17-billion-inflows-Ethereum-Classic-market-cap-in-a-week-as-ETC-gains-momentum",
+      "pubDate": "2022-07-30T13:15:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum Classic (ETC) continues to attract more interest among cryptocurrency investors ahead of the Merge upgrade on the main Ethereum... Continue reading",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano Is Now Compatible With This Platform Used in 2500 Games: Details",
+      "link": "https://cryptopanic.com/news/15916343/Cardano-Is-Now-Compatible-With-This-Platform-Used-in-2500-Games-Details",
+      "pubDate": "2022-07-30T12:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano ecosystem continues to experience growth",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Elon Musk Fires Back At Twitter with a Counter Lawsuit",
+      "link": "https://cryptopanic.com/news/15916072/Elon-Musk-Fires-Back-At-Twitter-with-a-Counter-Lawsuit",
+      "pubDate": "2022-07-30T11:24:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Summary: Elon Musk has filed a countersuit against Twitter over the now uncertain $44 billion deal. The lawsuit was filed late Friday, July 29th, a few hours after a Judge set October 17th as the beginning of Twitter’s case against him. Tesla’s CEO and SpaceX founder, Elon Musk, has counter-sued Twitter amidst the ongoing court battle that the social media company lodged to compel him to complete...",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Dogecoin (DOGE) Activity Surges Despite Market Consolidation",
+      "link": "https://cryptopanic.com/news/15912396/Dogecoin-DOGE-Activity-Surges-Despite-Market-Consolidation",
+      "pubDate": "2022-07-30T07:39:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Activity on the Dogecoin (DOGE) blockchain surged in recent months, according to data shared by analyst Ali Martinez. According to him, the number of new daily Dogecoin addresses […]",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 6
+      }
+    },
+    {
+      "title": "$DOGE: Daily Active Dogecoin Addresses Surged 265% in Two Months, Data Shows",
+      "link": "https://cryptopanic.com/news/15909133/DOGE-Daily-Active-Dogecoin-Addresses-Surged-265-in-Two-Months-Data-Shows",
+      "pubDate": "2022-07-30T04:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Dogecoin’s price has dropped around 15% over the last two months amid a wider cryptocurrency market downturn that has been exacerbated by a wave of contagion events. Active addresses on the Dogecoin network, however, surged 265%. According to data from blockchain analytics firm IntoTheBlock shared by cryptocurrency analyst Ali Martinez, the number of daily active […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 8
+      }
+    },
+    {
+      "title": "RT @Cointelegraph: Here is the ultimate guide to Polkadot and Kusama parachains.",
+      "link": "https://cryptopanic.com/news/15912516/RT-Cointelegraph-Here-is-the-ultimate-guide-to-Polkadot-and-Kusama-parachains",
+      "pubDate": "2022-07-30T03:26:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "KSM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance’s CZ: High Inflation And  Recession Fears Will Drive Bitcoin Adoption",
+      "link": "https://cryptopanic.com/news/15908928/Binances-CZ-High-Inflation-And-Recession-Fears-Will-Drive-Bitcoin-Adoption",
+      "pubDate": "2022-07-30T01:53:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "It’s safe to say CZ is bullish on bitcoin and crypto’s future. Changpeng Zhao visited CNBC’s Squawk on the Street and flipped the prevalent bearish narrative on its head. In less than 2 minutes. Most of the things CZ said are based on common sense and a basic understanding of market forces, but still, it’s calming to hear a leader of the industry saying them. Especially in this fear-ridden...",
+      "currencies": [
+        "BTC",
+        "BNB"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance’s CZ: High Inflation And Recession Fears Will Drive Bitcoin Adoption",
+      "link": "https://cryptopanic.com/news/binancecoin/15908928/Binances-CZ-High-Inflation-And-Recession-Fears-Will-Drive-Bitcoin-Adoption",
+      "pubDate": "2022-07-30T01:53:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "It’s safe to say CZ is bullish on bitcoin and crypto’s future. Changpeng Zhao visited CNBC’s Squawk on the Street and flipped the prevalent bearish narrative on its head. In less than 2 minutes. Most of the things CZ said are based on common sense and a basic understanding of market forces, but still, it’s calming to hear a leader of the industry saying them. Especially in this fear-ridden stage of the cycle we’re in. .@binance CEO @cz_binance: The macroeconomics situation will be high inflation",
+      "currencies": [
+        "BTC",
+        "BNB"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "THETA presents buying opportunity on a pullback after…",
+      "link": "https://cryptopanic.com/news/theta-token/15908893/THETA-presents-buying-opportunity-on-a-pullback-after",
+      "pubDate": "2022-07-30T01:30:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "THETA"
+      ]
+    }
+  ]
+}

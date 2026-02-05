@@ -1,0 +1,844 @@
+{
+  "date": "2022-10-24",
+  "fetchedAt": "2026-02-05T07:27:07.375Z",
+  "articleCount": 59,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "3 Reasons Experts Are Bearish on the Shiba Inu Price and Bullish on Dash 2 Trade and Calvaria",
+      "link": "https://cryptopanic.com/news/dash/16693186/3-Reasons-Experts-Are-Bearish-on-the-Shiba-Inu-Price-and-Bullish-on-Dash-2-Trade-and-Calvaria",
+      "pubDate": "2022-10-24T23:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "SHIB",
+        "DASH"
+      ]
+    },
+    {
+      "title": "Ethereum's Merge won't stop its price from sinking",
+      "link": "https://cryptopanic.com/news/16693168/Ethereums-Merge-wont-stop-its-price-from-sinking",
+      "pubDate": "2022-10-24T23:30:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum became deflationary after its September Merge. But for now, it's not going to make much of a difference.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Cardano (ADA) Could Soon Be Listed on Crypto Exchange FTX, According to CEO Sam Bankman-Fried",
+      "link": "https://cryptopanic.com/news/16692997/Cardano-ADA-Could-Soon-Be-Listed-on-Crypto-Exchange-FTX-According-to-CEO-Sam-Bankman-Fried",
+      "pubDate": "2022-10-24T22:01:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Crypto exchange FTX founder Sam Bankman-Fried says he’s willing to bet that smart contract platform Cardano (ADA) will be listed on his platform soon. In response to a Twitter user claiming FTX is avoiding listing ADA, Bankman-Fried pointed out that ADA perpetual futures contracts are already available on the platform. “Definitely not the case! we have […]",
+      "currencies": [
+        "ADA",
+        "FTT"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Optimism (OP) Cracks Double-digit Gains, Can Bulls Breach $1 Mark?",
+      "link": "https://cryptopanic.com/news/axie-infinity/16692995/Optimism-OP-Cracks-Double-digit-Gains-Can-Bulls-Breach-1-Mark",
+      "pubDate": "2022-10-24T22:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "AXS"
+      ]
+    },
+    {
+      "title": "🦅 Keeping #Helium antennas safe..🫡",
+      "link": "https://cryptopanic.com/news/helium/16696565/Keeping-Helium-antennas-safe",
+      "pubDate": "2022-10-24T21:13:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ]
+    },
+    {
+      "title": "Acala Community Call - Tuesday 10 PM UTC on Youtube",
+      "link": "https://cryptopanic.com/news/16692804/Acala-Community-Call-Tuesday-10-PM-UTC-on-Youtube",
+      "pubDate": "2022-10-24T21:02:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ACA"
+      ]
+    },
+    {
+      "title": "Another Badger Creator Contest is in the can. This week winners received 50 $BADGER for their \"Prehistoric Badgers\"…",
+      "link": "https://cryptopanic.com/news/16694311/Another-Badger-Creator-Contest-is-in-the-can-This-week-winners-received-50-BADGER-for-their-Prehistoric-Badgers",
+      "pubDate": "2022-10-24T20:33:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BADGER"
+      ]
+    },
+    {
+      "title": "Wow ~ 67 Miles",
+      "link": "https://cryptopanic.com/news/helium/16696566/Wow-67-Miles",
+      "pubDate": "2022-10-24T20:26:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ]
+    },
+    {
+      "title": "Why Klaytn (KLAY) Price Doubled in 24 Hours",
+      "link": "https://cryptopanic.com/news/klay-token/16692747/Why-Klaytn-KLAY-Price-Doubled-in-24-Hours",
+      "pubDate": "2022-10-24T20:11:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "KLAY"
+      ]
+    },
+    {
+      "title": "FTX not yet facing enforcement action, says Texas securities regulator",
+      "link": "https://cryptopanic.com/news/16692712/FTX-not-yet-facing-enforcement-action-says-Texas-securities-regulator",
+      "pubDate": "2022-10-24T20:10:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "Can the Aptos NFT Scene Compete With Ethereum’s?",
+      "link": "https://cryptopanic.com/news/16692668/Can-the-Aptos-NFT-Scene-Compete-With-Ethereums",
+      "pubDate": "2022-10-24T20:07:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The hype around Aptos is driving intense activity to its various NFT marketplaces. There are signs, however, that the enthusiasm for Aptos NFTs may not stay consistent in the long run. Launched on October 17, Aptos is a Proof-of-Stake Layer 1 blockchain conceived by former Meta engineers. The protocol aims to leverage its new smart contract language, Move, in order to reach a throughput of...",
+      "currencies": [
+        "ETH",
+        "APT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @arietrouw: Very happy to be interviewed on The Exit pod cast (@flippa)!",
+      "link": "https://cryptopanic.com/news/16700373/RT-arietrouw-Very-happy-to-be-interviewed-on-The-Exit-pod-cast-flippa",
+      "pubDate": "2022-10-24T19:28:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XYO"
+      ]
+    },
+    {
+      "title": "Cardano Price Prediction: FTX CEO Signals Upcoming ADA Listing",
+      "link": "https://cryptopanic.com/news/16692534/Cardano-Price-Prediction-FTX-CEO-Signals-Upcoming-ADA-Listing",
+      "pubDate": "2022-10-24T19:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The Cardano (ADA) price is trading inside an important horizontal support area, but has yet to show any bullish reversal signs whatsoever.",
+      "currencies": [
+        "ADA",
+        "FTT"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Metaverse and Gaming Altcoin Explodes 120% After New Community Proposal Goes Live",
+      "link": "https://cryptopanic.com/news/klay-token/16692416/Metaverse-and-Gaming-Altcoin-Explodes-120-After-New-Community-Proposal-Goes-Live",
+      "pubDate": "2022-10-24T19:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "An altcoin from the metaverse sector is skyrocketing following a new community proposal that will affect its tokenomics. Klaytn (KLAY) is a public enterprise blockchain focused on artists, non-fungible tokens (NFTs), gaming and entertainment. Klaytn is currently being rebuilt into a “metaverse scale” blockchain, with multiple milestones lined up for the next two years or […]",
+      "currencies": [
+        "KLAY"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Are you a developer or entrepreneur looking for the right blockchain infrastructure to make your project work? Th…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/16694501/Are-you-a-developer-or-entrepreneur-looking-for-the-right-blockchain-infrastructure-to-make-your-project-work-Th",
+      "pubDate": "2022-10-24T18:48:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "RT @priv_alliance: We had a stimulating and eye-opening conversation about #privacy on #GlobalEncryptionDay with our members and supporters…",
+      "link": "https://cryptopanic.com/news/16698233/RT-priv_alliance-We-had-a-stimulating-and-eye-opening-conversation-about-privacy-on-GlobalEncryptionDay-with-our-members-and-supporters",
+      "pubDate": "2022-10-24T18:34:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OXT"
+      ]
+    },
+    {
+      "title": "3 Reasons Why Axie Infinity (AXS) Price Is Tanking",
+      "link": "https://cryptopanic.com/news/axie-infinity/16692348/3-Reasons-Why-Axie-Infinity-AXS-Price-Is-Tanking",
+      "pubDate": "2022-10-24T18:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Have you ever thought about tracking how many people entered stores every single day? Using the #Helium Network,…",
+      "link": "https://cryptopanic.com/news/helium/16696567/Have-you-ever-thought-about-tracking-how-many-people-entered-stores-every-single-day-Using-the-Helium-Network",
+      "pubDate": "2022-10-24T18:19:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ]
+    },
+    {
+      "title": "Ripple’s Chief Engineer Calls It Quits — Will His Shocking Departure Upend XRP’s Recovery?",
+      "link": "https://cryptopanic.com/news/16692304/Ripples-Chief-Engineer-Calls-It-Quits-Will-His-Shocking-Departure-Upend-XRPs-Recovery",
+      "pubDate": "2022-10-24T18:14:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Bougalis’ resignation comes as Ripple commences tests of an XRP Ledger sidechain compatible with the Ethereum Virtual Machine (EVM), the software that runs smart contracts on Ethereum.",
+      "currencies": [
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Reddit Avatars Are A Hit, Surpass OpenSea In Number Of NFT Wallets",
+      "link": "https://cryptopanic.com/news/16692213/Reddit-Avatars-Are-A-Hit-Surpass-OpenSea-In-Number-Of-NFT-Wallets",
+      "pubDate": "2022-10-24T17:57:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "Slowly but surely, Reddit Avatars fought their way into success. The initiative was initially mocked, but their second generation 40K collection sold out in 24 hours and the pieces’ prices are raising on the secondary market. Don’t call them NFTs, though. The Reddit brand managed to accomplish the impossible by avoiding crypto jargon in the […]",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "A complete guide to $NKN mainnet wallets: browser based (), iOS/Android smartphone (…",
+      "link": "https://cryptopanic.com/news/16697977/A-complete-guide-to-NKN-mainnet-wallets-browser-based-iOSAndroid-smartphone",
+      "pubDate": "2022-10-24T17:56:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NKN"
+      ]
+    },
+    {
+      "title": "2 New DAO Proposals",
+      "link": "https://cryptopanic.com/news/16733459/2-New-DAO-Proposals",
+      "pubDate": "2022-10-24T17:48:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SPS"
+      ]
+    },
+    {
+      "title": "Polygon's QuickSwap Hit With $220,000 Flash Loan Attack",
+      "link": "https://cryptopanic.com/news/16692197/Polygons-QuickSwap-Hit-With-220000-Flash-Loan-Attack",
+      "pubDate": "2022-10-24T17:44:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "The popular DEX said Monday that it had closed its lending protocol QuickSwap Lend.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @TDMBlockchain: Hello Twitter!  This is TDM Blockchain, and we’re a blockchain company focused on building on Solana, Serum, xNFTs, Re…",
+      "link": "https://cryptopanic.com/news/16699121/RT-TDMBlockchain-Hello-Twitter-This-is-TDM-Blockchain-and-were-a-blockchain-company-focused-on-building-on-Solana-Serum-xNFTs-Re",
+      "pubDate": "2022-10-24T17:38:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "SRM"
+      ]
+    },
+    {
+      "title": "$185 Million Worth Of AXS Tokens Set To Be Unlocked, Time To Get Out Of Axie Infinity?",
+      "link": "https://cryptopanic.com/news/axie-infinity/16692050/185-Million-Worth-Of-AXS-Tokens-Set-To-Be-Unlocked-Time-To-Get-Out-Of-Axie-Infinity",
+      "pubDate": "2022-10-24T17:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "AVAX",
+        "AXS"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @HeliumFndn: Last week, our team visited @Helium grantees in Indonesia 🇮🇩 who are building innovative floating hydrogen production sites…",
+      "link": "https://cryptopanic.com/news/helium/16696568/RT-HeliumFndn-Last-week-our-team-visited-Helium-grantees-in-Indonesia-who-are-building-innovative-floating-hydrogen-production-sites",
+      "pubDate": "2022-10-24T16:57:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ]
+    },
+    {
+      "title": "RT @HeliumFndn: The @Helium community has passed HIP 73, approving a new chain variable to improve the performance of the current Helium L1…",
+      "link": "https://cryptopanic.com/news/helium/16696569/RT-HeliumFndn-The-Helium-community-has-passed-HIP-73-approving-a-new-chain-variable-to-improve-the-performance-of-the-current-Helium-L1",
+      "pubDate": "2022-10-24T15:54:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HNT",
+        "XCN"
+      ]
+    },
+    {
+      "title": "We’re here! @Money2020 is kicking off in Las Vegas at @VenetianVegas. Head to Booth #1344 to be the first to learn…",
+      "link": "https://cryptopanic.com/news/pax-gold/16694454/Were-here-Money2020-is-kicking-off-in-Las-Vegas-at-VenetianVegas-Head-to-Booth-1344-to-be-the-first-to-learn",
+      "pubDate": "2022-10-24T15:41:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BUSD",
+        "PAXG",
+        "BKRW"
+      ]
+    },
+    {
+      "title": "New $KLAY listing on @FTX_Official",
+      "link": "https://cryptopanic.com/news/klay-token/16697043/New-KLAY-listing-on-FTX_Official",
+      "pubDate": "2022-10-24T15:18:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "Dumping in $AXS started before even the Unlock starts! Be careful. @RadoTsankov in his Analysis Said that can go to…",
+      "link": "https://cryptopanic.com/news/axie-infinity/16695121/Dumping-in-AXS-started-before-even-the-Unlock-starts-Be-careful-RadoTsankov-in-his-Analysis-Said-that-can-go-to",
+      "pubDate": "2022-10-24T15:01:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AXS",
+        "CRVT"
+      ]
+    },
+    {
+      "title": "Please be reminded that the Sollet Bridge will be deprecated on Oct 31, 2022. Users can convert their Sollet ERC20…",
+      "link": "https://cryptopanic.com/news/16699122/Please-be-reminded-that-the-Sollet-Bridge-will-be-deprecated-on-Oct-31-2022-Users-can-convert-their-Sollet-ERC20",
+      "pubDate": "2022-10-24T15:00:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "SRM"
+      ]
+    },
+    {
+      "title": "‘In the future of #Bitcoin, we will laugh at 100,000 transactions or a 4GB block. We are already talking about Tera…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/16694502/In-the-future-of-Bitcoin-we-will-laugh-at-100000-transactions-or-a-4GB-block-We-are-already-talking-about-Tera",
+      "pubDate": "2022-10-24T14:40:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "Popular Trading Exchange Robinhood lists Aave And XTZ On Their Platfom",
+      "link": "https://cryptopanic.com/news/16691510/Popular-Trading-Exchange-Robinhood-lists-Aave-And-XTZ-On-Their-Platfom",
+      "pubDate": "2022-10-24T14:21:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Stock and crypto trading app Robinhood lists Aave and XTZ on their trading platform. Robinhood now supports 19 cryptocurrencies in total including memecoins such as DogeCoin and Shiba Inu. Robinhood’s shares jumped 14% on rumors that of acquisition from Sam Bankman Fried. Stock trading app Robinhood listed Aave and XTZ on their commission-free trading platform today. Aave is a DeFI lending...",
+      "currencies": [
+        "DOGE",
+        "XTZ",
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Warren Buffett-backed neobank picks Polygon for Web3 token — MATIC price eyes 100% rally",
+      "link": "https://cryptopanic.com/news/16691460/Warren-Buffett-backed-neobank-picks-Polygon-for-Web3-token-MATIC-price-eyes-100-rally",
+      "pubDate": "2022-10-24T14:14:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "MATIC has painted a bull flag setup with a profit target sitting nearly 100% higher than its current price.",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Did you know Parity is a defi NFT that will let you set your own risk preference and custom-tailer your portfolio o…",
+      "link": "https://cryptopanic.com/news/16696117/Did-you-know-Parity-is-a-defi-NFT-that-will-let-you-set-your-own-risk-preference-and-custom-tailer-your-portfolio-o?mtm_campaign=API-OFA",
+      "pubDate": "2022-10-24T14:04:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "FORM"
+      ]
+    },
+    {
+      "title": "Upcoming listing on FTX: Klaytn $KLAY perpetual futures! Live on October 25, 2022 at 2pm (UTC) @klaytn_official L…",
+      "link": "https://cryptopanic.com/news/klay-token/16695924/Upcoming-listing-on-FTX-Klaytn-KLAY-perpetual-futures-Live-on-October-25-2022-at-2pm-UTC-klaytn_official-L",
+      "pubDate": "2022-10-24T14:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "FTT",
+        "HOLY",
+        "BITO"
+      ]
+    },
+    {
+      "title": "Dear Traders, $USDD is available for Staking with 11% APY on our platform. USDD is an algorithmic stablecoin on T…",
+      "link": "https://cryptopanic.com/news/usdd/16691298/Dear-Traders-USDD-is-available-for-Staking-with-11-APY-on-our-platform-USDD-is-an-algorithmic-stablecoin-on-T",
+      "pubDate": "2022-10-24T13:43:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDD",
+        "HIT"
+      ]
+    },
+    {
+      "title": "Be a part of the #ABBC community and follow our official Telegram channel to get the latest updates about our upcom…",
+      "link": "https://cryptopanic.com/news/16693896/Be-a-part-of-the-ABBC-community-and-follow-our-official-Telegram-channel-to-get-the-latest-updates-about-our-upcom",
+      "pubDate": "2022-10-24T13:29:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ABBC"
+      ]
+    },
+    {
+      "title": "How the newest proposal \"Adjust Rewards Based on Card Level\" affects me as a Silver league player",
+      "link": "https://cryptopanic.com/news/16691171/How-the-newest-proposal-Adjust-Rewards-Based-on-Card-Level-affects-me-as-a-Silver-league-player",
+      "pubDate": "2022-10-24T13:04:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SPS"
+      ]
+    },
+    {
+      "title": "Only five countries control 30% of all reachable Bitcoin nodes globally",
+      "link": "https://cryptopanic.com/news/bitcoin/16691076/Only-five-countries-control-30-of-all-reachable-Bitcoin-nodes-globally",
+      "pubDate": "2022-10-24T12:33:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "As Bitcoin (BTC) continues to gain adoption, the relative size of its peer-to-peer (P2P) network can be examined by analyzing... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Gm ️ Who got their #Helium 5G radio installed over the weekend?",
+      "link": "https://cryptopanic.com/news/helium/16696570/Gm-Who-got-their-Helium-5G-radio-installed-over-the-weekend",
+      "pubDate": "2022-10-24T12:25:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ]
+    },
+    {
+      "title": "Binance Blows Crypto Exchange Competitors Away With 55% Dominance Over Spot Trading Volume",
+      "link": "https://cryptopanic.com/news/16691004/Binance-Blows-Crypto-Exchange-Competitors-Away-With-55-Dominance-Over-Spot-Trading-Volume",
+      "pubDate": "2022-10-24T12:13:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Binance commands the greater share of crypto spot and derivatives trading in a 24 hour period, eclipsing competitors likes FTX, Coinbase, and KuCoin.",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Basis Play of the Week ‍ This week we have a reverse basis trade (long the perp, short the spot) for Klaytn (KLA…",
+      "link": "https://cryptopanic.com/news/klay-token/16700586/Basis-Play-of-the-Week-This-week-we-have-a-reverse-basis-trade-long-the-perp-short-the-spot-for-Klaytn-KLA",
+      "pubDate": "2022-10-24T11:56:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "BASIS"
+      ]
+    },
+    {
+      "title": "Axie Infinity Drops 22% Over The Week Amid Fears of Token Unlock",
+      "link": "https://cryptopanic.com/news/axie-infinity/16690949/Axie-Infinity-Drops-22-Over-The-Week-Amid-Fears-of-Token-Unlock",
+      "pubDate": "2022-10-24T11:50:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "FTX Sam Bankman-Fried hints at Cardano listing",
+      "link": "https://cryptopanic.com/news/16690896/FTX-Sam-Bankman-Fried-hints-at-Cardano-listing",
+      "pubDate": "2022-10-24T11:35:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "FTX founder Sam Bankman-Fried has hinted that the exchange could soon be listing Cardano’s ADA for spot trading in an October 23 tweet.",
+      "currencies": [
+        "ADA",
+        "FTT"
+      ],
+      "votes": {
+        "positive": 20,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Interest in Bitcoin and NFTs surges among the super-rich in Hong Kong and Singapore",
+      "link": "https://cryptopanic.com/news/bitcoin/16690853/Interest-in-Bitcoin-and-NFTs-surges-among-the-super-rich-in-Hong-Kong-and-Singapore",
+      "pubDate": "2022-10-24T11:13:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Despite its volatility over the past two years, the cryptocurrency industry continues to expand, partially driven by the interest of... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple lead engineer steps down after decade at the company",
+      "link": "https://cryptopanic.com/news/16690776/Ripple-lead-engineer-steps-down-after-decade-at-the-company",
+      "pubDate": "2022-10-24T11:00:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple (XRP) Labs’ director of engineering Nik Bougalis has announced that he will leave the company after ten years in an October 22 Twitter thread.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "$KLAY Buyback Announcement To stabilize Klaytn’s ecosystem, a buyback is in progress: 1️⃣ Klaytn Foundation's st…",
+      "link": "https://cryptopanic.com/news/klay-token/16697044/KLAY-Buyback-Announcement-To-stabilize-Klaytns-ecosystem-a-buyback-is-in-progress-1-Klaytn-Foundations-st",
+      "pubDate": "2022-10-24T10:30:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "24/7 carbon-free energy has provided new tools for sustainability managers to consider. T-EACs will allow organizat…",
+      "link": "https://cryptopanic.com/news/16689970/247-carbon-free-energy-has-provided-new-tools-for-sustainability-managers-to-consider-T-EACs-will-allow-organizat",
+      "pubDate": "2022-10-24T10:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "POWR"
+      ]
+    },
+    {
+      "title": "Solana Aims For Moonshots With Its Groundbreaking Smartphone — Disrupting Google and Apple",
+      "link": "https://cryptopanic.com/news/16689776/Solana-Aims-For-Moonshots-With-Its-Groundbreaking-Smartphone-Disrupting-Google-and-Apple",
+      "pubDate": "2022-10-24T09:49:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana jumps into smartphone hardware with hopes to take a small portion of the market share from Apple, Samsung and Google in the coming years.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cosmos In A Downtrend Since Last 2 Months – Investors Shying Away From ATOM?",
+      "link": "https://cryptopanic.com/news/16689762/Cosmos-In-A-Downtrend-Since-Last-2-Months-Investors-Shying-Away-From-ATOM",
+      "pubDate": "2022-10-24T09:40:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Cosmos (ATOM) started this year with a bang by attaining its all-time high (ATH) on January 17 when it traded for $44.45. But just like other cryptocurrencies, it failed to sustain that level and was relentlessly pummeled by the volatile crypto market. Cosmos has been down by 16.8% over the last month ATOM is forecasted to fall below $7 a month from now Cosmos remains in extended bearish...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "AVAX",
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Klaytn is a public blockchain focused on the metaverse, gamefi, and the creator economy. @klaytn_official is the do…",
+      "link": "https://cryptopanic.com/news/klay-token/16689027/Klaytn-is-a-public-blockchain-focused-on-the-metaverse-gamefi-and-the-creator-economy-klaytn_official-is-the-do",
+      "pubDate": "2022-10-24T09:04:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "HIT"
+      ]
+    },
+    {
+      "title": "Gift cards are just one of the ways you can spend #crypto via the #ETNApp. There's also a host of other options, in…",
+      "link": "https://cryptopanic.com/news/16688957/Gift-cards-are-just-one-of-the-ways-you-can-spend-crypto-via-the-ETNApp-Theres-also-a-host-of-other-options-in",
+      "pubDate": "2022-10-24T09:00:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "Axie Infinity’s market cap drops below $1 billion; Why is AXS crashing?",
+      "link": "https://cryptopanic.com/news/16688456/Axie-Infinitys-market-cap-drops-below-1-billion-Why-is-AXS-crashing",
+      "pubDate": "2022-10-24T08:26:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Despite being one of the metaverse projects that has brought in the highest returns to its early investors, Pokémon-inspired blockchain-based... Continue reading",
+      "currencies": [
+        "AXS"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "RT @litocoen: optimism and arbitrum now both have a larger TVL than solana",
+      "link": "https://cryptopanic.com/news/16687113/RT-litocoen-optimism-and-arbitrum-now-both-have-a-larger-TVL-than-solana?mtm_campaign=API-OFA",
+      "pubDate": "2022-10-24T07:00:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "FORM"
+      ]
+    },
+    {
+      "title": "Full Credits to @lookonchain for $AXS Unlock Article!",
+      "link": "https://cryptopanic.com/news/axie-infinity/16686448/Full-Credits-to-lookonchain-for-AXS-Unlock-Article",
+      "pubDate": "2022-10-24T06:09:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS",
+        "CRVT"
+      ]
+    },
+    {
+      "title": "Join Acala’s @bettechentt and @danreecer_ this Tuesday at 10pm UTC on YouTube for Acala and aUSD updates",
+      "link": "https://cryptopanic.com/news/16687668/Join-Acalas-bettechentt-and-danreecer_-this-Tuesday-at-10pm-UTC-on-YouTube-for-Acala-and-aUSD-updates",
+      "pubDate": "2022-10-24T02:54:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ACA"
+      ]
+    },
+    {
+      "title": "RT @PlusFi_net: Lending, Leverage Farming, and IDO are scheduled in addition to swap and staking through the liquidity pool to increase the…",
+      "link": "https://cryptopanic.com/news/16685677/RT-PlusFi_net-Lending-Leverage-Farming-and-IDO-are-scheduled-in-addition-to-swap-and-staking-through-the-liquidity-pool-to-increase-the",
+      "pubDate": "2022-10-24T02:08:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "Klaytn (KLAY) Skyrockets 106% After New Governance Proposal",
+      "link": "https://cryptopanic.com/news/klay-token/16685090/Klaytn-KLAY-Skyrockets-106-After-New-Governance-Proposal",
+      "pubDate": "2022-10-24T00:15:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2019-07-17",
+  "fetchedAt": "2026-02-05T07:27:07.000Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "PayPal Set to Challenge Blockchain-Based Payments with Xoom",
+      "link": "https://cryptopanic.com/news/ripple/6060251/PayPal-Set-to-Challenge-Blockchain-Based-Payments-with-Xoom",
+      "pubDate": "2019-07-17T18:00:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

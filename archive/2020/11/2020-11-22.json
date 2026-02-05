@@ -1,0 +1,50 @@
+{
+  "date": "2020-11-22",
+  "fetchedAt": "2026-02-05T07:27:06.985Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Top Crypto Analyst Says Two Little-Known Altcoins Offer Massive Entry Opportunities, Outlines What’s Next for Bitcoin and Ethereum",
+      "link": "https://cryptopanic.com/news/10611271/Top-Crypto-Analyst-Says-Two-Little-Known-Altcoins-Offer-Massive-Entry-Opportunities-Outlines-Whats-Next-for-Bitcoin-and-Ethereum",
+      "pubDate": "2020-11-22T19:30:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "OCEAN"
+      ]
+    },
+    {
+      "title": "RT @SwissEmbassyUSA: We are excited to see @SBH_USA's first commercial currently airing on television! Choose #Switzerland, it’s time to do…",
+      "link": "https://cryptopanic.com/news/10607641/RT-SwissEmbassyUSA-We-are-excited-to-see-SBH_USAs-first-commercial-currently-airing-on-television-Choose-Switzerland-its-time-to-do",
+      "pubDate": "2020-11-22T07:09:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "XRP Surges 30% Higher—and Analysts Think There’s Upside to Come",
+      "link": "https://cryptopanic.com/news/ripple/10606326/XRP-Surges-30-Higherand-Analysts-Think-Theres-Upside-to-Come",
+      "pubDate": "2020-11-22T00:45:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    }
+  ]
+}

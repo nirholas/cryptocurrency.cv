@@ -1,0 +1,640 @@
+{
+  "date": "2024-01-05",
+  "fetchedAt": "2026-02-05T07:27:08.081Z",
+  "articleCount": 43,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Solana Co-Founder: The Blockchain Doesn’t Need Layer-2s Like Ethereum",
+      "link": "https://cryptopanic.com/news/19154182/Solana-Co-Founder-The-Blockchain-Doesnt-Need-Layer-2s-Like-Ethereum",
+      "pubDate": "2024-01-05T23:00:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "MKR",
+        "ARB",
+        "OP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The Bitcoin ETFs Are Unofficially Approved as BlackRock Amends 19b-4",
+      "link": "https://cryptopanic.com/news/19154135/The-Bitcoin-ETFs-Are-Unofficially-Approved-as-BlackRock-Amends-19b-4",
+      "pubDate": "2024-01-05T22:27:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "\"It’s basically done,\" says Eric Balchunas, a senior ETF analyst for Bloomberg after Nasdaq filed the much expected amended 19b-4 forms for BlackRock and Valkyrie.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 23,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance places privacy coins Monero, Zcash and others for possible delisting",
+      "link": "https://cryptopanic.com/news/19154046/Binance-places-privacy-coins-Monero-Zcash-and-others-for-possible-delisting",
+      "pubDate": "2024-01-05T21:17:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "dYdX Founder Skeptical Of Current Bull Run, Cites Low Participation",
+      "link": "https://cryptopanic.com/news/19154006/dYdX-Founder-Skeptical-Of-Current-Bull-Run-Cites-Low-Participation",
+      "pubDate": "2024-01-05T21:00:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "MKR"
+      ]
+    },
+    {
+      "title": "VanEck Head of Digital Assets Research Makes $2 Billion Worth BlackRock Spot Bitcoin ETF Claim",
+      "link": "https://cryptopanic.com/news/19153943/VanEck-Head-of-Digital-Assets-Research-Makes-2-Billion-Worth-BlackRock-Spot-Bitcoin-ETF-Claim",
+      "pubDate": "2024-01-05T20:00:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "It was claimed that BlackRock, the world's largest asset management company, kept $2 billion aside to support Bitcoin Spot ETFs. Continue Reading: VanEck Head of Digital Assets Research Makes $2 Billion Worth BlackRock Spot Bitcoin ETF Claim",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Santiment Reveals The Altcoins Set For Bullish Growth",
+      "link": "https://cryptopanic.com/news/19153899/Santiment-Reveals-The-Altcoins-Set-For-Bullish-Growth",
+      "pubDate": "2024-01-05T19:30:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "MKR"
+      ]
+    },
+    {
+      "title": "NeoResearch adds Gitpod and GitHub Codespaces integrations to NeoCompiler Eco",
+      "link": "https://cryptopanic.com/news/19153857/NeoResearch-adds-Gitpod-and-GitHub-Codespaces-integrations-to-NeoCompiler-Eco",
+      "pubDate": "2024-01-05T19:12:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Bitcoin SV Falls More Than 3% In 24 hours",
+      "link": "https://cryptopanic.com/news/19153860/Cryptocurrency-Bitcoin-SV-Falls-More-Than-3-In-24-hours",
+      "pubDate": "2024-01-05T19:03:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Quant Down More Than 7% Within 24 hours",
+      "link": "https://cryptopanic.com/news/19153859/Cryptocurrency-Quant-Down-More-Than-7-Within-24-hours",
+      "pubDate": "2024-01-05T19:02:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QNT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cryptocurrency The Graph Falls More Than 7% In 24 hours",
+      "link": "https://cryptopanic.com/news/19153861/Cryptocurrency-The-Graph-Falls-More-Than-7-In-24-hours",
+      "pubDate": "2024-01-05T19:02:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GRT"
+      ]
+    },
+    {
+      "title": "The Journalist, Who Said Bitcoin Spot ETF Will Be Approved Today, Speaks Again: This Time She Changed Her Mind",
+      "link": "https://cryptopanic.com/news/bitcoin/19153740/The-Journalist-Who-Said-Bitcoin-Spot-ETF-Will-Be-Approved-Today-Speaks-Again-This-Time-She-Changed-Her-Mind",
+      "pubDate": "2024-01-05T18:13:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "NOWNodes adds Neo N3 network to its blockchain API service for developers",
+      "link": "https://cryptopanic.com/news/19153703/NOWNodes-adds-Neo-N3-network-to-its-blockchain-API-service-for-developers",
+      "pubDate": "2024-01-05T18:07:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Not Axie Infinity, But Meme Kombat is The Gaming Token in 2024",
+      "link": "https://cryptopanic.com/news/19153672/Not-Axie-Infinity-But-Meme-Kombat-is-The-Gaming-Token-in-2024",
+      "pubDate": "2024-01-05T17:52:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "Banking app Dave to buy back $100M stake from FTX",
+      "link": "https://cryptopanic.com/news/19153636/Banking-app-Dave-to-buy-back-100M-stake-from-FTX",
+      "pubDate": "2024-01-05T17:32:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "ZenIP 42207: Complete Removal of Shielded Pool from the Horizen Mainchain",
+      "link": "https://cryptopanic.com/news/19153584/ZenIP-42207-Complete-Removal-of-Shielded-Pool-from-the-Horizen-Mainchain",
+      "pubDate": "2024-01-05T17:04:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEN"
+      ]
+    },
+    {
+      "title": "Why This Analyst Thinks It’s Impossible For The Bitcoin ETF To Be Priced In",
+      "link": "https://cryptopanic.com/news/19153562/Why-This-Analyst-Thinks-Its-Impossible-For-The-Bitcoin-ETF-To-Be-Priced-In",
+      "pubDate": "2024-01-05T17:00:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "FLOW",
+        "OP"
+      ]
+    },
+    {
+      "title": "Ethereum Validators Forced to Wait Days to Unstake Amid Celsius Withdraws",
+      "link": "https://cryptopanic.com/news/19153526/Ethereum-Validators-Forced-to-Wait-Days-to-Unstake-Amid-Celsius-Withdraws",
+      "pubDate": "2024-01-05T16:28:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "CEL"
+      ]
+    },
+    {
+      "title": "Fantom Foundation’s Strategic Move: Lowering Validator Self-Staking Requirements",
+      "link": "https://cryptopanic.com/news/19153367/Fantom-Foundations-Strategic-Move-Lowering-Validator-Self-Staking-Requirements",
+      "pubDate": "2024-01-05T15:34:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FTM"
+      ]
+    },
+    {
+      "title": "Pullix (PLX) Emerges Victorious: Altcoin Showdown Against Avalanche (AVAX) and Mina Protocol (MINA)",
+      "link": "https://cryptopanic.com/news/19153335/Pullix-PLX-Emerges-Victorious-Altcoin-Showdown-Against-Avalanche-AVAX-and-Mina-Protocol-MINA",
+      "pubDate": "2024-01-05T15:24:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "MINA"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Cronos Decreases More Than 4% Within 24 hours",
+      "link": "https://cryptopanic.com/news/19153307/Cryptocurrency-Cronos-Decreases-More-Than-4-Within-24-hours",
+      "pubDate": "2024-01-05T15:03:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Kaspa Up More Than 3% In 24 hours",
+      "link": "https://cryptopanic.com/news/19153308/Cryptocurrency-Kaspa-Up-More-Than-3-In-24-hours",
+      "pubDate": "2024-01-05T15:02:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KAS"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cryptocurrency VeChain Down More Than 5% Within 24 hours",
+      "link": "https://cryptopanic.com/news/19153310/Cryptocurrency-VeChain-Down-More-Than-5-Within-24-hours",
+      "pubDate": "2024-01-05T15:01:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ]
+    },
+    {
+      "title": "Ethereum Mega Whales Continue To Buy: Do They Know Something You Don’t?",
+      "link": "https://cryptopanic.com/news/19153279/Ethereum-Mega-Whales-Continue-To-Buy-Do-They-Know-Something-You-Dont",
+      "pubDate": "2024-01-05T15:00:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LTC",
+        "LDO"
+      ]
+    },
+    {
+      "title": "Bitcoin Tops $44,000 Following Jobs Data; Osmosis Emerges As Top Gainer",
+      "link": "https://cryptopanic.com/news/19153211/Bitcoin-Tops-44000-Following-Jobs-Data-Osmosis-Emerges-As-Top-Gainer",
+      "pubDate": "2024-01-05T14:35:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "OSMO"
+      ]
+    },
+    {
+      "title": "Shiba Inu Army Look To $0.001 SHIB All-Time High Price In 2024 As Mega Whales Scoop Trillions Of SHIB",
+      "link": "https://cryptopanic.com/news/19153152/Shiba-Inu-Army-Look-To-0001-SHIB-All-Time-High-Price-In-2024-As-Mega-Whales-Scoop-Trillions-Of-SHIB",
+      "pubDate": "2024-01-05T14:29:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "...recently made a significant transaction involving billions of Shiba Inu (SHIB) tokens amid whales moving trillions of SHIB tokens. These moves caused intense speculation about its potential impact on the price of the meme coin...",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Maker Market Heats Up: Over 600 Addresses Complete MKR Trades In Single Day",
+      "link": "https://cryptopanic.com/news/19153081/Maker-Market-Heats-Up-Over-600-Addresses-Complete-MKR-Trades-In-Single-Day",
+      "pubDate": "2024-01-05T14:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "DAI",
+        "MKR",
+        "TIA"
+      ]
+    },
+    {
+      "title": "Binance Inches Closer to Discontinuing BUSD Stablecoin",
+      "link": "https://cryptopanic.com/news/19153106/Binance-Inches-Closer-to-Discontinuing-BUSD-Stablecoin",
+      "pubDate": "2024-01-05T13:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "BUSD",
+        "FDUSD"
+      ]
+    },
+    {
+      "title": "Klaytn Blockchain Welcomes Creder's Gold Pegged Coin",
+      "link": "https://cryptopanic.com/news/19152979/Klaytn-Blockchain-Welcomes-Creders-Gold-Pegged-Coin",
+      "pubDate": "2024-01-05T13:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "KLAY"
+      ]
+    },
+    {
+      "title": "Tesla Slides Premarket as EV Maker Plans to Recall 1.6 Million Cars",
+      "link": "https://cryptopanic.com/news/19152952/Tesla-Slides-Premarket-as-EV-Maker-Plans-to-Recall-16-Million-Cars",
+      "pubDate": "2024-01-05T13:17:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Tesla shares fell 0.6% in premarket trading Friday after Chinese market regulator said the carmaker will recall 1.6M vehicles due to software issues.",
+      "currencies": [
+        "MKR"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "BlackRock $10 Million Bitcoin Purchase Will Happen Today, Expert Says SEC Is Backed Into A Corner",
+      "link": "https://cryptopanic.com/news/19152890/BlackRock-10-Million-Bitcoin-Purchase-Will-Happen-Today-Expert-Says-SEC-Is-Backed-Into-A-Corner",
+      "pubDate": "2024-01-05T13:00:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The world’s largest asset manager, BlackRock, is set to make a significant Bitcoin purchase on January 5. This comes as Bloomberg analyst James Seyffart hinted that the Securities and Exchange Commission (SEC) has no choice but to approve the pending Spot Bitcoin ETFs finally. BlackRock To Purchase $10 Million Worth Of Bitcoin As part of efforts to seed its Spot Bitcoin ETF, BlackRock will...",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Latest news and prices for crypto Sui (SUI), Celestia (TIA), and PancakeSwap (CAKE)",
+      "link": "https://cryptopanic.com/news/pancakeswap-token/19152916/Latest-news-and-prices-for-crypto-Sui-SUI-Celestia-TIA-and-PancakeSwap-CAKE",
+      "pubDate": "2024-01-05T12:55:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CAKE",
+        "SUI",
+        "TIA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Growing Role of Digital Assets and Crypto in Relief Efforts",
+      "link": "https://cryptopanic.com/news/19152950/Growing-Role-of-Digital-Assets-and-Crypto-in-Relief-Efforts",
+      "pubDate": "2024-01-05T12:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "MKR"
+      ]
+    },
+    {
+      "title": "South Korean Tokenization Startup Chooses Klaytn Over Ethereum for Gold NFTs",
+      "link": "https://cryptopanic.com/news/19152615/South-Korean-Tokenization-Startup-Chooses-Klaytn-Over-Ethereum-for-Gold-NFTs",
+      "pubDate": "2024-01-05T11:00:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "KLAY"
+      ]
+    },
+    {
+      "title": "Crypto Trader Says Ethereum-Based Altcoin Could Explode by Over 80%, Updates Outlook on Bitcoin and Litecoin",
+      "link": "https://cryptopanic.com/news/19152520/Crypto-Trader-Says-Ethereum-Based-Altcoin-Could-Explode-by-Over-80-Updates-Outlook-on-Bitcoin-and-Litecoin",
+      "pubDate": "2024-01-05T10:15:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC",
+        "LDO"
+      ]
+    },
+    {
+      "title": "Solana Co-founder Issues Warning of a Potential Risk in Ethereum Blockchain",
+      "link": "https://cryptopanic.com/news/19152386/Solana-Co-founder-Issues-Warning-of-a-Potential-Risk-in-Ethereum-Blockchain",
+      "pubDate": "2024-01-05T09:16:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Solana's Anatoly Yakovenko discusses Ethereum's centralization risk and Solana's reliance on atomic composability, as experts call for a simpler blockchain language.",
+      "currencies": [
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Celsius to Unstake Thousands of Ether, Possibly Easing ETH Selling Pressure",
+      "link": "https://cryptopanic.com/news/19152346/Celsius-to-Unstake-Thousands-of-Ether-Possibly-Easing-ETH-Selling-Pressure",
+      "pubDate": "2024-01-05T08:55:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "CEL"
+      ]
+    },
+    {
+      "title": "AlgosOne Has Cracked the Crypto Code with 80%+ Trade Success Rates",
+      "link": "https://cryptopanic.com/news/19152398/AlgosOne-Has-Cracked-the-Crypto-Code-with-80-Trade-Success-Rates",
+      "pubDate": "2024-01-05T08:33:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "OSMO"
+      ]
+    },
+    {
+      "title": "Maker logs a spike in network activity – Can it boost MKR prices?",
+      "link": "https://cryptopanic.com/news/19152288/Maker-logs-a-spike-in-network-activity-Can-it-boost-MKR-prices",
+      "pubDate": "2024-01-05T08:30:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Support Statement for This Altcoin from Bitcoin Exchange Binance!",
+      "link": "https://cryptopanic.com/news/19152226/Support-Statement-for-This-Altcoin-from-Bitcoin-Exchange-Binance",
+      "pubDate": "2024-01-05T07:58:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BNB",
+        "ORDI"
+      ]
+    },
+    {
+      "title": "FTX and Alameda Transfer $4.17M in CRO Tokens to Coinbase Amid Ongoing Controversy",
+      "link": "https://cryptopanic.com/news/19152195/FTX-and-Alameda-Transfer-417M-in-CRO-Tokens-to-Coinbase-Amid-Ongoing-Controversy",
+      "pubDate": "2024-01-05T07:43:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Cryptocurrency exchange platform FTX and its sister company, Alameda Research, have raised eyebrows in the crypto community with a series of transfers to Coinbase totaling $4.17 million in CRO tokens. This move comes amidst ongoing controversy surrounding FTX’s repayment plans to its creditors and legal troubles involving its co-founder, Sam Bankman-Fried. FTX and Alameda’s recent […]",
+      "currencies": [
+        "CRO"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SEC Meets with Stock Exchange Reps for Anticipated Spot Bitcoin ETF Approval",
+      "link": "https://cryptopanic.com/news/bitcoin/19151980/SEC-Meets-with-Stock-Exchange-Reps-for-Anticipated-Spot-Bitcoin-ETF-Approval",
+      "pubDate": "2024-01-05T04:49:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Insiders suggest that the SEC may notify issuers of approval this Friday, potentially allowing trading of spot Bitcoin ETFs next week.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto lender Celsius to unstake $470M in Ether ahead of repayments",
+      "link": "https://cryptopanic.com/news/19151947/Crypto-lender-Celsius-to-unstake-470M-in-Ether-ahead-of-repayments",
+      "pubDate": "2024-01-05T04:02:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "CEL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Analyst Predicts 76% Lido DAO Rally If This Ascending Triangle Break Happens",
+      "link": "https://cryptopanic.com/news/19152628/Analyst-Predicts-76-Lido-DAO-Rally-If-This-Ascending-Triangle-Break-Happens",
+      "pubDate": "2024-01-05T00:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC",
+        "LDO"
+      ]
+    }
+  ]
+}

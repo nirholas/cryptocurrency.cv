@@ -1,0 +1,1445 @@
+{
+  "date": "2025-10-10",
+  "fetchedAt": "2026-02-05T07:27:08.594Z",
+  "articleCount": 105,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin and Crypto Market Crash and Rebound After Trump’s Tariff Shock Sparks $5B Liquidation Frenzy",
+      "link": "https://cryptopanic.com/news/cardano/26051071/Bitcoin-and-Crypto-Market-Crash-and-Rebound-After-Trumps-Tariff-Shock-Sparks-5B-Liquidation-Frenzy",
+      "pubDate": "2025-10-10T22:53:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "DOGE"
+      ]
+    },
+    {
+      "title": "How to transfer TRX to cold wallet",
+      "link": "https://cryptopanic.com/news/tron/26047847/How-to-transfer-TRX-to-cold-wallet",
+      "pubDate": "2025-10-10T22:17:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "WTRX"
+      ]
+    },
+    {
+      "title": "Charles Hoskinson Calls Senate Democrats’ DeFi Proposal a “Kill Switch”",
+      "link": "https://cryptopanic.com/news/cardano/26047889/Charles-Hoskinson-Calls-Senate-Democrats-DeFi-Proposal-a-Kill-Switch",
+      "pubDate": "2025-10-10T22:11:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Cardano founder Charles Hoskinson became the latest industry leader to criticize Senate Democrats’ leaked proposal to regulate decentralized finance. In a YouTube livestream, Charles Hoskinson reviewed the proposed regulation’s articles. He used this opportunity to launch a broader, highly critical political critique, primarily aimed at the Democratic Party. Hoskinson Attacks Treasury’s Power to Blacklist DeFi Protocols Adding significant weight to the industry’s opposition, Hoskinson detailed h",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Foundation, Keyring Network Raise Funds For Tornado Cash Developers",
+      "link": "https://cryptopanic.com/news/ethereum/26047523/Ethereum-Foundation-Keyring-Network-Raise-Funds-For-Tornado-Cash-Developers",
+      "pubDate": "2025-10-10T22:04:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The Ethereum Foundation and Keyring Network have launched an initiative to raise funds for Tornado Cash developers Roman Storm and Alexey Pertsev amid their respective legal battles. Ethereum Foundation, Keyring Network Raise FundsAccording to an October 10 announcement, the two organizations have launched fundraising efforts to “pioneer open-source legal defense funding. ” The announcement also states that […]",
+      "currencies": [
+        "ETH",
+        "TORN"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "From $254M To $78.5B: Tron USDT Growth Drives Network Valuation",
+      "link": "https://cryptopanic.com/news/tron/26046876/From-254M-To-785B-Tron-USDT-Growth-Drives-Network-Valuation",
+      "pubDate": "2025-10-10T22:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "SOL",
+        "TRX"
+      ]
+    },
+    {
+      "title": "XRP Price Crashes to $2 Amid Broad Crypto Market Meltdown",
+      "link": "https://cryptopanic.com/news/ripple/26046845/XRP-Price-Crashes-to-2-Amid-Broad-Crypto-Market-Meltdown",
+      "pubDate": "2025-10-10T21:44:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The token’s weekly losses have now deepened to over 33%, erasing a significant portion of its previous rally and bringing […] The post XRP Price Crashes to $2 Amid Broad Crypto Market Meltdown appeared first on Coindoo.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Cardano Price Crashes Nearly 40% as Market Sell-Off Deepens",
+      "link": "https://cryptopanic.com/news/cardano/26046822/Cardano-Price-Crashes-Nearly-40-as-Market-Sell-Off-Deepens",
+      "pubDate": "2025-10-10T21:41:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ]
+    },
+    {
+      "title": "Ethereum at a Tipping Point: How Likely Is a Sub-$4,000 Slide?",
+      "link": "https://cryptopanic.com/news/ethereum/26046854/Ethereum-at-a-Tipping-Point-How-Likely-Is-a-Sub-4000-Slide",
+      "pubDate": "2025-10-10T21:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "As sentiment across the broader crypto market cools, leading altcoin Ethereum has fallen below the crucial $4,426 support level. With bullish momentum slowing marketwide, ETH could slip below the $4,000 mark, further testing traders’ confidence. Smart Money Turns Cold on Ethereum ETH’s price decline since the beginning of the week has triggered a lackluster attitude toward it from investors, and this is reflected by the dip in its social dominance since then. According to Santiment, this metric ",
+      "currencies": [
+        "ETH",
+        "4"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Wanchain’s Tron Bridge Expands USDT Liquidity Across 12 Blockchains",
+      "link": "https://cryptopanic.com/news/tron/26046679/Wanchains-Tron-Bridge-Expands-USDT-Liquidity-Across-12-Blockchains",
+      "pubDate": "2025-10-10T21:00:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "WTRX"
+      ]
+    },
+    {
+      "title": "Ethereum Foundation makes new cash commitment to Tornado Cash developers",
+      "link": "https://cryptopanic.com/news/ethereum/26045532/Ethereum-Foundation-makes-new-cash-commitment-to-Tornado-Cash-developers",
+      "pubDate": "2025-10-10T20:35:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The Ethereum Foundation has joined forces with Keyring network to fund the legal defense of Tornado Cash developers Roman Storm and Alexey Pertsev. Under the initiative, proceeds from Keyring’s zkVerified vaults, a yield-generating product on the Ethereum mainnet, would be directed toward the defense of the two developers. For the next two months, 100% of […]",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano (ADA) Consolidates Below Yearly High as Bulls Eye $1 Target",
+      "link": "https://cryptopanic.com/news/cardano/26051921/Cardano-ADA-Consolidates-Below-Yearly-High-as-Bulls-Eye-1-Target",
+      "pubDate": "2025-10-10T20:31:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ]
+    },
+    {
+      "title": "Price predictions 10/10: BTC, ETH, BNB, XRP, SOL, DOGE, ADA, HYPE, LINK, SUI",
+      "link": "https://cryptopanic.com/news/cardano/26044386/Price-predictions-1010-BTC-ETH-BNB-XRP-SOL-DOGE-ADA-HYPE-LINK-SUI",
+      "pubDate": "2025-10-10T19:44:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Crypto Price Analysis 10-10: BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, CELESTIA: TIA, UNISWAP: UNI",
+      "link": "https://cryptopanic.com/news/uniswap/26043119/Crypto-Price-Analysis-10-10-BITCOIN-BTC-ETHEREUM-ETH-SOLANA-SOL-CELESTIA-TIA-UNISWAP-UNI",
+      "pubDate": "2025-10-10T18:52:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Strategy’s Bitcoin mNAV collapses to 1.174, lowest since February 2024",
+      "link": "https://cryptopanic.com/news/bitcoin/26042828/Strategys-Bitcoin-mNAV-collapses-to-1174-lowest-since-February-2024",
+      "pubDate": "2025-10-10T18:15:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Strategy’s market net asset value (mNAV) compared to Bitcoin (BTC) its holdings dropped to 1. 174 on Oct. 10, the lowest level in almost two years. The company’s shares fell 3% to $307",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Bitcoin Plummets To $118,000 As ETH, XRP, DOGE Take Heavy Losses On Trump Tariff Threat",
+      "link": "https://cryptopanic.com/news/litecoin/26042627/Bitcoin-Plummets-To-118000-As-ETH-XRP-DOGE-Take-Heavy-Losses-On-Trump-Tariff-Threat",
+      "pubDate": "2025-10-10T17:53:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "We Just Bought 2,734 ADA — Here’s What No One Sees About Cardano",
+      "link": "https://cryptopanic.com/news/cardano/26041834/We-Just-Bought-2734-ADA-Heres-What-No-One-Sees-About-Cardano",
+      "pubDate": "2025-10-10T17:40:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Zcash Tops Leaderboard in Altcoin Season With 382% Run – Litecoin, NEAR Participate",
+      "link": "https://cryptopanic.com/news/litecoin/26041775/Zcash-Tops-Leaderboard-in-Altcoin-Season-With-382-Run-Litecoin-NEAR-Participate",
+      "pubDate": "2025-10-10T17:32:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "NEAR",
+        "ZEC"
+      ]
+    },
+    {
+      "title": "The Best Altcoins To Buy Now Include Remittix, Polkadot & Kaspa In October",
+      "link": "https://cryptopanic.com/news/polkadot/26041735/The-Best-Altcoins-To-Buy-Now-Include-Remittix-Polkadot-Kaspa-In-October",
+      "pubDate": "2025-10-10T17:30:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "KAS"
+      ]
+    },
+    {
+      "title": "Will Zcash Price Surge Break ATH Soon? Check 3 $ZEC Rally Reasons",
+      "link": "https://cryptopanic.com/news/zcash/26044316/Will-Zcash-Price-Surge-Break-ATH-Soon-Check-3-ZEC-Rally-Reasons",
+      "pubDate": "2025-10-10T17:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ZEC",
+        "ATH"
+      ]
+    },
+    {
+      "title": "Ethereum Crashes To $4,100 As Senate Democrats Take Aim At DeFi",
+      "link": "https://cryptopanic.com/news/uniswap/26041791/Ethereum-Crashes-To-4100-As-Senate-Democrats-Take-Aim-At-DeFi",
+      "pubDate": "2025-10-10T17:27:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI",
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "BlockDAG Leads With Alpine F1® Deal, While Worldcoin Faces Regulatory Scrutiny and Stellar Struggles for Visibility in 2025",
+      "link": "https://cryptopanic.com/news/stellar/26040397/BlockDAG-Leads-With-Alpine-F1-Deal-While-Worldcoin-Faces-Regulatory-Scrutiny-and-Stellar-Struggles-for-Visibility-in-2025",
+      "pubDate": "2025-10-10T17:00:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "WLD"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Cardano Price Prediction: Bullish Pattern Suggests ADA Could Double by 2026",
+      "link": "https://cryptopanic.com/news/cardano/26040363/Cardano-Price-Prediction-Bullish-Pattern-Suggests-ADA-Could-Double-by-2026",
+      "pubDate": "2025-10-10T16:52:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ]
+    },
+    {
+      "title": "Zcash Price Prediction: This Coin’s Already Exploded – But Here’s Why Analysts Still Think It’s Crazy Undervalued",
+      "link": "https://cryptopanic.com/news/zcash/26040308/Zcash-Price-Prediction-This-Coins-Already-Exploded-But-Heres-Why-Analysts-Still-Think-Its-Crazy-Undervalued",
+      "pubDate": "2025-10-10T16:41:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Zcash Defies the Market Downturn With a Powerful 55% Weekly Rally",
+      "link": "https://cryptopanic.com/news/zcash/26040301/Zcash-Defies-the-Market-Downturn-With-a-Powerful-55-Weekly-Rally",
+      "pubDate": "2025-10-10T16:36:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Bitcoin Short Squeeze Incoming? ZEC Explodes 700%!",
+      "link": "https://cryptopanic.com/news/zcash/26037596/Bitcoin-Short-Squeeze-Incoming-ZEC-Explodes-700",
+      "pubDate": "2025-10-10T16:32:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Polkadot Prepares for Liftoff After EMA Crossover",
+      "link": "https://cryptopanic.com/news/polkadot/26039777/Polkadot-Prepares-for-Liftoff-After-EMA-Crossover",
+      "pubDate": "2025-10-10T16:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Litecoin Defies Market Drop With 10% Daily Surge — Here’s What’s Fueling the Rally",
+      "link": "https://cryptopanic.com/news/litecoin/26040882/Litecoin-Defies-Market-Drop-With-10-Daily-Surge-Heres-Whats-Fueling-the-Rally",
+      "pubDate": "2025-10-10T16:05:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Chainlink Eyes Major Breakout: LINK Price Could Surge 50% Amid Bearish Pressure",
+      "link": "https://cryptopanic.com/news/chainlink/26040360/Chainlink-Eyes-Major-Breakout-LINK-Price-Could-Surge-50-Amid-Bearish-Pressure",
+      "pubDate": "2025-10-10T15:48:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LINK"
+      ]
+    },
+    {
+      "title": "Bitcoin Veteran Rejects Cardano's Value, But Price Prediction Shows $2 ADA Scenario",
+      "link": "https://cryptopanic.com/news/cardano/26038862/Bitcoin-Veteran-Rejects-Cardanos-Value-But-Price-Prediction-Shows-2-ADA-Scenario",
+      "pubDate": "2025-10-10T15:34:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Hyperliquid User Loses $21 Million to Hackers After Private Key Breach",
+      "link": "https://cryptopanic.com/news/dai/26038838/Hyperliquid-User-Loses-21-Million-to-Hackers-After-Private-Key-Breach",
+      "pubDate": "2025-10-10T15:30:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DAI",
+        "HYPE",
+        "A"
+      ]
+    },
+    {
+      "title": "Cardano Price Prediction: Have You Just Come Across The Next 100x Crypto Here?",
+      "link": "https://cryptopanic.com/news/cardano/26038793/Cardano-Price-Prediction-Have-You-Just-Come-Across-The-Next-100x-Crypto-Here",
+      "pubDate": "2025-10-10T15:30:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ]
+    },
+    {
+      "title": "Zcash Skyrockets 400% in a Month, Leading Crypto Markets — Here’s What’s Behind the Surge",
+      "link": "https://cryptopanic.com/news/zcash/26038920/Zcash-Skyrockets-400-in-a-Month-Leading-Crypto-Markets-Heres-Whats-Behind-the-Surge",
+      "pubDate": "2025-10-10T15:07:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "ADA Price Coils Tight — Major Move Brewing Toward $0.90",
+      "link": "https://cryptopanic.com/news/cardano/26037823/ADA-Price-Coils-Tight-Major-Move-Brewing-Toward-090",
+      "pubDate": "2025-10-10T15:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Litecoin Outperforms Crypto Market with 15% Upside, $200 LTC Price Coming?",
+      "link": "https://cryptopanic.com/news/litecoin/26043066/Litecoin-Outperforms-Crypto-Market-with-15-Upside-200-LTC-Price-Coming",
+      "pubDate": "2025-10-10T15:03:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Zcash (ZEC) Reclaims $230 as Demand for Privacy Coins Skyrocket",
+      "link": "https://cryptopanic.com/news/zcash/26043065/Zcash-ZEC-Reclaims-230-as-Demand-for-Privacy-Coins-Skyrocket",
+      "pubDate": "2025-10-10T14:35:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Litecoin (LTC) Suddenly Jumps 13%, What's Happening?",
+      "link": "https://cryptopanic.com/news/litecoin/26035796/Litecoin-LTC-Suddenly-Jumps-13-Whats-Happening",
+      "pubDate": "2025-10-10T13:53:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Avalanche Momentum Builds — Can AVAX Smash $29.50?",
+      "link": "https://cryptopanic.com/news/avalanche-2/26035765/Avalanche-Momentum-Builds-Can-AVAX-Smash-2950",
+      "pubDate": "2025-10-10T13:48:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Zcash Just Did What XRP And ADA Couldn't — What's Behind The Brutal 223% Rally?",
+      "link": "https://cryptopanic.com/news/cardano/26035746/Zcash-Just-Did-What-XRP-And-ADA-Couldnt-Whats-Behind-The-Brutal-223-Rally",
+      "pubDate": "2025-10-10T13:33:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Algorand Unlocks Global USDC Spending: ALGO Price Eyes $0.8?",
+      "link": "https://cryptopanic.com/news/algorand/26035753/Algorand-Unlocks-Global-USDC-Spending-ALGO-Price-Eyes-08",
+      "pubDate": "2025-10-10T13:25:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "ALGO",
+        "U"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "From the past, Dash and Stellar cryptocurrencies resurface: here’s what’s happening",
+      "link": "https://cryptopanic.com/news/stellar/26037376/From-the-past-Dash-and-Stellar-cryptocurrencies-resurface-heres-whats-happening",
+      "pubDate": "2025-10-10T13:17:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "Z"
+      ]
+    },
+    {
+      "title": "CoinDesk 20 Performance Update: Litecoin (LTC) Surges 11.9% as All Constituents Rise",
+      "link": "https://cryptopanic.com/news/litecoin/26036061/CoinDesk-20-Performance-Update-Litecoin-LTC-Surges-119-as-All-Constituents-Rise",
+      "pubDate": "2025-10-10T13:10:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Chainlink Soared Past $50 — Blazpay’s $0.006 Presale Might Be the Next Best Token Presale to 100x",
+      "link": "https://cryptopanic.com/news/chainlink/26034210/Chainlink-Soared-Past-50-Blazpays-0006-Presale-Might-Be-the-Next-Best-Token-Presale-to-100x",
+      "pubDate": "2025-10-10T13:00:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "Analysts Eye NEAR Intents as Catalyst for Long-Awaited Price Breakout",
+      "link": "https://cryptopanic.com/news/tron/26035595/Analysts-Eye-NEAR-Intents-as-Catalyst-for-Long-Awaited-Price-Breakout",
+      "pubDate": "2025-10-10T12:59:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "TRX"
+      ]
+    },
+    {
+      "title": "XRP, Cardano, And PEPE Fade In Q4 2025, While Investors Shift To A New Ethereum Based Meme Coin",
+      "link": "https://cryptopanic.com/news/cardano/26034206/XRP-Cardano-And-PEPE-Fade-In-Q4-2025-While-Investors-Shift-To-A-New-Ethereum-Based-Meme-Coin",
+      "pubDate": "2025-10-10T12:53:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Vitalik Buterin Dumps Free Meme Coins Again, Cashes $96K on Uniswap",
+      "link": "https://cryptopanic.com/news/uniswap/26034116/Vitalik-Buterin-Dumps-Free-Meme-Coins-Again-Cashes-96K-on-Uniswap",
+      "pubDate": "2025-10-10T12:35:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "The Best Crypto To Buy Now For The Highest ROI Is Remittix. Algorand & VeChain But Which Could 30x In 2025",
+      "link": "https://cryptopanic.com/news/algorand/26034057/The-Best-Crypto-To-Buy-Now-For-The-Highest-ROI-Is-Remittix-Algorand-VeChain-But-Which-Could-30x-In-2025",
+      "pubDate": "2025-10-10T12:30:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Monero releases ‘Fluorine Fermi’ update against sneaky network nodes",
+      "link": "https://cryptopanic.com/news/monero/26034038/Monero-releases-Fluorine-Fermi-update-against-sneaky-network-nodes",
+      "pubDate": "2025-10-10T12:15:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "IP",
+        "4"
+      ]
+    },
+    {
+      "title": "Litecoin Price Forecast: LTC bounces back as retail interest surges",
+      "link": "https://cryptopanic.com/news/litecoin/26035752/Litecoin-Price-Forecast-LTC-bounces-back-as-retail-interest-surges",
+      "pubDate": "2025-10-10T12:09:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Grayscale Sends Zcash (ZEC) Soaring 36% — But $5,000 Dreams Might Be Too Big",
+      "link": "https://cryptopanic.com/news/zcash/26037187/Grayscale-Sends-Zcash-ZEC-Soaring-36-But-5000-Dreams-Might-Be-Too-Big",
+      "pubDate": "2025-10-10T12:06:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "‘Everything Is Lining Up’ for ADA Rally amid Major Cardano’s Hydra Update",
+      "link": "https://cryptopanic.com/news/cardano/26037302/Everything-Is-Lining-Up-for-ADA-Rally-amid-Major-Cardanos-Hydra-Update",
+      "pubDate": "2025-10-10T12:01:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ]
+    },
+    {
+      "title": "Zcash: Mapping ZEC’s path to $303 after 35% daily surge",
+      "link": "https://cryptopanic.com/news/zcash/26032841/Zcash-Mapping-ZECs-path-to-303-after-35-daily-surge",
+      "pubDate": "2025-10-10T12:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Phala, Polkadot AI parachain, votes to fully switch to Ethereum L2",
+      "link": "https://cryptopanic.com/news/polkadot/26033542/Phala-Polkadot-AI-parachain-votes-to-fully-switch-to-Ethereum-L2",
+      "pubDate": "2025-10-10T12:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DOT",
+        "PHA"
+      ]
+    },
+    {
+      "title": "Zcash Leads Privacy Coin Surge Amid Surveillance Fears",
+      "link": "https://cryptopanic.com/news/zcash/26032590/Zcash-Leads-Privacy-Coin-Surge-Amid-Surveillance-Fears",
+      "pubDate": "2025-10-10T11:58:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Mandala Chain Is Redefining Cross-Chain Connectivity Through Polkadot’s Parachain Power",
+      "link": "https://cryptopanic.com/news/polkadot/26032580/Mandala-Chain-Is-Redefining-Cross-Chain-Connectivity-Through-Polkadots-Parachain-Power",
+      "pubDate": "2025-10-10T11:55:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "XCM"
+      ]
+    },
+    {
+      "title": "Analysts Rank Mandala Chain as one of the best investments based on Polkadot by 2026",
+      "link": "https://cryptopanic.com/news/polkadot/26032569/Analysts-Rank-Mandala-Chain-as-one-of-the-best-investments-based-on-Polkadot-by-2026",
+      "pubDate": "2025-10-10T11:53:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Huge news!",
+      "link": "https://cryptopanic.com/news/litecoin/26034030/Huge-news",
+      "pubDate": "2025-10-10T11:31:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "LTC",
+        "PEPECOIN"
+      ]
+    },
+    {
+      "title": "Cardano and XRP suffer, BNB continues to perform well",
+      "link": "https://cryptopanic.com/news/cardano/26034201/Cardano-and-XRP-suffer-BNB-continues-to-perform-well",
+      "pubDate": "2025-10-10T11:31:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BNB",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Zcash Soars 434% in 30 Days, Market Cap Tops $4B",
+      "link": "https://cryptopanic.com/news/zcash/26033889/Zcash-Soars-434-in-30-Days-Market-Cap-Tops-4B",
+      "pubDate": "2025-10-10T11:30:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEC",
+        "4"
+      ]
+    },
+    {
+      "title": "Near Protocol (NEAR) spikes to the upside: Is Chainlink (LINK) next?",
+      "link": "https://cryptopanic.com/news/chainlink/26032468/Near-Protocol-NEAR-spikes-to-the-upside-Is-Chainlink-LINK-next",
+      "pubDate": "2025-10-10T11:25:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LINK",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto News: Zcash Extends Rally Above $200 as Privacy Narrative Gains Momentum",
+      "link": "https://cryptopanic.com/news/zcash/26032006/Crypto-News-Zcash-Extends-Rally-Above-200-as-Privacy-Narrative-Gains-Momentum",
+      "pubDate": "2025-10-10T11:15:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Dash jumps 44% to lead privacy coin rally as Zcash momentum spreads",
+      "link": "https://cryptopanic.com/news/zcash/26031104/Dash-jumps-44-to-lead-privacy-coin-rally-as-Zcash-momentum-spreads",
+      "pubDate": "2025-10-10T10:47:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ZEC",
+        "DASH"
+      ]
+    },
+    {
+      "title": "XRP wipes out $16 billion in a week",
+      "link": "https://cryptopanic.com/news/ripple/26030759/XRP-wipes-out-16-billion-in-a-week",
+      "pubDate": "2025-10-10T10:41:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "XRP has erased $16. 47 billion in market value over the past seven days, as its capitalization fell from $185.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Traders Rotate From Solana And Litecoin To Pepeto For 100x Potential, the best crypto to buy now",
+      "link": "https://cryptopanic.com/news/litecoin/26030849/Traders-Rotate-From-Solana-And-Litecoin-To-Pepeto-For-100x-Potential-the-best-crypto-to-buy-now",
+      "pubDate": "2025-10-10T10:31:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Pi Network Price Prediction: Cardano Investors Add Remittix To Watchlists After Trending ICO Goes Viral",
+      "link": "https://cryptopanic.com/news/cardano/26030670/Pi-Network-Price-Prediction-Cardano-Investors-Add-Remittix-To-Watchlists-After-Trending-ICO-Goes-Viral",
+      "pubDate": "2025-10-10T10:30:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "PI"
+      ]
+    },
+    {
+      "title": "Zcash reclaims $200 level after three years amid renewed interest in privacy coins",
+      "link": "https://cryptopanic.com/news/zcash/26030653/Zcash-reclaims-200-level-after-three-years-amid-renewed-interest-in-privacy-coins",
+      "pubDate": "2025-10-10T10:21:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Monero Launches Fluorine Fermi Upgrade, Strengthen Privacy and Network Security",
+      "link": "https://cryptopanic.com/news/monero/26032548/Monero-Launches-Fluorine-Fermi-Upgrade-Strengthen-Privacy-and-Network-Security",
+      "pubDate": "2025-10-10T10:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Analysis: Market Is Undervaluing the Possibility Cardano (ADA) ETF Is Delayed Until 2026",
+      "link": "https://cryptopanic.com/news/cardano/26030819/Analysis-Market-Is-Undervaluing-the-Possibility-Cardano-ADA-ETF-Is-Delayed-Until-2026",
+      "pubDate": "2025-10-10T10:03:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ]
+    },
+    {
+      "title": "Avalanche Might Break its ATH This October — Analysts Eye Blazpay ($BLAZ) Presale for Next 100x Opportunity",
+      "link": "https://cryptopanic.com/news/avalanche-2/26029094/Avalanche-Might-Break-its-ATH-This-October-Analysts-Eye-Blazpay-BLAZ-Presale-for-Next-100x-Opportunity",
+      "pubDate": "2025-10-10T10:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "ATH"
+      ]
+    },
+    {
+      "title": "Can Stellar (XLM) Repeat Its 2017 Bull Run? 4 Signals Point to a Q4 Breakout",
+      "link": "https://cryptopanic.com/news/stellar/26030695/Can-Stellar-XLM-Repeat-Its-2017-Bull-Run-4-Signals-Point-to-a-Q4-Breakout",
+      "pubDate": "2025-10-10T09:51:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "4"
+      ]
+    },
+    {
+      "title": "Cake Wallet launches xStocks: invest in tokenized stocks with Monero, Bitcoin, and Ethereum",
+      "link": "https://cryptopanic.com/news/monero/26030846/Cake-Wallet-launches-xStocks-invest-in-tokenized-stocks-with-Monero-Bitcoin-and-Ethereum",
+      "pubDate": "2025-10-10T09:45:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XMR"
+      ]
+    },
+    {
+      "title": "Tapzi Aligns with Chainlink, UBS & BlockDAG, Leads Crypto Presales in the Tokenization Revolution",
+      "link": "https://cryptopanic.com/news/chainlink/26028960/Tapzi-Aligns-with-Chainlink-UBS-BlockDAG-Leads-Crypto-Presales-in-the-Tokenization-Revolution",
+      "pubDate": "2025-10-10T09:42:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "XRP Price Prediction: Chainlink Latest News As Remittix ICO Becomes Tipped As A Potential 100x Crypto Gainer",
+      "link": "https://cryptopanic.com/news/chainlink/26028911/XRP-Price-Prediction-Chainlink-Latest-News-As-Remittix-ICO-Becomes-Tipped-As-A-Potential-100x-Crypto-Gainer",
+      "pubDate": "2025-10-10T09:30:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "LINK",
+        "A"
+      ]
+    },
+    {
+      "title": "Top 3 Cryptos Poised To Explode This October – As $Ipo Becomes The One Of The Best Crypto Presales To Buy Now",
+      "link": "https://cryptopanic.com/news/stellar/26028910/Top-3-Cryptos-Poised-To-Explode-This-October-As-Ipo-Becomes-The-One-Of-The-Best-Crypto-Presales-To-Buy-Now",
+      "pubDate": "2025-10-10T09:29:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Litecoin ETF decision imminent: Is $400 next for LTC?",
+      "link": "https://cryptopanic.com/news/litecoin/26028958/Litecoin-ETF-decision-imminent-Is-400-next-for-LTC",
+      "pubDate": "2025-10-10T09:27:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Jack Dorsey Wants A Tax Exemption On Everyday Bitcoin Transactions — Cynthia Lummis Points Toward A Bill She Introduced",
+      "link": "https://cryptopanic.com/news/litecoin/26028953/Jack-Dorsey-Wants-A-Tax-Exemption-On-Everyday-Bitcoin-Transactions-Cynthia-Lummis-Points-Toward-A-Bill-She-Introduced",
+      "pubDate": "2025-10-10T09:24:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Zcash (ZEC) adds $3B in value as traders bet on privacy coin boom",
+      "link": "https://cryptopanic.com/news/zcash/26028465/Zcash-ZEC-adds-3B-in-value-as-traders-bet-on-privacy-coin-boom",
+      "pubDate": "2025-10-10T09:09:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "First Project to Launch on PancakeSwap’s New CAKE.PAD",
+      "link": "https://cryptopanic.com/news/pancakeswap-token/26027363/First-Project-to-Launch-on-PancakeSwaps-New-CAKEPAD",
+      "pubDate": "2025-10-10T08:55:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CAKE"
+      ]
+    },
+    {
+      "title": "Near Protocol Price Forecast: NEAR bounces back on retail interest, bullish bets surge",
+      "link": "https://cryptopanic.com/news/near/26030776/Near-Protocol-Price-Forecast-NEAR-bounces-back-on-retail-interest-bullish-bets-surge",
+      "pubDate": "2025-10-10T08:52:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "NEAR",
+        "A",
+        "4"
+      ]
+    },
+    {
+      "title": "Privacy Coins Explode: ZEC, DASH, RAIL See Massive Gains Revives 2018 Crypto ERA",
+      "link": "https://cryptopanic.com/news/zcash/26028930/Privacy-Coins-Explode-ZEC-DASH-RAIL-See-Massive-Gains-Revives-2018-Crypto-ERA",
+      "pubDate": "2025-10-10T08:33:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEC",
+        "DASH",
+        "RAIL"
+      ]
+    },
+    {
+      "title": "Why Zcash (ZEC) Price is Rising Today? Is Zcash a Good Investment?",
+      "link": "https://cryptopanic.com/news/zcash/26028929/Why-Zcash-ZEC-Price-is-Rising-Today-Is-Zcash-a-Good-Investment",
+      "pubDate": "2025-10-10T08:32:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Trends, Tokenization & Treasuries: Cardano's Frederik Gregaard Talks Enterprise Adoption",
+      "link": "https://cryptopanic.com/news/cardano/26025846/Trends-Tokenization-Treasuries-Cardanos-Frederik-Gregaard-Talks-Enterprise-Adoption",
+      "pubDate": "2025-10-10T08:00:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ]
+    },
+    {
+      "title": "ZEC resumes its rally, returns to levels not seen since 2018",
+      "link": "https://cryptopanic.com/news/zcash/26025851/ZEC-resumes-its-rally-returns-to-levels-not-seen-since-2018",
+      "pubDate": "2025-10-10T07:51:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Ethereum Classic Price Forecast: ETC breaks out of falling wedge pattern, eyes bullish continuation",
+      "link": "https://cryptopanic.com/news/ethereum-classic/26027311/Ethereum-Classic-Price-Forecast-ETC-breaks-out-of-falling-wedge-pattern-eyes-bullish-continuation",
+      "pubDate": "2025-10-10T07:44:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "Top Altcoins to Watch: BNB, Solana, and FET Lead the Hottest Crypto Discussions Right Now",
+      "link": "https://cryptopanic.com/news/tron/26025827/Top-Altcoins-to-Watch-BNB-Solana-and-FET-Lead-the-Hottest-Crypto-Discussions-Right-Now",
+      "pubDate": "2025-10-10T06:50:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "SOL",
+        "TRX"
+      ]
+    },
+    {
+      "title": "Privacy Tokens Zcash, Dash, Railgun Rip Higher as Market Rotates Back to 2018 Narratives",
+      "link": "https://cryptopanic.com/news/monero/26025833/Privacy-Tokens-Zcash-Dash-Railgun-Rip-Higher-as-Market-Rotates-Back-to-2018-Narratives",
+      "pubDate": "2025-10-10T06:45:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "ZEC",
+        "DASH"
+      ]
+    },
+    {
+      "title": "Top 7 Best Coins to Buy Now: $ETH, $BNB, $ADA, $BLAZ, and More",
+      "link": "https://cryptopanic.com/news/cardano/26038965/Top-7-Best-Coins-to-Buy-Now-ETH-BNB-ADA-BLAZ-and-More",
+      "pubDate": "2025-10-10T06:39:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "BNB",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Polkadot Price Climbs to $4.39, Dogecoin Trades at $0.27, and Blazpay Sells Over 4.5 Million Tokens in Its Crypto Presale",
+      "link": "https://cryptopanic.com/news/polkadot/26029294/Polkadot-Price-Climbs-to-439-Dogecoin-Trades-at-027-and-Blazpay-Sells-Over-45-Million-Tokens-in-Its-Crypto-Presale",
+      "pubDate": "2025-10-10T06:34:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "DOT",
+        "4"
+      ]
+    },
+    {
+      "title": "Litecoin Price Breaks Resistance, Can the Rally Rise Above $134?",
+      "link": "https://cryptopanic.com/news/litecoin/26025732/Litecoin-Price-Breaks-Resistance-Can-the-Rally-Rise-Above-134",
+      "pubDate": "2025-10-10T06:27:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Monero Releases ‘Fluorine Fermi’ Update to Boost Protection Against Spy Nodes",
+      "link": "https://cryptopanic.com/news/monero/26024233/Monero-Releases-Fluorine-Fermi-Update-to-Boost-Protection-Against-Spy-Nodes",
+      "pubDate": "2025-10-10T06:14:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "4"
+      ]
+    },
+    {
+      "title": "Monero Releases Privacy Boost Against Sneaky Network Nodes",
+      "link": "https://cryptopanic.com/news/monero/26024401/Monero-Releases-Privacy-Boost-Against-Sneaky-Network-Nodes",
+      "pubDate": "2025-10-10T05:52:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash Price Forecast: BCH flashes breakout potential as retail interest grows",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/26025777/Bitcoin-Cash-Price-Forecast-BCH-flashes-breakout-potential-as-retail-interest-grows",
+      "pubDate": "2025-10-10T05:46:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH",
+        "4"
+      ]
+    },
+    {
+      "title": "Monero Releases Fluorine Fermi to Tackle Spy Node Threats",
+      "link": "https://cryptopanic.com/news/monero/26025731/Monero-Releases-Fluorine-Fermi-to-Tackle-Spy-Node-Threats",
+      "pubDate": "2025-10-10T05:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Cardano (ADA) Price To Breakout Above $1: What It Needs",
+      "link": "https://cryptopanic.com/news/cardano/26023008/Cardano-ADA-Price-To-Breakout-Above-1-What-It-Needs",
+      "pubDate": "2025-10-10T05:26:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "AI Polkadot parachain Phala votes to fully switch to Ethereum L2",
+      "link": "https://cryptopanic.com/news/polkadot/26022999/AI-Polkadot-parachain-Phala-votes-to-fully-switch-to-Ethereum-L2",
+      "pubDate": "2025-10-10T05:24:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DOT",
+        "GPU"
+      ]
+    },
+    {
+      "title": "Cardano Price Forecast: ADA correction deepens as profit-taking activity increases",
+      "link": "https://cryptopanic.com/news/cardano/26024351/Cardano-Price-Forecast-ADA-correction-deepens-as-profit-taking-activity-increases",
+      "pubDate": "2025-10-10T05:06:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ]
+    },
+    {
+      "title": "Litecoin Surges 10% Bucking Bitcoin, Ethereum Drop: Awaits Spot ETF Approval",
+      "link": "https://cryptopanic.com/news/litecoin/26022965/Litecoin-Surges-10-Bucking-Bitcoin-Ethereum-Drop-Awaits-Spot-ETF-Approval",
+      "pubDate": "2025-10-10T04:59:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Litecoin Momentum Heats Up: Order Book Shows Bulls Eyeing $135 Target",
+      "link": "https://cryptopanic.com/news/litecoin/26021891/Litecoin-Momentum-Heats-Up-Order-Book-Shows-Bulls-Eyeing-135-Target",
+      "pubDate": "2025-10-10T04:43:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Solana News: SEC Delays ETF Decisions as JPMorgan Turns Cautious on SOL",
+      "link": "https://cryptopanic.com/news/litecoin/26021855/Solana-News-SEC-Delays-ETF-Decisions-as-JPMorgan-Turns-Cautious-on-SOL",
+      "pubDate": "2025-10-10T04:30:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "LTC"
+      ]
+    },
+    {
+      "title": "“Bitcoin Jesus” Roger Ver Close to Paying $48M to Settle U.S. Tax Fraud Charges",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/26021863/Bitcoin-Jesus-Roger-Ver-Close-to-Paying-48M-to-Settle-US-Tax-Fraud-Charges",
+      "pubDate": "2025-10-10T04:29:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "TRON Daily Report: October 10, 2025 Volume Surge, Perps Platform Launch, US Data Partnership, and Meme Coin Leaderboard Flips",
+      "link": "https://cryptopanic.com/news/tron/26032426/TRON-Daily-Report-October-10-2025-Volume-Surge-Perps-Platform-Launch-US-Data-Partnership-and-Meme-Coin-Leaderboard-Flips",
+      "pubDate": "2025-10-10T04:16:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "WTRX"
+      ]
+    },
+    {
+      "title": "Former SEC Lawyer Doubts $17M XRP Buy By Reliance, Here’s Why",
+      "link": "https://cryptopanic.com/news/cardano/26021955/Former-SEC-Lawyer-Doubts-17M-XRP-Buy-By-Reliance-Heres-Why",
+      "pubDate": "2025-10-10T04:00:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Top Crypto Gainers: Zcash surpasses $200, Litecoin and MYX Finance gain momentum",
+      "link": "https://cryptopanic.com/news/litecoin/26021885/Top-Crypto-Gainers-Zcash-surpasses-200-Litecoin-and-MYX-Finance-gain-momentum",
+      "pubDate": "2025-10-10T03:18:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC",
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Monero releases ‘Flourine Fermi’ update to fight spy nodes",
+      "link": "https://cryptopanic.com/news/monero/26019643/Monero-releases-Flourine-Fermi-update-to-fight-spy-nodes",
+      "pubDate": "2025-10-10T02:21:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "IP"
+      ]
+    },
+    {
+      "title": "Helium surges 14% – HNT bulls target $3.20, but ONE risk remains!",
+      "link": "https://cryptopanic.com/news/helium/26017984/Helium-surges-14-HNT-bulls-target-320-but-ONE-risk-remains",
+      "pubDate": "2025-10-10T01:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HNT",
+        "ONE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Best no KYC Exchange for swap TRON into BTC?",
+      "link": "https://cryptopanic.com/news/tron/26017697/Best-no-KYC-Exchange-for-swap-TRON-into-BTC",
+      "pubDate": "2025-10-10T00:06:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "WTRX"
+      ]
+    }
+  ]
+}

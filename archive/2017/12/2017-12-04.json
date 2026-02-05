@@ -1,0 +1,22 @@
+{
+  "date": "2017-12-04",
+  "fetchedAt": "2026-02-05T07:27:06.983Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Spin-Offs Caught in a Bull-Bear Tug Of War",
+      "link": "https://cryptopanic.com/news/520733/Bitcoin-Spin-Offs-Caught-in-a-Bull-Bear-Tug-Of-War",
+      "pubDate": "2017-12-04T15:32:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH",
+        "BTG"
+      ]
+    }
+  ]
+}

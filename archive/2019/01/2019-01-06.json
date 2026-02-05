@@ -1,0 +1,26 @@
+{
+  "date": "2019-01-06",
+  "fetchedAt": "2026-02-05T07:27:07.855Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Busy Week For TRON With Multiple Developments Including Bitrue Adding New XRP / TRX Pair",
+      "link": "https://cryptopanic.com/news/4171744/Busy-Week-For-TRON-With-Multiple-Developments-Including-Bitrue-Adding-New-XRP-TRX-Pair",
+      "pubDate": "2019-01-06T12:29:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

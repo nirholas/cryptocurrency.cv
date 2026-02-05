@@ -1,0 +1,26 @@
+{
+  "date": "2018-08-10",
+  "fetchedAt": "2026-02-05T07:27:07.883Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin [BTC] Developer Discovers Vulnerability In Bitcoin Cash [BCH] Code, Finds It Near Impossible to Report the Bug to Developers",
+      "link": "https://cryptopanic.com/news/2775824/Bitcoin-BTC-Developer-Discovers-Vulnerability-In-Bitcoin-Cash-BCH-Code-Finds-It-Near-Impossible-to-Report-the-Bug-to-Developers",
+      "pubDate": "2018-08-10T09:02:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

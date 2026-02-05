@@ -1,0 +1,621 @@
+{
+  "date": "2024-04-27",
+  "fetchedAt": "2026-02-05T07:27:08.011Z",
+  "articleCount": 40,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ripple (XRP), Cardano (ADA), Fantom (FTM) Amongst Forbes’ Zombie Tokens List",
+      "link": "https://cryptopanic.com/news/19441836/Ripple-XRP-Cardano-ADA-Fantom-FTM-Amongst-Forbes-Zombie-Tokens-List",
+      "pubDate": "2024-04-27T22:40:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "XRP",
+        "FTM"
+      ]
+    },
+    {
+      "title": "ADA Price Struggles To Break Above Trendline – Downward Trend Persists",
+      "link": "https://cryptopanic.com/news/19441744/ADA-Price-Struggles-To-Break-Above-Trendline-Downward-Trend-Persists",
+      "pubDate": "2024-04-27T20:30:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "ADA is the native cryptocurrency of the Cardano blockchain network, which is used for transactions, staking, and as a means of participating in the platform’s governance. Recently, the price of ADA has been on a downtrend, and from the look of things the token is not showing any sign of reversing anytime soon. ADA On […]",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Crypto Community Loses OXT Analysis Tool Amid Legal Troubles for Samourai Wallet",
+      "link": "https://cryptopanic.com/news/19441738/Crypto-Community-Loses-OXT-Analysis-Tool-Amid-Legal-Troubles-for-Samourai-Wallet",
+      "pubDate": "2024-04-27T20:22:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "OXT"
+      ]
+    },
+    {
+      "title": "OP’s price takes 4.5% hit after Optimism faces ‘very high risk’ security concerns",
+      "link": "https://cryptopanic.com/news/19441725/OPs-price-takes-45-hit-after-Optimism-faces-very-high-risk-security-concerns",
+      "pubDate": "2024-04-27T20:00:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "OP"
+      ]
+    },
+    {
+      "title": "Internet Computer ($ICP) Founder: “95% of the Blockchains out There Are Just Junk, and They’re Just Selling Snake Oil”",
+      "link": "https://cryptopanic.com/news/19441718/Internet-Computer-ICP-Founder-95-of-the-Blockchains-out-There-Are-Just-Junk-and-Theyre-Just-Selling-Snake-Oil",
+      "pubDate": "2024-04-27T19:51:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "OP Labs successfully completes Sherlock audit with more findings",
+      "link": "https://cryptopanic.com/news/19441597/OP-Labs-successfully-completes-Sherlock-audit-with-more-findings",
+      "pubDate": "2024-04-27T18:05:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OP"
+      ]
+    },
+    {
+      "title": "3 cryptocurrencies to avoid trading in May’s first week",
+      "link": "https://cryptopanic.com/news/19441565/3-cryptocurrencies-to-avoid-trading-in-Mays-first-week",
+      "pubDate": "2024-04-27T17:40:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DYDX"
+      ]
+    },
+    {
+      "title": "BlockDAG Soars: Stellar Moonshot Teaser and Phenomenal 30,000X ROI Potential Surpass Dogecoin and Polygon",
+      "link": "https://cryptopanic.com/news/19441518/BlockDAG-Soars-Stellar-Moonshot-Teaser-and-Phenomenal-30000X-ROI-Potential-Surpass-Dogecoin-and-Polygon",
+      "pubDate": "2024-04-27T17:00:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "MATIC",
+        "XLM"
+      ]
+    },
+    {
+      "title": "ETH price prediction as DTCC lists finance giant’s Ethereum spot ETF",
+      "link": "https://cryptopanic.com/news/19441479/ETH-price-prediction-as-DTCC-lists-finance-giants-Ethereum-spot-ETF",
+      "pubDate": "2024-04-27T16:18:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The Depository Trust & Clearing Corporation (DTCC) listed Franklin Templeton’s Ethereum (ETH) spot ETF with a “yes” for create and … Continue reading",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The Machines Know: Bitcoin Primed For Epic Price Surge To $77,000",
+      "link": "https://cryptopanic.com/news/19441397/The-Machines-Know-Bitcoin-Primed-For-Epic-Price-Surge-To-77000",
+      "pubDate": "2024-04-27T15:30:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Franklin Templeton lists its spot Ethereum ETF on DTCC",
+      "link": "https://cryptopanic.com/news/19441366/Franklin-Templeton-lists-its-spot-Ethereum-ETF-on-DTCC",
+      "pubDate": "2024-04-27T15:03:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Franklin Templeton, a heavyweight in asset management, has launched a new product called the “Franklin Ethereum TR Ethereum ETF,” officially coded as EZET. This Ethereum spot ETF has made its debut on the Depository Trust and Clearing Corporation (DTCC) website, a critical platform for handling securities transactions across the United States. The DTCC’s listing shows […]",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DTX Investors Set Sight on Massive Price Rally, Ignore Bullish Trend on Solana and Jupiter",
+      "link": "https://cryptopanic.com/news/19441325/DTX-Investors-Set-Sight-on-Massive-Price-Rally-Ignore-Bullish-Trend-on-Solana-and-Jupiter",
+      "pubDate": "2024-04-27T14:28:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "JUP"
+      ]
+    },
+    {
+      "title": "Taking Ordinals to a New Level: Why Bitcoin Inscriptions Need AR",
+      "link": "https://cryptopanic.com/news/19441315/Taking-Ordinals-to-a-New-Level-Why-Bitcoin-Inscriptions-Need-AR",
+      "pubDate": "2024-04-27T14:21:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "AR"
+      ]
+    },
+    {
+      "title": "Crypto crime is too easy",
+      "link": "https://cryptopanic.com/news/19441309/Crypto-crime-is-too-easy",
+      "pubDate": "2024-04-27T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OP"
+      ]
+    },
+    {
+      "title": "STRK, ORDI, EGLD: Worst YTD Performers Named by Analyst",
+      "link": "https://cryptopanic.com/news/19441207/STRK-ORDI-EGLD-Worst-YTD-Performers-Named-by-Analyst",
+      "pubDate": "2024-04-27T13:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "EGLD",
+        "STRK",
+        "ORDI"
+      ]
+    },
+    {
+      "title": "Introducing ALPHA V0.X — A New Era of Derivatives on BNB Chain",
+      "link": "https://cryptopanic.com/news/19441143/Introducing-ALPHA-V0X-A-New-Era-of-Derivatives-on-BNB-Chain",
+      "pubDate": "2024-04-27T12:22:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "ALPHA"
+      ]
+    },
+    {
+      "title": "Bitget Introduces Trade to Mine Promotion, Giving Away All Fees to Traders",
+      "link": "https://cryptopanic.com/news/19441126/Bitget-Introduces-Trade-to-Mine-Promotion-Giving-Away-All-Fees-to-Traders",
+      "pubDate": "2024-04-27T12:15:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "BGB"
+      ]
+    },
+    {
+      "title": "Trader Predicts One Blue-Chip Altcoin Will Explode 260%+ This Year, Updates Outlook on Fetch.ai and Render",
+      "link": "https://cryptopanic.com/news/19441076/Trader-Predicts-One-Blue-Chip-Altcoin-Will-Explode-260-This-Year-Updates-Outlook-on-Fetchai-and-Render",
+      "pubDate": "2024-04-27T11:45:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "RNDR",
+        "FET"
+      ]
+    },
+    {
+      "title": "Surpassing Ondo (ONDO), BlastUP (BLP) Launch Thrives: Could It Rival Polkadot (DOT) in the Crypto Arena?",
+      "link": "https://cryptopanic.com/news/19441072/Surpassing-Ondo-ONDO-BlastUP-BLP-Launch-Thrives-Could-It-Rival-Polkadot-DOT-in-the-Crypto-Arena",
+      "pubDate": "2024-04-27T11:45:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "ONDO"
+      ]
+    },
+    {
+      "title": "2 cryptocurrencies to watch closely next week",
+      "link": "https://cryptopanic.com/news/19441069/2-cryptocurrencies-to-watch-closely-next-week",
+      "pubDate": "2024-04-27T11:40:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX",
+        "ENA"
+      ]
+    },
+    {
+      "title": "Bitcoin Raises Bull Flag, Formation Triggers Calls For $100,000",
+      "link": "https://cryptopanic.com/news/19441057/Bitcoin-Raises-Bull-Flag-Formation-Triggers-Calls-For-100000",
+      "pubDate": "2024-04-27T11:30:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Ondo (ONDO), Wormhole, and BlastUP (BLP) Are Poised for a Massive Pump in 2024",
+      "link": "https://cryptopanic.com/news/19440981/Ondo-ONDO-Wormhole-and-BlastUP-BLP-Are-Poised-for-a-Massive-Pump-in-2024",
+      "pubDate": "2024-04-27T10:45:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ONDO"
+      ]
+    },
+    {
+      "title": "The Eroding State of Privacy in the Crypto World",
+      "link": "https://cryptopanic.com/news/19440904/The-Eroding-State-of-Privacy-in-the-Crypto-World?mtm_campaign=API-OFA",
+      "pubDate": "2024-04-27T09:42:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ZANO"
+      ]
+    },
+    {
+      "title": "‘Hands Down a Market Leader Right Now’: Trader Says Top Ethereum Rival Will Be One of the First To Hit New Highs",
+      "link": "https://cryptopanic.com/news/19440849/Hands-Down-a-Market-Leader-Right-Now-Trader-Says-Top-Ethereum-Rival-Will-Be-One-of-the-First-To-Hit-New-Highs",
+      "pubDate": "2024-04-27T09:15:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin emerges as safe haven amidst  Republic First Bank crisis",
+      "link": "https://cryptopanic.com/news/19440815/Bitcoin-emerges-as-safe-haven-amidst-Republic-First-Bank-crisis",
+      "pubDate": "2024-04-27T08:38:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "US regulators have completely shut down Philadelphia-based Republic First Bank, the nation’s first bank failure of 2024. This creates a rift among those observing/investing in the crypto trade. Following the announcement, Bitcoin, Ether, and altcoins were slightly flattered. Bank failure prompts shift towards crypto Crypto trader Pillage Capital claimed that the Republic First Bank collapse...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin emerges as safe haven amidst Republic First Bank crisis",
+      "link": "https://cryptopanic.com/news/bitcoin/19440815/Bitcoin-emerges-as-safe-haven-amidst-Republic-First-Bank-crisis",
+      "pubDate": "2024-04-27T08:38:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "US regulators have completely shut down Philadelphia-based Republic First Bank, the nation’s first bank failure of 2024. This creates a rift among those observing/investing in the crypto trade. Following the announcement, Bitcoin, Ether, and altcoins were slightly flattered. Bank failure prompts shift towards crypto Crypto trader Pillage Capital claimed that the Republic First Bank collapse […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Altcoins Crash Once More as Bitcoin (BTC) Slips to $63K (Weekend Watch)",
+      "link": "https://cryptopanic.com/news/19440771/Altcoins-Crash-Once-More-as-Bitcoin-BTC-Slips-to-63K-Weekend-Watch",
+      "pubDate": "2024-04-27T08:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "SOL",
+        "DOGE",
+        "HBAR",
+        "RNDR"
+      ]
+    },
+    {
+      "title": "Buterin Defends Ethereum's Shift from PoW to PoS",
+      "link": "https://cryptopanic.com/news/19440765/Buterin-Defends-Ethereums-Shift-from-PoW-to-PoS",
+      "pubDate": "2024-04-27T07:45:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Buterin counters nostalgia highlights PoW's centralization before Ethereum's PoS shift",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 22,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Japanese Yen Falls To Multi-Year Lows: Will Banks Adopt XRP By 2025?",
+      "link": "https://cryptopanic.com/news/19440733/Japanese-Yen-Falls-To-Multi-Year-Lows-Will-Banks-Adopt-XRP-By-2025",
+      "pubDate": "2024-04-27T07:20:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Recent reports revealed a subsequent decline in the Japanese Yen, keeping investors anxious. While the Yen dropped to a multi-year low, SBI CEO Yoshitaka Kitao’s previous statement on the potential of XRP once again gained traction. A crypto enthusiast, known on X as Amelie shared an X post reflecting Kitao’s preference for Ripple’s XRP. While […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Enters ‘Danger Zone’ Post-Halving, Analyst Warns Of Potential Downside",
+      "link": "https://cryptopanic.com/news/19440703/Bitcoin-Enters-Danger-Zone-Post-Halving-Analyst-Warns-Of-Potential-Downside",
+      "pubDate": "2024-04-27T06:50:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "XRP",
+        "ARK"
+      ]
+    },
+    {
+      "title": "5 Altcoins You Should Keep an Eye on in May",
+      "link": "https://cryptopanic.com/news/19440719/5-Altcoins-You-Should-Keep-an-Eye-on-in-May",
+      "pubDate": "2024-04-27T06:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "SOL",
+        "NEAR",
+        "XLM",
+        "ONE",
+        "RNDR",
+        "PEPE",
+        "WIF"
+      ]
+    },
+    {
+      "title": "Forbes lists XRP, ADA, LTC, ETC among top “zombie” tokens",
+      "link": "https://cryptopanic.com/news/19440586/Forbes-lists-XRP-ADA-LTC-ETC-among-top-zombie-tokens",
+      "pubDate": "2024-04-27T04:05:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "XRP",
+        "LTC",
+        "BCH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Secure the Premier Solana Substitute with a 30,000x ROI; Complete Tutorial on Acquiring BlockDAG Coin via Trust Wallet",
+      "link": "https://cryptopanic.com/news/19440570/Secure-the-Premier-Solana-Substitute-with-a-30000x-ROI-Complete-Tutorial-on-Acquiring-BlockDAG-Coin-via-Trust-Wallet",
+      "pubDate": "2024-04-27T03:40:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "DAG"
+      ]
+    },
+    {
+      "title": "Forbes Unveils 20 Crypto ‘Zombies,’ Declares Ripple And XRP Among The Undead",
+      "link": "https://cryptopanic.com/news/19440525/Forbes-Unveils-20-Crypto-Zombies-Declares-Ripple-And-XRP-Among-The-Undead",
+      "pubDate": "2024-04-27T02:30:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "ADA",
+        "XRP",
+        "LTC",
+        "XMR",
+        "BCH",
+        "ETC",
+        "ALGO",
+        "XTZ",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "BlockDAG’s 30,000x ROI Outshines SHIB, FLOKI, VET, PEPE, and BOME in the Best Cryptos Arena",
+      "link": "https://cryptopanic.com/news/19440506/BlockDAGs-30000x-ROI-Outshines-SHIB-FLOKI-VET-PEPE-and-BOME-in-the-Best-Cryptos-Arena",
+      "pubDate": "2024-04-27T01:46:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SHIB",
+        "VET",
+        "PEPE",
+        "FLOKI"
+      ]
+    },
+    {
+      "title": "Terra LUNA Classic Price Prediction as Community Revises Burn Tax – Can LUNC Reach $100?",
+      "link": "https://cryptopanic.com/news/19440613/Terra-LUNA-Classic-Price-Prediction-as-Community-Revises-Burn-Tax-Can-LUNC-Reach-100",
+      "pubDate": "2024-04-27T01:32:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LUNC"
+      ]
+    },
+    {
+      "title": "Franklin Templeton’s Ethereum spot ETF listed on DTCC",
+      "link": "https://cryptopanic.com/news/19440489/Franklin-Templetons-Ethereum-spot-ETF-listed-on-DTCC",
+      "pubDate": "2024-04-27T01:11:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Franklin Templeton's proposed spot Ethereum ETF has appeared on the Depository Trust and Clearing Corporations (DTCC) new securities list with the ticker EZET. This development occurred just a day following reports of the SEC's probable rejection of spot Ethereum ETF applications.The DTCC listing represents a preliminary step in the trading process, yet it does not ensure that the SEC will...",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Expert Makes Bold Call: It’s Time To Swap Your Dollars For Bitcoin",
+      "link": "https://cryptopanic.com/news/19440481/Expert-Makes-Bold-Call-Its-Time-To-Swap-Your-Dollars-For-Bitcoin",
+      "pubDate": "2024-04-27T01:00:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "SAFE"
+      ]
+    },
+    {
+      "title": "Crypto Trader Issues Bitcoin Warning, Says Ethereum Liquid Staking Project Flashing Short-Term Bullish Signal",
+      "link": "https://cryptopanic.com/news/19440434/Crypto-Trader-Issues-Bitcoin-Warning-Says-Ethereum-Liquid-Staking-Project-Flashing-Short-Term-Bullish-Signal",
+      "pubDate": "2024-04-27T00:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LDO",
+        "DAO"
+      ]
+    },
+    {
+      "title": "Timing The Breakout: When Will Bitcoin Escape The Post-Halving Consolidation?",
+      "link": "https://cryptopanic.com/news/19440433/Timing-The-Breakout-When-Will-Bitcoin-Escape-The-Post-Halving-Consolidation",
+      "pubDate": "2024-04-27T00:00:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "XRP",
+        "SUI"
+      ]
+    }
+  ]
+}

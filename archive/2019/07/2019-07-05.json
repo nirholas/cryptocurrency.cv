@@ -1,0 +1,38 @@
+{
+  "date": "2019-07-05",
+  "fetchedAt": "2026-02-05T07:27:06.968Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "XRP Was Worst Performing Top-10 Crypto in H1 – But BNB Shone",
+      "link": "https://cryptopanic.com/news/5930725/XRP-Was-Worst-Performing-Top-10-Crypto-in-H1-But-BNB-Shone",
+      "pubDate": "2019-07-05T15:01:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Binance to List DOGE, Meme Coin is Up 28 Percent Already",
+      "link": "https://cryptopanic.com/news/dogecoin/5928220/Binance-to-List-DOGE-Meme-Coin-is-Up-28-Percent-Already",
+      "pubDate": "2019-07-05T09:35:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

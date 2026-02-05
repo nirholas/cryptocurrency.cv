@@ -1,0 +1,56 @@
+{
+  "date": "2019-01-08",
+  "fetchedAt": "2026-02-05T07:27:06.981Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "BitTorrent’s Master Plan to Bring a Tron-Powered Crypto Token to the Masses",
+      "link": "https://cryptopanic.com/news/tron/4192359/BitTorrents-Master-Plan-to-Bring-a-Tron-Powered-Crypto-Token-to-the-Masses",
+      "pubDate": "2019-01-08T17:00:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "TrueUSD Passes Asset Attestation, Binance Adds New TUSD, PAX Pairs",
+      "link": "https://cryptopanic.com/news/4298992/TrueUSD-Passes-Asset-Attestation-Binance-Adds-New-TUSD-PAX-Pairs",
+      "pubDate": "2019-01-08T08:27:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "TUSD",
+        "USDP"
+      ]
+    },
+    {
+      "title": "Ethereum Classic Attack - What Happened & What Now? News Report",
+      "link": "https://cryptopanic.com/news/ethereum/4187575/Ethereum-Classic-Attack-What-Happened-What-Now-News-Report",
+      "pubDate": "2019-01-08T06:27:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

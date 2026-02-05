@@ -1,0 +1,44 @@
+{
+  "date": "2019-02-28",
+  "fetchedAt": "2026-02-05T07:27:06.811Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Brave Browser Partners with TAP Network to Drive BAT Adoption",
+      "link": "https://cryptopanic.com/news/4700179/Brave-Browser-Partners-with-TAP-Network-to-Drive-BAT-Adoption",
+      "pubDate": "2019-02-28T11:00:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BAT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin SV (BSV) Price Prediction – The Six-Month Analysis",
+      "link": "https://cryptopanic.com/news/4698696/Bitcoin-SV-BSV-Price-Prediction-The-Six-Month-Analysis",
+      "pubDate": "2019-02-28T07:08:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

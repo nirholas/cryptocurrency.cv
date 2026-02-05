@@ -1,0 +1,114 @@
+{
+  "date": "2020-12-10",
+  "fetchedAt": "2026-02-05T07:27:06.786Z",
+  "articleCount": 7,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "The Ether Fund by @3iq_corp is now listed on the Toronto Stock Exchange ($QETH). Congratulations to the team on thi…",
+      "link": "https://cryptopanic.com/news/10781947/The-Ether-Fund-by-3iq_corp-is-now-listed-on-the-Toronto-Stock-Exchange-QETH-Congratulations-to-the-team-on-thi",
+      "pubDate": "2020-12-10T19:37:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    },
+    {
+      "title": "A feature allowing anonymous Uniswap trading has returned",
+      "link": "https://cryptopanic.com/news/uniswap/10781723/A-feature-allowing-anonymous-Uniswap-trading-has-returned",
+      "pubDate": "2020-12-10T19:11:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "One of Europe’s Oldest Banks Launches Stablecoin on Stellar",
+      "link": "https://cryptopanic.com/news/10781109/One-of-Europes-Oldest-Banks-Launches-Stablecoin-on-Stellar",
+      "pubDate": "2020-12-10T18:20:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The IOTA Foundation would like to announce that it has parted ways with David Sønstebø. This was a unanimous decisi…",
+      "link": "https://cryptopanic.com/news/10780736/The-IOTA-Foundation-would-like-to-announce-that-it-has-parted-ways-with-David-Snsteb-This-was-a-unanimous-decisi",
+      "pubDate": "2020-12-10T17:36:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ]
+    },
+    {
+      "title": "Chainlink Oracles go live on Binance Smart Chain",
+      "link": "https://cryptopanic.com/news/chainlink/10778909/Chainlink-Oracles-go-live-on-Binance-Smart-Chain",
+      "pubDate": "2020-12-10T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The feeling when I'm waiting for Red Packet #Airdrop #redpacket #HRC30",
+      "link": "https://cryptopanic.com/news/10777751/The-feeling-when-Im-waiting-for-Red-Packet-Airdrop-redpacket-HRC30",
+      "pubDate": "2020-12-10T12:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Singapore’s DBS Bank announces plans to launch BTC, XRP, ETH-offering exchange",
+      "link": "https://cryptopanic.com/news/10777730/Singapores-DBS-Bank-announces-plans-to-launch-BTC-XRP-ETH-offering-exchange",
+      "pubDate": "2020-12-10T12:23:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

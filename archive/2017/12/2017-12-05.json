@@ -1,0 +1,25 @@
+{
+  "date": "2017-12-05",
+  "fetchedAt": "2026-02-05T07:27:06.816Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "An Introduction to Bitcoin Cash",
+      "link": "https://cryptopanic.com/news/526074/An-Introduction-to-Bitcoin-Cash",
+      "pubDate": "2017-12-05T20:15:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    }
+  ]
+}

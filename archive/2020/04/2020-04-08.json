@@ -1,0 +1,25 @@
+{
+  "date": "2020-04-08",
+  "fetchedAt": "2026-02-05T07:27:06.865Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "VeChain (VET) Partners U.S. Startup to Verify Authenticity of 200K KN95 Masks",
+      "link": "https://cryptopanic.com/news/8469301/VeChain-VET-Partners-US-Startup-to-Verify-Authenticity-of-200K-KN95-Masks",
+      "pubDate": "2020-04-08T16:00:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

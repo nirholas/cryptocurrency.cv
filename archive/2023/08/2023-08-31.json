@@ -1,0 +1,836 @@
+{
+  "date": "2023-08-31",
+  "fetchedAt": "2026-02-05T07:27:07.056Z",
+  "articleCount": 58,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Cash Traders Move Into Profit, But Can The Rally Continue?",
+      "link": "https://cryptopanic.com/news/18872832/Bitcoin-Cash-Traders-Move-Into-Profit-But-Can-The-Rally-Continue",
+      "pubDate": "2023-08-31T23:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano to be Bigger than Bitcoin and Ethereum? Hoskinson Reveals Why ADA is Primed to Explode",
+      "link": "https://cryptopanic.com/news/18872782/Cardano-to-be-Bigger-than-Bitcoin-and-Ethereum-Hoskinson-Reveals-Why-ADA-is-Primed-to-Explode",
+      "pubDate": "2023-08-31T22:03:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Hoskinson highlighted the importance of Cardano as a leader in the blockchain space, saying that “the other two big guys, Ethereum and Bitcoin, have recused themselves”.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 20,
+        "negative": 13
+      }
+    },
+    {
+      "title": "Cardano’s Hoskinson Clears Air on NFT Project Affiliations",
+      "link": "https://cryptopanic.com/news/18872661/Cardanos-Hoskinson-Clears-Air-on-NFT-Project-Affiliations",
+      "pubDate": "2023-08-31T20:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "Charles Hoskinson delves into his perspective on Cardano NFTs, sharing why he stays sidelined.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Maker (MKR) gains amid 2-month whale accumulation",
+      "link": "https://cryptopanic.com/news/maker/18872621/Maker-MKR-gains-amid-2-month-whale-accumulation",
+      "pubDate": "2023-08-31T20:34:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "MakerDAO’s MKR Token Jumps 10%, Defying Crypto Market Slump",
+      "link": "https://cryptopanic.com/news/maker/18872620/MakerDAOs-MKR-Token-Jumps-10-Defying-Crypto-Market-Slump",
+      "pubDate": "2023-08-31T20:17:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Toncoin and Unibot Are Up Over 20% This Week. Borroe Finance Cruises Past $600k Milestone",
+      "link": "https://cryptopanic.com/news/flow/18872617/Toncoin-and-Unibot-Are-Up-Over-20-This-Week-Borroe-Finance-Cruises-Past-600k-Milestone",
+      "pubDate": "2023-08-31T19:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI",
+        "TON"
+      ]
+    },
+    {
+      "title": "Binance to Gradually Phase Out Support for BUSD Stablecoin",
+      "link": "https://cryptopanic.com/news/18872511/Binance-to-Gradually-Phase-Out-Support-for-BUSD-Stablecoin",
+      "pubDate": "2023-08-31T19:30:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BUSD"
+      ]
+    },
+    {
+      "title": "BREAKING: SEC Postpones WisdomTree's Spot Bitcoin ETF Application!",
+      "link": "https://cryptopanic.com/news/18872486/BREAKING-SEC-Postpones-WisdomTrees-Spot-Bitcoin-ETF-Application",
+      "pubDate": "2023-08-31T19:16:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "According to the latest information, the SEC postponed WisdomTree's spot Bitcoin ETF application. According to the documents, the SEC also postponed the Bitcoin Spot ETF application of Blackrock, Invesco Galaxy, Vaneck, Bitwise and Valkyrie. “The Commission finds it appropriate to establish a longer period for taking action on the proposed rule change in order to […] Continue Reading:...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 10
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Maker (MKR) Unleashed: Price Soars 12% In One Day – What’s Behind The Surge?",
+      "link": "https://cryptopanic.com/news/maker/18872465/Maker-MKR-Unleashed-Price-Soars-12-In-One-Day-Whats-Behind-The-Surge",
+      "pubDate": "2023-08-31T19:00:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XRP",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Binance preps switch to little-used stablecoin, FDUSD",
+      "link": "https://cryptopanic.com/news/18872447/Binance-preps-switch-to-little-used-stablecoin-FDUSD",
+      "pubDate": "2023-08-31T18:53:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "FDUSD"
+      ]
+    },
+    {
+      "title": "Polygon Affirms ETH Alignment with Innovative Plan to Fund Core Devs",
+      "link": "https://cryptopanic.com/news/18872372/Polygon-Affirms-ETH-Alignment-with-Innovative-Plan-to-Fund-Core-Devs",
+      "pubDate": "2023-08-31T18:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DAI",
+        "MATIC"
+      ]
+    },
+    {
+      "title": "The ApeCoin Quandary: Why Additional Losses Could Persist",
+      "link": "https://cryptopanic.com/news/18872348/The-ApeCoin-Quandary-Why-Additional-Losses-Could-Persist",
+      "pubDate": "2023-08-31T18:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "SHIB",
+        "APE"
+      ]
+    },
+    {
+      "title": "Major Japanese Exchange to Support Shiba Inu on Polygon",
+      "link": "https://cryptopanic.com/news/18872140/Major-Japanese-Exchange-to-Support-Shiba-Inu-on-Polygon",
+      "pubDate": "2023-08-31T16:46:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DAI",
+        "SHIB",
+        "MATIC"
+      ]
+    },
+    {
+      "title": "Maker (MKR) up 14% as Its New Protocol Goes Live",
+      "link": "https://cryptopanic.com/news/maker/18872200/Maker-MKR-up-14-as-Its-New-Protocol-Goes-Live",
+      "pubDate": "2023-08-31T16:38:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Mastercard Partners with Nexo for Simplified Cryptocurrency Transactions",
+      "link": "https://cryptopanic.com/news/18872143/Mastercard-Partners-with-Nexo-for-Simplified-Cryptocurrency-Transactions",
+      "pubDate": "2023-08-31T16:17:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEXO"
+      ]
+    },
+    {
+      "title": "DWF Labs, The Market Maker In The Spotlight Lately, Made A Huge Profit This Month – Here Are All Its Trades",
+      "link": "https://cryptopanic.com/news/maker/18872115/DWF-Labs-The-Market-Maker-In-The-Spotlight-Lately-Made-A-Huge-Profit-This-Month-Here-Are-All-Its-Trades",
+      "pubDate": "2023-08-31T16:05:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Major Japanese Exchange Adds Polygon Support for Shiba Inu (SHIB)",
+      "link": "https://cryptopanic.com/news/18872059/Major-Japanese-Exchange-Adds-Polygon-Support-for-Shiba-Inu-SHIB",
+      "pubDate": "2023-08-31T15:48:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DAI",
+        "SHIB",
+        "MATIC"
+      ]
+    },
+    {
+      "title": "Can Stacks (STX) Keep Riding on the Bitcoin (BTC) Wave?",
+      "link": "https://cryptopanic.com/news/18872002/Can-Stacks-STX-Keep-Riding-on-the-Bitcoin-BTC-Wave",
+      "pubDate": "2023-08-31T15:26:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH",
+        "STX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance Confirms Demise of BUSD and Encourages Users to Convert to FDUSD",
+      "link": "https://cryptopanic.com/news/18872020/Binance-Confirms-Demise-of-BUSD-and-Encourages-Users-to-Convert-to-FDUSD",
+      "pubDate": "2023-08-31T15:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BUSD"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Cryptocurrency XDC Network Down More Than 9% Within 24 hours",
+      "link": "https://cryptopanic.com/news/18871968/Cryptocurrency-XDC-Network-Down-More-Than-9-Within-24-hours",
+      "pubDate": "2023-08-31T15:00:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XDC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "August Chronicles Another Month of Decline as 9 of 10 Leading Stablecoins Witness Supply Contraction",
+      "link": "https://cryptopanic.com/news/18871843/August-Chronicles-Another-Month-of-Decline-as-9-of-10-Leading-Stablecoins-Witness-Supply-Contraction",
+      "pubDate": "2023-08-31T14:30:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "BUSD",
+        "DAI"
+      ]
+    },
+    {
+      "title": "Maker (MKR) price soars amid South Korea expansion push",
+      "link": "https://cryptopanic.com/news/maker/18871810/Maker-MKR-price-soars-amid-South-Korea-expansion-push",
+      "pubDate": "2023-08-31T14:26:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Binance to discontinue BUSD support; recommends this alternative",
+      "link": "https://cryptopanic.com/news/18871754/Binance-to-discontinue-BUSD-support-recommends-this-alternative",
+      "pubDate": "2023-08-31T14:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BUSD"
+      ]
+    },
+    {
+      "title": "Elon Musk Officially Denies X Coin, But What About Dogecoin (DOGE)?",
+      "link": "https://cryptopanic.com/news/18871724/Elon-Musk-Officially-Denies-X-Coin-But-What-About-Dogecoin-DOGE",
+      "pubDate": "2023-08-31T13:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Tesla and SpaceX founder says 'no' to X coin, ignites debate over DOGE's future",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Cash Traders Back In Profit As BCH Surges 15%",
+      "link": "https://cryptopanic.com/news/18871716/Bitcoin-Cash-Traders-Back-In-Profit-As-BCH-Surges-15",
+      "pubDate": "2023-08-31T13:40:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Terra Luna Classic (LUNC) Proposes A Decentralized Debit Card",
+      "link": "https://cryptopanic.com/news/18871575/Terra-Luna-Classic-LUNC-Proposes-A-Decentralized-Debit-Card",
+      "pubDate": "2023-08-31T13:35:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LUNC"
+      ]
+    },
+    {
+      "title": "Binance to end support for BUSD, encourages conversion to FDUSD",
+      "link": "https://cryptopanic.com/news/18871689/Binance-to-end-support-for-BUSD-encourages-conversion-to-FDUSD",
+      "pubDate": "2023-08-31T13:32:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BUSD"
+      ]
+    },
+    {
+      "title": "US officials extend export curbs on Nvidia AI chip to ‘some Middle Eastern countries’",
+      "link": "https://cryptopanic.com/news/maker/18871577/US-officials-extend-export-curbs-on-Nvidia-AI-chip-to-some-Middle-Eastern-countries",
+      "pubDate": "2023-08-31T13:04:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Offchain Labs introduces Arbitrum Stylus to expand language support for Ethereum Layer 2 dapps",
+      "link": "https://cryptopanic.com/news/18871537/Offchain-Labs-introduces-Arbitrum-Stylus-to-expand-language-support-for-Ethereum-Layer-2-dapps",
+      "pubDate": "2023-08-31T13:00:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Offchain Labs introduced a technical implementation called Arbitrum Stylus to support smart contract development in multiple languages.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance Phasing Out Support for BUSD Stablecoin by Q1 2024",
+      "link": "https://cryptopanic.com/news/18871467/Binance-Phasing-Out-Support-for-BUSD-Stablecoin-by-Q1-2024",
+      "pubDate": "2023-08-31T12:39:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "BUSD",
+        "TRX"
+      ]
+    },
+    {
+      "title": "Binance to Phase Out BUSD Support, ‘Encourages’ Users To Convert Into Other Stablecoins",
+      "link": "https://cryptopanic.com/news/18871429/Binance-to-Phase-Out-BUSD-Support-Encourages-Users-To-Convert-Into-Other-Stablecoins",
+      "pubDate": "2023-08-31T12:06:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BUSD"
+      ]
+    },
+    {
+      "title": "The End of BUSD on Binance: What Holders Need to Know",
+      "link": "https://cryptopanic.com/news/18871393/The-End-of-BUSD-on-Binance-What-Holders-Need-to-Know",
+      "pubDate": "2023-08-31T12:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BUSD"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Can Shiba Inu Climb Before September Starts? Evaluating The $0.00001 Projection",
+      "link": "https://cryptopanic.com/news/18871398/Can-Shiba-Inu-Climb-Before-September-Starts-Evaluating-The-000001-Projection",
+      "pubDate": "2023-08-31T12:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "SHIB",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Axie Infinity Price Prediction: AXS Chasing $5? InQubeta’s Future Also Looking Bright.",
+      "link": "https://cryptopanic.com/news/axie-infinity/18871526/Axie-Infinity-Price-Prediction-AXS-Chasing-5-InQubetas-Future-Also-Looking-Bright",
+      "pubDate": "2023-08-31T12:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "Binance to Phase Out BUSD Support in Collaboration with Paxos",
+      "link": "https://cryptopanic.com/news/18871354/Binance-to-Phase-Out-BUSD-Support-in-Collaboration-with-Paxos",
+      "pubDate": "2023-08-31T11:50:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BUSD"
+      ]
+    },
+    {
+      "title": "Binance nudges users towards FDUSD as it ‘gradually’ phases BUSD out",
+      "link": "https://cryptopanic.com/news/18871217/Binance-nudges-users-towards-FDUSD-as-it-gradually-phases-BUSD-out",
+      "pubDate": "2023-08-31T11:08:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BUSD"
+      ]
+    },
+    {
+      "title": "Satoshi Nakamoto Unmasked: Speculation and Theories Claim CIA Targeted Bitcoin Creator",
+      "link": "https://cryptopanic.com/news/18871333/Satoshi-Nakamoto-Unmasked-Speculation-and-Theories-Claim-CIA-Targeted-Bitcoin-Creator",
+      "pubDate": "2023-08-31T11:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Binance Set to Wind Down Support for BUSD: A New Stablecoin Ahead?",
+      "link": "https://cryptopanic.com/news/18871180/Binance-Set-to-Wind-Down-Support-for-BUSD-A-New-Stablecoin-Ahead",
+      "pubDate": "2023-08-31T10:53:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BUSD"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Binance to Discontinue BUSD Support in Q1 2024",
+      "link": "https://cryptopanic.com/news/18871168/Binance-to-Discontinue-BUSD-Support-in-Q1-2024",
+      "pubDate": "2023-08-31T10:45:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BUSD"
+      ]
+    },
+    {
+      "title": "Binance Calls for Converting BUSD Assets to Other Stablecoins!",
+      "link": "https://cryptopanic.com/news/18871144/Binance-Calls-for-Converting-BUSD-Assets-to-Other-Stablecoins",
+      "pubDate": "2023-08-31T10:40:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BUSD"
+      ]
+    },
+    {
+      "title": "Binance To Phase Out BUSD By 2024",
+      "link": "https://cryptopanic.com/news/18871139/Binance-To-Phase-Out-BUSD-By-2024",
+      "pubDate": "2023-08-31T10:35:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "BNB",
+        "BUSD",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Algorand (ALGO) Price Shows Signs of Life but Critical Resistance at $0.11 Remains Intact",
+      "link": "https://cryptopanic.com/news/18871147/Algorand-ALGO-Price-Shows-Signs-of-Life-but-Critical-Resistance-at-011-Remains-Intact",
+      "pubDate": "2023-08-31T10:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ALGO"
+      ]
+    },
+    {
+      "title": "EOS Expands Into Asian Markets Following Regulatory Nod In Japan",
+      "link": "https://cryptopanic.com/news/18871081/EOS-Expands-Into-Asian-Markets-Following-Regulatory-Nod-In-Japan",
+      "pubDate": "2023-08-31T10:11:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ]
+    },
+    {
+      "title": "Polkadot Price Target – Will DOT Hit The $5.5 Mark As August Ends?",
+      "link": "https://cryptopanic.com/news/18871059/Polkadot-Price-Target-Will-DOT-Hit-The-55-Mark-As-August-Ends",
+      "pubDate": "2023-08-31T10:00:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "DOT",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "First Digital USD (FDUSD) reaps big as Binance cease BUSD support",
+      "link": "https://cryptopanic.com/news/18871001/First-Digital-USD-FDUSD-reaps-big-as-Binance-cease-BUSD-support",
+      "pubDate": "2023-08-31T09:52:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BUSD"
+      ]
+    },
+    {
+      "title": "Binance to 'Gradually' End Support for BUSD Products",
+      "link": "https://cryptopanic.com/news/18870818/Binance-to-Gradually-End-Support-for-BUSD-Products",
+      "pubDate": "2023-08-31T08:27:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BUSD"
+      ]
+    },
+    {
+      "title": "Binance pushes new stablecoin as it confirms plan to cease BUSD support",
+      "link": "https://cryptopanic.com/news/18870758/Binance-pushes-new-stablecoin-as-it-confirms-plan-to-cease-BUSD-support",
+      "pubDate": "2023-08-31T08:04:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BUSD"
+      ]
+    },
+    {
+      "title": "Prices and crypto news of Cosmos (ATOM), Avalanche (AVAX) and MultiversX (formerly Elrond)",
+      "link": "https://cryptopanic.com/news/elrond-erd-2/18870665/Prices-and-crypto-news-of-Cosmos-ATOM-Avalanche-AVAX-and-MultiversX-formerly-Elrond",
+      "pubDate": "2023-08-31T06:53:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "EGLD"
+      ]
+    },
+    {
+      "title": "Core Quickswap Members Launch 50x Leverage on Kava Chain",
+      "link": "https://cryptopanic.com/news/18870681/Core-Quickswap-Members-Launch-50x-Leverage-on-Kava-Chain",
+      "pubDate": "2023-08-31T06:47:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "KAVA"
+      ]
+    },
+    {
+      "title": "EOS Price Analysis: Bulls Aim Increase To $0.70",
+      "link": "https://cryptopanic.com/news/18870572/EOS-Price-Analysis-Bulls-Aim-Increase-To-070",
+      "pubDate": "2023-08-31T06:08:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ]
+    },
+    {
+      "title": "Base is a silver lining in a struggling NFT market: Here’s why",
+      "link": "https://cryptopanic.com/news/18870429/Base-is-a-silver-lining-in-a-struggling-NFT-market-Heres-why",
+      "pubDate": "2023-08-31T03:30:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "APE"
+      ]
+    },
+    {
+      "title": "Bitcoin To $185,000 if Spot ETF Is Approved: Expert",
+      "link": "https://cryptopanic.com/news/18870400/Bitcoin-To-185000-if-Spot-ETF-Is-Approved-Expert",
+      "pubDate": "2023-08-31T03:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "If the United States Securities and Exchange Commission (SEC) ends up approving a spot Bitcoin exchange-traded fund (ETF) anytime in the coming days or weeks, one expert is confident BTC prices will explode more than 6x to $185,000. As of August 30, BTC is changing hands below $30,000 but remains firm. Bitcoin To $185,000? In a recent CNBC interview, Tom Lee, who regularly comments on Bitcoin...",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 20,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "AAVE headed toward a three-year support zone; will buyers invest?",
+      "link": "https://cryptopanic.com/news/18870380/AAVE-headed-toward-a-three-year-support-zone-will-buyers-invest",
+      "pubDate": "2023-08-31T02:30:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Uniswap lawsuit judge calls Ether a commodity in dismissal order",
+      "link": "https://cryptopanic.com/news/18870302/Uniswap-lawsuit-judge-calls-Ether-a-commodity-in-dismissal-order",
+      "pubDate": "2023-08-31T00:37:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "United States District Court Judge Katherine Polk Failla is also the judge overseeing the Securities and Exchange Commission’s lawsuit against crypto exchange Coinbase.",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "EOS Network gains ground in Japan; EOS surges despite market troubles",
+      "link": "https://cryptopanic.com/news/18870292/EOS-Network-gains-ground-in-Japan-EOS-surges-despite-market-troubles",
+      "pubDate": "2023-08-31T00:30:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ]
+    },
+    {
+      "title": "Rusty Matveev – Calaxy – The Smart Economy Podcast: Episode 45",
+      "link": "https://cryptopanic.com/news/18877322/Rusty-Matveev-Calaxy-The-Smart-Economy-Podcast-Episode-45",
+      "pubDate": "2023-08-31T00:19:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Kinetix eyes GMX’s path, aims to revolutionize Kava Chain with perpetual swaps",
+      "link": "https://cryptopanic.com/news/18870256/Kinetix-eyes-GMXs-path-aims-to-revolutionize-Kava-Chain-with-perpetual-swaps",
+      "pubDate": "2023-08-31T00:01:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KAVA"
+      ]
+    },
+    {
+      "title": "Cardano (ADA) Price Nears A Pivotal Shift – A Breach Into The $0.3 Level?",
+      "link": "https://cryptopanic.com/news/18870260/Cardano-ADA-Price-Nears-A-Pivotal-Shift-A-Breach-Into-The-03-Level",
+      "pubDate": "2023-08-31T00:00:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Cardano (ADA) enthusiasts are eagerly watching the charts as the cryptocurrency’s price forms a distinctive triangle pattern, suggesting an imminent breakout that could mark a significant shift in its trajectory. This technical formation occurs when the price fluctuations of an asset are confined within converging trendlines, creating a triangle-like shape on the chart. Traders interpret this...",
+      "currencies": [
+        "ADA",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    }
+  ]
+}

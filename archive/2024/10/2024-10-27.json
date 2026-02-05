@@ -1,0 +1,428 @@
+{
+  "date": "2024-10-27",
+  "fetchedAt": "2026-02-05T07:27:08.366Z",
+  "articleCount": 28,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "MEW soars 47%, but analysts say a pullback could be coming – Here’s why",
+      "link": "https://cryptopanic.com/news/20104388/MEW-soars-47-but-analysts-say-a-pullback-could-be-coming-Heres-why?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T23:00:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MEW",
+        "MEME"
+      ]
+    },
+    {
+      "title": "Goatseus Maximus (GOAT) Slumps 24%, Sparking Bearish Bets",
+      "link": "https://cryptopanic.com/news/20104463/Goatseus-Maximus-GOAT-Slumps-24-Sparking-Bearish-Bets?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T23:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "ATH",
+        "GOAT"
+      ]
+    },
+    {
+      "title": "Terra Classic Votes on This Key Community Proposal",
+      "link": "https://cryptopanic.com/news/20104228/Terra-Classic-Votes-on-This-Key-Community-Proposal?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T21:44:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LUNA"
+      ]
+    },
+    {
+      "title": "Bitcoin price push through $68K adds strength to SOL, DOGE, RUNE and BGB",
+      "link": "https://cryptopanic.com/news/20104162/Bitcoin-price-push-through-68K-adds-strength-to-SOL-DOGE-RUNE-and-BGB?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T21:08:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "DOGE",
+        "RUNE",
+        "BGB"
+      ]
+    },
+    {
+      "title": "Lens Protocol Prepares for Q4 ICO on Polygon",
+      "link": "https://cryptopanic.com/news/20104098/Lens-Protocol-Prepares-for-Q4-ICO-on-Polygon?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T20:59:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "MATIC"
+      ]
+    },
+    {
+      "title": "Shiba Inu Launches ShibaSwap 2.0 with Major Upgrades",
+      "link": "https://cryptopanic.com/news/20104080/Shiba-Inu-Launches-ShibaSwap-20-with-Major-Upgrades?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T20:55:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Shiba Inu unveils ShibaSwap 2.0, bringing enhanced features and greater accessibility, aiming to boost activity on the Shibarium network.",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto market’s weekly winners and losers – SAFE, RAY, IMX, APE",
+      "link": "https://cryptopanic.com/news/20103827/Crypto-markets-weekly-winners-and-losers-SAFE-RAY-IMX-APE?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T19:00:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "APE",
+        "IMX",
+        "SAFE",
+        "RAY"
+      ]
+    },
+    {
+      "title": "Marc Andreesen shoutouts help AI-powered VC fund ai16z to nearly $100 million market cap",
+      "link": "https://cryptopanic.com/news/20103790/Marc-Andreesen-shoutouts-help-AI-powered-VC-fund-ai16z-to-nearly-100-million-market-cap?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T18:39:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AI16Z",
+        "VC"
+      ]
+    },
+    {
+      "title": "Coinbase Reveals Tool for Faster Blockchain AI Agent Creation",
+      "link": "https://cryptopanic.com/news/20103799/Coinbase-Reveals-Tool-for-Faster-Blockchain-AI-Agent-Creation?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T18:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MATIC",
+        "ARB"
+      ]
+    },
+    {
+      "title": "Toncoin grows 210x faster than Ethereum: TON over ETH soon?",
+      "link": "https://cryptopanic.com/news/20103688/Toncoin-grows-210x-faster-than-Ethereum-TON-over-ETH-soon?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T18:00:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "TON addresses have been growing faster than ETH addresses, and could soon flip Ethereum!",
+      "currencies": [
+        "ETH",
+        "TON"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Ethereum Rally Stalls Due to 2-Month High-Profit Taking",
+      "link": "https://cryptopanic.com/news/20103670/Ethereum-Rally-Stalls-Due-to-2-Month-High-Profit-Taking?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "RAY"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Price Holds Strong Above $2,400 — Is $2,650 The Next Stop?",
+      "link": "https://cryptopanic.com/news/20103354/Ethereum-Price-Holds-Strong-Above-2400-Is-2650-The-Next-Stop?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T15:30:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "ALI"
+      ]
+    },
+    {
+      "title": "3 signs Ethereum price is gearing up for a rebound toward $6K",
+      "link": "https://cryptopanic.com/news/20103288/3-signs-Ethereum-price-is-gearing-up-for-a-rebound-toward-6K?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T15:06:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum is now testing a key support level that last helped it rebound by over 160%. Multiple factors support this bullish fractal.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano To Host Nation States By 2030 – Charles Hoskinson",
+      "link": "https://cryptopanic.com/news/20103156/Cardano-To-Host-Nation-States-By-2030-Charles-Hoskinson?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T14:33:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano founder Charles Hoskinson has shared a bold vision that may drive better decentralization and self-governing systems in the protocol. In a video on X, Hoskinson shared reasons his plans would work. He believes running a nation-state by 2030 might seem ambitious, but it remains achievable as Cardano can handle it. Cardano As a Tool […]",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Uniswap (UNI) and PancakeSwap (CAKE) Show Growth, But ZDEX’s Capital Efficiency Could Bring Massive Returns Up to 1000%",
+      "link": "https://cryptopanic.com/news/20103476/Uniswap-UNI-and-PancakeSwap-CAKE-Show-Growth-But-ZDEXs-Capital-Efficiency-Could-Bring-Massive-Returns-Up-to-1000?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T14:01:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "CAKE"
+      ]
+    },
+    {
+      "title": "Ethereum Prepares For Potential Rally To $6,000, Analyst Says",
+      "link": "https://cryptopanic.com/news/20102944/Ethereum-Prepares-For-Potential-Rally-To-6000-Analyst-Says?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T13:30:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "SOL",
+        "ALI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Justin Sun Reveals USDD Upgrade as Tron’s ‘Top Priority” in Q4",
+      "link": "https://cryptopanic.com/news/20102927/Justin-Sun-Reveals-USDD-Upgrade-as-Trons-Top-Priority-in-Q4?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T13:25:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "USDD"
+      ]
+    },
+    {
+      "title": "The Best Altcoins to Invest in October-November: SOL, CYBRO, KAS, AAVE Are Among Experts Hottest Picks",
+      "link": "https://cryptopanic.com/news/20102900/The-Best-Altcoins-to-Invest-in-October-November-SOL-CYBRO-KAS-AAVE-Are-Among-Experts-Hottest-Picks?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T13:04:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "AAVE",
+        "KAS"
+      ]
+    },
+    {
+      "title": "Exploring the Impact of Zig Network (ZIG) on Ripple (XRP) and Polkadot (DOT) Market Dynamics",
+      "link": "https://cryptopanic.com/news/20102749/Exploring-the-Impact-of-Zig-Network-ZIG-on-Ripple-XRP-and-Polkadot-DOT-Market-Dynamics?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T12:50:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "DOT",
+        "ZIG"
+      ]
+    },
+    {
+      "title": "$1k invested into the Top Ten Cryptos in January 2021 - Month 45 (UP +196%)",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/20107954/1k-invested-into-the-Top-Ten-Cryptos-in-January-2021-Month-45-UP-196",
+      "pubDate": "2024-10-27T12:38:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "XRP",
+        "MOON"
+      ]
+    },
+    {
+      "title": "Treasure Tapper Daily Code 28 October 2024, Tap to Earn $TREZ",
+      "link": "https://cryptopanic.com/news/20102956/Treasure-Tapper-Daily-Code-28-October-2024-Tap-to-Earn-TREZ?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T11:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "GALA"
+      ]
+    },
+    {
+      "title": "Cats Youtube Code Today October 28, 2024: Boost Your Earnings",
+      "link": "https://cryptopanic.com/news/20102606/Cats-Youtube-Code-Today-October-28-2024-Boost-Your-Earnings?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T10:06:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS",
+        "TON"
+      ]
+    },
+    {
+      "title": "Cardano (ADA) Price Stalls at $0.33 as 2-Month-Old Bullish Momentum Fades",
+      "link": "https://cryptopanic.com/news/20102328/Cardano-ADA-Price-Stalls-at-033-as-2-Month-Old-Bullish-Momentum-Fades?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T09:47:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Cardano (ADA) price has been trapped in a consolidation phase since early August, unable to break free from macro-level stagnation. Despite initial signs of bullish momentum, ADA has struggled to sustain upward movement. This prolonged consolidation has left investors questioning what’s next for Cardano’s price as it approaches key support levels. Cardano Faces the...",
+      "currencies": [
+        "BTC",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "An AI Bot Worth Millions? The Unbelievable Story of Truth Terminal and GOAT",
+      "link": "https://cryptopanic.com/news/20101767/An-AI-Bot-Worth-Millions-The-Unbelievable-Story-of-Truth-Terminal-and-GOAT?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T07:30:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "GOAT"
+      ]
+    },
+    {
+      "title": "Altcoin seasons ‘will be weaker’ moving forward, says analyst",
+      "link": "https://cryptopanic.com/news/20101651/Altcoin-seasons-will-be-weaker-moving-forward-says-analyst?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T06:53:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "WOO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Why Solana Cannot Become the Global Blockchain Backbone",
+      "link": "https://cryptopanic.com/news/20101373/Why-Solana-Cannot-Become-the-Global-Blockchain-Backbone?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T04:11:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Why Solana cannot become the global blockchain backbone: Due to centralization, bandwidth needs, and lack of client diversity, Solana struggles to match Ethereum.",
+      "currencies": [
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Biggest Altcoin Gainers of the Fourth Week of October 2024",
+      "link": "https://cryptopanic.com/news/20101379/Biggest-Altcoin-Gainers-of-the-Fourth-Week-of-October-2024?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T04:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "SAFE",
+        "RAY"
+      ]
+    },
+    {
+      "title": "Helium (HNT) Price Aims for 20% Surge: Is It A Buy For Investors?",
+      "link": "https://cryptopanic.com/news/20101039/Helium-HNT-Price-Aims-for-20-Surge-Is-It-A-Buy-For-Investors?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-27T00:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "date": "2018-10-06",
+  "fetchedAt": "2026-02-05T07:27:06.994Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin & Altcoins to Rally in Q4? The Bull & Bear Cases",
+      "link": "https://cryptopanic.com/news/litecoin/3261717/Bitcoin-Altcoins-to-Rally-in-Q4-The-Bull-Bear-Cases",
+      "pubDate": "2018-10-06T19:13:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto.Com Will Ship Over 100,000 Crypto Visa Debit Cards in Asia in 2 Months",
+      "link": "https://cryptopanic.com/news/3261020/CryptoCom-Will-Ship-Over-100000-Crypto-Visa-Debit-Cards-in-Asia-in-2-Months",
+      "pubDate": "2018-10-06T17:29:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BTG"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

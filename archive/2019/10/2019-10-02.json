@@ -1,0 +1,40 @@
+{
+  "date": "2019-10-02",
+  "fetchedAt": "2026-02-05T07:27:07.881Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Monero's price drops 2%, Stellar and Bitcoin SV not far behind",
+      "link": "https://cryptopanic.com/news/6746065/Moneros-price-drops-2-Stellar-and-Bitcoin-SV-not-far-behind",
+      "pubDate": "2019-10-02T14:17:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "XLM",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @AvdiuSazan: @BitcoinSuisseAG @ian_simpson80 @TezosFoundation @cosmos @ethereum and yet you don't know or even worse ignore Swiss based…",
+      "link": "https://cryptopanic.com/news/11431139/RT-AvdiuSazan-BitcoinSuisseAG-ian_simpson80-TezosFoundation-cosmos-ethereum-and-yet-you-dont-know-or-even-worse-ignore-Swiss-based?mtm_campaign=API-OFA",
+      "pubDate": "2019-10-02T07:27:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "AEUR"
+      ]
+    }
+  ]
+}

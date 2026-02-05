@@ -1,0 +1,55 @@
+{
+  "date": "2019-09-17",
+  "fetchedAt": "2026-02-05T07:27:06.978Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Regulated Digital Gold from Paxos Invigorates Harmony Between Traditional and Tokenized Assets",
+      "link": "https://cryptopanic.com/news/6600784/Regulated-Digital-Gold-from-Paxos-Invigorates-Harmony-Between-Traditional-and-Tokenized-Assets",
+      "pubDate": "2019-09-17T20:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "IOTA Debuts Permanode Solution Called Chronicle",
+      "link": "https://cryptopanic.com/news/6600346/IOTA-Debuts-Permanode-Solution-Called-Chronicle",
+      "pubDate": "2019-09-17T19:08:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Pi Network — The First Crypto You Can Mine on Your Phone",
+      "link": "https://cryptopanic.com/news/stellar/6597214/Pi-Network-The-First-Crypto-You-Can-Mine-on-Your-Phone",
+      "pubDate": "2019-09-17T13:40:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

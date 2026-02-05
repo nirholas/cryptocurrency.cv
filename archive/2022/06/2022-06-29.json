@@ -1,0 +1,720 @@
+{
+  "date": "2022-06-29",
+  "fetchedAt": "2026-02-05T07:27:07.571Z",
+  "articleCount": 46,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Shiba Inu ($SHIB), Dogecoin ($DOGE) Added as Payment Methods on Coinbase Commerce",
+      "link": "https://cryptopanic.com/news/dogecoin/15633878/Shiba-Inu-SHIB-Dogecoin-DOGE-Added-as-Payment-Methods-on-Coinbase-Commerce",
+      "pubDate": "2022-06-29T22:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Merchants using leading cryptocurrency firm Coinbase for their commerce solutions can now accepts payments in a wider number of digital currencies, including meme-inspired tokens Shiba Inu ($SHIB) and Dogecoin ($DOGE). In a new announcement Coinbase Commerce, a division of the Nasdaq-listed exchange Coinbase Global, reveled that as part of its goal to bring together consumers […]",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Analyst Reveals Big Downside Target for Ethereum, Predicts Bitcoin Bottom Scenario",
+      "link": "https://cryptopanic.com/news/bitcoin/15633789/Crypto-Analyst-Reveals-Big-Downside-Target-for-Ethereum-Predicts-Bitcoin-Bottom-Scenario",
+      "pubDate": "2022-06-29T22:05:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A popular analyst is digging into the charts to set low-end price targets for the two largest crypto assets by market cap. Pseudonymous crypto trader Altcoin Sherpa tells his 179,500 Twitter followers he’s watching leading smart contract platform Ethereum (ETH) at around $975 to $1,425 while warning that further capitulation could send it tumbling to […]",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "KuCoin Announces The Full Launch Of Its Web3 Wallet",
+      "link": "https://cryptopanic.com/news/15633575/KuCoin-Announces-The-Full-Launch-Of-Its-Web3-Wallet",
+      "pubDate": "2022-06-29T20:27:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "In a press release on Tuesday, leading crypto exchange KuCoin announced the full launch of its Web 3 wallet. KuCoin revealed that it was now fully ready after an extended beta testing period of the wallet. According to the exchange, about 3 million users took part in the beta tests, whose feedback led to significant […]",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "KCS"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Speaking now at @PolkadotDecoded: @AIRA_Robonomics' @vadim_manaenko with an overview of Smart Home on #web3 cloud.…",
+      "link": "https://cryptopanic.com/news/15638310/Speaking-now-at-PolkadotDecoded-AIRA_Robonomics-vadim_manaenko-with-an-overview-of-Smart-Home-on-web3-cloud",
+      "pubDate": "2022-06-29T20:24:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KSM"
+      ]
+    },
+    {
+      "title": "KLAPPERS! Our Lockdrop event where you can earn KLAP and KLAY tokens officially ENDS in five hours time. Do not…",
+      "link": "https://cryptopanic.com/news/klay-token/15638226/KLAPPERS-Our-Lockdrop-event-where-you-can-earn-KLAP-and-KLAY-tokens-officially-ENDS-in-five-hours-time-Do-not",
+      "pubDate": "2022-06-29T19:11:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "KLAP"
+      ]
+    },
+    {
+      "title": "It is 12:00PM EST on Thursday June 30th. It's been 16 hours since The Great $CVX Unlockening. Lets talk about it...…",
+      "link": "https://cryptopanic.com/news/15635348/It-is-1200PM-EST-on-Thursday-June-30th-Its-been-16-hours-since-The-Great-CVX-Unlockening-Lets-talk-about-it",
+      "pubDate": "2022-06-29T18:49:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CVX",
+        "BADGER"
+      ]
+    },
+    {
+      "title": "RT @Harshita_125: Great initiative by @devfolio. Excited to be mentoring projects as part of @0xPolygon fellowship",
+      "link": "https://cryptopanic.com/news/16446381/RT-Harshita_125-Great-initiative-by-devfolio-Excited-to-be-mentoring-projects-as-part-of-0xPolygon-fellowship",
+      "pubDate": "2022-06-29T18:47:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "SC"
+      ]
+    },
+    {
+      "title": "Price analysis 6/29: BTC, ETH, BNB, XRP, ADA, SOL, DOGE, DOT, SHIB, LEO",
+      "link": "https://cryptopanic.com/news/15633234/Price-analysis-629-BTC-ETH-BNB-XRP-ADA-SOL-DOGE-DOT-SHIB-LEO",
+      "pubDate": "2022-06-29T18:36:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin and altcoins gave up the gains of last week’s relief rally and June 29’s dip below $20,000 suggests bears are intent on pushing the market back to its yearly lows.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "XRP",
+        "DOGE",
+        "DOT",
+        "SHIB",
+        "LEO"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "What is the role of $KLAY Token in the @klaytn_official Ecosystem? Let’s find out here David Shin head of globa…",
+      "link": "https://cryptopanic.com/news/klay-token/15638321/What-is-the-role-of-KLAY-Token-in-the-klaytn_official-Ecosystem-Lets-find-out-here-David-Shin-head-of-globa",
+      "pubDate": "2022-06-29T17:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "LCX"
+      ]
+    },
+    {
+      "title": "SEC Chair Gary Gensler Singles Out Bitcoin, Says BTC Only Crypto He’s Willing To Label a Commodity",
+      "link": "https://cryptopanic.com/news/bitcoin/15632937/SEC-Chair-Gary-Gensler-Singles-Out-Bitcoin-Says-BTC-Only-Crypto-Hes-Willing-To-Label-a-Commodity",
+      "pubDate": "2022-06-29T16:55:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "U.S. Securities and Exchange Commission (SEC) Chair Gary Gensler says he believes most crypto assets are securities. In a CNBC interview, Gensler says Bitcoin (BTC) is the only crypto asset that fits the description of a commodity. “Many of these financial assets, crypto financial assets, have the key attributes of a security. So some of […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Here Are Bitcoin And Ethereum’s Flaws, According To This Pentagon Investigation",
+      "link": "https://cryptopanic.com/news/15632909/Here-Are-Bitcoin-And-Ethereums-Flaws-According-To-This-Pentagon-Investigation",
+      "pubDate": "2022-06-29T16:46:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Polkadot Unveils New On-Chain Governance Model",
+      "link": "https://cryptopanic.com/news/15632851/Polkadot-Unveils-New-On-Chain-Governance-Model",
+      "pubDate": "2022-06-29T16:24:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Polkadot founder Gavin Wood announced the new governance structure as part of the Polkadot Decoded 2022 conference. Polkadot Updates Governance Model Cryptos eighth-biggest blockchain is preparing to transform its governance...",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polkadot's founder announces steps toward full decentralization with new governance model",
+      "link": "https://cryptopanic.com/news/15632848/Polkadots-founder-announces-steps-toward-full-decentralization-with-new-governance-model",
+      "pubDate": "2022-06-29T16:21:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "KSM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Polkadot to scrap its ‘Council’ body in new governance system",
+      "link": "https://cryptopanic.com/news/15632831/Polkadot-to-scrap-its-Council-body-in-new-governance-system",
+      "pubDate": "2022-06-29T16:17:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Polkadot has announced a new version of its governance system called Governance version 2 (or Gov2).",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 35,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polkadot Unveils Proposal for Next Generation of Governance",
+      "link": "https://cryptopanic.com/news/15632829/Polkadot-Unveils-Proposal-for-Next-Generation-of-Governance",
+      "pubDate": "2022-06-29T16:16:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "KSM"
+      ]
+    },
+    {
+      "title": "We defined a whole new process to fund energy efficiency projects and NFTs are in the game. Discover more on",
+      "link": "https://cryptopanic.com/news/15636839/We-defined-a-whole-new-process-to-fund-energy-efficiency-projects-and-NFTs-are-in-the-game-Discover-more-on",
+      "pubDate": "2022-06-29T16:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "A new batch of energy efficiency projects fundable through our updated platform is going to be live starting from the end of next week",
+      "link": "https://cryptopanic.com/news/15636840/A-new-batch-of-energy-efficiency-projects-fundable-through-our-updated-platform-is-going-to-be-live-starting-from-the-end-of-next-week",
+      "pubDate": "2022-06-29T15:59:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "Our updated website is now online. Whitepaper update is expected by the end of next month, while an extensive docum…",
+      "link": "https://cryptopanic.com/news/15636842/Our-updated-website-is-now-online-Whitepaper-update-is-expected-by-the-end-of-next-month-while-an-extensive-docum",
+      "pubDate": "2022-06-29T15:57:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "We are currently discussing with @BithumbOfficial team, answering all their questions in order to remove the warnin…",
+      "link": "https://cryptopanic.com/news/15636843/We-are-currently-discussing-with-BithumbOfficial-team-answering-all-their-questions-in-order-to-remove-the-warnin",
+      "pubDate": "2022-06-29T15:54:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "Tether CTO Paolo Ardoino Says Hedge Funds Attempting To Sabotage USDT",
+      "link": "https://cryptopanic.com/news/15632429/Tether-CTO-Paolo-Ardoino-Says-Hedge-Funds-Attempting-To-Sabotage-USDT",
+      "pubDate": "2022-06-29T14:30:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Tether’s chief technology officer says certain hedge funds recently attempted to spread panic and profit off shorting Tether (USDT). Tether CTO Paolo Ardoino says hedge funds helped spread rumors that Tether isn’t 100% backed and has 85% exposure to Chinese commercial paper (CP) holdings. CP holdings are a type of unsecured and usually discounted short-term […]",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Join us for @CryptoSlate's Twitter AMA this Friday on how NFTs can provide digital rights to users!",
+      "link": "https://cryptopanic.com/news/theta-token/15640685/Join-us-for-CryptoSlates-Twitter-AMA-this-Friday-on-how-NFTs-can-provide-digital-rights-to-users",
+      "pubDate": "2022-06-29T14:21:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Pentagon paper warns of major vulnerabilities in the Bitcoin blockchain",
+      "link": "https://cryptopanic.com/news/bitcoin/15632386/Pentagon-paper-warns-of-major-vulnerabilities-in-the-Bitcoin-blockchain",
+      "pubDate": "2022-06-29T14:19:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "As the cryptocurrency industry continues to expand and becomes an increasingly attractive target to hackers, the Pentagon has commissioned a... Continue reading",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin Plunges Below $20,000 Again As ECB Gears Up To Raise Rates ‘At A Faster Pace’",
+      "link": "https://cryptopanic.com/news/bitcoin/15632292/Bitcoin-Plunges-Below-20000-Again-As-ECB-Gears-Up-To-Raise-Rates-At-A-Faster-Pace",
+      "pubDate": "2022-06-29T13:59:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The sharp drop was triggered by a plethora of factors, key among them, a statement by the European Central Bank President Christine Lagarde detailing a plan to go harder on inflation.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Cardano’s DeFi Can Now Be Possible on Ethereum Through This Integration: Details",
+      "link": "https://cryptopanic.com/news/15632124/Cardanos-DeFi-Can-Now-Be-Possible-on-Ethereum-Through-This-Integration-Details",
+      "pubDate": "2022-06-29T13:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "This sidechain allows transfer of assets, Ethereum dApps to run on Cardano and vice versa",
+      "currencies": [
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Almost 70% of Bitcoin millionaires were wiped in H1 2022",
+      "link": "https://cryptopanic.com/news/bitcoin/15632025/Almost-70-of-Bitcoin-millionaires-were-wiped-in-H1-2022",
+      "pubDate": "2022-06-29T13:00:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Since the start of the year, the cryptocurrency market has lost over $1 trillion in value from its market cap... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 10
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "British Virgin Islands court reportedly orders to liquidate 3AC",
+      "link": "https://cryptopanic.com/news/15631851/British-Virgin-Islands-court-reportedly-orders-to-liquidate-3AC",
+      "pubDate": "2022-06-29T12:03:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The order reportedly came on the same date with Voyager Digital issuing a notice of default to 3AC for its failure to pay its 15,250 Bitcoin and 350 million USDC loan.",
+      "currencies": [
+        "BTC",
+        "USDC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Over $530 million inflows Terra Classic in four days; What’s behind the curtain?",
+      "link": "https://cryptopanic.com/news/15631789/Over-530-million-inflows-Terra-Classic-in-four-days-Whats-behind-the-curtain",
+      "pubDate": "2022-06-29T11:46:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Terra Classic (LUNC), the original chain of the collapsed Terra (LUNA) ecosystem, continues to gain interest among investors, attracting significant... Continue reading",
+      "currencies": [
+        "XCN",
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 18
+      }
+    },
+    {
+      "title": "Third-Tier Exchanges “Secretly Insolvent,” Says FTX’s Sam Bankman-Fried",
+      "link": "https://cryptopanic.com/news/15631659/Third-Tier-Exchanges-Secretly-Insolvent-Says-FTXs-Sam-Bankman-Fried",
+      "pubDate": "2022-06-29T11:00:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Sam Bankman-Fried, whose FTX exchange recently bailed out distressed crypto firms BlockFi and Voyager Digital to a combined tune of $800 million, has warned that more crypto exchange failures are...",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "LUNC & USTC Show Double-Digit Growth Amid Crypto Market Drop, What's Wrong with Them?",
+      "link": "https://cryptopanic.com/news/15631502/LUNC-USTC-Show-Double-Digit-Growth-Amid-Crypto-Market-Drop-Whats-Wrong-with-Them",
+      "pubDate": "2022-06-29T10:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Failed Terra tokens show suspiciously positive dynamic",
+      "currencies": [
+        "USTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "The #Klaytn team as a co-host at @ChampMedici as we take bigger steps to go #global #NFTNYC2022 @NFT_NYC",
+      "link": "https://cryptopanic.com/news/klay-token/15638231/The-Klaytn-team-as-a-co-host-at-ChampMedici-as-we-take-bigger-steps-to-go-global-NFTNYC2022-NFT_NYC",
+      "pubDate": "2022-06-29T10:07:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "KLAY"
+      ]
+    },
+    {
+      "title": "Cardano: Ledger Expands Support to Enable ADA Accounts on Android Mobiles",
+      "link": "https://cryptopanic.com/news/15631495/Cardano-Ledger-Expands-Support-to-Enable-ADA-Accounts-on-Android-Mobiles",
+      "pubDate": "2022-06-29T10:06:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano (ADA) accounts are now supported on Android mobiles",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Will SAND find more demand after recovery to May levels post 85% rally",
+      "link": "https://cryptopanic.com/news/15631482/Will-SAND-find-more-demand-after-recovery-to-May-levels-post-85-rally",
+      "pubDate": "2022-06-29T10:00:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Crypto bulls have been playing with SAND for the last two weeks, leading to a healthy 85% rally from its lowest price level in June. A bearish correction might be imminent due to profit-taking after the rally. But a new development suggests that the bulls might stay a while longer. SAND’s price action bottomed out […]",
+      "currencies": [
+        "SAND"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Klaytn Museum Quiz Hints ‼️ Location: Near the DeFi Pavilion () Quiz period: 27/6 (Mon…",
+      "link": "https://cryptopanic.com/news/klay-token/15638232/Klaytn-Museum-Quiz-Hints-Location-Near-the-DeFi-Pavilion-Quiz-period-276-Mon",
+      "pubDate": "2022-06-29T09:56:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "KLAY"
+      ]
+    },
+    {
+      "title": "Multiple Crypto Exchanges Are “Secretly Insolvent,” Warns SBF",
+      "link": "https://cryptopanic.com/news/15631464/Multiple-Crypto-Exchanges-Are-Secretly-Insolvent-Warns-SBF",
+      "pubDate": "2022-06-29T09:53:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The FTX CEO warned of third-tier exchanges that are yet to reveal their insolvency and of mining firms suffering from excessive leverage.",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Glad to see another #Klaytn-based project take flight ️ Participate in their #airdrop event now!",
+      "link": "https://cryptopanic.com/news/klay-token/15638233/Glad-to-see-another-Klaytn-based-project-take-flight-Participate-in-their-airdrop-event-now",
+      "pubDate": "2022-06-29T09:22:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY"
+      ]
+    },
+    {
+      "title": "Analyst Predicts Ethereum (ETH) Bounce, Updates Outlook on XRP and Fantom (FTM)",
+      "link": "https://cryptopanic.com/news/15630547/Analyst-Predicts-Ethereum-ETH-Bounce-Updates-Outlook-on-XRP-and-Fantom-FTM",
+      "pubDate": "2022-06-29T09:15:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Widely followed crypto analyst Michaël van de Poppe is predicting what might be in store for a trio of popular altcoins. Van de Poppe tells his 613,800 Twitter followers that leading smart contract platform Ethereum (ETH) appears to have decent momentum after rallying back from monthly lows under $1,000 on June 18th and 19th. “Great […] The post Analyst Predicts Ethereum (ETH) Bounce, Updates Outlook on XRP and Fantom (FTM) appeared first on The Daily Hodl.",
+      "currencies": [
+        "ETH",
+        "XRP",
+        "FTM"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "️ Freeway recorded its first ever 30 second radio spot, which is due to hit the airwaves in July. You can hear it…",
+      "link": "https://cryptopanic.com/news/15637292/Freeway-recorded-its-first-ever-30-second-radio-spot-which-is-due-to-hit-the-airwaves-in-July-You-can-hear-it",
+      "pubDate": "2022-06-29T08:57:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FWT"
+      ]
+    },
+    {
+      "title": "Core pallet has been added to Dora Factory KSM Parachain. It will be a gateway for parachain users to access key pa…",
+      "link": "https://cryptopanic.com/news/15636700/Core-pallet-has-been-added-to-Dora-Factory-KSM-Parachain-It-will-be-a-gateway-for-parachain-users-to-access-key-pa",
+      "pubDate": "2022-06-29T07:39:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KSM"
+      ]
+    },
+    {
+      "title": "Rich Dad Poor Dad Author Says Colossal Bitcoin Discount Is Coming – Here’s His New Target",
+      "link": "https://cryptopanic.com/news/bitcoin/15626860/Rich-Dad-Poor-Dad-Author-Says-Colossal-Bitcoin-Discount-Is-Coming-Heres-His-New-Target",
+      "pubDate": "2022-06-29T07:04:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Rich Dad Poor Dad author Robert Kiyosaki says he’s planning on buying Bitcoin (BTC) at massively discounted prices. The widely followed investor tells his two million Twitter followers that the current Bitcoin bear market does not deter him from accumulating the leading crypto asset. Kiyosaki says he’s waiting for Bitcoin to crash nearly 95% from […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Roger Ver denies defaulting on US$47 mln loan from CoinFLEX",
+      "link": "https://cryptopanic.com/news/15624861/Roger-Ver-denies-defaulting-on-US47-mln-loan-from-CoinFLEX",
+      "pubDate": "2022-06-29T05:45:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Early Bitcoin adopter and Bitcoin Cash promoter Roger Ver has denied defaulting on a US$47 million loan in USDC to beleaguered cryptocurrency exchange CoinFLEX. See related article: CoinFLEX to issue US$47 mln in tokens as it waits for ‘crypto whale’ to pay up Fast facts Ver tweeted overnight in Asia time that rumors of the […]",
+      "currencies": [
+        "BTC",
+        "USDC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bankman-Fried Is Looking At “Secretly insolvent” Small Exchanges & Crypto Miners",
+      "link": "https://cryptopanic.com/news/15624130/Bankman-Fried-Is-Looking-At-Secretly-insolvent-Small-Exchanges-Crypto-Miners",
+      "pubDate": "2022-06-29T03:44:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "It’s Sam Bankman-Fried’s moment. The FTX and Alameda Ventures golden boy put both of his companies in a winning position and seems to be carrying the spoils away. The recent Forbes piece about secretly insolvent exchanges puts it best, “Like J.P. Morgan during the stock market panic and crash of 1907, Bankman-Fried is taking advantage of the crypto chaos to expand his empire.” Rumors about his involvement in engineering the “crypto chaos” appear to be greatly exaggerated. NewsBTC reported on FTX",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "FTT",
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Cypherpunk dumps Bitcoin and Ether to avoid more drawdowns",
+      "link": "https://cryptopanic.com/news/bitcoin/15624121/Cypherpunk-dumps-Bitcoin-and-Ether-to-avoid-more-drawdowns",
+      "pubDate": "2022-06-29T03:32:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Cypherpunk Holdings Inc. has liquidated all of its Bitcoin and Ethereum treasury holdings, the Canadian investment firm said on Tuesday. See related article: Warnings on crypto, Bitcoin have materialized, says central bank body BIS Fast facts “In the interest of all shareholders, the company transitioned its treasury to cash,” said Moe Adham, investment chief at […]",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 6
+      }
+    },
+    {
+      "title": "It Is Time To Turn The Tables On The Bitcoin Environmental Debate",
+      "link": "https://cryptopanic.com/news/bitcoin/15623988/It-Is-Time-To-Turn-The-Tables-On-The-Bitcoin-Environmental-Debate",
+      "pubDate": "2022-06-29T02:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin’s infamous energy criticism is misguided as mounting research shows the exact opposite of those claims are true.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "With Shibarium on the way, can Shiba Inu still walk the bark",
+      "link": "https://cryptopanic.com/news/15623946/With-Shibarium-on-the-way-can-Shiba-Inu-still-walk-the-bark",
+      "pubDate": "2022-06-29T01:30:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Unification Foundation, the team of developers behind Shiba Inu’s [SHIB] Layer 2 solution, Shibarium, announced on 24 June that a public beta is planned for deployment in the third quarter of 2022. Through a proposal published on 19 June, the Shiba Inu ecosystem asked community members to vote on whether or not to halt further […]",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "RT @SuperUmans: We will be having an AMA with @STP_Networks tomorrow at 15:00 UTC. Be sure to join in. Link in our bio .#defi #DAO #supe…",
+      "link": "https://cryptopanic.com/news/15629618/RT-SuperUmans-We-will-be-having-an-AMA-with-STP_Networks-tomorrow-at-1500-UTC-Be-sure-to-join-in-Link-in-our-bio-defi-DAO-supe",
+      "pubDate": "2022-06-29T00:34:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "STPT"
+      ]
+    },
+    {
+      "title": "RT @SynapseProtocol: Nearly $50 million in volume has already been bridged to @klaytn_official less than 1 week since launch! Getting clos…",
+      "link": "https://cryptopanic.com/news/klay-token/15627738/RT-SynapseProtocol-Nearly-50-million-in-volume-has-already-been-bridged-to-klaytn_official-less-than-1-week-since-launch-Getting-clos",
+      "pubDate": "2022-06-29T00:17:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY"
+      ]
+    }
+  ]
+}

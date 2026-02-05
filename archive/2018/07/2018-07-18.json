@@ -1,0 +1,46 @@
+{
+  "date": "2018-07-18",
+  "fetchedAt": "2026-02-05T07:27:07.857Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Altcoin of the Day – Stellar Lumens [XLM] Surging With +20% Gains",
+      "link": "https://cryptopanic.com/news/stellar/2581793/Altcoin-of-the-Day-Stellar-Lumens-XLM-Surging-With-20-Gains",
+      "pubDate": "2018-07-18T18:03:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron Outperforming Ethereum – Above $0.04",
+      "link": "https://cryptopanic.com/news/2580943/Tron-Outperforming-Ethereum-Above-004",
+      "pubDate": "2018-07-18T16:49:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

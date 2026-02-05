@@ -1,0 +1,37 @@
+{
+  "date": "2020-03-22",
+  "fetchedAt": "2026-02-05T07:27:06.996Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Some of you may find the article of use when looking for new learning opportunities online. 150+ platforms listed.…",
+      "link": "https://cryptopanic.com/news/8299821/Some-of-you-may-find-the-article-of-use-when-looking-for-new-learning-opportunities-online-150-platforms-listed?mtm_campaign=API-OFA",
+      "pubDate": "2020-03-22T17:05:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EDU"
+      ]
+    },
+    {
+      "title": "Justin Sun Reports Recent Milestones Reached by Tron",
+      "link": "https://cryptopanic.com/news/tron/8298151/Justin-Sun-Reports-Recent-Milestones-Reached-by-Tron",
+      "pubDate": "2020-03-22T12:44:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 15
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "date": "2020-02-14",
+  "fetchedAt": "2026-02-05T07:27:06.680Z",
+  "articleCount": 8,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Justin Sun wants to be Crypto’s Elon Musk? Tron acquires Steemit? Founder Reveals Tron's Master Plan",
+      "link": "https://cryptopanic.com/news/tron/7938396/Justin-Sun-wants-to-be-Cryptos-Elon-Musk-Tron-acquires-Steemit-Founder-Reveals-Trons-Master-Plan",
+      "pubDate": "2020-02-14T22:35:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Craig Wright Says He Owns Rights to Bitcoin (BTC), Threatens Legal Action Against \"CoreCoin\" and Bitcoin Cash (BCH)",
+      "link": "https://cryptopanic.com/news/7935951/Craig-Wright-Says-He-Owns-Rights-to-Bitcoin-BTC-Threatens-Legal-Action-Against-CoreCoin-and-Bitcoin-Cash-BCH",
+      "pubDate": "2020-02-14T17:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Steemit Sets Up Shop on Tron Network",
+      "link": "https://cryptopanic.com/news/tron/7935408/Steemit-Sets-Up-Shop-on-Tron-Network",
+      "pubDate": "2020-02-14T16:02:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "STEEM"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Largest Blockchain Social Media Steemit Joining TRON’s Ecosystem",
+      "link": "https://cryptopanic.com/news/tron/7935313/Largest-Blockchain-Social-Media-Steemit-Joining-TRONs-Ecosystem",
+      "pubDate": "2020-02-14T16:00:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Just In: Steemit Moves to Tron (TRX) Blockchain",
+      "link": "https://cryptopanic.com/news/7935323/Just-In-Steemit-Moves-to-Tron-TRX-Blockchain",
+      "pubDate": "2020-02-14T15:59:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "TRON Price Analysis: TRX Crossing 5-Month Highs Eyeing $0.03 As Next Target",
+      "link": "https://cryptopanic.com/news/tron/7933616/TRON-Price-Analysis-TRX-Crossing-5-Month-Highs-Eyeing-003-As-Next-Target",
+      "pubDate": "2020-02-14T12:50:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Brazil’s Largest Crypto-Friendly Bank Posts 42% Rise In Q4 2019",
+      "link": "https://cryptopanic.com/news/7933482/Brazils-Largest-Crypto-Friendly-Bank-Posts-42-Rise-In-Q4-2019",
+      "pubDate": "2020-02-14T12:35:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XTZ",
+        "BTG"
+      ]
+    },
+    {
+      "title": "Check out what our design lead, @MomchilJ, had to share on the subject of #blockchain mass adoption with…",
+      "link": "https://cryptopanic.com/news/7932562/Check-out-what-our-design-lead-MomchilJ-had-to-share-on-the-subject-of-blockchain-mass-adoption-with?mtm_campaign=API-OFA",
+      "pubDate": "2020-02-14T10:33:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EDU"
+      ]
+    }
+  ]
+}

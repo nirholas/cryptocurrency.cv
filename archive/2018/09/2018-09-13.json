@@ -1,0 +1,115 @@
+{
+  "date": "2018-09-13",
+  "fetchedAt": "2026-02-05T07:27:06.812Z",
+  "articleCount": 6,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "NEO Launches New Creative Design Competition, Seeks Brand Improvement",
+      "link": "https://cryptopanic.com/news/3043170/NEO-Launches-New-Creative-Design-Competition-Seeks-Brand-Improvement",
+      "pubDate": "2018-09-13T15:59:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "NEO"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogecoin, the Dog Meme Cryptocurrency that is Outperforming Bitcoin and Ethereum",
+      "link": "https://cryptopanic.com/news/dogecoin/3042888/Dogecoin-the-Dog-Meme-Cryptocurrency-that-is-Outperforming-Bitcoin-and-Ethereum",
+      "pubDate": "2018-09-13T14:00:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 10
+      }
+    },
+    {
+      "title": "Morgan Stanley Joins the Bitcoin Derivatives Party",
+      "link": "https://cryptopanic.com/news/3042889/Morgan-Stanley-Joins-the-Bitcoin-Derivatives-Party",
+      "pubDate": "2018-09-13T13:57:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron [TRX] Returns Toward $0.02 After Sell-Off",
+      "link": "https://cryptopanic.com/news/3042829/Tron-TRX-Returns-Toward-002-After-Sell-Off",
+      "pubDate": "2018-09-13T13:47:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron (TRX) Can Now Be Swapped for Other Cryptos Supported by Satowallet Exchange",
+      "link": "https://cryptopanic.com/news/3041952/Tron-TRX-Can-Now-Be-Swapped-for-Other-Cryptos-Supported-by-Satowallet-Exchange",
+      "pubDate": "2018-09-13T06:56:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "World’s First Electric Vehicle Charging Station to Accept IOTA Payments Inches Closer to a Reality",
+      "link": "https://cryptopanic.com/news/3041754/Worlds-First-Electric-Vehicle-Charging-Station-to-Accept-IOTA-Payments-Inches-Closer-to-a-Reality",
+      "pubDate": "2018-09-13T04:00:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 31,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2020-02-16",
+  "fetchedAt": "2026-02-05T07:27:06.977Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA Announces Successful Patch of Bug Responsible for Trinity Wallet Hack",
+      "link": "https://cryptopanic.com/news/7951067/IOTA-Announces-Successful-Patch-of-Bug-Responsible-for-Trinity-Wallet-Hack",
+      "pubDate": "2020-02-16T19:00:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2019-09-03",
+  "fetchedAt": "2026-02-05T07:27:07.880Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Franklin Templeton proposes tokenized government money market fund on Stellar Network",
+      "link": "https://cryptopanic.com/news/6472293/Franklin-Templeton-proposes-tokenized-government-money-market-fund-on-Stellar-Network",
+      "pubDate": "2019-09-03T18:29:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

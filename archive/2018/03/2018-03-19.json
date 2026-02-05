@@ -1,0 +1,63 @@
+{
+  "date": "2018-03-19",
+  "fetchedAt": "2026-02-05T07:27:06.798Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Another Dark Red Week for Cryptocurrency Markets Ahead of G20 Meeting: Week in Review Mar. 19",
+      "link": "https://cryptopanic.com/news/1417709/Another-Dark-Red-Week-for-Cryptocurrency-Markets-Ahead-of-G20-Meeting-Week-in-Review-Mar-19",
+      "pubDate": "2018-03-19T22:45:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "XMR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Coincheck Stops Support for 3 Privacy-Focused Cryptocurrencies: Monero, Dash and Zcash",
+      "link": "https://cryptopanic.com/news/1413927/Coincheck-Stops-Support-for-3-Privacy-Focused-Cryptocurrencies-Monero-Dash-and-Zcash",
+      "pubDate": "2018-03-19T16:30:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ZEC",
+        "DASH",
+        "XEM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Stellar Goes In On Lightning with 2018 Launch Target",
+      "link": "https://cryptopanic.com/news/stellar/1413527/Stellar-Goes-In-On-Lightning-with-2018-Launch-Target",
+      "pubDate": "2018-03-19T16:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

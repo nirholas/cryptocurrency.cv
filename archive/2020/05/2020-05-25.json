@@ -1,0 +1,26 @@
+{
+  "date": "2020-05-25",
+  "fetchedAt": "2026-02-05T07:27:06.901Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Theta Fuel (TFUEL) Records 630% Weekly Gains As Binance To Support Theta Mainnet 2.0 Launch",
+      "link": "https://cryptopanic.com/news/8897791/Theta-Fuel-TFUEL-Records-630-Weekly-Gains-As-Binance-To-Support-Theta-Mainnet-20-Launch",
+      "pubDate": "2020-05-25T10:27:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

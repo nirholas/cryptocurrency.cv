@@ -1,0 +1,364 @@
+{
+  "date": "2021-09-25",
+  "fetchedAt": "2026-02-05T07:27:06.733Z",
+  "articleCount": 23,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @karamblez: #StatueOfSatoshi + @decredproject build to evolve",
+      "link": "https://cryptopanic.com/news/12865171/RT-karamblez-StatueOfSatoshi-decredproject-build-to-evolve",
+      "pubDate": "2021-09-25T21:48:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "DCR"
+      ]
+    },
+    {
+      "title": "Elon Musk Will Always Have Support of DOGE Community: Major Dogecoin Account",
+      "link": "https://cryptopanic.com/news/dogecoin/12865118/Elon-Musk-Will-Always-Have-Support-of-DOGE-Community-Major-Dogecoin-Account",
+      "pubDate": "2021-09-25T20:58:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Owner of one of major Dogecoin Twitter accounts has promised that Elon Musk’s support to Dogecoin and its community will be mutually beneficial",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 45
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @TONi_ZH1: news from #TRON next month",
+      "link": "https://cryptopanic.com/news/12867568/RT-TONi_ZH1-news-from-TRON-next-month",
+      "pubDate": "2021-09-25T20:32:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AMA"
+      ]
+    },
+    {
+      "title": "Chainlink Labs Has ‘A Tremendous Amount of Respect for the Cardano Ecosystem’",
+      "link": "https://cryptopanic.com/news/chainlink/12865094/Chainlink-Labs-Has-A-Tremendous-Amount-of-Respect-for-the-Cardano-Ecosystem",
+      "pubDate": "2021-09-25T20:23:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Earlier today (September 25), Niki Ariyasinghe, Head of Business Development (Asia-Pacific, Middle East and Africa) at Chainlink Labs, discussed with Tim Harrison, Marketing & Communications Director at IOHK (aka “IOG”), the technology company that develops the software implementing the Cardano protocol, a new strategic collaboration that will “help developers build smart contracts for...",
+      "currencies": [
+        "ADA",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 66,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Derivatives data suggests Solana has reached a short-term top",
+      "link": "https://cryptopanic.com/news/12865017/Derivatives-data-suggests-Solana-has-reached-a-short-term-top",
+      "pubDate": "2021-09-25T19:45:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "SOL's futures open interest recently hit $1 billion and while the recent price swing liquidated leveraged longs, data suggests the short-term top is not a bearish trend reversal.",
+      "currencies": [
+        "SOL",
+        "AVAX",
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Does Fantom’s entry in the NFT space give it one up on Ethereum",
+      "link": "https://cryptopanic.com/news/12865006/Does-Fantoms-entry-in-the-NFT-space-give-it-one-up-on-Ethereum",
+      "pubDate": "2021-09-25T19:30:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "After Polygon, Binance Smart Chain, and Solana have been gaining strength in the NFT space recently. They are now being joined by Fantom. Even though Fantom has been around for a while now, this has been one of the biggest steps for the chain, in terms of development. So now, looking at the NFT space […]",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "FTM"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Can Bitcoin Surpass $6,000,000? Ethereum and Polkadot Creator Details Possible Future of Crypto",
+      "link": "https://cryptopanic.com/news/polkadot/12864969/Can-Bitcoin-Surpass-6000000-Ethereum-and-Polkadot-Creator-Details-Possible-Future-of-Crypto",
+      "pubDate": "2021-09-25T18:40:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Early Bitcoin developer and co-founder of Ethereum and Polkadot, Gavin Andresen, is outlining a future where BTC rises to a staggering $6,000,000 per coin. Gavin Andresen, who took over as Bitcoin’s lead maintainer from founder Satoshi Nakamoto in 2011, just published a new blog post detailing how BTC’s theoretical evolution could look. Andresen describes a “possible” […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano Partners with Chainlink to Integrate Oracles for Advanced Smart Contracts",
+      "link": "https://cryptopanic.com/news/chainlink/12864807/Cardano-Partners-with-Chainlink-to-Integrate-Oracles-for-Advanced-Smart-Contracts",
+      "pubDate": "2021-09-25T17:29:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano joins forces with Chainlink to provide extra support for developers building smart contracts by integrating oracles",
+      "currencies": [
+        "ADA",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 122,
+        "negative": 6
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Has Great Risk-Reward Ratio, With 10x Price Rise Likely: Macro Guru Raoul Pal",
+      "link": "https://cryptopanic.com/news/ripple/12864876/XRP-Has-Great-Risk-Reward-Ratio-With-10x-Price-Rise-Likely-Macro-Guru-Raoul-Pal",
+      "pubDate": "2021-09-25T17:10:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Raoul Pal is saying that global payments asset XRP has a great risk-reward ratio despite a lawsuit filed by the U.S. Securities and Exchange Commission (SEC). In a new interview on Savvy Finance, the CEO of Real Vision and Global Macro Investor shares why he remains bullish on the crypto asset. “XRP is a great risk-reward. […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "It's a Miner... It's a Gamer... It's @MineWithThorg , our newest project built on top of Golem to get you mining se…",
+      "link": "https://cryptopanic.com/news/12864663/Its-a-Miner-Its-a-Gamer-Its-MineWithThorg-our-newest-project-built-on-top-of-Golem-to-get-you-mining-se",
+      "pubDate": "2021-09-25T16:25:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "GLM"
+      ]
+    },
+    {
+      "title": "Binance Coin, Sushiswap, DASH Price Analysis: 25 September",
+      "link": "https://cryptopanic.com/news/dash/12864563/Binance-Coin-Sushiswap-DASH-Price-Analysis-25-September",
+      "pubDate": "2021-09-25T15:30:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "DASH",
+        "SUSHI"
+      ]
+    },
+    {
+      "title": "30,358 digital assets have been created using the Ravencoin protocol so far.",
+      "link": "https://cryptopanic.com/news/12868030/30358-digital-assets-have-been-created-using-the-Ravencoin-protocol-so-far",
+      "pubDate": "2021-09-25T14:03:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RVN"
+      ]
+    },
+    {
+      "title": "Today at 6pm CET we will share some of the latest updates with our community for the September monthly Gathering! M…",
+      "link": "https://cryptopanic.com/news/12866668/Today-at-6pm-CET-we-will-share-some-of-the-latest-updates-with-our-community-for-the-September-monthly-Gathering-M",
+      "pubDate": "2021-09-25T12:43:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "Huobi Exchange Stops Accepting Chinese Users After Crypto Crackdown",
+      "link": "https://cryptopanic.com/news/bitcoin/12864204/Huobi-Exchange-Stops-Accepting-Chinese-Users-After-Crypto-Crackdown",
+      "pubDate": "2021-09-25T11:23:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "China's largest Bitcoin Exchange Huobi has implemented a measure to stop mainland Chinese residents from registering on its platform by preventing the addition of accounts with Chinese mainland phone numbers, to comply with recent Chinese crackdown on crypto.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 12
+      }
+    },
+    {
+      "title": "Bitcoin Price Analysis: China FUD Caused Heavy Liquidations, Is the Bottom In?",
+      "link": "https://cryptopanic.com/news/bitcoin/12864083/Bitcoin-Price-Analysis-China-FUD-Caused-Heavy-Liquidations-Is-the-Bottom-In",
+      "pubDate": "2021-09-25T10:17:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Just as Bitcoin rallied slightly above $45k on Friday, recycled news on China’s central bank vowing to ban crypto trading for Chinese citizens came out, liquidating more than $600 million of derivative positions at the time of writing. It is crucial to remember that large liquidations tend to cause cascades of forced sell orders, creating […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 10
+      }
+    },
+    {
+      "title": "RT @eliz883: $OMG THX FOR THE GIFT BTC @Delta_Exchange",
+      "link": "https://cryptopanic.com/news/12866562/RT-eliz883-OMG-THX-FOR-THE-GIFT-BTC-Delta_Exchange",
+      "pubDate": "2021-09-25T10:10:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "OMG"
+      ]
+    },
+    {
+      "title": "RT @zukoboba: Seeing @bobanetwork already top 10 on @l2beatcom within a few days of going live and only 1 app fully deployed (@witnet_io )…",
+      "link": "https://cryptopanic.com/news/12863940/RT-zukoboba-Seeing-bobanetwork-already-top-10-on-l2beatcom-within-a-few-days-of-going-live-and-only-1-app-fully-deployed-witnet_io",
+      "pubDate": "2021-09-25T08:34:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "OMG"
+      ]
+    },
+    {
+      "title": "A skateboard for all the $bnb holders. Dash through the dip and Just be #awsome #bnb #binance #BinanceSmartChain…",
+      "link": "https://cryptopanic.com/news/dash/12863764/A-skateboard-for-all-the-bnb-holders-Dash-through-the-dip-and-Just-be-awsome-bnb-binance-BinanceSmartChain",
+      "pubDate": "2021-09-25T08:22:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "DASH",
+        "EARN",
+        "EARNX"
+      ]
+    },
+    {
+      "title": "XRP, Chainlink and This Crypto Project Launching Bitcoin Smart Contracts Are ‘About To Go Crazy’, Says Altcoin Daily",
+      "link": "https://cryptopanic.com/news/12863442/XRP-Chainlink-and-This-Crypto-Project-Launching-Bitcoin-Smart-Contracts-Are-About-To-Go-Crazy-Says-Altcoin-Daily",
+      "pubDate": "2021-09-25T07:08:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Altcoin Daily host Austin Arnold is listing three altcoins that he says are “about to go crazy”. In a new video, Austin tells his one million YouTube subscribers that the altcoins in question are Dfinity Foundation’s Internet Computer (ICP), the bridge currency XRP, and blockchain oracle network Chainlink (LINK). Kicking off the list with Internet […]",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "LINK",
+        "ICP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RippleX Grants $2 Million to Promote NFT Solutions on the XRP Ledger",
+      "link": "https://cryptopanic.com/news/ripple/12858822/RippleX-Grants-2-Million-to-Promote-NFT-Solutions-on-the-XRP-Ledger",
+      "pubDate": "2021-09-25T03:30:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NFTs on Ripple's blockchain? Who would have thought! RippleX just gave over $2 Million in grants for developers working on NFT solutions for XRPL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @enyaai: Thank you to everyone who came to our launch party on Monday! We had a great time meeting and getting to know all of you 🥳 #Fla…",
+      "link": "https://cryptopanic.com/news/12858730/RT-enyaai-Thank-you-to-everyone-who-came-to-our-launch-party-on-Monday-We-had-a-great-time-meeting-and-getting-to-know-all-of-you-Fla",
+      "pubDate": "2021-09-25T02:01:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OMG"
+      ]
+    },
+    {
+      "title": "DeFi Hack: Vee Finance Losses $35 Million To Hackers Following Mainnet Launch",
+      "link": "https://cryptopanic.com/news/avalanche-2/12858672/DeFi-Hack-Vee-Finance-Losses-35-Million-To-Hackers-Following-Mainnet-Launch",
+      "pubDate": "2021-09-25T01:00:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "One of the major threats to businesses online, not only the crypto industry, is cybercriminals’ attacks. Even though the existing networks are supposed to be safe and secure, attackers often find loopholes to exploit them in the bid to steal investors’ funds. This is not new in the online world. There have been occasions when hackers even forced companies to shut down. The decentralized...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "El Salvador’s Chivo And Bitcoin Adoption In Mindblowing Facts And Stats",
+      "link": "https://cryptopanic.com/news/flow/12858622/El-Salvadors-Chivo-And-Bitcoin-Adoption-In-Mindblowing-Facts-And-Stats",
+      "pubDate": "2021-09-25T00:26:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Why didn’t we thought of measuring Chivo and Bitcoin adoption this way? Cero anecdotal evidence. Only facts, numbers, and reports from wherever we can get them. What do we know about the Chivo wallet’s Lightning node? What apps besides the government wallet are the Salvadorans using? Are they happy with them? Investor and blogger Kevin Rooke has a fresh take on El Salvador’s Bitcoin adoption...",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

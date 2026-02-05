@@ -1,0 +1,607 @@
+{
+  "date": "2025-07-29",
+  "fetchedAt": "2026-02-05T07:27:08.672Z",
+  "articleCount": 45,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Trump Inaugurates New Aberdeen Course Ahead Of Nexo Championship, Crypto Lender Eyes U.S. Market Reentry",
+      "link": "https://cryptopanic.com/news/nexo/23769877/Trump-Inaugurates-New-Aberdeen-Course-Ahead-Of-Nexo-Championship-Crypto-Lender-Eyes-US-Market-Reentry",
+      "pubDate": "2025-07-29T22:35:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEXO",
+        "TRUMP"
+      ]
+    },
+    {
+      "title": "Will Ethereum (ETH) hit $15K on the price charts?",
+      "link": "https://cryptopanic.com/news/ethereum/23767722/Will-Ethereum-ETH-hit-15K-on-the-price-charts",
+      "pubDate": "2025-07-29T21:30:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum is mooning, but does it have a realistic price target in mind?",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SEC weighs BlackRock’s bid to add staking to Ethereum ETF, delays Grayscale Litecoin proposal",
+      "link": "https://cryptopanic.com/news/litecoin/23766961/SEC-weighs-BlackRocks-bid-to-add-staking-to-Ethereum-ETF-delays-Grayscale-Litecoin-proposal",
+      "pubDate": "2025-07-29T21:16:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "LTC",
+        "GAL"
+      ]
+    },
+    {
+      "title": "Blackhole Hits $250M TVL to Become Largest DEX on Avalanche",
+      "link": "https://cryptopanic.com/news/avalanche-2/23765759/Blackhole-Hits-250M-TVL-to-Become-Largest-DEX-on-Avalanche",
+      "pubDate": "2025-07-29T20:54:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "US SEC Delays Launch Of Grayscale’s Spot Litecoin ETF",
+      "link": "https://cryptopanic.com/news/litecoin/23765663/US-SEC-Delays-Launch-Of-Grayscales-Spot-Litecoin-ETF",
+      "pubDate": "2025-07-29T20:33:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Whale Loops $180M in ETH for 5x Leverage on Aave",
+      "link": "https://cryptopanic.com/news/aave/23769809/Whale-Loops-180M-in-ETH-for-5x-Leverage-on-Aave",
+      "pubDate": "2025-07-29T20:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AAVE",
+        "A"
+      ]
+    },
+    {
+      "title": "VET price outlook as VeChain teams up with BitGo",
+      "link": "https://cryptopanic.com/news/vechain/23765665/VET-price-outlook-as-VeChain-teams-up-with-BitGo",
+      "pubDate": "2025-07-29T20:15:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ]
+    },
+    {
+      "title": "Monero Under Pressure: Qubic’s Dual‑Mining Model Tests Community’s Nerves",
+      "link": "https://cryptopanic.com/news/monero/23764874/Monero-Under-Pressure-Qubics-DualMining-Model-Tests-Communitys-Nerves",
+      "pubDate": "2025-07-29T20:05:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Lido Founder Borrows 85M USDT from Aave to Buy Ethereum (ETH)",
+      "link": "https://cryptopanic.com/news/aave/23763150/Lido-Founder-Borrows-85M-USDT-from-Aave-to-Buy-Ethereum-ETH",
+      "pubDate": "2025-07-29T18:48:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Altcoin rally led by ETH, BNB, AVAX, PENGU likely if Bitcoin range break occurs",
+      "link": "https://cryptopanic.com/news/avalanche-2/23761686/Altcoin-rally-led-by-ETH-BNB-AVAX-PENGU-likely-if-Bitcoin-range-break-occurs",
+      "pubDate": "2025-07-29T17:32:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB"
+      ]
+    },
+    {
+      "title": "AMD Rises To 1-Year Highs, Crude Eyes $68: What's Moving Markets Tuesday?",
+      "link": "https://cryptopanic.com/news/pancakeswap-token/23761714/AMD-Rises-To-1-Year-Highs-Crude-Eyes-68-Whats-Moving-Markets-Tuesday",
+      "pubDate": "2025-07-29T17:27:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "STX",
+        "S"
+      ]
+    },
+    {
+      "title": "FET & BCH Price Movements vs BlockDAG’s 3,025% Potential",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/23760312/FET-BCH-Price-Movements-vs-BlockDAGs-3025-Potential",
+      "pubDate": "2025-07-29T17:00:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BCH",
+        "FET"
+      ]
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 30 July 2025: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/decentraland/23763088/Spell-Wallet-Daily-Puzzle-30-July-2025-Earn-Reward-of-1-MANA",
+      "pubDate": "2025-07-29T16:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "NEAR Protocol Retreats 3% Amid Liquidation Cascade",
+      "link": "https://cryptopanic.com/news/near/23760265/NEAR-Protocol-Retreats-3-Amid-Liquidation-Cascade",
+      "pubDate": "2025-07-29T16:18:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "New Demo Shows How to Earn 200 BlockDAG Daily With No Experience; CRO & ENA Market Analyses Flash Breakouts",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/23760308/New-Demo-Shows-How-to-Earn-200-BlockDAG-Daily-With-No-Experience-CRO-ENA-Market-Analyses-Flash-Breakouts",
+      "pubDate": "2025-07-29T16:02:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "CRO",
+        "ENA"
+      ]
+    },
+    {
+      "title": "XLM Downturn Looms: MACD Crossover and Negative Sentiment Raise Red Flags",
+      "link": "https://cryptopanic.com/news/stellar/23760202/XLM-Downturn-Looms-MACD-Crossover-and-Negative-Sentiment-Raise-Red-Flags",
+      "pubDate": "2025-07-29T15:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Polkadot's DOT Slips 3% as Failed Recovery Attempts Signal Weakness",
+      "link": "https://cryptopanic.com/news/polkadot/23759343/Polkadots-DOT-Slips-3-as-Failed-Recovery-Attempts-Signal-Weakness",
+      "pubDate": "2025-07-29T15:00:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Stellar (XLM) Price to $0.50? Golden Cross Switch Teases Next Price Target",
+      "link": "https://cryptopanic.com/news/stellar/23757222/Stellar-XLM-Price-to-050-Golden-Cross-Switch-Teases-Next-Price-Target",
+      "pubDate": "2025-07-29T14:33:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Ethereum validator exit queue reaches highest point ever",
+      "link": "https://cryptopanic.com/news/aave/23757171/Ethereum-validator-exit-queue-reaches-highest-point-ever",
+      "pubDate": "2025-07-29T14:31:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AAVE",
+        "BLOCK"
+      ]
+    },
+    {
+      "title": "What Most People Still Get Wrong About AI Agents: 'They Aren't Just Tools,' Says Ensemble's CEO Shamir Ozery",
+      "link": "https://cryptopanic.com/news/algorand/23757259/What-Most-People-Still-Get-Wrong-About-AI-Agents-They-Arent-Just-Tools-Says-Ensembles-CEO-Shamir-Ozery",
+      "pubDate": "2025-07-29T14:21:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Qubic’s Plan to Control 51% of Monero’s Hashrate Triggers Strong Community Reaction",
+      "link": "https://cryptopanic.com/news/monero/23757042/Qubics-Plan-to-Control-51-of-Moneros-Hashrate-Triggers-Strong-Community-Reaction",
+      "pubDate": "2025-07-29T14:20:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "IOTA"
+      ]
+    },
+    {
+      "title": "HTX Introduces Custom Invitation Code Feature with Referral Campaign Offering 1 BTC Grand Prize",
+      "link": "https://cryptopanic.com/news/huobi-token/23757186/HTX-Introduces-Custom-Invitation-Code-Feature-with-Referral-Campaign-Offering-1-BTC-Grand-Prize",
+      "pubDate": "2025-07-29T14:04:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "HT"
+      ]
+    },
+    {
+      "title": "Stellar Faces Crucial Battle After Mega Surge: Could XLM Mirror Ripple’s XRP $200 Billion Success?",
+      "link": "https://cryptopanic.com/news/stellar/23756529/Stellar-Faces-Crucial-Battle-After-Mega-Surge-Could-XLM-Mirror-Ripples-XRP-200-Billion-Success",
+      "pubDate": "2025-07-29T14:01:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "XRP",
+        "XLM"
+      ]
+    },
+    {
+      "title": "CoinDesk 20 Performance Update: Stellar (XLM) Gains 2.1% as Index Inches Higher",
+      "link": "https://cryptopanic.com/news/stellar/23755613/CoinDesk-20-Performance-Update-Stellar-XLM-Gains-21-as-Index-Inches-Higher",
+      "pubDate": "2025-07-29T13:19:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "SEC Delays Trump-Backed Bitcoin ETF and Other Major Crypto Funds Again",
+      "link": "https://cryptopanic.com/news/litecoin/23755236/SEC-Delays-Trump-Backed-Bitcoin-ETF-and-Other-Major-Crypto-Funds-Again",
+      "pubDate": "2025-07-29T13:18:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Trump’s World Liberty Financial Dumps $1M USDC for 256.75 ETH",
+      "link": "https://cryptopanic.com/news/ethereum/23754696/Trumps-World-Liberty-Financial-Dumps-1M-USDC-for-25675-ETH",
+      "pubDate": "2025-07-29T13:10:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "World Liberty Financial ETH holdings have increased; its total holdings are now 77,226 ETH, valued at about $296 million, with an approximate unrealized profit of $41. 7 million.",
+      "currencies": [
+        "ETH",
+        "USDC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "HBAR Whales Quietly Buy the Dip While Retail Turns Bearish; Rally Ahead?",
+      "link": "https://cryptopanic.com/news/blockstack/23755447/HBAR-Whales-Quietly-Buy-the-Dip-While-Retail-Turns-Bearish-Rally-Ahead",
+      "pubDate": "2025-07-29T12:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HBAR",
+        "STX"
+      ]
+    },
+    {
+      "title": "VeChain Launches Stargate: Easy Staking for Everyone",
+      "link": "https://cryptopanic.com/news/vechain/23753604/VeChain-Launches-Stargate-Easy-Staking-for-Everyone",
+      "pubDate": "2025-07-29T12:15:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ]
+    },
+    {
+      "title": "CRO Price Eyes Breakout as Double Bottom and Golden Cross Align",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/23754811/CRO-Price-Eyes-Breakout-as-Double-Bottom-and-Golden-Cross-Align",
+      "pubDate": "2025-07-29T12:11:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Trump-backed World Liberty Financial ETH portfolio nears $300M with latest purchase",
+      "link": "https://cryptopanic.com/news/ethereum/23750182/Trump-backed-World-Liberty-Financial-ETH-portfolio-nears-300M-with-latest-purchase",
+      "pubDate": "2025-07-29T11:14:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Trump-backed World Liberty Financial has invested an additional 1 million USDC in 256. 75 ETH at $3,895.",
+      "currencies": [
+        "ETH",
+        "USDC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Main XRP Rival Stellar (XLM) Might Be on Edge of Major Crash: Here's Scenario",
+      "link": "https://cryptopanic.com/news/stellar/23750048/Main-XRP-Rival-Stellar-XLM-Might-Be-on-Edge-of-Major-Crash-Heres-Scenario",
+      "pubDate": "2025-07-29T11:12:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XLM"
+      ]
+    },
+    {
+      "title": "$250 million jolt on Avalanche: Grove Finance revolutionizes DeFi and aims at the tokenization of real assets",
+      "link": "https://cryptopanic.com/news/avalanche-2/23755391/250-million-jolt-on-Avalanche-Grove-Finance-revolutionizes-DeFi-and-aims-at-the-tokenization-of-real-assets",
+      "pubDate": "2025-07-29T10:57:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "Lido Founder Konstantin Lomashuk borrows 85M USDT from Aave for ETH acquisition",
+      "link": "https://cryptopanic.com/news/aave/23747281/Lido-Founder-Konstantin-Lomashuk-borrows-85M-USDT-from-Aave-for-ETH-acquisition",
+      "pubDate": "2025-07-29T10:00:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Grove Finance Launches on Avalanche With $250 Million Target Investment",
+      "link": "https://cryptopanic.com/news/avalanche-2/23744385/Grove-Finance-Launches-on-Avalanche-With-250-Million-Target-Investment",
+      "pubDate": "2025-07-29T08:30:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "RWA"
+      ]
+    },
+    {
+      "title": "PancakeSwap breaks 8-month resistance – $4.25 in sight, only if…",
+      "link": "https://cryptopanic.com/news/pancakeswap-token/23742757/PancakeSwap-breaks-8-month-resistance-425-in-sight-only-if",
+      "pubDate": "2025-07-29T08:00:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CAKE"
+      ]
+    },
+    {
+      "title": "IKA Listing on KuCoin, Bitget, and LBank Today: Trade Clock Ticking",
+      "link": "https://cryptopanic.com/news/kucoin-shares/23747120/IKA-Listing-on-KuCoin-Bitget-and-LBank-Today-Trade-Clock-Ticking",
+      "pubDate": "2025-07-29T08:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "KCS",
+        "IKA"
+      ]
+    },
+    {
+      "title": "Stellar (XLM) at Risk of a Major Crash After Losing Key 10-Day Support",
+      "link": "https://cryptopanic.com/news/stellar/23742627/Stellar-XLM-at-Risk-of-a-Major-Crash-After-Losing-Key-10-Day-Support",
+      "pubDate": "2025-07-29T07:56:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "This Emerging Project Could Overtake Monero’s Network",
+      "link": "https://cryptopanic.com/news/monero/23740745/This-Emerging-Project-Could-Overtake-Moneros-Network",
+      "pubDate": "2025-07-29T06:30:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "STX is 125% APY stake rewards???",
+      "link": "https://cryptopanic.com/news/blockstack/23782243/STX-is-125-APY-stake-rewards",
+      "pubDate": "2025-07-29T06:22:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STX",
+        "MCO"
+      ]
+    },
+    {
+      "title": "AVAX jumps 40% in TVL: Will traders drive the next leg up?",
+      "link": "https://cryptopanic.com/news/avalanche-2/23739397/AVAX-jumps-40-in-TVL-Will-traders-drive-the-next-leg-up",
+      "pubDate": "2025-07-29T06:00:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Rhea Finance Listing Date Near: Check RHEA Token Price Prediction",
+      "link": "https://cryptopanic.com/news/near/23742658/Rhea-Finance-Listing-Date-Near-Check-RHEA-Token-Price-Prediction",
+      "pubDate": "2025-07-29T06:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Cronos Price Prediction: CRO bulls aim for next leg higher as momentum builds",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/23753737/Cronos-Price-Prediction-CRO-bulls-aim-for-next-leg-higher-as-momentum-builds",
+      "pubDate": "2025-07-29T05:55:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Lido Founder Utilizes USDT Loan for Ethereum Acquisition",
+      "link": "https://cryptopanic.com/news/aave/23742524/Lido-Founder-Utilizes-USDT-Loan-for-Ethereum-Acquisition",
+      "pubDate": "2025-07-29T04:13:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Fluid Gains Significant Share in Ethereum Stablecoin Market",
+      "link": "https://cryptopanic.com/news/uniswap/23742521/Fluid-Gains-Significant-Share-in-Ethereum-Stablecoin-Market",
+      "pubDate": "2025-07-29T03:53:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ]
+    },
+    {
+      "title": "Will XRP Replace The U.S Dollar As The Global Reserve Currency?",
+      "link": "https://cryptopanic.com/news/ripple/23734616/Will-XRP-Replace-The-US-Dollar-As-The-Global-Reserve-Currency",
+      "pubDate": "2025-07-29T01:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Key Insights: Social sentiment around XRP was on the rise in the last 7 days. It was with a particular focus on its role in global finance and the grand scheme of things. Most of it was driven by key industry figures who recently expressed their thoughts on the fate of XRP. Perhaps the most […] The post Will XRP Replace The U",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 6
+      }
+    }
+  ]
+}

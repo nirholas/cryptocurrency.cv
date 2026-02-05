@@ -1,0 +1,25 @@
+{
+  "date": "2020-08-06",
+  "fetchedAt": "2026-02-05T07:27:06.942Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA (MIOTA) Playing an Active Role in EU’s CityxChange Project",
+      "link": "https://cryptopanic.com/news/9587846/IOTA-MIOTA-Playing-an-Active-Role-in-EUs-CityxChange-Project",
+      "pubDate": "2020-08-06T18:07:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

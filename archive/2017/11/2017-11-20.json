@@ -1,0 +1,26 @@
+{
+  "date": "2017-11-20",
+  "fetchedAt": "2026-02-05T07:27:06.995Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "First Successful Bitcoin-Litecoin Cross-Chain Transaction Completed",
+      "link": "https://cryptopanic.com/news/litecoin/465811/First-Successful-Bitcoin-Litecoin-Cross-Chain-Transaction-Completed",
+      "pubDate": "2017-11-20T04:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

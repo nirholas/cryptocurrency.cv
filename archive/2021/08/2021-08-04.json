@@ -1,0 +1,549 @@
+{
+  "date": "2021-08-04",
+  "fetchedAt": "2026-02-05T07:27:06.512Z",
+  "articleCount": 35,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ripple (XRP) granted access to Binance documents for SEC case",
+      "link": "https://cryptopanic.com/news/ripple/12467802/Ripple-XRP-granted-access-to-Binance-documents-for-SEC-case",
+      "pubDate": "2021-08-04T22:00:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Ripple’s lawsuit with the US Securities and Exchange Commission (SEC) involved one of the largest crypto exchanges in the case discovery as Brad Garlinghouse’s motion to obtain Binance documents from the Cayman Islands has been granted by the court.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogecoin ($DOGE) Could Hit $1.2 by 2025, Expert Panel Suggests",
+      "link": "https://cryptopanic.com/news/dogecoin/12467782/Dogecoin-DOGE-Could-Hit-12-by-2025-Expert-Panel-Suggests",
+      "pubDate": "2021-08-04T21:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The price of Dogecoin (DOGE) could surpass the elusive $1 mark by 2025 and hit a $1.21 high by that year, before reaching a $3.6 high by 2030, according to a panel of cryptocurrency experts surveyed by Finder. According to the expert panel, the price of the cryptocurrency is set to surge in the future, […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 5
+      }
+    },
+    {
+      "title": "CipherTrace Releases DHS-Funded Monero Tracing Tools",
+      "link": "https://cryptopanic.com/news/monero/12467771/CipherTrace-Releases-DHS-Funded-Monero-Tracing-Tools",
+      "pubDate": "2021-08-04T21:41:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Coinbase halts Bitcoin SV trading after yet another 51% attack",
+      "link": "https://cryptopanic.com/news/12467755/Coinbase-halts-Bitcoin-SV-trading-after-yet-another-51-attack",
+      "pubDate": "2021-08-04T21:30:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ]
+    },
+    {
+      "title": "Theta blockhain is now accessible through Metamask plug-in! Find out how to use Metamask with Theta to simplify int…",
+      "link": "https://cryptopanic.com/news/theta-token/12472453/Theta-blockhain-is-now-accessible-through-Metamask-plug-in-Find-out-how-to-use-Metamask-with-Theta-to-simplify-int",
+      "pubDate": "2021-08-04T20:33:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "AccuWeather brings weather data to smart contracts by running a Chainlink node",
+      "link": "https://cryptopanic.com/news/chainlink/12467612/AccuWeather-brings-weather-data-to-smart-contracts-by-running-a-Chainlink-node",
+      "pubDate": "2021-08-04T20:32:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "AccuWeather announced Wednesday that it's launching a Chainlink node to place its weather APIs directly onto blockchain-based smart contracts.",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 53,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Exchanges Increasingly Becoming Wary Of Bitcoin SV Following String Of Attacks On The Network",
+      "link": "https://cryptopanic.com/news/12467582/Crypto-Exchanges-Increasingly-Becoming-Wary-Of-Bitcoin-SV-Following-String-Of-Attacks-On-The-Network",
+      "pubDate": "2021-08-04T20:30:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin SV’s price was shaken briefly as its community continued to digest the news that the cryptocurrency suffered a 51% breach. Following the news of the attack on the network, Coinbase stopped trading the cryptocurrency on the exchange platform. Coinbase, which listed BSV only a few months ago, announced suspending the trading on the website […]",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Oscar Mayer Creates One-Off Pack of Dogecoin Hot Dogs",
+      "link": "https://cryptopanic.com/news/dogecoin/12467521/Oscar-Mayer-Creates-One-Off-Pack-of-Dogecoin-Hot-Dogs",
+      "pubDate": "2021-08-04T20:09:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "-",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Axie Infinity Generated More Revenue than Bitcoin, Ethereum in July",
+      "link": "https://cryptopanic.com/news/12467093/Axie-Infinity-Generated-More-Revenue-than-Bitcoin-Ethereum-in-July",
+      "pubDate": "2021-08-04T17:05:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "AXS"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Circle and Unstoppable Domains Partner to Make USDC Exchanges Easier",
+      "link": "https://cryptopanic.com/news/12467027/Circle-and-Unstoppable-Domains-Partner-to-Make-USDC-Exchanges-Easier",
+      "pubDate": "2021-08-04T16:40:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "In a similar aspect to how PayPal and Venmo made it easy for people to send US dollars to one another, Unstoppable Domains said their “.coin” usernames provide the same simplicity and accessibility",
+      "currencies": [
+        "USDC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple CEO Granted Access To Binance XRP Docs",
+      "link": "https://cryptopanic.com/news/ripple/12466774/Ripple-CEO-Granted-Access-To-Binance-XRP-Docs",
+      "pubDate": "2021-08-04T15:03:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "-",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "AXS price gains over 16% as Axie Infinity closes in on 1M daily active users",
+      "link": "https://cryptopanic.com/news/12466709/AXS-price-gains-over-16-as-Axie-Infinity-closes-in-on-1M-daily-active-users",
+      "pubDate": "2021-08-04T14:46:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The interplay between Axie Infinity's rising popularity among gamers and its booming revenue has helped its native token AXS become one of the top-performing digital assets in 2021.",
+      "currencies": [
+        "AXS"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @hackernoon: \"XDC-Connect: A Simplified Process of Connecting to XDC Supported Wallets\" by @XinFin_Official #xdc…",
+      "link": "https://cryptopanic.com/news/12473010/RT-hackernoon-XDC-Connect-A-Simplified-Process-of-Connecting-to-XDC-Supported-Wallets-by-XinFin_Official-xdc",
+      "pubDate": "2021-08-04T14:43:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XDC"
+      ]
+    },
+    {
+      "title": "“We must avoid weakening commitment strategies...once it’s on the roadmap we need to commit to it...we must require…",
+      "link": "https://cryptopanic.com/news/ecash/12473136/We-must-avoid-weakening-commitment-strategiesonce-its-on-the-roadmap-we-need-to-commit-to-itwe-must-require",
+      "pubDate": "2021-08-04T14:31:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Have you seen the #ETNApp has been downloaded over 3 million times?! We've got more information over on the…",
+      "link": "https://cryptopanic.com/news/12466631/Have-you-seen-the-ETNApp-has-been-downloaded-over-3-million-times-Weve-got-more-information-over-on-the",
+      "pubDate": "2021-08-04T14:30:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "XRP lawsuit: Judge grants Ripple CEO’s motion to obtain docs from Binance",
+      "link": "https://cryptopanic.com/news/ripple/12466520/XRP-lawsuit-Judge-grants-Ripple-CEOs-motion-to-obtain-docs-from-Binance",
+      "pubDate": "2021-08-04T14:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The United States Securities and Exchange Commission’s lawsuit against Ripple Labs saw a recent development after U.S. Magistrate Judge Sarah Netburn granted Ripple CEO Brad Garlinghouse’s motions to “Obtain International Discovery.” According to the order description, “ORDER granting 274 Letter Motion for Discovery. The Court will communicate with counsel to arrange delivery of the letters.”...",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @Rob_Gryn: Straight from the set of PAX TV in South Korea - 15 min segment featuring #Metahero airing soon 🇰🇷 #BeYourOwnHero",
+      "link": "https://cryptopanic.com/news/paxos-standard/12470885/RT-Rob_Gryn-Straight-from-the-set-of-PAX-TV-in-South-Korea-15-min-segment-featuring-Metahero-airing-soon-BeYourOwnHero",
+      "pubDate": "2021-08-04T11:48:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HERO",
+        "PAX"
+      ]
+    },
+    {
+      "title": "SEC Faces A Brutal Ripple Reckoning With Federal Judge Granting Brad Garlinghouse’s Request For Binance Documents",
+      "link": "https://cryptopanic.com/news/ripple/12466064/SEC-Faces-A-Brutal-Ripple-Reckoning-With-Federal-Judge-Granting-Brad-Garlinghouses-Request-For-Binance-Documents",
+      "pubDate": "2021-08-04T11:02:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Fintech startup Ripple has notched another win this week in its endless legal showdown with the United States Securities and Exchange Commission (SEC). As ZyCrypto reported on Tuesday, the lawsuit between the SEC and Ripple now involves the world’s largest cryptocurrency exchange by volume, Binance. Specifically, CEO Brad Garlinghouse filed a motion requesting documents from […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 39,
+        "negative": 17
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Want to learn how to connect your Trust Wallet to Binance Smart Chain (BSC - @BinanceChain) to interact with the wi…",
+      "link": "https://cryptopanic.com/news/12472702/Want-to-learn-how-to-connect-your-Trust-Wallet-to-Binance-Smart-Chain-BSC-BinanceChain-to-interact-with-the-wi",
+      "pubDate": "2021-08-04T10:06:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "Brad Garlinghouse Slams SEC for Going Back on ETH Non-Security Status",
+      "link": "https://cryptopanic.com/news/ethereum/12465930/Brad-Garlinghouse-Slams-SEC-for-Going-Back-on-ETH-Non-Security-Status",
+      "pubDate": "2021-08-04T09:59:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Brad Garlinghouse doubts the crypto market will have enough clarity now after Hinman's recent ETH affidavit",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 13
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ethereum Is One of Biggest Volume Losers on Crypto Market Ahead of EIP-1559 Launch",
+      "link": "https://cryptopanic.com/news/ethereum/12465662/Ethereum-Is-One-of-Biggest-Volume-Losers-on-Crypto-Market-Ahead-of-EIP-1559-Launch",
+      "pubDate": "2021-08-04T08:02:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum is losing larger volume than biggest cryptocurrencies and the reason may be the upcoming network update",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "250 Million XRP Transferred in One Move to Bitstamp, While XRP Holds Above $0.7",
+      "link": "https://cryptopanic.com/news/ripple/12465160/250-Million-XRP-Transferred-in-One-Move-to-Bitstamp-While-XRP-Holds-Above-07",
+      "pubDate": "2021-08-04T07:41:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "A single lump of 250 million XRP tokens has been moved to Bitstamp from an anonymous cryptocurrency wallet, while Ripple keeps sending XRP to Huobi",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "POW#49: Something special is happening with eCash",
+      "link": "https://cryptopanic.com/news/ecash/12468070/POW49-Something-special-is-happening-with-eCash",
+      "pubDate": "2021-08-04T07:21:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: How's it going everyone?",
+      "link": "https://cryptopanic.com/news/12470230/RT-RichardHeartWin-Hows-it-going-everyone",
+      "pubDate": "2021-08-04T07:14:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "Bitcoin SV (BSV) hit by 51% attack, three malicious chains created",
+      "link": "https://cryptopanic.com/news/12462482/Bitcoin-SV-BSV-hit-by-51-attack-three-malicious-chains-created",
+      "pubDate": "2021-08-04T06:17:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin SV (BSV) was hit by a 51% attack last night, leading to over three malicious chains getting created and several blocks getting ‘reorganized,’ data from multiple sources showed.",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin SV suffers a new  51% attack",
+      "link": "https://cryptopanic.com/news/12461096/Bitcoin-SV-suffers-a-new-51-attack",
+      "pubDate": "2021-08-04T05:29:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "An unidentified group reorganized the Bitcoin SV blockchain, creating 3 different chains that were mined at the same time",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 12
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin SV suffers a new 51% attack",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/12461096/Bitcoin-SV-suffers-a-new-51-attack",
+      "pubDate": "2021-08-04T05:29:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "An unidentified group reorganized the Bitcoin SV blockchain, creating 3 different chains that were mined at the same time",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 12
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "This is a very interesting creation, I hope our products can bring more joy. Very good work.",
+      "link": "https://cryptopanic.com/news/12589730/This-is-a-very-interesting-creation-I-hope-our-products-can-bring-more-joy-Very-good-work",
+      "pubDate": "2021-08-04T04:34:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DAO"
+      ]
+    },
+    {
+      "title": "RT @eCashOfficial: Exciting news! Nakamoto Financial announces the first stablecoin built on eCash! Great that they are building their…",
+      "link": "https://cryptopanic.com/news/ecash/12461584/RT-eCashOfficial-Exciting-news-Nakamoto-Financial-announces-the-first-stablecoin-built-on-eCash-Great-that-they-are-building-their",
+      "pubDate": "2021-08-04T03:51:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC",
+        "BCHABC"
+      ]
+    },
+    {
+      "title": "Exciting news! Nakamoto Financial announces the first stablecoin built on eCash! Great that they are building t…",
+      "link": "https://cryptopanic.com/news/ecash/12465666/Exciting-news-Nakamoto-Financial-announces-the-first-stablecoin-built-on-eCash-Great-that-they-are-building-t",
+      "pubDate": "2021-08-04T03:50:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "This is what you’re missing about AAVE’s growth, price action",
+      "link": "https://cryptopanic.com/news/12460838/This-is-what-youre-missing-about-AAVEs-growth-price-action",
+      "pubDate": "2021-08-04T02:30:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Impacted by Bitcoin falling into the $38.5k range again, most altcoins have had a pretty monotonous 24 hours. Such was the case with AAVE too. After witnessing a 1.4% drop over the day, the crypto was valued at $311.42 at press time. Additionally, its market cap stood at merely $4 billion, when looked at in […]",
+      "currencies": [
+        "BTC",
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano Founder Dismisses Technical Analysis Suggesting $ADA’s Price Is Set to Plunge",
+      "link": "https://cryptopanic.com/news/cardano/12460855/Cardano-Founder-Dismisses-Technical-Analysis-Suggesting-ADAs-Price-Is-Set-to-Plunge",
+      "pubDate": "2021-08-04T02:24:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Cardano (ADA) founder Charles Hoskinson has dismissed technical analysis published by veteran trader Peter Brandt suggesting that the price of ADA could soon plunge after forming a pattern similar to one Litecoin saw in 2018. In an Ask Me Anything (AMA) session, Hoskinson dismissed the technical analysis, suggesting that markets are now too complicated for […]",
+      "currencies": [
+        "ADA",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 10
+      }
+    },
+    {
+      "title": "Bitcoin SV Suffers Another 51% Attack",
+      "link": "https://cryptopanic.com/news/12460811/Bitcoin-SV-Suffers-Another-51-Attack",
+      "pubDate": "2021-08-04T02:08:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "An unidentified group reorganized the Bitcoin SV blockchain, creating 3 different chains that were mined at the same time",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "RT @KitcoNewsNOW: What is Hex, and how did it gain 2,700% in 1 year? Richard Heart challenges 'scam' accusations #k…",
+      "link": "https://cryptopanic.com/news/12462887/RT-KitcoNewsNOW-What-is-Hex-and-how-did-it-gain-2700-in-1-year-Richard-Heart-challenges-scam-accusations-k",
+      "pubDate": "2021-08-04T00:32:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "Bitcoin Price Still ‘in a Parabolic Advance’, Says Trader Who Predicted Btc’s 2018 Bear Market",
+      "link": "https://cryptopanic.com/news/near/12460656/Bitcoin-Price-Still-in-a-Parabolic-Advance-Says-Trader-Who-Predicted-Btcs-2018-Bear-Market",
+      "pubDate": "2021-08-04T00:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Veteran trader and analyst Peter Brandt, well-known in the cryptocurrency space for accurately predicting bitcoin’s 84% decline in 2018 after the cryptocurrency hit a then all-time high near $20,000, has revealed he believes Bitcoin’s parabolic advance is still ongoing. Speaking to crypto analyst Scott Melker, Brandt noted that Bitcoin is still on a long-term upward […]",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "date": "2018-06-03",
+  "fetchedAt": "2026-02-05T07:27:06.908Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "ICOs in 2018 Have Surpassed 2017’s Record Pace",
+      "link": "https://cryptopanic.com/news/2108360/ICOs-in-2018-Have-Surpassed-2017s-Record-Pace",
+      "pubDate": "2018-06-03T15:25:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    }
+  ]
+}

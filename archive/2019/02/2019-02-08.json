@@ -1,0 +1,26 @@
+{
+  "date": "2019-02-08",
+  "fetchedAt": "2026-02-05T07:27:07.875Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Litecoin [LTC] Spikes Higher Becoming 4th Largest Crypto, $40 Within Striking Distance",
+      "link": "https://cryptopanic.com/news/4511126/Litecoin-LTC-Spikes-Higher-Becoming-4th-Largest-Crypto-40-Within-Striking-Distance",
+      "pubDate": "2019-02-08T15:49:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 21,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

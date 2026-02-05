@@ -1,0 +1,25 @@
+{
+  "date": "2018-11-09",
+  "fetchedAt": "2026-02-05T07:27:08.686Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Roger Ver and Craig Wright Have Made Bitcoin Cash’s Hard Fork All About Them",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/3622382/Roger-Ver-and-Craig-Wright-Have-Made-Bitcoin-Cashs-Hard-Fork-All-About-Them",
+      "pubDate": "2018-11-09T18:13:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 8
+      }
+    }
+  ]
+}

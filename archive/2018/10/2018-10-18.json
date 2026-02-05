@@ -1,0 +1,22 @@
+{
+  "date": "2018-10-18",
+  "fetchedAt": "2026-02-05T07:27:08.696Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tether is exiting and nobody noticed",
+      "link": "https://cryptopanic.com/news/paxos-standard/3383540/Tether-is-exiting-and-nobody-noticed",
+      "pubDate": "2018-10-18T04:03:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDC"
+      ]
+    }
+  ]
+}

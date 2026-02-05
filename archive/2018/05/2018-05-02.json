@@ -1,0 +1,39 @@
+{
+  "date": "2018-05-02",
+  "fetchedAt": "2026-02-05T07:27:06.982Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @bitcoingold: Check out the BTG Progress Update presented by Co-founder Martin Kuvandzhiev at the COINNEST Meet-UP in Seoul, Korea. 🇰🇷…",
+      "link": "https://cryptopanic.com/news/1840055/RT-bitcoingold-Check-out-the-BTG-Progress-Update-presented-by-Co-founder-Martin-Kuvandzhiev-at-the-COINNEST-Meet-UP-in-Seoul-Korea",
+      "pubDate": "2018-05-02T23:24:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTG"
+      ]
+    },
+    {
+      "title": "Rhett Creighton Announces the Next Bitcoin Fork to the Chagrin of the Community",
+      "link": "https://cryptopanic.com/news/1836376/Rhett-Creighton-Announces-the-Next-Bitcoin-Fork-to-the-Chagrin-of-the-Community",
+      "pubDate": "2018-05-02T16:00:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH",
+        "BTG"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

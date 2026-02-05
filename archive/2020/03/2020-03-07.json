@@ -1,0 +1,37 @@
+{
+  "date": "2020-03-07",
+  "fetchedAt": "2026-02-05T07:27:06.977Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA (MIOTA) Founder to Compensate Hack Losses to Community From His Own Pocket",
+      "link": "https://cryptopanic.com/news/8135119/IOTA-MIOTA-Founder-to-Compensate-Hack-Losses-to-Community-From-His-Own-Pocket",
+      "pubDate": "2020-03-07T10:50:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$AEVO has been added to #Guildex",
+      "link": "https://cryptopanic.com/news/8441597/AEVO-has-been-added-to-Guildex?mtm_campaign=API-OFA",
+      "pubDate": "2020-03-07T03:33:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "AEVO"
+      ]
+    }
+  ]
+}

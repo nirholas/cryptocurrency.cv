@@ -1,0 +1,26 @@
+{
+  "date": "2019-03-03",
+  "fetchedAt": "2026-02-05T07:27:06.811Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin SV Team Rectifies Vulnerabilities for Multiple Bitcoin Blockchains",
+      "link": "https://cryptopanic.com/news/4725271/Bitcoin-SV-Team-Rectifies-Vulnerabilities-for-Multiple-Bitcoin-Blockchains",
+      "pubDate": "2019-03-03T11:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    }
+  ]
+}

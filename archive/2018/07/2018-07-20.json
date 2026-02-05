@@ -1,0 +1,25 @@
+{
+  "date": "2018-07-20",
+  "fetchedAt": "2026-02-05T07:27:06.812Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Smarts Contracts Are Coming to Bitcoin Cash, Here’s all you Need to Know",
+      "link": "https://cryptopanic.com/news/2588488/Smarts-Contracts-Are-Coming-to-Bitcoin-Cash-Heres-all-you-Need-to-Know",
+      "pubDate": "2018-07-20T12:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 6
+      }
+    }
+  ]
+}

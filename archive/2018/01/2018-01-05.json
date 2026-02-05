@@ -1,0 +1,43 @@
+{
+  "date": "2018-01-05",
+  "fetchedAt": "2026-02-05T07:27:06.962Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Clone Verge May not be So Private After All",
+      "link": "https://cryptopanic.com/news/727283/Bitcoin-Clone-Verge-May-not-be-So-Private-After-All",
+      "pubDate": "2018-01-05T15:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XVG"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ripple Eyes Retreat After Record Price Highs",
+      "link": "https://cryptopanic.com/news/ripple/726336/Ripple-Eyes-Retreat-After-Record-Price-Highs",
+      "pubDate": "2018-01-05T14:16:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "date": "2017-11-14",
+  "fetchedAt": "2026-02-05T07:27:06.817Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Cash Hard Forks to a Better Difficulty Algorithm",
+      "link": "https://cryptopanic.com/news/444245/Bitcoin-Cash-Hard-Forks-to-a-Better-Difficulty-Algorithm",
+      "pubDate": "2017-11-14T00:01:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

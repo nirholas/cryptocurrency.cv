@@ -1,0 +1,345 @@
+{
+  "date": "2021-02-21",
+  "fetchedAt": "2026-02-05T07:27:06.843Z",
+  "articleCount": 22,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Doge King: One Cryptocurrency Account Revealed To Hold 36 Billion Dogecoin—Worth Over $2 Billion",
+      "link": "https://cryptopanic.com/news/dogecoin/11522054/Doge-King-One-Cryptocurrency-Account-Revealed-To-Hold-36-Billion-DogecoinWorth-Over-2-Billion",
+      "pubDate": "2021-02-21T23:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin blockchain data has shown an anonymous person or persons control around 28% of all the dogecoin tokens in circulation—worth a massive $2 billion at current prices...",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Crypto Analyst Who Accurately Called Bitcoin Collapse Says Top Could Be Near – Here’s His New Forecast",
+      "link": "https://cryptopanic.com/news/near/11522055/Crypto-Analyst-Who-Accurately-Called-Bitcoin-Collapse-Says-Top-Could-Be-Near-Heres-His-New-Forecast",
+      "pubDate": "2021-02-21T22:15:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A pseudonymous analyst who nailed Bitcoin’s plummet from $11,600 to $6,400 in 2019 says the bull market top could be on the horizon. In a new tweet, the crypto strategist known in the industry as Dave the Wave warns his 44,700 followers that Bitcoin’s furious rally from $20,000 to an all-time high of $57,505 in […]",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 10
+      }
+    },
+    {
+      "title": "#CounosBit, the newest #hard_fork of #Bitcoin, will be built by and around a community of users. #Cbits offers 20 t…",
+      "link": "https://cryptopanic.com/news/11522819/CounosBit-the-newest-hard_fork-of-Bitcoin-will-be-built-by-and-around-a-community-of-users-Cbits-offers-20-t",
+      "pubDate": "2021-02-21T22:13:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "Former SEC Chair Mary Jo White on SEC’s XRP Lawsuit: ‘Dead Wrong Legally and Factually’",
+      "link": "https://cryptopanic.com/news/ripple/11521887/Former-SEC-Chair-Mary-Jo-White-on-SECs-XRP-Lawsuit-Dead-Wrong-Legally-and-Factually",
+      "pubDate": "2021-02-21T20:48:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "As Ripple squares up for battle against the U.S. Securities and Exchange Commission (SEC), former SEC Chair Mary Jo White is coming to Ripple’s defense. In an interview with Fortune Magazine, White, who served as the 31st SEC chair from 2013-2017, reveals that she is not convinced that the SEC’s lawsuit against Ripple, which accuses […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple now registered as a Wyoming business",
+      "link": "https://cryptopanic.com/news/ripple/11521851/Ripple-now-registered-as-a-Wyoming-business",
+      "pubDate": "2021-02-21T20:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "\"More crypto companies are realizing Wyoming is a better domicile than Delaware due to our crypto-friendly laws,\" said Caitlin Long.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Top 5 cryptocurrencies to watch this week: BTC, AAVE, ATOM, NEO, VET",
+      "link": "https://cryptopanic.com/news/11521822/Top-5-cryptocurrencies-to-watch-this-week-BTC-AAVE-ATOM-NEO-VET",
+      "pubDate": "2021-02-21T19:45:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Select altcoins continue to move higher as traders attempt to push Bitcoin price to $60,000.",
+      "currencies": [
+        "BTC",
+        "ATOM",
+        "VET",
+        "NEO"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Are you a dev that is or wants to build #dApps that ensure #data privacy, permanence &amp; security? We want to hear fr…",
+      "link": "https://cryptopanic.com/news/11523449/Are-you-a-dev-that-is-or-wants-to-build-dApps-that-ensure-data-privacy-permanence-amp-security-We-want-to-hear-fr",
+      "pubDate": "2021-02-21T19:38:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "Ark Ecosystem Funding Status",
+      "link": "https://cryptopanic.com/news/11551194/Ark-Ecosystem-Funding-Status",
+      "pubDate": "2021-02-21T16:43:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Help understanding delegates/staking fees",
+      "link": "https://cryptopanic.com/news/11525890/Help-understanding-delegatesstaking-fees",
+      "pubDate": "2021-02-21T14:41:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Bitcoin Is Greatly Overpriced; Its Fair Value Is $25k, Say JPMorgan Strategists",
+      "link": "https://cryptopanic.com/news/11521460/Bitcoin-Is-Greatly-Overpriced-Its-Fair-Value-Is-25k-Say-JPMorgan-Strategists",
+      "pubDate": "2021-02-21T14:36:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin is trading at twice its fair valuation, analysts at the largest bank in the U.S have claimed. In its latest report, JPMorgan stated that it assesses the top crypto’s fair value to be $25,000. The report also looked into the effect Tesla has had, why Tether is BTC’s greatest tail risk, the rise of […]",
+      "currencies": [
+        "BTC",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 25,
+        "negative": 22
+      }
+    },
+    {
+      "title": "Monster bull flag for Yearn.finance puts $200,000 YFI price in play",
+      "link": "https://cryptopanic.com/news/11521421/Monster-bull-flag-for-Yearnfinance-puts-200000-YFI-price-in-play",
+      "pubDate": "2021-02-21T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "After weeks of aggressive selling, YFI looks primed for a move to $60,000 before Bitcoin.",
+      "currencies": [
+        "BTC",
+        "YFI"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Rises from the Crash. Now What? (Ripple 2021 Forecast)",
+      "link": "https://cryptopanic.com/news/ripple/11521420/XRP-Rises-from-the-Crash-Now-What-Ripple-2021-Forecast",
+      "pubDate": "2021-02-21T13:33:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP rises from the crash. Now what? (ripple 2021 forecast). Ripple's XRP has managed to hold a key level that we mention in our previous video and rally above the trendline resistance. So what could this potentially mean for XRP from an elliott wave outlook? Is there a probable bullish scenario for XRP? If we are in a probable wave 3 for XRP, what part of this wave 3 could we be in? #XRP #Bitcoin #AlessioRastani Subscribe: http://bit.ly/2lz33DQ| 🔔Make sure to enable ALL push notifications!🔔 Wa",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple Responds to New Complaint From SEC on Alleged Manipulation of XRP",
+      "link": "https://cryptopanic.com/news/ripple/11521410/Ripple-Responds-to-New-Complaint-From-SEC-on-Alleged-Manipulation-of-XRP",
+      "pubDate": "2021-02-21T12:45:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Ripple’s top lawyer is responding to the release of an amended court complaint filed by the U.S. Securities and Exchange Commission (SEC). The SEC, which asserts XRP is a security and alleges Ripple illegally sold the digital asset without proper clearance, filed the amended complaint on Thursday. The document adds more details on the role […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 4
+      }
+    },
+    {
+      "title": "What is going on with Ark?",
+      "link": "https://cryptopanic.com/news/11521528/What-is-going-on-with-Ark",
+      "pubDate": "2021-02-21T11:49:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "The staking race: Late entrant Ethereum lags behind rivals with Eth2",
+      "link": "https://cryptopanic.com/news/ethereum/11521358/The-staking-race-Late-entrant-Ethereum-lags-behind-rivals-with-Eth2",
+      "pubDate": "2021-02-21T11:49:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The second-biggest cryptocurrency is only the fourth-ranked staking network, but it’s looking to catch up to the rest.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Uniswap’s 2020 UNI Airdrop Now Worth $12,000",
+      "link": "https://cryptopanic.com/news/uniswap/11521259/Uniswaps-2020-UNI-Airdrop-Now-Worth-12000",
+      "pubDate": "2021-02-21T10:54:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Those who held their UNI tokens received through an airdrop back in 2020 are now sitting on roughly $12,000 following the explosive growth of the platform.",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "What is #market_cap? #Market #Capitalization, or market cap, is the total market value of an asset, like a…",
+      "link": "https://cryptopanic.com/news/11522820/What-is-market_cap-Market-Capitalization-or-market-cap-is-the-total-market-value-of-an-asset-like-a",
+      "pubDate": "2021-02-21T09:29:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "XRP Plunges 12 Percent in Minutes as $1.7 Billion Worth of Crypto Gets Liquidated",
+      "link": "https://cryptopanic.com/news/ripple/11521188/XRP-Plunges-12-Percent-in-Minutes-as-17-Billion-Worth-of-Crypto-Gets-Liquidated",
+      "pubDate": "2021-02-21T08:54:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP saw a double-digit drop in minutes, but it's not the worst-performing altcoin",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 8
+      }
+    },
+    {
+      "title": "Question, is there anywhere online that takes ark directly for payment?",
+      "link": "https://cryptopanic.com/news/11557206/Question-is-there-anywhere-online-that-takes-ark-directly-for-payment",
+      "pubDate": "2021-02-21T08:13:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Ripple Brings in Former SEC Head to Defend it Against SEC",
+      "link": "https://cryptopanic.com/news/ripple/11521157/Ripple-Brings-in-Former-SEC-Head-to-Defend-it-Against-SEC",
+      "pubDate": "2021-02-21T08:06:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "SEC Oddity In the interview with Fortune, White pointed to problems with the case against Ripple on several levels. First, she pointed to the oddity of the timing and the lengthy investigation that preceded it. White framed her explanation in terms of her experience both as an SEC Chair and a U.S. attorney at the … Continued",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @btsfav: #Bitcoin Experiment: Financial Freedom with Faucets?! Week 32",
+      "link": "https://cryptopanic.com/news/11520758/RT-btsfav-Bitcoin-Experiment-Financial-Freedom-with-Faucets-Week-32",
+      "pubDate": "2021-02-21T06:38:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "Ethereum Retreats From $2K, Why ETH Remains Strong Above $1,850",
+      "link": "https://cryptopanic.com/news/near/11519096/Ethereum-Retreats-From-2K-Why-ETH-Remains-Strong-Above-1850",
+      "pubDate": "2021-02-21T05:28:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum traded to a new all-time high near $2,040 before correcting lower against the US Dollar. ETH price is trading nicely above $1,850 and it is likely to continue towards $2,000. ETH price climbed higher steadily and it surpassed the main $2,000 resistance against the US Dollar. The price is trading nicely above the $1,850 […]",
+      "currencies": [
+        "ETH",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

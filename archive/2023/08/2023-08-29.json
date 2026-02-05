@@ -1,0 +1,584 @@
+{
+  "date": "2023-08-29",
+  "fetchedAt": "2026-02-05T07:27:07.166Z",
+  "articleCount": 42,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Top Trader Says He’s Only Bullish on Solana and Two Other Crypto Assets Besides Bitcoin and Ethereum",
+      "link": "https://cryptopanic.com/news/flow/18867404/Top-Trader-Says-Hes-Only-Bullish-on-Solana-and-Two-Other-Crypto-Assets-Besides-Bitcoin-and-Ethereum",
+      "pubDate": "2023-08-29T19:55:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "dYdX Community Votes On Appchain Migration and V4 Deployment",
+      "link": "https://cryptopanic.com/news/18867396/dYdX-Community-Votes-On-Appchain-Migration-and-V4-Deployment",
+      "pubDate": "2023-08-29T19:51:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DYDX"
+      ]
+    },
+    {
+      "title": "Crypto Analyst Cautions Against 'Next Bull Market' Assumptions",
+      "link": "https://cryptopanic.com/news/flow/18867426/Crypto-Analyst-Cautions-Against-Next-Bull-Market-Assumptions",
+      "pubDate": "2023-08-29T19:49:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Aave Launches sDAI Pool As MakerDAO Weighs Reducing Yields",
+      "link": "https://cryptopanic.com/news/18867373/Aave-Launches-sDAI-Pool-As-MakerDAO-Weighs-Reducing-Yields",
+      "pubDate": "2023-08-29T19:35:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "DAI",
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Cash Up 17% After Grayscale Prevails Over SEC in ETF Case",
+      "link": "https://cryptopanic.com/news/18867349/Bitcoin-Cash-Up-17-After-Grayscale-Prevails-Over-SEC-in-ETF-Case",
+      "pubDate": "2023-08-29T19:17:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH",
+        "STX"
+      ]
+    },
+    {
+      "title": "X (Twitter) Obtains License To Store, Transfer, And Trade Bitcoin And Crypto",
+      "link": "https://cryptopanic.com/news/18867318/X-Twitter-Obtains-License-To-Store-Transfer-And-Trade-Bitcoin-And-Crypto",
+      "pubDate": "2023-08-29T19:06:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "This license also includes related service providers, such as wallets, payment processors, and exchanges.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Hater Peter Schiff Makes His First Comment on Grayscale’s Victory Against the SEC: “It Could Drive BTC Price Down”",
+      "link": "https://cryptopanic.com/news/18867267/Bitcoin-Hater-Peter-Schiff-Makes-His-First-Comment-on-Grayscales-Victory-Against-the-SEC-It-Could-Drive-BTC-Price-Down",
+      "pubDate": "2023-08-29T18:34:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ]
+    },
+    {
+      "title": "Best Play to Earn and Gambling Projects",
+      "link": "https://cryptopanic.com/news/18867200/Best-Play-to-Earn-and-Gambling-Projects",
+      "pubDate": "2023-08-29T18:05:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "MATIC",
+        "AXS"
+      ]
+    },
+    {
+      "title": "5 billion LUNC unstaked, triggers price drop concerns",
+      "link": "https://cryptopanic.com/news/18867127/5-billion-LUNC-unstaked-triggers-price-drop-concerns",
+      "pubDate": "2023-08-29T17:30:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LUNC"
+      ]
+    },
+    {
+      "title": "Massive Whale Trades 10.000 Ethereum After Grayscale Wins the Lawsuit",
+      "link": "https://cryptopanic.com/news/18867032/Massive-Whale-Trades-10000-Ethereum-After-Grayscale-Wins-the-Lawsuit",
+      "pubDate": "2023-08-29T16:42:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A huge cryptocurrency whale made heavy transactions after the Grayscale lawsuit decision was announced, according to onchain data. Continue Reading: Massive Whale Trades 10.000 Ethereum After Grayscale Wins the Lawsuit",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "dYdX Community Votes on V4 Upgrade Proposal as $14 Million Worth of Tokens Unlock",
+      "link": "https://cryptopanic.com/news/18866904/dYdX-Community-Votes-on-V4-Upgrade-Proposal-as-14-Million-Worth-of-Tokens-Unlock",
+      "pubDate": "2023-08-29T16:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DYDX"
+      ]
+    },
+    {
+      "title": "BREAKING: Grayscale Triumph: SEC Crushed, GBTC Rockets Towards ETF, Bitcoin Targets $28,000",
+      "link": "https://cryptopanic.com/news/18866754/BREAKING-Grayscale-Triumph-SEC-Crushed-GBTC-Rockets-Towards-ETF-Bitcoin-Targets-28000",
+      "pubDate": "2023-08-29T15:17:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "In a significant turn of events for Bitcoin (BTC) and the overall market, cryptocurrency asset manager Grayscale has emerged victorious in its legal battle against the U.S. Securities and Exchange Commission (SEC). The U.S. District of Columbia Court of Appeals has ruled in favor of Grayscale, overturning the SEC’s lawsuit and potentially bringing the company one step closer to achieving Bitcoin Spot exchange-traded fund (ETF) status. Bitcoin Surges As Grayscale’s Legal Victory Boosts Market Sen",
+      "currencies": [
+        "BTC",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 38,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Securitize tokenizes U.S. Treasury Bond yield fund for accredited investors",
+      "link": "https://cryptopanic.com/news/18866713/Securitize-tokenizes-US-Treasury-Bond-yield-fund-for-accredited-investors",
+      "pubDate": "2023-08-29T15:08:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The finance asset marketplace Tradeteq is launching a U.S. Treasury Bond token on the XDC network.",
+      "currencies": [
+        "XDC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DWF Labs Withdraws 2M $CRV Tokens from Binance for Inventory Management",
+      "link": "https://cryptopanic.com/news/18866664/DWF-Labs-Withdraws-2M-CRV-Tokens-from-Binance-for-Inventory-Management",
+      "pubDate": "2023-08-29T14:59:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "One Man’s Quest to Defeat Crypto Hackers Is More Old-School Than You Might Think",
+      "link": "https://cryptopanic.com/news/flow/18866632/One-Mans-Quest-to-Defeat-Crypto-Hackers-Is-More-Old-School-Than-You-Might-Think",
+      "pubDate": "2023-08-29T14:48:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "NEAR Protocol",
+      "link": "https://cryptopanic.com/news/18866575/NEAR-Protocol",
+      "pubDate": "2023-08-29T14:30:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "BREAKING: Decision Made in Grayscale-SEC Case, Grayscale Wins the Case!",
+      "link": "https://cryptopanic.com/news/18866562/BREAKING-Decision-Made-in-Grayscale-SEC-Case-Grayscale-Wins-the-Case",
+      "pubDate": "2023-08-29T14:25:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The judge has finally made his decision in the highly followed Bitcoin Spot ETF case between Grayscale and the SEC. Continue Reading: BREAKING: Decision Made in Grayscale-SEC Case, Grayscale Wins the Case!",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 77,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Blockchain Is About To Surge, A CEO Says, And He's Launching A Fund To Take Advantage",
+      "link": "https://cryptopanic.com/news/18866539/Blockchain-Is-About-To-Surge-A-CEO-Says-And-Hes-Launching-A-Fund-To-Take-Advantage",
+      "pubDate": "2023-08-29T14:15:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ]
+    },
+    {
+      "title": "Terra Luna Classic Requisite Market Swap Reopening For LUNC And USTC To $1",
+      "link": "https://cryptopanic.com/news/18866421/Terra-Luna-Classic-Requisite-Market-Swap-Reopening-For-LUNC-And-USTC-To-1",
+      "pubDate": "2023-08-29T14:13:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LUNC"
+      ]
+    },
+    {
+      "title": "SUI, HBAR Dip Despite New Partnerships Ahead of Token Unlock",
+      "link": "https://cryptopanic.com/news/18866493/SUI-HBAR-Dip-Despite-New-Partnerships-Ahead-of-Token-Unlock",
+      "pubDate": "2023-08-29T14:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "PayPal’s PYUSD Fails To Capture Interest: 90% Of Supply Remains In Paxos’ Wallet",
+      "link": "https://cryptopanic.com/news/18866443/PayPals-PYUSD-Fails-To-Capture-Interest-90-Of-Supply-Remains-In-Paxos-Wallet",
+      "pubDate": "2023-08-29T14:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "CRV"
+      ]
+    },
+    {
+      "title": "DYDX Is Up By 11% In A Week, But Investors Must Watch Out For This Event",
+      "link": "https://cryptopanic.com/news/18866289/DYDX-Is-Up-By-11-In-A-Week-But-Investors-Must-Watch-Out-For-This-Event",
+      "pubDate": "2023-08-29T13:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MATIC",
+        "DYDX"
+      ]
+    },
+    {
+      "title": "Chiliz (CHZ) Multisig Wallet and Wintermute Trading Send Large Amount of CHZ to Binance",
+      "link": "https://cryptopanic.com/news/18866302/Chiliz-CHZ-Multisig-Wallet-and-Wintermute-Trading-Send-Large-Amount-of-CHZ-to-Binance",
+      "pubDate": "2023-08-29T12:52:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "CHZ"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DeFi Protocol Balancer Falls Victim to Exploit, Loses Nearly $900,000 in Recent Attack",
+      "link": "https://cryptopanic.com/news/maker/18866230/DeFi-Protocol-Balancer-Falls-Victim-to-Exploit-Loses-Nearly-900000-in-Recent-Attack",
+      "pubDate": "2023-08-29T12:35:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "ATOM Shows Resilience Amid Signs of Looming Bearish Turn",
+      "link": "https://cryptopanic.com/news/18866193/ATOM-Shows-Resilience-Amid-Signs-of-Looming-Bearish-Turn",
+      "pubDate": "2023-08-29T12:25:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ]
+    },
+    {
+      "title": "CRV, IMX, AAVE, COMP, YGG Poised for Strong Price Moves",
+      "link": "https://cryptopanic.com/news/18866124/CRV-IMX-AAVE-COMP-YGG-Poised-for-Strong-Price-Moves",
+      "pubDate": "2023-08-29T12:02:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "IMX"
+      ]
+    },
+    {
+      "title": "Top Trader Issues Crypto Warning, Says Next Bull Market Not a Guarantee – Here’s Why",
+      "link": "https://cryptopanic.com/news/flow/18866061/Top-Trader-Issues-Crypto-Warning-Says-Next-Bull-Market-Not-a-Guarantee-Heres-Why",
+      "pubDate": "2023-08-29T11:45:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Theta Network Price Prediction 2023-2030: Will THETA Price Hit $1.5 Soon?",
+      "link": "https://cryptopanic.com/news/18866040/Theta-Network-Price-Prediction-2023-2030-Will-THETA-Price-Hit-15-Soon",
+      "pubDate": "2023-08-29T11:40:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "THETA"
+      ]
+    },
+    {
+      "title": "DeOrderBook Set to Launch on Ethereum Mainnet, Pioneering Truly Trustless DeFi Optionality",
+      "link": "https://cryptopanic.com/news/18865957/DeOrderBook-Set-to-Launch-on-Ethereum-Mainnet-Pioneering-Truly-Trustless-DeFi-Optionality",
+      "pubDate": "2023-08-29T11:00:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDC",
+        "WBTC"
+      ]
+    },
+    {
+      "title": "Tokenized U.S. Treasuries Arrive to XDC Network as Digital Bond Market Grows",
+      "link": "https://cryptopanic.com/news/18865958/Tokenized-US-Treasuries-Arrive-to-XDC-Network-as-Digital-Bond-Market-Grows",
+      "pubDate": "2023-08-29T11:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XDC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Governance proposal for upcoming dYdX Chain goes to Snapshot vote",
+      "link": "https://cryptopanic.com/news/18865907/Governance-proposal-for-upcoming-dYdX-Chain-goes-to-Snapshot-vote",
+      "pubDate": "2023-08-29T10:44:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DYDX"
+      ]
+    },
+    {
+      "title": "Millions of XRP Flow into Ripple Partner Exchange: What's Behind This Move?",
+      "link": "https://cryptopanic.com/news/flow/18865755/Millions-of-XRP-Flow-into-Ripple-Partner-Exchange-Whats-Behind-This-Move",
+      "pubDate": "2023-08-29T09:48:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Stargate Deploys to Kava Chain Unifying Cosmos-Ethereum Liquidity",
+      "link": "https://cryptopanic.com/news/18865851/Stargate-Deploys-to-Kava-Chain-Unifying-Cosmos-Ethereum-Liquidity",
+      "pubDate": "2023-08-29T09:34:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "KAVA"
+      ]
+    },
+    {
+      "title": "DYdX to unlock 6.52M tokens worth $14M for community treasury, rewards",
+      "link": "https://cryptopanic.com/news/18865664/DYdX-to-unlock-652M-tokens-worth-14M-for-community-treasury-rewards",
+      "pubDate": "2023-08-29T09:00:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DYDX"
+      ]
+    },
+    {
+      "title": "XDC Steals the Show With 15% Daily Surge, BTC Won’t Move From $26K (Market Watch)",
+      "link": "https://cryptopanic.com/news/18865638/XDC-Steals-the-Show-With-15-Daily-Surge-BTC-Wont-Move-From-26K-Market-Watch",
+      "pubDate": "2023-08-29T08:53:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "AVAX",
+        "CRV",
+        "XDC"
+      ]
+    },
+    {
+      "title": "Weekly Cryptocurrency Market Analysis: Altcoins Trades Near Past Lows, Indicating A Potential Breakout",
+      "link": "https://cryptopanic.com/news/18866072/Weekly-Cryptocurrency-Market-Analysis-Altcoins-Trades-Near-Past-Lows-Indicating-A-Potential-Breakout",
+      "pubDate": "2023-08-29T08:26:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "New crypto collaboration between SingularityNET and Vechain to revolutionize AI-Blockchain innovation",
+      "link": "https://cryptopanic.com/news/vechain/18865462/New-crypto-collaboration-between-SingularityNET-and-Vechain-to-revolutionize-AI-Blockchain-innovation",
+      "pubDate": "2023-08-29T07:07:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ]
+    },
+    {
+      "title": "Hedera Sets Out for 1.15b Token Unlock",
+      "link": "https://cryptopanic.com/news/18866255/Hedera-Sets-Out-for-115b-Token-Unlock",
+      "pubDate": "2023-08-29T07:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Ethereum Staking Stash Almost Double Amount of ETH on Exchanges",
+      "link": "https://cryptopanic.com/news/18865491/Ethereum-Staking-Stash-Almost-Double-Amount-of-ETH-on-Exchanges",
+      "pubDate": "2023-08-29T06:31:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "RPL"
+      ]
+    },
+    {
+      "title": "Weekly Cryptocurrency Market Analysis: Altcoins Lose Ground As Cryptocurrencies Struggle To Hold Current Support Levels",
+      "link": "https://cryptopanic.com/news/18865676/Weekly-Cryptocurrency-Market-Analysis-Altcoins-Lose-Ground-As-Cryptocurrencies-Struggle-To-Hold-Current-Support-Levels",
+      "pubDate": "2023-08-29T06:19:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ]
+    },
+    {
+      "title": "Crypto Exchange Risks Exposed With These 3 Indicators: Glassnode",
+      "link": "https://cryptopanic.com/news/18865348/Crypto-Exchange-Risks-Exposed-With-These-3-Indicators-Glassnode",
+      "pubDate": "2023-08-29T06:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDC",
+        "HT"
+      ]
+    },
+    {
+      "title": "Amid slow accumulation, Hedera gears up to unlock 1.5 billion tokens",
+      "link": "https://cryptopanic.com/news/18865072/Amid-slow-accumulation-Hedera-gears-up-to-unlock-15-billion-tokens",
+      "pubDate": "2023-08-29T00:30:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    }
+  ]
+}

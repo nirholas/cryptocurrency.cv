@@ -1,0 +1,631 @@
+{
+  "date": "2022-06-30",
+  "fetchedAt": "2026-02-05T07:27:07.541Z",
+  "articleCount": 42,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "KLAPPERS CAN NOW CLAIM THEIR LOCKDROP KLAY REWARDS! Distribution of KLAY for users who locked funds in the Lo…",
+      "link": "https://cryptopanic.com/news/klay-token/15649312/KLAPPERS-CAN-NOW-CLAIM-THEIR-LOCKDROP-KLAY-REWARDS-Distribution-of-KLAY-for-users-who-locked-funds-in-the-Lo",
+      "pubDate": "2022-06-30T23:11:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "KLAP"
+      ]
+    },
+    {
+      "title": "Coinbase Announces Support for Little-Known Ethereum Scaling Altcoin and Mid-Cap Stablecoin Project",
+      "link": "https://cryptopanic.com/news/15644869/Coinbase-Announces-Support-for-Little-Known-Ethereum-Scaling-Altcoin-and-Mid-Cap-Stablecoin-Project",
+      "pubDate": "2022-06-30T22:05:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A layer-2 scaling solution is joining top US crypto exchange Coinbase’s roster of digital assets alongside an exchange stablecoin. Coinbase says Boba Network (BOBA) and Gemini USD (GUSD) will start trading paired with Tether (USDT) once appropriate liquidity conditions are met. Boba Network utilizes optimistic rollups, a less stringent and data-heavy method of transaction verification […]",
+      "currencies": [
+        "ETH",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 3
+      }
+    },
+    {
+      "title": "RT @PsyOptions: Introducing Serum Remote, a new way to \"DO\" governance on Solana",
+      "link": "https://cryptopanic.com/news/15651416/RT-PsyOptions-Introducing-Serum-Remote-a-new-way-to-DO-governance-on-Solana",
+      "pubDate": "2022-06-30T21:33:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "SRM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Remember the jumping dino game for the Chrome browser, that can only be played by one person? Try the 1-on-1 dino g…",
+      "link": "https://cryptopanic.com/news/15650215/Remember-the-jumping-dino-game-for-the-Chrome-browser-that-can-only-be-played-by-one-person-Try-the-1-on-1-dino-g",
+      "pubDate": "2022-06-30T20:24:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NKN"
+      ]
+    },
+    {
+      "title": "Banking Giant JPMorgan Says Bitcoin and Crypto Meltdown May Be Short-Lived – Here’s Why",
+      "link": "https://cryptopanic.com/news/15644525/Banking-Giant-JPMorgan-Says-Bitcoin-and-Crypto-Meltdown-May-Be-Short-Lived-Heres-Why",
+      "pubDate": "2022-06-30T20:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Financial services giant JPMorgan says the latest Bitcoin (BTC) and crypto market meltdown may be fleeting. According to a new BNN Bloomberg report, JPMorgan analysts say the crypto market’s current deleveraging trend may not last much longer. The analysts also suggest that crypto firms going under shouldn’t be a surprise given the falling prices of […]",
+      "currencies": [
+        "BTC",
+        "FTT"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Don't miss the next Multi-Chain Session: Liquid Staking for Polkadot on Moonbeam &amp; Kusama on Moonriver w/…",
+      "link": "https://cryptopanic.com/news/15650094/Dont-miss-the-next-Multi-Chain-Session-Liquid-Staking-for-Polkadot-on-Moonbeam-amp-Kusama-on-Moonriver-w",
+      "pubDate": "2022-06-30T19:50:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "KSM",
+        "GLMR"
+      ]
+    },
+    {
+      "title": "Bitcoin Trading Volume Sinks Down Almost 60% In 9 Days",
+      "link": "https://cryptopanic.com/news/bitcoin/15644398/Bitcoin-Trading-Volume-Sinks-Down-Almost-60-In-9-Days",
+      "pubDate": "2022-06-30T19:00:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Data shows the Bitcoin spot trading volume has dropped down almost 60% since the recent high, suggesting activity has severely fallen. Bitcoin Weekly Trading Volume Rises Sharp, And Then Falls Hard As per the latest weekly report from Arcane Research, the BTC spot volume recently observed a drop of around 58.7% in just nine days. […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Algorand pioneers state proofs- Here’s what investors can expect from ALGO",
+      "link": "https://cryptopanic.com/news/15644310/Algorand-pioneers-state-proofs-Heres-what-investors-can-expect-from-ALGO",
+      "pubDate": "2022-06-30T18:30:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Algorand [ALGO] is down by more than 30% this week courtesy of a bearish correction after coming into contact with its descending support line. It is now retesting the previous support line where it bounced off earlier this month. Here are some of the likely scenarios that may take place as ALGO’s price action pushes […]",
+      "currencies": [
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Rari Capital announced a system wide pause on April 30, 2022. As of today systems remain paused. As a result, Badge…",
+      "link": "https://cryptopanic.com/news/15646363/Rari-Capital-announced-a-system-wide-pause-on-April-30-2022-As-of-today-systems-remain-paused-As-a-result-Badge",
+      "pubDate": "2022-06-30T17:16:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BADGER"
+      ]
+    },
+    {
+      "title": "Over the past two years, Skynet has focused on building decentralized infrastructure for developers to support a ne…",
+      "link": "https://cryptopanic.com/news/15644019/Over-the-past-two-years-Skynet-has-focused-on-building-decentralized-infrastructure-for-developers-to-support-a-ne",
+      "pubDate": "2022-06-30T17:05:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SC"
+      ]
+    },
+    {
+      "title": "Here’s how undercover Feds got a drug ring near Boston to send $1M in bitcoin",
+      "link": "https://cryptopanic.com/news/bitcoin/15643964/Heres-how-undercover-Feds-got-a-drug-ring-near-Boston-to-send-1M-in-bitcoin",
+      "pubDate": "2022-06-30T16:46:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The third member of a drug ring that made at least 59 bitcoin has pleaded guilty. Here's how the Feds went undercover to acquire it.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "SHIB leads the top 100 pack in gains as most major cryptos see red",
+      "link": "https://cryptopanic.com/news/15643836/SHIB-leads-the-top-100-pack-in-gains-as-most-major-cryptos-see-red",
+      "pubDate": "2022-06-30T16:01:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Although the majority of the cryptocurrency market is sustaining its bearish streak, some of its assets are actually advancing, including... Continue reading",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 9
+      }
+    },
+    {
+      "title": "RT @binance: #Binance adds $BEL/ $ETH &amp; $LIT/ $ETH trading pairs.",
+      "link": "https://cryptopanic.com/news/15646482/RT-binance-Binance-adds-BEL-ETH-amp-LIT-ETH-trading-pairs",
+      "pubDate": "2022-06-30T15:58:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BEL"
+      ]
+    },
+    {
+      "title": "Decentral Bank pauses use of NEAR tokens for minting USN stablecoin",
+      "link": "https://cryptopanic.com/news/15643731/Decentral-Bank-pauses-use-of-NEAR-tokens-for-minting-USN-stablecoin",
+      "pubDate": "2022-06-30T15:38:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Decentral Bank DAO plans to use a basket of market-leading stablecoins as USN's underlying collateral.",
+      "currencies": [
+        "USDT",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 10
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Check out the brand new @RLYNetworkAssoc website. Great resource for #developers interested in joining the vibrant…",
+      "link": "https://cryptopanic.com/news/15651122/Check-out-the-brand-new-RLYNetworkAssoc-website-Great-resource-for-developers-interested-in-joining-the-vibrant",
+      "pubDate": "2022-06-30T15:22:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RLY"
+      ]
+    },
+    {
+      "title": "RT @Jelurida: #Jelurida got selected as one of the 15 most innovative #startups to participate in the #NauticTech2022 #InnovationDock at @s…",
+      "link": "https://cryptopanic.com/news/15643444/RT-Jelurida-Jelurida-got-selected-as-one-of-the-15-most-innovative-startups-to-participate-in-the-NauticTech2022-InnovationDock-at-s",
+      "pubDate": "2022-06-30T14:31:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARDR"
+      ]
+    },
+    {
+      "title": "Kusama: Factors why KSM is struggling to find ample trading volume",
+      "link": "https://cryptopanic.com/news/15643247/Kusama-Factors-why-KSM-is-struggling-to-find-ample-trading-volume",
+      "pubDate": "2022-06-30T13:30:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KSM"
+      ]
+    },
+    {
+      "title": "RT @Stratis_Faction: SDA UPDATE 2 Corgi Dash YES: 79 NO: 13 108 votes are needed! #stratis #SDA #strax @stratisplatform #corgidash…",
+      "link": "https://cryptopanic.com/news/dash/15643170/RT-Stratis_Faction-SDA-UPDATE-2-Corgi-Dash-YES-79-NO-13-108-votes-are-needed-stratis-SDA-strax-stratisplatform-corgidash",
+      "pubDate": "2022-06-30T13:17:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STRAX",
+        "STRAT",
+        "CRS"
+      ]
+    },
+    {
+      "title": "The ETN-Network uses its blockchain technology to connect millions of people to the global digital economy - bringi…",
+      "link": "https://cryptopanic.com/news/15643131/The-ETN-Network-uses-its-blockchain-technology-to-connect-millions-of-people-to-the-global-digital-economy-bringi",
+      "pubDate": "2022-06-30T13:09:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "FTX walked away from a deal with Celsius after seeing state of its finances: sources",
+      "link": "https://cryptopanic.com/news/15643146/FTX-walked-away-from-a-deal-with-Celsius-after-seeing-state-of-its-finances-sources",
+      "pubDate": "2022-06-30T13:06:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "FTX looked at making a deal with troubled crypto lender Celsius but ultimately walked away from it, sources tell The Block.",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 14
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "During the #WeAreDevelopers #event in #Berlin, @MSinkec from sCrypt Illustrated Bitcoin's suitability for…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/15646619/During-the-WeAreDevelopers-event-in-Berlin-MSinkec-from-sCrypt-Illustrated-Bitcoins-suitability-for",
+      "pubDate": "2022-06-30T13:05:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "Zero Bullish Catalysts For Cardano, Solana, XRP As Bitcoin Risks Crashing To $12,000",
+      "link": "https://cryptopanic.com/news/15643096/Zero-Bullish-Catalysts-For-Cardano-Solana-XRP-As-Bitcoin-Risks-Crashing-To-12000",
+      "pubDate": "2022-06-30T12:56:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The crypto markets have been range-bound for weeks despite relatively attractive prices as economic concerns remain.",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 9
+      }
+    },
+    {
+      "title": "Reserve Bank of India: Cryptocurrencies are not currencies nor a financial asset",
+      "link": "https://cryptopanic.com/news/bitcoin/15642985/Reserve-Bank-of-India-Cryptocurrencies-are-not-currencies-nor-a-financial-asset",
+      "pubDate": "2022-06-30T12:23:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "As India continues to debate the right framework for cryptocurrency regulations, the country’s central bank has reiterated why digital assets... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 15
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Cardano FOMO Could Return Quickly, According to Blockchain Analytics Firm Santiment – Here’s How",
+      "link": "https://cryptopanic.com/news/15642857/Cardano-FOMO-Could-Return-Quickly-According-to-Blockchain-Analytics-Firm-Santiment-Heres-How",
+      "pubDate": "2022-06-30T11:45:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "A leading crypto analytics firm says trader sentiment on Cardano (ADA) isn’t high right now, but that could quickly change. In a new analysis, Santiment notes Cardano is currently witnessing the highest amount of unique addresses interacting on its network in a year. “On top of this, sentiment on social platforms has fallen to a […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 7
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The event is progressive history that Golem got to participate in. And what history it is!!…",
+      "link": "https://cryptopanic.com/news/15642825/The-event-is-progressive-history-that-Golem-got-to-participate-in-And-what-history-it-is",
+      "pubDate": "2022-06-30T11:41:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GLM"
+      ]
+    },
+    {
+      "title": "Crypto market cap lost 60% of its value in H1 2022 wiping $1.3 trillion",
+      "link": "https://cryptopanic.com/news/bitcoin/15642532/Crypto-market-cap-lost-60-of-its-value-in-H1-2022-wiping-13-trillion",
+      "pubDate": "2022-06-30T10:05:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "After the widely publicized collapse of Terraform Labs’ stablecoin TerraUSD (UST) and its native token Terra (LUNA), Celsius halted client... Continue reading",
+      "currencies": [
+        "BTC",
+        "MC_"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Happening now at @PolkadotDecoded 2022: @ZeitgeistPM`s @logansaether dives into how they are evolving decentralised…",
+      "link": "https://cryptopanic.com/news/15649395/Happening-now-at-PolkadotDecoded-2022-ZeitgeistPMs-logansaether-dives-into-how-they-are-evolving-decentralised",
+      "pubDate": "2022-06-30T09:58:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "KSM"
+      ]
+    },
+    {
+      "title": "Coming up at @PolkadotDecoded: hear how @ZeitgeistPM`s @logansaether discusses the future of governance on…",
+      "link": "https://cryptopanic.com/news/15649396/Coming-up-at-PolkadotDecoded-hear-how-ZeitgeistPMs-logansaether-discusses-the-future-of-governance-on",
+      "pubDate": "2022-06-30T09:50:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "KSM"
+      ]
+    },
+    {
+      "title": "Bitcoin Dumps to 11-Day Low Beneath $20K as Global Markets Tumble (Market Watch)",
+      "link": "https://cryptopanic.com/news/bitcoin/15640496/Bitcoin-Dumps-to-11-Day-Low-Beneath-20K-as-Global-Markets-Tumble-Market-Watch",
+      "pubDate": "2022-06-30T08:50:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Following the bloodbath on Wall Street and the futures contracts in particular, BTC dropped to an 11-day low beneath $20K.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "The strongest will emerge as winners because a downturn can be an opportunity. We are building for the future and f…",
+      "link": "https://cryptopanic.com/news/15646869/The-strongest-will-emerge-as-winners-because-a-downturn-can-be-an-opportunity-We-are-building-for-the-future-and-f?mtm_campaign=API-OFA",
+      "pubDate": "2022-06-30T08:39:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHEX"
+      ]
+    },
+    {
+      "title": "Bitcoin price drops 3% to ten-day lows as Ethereum inches closer to $1K",
+      "link": "https://cryptopanic.com/news/bitcoin/15640021/Bitcoin-price-drops-3-to-ten-day-lows-as-Ethereum-inches-closer-to-1K",
+      "pubDate": "2022-06-30T08:38:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "More downside pressure across crypto amid challenging regulatory events in both the U.S. and Europe.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "We're thrilled to share with the community, after being listed on Huobi global, we are going to be listed on Huobi…",
+      "link": "https://cryptopanic.com/news/15649090/Were-thrilled-to-share-with-the-community-after-being-listed-on-Huobi-global-we-are-going-to-be-listed-on-Huobi",
+      "pubDate": "2022-06-30T08:07:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HT",
+        "JASMY"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Stay strong  it will recover",
+      "link": "https://cryptopanic.com/news/15641236/Stay-strong-it-will-recover?mtm_campaign=API-OFA",
+      "pubDate": "2022-06-30T08:06:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VICE"
+      ]
+    },
+    {
+      "title": "80,000 Bitcoin millionaires wiped out in the great crypto crash of 2022",
+      "link": "https://cryptopanic.com/news/bitcoin/15639127/80000-Bitcoin-millionaires-wiped-out-in-the-great-crypto-crash-of-2022",
+      "pubDate": "2022-06-30T07:57:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The crypto crash has seen the number of Bitcoin millionaires decline by more than 75% since November last year.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Crypto’s Second-Richest Billionaire Issues Dire Warning, Says More Digital Asset Firms Will Collapse: Report",
+      "link": "https://cryptopanic.com/news/15637370/Cryptos-Second-Richest-Billionaire-Issues-Dire-Warning-Says-More-Digital-Asset-Firms-Will-Collapse-Report",
+      "pubDate": "2022-06-30T07:04:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The second-richest crypto billionaire is warning that some digital asset companies are facing financial difficulties as the market downturn continues. Forbes reports that FTX co-founder and CEO Sam Bankman-Fried believes some lesser-known crypto exchanges are already bankrupt. “There are some third-tier exchanges that are already secretly insolvent.” According to the report, Bankman-Fried is...",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Reward Pallet has been added to DORA KSM Parachain. Frontend can be accessed via the core pallet website:…",
+      "link": "https://cryptopanic.com/news/15636698/Reward-Pallet-has-been-added-to-DORA-KSM-Parachain-Frontend-can-be-accessed-via-the-core-pallet-website",
+      "pubDate": "2022-06-30T06:13:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KSM"
+      ]
+    },
+    {
+      "title": "Contagion: Genesis faces huge losses, BlockFi’s $1B loan, Celsius’s risky model",
+      "link": "https://cryptopanic.com/news/15635265/Contagion-Genesis-faces-huge-losses-BlockFis-1B-loan-Celsiuss-risky-model",
+      "pubDate": "2022-06-30T05:44:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "A leaked investor call from Morgan Creek Digital suggests BlockFi liquidated 3AC for $1 billion, while Celsius reportedly maintained a highly risky assets-to-equity ratio last year that may have caused its recent liquidity woes.",
+      "currencies": [
+        "FTT",
+        "CEL"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Announcement: GC member changes As of 30 Jun 2022, 9am KST, Shinhan Bank is no longer part of the #Klaytn Gove…",
+      "link": "https://cryptopanic.com/news/klay-token/15638229/Announcement-GC-member-changes-As-of-30-Jun-2022-9am-KST-Shinhan-Bank-is-no-longer-part-of-the-Klaytn-Gove",
+      "pubDate": "2022-06-30T03:57:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "RT @nftbmarket: 🤩Our recent partnership with the ground-breaking @klaytn_official has gotten many squealing with excitement! But why? Re…",
+      "link": "https://cryptopanic.com/news/klay-token/15638230/RT-nftbmarket-Our-recent-partnership-with-the-ground-breaking-klaytn_official-has-gotten-many-squealing-with-excitement-But-why-Re",
+      "pubDate": "2022-06-30T03:44:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "KLAY"
+      ]
+    },
+    {
+      "title": "Bitcoin Dips Below $20,000 Once Again",
+      "link": "https://cryptopanic.com/news/bitcoin/15634385/Bitcoin-Dips-Below-20000-Once-Again",
+      "pubDate": "2022-06-30T02:10:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "It's been a cruel summer for crypto markets, with BTC fluttering around its peak price in 2017.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @metaplex: Join me in my Space!",
+      "link": "https://cryptopanic.com/news/15640255/RT-metaplex-Join-me-in-my-Space",
+      "pubDate": "2022-06-30T02:07:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SRM"
+      ]
+    },
+    {
+      "title": "SEC rejects Grayscale’s bid to convert GBTC to a Bitcoin ETF",
+      "link": "https://cryptopanic.com/news/bitcoin/15634058/SEC-rejects-Grayscales-bid-to-convert-GBTC-to-a-Bitcoin-ETF",
+      "pubDate": "2022-06-30T00:11:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The SEC has denied Grayscale's bid to convert its flagship product to a spot-based bitcoin ETF, making it the latest in a wave of rejections.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    }
+  ]
+}

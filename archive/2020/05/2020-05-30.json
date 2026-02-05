@@ -1,0 +1,25 @@
+{
+  "date": "2020-05-30",
+  "fetchedAt": "2026-02-05T07:27:06.976Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA Releases Hornet v.0.4.0 Node Software, Improves Usability and Performance",
+      "link": "https://cryptopanic.com/news/8947379/IOTA-Releases-Hornet-v040-Node-Software-Improves-Usability-and-Performance",
+      "pubDate": "2020-05-30T14:19:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

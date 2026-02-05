@@ -1,0 +1,25 @@
+{
+  "date": "2018-12-03",
+  "fetchedAt": "2026-02-05T07:27:07.856Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Double Exchange Listing for TRON [TRX] as It Starts Trading on BitMart and ABCC",
+      "link": "https://cryptopanic.com/news/3865223/Double-Exchange-Listing-for-TRON-TRX-as-It-Starts-Trading-on-BitMart-and-ABCC",
+      "pubDate": "2018-12-03T14:44:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

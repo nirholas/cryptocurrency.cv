@@ -1,0 +1,27 @@
+{
+  "date": "2018-05-14",
+  "fetchedAt": "2026-02-05T07:27:06.999Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bulletproofs can Help Bitcoin to Process Anonymous Payments Efficiently Says Developer",
+      "link": "https://cryptopanic.com/news/monero/1927625/Bulletproofs-can-Help-Bitcoin-to-Process-Anonymous-Payments-Efficiently-Says-Developer",
+      "pubDate": "2018-05-14T11:30:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XMR"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

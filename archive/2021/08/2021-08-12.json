@@ -1,0 +1,597 @@
+{
+  "date": "2021-08-12",
+  "fetchedAt": "2026-02-05T07:27:06.511Z",
+  "articleCount": 41,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @MorganWBender: Fun fact: @chia_project is the most decentralized and secure blockchain ever (350k full nodes vs BTC’s 65k) and it uses…",
+      "link": "https://cryptopanic.com/news/12526685/RT-MorganWBender-Fun-fact-chia_project-is-the-most-decentralized-and-secure-blockchain-ever-350k-full-nodes-vs-BTCs-65k-and-it-uses",
+      "pubDate": "2021-08-12T23:18:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XCH"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: WOW! I just noticed something. The dips are getting shorter and shorter.",
+      "link": "https://cryptopanic.com/news/12527729/RT-RichardHeartWin-WOW-I-just-noticed-something-The-dips-are-getting-shorter-and-shorter",
+      "pubDate": "2021-08-12T23:05:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": ".@BinanceChain have just announced the launch of MVB III: Beyond the Big Bang! Check it out",
+      "link": "https://cryptopanic.com/news/12530130/BinanceChain-have-just-announced-the-launch-of-MVB-III-Beyond-the-Big-Bang-Check-it-out",
+      "pubDate": "2021-08-12T22:19:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "RT @PlayPolkadot: Join us on Telegram",
+      "link": "https://cryptopanic.com/news/12528523/RT-PlayPolkadot-Join-us-on-Telegram",
+      "pubDate": "2021-08-12T20:53:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MOG"
+      ]
+    },
+    {
+      "title": "What is Polkadot? The Complete Guide",
+      "link": "https://cryptopanic.com/news/polkadot/12524967/What-is-Polkadot-The-Complete-Guide",
+      "pubDate": "2021-08-12T20:20:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Polkadot has been receiving a great deal of attention for its innovative parachain approach. Here is everything you need to know about the cross-chain blockchain.",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Does buying, selling and collecting NFTs with lower gas fees and shorter wait times sound good to you? Then read on…",
+      "link": "https://cryptopanic.com/news/12530131/Does-buying-selling-and-collecting-NFTs-with-lower-gas-fees-and-shorter-wait-times-sound-good-to-you-Then-read-on",
+      "pubDate": "2021-08-12T20:06:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "RT @safenetworktech: This week’s update shares a sudden &amp; unexpected loss to the @maidsafe team. As our team member would have wished, we c…",
+      "link": "https://cryptopanic.com/news/12524524/RT-safenetworktech-This-weeks-update-shares-a-sudden-amp-unexpected-loss-to-the-maidsafe-team-As-our-team-member-would-have-wished-we-c",
+      "pubDate": "2021-08-12T17:32:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "Exchange (@BitcoinComExch) has recently listed Decred and enables users to trade against BT…",
+      "link": "https://cryptopanic.com/news/12524426/Exchange-BitcoinComExch-has-recently-listed-Decred-and-enables-users-to-trade-against-BT",
+      "pubDate": "2021-08-12T16:51:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "DCR"
+      ]
+    },
+    {
+      "title": "NKN is an early believer of @cdixon \"why decentralization matters\". NKN has built the largest network infrastructu…",
+      "link": "https://cryptopanic.com/news/12528675/NKN-is-an-early-believer-of-cdixon-why-decentralization-matters-NKN-has-built-the-largest-network-infrastructu",
+      "pubDate": "2021-08-12T16:41:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NKN"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "1/ Reef Finance  is thrilled to welcome @CommunityJax, a merge-mining operation on Bitcoin's blockchain designed t…",
+      "link": "https://cryptopanic.com/news/12529397/1-Reef-Finance-is-thrilled-to-welcome-CommunityJax-a-merge-mining-operation-on-Bitcoins-blockchain-designed-t",
+      "pubDate": "2021-08-12T16:07:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ]
+    },
+    {
+      "title": "Coinbase Removes USD Coin (USDC)”Backed By Dollar” Statement",
+      "link": "https://cryptopanic.com/news/12524312/Coinbase-Removes-USD-Coin-USDCBacked-By-Dollar-Statement",
+      "pubDate": "2021-08-12T16:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "USDC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DAO Maker Suffers $7 Million Exploit",
+      "link": "https://cryptopanic.com/news/12524178/DAO-Maker-Suffers-7-Million-Exploit",
+      "pubDate": "2021-08-12T15:29:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "DAO Maker, a popular decentralized finance platform, recently experienced a security breach that led to the loss of $7 million. The exploit has raised concerns about vulnerabilities in DeFi protocols and prompted investigations into the incident. The platform is working on measures to enhance security and protect user assets in the future.",
+      "currencies": [
+        "MKR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 29
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @DCAL_Gamevid4: There is a torrent of #SafeCoin developments releasing over the next few months. Stuff that will generate a lot of buzz…",
+      "link": "https://cryptopanic.com/news/12529548/RT-DCAL_Gamevid4-There-is-a-torrent-of-SafeCoin-developments-releasing-over-the-next-few-months-Stuff-that-will-generate-a-lot-of-buzz",
+      "pubDate": "2021-08-12T13:36:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SAFE"
+      ]
+    },
+    {
+      "title": "RT @ItsFrankenSense: Learn how to change your published / public information for your validator! For @SafeCoins or @solana #safecoin #solan…",
+      "link": "https://cryptopanic.com/news/12529550/RT-ItsFrankenSense-Learn-how-to-change-your-published-public-information-for-your-validator-For-SafeCoins-or-solana-safecoin-solan",
+      "pubDate": "2021-08-12T13:35:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SAFE"
+      ]
+    },
+    {
+      "title": "RT @MaDz_Crypto: There are a lot of \"Safe\"coins out there. Only one is SAFE. Full documentation is available. It even has a section New to…",
+      "link": "https://cryptopanic.com/news/12529551/RT-MaDz_Crypto-There-are-a-lot-of-Safecoins-out-there-Only-one-is-SAFE-Full-documentation-is-available-It-even-has-a-section-New-to",
+      "pubDate": "2021-08-12T13:35:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "SAFE"
+      ]
+    },
+    {
+      "title": "RT @MaDz_Crypto: Did you know #SafeCoin is a lightning fast and efficient Proof-of-Stake blockchain network based on the #Solana code base?…",
+      "link": "https://cryptopanic.com/news/12529553/RT-MaDz_Crypto-Did-you-know-SafeCoin-is-a-lightning-fast-and-efficient-Proof-of-Stake-blockchain-network-based-on-the-Solana-code-base",
+      "pubDate": "2021-08-12T13:34:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SAFE"
+      ]
+    },
+    {
+      "title": "Prepare for next move guys.... Stay tune for NFT breeding collection",
+      "link": "https://cryptopanic.com/news/12526440/Prepare-for-next-move-guys-Stay-tune-for-NFT-breeding-collection?mtm_campaign=API-OFA",
+      "pubDate": "2021-08-12T13:23:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "BB"
+      ]
+    },
+    {
+      "title": "How Polygon and xDai Will Adopt EIP-1559",
+      "link": "https://cryptopanic.com/news/matic-network/12523667/How-Polygon-and-xDai-Will-Adopt-EIP-1559",
+      "pubDate": "2021-08-12T12:36:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "-",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Right, let's see what the Trust Wallet fam thinks. $50,000 appeared in your Trust Wallet... what you getting? If Al…",
+      "link": "https://cryptopanic.com/news/12530133/Right-lets-see-what-the-Trust-Wallet-fam-thinks-50000-appeared-in-your-Trust-Wallet-what-you-getting-If-Al",
+      "pubDate": "2021-08-12T11:51:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "RT @PlayPolkadot: A new way of blockchain gamification",
+      "link": "https://cryptopanic.com/news/12528524/RT-PlayPolkadot-A-new-way-of-blockchain-gamification",
+      "pubDate": "2021-08-12T11:38:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MOG"
+      ]
+    },
+    {
+      "title": "TZ APAC in Tezos blockchain adoption push in Asia",
+      "link": "https://cryptopanic.com/news/12523512/TZ-APAC-in-Tezos-blockchain-adoption-push-in-Asia",
+      "pubDate": "2021-08-12T11:30:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "TZ APAC, an entity supporting the Tezos blockchain ecosystem in Asia-Pacific, this week announced a “strategic commitment” to the region as it bolsters its efforts to grow the Tezos ecosystem. Fast facts TZ APAC intends to deploy capital and resources across the region towards business development, marketing and project management to drive adoption of the […]",
+      "currencies": [
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Stellar XLM climbs 24% in a week, extending its upward trend towards $0.4",
+      "link": "https://cryptopanic.com/news/12523495/Stellar-XLM-climbs-24-in-a-week-extending-its-upward-trend-towards-04",
+      "pubDate": "2021-08-12T11:29:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Recently, a Stellar-powered remittance corridor between 27 EU countries and Thailand became live, pushing up the price of Stellar’s native... Continue reading",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "“The last 2 months has been a learning experience for me, and I realize that success will not come merely from good…",
+      "link": "https://cryptopanic.com/news/ecash/12530574/The-last-2-months-has-been-a-learning-experience-for-me-and-I-realize-that-success-will-not-come-merely-from-good",
+      "pubDate": "2021-08-12T11:19:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Ripple’s XRP Surges 14% As Other Major Cryptocurrencies Cool Off From Yesterday’s Rally",
+      "link": "https://cryptopanic.com/news/ripple/12523384/Ripples-XRP-Surges-14-As-Other-Major-Cryptocurrencies-Cool-Off-From-Yesterdays-Rally",
+      "pubDate": "2021-08-12T10:35:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The market is taking a breather from yesterday's rally, which saw the global cryptocurrency market capitalization cross the $2 trillion threshold for the first time in nearly three months.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Uniswap Becomes First DeFi Protocol to Generate $1B in Fees",
+      "link": "https://cryptopanic.com/news/uniswap/12523376/Uniswap-Becomes-First-DeFi-Protocol-to-Generate-1B-in-Fees",
+      "pubDate": "2021-08-12T10:27:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The Uniswap decentralized exchange (DEX) has hit a milestone in terms of fee generation, becoming the first DeFi protocol to reach $1 billion.",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "1/  Band Protocol is proud to share an integration with @cronos_chain, the scalable EVM-compatible chain developed…",
+      "link": "https://cryptopanic.com/news/12526252/1-Band-Protocol-is-proud-to-share-an-integration-with-cronos_chain-the-scalable-EVM-compatible-chain-developed",
+      "pubDate": "2021-08-12T10:25:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "138 Million XRP Shifted by Ripple and Top-Tier Global Exchanges",
+      "link": "https://cryptopanic.com/news/ripple/12523356/138-Million-XRP-Shifted-by-Ripple-and-Top-Tier-Global-Exchanges",
+      "pubDate": "2021-08-12T10:15:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple fintech monster, its Mexican partner (Bitso crypto unicorn) and a few leading digital exchanges have moved almost 140 million XRP tokens amongst each other",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$XRP Price Surges 14% to Above $1 for First Time Since June 4",
+      "link": "https://cryptopanic.com/news/ripple/12523152/XRP-Price-Surges-14-to-Above-1-for-First-Time-Since-June-4",
+      "pubDate": "2021-08-12T08:33:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "On Thursday (August 12), XRP extended the bull run that began on July 21, surging above the $1 level for the first time in nearly 10 weeks. According to data from TradingView, on crypto exchange Bitstamp, at 07:08 UTC on August 12, the XRP price reached $1.00173. Currently (as of 08:20 UTC on August 12), […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Surges to $1.09, Here Are Possible Reasons from Santiment",
+      "link": "https://cryptopanic.com/news/ripple/12522523/XRP-Surges-to-109-Here-Are-Possible-Reasons-from-Santiment",
+      "pubDate": "2021-08-12T08:10:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Recently shared analytics data shows that XRP is decoupling from Bitcoin and growing along with network activity and emergence of new addresses",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Axie Infinity (AXS) Skyrocketed 30% Following a Coinbase Pro Listing",
+      "link": "https://cryptopanic.com/news/12521692/Axie-Infinity-AXS-Skyrocketed-30-Following-a-Coinbase-Pro-Listing",
+      "pubDate": "2021-08-12T07:33:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "America's largest cryptocurrency exchange Coinbase Pro has announced the listing of new tokens, including Axie Infinity (AXS).",
+      "currencies": [
+        "AXS"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "One day..",
+      "link": "https://cryptopanic.com/news/ecash/12530647/One-day",
+      "pubDate": "2021-08-12T06:58:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "XRP price rises as GME joins RippleNet to expand remittances between S. Korea and Thailand",
+      "link": "https://cryptopanic.com/news/ripple/12518460/XRP-price-rises-as-GME-joins-RippleNet-to-expand-remittances-between-S-Korea-and-Thailand",
+      "pubDate": "2021-08-12T05:42:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "San Francisco-based payments technology company Ripple this week announced that South Korean money transfer company, Global Money Express Co. Ltd (GME Remittance), has joined RippleNet to expand remittances between South Korea and Thailand. Fast facts Some 184,000 Thai nationals live in South Korea, and they account for the third largest group of foreign nationals in […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Why Ethereum (ETH) Bulls Keeps Pushing, Why Rally Isn’t Over Yet",
+      "link": "https://cryptopanic.com/news/near/12517838/Why-Ethereum-ETH-Bulls-Keeps-Pushing-Why-Rally-Isnt-Over-Yet",
+      "pubDate": "2021-08-12T05:08:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum is holding gains above the $3,200 resistance zone against the US Dollar. ETH price remains attractive and it might continue to rise towards the $3,350 resistance. Ethereum is trading nicely above the $3,100 and $3,150 support levels. The price is now trading above $3,200 and the 100 hourly simple moving average. There is a key bullish trend line forming with support near $3,110 on the...",
+      "currencies": [
+        "ETH",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Chilean Peso stablecoin goes live on Stellar Network",
+      "link": "https://cryptopanic.com/news/12517795/Chilean-Peso-stablecoin-goes-live-on-Stellar-Network",
+      "pubDate": "2021-08-12T04:25:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "Chilean Peso-pegged stablecoin CLPX launched on Stellar this week and is hoping to gain traction in the remittance and copper markets.",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Compare project feature to feature and commitment to develop the project crypto - Glitzkoin has no competition but,…",
+      "link": "https://cryptopanic.com/news/12519716/Compare-project-feature-to-feature-and-commitment-to-develop-the-project-crypto-Glitzkoin-has-no-competition-but",
+      "pubDate": "2021-08-12T03:18:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "RT @cdixon: 1/ Topic: Going from Web 2 to Web 3 - “Your take rate is my opportunity” 🧵",
+      "link": "https://cryptopanic.com/news/12520741/RT-cdixon-1-Topic-Going-from-Web-2-to-Web-3-Your-take-rate-is-my-opportunity",
+      "pubDate": "2021-08-12T03:04:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NKN"
+      ]
+    },
+    {
+      "title": "XRP Price Jumps After GME Remittance Joins RippleNet",
+      "link": "https://cryptopanic.com/news/ripple/12517670/XRP-Price-Jumps-After-GME-Remittance-Joins-RippleNet",
+      "pubDate": "2021-08-12T02:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The price of the XRP token has surged to touch the $0.90 area shortly after Ripple announced that GME Remittance, one of the largest non-bank remittance service providers in South Korea, joined RippleNet. RippleNet, according to Ripple’s website, offers “connections to hundreds of financial institutions around the world via a single API and makes moving […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dear $AERGO community, @coreycosta123 has written an article focusing on the latest breach in security in DeFi and…",
+      "link": "https://cryptopanic.com/news/12517943/Dear-AERGO-community-coreycosta123-has-written-an-article-focusing-on-the-latest-breach-in-security-in-DeFi-and",
+      "pubDate": "2021-08-12T02:19:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "RT @TheCryptoLark: Every week I publish a #crypto investor report called Wealth Mastery. Issue #58 out now - Earn 46% on Maple Finance by…",
+      "link": "https://cryptopanic.com/news/theta-token/12521923/RT-TheCryptoLark-Every-week-I-publish-a-crypto-investor-report-called-Wealth-Mastery-Issue-58-out-now-Earn-46-on-Maple-Finance-by",
+      "pubDate": "2021-08-12T02:13:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "7 Days $COCOS",
+      "link": "https://cryptopanic.com/news/12518798/7-Days-COCOS",
+      "pubDate": "2021-08-12T00:52:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "COCOS"
+      ]
+    },
+    {
+      "title": "Crypto Analyst Sees Bitcoin Hit $200,000 by Year-End if It Breaks These Key Levels",
+      "link": "https://cryptopanic.com/news/near/12517091/Crypto-Analyst-Sees-Bitcoin-Hit-200000-by-Year-End-if-It-Breaks-These-Key-Levels",
+      "pubDate": "2021-08-12T00:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Popular cryptocurrency analyst Justin Bennett has revealed on social media he believes the price of bitcoin could hit $200,000 by the end of the year if the cryptocurrency manages to stay above two key levels in the near future. In a Twitter thread published to his followers on the microblogging platform Bennett, who’s also the […]",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

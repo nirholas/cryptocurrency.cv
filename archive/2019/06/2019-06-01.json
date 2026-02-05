@@ -1,0 +1,85 @@
+{
+  "date": "2019-06-01",
+  "fetchedAt": "2026-02-05T07:27:06.681Z",
+  "articleCount": 5,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Block.One Is Launching a Social Media Platform on the EOS Blockchain",
+      "link": "https://cryptopanic.com/news/5596273/BlockOne-Is-Launching-a-Social-Media-Platform-on-the-EOS-Blockchain",
+      "pubDate": "2019-06-01T23:00:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 6
+      }
+    },
+    {
+      "title": "PAX Stablecoin Earns Listing on Blockchain Mobile Wallet",
+      "link": "https://cryptopanic.com/news/5596058/PAX-Stablecoin-Earns-Listing-on-Blockchain-Mobile-Wallet",
+      "pubDate": "2019-06-01T22:00:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "Tron Price Soars as Justin Sun Promises to Announce 'Something Amazing' on June 3",
+      "link": "https://cryptopanic.com/news/5592625/Tron-Price-Soars-as-Justin-Sun-Promises-to-Announce-Something-Amazing-on-June-3",
+      "pubDate": "2019-06-01T10:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "EOS Price Pumping Ahead of Block.One’s Major Announcement",
+      "link": "https://cryptopanic.com/news/5592216/EOS-Price-Pumping-Ahead-of-BlockOnes-Major-Announcement",
+      "pubDate": "2019-06-01T08:13:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "EOS Price Prediction — Can the Coinbase Listing Keep EOS in the Top 5?",
+      "link": "https://cryptopanic.com/news/5590784/EOS-Price-Prediction-Can-the-Coinbase-Listing-Keep-EOS-in-the-Top-5",
+      "pubDate": "2019-06-01T02:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    }
+  ]
+}

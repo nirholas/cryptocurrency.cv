@@ -1,0 +1,239 @@
+{
+  "date": "2023-07-15",
+  "fetchedAt": "2026-02-05T07:27:07.172Z",
+  "articleCount": 15,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Will Users Be Covered in Fantom (FTM)? Founder Cronje Speaks",
+      "link": "https://cryptopanic.com/news/18776473/Will-Users-Be-Covered-in-Fantom-FTM-Founder-Cronje-Speaks",
+      "pubDate": "2023-07-15T19:31:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FTM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ApeCoin’s Q2 was a rollercoaster ride; what does Q3 hold?",
+      "link": "https://cryptopanic.com/news/18776470/ApeCoins-Q2-was-a-rollercoaster-ride-what-does-Q3-hold",
+      "pubDate": "2023-07-15T19:30:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "APE"
+      ]
+    },
+    {
+      "title": "‘Multichain was a big blow,’ says Andre Cronje as Fantom TVL slumps",
+      "link": "https://cryptopanic.com/news/18776464/Multichain-was-a-big-blow-says-Andre-Cronje-as-Fantom-TVL-slumps",
+      "pubDate": "2023-07-15T19:24:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "FTM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Did The Biggest Ripple Whales Sell XRP During The Uptrend? Here is the Data",
+      "link": "https://cryptopanic.com/news/18776385/Did-The-Biggest-Ripple-Whales-Sell-XRP-During-The-Uptrend-Here-is-the-Data",
+      "pubDate": "2023-07-15T17:40:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "What is the latest situation in the balances of XRP's biggest whales after the recent rise in the Ripple price? Continue Reading: Did The Biggest Ripple Whales Sell XRP During The Uptrend? Here is the Data",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The Graph Now Supports Solana with Substreams",
+      "link": "https://cryptopanic.com/news/the-graph/19789655/The-Graph-Now-Supports-Solana-with-Substreams",
+      "pubDate": "2023-07-15T16:59:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "GRT"
+      ]
+    },
+    {
+      "title": "MultiversX makes these moves to reignite its ailing DeFi ecosystem",
+      "link": "https://cryptopanic.com/news/18776196/MultiversX-makes-these-moves-to-reignite-its-ailing-DeFi-ecosystem",
+      "pubDate": "2023-07-15T14:30:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "EGLD"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Judge in Coinbase-SEC Case Delivers Speech in favor of Coinbase",
+      "link": "https://cryptopanic.com/news/18776174/Judge-in-Coinbase-SEC-Case-Delivers-Speech-in-favor-of-Coinbase",
+      "pubDate": "2023-07-15T14:18:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "In the process that started with the SEC suing Coinbase, some statements came from the judge in favor of the cryptocurrency exchange. Continue Reading: Judge in Coinbase-SEC Case Delivers Speech in favor of Coinbase",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The Good, Bad and the Complicated from the SEC vs Ripple Verdict As Bulls Envision $10 XRP Price",
+      "link": "https://cryptopanic.com/news/18776172/The-Good-Bad-and-the-Complicated-from-the-SEC-vs-Ripple-Verdict-As-Bulls-Envision-10-XRP-Price",
+      "pubDate": "2023-07-15T14:13:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Barely hours after its historic “victory”, XRP became the fourth-largest crypto asset with a market capitalization of over $40 billion, but there could be further trouble on the horizon.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto community with 85% historical accuracy sets Dogecoin price for July 31",
+      "link": "https://cryptopanic.com/news/18775984/Crypto-community-with-85-historical-accuracy-sets-Dogecoin-price-for-July-31",
+      "pubDate": "2023-07-15T11:57:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The price of Dogecoin (DOGE) is rising in unison with the crypto market, and top altcoins by market cap, slowly … Continued",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Fantom Took Precautionary Measures to Contain Multichain Implosion: Details",
+      "link": "https://cryptopanic.com/news/18775893/Fantom-Took-Precautionary-Measures-to-Contain-Multichain-Implosion-Details",
+      "pubDate": "2023-07-15T10:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FTM"
+      ]
+    },
+    {
+      "title": "5 peer-to-peer (P2P) lending platforms for borrowers and lenders",
+      "link": "https://cryptopanic.com/news/18775801/5-peer-to-peer-P2P-lending-platforms-for-borrowers-and-lenders",
+      "pubDate": "2023-07-15T09:07:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "COMP"
+      ]
+    },
+    {
+      "title": "Market Analysis: InQubeta (QUBE) Promising Growth vs. Filecoin (FIL) and Cardano (ADA)",
+      "link": "https://cryptopanic.com/news/filecoin/18775905/Market-Analysis-InQubeta-QUBE-Promising-Growth-vs-Filecoin-FIL-and-Cardano-ADA",
+      "pubDate": "2023-07-15T09:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "FIL"
+      ]
+    },
+    {
+      "title": "This Top-30 Altcoin That’s Underperformed Other Crypto Assets Could Explode by 100%, Predicts Leading Analyst",
+      "link": "https://cryptopanic.com/news/18775684/This-Top-30-Altcoin-Thats-Underperformed-Other-Crypto-Assets-Could-Explode-by-100-Predicts-Leading-Analyst",
+      "pubDate": "2023-07-15T07:04:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Filecoin [FIL] hits a familiar roadblock – Bulls can re-enter here",
+      "link": "https://cryptopanic.com/news/18775617/Filecoin-FIL-hits-a-familiar-roadblock-Bulls-can-re-enter-here",
+      "pubDate": "2023-07-15T04:30:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FIL"
+      ]
+    },
+    {
+      "title": "Binance Coin ($BNB) and Bitcoin Cash ($BCH) Could Surge Soon, Says Popular Crypto Analyst",
+      "link": "https://cryptopanic.com/news/18775501/Binance-Coin-BNB-and-Bitcoin-Cash-BCH-Could-Surge-Soon-Says-Popular-Crypto-Analyst",
+      "pubDate": "2023-07-15T00:22:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BNB",
+        "BCH",
+        "XCN"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

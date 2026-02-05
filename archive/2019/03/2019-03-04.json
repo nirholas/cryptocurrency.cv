@@ -1,0 +1,60 @@
+{
+  "date": "2019-03-04",
+  "fetchedAt": "2026-02-05T07:27:06.997Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ripple XRP Is A SCAM! And Needs To Be Shut Down Immediately! Confirmed!",
+      "link": "https://cryptopanic.com/news/ripple/4735387/Ripple-XRP-Is-A-SCAM-And-Needs-To-Be-Shut-Down-Immediately-Confirmed",
+      "pubDate": "2019-03-04T17:17:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 11
+      }
+    },
+    {
+      "title": "Tether to Launch New Version of USDT Stablecoin on Tron Blockchain",
+      "link": "https://cryptopanic.com/news/tron/4735276/Tether-to-Launch-New-Version-of-USDT-Stablecoin-on-Tron-Blockchain",
+      "pubDate": "2019-03-04T17:01:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "TRON Partnering Up With Tether To Launch a TRC20-based Version of the USDT Stablecoin",
+      "link": "https://cryptopanic.com/news/tron/4735162/TRON-Partnering-Up-With-Tether-To-Launch-a-TRC20-based-Version-of-the-USDT-Stablecoin",
+      "pubDate": "2019-03-04T16:57:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

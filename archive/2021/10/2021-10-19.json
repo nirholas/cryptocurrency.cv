@@ -1,0 +1,825 @@
+{
+  "date": "2021-10-19",
+  "fetchedAt": "2026-02-05T07:27:06.839Z",
+  "articleCount": 56,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @kucoincom: As #DeFi tokens top the price rally during the market uptrend last week, a new Mega Concept of DeFi 2.0 is expected to lead…",
+      "link": "https://cryptopanic.com/news/13064431/RT-kucoincom-As-DeFi-tokens-top-the-price-rally-during-the-market-uptrend-last-week-a-new-Mega-Concept-of-DeFi-20-is-expected-to-lead",
+      "pubDate": "2021-10-19T23:55:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "-",
+      "currencies": [
+        "XPR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @TronixTrx: 18th October: #TRON burns more than 3,942,704 coins  with a net production ratio greater than zero 1,126,447 ️",
+      "link": "https://cryptopanic.com/news/13063680/RT-TronixTrx-18th-October-TRON-burns-more-than-3942704-coins-with-a-net-production-ratio-greater-than-zero-1126447",
+      "pubDate": "2021-10-19T22:06:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AMA"
+      ]
+    },
+    {
+      "title": "RT @Crypto_Petrov: I’m standing with my money behind my conviction in #Tron blockchain.",
+      "link": "https://cryptopanic.com/news/13063681/RT-Crypto_Petrov-Im-standing-with-my-money-behind-my-conviction-in-Tron-blockchain",
+      "pubDate": "2021-10-19T22:06:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AMA"
+      ]
+    },
+    {
+      "title": "New release of the eCash node software. Development never stops! #eCash #XEC #BitcoinABC",
+      "link": "https://cryptopanic.com/news/ecash/13066232/New-release-of-the-eCash-node-software-Development-never-stops-eCash-XEC-BitcoinABC",
+      "pubDate": "2021-10-19T20:51:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin ABC 0.24.4 is now available! This release brings various wallet and RPC improvements, as well as a new Ze…",
+      "link": "https://cryptopanic.com/news/ecash/13060752/Bitcoin-ABC-0244-is-now-available-This-release-brings-various-wallet-and-RPC-improvements-as-well-as-a-new-Ze",
+      "pubDate": "2021-10-19T20:45:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC",
+        "BCHABC"
+      ]
+    },
+    {
+      "title": "If you prefer @discord over @telegram, don't worry, we've got you covered! Join the official #DOGE DASH #discord he…",
+      "link": "https://cryptopanic.com/news/dash/13061707/If-you-prefer-discord-over-telegram-dont-worry-weve-got-you-covered-Join-the-official-DOGE-DASH-discord-he",
+      "pubDate": "2021-10-19T20:05:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DASH",
+        "DOGEDASH"
+      ]
+    },
+    {
+      "title": "Shiba Inu’s Wallet Addresses Surge by Over 9% in Two Weeks",
+      "link": "https://cryptopanic.com/news/shiba-inu/13058469/Shiba-Inus-Wallet-Addresses-Surge-by-Over-9-in-Two-Weeks",
+      "pubDate": "2021-10-19T19:05:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The number of addresses holding SHIB has surpassed 742,000, after growing by more than 9% in the last two weeks.",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Cosmos announces launch of new blockchain, Sagan",
+      "link": "https://cryptopanic.com/news/13058424/Cosmos-announces-launch-of-new-blockchain-Sagan",
+      "pubDate": "2021-10-19T19:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The project teased the release of the blockchain in a video message with a quote from famous astronomer Carl Sagan and a picture of a canary among the stars.",
+      "currencies": [
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @chemicalbruvva: Fantastic learning experience today, the @kwenta_io Leveraged Futures Trading competition has begun, you can win real p…",
+      "link": "https://cryptopanic.com/news/13065280/RT-chemicalbruvva-Fantastic-learning-experience-today-the-kwenta_io-Leveraged-Futures-Trading-competition-has-begun-you-can-win-real-p",
+      "pubDate": "2021-10-19T18:03:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SNX",
+        "SUSD"
+      ]
+    },
+    {
+      "title": "Russia & Belarus to Charge Higher Tariffs for Crypto Miners Due to High Energy Usage",
+      "link": "https://cryptopanic.com/news/bitcoin/13058180/Russia-Belarus-to-Charge-Higher-Tariffs-for-Crypto-Miners-Due-to-High-Energy-Usage",
+      "pubDate": "2021-10-19T17:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "The sheer amount of energy used by miners has caught the attention of governments in Russia and Belarus, prompting them to consider alternate tariffs.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Solana Is Edging Closer to a Breakout",
+      "link": "https://cryptopanic.com/news/13058139/Solana-Is-Edging-Closer-to-a-Breakout",
+      "pubDate": "2021-10-19T17:28:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "-",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 43,
+        "negative": 28
+      }
+    },
+    {
+      "title": "Cardano price paints 'death cross' with ADA at two-month lows vs. Bitcoin",
+      "link": "https://cryptopanic.com/news/cardano/13058074/Cardano-price-paints-death-cross-with-ADA-at-two-month-lows-vs-Bitcoin",
+      "pubDate": "2021-10-19T17:02:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "ADA price has been struggling against the U.S. dollar in October.",
+      "currencies": [
+        "BTC",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 17
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Still seeing old AGI in your wallet? Follow these super simple steps to see $AGIX tokens in your wallet. Metamask a…",
+      "link": "https://cryptopanic.com/news/13064960/Still-seeing-old-AGI-in-your-wallet-Follow-these-super-simple-steps-to-see-AGIX-tokens-in-your-wallet-Metamask-a",
+      "pubDate": "2021-10-19T17:00:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AGIX"
+      ]
+    },
+    {
+      "title": "DraftKings Doubles Down, Partners With Polygon",
+      "link": "https://cryptopanic.com/news/matic-network/13058014/DraftKings-Doubles-Down-Partners-With-Polygon",
+      "pubDate": "2021-10-19T16:59:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "Yes, it was just a few short months ago that DraftKings launched the ‘DraftKings Marketplace‘ in partnership with Autograph.io. In that short time, we’ve seen the sports gambling powerhouse churn out some successful NFT releases with the likes of Tiger Woods, Simone Biles, Tom Brady, and more. Now, DraftKings is doubling down on crypto, this […]",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance Just Took Over Half A Billion Dollars Worth Of BNB Completely Out Of Circulation In 17th Quarterly Burn",
+      "link": "https://cryptopanic.com/news/binancecoin/13057888/Binance-Just-Took-Over-Half-A-Billion-Dollars-Worth-Of-BNB-Completely-Out-Of-Circulation-In-17th-Quarterly-Burn",
+      "pubDate": "2021-10-19T16:17:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "On Tuesday, Binance announced that it had burned 1,335,888 BNB valued at approximately $639,462,868. Coin burning is a process by which cryptocurrency miners or exchanges periodically take out a certain portion of coins from circulation to control price through supply restriction. This has been a common practice in the cryptocurrency industry and is done to […]",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance Just Took Over Half A Billion Dollars  Worth Of BNB Completely Out Of Circulation In 17th Quarterly Burn",
+      "link": "https://cryptopanic.com/news/13057888/Binance-Just-Took-Over-Half-A-Billion-Dollars-Worth-Of-BNB-Completely-Out-Of-Circulation-In-17th-Quarterly-Burn",
+      "pubDate": "2021-10-19T16:17:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "On Tuesday, Binance announced that it had burned 1,335,888 BNB valued at approximately $639,462,868. Coin burning is a process by which cryptocurrency miners or exchanges periodically take out a certain portion of coins from circulation to control price through supply restriction. This has been a common practice in the cryptocurrency industry and is done to […]",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Chainlink Looks Ready to Start a New Bull Rally",
+      "link": "https://cryptopanic.com/news/chainlink/13057837/Chainlink-Looks-Ready-to-Start-a-New-Bull-Rally",
+      "pubDate": "2021-10-19T16:06:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "-",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Kusama (KSM) council announces early start for next batch of parachain auctions",
+      "link": "https://cryptopanic.com/news/13057840/Kusama-KSM-council-announces-early-start-for-next-batch-of-parachain-auctions",
+      "pubDate": "2021-10-19T16:00:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "High-speed “layer-0” blockchain Kusama has made a recent change in its schedule regarding the impending parachain auctions.",
+      "currencies": [
+        "KSM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "It’s a great pleasure to introduce @Alphan_Gogus as our next speaker at the #EFFORCE Summit this coming November 6t…",
+      "link": "https://cryptopanic.com/news/13061833/Its-a-great-pleasure-to-introduce-Alphan_Gogus-as-our-next-speaker-at-the-EFFORCE-Summit-this-coming-November-6t",
+      "pubDate": "2021-10-19T15:50:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "In this mini series, we will feature dApps that won @NKN_ORG – @gitcoin GR11 hackathon. Enter Riddle, a collaborat…",
+      "link": "https://cryptopanic.com/news/13063772/In-this-mini-series-we-will-feature-dApps-that-won-NKN_ORG-gitcoin-GR11-hackathon-Enter-Riddle-a-collaborat",
+      "pubDate": "2021-10-19T15:48:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NKN"
+      ]
+    },
+    {
+      "title": "Do you like GameFi？",
+      "link": "https://cryptopanic.com/news/13062375/Do-you-like-GameFi",
+      "pubDate": "2021-10-19T15:14:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DAO"
+      ]
+    },
+    {
+      "title": "Our new website's lookin' fresh!  All thanks to @makingStormX",
+      "link": "https://cryptopanic.com/news/13065178/Our-new-websites-lookin-fresh-All-thanks-to-makingStormX",
+      "pubDate": "2021-10-19T14:44:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STMX"
+      ]
+    },
+    {
+      "title": "Cardano (ADA) Chosen by Australians, Dogecoin (DOGE) Number One in the U.S.: CoinMarketCap Report",
+      "link": "https://cryptopanic.com/news/dogecoin/13057550/Cardano-ADA-Chosen-by-Australians-Dogecoin-DOGE-Number-One-in-the-US-CoinMarketCap-Report",
+      "pubDate": "2021-10-19T14:43:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Are we still early? CoinMarketCap shares results of new report on the state of crypto mass adoption",
+      "currencies": [
+        "ADA",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "See you tonight 🇵🇹",
+      "link": "https://cryptopanic.com/news/13057498/See-you-tonight",
+      "pubDate": "2021-10-19T14:32:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SSV"
+      ]
+    },
+    {
+      "title": "And so concludes another AGI Conference!! And what an awesome one it has been. Thanks to all our participants, atte…",
+      "link": "https://cryptopanic.com/news/13064962/And-so-concludes-another-AGI-Conference-And-what-an-awesome-one-it-has-been-Thanks-to-all-our-participants-atte",
+      "pubDate": "2021-10-19T14:24:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AGIX"
+      ]
+    },
+    {
+      "title": "Elon Musk Pushes SHIB Up 15%, Binance Burns $639 Million Worth of BNB, ProShares Launches Bitcoin ETF: Crypto News Digest by U.Today",
+      "link": "https://cryptopanic.com/news/bitcoin/13057383/Elon-Musk-Pushes-SHIB-Up-15-Binance-Burns-639-Million-Worth-of-BNB-ProShares-Launches-Bitcoin-ETF-Crypto-News-Digest-by-UToday",
+      "pubDate": "2021-10-19T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Keep track of the crypto agenda with U.Today’s news digest!",
+      "currencies": [
+        "BTC",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Last week @coinbase announced the launch of its #NFT marketplace  our in-house NFT expert @MPtherealmvp discusses…",
+      "link": "https://cryptopanic.com/news/13057274/Last-week-coinbase-announced-the-launch-of-its-NFT-marketplace-our-in-house-NFT-expert-MPtherealmvp-discusses",
+      "pubDate": "2021-10-19T13:43:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "GLM"
+      ]
+    },
+    {
+      "title": "RT @kokid951: LFG 🤝 Congratulations",
+      "link": "https://cryptopanic.com/news/13069668/RT-kokid951-LFG-Congratulations?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-19T13:34:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BLAST"
+      ]
+    },
+    {
+      "title": "Unpopular opinion: Sauron should have NFT'ed the Ring",
+      "link": "https://cryptopanic.com/news/13066148/Unpopular-opinion-Sauron-should-have-NFTed-the-Ring",
+      "pubDate": "2021-10-19T13:33:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "ZB"
+      ]
+    },
+    {
+      "title": "Fantom Hits New All-Time High as Rally Continues",
+      "link": "https://cryptopanic.com/news/13057210/Fantom-Hits-New-All-Time-High-as-Rally-Continues",
+      "pubDate": "2021-10-19T13:29:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "-",
+      "currencies": [
+        "FTM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Shiba Inu is the most-used non-stablecoin token on ETH network in last 7 days",
+      "link": "https://cryptopanic.com/news/shiba-inu/13057211/Shiba-Inu-is-the-most-used-non-stablecoin-token-on-ETH-network-in-last-7-days",
+      "pubDate": "2021-10-19T13:25:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Shiba Inu (SHIB), a decentralized currency based on the Ethereum (ETH) blockchain, is currently the most widely used non-stablecoin token... Continue reading",
+      "currencies": [
+        "ETH",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 7
+      }
+    },
+    {
+      "title": "CEO Sunny Lu just held a webinar at the prestigious #Tsinghua University to discuss how #VeChain's #blockchain tool…",
+      "link": "https://cryptopanic.com/news/13057189/CEO-Sunny-Lu-just-held-a-webinar-at-the-prestigious-Tsinghua-University-to-discuss-how-VeChains-blockchain-tool",
+      "pubDate": "2021-10-19T13:24:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "VET",
+        "VTHO"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @AltcoinGordon: Are you bullish or are you wrong?",
+      "link": "https://cryptopanic.com/news/13066149/RT-AltcoinGordon-Are-you-bullish-or-are-you-wrong",
+      "pubDate": "2021-10-19T13:21:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ZB"
+      ]
+    },
+    {
+      "title": "Paris Hilton Reveals Her Genie For Decentraland",
+      "link": "https://cryptopanic.com/news/ethereum/13057182/Paris-Hilton-Reveals-Her-Genie-For-Decentraland",
+      "pubDate": "2021-10-19T13:18:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "It’s gone get hot, Paris Hilton said in a statement as she revealed her custom avatar called Genies (pictured above) for the biggest crypto party on the blockchain, ever. Genies...",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "SHIB, DOGE Now Available on Huobi Earn. See the APY",
+      "link": "https://cryptopanic.com/news/dogecoin/13056924/SHIB-DOGE-Now-Available-on-Huobi-Earn-See-the-APY",
+      "pubDate": "2021-10-19T12:07:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Two largest memetic coins, Dogecoin and Shiba Inu, are now supported in Huobi's passive income module",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @coinlistings: 🆕 New CoinGecko Listing: $BLAST",
+      "link": "https://cryptopanic.com/news/13069670/RT-coinlistings-New-CoinGecko-Listing-BLAST?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-19T11:52:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BLAST"
+      ]
+    },
+    {
+      "title": "XRP Has Nearly Tripled in Value Despite SEC Lawsuit Due to ‘New Phenomenon,’ Says Galaxy Digital CEO",
+      "link": "https://cryptopanic.com/news/ripple/13056862/XRP-Has-Nearly-Tripled-in-Value-Despite-SEC-Lawsuit-Due-to-New-Phenomenon-Says-Galaxy-Digital-CEO",
+      "pubDate": "2021-10-19T11:45:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "A “new phenomenon” is helping XRP’s price thrive despite the ongoing U.S. Securities and Exchange (SEC) lawsuit against Ripple, according to Galaxy Digital CEO Mike Novogratz. On December 22nd, 2020, the SEC officially filed a lawsuit against Ripple Labs, alleging that XRP was an unregistered security upon its launch and remains a security to this day. […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Mark Cuban Deems Bitcoin A Superior Store Of Value But Maintains Dogecoin Will Dominate Payments – Here’s Why",
+      "link": "https://cryptopanic.com/news/dogecoin/13056726/Mark-Cuban-Deems-Bitcoin-A-Superior-Store-Of-Value-But-Maintains-Dogecoin-Will-Dominate-Payments-Heres-Why",
+      "pubDate": "2021-10-19T10:56:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Key takeaways Billionaire Mark Cuban opens up about his favourite cryptocurrencies Bitcoin, Dogecoin, and Ethereum. For Cuban, Bitcoin is the best store of value. Dogecoin remains the best for payments, while Ethereum needs to “figure out” proof-of-stake. Among the favorite cryptocurrencies of Mark Cuban including Bitcoin, Dogecoin, and Ethereum, the billionaire owner of NBA team […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Trader Says Bitcoin Forming a Parabolic Structure, Predicts Two Large-Cap Altcoins Primed To Rally",
+      "link": "https://cryptopanic.com/news/chainlink/13056476/Trader-Says-Bitcoin-Forming-a-Parabolic-Structure-Predicts-Two-Large-Cap-Altcoins-Primed-To-Rally",
+      "pubDate": "2021-10-19T09:00:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A popular crypto analyst and trader is predicting major rallies for Bitcoin and two large-cap altcoins as the crypto markets continue to flash signs of strength. The pseudonymous trader known as Inmortal sees Bitcoin (BTC) showing signs that it is gearing up for a parabolic move. According to Inmortal, the current price action is reminiscent […]",
+      "currencies": [
+        "BTC",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @techleadhd: Million Token joins @avalancheavax #AVAX ecosystem, becoming the FASTEST cryptocurrency in the world for next-gen scalabili…",
+      "link": "https://cryptopanic.com/news/13060225/RT-techleadhd-Million-Token-joins-avalancheavax-AVAX-ecosystem-becoming-the-FASTEST-cryptocurrency-in-the-world-for-next-gen-scalabili",
+      "pubDate": "2021-10-19T08:46:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ANY"
+      ]
+    },
+    {
+      "title": "The last day giving your guess of the upcoming #TRON DeFi ecosystem newest event! 🆙What will come? Leave your a…",
+      "link": "https://cryptopanic.com/news/tron/13055078/The-last-day-giving-your-guess-of-the-upcoming-TRON-DeFi-ecosystem-newest-event-What-will-come-Leave-your-a",
+      "pubDate": "2021-10-19T08:01:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "-",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "The Standard Hashrate Group has from the outset diversified our mining operations in multiple geographical location…",
+      "link": "https://cryptopanic.com/news/13060408/The-Standard-Hashrate-Group-has-from-the-outset-diversified-our-mining-operations-in-multiple-geographical-location",
+      "pubDate": "2021-10-19T07:45:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "BTCST"
+      ]
+    },
+    {
+      "title": "1000+ followers! Great job, everyone🥰 To show our gratitude, we’ll be rewarding EACH of the 6 winners the total pri…",
+      "link": "https://cryptopanic.com/news/13060605/1000-followers-Great-job-everyone-To-show-our-gratitude-well-be-rewarding-EACH-of-the-6-winners-the-total-pri",
+      "pubDate": "2021-10-19T06:38:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BFC"
+      ]
+    },
+    {
+      "title": "RT @jgarzik: Maybe it's my background in #Linux kernel storage (ATA/SCSI), but I keep wondering when #decentralized #storage is going to be…",
+      "link": "https://cryptopanic.com/news/13054497/RT-jgarzik-Maybe-its-my-background-in-Linux-kernel-storage-ATASCSI-but-I-keep-wondering-when-decentralized-storage-is-going-to-be",
+      "pubDate": "2021-10-19T06:33:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QTUM"
+      ]
+    },
+    {
+      "title": "Polkadot unveils $770M development fund ahead of parachain auctions",
+      "link": "https://cryptopanic.com/news/polkadot/13051889/Polkadot-unveils-770M-development-fund-ahead-of-parachain-auctions",
+      "pubDate": "2021-10-19T06:12:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Polkadot’s Gavin Wood has announced a more than $770 million development fund just weeks before the network’s parachain auctions are set to go live.",
+      "currencies": [
+        "DOT",
+        "KSM"
+      ],
+      "votes": {
+        "positive": 26,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Top 100 Polygon Holders Collectively Own >90% of MATIC Supply",
+      "link": "https://cryptopanic.com/news/matic-network/13051495/Top-100-Polygon-Holders-Collectively-Own-90-of-MATIC-Supply",
+      "pubDate": "2021-10-19T06:05:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "Recent data is showing that the top 100 Polygon holders account for 91.06% of all MATIC tokens. Most of these are network contracts, though a good portion is held by other holders.",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 8
+      }
+    },
+    {
+      "title": "Ripple CEO Comments on Prospects of XRP ETF in U.S.",
+      "link": "https://cryptopanic.com/news/ripple/13050586/Ripple-CEO-Comments-on-Prospects-of-XRP-ETF-in-US",
+      "pubDate": "2021-10-19T05:38:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple CEO Brad Garlinghouse believes that the SEC is deliberately picking winners and losers",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "#eCash article at Ivan on Tech Academy \"In this article, we are going to dive deep into…",
+      "link": "https://cryptopanic.com/news/ecash/13056319/eCash-article-at-Ivan-on-Tech-Academy-In-this-article-we-are-going-to-dive-deep-into",
+      "pubDate": "2021-10-19T05:09:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "JASMY joined hands with Witz in launching TISIWIT",
+      "link": "https://cryptopanic.com/news/13053084/JASMY-joined-hands-with-Witz-in-launching-TISIWIT",
+      "pubDate": "2021-10-19T03:27:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "JASMY"
+      ]
+    },
+    {
+      "title": "1/5 When the demand for the stablecoin is in a long-term expansion or contraction phase, the protocol will adjust t…",
+      "link": "https://cryptopanic.com/news/13055973/15-When-the-demand-for-the-stablecoin-is-in-a-long-term-expansion-or-contraction-phase-the-protocol-will-adjust-t",
+      "pubDate": "2021-10-19T03:24:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDN"
+      ]
+    },
+    {
+      "title": "“[Reef Chain’s] smart contract deployment and verification are now fully automated with Remix ERC-20 support, allow…",
+      "link": "https://cryptopanic.com/news/13054609/Reef-Chains-smart-contract-deployment-and-verification-are-now-fully-automated-with-Remix-ERC-20-support-allow",
+      "pubDate": "2021-10-19T02:26:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ]
+    },
+    {
+      "title": "how did the total number of coins in my wallet decreased?",
+      "link": "https://cryptopanic.com/news/13078348/how-did-the-total-number-of-coins-in-my-wallet-decreased?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-19T01:27:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "UPC"
+      ]
+    },
+    {
+      "title": "Polkadot (DOT) founder announces $774 million development fund for DeFi",
+      "link": "https://cryptopanic.com/news/polkadot/13049836/Polkadot-DOT-founder-announces-774-million-development-fund-for-DeFi",
+      "pubDate": "2021-10-19T01:00:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Following DOT’s rally last week, driven by the announcement of Polkadot’s highly-anticipated parachain auctions, Gavin Wood teased $774 million ready to be spent on innovative ideas.",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 44,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "#AGI21 #day4 Next up: Vignav Ramesh and Anton Kolonin are talking about their presentation: Unsupervised Context-Dr…",
+      "link": "https://cryptopanic.com/news/13054989/AGI21-day4-Next-up-Vignav-Ramesh-and-Anton-Kolonin-are-talking-about-their-presentation-Unsupervised-Context-Dr",
+      "pubDate": "2021-10-19T00:39:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AGIX"
+      ]
+    },
+    {
+      "title": "Unique Polygon ($MATIC) Address Numbers Hit 100 Million All-Time High",
+      "link": "https://cryptopanic.com/news/matic-network/13049773/Unique-Polygon-MATIC-Address-Numbers-Hit-100-Million-All-Time-High",
+      "pubDate": "2021-10-19T00:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "The number of unique addresses on the Polygon (MATIC) network has recently hit a new all-time high above 100 million as users keep taking advantage of the low transaction fees on its network and using it to access decentralized finance (DeFi) applications. The network’s growth has been steady over time, with an exponential growth period […]",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 33,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "#AGI21 #day4 Now we have the authors of the online contributed talks coming on! First up: 1. Vladimir Smolin from :…",
+      "link": "https://cryptopanic.com/news/13054991/AGI21-day4-Now-we-have-the-authors-of-the-online-contributed-talks-coming-on-First-up-1-Vladimir-Smolin-from",
+      "pubDate": "2021-10-19T00:03:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AGIX"
+      ]
+    }
+  ]
+}

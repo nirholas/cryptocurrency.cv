@@ -1,0 +1,56 @@
+{
+  "date": "2018-09-16",
+  "fetchedAt": "2026-02-05T07:27:06.982Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tron Foundation Burns 4.9 Billion ERC20 Tokens",
+      "link": "https://cryptopanic.com/news/3064660/Tron-Foundation-Burns-49-Billion-ERC20-Tokens",
+      "pubDate": "2018-09-16T15:48:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Can Ripple XRP Hit $589 This Year?",
+      "link": "https://cryptopanic.com/news/ripple/3064513/Can-Ripple-XRP-Hit-589-This-Year",
+      "pubDate": "2018-09-16T13:46:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 17
+      }
+    },
+    {
+      "title": "The Co-founder of Bitcoin Gold Will speak at the key Blockchain and Cryptocurrency Forum Blockchain Life 2018",
+      "link": "https://cryptopanic.com/news/3063959/The-Co-founder-of-Bitcoin-Gold-Will-speak-at-the-key-Blockchain-and-Cryptocurrency-Forum-Blockchain-Life-2018",
+      "pubDate": "2018-09-16T04:00:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BTG"
+      ]
+    }
+  ]
+}

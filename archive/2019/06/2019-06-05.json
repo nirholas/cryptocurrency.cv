@@ -1,0 +1,41 @@
+{
+  "date": "2019-06-05",
+  "fetchedAt": "2026-02-05T07:27:06.997Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tron CEO Justin Sun Skyrockets on Google Trends After Getting Major Media Exposure",
+      "link": "https://cryptopanic.com/news/tron/5630153/Tron-CEO-Justin-Sun-Skyrockets-on-Google-Trends-After-Getting-Major-Media-Exposure",
+      "pubDate": "2019-06-05T18:36:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 22,
+        "negative": 14
+      }
+    },
+    {
+      "title": "Bots made 75% of transactions on all EOS dapps per report",
+      "link": "https://cryptopanic.com/news/eos/5627772/Bots-made-75-of-transactions-on-all-EOS-dapps-per-report",
+      "pubDate": "2019-06-05T14:16:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 17
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

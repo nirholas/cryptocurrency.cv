@@ -1,0 +1,27 @@
+{
+  "date": "2018-12-13",
+  "fetchedAt": "2026-02-05T07:27:06.992Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Buy The Dip, Bitcoin Better Than Gold, Cardano Update, IOTA Omega & Bitcoin Oversold",
+      "link": "https://cryptopanic.com/news/cardano/3965814/Buy-The-Dip-Bitcoin-Better-Than-Gold-Cardano-Update-IOTA-Omega-Bitcoin-Oversold",
+      "pubDate": "2018-12-13T10:53:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

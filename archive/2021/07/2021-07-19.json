@@ -1,0 +1,456 @@
+{
+  "date": "2021-07-19",
+  "fetchedAt": "2026-02-05T07:27:06.902Z",
+  "articleCount": 30,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ether EFT Gets Approval From Brazilian Securities Regulator",
+      "link": "https://cryptopanic.com/news/flow/12356168/Ether-EFT-Gets-Approval-From-Brazilian-Securities-Regulator",
+      "pubDate": "2021-07-19T22:05:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The Brazilian Securities Regulator, Comissão de Valores Mobiliários (CVM) gives approval for an Ether exchange-traded fund (ETF). The holding company of QR Asset Management, QR Capital, announced the approval. 🔴 BREAKING: CVM aprova o 1º ETF de Ethereum da América Latina, o QETH11. O ETF da QR Asset Management, gestora do grupo QR Capital, será listado na B3, que se torna a 1ª bolsa na América...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "POW#45: Don't focus on the fud, focus on the mission",
+      "link": "https://cryptopanic.com/news/ecash/12403093/POW45-Dont-focus-on-the-fud-focus-on-the-mission",
+      "pubDate": "2021-07-19T21:45:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "RT @CENNZnet: So you know what Apps are but what do you know about their decentralised cousins #DApps? Learn exactly what DApps are and how…",
+      "link": "https://cryptopanic.com/news/12357677/RT-CENNZnet-So-you-know-what-Apps-are-but-what-do-you-know-about-their-decentralised-cousins-DApps-Learn-exactly-what-DApps-are-and-how",
+      "pubDate": "2021-07-19T21:40:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CENNZ"
+      ]
+    },
+    {
+      "title": "RT @GD10V: Check out our most recent article, a first look at @FormationFi, the cutting edge #crosschain project that promises to revolutio…",
+      "link": "https://cryptopanic.com/news/12358375/RT-GD10V-Check-out-our-most-recent-article-a-first-look-at-FormationFi-the-cutting-edge-crosschain-project-that-promises-to-revolutio?mtm_campaign=API-OFA",
+      "pubDate": "2021-07-19T20:13:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FORM"
+      ]
+    },
+    {
+      "title": "This week in #CelsiusRewardsExplorer, more than $25K rewards in $PAX were distributed to #Celsians. Did you kn…",
+      "link": "https://cryptopanic.com/news/paxos-standard/12357662/This-week-in-CelsiusRewardsExplorer-more-than-25K-rewards-in-PAX-were-distributed-to-Celsians-Did-you-kn",
+      "pubDate": "2021-07-19T19:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CEL",
+        "PAX"
+      ]
+    },
+    {
+      "title": "Thank for @Investingcom for the great article - Forked Cryptocurrencies Demonstrate Great Price Performance. #eCash…",
+      "link": "https://cryptopanic.com/news/ecash/12368712/Thank-for-Investingcom-for-the-great-article-Forked-Cryptocurrencies-Demonstrate-Great-Price-Performance-eCash",
+      "pubDate": "2021-07-19T19:26:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Bitcoin Miners Have Started Selling, Bear Market Ahead?",
+      "link": "https://cryptopanic.com/news/12355802/Bitcoin-Miners-Have-Started-Selling-Bear-Market-Ahead",
+      "pubDate": "2021-07-19T19:00:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin on-chain data has revealed that miners have started selling more BTC on exchanges, an indicator that a bear market could be ahead. Miners To Exchanges Flow Has Sharply Risen As pointed out by a CryptoQuant post, the all miners to all exchanges flow mean for Bitcoin seems to have sharply risen this past weekend. Related to the data are three basic terms. First is the all miners to all...",
+      "currencies": [
+        "BTC",
+        "FLOW",
+        "GRT"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polkadot Is the Only Blockchain Protocol Fitting the Revolutionary Bill: Interview With Parity",
+      "link": "https://cryptopanic.com/news/polkadot/12355748/Polkadot-Is-the-Only-Blockchain-Protocol-Fitting-the-Revolutionary-Bill-Interview-With-Parity",
+      "pubDate": "2021-07-19T18:40:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Parity Technologies' head of public affairs explains why Polkadot is superior to Ethereum, how do Parachains work, the role of Kusama, and more.",
+      "currencies": [
+        "ETH",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 23,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Coinbase Sued Over “Deceptive” Dogecoin Campaign",
+      "link": "https://cryptopanic.com/news/dogecoin/12355628/Coinbase-Sued-Over-Deceptive-Dogecoin-Campaign",
+      "pubDate": "2021-07-19T17:57:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "-",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "The gang 🤩 #CrossingTheYellowBlocks #CBK work in progress 🤓 with @bamboodefi",
+      "link": "https://cryptopanic.com/news/12357815/The-gang-CrossingTheYellowBlocks-CBK-work-in-progress-with-bamboodefi?mtm_campaign=API-OFA",
+      "pubDate": "2021-07-19T17:22:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CBK"
+      ]
+    },
+    {
+      "title": "Binance Burns Hundreds Of Millions Worth Of Coins, Crypto Market Reacts",
+      "link": "https://cryptopanic.com/news/12355507/Binance-Burns-Hundreds-Of-Millions-Worth-Of-Coins-Crypto-Market-Reacts",
+      "pubDate": "2021-07-19T17:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Binance has now burned over $300 million worth of crypto coins in its quarterly burns. The Binance burn consisted of 1,296,728 BNB burned, and an additional 5,163 burned as part of the Binance Pioneer Burn Program. Keeping its promise of helping out developers on the Binance Smart Chain who, by honest mistake, lost their BNB […]",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @Thetaboard1: Even if you know your Whitedoves from your BigDogs, growth of our network still requires new people joining, so let us not…",
+      "link": "https://cryptopanic.com/news/theta-token/12360548/RT-Thetaboard1-Even-if-you-know-your-Whitedoves-from-your-BigDogs-growth-of-our-network-still-requires-new-people-joining-so-let-us-not",
+      "pubDate": "2021-07-19T16:59:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Polygon Launches NFT Gaming Studio",
+      "link": "https://cryptopanic.com/news/matic-network/12355406/Polygon-Launches-NFT-Gaming-Studio",
+      "pubDate": "2021-07-19T16:36:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "-",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 27,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @Ultra_platform: THREAD: What makes games on Ultra so special",
+      "link": "https://cryptopanic.com/news/12360788/RT-Ultra_platform-THREAD-What-makes-games-on-Ultra-so-special",
+      "pubDate": "2021-07-19T16:25:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "UOS"
+      ]
+    },
+    {
+      "title": "\"OKEx completes token migration from BCHA to XEC and opens XEC/USDT spot trading\" #eCash #XEC $XEC",
+      "link": "https://cryptopanic.com/news/ecash/12368714/OKEx-completes-token-migration-from-BCHA-to-XEC-and-opens-XECUSDT-spot-trading-eCash-XEC-XEC",
+      "pubDate": "2021-07-19T16:23:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC",
+        "BCHA"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: Going live now!",
+      "link": "https://cryptopanic.com/news/12358608/RT-RichardHeartWin-Going-live-now",
+      "pubDate": "2021-07-19T16:04:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "Polygon Unveils New Blockchain Gaming and NFT Division",
+      "link": "https://cryptopanic.com/news/matic-network/12355311/Polygon-Unveils-New-Blockchain-Gaming-and-NFT-Division",
+      "pubDate": "2021-07-19T16:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "Polygon's new blockchain unit focuses on growing the global decentralized gaming and NFT markets while also bridging the gap between web 2 and web 3 gaming.",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @PulsechainCom: Congratulations! The code is now released at ! We're going to help make #…",
+      "link": "https://cryptopanic.com/news/12358609/RT-PulsechainCom-Congratulations-The-code-is-now-released-at-Were-going-to-help-make",
+      "pubDate": "2021-07-19T15:08:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "Grayscale Launches a DeFi Fund Consisting of Uniswap (UNI), Aave (AAVE), and Compound (COMP)",
+      "link": "https://cryptopanic.com/news/uniswap/12355036/Grayscale-Launches-a-DeFi-Fund-Consisting-of-Uniswap-UNI-Aave-AAVE-and-Compound-COMP",
+      "pubDate": "2021-07-19T14:44:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The world's largest cryptocurrency asset manager, Grayscale Investments, has launched a new product focused on assets from the DeFi space only.",
+      "currencies": [
+        "UNI",
+        "AAVE",
+        "COMP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BTC, ETH and XRP Price Analysis for July 19",
+      "link": "https://cryptopanic.com/news/ripple/12354881/BTC-ETH-and-XRP-Price-Analysis-for-July-19",
+      "pubDate": "2021-07-19T13:58:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Can Ethereum (ETH) or XRP withstand the fall of Bitcoin (BTC)?",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance ‘burns’ nearly $400 million worth of BNB",
+      "link": "https://cryptopanic.com/news/12354756/Binance-burns-nearly-400-million-worth-of-BNB",
+      "pubDate": "2021-07-19T13:16:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Major cryptocurrency exchange Binance has announced that it successfully completed the 16th quarterly token burn yesterday, removing $393.6 million worth of Binance Coin (BNB) from circulation.",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @Prosperpredict: Prosper, Prometeus and Binance launch $PROM / $PROS trading \"Collect &amp; Win\" contest for Russia, Ukraine, Kazakhstan and…",
+      "link": "https://cryptopanic.com/news/12359884/RT-Prosperpredict-Prosper-Prometeus-and-Binance-launch-PROM-PROS-trading-Collect-amp-Win-contest-for-Russia-Ukraine-Kazakhstan-and",
+      "pubDate": "2021-07-19T13:09:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "PROM"
+      ]
+    },
+    {
+      "title": "RT @PulsechainCom: 17.5 hours until the rate increases 5%! It keeps doing that until the rate is 1.98x higher than now!",
+      "link": "https://cryptopanic.com/news/12358610/RT-PulsechainCom-175-hours-until-the-rate-increases-5-It-keeps-doing-that-until-the-rate-is-198x-higher-than-now",
+      "pubDate": "2021-07-19T11:22:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "Dogecoin rallies as Musk dons sunglasses",
+      "link": "https://cryptopanic.com/news/dogecoin/12354300/Dogecoin-rallies-as-Musk-dons-sunglasses",
+      "pubDate": "2021-07-19T10:30:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The price of Dogecoin rose more than 15% at the weekend after Tesla CEO Elon Musk changed his Twitter profile picture to a photo featuring the dog breed whose likeness features on the memecoin. Fast facts Musk’s new picture featured the billionaire wearing mirrored, aviator-style glasses with a Shiba Inu dog reflected in them. Dogecoin’s […]",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 26
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "DeFi lending platform Aave to ‘build Twitter on Ethereum’",
+      "link": "https://cryptopanic.com/news/12354183/DeFi-lending-platform-Aave-to-build-Twitter-on-Ethereum",
+      "pubDate": "2021-07-19T09:25:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Decentralized lending platform Aave will build “Twitter on Ethereum,” its founder, Stani Kulechov, tweeted during the weekend. His message came seemingly in response to an announcement that Twitter founder Jack Dorsey was developing a Bitcoin-oriented fintech platform resembling Aave. Fast facts Dorsey, who is also CEO of payments company Square, tweeted that the firm was […]",
+      "currencies": [
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @RichardHeartWin: Going live now",
+      "link": "https://cryptopanic.com/news/12358611/RT-RichardHeartWin-Going-live-now",
+      "pubDate": "2021-07-19T09:07:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "84.3 Million XRP Transferred to Binance, While Coin Sits at $0.5",
+      "link": "https://cryptopanic.com/news/ripple/12354133/843-Million-XRP-Transferred-to-Binance-While-Coin-Sits-at-05",
+      "pubDate": "2021-07-19T08:53:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Anonymous whale has moved 84.3 million XRP to Binance, while the popular Ripple-affiliated coin remains at the $0.50 level",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance burns $390M worth of BNB tokens",
+      "link": "https://cryptopanic.com/news/12353593/Binance-burns-390M-worth-of-BNB-tokens",
+      "pubDate": "2021-07-19T07:34:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Binance has destroyed $400 million worth of BNB in its 16th quarterly token burn event, but the markets don’t seem to care.",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance Burns Almost $400 Million Worth of BNB, Price Unfazed",
+      "link": "https://cryptopanic.com/news/12353204/Binance-Burns-Almost-400-Million-Worth-of-BNB-Price-Unfazed",
+      "pubDate": "2021-07-19T07:17:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Binance completed another quarterly burn of BNB. This time, however, the price failed to react.",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 25,
+        "negative": 10
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @PulsechainCom: Congratulations #tron Users! sacrifice phase is bringing #TronNetwork adoption! #TRX is now va…",
+      "link": "https://cryptopanic.com/news/12352340/RT-PulsechainCom-Congratulations-tron-Users-sacrifice-phase-is-bringing-TronNetwork-adoption-TRX-is-now-va",
+      "pubDate": "2021-07-19T05:37:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    }
+  ]
+}

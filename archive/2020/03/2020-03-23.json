@@ -1,0 +1,25 @@
+{
+  "date": "2020-03-23",
+  "fetchedAt": "2026-02-05T07:27:06.961Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Hive Blockchain Goes Live After Successful Steem Network Hard Fork",
+      "link": "https://cryptopanic.com/news/8308806/Hive-Blockchain-Goes-Live-After-Successful-Steem-Network-Hard-Fork",
+      "pubDate": "2020-03-23T15:00:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

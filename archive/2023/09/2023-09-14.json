@@ -1,0 +1,813 @@
+{
+  "date": "2023-09-14",
+  "fetchedAt": "2026-02-05T07:27:07.054Z",
+  "articleCount": 56,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Telegram’s New Wallet Launch on TON Blockchain Sparks Controversy",
+      "link": "https://cryptopanic.com/news/18904409/Telegrams-New-Wallet-Launch-on-TON-Blockchain-Sparks-Controversy",
+      "pubDate": "2023-09-14T22:46:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TON"
+      ]
+    },
+    {
+      "title": "This Will Send Bitcoin To $10,600,000?",
+      "link": "https://cryptopanic.com/news/bitcoin/18904345/THIS-WILL-SEND-BITCOIN-TO-10600000",
+      "pubDate": "2023-09-14T21:47:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Circle's USDC Expansion On NEAR Signals Resilient Multi-Blockchain Future",
+      "link": "https://cryptopanic.com/news/18904265/Circles-USDC-Expansion-On-NEAR-Signals-Resilient-Multi-Blockchain-Future",
+      "pubDate": "2023-09-14T20:51:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ATOM price outlook after Cosmos Hub’s upgrade for liquid staking",
+      "link": "https://cryptopanic.com/news/18904210/ATOM-price-outlook-after-Cosmos-Hubs-upgrade-for-liquid-staking",
+      "pubDate": "2023-09-14T20:35:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ALGO’s bullish strides can strengthen as Algorand announces this change",
+      "link": "https://cryptopanic.com/news/18904207/ALGOs-bullish-strides-can-strengthen-as-Algorand-announces-this-change",
+      "pubDate": "2023-09-14T20:30:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Will Bitcoin Follow Through? Btc, Rune, Mkr Price Predictions",
+      "link": "https://cryptopanic.com/news/maker/18904235/WILL-BITCOIN-FOLLOW-THROUGH-BTC-RUNE-MKR-PRICE-PREDICTIONS",
+      "pubDate": "2023-09-14T20:30:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Renewable Energy Use in Bitcoin Mining Exceeds 50 Percent: What’s Elon Musk Waiting For?",
+      "link": "https://cryptopanic.com/news/18904169/Renewable-Energy-Use-in-Bitcoin-Mining-Exceeds-50-Percent-Whats-Elon-Musk-Waiting-For",
+      "pubDate": "2023-09-14T20:06:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "According to the latest updated data, the rate of using renewable energy in Bitcoin mining has exceeded 50 percent. Continue Reading: Renewable Energy Use in Bitcoin Mining Exceeds 50 Percent: What’s Elon Musk Waiting For?",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Curve Finance: Of market movements and price puzzles",
+      "link": "https://cryptopanic.com/news/18904106/Curve-Finance-Of-market-movements-and-price-puzzles",
+      "pubDate": "2023-09-14T19:30:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Former Celsius exec pleads guilty to criminal charges",
+      "link": "https://cryptopanic.com/news/18904086/Former-Celsius-exec-pleads-guilty-to-criminal-charges",
+      "pubDate": "2023-09-14T19:28:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CEL"
+      ]
+    },
+    {
+      "title": "Cryptocurrency XDC Network Up More Than 6% In 24 hours",
+      "link": "https://cryptopanic.com/news/18904073/Cryptocurrency-XDC-Network-Up-More-Than-6-In-24-hours",
+      "pubDate": "2023-09-14T19:00:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XDC"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Cosmos Hub Rises More Than 3% In 24 hours",
+      "link": "https://cryptopanic.com/news/18904075/Cryptocurrency-Cosmos-Hub-Rises-More-Than-3-In-24-hours",
+      "pubDate": "2023-09-14T19:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ]
+    },
+    {
+      "title": "Crypto Trader Says One Ethereum-Based Altcoin Primed To ‘Do Big Numbers’, Updates Outlook on Bitcoin and Polygon",
+      "link": "https://cryptopanic.com/news/18903950/Crypto-Trader-Says-One-Ethereum-Based-Altcoin-Primed-To-Do-Big-Numbers-Updates-Outlook-on-Bitcoin-and-Polygon",
+      "pubDate": "2023-09-14T18:05:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MATIC",
+        "LINK",
+        "APE"
+      ]
+    },
+    {
+      "title": "The Blockchain In Australia – BSV Blockchain Association Hosts Successful Event In Sydney",
+      "link": "https://cryptopanic.com/news/18903905/The-Blockchain-In-Australia-BSV-Blockchain-Association-Hosts-Successful-Event-In-Sydney",
+      "pubDate": "2023-09-14T17:41:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "USD Coin (USDC) Stablecoin by Circle Kicks off on NEAR",
+      "link": "https://cryptopanic.com/news/18903734/USD-Coin-USDC-Stablecoin-by-Circle-Kicks-off-on-NEAR",
+      "pubDate": "2023-09-14T16:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Bitcoin Rallies Over Deutsche Bank Crypto Custody Move; BTC To Break $26,800?",
+      "link": "https://cryptopanic.com/news/18903683/Bitcoin-Rallies-Over-Deutsche-Bank-Crypto-Custody-Move-BTC-To-Break-26800",
+      "pubDate": "2023-09-14T16:27:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDC",
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Binance Announces Burn of Idle BUSD Tokens",
+      "link": "https://cryptopanic.com/news/18903662/Binance-Announces-Burn-of-Idle-BUSD-Tokens",
+      "pubDate": "2023-09-14T16:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "BNB",
+        "BUSD",
+        "TUSD"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Axie Infinity (AXS) Pumps 20%, Here's What Happened",
+      "link": "https://cryptopanic.com/news/18903674/Axie-Infinity-AXS-Pumps-20-Heres-What-Happened",
+      "pubDate": "2023-09-14T16:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "SEC Statement from Ethereum's Co-Founder: 'Logic Will Win in All Cases!'",
+      "link": "https://cryptopanic.com/news/18903641/SEC-Statement-from-Ethereums-Co-Founder-Logic-Will-Win-in-All-Cases",
+      "pubDate": "2023-09-14T16:06:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Joseph Lubin, co-founder of Ethereum and CEO of ConsenSys, said he believes logic will prevail in SEC cases. Continue Reading: SEC Statement from Ethereum's Co-Founder: 'Logic Will Win in All Cases!'",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "The Real Reason Behind That Bitcoin Transaction With A $500,000 Fee Has Been Revealed",
+      "link": "https://cryptopanic.com/news/18903599/The-Real-Reason-Behind-That-Bitcoin-Transaction-With-A-500000-Fee-Has-Been-Revealed",
+      "pubDate": "2023-09-14T16:00:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BUSD",
+        "USDP"
+      ]
+    },
+    {
+      "title": "VeChain price: VET outlook after Coinbase listing news",
+      "link": "https://cryptopanic.com/news/18903579/VeChain-price-VET-outlook-after-Coinbase-listing-news",
+      "pubDate": "2023-09-14T15:45:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ]
+    },
+    {
+      "title": "Axie Infinity’s AXS price spikes as unique wallets soar: is it a buy?",
+      "link": "https://cryptopanic.com/news/18903499/Axie-Infinitys-AXS-price-spikes-as-unique-wallets-soar-is-it-a-buy",
+      "pubDate": "2023-09-14T15:14:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "Cardano's Vision vs. Domini.art's 340% Presale Surge vs. Stellar's Stability",
+      "link": "https://cryptopanic.com/news/18903430/Cardanos-Vision-vs-Dominiarts-340-Presale-Surge-vs-Stellars-Stability",
+      "pubDate": "2023-09-14T14:56:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Ethereum Tops This Key Level Following PPI Data; Hedera Emerges As Top Gainer",
+      "link": "https://cryptopanic.com/news/18903275/Ethereum-Tops-This-Key-Level-Following-PPI-Data-Hedera-Emerges-As-Top-Gainer",
+      "pubDate": "2023-09-14T13:48:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Hedera's Brand New Stablecoin Studio Propels HBAR’s 9% Surge",
+      "link": "https://cryptopanic.com/news/18903188/Hederas-Brand-New-Stablecoin-Studio-Propels-HBARs-9-Surge",
+      "pubDate": "2023-09-14T13:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "VET Soars on Coinbase Listing, Will Bullish Momentum Persist?",
+      "link": "https://cryptopanic.com/news/18903203/VET-Soars-on-Coinbase-Listing-Will-Bullish-Momentum-Persist",
+      "pubDate": "2023-09-14T13:32:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ]
+    },
+    {
+      "title": "Breaking: Circle Launches Native USDC On NEAR Protocol",
+      "link": "https://cryptopanic.com/news/18903183/Breaking-Circle-Launches-Native-USDC-On-NEAR-Protocol",
+      "pubDate": "2023-09-14T13:31:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Polygon 2.0 — MATIC conversion to POL outlined in preliminary improvement proposals",
+      "link": "https://cryptopanic.com/news/18903089/Polygon-20-MATIC-conversion-to-POL-outlined-in-preliminary-improvement-proposals",
+      "pubDate": "2023-09-14T13:05:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "The Ethereum layer-2 developer has introduced the first improvement proposals to begin the transition to its Polygon 2.0 ecosystem.",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "First Mover Americas: BTC Holds $26K; Hedera’s HBAR Jumps",
+      "link": "https://cryptopanic.com/news/18903086/First-Mover-Americas-BTC-Holds-26K-Hederas-HBAR-Jumps",
+      "pubDate": "2023-09-14T13:02:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Lido Finance selects Axelar and Neutron to launch wstETH on Cosmos",
+      "link": "https://cryptopanic.com/news/18903053/Lido-Finance-selects-Axelar-and-Neutron-to-launch-wstETH-on-Cosmos",
+      "pubDate": "2023-09-14T13:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ATOM"
+      ]
+    },
+    {
+      "title": "Lido’s Staked Ether Tokens Can Soon Be Used on Cosmos, IBC Blockchains",
+      "link": "https://cryptopanic.com/news/18903087/Lidos-Staked-Ether-Tokens-Can-Soon-Be-Used-on-Cosmos-IBC-Blockchains",
+      "pubDate": "2023-09-14T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ATOM"
+      ]
+    },
+    {
+      "title": "Lidos’ wrapped staked ETH is coming to Cosmos",
+      "link": "https://cryptopanic.com/news/18903126/Lidos-wrapped-staked-ETH-is-coming-to-Cosmos",
+      "pubDate": "2023-09-14T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "LDO"
+      ]
+    },
+    {
+      "title": "A New Foundation in Abu Dhabi, UAE, to Grow IOTA’s Global Expansion",
+      "link": "https://cryptopanic.com/news/18903041/A-New-Foundation-in-Abu-Dhabi-UAE-to-Grow-IOTAs-Global-Expansion",
+      "pubDate": "2023-09-14T12:55:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Whales are Accumulating These Altcoins at Discount",
+      "link": "https://cryptopanic.com/news/18903182/Crypto-Whales-are-Accumulating-These-Altcoins-at-Discount",
+      "pubDate": "2023-09-14T12:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MATIC",
+        "LTC",
+        "APE"
+      ]
+    },
+    {
+      "title": "BREAKING! US PPI and Employment Data Announced! Here is the First Reaction of Bitcoin and Dollar!",
+      "link": "https://cryptopanic.com/news/18903001/BREAKING-US-PPI-and-Employment-Data-Announced-Here-is-the-First-Reaction-of-Bitcoin-and-Dollar",
+      "pubDate": "2023-09-14T12:34:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Data on the US producer price index has been announced. How did Bitcoin and the dollar react after the announced data? Continue Reading: BREAKING! US PPI and Employment Data Announced! Here is the First Reaction of Bitcoin and Dollar!",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Huobi's 10th anniversary is marked by a divisive rebranding as HTX",
+      "link": "https://cryptopanic.com/news/18902965/Huobis-10th-anniversary-is-marked-by-a-divisive-rebranding-as-HTX",
+      "pubDate": "2023-09-14T12:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "HT"
+      ]
+    },
+    {
+      "title": "Top 5 Cryptocurrencies In Terms Of Development Could Surge Soon",
+      "link": "https://cryptopanic.com/news/18902871/Top-5-Cryptocurrencies-In-Terms-Of-Development-Could-Surge-Soon",
+      "pubDate": "2023-09-14T11:58:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "DOT",
+        "LINK",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Crypto Exchange Huobi to Use HTX to Fulfill Its Global Ambitions",
+      "link": "https://cryptopanic.com/news/18902843/Crypto-Exchange-Huobi-to-Use-HTX-to-Fulfill-Its-Global-Ambitions",
+      "pubDate": "2023-09-14T11:53:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "HT"
+      ]
+    },
+    {
+      "title": "Two Ethereum Rivals Overtake Cardano on One Critical Metric, Says Crypto Analytics Firm Santiment",
+      "link": "https://cryptopanic.com/news/18902833/Two-Ethereum-Rivals-Overtake-Cardano-on-One-Critical-Metric-Says-Crypto-Analytics-Firm-Santiment",
+      "pubDate": "2023-09-14T11:45:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Blockchain analytics platform Santiment says that two Ethereum (ETH) rivals are surpassing Cardano (ADA) in one major area. According to a new Santiment blog post, Polkadot (DOT) and its canary test network Kusama (KSM) are now seeing more development activity on the development hosting platform GitHub than Cardano during the past 30 days. “It is […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "DOT",
+        "LINK",
+        "FIL",
+        "KSM"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "HBAR Rallies Nearly 9% Following Bithumb’s Listing Announcement",
+      "link": "https://cryptopanic.com/news/18902835/HBAR-Rallies-Nearly-9-Following-Bithumbs-Listing-Announcement",
+      "pubDate": "2023-09-14T11:42:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Binance To Burn Multiple Crypto On Polygon (MATIC) And Other Network",
+      "link": "https://cryptopanic.com/news/18902710/Binance-To-Burn-Multiple-Crypto-On-Polygon-MATIC-And-Other-Network",
+      "pubDate": "2023-09-14T11:02:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BUSD",
+        "MATIC"
+      ]
+    },
+    {
+      "title": "Here’s How the Bitcoin Cash (BCH) Price Can Reach a New Yearly High",
+      "link": "https://cryptopanic.com/news/18902740/Heres-How-the-Bitcoin-Cash-BCH-Price-Can-Reach-a-New-Yearly-High",
+      "pubDate": "2023-09-14T11:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Huobi’s bold step toward global expansion under the leadership of Tron founder Justin Sun",
+      "link": "https://cryptopanic.com/news/huobi-token/18902715/Huobis-bold-step-toward-global-expansion-under-the-leadership-of-Tron-founder-Justin-Sun",
+      "pubDate": "2023-09-14T10:28:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "HT"
+      ]
+    },
+    {
+      "title": "Top 10 cryptocurrencies by GitHub activity in last 30 days",
+      "link": "https://cryptopanic.com/news/18902466/Top-10-cryptocurrencies-by-GitHub-activity-in-last-30-days",
+      "pubDate": "2023-09-14T09:39:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Although most of the assets in the cryptocurrency market might have been in a stagnation trend in terms of their … Continued",
+      "currencies": [
+        "ADA",
+        "DOT",
+        "LINK",
+        "ATOM",
+        "HBAR",
+        "FIL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "NEO & Avalanche (AVAX) Caught In The Crypto Storm, VC Spectra’s (SPCT) Surge Is Unstoppable!",
+      "link": "https://cryptopanic.com/news/neo/18902745/NEO-Avalanche-AVAX-Caught-In-The-Crypto-Storm-VC-Spectras-SPCT-Surge-Is-Unstoppable",
+      "pubDate": "2023-09-14T09:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "NEO"
+      ]
+    },
+    {
+      "title": "Crypto Daily Roundup: CPI Data Boosts PEPE Coin, Bitcoin, and Solana",
+      "link": "https://cryptopanic.com/news/maker/18902307/Crypto-Daily-Roundup-CPI-Data-Boosts-PEPE-Coin-Bitcoin-and-Solana",
+      "pubDate": "2023-09-14T08:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash pumps 13% – a rally in the works?",
+      "link": "https://cryptopanic.com/news/18902192/Bitcoin-Cash-pumps-13-a-rally-in-the-works",
+      "pubDate": "2023-09-14T07:30:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Telegram Integrates With Self-custodial Wallet TON Space",
+      "link": "https://cryptopanic.com/news/18902173/Telegram-Integrates-With-Self-custodial-Wallet-TON-Space",
+      "pubDate": "2023-09-14T07:24:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TON"
+      ]
+    },
+    {
+      "title": "Justin Sun hopes HTX rebrand will help exchange keep pace with rivals’ global expansion",
+      "link": "https://cryptopanic.com/news/18902158/Justin-Sun-hopes-HTX-rebrand-will-help-exchange-keep-pace-with-rivals-global-expansion",
+      "pubDate": "2023-09-14T07:12:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "HT"
+      ]
+    },
+    {
+      "title": "EOS Price Analysis: Bears In Control Below $0.60",
+      "link": "https://cryptopanic.com/news/18902035/EOS-Price-Analysis-Bears-In-Control-Below-060",
+      "pubDate": "2023-09-14T05:48:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ]
+    },
+    {
+      "title": "$XRP Price Could Surge Over 1,200% to $6.29 If It Breaks Key Resistance, Analyst Says",
+      "link": "https://cryptopanic.com/news/18902004/XRP-Price-Could-Surge-Over-1200-to-629-If-It-Breaks-Key-Resistance-Analyst-Says",
+      "pubDate": "2023-09-14T05:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The cryptocurrency space is a financial realm rife with volatility and lately, the native token of the XRP Ledger, $XRP, has been capturing attention amid a wider cryptocurrency market recovery, with one analyst predicting the price of XRP could surge to $6.29 in the future. In a post on the microblogging platform X (formerly known […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Certik Cautions Against Telegram Bot Tokens Amid TON-Based Wallet Launch",
+      "link": "https://cryptopanic.com/news/18902002/Certik-Cautions-Against-Telegram-Bot-Tokens-Amid-TON-Based-Wallet-Launch",
+      "pubDate": "2023-09-14T05:00:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TON"
+      ]
+    },
+    {
+      "title": "FTX Crypto Purge: Court Gives Green Light To $3.4 Billion Liquidation Blitz",
+      "link": "https://cryptopanic.com/news/18901905/FTX-Crypto-Purge-Court-Gives-Green-Light-To-34-Billion-Liquidation-Blitz",
+      "pubDate": "2023-09-14T03:30:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "In a significant development for the cryptocurrency market, the bankrupt exchange FTX has received court approval to liquidate its crypto assets worth over $3.4 billion. The decision, delivered by Judge John Dorsey, overruled objections and permitted FTX to proceed with selling, staking, and hedging its holdings. The exchange had submitted a filing in August, arguing […]",
+      "currencies": [
+        "BTC",
+        "FTT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Court Approves FTX Liquidation Plan – Here’s the Full List of Cryptos to Be Sold",
+      "link": "https://cryptopanic.com/news/18901888/Court-Approves-FTX-Liquidation-Plan-Heres-the-Full-List-of-Cryptos-to-Be-Sold",
+      "pubDate": "2023-09-14T02:49:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "SOL",
+        "DOGE",
+        "WBTC",
+        "MATIC",
+        "FTT"
+      ]
+    },
+    {
+      "title": "24 Crypto Update, 13 Sep: Crypto stabilizes after US CPI data release",
+      "link": "https://cryptopanic.com/news/18902077/24-Crypto-Update-13-Sep-Crypto-stabilizes-after-US-CPI-data-release",
+      "pubDate": "2023-09-14T01:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "UNI",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Elon Musk obtains license for X to trade and store Bitcoin #bitcoin #twitter #shorts",
+      "link": "https://cryptopanic.com/news/bitcoin/18901796/Elon-Musk-obtains-license-for-X-to-trade-and-store-Bitcoin-bitcoin-twitter-shorts",
+      "pubDate": "2023-09-14T01:00:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Elon Musk wants X to be the WeChat of the west. Are you okay with this?",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Huobi Celebrates 10 Years: Sparks Controversy With Rebrand To “HTX”",
+      "link": "https://cryptopanic.com/news/18901792/Huobi-Celebrates-10-Years-Sparks-Controversy-With-Rebrand-To-HTX",
+      "pubDate": "2023-09-14T01:00:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FTT",
+        "HT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

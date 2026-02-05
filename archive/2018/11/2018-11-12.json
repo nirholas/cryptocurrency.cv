@@ -1,0 +1,60 @@
+{
+  "date": "2018-11-12",
+  "fetchedAt": "2026-02-05T07:27:07.575Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitfinex: New Fee Policy Suggests $30,000 Fee to Withdraw $1 Million",
+      "link": "https://cryptopanic.com/news/3646246/Bitfinex-New-Fee-Policy-Suggests-30000-Fee-to-Withdraw-1-Million",
+      "pubDate": "2018-11-12T19:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "NEM Among Top Performers in Top 100 After Coincheck Relisting",
+      "link": "https://cryptopanic.com/news/3644134/NEM-Among-Top-Performers-in-Top-100-After-Coincheck-Relisting",
+      "pubDate": "2018-11-12T15:39:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "carVertical Unveils CarVertical.CITY, Its New Automatic Parking App That Uses IOTA",
+      "link": "https://cryptopanic.com/news/3642376/carVertical-Unveils-CarVerticalCITY-Its-New-Automatic-Parking-App-That-Uses-IOTA",
+      "pubDate": "2018-11-12T12:29:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 30,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

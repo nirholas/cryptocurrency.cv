@@ -1,0 +1,26 @@
+{
+  "date": "2020-01-18",
+  "fetchedAt": "2026-02-05T07:27:06.928Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin SV Drops 15% As New Evidence Confirms CSW Hasn’t Got The 1.1M BTC Private Keys",
+      "link": "https://cryptopanic.com/news/7684953/Bitcoin-SV-Drops-15-As-New-Evidence-Confirms-CSW-Hasnt-Got-The-11M-BTC-Private-Keys",
+      "pubDate": "2020-01-18T15:08:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 11
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

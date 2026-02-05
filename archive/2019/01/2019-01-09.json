@@ -1,0 +1,78 @@
+{
+  "date": "2019-01-09",
+  "fetchedAt": "2026-02-05T07:27:06.993Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Russia Using Bitcoin, NEO Price Jump Speculation & $7 Trillion Market Cap",
+      "link": "https://cryptopanic.com/news/neo/4204339/Russia-Using-Bitcoin-NEO-Price-Jump-Speculation-7-Trillion-Market-Cap",
+      "pubDate": "2019-01-09T16:31:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron [TRX] Top Performer After Surpassing Its 200-Day Moving Average",
+      "link": "https://cryptopanic.com/news/4203604/Tron-TRX-Top-Performer-After-Surpassing-Its-200-Day-Moving-Average",
+      "pubDate": "2019-01-09T15:54:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Zcash [ZEC] Details Its 2019 Go-To-Market Strategy",
+      "link": "https://cryptopanic.com/news/4203125/Zcash-ZEC-Details-Its-2019-Go-To-Market-Strategy",
+      "pubDate": "2019-01-09T15:29:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BITCOIN TO $1300!? How to predict BTC bottom & make millions in bear market ETH EOS NEO",
+      "link": "https://cryptopanic.com/news/ethereum/4202166/BITCOIN-TO-1300-How-to-predict-BTC-bottom-make-millions-in-bear-market-ETH-EOS-NEO",
+      "pubDate": "2019-01-09T14:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

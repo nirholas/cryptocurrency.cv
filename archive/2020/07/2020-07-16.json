@@ -1,0 +1,37 @@
+{
+  "date": "2020-07-16",
+  "fetchedAt": "2026-02-05T07:27:06.864Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Norway’s Largest Cruise Ferry Line Uses DNV GL and VeChain’s (VET) My Care Solution",
+      "link": "https://cryptopanic.com/news/9372281/Norways-Largest-Cruise-Ferry-Line-Uses-DNV-GL-and-VeChains-VET-My-Care-Solution",
+      "pubDate": "2020-07-16T18:07:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ARE YOU READY FOR GAMING REVOLUTION?",
+      "link": "https://cryptopanic.com/news/9369285/ARE-YOU-READY-FOR-GAMING-REVOLUTION",
+      "pubDate": "2020-07-16T12:35:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SNL"
+      ]
+    }
+  ]
+}

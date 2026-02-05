@@ -1,0 +1,26 @@
+{
+  "date": "2020-09-08",
+  "fetchedAt": "2026-02-05T07:27:06.973Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Crypto Investors Have Ignored Three Straight 51% Attacks on ETC",
+      "link": "https://cryptopanic.com/news/9920500/Crypto-Investors-Have-Ignored-Three-Straight-51-Attacks-on-ETC",
+      "pubDate": "2020-09-08T20:57:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

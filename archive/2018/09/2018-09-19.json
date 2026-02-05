@@ -1,0 +1,45 @@
+{
+  "date": "2018-09-19",
+  "fetchedAt": "2026-02-05T07:27:06.985Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "How Close Is Bitcoin to Passing Visa or Mastercard?",
+      "link": "https://cryptopanic.com/news/3080967/How-Close-Is-Bitcoin-to-Passing-Visa-or-Mastercard",
+      "pubDate": "2018-09-19T15:14:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BTG"
+      ]
+    },
+    {
+      "title": "CTC is now holding a two-day exhibition in CONSENSUS: SINGAPORE 2018. CTC will answer any of your inquires about Cr…",
+      "link": "https://cryptopanic.com/news/3077624/CTC-is-now-holding-a-two-day-exhibition-in-CONSENSUS-SINGAPORE-2018-CTC-will-answer-any-of-your-inquires-about-Cr",
+      "pubDate": "2018-09-19T09:08:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CTC"
+      ]
+    },
+    {
+      "title": "Researcher: Both GUSD And WIT Face The Risk of Centralization of Custody And Doubt Whether It Can Surpass USDT’s Ma…",
+      "link": "https://cryptopanic.com/news/3077491/Researcher-Both-GUSD-And-WIT-Face-The-Risk-of-Centralization-of-Custody-And-Doubt-Whether-It-Can-Surpass-USDTs-Ma",
+      "pubDate": "2018-09-19T08:50:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    }
+  ]
+}

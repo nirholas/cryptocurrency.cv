@@ -1,0 +1,26 @@
+{
+  "date": "2019-06-30",
+  "fetchedAt": "2026-02-05T07:27:06.796Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Monero and Zcash Conferences Showcase Their Differences (And Links)",
+      "link": "https://cryptopanic.com/news/5881855/Monero-and-Zcash-Conferences-Showcase-Their-Differences-And-Links",
+      "pubDate": "2019-06-30T10:00:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "ZEC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "date": "2018-05-19",
+  "fetchedAt": "2026-02-05T07:27:06.994Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "German Stock Exchange Unveils Bison for Free Trading of Bitcoin, Ethereum, Litecoin and Ripple",
+      "link": "https://cryptopanic.com/news/litecoin/1977637/German-Stock-Exchange-Unveils-Bison-for-Free-Trading-of-Bitcoin-Ethereum-Litecoin-and-Ripple",
+      "pubDate": "2018-05-19T20:15:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

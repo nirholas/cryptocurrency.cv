@@ -1,0 +1,25 @@
+{
+  "date": "2018-12-09",
+  "fetchedAt": "2026-02-05T07:27:08.686Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Cash on Gemini, Robinhood Hints at TRON - Today's Crypto News",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/3924377/Bitcoin-Cash-on-Gemini-Robinhood-Hints-at-TRON-Todays-Crypto-News",
+      "pubDate": "2018-12-09T15:26:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    }
+  ]
+}

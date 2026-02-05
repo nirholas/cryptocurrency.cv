@@ -1,0 +1,25 @@
+{
+  "date": "2019-07-11",
+  "fetchedAt": "2026-02-05T07:27:07.874Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Miami Dolphins Adopt Litecoin As Official Cryptocurrency",
+      "link": "https://cryptopanic.com/news/6007633/Miami-Dolphins-Adopt-Litecoin-As-Official-Cryptocurrency",
+      "pubDate": "2019-07-11T20:05:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 21,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

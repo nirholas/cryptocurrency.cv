@@ -1,0 +1,33 @@
+{
+  "date": "2019-05-13",
+  "fetchedAt": "2026-02-05T07:27:06.980Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "PAX can now be redeemed instantly, stoking up competition in stablecoin market",
+      "link": "https://cryptopanic.com/news/5404744/PAX-can-now-be-redeemed-instantly-stoking-up-competition-in-stablecoin-market",
+      "pubDate": "2019-05-13T13:10:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDP"
+      ]
+    },
+    {
+      "title": "PAX Streamlines Redemptions in Battle for Stablecoin Market Share",
+      "link": "https://cryptopanic.com/news/5404677/PAX-Streamlines-Redemptions-in-Battle-for-Stablecoin-Market-Share",
+      "pubDate": "2019-05-13T13:01:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2019-12-05",
+  "fetchedAt": "2026-02-05T07:27:06.999Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "DigiByte (DGB) Getting Delisted From Poloniex Just Hours After Bashing Tron On Twitter",
+      "link": "https://cryptopanic.com/news/tron/7326684/DigiByte-DGB-Getting-Delisted-From-Poloniex-Just-Hours-After-Bashing-Tron-On-Twitter",
+      "pubDate": "2019-12-05T08:45:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "DGB"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    }
+  ]
+}

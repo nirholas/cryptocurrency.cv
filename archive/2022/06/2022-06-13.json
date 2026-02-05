@@ -1,0 +1,417 @@
+{
+  "date": "2022-06-13",
+  "fetchedAt": "2026-02-05T07:27:07.727Z",
+  "articleCount": 27,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Binance To Ban Litecoin Transactions With MimbleWimble Upgrade",
+      "link": "https://cryptopanic.com/news/15486681/Binance-To-Ban-Litecoin-Transactions-With-MimbleWimble-Upgrade",
+      "pubDate": "2022-06-13T21:04:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The world’s biggest crypto exchange by volume, Binance, published blog post this morning saying they are not going to support the MimbleWimble Extensions Block (MWEB) feature for Litecoin (LTC) deposits and withdrawals. They cited worries about security as the main reason for this decision. Binance has delisted many other coins in the past due to […]",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @BadgerGravity: Check out this @BadgerDAO Office Hours where @Tritium_DAOist does a quick overview of @CurveFinance @ConvexFinance, and…",
+      "link": "https://cryptopanic.com/news/15488358/RT-BadgerGravity-Check-out-this-BadgerDAO-Office-Hours-where-Tritium_DAOist-does-a-quick-overview-of-CurveFinance-ConvexFinance-and",
+      "pubDate": "2022-06-13T20:43:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BADGER"
+      ]
+    },
+    {
+      "title": "Ethereum Flash Crash Sends Price Under $950 on Uniswap",
+      "link": "https://cryptopanic.com/news/15486361/Ethereum-Flash-Crash-Sends-Price-Under-950-on-Uniswap",
+      "pubDate": "2022-06-13T19:01:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "ETH has lost 20% of its value over the last day, but the price sank even further on Uniswap overnight due to a huge whale sale.",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "RT @CoinbaseAssets: Coinbase Custody now supports deposits and withdrawals for $PLU, $UFT, $AVT, $AST, $ABT, $CVP, $DAR, $HAPI, $ELON, $CRP…",
+      "link": "https://cryptopanic.com/news/15493739/RT-CoinbaseAssets-Coinbase-Custody-now-supports-deposits-and-withdrawals-for-PLU-UFT-AVT-AST-ABT-CVP-DAR-HAPI-ELON-CRP",
+      "pubDate": "2022-06-13T16:50:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "TITAN"
+      ]
+    },
+    {
+      "title": "To add more enthusiasm for the launch of #PvE mode on 18th Jun, @Thewastedlands gives away 20 NFTs to 20 random v…",
+      "link": "https://cryptopanic.com/news/15493686/To-add-more-enthusiasm-for-the-launch-of-PvE-mode-on-18th-Jun-Thewastedlands-gives-away-20-NFTs-to-20-random-v?mtm_campaign=API-OFA",
+      "pubDate": "2022-06-13T16:31:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "WAL"
+      ]
+    },
+    {
+      "title": "SHIB Adds Zero to Its Price, Do Kwon Cashed $80 Million in Terra’s Crypto Monthly, Cardano Creator Calls Bear Markets “Comfortable”: Crypto News Digest by U.Today",
+      "link": "https://cryptopanic.com/news/15485704/SHIB-Adds-Zero-to-Its-Price-Do-Kwon-Cashed-80-Million-in-Terras-Crypto-Monthly-Cardano-Creator-Calls-Bear-Markets-Comfortable-Crypto-News-Digest-by-UToday",
+      "pubDate": "2022-06-13T16:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Afraid of missing out on the crypto world’s latest events? Read U.Today’s news digest to stay tuned!",
+      "currencies": [
+        "ADA",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Dogecoin lost 93% of its value since the Musk’s SNL hype a year ago",
+      "link": "https://cryptopanic.com/news/15485447/Dogecoin-lost-93-of-its-value-since-the-Musks-SNL-hype-a-year-ago",
+      "pubDate": "2022-06-13T15:05:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "After skyrocketing in value across 2021, fueled by the input of Tesla (NASDAQ: TSLA) CEO Elon Musk, the price of... Continue reading",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 17
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ethereum price flash crashes to $950 on Uniswap as whale dumps 93K ETH",
+      "link": "https://cryptopanic.com/news/15485389/Ethereum-price-flash-crashes-to-950-on-Uniswap-as-whale-dumps-93K-ETH",
+      "pubDate": "2022-06-13T14:53:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "ETH managed a sharp rebound after falling to $950. But the ETH/USD bearish continuation setup could have it revisit it.",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "RT @TheCitadel_DAO: Just a friendly reminder to join us and our friends at @TokenReactor today at 3PM EST as we chat all things Citadel lau…",
+      "link": "https://cryptopanic.com/news/15488360/RT-TheCitadel_DAO-Just-a-friendly-reminder-to-join-us-and-our-friends-at-TokenReactor-today-at-3PM-EST-as-we-chat-all-things-Citadel-lau",
+      "pubDate": "2022-06-13T14:14:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BADGER"
+      ]
+    },
+    {
+      "title": "RT @Jelurida: Today #Jelurida is at the #Metaforum in Lugano, an event gathering industry leaders to discuss #NFTs, the #Metaverse, #web3 a…",
+      "link": "https://cryptopanic.com/news/15485106/RT-Jelurida-Today-Jelurida-is-at-the-Metaforum-in-Lugano-an-event-gathering-industry-leaders-to-discuss-NFTs-the-Metaverse-web3-a",
+      "pubDate": "2022-06-13T13:59:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "ARDR"
+      ]
+    },
+    {
+      "title": "\"Money was never a big motivation for me, except as a way to keep score. The real excitement is playing the game.\"…",
+      "link": "https://cryptopanic.com/news/15494099/Money-was-never-a-big-motivation-for-me-except-as-a-way-to-keep-score-The-real-excitement-is-playing-the-game?mtm_campaign=API-OFA",
+      "pubDate": "2022-06-13T13:06:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VICE"
+      ]
+    },
+    {
+      "title": "Nexo Circles Celsius for Potential Loan Asset Buyout",
+      "link": "https://cryptopanic.com/news/15484846/Nexo-Circles-Celsius-for-Potential-Loan-Asset-Buyout",
+      "pubDate": "2022-06-13T12:47:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "The crypto lender Nexo has sent an official letter of intent to Celsius, offering to buy some or all of its collateralized loan assets to secure sufficient liquidity for its...",
+      "currencies": [
+        "NEXO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "1/ Coming up on #MEVexplained – Liquidations, another popular MEV opportunity made possible by borrowing money/taki…",
+      "link": "https://cryptopanic.com/news/15491432/1-Coming-up-on-MEVexplained-Liquidations-another-popular-MEV-opportunity-made-possible-by-borrowing-moneytaki?mtm_campaign=API-OFA",
+      "pubDate": "2022-06-13T12:18:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "POND"
+      ]
+    },
+    {
+      "title": "We're proud to announce that #BSV will soon be available in Japan at @HuobiJapan_Ex! #BitcoinSV deposits and withd…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/15488544/Were-proud-to-announce-that-BSV-will-soon-be-available-in-Japan-at-HuobiJapan_Ex-BitcoinSV-deposits-and-withd",
+      "pubDate": "2022-06-13T11:47:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "Cardano Is One Step Closer to Interoperability as EVM Sidechain Set for Launch",
+      "link": "https://cryptopanic.com/news/15484590/Cardano-Is-One-Step-Closer-to-Interoperability-as-EVM-Sidechain-Set-for-Launch",
+      "pubDate": "2022-06-13T11:22:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Permissionless sidechain will allow developers to write Solidity smart contracts on Cardano",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 28,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron DAO Attacked: USDD Depeg Causes 16% TRX Collapse, Justin Sun Ready to Cash in $2 Billion to Fight Back",
+      "link": "https://cryptopanic.com/news/15484524/Tron-DAO-Attacked-USDD-Depeg-Causes-16-TRX-Collapse-Justin-Sun-Ready-to-Cash-in-2-Billion-to-Fight-Back",
+      "pubDate": "2022-06-13T11:09:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Justin Sun prepares $2 billion to strke back after attack on Tron DAO",
+      "currencies": [
+        "TRX",
+        "USDD"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Binance warns against use of litecoin’s Mimblewimble privacy feature",
+      "link": "https://cryptopanic.com/news/15484328/Binance-warns-against-use-of-litecoins-Mimblewimble-privacy-feature",
+      "pubDate": "2022-06-13T10:04:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "The crypto exchange won't accept litecoin transactions using MimbleWimble Extension Blocks (MWEB).",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Celsius Network Suspends All Withdrawals with Immediate Effect",
+      "link": "https://cryptopanic.com/news/15484322/Celsius-Network-Suspends-All-Withdrawals-with-Immediate-Effect",
+      "pubDate": "2022-06-13T10:03:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Lending platform Celsius, which is rumored to be suffering from an acute liquidity crisis, suspended all customer withdrawals earlier today.",
+      "currencies": [
+        "CEL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 10
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Korean crypto exchanges are forming a body to avoid another Terra-style meltdown",
+      "link": "https://cryptopanic.com/news/15484302/Korean-crypto-exchanges-are-forming-a-body-to-avoid-another-Terra-style-meltdown",
+      "pubDate": "2022-06-13T10:00:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Leading South Korean crypto exchanges have resolved to form a consultative body to prevent the recurrence of similar incidents like... Continue reading",
+      "currencies": [
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Nexo offers to buy out Celsius’ loans amid withdrawal suspension",
+      "link": "https://cryptopanic.com/news/15484295/Nexo-offers-to-buy-out-Celsius-loans-amid-withdrawal-suspension",
+      "pubDate": "2022-06-13T09:52:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Nexo platform could rescue Celsius' customers after “what appears to be the insolvency of the Celsius Network.”",
+      "currencies": [
+        "NEXO",
+        "CEL"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron deploys $2 billion from reserves to guard against shorts",
+      "link": "https://cryptopanic.com/news/15483835/Tron-deploys-2-billion-from-reserves-to-guard-against-shorts",
+      "pubDate": "2022-06-13T09:24:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The project had been preparing for potential market turbulence following the collapse of Terra.",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Nexo offers to buy crypto assets from beleaguered rival Celsius",
+      "link": "https://cryptopanic.com/news/15482673/Nexo-offers-to-buy-crypto-assets-from-beleaguered-rival-Celsius",
+      "pubDate": "2022-06-13T08:24:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The crypto lending firm wants to buy assets from beleaguered rival Celsius, claiming it's in a healthy position to do so.",
+      "currencies": [
+        "NEXO"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "#Orb's Grade and Level are elements of Orb #NFT itself, and once an Orb is strengthened, its strength can be mainta…",
+      "link": "https://cryptopanic.com/news/15482455/Orbs-Grade-and-Level-are-elements-of-Orb-NFT-itself-and-once-an-Orb-is-strengthened-its-strength-can-be-mainta?mtm_campaign=API-OFA",
+      "pubDate": "2022-06-13T07:26:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "ORBR"
+      ]
+    },
+    {
+      "title": "Terra in May, Celsius in June? Why the heat is on after withdrawals halt, $200M to FTX",
+      "link": "https://cryptopanic.com/news/15481084/Terra-in-May-Celsius-in-June-Why-the-heat-is-on-after-withdrawals-halt-200M-to-FTX",
+      "pubDate": "2022-06-13T07:05:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "There’s no easy way to say this, but current crypto-market conditions can only be described as ‘extreme.’ In fact, ongoing corrections saw the price of Ether and other cryptocurrencies tumble, with many seeing significant liquidations within the market. Implications of a further fall could see nearly $500 million of on-chain collateral facing liquidation. The stETH/ETH pool […]",
+      "currencies": [
+        "ETH",
+        "FTT",
+        "CEL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 12
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Klaytn is about to hit 3 years soon! And to celebrate the occasion, we'll be creating a fun space with…",
+      "link": "https://cryptopanic.com/news/klay-token/15481630/Klaytn-is-about-to-hit-3-years-soon-And-to-celebrate-the-occasion-well-be-creating-a-fun-space-with",
+      "pubDate": "2022-06-13T06:04:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY"
+      ]
+    },
+    {
+      "title": "Celsius exodus: $320M in crypto sent to FTX, user withdrawals paused",
+      "link": "https://cryptopanic.com/news/15479349/Celsius-exodus-320M-in-crypto-sent-to-FTX-user-withdrawals-paused",
+      "pubDate": "2022-06-13T04:01:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Celsius has been moving more than a quarter of a billion dollars worth of funds from Aave into the FTX exchange for reasons not specified, in addition to suspending withdrawals for users.",
+      "currencies": [
+        "FTT",
+        "AAVE",
+        "CEL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "What could be better than: Maximum liquidity ️ High yield Token rewards Check out our latest integration h…",
+      "link": "https://cryptopanic.com/news/klay-token/15481631/What-could-be-better-than-Maximum-liquidity-High-yield-Token-rewards-Check-out-our-latest-integration-h",
+      "pubDate": "2022-06-13T00:38:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "KLAY"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,490 @@
+{
+  "date": "2021-02-23",
+  "fetchedAt": "2026-02-05T07:27:06.916Z",
+  "articleCount": 31,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @michael_saylor: I enjoyed my opportunity to have a constructive conversation this morning with @BeckyQuick, @andrewrsorkin, &amp; @JoeSquaw…",
+      "link": "https://cryptopanic.com/news/11534306/RT-michael_saylor-I-enjoyed-my-opportunity-to-have-a-constructive-conversation-this-morning-with-BeckyQuick-andrewrsorkin-amp-JoeSquaw",
+      "pubDate": "2021-02-23T23:21:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SURE"
+      ]
+    },
+    {
+      "title": "TRX (TRON) and STEEM withdrawal added on Nomadtask, one of the world's largest on-demand marketing platforms. $TRX…",
+      "link": "https://cryptopanic.com/news/11532680/TRX-TRON-and-STEEM-withdrawal-added-on-Nomadtask-one-of-the-worlds-largest-on-demand-marketing-platforms-TRX",
+      "pubDate": "2021-02-23T22:53:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "HUNT"
+      ]
+    },
+    {
+      "title": "Brave 2.0 Will Drop Centralized Wallets and Add DEX",
+      "link": "https://cryptopanic.com/news/11530750/Brave-20-Will-Drop-Centralized-Wallets-and-Add-DEX",
+      "pubDate": "2021-02-23T21:36:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Brave has published the specifications for version 2.0 of its privacy-focused, cryptocurrency-powered web browser. Brave Improves Decentralization Brave plans to add a new native Ethereum wallet to replace its built-in cryptocurrency wallet. That wallet will hold Brave’s BAT tokens, distributed to users as a reward for viewing advertisements. Brave additionally plans to introduce...",
+      "currencies": [
+        "BAT"
+      ],
+      "votes": {
+        "positive": 24,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "What is Polkadot? It Might Not Be Too late To invest!",
+      "link": "https://cryptopanic.com/news/polkadot/11530660/What-is-Polkadot-It-Might-Not-Be-Too-late-To-invest",
+      "pubDate": "2021-02-23T20:45:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "In this Polkadot Blog post, we are going to dive into the project and give you a basic understanding of it! Here is what we are going to cover: History of Polkadot Purpose of the project Breakdown the structure Discuss Relay Chains Look at Parachains and the use-cases Talk about what “Bridges” are Touch on […]",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 38,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The Ethereum Conundrum: How long will users bear high transaction fees?",
+      "link": "https://cryptopanic.com/news/ethereum/11530638/The-Ethereum-Conundrum-How-long-will-users-bear-high-transaction-fees",
+      "pubDate": "2021-02-23T20:30:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "There are two kinds of people in the Ethereum network at the moment – The happy miner and the dissatisfied user. ETH miners have raked in more gas fees over the past few months than ever before, but on the other hand, users are paying the highest gas prices too. The demand for block space […]",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "We are happy to announce that Uphold is coming to MarketSquare! Uphold allows users to easily trade crypto, stocks, metals, and more!",
+      "link": "https://cryptopanic.com/news/11530606/We-are-happy-to-announce-that-Uphold-is-coming-to-MarketSquare-Uphold-allows-users-to-easily-trade-crypto-stocks-metals-and-more",
+      "pubDate": "2021-02-23T20:30:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "This Unique Take On Bitcoin Suggests A Bear Phase Is Near",
+      "link": "https://cryptopanic.com/news/near/11530556/This-Unique-Take-On-Bitcoin-Suggests-A-Bear-Phase-Is-Near",
+      "pubDate": "2021-02-23T20:00:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin just experienced one of its steepest corrections in months, and one of only a handful of pullbacks since the uptrend began. However, one unique perspective on the cryptocurrency’s long-term price chart suggests that another bear market could be incoming as volatility in the asset dwindles over time. The idea is based on the leading […]",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 12
+      }
+    },
+    {
+      "title": "Polkadot vs. Polygon: Understanding Two Prominent Second Layer Ethereum Blockchain Solutions",
+      "link": "https://cryptopanic.com/news/polkadot/11530369/Polkadot-vs-Polygon-Understanding-Two-Prominent-Second-Layer-Ethereum-Blockchain-Solutions",
+      "pubDate": "2021-02-23T18:06:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The meteoric rise of decentralized finance across 2020 exposed numerous vulnerabilities with the Ethereum network. While the Ethereum blockchain is one of the most secure and ‘battle-hardened’ infrastructures, high gas costs and scalability issues have led some projects to innovate instead of waiting for the long-desired Ethereum 2.0. Second-layer solutions have gained notoriety lately as...",
+      "currencies": [
+        "ETH",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "5 ARK Crypto Wallet Features You'll Love",
+      "link": "https://cryptopanic.com/news/11530863/5-ARK-Crypto-Wallet-Features-Youll-Love",
+      "pubDate": "2021-02-23T16:44:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Chainlink Advances Randomness on Polygon Blockchain, Here's How",
+      "link": "https://cryptopanic.com/news/chainlink/11530103/Chainlink-Advances-Randomness-on-Polygon-Blockchain-Heres-How",
+      "pubDate": "2021-02-23T15:50:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "Now all decentralized applications on Polygon (previously Matic Network) have their own tamper-proof source of randomness, developed by Chainlink (LINK)",
+      "currencies": [
+        "MATIC",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 21,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tether (USDT) Reaches $18.5 Million Settlement With NY AG",
+      "link": "https://cryptopanic.com/news/11530011/Tether-USDT-Reaches-185-Million-Settlement-With-NY-AG",
+      "pubDate": "2021-02-23T15:01:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The agreement requires Tether and Bitfinex to cease any further trading activity with New Yorkers, as well as pay $18.5 million in penalties, in addition to requiring a number of steps to increase transparency, according to an announcement from the Office of the Attorney General (AGO). “This resolution makes clear that those trading virtual currencies … Continued",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitfinex, Tether to pay $18.5 million fine",
+      "link": "https://cryptopanic.com/news/11529820/Bitfinex-Tether-to-pay-185-million-fine",
+      "pubDate": "2021-02-23T13:55:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The much-discussed litigation that involved Bitfinex and Tether has now come to an end; the parties have reached a settlement. The settlement translated to both iFinex and Tether having agreed to pay $18.5 million in penalties. However, the crypto firms have admitted to no wrongdoing, but are now required to cease trading activity in New […]",
+      "currencies": [
+        "BTC",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tether to report reserves and pay $18.5M fine after settlement with NYAG",
+      "link": "https://cryptopanic.com/news/11529756/Tether-to-report-reserves-and-pay-185M-fine-after-settlement-with-NYAG",
+      "pubDate": "2021-02-23T13:18:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "New York regulators are forcing Tether to be fully transparent about its reserves, at the cost of not serving New York residents.",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Blow to Bitcoin Haters as Tether and Bitfinex Settle with New York Attorney General",
+      "link": "https://cryptopanic.com/news/11529735/Blow-to-Bitcoin-Haters-as-Tether-and-Bitfinex-Settle-with-New-York-Attorney-General",
+      "pubDate": "2021-02-23T12:59:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "We can finally say goodbye to Tether-related conspiracy theories",
+      "currencies": [
+        "BTC",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 36,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "After Successful Launch, Solana DEX Raydium May Integrate SushiSwap",
+      "link": "https://cryptopanic.com/news/11529682/After-Successful-Launch-Solana-DEX-Raydium-May-Integrate-SushiSwap",
+      "pubDate": "2021-02-23T12:57:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "SushiSwap on Solana? Thanks to Raydium, it may happen soon. Proposed SushiSwap Integration Raydium, a new automated market maker (AMM) built on the Solana blockchain, may integrate SushiSwap. A proposal called “Bonsai” on the SushiSwap forum details a plan to “build out SushiSwap on Solana and Serum.” Written by someone using the moniker handroll, the proposal starts by...",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "MKR",
+        "SUSHI"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitfinex, Tether settle with New York’s Attorney General for $18.5 million",
+      "link": "https://cryptopanic.com/news/11529676/Bitfinex-Tether-settle-with-New-Yorks-Attorney-General-for-185-million",
+      "pubDate": "2021-02-23T12:41:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Crypto firms Bitfinex and Tether have settled with the New York Attorney General's (NYAG's) office, ending a legal dispute that began in mid-2019. The post Bitfinex, Tether settle with New York’s Attorney General for $18.5 million appeared first on The Block.",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Shifts Under $1,400 as Crypto Bloodbath Continues",
+      "link": "https://cryptopanic.com/news/ethereum/11529626/Ethereum-Shifts-Under-1400-as-Crypto-Bloodbath-Continues",
+      "pubDate": "2021-02-23T12:11:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum has seen immense volatility over the past two days as the bullish trend has finally begun to slow. It began early this past weekend, which was when the leading cryptocurrency began to slam lower as Bitcoin fell from its highs in the $58,000 range. Ethereum currently trades for $1,400, though fell even lower earlier […]",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Average Ethereum Fees Above $30 to New ATH as ETH Drops 35% in Two Days",
+      "link": "https://cryptopanic.com/news/ethereum/11529624/Average-Ethereum-Fees-Above-30-to-New-ATH-as-ETH-Drops-35-in-Two-Days",
+      "pubDate": "2021-02-23T12:10:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The average transaction costs paid on the Ethereum network have skyrocketed above $30 to a new ATH, while ETH's price dropped by $700 in days.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "No Ripple-SEC lawsuit settlement in sight as XRP prices tumble",
+      "link": "https://cryptopanic.com/news/ripple/11529497/No-Ripple-SEC-lawsuit-settlement-in-sight-as-XRP-prices-tumble",
+      "pubDate": "2021-02-23T11:02:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Ripple and SEC face off in a pretrial conference as MoneyGram, the world's second largest money transfer provider, suspends trading on Ripple's platform.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 12
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "2 Reasons Why Ethereum Could Reclaim Record Highs Above $2,000",
+      "link": "https://cryptopanic.com/news/ethereum/11529500/2-Reasons-Why-Ethereum-Could-Reclaim-Record-Highs-Above-2000",
+      "pubDate": "2021-02-23T11:01:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum tanked wildly in the running weekly session, shedding up to 30 percent of its valuation in just two days of trading amid a broader cryptocurrency market correction. The plunge in the second-largest crypto brought its prices down to a multi-week low of $1,356, prompting bears to envision further declines after the asset’s 176 percent […]",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 14
+      }
+    },
+    {
+      "title": "RT @BitcoinKingom: Our Distributor @Quisel13 has Set Up one of #CharlotteNC top Chiropractors with The PAX A920 #XPOS @PundiXLabs is one of…",
+      "link": "https://cryptopanic.com/news/paxos-standard/11533482/RT-BitcoinKingom-Our-Distributor-Quisel13-has-Set-Up-one-of-CharlotteNC-top-Chiropractors-with-The-PAX-A920-XPOS-PundiXLabs-is-one-of",
+      "pubDate": "2021-02-23T10:48:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "NPXS",
+        "PXS",
+        "NPXSXEM"
+      ]
+    },
+    {
+      "title": "If I Did Trade OTC Securities, XRP Would Be of Interest: Peter Brandt",
+      "link": "https://cryptopanic.com/news/ripple/11529249/If-I-Did-Trade-OTC-Securities-XRP-Would-Be-of-Interest-Peter-Brandt",
+      "pubDate": "2021-02-23T08:39:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Savvy old-school trading legend Peter Brandt has openly called XRP token a security issued by Ripple and said he is not interested",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 7
+      }
+    },
+    {
+      "title": "This is how we feel now",
+      "link": "https://cryptopanic.com/news/11532754/This-is-how-we-feel-now",
+      "pubDate": "2021-02-23T08:22:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Crypto Market Cap Lost $260B in a Day as Bitcoin Slides to $50K (Market Watch)",
+      "link": "https://cryptopanic.com/news/ethereum/11529192/Crypto-Market-Cap-Lost-260B-in-a-Day-as-Bitcoin-Slides-to-50K-Market-Watch",
+      "pubDate": "2021-02-23T07:59:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "More than $260B evaporated from the crypto market cap as BTC struggles to remain above $50K, while ETH and BNB lost 15% of value in a day.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 21
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Please check out our STPT staking pool on @LaunchPoolXYZ with very high APY currently! All users can stake STPT on…",
+      "link": "https://cryptopanic.com/news/11528490/Please-check-out-our-STPT-staking-pool-on-LaunchPoolXYZ-with-very-high-APY-currently-All-users-can-stake-STPT-on",
+      "pubDate": "2021-02-23T05:27:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STPT"
+      ]
+    },
+    {
+      "title": "$24 million lost in second-largest day of DeFi liquidations",
+      "link": "https://cryptopanic.com/news/11526316/24-million-lost-in-second-largest-day-of-DeFi-liquidations",
+      "pubDate": "2021-02-23T05:16:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The Feb. 22 crypto market flash-crash liquidated more than $24 million worth of DeFi loans. with Compound users representing more than half of the margin calls.",
+      "currencies": [
+        "COMP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Welcome the four new members to join @KPAlliance! The exciting addition of these new partners to the ecosystem will…",
+      "link": "https://cryptopanic.com/news/11528491/Welcome-the-four-new-members-to-join-KPAlliance-The-exciting-addition-of-these-new-partners-to-the-ecosystem-will",
+      "pubDate": "2021-02-23T05:04:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STPT"
+      ]
+    },
+    {
+      "title": "Glitzkoin CEO Navneet Goenka puts doubts to rest. Glitzkoin is pro crypto legislation as, it expects cryptocurrency…",
+      "link": "https://cryptopanic.com/news/11527383/Glitzkoin-CEO-Navneet-Goenka-puts-doubts-to-rest-Glitzkoin-is-pro-crypto-legislation-as-it-expects-cryptocurrency",
+      "pubDate": "2021-02-23T04:39:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Crypto influencer warns Ethereum fees will drive users away",
+      "link": "https://cryptopanic.com/news/ethereum/11526221/Crypto-influencer-warns-Ethereum-fees-will-drive-users-away",
+      "pubDate": "2021-02-23T03:34:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Crypto YouTuber Lark Davis is urging Ethereum’s to launch ETH 2.0 quickly, warning its devs must act soon to prevent rival networks from taking over amid high gas fees.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 10
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @Bitboy_Crypto: Sounds about right",
+      "link": "https://cryptopanic.com/news/11527517/RT-Bitboy_Crypto-Sounds-about-right",
+      "pubDate": "2021-02-23T02:48:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "As the price of $ETH soar, users have to pay more for their #DeFi transactions. Are you still using #DeFi or going…",
+      "link": "https://cryptopanic.com/news/11527518/As-the-price-of-ETH-soar-users-have-to-pay-more-for-their-DeFi-transactions-Are-you-still-using-DeFi-or-going",
+      "pubDate": "2021-02-23T02:27:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    }
+  ]
+}

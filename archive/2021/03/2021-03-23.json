@@ -1,0 +1,506 @@
+{
+  "date": "2021-03-23",
+  "fetchedAt": "2026-02-05T07:27:06.900Z",
+  "articleCount": 32,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Best Cryptocurrency to Buy Now",
+      "link": "https://cryptopanic.com/news/11664411/Best-Cryptocurrency-to-Buy-Now",
+      "pubDate": "2021-03-23T21:01:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Uniswap V3 to launch on Ethereum mainnet by May",
+      "link": "https://cryptopanic.com/news/uniswap/11664354/Uniswap-V3-to-launch-on-Ethereum-mainnet-by-May",
+      "pubDate": "2021-03-23T20:00:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A surge in participation in decentralized finance and decentralized exchanges has increased competition among projects especially to improve liquidity offerings. Uniswap Labs released an overview of the upcoming Uniswap Protocol v3. According to a release shared with AMBCrypto, this new feature aims to “increase capital efficiency and trade execution quality.” The new protocol is scheduled...",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 25,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DENT Key Milestones for the first half year 2021",
+      "link": "https://cryptopanic.com/news/11664236/DENT-Key-Milestones-for-the-first-half-year-2021",
+      "pubDate": "2021-03-23T19:01:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "Dent to the",
+      "link": "https://cryptopanic.com/news/11664577/Dent-to-the",
+      "pubDate": "2021-03-23T18:54:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "Coinbase to List ANKR, CRV, and STORJ",
+      "link": "https://cryptopanic.com/news/11664180/Coinbase-to-List-ANKR-CRV-and-STORJ",
+      "pubDate": "2021-03-23T18:05:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Coinbase is adding fuel to the bull run as it continues listing more tokens to its retail platform. The San Francisco-based cryptocurrency exchange revealed that it would add support for Ankr, Curve DAO Token, and Storj, sending prices into higher highs. Tokens Moon on Coinbase Listing In a recent blog post, Coinbase Pro announced that starting on Mar. 23 users will be able to transfer...",
+      "currencies": [
+        "BTC",
+        "CRV",
+        "ANKR"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Uniswap V3 Offers Far Higher Exposure, Lower Risk For Staking",
+      "link": "https://cryptopanic.com/news/near/11664115/Uniswap-V3-Offers-Far-Higher-Exposure-Lower-Risk-For-Staking",
+      "pubDate": "2021-03-23T17:49:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Uniswap has revealed an overview of V3 of the DEX which is due to launch on May 5, described by Uniswap as “the most flexible and capital-efficient AMM ever designed.” V3 will also launch separately on the L2 Optimism solution. User Capital Now Goes 4000 Times Farther Uniswap accounts for 20% – 25% of all daily transactions on the Ethereum network, and V2 has handled $135 billion in...",
+      "currencies": [
+        "ETH",
+        "UNI",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Uniswap V3 launches — UNI prices surges by 8% in minutes",
+      "link": "https://cryptopanic.com/news/uniswap/11664091/Uniswap-V3-launches-UNI-prices-surges-by-8-in-minutes",
+      "pubDate": "2021-03-23T17:30:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "UNI, the native governance token of Uniswap, surged immediately after the Uniswap V3 launch.",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "4000x more capital efficient: Uniswap team reveals details for v3",
+      "link": "https://cryptopanic.com/news/uniswap/11664052/4000x-more-capital-efficient-Uniswap-team-reveals-details-for-v3",
+      "pubDate": "2021-03-23T17:07:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The third iteration of the market-leading decentralized exchange Uniswap is coming this spring, according to new details of the so-called v3 launch published Tuesday.",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 26,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Our latest article covers our development timeline for 2021, and we have some exciting news to boot!",
+      "link": "https://cryptopanic.com/news/11667051/Our-latest-article-covers-our-development-timeline-for-2021-and-we-have-some-exciting-news-to-boot",
+      "pubDate": "2021-03-23T17:02:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LOOM"
+      ]
+    },
+    {
+      "title": "Cartesi and the IOTA Foundation Partner to Accelerate Smart Contract Adoption for IoT",
+      "link": "https://cryptopanic.com/news/11664015/Cartesi-and-the-IOTA-Foundation-Partner-to-Accelerate-Smart-Contract-Adoption-for-IoT",
+      "pubDate": "2021-03-23T16:36:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "With IOTA Oracles, IOTA Smart Contracts and Cartesi’s Linux based virtual machine, the two groups will bring non-blockchain based use cases and businesses into the world of decentralized finance (DeFi), Gaming, NFTs, and industrial IoT. We are excited to announce our formal partnership with Cartesi, an organization committed to",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Here is how to pool your loaned funds through our Balancer pool",
+      "link": "https://cryptopanic.com/news/11666682/Here-is-how-to-pool-your-loaned-funds-through-our-Balancer-pool",
+      "pubDate": "2021-03-23T16:33:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MFT"
+      ]
+    },
+    {
+      "title": "Crypto markets are booming but, imagine how BIG that BOOM would be if - 2021 delivers higher crypto adoption and mo…",
+      "link": "https://cryptopanic.com/news/11666579/Crypto-markets-are-booming-but-imagine-how-BIG-that-BOOM-would-be-if-2021-delivers-higher-crypto-adoption-and-mo",
+      "pubDate": "2021-03-23T16:31:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Why THETA is no longer the underdog",
+      "link": "https://cryptopanic.com/news/11663992/Why-THETA-is-no-longer-the-underdog",
+      "pubDate": "2021-03-23T16:30:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "At the time of writing, THETA was ranked the market’s ninth-largest altcoin on CoinMarketCap. With a total market capitalization of over $11.3 billion, however, to many, it is a surprise that THETA is not half as popular as other altcoins which have noted less than 10% gains over the past week (ADA, BNB, and DOT). […]",
+      "currencies": [
+        "THETA"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 6
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Get a closer look at the MarketSquare platform in this presentation we gave at DYGYCON",
+      "link": "https://cryptopanic.com/news/11664630/Get-a-closer-look-at-the-MarketSquare-platform-in-this-presentation-we-gave-at-DYGYCON",
+      "pubDate": "2021-03-23T16:22:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Theta Breaks Top 10 in Market Cap",
+      "link": "https://cryptopanic.com/news/11663963/Theta-Breaks-Top-10-in-Market-Cap",
+      "pubDate": "2021-03-23T16:11:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "THETA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "IOTA's Dominik Schiener Discloses His Second Major Strategic Bet",
+      "link": "https://cryptopanic.com/news/11663921/IOTAs-Dominik-Schiener-Discloses-His-Second-Major-Strategic-Bet",
+      "pubDate": "2021-03-23T15:41:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Chairman and co-founder of IOTA Foundation, Dominik Schiener, shared that he owns a stake in German fintech startup credX. Which segment does it address?",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron founder Justin Sun just paid $6 million for a Beeple NFT",
+      "link": "https://cryptopanic.com/news/tron/11663908/Tron-founder-Justin-Sun-just-paid-6-million-for-a-Beeple-NFT",
+      "pubDate": "2021-03-23T15:40:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "Tron founder Justin Sun splurged over $6 million on a non-fungible token (NFT) created by digital artist Mike Winklemann, as per a tweet this morning.",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "The $Gaia-ETH pool rewards will start at ethereum block 12096504: . This pool is primarily u…",
+      "link": "https://cryptopanic.com/news/11667890/The-Gaia-ETH-pool-rewards-will-start-at-ethereum-block-12096504-This-pool-is-primarily-u?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-23T15:10:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDX",
+        "USDF",
+        "SHARE"
+      ]
+    },
+    {
+      "title": "Ripple Price Analysis: XRP Eyes $0.60 Following a 30% Weekly Surge",
+      "link": "https://cryptopanic.com/news/ripple/11663840/Ripple-Price-Analysis-XRP-Eyes-060-Following-a-30-Weekly-Surge",
+      "pubDate": "2021-03-23T14:56:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "While the overall market tumbles, XRP is up by a solid 5.5% today as the coin reached $0.578. Against Bitcoin, XRP is also performing well.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Big announcement coming March 31st, 11:30pm UTC",
+      "link": "https://cryptopanic.com/news/11667891/Big-announcement-coming-March-31st-1130pm-UTC?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-23T14:07:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDX",
+        "USDF",
+        "SHARE"
+      ]
+    },
+    {
+      "title": "Theta Network's token enters top 10 cryptos by market capitalization",
+      "link": "https://cryptopanic.com/news/11663577/Theta-Networks-token-enters-top-10-cryptos-by-market-capitalization",
+      "pubDate": "2021-03-23T12:46:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Theta Network’s native token THETA continues to hit new all-time highs.",
+      "currencies": [
+        "THETA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Harmony Protocol Changes Open Source License After Ethereum Developer Claims Infringement",
+      "link": "https://cryptopanic.com/news/11663646/Harmony-Protocol-Changes-Open-Source-License-After-Ethereum-Developer-Claims-Infringement",
+      "pubDate": "2021-03-23T12:46:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "-",
+      "currencies": [
+        "ETH",
+        "ONE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Theta Network (THETA) Topples Chainlink (LINK), Breaks into Top 10. What Is THETA?",
+      "link": "https://cryptopanic.com/news/chainlink/11663570/Theta-Network-THETA-Topples-Chainlink-LINK-Breaks-into-Top-10-What-Is-THETA",
+      "pubDate": "2021-03-23T12:37:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Here's how THETA, a core native asset of a decentralized streaming platform, saw its price triple in 30 days",
+      "currencies": [
+        "LINK",
+        "THETA"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "IOTA Price Hits 3-Year High as Focus Shifts on IoT Protocol Overhaul",
+      "link": "https://cryptopanic.com/news/11663516/IOTA-Price-Hits-3-Year-High-as-Focus-Shifts-on-IoT-Protocol-Overhaul",
+      "pubDate": "2021-03-23T12:06:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "IOTA rallied Tuesday, hitting its highest levels in more than three years, on hopes that the upcoming makeover of its Internet-of-Things protocol would make it more appealing to investors and traders alike. The IOTA Foundation Co-founder and CEO Dominik Schiener spilled details about their major upgrade—scheduled for an April 2021 release—in an interview with ZDNet. Dubbed […]",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Price Surges 12% Following Positive News in the Ripple-SEC Case",
+      "link": "https://cryptopanic.com/news/ripple/11663425/XRP-Price-Surges-12-Following-Positive-News-in-the-Ripple-SEC-Case",
+      "pubDate": "2021-03-23T11:20:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The price for XRP has surged by 10% following what seems to be positive developments in the case between Ripple and the US Securities and Exchange Commission.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 8
+      }
+    },
+    {
+      "title": "Bitcoin’s lower lows worry traders — But is the BTC bull market really in danger?",
+      "link": "https://cryptopanic.com/news/near/11663390/Bitcoins-lower-lows-worry-traders-But-is-the-BTC-bull-market-really-in-danger",
+      "pubDate": "2021-03-23T11:05:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin bounced off the $53,000 support, but another leg down should not be ruled out in the near term.",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 22,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Starting Wednesday you can go vote, to or not to incubate Crispy Wale",
+      "link": "https://cryptopanic.com/news/11665342/Starting-Wednesday-you-can-go-vote-to-or-not-to-incubate-Crispy-Wale",
+      "pubDate": "2021-03-23T09:11:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "you haven't opened trust wallet nearly enough times yet today",
+      "link": "https://cryptopanic.com/news/11668243/you-havent-opened-trust-wallet-nearly-enough-times-yet-today",
+      "pubDate": "2021-03-23T07:48:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "What exchanges should $HYN get lised? Any suggestions?🧐",
+      "link": "https://cryptopanic.com/news/11666722/What-exchanges-should-HYN-get-lised-Any-suggestions",
+      "pubDate": "2021-03-23T07:30:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Charted: Ripple (XRP) Rallies 10%, Why It Could Outperform BTC and ETH",
+      "link": "https://cryptopanic.com/news/ripple/11662573/Charted-Ripple-XRP-Rallies-10-Why-It-Could-Outperform-BTC-and-ETH",
+      "pubDate": "2021-03-23T07:08:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Ripple started a strong increase from the $0.4400 support zone against the US Dollar. XRP price is now trading well above $0.5500 and it is likely to continue higher above $0.6000. Ripple is up over 10% and it cleared the main $0.5000 resistance zone against the US dollar. The price is now above $0.5500 and […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "IOTA Wants To Reclaim Its Past Glory With a Major Upgrade And Lots of New Features",
+      "link": "https://cryptopanic.com/news/11660018/IOTA-Wants-To-Reclaim-Its-Past-Glory-With-a-Major-Upgrade-And-Lots-of-New-Features",
+      "pubDate": "2021-03-23T05:38:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "IOTA is not what is used to be, but its team wants to fix that. And a major upgrade is the best to start over and relieve its glory days.",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 33,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple recasts embattled XRP as a ‘bridge’ currency for CBDCs",
+      "link": "https://cryptopanic.com/news/ripple/11659715/Ripple-recasts-embattled-XRP-as-a-bridge-currency-for-CBDCs",
+      "pubDate": "2021-03-23T05:27:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "As XRP holders step closer to intervening in SEC’s lawsuit against Ripple, the payment platform gears up to grow its CBDC business with a new white paper.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

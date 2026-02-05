@@ -1,0 +1,44 @@
+{
+  "date": "2019-01-20",
+  "fetchedAt": "2026-02-05T07:27:06.998Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "An Introduction to TRON Smart Contract Development",
+      "link": "https://cryptopanic.com/news/tron/4325485/An-Introduction-to-TRON-Smart-Contract-Development",
+      "pubDate": "2019-01-20T20:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Why the BitTorrent (BTT) Token Sale Will Be Like No Other",
+      "link": "https://cryptopanic.com/news/4322824/Why-the-BitTorrent-BTT-Token-Sale-Will-Be-Like-No-Other",
+      "pubDate": "2019-01-20T10:48:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

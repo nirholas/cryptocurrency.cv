@@ -1,0 +1,50 @@
+{
+  "date": "2020-06-10",
+  "fetchedAt": "2026-02-05T07:27:06.865Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Rublix Development is happy to announce the public launch of the HedgeTrade social trading platform, where traders…",
+      "link": "https://cryptopanic.com/news/9054875/Rublix-Development-is-happy-to-announce-the-public-launch-of-the-HedgeTrade-social-trading-platform-where-traders",
+      "pubDate": "2020-06-10T21:03:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEDG"
+      ]
+    },
+    {
+      "title": "German Government Recognizes VeChain’s Drive to Improve Traceability and Supply Chain Management",
+      "link": "https://cryptopanic.com/news/9052001/German-Government-Recognizes-VeChains-Drive-to-Improve-Traceability-and-Supply-Chain-Management",
+      "pubDate": "2020-06-10T16:00:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "New Reports Link More Than 40% of PAX Stablecoin Transfers To MMM Ponzi Scheme",
+      "link": "https://cryptopanic.com/news/9051053/New-Reports-Link-More-Than-40-of-PAX-Stablecoin-Transfers-To-MMM-Ponzi-Scheme",
+      "pubDate": "2020-06-10T14:15:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    }
+  ]
+}

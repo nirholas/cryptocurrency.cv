@@ -1,0 +1,25 @@
+{
+  "date": "2018-01-15",
+  "fetchedAt": "2026-02-05T07:27:06.973Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "$400K: Hacker Makes Off With Stellar Lumens in BlackWallet Theft",
+      "link": "https://cryptopanic.com/news/815526/400K-Hacker-Makes-Off-With-Stellar-Lumens-in-BlackWallet-Theft",
+      "pubDate": "2018-01-15T19:37:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 10
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

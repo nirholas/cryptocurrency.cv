@@ -1,0 +1,278 @@
+{
+  "date": "2021-01-12",
+  "fetchedAt": "2026-02-05T07:27:06.783Z",
+  "articleCount": 19,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "SEC Enforcer Behind $1.3 Billion Ripple Lawsuit Stepping Down",
+      "link": "https://cryptopanic.com/news/11121619/SEC-Enforcer-Behind-13-Billion-Ripple-Lawsuit-Stepping-Down",
+      "pubDate": "2021-01-12T23:31:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The Securities and Exchange Commission’s Acting Enforcement Director Marc P. Berger led high-profile enforcement actions against cryptocurrency ICOs.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Pro-Bitcoin U.S. Treasury official calls DeFi the future in op-ed",
+      "link": "https://cryptopanic.com/news/11120960/Pro-Bitcoin-US-Treasury-official-calls-DeFi-the-future-in-op-ed",
+      "pubDate": "2021-01-12T22:15:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The Ethereum decentralized finance (DeFi) space saw a renaissance in 2020 led by the release of new platforms such as Aave and iEarn (now Yearn), along with the rise of liquidity mining schemes that managed to draw hundreds of thousands into this space.",
+      "currencies": [
+        "ETH",
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Today #GeminiCustody has surpassed $10 billion in total #crypto under custody. We thank you for your trust and are…",
+      "link": "https://cryptopanic.com/news/11120436/Today-GeminiCustody-has-surpassed-10-billion-in-total-crypto-under-custody-We-thank-you-for-your-trust-and-are",
+      "pubDate": "2021-01-12T21:29:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    },
+    {
+      "title": "Grayscale Investments Reopens The Majority Of Its Crypto Trusts To New Investors",
+      "link": "https://cryptopanic.com/news/litecoin/11119468/Grayscale-Investments-Reopens-The-Majority-Of-Its-Crypto-Trusts-To-New-Investors",
+      "pubDate": "2021-01-12T19:28:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "New York-based digital asset manager Grayscale LLC has once again opened its doors to new investors for most of its crypto trusts. The company had paused taking on new investors in late December 2020. It’s not uncommon for Grayscale to temporarily pause on new investors. On Dec. 21, the fund halted six of its cryptocurrency […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 29,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We're proud to be working with the @HRF on supporting their latest Bitcoin Development Fund beneficiaries through t…",
+      "link": "https://cryptopanic.com/news/11119304/Were-proud-to-be-working-with-the-HRF-on-supporting-their-latest-Bitcoin-Development-Fund-beneficiaries-through-t",
+      "pubDate": "2021-01-12T19:18:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    },
+    {
+      "title": "155,000 American Merchants to Accept DASH as Payment",
+      "link": "https://cryptopanic.com/news/11118685/155000-American-Merchants-to-Accept-DASH-as-Payment",
+      "pubDate": "2021-01-12T18:09:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "DASH (Digital Cash) announced the news on Tuesday which aims to increase adoption among its users. In coordination with this investment, Dash Core Group will be creating a new version of CrayPay’s saving platform to be utilized by DASH users. A Broader Outreach This collaboration means that users can spend and receive DASH back as … Continued",
+      "currencies": [
+        "DASH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Yes the Myticket-Glitzkoin partnership is due to launch in 2021. The pandemic has slowed down things a bit here.…",
+      "link": "https://cryptopanic.com/news/11117799/Yes-the-Myticket-Glitzkoin-partnership-is-due-to-launch-in-2021-The-pandemic-has-slowed-down-things-a-bit-here",
+      "pubDate": "2021-01-12T16:56:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "We’ve been coordinating the token swap with multiple exchanges, a few of which have requested for additional time t…",
+      "link": "https://cryptopanic.com/news/11117273/Weve-been-coordinating-the-token-swap-with-multiple-exchanges-a-few-of-which-have-requested-for-additional-time-t",
+      "pubDate": "2021-01-12T16:11:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "LOOM"
+      ]
+    },
+    {
+      "title": "#TomoChain would like to announce the release of the new mainnet version, the Zorro Upgrade, a major #DeFi enabler…",
+      "link": "https://cryptopanic.com/news/11115898/TomoChain-would-like-to-announce-the-release-of-the-new-mainnet-version-the-Zorro-Upgrade-a-major-DeFi-enabler",
+      "pubDate": "2021-01-12T14:15:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "RT @Poolz__: Over 100 #test pools were created on @ethereum, @TomoChainANN and @MoonbeamNetwork networks, along with 300+ transactions &amp;…",
+      "link": "https://cryptopanic.com/news/11115279/RT-Poolz__-Over-100-test-pools-were-created-on-ethereum-TomoChainANN-and-MoonbeamNetwork-networks-along-with-300-transactions-amp",
+      "pubDate": "2021-01-12T13:25:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "In episode 2, We'll introduce the 3 forms of Red Pocket, how do the giveaway works, what are the characteristics of…",
+      "link": "https://cryptopanic.com/news/11114968/In-episode-2-Well-introduce-the-3-forms-of-Red-Pocket-how-do-the-giveaway-works-what-are-the-characteristics-of",
+      "pubDate": "2021-01-12T12:56:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "UK Treasury Says XRP Is Exchange Token and Not a Security",
+      "link": "https://cryptopanic.com/news/11114622/UK-Treasury-Says-XRP-Is-Exchange-Token-and-Not-a-Security",
+      "pubDate": "2021-01-12T12:00:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The United Kingdom government appears to be cementing its position that XRP is an exchange token and not a security. Her Majesty’s Treasury has published a new document outlining the UK’s regulatory approach to cryptocurrencies and stablecoins. The report classifies XRP, Ethereum and Bitcoin as “tokens that are primarily used as a means of exchange.” […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 23,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Are you still buying the dip now? Hit likes to let me know.",
+      "link": "https://cryptopanic.com/news/11113657/Are-you-still-buying-the-dip-now-Hit-likes-to-let-me-know",
+      "pubDate": "2021-01-12T09:57:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "#Supply_chain can become much more #transparent, #reliable, #straightforward, less costly, and more easily manage…",
+      "link": "https://cryptopanic.com/news/11113311/Supply_chain-can-become-much-more-transparent-reliable-straightforward-less-costly-and-more-easily-manage",
+      "pubDate": "2021-01-12T08:56:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "XLM re-enters top-10 coins by market cap after surging nearly 30%",
+      "link": "https://cryptopanic.com/news/11113033/XLM-re-enters-top-10-coins-by-market-cap-after-surging-nearly-30",
+      "pubDate": "2021-01-12T08:09:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Stellar Lumens saw major price action after the Stellar Development Foundation signed an agreement with the Ukrainian government.",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "#TomoChain is excited to partner with @paid_network to integrate $PAID's SMART Agreements, solving the complex issu…",
+      "link": "https://cryptopanic.com/news/11112957/TomoChain-is-excited-to-partner-with-paid_network-to-integrate-PAIDs-SMART-Agreements-solving-the-complex-issu",
+      "pubDate": "2021-01-12T08:02:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "Will $EOS finally turn the ship around? Haven't seen this bullish sentiment in years. #EOS is the high-performanc…",
+      "link": "https://cryptopanic.com/news/eos/11111665/Will-EOS-finally-turn-the-ship-around-Havent-seen-this-bullish-sentiment-in-years-EOS-is-the-high-performanc",
+      "pubDate": "2021-01-12T04:28:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "-",
+      "currencies": [
+        "EOS",
+        "BET",
+        "EBET"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We'll be publishing a new article in the next 24 hours that answers some common questions about the upcoming token swap.",
+      "link": "https://cryptopanic.com/news/11111570/Well-be-publishing-a-new-article-in-the-next-24-hours-that-answers-some-common-questions-about-the-upcoming-token-swap",
+      "pubDate": "2021-01-12T04:09:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LOOM"
+      ]
+    },
+    {
+      "title": "BORA’s developer WAY2BIT and Barunson Co., Ltd. signed a MOU for a joint project on ‘blockchain-based movie product…",
+      "link": "https://cryptopanic.com/news/11110994/BORAs-developer-WAY2BIT-and-Barunson-Co-Ltd-signed-a-MOU-for-a-joint-project-on-blockchain-based-movie-product",
+      "pubDate": "2021-01-12T02:26:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BORA"
+      ]
+    }
+  ]
+}

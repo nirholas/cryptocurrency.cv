@@ -1,0 +1,498 @@
+{
+  "date": "2025-05-27",
+  "fetchedAt": "2026-02-05T07:27:08.637Z",
+  "articleCount": 35,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "QNT 16% Surge: The New Era of Money in the Digital World",
+      "link": "https://cryptopanic.com/news/quant-network/22130621/QNT-16-Surge-The-New-Era-of-Money-in-the-Digital-World",
+      "pubDate": "2025-05-27T22:18:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "QNT"
+      ]
+    },
+    {
+      "title": "Cronos Crypto: Trump Media Is Using Crypto.com",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/22129687/Cronos-Crypto-Trump-Media-Is-Using-Cryptocom",
+      "pubDate": "2025-05-27T21:44:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Trump Media just announced a $2. 5 billion deal for its Bitcoin treasury. They will use Crypto. com for custody of their Bitcoin treasury",
+      "currencies": [
+        "BTC",
+        "CRO"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "PancakeSwap CAKE 15% Surge: What Is The Best Crypto DEX On The Market?",
+      "link": "https://cryptopanic.com/news/pancakeswap-token/22129686/PancakeSwap-CAKE-15-Surge-What-Is-The-Best-Crypto-DEX-On-The-Market",
+      "pubDate": "2025-05-27T21:00:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CAKE"
+      ]
+    },
+    {
+      "title": "SOL Strategies Files for $1B Financing Flexibility to Capitalize on Solana Ecosystem Growth",
+      "link": "https://cryptopanic.com/news/solana/22128282/SOL-Strategies-Files-for-1B-Financing-Flexibility-to-Capitalize-on-Solana-Ecosystem-Growth",
+      "pubDate": "2025-05-27T20:12:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "From a $500M staking-linked deal to exploring tokenized public shares, the firm is aligning its capital structure with next-gen blockchain infrastructure.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Consensys CEO Joe Lubin Is Poised to Become Ethereum’s Michael Saylor",
+      "link": "https://cryptopanic.com/news/ethereum/22127576/Consensys-CEO-Joe-Lubin-Is-Poised-to-Become-Ethereums-Michael-Saylor",
+      "pubDate": "2025-05-27T19:35:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "SharpLink’s stock rallied over 400% after it announced its plans for an ETH treasury and tapped Lubin as chairman of the board.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Bitcoin Makes Run for New All-Time High as Chainlink Founder Sergey Nazarov Says BTC Starting Act As Safe Haven: Report",
+      "link": "https://cryptopanic.com/news/bitcoin/22124522/Bitcoin-Makes-Run-for-New-All-Time-High-as-Chainlink-Founder-Sergey-Nazarov-Says-BTC-Starting-Act-As-Safe-Haven-Report",
+      "pubDate": "2025-05-27T18:05:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin has opened the week higher in what some prominent industry voices are flagging as a sign that BTC may be starting to act as a safe haven asset. Chainlink (LINK) creator Sergey Nazarov says that the flagship cryptocurrency appears to be decoupling from the stock market and behaving more like gold, Fox Business reports.",
+      "currencies": [
+        "BTC",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Whales accumulate AAVE – Will $280 finally break or hold?",
+      "link": "https://cryptopanic.com/news/aave/22124127/Whales-accumulate-AAVE-Will-280-finally-break-or-hold",
+      "pubDate": "2025-05-27T18:00:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Ether Approaches $2,700 After SharpLink Unveils $425 Million Treasury Strategy",
+      "link": "https://cryptopanic.com/news/bitcoin/22124104/Ether-Approaches-2700-After-SharpLink-Unveils-425-Million-Treasury-Strategy",
+      "pubDate": "2025-05-27T17:45:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Despite Bitcoin rallying above $110,000, the overall crypto market capitalization is down 0. 5% over the past 24 hours.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Crypto Coins to Watch: Web3 ai Targets 1,747% ROI While Uniswap (UNI) Whale Buys $3.97M and HYPE Eyes $35",
+      "link": "https://cryptopanic.com/news/uniswap/22123978/Crypto-Coins-to-Watch-Web3-ai-Targets-1747-ROI-While-Uniswap-UNI-Whale-Buys-397M-and-HYPE-Eyes-35",
+      "pubDate": "2025-05-27T17:25:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "HYPE"
+      ]
+    },
+    {
+      "title": "SUI Maintains Strength Above $3.50 – Can UNI Sustain Its Breakout Toward $7.50 and First Positive Monthly Close?",
+      "link": "https://cryptopanic.com/news/uniswap/22123971/SUI-Maintains-Strength-Above-350-Can-UNI-Sustain-Its-Breakout-Toward-750-and-First-Positive-Monthly-Close",
+      "pubDate": "2025-05-27T17:19:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "SUI"
+      ]
+    },
+    {
+      "title": "QNT Trading Volume Jumps 500% After Quant Network’s Layer 2.5 Announcement",
+      "link": "https://cryptopanic.com/news/quant-network/22125067/QNT-Trading-Volume-Jumps-500-After-Quant-Networks-Layer-25-Announcement",
+      "pubDate": "2025-05-27T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "QNT"
+      ]
+    },
+    {
+      "title": "NEAR, VIRTUAL and KAITO lead AI tokens ahead of Nvidia Q1 earnings report",
+      "link": "https://cryptopanic.com/news/near/22122835/NEAR-VIRTUAL-and-KAITO-lead-AI-tokens-ahead-of-Nvidia-Q1-earnings-report",
+      "pubDate": "2025-05-27T15:32:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR",
+        "VIRTUAL",
+        "KAITO"
+      ]
+    },
+    {
+      "title": "Ethereum flashes ‘altseason’ signal as ETH price eyes $4.1K",
+      "link": "https://cryptopanic.com/news/bitcoin/22121212/Ethereum-flashes-altseason-signal-as-ETH-price-eyes-41K",
+      "pubDate": "2025-05-27T15:26:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Key takeaways:Ethereum has reclaimed a key level that preceded 100%+ rallies and triggered past altseasons. Altcoin market cap could surge toward $15 trillion if Bitcoin dominance repeats its post-halving drop. Despite bullish signals, ETH remains fragile, with $123B in supply near cost basis at risk of flipping into a loss. Ethereum’s native token, Ether (ETH), has reclaimed a key technical level that has historically preceded sharp price gains and marked the start of an “altseason” across mult",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Ethereum Surges 4% on Massive Volume as Institutional Interest Grows",
+      "link": "https://cryptopanic.com/news/ethereum/22121086/Ethereum-Surges-4-on-Massive-Volume-as-Institutional-Interest-Grows",
+      "pubDate": "2025-05-27T15:06:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum ETH has staged an impressive recovery in the past 24 hours, climbing 3.8% amid significant market volatility. The second-largest cryptocurrency found solid support at $2,530, where exceptional trading volume (242,521 ETH) created a clear bottoming pattern. This was followed by a decisive breakout during the early trading hours, supported by massive volume surges exceeding 550,000 ETH that pushed prices above key resistance levels",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 5
+      }
+    },
+    {
+      "title": "SAND: $5.7M whale dump, price under pressure! – More trouble ahead?",
+      "link": "https://cryptopanic.com/news/the-sandbox/22119628/SAND-57M-whale-dump-price-under-pressure-More-trouble-ahead",
+      "pubDate": "2025-05-27T14:30:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SAND"
+      ]
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 28 May 2025: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/decentraland/22122771/Spell-Wallet-Daily-Puzzle-28-May-2025-Earn-Reward-of-1-MANA",
+      "pubDate": "2025-05-27T14:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "Cobie’s ICO platform Sonar goes live with Plasma seeking $50 million at $500 million token valuation",
+      "link": "https://cryptopanic.com/news/dai/22118170/Cobies-ICO-platform-Sonar-goes-live-with-Plasma-seeking-50-million-at-500-million-token-valuation",
+      "pubDate": "2025-05-27T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDC"
+      ]
+    },
+    {
+      "title": "Filecoin Foundation and Ava Labs Launch Native Cross-Chain Data Bridge",
+      "link": "https://cryptopanic.com/news/filecoin/22118142/Filecoin-Foundation-and-Ava-Labs-Launch-Native-Cross-Chain-Data-Bridge",
+      "pubDate": "2025-05-27T13:54:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "FIL"
+      ]
+    },
+    {
+      "title": "Trump Media to raise $2.5B to build Bitcoin treasury, mirroring Strategy’s playbook",
+      "link": "https://cryptopanic.com/news/bitcoin/22117973/Trump-Media-to-raise-25B-to-build-Bitcoin-treasury-mirroring-Strategys-playbook",
+      "pubDate": "2025-05-27T13:27:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Quant [QNT] hits 3-month high, but traders, watch out for THIS bearish sign!",
+      "link": "https://cryptopanic.com/news/quant-network/22116707/Quant-QNT-hits-3-month-high-but-traders-watch-out-for-THIS-bearish-sign",
+      "pubDate": "2025-05-27T13:00:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "QNT"
+      ]
+    },
+    {
+      "title": "Quant extends gains, aiming for $120, as risk-on sentiment returns",
+      "link": "https://cryptopanic.com/news/quant-network/22118155/Quant-extends-gains-aiming-for-120-as-risk-on-sentiment-returns",
+      "pubDate": "2025-05-27T12:52:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QNT"
+      ]
+    },
+    {
+      "title": "CAKE reclaims monthly high as PancakeSwap surpasses Circle in weekly fees",
+      "link": "https://cryptopanic.com/news/pancakeswap-token/22114692/CAKE-reclaims-monthly-high-as-PancakeSwap-surpasses-Circle-in-weekly-fees",
+      "pubDate": "2025-05-27T11:35:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "CAKE"
+      ]
+    },
+    {
+      "title": "Helium Price Forecast: Possible breakout from triangle pattern signals bullish outlook",
+      "link": "https://cryptopanic.com/news/helium/22116204/Helium-Price-Forecast-Possible-breakout-from-triangle-pattern-signals-bullish-outlook",
+      "pubDate": "2025-05-27T10:49:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ]
+    },
+    {
+      "title": "Whale Buys $5M in AAVE, Price to Explode to $400?",
+      "link": "https://cryptopanic.com/news/aave/22114752/Whale-Buys-5M-in-AAVE-Price-to-Explode-to-400",
+      "pubDate": "2025-05-27T10:25:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "IP"
+      ]
+    },
+    {
+      "title": "Monero (XMR) Quietly Surges 150% in Q2 — What’s Driving It?",
+      "link": "https://cryptopanic.com/news/monero/22113123/Monero-XMR-Quietly-Surges-150-in-Q2-Whats-Driving-It",
+      "pubDate": "2025-05-27T09:49:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Recovers From Sub-$108K Drop, Ethereum Maintains $2.6K (Market Watch)",
+      "link": "https://cryptopanic.com/news/monero/22111460/Bitcoin-Recovers-From-Sub-108K-Drop-Ethereum-Maintains-26K-Market-Watch",
+      "pubDate": "2025-05-27T09:40:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT"
+      ]
+    },
+    {
+      "title": "Time’s Running Out: Grab Arctic Pablo Now at $0.00023 While Ethereum and Polkadot Turn Heads as the Best Cryptos to Invest",
+      "link": "https://cryptopanic.com/news/polkadot/22110073/Times-Running-Out-Grab-Arctic-Pablo-Now-at-000023-While-Ethereum-and-Polkadot-Turn-Heads-as-the-Best-Cryptos-to-Invest",
+      "pubDate": "2025-05-27T08:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOT"
+      ]
+    },
+    {
+      "title": "7 Utility Tokens to Invest in 2025-The First One is Going to Surprise You",
+      "link": "https://cryptopanic.com/news/filecoin/22108482/7-Utility-Tokens-to-Invest-in-2025-The-First-One-is-Going-to-Surprise-You",
+      "pubDate": "2025-05-27T08:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "FIL",
+        "BAT"
+      ]
+    },
+    {
+      "title": "Ethereum validators begin signaling another gas limit boost",
+      "link": "https://cryptopanic.com/news/ethereum/22108459/Ethereum-validators-begin-signaling-another-gas-limit-boost",
+      "pubDate": "2025-05-27T07:47:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Over 150,000 Ethereum validators (around 15% of the network) are signaling support to raise the block gas limit.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Market Recap: QNT, CAKE, JUP Lead the Markets While PI & BONK Face Huge Upward Pressure",
+      "link": "https://cryptopanic.com/news/quant-network/22107820/Crypto-Market-Recap-QNT-CAKE-JUP-Lead-the-Markets-While-PI-BONK-Face-Huge-Upward-Pressure",
+      "pubDate": "2025-05-27T07:12:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QNT",
+        "PI",
+        "HYPE"
+      ]
+    },
+    {
+      "title": "PancakeSwap soars to two-month high after tokenomics 3.0 approval cuts supply",
+      "link": "https://cryptopanic.com/news/pancakeswap-token/22108477/PancakeSwap-soars-to-two-month-high-after-tokenomics-30-approval-cuts-supply",
+      "pubDate": "2025-05-27T06:52:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CAKE"
+      ]
+    },
+    {
+      "title": "PancakeSwap (CAKE) Price Analysis: Will CAKE Price Rally to $3 in Hours?",
+      "link": "https://cryptopanic.com/news/pancakeswap-token/22106935/PancakeSwap-CAKE-Price-Analysis-Will-CAKE-Price-Rally-to-3-in-Hours",
+      "pubDate": "2025-05-27T06:23:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "CAKE"
+      ]
+    },
+    {
+      "title": "Top Gainers QNT JUP FORM: DeFi tokens rally as top altcoins stall",
+      "link": "https://cryptopanic.com/news/quant-network/22105107/Top-Gainers-QNT-JUP-FORM-DeFi-tokens-rally-as-top-altcoins-stall",
+      "pubDate": "2025-05-27T03:22:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XRP",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Hashed sends 36.9M SAND to Binance – Is the altcoin’s price at risk?",
+      "link": "https://cryptopanic.com/news/the-sandbox/22103207/Hashed-sends-369M-SAND-to-Binance-Is-the-altcoins-price-at-risk",
+      "pubDate": "2025-05-27T02:00:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SAND"
+      ]
+    },
+    {
+      "title": "Whale Accumulates $15M in AAVE via Wintermute, Now Holds $26M Profit",
+      "link": "https://cryptopanic.com/news/aave/22102310/Whale-Accumulates-15M-in-AAVE-via-Wintermute-Now-Holds-26M-Profit",
+      "pubDate": "2025-05-27T00:11:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "AAVE"
+      ]
+    }
+  ]
+}

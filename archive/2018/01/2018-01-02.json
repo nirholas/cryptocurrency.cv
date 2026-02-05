@@ -1,0 +1,26 @@
+{
+  "date": "2018-01-02",
+  "fetchedAt": "2026-02-05T07:27:06.813Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "New Bitcoin Cash Tech Takes Aim at Accidental Spending Issue",
+      "link": "https://cryptopanic.com/news/703136/New-Bitcoin-Cash-Tech-Takes-Aim-at-Accidental-Spending-Issue",
+      "pubDate": "2018-01-02T18:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

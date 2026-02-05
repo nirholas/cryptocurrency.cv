@@ -1,0 +1,466 @@
+{
+  "date": "2024-02-04",
+  "fetchedAt": "2026-02-05T07:27:08.089Z",
+  "articleCount": 31,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Chainlink Price Stalls As $287 Million Worth Of LINK Makes Its Way To Binance",
+      "link": "https://cryptopanic.com/news/19227736/Chainlink-Price-Stalls-As-287-Million-Worth-Of-LINK-Makes-Its-Way-To-Binance?mtm_campaign=API-OFA",
+      "pubDate": "2024-02-04T23:00:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "LINK",
+        "ALI"
+      ]
+    },
+    {
+      "title": "Will XRP climb above $0.53? Here are the odds",
+      "link": "https://cryptopanic.com/news/19227708/Will-XRP-climb-above-053-Here-are-the-odds",
+      "pubDate": "2024-02-04T22:30:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "XRP’s weekly chart remains in the red, but the possibility of a recovery cannot be ruled out yet.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 12
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "WHAT IS XRP LEDGER (XRP)?",
+      "link": "https://cryptopanic.com/news/19227691/WHAT-IS-XRP-LEDGER-XRP",
+      "pubDate": "2024-02-04T22:00:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "SOL",
+        "UNI",
+        "KAS",
+        "ARB",
+        "SEI"
+      ]
+    },
+    {
+      "title": "Cardano founder Charles Hoskinson critiques Bitcoin L2, sparks crypto debate",
+      "link": "https://cryptopanic.com/news/blockstack/19227629/Cardano-founder-Charles-Hoskinson-critiques-Bitcoin-L2-sparks-crypto-debate",
+      "pubDate": "2024-02-04T20:51:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ]
+    },
+    {
+      "title": "Bitcoin’s muted price volatility shifts traders’ focus to LINK, ICP, RNDR and SUI",
+      "link": "https://cryptopanic.com/news/19227558/Bitcoins-muted-price-volatility-shifts-traders-focus-to-LINK-ICP-RNDR-and-SUI",
+      "pubDate": "2024-02-04T19:25:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LINK",
+        "ICP",
+        "RNDR",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Nearly 10 Million Ethereum (ETH) Now Staked in Lido DAO",
+      "link": "https://cryptopanic.com/news/19227563/Nearly-10-Million-Ethereum-ETH-Now-Staked-in-Lido-DAO",
+      "pubDate": "2024-02-04T19:25:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "LDO",
+        "DAO"
+      ]
+    },
+    {
+      "title": "VGX Foundation and Gala Games to Collaborate on new Web3-Enabled Games",
+      "link": "https://cryptopanic.com/news/19227556/VGX-Foundation-and-Gala-Games-to-Collaborate-on-new-Web3-Enabled-Games",
+      "pubDate": "2024-02-04T19:19:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GALA",
+        "VGX"
+      ]
+    },
+    {
+      "title": "What Is Kaspa (KAS) Blockchain?",
+      "link": "https://cryptopanic.com/news/19227533/What-Is-Kaspa-KAS-Blockchain",
+      "pubDate": "2024-02-04T19:00:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DAG",
+        "IQ",
+        "KAS"
+      ]
+    },
+    {
+      "title": "Crypto market’s weekly winners and losers – LINK, PENDLE, MANTLE, JUP",
+      "link": "https://cryptopanic.com/news/19227514/Crypto-markets-weekly-winners-and-losers-LINK-PENDLE-MANTLE-JUP",
+      "pubDate": "2024-02-04T18:30:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "MNT",
+        "JUP"
+      ]
+    },
+    {
+      "title": "This Week in Crypto: Turbulent Token Launches for WEN and JUP, Plus Vitalik’s Retreat",
+      "link": "https://cryptopanic.com/news/19227388/This-Week-in-Crypto-Turbulent-Token-Launches-for-WEN-and-JUP-Plus-Vitaliks-Retreat",
+      "pubDate": "2024-02-04T16:31:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "JUP"
+      ]
+    },
+    {
+      "title": "Genesis Seeks Court Approval to Offload $1.4 Billion in GBTC Assets Post-SEC Settlement",
+      "link": "https://cryptopanic.com/news/19227393/Genesis-Seeks-Court-Approval-to-Offload-14-Billion-in-GBTC-Assets-Post-SEC-Settlement",
+      "pubDate": "2024-02-04T16:30:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "How To Mint BRC-20 Tokens On The Bitcoin Network",
+      "link": "https://cryptopanic.com/news/19227357/How-To-Mint-BRC-20-Tokens-On-The-Bitcoin-Network",
+      "pubDate": "2024-02-04T16:00:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "ORDI"
+      ]
+    },
+    {
+      "title": "FTX Expands Sell-Off: AI Startup Stake Next to Go",
+      "link": "https://cryptopanic.com/news/19227233/FTX-Expands-Sell-Off-AI-Startup-Stake-Next-to-Go",
+      "pubDate": "2024-02-04T13:11:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FTT"
+      ]
+    },
+    {
+      "title": "Cardano Heats Up: Transactions Break Past 4 Million As Ecosystem Thrives",
+      "link": "https://cryptopanic.com/news/19227174/Cardano-Heats-Up-Transactions-Break-Past-4-Million-As-Ecosystem-Thrives",
+      "pubDate": "2024-02-04T13:00:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano, a blockchain platform known for its research-oriented strategy and eco-friendly Proof-of-Stake consensus, is experiencing substantial growth. Increased transaction volumes, a variety of project launches, and active development within its ecosystem underline this expansion. Related Reading: Avalanche To Unleash 9.5 Million Tokens, Traders Brace For Impact Cardano Transaction Boom...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "DOGE",
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 9
+      }
+    },
+    {
+      "title": "USA crypto investors pile into Kelexo (KLXO) presale as Internet Computer (ICP) & Ethereum Classic (ETC) have a mass exodus",
+      "link": "https://cryptopanic.com/news/19227163/USA-crypto-investors-pile-into-Kelexo-KLXO-presale-as-Internet-Computer-ICP-Ethereum-Classic-ETC-have-a-mass-exodus",
+      "pubDate": "2024-02-04T12:47:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC",
+        "ICP"
+      ]
+    },
+    {
+      "title": "PlanB Predicts Timeline for New Bitcoin All-Time High, Says BTC Won’t Go Below This Floor Price",
+      "link": "https://cryptopanic.com/news/19227164/PlanB-Predicts-Timeline-for-New-Bitcoin-All-Time-High-Says-BTC-Wont-Go-Below-This-Floor-Price",
+      "pubDate": "2024-02-04T12:45:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "QNT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "DOJ Charges Belarusian National With Money Laundering Conspiracy and Operating Unlicensed Crypto Exchange",
+      "link": "https://cryptopanic.com/news/19227151/DOJ-Charges-Belarusian-National-With-Money-Laundering-Conspiracy-and-Operating-Unlicensed-Crypto-Exchange",
+      "pubDate": "2024-02-04T12:30:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FX"
+      ]
+    },
+    {
+      "title": "Kaspa (KAS) investors are loving DeeStream (DST) as presale sets sail! Meanwhile BNB (BNB) future looks worrying to investors",
+      "link": "https://cryptopanic.com/news/19227142/Kaspa-KAS-investors-are-loving-DeeStream-DST-as-presale-sets-sail-Meanwhile-BNB-BNB-future-looks-worrying-to-investors",
+      "pubDate": "2024-02-04T12:29:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "KAS"
+      ]
+    },
+    {
+      "title": "5 Questions With SCENE: Gala Marija Vrbanic",
+      "link": "https://cryptopanic.com/news/19227111/5-Questions-With-SCENE-Gala-Marija-Vrbanic",
+      "pubDate": "2024-02-04T12:01:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "GALA"
+      ]
+    },
+    {
+      "title": "Ripple's XRP Services to Go Live in US",
+      "link": "https://cryptopanic.com/news/19227096/Ripples-XRP-Services-to-Go-Live-in-US",
+      "pubDate": "2024-02-04T11:49:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple prepares to transform US cross-border payments, expanding payment services and utilizing XRP as key bridge currency",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "MakerDAO: As DAI supply hits 18-month low, what’s next?",
+      "link": "https://cryptopanic.com/news/19227081/MakerDAO-As-DAI-supply-hits-18-month-low-whats-next",
+      "pubDate": "2024-02-04T11:30:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "DAI"
+      ]
+    },
+    {
+      "title": "Trump: Although CBDCs Are ‘Very Dangerous’, AI Is ‘The Most Dangerous Thing out There’ and ‘Something Has To Be Done About This’",
+      "link": "https://cryptopanic.com/news/19227038/Trump-Although-CBDCs-Are-Very-Dangerous-AI-Is-The-Most-Dangerous-Thing-out-There-and-Something-Has-To-Be-Done-About-This",
+      "pubDate": "2024-02-04T10:45:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "AR"
+      ]
+    },
+    {
+      "title": "This Cardano (ADA) Price Level Is Almost Impossible to Beat",
+      "link": "https://cryptopanic.com/news/19227012/This-Cardano-ADA-Price-Level-Is-Almost-Impossible-to-Beat",
+      "pubDate": "2024-02-04T10:17:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Cardano investors actively taking profits or breaking even as this resistance level clearly causes some issues for price",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 10
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "This Week’s Best and Worst Alt Performers as Bitcoin Stalls at $43K (Weekend Watch)",
+      "link": "https://cryptopanic.com/news/19226985/This-Weeks-Best-and-Worst-Alt-Performers-as-Bitcoin-Stalls-at-43K-Weekend-Watch",
+      "pubDate": "2024-02-04T09:53:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "JUP"
+      ]
+    },
+    {
+      "title": "Solana DEX Jupiter Overtakes Uniswap with $480 Million Daily Trading Volume",
+      "link": "https://cryptopanic.com/news/19226931/Solana-DEX-Jupiter-Overtakes-Uniswap-with-480-Million-Daily-Trading-Volume",
+      "pubDate": "2024-02-04T08:34:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Welcome to Finance Redefined, your weekly source of critical decentralized finance (DeFi) insights. Our newsletter...",
+      "currencies": [
+        "SOL",
+        "UNI",
+        "JUP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Analyst Predicts Cardano Price To Skyrocket By 1,400% – Here’s How",
+      "link": "https://cryptopanic.com/news/19226927/Analyst-Predicts-Cardano-Price-To-Skyrocket-By-1400-Heres-How",
+      "pubDate": "2024-02-04T08:30:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Cardano, like the majority of the cryptocurrency market, put up a positive price performance over the past week. While the ADA token largely struggled to replicate its December run in January, the tides seem to be turning in favor of the altcoin at the moment. In fact, a popular crypto analyst has weighed in on […]",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 9
+      }
+    },
+    {
+      "title": "FTX’s scrapped relaunch raises alarm on legal team’s profits",
+      "link": "https://cryptopanic.com/news/19226920/FTXs-scrapped-relaunch-raises-alarm-on-legal-teams-profits",
+      "pubDate": "2024-02-04T08:16:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "5 Decentralized Services You Can Use For Free and Donate to via Kivach (Ep VI)",
+      "link": "https://cryptopanic.com/news/19226904/5-Decentralized-Services-You-Can-Use-For-Free-and-Donate-to-via-Kivach-Ep-VI",
+      "pubDate": "2024-02-04T07:42:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "Bitcoin SV (BSV) Price Dips Following Coinbase Delisting",
+      "link": "https://cryptopanic.com/news/19226844/Bitcoin-SV-BSV-Price-Dips-Following-Coinbase-Delisting",
+      "pubDate": "2024-02-04T06:39:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH",
+        "BSV"
+      ]
+    },
+    {
+      "title": "DOJ Charges Trio Behind $400 Million SIM Swap Attack on FTX",
+      "link": "https://cryptopanic.com/news/19226765/DOJ-Charges-Trio-Behind-400-Million-SIM-Swap-Attack-on-FTX",
+      "pubDate": "2024-02-04T05:30:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FTT"
+      ]
+    },
+    {
+      "title": "Solana-Based Altcoin Surges More Than 42% This Week Amid New Listing on Top Crypto Exchange Binance",
+      "link": "https://cryptopanic.com/news/19226607/Solana-Based-Altcoin-Surges-More-Than-42-This-Week-Amid-New-Listing-on-Top-Crypto-Exchange-Binance",
+      "pubDate": "2024-02-04T01:00:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "PYTH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

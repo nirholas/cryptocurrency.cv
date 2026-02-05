@@ -1,0 +1,43 @@
+{
+  "date": "2018-11-07",
+  "fetchedAt": "2026-02-05T07:27:08.685Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Is Bitcoin Cash doomed?",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/3641057/Is-Bitcoin-Cash-doomed",
+      "pubDate": "2018-11-07T13:01:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Stellar XLM to Airdrop $125 MILLION - Today's Crypto News",
+      "link": "https://cryptopanic.com/news/stellar/3591731/Stellar-XLM-to-Airdrop-125-MILLION-Todays-Crypto-News",
+      "pubDate": "2018-11-07T00:55:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

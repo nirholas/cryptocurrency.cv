@@ -1,0 +1,744 @@
+{
+  "date": "2025-06-17",
+  "fetchedAt": "2026-02-05T07:27:08.631Z",
+  "articleCount": 51,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "DTCC lists VanEck’s proposed spot SOL ETF on list of ‘active and pre-launch’ funds",
+      "link": "https://cryptopanic.com/news/solana/22636295/DTCC-lists-VanEcks-proposed-spot-SOL-ETF-on-list-of-active-and-pre-launch-funds",
+      "pubDate": "2025-06-17T22:06:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The DTCC notes the fund cannot be created or redeemed; however, VSOL's presence indicates it may soon be approved by the SEC.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Kraken’s Ink Layer-2 Network Now Launches INK Token",
+      "link": "https://cryptopanic.com/news/aave/22636647/Krakens-Ink-Layer-2-Network-Now-Launches-INK-Token",
+      "pubDate": "2025-06-17T22:01:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AAVE",
+        "SN77"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "JPMorgan Unveils Its U.S. Dollar-backed JPMD Stablecoin on Ethereum’s Base",
+      "link": "https://cryptopanic.com/news/ethereum/22635684/JPMorgan-Unveils-Its-US-Dollar-backed-JPMD-Stablecoin-on-Ethereums-Base",
+      "pubDate": "2025-06-17T21:19:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The post JPMorgan Unveils Its U. S. (NYSE: JPM) has unveiled its permissioned stablecoin on the Base network, a top-tier Ethereum (ETH)-based layer two scaling solution backed by Coinbase Global Inc",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Pump.fun Accused of ‘Stealing’ $741M in Fees as Critics Call Platform a ‘Disease’",
+      "link": "https://cryptopanic.com/news/solana/22635668/Pumpfun-Accused-of-Stealing-741M-in-Fees-as-Critics-Call-Platform-a-Disease",
+      "pubDate": "2025-06-17T21:15:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Pump. fun has sold millions of SOL for $741M while only 293 of 13. 55 M wallets have exceeded $1M in gains. The Solana memecoin launchpad now faces backlash over alleged scam activity and harmful livestreams as X suspends its account ahead of a planned $1B token issuance at a $4B valuation",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ether price stable near $2.4K as crypto investors bet on long-term growth",
+      "link": "https://cryptopanic.com/news/ethereum/22634710/Ether-price-stable-near-24K-as-crypto-investors-bet-on-long-term-growth",
+      "pubDate": "2025-06-17T20:52:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum layer-2 growth and $830 million in spot ETH ETF inflows show investors’ true feelings even as the wider crypto market crumbles.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tether Buys 32% of Gold Miner to Back ‘Bitcoin-Gold’ Reserve Strategy",
+      "link": "https://cryptopanic.com/news/bitcoin/22634669/Tether-Buys-32-of-Gold-Miner-to-Back-Bitcoin-Gold-Reserve-Strategy",
+      "pubDate": "2025-06-17T20:45:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Tether, the provider of the world’s largest stablecoin USDT, has acquired a 32% stake in Canadian public gold royalty firm Elemental Altus Royalties, extending its aggressive investment spree.",
+      "currencies": [
+        "BTC",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Kraken's Ethereum Layer-2 Ink Network Is Launching a Token",
+      "link": "https://cryptopanic.com/news/ethereum/22634581/Krakens-Ethereum-Layer-2-Ink-Network-Is-Launching-a-Token",
+      "pubDate": "2025-06-17T20:18:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The Ink Foundation will debut a native token for Kraken's Ethereum layer-2 network. Here's what we know so far.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 6
+      }
+    },
+    {
+      "title": "How Flare Is Bringing XRP to DeFi",
+      "link": "https://cryptopanic.com/news/ripple/22633646/How-Flare-Is-Bringing-XRP-to-DeFi",
+      "pubDate": "2025-06-17T19:22:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Flare unlocks XRP for DeFi with secure cross-chain protocols, liquid staking, and stablecoins—transforming XRP’s role in decentralized finance.",
+      "currencies": [
+        "XRP",
+        "FLR"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "VeChain’s Stargate Launch Could Spark a Major Breakout",
+      "link": "https://cryptopanic.com/news/vechain/22632822/VeChains-Stargate-Launch-Could-Spark-a-Major-Breakout",
+      "pubDate": "2025-06-17T19:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ]
+    },
+    {
+      "title": "Trump’s Crypto Reserve to Make XRP the Next Big Winner as XRP Eyes $1000 on SWIFT Replacement Theory",
+      "link": "https://cryptopanic.com/news/ripple/22632576/Trumps-Crypto-Reserve-to-Make-XRP-the-Next-Big-Winner-as-XRP-Eyes-1000-on-SWIFT-Replacement-Theory",
+      "pubDate": "2025-06-17T18:35:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "US DOJ and Europol Take Down Major Monero-Powered Dark Web Market",
+      "link": "https://cryptopanic.com/news/monero/22632650/US-DOJ-and-Europol-Take-Down-Major-Monero-Powered-Dark-Web-Market",
+      "pubDate": "2025-06-17T18:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Ethereum L2 Ink to Launch Fixed-Supply INK Token With Massive Airdrop!",
+      "link": "https://cryptopanic.com/news/aave/22632362/Ethereum-L2-Ink-to-Launch-Fixed-Supply-INK-Token-With-Massive-Airdrop",
+      "pubDate": "2025-06-17T18:16:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Ethereum-based startup Fileverse unveils open source and private alternative to Google Sheets",
+      "link": "https://cryptopanic.com/news/ethereum/22632440/Ethereum-based-startup-Fileverse-unveils-open-source-and-private-alternative-to-Google-Sheets",
+      "pubDate": "2025-06-17T18:16:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Fileverse, the startup making easy-to-use Ethereum-based productivity software, has released dSheets, an alternative to Excel.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 5
+      }
+    },
+    {
+      "title": "The Daily: Kraken-incubated Layer 2 Ink plots token launch and airdrop, Coinbase seeks greenlight for tokenized stocks, and more",
+      "link": "https://cryptopanic.com/news/aave/22631451/The-Daily-Kraken-incubated-Layer-2-Ink-plots-token-launch-and-airdrop-Coinbase-seeks-greenlight-for-tokenized-stocks-and-more",
+      "pubDate": "2025-06-17T17:51:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AAVE",
+        "OP"
+      ]
+    },
+    {
+      "title": "Virtual Worlds Like Decentraland Could Lower Barrier For Web3 Adoption, Says Bondex CEO",
+      "link": "https://cryptopanic.com/news/decentraland/22631460/Virtual-Worlds-Like-Decentraland-Could-Lower-Barrier-For-Web3-Adoption-Says-Bondex-CEO",
+      "pubDate": "2025-06-17T17:42:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "MANA",
+        "METAV"
+      ]
+    },
+    {
+      "title": "Kraken’s L2 network rolls out native INK token to power protocol incentives, allocation",
+      "link": "https://cryptopanic.com/news/ethereum/22631404/Krakens-L2-network-rolls-out-native-INK-token-to-power-protocol-incentives-allocation",
+      "pubDate": "2025-06-17T17:40:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Ink Foundation announced on June 17 that it would mint 1 billion INK tokens to fund user-run liquidity on Ink, the Ethereum layer-2 network backed by Kraken. The foundation has permanently set the supply cap and will release the mint date and contract address after completing the audits.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Truth Social Files for Bitcoin-Ether ETF, Expands Crypto Push",
+      "link": "https://cryptopanic.com/news/bitcoin/22624477/Truth-Social-Files-for-Bitcoin-Ether-ETF-Expands-Crypto-Push",
+      "pubDate": "2025-06-17T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Catenaa, Tuesday, June 17, 2025-Truth Social, the social media platform backed by President Donald Trump, has filed with the Securities and Exchange Commission to launch a spot bitcoin and ethereum exchange-traded fund, further deepening Trump Media’s involvement in the cryptocurrency market. The filing, submitted Monday under the name “Truth Social Bitcoin and Ethereum ETF, B. T. ,” […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "B"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "NEAR Plunges 8% as Middle East Tensions Rattle Crypto Markets",
+      "link": "https://cryptopanic.com/news/near/22630942/NEAR-Plunges-8-as-Middle-East-Tensions-Rattle-Crypto-Markets",
+      "pubDate": "2025-06-17T16:46:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Solana ETF Approval Odds Hit 76%, Upside for SOL?",
+      "link": "https://cryptopanic.com/news/solana/22630130/Solana-ETF-Approval-Odds-Hit-76-Upside-for-SOL",
+      "pubDate": "2025-06-17T16:39:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana is in spotlight amid bullish projection of its ETF approval in July by Polymarket traders",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The DePIN Narrative: Comparing the Investment Case for Helium (HNT) and Filecoin (FIL)",
+      "link": "https://cryptopanic.com/news/filecoin/22629392/The-DePIN-Narrative-Comparing-the-Investment-Case-for-Helium-HNT-and-Filecoin-FIL",
+      "pubDate": "2025-06-17T16:06:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL",
+        "HNT"
+      ]
+    },
+    {
+      "title": "Filecoin Plunges 6% On Heavy Volume, Breaks Technical Support at $2.52 Level",
+      "link": "https://cryptopanic.com/news/filecoin/22629852/Filecoin-Plunges-6-On-Heavy-Volume-Breaks-Technical-Support-at-252-Level",
+      "pubDate": "2025-06-17T16:06:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "Kraken-backed layer 2 Ink to launch $INK token",
+      "link": "https://cryptopanic.com/news/aave/22629394/Kraken-backed-layer-2-Ink-to-launch-INK-token",
+      "pubDate": "2025-06-17T16:05:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "The Ink Foundation, an independent entity that manages Ink, the layer 2 blockchain originally developed and launched by Kraken, announced Tuesday its plans to debut the $INK token to support on-chain capital markets and DeFi ecosystem development. The token will be integrated with a new liquidity protocol powered by Aave technology. https://twitter. com/inkonchain/status/1934992073024823560The $INK token will launch with a capped supply of 1 billion, permanently fixed and not subject to governan",
+      "currencies": [
+        "AAVE",
+        "DEFI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Bitcoin Cash: Can BCH continue its bullish run after recent 20% surge?",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22629116/Bitcoin-Cash-Can-BCH-continue-its-bullish-run-after-recent-20-surge",
+      "pubDate": "2025-06-17T16:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "XRP ETF To Debut In Canada, Setting The Stage For US Showdown",
+      "link": "https://cryptopanic.com/news/litecoin/22628915/XRP-ETF-To-Debut-In-Canada-Setting-The-Stage-For-US-Showdown",
+      "pubDate": "2025-06-17T15:35:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Algorand Eyes Breakout as Accumulation Nears End, Analyst Says",
+      "link": "https://cryptopanic.com/news/algorand/22627278/Algorand-Eyes-Breakout-as-Accumulation-Nears-End-Analyst-Says",
+      "pubDate": "2025-06-17T14:30:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Best Cheap Crypto to Buy Now? Qubetics Secures Over $18M Alongside ICP’s 6.32% Climb and Injective’s 4.8% Jump",
+      "link": "https://cryptopanic.com/news/internet-computer/22626811/Best-Cheap-Crypto-to-Buy-Now-Qubetics-Secures-Over-18M-Alongside-ICPs-632-Climb-and-Injectives-48-Jump",
+      "pubDate": "2025-06-17T14:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ICP",
+        "INJ"
+      ]
+    },
+    {
+      "title": "Spot Solana ETF Hopes Rise as Firms File Updated S-1s",
+      "link": "https://cryptopanic.com/news/solana/22620452/Spot-Solana-ETF-Hopes-Rise-as-Firms-File-Updated-S-1s",
+      "pubDate": "2025-06-17T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Catenaa, Tuesday, June 17, 2025-Investment giants including Franklin Templeton, Fidelity, Grayscale, Galaxy Digital, and VanEck submitted updated S-1 registration filings on Friday in a move widely seen as bringing spot Solana ETFs closer to regulatory approval. The filings, which were made public late Friday, followed reported requests from the U. S. Securities and Exchange Commission for […]",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance Prepares for THORChain Upgrade, Temporarily Halts RUNE Transfers",
+      "link": "https://cryptopanic.com/news/thorchain/22630149/Binance-Prepares-for-THORChain-Upgrade-Temporarily-Halts-RUNE-Transfers",
+      "pubDate": "2025-06-17T13:55:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "RUNE"
+      ]
+    },
+    {
+      "title": "Meta Pool, a Liquid Staking Protocol, Suffers $27M Exploit",
+      "link": "https://cryptopanic.com/news/uniswap/22626735/Meta-Pool-a-Liquid-Staking-Protocol-Suffers-27M-Exploit",
+      "pubDate": "2025-06-17T13:35:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ]
+    },
+    {
+      "title": "PublicAI Secures $8 Million in Series A Funding",
+      "link": "https://cryptopanic.com/news/near/22625881/PublicAI-Secures-8-Million-in-Series-A-Funding",
+      "pubDate": "2025-06-17T13:23:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "NEAR",
+        "YGG",
+        "A"
+      ]
+    },
+    {
+      "title": "CoinShares Files for Spot Solana ETF as SEC Reviews Staking Terms",
+      "link": "https://cryptopanic.com/news/solana/22619066/CoinShares-Files-for-Spot-Solana-ETF-as-SEC-Reviews-Staking-Terms",
+      "pubDate": "2025-06-17T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Catenaa, Tuesday, June 17, 2025-European asset manager CoinShares has joined the growing list of firms seeking US regulatory approval for a spot Solana exchange-traded fund, submitting a Form S-1 registration with the Securities and Exchange Commission. Filed Monday, the CoinShares Solana ETF proposal would enable investors to gain direct exposure to Solana’s price movements. Coinbase […]",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "CoinDesk Indices, Sentora Unveil Stablecoin Overnight Rates to Mirror Money Market Tools",
+      "link": "https://cryptopanic.com/news/aave/22625439/CoinDesk-Indices-Sentora-Unveil-Stablecoin-Overnight-Rates-to-Mirror-Money-Market-Tools",
+      "pubDate": "2025-06-17T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "KuCoin Pay and Cryptorefills Partner To Open Global Web3 Payments To 40 M+ Customers",
+      "link": "https://cryptopanic.com/news/kucoin-shares/22624439/KuCoin-Pay-and-Cryptorefills-Partner-To-Open-Global-Web3-Payments-To-40-M-Customers",
+      "pubDate": "2025-06-17T12:47:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "Crypto Price Analysis 6-17: BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, POLKADOT: DOT, INJECTIVE: INJ, JUPITER: JUP",
+      "link": "https://cryptopanic.com/news/polkadot/22625918/Crypto-Price-Analysis-6-17-BITCOIN-BTC-ETHEREUM-ETH-SOLANA-SOL-POLKADOT-DOT-INJECTIVE-INJ-JUPITER-JUP",
+      "pubDate": "2025-06-17T12:28:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash-Bitcoin Ratio Smashes Triangle Pattern; HYPE Rally May Be Over",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22623992/Bitcoin-Cash-Bitcoin-Ratio-Smashes-Triangle-Pattern-HYPE-Rally-May-Be-Over",
+      "pubDate": "2025-06-17T11:59:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH",
+        "HYPE"
+      ]
+    },
+    {
+      "title": "Now live in the Derivatives Exchange: $SPK Perpetual Contract",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/22649806/Now-live-in-the-Derivatives-Exchange-SPK-Perpetual-Contract",
+      "pubDate": "2025-06-17T11:40:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "CRO",
+        "MCO",
+        "SPK"
+      ]
+    },
+    {
+      "title": "Crypto Daybook Americas: Institutions Pile In as Bitcoin’s Favorable Asymmetry Persists",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22623982/Crypto-Daybook-Americas-Institutions-Pile-In-as-Bitcoins-Favorable-Asymmetry-Persists",
+      "pubDate": "2025-06-17T11:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Luxxfolio Holdings Selects Litecoin as Reserve Asset",
+      "link": "https://cryptopanic.com/news/litecoin/22621698/Luxxfolio-Holdings-Selects-Litecoin-as-Reserve-Asset",
+      "pubDate": "2025-06-17T09:59:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash (BCH) Hits Multi-Week Highs Riding Bitcoin’s Momentum",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22620371/Bitcoin-Cash-BCH-Hits-Multi-Week-Highs-Riding-Bitcoins-Momentum",
+      "pubDate": "2025-06-17T09:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Litecoin’s Breakout Setup: Is the Bottom Finally In?",
+      "link": "https://cryptopanic.com/news/litecoin/22751848/Litecoins-Breakout-Setup-Is-the-Bottom-Finally-In",
+      "pubDate": "2025-06-17T08:50:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Litecoin pulls back, but holders can still earn $9,850 per day through BAY Miner cloud mining",
+      "link": "https://cryptopanic.com/news/litecoin/22618125/Litecoin-pulls-back-but-holders-can-still-earn-9850-per-day-through-BAY-Miner-cloud-mining",
+      "pubDate": "2025-06-17T08:06:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "LTC"
+      ]
+    },
+    {
+      "title": "This Is Why You Need Bitcoin And Monero!!!!",
+      "link": "https://cryptopanic.com/news/monero/22617673/THIS-IS-WHY-YOU-NEED-BITCOIN-AND-MONERO",
+      "pubDate": "2025-06-17T07:36:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XMR",
+        "BITCOIN"
+      ]
+    },
+    {
+      "title": "Circle Mints $100 Million USDC on Algorand Blockchain",
+      "link": "https://cryptopanic.com/news/algorand/22616240/Circle-Mints-100-Million-USDC-on-Algorand-Blockchain",
+      "pubDate": "2025-06-17T06:19:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Unknown Wallet Mints $100 Million USDC on Algorand Blockchain",
+      "link": "https://cryptopanic.com/news/algorand/22617554/Unknown-Wallet-Mints-100-Million-USDC-on-Algorand-Blockchain",
+      "pubDate": "2025-06-17T06:13:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Kusama Coin (KSM) Price Prediction 2025, 2026-2030: Is KSM A Worthy Buy?",
+      "link": "https://cryptopanic.com/news/polkadot/22615254/Kusama-Coin-KSM-Price-Prediction-2025-2026-2030-Is-KSM-A-Worthy-Buy",
+      "pubDate": "2025-06-17T05:32:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "KSM",
+        "A"
+      ]
+    },
+    {
+      "title": "Altcoins to watch this week: Cronos and Toncoin at risk of double-digit crash as bearish signals emerge",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/22616015/Altcoins-to-watch-this-week-Cronos-and-Toncoin-at-risk-of-double-digit-crash-as-bearish-signals-emerge",
+      "pubDate": "2025-06-17T04:37:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CRO",
+        "TON"
+      ]
+    },
+    {
+      "title": "Bitcoin’s recovery above $107,000 ignites DeFi rally: PENDLE, AERO, UNI charge forward",
+      "link": "https://cryptopanic.com/news/uniswap/22614479/Bitcoins-recovery-above-107000-ignites-DeFi-rally-PENDLE-AERO-UNI-charge-forward",
+      "pubDate": "2025-06-17T03:25:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "UNI",
+        "AERO"
+      ]
+    },
+    {
+      "title": "5 Best Altcoins to Buy This Week – Ethereum, MixieAI, Solaxy, Uniswap, Solana",
+      "link": "https://cryptopanic.com/news/uniswap/22613607/5-Best-Altcoins-to-Buy-This-Week-Ethereum-MixieAI-Solaxy-Uniswap-Solana",
+      "pubDate": "2025-06-17T03:12:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "UNI"
+      ]
+    },
+    {
+      "title": "Win US$25 in BTC when you fill up your Reserve Assets Crypto Basket, containing $BTC and $PAXG 🧺",
+      "link": "https://cryptopanic.com/news/pax-gold/22649798/Win-US25-in-BTC-when-you-fill-up-your-Reserve-Assets-Crypto-Basket-containing-BTC-and-PAXG",
+      "pubDate": "2025-06-17T01:33:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "PAXG",
+        "MCO"
+      ]
+    },
+    {
+      "title": "XRP News Today: XRP Now Soars As Market Dynamics Fuel Rally",
+      "link": "https://cryptopanic.com/news/ripple/22612154/XRP-News-Today-XRP-Now-Soars-As-Market-Dynamics-Fuel-Rally",
+      "pubDate": "2025-06-17T00:58:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP Rally: Discover how XRP's price surged to $2. 29 as investor confidence drives significant market gains.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 17 June 2025: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/decentraland/22612214/Spell-Wallet-Daily-Puzzle-17-June-2025-Earn-Reward-of-1-MANA",
+      "pubDate": "2025-06-17T00:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,713 @@
+{
+  "date": "2024-12-22",
+  "fetchedAt": "2026-02-05T07:27:08.266Z",
+  "articleCount": 53,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "What happened? The app made me sell cheaper!",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/20466280/What-happened-The-app-made-me-sell-cheaper",
+      "pubDate": "2024-12-22T23:42:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO",
+        "MCO"
+      ]
+    },
+    {
+      "title": "What happened in crypto this week",
+      "link": "https://cryptopanic.com/news/20461726/What-happened-in-crypto-this-week?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T22:11:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "INJ"
+      ]
+    },
+    {
+      "title": "Securitize proposes BlackRock BUIDL fund as collateral for Frax USD",
+      "link": "https://cryptopanic.com/news/20461710/Securitize-proposes-BlackRock-BUIDL-fund-as-collateral-for-Frax-USD?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T22:02:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FRAX"
+      ]
+    },
+    {
+      "title": "UAE Joins Bitcoin Accumulation Buzz With Unverified $40 Billion Claim",
+      "link": "https://cryptopanic.com/news/20461766/UAE-Joins-Bitcoin-Accumulation-Buzz-With-Unverified-40-Billion-Claim?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T22:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "T"
+      ]
+    },
+    {
+      "title": "Trump appoints former college football player, GOP House nominee Bo Hines to head crypto council",
+      "link": "https://cryptopanic.com/news/20461693/Trump-appoints-former-college-football-player-GOP-House-nominee-Bo-Hines-to-head-crypto-council?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T21:52:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PEOPLE"
+      ]
+    },
+    {
+      "title": "Infomon Blends Pokémon Go With NFTs and X Integration",
+      "link": "https://cryptopanic.com/news/20461691/Infomon-Blends-Pokemon-Go-With-NFTs-and-X-Integration?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T21:51:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "AR",
+        "NFT"
+      ]
+    },
+    {
+      "title": "Altcoin Market Struggles to Rise – What's Happening?",
+      "link": "https://cryptopanic.com/news/20461641/Altcoin-Market-Struggles-to-Rise-Whats-Happening?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T21:06:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "PEPE",
+        "OP",
+        "WIF"
+      ]
+    },
+    {
+      "title": "SUI, BGB, ENA and VIRTUAL show strength as Bitcoin looks for direction",
+      "link": "https://cryptopanic.com/news/20461640/SUI-BGB-ENA-and-VIRTUAL-show-strength-as-Bitcoin-looks-for-direction?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T21:05:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SUI",
+        "BGB",
+        "ENA",
+        "VIRTUAL"
+      ]
+    },
+    {
+      "title": "Cardano’s Charles Hoskinson to meet Democratic Senators in push of bipartisan crypto agenda",
+      "link": "https://cryptopanic.com/news/20461644/Cardanos-Charles-Hoskinson-to-meet-Democratic-Senators-in-push-of-bipartisan-crypto-agenda?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T21:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ripple’s CEO Now Highlights XRP’s Potential Across Industries",
+      "link": "https://cryptopanic.com/news/20461649/Ripples-CEO-Now-Highlights-XRPs-Potential-Across-Industries?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T20:59:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "-",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Understanding Litecoin Core: A Comprehensive Guide",
+      "link": "https://cryptopanic.com/news/20461555/Understanding-Litecoin-Core-A-Comprehensive-Guide?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T20:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Securitize proposes adding BlackRock’s BUIDL token as Frax USD stablecoin backing",
+      "link": "https://cryptopanic.com/news/20461554/Securitize-proposes-adding-BlackRocks-BUIDL-token-as-Frax-USD-stablecoin-backing?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T20:13:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FRAX",
+        "ENA"
+      ]
+    },
+    {
+      "title": "Uniswap and OKB in the Red, Experts Spot the Next Exchange Token Moonshot",
+      "link": "https://cryptopanic.com/news/okb/20461562/Uniswap-and-OKB-in-the-Red-Experts-Spot-the-Next-Exchange-Token-Moonshot",
+      "pubDate": "2024-12-22T19:29:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "OKB"
+      ]
+    },
+    {
+      "title": "Don’t Waste Money on These 4 Meme Coins—This One Might Be a Winner",
+      "link": "https://cryptopanic.com/news/20461690/Dont-Waste-Money-on-These-4-Meme-CoinsThis-One-Might-Be-a-Winner?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T19:28:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PENGU",
+        "DOGS"
+      ]
+    },
+    {
+      "title": "Crypto market’s weekly winners and losers – HYPE, BGB, WIF, APT",
+      "link": "https://cryptopanic.com/news/20461452/Crypto-markets-weekly-winners-and-losers-HYPE-BGB-WIF-APT?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T19:00:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "APT",
+        "WIF",
+        "BGB",
+        "HYPE"
+      ]
+    },
+    {
+      "title": "Charles Hoskinson Reflects on Cardano’s Journey and Future",
+      "link": "https://cryptopanic.com/news/20461435/Charles-Hoskinson-Reflects-on-Cardanos-Journey-and-Future?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T18:53:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "On December 22, 2024, Charles Hoskinson, co-creator of Cardano, addressed the blockchain community in a candid and detailed livestream. Broadcasting from Colorado, Hoskinson shared insights about Cardano’s governance, partnerships, and technological advancements while reflecting on the challenges and successes of the year. He offered a roadmap for Cardano’s evolution and expressed his...",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Stablecoin Frenzy: USDE Nears $6B as USD0 Rockets Past $1B in Market Supply",
+      "link": "https://cryptopanic.com/news/20461427/Stablecoin-Frenzy-USDE-Nears-6B-as-USD0-Rockets-Past-1B-in-Market-Supply?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T18:46:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "ENA",
+        "USDe",
+        "USD0"
+      ]
+    },
+    {
+      "title": "Top Crypto Pick: This $0.0013 Coin Could Challenge Polygon and Avalanche for Market Dominance",
+      "link": "https://cryptopanic.com/news/20461446/Top-Crypto-Pick-This-00013-Coin-Could-Challenge-Polygon-and-Avalanche-for-Market-Dominance?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T17:55:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Expert Hints at 11x Growth for a New Coin – the Next Binance Coin or Solana?",
+      "link": "https://cryptopanic.com/news/20461358/Expert-Hints-at-11x-Growth-for-a-New-Coin-the-Next-Binance-Coin-or-Solana?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T17:39:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Ethereum and Solana NFT Scammers Charged in $22 Million Rug Pull Scheme",
+      "link": "https://cryptopanic.com/news/20461268/Ethereum-and-Solana-NFT-Scammers-Charged-in-22-Million-Rug-Pull-Scheme?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T16:38:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "NFT"
+      ]
+    },
+    {
+      "title": "Is $2000 A Realistic Price Target For Binance Coin (BNB)? Here's What The Experts Think",
+      "link": "https://cryptopanic.com/news/20461185/Is-2000-A-Realistic-Price-Target-For-Binance-Coin-BNB-Heres-What-The-Experts-Think?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T15:39:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BNB"
+      ]
+    },
+    {
+      "title": "Top Cryptos to Buy - BlockDAG Joins Toncoin, Aptos and Avalanche as Best Picks",
+      "link": "https://cryptopanic.com/news/20461370/Top-Cryptos-to-Buy-BlockDAG-Joins-Toncoin-Aptos-and-Avalanche-as-Best-Picks?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T15:15:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "TON",
+        "APT"
+      ]
+    },
+    {
+      "title": "Vertus Daily Combo Code for 23th December 2024",
+      "link": "https://cryptopanic.com/news/20461326/Vertus-Daily-Combo-Code-for-23th-December-2024?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T15:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "TON"
+      ]
+    },
+    {
+      "title": "Monsta Mash ($MASH) Targets 1000% Gains as Litecoin (LTC) and Ripple (XRP) Prepare for Explosive Breakouts!",
+      "link": "https://cryptopanic.com/news/20461101/Monsta-Mash-MASH-Targets-1000-Gains-as-Litecoin-LTC-and-Ripple-XRP-Prepare-for-Explosive-Breakouts?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T15:03:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "LTC"
+      ]
+    },
+    {
+      "title": "TapCoin Daily Combo 23 December 2024: Play To Earn Rewards",
+      "link": "https://cryptopanic.com/news/20461264/TapCoin-Daily-Combo-23-December-2024-Play-To-Earn-Rewards?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T14:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "TON"
+      ]
+    },
+    {
+      "title": "BLUM Daily Video Codes 23 December 2024: Earn 250 BP Points",
+      "link": "https://cryptopanic.com/news/20461199/BLUM-Daily-Video-Codes-23-December-2024-Earn-250-BP-Points?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T13:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGS"
+      ]
+    },
+    {
+      "title": "BitTorrent (BTT) Tops the Market, but the Trend May Not Hold",
+      "link": "https://cryptopanic.com/news/20461046/BitTorrent-BTT-Tops-the-Market-but-the-Trend-May-Not-Hold?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T13:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTT"
+      ]
+    },
+    {
+      "title": "Ethereum Set To Move Up Against Bitcoin, According to Analyst Benjamin Cowen – Here’s His Outlook",
+      "link": "https://cryptopanic.com/news/20460828/Ethereum-Set-To-Move-Up-Against-Bitcoin-According-to-Analyst-Benjamin-Cowen-Heres-His-Outlook?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T12:45:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A closely followed crypto analyst says that Ethereum (ETH) looks primed to surge against Bitcoin (BTC) as we enter the new year. In a new video update, crypto strategist Benjamin Cowen tells his 848,000 YouTube subscribers that based on historical trends, Ethereum should soon bottom out against the top crypto asset by market cap. According […] The post Ethereum Set To Move Up Against Bitcoin,...",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Why Bitcoin’s ‘red-hot run’ could correct to ‘$20,000 over the next few weeks’",
+      "link": "https://cryptopanic.com/news/20460637/Why-Bitcoins-red-hot-run-could-correct-to-20000-over-the-next-few-weeks?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T11:32:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ]
+    },
+    {
+      "title": "Almost No New XRP Investors Coming: Details",
+      "link": "https://cryptopanic.com/news/20460574/Almost-No-New-XRP-Investors-Coming-Details?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T10:58:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "XRP not seeing fresh inflows, which is substantial problem",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 11
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Does Ethereum Need Its Own Michael Saylor? A Look at the Crypto Community’s Reaction",
+      "link": "https://cryptopanic.com/news/20460570/Does-Ethereum-Need-Its-Own-Michael-Saylor-A-Look-at-the-Crypto-Communitys-Reaction?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T10:54:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ]
+    },
+    {
+      "title": "Fantom breaks $1: Will FTM continue its bullish trend towards $1.50?",
+      "link": "https://cryptopanic.com/news/20460463/Fantom-breaks-1-Will-FTM-continue-its-bullish-trend-towards-150?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T10:00:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FTM"
+      ]
+    },
+    {
+      "title": "Jump Crypto Subsidiary Settles with SEC for $123M Over TerraUSD Misrepresentation",
+      "link": "https://cryptopanic.com/news/20460605/Jump-Crypto-Subsidiary-Settles-with-SEC-for-123M-Over-TerraUSD-Misrepresentation?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T09:48:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "LUNA"
+      ]
+    },
+    {
+      "title": "Why Ethereum Classic could be setting up for a 20% price jump",
+      "link": "https://cryptopanic.com/news/20460427/Why-Ethereum-Classic-could-be-setting-up-for-a-20-price-jump?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T09:30:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "Solana Price Continues Downward Slide — Is A Rebound Possible At $180?",
+      "link": "https://cryptopanic.com/news/20460380/Solana-Price-Continues-Downward-Slide-Is-A-Rebound-Possible-At-180?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T09:00:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "SOL",
+        "SUI",
+        "ATH",
+        "ALI"
+      ]
+    },
+    {
+      "title": "THORchain Review",
+      "link": "https://cryptopanic.com/news/20460372/THORchain-Review?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T09:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RUNE"
+      ]
+    },
+    {
+      "title": "The Metaverse We’ve All Been Waiting For: Wilder World Unveils Gameplay Trailer",
+      "link": "https://cryptopanic.com/news/20460488/The-Metaverse-Weve-All-Been-Waiting-For-Wilder-World-Unveils-Gameplay-Trailer?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T08:55:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NFT",
+        "TIA"
+      ]
+    },
+    {
+      "title": "Polkadot’s make or break moment at $7: Road to $30 in sight?",
+      "link": "https://cryptopanic.com/news/20460317/Polkadots-make-or-break-moment-at-7-Road-to-30-in-sight?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T08:00:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "UNUS SED LEO’s Price Prediction: What to Expect between 2025 and 2030",
+      "link": "https://cryptopanic.com/news/20460296/UNUS-SED-LEOs-Price-Prediction-What-to-Expect-between-2025-and-2030?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T08:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LEO"
+      ]
+    },
+    {
+      "title": "These Are the Top 10 Cryptocurrencies by ‘Notable Development Activity’ (Santiment)",
+      "link": "https://cryptopanic.com/news/20460267/These-Are-the-Top-10-Cryptocurrencies-by-Notable-Development-Activity-Santiment?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T07:28:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "DOT",
+        "LINK",
+        "OP"
+      ]
+    },
+    {
+      "title": "Cathie Wood Predicts Bitcoin Will Reach $1.5 Million by 2030",
+      "link": "https://cryptopanic.com/news/20460227/Cathie-Wood-Predicts-Bitcoin-Will-Reach-15-Million-by-2030?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T06:51:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ARK"
+      ]
+    },
+    {
+      "title": "Why Chainlink is Vital for the Future of Smart Contracts",
+      "link": "https://cryptopanic.com/news/20460208/Why-Chainlink-is-Vital-for-the-Future-of-Smart-Contracts?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T06:30:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "AAVE: THESE factors could drive the coin to $351",
+      "link": "https://cryptopanic.com/news/20460186/AAVE-THESE-factors-could-drive-the-coin-to-351?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T06:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 22 December 2024: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/20460254/Spell-Wallet-Daily-Puzzle-22-December-2024-Earn-Reward-of-1-MANA?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T05:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "Litecoin, HBAR ETFs Speculation Soars – Lunex Gains Steam Amid Explosive Price Forecasts",
+      "link": "https://cryptopanic.com/news/20460136/Litecoin-HBAR-ETFs-Speculation-Soars-Lunex-Gains-Steam-Amid-Explosive-Price-Forecasts?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T05:18:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Render: Can whales push RNDR to $8.13 after a 40% dip?",
+      "link": "https://cryptopanic.com/news/20460124/Render-Can-whales-push-RNDR-to-813-after-a-40-dip?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T05:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RENDER"
+      ]
+    },
+    {
+      "title": "Bitcoin Drops Below $100,000: The End Or Beginning Of The Crypto Bull Market?",
+      "link": "https://cryptopanic.com/news/20460110/Bitcoin-Drops-Below-100000-The-End-Or-Beginning-Of-The-Crypto-Bull-Market?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T04:30:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDC"
+      ]
+    },
+    {
+      "title": "Avalanche: Understanding Its Unique Consensus Mechanism",
+      "link": "https://cryptopanic.com/news/20460107/Avalanche-Understanding-Its-Unique-Consensus-Mechanism?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T04:30:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Uniswap [UNI] price prediction – Traders, expect THIS after altcoin’s 14% hike!",
+      "link": "https://cryptopanic.com/news/20460021/Uniswap-UNI-price-prediction-Traders-expect-THIS-after-altcoins-14-hike?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T03:00:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Shiba Eternity & Agent Shiboshi Unleash $BONE-anza! 750 Tokens Up For Grabs in Epic Weekend Tournament!",
+      "link": "https://cryptopanic.com/news/20459961/Shiba-Eternity-Agent-Shiboshi-Unleash-BONE-anza-750-Tokens-Up-For-Grabs-in-Epic-Weekend-Tournament?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T02:23:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "BONE"
+      ]
+    },
+    {
+      "title": "Altcoin That’s Up 20,000%+ Year-to-Date and Nine Others Are Seeing ‘Very Large Whale Transfers’: Santiment",
+      "link": "https://cryptopanic.com/news/20459567/Altcoin-Thats-Up-20000-Year-to-Date-and-Nine-Others-Are-Seeing-Very-Large-Whale-Transfers-Santiment?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T01:00:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "AAVE",
+        "GNO",
+        "FLOKI"
+      ]
+    },
+    {
+      "title": "Hex founder Richard Heart wanted by Interpol, Europol on charges of tax evasion and assault",
+      "link": "https://cryptopanic.com/news/20459462/Hex-founder-Richard-Heart-wanted-by-Interpol-Europol-on-charges-of-tax-evasion-and-assault?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T00:31:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GAL"
+      ]
+    },
+    {
+      "title": "The Shib Magazine New Website Launches with $BONE Giveaway: 10 Crypto Holders Win Big!",
+      "link": "https://cryptopanic.com/news/20459425/The-Shib-Magazine-New-Website-Launches-with-BONE-Giveaway-10-Crypto-Holders-Win-Big?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-22T00:12:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "BONE"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "date": "2018-05-22",
+  "fetchedAt": "2026-02-05T07:27:06.956Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Placeholder VC Puts Money on Decred to Rival Bitcoin",
+      "link": "https://cryptopanic.com/news/2003862/Placeholder-VC-Puts-Money-on-Decred-to-Rival-Bitcoin",
+      "pubDate": "2018-05-22T18:30:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DCR"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

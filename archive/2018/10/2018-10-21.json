@@ -1,0 +1,26 @@
+{
+  "date": "2018-10-21",
+  "fetchedAt": "2026-02-05T07:27:07.856Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Sesameseed Opens Beta Program for TronCard, a Payments Card for Tron Blockchain",
+      "link": "https://cryptopanic.com/news/3411726/Sesameseed-Opens-Beta-Program-for-TronCard-a-Payments-Card-for-Tron-Blockchain",
+      "pubDate": "2018-10-21T13:44:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

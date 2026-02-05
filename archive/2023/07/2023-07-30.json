@@ -1,0 +1,265 @@
+{
+  "date": "2023-07-30",
+  "fetchedAt": "2026-02-05T07:27:07.313Z",
+  "articleCount": 17,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "CRV Tanks 19% After Curve Finance Loses $46 Million In Exploits",
+      "link": "https://cryptopanic.com/news/18806021/CRV-Tanks-19-After-Curve-Finance-Loses-46-Million-In-Exploits",
+      "pubDate": "2023-07-30T21:44:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Curve Finance Exploit Puts $100M+ Worth of Crypto at Risk; CRV Token Tumbles",
+      "link": "https://cryptopanic.com/news/18805972/Curve-Finance-Exploit-Puts-100M-Worth-of-Crypto-at-Risk-CRV-Token-Tumbles",
+      "pubDate": "2023-07-30T20:25:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Curve, a stablecoin exchange at the heart of decentralized finance (DeFi) on Ethereum, has been the victim of an exploit according to a tweet from the project. Upwards of $100 million worth of cryptocurrency are at risk due to a “re-entrancy” bug in Vyper, a programming language used to power parts of the Curve system. Several stablecoin pools on the platform — used for pricing and liquidity...",
+      "currencies": [
+        "ETH",
+        "CRV"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Millions of Curve DAO tokens stolen minutes before a white hat rescue mission",
+      "link": "https://cryptopanic.com/news/18805954/Millions-of-Curve-DAO-tokens-stolen-minutes-before-a-white-hat-rescue-mission",
+      "pubDate": "2023-07-30T19:55:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "JUST IN: Major Hack Incident in DeFi World! CRV Price Temporarily  Drops to $0.1!",
+      "link": "https://cryptopanic.com/news/18805951/JUST-IN-Major-Hack-Incident-in-DeFi-World-CRV-Price-Temporarily-Drops-to-01",
+      "pubDate": "2023-07-30T19:50:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "After the hacking event today, this time the hackers were targeting the CRV token. The price of the token has dropped from $0.70 to $0.10. Continue Reading: JUST IN: Major Hack Incident in DeFi World! CRV Price Temporarily Drops to $0.1!",
+      "currencies": [
+        "CRV"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Soaring Demand for XRP Could Ignite a Price Boom, Predicts Crypto Expert",
+      "link": "https://cryptopanic.com/news/18805947/Soaring-Demand-for-XRP-Could-Ignite-a-Price-Boom-Predicts-Crypto-Expert",
+      "pubDate": "2023-07-30T19:39:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Versan Aljarrah, the founder of Black Swan Capitalist and a well-known YouTuber, recently sparked a conversation on Twitter, hinting at a future where XRP’s current budget-friendly price may not stand the test of time as the worldwide thirst for this digital asset intensifies Aljarrah’s digital shout-out came with a sense of immediacy, suggesting that the supply of […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple and FPC Report: Crypto-Enabled Solutions Set to Revolutionize Global Payments",
+      "link": "https://cryptopanic.com/news/18805931/Ripple-and-FPC-Report-Crypto-Enabled-Solutions-Set-to-Revolutionize-Global-Payments",
+      "pubDate": "2023-07-30T19:18:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The payments landscape is undergoing rapid transformation, with digital currencies playing a pivotal role, according to a recent report by Ripple and the Faster Payments Council (FPC). The report “Transforming the Way Money Moves” explores the potential of cryptocurrencies in the evolving payments ecosystem. The report emphasizes that the payments ecosystem is evolving quickly, with […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Shiba Inu Primed For Huge Price Outburst After Shibarium Beta Bridge Goes Live For Public Testing",
+      "link": "https://cryptopanic.com/news/18805890/Shiba-Inu-Primed-For-Huge-Price-Outburst-After-Shibarium-Beta-Bridge-Goes-Live-For-Public-Testing",
+      "pubDate": "2023-07-30T18:12:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "In a major development for the crypto community, Shibarium Beta Bridge has been launched for public testing, bringing Shibarium mainnet closer to launch.",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DOGE, MKR, OP and XDC gather strength as Bitcoin price remains range-bound",
+      "link": "https://cryptopanic.com/news/18805877/DOGE-MKR-OP-and-XDC-gather-strength-as-Bitcoin-price-remains-range-bound",
+      "pubDate": "2023-07-30T18:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "MKR",
+        "XDC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SEC Warns Against Misleading Crypto Audits",
+      "link": "https://cryptopanic.com/news/18805597/SEC-Warns-Against-Misleading-Crypto-Audits",
+      "pubDate": "2023-07-30T13:52:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "KCS"
+      ]
+    },
+    {
+      "title": "Baron Davis Wants a Player-Owned NBA Team. Can This Pro-Sailing League Get Him There?",
+      "link": "https://cryptopanic.com/news/18805538/Baron-Davis-Wants-a-Player-Owned-NBA-Team-Can-This-Pro-Sailing-League-Get-Him-There",
+      "pubDate": "2023-07-30T13:01:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Ripple Report Foresees Blockchain Saving Financial Institutions $10 Billion By 2030",
+      "link": "https://cryptopanic.com/news/18805521/Ripple-Report-Foresees-Blockchain-Saving-Financial-Institutions-10-Billion-By-2030",
+      "pubDate": "2023-07-30T12:54:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "COMP"
+      ]
+    },
+    {
+      "title": "Maker (MKR) Signals Bullish Price Formation – Is $1.300 Around The Corner?",
+      "link": "https://cryptopanic.com/news/18805476/Maker-MKR-Signals-Bullish-Price-Formation-Is-1300-Around-The-Corner",
+      "pubDate": "2023-07-30T12:22:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "DAI",
+        "SHIB",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Crypto Weekly Roundup: SBF Under Gag Order And More",
+      "link": "https://cryptopanic.com/news/18805376/Crypto-Weekly-Roundup-SBF-Under-Gag-Order-And-More",
+      "pubDate": "2023-07-30T10:38:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "KCS",
+        "EOS"
+      ]
+    },
+    {
+      "title": "What to expect as Optimism unlocks tokens worth millions",
+      "link": "https://cryptopanic.com/news/18805370/What-to-expect-as-Optimism-unlocks-tokens-worth-millions",
+      "pubDate": "2023-07-30T10:30:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "Optimism unlocked 24 million OP tokens on 30 July 2023, which accounted for 3.56% of its total supply.",
+      "currencies": [
+        "OP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Apple’s Potential Involvement with Cryptocurrency is Expected",
+      "link": "https://cryptopanic.com/news/18810927/Apples-Potential-Involvement-with-Cryptocurrency-is-Expected",
+      "pubDate": "2023-07-30T10:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "Chiliz: Network’s impressive wallet growth reinforces optimism in Chiliz 2.0",
+      "link": "https://cryptopanic.com/news/18805234/Chiliz-Networks-impressive-wallet-growth-reinforces-optimism-in-Chiliz-20",
+      "pubDate": "2023-07-30T07:30:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "CHZ"
+      ]
+    },
+    {
+      "title": "AI Crypto Projects Witness Downtick in Trading Volume After Surge of Buzz Earlier This Year: Market Data Firm",
+      "link": "https://cryptopanic.com/news/18805061/AI-Crypto-Projects-Witness-Downtick-in-Trading-Volume-After-Surge-of-Buzz-Earlier-This-Year-Market-Data-Firm",
+      "pubDate": "2023-07-30T00:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "GRT",
+        "RNDR"
+      ]
+    }
+  ]
+}

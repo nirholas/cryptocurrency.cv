@@ -1,0 +1,486 @@
+{
+  "date": "2021-03-05",
+  "fetchedAt": "2026-02-05T07:27:06.842Z",
+  "articleCount": 34,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "99% gone in 60 seconds: How a Polkadot trader may have crashed DOT futures",
+      "link": "https://cryptopanic.com/news/polkadot/11579066/99-gone-in-60-seconds-How-a-Polkadot-trader-may-have-crashed-DOT-futures",
+      "pubDate": "2021-03-05T22:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Polkadot (DOT) futures at Binance flash-crashed by 99.5%, potentially generating an $8.3-million profit for the ‘trader’ if they used this clever strategy.",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "I've read in comments here that nu would be supported on ledger, but their website says no... any suggestions for a hardware wallet for nu?",
+      "link": "https://cryptopanic.com/news/11582868/Ive-read-in-comments-here-that-nu-would-be-supported-on-ledger-but-their-website-says-no-any-suggestions-for-a-hardware-wallet-for-nu",
+      "pubDate": "2021-03-05T21:04:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Added 8k to my position at .65 I had to 🤷‍️",
+      "link": "https://cryptopanic.com/news/11578954/Added-8k-to-my-position-at-65-I-had-to",
+      "pubDate": "2021-03-05T21:02:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "IOTA token added as collateral asset on Bitfinex Borrow",
+      "link": "https://cryptopanic.com/news/11578929/IOTA-token-added-as-collateral-asset-on-Bitfinex-Borrow",
+      "pubDate": "2021-03-05T20:51:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "CryptoNinjas » IOTA token added as collateral asset on Bitfinex Borrow Bitfinex, the popular cryptocurrency exchange platform, today announced it has added IOTA as collateral on Bitfinex Borrow; after it was successful in a recent social media poll. An overwhelming majority of Bitfinex’s growing community opted for IOTA; with the token gathering 87.6% of the votes in a social media...",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SEC files motion to dismiss XRP holders’ petition",
+      "link": "https://cryptopanic.com/news/ripple/11578904/SEC-files-motion-to-dismiss-XRP-holders-petition",
+      "pubDate": "2021-03-05T20:35:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "United States Securities and Exchange Commission and former Acting Chairman Elad Roisman have filed a motion to dismiss a petition filed by XRP investors who seek to amend SEC’s complaint against Ripple. Through a writ of mandamus that was submitted in early January, petitioners hoped to change SEC’s decision to exclude the part of the […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Snapshot of the mogwaicoin chain for the free drop allocations for DOTMog, will be taken between block 620'000 and…",
+      "link": "https://cryptopanic.com/news/11581423/Snapshot-of-the-mogwaicoin-chain-for-the-free-drop-allocations-for-DOTMog-will-be-taken-between-block-620000-and",
+      "pubDate": "2021-03-05T20:19:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MOG"
+      ]
+    },
+    {
+      "title": "Crypto project PAID exploited, attacker gains over 2,000 ETH after minting nearly $160M in tokens",
+      "link": "https://cryptopanic.com/news/ethereum/11578804/Crypto-project-PAID-exploited-attacker-gains-over-2000-ETH-after-minting-nearly-160M-in-tokens",
+      "pubDate": "2021-03-05T19:25:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "PAID Network, a crypto project that utilizes an Ethereum-based token, has suffered a contract exploit, resulting in the minting of nearly $160 million worth of tokens by the attacker. Network data shows that just over 2,000 ETH — worth roughly $3 million at press time — was obtained by the attacker after some of the […]",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 19
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "SEC Strikes Back at XRP Holders by Moving to Dismiss Their Petition",
+      "link": "https://cryptopanic.com/news/ripple/11578745/SEC-Strikes-Back-at-XRP-Holders-by-Moving-to-Dismiss-Their-Petition",
+      "pubDate": "2021-03-05T18:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The SEC says that XRP holders can't prove that exchanges will re-list XRP if it amends its complaint against Ripple",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Will corporate America be at odds with NU",
+      "link": "https://cryptopanic.com/news/11582680/Will-corporate-America-be-at-odds-with-NU",
+      "pubDate": "2021-03-05T18:27:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "What is Cosmos Network (ATOM), the Internet of Blockchains?",
+      "link": "https://cryptopanic.com/news/11578700/What-is-Cosmos-Network-ATOM-the-Internet-of-Blockchains",
+      "pubDate": "2021-03-05T18:15:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Cosmos aims to create an “Internet of Blockchains,” where any blockchain is able to communicate, share data, and transact with any other.",
+      "currencies": [
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Survey: Stakeholder interests in public blockchains",
+      "link": "https://cryptopanic.com/news/11579689/Survey-Stakeholder-interests-in-public-blockchains",
+      "pubDate": "2021-03-05T16:03:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Binance email",
+      "link": "https://cryptopanic.com/news/11578331/Binance-email",
+      "pubDate": "2021-03-05T15:31:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Introducing Elon Protocol: The Easy Way to Do Defi",
+      "link": "https://cryptopanic.com/news/11578241/Introducing-Elon-Protocol-The-Easy-Way-to-Do-Defi",
+      "pubDate": "2021-03-05T15:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Ripple Signs 15 New Contracts with Banks Despite SEC Lawsuit",
+      "link": "https://cryptopanic.com/news/ripple/11578252/Ripple-Signs-15-New-Contracts-with-Banks-Despite-SEC-Lawsuit",
+      "pubDate": "2021-03-05T14:51:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Ripple's appeal has not been dented by the SEC's lawsuit over unregistered XRP sales",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Enjoy auto-compounding 20%+ daily returns in our new @FinanceGoose layer 1 vaults! #BSC…",
+      "link": "https://cryptopanic.com/news/11580879/Enjoy-auto-compounding-20-daily-returns-in-our-new-FinanceGoose-layer-1-vaults-BSC?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-05T14:17:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SUPRA",
+        "FLP"
+      ]
+    },
+    {
+      "title": "IOTA Newsletter #30 - A new dawn, IOTA Oracles, Digital Assets, Project Alvarium with Dell and Intel and more",
+      "link": "https://cryptopanic.com/news/11578167/IOTA-Newsletter-30-A-new-dawn-IOTA-Oracles-Digital-Assets-Project-Alvarium-with-Dell-and-Intel-and-more",
+      "pubDate": "2021-03-05T13:52:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "IOTA - A new dawn The launch of the first IOTA mainnet in June 2016 was the start of our journey to revolutionize Blockchain. Being a pioneer in a nascent, fast-paced industry means that you get some things right, while others have to be discarded. \"Fail fast, fail early and",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitfinex Adds IOTA as Collateral on Its Crypto Loan Portal",
+      "link": "https://cryptopanic.com/news/11578097/Bitfinex-Adds-IOTA-as-Collateral-on-Its-Crypto-Loan-Portal",
+      "pubDate": "2021-03-05T13:46:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Bitfinex Borrow has added IOTA token as collateral after a poll conducted on social media recently",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 21,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ADA, DOT Could Rise 20x in 2-3 Years, Says FD7 Ventures",
+      "link": "https://cryptopanic.com/news/polkadot/11578088/ADA-DOT-Could-Rise-20x-in-2-3-Years-Says-FD7-Ventures",
+      "pubDate": "2021-03-05T13:32:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "In addition to believing in ADA and DOT, he also believes that more institutional investors will begin to share his enthusiasm very soon. “The potential for these two projects along with Ethereum to change the way that the world does business is massive,” Chand said. “In my opinion, these 3 projects are going to start … Continued",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "A pleasure to support and work with a project that supports such a brilliant cause, we look forward to the future!",
+      "link": "https://cryptopanic.com/news/11580880/A-pleasure-to-support-and-work-with-a-project-that-supports-such-a-brilliant-cause-we-look-forward-to-the-future?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-05T12:12:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SUPRA",
+        "FLP"
+      ]
+    },
+    {
+      "title": "Any other forks like hive?",
+      "link": "https://cryptopanic.com/news/11578472/Any-other-forks-like-hive",
+      "pubDate": "2021-03-05T09:48:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "RT @go_eos: Not the first rodeo of the @ChintaiEOS team. Been doing solid things with the #EOSIO tech stack from the beginning and keep in…",
+      "link": "https://cryptopanic.com/news/11580338/RT-go_eos-Not-the-first-rodeo-of-the-ChintaiEOS-team-Been-doing-solid-things-with-the-EOSIO-tech-stack-from-the-beginning-and-keep-in?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-05T08:33:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "CHEX"
+      ]
+    },
+    {
+      "title": "Enjin Will Release Two Solutions To Support NFT Market And Reduce Ethereum Fees",
+      "link": "https://cryptopanic.com/news/11577460/Enjin-Will-Release-Two-Solutions-To-Support-NFT-Market-And-Reduce-Ethereum-Fees",
+      "pubDate": "2021-03-05T07:32:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "-",
+      "currencies": [
+        "ENJ"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SEC’s actions caused $15 billion in damages to XRP holders: Ripple",
+      "link": "https://cryptopanic.com/news/ripple/11577008/SECs-actions-caused-15-billion-in-damages-to-XRP-holders-Ripple",
+      "pubDate": "2021-03-05T07:02:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Weeks after the United States’ Securities and Exchange Commission filed an amended complaint in its lawsuit against Ripple Labs, the latter has now filed an official response, with the same asserting that the SEC is picking virtual currency winners and losers by exempting Bitcoin and Ether from the scrutiny of similar regulations. According to Ripple, […]",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Kai Law, the CEO of Hyperion, attended the MBACHINA Forum, the elite gathering of financial professions, academic r…",
+      "link": "https://cryptopanic.com/news/11575654/Kai-Law-the-CEO-of-Hyperion-attended-the-MBACHINA-Forum-the-elite-gathering-of-financial-professions-academic-r",
+      "pubDate": "2021-03-05T06:20:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Putting my $ where my mouth is. Bought $500 more. In this for the long haul",
+      "link": "https://cryptopanic.com/news/11574263/Putting-my-where-my-mouth-is-Bought-500-more-In-this-for-the-long-haul",
+      "pubDate": "2021-03-05T05:02:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "DeFi’s booming &amp; #TomoChain's super excited to be partnering with @bigdataprotocol, enabling $TOMOE-$BDP pool on it…",
+      "link": "https://cryptopanic.com/news/11577102/DeFis-booming-amp-TomoChains-super-excited-to-be-partnering-with-bigdataprotocol-enabling-TOMOE-BDP-pool-on-it",
+      "pubDate": "2021-03-05T04:03:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "NU on binance",
+      "link": "https://cryptopanic.com/news/11578891/NU-on-binance",
+      "pubDate": "2021-03-05T03:35:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Bitcoin and Ether Whales Prepare for Market Rally as Altcoins Outperform Top Cryptos",
+      "link": "https://cryptopanic.com/news/near/11574173/Bitcoin-and-Ether-Whales-Prepare-for-Market-Rally-as-Altcoins-Outperform-Top-Cryptos",
+      "pubDate": "2021-03-05T03:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin and Ethereum whales are preparing for a renewed cryptocurrency market rally, grabbing as much of both cryptoassets’ total supply as they can before prices move up in the near future. According to crypto analytics firm Santiment, Bitcoin’s largest holder – those with over 1,000 BTC or more, worth about $49.8 million at press time […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Not sure if this is something that’s allowed... but",
+      "link": "https://cryptopanic.com/news/11578995/Not-sure-if-this-is-something-thats-allowed-but",
+      "pubDate": "2021-03-05T03:12:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "1/3 of crypto investors don't know how crypto works, hence the top few coins dominate the market share. Instead of shilling your coin about 100x potential, educate people about the technology & innovation and not the price",
+      "link": "https://cryptopanic.com/news/11574152/13-of-crypto-investors-dont-know-how-crypto-works-hence-the-top-few-coins-dominate-the-market-share-Instead-of-shilling-your-coin-about-100x-potential-educate-people-about-the-technology-innovation-and-not-the-price",
+      "pubDate": "2021-03-05T03:02:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Nu will be 1$ during weekend",
+      "link": "https://cryptopanic.com/news/11582758/Nu-will-be-1-during-weekend",
+      "pubDate": "2021-03-05T02:52:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "New stage of whitecoin!",
+      "link": "https://cryptopanic.com/news/11577292/New-stage-of-whitecoin",
+      "pubDate": "2021-03-05T02:51:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XWC"
+      ]
+    },
+    {
+      "title": "In NU we trust. 2$ soon baby!",
+      "link": "https://cryptopanic.com/news/11574102/In-NU-we-trust-2-soon-baby",
+      "pubDate": "2021-03-05T02:02:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Ethereum gas fees drop as daily DEX and DeFi volumes decline",
+      "link": "https://cryptopanic.com/news/uniswap/11574068/Ethereum-gas-fees-drop-as-daily-DEX-and-DeFi-volumes-decline",
+      "pubDate": "2021-03-05T01:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum fees have pulled back from their recent highs alongside a decline in DeFi transaction volumes but the rise of NFTs could push transaction costs back to new highs.",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    }
+  ]
+}

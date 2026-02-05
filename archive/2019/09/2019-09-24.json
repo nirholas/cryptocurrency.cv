@@ -1,0 +1,42 @@
+{
+  "date": "2019-09-24",
+  "fetchedAt": "2026-02-05T07:27:06.906Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bakkt Nightmare: Bitcoin Plunges by More Than $1,500 to $8,000",
+      "link": "https://cryptopanic.com/news/6673848/Bakkt-Nightmare-Bitcoin-Plunges-by-More-Than-1500-to-8000",
+      "pubDate": "2019-09-24T20:43:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "IOTA and Linux Foundation partner for “edge computing” project",
+      "link": "https://cryptopanic.com/news/6668009/IOTA-and-Linux-Foundation-partner-for-edge-computing-project",
+      "pubDate": "2019-09-24T13:23:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

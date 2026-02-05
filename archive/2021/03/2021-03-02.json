@@ -1,0 +1,604 @@
+{
+  "date": "2021-03-02",
+  "fetchedAt": "2026-02-05T07:27:06.779Z",
+  "articleCount": 40,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "MOBI Nucypher mention posted 3 hours ago",
+      "link": "https://cryptopanic.com/news/11568134/MOBI-Nucypher-mention-posted-3-hours-ago",
+      "pubDate": "2021-03-02T22:08:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "DEX aggregator 1inch integrates Bitquery’s API-powered crypto trading data",
+      "link": "https://cryptopanic.com/news/11562711/DEX-aggregator-1inch-integrates-Bitquerys-API-powered-crypto-trading-data",
+      "pubDate": "2021-03-02T21:38:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "CryptoNinjas » DEX aggregator 1inch integrates Bitquery’s API-powered crypto trading data 1inch.exchange, an Ethereum decentralized exchange (DEX) aggregator, has announced a new partnership with Bitquery.io (formerly bloxy.info), a blockchain data provider. With this integration, Bitquery will provide a real-time trading data feed on multiple decentralized exchanges and protocols to...",
+      "currencies": [
+        "ETH",
+        "1INCH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "If you also think @CoinDesk’s 28-hr suspension from #YouTube was unacceptable, join us in building @safenetworktech…",
+      "link": "https://cryptopanic.com/news/11565071/If-you-also-think-CoinDesks-28-hr-suspension-from-YouTube-was-unacceptable-join-us-in-building-safenetworktech",
+      "pubDate": "2021-03-02T20:45:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "Grayscale adds 174k LTC to its Litecoin Trust",
+      "link": "https://cryptopanic.com/news/litecoin/11562584/Grayscale-adds-174k-LTC-to-its-Litecoin-Trust",
+      "pubDate": "2021-03-02T20:05:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "New York-based cryptocurrency asset managers Grayscale bought over 174,000 Litecoin over the past month.",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Alt Season 2.0: Analyst Claims It’s “Showtime” For Ethereum",
+      "link": "https://cryptopanic.com/news/near/11562552/Alt-Season-20-Analyst-Claims-Its-Showtime-For-Ethereum",
+      "pubDate": "2021-03-02T20:00:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum has had an incredible year thus far, breaking its former all-time high on its USD pair and soaring well above it. However, on its Bitcoin trading pair, the altcoin has struggled to get anywhere near its former highs. According to one crypto trader, that all is about to change, and it is finally “showtime” […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance still not budging. Are they simply anti-ETH or anti-encryption that can't be controlled?",
+      "link": "https://cryptopanic.com/news/11563177/Binance-still-not-budging-Are-they-simply-anti-ETH-or-anti-encryption-that-cant-be-controlled",
+      "pubDate": "2021-03-02T18:56:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Good news for Nu, or just Eth?",
+      "link": "https://cryptopanic.com/news/11567877/Good-news-for-Nu-or-just-Eth",
+      "pubDate": "2021-03-02T18:52:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "RT @chainlink: .@InsureToken is using Historical #Chainlink Price Data to calculate market volatility and dynamically adjust premiums on cr…",
+      "link": "https://cryptopanic.com/news/11566365/RT-chainlink-InsureToken-is-using-Historical-Chainlink-Price-Data-to-calculate-market-volatility-and-dynamically-adjust-premiums-on-cr",
+      "pubDate": "2021-03-02T18:42:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SURE"
+      ]
+    },
+    {
+      "title": "RT @InsureToken: @MartiniGuyYT love your vision! We are so aligned on this!",
+      "link": "https://cryptopanic.com/news/11566366/RT-InsureToken-MartiniGuyYT-love-your-vision-We-are-so-aligned-on-this",
+      "pubDate": "2021-03-02T18:11:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SURE"
+      ]
+    },
+    {
+      "title": "Chainlink May Gain Prominence Over Bitcoin – Citi Report",
+      "link": "https://cryptopanic.com/news/chainlink/11562392/Chainlink-May-Gain-Prominence-Over-Bitcoin-Citi-Report",
+      "pubDate": "2021-03-02T18:06:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Quick take: A recent report by Citi Group forecasted that Chainlink may gain prominence over Bitcoin The report cites the use of LINK as a token in the Chainlink ecosystem could increase as blockchain continues to thrive globally over time Chainlink is also being adopted on other networks such as Tezos and Polkadot Earlier this week, the team at Citi Group released a report explaining that...",
+      "currencies": [
+        "BTC",
+        "LINK",
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "PayPal to Buy Curv Crypto Custody Firm",
+      "link": "https://cryptopanic.com/news/11562307/PayPal-to-Buy-Curv-Crypto-Custody-Firm",
+      "pubDate": "2021-03-02T17:11:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "PayPal is reportedly buying the Curv cryptocurrency custody firm, with price estimates ranging between $200 to $500 million. PayPal Moves Further Into Crypto The Curv acquisition is the latest in a series of moves indicating PayPal’s interest in cryptocurrencies. The payment processing giant enabled crypto purchases in Q4 2020, raising the buy limits from $10,000 to $15,000 in...",
+      "currencies": [
+        "BTC",
+        "CRV"
+      ],
+      "votes": {
+        "positive": 24,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Sony Europe joins Theta Network as ‘Enterprise Validator’",
+      "link": "https://cryptopanic.com/news/11562305/Sony-Europe-joins-Theta-Network-as-Enterprise-Validator",
+      "pubDate": "2021-03-02T17:10:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "A division of Sony Europe has joined Theta Labs’ Enterprise Validator and Governance Council Program, the firms said in a release shared with CryptoSlate.",
+      "currencies": [
+        "THETA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "IOTA and Horizen Partner to Maximize IOTA Oracles Adoption by New Blockchains",
+      "link": "https://cryptopanic.com/news/11562308/IOTA-and-Horizen-Partner-to-Maximize-IOTA-Oracles-Adoption-by-New-Blockchains",
+      "pubDate": "2021-03-02T17:00:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Horizen, a technology platform that enables businesses and developers to create their public or private blockchains, announced a partnership with IOTA. The partnership will see the newly launched IOTA Oracles’ functionality and introduce oracle capabilities to the Horizen sidechain and scaling protocol, Zendoo. IOTA Partnership Plans IOTA is a cryptocurrency built to operate as theRead More",
+      "currencies": [
+        "MIOTA",
+        "ZEN"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin gains corporate support. Price volatility in modest range and price slump seems unlikely. Things going righ…",
+      "link": "https://cryptopanic.com/news/11564613/Bitcoin-gains-corporate-support-Price-volatility-in-modest-range-and-price-slump-seems-unlikely-Things-going-righ",
+      "pubDate": "2021-03-02T16:33:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "(OKEX) ARK Mainnet Upgrade: Depositing and Withdrawal Resumption",
+      "link": "https://cryptopanic.com/news/11566886/OKEX-ARK-Mainnet-Upgrade-Depositing-and-Withdrawal-Resumption",
+      "pubDate": "2021-03-02T16:25:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Built on VeChainThor, #DNV's new service “Tag. Trace. Trust.” intends to bridge trust between a company’s sustainab…",
+      "link": "https://cryptopanic.com/news/11566167/Built-on-VeChainThor-DNVs-new-service-Tag-Trace-Trust-intends-to-bridge-trust-between-a-companys-sustainab",
+      "pubDate": "2021-03-02T16:22:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "VET",
+        "VTHO"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Staking NuCypher on CoinList - What it is and How to do it.",
+      "link": "https://cryptopanic.com/news/11563363/Staking-NuCypher-on-CoinList-What-it-is-and-How-to-do-it",
+      "pubDate": "2021-03-02T15:36:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Helpful Nu analogy over on Twitter..",
+      "link": "https://cryptopanic.com/news/11562077/Helpful-Nu-analogy-over-on-Twitter",
+      "pubDate": "2021-03-02T15:31:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Grayscale Invests in 35 Million XLM Amid Rising Institutional Interest in Stellar",
+      "link": "https://cryptopanic.com/news/11562066/Grayscale-Invests-in-35-Million-XLM-Amid-Rising-Institutional-Interest-in-Stellar",
+      "pubDate": "2021-03-02T15:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Grayscale has been among the top institutions that have adopted cryptocurrencies over the past year to diversify their portfolio. In the last 30 days, Grayscale Investments hedge fund has acquired 35,855,625 XLM. Grayscale Investment in Cryptocurrencies The company also made purchases of 243,519 ETH, 174,939 LTC, and other altcoins in the past month. The totalRead More",
+      "currencies": [
+        "ETH",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ill winds: Why Mainframe Security Should be Heading Your 2021 Priorities List",
+      "link": "https://cryptopanic.com/news/11562577/Ill-winds-Why-Mainframe-Security-Should-be-Heading-Your-2021-Priorities-List",
+      "pubDate": "2021-03-02T14:28:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "MFT"
+      ]
+    },
+    {
+      "title": "Ethereum’s Future Is Far More Uncertain Than Bitcoin’s, Says Andreas Antonopoulos",
+      "link": "https://cryptopanic.com/news/ethereum/11561796/Ethereums-Future-Is-Far-More-Uncertain-Than-Bitcoins-Says-Andreas-Antonopoulos",
+      "pubDate": "2021-03-02T12:45:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin evangelist and educator Andreas Antonopoulos says Ethereum’s future is a blank canvas, compared to Bitcoin. In a new interview with Real Vision, Antonopoulos says Ethereum’s vast amount of potential use cases makes it hard to pinpoint exactly what’s in store for the world’s second-largest cryptocurrency by market cap. He says that while Bitcoin’s design is […]",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "ARK Wallet Staking",
+      "link": "https://cryptopanic.com/news/11572945/ARK-Wallet-Staking",
+      "pubDate": "2021-03-02T12:14:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "What does this mean..?",
+      "link": "https://cryptopanic.com/news/11567876/What-does-this-mean",
+      "pubDate": "2021-03-02T11:20:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Stellar (XLM) Introduces Update Horizon 2.0. Why Is It Crucial for Stellar?",
+      "link": "https://cryptopanic.com/news/11561616/Stellar-XLM-Introduces-Update-Horizon-20-Why-Is-It-Crucial-for-Stellar",
+      "pubDate": "2021-03-02T11:17:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Stellar Development Foundation (SDF) revealed details of Horizon 2.0 update. It revamps Stellar's architecture, making it more flexible and user-friendly",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 21,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Top Law Firm Sues MoneyGram Over XRP, Promises Compensation to Its Shareholders",
+      "link": "https://cryptopanic.com/news/ripple/11561617/Top-Law-Firm-Sues-MoneyGram-Over-XRP-Promises-Compensation-to-Its-Shareholders",
+      "pubDate": "2021-03-02T11:16:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "MoneyGram has been taken to court by a major law firm as its shareholders want compensation over the misleading statements about its partnership with Ripple and XRP",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Binance Coin (BNB) Bull Run: Analyst Makes Bold Case for $500",
+      "link": "https://cryptopanic.com/news/11561590/Binance-Coin-BNB-Bull-Run-Analyst-Makes-Bold-Case-for-500",
+      "pubDate": "2021-03-02T11:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Binance Coin should do to Ethereum what Bitcoin is doing to gold: eating a good portion of its market capitalization by acting as a better alternative. That was pretty much what Changpeng Zhao, the founder/CEO of Binance cryptocurrency exchange, dictated in his series of tweets on February 28 as he pitted their Binance Smart Chain […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We welcome Chintai to WalletInvestor.com where we feature market data and forecasts",
+      "link": "https://cryptopanic.com/news/11757001/We-welcome-Chintai-to-WalletInvestorcom-where-we-feature-market-data-and-forecasts?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-02T10:50:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHEX"
+      ]
+    },
+    {
+      "title": "Grayscale Acquires Almost 35 Million XLM as Institutional Interest in Stellar Grows",
+      "link": "https://cryptopanic.com/news/11561530/Grayscale-Acquires-Almost-35-Million-XLM-as-Institutional-Interest-in-Stellar-Grows",
+      "pubDate": "2021-03-02T10:22:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "According to recent data from Stellar Lumens, Grayscale has added an amount close to 35 million XLM to its crypto holdings over the past month",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 20,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Don't see any new LOOM tokens in your wallet after swapping them on or transferring them fr…",
+      "link": "https://cryptopanic.com/news/11565027/Dont-see-any-new-LOOM-tokens-in-your-wallet-after-swapping-them-on-or-transferring-them-fr",
+      "pubDate": "2021-03-02T09:47:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LOOM"
+      ]
+    },
+    {
+      "title": "Grayscale Bought 80% of All Litecoin Mined in February",
+      "link": "https://cryptopanic.com/news/litecoin/11561408/Grayscale-Bought-80-of-All-Litecoin-Mined-in-February",
+      "pubDate": "2021-03-02T09:03:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The 'digital silver' has seemingly found its backers among Grayscale’s accredited and institutional investors.",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 25,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @btsfav: r/YieldFarm stats Jun'20 - Feb'21 are amazing. shows the explosive interest growth in #DeFi",
+      "link": "https://cryptopanic.com/news/11565878/RT-btsfav-rYieldFarm-stats-Jun20-Feb21-are-amazing-shows-the-explosive-interest-growth-in-DeFi",
+      "pubDate": "2021-03-02T08:55:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "Ripple Sends 627,974,493 XRP to Jed McCaleb After Chris Larsen Gets 41 Million from Binance",
+      "link": "https://cryptopanic.com/news/ripple/11561380/Ripple-Sends-627974493-XRP-to-Jed-McCaleb-After-Chris-Larsen-Gets-41-Million-from-Binance",
+      "pubDate": "2021-03-02T08:49:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple fintech giant has wired another mammoth XRP amount to its cofounder, and Binance sent over 41 million XRP tokens to its former CEO Chris Larsen",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 9
+      }
+    },
+    {
+      "title": "RT @dougboneparth: The world when bitcoin is back over $50,000...",
+      "link": "https://cryptopanic.com/news/11564750/RT-dougboneparth-The-world-when-bitcoin-is-back-over-50000",
+      "pubDate": "2021-03-02T08:45:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "BlockFi Adds LINK Token, Interest Rate Pending",
+      "link": "https://cryptopanic.com/news/chainlink/11561376/BlockFi-Adds-LINK-Token-Interest-Rate-Pending",
+      "pubDate": "2021-03-02T08:40:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "BlockFi answers the Chainlink army’s calls. BlockFi to Add LINK BlockFi said it would add LINK–the native token of decentralized oracle project Chainlink. LINK is the ninth-most popular crypto asset, currently standing at a market capitalization of more than $11 billion, as per CoinGecko. The asset will join BlockFi’s select list of supported cryptocurrencies, including Bitcoin...",
+      "currencies": [
+        "BTC",
+        "LTC",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Can confirm NUcypher works with Ellipal Cold Wallet",
+      "link": "https://cryptopanic.com/news/11562462/Can-confirm-NUcypher-works-with-Ellipal-Cold-Wallet",
+      "pubDate": "2021-03-02T08:09:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Binance Smart Chain Unique Addresses Increased by 2,265% in 2 Weeks",
+      "link": "https://cryptopanic.com/news/11561292/Binance-Smart-Chain-Unique-Addresses-Increased-by-2265-in-2-Weeks",
+      "pubDate": "2021-03-02T07:46:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "In brief: The number of unique addresses on the Binance Smart Chain has hit a new ATH of 47.3M This is a 2,265% increment from mid-February’s peak of 2M unique addresses 1inch Exchange recently expanded to the Binance Smart Chain and could be one reason for the increased unique addresses Such a high number of users on the BSC could ultimately push the price of Binance Coin higher The number of...",
+      "currencies": [
+        "BNB",
+        "1INCH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Theta Mainnet 3.0 is coming April 21st! Start running an Edge Node today: and stay tuned fo…",
+      "link": "https://cryptopanic.com/news/11560735/Theta-Mainnet-30-is-coming-April-21st-Start-running-an-Edge-Node-today-and-stay-tuned-fo",
+      "pubDate": "2021-03-02T06:25:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Hyperion Lab Ltd. announce agreement to be acquired by an Auspacific Fund &amp; Trust Management Co. Ltd. 2 companies a…",
+      "link": "https://cryptopanic.com/news/11559511/Hyperion-Lab-Ltd-announce-agreement-to-be-acquired-by-an-Auspacific-Fund-amp-Trust-Management-Co-Ltd-2-companies-a",
+      "pubDate": "2021-03-02T06:22:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Cardano Bucks the Trend As Crypto Market Pulls Back – eToro Crypto Roundup",
+      "link": "https://cryptopanic.com/news/cardano/11558099/Cardano-Bucks-the-Trend-As-Crypto-Market-Pulls-Back-eToro-Crypto-Roundup",
+      "pubDate": "2021-03-02T04:40:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Paycoin partnering with blockchain-based digital content ecosystem . #XPeare will integrate…",
+      "link": "https://cryptopanic.com/news/11560217/Paycoin-partnering-with-blockchain-based-digital-content-ecosystem-XPeare-will-integrate?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-02T03:01:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PCI"
+      ]
+    }
+  ]
+}

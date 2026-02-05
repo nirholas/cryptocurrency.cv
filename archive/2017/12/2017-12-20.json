@@ -1,0 +1,25 @@
+{
+  "date": "2017-12-20",
+  "fetchedAt": "2026-02-05T07:27:06.813Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Speculation of Insider Trading at Coinbase after Surprise Bitcoin Cash Announcement",
+      "link": "https://cryptopanic.com/news/616685/Speculation-of-Insider-Trading-at-Coinbase-after-Surprise-Bitcoin-Cash-Announcement",
+      "pubDate": "2017-12-20T03:35:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 6
+      }
+    }
+  ]
+}

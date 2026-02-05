@@ -1,0 +1,69 @@
+{
+  "date": "2018-11-21",
+  "fetchedAt": "2026-02-05T07:27:06.797Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin SV’s 64MB Block Could Fit 3,000 Tetris Games",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/3758049/Bitcoin-SVs-64MB-Block-Could-Fit-3000-Tetris-Games",
+      "pubDate": "2018-11-21T19:04:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 13
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "A great step further for #AVINOC within the Emirates Airlines challenges as part of Dubai Future Accelerators. Look…",
+      "link": "https://cryptopanic.com/news/3757799/A-great-step-further-for-AVINOC-within-the-Emirates-Airlines-challenges-as-part-of-Dubai-Future-Accelerators-Look",
+      "pubDate": "2018-11-21T18:41:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVINOC"
+      ]
+    },
+    {
+      "title": "Paxos and BitPay Partner to Add PAX Support for Global Bitcoin Payment Service",
+      "link": "https://cryptopanic.com/news/paxos-standard/3755228/Paxos-and-BitPay-Partner-to-Add-PAX-Support-for-Global-Bitcoin-Payment-Service",
+      "pubDate": "2018-11-21T14:29:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDP"
+      ]
+    },
+    {
+      "title": "Cybercriminals Attack Make-a-Wish Website to Mine Monero",
+      "link": "https://cryptopanic.com/news/3752613/Cybercriminals-Attack-Make-a-Wish-Website-to-Mine-Monero",
+      "pubDate": "2018-11-21T09:00:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

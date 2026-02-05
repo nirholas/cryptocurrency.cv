@@ -1,0 +1,43 @@
+{
+  "date": "2019-05-21",
+  "fetchedAt": "2026-02-05T07:27:06.929Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Harmony - Major Ethereum Competitor To Rock Crypto Economy - Hot Binance IEO",
+      "link": "https://cryptopanic.com/news/ethereum/5491936/Harmony-Major-Ethereum-Competitor-To-Rock-Crypto-Economy-Hot-Binance-IEO",
+      "pubDate": "2019-05-21T20:48:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin SV Price Skyrockets 90 Percent After Craig Wright Copyrights Bitcoin White Paper",
+      "link": "https://cryptopanic.com/news/5488811/Bitcoin-SV-Price-Skyrockets-90-Percent-After-Craig-Wright-Copyrights-Bitcoin-White-Paper",
+      "pubDate": "2019-05-21T14:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 35
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

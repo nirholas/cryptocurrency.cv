@@ -1,0 +1,169 @@
+{
+  "date": "2021-01-10",
+  "fetchedAt": "2026-02-05T07:27:06.901Z",
+  "articleCount": 11,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "YOUengine Launch Day! Beta Test Completed",
+      "link": "https://cryptopanic.com/news/11152905/YOUengine-Launch-Day-Beta-Test-Completed",
+      "pubDate": "2021-01-10T22:59:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "YOUC"
+      ]
+    },
+    {
+      "title": "Get $PNT rewards when staking in the #pNetwork DAO —and help govern the development of your favorite #DeFi project!…",
+      "link": "https://cryptopanic.com/news/11093597/Get-PNT-rewards-when-staking-in-the-pNetwork-DAO-and-help-govern-the-development-of-your-favorite-DeFi-project",
+      "pubDate": "2021-01-10T19:32:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "PLTC"
+      ]
+    },
+    {
+      "title": "Top 5 cryptocurrencies to watch this week: BTC, ADA, EOS, THETA, AAVE",
+      "link": "https://cryptopanic.com/news/11093640/Top-5-cryptocurrencies-to-watch-this-week-BTC-ADA-EOS-THETA-AAVE",
+      "pubDate": "2021-01-10T19:30:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Altcoins rallied strongly over the past week, but Bitcoin’s current consolidation could be a sign that the trend may reverse soon.",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "THETA",
+        "AAVE",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "How can #Blockchain change the #healthcare system? The Blockchain technology can be used to store all #medical re…",
+      "link": "https://cryptopanic.com/news/11093438/How-can-Blockchain-change-the-healthcare-system-The-Blockchain-technology-can-be-used-to-store-all-medical-re",
+      "pubDate": "2021-01-10T19:01:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "EOS Plummets After Block.one CTO Dan Larimer Resigns",
+      "link": "https://cryptopanic.com/news/ethereum/11092310/EOS-Plummets-After-Blockone-CTO-Dan-Larimer-Resigns",
+      "pubDate": "2021-01-10T17:09:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Dan Larimer announced his resignation as chief technology officer (CTO) of the crypto company, Block.one. The company is responsible for building an alleged “Ethereum killer” and earned over $4 billion during an ICO promising the same. Larimer: “All Good Things Must Come to an End” In a brief blog post, the Block.one CTO thanked his colleagues and announced that he would be leaving the company to turn to build more censorship-resistant technologies. He said: “I have come to believe that you cann",
+      "currencies": [
+        "ETH",
+        "EOS",
+        "STEEM"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @block_one_: today announced that Daniel Larimer, CTO at , has departed to pursue new per…",
+      "link": "https://cryptopanic.com/news/11322608/RT-block_one_-today-announced-that-Daniel-Larimer-CTO-at-has-departed-to-pursue-new-per?mtm_campaign=API-OFA",
+      "pubDate": "2021-01-10T16:04:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHEX"
+      ]
+    },
+    {
+      "title": "Dan Larimer Announces Departure From EOS Builder Block.One",
+      "link": "https://cryptopanic.com/news/11091184/Dan-Larimer-Announces-Departure-From-EOS-Builder-BlockOne",
+      "pubDate": "2021-01-10T14:33:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Dan Larimer has left Block.one, the company that raised $4 billion to build the software behind the EOS blockchain.",
+      "currencies": [
+        "EOS",
+        "STEEM"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "The Future of DeFi",
+      "link": "https://cryptopanic.com/news/11095228/The-Future-of-DeFi",
+      "pubDate": "2021-01-10T09:51:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "Set up a #pNetwork node and secure the movement of $BTC, $ETH, $LTC and other #crypto assets into the #DeFi ecosyst…",
+      "link": "https://cryptopanic.com/news/11089271/Set-up-a-pNetwork-node-and-secure-the-movement-of-BTC-ETH-LTC-and-other-crypto-assets-into-the-DeFi-ecosyst",
+      "pubDate": "2021-01-10T09:30:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "PLTC"
+      ]
+    },
+    {
+      "title": "RT @btsfav: #Bitcoin Experiment: Financial Freedom with Faucets?! Week 26 #hive",
+      "link": "https://cryptopanic.com/news/11089106/RT-btsfav-Bitcoin-Experiment-Financial-Freedom-with-Faucets-Week-26-hive",
+      "pubDate": "2021-01-10T08:41:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "RT @DogeDomains: Welcome  to #Defi Shibes  So bullish for $DOGE Wow 🤩 #dogecointo1dollar #Dogecoinarmy #dogecoin #DogeArmy #doge #dogecoi…",
+      "link": "https://cryptopanic.com/news/11087410/RT-DogeDomains-Welcome-to-Defi-Shibes-So-bullish-for-DOGE-Wow-dogecointo1dollar-Dogecoinarmy-dogecoin-DogeArmy-doge-dogecoi",
+      "pubDate": "2021-01-10T02:05:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "PLTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

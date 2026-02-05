@@ -1,0 +1,25 @@
+{
+  "date": "2018-03-24",
+  "fetchedAt": "2026-02-05T07:27:06.993Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "What’s Been Going On With Ethereum’s Price Lately?",
+      "link": "https://cryptopanic.com/news/ethereum/1470150/Whats-Been-Going-On-With-Ethereums-Price-Lately",
+      "pubDate": "2018-03-24T19:20:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

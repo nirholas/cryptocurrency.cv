@@ -1,0 +1,468 @@
+{
+  "date": "2025-06-23",
+  "fetchedAt": "2026-02-05T07:27:08.690Z",
+  "articleCount": 35,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "ZachXBT Unmasks $4M Coinbase Crypto Scam – Victims’ Wallets Emptied, Funds Gambled Away",
+      "link": "https://cryptopanic.com/news/monero/22773783/ZachXBT-Unmasks-4M-Coinbase-Crypto-Scam-Victims-Wallets-Emptied-Funds-Gambled-Away",
+      "pubDate": "2025-06-23T22:22:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Anchorage adds DeFi capability for institutions with Uniswap wallet integration",
+      "link": "https://cryptopanic.com/news/uniswap/22773038/Anchorage-adds-DeFi-capability-for-institutions-with-Uniswap-wallet-integration",
+      "pubDate": "2025-06-23T21:48:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Crypto Gems to Grab in 2025: Web3 ai, Polkadot, Chainlink & Dogecoin!",
+      "link": "https://cryptopanic.com/news/polkadot/22770800/Crypto-Gems-to-Grab-in-2025-Web3-ai-Polkadot-Chainlink-Dogecoin",
+      "pubDate": "2025-06-23T19:30:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "DOT",
+        "LINK"
+      ]
+    },
+    {
+      "title": "The Most Overlooked Crypto Sector? A Deep Dive into Decentralized Storage with Filecoin (FIL) and Arweave (AR)",
+      "link": "https://cryptopanic.com/news/filecoin/22769903/The-Most-Overlooked-Crypto-Sector-A-Deep-Dive-into-Decentralized-Storage-with-Filecoin-FIL-and-Arweave-AR",
+      "pubDate": "2025-06-23T19:02:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FIL",
+        "AR",
+        "A"
+      ]
+    },
+    {
+      "title": "Unstaked Hits $10.4M Presale: Insights on Polkadot Support & Ethereum Outlook",
+      "link": "https://cryptopanic.com/news/polkadot/22769734/Unstaked-Hits-104M-Presale-Insights-on-Polkadot-Support-Ethereum-Outlook",
+      "pubDate": "2025-06-23T19:00:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DOT",
+        "A"
+      ]
+    },
+    {
+      "title": "Solana CME futures signal high chance of ETF approval",
+      "link": "https://cryptopanic.com/news/solana/22769703/Solana-CME-futures-signal-high-chance-of-ETF-approval",
+      "pubDate": "2025-06-23T18:40:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana (SOL) futures show increased open interest and volumes, and are considered an indicator for an upcoming ETF approval.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solaxy (SOLX) Price Set to Heat Up as Solana Layer 2 Lists on DEXs, Major Exchanges to Follow",
+      "link": "https://cryptopanic.com/news/uniswap/22768611/Solaxy-SOLX-Price-Set-to-Heat-Up-as-Solana-Layer-2-Lists-on-DEXs-Major-Exchanges-to-Follow",
+      "pubDate": "2025-06-23T17:51:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "UNI"
+      ]
+    },
+    {
+      "title": "3 Altcoins to Watch in the Final Week of June 2025",
+      "link": "https://cryptopanic.com/news/zilliqa/22769683/3-Altcoins-to-Watch-in-the-Final-Week-of-June-2025",
+      "pubDate": "2025-06-23T17:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "ZIL"
+      ]
+    },
+    {
+      "title": "Anchorage Digital Adds Uniswap Access for Institutional DeFi Trading",
+      "link": "https://cryptopanic.com/news/uniswap/22768465/Anchorage-Digital-Adds-Uniswap-Access-for-Institutional-DeFi-Trading",
+      "pubDate": "2025-06-23T17:27:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "Digital Asset Funds Record 10th Straight Week of Inflows Despite Israel-Iran Tensions",
+      "link": "https://cryptopanic.com/news/litecoin/22768467/Digital-Asset-Funds-Record-10th-Straight-Week-of-Inflows-Despite-Israel-Iran-Tensions",
+      "pubDate": "2025-06-23T17:25:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "BDAG’s July Miner Shipment Confirmed, DOGE Slides & VeChain Grows",
+      "link": "https://cryptopanic.com/news/vechain/22767338/BDAGs-July-Miner-Shipment-Confirmed-DOGE-Slides-VeChain-Grows",
+      "pubDate": "2025-06-23T17:00:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "VET"
+      ]
+    },
+    {
+      "title": "ZachXBT Ties NY Scammer to $4M Coinbase Phishing Scheme",
+      "link": "https://cryptopanic.com/news/monero/22767275/ZachXBT-Ties-NY-Scammer-to-4M-Coinbase-Phishing-Scheme",
+      "pubDate": "2025-06-23T16:55:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XMR"
+      ]
+    },
+    {
+      "title": "Neo News: Week in Review – June 16 – June 22",
+      "link": "https://cryptopanic.com/news/neo/22765877/Neo-News-Week-in-Review-June-16-June-22",
+      "pubDate": "2025-06-23T15:58:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO",
+        "FLM"
+      ]
+    },
+    {
+      "title": "Anchorage Digital Supercharges Institutional DeFi Access with Uniswap API Integration",
+      "link": "https://cryptopanic.com/news/uniswap/22765800/Anchorage-Digital-Supercharges-Institutional-DeFi-Access-with-Uniswap-API-Integration",
+      "pubDate": "2025-06-23T15:47:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 24 June 2025: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/decentraland/22768474/Spell-Wallet-Daily-Puzzle-24-June-2025-Earn-Reward-of-1-MANA",
+      "pubDate": "2025-06-23T15:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "Anchorage Digital integrates Uniswap Labs Trading API to give institutional wallet users improved DeFi liquidity",
+      "link": "https://cryptopanic.com/news/uniswap/22764873/Anchorage-Digital-integrates-Uniswap-Labs-Trading-API-to-give-institutional-wallet-users-improved-DeFi-liquidity",
+      "pubDate": "2025-06-23T15:06:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "Bitcoin supply shock is intensifying – DOT miners are making up to $9,800 a day ahead of next bull run",
+      "link": "https://cryptopanic.com/news/polkadot/22765817/Bitcoin-supply-shock-is-intensifying-DOT-miners-are-making-up-to-9800-a-day-ahead-of-next-bull-run",
+      "pubDate": "2025-06-23T13:52:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOT"
+      ]
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 23 June 2025: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/decentraland/22765705/Spell-Wallet-Daily-Puzzle-23-June-2025-Earn-Reward-of-1-MANA",
+      "pubDate": "2025-06-23T13:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "GAP 3 Partners FZCO Becomes Dubai’s First Regulated Virtual Asset Investment Advisor with Operational License from VARA",
+      "link": "https://cryptopanic.com/news/near/22761542/GAP-3-Partners-FZCO-Becomes-Dubais-First-Regulated-Virtual-Asset-Investment-Advisor-with-Operational-License-from-VARA",
+      "pubDate": "2025-06-23T13:06:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR",
+        "VARA"
+      ]
+    },
+    {
+      "title": "Saylor stacks more: Strategy adds 245 Bitcoins, total BTC hits 592,345",
+      "link": "https://cryptopanic.com/news/blockstack/22760934/Saylor-stacks-more-Strategy-adds-245-Bitcoins-total-BTC-hits-592345",
+      "pubDate": "2025-06-23T12:55:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "STX"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Metaplanet Stacks Another 1,111 Bitcoin For $117 Million",
+      "link": "https://cryptopanic.com/news/blockstack/22762426/Metaplanet-Stacks-Another-1111-Bitcoin-For-117-Million",
+      "pubDate": "2025-06-23T12:08:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "STX"
+      ]
+    },
+    {
+      "title": "Quant Price Prediction: Award-winning payment platform eyes bullish reversal",
+      "link": "https://cryptopanic.com/news/quant-network/22761535/Quant-Price-Prediction-Award-winning-payment-platform-eyes-bullish-reversal",
+      "pubDate": "2025-06-23T11:34:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "QNT",
+        "OI"
+      ]
+    },
+    {
+      "title": "Crypto Price Analysis 6-23: BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, DOGECOIN: DOGE, LITECOIN: LTC, OPTIMISM: OP",
+      "link": "https://cryptopanic.com/news/litecoin/22758769/Crypto-Price-Analysis-6-23-BITCOIN-BTC-ETHEREUM-ETH-SOLANA-SOL-DOGECOIN-DOGE-LITECOIN-LTC-OPTIMISM-OP",
+      "pubDate": "2025-06-23T11:09:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Whales Dump AAVE Amid Market Wipeout: Where is the Altcoin Rally?",
+      "link": "https://cryptopanic.com/news/aave/22762421/Whales-Dump-AAVE-Amid-Market-Wipeout-Where-is-the-Altcoin-Rally",
+      "pubDate": "2025-06-23T09:37:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Binance Margin to Delist UTK/USDC and ZIL/BTC Trading Pairs",
+      "link": "https://cryptopanic.com/news/zilliqa/22756367/Binance-Margin-to-Delist-UTKUSDC-and-ZILBTC-Trading-Pairs",
+      "pubDate": "2025-06-23T09:27:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDC",
+        "ZIL"
+      ]
+    },
+    {
+      "title": "HTX Executives Go Face-to-Face: Molly Highlights User-Centric Perspective and Trust Built Through Sincerity",
+      "link": "https://cryptopanic.com/news/huobi-token/22757678/HTX-Executives-Go-Face-to-Face-Molly-Highlights-User-Centric-Perspective-and-Trust-Built-Through-Sincerity",
+      "pubDate": "2025-06-23T09:23:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HT"
+      ]
+    },
+    {
+      "title": "Uniswap, Morpho Launch Web3SOC to Guide DeFi-Institutional Partnerships",
+      "link": "https://cryptopanic.com/news/uniswap/22749707/Uniswap-Morpho-Launch-Web3SOC-to-Guide-DeFi-Institutional-Partnerships",
+      "pubDate": "2025-06-23T09:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ]
+    },
+    {
+      "title": "OKX Plans U.S. IPO After $500M Settlement",
+      "link": "https://cryptopanic.com/news/okb/22754726/OKX-Plans-US-IPO-After-500M-Settlement",
+      "pubDate": "2025-06-23T08:22:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ]
+    },
+    {
+      "title": "OKX Eyes US IPO After DOJ Settlement and Market Re-Entry",
+      "link": "https://cryptopanic.com/news/okb/22753188/OKX-Eyes-US-IPO-After-DOJ-Settlement-and-Market-Re-Entry",
+      "pubDate": "2025-06-23T07:32:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ]
+    },
+    {
+      "title": "OKX Considers US IPO, Boosting OKB Token 5% Despite Market Slump",
+      "link": "https://cryptopanic.com/news/okb/22751557/OKX-Considers-US-IPO-Boosting-OKB-Token-5-Despite-Market-Slump",
+      "pubDate": "2025-06-23T05:21:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ]
+    },
+    {
+      "title": "Polemos Launches $PLMS Token On MEXC and Uniswap, Advancing Web3 Gaming Infrastructure",
+      "link": "https://cryptopanic.com/news/uniswap/22749931/Polemos-Launches-PLMS-Token-On-MEXC-and-Uniswap-Advancing-Web3-Gaming-Infrastructure",
+      "pubDate": "2025-06-23T05:05:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Polemos Launches PLMS Token On MEXC and Uniswap, Advancing Web3 Gaming Infrastructure",
+      "link": "https://cryptopanic.com/news/uniswap/22749849/Polemos-Launches-PLMS-Token-On-MEXC-and-Uniswap-Advancing-Web3-Gaming-Infrastructure",
+      "pubDate": "2025-06-23T05:01:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Top Crypto Gainers Price Prediction: OKB, IP, HYPE post gains, shrug off Bitcoin’s dip to $100,000",
+      "link": "https://cryptopanic.com/news/okb/22750768/Top-Crypto-Gainers-Price-Prediction-OKB-IP-HYPE-post-gains-shrug-off-Bitcoins-dip-to-100000",
+      "pubDate": "2025-06-23T03:19:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "OKB",
+        "HYPE"
+      ]
+    },
+    {
+      "title": "Unstaked’s $1M Giveaway Draws Smart Buyers’ Attention! Monero Weakens While Toncoin Recovers",
+      "link": "https://cryptopanic.com/news/monero/22748132/Unstakeds-1M-Giveaway-Draws-Smart-Buyers-Attention-Monero-Weakens-While-Toncoin-Recovers",
+      "pubDate": "2025-06-23T03:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XMR"
+      ]
+    },
+    {
+      "title": "VeChain Price Stalls: Next Move Could Be Explosive",
+      "link": "https://cryptopanic.com/news/vechain/22751918/VeChain-Price-Stalls-Next-Move-Could-Be-Explosive",
+      "pubDate": "2025-06-23T01:13:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ]
+    }
+  ]
+}

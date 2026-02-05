@@ -1,0 +1,153 @@
+{
+  "date": "2020-11-26",
+  "fetchedAt": "2026-02-05T07:27:06.686Z",
+  "articleCount": 11,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Thank you all for supporting $STPT. Our team has some exciting updates to share so stay tuned. Happy Thanksgiving!!…",
+      "link": "https://cryptopanic.com/news/10656105/Thank-you-all-for-supporting-STPT-Our-team-has-some-exciting-updates-to-share-so-stay-tuned-Happy-Thanksgiving",
+      "pubDate": "2020-11-26T23:13:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STPT"
+      ]
+    },
+    {
+      "title": "Happy Thanksgiving #crypto fam!🦃 We are thankful for our community and the ability to be your trusted exchange and…",
+      "link": "https://cryptopanic.com/news/10654495/Happy-Thanksgiving-crypto-fam-We-are-thankful-for-our-community-and-the-ability-to-be-your-trusted-exchange-and",
+      "pubDate": "2020-11-26T18:54:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    },
+    {
+      "title": "IOTA Partners With Pantos for European Blockchain R&D Lab",
+      "link": "https://cryptopanic.com/news/10654654/IOTA-Partners-With-Pantos-for-European-Blockchain-RD-Lab",
+      "pubDate": "2020-11-26T18:30:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @whale_alert: 16,499,998 #BUSD (16,499,998 USD) transferred from PAX Treasury to unknown wallet Tx",
+      "link": "https://cryptopanic.com/news/paxos-standard/10653035/RT-whale_alert-16499998-BUSD-16499998-USD-transferred-from-PAX-Treasury-to-unknown-wallet-Tx",
+      "pubDate": "2020-11-26T16:16:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PAX",
+        "1MT"
+      ]
+    },
+    {
+      "title": "$100M Liquidated From Compound Following Flash Loan Exploit",
+      "link": "https://cryptopanic.com/news/10652520/100M-Liquidated-From-Compound-Following-Flash-Loan-Exploit",
+      "pubDate": "2020-11-26T15:19:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "DAI",
+        "COMP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "424,249,337 $HYN has been burned since October 27th!",
+      "link": "https://cryptopanic.com/news/10650983/424249337-HYN-has-been-burned-since-October-27th",
+      "pubDate": "2020-11-26T12:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "\"Responsible cryptocurrency service providers are actively raising the bar when it comes to product, licensing, com…",
+      "link": "https://cryptopanic.com/news/10649655/Responsible-cryptocurrency-service-providers-are-actively-raising-the-bar-when-it-comes-to-product-licensing-com",
+      "pubDate": "2020-11-26T09:11:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    },
+    {
+      "title": "How to Split Bitcoin Cash & Bitcoin ABC and claim BCHA coins. Quickest method. [BCH HARD FORK 15 nov 2020]",
+      "link": "https://cryptopanic.com/news/ecash/12211625/How-to-Split-Bitcoin-Cash-Bitcoin-ABC-and-claim-BCHA-coins-Quickest-method-BCH-HARD-FORK-15-nov-2020",
+      "pubDate": "2020-11-26T08:42:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH",
+        "XEC"
+      ]
+    },
+    {
+      "title": "Here is an overview of how we will be integrating @helloiconworld into the #Paycoin App. Users will be able pay swa…",
+      "link": "https://cryptopanic.com/news/10648055/Here-is-an-overview-of-how-we-will-be-integrating-helloiconworld-into-the-Paycoin-App-Users-will-be-able-pay-swa?mtm_campaign=API-OFA",
+      "pubDate": "2020-11-26T06:19:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PCI"
+      ]
+    },
+    {
+      "title": "RT @binance: #Binance Will List @prometeusnet $PROM in the Innovation Zone",
+      "link": "https://cryptopanic.com/news/11328737/RT-binance-Binance-Will-List-prometeusnet-PROM-in-the-Innovation-Zone",
+      "pubDate": "2020-11-26T05:56:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "PROM"
+      ]
+    },
+    {
+      "title": "Happy #Thanksgiving2020",
+      "link": "https://cryptopanic.com/news/10647059/Happy-Thanksgiving2020",
+      "pubDate": "2020-11-26T03:46:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,444 @@
+{
+  "date": "2022-07-06",
+  "fetchedAt": "2026-02-05T07:27:07.568Z",
+  "articleCount": 30,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "SEC Still Against Spot-based Bitcoin ETFs. Is There A Light At The End Of The Tunnel?",
+      "link": "https://cryptopanic.com/news/15695530/SEC-Still-Against-Spot-based-Bitcoin-ETFs-Is-There-A-Light-At-The-End-Of-The-Tunnel",
+      "pubDate": "2022-07-06T23:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "With the approvals of futures bitcoin ETFs, firms have taken it one step further and have applied with the Securities and Exchanges Commission (SEC) for spot-based bitcoin ETFs. However, unlike their futures and short counterparts, the spot ETFs have not found favor in the eyes of the regulatory watchdog. And as more spot-based bitcoin ETF applications are declined by the SEC, questions have...",
+      "currencies": [
+        "BTC",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "RT @ThetaDrop: It's your chance to collect epic @failarmy clips! Combine your clips to complete challenges and earn rewards. Dropping thi…",
+      "link": "https://cryptopanic.com/news/theta-token/15701984/RT-ThetaDrop-Its-your-chance-to-collect-epic-failarmy-clips-Combine-your-clips-to-complete-challenges-and-earn-rewards-Dropping-thi",
+      "pubDate": "2022-07-06T22:21:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "What Polkadot’s new staking dashboard means for DOT",
+      "link": "https://cryptopanic.com/news/15695324/What-Polkadots-new-staking-dashboard-means-for-DOT",
+      "pubDate": "2022-07-06T21:30:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The 2022 crypto market crash has, so far, ensured that almost every cryptocurrency received a deep discount. And Polkadot is making an effort to ensure that those buying the dip can put their DOT to good use. Polkadot recently revealed the rollout of a new crypto staking dashboard that was designed keeping user-friendliness in mind. […]",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "U.S. and South Korean Officials Meet to Discuss Terra Collapse",
+      "link": "https://cryptopanic.com/news/15695294/US-and-South-Korean-Officials-Meet-to-Discuss-Terra-Collapse",
+      "pubDate": "2022-07-06T21:11:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Officials from South Korea and the U.S. met this week to discuss topics including the investigation of May’s Terra collapse. Officials Discuss Terra Investigation Prosecutors in either hemisphere may be...",
+      "currencies": [
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Kernel, Skynet't newest tool for building decentralized API's and social applications, made a debut at @ETHNewYork…",
+      "link": "https://cryptopanic.com/news/15695154/Kernel-Skynett-newest-tool-for-building-decentralized-APIs-and-social-applications-made-a-debut-at-ETHNewYork",
+      "pubDate": "2022-07-06T20:23:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "SC"
+      ]
+    },
+    {
+      "title": "Worst of Crypto Crisis Has Passed: FTX CEO",
+      "link": "https://cryptopanic.com/news/15695168/Worst-of-Crypto-Crisis-Has-Passed-FTX-CEO",
+      "pubDate": "2022-07-06T20:20:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "30-year-old billionaire Sam Bankman-Fried nonetheless admitted that the crash was “a fair bit worse” than he expected.",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Shiba Inu to launch SHI stablecoin, TREAT reward token in 2022",
+      "link": "https://cryptopanic.com/news/15695124/Shiba-Inu-to-launch-SHI-stablecoin-TREAT-reward-token-in-2022",
+      "pubDate": "2022-07-06T20:00:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Shiba Inu (SHIB) lead developer Shytoshi Kusama has released a new update for the meme coin community on the plans to launch a stablecoin and reward token.",
+      "currencies": [
+        "SHIB",
+        "KSM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "No Coins For You! Chinese Court Declares Salary Payments In USDT Stablecoin Illegal",
+      "link": "https://cryptopanic.com/news/15694884/No-Coins-For-You-Chinese-Court-Declares-Salary-Payments-In-USDT-Stablecoin-Illegal",
+      "pubDate": "2022-07-06T18:44:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "China’s Chaoyang Court has barred employers from utilizing stablecoins such as USDT to pay salaries.",
+      "currencies": [
+        "BTC",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Calamari has been online for almost a year, our last lease period on Kusama is underway. To continue operating afte…",
+      "link": "https://cryptopanic.com/news/15697229/Calamari-has-been-online-for-almost-a-year-our-last-lease-period-on-Kusama-is-underway-To-continue-operating-afte",
+      "pubDate": "2022-07-06T18:07:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KSM"
+      ]
+    },
+    {
+      "title": "Bitcoin ABC 0.25.9 is now available! This is a maintenance release with minor fixes and improvements. Download it…",
+      "link": "https://cryptopanic.com/news/ecash/15696981/Bitcoin-ABC-0259-is-now-available-This-is-a-maintenance-release-with-minor-fixes-and-improvements-Download-it",
+      "pubDate": "2022-07-06T17:50:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC",
+        "BCHABC"
+      ]
+    },
+    {
+      "title": "Which token should we accept to our #NFT marketplace and do a feature sexy NFT set of . Drop ideas or apply to add…",
+      "link": "https://cryptopanic.com/news/15702591/Which-token-should-we-accept-to-our-NFT-marketplace-and-do-a-feature-sexy-NFT-set-of-Drop-ideas-or-apply-to-add?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-06T17:30:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "VICE"
+      ]
+    },
+    {
+      "title": "peaq launches open-source Polkadot ecosystem blockchain explorer",
+      "link": "https://cryptopanic.com/news/15694486/peaq-launches-open-source-Polkadot-ecosystem-blockchain-explorer",
+      "pubDate": "2022-07-06T16:48:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "KSM"
+      ]
+    },
+    {
+      "title": "Welcome to the chaos @amplitude_chain [@Pendulum_chain]! After winning an auction, Amplitude will be onboarded as m…",
+      "link": "https://cryptopanic.com/news/15699623/Welcome-to-the-chaos-amplitude_chain-Pendulum_chain-After-winning-an-auction-Amplitude-will-be-onboarded-as-m",
+      "pubDate": "2022-07-06T15:53:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KSM"
+      ]
+    },
+    {
+      "title": "Hello #WhiteBIT users! Nice to meet you",
+      "link": "https://cryptopanic.com/news/15699354/Hello-WhiteBIT-users-Nice-to-meet-you",
+      "pubDate": "2022-07-06T14:37:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "JASMY"
+      ]
+    },
+    {
+      "title": "Chinese court bans businesses from paying salaries in Tether stablecoin",
+      "link": "https://cryptopanic.com/news/15693969/Chinese-court-bans-businesses-from-paying-salaries-in-Tether-stablecoin",
+      "pubDate": "2022-07-06T14:15:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A Chinese court has ruled that the Tether (USDT) cryptocurrency cannot be used to pay salaries citing the country’s general... Continue reading",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Smart contracts have the potential to transform many of today’s legacy systems such as financial services, healthca…",
+      "link": "https://cryptopanic.com/news/15693858/Smart-contracts-have-the-potential-to-transform-many-of-todays-legacy-systems-such-as-financial-services-healthca",
+      "pubDate": "2022-07-06T14:01:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "We'll be going live with @MoonbeamNetwork in 1.5h time to share more about #QRNG &amp; to give #Moonbuilders a live dem…",
+      "link": "https://cryptopanic.com/news/15696273/Well-be-going-live-with-MoonbeamNetwork-in-15h-time-to-share-more-about-QRNG-amp-to-give-Moonbuilders-a-live-dem",
+      "pubDate": "2022-07-06T13:36:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "API3"
+      ]
+    },
+    {
+      "title": "RT @binance: #Binance will support the @ShentuChain $CTK network upgrade.",
+      "link": "https://cryptopanic.com/news/15697303/RT-binance-Binance-will-support-the-ShentuChain-CTK-network-upgrade",
+      "pubDate": "2022-07-06T13:27:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "CTK"
+      ]
+    },
+    {
+      "title": "Cardano Has Got \"Tsunami\" in Works: IOG's Technical Architect",
+      "link": "https://cryptopanic.com/news/15693762/Cardano-Has-Got-Tsunami-in-Works-IOGs-Technical-Architect",
+      "pubDate": "2022-07-06T13:27:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "There have been a ton of recent upgrades to Cardano blockchain",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 36,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bear market delivery! Bitcoiner rejoins DoorDash to buy more BTC",
+      "link": "https://cryptopanic.com/news/dash/15693744/Bear-market-delivery-Bitcoiner-rejoins-DoorDash-to-buy-more-BTC",
+      "pubDate": "2022-07-06T13:20:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DASH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Salary payments in USDT stablecoin ruled as illegal in the Chinese court",
+      "link": "https://cryptopanic.com/news/15693683/Salary-payments-in-USDT-stablecoin-ruled-as-illegal-in-the-Chinese-court",
+      "pubDate": "2022-07-06T13:07:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Tether USDT stablecoin cannot be used for salary payments, a Chinese court ruled, citing the country’s blanket ban on all types of crypto transactions.",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Deep learning algorithm predicts Cardano could surge to $2.90 by September",
+      "link": "https://cryptopanic.com/news/15693412/Deep-learning-algorithm-predicts-Cardano-could-surge-to-290-by-September",
+      "pubDate": "2022-07-06T11:38:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "After a long period of bearishness, the cryptocurrency industry finally seems to be catching its breath, and with it, so... Continue reading",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 34,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @nftbmarket: We're thrilled to announce that @klaytn_official is LIVE on NFTb! 🤝Providing high-potential projects with advisory & fundr…",
+      "link": "https://cryptopanic.com/news/klay-token/15699568/RT-nftbmarket-Were-thrilled-to-announce-that-klaytn_official-is-LIVE-on-NFTb-Providing-high-potential-projects-with-advisory-amp-fundr",
+      "pubDate": "2022-07-06T11:17:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "Shiba Inu (SHIB) Price Finally Moves Above $0.00001",
+      "link": "https://cryptopanic.com/news/15693328/Shiba-Inu-SHIB-Price-Finally-Moves-Above-000001",
+      "pubDate": "2022-07-06T11:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Shiba Inu (SHIB) has regained its footing after a breakdown from a neutral pattern. However, it has yet to reclaim an important horizontal resistance area.",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DPP is a protocol used between a #payment receiver and their #customer enabling a better user experience, simpler…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/15696980/DPP-is-a-protocol-used-between-a-payment-receiver-and-their-customer-enabling-a-better-user-experience-simpler",
+      "pubDate": "2022-07-06T10:10:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "In 6 easy steps, learn how to deploy a smart contract on the #Klaytn network ️ From deploying a smart contract on…",
+      "link": "https://cryptopanic.com/news/klay-token/15699569/In-6-easy-steps-learn-how-to-deploy-a-smart-contract-on-the-Klaytn-network-From-deploying-a-smart-contract-on",
+      "pubDate": "2022-07-06T09:00:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "Bitcoin Reclaimed $20K Following Extreme Volatility, AVAX Jumps 7% (Market Watch)",
+      "link": "https://cryptopanic.com/news/15691248/Bitcoin-Reclaimed-20K-Following-Extreme-Volatility-AVAX-Jumps-7-Market-Watch",
+      "pubDate": "2022-07-06T08:51:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin stands above $20,000 after the enhanced volatility yesterday and earlier today. AVAX and SAND have spiked the most from the alts.",
+      "currencies": [
+        "BTC",
+        "AVAX",
+        "SAND"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We're live now!!",
+      "link": "https://cryptopanic.com/news/klay-token/15689186/Were-live-now",
+      "pubDate": "2022-07-06T01:32:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "We welcome @Zero_Code_NFT onboard the #Klaytn ecosystem",
+      "link": "https://cryptopanic.com/news/klay-token/15689187/We-welcome-Zero_Code_NFT-onboard-the-Klaytn-ecosystem",
+      "pubDate": "2022-07-06T01:16:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "RT @gauntletnetwork:  Gauntlet recommends increasing liquidation ratios for $KSM and $LKSM vaults on @AcalaNetwork to decrease market risk…",
+      "link": "https://cryptopanic.com/news/15689145/RT-gauntletnetwork-Gauntlet-recommends-increasing-liquidation-ratios-for-KSM-and-LKSM-vaults-on-AcalaNetwork-to-decrease-market-risk",
+      "pubDate": "2022-07-06T00:54:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KSM",
+        "ACA"
+      ]
+    }
+  ]
+}

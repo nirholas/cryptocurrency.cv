@@ -1,0 +1,26 @@
+{
+  "date": "2019-10-30",
+  "fetchedAt": "2026-02-05T07:27:06.993Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "TRON Continues to Shine; Overtakes Ethereum in Latest Chinese Crypto Rankings",
+      "link": "https://cryptopanic.com/news/ethereum/7004363/TRON-Continues-to-Shine-Overtakes-Ethereum-in-Latest-Chinese-Crypto-Rankings",
+      "pubDate": "2019-10-30T12:04:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 13
+      }
+    }
+  ]
+}

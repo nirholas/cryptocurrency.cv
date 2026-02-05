@@ -1,0 +1,134 @@
+{
+  "date": "2020-12-03",
+  "fetchedAt": "2026-02-05T07:27:06.787Z",
+  "articleCount": 9,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Gavin Wood: Polkadot is a ‘bet against blockchain maximalism’",
+      "link": "https://cryptopanic.com/news/polkadot/10720727/Gavin-Wood-Polkadot-is-a-bet-against-blockchain-maximalism",
+      "pubDate": "2020-12-03T23:23:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Care about privacy and free speech? Join the PSF",
+      "link": "https://cryptopanic.com/news/ecash/12211622/Care-about-privacy-and-free-speech-Join-the-PSF",
+      "pubDate": "2020-12-03T20:08:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Gemini Live with Tyler Winklevoss, Cameron Winklevoss and AAVE's Stani Kulechov.",
+      "link": "https://cryptopanic.com/news/10718106/Gemini-Live-with-Tyler-Winklevoss-Cameron-Winklevoss-and-AAVEs-Stani-Kulechov",
+      "pubDate": "2020-12-03T18:31:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    },
+    {
+      "title": "T-minus 1 hour until our live Q&amp;A with @cameron, @tyler and @StaniKulechov. Don't miss it!  #GeminiLive",
+      "link": "https://cryptopanic.com/news/10717559/T-minus-1-hour-until-our-live-QampA-with-cameron-tyler-and-StaniKulechov-Dont-miss-it-GeminiLive",
+      "pubDate": "2020-12-03T17:33:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    },
+    {
+      "title": "Aave Launches V2 in Bid to Make Borrowing Against Volatile Assets Less Risky",
+      "link": "https://cryptopanic.com/news/10716010/Aave-Launches-V2-in-Bid-to-Make-Borrowing-Against-Volatile-Assets-Less-Risky",
+      "pubDate": "2020-12-03T14:59:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We're excited to announce the launch of the Gemini Opportunity Fund, a donor-advised fund that will support…",
+      "link": "https://cryptopanic.com/news/10715815/Were-excited-to-announce-the-launch-of-the-Gemini-Opportunity-Fund-a-donor-advised-fund-that-will-support",
+      "pubDate": "2020-12-03T14:57:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    },
+    {
+      "title": "224-Year Old German Bank to Float Crypto Fund in 2021",
+      "link": "https://cryptopanic.com/news/10715107/224-Year-Old-German-Bank-to-Float-Crypto-Fund-in-2021",
+      "pubDate": "2020-12-03T13:45:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Xfers Dash allows your business to send money quickly and easily - either in bulk or individually via our dashboard…",
+      "link": "https://cryptopanic.com/news/11442063/Xfers-Dash-allows-your-business-to-send-money-quickly-and-easily-either-in-bulk-or-individually-via-our-dashboard",
+      "pubDate": "2020-12-03T04:01:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DASH",
+        "XSGD"
+      ]
+    },
+    {
+      "title": "Darma Cash ( $DMCH ) is now available at #Blockfolio. Thank you @blockfolio for activating Blockfolio Signal which…",
+      "link": "https://cryptopanic.com/news/11443729/Darma-Cash-DMCH-is-now-available-at-Blockfolio-Thank-you-blockfolio-for-activating-Blockfolio-Signal-which",
+      "pubDate": "2020-12-03T01:57:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DMCH"
+      ]
+    }
+  ]
+}

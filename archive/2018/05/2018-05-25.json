@@ -1,0 +1,26 @@
+{
+  "date": "2018-05-25",
+  "fetchedAt": "2026-02-05T07:27:06.993Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "The Record-Breaking $152 Million Battle Over Blockchain Betting Tool Augur",
+      "link": "https://cryptopanic.com/news/ethereum/2030440/The-Record-Breaking-152-Million-Battle-Over-Blockchain-Betting-Tool-Augur",
+      "pubDate": "2018-05-25T00:40:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "REP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

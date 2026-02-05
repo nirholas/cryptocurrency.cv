@@ -1,0 +1,956 @@
+{
+  "date": "2022-12-09",
+  "fetchedAt": "2026-02-05T07:27:07.358Z",
+  "articleCount": 71,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @CurtisCaudill3: $BTC $KDA $LTC $ETC Are you into Defi, mining, or just collecting on exchanges? Do you store multiple assets on exchang…",
+      "link": "https://cryptopanic.com/news/ethereum-classic/17116403/RT-CurtisCaudill3-BTC-KDA-LTC-ETC-Are-you-into-Defi-mining-or-just-collecting-on-exchanges-Do-you-store-multiple-assets-on-exchang",
+      "pubDate": "2022-12-09T23:27:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "ETC",
+        "FLUX"
+      ]
+    },
+    {
+      "title": "Solana Records Biggest Loss on One DeFi Metric As BNB Chain Shows Resilience: DappRadar",
+      "link": "https://cryptopanic.com/news/17113917/Solana-Records-Biggest-Loss-on-One-DeFi-Metric-As-BNB-Chain-Shows-Resilience-DappRadar",
+      "pubDate": "2022-12-09T23:05:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "A new DappRadar report finds that last month’s crypto market meltdown caused the total value locked (TVL) on smart contract platform Solana (SOL) to freefall. The TVL of a blockchain represents the total capital held within its smart contracts and is calculated by multiplying the amount of collateral locked into the network by the current […]",
+      "currencies": [
+        "ETH",
+        "BNB",
+        "SOL",
+        "XCN"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "️ If you’re interested to know more about Holochain technical releases and updates, sign up for the monthly Holoch…",
+      "link": "https://cryptopanic.com/news/17116830/If-youre-interested-to-know-more-about-Holochain-technical-releases-and-updates-sign-up-for-the-monthly-Holoch",
+      "pubDate": "2022-12-09T21:22:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HOT"
+      ]
+    },
+    {
+      "title": "Starbucks Rolls Out Beta Testing on New Polygon-Powered NFT Rewards Program",
+      "link": "https://cryptopanic.com/news/17113677/Starbucks-Rolls-Out-Beta-Testing-on-New-Polygon-Powered-NFT-Rewards-Program",
+      "pubDate": "2022-12-09T21:00:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "US coffee giant Starbucks is launching the beta version of a new rewards program that allows members to earn and buy non-fungible tokens (NFTs) minted on the Polygon (MATIC) blockchain. In a recent statement, the world’s largest coffeehouse chain says that it is rolling out Starbucks Odyssey, a loyalty program for customers, employees, and partners […]",
+      "currencies": [
+        "MATIC",
+        "XCN"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Analyst Michaël Van De Poppe Eyes Rallies for Ethereum, Litecoin and One ETH Rival – Here Are His Targets",
+      "link": "https://cryptopanic.com/news/17113643/Crypto-Analyst-Michael-Van-De-Poppe-Eyes-Rallies-for-Ethereum-Litecoin-and-One-ETH-Rival-Here-Are-His-Targets",
+      "pubDate": "2022-12-09T20:55:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A widely followed crypto analyst is predicting rallies for a handful of altcoins, including the leading smart contract platform Ethereum (ETH) and one of its primary competitors. Crypto strategist Michaël van de Poppe tells his 643,000 Twitter followers that he expects the second-largest crypto asset by market cap to test the $1,450 price level relatively […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "AVAX",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Numerai to sponsor the MIT AI Quant Conference on December 15th, 2022",
+      "link": "https://cryptopanic.com/news/17113528/Numerai-to-sponsor-the-MIT-AI-Quant-Conference-on-December-15th-2022",
+      "pubDate": "2022-12-09T20:14:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QNT",
+        "NMR"
+      ]
+    },
+    {
+      "title": "RT @ReggieMiddleton: This is @Grayscale #DeFi trust. I'm curious to hear what my followers feel is the common thread among these operations…",
+      "link": "https://cryptopanic.com/news/17113425/RT-ReggieMiddleton-This-is-Grayscale-DeFi-trust-Im-curious-to-hear-what-my-followers-feel-is-the-common-thread-among-these-operations",
+      "pubDate": "2022-12-09T19:39:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "VERI"
+      ]
+    },
+    {
+      "title": "Thanks to all the highly talented creators who joined $CEEK at #ArtBasel We look forward to adding utility to your…",
+      "link": "https://cryptopanic.com/news/17115210/Thanks-to-all-the-highly-talented-creators-who-joined-CEEK-at-ArtBasel-We-look-forward-to-adding-utility-to-your",
+      "pubDate": "2022-12-09T19:10:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CEEK"
+      ]
+    },
+    {
+      "title": "Crypto​.com releases proof of reserves, showing above 100% for BTC, ETH",
+      "link": "https://cryptopanic.com/news/17113339/Cryptocom-releases-proof-of-reserves-showing-above-100-for-BTC-ETH",
+      "pubDate": "2022-12-09T19:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The new disclosure page allows skeptical users to self-verify that their assets are included in the report.",
+      "currencies": [
+        "ETH",
+        "FTT"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Did you know that the LEOX token is the first public launch worldwide using the Quant Networks QRC-20 standardisati…",
+      "link": "https://cryptopanic.com/news/quant-network/17116568/Did-you-know-that-the-LEOX-token-is-the-first-public-launch-worldwide-using-the-Quant-Networks-QRC-20-standardisati",
+      "pubDate": "2022-12-09T19:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QNT",
+        "LEOX"
+      ]
+    },
+    {
+      "title": "RT @ReggieMiddleton: @SBF_FTX @WallStCynic @cryptomanran You guys are forgetting that @FTX_Official was apparently unprofitable from a nomi…",
+      "link": "https://cryptopanic.com/news/17113308/RT-ReggieMiddleton-SBF_FTX-WallStCynic-cryptomanran-You-guys-are-forgetting-that-FTX_Official-was-apparently-unprofitable-from-a-nomi",
+      "pubDate": "2022-12-09T18:36:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "VERI"
+      ]
+    },
+    {
+      "title": "With the rollout of EVM compatibility, you can now use #MetaMask with Zilliqa! Here's how to connect your wallet to…",
+      "link": "https://cryptopanic.com/news/zilliqa/17120012/With-the-rollout-of-EVM-compatibility-you-can-now-use-MetaMask-with-Zilliqa-Heres-how-to-connect-your-wallet-to",
+      "pubDate": "2022-12-09T18:22:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZIL",
+        "GZIL"
+      ]
+    },
+    {
+      "title": "Acala LcDOT Crowdloan Redemption Nov/Dec 2023",
+      "link": "https://cryptopanic.com/news/17113212/Acala-LcDOT-Crowdloan-Redemption-NovDec-2023",
+      "pubDate": "2022-12-09T18:01:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ACA"
+      ]
+    },
+    {
+      "title": "Tron Hackathon Update #1: Integrating BitTorrent Chain into Mobula Ecosystem What does this mean for users? 🟢 T…",
+      "link": "https://cryptopanic.com/news/bittorrent/17117694/Tron-Hackathon-Update-1-Integrating-BitTorrent-Chain-into-Mobula-Ecosystem-What-does-this-mean-for-users-T",
+      "pubDate": "2022-12-09T17:29:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "XCN",
+        "MOBL"
+      ]
+    },
+    {
+      "title": "SBF Willing to Testify Before US House Committee of Financial Services Next Week",
+      "link": "https://cryptopanic.com/news/17113154/SBF-Willing-to-Testify-Before-US-House-Committee-of-Financial-Services-Next-Week",
+      "pubDate": "2022-12-09T17:25:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Bankman-Fried promised to testify before the US House Committee on Financial Services on December 13.",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Sam Bankman-Fried Supports Issuing New FTT Tokens To Make FTX Users Whole",
+      "link": "https://cryptopanic.com/news/17113108/Sam-Bankman-Fried-Supports-Issuing-New-FTT-Tokens-To-Make-FTX-Users-Whole",
+      "pubDate": "2022-12-09T17:07:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "Biggest Movers: MATIC, QNT Move Higher on Friday, as Cryptos Rebound",
+      "link": "https://cryptopanic.com/news/quant-network/17113105/Biggest-Movers-MATIC-QNT-Move-Higher-on-Friday-as-Cryptos-Rebound",
+      "pubDate": "2022-12-09T17:06:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MATIC",
+        "QNT"
+      ]
+    },
+    {
+      "title": "️ Heartbeat requirements have increased from 1 heartbeat to 12 per 24 hour Rewards Period for MOBILE Proof-of-Cove…",
+      "link": "https://cryptopanic.com/news/17116798/Heartbeat-requirements-have-increased-from-1-heartbeat-to-12-per-24-hour-Rewards-Period-for-MOBILE-Proof-of-Cove",
+      "pubDate": "2022-12-09T16:53:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ]
+    },
+    {
+      "title": "RT @behindtext: in this 2nd article in a series prior to a new major release, i discuss what is wrong with The Web, the world's largest and…",
+      "link": "https://cryptopanic.com/news/17113015/RT-behindtext-in-this-2nd-article-in-a-series-prior-to-a-new-major-release-i-discuss-what-is-wrong-with-The-Web-the-worlds-largest-and",
+      "pubDate": "2022-12-09T16:42:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DCR"
+      ]
+    },
+    {
+      "title": "RT @DanieleMensi23: Early next week will release a new @astrax mobile version #DigitalBits #BlockchainForBrands #BUIDLing",
+      "link": "https://cryptopanic.com/news/17115898/RT-DanieleMensi23-Early-next-week-will-release-a-new-astrax-mobile-version-DigitalBits-BlockchainForBrands-BUIDLing",
+      "pubDate": "2022-12-09T16:38:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XDB"
+      ]
+    },
+    {
+      "title": "Join our own @Ja_Morris and @DaniyalAjdadi on Energy Web’s last space event of the year! We’ll be looking back on t…",
+      "link": "https://cryptopanic.com/news/17116104/Join-our-own-Ja_Morris-and-DaniyalAjdadi-on-Energy-Webs-last-space-event-of-the-year-Well-be-looking-back-on-t",
+      "pubDate": "2022-12-09T16:38:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EWT"
+      ]
+    },
+    {
+      "title": "Another #QRNG deployment is now live! Our quantum randomness service is now available on @arbitrum’s Arbitrum Nova…",
+      "link": "https://cryptopanic.com/news/17114410/Another-QRNG-deployment-is-now-live-Our-quantum-randomness-service-is-now-available-on-arbitrums-Arbitrum-Nova",
+      "pubDate": "2022-12-09T16:30:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "API3"
+      ]
+    },
+    {
+      "title": "The love is mutual, without a doubt!  x 🧋 = ️",
+      "link": "https://cryptopanic.com/news/17112912/The-love-is-mutual-without-a-doubt-x",
+      "pubDate": "2022-12-09T16:09:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BOBA"
+      ]
+    },
+    {
+      "title": "RT @ChilizX: 𝐒𝐚𝐧𝐭𝐚 𝐓𝐞𝐥𝐥 𝐌𝐞 Do you want to play a game? After a long year of hard work, it's time to make some fun! Get ready to coun…",
+      "link": "https://cryptopanic.com/news/chiliz/17115351/RT-ChilizX-Santa-Tell-Me-Do-you-want-to-play-a-game-After-a-long-year-of-hard-work-its-time-to-make-some-fun-Get-ready-to-coun",
+      "pubDate": "2022-12-09T16:05:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHZ",
+        "ARG",
+        "PFL"
+      ]
+    },
+    {
+      "title": "We're excited to announce our commitment to supporting zkSync 2.0 on Ethereum. To get started, we're offering 150 f…",
+      "link": "https://cryptopanic.com/news/17112907/Were-excited-to-announce-our-commitment-to-supporting-zkSync-20-on-Ethereum-To-get-started-were-offering-150-f",
+      "pubDate": "2022-12-09T16:05:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "STORJ"
+      ]
+    },
+    {
+      "title": "Sending payments should be simple and fast. The #ETNApp enables people to process an #ETN transfer within a matter…",
+      "link": "https://cryptopanic.com/news/17112886/Sending-payments-should-be-simple-and-fast-The-ETNApp-enables-people-to-process-an-ETN-transfer-within-a-matter",
+      "pubDate": "2022-12-09T16:02:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "A big thank you to our amazing community for helping us reach 100k followers this week.",
+      "link": "https://cryptopanic.com/news/17118055/A-big-thank-you-to-our-amazing-community-for-helping-us-reach-100k-followers-this-week",
+      "pubDate": "2022-12-09T16:00:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OXT"
+      ]
+    },
+    {
+      "title": "Join #Zilliqa CEO @MattDDyer for a live AMA to round out 2022. Matt will look back at the last 12 months for…",
+      "link": "https://cryptopanic.com/news/zilliqa/17120013/Join-Zilliqa-CEO-MattDDyer-for-a-live-AMA-to-round-out-2022-Matt-will-look-back-at-the-last-12-months-for",
+      "pubDate": "2022-12-09T15:33:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZIL",
+        "GZIL"
+      ]
+    },
+    {
+      "title": "Kevin O’Leary Says FTX Collapse Makes Him and Other Investors in the Crypto Exchange ‘Look Like Idiots’",
+      "link": "https://cryptopanic.com/news/17112821/Kevin-OLeary-Says-FTX-Collapse-Makes-Him-and-Other-Investors-in-the-Crypto-Exchange-Look-Like-Idiots",
+      "pubDate": "2022-12-09T15:30:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "𝐈𝐭'𝐬 𝐌𝐚𝐭𝐜𝐡𝐝𝐚𝐲 | Morocco 🇲🇦 vs Portugal 🇵🇹 Who will win and WHY? We're partnering with @ZenGo to gift $200 in $CHZ…",
+      "link": "https://cryptopanic.com/news/chiliz/17115352/Its-Matchday-Morocco-vs-Portugal-Who-will-win-and-WHY-Were-partnering-with-ZenGo-to-gift-200-in-CHZ",
+      "pubDate": "2022-12-09T15:01:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHZ",
+        "ARG",
+        "PFL"
+      ]
+    },
+    {
+      "title": "Find out everything you need to know about the #Rootstock Blockchain Developer Course and become an official Root…",
+      "link": "https://cryptopanic.com/news/17118870/Find-out-everything-you-need-to-know-about-the-Rootstock-Blockchain-Developer-Course-and-become-an-official-Root",
+      "pubDate": "2022-12-09T15:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RBTC"
+      ]
+    },
+    {
+      "title": "Acala Engineers Deliver Open-Source ‘Chopsticks’ Client to Improve Testing in Polkadot Ecosystem",
+      "link": "https://cryptopanic.com/news/17120183/Acala-Engineers-Deliver-Open-Source-Chopsticks-Client-to-Improve-Testing-in-Polkadot-Ecosystem",
+      "pubDate": "2022-12-09T14:54:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "ACA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @RoseteDayan: Set a reminder for my upcoming Space! #gotchygame is right around the corner #MoleFam lets talk ab…",
+      "link": "https://cryptopanic.com/news/17119590/RT-RoseteDayan-Set-a-reminder-for-my-upcoming-Space-gotchygame-is-right-around-the-corner-MoleFam-lets-talk-ab",
+      "pubDate": "2022-12-09T14:28:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VVS"
+      ]
+    },
+    {
+      "title": "Energy Web's newsletter for November is now online! Get the latest Energy Web news, events, videos, and more, all i…",
+      "link": "https://cryptopanic.com/news/17116105/Energy-Webs-newsletter-for-November-is-now-online-Get-the-latest-Energy-Web-news-events-videos-and-more-all-i",
+      "pubDate": "2022-12-09T14:13:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EWT"
+      ]
+    },
+    {
+      "title": "It was a super informative event, thank you @EiCInitiative for inviting us. These events help define the challenges…",
+      "link": "https://cryptopanic.com/news/17115996/It-was-a-super-informative-event-thank-you-EiCInitiative-for-inviting-us-These-events-help-define-the-challenges",
+      "pubDate": "2022-12-09T13:56:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "DUSK"
+      ]
+    },
+    {
+      "title": "“#Rootstock is a network built by people for people with everyday needs” - @danielfogg at #RootstockSummit",
+      "link": "https://cryptopanic.com/news/17118871/Rootstock-is-a-network-built-by-people-for-people-with-everyday-needs-danielfogg-at-RootstockSummit",
+      "pubDate": "2022-12-09T13:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RBTC"
+      ]
+    },
+    {
+      "title": "I just signed up to use @metaplex’s creator royalties solution at 🦾",
+      "link": "https://cryptopanic.com/news/17118465/I-just-signed-up-to-use-metaplexs-creator-royalties-solution-at",
+      "pubDate": "2022-12-09T12:35:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "RAD"
+      ]
+    },
+    {
+      "title": "RT @DrDeathCultClub: GM to seekers of esoteric wisdom 🧠 The community have voted: the 1st episode of the documentary series The Garde…",
+      "link": "https://cryptopanic.com/news/zilliqa/17120014/RT-DrDeathCultClub-GM-to-seekers-of-esoteric-wisdom-The-community-have-voted-the-1st-episode-of-the-documentary-series-The-Garde",
+      "pubDate": "2022-12-09T12:20:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZIL",
+        "GZIL"
+      ]
+    },
+    {
+      "title": "Sam Bankman-Fried says he will testify before congressional committee",
+      "link": "https://cryptopanic.com/news/17112176/Sam-Bankman-Fried-says-he-will-testify-before-congressional-committee",
+      "pubDate": "2022-12-09T12:16:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The former FTX CEO said he's willing to testify before the House Committee on Financial Services in Washington, D.C., next week.",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "'I don't want a lot for Christmas There is just one thing I need I don't care about the presents underneath the C…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/17115022/I-dont-want-a-lot-for-Christmas-There-is-just-one-thing-I-need-I-dont-care-about-the-presents-underneath-the-C",
+      "pubDate": "2022-12-09T11:50:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "Founders Of @budblockz ($BLUNT) Believe Their Crypto Project Can Outperform Monero ($XMR) And Quant ($QNT) #Crypto…",
+      "link": "https://cryptopanic.com/news/quant-network/17119439/Founders-Of-budblockz-BLUNT-Believe-Their-Crypto-Project-Can-Outperform-Monero-XMR-And-Quant-QNT-Crypto",
+      "pubDate": "2022-12-09T11:06:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "QNT",
+        "TWJ"
+      ]
+    },
+    {
+      "title": "Did you know #OnePiece, one of the most popular and best-selling ongoing #manga and #anime, launched officially lic…",
+      "link": "https://cryptopanic.com/news/17114859/Did-you-know-OnePiece-one-of-the-most-popular-and-best-selling-ongoing-manga-and-anime-launched-officially-lic",
+      "pubDate": "2022-12-09T11:01:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BAKE"
+      ]
+    },
+    {
+      "title": "Will it be Lionel Messi or Cody Gakpo scoring the decisive goal tonight? 🤔 Reply with your best answer on 'who wil…",
+      "link": "https://cryptopanic.com/news/chiliz/17115353/Will-it-be-Lionel-Messi-or-Cody-Gakpo-scoring-the-decisive-goal-tonight-Reply-with-your-best-answer-on-who-wil",
+      "pubDate": "2022-12-09T11:00:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHZ",
+        "ARG",
+        "PFL"
+      ]
+    },
+    {
+      "title": "Beldex @CoinMarketCap Community Page link",
+      "link": "https://cryptopanic.com/news/17114916/Beldex-CoinMarketCap-Community-Page-link?mtm_campaign=API-OFA",
+      "pubDate": "2022-12-09T10:49:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BDX"
+      ]
+    },
+    {
+      "title": "Earn more crypto by inviting your friends to trade their ABBC coins on the #ABBCTrade portal and immediately rece…",
+      "link": "https://cryptopanic.com/news/17114503/Earn-more-crypto-by-inviting-your-friends-to-trade-their-ABBC-coins-on-the-ABBCTrade-portal-and-immediately-rece",
+      "pubDate": "2022-12-09T10:49:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ABBC"
+      ]
+    },
+    {
+      "title": "DeFi Kingdoms’ Serendale realm goes live on Klaytn",
+      "link": "https://cryptopanic.com/news/klay-token/17111949/DeFi-Kingdoms-Serendale-realm-goes-live-on-Klaytn",
+      "pubDate": "2022-12-09T10:47:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "KLAY"
+      ]
+    },
+    {
+      "title": "We’re in the TOP 3! Trade with #USDD and @defi_sunio and grow your wealth! #StableCoin #Sunswap #crypto",
+      "link": "https://cryptopanic.com/news/usdd/17119478/Were-in-the-TOP-3-Trade-with-USDD-and-defi_sunio-and-grow-your-wealth-StableCoin-Sunswap-crypto",
+      "pubDate": "2022-12-09T10:46:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "USDD"
+      ]
+    },
+    {
+      "title": "Axie Infinity (AXS), Synthetix (SNX), and ThorChain (RUNE) Lead the Crypto Market Charge",
+      "link": "https://cryptopanic.com/news/axie-infinity/17111914/Axie-Infinity-AXS-Synthetix-SNX-and-ThorChain-RUNE-Lead-the-Crypto-Market-Charge",
+      "pubDate": "2022-12-09T10:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS",
+        "AXS",
+        "RUNE"
+      ]
+    },
+    {
+      "title": "The overall market remained sluggish this week, with the 7-day change of BTC &amp; ETH at +1.7% and 0.5% respectively.🥱",
+      "link": "https://cryptopanic.com/news/17119354/The-overall-market-remained-sluggish-this-week-with-the-7-day-change-of-BTC-amp-ETH-at-17-and-05-respectively?mtm_campaign=API-OFA",
+      "pubDate": "2022-12-09T10:22:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "LON",
+        "imBTC"
+      ]
+    },
+    {
+      "title": "The end of the year is looking sweet! 🤩 #USDD / #CNHT is the new trading pair from @HuobiGlobal and it’s coming SO…",
+      "link": "https://cryptopanic.com/news/usdd/17110830/The-end-of-the-year-is-looking-sweet-USDD-CNHT-is-the-new-trading-pair-from-HuobiGlobal-and-its-coming-SO",
+      "pubDate": "2022-12-09T09:40:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDD"
+      ]
+    },
+    {
+      "title": "We are happy to announce that @Pinkpaperxyz, a decentralized content publishing platform, has joined the EcoBoost…",
+      "link": "https://cryptopanic.com/news/17110240/We-are-happy-to-announce-that-Pinkpaperxyz-a-decentralized-content-publishing-platform-has-joined-the-EcoBoost?mtm_campaign=API-OFA",
+      "pubDate": "2022-12-09T09:21:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO",
+        "GAS"
+      ]
+    },
+    {
+      "title": "Don’t forget about the ZERO FEE! 🤩 All #USDD related pairs are currently offering a zero fee trade on @HuobiGlobal…",
+      "link": "https://cryptopanic.com/news/usdd/17110831/Dont-forget-about-the-ZERO-FEE-All-USDD-related-pairs-are-currently-offering-a-zero-fee-trade-on-HuobiGlobal",
+      "pubDate": "2022-12-09T09:07:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDD"
+      ]
+    },
+    {
+      "title": "RT @bitlend_finance: Beloved @bitlend_finance fans, we are launched and ready for your attention #DeFi App we have developed is ready to…",
+      "link": "https://cryptopanic.com/news/bittorrent/17115019/RT-bitlend_finance-Beloved-bitlend_finance-fans-we-are-launched-and-ready-for-your-attention-DeFi-App-we-have-developed-is-ready-to",
+      "pubDate": "2022-12-09T08:33:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTT",
+        "BTTOLD"
+      ]
+    },
+    {
+      "title": "RT @RequestFinance: We're giving away an e-book! Come listen to what we learned from speaking with 250 CFOs at DAOs, and crypto companies.…",
+      "link": "https://cryptopanic.com/news/17108644/RT-RequestFinance-Were-giving-away-an-e-book-Come-listen-to-what-we-learned-from-speaking-with-250-CFOs-at-DAOs-and-crypto-companies",
+      "pubDate": "2022-12-09T08:02:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REQ"
+      ]
+    },
+    {
+      "title": "Payment channels born from a symbiotic relationship between Bitcoin and IPv6 provide a new level of scale and effic…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/17115023/Payment-channels-born-from-a-symbiotic-relationship-between-Bitcoin-and-IPv6-provide-a-new-level-of-scale-and-effic",
+      "pubDate": "2022-12-09T07:49:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "RT @behindtext: in my recent article about #Decred's marketing challenges, i put forward a long-standing hypothesis that the project accoun…",
+      "link": "https://cryptopanic.com/news/17108223/RT-behindtext-in-my-recent-article-about-Decreds-marketing-challenges-i-put-forward-a-long-standing-hypothesis-that-the-project-accoun",
+      "pubDate": "2022-12-09T07:44:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DCR"
+      ]
+    },
+    {
+      "title": "️ Gear Ticket Redemption is LIVE! How to claim YOUR Klaytn Gear NFTs: 1⃣ Go to 2⃣ Cl…",
+      "link": "https://cryptopanic.com/news/klay-token/17108812/Gear-Ticket-Redemption-is-LIVE-How-to-claim-YOUR-Klaytn-Gear-NFTs-1-Go-to-2-Cl",
+      "pubDate": "2022-12-09T07:31:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "DBY",
+        "HOOF"
+      ]
+    },
+    {
+      "title": "Launching your #decentralized application on the Velas #ecosystem provides unparalleled efficiency, security and sc…",
+      "link": "https://cryptopanic.com/news/17110978/Launching-your-decentralized-application-on-the-Velas-ecosystem-provides-unparalleled-efficiency-security-and-sc",
+      "pubDate": "2022-12-09T07:15:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "VLX",
+        "WVLX"
+      ]
+    },
+    {
+      "title": "3 days left to sign up to be a #KlaytnDevAmbassador! Don't miss out on the opportunity to learn from our dev team a…",
+      "link": "https://cryptopanic.com/news/klay-token/17108260/3-days-left-to-sign-up-to-be-a-KlaytnDevAmbassador-Dont-miss-out-on-the-opportunity-to-learn-from-our-dev-team-a",
+      "pubDate": "2022-12-09T07:01:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "New Cardano (ADA) Pair Added to Binance.US",
+      "link": "https://cryptopanic.com/news/17106118/New-Cardano-ADA-Pair-Added-to-BinanceUS",
+      "pubDate": "2022-12-09T06:09:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Binance.US has allowed its users to trade Cardano (ADA) and Solana (SOL) against the second-biggest stablecoin",
+      "currencies": [
+        "ADA",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Deploying and Running Solidity Smart Contracts on Zilliqa by @weimenglee #Zilliqa #EVM #Solidity",
+      "link": "https://cryptopanic.com/news/zilliqa/17111426/Deploying-and-Running-Solidity-Smart-Contracts-on-Zilliqa-by-weimenglee-Zilliqa-EVM-Solidity",
+      "pubDate": "2022-12-09T06:06:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ZIL",
+        "GZIL"
+      ]
+    },
+    {
+      "title": "RT if you want more #HPO in your wallet!",
+      "link": "https://cryptopanic.com/news/17107863/RT-if-you-want-more-HPO-in-your-wallet?mtm_campaign=API-OFA",
+      "pubDate": "2022-12-09T05:45:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HPO"
+      ]
+    },
+    {
+      "title": "RT @ImagineReplay: It's live! Here's the first of several commercials showing off ! We're bringing the couch #PLAY…",
+      "link": "https://cryptopanic.com/news/theta-token/17110488/RT-ImagineReplay-Its-live-Heres-the-first-of-several-commercials-showing-off-Were-bringing-the-couch-PLAY",
+      "pubDate": "2022-12-09T05:23:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Going short on Ethereum Classic [ETC]? You can benefit from these levels",
+      "link": "https://cryptopanic.com/news/ethereum-classic/17105146/Going-short-on-Ethereum-Classic-ETC-You-can-benefit-from-these-levels",
+      "pubDate": "2022-12-09T04:30:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "Coinbase Urges Customers to Ditch Tether With Free Transfers to USDC",
+      "link": "https://cryptopanic.com/news/17105075/Coinbase-Urges-Customers-to-Ditch-Tether-With-Free-Transfers-to-USDC",
+      "pubDate": "2022-12-09T03:37:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "America’s largest crypto exchange, Coinbase, doesn’t want its customers to use the Tether stablecoin. It's instead offering incentives on its own stablecoin, USDC.",
+      "currencies": [
+        "USDT",
+        "USDC"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 10
+      }
+    },
+    {
+      "title": "We look forward to 2023 as leading regulators and progressive institutional investors eyeing the tokenisation of of…",
+      "link": "https://cryptopanic.com/news/17106151/We-look-forward-to-2023-as-leading-regulators-and-progressive-institutional-investors-eyeing-the-tokenisation-of-of?mtm_campaign=API-OFA",
+      "pubDate": "2022-12-09T03:28:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHEX"
+      ]
+    },
+    {
+      "title": "RT @EFF: And finally, Apple has backed away from its privacy-invasive scanning plans and and announced that it will make real encryption av…",
+      "link": "https://cryptopanic.com/news/17109263/RT-EFF-And-finally-Apple-has-backed-away-from-its-privacy-invasive-scanning-plans-and-and-announced-that-it-will-make-real-encryption-av",
+      "pubDate": "2022-12-09T02:17:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OXT"
+      ]
+    },
+    {
+      "title": "RT @DigPerspectives: Listen to @ReggieMiddleton as he explains that he holds #DeFi Patents that were fought for, issued in the U.S. and Jap…",
+      "link": "https://cryptopanic.com/news/17104954/RT-DigPerspectives-Listen-to-ReggieMiddleton-as-he-explains-that-he-holds-DeFi-Patents-that-were-fought-for-issued-in-the-US-and-Jap",
+      "pubDate": "2022-12-09T02:09:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "VERI"
+      ]
+    },
+    {
+      "title": "What Keeps Price of Cardano Under $1?",
+      "link": "https://cryptopanic.com/news/17104892/What-Keeps-Price-of-Cardano-Under-1",
+      "pubDate": "2022-12-09T01:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Three factors keep Cardano from experiencing sturdy growth",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @immersve: Yesterday @immersve @altstatemachine &amp; @CENNZnet came together to put on a Women in Web3 Tech networking event for all the in…",
+      "link": "https://cryptopanic.com/news/17106148/RT-immersve-Yesterday-immersve-altstatemachine-amp-CENNZnet-came-together-to-put-on-a-Women-in-Web3-Tech-networking-event-for-all-the-in",
+      "pubDate": "2022-12-09T01:27:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "CENNZ"
+      ]
+    },
+    {
+      "title": "What Cardano’s [ADA] long-term investors can expect in 2023?",
+      "link": "https://cryptopanic.com/news/17104790/What-Cardanos-ADA-long-term-investors-can-expect-in-2023",
+      "pubDate": "2022-12-09T00:30:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano recently concluded its Cardano Summit 2022 Considering the metrics and planned updates, the next year might be better for Cardano Cardano’s [ADA] recent performance did not please its investors, its price action was quite sluggish in the previous week. As per CoinMarketCap, ADA registered negative weekly gains and, at the time of writing, it […]",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    }
+  ]
+}

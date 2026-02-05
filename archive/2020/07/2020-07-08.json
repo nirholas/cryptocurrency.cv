@@ -1,0 +1,25 @@
+{
+  "date": "2020-07-08",
+  "fetchedAt": "2026-02-05T07:27:06.942Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA 2.0: Pollen Testnet Records Peak Performance of 1500 TPS, 20x Improvement in Message Confirmation Time",
+      "link": "https://cryptopanic.com/news/9299580/IOTA-20-Pollen-Testnet-Records-Peak-Performance-of-1500-TPS-20x-Improvement-in-Message-Confirmation-Time",
+      "pubDate": "2020-07-08T18:00:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

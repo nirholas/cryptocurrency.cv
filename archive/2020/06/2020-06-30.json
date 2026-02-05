@@ -1,0 +1,25 @@
+{
+  "date": "2020-06-30",
+  "fetchedAt": "2026-02-05T07:27:06.943Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA Announces Pollen Testbed Release for Fully Decentralized IOTA 2.0 Trial",
+      "link": "https://cryptopanic.com/news/9227692/IOTA-Announces-Pollen-Testbed-Release-for-Fully-Decentralized-IOTA-20-Trial",
+      "pubDate": "2020-06-30T14:02:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

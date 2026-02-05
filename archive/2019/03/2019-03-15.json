@@ -1,0 +1,39 @@
+{
+  "date": "2019-03-15",
+  "fetchedAt": "2026-02-05T07:27:06.982Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Stock Exchange of Thailand Announces Digital Assets Platform",
+      "link": "https://cryptopanic.com/news/4845492/Stock-Exchange-of-Thailand-Announces-Digital-Assets-Platform",
+      "pubDate": "2019-03-15T18:00:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BTG"
+      ]
+    },
+    {
+      "title": "Bitcoin Trading Volume Tops $11 Billion For First Time In Nearly a Year",
+      "link": "https://cryptopanic.com/news/litecoin/4843718/Bitcoin-Trading-Volume-Tops-11-Billion-For-First-Time-In-Nearly-a-Year",
+      "pubDate": "2019-03-15T14:45:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 25,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

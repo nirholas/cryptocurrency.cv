@@ -1,0 +1,400 @@
+{
+  "date": "2025-09-28",
+  "fetchedAt": "2026-02-05T07:27:08.595Z",
+  "articleCount": 27,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Here’s Why BlockDAG’s 3M+ Miners & $411M+ Raise Put It Ahead of Cardano & Litecoin in 2025",
+      "link": "https://cryptopanic.com/news/litecoin/25724201/Heres-Why-BlockDAGs-3M-Miners-411M-Raise-Put-It-Ahead-of-Cardano-Litecoin-in-2025",
+      "pubDate": "2025-09-28T21:00:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Polkadot Advances Plan for Native DOT-Backed Stablecoin pUSD",
+      "link": "https://cryptopanic.com/news/polkadot/25724135/Polkadot-Advances-Plan-for-Native-DOT-Backed-Stablecoin-pUSD",
+      "pubDate": "2025-09-28T20:30:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "DOT"
+      ]
+    },
+    {
+      "title": "Ethereum Steadies, Bitcoin Cash Gains Traction, While BullZilla Presale Dominates the Best Crypto Presales to Buy Today",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/25722834/Ethereum-Steadies-Bitcoin-Cash-Gains-Traction-While-BullZilla-Presale-Dominates-the-Best-Crypto-Presales-to-Buy-Today",
+      "pubDate": "2025-09-28T18:15:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Chinese Company Debuts $500 Million Ethereum Tokenization Fund",
+      "link": "https://cryptopanic.com/news/ethereum/25722856/Chinese-Company-Debuts-500-Million-Ethereum-Tokenization-Fund",
+      "pubDate": "2025-09-28T17:59:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "China Asset Management Company (ChinaAMC), one of China’s largest fund managers with more than $400 billion in assets under management, has launched a tokenized money market fund on Ethereum. According to data provider RWA. xyz, the new product, ChinaAMC USD Digital Money Market Fund Class I USD (CUMIU), invests in short-term deposits and high-quality money market instruments. Its objective is to deliver stable returns denominated in Hong Kong dollars",
+      "currencies": [
+        "ETH",
+        "RWA"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Novogratz: 'I Didn't Think XRP Would Last'",
+      "link": "https://cryptopanic.com/news/ripple/25722361/Novogratz-I-Didnt-Think-XRP-Would-Last",
+      "pubDate": "2025-09-28T17:44:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The Best Altcoins To Buy For The Highest Gains Are VeChain, Algorand & Remittix",
+      "link": "https://cryptopanic.com/news/algorand/25722058/The-Best-Altcoins-To-Buy-For-The-Highest-Gains-Are-VeChain-Algorand-Remittix",
+      "pubDate": "2025-09-28T17:30:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALGO",
+        "VET"
+      ]
+    },
+    {
+      "title": "Best Altcoins To Buy Now: Solana, Litecoin & Remittix Could Deliver 30x Gains",
+      "link": "https://cryptopanic.com/news/litecoin/25721465/Best-Altcoins-To-Buy-Now-Solana-Litecoin-Remittix-Could-Deliver-30x-Gains",
+      "pubDate": "2025-09-28T16:45:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Best Cryptos To Buy Now: AAVE, ASTER, PEPENODE, HYPE, XPL, ZBCN",
+      "link": "https://cryptopanic.com/news/aave/25722032/Best-Cryptos-To-Buy-Now-AAVE-ASTER-PEPENODE-HYPE-XPL-ZBCN",
+      "pubDate": "2025-09-28T16:41:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "AAVE",
+        "HYPE"
+      ]
+    },
+    {
+      "title": "Best Crypto to Buy Now for 20x Gains by Year-End: VeChain, Polkadot, Cronos, Algorand, and Layer Brett",
+      "link": "https://cryptopanic.com/news/polkadot/25721409/Best-Crypto-to-Buy-Now-for-20x-Gains-by-Year-End-VeChain-Polkadot-Cronos-Algorand-and-Layer-Brett",
+      "pubDate": "2025-09-28T16:30:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "CRO",
+        "ALGO"
+      ]
+    },
+    {
+      "title": "What Happened in Crypto This Week: Vitalik on Base, WLFI Burn, Uniswap Hits $1T",
+      "link": "https://cryptopanic.com/news/uniswap/25722838/What-Happened-in-Crypto-This-Week-Vitalik-on-Base-WLFI-Burn-Uniswap-Hits-1T",
+      "pubDate": "2025-09-28T16:00:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "WLFI"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Aave Reaches $6.5B in Plasma Chain Deposits",
+      "link": "https://cryptopanic.com/news/aave/25720671/Aave-Reaches-65B-in-Plasma-Chain-Deposits",
+      "pubDate": "2025-09-28T15:58:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "XPL"
+      ]
+    },
+    {
+      "title": "Analyst PlanB Predicts Continued Bitcoin Bull Market",
+      "link": "https://cryptopanic.com/news/bitcoin/25720658/Analyst-PlanB-Predicts-Continued-Bitcoin-Bull-Market",
+      "pubDate": "2025-09-28T15:30:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "According to BlockBeats, renowned analyst PlanB has expressed confidence that the Bitcoin bull market is not yet over and is expected to continue. He anticipates a long-term stable upward trend without fear of missing out (FOMO) or crashes. PlanB noted that the market experienced a bull-bear transition point in June 2025, similar to previous transitions in October 2020, February 2017, and January 2013.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Vitalik Buterin Warns EU Chat Law Could Put Millions At Risk",
+      "link": "https://cryptopanic.com/news/ethereum/25719860/Vitalik-Buterin-Warns-EU-Chat-Law-Could-Put-Millions-At-Risk",
+      "pubDate": "2025-09-28T14:47:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Vitalik Buterin warns Europe’s chat monitoring bill threatens privacy, weakens security, and risks a digital shift toward Web3.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Avalanche Price Outlook Dims as Lyno AI Presale Attracts Whale Attention",
+      "link": "https://cryptopanic.com/news/avalanche-2/25719846/Avalanche-Price-Outlook-Dims-as-Lyno-AI-Presale-Attracts-Whale-Attention",
+      "pubDate": "2025-09-28T14:46:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "AVAX Price Prediction 2025: Is Wave 5 Setting Up for $50?",
+      "link": "https://cryptopanic.com/news/avalanche-2/25727362/AVAX-Price-Prediction-2025-Is-Wave-5-Setting-Up-for-50",
+      "pubDate": "2025-09-28T12:34:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "A"
+      ]
+    },
+    {
+      "title": "TRON Price Prediction 2025: Can TRX Break Out Above $0.36?",
+      "link": "https://cryptopanic.com/news/tron/25717890/TRON-Price-Prediction-2025-Can-TRX-Break-Out-Above-036",
+      "pubDate": "2025-09-28T12:14:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "A"
+      ]
+    },
+    {
+      "title": "Top 7 Low-Cap Coins Under $1—$OZ, XLM, DOGE, HBAR, CRO, ENA, and ONDO Lead the Pack for Explosive Returns",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/25716751/Top-7-Low-Cap-Coins-Under-1OZ-XLM-DOGE-HBAR-CRO-ENA-and-ONDO-Lead-the-Pack-for-Explosive-Returns",
+      "pubDate": "2025-09-28T11:35:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "XLM",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Polkadot Aims to Unlock DeFi Potential With Native pUSD Stablecoin",
+      "link": "https://cryptopanic.com/news/polkadot/25715614/Polkadot-Aims-to-Unlock-DeFi-Potential-With-Native-pUSD-Stablecoin",
+      "pubDate": "2025-09-28T09:57:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "DOT"
+      ]
+    },
+    {
+      "title": "Chainlink, Quant, Ondo, Pendle and Zexpire Named Top RWA Tokens to Watch in Q4 2025",
+      "link": "https://cryptopanic.com/news/chainlink/25713519/Chainlink-Quant-Ondo-Pendle-and-Zexpire-Named-Top-RWA-Tokens-to-Watch-in-Q4-2025",
+      "pubDate": "2025-09-28T09:00:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "QNT",
+        "ONDO"
+      ]
+    },
+    {
+      "title": "Uptober or Letdown? Analysts Eye LINK, XYZ & CRO Amid Altcoin Rotation",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/25713300/Uptober-or-Letdown-Analysts-Eye-LINK-XYZ-CRO-Amid-Altcoin-Rotation",
+      "pubDate": "2025-09-28T08:40:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO",
+        "LINK"
+      ]
+    },
+    {
+      "title": "What to Expect From Ethereum in Next 3 Years",
+      "link": "https://cryptopanic.com/news/ethereum/25713286/What-to-Expect-From-Ethereum-in-Next-3-Years",
+      "pubDate": "2025-09-28T08:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Here’s an expanded version of the sentence: \"In the coming three years, what developments, advancements, and transformations should we anticipate from the Ethereum network, particularly in terms of its technology, scalability, user adoption, and overall influence on the cryptocurrency ecosystem?\"",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Quant’s Rally Draws Attention As Bulls Eye $103 Liquidity Zone",
+      "link": "https://cryptopanic.com/news/quant-network/25713287/Quants-Rally-Draws-Attention-As-Bulls-Eye-103-Liquidity-Zone",
+      "pubDate": "2025-09-28T07:41:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "QNT"
+      ]
+    },
+    {
+      "title": "Ethereum vs Tron: Who Leads the Stablecoin Battle in 2025?",
+      "link": "https://cryptopanic.com/news/tron/25711253/Ethereum-vs-Tron-Who-Leads-the-Stablecoin-Battle-in-2025",
+      "pubDate": "2025-09-28T06:59:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TRX",
+        "A"
+      ]
+    },
+    {
+      "title": "Ripple News: XRP Ledger Positioned to Rival Ethereum in RWA Market",
+      "link": "https://cryptopanic.com/news/ethereum/25712223/Ripple-News-XRP-Ledger-Positioned-to-Rival-Ethereum-in-RWA-Market",
+      "pubDate": "2025-09-28T05:00:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The partnership introduces OUSG, a tokenized version of short-term government debt, and uses Ripple’s RLUSD stablecoin as the backbone for […] The post Ripple News: XRP Ledger Positioned to Rival Ethereum in RWA Market appeared first on Coindoo.",
+      "currencies": [
+        "ETH",
+        "XRP",
+        "RLUSD"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 4
+      }
+    },
+    {
+      "title": "TRON Daily Report: September 28, 2025 — Whale Guard, TRX Bull/Bear, DeFi Flows",
+      "link": "https://cryptopanic.com/news/tron/25710340/TRON-Daily-Report-September-28-2025-Whale-Guard-TRX-BullBear-DeFi-Flows",
+      "pubDate": "2025-09-28T04:18:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "WTRX"
+      ]
+    },
+    {
+      "title": "Radiant Capital Attacker Converts DAI to ETH and Utilizes TornadoCash",
+      "link": "https://cryptopanic.com/news/dai/25720636/Radiant-Capital-Attacker-Converts-DAI-to-ETH-and-Utilizes-TornadoCash",
+      "pubDate": "2025-09-28T02:33:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DAI"
+      ]
+    },
+    {
+      "title": "Chainlink Targets $22 As LINKBTC Shows Signs Of Reversal – Is The Next Rally Close?",
+      "link": "https://cryptopanic.com/news/chainlink/25707697/Chainlink-Targets-22-As-LINKBTC-Shows-Signs-Of-Reversal-Is-The-Next-Rally-Close",
+      "pubDate": "2025-09-28T01:30:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "CryptoWzrd noted in a fresh update that Chainlink ended the day on a bullish note, with signs pointing to more upside ahead. The strength in LINKBTC is adding momentum, suggesting further pressure from the bulls. On the intraday chart, the $22 level is emerging as the next key bullish zone, while lower time frames remain the focus for spotting the next scalp opportunity. LINKBTC To Trigger A Reversal For Chainlink In an elaborate analysis, CryptoWzrd confirmed a strong bullish close for both the",
+      "currencies": [
+        "BTC",
+        "LINK",
+        "A"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

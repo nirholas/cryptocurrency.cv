@@ -1,0 +1,25 @@
+{
+  "date": "2020-04-22",
+  "fetchedAt": "2026-02-05T07:27:06.961Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "EOS.IO Daniel Larimer to Implement 'Enterprise Application' Without Tokens",
+      "link": "https://cryptopanic.com/news/8575335/EOSIO-Daniel-Larimer-to-Implement-Enterprise-Application-Without-Tokens",
+      "pubDate": "2020-04-22T11:09:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 12
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

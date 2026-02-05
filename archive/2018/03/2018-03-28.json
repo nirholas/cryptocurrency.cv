@@ -1,0 +1,25 @@
+{
+  "date": "2018-03-28",
+  "fetchedAt": "2026-02-05T07:27:06.994Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "As LitePay Shuts Down, Litecoin Sees a 15 Percent Drop in Value",
+      "link": "https://cryptopanic.com/news/litecoin/1504271/As-LitePay-Shuts-Down-Litecoin-Sees-a-15-Percent-Drop-in-Value",
+      "pubDate": "2018-03-28T16:00:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

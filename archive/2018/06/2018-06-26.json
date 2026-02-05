@@ -1,0 +1,26 @@
+{
+  "date": "2018-06-26",
+  "fetchedAt": "2026-02-05T07:27:07.892Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "EOS Block Producer Faces Legal Action After Goof-Up",
+      "link": "https://cryptopanic.com/news/2364196/EOS-Block-Producer-Faces-Legal-Action-After-Goof-Up",
+      "pubDate": "2018-06-26T13:44:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

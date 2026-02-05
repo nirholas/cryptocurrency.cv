@@ -1,0 +1,54 @@
+{
+  "date": "2019-05-26",
+  "fetchedAt": "2026-02-05T07:27:06.930Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Buy or Cry! Bitcoin SV (BSV) Price Booms – Sweet Summer Is Predicted",
+      "link": "https://cryptopanic.com/news/5533226/Buy-or-Cry-Bitcoin-SV-BSV-Price-Booms-Sweet-Summer-Is-Predicted",
+      "pubDate": "2019-05-26T16:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Justin Sun Tweets About BitTorrent’s Upcoming Announcement: BTT Surges 20%",
+      "link": "https://cryptopanic.com/news/5532059/Justin-Sun-Tweets-About-BitTorrents-Upcoming-Announcement-BTT-Surges-20",
+      "pubDate": "2019-05-26T12:13:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTT"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 28
+      }
+    },
+    {
+      "title": "RT @Jelurida: In anticipation of the upcoming #Java Barcelona Conference where @lioryaffe will speak and do a workshop, we are excited to s…",
+      "link": "https://cryptopanic.com/news/11431142/RT-Jelurida-In-anticipation-of-the-upcoming-Java-Barcelona-Conference-where-lioryaffe-will-speak-and-do-a-workshop-we-are-excited-to-s?mtm_campaign=API-OFA",
+      "pubDate": "2019-05-26T09:57:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AEUR"
+      ]
+    }
+  ]
+}

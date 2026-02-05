@@ -1,0 +1,25 @@
+{
+  "date": "2017-11-12",
+  "fetchedAt": "2026-02-05T07:27:06.817Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Confusion and Euphoria As Bitcoin Cash Tops $30 Billion",
+      "link": "https://cryptopanic.com/news/437504/Confusion-and-Euphoria-As-Bitcoin-Cash-Tops-30-Billion",
+      "pubDate": "2017-11-12T05:45:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    }
+  ]
+}

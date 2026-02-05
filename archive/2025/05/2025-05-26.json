@@ -1,0 +1,445 @@
+{
+  "date": "2025-05-26",
+  "fetchedAt": "2026-02-05T07:27:08.637Z",
+  "articleCount": 30,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Monero and Zcash Push Privacy-Coin Market Cap Past $10B",
+      "link": "https://cryptopanic.com/news/monero/22100181/Monero-and-Zcash-Push-Privacy-Coin-Market-Cap-Past-10B",
+      "pubDate": "2025-05-26T21:02:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Here’s Why Monero XMR is Pumping! #shorts",
+      "link": "https://cryptopanic.com/news/monero/22100165/Heres-Why-Monero-XMR-is-Pumping-shorts",
+      "pubDate": "2025-05-26T21:00:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Altcoins surge! XMR, AAVE, and WLD outperform as Bitcoin holds support",
+      "link": "https://cryptopanic.com/news/monero/22100168/Altcoins-surge-XMR-AAVE-and-WLD-outperform-as-Bitcoin-holds-support",
+      "pubDate": "2025-05-26T21:00:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XMR",
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "TRX, Monero, and HYPE Token Ignite Surprise Altcoin Rally",
+      "link": "https://cryptopanic.com/news/monero/22100017/TRX-Monero-and-HYPE-Token-Ignite-Surprise-Altcoin-Rally",
+      "pubDate": "2025-05-26T20:50:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "XMR",
+        "HYPE"
+      ]
+    },
+    {
+      "title": "Monero Hits Recent Highs, Tron Price Prediction And Everything You Need To Know About New Altcoin Mantix",
+      "link": "https://cryptopanic.com/news/monero/22098360/Monero-Hits-Recent-Highs-Tron-Price-Prediction-And-Everything-You-Need-To-Know-About-New-Altcoin-Mantix",
+      "pubDate": "2025-05-26T18:21:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "XMR"
+      ]
+    },
+    {
+      "title": "Uniswap rises above key resistance, aiming for $7.50 ahead of first positive monthly return in 2025",
+      "link": "https://cryptopanic.com/news/uniswap/22098430/Uniswap-rises-above-key-resistance-aiming-for-750-ahead-of-first-positive-monthly-return-in-2025",
+      "pubDate": "2025-05-26T17:34:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "VeChain’s Johnny Garcia Explains Why Texas Could Be Next to Adopt a Bitcoin Reserve",
+      "link": "https://cryptopanic.com/news/vechain/22098265/VeChains-Johnny-Garcia-Explains-Why-Texas-Could-Be-Next-to-Adopt-a-Bitcoin-Reserve",
+      "pubDate": "2025-05-26T17:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "VET"
+      ]
+    },
+    {
+      "title": "Pepe, Polkadot & Mantix Rumours Spread As Major Growth Is About To Erupt In These Big Players",
+      "link": "https://cryptopanic.com/news/polkadot/22097402/Pepe-Polkadot-Mantix-Rumours-Spread-As-Major-Growth-Is-About-To-Erupt-In-These-Big-Players",
+      "pubDate": "2025-05-26T17:18:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "PEPE"
+      ]
+    },
+    {
+      "title": "Fastest Growing Crypto's To Buy Now: Solana, Mantix & Bitcoin Cash Are Hot To Trot - Don't Miss Out",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22097183/Fastest-Growing-Cryptos-To-Buy-Now-Solana-Mantix-Bitcoin-Cash-Are-Hot-To-Trot-Dont-Miss-Out",
+      "pubDate": "2025-05-26T17:10:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Ethereum, Monero, and BlockDAG Compared: Growth Potential, Utility, and Market Momentum in 2025",
+      "link": "https://cryptopanic.com/news/monero/22096616/Ethereum-Monero-and-BlockDAG-Compared-Growth-Potential-Utility-and-Market-Momentum-in-2025",
+      "pubDate": "2025-05-26T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XMR"
+      ]
+    },
+    {
+      "title": "Trump Media aims for $3B raise to acquire crypto assets, potentially mirroring Strategy’s Bitcoin playbook",
+      "link": "https://cryptopanic.com/news/bitcoin/22096528/Trump-Media-aims-for-3B-raise-to-acquire-crypto-assets-potentially-mirroring-Strategys-Bitcoin-playbook",
+      "pubDate": "2025-05-26T16:36:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Trump Media and Technology Group (TMTG), which runs Truth Social, is seeking to raise $3 billion for crypto asset acquisitions, the Financial Times reported Monday, citing six sources familiar with the plan. The company targets $2 billion in fresh equity and an additional $1 billion through convertible bonds, sources told the FT. An announcement on the capital raise may come before the 2025 Bitcoin Conference kicks off in Las Vegas from May 27 to 29. The event, the largest of its kind, will feat",
+      "currencies": [
+        "BTC",
+        "FT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Monero (XMR) Privacy Coin Makes Unexpected Comeback to Top 25",
+      "link": "https://cryptopanic.com/news/monero/22096311/Monero-XMR-Privacy-Coin-Makes-Unexpected-Comeback-to-Top-25",
+      "pubDate": "2025-05-26T16:14:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 27 May 2025: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/decentraland/22097429/Spell-Wallet-Daily-Puzzle-27-May-2025-Earn-Reward-of-1-MANA",
+      "pubDate": "2025-05-26T15:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "Crypto Price Analysis 5-26: BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, BITTENSOR: TAO, FILECOIN: FIL, POLKADOT: DOT",
+      "link": "https://cryptopanic.com/news/polkadot/22094430/Crypto-Price-Analysis-5-26-BITCOIN-BTC-ETHEREUM-ETH-SOLANA-SOL-BITTENSOR-TAO-FILECOIN-FIL-POLKADOT-DOT",
+      "pubDate": "2025-05-26T14:35:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Neo News: Week in Review – May 19 – May 25",
+      "link": "https://cryptopanic.com/news/neo/22093758/Neo-News-Week-in-Review-May-19-May-25",
+      "pubDate": "2025-05-26T14:30:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO",
+        "FLM"
+      ]
+    },
+    {
+      "title": "Chainlink Secures Over 68% of Oracle TVL With $66 Billion, Powers 81.93% of Ethereum Oracle Infrastructure, Integrates $2B+ Solv Protocol Proof of Reserve",
+      "link": "https://cryptopanic.com/news/ethereum/22093180/Chainlink-Secures-Over-68-of-Oracle-TVL-With-66-Billion-Powers-8193-of-Ethereum-Oracle-Infrastructure-Integrates-2B-Solv-Protocol-Proof-of-Reserve",
+      "pubDate": "2025-05-26T14:05:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Chainlink continues to consolidate its position as a dominant oracle network in the decentralized finance (DeFi) ecosystem",
+      "currencies": [
+        "ETH",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The crypto Monero conquers the Top 25: surpassed Litecoin and Toncoin",
+      "link": "https://cryptopanic.com/news/monero/22096445/The-crypto-Monero-conquers-the-Top-25-surpassed-Litecoin-and-Toncoin",
+      "pubDate": "2025-05-26T13:57:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "XMR",
+        "TON"
+      ]
+    },
+    {
+      "title": "XMR Enters Top 25: Flips Litecoin and Toncoin",
+      "link": "https://cryptopanic.com/news/monero/22096461/XMR-Enters-Top-25-Flips-Litecoin-and-Toncoin",
+      "pubDate": "2025-05-26T12:38:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "XMR",
+        "TON"
+      ]
+    },
+    {
+      "title": "Uniswap price up 11% amid double-digit gains for JUP, VIRTUAL",
+      "link": "https://cryptopanic.com/news/uniswap/22091393/Uniswap-price-up-11-amid-double-digit-gains-for-JUP-VIRTUAL",
+      "pubDate": "2025-05-26T12:17:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "JUP",
+        "VIRTUAL"
+      ]
+    },
+    {
+      "title": "Ethereum’s Buterin: Privacy-Focused Networks Could Support National Payment Systems",
+      "link": "https://cryptopanic.com/news/ethereum/22089994/Ethereums-Buterin-Privacy-Focused-Networks-Could-Support-National-Payment-Systems",
+      "pubDate": "2025-05-26T11:42:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "TL;DR Vitalik Buterin claims that decentralized networks like Ethereum could replace cash in emergency situations, as long as they are private and resilient enough. Sweden and Norway, pioneers in eliminating the use of cash, have taken a step back and now urge their citizens to store physical money for safety precautions. Buterin envisions Ethereum as. . . Read more",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dormant Uniswap Whale Returns After 3 Years, UNI to $18 Soon?",
+      "link": "https://cryptopanic.com/news/uniswap/22091364/Dormant-Uniswap-Whale-Returns-After-3-Years-UNI-to-18-Soon",
+      "pubDate": "2025-05-26T11:23:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "After The Latest Network Upgrades, These 4 Altcoins, Including Fartcoin, Are Primed To Surge",
+      "link": "https://cryptopanic.com/news/polkadot/22089195/After-The-Latest-Network-Upgrades-These-4-Altcoins-Including-Fartcoin-Are-Primed-To-Surge",
+      "pubDate": "2025-05-26T11:02:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "AVAX",
+        "FARTCOIN"
+      ]
+    },
+    {
+      "title": "Whale Converts $20M in Bitcoin to AAVE, Bags Big Unrealized Profits",
+      "link": "https://cryptopanic.com/news/aave/22098395/Whale-Converts-20M-in-Bitcoin-to-AAVE-Bags-Big-Unrealized-Profits",
+      "pubDate": "2025-05-26T11:00:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Vitalik Buterin: Ethereum Needs Privacy and Strength to Replace Cash",
+      "link": "https://cryptopanic.com/news/ethereum/22088005/Vitalik-Buterin-Ethereum-Needs-Privacy-and-Strength-to-Replace-Cash",
+      "pubDate": "2025-05-26T10:12:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum co-founder Vitalik Buterin has emphasized that maintaining resilience and privacy is essential for Ethereum to remain competitive against cash, especially as Nordic countries increasingly revert to cash usage. In a recent post on X, Buterin noted a report indicating that Nordic countries are shifting back to cash amid concerns over the vulnerabilities of centralized digital payment systems. “Cash turns out necessary as a backup,” Buterin wrote. “Ethereum needs to be resilient enough, an",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Monero's Market Cap Flips Litecoin and Toncoin as XMR Enters Top 25 Tokens",
+      "link": "https://cryptopanic.com/news/monero/22088411/Moneros-Market-Cap-Flips-Litecoin-and-Toncoin-as-XMR-Enters-Top-25-Tokens",
+      "pubDate": "2025-05-26T10:10:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Privacy-focused cryptocurrency monero XMR has overtaken litecoin LTC and toncoin TON to rank among the top 25 digital assets by market value.The so-called flippening is characterized by XMR's market capitalization topping $7.5 billion, racing ahead of TON's $7.48 billion and LTC's $7",
+      "currencies": [
+        "LTC",
+        "XMR",
+        "TON"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Uniswap Foundation Discloses Reserves, Expands Ecosystem Funding Plans",
+      "link": "https://cryptopanic.com/news/uniswap/22093812/Uniswap-Foundation-Discloses-Reserves-Expands-Ecosystem-Funding-Plans",
+      "pubDate": "2025-05-26T10:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Florida Becomes First U.S. State to Propose Eliminating Capital Gains Tax on Bitcoin, Boosting Cryptocurrency Adoption",
+      "link": "https://cryptopanic.com/news/bitcoin/22087191/Florida-Becomes-First-US-State-to-Propose-Eliminating-Capital-Gains-Tax-on-Bitcoin-Boosting-Cryptocurrency-Adoption",
+      "pubDate": "2025-05-26T09:35:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Florida has become the first U",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "UNI whale nets $21.5M profit, scores fresh gains with $5.99 buy-in",
+      "link": "https://cryptopanic.com/news/uniswap/22085871/UNI-whale-nets-215M-profit-scores-fresh-gains-with-599-buy-in",
+      "pubDate": "2025-05-26T08:37:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Whale Investor Sees Gains in UNI Trading",
+      "link": "https://cryptopanic.com/news/uniswap/22085841/Whale-Investor-Sees-Gains-in-UNI-Trading",
+      "pubDate": "2025-05-26T08:03:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Top Gainers HYPE ZEC VIRTUAL: Social chatter fuels altcoin rally, HYPE and ZEC target new peaks",
+      "link": "https://cryptopanic.com/news/zcash/22081416/Top-Gainers-HYPE-ZEC-VIRTUAL-Social-chatter-fuels-altcoin-rally-HYPE-and-ZEC-target-new-peaks",
+      "pubDate": "2025-05-26T03:17:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "HYPE",
+        "VIRTUAL"
+      ]
+    }
+  ]
+}

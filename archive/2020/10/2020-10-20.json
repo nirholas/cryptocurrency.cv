@@ -1,0 +1,23 @@
+{
+  "date": "2020-10-20",
+  "fetchedAt": "2026-02-05T07:27:07.577Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "An Epic Beginners Guide to Uniswap [2020]",
+      "link": "https://cryptopanic.com/news/10301963/An-Epic-Beginners-Guide-to-Uniswap-2020",
+      "pubDate": "2020-10-20T14:58:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "UNI",
+        "AAVE"
+      ]
+    }
+  ]
+}

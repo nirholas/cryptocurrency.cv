@@ -1,0 +1,724 @@
+{
+  "date": "2025-07-21",
+  "fetchedAt": "2026-02-05T07:27:08.621Z",
+  "articleCount": 49,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Franklin Templeton Discusses Its Benji Token, Stellar Network, DeFi, and More",
+      "link": "https://cryptopanic.com/news/stellar/23528648/Franklin-Templeton-Discusses-Its-Benji-Token-Stellar-Network-DeFi-and-More",
+      "pubDate": "2025-07-21T23:56:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XLM",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "3 Altcoins to Watch in the Fourth Week of July 2025",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/23528646/3-Altcoins-to-Watch-in-the-Fourth-Week-of-July-2025",
+      "pubDate": "2025-07-21T23:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Coinbase finally debuts perpetual futures in the US for the first time – Left out XRP and SOL",
+      "link": "https://cryptopanic.com/news/bitcoin/23526121/Coinbase-finally-debuts-perpetual-futures-in-the-US-for-the-first-time-Left-out-XRP-and-SOL",
+      "pubDate": "2025-07-21T22:15:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Coinbase has just launched CFTC-compliant perpetual-style futures trading in the U. S. with nano Bitcoin (BTC) and Ethereum (ETH) contracts being offered up first. The contracts will reportedly offer 24/7 trading, up to 10x leverage, no quarterly expiration, and fees as low as 0. 02%, marking a significant step for regulated crypto derivatives in the U. S. Coinbase […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "ETH on the Rise as Treasury Firms and ETFs Fuel Momentum",
+      "link": "https://cryptopanic.com/news/ethereum/23523660/ETH-on-the-Rise-as-Treasury-Firms-and-ETFs-Fuel-Momentum",
+      "pubDate": "2025-07-21T21:01:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Analysts point to increasing ETH allocations from asset managers like BlackRock, alongside purchases from banks and fintech firms using ETH […] The post ETH on the Rise as Treasury Firms and ETFs Fuel Momentum appeared first on Coindoo.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ALGO Slips Into Bear Zone, SEI Breaks Out, BlockDAG Boosts X1 Rewards Tenfold with X10, Demo Coming This Wednesday!",
+      "link": "https://cryptopanic.com/news/algorand/23523529/ALGO-Slips-Into-Bear-Zone-SEI-Breaks-Out-BlockDAG-Boosts-X1-Rewards-Tenfold-with-X10-Demo-Coming-This-Wednesday",
+      "pubDate": "2025-07-21T21:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ALGO",
+        "SEI"
+      ]
+    },
+    {
+      "title": "Over 99% of XRP holders are in profit",
+      "link": "https://cryptopanic.com/news/bitcoin/23523466/Over-99-of-XRP-holders-are-in-profit",
+      "pubDate": "2025-07-21T20:27:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "XRP reaches 99. 6% of its supply in profit, outpacing Bitcoin and signaling peak investor profitability levels.",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Important Token Unlocks Worth $442M Happen This Week: Watch These Altcoins",
+      "link": "https://cryptopanic.com/news/avalanche-2/23520241/Important-Token-Unlocks-Worth-442M-Happen-This-Week-Watch-These-Altcoins",
+      "pubDate": "2025-07-21T18:05:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "DOGE",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Arbitrum Records Net Inflows of $1.9 Billion and Strengthens Its DeFi Ecosystem",
+      "link": "https://cryptopanic.com/news/avalanche-2/23519647/Arbitrum-Records-Net-Inflows-of-19-Billion-and-Strengthens-Its-DeFi-Ecosystem",
+      "pubDate": "2025-07-21T17:35:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "AVAX Price Targets $48 as DeFi TVL Approaches 3-Year High",
+      "link": "https://cryptopanic.com/news/avalanche-2/23518243/AVAX-Price-Targets-48-as-DeFi-TVL-Approaches-3-Year-High",
+      "pubDate": "2025-07-21T16:54:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Arbitrum leads with $1.9 billion inflows, outpaces Avalanche and Unichain in DeFi liquidity race",
+      "link": "https://cryptopanic.com/news/avalanche-2/23518189/Arbitrum-leads-with-19-billion-inflows-outpaces-Avalanche-and-Unichain-in-DeFi-liquidity-race",
+      "pubDate": "2025-07-21T16:25:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AVAX",
+        "ARB"
+      ]
+    },
+    {
+      "title": "Cardano Eyes Breakout While Market Rotation Quietly Begins",
+      "link": "https://cryptopanic.com/news/bitcoin/23516429/Cardano-Eyes-Breakout-While-Market-Rotation-Quietly-Begins",
+      "pubDate": "2025-07-21T15:31:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Signs of rotation are emerging, and analysts are watching a critical metric — Bitcoin dominance — for confirmation.",
+      "currencies": [
+        "BTC",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 22 July 2025: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/decentraland/23519620/Spell-Wallet-Daily-Puzzle-22-July-2025-Earn-Reward-of-1-MANA",
+      "pubDate": "2025-07-21T15:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "'Ethereum Stole the Show' as ETH ETF Flows Hit Record High: CoinShares",
+      "link": "https://cryptopanic.com/news/bitcoin/23514866/Ethereum-Stole-the-Show-as-ETH-ETF-Flows-Hit-Record-High-CoinShares",
+      "pubDate": "2025-07-21T15:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum ETFs smash records with $2. 2B weekly inflows, outshining Bitcoin as institutional investors pile into the surging altcoin.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Decentraland (MANA): the price rises again by 42% in a month. Technical analysis and future scenarios",
+      "link": "https://cryptopanic.com/news/decentraland/23518689/Decentraland-MANA-the-price-rises-again-by-42-in-a-month-Technical-analysis-and-future-scenarios",
+      "pubDate": "2025-07-21T14:14:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MANA",
+        "Z"
+      ]
+    },
+    {
+      "title": "Aave proposal to launch centralized lending on Kraken’s Ink moves to next phase",
+      "link": "https://cryptopanic.com/news/aave/23513284/Aave-proposal-to-launch-centralized-lending-on-Krakens-Ink-moves-to-next-phase",
+      "pubDate": "2025-07-21T14:00:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Ayni Gold Is Tokenizing the Once-Inaccessible Gold Mining Industry — Here’s What It Means for Everyday Investors",
+      "link": "https://cryptopanic.com/news/pax-gold/23513242/Ayni-Gold-Is-Tokenizing-the-Once-Inaccessible-Gold-Mining-Industry-Heres-What-It-Means-for-Everyday-Investors",
+      "pubDate": "2025-07-21T13:55:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "PAXG"
+      ]
+    },
+    {
+      "title": "Ethereum Sees Unprecedented $2.12B Weekly Inflows, Beating All Prior Records",
+      "link": "https://cryptopanic.com/news/ethereum/23513198/Ethereum-Sees-Unprecedented-212B-Weekly-Inflows-Beating-All-Prior-Records",
+      "pubDate": "2025-07-21T13:51:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "TL;DR Crypto funds saw a record $4. 39 billion in inflows last week, 14 consecutive weeks of net positive flows, lifting total AUM to an all-time $220 billion on booming ETP demand. Ethereum led the charge with $2. 12 billion of weekly inflows (23 percent of its ETP assets), outpacing its entire 2024 intake in just seven. . . Read more",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Stellar (XLM) Ultra-Rare Golden Cross Imminent Amid 102% Surge: Details",
+      "link": "https://cryptopanic.com/news/stellar/23513151/Stellar-XLM-Ultra-Rare-Golden-Cross-Imminent-Amid-102-Surge-Details",
+      "pubDate": "2025-07-21T13:39:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Cardano Controversy: Hoskinson to Expose Truth in Mid-August Audit Stream",
+      "link": "https://cryptopanic.com/news/cardano/23513116/Cardano-Controversy-Hoskinson-to-Expose-Truth-in-Mid-August-Audit-Stream",
+      "pubDate": "2025-07-21T13:37:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "TL;DR Cardano founder Charles Hoskinson has confirmed that the long-awaited audit of Input Output Global’s ADA reserves is almost ready and will be broadcast live by mid-August. The move aims to counter $600 million ADA misuse claims, which Hoskinson firmly denies. He also hinted at potential lawsuits against those spreading false information. As the crypto. . . Read more",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Neo News: Week in Review – July 14 – July 20",
+      "link": "https://cryptopanic.com/news/neo/23513173/Neo-News-Week-in-Review-July-14-July-20",
+      "pubDate": "2025-07-21T13:34:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO",
+        "FLM"
+      ]
+    },
+    {
+      "title": "Ethereum, Cardano, and ICP Dominate Weekly Crypto Development Rankings",
+      "link": "https://cryptopanic.com/news/internet-computer/23512733/Ethereum-Cardano-and-ICP-Dominate-Weekly-Crypto-Development-Rankings",
+      "pubDate": "2025-07-21T13:24:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "ICP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Exclusive: Ethereum co-founder Joe Lubin has blunt response to Bitcoin treasury firms",
+      "link": "https://cryptopanic.com/news/bitcoin/23512640/Exclusive-Ethereum-co-founder-Joe-Lubin-has-blunt-response-to-Bitcoin-treasury-firms",
+      "pubDate": "2025-07-21T13:16:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Joe Lubin outlines SharpLink's aggressive Ether treasury drive and why friendlier U. S. regulators changed the game.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Nexo Price Prediction 2025, 2026 – 2030: Will NEXO Price Hit $5 Target?",
+      "link": "https://cryptopanic.com/news/nexo/23511688/Nexo-Price-Prediction-2025-2026-2030-Will-NEXO-Price-Hit-5-Target",
+      "pubDate": "2025-07-21T13:09:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "NEXO"
+      ]
+    },
+    {
+      "title": "ETC Soars 50% in a Month as Community Presses Coinbase to Reduce Transaction Wait Times",
+      "link": "https://cryptopanic.com/news/ethereum-classic/23511694/ETC-Soars-50-in-a-Month-as-Community-Presses-Coinbase-to-Reduce-Transaction-Wait-Times",
+      "pubDate": "2025-07-21T13:06:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "USDT Rates Spike on Aave After HTX-Linked Addresses Withdraw Liquidity",
+      "link": "https://cryptopanic.com/news/aave/23511494/USDT-Rates-Spike-on-Aave-After-HTX-Linked-Addresses-Withdraw-Liquidity",
+      "pubDate": "2025-07-21T12:40:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Litecoin Price Prediction: LTC Could Reach $200, But Ozak AI Could Deliver Explosive Growth at a Fraction of the Cost",
+      "link": "https://cryptopanic.com/news/litecoin/23511408/Litecoin-Price-Prediction-LTC-Could-Reach-200-But-Ozak-AI-Could-Deliver-Explosive-Growth-at-a-Fraction-of-the-Cost",
+      "pubDate": "2025-07-21T12:32:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Pantera-backed The Ether Machine set for Nasdaq debut, targets $1.6B raise",
+      "link": "https://cryptopanic.com/news/ethereum/23511385/Pantera-backed-The-Ether-Machine-set-for-Nasdaq-debut-targets-16B-raise",
+      "pubDate": "2025-07-21T12:28:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The Ether Machine, a newly established firm backed by a group of top-tier institutional, crypto-native, and strategic investors, announced Monday its plans to go public on Nasdaq, targeting over $1. 6 billion in gross proceeds to build \"the largest public Ether generation company. \"The Ether Machine is set to trade under the ticker ETHM via a business combination with Dynamix Corporation. At launch, the company expects to hold more than 400,000 ETH on its balance sheet",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Solana price prediction: SOL targets breakout above $200",
+      "link": "https://cryptopanic.com/news/solana/23511198/Solana-price-prediction-SOL-targets-breakout-above-200",
+      "pubDate": "2025-07-21T12:16:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Solana price is above $190, with intraday highs of $192 as bulls target the psychological $200 level. Analysts say SOL could explode above the $190 level amid current altcoin gains. Institutional interest in Solana continues amid investment product inflows",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "If Solana Price Reaches $200 Meme Season Could Erupt, What Should You Be Buying Before The Pump?",
+      "link": "https://cryptopanic.com/news/solana/23510987/If-Solana-Price-Reaches-200-Meme-Season-Could-Erupt-What-Should-You-Be-Buying-Before-The-Pump",
+      "pubDate": "2025-07-21T12:14:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Solana Price continues to dominate headlines as traders speculate on what comes next if Solana breaks through the $200 barrier. The latest forecasts suggest Solana Price could surge toward $228 and beyond if bullish momentum holds, with institutional flows and ETF speculation fueling the excitement. Traders focused on projects like Solana are also closely monitoring. . . Read more",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Ether Machine goes public with $1.5 billion and 400,000 ETH for institutional yield",
+      "link": "https://cryptopanic.com/news/ethereum/23510668/Ether-Machine-goes-public-with-15-billion-and-400000-ETH-for-institutional-yield",
+      "pubDate": "2025-07-21T12:09:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The Ether Machine is going live on the Nasdaq with more than $1. 5 billion raised and 400,000 ETH locked in its vault. It’s the result of a reverse merger between The Ether Reserve, a crypto startup, and Dynamix Corp, a blank-check company that saw its shares more than double in premarket trading after the deal […]",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Aave DAO Votes to Let Kraken’s Ink Launch Lending Protocol Using Its Code",
+      "link": "https://cryptopanic.com/news/aave/23510332/Aave-DAO-Votes-to-Let-Krakens-Ink-Launch-Lending-Protocol-Using-Its-Code",
+      "pubDate": "2025-07-21T12:05:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "DAO",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "Ethereum targets November for Fusaka hard fork as Glamsterdam upgrade finalization nears",
+      "link": "https://cryptopanic.com/news/ethereum/23509807/Ethereum-targets-November-for-Fusaka-hard-fork-as-Glamsterdam-upgrade-finalization-nears",
+      "pubDate": "2025-07-21T11:53:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum’s upcoming Fusaka hard fork, scheduled for November, is expected to make the network much more scalable and secure. Several upgrades are underway by core developers, including the integration of 11 Ethereum Improvement Proposals (EIPs). The EIP-7825 is one of several major features of the Fusaka upgrade, aimed at making the network resistant to malicious […]",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Ethereum Roars To $3,800: What's Driving The Surge?",
+      "link": "https://cryptopanic.com/news/ethereum/23509745/Ethereum-Roars-To-3800-Whats-Driving-The-Surge",
+      "pubDate": "2025-07-21T11:33:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum's (CRYPTO: ETH) most recent breakout isn't just a product of ETF hype, it's backed by a surge in DeFi activity and a rising structural shift, according to a read more",
+      "currencies": [
+        "ETH",
+        "XRP",
+        "MSTR"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Ethereum Price Breaks Out as GENIUS Act Triggers $2.18B ETF Inflows",
+      "link": "https://cryptopanic.com/news/ethereum/23509556/Ethereum-Price-Breaks-Out-as-GENIUS-Act-Triggers-218B-ETF-Inflows",
+      "pubDate": "2025-07-21T11:25:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The post Ethereum Price Breaks Out as GENIUS Act Triggers $2. According to Bernstein analysts, the stablecoin-focused GENIUS Act has given Ethereum its long-awaited “moment,” as investors rush to capitalize on a more transparent, mainstream-ready crypto environment. Record capital is pouring into Ethereum’s ecosystem",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Ethereum Eyes $8,000 Surge Amid Familiar Technical Patterns",
+      "link": "https://cryptopanic.com/news/ethereum/23509646/Ethereum-Eyes-8000-Surge-Amid-Familiar-Technical-Patterns",
+      "pubDate": "2025-07-21T11:11:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum’s native token, Ether (ETH), could be heading for a dramatic rise toward $8,000, according to market analyst Gert van Lagen. He points to a notable similarity between ETH’s current chart pattern and a historical trend observed in the Dow Jones Industrial Average (DJIA), suggesting the cryptocurrency is now entering a critical bullish phase. Van Lagen highlights what he describes as a “textbook expanding diagonal,” also known as a megaphone pattern, which has supported Ethereum’s major r",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The Ether Machine to list on Nasdaq with $1.5 billion war chest for Ethereum treasury",
+      "link": "https://cryptopanic.com/news/ethereum/23508195/The-Ether-Machine-to-list-on-Nasdaq-with-15-billion-war-chest-for-Ethereum-treasury",
+      "pubDate": "2025-07-21T10:57:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The Ether Machine will merge with SPAC Dynamix to list on Nasdaq as ETHM, bringing 400,000 ether via $1. 5 billion in committed capital to public markets.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum mirrors stocks as ETH price chart hints at ‘final surge’ to $8K",
+      "link": "https://cryptopanic.com/news/ethereum/23508179/Ethereum-mirrors-stocks-as-ETH-price-chart-hints-at-final-surge-to-8K",
+      "pubDate": "2025-07-21T10:52:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ether’s current structure mirrors the Dow Jones’s 1980 bull run, with technical patterns reinforcing the ETH price rally outlook.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance to Launch ETC/USDC, GRT/USDC, and ROSE/USDC Trading Pairs with Automated Trading Tools",
+      "link": "https://cryptopanic.com/news/ethereum-classic/23506444/Binance-to-Launch-ETCUSDC-GRTUSDC-and-ROSEUSDC-Trading-Pairs-with-Automated-Trading-Tools",
+      "pubDate": "2025-07-21T09:26:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "ETC",
+        "GRT"
+      ]
+    },
+    {
+      "title": "Whale Investor Considers Selling WBTC Holdings for Significant Profit",
+      "link": "https://cryptopanic.com/news/wrapped-bitcoin/23506433/Whale-Investor-Considers-Selling-WBTC-Holdings-for-Significant-Profit",
+      "pubDate": "2025-07-21T09:13:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "WBTC"
+      ]
+    },
+    {
+      "title": "HTX Crypto Gem Hunt #8: 7 Breakout Projects Signal the Next Wave of Long-Term Crypto Value",
+      "link": "https://cryptopanic.com/news/huobi-token/23507566/HTX-Crypto-Gem-Hunt-8-7-Breakout-Projects-Signal-the-Next-Wave-of-Long-Term-Crypto-Value",
+      "pubDate": "2025-07-21T09:13:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "HT"
+      ]
+    },
+    {
+      "title": "Chainlink Heats Up: Whales Keep Buying As LINK Climbs Past $19",
+      "link": "https://cryptopanic.com/news/chainlink/23506370/Chainlink-Heats-Up-Whales-Keep-Buying-As-LINK-Climbs-Past-19",
+      "pubDate": "2025-07-21T09:07:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "\"Chainlink is gaining significant momentum in the cryptocurrency market as its price surpasses the $19 mark, attracting the attention of large investors, commonly referred to as 'whales,' who continue to aggressively accumulate LINK tokens. This surge in purchasing activity indicates growing confidence in Chainlink's potential, contributing to its upward trajectory and highlighting the increasing interest in decentralized oracle solutions.\"",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Not Even Bitcoin Is Safe: Kiyosaki Warns Of Massive Market Collapse",
+      "link": "https://cryptopanic.com/news/stellar/23504901/Not-Even-Bitcoin-Is-Safe-Kiyosaki-Warns-Of-Massive-Market-Collapse",
+      "pubDate": "2025-07-21T08:30:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XLM"
+      ]
+    },
+    {
+      "title": "User Loses $1.23 Million in Uniswap V3 Position NFT Due to Phishing Scam",
+      "link": "https://cryptopanic.com/news/uniswap/23503439/User-Loses-123-Million-in-Uniswap-V3-Position-NFT-Due-to-Phishing-Scam",
+      "pubDate": "2025-07-21T07:43:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Aave DAO approves Kraken-backed Ink Foundation to launch white-label version of lending protocol in ARFC vote",
+      "link": "https://cryptopanic.com/news/aave/23502022/Aave-DAO-approves-Kraken-backed-Ink-Foundation-to-launch-white-label-version-of-lending-protocol-in-ARFC-vote",
+      "pubDate": "2025-07-21T06:48:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "DAO",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "Litecoin’s 42% rally – How altcoin can eye THIS level for next 14% hike!",
+      "link": "https://cryptopanic.com/news/litecoin/23499755/Litecoins-42-rally-How-altcoin-can-eye-THIS-level-for-next-14-hike",
+      "pubDate": "2025-07-21T05:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "A"
+      ]
+    },
+    {
+      "title": "Arbitrum Leads in Cross-Chain Net Inflows",
+      "link": "https://cryptopanic.com/news/avalanche-2/23499356/Arbitrum-Leads-in-Cross-Chain-Net-Inflows",
+      "pubDate": "2025-07-21T04:16:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "ARB"
+      ]
+    },
+    {
+      "title": "Arbitrum Leads Cross-Chain Bridge Inflows with $168 Million",
+      "link": "https://cryptopanic.com/news/avalanche-2/23499724/Arbitrum-Leads-Cross-Chain-Bridge-Inflows-with-168-Million",
+      "pubDate": "2025-07-21T04:13:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "ARB"
+      ]
+    },
+    {
+      "title": "How Tezos whales helped XTZ surge 112% in the last month",
+      "link": "https://cryptopanic.com/news/tezos/23497305/How-Tezos-whales-helped-XTZ-surge-112-in-the-last-month",
+      "pubDate": "2025-07-21T03:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XTZ"
+      ]
+    },
+    {
+      "title": "4 Top Trending Cryptos to Buy Now That Could Skyrocket Soon: BlockDAG, Toncoin, Fetch.AI, & VeChain!",
+      "link": "https://cryptopanic.com/news/vechain/23494936/4-Top-Trending-Cryptos-to-Buy-Now-That-Could-Skyrocket-Soon-BlockDAG-Toncoin-FetchAI-VeChain",
+      "pubDate": "2025-07-21T01:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET",
+        "TON"
+      ]
+    }
+  ]
+}

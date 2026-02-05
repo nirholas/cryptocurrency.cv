@@ -1,0 +1,76 @@
+{
+  "date": "2019-04-30",
+  "fetchedAt": "2026-02-05T07:27:06.964Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "BREAKING: Tether Confirms That 26 Percent of Its USDT Supply Is NOT Backed by Fiat",
+      "link": "https://cryptopanic.com/news/5281572/BREAKING-Tether-Confirms-That-26-Percent-of-Its-USDT-Supply-Is-NOT-Backed-by-Fiat",
+      "pubDate": "2019-04-30T17:45:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 15
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Kraken delists Bitcoin SV",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/5280051/Kraken-delists-Bitcoin-SV",
+      "pubDate": "2019-04-30T14:38:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Tron dApps Now Total 400, Tron Keeps Heading Forward Fast",
+      "link": "https://cryptopanic.com/news/tron/5278377/Tron-dApps-Now-Total-400-Tron-Keeps-Heading-Forward-Fast",
+      "pubDate": "2019-04-30T12:11:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple's XRP Index (XRPLX) to Be Added by Nasdaq to Its Global Data Platform",
+      "link": "https://cryptopanic.com/news/5277643/Ripples-XRP-Index-XRPLX-to-Be-Added-by-Nasdaq-to-Its-Global-Data-Platform",
+      "pubDate": "2019-04-30T10:34:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 34,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

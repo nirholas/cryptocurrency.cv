@@ -1,0 +1,952 @@
+{
+  "date": "2023-07-13",
+  "fetchedAt": "2026-02-05T07:27:07.263Z",
+  "articleCount": 62,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Celsius Reorganization Not Affected by $4.7B Settlement With U.S., Bankrupt Crypto Lender Says",
+      "link": "https://cryptopanic.com/news/18772953/Celsius-Reorganization-Not-Affected-by-47B-Settlement-With-US-Bankrupt-Crypto-Lender-Says",
+      "pubDate": "2023-07-13T21:40:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "CEL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Charles Hoskinson Extends Opportunity to Algorand, Proposes Sidechain Collaboration",
+      "link": "https://cryptopanic.com/news/18772928/Charles-Hoskinson-Extends-Opportunity-to-Algorand-Proposes-Sidechain-Collaboration",
+      "pubDate": "2023-07-13T21:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Charles Hoskinson has an offer Algorand can’t refuse.",
+      "currencies": [
+        "ADA",
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Best Crypto to Buy Now 13 July – Litecoin, Chainlink, Compound",
+      "link": "https://cryptopanic.com/news/18772914/Best-Crypto-to-Buy-Now-13-July-Litecoin-Chainlink-Compound",
+      "pubDate": "2023-07-13T21:16:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "LTC",
+        "LINK",
+        "COMP"
+      ]
+    },
+    {
+      "title": "XLM price soars as Stellar rides Ripple’s XRP wave",
+      "link": "https://cryptopanic.com/news/18772884/XLM-price-soars-as-Stellar-rides-Ripples-XRP-wave",
+      "pubDate": "2023-07-13T21:09:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Stellar (XLM) price rose to its highest level since April 2022, hitting highs near $0.20. XLM’s stellar performance followed a staggering 87% jump in less than 3 hours for XRP. XRP is Ripple’s token, and a judge just declared it was not a security. Stellar (XLM) price jumped nearly 70% on Thursday as bulls pushed […]",
+      "currencies": [
+        "XRP",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Celsius Moves $64M in LINK, MATIC, AAVE and Altcoins Following Court Permission to Sell Tokens",
+      "link": "https://cryptopanic.com/news/18772882/Celsius-Moves-64M-in-LINK-MATIC-AAVE-and-Altcoins-Following-Court-Permission-to-Sell-Tokens",
+      "pubDate": "2023-07-13T20:57:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "AAVE",
+        "CEL"
+      ]
+    },
+    {
+      "title": "Bitcoin loses lead in daily transactions: Here’s why",
+      "link": "https://cryptopanic.com/news/18772831/Bitcoin-loses-lead-in-daily-transactions-Heres-why",
+      "pubDate": "2023-07-13T20:30:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Polygon Unveils Game-Changing Transformation of MATIC into Versatile POL Token",
+      "link": "https://cryptopanic.com/news/18772816/Polygon-Unveils-Game-Changing-Transformation-of-MATIC-into-Versatile-POL-Token",
+      "pubDate": "2023-07-13T20:24:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "Polygon Labs, the development team behind Ethereum scaling solution Polygon, has announced its new native token, POL.",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple’s Legal Victory Boosts XRP Price, Could Reach $1 Soon?",
+      "link": "https://cryptopanic.com/news/flow/18772775/Ripples-Legal-Victory-Boosts-XRP-Price-Could-Reach-1-Soon",
+      "pubDate": "2023-07-13T20:00:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Why are MakerDAO traders watching Bitcoin’s price action?",
+      "link": "https://cryptopanic.com/news/18772719/Why-are-MakerDAO-traders-watching-Bitcoins-price-action",
+      "pubDate": "2023-07-13T19:30:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "DAI"
+      ]
+    },
+    {
+      "title": "BREAKING: SEC Makes Its First Statement After Ripple's Victory!",
+      "link": "https://cryptopanic.com/news/18772644/BREAKING-SEC-Makes-Its-First-Statement-After-Ripples-Victory",
+      "pubDate": "2023-07-13T18:52:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The first statement by the SEC came after the judge decided in favor of Ripple in the ongoing lawsuit between Ripple and the SEC. Continue Reading: BREAKING: SEC Makes Its First Statement After Ripple's Victory!",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "A proposal for shared ownership and resilience of Zcash-focused digital properties",
+      "link": "https://cryptopanic.com/news/18772685/A-proposal-for-shared-ownership-and-resilience-of-Zcash-focused-digital-properties",
+      "pubDate": "2023-07-13T18:51:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "New era for XRP begins as Ripple wins case against SEC; CEO reacts",
+      "link": "https://cryptopanic.com/news/18772621/New-era-for-XRP-begins-as-Ripple-wins-case-against-SEC-CEO-reacts",
+      "pubDate": "2023-07-13T18:48:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "In a significant legal triumph, blockchain company Ripple secured a favorable ruling in the firm’s high stake case with the … Continued",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Makes a Comeback as Holders Bet on Huge Upsurge Amid Ripple’s Groundbreaking Win in SEC Lawsuit",
+      "link": "https://cryptopanic.com/news/18772624/XRP-Makes-a-Comeback-as-Holders-Bet-on-Huge-Upsurge-Amid-Ripples-Groundbreaking-Win-in-SEC-Lawsuit",
+      "pubDate": "2023-07-13T18:46:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Against the odds of the broader crypto market, the value of XRP, the cryptocurrency linked to Ripple, has significantly skyrocketed, providing comfort to holders.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Classic price rejection: Watch these levels for buying opportunities",
+      "link": "https://cryptopanic.com/news/18772597/Ethereum-Classic-price-rejection-Watch-these-levels-for-buying-opportunities",
+      "pubDate": "2023-07-13T18:30:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "Alex Mashinsky Built Celsius Into a House of Cards",
+      "link": "https://cryptopanic.com/news/18772599/Alex-Mashinsky-Built-Celsius-Into-a-House-of-Cards",
+      "pubDate": "2023-07-13T18:29:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Consensus 2019 Alex Mashinsky Founder and CEO Celsius Network (CoinDesk)",
+      "currencies": [
+        "CEL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Huobi Says It’s Dedicated to User Asset Security, Releases Response on ‘Unsubstantiated’ Claims of Asset Decline",
+      "link": "https://cryptopanic.com/news/18772568/Huobi-Says-Its-Dedicated-to-User-Asset-Security-Releases-Response-on-Unsubstantiated-Claims-of-Asset-Decline",
+      "pubDate": "2023-07-13T18:17:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HT"
+      ]
+    },
+    {
+      "title": "Did XRP Restart Alt Season? Solana, Cardano, Polygon Up Double Digits",
+      "link": "https://cryptopanic.com/news/18772563/Did-XRP-Restart-Alt-Season-Solana-Cardano-Polygon-Up-Double-Digits",
+      "pubDate": "2023-07-13T18:11:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Most of the tokens previously deemed securities by the SEC are seeing large gains upon a federal court’s ruling in the XRP case.",
+      "currencies": [
+        "XRP",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Whales Aggressively Accumulating One Crypto Asset Class As Bitcoin Ranges, Says Santiment – Here’s What It Means",
+      "link": "https://cryptopanic.com/news/18772536/Whales-Aggressively-Accumulating-One-Crypto-Asset-Class-As-Bitcoin-Ranges-Says-Santiment-Heres-What-It-Means",
+      "pubDate": "2023-07-13T18:05:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "DAI",
+        "MATIC",
+        "USDP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "This is how much Celsius Network agreed to pay FTC to settle the case",
+      "link": "https://cryptopanic.com/news/18772496/This-is-how-much-Celsius-Network-agreed-to-pay-FTC-to-settle-the-case",
+      "pubDate": "2023-07-13T18:00:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CEL"
+      ]
+    },
+    {
+      "title": "last minute pickup",
+      "link": "https://cryptopanic.com/news/18772429/last-minute-pickup",
+      "pubDate": "2023-07-13T17:30:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CFX"
+      ]
+    },
+    {
+      "title": "XRP up 35%, altcoins make explosive gains after judge’s Ripple case ruling",
+      "link": "https://cryptopanic.com/news/18772396/XRP-up-35-altcoins-make-explosive-gains-after-judges-Ripple-case-ruling",
+      "pubDate": "2023-07-13T17:08:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple’s XRP stood at about $0.60 on Thursday at 1 pm ET, up 35% since the news, with ETH, SOL and ADA among others seeing gains",
+      "currencies": [
+        "ADA",
+        "XRP",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Markets ‘Highly Dependent’ on Stablecoins Lacking Transparency, TUSD Poses Risk: Kaiko",
+      "link": "https://cryptopanic.com/news/18772397/Crypto-Markets-Highly-Dependent-on-Stablecoins-Lacking-Transparency-TUSD-Poses-Risk-Kaiko",
+      "pubDate": "2023-07-13T16:57:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "TUSD"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Huobi Is dedicated to User Asset Security and Releases a Firm Response Towards Baseless Claims of “Asset Decline”",
+      "link": "https://cryptopanic.com/news/18772329/Huobi-Is-dedicated-to-User-Asset-Security-and-Releases-a-Firm-Response-Towards-Baseless-Claims-of-Asset-Decline",
+      "pubDate": "2023-07-13T16:39:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HT"
+      ]
+    },
+    {
+      "title": "Did Bank of America Close a Customer Account for Using Crypto?",
+      "link": "https://cryptopanic.com/news/18773372/Did-Bank-of-America-Close-a-Customer-Account-for-Using-Crypto",
+      "pubDate": "2023-07-13T16:38:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "STX"
+      ]
+    },
+    {
+      "title": "XRP Sold on Exchange Declared Not an Investment Contract",
+      "link": "https://cryptopanic.com/news/18772319/XRP-Sold-on-Exchange-Declared-Not-an-Investment-Contract",
+      "pubDate": "2023-07-13T16:37:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple Labs Inc., the blockchain-based payment protocol company, has won a significant legal battle against the U.S. Securities and Exchange Commission (SEC). In a case that has been closely monitored by the financial world since 2020, Judge Analisa Torres of the United States District Court, Southern District of New York, ruled on July 13 that the XRP token is not a security when put on...",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 20,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BREAKING: Victory For Ripple, Judge Deems XRP Sales As Non-Investment Contracts",
+      "link": "https://cryptopanic.com/news/18772259/BREAKING-Victory-For-Ripple-Judge-Deems-XRP-Sales-As-Non-Investment-Contracts",
+      "pubDate": "2023-07-13T16:17:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "In a significant legal victory for Ripple, US District Judge Analisa Torres ruled in favor of Ripple in the lawsuit filed against it by the US Securities and Exchange Commission (SEC) in December 2020. The SEC had alleged that Ripple had raised over $1.3 billion through the sale of XRP to investors, which should be […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 23,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Is it Too Late to Buy Conflux? CFX Pumps Up 11% in 24 Hours and Mr. Hankey Coin Presale is Launching in Less Than 24 Hours – 100x Potential?",
+      "link": "https://cryptopanic.com/news/18772748/Is-it-Too-Late-to-Buy-Conflux-CFX-Pumps-Up-11-in-24-Hours-and-Mr-Hankey-Coin-Presale-is-Launching-in-Less-Than-24-Hours-100x-Potential",
+      "pubDate": "2023-07-13T16:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CFX"
+      ]
+    },
+    {
+      "title": "Judge rules Ripple’s XRP programmatic sales ‘not securities’; XRP up 28%",
+      "link": "https://cryptopanic.com/news/18772203/Judge-rules-Ripples-XRP-programmatic-sales-not-securities-XRP-up-28",
+      "pubDate": "2023-07-13T16:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Judge Analisa Torres ruled that Ripple’s sale of XRP to the general public and its distributions of the token do not constitute an offer and sale of an investment contract. These include “Programmatic sales,” where XRP was offered to public buyers, and “Other Distributions,” where people were given XRP for free. The court concluded that […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Christensen-backed Bluechip launches stablecoin ratings, USDD gets an ‘F’",
+      "link": "https://cryptopanic.com/news/18772237/Christensen-backed-Bluechip-launches-stablecoin-ratings-USDD-gets-an-F",
+      "pubDate": "2023-07-13T16:00:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "DAI",
+        "USDD",
+        "PAXG",
+        "GUSD"
+      ]
+    },
+    {
+      "title": "Charles Hoskinson Says Algorand Should Become A Sidechain of Cardano",
+      "link": "https://cryptopanic.com/news/18773373/Charles-Hoskinson-Says-Algorand-Should-Become-A-Sidechain-of-Cardano",
+      "pubDate": "2023-07-13T15:57:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "ALGO"
+      ]
+    },
+    {
+      "title": "US Attorney’s Office announces criminal fraud charges against Alex Mashinsky",
+      "link": "https://cryptopanic.com/news/18772197/US-Attorneys-Office-announces-criminal-fraud-charges-against-Alex-Mashinsky",
+      "pubDate": "2023-07-13T15:52:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CEL"
+      ]
+    },
+    {
+      "title": "Breaking: Ripple wins case against SEC as judge rules XRP is not a security",
+      "link": "https://cryptopanic.com/news/18772186/Breaking-Ripple-wins-case-against-SEC-as-judge-rules-XRP-is-not-a-security",
+      "pubDate": "2023-07-13T15:46:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "CEO Brad Garlinghouse recently opined that the case would end soon, but the fight for crypto wasn’t over yet.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 33,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Price Explodes Over 70% as Judge Rules In Favor of Ripple in SEC Case",
+      "link": "https://cryptopanic.com/news/18772170/XRP-Price-Explodes-Over-70-as-Judge-Rules-In-Favor-of-Ripple-in-SEC-Case",
+      "pubDate": "2023-07-13T15:40:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP's price exploded immediately after the news broke out.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 26,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BREAKING: Judge Declares XRP Not A Securities!",
+      "link": "https://cryptopanic.com/news/18772174/BREAKING-Judge-Declares-XRP-Not-A-Securities",
+      "pubDate": "2023-07-13T15:34:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "A US judge has ruled that the XRP altcoin is not a security. Here are the details of the highly anticipated decision. Continue Reading: BREAKING: Judge Declares XRP Not A Securities!",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 82,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Today in Crypto: BNB Beacon Chain Upgrade Will Allow It to Halt New Block Production, Europe's First BTC ETF Set to Launch Next Month, Digital Yuan to be Used Offline, BitMEX Traders Can Form Guilds",
+      "link": "https://cryptopanic.com/news/18772087/Today-in-Crypto-BNB-Beacon-Chain-Upgrade-Will-Allow-It-to-Halt-New-Block-Production-Europes-First-BTC-ETF-Set-to-Launch-Next-Month-Digital-Yuan-to-be-Used-Offline-BitMEX-Traders-Can-Form-Guilds",
+      "pubDate": "2023-07-13T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BNB",
+        "MATIC",
+        "ICP"
+      ]
+    },
+    {
+      "title": "Stablecoin Sharks & Whales Show Strong Accumulation, Good Sign For Bitcoin?",
+      "link": "https://cryptopanic.com/news/18772015/Stablecoin-Sharks-Whales-Show-Strong-Accumulation-Good-Sign-For-Bitcoin",
+      "pubDate": "2023-07-13T14:30:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DAI",
+        "USDP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin, Ethereum Move Lower; Kava Becomes Top Loser",
+      "link": "https://cryptopanic.com/news/18771975/Bitcoin-Ethereum-Move-Lower-Kava-Becomes-Top-Loser",
+      "pubDate": "2023-07-13T14:10:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "KAVA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Breaking: Celsius Network fined $4.7B by FTC",
+      "link": "https://cryptopanic.com/news/18771915/Breaking-Celsius-Network-fined-47B-by-FTC",
+      "pubDate": "2023-07-13T14:06:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CEL"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Santiment: \"Whales Preparing For Bitcoin Bulls! Chasing These Levels!\"",
+      "link": "https://cryptopanic.com/news/18771829/Santiment-Whales-Preparing-For-Bitcoin-Bulls-Chasing-These-Levels",
+      "pubDate": "2023-07-13T13:31:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DAI",
+        "USDP"
+      ]
+    },
+    {
+      "title": "Uniswap Launches On Avalanche",
+      "link": "https://cryptopanic.com/news/maker/18771773/Uniswap-Launches-On-Avalanche",
+      "pubDate": "2023-07-13T13:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AVAX",
+        "UNI"
+      ]
+    },
+    {
+      "title": "US SEC files lawsuit against Celsius and Alex Mashinsky",
+      "link": "https://cryptopanic.com/news/18771726/US-SEC-files-lawsuit-against-Celsius-and-Alex-Mashinsky",
+      "pubDate": "2023-07-13T13:05:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "CEL"
+      ]
+    },
+    {
+      "title": "Former Celsius CEO Alex Mashinsky reportedly arrested",
+      "link": "https://cryptopanic.com/news/18771727/Former-Celsius-CEO-Alex-Mashinsky-reportedly-arrested",
+      "pubDate": "2023-07-13T13:03:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The U.S. SEC filed a lawsuit against the bankrupt crypto lender on July 13 followed by news reports about the arrest of the former CEO Alex Mashinsky.",
+      "currencies": [
+        "CEL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "In this article we will look at what news is most relevant for the crypto assets Dogecoin (DOGE), Cardano (ADA) and The Sandbox (SAND).",
+      "link": "https://cryptopanic.com/news/the-sandbox/18771675/In-this-article-we-will-look-at-what-news-is-most-relevant-for-the-crypto-assets-Dogecoin-DOGE-Cardano-ADA-and-The-Sandbox-SAND",
+      "pubDate": "2023-07-13T12:50:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "DOGE",
+        "SAND"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ordinals and STX Among Projected Beneficiaries of BlackRock ETF",
+      "link": "https://cryptopanic.com/news/18772213/Ordinals-and-STX-Among-Projected-Beneficiaries-of-BlackRock-ETF",
+      "pubDate": "2023-07-13T12:49:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "STX"
+      ]
+    },
+    {
+      "title": "Celsius Network’s Alex Mashinsky Is Arrested as SEC, CFTC, FTC Sue Bankrupt Crypto Lender",
+      "link": "https://cryptopanic.com/news/18771663/Celsius-Networks-Alex-Mashinsky-Is-Arrested-as-SEC-CFTC-FTC-Sue-Bankrupt-Crypto-Lender",
+      "pubDate": "2023-07-13T12:48:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "CEL"
+      ]
+    },
+    {
+      "title": "KAVA Succumbs To Bearish Market Trend, Loses 11% In The Last Day",
+      "link": "https://cryptopanic.com/news/18771566/KAVA-Succumbs-To-Bearish-Market-Trend-Loses-11-In-The-Last-Day",
+      "pubDate": "2023-07-13T12:19:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "DOGE",
+        "SHIB",
+        "KAVA"
+      ]
+    },
+    {
+      "title": "BTC Hits Ardently-awaited $30K, Will the Whales Start the Buying Frenzy?",
+      "link": "https://cryptopanic.com/news/18772144/BTC-Hits-Ardently-awaited-30K-Will-the-Whales-Start-the-Buying-Frenzy",
+      "pubDate": "2023-07-13T12:08:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DAI"
+      ]
+    },
+    {
+      "title": "Polygon To Transition MATIC Tokens To POL Coins If Community Approves Roadmap 2.0 Update",
+      "link": "https://cryptopanic.com/news/18771532/Polygon-To-Transition-MATIC-Tokens-To-POL-Coins-If-Community-Approves-Roadmap-20-Update",
+      "pubDate": "2023-07-13T12:02:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "The major technical upgrade is part of Polygon’s roadmap 2.0 and is subject to community approval. The new POL token would replace MATIC as Polygon’s native token and introduce Multichain validation across the L2’s ecosystem. Users will have at least four years to swap their MATIC for POL tokens by sending their old coins to a specific contract address. If the community approves, the project...",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "NEAR in Q2: Consecutive collapses, increasing adoption, and more",
+      "link": "https://cryptopanic.com/news/18771455/NEAR-in-Q2-Consecutive-collapses-increasing-adoption-and-more",
+      "pubDate": "2023-07-13T11:30:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "NEAR",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "US Authorities Accuse Former Security Engineer of Siphoning $9 Million From Defi Platform",
+      "link": "https://cryptopanic.com/news/18771456/US-Authorities-Accuse-Former-Security-Engineer-of-Siphoning-9-Million-From-Defi-Platform",
+      "pubDate": "2023-07-13T11:30:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Cardano Creator Offers Algorand Sidechain Role, Community Reaction Epic",
+      "link": "https://cryptopanic.com/news/18771267/Cardano-Creator-Offers-Algorand-Sidechain-Role-Community-Reaction-Epic",
+      "pubDate": "2023-07-13T10:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Polygon proposes upgrading MATIC tokens to become POL",
+      "link": "https://cryptopanic.com/news/18771179/Polygon-proposes-upgrading-MATIC-tokens-to-become-POL",
+      "pubDate": "2023-07-13T09:30:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "MATIC would be converted into Polygon (POL), a token with the capability to validate multiple chains within the Polygon ecosystem.",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Conflux 🤝 BR Group partnership",
+      "link": "https://cryptopanic.com/news/18771875/Conflux-BR-Group-partnership",
+      "pubDate": "2023-07-13T09:17:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CFX"
+      ]
+    },
+    {
+      "title": "4 Trillion SHIB Tokens Transferred by Giant Whale",
+      "link": "https://cryptopanic.com/news/shiba-inu/18771122/4-Trillion-SHIB-Tokens-Transferred-by-Giant-Whale",
+      "pubDate": "2023-07-13T09:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Largest holder of Shiba Inu (SHIB) tokens made significant transfer today",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Do personal savings levels correlate with Bitcoin price increases?",
+      "link": "https://cryptopanic.com/news/18771096/Do-personal-savings-levels-correlate-with-Bitcoin-price-increases",
+      "pubDate": "2023-07-13T09:01:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "GRT"
+      ]
+    },
+    {
+      "title": "Bitcoin Tumbles Toward $30K, KAVA Crashes 12% Daily (Market Watch)",
+      "link": "https://cryptopanic.com/news/18771074/Bitcoin-Tumbles-Toward-30K-KAVA-Crashes-12-Daily-Market-Watch",
+      "pubDate": "2023-07-13T08:58:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "KAVA"
+      ]
+    },
+    {
+      "title": "Cardano Drama: This Grifter Company Targets $5.8+ Million From Catalyst Fund 10",
+      "link": "https://cryptopanic.com/news/18771078/Cardano-Drama-This-Grifter-Company-Targets-58-Million-From-Catalyst-Fund-10",
+      "pubDate": "2023-07-13T08:58:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano community outraged and ready to take action",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "LBank Labs joins Draper and INCE Capital in investing in LunarCrush",
+      "link": "https://cryptopanic.com/news/18771013/LBank-Labs-joins-Draper-and-INCE-Capital-in-investing-in-LunarCrush",
+      "pubDate": "2023-07-13T08:25:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HT"
+      ]
+    },
+    {
+      "title": "Upstart market maker Swaap goes live with new version on Ethereum, Polygon",
+      "link": "https://cryptopanic.com/news/maker/18770896/Upstart-market-maker-Swaap-goes-live-with-new-version-on-Ethereum-Polygon",
+      "pubDate": "2023-07-13T07:20:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "MATIC",
+        "MKR"
+      ]
+    },
+    {
+      "title": "EOS Price Analysis: Key Uptrend Support Intact at $0.70",
+      "link": "https://cryptopanic.com/news/18770742/EOS-Price-Analysis-Key-Uptrend-Support-Intact-at-070",
+      "pubDate": "2023-07-13T05:08:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ]
+    },
+    {
+      "title": "$XRP Price Could Skyrocket to $30 in Short Term, Says Fund Manager",
+      "link": "https://cryptopanic.com/news/18770718/XRP-Price-Could-Skyrocket-to-30-in-Short-Term-Says-Fund-Manager",
+      "pubDate": "2023-07-13T04:24:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The native token of the XRP Ledger, $XRP, could see a significant price increase to potentially reach a bullish target of $30 in the short term, according to the founder and manager of Kralow Capital, Thomas Kralow, who recently revealed his bullish prediction. Kralow’s words come at a time in which a major player in […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Kava 14 Accelerates Cosmos Ecosystem Expansion",
+      "link": "https://cryptopanic.com/news/18770478/Kava-14-Accelerates-Cosmos-Ecosystem-Expansion",
+      "pubDate": "2023-07-13T00:00:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "KAVA"
+      ]
+    }
+  ]
+}

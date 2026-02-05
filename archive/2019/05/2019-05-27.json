@@ -1,0 +1,75 @@
+{
+  "date": "2019-05-27",
+  "fetchedAt": "2026-02-05T07:27:06.906Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA Hints at Coordicide",
+      "link": "https://cryptopanic.com/news/5542263/IOTA-Hints-at-Coordicide",
+      "pubDate": "2019-05-27T18:40:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 30,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "EOS Price Pumps Whopping 20 Percent, Block.One Prepares Social Media Launch",
+      "link": "https://cryptopanic.com/news/5542336/EOS-Price-Pumps-Whopping-20-Percent-BlockOne-Prepares-Social-Media-Launch",
+      "pubDate": "2019-05-27T18:36:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Justin Sun Announces BitTorrent File System",
+      "link": "https://cryptopanic.com/news/tron/5539814/Justin-Sun-Announces-BitTorrent-File-System",
+      "pubDate": "2019-05-27T13:19:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 10
+      }
+    },
+    {
+      "title": "Justin Sun Promises ‘Something Amazing’ Coming, Makes Tron (TRX) Price Spike 14%",
+      "link": "https://cryptopanic.com/news/5538583/Justin-Sun-Promises-Something-Amazing-Coming-Makes-Tron-TRX-Price-Spike-14",
+      "pubDate": "2019-05-27T09:53:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

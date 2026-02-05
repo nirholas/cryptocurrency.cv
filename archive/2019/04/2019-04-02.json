@@ -1,0 +1,26 @@
+{
+  "date": "2019-04-02",
+  "fetchedAt": "2026-02-05T07:27:06.901Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin and Anonymous Coins Not Favored by Terrorists – Cash Is: Report",
+      "link": "https://cryptopanic.com/news/5016081/Bitcoin-and-Anonymous-Coins-Not-Favored-by-Terrorists-Cash-Is-Report",
+      "pubDate": "2019-04-02T13:30:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ZEC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

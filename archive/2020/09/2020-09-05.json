@@ -1,0 +1,60 @@
+{
+  "date": "2020-09-05",
+  "fetchedAt": "2026-02-05T07:27:06.942Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "SUSHI Sell Off Drives the Crypto Market to Abyss: Bitcoin Below $10K",
+      "link": "https://cryptopanic.com/news/ethereum/9896401/SUSHI-Sell-Off-Drives-the-Crypto-Market-to-Abyss-Bitcoin-Below-10K",
+      "pubDate": "2020-09-05T21:07:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Russia Can Legalize Bitcoin Mining But There’s a Catch",
+      "link": "https://cryptopanic.com/news/ethereum/9892360/Russia-Can-Legalize-Bitcoin-Mining-But-Theres-a-Catch",
+      "pubDate": "2020-09-05T11:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "IOTA Reveal Key Details on Pollen Testnet Update",
+      "link": "https://cryptopanic.com/news/9891008/IOTA-Reveal-Key-Details-on-Pollen-Testnet-Update",
+      "pubDate": "2020-09-05T04:30:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

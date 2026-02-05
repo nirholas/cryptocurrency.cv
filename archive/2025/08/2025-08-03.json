@@ -1,0 +1,206 @@
+{
+  "date": "2025-08-03",
+  "fetchedAt": "2026-02-05T07:27:08.618Z",
+  "articleCount": 14,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin surge to $125K will liquidate $5.6 billion in shorts as whale long adds fuel",
+      "link": "https://cryptopanic.com/news/bitcoin/23911627/Bitcoin-surge-to-125K-will-liquidate-56-billion-in-shorts-as-whale-long-adds-fuel",
+      "pubDate": "2025-08-03T20:52:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A whale just placed a massive Bitcoin bet, $45 million worth, with 40x leverage, according to data from Coinglass. The trade was opened with a liquidation line at $105,000, and if Bitcoin hits $125,000, it’ll trigger $5. 6 billion in short liquidations, most of which are clustered near $121,000. At press time, Bitcoin is trading just […]",
+      "currencies": [
+        "BTC",
+        "A"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Missing CRO rewards",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/23959702/Missing-CRO-rewards",
+      "pubDate": "2025-08-03T18:54:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO",
+        "MCO"
+      ]
+    },
+    {
+      "title": "Anonymous creators, storybook slumbers, and a Marvel-style villian: Luckycoin’s stranger-than-fiction journey",
+      "link": "https://cryptopanic.com/news/litecoin/23909721/Anonymous-creators-storybook-slumbers-and-a-Marvel-style-villian-Luckycoins-stranger-than-fiction-journey",
+      "pubDate": "2025-08-03T18:00:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "LTC"
+      ]
+    },
+    {
+      "title": "COZ brings BlockSpirits Web3 experience to Blockchain.RIO 2025",
+      "link": "https://cryptopanic.com/news/neo/23908927/COZ-brings-BlockSpirits-Web3-experience-to-BlockchainRIO-2025",
+      "pubDate": "2025-08-03T16:19:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO",
+        "RIO"
+      ]
+    },
+    {
+      "title": "Top Trending Crypto: Cold Wallet, ONDO, XLM, and HBAR with Use Cases to Watch",
+      "link": "https://cryptopanic.com/news/stellar/23909603/Top-Trending-Crypto-Cold-Wallet-ONDO-XLM-and-HBAR-with-Use-Cases-to-Watch",
+      "pubDate": "2025-08-03T14:03:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "HBAR",
+        "ONDO"
+      ]
+    },
+    {
+      "title": "XRP Price Prediction 2025–2031: Could $10 Become a Reality Soon?",
+      "link": "https://cryptopanic.com/news/ripple/23906880/XRP-Price-Prediction-20252031-Could-10-Become-a-Reality-Soon",
+      "pubDate": "2025-08-03T14:00:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "As of August 2025, XRP trades at around $2.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 6
+      }
+    },
+    {
+      "title": "DeFi Education Fund Urges US Senate to Create Clear DeFi Regulatory Framework",
+      "link": "https://cryptopanic.com/news/uniswap/23904778/DeFi-Education-Fund-Urges-US-Senate-to-Create-Clear-DeFi-Regulatory-Framework",
+      "pubDate": "2025-08-03T10:26:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "UNI"
+      ]
+    },
+    {
+      "title": "Litecoin Eyes Breakout: Can It Actually Hit $150—or Go Beyond?",
+      "link": "https://cryptopanic.com/news/litecoin/23902090/Litecoin-Eyes-Breakout-Can-It-Actually-Hit-150or-Go-Beyond",
+      "pubDate": "2025-08-03T08:55:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Cardano community approves funding to support upgrades",
+      "link": "https://cryptopanic.com/news/cardano/23902007/Cardano-community-approves-funding-to-support-upgrades",
+      "pubDate": "2025-08-03T08:36:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "August 2025 Altcoin Forecast: Can SUI, Chainlink, and Stellar Pull Off a Surprise Rally?",
+      "link": "https://cryptopanic.com/news/stellar/23901041/August-2025-Altcoin-Forecast-Can-SUI-Chainlink-and-Stellar-Pull-Off-a-Surprise-Rally",
+      "pubDate": "2025-08-03T07:40:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "XLM",
+        "SUI"
+      ]
+    },
+    {
+      "title": "BlockDAG’s $0.0016 Deal Boosts Demand as XRP Slows and Avalanche Ecosystem Surges to $1.5B TVL",
+      "link": "https://cryptopanic.com/news/avalanche-2/23901025/BlockDAGs-00016-Deal-Boosts-Demand-as-XRP-Slows-and-Avalanche-Ecosystem-Surges-to-15B-TVL",
+      "pubDate": "2025-08-03T07:32:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "AVAX",
+        "A"
+      ]
+    },
+    {
+      "title": "Litecoin (LTC) Price on the Move! Breakout Signals Potential Surge Toward $150—But Here’s When.",
+      "link": "https://cryptopanic.com/news/litecoin/23899782/Litecoin-LTC-Price-on-the-Move-Breakout-Signals-Potential-Surge-Toward-150But-Heres-When",
+      "pubDate": "2025-08-03T05:06:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Visa’s New Stablecoins and Chains Spark a Crypto Payment Revolution",
+      "link": "https://cryptopanic.com/news/stellar/23897461/Visas-New-Stablecoins-and-Chains-Spark-a-Crypto-Payment-Revolution",
+      "pubDate": "2025-08-03T02:30:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "EURC"
+      ]
+    },
+    {
+      "title": "Litecoin Drifts Sideways—Intraday Action Tied To BTC Pulse",
+      "link": "https://cryptopanic.com/news/litecoin/23895518/Litecoin-Drifts-SidewaysIntraday-Action-Tied-To-BTC-Pulse",
+      "pubDate": "2025-08-03T00:00:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC",
+        "D"
+      ]
+    }
+  ]
+}

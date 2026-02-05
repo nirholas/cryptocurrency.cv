@@ -1,0 +1,42 @@
+{
+  "date": "2018-06-27",
+  "fetchedAt": "2026-02-05T07:27:06.907Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Block.One CTO: Arbitrator Controversy Damaged EOS Community",
+      "link": "https://cryptopanic.com/news/2376299/BlockOne-CTO-Arbitrator-Controversy-Damaged-EOS-Community",
+      "pubDate": "2018-06-27T17:30:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Pornhub Adds Tron, ZenCash as Crypto Payment Options",
+      "link": "https://cryptopanic.com/news/tron/2374864/Pornhub-Adds-Tron-ZenCash-as-Crypto-Payment-Options",
+      "pubDate": "2018-06-27T16:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

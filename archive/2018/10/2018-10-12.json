@@ -1,0 +1,37 @@
+{
+  "date": "2018-10-12",
+  "fetchedAt": "2026-02-05T07:27:06.907Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Cryptocurrency Investor Gives “13 Reasons Why” EOS Is a Disaster",
+      "link": "https://cryptopanic.com/news/3321641/Cryptocurrency-Investor-Gives-13-Reasons-Why-EOS-Is-a-Disaster",
+      "pubDate": "2018-10-12T10:00:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "CTC Project Weekly Report (Sep. 28, 2018 – Oct. 10, 2018)",
+      "link": "https://cryptopanic.com/news/3319385/CTC-Project-Weekly-Report-Sep-28-2018-Oct-10-2018",
+      "pubDate": "2018-10-12T06:18:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CTC"
+      ]
+    }
+  ]
+}

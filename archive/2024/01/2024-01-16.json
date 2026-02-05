@@ -1,0 +1,713 @@
+{
+  "date": "2024-01-16",
+  "fetchedAt": "2026-02-05T07:27:08.103Z",
+  "articleCount": 48,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Under-the-Radar Ethereum Rival Jumps Nearly 40% in Hours Amid a Proposed Blockchain Merger",
+      "link": "https://cryptopanic.com/news/19180645/Under-the-Radar-Ethereum-Rival-Jumps-Nearly-40-in-Hours-Amid-a-Proposed-Blockchain-Merger",
+      "pubDate": "2024-01-16T23:01:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "KLAY"
+      ]
+    },
+    {
+      "title": "Chainlink: Is now the right time to invest in LINK",
+      "link": "https://cryptopanic.com/news/19180592/Chainlink-Is-now-the-right-time-to-invest-in-LINK",
+      "pubDate": "2024-01-16T22:30:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Chainlink’s supply on exchanges reached a critical level, which was bullish. Does other metrics agree?",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "'Final Fantasy' Maker Square Enix's Next Big Game Features AI Art",
+      "link": "https://cryptopanic.com/news/19180535/Final-Fantasy-Maker-Square-Enixs-Next-Big-Game-Features-AI-Art",
+      "pubDate": "2024-01-16T21:39:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Samourai Wallet Unveils Privacy-Enhancing BTC to XMR Atomic Swaps in Beta Launch",
+      "link": "https://cryptopanic.com/news/19180511/Samourai-Wallet-Unveils-Privacy-Enhancing-BTC-to-XMR-Atomic-Swaps-in-Beta-Launch",
+      "pubDate": "2024-01-16T21:30:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "According to the Samourai Wallet developers, the beta release of bitcoin/monero atomic swaps has been launched, marking an exciting development in privacy-preserving techniques. This new release of the desktop application streamlines the process of securely swapping bitcoin and monero via the Tor network. Samourai Wallet Rolls out Beta BitcoinMonero Atomic Swaps The much-anticipated BTCXMR […]",
+      "currencies": [
+        "BTC",
+        "XMR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The State of NeoFS – January 2024",
+      "link": "https://cryptopanic.com/news/19180308/The-State-of-NeoFS-January-2024",
+      "pubDate": "2024-01-16T19:55:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Bitcoin SV Down More Than 3% Within 24 hours",
+      "link": "https://cryptopanic.com/news/19180216/Cryptocurrency-Bitcoin-SV-Down-More-Than-3-Within-24-hours",
+      "pubDate": "2024-01-16T19:02:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Filecoin Decreases More Than 4% Within 24 hours",
+      "link": "https://cryptopanic.com/news/19180217/Cryptocurrency-Filecoin-Decreases-More-Than-4-Within-24-hours",
+      "pubDate": "2024-01-16T19:02:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "SOL On Verge Of Ultimate Price Explosion To All-Time Highs As Solana Plans To Unveil Cheaper Saga Successor",
+      "link": "https://cryptopanic.com/news/19180174/SOL-On-Verge-Of-Ultimate-Price-Explosion-To-All-Time-Highs-As-Solana-Plans-To-Unveil-Cheaper-Saga-Successor",
+      "pubDate": "2024-01-16T18:55:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Solana is reportedly preparing to release yet another crypto-forward smartphone.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Foundation Dumps More ETH",
+      "link": "https://cryptopanic.com/news/19180157/Ethereum-Foundation-Dumps-More-ETH",
+      "pubDate": "2024-01-16T18:32:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DAI"
+      ]
+    },
+    {
+      "title": "Charles Hoskinson Responds to Research That Claims Cardano Is ‘Useless’",
+      "link": "https://cryptopanic.com/news/19180126/Charles-Hoskinson-Responds-to-Research-That-Claims-Cardano-Is-Useless",
+      "pubDate": "2024-01-16T18:31:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "In a bold retort to a critical report by K33 Research, Charles Hoskinson, the founder of Cardano, downplayed the research firm’s credibility. The firm tried to allege that Cardano’s native token – ADA, is useless. This response comes amid a contentious debate sparked by K33’s analysis. The analysis deemed Cardano’s native token as lacking meaningful use and value. Is Cardano (ADA) Useless? K33 Research’s report asserts that a smart contract network’s native token requires substantial use to hold",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Filecoin Tests New Technology in Space Communications",
+      "link": "https://cryptopanic.com/news/19180127/Filecoin-Tests-New-Technology-in-Space-Communications",
+      "pubDate": "2024-01-16T17:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "Filecoin Foundation demonstrates IPFS data transmission in space, eyes future off-planet networks",
+      "link": "https://cryptopanic.com/news/filecoin/19179918/Filecoin-Foundation-demonstrates-IPFS-data-transmission-in-space-eyes-future-off-planet-networks",
+      "pubDate": "2024-01-16T17:00:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Manta’s TVL Exceeds BASE, Prepares for Huge 50 Million MANTA Token Airdrop",
+      "link": "https://cryptopanic.com/news/19179957/Mantas-TVL-Exceeds-BASE-Prepares-for-Huge-50-Million-MANTA-Token-Airdrop",
+      "pubDate": "2024-01-16T16:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDC",
+        "MNT"
+      ]
+    },
+    {
+      "title": "Crypto Analyst Implores Users to Dump their ADA Tokens: Here is Why",
+      "link": "https://cryptopanic.com/news/19179774/Crypto-Analyst-Implores-Users-to-Dump-their-ADA-Tokens-Here-is-Why",
+      "pubDate": "2024-01-16T16:02:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "In a recent post, Anders Helseth, head of research at K33 Research, asked cryptocurrency community members to stay clear of layer-1 blockchain Cardano (ADA). According to Helseth, “the Cardano network’s complete lack of meaningful activity will make the ADA token worthless over time. Helseth based his arguments on several factors. Firstly, the analyst argued that […]",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin Exchange Outflows & Inflows Hit Historical Highs, Volatility Soon?",
+      "link": "https://cryptopanic.com/news/19179759/Bitcoin-Exchange-Outflows-Inflows-Hit-Historical-Highs-Volatility-Soon",
+      "pubDate": "2024-01-16T16:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Hedera Network Enhances Accessibility with MetaMask Integration through Hedera Wallet Snap",
+      "link": "https://cryptopanic.com/news/19179700/Hedera-Network-Enhances-Accessibility-with-MetaMask-Integration-through-Hedera-Wallet-Snap",
+      "pubDate": "2024-01-16T15:43:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The Hedera network has announced the launch of the Hedera Wallet Snap. The innovative integration connects Hedera, an open-source, leaderless proof-of-stake network, with MetaMask, a leading cryptocurrency wallet boasting 30 million monthly active users. Developed by Tuum Technologies, a pioneer in decentralized identity solutions, the Hedera Wallet Snap is a significant milestone in making...",
+      "currencies": [
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Chainlink integrates with Circle’s CCTP protocol for cross-chain USDC transfers",
+      "link": "https://cryptopanic.com/news/19179575/Chainlink-integrates-with-Circles-CCTP-protocol-for-cross-chain-USDC-transfers",
+      "pubDate": "2024-01-16T15:05:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "Chainlink has integrated Circle’s cross-chain transfer protocol with its CCIP system — aiming to securely move USDC across networks.",
+      "currencies": [
+        "USDC",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Klaytn and LINE’s Finschia Eye Merger: A Leap Towards Asia’s Largest Web3 Ecosystem",
+      "link": "https://cryptopanic.com/news/19179499/Klaytn-and-LINEs-Finschia-Eye-Merger-A-Leap-Towards-Asias-Largest-Web3-Ecosystem",
+      "pubDate": "2024-01-16T14:41:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY"
+      ]
+    },
+    {
+      "title": "Bitcoin Moves Higher; Chiliz, Klaytn Among Top Gainers",
+      "link": "https://cryptopanic.com/news/19179517/Bitcoin-Moves-Higher-Chiliz-Klaytn-Among-Top-Gainers",
+      "pubDate": "2024-01-16T14:36:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "KLAY"
+      ]
+    },
+    {
+      "title": "Key Reasons Why Chiliz (CHZ) Price Skyrocketed Over 20%",
+      "link": "https://cryptopanic.com/news/19179475/Key-Reasons-Why-Chiliz-CHZ-Price-Skyrocketed-Over-20",
+      "pubDate": "2024-01-16T14:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CHZ"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BlackRock CEO Larry Fink’s Cryptic Spot XRP ETF Comment Sparks Speculation From Ripple’s XRP Army",
+      "link": "https://cryptopanic.com/news/19179444/BlackRock-CEO-Larry-Finks-Cryptic-Spot-XRP-ETF-Comment-Sparks-Speculation-From-Ripples-XRP-Army",
+      "pubDate": "2024-01-16T14:24:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The XRP army and community find themselves in a fervour following a recent Fox Business interview where BlackRock CEO Larry Fink dropped a cryptic comment regarding the possibility of a spot XRP Exchange-Traded Fund (ETF).",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Polygon Foundation Under Scrutiny Due to MATIC Allocation Concerns",
+      "link": "https://cryptopanic.com/news/19179564/Polygon-Foundation-Under-Scrutiny-Due-to-MATIC-Allocation-Concerns",
+      "pubDate": "2024-01-16T14:03:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "MATIC",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Bitwise CIO Equates Bitcoin ETF Impact To 1.4 Halvings: What This Means",
+      "link": "https://cryptopanic.com/news/19179345/Bitwise-CIO-Equates-Bitcoin-ETF-Impact-To-14-Halvings-What-This-Means",
+      "pubDate": "2024-01-16T14:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "WalletConnect launches ‘Web3Inbox’ notification app for Web3 users",
+      "link": "https://cryptopanic.com/news/19179340/WalletConnect-launches-Web3Inbox-notification-app-for-Web3-users",
+      "pubDate": "2024-01-16T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CAKE"
+      ]
+    },
+    {
+      "title": "Fantom Beefs Up Security By Cutting Staking Requirement By 90%",
+      "link": "https://cryptopanic.com/news/19179342/Fantom-Beefs-Up-Security-By-Cutting-Staking-Requirement-By-90",
+      "pubDate": "2024-01-16T13:28:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTM"
+      ]
+    },
+    {
+      "title": "Coincall Unveils Altcoin Options Market Maker and Ambassador Programs",
+      "link": "https://cryptopanic.com/news/19179321/Coincall-Unveils-Altcoin-Options-Market-Maker-and-Ambassador-Programs",
+      "pubDate": "2024-01-16T13:22:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Cronos Labs Launches Third Cohort of Pioneering Web3 Accelerator Program",
+      "link": "https://cryptopanic.com/news/19179521/Cronos-Labs-Launches-Third-Cohort-of-Pioneering-Web3-Accelerator-Program",
+      "pubDate": "2024-01-16T12:55:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Tether Responds Fiercely To The United Nations Money Laundering Accusations",
+      "link": "https://cryptopanic.com/news/19178895/Tether-Responds-Fiercely-To-The-United-Nations-Money-Laundering-Accusations",
+      "pubDate": "2024-01-16T11:31:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Tether Challenges UN Accusations, Advocates Blockchain's Role in Crime Prevention",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BLUR and LINK Move In Opposite Directions Despite the Former’s Token Unlock",
+      "link": "https://cryptopanic.com/news/19178896/BLUR-and-LINK-Move-In-Opposite-Directions-Despite-the-Formers-Token-Unlock?mtm_campaign=API-OFA",
+      "pubDate": "2024-01-16T11:26:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "BLUR"
+      ]
+    },
+    {
+      "title": "Filecoin Foundation explores space for decentralized storage system",
+      "link": "https://cryptopanic.com/news/filecoin/19178792/Filecoin-Foundation-explores-space-for-decentralized-storage-system",
+      "pubDate": "2024-01-16T11:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "Price Analysis: Strong Bullish Sentiment for Bitcoin (BTC), Internet Computer (ICP) and Everlodge (ELDG)",
+      "link": "https://cryptopanic.com/news/internet-computer/19178831/Price-Analysis-Strong-Bullish-Sentiment-for-Bitcoin-BTC-Internet-Computer-ICP-and-Everlodge-ELDG",
+      "pubDate": "2024-01-16T11:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ICP"
+      ]
+    },
+    {
+      "title": "Klaytn and Finschia Foundations Propose Merger for Asia’s Premier Web3 Ecosystem",
+      "link": "https://cryptopanic.com/news/19178749/Klaytn-and-Finschia-Foundations-Propose-Merger-for-Asias-Premier-Web3-Ecosystem",
+      "pubDate": "2024-01-16T10:31:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ATOM",
+        "KLAY"
+      ]
+    },
+    {
+      "title": "Mantle Launches V2 Iteration On Testnet Following Impressive Growth",
+      "link": "https://cryptopanic.com/news/19178705/Mantle-Launches-V2-Iteration-On-Testnet-Following-Impressive-Growth",
+      "pubDate": "2024-01-16T10:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MNT"
+      ]
+    },
+    {
+      "title": "Hedera Council Boosts Blockchain Innovation With Billions in HBAR",
+      "link": "https://cryptopanic.com/news/19178637/Hedera-Council-Boosts-Blockchain-Innovation-With-Billions-in-HBAR",
+      "pubDate": "2024-01-16T10:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Stablecoin Takeover? Record Tether 71% Dominance Raises Questions About Crypto Future",
+      "link": "https://cryptopanic.com/news/19178612/Stablecoin-Takeover-Record-Tether-71-Dominance-Raises-Questions-About-Crypto-Future",
+      "pubDate": "2024-01-16T10:00:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "USDC",
+        "ETC",
+        "SUI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Fantom foundation bolsters layer-1 blockchain security with staking requirement cut",
+      "link": "https://cryptopanic.com/news/19178650/Fantom-foundation-bolsters-layer-1-blockchain-security-with-staking-requirement-cut",
+      "pubDate": "2024-01-16T09:59:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTM"
+      ]
+    },
+    {
+      "title": "BLUR Token Unlock Today: Forecasting Its Impact on the NFT Sector",
+      "link": "https://cryptopanic.com/news/19178636/BLUR-Token-Unlock-Today-Forecasting-Its-Impact-on-the-NFT-Sector?mtm_campaign=API-OFA",
+      "pubDate": "2024-01-16T09:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "BLUR"
+      ]
+    },
+    {
+      "title": "Prices and news of the crypto XAI, Quant and BNB",
+      "link": "https://cryptopanic.com/news/quant-network/19178481/Prices-and-news-of-the-crypto-XAI-Quant-and-BNB",
+      "pubDate": "2024-01-16T08:32:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "QNT"
+      ]
+    },
+    {
+      "title": "Crypto Research Firm Says ‘Sell All Your Cardano (ADA)’, Here’s Why",
+      "link": "https://cryptopanic.com/news/19178387/Crypto-Research-Firm-Says-Sell-All-Your-Cardano-ADA-Heres-Why",
+      "pubDate": "2024-01-16T08:30:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "ADA",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ethereum Classic Maintains 32% Steady Rise – What’s Driving ETC Up?",
+      "link": "https://cryptopanic.com/news/19178388/Ethereum-Classic-Maintains-32-Steady-Rise-Whats-Driving-ETC-Up",
+      "pubDate": "2024-01-16T08:26:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LINK",
+        "ETC",
+        "SUI"
+      ]
+    },
+    {
+      "title": "TUSD Loses $1 Peg Amid Binance's FDUSD Focus: Analyst",
+      "link": "https://cryptopanic.com/news/19178404/TUSD-Loses-1-Peg-Amid-Binances-FDUSD-Focus-Analyst",
+      "pubDate": "2024-01-16T08:24:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "TUSD",
+        "FDUSD"
+      ]
+    },
+    {
+      "title": "Fantom Slashes Validator Staking Requirements by 90%, FTM Prices Unchanged",
+      "link": "https://cryptopanic.com/news/19178363/Fantom-Slashes-Validator-Staking-Requirements-by-90-FTM-Prices-Unchanged",
+      "pubDate": "2024-01-16T08:05:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FTM"
+      ]
+    },
+    {
+      "title": "Good Chance US Will Pass Stablecoin Regulations in 2024: Circle CEO",
+      "link": "https://cryptopanic.com/news/19178304/Good-Chance-US-Will-Pass-Stablecoin-Regulations-in-2024-Circle-CEO",
+      "pubDate": "2024-01-16T06:47:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "TUSD",
+        "FDUSD"
+      ]
+    },
+    {
+      "title": "Fantom (FTM) Cuts Staking Requirement by 90% in Decentralization Push",
+      "link": "https://cryptopanic.com/news/19178051/Fantom-FTM-Cuts-Staking-Requirement-by-90-in-Decentralization-Push",
+      "pubDate": "2024-01-16T04:26:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FTM"
+      ]
+    },
+    {
+      "title": "Solana Replacing Ethereum As The Home Of Meme Coins?",
+      "link": "https://cryptopanic.com/news/19177898/Solana-Replacing-Ethereum-As-The-Home-Of-Meme-Coins",
+      "pubDate": "2024-01-16T02:00:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "There is a growing sentiment that minting and trading meme coins on Ethereum is no “longer viable” since Solana is emerging as a potential alternative, looking at recent on-chain activity. This shift in dynamics is evident in the recent success of Solana-based meme coins like BONK, which has captured significant attention within the cryptocurrency community. […]",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "24 Crypto Update, 15 Jan: Bitcoin Holds Ground While Altcoins Ignite",
+      "link": "https://cryptopanic.com/news/19178088/24-Crypto-Update-15-Jan-Bitcoin-Holds-Ground-While-Altcoins-Ignite",
+      "pubDate": "2024-01-16T01:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "MATIC",
+        "APT",
+        "OP",
+        "FLR"
+      ]
+    },
+    {
+      "title": "Fantom cuts staking requirement by 90% in a bid to increase security",
+      "link": "https://cryptopanic.com/news/19177837/Fantom-cuts-staking-requirement-by-90-in-a-bid-to-increase-security",
+      "pubDate": "2024-01-16T01:07:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The Fantom Foundation expects the changes will beef up Fantom’s security without slowing down the network.",
+      "currencies": [
+        "FTM"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Chainlink Exchange Supply Plunges To 4-Year Low: Rally To Continue?",
+      "link": "https://cryptopanic.com/news/19177780/Chainlink-Exchange-Supply-Plunges-To-4-Year-Low-Rally-To-Continue",
+      "pubDate": "2024-01-16T00:00:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "On-chain data shows the Chainlink supply on exchanges has dropped to the lowest level in around four years, a sign that could be bullish for LINK. Chainlink Supply On Exchanges Has Seen A Plunge Recently According to data from the on-chain analytics firm Santiment, LINK’s latest upward surge has come as the cryptocurrency’s supply on […]",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

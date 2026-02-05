@@ -1,0 +1,42 @@
+{
+  "date": "2019-07-01",
+  "fetchedAt": "2026-02-05T07:27:06.955Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Brave Browser now Allows Tipping Services on Vimeo and Reddit",
+      "link": "https://cryptopanic.com/news/5891909/Brave-Browser-now-Allows-Tipping-Services-on-Vimeo-and-Reddit",
+      "pubDate": "2019-07-01T15:36:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BAT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "VeChain Foundation to buy back $25 million of VET coins",
+      "link": "https://cryptopanic.com/news/5890194/VeChain-Foundation-to-buy-back-25-million-of-VET-coins",
+      "pubDate": "2019-07-01T12:47:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "date": "2020-08-19",
+  "fetchedAt": "2026-02-05T07:27:06.680Z",
+  "articleCount": 6,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA’s Chrysalis Goes Live on Mainnet",
+      "link": "https://cryptopanic.com/news/9726899/IOTAs-Chrysalis-Goes-Live-on-Mainnet",
+      "pubDate": "2020-08-19T21:12:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 20,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @Folgory1: We are glad to announce that @Touchsocialtst #TST is listed in folgory with pairs BTC and USDT go to trade now @CoinMarketCap…",
+      "link": "https://cryptopanic.com/news/11440740/RT-Folgory1-We-are-glad-to-announce-that-Touchsocialtst-TST-is-listed-in-folgory-with-pairs-BTC-and-USDT-go-to-trade-now-CoinMarketCap?mtm_campaign=API-OFA",
+      "pubDate": "2020-08-19T18:38:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "TST"
+      ]
+    },
+    {
+      "title": "IOTA Upgrades to Chrysalis 1.5, Inches Closer to Complete Decentralization",
+      "link": "https://cryptopanic.com/news/9725719/IOTA-Upgrades-to-Chrysalis-15-Inches-Closer-to-Complete-Decentralization",
+      "pubDate": "2020-08-19T18:07:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @PaxosGlobal: More companies see that the digital asset revolution is coming. Paxos Crypto Brokerage enables companies to integrate cryp…",
+      "link": "https://cryptopanic.com/news/9723742/RT-PaxosGlobal-More-companies-see-that-the-digital-asset-revolution-is-coming-Paxos-Crypto-Brokerage-enables-companies-to-integrate-cryp",
+      "pubDate": "2020-08-19T15:25:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "Chainlink to Provide Data for Farming Insurance Startup Arbol",
+      "link": "https://cryptopanic.com/news/chainlink/9722357/Chainlink-to-Provide-Data-for-Farming-Insurance-Startup-Arbol",
+      "pubDate": "2020-08-19T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron Goes All In on DeFi as Justin Sun Plans JUSTSwap to Challenge Ethereum-Based DeFi in Future",
+      "link": "https://cryptopanic.com/news/9722055/Tron-Goes-All-In-on-DeFi-as-Justin-Sun-Plans-JUSTSwap-to-Challenge-Ethereum-Based-DeFi-in-Future",
+      "pubDate": "2020-08-19T12:34:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

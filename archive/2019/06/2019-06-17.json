@@ -1,0 +1,25 @@
+{
+  "date": "2019-06-17",
+  "fetchedAt": "2026-02-05T07:27:06.973Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Cash Developer: If Something Isn’t Done, BCH Will Cease to Exist",
+      "link": "https://cryptopanic.com/news/5736123/Bitcoin-Cash-Developer-If-Something-Isnt-Done-BCH-Will-Cease-to-Exist",
+      "pubDate": "2019-06-17T12:54:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

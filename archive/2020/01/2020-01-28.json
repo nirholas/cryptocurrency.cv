@@ -1,0 +1,39 @@
+{
+  "date": "2020-01-28",
+  "fetchedAt": "2026-02-05T07:27:06.809Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @ethchris: #Solidity 0.6.2 is fresh off the press and includes high-level access to the \"create2\"-opcode, interface inheritance, much fa…",
+      "link": "https://cryptopanic.com/news/7779089/RT-ethchris-Solidity-062-is-fresh-off-the-press-and-includes-high-level-access-to-the-create2-opcode-interface-inheritance-much-fa",
+      "pubDate": "2020-01-28T22:17:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "SNL"
+      ]
+    },
+    {
+      "title": "XRP Tax Refunds Become Available for All American Taxpayers",
+      "link": "https://cryptopanic.com/news/7776028/XRP-Tax-Refunds-Become-Available-for-All-American-Taxpayers",
+      "pubDate": "2020-01-28T16:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XRP",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

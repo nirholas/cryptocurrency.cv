@@ -1,0 +1,26 @@
+{
+  "date": "2018-04-17",
+  "fetchedAt": "2026-02-05T07:27:06.996Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Merchant Adoption Might Just Be Accelerating In Asia",
+      "link": "https://cryptopanic.com/news/litecoin/1680548/Bitcoin-Merchant-Adoption-Might-Just-Be-Accelerating-In-Asia",
+      "pubDate": "2018-04-17T07:00:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

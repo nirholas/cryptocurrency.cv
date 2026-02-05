@@ -1,0 +1,37 @@
+{
+  "date": "2018-01-26",
+  "fetchedAt": "2026-02-05T07:27:06.958Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Crypto Exchange Coincheck Abruptly Halts Withdrawals",
+      "link": "https://cryptopanic.com/news/897493/Crypto-Exchange-Coincheck-Abruptly-Halts-Withdrawals",
+      "pubDate": "2018-01-26T12:32:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XEM"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "SAROS listed on Southexchange",
+      "link": "https://cryptopanic.com/news/11437944/SAROS-listed-on-Southexchange?mtm_campaign=API-OFA",
+      "pubDate": "2018-01-26T06:41:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "SAROS"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "date": "2019-05-28",
+  "fetchedAt": "2026-02-05T07:27:06.789Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA Achieves Huge Milestone with Coordicide Release",
+      "link": "https://cryptopanic.com/news/5551129/IOTA-Achieves-Huge-Milestone-with-Coordicide-Release",
+      "pubDate": "2019-05-28T17:35:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 20,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Stellar (XLM) Price to Grow by 740% and Higher? Buying Guide & Predictions from Traders",
+      "link": "https://cryptopanic.com/news/5550280/Stellar-XLM-Price-to-Grow-by-740-and-Higher-Buying-Guide-Predictions-from-Traders",
+      "pubDate": "2019-05-28T16:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

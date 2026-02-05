@@ -1,0 +1,532 @@
+{
+  "date": "2022-07-07",
+  "fetchedAt": "2026-02-05T07:27:07.846Z",
+  "articleCount": 35,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "10 decades, 10 digital artworks, 100 years through the lens of Centre Court  minted by our friends at…",
+      "link": "https://cryptopanic.com/news/15707579/10-decades-10-digital-artworks-100-years-through-the-lens-of-Centre-Court-minted-by-our-friends-at",
+      "pubDate": "2022-07-07T23:53:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CENNZ"
+      ]
+    },
+    {
+      "title": "Find out how federations, like the one used on the #LiquidNetwork, can be applied to ecash mints. Follow at…",
+      "link": "https://cryptopanic.com/news/ecash/15707419/Find-out-how-federations-like-the-one-used-on-the-LiquidNetwork-can-be-applied-to-ecash-mints-Follow-at",
+      "pubDate": "2022-07-07T23:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC",
+        "BMN"
+      ]
+    },
+    {
+      "title": "U.S. Bank Will Connect With Ethereum’s MakerDAO To Borrow $100 Million",
+      "link": "https://cryptopanic.com/news/15705702/US-Bank-Will-Connect-With-Ethereums-MakerDAO-To-Borrow-100-Million",
+      "pubDate": "2022-07-07T22:00:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum’s decentralized finance protocol MakerDAO proposed a historic vote to connect a U.S. bank to its platform, the Huntingdon Valley Bank (HVB). The community has approved the proposal and the financial entity will be able to access an initial debt ceiling of $100 million. Related Reading | NFTs Enter A New Era As Solana Closes The […]",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "142,000 Bitcoin Could Be Dumped As Creditors Eye Mt. Gox Repayment",
+      "link": "https://cryptopanic.com/news/15705522/142000-Bitcoin-Could-Be-Dumped-As-Creditors-Eye-Mt-Gox-Repayment",
+      "pubDate": "2022-07-07T20:55:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The Mt. Gox rehabilitation trustee asked creditors to choose between bitcoin, cash or Bitcoin Cash to receive repayment, risking pressuring the market further.",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Former Fed Regulator Calls For Full Ban On Bitcoin – Says Crypto Has No Real Value",
+      "link": "https://cryptopanic.com/news/15705212/Former-Fed-Regulator-Calls-For-Full-Ban-On-Bitcoin-Says-Crypto-Has-No-Real-Value",
+      "pubDate": "2022-07-07T19:10:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Lee Reiners – a former employee of the Federal Reserve Bank of New York and currently executive director of Duke University's Global Financial Markets Center – says he believes Crypto has no cash flow and should be kept out of the banking system.",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 30,
+        "negative": 8
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana (SOL) Emerging As Viable Threat to Ethereum in NFT Markets: DappRadar Report",
+      "link": "https://cryptopanic.com/news/15705142/Solana-SOL-Emerging-As-Viable-Threat-to-Ethereum-in-NFT-Markets-DappRadar-Report",
+      "pubDate": "2022-07-07T18:45:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "DappRadar says Solana (SOL) could potentially pass Ethereum (ETH) as the leading blockchain for non-fungible tokens (NFTs). In a new report, DappRadar finds Solana is performing well in the NFT space despite the latest widespread crypto market downturn. Trading volume for SOL increased amid declines seen in other blockchains, including leading altcoin Ethereum. DappRadar finds […]",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Mt. Gox Releases Update on Creditor Rehabilitation Plan",
+      "link": "https://cryptopanic.com/news/bitcoin/15705052/Mt-Gox-Releases-Update-on-Creditor-Rehabilitation-Plan",
+      "pubDate": "2022-07-07T18:11:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The exchange could begin to repay its creditors in August, with some compensated directly in Bitcoin.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Reddit Has Started Selling NFT Avatars on Polygon",
+      "link": "https://cryptopanic.com/news/15704855/Reddit-Has-Started-Selling-NFT-Avatars-on-Polygon",
+      "pubDate": "2022-07-07T17:10:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "Reddit has partnered with Polygon to launch a range of blockchain-based NFT avatars that can be set as profile pictures on the social media site. Reddit Sells First NFTs NFT...",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Thank you Project X Community ️ We will be keeping everyone updated via Twitter and Discord.",
+      "link": "https://cryptopanic.com/news/15711594/Thank-you-Project-X-Community-We-will-be-keeping-everyone-updated-via-Twitter-and-Discord?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-07T16:58:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PXT"
+      ]
+    },
+    {
+      "title": "Bitcoin faces Mt. Gox 'black swan' as trustee prepares to unlock 150K BTC",
+      "link": "https://cryptopanic.com/news/bitcoin/15704612/Bitcoin-faces-Mt-Gox-black-swan-as-trustee-prepares-to-unlock-150K-BTC",
+      "pubDate": "2022-07-07T16:17:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The prospect of a rumored 150,000 BTC flooding the market gets real as Mt. Gox creditors choose how much money to receive in cash, Bitcoin and Bitcoin Cash.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Theta Edge Nodes can now perform decentralized video encoding to support Theta Video API! TVA jobs will initially o…",
+      "link": "https://cryptopanic.com/news/theta-token/15712505/Theta-Edge-Nodes-can-now-perform-decentralized-video-encoding-to-support-Theta-Video-API-TVA-jobs-will-initially-o",
+      "pubDate": "2022-07-07T16:11:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Gold would have been a 40% better investment than Bitcoin in 2022",
+      "link": "https://cryptopanic.com/news/bitcoin/15704614/Gold-would-have-been-a-40-better-investment-than-Bitcoin-in-2022",
+      "pubDate": "2022-07-07T16:10:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin proponents have maintained that the maturing asset will replace gold as the presumptive store of wealth and a hedge... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 8
+      }
+    },
+    {
+      "title": "Spot trading competitions are nearly here! From the 18th of July and in partnership with @ProjectSerum, 50K SRM wil…",
+      "link": "https://cryptopanic.com/news/15710400/Spot-trading-competitions-are-nearly-here-From-the-18th-of-July-and-in-partnership-with-ProjectSerum-50K-SRM-wil",
+      "pubDate": "2022-07-07T16:04:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SRM",
+        "MNGO"
+      ]
+    },
+    {
+      "title": "MakerDAO approves $100 million stablecoin loan vault for 151-year-old US bank",
+      "link": "https://cryptopanic.com/news/15704572/MakerDAO-approves-100-million-stablecoin-loan-vault-for-151-year-old-US-bank",
+      "pubDate": "2022-07-07T16:01:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "A Delaware-based trust company called MakerDAO Bank Participation Trust will co-manage the bank's loan assets on behalf of MakerDAO.",
+      "currencies": [
+        "DAI"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "What is SolScan and how to use it?",
+      "link": "https://cryptopanic.com/news/15704566/What-is-SolScan-and-how-to-use-it",
+      "pubDate": "2022-07-07T15:58:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "A well-liked substitute for the official Solana explorer is called Solscan. You may use it to look up particular wallet addresses and transactions using SolScan's search bar.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Celsius Network Clears its Bitcoin Loan, Resetting its Liquidation Price to $0",
+      "link": "https://cryptopanic.com/news/15704526/Celsius-Network-Clears-its-Bitcoin-Loan-Resetting-its-Liquidation-Price-to-0",
+      "pubDate": "2022-07-07T15:58:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Summary: Celsius Network has completely paid off its Bitcoin loan, resetting its liquidation price to zero. The lending platform has been paying off its loan on the Maker Protocol since mid-June and after it announced pausing of withdrawals. The complete repayment of its Bitcoin loan could be part of Celsius Network’s restructuring plan and commitment to making all its users whole. Celsius Network has completely paid off its Bitcoin loan and thus resetting its liquidation price back to zero. Acc",
+      "currencies": [
+        "BTC",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 46,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Going live in 5 minutes. See you in the discord.",
+      "link": "https://cryptopanic.com/news/15707108/Going-live-in-5-minutes-See-you-in-the-discord",
+      "pubDate": "2022-07-07T15:55:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BADGER"
+      ]
+    },
+    {
+      "title": "RT @KevinChou: Web3 Is Already Reshaping Dynamics On Social Networks @takiapp",
+      "link": "https://cryptopanic.com/news/15711719/RT-KevinChou-Web3-Is-Already-Reshaping-Dynamics-On-Social-Networks-takiapp",
+      "pubDate": "2022-07-07T15:24:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RLY"
+      ]
+    },
+    {
+      "title": "DeFi protocol Aave proposes creation of stablecoin called GHO",
+      "link": "https://cryptopanic.com/news/15704396/DeFi-protocol-Aave-proposes-creation-of-stablecoin-called-GHO",
+      "pubDate": "2022-07-07T15:16:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Aave Companies has proposed to Aave's governance forum that a new stablecoin called GHO should be created.",
+      "currencies": [
+        "DAI",
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "With the public sale of SubQuery coming up, we will have one last AMA with the SQ team  Please join and ask any qu…",
+      "link": "https://cryptopanic.com/news/15708845/With-the-public-sale-of-SubQuery-coming-up-we-will-have-one-last-AMA-with-the-SQ-team-Please-join-and-ask-any-qu?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-07T14:21:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FAI"
+      ]
+    },
+    {
+      "title": "Our #nft marketplace features some of the hottest models from across the world",
+      "link": "https://cryptopanic.com/news/15713155/Our-nft-marketplace-features-some-of-the-hottest-models-from-across-the-world?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-07T13:09:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "VICE"
+      ]
+    },
+    {
+      "title": "RT @Ashar2shahid: As promised, A full guide to creating your own NFT minting contract like Quantumons using QRNG.",
+      "link": "https://cryptopanic.com/news/15716939/RT-Ashar2shahid-As-promised-A-full-guide-to-creating-your-own-NFT-minting-contract-like-Quantumons-using-QRNG",
+      "pubDate": "2022-07-07T12:35:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "API3"
+      ]
+    },
+    {
+      "title": "SHIB, LEASH and BONE List on Canadian Crypto Payments Platform: Details",
+      "link": "https://cryptopanic.com/news/15703614/SHIB-LEASH-and-BONE-List-on-Canadian-Crypto-Payments-Platform-Details",
+      "pubDate": "2022-07-07T11:58:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Shiba Inu is currently available for trading on several renowned cryptocurrency exchanges",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Over $1 Billion Inflows DOGE Market Cap As Elon Musk’s ‘Boring Company’ Accepts Dogecoin For Rides",
+      "link": "https://cryptopanic.com/news/15703616/Over-1-Billion-Inflows-DOGE-Market-Cap-As-Elon-Musks-Boring-Company-Accepts-Dogecoin-For-Rides",
+      "pubDate": "2022-07-07T11:54:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Elon Musk is going all-in on Dogecoin (DOGE) and this time, it's not by sharing memes or appearing on TV shows. Instead, one of the billionaire’s companies has announced that customers can now use the dog-themed cryptocurrency to make payments for its services.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana Investor Sues Project Insiders, Claims Network Is ‘Highly Centralized’",
+      "link": "https://cryptopanic.com/news/15703543/Solana-Investor-Sues-Project-Insiders-Claims-Network-Is-Highly-Centralized",
+      "pubDate": "2022-07-07T11:31:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "California resident Mark Young alleges key players in the Solana ecosystem misled investors and sold them unregistered securities",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 16
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "️ The sun might not be shining on crypto markets right now (or any other markets for that matter), but Freeway con…",
+      "link": "https://cryptopanic.com/news/15709077/The-sun-might-not-be-shining-on-crypto-markets-right-now-or-any-other-markets-for-that-matter-but-Freeway-con",
+      "pubDate": "2022-07-07T10:27:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FWT"
+      ]
+    },
+    {
+      "title": "Elon Musk Says He Will Continue Supporting Dogecoin \"Wherever Possible\"",
+      "link": "https://cryptopanic.com/news/15703345/Elon-Musk-Says-He-Will-Continue-Supporting-Dogecoin-Wherever-Possible",
+      "pubDate": "2022-07-07T10:17:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "He has since been strong supporter of Dogecoin",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "#Blockchain was designed to help businesses improve efficiency & integrate with the #dataeconomy. But present imp…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/15707352/Blockchain-was-designed-to-help-businesses-improve-efficiency-amp-integrate-with-the-dataeconomy-But-present-imp",
+      "pubDate": "2022-07-07T10:02:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "Shiba Inu Reveals Stablecoin Plans and Dogecoin Comes to Las Vegas",
+      "link": "https://cryptopanic.com/news/dogecoin/15703204/Shiba-Inu-Reveals-Stablecoin-Plans-and-Dogecoin-Comes-to-Las-Vegas",
+      "pubDate": "2022-07-07T09:39:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Popular dog-themed meme coins shiba inu (SHIB) and dogecoin (DOGE) may get a boost as the former plans to expand its ecosystem with a range of new products, while the latter will reportedly be accepted as a payment method at The Boring Company's newly-opened transit station in Las Vegas.... Read More: Shiba Inu Reveals Stablecoin Plans and Dogecoin Comes to Las Vegas",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Developers Behind Shiba Inu Tease Launch of New Stablecoin, Reward Token",
+      "link": "https://cryptopanic.com/news/shiba-inu/15702937/Developers-Behind-Shiba-Inu-Tease-Launch-of-New-Stablecoin-Reward-Token",
+      "pubDate": "2022-07-07T09:32:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Popular meme coin Shiba Inu sets sights on expanding its ecosystem with a decentralized stablecoin and a new reward token.",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Sam Bankman-Fried Says FTX Has a ‘Few Billion’ for Additional Bailouts",
+      "link": "https://cryptopanic.com/news/ftx-token/15699362/Sam-Bankman-Fried-Says-FTX-Has-a-Few-Billion-for-Additional-Bailouts",
+      "pubDate": "2022-07-07T07:29:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "On top of leading firms like BlockFi and Voyager, small-sized companies have also reached out to FTX for help.",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Jasmy, Official Sponsor of Sagan Tosu, releases fan token website, pre-registration from July 2 (Sat.)",
+      "link": "https://cryptopanic.com/news/15699353/Jasmy-Official-Sponsor-of-Sagan-Tosu-releases-fan-token-website-pre-registration-from-July-2-Sat",
+      "pubDate": "2022-07-07T06:30:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "JASMY"
+      ]
+    },
+    {
+      "title": "RT @ivcryptofund: #IVSCrypto kicks off in an hour! We'd like to thank all of our esteemed sponsors again: Platinum: @klaytn_official &…",
+      "link": "https://cryptopanic.com/news/klay-token/15699567/RT-ivcryptofund-IVSCrypto-kicks-off-in-an-hour-Wed-like-to-thank-all-of-our-esteemed-sponsors-again-Platinum-klaytn_official-amp",
+      "pubDate": "2022-07-07T06:00:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "RT @richardcraib: first Numerai Supreme trades hit the global markets today",
+      "link": "https://cryptopanic.com/news/15696609/RT-richardcraib-first-Numerai-Supreme-trades-hit-the-global-markets-today",
+      "pubDate": "2022-07-07T05:43:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NMR"
+      ]
+    },
+    {
+      "title": "All good things must come to an end, #telfam. At 00:00 UTC on July 8th our inaugural $TEL promo period will close.…",
+      "link": "https://cryptopanic.com/news/15702078/All-good-things-must-come-to-an-end-telfam-At-0000-UTC-on-July-8th-our-inaugural-TEL-promo-period-will-close",
+      "pubDate": "2022-07-07T01:40:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    }
+  ]
+}

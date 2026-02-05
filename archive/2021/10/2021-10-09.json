@@ -1,0 +1,335 @@
+{
+  "date": "2021-10-09",
+  "fetchedAt": "2026-02-05T07:27:06.709Z",
+  "articleCount": 22,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @GaiaEverWorld: Tomorrow, October 10th, we are excited to finally open the doors to the Gaia Elite Club, where we will have 10,000 uniqu…",
+      "link": "https://cryptopanic.com/news/12980978/RT-GaiaEverWorld-Tomorrow-October-10th-we-are-excited-to-finally-open-the-doors-to-the-Gaia-Elite-Club-where-we-will-have-10000-uniqu?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-09T23:07:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LAYER",
+        "LAYERX"
+      ]
+    },
+    {
+      "title": "Polygon Transcends Ethereum As MATIC’s Active User Base Explodes",
+      "link": "https://cryptopanic.com/news/matic-network/12977110/Polygon-Transcends-Ethereum-As-MATICs-Active-User-Base-Explodes",
+      "pubDate": "2021-10-09T20:43:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Polygon is adding new users in the form of unique addresses faster than Ethereum despite having a lower count on the number of unique addresses than Ethereum. The network has added close to 3 million unique addresses in the last week, compared to Ethereum’s new count of 710,000 for the same duration. Today, Polygon added […]",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 43,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polygon ($MATIC) Powered Debut NFT Collection by Dolce & Gabbana Sells for 1,885 ETH",
+      "link": "https://cryptopanic.com/news/matic-network/12977035/Polygon-MATIC-Powered-Debut-NFT-Collection-by-Dolce-Gabbana-Sells-for-1885-ETH",
+      "pubDate": "2021-10-09T19:49:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Recently, Italian luxury fashion house Dolce & Gabbana (aka “D&G”) reported that “Collezione Genesi”, its debut NFT collection (which consists of both digital and physical works of art) had sold for over 1,885 ETH on Polygon-powered NFT marketplace UNXD, making this “the most successful digital fashion drop ever” (according to D&G). As CryptoGlobe reported on […]",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @CainBCHA: I still say @deadalnix is the most underrated founder and developer in all of crypto. I always learn something new from his i…",
+      "link": "https://cryptopanic.com/news/12981244/RT-CainBCHA-I-still-say-deadalnix-is-the-most-underrated-founder-and-developer-in-all-of-crypto-I-always-learn-something-new-from-his-i",
+      "pubDate": "2021-10-09T18:57:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "RT @deadalnix: This is the perfect explaination of why we are building XEC.",
+      "link": "https://cryptopanic.com/news/12981245/RT-deadalnix-This-is-the-perfect-explaination-of-why-we-are-building-XEC",
+      "pubDate": "2021-10-09T18:56:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "RT @MarshallHayner: We wanted to give you more potential to show off your Proton account and NFT portfolio. Grab an $XPR domain and add it…",
+      "link": "https://cryptopanic.com/news/12980223/RT-MarshallHayner-We-wanted-to-give-you-more-potential-to-show-off-your-Proton-account-and-NFT-portfolio-Grab-an-XPR-domain-and-add-it",
+      "pubDate": "2021-10-09T18:42:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "XPR"
+      ]
+    },
+    {
+      "title": "RT @Meter_IO: ️We are excited to announce our partnership with @Theta_Network! #Theta users will soon be able to use our #crosschain bri…",
+      "link": "https://cryptopanic.com/news/theta-token/12980757/RT-Meter_IO-We-are-excited-to-announce-our-partnership-with-Theta_Network-Theta-users-will-soon-be-able-to-use-our-crosschain-bri",
+      "pubDate": "2021-10-09T18:04:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @CryptoNewton: $LAYER @UniLayer_",
+      "link": "https://cryptopanic.com/news/12980979/RT-CryptoNewton-LAYER-UniLayer_?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-09T17:47:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LAYER",
+        "LAYERX"
+      ]
+    },
+    {
+      "title": "A decade down the line, is Litecoin actually living up to expectations",
+      "link": "https://cryptopanic.com/news/12976588/A-decade-down-the-line-is-Litecoin-actually-living-up-to-expectations",
+      "pubDate": "2021-10-09T15:00:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Shiba Inu is now a top-20 cryptocurrency with SHIB price soaring 300% in 9 days",
+      "link": "https://cryptopanic.com/news/dogecoin/12976551/Shiba-Inu-is-now-a-top-20-cryptocurrency-with-SHIB-price-soaring-300-in-9-days",
+      "pubDate": "2021-10-09T14:41:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The Dogecoin spinoff sprinted past popular blockchain protocols like Stellar and Polygon to become an $11 billion crypto project.",
+      "currencies": [
+        "DOGE",
+        "SHIB",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 15
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "The shift towards renewable energy for #Bitcoin mining is clear. Miners need to be environmentally conscious to kee…",
+      "link": "https://cryptopanic.com/news/12977884/The-shift-towards-renewable-energy-for-Bitcoin-mining-is-clear-Miners-need-to-be-environmentally-conscious-to-kee",
+      "pubDate": "2021-10-09T14:04:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTCST"
+      ]
+    },
+    {
+      "title": "The goal of the V10 #Blockchain release is to make the #ETN-Network blockchain as transparent as possible. That per…",
+      "link": "https://cryptopanic.com/news/12976453/The-goal-of-the-V10-Blockchain-release-is-to-make-the-ETN-Network-blockchain-as-transparent-as-possible-That-per",
+      "pubDate": "2021-10-09T14:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "Beginner’s Guide: Getting Started With Solana",
+      "link": "https://cryptopanic.com/news/12976455/Beginners-Guide-Getting-Started-With-Solana",
+      "pubDate": "2021-10-09T13:52:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "-",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @zhaojun_sh: $MIM is the first free multichain bridge token.",
+      "link": "https://cryptopanic.com/news/12977753/RT-zhaojun_sh-MIM-is-the-first-free-multichain-bridge-token",
+      "pubDate": "2021-10-09T12:41:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ANY"
+      ]
+    },
+    {
+      "title": "Axie Infinity (AXS) Binance Launchpad Lottery Ticket Sold at $200 Now Worth $250,000",
+      "link": "https://cryptopanic.com/news/12976141/Axie-Infinity-AXS-Binance-Launchpad-Lottery-Ticket-Sold-at-200-Now-Worth-250000",
+      "pubDate": "2021-10-09T10:48:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Investors who won the lottery for AXS public sale on Binance last October and held till date are currently sitting on more than $250,000.",
+      "currencies": [
+        "AXS"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polygon ($MATIC) Blockchain Is Being Used by Switzerland’s Postal Service",
+      "link": "https://cryptopanic.com/news/matic-network/12976105/Polygon-MATIC-Blockchain-Is-Being-Used-by-Switzerlands-Postal-Service",
+      "pubDate": "2021-10-09T09:59:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "The national postal service for Switzerland is planning to launch the “Swiss Crypto Stamp”. According to a press release issued by Swiss Post, which “issues around 50 different new stamps each year”, on November 25 it will “launch a very different type of stamp, representing a milestone in Swiss stamp history – the Swiss Crypto […]",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 94,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Consolidates as Shiba Inu (SHIB) Explodes 35% Daily Again (Weekend Watch)",
+      "link": "https://cryptopanic.com/news/shiba-inu/12975003/Bitcoin-Consolidates-as-Shiba-Inu-SHIB-Explodes-35-Daily-Again-Weekend-Watch",
+      "pubDate": "2021-10-09T08:28:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Shiba Inu's volatility continues with a massive leg up this time of 35%. Bitcoin has remained still around $55,000.",
+      "currencies": [
+        "BTC",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Vitalik Buterin Calls El Salvador's Bitcoin Experiment \"Reckless\"",
+      "link": "https://cryptopanic.com/news/bitcoin/12974828/Vitalik-Buterin-Calls-El-Salvadors-Bitcoin-Experiment-Reckless",
+      "pubDate": "2021-10-09T08:20:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Ethereum's Vitalik Buterin has slammed Bitcoin maximalists for “uncritically praising” Nayib Bukele",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Request is proud to support the largest Swiss Blockchain Hackathon 🤖 to solve real-world business challenges with c…",
+      "link": "https://cryptopanic.com/news/12973190/Request-is-proud-to-support-the-largest-Swiss-Blockchain-Hackathon-to-solve-real-world-business-challenges-with-c",
+      "pubDate": "2021-10-09T07:25:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "REQ"
+      ]
+    },
+    {
+      "title": "The BIGGEST Play-To-Earn game of 2021 Doge Dash is launching a huge $5,000 giveaway!! Enter here:…",
+      "link": "https://cryptopanic.com/news/dash/13025587/The-BIGGEST-Play-To-Earn-game-of-2021-Doge-Dash-is-launching-a-huge-5000-giveaway-Enter-here",
+      "pubDate": "2021-10-09T04:43:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DASH",
+        "DOGEDASH"
+      ]
+    },
+    {
+      "title": "In just a little over 3 weeks the @GaiaEverWorld snapshot  is taking place (October 31st) all $LAYER holders that…",
+      "link": "https://cryptopanic.com/news/12974621/In-just-a-little-over-3-weeks-the-GaiaEverWorld-snapshot-is-taking-place-October-31st-all-LAYER-holders-that?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-09T02:29:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LAYER",
+        "LAYERX"
+      ]
+    },
+    {
+      "title": "BEST Q4 SCENARIO! Will This Huge Google Partnership help Pump Bitcoin to $150K?",
+      "link": "https://cryptopanic.com/news/bitcoin/12969562/BEST-Q4-SCENARIO-Will-This-Huge-Google-Partnership-help-Pump-Bitcoin-to-150K",
+      "pubDate": "2021-10-09T00:31:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "✅ Follow EllioTrades on Twitter: https://twitter.com/elliotrades Wassup E.T Fam?! I just wanted to briefly check in and talk with you all about the Google and Bakkt partnership that was announced. For those of you that are unaware, Google has partnered with Bakkt to add support for Bakkt’s virtual Visa card through Google Pay. This will allow people to purchase goods or services using Bitcoin. I realize that most of us will have mixed feelings about this move because of the issue of centralizati",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

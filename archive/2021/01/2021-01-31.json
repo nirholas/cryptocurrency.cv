@@ -1,0 +1,158 @@
+{
+  "date": "2021-01-31",
+  "fetchedAt": "2026-02-05T07:27:06.781Z",
+  "articleCount": 11,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @pNetworkDeFi: In retrospect, it was inevitable",
+      "link": "https://cryptopanic.com/news/11350844/RT-pNetworkDeFi-In-retrospect-it-was-inevitable",
+      "pubDate": "2021-01-31T21:51:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "PLTC"
+      ]
+    },
+    {
+      "title": "One thing is clear - it’s time to restructure capital markets to remove asymmetrical advantages which only benefit…",
+      "link": "https://cryptopanic.com/news/11350367/One-thing-is-clear-its-time-to-restructure-capital-markets-to-remove-asymmetrical-advantages-which-only-benefit?mtm_campaign=API-OFA",
+      "pubDate": "2021-01-31T20:39:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHEX"
+      ]
+    },
+    {
+      "title": "LINK Price Analysis: Chainlink Expects Huge Move Upon Breaking Symmetrical Triangle",
+      "link": "https://cryptopanic.com/news/chainlink/11349826/LINK-Price-Analysis-Chainlink-Expects-Huge-Move-Upon-Breaking-Symmetrical-Triangle",
+      "pubDate": "2021-01-31T19:19:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Chainlink is down 2% over the past 24 hours, forming a huge symmetrical triangle. Against Bitcoin, LINK found support at 0.0006 BTC last Friday and since then, pushed higher.",
+      "currencies": [
+        "BTC",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Stellar Lumens (XLM) Team Releases Its 2021 Roadmap",
+      "link": "https://cryptopanic.com/news/11349759/Stellar-Lumens-XLM-Team-Releases-Its-2021-Roadmap",
+      "pubDate": "2021-01-31T18:59:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Grow, Grow, Grow The Stellar Lumens (XLM) team published its 2021 roadmap today, setting out its vision for the coming year and beyond. The prevailing theme in the much anticipated roadmap is growth. Specifically, the team wants to grow the number of developers using the network, its volume of transactions and public awareness of the … Continued",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tomo Halving",
+      "link": "https://cryptopanic.com/news/11348745/Tomo-Halving",
+      "pubDate": "2021-01-31T17:02:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "I know my steemit password (but I don't know my login). Any help?",
+      "link": "https://cryptopanic.com/news/11347684/I-know-my-steemit-password-but-I-dont-know-my-login-Any-help",
+      "pubDate": "2021-01-31T15:03:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "Trezor integration",
+      "link": "https://cryptopanic.com/news/11466983/Trezor-integration",
+      "pubDate": "2021-01-31T15:01:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "RT @btsfav: #Bitcoin Experiment: Financial Freedom with Faucets?! Week 29 #hive -",
+      "link": "https://cryptopanic.com/news/11345343/RT-btsfav-Bitcoin-Experiment-Financial-Freedom-with-Faucets-Week-29-hive-",
+      "pubDate": "2021-01-31T08:23:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "When is halving?",
+      "link": "https://cryptopanic.com/news/11353808/When-is-halving",
+      "pubDate": "2021-01-31T08:21:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "We have successfully delivered almost half $wBTC to all of our $BLISS Stakers. Thankyou to everyone who has partici…",
+      "link": "https://cryptopanic.com/news/11432305/We-have-successfully-delivered-almost-half-wBTC-to-all-of-our-BLISS-Stakers-Thankyou-to-everyone-who-has-partici?mtm_campaign=API-OFA",
+      "pubDate": "2021-01-31T08:10:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "VANA",
+        "BLISS"
+      ]
+    },
+    {
+      "title": "Ethereum Could Outperform Bitcoin, Why ETH Could Rally To $1,500",
+      "link": "https://cryptopanic.com/news/near/11344770/Ethereum-Could-Outperform-Bitcoin-Why-ETH-Could-Rally-To-1500",
+      "pubDate": "2021-01-31T06:18:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Ethereum remains in a range above the $1,300 support against the US Dollar. ETH price is likely to gain momentum above $1,400 and $1,450 resistance levels in the near term. ETH price traded as high as $1,438 and before it corrected lower against the US Dollar. The price is consolidating above the $1,320 support level […]",
+      "currencies": [
+        "ETH",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

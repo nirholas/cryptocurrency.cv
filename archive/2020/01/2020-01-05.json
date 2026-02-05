@@ -1,0 +1,61 @@
+{
+  "date": "2020-01-05",
+  "fetchedAt": "2026-02-05T07:27:06.954Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Dash (DASH) Price Surges 14 Percent. Will XRP and Ethereum (ETH) Follow Suit?",
+      "link": "https://cryptopanic.com/news/7570200/Dash-DASH-Price-Surges-14-Percent-Will-XRP-and-Ethereum-ETH-Follow-Suit",
+      "pubDate": "2020-01-05T19:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XRP",
+        "DASH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron Becomes The Most Popular Ecosystem for dApps Users, Report Says",
+      "link": "https://cryptopanic.com/news/7568157/Tron-Becomes-The-Most-Popular-Ecosystem-for-dApps-Users-Report-Says",
+      "pubDate": "2020-01-05T12:22:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "BitMEX Bets on Ethereum Price Falling in 2020: 'We Are About to Put On Our ETH Shorts'",
+      "link": "https://cryptopanic.com/news/ethereum/7567811/BitMEX-Bets-on-Ethereum-Price-Falling-in-2020-We-Are-About-to-Put-On-Our-ETH-Shorts",
+      "pubDate": "2020-01-05T10:32:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "date": "2020-09-07",
+  "fetchedAt": "2026-02-05T07:27:06.962Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Last call for users still holding #AEUR. After planned @ArdorPlatform hardfork (block 1453000 expected on Sep 22, 2…",
+      "link": "https://cryptopanic.com/news/11431131/Last-call-for-users-still-holding-AEUR-After-planned-ArdorPlatform-hardfork-block-1453000-expected-on-Sep-22-2?mtm_campaign=API-OFA",
+      "pubDate": "2020-09-07T18:51:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AEUR"
+      ]
+    },
+    {
+      "title": "Did Band Protocol CTO Create SushiSwap? Chainlink?s Number One Competitor Addresses Rumors",
+      "link": "https://cryptopanic.com/news/9905158/Did-Band-Protocol-CTO-Create-SushiSwap-Chainlinks-Number-One-Competitor-Addresses-Rumors",
+      "pubDate": "2020-09-07T06:27:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

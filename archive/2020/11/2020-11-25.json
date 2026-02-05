@@ -1,0 +1,91 @@
+{
+  "date": "2020-11-25",
+  "fetchedAt": "2026-02-05T07:27:06.984Z",
+  "articleCount": 6,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Don't want to spend too much time explaining #bitcoin to your family and friends this Thanksgiving? Our \"Bitcoin in…",
+      "link": "https://cryptopanic.com/news/10644184/Dont-want-to-spend-too-much-time-explaining-bitcoin-to-your-family-and-friends-this-Thanksgiving-Our-Bitcoin-in",
+      "pubDate": "2020-11-25T22:28:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    },
+    {
+      "title": "XRP Set to Surpass Ethereum in Key Metric for First Time in Seven Months, Says Crypto Intelligence Firm Santiment",
+      "link": "https://cryptopanic.com/news/ethereum/10639605/XRP-Set-to-Surpass-Ethereum-in-Key-Metric-for-First-Time-in-Seven-Months-Says-Crypto-Intelligence-Firm-Santiment",
+      "pubDate": "2020-11-25T13:55:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XRP",
+        "XVG"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 5
+      }
+    },
+    {
+      "title": "RT @OKEx: Beyond #ThankYou: To express our gratitude for everyone's unwavering trust in the #OKFam, @OKEx is launching user rewards promos…",
+      "link": "https://cryptopanic.com/news/10637976/RT-OKEx-Beyond-ThankYou-To-express-our-gratitude-for-everyones-unwavering-trust-in-the-OKFam-OKEx-is-launching-user-rewards-promos",
+      "pubDate": "2020-11-25T10:38:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "Dormant Ripple Whale Linked to Genesis Address Moves 40 Million XRP to Bitstamp",
+      "link": "https://cryptopanic.com/news/ripple/10636741/Dormant-Ripple-Whale-Linked-to-Genesis-Address-Moves-40-Million-XRP-to-Bitstamp",
+      "pubDate": "2020-11-25T06:34:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @ChefGrandpa: We have delisted STPT, WMBL, DVP, WTON, GT, HT, MX, GOM2. Please unstake the tokens from the pool. All delisted staking po…",
+      "link": "https://cryptopanic.com/news/10636074/RT-ChefGrandpa-We-have-delisted-STPT-WMBL-DVP-WTON-GT-HT-MX-GOM2-Please-unstake-the-tokens-from-the-pool-All-delisted-staking-po",
+      "pubDate": "2020-11-25T04:51:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MBL"
+      ]
+    },
+    {
+      "title": "What does Hyperion offer? I hope this article will help.",
+      "link": "https://cryptopanic.com/news/10635176/What-does-Hyperion-offer-I-hope-this-article-will-help",
+      "pubDate": "2020-11-25T02:14:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    }
+  ]
+}

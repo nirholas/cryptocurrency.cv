@@ -1,0 +1,43 @@
+{
+  "date": "2019-12-26",
+  "fetchedAt": "2026-02-05T07:27:06.977Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA Tokens to be Used in IBM Task Scheduling System: Patent Revealed",
+      "link": "https://cryptopanic.com/news/7501780/IOTA-Tokens-to-be-Used-in-IBM-Task-Scheduling-System-Patent-Revealed",
+      "pubDate": "2019-12-26T14:59:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 27,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "‘Japan’s Amazon’ Rakuten now allows users to convert loyalty points to bitcoin, ether and bitcoin cash",
+      "link": "https://cryptopanic.com/news/7500072/Japans-Amazon-Rakuten-now-allows-users-to-convert-loyalty-points-to-bitcoin-ether-and-bitcoin-cash",
+      "pubDate": "2019-12-26T08:20:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 24,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "date": "2019-02-05",
+  "fetchedAt": "2026-02-05T07:27:06.984Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Winklevoss Exchange Gemini Shuts Down Accounts Over Stablecoin Redemptions",
+      "link": "https://cryptopanic.com/news/4482208/Winklevoss-Exchange-Gemini-Shuts-Down-Accounts-Over-Stablecoin-Redemptions",
+      "pubDate": "2019-02-05T17:45:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Kraken Acquires Crypto Facilities Futures For $100M: What Are Crypto Futures and What Can We Learn About Kraken and The Crypto Ecosystem?",
+      "link": "https://cryptopanic.com/news/litecoin/4476757/Kraken-Acquires-Crypto-Facilities-Futures-For-100M-What-Are-Crypto-Futures-and-What-Can-We-Learn-About-Kraken-and-The-Crypto-Ecosystem",
+      "pubDate": "2019-02-05T08:29:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

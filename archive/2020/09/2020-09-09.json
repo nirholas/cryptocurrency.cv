@@ -1,0 +1,66 @@
+{
+  "date": "2020-09-09",
+  "fetchedAt": "2026-02-05T07:27:06.941Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Insane New Polkadot Partnership: Origin Trail + Bonus Gem!",
+      "link": "https://cryptopanic.com/news/polkadot/9931990/INSANE-NEW-POLKADOT-PARTNERSHIP-ORIGIN-TRAIL-BONUS-GEM",
+      "pubDate": "2020-09-09T23:14:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @PaxosGlobal: Paxos Settlement Service’s third broker-dealer client @SocieteGenerale is now using our service to settle U.S. listed equi…",
+      "link": "https://cryptopanic.com/news/9929524/RT-PaxosGlobal-Paxos-Settlement-Services-third-broker-dealer-client-SocieteGenerale-is-now-using-our-service-to-settle-US-listed-equi",
+      "pubDate": "2020-09-09T18:01:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "IOTA Releases New Version of Its Trinity Wallet with These Important Fixes",
+      "link": "https://cryptopanic.com/news/9929457/IOTA-Releases-New-Version-of-Its-Trinity-Wallet-with-These-Important-Fixes",
+      "pubDate": "2020-09-09T17:41:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Coinpayments as one of the most trusted crypto payment processors will provide services on our platform of buying a…",
+      "link": "https://cryptopanic.com/news/9928647/Coinpayments-as-one-of-the-most-trusted-crypto-payment-processors-will-provide-services-on-our-platform-of-buying-a",
+      "pubDate": "2020-09-09T16:24:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEON"
+      ]
+    }
+  ]
+}

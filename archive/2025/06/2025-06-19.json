@@ -1,0 +1,557 @@
+{
+  "date": "2025-06-19",
+  "fetchedAt": "2026-02-05T07:27:08.630Z",
+  "articleCount": 39,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Here are the 8 firms vying to list Solana ETFs",
+      "link": "https://cryptopanic.com/news/solana/22690701/Here-are-the-8-firms-vying-to-list-Solana-ETFs",
+      "pubDate": "2025-06-19T20:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "All eight included staking in their most recent SEC filings",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Lending TVL Hits Record $55.7B",
+      "link": "https://cryptopanic.com/news/aave/22690115/Lending-TVL-Hits-Record-557B",
+      "pubDate": "2025-06-19T20:00:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Ethereum at $2,700, While BlockDAG to Begin Shipping Miners in July; NEAR Price Analysis Inside",
+      "link": "https://cryptopanic.com/news/near/22689987/Ethereum-at-2700-While-BlockDAG-to-Begin-Shipping-Miners-in-July-NEAR-Price-Analysis-Inside",
+      "pubDate": "2025-06-19T20:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Best Crypto to Buy 2025: Web3 ai, HYPE, UNI, & ICP Lead the Pack",
+      "link": "https://cryptopanic.com/news/uniswap/22689161/Best-Crypto-to-Buy-2025-Web3-ai-HYPE-UNI-ICP-Lead-the-Pack",
+      "pubDate": "2025-06-19T19:00:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "ICP",
+        "HYPE"
+      ]
+    },
+    {
+      "title": "$OKB Jumps 10%, Sets Up for $60 Breakout Amid Crypto Exchange Token Race",
+      "link": "https://cryptopanic.com/news/okb/22689102/OKB-Jumps-10-Sets-Up-for-60-Breakout-Amid-Crypto-Exchange-Token-Race",
+      "pubDate": "2025-06-19T18:39:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "OKB",
+        "BGB"
+      ]
+    },
+    {
+      "title": "Internet Computer Woos Blockchain Devs with Solana Access Amid Dwindling Onchain Activity",
+      "link": "https://cryptopanic.com/news/internet-computer/22689101/Internet-Computer-Woos-Blockchain-Devs-with-Solana-Access-Amid-Dwindling-Onchain-Activity",
+      "pubDate": "2025-06-19T18:36:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "ICP"
+      ]
+    },
+    {
+      "title": "$AERO Soars 70% in a Week – Is Coinbase-Backed DEX the Next Billion-Dollar DeFi Star?",
+      "link": "https://cryptopanic.com/news/uniswap/22689064/AERO-Soars-70-in-a-Week-Is-Coinbase-Backed-DEX-the-Next-Billion-Dollar-DeFi-Star",
+      "pubDate": "2025-06-19T18:21:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "AERO"
+      ]
+    },
+    {
+      "title": "Are Ripple Investors Capitulating as XRP Price Fails to Make a Move?",
+      "link": "https://cryptopanic.com/news/bitcoin/22688586/Are-Ripple-Investors-Capitulating-as-XRP-Price-Fails-to-Make-a-Move",
+      "pubDate": "2025-06-19T18:07:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Best Cryptos to Buy Now: Web3 ai, SUI, CRO, & LTC",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/22688161/Best-Cryptos-to-Buy-Now-Web3-ai-SUI-CRO-LTC",
+      "pubDate": "2025-06-19T18:00:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO",
+        "LTC",
+        "SUI"
+      ]
+    },
+    {
+      "title": "What happened to WBTC on TRON?",
+      "link": "https://cryptopanic.com/news/wrapped-bitcoin/22688077/What-happened-to-WBTC-on-TRON",
+      "pubDate": "2025-06-19T17:30:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "WBTC",
+        "TRX"
+      ]
+    },
+    {
+      "title": "Ripple VS SEC Legal Battle Now Intensifies",
+      "link": "https://cryptopanic.com/news/ripple/22688145/Ripple-VS-SEC-Legal-Battle-Now-Intensifies",
+      "pubDate": "2025-06-19T17:23:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "With $312M Raised Quickly, BlockDAG Sets a New Benchmark in Crypto Funding! Uniswap & DOGE Gain Momentum",
+      "link": "https://cryptopanic.com/news/uniswap/22687142/With-312M-Raised-Quickly-BlockDAG-Sets-a-New-Benchmark-in-Crypto-Funding-Uniswap-DOGE-Gain-Momentum",
+      "pubDate": "2025-06-19T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "UNI"
+      ]
+    },
+    {
+      "title": "Centralized exchanges are embracing the DeFi mullet",
+      "link": "https://cryptopanic.com/news/uniswap/22688043/Centralized-exchanges-are-embracing-the-DeFi-mullet",
+      "pubDate": "2025-06-19T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "AVAX Drops 14% and ALGO Stalls as BlockDAG Prepares for US Reveal",
+      "link": "https://cryptopanic.com/news/algorand/22687146/AVAX-Drops-14-and-ALGO-Stalls-as-BlockDAG-Prepares-for-US-Reveal",
+      "pubDate": "2025-06-19T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "ALGO"
+      ]
+    },
+    {
+      "title": "KuCoin Taps BitGo in $2B ‘Trust Project’ to Shield Clients With Off-Exchange Custody",
+      "link": "https://cryptopanic.com/news/kucoin-shares/22687089/KuCoin-Taps-BitGo-in-2B-Trust-Project-to-Shield-Clients-With-Off-Exchange-Custody",
+      "pubDate": "2025-06-19T16:38:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "KCS",
+        "B"
+      ]
+    },
+    {
+      "title": "Ethereum bulls must break $2.8K: What will trigger a 'violent move'?",
+      "link": "https://cryptopanic.com/news/ethereum/22686033/Ethereum-bulls-must-break-28K-What-will-trigger-a-039violent-move039",
+      "pubDate": "2025-06-19T15:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Shrinking liquid supply, persistent ETF demand, and strong technical factors could push ETH price above $4,000.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "DeFi lending hits record $55 billion TVL as Aave, Maple, and Morpho lead the charge",
+      "link": "https://cryptopanic.com/news/aave/22685965/DeFi-lending-hits-record-55-billion-TVL-as-Aave-Maple-and-Morpho-lead-the-charge",
+      "pubDate": "2025-06-19T15:31:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "MORPHO",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "Key Insights from ICP Hub’s AI Lounge on What’s Hype, What’s Real, and Who’s Building",
+      "link": "https://cryptopanic.com/news/internet-computer/22685990/Key-Insights-from-ICP-Hubs-AI-Lounge-on-Whats-Hype-Whats-Real-and-Whos-Building",
+      "pubDate": "2025-06-19T14:57:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ]
+    },
+    {
+      "title": "Solana Will Flip Ethereum, Anthony Scaramucci Predicts",
+      "link": "https://cryptopanic.com/news/ethereum/22684808/Solana-Will-Flip-Ethereum-Anthony-Scaramucci-Predicts",
+      "pubDate": "2025-06-19T14:48:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The SkyBridge Capital founder is leaning into Solana’s “Ethereum killer” narrative—and going against Standard Chartered's recent prediction.",
+      "currencies": [
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 5
+      }
+    },
+    {
+      "title": "KuCoin Partners With BitGo Singapore To Integrate Institutional Clients On The Go Network",
+      "link": "https://cryptopanic.com/news/kucoin-shares/22684746/KuCoin-Partners-With-BitGo-Singapore-To-Integrate-Institutional-Clients-On-The-Go-Network",
+      "pubDate": "2025-06-19T14:44:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 20 June 2025: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/decentraland/22687041/Spell-Wallet-Daily-Puzzle-20-June-2025-Earn-Reward-of-1-MANA",
+      "pubDate": "2025-06-19T14:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "Crypto Price Analysis 6-19: BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, INJECTIVE: INJ, INTERNET COMPUTER: ICP, DOGWIFHAT: WIF",
+      "link": "https://cryptopanic.com/news/internet-computer/22683411/Crypto-Price-Analysis-6-19-BITCOIN-BTC-ETHEREUM-ETH-SOLANA-SOL-INJECTIVE-INJ-INTERNET-COMPUTER-ICP-DOGWIFHAT-WIF",
+      "pubDate": "2025-06-19T13:54:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "PancakeSwap extends lead as monthly DEX volume tops $500B",
+      "link": "https://cryptopanic.com/news/pancakeswap-token/22683318/PancakeSwap-extends-lead-as-monthly-DEX-volume-tops-500B",
+      "pubDate": "2025-06-19T13:38:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "CAKE",
+        "ALPHA",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "Shiba Inu (SHIB) Refuses to Be Dethroned by Litecoin, With $350 Million Advantage",
+      "link": "https://cryptopanic.com/news/litecoin/22681984/Shiba-Inu-SHIB-Refuses-to-Be-Dethroned-by-Litecoin-With-350-Million-Advantage",
+      "pubDate": "2025-06-19T12:46:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Hoskinson Reacts as Cardano Crushes XRP in Crypto Community Vote",
+      "link": "https://cryptopanic.com/news/algorand/22681997/Hoskinson-Reacts-as-Cardano-Crushes-XRP-in-Crypto-Community-Vote",
+      "pubDate": "2025-06-19T12:45:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "XRP",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Matchain Token Price May Hit $4 After This 8-Figure Listing Push",
+      "link": "https://cryptopanic.com/news/kucoin-shares/22684677/Matchain-Token-Price-May-Hit-4-After-This-8-Figure-Listing-Push",
+      "pubDate": "2025-06-19T12:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "KCS",
+        "MAT"
+      ]
+    },
+    {
+      "title": "Matchain’s $MAT Token Launches Today — Giving WEB2 and WEB3 the Ability to Own, Verify and Monetize Their Data",
+      "link": "https://cryptopanic.com/news/kucoin-shares/22683294/Matchains-MAT-Token-Launches-Today-Giving-WEB2-and-WEB3-the-Ability-to-Own-Verify-and-Monetize-Their-Data",
+      "pubDate": "2025-06-19T12:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS",
+        "MAT"
+      ]
+    },
+    {
+      "title": "Top ISO 20022 Cryptos to Watch in 2025: Why XRP, Stellar, XDC & Algorand Lead the Pack",
+      "link": "https://cryptopanic.com/news/algorand/22681314/Top-ISO-20022-Cryptos-to-Watch-in-2025-Why-XRP-Stellar-XDC-Algorand-Lead-the-Pack",
+      "pubDate": "2025-06-19T12:12:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XLM",
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Monster $1.5 billion Solana short squeeze alert",
+      "link": "https://cryptopanic.com/news/solana/22680478/Monster-15-billion-Solana-short-squeeze-alert",
+      "pubDate": "2025-06-19T11:34:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana (SOL) is trading at $145. 50, but under the surface, tension is building across derivatives markets. The latest 30-day Solana Exchange Liquidation … Continue reading The post Monster $1.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "KuCoin’s rolls out new support features for institutional clients",
+      "link": "https://cryptopanic.com/news/kucoin-shares/22680458/KuCoins-rolls-out-new-support-features-for-institutional-clients",
+      "pubDate": "2025-06-19T11:25:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "BNB Chain Foundation Increases Holdings in LISTA and CAKE",
+      "link": "https://cryptopanic.com/news/pancakeswap-token/22680188/BNB-Chain-Foundation-Increases-Holdings-in-LISTA-and-CAKE",
+      "pubDate": "2025-06-19T11:14:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "BNB",
+        "CAKE"
+      ]
+    },
+    {
+      "title": "BSC Foundation Expands Portfolio with $100,000 Token Purchase",
+      "link": "https://cryptopanic.com/news/pancakeswap-token/22677643/BSC-Foundation-Expands-Portfolio-with-100000-Token-Purchase",
+      "pubDate": "2025-06-19T09:49:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CAKE",
+        "LISTA"
+      ]
+    },
+    {
+      "title": "KuCoin Enables Institutional Trading Without Wallet Pre-Funding via BitGo Integration",
+      "link": "https://cryptopanic.com/news/kucoin-shares/22675944/KuCoin-Enables-Institutional-Trading-Without-Wallet-Pre-Funding-via-BitGo-Integration",
+      "pubDate": "2025-06-19T08:51:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS",
+        "MAS"
+      ]
+    },
+    {
+      "title": "Analyst Recommends Long Solana, Short Litecoin Ahead of ETF Decisions",
+      "link": "https://cryptopanic.com/news/litecoin/22670148/Analyst-Recommends-Long-Solana-Short-Litecoin-Ahead-of-ETF-Decisions",
+      "pubDate": "2025-06-19T04:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "In a note reported by The Block, Lunde suggested a long SOL / short LTC position as the most advantageous […] The post Analyst Recommends Long Solana, Short Litecoin Ahead of ETF Decisions appeared first on Coindoo.",
+      "currencies": [
+        "SOL",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Lawsuit: Ex-SEC Official Says Judge Torres Already Ended the Ripple Case",
+      "link": "https://cryptopanic.com/news/ripple/22669180/XRP-Lawsuit-Ex-SEC-Official-Says-Judge-Torres-Already-Ended-the-Ripple-Case",
+      "pubDate": "2025-06-19T02:43:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "S. Securities and Exchange Commission (SEC) continues to drag on, leaving many in the XRP community frustrated. Recently, Ripple filed a Supplemental Letter in support of its Motion for an Indicative Ruling, asking Judge Analisa Torres to reconsider parts of her earlier decision",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 19 June 2025: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/decentraland/22670779/Spell-Wallet-Daily-Puzzle-19-June-2025-Earn-Reward-of-1-MANA",
+      "pubDate": "2025-06-19T02:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "Best Cryptos to Join for Short Term Profits? Qubetics Final Presale Stage Gains Momentum While Tezos and Avalanche Dips",
+      "link": "https://cryptopanic.com/news/tezos/22669137/Best-Cryptos-to-Join-for-Short-Term-Profits-Qubetics-Final-Presale-Stage-Gains-Momentum-While-Tezos-and-Avalanche-Dips",
+      "pubDate": "2025-06-19T02:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "XTZ"
+      ]
+    },
+    {
+      "title": "Solana ETF hype builds: Is NOW the time to bet on SOL?",
+      "link": "https://cryptopanic.com/news/solana/22667719/Solana-ETF-hype-builds-Is-NOW-the-time-to-bet-on-SOL",
+      "pubDate": "2025-06-19T01:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "VanEck’s ETF enters ‘active’ status - now it’s up to the SEC and the markets.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Chart Forms ‘Hot Cup’ Pattern: Major Move Incoming?",
+      "link": "https://cryptopanic.com/news/ripple/22666948/XRP-Chart-Forms-Hot-Cup-Pattern-Major-Move-Incoming",
+      "pubDate": "2025-06-19T00:00:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The setup suggests a potential breakout as tension builds within a compressed technical structure.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    }
+  ]
+}

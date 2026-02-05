@@ -1,0 +1,42 @@
+{
+  "date": "2019-11-22",
+  "fetchedAt": "2026-02-05T07:27:06.996Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ubisoft joins up with EOS-based gaming platform Ultra",
+      "link": "https://cryptopanic.com/news/7221818/Ubisoft-joins-up-with-EOS-based-gaming-platform-Ultra",
+      "pubDate": "2019-11-22T22:05:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron CEO Justin Sun Teases Tesla Cybertruck Giveaway",
+      "link": "https://cryptopanic.com/news/tron/7217817/Tron-CEO-Justin-Sun-Teases-Tesla-Cybertruck-Giveaway",
+      "pubDate": "2019-11-22T14:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

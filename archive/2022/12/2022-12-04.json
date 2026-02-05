@@ -1,0 +1,325 @@
+{
+  "date": "2022-12-04",
+  "fetchedAt": "2026-02-05T07:27:07.470Z",
+  "articleCount": 22,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @chainlink: Just 48 hours until the launch of Chainlink Staking v0.1! Staking marks an inflection point for #Chainlink, enabling the co…",
+      "link": "https://cryptopanic.com/news/chainlink/17068694/RT-chainlink-Just-48-hours-until-the-launch-of-Chainlink-Staking-v01-Staking-marks-an-inflection-point-for-Chainlink-enabling-the-co",
+      "pubDate": "2022-12-04T20:35:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @arringtonXRPcap: Happy Dec 4! Our #CountDownto2023, where we highlight one of our startups innovating in #web3 each day, continues toda…",
+      "link": "https://cryptopanic.com/news/17071283/RT-arringtonXRPcap-Happy-Dec-4-Our-CountDownto2023-where-we-highlight-one-of-our-startups-innovating-in-web3-each-day-continues-toda",
+      "pubDate": "2022-12-04T20:30:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ACA"
+      ]
+    },
+    {
+      "title": "RT @alex_dreyfus: It's a wrap. 3 days of work with all our colleagues. I think it's time to do a LIVE AMA tomorrow Monday 5th Dec 2.30pm CE…",
+      "link": "https://cryptopanic.com/news/chiliz/17070028/RT-alex_dreyfus-Its-a-wrap-3-days-of-work-with-all-our-colleagues-I-think-its-time-to-do-a-LIVE-AMA-tomorrow-Monday-5th-Dec-230pm-CE",
+      "pubDate": "2022-12-04T19:37:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHZ",
+        "ARG",
+        "PFL"
+      ]
+    },
+    {
+      "title": "$0.50 for XRP next? Analyst’s short-term take on Ripple’s token",
+      "link": "https://cryptopanic.com/news/17068603/050-for-XRP-next-Analysts-short-term-take-on-Ripples-token",
+      "pubDate": "2022-12-04T19:19:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "After weeks of rallying, XRP’s price is now consolidating in line with the general cryptocurrency market price trajectory. Amid the … Continued",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @CryptoCoinShow: We speak with @dleonard00, CEO of @HifiFinance on their lending protocol capabilities, the launch of @crownribbonhq tok…",
+      "link": "https://cryptopanic.com/news/17071066/RT-CryptoCoinShow-We-speak-with-dleonard00-CEO-of-HifiFinance-on-their-lending-protocol-capabilities-the-launch-of-crownribbonhq-tok",
+      "pubDate": "2022-12-04T19:09:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "MFT"
+      ]
+    },
+    {
+      "title": "AVAX Receives Major Boost As Alibaba Cloud Expands Support For Avalanche",
+      "link": "https://cryptopanic.com/news/17068484/AVAX-Receives-Major-Boost-As-Alibaba-Cloud-Expands-Support-For-Avalanche",
+      "pubDate": "2022-12-04T17:55:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Alibaba Cloud, a subset of Chinese e-commerce giant Alibaba has expanded its line of cloud infrastructure technology and developer tools to the Avalanche blockchain.",
+      "currencies": [
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Earning #ETN has never been easier. With @anytaskofficial you can sell a digital service and get paid directly into…",
+      "link": "https://cryptopanic.com/news/17068332/Earning-ETN-has-never-been-easier-With-anytaskofficial-you-can-sell-a-digital-service-and-get-paid-directly-into",
+      "pubDate": "2022-12-04T16:26:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "Cardano’s Hoskinson Praises Algorithmic Stablecoins, Touts Them As The Gold Standard Of The Digital Age",
+      "link": "https://cryptopanic.com/news/17068212/Cardanos-Hoskinson-Praises-Algorithmic-Stablecoins-Touts-Them-As-The-Gold-Standard-Of-The-Digital-Age",
+      "pubDate": "2022-12-04T15:08:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Charles Hoskinson believes that algorithmic stablecoins are the way to go and that they have the ability to...",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Normally, when we bring you a development update, the code comes from a public repository. But today, we're giving…",
+      "link": "https://cryptopanic.com/news/17073386/Normally-when-we-bring-you-a-development-update-the-code-comes-from-a-public-repository-But-today-were-giving",
+      "pubDate": "2022-12-04T15:01:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XYO"
+      ]
+    },
+    {
+      "title": "Looking for trusted research from professional quant traders? BITFINEX ALPHA is for you! In depth analysis of the c…",
+      "link": "https://cryptopanic.com/news/quant-network/17068178/Looking-for-trusted-research-from-professional-quant-traders-BITFINEX-ALPHA-is-for-you-In-depth-analysis-of-the-c",
+      "pubDate": "2022-12-04T15:00:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LEO",
+        "QNT"
+      ]
+    },
+    {
+      "title": "Collaterized LDOT",
+      "link": "https://cryptopanic.com/news/17068929/Collaterized-LDOT",
+      "pubDate": "2022-12-04T14:24:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ACA"
+      ]
+    },
+    {
+      "title": "VP of $1,530,000,000,000 Asset Manager Says Ethereum Staking Presents Big Opportunities to Institutional Investors",
+      "link": "https://cryptopanic.com/news/17067946/VP-of-1530000000000-Asset-Manager-Says-Ethereum-Staking-Presents-Big-Opportunities-to-Institutional-Investors",
+      "pubDate": "2022-12-04T12:45:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A senior executive at the $1.5 trillion asset management giant Franklin Templeton says that Ethereum (ETH) staking yield is presenting big opportunities for institutions looking at the crypto markets. In a new interview on Real Vision with Raoul Pal, Pal asks senior vice president of Franklin Templeton Sandy Kaul if Ethereum staking could help spark […]",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 6
+      }
+    },
+    {
+      "title": "These Investors Buying Up Cardano (ADA) En Masse, What Is Their Plan?",
+      "link": "https://cryptopanic.com/news/17067876/These-Investors-Buying-Up-Cardano-ADA-En-Masse-What-Is-Their-Plan",
+      "pubDate": "2022-12-04T11:56:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano unexpectedly gains momentum among these investors",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "What’s In Store For Cardano This December – Will ADA Be Merry Before Christmas?",
+      "link": "https://cryptopanic.com/news/17067802/Whats-In-Store-For-Cardano-This-December-Will-ADA-Be-Merry-Before-Christmas",
+      "pubDate": "2022-12-04T11:08:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano (ADA) exited the month of November with its total market capitalization and its blockchain’s total value locked (TVL) taking a heavy hit from the FTX collapse that dragged down the entire crypto market. According to data from CoinMarketCap, when last month ended, ADA’s overall valuation was at $10.7 billion, 23% lower than the $13.9 billion market cap it had towards the end of October....",
+      "currencies": [
+        "USDT",
+        "ADA",
+        "XRP",
+        "TRX",
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "'As we get ready for the New Year, let's sing Auld Lang Syne and get ready as it's timetoparty!' 🤶🧑‍ In our…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/17069824/As-we-get-ready-for-the-New-Year-lets-sing-Auld-Lang-Syne-and-get-ready-as-its-timetoparty-In-our",
+      "pubDate": "2022-12-04T10:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "Ripple vs. SEC: Two-Year Legal Battle for XRP Nears the End",
+      "link": "https://cryptopanic.com/news/17067355/Ripple-vs-SEC-Two-Year-Legal-Battle-for-XRP-Nears-the-End",
+      "pubDate": "2022-12-04T09:22:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Ripple's two years legal battle with the U.S. SEC is drawing to a close as the firm has made its final submission to the court.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "There are fake pages appearing on social medias under the name of Fasttoken, which have nothing to do with Fasttoke…",
+      "link": "https://cryptopanic.com/news/17160331/There-are-fake-pages-appearing-on-social-medias-under-the-name-of-Fasttoken-which-have-nothing-to-do-with-Fasttoke?mtm_campaign=API-OFA",
+      "pubDate": "2022-12-04T09:13:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FTN"
+      ]
+    },
+    {
+      "title": "Notifi Launches on Acala, Bringing Push Notifications to Polkadot DeFi Users and Developers",
+      "link": "https://cryptopanic.com/news/17068386/Notifi-Launches-on-Acala-Bringing-Push-Notifications-to-Polkadot-DeFi-Users-and-Developers",
+      "pubDate": "2022-12-04T08:06:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "ACA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @carblabs: High level overview of #graphite - our governance platform built using ⁦@sveltejs⁩ , ⁦@zilliqa⁩ , #gundb #zilliqa $carb $grph…",
+      "link": "https://cryptopanic.com/news/zilliqa/17067605/RT-carblabs-High-level-overview-of-graphite-our-governance-platform-built-using-sveltejs-zilliqa-gundb-zilliqa-carb-grph",
+      "pubDate": "2022-12-04T07:39:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZIL",
+        "GZIL"
+      ]
+    },
+    {
+      "title": "All the missions (from Q4 2021-Q3 2022) in ACT roadmap have been achieved. The last quarter (Q4) of 2022 is endin…",
+      "link": "https://cryptopanic.com/news/17064173/All-the-missions-from-Q4-2021-Q3-2022-in-ACT-roadmap-have-been-achieved-The-last-quarter-Q4-of-2022-is-endin?mtm_campaign=API-OFA",
+      "pubDate": "2022-12-04T05:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ACT"
+      ]
+    },
+    {
+      "title": "SBF says he ‘can only speculate’ about where wired Alameda funds ended up: WSJ",
+      "link": "https://cryptopanic.com/news/17063991/SBF-says-he-can-only-speculate-about-where-wired-Alameda-funds-ended-up-WSJ",
+      "pubDate": "2022-12-04T03:18:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "RT @ThetaCon22: Now starting a very special panel hosted by @w3Andrea and Andrew discussing the utilization of @Theta_Network Featuring P…",
+      "link": "https://cryptopanic.com/news/theta-token/17067130/RT-ThetaCon22-Now-starting-a-very-special-panel-hosted-by-w3Andrea-and-Andrew-discussing-the-utilization-of-Theta_Network-Featuring-P",
+      "pubDate": "2022-12-04T00:37:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    }
+  ]
+}

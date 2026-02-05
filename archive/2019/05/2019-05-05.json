@@ -1,0 +1,26 @@
+{
+  "date": "2019-05-05",
+  "fetchedAt": "2026-02-05T07:27:08.685Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ripple’s XRP and Stellar Lumens Underperform as Bitcoin Records New 2019 High [Price Analysis]",
+      "link": "https://cryptopanic.com/news/stellar/5324914/Ripples-XRP-and-Stellar-Lumens-Underperform-as-Bitcoin-Records-New-2019-High-Price-Analysis",
+      "pubDate": "2019-05-05T09:03:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    }
+  ]
+}

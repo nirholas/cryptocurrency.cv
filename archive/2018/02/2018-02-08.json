@@ -1,0 +1,45 @@
+{
+  "date": "2018-02-08",
+  "fetchedAt": "2026-02-05T07:27:06.813Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Cash Outpaces Crypto Consolidation with 20% Spike",
+      "link": "https://cryptopanic.com/news/1022106/Bitcoin-Cash-Outpaces-Crypto-Consolidation-with-20-Spike",
+      "pubDate": "2018-02-08T12:45:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Litecoin Cash?: It’s Coming, and It’s Completely Bizarre",
+      "link": "https://cryptopanic.com/news/litecoin/1021489/Litecoin-Cash-Its-Coming-and-Its-Completely-Bizarre",
+      "pubDate": "2018-02-08T11:55:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

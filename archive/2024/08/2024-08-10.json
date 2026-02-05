@@ -1,0 +1,808 @@
+{
+  "date": "2024-08-10",
+  "fetchedAt": "2026-02-05T07:27:08.185Z",
+  "articleCount": 53,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Cronos Surprises With 12% Uptick – Can Investors Sustain The Rally?",
+      "link": "https://cryptopanic.com/news/19781702/Cronos-Surprises-With-12-Uptick-Can-Investors-Sustain-The-Rally",
+      "pubDate": "2024-08-10T23:58:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "SOL",
+        "CRO",
+        "PYTH"
+      ]
+    },
+    {
+      "title": "Cardano Founder Charles Hoskinson Warns: Harris Victory Equals Demise For American Crypto Sector",
+      "link": "https://cryptopanic.com/news/19781556/Cardano-Founder-Charles-Hoskinson-Warns-Harris-Victory-Equals-Demise-For-American-Crypto-Sector",
+      "pubDate": "2024-08-10T21:02:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Hoskinson believes the Biden-Harris administration is actively working against the crypto industry, with no signs of improvement or a “reset” in their strategy.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Cardano Improves Hydra Scaling Solution Before Chang Hard Fork",
+      "link": "https://cryptopanic.com/news/19781519/Cardano-Improves-Hydra-Scaling-Solution-Before-Chang-Hard-Fork",
+      "pubDate": "2024-08-10T20:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano has recently implemented a significant upgrade to its Hydra Head scaling solution, marking a key step towards enhancing network transactions. This development comes as the network approaches the highly anticipated Chang hard fork. Hydra Upgrade Brings Key Changes Ahead of Chang Hard Fork On August 9, Cardano introduced version 0.18.0 of its Hydra Head scaling solution....",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 7
+      }
+    },
+    {
+      "title": "MakerDAO Flags Risks On Justin Sun’s Role in WBTC Custody Changes",
+      "link": "https://cryptopanic.com/news/wrapped-bitcoin/19781460/MakerDAO-Flags-Risks-On-Justin-Suns-Role-in-WBTC-Custody-Changes",
+      "pubDate": "2024-08-10T19:42:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "WBTC"
+      ]
+    },
+    {
+      "title": "Solana Gains Ground on Ethereum and Bitcoin in 2024",
+      "link": "https://cryptopanic.com/news/19781455/Solana-Gains-Ground-on-Ethereum-and-Bitcoin-in-2024",
+      "pubDate": "2024-08-10T19:30:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Over the past week, there’s been a buzz among market watchers about solana’s performance against BTC, especially when compared to ether. Since the year kicked off, ether has tumbled over 20% against the leading cryptocurrency, while solana has gained more than 5%. Solana, Ethereum, and Bitcoin — Dominance Competition Heats Up Among Crypto Giants In […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Morgan Stanley's Bitcoin ETF Faces Regulatory Hurdles",
+      "link": "https://cryptopanic.com/news/19781447/Morgan-Stanleys-Bitcoin-ETF-Faces-Regulatory-Hurdles",
+      "pubDate": "2024-08-10T19:21:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Morgan Stanley's plan to offer Bitcoin ETFs to clients could lead to increased regulatory scrutiny, warns former SEC official John Reed Stark.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Indian Crypto Exchange WazirX To Roll Back All Trades and Restore Balances Following $230,000,000 Hack in July",
+      "link": "https://cryptopanic.com/news/19781401/Indian-Crypto-Exchange-WazirX-To-Roll-Back-All-Trades-and-Restore-Balances-Following-230000000-Hack-in-July",
+      "pubDate": "2024-08-10T18:45:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "SHIB",
+        "MATIC",
+        "GALA",
+        "WRX",
+        "PEPE"
+      ]
+    },
+    {
+      "title": "Bitcoin Nodes: What happened in July 2024?",
+      "link": "https://cryptopanic.com/news/the-graph/19782057/Bitcoin-Nodes-What-happened-in-July-2024",
+      "pubDate": "2024-08-10T18:44:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "GRT",
+        "SOBTC"
+      ]
+    },
+    {
+      "title": "Celsius sues Tether seeking $3.5B over Bitcoin collateral selloff",
+      "link": "https://cryptopanic.com/news/19781390/Celsius-sues-Tether-seeking-35B-over-Bitcoin-collateral-selloff",
+      "pubDate": "2024-08-10T18:36:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "CEL"
+      ]
+    },
+    {
+      "title": "GhostMarket introduces “Lucky Buy” feature for NFT purchases on Neo N3",
+      "link": "https://cryptopanic.com/news/19781391/GhostMarket-introduces-Lucky-Buy-feature-for-NFT-purchases-on-Neo-N3",
+      "pubDate": "2024-08-10T18:32:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "NEO",
+        "NFT"
+      ]
+    },
+    {
+      "title": "Celsius targets Tether, Badger DAO, Compound, and Netanyahu’s niece and nephew in lawsuits",
+      "link": "https://cryptopanic.com/news/19781366/Celsius-targets-Tether-Badger-DAO-Compound-and-Netanyahus-niece-and-nephew-in-lawsuits",
+      "pubDate": "2024-08-10T18:14:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "COMP",
+        "DAO"
+      ]
+    },
+    {
+      "title": "Tether Vows to Defend Itself Against Celsius’s “Shake Down” Litigation",
+      "link": "https://cryptopanic.com/news/19781320/Tether-Vows-to-Defend-Itself-Against-Celsiuss-Shake-Down-Litigation",
+      "pubDate": "2024-08-10T17:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "CEL"
+      ]
+    },
+    {
+      "title": "Cardano Labeled a ‘Clone’ by Forbes; Community Fires Back",
+      "link": "https://cryptopanic.com/news/19781271/Cardano-Labeled-a-Clone-by-Forbes-Community-Fires-Back",
+      "pubDate": "2024-08-10T17:06:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The Cardano community has rallied in defense of its blockchain after Forbes published an article. It happened after the media house labeled the project as “Ethereum clone” and Charles Hoskinson, as a “cult leader.” The piece, authored by Forbes’ crypto research director Steven Ehrlich, sparked widespread backlash within the Cardano ecosystem. Supporters argue that the platform’s […]",
+      "currencies": [
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Tether Refutes $2.4B Bitcoin Fraud Claims In Celsius Network Lawsuit",
+      "link": "https://cryptopanic.com/news/19781268/Tether-Refutes-24B-Bitcoin-Fraud-Claims-In-Celsius-Network-Lawsuit",
+      "pubDate": "2024-08-10T17:05:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "CEL"
+      ]
+    },
+    {
+      "title": "Crypto Whales’ Bullish Bets: 5 Altcoins They’re Stocking Up for the Next Upcoming Market Cycle",
+      "link": "https://cryptopanic.com/news/19781117/Crypto-Whales-Bullish-Bets-5-Altcoins-Theyre-Stocking-Up-for-the-Next-Upcoming-Market-Cycle",
+      "pubDate": "2024-08-10T15:33:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "TRX",
+        "ARB",
+        "SUI",
+        "ONDO"
+      ]
+    },
+    {
+      "title": "Celsius Sues Tether to Recover $2B in Bitcoin Lost in Alleged Fraudulent Transfers",
+      "link": "https://cryptopanic.com/news/19781088/Celsius-Sues-Tether-to-Recover-2B-in-Bitcoin-Lost-in-Alleged-Fraudulent-Transfers",
+      "pubDate": "2024-08-10T15:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "CEL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "CEO Paolo Ardoino Responds to Celsius’s Lawsuit Against Tether, Calls it ‘Baseless Shakedown’",
+      "link": "https://cryptopanic.com/news/19781089/CEO-Paolo-Ardoino-Responds-to-Celsiuss-Lawsuit-Against-Tether-Calls-it-Baseless-Shakedown",
+      "pubDate": "2024-08-10T15:16:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "CEL"
+      ]
+    },
+    {
+      "title": "Injective (INJ) Price Eyes A 40% Surge Amid Bullish Reversal?",
+      "link": "https://cryptopanic.com/news/19781064/Injective-INJ-Price-Eyes-A-40-Surge-Amid-Bullish-Reversal",
+      "pubDate": "2024-08-10T15:06:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "INJ"
+      ]
+    },
+    {
+      "title": "Notcoin price prediction: +10% potential gains if these key levels are met",
+      "link": "https://cryptopanic.com/news/19781047/Notcoin-price-prediction-10-potential-gains-if-these-key-levels-are-met",
+      "pubDate": "2024-08-10T15:00:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "NOT"
+      ]
+    },
+    {
+      "title": "LATAM Crypto Roundup: Brazil Approves Solana ETF, Bolivia Pushes for Metal-Backed Stablecoins, and More",
+      "link": "https://cryptopanic.com/news/19781091/LATAM-Crypto-Roundup-Brazil-Approves-Solana-ETF-Bolivia-Pushes-for-Metal-Backed-Stablecoins-and-More",
+      "pubDate": "2024-08-10T14:24:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "SOL",
+        "BTG"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Wazirx to Reverse All Trades Made After Withdrawal Freeze",
+      "link": "https://cryptopanic.com/news/19780977/Wazirx-to-Reverse-All-Trades-Made-After-Withdrawal-Freeze",
+      "pubDate": "2024-08-10T14:20:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "WRX"
+      ]
+    },
+    {
+      "title": "Ethereum, Bitcoin ETFs face sudden outflows; Is a market shift in play now?",
+      "link": "https://cryptopanic.com/news/19780952/Ethereum-Bitcoin-ETFs-face-sudden-outflows-Is-a-market-shift-in-play-now",
+      "pubDate": "2024-08-10T14:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "8 August was a good day, but 9 August wasn't quite so for ETFs.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Ethereum Layer-2 Activity Hits A New High Amid Vitalik’s 3000ETH Transfer",
+      "link": "https://cryptopanic.com/news/19780880/Ethereum-Layer-2-Activity-Hits-A-New-High-Amid-Vitaliks-3000ETH-Transfer",
+      "pubDate": "2024-08-10T13:31:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The co-founder of Ethereum, Vitalik Buterin transferred 3,000 ETH, approximately $8 million to a multi-sig wallet. The transaction spotted by Lookonchain took place on August 9, 2024, and people questioned whether it was a donation or a transfer of funds from within. Analysts stated that the destination wallet with the 3,000 ETH has ties with Buterin through […] The post Ethereum Layer-2 Activity Hits A New High Amid Vitalik’s 3000ETH Transfer appeared first on The Coin Republic.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Cryptocurrencies will unlock $230 million this week – What to expect?",
+      "link": "https://cryptopanic.com/news/19780872/Cryptocurrencies-will-unlock-230-million-this-week-What-to-expect",
+      "pubDate": "2024-08-10T13:30:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The cryptocurrency industry will unlock nearly $230 million in vested tokens this week, sounding an alarm to these diluted cryptocurrencies. … Continue reading",
+      "currencies": [
+        "SAND",
+        "APT",
+        "ARB"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Cardano Chang Hard Fork Is Closer Than Ever, Here's Possible ETA",
+      "link": "https://cryptopanic.com/news/19780846/Cardano-Chang-Hard-Fork-Is-Closer-Than-Ever-Heres-Possible-ETA",
+      "pubDate": "2024-08-10T13:17:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "When will Cardano Chang hard fork go live?",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Benzinga Bulls And Bears: Palantir, Nvidia, Tesla, Alphabet And Crypto Trader Says This 'Should Be The Bottom' For Dogecoin",
+      "link": "https://cryptopanic.com/news/19780833/Benzinga-Bulls-And-Bears-Palantir-Nvidia-Tesla-Alphabet-And-Crypto-Trader-Says-This-Should-Be-The-Bottom-For-Dogecoin",
+      "pubDate": "2024-08-10T13:00:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "META"
+      ]
+    },
+    {
+      "title": "What is Dymension? Review of the platform that is Revolutionizing RollApp Creation",
+      "link": "https://cryptopanic.com/news/19780796/What-is-Dymension-Review-of-the-platform-that-is-Revolutionizing-RollApp-Creation?mtm_campaign=API-OFA",
+      "pubDate": "2024-08-10T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DYM"
+      ]
+    },
+    {
+      "title": "Top Altcoin Picks By Crypto Whales in the First Week of August 2024",
+      "link": "https://cryptopanic.com/news/19780802/Top-Altcoin-Picks-By-Crypto-Whales-in-the-First-Week-of-August-2024",
+      "pubDate": "2024-08-10T12:58:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "XRP",
+        "ONDO"
+      ]
+    },
+    {
+      "title": "Breaking: Celsius Sues Tether To Clawback $2B Bitcoin Lost In ‘Fraudulent’ Transfers",
+      "link": "https://cryptopanic.com/news/19780785/Breaking-Celsius-Sues-Tether-To-Clawback-2B-Bitcoin-Lost-In-Fraudulent-Transfers",
+      "pubDate": "2024-08-10T12:46:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "CEL"
+      ]
+    },
+    {
+      "title": "NFT Sales Hit $95.42M With Ethereum Dominating, but Market Participation Shrinks",
+      "link": "https://cryptopanic.com/news/19780755/NFT-Sales-Hit-9542M-With-Ethereum-Dominating-but-Market-Participation-Shrinks",
+      "pubDate": "2024-08-10T12:30:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "NFT"
+      ]
+    },
+    {
+      "title": "Today’s Musk X Empire Rebus of the Day 10 August 2024",
+      "link": "https://cryptopanic.com/news/19780747/Todays-Musk-X-Empire-Rebus-of-the-Day-10-August-2024",
+      "pubDate": "2024-08-10T12:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "TON",
+        "NOT"
+      ]
+    },
+    {
+      "title": "Crypto Researcher Reveals Top Solana Altcoins Performers",
+      "link": "https://cryptopanic.com/news/19780613/Crypto-Researcher-Reveals-Top-Solana-Altcoins-Performers",
+      "pubDate": "2024-08-10T11:07:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "SOL",
+        "HNT",
+        "RAY",
+        "JUP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Kaspa (KAS) 2024-2030 Price Prediction: Here is Everything you Need to Know",
+      "link": "https://cryptopanic.com/news/19780582/Kaspa-KAS-2024-2030-Price-Prediction-Here-is-Everything-you-Need-to-Know",
+      "pubDate": "2024-08-10T11:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "KAS"
+      ]
+    },
+    {
+      "title": "Altcoins Poised for a Strong Upswing: SUI, ONDO, and HNT Prices May Maintian a Strong Ascending Trend",
+      "link": "https://cryptopanic.com/news/19780578/Altcoins-Poised-for-a-Strong-Upswing-SUI-ONDO-and-HNT-Prices-May-Maintian-a-Strong-Ascending-Trend",
+      "pubDate": "2024-08-10T10:56:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HNT",
+        "SUI",
+        "ONDO"
+      ]
+    },
+    {
+      "title": "Shiba Inu’s Shytoshi Kusama Mocks Dogecoin Gaming Platform Launch",
+      "link": "https://cryptopanic.com/news/19780554/Shiba-Inus-Shytoshi-Kusama-Mocks-Dogecoin-Gaming-Platform-Launch",
+      "pubDate": "2024-08-10T10:40:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "SHIB",
+        "KSM"
+      ]
+    },
+    {
+      "title": "Solana Vs Ethereum: Experts Weigh On After Recent Market Crash",
+      "link": "https://cryptopanic.com/news/19780545/Solana-Vs-Ethereum-Experts-Weigh-On-After-Recent-Market-Crash",
+      "pubDate": "2024-08-10T10:33:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Crypto experts at the UnChained crypto podcast, Haseeb Qureshi, Managing Partner at Dragonfly, and Tom Schmidt, General Partner at Dragonfly, along with Robert Leshner, CEO & Co-founder of Superstate, and Tarun Chitra, Managing Partner at Robot Ventures, recently weighed in on the market crash that has intensified the debate over Solana and Ethereum. Their analysis",
+      "currencies": [
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Charles Hoskinson says voting for Kamala Harris is a threat to US crypto sector",
+      "link": "https://cryptopanic.com/news/19780423/Charles-Hoskinson-says-voting-for-Kamala-Harris-is-a-threat-to-US-crypto-sector",
+      "pubDate": "2024-08-10T09:38:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Charles Hoskinson, the founder of Cardano, warned that voting for Kamala Harris in the upcoming presidential election is voting against the interests of the US crypto industry. He believes the Biden-Harris administration's perceived hostility toward cryptocurrency is intensifying, with no signs of improvement or a \"reset\" in their approach.\"As I have repeatedly said, the Biden-Harris...",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cathie Wood Sells Ethereum Futures ETFs, Bearish Signal For Spot ETFs?",
+      "link": "https://cryptopanic.com/news/19780399/Cathie-Wood-Sells-Ethereum-Futures-ETFs-Bearish-Signal-For-Spot-ETFs",
+      "pubDate": "2024-08-10T09:21:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ARK"
+      ]
+    },
+    {
+      "title": "This Layer-1 Altcoin Presents Solana-Like Opportunity, Could Be One of Fastest Horses in the Race: Raoul Pal",
+      "link": "https://cryptopanic.com/news/19780387/This-Layer-1-Altcoin-Presents-Solana-Like-Opportunity-Could-Be-One-of-Fastest-Horses-in-the-Race-Raoul-Pal",
+      "pubDate": "2024-08-10T09:15:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "AVAX",
+        "SUI",
+        "TIA"
+      ]
+    },
+    {
+      "title": "Here is What Sets Apart Cardano rom Other Top Cryptocurrencies",
+      "link": "https://cryptopanic.com/news/19780361/Here-is-What-Sets-Apart-Cardano-rom-Other-Top-Cryptocurrencies",
+      "pubDate": "2024-08-10T09:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano (ADA), a prominent proof-of-stake cryptocurrency, has achieved exceptionally low inflation, drawing both commendation and criticism from the crypto community. The post Here is What Sets Apart Cardano rom Other Top Cryptocurrencies appeared first on Cryptodnes.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Crypto Scam? PolitiFi Token RTR Plummets 95% After Trump Family Denies Link",
+      "link": "https://cryptopanic.com/news/19780276/Crypto-Scam-PolitiFi-Token-RTR-Plummets-95-After-Trump-Family-Denies-Link",
+      "pubDate": "2024-08-10T08:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "TON",
+        "NOT"
+      ]
+    },
+    {
+      "title": "Solana Grapples with Transaction Failures, Raising Concerns",
+      "link": "https://cryptopanic.com/news/19780251/Solana-Grapples-with-Transaction-Failures-Raising-Concerns",
+      "pubDate": "2024-08-10T07:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana, a blockchain renowned for its rapid transactions, is under the spotlight again due to significant performance issues.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 9
+      }
+    },
+    {
+      "title": "Market Analysis: Notcoin and Sui Comeback Strong While Hybrid DTX Exchange (DTX) Leads",
+      "link": "https://cryptopanic.com/news/19780240/Market-Analysis-Notcoin-and-Sui-Comeback-Strong-While-Hybrid-DTX-Exchange-DTX-Leads",
+      "pubDate": "2024-08-10T07:20:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SUI",
+        "NOT"
+      ]
+    },
+    {
+      "title": "Ronin Network Witnessed a $9.8 Million Exploit From an MEV Bot",
+      "link": "https://cryptopanic.com/news/19780214/Ronin-Network-Witnessed-a-98-Million-Exploit-From-an-MEV-Bot",
+      "pubDate": "2024-08-10T07:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "AXS"
+      ]
+    },
+    {
+      "title": "Unlock PixelTap Daily Combo Code 10 August 2024",
+      "link": "https://cryptopanic.com/news/19780170/Unlock-PixelTap-Daily-Combo-Code-10-August-2024?mtm_campaign=API-OFA",
+      "pubDate": "2024-08-10T06:25:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "TON",
+        "MEW"
+      ]
+    },
+    {
+      "title": "Animoca Brands Valuation Tanks 75% In Two Years, Here’s Why",
+      "link": "https://cryptopanic.com/news/19780078/Animoca-Brands-Valuation-Tanks-75-In-Two-Years-Heres-Why",
+      "pubDate": "2024-08-10T05:20:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NFT"
+      ]
+    },
+    {
+      "title": "Cardano Set to Launch Chang Hard Fork with Major Network Upgrades",
+      "link": "https://cryptopanic.com/news/19780046/Cardano-Set-to-Launch-Chang-Hard-Fork-with-Major-Network-Upgrades",
+      "pubDate": "2024-08-10T05:00:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano (ADA) is poised to launch the highly anticipated Chang hard fork as over 70% of nodes have signaled readiness for the new version.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 5
+      }
+    },
+    {
+      "title": "SEC Accepted Its Defeat, Won’t Challenge Ripple XRP Case Ruling, But!!!",
+      "link": "https://cryptopanic.com/news/19780047/SEC-Accepted-Its-Defeat-Wont-Challenge-Ripple-XRP-Case-Ruling-But",
+      "pubDate": "2024-08-10T04:56:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The U.S. Securities and Exchange Commission (SEC) has announced it will not appeal the recent court ruling in the Ripple XRP case. The decision, which followed Judge Torres’ order on August 7, 2023, marks a significant moment in the ongoing legal struggle between the SEC and Ripple. The court’s ruling, which imposed a $125 million …",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Just In: Patnera Capital Deposits 12.95 Million 1INCH To Coinbase Prime",
+      "link": "https://cryptopanic.com/news/19779942/Just-In-Patnera-Capital-Deposits-1295-Million-1INCH-To-Coinbase-Prime",
+      "pubDate": "2024-08-10T03:14:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "1INCH"
+      ]
+    },
+    {
+      "title": "Fantom Q2 Performance: Financial Metrics React To Sonic Blockchain Anticipation",
+      "link": "https://cryptopanic.com/news/19779856/Fantom-Q2-Performance-Financial-Metrics-React-To-Sonic-Blockchain-Anticipation",
+      "pubDate": "2024-08-10T02:00:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "FTM"
+      ]
+    },
+    {
+      "title": "Arbitrum, Aptos, Starkware, SAND lead $220 million token unlocks next week",
+      "link": "https://cryptopanic.com/news/19781175/Arbitrum-Aptos-Starkware-SAND-lead-220-million-token-unlocks-next-week",
+      "pubDate": "2024-08-10T01:26:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "SAND",
+        "APT",
+        "ARB"
+      ]
+    },
+    {
+      "title": "NBTC: THORChain Protocol Revenue Rises 100%, Why Is RUNE Struggling?",
+      "link": "https://cryptopanic.com/news/19779769/NBTC-THORChain-Protocol-Revenue-Rises-100-Why-Is-RUNE-Struggling",
+      "pubDate": "2024-08-10T00:30:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "RUNE",
+        "INJ"
+      ]
+    },
+    {
+      "title": "Solana Validators See Record Tips, as Secret Fees Plague Network Users",
+      "link": "https://cryptopanic.com/news/19779745/Solana-Validators-See-Record-Tips-as-Secret-Fees-Plague-Network-Users?mtm_campaign=API-OFA",
+      "pubDate": "2024-08-10T00:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "JTO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

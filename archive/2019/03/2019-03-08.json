@@ -1,0 +1,25 @@
+{
+  "date": "2019-03-08",
+  "fetchedAt": "2026-02-05T07:27:06.955Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Samsung Partnership Was Confirmed: Enjin Coin (ENJ) Gains 75% In Response",
+      "link": "https://cryptopanic.com/news/4773059/Samsung-Partnership-Was-Confirmed-Enjin-Coin-ENJ-Gains-75-In-Response",
+      "pubDate": "2019-03-08T08:44:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ENJ"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

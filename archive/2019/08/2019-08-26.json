@@ -1,0 +1,24 @@
+{
+  "date": "2019-08-26",
+  "fetchedAt": "2026-02-05T07:27:06.965Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Somebody Tried to Transfer 46 BILLION USDT Tether to Unknown Wallet",
+      "link": "https://cryptopanic.com/news/6407040/Somebody-Tried-to-Transfer-46-BILLION-USDT-Tether-to-Unknown-Wallet",
+      "pubDate": "2019-08-26T16:35:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    }
+  ]
+}

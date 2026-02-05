@@ -1,0 +1,42 @@
+{
+  "date": "2018-04-13",
+  "fetchedAt": "2026-02-05T07:27:06.960Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Germany's No. 2 Stock Exchange Unveils Crypto Trading App",
+      "link": "https://cryptopanic.com/news/litecoin/1652111/Germanys-No-2-Stock-Exchange-Unveils-Crypto-Trading-App",
+      "pubDate": "2018-04-13T16:45:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XVG, EOS, ONT: 3 Cryptos Leading the Market Recovery",
+      "link": "https://cryptopanic.com/news/1649632/XVG-EOS-ONT-3-Cryptos-Leading-the-Market-Recovery",
+      "pubDate": "2018-04-13T13:45:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ONT",
+        "XVG"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "date": "2020-12-23",
+  "fetchedAt": "2026-02-05T07:27:06.986Z",
+  "articleCount": 17,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ripple Lawsuit Triggers XRP Led Altcoin Apocalypse",
+      "link": "https://cryptopanic.com/news/ethereum/10908092/Ripple-Lawsuit-Triggers-XRP-Led-Altcoin-Apocalypse",
+      "pubDate": "2020-12-23T23:00:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Simplex bars XRP transactions in wake of SEC’s Ripple lawsuit",
+      "link": "https://cryptopanic.com/news/ripple/10907548/Simplex-bars-XRP-transactions-in-wake-of-SECs-Ripple-lawsuit",
+      "pubDate": "2020-12-23T22:17:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "XRP Likely to Plunge towards $0.20 as SEC Woes Rattle Investors",
+      "link": "https://cryptopanic.com/news/ripple/10906716/XRP-Likely-to-Plunge-towards-020-as-SEC-Woes-Rattle-Investors",
+      "pubDate": "2020-12-23T21:00:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 13
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Galaxy Digital and Jump Trading Cut Ties With XRP: Reports",
+      "link": "https://cryptopanic.com/news/ripple/10906609/Galaxy-Digital-and-Jump-Trading-Cut-Ties-With-XRP-Reports",
+      "pubDate": "2020-12-23T20:40:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "The Exchanges That Delisted XRP Following The Ripple SEC Lawsuit",
+      "link": "https://cryptopanic.com/news/ripple/10906352/The-Exchanges-That-Delisted-XRP-Following-The-Ripple-SEC-Lawsuit",
+      "pubDate": "2020-12-23T20:16:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 11
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Join #Counos_Mining_Pool to mine #Counos_X (#CCXX) and #Counos_Coin (#CCA) to earn 0.035 and 1.5 coins respectivel…",
+      "link": "https://cryptopanic.com/news/10904124/Join-Counos_Mining_Pool-to-mine-Counos_X-CCXX-and-Counos_Coin-CCA-to-earn-0035-and-15-coins-respectivel",
+      "pubDate": "2020-12-23T15:54:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "RT @HamnettPhillip: Do you want to develop on #EOSIO but aren't sure where to start? Check out the Developer's portal (",
+      "link": "https://cryptopanic.com/news/11322617/RT-HamnettPhillip-Do-you-want-to-develop-on-EOSIO-but-arent-sure-where-to-start-Check-out-the-Developers-portal?mtm_campaign=API-OFA",
+      "pubDate": "2020-12-23T15:53:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHEX"
+      ]
+    },
+    {
+      "title": "why so many exchanges does not allow BCHA withdrawl and deposits?",
+      "link": "https://cryptopanic.com/news/ecash/12211617/why-so-many-exchanges-does-not-allow-BCHA-withdrawl-and-deposits",
+      "pubDate": "2020-12-23T13:29:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "@cz_binance what will happen to users funds if exchange owner die , how they can withdraw funds",
+      "link": "https://cryptopanic.com/news/10902548/cz_binance-what-will-happen-to-users-funds-if-exchange-owner-die-how-they-can-withdraw-funds?mtm_campaign=API-OFA",
+      "pubDate": "2020-12-23T13:17:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ACA",
+        "USDG",
+        "999"
+      ]
+    },
+    {
+      "title": "XRP Price Plunges Over 35% as Exchanges Start Delisting It Over SEC Lawsuit",
+      "link": "https://cryptopanic.com/news/ripple/10901911/XRP-Price-Plunges-Over-35-as-Exchanges-Start-Delisting-It-Over-SEC-Lawsuit",
+      "pubDate": "2020-12-23T11:49:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "XRP Crashes Back to $0.30 Amid 30% Daily Drop",
+      "link": "https://cryptopanic.com/news/ripple/10901835/XRP-Crashes-Back-to-030-Amid-30-Daily-Drop",
+      "pubDate": "2020-12-23T11:30:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "SEC Officially Charges Ripple Executives for Unregistered Securities Sale",
+      "link": "https://cryptopanic.com/news/ripple/10901243/SEC-Officially-Charges-Ripple-Executives-for-Unregistered-Securities-Sale",
+      "pubDate": "2020-12-23T10:39:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Chainlink (LINK) Will Face the SEC Next After Ripple – Zeus Capital",
+      "link": "https://cryptopanic.com/news/chainlink/10900710/Chainlink-LINK-Will-Face-the-SEC-Next-After-Ripple-Zeus-Capital",
+      "pubDate": "2020-12-23T09:16:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "#MBL snapshot successfully completed  with all your support, thank you!  @CoinoneOfficial @BithumbOfficial…",
+      "link": "https://cryptopanic.com/news/10900621/MBL-snapshot-successfully-completed-with-all-your-support-thank-you-CoinoneOfficial-BithumbOfficial",
+      "pubDate": "2020-12-23T09:02:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MBL"
+      ]
+    },
+    {
+      "title": "@MXC_Exchange will support CBK Airdrop for MBL Holders",
+      "link": "https://cryptopanic.com/news/10898960/MXC_Exchange-will-support-CBK-Airdrop-for-MBL-Holders",
+      "pubDate": "2020-12-23T04:12:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "MBL"
+      ]
+    },
+    {
+      "title": "Made possible by the decentralised nature of #blockchain technology, you can now swap $XSGD and @circlepay's $USDC…",
+      "link": "https://cryptopanic.com/news/11442043/Made-possible-by-the-decentralised-nature-of-blockchain-technology-you-can-now-swap-XSGD-and-circlepays-USDC",
+      "pubDate": "2020-12-23T03:54:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "XSGD"
+      ]
+    },
+    {
+      "title": "We are excited to launch our USTP/STPT liquidity mining program as the first feature utilizing USTP in the STP ecos…",
+      "link": "https://cryptopanic.com/news/10898292/We-are-excited-to-launch-our-USTPSTPT-liquidity-mining-program-as-the-first-feature-utilizing-USTP-in-the-STP-ecos",
+      "pubDate": "2020-12-23T02:12:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "STPT"
+      ]
+    }
+  ]
+}

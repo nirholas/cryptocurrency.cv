@@ -1,0 +1,56 @@
+{
+  "date": "2020-11-06",
+  "fetchedAt": "2026-02-05T07:27:06.940Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA (MIOTA) Releases Status Update for November",
+      "link": "https://cryptopanic.com/news/10465428/IOTA-MIOTA-Releases-Status-Update-for-November",
+      "pubDate": "2020-11-06T18:00:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Price Analysis & Overview November 6th: Bitcoin, Ethereum, Ripple, Litecoin, and Cardano",
+      "link": "https://cryptopanic.com/news/litecoin/10463802/Crypto-Price-Analysis-Overview-November-6th-Bitcoin-Ethereum-Ripple-Litecoin-and-Cardano",
+      "pubDate": "2020-11-06T15:18:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Fast mover, nice job !",
+      "link": "https://cryptopanic.com/news/11377807/Fast-mover-nice-job?mtm_campaign=API-OFA",
+      "pubDate": "2020-11-06T04:31:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KOGE"
+      ]
+    }
+  ]
+}

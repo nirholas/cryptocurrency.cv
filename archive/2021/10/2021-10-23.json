@@ -1,0 +1,523 @@
+{
+  "date": "2021-10-23",
+  "fetchedAt": "2026-02-05T07:27:06.973Z",
+  "articleCount": 36,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Report: 26.4% of Australian crypto owners hold Cardano, while Dogecoin remains U.S. bet",
+      "link": "https://cryptopanic.com/news/dogecoin/13098724/Report-264-of-Australian-crypto-owners-hold-Cardano-while-Dogecoin-remains-US-bet",
+      "pubDate": "2021-10-23T23:00:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Finder recently published a survey that dived into current market trends across 22 countries, uncovering which cryptocurrencies, besides Bitcoin (BTC), are driving the adoption across the globe. While publishing a definitive ranking of the most popular cryptos per country, the independent comparison platform also addressed the investor demographics, revealing that only in Mexico is crypto...",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 37,
+        "negative": 9
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @TronixTrx: 22nd October: #TRON burns more than 4,018,352 coins  with a net production ratio greater than zero 1,055,199 ️",
+      "link": "https://cryptopanic.com/news/13101972/RT-TronixTrx-22nd-October-TRON-burns-more-than-4018352-coins-with-a-net-production-ratio-greater-than-zero-1055199",
+      "pubDate": "2021-10-23T22:53:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AMA"
+      ]
+    },
+    {
+      "title": "RT @Ehrls15: Race say and with 18 to go @landoncassill in 7th!!! @investvoyager",
+      "link": "https://cryptopanic.com/news/13103331/RT-Ehrls15-Race-say-and-with-18-to-go-landoncassill-in-7th-investvoyager",
+      "pubDate": "2021-10-23T21:45:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VGX"
+      ]
+    },
+    {
+      "title": "RT @QueenOfBitcoin1: @BlastoiseInu delivered us an Amazing Exchange !! DEV is legit and working hard for us  You Should don’t miss this…",
+      "link": "https://cryptopanic.com/news/13100090/RT-QueenOfBitcoin1-BlastoiseInu-delivered-us-an-Amazing-Exchange-DEV-is-legit-and-working-hard-for-us-You-Should-dont-miss-this?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-23T21:29:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BLAST"
+      ]
+    },
+    {
+      "title": "WE ARE NOW LIVE!!! #DecentralizedFinance #ETH #BTC ALL TOKENS WELCOME!!!",
+      "link": "https://cryptopanic.com/news/13100092/WE-ARE-NOW-LIVE-DecentralizedFinance-ETH-BTC-ALL-TOKENS-WELCOME?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-23T21:23:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BLAST"
+      ]
+    },
+    {
+      "title": "During our Mining Equipment Funding, someone impersonated me on telegram. The imposter managed to scam 48 BSV from…",
+      "link": "https://cryptopanic.com/news/13100637/During-our-Mining-Equipment-Funding-someone-impersonated-me-on-telegram-The-imposter-managed-to-scam-48-BSV-from",
+      "pubDate": "2021-10-23T20:19:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "RT @metalpaysme: Did you know that Metal employees can opt to receive some of their paycheck in $XPR? Our team figured how to handle the ta…",
+      "link": "https://cryptopanic.com/news/13102394/RT-metalpaysme-Did-you-know-that-Metal-employees-can-opt-to-receive-some-of-their-paycheck-in-XPR-Our-team-figured-how-to-handle-the-ta",
+      "pubDate": "2021-10-23T20:15:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XPR"
+      ]
+    },
+    {
+      "title": "Shiba Inu Price Analysis: SHIB Skyrockets 20%, Is New All-time High Incoming?",
+      "link": "https://cryptopanic.com/news/shiba-inu/13098435/Shiba-Inu-Price-Analysis-SHIB-Skyrockets-20-Is-New-All-time-High-Incoming",
+      "pubDate": "2021-10-23T19:35:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Shiba Inu (SHIB) surged more than 20% in less than four hours today and is close (11%) to reaching its all-time high set on May 10, 2021.",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 38,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @stelballe: Announcing GamesToPlay - a crypto webshop that takes mined cryptocurrencies and exchanges them for games",
+      "link": "https://cryptopanic.com/news/13098407/RT-stelballe-Announcing-GamesToPlay-a-crypto-webshop-that-takes-mined-cryptocurrencies-and-exchanges-them-for-games",
+      "pubDate": "2021-10-23T19:20:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "GLM"
+      ]
+    },
+    {
+      "title": "Us. ‍️",
+      "link": "https://cryptopanic.com/news/13098292/Us",
+      "pubDate": "2021-10-23T18:11:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEM",
+        "XYM"
+      ]
+    },
+    {
+      "title": "RT @nathangrate81: @BlastoiseInu I just made a podcast talking about blast INU and once the token hits over 1k holders the coin could hit o…",
+      "link": "https://cryptopanic.com/news/13100095/RT-nathangrate81-BlastoiseInu-I-just-made-a-podcast-talking-about-blast-INU-and-once-the-token-hits-over-1k-holders-the-coin-could-hit-o?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-23T17:58:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BLAST"
+      ]
+    },
+    {
+      "title": "RT @KingCha37261911: @BlastoiseInu is moving. Omg. The next Saitama I believe it. #SHIBARMY #anime #SaitamaInu #FLOKI #doge #dogecoin #Bitc…",
+      "link": "https://cryptopanic.com/news/13100096/RT-KingCha37261911-BlastoiseInu-is-moving-Omg-The-next-Saitama-I-believe-it-SHIBARMY-anime-SaitamaInu-FLOKI-doge-dogecoin-Bitc?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-23T17:54:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BLAST"
+      ]
+    },
+    {
+      "title": "RT @SignalLTC: @KingCha37261911 @BlastoiseInu @souljaboy @elonmusk @LoganPaul @The_MJF @mcuban @BlastoiseInu @elonmusk $BLAST Is Truly Attr…",
+      "link": "https://cryptopanic.com/news/13100097/RT-SignalLTC-KingCha37261911-BlastoiseInu-souljaboy-elonmusk-LoganPaul-The_MJF-mcuban-BlastoiseInu-elonmusk-BLAST-Is-Truly-Attr?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-23T17:54:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BLAST"
+      ]
+    },
+    {
+      "title": "Ben Goertzel, CEO of SingularityNET and Bill Inman, CEO of Singularity Studio at CoinAgenda --global blockchain and…",
+      "link": "https://cryptopanic.com/news/13102735/Ben-Goertzel-CEO-of-SingularityNET-and-Bill-Inman-CEO-of-Singularity-Studio-at-CoinAgenda-global-blockchain-and",
+      "pubDate": "2021-10-23T17:23:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AGIX"
+      ]
+    },
+    {
+      "title": "Solana Price Analysis: SOL Failed to Break ATH, Will Critical Support Hold?",
+      "link": "https://cryptopanic.com/news/13098189/Solana-Price-Analysis-SOL-Failed-to-Break-ATH-Will-Critical-Support-Hold",
+      "pubDate": "2021-10-23T17:20:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Solana (SOL) rallied 30% and almost touched the all-time high levels of $216 after breaking out above a pennant formation. SOL missed the ATH price by just $1, according to Binance. Key Support level: $192, $177 Key Resistance level: $216 The mentioned above pennant is marked blue on the following chart. The current all-time high […]",
+      "currencies": [
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @balooinu: @JakeGagain @InuSaitama Get @BlastoiseInu on",
+      "link": "https://cryptopanic.com/news/13100101/RT-balooinu-JakeGagain-InuSaitama-Get-BlastoiseInu-on?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-23T17:01:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BLAST"
+      ]
+    },
+    {
+      "title": "Yieldly’s CEO Says Interoperability In DeFi Is More Important Than A Market-Leading Blockchain",
+      "link": "https://cryptopanic.com/news/near/13098174/Yieldlys-CEO-Says-Interoperability-In-DeFi-Is-More-Important-Than-A-Market-Leading-Blockchain",
+      "pubDate": "2021-10-23T17:00:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Decentralized finance (DeFi) is no doubt one of the leading offerings of the crypto market. DeFi has provided users alternatives to traditional investments that they would otherwise not be able to access and this has been one of the major factors driving the growth of the space. Currently, there are a number of blockchains on which DeFi protocols are programmed, namely; Ethereum, Solana,...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "IDO dates for @photo_chromic have been finalized! Registration begins on Monday, November 8th @ 3PM UTC The IDO wil…",
+      "link": "https://cryptopanic.com/news/13100244/IDO-dates-for-photo_chromic-have-been-finalized-Registration-begins-on-Monday-November-8th-3PM-UTC-The-IDO-wil?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-23T16:49:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SHFL",
+        "CARDS"
+      ]
+    },
+    {
+      "title": "Robinhood Adds SHIB to Their Survey to Study Clients’ Crypto Preferences",
+      "link": "https://cryptopanic.com/news/shiba-inu/13098062/Robinhood-Adds-SHIB-to-Their-Survey-to-Study-Clients-Crypto-Preferences",
+      "pubDate": "2021-10-23T16:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Looks like Robinhood just might be thinking of listing SHIB as it has included the coin in its recent customer survey",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 69,
+        "negative": 8
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @balooinu: Finally on the @BlastoiseInu train  here we gooo #NFTCommunity #Crypto #cryptocurrency",
+      "link": "https://cryptopanic.com/news/13100103/RT-balooinu-Finally-on-the-BlastoiseInu-train-here-we-gooo-NFTCommunity-Crypto-cryptocurrency?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-23T15:41:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "BLAST"
+      ]
+    },
+    {
+      "title": "XRPL Devs Can Participate in Second Grant Program",
+      "link": "https://cryptopanic.com/news/ripple/13097911/XRPL-Devs-Can-Participate-in-Second-Grant-Program",
+      "pubDate": "2021-10-23T14:53:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "\"Shadowy super coders\" interested in joining the club of XRP Ledger developers can apply for funding, here's how",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Part 2 of @deadalnix & @cmuratori. This portion focuses on the economic and social aspects of cryptocurrency. V…",
+      "link": "https://cryptopanic.com/news/ecash/13103529/Part-2-of-deadalnix-amp-cmuratori-This-portion-focuses-on-the-economic-and-social-aspects-of-cryptocurrency-V",
+      "pubDate": "2021-10-23T13:12:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Welcome to #XPOS family 🇯🇵",
+      "link": "https://cryptopanic.com/news/13102396/Welcome-to-XPOS-family",
+      "pubDate": "2021-10-23T13:01:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PUNDIX"
+      ]
+    },
+    {
+      "title": "RT @nunet_global: What's been happening with NuNet Private Alpha? Kabir gives an exciting update! #cardano #decentralized #computingpower #…",
+      "link": "https://cryptopanic.com/news/13102736/RT-nunet_global-Whats-been-happening-with-NuNet-Private-Alpha-Kabir-gives-an-exciting-update-cardano-decentralized-computingpower",
+      "pubDate": "2021-10-23T11:58:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "AGIX"
+      ]
+    },
+    {
+      "title": "SEC Served Terra’s Do Kwon With Subpoena; Now He’s Suing",
+      "link": "https://cryptopanic.com/news/terra-luna/13097500/SEC-Served-Terras-Do-Kwon-With-Subpoena-Now-Hes-Suing",
+      "pubDate": "2021-10-23T11:01:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "-",
+      "currencies": [
+        "NULL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Robinhood CEO confirms crypto wallet waitlist hits 1 million as SHIB army presses for listing",
+      "link": "https://cryptopanic.com/news/shiba-inu/13097395/Robinhood-CEO-confirms-crypto-wallet-waitlist-hits-1-million-as-SHIB-army-presses-for-listing",
+      "pubDate": "2021-10-23T09:17:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Vlad Tenev, the CEO of the commission-free investment platform Robinhood, said that the business had received more than 1 million applications... Continue reading",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 33,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$1.67 Billion in Bitcoin Moved Between Anon Wallets as BTC Drops to $60,000",
+      "link": "https://cryptopanic.com/news/bitcoin/13097372/167-Billion-in-Bitcoin-Moved-Between-Anon-Wallets-as-BTC-Drops-to-60000",
+      "pubDate": "2021-10-23T09:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "According to the recent blockchain data, whales have transferred $1.67 billion worth of Bitcoin between their wallets as BTC regains $61,000 after a decline",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Please welcome @DanSimerman amongst our #EFFORCE Summit speakers! It will be a great pleasure to have you with us o…",
+      "link": "https://cryptopanic.com/news/13100783/Please-welcome-DanSimerman-amongst-our-EFFORCE-Summit-speakers-It-will-be-a-great-pleasure-to-have-you-with-us-o",
+      "pubDate": "2021-10-23T08:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "RT @apenftorg: Prepare for battle. @WINNFTHORSE Official launch on 30 Oct 2021. Play. Win. 🤑Earn. #GameFi #TRONICS",
+      "link": "https://cryptopanic.com/news/tron/13093035/RT-apenftorg-Prepare-for-battle-WINNFTHORSE-Official-launch-on-30-Oct-2021-Play-Win-Earn-GameFi-TRONICS",
+      "pubDate": "2021-10-23T06:27:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "-",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "RT @LunaChoww: LunaChow is now officially on Polygon network via Bridge Integration.....",
+      "link": "https://cryptopanic.com/news/13099742/RT-LunaChoww-LunaChow-is-now-officially-on-Polygon-network-via-Bridge-Integration",
+      "pubDate": "2021-10-23T05:54:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "MATIC",
+        "ANY"
+      ]
+    },
+    {
+      "title": "Polkadot Co-Founder Gavin Wood Announces 18.9 Million $DOT Development Fund",
+      "link": "https://cryptopanic.com/news/polkadot/13092270/Polkadot-Co-Founder-Gavin-Wood-Announces-189-Million-DOT-Development-Fund",
+      "pubDate": "2021-10-23T05:49:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Polkadot co-founder Gavin Wood has announced an 18.9 million DOT ($777 million) development fund just ahead of the network’s launch of the auctions for the initial batch of parachain slots. Here is an overview of Polkadot using information from the Polkadot website: “Polkadot is a network protocol that allows arbitrary data—not just tokens—to be transferred across blockchains. […]",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 46,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Chainlink Whales Own Nearly 25% of $LINK’s Supply After Months Accumulating",
+      "link": "https://cryptopanic.com/news/chainlink/13091129/Chainlink-Whales-Own-Nearly-25-of-LINKs-Supply-After-Months-Accumulating",
+      "pubDate": "2021-10-23T02:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Whales within the decentralized oracle network Chainlink have been steadily accumulating LINK tokens over the last few months, to the point they now own up to a quarter of the cryptocurrency’s supply. According to data shared by crypto analytics firm Santiment, Chainlink millionaire addresses, holding between 100,000 to 10 million LINK tokens, have been accumulating […]",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "GREATEST IOTA News!! Major Chainlink, FIRO, LunarCrush updates",
+      "link": "https://cryptopanic.com/news/chainlink/13091081/GREATEST-IOTA-News-Major-Chainlink-FIRO-LunarCrush-updates",
+      "pubDate": "2021-10-23T01:38:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "IOTA is entering the smart contract game, OKCoin has some rocket fuel, another day, another Chainlink partnership but it's not what you think, huge upgrades are coming to Firo, you can take out a loan with a stablecoin and you won't believe what $2 USDT could get you. Kava: The safest place to earn with your crypto with Lend (Lend, Borrow & Earn), Mint (Stablecoin loans in seconds) and Swap (Low fees and high liquidity rewards) Start your journey here - http://kava.io/?utm_campaign=Influencers&u",
+      "currencies": [
+        "LINK",
+        "MIOTA",
+        "HOT"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Here’s Ripple CEO’s take on firm’s ‘record year,’ despite SEC’s ‘headwinds’",
+      "link": "https://cryptopanic.com/news/ripple/13090970/Heres-Ripple-CEOs-take-on-firms-record-year-despite-SECs-headwinds",
+      "pubDate": "2021-10-23T00:30:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Ripple Labs has been entangled in a lawsuit with the United States Securities and Exchange Commission for almost a year now. While the case has opened the doors for a wider conversation on the country’s securities laws and how they pertain to digital assets, the company has undoubtedly lost out on a lot of business […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin’s Price Could Rally to $90,000, Fundstrat Strategists Say",
+      "link": "https://cryptopanic.com/news/near/13090975/Bitcoins-Price-Could-Rally-to-90000-Fundstrat-Strategists-Say",
+      "pubDate": "2021-10-23T00:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Strategists at the independent research boutique Fundstrat have revealed they see the flagship cryptocurrency rally to $100,000 or $90,000 in the near future, after its price broke through its previous all-time high and got to a new high near $67,000. Bitcoin is currently trading above the $63,000 mark according to CryptoCompare data, but the move […]",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "StormX Reward Members get more. Pass it on.",
+      "link": "https://cryptopanic.com/news/13096281/StormX-Reward-Members-get-more-Pass-it-on",
+      "pubDate": "2021-10-23T00:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STMX"
+      ]
+    }
+  ]
+}

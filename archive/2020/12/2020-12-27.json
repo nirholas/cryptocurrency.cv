@@ -1,0 +1,90 @@
+{
+  "date": "2020-12-27",
+  "fetchedAt": "2026-02-05T07:27:06.964Z",
+  "articleCount": 6,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "'Tis the season of tradingand with Gemini's integration on @TradingView you can buy and sell #crypto directly from…",
+      "link": "https://cryptopanic.com/news/10942734/Tis-the-season-of-tradingand-with-Geminis-integration-on-TradingView-you-can-buy-and-sell-crypto-directly-from",
+      "pubDate": "2020-12-27T20:25:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    },
+    {
+      "title": "What is Blockchain? #Blockchain provides a #decentralized and tamper-proof infrastructure for data storage and as…",
+      "link": "https://cryptopanic.com/news/10940644/What-is-Blockchain-Blockchain-provides-a-decentralized-and-tamper-proof-infrastructure-for-data-storage-and-as",
+      "pubDate": "2020-12-27T14:51:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "now smooth as butter on your smartphone and other smart devices!",
+      "link": "https://cryptopanic.com/news/11320726/now-smooth-as-butter-on-your-smartphone-and-other-smart-devices",
+      "pubDate": "2020-12-27T11:32:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CORE"
+      ]
+    },
+    {
+      "title": "Tether Regulation Proposal ‘Apocalyptic’ for Crypto",
+      "link": "https://cryptopanic.com/news/10939104/Tether-Regulation-Proposal-Apocalyptic-for-Crypto",
+      "pubDate": "2020-12-27T10:35:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @btsfav: #Bitcoin Experiment: Financial Freedom with Faucets?! Week 24 #hive -",
+      "link": "https://cryptopanic.com/news/10938291/RT-btsfav-Bitcoin-Experiment-Financial-Freedom-with-Faucets-Week-24-hive-",
+      "pubDate": "2020-12-27T07:37:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "Ripple Lawsuit Could Invoke Billions in Losses to ‘Innocent Third-Parties,’ Says Former SEC Commissioner",
+      "link": "https://cryptopanic.com/news/ripple/10937743/Ripple-Lawsuit-Could-Invoke-Billions-in-Losses-to-Innocent-Third-Parties-Says-Former-SEC-Commissioner",
+      "pubDate": "2020-12-27T06:00:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "date": "2020-07-10",
+  "fetchedAt": "2026-02-05T07:27:06.864Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA (MIOTA) Making Significant Progress Toward IOTA 2.0 Launch",
+      "link": "https://cryptopanic.com/news/9320223/IOTA-MIOTA-Making-Significant-Progress-Toward-IOTA-20-Launch",
+      "pubDate": "2020-07-10T18:07:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "VeChain CEO Sunny Lu Delivers Keynote at World AI Conference; ToolChain to Enable Blockchain Mass Adoption",
+      "link": "https://cryptopanic.com/news/9319803/VeChain-CEO-Sunny-Lu-Delivers-Keynote-at-World-AI-Conference-ToolChain-to-Enable-Blockchain-Mass-Adoption",
+      "pubDate": "2020-07-10T16:07:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

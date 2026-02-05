@@ -1,0 +1,42 @@
+{
+  "date": "2018-03-02",
+  "fetchedAt": "2026-02-05T07:27:06.866Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Where Next for the Price of NEO?: Price Analysis March 3",
+      "link": "https://cryptopanic.com/news/1257510/Where-Next-for-the-Price-of-NEO-Price-Analysis-March-3",
+      "pubDate": "2018-03-02T18:30:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "VeChain Partners with BMW & Oxford University, Becomes VeChain Thor",
+      "link": "https://cryptopanic.com/news/1252303/VeChain-Partners-with-BMW-Oxford-University-Becomes-VeChain-Thor",
+      "pubDate": "2018-03-02T10:00:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

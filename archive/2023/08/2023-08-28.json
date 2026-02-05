@@ -1,0 +1,510 @@
+{
+  "date": "2023-08-28",
+  "fetchedAt": "2026-02-05T07:27:07.057Z",
+  "articleCount": 34,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Filecoin finds recovery elusive after hitting long-term support",
+      "link": "https://cryptopanic.com/news/18865011/Filecoin-finds-recovery-elusive-after-hitting-long-term-support",
+      "pubDate": "2023-08-28T23:30:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "SUI and HBAR Slump Ahead of Latest Crypto Token Unlocks",
+      "link": "https://cryptopanic.com/news/18864999/SUI-and-HBAR-Slump-Ahead-of-Latest-Crypto-Token-Unlocks",
+      "pubDate": "2023-08-28T23:19:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Bored Ape & Axie to Unlock 11% of Their Market Cap",
+      "link": "https://cryptopanic.com/news/18864995/Bored-Ape-Axie-to-Unlock-11-of-Their-Market-Cap",
+      "pubDate": "2023-08-28T23:19:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "APE"
+      ]
+    },
+    {
+      "title": "Technical Analysis BITCOIN, THORCHAIN, TELLOR",
+      "link": "https://cryptopanic.com/news/thorchain/18864858/Technical-Analysis-BITCOIN-THORCHAIN-TELLOR",
+      "pubDate": "2023-08-28T21:00:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "RUNE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Plot Twist: $20M in ETH to Sent to ‘Inaccessible’ Prime Trust Wallet",
+      "link": "https://cryptopanic.com/news/18864814/Plot-Twist-20M-in-ETH-to-Sent-to-Inaccessible-Prime-Trust-Wallet",
+      "pubDate": "2023-08-28T20:38:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TWT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Hedera Drives Launch of Asia’s First Digital Carbon Registry, GCR",
+      "link": "https://cryptopanic.com/news/18864698/Hedera-Drives-Launch-of-Asias-First-Digital-Carbon-Registry-GCR",
+      "pubDate": "2023-08-28T19:59:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Binance Will Halt These 39 Liquidity Mining Pools This Week",
+      "link": "https://cryptopanic.com/news/18864662/Binance-Will-Halt-These-39-Liquidity-Mining-Pools-This-Week",
+      "pubDate": "2023-08-28T19:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BNB",
+        "ADA",
+        "DOT",
+        "WBTC",
+        "TRX",
+        "AVAX",
+        "MATIC",
+        "XMR",
+        "APE",
+        "FIL",
+        "ICP",
+        "THETA",
+        "NEO",
+        "CHZ",
+        "PAXG",
+        "GALA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "HBAR, OP, DYDX Set for Another Round of Token Unlocks",
+      "link": "https://cryptopanic.com/news/18864521/HBAR-OP-DYDX-Set-for-Another-Round-of-Token-Unlocks",
+      "pubDate": "2023-08-28T17:27:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HBAR",
+        "DYDX"
+      ]
+    },
+    {
+      "title": "Terra Classic price prediction as 5 Billion LUNC removed from staking",
+      "link": "https://cryptopanic.com/news/18864513/Terra-Classic-price-prediction-as-5-Billion-LUNC-removed-from-staking",
+      "pubDate": "2023-08-28T17:25:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano Will Surpass Bitcoin and Ethereum: Cardano Founder",
+      "link": "https://cryptopanic.com/news/18864310/Cardano-Will-Surpass-Bitcoin-and-Ethereum-Cardano-Founder",
+      "pubDate": "2023-08-28T16:01:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Charles Hoskinson, Cardano founder, predicts that the blockchain platfoFrm’s cryptocurrency, ADA, will surpass Bitcoin and Ethereum to become the biggest cryptocurrency in the world. Hoskinson predicted the Rare Evo blockchain event and said his product is currently the number one blockchain in development activity. Hoskinson told the listening audience at the blockchain event that Cardano’s...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "dYdX price: DYDX outlook ahead of $14M bump in token supply",
+      "link": "https://cryptopanic.com/news/18864295/dYdX-price-DYDX-outlook-ahead-of-14M-bump-in-token-supply",
+      "pubDate": "2023-08-28T15:53:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DYDX"
+      ]
+    },
+    {
+      "title": "Cosmos: Why a bounce to $7.5 is possible amid strong bearish outlook",
+      "link": "https://cryptopanic.com/news/18864226/Cosmos-Why-a-bounce-to-75-is-possible-amid-strong-bearish-outlook",
+      "pubDate": "2023-08-28T15:30:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Maker Down More Than 3% Within 24 hours",
+      "link": "https://cryptopanic.com/news/maker/18864215/Cryptocurrency-Maker-Down-More-Than-3-Within-24-hours",
+      "pubDate": "2023-08-28T15:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Hedera Down More Than 4% Within 24 hours",
+      "link": "https://cryptopanic.com/news/18864216/Cryptocurrency-Hedera-Down-More-Than-4-Within-24-hours",
+      "pubDate": "2023-08-28T15:00:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Monero: A new miner, growing concerns and the current state of the XMR token",
+      "link": "https://cryptopanic.com/news/18864091/Monero-A-new-miner-growing-concerns-and-the-current-state-of-the-XMR-token",
+      "pubDate": "2023-08-28T14:30:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "New dYdX v4 reaches community vote stage",
+      "link": "https://cryptopanic.com/news/18864097/New-dYdX-v4-reaches-community-vote-stage",
+      "pubDate": "2023-08-28T14:26:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DYDX"
+      ]
+    },
+    {
+      "title": "Bitcoin Trades Above This Key Level; dYdX Emerges As Top Gainer",
+      "link": "https://cryptopanic.com/news/18864076/Bitcoin-Trades-Above-This-Key-Level-dYdX-Emerges-As-Top-Gainer",
+      "pubDate": "2023-08-28T14:03:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DYDX"
+      ]
+    },
+    {
+      "title": "ApeCoin’s tale of accumulation and selling sparks market speculation",
+      "link": "https://cryptopanic.com/news/18863948/ApeCoins-tale-of-accumulation-and-selling-sparks-market-speculation",
+      "pubDate": "2023-08-28T13:30:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "APE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DeFi Revolutionizing & Empowering Finance Through Decentralization",
+      "link": "https://cryptopanic.com/news/18863938/DeFi-Revolutionizing-Empowering-Finance-Through-Decentralization",
+      "pubDate": "2023-08-28T13:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "UNI",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Neo News: Week in Review – August 21 – August 27",
+      "link": "https://cryptopanic.com/news/18863923/Neo-News-Week-in-Review-August-21-August-27",
+      "pubDate": "2023-08-28T13:24:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "BlackRock is a major shareholder in 4 of the 5 largest Bitcoin miners",
+      "link": "https://cryptopanic.com/news/18863852/BlackRock-is-a-major-shareholder-in-4-of-the-5-largest-Bitcoin-miners",
+      "pubDate": "2023-08-28T12:54:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "BlackRock (NYSE: BLK) — one of the largest investment companies in the world — is positioning itself in the Bitcoin … Continued",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Balancer Loses $900,000 to Security Vulnerability Despite Prior Warning",
+      "link": "https://cryptopanic.com/news/18863599/Balancer-Loses-900000-to-Security-Vulnerability-Despite-Prior-Warning",
+      "pubDate": "2023-08-28T11:24:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DAI"
+      ]
+    },
+    {
+      "title": "Binance Removes Cardano, MATIC, Pepe Coin, BTC & 35 Other Liquidity Pools, What It Means?",
+      "link": "https://cryptopanic.com/news/18863521/Binance-Removes-Cardano-MATIC-Pepe-Coin-BTC-35-Other-Liquidity-Pools-What-It-Means",
+      "pubDate": "2023-08-28T11:14:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "DOT",
+        "TRX",
+        "AVAX",
+        "MATIC",
+        "FIL"
+      ]
+    },
+    {
+      "title": "Oman Makes Big Investments in Bitcoin Mining Operations, But Is It Sharia Compliant?",
+      "link": "https://cryptopanic.com/news/18863524/Oman-Makes-Big-Investments-in-Bitcoin-Mining-Operations-But-Is-It-Sharia-Compliant",
+      "pubDate": "2023-08-28T10:48:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ]
+    },
+    {
+      "title": "Binance Set to Remove PEPE and ADA Pairs From Liquidity Swap",
+      "link": "https://cryptopanic.com/news/18863511/Binance-Set-to-Remove-PEPE-and-ADA-Pairs-From-Liquidity-Swap",
+      "pubDate": "2023-08-28T10:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "APE"
+      ]
+    },
+    {
+      "title": "SHIB Price Explosion Hangs On As Shiba Inu’s Shibarium Relaunch Proves To Be ‘Game-Changer Factor’",
+      "link": "https://cryptopanic.com/news/18863344/SHIB-Price-Explosion-Hangs-On-As-Shiba-Inus-Shibarium-Relaunch-Proves-To-Be-Game-Changer-Factor",
+      "pubDate": "2023-08-28T09:22:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "After a shaky start to life, Shiba Inu’s Shibarium is inching toward a relaunch with developers introducing new measures to handle soaring demand levels.",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "PEPE’s Weekly Losses Exceed 20%, BTC Slips Below $26K (Market Watch)",
+      "link": "https://cryptopanic.com/news/18863268/PEPEs-Weekly-Losses-Exceed-20-BTC-Slips-Below-26K-Market-Watch",
+      "pubDate": "2023-08-28T08:56:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "APE",
+        "RUNE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Non-Fungible Tokens (NFTs): Anyone Can Do It and Earn From It",
+      "link": "https://cryptopanic.com/news/18863536/Non-Fungible-Tokens-NFTs-Anyone-Can-Do-It-and-Earn-From-It",
+      "pubDate": "2023-08-28T08:19:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "LTC",
+        "XMR",
+        "ETC"
+      ]
+    },
+    {
+      "title": "September ‘crash’ to $22K? — 5 things to know in Bitcoin this week",
+      "link": "https://cryptopanic.com/news/18863174/September-crash-to-22K-5-things-to-know-in-Bitcoin-this-week",
+      "pubDate": "2023-08-28T08:07:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The BTC price looks frail as August comes to an end, and with Bitcoin bulls out of ammo, traders are preparing for more pain.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "dYdX Founder: Crypto Industry Should “Give Up” On US Markets",
+      "link": "https://cryptopanic.com/news/18863177/dYdX-Founder-Crypto-Industry-Should-Give-Up-On-US-Markets",
+      "pubDate": "2023-08-28T07:58:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DYDX"
+      ]
+    },
+    {
+      "title": "Cronos Labs: growing use of AI indicates accelerated adoption of blockchain",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/18863210/Cronos-Labs-growing-use-of-AI-indicates-accelerated-adoption-of-blockchain",
+      "pubDate": "2023-08-28T07:33:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Quant Rises Upward In The Face Of Rejection At $105",
+      "link": "https://cryptopanic.com/news/18863381/Quant-Rises-Upward-In-The-Face-Of-Rejection-At-105",
+      "pubDate": "2023-08-28T06:41:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QNT"
+      ]
+    },
+    {
+      "title": "Ethereum AMM Balancer Exploited for Roughly $900k Following Vulnerability Warning",
+      "link": "https://cryptopanic.com/news/18862926/Ethereum-AMM-Balancer-Exploited-for-Roughly-900k-Following-Vulnerability-Warning",
+      "pubDate": "2023-08-28T05:01:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DAI",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash Price Could Restart Increase To $250 If It Breaks This Resistance",
+      "link": "https://cryptopanic.com/news/18862918/Bitcoin-Cash-Price-Could-Restart-Increase-To-250-If-It-Breaks-This-Resistance",
+      "pubDate": "2023-08-28T04:54:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

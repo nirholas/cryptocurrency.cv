@@ -1,0 +1,712 @@
+{
+  "date": "2025-08-21",
+  "fetchedAt": "2026-02-05T07:27:08.671Z",
+  "articleCount": 53,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Avalanche (AVAX) Holding Strong as On-Chain Momentum Builds Toward Breakout",
+      "link": "https://cryptopanic.com/news/avalanche-2/24454367/Avalanche-AVAX-Holding-Strong-as-On-Chain-Momentum-Builds-Toward-Breakout",
+      "pubDate": "2025-08-21T22:32:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Altcoin ETFs on Hold: Will XRP, Solana, and Litecoin Finally Get Approved in 2025?",
+      "link": "https://cryptopanic.com/news/litecoin/24453474/Altcoin-ETFs-on-Hold-Will-XRP-Solana-and-Litecoin-Finally-Get-Approved-in-2025",
+      "pubDate": "2025-08-21T22:01:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Aave Expands Beyond EVM: Launches on Aptos with Support for USDC, USDT, APT, and sUSDe",
+      "link": "https://cryptopanic.com/news/aave/24453054/Aave-Expands-Beyond-EVM-Launches-on-Aptos-with-Support-for-USDC-USDT-APT-and-sUSDe",
+      "pubDate": "2025-08-21T21:16:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "USDC"
+      ]
+    },
+    {
+      "title": "OKX’s 90% supply burn sets OKB ablaze – Will price soar higher?",
+      "link": "https://cryptopanic.com/news/okb/24452309/OKXs-90-supply-burn-sets-OKB-ablaze-Will-price-soar-higher",
+      "pubDate": "2025-08-21T21:00:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ]
+    },
+    {
+      "title": "Aave Expands to Aptos: First Launch on Non-EVM Blockchain",
+      "link": "https://cryptopanic.com/news/aave/24454416/Aave-Expands-to-Aptos-First-Launch-on-Non-EVM-Blockchain",
+      "pubDate": "2025-08-21T20:53:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "How the OKB Token Burn Strategy Created a 400% Rally",
+      "link": "https://cryptopanic.com/news/okb/24453174/How-the-OKB-Token-Burn-Strategy-Created-a-400-Rally",
+      "pubDate": "2025-08-21T19:59:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ]
+    },
+    {
+      "title": "OKB Emerges Crypto Top Gainer as XRP Airdrop Sparks 400% Trading Volume Spike",
+      "link": "https://cryptopanic.com/news/okb/24453272/OKB-Emerges-Crypto-Top-Gainer-as-XRP-Airdrop-Sparks-400-Trading-Volume-Spike",
+      "pubDate": "2025-08-21T19:44:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Ripple’s XRP $5 Quest Begins as Bulls Prepare for Critical $10 Target",
+      "link": "https://cryptopanic.com/news/tether/24450854/Ripples-XRP-5-Quest-Begins-as-Bulls-Prepare-for-Critical-10-Target",
+      "pubDate": "2025-08-21T19:41:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP may be in the calm before a breakout, with the 3rd-largest crypto poised for a bold upward surge.",
+      "currencies": [
+        "USDT",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "OKB Token Continues to Rally Following OKX Token Burn",
+      "link": "https://cryptopanic.com/news/okb/24450844/OKB-Token-Continues-to-Rally-Following-OKX-Token-Burn",
+      "pubDate": "2025-08-21T19:39:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ]
+    },
+    {
+      "title": "OKB, Aave, and Monero Could Make You Rich Beyond Your Wildest Dreams This Altcoin Season",
+      "link": "https://cryptopanic.com/news/monero/24449493/OKB-Aave-and-Monero-Could-Make-You-Rich-Beyond-Your-Wildest-Dreams-This-Altcoin-Season",
+      "pubDate": "2025-08-21T18:48:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XMR",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "DeFi Treasury Protocol ETH Strategy Deploys Over 50% of Its ETH for Yield",
+      "link": "https://cryptopanic.com/news/aave/24449451/DeFi-Treasury-Protocol-ETH-Strategy-Deploys-Over-50-of-Its-ETH-for-Yield",
+      "pubDate": "2025-08-21T18:37:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "$70B DeFi protocol Aave goes live on Aptos in ecosystem expansion",
+      "link": "https://cryptopanic.com/news/aave/24449406/70B-DeFi-protocol-Aave-goes-live-on-Aptos-in-ecosystem-expansion",
+      "pubDate": "2025-08-21T18:27:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "APT"
+      ]
+    },
+    {
+      "title": "Crypto.com card downgrade/unstake policy is anti-consumer",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/24466489/Cryptocom-card-downgradeunstake-policy-is-anti-consumer",
+      "pubDate": "2025-08-21T18:22:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO",
+        "MCO",
+        "I"
+      ]
+    },
+    {
+      "title": "OKB Jumps 90% in 7 Days Toward $200, What’s Fueling the Rally?",
+      "link": "https://cryptopanic.com/news/okb/24449198/OKB-Jumps-90-in-7-Days-Toward-200-Whats-Fueling-the-Rally",
+      "pubDate": "2025-08-21T18:18:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ]
+    },
+    {
+      "title": "What is Internet Computer and How Does it Work? Is ICP a Must Buy Crypto in 2025?",
+      "link": "https://cryptopanic.com/news/internet-computer/24452054/What-is-Internet-Computer-and-How-Does-it-Work-Is-ICP-a-Must-Buy-Crypto-in-2025",
+      "pubDate": "2025-08-21T16:56:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ]
+    },
+    {
+      "title": "Users Can Connect to Uniswap, Aave, Opensea via Trezor Suite",
+      "link": "https://cryptopanic.com/news/uniswap/24446189/Users-Can-Connect-to-Uniswap-Aave-Opensea-via-Trezor-Suite",
+      "pubDate": "2025-08-21T16:30:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Aave Debuts on Aptos in First Non-EVM Deployment: All You Need to Know",
+      "link": "https://cryptopanic.com/news/aave/24447889/Aave-Debuts-on-Aptos-in-First-Non-EVM-Deployment-All-You-Need-to-Know",
+      "pubDate": "2025-08-21T16:10:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "APT"
+      ]
+    },
+    {
+      "title": "AAVE: Bullish momentum builds despite mixed signals: What’s next?",
+      "link": "https://cryptopanic.com/news/aave/24444858/AAVE-Bullish-momentum-builds-despite-mixed-signals-Whats-next",
+      "pubDate": "2025-08-21T16:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Aave Expands Beyond EVM With Aptos Launch",
+      "link": "https://cryptopanic.com/news/aave/24447873/Aave-Expands-Beyond-EVM-With-Aptos-Launch",
+      "pubDate": "2025-08-21T15:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Starknet Approves Wrapped Bitcoin Staking Proposal",
+      "link": "https://cryptopanic.com/news/wrapped-bitcoin/24447842/Starknet-Approves-Wrapped-Bitcoin-Staking-Proposal",
+      "pubDate": "2025-08-21T15:34:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "WBTC",
+        "STRK"
+      ]
+    },
+    {
+      "title": "XLM Eyes Bullish Continuation After Rising From Support",
+      "link": "https://cryptopanic.com/news/stellar/24445713/XLM-Eyes-Bullish-Continuation-After-Rising-From-Support",
+      "pubDate": "2025-08-21T15:24:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "MetaMask enters stablecoin scene with mUSD launch on Ethereum and Linea",
+      "link": "https://cryptopanic.com/news/ethereum/24444234/MetaMask-enters-stablecoin-scene-with-mUSD-launch-on-Ethereum-and-Linea",
+      "pubDate": "2025-08-21T15:13:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "MetaMask, the widely used self-custodial wallet, has revealed plans to launch its own stablecoin, MetaMask USD (mUSD), later this year. According to an Aug. 21 statement, mUSD will initially debut on Ethereum and Linea L2, where it will become a key component of Linea’s growing DeFi ecosystem",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Uniswap's Unichain Trading Volume Surpasses $51 Billion",
+      "link": "https://cryptopanic.com/news/uniswap/24444715/Uniswaps-Unichain-Trading-Volume-Surpasses-51-Billion",
+      "pubDate": "2025-08-21T15:06:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Trezor Suite Now Supports WalletConnect for Secure Access to dApps",
+      "link": "https://cryptopanic.com/news/uniswap/24443917/Trezor-Suite-Now-Supports-WalletConnect-for-Secure-Access-to-dApps",
+      "pubDate": "2025-08-21T14:48:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "UNI"
+      ]
+    },
+    {
+      "title": "OKB Skyrockets After $7.6B Token Burn and Network Upgrade",
+      "link": "https://cryptopanic.com/news/okb/24443271/OKB-Skyrockets-After-76B-Token-Burn-and-Network-Upgrade",
+      "pubDate": "2025-08-21T14:46:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ]
+    },
+    {
+      "title": "Buy Aave without Verification – Fast and Anonymous Options",
+      "link": "https://cryptopanic.com/news/aave/24448765/Buy-Aave-without-Verification-Fast-and-Anonymous-Options",
+      "pubDate": "2025-08-21T14:41:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "OKB Soars 55% in 24 Hours as Best Wallet Presale Hits $15M: Best Utility Tokens for 2025?",
+      "link": "https://cryptopanic.com/news/okb/24446160/OKB-Soars-55-in-24-Hours-as-Best-Wallet-Presale-Hits-15M-Best-Utility-Tokens-for-2025",
+      "pubDate": "2025-08-21T14:09:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "OKB"
+      ]
+    },
+    {
+      "title": "OKB Price Prediction: OKB Continues to Pump Hard, Is $220 Within Reach Today?",
+      "link": "https://cryptopanic.com/news/okb/24441427/OKB-Price-Prediction-OKB-Continues-to-Pump-Hard-Is-220-Within-Reach-Today",
+      "pubDate": "2025-08-21T13:46:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ]
+    },
+    {
+      "title": "AI Coins Defy The Odds: NEAR Price Up 3% Despite Meta AI Hiring Freeze And Market Downturn, What’s Next?",
+      "link": "https://cryptopanic.com/news/near/24441334/AI-Coins-Defy-The-Odds-NEAR-Price-Up-3-Despite-Meta-AI-Hiring-Freeze-And-Market-Downturn-Whats-Next",
+      "pubDate": "2025-08-21T13:35:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "BlockDAG’s $379M Presale Overshadows NEAR’s $3 Drive and TRUMP Coin ETF Speculation",
+      "link": "https://cryptopanic.com/news/near/24446362/BlockDAGs-379M-Presale-Overshadows-NEARs-3-Drive-and-TRUMP-Coin-ETF-Speculation",
+      "pubDate": "2025-08-21T12:59:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR",
+        "TRUMP"
+      ]
+    },
+    {
+      "title": "OKB Price Prediction: Why the Exchange Token is Rallying to New Highs",
+      "link": "https://cryptopanic.com/news/okb/24441341/OKB-Price-Prediction-Why-the-Exchange-Token-is-Rallying-to-New-Highs",
+      "pubDate": "2025-08-21T12:34:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "OKB"
+      ]
+    },
+    {
+      "title": "Kanye West adds $34M in YZY tokens to Solana liquidity pool amid price volatility",
+      "link": "https://cryptopanic.com/news/solana/24438543/Kanye-West-adds-34M-in-YZY-tokens-to-Solana-liquidity-pool-amid-price-volatility",
+      "pubDate": "2025-08-21T12:10:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "21-8-2025 – Kanye West has deposited 30 million YZY tokens, worth $34 million, into a liquidity pool on the Solana blockchain, targeting a price range of $3. 1716 to $4. 4929. The move, executed earlier today, leverages the Meteora platform’s dynamic liquidity model, allowing West to earn fees once the token price exceeds $3",
+      "currencies": [
+        "SOL",
+        "YZY"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Aave launches on Aptos in first non-EVM deployment as part of multichain strategy",
+      "link": "https://cryptopanic.com/news/aave/24438627/Aave-launches-on-Aptos-in-first-non-EVM-deployment-as-part-of-multichain-strategy",
+      "pubDate": "2025-08-21T12:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "APT"
+      ]
+    },
+    {
+      "title": "Singapore’s Largest Bank Turns to Ethereum for Tokenized Finance",
+      "link": "https://cryptopanic.com/news/ethereum/24435868/Singapores-Largest-Bank-Turns-to-Ethereum-for-Tokenized-Finance",
+      "pubDate": "2025-08-21T11:01:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The move is designed to make complex financial products more accessible to accredited and institutional investors while strengthening the bank’s […] The post Singapore’s Largest Bank Turns to Ethereum for Tokenized Finance appeared first on Coindoo.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "OKB price hits new all-time high amid a 50% spike",
+      "link": "https://cryptopanic.com/news/okb/24434038/OKB-price-hits-new-all-time-high-amid-a-50-spike",
+      "pubDate": "2025-08-21T09:42:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ]
+    },
+    {
+      "title": "HTX Rolls Out Stablecoin Earning Zone With Yields Up to 20%",
+      "link": "https://cryptopanic.com/news/huobi-token/24434030/HTX-Rolls-Out-Stablecoin-Earning-Zone-With-Yields-Up-to-20",
+      "pubDate": "2025-08-21T09:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "HT"
+      ]
+    },
+    {
+      "title": "Kanye West’s Official YZY Memecoin Debuts On Solana With Blistering Gains",
+      "link": "https://cryptopanic.com/news/solana/24433284/Kanye-Wests-Official-YZY-Memecoin-Debuts-On-Solana-With-Blistering-Gains",
+      "pubDate": "2025-08-21T09:11:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "U. S. hip hop artist Kanye West, now known as Ye, has made his first direct move into crypto, releasing Yeezy Money (YZY), a new token on the Solana blockchain. Ye joins a long list of celebrities who have previously ventured into crypto with their meme-based tokens. YZY’s Frenzied Launch Rapper Ye has apparently launched a […]",
+      "currencies": [
+        "SOL",
+        "YZY"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "AI Platform Cointel Secures $7.4 Million Funding Round",
+      "link": "https://cryptopanic.com/news/avalanche-2/24433097/AI-Platform-Cointel-Secures-74-Million-Funding-Round",
+      "pubDate": "2025-08-21T09:08:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "BNB Sets New ATH, OKB Explodes Another 50%, BTC Struggles Below $114K: Market Watch",
+      "link": "https://cryptopanic.com/news/okb/24432650/BNB-Sets-New-ATH-OKB-Explodes-Another-50-BTC-Struggles-Below-114K-Market-Watch",
+      "pubDate": "2025-08-21T09:07:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "BNB"
+      ]
+    },
+    {
+      "title": "Best Crypto to Buy Now: Dogecoin, PENGU, and OKB Shine as Market Leaders",
+      "link": "https://cryptopanic.com/news/okb/24434393/Best-Crypto-to-Buy-Now-Dogecoin-PENGU-and-OKB-Shine-as-Market-Leaders",
+      "pubDate": "2025-08-21T08:34:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "OKB"
+      ]
+    },
+    {
+      "title": "Kanye West YZY Token Rockets Before Insider Fears Cut Gains",
+      "link": "https://cryptopanic.com/news/solana/24431811/Kanye-West-YZY-Token-Rockets-Before-Insider-Fears-Cut-Gains",
+      "pubDate": "2025-08-21T08:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Kanye West shook the crypto market with the launch of his YZY token on Solana, which briefly hit a billion dollar valuation within 40 minutes before sliding.",
+      "currencies": [
+        "SOL",
+        "YZY"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "OKB Hits Record $195 After 93% Supply Burn—But Warning Signs Emerge",
+      "link": "https://cryptopanic.com/news/okb/24432172/OKB-Hits-Record-195-After-93-Supply-BurnBut-Warning-Signs-Emerge",
+      "pubDate": "2025-08-21T08:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ]
+    },
+    {
+      "title": "Why OKB Price is Going up Today: Token Burn and Upgrade",
+      "link": "https://cryptopanic.com/news/okb/24434056/Why-OKB-Price-is-Going-up-Today-Token-Burn-and-Upgrade",
+      "pubDate": "2025-08-21T08:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ]
+    },
+    {
+      "title": "Trump Jr.-Backed Digital Marketing Firm Pivots to Dogecoin Mining in $154 Million Deal",
+      "link": "https://cryptopanic.com/news/litecoin/24428667/Trump-Jr-Backed-Digital-Marketing-Firm-Pivots-to-Dogecoin-Mining-in-154-Million-Deal",
+      "pubDate": "2025-08-21T07:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Stellar (XLM) Price Faces Further Downtrend as Outflows Show No End",
+      "link": "https://cryptopanic.com/news/stellar/24428648/Stellar-XLM-Price-Faces-Further-Downtrend-as-Outflows-Show-No-End",
+      "pubDate": "2025-08-21T06:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "OKB Token Price Soars 180% After $7.3B Burn",
+      "link": "https://cryptopanic.com/news/okb/24428655/OKB-Token-Price-Soars-180-After-73B-Burn",
+      "pubDate": "2025-08-21T05:50:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "OKB"
+      ]
+    },
+    {
+      "title": "Mass Adoption? AVAX Transactions Jump 585% Since May",
+      "link": "https://cryptopanic.com/news/avalanche-2/24426372/Mass-Adoption-AVAX-Transactions-Jump-585-Since-May",
+      "pubDate": "2025-08-21T05:09:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Nexo Launches AI Tool for Real-Time Crypto Insights and Portfolio Access",
+      "link": "https://cryptopanic.com/news/nexo/24425405/Nexo-Launches-AI-Tool-for-Real-Time-Crypto-Insights-and-Portfolio-Access",
+      "pubDate": "2025-08-21T04:30:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEXO"
+      ]
+    },
+    {
+      "title": "Litecoin Price Action Remains Flat as Investors Seek Faster-Growing Assets",
+      "link": "https://cryptopanic.com/news/litecoin/24425328/Litecoin-Price-Action-Remains-Flat-as-Investors-Seek-Faster-Growing-Assets",
+      "pubDate": "2025-08-21T04:30:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Crypto Gainers: OKB leads crypto rally, Conflux and GateToken follow",
+      "link": "https://cryptopanic.com/news/okb/24437606/Crypto-Gainers-OKB-leads-crypto-rally-Conflux-and-GateToken-follow",
+      "pubDate": "2025-08-21T03:14:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "OKB",
+        "GT",
+        "CFX"
+      ]
+    },
+    {
+      "title": "SkyBridge Capital to Tokenize $300 Million in Hedge Funds on Avalanche Blockchain",
+      "link": "https://cryptopanic.com/news/avalanche-2/24423056/SkyBridge-Capital-to-Tokenize-300-Million-in-Hedge-Funds-on-Avalanche-Blockchain",
+      "pubDate": "2025-08-21T02:51:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "War on Bugs introduces NFT support and major UI improvements",
+      "link": "https://cryptopanic.com/news/neo/24421629/War-on-Bugs-introduces-NFT-support-and-major-UI-improvements",
+      "pubDate": "2025-08-21T01:40:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "NEO",
+        "UI"
+      ]
+    },
+    {
+      "title": "Toyota Unveils Blockchain Framework to Turn Vehicles Into Tradeable Digital Assets",
+      "link": "https://cryptopanic.com/news/avalanche-2/24423014/Toyota-Unveils-Blockchain-Framework-to-Turn-Vehicles-Into-Tradeable-Digital-Assets",
+      "pubDate": "2025-08-21T01:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "MON"
+      ]
+    }
+  ]
+}

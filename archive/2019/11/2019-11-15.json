@@ -1,0 +1,79 @@
+{
+  "date": "2019-11-15",
+  "fetchedAt": "2026-02-05T07:27:06.906Z",
+  "articleCount": 5,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Weiss Ratings Sparks Controversy Saying Cardano (ADA) Is “Clearly Superior” to EOS",
+      "link": "https://cryptopanic.com/news/7158144/Weiss-Ratings-Sparks-Controversy-Saying-Cardano-ADA-Is-Clearly-Superior-to-EOS",
+      "pubDate": "2019-11-15T21:00:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Verge surge as PayPal bans Pornhub payments",
+      "link": "https://cryptopanic.com/news/7153645/Verge-surge-as-PayPal-bans-Pornhub-payments",
+      "pubDate": "2019-11-15T12:11:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XVG"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "“In fact, technology has been the story of human progress from as long back as we know. In 100 years people will lo…",
+      "link": "https://cryptopanic.com/news/7153499/In-fact-technology-has-been-the-story-of-human-progress-from-as-long-back-as-we-know-In-100-years-people-will-lo?mtm_campaign=API-OFA",
+      "pubDate": "2019-11-15T12:01:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DEEP"
+      ]
+    },
+    {
+      "title": "Onepage fully describes ZEON Network for potential partners, exchanges, users of crypto loans and deposits. Review…",
+      "link": "https://cryptopanic.com/news/7152431/Onepage-fully-describes-ZEON-Network-for-potential-partners-exchanges-users-of-crypto-loans-and-deposits-Review",
+      "pubDate": "2019-11-15T09:12:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ZEON"
+      ]
+    },
+    {
+      "title": "Humanscape selected as 9th ‘1Q Agile Lab’ member of KEB Hana Bank, the very first accelerator program in Korea…",
+      "link": "https://cryptopanic.com/news/13729203/Humanscape-selected-as-9th-1Q-Agile-Lab-member-of-KEB-Hana-Bank-the-very-first-accelerator-program-in-Korea",
+      "pubDate": "2019-11-15T08:47:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HUM"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "date": "2020-09-01",
+  "fetchedAt": "2026-02-05T07:27:06.960Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Yearn.Finance’s New Vault Leverages DeFi ‘Triforce’: ETH, MakerDAO and Curve",
+      "link": "https://cryptopanic.com/news/9853604/YearnFinances-New-Vault-Leverages-DeFi-Triforce-ETH-MakerDAO-and-Curve",
+      "pubDate": "2020-09-01T22:12:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "YFI"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Chainlink Now Powers All Price Data for DeFi Exchange Syhthetix",
+      "link": "https://cryptopanic.com/news/chainlink/9851770/Chainlink-Now-Powers-All-Price-Data-for-DeFi-Exchange-Syhthetix",
+      "pubDate": "2020-09-01T18:36:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

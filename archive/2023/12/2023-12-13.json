@@ -1,0 +1,605 @@
+{
+  "date": "2023-12-13",
+  "fetchedAt": "2026-02-05T07:27:08.064Z",
+  "articleCount": 41,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "S&P issues warning on USDT’s ability to hold peg in latest assessment",
+      "link": "https://cryptopanic.com/news/19107685/SP-issues-warning-on-USDTs-ability-to-hold-peg-in-latest-assessment",
+      "pubDate": "2023-12-13T23:42:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "DAI",
+        "FRAX"
+      ]
+    },
+    {
+      "title": "'Lords of Light' NFT Game Studio Raini Reveals New Owners, RST Token on Beam",
+      "link": "https://cryptopanic.com/news/19107676/Lords-of-Light-NFT-Game-Studio-Raini-Reveals-New-Owners-RST-Token-on-Beam",
+      "pubDate": "2023-12-13T23:29:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "BEAM"
+      ]
+    },
+    {
+      "title": "No Gas for Gamers: Ethereum Scaler Immutable zkEVM Will Let Developers Cover Fees",
+      "link": "https://cryptopanic.com/news/19107545/No-Gas-for-Gamers-Ethereum-Scaler-Immutable-zkEVM-Will-Let-Developers-Cover-Fees",
+      "pubDate": "2023-12-13T22:01:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "IMX"
+      ]
+    },
+    {
+      "title": "Is A Mega Bull Run Incoming? Whale Transfers Over $780 Million Of Stablecoin To Binance",
+      "link": "https://cryptopanic.com/news/19107527/Is-A-Mega-Bull-Run-Incoming-Whale-Transfers-Over-780-Million-Of-Stablecoin-To-Binance",
+      "pubDate": "2023-12-13T22:00:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Data Nerd Data on December 13 shows that over the past 24 hours, the wallet “0xea8” moved 200 million BUSD from Binance, the world’s leading cryptocurrency exchange by client count. The whale transfer caught the attention of keen crypto users, who also noted that the transfer was soon followed by a deposit of 99.95 million FDUSD, a stablecoin supported by the exchange. Whale Address...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "USDC",
+        "ADA",
+        "BUSD",
+        "SHIB",
+        "FDUSD"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Protocol Village: Immutable zkEVM Will Allow Developers to 'Abstract' Transaction Fees",
+      "link": "https://cryptopanic.com/news/19107544/Protocol-Village-Immutable-zkEVM-Will-Allow-Developers-to-Abstract-Transaction-Fees",
+      "pubDate": "2023-12-13T22:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "IMX"
+      ]
+    },
+    {
+      "title": "Bull Trap Likely Being Set for Bitcoin As Potential Sell-the-News Event Approaches, Warns Top Trader",
+      "link": "https://cryptopanic.com/news/19107429/Bull-Trap-Likely-Being-Set-for-Bitcoin-As-Potential-Sell-the-News-Event-Approaches-Warns-Top-Trader",
+      "pubDate": "2023-12-13T21:00:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A closely followed crypto strategist thinks that crypto bulls are being set up for a big trap as traders appear to be front-running a potential sell-off event. Pseudonymous analyst The Flow Horse tells his 191,700 followers on the social media platform X that most market participants appear to still be very bullish on Bitcoin (BTC) […]",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Iota and Fireblocks Collaborate to Enhance Asset Tokenization",
+      "link": "https://cryptopanic.com/news/19107320/Iota-and-Fireblocks-Collaborate-to-Enhance-Asset-Tokenization?mtm_campaign=API-OFA",
+      "pubDate": "2023-12-13T19:59:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "IOTA"
+      ]
+    },
+    {
+      "title": "Deutsche Bank Subsidiary Forms Partnership With Galaxy Digital and Other Firms To Launch New Euro Stablecoin",
+      "link": "https://cryptopanic.com/news/19107310/Deutsche-Bank-Subsidiary-Forms-Partnership-With-Galaxy-Digital-and-Other-Firms-To-Launch-New-Euro-Stablecoin",
+      "pubDate": "2023-12-13T19:41:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Full List of Bitcoin ETFs Waiting Approval in January 2024 and Deadlines",
+      "link": "https://cryptopanic.com/news/19107207/Full-List-of-Bitcoin-ETFs-Waiting-Approval-in-January-2024-and-Deadlines",
+      "pubDate": "2023-12-13T19:02:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Internet Computer Rises More Than 10% In 24 hours",
+      "link": "https://cryptopanic.com/news/internet-computer/19107236/Cryptocurrency-Internet-Computer-Rises-More-Than-10-In-24-hours",
+      "pubDate": "2023-12-13T19:00:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ]
+    },
+    {
+      "title": "Unraveling Bullish Potential of Pepe (PEPE), ApeCoin (APE), and Floki Inu Coin (FLOKI) - What to Watch for?",
+      "link": "https://cryptopanic.com/news/19107139/Unraveling-Bullish-Potential-of-Pepe-PEPE-ApeCoin-APE-and-Floki-Inu-Coin-FLOKI-What-to-Watch-for",
+      "pubDate": "2023-12-13T18:35:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "APE"
+      ]
+    },
+    {
+      "title": "Shiba Inu Whales Exiting From Exchanges: Is This Bullish?",
+      "link": "https://cryptopanic.com/news/19106858/Shiba-Inu-Whales-Exiting-From-Exchanges-Is-This-Bullish",
+      "pubDate": "2023-12-13T16:30:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "On-chain data shows the Shiba Inu whales have been withdrawing from exchanges recently. Here’s what this could mean for SHIB’s price. Shiba Inu Supply On Exchanges Has Plunged Recently As pointed out by an analyst in a post on X, the Shiba Inu supply on exchanges has seen a sharp drop recently. The “supply on […]",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "VeChain (VET) Surpasses 900k Holders, What's Next For Bullish Rated Meme Moguls (MGLS)?",
+      "link": "https://cryptopanic.com/news/19106727/VeChain-VET-Surpasses-900k-Holders-Whats-Next-For-Bullish-Rated-Meme-Moguls-MGLS",
+      "pubDate": "2023-12-13T15:53:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "IRS Demanding $24,000,000,000 From FTX Would Take Money Away Collapse Victims, Lawyers Say: Report",
+      "link": "https://cryptopanic.com/news/19106653/IRS-Demanding-24000000000-From-FTX-Would-Take-Money-Away-Collapse-Victims-Lawyers-Say-Report",
+      "pubDate": "2023-12-13T15:30:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "FTX Founder’s Defense Attorney Drops Bombshell: Sam Bankman-Fried Trial Almost Impossible To Win",
+      "link": "https://cryptopanic.com/news/19106554/FTX-Founders-Defense-Attorney-Drops-Bombshell-Sam-Bankman-Fried-Trial-Almost-Impossible-To-Win",
+      "pubDate": "2023-12-13T15:06:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "Shiba Inu Bucks Bearish Trend: Large Holder Netflow Rises 1079% To 4.68 Trillion SHIB",
+      "link": "https://cryptopanic.com/news/19106463/Shiba-Inu-Bucks-Bearish-Trend-Large-Holder-Netflow-Rises-1079-To-468-Trillion-SHIB",
+      "pubDate": "2023-12-13T14:30:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "XRP",
+        "SHIB",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Google Cloud Partnership With This Altcoin, The Price Moved!",
+      "link": "https://cryptopanic.com/news/19106441/Google-Cloud-Partnership-With-This-Altcoin-The-Price-Moved",
+      "pubDate": "2023-12-13T14:27:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ZIL"
+      ]
+    },
+    {
+      "title": "ATOM Surges To 6-Month High: Will the Rally Breach Resistance?",
+      "link": "https://cryptopanic.com/news/19106305/ATOM-Surges-To-6-Month-High-Will-the-Rally-Breach-Resistance",
+      "pubDate": "2023-12-13T13:42:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "AllUnity: the new Euro stablecoin by Galaxy, DWS, and Flow Traders",
+      "link": "https://cryptopanic.com/news/flow/19106295/AllUnity-the-new-Euro-stablecoin-by-Galaxy-DWS-and-Flow-Traders",
+      "pubDate": "2023-12-13T13:35:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "FLOW"
+      ]
+    },
+    {
+      "title": "OpenAI Crisis: A Cautionary Tale for the Future of AI",
+      "link": "https://cryptopanic.com/news/19106272/OpenAI-Crisis-A-Cautionary-Tale-for-the-Future-of-AI",
+      "pubDate": "2023-12-13T13:33:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Important Binance Update Concerning Cosmos (ATOM) Users",
+      "link": "https://cryptopanic.com/news/19106137/Important-Binance-Update-Concerning-Cosmos-ATOM-Users",
+      "pubDate": "2023-12-13T12:53:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ]
+    },
+    {
+      "title": "OKX DEX Loses Over $400,000 To Hackers – What Happens To Customer Funds?",
+      "link": "https://cryptopanic.com/news/19106121/OKX-DEX-Loses-Over-400000-To-Hackers-What-Happens-To-Customer-Funds",
+      "pubDate": "2023-12-13T12:45:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "MKR",
+        "IMX",
+        "INJ"
+      ]
+    },
+    {
+      "title": "Immutable zkEVM Invites Developers To Offset Gamer Gas Fees",
+      "link": "https://cryptopanic.com/news/19106053/Immutable-zkEVM-Invites-Developers-To-Offset-Gamer-Gas-Fees",
+      "pubDate": "2023-12-13T12:16:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "IMX"
+      ]
+    },
+    {
+      "title": "Breaking: Crypto Community To Witness a New Euro-Denominated Stablecoin",
+      "link": "https://cryptopanic.com/news/19106039/Breaking-Crypto-Community-To-Witness-a-New-Euro-Denominated-Stablecoin",
+      "pubDate": "2023-12-13T12:12:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Binance Seeks Dismissal of SEC Suit Amid Recent Legal Challenges",
+      "link": "https://cryptopanic.com/news/19105954/Binance-Seeks-Dismissal-of-SEC-Suit-Amid-Recent-Legal-Challenges",
+      "pubDate": "2023-12-13T11:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BNB",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "S&P Global Ratings Launches Stablecoin Assessment, Slams Tether’s USDT with Negative Review",
+      "link": "https://cryptopanic.com/news/19105867/SP-Global-Ratings-Launches-Stablecoin-Assessment-Slams-Tethers-USDT-with-Negative-Review",
+      "pubDate": "2023-12-13T11:28:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "DAI"
+      ]
+    },
+    {
+      "title": "BingX Introduces JITO Coin $JTO and Ordinals $ORDI",
+      "link": "https://cryptopanic.com/news/19105876/BingX-Introduces-JITO-Coin-JTO-and-Ordinals-ORDI",
+      "pubDate": "2023-12-13T11:19:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ORDI"
+      ]
+    },
+    {
+      "title": "Deutsche Bank leads new venture for Euro stablecoin launch",
+      "link": "https://cryptopanic.com/news/19105727/Deutsche-Bank-leads-new-venture-for-Euro-stablecoin-launch",
+      "pubDate": "2023-12-13T10:08:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Immutable Momentum: IMX Rockets To $2.21, Scaling Heights Unseen Since 2022",
+      "link": "https://cryptopanic.com/news/19105476/Immutable-Momentum-IMX-Rockets-To-221-Scaling-Heights-Unseen-Since-2022",
+      "pubDate": "2023-12-13T09:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "IMX",
+        "INJ",
+        "BEAM"
+      ]
+    },
+    {
+      "title": "Binance Launches Zero Fee Trading For Shiba Inu (SHIB), INJ, SAND; Price Rally Ahead?",
+      "link": "https://cryptopanic.com/news/19105428/Binance-Launches-Zero-Fee-Trading-For-Shiba-Inu-SHIB-INJ-SAND-Price-Rally-Ahead",
+      "pubDate": "2023-12-13T08:33:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The world’s largest crypto exchange Binance on Wednesday said it is launching new spot trading pairs and Trading Bots services for some crypto trading pairs. The crypto exchange plans to launch zero-fee trading for crypto such as Shiba Inu (SHIB), Injective (INJ), and The Sandbox (SAND). Will Binance’s new spot trading pairs and Trading Bots services",
+      "currencies": [
+        "SHIB",
+        "SAND",
+        "INJ"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Daily Roundup, 13 Dec: Cryptos Dance on the Edge Amid FOMC Dip",
+      "link": "https://cryptopanic.com/news/19105418/Crypto-Daily-Roundup-13-Dec-Cryptos-Dance-on-the-Edge-Amid-FOMC-Dip",
+      "pubDate": "2023-12-13T08:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Donald Trump Dives Back Into NFTs With New Collection",
+      "link": "https://cryptopanic.com/news/19105400/Donald-Trump-Dives-Back-Into-NFTs-With-New-Collection",
+      "pubDate": "2023-12-13T08:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "GALA"
+      ]
+    },
+    {
+      "title": "Breaking: Deutsche Bank, Others To Issue Euro-based Stablecoin",
+      "link": "https://cryptopanic.com/news/19105332/Breaking-Deutsche-Bank-Others-To-Issue-Euro-based-Stablecoin",
+      "pubDate": "2023-12-13T07:41:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FLOW",
+        "MKR"
+      ]
+    },
+    {
+      "title": "ProBit Global Branches Into Web3 Entertainment With Gala Music Listing",
+      "link": "https://cryptopanic.com/news/19105307/ProBit-Global-Branches-Into-Web3-Entertainment-With-Gala-Music-Listing",
+      "pubDate": "2023-12-13T07:06:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "GALA"
+      ]
+    },
+    {
+      "title": "Galaxy, DWS and Flow Traders eye stablecoin launch on Ethereum, Solana",
+      "link": "https://cryptopanic.com/news/19105200/Galaxy-DWS-and-Flow-Traders-eye-stablecoin-launch-on-Ethereum-Solana",
+      "pubDate": "2023-12-13T06:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Firms set to seek regulatory approval for their planned Euro-denominated stablecoin before the intended launch date in 12 to 18 months",
+      "currencies": [
+        "SOL",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SBF’s Lawyer Reveals FTX Trial Defense Struggles and Frustrations",
+      "link": "https://cryptopanic.com/news/19105137/SBFs-Lawyer-Reveals-FTX-Trial-Defense-Struggles-and-Frustrations",
+      "pubDate": "2023-12-13T05:10:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "Token Spotlight And Next Run Predictions: Analyst’s Weekly Altcoins Watchlist Unveiled",
+      "link": "https://cryptopanic.com/news/19105029/Token-Spotlight-And-Next-Run-Predictions-Analysts-Weekly-Altcoins-Watchlist-Unveiled",
+      "pubDate": "2023-12-13T03:00:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "SOL",
+        "AVAX",
+        "NEAR",
+        "IMX",
+        "INJ",
+        "FRAX",
+        "FXS",
+        "ARB",
+        "TIA",
+        "PYTH"
+      ]
+    },
+    {
+      "title": "Coinbase to list Solana’s BONK, meme coin jumps over 8%",
+      "link": "https://cryptopanic.com/news/19104972/Coinbase-to-list-Solanas-BONK-meme-coin-jumps-over-8",
+      "pubDate": "2023-12-13T02:03:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Coinbase, the major US-based crypto exchange, announced today that it will be listing Bonk (BONK), a dog-themed token on the Solana blockchain. The inclusion of BONK on Coinbase's listing \"Roadmap\" caused the price of the token to jump over 8% from .00001229 to .00001132 according to data from CoinGecko.https://twitter.com/CoinbaseAssets/status/1734739348308787524Assets placed on Coinbase's...",
+      "currencies": [
+        "SOL",
+        "BONK"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "24 Crypto Update, 12 Dec: Cryptos on Brink, FOMC Drama Adds Suspense",
+      "link": "https://cryptopanic.com/news/19105174/24-Crypto-Update-12-Dec-Cryptos-on-Brink-FOMC-Drama-Adds-Suspense",
+      "pubDate": "2023-12-13T01:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "DOGE",
+        "AXS"
+      ]
+    },
+    {
+      "title": "FTX And IRS Lock Horns Over $24 Billion Tax Bill, FTT’s Key Support Wavers",
+      "link": "https://cryptopanic.com/news/19104923/FTX-And-IRS-Lock-Horns-Over-24-Billion-Tax-Bill-FTTs-Key-Support-Wavers",
+      "pubDate": "2023-12-13T01:00:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "FTT",
+        "HNT"
+      ]
+    },
+    {
+      "title": "XRP Price Sticks to Gains: Ripple's Remarkable Resilience Amid Crypto Storm",
+      "link": "https://cryptopanic.com/news/19104926/XRP-Price-Sticks-to-Gains-Ripples-Remarkable-Resilience-Amid-Crypto-Storm",
+      "pubDate": "2023-12-13T01:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP still in uptrend but faces significant pressure",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "date": "2018-07-14",
+  "fetchedAt": "2026-02-05T07:27:07.891Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "EOS Network Lives up to the Hype but Not an Ethereum Killer",
+      "link": "https://cryptopanic.com/news/2537772/EOS-Network-Lives-up-to-the-Hype-but-Not-an-Ethereum-Killer",
+      "pubDate": "2018-07-14T13:19:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    }
+  ]
+}

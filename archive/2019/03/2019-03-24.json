@@ -1,0 +1,25 @@
+{
+  "date": "2019-03-24",
+  "fetchedAt": "2026-02-05T07:27:06.968Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Binance Coin (BNB) Surges 13% To a New All-Time High Following Binance Launchpad Announcement: BNB Price Analysis",
+      "link": "https://cryptopanic.com/news/4916373/Binance-Coin-BNB-Surges-13-To-a-New-All-Time-High-Following-Binance-Launchpad-Announcement-BNB-Price-Analysis",
+      "pubDate": "2019-03-24T11:38:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

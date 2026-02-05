@@ -1,0 +1,42 @@
+{
+  "date": "2017-12-01",
+  "fetchedAt": "2026-02-05T07:27:06.954Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA Partners with Cisco, Volkswagen and Others on Data Marketplace",
+      "link": "https://cryptopanic.com/news/510877/IOTA-Partners-with-Cisco-Volkswagen-and-Others-on-Data-Marketplace",
+      "pubDate": "2017-12-01T19:35:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dash’s Rise to $800: The Altcoin Displays its Biggest Monthly Price Gain",
+      "link": "https://cryptopanic.com/news/508188/Dashs-Rise-to-800-The-Altcoin-Displays-its-Biggest-Monthly-Price-Gain",
+      "pubDate": "2017-12-01T01:55:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DASH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    }
+  ]
+}

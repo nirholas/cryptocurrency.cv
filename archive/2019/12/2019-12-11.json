@@ -1,0 +1,51 @@
+{
+  "date": "2019-12-11",
+  "fetchedAt": "2026-02-05T07:27:06.680Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "BitPay Enabling Merchants to Overcome Bitcoin Volatility with Stablecoins",
+      "link": "https://cryptopanic.com/news/7380255/BitPay-Enabling-Merchants-to-Overcome-Bitcoin-Volatility-with-Stablecoins",
+      "pubDate": "2019-12-11T13:00:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDC",
+        "USDP"
+      ]
+    },
+    {
+      "title": "Tron to Be Listed on Binance.US, Poloniex Offers Holders New Ways to Earn TRX",
+      "link": "https://cryptopanic.com/news/7378220/Tron-to-Be-Listed-on-BinanceUS-Poloniex-Offers-Holders-New-Ways-to-Earn-TRX",
+      "pubDate": "2019-12-11T09:44:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "BitPay now lets merchants accept three stablecoins, including Gemini dollar",
+      "link": "https://cryptopanic.com/news/7377570/BitPay-now-lets-merchants-accept-three-stablecoins-including-Gemini-dollar",
+      "pubDate": "2019-12-11T07:45:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "USDP"
+      ]
+    }
+  ]
+}

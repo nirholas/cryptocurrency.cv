@@ -1,0 +1,67 @@
+{
+  "date": "2018-10-17",
+  "fetchedAt": "2026-02-05T07:27:06.958Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "0x Project Continues Appreciation Week After Coinbase Listing",
+      "link": "https://cryptopanic.com/news/3374035/0x-Project-Continues-Appreciation-Week-After-Coinbase-Listing",
+      "pubDate": "2018-10-17T14:13:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ZRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "I just published Fountain Community Supporting Plan Launch Notice",
+      "link": "https://cryptopanic.com/news/4143369/I-just-published-Fountain-Community-Supporting-Plan-Launch-Notice?mtm_campaign=API-OFA",
+      "pubDate": "2018-10-17T13:46:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FTN"
+      ]
+    },
+    {
+      "title": "Qtum Blockchain Becomes Amazon Web Services Partner in China",
+      "link": "https://cryptopanic.com/news/3372988/Qtum-Blockchain-Becomes-Amazon-Web-Services-Partner-in-China",
+      "pubDate": "2018-10-17T12:00:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QTUM"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Congratulations to @wecredit !",
+      "link": "https://cryptopanic.com/news/3371558/Congratulations-to-wecredit",
+      "pubDate": "2018-10-17T09:43:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CTC"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "date": "2019-11-06",
+  "fetchedAt": "2026-02-05T07:27:06.999Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Exposed: Tron’s Justin Sun Real Reason For Warren Buffet Lunch Postponement (Not Kidney Stones)",
+      "link": "https://cryptopanic.com/news/tron/7073616/Exposed-Trons-Justin-Sun-Real-Reason-For-Warren-Buffet-Lunch-Postponement-Not-Kidney-Stones",
+      "pubDate": "2019-11-06T20:37:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Kraken lists Nano against US dollar, pushes price up 12%",
+      "link": "https://cryptopanic.com/news/7069537/Kraken-lists-Nano-against-US-dollar-pushes-price-up-12",
+      "pubDate": "2019-11-06T13:25:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XNO"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

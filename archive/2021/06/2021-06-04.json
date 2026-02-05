@@ -1,0 +1,666 @@
+{
+  "date": "2021-06-04",
+  "fetchedAt": "2026-02-05T07:27:06.752Z",
+  "articleCount": 43,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "More than anything, this is what Ethereum needs for a good June",
+      "link": "https://cryptopanic.com/news/ethereum/12056358/More-than-anything-this-is-what-Ethereum-needs-for-a-good-June",
+      "pubDate": "2021-06-04T23:30:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "On-chain metrics and fundamental developments have been a beacon of hope for most Ethereum holders in 2021. Whenever prices have suffered a decline, speculators have leaned towards its consistent functionality, and rightly so. Ethereum has been at the forefront of a lot of crypto-innovations over the years, taking the space to new levels and deserved […]",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Elon Musk May Send Five More Altcoins to the Moon, According to Crypto Trader Tyler Swope",
+      "link": "https://cryptopanic.com/news/dogecoin/12056256/Elon-Musk-May-Send-Five-More-Altcoins-to-the-Moon-According-to-Crypto-Trader-Tyler-Swope",
+      "pubDate": "2021-06-04T22:05:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Popular crypto analyst Tyler Swope is conducting a deep dive into the coins that SpaceX CEO Elon Musk could catapult into space. Earlier this month Musk announced that SpaceX would launch a DOGE-funded mission, claiming that Dogecoin will be “the first meme in space.” In a new video, Swope shares his theories surrounding which other […] The post Elon Musk May Send Five More Altcoins to the Moon, According to Crypto Trader Tyler Swope appeared first on The Daily Hodl.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Why Solana and Polkadot Have Been The Least Impacted By The Crypto Crash",
+      "link": "https://cryptopanic.com/news/polkadot/12056148/Why-Solana-and-Polkadot-Have-Been-The-Least-Impacted-By-The-Crypto-Crash",
+      "pubDate": "2021-06-04T21:30:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Research firm Messari published a report on the performance of 5 sectors in the crypto industry after the recent crash. Written by Roberto Talamas, the report determined that smart contracts (Solana, Cosmos, Polkadot, Kusama, and others) have been amongst the least affected by this event. Relentless selling pressure caused the main cryptocurrencies to correct by […]",
+      "currencies": [
+        "SOL",
+        "DOT",
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Theta 1-click delegated staking now live in the Theta Web Wallet! With this new feature, you can delegate your THET…",
+      "link": "https://cryptopanic.com/news/theta-token/12060239/Theta-1-click-delegated-staking-now-live-in-the-Theta-Web-Wallet-With-this-new-feature-you-can-delegate-your-THET",
+      "pubDate": "2021-06-04T21:21:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Dogecoin (DOGE) miners now make over $6 million daily",
+      "link": "https://cryptopanic.com/news/dogecoin/12056085/Dogecoin-DOGE-miners-now-make-over-6-million-daily",
+      "pubDate": "2021-06-04T21:04:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Apart from dogecoin investors, the meme cryptocurrency miners are also reaping millions for generating new coins and confirming transactions amid... Continue reading",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 8
+      }
+    },
+    {
+      "title": "Ethereum options data shows traders' mixed opinions on ETH's future",
+      "link": "https://cryptopanic.com/news/ethereum/12055927/Ethereum-options-data-shows-traders-mixed-opinions-on-ETHs-future",
+      "pubDate": "2021-06-04T20:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Data shows traders are buying $400 protective puts while also holding $7,000 call options, a signal that traders either have mixed emotions or are just cashing in on the upfront premium.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Floyd Mayweather, Sponsored by Ethereum Token, Gets Booed at Bitcoin Conference",
+      "link": "https://cryptopanic.com/news/ethereum/12055933/Floyd-Mayweather-Sponsored-by-Ethereum-Token-Gets-Booed-at-Bitcoin-Conference",
+      "pubDate": "2021-06-04T19:53:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The boxer suffered a TKO on stage.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @lynch_mn: Agreed. $alch is seriously undervalued",
+      "link": "https://cryptopanic.com/news/12056915/RT-lynch_mn-Agreed-alch-is-seriously-undervalued?mtm_campaign=API-OFA",
+      "pubDate": "2021-06-04T19:22:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALCH"
+      ]
+    },
+    {
+      "title": "Ethereum Platform Brought to Space to Provide More Efficient Smart Contract Operation",
+      "link": "https://cryptopanic.com/news/ethereum/12055851/Ethereum-Platform-Brought-to-Space-to-Provide-More-Efficient-Smart-Contract-Operation",
+      "pubDate": "2021-06-04T19:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "In a space-as-a-service effort, an Enterprise Ethereum Alliance member, SpaceChain, has integrated Ethereum technology in space by rolling out on-orbit Ethereum multisignature transaction services.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Will ETH be below $2800 at any time on Monday?",
+      "link": "https://cryptopanic.com/news/12055721/Will-ETH-be-below-2800-at-any-time-on-Monday",
+      "pubDate": "2021-06-04T18:46:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "REP"
+      ]
+    },
+    {
+      "title": "RT @Bhim_DuTT1: @AlchemyDAO $ALCH token has massive potential, in short term $ALCH will make us huge returns. In future $ALCH will make the…",
+      "link": "https://cryptopanic.com/news/12056916/RT-Bhim_DuTT1-AlchemyDAO-ALCH-token-has-massive-potential-in-short-term-ALCH-will-make-us-huge-returns-In-future-ALCH-will-make-the?mtm_campaign=API-OFA",
+      "pubDate": "2021-06-04T18:26:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALCH"
+      ]
+    },
+    {
+      "title": "Price analysis 6/4: BTC, ETH, BNB, ADA, DOGE, XRP, DOT, UNI, ICP, BCH",
+      "link": "https://cryptopanic.com/news/12055665/Price-analysis-64-BTC-ETH-BNB-ADA-DOGE-XRP-DOT-UNI-ICP-BCH",
+      "pubDate": "2021-06-04T18:20:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "ADA",
+        "XRP",
+        "DOGE",
+        "DOT",
+        "UNI",
+        "BCH",
+        "ICP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tesla Could Empty Its $1.5 Billion Bitcoin Bag In No Time … And Tron’s Justin Sun Wants It All",
+      "link": "https://cryptopanic.com/news/tron/12055512/Tesla-Could-Empty-Its-15-Billion-Bitcoin-Bag-In-No-Time-And-Trons-Justin-Sun-Wants-It-All",
+      "pubDate": "2021-06-04T17:08:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Tron’s Justin Sun has remained bullish on Bitcoin, despite Elon Musk’s bearish tweets. The founder of the Tron network has been consistent with his bullish feedback on the state of the market. Sun has also been quick to make bullish requests and pledges in support of Tron’s native token (TRX). However, Sun seems to be […]",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @hashoshi4: I’m super stoked to be a part of the @Theta_Network NFT DROP coming in July! Proceeds from NFTs are going to a mix of charit…",
+      "link": "https://cryptopanic.com/news/theta-token/12060240/RT-hashoshi4-Im-super-stoked-to-be-a-part-of-the-Theta_Network-NFT-DROP-coming-in-July-Proceeds-from-NFTs-are-going-to-a-mix-of-charit",
+      "pubDate": "2021-06-04T15:51:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "DOGE, SHIB Now Accepted by XRP-Friendly Bitrue as Collateral",
+      "link": "https://cryptopanic.com/news/shiba-inu/12055109/DOGE-SHIB-Now-Accepted-by-XRP-Friendly-Bitrue-as-Collateral",
+      "pubDate": "2021-06-04T15:00:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Two most overhyped coins of 2021 are now welcomed as collateral on Bitrue (BTR) cryptocurrencies exchange",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 9
+      }
+    },
+    {
+      "title": "Our Head of Strategy @wes_levitt is coming up next on @Synopsis2021 Tune in on @THETAtv to watch his session on \"…",
+      "link": "https://cryptopanic.com/news/theta-token/12060241/Our-Head-of-Strategy-wes_levitt-is-coming-up-next-on-Synopsis2021-Tune-in-on-THETAtv-to-watch-his-session-on",
+      "pubDate": "2021-06-04T15:00:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Bitcoin Will Get to the Moon Before Dogecoin Thanks to BitMEX",
+      "link": "https://cryptopanic.com/news/dogecoin/12055074/Bitcoin-Will-Get-to-the-Moon-Before-Dogecoin-Thanks-to-BitMEX",
+      "pubDate": "2021-06-04T14:33:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin appears to be winning the race to the moon",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 25,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Chainlink to Collaborate with IEEE to Develop Intl. Oracle Standards",
+      "link": "https://cryptopanic.com/news/chainlink/12055021/Chainlink-to-Collaborate-with-IEEE-to-Develop-Intl-Oracle-Standards",
+      "pubDate": "2021-06-04T14:09:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Chainlink is collaborating with the IEEE to develop global standards for the adoption of decentralized oracle networks Chainlink will be working with the Computer Society Blockchain and Distributed Ledger Standards Committee of the IEEE A Chainlink community grant has been awarded to sponsor the process IEEE is a global body that provides industry standards in engineering, computing and...",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple’s $420M transfer to former exec raises questions about SEC, again",
+      "link": "https://cryptopanic.com/news/ripple/12054890/Ripples-420M-transfer-to-former-exec-raises-questions-about-SEC-again",
+      "pubDate": "2021-06-04T13:00:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "After seeing some strong gains over the past week, XRP’s value had once again fallen below $1 at press time. Now, although the downtrend of XRP could be due to its correlation with Bitcoin [BTC], there was another reason the market had to account for. Jed McCaleb, former Ripple executive, received another 408.12 million XRP […]",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Define personal financial targets by yourself. Avoid so-called \"influencers\" that pursue their own goals so you wil…",
+      "link": "https://cryptopanic.com/news/12059878/Define-personal-financial-targets-by-yourself-Avoid-so-called-influencers-that-pursue-their-own-goals-so-you-wil",
+      "pubDate": "2021-06-04T12:20:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "$BB is on it's way to $1 too 🪨",
+      "link": "https://cryptopanic.com/news/12057339/BB-is-on-its-way-to-1-too?mtm_campaign=API-OFA",
+      "pubDate": "2021-06-04T12:16:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BB"
+      ]
+    },
+    {
+      "title": "you might want to buy $BB dips too ;)",
+      "link": "https://cryptopanic.com/news/12057340/you-might-want-to-buy-BB-dips-too?mtm_campaign=API-OFA",
+      "pubDate": "2021-06-04T12:08:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BB"
+      ]
+    },
+    {
+      "title": "Here’s How Soon Jed McCaleb Is to Run Out of XRP: Report",
+      "link": "https://cryptopanic.com/news/ripple/12054793/Heres-How-Soon-Jed-McCaleb-Is-to-Run-Out-of-XRP-Report",
+      "pubDate": "2021-06-04T12:06:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "A researcher and XRP fan has shared the estimated time when Ripple co-founder and its former CTO will run out of his XRP holdings for good",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 11
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "BB is a GEM too 🧞",
+      "link": "https://cryptopanic.com/news/12057341/BB-is-a-GEM-too?mtm_campaign=API-OFA",
+      "pubDate": "2021-06-04T12:05:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BB"
+      ]
+    },
+    {
+      "title": "Block elon and follow us!",
+      "link": "https://cryptopanic.com/news/12057342/Block-elon-and-follow-us?mtm_campaign=API-OFA",
+      "pubDate": "2021-06-04T12:05:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BB"
+      ]
+    },
+    {
+      "title": "Coin Bureau: Kusama ($KSM) Could Explode Following Parachain Slot Auction Launch",
+      "link": "https://cryptopanic.com/news/polkadot/12054787/Coin-Bureau-Kusama-KSM-Could-Explode-Following-Parachain-Slot-Auction-Launch",
+      "pubDate": "2021-06-04T12:00:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Recently, pseudo-anonymous crypto analyst and influencer “Coin Bureau” explained why he is so bullish on Kusama (KSM). Here is what the Kusama team say about the upcoming parachain slot auctions: The key to Kusama’s scalable multichain architecture, parachains connect to the network by leasing a slot on the Relay Chain via permissionless auction. As Polkadot’s […]",
+      "currencies": [
+        "DOT",
+        "KSM"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Filecoin ignores Elon Musk’s Bitcoin FUD as FIL price rockets by 17%",
+      "link": "https://cryptopanic.com/news/12054720/Filecoin-ignores-Elon-Musks-Bitcoin-FUD-as-FIL-price-rockets-by-17",
+      "pubDate": "2021-06-04T11:09:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The token emerged as one of the top performers in the cryptocurrency market — even as traders mass-dumped other assets.",
+      "currencies": [
+        "BTC",
+        "FIL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Criticisms of Tether’s reserves are unfounded, says Bitfinex CTO",
+      "link": "https://cryptopanic.com/news/12054708/Criticisms-of-Tethers-reserves-are-unfounded-says-Bitfinex-CTO",
+      "pubDate": "2021-06-04T11:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "After Tether's legal settlement with New York, USDT's growth is exploding—dispelling concerns over Tether's reserves, says Bitfinex CTO Paolo Ardoino.",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "You can now read all about the upcoming #BlockchainSummit2021 on the Electroneum newsroom here:…",
+      "link": "https://cryptopanic.com/news/12058028/You-can-now-read-all-about-the-upcoming-BlockchainSummit2021-on-the-Electroneum-newsroom-here",
+      "pubDate": "2021-06-04T10:59:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "453 Million XRP Sold by Jed McCaleb in May: XRPscan Data",
+      "link": "https://cryptopanic.com/news/ripple/12054665/453-Million-XRP-Sold-by-Jed-McCaleb-in-May-XRPscan-Data",
+      "pubDate": "2021-06-04T10:24:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Recent data shows that in May and the first four days of June, Ripple co-founder McCaleb has transferred 453 million XRP to be sold",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 30
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "What is the current relationship between #NFTs and #sustainability? Tune in to today’s Fashion Tech Summit at 17:00…",
+      "link": "https://cryptopanic.com/news/12058893/What-is-the-current-relationship-between-NFTs-and-sustainability-Tune-in-to-todays-Fashion-Tech-Summit-at-1700",
+      "pubDate": "2021-06-04T10:08:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "RT @Loopifyyy: I hereby declare the start of the next NFT bull run.",
+      "link": "https://cryptopanic.com/news/12056917/RT-Loopifyyy-I-hereby-declare-the-start-of-the-next-NFT-bull-run?mtm_campaign=API-OFA",
+      "pubDate": "2021-06-04T09:20:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "ALCH"
+      ]
+    },
+    {
+      "title": "Bloomberg report calls Bitcoin ‘refreshed and discounted’ as BTC price bounces at $36K",
+      "link": "https://cryptopanic.com/news/dogecoin/12054584/Bloomberg-report-calls-Bitcoin-refreshed-and-discounted-as-BTC-price-bounces-at-36K",
+      "pubDate": "2021-06-04T09:18:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "BTC price action is already in recovery after a modest drop, and traders are favoring upside.",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 40,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "MovieBloc Monthly Newsletter- May 2021 is here!",
+      "link": "https://cryptopanic.com/news/12059173/MovieBloc-Monthly-Newsletter-May-2021-is-here",
+      "pubDate": "2021-06-04T08:27:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MBL"
+      ]
+    },
+    {
+      "title": "Nightmode, for Mogwai #NFTs No fear! Ready to rumble the #BlockchainGaming ecosystem of #Polkadot",
+      "link": "https://cryptopanic.com/news/12059121/Nightmode-for-Mogwai-NFTs-No-fear-Ready-to-rumble-the-BlockchainGaming-ecosystem-of-Polkadot",
+      "pubDate": "2021-06-04T08:10:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "MOG"
+      ]
+    },
+    {
+      "title": "RT @yihan2604: Minted another NFT done by my brother Yibin at $ALCH @AlchemyDAO This beautiful 3D image of a well-worn army boot looks so…",
+      "link": "https://cryptopanic.com/news/12056918/RT-yihan2604-Minted-another-NFT-done-by-my-brother-Yibin-at-ALCH-AlchemyDAO-This-beautiful-3D-image-of-a-well-worn-army-boot-looks-so?mtm_campaign=API-OFA",
+      "pubDate": "2021-06-04T07:11:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "ALCH"
+      ]
+    },
+    {
+      "title": "Elon Musk Pushes Bitcoin Down with Linkin Park Song, Jokes About Dogecoin and Federal Reserve",
+      "link": "https://cryptopanic.com/news/dogecoin/12049976/Elon-Musk-Pushes-Bitcoin-Down-with-Linkin-Park-Song-Jokes-About-Dogecoin-and-Federal-Reserve",
+      "pubDate": "2021-06-04T04:25:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "In the end, it didn’t even matter",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 54
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "TA: Bitcoin Faces Another Rejection, Here’s What Could Trigger Nasty Decline",
+      "link": "https://cryptopanic.com/news/near/12049932/TA-Bitcoin-Faces-Another-Rejection-Heres-What-Could-Trigger-Nasty-Decline",
+      "pubDate": "2021-06-04T03:08:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin price climbed above the $38,000 resistance against the US Dollar, but it failed near $39,500. BTC is correcting lower and it might dive if it breaks the $37,000 support. Bitcoin failed to gain momentum for a break above $39,500 and $40,000. The price is currently trading above $37,000 and the 100 hourly simple moving […]",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Some fresh stats from our #prediction & bet tool! $QUICK vs. $THETA battle: @QuickswapDEX -7.43% 530 $DoTx be…",
+      "link": "https://cryptopanic.com/news/theta-token/12051114/Some-fresh-stats-from-our-prediction-amp-bet-tool-QUICK-vs-THETA-battle-QuickswapDEX-743-530-DoTx-be",
+      "pubDate": "2021-06-04T02:17:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "DOTX"
+      ]
+    },
+    {
+      "title": "RT @agfnzn1: I leave you my recent publication about the NBA and the details of the game  #scorum @SCORUM_en #NBAP…",
+      "link": "https://cryptopanic.com/news/12053483/RT-agfnzn1-I-leave-you-my-recent-publication-about-the-NBA-and-the-details-of-the-game-scorum-SCORUM_en-NBAP?mtm_campaign=API-OFA",
+      "pubDate": "2021-06-04T02:16:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SCR"
+      ]
+    },
+    {
+      "title": "Ripple transfers another $420 million in XRP for co-founder Jed McCaleb to dump",
+      "link": "https://cryptopanic.com/news/ripple/12049860/Ripple-transfers-another-420-million-in-XRP-for-co-founder-Jed-McCaleb-to-dump",
+      "pubDate": "2021-06-04T01:00:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Blockchain payments company Ripple today sent its co-founder and former chief technology officer Jed McCaleb another payment of over 408 million XRP tokens, worth around $420 million at current prices.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 20
+      }
+    },
+    {
+      "title": "Shanghai Man: 'Green-light' for miners? CZ not responsible for BSC, Uniswap frauds on TV",
+      "link": "https://cryptopanic.com/news/uniswap/12049848/Shanghai-Man-Green-light-for-miners-CZ-not-responsible-for-BSC-Uniswap-frauds-on-TV",
+      "pubDate": "2021-06-04T00:51:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "CZ claims Binance didn’t really make Binance Smart Chain, Beijing to distribute $6.2 million in free digital yuan, and miners speak out about clean energy mining",
+      "currencies": [
+        "BTC",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "While Elon Musk Boosts The Dogecoin Price, The Tesla Dogecoin Dream Is Already Coming True",
+      "link": "https://cryptopanic.com/news/dogecoin/12049838/While-Elon-Musk-Boosts-The-Dogecoin-Price-The-Tesla-Dogecoin-Dream-Is-Already-Coming-True",
+      "pubDate": "2021-06-04T00:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Amid calls from doge fans for Tesla to allow their cars to create dogecoin tokens while they're charging, a rival electric car company has revealed it's working on a car that can mine dogecoin and other cryptocurrencies...",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

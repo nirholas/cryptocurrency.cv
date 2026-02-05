@@ -1,0 +1,117 @@
+{
+  "date": "2019-02-21",
+  "fetchedAt": "2026-02-05T07:27:06.947Z",
+  "articleCount": 7,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "TRON Becomes the Latest Token to join BitGo’s Roster",
+      "link": "https://cryptopanic.com/news/tron/4633506/TRON-Becomes-the-Latest-Token-to-join-BitGos-Roster",
+      "pubDate": "2019-02-21T21:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Brazilian bank BTG Pactual launches a security token; hopes crypto will attract investors to distressed real estate assets",
+      "link": "https://cryptopanic.com/news/4633057/Brazilian-bank-BTG-Pactual-launches-a-security-token-hopes-crypto-will-attract-investors-to-distressed-real-estate-assets",
+      "pubDate": "2019-02-21T20:00:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTG"
+      ]
+    },
+    {
+      "title": "Binance and NEO Accused By Blocknet For Stealing Info Used To Build Binance DEX",
+      "link": "https://cryptopanic.com/news/4632837/Binance-and-NEO-Accused-By-Blocknet-For-Stealing-Info-Used-To-Build-Binance-DEX",
+      "pubDate": "2019-02-21T19:40:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We made an example dApp template to show how to develop #NEO dApps/games in Unity WebGL that can be integrated int…",
+      "link": "https://cryptopanic.com/news/4632209/We-made-an-example-dApp-template-to-show-how-to-develop-NEO-dAppsgames-in-Unity-WebGL-that-can-be-integrated-int",
+      "pubDate": "2019-02-21T18:37:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MCT"
+      ]
+    },
+    {
+      "title": "Brazilian Bank Aims to Raise $15 Million Through Security Token Offering",
+      "link": "https://cryptopanic.com/news/4630466/Brazilian-Bank-Aims-to-Raise-15-Million-Through-Security-Token-Offering",
+      "pubDate": "2019-02-21T15:30:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTG"
+      ]
+    },
+    {
+      "title": "USD Coin (USDC), Gemini Dollar (GUSD), Paxos Standard (PAX), and TrueUSD (TUSD) Experienced Significant Supply Reduction This February: Research",
+      "link": "https://cryptopanic.com/news/4628211/USD-Coin-USDC-Gemini-Dollar-GUSD-Paxos-Standard-PAX-and-TrueUSD-TUSD-Experienced-Significant-Supply-Reduction-This-February-Research",
+      "pubDate": "2019-02-21T11:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "TUSD",
+        "GUSD"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "R3 Corda Ripple XRP 50 Banks, TRON On BitGo, XRP BTC Whales & Unregistered Security",
+      "link": "https://cryptopanic.com/news/tron/4628072/R3-Corda-Ripple-XRP-50-Banks-TRON-On-BitGo-XRP-BTC-Whales-Unregistered-Security",
+      "pubDate": "2019-02-21T10:41:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

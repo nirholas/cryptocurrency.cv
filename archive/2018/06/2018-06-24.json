@@ -1,0 +1,25 @@
+{
+  "date": "2018-06-24",
+  "fetchedAt": "2026-02-05T07:27:06.907Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "EOS “Constitution” Blocks 27 Accounts",
+      "link": "https://cryptopanic.com/news/2349994/EOS-Constitution-Blocks-27-Accounts",
+      "pubDate": "2018-06-24T18:00:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

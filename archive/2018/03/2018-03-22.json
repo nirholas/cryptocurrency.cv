@@ -1,0 +1,74 @@
+{
+  "date": "2018-03-22",
+  "fetchedAt": "2026-02-05T07:27:06.813Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Canadian Entrepreneur to Parliament: Bitcoin Cash is a Four-letter Word, Spelt S-C-A-M",
+      "link": "https://cryptopanic.com/news/1451952/Canadian-Entrepreneur-to-Parliament-Bitcoin-Cash-is-a-Four-letter-Word-Spelt-S-C-A-M",
+      "pubDate": "2018-03-22T18:30:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Investing in Ripple? Here’s 3 Points to Worry About",
+      "link": "https://cryptopanic.com/news/ripple/1450758/Investing-in-Ripple-Heres-3-Points-to-Worry-About",
+      "pubDate": "2018-03-22T16:40:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Stellar is Looking to Incorporate the Lightning Network",
+      "link": "https://cryptopanic.com/news/litecoin/1450759/Stellar-is-Looking-to-Incorporate-the-Lightning-Network",
+      "pubDate": "2018-03-22T15:40:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Edward Snowden: Public Ledger Is Bitcoin's Big Flaw",
+      "link": "https://cryptopanic.com/news/1447533/Edward-Snowden-Public-Ledger-Is-Bitcoins-Big-Flaw",
+      "pubDate": "2018-03-22T12:00:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ZEC"
+      ]
+    }
+  ]
+}

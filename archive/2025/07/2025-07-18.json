@@ -1,0 +1,1010 @@
+{
+  "date": "2025-07-18",
+  "fetchedAt": "2026-02-05T07:27:08.622Z",
+  "articleCount": 71,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Litecoin Jumps 10%—Can a $100M Bet From a Biotech Company Kick Off a Bigger Rally?",
+      "link": "https://cryptopanic.com/news/litecoin/23429021/Litecoin-Jumps-10Can-a-100M-Bet-From-a-Biotech-Company-Kick-Off-a-Bigger-Rally",
+      "pubDate": "2025-07-18T23:38:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Litecoin Sets New Open Interest Record Worth $761,000,000, LTC To $120?",
+      "link": "https://cryptopanic.com/news/litecoin/23427326/Litecoin-Sets-New-Open-Interest-Record-Worth-761000000-LTC-To-120",
+      "pubDate": "2025-07-18T23:25:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "OI"
+      ]
+    },
+    {
+      "title": "Which Ethereum Ecosystem Tokens Is Arthur Hayes Buying?",
+      "link": "https://cryptopanic.com/news/aave/23424989/Which-Ethereum-Ecosystem-Tokens-Is-Arthur-Hayes-Buying",
+      "pubDate": "2025-07-18T22:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AAVE",
+        "ENA"
+      ]
+    },
+    {
+      "title": "Is Polkadot Dead or Just Getting Started? Here is the Shocking Truth",
+      "link": "https://cryptopanic.com/news/polkadot/23425611/Is-Polkadot-Dead-or-Just-Getting-Started-Here-is-the-Shocking-Truth",
+      "pubDate": "2025-07-18T21:59:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "‘Made in USA’ Crypto Coins Surge as House Passes Landmark Bills",
+      "link": "https://cryptopanic.com/news/uniswap/23421832/Made-in-USA-Crypto-Coins-Surge-as-House-Passes-Landmark-Bills",
+      "pubDate": "2025-07-18T20:58:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "TEL",
+        "OP"
+      ]
+    },
+    {
+      "title": "Bitcoin’s lower support retests shift traders’ focus to XLM, LTC, ETC, BNB",
+      "link": "https://cryptopanic.com/news/litecoin/23421745/Bitcoins-lower-support-retests-shift-traders-focus-to-XLM-LTC-ETC-BNB",
+      "pubDate": "2025-07-18T20:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BNB",
+        "XLM"
+      ]
+    },
+    {
+      "title": "World Liberty plans to unlock WLFI token transferability within two months as pre-market trading pushes it to 11th-largest market cap",
+      "link": "https://cryptopanic.com/news/aave/23417549/World-Liberty-plans-to-unlock-WLFI-token-transferability-within-two-months-as-pre-market-trading-pushes-it-to-11th-largest-market-cap",
+      "pubDate": "2025-07-18T18:37:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "PEOPLE",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "Euler Finance and Brahma Introduce Swype.fun, a DeFi-Powered Credit Card on Base",
+      "link": "https://cryptopanic.com/news/aave/23417408/Euler-Finance-and-Brahma-Introduce-Swypefun-a-DeFi-Powered-Credit-Card-on-Base",
+      "pubDate": "2025-07-18T18:32:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "XLM could follow XRP’s monster rally and hit $1 soon: Fact or fiction?",
+      "link": "https://cryptopanic.com/news/stellar/23415532/XLM-could-follow-XRPs-monster-rally-and-hit-1-soon-Fact-or-fiction",
+      "pubDate": "2025-07-18T18:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Charles Schwab To Launch Bitcoin, Ethereum Trading Services (CORRECTED)",
+      "link": "https://cryptopanic.com/news/litecoin/23415723/Charles-Schwab-To-Launch-Bitcoin-Ethereum-Trading-Services-CORRECTED",
+      "pubDate": "2025-07-18T17:57:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "AYNI Gold-Backed Token: OTC Sale Begins as Gold Mining Sector Logs Increased Q2 Earnings",
+      "link": "https://cryptopanic.com/news/pax-gold/23414152/AYNI-Gold-Backed-Token-OTC-Sale-Begins-as-Gold-Mining-Sector-Logs-Increased-Q2-Earnings",
+      "pubDate": "2025-07-18T17:33:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "PAXG"
+      ]
+    },
+    {
+      "title": "Avalanche Bulls Eye Breakout, But Mid-Term Caution Clouds The View",
+      "link": "https://cryptopanic.com/news/avalanche-2/23414023/Avalanche-Bulls-Eye-Breakout-But-Mid-Term-Caution-Clouds-The-View",
+      "pubDate": "2025-07-18T17:30:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "MEI Pharma Announces Private Placement for $100 Million Litecoin Treasury Strategy",
+      "link": "https://cryptopanic.com/news/litecoin/23413663/MEI-Pharma-Announces-Private-Placement-for-100-Million-Litecoin-Treasury-Strategy",
+      "pubDate": "2025-07-18T17:24:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Why Is MEI Pharma Stock Soaring On Friday?",
+      "link": "https://cryptopanic.com/news/litecoin/23414615/Why-Is-MEI-Pharma-Stock-Soaring-On-Friday",
+      "pubDate": "2025-07-18T17:22:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "WHY"
+      ]
+    },
+    {
+      "title": "Charles Schwab ready to compete directly with Coinbase on Bitcoin, crypto offerings, says CEO",
+      "link": "https://cryptopanic.com/news/bitcoin/23413242/Charles-Schwab-ready-to-compete-directly-with-Coinbase-on-Bitcoin-crypto-offerings-says-CEO",
+      "pubDate": "2025-07-18T17:07:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Top brokerage company Charles Schwab is ready to compete with Coinbase as it gears toward launching spot Bitcoin and Ethereum trading, said CEO Rick Wurster on CNBC's 'Money Movers' this morning. Absolutely,\" said Wurster when asked whether Schwabs upcoming spot crypto trading would put it in direct competition with industry giants like Coinbase. \"If theyre buying their crypto on Coinbase, wed love to see them bring it back to Schwab. \"Apart from spot crypto trading, Charles Schwab is also sett",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "CRO Breaks Out With Momentum — Will the $0.18 Target Fall Next?",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/23413154/CRO-Breaks-Out-With-Momentum-Will-the-018-Target-Fall-Next",
+      "pubDate": "2025-07-18T16:49:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Ethereum bull run just starting, analyst says as whale scoops $70m ETH",
+      "link": "https://cryptopanic.com/news/ethereum/23413204/Ethereum-bull-run-just-starting-analyst-says-as-whale-scoops-70m-ETH",
+      "pubDate": "2025-07-18T16:47:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Whale buy Ethereum amid strong buying pressure. Institutional adoption continues with SharpLink Gaming’s massive purchases. Analysts predict ETH could explode amid numerous catalysts. Ethereum, the second-largest cryptocurrency by market capitalization, is eyeing a major breakout as price hovers above the $3,500 mark",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Litecoin Price Forecast: LTC reclaims $100 as NASDAQ-listed MEI Pharma unveils $100 million treasury",
+      "link": "https://cryptopanic.com/news/litecoin/23436029/Litecoin-Price-Forecast-LTC-reclaims-100-as-NASDAQ-listed-MEI-Pharma-unveils-100-million-treasury",
+      "pubDate": "2025-07-18T16:40:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "LTC Soars 3% as MEI Pharma Announces $100M Litecoin Treasury Strategy",
+      "link": "https://cryptopanic.com/news/litecoin/23411567/LTC-Soars-3-as-MEI-Pharma-Announces-100M-Litecoin-Treasury-Strategy",
+      "pubDate": "2025-07-18T16:20:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Nasdaq-listed MEI Pharma launches $100M Litecoin treasury plan, stock rockets 50%",
+      "link": "https://cryptopanic.com/news/litecoin/23410920/Nasdaq-listed-MEI-Pharma-launches-100M-Litecoin-treasury-plan-stock-rockets-50",
+      "pubDate": "2025-07-18T16:00:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Ethereum’s Breakout Above The MA50 Suggests Further Upside, Here’s The Target",
+      "link": "https://cryptopanic.com/news/ethereum/23410922/Ethereums-Breakout-Above-The-MA50-Suggests-Further-Upside-Heres-The-Target",
+      "pubDate": "2025-07-18T16:00:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum (ETH) has decisively broken above a resistance level, the 50-day Exponential Moving Average (EMA50), igniting renewed bullish momentum across the market. This breakout marks a significant shift in market trend, opening the door for a potential rally toward higher targets around the $4,000 level. Ethereum Targets $4,000 After EMA50 Breakout The Ethereum price has delivered an explosive rally after its recent breakout above the EMA50 barrier. Given this development, crypto analyst Doctor ",
+      "currencies": [
+        "ETH",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Uniswap – Why the $10-level could be critical for UNI’s future",
+      "link": "https://cryptopanic.com/news/uniswap/23410927/Uniswap-Why-the-10-level-could-be-critical-for-UNIs-future",
+      "pubDate": "2025-07-18T16:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "First Strategy, Now MEI Pharma: Litecoin Joins Bitcoin As Treasury Asset",
+      "link": "https://cryptopanic.com/news/litecoin/23410929/First-Strategy-Now-MEI-Pharma-Litecoin-Joins-Bitcoin-As-Treasury-Asset",
+      "pubDate": "2025-07-18T15:47:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Ethereum Price Prediction: Is $10K Within Reach in 2025?",
+      "link": "https://cryptopanic.com/news/ethereum/23410808/Ethereum-Price-Prediction-Is-10K-Within-Reach-in-2025",
+      "pubDate": "2025-07-18T15:46:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "With ETF inflows accelerating and no major policy headwinds from the Fed, market watchers say the uptrend could persist without […] The post Ethereum Price Prediction: Is $10K Within Reach in 2025? appeared first on Coindoo.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 19 July 2025: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/decentraland/23413925/Spell-Wallet-Daily-Puzzle-19-July-2025-Earn-Reward-of-1-MANA",
+      "pubDate": "2025-07-18T15:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "KuCoin Launches xStocks, Bringing Tokenized Equities Like Tesla and S&P 500 to Crypto",
+      "link": "https://cryptopanic.com/news/kucoin-shares/23409881/KuCoin-Launches-xStocks-Bringing-Tokenized-Equities-Like-Tesla-and-SP-500-to-Crypto",
+      "pubDate": "2025-07-18T15:27:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "KCS"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Big Pharma joins crypto with a private placement for $100 Million Litecoin Treasury Strategy",
+      "link": "https://cryptopanic.com/news/litecoin/23409891/Big-Pharma-joins-crypto-with-a-private-placement-for-100-Million-Litecoin-Treasury-Strategy",
+      "pubDate": "2025-07-18T15:24:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$67M For More ETH: Bit Digital Expands Its Ethereum Treasury Beyond 120,000 Coins",
+      "link": "https://cryptopanic.com/news/litecoin/23408572/67M-For-More-ETH-Bit-Digital-Expands-Its-Ethereum-Treasury-Beyond-120000-Coins",
+      "pubDate": "2025-07-18T14:44:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Avalanche inflows surge past $120M, longs hit 76%: AVAX breakout ahead?",
+      "link": "https://cryptopanic.com/news/avalanche-2/23406059/Avalanche-inflows-surge-past-120M-longs-hit-76-AVAX-breakout-ahead",
+      "pubDate": "2025-07-18T14:00:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "MultiBank Group to List MBG Token on Gate.io and MEXC During Official Token Generation Event",
+      "link": "https://cryptopanic.com/news/uniswap/23406023/MultiBank-Group-to-List-MBG-Token-on-Gateio-and-MEXC-During-Official-Token-Generation-Event",
+      "pubDate": "2025-07-18T13:54:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Bit Digital acquires 19,683 ETH, growing treasury to over 120,000 ETH",
+      "link": "https://cryptopanic.com/news/ethereum/23406005/Bit-Digital-acquires-19683-ETH-growing-treasury-to-over-120000-ETH",
+      "pubDate": "2025-07-18T13:48:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Bit Digital increased its ether treasury to about 120,000 ETH, chasing SharpLink and BitMine in the corporate race to accumulate Ethereum.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Crypto Price Analysis 7-18: BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, RIPPLE: XRP, NEAR PROTOCOL: NEAR",
+      "link": "https://cryptopanic.com/news/near/23406037/Crypto-Price-Analysis-7-18-BITCOIN-BTC-ETHEREUM-ETH-SOLANA-SOL-RIPPLE-XRP-NEAR-PROTOCOL-NEAR",
+      "pubDate": "2025-07-18T13:37:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "BlackRock’s Ethereum ETF Draws Record $546 Million in Inflows",
+      "link": "https://cryptopanic.com/news/ethereum/23405920/BlackRocks-Ethereum-ETF-Draws-Record-546-Million-in-Inflows",
+      "pubDate": "2025-07-18T13:37:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "BlackRock’s ETHA ETF posts record inflows as staking options and new regulatory momentum fuel investor demand for Ethereum-based funds.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Ethereum flips Costco, Johnson & Johnson as market cap grows by $150B this month",
+      "link": "https://cryptopanic.com/news/ethereum/23405654/Ethereum-flips-Costco-Johnson-Johnson-as-market-cap-grows-by-150B-this-month",
+      "pubDate": "2025-07-18T13:31:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum (ETH) has climbed 43% in a month, boosting its market cap past $435 billion and putting it ahead of retail giant Costco and healthcare heavyweight Johnson & Johnson in size, CompaniesMarketCap data shows. Ethereums market cap has climbed by over $100 billion since July 1. The second-largest crypto asset is now closing in on Mastercard and Netflix, the next two giants ahead of it by market cap. Mastercard is valued at over $504 billion, while Netflix sits at around $542 billion",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "3 Reasons Why Stellar XLM Can Explode!",
+      "link": "https://cryptopanic.com/news/stellar/23405960/3-Reasons-Why-Stellar-XLM-Can-Explode",
+      "pubDate": "2025-07-18T13:30:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Stellar’s XLM has 'most bullish chart' in crypto, mirroring XRP price",
+      "link": "https://cryptopanic.com/news/stellar/23405397/Stellars-XLM-has-039most-bullish-chart039-in-crypto-mirroring-XRP-price",
+      "pubDate": "2025-07-18T13:20:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "MEI Pharma Invests $100M in Litecoin Fund",
+      "link": "https://cryptopanic.com/news/litecoin/23404886/MEI-Pharma-Invests-100M-in-Litecoin-Fund",
+      "pubDate": "2025-07-18T13:17:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Uniswap Price Forecast: UNI surges 20% as DeFi TVL, open interest and volume scale up",
+      "link": "https://cryptopanic.com/news/uniswap/23436027/Uniswap-Price-Forecast-UNI-surges-20-as-DeFi-TVL-open-interest-and-volume-scale-up",
+      "pubDate": "2025-07-18T13:08:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Donald Trump Jr-Backed Thumzup Media Approves $250M In Bitcoin, Ethereum, XRP, SOL, Dogecoin Treasury Purchases",
+      "link": "https://cryptopanic.com/news/litecoin/23404998/Donald-Trump-Jr-Backed-Thumzup-Media-Approves-250M-In-Bitcoin-Ethereum-XRP-SOL-Dogecoin-Treasury-Purchases",
+      "pubDate": "2025-07-18T13:06:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "GSR Leads $100M Private Placement into Nasdaq-listed MEI Pharma to Launch First Institutional Litecoin Treasury Strategy Alongside Charlie Lee",
+      "link": "https://cryptopanic.com/news/litecoin/23403697/GSR-Leads-100M-Private-Placement-into-Nasdaq-listed-MEI-Pharma-to-Launch-First-Institutional-Litecoin-Treasury-Strategy-Alongside-Charlie-Lee",
+      "pubDate": "2025-07-18T13:02:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "BlackRock Increases Ethereum Holdings with Significant Purchase",
+      "link": "https://cryptopanic.com/news/ethereum/23403655/BlackRock-Increases-Ethereum-Holdings-with-Significant-Purchase",
+      "pubDate": "2025-07-18T13:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "According to TechFlow, on July 18, blockchain analytics platform Lookonchain reported that BlackRock acquired an additional 158,875 Ethereum (ETH) valued at approximately $574 million. This purchase brings the institution's two-day total to 363,445 ETH, worth around $1. 31 billion. Currently, BlackRock's total Ethereum holdings have reached 2. 46 million ETH, with an estimated value of $8. 9 billion.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polkadot Price Prediction: Can DOT Reach Double-Digit Price In July 2025 as Founder Unveils Proof-of-Personhood Plans?",
+      "link": "https://cryptopanic.com/news/polkadot/23403473/Polkadot-Price-Prediction-Can-DOT-Reach-Double-Digit-Price-In-July-2025-as-Founder-Unveils-Proof-of-Personhood-Plans",
+      "pubDate": "2025-07-18T12:57:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Brandt Flags XLM as “Most Bullish Chart” – $2 in Sight?",
+      "link": "https://cryptopanic.com/news/stellar/23403673/Brandt-Flags-XLM-as-Most-Bullish-Chart-2-in-Sight",
+      "pubDate": "2025-07-18T12:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Is Chainlink Ready for a Major Rally? All Eyes on $22 Resistance",
+      "link": "https://cryptopanic.com/news/chainlink/23401838/Is-Chainlink-Ready-for-a-Major-Rally-All-Eyes-on-22-Resistance",
+      "pubDate": "2025-07-18T12:08:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Market analyst Ali highlighted the growing strength in LINK’s technical setup, suggesting the asset is nearing a key resistance zone […] The post Is Chainlink Ready for a Major Rally? All Eyes on $22 Resistance appeared first on Coindoo.",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BlockDAG’s 50M Buyer Battles Turn Presale Into a High-Stakes Contest as ICP Rebounds & SEI Rallies on 3.2M Addresses",
+      "link": "https://cryptopanic.com/news/internet-computer/23413194/BlockDAGs-50M-Buyer-Battles-Turn-Presale-Into-a-High-Stakes-Contest-as-ICP-Rebounds-SEI-Rallies-on-32M-Addresses",
+      "pubDate": "2025-07-18T12:04:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ICP",
+        "SEI"
+      ]
+    },
+    {
+      "title": "This Pharma Firm Just Bet $100M on Litecoin – Here’s Why It Matters",
+      "link": "https://cryptopanic.com/news/litecoin/23401288/This-Pharma-Firm-Just-Bet-100M-on-Litecoin-Heres-Why-It-Matters",
+      "pubDate": "2025-07-18T12:01:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "BlockDAG, ARB, AVAX, and AAVE Headline This Summer’s Top Altcoins to Explore",
+      "link": "https://cryptopanic.com/news/avalanche-2/23401172/BlockDAG-ARB-AVAX-and-AAVE-Headline-This-Summers-Top-Altcoins-to-Explore",
+      "pubDate": "2025-07-18T12:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "AAVE",
+        "ARB"
+      ]
+    },
+    {
+      "title": "Algorand, Bonk and Remittix Skyrocket In July But Which Is Tipped For 10x Gains By September?",
+      "link": "https://cryptopanic.com/news/algorand/23401173/Algorand-Bonk-and-Remittix-Skyrocket-In-July-But-Which-Is-Tipped-For-10x-Gains-By-September",
+      "pubDate": "2025-07-18T12:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "ALGO",
+        "BONK"
+      ]
+    },
+    {
+      "title": "Ethereum Price Prediction: Can ETH Reach $10K in July 2025, As BlackRock Files For Staked Ethereum ETF?",
+      "link": "https://cryptopanic.com/news/ethereum/23401106/Ethereum-Price-Prediction-Can-ETH-Reach-10K-in-July-2025-As-BlackRock-Files-For-Staked-Ethereum-ETF",
+      "pubDate": "2025-07-18T11:43:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The Ethereum price has gained by 4% in the past 24 hours, rising to $3,614 in what has been an extremely bullish week for the altcoin.ETH is now up by 20% in seven days and by 43% in the past month, with its gains today coming as Ethereum ETFs marked $5.5 billion in total inflows since debuting last summer.And it’s possible that ETH ETFs will only get busier in the coming months, with major asset manager BlackRock filing yesterday to add staking to its Ethereum ETF",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 7
+      }
+    },
+    {
+      "title": "‘Early Signals’ of Altcoin Season as OG Tokens Pump Following XRP, BTC All-time Highs",
+      "link": "https://cryptopanic.com/news/litecoin/23401061/Early-Signals-of-Altcoin-Season-as-OG-Tokens-Pump-Following-XRP-BTC-All-time-Highs",
+      "pubDate": "2025-07-18T11:35:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Stellar Surges 61% Weekly, Peter Brandt Calls XLM the ‘Most Bullish’ Chart",
+      "link": "https://cryptopanic.com/news/stellar/23400415/Stellar-Surges-61-Weekly-Peter-Brandt-Calls-XLM-the-Most-Bullish-Chart",
+      "pubDate": "2025-07-18T11:18:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "XLM Price Prediction 2025: Can Stellar Hit $7 After 100% Surge in July?",
+      "link": "https://cryptopanic.com/news/stellar/23400284/XLM-Price-Prediction-2025-Can-Stellar-Hit-7-After-100-Surge-in-July",
+      "pubDate": "2025-07-18T11:12:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Manyu Price Prediction: Can This New Meme Coin Continue Its Surge After the KuCoin Listing?",
+      "link": "https://cryptopanic.com/news/kucoin-shares/23402809/Manyu-Price-Prediction-Can-This-New-Meme-Coin-Continue-Its-Surge-After-the-KuCoin-Listing",
+      "pubDate": "2025-07-18T11:02:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "KCS"
+      ]
+    },
+    {
+      "title": "Binance Launches Spot Altcoin Trading Festival",
+      "link": "https://cryptopanic.com/news/pancakeswap-token/23400529/Binance-Launches-Spot-Altcoin-Trading-Festival",
+      "pubDate": "2025-07-18T10:50:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "CAKE",
+        "PENGU"
+      ]
+    },
+    {
+      "title": "Why the Uniswap (UNI) Token is Surging Today",
+      "link": "https://cryptopanic.com/news/uniswap/23399139/Why-the-Uniswap-UNI-Token-is-Surging-Today",
+      "pubDate": "2025-07-18T10:45:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Bitcoin, Ethereum, XRP Lead Crypto Market Cap Rebound Above $4 Trillion",
+      "link": "https://cryptopanic.com/news/pancakeswap-token/23399153/Bitcoin-Ethereum-XRP-Lead-Crypto-Market-Cap-Rebound-Above-4-Trillion",
+      "pubDate": "2025-07-18T10:34:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "KuCoin Launches xStocks, Delivering a One-Stop Access Point to Top Global Tokenized Equities",
+      "link": "https://cryptopanic.com/news/kucoin-shares/23398115/KuCoin-Launches-xStocks-Delivering-a-One-Stop-Access-Point-to-Top-Global-Tokenized-Equities",
+      "pubDate": "2025-07-18T10:08:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "HTX Hot Listings Weekly Recap (July 7 – 14): Bitcoin Tops $120,000, New Tokens Listed on HTX Post Impressive Returns",
+      "link": "https://cryptopanic.com/news/huobi-token/23398769/HTX-Hot-Listings-Weekly-Recap-July-7-14-Bitcoin-Tops-120000-New-Tokens-Listed-on-HTX-Post-Impressive-Returns",
+      "pubDate": "2025-07-18T09:53:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "HT"
+      ]
+    },
+    {
+      "title": "Stellar Price Forecast: XLM Open Interest hits record high, bulls target key psychological level",
+      "link": "https://cryptopanic.com/news/stellar/23436024/Stellar-Price-Forecast-XLM-Open-Interest-hits-record-high-bulls-target-key-psychological-level",
+      "pubDate": "2025-07-18T09:37:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Nearly 100,000 Participations Recorded! HTX’s 12th Anniversary “Mars Program” Special Event Ignites a Frenzy",
+      "link": "https://cryptopanic.com/news/huobi-token/23398757/Nearly-100000-Participations-Recorded-HTXs-12th-Anniversary-Mars-Program-Special-Event-Ignites-a-Frenzy",
+      "pubDate": "2025-07-18T09:34:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HT"
+      ]
+    },
+    {
+      "title": "Nasdaq-listed Thumzup Media Corp. to invest $250M in crypto treasury",
+      "link": "https://cryptopanic.com/news/litecoin/23396856/Nasdaq-listed-Thumzup-Media-Corp-to-invest-250M-in-crypto-treasury",
+      "pubDate": "2025-07-18T09:19:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "XRP Hits $3.65, But These 3 Altcoins Are Outperforming It!",
+      "link": "https://cryptopanic.com/news/ripple/23393393/XRP-Hits-365-But-These-3-Altcoins-Are-Outperforming-It",
+      "pubDate": "2025-07-18T07:57:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The post XRP Hits $3. 65. After years of waiting, the XRP community finally saw the breakout they had been hoping for",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Coinbase Listing Sparks Caldera (ERA) Price Surge, But Airdrop Pressure Holds Firm",
+      "link": "https://cryptopanic.com/news/kucoin-shares/23394631/Coinbase-Listing-Sparks-Caldera-ERA-Price-Surge-But-Airdrop-Pressure-Holds-Firm",
+      "pubDate": "2025-07-18T07:35:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "KCS",
+        "ERA"
+      ]
+    },
+    {
+      "title": "MEI Pharma Launches $100 Million Litecoin Treasury Strategy",
+      "link": "https://cryptopanic.com/news/litecoin/23390239/MEI-Pharma-Launches-100-Million-Litecoin-Treasury-Strategy",
+      "pubDate": "2025-07-18T06:05:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Thumzup media approved to hold $250M in crypto assets",
+      "link": "https://cryptopanic.com/news/litecoin/23389500/Thumzup-media-approved-to-hold-250M-in-crypto-assets",
+      "pubDate": "2025-07-18T05:40:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Litecoin Price Skyrockets as Crypto Market Nears $4T—$120 Next?",
+      "link": "https://cryptopanic.com/news/litecoin/23388493/Litecoin-Price-Skyrockets-as-Crypto-Market-Nears-4T120-Next",
+      "pubDate": "2025-07-18T04:53:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "8 Days Left: BlockDAG’s Launches NO VESTING PASS as AAVE Hits $331 & Ondo Acquires Strangelove",
+      "link": "https://cryptopanic.com/news/aave/23386610/8-Days-Left-BlockDAGs-Launches-NO-VESTING-PASS-as-AAVE-Hits-331-Ondo-Acquires-Strangelove",
+      "pubDate": "2025-07-18T03:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "AAVE",
+        "ONDO"
+      ]
+    },
+    {
+      "title": "SharpLink Gaming adds $118 million worth of Ethereum, extending lead as largest corporate ether holder",
+      "link": "https://cryptopanic.com/news/ethereum/23386562/SharpLink-Gaming-adds-118-million-worth-of-Ethereum-extending-lead-as-largest-corporate-ether-holder",
+      "pubDate": "2025-07-18T02:34:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Sharplink Gaming became the largest corporate holder of ether earlier this week, surpassing the Ethereum Foundation.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Nasdaq-listed Thumzup authorized to hold up to $250M in BTC, ETH, XRP, and DOGE",
+      "link": "https://cryptopanic.com/news/litecoin/23386543/Nasdaq-listed-Thumzup-authorized-to-hold-up-to-250M-in-BTC-ETH-XRP-and-DOGE",
+      "pubDate": "2025-07-18T02:33:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Here is What to Expect From XRP After the Recent ATH",
+      "link": "https://cryptopanic.com/news/ripple/23385905/Here-is-What-to-Expect-From-XRP-After-the-Recent-ATH",
+      "pubDate": "2025-07-18T02:01:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Analysts say the rally is being powered by aggressive whale accumulation — over 2.",
+      "currencies": [
+        "XRP",
+        "ATH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ethereum breaks $3,600 barrier, gains 7.48% in 24 hours",
+      "link": "https://cryptopanic.com/news/ethereum/23385707/Ethereum-breaks-3600-barrier-gains-748-in-24-hours",
+      "pubDate": "2025-07-18T01:52:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "18-7-2025 – Ethereum has surpassed the $3,600 mark, trading at $3,600. 63 USDT, with a 7. 48% increase over the past 24 hours, according to Binance Market Data. The surge reflects renewed investor confidence and heightened activity on the Ethereum network",
+      "currencies": [
+        "ETH",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 6
+      }
+    }
+  ]
+}

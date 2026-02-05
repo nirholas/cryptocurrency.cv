@@ -1,0 +1,27 @@
+{
+  "date": "2017-12-13",
+  "fetchedAt": "2026-02-05T07:27:06.995Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ripple Soars to New High Following the Rally of Bitcoin, Ether and Litecoin",
+      "link": "https://cryptopanic.com/news/litecoin/582070/Ripple-Soars-to-New-High-Following-the-Rally-of-Bitcoin-Ether-and-Litecoin",
+      "pubDate": "2017-12-13T16:00:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XRP",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

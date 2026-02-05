@@ -1,0 +1,64 @@
+{
+  "date": "2020-02-03",
+  "fetchedAt": "2026-02-05T07:27:06.958Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA Founder David S?nsteb? Sets Record Straight About His Spat with Sergey Ivancheglo",
+      "link": "https://cryptopanic.com/news/7830219/IOTA-Founder-David-Snsteb-Sets-Record-Straight-About-His-Spat-with-Sergey-Ivancheglo",
+      "pubDate": "2020-02-03T19:14:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The IOTA Week: The Positive News That Can Explain IOTA’s 40% Surge Over The Past 7 Days",
+      "link": "https://cryptopanic.com/news/7828188/The-IOTA-Week-The-Positive-News-That-Can-Explain-IOTAs-40-Surge-Over-The-Past-7-Days",
+      "pubDate": "2020-02-03T15:05:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin, Ether, and XRP Weekly Market Update February 3, 2020",
+      "link": "https://cryptopanic.com/news/7826026/Bitcoin-Ether-and-XRP-Weekly-Market-Update-February-3-2020",
+      "pubDate": "2020-02-03T10:00:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "XRP",
+        "LTC",
+        "ICX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

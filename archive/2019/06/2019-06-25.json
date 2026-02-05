@@ -1,0 +1,42 @@
+{
+  "date": "2019-06-25",
+  "fetchedAt": "2026-02-05T07:27:08.684Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Walmart uses Vechain (VET) to drastically improve food safety",
+      "link": "https://cryptopanic.com/news/vechain/5832948/Walmart-uses-Vechain-VET-to-drastically-improve-food-safety",
+      "pubDate": "2019-06-25T14:07:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "TRON Foundation Gears Up for the Largest TRX Buyback",
+      "link": "https://cryptopanic.com/news/tron/5832647/TRON-Foundation-Gears-Up-for-the-Largest-TRX-Buyback",
+      "pubDate": "2019-06-25T13:31:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

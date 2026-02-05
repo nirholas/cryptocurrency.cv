@@ -1,0 +1,465 @@
+{
+  "date": "2021-06-17",
+  "fetchedAt": "2026-02-05T07:27:06.853Z",
+  "articleCount": 30,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Theta extending development compatibility with Ethereum with a new RPC API suite, Web3 tools, Metamask integration…",
+      "link": "https://cryptopanic.com/news/12152826/Theta-extending-development-compatibility-with-Ethereum-with-a-new-RPC-API-suite-Web3-tools-Metamask-integration",
+      "pubDate": "2021-06-17T22:59:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "-",
+      "currencies": [
+        "ETH",
+        "THETA",
+        "TFUEL"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "KSM Finds Support After Breakdown",
+      "link": "https://cryptopanic.com/news/12146306/KSM-Finds-Support-After-Breakdown",
+      "pubDate": "2021-06-17T19:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Kusama (KSM) has been moving upwards since May 19, but broke down from an ascending support line on June 15",
+      "currencies": [
+        "KSM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "NASCAR Driver Landon Cassill’s Salary Will Now Be Paid In Bitcoin And Litecoin",
+      "link": "https://cryptopanic.com/news/litecoin/12146052/NASCAR-Driver-Landon-Cassills-Salary-Will-Now-Be-Paid-In-Bitcoin-And-Litecoin",
+      "pubDate": "2021-06-17T17:38:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NASCAR driver Landon Cassill has struck a racing deal that will see him become the first such driver whose entire salary will be paid in cryptocurrency. According to a report from NBC Sports, Cassill has signed a contract with the Voyager crypto brokerage that requires him to race in 19 events in exchange for digital […]",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We continue to add exchange listings for the Glitzkoin GTN token - also trading now on BankCex. Our CEO explains…",
+      "link": "https://cryptopanic.com/news/12150704/We-continue-to-add-exchange-listings-for-the-Glitzkoin-GTN-token-also-trading-now-on-BankCex-Our-CEO-explains",
+      "pubDate": "2021-06-17T16:40:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "BIC’s Video News Show: Is Telcoin a Good Investment?",
+      "link": "https://cryptopanic.com/news/12145857/BICs-Video-News-Show-Is-Telcoin-a-Good-Investment",
+      "pubDate": "2021-06-17T16:17:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "RT @CoinRivet: $ETN listed on @coinexcom with both USDT and BTC trading pairs .",
+      "link": "https://cryptopanic.com/news/12145582/RT-CoinRivet-ETN-listed-on-coinexcom-with-both-USDT-and-BTC-trading-pairs",
+      "pubDate": "2021-06-17T15:19:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "NASCAR Driver Landon Cassill to Receive His Salary in Bitcoin and Litecoin",
+      "link": "https://cryptopanic.com/news/litecoin/12145505/NASCAR-Driver-Landon-Cassill-to-Receive-His-Salary-in-Bitcoin-and-Litecoin",
+      "pubDate": "2021-06-17T14:54:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Crypto is permeating the auto race industry, with Landon Cassill dumping cold hard cash for Bitcoin and Litecoin",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 41,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @gregoryklumov: “We want to be the bridge between crypto platforms and our 70 million merchants around the world. We see stablecoin pla…",
+      "link": "https://cryptopanic.com/news/12152389/RT-gregoryklumov-We-want-to-be-the-bridge-between-crypto-platforms-and-our-70-million-merchants-around-the-world-We-see-stablecoin-pla",
+      "pubDate": "2021-06-17T14:43:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "There are multiple ways to make money in the #cryptocurrency world. There are even more ways to lose your fortune h…",
+      "link": "https://cryptopanic.com/news/12152390/There-are-multiple-ways-to-make-money-in-the-cryptocurrency-world-There-are-even-more-ways-to-lose-your-fortune-h",
+      "pubDate": "2021-06-17T14:42:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "McLaren Formula One Team Partners With Tezos to Create NFT Collection",
+      "link": "https://cryptopanic.com/news/12145423/McLaren-Formula-One-Team-Partners-With-Tezos-to-Create-NFT-Collection",
+      "pubDate": "2021-06-17T14:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "British Formula One team McLaren has announced a partnership with Tezos Network to bring its non-fungible token (NFT) collection to fans.",
+      "currencies": [
+        "XTZ",
+        "CHZ"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Dropping to $1,800 is Probable With a Rising BTC – Report",
+      "link": "https://cryptopanic.com/news/ethereum/12145140/Ethereum-Dropping-to-1800-is-Probable-With-a-Rising-BTC-Report",
+      "pubDate": "2021-06-17T13:13:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin’s dominance is once again on the rise and at 45.89% Such a rise usually causes a reallocation of capital away from Ethereum and alts, back to Bitcoin Ethereum risks dropping to $1,800 due to the increased influence of Bitcoin $2k remains the support level to watch for Ethereum A rise in Bitcoin’s dominance could cause Ethereum to lose several support zones and head to the $1,800 price...",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 4
+      }
+    },
+    {
+      "title": "2nd Most Successful Formula 1 Team, McLaren, Picks Tezos to Build NFT Platform on It",
+      "link": "https://cryptopanic.com/news/12145063/2nd-Most-Successful-Formula-1-Team-McLaren-Picks-Tezos-to-Build-NFT-Platform-on-It",
+      "pubDate": "2021-06-17T12:51:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "British motor racing team McLaren, that comes second after Ferrari by race wins, has partnered with Tezos to create an “NFT platform with fan experience at the heart”",
+      "currencies": [
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "McLaren Racing Taps Tezos to Launch NFT Platform",
+      "link": "https://cryptopanic.com/news/12145019/McLaren-Racing-Taps-Tezos-to-Launch-NFT-Platform",
+      "pubDate": "2021-06-17T12:49:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "McLaren Racing has partnered with Tezos to create a new NFT platform aimed at enhancing fan engagement and digital collectibles. This collaboration will allow fans to purchase, trade, and showcase unique digital assets related to the racing team, leveraging Tezos’ blockchain technology for secure transactions and authenticity.",
+      "currencies": [
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "McLaren Racing has selected #Tezos to become the team’s Official Technical Partner in a new multi-year technical pa…",
+      "link": "https://cryptopanic.com/news/12144887/McLaren-Racing-has-selected-Tezos-to-become-the-teams-Official-Technical-Partner-in-a-new-multi-year-technical-pa",
+      "pubDate": "2021-06-17T12:11:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "McLaren Racing has selected #Tezos to become the team’s Official Blockchain Partner in a new multi-year technical p…",
+      "link": "https://cryptopanic.com/news/12144871/McLaren-Racing-has-selected-Tezos-to-become-the-teams-Official-Blockchain-Partner-in-a-new-multi-year-technical-p",
+      "pubDate": "2021-06-17T12:07:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Today is Technology Thursday, so here's a brief explanation about the characteristics of PoC that supports Fruits…",
+      "link": "https://cryptopanic.com/news/12150591/Today-is-Technology-Thursday-so-heres-a-brief-explanation-about-the-characteristics-of-PoC-that-supports-Fruits",
+      "pubDate": "2021-06-17T12:07:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FRTS"
+      ]
+    },
+    {
+      "title": "McLaren Racing signs Tezos as blockchain and NFT partner",
+      "link": "https://cryptopanic.com/news/12144732/McLaren-Racing-signs-Tezos-as-blockchain-and-NFT-partner",
+      "pubDate": "2021-06-17T11:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "McLaren Racing has selected Tezos to become the team’s Official Blockchain Partner in a new multi-year technical partnership across Formula 1, INDYCAR, and esports, it said in a release shared with CryptoSlate.",
+      "currencies": [
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 22,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "What Do Kusama, Polkadot and Your Spare Crypto Holdings Have in Common?",
+      "link": "https://cryptopanic.com/news/polkadot/12144704/What-Do-Kusama-Polkadot-and-Your-Spare-Crypto-Holdings-Have-in-Common",
+      "pubDate": "2021-06-17T10:58:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "What do Kusama, Polkadot and your spare cryptoasset holdings have in common? Parachain Slot Auctions, that’s what. Kusama and Polkadot which are built on the same architecture, one designed for wild testing of new codes and projects, the other more targeted at enterprise and businesses, both give developers and teams the chance to be part […]",
+      "currencies": [
+        "DOT",
+        "KSM"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @kwikswapdex: Huge Announcement! Kwikswap DEX is now LIVE on REEF Chain Testnet! Check it out! @ReefDeFi @RussiaReef for full video http…",
+      "link": "https://cryptopanic.com/news/12152278/RT-kwikswapdex-Huge-Announcement-Kwikswap-DEX-is-now-LIVE-on-REEF-Chain-Testnet-Check-it-out-ReefDeFi-RussiaReef-for-full-video-http",
+      "pubDate": "2021-06-17T10:47:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ]
+    },
+    {
+      "title": "Shiba Inu (SHIB) Subreddit Subscribers Have Grown By 59,381% in Q2",
+      "link": "https://cryptopanic.com/news/shiba-inu/12144626/Shiba-Inu-SHIB-Subreddit-Subscribers-Have-Grown-By-59381-in-Q2",
+      "pubDate": "2021-06-17T10:17:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "r/ShibaInuCoin subscribers have grown by 59,381% in Q2 of 2021 There were only 90 subscribers in early April, now r/ShibaInuCoin has 53,533 Shiba Inu’s popularity has led to a listing of SHIB on Coinbase Pro However, deposits and trading of Shiba Inu ran into technical difficulties ShibaSwap is also on the horizon and SHIB could continue to thrive The number of subscribers to the r/ShibaInuCoin...",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 36,
+        "negative": 12
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "#XWC  What's going on this prowess today?",
+      "link": "https://cryptopanic.com/news/12144543/XWC-Whats-going-on-this-prowess-today",
+      "pubDate": "2021-06-17T09:44:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XWC"
+      ]
+    },
+    {
+      "title": "Tron (TRX) Ranks 1st in Transactions Per Second, Eclipsing ADA and XRP",
+      "link": "https://cryptopanic.com/news/tron/12144554/Tron-TRX-Ranks-1st-in-Transactions-Per-Second-Eclipsing-ADA-and-XRP",
+      "pubDate": "2021-06-17T09:41:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "According to Coinmetrics, Tron is the fastest blockchain in terms of transactions per second Tron’s throughput exceeds that of Bitcoin, Ethereum, Cardano and XRP Tron’s users continue to grow with the network exceeding 40 million unique accounts However, TRX is currently trading above the 200-day moving average with a potential death cross, only weeks away The Tron (TRX) network ranks first in...",
+      "currencies": [
+        "ADA",
+        "XRP",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @LuksoCat: My first write up on @lukso_io, I hope to continue to shed light on the nuances of the project that many may be missing. @fei…",
+      "link": "https://cryptopanic.com/news/12151232/RT-LuksoCat-My-first-write-up-on-lukso_io-I-hope-to-continue-to-shed-light-on-the-nuances-of-the-project-that-many-may-be-missing-fei",
+      "pubDate": "2021-06-17T07:33:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "Celsius Co-Founder and CEO Raises His Year End Target for Bitcoin to $160,000",
+      "link": "https://cryptopanic.com/news/12143388/Celsius-Co-Founder-and-CEO-Raises-His-Year-End-Target-for-Bitcoin-to-160000",
+      "pubDate": "2021-06-17T07:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "On Monday (June 14), Alex Mashinsky, Co-founder, Chairman, and CEO of lending platform Celsius Network predicted that Bitcoin’s price could reach $160,000 by the end of this year. Here’s some information about Mashinsky from his bio page on the Celsius website: “Alex is one of the inventors of VOIP (Voice Over Internet Protocol) with a […]",
+      "currencies": [
+        "BTC",
+        "CEL"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BORA developer WAY2BIT signed a contract to use BORA tokens in global game developer Gala Lab's PC MMORPG games 'Fl…",
+      "link": "https://cryptopanic.com/news/12149338/BORA-developer-WAY2BIT-signed-a-contract-to-use-BORA-tokens-in-global-game-developer-Gala-Labs-PC-MMORPG-games-Fl",
+      "pubDate": "2021-06-17T06:18:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BORA"
+      ]
+    },
+    {
+      "title": "We are thrilled to announce that #TWIP has joined our merchant network. #TWIP is a platform that enables donation a…",
+      "link": "https://cryptopanic.com/news/12142673/We-are-thrilled-to-announce-that-TWIP-has-joined-our-merchant-network-TWIP-is-a-platform-that-enables-donation-a?mtm_campaign=API-OFA",
+      "pubDate": "2021-06-17T04:17:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PCI"
+      ]
+    },
+    {
+      "title": "To date, we have burned  over 1,680,000 τDoge and 21.21 τBTC! When the TWAP price of either Tau Asset climbs above…",
+      "link": "https://cryptopanic.com/news/12140185/To-date-we-have-burned-over-1680000-Doge-and-2121-BTC-When-the-TWAP-price-of-either-Tau-Asset-climbs-above",
+      "pubDate": "2021-06-17T03:35:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTCST"
+      ]
+    },
+    {
+      "title": "RT @KyleLaffey: I made a stupid mistake today & updated the @ThetaDrop Twitter account birthday to May 2021 (when our first WPT drop launch…",
+      "link": "https://cryptopanic.com/news/theta-token/12143559/RT-KyleLaffey-I-made-a-stupid-mistake-today-amp-updated-the-ThetaDrop-Twitter-account-birthday-to-May-2021-when-our-first-WPT-drop-launch",
+      "pubDate": "2021-06-17T03:15:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "TA: Bitcoin Dips From $40K, Here’s Why Uptrend Is Still Intact In BTC",
+      "link": "https://cryptopanic.com/news/near/12139634/TA-Bitcoin-Dips-From-40K-Heres-Why-Uptrend-Is-Still-Intact-In-BTC",
+      "pubDate": "2021-06-17T03:08:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin price started a downside correction from well above $40,000 against the US Dollar. BTC is now trading near a major support at $38,000, where the bulls are currently active. Bitcoin started a downside correction after it failed to stay above $40,000. The price is currently just below $39,000 and the 100 hourly simple moving […]",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "92,162kg of plastic waste recovered from oceans in May 2021 by @ReseaP using our blockchain and @DNV_Assurance!…",
+      "link": "https://cryptopanic.com/news/12139491/92162kg-of-plastic-waste-recovered-from-oceans-in-May-2021-by-ReseaP-using-our-blockchain-and-DNV_Assurance",
+      "pubDate": "2021-06-17T01:55:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "VET",
+        "VTHO"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

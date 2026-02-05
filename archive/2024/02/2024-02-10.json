@@ -1,0 +1,568 @@
+{
+  "date": "2024-02-10",
+  "fetchedAt": "2026-02-05T07:27:08.079Z",
+  "articleCount": 36,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Dydx Foundation Receives $30M From Community Treasury to Propel Strategic Initiatives",
+      "link": "https://cryptopanic.com/news/19243951/Dydx-Foundation-Receives-30M-From-Community-Treasury-to-Propel-Strategic-Initiatives",
+      "pubDate": "2024-02-10T23:30:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DYDX"
+      ]
+    },
+    {
+      "title": "Crypto Analyst Says Bitcoin At $100,000 Not Far Off, Here’s When",
+      "link": "https://cryptopanic.com/news/19243937/Crypto-Analyst-Says-Bitcoin-At-100000-Not-Far-Off-Heres-When",
+      "pubDate": "2024-02-10T23:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "ADA",
+        "SOL",
+        "EVER"
+      ]
+    },
+    {
+      "title": "Solana explains outage as SOL continues to pump",
+      "link": "https://cryptopanic.com/news/19243922/Solana-explains-outage-as-SOL-continues-to-pump",
+      "pubDate": "2024-02-10T22:30:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The recent disruption was the first in a year since the 20-hour network jam recorded in February 2023.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin ETFs see high volume, Binance delists Monero, and ARK plans staking Ether: Hodler’s Digest, Feb. 4-10",
+      "link": "https://cryptopanic.com/news/19243919/Bitcoin-ETFs-see-high-volume-Binance-delists-Monero-and-ARK-plans-staking-Ether-Hodlers-Digest-Feb-4-10",
+      "pubDate": "2024-02-10T22:21:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XMR",
+        "ARK"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin ETFs hit $10B milestone just one month after approval",
+      "link": "https://cryptopanic.com/news/bitcoin/19243895/Bitcoin-ETFs-hit-10B-milestone-just-one-month-after-approval",
+      "pubDate": "2024-02-10T21:56:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The nine spot Bitcoin ETFs reached a significant milestone of $10 billion in assets under management on Feb. 9.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Kraken, ETF issuers, and other crypto giants pass on Super Bowl ads: Fox Business",
+      "link": "https://cryptopanic.com/news/19243843/Kraken-ETF-issuers-and-other-crypto-giants-pass-on-Super-Bowl-ads-Fox-Business",
+      "pubDate": "2024-02-10T20:58:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "DFI"
+      ]
+    },
+    {
+      "title": "XRP Holders Demand Answers for Depressing Price Performance",
+      "link": "https://cryptopanic.com/news/19243787/XRP-Holders-Demand-Answers-for-Depressing-Price-Performance",
+      "pubDate": "2024-02-10T20:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ]
+    },
+    {
+      "title": "Shiba Inu Rallies as Robinhood Partners with MetaMask, Streamlining SHIB Purchases for Millions Of Customers",
+      "link": "https://cryptopanic.com/news/19243725/Shiba-Inu-Rallies-as-Robinhood-Partners-with-MetaMask-Streamlining-SHIB-Purchases-for-Millions-Of-Customers",
+      "pubDate": "2024-02-10T19:06:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BUSD",
+        "SHIB"
+      ]
+    },
+    {
+      "title": "Our Most Read Stories This Week: Morpheus AI, Manta Token, Dymension Airdrop, ERC-404",
+      "link": "https://cryptopanic.com/news/19243731/Our-Most-Read-Stories-This-Week-Morpheus-AI-Manta-Token-Dymension-Airdrop-ERC-404?mtm_campaign=API-OFA",
+      "pubDate": "2024-02-10T19:03:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DYM"
+      ]
+    },
+    {
+      "title": "Charles Hoskinson Forecasts Cardano’s Triumph Over Ethereum with Upcoming Developments",
+      "link": "https://cryptopanic.com/news/19243626/Charles-Hoskinson-Forecasts-Cardanos-Triumph-Over-Ethereum-with-Upcoming-Developments",
+      "pubDate": "2024-02-10T17:37:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Charles Hoskinson, the founder of Cardano, has expressed confidence in the future of the network, underscoring its potential to surpass Ethereum in the realm of decentralized finance (DeFi) and blockchain innovation.",
+      "currencies": [
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 26,
+        "negative": 10
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "A CRAZY Turn Ahead for Solana (SOL), Ripple (XRP), and Sei (SEI)",
+      "link": "https://cryptopanic.com/news/19243611/A-CRAZY-Turn-Ahead-for-Solana-SOL-Ripple-XRP-and-Sei-SEI",
+      "pubDate": "2024-02-10T17:15:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "SEI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Justin Sun Burns $50 Million Huobi Token (HT)",
+      "link": "https://cryptopanic.com/news/19243549/Justin-Sun-Burns-50-Million-Huobi-Token-HT",
+      "pubDate": "2024-02-10T16:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "⁠Starting Your Crypto Journey in 2024 with $1000: A Beginner's Strategy Guide",
+      "link": "https://cryptopanic.com/news/19243539/Starting-Your-Crypto-Journey-in-2024-with-1000-A-Beginners-Strategy-Guide",
+      "pubDate": "2024-02-10T16:12:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "APT",
+        "MNT"
+      ]
+    },
+    {
+      "title": "Maximizing Financial Opportunities: Top Cryptocurrencies Set to Excel in 2024",
+      "link": "https://cryptopanic.com/news/19243513/Maximizing-Financial-Opportunities-Top-Cryptocurrencies-Set-to-Excel-in-2024",
+      "pubDate": "2024-02-10T15:26:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MNT",
+        "ARB",
+        "OP",
+        "ONDO"
+      ]
+    },
+    {
+      "title": "EigenLayer’s TVL hits $6 billion after opening new restaking window",
+      "link": "https://cryptopanic.com/news/19243470/EigenLayers-TVL-hits-6-billion-after-opening-new-restaking-window",
+      "pubDate": "2024-02-10T15:10:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "This Blockchain Game App Got Hacked $31 Million",
+      "link": "https://cryptopanic.com/news/19243467/This-Blockchain-Game-App-Got-Hacked-31-Million",
+      "pubDate": "2024-02-10T14:49:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PLA"
+      ]
+    },
+    {
+      "title": "dYdX Foundation secures $30M in funding from community treasury for ecosystem growth",
+      "link": "https://cryptopanic.com/news/19243421/dYdX-Foundation-secures-30M-in-funding-from-community-treasury-for-ecosystem-growth",
+      "pubDate": "2024-02-10T14:28:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DYDX"
+      ]
+    },
+    {
+      "title": "3 cryptocurrencies to reach $10 billion market cap in 2024",
+      "link": "https://cryptopanic.com/news/19243400/3-cryptocurrencies-to-reach-10-billion-market-cap-in-2024",
+      "pubDate": "2024-02-10T14:26:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Good fundamental cryptocurrencies with lower market caps can present appealing risk-reward potential in the constantly evolving crypto ecosystem. In this … Continue reading",
+      "currencies": [
+        "XMR",
+        "MKR",
+        "RUNE"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Whale Shifts Millions of XRP Tokens to Binance, Here's Why",
+      "link": "https://cryptopanic.com/news/19243396/XRP-Whale-Shifts-Millions-of-XRP-Tokens-to-Binance-Heres-Why",
+      "pubDate": "2024-02-10T14:22:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Mysterious whale stirs speculation with millions of XRP shift to Binance",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "3 Inexpensive Cryptos Poised for 10x Gains in 2024",
+      "link": "https://cryptopanic.com/news/19243389/3-Inexpensive-Cryptos-Poised-for-10x-Gains-in-2024",
+      "pubDate": "2024-02-10T14:19:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "APT",
+        "MNT",
+        "ARB"
+      ]
+    },
+    {
+      "title": "Bitcoin Tastes $48,000 As Ethereum And Avalanche Follow, Led By Record ETF Asset Inflows: The Week In Retrospect",
+      "link": "https://cryptopanic.com/news/19243392/Bitcoin-Tastes-48000-As-Ethereum-And-Avalanche-Follow-Led-By-Record-ETF-Asset-Inflows-The-Week-In-Retrospect",
+      "pubDate": "2024-02-10T14:08:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "DOGE",
+        "AVAX",
+        "IMX",
+        "BONK"
+      ]
+    },
+    {
+      "title": "Solana's Shiba Inu, Bonk (BONK), Skyrockets 471% in Volumes in Epic Comeback",
+      "link": "https://cryptopanic.com/news/19243258/Solanas-Shiba-Inu-Bonk-BONK-Skyrockets-471-in-Volumes-in-Epic-Comeback",
+      "pubDate": "2024-02-10T12:24:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Increase in trade volume coincides with 13% rise in BONK price",
+      "currencies": [
+        "SOL",
+        "SHIB",
+        "BONK"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "What Is Ripple?",
+      "link": "https://cryptopanic.com/news/19243234/What-Is-Ripple",
+      "pubDate": "2024-02-10T12:00:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "LTC",
+        "BCH",
+        "ETC",
+        "FX"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "OKX Expands Presence in Argentina, Boosting Crypto Access",
+      "link": "https://cryptopanic.com/news/19243199/OKX-Expands-Presence-in-Argentina-Boosting-Crypto-Access",
+      "pubDate": "2024-02-10T11:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Mina Protocol Advances with Testworld 2.0 and Mainnet Upgrade",
+      "link": "https://cryptopanic.com/news/19243122/Mina-Protocol-Advances-with-Testworld-20-and-Mainnet-Upgrade",
+      "pubDate": "2024-02-10T10:26:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MINA"
+      ]
+    },
+    {
+      "title": "Trader Says Altcoin That’s Exploded Over 90% in Four Days To Go Way Higher, Updates Outlook on Bitcoin",
+      "link": "https://cryptopanic.com/news/19243109/Trader-Says-Altcoin-Thats-Exploded-Over-90-in-Four-Days-To-Go-Way-Higher-Updates-Outlook-on-Bitcoin?mtm_campaign=API-OFA",
+      "pubDate": "2024-02-10T10:15:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DYM"
+      ]
+    },
+    {
+      "title": "Senior Solana Executive Speaks on the Future of SOL",
+      "link": "https://cryptopanic.com/news/19243075/Senior-Solana-Executive-Speaks-on-the-Future-of-SOL",
+      "pubDate": "2024-02-10T09:52:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana Foundation strategy manager Austin Federa made interesting statements about SOL in his interview. Continue Reading: Senior Solana Executive Speaks on the Future of SOL",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 7
+      }
+    },
+    {
+      "title": "DFINITY blockchain announces new service to help streamline Dapps development",
+      "link": "https://cryptopanic.com/news/19243120/DFINITY-blockchain-announces-new-service-to-help-streamline-Dapps-development",
+      "pubDate": "2024-02-10T09:43:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ICP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "dYdX Foundation Secures $30M From Community Treasury",
+      "link": "https://cryptopanic.com/news/19243043/dYdX-Foundation-Secures-30M-From-Community-Treasury",
+      "pubDate": "2024-02-10T09:30:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DYDX"
+      ]
+    },
+    {
+      "title": "24 Crypto Update, 09 Feb: Crypto market Ride High on Rally",
+      "link": "https://cryptopanic.com/news/19242839/24-Crypto-Update-09-Feb-Crypto-market-Ride-High-on-Rally",
+      "pubDate": "2024-02-10T06:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "XRP",
+        "SOL",
+        "AVAX",
+        "XMR",
+        "SUI",
+        "BONK"
+      ]
+    },
+    {
+      "title": "Helium (HNT) whales invest in the best A.I technology, ROI set at 100x",
+      "link": "https://cryptopanic.com/news/19242824/Helium-HNT-whales-invest-in-the-best-AI-technology-ROI-set-at-100x",
+      "pubDate": "2024-02-10T05:45:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ]
+    },
+    {
+      "title": "Bitcoin Price Faces Threat As Analyst Foresees $55 Million Liquidation",
+      "link": "https://cryptopanic.com/news/19242808/Bitcoin-Price-Faces-Threat-As-Analyst-Foresees-55-Million-Liquidation?mtm_campaign=API-OFA",
+      "pubDate": "2024-02-10T05:19:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "ALI"
+      ]
+    },
+    {
+      "title": "Flare Network Heats Up With 66 Million $FLR Token Burn, Bringing Total to Near 400 Million",
+      "link": "https://cryptopanic.com/news/19242748/Flare-Network-Heats-Up-With-66-Million-FLR-Token-Burn-Bringing-Total-to-Near-400-Million",
+      "pubDate": "2024-02-10T03:23:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "FLR"
+      ]
+    },
+    {
+      "title": "US Senators Call Out SEC’s Chairman For “Misleading Representations” In Crypto Case",
+      "link": "https://cryptopanic.com/news/19242741/US-Senators-Call-Out-SECs-Chairman-For-Misleading-Representations-In-Crypto-Case",
+      "pubDate": "2024-02-10T03:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Following the recent dismissal of the case against crypto firm Digital Licensing by the US Securities and Exchange Commission (SEC), a group of US Senators have sent a letter to the agency’s chair, Gary Gensler, expressing concerns about the handling of the case. Related Reading: US Senator Defends Crypto: Crack Down On Bad Actors, Not […]",
+      "currencies": [
+        "BTC",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Can Bitcoin Overcome Past Trends? Examining The Pre-Halving Rally And Resistance Levels",
+      "link": "https://cryptopanic.com/news/19242709/Can-Bitcoin-Overcome-Past-Trends-Examining-The-Pre-Halving-Rally-And-Resistance-Levels",
+      "pubDate": "2024-02-10T02:30:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "XRP",
+        "OM"
+      ]
+    },
+    {
+      "title": "The 4 Most Promising Bitcoin Crypto L2s (Besides Stacks STX)",
+      "link": "https://cryptopanic.com/news/blockstack/19242614/The-4-Most-Promising-Bitcoin-Crypto-L2s-Besides-Stacks-STX",
+      "pubDate": "2024-02-10T00:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "STX"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

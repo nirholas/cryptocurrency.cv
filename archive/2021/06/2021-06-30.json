@@ -1,0 +1,690 @@
+{
+  "date": "2021-06-30",
+  "fetchedAt": "2026-02-05T07:27:06.672Z",
+  "articleCount": 47,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Fresh off the back of our #TelcoinV3 announcement, we will be hosting an interview with @QuickswapDEX founder…",
+      "link": "https://cryptopanic.com/news/12238763/Fresh-off-the-back-of-our-TelcoinV3-announcement-we-will-be-hosting-an-interview-with-QuickswapDEX-founder",
+      "pubDate": "2021-06-30T23:20:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "Excited about @xcapitla investment walletRIF integration announcement that provides new opportunites for RIF token…",
+      "link": "https://cryptopanic.com/news/12238064/Excited-about-xcapitla-investment-walletRIF-integration-announcement-that-provides-new-opportunites-for-RIF-token",
+      "pubDate": "2021-06-30T22:07:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RIF"
+      ]
+    },
+    {
+      "title": "Top Analyst Says He’s Bullish on Ethereum and Cardano – But Another Altcoin Is Looking Stronger",
+      "link": "https://cryptopanic.com/news/near/12234237/Top-Analyst-Says-Hes-Bullish-on-Ethereum-and-Cardano-But-Another-Altcoin-Is-Looking-Stronger",
+      "pubDate": "2021-06-30T22:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Cryptocurrency analyst and YouTuber Jason Pizzino is considering several crypto assets as the market bounces off of its recent lows. Pizzino tells his 190,000 YouTube subscribers that he’s bullish on Ethereum in the long run, although he expects ETH to drop against Bitcoin in the near term. “ETH, it’s one of those ones I’m happy […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @sporeproject: @katyperry @Theta_Network Honestly no idea wtf Theta Network is, but if you're looking for mushroom NFTs, the only place…",
+      "link": "https://cryptopanic.com/news/theta-token/12238557/RT-sporeproject-katyperry-Theta_Network-Honestly-no-idea-wtf-Theta-Network-is-but-if-youre-looking-for-mushroom-NFTs-the-only-place",
+      "pubDate": "2021-06-30T21:56:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "SPORE"
+      ]
+    },
+    {
+      "title": "Katy Perry to drop NFT collection later this year",
+      "link": "https://cryptopanic.com/news/12234132/Katy-Perry-to-drop-NFT-collection-later-this-year",
+      "pubDate": "2021-06-30T21:49:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "Katy Perry announced Wednesday that she’s dropping an NFT collection in Q4 and that she bought a minority stake in a blockchain tech company.",
+      "currencies": [
+        "THETA"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Shurbhi, from our engineering team, shares her thoughts about bringing more women into blockchain.",
+      "link": "https://cryptopanic.com/news/12236639/Shurbhi-from-our-engineering-team-shares-her-thoughts-about-bringing-more-women-into-blockchain",
+      "pubDate": "2021-06-30T21:48:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MFT"
+      ]
+    },
+    {
+      "title": "Here's why pro traders expect further downside from Ethereum price",
+      "link": "https://cryptopanic.com/news/ethereum/12234122/Heres-why-pro-traders-expect-further-downside-from-Ethereum-price",
+      "pubDate": "2021-06-30T21:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum's EIP-1559 upgrade is fast approaching, but derivatives data shows traders are less than optimistic about ETH's short-term prospects.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Mainnet 3.0 has successfully launched! At block height 10,968,061 the chain forked to MN3.0 code and TFuel staking…",
+      "link": "https://cryptopanic.com/news/theta-token/12238703/Mainnet-30-has-successfully-launched-At-block-height-10968061-the-chain-forked-to-MN30-code-and-TFuel-staking",
+      "pubDate": "2021-06-30T21:21:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple Hires Former Mastercard Exec to Expand Its XRP-Powered Solution RippleNet",
+      "link": "https://cryptopanic.com/news/ripple/12234088/Ripple-Hires-Former-Mastercard-Exec-to-Expand-Its-XRP-Powered-Solution-RippleNet",
+      "pubDate": "2021-06-30T21:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Fintech giant Ripple has hired former Mastercard executive Sendi Young as Managing Director of its European operations in a bid to expand Ripple’s global financial network technology RippleNet, which uses the XRP token for its On-Demand Liquidity (ODL) solution. In a blog post, Ripple detailed that Sendi has over fifteen years of experience in fintech, […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Introducing the world's first user-owned, decentralized financial platform! V3 launches two core layers of the Telc…",
+      "link": "https://cryptopanic.com/news/12238764/Introducing-the-worlds-first-user-owned-decentralized-financial-platform-V3-launches-two-core-layers-of-the-Telc",
+      "pubDate": "2021-06-30T20:48:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "One day before the launch: My hopes for the future of eCash",
+      "link": "https://cryptopanic.com/news/ecash/12291417/One-day-before-the-launch-My-hopes-for-the-future-of-eCash",
+      "pubDate": "2021-06-30T18:51:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Price analysis 6/30: BTC, ETH, BNB, ADA, DOGE, XRP, DOT, UNI, BCH, LTC",
+      "link": "https://cryptopanic.com/news/dogecoin/12233658/Price-analysis-630-BTC-ETH-BNB-ADA-DOGE-XRP-DOT-UNI-BCH-LTC",
+      "pubDate": "2021-06-30T18:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin and altcoins are witnessing selling near key overhead resistance levels, but a shallow pullback may suggest further upside is in store.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @uDiscoverMusic: .@KatyPerry announces exclusive global #NFT collaboration and investment in @Theta_Network",
+      "link": "https://cryptopanic.com/news/theta-token/12238704/RT-uDiscoverMusic-KatyPerry-announces-exclusive-global-NFT-collaboration-and-investment-in-Theta_Network",
+      "pubDate": "2021-06-30T18:27:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Twitter CEO Keeps Rejecting Ethereum",
+      "link": "https://cryptopanic.com/news/ethereum/12233593/Twitter-CEO-Keeps-Rejecting-Ethereum",
+      "pubDate": "2021-06-30T18:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Twitter CEO Jack Dorsey is not budging on Bitcoin maximalism",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Thanks for all the encouraging messages. We have come a long way - with your support and blessings. Glitzkoin was t…",
+      "link": "https://cryptopanic.com/news/12236478/Thanks-for-all-the-encouraging-messages-We-have-come-a-long-way-with-your-support-and-blessings-Glitzkoin-was-t",
+      "pubDate": "2021-06-30T17:34:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Reef Finance  is happy to share the latest DeFi tool coming to Reef, @5xMarginTool! This is in development by…",
+      "link": "https://cryptopanic.com/news/12238127/Reef-Finance-is-happy-to-share-the-latest-DeFi-tool-coming-to-Reef-5xMarginTool-This-is-in-development-by",
+      "pubDate": "2021-06-30T17:03:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "In an effort to address all of our community’s questions, we decided to introduce a new weekly appointment dedicate…",
+      "link": "https://cryptopanic.com/news/12236091/In-an-effort-to-address-all-of-our-communitys-questions-we-decided-to-introduce-a-new-weekly-appointment-dedicate",
+      "pubDate": "2021-06-30T15:50:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "Theta Mainnet 3.0 will be released today — see below for everything you need to know about this major protocol upda…",
+      "link": "https://cryptopanic.com/news/theta-token/12238705/Theta-Mainnet-30-will-be-released-today-see-below-for-everything-you-need-to-know-about-this-major-protocol-upda",
+      "pubDate": "2021-06-30T15:40:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Big day: Today we have released the Mobile #Data Marketplace 2.0 for iOS!  DENTs vision is alive!  We have now th…",
+      "link": "https://cryptopanic.com/news/12233106/Big-day-Today-we-have-released-the-Mobile-Data-Marketplace-20-for-iOS-DENTs-vision-is-alive-We-have-now-th",
+      "pubDate": "2021-06-30T15:40:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash, Solana, THETA Price Analysis: 30 June",
+      "link": "https://cryptopanic.com/news/theta-token/12233104/Bitcoin-Cash-Solana-THETA-Price-Analysis-30-June",
+      "pubDate": "2021-06-30T15:30:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "BCH"
+      ]
+    },
+    {
+      "title": "RT @CoinDesk: American pop singer and songwriter @KatyPerry is launching non-fungible tokens (NFTs) for fans and has acquired a stake in th…",
+      "link": "https://cryptopanic.com/news/theta-token/12238706/RT-CoinDesk-American-pop-singer-and-songwriter-KatyPerry-is-launching-non-fungible-tokens-NFTs-for-fans-and-has-acquired-a-stake-in-th",
+      "pubDate": "2021-06-30T14:33:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Electrum ABC 5.0.0 is released! This release supports the eCash rebrand with a new CashAddr prefix and base unit.…",
+      "link": "https://cryptopanic.com/news/ecash/12235314/Electrum-ABC-500-is-released-This-release-supports-the-eCash-rebrand-with-a-new-CashAddr-prefix-and-base-unit",
+      "pubDate": "2021-06-30T14:33:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC",
+        "BCHABC"
+      ]
+    },
+    {
+      "title": "Former Mastercard exec to lead Ripple’s European Expansion",
+      "link": "https://cryptopanic.com/news/ripple/12232820/Former-Mastercard-exec-to-lead-Ripples-European-Expansion",
+      "pubDate": "2021-06-30T14:20:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Sendi Young has over 15 years of fintech experience and has previously worked at prominent payments firms.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Excellent article by @SantiDiPaolo about RIF Lumino. Thanks for the collaboration!",
+      "link": "https://cryptopanic.com/news/12238065/Excellent-article-by-SantiDiPaolo-about-RIF-Lumino-Thanks-for-the-collaboration",
+      "pubDate": "2021-06-30T14:02:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RIF"
+      ]
+    },
+    {
+      "title": "Top 10 Aspiring Crypto Coins For July",
+      "link": "https://cryptopanic.com/news/theta-token/12232706/Top-10-Aspiring-Crypto-Coins-For-July",
+      "pubDate": "2021-06-30T13:45:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA"
+      ]
+    },
+    {
+      "title": "RT @katyperry: Excited & curious to be launching my FIRST ever #NFTs later this year w/ @Theta_Network. Look out for memorable & creative…",
+      "link": "https://cryptopanic.com/news/theta-token/12238707/RT-katyperry-Excited-amp-curious-to-be-launching-my-FIRST-ever-NFTs-later-this-year-w-Theta_Network-Look-out-for-memorable-amp-creative",
+      "pubDate": "2021-06-30T13:06:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "David, Nicolas, and Rami are answering some questions about the Ultra Mainnet launch now!",
+      "link": "https://cryptopanic.com/news/12238995/David-Nicolas-and-Rami-are-answering-some-questions-about-the-Ultra-Mainnet-launch-now",
+      "pubDate": "2021-06-30T13:01:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "UOS"
+      ]
+    },
+    {
+      "title": "Bye-bye, Binance. Elon Musk spawns Floki Shiba Inu craze. Tickets for tokens in China.",
+      "link": "https://cryptopanic.com/news/shiba-inu/12232526/Bye-bye-Binance-Elon-Musk-spawns-Floki-Shiba-Inu-craze-Tickets-for-tokens-in-China",
+      "pubDate": "2021-06-30T12:54:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Top blockchain and cryptocurrency news: Binance bounced out of Britain. Musk moves Shiba Inu prices again. China’s digital currency gets ready to roll.",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "RT @RichardHeartWin: #Bitcoin #Ethereum #BNB #ADA #DOGE #XRP #DOT #BTC #ETH $BTC $ETH #DOT #UNI #BCH #SOL #LTC #LINK #ICP #MATIC #THETA #XL…",
+      "link": "https://cryptopanic.com/news/12236567/RT-RichardHeartWin-Bitcoin-Ethereum-BNB-ADA-DOGE-XRP-DOT-BTC-ETH-BTC-ETH-DOT-UNI-BCH-SOL-LTC-LINK-ICP-MATIC-THETA-XL",
+      "pubDate": "2021-06-30T12:53:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "e.cash [IT'S COMING]",
+      "link": "https://cryptopanic.com/news/ecash/12291421/ecash-ITS-COMING",
+      "pubDate": "2021-06-30T12:50:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "RT @ramijames: Starting a Twitter spaces in 30 minutes! Talking with Nicolas Gilot and David Hanson, the co-CEOs of @ultra_io about our Mai…",
+      "link": "https://cryptopanic.com/news/12238996/RT-ramijames-Starting-a-Twitter-spaces-in-30-minutes-Talking-with-Nicolas-Gilot-and-David-Hanson-the-co-CEOs-of-ultra_io-about-our-Mai",
+      "pubDate": "2021-06-30T12:36:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "UOS"
+      ]
+    },
+    {
+      "title": "214.4 Million XRP On the Move, Wired by Ripple and Top US and Asian Exchanges",
+      "link": "https://cryptopanic.com/news/ripple/12231833/2144-Million-XRP-On-the-Move-Wired-by-Ripple-and-Top-US-and-Asian-Exchanges",
+      "pubDate": "2021-06-30T08:42:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple and a few top-tier digital currency exchanges have transferred an astounding amount of XRP and over half of it was moved by the fintech behemoth",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Reached a 12-Day High: Ethereum Classic Surges 25% (Market Watch)",
+      "link": "https://cryptopanic.com/news/12231829/Bitcoin-Reached-a-12-Day-High-Ethereum-Classic-Surges-25-Market-Watch",
+      "pubDate": "2021-06-30T08:41:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin pumped to its highest price line in almost two weeks as Ethereum Classic skyrocketed by 25% to overcome $60.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @verge: T-Mobile is offering iPhone owners no-hassle network \"test drives\"",
+      "link": "https://cryptopanic.com/news/12231784/RT-verge-T-Mobile-is-offering-iPhone-owners-no-hassle-network-test-drives",
+      "pubDate": "2021-06-30T08:26:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "Veteran Crypto Trader Says One ‘Extremely Bullish’ Altcoin Will Significantly Outperform Ethereum This Year",
+      "link": "https://cryptopanic.com/news/12230263/Veteran-Crypto-Trader-Says-One-Extremely-Bullish-Altcoin-Will-Significantly-Outperform-Ethereum-This-Year",
+      "pubDate": "2021-06-30T07:04:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A veteran crypto trader and influencer is singling out one mid-cap altcoin that he says will significantly outperform Ethereum this year. The pseudonymous trader, who tweets to his 539,500 followers under the alias The Crypto Dog, says that smart contract platform Solana (SOL) has the potential to blaze toward Ethereum’s $250 billion market capitalization. “The SOL/ETH […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We're excited to introduce our XSGD Decentralised Finance (#DeFi) Showcase series, where we feature applications th…",
+      "link": "https://cryptopanic.com/news/12231228/Were-excited-to-introduce-our-XSGD-Decentralised-Finance-DeFi-Showcase-series-where-we-feature-applications-th",
+      "pubDate": "2021-06-30T07:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "XSGD"
+      ]
+    },
+    {
+      "title": "DigiFinex will list THETA/USDT and ATOM/USDT trading pairs for margin trading with 0 interest! Interest-free per…",
+      "link": "https://cryptopanic.com/news/theta-token/12235977/DigiFinex-will-list-THETAUSDT-and-ATOMUSDT-trading-pairs-for-margin-trading-with-0-interest-Interest-free-per",
+      "pubDate": "2021-06-30T06:52:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "ATOM",
+        "THETA",
+        "DFT"
+      ]
+    },
+    {
+      "title": "Glad to see #USDC on #TRON.",
+      "link": "https://cryptopanic.com/news/12230765/Glad-to-see-USDC-on-TRON",
+      "pubDate": "2021-06-30T06:46:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "-",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cocos-BCX has completed migration from MainNet and suspended related services at 2 PM SGT, June 30th. Cocos-BCX te…",
+      "link": "https://cryptopanic.com/news/12235679/Cocos-BCX-has-completed-migration-from-MainNet-and-suspended-related-services-at-2-PM-SGT-June-30th-Cocos-BCX-te",
+      "pubDate": "2021-06-30T06:37:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "COCOS"
+      ]
+    },
+    {
+      "title": "CoinMarketCap launches Ethereum token swaps powered by Uniswap",
+      "link": "https://cryptopanic.com/news/uniswap/12227825/CoinMarketCap-launches-Ethereum-token-swaps-powered-by-Uniswap",
+      "pubDate": "2021-06-30T05:49:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "CoinMarketCap has launched a token swap feature via integration with Uniswap, and has hinted at supporting additional DEXs and networks in the future.",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "CoinMarketCap Launches Token Swaps and Uniswap Support",
+      "link": "https://cryptopanic.com/news/uniswap/12227306/CoinMarketCap-Launches-Token-Swaps-and-Uniswap-Support",
+      "pubDate": "2021-06-30T05:38:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Cryptocurrency analytics platform CoinMarketCap (CMC) is venturing into the token swap and decentralized exchange space with its latest offering.",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dual Investment (49th Phase) - Earn Up to 77% APY ️",
+      "link": "https://cryptopanic.com/news/binancecoin/12227442/Dual-Investment-49th-Phase-Earn-Up-to-77-APY",
+      "pubDate": "2021-06-30T05:38:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "BNB",
+        "ETHDOWN",
+        "ETHUP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "TA: Ethereum Corrects Lower, What Could Spark A Fresh Rally",
+      "link": "https://cryptopanic.com/news/near/12227050/TA-Ethereum-Corrects-Lower-What-Could-Spark-A-Fresh-Rally",
+      "pubDate": "2021-06-30T05:28:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum rallied further towards $2,250 before it faced sellers against the US Dollar. ETH price is correcting lower, but the bulls are likely to remain active near $2,000. Ethereum started a downside correction after it tested the $2,250 resistance zone. The price is still well above $2,000 and the 100 hourly simple moving average. There […]",
+      "currencies": [
+        "ETH",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @OccamFi: Huge news from the Occam ecosystem today! We are delighted to be working with @stasisnet to bring the first Euro-backed stable…",
+      "link": "https://cryptopanic.com/news/12230336/RT-OccamFi-Huge-news-from-the-Occam-ecosystem-today-We-are-delighted-to-be-working-with-stasisnet-to-bring-the-first-Euro-backed-stable",
+      "pubDate": "2021-06-30T05:25:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "[MovieBloc X Radiator IP Sales &amp; Origine films] Promotion Event Winners!! Congratulation!! We will send MBL by n…",
+      "link": "https://cryptopanic.com/news/12229453/MovieBloc-X-Radiator-IP-Sales-amp-Origine-films-Promotion-Event-Winners-Congratulation-We-will-send-MBL-by-n",
+      "pubDate": "2021-06-30T04:55:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MBL"
+      ]
+    },
+    {
+      "title": "The Combination of POI and NFT, Hyperion is Doing Its Part",
+      "link": "https://cryptopanic.com/news/12228809/The-Combination-of-POI-and-NFT-Hyperion-is-Doing-Its-Part",
+      "pubDate": "2021-06-30T03:33:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "TA: Bitcoin Lacks Momentum Above $36K, Why BTC Could Correct Lower",
+      "link": "https://cryptopanic.com/news/near/12226780/TA-Bitcoin-Lacks-Momentum-Above-36K-Why-BTC-Could-Correct-Lower",
+      "pubDate": "2021-06-30T03:08:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin price extended its recovery above the $36,000 zone against the US Dollar. BTC topped near $36,700 and it is now correcting gains. Bitcoin started a fresh increase above the $35,000 and $36,000 resistance levels. The price is now trading nicely above $35,000 and the 100 hourly simple moving average. There is a major bullish […]",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

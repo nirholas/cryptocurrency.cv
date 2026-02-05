@@ -1,0 +1,728 @@
+{
+  "date": "2021-03-12",
+  "fetchedAt": "2026-02-05T07:27:06.935Z",
+  "articleCount": 53,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bancor Progress Update (March 2021)",
+      "link": "https://cryptopanic.com/news/chainlink/11613071/Bancor-Progress-Update-March-2021",
+      "pubDate": "2021-03-12T23:31:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "In the last month, the total value locked in the Bancor Protocol has more than doubled, exceeding $1.6 billion. Bancor broke into the top 10 projects by TVL and now generates the fifth highest revenue of any protocol on Ethereum. Bancor’s traction in the DeFi world is developing rapidly. LPs are increasingly reluctant to risk their capital under the threat of impermanent loss on...",
+      "currencies": [
+        "LINK",
+        "UNI",
+        "BNT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bought another 55 at .5595",
+      "link": "https://cryptopanic.com/news/11617287/Bought-another-55-at-5595",
+      "pubDate": "2021-03-12T22:29:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Community call - 12PM EST Monday 3/15",
+      "link": "https://cryptopanic.com/news/11612936/Community-call-12PM-EST-Monday-315",
+      "pubDate": "2021-03-12T22:02:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Blog: NFT is a rising trend, what it is actually?",
+      "link": "https://cryptopanic.com/news/11615387/Blog-NFT-is-a-rising-trend-what-it-is-actually",
+      "pubDate": "2021-03-12T19:01:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "PLTC"
+      ]
+    },
+    {
+      "title": "How many jumped off the dip?",
+      "link": "https://cryptopanic.com/news/11613174/How-many-jumped-off-the-dip",
+      "pubDate": "2021-03-12T18:44:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "RT @safenetworktech: Looking for more updates on #SafeNetwork development? We’re back to sharing weekly updates on @blockfolio! Checkout th…",
+      "link": "https://cryptopanic.com/news/11614951/RT-safenetworktech-Looking-for-more-updates-on-SafeNetwork-development-Were-back-to-sharing-weekly-updates-on-blockfolio-Checkout-th",
+      "pubDate": "2021-03-12T18:35:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "This account is no longer active, please follow @HifiFinance",
+      "link": "https://cryptopanic.com/news/11614952/This-account-is-no-longer-active-please-follow-HifiFinance",
+      "pubDate": "2021-03-12T18:21:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MFT"
+      ]
+    },
+    {
+      "title": "Enjoy our first Medium post explaining why vaults make the difference.",
+      "link": "https://cryptopanic.com/news/11614417/Enjoy-our-first-Medium-post-explaining-why-vaults-make-the-difference?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-12T17:57:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SUPRA",
+        "FLP"
+      ]
+    },
+    {
+      "title": "Just bought 18k $NU let’s vibe!",
+      "link": "https://cryptopanic.com/news/11612561/Just-bought-18k-NU-lets-vibe",
+      "pubDate": "2021-03-12T17:31:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "This month's 'Blockchains of' episode gives ARK some much deserved love! This is The Blockchains of Ready Player One",
+      "link": "https://cryptopanic.com/news/11625360/This-months-Blockchains-of-episode-gives-ARK-some-much-deserved-love-This-is-The-Blockchains-of-Ready-Player-One",
+      "pubDate": "2021-03-12T17:13:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Chainlink Set To Surge on Release of Dynamic NFTs, Says Crypto Trader Tyler Swope",
+      "link": "https://cryptopanic.com/news/chainlink/11612599/Chainlink-Set-To-Surge-on-Release-of-Dynamic-NFTs-Says-Crypto-Trader-Tyler-Swope",
+      "pubDate": "2021-03-12T17:10:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "Crypto analyst and trader Tyler Swope is placing Chainlink (LINK) in the spotlight as the oracle project prepares to dive head first into the non-fungible token (NFT) space. In a new video, Swope tracks the little-known connection between Chainlink and the emerging digital art industry. The trader highlights that the number one oracle project in […]",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "In just a few minutes @PaulRBerg will be presenting about @SablierHQ on this @MakerDAO Core Unit Series.",
+      "link": "https://cryptopanic.com/news/11614623/In-just-a-few-minutes-PaulRBerg-will-be-presenting-about-SablierHQ-on-this-MakerDAO-Core-Unit-Series",
+      "pubDate": "2021-03-12T16:57:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MFT"
+      ]
+    },
+    {
+      "title": "An Ark appreciation post.",
+      "link": "https://cryptopanic.com/news/11612933/An-Ark-appreciation-post",
+      "pubDate": "2021-03-12T16:55:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Vote ⬆️ if you want NU on Binance!",
+      "link": "https://cryptopanic.com/news/11612463/Vote-if-you-want-NU-on-Binance",
+      "pubDate": "2021-03-12T16:31:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Bitcoin Near All-Time High, but This On-Chain Metric Suggests the Party Might Soon Be Over",
+      "link": "https://cryptopanic.com/news/near/11612453/Bitcoin-Near-All-Time-High-but-This-On-Chain-Metric-Suggests-the-Party-Might-Soon-Be-Over",
+      "pubDate": "2021-03-12T16:19:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin miners have been selling smaller amounts of BTC as the price of the flagship cryptocurrency moved up from $11,000 late last year to a $58,000 all-time high last month. Once they start taking profits, BTC could endure another correction. According to the creator of on-chain data resource LookIntoBitcoin, Philip Swift, data shows that miners […]",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 19
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Don't Worry! - It's all part of the process",
+      "link": "https://cryptopanic.com/news/11612347/Dont-Worry-Its-all-part-of-the-process",
+      "pubDate": "2021-03-12T15:31:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Scared money don’t make money",
+      "link": "https://cryptopanic.com/news/11613108/Scared-money-dont-make-money",
+      "pubDate": "2021-03-12T15:30:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Friday is dip central. If you don't plan on buying don't f**kin watch.",
+      "link": "https://cryptopanic.com/news/11613109/Friday-is-dip-central-If-you-dont-plan-on-buying-dont-fkin-watch",
+      "pubDate": "2021-03-12T15:13:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "IOTA Foundation Unveils New Version of Pollen Testnet",
+      "link": "https://cryptopanic.com/news/11612339/IOTA-Foundation-Unveils-New-Version-of-Pollen-Testnet",
+      "pubDate": "2021-03-12T15:00:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The IOTA Foundation has introduced a new version of the Pollen Testnet with a range of significant changes and enhancements. IOTA-Mana Collab According to the report, this release marks the official start of IOTA’s journey with Mana, a new reputation framework incorporated into pollen to mitigate Sybil attacks. Mana is perhaps best thought of as Read More",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Network Fee Question",
+      "link": "https://cryptopanic.com/news/11625175/Network-Fee-Question",
+      "pubDate": "2021-03-12T14:30:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "This is.... Clearly Spam?",
+      "link": "https://cryptopanic.com/news/11612144/This-is-Clearly-Spam",
+      "pubDate": "2021-03-12T14:02:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Bitcoin Drops to $55k on News of the US CFTC Investigating Binance",
+      "link": "https://cryptopanic.com/news/11612162/Bitcoin-Drops-to-55k-on-News-of-the-US-CFTC-Investigating-Binance",
+      "pubDate": "2021-03-12T14:00:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "In brief: According to Bloomberg, the US CFTC is probing Binance on whether it allowed US residents to trade derivatives on the platform Bitcoin took a $2k nosedive from $57k to $55k as a result March 12th might be a cursed date for Bitcoin as the Coronavirus dip happened exactly one year ago The US CFTC (Commodity Futures Trading Commission) is reportedly probing whether Binance knowingly allowed US residents to trade derivatives on the platform. According to Bloomberg, the CFTC […]",
+      "currencies": [
+        "BTC",
+        "BNB"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Alameda Research buys $20 million in REEF tokens linked to Polkadot-based DeFi project",
+      "link": "https://cryptopanic.com/news/polkadot/11612132/Alameda-Research-buys-20-million-in-REEF-tokens-linked-to-Polkadot-based-DeFi-project",
+      "pubDate": "2021-03-12T14:00:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Polkadot-based DeFi project Reef Finance has raised $20 million in a token sale round.",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 26,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "REEF Finance Receives $20 Million Investment from Alameda Research",
+      "link": "https://cryptopanic.com/news/11612128/REEF-Finance-Receives-20-Million-Investment-from-Alameda-Research",
+      "pubDate": "2021-03-12T14:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "REEF Finance saw a $20 million investment from Alameda Research. It was done through the purchase of REEF tokens.",
+      "currencies": [
+        "REEF"
+      ],
+      "votes": {
+        "positive": 22,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The Magnificent Seven: CHZ, SKL, TFUEL, MATIC, HBAR, ENJ, ZIL – Biggest Altcoin Gainers of the Week",
+      "link": "https://cryptopanic.com/news/matic-network/11612158/The-Magnificent-Seven-CHZ-SKL-TFUEL-MATIC-HBAR-ENJ-ZIL-Biggest-Altcoin-Gainers-of-the-Week",
+      "pubDate": "2021-03-12T13:38:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "They are: Chiliz (CHZ) – 300% SKALE Network (SKL) – 247% Theta Fuel (TFUEL) – 182% Polygon (MATIC) – 130% Hedera Hashgraph (HBAR) – 79% Enjin Coin (ENJ)- 75% Ziliqa (ZIL) – 63% Chiliza (CHZ) CHZ has been increasing rapidly over the past 17 days. So far, it has moved upwards by an astonishing 1600%. … Continued",
+      "currencies": [
+        "MATIC",
+        "CHZ",
+        "ZIL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Too much negativity not enough positivity !",
+      "link": "https://cryptopanic.com/news/11612003/Too-much-negativity-not-enough-positivity",
+      "pubDate": "2021-03-12T13:02:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Need help please, where do I find my newly created LP token or view it in my trust wallet? I have checked the liquidity pools and I can not see the BNBAUTO pool. This is my first attempt at providing liquidity and I just hope I did not stuff it up. So any advise or help would be much appreciated. T",
+      "link": "https://cryptopanic.com/news/11611951/Need-help-please-where-do-I-find-my-newly-created-LP-token-or-view-it-in-my-trust-wallet-I-have-checked-the-liquidity-pools-and-I-can-not-see-the-BNBAUTO-pool-This-is-my-first-attempt-at-providing-liquidity-and-I-just-hope-I-did-not-stuff-it-up-So-any-advi",
+      "pubDate": "2021-03-12T12:31:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "Chainlink’s Market Cap Could Hit $1T in 10 Years – Crypto Analyst",
+      "link": "https://cryptopanic.com/news/chainlink/11611886/Chainlinks-Market-Cap-Could-Hit-1T-in-10-Years-Crypto-Analyst",
+      "pubDate": "2021-03-12T11:52:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Summary: Timothy Peterson has forecasted that Chainlink could reach a $1 Trillion market cap in 10 years He compares Chainlink to Facebook that achieved a similar feat in the stated time period A $1 Trillion market cap translates to a $3k value of LINK Chainlink’s scalability solution of Off-Chain Reporting could boost the value of LINK further Chainlink is currently battling to maintain the...",
+      "currencies": [
+        "BTC",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 22,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Glad to see that @VitalikButerin 's proposal matches with QuarkChain's design. We have implemented shard ID design…",
+      "link": "https://cryptopanic.com/news/11615456/Glad-to-see-that-VitalikButerin-s-proposal-matches-with-QuarkChains-design-We-have-implemented-shard-ID-design",
+      "pubDate": "2021-03-12T10:28:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "QKC"
+      ]
+    },
+    {
+      "title": "Ripple Giant and Coinbase Shift Staggering 237 Million XRP",
+      "link": "https://cryptopanic.com/news/ripple/11611731/Ripple-Giant-and-Coinbase-Shift-Staggering-237-Million-XRP",
+      "pubDate": "2021-03-12T10:03:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple fintech behemoth and major U.S. digital exchange, Coinbase, have transferred a massive amount of XRP tokens: 237.1 million",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "You panic sellers are crazy! NU is a great product with a great team behind it. The market cap is extremely low and even after the work lock release the coin circulation will be significantly lower than most. I honestly feel as though we are very undervalued at the moment.",
+      "link": "https://cryptopanic.com/news/11611714/You-panic-sellers-are-crazy-NU-is-a-great-product-with-a-great-team-behind-it-The-market-cap-is-extremely-low-and-even-after-the-work-lock-release-the-coin-circulation-will-be-significantly-lower-than-most-I-honestly-feel-as-though-we-are-very-undervalued-",
+      "pubDate": "2021-03-12T10:02:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Hyperion is thrilled to introduce RHEA, an asset bridge allowing users to move assets from Atlas to HECO, also from…",
+      "link": "https://cryptopanic.com/news/11614658/Hyperion-is-thrilled-to-introduce-RHEA-an-asset-bridge-allowing-users-to-move-assets-from-Atlas-to-HECO-also-from",
+      "pubDate": "2021-03-12T09:25:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Citing Facebook’s Trajectory, Pundit Says Trillion-Dollar Chainlink Market Cap Is “Doable”",
+      "link": "https://cryptopanic.com/news/11611650/Citing-Facebooks-Trajectory-Pundit-Says-Trillion-Dollar-Chainlink-Market-Cap-Is-Doable",
+      "pubDate": "2021-03-12T09:17:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Chainlink (LINK) took the crypto space by storm in 2020. After rising to a high of almost $20, it rose to become the 5th largest coin by market cap. Although it has since dropped to the tenth position, analysts remain hopeful about its future. According to crypto analyst Timothy Peterson, the token could reach a […]",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "This week marks International Women’s Day and our Head of Regional Payments, @sharonlourdes spoke with…",
+      "link": "https://cryptopanic.com/news/11616256/This-week-marks-International-Womens-Day-and-our-Head-of-Regional-Payments-sharonlourdes-spoke-with",
+      "pubDate": "2021-03-12T09:01:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XSGD"
+      ]
+    },
+    {
+      "title": "Personal financial records of Ripple execs sought by the SEC",
+      "link": "https://cryptopanic.com/news/ripple/11611608/Personal-financial-records-of-Ripple-execs-sought-by-the-SEC",
+      "pubDate": "2021-03-12T09:00:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The cryptocurrency market has been witnessing quite an event unfolding between the U.S. Securities and Exchange Commission and Ripple. There has been a lot of back and forth between the two parties and as per the latest development, the SEC is seeking the personal financial information of the Ripple executives named in the lawsuit. Ripple […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 17
+      }
+    },
+    {
+      "title": "Despite the differences in appearance &amp; function, $TOMO siblings carry the same value &amp; mission, enriching the…",
+      "link": "https://cryptopanic.com/news/11615988/Despite-the-differences-in-appearance-amp-function-TOMO-siblings-carry-the-same-value-amp-mission-enriching-the",
+      "pubDate": "2021-03-12T08:59:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "It's March 12th, again. It seems #Bitcoin makes a remarkable achievement.",
+      "link": "https://cryptopanic.com/news/11614659/Its-March-12th-again-It-seems-Bitcoin-makes-a-remarkable-achievement",
+      "pubDate": "2021-03-12T07:39:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "[XWC User Exclusive] Win Airdrops By Depositing 8888XWC Strong Landing @XTexchange #Bishijie #XWC #XT #crypto",
+      "link": "https://cryptopanic.com/news/11611263/XWC-User-Exclusive-Win-Airdrops-By-Depositing-8888XWC-Strong-Landing-XTexchange-Bishijie-XWC-XT-crypto",
+      "pubDate": "2021-03-12T07:19:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XWC"
+      ]
+    },
+    {
+      "title": "Ethereum Co-Founder Vitalik Buterin Says Network Will Scale 100X ‘Very Soon’",
+      "link": "https://cryptopanic.com/news/near/11610939/Ethereum-Co-Founder-Vitalik-Buterin-Says-Network-Will-Scale-100X-Very-Soon",
+      "pubDate": "2021-03-12T07:02:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum co-founder Vitalik Buterin says the network is on the verge of 100X scaling with the release of its layer-two solution coming in the near future. Speaking on the Tim Ferriss Podcast, Buterin said Optimism is launching its mainnet soon, which would give users access to long-awaited layer-two solutions for scaling. Buterin said: “Rollups are […]",
+      "currencies": [
+        "ETH",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 26,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Japanese Financial Giant SBI Group to Offer Shareholders’ Year-End Benefit in XRP",
+      "link": "https://cryptopanic.com/news/ripple/11610411/Japanese-Financial-Giant-SBI-Group-to-Offer-Shareholders-Year-End-Benefit-in-XRP",
+      "pubDate": "2021-03-12T06:42:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "XRP is gaining more traction in Japan, with SBI Group now offering benefits in the cryptocurrency",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Prepare to see a possible drop to 40cents",
+      "link": "https://cryptopanic.com/news/11608530/Prepare-to-see-a-possible-drop-to-40cents",
+      "pubDate": "2021-03-12T05:44:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "BUY THE DIP and Ladder Your Staking!",
+      "link": "https://cryptopanic.com/news/11608072/BUY-THE-DIP-and-Ladder-Your-Staking",
+      "pubDate": "2021-03-12T05:02:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Keep calm and hodl on.",
+      "link": "https://cryptopanic.com/news/11608071/Keep-calm-and-hodl-on",
+      "pubDate": "2021-03-12T05:02:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Pain pain pain.",
+      "link": "https://cryptopanic.com/news/11611900/Pain-pain-pain",
+      "pubDate": "2021-03-12T04:34:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Email Robinhood and comment on all of Binance Twitter posts to add Nucypher",
+      "link": "https://cryptopanic.com/news/11608052/Email-Robinhood-and-comment-on-all-of-Binance-Twitter-posts-to-add-Nucypher",
+      "pubDate": "2021-03-12T04:31:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "What validator for BNB Staking",
+      "link": "https://cryptopanic.com/news/11617389/What-validator-for-BNB-Staking",
+      "pubDate": "2021-03-12T02:02:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "Let’s get the show on the road!!",
+      "link": "https://cryptopanic.com/news/11607861/Lets-get-the-show-on-the-road",
+      "pubDate": "2021-03-12T01:31:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Long-Term Bitcoin HODLers Keep Accumulating as Newcomers Take Profits, Data Shows",
+      "link": "https://cryptopanic.com/news/near/11607859/Long-Term-Bitcoin-HODLers-Keep-Accumulating-as-Newcomers-Take-Profits-Data-Shows",
+      "pubDate": "2021-03-12T01:21:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Data shows that long-term bitcoin HODLers do not appear to be selling their holdings, even as the price of bitcoin tops $55,000 – more than double its previous all-time high near $19,000. Newcomers, on the other hand, have been taking profits. As reported by Cointelegraph, Unchained Capital’s “Hodlwaves” chart – which visually illustrates BTC wallets […]",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "NU’s having a rough go of it lately!",
+      "link": "https://cryptopanic.com/news/11607832/NUs-having-a-rough-go-of-it-lately",
+      "pubDate": "2021-03-12T01:02:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Why did Elon Musk finally invest in Bitcoin?",
+      "link": "https://cryptopanic.com/news/11607829/Why-did-Elon-Musk-finally-invest-in-Bitcoin",
+      "pubDate": "2021-03-12T01:02:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Thought I Was Comfortable HODL'in My Position, But People KEEP Asking If I'm Back For More NU...",
+      "link": "https://cryptopanic.com/news/11607510/Thought-I-Was-Comfortable-HODLin-My-Position-But-People-KEEP-Asking-If-Im-Back-For-More-NU",
+      "pubDate": "2021-03-12T00:32:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Staked",
+      "link": "https://cryptopanic.com/news/11611715/Staked",
+      "pubDate": "2021-03-12T00:29:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Road to 1 Billion Presentation by Dyma Budorin, CEO at Hacken",
+      "link": "https://cryptopanic.com/news/11607165/Road-to-1-Billion-Presentation-by-Dyma-Budorin-CEO-at-Hacken",
+      "pubDate": "2021-03-12T00:00:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    }
+  ]
+}

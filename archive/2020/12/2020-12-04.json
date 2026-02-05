@@ -1,0 +1,116 @@
+{
+  "date": "2020-12-04",
+  "fetchedAt": "2026-02-05T07:27:06.787Z",
+  "articleCount": 8,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "We're ending the week on a high note with a #CryptoAndCoffee interview with our Principle in Diversity, Equity, and…",
+      "link": "https://cryptopanic.com/news/10730510/Were-ending-the-week-on-a-high-note-with-a-CryptoAndCoffee-interview-with-our-Principle-in-Diversity-Equity-and",
+      "pubDate": "2020-12-04T22:48:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    },
+    {
+      "title": "VeChain (VET) COVID-19 Blockchain Solution Adopted by Top Cyprian Hospitals",
+      "link": "https://cryptopanic.com/news/10728001/VeChain-VET-COVID-19-Blockchain-Solution-Adopted-by-Top-Cyprian-Hospitals",
+      "pubDate": "2020-12-04T17:00:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Mike Novogratz Agrees That Litecoin Is Direct Attack on Bitcoin",
+      "link": "https://cryptopanic.com/news/10726496/Mike-Novogratz-Agrees-That-Litecoin-Is-Direct-Attack-on-Bitcoin",
+      "pubDate": "2020-12-04T14:37:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ]
+    },
+    {
+      "title": "All You Need to Know about RP and HRC30",
+      "link": "https://cryptopanic.com/news/10724651/All-You-Need-to-Know-about-RP-and-HRC30",
+      "pubDate": "2020-12-04T10:58:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Don't forget to join us today. 🥰",
+      "link": "https://cryptopanic.com/news/10723558/Dont-forget-to-join-us-today",
+      "pubDate": "2020-12-04T07:54:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Not just Dutch exchanges, this is happening at many places. A good move as it helps streamline and secure crypto tr…",
+      "link": "https://cryptopanic.com/news/10722447/Not-just-Dutch-exchanges-this-is-happening-at-many-places-A-good-move-as-it-helps-streamline-and-secure-crypto-tr",
+      "pubDate": "2020-12-04T04:04:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Ripple CTO says community could force the company to burn 48 billion XRP",
+      "link": "https://cryptopanic.com/news/10722028/Ripple-CTO-says-community-could-force-the-company-to-burn-48-billion-XRP",
+      "pubDate": "2020-12-04T02:53:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Due to historical reasons, multisignature feature is not available at DMCH. However, Some financial institutions ne…",
+      "link": "https://cryptopanic.com/news/11443725/Due-to-historical-reasons-multisignature-feature-is-not-available-at-DMCH-However-Some-financial-institutions-ne",
+      "pubDate": "2020-12-04T02:35:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DMCH"
+      ]
+    }
+  ]
+}

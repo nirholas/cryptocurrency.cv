@@ -1,0 +1,93 @@
+{
+  "date": "2018-10-25",
+  "fetchedAt": "2026-02-05T07:27:06.994Z",
+  "articleCount": 5,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Public Bug Bounty Begins for IOTA’s Cross-platform Trinity Wallet",
+      "link": "https://cryptopanic.com/news/3462232/Public-Bug-Bounty-Begins-for-IOTAs-Cross-platform-Trinity-Wallet",
+      "pubDate": "2018-10-25T17:59:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple Says XRP Cryptocurrency Sales Doubled in Q3 2018",
+      "link": "https://cryptopanic.com/news/ripple/3461505/Ripple-Says-XRP-Cryptocurrency-Sales-Doubled-in-Q3-2018",
+      "pubDate": "2018-10-25T16:45:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 5
+      }
+    },
+    {
+      "title": "XRP-Backed Crypto Loans Now Offered by Nexo",
+      "link": "https://cryptopanic.com/news/litecoin/3459597/XRP-Backed-Crypto-Loans-Now-Offered-by-Nexo",
+      "pubDate": "2018-10-25T14:00:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "LTC",
+        "NEXO"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "A Solution to IOTA’s Reusable Address Problem With IOTA-Pay!",
+      "link": "https://cryptopanic.com/news/3458899/A-Solution-to-IOTAs-Reusable-Address-Problem-With-IOTA-Pay",
+      "pubDate": "2018-10-25T13:09:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "King Tether and the Stable Coin Wars",
+      "link": "https://cryptopanic.com/news/paxos-standard/3453526/King-Tether-and-the-Stable-Coin-Wars",
+      "pubDate": "2018-10-25T01:06:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDP"
+      ]
+    }
+  ]
+}

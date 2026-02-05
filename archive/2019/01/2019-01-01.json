@@ -1,0 +1,26 @@
+{
+  "date": "2019-01-01",
+  "fetchedAt": "2026-02-05T07:27:06.962Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Hot January for Ethereum: The Three Hard Forks you Should Know About",
+      "link": "https://cryptopanic.com/news/4131485/Hot-January-for-Ethereum-The-Three-Hard-Forks-you-Should-Know-About",
+      "pubDate": "2019-01-01T13:35:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETN"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

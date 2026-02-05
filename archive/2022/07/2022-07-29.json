@@ -1,0 +1,572 @@
+{
+  "date": "2022-07-29",
+  "fetchedAt": "2026-02-05T07:27:07.645Z",
+  "articleCount": 39,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "The ownership economy, on RLY Network with our friends @superlayerio &amp; @takiapp",
+      "link": "https://cryptopanic.com/news/15913870/The-ownership-economy-on-RLY-Network-with-our-friends-superlayerio-amp-takiapp",
+      "pubDate": "2022-07-29T22:51:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RLY"
+      ]
+    },
+    {
+      "title": "FTX US to Make Fractional Stock Trading Free",
+      "link": "https://cryptopanic.com/news/ftx-token/15908438/FTX-US-to-Make-Fractional-Stock-Trading-Free",
+      "pubDate": "2022-07-29T21:42:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "The company is set to make the trading of fractional shares free when fees kick in on Oct. 1",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "If you love all thinks crypto, metaverse & the occasional dash of economics make sure you subscribe to #vEmpire’s Y…",
+      "link": "https://cryptopanic.com/news/dash/15915550/If-you-love-all-thinks-crypto-metaverse-amp-the-occasional-dash-of-economics-make-sure-you-subscribe-to-vEmpires-Y",
+      "pubDate": "2022-07-29T21:35:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DASH",
+        "VEMP"
+      ]
+    },
+    {
+      "title": "RT @waiaujustin: Our metaverse partner @SalsaValley represented at the @NFT_Expoverse ! Make sure to say hi if you’re there",
+      "link": "https://cryptopanic.com/news/15912448/RT-waiaujustin-Our-metaverse-partner-SalsaValley-represented-at-the-NFT_Expoverse-Make-sure-to-say-hi-if-youre-there?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-29T20:34:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "USDL",
+        "LGCY"
+      ]
+    },
+    {
+      "title": "Price analysis 7/29: BTC, ETH, BNB, XRP, ADA, SOL, DOGE, DOT, MATIC, AVAX",
+      "link": "https://cryptopanic.com/news/15908173/Price-analysis-729-BTC-ETH-BNB-XRP-ADA-SOL-DOGE-DOT-MATIC-AVAX",
+      "pubDate": "2022-07-29T19:55:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin price has hit resistance at the $24,000 level, resulting in a slight pullback in select altcoins. Is the rally over?",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "XRP",
+        "DOGE",
+        "DOT",
+        "AVAX",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "FTX gets green light to operate fully in Dubai",
+      "link": "https://cryptopanic.com/news/15908151/FTX-gets-green-light-to-operate-fully-in-Dubai",
+      "pubDate": "2022-07-29T19:47:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "FTX Exchange FZE, a subsidiary of FTX Europe, won approval from Dubai's VARA agency to operate in the jurisdiction.",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "🆕 The #Klaytn v1.9.0 hard fork, a dynamic gas fee mechanism, will replace the existing fixed price policy. Maxim…",
+      "link": "https://cryptopanic.com/news/klay-token/15912356/The-Klaytn-v190-hard-fork-a-dynamic-gas-fee-mechanism-will-replace-the-existing-fixed-price-policy-Maxim",
+      "pubDate": "2022-07-29T17:28:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "Our July dev call is live! Log in or sign up to to access the link.",
+      "link": "https://cryptopanic.com/news/15907759/Our-July-dev-call-is-live-Log-in-or-sign-up-to-to-access-the-link",
+      "pubDate": "2022-07-29T17:25:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SC"
+      ]
+    },
+    {
+      "title": "Skynet's dev call is live! Login or signup at to access the recording.",
+      "link": "https://cryptopanic.com/news/15907757/Skynets-dev-call-is-live-Login-or-signup-at-to-access-the-recording",
+      "pubDate": "2022-07-29T17:24:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SC"
+      ]
+    },
+    {
+      "title": "Cardano climbs 5% in 24 hours despite Vasil hard fork delay setback",
+      "link": "https://cryptopanic.com/news/15907574/Cardano-climbs-5-in-24-hours-despite-Vasil-hard-fork-delay-setback",
+      "pubDate": "2022-07-29T16:29:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The price of Cardano (ADA) has rallied despite the network confirming that the highly anticipated vasil hard fork will be... Continue reading",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 23,
+        "negative": 8
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum will outpace Visa with zkEVM Rollups, says Polygon co-founder",
+      "link": "https://cryptopanic.com/news/15907476/Ethereum-will-outpace-Visa-with-zkEVM-Rollups-says-Polygon-co-founder",
+      "pubDate": "2022-07-29T16:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A new scaling solution, zkEVM Rollups, could allow Ethereum to overcome Visa in terms of transaction throughput, says Polygon co-founder Mihailo Bjelic.",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogecoin Community Issues Alert on Scam Tokens",
+      "link": "https://cryptopanic.com/news/15907164/Dogecoin-Community-Issues-Alert-on-Scam-Tokens",
+      "pubDate": "2022-07-29T14:48:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin developer community has raised several red flags on scam projects",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 3
+      }
+    },
+    {
+      "title": "RT @ThetaJukebox: We're live in Las Vegas on the @ResortsWorldLV tower! \"Smile\" by the legendary @dionnewarwick releases exclusively on…",
+      "link": "https://cryptopanic.com/news/theta-token/15914509/RT-ThetaJukebox-Were-live-in-Las-Vegas-on-the-ResortsWorldLV-tower-Smile-by-the-legendary-dionnewarwick-releases-exclusively-on",
+      "pubDate": "2022-07-29T14:40:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Can BNB reach $400 by the end of August? Here’s what the crypto community says",
+      "link": "https://cryptopanic.com/news/15907099/Can-BNB-reach-400-by-the-end-of-August-Heres-what-the-crypto-community-says",
+      "pubDate": "2022-07-29T14:20:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Disclaimer: The CoinMarketCap cryptocurrency community price estimate is based only on the votes of its users. Estimates do not guarantee... Continue reading",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "What does a music community’s web3 HQ look like? @portugaltheman showed the new home of PTM Coin to @notionport and…",
+      "link": "https://cryptopanic.com/news/15913872/What-does-a-music-communitys-web3-HQ-look-like-portugaltheman-showed-the-new-home-of-PTM-Coin-to-notionport-and",
+      "pubDate": "2022-07-29T14:17:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RLY"
+      ]
+    },
+    {
+      "title": "Dogecoin Might Rise Another 14% If This Support Holds",
+      "link": "https://cryptopanic.com/news/15906894/Dogecoin-Might-Rise-Another-14-If-This-Support-Holds",
+      "pubDate": "2022-07-29T13:23:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin has built important support at $0.068",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Join us today for our Twitter Space discussing all things SFTs! We'll be joined by @Locodoco from @MagicEden and…",
+      "link": "https://cryptopanic.com/news/15914141/Join-us-today-for-our-Twitter-Space-discussing-all-things-SFTs-Well-be-joined-by-Locodoco-from-MagicEden-and",
+      "pubDate": "2022-07-29T13:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SRM"
+      ]
+    },
+    {
+      "title": "Check out Solitaire Blitz, by @onjoyride which uses RLY Protocol to generate RLY Rewards.",
+      "link": "https://cryptopanic.com/news/15913871/Check-out-Solitaire-Blitz-by-onjoyride-which-uses-RLY-Protocol-to-generate-RLY-Rewards",
+      "pubDate": "2022-07-29T12:40:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "RLY"
+      ]
+    },
+    {
+      "title": "Axie Infinity chief denies insider trading, says firm was fighting short-sellers",
+      "link": "https://cryptopanic.com/news/15906671/Axie-Infinity-chief-denies-insider-trading-says-firm-was-fighting-short-sellers",
+      "pubDate": "2022-07-29T12:27:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Trung Nguyen says Axie funds were moved to steady the firm's finances, provide liquidity, and outwit those looking to profit from $600M hack.",
+      "currencies": [
+        "AXS"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Mercedes-Benz and Polygon to develop a blockchain-based data sharing platform",
+      "link": "https://cryptopanic.com/news/15906600/Mercedes-Benz-and-Polygon-to-develop-a-blockchain-based-data-sharing-platform",
+      "pubDate": "2022-07-29T12:01:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "Daimler South East Asia, a part of the Mercedes-Benz Group, announced a data-sharing network based on blockchain technology, which will... Continue reading",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Number of new daily DOGE addresses climbs over 260% in 2 months",
+      "link": "https://cryptopanic.com/news/15906531/Number-of-new-daily-DOGE-addresses-climbs-over-260-in-2-months",
+      "pubDate": "2022-07-29T11:50:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The price of Dogecoin (DOGE) has been fluctuating over the last several weeks, impacted by the sentiment of the larger... Continue reading",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Huobi Token (HT) Creates Triple Bottom Pattern: Biggest Weekly Losers",
+      "link": "https://cryptopanic.com/news/15906538/Huobi-Token-HT-Creates-Triple-Bottom-Pattern-Biggest-Weekly-Losers",
+      "pubDate": "2022-07-29T11:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALGO",
+        "HT",
+        "KSM"
+      ]
+    },
+    {
+      "title": "The basic mode of the Orbler game is a competitive mode, where users compete to defeat more enemies. The competitio…",
+      "link": "https://cryptopanic.com/news/15913353/The-basic-mode-of-the-Orbler-game-is-a-competitive-mode-where-users-compete-to-defeat-more-enemies-The-competitio?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-29T11:04:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "ORBR"
+      ]
+    },
+    {
+      "title": "Ethereum Classic leads most trending cryptos while climbing 27% in 24 hours",
+      "link": "https://cryptopanic.com/news/15906366/Ethereum-Classic-leads-most-trending-cryptos-while-climbing-27-in-24-hours",
+      "pubDate": "2022-07-29T10:57:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "As the cryptocurrency market sustains its rally after reclaiming (and well surpassing) the $1 trillion market capitalization mark, the digital... Continue reading",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ravencoin (RVN) Makes Enormous 50% Return, Here Are 3 Reasons Why",
+      "link": "https://cryptopanic.com/news/15906369/Ravencoin-RVN-Makes-Enormous-50-Return-Here-Are-3-Reasons-Why",
+      "pubDate": "2022-07-29T10:52:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RVN"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The #Klaytn Difference 🟠 Ensuring flawless #gaming experiences & actively supporting our gaming partners 🤝 E…",
+      "link": "https://cryptopanic.com/news/klay-token/15912358/The-Klaytn-Difference-Ensuring-flawless-gaming-experiences-amp-actively-supporting-our-gaming-partners-E",
+      "pubDate": "2022-07-29T10:37:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "#BitcoinFact #5: Bitcoin is the archetype for blockchain technology. Here are 4 other #bitcoinfacts you should k…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/15909934/BitcoinFact-5-Bitcoin-is-the-archetype-for-blockchain-technology-Here-are-4-other-bitcoinfacts-you-should-k",
+      "pubDate": "2022-07-29T10:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "RT @Nxter_org: The #NFTGame is ongoing. 2.5% of the total income from all #MythicalBeings #NFTs sales + 1000 $GEM goes to the winners of th…",
+      "link": "https://cryptopanic.com/news/15905310/RT-Nxter_org-The-NFTGame-is-ongoing-25-of-the-total-income-from-all-MythicalBeings-NFTs-sales-1000-GEM-goes-to-the-winners-of-th",
+      "pubDate": "2022-07-29T09:25:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "ARDR"
+      ]
+    },
+    {
+      "title": "RT @BitswiftC: Some info on #NFTs and @nftmagicart",
+      "link": "https://cryptopanic.com/news/15905307/RT-BitswiftC-Some-info-on-NFTs-and-nftmagicart",
+      "pubDate": "2022-07-29T09:25:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "ARDR"
+      ]
+    },
+    {
+      "title": "RT @ginoongboyong: Round 14 of @BeingsMythical #NFTCard #NFTCollection #NFTGame has ended. 7 #SasquatchCard was raffled. Congrats to all th…",
+      "link": "https://cryptopanic.com/news/15903274/RT-ginoongboyong-Round-14-of-BeingsMythical-NFTCard-NFTCollection-NFTGame-has-ended-7-SasquatchCard-was-raffled-Congrats-to-all-th",
+      "pubDate": "2022-07-29T08:11:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "ARDR"
+      ]
+    },
+    {
+      "title": "RT @FelixProducer: Hey guys, here's a new video of me. @FellazXYZ is really taking off. @BoredApeYC @Eminem @SnoopDogg @Madonna @StephenCu…",
+      "link": "https://cryptopanic.com/news/15911348/RT-FelixProducer-Hey-guys-heres-a-new-video-of-me-FellazXYZ-is-really-taking-off-BoredApeYC-Eminem-SnoopDogg-Madonna-StephenCu?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-29T07:47:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FLZ"
+      ]
+    },
+    {
+      "title": "Ethereum Whales Pile Into Dogecoin Competitor Shiba Inu As Holdings Explode by Over 500%",
+      "link": "https://cryptopanic.com/news/15901568/Ethereum-Whales-Pile-Into-Dogecoin-Competitor-Shiba-Inu-As-Holdings-Explode-by-Over-500",
+      "pubDate": "2022-07-29T07:04:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum (ETH) whales are aggressively increasing their holdings of a Dogecoin (DOGE) rival as the crypto market stages a modest recovery. According to transactions tracker WhaleStats, Ethereum whales have increased their holdings of Shiba Inu (SHIB) by slightly over 580% from $736,000 to over $5 million in under 24 hours, in the process moving the […]",
+      "currencies": [
+        "ETH",
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @vicewrld_: Hello here is the form to apply for a beta spot for our partners at . There are only 25 spots be fas…",
+      "link": "https://cryptopanic.com/news/15905518/RT-vicewrld_-Hello-here-is-the-form-to-apply-for-a-beta-spot-for-our-partners-at-There-are-only-25-spots-be-fas?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-29T04:20:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VICE"
+      ]
+    },
+    {
+      "title": "Join the Liqd Waitlist",
+      "link": "https://cryptopanic.com/news/15907699/Join-the-Liqd-Waitlist?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-29T04:06:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDB"
+      ]
+    },
+    {
+      "title": "Phishing risks escalate as Celsius confirms client emails leaked",
+      "link": "https://cryptopanic.com/news/15898781/Phishing-risks-escalate-as-Celsius-confirms-client-emails-leaked",
+      "pubDate": "2022-07-29T03:45:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "It is not the first time Celsius’ customer emails have been exploited and leaked online.",
+      "currencies": [
+        "CEL"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "1/ GM, developers. Want to know how to build on #Klaytn? 🧵 Our 1st IRL dev meetup #KlayDevDay is the perfect time…",
+      "link": "https://cryptopanic.com/news/klay-token/15902450/1-GM-developers-Want-to-know-how-to-build-on-Klaytn-Our-1st-IRL-dev-meetup-KlayDevDay-is-the-perfect-time",
+      "pubDate": "2022-07-29T02:35:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "BAYC, ApeCoin- Everything latest you need to know for making money",
+      "link": "https://cryptopanic.com/news/15898652/BAYC-ApeCoin-Everything-latest-you-need-to-know-for-making-money",
+      "pubDate": "2022-07-29T02:30:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "Apecoin [APE], and its supporting NFT collection, Bored Ape Yacht Club [BAYC] have not had the best of times lately. In fact APE is largely down from its all-time high (ATH). In fact, BAYC sales volume has been in the red, giving way for CryptoPunk to surpass it in the leading spot. However, it looks […]",
+      "currencies": [
+        "APE"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Throwback Thursday: @rajgokal and @aeyakovenko testing out the first @solana node",
+      "link": "https://cryptopanic.com/news/15900605/Throwback-Thursday-rajgokal-and-aeyakovenko-testing-out-the-first-solana-node?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-29T00:43:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BORG"
+      ]
+    },
+    {
+      "title": "RT @KlaytnGames: Claim your $NPT You can withdraw $NPT airdrops for the amount you staked last week 🤑 If you maintain $KLAY staking s…",
+      "link": "https://cryptopanic.com/news/klay-token/15903363/RT-KlaytnGames-Claim-your-NPT-You-can-withdraw-NPT-airdrops-for-the-amount-you-staked-last-week-If-you-maintain-KLAY-staking-s",
+      "pubDate": "2022-07-29T00:19:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "NPT"
+      ]
+    }
+  ]
+}

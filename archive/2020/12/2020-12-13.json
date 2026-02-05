@@ -1,0 +1,106 @@
+{
+  "date": "2020-12-13",
+  "fetchedAt": "2026-02-05T07:27:06.937Z",
+  "articleCount": 7,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA Announces Launch of Chrysalis Testnet",
+      "link": "https://cryptopanic.com/news/10804245/IOTA-Announces-Launch-of-Chrysalis-Testnet",
+      "pubDate": "2020-12-13T18:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "#Counos_Platform offers an economic system as fair and precise as Switzerland, and wants to bring users along with…",
+      "link": "https://cryptopanic.com/news/10803141/Counos_Platform-offers-an-economic-system-as-fair-and-precise-as-Switzerland-and-wants-to-bring-users-along-with",
+      "pubDate": "2020-12-13T14:43:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "RT @btsfav: #Bitcoin Experiment: Financial Freedom with Faucets?! Week 22 #hive -",
+      "link": "https://cryptopanic.com/news/10802564/RT-btsfav-Bitcoin-Experiment-Financial-Freedom-with-Faucets-Week-22-hive-",
+      "pubDate": "2020-12-13T12:37:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "What did you do on Sunday?",
+      "link": "https://cryptopanic.com/news/10802424/What-did-you-do-on-Sunday",
+      "pubDate": "2020-12-13T12:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Cardano to Add DeFi Capability with Bondly",
+      "link": "https://cryptopanic.com/news/polkadot/10802259/Cardano-to-Add-DeFi-Capability-with-Bondly",
+      "pubDate": "2020-12-13T10:32:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Logo for A BITCOIN GOLD COIN",
+      "link": "https://cryptopanic.com/news/11174131/Logo-for-A-BITCOIN-GOLD-COIN",
+      "pubDate": "2020-12-13T06:25:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTG"
+      ]
+    },
+    {
+      "title": "The project can easly jump to 8$ with this performance #FSN",
+      "link": "https://cryptopanic.com/news/10800833/The-project-can-easly-jump-to-8-with-this-performance-FSN?mtm_campaign=API-OFA",
+      "pubDate": "2020-12-13T03:22:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ACA",
+        "USDG",
+        "999"
+      ]
+    }
+  ]
+}

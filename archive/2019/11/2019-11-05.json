@@ -1,0 +1,42 @@
+{
+  "date": "2019-11-05",
+  "fetchedAt": "2026-02-05T07:27:06.788Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "The Stellar Foundation has burned over 50% of the total XLM token supply, canceling airdrop programs",
+      "link": "https://cryptopanic.com/news/7053979/The-Stellar-Foundation-has-burned-over-50-of-the-total-XLM-token-supply-canceling-airdrop-programs",
+      "pubDate": "2019-11-05T01:00:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Stellar’s Foundation Just Destroyed Half the Supply of Its Lumens Cryptocurrency",
+      "link": "https://cryptopanic.com/news/7053824/Stellars-Foundation-Just-Destroyed-Half-the-Supply-of-Its-Lumens-Cryptocurrency",
+      "pubDate": "2019-11-05T00:25:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

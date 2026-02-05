@@ -1,0 +1,871 @@
+{
+  "date": "2025-08-14",
+  "fetchedAt": "2026-02-05T07:27:08.612Z",
+  "articleCount": 61,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Uniswap Deploys Flashblocks on Unichain for 200ms Trade Locks",
+      "link": "https://cryptopanic.com/news/uniswap/24234624/Uniswap-Deploys-Flashblocks-on-Unichain-for-200ms-Trade-Locks",
+      "pubDate": "2025-08-14T23:35:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Jack Dorsey’s Block Introduces Tool-Free, Modular Bitcoin Miner with 10-Year Lifespan Goal",
+      "link": "https://cryptopanic.com/news/bitcoin/24218268/Jack-Dorseys-Block-Introduces-Tool-Free-Modular-Bitcoin-Miner-with-10-Year-Lifespan-Goal",
+      "pubDate": "2025-08-14T23:31:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Block Inc. has launched Proto Rig, a groundbreaking modular Bitcoin miner that extends hardware lifespan to over a decade, alongside Proto Fleet open-source management software. The innovation challenges traditional ASIC mining with tool-free upgrades and reduced operational costs",
+      "currencies": [
+        "BTC",
+        "BLOCK"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Crypto Price Prediction Today 14 August – XRP, Sei, OKB",
+      "link": "https://cryptopanic.com/news/okb/24217111/Crypto-Price-Prediction-Today-14-August-XRP-Sei-OKB",
+      "pubDate": "2025-08-14T22:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "OKB"
+      ]
+    },
+    {
+      "title": "Top-50 Altcoin Explodes 115% in Under 48 Hours Amid Plans for Massive Token Burn and Blockchain Upgrades",
+      "link": "https://cryptopanic.com/news/okb/24220892/Top-50-Altcoin-Explodes-115-in-Under-48-Hours-Amid-Plans-for-Massive-Token-Burn-and-Blockchain-Upgrades",
+      "pubDate": "2025-08-14T22:01:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MATIC",
+        "OKB"
+      ]
+    },
+    {
+      "title": "Cardano Hits 5-Month High as Bulls Regain Control: Could $3 Be Closer Than Expected?",
+      "link": "https://cryptopanic.com/news/cardano/24214534/Cardano-Hits-5-Month-High-as-Bulls-Regain-Control-Could-3-Be-Closer-Than-Expected",
+      "pubDate": "2025-08-14T21:00:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Cardano (ADA) has surged past the $1 mark for the first time in months, gaining over 20% in the past 24 hours. The breakout, from $0. 8454 to $1. 01, signals renewed bullish momentum after a prolonged downtrend",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum, Solana Lead Crypto Social Media Discussions — What About Bitcoin?",
+      "link": "https://cryptopanic.com/news/monero/24212102/Ethereum-Solana-Lead-Crypto-Social-Media-Discussions-What-About-Bitcoin",
+      "pubDate": "2025-08-14T18:24:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "BtcTurk Turkey’s Second-Largest Crypto Exchange Loses $48M in Major Hack – What’s Happening?",
+      "link": "https://cryptopanic.com/news/avalanche-2/24211254/BtcTurk-Turkeys-Second-Largest-Crypto-Exchange-Loses-48M-in-Major-Hack-Whats-Happening",
+      "pubDate": "2025-08-14T18:07:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin dominance hits 6-month low as altcoin interest surges",
+      "link": "https://cryptopanic.com/news/bitcoin/24210331/Bitcoin-dominance-hits-6-month-low-as-altcoin-interest-surges",
+      "pubDate": "2025-08-14T17:08:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin market dominance has fallen 57. 4% in the last six months, as investors shift their funds towards altcoins.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Top Crypto News: Cardano at $0.85, Avalanche at $65, BlockDAG’s $373M Raise and X-Series Miners Lead the Pack in 2025",
+      "link": "https://cryptopanic.com/news/avalanche-2/24209396/Top-Crypto-News-Cardano-at-085-Avalanche-at-65-BlockDAGs-373M-Raise-and-X-Series-Miners-Lead-the-Pack-in-2025",
+      "pubDate": "2025-08-14T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "AVAX",
+        "FIL"
+      ]
+    },
+    {
+      "title": "ETH ETFs Just Hit a $1 Billion Net Inflow Day – Could That Spur Altcoin Rotation This Weekend?",
+      "link": "https://cryptopanic.com/news/ethereum/24209384/ETH-ETFs-Just-Hit-a-1-Billion-Net-Inflow-Day-Could-That-Spur-Altcoin-Rotation-This-Weekend",
+      "pubDate": "2025-08-14T16:57:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "ETH Inflows have reached a record, with U. S. spot Ethereum ETFs drawing $1B in a single session. BlackRock’s ETHA has led with $640M and Fidelity’s FETH has added $277M. Liquidity and participation have expanded across DeFi, L2s, and connected markets.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "US Treasury Secretary says no purchases for strategic bitcoin reserve",
+      "link": "https://cryptopanic.com/news/bitcoin/24209294/US-Treasury-Secretary-says-no-purchases-for-strategic-bitcoin-reserve",
+      "pubDate": "2025-08-14T16:35:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Scott Bessent confirmed a disappointing amount of US government bitcoin this morning, putting the number at $15B to $20B.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Suited for 'Meteoric' Stablecoin Growth, JPMorgan Says",
+      "link": "https://cryptopanic.com/news/ethereum/24209280/Ethereum-Suited-for-Meteoric-Stablecoin-Growth-JPMorgan-Says",
+      "pubDate": "2025-08-14T16:31:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum’s price has increased 50% over the past month.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum’s Moment? Why $10K ETH Is Back on the Table",
+      "link": "https://cryptopanic.com/news/bitcoin/24209225/Ethereums-Moment-Why-10K-ETH-Is-Back-on-the-Table",
+      "pubDate": "2025-08-14T16:23:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Even amid the institutional hostility of the Biden era, Ethereum kept building its ecosystem, now dominating DeFi and stablecoin markets with analysts forecasting new all-time highs.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Wall Street debates Strategy's Bitcoin blueprint",
+      "link": "https://cryptopanic.com/news/bitcoin/24209207/Wall-Street-debates-Strategys-Bitcoin-blueprint",
+      "pubDate": "2025-08-14T16:22:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Strategy’s preferred share model fuels bitcoin growth, but critics warn premium could collapse.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "NEAR Protocol Faces Heavy Institutional Selling, Recovers Slightly Amid Ongoing Volatility",
+      "link": "https://cryptopanic.com/news/near/24209820/NEAR-Protocol-Faces-Heavy-Institutional-Selling-Recovers-Slightly-Amid-Ongoing-Volatility",
+      "pubDate": "2025-08-14T16:03:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Assessing how Stellar [XLM] could rally 25% if THIS level breaks",
+      "link": "https://cryptopanic.com/news/stellar/24208009/Assessing-how-Stellar-XLM-could-rally-25-if-THIS-level-breaks",
+      "pubDate": "2025-08-14T16:00:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "The Chopping Block: Corpo Chains, Monero’s AI Vampire Attack, and DAT Mania - Ep. 887",
+      "link": "https://cryptopanic.com/news/monero/24208078/The-Chopping-Block-Corpo-Chains-Moneros-AI-Vampire-Attack-and-DAT-Mania-Ep-887",
+      "pubDate": "2025-08-14T16:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Is This the XLM Breakout Bulls Have Been Waiting For?",
+      "link": "https://cryptopanic.com/news/stellar/24207843/Is-This-the-XLM-Breakout-Bulls-Have-Been-Waiting-For",
+      "pubDate": "2025-08-14T15:54:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Grok Reveals the Altcoins Set to Soar After Bitcoin’s $124K Breakout",
+      "link": "https://cryptopanic.com/news/aave/24206359/Grok-Reveals-the-Altcoins-Set-to-Soar-After-Bitcoins-124K-Breakout",
+      "pubDate": "2025-08-14T14:53:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "U.S. Will Not Be Purchasing Any Bitcoin, Treasury Secretary Bessent Says",
+      "link": "https://cryptopanic.com/news/bitcoin/24206347/US-Will-Not-Be-Purchasing-Any-Bitcoin-Treasury-Secretary-Bessent-Says",
+      "pubDate": "2025-08-14T14:48:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The White House has repeatedly floated the idea that the federal government could—and should—purchase additional Bitcoin to supplement existing reserves.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Turkish crypto exchange BtcTurk hacked for $49M after $55M loss last year",
+      "link": "https://cryptopanic.com/news/avalanche-2/24206275/Turkish-crypto-exchange-BtcTurk-hacked-for-49M-after-55M-loss-last-year",
+      "pubDate": "2025-08-14T14:40:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Stellar (XLM) Price Prediction for August 14",
+      "link": "https://cryptopanic.com/news/stellar/24206313/Stellar-XLM-Price-Prediction-for-August-14",
+      "pubDate": "2025-08-14T14:37:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "BtcTurk hack sees $48 million in crypto vanish from hot wallets",
+      "link": "https://cryptopanic.com/news/avalanche-2/24206253/BtcTurk-hack-sees-48-million-in-crypto-vanish-from-hot-wallets",
+      "pubDate": "2025-08-14T14:35:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AVAX",
+        "MNT"
+      ]
+    },
+    {
+      "title": "XLM Price Faces Risk: Can Strong Outflows Undermine 22% Rally?",
+      "link": "https://cryptopanic.com/news/stellar/24207696/XLM-Price-Faces-Risk-Can-Strong-Outflows-Undermine-22-Rally",
+      "pubDate": "2025-08-14T14:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Turkey’s Oldest Crypto Exchange Gets Hacked for $48 Million",
+      "link": "https://cryptopanic.com/news/avalanche-2/24206164/Turkeys-Oldest-Crypto-Exchange-Gets-Hacked-for-48-Million",
+      "pubDate": "2025-08-14T13:46:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AVAX",
+        "MNT"
+      ]
+    },
+    {
+      "title": "SEC Greenlights Liquid Staking - Is Best Free Cloud Mining via QFSCOIN Next Big Passive Income Trend?",
+      "link": "https://cryptopanic.com/news/litecoin/24204717/SEC-Greenlights-Liquid-Staking-Is-Best-Free-Cloud-Mining-via-QFSCOIN-Next-Big-Passive-Income-Trend",
+      "pubDate": "2025-08-14T13:44:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ]
+    },
+    {
+      "title": "HTX Marks 12th Anniversary with $80,000 in Trading Campaigns Amid Market Rally",
+      "link": "https://cryptopanic.com/news/litecoin/24206162/HTX-Marks-12th-Anniversary-with-80000-in-Trading-Campaigns-Amid-Market-Rally",
+      "pubDate": "2025-08-14T13:40:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "DOGE"
+      ]
+    },
+    {
+      "title": "BREAKING: U.S. Won’t Be Buying New Bitcoin!",
+      "link": "https://cryptopanic.com/news/bitcoin/24204674/BREAKING-US-Wont-Be-Buying-New-Bitcoin",
+      "pubDate": "2025-08-14T13:34:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Treasury Secretary Scott Bessent confirmed that the U. S. government will not purchase any more Bitcoin. .",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 12
+      }
+    },
+    {
+      "title": "Ethereum validator exit queue climbs to over $3 billion in ETH amid increased stake withdrawals",
+      "link": "https://cryptopanic.com/news/ethereum/24204634/Ethereum-validator-exit-queue-climbs-to-over-3-billion-in-ETH-amid-increased-stake-withdrawals",
+      "pubDate": "2025-08-14T13:31:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum’s validator exit queue climbed to over 670,000 ETH with a 12-day wait, as staking entries fell and analysts pointed to leverage unwinds.",
+      "currencies": [
+        "ETH",
+        "DEFI"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "CoinDesk 20 Performance Update: Uniswap Drops 8.2%, as Nearly All Assets Decline",
+      "link": "https://cryptopanic.com/news/uniswap/24205003/CoinDesk-20-Performance-Update-Uniswap-Drops-82-as-Nearly-All-Assets-Decline",
+      "pubDate": "2025-08-14T13:26:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "$6B Privacy Coin Monero Was Just Hijacked for $100K/Day – Here’s Why That’s Terrifying",
+      "link": "https://cryptopanic.com/news/monero/24204058/6B-Privacy-Coin-Monero-Was-Just-Hijacked-for-100KDay-Heres-Why-Thats-Terrifying",
+      "pubDate": "2025-08-14T13:15:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Dinari to Launch L1 Blockchain for Securities Coordination",
+      "link": "https://cryptopanic.com/news/avalanche-2/24207866/Dinari-to-Launch-L1-Blockchain-for-Securities-Coordination",
+      "pubDate": "2025-08-14T13:15:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "ARB"
+      ]
+    },
+    {
+      "title": "OKB crypto rallies 221% – Mapping its path to $148 ATH",
+      "link": "https://cryptopanic.com/news/okb/24203099/OKB-crypto-rallies-221-Mapping-its-path-to-148-ATH",
+      "pubDate": "2025-08-14T13:00:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OKB",
+        "ATH"
+      ]
+    },
+    {
+      "title": "Tokenization Firm Dinari to Launch L1 Blockchain, Aims to Be the 'DTCC of Tokenized Stocks'",
+      "link": "https://cryptopanic.com/news/avalanche-2/24204988/Tokenization-Firm-Dinari-to-Launch-L1-Blockchain-Aims-to-Be-the-DTCC-of-Tokenized-Stocks",
+      "pubDate": "2025-08-14T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "ICP Rallies to $6.08 Before Sharp Reversal Amid Security Concerns",
+      "link": "https://cryptopanic.com/news/internet-computer/24203255/ICP-Rallies-to-608-Before-Sharp-Reversal-Amid-Security-Concerns",
+      "pubDate": "2025-08-14T12:06:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ]
+    },
+    {
+      "title": "Meliuz Reports Stellar Financial Results, Achieves 908% BTC Yield",
+      "link": "https://cryptopanic.com/news/stellar/24200751/Meliuz-Reports-Stellar-Financial-Results-Achieves-908-BTC-Yield",
+      "pubDate": "2025-08-14T11:30:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Will Avalanche’s First Token Unlock In 3 Months Trigger Price Drop to $20?",
+      "link": "https://cryptopanic.com/news/avalanche-2/24202160/Will-Avalanches-First-Token-Unlock-In-3-Months-Trigger-Price-Drop-to-20",
+      "pubDate": "2025-08-14T11:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "KuCoin Pay Teams Up with BitTopup to Boost Everyday Crypto Spending",
+      "link": "https://cryptopanic.com/news/kucoin-shares/24200739/KuCoin-Pay-Teams-Up-with-BitTopup-to-Boost-Everyday-Crypto-Spending",
+      "pubDate": "2025-08-14T11:29:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "Cardano Hits 5-Month High As Bitcoin, Ethereum Hover Near Record Price",
+      "link": "https://cryptopanic.com/news/bitcoin/24200726/Cardano-Hits-5-Month-High-As-Bitcoin-Ethereum-Hover-Near-Record-Price",
+      "pubDate": "2025-08-14T11:27:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "ADA jumped double digits on the day as it surged to a five-month high, following a BTC all-time high and ETH closing in on its peak.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Master Ventures Converts $2.4 Million WBTC to ETH",
+      "link": "https://cryptopanic.com/news/wrapped-bitcoin/24202712/Master-Ventures-Converts-24-Million-WBTC-to-ETH",
+      "pubDate": "2025-08-14T11:03:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "WBTC"
+      ]
+    },
+    {
+      "title": "12 Hot Picks! HTX Crypto Gem Hunt (12th Anniversary Special Edition): Discover Premium Assets and Wealth Opportunities for the Next Crypto Cycle",
+      "link": "https://cryptopanic.com/news/huobi-token/24200367/12-Hot-Picks-HTX-Crypto-Gem-Hunt-12th-Anniversary-Special-Edition-Discover-Premium-Assets-and-Wealth-Opportunities-for-the-Next-Crypto-Cycle",
+      "pubDate": "2025-08-14T10:42:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "HT"
+      ]
+    },
+    {
+      "title": "The crypto in distress: Filecoin (FIL), Algorand (ALGO), and Polkadot (DOT)",
+      "link": "https://cryptopanic.com/news/polkadot/24202927/The-crypto-in-distress-Filecoin-FIL-Algorand-ALGO-and-Polkadot-DOT",
+      "pubDate": "2025-08-14T10:26:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "ALGO",
+        "FIL"
+      ]
+    },
+    {
+      "title": "Cardano analyst expects 150% 'massive bullish rally’ in the coming weeks",
+      "link": "https://cryptopanic.com/news/cardano/24197429/Cardano-analyst-expects-150-039massive-bullish-rally-in-the-coming-weeks",
+      "pubDate": "2025-08-14T09:49:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Over 15 billion ADA has stayed unmoved for a year, signaling holder confidence as “altcoin season” momentum builds and Cardano price rises to multimonth highs.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Best Crypto to Buy Now as Big Caps Dominate the Top Gainers List Today",
+      "link": "https://cryptopanic.com/news/okb/24204075/Best-Crypto-to-Buy-Now-as-Big-Caps-Dominate-the-Top-Gainers-List-Today",
+      "pubDate": "2025-08-14T09:42:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "OKB"
+      ]
+    },
+    {
+      "title": "ADA Rockets to 5-Month Peak, BTC Price Corrects After Latest ATH: Market Watch",
+      "link": "https://cryptopanic.com/news/bitcoin/24197366/ADA-Rockets-to-5-Month-Peak-BTC-Price-Corrects-After-Latest-ATH-Market-Watch",
+      "pubDate": "2025-08-14T09:35:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "ADA topped $1 for the first time since early March.",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Stellar (XLM) Eyes XRP-Style Upside With Inverse Head and Shoulders",
+      "link": "https://cryptopanic.com/news/stellar/24195838/Stellar-XLM-Eyes-XRP-Style-Upside-With-Inverse-Head-and-Shoulders",
+      "pubDate": "2025-08-14T08:59:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Crypto Price Predictions August: VeChain (VET) Price Slides as Investors Explore a New Crypto Presale for 2025 Growth",
+      "link": "https://cryptopanic.com/news/vechain/24195693/Crypto-Price-Predictions-August-VeChain-VET-Price-Slides-as-Investors-Explore-a-New-Crypto-Presale-for-2025-Growth",
+      "pubDate": "2025-08-14T08:41:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ]
+    },
+    {
+      "title": "OKB News: Price Jumps 130% in a Day After Record Token Burn",
+      "link": "https://cryptopanic.com/news/okb/24197466/OKB-News-Price-Jumps-130-in-a-Day-After-Record-Token-Burn",
+      "pubDate": "2025-08-14T08:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ]
+    },
+    {
+      "title": "Cardano (ADA) Breaks Trendline With 20% Daily Surge, $1.54 Target Now in Play",
+      "link": "https://cryptopanic.com/news/cardano/24194038/Cardano-ADA-Breaks-Trendline-With-20-Daily-Surge-154-Target-Now-in-Play",
+      "pubDate": "2025-08-14T07:35:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "ADA jumped to $1 for the first time in months - what's next?",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "OKB: the crypto of the OKX exchange soars by +170% after the tokenomics update",
+      "link": "https://cryptopanic.com/news/okb/24195793/OKB-the-crypto-of-the-OKX-exchange-soars-by-170-after-the-tokenomics-update",
+      "pubDate": "2025-08-14T07:19:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "OKB",
+        "Z"
+      ]
+    },
+    {
+      "title": "OKB’s 160% Rally Meets $58 Million Sell Wall — Is a Free Fall Next?",
+      "link": "https://cryptopanic.com/news/okb/24193335/OKBs-160-Rally-Meets-58-Million-Sell-Wall-Is-a-Free-Fall-Next",
+      "pubDate": "2025-08-14T06:33:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ]
+    },
+    {
+      "title": "OKB Price Surges 129% in a Day, Is a Drop to $103 Imminent?",
+      "link": "https://cryptopanic.com/news/okb/24193502/OKB-Price-Surges-129-in-a-Day-Is-a-Drop-to-103-Imminent",
+      "pubDate": "2025-08-14T06:09:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ]
+    },
+    {
+      "title": "Cardano price prediction – Is Grayscale ETF hype the catalyst ADA needs to hit $1.50?",
+      "link": "https://cryptopanic.com/news/cardano/24190394/Cardano-price-prediction-Is-Grayscale-ETF-hype-the-catalyst-ADA-needs-to-hit-150",
+      "pubDate": "2025-08-14T05:00:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Cardano’s rally may be gaining traction as ETF buzz, bullish sentiment, and on-chain trends align.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Coinbase Revives Bootstrap Fund to Flood DeFi with Stablecoin Liquidity",
+      "link": "https://cryptopanic.com/news/aave/24190175/Coinbase-Revives-Bootstrap-Fund-to-Flood-DeFi-with-Stablecoin-Liquidity",
+      "pubDate": "2025-08-14T04:31:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "AAVE",
+        "JUP"
+      ]
+    },
+    {
+      "title": "Crypto Market RoundUp Aug 14: Bitcoin Climbs to $123K, up by 3.5%",
+      "link": "https://cryptopanic.com/news/polkadot/24192590/Crypto-Market-RoundUp-Aug-14-Bitcoin-Climbs-to-123K-up-by-35",
+      "pubDate": "2025-08-14T04:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "KuCoin partners with AlloyX to test RWA collateral program",
+      "link": "https://cryptopanic.com/news/kucoin-shares/24190144/KuCoin-partners-with-AlloyX-to-test-RWA-collateral-program",
+      "pubDate": "2025-08-14T04:14:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS",
+        "RWA"
+      ]
+    },
+    {
+      "title": "Uniswap, Alchemy, Roblox, and More Are Hiring in Web3",
+      "link": "https://cryptopanic.com/news/uniswap/24190143/Uniswap-Alchemy-Roblox-and-More-Are-Hiring-in-Web3",
+      "pubDate": "2025-08-14T04:12:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash Price Forecast: BCH hits new yearly high, BTC reaches all-time high",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/24200716/Bitcoin-Cash-Price-Forecast-BCH-hits-new-yearly-high-BTC-reaches-all-time-high",
+      "pubDate": "2025-08-14T03:42:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Crypto All-Time High Season: OKB hits record high as Arbitrum, Raydium follow",
+      "link": "https://cryptopanic.com/news/okb/24200715/Crypto-All-Time-High-Season-OKB-hits-record-high-as-Arbitrum-Raydium-follow",
+      "pubDate": "2025-08-14T03:40:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "OKB",
+        "RAY",
+        "ARB"
+      ]
+    },
+    {
+      "title": "Earn a $CRO welcome bonus¹ for opening a Crypto.com Visa Signature® Credit Card by Aug 31 and spending with it",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/24187884/Earn-a-CRO-welcome-bonus1-for-opening-a-Cryptocom-Visa-Signature-Credit-Card-by-Aug-31-and-spending-with-it",
+      "pubDate": "2025-08-14T01:24:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO",
+        "MCO"
+      ]
+    },
+    {
+      "title": "Analyzing if Litecoin [LTC] can breach $137 and trigger a squeeze",
+      "link": "https://cryptopanic.com/news/litecoin/24185127/Analyzing-if-Litecoin-LTC-can-breach-137-and-trigger-a-squeeze",
+      "pubDate": "2025-08-14T00:00:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    }
+  ]
+}

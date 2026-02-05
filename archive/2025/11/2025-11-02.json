@@ -1,0 +1,801 @@
+{
+  "date": "2025-11-02",
+  "fetchedAt": "2026-02-05T07:27:08.689Z",
+  "articleCount": 61,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "XRP ETF Set to Launch in November, Western Union Announces Solana-Based Stablecoin, Cardano Founder Calls Out Peter Schiff for Wrong Bitcoin Price Prediction — Top Weekly Crypto News",
+      "link": "https://cryptopanic.com/news/cardano/26646528/XRP-ETF-Set-to-Launch-in-November-Western-Union-Announces-Solana-Based-Stablecoin-Cardano-Founder-Calls-Out-Peter-Schiff-for-Wrong-Bitcoin-Price-Prediction-Top-Weekly-Crypto-News",
+      "pubDate": "2025-11-02T23:35:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Bitcoin Scarcity Index On Binance Flips Green As Whales Enter Accumulation Mode",
+      "link": "https://cryptopanic.com/news/usd-coin/26643309/Bitcoin-Scarcity-Index-On-Binance-Flips-Green-As-Whales-Enter-Accumulation-Mode",
+      "pubDate": "2025-11-02T21:53:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDC"
+      ]
+    },
+    {
+      "title": "Cardano’s Hoskinson Predicts Bitcoin Price To Reach $1 Million, Fires Back At Peter Schiff",
+      "link": "https://cryptopanic.com/news/usd-coin/26642718/Cardanos-Hoskinson-Predicts-Bitcoin-Price-To-Reach-1-Million-Fires-Back-At-Peter-Schiff",
+      "pubDate": "2025-11-02T21:37:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Michael Saylor Eyes $150,000 Bitcoin Price By End Of 2025, Targets $1 Million In 2029",
+      "link": "https://cryptopanic.com/news/usd-coin/26642079/Michael-Saylor-Eyes-150000-Bitcoin-Price-By-End-Of-2025-Targets-1-Million-In-2029",
+      "pubDate": "2025-11-02T21:14:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDC"
+      ]
+    },
+    {
+      "title": "Dash soars 49% in a day – Privacy coin mania captures the market",
+      "link": "https://cryptopanic.com/news/zcash/26641878/Dash-soars-49-in-a-day-Privacy-coin-mania-captures-the-market",
+      "pubDate": "2025-11-02T21:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "x402 is Coming to Cardano and Charles Hoskinson Believes it’s a Big Deal for the Network",
+      "link": "https://cryptopanic.com/news/cardano/26640930/x402-is-Coming-to-Cardano-and-Charles-Hoskinson-Believes-its-a-Big-Deal-for-the-Network",
+      "pubDate": "2025-11-02T20:38:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "KING"
+      ]
+    },
+    {
+      "title": "Privacy Coin Zcash Price Prediction Of $100,000 & Bitcoin Connection?",
+      "link": "https://cryptopanic.com/news/zcash/26640924/Privacy-Coin-Zcash-Price-Prediction-Of-100000-Bitcoin-Connection",
+      "pubDate": "2025-11-02T20:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Shiba Inu's Shibarium Goes Dark for Two Weeks – Here's What Users Need to Know",
+      "link": "https://cryptopanic.com/news/shiba-inu/26640647/Shiba-Inus-Shibarium-Goes-Dark-for-Two-Weeks-Heres-What-Users-Need-to-Know",
+      "pubDate": "2025-11-02T20:26:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB"
+      ]
+    },
+    {
+      "title": "Bitwise CEO Predicts Wall Street Will Fully Buy Into Crypto Over The Next 12 Months",
+      "link": "https://cryptopanic.com/news/usd-coin/26640380/Bitwise-CEO-Predicts-Wall-Street-Will-Fully-Buy-Into-Crypto-Over-The-Next-12-Months",
+      "pubDate": "2025-11-02T20:15:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT"
+      ]
+    },
+    {
+      "title": "Coinbase Launches x402 for Stablecoin Web Payments",
+      "link": "https://cryptopanic.com/news/usd-coin/26638999/Coinbase-Launches-x402-for-Stablecoin-Web-Payments",
+      "pubDate": "2025-11-02T19:36:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "USDC"
+      ]
+    },
+    {
+      "title": "The Forgotten Phase: Why the Crypto Market Might Be Stuck Between Cycles",
+      "link": "https://cryptopanic.com/news/cardano/26637663/The-Forgotten-Phase-Why-the-Crypto-Market-Might-Be-Stuck-Between-Cycles",
+      "pubDate": "2025-11-02T19:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ADA"
+      ]
+    },
+    {
+      "title": "Crypto market’s weekly winners and losers – DASH, VIRTUAL, ASTER, ENA",
+      "link": "https://cryptopanic.com/news/dash/26637614/Crypto-markets-weekly-winners-and-losers-DASH-VIRTUAL-ASTER-ENA",
+      "pubDate": "2025-11-02T19:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DASH",
+        "ENA",
+        "ASTER"
+      ]
+    },
+    {
+      "title": "Shiba Inu Token Burns Surge as November Price Recovery Takes Shape",
+      "link": "https://cryptopanic.com/news/shiba-inu/26637542/Shiba-Inu-Token-Burns-Surge-as-November-Price-Recovery-Takes-Shape",
+      "pubDate": "2025-11-02T18:57:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SHIB"
+      ]
+    },
+    {
+      "title": "HBAR Price Shows Cracks — Yet a Quick Rebound May Be Hiding in the Charts",
+      "link": "https://cryptopanic.com/news/hedera-hashgraph/26638305/HBAR-Price-Shows-Cracks-Yet-a-Quick-Rebound-May-Be-Hiding-in-the-Charts",
+      "pubDate": "2025-11-02T18:50:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "BlockDAG’s 1,400 TPS Awakening Testnet Proves 1000x Potential, Outshining ZCash Drops and Binance Coin Speculation",
+      "link": "https://cryptopanic.com/news/zcash/26634889/BlockDAGs-1400-TPS-Awakening-Testnet-Proves-1000x-Potential-Outshining-ZCash-Drops-and-Binance-Coin-Speculation",
+      "pubDate": "2025-11-02T18:00:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Nearly 8 Million Shiba Inu Vanish After First SHIB ETF Filing Shakes Market",
+      "link": "https://cryptopanic.com/news/shiba-inu/26634773/Nearly-8-Million-Shiba-Inu-Vanish-After-First-SHIB-ETF-Filing-Shakes-Market",
+      "pubDate": "2025-11-02T17:32:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SHIB"
+      ]
+    },
+    {
+      "title": "Shiba Inu News: Developers Launch Major Anti-Hack Upgrade for Shibarium",
+      "link": "https://cryptopanic.com/news/shiba-inu/26633473/Shiba-Inu-News-Developers-Launch-Major-Anti-Hack-Upgrade-for-Shibarium",
+      "pubDate": "2025-11-02T17:04:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB"
+      ]
+    },
+    {
+      "title": "Binance P2P third party accounts?",
+      "link": "https://cryptopanic.com/news/usd-coin/26687155/Binance-P2P-third-party-accounts",
+      "pubDate": "2025-11-02T16:57:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "BNB"
+      ]
+    },
+    {
+      "title": "HBAR Price Prediction 2025 – Could ETF Inflows Push Hedera to New Highs?",
+      "link": "https://cryptopanic.com/news/litecoin/26637002/HBAR-Price-Prediction-2025-Could-ETF-Inflows-Push-Hedera-to-New-Highs",
+      "pubDate": "2025-11-02T16:52:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Crypto Whales Watch Closely as LivLive ($LIVE) Overtakes Avalanche (AVAX) and TRON (TRX) Among Top Crypto Coins Right Now",
+      "link": "https://cryptopanic.com/news/tron/26633429/Crypto-Whales-Watch-Closely-as-LivLive-LIVE-Overtakes-Avalanche-AVAX-and-TRON-TRX-Among-Top-Crypto-Coins-Right-Now",
+      "pubDate": "2025-11-02T16:48:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Crypto Market Adds $33 Billion As BTC Price Retests $111,000",
+      "link": "https://cryptopanic.com/news/zcash/26633410/Crypto-Market-Adds-33-Billion-As-BTC-Price-Retests-111000",
+      "pubDate": "2025-11-02T16:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Zcash Hashrate Hits Record High as Miners Cash In on Rally",
+      "link": "https://cryptopanic.com/news/zcash/26633357/Zcash-Hashrate-Hits-Record-High-as-Miners-Cash-In-on-Rally",
+      "pubDate": "2025-11-02T16:19:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "1 Million SHIB Burn: Will Shiba Inu's Price Bounce Back in November?",
+      "link": "https://cryptopanic.com/news/shiba-inu/26633335/1-Million-SHIB-Burn-Will-Shiba-Inus-Price-Bounce-Back-in-November",
+      "pubDate": "2025-11-02T16:07:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SHIB"
+      ]
+    },
+    {
+      "title": "Litecoin’s $105 line in the sand: Is THIS the key to unlocking $137 for LTC?",
+      "link": "https://cryptopanic.com/news/litecoin/26633303/Litecoins-105-line-in-the-sand-Is-THIS-the-key-to-unlocking-137-for-LTC",
+      "pubDate": "2025-11-02T16:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "BlockDAG, Binance Coin, Avalanche, and Sui Lead as the Good Cryptos to Invest in for 2025",
+      "link": "https://cryptopanic.com/news/avalanche-2/26633307/BlockDAG-Binance-Coin-Avalanche-and-Sui-Lead-as-the-Good-Cryptos-to-Invest-in-for-2025",
+      "pubDate": "2025-11-02T16:00:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Educational Byte: Are privacy coins legal?",
+      "link": "https://cryptopanic.com/news/monero/26633847/Educational-Byte-Are-privacy-coins-legal",
+      "pubDate": "2025-11-02T15:52:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "ZEC",
+        "GBYTE"
+      ]
+    },
+    {
+      "title": "Maxi Doge Soars Toward $4M as Experts Call It the Next Crypto to Explode in 2025",
+      "link": "https://cryptopanic.com/news/shiba-inu/26633301/Maxi-Doge-Soars-Toward-4M-as-Experts-Call-It-the-Next-Crypto-to-Explode-in-2025",
+      "pubDate": "2025-11-02T15:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "DOGE",
+        "SHIB"
+      ]
+    },
+    {
+      "title": "What To Expect From Stellar (XLM) Price In November 2025",
+      "link": "https://cryptopanic.com/news/stellar/26633273/What-To-Expect-From-Stellar-XLM-Price-In-November-2025",
+      "pubDate": "2025-11-02T14:49:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Investor Frenzy Builds as Lyno AI (LYNO) Predicted to Surge 22,680%, Threatening Dogecoin (DOGE) and SHIB’s Market Dominance",
+      "link": "https://cryptopanic.com/news/shiba-inu/26632423/Investor-Frenzy-Builds-as-Lyno-AI-LYNO-Predicted-to-Surge-22680-Threatening-Dogecoin-DOGE-and-SHIBs-Market-Dominance",
+      "pubDate": "2025-11-02T14:42:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ]
+    },
+    {
+      "title": "Dogecoin Price Hits Key Resistance While Lyno AI (LYNO) Looks Set for a 21,677% Explosion and SHIB Targets 110% Year-End Gain",
+      "link": "https://cryptopanic.com/news/shiba-inu/26632412/Dogecoin-Price-Hits-Key-Resistance-While-Lyno-AI-LYNO-Looks-Set-for-a-21677-Explosion-and-SHIB-Targets-110-Year-End-Gain",
+      "pubDate": "2025-11-02T14:39:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ]
+    },
+    {
+      "title": "Shiba Inu (SHIB) Survives October Without Adding New Zero, Meme Coin Bulls Eye November Rally",
+      "link": "https://cryptopanic.com/news/shiba-inu/26632395/Shiba-Inu-SHIB-Survives-October-Without-Adding-New-Zero-Meme-Coin-Bulls-Eye-November-Rally",
+      "pubDate": "2025-11-02T14:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SHIB"
+      ]
+    },
+    {
+      "title": "PIVX Core and PIVXLabs Development Reports",
+      "link": "https://cryptopanic.com/news/zcash/26632366/PIVX-Core-and-PIVXLabs-Development-Reports",
+      "pubDate": "2025-11-02T14:29:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ZEC",
+        "PIVX"
+      ]
+    },
+    {
+      "title": "Shiba Inu News: Shiba Inu Unveils Shibarium RPC Migration to Strengthen Network Security",
+      "link": "https://cryptopanic.com/news/shiba-inu/26632217/Shiba-Inu-News-Shiba-Inu-Unveils-Shibarium-RPC-Migration-to-Strengthen-Network-Security",
+      "pubDate": "2025-11-02T13:30:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "SHIB"
+      ]
+    },
+    {
+      "title": "SHIB Holders Brace for a Breakout — Could This Be the Start of a New Meme Coin Supercycle?",
+      "link": "https://cryptopanic.com/news/shiba-inu/26632205/SHIB-Holders-Brace-for-a-Breakout-Could-This-Be-the-Start-of-a-New-Meme-Coin-Supercycle",
+      "pubDate": "2025-11-02T13:30:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SHIB"
+      ]
+    },
+    {
+      "title": "Zcash’s Privacy Evolution Continues as ECC Strengthens Core Infrastructure",
+      "link": "https://cryptopanic.com/news/zcash/26632267/Zcashs-Privacy-Evolution-Continues-as-ECC-Strengthens-Core-Infrastructure",
+      "pubDate": "2025-11-02T13:05:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "November Could Be the New October for U.S. Crypto ETFs After Shutdown Delays SEC Decisions",
+      "link": "https://cryptopanic.com/news/hedera-hashgraph/26632268/November-Could-Be-the-New-October-for-US-Crypto-ETFs-After-Shutdown-Delays-SEC-Decisions",
+      "pubDate": "2025-11-02T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "America.Fun Wants To Fix the Pump.Fun Problem — But Will It Succeed?",
+      "link": "https://cryptopanic.com/news/solana/26632220/AmericaFun-Wants-To-Fix-the-PumpFun-Problem-But-Will-It-Succeed",
+      "pubDate": "2025-11-02T12:49:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "America. Fun is a new Solana-based launchpad advised by World Liberty Financial’s Ogle. It claims to offer a safer alternative to the meme-coin chaos typified by Pump. Fun",
+      "currencies": [
+        "SOL",
+        "WLFI",
+        "PUMP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Stellar Partners With Chainlink — A Big Step Toward Interconnected On-Chain Finance",
+      "link": "https://cryptopanic.com/news/chainlink/26632158/Stellar-Partners-With-Chainlink-A-Big-Step-Toward-Interconnected-On-Chain-Finance",
+      "pubDate": "2025-11-02T12:43:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "XLM",
+        "A"
+      ]
+    },
+    {
+      "title": "Tron Ends October With Massive Network Growth — Here’s What’s Driving It",
+      "link": "https://cryptopanic.com/news/tron/26632090/Tron-Ends-October-With-Massive-Network-Growth-Heres-Whats-Driving-It",
+      "pubDate": "2025-11-02T12:29:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ]
+    },
+    {
+      "title": "Market News: Internet Computer (ICP) Testing Key Resistance – Breakout Brewing?",
+      "link": "https://cryptopanic.com/news/internet-computer/26631920/Market-News-Internet-Computer-ICP-Testing-Key-Resistance-Breakout-Brewing",
+      "pubDate": "2025-11-02T11:45:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ]
+    },
+    {
+      "title": "$ZEC And other privacy coins have been on an incredible run recently. Not sure when or where this tops exactly, but I do want to highlight the fact that some of these beta coins like $ZEN & $DASH have been outperforming big in the short term. Generally when beta coins start",
+      "link": "https://cryptopanic.com/news/dash/26631730/ZEC-And-other-privacy-coins-have-been-on-an-incredible-run-recently-Not-sure-when-or-where-this-tops-exactly-but-I-do-want-to-highlight-the-fact-that-some-of-these-beta-coins-like-ZEN-amp-DASH-have-been-outperforming-big-in-the-short-term-Generally-when-beta-coins-start",
+      "pubDate": "2025-11-02T11:38:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ZEC",
+        "DASH",
+        "ZEN"
+      ]
+    },
+    {
+      "title": "Dogecoin Holds Steady at $0.18 — Is a Bigger Move Just Around the Corner?",
+      "link": "https://cryptopanic.com/news/shiba-inu/26632057/Dogecoin-Holds-Steady-at-018-Is-a-Bigger-Move-Just-Around-the-Corner",
+      "pubDate": "2025-11-02T11:20:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ]
+    },
+    {
+      "title": "Hedera Price Prediction: Falling Wedge Pattern Hints 150% Upside Amid $44M HBAR ETF Inflows",
+      "link": "https://cryptopanic.com/news/litecoin/26633206/Hedera-Price-Prediction-Falling-Wedge-Pattern-Hints-150-Upside-Amid-44M-HBAR-ETF-Inflows",
+      "pubDate": "2025-11-02T11:18:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Shiba Inu News Today: Shiba Inu Trades Sideways Amid Market’s Wait for Breakout",
+      "link": "https://cryptopanic.com/news/shiba-inu/26630977/Shiba-Inu-News-Today-Shiba-Inu-Trades-Sideways-Amid-Markets-Wait-for-Breakout",
+      "pubDate": "2025-11-02T11:15:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB"
+      ]
+    },
+    {
+      "title": "Cronos Price Prediction: Will CRO Rally 6x In The Next Altcoin Season?",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/26630894/Cronos-Price-Prediction-Will-CRO-Rally-6x-In-The-Next-Altcoin-Season",
+      "pubDate": "2025-11-02T10:31:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CRO",
+        "IP"
+      ]
+    },
+    {
+      "title": "ADA Whale Activity Signals Growing Confidence — Is Cardano Preparing for a Major Comeback?",
+      "link": "https://cryptopanic.com/news/cardano/26630965/ADA-Whale-Activity-Signals-Growing-Confidence-Is-Cardano-Preparing-for-a-Major-Comeback",
+      "pubDate": "2025-11-02T10:17:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ]
+    },
+    {
+      "title": "Newsletter #83",
+      "link": "https://cryptopanic.com/news/zcash/26630803/Newsletter-83",
+      "pubDate": "2025-11-02T10:10:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEC",
+        "TRUMP"
+      ]
+    },
+    {
+      "title": "Shiba Inu (SHIB) Going to 0? Volume Profiles Show Bleeding",
+      "link": "https://cryptopanic.com/news/shiba-inu/26630713/Shiba-Inu-SHIB-Going-to-0-Volume-Profiles-Show-Bleeding",
+      "pubDate": "2025-11-02T09:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB"
+      ]
+    },
+    {
+      "title": "Chainlink Price Prediction: LINK Poised for Major Breakout, Yet This PayFi Altcoin Could Leave It in the Dust",
+      "link": "https://cryptopanic.com/news/chainlink/26629843/Chainlink-Price-Prediction-LINK-Poised-for-Major-Breakout-Yet-This-PayFi-Altcoin-Could-Leave-It-in-the-Dust",
+      "pubDate": "2025-11-02T09:30:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LINK"
+      ]
+    },
+    {
+      "title": "Ethereum Leads Growth in October Blockchain Transactions",
+      "link": "https://cryptopanic.com/news/avalanche-2/26630907/Ethereum-Leads-Growth-in-October-Blockchain-Transactions",
+      "pubDate": "2025-11-02T08:27:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "DASH Surges Over 30% in Daily Trading",
+      "link": "https://cryptopanic.com/news/dash/26629708/DASH-Surges-Over-30-in-Daily-Trading",
+      "pubDate": "2025-11-02T07:06:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DASH"
+      ]
+    },
+    {
+      "title": "Filecoin (FIL) Flashes Early Signs of Recovery — Can Bulls Break Past $1.70?",
+      "link": "https://cryptopanic.com/news/filecoin/26628979/Filecoin-FIL-Flashes-Early-Signs-of-Recovery-Can-Bulls-Break-Past-170",
+      "pubDate": "2025-11-02T07:03:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "Litecoin Price Poised for a Move — Key Levels Traders Are Watching",
+      "link": "https://cryptopanic.com/news/litecoin/26628961/Litecoin-Price-Poised-for-a-Move-Key-Levels-Traders-Are-Watching",
+      "pubDate": "2025-11-02T07:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Zcash Developer ECC Unveils Bold Q4 Roadmap as Privacy Demand Returns",
+      "link": "https://cryptopanic.com/news/zcash/26628098/Zcash-Developer-ECC-Unveils-Bold-Q4-Roadmap-as-Privacy-Demand-Returns",
+      "pubDate": "2025-11-02T06:00:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Cardano: What rising whale outflows mean for ADA’s next leg up",
+      "link": "https://cryptopanic.com/news/cardano/26628089/Cardano-What-rising-whale-outflows-mean-for-ADAs-next-leg-up",
+      "pubDate": "2025-11-02T06:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ]
+    },
+    {
+      "title": "TRON Daily Report – November 2, 2025: Whale Heatmap, Meme Cycle, Deep Alpha",
+      "link": "https://cryptopanic.com/news/tron/26687166/TRON-Daily-Report-November-2-2025-Whale-Heatmap-Meme-Cycle-Deep-Alpha",
+      "pubDate": "2025-11-02T04:32:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "WTRX"
+      ]
+    },
+    {
+      "title": "Tron’s DEX volume surges 174% – But why are TRX prices stalling?",
+      "link": "https://cryptopanic.com/news/tron/26627386/Trons-DEX-volume-surges-174-But-why-are-TRX-prices-stalling",
+      "pubDate": "2025-11-02T04:00:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ]
+    },
+    {
+      "title": "Stablecoin Market Experiences Slight Decline",
+      "link": "https://cryptopanic.com/news/usd-coin/26629702/Stablecoin-Market-Experiences-Slight-Decline",
+      "pubDate": "2025-11-02T03:53:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "ENA"
+      ]
+    },
+    {
+      "title": "Major Aave Trader Sells ETH Amid Leveraged Position Adjustment",
+      "link": "https://cryptopanic.com/news/aave/26629696/Major-Aave-Trader-Sells-ETH-Amid-Leveraged-Position-Adjustment",
+      "pubDate": "2025-11-02T02:33:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AAVE",
+        "4"
+      ]
+    },
+    {
+      "title": "Chainlink Maintains Its Base, But One Push Could Flip Sentiment Fast",
+      "link": "https://cryptopanic.com/news/chainlink/26627214/Chainlink-Maintains-Its-Base-But-One-Push-Could-Flip-Sentiment-Fast",
+      "pubDate": "2025-11-02T02:30:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LINK"
+      ]
+    },
+    {
+      "title": "Electric Coin Company Unveils Zcash Privacy Enhancements",
+      "link": "https://cryptopanic.com/news/zcash/26626655/Electric-Coin-Company-Unveils-Zcash-Privacy-Enhancements",
+      "pubDate": "2025-11-02T01:27:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    }
+  ]
+}

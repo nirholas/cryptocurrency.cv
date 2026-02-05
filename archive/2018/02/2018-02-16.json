@@ -1,0 +1,25 @@
+{
+  "date": "2018-02-16",
+  "fetchedAt": "2026-02-05T07:27:06.813Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Cash Hits $1.5K Amid Short-Term Bull Reversal",
+      "link": "https://cryptopanic.com/news/1099055/Bitcoin-Cash-Hits-15K-Amid-Short-Term-Bull-Reversal",
+      "pubDate": "2018-02-16T12:00:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 5
+      }
+    }
+  ]
+}

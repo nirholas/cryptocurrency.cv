@@ -1,0 +1,37 @@
+{
+  "date": "2019-04-26",
+  "fetchedAt": "2026-02-05T07:27:06.789Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "We Are So Proud To Announce That Etherscan (The Official Blockchain of Ethereum) Already Verified SNL Market Capita…",
+      "link": "https://cryptopanic.com/news/5580099/We-Are-So-Proud-To-Announce-That-Etherscan-The-Official-Blockchain-of-Ethereum-Already-Verified-SNL-Market-Capita",
+      "pubDate": "2019-04-26T15:14:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "SNL"
+      ]
+    },
+    {
+      "title": "Wirex to Develop 26 Stablecoins on Stellar Following Listing of XLM",
+      "link": "https://cryptopanic.com/news/5247967/Wirex-to-Develop-26-Stablecoins-on-Stellar-Following-Listing-of-XLM",
+      "pubDate": "2019-04-26T12:00:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "date": "2018-01-27",
+  "fetchedAt": "2026-02-05T07:27:06.957Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tether Confirms Its Relationship With Auditor Has 'Dissolved'",
+      "link": "https://cryptopanic.com/news/910830/Tether-Confirms-Its-Relationship-With-Auditor-Has-Dissolved",
+      "pubDate": "2018-01-27T23:43:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Coincheck is Refunding Investors Who Lost their NEM (XEM) during Cyberheist",
+      "link": "https://cryptopanic.com/news/908974/Coincheck-is-Refunding-Investors-Who-Lost-their-NEM-XEM-during-Cyberheist",
+      "pubDate": "2018-01-27T19:35:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEM"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "#Saros is now available on",
+      "link": "https://cryptopanic.com/news/11437940/Saros-is-now-available-on?mtm_campaign=API-OFA",
+      "pubDate": "2018-01-27T00:26:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SAROS"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "date": "2019-07-23",
+  "fetchedAt": "2026-02-05T07:27:06.866Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "VeChain (VET) Inks MoU with the Republic of San Marino",
+      "link": "https://cryptopanic.com/news/6106715/VeChain-VET-Inks-MoU-with-the-Republic-of-San-Marino",
+      "pubDate": "2019-07-23T10:06:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Unconfirmed: Justin Sun Charged with Money Laundering, ‘Kidney Stones’ Is Excuse to Avoid Lunch with Buffett",
+      "link": "https://cryptopanic.com/news/tron/6106111/Unconfirmed-Justin-Sun-Charged-with-Money-Laundering-Kidney-Stones-Is-Excuse-to-Avoid-Lunch-with-Buffett",
+      "pubDate": "2019-07-23T08:16:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    }
+  ]
+}

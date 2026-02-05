@@ -1,0 +1,25 @@
+{
+  "date": "2020-06-26",
+  "fetchedAt": "2026-02-05T07:27:06.943Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA (MIOTA) Could Launch First Public Coordicide Testnet By June End",
+      "link": "https://cryptopanic.com/news/9197783/IOTA-MIOTA-Could-Launch-First-Public-Coordicide-Testnet-By-June-End",
+      "pubDate": "2020-06-26T16:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

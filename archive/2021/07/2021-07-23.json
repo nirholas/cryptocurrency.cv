@@ -1,0 +1,598 @@
+{
+  "date": "2021-07-23",
+  "fetchedAt": "2026-02-05T07:27:06.770Z",
+  "articleCount": 40,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "This is a member initiated and funded project that many of you might find interesting. Scorum Inc. has not been dir…",
+      "link": "https://cryptopanic.com/news/12390443/This-is-a-member-initiated-and-funded-project-that-many-of-you-might-find-interesting-Scorum-Inc-has-not-been-dir?mtm_campaign=API-OFA",
+      "pubDate": "2021-07-23T23:42:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SCR"
+      ]
+    },
+    {
+      "title": "The #InternetComputer blockchain recently surpassed 100MM blocks on Friday, July 23, 2021 09:15:28 AM GMT, and curr…",
+      "link": "https://cryptopanic.com/news/12386306/The-InternetComputer-blockchain-recently-surpassed-100MM-blocks-on-Friday-July-23-2021-091528-AM-GMT-and-curr",
+      "pubDate": "2021-07-23T23:24:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "ICP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Uniswap Labs restricts access to certain tokens through its interface, citing ‘evolving regulatory landscape’",
+      "link": "https://cryptopanic.com/news/uniswap/12386301/Uniswap-Labs-restricts-access-to-certain-tokens-through-its-interface-citing-evolving-regulatory-landscape",
+      "pubDate": "2021-07-23T23:10:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Uniswap's official front-end succumbs to regulatory pressure, cutting a range of synthetic token offerings.",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Solana to Launch Stake Pools, This Is How It Will Enable Rewards For SOL Holders",
+      "link": "https://cryptopanic.com/news/12386148/Solana-to-Launch-Stake-Pools-This-Is-How-It-Will-Enable-Rewards-For-SOL-Holders",
+      "pubDate": "2021-07-23T22:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The Solana Foundation has announced Stake Pools to increase the network’s security, promote censorship resistance, and rewards SOL holders in the process. The announcement was made via their official Twitter handle. The Stake Pool program was enabled via an on-chain governance process, as the Solana Foundation said. Any SOL holder can participate in the process via SolFlare, a non-custodial...",
+      "currencies": [
+        "SOL",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin’s Price is Ready for a ‘Major Bounce’, Says Popular Crypto Analyst",
+      "link": "https://cryptopanic.com/news/near/12386136/Bitcoins-Price-is-Ready-for-a-Major-Bounce-Says-Popular-Crypto-Analyst",
+      "pubDate": "2021-07-23T21:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Pseudonymous cryptocurrency analyst ‘Crypto Birb’ has revealed on social media he believes the price of the flagship cryptocurrency bitcoin is “ready for major bounce” and a final move up in this bull cycle near the end of the year. In a tweet sent to his over 320,000 followers, Birb noted that over-the-counter outflows signaling a […]",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The $100 Million Project Designed to Make Polygon Top-Tier Whilst Ousting Ethereum",
+      "link": "https://cryptopanic.com/news/matic-network/12385880/The-100-Million-Project-Designed-to-Make-Polygon-Top-Tier-Whilst-Ousting-Ethereum",
+      "pubDate": "2021-07-23T19:40:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Non-Fungible-Tokens (NFTs) have been a big game-changer in the industry. NFTs are crypto-assets representing an intangible digital item such as an image, video, text, or in-game item. An NFT is traded as a stand-in for the digital asset it represents with owners of the NFTs recorded on the blockchain. According to our report, the market […]",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ADA Near Oversold Levels, Why Cardano Could Retake Previous Highs",
+      "link": "https://cryptopanic.com/news/dogecoin/12385680/ADA-Near-Oversold-Levels-Why-Cardano-Could-Retake-Previous-Highs",
+      "pubDate": "2021-07-23T18:00:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano (ADA) has been one of the most resilient coins in the crypto market. While Bitcoin has experienced a 50% correction and has revisited the yearly open, ADA has traded well above its previous lows. At the time of writing, ADA trades at $1,14 with a 2.7% and 4.8% loss in the daily and weekly charts, respectively. The cryptocurrency has managed to make its way into the crypto top 5 by...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @PulsechainCom: Updated",
+      "link": "https://cryptopanic.com/news/12388926/RT-PulsechainCom-Updated",
+      "pubDate": "2021-07-23T17:30:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "RT @CryptoPalladium: $TEL | Send Money Smarter | $TELx",
+      "link": "https://cryptopanic.com/news/12390779/RT-CryptoPalladium-TEL-Send-Money-Smarter-TELx",
+      "pubDate": "2021-07-23T16:48:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "RT @P4Cap: #Telcoin family, let’s help one of our own get to $25,000. Families show up when they are needed most! Help Erin Battle Stage 4…",
+      "link": "https://cryptopanic.com/news/12390780/RT-P4Cap-Telcoin-family-lets-help-one-of-our-own-get-to-25000-Families-show-up-when-they-are-needed-most-Help-Erin-Battle-Stage-4",
+      "pubDate": "2021-07-23T16:48:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "#Telcoin Family",
+      "link": "https://cryptopanic.com/news/12390781/Telcoin-Family",
+      "pubDate": "2021-07-23T16:48:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "RT @P4Cap: #SendMoneySmarter &amp; #PayYourself on the @telcoin_team platform powered by @0xPolygon",
+      "link": "https://cryptopanic.com/news/12390784/RT-P4Cap-SendMoneySmarter-amp-PayYourself-on-the-telcoin_team-platform-powered-by-0xPolygon",
+      "pubDate": "2021-07-23T16:41:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "Creative attacker steals $76,000 in RUNE by giving out free tokens",
+      "link": "https://cryptopanic.com/news/12385440/Creative-attacker-steals-76000-in-RUNE-by-giving-out-free-tokens",
+      "pubDate": "2021-07-23T16:33:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "A bad actor is airdropping UNIH tokens to crypto users. But it’s a trap that’s stealing other tokens from their wallets.",
+      "currencies": [
+        "RUNE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "PAX is going to be live on @AaveAave soon! Thanks to the community for your overwhelming support in voting on the p…",
+      "link": "https://cryptopanic.com/news/paxos-standard/12387721/PAX-is-going-to-be-live-on-AaveAave-soon-Thanks-to-the-community-for-your-overwhelming-support-in-voting-on-the-p",
+      "pubDate": "2021-07-23T16:18:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BUSD",
+        "PAXG",
+        "BKRW"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: Do not interact with this UniH stuff. Or dust attack stuff in general. You could get your wallet drained.",
+      "link": "https://cryptopanic.com/news/12388927/RT-RichardHeartWin-Do-not-interact-with-this-UniH-stuff-Or-dust-attack-stuff-in-general-You-could-get-your-wallet-drained",
+      "pubDate": "2021-07-23T15:14:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "THORChain Hacked for a Second Time: $8 Million Compromised",
+      "link": "https://cryptopanic.com/news/12385157/THORChain-Hacked-for-a-Second-Time-8-Million-Compromised",
+      "pubDate": "2021-07-23T15:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Another breach in THORChain's security system happened as this time hackers drained $8 million worth of cryptocurrencies.",
+      "currencies": [
+        "RUNE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Reef Finance is delighted to share the news that $REEF is coming to @Bitfinex!",
+      "link": "https://cryptopanic.com/news/12390244/Reef-Finance-is-delighted-to-share-the-news-that-REEF-is-coming-to-Bitfinex",
+      "pubDate": "2021-07-23T14:58:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ]
+    },
+    {
+      "title": "Karura Swap Launches First DEX in Polkadot Ecosystem",
+      "link": "https://cryptopanic.com/news/polkadot/12385108/Karura-Swap-Launches-First-DEX-in-Polkadot-Ecosystem",
+      "pubDate": "2021-07-23T14:56:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Karura Swap has launched the first decentralized exchange (DEX) within the Polkadot ecosystem, aiming to enhance trading and liquidity for users. The new DEX will leverage the interoperability features of Polkadot, allowing for seamless transactions across different blockchains. This initiative is expected to bolster the DeFi landscape and provide innovative financial solutions for its...",
+      "currencies": [
+        "DOT",
+        "KSM"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Don’t miss out the latest #CBK token updates🧐 all the fresh announcement and hot discussions are here",
+      "link": "https://cryptopanic.com/news/12388154/Dont-miss-out-the-latest-CBK-token-updates-all-the-fresh-announcement-and-hot-discussions-are-here?mtm_campaign=API-OFA",
+      "pubDate": "2021-07-23T14:11:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CBK"
+      ]
+    },
+    {
+      "title": "Hey hey to our Turkish $CBK community  can’t wait for our new audiences to discover #CrossingTheYellowBlocks and m…",
+      "link": "https://cryptopanic.com/news/12388155/Hey-hey-to-our-Turkish-CBK-community-cant-wait-for-our-new-audiences-to-discover-CrossingTheYellowBlocks-and-m?mtm_campaign=API-OFA",
+      "pubDate": "2021-07-23T14:08:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CBK"
+      ]
+    },
+    {
+      "title": "“The eCash roadmap mentions the eventual addition of an EVM subchain, and a zero-knowledge subchain. What are subch…",
+      "link": "https://cryptopanic.com/news/ecash/12391357/The-eCash-roadmap-mentions-the-eventual-addition-of-an-EVM-subchain-and-a-zero-knowledge-subchain-What-are-subch",
+      "pubDate": "2021-07-23T13:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: Othercoiner seethe vs cope % on this?",
+      "link": "https://cryptopanic.com/news/12388928/RT-RichardHeartWin-Othercoiner-seethe-vs-cope-on-this",
+      "pubDate": "2021-07-23T12:28:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "Crypto Platform Stellar Looking To Acquire Payments Giant MoneyGram: Report",
+      "link": "https://cryptopanic.com/news/12384668/Crypto-Platform-Stellar-Looking-To-Acquire-Payments-Giant-MoneyGram-Report",
+      "pubDate": "2021-07-23T11:45:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The Stellar Development Foundation reportedly wants to acquire payments giant MoneyGram. Citing people familiar with the matter, Bloomberg reports that the non-profit organization behind the blockchain payment platform Stellar Lumens (XLM) is working with Boston-based private equity firm Advent International on the potential acquisition. The two firms have already contacted MoneyGram, but a...",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @RichardHeartWin: This looks pretty cool, and it's just the #Ethereuem network.",
+      "link": "https://cryptopanic.com/news/12388929/RT-RichardHeartWin-This-looks-pretty-cool-and-its-just-the-Ethereuem-network",
+      "pubDate": "2021-07-23T11:35:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "SEC: Commissioners’ statement not relevant to Ripple’s XRP lawsuit defense",
+      "link": "https://cryptopanic.com/news/ripple/12384550/SEC-Commissioners-statement-not-relevant-to-Ripples-XRP-lawsuit-defense",
+      "pubDate": "2021-07-23T11:31:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "US Securities and Exchange Commission staffers say their appointed leaders’ views do not reflect the agency's stance on Ripple and XRP.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Glitzkoin GTN 24 hour trade touches $1,000,000 for the first time. While this could move up and down, it would be a…",
+      "link": "https://cryptopanic.com/news/12388843/Glitzkoin-GTN-24-hour-trade-touches-1000000-for-the-first-time-While-this-could-move-up-and-down-it-would-be-a",
+      "pubDate": "2021-07-23T11:14:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Axie Infinity refreshes record high as AXS ascends 131% in just 3 days",
+      "link": "https://cryptopanic.com/news/12384450/Axie-Infinity-refreshes-record-high-as-AXS-ascends-131-in-just-3-days",
+      "pubDate": "2021-07-23T10:56:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Traders flock to the gaming cryptocurrency in the wake of a sector-wide price rally, but its gains are comparatively higher — much higher.",
+      "currencies": [
+        "AXS"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @bitpanda: You asked for it. We did it. Starting today, we’re adding 4 new assets to Bitpanda Here they are: $MATIC (@0xPolygon)…",
+      "link": "https://cryptopanic.com/news/theta-token/12390736/RT-bitpanda-You-asked-for-it-We-did-it-Starting-today-were-adding-4-new-assets-to-Bitpanda-Here-they-are-MATIC-0xPolygon",
+      "pubDate": "2021-07-23T10:49:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Thorchain suffers $8 million loss by hacker wanting to ‘teach lesson’",
+      "link": "https://cryptopanic.com/news/ethereum/12384418/Thorchain-suffers-8-million-loss-by-hacker-wanting-to-teach-lesson",
+      "pubDate": "2021-07-23T10:37:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Cross-chain swap platform Thorchain has been exploited for a further $8 million today but it could have been far worse.",
+      "currencies": [
+        "ETH",
+        "RUNE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 16
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitpanda lists 4th largest digital asset Binance Coin (BNB)",
+      "link": "https://cryptopanic.com/news/12384340/Bitpanda-lists-4th-largest-digital-asset-Binance-Coin-BNB",
+      "pubDate": "2021-07-23T09:51:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Austrian cryptocurrency broker Bitpanda has revealed users of its app will be able to buy and sell Binance Coin (BNB)... Continue reading The post Bitpanda lists 4th largest digital asset Binance Coin (BNB) appeared first on Finbold.",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Theta Network Could Soon Have a Cross-chain Bridge with Ethereum",
+      "link": "https://cryptopanic.com/news/theta-token/12384281/Theta-Network-Could-Soon-Have-a-Cross-chain-Bridge-with-Ethereum",
+      "pubDate": "2021-07-23T09:24:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "THETA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "110 Million XRP Transferred by Ripple and Top Asian Crypto Platforms",
+      "link": "https://cryptopanic.com/news/ripple/12384209/110-Million-XRP-Transferred-by-Ripple-and-Top-Asian-Crypto-Platforms",
+      "pubDate": "2021-07-23T08:46:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple and two major Asian digital exchanges have transferred 110 million XRP tokens",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$8M Lost as THORChain Suffers Third Attack in a Month",
+      "link": "https://cryptopanic.com/news/12384205/8M-Lost-as-THORChain-Suffers-Third-Attack-in-a-Month",
+      "pubDate": "2021-07-23T08:42:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "THORChain has experienced its third security breach in just a month, resulting in an $8 million loss. The repeated attacks have raised concerns about the platform's vulnerabilities and its ability to secure users' funds, highlighting ongoing challenges in the decentralized finance sector.",
+      "currencies": [
+        "RUNE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Paxos Standard Presents Assets Backing Its Stablecoins",
+      "link": "https://cryptopanic.com/news/paxos-standard/12384177/Paxos-Standard-Presents-Assets-Backing-Its-Stablecoins",
+      "pubDate": "2021-07-23T08:30:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "BUSD",
+        "PAX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogecoin Founder \"Revealed\" Successful Flowchart",
+      "link": "https://cryptopanic.com/news/dogecoin/12384153/Dogecoin-Founder-Revealed-Successful-Flowchart",
+      "pubDate": "2021-07-23T08:19:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin founder explained the success of this flowchart in his own way",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Join $BAND CEO Soravis Srinawakoon (@SSrinawakoon) at the Global DeFi Summit panel on 'Band Protocol &amp; the Future o…",
+      "link": "https://cryptopanic.com/news/12387658/Join-BAND-CEO-Soravis-Srinawakoon-SSrinawakoon-at-the-Global-DeFi-Summit-panel-on-Band-Protocol-amp-the-Future-o",
+      "pubDate": "2021-07-23T06:18:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "RT @daoinvestorg: We’re thrilled to announce that from now on you can freely move VEST between #Ethereum and #BSC (#BinanceSmartChain). $VE…",
+      "link": "https://cryptopanic.com/news/12384082/RT-daoinvestorg-Were-thrilled-to-announce-that-from-now-on-you-can-freely-move-VEST-between-Ethereum-and-BSC-BinanceSmartChain-VE",
+      "pubDate": "2021-07-23T06:16:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "SURE"
+      ]
+    },
+    {
+      "title": "RT @chainlink: Chainlink provides #developers with the highly reliable market data they need to build secure on-chain financial products. E…",
+      "link": "https://cryptopanic.com/news/12379555/RT-chainlink-Chainlink-provides-developers-with-the-highly-reliable-market-data-they-need-to-build-secure-on-chain-financial-products-E",
+      "pubDate": "2021-07-23T03:17:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "REP"
+      ]
+    },
+    {
+      "title": "RT @PulsechainCom: Some new coins have been added to the sacrifice list at on #Matic and #BinanceSmartChain. https:…",
+      "link": "https://cryptopanic.com/news/12381452/RT-PulsechainCom-Some-new-coins-have-been-added-to-the-sacrifice-list-at-on-Matic-and-BinanceSmartChain-https",
+      "pubDate": "2021-07-23T02:28:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "Coinbase Commerce Now Supports Dogecoin Payments",
+      "link": "https://cryptopanic.com/news/dogecoin/12379450/Coinbase-Commerce-Now-Supports-Dogecoin-Payments",
+      "pubDate": "2021-07-23T02:00:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Coinbase now accepts commerce payments in dogecoin. With the addition of the meme crypto, Coinbase Commerce now allows customers to check out and pay with seven cryptocurrencies. Coinbase Commerce Now Supports Dogecoin Coinbase Commerce is a platform by the Nasdaq-listed Coinbase that “enables merchants anywhere in the world to accept cryptocurrency payments in a fully […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

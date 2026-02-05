@@ -1,0 +1,511 @@
+{
+  "date": "2021-04-18",
+  "fetchedAt": "2026-02-05T07:27:06.676Z",
+  "articleCount": 33,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Serious Crypto ‘Washout’ Warning As Massive $300 Billion Price Flash Crash Suddenly Tanks Bitcoin, Ethereum, Ripple’s XRP And Cardano",
+      "link": "https://cryptopanic.com/news/cardano/11787364/Serious-Crypto-Washout-Warning-As-Massive-300-Billion-Price-Flash-Crash-Suddenly-Tanks-Bitcoin-Ethereum-Ripples-XRP-And-Cardano",
+      "pubDate": "2021-04-18T23:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Ahead of the cryptocurrency flash crash, wiping $300 billion from the combined bitcoin, XRP, cardano and broader $2 trillion crypto market, bitcoin bull and CEO of Galaxy Digital Mike Novogratz warned of a \"washout\" ahead...",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 12
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Binance to burn BNB worth $37 billion from 2017 ICO",
+      "link": "https://cryptopanic.com/news/11787325/Binance-to-burn-BNB-worth-37-billion-from-2017-ICO",
+      "pubDate": "2021-04-18T22:37:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Binance’s CEO Changpeng Zhao has announced that the exchange team was allocated 40% of the 200 million BNB minted during... Continue reading",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ready for Tuesday?!",
+      "link": "https://cryptopanic.com/news/11787273/Ready-for-Tuesday",
+      "pubDate": "2021-04-18T22:02:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHSB"
+      ]
+    },
+    {
+      "title": "Chainlink 2.0 - The next generation of hybrid smart contracts",
+      "link": "https://cryptopanic.com/news/chainlink/11787248/Chainlink-20-The-next-generation-of-hybrid-smart-contracts",
+      "pubDate": "2021-04-18T21:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Chainlink has released a new whitepaper called Chainlink 2.0: Next Steps in the Evolution of Decentralized Oracle Networks. The new whitepaper outlines an ambitious vision for the future of smart contracts. We talk with Chainlink co-founder Sergey Nazarov who explains the implications for the next generation of blockchain ecosystems.",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 33,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "All Hands on Deck for IOTA’s Chrysalis 2.0, This Is What You Need to Know",
+      "link": "https://cryptopanic.com/news/11787236/All-Hands-on-Deck-for-IOTAs-Chrysalis-20-This-Is-What-You-Need-to-Know",
+      "pubDate": "2021-04-18T21:00:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "IOTA is ready for a major milestone with the launch of the Chrysalis phase 2 also know as the final stage for IOTA 1.5. The bridge network between IOTA and the Coordicide event which will lead it to full decentralization, Chrysalis will roll out on April 28th, 2021. Dev Update, April 2021 – Our engineering […]",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Here Are Ethereum’s 5 Biggest Competitors According to Crypto Analyst Lark Davis",
+      "link": "https://cryptopanic.com/news/polkadot/11787198/Here-Are-Ethereums-5-Biggest-Competitors-According-to-Crypto-Analyst-Lark-Davis",
+      "pubDate": "2021-04-18T20:31:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "In a recent video for his very popular YouTube channel, popular New Zealand-based crypto analyst and influencer Lark Davis (@TheCryptoLark on Twitter) talked about five major blockchains that could take market share from Ethereum. Davis made his comments in a video he released on April 14. Davis prefaced the video by calling himself a “massive” Ethereum supporter but noted the […]",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SwissBorg is my best choice to manage my cryptocurrencies",
+      "link": "https://cryptopanic.com/news/11787152/SwissBorg-is-my-best-choice-to-manage-my-cryptocurrencies",
+      "pubDate": "2021-04-18T19:31:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHSB"
+      ]
+    },
+    {
+      "title": "$DAO Army is waking up.",
+      "link": "https://cryptopanic.com/news/11788112/DAO-Army-is-waking-up",
+      "pubDate": "2021-04-18T19:19:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DAO"
+      ]
+    },
+    {
+      "title": "Dogecoin’s Meteoric Rise Just the Beginning, Says CoinShares CSO Meltem Demirors",
+      "link": "https://cryptopanic.com/news/dogecoin/11787106/Dogecoins-Meteoric-Rise-Just-the-Beginning-Says-CoinShares-CSO-Meltem-Demirors",
+      "pubDate": "2021-04-18T17:30:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "CoinShares chief strategy officer Meltem Demirors is saying that Dogecoin’s (DOGE) recent eruption is a sign that the crypto mania is just getting started. In a new lengthy twitter thread, Demirors analyzes the reasons Dogecoin, which has pumped over 400% in just two weeks, is on the rise, attributing its resurgence to the WallStreetBets (WSB) […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 25,
+        "negative": 31
+      }
+    },
+    {
+      "title": "Enough SHOs to feed the whole $DAO army",
+      "link": "https://cryptopanic.com/news/11788113/Enough-SHOs-to-feed-the-whole-DAO-army",
+      "pubDate": "2021-04-18T17:14:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DAO"
+      ]
+    },
+    {
+      "title": "Is it likely that Dogecoin continues its rally?",
+      "link": "https://cryptopanic.com/news/dogecoin/11787006/Is-it-likely-that-Dogecoin-continues-its-rally",
+      "pubDate": "2021-04-18T16:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "From meme coin to a top altcoin, ranking 8th in terms of market capitalization, DOGE’s price rally is currently unstoppable. Though the price has dropped in the last 24 hours, it is still 340% higher than a week ago. The current on-chain sentiment is bearish, and the trade volume has dropped over 50%. However, considering […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "First purchase on swissborg, doubt about the exchange rate",
+      "link": "https://cryptopanic.com/news/11787275/First-purchase-on-swissborg-doubt-about-the-exchange-rate",
+      "pubDate": "2021-04-18T15:55:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "CHSB"
+      ]
+    },
+    {
+      "title": "Missed the $DAO @OKEx listing last week?",
+      "link": "https://cryptopanic.com/news/11788116/Missed-the-DAO-OKEx-listing-last-week",
+      "pubDate": "2021-04-18T15:51:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DAO"
+      ]
+    },
+    {
+      "title": "Binance’s CZ Hints On BNB Repeating 5-Month Bullish Cycle To Touch $1,000",
+      "link": "https://cryptopanic.com/news/11786972/Binances-CZ-Hints-On-BNB-Repeating-5-Month-Bullish-Cycle-To-Touch-1000",
+      "pubDate": "2021-04-18T15:36:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "After a successful Binance Coin (BNB) token burn which took place last week, traders are keeping their eyes peeled for when the third-largest token by market cap will hit new highs. Changpeng Zhao, CEO of Binance, the exchange behind BNB, came to the aid of the curious one’s right on time, as he dropped subtle […]",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 26,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "This Large-Cap Crypto Could Explode Like Dogecoin, Says Trader Nicholas Merten",
+      "link": "https://cryptopanic.com/news/litecoin/11786953/This-Large-Cap-Crypto-Could-Explode-Like-Dogecoin-Says-Trader-Nicholas-Merten",
+      "pubDate": "2021-04-18T15:10:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Crypto strategist and trader Nicholas Merten believes that one large-cap crypto asset could be the next coin to meteorically rise after Dogecoin’s most recent explosion. In a new video, the DataDash founder tells his 431,00 YouTube subscribers that he’s looking at a clear bullish setup in the Litecoin/Bitcoin (LTC/BTC) pair. “It is playing out just […]",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Chinese Police Confiscated $3.8 Million in Crypto After Arresting EOS Gambling dApp Team",
+      "link": "https://cryptopanic.com/news/11786919/Chinese-Police-Confiscated-38-Million-in-Crypto-After-Arresting-EOS-Gambling-dApp-Team",
+      "pubDate": "2021-04-18T14:56:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "$3.8 million in bitcoin and EOS seized in China from a team of developers operating a decentralized gambling platform built on the EOS blockchain.",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 16
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "SEC loses a battle to win the war? Ripple dissociates from pumping XRP",
+      "link": "https://cryptopanic.com/news/ripple/11786893/SEC-loses-a-battle-to-win-the-war-Ripple-dissociates-from-pumping-XRP",
+      "pubDate": "2021-04-18T14:14:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "While the defendants may have gained an edge in pre-trial rulings in SEC v. Ripple Labs, are Ripple’s legal troubles now over?",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Litecoin Price Prediction: Can LTC Hit $1,000?",
+      "link": "https://cryptopanic.com/news/litecoin/11786849/Litecoin-Price-Prediction-Can-LTC-Hit-1000",
+      "pubDate": "2021-04-18T13:00:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Litecoin (LTC) is a cryptocurrency that is largely similar to Bitcoin. Fundamentally, Litecoin is also a decentralized cryptocurrency which utilizes similar protocols as Bitcoin except for a few parameter tweaks. Much like Bitcoin, Litecoin also relies on proof-of-work for consensus and operates on a permissionless peer-to-peer network where users are able to transfer funds to one another without the need to rely on any central authority. Litecoin was created by Charlie Lee in October 2011 as a ",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "yo @McDonalds you hiring?",
+      "link": "https://cryptopanic.com/news/11789566/yo-McDonalds-you-hiring",
+      "pubDate": "2021-04-18T12:19:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "We Should All Expect Repercussions When The Music Stops on Dogecoin",
+      "link": "https://cryptopanic.com/news/dogecoin/11786802/We-Should-All-Expect-Repercussions-When-The-Music-Stops-on-Dogecoin",
+      "pubDate": "2021-04-18T12:15:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Year-to-date gains for Dogecoin come to over +6,000%, making it significantly more profitable than Bitcoin, which is up a comparatively paltry 88% over the same period. Most view this as generally positive for crypto, not least in the fun and charitable sense. However, given the lack of fundamentals underpinning DOGE’s price, the fallout could be […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Sunday’s Crypto Price Analysis: Bitcoin (BTC), Ethereum (ETH), Ripple (XRP)",
+      "link": "https://cryptopanic.com/news/ripple/11786774/Sundays-Crypto-Price-Analysis-Bitcoin-BTC-Ethereum-ETH-Ripple-XRP",
+      "pubDate": "2021-04-18T11:56:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin (BTC) Price Analysis Bitcoin collapsed by almost 15% from today’s $60,000 opening price, reaching as low as $51,540 (as of now). The cryptocurrency had set a new all-time high price earlier in the week at $64,895 but failed to produce a daily closing candle above significant resistance at $63,760. Together with the bearish divergence […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Sunday Bitcoin Flash Crash Sees $10 Billion in Positions Liquidated",
+      "link": "https://cryptopanic.com/news/ethereum/11786709/Sunday-Bitcoin-Flash-Crash-Sees-10-Billion-in-Positions-Liquidated",
+      "pubDate": "2021-04-18T09:54:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Sunday saw bitcoin flash crash, causing large-scale liquidations across the board. With the total market capitalization dropping by almost $4 billion",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "It has been determined that my account is no longer supported",
+      "link": "https://cryptopanic.com/news/11787274/It-has-been-determined-that-my-account-is-no-longer-supported",
+      "pubDate": "2021-04-18T08:44:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHSB"
+      ]
+    },
+    {
+      "title": "Bitcoin Price Dipped Below $52K Amid U.S. Treasury Rumors (Market Watch)",
+      "link": "https://cryptopanic.com/news/11786467/Bitcoin-Price-Dipped-Below-52K-Amid-US-Treasury-Rumors-Market-Watch",
+      "pubDate": "2021-04-18T07:29:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The crypto market experienced a massive price slump with bitcoin dumping as low as $51,500, ETH to $1,940, and BNB to $440.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano, Litecoin and Dogecoin Could Still Blast Off Into the Stratosphere, Says Top Analyst",
+      "link": "https://cryptopanic.com/news/dogecoin/11786620/Cardano-Litecoin-and-Dogecoin-Could-Still-Blast-Off-Into-the-Stratosphere-Says-Top-Analyst",
+      "pubDate": "2021-04-18T07:04:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "A prominent crypto analyst and trader is mapping out bullish paths for Cardano (ADA), Litecoin (LTC) and Dogecoin (DOGE). Pseudonymous trader Kaleo says that the developing smart contract platform Cardano (ADA) appears ready to break out to the upside. Kaleo predicts that ADA will likely rally in its BTC pair by over 70% from 0.0000236 […]",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "#TRX now is the most active blockchain in the world. #btc #eth #TRON @coinmetrics",
+      "link": "https://cryptopanic.com/news/11786281/TRX-now-is-the-most-active-blockchain-in-the-world-btc-eth-TRON-coinmetrics",
+      "pubDate": "2021-04-18T06:46:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "-",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    },
+    {
+      "title": "RT @btsfav: #Bitcoin Experiment: Financial Freedom with Faucets?! Week 39 #hive",
+      "link": "https://cryptopanic.com/news/11786237/RT-btsfav-Bitcoin-Experiment-Financial-Freedom-with-Faucets-Week-39-hive",
+      "pubDate": "2021-04-18T06:29:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "Really good overview by a community member for the whole Alchemy project and ecosystem. Please like the video if it…",
+      "link": "https://cryptopanic.com/news/11787711/Really-good-overview-by-a-community-member-for-the-whole-Alchemy-project-and-ecosystem-Please-like-the-video-if-it?mtm_campaign=API-OFA",
+      "pubDate": "2021-04-18T06:01:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALCH"
+      ]
+    },
+    {
+      "title": "Social engineering techniques rely on the weaknesses of human psychology. Scammers take advantage of emotions to…",
+      "link": "https://cryptopanic.com/news/binancecoin/11784795/Social-engineering-techniques-rely-on-the-weaknesses-of-human-psychology-Scammers-take-advantage-of-emotions-to",
+      "pubDate": "2021-04-18T05:30:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "ETHDOWN",
+        "ETHUP"
+      ]
+    },
+    {
+      "title": "#DOGE #DENT #WINK🧑‍‍",
+      "link": "https://cryptopanic.com/news/11786691/DOGE-DENT-WINK",
+      "pubDate": "2021-04-18T04:44:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "RT @kingscrownBTC: $EXCL made volume of 163290 $USDT $USDC $GUSD $SBD $HBD $PAX $TUSD $HUSD $BUSD on #bittrex itself as 2014 made #Masterno…",
+      "link": "https://cryptopanic.com/news/paxos-standard/11785231/RT-kingscrownBTC-EXCL-made-volume-of-163290-USDT-USDC-GUSD-SBD-HBD-PAX-TUSD-HUSD-BUSD-on-bittrex-itself-as-2014-made-Masterno",
+      "pubDate": "2021-04-18T04:27:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "BUSD",
+        "EXCL"
+      ]
+    },
+    {
+      "title": "Dogecoin To $1!!! Altcoin Season 2021 Insanity",
+      "link": "https://cryptopanic.com/news/dogecoin/11784538/Dogecoin-To-1-Altcoin-Season-2021-Insanity",
+      "pubDate": "2021-04-18T02:53:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin insane mega rally, altcoin season 2021 is insane! 💎 BINANCE $700 BONUS + 10% OFF FEES ►► http://cryptolark.co/10 🔥 WEALTH MASTERY ►► https://cryptolark.co/WEALTHMASTERY 0:00 Today in Crypto 0:59 PSA 2:04 Doge Insanity 6:06 The Pump Factors 👨‍🎓 COURSES FOR BEGINNERS 👨‍🎓 👉 CRYPTO EXPLAINED COURSE ►► https://cryptolark.co/beginner-course 👉 TRADING COURSE ►► https://cryptolark.co/trading-course 💲 BEST EXCHANGES FOR BUYING & TRADING 💲 💰 BINANCE BEST EXCHANGE FOR BUYING & TRADING C",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 35
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "🤩The \"NFT\" theme sharing meeting was jointly held by Cocos BCX, @BinanceChain and @BlockBeatsChina .The event has…",
+      "link": "https://cryptopanic.com/news/11784933/The-NFT-theme-sharing-meeting-was-jointly-held-by-Cocos-BCX-BinanceChain-and-BlockBeatsChina-The-event-has",
+      "pubDate": "2021-04-18T02:20:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "COCOS"
+      ]
+    }
+  ]
+}

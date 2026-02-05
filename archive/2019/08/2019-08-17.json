@@ -1,0 +1,27 @@
+{
+  "date": "2019-08-17",
+  "fetchedAt": "2026-02-05T07:27:08.688Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA Chosen Over Bitcoin, Ethereum, And EOS In Twitter Poll Of Over 3000 People",
+      "link": "https://cryptopanic.com/news/eos/6335921/IOTA-Chosen-Over-Bitcoin-Ethereum-And-EOS-In-Twitter-Poll-Of-Over-3000-People",
+      "pubDate": "2019-08-17T07:47:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EOS",
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

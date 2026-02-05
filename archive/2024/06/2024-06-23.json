@@ -1,0 +1,744 @@
+{
+  "date": "2024-06-23",
+  "fetchedAt": "2026-02-05T07:27:07.952Z",
+  "articleCount": 52,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "EigenDA Enhances Security and Scalability",
+      "link": "https://cryptopanic.com/news/19615965/EigenDA-Enhances-Security-and-Scalability",
+      "pubDate": "2024-06-23T20:44:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "EigenDA enhances security and scalability on Ethereum's EigenLayer with new measures to combat Sybil and DDoS attacks, benefiting high-throughput applications.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana Introduces ZK Compression",
+      "link": "https://cryptopanic.com/news/19615963/Solana-Introduces-ZK-Compression",
+      "pubDate": "2024-06-23T20:38:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana launches ZK compression, a new feature that drastically cuts costs and enhances scalability for developers, sparking debate in the crypto community.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BlackRock and Franklin Templeton Lead the Over 1,000% Surge in Tokenized US Treasuries",
+      "link": "https://cryptopanic.com/news/19616002/BlackRock-and-Franklin-Templeton-Lead-the-Over-1000-Surge-in-Tokenized-US-Treasuries",
+      "pubDate": "2024-06-23T20:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The tokenized US treasuries market is experiencing unprecedented growth. High interest rates and a surge in demand for safe, high-yielding on-chain assets drive this achievement. BlackRock’s BUIDL Takes the Lead in Tokenized Treasury Funds Segment High interest rates have bolstered demand for secure, high-yielding T-bills on-chain. This has propelled the value of tokenized US...",
+      "currencies": [
+        "USDT",
+        "T",
+        "ONDO"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano Price Skyrockets To $45 Or Crashes To $0.2? What To Expect Amid Key ADA Developments",
+      "link": "https://cryptopanic.com/news/19615936/Cardano-Price-Skyrockets-To-45-Or-Crashes-To-02-What-To-Expect-Amid-Key-ADA-Developments",
+      "pubDate": "2024-06-23T20:12:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Cardano (ADA) has faced downward pressure in recent weeks, with Sunday marking its fifth consecutive week of decline.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Phishing scam costs MakerDAO delegate $11M in crypto assets",
+      "link": "https://cryptopanic.com/news/19615918/Phishing-scam-costs-MakerDAO-delegate-11M-in-crypto-assets",
+      "pubDate": "2024-06-23T19:56:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Crypto market’s weekly winners and losers – LDO, ENS, WIF, NOT",
+      "link": "https://cryptopanic.com/news/19615871/Crypto-markets-weekly-winners-and-losers-LDO-ENS-WIF-NOT",
+      "pubDate": "2024-06-23T19:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LDO",
+        "ENS",
+        "NOT",
+        "WIF"
+      ]
+    },
+    {
+      "title": "Fantom Foundation Commits Over $144,000,000 in FTM to Sonic Labs Accelerator Program",
+      "link": "https://cryptopanic.com/news/19615858/Fantom-Foundation-Commits-Over-144000000-in-FTM-to-Sonic-Labs-Accelerator-Program",
+      "pubDate": "2024-06-23T18:45:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FTM"
+      ]
+    },
+    {
+      "title": "Phishing scam costs MakerDAO delegate $11.1 million in crypto assets",
+      "link": "https://cryptopanic.com/news/19615844/Phishing-scam-costs-MakerDAO-delegate-111-million-in-crypto-assets?mtm_campaign=API-OFA",
+      "pubDate": "2024-06-23T18:38:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "PENDLE"
+      ]
+    },
+    {
+      "title": "Polkadot ($DOT) Tumbles Amid Wider Market Downturns",
+      "link": "https://cryptopanic.com/news/19615843/Polkadot-DOT-Tumbles-Amid-Wider-Market-Downturns",
+      "pubDate": "2024-06-23T18:37:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOT"
+      ]
+    },
+    {
+      "title": "Market Jitters: Analysts Warn of Looming US Stock Crash, Draw Parallels to 1929",
+      "link": "https://cryptopanic.com/news/19615836/Market-Jitters-Analysts-Warn-of-Looming-US-Stock-Crash-Draw-Parallels-to-1929",
+      "pubDate": "2024-06-23T18:30:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DENT"
+      ]
+    },
+    {
+      "title": "Bitcoin targets $90K on high time frame bullish signals",
+      "link": "https://cryptopanic.com/news/19615834/Bitcoin-targets-90K-on-high-time-frame-bullish-signals",
+      "pubDate": "2024-06-23T18:30:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "RLY"
+      ]
+    },
+    {
+      "title": "Hoskinson: Cardano Is Waking Up",
+      "link": "https://cryptopanic.com/news/19615846/Hoskinson-Cardano-Is-Waking-Up",
+      "pubDate": "2024-06-23T18:29:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The Cardano founder has also teased \"amazing tech\" in the coming years",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Political Memecoins Might Be Biggest Winner In Trump Vs Biden Debate",
+      "link": "https://cryptopanic.com/news/19615830/Political-Memecoins-Might-Be-Biggest-Winner-In-Trump-Vs-Biden-Debate",
+      "pubDate": "2024-06-23T18:28:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "JOE"
+      ]
+    },
+    {
+      "title": "Solana’s BONK vs. Base’s BRETT – What’s going on? A breakdown",
+      "link": "https://cryptopanic.com/news/19615798/Solanas-BONK-vs-Bases-BRETT-Whats-going-on-A-breakdown",
+      "pubDate": "2024-06-23T18:00:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "BRETT holds a slight edge over BONK after a brief flip. Can things change again?",
+      "currencies": [
+        "SOL",
+        "BONK",
+        "BRETT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto’s Stagnant Summer: Analysts Say ‘Boring’ Markets May Set Stage for Eventual Price Surge",
+      "link": "https://cryptopanic.com/news/19615776/Cryptos-Stagnant-Summer-Analysts-Say-Boring-Markets-May-Set-Stage-for-Eventual-Price-Surge",
+      "pubDate": "2024-06-23T17:29:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "WOO"
+      ]
+    },
+    {
+      "title": "Bitcoin price loses ground as TON, PEPE, KAS and JASMY catch traders’ attention",
+      "link": "https://cryptopanic.com/news/19615778/Bitcoin-price-loses-ground-as-TON-PEPE-KAS-and-JASMY-catch-traders-attention",
+      "pubDate": "2024-06-23T17:29:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TON",
+        "JASMY",
+        "KAS",
+        "PEPE"
+      ]
+    },
+    {
+      "title": "TON and NOT Price Prediction for June 23",
+      "link": "https://cryptopanic.com/news/19615761/TON-and-NOT-Price-Prediction-for-June-23",
+      "pubDate": "2024-06-23T17:21:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TON",
+        "NOT"
+      ]
+    },
+    {
+      "title": "EigenDA Launches Free Data Availability Tier for Ethereum Rollups",
+      "link": "https://cryptopanic.com/news/19615759/EigenDA-Launches-Free-Data-Availability-Tier-for-Ethereum-Rollups",
+      "pubDate": "2024-06-23T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Binance Receives 12.66 Million WIF in Whale Moves as Dogwifhat Drops 30%",
+      "link": "https://cryptopanic.com/news/19615679/Binance-Receives-1266-Million-WIF-in-Whale-Moves-as-Dogwifhat-Drops-30",
+      "pubDate": "2024-06-23T16:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "WIF"
+      ]
+    },
+    {
+      "title": "MKR Falls 7% as MakerDAO Delegate Loses $11 Million to Phishing Scam",
+      "link": "https://cryptopanic.com/news/19615641/MKR-Falls-7-as-MakerDAO-Delegate-Loses-11-Million-to-Phishing-Scam",
+      "pubDate": "2024-06-23T16:07:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MKR",
+        "ENA"
+      ]
+    },
+    {
+      "title": "The Opportunity Cost of Holding Cardano Instead of BTC: How Much Are ADA Holders Behind?",
+      "link": "https://cryptopanic.com/news/19615603/The-Opportunity-Cost-of-Holding-Cardano-Instead-of-BTC-How-Much-Are-ADA-Holders-Behind",
+      "pubDate": "2024-06-23T15:49:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The theory of crypto market cycles is one that’s been around for many years now. In essence, many traders and analysts are of the opinion that there’s a considerable bull market once every four years, usually predicated by the Bitcoin halving. So far, that has been the case. Within these major cycles, there are usually […]",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Forget The Dip! XRP Primed For Epic Rally To $36, Expert Claims",
+      "link": "https://cryptopanic.com/news/19615567/Forget-The-Dip-XRP-Primed-For-Epic-Rally-To-36-Expert-Claims",
+      "pubDate": "2024-06-23T15:30:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "TON",
+        "FLOKI"
+      ]
+    },
+    {
+      "title": "5 Meme Coins With the Most Vibrant Communities",
+      "link": "https://cryptopanic.com/news/19615560/5-Meme-Coins-With-the-Most-Vibrant-Communities",
+      "pubDate": "2024-06-23T15:21:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "SHIB",
+        "PEPE",
+        "WIF",
+        "FLOKI"
+      ]
+    },
+    {
+      "title": "EigenLayer’s EigenDA Enhances Security to Combat Sybil and DDoS Attacks",
+      "link": "https://cryptopanic.com/news/19615536/EigenLayers-EigenDA-Enhances-Security-to-Combat-Sybil-and-DDoS-Attacks",
+      "pubDate": "2024-06-23T14:42:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TIA"
+      ]
+    },
+    {
+      "title": "Litecoin Price Recovers And Rises Above The $70 Level",
+      "link": "https://cryptopanic.com/news/19615586/Litecoin-Price-Recovers-And-Rises-Above-The-70-Level",
+      "pubDate": "2024-06-23T14:41:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "3 Best Ethereum Tokens Primed for Massive Gains: Insights for 2024’s Bull Run",
+      "link": "https://cryptopanic.com/news/19615486/3-Best-Ethereum-Tokens-Primed-for-Massive-Gains-Insights-for-2024s-Bull-Run",
+      "pubDate": "2024-06-23T14:38:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SHIB",
+        "ARB"
+      ]
+    },
+    {
+      "title": "Tether’s USDT on TRON Network Surpasses Visa’s $42,000,000,000 Daily Average Volume: Lookonchain",
+      "link": "https://cryptopanic.com/news/19615473/Tethers-USDT-on-TRON-Network-Surpasses-Visas-42000000000-Daily-Average-Volume-Lookonchain",
+      "pubDate": "2024-06-23T14:30:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "TRX"
+      ]
+    },
+    {
+      "title": "Solana Developer Reveals What He Claims Will Be a Breakthrough for SOL, Says “Big News is Here”",
+      "link": "https://cryptopanic.com/news/19615465/Solana-Developer-Reveals-What-He-Claims-Will-Be-a-Breakthrough-for-SOL-Says-Big-News-is-Here",
+      "pubDate": "2024-06-23T14:28:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Mert Mumtaz, one of the most important developers of the Solana ecosystem, shared a new development in his statement. Continue Reading: Solana Developer Reveals What He Claims Will Be a Breakthrough for SOL, Says “Big News is Here”",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Major Trader Who Predicted Avalanche & Chainlink’s Growth Now Focuses on This New DeFi Project",
+      "link": "https://cryptopanic.com/news/19615440/Major-Trader-Who-Predicted-Avalanche-Chainlinks-Growth-Now-Focuses-on-This-New-DeFi-Project",
+      "pubDate": "2024-06-23T14:10:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "LINK"
+      ]
+    },
+    {
+      "title": "Arthur Hayes Tips Aptos To Overtake Solana; Could This New Altcoin Be Set To Overtake Both?",
+      "link": "https://cryptopanic.com/news/19615428/Arthur-Hayes-Tips-Aptos-To-Overtake-Solana-Could-This-New-Altcoin-Be-Set-To-Overtake-Both",
+      "pubDate": "2024-06-23T14:04:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "APT"
+      ]
+    },
+    {
+      "title": "Pepe, Dogwifhat and AlexTheDoge Memecoins Surge 12% Despite Market Falling 10% Overnight",
+      "link": "https://cryptopanic.com/news/19615411/Pepe-Dogwifhat-and-AlexTheDoge-Memecoins-Surge-12-Despite-Market-Falling-10-Overnight",
+      "pubDate": "2024-06-23T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "PEPE",
+        "WIF"
+      ]
+    },
+    {
+      "title": "Binance Coin Trades at Critical Levels Amid Market Volatility",
+      "link": "https://cryptopanic.com/news/19615416/Binance-Coin-Trades-at-Critical-Levels-Amid-Market-Volatility",
+      "pubDate": "2024-06-23T13:59:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BNB"
+      ]
+    },
+    {
+      "title": "This Week in Crypto Games: 'Pixels' Chapter 2, Konami on Avalanche, Telegram Gaming Boom",
+      "link": "https://cryptopanic.com/news/19615336/This-Week-in-Crypto-Games-Pixels-Chapter-2-Konami-on-Avalanche-Telegram-Gaming-Boom",
+      "pubDate": "2024-06-23T13:01:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "MakerDAO delegate’s $11M in tokens stolen in phishing scam",
+      "link": "https://cryptopanic.com/news/19615310/MakerDAO-delegates-11M-in-tokens-stolen-in-phishing-scam?mtm_campaign=API-OFA",
+      "pubDate": "2024-06-23T12:50:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "PENDLE"
+      ]
+    },
+    {
+      "title": "Pendle Permit Phishing Scam Causes Crypto User Loses $11 Million",
+      "link": "https://cryptopanic.com/news/19615485/Pendle-Permit-Phishing-Scam-Causes-Crypto-User-Loses-11-Million?mtm_campaign=API-OFA",
+      "pubDate": "2024-06-23T12:40:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PENDLE"
+      ]
+    },
+    {
+      "title": "XRP 6-Year Trendline Draws To A Close, Analyst Predicts 1,400% Rally To $7.5",
+      "link": "https://cryptopanic.com/news/19615273/XRP-6-Year-Trendline-Draws-To-A-Close-Analyst-Predicts-1400-Rally-To-75",
+      "pubDate": "2024-06-23T12:30:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "FUN",
+        "FLOKI"
+      ]
+    },
+    {
+      "title": "SEC Demands $102M From Ripple, Dems Reportedly Prepare for Crypto Roundtable, and More — Week in Review",
+      "link": "https://cryptopanic.com/news/19615263/SEC-Demands-102M-From-Ripple-Dems-Reportedly-Prepare-for-Crypto-Roundtable-and-More-Week-in-Review",
+      "pubDate": "2024-06-23T12:25:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "JOE"
+      ]
+    },
+    {
+      "title": "MakerDAO falls to $11.1M phishing attack – These areas affected",
+      "link": "https://cryptopanic.com/news/19615189/MakerDAO-falls-to-111M-phishing-attack-These-areas-affected",
+      "pubDate": "2024-06-23T11:30:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "JasmyCoin defies broader crypto market as price surges 12%",
+      "link": "https://cryptopanic.com/news/19615168/JasmyCoin-defies-broader-crypto-market-as-price-surges-12",
+      "pubDate": "2024-06-23T11:23:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "JasmyCoin surges 12% as price defies broader crypto market JASMY could flip to $0.04 if bulls hold above key support level JasmyCoin (JASMY), the native token of a Japan-based cryptocurrency project for decentralized data, has witnessed a significant price increase as most top altcoins mirror Bitcoin’s consolidation in the past month. On June 23, JASMY […]",
+      "currencies": [
+        "BTC",
+        "JASMY"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "AVAX plunges amidst suspicious whale transactions: What now?",
+      "link": "https://cryptopanic.com/news/19615141/AVAX-plunges-amidst-suspicious-whale-transactions-What-now",
+      "pubDate": "2024-06-23T11:00:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Polygon Got Oversold As The Price Reaches A Low Of $0.52",
+      "link": "https://cryptopanic.com/news/19615195/Polygon-Got-Oversold-As-The-Price-Reaches-A-Low-Of-052",
+      "pubDate": "2024-06-23T10:31:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MATIC"
+      ]
+    },
+    {
+      "title": "'TapSwap' Tips Guide: How to Earn the Most Coins in the Telegram Crypto Game",
+      "link": "https://cryptopanic.com/news/19615065/TapSwap-Tips-Guide-How-to-Earn-the-Most-Coins-in-the-Telegram-Crypto-Game",
+      "pubDate": "2024-06-23T10:01:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TON",
+        "NOT"
+      ]
+    },
+    {
+      "title": "Litecoin stagnates around $71 support level – Where will LTC go next?",
+      "link": "https://cryptopanic.com/news/19615063/Litecoin-stagnates-around-71-support-level-Where-will-LTC-go-next",
+      "pubDate": "2024-06-23T10:00:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "19 Million Chainlink Tokens Transferred To Exchanges – More Downside For LINK Price?",
+      "link": "https://cryptopanic.com/news/19615016/19-Million-Chainlink-Tokens-Transferred-To-Exchanges-More-Downside-For-LINK-Price",
+      "pubDate": "2024-06-23T09:30:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "LINK",
+        "TON"
+      ]
+    },
+    {
+      "title": "Why Investors Are Turning to Furrever Token Amid Pepe Coin’s Stability, Shiba Inu’s Gains, and Floki’s Rise",
+      "link": "https://cryptopanic.com/news/19614997/Why-Investors-Are-Turning-to-Furrever-Token-Amid-Pepe-Coins-Stability-Shiba-Inus-Gains-and-Flokis-Rise",
+      "pubDate": "2024-06-23T09:13:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SHIB",
+        "PEPE",
+        "FLOKI"
+      ]
+    },
+    {
+      "title": "Arbitrum, Starknet vie for L2 domination despite falling prices",
+      "link": "https://cryptopanic.com/news/19614984/Arbitrum-Starknet-vie-for-L2-domination-despite-falling-prices",
+      "pubDate": "2024-06-23T09:00:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "STRK",
+        "ARB"
+      ]
+    },
+    {
+      "title": "Bitcoin Price Solid at $64K as Cardano (ADA) Surges 4% Daily: Weekend Watch",
+      "link": "https://cryptopanic.com/news/19614960/Bitcoin-Price-Solid-at-64K-as-Cardano-ADA-Surges-4-Daily-Weekend-Watch",
+      "pubDate": "2024-06-23T08:29:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin has managed to stop the bleeding over the past 24 hours while most of the altcoins are attempting to recover.",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Don’t Miss The Floki FOMO: Social Media Sends Meme Coin On 300% Rip",
+      "link": "https://cryptopanic.com/news/19614841/Dont-Miss-The-Floki-FOMO-Social-Media-Sends-Meme-Coin-On-300-Rip",
+      "pubDate": "2024-06-23T06:30:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "DOGE",
+        "SHIB",
+        "TON",
+        "FLOKI"
+      ]
+    },
+    {
+      "title": "CoinStats Hack: 1,590 Wallets Compromised, Users Report Missing Funds",
+      "link": "https://cryptopanic.com/news/19614704/CoinStats-Hack-1590-Wallets-Compromised-Users-Report-Missing-Funds",
+      "pubDate": "2024-06-23T04:54:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MKR",
+        "GALA"
+      ]
+    },
+    {
+      "title": "BNB’s road to recovery – Tracing the path to $600",
+      "link": "https://cryptopanic.com/news/19614594/BNBs-road-to-recovery-Tracing-the-path-to-600",
+      "pubDate": "2024-06-23T04:00:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BNB"
+      ]
+    },
+    {
+      "title": "Ethereum (ETH) Records Surge In Active Addresses – Incoming Price Rebound?",
+      "link": "https://cryptopanic.com/news/19614783/Ethereum-ETH-Records-Surge-In-Active-Addresses-Incoming-Price-Rebound?mtm_campaign=API-OFA",
+      "pubDate": "2024-06-23T03:30:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "ALI"
+      ]
+    },
+    {
+      "title": "Meme Coins Dogwifhat (WIF) And PEPE Crash As Investors Move To More Quality On DTX Presale",
+      "link": "https://cryptopanic.com/news/19614986/Meme-Coins-Dogwifhat-WIF-And-PEPE-Crash-As-Investors-Move-To-More-Quality-On-DTX-Presale",
+      "pubDate": "2024-06-23T02:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "PEPE",
+        "WIF"
+      ]
+    }
+  ]
+}

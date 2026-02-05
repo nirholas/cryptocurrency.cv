@@ -1,0 +1,871 @@
+{
+  "date": "2022-09-27",
+  "fetchedAt": "2026-02-05T07:27:07.398Z",
+  "articleCount": 59,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "SOL developments: Short-term plan or long-term fix to boost investor morale?",
+      "link": "https://cryptopanic.com/news/16449438/SOL-developments-Short-term-plan-or-long-term-fix-to-boost-investor-morale",
+      "pubDate": "2022-09-27T23:30:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana [SOL] founder, Anatoly Yakovenko, talked about the progress of Solana’s technology department via a tweet published on 27 September. According to the tweet, Solana’s development progress has been going as planned. The Solana team also upgraded their QUIC protocol. In the coming future, Anatoly stated that wallets, users, and bots would start increasing prioritization fees […]",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "New to #Klaytn? [#KlaytnatTOKEN2049] We're a layer 1 public blockchain focused on the #metaverse, #gamefi, and the…",
+      "link": "https://cryptopanic.com/news/klay-token/16453566/New-to-Klaytn-KlaytnatTOKEN2049-Were-a-layer-1-public-blockchain-focused-on-the-metaverse-gamefi-and-the",
+      "pubDate": "2022-09-27T23:16:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "There's just 1 hour until the KLEX token launch!! If you haven't already, get some $KLAY tokens ready to partici…",
+      "link": "https://cryptopanic.com/news/klay-token/16502040/Theres-just-1-hour-until-the-KLEX-token-launch-If-you-havent-already-get-some-KLAY-tokens-ready-to-partici",
+      "pubDate": "2022-09-27T23:03:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "KLEX"
+      ]
+    },
+    {
+      "title": "Cardano ($ADA) Investment Products See Eighth Consecutive Week of Inflows as Institutions Raise Altcoin Bets",
+      "link": "https://cryptopanic.com/news/16449187/Cardano-ADA-Investment-Products-See-Eighth-Consecutive-Week-of-Inflows-as-Institutions-Raise-Altcoin-Bets",
+      "pubDate": "2022-09-27T21:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Cryptocurrency investment products offering investors exposure to Cardano ($ADA) have seen their eighth consecutive week of inflows, with an additional $100,000 being invested into these products last week. Year-to-date, according to CoinShares’ Digital Asset Fund Flows Weekly Report, Cardano has seen $14.4 million of inflows, making it more popular than other altcoins including Litecoin...",
+      "currencies": [
+        "ADA",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 4
+      }
+    },
+    {
+      "title": "RT @hackernoon: \"How I Rebuilt the Classic Snake Game on the CENNZnet Blockchain\" by @cennznet #blockchain #rustlang",
+      "link": "https://cryptopanic.com/news/16451204/RT-hackernoon-How-I-Rebuilt-the-Classic-Snake-Game-on-the-CENNZnet-Blockchain-by-cennznet-blockchain-rustlang",
+      "pubDate": "2022-09-27T20:18:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CENNZ"
+      ]
+    },
+    {
+      "title": "Cosmos Community Publishes New Whitepaper for Highly-Anticipated Upgrade That Revamps ATOM",
+      "link": "https://cryptopanic.com/news/16448944/Cosmos-Community-Publishes-New-Whitepaper-for-Highly-Anticipated-Upgrade-That-Revamps-ATOM",
+      "pubDate": "2022-09-27T19:55:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Leading members of the Cosmos (ATOM) community have unveiled a whitepaper for a redesigned Cosmos Hub, which is the technology at the center of its ecosystem. According to the whitepaper, the new Cosmos Hub aims to drive the growth of the Cosmos Network as it transitions toward becoming a secure and holistic platform that allows […]",
+      "currencies": [
+        "ETH",
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Lightning Network dApp Strike Aims to Take Visa & Mastercard out of Business",
+      "link": "https://cryptopanic.com/news/bitcoin/16448970/Bitcoin-Lightning-Network-dApp-Strike-Aims-to-Take-Visa-Mastercard-out-of-Business",
+      "pubDate": "2022-09-27T19:36:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin Lightning Network payments company Strike raises $80 million to expand its footprint to larger financial institutions.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "ICYMI : Last week at #HeliumHouse NYC, @seeedstudio @Embedded_Works @ParleyLabs and @Trackpacio came together to t…",
+      "link": "https://cryptopanic.com/news/helium/16453026/ICYMI-Last-week-at-HeliumHouse-NYC-seeedstudio-Embedded_Works-ParleyLabs-and-Trackpacio-came-together-to-t",
+      "pubDate": "2022-09-27T19:13:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ]
+    },
+    {
+      "title": "Do Kwon Statement: A Possible Trigger For Terra Tokens Price Surge",
+      "link": "https://cryptopanic.com/news/16448762/Do-Kwon-Statement-A-Possible-Trigger-For-Terra-Tokens-Price-Surge",
+      "pubDate": "2022-09-27T19:00:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "RT @NFTdoctor12: If you’re into trading, i would suggest you a @CyborgApesNFT. Really low floor for a lifetime pass to charts and signals.…",
+      "link": "https://cryptopanic.com/news/16451768/RT-NFTdoctor12-If-youre-into-trading-i-would-suggest-you-a-CyborgApesNFT-Really-low-floor-for-a-lifetime-pass-to-charts-and-signals?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-27T18:53:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "BORG"
+      ]
+    },
+    {
+      "title": "What's the coolest thing you've gotten by providing data to #XYO as a node using @coin_with_us? Tell us, we're curi…",
+      "link": "https://cryptopanic.com/news/16457066/Whats-the-coolest-thing-youve-gotten-by-providing-data-to-XYO-as-a-node-using-coin_with_us-Tell-us-were-curi",
+      "pubDate": "2022-09-27T18:02:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XYO"
+      ]
+    },
+    {
+      "title": "RT @w3Andrea: That’s right!! The #NFTs will be available this Friday @ 12pm PT on @ThetaDrop #web3 @EW @ImagineReplay @therealcykoko",
+      "link": "https://cryptopanic.com/news/16456196/RT-w3Andrea-Thats-right-The-NFTs-will-be-available-this-Friday-12pm-PT-on-ThetaDrop-web3-EW-ImagineReplay-therealcykoko",
+      "pubDate": "2022-09-27T16:23:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "RT @therealcykoko: BREAKING NEWS!!! This is what we've been sitting on! Thrilled to be working with @Theta_Network @ThetaDrop @ImagineRepl…",
+      "link": "https://cryptopanic.com/news/16456197/RT-therealcykoko-BREAKING-NEWS-This-is-what-weve-been-sitting-on-Thrilled-to-be-working-with-Theta_Network-ThetaDrop-ImagineRepl",
+      "pubDate": "2022-09-27T16:22:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Terra Luna Classic Price Prediction as LUNC Falls 12% in 24 Hours",
+      "link": "https://cryptopanic.com/news/16448090/Terra-Luna-Classic-Price-Prediction-as-LUNC-Falls-12-in-24-Hours",
+      "pubDate": "2022-09-27T16:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Terra Classic continued its extreme volatility on Monday and Tuesday after a sensational six-hour rise was followed by another sharp sell-off. LUNC - often wrongly referred to as Luna Classic - made gains of 75% at one from 6am to 12pm UTC on Monday and was up to $0.00032, before a sharp retraction since has the coin down 12% in the last 24hrs.... Read More: Terra Luna Classic Price...",
+      "currencies": [
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "“A core property of a #Bitcoin sidechain is that it has no other native currency that competes with BTC. This align…",
+      "link": "https://cryptopanic.com/news/16455864/A-core-property-of-a-Bitcoin-sidechain-is-that-it-has-no-other-native-currency-that-competes-with-BTC-This-align",
+      "pubDate": "2022-09-27T16:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "RBTC"
+      ]
+    },
+    {
+      "title": "There’s no such thing as a ‘blockchain trilemma’. Just because #Ethereum et al. can’t provide #scalability,…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/16450980/Theres-no-such-thing-as-a-blockchain-trilemma-Just-because-Ethereum-et-al-cant-provide-scalability",
+      "pubDate": "2022-09-27T15:55:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "Cosmos Reveals Whitepaper for New Cosmos Hub and ATOM 2.0",
+      "link": "https://cryptopanic.com/news/16447898/Cosmos-Reveals-Whitepaper-for-New-Cosmos-Hub-and-ATOM-20",
+      "pubDate": "2022-09-27T15:45:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The Cosmos project published a whitepaper announcing ATOM 2.0 and other major changes. Two particularly notable changes are the Interchain Scheduler and Interchain Allocator. The whitepaper is subject to change, but the team has a tentative vision for how things should be. The Cosmos project has published its whitepaper for ATOM 2.0. The document was revealed at the Cosmoverse conference in...",
+      "currencies": [
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Celsius Network’s $CEL Plummets 10% After Its CEO Alex Mashinsky’s Resignation",
+      "link": "https://cryptopanic.com/news/16447852/Celsius-Networks-CEL-Plummets-10-After-Its-CEO-Alex-Mashinskys-Resignation",
+      "pubDate": "2022-09-27T15:30:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Alex Mashinsky, CEO of crypto lender platform Celsius Network, has resigned from his position. The firm’s CFO, Chris Ferraro, has been appointed as the next CEO of the Celsius Network The news of Mashinsky’s resignation has adversely impacted the price of its native token CEL, which is down 10% in the last hour. On Tuesday, Alex Mashinsky, CEO of embattled crypto lender platform Celsius Network, submitted his resignation to the company’s board of directors. The news of Mashinsky’s resignation af",
+      "currencies": [
+        "CEL"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "NYC Hotspots are helping to connect one of @senetco’s major customers. The result? 25% increase in outdoor asset re…",
+      "link": "https://cryptopanic.com/news/helium/16453027/NYC-Hotspots-are-helping-to-connect-one-of-senetcos-major-customers-The-result-25-increase-in-outdoor-asset-re",
+      "pubDate": "2022-09-27T15:27:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ]
+    },
+    {
+      "title": "Microsoft, Avalanche, Polygon join $20M funding of Web3 automation startup",
+      "link": "https://cryptopanic.com/news/16447655/Microsoft-Avalanche-Polygon-join-20M-funding-of-Web3-automation-startup",
+      "pubDate": "2022-09-27T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "Web3 data firm Space and Time is also supported by blockchain oracle firm Chainlink through its startup program.",
+      "currencies": [
+        "MATIC",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Our latest whitepaper explains the recent explosion in #crypto usage in Latin America. But it's more than facts and…",
+      "link": "https://cryptopanic.com/news/pax-gold/16450903/Our-latest-whitepaper-explains-the-recent-explosion-in-crypto-usage-in-Latin-America-But-its-more-than-facts-and",
+      "pubDate": "2022-09-27T14:52:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BUSD",
+        "PAXG",
+        "BKRW"
+      ]
+    },
+    {
+      "title": "RT @MrWhale_Crypto: HOLD $SC MORE LFG  COMING...",
+      "link": "https://cryptopanic.com/news/16455760/RT-MrWhale_Crypto-HOLD-SC-MORE-LFG-COMING",
+      "pubDate": "2022-09-27T14:42:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SC"
+      ]
+    },
+    {
+      "title": "3 more days until the launch of the first product in the BandBuilderVerse's lineup! Stay tuned!",
+      "link": "https://cryptopanic.com/news/16450791/3-more-days-until-the-launch-of-the-first-product-in-the-BandBuilderVerses-lineup-Stay-tuned",
+      "pubDate": "2022-09-27T14:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "Cosmos contributors release new whitepaper showcasing two big ideas",
+      "link": "https://cryptopanic.com/news/16447435/Cosmos-contributors-release-new-whitepaper-showcasing-two-big-ideas",
+      "pubDate": "2022-09-27T13:56:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "On Monday, a group of Cosmos contributors released a new whitepaper that outlines a plan to add two new functionalities to the Cosmos Hub.",
+      "currencies": [
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 34,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "In your opinion, is cryptocurrency changing how emerging markets do business and how users adopt to use them daily?…",
+      "link": "https://cryptopanic.com/news/16450334/In-your-opinion-is-cryptocurrency-changing-how-emerging-markets-do-business-and-how-users-adopt-to-use-them-daily",
+      "pubDate": "2022-09-27T13:49:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "ABBC"
+      ]
+    },
+    {
+      "title": "Report: Korean authorities orders freeze of $67M of Bitcoin tied to Do Kwon",
+      "link": "https://cryptopanic.com/news/16447357/Report-Korean-authorities-orders-freeze-of-67M-of-Bitcoin-tied-to-Do-Kwon",
+      "pubDate": "2022-09-27T13:34:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The latest discovery in the long-drawn Terra ecosystem saga contradicts many of Do Kwon’s early claims.",
+      "currencies": [
+        "BTC",
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "VeChain social mentions hit a peak in Q3 2022 with strong bullish sentiment",
+      "link": "https://cryptopanic.com/news/16447306/VeChain-social-mentions-hit-a-peak-in-Q3-2022-with-strong-bullish-sentiment",
+      "pubDate": "2022-09-27T13:30:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "VeChain is one of the cryptocurrency projects that has seen increasing attention driven by the fact that its native token... Continue reading The post VeChain social mentions hit a peak in Q3 2022 with strong bullish sentiment appeared first on Finbold.",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "GM fam. We gave lot of WL spots in our discord for holders. Turn on Notifications 🦾",
+      "link": "https://cryptopanic.com/news/16451769/GM-fam-We-gave-lot-of-WL-spots-in-our-discord-for-holders-Turn-on-Notifications?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-27T12:56:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BORG"
+      ]
+    },
+    {
+      "title": "LUNC Price Increases as Binance Decides To Burn Trading Fees",
+      "link": "https://cryptopanic.com/news/16447062/LUNC-Price-Increases-as-Binance-Decides-To-Burn-Trading-Fees",
+      "pubDate": "2022-09-27T12:32:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "In response to proposals from the LUNC community, Binance has decided to burn all fees on LUNC spot and margin trading pairs. Binance said it would send the trading fees and margin trading pairs to LUNC burn addresses. The announcement was made via a blog post on Binance’s official website. The Terra Classic community expressed dissatisfaction with an ‘opt-in button proposed by Binance CEO....",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "BNB",
+        "ALGO",
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ANNOUNCEMENT Mandala will support the THETA NETWORK (THETA) upgrade & hard fork 🤝 @Theta_Network",
+      "link": "https://cryptopanic.com/news/theta-token/16454033/ANNOUNCEMENT-Mandala-will-support-the-THETA-NETWORK-THETA-upgrade-amp-hard-fork-Theta_Network",
+      "pubDate": "2022-09-27T12:19:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "MDX"
+      ]
+    },
+    {
+      "title": "Polkadot Announces New Roadmap, Here's What's In It",
+      "link": "https://cryptopanic.com/news/16446969/Polkadot-Announces-New-Roadmap-Heres-Whats-In-It",
+      "pubDate": "2022-09-27T12:01:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "KSM",
+        "XCN"
+      ]
+    },
+    {
+      "title": "Do Kwon Moved LFG’s Bitcoin After Court Approved Arrest, Prosecutors Claim",
+      "link": "https://cryptopanic.com/news/16446856/Do-Kwon-Moved-LFGs-Bitcoin-After-Court-Approved-Arrest-Prosecutors-Claim",
+      "pubDate": "2022-09-27T11:35:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Despite the rapidly intensifying drama surrounding Kwon, the famously outspoken blockchain entrepreneur surfaced on Twitter Monday to say that he was making zero effort to hide from authorities. South Korean prosecutors are reportedly making efforts to freeze $67 million worth of Bitcoin linked to Terras wanted figurehead, Do Kwon.The Seoul Southern District Prosecutors Office has asked KuCoin...",
+      "currencies": [
+        "BTC",
+        "KCS",
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @HippoWallet: Hippo Wallet will be treading the premier cryptocurrency event, Crypto Expo 2022 at Dubai Festival City on October 5 &amp; 6!…",
+      "link": "https://cryptopanic.com/news/16816830/RT-HippoWallet-Hippo-Wallet-will-be-treading-the-premier-cryptocurrency-event-Crypto-Expo-2022-at-Dubai-Festival-City-on-October-5-amp-6?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-27T11:30:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HPO"
+      ]
+    },
+    {
+      "title": "RT @ShibaInformer: SHIBCHAIN ( $SC ) serves as the primary governance token for the Shibchain EVM compatible Blockchain and for paying fees…",
+      "link": "https://cryptopanic.com/news/16455763/RT-ShibaInformer-SHIBCHAIN-SC-serves-as-the-primary-governance-token-for-the-Shibchain-EVM-compatible-Blockchain-and-for-paying-fees",
+      "pubDate": "2022-09-27T10:13:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SC"
+      ]
+    },
+    {
+      "title": "Have you heard about #Bitcoin for kids and beginners? Parents, educators and beginners had a lot of questions duri…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/16450981/Have-you-heard-about-Bitcoin-for-kids-and-beginners-Parents-educators-and-beginners-had-a-lot-of-questions-duri",
+      "pubDate": "2022-09-27T10:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "Terra’s Do Kwon made a suspicious 3,310 BTC transfer shortly after his arrest warrant issuance",
+      "link": "https://cryptopanic.com/news/bitcoin/16446318/Terras-Do-Kwon-made-a-suspicious-3310-BTC-transfer-shortly-after-his-arrest-warrant-issuance",
+      "pubDate": "2022-09-27T10:07:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "As the widely-publicized saga of Terraform Labs continues to unravel, a suspicious transfer in Bitcoin (BTC) has been discovered from... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 10
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Game On: 10 GameFi DAOs You Need to Know About in 2022",
+      "link": "https://cryptopanic.com/news/axie-infinity/16444988/Game-On-10-GameFi-DAOs-You-Need-to-Know-About-in-2022",
+      "pubDate": "2022-09-27T09:17:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "Analyst Says Ethereum Primed To Outperform Bitcoin, Updates Outlook on XRP and Two Additional Altcoins",
+      "link": "https://cryptopanic.com/news/16444992/Analyst-Says-Ethereum-Primed-To-Outperform-Bitcoin-Updates-Outlook-on-XRP-and-Two-Additional-Altcoins",
+      "pubDate": "2022-09-27T09:15:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A closely followed crypto strategist and trader is expecting Ethereum (ETH) to outshine Bitcoin (BTC) while updating his forecast for XRP and two low-cap digital assets. Pseudonymous analyst Altcoin Sherpa tells his 183,500 Twitter followers that he sees the Ethereum/Bitcoin pair (ETH/BTC) rallying from current levels. “This one should bounce around this area. Equilibrium of […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin Price Rockets 8% to $20,270 – What's Behind the Jump, Should You Buy?",
+      "link": "https://cryptopanic.com/news/bitcoin/16444472/Bitcoin-Price-Rockets-8-to-20270-Whats-Behind-the-Jump-Should-You-Buy",
+      "pubDate": "2022-09-27T08:55:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The price of bitcoin has hit $20,270 today, marking a 7.5% rise over the cryptocurrency's 24-hour-low of $18,858. Surprisingly, the jump comes amid continued negative sentiment in global markets, with the Dow Jones entering a technical bear market following a 1.1% decline yesterday, which completed a 20% fall compared to peaks witnessed in January.... Read More: Bitcoin Price Rockets 8% to...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin gains 5% to reclaim $20K, eyes first 'green' September since 2016",
+      "link": "https://cryptopanic.com/news/bitcoin/16443922/Bitcoin-gains-5-to-reclaim-20K-eyes-first-green-September-since-2016",
+      "pubDate": "2022-09-27T08:36:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "And... the winner has emerged! Congratulations to @SavannaSurvival Read more about the top 8 projects here:…",
+      "link": "https://cryptopanic.com/news/klay-token/16453567/And-the-winner-has-emerged-Congratulations-to-SavannaSurvival-Read-more-about-the-top-8-projects-here",
+      "pubDate": "2022-09-27T08:26:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "Crypto market adds over $50 billion in 24 hours as Bitcoin surges past $20,000",
+      "link": "https://cryptopanic.com/news/bitcoin/16443396/Crypto-market-adds-over-50-billion-in-24-hours-as-Bitcoin-surges-past-20000",
+      "pubDate": "2022-09-27T08:18:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "On Tuesday, September 27, Bitcoin (BTC) surged beyond the $20,000 level as the cryptocurrency market as a whole pushed closer to the... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The future is now. We give our super-powered thinkers the freedom and flexibility to work how &amp; where they want wit…",
+      "link": "https://cryptopanic.com/news/16442840/The-future-is-now-We-give-our-super-powered-thinkers-the-freedom-and-flexibility-to-work-how-amp-where-they-want-wit",
+      "pubDate": "2022-09-27T07:58:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GLM"
+      ]
+    },
+    {
+      "title": "#Binance will support the @Theta_Network $THETA upgrade and hard fork.",
+      "link": "https://cryptopanic.com/news/theta-token/16450902/Binance-will-support-the-Theta_Network-THETA-upgrade-and-hard-fork",
+      "pubDate": "2022-09-27T07:17:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "ETHDOWN",
+        "ETHUP"
+      ]
+    },
+    {
+      "title": "We reached a new milestone! 🤑 USDD/3CRV & USDDFRAXBP have reached a total TVL of over $72 Million with…",
+      "link": "https://cryptopanic.com/news/usdd/16445388/We-reached-a-new-milestone-USDD3CRV-amp-USDDFRAXBP-have-reached-a-total-TVL-of-over-72-Million-with",
+      "pubDate": "2022-09-27T07:04:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "USDD"
+      ]
+    },
+    {
+      "title": "It seems the market has spoken. Since our 2 recent Telegram announcements about Decentryk NFT products (built on th…",
+      "link": "https://cryptopanic.com/news/16440609/It-seems-the-market-has-spoken-Since-our-2-recent-Telegram-announcements-about-Decentryk-NFT-products-built-on-th",
+      "pubDate": "2022-09-27T06:34:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "CTK"
+      ]
+    },
+    {
+      "title": "Australian Central Bank Details Active CBDC Pilot Project In Telling Whitepaper",
+      "link": "https://cryptopanic.com/news/16439765/Australian-Central-Bank-Details-Active-CBDC-Pilot-Project-In-Telling-Whitepaper",
+      "pubDate": "2022-09-27T05:50:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Australians are already testing a CBDC. Surprising no one, considering the authoritarian way that the government handled the lockdowns. The jury is still out on Central Bank Digital Currencies, while some authorities see them as problematic and prone to abuse, others are running a pilot program. The Reserve Bank of Australia, the country’s Central Bank, […]",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "See you at #token2049 Singapore 🇸🇬",
+      "link": "https://cryptopanic.com/news/16443878/See-you-at-token2049-Singapore?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-27T05:37:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PCI",
+        "WPCI"
+      ]
+    },
+    {
+      "title": "Greetings, $TRX $KLAY $IPV $NPT holders! Don’t work, make your tokens work ️via #NEOPIN’s user-friendly #Staking s…",
+      "link": "https://cryptopanic.com/news/klay-token/16443456/Greetings-TRX-KLAY-IPV-NPT-holders-Dont-work-make-your-tokens-work-via-NEOPINs-user-friendly-Staking-s",
+      "pubDate": "2022-09-27T05:15:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "KLAY",
+        "NPT"
+      ]
+    },
+    {
+      "title": "Polkadot eyes increasing transaction speed by 100 to 1,000 times",
+      "link": "https://cryptopanic.com/news/16438926/Polkadot-eyes-increasing-transaction-speed-by-100-to-1000-times",
+      "pubDate": "2022-09-27T04:33:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Polkadot updated its roadmap on Monday, expecting to deploy a technique called “asynchronous backing” on its development-testing network Kusama before the end of 2022, as a prelude to upgrading the mainnet for boosting the transaction speed. See related article: Markets: Bitcoin price back above US$19,000; Ether, Polkadot gain; XRP leads losers Fast facts Asynchronous backing […]",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We're happy to be a friend of @HuobiGlobal and we look forward to an even stronger partnership going forward Ch…",
+      "link": "https://cryptopanic.com/news/klay-token/16442457/Were-happy-to-be-a-friend-of-HuobiGlobal-and-we-look-forward-to-an-even-stronger-partnership-going-forward-Ch",
+      "pubDate": "2022-09-27T03:58:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "Terra Classic surges 50% as Binance offers token burning mechanism",
+      "link": "https://cryptopanic.com/news/16438836/Terra-Classic-surges-50-as-Binance-offers-token-burning-mechanism?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-27T03:40:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Terra Classic (LUNC), the original crypto token of the Terra-LUNA blockchain that collapsed back in May, gained over 50% on Tuesday following an announcement by Binance, the world’s largest crypto exchange by volume, that it would support a burn mechanism for the network. See related article: For South Korea, making Do Kwon pay for his […]",
+      "currencies": [
+        "LUNA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Our Keynote speech by Sam Seo, our Chief Klaytn Officer, has just started! Join in the livestream here:…",
+      "link": "https://cryptopanic.com/news/klay-token/16442458/Our-Keynote-speech-by-Sam-Seo-our-Chief-Klaytn-Officer-has-just-started-Join-in-the-livestream-here",
+      "pubDate": "2022-09-27T03:10:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "Is crypto in a deep funk? Think again",
+      "link": "https://cryptopanic.com/news/axie-infinity/16438770/Is-crypto-in-a-deep-funk-Think-again",
+      "pubDate": "2022-09-27T03:02:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "FTX Wins Auction For Voyager Digital Assets, Valued Over $1B",
+      "link": "https://cryptopanic.com/news/16438746/FTX-Wins-Auction-For-Voyager-Digital-Assets-Valued-Over-1B?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-27T02:55:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Voyager Digital has officially completed it’s auction for acquisition, with powerhouse exchange FTX securing the winning bid, according to emerging reports (and confirmed via press release) in recent hours. Reports in recent weeks had stated that the flagship exchange was in the bidding mix with competitors Binance and CrossTower, with all three supposedly in the final running for Voyager’s...",
+      "currencies": [
+        "FTT",
+        "LUNA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "The livestream for #KlayDevDay in SG is starting! You can also head over to our #KlaytnMuseum to participate:…",
+      "link": "https://cryptopanic.com/news/klay-token/16442459/The-livestream-for-KlayDevDay-in-SG-is-starting-You-can-also-head-over-to-our-KlaytnMuseum-to-participate",
+      "pubDate": "2022-09-27T02:54:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "Come join us at National Gallery for #KlayDevDay in SG! We're accepting walk-ins too 10am-7pm (lunch provided)…",
+      "link": "https://cryptopanic.com/news/klay-token/16442460/Come-join-us-at-National-Gallery-for-KlayDevDay-in-SG-Were-accepting-walk-ins-too-10am-7pm-lunch-provided",
+      "pubDate": "2022-09-27T02:29:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "New Cosmos white paper repurposes ATOM token and refines vision",
+      "link": "https://cryptopanic.com/news/16438668/New-Cosmos-white-paper-repurposes-ATOM-token-and-refines-vision",
+      "pubDate": "2022-09-27T02:19:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The news comes a couple of weeks after research firm Delphi Labs announced it would shift the focus of its research and development efforts toward the Cosmos ecosystem.",
+      "currencies": [
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance Coin Could Be Set For A Litmus Test, Eyes $280",
+      "link": "https://cryptopanic.com/news/16438552/Binance-Coin-Could-Be-Set-For-A-Litmus-Test-Eyes-280",
+      "pubDate": "2022-09-27T01:18:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "BNB price ranges below 50 and 200 EMA on the daily timeframe. BNB shows bullish strength on the 4H timeframe as price breaks an asymmetric triangle. The price could be poised to retest the 1D and 4H resistance of $280. Binance Coin (BNB) price showed bullish strength in recent weeks, but the price has failed to match that run against tether (USDT). With the price of Binance Coin facing...",
+      "currencies": [
+        "USDT",
+        "BNB",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    }
+  ]
+}

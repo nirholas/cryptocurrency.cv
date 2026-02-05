@@ -1,0 +1,25 @@
+{
+  "date": "2019-03-18",
+  "fetchedAt": "2026-02-05T07:27:06.790Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IBM Signs 6 Banks to Issue Stablecoins and Use Stellar’s XLM Cryptocurrency",
+      "link": "https://cryptopanic.com/news/4864654/IBM-Signs-6-Banks-to-Issue-Stablecoins-and-Use-Stellars-XLM-Cryptocurrency",
+      "pubDate": "2019-03-18T14:01:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 36,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

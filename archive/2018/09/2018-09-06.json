@@ -1,0 +1,60 @@
+{
+  "date": "2018-09-06",
+  "fetchedAt": "2026-02-05T07:27:06.947Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "PBoC’s Fintech Research arm to Expand Blockchain Operations beyond Beijing",
+      "link": "https://cryptopanic.com/news/3022922/PBoCs-Fintech-Research-arm-to-Expand-Blockchain-Operations-beyond-Beijing",
+      "pubDate": "2018-09-06T20:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "NEO"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "IBM Uses Stellar Lumens’ Blockchain to Create “Blockchain World Wire”",
+      "link": "https://cryptopanic.com/news/3022283/IBM-Uses-Stellar-Lumens-Blockchain-to-Create-Blockchain-World-Wire",
+      "pubDate": "2018-09-06T15:30:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "EOS Technical Analysis - Understanding Trading Indicators - New Crypto Analyst Intro",
+      "link": "https://cryptopanic.com/news/eos/3020883/EOS-Technical-Analysis-Understanding-Trading-Indicators-New-Crypto-Analyst-Intro",
+      "pubDate": "2018-09-06T04:36:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

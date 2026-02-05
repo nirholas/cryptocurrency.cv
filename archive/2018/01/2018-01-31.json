@@ -1,0 +1,27 @@
+{
+  "date": "2018-01-31",
+  "fetchedAt": "2026-02-05T07:27:06.999Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Likely Additions to Coinbase in 2018 (Ripple, Monero, and DASH)",
+      "link": "https://cryptopanic.com/news/monero/944312/Likely-Additions-to-Coinbase-in-2018-Ripple-Monero-and-DASH",
+      "pubDate": "2018-01-31T12:00:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "XMR"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

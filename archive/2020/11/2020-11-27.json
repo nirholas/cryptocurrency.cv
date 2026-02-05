@@ -1,0 +1,86 @@
+{
+  "date": "2020-11-27",
+  "fetchedAt": "2026-02-05T07:27:06.937Z",
+  "articleCount": 6,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA Moving Closer to Release of Chrysalis Phase 2",
+      "link": "https://cryptopanic.com/news/10662874/IOTA-Moving-Closer-to-Release-of-Chrysalis-Phase-2",
+      "pubDate": "2020-11-27T17:56:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "NOW is your turn $BTG",
+      "link": "https://cryptopanic.com/news/10661904/NOW-is-your-turn-BTG",
+      "pubDate": "2020-11-27T16:01:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTG"
+      ]
+    },
+    {
+      "title": "DIA product update: PAX Gold (PAXG, @PaxosGlobal) Price scraper for gold in grams. API endpoint:…",
+      "link": "https://cryptopanic.com/news/paxos-standard/10661178/DIA-product-update-PAX-Gold-PAXG-PaxosGlobal-Price-scraper-for-gold-in-grams-API-endpoint",
+      "pubDate": "2020-11-27T14:38:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "PAX",
+        "DIA"
+      ]
+    },
+    {
+      "title": "Thank you for showing your support. More than 10 million votes have been secured at the lis…",
+      "link": "https://cryptopanic.com/news/10659425/Thank-you-for-showing-your-support-More-than-10-million-votes-have-been-secured-at-the-lis",
+      "pubDate": "2020-11-27T10:21:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ABBC"
+      ]
+    },
+    {
+      "title": "What's the next step for #Bitcoin ? Can it go back to $18000? Leave your comment here",
+      "link": "https://cryptopanic.com/news/10658805/Whats-the-next-step-for-Bitcoin-Can-it-go-back-to-18000-Leave-your-comment-here",
+      "pubDate": "2020-11-27T08:33:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "2020 was a forgettable year for the deadly pandemic, but it did deliver some benefits for cryptocurrency. Let's get…",
+      "link": "https://cryptopanic.com/news/10657460/2020-was-a-forgettable-year-for-the-deadly-pandemic-but-it-did-deliver-some-benefits-for-cryptocurrency-Lets-get",
+      "pubDate": "2020-11-27T04:09:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    }
+  ]
+}

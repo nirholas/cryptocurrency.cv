@@ -1,0 +1,838 @@
+{
+  "date": "2025-09-26",
+  "fetchedAt": "2026-02-05T07:27:08.664Z",
+  "articleCount": 61,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "KuCoin pushes back against $14M Canadian AML penalty",
+      "link": "https://cryptopanic.com/news/kucoin-shares/25682133/KuCoin-pushes-back-against-14M-Canadian-AML-penalty",
+      "pubDate": "2025-09-26T20:50:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS",
+        "C"
+      ]
+    },
+    {
+      "title": "WLD Price Prediction: $1.28 Support Holds as CCIP Unlocks Native Cross-Chain Moves",
+      "link": "https://cryptopanic.com/news/chainlink/25682105/WLD-Price-Prediction-128-Support-Holds-as-CCIP-Unlocks-Native-Cross-Chain-Moves",
+      "pubDate": "2025-09-26T20:45:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "LINK",
+        "WLD"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "KuCoin Operator Fined by Canadian AML Agency, Largest Penalty Yet",
+      "link": "https://cryptopanic.com/news/kucoin-shares/25680848/KuCoin-Operator-Fined-by-Canadian-AML-Agency-Largest-Penalty-Yet",
+      "pubDate": "2025-09-26T19:59:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "Crypto.com's CRO token wipes out over $6 billion",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/25681034/Cryptocoms-CRO-token-wipes-out-over-6-billion",
+      "pubDate": "2025-09-26T19:48:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Cronos has lost over $6B in value since the Trump Media partnership announcement.",
+      "currencies": [
+        "BTC",
+        "CRO",
+        "TRUMP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Avalanche’s AVAX Drops 18% in a Week Despite Institutional Support—What’s Next?",
+      "link": "https://cryptopanic.com/news/avalanche-2/25682301/Avalanches-AVAX-Drops-18-in-a-Week-Despite-Institutional-SupportWhats-Next",
+      "pubDate": "2025-09-26T19:41:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Stablecoins are like digital savings accounts, says Ava Labs VP",
+      "link": "https://cryptopanic.com/news/avalanche-2/25680771/Stablecoins-are-like-digital-savings-accounts-says-Ava-Labs-VP",
+      "pubDate": "2025-09-26T19:34:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "S"
+      ]
+    },
+    {
+      "title": "Price predictions 9/26: BTC, ETH, XRP, BNB, SOL, DOGE, ADA, HYPE, LINK, AVAX",
+      "link": "https://cryptopanic.com/news/avalanche-2/25679391/Price-predictions-926-BTC-ETH-XRP-BNB-SOL-DOGE-ADA-HYPE-LINK-AVAX",
+      "pubDate": "2025-09-26T18:32:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "SWIFT Picks Ethereum Layer-2 Chain Linea For Stablecoin Test",
+      "link": "https://cryptopanic.com/news/ethereum/25679403/SWIFT-Picks-Ethereum-Layer-2-Chain-Linea-For-Stablecoin-Test",
+      "pubDate": "2025-09-26T18:27:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "SWIFT has selected Linea, the Ethereum (CRYPTO: ETH) Layer-2 blockchain developed by Consensys, to pilot blockchain messaging and stablecoin paymentread more",
+      "currencies": [
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Kusama and Polkadot Begin Asset Hub Migration With Binance Support",
+      "link": "https://cryptopanic.com/news/polkadot/25678814/Kusama-and-Polkadot-Begin-Asset-Hub-Migration-With-Binance-Support",
+      "pubDate": "2025-09-26T18:03:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "LYS Labs Announces Solana Trading Engine and Chainlink Partnership",
+      "link": "https://cryptopanic.com/news/chainlink/25678129/LYS-Labs-Announces-Solana-Trading-Engine-and-Chainlink-Partnership",
+      "pubDate": "2025-09-26T17:45:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Canada’s FINTRAC Slaps $14 Million Fine On KuCoin",
+      "link": "https://cryptopanic.com/news/kucoin-shares/25680061/Canadas-FINTRAC-Slaps-14-Million-Fine-On-KuCoin",
+      "pubDate": "2025-09-26T17:28:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "KCS",
+        "C"
+      ]
+    },
+    {
+      "title": "Crypto Price Analysis 9-26: BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, FILECOIN: FIL, JUPITER: JUP",
+      "link": "https://cryptopanic.com/news/filecoin/25678043/Crypto-Price-Analysis-9-26-BITCOIN-BTC-ETHEREUM-ETH-SOLANA-SOL-FILECOIN-FIL-JUPITER-JUP",
+      "pubDate": "2025-09-26T17:16:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Grayscale Ranks The Top 20 Tokens That Offered The Best Returns In Q3",
+      "link": "https://cryptopanic.com/news/avalanche-2/25678059/Grayscale-Ranks-The-Top-20-Tokens-That-Offered-The-Best-Returns-In-Q3",
+      "pubDate": "2025-09-26T16:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BNB",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Caliber Adds $4 Million In Chainlink But $70 Million In Outflows Endanger Treasury Bet",
+      "link": "https://cryptopanic.com/news/chainlink/25676664/Caliber-Adds-4-Million-In-Chainlink-But-70-Million-In-Outflows-Endanger-Treasury-Bet",
+      "pubDate": "2025-09-26T16:16:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "Justin Sun Reportedly Controls Over 60% Of Tron’s (TRX) Supply",
+      "link": "https://cryptopanic.com/news/tron/25676683/Justin-Sun-Reportedly-Controls-Over-60-Of-Trons-TRX-Supply",
+      "pubDate": "2025-09-26T16:15:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "A"
+      ]
+    },
+    {
+      "title": "Avalanche's AVAX Extends Weekly Losses to 18% as Institutional Backing Fails to Lift Market",
+      "link": "https://cryptopanic.com/news/avalanche-2/25676719/Avalanches-AVAX-Extends-Weekly-Losses-to-18-as-Institutional-Backing-Fails-to-Lift-Market",
+      "pubDate": "2025-09-26T16:12:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Justin Sun owns more TRX than everyone else combined, report",
+      "link": "https://cryptopanic.com/news/tron/25676207/Justin-Sun-owns-more-TRX-than-everyone-else-combined-report",
+      "pubDate": "2025-09-26T16:08:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ]
+    },
+    {
+      "title": "Aave’s Upcoming Upgrade Promises Safer, Smarter Borrowing",
+      "link": "https://cryptopanic.com/news/aave/25675512/Aaves-Upcoming-Upgrade-Promises-Safer-Smarter-Borrowing",
+      "pubDate": "2025-09-26T16:03:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Plasma Mainnet Launch Sends XPL Token Soaring 52%",
+      "link": "https://cryptopanic.com/news/chainlink/25675297/Plasma-Mainnet-Launch-Sends-XPL-Token-Soaring-52",
+      "pubDate": "2025-09-26T16:00:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "LINK"
+      ]
+    },
+    {
+      "title": "Chainlink’s LINK Hits 6-Week Low but Buyers Defend $20 Support: Can a Trend Shift Follow?",
+      "link": "https://cryptopanic.com/news/chainlink/25676623/Chainlinks-LINK-Hits-6-Week-Low-but-Buyers-Defend-20-Support-Can-a-Trend-Shift-Follow",
+      "pubDate": "2025-09-26T15:44:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "SEC Approval of Hashdex Nasdaq Crypto ETF Expansion: A Game-Changer for XRP and XLM?",
+      "link": "https://cryptopanic.com/news/stellar/25675166/SEC-Approval-of-Hashdex-Nasdaq-Crypto-ETF-Expansion-A-Game-Changer-for-XRP-and-XLM",
+      "pubDate": "2025-09-26T15:24:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XLM",
+        "A"
+      ]
+    },
+    {
+      "title": "KuCoin Brings Menstrual Equity Project to The Bahamas to Tackle Period Poverty and Boost School Attendance",
+      "link": "https://cryptopanic.com/news/kucoin-shares/25675071/KuCoin-Brings-Menstrual-Equity-Project-to-The-Bahamas-to-Tackle-Period-Poverty-and-Boost-School-Attendance",
+      "pubDate": "2025-09-26T15:18:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "Avalanche Price Could Surge to $50 as Transactions Jump 200%",
+      "link": "https://cryptopanic.com/news/avalanche-2/25674033/Avalanche-Price-Could-Surge-to-50-as-Transactions-Jump-200",
+      "pubDate": "2025-09-26T15:04:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "LYS Labs Moves Beyond Data and Aims to Become the Operating System for Automated Global Finance",
+      "link": "https://cryptopanic.com/news/chainlink/25673586/LYS-Labs-Moves-Beyond-Data-and-Aims-to-Become-the-Operating-System-for-Automated-Global-Finance",
+      "pubDate": "2025-09-26T14:37:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LINK"
+      ]
+    },
+    {
+      "title": "Cronos (CRO) loses approximately 6.6 billion dollars in market cap after the rally linked to TMTG",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/25674643/Cronos-CRO-loses-approximately-66-billion-dollars-in-market-cap-after-the-rally-linked-to-TMTG",
+      "pubDate": "2025-09-26T14:31:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CRO",
+        "Z"
+      ]
+    },
+    {
+      "title": "3 Positive Signs for the Stellar Network in September Despite Price Decline",
+      "link": "https://cryptopanic.com/news/stellar/25674912/3-Positive-Signs-for-the-Stellar-Network-in-September-Despite-Price-Decline",
+      "pubDate": "2025-09-26T14:22:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Chainlink's LINK Slips to 6-Week Low, but Potential Trend Shift Has Emerged",
+      "link": "https://cryptopanic.com/news/chainlink/25673591/Chainlinks-LINK-Slips-to-6-Week-Low-but-Potential-Trend-Shift-Has-Emerged",
+      "pubDate": "2025-09-26T14:19:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "Significant Investment in WBTC by Notable Address",
+      "link": "https://cryptopanic.com/news/wrapped-bitcoin/25676088/Significant-Investment-in-WBTC-by-Notable-Address",
+      "pubDate": "2025-09-26T14:13:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "WBTC",
+        "LUNA"
+      ]
+    },
+    {
+      "title": "Hashdex Expands U.S. Crypto ETF to Add XRP and Solana as Solana Slips Under $200",
+      "link": "https://cryptopanic.com/news/stellar/25672027/Hashdex-Expands-US-Crypto-ETF-to-Add-XRP-and-Solana-as-Solana-Slips-Under-200",
+      "pubDate": "2025-09-26T13:59:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Canada Fines KuCoin Record $14 Million for AML Failures",
+      "link": "https://cryptopanic.com/news/kucoin-shares/25673568/Canada-Fines-KuCoin-Record-14-Million-for-AML-Failures",
+      "pubDate": "2025-09-26T13:57:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "KCS",
+        "C"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Crypto.com’s Cronos erases Trump pump gains, community questions demand",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/25671989/Cryptocoms-Cronos-erases-Trump-pump-gains-community-questions-demand",
+      "pubDate": "2025-09-26T13:43:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "KuCoin Challenges $14 Million Penalty in Canada for AML Violations",
+      "link": "https://cryptopanic.com/news/kucoin-shares/25671633/KuCoin-Challenges-14-Million-Penalty-in-Canada-for-AML-Violations",
+      "pubDate": "2025-09-26T13:17:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "KCS",
+        "C"
+      ]
+    },
+    {
+      "title": "CoinDesk 20 Performance Update: Avalanche (AVAX) Slides 7.1%, Leading Index Lower",
+      "link": "https://cryptopanic.com/news/avalanche-2/25671928/CoinDesk-20-Performance-Update-Avalanche-AVAX-Slides-71-Leading-Index-Lower",
+      "pubDate": "2025-09-26T13:14:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "QNT Price Surges as Quant Powers UK’s Tokenised Sterling Deposits Project",
+      "link": "https://cryptopanic.com/news/quant-network/25672982/QNT-Price-Surges-as-Quant-Powers-UKs-Tokenised-Sterling-Deposits-Project",
+      "pubDate": "2025-09-26T13:11:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "QNT"
+      ]
+    },
+    {
+      "title": "Quant to Power UK’s Tokenized Sterling Deposit Project With Major Banks",
+      "link": "https://cryptopanic.com/news/quant-network/25674436/Quant-to-Power-UKs-Tokenized-Sterling-Deposit-Project-With-Major-Banks",
+      "pubDate": "2025-09-26T12:55:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "QNT"
+      ]
+    },
+    {
+      "title": "GoPlus Issues Security Alert on Uniswap Phishing Scam",
+      "link": "https://cryptopanic.com/news/uniswap/25676079/GoPlus-Issues-Security-Alert-on-Uniswap-Phishing-Scam",
+      "pubDate": "2025-09-26T11:43:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Hashdex Adds XRP and Solana to its ETF",
+      "link": "https://cryptopanic.com/news/stellar/25668614/Hashdex-Adds-XRP-and-Solana-to-its-ETF",
+      "pubDate": "2025-09-26T11:32:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Quant leads the UK Finance's tokenized Sterling initiative amid rising bullish interest",
+      "link": "https://cryptopanic.com/news/quant-network/25683234/Quant-leads-the-UK-Finances-tokenized-Sterling-initiative-amid-rising-bullish-interest",
+      "pubDate": "2025-09-26T11:06:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "QNT"
+      ]
+    },
+    {
+      "title": "Ethereum Welcomes Major Testnet Release Ahead of Fusaka Upgrade",
+      "link": "https://cryptopanic.com/news/ethereum/25667018/Ethereum-Welcomes-Major-Testnet-Release-Ahead-of-Fusaka-Upgrade",
+      "pubDate": "2025-09-26T10:55:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum Fusaka upgrade coming, and this Nimbus release will aid its testnet deployment",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XLM Price Awaits Breakout After SEC Greenlights Hashdex Stellar ETF",
+      "link": "https://cryptopanic.com/news/stellar/25666929/XLM-Price-Awaits-Breakout-After-SEC-Greenlights-Hashdex-Stellar-ETF",
+      "pubDate": "2025-09-26T10:35:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Chainlink falls 16% as LINK whales dump $8.17M – Can $20 hold?",
+      "link": "https://cryptopanic.com/news/chainlink/25665666/Chainlink-falls-16-as-LINK-whales-dump-817M-Can-20-hold",
+      "pubDate": "2025-09-26T10:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "World Adopts Chainlink CCIP for Secure and Smooth WLD Transfers",
+      "link": "https://cryptopanic.com/news/chainlink/25668781/World-Adopts-Chainlink-CCIP-for-Secure-and-Smooth-WLD-Transfers",
+      "pubDate": "2025-09-26T10:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "WLD"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Is Altcoin Season 2025 Dead or Delayed ?",
+      "link": "https://cryptopanic.com/news/avalanche-2/25666944/Is-Altcoin-Season-2025-Dead-or-Delayed",
+      "pubDate": "2025-09-26T09:41:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Chainlink price forecast: analysts hint at a possible breakout",
+      "link": "https://cryptopanic.com/news/chainlink/25665331/Chainlink-price-forecast-analysts-hint-at-a-possible-breakout",
+      "pubDate": "2025-09-26T09:17:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "Worldcoin integrates Chainlink CCIP as WLD eyes rebound, LINK faces supply pressure",
+      "link": "https://cryptopanic.com/news/chainlink/25683231/Worldcoin-integrates-Chainlink-CCIP-as-WLD-eyes-rebound-LINK-faces-supply-pressure",
+      "pubDate": "2025-09-26T08:58:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "WLD"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Canada Fines KuCoin $14M for Anti-Money Laundering Failures",
+      "link": "https://cryptopanic.com/news/kucoin-shares/25663616/Canada-Fines-KuCoin-14M-for-Anti-Money-Laundering-Failures",
+      "pubDate": "2025-09-26T08:36:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "KCS",
+        "C"
+      ]
+    },
+    {
+      "title": "OKB Defies Market Slump—But Can It Break $200 This Month?",
+      "link": "https://cryptopanic.com/news/okb/25663696/OKB-Defies-Market-SlumpBut-Can-It-Break-200-This-Month",
+      "pubDate": "2025-09-26T08:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "OKB"
+      ]
+    },
+    {
+      "title": "XRP $3 Fakeout Can Send Price to $2 Now: Details",
+      "link": "https://cryptopanic.com/news/ripple/25660922/XRP-3-Fakeout-Can-Send-Price-to-2-Now-Details",
+      "pubDate": "2025-09-26T07:02:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP could not find enough ground for reversal at around these price levels and might be plunging toward $2 mark",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Crypto exchange KuCoin appeals $14 million penalty from Canadian regulator over AML violations",
+      "link": "https://cryptopanic.com/news/kucoin-shares/25660667/Crypto-exchange-KuCoin-appeals-14-million-penalty-from-Canadian-regulator-over-AML-violations",
+      "pubDate": "2025-09-26T06:45:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "Stellar Price Forecast: XLM falls more than 6% despite SEC's approval of Hashdex ETF",
+      "link": "https://cryptopanic.com/news/stellar/25683230/Stellar-Price-Forecast-XLM-falls-more-than-6-despite-SECs-approval-of-Hashdex-ETF",
+      "pubDate": "2025-09-26T06:13:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Diamond-Handed: XRP Holders Stand Tall Since Bears Can’t Shake Them",
+      "link": "https://cryptopanic.com/news/ripple/25659643/Diamond-Handed-XRP-Holders-Stand-Tall-Since-Bears-Cant-Shake-Them",
+      "pubDate": "2025-09-26T06:03:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Long-term XRP holders remain steadfast, refusing to sell despite ongoing bearish pressure.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BlockDAG Presale Rushes Past $410M While LINK Eyes $30 in Q3 While SOL Remains Bullish",
+      "link": "https://cryptopanic.com/news/chainlink/25659482/BlockDAG-Presale-Rushes-Past-410M-While-LINK-Eyes-30-in-Q3-While-SOL-Remains-Bullish",
+      "pubDate": "2025-09-26T06:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LINK"
+      ]
+    },
+    {
+      "title": "Chainlink (LINK) Triangle Setup Points To $100, Says Analyst",
+      "link": "https://cryptopanic.com/news/chainlink/25658285/Chainlink-LINK-Triangle-Setup-Points-To-100-Says-Analyst",
+      "pubDate": "2025-09-26T05:00:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "A",
+        "TA"
+      ]
+    },
+    {
+      "title": "TRON Daily Report: September 26, 2025 Whale Net Inflows, Meme Rotation, and Fee Farming Alpha",
+      "link": "https://cryptopanic.com/news/tron/25658202/TRON-Daily-Report-September-26-2025-Whale-Net-Inflows-Meme-Rotation-and-Fee-Farming-Alpha",
+      "pubDate": "2025-09-26T04:20:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "WTRX"
+      ]
+    },
+    {
+      "title": "Privacy Narrative Powers Zcash Rally – Discover What’s Driving ZEC Higher",
+      "link": "https://cryptopanic.com/news/zcash/25672251/Privacy-Narrative-Powers-Zcash-Rally-Discover-Whats-Driving-ZEC-Higher",
+      "pubDate": "2025-09-26T04:10:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "SUI Retest Ascending Triangle Support Amid 8% Drop – Bounce Or Breakdown Next?",
+      "link": "https://cryptopanic.com/news/avalanche-2/25657307/SUI-Retest-Ascending-Triangle-Support-Amid-8-Drop-Bounce-Or-Breakdown-Next",
+      "pubDate": "2025-09-26T04:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Whale Sells LINK Holdings for Significant Profit",
+      "link": "https://cryptopanic.com/news/chainlink/25659370/Whale-Sells-LINK-Holdings-for-Significant-Profit",
+      "pubDate": "2025-09-26T03:46:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "Story, Aster, Flare, and Avalanche lead crypto market losses as liquidations top $1 billion",
+      "link": "https://cryptopanic.com/news/avalanche-2/25660608/Story-Aster-Flare-and-Avalanche-lead-crypto-market-losses-as-liquidations-top-1-billion",
+      "pubDate": "2025-09-26T03:30:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "IP",
+        "ASTER"
+      ]
+    },
+    {
+      "title": "Aave's V4 Update to Enhance DeFi Lending with Modular Markets",
+      "link": "https://cryptopanic.com/news/aave/25659365/Aaves-V4-Update-to-Enhance-DeFi-Lending-with-Modular-Markets",
+      "pubDate": "2025-09-26T01:19:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "My account is restricted from withdrawing money, RFI",
+      "link": "https://cryptopanic.com/news/litecoin/25729783/My-account-is-restricted-from-withdrawing-money-RFI",
+      "pubDate": "2025-09-26T00:46:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Bitwise files prospectus for Hyperliquid ETF as SEC delays several altcoin proposals",
+      "link": "https://cryptopanic.com/news/avalanche-2/25654258/Bitwise-files-prospectus-for-Hyperliquid-ETF-as-SEC-delays-several-altcoin-proposals",
+      "pubDate": "2025-09-26T00:11:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "SUI",
+        "HYPE"
+      ]
+    }
+  ]
+}

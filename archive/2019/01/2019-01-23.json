@@ -1,0 +1,51 @@
+{
+  "date": "2019-01-23",
+  "fetchedAt": "2026-02-05T07:27:06.987Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "HOT GIRL EXPLAINS CRYPTO: Bitcoin, Blockchain & Altcoins | BTC ETH XRP TRX ADA EOS",
+      "link": "https://cryptopanic.com/news/tron/4359528/HOT-GIRL-EXPLAINS-CRYPTO-Bitcoin-Blockchain-Altcoins-BTC-ETH-XRP-TRX-ADA-EOS",
+      "pubDate": "2019-01-23T19:34:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cool stuff",
+      "link": "https://cryptopanic.com/news/4355314/Cool-stuff",
+      "pubDate": "2019-01-23T12:25:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVINOC"
+      ]
+    },
+    {
+      "title": "There is no optimization, no jet and no seat sharing. There is no GDS like system for the #BizAv. More than 1 Milli…",
+      "link": "https://cryptopanic.com/news/4354022/There-is-no-optimization-no-jet-and-no-seat-sharing-There-is-no-GDS-like-system-for-the-BizAv-More-than-1-Milli",
+      "pubDate": "2019-01-23T09:28:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVINOC"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2020-10-07",
+  "fetchedAt": "2026-02-05T07:27:06.905Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Google Cloud Does Not Intend to Take EOS Rewards as a Block Producer",
+      "link": "https://cryptopanic.com/news/10191956/Google-Cloud-Does-Not-Intend-to-Take-EOS-Rewards-as-a-Block-Producer",
+      "pubDate": "2020-10-07T21:11:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

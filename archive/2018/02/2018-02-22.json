@@ -1,0 +1,39 @@
+{
+  "date": "2018-02-22",
+  "fetchedAt": "2026-02-05T07:27:06.962Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "How Dogecoin is Solving Ethereum’s Scalability Problem",
+      "link": "https://cryptopanic.com/news/1164641/How-Dogecoin-is-Solving-Ethereums-Scalability-Problem",
+      "pubDate": "2018-02-22T16:30:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DOGE",
+        "XVG"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Website design contest is still on going!",
+      "link": "https://cryptopanic.com/news/11437902/Website-design-contest-is-still-on-going?mtm_campaign=API-OFA",
+      "pubDate": "2018-02-22T03:02:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SAROS"
+      ]
+    }
+  ]
+}

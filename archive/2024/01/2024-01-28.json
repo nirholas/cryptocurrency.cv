@@ -1,0 +1,821 @@
+{
+  "date": "2024-01-28",
+  "fetchedAt": "2026-02-05T07:27:08.050Z",
+  "articleCount": 54,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "This Solana DEX Reached $520 Million in Daily Trading Volume",
+      "link": "https://cryptopanic.com/news/19210172/This-Solana-DEX-Reached-520-Million-in-Daily-Trading-Volume",
+      "pubDate": "2024-01-28T23:11:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "UNI",
+        "DYDX",
+        "SUI"
+      ]
+    },
+    {
+      "title": "MKR Co-founder Offloads $4 Million Worth of MKR: Holders Panic",
+      "link": "https://cryptopanic.com/news/19210115/MKR-Co-founder-Offloads-4-Million-Worth-of-MKR-Holders-Panic",
+      "pubDate": "2024-01-28T22:35:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Ethereum Price Could Plunge Below $1,000 In Coming Months, Warns Crypto Analyst Benjamin Cowen",
+      "link": "https://cryptopanic.com/news/19210091/Ethereum-Price-Could-Plunge-Below-1000-In-Coming-Months-Warns-Crypto-Analyst-Benjamin-Cowen",
+      "pubDate": "2024-01-28T22:20:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ]
+    },
+    {
+      "title": "73% of European Residents Are Confident in Crypto’s Future: Survey",
+      "link": "https://cryptopanic.com/news/19210084/73-of-European-Residents-Are-Confident-in-Cryptos-Future-Survey",
+      "pubDate": "2024-01-28T22:15:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The results revealed a trend of optimism, exclusive engagement with crypto assets, surging adoption, growing trust, and increasing utility.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Avalanche (AVAX) Surges 10% After Team Unveils Scaling Solution",
+      "link": "https://cryptopanic.com/news/19210111/Avalanche-AVAX-Surges-10-After-Team-Unveils-Scaling-Solution",
+      "pubDate": "2024-01-28T22:10:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Avalanche (AVAX) has demonstrated significant strength, with a price surge of over 10% within the last 24 hours. The catalyst behind this bullish momentum is the unveiling of Ava Labs’ latest initiative – the Vryx scaling solution. The developers behind Avalanche detailed how Vryx will propel its network’s capacity to an impressive 100,000 transactions per second (TPS). Avalanche’s...",
+      "currencies": [
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "5 Cryptos That Can EASILY make 20X-30X Gains",
+      "link": "https://cryptopanic.com/news/19210066/5-Cryptos-That-Can-EASILY-make-20X-30X-Gains?mtm_campaign=API-OFA",
+      "pubDate": "2024-01-28T21:43:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "JTO",
+        "GAINS",
+        "MAGIC",
+        "NEXT",
+        "SQR"
+      ]
+    },
+    {
+      "title": "Maker co-founder dumps MKR worth $4.5 mln: What’s going on?",
+      "link": "https://cryptopanic.com/news/19210046/Maker-co-founder-dumps-MKR-worth-45-mln-Whats-going-on",
+      "pubDate": "2024-01-28T21:30:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Ethereum Likely To Crash Below $1,000, According to Crypto Analyst Benjamin Cowen – Here’s Why",
+      "link": "https://cryptopanic.com/news/19210020/Ethereum-Likely-To-Crash-Below-1000-According-to-Crypto-Analyst-Benjamin-Cowen-Heres-Why",
+      "pubDate": "2024-01-28T21:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH"
+      ]
+    },
+    {
+      "title": "Coinbase Nears Historic 1 Million Bitcoin Milestone Amid Rise in Reserves and ETF Activity",
+      "link": "https://cryptopanic.com/news/19210028/Coinbase-Nears-Historic-1-Million-Bitcoin-Milestone-Amid-Rise-in-Reserves-and-ETF-Activity",
+      "pubDate": "2024-01-28T21:00:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "JST"
+      ]
+    },
+    {
+      "title": "As Regulatory Challenges Diminish BUSD, This Stablecoin Ascends in Dominance",
+      "link": "https://cryptopanic.com/news/19210047/As-Regulatory-Challenges-Diminish-BUSD-This-Stablecoin-Ascends-in-Dominance",
+      "pubDate": "2024-01-28T20:46:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "BUSD",
+        "SOL",
+        "JST"
+      ]
+    },
+    {
+      "title": "FOMO Alert: Top Cryptos to Outshine Dogecoin Rise in February",
+      "link": "https://cryptopanic.com/news/19209998/FOMO-Alert-Top-Cryptos-to-Outshine-Dogecoin-Rise-in-February",
+      "pubDate": "2024-01-28T20:36:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "OSMO",
+        "ARB",
+        "OP",
+        "BONK"
+      ]
+    },
+    {
+      "title": "How To Buy, Sell, And Trade Crypto Tokens On The Tron Network",
+      "link": "https://cryptopanic.com/news/19209979/How-To-Buy-Sell-And-Trade-Crypto-Tokens-On-The-Tron-Network",
+      "pubDate": "2024-01-28T20:00:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "TRX",
+        "INJ",
+        "ARB",
+        "OP",
+        "TIA",
+        "SEI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BlackRock’s Spot ETF Hits $2 Billion In Assets Under Management As Bitcoin Roars Past $42,000",
+      "link": "https://cryptopanic.com/news/19209981/BlackRocks-Spot-ETF-Hits-2-Billion-In-Assets-Under-Management-As-Bitcoin-Roars-Past-42000",
+      "pubDate": "2024-01-28T19:55:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "JST"
+      ]
+    },
+    {
+      "title": "Crypto Showdown: BNB (BNB), Pullix (PLX), and Celestia (TIA) - Experts Predict Explosive Price Surges in Q1 2024",
+      "link": "https://cryptopanic.com/news/19209928/Crypto-Showdown-BNB-BNB-Pullix-PLX-and-Celestia-TIA-Experts-Predict-Explosive-Price-Surges-in-Q1-2024",
+      "pubDate": "2024-01-28T19:08:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "TIA"
+      ]
+    },
+    {
+      "title": "This Company Sold Over $700 Million in Crypto in Just 3 Months",
+      "link": "https://cryptopanic.com/news/19209914/This-Company-Sold-Over-700-Million-in-Crypto-in-Just-3-Months",
+      "pubDate": "2024-01-28T18:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FTT",
+        "OKB",
+        "JST"
+      ]
+    },
+    {
+      "title": "Pullix (PLX) Presale Frenzy Causes Mass Exodus: Arbitrum (ARB) and Sei (SEI) Investors Rush To Join the Hype",
+      "link": "https://cryptopanic.com/news/19209916/Pullix-PLX-Presale-Frenzy-Causes-Mass-Exodus-Arbitrum-ARB-and-Sei-SEI-Investors-Rush-To-Join-the-Hype",
+      "pubDate": "2024-01-28T18:39:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "ARB",
+        "SEI"
+      ]
+    },
+    {
+      "title": "Crypto Whales keeping an eye on these 3 coins",
+      "link": "https://cryptopanic.com/news/19209891/Crypto-Whales-keeping-an-eye-on-these-3-coins",
+      "pubDate": "2024-01-28T18:16:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DAI",
+        "APT",
+        "OP"
+      ]
+    },
+    {
+      "title": "Dump Alert: Here Are 7 Projects Planning to Unlock $215M+ Tokens",
+      "link": "https://cryptopanic.com/news/19209873/Dump-Alert-Here-Are-7-Projects-Planning-to-Unlock-215M-Tokens",
+      "pubDate": "2024-01-28T18:04:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DYDX"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin Might Fall Even Lower, but These 3 Altcoins are Poised for Gains",
+      "link": "https://cryptopanic.com/news/19209938/Bitcoin-Might-Fall-Even-Lower-but-These-3-Altcoins-are-Poised-for-Gains",
+      "pubDate": "2024-01-28T17:53:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "IMX",
+        "ARB"
+      ]
+    },
+    {
+      "title": "3 Cryptocurrencies Below $0.1 That Will Pump Like Shiba Inu",
+      "link": "https://cryptopanic.com/news/19209929/3-Cryptocurrencies-Below-01-That-Will-Pump-Like-Shiba-Inu?mtm_campaign=API-OFA",
+      "pubDate": "2024-01-28T17:29:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "BONK",
+        "SAROS",
+        "MEME"
+      ]
+    },
+    {
+      "title": "Best Crypto to Buy if Bitcoin Falls Below $30k After Halving",
+      "link": "https://cryptopanic.com/news/19209903/Best-Crypto-to-Buy-if-Bitcoin-Falls-Below-30k-After-Halving",
+      "pubDate": "2024-01-28T17:14:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "APT",
+        "MNT",
+        "ARB"
+      ]
+    },
+    {
+      "title": "Three Reasons Why Bitcoin Price Fell In January",
+      "link": "https://cryptopanic.com/news/19209827/Three-Reasons-Why-Bitcoin-Price-Fell-In-January",
+      "pubDate": "2024-01-28T17:01:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "RLY"
+      ]
+    },
+    {
+      "title": "How To Buy, Sell, And Trade Crypto On The Base Network",
+      "link": "https://cryptopanic.com/news/19209828/How-To-Buy-Sell-And-Trade-Crypto-On-The-Base-Network",
+      "pubDate": "2024-01-28T17:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AVAX",
+        "MATIC",
+        "SCRT",
+        "DESO",
+        "ARB",
+        "OP"
+      ]
+    },
+    {
+      "title": "5 Tokens To Turn $10 investment into $1,000 in 2024",
+      "link": "https://cryptopanic.com/news/19209848/5-Tokens-To-Turn-10-investment-into-1000-in-2024",
+      "pubDate": "2024-01-28T16:52:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "APT",
+        "ARB",
+        "ONDO",
+        "PYTH",
+        "SEI"
+      ]
+    },
+    {
+      "title": "FOMO Alert: Top Cryptos to Outshine Previous Dogecoin Rise",
+      "link": "https://cryptopanic.com/news/19209809/FOMO-Alert-Top-Cryptos-to-Outshine-Previous-Dogecoin-Rise",
+      "pubDate": "2024-01-28T16:35:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "IMX"
+      ]
+    },
+    {
+      "title": "What Is Ronin? The Ethereum Gaming Chain Behind 'Axie Infinity' and 'Pixels'",
+      "link": "https://cryptopanic.com/news/19209791/What-Is-Ronin-The-Ethereum-Gaming-Chain-Behind-Axie-Infinity-and-Pixels",
+      "pubDate": "2024-01-28T16:34:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AXS",
+        "RON"
+      ]
+    },
+    {
+      "title": "As HNT price retests $9 obstacle, do predictions favor the bulls?",
+      "link": "https://cryptopanic.com/news/19209788/As-HNT-price-retests-9-obstacle-do-predictions-favor-the-bulls",
+      "pubDate": "2024-01-28T16:30:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ]
+    },
+    {
+      "title": "MakerDAO’s Founder Dumps $4.54 Million MKR: Should You Buy the Dip?",
+      "link": "https://cryptopanic.com/news/19209793/MakerDAOs-Founder-Dumps-454-Million-MKR-Should-You-Buy-the-Dip",
+      "pubDate": "2024-01-28T16:29:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Bitcoin Whales Increase Their Holdings By $3 Billion – Is A Price Surge Imminent?",
+      "link": "https://cryptopanic.com/news/19209729/Bitcoin-Whales-Increase-Their-Holdings-By-3-Billion-Is-A-Price-Surge-Imminent",
+      "pubDate": "2024-01-28T15:30:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SHIB",
+        "HNT"
+      ]
+    },
+    {
+      "title": "Top Trader Says Bitcoin Remains in Strong Uptrend Despite Pullback, Predicts Rally if BTC Takes Out This Level",
+      "link": "https://cryptopanic.com/news/19209731/Top-Trader-Says-Bitcoin-Remains-in-Strong-Uptrend-Despite-Pullback-Predicts-Rally-if-BTC-Takes-Out-This-Level",
+      "pubDate": "2024-01-28T15:30:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "RLY"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano (ADA) Community Puzzled by Founder's Strange Tweet: Details",
+      "link": "https://cryptopanic.com/news/19209712/Cardano-ADA-Community-Puzzled-by-Founders-Strange-Tweet-Details",
+      "pubDate": "2024-01-28T15:18:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano (ADA) community puzzled by founder's strange tweet",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 9
+      }
+    },
+    {
+      "title": "Best investment of 2024? Top analyst says Pushd (PUSHD) over the likes of Solana (SOL) and OKB (OKB)",
+      "link": "https://cryptopanic.com/news/19209670/Best-investment-of-2024-Top-analyst-says-Pushd-PUSHD-over-the-likes-of-Solana-SOL-and-OKB-OKB",
+      "pubDate": "2024-01-28T14:48:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "OKB"
+      ]
+    },
+    {
+      "title": "Analyst Says ‘Bitcoin Price Correction Is Over’ – What’s Next?",
+      "link": "https://cryptopanic.com/news/19209623/Analyst-Says-Bitcoin-Price-Correction-Is-Over-Whats-Next",
+      "pubDate": "2024-01-28T14:00:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "HBAR",
+        "RLY"
+      ]
+    },
+    {
+      "title": "Why SEI, FTM, FET, and INJ Are All In the Spotlight This Week",
+      "link": "https://cryptopanic.com/news/19209576/Why-SEI-FTM-FET-and-INJ-Are-All-In-the-Spotlight-This-Week",
+      "pubDate": "2024-01-28T13:37:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FTM",
+        "FET",
+        "INJ",
+        "SEI"
+      ]
+    },
+    {
+      "title": "Bitbot picks momentum as Avalanche leads altcoin recovery",
+      "link": "https://cryptopanic.com/news/19209566/Bitbot-picks-momentum-as-Avalanche-leads-altcoin-recovery",
+      "pubDate": "2024-01-28T13:24:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Avalanche has spiked double-digits amid new momentum forecast for rally to $100. BITBOT could be the pick of presale tokens with its investment potential buoyed by its likely dominance of Telegram crypto trading landscape. Bitbot (BITBOT) token is creating a huge wave of interest from traders as the market bounces following Bitcoin’s upside this weekend. […]",
+      "currencies": [
+        "AVAX",
+        "RLY"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "CFTC seeks feedback on AI use in compliance and market dynamics",
+      "link": "https://cryptopanic.com/news/19209502/CFTC-seeks-feedback-on-AI-use-in-compliance-and-market-dynamics",
+      "pubDate": "2024-01-28T12:41:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "REQ"
+      ]
+    },
+    {
+      "title": "How To Buy, Sell, And Trade Crypto Tokens On The Cardano (ADA) Network",
+      "link": "https://cryptopanic.com/news/19209469/How-To-Buy-Sell-And-Trade-Crypto-Tokens-On-The-Cardano-ADA-Network",
+      "pubDate": "2024-01-28T12:00:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "[toc] The Cardano Network is a decentralized proof-of-stake blockchain platform with smart contract support and uses its own native token ADA, just like the Ethereum blockchain. Cardano is often described as the Ethereum killer. However, Cardano also considers itself the updated version of Ethereum, which is currently the king of all altcoins, including ADA. Cardano (ADA) The Supposed Ethereum...",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "AVAX",
+        "MATIC",
+        "JST",
+        "SCRT",
+        "ARB",
+        "OP",
+        "SEI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Polygon zkEVM Gears Up for an Exciting Upgrade",
+      "link": "https://cryptopanic.com/news/19209468/Polygon-zkEVM-Gears-Up-for-an-Exciting-Upgrade",
+      "pubDate": "2024-01-28T11:53:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MATIC",
+        "JST"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Current Price Dip is the Most Bullish Thing That Could Happen to Cardano: Analyst",
+      "link": "https://cryptopanic.com/news/19209417/Current-Price-Dip-is-the-Most-Bullish-Thing-That-Could-Happen-to-Cardano-Analyst",
+      "pubDate": "2024-01-28T11:13:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "RLY"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Cloned Assets: An Ideal Tool for Bringing Liquidity to Non-Native Tokens on Solana, Says Evan Deutsch",
+      "link": "https://cryptopanic.com/news/19209407/Cloned-Assets-An-Ideal-Tool-for-Bringing-Liquidity-to-Non-Native-Tokens-on-Solana-Says-Evan-Deutsch",
+      "pubDate": "2024-01-28T11:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CORE"
+      ]
+    },
+    {
+      "title": "Solana (SOL) Paints Extremely Bullish Reversal Chart Pattern",
+      "link": "https://cryptopanic.com/news/19209374/Solana-SOL-Paints-Extremely-Bullish-Reversal-Chart-Pattern",
+      "pubDate": "2024-01-28T10:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Solana could be on verge of massive breakthrough against both Ethereum and USDT",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "SOL",
+        "XVG"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Analyst Predicts Bitcoin Consolidation, Eyes Long-Term Price Target Of $500,000",
+      "link": "https://cryptopanic.com/news/19209368/Analyst-Predicts-Bitcoin-Consolidation-Eyes-Long-Term-Price-Target-Of-500000",
+      "pubDate": "2024-01-28T10:25:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "JST"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin Could Soar to $170,000, Hedge Fund Veteran Anthony Scaramucci Predicts",
+      "link": "https://cryptopanic.com/news/19209331/Bitcoin-Could-Soar-to-170000-Hedge-Fund-Veteran-Anthony-Scaramucci-Predicts",
+      "pubDate": "2024-01-28T09:50:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "RLY"
+      ]
+    },
+    {
+      "title": "FTX Becomes Major Bitcoin Shorter Amid Efforts to Recover Customer Funds",
+      "link": "https://cryptopanic.com/news/19209295/FTX-Becomes-Major-Bitcoin-Shorter-Amid-Efforts-to-Recover-Customer-Funds",
+      "pubDate": "2024-01-28T09:07:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "FTX struggles to repay debts, raises $4.4 billion by selling assets and trading Bitcoin derivatives, but full customer repayment remains uncertain.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 14
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "OpenSea’s CEO Says Company Open to Deals, Including Being Acquired",
+      "link": "https://cryptopanic.com/news/19209296/OpenSeas-CEO-Says-Company-Open-to-Deals-Including-Being-Acquired?mtm_campaign=API-OFA",
+      "pubDate": "2024-01-28T09:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "BLUR"
+      ]
+    },
+    {
+      "title": "NiftyKit and Base Collaborate to Enhance NFT Accessibility and Innovation",
+      "link": "https://cryptopanic.com/news/19209306/NiftyKit-and-Base-Collaborate-to-Enhance-NFT-Accessibility-and-Innovation",
+      "pubDate": "2024-01-28T08:34:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "JST"
+      ]
+    },
+    {
+      "title": "Hedge Fund Veteran Anthony Scaramucci Says Bitcoin Will Skyrocket to $170,000 After the Halving – Here’s Why",
+      "link": "https://cryptopanic.com/news/19209260/Hedge-Fund-Veteran-Anthony-Scaramucci-Says-Bitcoin-Will-Skyrocket-to-170000-After-the-Halving-Heres-Why",
+      "pubDate": "2024-01-28T08:04:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "RLY"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Top 5 Reasons to Use AI to Invest in Bitcoin, Ether, and Apple Stock (AAPL)",
+      "link": "https://cryptopanic.com/news/19209265/Top-5-Reasons-to-Use-AI-to-Invest-in-Bitcoin-Ether-and-Apple-Stock-AAPL",
+      "pubDate": "2024-01-28T08:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "JST"
+      ]
+    },
+    {
+      "title": "Quant Price In A Gloomy Trend As It Threatens The Existing Support At $100",
+      "link": "https://cryptopanic.com/news/19209379/Quant-Price-In-A-Gloomy-Trend-As-It-Threatens-The-Existing-Support-At-100",
+      "pubDate": "2024-01-28T07:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "QNT"
+      ]
+    },
+    {
+      "title": "BlackRock’s Bitcoin ETF soars past $2B AUM",
+      "link": "https://cryptopanic.com/news/19209236/BlackRocks-Bitcoin-ETF-soars-past-2B-AUM",
+      "pubDate": "2024-01-28T07:11:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "JST"
+      ]
+    },
+    {
+      "title": "XRP Price Will See 1,000% Rally When ‘Black Cloud’ Dissolves, What This Means",
+      "link": "https://cryptopanic.com/news/19209069/XRP-Price-Will-See-1000-Rally-When-Black-Cloud-Dissolves-What-This-Means",
+      "pubDate": "2024-01-28T01:30:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "MATIC",
+        "RLY"
+      ]
+    },
+    {
+      "title": "Saturday recap: Sui’s TVL milestone, OpenSea’s acquisition plans, Farcaster Frames fun, and more",
+      "link": "https://cryptopanic.com/news/19209062/Saturday-recap-Suis-TVL-milestone-OpenSeas-acquisition-plans-Farcaster-Frames-fun-and-more?mtm_campaign=API-OFA",
+      "pubDate": "2024-01-28T01:06:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "RLB"
+      ]
+    },
+    {
+      "title": "Hybrid Blockchain Altcoin Surges by More Than 20% As Project Announces New Partnership With a Venture Studio",
+      "link": "https://cryptopanic.com/news/19209056/Hybrid-Blockchain-Altcoin-Surges-by-More-Than-20-As-Project-Announces-New-Partnership-With-a-Venture-Studio",
+      "pubDate": "2024-01-28T01:00:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CFX"
+      ]
+    },
+    {
+      "title": "BlackRock Bitcoin ETF Hits $2B AUM Milestone in Two Weeks",
+      "link": "https://cryptopanic.com/news/bitcoin/19209039/BlackRock-Bitcoin-ETF-Hits-2B-AUM-Milestone-in-Two-Weeks",
+      "pubDate": "2024-01-28T00:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Blackrock becomes the first Bitcoin ETF among the new issuers to reach this milestone.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

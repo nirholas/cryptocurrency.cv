@@ -1,0 +1,963 @@
+{
+  "date": "2025-09-03",
+  "fetchedAt": "2026-02-05T07:27:08.601Z",
+  "articleCount": 67,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ethereum Network Activity Surges As Daily Transactions Reach 12-Month Peak — Details",
+      "link": "https://cryptopanic.com/news/bitcoin/24946506/Ethereum-Network-Activity-Surges-As-Daily-Transactions-Reach-12-Month-Peak-Details",
+      "pubDate": "2025-09-03T22:00:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum’s on-chain activity has reached a new milestone and recorded 1. 8 million daily transactions. This unprecedented level of network usage showcases the vitality of the world’s leading smart contract platform and also underscores the effectiveness of its multi-layered scaling strategy. What This Milestone Represents In The Context Of A One-Year High A pivotal shift is underway in the crypto market, and the on-chain data for Ethereum tells the story",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Mapping Chainlink’s path to $31 as LINK defends KEY price level",
+      "link": "https://cryptopanic.com/news/chainlink/24946503/Mapping-Chainlinks-path-to-31-as-LINK-defends-KEY-price-level",
+      "pubDate": "2025-09-03T22:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "KEY"
+      ]
+    },
+    {
+      "title": "Ether exchange reserves fall to 3-year low as ETFs, corporate treasuries soak up supply",
+      "link": "https://cryptopanic.com/news/ethereum/24946496/Ether-exchange-reserves-fall-to-3-year-low-as-ETFs-corporate-treasuries-soak-up-supply",
+      "pubDate": "2025-09-03T21:44:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ether supply on centralized exchanges has plunged around 38% since 2022, as billions flow into spot ETFs and corporate treasuries ramp up their ETH holdings.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano Founder Says Chainlink Quoted Them An ‘Absurd Price’, Here’s Why",
+      "link": "https://cryptopanic.com/news/avalanche-2/24945133/Cardano-Founder-Says-Chainlink-Quoted-Them-An-Absurd-Price-Heres-Why",
+      "pubDate": "2025-09-03T21:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "BNB",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Vietnam Taps KuCoin in Push to Build National Blockchain Infrastructure",
+      "link": "https://cryptopanic.com/news/kucoin-shares/24945036/Vietnam-Taps-KuCoin-in-Push-to-Build-National-Blockchain-Infrastructure",
+      "pubDate": "2025-09-03T20:31:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "Ethereum’s largest L2 Arbitrum launches $40M program to promote DeFi growth",
+      "link": "https://cryptopanic.com/news/ethereum/24943927/Ethereums-largest-L2-Arbitrum-launches-40M-program-to-promote-DeFi-growth",
+      "pubDate": "2025-09-03T20:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The Arbitrum Foundation has launched the DeFi Renaissance Incentive Program (DRIP), and it is being touted as a significant initiative aimed at boosting decentralized finance (DeFi) activity on Arbitrum, Ethereum’s largest Layer 2 (L2) scaling solution by total value locked (TVL). The program aims to reward users for engaging in specific DeFi actions, and the […]",
+      "currencies": [
+        "ETH",
+        "ARB"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "500,000 ETH in Just 1 Week: Is Ethereum’s Price Gearing up for Another Big Rally?",
+      "link": "https://cryptopanic.com/news/ethereum/24943590/500000-ETH-in-Just-1-Week-Is-Ethereums-Price-Gearing-up-for-Another-Big-Rally",
+      "pubDate": "2025-09-03T19:23:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The amount of ETH stored on exchanges tumbled to a nine-year low.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DeFi Protocol Ondo Finance Puts 100 Tokenized Stocks on Ethereum",
+      "link": "https://cryptopanic.com/news/ethereum/24943528/DeFi-Protocol-Ondo-Finance-Puts-100-Tokenized-Stocks-on-Ethereum",
+      "pubDate": "2025-09-03T19:18:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "And the company says it wants to bring the tokenized stocks to Solana soon.",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "ONDO"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana Outperforms Bitcoin; Possibly Poised to Follow Ether's Recent 200% Rally, Says Analyst",
+      "link": "https://cryptopanic.com/news/bitcoin/24943599/Solana-Outperforms-Bitcoin-Possibly-Poised-to-Follow-Ethers-Recent-200-Rally-Says-Analyst",
+      "pubDate": "2025-09-03T19:04:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A recent analysis suggests that Solana has significantly outperformed Bitcoin in terms of market performance and investor interest, indicating a potential trajectory that could mirror the impressive 200% rally experienced by Ether in recent months, according to insights provided by a seasoned financial analyst. This assessment highlights Solana's growing prominence in the cryptocurrency space and suggests that, if current trends continue, it may also capitalize on similar upward momentum, drawin",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "A"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Bitcoin, Ethereum, XRP, Dogecoin Rally, But Traders Remain Wary Of September Seasonality",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/24943342/Bitcoin-Ethereum-XRP-Dogecoin-Rally-But-Traders-Remain-Wary-Of-September-Seasonality",
+      "pubDate": "2025-09-03T19:00:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Want to Support Ethereum and Earn ETH Yield? Get in Line",
+      "link": "https://cryptopanic.com/news/ethereum/24942366/Want-to-Support-Ethereum-and-Earn-ETH-Yield-Get-in-Line",
+      "pubDate": "2025-09-03T18:57:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Analysts chalked up part of the validator entry queue numbers to new capital flowing into ETH treasury management companies like SharpLink and BitMine Immersion.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ether rally to $5.5K possible due to illiquid supply and bullish ETH futures signal",
+      "link": "https://cryptopanic.com/news/ethereum/24942328/Ether-rally-to-55K-possible-due-to-illiquid-supply-and-bullish-ETH-futures-signal",
+      "pubDate": "2025-09-03T18:46:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Illiquid supply, falling exchange reserves and accumulation from whales could send ETH price to $5,500.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Ondo Launches Global Markets: 100+ Tokenized U.S. Stocks on Ethereum",
+      "link": "https://cryptopanic.com/news/ethereum/24942304/Ondo-Launches-Global-Markets-100-Tokenized-US-Stocks-on-Ethereum",
+      "pubDate": "2025-09-03T18:35:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ondo has launched Global Markets for eligible non-U. S. investors, bringing tokenized access to 100+ U. S. stocks and ETFs on Ethereum. Tokens have been backed one-to-one and support 24/5 mint-redeem; price data uses Chainlink; expansion has been planned for BNB Chain, Solana, and Ondo Chain.",
+      "currencies": [
+        "ETH",
+        "BNB",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Congressman Has Bought Ethereum Four Times In 2025 Before All-Time Highs: Here's The Potential Profits",
+      "link": "https://cryptopanic.com/news/ethereum/24942307/Congressman-Has-Bought-Ethereum-Four-Times-In-2025-Before-All-Time-Highs-Heres-The-Potential-Profits",
+      "pubDate": "2025-09-03T18:22:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Multiple members of Congress have been buying cryptocurrency and cryptocurrency-related ETFs as they look to diversify their portfolios and bet on a sector supported by the White House administration. read more",
+      "currencies": [
+        "ETH",
+        "FORM",
+        "EDGE"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Grayscale Launches Ethereum Covered Call ETF as Money Rushes Into ETH Funds",
+      "link": "https://cryptopanic.com/news/ethereum/24942172/Grayscale-Launches-Ethereum-Covered-Call-ETF-as-Money-Rushes-Into-ETH-Funds",
+      "pubDate": "2025-09-03T18:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Grayscale Investments has officially launched an Ethereum Covered Call Exchange-Traded Fund (ETF), a strategic financial product designed to capitalize on the growing interest in cryptocurrencies. This development comes at a time when a significant influx of capital is flowing into Ethereum-focused investment funds, reflecting a strong bullish sentiment among investors who are increasingly looking to diversify their portfolios and gain exposure to the second-largest cryptocurrency by market capi",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Price predictions 9/3: BTC, ETH, XRP, BNB, SOL, DOGE, ADA, LINK, HYPE, SUI",
+      "link": "https://cryptopanic.com/news/chainlink/24940814/Price-predictions-93-BTC-ETH-XRP-BNB-SOL-DOGE-ADA-LINK-HYPE-SUI",
+      "pubDate": "2025-09-03T17:40:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Toyota and Avalanche launch robotaxi network on blockchain",
+      "link": "https://cryptopanic.com/news/avalanche-2/24939339/Toyota-and-Avalanche-launch-robotaxi-network-on-blockchain",
+      "pubDate": "2025-09-03T17:12:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "MON"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Altcoin Season: Ethena Rises on $50M Weekly Revenue; MemeCore and OKB Climb",
+      "link": "https://cryptopanic.com/news/okb/24939167/Altcoin-Season-Ethena-Rises-on-50M-Weekly-Revenue-MemeCore-and-OKB-Climb",
+      "pubDate": "2025-09-03T16:37:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "OKB",
+        "ENA",
+        "M"
+      ]
+    },
+    {
+      "title": "Stellar Upgrade Triggers Trading Pauses on Major Exchanges, XLM Faces Resistance",
+      "link": "https://cryptopanic.com/news/stellar/24939981/Stellar-Upgrade-Triggers-Trading-Pauses-on-Major-Exchanges-XLM-Faces-Resistance",
+      "pubDate": "2025-09-03T16:15:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Stellar (XLM) Rockets 288% in Yearly Surge, $1 Next?",
+      "link": "https://cryptopanic.com/news/stellar/24937685/Stellar-XLM-Rockets-288-in-Yearly-Surge-1-Next",
+      "pubDate": "2025-09-03T15:58:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Avalanche Blockchain Activity Surges as Whales, DeFi Traders, and Memecoins Fuel Growth",
+      "link": "https://cryptopanic.com/news/avalanche-2/24937628/Avalanche-Blockchain-Activity-Surges-as-Whales-DeFi-Traders-and-Memecoins-Fuel-Growth",
+      "pubDate": "2025-09-03T15:48:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "XLM Price Ripe for a 42% Surge as Stellar Whisk Upgrade Launches",
+      "link": "https://cryptopanic.com/news/stellar/24937596/XLM-Price-Ripe-for-a-42-Surge-as-Stellar-Whisk-Upgrade-Launches",
+      "pubDate": "2025-09-03T15:43:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Tom Lee: Ethereum Could Reach $62,000 If It Hits This ETH/BTC Ratio",
+      "link": "https://cryptopanic.com/news/bitcoin/24937639/Tom-Lee-Ethereum-Could-Reach-62000-If-It-Hits-This-ETHBTC-Ratio",
+      "pubDate": "2025-09-03T15:35:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Tom Lee, Chief Investment Officer at Fundstrat Capital and Chairman of Bitmine (AMEX:BMNR) on Wednesday outlined how Ethereum (CRYPTO: ETH) could read more",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Aave on Aptos = Big Move for DeFi",
+      "link": "https://cryptopanic.com/news/aave/24937502/Aave-on-Aptos-Big-Move-for-DeFi",
+      "pubDate": "2025-09-03T15:15:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "APT"
+      ]
+    },
+    {
+      "title": "KuCoin Launches Launches Cloud Mining With 10% of Dogecoin’s Network Power",
+      "link": "https://cryptopanic.com/news/kucoin-shares/24936276/KuCoin-Launches-Launches-Cloud-Mining-With-10-of-Dogecoins-Network-Power",
+      "pubDate": "2025-09-03T15:01:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "KCS"
+      ]
+    },
+    {
+      "title": "AVAX Price Eyes Breakout as Avalanche C-Chain Breaks Key Milestone",
+      "link": "https://cryptopanic.com/news/avalanche-2/24939306/AVAX-Price-Eyes-Breakout-as-Avalanche-C-Chain-Breaks-Key-Milestone",
+      "pubDate": "2025-09-03T14:51:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "C"
+      ]
+    },
+    {
+      "title": "Electric Capital, Paradigm lead $40 million investment into institutional Ethereum advocacy group Etherealize",
+      "link": "https://cryptopanic.com/news/ethereum/24935585/Electric-Capital-Paradigm-lead-40-million-investment-into-institutional-Ethereum-advocacy-group-Etherealize",
+      "pubDate": "2025-09-03T14:12:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Etherealize is an institution-focused advocacy and development group led by former EF developer Danny Ryan and Wall Street trader Vivek Raman.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Chainlink & Cardano holders turn to Remittix as PayFi altcoin breaks records in 2025",
+      "link": "https://cryptopanic.com/news/chainlink/24935674/Chainlink-Cardano-holders-turn-to-Remittix-as-PayFi-altcoin-breaks-records-in-2025",
+      "pubDate": "2025-09-03T13:59:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "LINK"
+      ]
+    },
+    {
+      "title": "KuCoin Signs Strategic MoU to Advance Vietnam’s Blockchain Ecosystem",
+      "link": "https://cryptopanic.com/news/kucoin-shares/24934313/KuCoin-Signs-Strategic-MoU-to-Advance-Vietnams-Blockchain-Ecosystem",
+      "pubDate": "2025-09-03T13:44:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "Ondo Finance Launches Tokenized US Stocks on Ethereum",
+      "link": "https://cryptopanic.com/news/ethereum/24934243/Ondo-Finance-Launches-Tokenized-US-Stocks-on-Ethereum",
+      "pubDate": "2025-09-03T13:38:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Qualified investors outside the U. S. can now trade tokenized U. S. equities on the Ethereum blockchain, with plans to expand support for BNB Chain and Solana.",
+      "currencies": [
+        "ETH",
+        "BNB",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SHIB Makes History as First Meme Coin to Join Major Cross-Chain DeFi Platform",
+      "link": "https://cryptopanic.com/news/chainlink/24934142/SHIB-Makes-History-as-First-Meme-Coin-to-Join-Major-Cross-Chain-DeFi-Platform",
+      "pubDate": "2025-09-03T13:27:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "LINK"
+      ]
+    },
+    {
+      "title": "CoinDesk 20 Performance Update: Avalanche (AVAX) Gains 5.2% as Nearly All Assets Rise",
+      "link": "https://cryptopanic.com/news/avalanche-2/24935890/CoinDesk-20-Performance-Update-Avalanche-AVAX-Gains-52-as-Nearly-All-Assets-Rise",
+      "pubDate": "2025-09-03T13:15:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "KuCoin expands into mining with goal to control 10% of Dogecoin",
+      "link": "https://cryptopanic.com/news/kucoin-shares/24933621/KuCoin-expands-into-mining-with-goal-to-control-10-of-Dogecoin",
+      "pubDate": "2025-09-03T13:07:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "KCS"
+      ]
+    },
+    {
+      "title": "Crypto Price Analysis 9-3: BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, UNISWAP: UNI, INTERNET COMPUTER: ICP",
+      "link": "https://cryptopanic.com/news/uniswap/24932595/Crypto-Price-Analysis-9-3-BITCOIN-BTC-ETHEREUM-ETH-SOLANA-SOL-UNISWAP-UNI-INTERNET-COMPUTER-ICP",
+      "pubDate": "2025-09-03T12:55:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Cardholder CRO stake reward",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/24990101/Cardholder-CRO-stake-reward",
+      "pubDate": "2025-09-03T12:51:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO",
+        "MCO"
+      ]
+    },
+    {
+      "title": "Avalanche activity driven by DEXs, trading bots, whale memecoin speculation",
+      "link": "https://cryptopanic.com/news/avalanche-2/24932562/Avalanche-activity-driven-by-DEXs-trading-bots-whale-memecoin-speculation",
+      "pubDate": "2025-09-03T12:46:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Ethereum Rainbow Chart predicts ETH price for September 30, 2025",
+      "link": "https://cryptopanic.com/news/ethereum/24932480/Ethereum-Rainbow-Chart-predicts-ETH-price-for-September-30-2025",
+      "pubDate": "2025-09-03T12:38:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The Ethereum Rainbow Chart, a logarithmic regression model designed to track Ethereum’s (ETH) long-term growth trajectory, has outlined a projected price spectrum for September 30, 2025. The outlook comes as Ethereum attempts to reclaim recent highs, with the second-ranked cryptocurrency by market cap having reached a record price of nearly $5,000. According to the chart, Ethereum could trade as low as $1,947 if it falls into the ‘Fire Sale’ zone, or climb as high as $21,101 if it enters ‘Maximu",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Big News: Aave x Aptos",
+      "link": "https://cryptopanic.com/news/aave/24932570/Big-News-Aave-x-Aptos",
+      "pubDate": "2025-09-03T12:31:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "APT"
+      ]
+    },
+    {
+      "title": "KuCoin makes expansion moves in Vietnam crypto markets",
+      "link": "https://cryptopanic.com/news/kucoin-shares/24932400/KuCoin-makes-expansion-moves-in-Vietnam-crypto-markets",
+      "pubDate": "2025-09-03T12:12:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "KuCoin debuts KuMining with a focus on Bitcoin, Dogecoin and Litecoin",
+      "link": "https://cryptopanic.com/news/litecoin/24972891/KuCoin-debuts-KuMining-with-a-focus-on-Bitcoin-Dogecoin-and-Litecoin",
+      "pubDate": "2025-09-03T11:53:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Pi Network Price Forecast: PI holds above key support amid recovery efforts",
+      "link": "https://cryptopanic.com/news/stellar/24931156/Pi-Network-Price-Forecast-PI-holds-above-key-support-amid-recovery-efforts",
+      "pubDate": "2025-09-03T11:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "PI"
+      ]
+    },
+    {
+      "title": "KuCoin Announces New Partnership to Innovate Digital Assets and Blockchain in Vietnam",
+      "link": "https://cryptopanic.com/news/kucoin-shares/24932419/KuCoin-Announces-New-Partnership-to-Innovate-Digital-Assets-and-Blockchain-in-Vietnam",
+      "pubDate": "2025-09-03T11:32:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "KuCoin Partners with VBA to Boost Vietnam Blockchain",
+      "link": "https://cryptopanic.com/news/kucoin-shares/24934160/KuCoin-Partners-with-VBA-to-Boost-Vietnam-Blockchain",
+      "pubDate": "2025-09-03T11:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS",
+        "A"
+      ]
+    },
+    {
+      "title": "KuCoin Doubles Down on Vietnam Market With New Partnership",
+      "link": "https://cryptopanic.com/news/kucoin-shares/24933100/KuCoin-Doubles-Down-on-Vietnam-Market-With-New-Partnership",
+      "pubDate": "2025-09-03T11:27:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "XLM eyes $0.40 ahead of Stellar’s Protocol 23 upgrade",
+      "link": "https://cryptopanic.com/news/stellar/24930496/XLM-eyes-040-ahead-of-Stellars-Protocol-23-upgrade",
+      "pubDate": "2025-09-03T11:17:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Trump’s $5.6 billion WLFI sparks big question what does it really offer",
+      "link": "https://cryptopanic.com/news/aave/24928658/Trumps-56-billion-WLFI-sparks-big-question-what-does-it-really-offer",
+      "pubDate": "2025-09-03T11:00:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "USD1",
+        "WLFI"
+      ]
+    },
+    {
+      "title": "KuCoin to Launch KuMining Cloud Mining Platform on September 16",
+      "link": "https://cryptopanic.com/news/kucoin-shares/24935798/KuCoin-to-Launch-KuMining-Cloud-Mining-Platform-on-September-16",
+      "pubDate": "2025-09-03T11:00:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "KCS"
+      ]
+    },
+    {
+      "title": "OKX Set to Launch OKB/USDT Perpetual Contract",
+      "link": "https://cryptopanic.com/news/okb/24927898/OKX-Set-to-Launch-OKBUSDT-Perpetual-Contract",
+      "pubDate": "2025-09-03T10:13:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "OKB"
+      ]
+    },
+    {
+      "title": "Toyota and Avalanche Team Up for Blockchain-Powered Robotaxis",
+      "link": "https://cryptopanic.com/news/avalanche-2/24928267/Toyota-and-Avalanche-Team-Up-for-Blockchain-Powered-Robotaxis",
+      "pubDate": "2025-09-03T10:06:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "A"
+      ]
+    },
+    {
+      "title": "KuCoin Presents KuMining: Embodying “Simple Mining, Smart Gains” for Effortless Crypto Accumulation",
+      "link": "https://cryptopanic.com/news/litecoin/24934681/KuCoin-Presents-KuMining-Embodying-Simple-Mining-Smart-Gains-for-Effortless-Crypto-Accumulation",
+      "pubDate": "2025-09-03T10:05:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "LTC"
+      ]
+    },
+    {
+      "title": "KuCoin Presents KuMining: Embodying \"Simple Mining, Smart Gains\" for Effortless Crypto Accumulation",
+      "link": "https://cryptopanic.com/news/kucoin-shares/25067072/KuCoin-Presents-KuMining-Embodying-Simple-Mining-Smart-Gains-for-Effortless-Crypto-Accumulation",
+      "pubDate": "2025-09-03T10:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "How to Buy Decentraland (MANA) Instantly Without KYC",
+      "link": "https://cryptopanic.com/news/decentraland/24932229/How-to-Buy-Decentraland-MANA-Instantly-Without-KYC",
+      "pubDate": "2025-09-03T09:53:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "Litecoin Under Pressure But Quietly Building Momentum: Here is What You Need to Know",
+      "link": "https://cryptopanic.com/news/litecoin/24926943/Litecoin-Under-Pressure-But-Quietly-Building-Momentum-Here-is-What-You-Need-to-Know",
+      "pubDate": "2025-09-03T09:51:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ]
+    },
+    {
+      "title": "KuCoin targets 10% of Dogecoin mining capacity via new mining platform",
+      "link": "https://cryptopanic.com/news/kucoin-shares/24926472/KuCoin-targets-10-of-Dogecoin-mining-capacity-via-new-mining-platform",
+      "pubDate": "2025-09-03T09:29:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "KCS"
+      ]
+    },
+    {
+      "title": "Earn $100,000 Per Month in 2025: Cloud Mining Platform Uses Automated Tools to Mine Bitcoin (BTC), Dogecoin (DOGE), and Litecoin (LTC)",
+      "link": "https://cryptopanic.com/news/litecoin/24926462/Earn-100000-Per-Month-in-2025-Cloud-Mining-Platform-Uses-Automated-Tools-to-Mine-Bitcoin-BTC-Dogecoin-DOGE-and-Litecoin-LTC",
+      "pubDate": "2025-09-03T09:27:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Chainlink Price Pulls Back but Fundamentals Stay Strong",
+      "link": "https://cryptopanic.com/news/chainlink/24926576/Chainlink-Price-Pulls-Back-but-Fundamentals-Stay-Strong",
+      "pubDate": "2025-09-03T08:52:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "3 Altcoins Poised to Benefit from Investor Interest in World Liberty Financial (WLFI)",
+      "link": "https://cryptopanic.com/news/chainlink/24926518/3-Altcoins-Poised-to-Benefit-from-Investor-Interest-in-World-Liberty-Financial-WLFI",
+      "pubDate": "2025-09-03T08:43:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "SOL",
+        "LINK"
+      ]
+    },
+    {
+      "title": "Stellar Price Forecast: Whisk upgrade faces muted interest amid XLM mixed technical outlook",
+      "link": "https://cryptopanic.com/news/stellar/24931153/Stellar-Price-Forecast-Whisk-upgrade-faces-muted-interest-amid-XLM-mixed-technical-outlook",
+      "pubDate": "2025-09-03T08:41:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "XRP ETF News: 15 Applications Sit on SEC’s Desk – October is the Key",
+      "link": "https://cryptopanic.com/news/bitcoin/24923586/XRP-ETF-News-15-Applications-Sit-on-SECs-Desk-October-is-the-Key",
+      "pubDate": "2025-09-03T08:09:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "This surge of filings positions XRP alongside Bitcoin and Ethereum as a cryptocurrency attracting serious attention from major financial firms.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Bitcoin Cash Price Breakout – Tether U-Turn, and Whale Demand Drive Gains",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/24924601/Bitcoin-Cash-Price-Breakout-Tether-U-Turn-and-Whale-Demand-Drive-Gains",
+      "pubDate": "2025-09-03T07:51:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Shiba Inu Token Now Eligible For Cross-Chain Lending, Borrowing Supported By Chainlink",
+      "link": "https://cryptopanic.com/news/chainlink/24918684/Shiba-Inu-Token-Now-Eligible-For-Cross-Chain-Lending-Borrowing-Supported-By-Chainlink",
+      "pubDate": "2025-09-03T05:40:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "LINK",
+        "CROSS"
+      ]
+    },
+    {
+      "title": "Bitcoin Flashes Rare Buy Signal Not Seen Since $49,000 And $74,000 Bottoms",
+      "link": "https://cryptopanic.com/news/quant-network/24917034/Bitcoin-Flashes-Rare-Buy-Signal-Not-Seen-Since-49000-And-74000-Bottoms",
+      "pubDate": "2025-09-03T05:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "QNT"
+      ]
+    },
+    {
+      "title": "Neo SPCC releases NeoFS S3 Gateway v0.41.0 with dynamic polling",
+      "link": "https://cryptopanic.com/news/neo/24917023/Neo-SPCC-releases-NeoFS-S3-Gateway-v0410-with-dynamic-polling",
+      "pubDate": "2025-09-03T04:55:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Chainlink Surges 3% to $24 After U.S. Government Data Partnership and Bitwise ETF Filing",
+      "link": "https://cryptopanic.com/news/chainlink/24915570/Chainlink-Surges-3-to-24-After-US-Government-Data-Partnership-and-Bitwise-ETF-Filing",
+      "pubDate": "2025-09-03T04:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LINK"
+      ]
+    },
+    {
+      "title": "Crypto.com Adds Zero-Fee Trading, Enters Sports Predictions with Underdog",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/24911679/Cryptocom-Adds-Zero-Fee-Trading-Enters-Sports-Predictions-with-Underdog",
+      "pubDate": "2025-09-03T00:52:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash Price Could Rally 35% As Two Bullish Setups Align",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/24911363/Bitcoin-Cash-Price-Could-Rally-35-As-Two-Bullish-Setups-Align",
+      "pubDate": "2025-09-03T00:42:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "VeChain Just Launched Something Huge",
+      "link": "https://cryptopanic.com/news/vechain/24911375/VeChain-Just-Launched-Something-Huge",
+      "pubDate": "2025-09-03T00:35:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ]
+    }
+  ]
+}

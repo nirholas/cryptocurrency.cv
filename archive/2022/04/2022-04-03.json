@@ -1,0 +1,976 @@
+{
+  "date": "2022-04-03",
+  "fetchedAt": "2026-02-05T07:27:06.570Z",
+  "articleCount": 70,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "cool idea! lil historical fact, we almost named ourselves treasureDAO with a similar goal, but arkive is a way cool…",
+      "link": "https://cryptopanic.com/news/14784576/cool-idea-lil-historical-fact-we-almost-named-ourselves-treasureDAO-with-a-similar-goal-but-arkive-is-a-way-cool",
+      "pubDate": "2022-04-03T23:56:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PEOPLE"
+      ]
+    },
+    {
+      "title": "Will #Bitcoin break $50,000 this month?",
+      "link": "https://cryptopanic.com/news/14788894/Will-Bitcoin-break-50000-this-month",
+      "pubDate": "2022-04-03T23:34:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "WXT"
+      ]
+    },
+    {
+      "title": "Community Debrief Mar 30 2022",
+      "link": "https://cryptopanic.com/news/14782961/Community-Debrief-Mar-30-2022",
+      "pubDate": "2022-04-03T23:22:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REV"
+      ]
+    },
+    {
+      "title": "The launch went well, we managed to blacklist 60 bots, and we now have a stable price at $1.3 which is a x16 since…",
+      "link": "https://cryptopanic.com/news/14804465/The-launch-went-well-we-managed-to-blacklist-60-bots-and-we-now-have-a-stable-price-at-13-which-is-a-x16-since",
+      "pubDate": "2022-04-03T23:17:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SUN"
+      ]
+    },
+    {
+      "title": "RT @TheBitcoinConf: There will be a Mega Meetup at Bitcoin 2022, where all Bitcoin meetup organizers and attendees are invited to talk abou…",
+      "link": "https://cryptopanic.com/news/14788042/RT-TheBitcoinConf-There-will-be-a-Mega-Meetup-at-Bitcoin-2022-where-all-Bitcoin-meetup-organizers-and-attendees-are-invited-to-talk-abou",
+      "pubDate": "2022-04-03T22:25:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "RBTC"
+      ]
+    },
+    {
+      "title": "RT @zerosnacks: I'm happy to announce that I'll be joining the TribeDAO team (@RariCapital + @feiprotocol &amp; more) full time starting May 2n…",
+      "link": "https://cryptopanic.com/news/14788559/RT-zerosnacks-Im-happy-to-announce-that-Ill-be-joining-the-TribeDAO-team-RariCapital-feiprotocol-amp-more-full-time-starting-May-2n",
+      "pubDate": "2022-04-03T22:19:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FEI",
+        "TRIBE"
+      ]
+    },
+    {
+      "title": "RT @safenetworktech: Thanks to the #SafeNetwork Community, eMAID--the #ERC20 version of $MAID--will wrap up beta next week! Here's how you…",
+      "link": "https://cryptopanic.com/news/14782732/RT-safenetworktech-Thanks-to-the-SafeNetwork-Community-eMAID-the-ERC20-version-of-MAID-will-wrap-up-beta-next-week-Heres-how-you",
+      "pubDate": "2022-04-03T21:35:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "RT @GuardaWallet: What a blast! So many amazing memes dedicated to @qtum &amp; #GuardaWallet it's a tough task to give all of them justice! Tha…",
+      "link": "https://cryptopanic.com/news/14787642/RT-GuardaWallet-What-a-blast-So-many-amazing-memes-dedicated-to-qtum-amp-GuardaWallet-its-a-tough-task-to-give-all-of-them-justice-Tha",
+      "pubDate": "2022-04-03T21:25:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QTUM"
+      ]
+    },
+    {
+      "title": "Bitcoin, Ether, and Cardano Jump Past Key Levels — A Bigger Breakout About to Ensue In Q2?",
+      "link": "https://cryptopanic.com/news/cardano/14782712/Bitcoin-Ether-and-Cardano-Jump-Past-Key-Levels-A-Bigger-Breakout-About-to-Ensue-In-Q2",
+      "pubDate": "2022-04-03T21:18:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The last few days have seen Bitcoin ignite an upward rally while jolting most cryptos.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 35,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Trezor Hit By Phishing Attack; Cautions Users Against Opening Emails",
+      "link": "https://cryptopanic.com/news/14782717/Trezor-Hit-By-Phishing-Attack-Cautions-Users-Against-Opening-Emails",
+      "pubDate": "2022-04-03T21:04:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Hardware wallet maker Trezor has confirmed to users that it was the subject of a recent phishing attack that occurred on Saturday. The post Trezor Hit By Phishing Attack; Cautions Users Against Opening Emails appeared first on BeInCrypto.",
+      "currencies": [
+        "MKR"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @crypto_blkbeard: $BICO is accelerating.",
+      "link": "https://cryptopanic.com/news/14784046/RT-crypto_blkbeard-BICO-is-accelerating",
+      "pubDate": "2022-04-03T20:07:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BICO"
+      ]
+    },
+    {
+      "title": "Top Trader Says Bitcoin (BTC) Set To Rally and Outperform Stock Market – Here’s His Timeline",
+      "link": "https://cryptopanic.com/news/bitcoin/14782627/Top-Trader-Says-Bitcoin-BTC-Set-To-Rally-and-Outperform-Stock-Market-Heres-His-Timeline",
+      "pubDate": "2022-04-03T20:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A well-known crypto trader and analyst says Bitcoin (BTC) is likely about to break out above its current trading range as it decorrelates with the stock market. The pseudonymous trader known as Kaleo tells his 476,000 Twitter followers that he’s watching Bitcoin, not priced in USD, but against the S&P 500 index (SPX). By looking […]",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Watch \"Veritaseum Token &amp; IP, Fintech, CBDC's, Governments &amp; The Global Macro Outlook\" on YouTube -",
+      "link": "https://cryptopanic.com/news/14782500/Watch-Veritaseum-Token-amp-IP-Fintech-CBDCs-Governments-amp-The-Global-Macro-Outlook-on-YouTube-",
+      "pubDate": "2022-04-03T19:21:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VERI"
+      ]
+    },
+    {
+      "title": "RT @kirstinbosh: @AragonProject is having their first event set up with the Index coop team. If you wanna learn more about investment model…",
+      "link": "https://cryptopanic.com/news/14782492/RT-kirstinbosh-AragonProject-is-having-their-first-event-set-up-with-the-Index-coop-team-If-you-wanna-learn-more-about-investment-model",
+      "pubDate": "2022-04-03T19:17:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ANT"
+      ]
+    },
+    {
+      "title": "A dive into the Future of Monero (XMR) #bitcoin #bitvalve #blockchain #crypto #cryptocurrencies #cryptocurrency…",
+      "link": "https://cryptopanic.com/news/14784099/A-dive-into-the-Future-of-Monero-XMR-bitcoin-bitvalve-blockchain-crypto-cryptocurrencies-cryptocurrency",
+      "pubDate": "2022-04-03T19:01:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Top 5 cryptocurrencies to watch this week: BTC, VET, THETA, RUNE, AAVE",
+      "link": "https://cryptopanic.com/news/14782403/Top-5-cryptocurrencies-to-watch-this-week-BTC-VET-THETA-RUNE-AAVE",
+      "pubDate": "2022-04-03T18:30:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "BTC is holding a key support level, allowing altcoins like VET, THETA, RUNE and AAVE to push higher.",
+      "currencies": [
+        "BTC",
+        "VET",
+        "AAVE",
+        "RUNE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @RenderToken: It’s in the works! $RNDR #Apple M1",
+      "link": "https://cryptopanic.com/news/14787735/RT-RenderToken-Its-in-the-works-RNDR-Apple-M1",
+      "pubDate": "2022-04-03T18:29:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RNDR"
+      ]
+    },
+    {
+      "title": "RT @RenderToken: Another great talk from the Multicoin Summit where @KyleSamani discussed the topic #Metaverse and blockchain with @ballmat…",
+      "link": "https://cryptopanic.com/news/14787736/RT-RenderToken-Another-great-talk-from-the-Multicoin-Summit-where-KyleSamani-discussed-the-topic-Metaverse-and-blockchain-with-ballmat",
+      "pubDate": "2022-04-03T18:28:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RNDR"
+      ]
+    },
+    {
+      "title": "Crypto Corner: The Sports Slice",
+      "link": "https://cryptopanic.com/news/14782287/Crypto-Corner-The-Sports-Slice",
+      "pubDate": "2022-04-03T17:35:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "It was a busy, but mild week in sports and crypto engagement – with Socios and it’s subsidiary Chiliz dominating the headlines with major news. Meanwhile, NFTs continued to carry the dialogue as a new marketplace, RareMint, swiftly sold out of Lou Gehrig and Michael Jordan collections, and Fanatics signing a new deal with NFTs […]",
+      "currencies": [
+        "BTC",
+        "CHZ"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @smly: Time for my flight home. I had a great time on this trip with numerai! I'll be back to signals' Number 1 again!!",
+      "link": "https://cryptopanic.com/news/14782219/RT-smly-Time-for-my-flight-home-I-had-a-great-time-on-this-trip-with-numerai-Ill-be-back-to-signals-Number-1-again",
+      "pubDate": "2022-04-03T17:10:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NMR"
+      ]
+    },
+    {
+      "title": "RT @DDDX_io:  has completed the development and test contract deployment, and will deploy the official contract on…",
+      "link": "https://cryptopanic.com/news/14788603/RT-DDDX_io-has-completed-the-development-and-test-contract-deployment-and-will-deploy-the-official-contract-on",
+      "pubDate": "2022-04-03T17:07:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDX"
+      ]
+    },
+    {
+      "title": "RT @yoshiso44: Numerai Conn、TCの解釈などなど確認/議論できてよかった。お話した方々ありがとうございました。新データも来るし、新しい手法もどういう結果になるかモニタしたいし、モチベ上がったのでアウトプットしていきたい。",
+      "link": "https://cryptopanic.com/news/14782199/RT-yoshiso44-Numerai-ConnTC",
+      "pubDate": "2022-04-03T17:03:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NMR"
+      ]
+    },
+    {
+      "title": "TrueUSD and Balancer Offer Liquidity Providers TUSD and BAL Rewards From Stablecoin Pool Incentive Program",
+      "link": "https://cryptopanic.com/news/14782218/TrueUSD-and-Balancer-Offer-Liquidity-Providers-TUSD-and-BAL-Rewards-From-Stablecoin-Pool-Incentive-Program",
+      "pubDate": "2022-04-03T17:00:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "MATIC",
+        "TUSD",
+        "MKR"
+      ]
+    },
+    {
+      "title": "RT @WalterReade: The machine learning community is full of amazing people! Glad to have had the chance to hang out with many of them at the…",
+      "link": "https://cryptopanic.com/news/14782182/RT-WalterReade-The-machine-learning-community-is-full-of-amazing-people-Glad-to-have-had-the-chance-to-hang-out-with-many-of-them-at-the",
+      "pubDate": "2022-04-03T17:00:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NMR"
+      ]
+    },
+    {
+      "title": "Goldman Sachs Gearing Up To Offer ‘Full Spectrum’ of Bitcoin (BTC) and Crypto Investment Services to Wealthy Clients: Report",
+      "link": "https://cryptopanic.com/news/bitcoin/14782270/Goldman-Sachs-Gearing-Up-To-Offer-Full-Spectrum-of-Bitcoin-BTC-and-Crypto-Investment-Services-to-Wealthy-Clients-Report",
+      "pubDate": "2022-04-03T16:55:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Banking giant Goldman Sachs is reportedly looking to offer crypto investment services to its deep-pocketed clients in the coming months. According to a new report by CNBC, the investment bank soon plans to add support for Bitcoin (BTC) and a “full spectrum” of other crypto assets due to high demand from its high-net-worth customers. Says […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Wen Merge? Ethereum Wraps Up Major ‘AllCoreDevs’ Session As Move To PoS Propels Giant Strides",
+      "link": "https://cryptopanic.com/news/ethereum/14782198/Wen-Merge-Ethereum-Wraps-Up-Major-AllCoreDevs-Session-As-Move-To-PoS-Propels-Giant-Strides",
+      "pubDate": "2022-04-03T16:53:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum has inched towards the transition to the Proof-of-Stake Consensus Layer with the conclusion of...",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Move to Earn in the AR Metaverse with Aircoins App and collect coins in Augmented Reality around the world. ‍️…",
+      "link": "https://cryptopanic.com/news/14783678/Move-to-Earn-in-the-AR-Metaverse-with-Aircoins-App-and-collect-coins-in-Augmented-Reality-around-the-world",
+      "pubDate": "2022-04-03T16:48:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AR"
+      ]
+    },
+    {
+      "title": "#FunctionX Foundation launches #FXCore donation support through the non-governmental organization @PAH_org and Cryp…",
+      "link": "https://cryptopanic.com/news/14785573/FunctionX-Foundation-launches-FXCore-donation-support-through-the-non-governmental-organization-PAH_org-and-Cryp",
+      "pubDate": "2022-04-03T16:38:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FX"
+      ]
+    },
+    {
+      "title": "RT @TMarketingGuild: The @NuCypher and @keep_project communities have been heads down, busy designing, implementing and executing. $NU + $K…",
+      "link": "https://cryptopanic.com/news/14788484/RT-TMarketingGuild-The-NuCypher-and-keep_project-communities-have-been-heads-down-busy-designing-implementing-and-executing-NU-K",
+      "pubDate": "2022-04-03T16:12:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "T"
+      ]
+    },
+    {
+      "title": "USDC borrow demand continues to rise",
+      "link": "https://cryptopanic.com/news/14786571/USDC-borrow-demand-continues-to-rise",
+      "pubDate": "2022-04-03T16:09:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MNGO"
+      ]
+    },
+    {
+      "title": "RT @TheBitcoinConf: Our Exhibitor Hall is completely SOLD OUT &amp; features the top brands in the #Bitcoin ecosystem. Swing by to see the late…",
+      "link": "https://cryptopanic.com/news/14788046/RT-TheBitcoinConf-Our-Exhibitor-Hall-is-completely-SOLD-OUT-amp-features-the-top-brands-in-the-Bitcoin-ecosystem-Swing-by-to-see-the-late",
+      "pubDate": "2022-04-03T15:42:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "RBTC"
+      ]
+    },
+    {
+      "title": "Beware of fake airdrop spreading across social media channels pretending to be #FunctionX. This is NOT a real giv…",
+      "link": "https://cryptopanic.com/news/14785574/Beware-of-fake-airdrop-spreading-across-social-media-channels-pretending-to-be-FunctionX-This-is-NOT-a-real-giv",
+      "pubDate": "2022-04-03T15:33:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FX"
+      ]
+    },
+    {
+      "title": "Spot balances reconciliation added to trades export csv. This places a table comparing current balances against cal…",
+      "link": "https://cryptopanic.com/news/14786573/Spot-balances-reconciliation-added-to-trades-export-csv-This-places-a-table-comparing-current-balances-against-cal",
+      "pubDate": "2022-04-03T15:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MNGO"
+      ]
+    },
+    {
+      "title": "86 Billion SHIB Shoveled by Third Largest Wallet on Ethereum",
+      "link": "https://cryptopanic.com/news/ethereum/14781968/86-Billion-SHIB-Shoveled-by-Third-Largest-Wallet-on-Ethereum",
+      "pubDate": "2022-04-03T14:54:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Billion Shiba Inu grabbed by whale who already owns two trillion",
+      "currencies": [
+        "ETH",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 9
+      }
+    },
+    {
+      "title": "WINkLink price prediction 2025-2031: How high can WIN rise?",
+      "link": "https://cryptopanic.com/news/14784506/WINkLink-price-prediction-2025-2031-How-high-can-WIN-rise?mtm_campaign=API-OFA",
+      "pubDate": "2022-04-03T14:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "WIN",
+        "TRC"
+      ]
+    },
+    {
+      "title": "How to Bridge from Ethereum to Layer 2",
+      "link": "https://cryptopanic.com/news/14781924/How-to-Bridge-from-Ethereum-to-Layer-2",
+      "pubDate": "2022-04-03T14:31:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH"
+      ]
+    },
+    {
+      "title": "Coin Bureau Warns of Potential ‘Grim’ Price Potential for Polygon (MATIC) – Here’s Why",
+      "link": "https://cryptopanic.com/news/ethereum/14781928/Coin-Bureau-Warns-of-Potential-Grim-Price-Potential-for-Polygon-MATIC-Heres-Why",
+      "pubDate": "2022-04-03T14:30:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The pseudonymous host of popular crypto YouTube channel Coin Bureau is updating his outlook on layer-2 scaling platform Polygon (MATIC). In a new video, the crypto analyst known as Guy tells his two million YouTube subscribers that the circulating supply of MATIC is putting fairly significant sell pressure on Polygon that could hamper any rallies […]",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Bitcoin Illiquid Supply Close to New All-Time High, Here's What It Means",
+      "link": "https://cryptopanic.com/news/bitcoin/14781890/Bitcoin-Illiquid-Supply-Close-to-New-All-Time-High-Heres-What-It-Means",
+      "pubDate": "2022-04-03T14:18:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The illiquid supply and demand for BTC is rising, which may cause a supply shock in the future",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @zzangt85: @VerluxNFT I'm glad that the plan went well.",
+      "link": "https://cryptopanic.com/news/15333059/RT-zzangt85-VerluxNFT-Im-glad-that-the-plan-went-well",
+      "pubDate": "2022-04-03T13:57:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "VLX"
+      ]
+    },
+    {
+      "title": "RT @TheBitcoinConf: The largest #Bitcoin Conference in history starts in 4 days!",
+      "link": "https://cryptopanic.com/news/14788048/RT-TheBitcoinConf-The-largest-Bitcoin-Conference-in-history-starts-in-4-days",
+      "pubDate": "2022-04-03T13:19:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "RBTC"
+      ]
+    },
+    {
+      "title": "Oh hello, \"Simply put, Dot Dot is Convex for Ellipsis.\"",
+      "link": "https://cryptopanic.com/news/14785223/Oh-hello-Simply-put-Dot-Dot-is-Convex-for-Ellipsis",
+      "pubDate": "2022-04-03T13:13:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EPS"
+      ]
+    },
+    {
+      "title": "A miner's second enemy is the tricky routes in the mines because even a single misstep can result in an unfortunate…",
+      "link": "https://cryptopanic.com/news/14786765/A-miners-second-enemy-is-the-tricky-routes-in-the-mines-because-even-a-single-misstep-can-result-in-an-unfortunate",
+      "pubDate": "2022-04-03T13:11:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DAR"
+      ]
+    },
+    {
+      "title": "2nd CAS Lottery. This time you have a chance to win @_portals_ Genesis Citizen Card for 150 $BORG only. With Downto…",
+      "link": "https://cryptopanic.com/news/14784755/2nd-CAS-Lottery-This-time-you-have-a-chance-to-win-_portals_-Genesis-Citizen-Card-for-150-BORG-only-With-Downto?mtm_campaign=API-OFA",
+      "pubDate": "2022-04-03T13:06:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BORG"
+      ]
+    },
+    {
+      "title": "Honoured to make the annual #TheBlockchain50 by @CBinsights, celebrating the most promising blockchain and crypto c…",
+      "link": "https://cryptopanic.com/news/14788895/Honoured-to-make-the-annual-TheBlockchain50-by-CBinsights-celebrating-the-most-promising-blockchain-and-crypto-c",
+      "pubDate": "2022-04-03T13:00:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WXT"
+      ]
+    },
+    {
+      "title": "Head’s up! Our Cypress gas price increase has taken place today. The new fixed gas price value should be set to 750…",
+      "link": "https://cryptopanic.com/news/14786209/Heads-up-Our-Cypress-gas-price-increase-has-taken-place-today-The-new-fixed-gas-price-value-should-be-set-to-750",
+      "pubDate": "2022-04-03T12:46:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "KLAY"
+      ]
+    },
+    {
+      "title": "RT @jebscc: $XYO rocking the #Coinbase Top movers list!!!",
+      "link": "https://cryptopanic.com/news/14788987/RT-jebscc-XYO-rocking-the-Coinbase-Top-movers-list",
+      "pubDate": "2022-04-03T12:01:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XYO"
+      ]
+    },
+    {
+      "title": "Chainlink [LINK]: ‘Successful recovery’ and what it means for adoption",
+      "link": "https://cryptopanic.com/news/14781636/Chainlink-LINK-Successful-recovery-and-what-it-means-for-adoption",
+      "pubDate": "2022-04-03T12:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "One of Chainlink’s biggest strengths over the past year has been the rate of its product suite’s adoption. And, while that makes a big difference as a whole on the price action, it also drives investors towards the asset. Contrary to expectations, alas, the same isn’t happening with Chainlink at the moment. Chainlink loses its […]",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Axie Infinity Hack Sees Retail Traders and Gamers Being the Biggest Losers",
+      "link": "https://cryptopanic.com/news/14781577/Axie-Infinity-Hack-Sees-Retail-Traders-and-Gamers-Being-the-Biggest-Losers",
+      "pubDate": "2022-04-03T11:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "On March 23, Axie Infinity became the latest crypto project to lose millions to hackers. The post Axie Infinity Hack Sees Retail Traders and Gamers Being the Biggest Losers appeared first on BeInCrypto.",
+      "currencies": [
+        "AXS"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "We're pleased to share Revuo #Monero Issue 114: March 24, 2022 - March 31, 2022 is now available!",
+      "link": "https://cryptopanic.com/news/14781519/Were-pleased-to-share-Revuo-Monero-Issue-114-March-24-2022-March-31-2022-is-now-available",
+      "pubDate": "2022-04-03T10:53:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "ADA Going Mainstream With Stellar Growth As Snoop Dogg Readies To Issue Cardano NFTs",
+      "link": "https://cryptopanic.com/news/cardano/14781508/ADA-Going-Mainstream-With-Stellar-Growth-As-Snoop-Dogg-Readies-To-Issue-Cardano-NFTs",
+      "pubDate": "2022-04-03T10:38:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "After a slow start since the incorporation of smart contracts on Cardano, the network has come alive in recent months. Since January 1, Cardano’s...",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 37,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Coin Bureau on Polygon ($MATIC): ‘Layer-2s Might Soon Be Needed More Than Ever’",
+      "link": "https://cryptopanic.com/news/matic-network/14781506/Coin-Bureau-on-Polygon-MATIC-Layer-2s-Might-Soon-Be-Needed-More-Than-Ever",
+      "pubDate": "2022-04-03T10:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "The host of popular crypto analytics and market commentary show Coin Bureau says that Polygon ($MATIC) is positioned to benefit from Ethereum’s transition to a proof-of-stake network. Polygon is “a protocol and a framework for building and connecting Ethereum-compatible blockchain networks”; it aggregates “scalable solutions on Ethereum supporting a multi-chain Ethereum ecosystem.” On 18 May...",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Trezor investigates potential data breach as users cite phishing attacks",
+      "link": "https://cryptopanic.com/news/bitcoin/14781495/Trezor-investigates-potential-data-breach-as-users-cite-phishing-attacks",
+      "pubDate": "2022-04-03T10:28:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Numerous users on Twitter alarmed Trezor of an ongoing email phishing campaign specifically targeting Trezor users via their registered email addresses.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "‘Big Surprises’—Bitcoin Could Be Set For One Of Its Biggest Ever Weeks As The Price Of Ethereum, BNB, XRP, Cardano, Solana And Luna Swing",
+      "link": "https://cryptopanic.com/news/bitcoin/14781485/Big-SurprisesBitcoin-Could-Be-Set-For-One-Of-Its-Biggest-Ever-Weeks-As-The-Price-Of-Ethereum-BNB-XRP-Cardano-Solana-And-Luna-Swing",
+      "pubDate": "2022-04-03T10:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "With the bitcoin community descending on Miami this week for the Bitcoin 2022 conference and one high-profile developer teasing \"big surprises,\" the cryptocurrency market could be in for a shake up...",
+      "currencies": [
+        "BTC",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @KnallimAll: @skdh hey Sabine, related to your Video (nice stuff) today, have a look @voicelifetech powered &amp; partnered @vergecurrency.…",
+      "link": "https://cryptopanic.com/news/14780589/RT-KnallimAll-skdh-hey-Sabine-related-to-your-Video-nice-stuff-today-have-a-look-voicelifetech-powered-amp-partnered-vergecurrency",
+      "pubDate": "2022-04-03T09:37:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XVG"
+      ]
+    },
+    {
+      "title": "Here’s Why Move-to-Earn Token STEPN (GMT) Spiked 31,000% In 30 Days",
+      "link": "https://cryptopanic.com/news/14781318/Heres-Why-Move-to-Earn-Token-STEPN-GMT-Spiked-31000-In-30-Days",
+      "pubDate": "2022-04-03T09:35:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Move-to-earn token STEPN (GMT) gained more than 30,000% in a month and over 300% in the last seven days . Here is why.",
+      "currencies": [
+        "GMT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Grayscale Investments: ‘Ethereum Is Like New York City’",
+      "link": "https://cryptopanic.com/news/matic-network/14781316/Grayscale-Investments-Ethereum-Is-Like-New-York-City",
+      "pubDate": "2022-04-03T09:32:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "In a recent report titled “Get Smart on Smart Contract Platforms”, cryptoasset manager Grayscale Investments compared Ethereum to New York City. Grayscale’s report, which was published last month, said that Dragonfly Research had “pioneered a useful framework for understanding blockchains by comparing blockchains to cities, the thesis being that blockchains are similar to cities in […]",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Big Things Coming for Solana Ecosystem As SOL Breaks Out Against Ethereum: Macro Guru Raoul Pal",
+      "link": "https://cryptopanic.com/news/14781486/Big-Things-Coming-for-Solana-Ecosystem-As-SOL-Breaks-Out-Against-Ethereum-Macro-Guru-Raoul-Pal",
+      "pubDate": "2022-04-03T09:15:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Macro expert Raoul Pal is optimistic that Solana (SOL) will continue to surge as the price of the high-performance blockchain ramps up against Ethereum (ETH). The Real Vision CEO tells his 918,400 Twitter followers that he expects more development from Solana’s ecosystem now that the smart contract platform appears to be on track to outperform […] The post Big Things Coming for Solana Ecosystem As SOL Breaks Out Against Ethereum: Macro Guru Raoul Pal appeared first on The Daily Hodl.",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Day 2 in #MiamiNFTWeek  Our duo @shanandwater and @vicpotates are making the rounds, meeting up with artists, crea…",
+      "link": "https://cryptopanic.com/news/14786211/Day-2-in-MiamiNFTWeek-Our-duo-shanandwater-and-vicpotates-are-making-the-rounds-meeting-up-with-artists-crea",
+      "pubDate": "2022-04-03T09:13:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "KLAY"
+      ]
+    },
+    {
+      "title": "Bitcoin (BTC), XRP and One Additional Altcoin Set for New Rallies, Says Closely Followed Crypto Strategist",
+      "link": "https://cryptopanic.com/news/14777615/Bitcoin-BTC-XRP-and-One-Additional-Altcoin-Set-for-New-Rallies-Says-Closely-Followed-Crypto-Strategist",
+      "pubDate": "2022-04-03T07:04:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A closely tracked crypto strategist says he believes Bitcoin (BTC), XRP and one more altcoin will likely sustain their bullish momentum despite some market turbulence over the weekend. Pseudonymous trader Credible tells his 320,200 Twitter followers that he sees Bitcoin pulling back to the $42,000 level before resuming its uptrend. “With this last weekly close, […]",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BSCDaily on Twitter bringing up some interesting stats...",
+      "link": "https://cryptopanic.com/news/14781894/BSCDaily-on-Twitter-bringing-up-some-interesting-stats",
+      "pubDate": "2022-04-03T06:58:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "RACA"
+      ]
+    },
+    {
+      "title": "🤯Proud of the @AstarNetwork ecosystem! Just getting started...",
+      "link": "https://cryptopanic.com/news/14784413/Proud-of-the-AstarNetwork-ecosystem-Just-getting-started",
+      "pubDate": "2022-04-03T06:36:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CELR"
+      ]
+    },
+    {
+      "title": "RT @rafzalan: Migration to #web3 needs infrastructure that makes on-chain storage searchable, new advertising models and protocol to suppor…",
+      "link": "https://cryptopanic.com/news/14775046/RT-rafzalan-Migration-to-web3-needs-infrastructure-that-makes-on-chain-storage-searchable-new-advertising-models-and-protocol-to-suppor",
+      "pubDate": "2022-04-03T03:50:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REV"
+      ]
+    },
+    {
+      "title": "RCAST 181 – [Climate and Coordination] Mar 25 2022 – Guest: Raphael Fabre – founder of dappy…",
+      "link": "https://cryptopanic.com/news/14775039/RCAST-181-Climate-and-Coordination-Mar-25-2022-Guest-Raphael-Fabre-founder-of-dappy",
+      "pubDate": "2022-04-03T03:42:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REV"
+      ]
+    },
+    {
+      "title": "$100 of USDB Giveaway",
+      "link": "https://cryptopanic.com/news/14781442/100-of-USDB-Giveaway?mtm_campaign=API-OFA",
+      "pubDate": "2022-04-03T02:27:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDB"
+      ]
+    },
+    {
+      "title": "USDB EXPLAINED",
+      "link": "https://cryptopanic.com/news/14781985/USDB-EXPLAINED?mtm_campaign=API-OFA",
+      "pubDate": "2022-04-03T02:20:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDB"
+      ]
+    },
+    {
+      "title": "BTC v. ETH: Can the ‘planet’s largest decentralized network’ surpass Bitcoin",
+      "link": "https://cryptopanic.com/news/bitcoin/14774888/BTC-v-ETH-Can-the-planets-largest-decentralized-network-surpass-Bitcoin",
+      "pubDate": "2022-04-03T01:30:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "There are competing factors that favor one cryptocurrency over the other. In the case of Ethereum, the blockchain’s smart contract capability has been the game-changer. Also, Ethereum’s transition to PoS is expected to be the watershed moment for the entire Ethereum ecosystem. It would increase ETH’s use cases. Well, even though BTC is the undisputed […]",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Did you know @VitalikButerin was just 19 when he published the #Ethereum whitepaper in 2013? A year later, he co-fo…",
+      "link": "https://cryptopanic.com/news/14780259/Did-you-know-VitalikButerin-was-just-19-when-he-published-the-Ethereum-whitepaper-in-2013-A-year-later-he-co-fo",
+      "pubDate": "2022-04-03T01:00:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "WXT"
+      ]
+    },
+    {
+      "title": "OK! Its Leaked! SMART DASH Claim/Interact w/ supported Projects UI/REWARDS all in one Place! Rolling out soon!…",
+      "link": "https://cryptopanic.com/news/dash/14780951/OK-Its-Leaked-SMART-DASH-ClaimInteract-w-supported-Projects-UIREWARDS-all-in-one-Place-Rolling-out-soon",
+      "pubDate": "2022-04-03T00:55:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DASH",
+        "SMRT"
+      ]
+    },
+    {
+      "title": "RT @myDopamineApp: Hey Dopsters, Today's \"Top Coins List\" is waiting to see your entries at Dopamine App ! Rush in to make your moves! ️…",
+      "link": "https://cryptopanic.com/news/14776987/RT-myDopamineApp-Hey-Dopsters-Todays-Top-Coins-List-is-waiting-to-see-your-entries-at-Dopamine-App-Rush-in-to-make-your-moves",
+      "pubDate": "2022-04-03T00:22:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "IQ"
+      ]
+    },
+    {
+      "title": "RT @DEROMEME: Hei @DeroProject do you like my XMRIG WITH COOLING SYSTEM?",
+      "link": "https://cryptopanic.com/news/14776635/RT-DEROMEME-Hei-DeroProject-do-you-like-my-XMRIG-WITH-COOLING-SYSTEM",
+      "pubDate": "2022-04-03T00:04:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DERO"
+      ]
+    }
+  ]
+}

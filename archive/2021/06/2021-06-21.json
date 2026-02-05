@@ -1,0 +1,375 @@
+{
+  "date": "2021-06-21",
+  "fetchedAt": "2026-02-05T07:27:06.516Z",
+  "articleCount": 25,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Stablecoin inflows to exchanges dip as traders watch Bitcoin from the sidelines",
+      "link": "https://cryptopanic.com/news/12172465/Stablecoin-inflows-to-exchanges-dip-as-traders-watch-Bitcoin-from-the-sidelines",
+      "pubDate": "2021-06-21T22:20:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Stablecoin inflows to exchanges tapered off as investors turned bearish on Bitcoin, but a surge in USDC minting could be a signal of upcoming regulation.",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Digital Currency Group Buying $50M of Ethereum Classic Grayscale Shares",
+      "link": "https://cryptopanic.com/news/12172112/Digital-Currency-Group-Buying-50M-of-Ethereum-Classic-Grayscale-Shares",
+      "pubDate": "2021-06-21T19:33:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The $50 million purchase comes amid questions about the viability of DCG's flagship Bitcoin Trust investment product.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Most Expensive Virtual Plot of Land Ever Sells for $900,000 on Decentraland",
+      "link": "https://cryptopanic.com/news/12171978/Most-Expensive-Virtual-Plot-of-Land-Ever-Sells-for-900000-on-Decentraland",
+      "pubDate": "2021-06-21T18:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "A plot of virtual land on the blockchain-based game Decentraland broke sales records on the platform by selling for nearly $1 million.",
+      "currencies": [
+        "MANA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @dematerialised: Look at all the variety of the applications layer for @lukso_io that @m_h_d_v is outlining  #blockchain",
+      "link": "https://cryptopanic.com/news/12175201/RT-dematerialised-Look-at-all-the-variety-of-the-applications-layer-for-lukso_io-that-m_h_d_v-is-outlining-blockchain",
+      "pubDate": "2021-06-21T18:25:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "What do you like the most of our Supra Bridges?",
+      "link": "https://cryptopanic.com/news/12174470/What-do-you-like-the-most-of-our-Supra-Bridges?mtm_campaign=API-OFA",
+      "pubDate": "2021-06-21T17:08:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SUPRA",
+        "FLP"
+      ]
+    },
+    {
+      "title": "Reef Finance is excited to partner with @shield2protocol to allow users to save their #2FA codes on #ReefChain",
+      "link": "https://cryptopanic.com/news/12176185/Reef-Finance-is-excited-to-partner-with-shield2protocol-to-allow-users-to-save-their-2FA-codes-on-ReefChain",
+      "pubDate": "2021-06-21T16:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ]
+    },
+    {
+      "title": "Polywhale Team Abandon $100 Million Project Amid Scam Allegations",
+      "link": "https://cryptopanic.com/news/matic-network/12171464/Polywhale-Team-Abandon-100-Million-Project-Amid-Scam-Allegations",
+      "pubDate": "2021-06-21T15:48:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "-",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 14
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Dogecoin Tanks 71 Percent Since Elon Musk's \"SNL\" Debut, Reaches 60-Day Low",
+      "link": "https://cryptopanic.com/news/dogecoin/12171439/Dogecoin-Tanks-71-Percent-Since-Elon-Musks-SNL-Debut-Reaches-60-Day-Low",
+      "pubDate": "2021-06-21T15:34:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin is getting clobbered harder than other major cryptocurrencies",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 9
+      }
+    },
+    {
+      "title": "Probably is Chanpeng Zatoshi :D",
+      "link": "https://cryptopanic.com/news/12173632/Probably-is-Chanpeng-Zatoshi-D?mtm_campaign=API-OFA",
+      "pubDate": "2021-06-21T13:10:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BB"
+      ]
+    },
+    {
+      "title": "Why this growth of SUSHI on MATIC should matter to traders",
+      "link": "https://cryptopanic.com/news/matic-network/12170880/Why-this-growth-of-SUSHI-on-MATIC-should-matter-to-traders",
+      "pubDate": "2021-06-21T13:00:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "SUSHI was trading at the same level as last week, however, there are metrics that suggest the sentiment and ROI have changed. At the $7.91 level, SUSHI’s trading volume was up 83%. This increase in trading volume is not indicative of the dip; it represents the selling pressure that SUSHI has resisted over the past […]",
+      "currencies": [
+        "MATIC",
+        "SUSHI"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @michael_saylor: MicroStrategy has purchased an additional 13,005 bitcoins for ~$489 million in cash at an average price of ~$37,617 per…",
+      "link": "https://cryptopanic.com/news/12176272/RT-michael_saylor-MicroStrategy-has-purchased-an-additional-13005-bitcoins-for-489-million-in-cash-at-an-average-price-of-37617-per",
+      "pubDate": "2021-06-21T12:19:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "Google for Blockchains: Unmarshal Launches a Multi-Chain Blockchain Explorer",
+      "link": "https://cryptopanic.com/news/matic-network/12170614/Google-for-Blockchains-Unmarshal-Launches-a-Multi-Chain-Blockchain-Explorer",
+      "pubDate": "2021-06-21T11:33:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Imagine relating the ease of searching for information on the world wide web using Google with the blockchain; Unmarshal has launched Xscan.io, the Google for blockchain networks. The multi-chain DeFi data indexing network releases Xscan, a multi-chain explorer with support for Ethereum, Polygon and Binance Smart Chain. With zero technical experience requirement, anyone can simply […]",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 22,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @btsfav: You can now buy and sell $AVA directly from your L1 Wallet and... @THORChain @SKIPswap",
+      "link": "https://cryptopanic.com/news/12170565/RT-btsfav-You-can-now-buy-and-sell-AVA-directly-from-your-L1-Wallet-and-THORChain-SKIPswap",
+      "pubDate": "2021-06-21T11:25:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "RT @buyaladdinapp:  Today marks the 50th day of our 100 x 100 x 100 #ABBCEvent! Don't miss the chance to win awesome rewards now. Join the…",
+      "link": "https://cryptopanic.com/news/12173313/RT-buyaladdinapp-Today-marks-the-50th-day-of-our-100-x-100-x-100-ABBCEvent-Dont-miss-the-chance-to-win-awesome-rewards-now-Join-the",
+      "pubDate": "2021-06-21T10:19:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ABBC"
+      ]
+    },
+    {
+      "title": "Polkadot (DOT) Struggles to Hold Support After Breakdown",
+      "link": "https://cryptopanic.com/news/polkadot/12170393/Polkadot-DOT-Struggles-to-Hold-Support-After-Breakdown",
+      "pubDate": "2021-06-21T10:13:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Polkadot (DOT) is attempting to hold on above a long-term support area at $19. The direction of the trend is undetermined.",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @btsfav: #Bitcoin crashing? Exchange to $BUSD or $USDT directly from your own wallet! #yourkeysyourcoins via #th…",
+      "link": "https://cryptopanic.com/news/12170366/RT-btsfav-Bitcoin-crashing-Exchange-to-BUSD-or-USDT-directly-from-your-own-wallet-yourkeysyourcoins-via-th",
+      "pubDate": "2021-06-21T10:09:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BUSD",
+        "STEEM"
+      ]
+    },
+    {
+      "title": "It is time that big crypto players, stopped making astronomical Bitcoin price predictions - with little logical sen…",
+      "link": "https://cryptopanic.com/news/12174646/It-is-time-that-big-crypto-players-stopped-making-astronomical-Bitcoin-price-predictions-with-little-logical-sen",
+      "pubDate": "2021-06-21T10:01:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Ethereum Dropped Below $2K for the First Time in a Month as BTC Slipped to $32K (Market Watch)",
+      "link": "https://cryptopanic.com/news/ethereum/12170189/Ethereum-Dropped-Below-2K-for-the-First-Time-in-a-Month-as-BTC-Slipped-to-32K-Market-Watch",
+      "pubDate": "2021-06-21T08:46:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "More Chinese FUD has caused significant price drops in the market as ether plummeted to its lowest price line in a month below $2,000.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "$1 Billion in Liquidations as Crypto Markets Lose $120B in a Day",
+      "link": "https://cryptopanic.com/news/ethereum/12169657/1-Billion-in-Liquidations-as-Crypto-Markets-Lose-120B-in-a-Day",
+      "pubDate": "2021-06-21T08:00:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The crypto market has faced another volatile trading day, and the total liquidations have jumped to roughly $1 billion.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 6
+      }
+    },
+    {
+      "title": ".@Wendys what time does my shift start?",
+      "link": "https://cryptopanic.com/news/12169380/Wendys-what-time-does-my-shift-start",
+      "pubDate": "2021-06-21T07:06:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "Dogecoin (DOGE) car crashes during NASCAR race",
+      "link": "https://cryptopanic.com/news/dogecoin/12168232/Dogecoin-DOGE-car-crashes-during-NASCAR-race",
+      "pubDate": "2021-06-21T06:46:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "A Dogecoin-branded race car crashed into the wall during Saturday’s NASCAR race on its return to the track, finishing last and causing a temporary price dump on DOGE.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @CitadelDAO: As we all know Validator Universe is huge and today we’ve prepared some @BandProtocol facts and htt…",
+      "link": "https://cryptopanic.com/news/12173516/RT-CitadelDAO-As-we-all-know-Validator-Universe-is-huge-and-today-weve-prepared-some-BandProtocol-facts-and-htt",
+      "pubDate": "2021-06-21T06:14:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "XRP Might Not Be a Security, According to SEC Commissioner",
+      "link": "https://cryptopanic.com/news/ripple/12166747/XRP-Might-Not-Be-a-Security-According-to-SEC-Commissioner",
+      "pubDate": "2021-06-21T05:07:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "SEC Commissioner Hester Peirce is calling for greater regulatory clarity",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cocos-BCX Will Complete Migration from MainNet at 2 PM SGT, June 30th and Develop More in Ethereum Ecosystem.…",
+      "link": "https://cryptopanic.com/news/12167266/Cocos-BCX-Will-Complete-Migration-from-MainNet-at-2-PM-SGT-June-30th-and-Develop-More-in-Ethereum-Ecosystem",
+      "pubDate": "2021-06-21T03:56:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "COCOS"
+      ]
+    },
+    {
+      "title": "Here is another article from @coreycosta123 regarding Blockchain voting. Well related to current global environmen…",
+      "link": "https://cryptopanic.com/news/12166849/Here-is-another-article-from-coreycosta123-regarding-Blockchain-voting-Well-related-to-current-global-environmen",
+      "pubDate": "2021-06-21T02:55:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    }
+  ]
+}

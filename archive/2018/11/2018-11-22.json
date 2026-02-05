@@ -1,0 +1,25 @@
+{
+  "date": "2018-11-22",
+  "fetchedAt": "2026-02-05T07:27:07.891Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "EOSIO Announces Version 1.5.0-rci as a Release Candidate",
+      "link": "https://cryptopanic.com/news/3764503/EOSIO-Announces-Version-150-rci-as-a-Release-Candidate",
+      "pubDate": "2018-11-22T12:59:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

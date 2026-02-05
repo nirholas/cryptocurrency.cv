@@ -1,0 +1,121 @@
+{
+  "date": "2020-11-19",
+  "fetchedAt": "2026-02-05T07:27:06.905Z",
+  "articleCount": 8,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "If you don’t have enough mental power to read the full guide above, please check out our recent video-guide. Step…",
+      "link": "https://cryptopanic.com/news/11328751/If-you-dont-have-enough-mental-power-to-read-the-full-guide-above-please-check-out-our-recent-video-guide-Step",
+      "pubDate": "2020-11-19T23:58:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PROM"
+      ]
+    },
+    {
+      "title": "DeFi Mainstay Aave Launches Money Market With CrescoFin",
+      "link": "https://cryptopanic.com/news/10588043/DeFi-Mainstay-Aave-Launches-Money-Market-With-CrescoFin",
+      "pubDate": "2020-11-19T22:23:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Litecoin (LTC) Comes Close to 2020 High After 223 Percent Rally",
+      "link": "https://cryptopanic.com/news/litecoin/10584833/Litecoin-LTC-Comes-Close-to-2020-High-After-223-Percent-Rally",
+      "pubDate": "2020-11-19T16:05:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BTC forks Bitcoin Gold and Bitcoin Diamond mysteriously pump 25% each",
+      "link": "https://cryptopanic.com/news/10583827/BTC-forks-Bitcoin-Gold-and-Bitcoin-Diamond-mysteriously-pump-25-each",
+      "pubDate": "2020-11-19T14:30:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BTG"
+      ]
+    },
+    {
+      "title": "Do you believe crypto is the future?",
+      "link": "https://cryptopanic.com/news/10582621/Do-you-believe-crypto-is-the-future",
+      "pubDate": "2020-11-19T12:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Excited to be working with @clear_bank as our UK banking partner to enable Gemini's UK customers to make instant an…",
+      "link": "https://cryptopanic.com/news/10582117/Excited-to-be-working-with-clear_bank-as-our-UK-banking-partner-to-enable-Geminis-UK-customers-to-make-instant-an",
+      "pubDate": "2020-11-19T11:13:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    },
+    {
+      "title": "From 2018 to October 2020, $HYN was based on #Ethereum and now on #Atlas. Today is the 5th birthday of ERC20 Token…",
+      "link": "https://cryptopanic.com/news/10581573/From-2018-to-October-2020-HYN-was-based-on-Ethereum-and-now-on-Atlas-Today-is-the-5th-birthday-of-ERC20-Token",
+      "pubDate": "2020-11-19T09:50:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Bitfinex Derivatives launch IOTA, Chainlink, Uniswap perpetual swaps",
+      "link": "https://cryptopanic.com/news/uniswap/10578240/Bitfinex-Derivatives-launch-IOTA-Chainlink-Uniswap-perpetual-swaps",
+      "pubDate": "2020-11-19T00:00:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "UNI",
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

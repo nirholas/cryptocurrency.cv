@@ -1,0 +1,79 @@
+{
+  "date": "2019-01-03",
+  "fetchedAt": "2026-02-05T07:27:06.998Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "BTC Head to All-Time Highs, XRP Could Become Number One, and BCH/BSV Will Fade Away: 7 Forecasts for 2019 by Weiss Ratings",
+      "link": "https://cryptopanic.com/news/4151656/BTC-Head-to-All-Time-Highs-XRP-Could-Become-Number-One-and-BCHBSV-Will-Fade-Away-7-Forecasts-for-2019-by-Weiss-Ratings",
+      "pubDate": "2019-01-03T20:40:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BitTorrent Is Launching Its Own Cryptocurrency on the Tron Network",
+      "link": "https://cryptopanic.com/news/tron/4148347/BitTorrent-Is-Launching-Its-Own-Cryptocurrency-on-the-Tron-Network",
+      "pubDate": "2019-01-03T14:45:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron is Garbage!? Stellar Lumens' Founder Slams Justin Sun and TRX",
+      "link": "https://cryptopanic.com/news/tron/4148169/Tron-is-Garbage-Stellar-Lumens-Founder-Slams-Justin-Sun-and-TRX",
+      "pubDate": "2019-01-03T14:30:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "IOTA Release a Permissionless Chat Application on the IOTA Tangle",
+      "link": "https://cryptopanic.com/news/4147210/IOTA-Release-a-Permissionless-Chat-Application-on-the-IOTA-Tangle",
+      "pubDate": "2019-01-03T12:29:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

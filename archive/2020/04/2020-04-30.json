@@ -1,0 +1,44 @@
+{
+  "date": "2020-04-30",
+  "fetchedAt": "2026-02-05T07:27:06.994Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tie-Up Between Chainlink and Tezos Finally Happening",
+      "link": "https://cryptopanic.com/news/chainlink/8650074/Tie-Up-Between-Chainlink-and-Tezos-Finally-Happening",
+      "pubDate": "2020-04-30T16:22:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tezos chooses Chainlink oracles to power its smart contracts",
+      "link": "https://cryptopanic.com/news/8648063/Tezos-chooses-Chainlink-oracles-to-power-its-smart-contracts",
+      "pubDate": "2020-04-30T13:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

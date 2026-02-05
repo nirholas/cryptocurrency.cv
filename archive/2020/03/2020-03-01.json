@@ -1,0 +1,25 @@
+{
+  "date": "2020-03-01",
+  "fetchedAt": "2026-02-05T07:27:06.865Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "U.K. Fashion Brand Embraces VeChain (VET) for Better Supply Chain Traceability",
+      "link": "https://cryptopanic.com/news/8077464/UK-Fashion-Brand-Embraces-VeChain-VET-for-Better-Supply-Chain-Traceability",
+      "pubDate": "2020-03-01T11:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

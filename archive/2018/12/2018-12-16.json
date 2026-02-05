@@ -1,0 +1,59 @@
+{
+  "date": "2018-12-16",
+  "fetchedAt": "2026-02-05T07:27:07.855Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Litecoin Overtakes Bitcoin Cash [BCH] as it Soars 11% in Price",
+      "link": "https://cryptopanic.com/news/3993342/Litecoin-Overtakes-Bitcoin-Cash-BCH-as-it-Soars-11-in-Price",
+      "pubDate": "2018-12-16T14:24:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "TRON Launches TRXMarket, a New Decentralized Exchange (DEX)",
+      "link": "https://cryptopanic.com/news/3993036/TRON-Launches-TRXMarket-a-New-Decentralized-Exchange-DEX",
+      "pubDate": "2018-12-16T13:29:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "TRON Releases Dapp Weekly Report: Two Tron-based Decentralized Exchanges Launched",
+      "link": "https://cryptopanic.com/news/3992852/TRON-Releases-Dapp-Weekly-Report-Two-Tron-based-Decentralized-Exchanges-Launched",
+      "pubDate": "2018-12-16T12:29:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

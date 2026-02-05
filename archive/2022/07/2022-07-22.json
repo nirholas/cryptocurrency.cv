@@ -1,0 +1,591 @@
+{
+  "date": "2022-07-22",
+  "fetchedAt": "2026-02-05T07:27:07.648Z",
+  "articleCount": 39,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Friday night is Ladies' night at the Villa Borgata. Where my Cyborg Divas at?!! Holla!!",
+      "link": "https://cryptopanic.com/news/15846214/Friday-night-is-Ladies-night-at-the-Villa-Borgata-Where-my-Cyborg-Divas-at-Holla?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-22T23:31:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BORG"
+      ]
+    },
+    {
+      "title": "Top Ethereum Altcoin Project Appears Ready for Major Rally, According to Crypto Analyst Michaël van de Poppe",
+      "link": "https://cryptopanic.com/news/15844128/Top-Ethereum-Altcoin-Project-Appears-Ready-for-Major-Rally-According-to-Crypto-Analyst-Michael-van-de-Poppe",
+      "pubDate": "2022-07-22T22:05:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A widely followed crypto analyst says one blockchain oracle built on Ethereum (ETH) is poised for a bullish flip. Trader Michaël van de Poppe tells his 618,300 Twitter followers that Chainlink (LINK) could explode from current prices nearing $7 to upwards of $10. “Chainlink looks ready for $9.50-10.00, and there’s not much you can do about that. […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOT",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Voyager Seeks to Reopen Withdrawals as FTX Proposes Joint Plan",
+      "link": "https://cryptopanic.com/news/15844026/Voyager-Seeks-to-Reopen-Withdrawals-as-FTX-Proposes-Joint-Plan",
+      "pubDate": "2022-07-22T21:15:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Voyager and FTX have put forward complementary plans that could help users regain access to their account balances. Voyager suspended withdrawals on July 1, leaving customers without access to their balances for three weeks.Now, bankruptcy and restructuring proceedings could allow customers to regain access to their account balances. Voyager says that one of its latest filings seeks court...",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "FTX proposes a way to give Voyager Digital clients some of their digital assets back early",
+      "link": "https://cryptopanic.com/news/ftx-token/15843971/FTX-proposes-a-way-to-give-Voyager-Digital-clients-some-of-their-digital-assets-back-early",
+      "pubDate": "2022-07-22T20:59:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "FTX is proposing to buy out all Voyager Digital digital assets and digital asset loans, except loans to Three Arrows Capital, which would remain Voyager Digital’s problem.",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "FTX Offers to Bail Out Voyager Customers in Joint Liquidity Proposal",
+      "link": "https://cryptopanic.com/news/ftx-token/15843970/FTX-Offers-to-Bail-Out-Voyager-Customers-in-Joint-Liquidity-Proposal",
+      "pubDate": "2022-07-22T20:56:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Debtors of crypto lender Voyager may still pursue their claims against now-defunct Three Arrows Capital for additional recoveries",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "RT @ErasureStaked: Staked in tournaments &gt; ONE MILLION $NMR",
+      "link": "https://cryptopanic.com/news/15843960/RT-ErasureStaked-Staked-in-tournaments-gt-ONE-MILLION-NMR",
+      "pubDate": "2022-07-22T20:54:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NMR"
+      ]
+    },
+    {
+      "title": "Bankman-Fried says his firms may deploy ‘hundreds of millions’ to backstop struggling crypto industry",
+      "link": "https://cryptopanic.com/news/ftx-token/15843934/Bankman-Fried-says-his-firms-may-deploy-hundreds-of-millions-to-backstop-struggling-crypto-industry",
+      "pubDate": "2022-07-22T20:32:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The interview comes days after reports that FTX and FTX US are in talks to raise fresh funds following a spending spree that saw the firm deploy nearly $1 billion over two weeks in June.",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Incoming Lows? Market Players Reveal What To Expect From Bitcoin In The Near Term",
+      "link": "https://cryptopanic.com/news/bitcoin/15843876/Incoming-Lows-Market-Players-Reveal-What-To-Expect-From-Bitcoin-In-The-Near-Term",
+      "pubDate": "2022-07-22T20:12:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "\"Bitcoin market cycle bottoms almost never occur when everyone agrees,\" said Kevin Svenson...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 10
+      }
+    },
+    {
+      "title": "Binance Had ‘Very Minimal’ Exposure to Collapsing Crypto Lending Companies, Says CEO Changpeng Zhao",
+      "link": "https://cryptopanic.com/news/15843809/Binance-Had-Very-Minimal-Exposure-to-Collapsing-Crypto-Lending-Companies-Says-CEO-Changpeng-Zhao",
+      "pubDate": "2022-07-22T19:55:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polkadot’s [DOT] price, volume part ways to give these signals",
+      "link": "https://cryptopanic.com/news/15843744/Polkadots-DOT-price-volume-part-ways-to-give-these-signals",
+      "pubDate": "2022-07-22T19:30:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Polkadot [DOT], 86.45% down from its all-time high (ATH), made some gains over the last 24 hours of press time. After dropping to $7.25 on 21 July, DOT has moved up 3.45%. At the time of writing, the coin was priced at $7.66. However, the recent price uptick does not mean that all is well […]",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Price analysis 7/22: BTC, ETH, BNB, XRP, ADA, SOL, DOGE, DOT, MATIC, AVAX",
+      "link": "https://cryptopanic.com/news/15843669/Price-analysis-722-BTC-ETH-BNB-XRP-ADA-SOL-DOGE-DOT-MATIC-AVAX",
+      "pubDate": "2022-07-22T19:04:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Traders are still buying BTC and major altcoins on each dip, but selling near overhead resistance could be a sign that price action will remain range-bound in the short-term.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "XRP",
+        "DOGE",
+        "DOT",
+        "AVAX",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Excited to team with @HuobiGlobal to celebrate $ETH's birthday Look out for #Huobi hangout in #CEEKLAND soon",
+      "link": "https://cryptopanic.com/news/15845691/Excited-to-team-with-HuobiGlobal-to-celebrate-ETHs-birthday-Look-out-for-Huobi-hangout-in-CEEKLAND-soon",
+      "pubDate": "2022-07-22T17:38:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "CEEK"
+      ]
+    },
+    {
+      "title": "Three new #cryptos are now available to trade in the #Telcoin App! Read below to learn more about $SOL $SAND $GHST…",
+      "link": "https://cryptopanic.com/news/15850098/Three-new-cryptos-are-now-available-to-trade-in-the-Telcoin-App-Read-below-to-learn-more-about-SOL-SAND-GHST",
+      "pubDate": "2022-07-22T17:10:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "SAND",
+        "TEL"
+      ]
+    },
+    {
+      "title": "Pro Bitcoin traders are uncomfortable with bullish positions",
+      "link": "https://cryptopanic.com/news/bitcoin/15843188/Pro-Bitcoin-traders-are-uncomfortable-with-bullish-positions",
+      "pubDate": "2022-07-22T16:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "BTC derivatives used by whales and market makers do not support a continuous price recovery above $24,000.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 11
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @DappRadar: @ThetaDrop, the #NFT marketplace reinvented by @Theta_Network, has seen UAW growth of +1093% and transactions up by +465%…",
+      "link": "https://cryptopanic.com/news/theta-token/15850046/RT-DappRadar-ThetaDrop-the-NFT-marketplace-reinvented-by-Theta_Network-has-seen-UAW-growth-of-1093-and-transactions-up-by-465",
+      "pubDate": "2022-07-22T16:14:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Heatwave causes largest Bitcoin mining power drop since China ban",
+      "link": "https://cryptopanic.com/news/bitcoin/15843137/Heatwave-causes-largest-Bitcoin-mining-power-drop-since-China-ban",
+      "pubDate": "2022-07-22T16:01:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "As the world battles with soaring air temperatures that have engulfed multiple countries around the globe and are breaking century-long... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 11
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ethereum Classic soars 100% in nine days  outperforming ETH as 'the Merge' approaches",
+      "link": "https://cryptopanic.com/news/15843074/Ethereum-Classic-soars-100-in-nine-days-outperforming-ETH-as-the-Merge-approaches",
+      "pubDate": "2022-07-22T15:57:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum's transition to proof-of-stake could be a boon for the price of Ethereum Classic.",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Classic soars 100% in nine days outperforming ETH as 'the Merge' approaches",
+      "link": "https://cryptopanic.com/news/ethereum-classic/15843074/Ethereum-Classic-soars-100-in-nine-days-outperforming-ETH-as-the-Merge-approaches",
+      "pubDate": "2022-07-22T15:57:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum's transition to proof-of-stake could be a boon for the price of Ethereum Classic.",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We are excited to present the first AMA Session with @MariuszKrolWolf, Metahero's new CEO. Sit back, relax and enjo…",
+      "link": "https://cryptopanic.com/news/15848357/We-are-excited-to-present-the-first-AMA-Session-with-MariuszKrolWolf-Metaheros-new-CEO-Sit-back-relax-and-enjo",
+      "pubDate": "2022-07-22T15:35:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HERO"
+      ]
+    },
+    {
+      "title": "see gecko, follow gecko",
+      "link": "https://cryptopanic.com/news/15846215/see-gecko-follow-gecko?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-22T15:04:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BORG"
+      ]
+    },
+    {
+      "title": "50 fintech specialists predict Solana to trade at $45 by the end of 2022",
+      "link": "https://cryptopanic.com/news/15842767/50-fintech-specialists-predict-Solana-to-trade-at-45-by-the-end-of-2022",
+      "pubDate": "2022-07-22T14:43:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The cryptocurrency market is back in the green zone again and so is one of its major digital assets –... Continue reading",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Shiba Inu Surpasses Tron (TRX), Rising 14% Weekly",
+      "link": "https://cryptopanic.com/news/15842776/Shiba-Inu-Surpasses-Tron-TRX-Rising-14-Weekly",
+      "pubDate": "2022-07-22T14:41:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Shiba Inu (SHIB) is currently outpacing Tron (TRX)",
+      "currencies": [
+        "TRX",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogecoin Rolls Out Upgrade on Feature Designed To Combat DOGE’s ‘Biggest Threat’",
+      "link": "https://cryptopanic.com/news/15842732/Dogecoin-Rolls-Out-Upgrade-on-Feature-Designed-To-Combat-DOGEs-Biggest-Threat",
+      "pubDate": "2022-07-22T14:30:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin (DOGE) is rolling out an upgrade offering “important security updates and changes to network efficiency.” Dogecoin developer Patrick Lodder says the upgrade will lower the meme coin’s recommended dust limits by around 99%. “This release changes the recommended dust limit for all participants on the Dogecoin network from 1 DOGE to 0.01 DOGE.” Dust […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @ardor_world: It turns out that $Ignis Asset Exchange has the ability to control the market by the account issuing the asset. A cool fea…",
+      "link": "https://cryptopanic.com/news/15842504/RT-ardor_world-It-turns-out-that-Ignis-Asset-Exchange-has-the-ability-to-control-the-market-by-the-account-issuing-the-asset-A-cool-fea",
+      "pubDate": "2022-07-22T13:40:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ARDR"
+      ]
+    },
+    {
+      "title": "Missed out on @WeAreDevs World Congress in #Berlin? Catch up on ‘20 Million Txs Per Day: Writing Data to the Worl…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/15845513/Missed-out-on-WeAreDevs-World-Congress-in-Berlin-Catch-up-on-20-Million-Txs-Per-Day-Writing-Data-to-the-Worl",
+      "pubDate": "2022-07-22T13:08:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "We're now in the second week of the Holochain Immersive and it is going very well. The eight developers completed t…",
+      "link": "https://cryptopanic.com/news/15847419/Were-now-in-the-second-week-of-the-Holochain-Immersive-and-it-is-going-very-well-The-eight-developers-completed-t",
+      "pubDate": "2022-07-22T12:51:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HOT"
+      ]
+    },
+    {
+      "title": "Kusama Is Soaring. Can Polkadot Catch Up?",
+      "link": "https://cryptopanic.com/news/15842306/Kusama-Is-Soaring-Can-Polkadot-Catch-Up",
+      "pubDate": "2022-07-22T12:35:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The canary network for the Polkadot blockchain, Kusama, has recently enjoyed a rally in the market. Now, the technicals point to a brief correction that may allow DOT to take the lead. Kusama has outperformed Polkadot in the latest market bounce, but the near-term outlook for both assets differs.Kusama has surged by nearly 13% over the last 12 hours as the cryptocurrency market enjoys new...",
+      "currencies": [
+        "DOT",
+        "KSM"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Part two of the BUILD 🆙 # 1 hackathon workshop about LUKSO Standard Proposals (LSPs) will begin today at 5pm CET ️…",
+      "link": "https://cryptopanic.com/news/15847928/Part-two-of-the-BUILD-1-hackathon-workshop-about-LUKSO-Standard-Proposals-LSPs-will-begin-today-at-5pm-CET",
+      "pubDate": "2022-07-22T12:35:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "Monero Climbs To 5-Week Peak, Nears Key Resistance At $155",
+      "link": "https://cryptopanic.com/news/15842264/Monero-Climbs-To-5-Week-Peak-Nears-Key-Resistance-At-155",
+      "pubDate": "2022-07-22T12:12:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Monero (XMR) spiked to its peak levels in three months, in the face of challenges in the crypto market. XMR has been gaining momentum since June 13 as it has been enjoying highest highs over the past few months. The token has been on an uptrend for the fourth day in a row and today it’s at fever-pitch with an intraday high beaming at $153.09 3hich is considerably the highest gain it has had...",
+      "currencies": [
+        "BNB",
+        "XMR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "RT @marcobrondani: It is here! Power to the community",
+      "link": "https://cryptopanic.com/news/15845692/RT-marcobrondani-It-is-here-Power-to-the-community",
+      "pubDate": "2022-07-22T10:20:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CENNZ"
+      ]
+    },
+    {
+      "title": "RECAP: Our #Klaytn reps, @shin_novation and @yifei_sh1, furthered Klaytn's global venture in 🇯🇵 Highlights: Fire…",
+      "link": "https://cryptopanic.com/news/klay-token/15838022/RECAP-Our-Klaytn-reps-shin_novation-and-yifei_sh1-furthered-Klaytns-global-venture-in-Highlights-Fire",
+      "pubDate": "2022-07-22T07:09:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "RT @NickZahab: Tune in to the @cryptonews Podcast episode 145 with David Shin (@shin_novation), the Head of Global Adoption for @klaytn_of…",
+      "link": "https://cryptopanic.com/news/klay-token/15838023/RT-NickZahab-Tune-in-to-the-cryptonews-Podcast-episode-145-with-David-Shin-shin_novation-the-Head-of-Global-Adoption-for-klaytn_of",
+      "pubDate": "2022-07-22T06:30:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "David Shin, our head of Global Adoption, shares with @arteculate Asia about how #Klaytn is helping developers to cr…",
+      "link": "https://cryptopanic.com/news/klay-token/15838024/David-Shin-our-head-of-Global-Adoption-shares-with-arteculate-Asia-about-how-Klaytn-is-helping-developers-to-cr",
+      "pubDate": "2022-07-22T06:25:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "RT @mattzahab: New @cryptonews Podcast with David Shin (@shin_novation), Head of Global Adoption for @klaytn_official - Future of blockcha…",
+      "link": "https://cryptopanic.com/news/klay-token/15838025/RT-mattzahab-New-cryptonews-Podcast-with-David-Shin-shin_novation-Head-of-Global-Adoption-for-klaytn_official-Future-of-blockcha",
+      "pubDate": "2022-07-22T06:18:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "The Balance Podcast series 1: Takepile",
+      "link": "https://cryptopanic.com/news/15843311/The-Balance-Podcast-series-1-Takepile?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-22T04:18:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDB"
+      ]
+    },
+    {
+      "title": "Kakao’s Ground X forms business alliance to expand NFT use cases, services",
+      "link": "https://cryptopanic.com/news/klay-token/15834241/Kakaos-Ground-X-forms-business-alliance-to-expand-NFT-use-cases-services",
+      "pubDate": "2022-07-22T02:44:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "KLAY"
+      ]
+    },
+    {
+      "title": "All ‘Ethereum killers’ will fail: Blockdaemon’s Freddy Zwanzger",
+      "link": "https://cryptopanic.com/news/15834131/All-Ethereum-killers-will-fail-Blockdaemons-Freddy-Zwanzger",
+      "pubDate": "2022-07-22T01:37:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "“All the Ethereum killers from back in the day didn’t succeed, and I don't expect them to succeed at all,” Blockdaemon’s Ethereum lead told Cointelegraph.",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "DOT",
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "NOT ON MY WATCH, MOTHERF*CKER!!!!!!!!!!!!!",
+      "link": "https://cryptopanic.com/news/15836137/NOT-ON-MY-WATCH-MOTHERFCKER?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-22T01:32:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BORG"
+      ]
+    },
+    {
+      "title": "A delicate balance of #blockchain experts, ecosystem #DApp leaders, and community representatives make up the…",
+      "link": "https://cryptopanic.com/news/15835541/A-delicate-balance-of-blockchain-experts-ecosystem-DApp-leaders-and-community-representatives-make-up-the",
+      "pubDate": "2022-07-22T01:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CENNZ"
+      ]
+    }
+  ]
+}

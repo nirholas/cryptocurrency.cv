@@ -1,0 +1,3002 @@
+{
+  "date": "2024-07-04",
+  "fetchedAt": "2026-02-05T07:27:07.923Z",
+  "articleCount": 216,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin’s (BTC) Price Slips Below $60,000 – Time for Altcoin Season",
+      "link": "https://cryptopanic.com/news/19655468/Bitcoins-BTC-Price-Slips-Below-60000-Time-for-Altcoin-Season",
+      "pubDate": "2024-07-04T23:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ARB"
+      ]
+    },
+    {
+      "title": "German Government Still Holds Over 40K Bitcoins After Recent Sale, Onchain Data Shows",
+      "link": "https://cryptopanic.com/news/19655443/German-Government-Still-Holds-Over-40K-Bitcoins-After-Recent-Sale-Onchain-Data-Shows",
+      "pubDate": "2024-07-04T23:16:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ]
+    },
+    {
+      "title": "Phoenix BCH Miner Elevates Hashrate to New Highs, Raising Concerns Within the Community",
+      "link": "https://cryptopanic.com/news/19655404/Phoenix-BCH-Miner-Elevates-Hashrate-to-New-Highs-Raising-Concerns-Within-the-Community",
+      "pubDate": "2024-07-04T22:30:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Bittensor Identifies Malicious Package as Cause of $8 Million Drain",
+      "link": "https://cryptopanic.com/news/19655363/Bittensor-Identifies-Malicious-Package-as-Cause-of-8-Million-Drain",
+      "pubDate": "2024-07-04T22:03:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TAO"
+      ]
+    },
+    {
+      "title": "Is Cardano the Next Big Winner? Analysts Predict Massive Surge as Bitcoin Wobbles",
+      "link": "https://cryptopanic.com/news/19655327/Is-Cardano-the-Next-Big-Winner-Analysts-Predict-Massive-Surge-as-Bitcoin-Wobbles",
+      "pubDate": "2024-07-04T22:00:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "FLOKI Price Falls 21% in a Day, Open Interest Drops by a Fifth",
+      "link": "https://cryptopanic.com/news/19655410/FLOKI-Price-Falls-21-in-a-Day-Open-Interest-Drops-by-a-Fifth",
+      "pubDate": "2024-07-04T22:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "BONK",
+        "FLOKI"
+      ]
+    },
+    {
+      "title": "Bitcoin price falls to 2-month low, but derivatives markets reflect traders’ interest",
+      "link": "https://cryptopanic.com/news/19655302/Bitcoin-price-falls-to-2-month-low-but-derivatives-markets-reflect-traders-interest",
+      "pubDate": "2024-07-04T21:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDC"
+      ]
+    },
+    {
+      "title": "Crypto startup launches tokenized US Treasury bonds on Bitcoin layer-2s",
+      "link": "https://cryptopanic.com/news/19655279/Crypto-startup-launches-tokenized-US-Treasury-bonds-on-Bitcoin-layer-2s",
+      "pubDate": "2024-07-04T21:37:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "STX"
+      ]
+    },
+    {
+      "title": "RWA Startup Hamilton Tokenizes US Treasury Bills on Bitcoin L2 Solutions",
+      "link": "https://cryptopanic.com/news/19655228/RWA-Startup-Hamilton-Tokenizes-US-Treasury-Bills-on-Bitcoin-L2-Solutions",
+      "pubDate": "2024-07-04T21:25:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "STX"
+      ]
+    },
+    {
+      "title": "US Judge rules that these altcoins are commodities like Bitcoin",
+      "link": "https://cryptopanic.com/news/19655230/US-Judge-rules-that-these-altcoins-are-commodities-like-Bitcoin?mtm_campaign=API-OFA",
+      "pubDate": "2024-07-04T21:23:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "OHM",
+        "KLIMA"
+      ]
+    },
+    {
+      "title": "Bitcoin Plummets as German Government Moves 3,000 BTC to Exchanges — Time to Buy the Dip?",
+      "link": "https://cryptopanic.com/news/19655225/Bitcoin-Plummets-as-German-Government-Moves-3000-BTC-to-Exchanges-Time-to-Buy-the-Dip",
+      "pubDate": "2024-07-04T21:15:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDC",
+        "TUSD"
+      ]
+    },
+    {
+      "title": "Shiba Inu Makes History as First U.S. Public Company Begins Accepting SHIB For Payments",
+      "link": "https://cryptopanic.com/news/19655219/Shiba-Inu-Makes-History-as-First-US-Public-Company-Begins-Accepting-SHIB-For-Payments",
+      "pubDate": "2024-07-04T21:12:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB"
+      ]
+    },
+    {
+      "title": "JPMorgan Chase Issues Economic Warning, Says Trump Victory Over Biden Could Trigger ‘Elixir for Stagflation’",
+      "link": "https://cryptopanic.com/news/19655214/JPMorgan-Chase-Issues-Economic-Warning-Says-Trump-Victory-Over-Biden-Could-Trigger-Elixir-for-Stagflation",
+      "pubDate": "2024-07-04T21:04:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "JOE"
+      ]
+    },
+    {
+      "title": "Crypto Regulation To Improve Regardless Of US Election Winner, CEO Says",
+      "link": "https://cryptopanic.com/news/19655213/Crypto-Regulation-To-Improve-Regardless-Of-US-Election-Winner-CEO-Says",
+      "pubDate": "2024-07-04T21:00:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "JOE"
+      ]
+    },
+    {
+      "title": "Important BitMEX Announcement Concerning Shiba Inu (SHIB) and Other Meme Coins",
+      "link": "https://cryptopanic.com/news/19655177/Important-BitMEX-Announcement-Concerning-Shiba-Inu-SHIB-and-Other-Meme-Coins",
+      "pubDate": "2024-07-04T20:41:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "SHIB",
+        "PEPE"
+      ]
+    },
+    {
+      "title": "Crypto Exchange KuCoin Adds 7.5% Tax for Nigeria Users, Citing 'Regulatory Update'",
+      "link": "https://cryptopanic.com/news/19655153/Crypto-Exchange-KuCoin-Adds-75-Tax-for-Nigeria-Users-Citing-Regulatory-Update",
+      "pubDate": "2024-07-04T20:18:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "From 0 to 239M: How Hamster Kombat is Revolutionizing Web3 Gaming?",
+      "link": "https://cryptopanic.com/news/19655145/From-0-to-239M-How-Hamster-Kombat-is-Revolutionizing-Web3-Gaming",
+      "pubDate": "2024-07-04T20:13:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TON"
+      ]
+    },
+    {
+      "title": "Opentensor Foundation Addresses Bittensor Security Breach",
+      "link": "https://cryptopanic.com/news/19655137/Opentensor-Foundation-Addresses-Bittensor-Security-Breach",
+      "pubDate": "2024-07-04T20:10:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TAO"
+      ]
+    },
+    {
+      "title": "Justin Sun Wants To Buy German Government’s $2.4 Billion BTC Stash To Reduce Bearish Market Impact",
+      "link": "https://cryptopanic.com/news/19655135/Justin-Sun-Wants-To-Buy-German-Governments-24-Billion-BTC-Stash-To-Reduce-Bearish-Market-Impact",
+      "pubDate": "2024-07-04T20:03:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDC",
+        "TRX",
+        "TUSD"
+      ]
+    },
+    {
+      "title": "Why Shiba Inu And Dogecoin Dumping Hard Today?",
+      "link": "https://cryptopanic.com/news/19655114/Why-Shiba-Inu-And-Dogecoin-Dumping-Hard-Today",
+      "pubDate": "2024-07-04T20:00:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "SHIB"
+      ]
+    },
+    {
+      "title": "‘In the Solana ecosystem, memecoins reign’: WIF, BONK outshine ETH memes",
+      "link": "https://cryptopanic.com/news/19655111/In-the-Solana-ecosystem-memecoins-reign-WIF-BONK-outshine-ETH-memes",
+      "pubDate": "2024-07-04T20:00:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "BONK",
+        "WIF"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Real Vision Analyst Says One Metric for Layer-1 Crypto Assets Flashing Bullish Following Altcoin Correction",
+      "link": "https://cryptopanic.com/news/19655109/Real-Vision-Analyst-Says-One-Metric-for-Layer-1-Crypto-Assets-Flashing-Bullish-Following-Altcoin-Correction",
+      "pubDate": "2024-07-04T20:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Aptos launches keyless wallets that use ZK-proofs to verify identities",
+      "link": "https://cryptopanic.com/news/19655087/Aptos-launches-keyless-wallets-that-use-ZK-proofs-to-verify-identities",
+      "pubDate": "2024-07-04T19:48:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "APT"
+      ]
+    },
+    {
+      "title": "Hamster Kombat hits 239M users in 81 days — Telegram’s Durov",
+      "link": "https://cryptopanic.com/news/19655048/Hamster-Kombat-hits-239M-users-in-81-days-Telegrams-Durov",
+      "pubDate": "2024-07-04T19:11:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TON"
+      ]
+    },
+    {
+      "title": "End of The Road for Meme Coins? Dogecoin Takes Heavy Losses",
+      "link": "https://cryptopanic.com/news/19655039/End-of-The-Road-for-Meme-Coins-Dogecoin-Takes-Heavy-Losses",
+      "pubDate": "2024-07-04T19:08:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Monero Down More Than 5% Within 24 hours",
+      "link": "https://cryptopanic.com/news/19655064/Cryptocurrency-Monero-Down-More-Than-5-Within-24-hours",
+      "pubDate": "2024-07-04T19:03:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Mantle Decreases More Than 7% Within 24 hours",
+      "link": "https://cryptopanic.com/news/19655063/Cryptocurrency-Mantle-Decreases-More-Than-7-Within-24-hours",
+      "pubDate": "2024-07-04T19:03:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MNT"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Render Decreases More Than 5% Within 24 hours",
+      "link": "https://cryptopanic.com/news/19655062/Cryptocurrency-Render-Decreases-More-Than-5-Within-24-hours",
+      "pubDate": "2024-07-04T19:02:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RNDR"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Ethereum Classic Decreases More Than 5% Within 24 hours",
+      "link": "https://cryptopanic.com/news/19655047/Cryptocurrency-Ethereum-Classic-Decreases-More-Than-5-Within-24-hours",
+      "pubDate": "2024-07-04T19:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "ONDO Price Consolidation Amid Whale Selling While Investors Hold Firm",
+      "link": "https://cryptopanic.com/news/19655068/ONDO-Price-Consolidation-Amid-Whale-Selling-While-Investors-Hold-Firm",
+      "pubDate": "2024-07-04T19:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ONDO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Over $370,000,000 in Bitcoin, Ethereum and Altcoins Liquidated in 24 Hours As BTC Briefly Dives Below $57,000",
+      "link": "https://cryptopanic.com/news/19654982/Over-370000000-in-Bitcoin-Ethereum-and-Altcoins-Liquidated-in-24-Hours-As-BTC-Briefly-Dives-Below-57000",
+      "pubDate": "2024-07-04T18:41:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "DOGE",
+        "TON"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Flare Enhances Blockchain Interoperability Through LayerZero",
+      "link": "https://cryptopanic.com/news/19654963/Flare-Enhances-Blockchain-Interoperability-Through-LayerZero",
+      "pubDate": "2024-07-04T18:32:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "FLR"
+      ]
+    },
+    {
+      "title": "Polkadot Pulls A Prank? Rebrand Sends Crypto Twitter Into A Frenzy",
+      "link": "https://cryptopanic.com/news/19654972/Polkadot-Pulls-A-Prank-Rebrand-Sends-Crypto-Twitter-Into-A-Frenzy",
+      "pubDate": "2024-07-04T18:30:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Double-Digit Losses Hit Meme Coin Index Amid Bearish Crypto Sentiment",
+      "link": "https://cryptopanic.com/news/19654999/Double-Digit-Losses-Hit-Meme-Coin-Index-Amid-Bearish-Crypto-Sentiment",
+      "pubDate": "2024-07-04T18:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "SHIB",
+        "PEPE",
+        "BONK",
+        "WIF"
+      ]
+    },
+    {
+      "title": "Jupiter Exchange to Distribute $60M in Rewards; Upbit Lists JUP in Solana Ecosystem",
+      "link": "https://cryptopanic.com/news/19654946/Jupiter-Exchange-to-Distribute-60M-in-Rewards-Upbit-Lists-JUP-in-Solana-Ecosystem",
+      "pubDate": "2024-07-04T18:18:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "DAO",
+        "JUP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Can Mt. Gox really crash the market with selling pressure from unloading 73 million USD worth of BCH??",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/19655513/Can-Mt-Gox-really-crash-the-market-with-selling-pressure-from-unloading-73-million-USD-worth-of-BCH",
+      "pubDate": "2024-07-04T18:12:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BCH",
+        "MOON"
+      ]
+    },
+    {
+      "title": "Flare Network Leverages LayerZero to Connect with 75 Blockchains",
+      "link": "https://cryptopanic.com/news/19654927/Flare-Network-Leverages-LayerZero-to-Connect-with-75-Blockchains",
+      "pubDate": "2024-07-04T18:12:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FLR"
+      ]
+    },
+    {
+      "title": "How DePin Networks can decentralize law enforcement",
+      "link": "https://cryptopanic.com/news/19654915/How-DePin-Networks-can-decentralize-law-enforcement",
+      "pubDate": "2024-07-04T18:08:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DAO"
+      ]
+    },
+    {
+      "title": "Notcoin Set to Boost Telegram Crypto Gaming with a $50m Accelerator",
+      "link": "https://cryptopanic.com/news/19654907/Notcoin-Set-to-Boost-Telegram-Crypto-Gaming-with-a-50m-Accelerator",
+      "pubDate": "2024-07-04T18:03:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NOT"
+      ]
+    },
+    {
+      "title": "Despite the Sharp Fall in Bitcoin, These Altcoins Are Making Profit for Their Investors!",
+      "link": "https://cryptopanic.com/news/19654910/Despite-the-Sharp-Fall-in-Bitcoin-These-Altcoins-Are-Making-Profit-for-Their-Investors",
+      "pubDate": "2024-07-04T18:03:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "SHIB",
+        "PEPE",
+        "MOG"
+      ]
+    },
+    {
+      "title": "Shiba Inu Whales Accumulate as Retail Investors Panic Sell",
+      "link": "https://cryptopanic.com/news/19654929/Shiba-Inu-Whales-Accumulate-as-Retail-Investors-Panic-Sell",
+      "pubDate": "2024-07-04T18:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "SHIB"
+      ]
+    },
+    {
+      "title": "Venom Expands Into India With Dual Listings on WazirX and CoinDCX",
+      "link": "https://cryptopanic.com/news/19654887/Venom-Expands-Into-India-With-Dual-Listings-on-WazirX-and-CoinDCX?mtm_campaign=API-OFA",
+      "pubDate": "2024-07-04T17:58:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VENOM"
+      ]
+    },
+    {
+      "title": "BeInCrypto CEO Alena Afanaseva and Charles Hoskinson to Speak at Blockchain Rio 2024",
+      "link": "https://cryptopanic.com/news/19654955/BeInCrypto-CEO-Alena-Afanaseva-and-Charles-Hoskinson-to-Speak-at-Blockchain-Rio-2024",
+      "pubDate": "2024-07-04T17:47:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ADA"
+      ]
+    },
+    {
+      "title": "Hedera (HBAR) Price Eyes $0.57 as Downtrend Strengthens",
+      "link": "https://cryptopanic.com/news/19654951/Hedera-HBAR-Price-Eyes-057-as-Downtrend-Strengthens",
+      "pubDate": "2024-07-04T17:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Telegram and Helika Launch $50M Gaming Accelerator",
+      "link": "https://cryptopanic.com/news/19654850/Telegram-and-Helika-Launch-50M-Gaming-Accelerator",
+      "pubDate": "2024-07-04T17:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TON",
+        "NOT"
+      ]
+    },
+    {
+      "title": "British Pound, European Stocks Surge Ahead Of UK Election Results; Bitcoin Plummets: What's Driving Markets Thursday?",
+      "link": "https://cryptopanic.com/news/19654836/British-Pound-European-Stocks-Surge-Ahead-Of-UK-Election-Results-Bitcoin-Plummets-Whats-Driving-Markets-Thursday",
+      "pubDate": "2024-07-04T17:15:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "XRP",
+        "SOL",
+        "ONE"
+      ]
+    },
+    {
+      "title": "Mt. Gox is all Set to Provide 9900% ROI",
+      "link": "https://cryptopanic.com/news/19654814/Mt-Gox-is-all-Set-to-Provide-9900-ROI",
+      "pubDate": "2024-07-04T17:13:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Bitcoin Alert: Mt. Gox Starts Repayments With Small Exchange Transfer",
+      "link": "https://cryptopanic.com/news/19654789/Bitcoin-Alert-Mt-Gox-Starts-Repayments-With-Small-Exchange-Transfer",
+      "pubDate": "2024-07-04T17:00:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Shiba Inu Coin Price: Here’s What To Do As SHIB Bottoms",
+      "link": "https://cryptopanic.com/news/19654772/Shiba-Inu-Coin-Price-Heres-What-To-Do-As-SHIB-Bottoms",
+      "pubDate": "2024-07-04T17:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "SHIB",
+        "PEPE"
+      ]
+    },
+    {
+      "title": "Hamster Kombat's Token Will Launch on TON Blockchain With Breakthrough Milestones",
+      "link": "https://cryptopanic.com/news/19654998/Hamster-Kombats-Token-Will-Launch-on-TON-Blockchain-With-Breakthrough-Milestones",
+      "pubDate": "2024-07-04T16:49:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TON",
+        "NOT"
+      ]
+    },
+    {
+      "title": "$1.1 Million TVL Vanishes from Friend.tech Amid Base Network Woes",
+      "link": "https://cryptopanic.com/news/19654832/11-Million-TVL-Vanishes-from-Friendtech-Amid-Base-Network-Woes",
+      "pubDate": "2024-07-04T16:46:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ARB",
+        "NOT"
+      ]
+    },
+    {
+      "title": "Justin Sun wants to buy off Germany’s Bitcoin holdings",
+      "link": "https://cryptopanic.com/news/19654735/Justin-Sun-wants-to-buy-off-Germanys-Bitcoin-holdings",
+      "pubDate": "2024-07-04T16:45:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ]
+    },
+    {
+      "title": "ZK Sync Elastic Chain rebrand seeks to carve out scaling niche",
+      "link": "https://cryptopanic.com/news/19654794/ZK-Sync-Elastic-Chain-rebrand-seeks-to-carve-out-scaling-niche",
+      "pubDate": "2024-07-04T16:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MATIC",
+        "ARB",
+        "OP"
+      ]
+    },
+    {
+      "title": "Is There Long-Term Potential in Sub $0.2 Cryptos? $DOGE, $ZK, $KAS, $GRT, and $CFX Explored",
+      "link": "https://cryptopanic.com/news/19654747/Is-There-Long-Term-Potential-in-Sub-02-Cryptos-DOGE-ZK-KAS-GRT-and-CFX-Explored",
+      "pubDate": "2024-07-04T16:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "GRT",
+        "CFX",
+        "KAS"
+      ]
+    },
+    {
+      "title": "Altcoins To Have In Your Portfolio Post US Independence",
+      "link": "https://cryptopanic.com/news/19654682/Altcoins-To-Have-In-Your-Portfolio-Post-US-Independence",
+      "pubDate": "2024-07-04T16:29:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "TON"
+      ]
+    },
+    {
+      "title": "Orbs Liquidity Hub Bags Strategic Integration with Fenix Finance",
+      "link": "https://cryptopanic.com/news/19654655/Orbs-Liquidity-Hub-Bags-Strategic-Integration-with-Fenix-Finance",
+      "pubDate": "2024-07-04T16:15:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ORBS"
+      ]
+    },
+    {
+      "title": "Crypto Trader Returns After Ten Months of Inactivity, Making Millions In Market Crash",
+      "link": "https://cryptopanic.com/news/19654599/Crypto-Trader-Returns-After-Ten-Months-of-Inactivity-Making-Millions-In-Market-Crash",
+      "pubDate": "2024-07-04T16:02:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "PEPE"
+      ]
+    },
+    {
+      "title": "Cardano price prediction: Why a July rally might not be in the cards",
+      "link": "https://cryptopanic.com/news/19654594/Cardano-price-prediction-Why-a-July-rally-might-not-be-in-the-cards",
+      "pubDate": "2024-07-04T16:00:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Web3 Foundation funds Dot Play to elevate Polkadot gaming ecosystem",
+      "link": "https://cryptopanic.com/news/19654588/Web3-Foundation-funds-Dot-Play-to-elevate-Polkadot-gaming-ecosystem",
+      "pubDate": "2024-07-04T16:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Buzz Over Solana ETF Clashes with SOL Price Dip",
+      "link": "https://cryptopanic.com/news/19654675/Buzz-Over-Solana-ETF-Clashes-with-SOL-Price-Dip",
+      "pubDate": "2024-07-04T16:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "MANTRA and RCO Finance (RCOF) Target 3,600% Bull Run as Tokenization Narrative Gains Strength",
+      "link": "https://cryptopanic.com/news/19654593/MANTRA-and-RCO-Finance-RCOF-Target-3600-Bull-Run-as-Tokenization-Narrative-Gains-Strength",
+      "pubDate": "2024-07-04T16:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DAO",
+        "OM"
+      ]
+    },
+    {
+      "title": "Aptos Labs Launches Aptos Connect: Revolutionary Web3 Onboarding Tool",
+      "link": "https://cryptopanic.com/news/19654572/Aptos-Labs-Launches-Aptos-Connect-Revolutionary-Web3-Onboarding-Tool",
+      "pubDate": "2024-07-04T15:55:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "APT"
+      ]
+    },
+    {
+      "title": "Pepe Unchained Smashes $2.2 Million Mark. Is $PEPU the next 10x meme coin?",
+      "link": "https://cryptopanic.com/news/19654667/Pepe-Unchained-Smashes-22-Million-Mark-Is-PEPU-the-next-10x-meme-coin",
+      "pubDate": "2024-07-04T15:47:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "PEPE"
+      ]
+    },
+    {
+      "title": "YieldNest and Origin Announce Merger of primeETH to ynLSD",
+      "link": "https://cryptopanic.com/news/19654674/YieldNest-and-Origin-Announce-Merger-of-primeETH-to-ynLSD",
+      "pubDate": "2024-07-04T15:46:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ALGO",
+        "DAO"
+      ]
+    },
+    {
+      "title": "DOGE, PEPE, And MOG Holders In Profit Above 75% Despite Downturn",
+      "link": "https://cryptopanic.com/news/19654536/DOGE-PEPE-And-MOG-Holders-In-Profit-Above-75-Despite-Downturn",
+      "pubDate": "2024-07-04T15:38:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "PEPE",
+        "MOG"
+      ]
+    },
+    {
+      "title": "BingX Launches USDC-Margined Perpetual Futures Trading",
+      "link": "https://cryptopanic.com/news/19654673/BingX-Launches-USDC-Margined-Perpetual-Futures-Trading",
+      "pubDate": "2024-07-04T15:31:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDC"
+      ]
+    },
+    {
+      "title": "Crypto Mogul Justin Sun Offers To Buy Germany’s $2 Billion Bitcoin Stash",
+      "link": "https://cryptopanic.com/news/19654502/Crypto-Mogul-Justin-Sun-Offers-To-Buy-Germanys-2-Billion-Bitcoin-Stash",
+      "pubDate": "2024-07-04T15:30:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "TRX",
+        "BTT"
+      ]
+    },
+    {
+      "title": "Solana Meme Coins Outperform Ethereum 800% YTD – Top Winners Revealed",
+      "link": "https://cryptopanic.com/news/19654523/Solana-Meme-Coins-Outperform-Ethereum-800-YTD-Top-Winners-Revealed",
+      "pubDate": "2024-07-04T15:30:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "BNB",
+        "SOL",
+        "TRX",
+        "AVAX",
+        "SHIB",
+        "MATIC",
+        "TON",
+        "LUSD",
+        "PEPE",
+        "BONK",
+        "WIF"
+      ]
+    },
+    {
+      "title": "Upbit Revealed Jupiter's New Trading Support; Here are The Details",
+      "link": "https://cryptopanic.com/news/19654495/Upbit-Revealed-Jupiters-New-Trading-Support-Here-are-The-Details",
+      "pubDate": "2024-07-04T15:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "SOL",
+        "ONDO",
+        "JUP"
+      ]
+    },
+    {
+      "title": "Solana Airdrops & Incentives - What to Expect Over the Next Two Months",
+      "link": "https://cryptopanic.com/news/19789970/Solana-Airdrops-Incentives-What-to-Expect-Over-the-Next-Two-Months",
+      "pubDate": "2024-07-04T15:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "JUP"
+      ]
+    },
+    {
+      "title": "Bittensor Halts Network After Users Fall Victim To Malicious Python Software",
+      "link": "https://cryptopanic.com/news/19654488/Bittensor-Halts-Network-After-Users-Fall-Victim-To-Malicious-Python-Software",
+      "pubDate": "2024-07-04T15:24:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TAO"
+      ]
+    },
+    {
+      "title": "Toncoin (TON) Skyrockets 257% in Whale Activity as Bears Hit Crypto Market",
+      "link": "https://cryptopanic.com/news/19654482/Toncoin-TON-Skyrockets-257-in-Whale-Activity-as-Bears-Hit-Crypto-Market",
+      "pubDate": "2024-07-04T15:18:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TON"
+      ]
+    },
+    {
+      "title": "Upcoming LAOS ICO",
+      "link": "https://cryptopanic.com/news/19654472/Upcoming-LAOS-ICO",
+      "pubDate": "2024-07-04T15:14:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Justin Sun eyes $2.3 billion German Bitcoin stash despite community skepticism",
+      "link": "https://cryptopanic.com/news/19654443/Justin-Sun-eyes-23-billion-German-Bitcoin-stash-despite-community-skepticism",
+      "pubDate": "2024-07-04T15:05:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ]
+    },
+    {
+      "title": "Are politicians using crypto to influence the US elections?",
+      "link": "https://cryptopanic.com/news/19654441/Are-politicians-using-crypto-to-influence-the-US-elections",
+      "pubDate": "2024-07-04T15:04:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "JOE"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Arbitrum Decreases More Than 7% Within 24 hours",
+      "link": "https://cryptopanic.com/news/19654487/Cryptocurrency-Arbitrum-Decreases-More-Than-7-Within-24-hours",
+      "pubDate": "2024-07-04T15:02:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "ARB"
+      ]
+    },
+    {
+      "title": "Lido Staked Ether Down More Than 5% Within 24 hours",
+      "link": "https://cryptopanic.com/news/19654485/Lido-Staked-Ether-Down-More-Than-5-Within-24-hours",
+      "pubDate": "2024-07-04T15:02:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "Former Goldman Sachs Analyst Slams XRP and ADA as 'Cult Meme Coins'",
+      "link": "https://cryptopanic.com/news/19654437/Former-Goldman-Sachs-Analyst-Slams-XRP-and-ADA-as-Cult-Meme-Coins",
+      "pubDate": "2024-07-04T15:02:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Litecoin Falls More Than 8% In 24 hours",
+      "link": "https://cryptopanic.com/news/19654484/Cryptocurrency-Litecoin-Falls-More-Than-8-In-24-hours",
+      "pubDate": "2024-07-04T15:01:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash Decreases More Than 8% Within 24 hours",
+      "link": "https://cryptopanic.com/news/19654465/Bitcoin-Cash-Decreases-More-Than-8-Within-24-hours",
+      "pubDate": "2024-07-04T15:00:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Crypto for Advisors: Is Crypto Too Volatile?",
+      "link": "https://cryptopanic.com/news/19654431/Crypto-for-Advisors-Is-Crypto-Too-Volatile",
+      "pubDate": "2024-07-04T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "RNDR"
+      ]
+    },
+    {
+      "title": "3 Coins That Could Restore Your Faith In The Crypto Markets: Polkadot, Raboo and BRETT",
+      "link": "https://cryptopanic.com/news/19654389/3-Coins-That-Could-Restore-Your-Faith-In-The-Crypto-Markets-Polkadot-Raboo-and-BRETT",
+      "pubDate": "2024-07-04T14:53:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "BRETT"
+      ]
+    },
+    {
+      "title": "DOGE and SHIB Price Prediction for July 4",
+      "link": "https://cryptopanic.com/news/19654392/DOGE-and-SHIB-Price-Prediction-for-July-4",
+      "pubDate": "2024-07-04T14:53:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ]
+    },
+    {
+      "title": "Binance to Temporarily Suspend Withdrawals on BNB Chain on This Date, Here's Why",
+      "link": "https://cryptopanic.com/news/19654379/Binance-to-Temporarily-Suspend-Withdrawals-on-BNB-Chain-on-This-Date-Heres-Why",
+      "pubDate": "2024-07-04T14:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BNB"
+      ]
+    },
+    {
+      "title": "‘Raider’ investors are looting DAOs — Nouns and Aragon share lessons learned",
+      "link": "https://cryptopanic.com/news/19654378/Raider-investors-are-looting-DAOs-Nouns-and-Aragon-share-lessons-learned",
+      "pubDate": "2024-07-04T14:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DAO"
+      ]
+    },
+    {
+      "title": "Opera’s MiniPay partners with Mento Labs to offer USDT, USDC, and cUSD swaps",
+      "link": "https://cryptopanic.com/news/19654264/Operas-MiniPay-partners-with-Mento-Labs-to-offer-USDT-USDC-and-cUSD-swaps",
+      "pubDate": "2024-07-04T14:29:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC"
+      ]
+    },
+    {
+      "title": "BONK Price Plummets 10% as $300M Volume Drives Prices Lower – What’s Next?",
+      "link": "https://cryptopanic.com/news/19654209/BONK-Price-Plummets-10-as-300M-Volume-Drives-Prices-Lower-Whats-Next",
+      "pubDate": "2024-07-04T14:14:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BONK"
+      ]
+    },
+    {
+      "title": "Tron Poised To Threaten Ethereum's Revenue Dominance",
+      "link": "https://cryptopanic.com/news/19654208/Tron-Poised-To-Threaten-Ethereums-Revenue-Dominance",
+      "pubDate": "2024-07-04T14:12:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TRX"
+      ]
+    },
+    {
+      "title": "US Judge Found CFTC Right, Decided That Two Altcoins Are Commodities!",
+      "link": "https://cryptopanic.com/news/19654178/US-Judge-Found-CFTC-Right-Decided-That-Two-Altcoins-Are-Commodities?mtm_campaign=API-OFA",
+      "pubDate": "2024-07-04T14:03:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "OHM",
+        "KLIMA"
+      ]
+    },
+    {
+      "title": "Maincard.io to Reach ‘A Billion Potential Users’ With The Open Network Launch",
+      "link": "https://cryptopanic.com/news/19654150/Maincardio-to-Reach-A-Billion-Potential-Users-With-The-Open-Network-Launch",
+      "pubDate": "2024-07-04T14:01:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TON"
+      ]
+    },
+    {
+      "title": "Bitget Wallet Amplifies Trading Features for TON, Introduces Cross-Chain Support for TON Tokens",
+      "link": "https://cryptopanic.com/news/19654127/Bitget-Wallet-Amplifies-Trading-Features-for-TON-Introduces-Cross-Chain-Support-for-TON-Tokens",
+      "pubDate": "2024-07-04T14:00:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TON"
+      ]
+    },
+    {
+      "title": "Arbitrum (ARB) Price Forms New All-Time Low",
+      "link": "https://cryptopanic.com/news/19654228/Arbitrum-ARB-Price-Forms-New-All-Time-Low",
+      "pubDate": "2024-07-04T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "ARB",
+        "ONDO"
+      ]
+    },
+    {
+      "title": "Retirement Portfolio Boosters: 5 Altcoins to Watch in 2024",
+      "link": "https://cryptopanic.com/news/19654234/Retirement-Portfolio-Boosters-5-Altcoins-to-Watch-in-2024",
+      "pubDate": "2024-07-04T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "NEAR",
+        "INJ",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Telegram CEO’s Post Sparks Speculation About Interest in Hamster Kombat",
+      "link": "https://cryptopanic.com/news/19654227/Telegram-CEOs-Post-Sparks-Speculation-About-Interest-in-Hamster-Kombat",
+      "pubDate": "2024-07-04T13:47:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TON",
+        "NOT"
+      ]
+    },
+    {
+      "title": "Book Of Meme (BOME) Continues To Decline Under $0.08, Hold or Sell?",
+      "link": "https://cryptopanic.com/news/19654108/Book-Of-Meme-BOME-Continues-To-Decline-Under-008-Hold-or-Sell?mtm_campaign=API-OFA",
+      "pubDate": "2024-07-04T13:45:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "BOME"
+      ]
+    },
+    {
+      "title": "PEPE Might Hit Floor as 8.27 Trillion Support Comes into View",
+      "link": "https://cryptopanic.com/news/19654083/PEPE-Might-Hit-Floor-as-827-Trillion-Support-Comes-into-View",
+      "pubDate": "2024-07-04T13:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PEPE"
+      ]
+    },
+    {
+      "title": "Tron Founder Justin Sun Willing to Minimize German Government's 40,359 BTC Sell-Off",
+      "link": "https://cryptopanic.com/news/19654494/Tron-Founder-Justin-Sun-Willing-to-Minimize-German-Governments-40359-BTC-Sell-Off",
+      "pubDate": "2024-07-04T13:30:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ]
+    },
+    {
+      "title": "Analyst: VeChain Could Be the Next Big Altcoin Winner, Thanks to Bitcoin and Ethereum ETFs",
+      "link": "https://cryptopanic.com/news/19654116/Analyst-VeChain-Could-Be-the-Next-Big-Altcoin-Winner-Thanks-to-Bitcoin-and-Ethereum-ETFs",
+      "pubDate": "2024-07-04T13:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "VET"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The Open Summit Set to Transform Asia’s WEB3 Landscape as the Largest Ton Event This Summer",
+      "link": "https://cryptopanic.com/news/19654224/The-Open-Summit-Set-to-Transform-Asias-WEB3-Landscape-as-the-Largest-Ton-Event-This-Summer",
+      "pubDate": "2024-07-04T13:23:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TON"
+      ]
+    },
+    {
+      "title": "Experts Bullish on Dogecoin Amid Market Slump: Why Doge2014 Token is One to Keep an Eye On",
+      "link": "https://cryptopanic.com/news/19654027/Experts-Bullish-on-Dogecoin-Amid-Market-Slump-Why-Doge2014-Token-is-One-to-Keep-an-Eye-On",
+      "pubDate": "2024-07-04T13:20:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE"
+      ]
+    },
+    {
+      "title": "Why Mpeppe (MPEPE) Is the Preferred Choice for Cardano (ADA) Investors Seeking Huge Returns",
+      "link": "https://cryptopanic.com/news/19654008/Why-Mpeppe-MPEPE-Is-the-Preferred-Choice-for-Cardano-ADA-Investors-Seeking-Huge-Returns",
+      "pubDate": "2024-07-04T13:14:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ]
+    },
+    {
+      "title": "Cardano Price Prediction: How Can Whales Profit From ADA Free Fall",
+      "link": "https://cryptopanic.com/news/19653989/Cardano-Price-Prediction-How-Can-Whales-Profit-From-ADA-Free-Fall",
+      "pubDate": "2024-07-04T13:11:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Where to buy $SOL and $RNDR in this crypto correction",
+      "link": "https://cryptopanic.com/news/19653980/Where-to-buy-SOL-and-RNDR-in-this-crypto-correction",
+      "pubDate": "2024-07-04T13:09:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "RNDR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogecoin Whale Bags 90M Tokens Amid Market Crash, What’s Next For DOGE?",
+      "link": "https://cryptopanic.com/news/19653971/Dogecoin-Whale-Bags-90M-Tokens-Amid-Market-Crash-Whats-Next-For-DOGE",
+      "pubDate": "2024-07-04T13:01:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE"
+      ]
+    },
+    {
+      "title": "PEPE Trembles as Mpeppe (MPEPE) Popularity Soars – Is This the End of the Meme Coin Rivalry?",
+      "link": "https://cryptopanic.com/news/19653970/PEPE-Trembles-as-Mpeppe-MPEPE-Popularity-Soars-Is-This-the-End-of-the-Meme-Coin-Rivalry",
+      "pubDate": "2024-07-04T13:00:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "PEPE"
+      ]
+    },
+    {
+      "title": "Floki Inu issues THIS urgent warning as prices drop 11%",
+      "link": "https://cryptopanic.com/news/19653965/Floki-Inu-issues-THIS-urgent-warning-as-prices-drop-11",
+      "pubDate": "2024-07-04T13:00:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "FLOKI"
+      ]
+    },
+    {
+      "title": "Mt. Gox: i rimborsi potrebbero far crollare Bitcoin Cash (BCH)",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/19654358/Mt-Gox-i-rimborsi-potrebbero-far-crollare-Bitcoin-Cash-BCH",
+      "pubDate": "2024-07-04T12:56:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ]
+    },
+    {
+      "title": "IOTA Teams Up With Tokeny",
+      "link": "https://cryptopanic.com/news/19653979/IOTA-Teams-Up-With-Tokeny?mtm_campaign=API-OFA",
+      "pubDate": "2024-07-04T12:55:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "IOTA"
+      ]
+    },
+    {
+      "title": "Chainlink (LINK) And Lido Dao (LDO) Hint A 10% Plunge This Week?",
+      "link": "https://cryptopanic.com/news/19653919/Chainlink-LINK-And-Lido-Dao-LDO-Hint-A-10-Plunge-This-Week",
+      "pubDate": "2024-07-04T12:54:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "LDO"
+      ]
+    },
+    {
+      "title": "Polygon Continues Its Slide As The Bears Break Through The $0.52 Low",
+      "link": "https://cryptopanic.com/news/19654440/Polygon-Continues-Its-Slide-As-The-Bears-Break-Through-The-052-Low",
+      "pubDate": "2024-07-04T12:52:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MATIC"
+      ]
+    },
+    {
+      "title": "Justin Sun To Buy German Government’s BTC Stash To Minimise Market Impact",
+      "link": "https://cryptopanic.com/news/19653910/Justin-Sun-To-Buy-German-Governments-BTC-Stash-To-Minimise-Market-Impact",
+      "pubDate": "2024-07-04T12:50:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ]
+    },
+    {
+      "title": "Tron’s Justin Sun Ready to Negotiate With German Govt. on Bitcoin Sales",
+      "link": "https://cryptopanic.com/news/19653903/Trons-Justin-Sun-Ready-to-Negotiate-With-German-Govt-on-Bitcoin-Sales",
+      "pubDate": "2024-07-04T12:48:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ]
+    },
+    {
+      "title": "Is Dogecoin Doomed? DOGE Price Crashes as Competitor Raises $500,000",
+      "link": "https://cryptopanic.com/news/19653892/Is-Dogecoin-Doomed-DOGE-Price-Crashes-as-Competitor-Raises-500000",
+      "pubDate": "2024-07-04T12:47:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE"
+      ]
+    },
+    {
+      "title": "First Layer 2 Meme Coin Pepe Unchained Raises Over $2M at Presale – Best Crypto to Buy?",
+      "link": "https://cryptopanic.com/news/19653899/First-Layer-2-Meme-Coin-Pepe-Unchained-Raises-Over-2M-at-Presale-Best-Crypto-to-Buy",
+      "pubDate": "2024-07-04T12:46:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "PEPE"
+      ]
+    },
+    {
+      "title": "Justin Sun wants to discuss Bitcoin deal with German government to reduce market impact",
+      "link": "https://cryptopanic.com/news/19653867/Justin-Sun-wants-to-discuss-Bitcoin-deal-with-German-government-to-reduce-market-impact",
+      "pubDate": "2024-07-04T12:39:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ]
+    },
+    {
+      "title": "Dogwifhat (WIF) Loses Bulls Support, Chases New Low",
+      "link": "https://cryptopanic.com/news/19654000/Dogwifhat-WIF-Loses-Bulls-Support-Chases-New-Low",
+      "pubDate": "2024-07-04T12:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "WIF"
+      ]
+    },
+    {
+      "title": "Toncoin (TON) Drops Over 7% Despite New Trading Approval in Kazakhstan",
+      "link": "https://cryptopanic.com/news/19653848/Toncoin-TON-Drops-Over-7-Despite-New-Trading-Approval-in-Kazakhstan",
+      "pubDate": "2024-07-04T12:29:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "AVAX",
+        "MATIC",
+        "TON",
+        "APT"
+      ]
+    },
+    {
+      "title": "Tron Founder Justin Sun Offers to Buy German Government’s BTC Stash Amid Price Drop",
+      "link": "https://cryptopanic.com/news/19653818/Tron-Founder-Justin-Sun-Offers-to-Buy-German-Governments-BTC-Stash-Amid-Price-Drop",
+      "pubDate": "2024-07-04T12:26:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ]
+    },
+    {
+      "title": "PEPE Meme Coin Wallet Counts Surges; What It Means For Its Price",
+      "link": "https://cryptopanic.com/news/19653814/PEPE-Meme-Coin-Wallet-Counts-Surges-What-It-Means-For-Its-Price",
+      "pubDate": "2024-07-04T12:21:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "PEPE"
+      ]
+    },
+    {
+      "title": "Mt. Gox Activates Wallets Ahead $9B Bitcoin & BCH Payout, What’s Next?",
+      "link": "https://cryptopanic.com/news/19653745/Mt-Gox-Activates-Wallets-Ahead-9B-Bitcoin-BCH-Payout-Whats-Next",
+      "pubDate": "2024-07-04T12:03:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "What this whale’s latest dump means for ETH, AAVE, and UNI’s prices",
+      "link": "https://cryptopanic.com/news/19653739/What-this-whales-latest-dump-means-for-ETH-AAVE-and-UNIs-prices",
+      "pubDate": "2024-07-04T12:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Tron Founder Justin Sun is Preparing to Buy Bitcoins Held by the German Government!",
+      "link": "https://cryptopanic.com/news/19653696/Tron-Founder-Justin-Sun-is-Preparing-to-Buy-Bitcoins-Held-by-the-German-Government",
+      "pubDate": "2024-07-04T12:00:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ]
+    },
+    {
+      "title": "Telegram And Helika Gaming Launch Gaming Accelerator For Telegram Mini Apps",
+      "link": "https://cryptopanic.com/news/19653695/Telegram-And-Helika-Gaming-Launch-Gaming-Accelerator-For-Telegram-Mini-Apps",
+      "pubDate": "2024-07-04T12:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NOT"
+      ]
+    },
+    {
+      "title": "What is Aevo’s Basis Trade Vault and How Does it Work?",
+      "link": "https://cryptopanic.com/news/19653813/What-is-Aevos-Basis-Trade-Vault-and-How-Does-it-Work?mtm_campaign=API-OFA",
+      "pubDate": "2024-07-04T12:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AEVO"
+      ]
+    },
+    {
+      "title": "Trader Says Top Ethereum Rival Primed To Go Higher, Updates Outlook on Bitcoin and One Blue-Chip Altcoin",
+      "link": "https://cryptopanic.com/news/19653640/Trader-Says-Top-Ethereum-Rival-Primed-To-Go-Higher-Updates-Outlook-on-Bitcoin-and-One-Blue-Chip-Altcoin",
+      "pubDate": "2024-07-04T11:45:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Top DeFi Projects to Watch Out for in 2024",
+      "link": "https://cryptopanic.com/news/19653621/Top-DeFi-Projects-to-Watch-Out-for-in-2024",
+      "pubDate": "2024-07-04T11:41:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash (BCH) Sees Record Hashrate as Price Hits 3-Month Low",
+      "link": "https://cryptopanic.com/news/19653755/Bitcoin-Cash-BCH-Sees-Record-Hashrate-as-Price-Hits-3-Month-Low",
+      "pubDate": "2024-07-04T11:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Rising Dominance Of Arbitrum and Base Defies Liquidity Fragmentation Narrative",
+      "link": "https://cryptopanic.com/news/19653588/Rising-Dominance-Of-Arbitrum-and-Base-Defies-Liquidity-Fragmentation-Narrative",
+      "pubDate": "2024-07-04T11:28:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ARB"
+      ]
+    },
+    {
+      "title": "DOGE Sees Over $4 Million Liquidation In 24 Hours",
+      "link": "https://cryptopanic.com/news/19653570/DOGE-Sees-Over-4-Million-Liquidation-In-24-Hours",
+      "pubDate": "2024-07-04T11:26:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ]
+    },
+    {
+      "title": "Missed the Boat on ApeCoin and Chainlink? WW3 Shiba’s Meteoric Rise is Stealing the Spotlight!",
+      "link": "https://cryptopanic.com/news/19653549/Missed-the-Boat-on-ApeCoin-and-Chainlink-WW3-Shibas-Meteoric-Rise-is-Stealing-the-Spotlight",
+      "pubDate": "2024-07-04T11:18:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "Meme Coin Sell-Offs: Crypto Investors Book Profit as Broader Market Plummets",
+      "link": "https://cryptopanic.com/news/19653513/Meme-Coin-Sell-Offs-Crypto-Investors-Book-Profit-as-Broader-Market-Plummets",
+      "pubDate": "2024-07-04T11:06:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "DOGE",
+        "EOS",
+        "PEPE",
+        "WIF",
+        "MOG"
+      ]
+    },
+    {
+      "title": "Telegram and Helika Gaming unveil $50M gaming accelerator with Notcoin",
+      "link": "https://cryptopanic.com/news/19653484/Telegram-and-Helika-Gaming-unveil-50M-gaming-accelerator-with-Notcoin",
+      "pubDate": "2024-07-04T11:03:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TON",
+        "NOT"
+      ]
+    },
+    {
+      "title": "Is it illegal to operate a Bitcoin Lightning node?",
+      "link": "https://cryptopanic.com/news/19653471/Is-it-illegal-to-operate-a-Bitcoin-Lightning-node",
+      "pubDate": "2024-07-04T11:03:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "GAL"
+      ]
+    },
+    {
+      "title": "Dogecoin Co-Founder Lashes Out After Bitcoin Price Drops Below $58k",
+      "link": "https://cryptopanic.com/news/19653455/Dogecoin-Co-Founder-Lashes-Out-After-Bitcoin-Price-Drops-Below-58k",
+      "pubDate": "2024-07-04T10:56:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ]
+    },
+    {
+      "title": "KangaMoon Leaps Forward, Leaving 1inch and Toncoin in the Dust",
+      "link": "https://cryptopanic.com/news/19653451/KangaMoon-Leaps-Forward-Leaving-1inch-and-Toncoin-in-the-Dust",
+      "pubDate": "2024-07-04T10:54:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "UNI",
+        "TON"
+      ]
+    },
+    {
+      "title": "Cardano (ADA) vs. Bitcoin (BTC): Which Crypto is a Better Investment Now?",
+      "link": "https://cryptopanic.com/news/19653504/Cardano-ADA-vs-Bitcoin-BTC-Which-Crypto-is-a-Better-Investment-Now",
+      "pubDate": "2024-07-04T10:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Cardano’s (ADA) latest analysis shows promising signs of a potential price surge. Cardano advocate Dan Gamberdello has ignited community excitement by stating that the token is primed for a breakout. Other analysts echo this sentiment, suggesting now is an opportune time to swap Bitcoin (BTC) for ADA. In the 4-hour chart, ADA trades at $0.410, […]",
+      "currencies": [
+        "BTC",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Polkadot (DOT) Network Activity Drops to 2024 Lows: Implications for Price",
+      "link": "https://cryptopanic.com/news/19653512/Polkadot-DOT-Network-Activity-Drops-to-2024-Lows-Implications-for-Price",
+      "pubDate": "2024-07-04T10:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "What is Polkadot’s Asynchronous Backing?",
+      "link": "https://cryptopanic.com/news/19653337/What-is-Polkadots-Asynchronous-Backing",
+      "pubDate": "2024-07-04T10:20:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Dogecoin Price Prediction: Rebound or Continued Slide Below $0.1?",
+      "link": "https://cryptopanic.com/news/19653300/Dogecoin-Price-Prediction-Rebound-or-Continued-Slide-Below-01",
+      "pubDate": "2024-07-04T10:13:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE"
+      ]
+    },
+    {
+      "title": "How Bitcoin Whales Could Profit from the Mt. Gox Bitcoin Dump",
+      "link": "https://cryptopanic.com/news/19653370/How-Bitcoin-Whales-Could-Profit-from-the-Mt-Gox-Bitcoin-Dump",
+      "pubDate": "2024-07-04T10:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "41.5 Million Dogecoin (DOGE) in 24 Hours as Heavy Liquidation Hits Crypto",
+      "link": "https://cryptopanic.com/news/19653233/415-Million-Dogecoin-DOGE-in-24-Hours-as-Heavy-Liquidation-Hits-Crypto",
+      "pubDate": "2024-07-04T10:01:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE"
+      ]
+    },
+    {
+      "title": "BitMEX Mimics VanEck with New Meme Coin Index",
+      "link": "https://cryptopanic.com/news/19653340/BitMEX-Mimics-VanEck-with-New-Meme-Coin-Index",
+      "pubDate": "2024-07-04T09:47:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "DOGE",
+        "TRX",
+        "AVAX",
+        "SHIB",
+        "PEPE",
+        "BONK",
+        "WIF",
+        "FLOKI",
+        "BRETT",
+        "MOG"
+      ]
+    },
+    {
+      "title": "Notcoin Set to Launch Telegram Gaming Accelerator for Game Developers",
+      "link": "https://cryptopanic.com/news/19653160/Notcoin-Set-to-Launch-Telegram-Gaming-Accelerator-for-Game-Developers",
+      "pubDate": "2024-07-04T09:40:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NOT"
+      ]
+    },
+    {
+      "title": "All Eyes on TON: How Will Hamster Kombat’s TGE Play Out",
+      "link": "https://cryptopanic.com/news/19653257/All-Eyes-on-TON-How-Will-Hamster-Kombats-TGE-Play-Out",
+      "pubDate": "2024-07-04T09:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TON"
+      ]
+    },
+    {
+      "title": "Bitcoin Examined: These Critical Points Are ‘Very Bad’ For BTC, Analyst Says",
+      "link": "https://cryptopanic.com/news/19653149/Bitcoin-Examined-These-Critical-Points-Are-Very-Bad-For-BTC-Analyst-Says",
+      "pubDate": "2024-07-04T09:35:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Oasys Transactions Are 85% of Transactions on Celer Bridge As Users Move To Native USDC Token",
+      "link": "https://cryptopanic.com/news/19653110/Oasys-Transactions-Are-85-of-Transactions-on-Celer-Bridge-As-Users-Move-To-Native-USDC-Token",
+      "pubDate": "2024-07-04T09:28:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC"
+      ]
+    },
+    {
+      "title": "‘It’s Gonna Rip’: Top Analyst Says Memecoin That’s Exploded Over 6x in Five Months Is About To Go Parabolic",
+      "link": "https://cryptopanic.com/news/19653068/Its-Gonna-Rip-Top-Analyst-Says-Memecoin-Thats-Exploded-Over-6x-in-Five-Months-Is-About-To-Go-Parabolic",
+      "pubDate": "2024-07-04T09:15:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WIF",
+        "FLOKI"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Crypto Price Analysis 7-04 BTC, ETH, SOL, BNB, ADA, UNI, DOGE, APT",
+      "link": "https://cryptopanic.com/news/19653046/Crypto-Price-Analysis-7-04-BTC-ETH-SOL-BNB-ADA-UNI-DOGE-APT",
+      "pubDate": "2024-07-04T09:09:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "ADA",
+        "SOL",
+        "DOGE",
+        "UNI",
+        "APT"
+      ]
+    },
+    {
+      "title": "Shocking Kidnapping Cases Using Cryptocurrency",
+      "link": "https://cryptopanic.com/news/19653036/Shocking-Kidnapping-Cases-Using-Cryptocurrency",
+      "pubDate": "2024-07-04T09:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "TAO"
+      ]
+    },
+    {
+      "title": "Solana DEX Jupiter (JUP) Braces for Major Listing, Recovery Ahead?",
+      "link": "https://cryptopanic.com/news/19652968/Solana-DEX-Jupiter-JUP-Braces-for-Major-Listing-Recovery-Ahead",
+      "pubDate": "2024-07-04T08:45:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "JUP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Pendle DeFi Protocol: A Case Study in Crypto Market Volatility",
+      "link": "https://cryptopanic.com/news/19653038/Pendle-DeFi-Protocol-A-Case-Study-in-Crypto-Market-Volatility?mtm_campaign=API-OFA",
+      "pubDate": "2024-07-04T08:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "PENDLE",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "Grayscale Solana Trust Trading At A Mega 650% Premium: What’s Going On?",
+      "link": "https://cryptopanic.com/news/19652905/Grayscale-Solana-Trust-Trading-At-A-Mega-650-Premium-Whats-Going-On",
+      "pubDate": "2024-07-04T08:30:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana is in red for now, but the coin is one of the top performers. In the last year of trading, SOL, the native currency of the Solana ecosystem, rose by over 15X, quickly moving up the crypto ranking to fifth, flipping XRP, Cardano, and even top meme coins like Dogecoin. GSOL Trading At A […]",
+      "currencies": [
+        "USDT",
+        "ADA",
+        "XRP",
+        "SOL",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Book of Meme (BOME) Eyes Further Decline as It Retests Support",
+      "link": "https://cryptopanic.com/news/19653093/Book-of-Meme-BOME-Eyes-Further-Decline-as-It-Retests-Support?mtm_campaign=API-OFA",
+      "pubDate": "2024-07-04T08:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "BOME",
+        "MEME",
+        "BOOK"
+      ]
+    },
+    {
+      "title": "Traditional VC Firms are Looking for Altcoins to Invest: Aptos Whale Thinks This DeFi Token Could Be The Next Solana",
+      "link": "https://cryptopanic.com/news/19652864/Traditional-VC-Firms-are-Looking-for-Altcoins-to-Invest-Aptos-Whale-Thinks-This-DeFi-Token-Could-Be-The-Next-Solana",
+      "pubDate": "2024-07-04T08:24:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "APT"
+      ]
+    },
+    {
+      "title": "LINK Price Downtrend Continues For A Month; What Technical Indicator Says?",
+      "link": "https://cryptopanic.com/news/19652855/LINK-Price-Downtrend-Continues-For-A-Month-What-Technical-Indicator-Says",
+      "pubDate": "2024-07-04T08:23:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "Sensex Breaks 80,200, Nifty 50 Nears 24,400 As Both Hit New Highs – Top 10 Gainers in Today’s Market Rally",
+      "link": "https://cryptopanic.com/news/19652839/Sensex-Breaks-80200-Nifty-50-Nears-24400-As-Both-Hit-New-Highs-Top-10-Gainers-in-Todays-Market-Rally",
+      "pubDate": "2024-07-04T08:16:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "RLY"
+      ]
+    },
+    {
+      "title": "LayerZero V2 integrates Flare, connecting to over 70 blockchains",
+      "link": "https://cryptopanic.com/news/19652815/LayerZero-V2-integrates-Flare-connecting-to-over-70-blockchains",
+      "pubDate": "2024-07-04T08:11:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FLR"
+      ]
+    },
+    {
+      "title": "Cardano Founder Hits Back at “Dead Coin” Claims",
+      "link": "https://cryptopanic.com/news/19652892/Cardano-Founder-Hits-Back-at-Dead-Coin-Claims",
+      "pubDate": "2024-07-04T08:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Charles Hoskinson, the founder of Cardano, recently responded to crypto influencer BitBoy Crypto’s claim that Cardano’s ADA token is “dead.” On July 3, Ben Armstrong, known online as BitBoy Crypto, took to Twitter (recently rebranded as X) to share his views on leading cryptocurrencies like Polkadot (DOT) and Cardano (ADA). He asserted that both ADA […] The post Cardano Founder Hits Back at “Dead Coin” Claims appeared first on Coin Edition.",
+      "currencies": [
+        "ADA",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 8
+      }
+    },
+    {
+      "title": "Dogecoin Founder Makes Crucial Bitcoin Statement as BTC Plummets",
+      "link": "https://cryptopanic.com/news/19652805/Dogecoin-Founder-Makes-Crucial-Bitcoin-Statement-as-BTC-Plummets",
+      "pubDate": "2024-07-04T08:08:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ]
+    },
+    {
+      "title": "VanEck’s Head of Research Explains Steps to Get a Spot Solana ETF Approved",
+      "link": "https://cryptopanic.com/news/19652854/VanEcks-Head-of-Research-Explains-Steps-to-Get-a-Spot-Solana-ETF-Approved",
+      "pubDate": "2024-07-04T08:06:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Head of research at VanEck, Matthew Sigel, discussed cryptocurrency regulation in the US following the firm’s recent move to file for a Solana spot ETF. Spot ETFs are the latest wave of financial instruments in the US. They offer institutional players exposure to crypto assets amid the country’s stringent regulatory environment. Solana ETF Approval: Insights from VanEck Sigel...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "FX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "This Altcoin is at the Foothill of a Major Explosion: May Soar 80% If Surges Above This Crucial Resistance",
+      "link": "https://cryptopanic.com/news/19652786/This-Altcoin-is-at-the-Foothill-of-a-Major-Explosion-May-Soar-80-If-Surges-Above-This-Crucial-Resistance",
+      "pubDate": "2024-07-04T08:00:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ROSE",
+        "OM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Opera’s Minipay Expands Stablecoin Support: Adds USDC and USDT to Its Digital Wallet",
+      "link": "https://cryptopanic.com/news/19652751/Operas-Minipay-Expands-Stablecoin-Support-Adds-USDC-and-USDT-to-Its-Digital-Wallet",
+      "pubDate": "2024-07-04T07:55:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDC"
+      ]
+    },
+    {
+      "title": "Pepe Price Analysis: PEPE Plummets 11%, Oversold RSI Signals Potential Rebound",
+      "link": "https://cryptopanic.com/news/19652747/Pepe-Price-Analysis-PEPE-Plummets-11-Oversold-RSI-Signals-Potential-Rebound",
+      "pubDate": "2024-07-04T07:52:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "PEPE"
+      ]
+    },
+    {
+      "title": "DePin Project Hivemapper Defies Market Downtrend: HONEY Token Surges Over 30%",
+      "link": "https://cryptopanic.com/news/19652852/DePin-Project-Hivemapper-Defies-Market-Downtrend-HONEY-Token-Surges-Over-30?mtm_campaign=API-OFA",
+      "pubDate": "2024-07-04T07:40:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "HONEY"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SEC vs. Ripple Heats Up: Regulators Reject Binance Ruling’s Relevance in XRP Case",
+      "link": "https://cryptopanic.com/news/19652783/SEC-vs-Ripple-Heats-Up-Regulators-Reject-Binance-Rulings-Relevance-in-XRP-Case",
+      "pubDate": "2024-07-04T07:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "XRP"
+      ]
+    },
+    {
+      "title": "The Best Altcoins For 30x Gains To Buy Now In 2024 – Most Trending AltCoins",
+      "link": "https://cryptopanic.com/news/19652677/The-Best-Altcoins-For-30x-Gains-To-Buy-Now-In-2024-Most-Trending-AltCoins",
+      "pubDate": "2024-07-04T07:29:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BNB"
+      ]
+    },
+    {
+      "title": "Mt. Gox Doomsday Scenario Involves Bitcoin Cash, Not Bitcoin: Analyst",
+      "link": "https://cryptopanic.com/news/19652689/Mt-Gox-Doomsday-Scenario-Involves-Bitcoin-Cash-Not-Bitcoin-Analyst",
+      "pubDate": "2024-07-04T07:21:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "DWF Labs Announces $20M Fund for Web3 Projects in Chinese-Speaking Regions",
+      "link": "https://cryptopanic.com/news/19652641/DWF-Labs-Announces-20M-Fund-for-Web3-Projects-in-Chinese-Speaking-Regions",
+      "pubDate": "2024-07-04T07:21:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FLOKI"
+      ]
+    },
+    {
+      "title": "BitMEX Expands Support For Dogecoin, Shiba Inu, Pepe Coin & Others; Here’s How",
+      "link": "https://cryptopanic.com/news/19652632/BitMEX-Expands-Support-For-Dogecoin-Shiba-Inu-Pepe-Coin-Others-Heres-How",
+      "pubDate": "2024-07-04T07:16:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "SHIB",
+        "PEPE",
+        "WIF"
+      ]
+    },
+    {
+      "title": "As The Ethereum ETF Looms, Pepe Holders Switch Focus To Dominant New Presale!",
+      "link": "https://cryptopanic.com/news/19652627/As-The-Ethereum-ETF-Looms-Pepe-Holders-Switch-Focus-To-Dominant-New-Presale",
+      "pubDate": "2024-07-04T07:14:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "PEPE"
+      ]
+    },
+    {
+      "title": "Piggycell, a IoT based RWA project, secures investment from a public mainnet, Internet Computer",
+      "link": "https://cryptopanic.com/news/19652608/Piggycell-a-IoT-based-RWA-project-secures-investment-from-a-public-mainnet-Internet-Computer",
+      "pubDate": "2024-07-04T07:12:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ]
+    },
+    {
+      "title": "Dogecoin Dying? BitMEX’s MEMEMEX Could Be the Meme Coin Lifeline You Need",
+      "link": "https://cryptopanic.com/news/19652674/Dogecoin-Dying-BitMEXs-MEMEMEX-Could-Be-the-Meme-Coin-Lifeline-You-Need",
+      "pubDate": "2024-07-04T07:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE"
+      ]
+    },
+    {
+      "title": "LayerZero V2 Connects Flare to 75 Other Blockchains with Latest Integration",
+      "link": "https://cryptopanic.com/news/19652600/LayerZero-V2-Connects-Flare-to-75-Other-Blockchains-with-Latest-Integration",
+      "pubDate": "2024-07-04T07:07:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "FLR"
+      ]
+    },
+    {
+      "title": "AI Coins in focus – Assessing NEAR, FET, and RNDR’s 2024 performances",
+      "link": "https://cryptopanic.com/news/19652585/AI-Coins-in-focus-Assessing-NEAR-FET-and-RNDRs-2024-performances",
+      "pubDate": "2024-07-04T07:00:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR",
+        "RNDR",
+        "FET"
+      ]
+    },
+    {
+      "title": "Gala Games Announces Partnership With Animoca Brands, GALA Token Plunges 6.7%",
+      "link": "https://cryptopanic.com/news/19652579/Gala-Games-Announces-Partnership-With-Animoca-Brands-GALA-Token-Plunges-67",
+      "pubDate": "2024-07-04T07:00:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "GALA",
+        "NFT",
+        "FET"
+      ]
+    },
+    {
+      "title": "Zebu Live 2024: The UK’s Premier Web3 Conference Returns with Steven Bartlett, Coinbase, Solana, and More",
+      "link": "https://cryptopanic.com/news/19652645/Zebu-Live-2024-The-UKs-Premier-Web3-Conference-Returns-with-Steven-Bartlett-Coinbase-Solana-and-More",
+      "pubDate": "2024-07-04T06:52:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "TRX"
+      ]
+    },
+    {
+      "title": "Pixelverse Welcomes MEW: Solana Meme Coin Cat Claws Its Way into Telegram Gaming",
+      "link": "https://cryptopanic.com/news/19652563/Pixelverse-Welcomes-MEW-Solana-Meme-Coin-Cat-Claws-Its-Way-into-Telegram-Gaming",
+      "pubDate": "2024-07-04T06:39:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "TON"
+      ]
+    },
+    {
+      "title": "Venture Capitalists Pour Millions into AI-Blockchain Projects, Signaling Growing Optimism",
+      "link": "https://cryptopanic.com/news/19652644/Venture-Capitalists-Pour-Millions-into-AI-Blockchain-Projects-Signaling-Growing-Optimism",
+      "pubDate": "2024-07-04T06:30:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "SOL",
+        "MATIC"
+      ]
+    },
+    {
+      "title": "92% of MATIC Addresses Are Empty While Ethereum Addresses Are Loading Up On Rollblock (RBLK)",
+      "link": "https://cryptopanic.com/news/19652456/92-of-MATIC-Addresses-Are-Empty-While-Ethereum-Addresses-Are-Loading-Up-On-Rollblock-RBLK",
+      "pubDate": "2024-07-04T06:16:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ]
+    },
+    {
+      "title": "Opera Mini’s crypto wallet MiniPay now offers USDT and USDC",
+      "link": "https://cryptopanic.com/news/19652455/Opera-Minis-crypto-wallet-MiniPay-now-offers-USDT-and-USDC",
+      "pubDate": "2024-07-04T06:14:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "CELO"
+      ]
+    },
+    {
+      "title": "Judge labels 2 obscure altcoins as commodities in $120M Ponzi case",
+      "link": "https://cryptopanic.com/news/19652454/Judge-labels-2-obscure-altcoins-as-commodities-in-120M-Ponzi-case?mtm_campaign=API-OFA",
+      "pubDate": "2024-07-04T06:14:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OHM",
+        "KLIMA"
+      ]
+    },
+    {
+      "title": "Top Cryptos To Invest For This Bull Run",
+      "link": "https://cryptopanic.com/news/19652441/Top-Cryptos-To-Invest-For-This-Bull-Run",
+      "pubDate": "2024-07-04T06:09:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Shiba Inu (SHIB) Nosedives Amid an Overall Meme Coin Bloodbath: Details",
+      "link": "https://cryptopanic.com/news/19652406/Shiba-Inu-SHIB-Nosedives-Amid-an-Overall-Meme-Coin-Bloodbath-Details",
+      "pubDate": "2024-07-04T06:06:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ]
+    },
+    {
+      "title": "Crypto News Today: Bitcoin Slides Below $60K Amid Sell-Off",
+      "link": "https://cryptopanic.com/news/19652377/Crypto-News-Today-Bitcoin-Slides-Below-60K-Amid-Sell-Off",
+      "pubDate": "2024-07-04T06:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "SOL",
+        "DOGE",
+        "LTC",
+        "JASMY",
+        "TAO",
+        "WIF",
+        "AKT"
+      ]
+    },
+    {
+      "title": "Bitcoin Plunges Under $59K as Crypto Bulls See $230M Liquidations",
+      "link": "https://cryptopanic.com/news/19652369/Bitcoin-Plunges-Under-59K-as-Crypto-Bulls-See-230M-Liquidations",
+      "pubDate": "2024-07-04T05:52:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "DOGE"
+      ]
+    },
+    {
+      "title": "HBAR Price Analysis: 65% Gains or 36% Drop, Decision Time for Hedera",
+      "link": "https://cryptopanic.com/news/19652350/HBAR-Price-Analysis-65-Gains-or-36-Drop-Decision-Time-for-Hedera",
+      "pubDate": "2024-07-04T05:39:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "DraftKings NFTs Securities Trial Advances As Judge Rejects Motion To Dismiss Lawsuit",
+      "link": "https://cryptopanic.com/news/19652345/DraftKings-NFTs-Securities-Trial-Advances-As-Judge-Rejects-Motion-To-Dismiss-Lawsuit",
+      "pubDate": "2024-07-04T05:30:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "MATIC",
+        "NFT"
+      ]
+    },
+    {
+      "title": "Welcome Poodlana: The Stylish New Meme Coin on Solana",
+      "link": "https://cryptopanic.com/news/19652328/Welcome-Poodlana-The-Stylish-New-Meme-Coin-on-Solana",
+      "pubDate": "2024-07-04T05:21:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "WIF"
+      ]
+    },
+    {
+      "title": "Meme Coin Index with SHIB, DOGE, WIF, PEPE, and BONK Launched by Major Exchange",
+      "link": "https://cryptopanic.com/news/19652335/Meme-Coin-Index-with-SHIB-DOGE-WIF-PEPE-and-BONK-Launched-by-Major-Exchange",
+      "pubDate": "2024-07-04T05:20:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "SHIB",
+        "PEPE",
+        "BONK",
+        "WIF"
+      ]
+    },
+    {
+      "title": "Solana Eases Gains: Can SOL Bulls Safeguard the $132 Support?",
+      "link": "https://cryptopanic.com/news/19652325/Solana-Eases-Gains-Can-SOL-Bulls-Safeguard-the-132-Support",
+      "pubDate": "2024-07-04T05:18:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "SOL",
+        "LUSD"
+      ]
+    },
+    {
+      "title": "Astar Network falls behind ahead of 350M token burn: What about ASTR?",
+      "link": "https://cryptopanic.com/news/19652309/Astar-Network-falls-behind-ahead-of-350M-token-burn-What-about-ASTR",
+      "pubDate": "2024-07-04T05:00:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "ASTR"
+      ]
+    },
+    {
+      "title": "Bitcoin Price Crash Is Buy Opportunity As Wallets Holding 10+ BTC Reaches New ATH",
+      "link": "https://cryptopanic.com/news/19652304/Bitcoin-Price-Crash-Is-Buy-Opportunity-As-Wallets-Holding-10-BTC-Reaches-New-ATH",
+      "pubDate": "2024-07-04T05:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin continues to be incredibly bearish amid negative market headwinds but that has not stopped investors from taking their positions during this time. These large investors who are holding more than $600,000 worth of Bitcoin have been accumulating BTC at an accelerated rate over the last six months. Bitcoin Holders Increase Wallet Holdings On-chain data tracking platform, Santiment,...",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Prices Today July 4: Bears Takeover BTC & Top Cryptos, But WLD Price Gains",
+      "link": "https://cryptopanic.com/news/19652290/Crypto-Prices-Today-July-4-Bears-Takeover-BTC-Top-Cryptos-But-WLD-Price-Gains",
+      "pubDate": "2024-07-04T04:52:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "SOL",
+        "DOGE",
+        "SHIB"
+      ]
+    },
+    {
+      "title": "PEPE, FET See Sharp Growth In Adoption: Rally Soon?",
+      "link": "https://cryptopanic.com/news/19652221/PEPE-FET-See-Sharp-Growth-In-Adoption-Rally-Soon",
+      "pubDate": "2024-07-04T04:00:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ENS",
+        "FET",
+        "PEPE"
+      ]
+    },
+    {
+      "title": "Will Chainlink hit the $16.5 level? Here’s where LINK is headed",
+      "link": "https://cryptopanic.com/news/19652220/Will-Chainlink-hit-the-165-level-Heres-where-LINK-is-headed",
+      "pubDate": "2024-07-04T04:00:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum’s DeFi Empire Crumbles as Polkadot Rises: WW3Shiba’s Influence Revealed",
+      "link": "https://cryptopanic.com/news/19652198/Ethereums-DeFi-Empire-Crumbles-as-Polkadot-Rises-WW3Shibas-Influence-Revealed",
+      "pubDate": "2024-07-04T03:57:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOT"
+      ]
+    },
+    {
+      "title": "‘Buy the dip’ mentions on social platforms surge as Bitcoin stumbles",
+      "link": "https://cryptopanic.com/news/19652122/Buy-the-dip-mentions-on-social-platforms-surge-as-Bitcoin-stumbles",
+      "pubDate": "2024-07-04T03:00:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "AMP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "LayerZero token ZRO surges 52% in 7 days: What’s behind the rise?",
+      "link": "https://cryptopanic.com/news/19652121/LayerZero-token-ZRO-surges-52-in-7-days-Whats-behind-the-rise?mtm_campaign=API-OFA",
+      "pubDate": "2024-07-04T03:00:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ZRO"
+      ]
+    },
+    {
+      "title": "Kamala Harris memecoin surges 250% amid calls for Biden to bow out",
+      "link": "https://cryptopanic.com/news/19652095/Kamala-Harris-memecoin-surges-250-amid-calls-for-Biden-to-bow-out",
+      "pubDate": "2024-07-04T02:53:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "JOE"
+      ]
+    },
+    {
+      "title": "Assisterr AI project wins Neo bounty at recent BeWater AI x Crypto hackathon",
+      "link": "https://cryptopanic.com/news/19652100/Assisterr-AI-project-wins-Neo-bounty-at-recent-BeWater-AI-x-Crypto-hackathon",
+      "pubDate": "2024-07-04T02:53:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Bitcoin Price Takes a 5% Hit: Can Bulls Save The Week?",
+      "link": "https://cryptopanic.com/news/19652093/Bitcoin-Price-Takes-a-5-Hit-Can-Bulls-Save-The-Week",
+      "pubDate": "2024-07-04T02:51:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "TUSD"
+      ]
+    },
+    {
+      "title": "Atomic Wallet to support Neo X when MainNet goes live",
+      "link": "https://cryptopanic.com/news/19652077/Atomic-Wallet-to-support-Neo-X-when-MainNet-goes-live",
+      "pubDate": "2024-07-04T02:38:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Market in wait-and-see mode as Bitcoin volumes stagnate",
+      "link": "https://cryptopanic.com/news/19652074/Market-in-wait-and-see-mode-as-Bitcoin-volumes-stagnate",
+      "pubDate": "2024-07-04T02:30:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ALPHA"
+      ]
+    },
+    {
+      "title": "When Do Secondary Token Sales Violate Howey?",
+      "link": "https://cryptopanic.com/news/19652079/When-Do-Secondary-Token-Sales-Violate-Howey",
+      "pubDate": "2024-07-04T02:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "BUSD"
+      ]
+    },
+    {
+      "title": "Bitcoin Is Up 2X But Speculators Are Underwater: Will The Sell-off Continue?",
+      "link": "https://cryptopanic.com/news/19652033/Bitcoin-Is-Up-2X-But-Speculators-Are-Underwater-Will-The-Sell-off-Continue",
+      "pubDate": "2024-07-04T02:00:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "AVAX",
+        "FET"
+      ]
+    },
+    {
+      "title": "Polkadot spends $87M in H1 2024: ‘Treasury deep in the negative’",
+      "link": "https://cryptopanic.com/news/19652031/Polkadot-spends-87M-in-H1-2024-Treasury-deep-in-the-negative",
+      "pubDate": "2024-07-04T02:00:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Dogwifhat on Vegas Sphere team ‘90% confident’ plan will go ahead",
+      "link": "https://cryptopanic.com/news/19652002/Dogwifhat-on-Vegas-Sphere-team-90-confident-plan-will-go-ahead",
+      "pubDate": "2024-07-04T01:42:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "WIF"
+      ]
+    },
+    {
+      "title": "Why Cathie Wood’s ARK Invest Just Sold a Significant Chunk of Tesla Stock: a Leading Finance Guru Ecplains",
+      "link": "https://cryptopanic.com/news/19652003/Why-Cathie-Woods-ARK-Invest-Just-Sold-a-Significant-Chunk-of-Tesla-Stock-a-Leading-Finance-Guru-Ecplains",
+      "pubDate": "2024-07-04T01:38:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Solana ETF Launch Tied To 2024 Presidential Election, VanEck Research Head Explains",
+      "link": "https://cryptopanic.com/news/19651932/Solana-ETF-Launch-Tied-To-2024-Presidential-Election-VanEck-Research-Head-Explains",
+      "pubDate": "2024-07-04T01:00:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "SOL",
+        "LUSD"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Cryptocurrency Analyst Predicts Dogecoin ($DOGE) Breakout to $0.653, a 400% Surge",
+      "link": "https://cryptopanic.com/news/19651916/Cryptocurrency-Analyst-Predicts-Dogecoin-DOGE-Breakout-to-0653-a-400-Surge",
+      "pubDate": "2024-07-04T00:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE"
+      ]
+    },
+    {
+      "title": "AIgentX integrates support for Neo X TestNet, offers AI tools for education",
+      "link": "https://cryptopanic.com/news/19651903/AIgentX-integrates-support-for-Neo-X-TestNet-offers-AI-tools-for-education",
+      "pubDate": "2024-07-04T00:32:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Longest Miner Capitulation Since 2022 Signals Potential Bitcoin Rally Ahead",
+      "link": "https://cryptopanic.com/news/19651893/Longest-Miner-Capitulation-Since-2022-Signals-Potential-Bitcoin-Rally-Ahead",
+      "pubDate": "2024-07-04T00:30:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "AVAX",
+        "TON"
+      ]
+    },
+    {
+      "title": "Planet Mojo offers a reward pool of $25,000 USDC and 1 million MOJO",
+      "link": "https://cryptopanic.com/news/19651852/Planet-Mojo-offers-a-reward-pool-of-25000-USDC-and-1-million-MOJO",
+      "pubDate": "2024-07-04T00:12:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC"
+      ]
+    },
+    {
+      "title": "While Bonk Price Climbs with $500 Million Volume, This Dog Coin Tops $5.35 Million",
+      "link": "https://cryptopanic.com/news/19651888/While-Bonk-Price-Climbs-with-500-Million-Volume-This-Dog-Coin-Tops-535-Million",
+      "pubDate": "2024-07-04T00:04:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BONK"
+      ]
+    },
+    {
+      "title": "Dogecoin’s make-or-break moment: Can DOGE cross the crucial $0.1184 support?",
+      "link": "https://cryptopanic.com/news/19651845/Dogecoins-make-or-break-moment-Can-DOGE-cross-the-crucial-01184-support",
+      "pubDate": "2024-07-04T00:00:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE"
+      ]
+    },
+    {
+      "title": "Oracle Network Chainlink Rapidly Ascending List of Top Crypto Projects in Development Activity: Santiment",
+      "link": "https://cryptopanic.com/news/19651826/Oracle-Network-Chainlink-Rapidly-Ascending-List-of-Top-Crypto-Projects-in-Development-Activity-Santiment",
+      "pubDate": "2024-07-04T00:00:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Decentralized oracle network Chainlink (LINK) is suddenly seeing a lot more development activity, according to new data published by the crypto analytics platform Santiment. Santiment notes that Chainlink has shot up in rankings in terms of development activity over the last 30 days from fourth place in May to second place last month. Meanwhile, decentralized […] The post Oracle Network Chainlink Rapidly Ascending List of Top Crypto Projects in Development Activity: Santiment appeared first on T",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

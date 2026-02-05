@@ -1,0 +1,555 @@
+{
+  "date": "2022-08-04",
+  "fetchedAt": "2026-02-05T07:27:07.722Z",
+  "articleCount": 37,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "alternative game client?",
+      "link": "https://cryptopanic.com/news/15962471/alternative-game-client",
+      "pubDate": "2022-08-04T22:05:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SPS"
+      ]
+    },
+    {
+      "title": "RT @YifanX: this isn't the most important metric, finally achieved a @numerai #1 spot",
+      "link": "https://cryptopanic.com/news/15962223/RT-YifanX-this-isnt-the-most-important-metric-finally-achieved-a-numerai-1-spot",
+      "pubDate": "2022-08-04T20:23:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NMR"
+      ]
+    },
+    {
+      "title": "Bitcoin Loses Critical Level Below $23,000, Bears Prepare For New Assault?",
+      "link": "https://cryptopanic.com/news/15962220/Bitcoin-Loses-Critical-Level-Below-23000-Bears-Prepare-For-New-Assault",
+      "pubDate": "2022-08-04T20:10:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin has been slowly trending to the downside over this week. The first cryptocurrency by market cap seems to have lost momentum as uncertainty spills into the crypto market from legacy markets. Related Reading: The Pelosi Effect? Ethereum Faces Headwinds Over Area At $1,600 At the time of writing, Bitcoin trades at $22,600 with a 4% loss in the last 24 hours and a 1.2% loss over the past...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Top Analyst Calls What’s Next for Bitcoin, Ethereum and the Rest of the Crypto Markets After a Mid-Week Slump",
+      "link": "https://cryptopanic.com/news/bitcoin/15962012/Top-Analyst-Calls-Whats-Next-for-Bitcoin-Ethereum-and-the-Rest-of-the-Crypto-Markets-After-a-Mid-Week-Slump",
+      "pubDate": "2022-08-04T19:00:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A widely followed crypto trader is charting out Bitcoin (BTC) and Ethereum (ETH) after BTC’s failed bid to reclaim $23,450. In the latest edition of his Cryptocademy newsletter, analyst Justin Bennett says BTC is teetering between support levels. “Bitcoin tried to reclaim $23,450 but failed. BTC also closed the day below $23,000, which could be problematic for […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "MC_"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Uniswap DAO Considers Creating Uniswap Foundation",
+      "link": "https://cryptopanic.com/news/15961953/Uniswap-DAO-Considers-Creating-Uniswap-Foundation",
+      "pubDate": "2022-08-04T18:33:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The Uniswap DAO is discussing the possibility of creating an independent Uniswap Foundation to work alongside Uniswap Labs on growing the protocol. A new governance body for one of Web3's most popular exchanges has been proposed.A proposal was submitted today in the Uniswap governance forum to create an independent Uniswap Foundation. The Foundations goal would be multipurpose: to support the...",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Insta-rally! FLOW token jumps 50% amid Instagram adoption euphoria",
+      "link": "https://cryptopanic.com/news/15961867/Insta-rally-FLOW-token-jumps-50-amid-Instagram-adoption-euphoria",
+      "pubDate": "2022-08-04T18:03:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "FLOW latest price rally has turned it into an \"overbought\" asset, which could amount to an imminent correction.",
+      "currencies": [
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Amazon Called SHIB “Solid Daily Burner”, Cardano Founder “Facepalms” Solana Hack, Japan’s Bitbank Now Supports DOGE and DOT: Crypto News Digest by U.Today",
+      "link": "https://cryptopanic.com/news/15961572/Amazon-Called-SHIB-Solid-Daily-Burner-Cardano-Founder-Facepalms-Solana-Hack-Japans-Bitbank-Now-Supports-DOGE-and-DOT-Crypto-News-Digest-by-UToday",
+      "pubDate": "2022-08-04T16:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Check out U.Today’s news digest to stay updated on the latest crypto events!",
+      "currencies": [
+        "ADA",
+        "SOL",
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Meta expands digital collectables support on Instagram to 100 more countries, adopts Flow blockchain",
+      "link": "https://cryptopanic.com/news/15961281/Meta-expands-digital-collectables-support-on-Instagram-to-100-more-countries-adopts-Flow-blockchain",
+      "pubDate": "2022-08-04T15:11:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Meta's move now brings digital collectibles, particularly non-fungible tokens, closer to mainstream social media use.",
+      "currencies": [
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Coinbase to provide crypto services to BlackRock institutional clients",
+      "link": "https://cryptopanic.com/news/bitcoin/15961190/Coinbase-to-provide-crypto-services-to-BlackRock-institutional-clients",
+      "pubDate": "2022-08-04T14:54:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Coinbase has announced a new partnership with BlackRock to provide direct crypto services for its institutional clients using Aladin –an end-to-end investment management platform of the asset manager.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Efforce Genesis contributors will be able to redeem their Genesis NFT and their rewards using our decentralized sys…",
+      "link": "https://cryptopanic.com/news/15965251/Efforce-Genesis-contributors-will-be-able-to-redeem-their-Genesis-NFT-and-their-rewards-using-our-decentralized-sys",
+      "pubDate": "2022-08-04T14:51:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "Efforce Genesis pool is generating a 10% yearly return on the invested amount.",
+      "link": "https://cryptopanic.com/news/15965252/Efforce-Genesis-pool-is-generating-a-10-yearly-return-on-the-invested-amount",
+      "pubDate": "2022-08-04T14:49:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "Next week, from August 9 to 11, #VOO, developed by #AVINOC, will take part in #LABACE22 — the largest…",
+      "link": "https://cryptopanic.com/news/15963310/Next-week-from-August-9-to-11-VOO-developed-by-AVINOC-will-take-part-in-LABACE22-the-largest",
+      "pubDate": "2022-08-04T14:41:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVINOC"
+      ]
+    },
+    {
+      "title": "NFTb x @klaytn_official Partnership: Milestone #2 Completed Any Klaytn Network-based projects can now create a Va…",
+      "link": "https://cryptopanic.com/news/klay-token/15967499/NFTb-x-klaytn_official-Partnership-Milestone-2-Completed-Any-Klaytn-Network-based-projects-can-now-create-a-Va",
+      "pubDate": "2022-08-04T14:06:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "NFTB"
+      ]
+    },
+    {
+      "title": "Cointelegraph increases its presence in Middle East and North Africa with a new franchise",
+      "link": "https://cryptopanic.com/news/bitcoin/15960934/Cointelegraph-increases-its-presence-in-Middle-East-and-North-Africa-with-a-new-franchise",
+      "pubDate": "2022-08-04T13:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Cointelegraph MENA will cover more news and technological developments in each country in the region in Arabic.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @HiltonSupra: Thank you Felix Xu, CEO of ARPA and Bella Protocol - CeFi Vs DeFi a great interview I learned a lot",
+      "link": "https://cryptopanic.com/news/15963902/RT-HiltonSupra-Thank-you-Felix-Xu-CEO-of-ARPA-and-Bella-Protocol-CeFi-Vs-DeFi-a-great-interview-I-learned-a-lot",
+      "pubDate": "2022-08-04T13:44:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BEL"
+      ]
+    },
+    {
+      "title": "Cardano-Cosmos Ecosystem Bridge Launches, Network Statistics Spike",
+      "link": "https://cryptopanic.com/news/15960904/Cardano-Cosmos-Ecosystem-Bridge-Launches-Network-Statistics-Spike",
+      "pubDate": "2022-08-04T13:34:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cross-chain bridge technology would serve as seminal bridge deployment between Cosmos and Cardano",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 23,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Slope wallet provider saved user seed phrases in plain text, Solana security researchers find",
+      "link": "https://cryptopanic.com/news/15960640/Slope-wallet-provider-saved-user-seed-phrases-in-plain-text-Solana-security-researchers-find",
+      "pubDate": "2022-08-04T12:27:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Security researchers at Otter claim they have pinned down what may have caused the Solana wallet breach.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 22
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "India’s second-most populous state issues 100,000 diplomas on Polygon blockchain",
+      "link": "https://cryptopanic.com/news/15960470/Indias-second-most-populous-state-issues-100000-diplomas-on-Polygon-blockchain",
+      "pubDate": "2022-08-04T11:35:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Through the LegitDoc platform, the Maharashtra State Board of Skill Development (MSBSD) has distributed approximately 100,000 verified digital certificates anchored... Continue reading",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana emerges as the most-trending coin, price unmoved despite 8,000 wallets hacked",
+      "link": "https://cryptopanic.com/news/15960443/Solana-emerges-as-the-most-trending-coin-price-unmoved-despite-8000-wallets-hacked",
+      "pubDate": "2022-08-04T11:26:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Even though the cryptocurrency market is struggling to regain its strength after a difficult couple of months, culminating with a... Continue reading",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 5
+      }
+    },
+    {
+      "title": "RT @DefiLlama: TOP 10 $BTC pools on @DefiLlama",
+      "link": "https://cryptopanic.com/news/15965280/RT-DefiLlama-TOP-10-BTC-pools-on-DefiLlama",
+      "pubDate": "2022-08-04T11:25:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "EPS"
+      ]
+    },
+    {
+      "title": "Todd Price, the Curriculum Specialist at #BSV #Academy, gives us a comprehensive walkthrough of the #APIs provided…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/15964033/Todd-Price-the-Curriculum-Specialist-at-BSV-Academy-gives-us-a-comprehensive-walkthrough-of-the-APIs-provided",
+      "pubDate": "2022-08-04T11:12:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "#RIF Gateways is a set of interoperability protocols (or oracles) that enable decentralized blockchains to secure…",
+      "link": "https://cryptopanic.com/news/15968262/RIF-Gateways-is-a-set-of-interoperability-protocols-or-oracles-that-enable-decentralized-blockchains-to-secure",
+      "pubDate": "2022-08-04T10:44:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "RIF"
+      ]
+    },
+    {
+      "title": "Senator Warren proposes reducing Wall Street’s involvement in crypto",
+      "link": "https://cryptopanic.com/news/bitcoin/15960299/Senator-Warren-proposes-reducing-Wall-Streets-involvement-in-crypto",
+      "pubDate": "2022-08-04T10:31:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Orbler team has updated its roadmap for 2022. Please view the updated roadmap for upcoming milestones:…",
+      "link": "https://cryptopanic.com/news/15967736/Orbler-team-has-updated-its-roadmap-for-2022-Please-view-the-updated-roadmap-for-upcoming-milestones?mtm_campaign=API-OFA",
+      "pubDate": "2022-08-04T09:44:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ORBR"
+      ]
+    },
+    {
+      "title": "RT @shravanadvfx: @BitcoinSVNode @CryptoFights @my2cents_app @Vaionex_Corp @Relysia_SV @TDXPappCH @bitinfocharts @Relysia_SV demo games are…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/15964034/RT-shravanadvfx-BitcoinSVNode-CryptoFights-my2cents_app-Vaionex_Corp-Relysia_SV-TDXPappCH-bitinfocharts-Relysia_SV-demo-games-are",
+      "pubDate": "2022-08-04T09:23:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "RT @CryptoSlate: CryptoSlate's @akibablade speaks to @wes_levitt of @Theta_Network about decentralized video, web3 content creation, and…",
+      "link": "https://cryptopanic.com/news/15958939/RT-CryptoSlate-CryptoSlates-akibablade-speaks-to-wes_levitt-of-Theta_Network-about-decentralized-video-web3-content-creation-and",
+      "pubDate": "2022-08-04T08:42:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Solana’s SOL Is The Most Underrated Token: FTX CEO Sam Bankman Fried",
+      "link": "https://cryptopanic.com/news/15958084/Solanas-SOL-Is-The-Most-Underrated-Token-FTX-CEO-Sam-Bankman-Fried",
+      "pubDate": "2022-08-04T08:39:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "FTX CEO Sam Bankman-Fried believes Solana is the most underrated token His comments have come at a time when the network is battling an intense hack that resulted in draining $8 million worth of user funds. In an interview with Fortune, FTX exchange CEO Sam Bankman Fried outlined his opinions on Solana cryptocurrency. He further added how he believes Solana is the most underrated cryptocurrency...",
+      "currencies": [
+        "SOL",
+        "FTT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Deloitte Survey Clearly Shows Crypto Payments Are The Next Big Thing In Commerce",
+      "link": "https://cryptopanic.com/news/15955900/Deloitte-Survey-Clearly-Shows-Crypto-Payments-Are-The-Next-Big-Thing-In-Commerce",
+      "pubDate": "2022-08-04T07:14:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "A new Deloitte survey titled “Merchants getting ready for crypto” contains extremely bullish news. It clearly shows that businesses of all sizes are getting ready for all kinds of crypto payments. And the vast majority believe that they will become ubiquitous in the next few years. Merchants, they are just like us. Deloitte produced the survey in association with PayPal, which is telling and...",
+      "currencies": [
+        "BTC",
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @Gateio_Startup: Introduction to #Gateio Startup $MBX @MARBLEXofficial Category: GameFi / Wallet / NFT Token Type: Klaytn Key Word…",
+      "link": "https://cryptopanic.com/news/klay-token/15956917/RT-Gateio_Startup-Introduction-to-Gateio-Startup-MBX-MARBLEXofficial-Category-GameFi-Wallet-NFT-Token-Type-Klaytn-Key-Word",
+      "pubDate": "2022-08-04T06:13:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "MBX"
+      ]
+    },
+    {
+      "title": "For those who can't physically attend #KBW2022, you can still join us in the #Metaverse Learn about #Klaytn …",
+      "link": "https://cryptopanic.com/news/klay-token/15956407/For-those-who-cant-physically-attend-KBW2022-you-can-still-join-us-in-the-Metaverse-Learn-about-Klaytn",
+      "pubDate": "2022-08-04T05:46:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "Join Klaytn's first #gaming hackathon! ️ Together with @ABGAasia and @DoraHacks, we invite game developers to…",
+      "link": "https://cryptopanic.com/news/klay-token/15956408/Join-Klaytns-first-gaming-hackathon-Together-with-ABGAasia-and-DoraHacks-we-invite-game-developers-to",
+      "pubDate": "2022-08-04T05:42:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "Polkadot Price Moves Above $8, Sets Eye On $9",
+      "link": "https://cryptopanic.com/news/15952780/Polkadot-Price-Moves-Above-8-Sets-Eye-On-9",
+      "pubDate": "2022-08-04T04:00:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Polkadot price has steadied itself above the $8 price mark. The coin seems to be extending the price recovery as DOT looks at moving past its next price ceiling. It also formed a bullish pattern on its daily chart. The cup and handle pattern that Polkadot has been forming for the past two months indicate that the bulls were strong in the market. The cup and handle pattern usually...",
+      "currencies": [
+        "SOL",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "#Klaytn has passed Japan’s Financial Services Agency’s review for listing. $KLAY is now on Japan’s whitelist and…",
+      "link": "https://cryptopanic.com/news/klay-token/15956409/Klaytn-has-passed-Japans-Financial-Services-Agencys-review-for-listing-KLAY-is-now-on-Japans-whitelist-and",
+      "pubDate": "2022-08-04T02:41:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "We're now integrated with @CelerNetwork",
+      "link": "https://cryptopanic.com/news/klay-token/15956410/Were-now-integrated-with-CelerNetwork",
+      "pubDate": "2022-08-04T01:51:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "Splinterfest Summoner",
+      "link": "https://cryptopanic.com/news/15960767/Splinterfest-Summoner",
+      "pubDate": "2022-08-04T01:40:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SPS"
+      ]
+    },
+    {
+      "title": "Q3 has been a whirlwind of activity for Klap - from becoming the 2nd largest protocol on Klaytn to a successful $35…",
+      "link": "https://cryptopanic.com/news/klay-token/15956399/Q3-has-been-a-whirlwind-of-activity-for-Klap-from-becoming-the-2nd-largest-protocol-on-Klaytn-to-a-successful-35",
+      "pubDate": "2022-08-04T01:35:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "KLAP"
+      ]
+    },
+    {
+      "title": "Major Ethereum Whale Accumulates $MATIC, $APE, $FTT, and Others in Massive Buying Spree",
+      "link": "https://cryptopanic.com/news/15952569/Major-Ethereum-Whale-Accumulates-MATIC-APE-FTT-and-Others-in-Massive-Buying-Spree",
+      "pubDate": "2022-08-04T01:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A major non-exchange Ethereum ($ETH) whale has accumulated several altcoins in a massive buying spree that saw it add to its positions on the cryptocurrency’s blockchain and saw the value of their account rise by more than $400 million. According to data from whale monitoring service WhaleStats, the Ethereum whale known as bonobo has splurged […]",
+      "currencies": [
+        "ETH",
+        "MATIC",
+        "FTT",
+        "APE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    }
+  ]
+}

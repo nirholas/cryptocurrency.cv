@@ -1,0 +1,26 @@
+{
+  "date": "2019-08-02",
+  "fetchedAt": "2026-02-05T07:27:06.952Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Nexo Launches a Debit Card That Lets You Not Spend Your Crypto",
+      "link": "https://cryptopanic.com/news/6217641/Nexo-Launches-a-Debit-Card-That-Lets-You-Not-Spend-Your-Crypto",
+      "pubDate": "2019-08-02T19:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "NEXO"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

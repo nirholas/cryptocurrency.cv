@@ -1,0 +1,59 @@
+{
+  "date": "2019-02-25",
+  "fetchedAt": "2026-02-05T07:27:06.811Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA Teams Up with Hackster.io to Propel Development of Smart Cities",
+      "link": "https://cryptopanic.com/news/4665166/IOTA-Teams-Up-with-Hacksterio-to-Propel-Development-of-Smart-Cities",
+      "pubDate": "2019-02-25T19:02:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Coinbase Exchange Users Can Buy and Sell XRP Starting Today",
+      "link": "https://cryptopanic.com/news/4664402/Coinbase-Exchange-Users-Can-Buy-and-Sell-XRP-Starting-Today",
+      "pubDate": "2019-02-25T18:01:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 58,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Jihan Wu Is Rumored to Leave Bitmain to Start His Own Mining Company Focused on Bitcoin Cash (BCH)",
+      "link": "https://cryptopanic.com/news/4662476/Jihan-Wu-Is-Rumored-to-Leave-Bitmain-to-Start-His-Own-Mining-Company-Focused-on-Bitcoin-Cash-BCH",
+      "pubDate": "2019-02-25T14:32:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

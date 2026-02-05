@@ -1,0 +1,601 @@
+{
+  "date": "2025-08-22",
+  "fetchedAt": "2026-02-05T07:27:08.608Z",
+  "articleCount": 41,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "ETH hits new all-time high above $4,870 as Fed turns dovish, Ether ETF inflows resume",
+      "link": "https://cryptopanic.com/news/ethereum/24489467/ETH-hits-new-all-time-high-above-4870-as-Fed-turns-dovish-Ether-ETF-inflows-resume",
+      "pubDate": "2025-08-22T21:05:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "ETH broke above its November 2021 record high, and analysts say a dovish Federal Reserve and institutional adoption will send Ether well above $5,000.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "180,000,000 ADA in Massive Buying Spree, Price Up 9%",
+      "link": "https://cryptopanic.com/news/cardano/24488866/180000000-ADA-in-Massive-Buying-Spree-Price-Up-9",
+      "pubDate": "2025-08-22T20:42:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Cardano bulls are back to the trading scenes, pushing price up for notable gains",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "On which DEX is it possible to trade TRC10 tokens?",
+      "link": "https://cryptopanic.com/news/bittorrent/24661600/On-which-DEX-is-it-possible-to-trade-TRC10-tokens",
+      "pubDate": "2025-08-22T20:35:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "WTRX"
+      ]
+    },
+    {
+      "title": "Zcash [ZEC]: Open Interest hits multi-month high – Is a price move coming?",
+      "link": "https://cryptopanic.com/news/zcash/24487393/Zcash-ZEC-Open-Interest-hits-multi-month-high-Is-a-price-move-coming",
+      "pubDate": "2025-08-22T20:00:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Crypto Biz: Bitcoin miners face tariff hit, blockchain courts Wall Street",
+      "link": "https://cryptopanic.com/news/polkadot/24487568/Crypto-Biz-Bitcoin-miners-face-tariff-hit-blockchain-courts-Wall-Street",
+      "pubDate": "2025-08-22T20:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOT"
+      ]
+    },
+    {
+      "title": "Analyst Michaël van de Poppe Says Ethereum Looks ‘Massively Strong,’ Predicts Higher Returns for Altcoins",
+      "link": "https://cryptopanic.com/news/theta-token/24489043/Analyst-Michael-van-de-Poppe-Says-Ethereum-Looks-Massively-Strong-Predicts-Higher-Returns-for-Altcoins",
+      "pubDate": "2025-08-22T19:55:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "LINK",
+        "THETA"
+      ]
+    },
+    {
+      "title": "VanEck files for JitoSOL ETF, opening pathway to Solana staking rewards",
+      "link": "https://cryptopanic.com/news/solana/24487385/VanEck-files-for-JitoSOL-ETF-opening-pathway-to-Solana-staking-rewards",
+      "pubDate": "2025-08-22T19:50:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "VanEck has filed to launch the first US ETF backed by a liquid staking token, JitoSOL, testing the SEC’s evolving stance on staking.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Court approves joint Ripple, SEC’s motion to dismiss appeals in XRP case",
+      "link": "https://cryptopanic.com/news/ripple/24487339/Court-approves-joint-Ripple-SECs-motion-to-dismiss-appeals-in-XRP-case",
+      "pubDate": "2025-08-22T19:28:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The long legal fight between Ripple and the US SEC is coming to a close. According to the defense lawyer James Filan, the US Court of Appeals for the Second Circuit has approved an agreement for both sides to drop their appeals. #XRPCommunity #SECGov v. #Ripple #XRP The Second Circuit has approved the Joint Stipulation […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "What is Monero and How Does it Work? Is XMR a Crypto Worth Buying in 2025?",
+      "link": "https://cryptopanic.com/news/monero/24486654/What-is-Monero-and-How-Does-it-Work-Is-XMR-a-Crypto-Worth-Buying-in-2025",
+      "pubDate": "2025-08-22T19:06:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XMR"
+      ]
+    },
+    {
+      "title": "Bitcoin, Ethereum, XRP, Dogecoin Explode Higher After Dovish Powell Speech",
+      "link": "https://cryptopanic.com/news/ethereum-classic/24485896/Bitcoin-Ethereum-XRP-Dogecoin-Explode-Higher-After-Dovish-Powell-Speech",
+      "pubDate": "2025-08-22T18:49:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Aave Expands to Aptos in First Move Off Ethereum",
+      "link": "https://cryptopanic.com/news/aave/24487045/Aave-Expands-to-Aptos-in-First-Move-Off-Ethereum",
+      "pubDate": "2025-08-22T18:35:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AAVE",
+        "APT"
+      ]
+    },
+    {
+      "title": "Crypto investor loses $1M in Uniswap scam exploiting Ethereum’s EIP-7702",
+      "link": "https://cryptopanic.com/news/uniswap/24485176/Crypto-investor-loses-1M-in-Uniswap-scam-exploiting-Ethereums-EIP-7702",
+      "pubDate": "2025-08-22T18:30:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI",
+        "A"
+      ]
+    },
+    {
+      "title": "Alphractal Says Resilient Dogecoin Metrics Could Lead To Price Breakout",
+      "link": "https://cryptopanic.com/news/litecoin/24484289/Alphractal-Says-Resilient-Dogecoin-Metrics-Could-Lead-To-Price-Breakout",
+      "pubDate": "2025-08-22T18:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "LTC"
+      ]
+    },
+    {
+      "title": "ETH ‘god candle’ emerges amid Fed rate cut hopes: Is $6K Ether next?",
+      "link": "https://cryptopanic.com/news/ethereum/24483733/ETH-god-candle-emerges-amid-Fed-rate-cut-hopes-Is-6K-Ether-next",
+      "pubDate": "2025-08-22T17:14:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Rising spot ETF demand, extremely strong technicals and a supply shortage could push ETH price to $6,000 before the end of 2025.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Shiba Inu Developer Unveils New LEASH v2 Migration Strategy",
+      "link": "https://cryptopanic.com/news/uniswap/24481372/Shiba-Inu-Developer-Unveils-New-LEASH-v2-Migration-Strategy",
+      "pubDate": "2025-08-22T16:03:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "In Brief After a series of updates from the core team, Shiba Inu’s lead developer has unveiled a migration plan designed to restore fairness for LEASH holders. The strategy combines a ratio-based conversion with targeted snapshots, aiming to protect long-term investors and chart a path out of the rebase controversy. In his latest blog post published Friday, lead developer Kaal Dhairya addressed the challenges posed by LEASH v1’s unexpected rebases, which continue to affect the token’s supply. “R",
+      "currencies": [
+        "SHIB",
+        "UNI",
+        "DAO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Stellar Price Risks 40% Drop As Three Bearish Setups Align",
+      "link": "https://cryptopanic.com/news/stellar/24481184/Stellar-Price-Risks-40-Drop-As-Three-Bearish-Setups-Align",
+      "pubDate": "2025-08-22T15:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 23 August 2025: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/decentraland/24484158/Spell-Wallet-Daily-Puzzle-23-August-2025-Earn-Reward-of-1-MANA",
+      "pubDate": "2025-08-22T15:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "Is Stellar On a Collision Course? XLM Price Tanks 8% In a Week, What’s Next?",
+      "link": "https://cryptopanic.com/news/stellar/24479776/Is-Stellar-On-a-Collision-Course-XLM-Price-Tanks-8-In-a-Week-Whats-Next",
+      "pubDate": "2025-08-22T15:03:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "PEPE"
+      ]
+    },
+    {
+      "title": "KCS and BGB Exchange Tokens Pumping, Is the Bull Market Still Here?",
+      "link": "https://cryptopanic.com/news/kucoin-shares/24479494/KCS-and-BGB-Exchange-Tokens-Pumping-Is-the-Bull-Market-Still-Here",
+      "pubDate": "2025-08-22T14:50:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "OKB",
+        "BGB"
+      ]
+    },
+    {
+      "title": "Bitcoin price charges to $116K as Fed's Powell hints at interest-rate cut",
+      "link": "https://cryptopanic.com/news/bitcoin/24479489/Bitcoin-price-charges-to-116K-as-Fed039s-Powell-hints-at-interest-rate-cut",
+      "pubDate": "2025-08-22T14:48:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin recovers from a trip to six-week lows as Fed Chair Jerome Powell gives strong \"dovish\" clues over where interest rates will head in September.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SharpLink Gaming Launches $1.5 Billion Stock Buyback Program, Reinforcing Ethereum-Centric Treasury Strategy",
+      "link": "https://cryptopanic.com/news/ethereum/24479050/SharpLink-Gaming-Launches-15-Billion-Stock-Buyback-Program-Reinforcing-Ethereum-Centric-Treasury-Strategy",
+      "pubDate": "2025-08-22T14:23:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "SharpLink Gaming has authorized a $1. 5 billion stock buyback as it reinforces its Ethereum-first treasury strategy with more than 740,000 ETH worth over $3 billion. <p>The post SharpLink Gaming Launches $1. 5 Billion Stock Buyback Program, Reinforcing Ethereum-Centric Treasury Strategy first appeared on Ecoinimist. </p>",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "A new cross-chain token creation platform, TokenGlade, is launching on Stellar in a few days and their whitepaper confirms upcoming support for Hedera and XRPL, enabling zero code, click based token generation across multiple networks",
+      "link": "https://cryptopanic.com/news/stellar/24563683/A-new-cross-chain-token-creation-platform-TokenGlade-is-launching-on-Stellar-in-a-few-days-and-their-whitepaper-confirms-upcoming-support-for-Hedera-and-XRPL-enabling-zero-code-click-based-token-generation-across-multiple-networks",
+      "pubDate": "2025-08-22T13:53:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "HBAR",
+        "A"
+      ]
+    },
+    {
+      "title": "How OKB’s Token Burn Strategy Lifted the CEX Sector in August",
+      "link": "https://cryptopanic.com/news/okb/24479526/How-OKBs-Token-Burn-Strategy-Lifted-the-CEX-Sector-in-August",
+      "pubDate": "2025-08-22T13:48:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "OKB",
+        "A"
+      ]
+    },
+    {
+      "title": "SharpLink Approves $1.5B Buyback as It Leans on Ethereum Holdings",
+      "link": "https://cryptopanic.com/news/ethereum/24477463/SharpLink-Approves-15B-Buyback-as-It-Leans-on-Ethereum-Holdings",
+      "pubDate": "2025-08-22T13:28:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "SharpLink Gaming, Inc. (Nasdaq: SBET), a gaming technology firm and one of the world’s largest corporate holders of Ether (ETH), announced that its Board of Directors has approved a stock buyback program of up to $1. 5 billion.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "OKX shock: burns approximately 65 million OKB, supply drops to 21 million — and the price accelerates",
+      "link": "https://cryptopanic.com/news/okb/24482428/OKX-shock-burns-approximately-65-million-OKB-supply-drops-to-21-million-and-the-price-accelerates",
+      "pubDate": "2025-08-22T13:20:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "OKB",
+        "Z"
+      ]
+    },
+    {
+      "title": "OKB Defies Altcoin Crash, Bitcoin Slips to $112K as Markets Brace for Powell Speech: Your Weekly Recap",
+      "link": "https://cryptopanic.com/news/okb/24476465/OKB-Defies-Altcoin-Crash-Bitcoin-Slips-to-112K-as-Markets-Brace-for-Powell-Speech-Your-Weekly-Recap",
+      "pubDate": "2025-08-22T13:08:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "OKB"
+      ]
+    },
+    {
+      "title": "Crypto Price Analysis 8-22: BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, BITTENSOR: TAO, APECOIN: APE",
+      "link": "https://cryptopanic.com/news/apecoin/24474122/Crypto-Price-Analysis-8-22-BITCOIN-BTC-ETHEREUM-ETH-SOLANA-SOL-BITTENSOR-TAO-APECOIN-APE",
+      "pubDate": "2025-08-22T11:55:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Bitcoin, Ethereum, XRP, Dogecoin Struggle, But Traders Say It's 'Just Another Healthy Retest'",
+      "link": "https://cryptopanic.com/news/monero/24472109/Bitcoin-Ethereum-XRP-Dogecoin-Struggle-But-Traders-Say-Its-Just-Another-Healthy-Retest",
+      "pubDate": "2025-08-22T10:37:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "1 Billion XRP Mark Lost: On-Chain Activity in Shambles",
+      "link": "https://cryptopanic.com/news/ripple/24472056/1-Billion-XRP-Mark-Lost-On-Chain-Activity-in-Shambles",
+      "pubDate": "2025-08-22T10:37:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "XRP's power on market slowly decreasing as on-chain dynamic turns slightly bearish",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Stablecoins Explained: How They Connect Fiat and Crypto Worlds",
+      "link": "https://cryptopanic.com/news/dai/24471210/Stablecoins-Explained-How-They-Connect-Fiat-and-Crypto-Worlds",
+      "pubDate": "2025-08-22T10:12:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDC"
+      ]
+    },
+    {
+      "title": "Bitcoin whale wakes after seven years, rotates holdings into $270 million worth of ETH",
+      "link": "https://cryptopanic.com/news/bitcoin/24468927/Bitcoin-whale-wakes-after-seven-years-rotates-holdings-into-270-million-worth-of-ETH",
+      "pubDate": "2025-08-22T09:02:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A bitcoin wallet dormant for seven years recently became active, selling a significant portion of its BTC and buying Ethereum.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "A"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "OKB Price Surge by 400% in 9 Days, What's Fueling the Rally?",
+      "link": "https://cryptopanic.com/news/okb/24472116/OKB-Price-Surge-by-400-in-9-Days-Whats-Fueling-the-Rally",
+      "pubDate": "2025-08-22T08:55:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ]
+    },
+    {
+      "title": "Arthur Hayes Sees $20K ETH Ahead, Why He’s Backing Ethereum Over Solana",
+      "link": "https://cryptopanic.com/news/ethereum/24468300/Arthur-Hayes-Sees-20K-ETH-Ahead-Why-Hes-Backing-Ethereum-Over-Solana",
+      "pubDate": "2025-08-22T08:16:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Hayes believes that once Ethereum convincingly clears its ATH, momentum could snowball, with crypto firms raising funds to pile in.",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "ATH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Uniswap Whales Are Dumping – Can UNI Survive the Next Correction?",
+      "link": "https://cryptopanic.com/news/uniswap/24467104/Uniswap-Whales-Are-Dumping-Can-UNI-Survive-the-Next-Correction",
+      "pubDate": "2025-08-22T08:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Uniswap Phishing Attack Results in Significant Losses",
+      "link": "https://cryptopanic.com/news/uniswap/24470272/Uniswap-Phishing-Attack-Results-in-Significant-Losses",
+      "pubDate": "2025-08-22T07:53:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Flow Q2 DeFi Report: Record growth in TVL, smart contracts, and Disney partnership",
+      "link": "https://cryptopanic.com/news/flow/24474030/Flow-Q2-DeFi-Report-Record-growth-in-TVL-smart-contracts-and-Disney-partnership",
+      "pubDate": "2025-08-22T06:56:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "FLOW"
+      ]
+    },
+    {
+      "title": "OKB Price Prediction – OKX Token Hits New ATH, Surges Past $5B Market Cap",
+      "link": "https://cryptopanic.com/news/okb/24468596/OKB-Price-Prediction-OKX-Token-Hits-New-ATH-Surges-Past-5B-Market-Cap",
+      "pubDate": "2025-08-22T06:35:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "OKB",
+        "ATH"
+      ]
+    },
+    {
+      "title": "Why the Zcash (ZEC) Price Is Up Today?",
+      "link": "https://cryptopanic.com/news/zcash/24467019/Why-the-Zcash-ZEC-Price-Is-Up-Today",
+      "pubDate": "2025-08-22T06:35:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "OKB Rockets to New All-Time Highs as Futures Traders Double Down",
+      "link": "https://cryptopanic.com/news/okb/24465184/OKB-Rockets-to-New-All-Time-Highs-as-Futures-Traders-Double-Down",
+      "pubDate": "2025-08-22T06:09:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ]
+    },
+    {
+      "title": "Neo X ZK DKG protocol audited by Hacken, ZK Trust Relay campaign launched",
+      "link": "https://cryptopanic.com/news/neo/24463539/Neo-X-ZK-DKG-protocol-audited-by-Hacken-ZK-Trust-Relay-campaign-launched",
+      "pubDate": "2025-08-22T05:32:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO",
+        "ZK"
+      ]
+    },
+    {
+      "title": "Crypto Gainers: OKB hits record high as ZEC and MORPHO hint at breakout rallies",
+      "link": "https://cryptopanic.com/news/zcash/24474027/Crypto-Gainers-OKB-hits-record-high-as-ZEC-and-MORPHO-hint-at-breakout-rallies",
+      "pubDate": "2025-08-22T03:36:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEC",
+        "OKB",
+        "MORPHO"
+      ]
+    }
+  ]
+}

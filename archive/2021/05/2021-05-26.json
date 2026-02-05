@@ -1,0 +1,829 @@
+{
+  "date": "2021-05-26",
+  "fetchedAt": "2026-02-05T07:27:06.828Z",
+  "articleCount": 50,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Analyst says DeFi and stablecoins held up well as crypto markets imploded",
+      "link": "https://cryptopanic.com/news/uniswap/12005040/Analyst-says-DeFi-and-stablecoins-held-up-well-as-crypto-markets-imploded",
+      "pubDate": "2021-05-26T23:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "DeFi showed tremendous strength during last week’s sell-off as DEX activity and stablecoin stability prove the sector may be ready for mass adoption.",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BEP20 $SURE is trending on #BSC!",
+      "link": "https://cryptopanic.com/news/12010012/BEP20-SURE-is-trending-on-BSC",
+      "pubDate": "2021-05-26T22:05:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SURE"
+      ]
+    },
+    {
+      "title": "Elon Musk Clarifies He Does Not Control Dogecoin (DOGE)",
+      "link": "https://cryptopanic.com/news/dogecoin/12004963/Elon-Musk-Clarifies-He-Does-Not-Control-Dogecoin-DOGE",
+      "pubDate": "2021-05-26T21:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Tesla CEO Elon Musk has made it clear on social media he does not control the meme-inspired cryptocurrency Dogecoin (DOGE) and that his “ability to take action is limited.” Dogecoin, he said, has no formal organization. Musk’s comments came as he was replying to a Twitter user who said the CEO was apparently treating the […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "What Is Aave? Inside the DeFi Lending Protocol",
+      "link": "https://cryptopanic.com/news/12004920/What-Is-Aave-Inside-the-DeFi-Lending-Protocol",
+      "pubDate": "2021-05-26T21:05:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "DeFi protocol Aave is one of the largest lenders of cryptocurrency and its AAVE token has a larger market cap than rivals Maker or Compound. Here's how it works.",
+      "currencies": [
+        "AAVE",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polygon-Based DFYN Reports User Growth of 128% in 24 Hours",
+      "link": "https://cryptopanic.com/news/matic-network/12004848/Polygon-Based-DFYN-Reports-User-Growth-of-128-in-24-Hours",
+      "pubDate": "2021-05-26T20:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "Multi-chain exchange DFYN, which operates on the Polygon Network, has seen a massive influx of new users in a very short span of time.",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Blockchain app development platform Reach raises $12 million",
+      "link": "https://cryptopanic.com/news/12004837/Blockchain-app-development-platform-Reach-raises-12-million",
+      "pubDate": "2021-05-26T20:02:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Reach, a development tool platform for building and launching decentralized applications (DApps) using a JavaScript-like language on high-performance blockchain networks, announced today the company has raised $12 million in funding at a $48 million valuation. Increasing the accessibility of blockchain development is expected to bolster the market share of Reach’s growing pool of partner...",
+      "currencies": [
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Can't wait for the next @safenetworktech testnet? The wait shouldn't be much longer! We're running internal tests o…",
+      "link": "https://cryptopanic.com/news/12007975/Cant-wait-for-the-next-safenetworktech-testnet-The-wait-shouldnt-be-much-longer-Were-running-internal-tests-o",
+      "pubDate": "2021-05-26T19:44:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "Price analysis 5/26: BTC, ETH, BNB, ADA, DOGE, XRP, DOT, ICP, UNI, BCH",
+      "link": "https://cryptopanic.com/news/dogecoin/12004784/Price-analysis-526-BTC-ETH-BNB-ADA-DOGE-XRP-DOT-ICP-UNI-BCH",
+      "pubDate": "2021-05-26T19:24:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Dip-buyers catalyzed a strong relief rally in Bitcoin and altcoins but decreasing volumes and overhead resistance suggest the market is losing momentum.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Lawsuit: After this, will settlement talks between SEC and Ripple get serious?",
+      "link": "https://cryptopanic.com/news/ripple/12004764/XRP-Lawsuit-After-this-will-settlement-talks-between-SEC-and-Ripple-get-serious",
+      "pubDate": "2021-05-26T19:00:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The ongoing lawsuit between the United States SEC and Ripple shows no signs of abating, with the same in the news today after the regulatory agency filed a motion to compel the defendants to produce post-complaint XRP transaction records. In doing so, the SEC also requested the court for additional discovery in the form of […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 9
+      }
+    },
+    {
+      "title": "COMP Regains Footing, After New Yearly Low",
+      "link": "https://cryptopanic.com/news/12004747/COMP-Regains-Footing-After-New-Yearly-Low",
+      "pubDate": "2021-05-26T18:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Compound (COMP) has been decreasing since May 12 and on May 23 reached a new yearly low. It has been bouncing since May 23.",
+      "currencies": [
+        "COMP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Polygon (MATIC) Releasing Development Kit For Ethereum-Connected Chains",
+      "link": "https://cryptopanic.com/news/matic-network/12004699/Polygon-MATIC-Releasing-Development-Kit-For-Ethereum-Connected-Chains",
+      "pubDate": "2021-05-26T18:07:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Safe to say, Polygon has been on a tear lately. On the heels of a DappRadar report noting more than 75,000 active users and nearly $1B in value flows through their layer 2 protocol, the Polygon team has announced a new developer SDK for streamlined app creation. In the past month, our team at NewsBTC […]",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Here’s what will determine this week for Polkadot, Chainlink and KSM",
+      "link": "https://cryptopanic.com/news/polkadot/12004692/Heres-what-will-determine-this-week-for-Polkadot-Chainlink-and-KSM",
+      "pubDate": "2021-05-26T18:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Polkadot’s price made a recovery following the comeback from the $16 level to the $24.28 level based on price data from coinmarketcap.com. There is a drop of 20% in the trade volume, and this could mean that there is a drop in the demand across exchanges or that there is less DOT in circulation or […]",
+      "currencies": [
+        "DOT",
+        "LINK",
+        "KSM"
+      ],
+      "votes": {
+        "positive": 20,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "MATIC is up by 123x YTD, Inches Closer to the Top 10 on Coinmarketcap",
+      "link": "https://cryptopanic.com/news/matic-network/12004536/MATIC-is-up-by-123x-YTD-Inches-Closer-to-the-Top-10-on-Coinmarketcap",
+      "pubDate": "2021-05-26T16:19:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The digital asset of MATIC has gained by a factor of 123x since the beginning of 2021 MATIC rebranded to Polygon and is on its way towards becoming a top 10 digital asset in terms of market cap Mark Cuban has also invested in Polygon (MATIC) which is now listed on his company website The digital asset of Polygon (MATIC) has increased in value by a factor of 123x since the year began. On January...",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 22,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Always be on the lookout for DeFi Scams.",
+      "link": "https://cryptopanic.com/news/12009538/Always-be-on-the-lookout-for-DeFi-Scams",
+      "pubDate": "2021-05-26T16:18:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "We are delighted to announce that the largest and most transparent EURS stablecoin is now available on…",
+      "link": "https://cryptopanic.com/news/12008942/We-are-delighted-to-announce-that-the-largest-and-most-transparent-EURS-stablecoin-is-now-available-on",
+      "pubDate": "2021-05-26T15:21:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "This could be the ideal strategy for MATIC",
+      "link": "https://cryptopanic.com/news/matic-network/12004433/This-could-be-the-ideal-strategy-for-MATIC",
+      "pubDate": "2021-05-26T15:00:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "MATIC’s price is up 16% in the past 24 hours and this is akin to how MATIC’s price has rallied previously. Traders have attributed MATIC’s price rally to the increased demand and users for ETH network following the launch of L2. Based on network activity and the transaction volume of both ETH and its scaling […]",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polygon Releases SDK Eyeing “Multi-Chain Future”",
+      "link": "https://cryptopanic.com/news/matic-network/12004389/Polygon-Releases-SDK-Eyeing-Multi-Chain-Future",
+      "pubDate": "2021-05-26T14:47:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "-",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple CEO Claims XRP Has \"Zero Inflation\" Unlike Bitcoin and Ethereum",
+      "link": "https://cryptopanic.com/news/ripple/12004395/Ripple-CEO-Claims-XRP-Has-Zero-Inflation-Unlike-Bitcoin-and-Ethereum",
+      "pubDate": "2021-05-26T14:46:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The premined XRP token has a \"zero inflation dynamic,\" says Ripple CEO Brad Garlingouse",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 9
+      }
+    },
+    {
+      "title": "Polkadot Powered Splyt! Massive D-commerce Marketplace! with Cyrus Taghehchian",
+      "link": "https://cryptopanic.com/news/polkadot/12004396/Polkadot-Powered-Splyt-Massive-D-commerce-Marketplace-with-Cyrus-Taghehchian",
+      "pubDate": "2021-05-26T14:44:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "D-Commerce stands for Decentralized commerce! We speak with Cyrus Taghehchian, CEO of the Splyt protocol which is an open-source blockchain inventory observed to be “the next generation of e-commerce”, the next biggest step in digital commerce since the mass-adoption of the internet. A bold statement, but the vision and technology is promising to deliver. Splyt is poised to be one of the top projects on Polkadot network. Splyt bridges the gap between brands and consumers in a rapidly changing cl",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Can Elon Musk shrink Bitcoin mining’s carbon footprint? PancakeBunny’s $200 million hack. Ray Dalio admits to owning crypto.",
+      "link": "https://cryptopanic.com/news/12004375/Can-Elon-Musk-shrink-Bitcoin-minings-carbon-footprint-PancakeBunnys-200-million-hack-Ray-Dalio-admits-to-owning-crypto",
+      "pubDate": "2021-05-26T14:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Other top blockchain and crypto news: Australia signals progressive approach to crypto as Hong Kong moves closer to banning retail crypto trading.",
+      "currencies": [
+        "BTC",
+        "CAKE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polygon (MATIC) SDK Arrives: Developers Can Now Deploy Chains to Ethereum",
+      "link": "https://cryptopanic.com/news/matic-network/12004290/Polygon-MATIC-SDK-Arrives-Developers-Can-Now-Deploy-Chains-to-Ethereum",
+      "pubDate": "2021-05-26T14:00:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Mark Cuban invested in Polygon as the team announced the launch of Polygon SDK allowing developers to deploy chains connected to Ethereum.",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 61,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polygon debuts SDK for building Ethereum-compatible chains",
+      "link": "https://cryptopanic.com/news/matic-network/12004280/Polygon-debuts-SDK-for-building-Ethereum-compatible-chains",
+      "pubDate": "2021-05-26T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Polygon developers are set to launch tools to enable the creation of Ethereum-compatible standalone chains and layer-two protocols.",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @OVioHQ: NOW ON YOUTUBE: The #Metaverse Show #4, @jamie247 @100xARt talks to @feindura founder of @lukso_io on: #NFTs #cryptoart, #ERC2…",
+      "link": "https://cryptopanic.com/news/12007836/RT-OVioHQ-NOW-ON-YOUTUBE-The-Metaverse-Show-4-jamie247-100xARt-talks-to-feindura-founder-of-lukso_io-on-NFTs-cryptoart-ERC2",
+      "pubDate": "2021-05-26T13:47:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "XRP lawsuit: Now, SEC wants Ripple to produce these XRP-related docs",
+      "link": "https://cryptopanic.com/news/ripple/12004188/XRP-lawsuit-Now-SEC-wants-Ripple-to-produce-these-XRP-related-docs",
+      "pubDate": "2021-05-26T13:00:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "It would seem that every other day has a major development around the corner in the ongoing case between the United States Securities and Exchange Commission and Ripple Labs. In what is the latest spanner in the works, the SEC has now filed a new motion before the court of Judge Sarah Netburn, a motion […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 14
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Polygon and Aleph.im Join Forces to Provide Extra Security for NFTs and dApps",
+      "link": "https://cryptopanic.com/news/matic-network/12004190/Polygon-and-Alephim-Join-Forces-to-Provide-Extra-Security-for-NFTs-and-dApps",
+      "pubDate": "2021-05-26T13:00:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "Their integration with the ETH scaling project hopes to provide extra security and permanence for NFTs, marketplaces, and dApps running on Polygon.",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polygon and Aleph.im partner to protect NFTs from disappearing",
+      "link": "https://cryptopanic.com/news/matic-network/12004170/Polygon-and-Alephim-partner-to-protect-NFTs-from-disappearing",
+      "pubDate": "2021-05-26T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "Fast-growing Ethereum scaling platform Polygon and decentralized storage network Aleph.im join forces to ‘supercharge’ Polygon's NFT ecosystem.",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple partners with Oman’s Bank Dhofar for cross-border mobile payments",
+      "link": "https://cryptopanic.com/news/ripple/12004120/Ripple-partners-with-Omans-Bank-Dhofar-for-cross-border-mobile-payments",
+      "pubDate": "2021-05-26T12:21:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Ripple is partnering with Bank Dhofar, Oman’s second largest bank, to facilitate cross border mobile payments through RippleNet.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 22,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "I just #mintedawickie!",
+      "link": "https://cryptopanic.com/news/12008082/I-just-mintedawickie",
+      "pubDate": "2021-05-26T11:38:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MOG"
+      ]
+    },
+    {
+      "title": "1/ @CreamdotFinance, a cross-chain decentralized money market and close collaborator of @iearnfinance, has complet…",
+      "link": "https://cryptopanic.com/news/12006014/1-CreamdotFinance-a-cross-chain-decentralized-money-market-and-close-collaborator-of-iearnfinance-has-complet",
+      "pubDate": "2021-05-26T11:15:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "Binance Coin Analysis: After 20% Daily Surge, is $400 Next for BNB?",
+      "link": "https://cryptopanic.com/news/12003988/Binance-Coin-Analysis-After-20-Daily-Surge-is-400-Next-for-BNB",
+      "pubDate": "2021-05-26T10:52:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "BNB rebounded by a total of 20% today as it attempts to conquer $400 again. It is also attempting to break strong resistance at 0.0095 BTC as it pushes above the 50-day MA today.",
+      "currencies": [
+        "BTC",
+        "BNB"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "IOTA’s Utility Maximization Tangle Paper Wins Best Paper Award at UNet 2021",
+      "link": "https://cryptopanic.com/news/12003962/IOTAs-Utility-Maximization-Tangle-Paper-Wins-Best-Paper-Award-at-UNet-2021",
+      "pubDate": "2021-05-26T10:39:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "IOTA has tweeted that their paper on Utility maximization in IOTA Tangle has won a major award at the recent international event dedicated to hot topics in computing",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 20,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "No one knows how deep we might fall. The market can always trick you. #EURS is a great asset for on- and off-ramp i…",
+      "link": "https://cryptopanic.com/news/12008943/No-one-knows-how-deep-we-might-fall-The-market-can-always-trick-you-EURS-is-a-great-asset-for-on-and-off-ramp-i",
+      "pubDate": "2021-05-26T10:31:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "Altcoins Pumping, Bitcoin Recovery, BTC December Price Prediction, XRP NFTs & Musky Centralization",
+      "link": "https://cryptopanic.com/news/ripple/12003979/Altcoins-Pumping-Bitcoin-Recovery-BTC-December-Price-Prediction-XRP-NFTs-Musky-Centralization",
+      "pubDate": "2021-05-26T10:31:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Become A Patreon! https://www.patreon.com/TheModernInvestor ------------------------------------------- MY SECOND CHANNEL: https://www.youtube.com/channel/UCH9HlTrjyLmLRS0iE1P4rrg ----------------------------------------- Protect And Store Your Crypto With A Ledger Nano: https://www.ledger.com?r=8af3ed38d3b7 ------------------------------------------- Open An Account With Binance! https://www.binance.com/?ref=22170588 ------------------------------------------- Rich Dad Poor Dad: https://amzn.to",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Total stablecoin supply crosses the $100 billion mark",
+      "link": "https://cryptopanic.com/news/12003925/Total-stablecoin-supply-crosses-the-100-billion-mark",
+      "pubDate": "2021-05-26T10:15:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "The total supply of dollar-pegged stablecoins has surged past the $100 billion mark, according to The Block's Data Dashboard.",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @CryptonitesTV: ️ We spoke with the incredible @wes_levitt, Head of Strategy @Theta_Network on everything happening in the world…",
+      "link": "https://cryptopanic.com/news/theta-token/12009358/RT-CryptonitesTV-We-spoke-with-the-incredible-wes_levitt-Head-of-Strategy-Theta_Network-on-everything-happening-in-the-world",
+      "pubDate": "2021-05-26T10:02:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple faces SEC request for further discovery over XRP transactions",
+      "link": "https://cryptopanic.com/news/ripple/12003890/Ripple-faces-SEC-request-for-further-discovery-over-XRP-transactions",
+      "pubDate": "2021-05-26T09:47:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The U.S. SEC is seeking additional discovery from Ripple on its XRP transactions and documents related to its lobbying efforts.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 12
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Elon Musk reminds followers he really isn’t Dogecoin’s master",
+      "link": "https://cryptopanic.com/news/dogecoin/12003856/Elon-Musk-reminds-followers-he-really-isnt-Dogecoins-master",
+      "pubDate": "2021-05-26T09:22:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Musk’s tweets have been credited with markedly influencing the value of the meme cryptocurrency.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 21
+      }
+    },
+    {
+      "title": "RT @TheMoonCarl: Don’t be afraid of a #Bitcoin correction! Just buy more and enjoy the next rise even more!",
+      "link": "https://cryptopanic.com/news/12007513/RT-TheMoonCarl-Dont-be-afraid-of-a-Bitcoin-correction-Just-buy-more-and-enjoy-the-next-rise-even-more",
+      "pubDate": "2021-05-26T09:11:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Ripple CTO Submits Proposal to add NFT Support to the XRP Ledger",
+      "link": "https://cryptopanic.com/news/ripple/12003850/Ripple-CTO-Submits-Proposal-to-add-NFT-Support-to-the-XRP-Ledger",
+      "pubDate": "2021-05-26T09:10:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "David Schwartz has submitted a proposal to add NFT support to the XRP ledger The proposal is via Github and suggests the addition of 2 new objects and one new ledger structure on XRPL The XRP ledger already offers support for tokens thus NFTs can also be supported by providing additional functionality The XRP ledger is also efficient and has a lower carbon footprint than other blockchains The CTO...",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Nebraska signs law to authorize state-chartered banks to custody crypto",
+      "link": "https://cryptopanic.com/news/12003830/Nebraska-signs-law-to-authorize-state-chartered-banks-to-custody-crypto",
+      "pubDate": "2021-05-26T09:05:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The bill was co-authored with the cryptocurrency firm Telcoin and introduced by Republican state senator Mike Flood.",
+      "currencies": [
+        "TEL"
+      ],
+      "votes": {
+        "positive": 28,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @CryptoDiffer: Stablecoins Market Cap has reached $100 billion USD! $USDT $USDC $BUSD $DAI $UST $PAX $TUSD $FEI $USDN $SUSD $XAUT $FRAX…",
+      "link": "https://cryptopanic.com/news/paxos-standard/12007172/RT-CryptoDiffer-Stablecoins-Market-Cap-has-reached-100-billion-USD-USDT-USDC-BUSD-DAI-UST-PAX-TUSD-FEI-USDN-SUSD-XAUT-FRAX",
+      "pubDate": "2021-05-26T08:07:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "FRAX",
+        "FXS"
+      ]
+    },
+    {
+      "title": "‘Dogecoin To Their Heart’s Content’—Crypto Market Price Surges By $300 Billion As Bitcoin, Ethereum, Binance’s BNB, Cardano And Ripple’s XRP Suddenly Soar",
+      "link": "https://cryptopanic.com/news/ripple/12003707/Dogecoin-To-Their-Hearts-ContentCrypto-Market-Price-Surges-By-300-Billion-As-Bitcoin-Ethereum-Binances-BNB-Cardano-And-Ripples-XRP-Suddenly-Soar",
+      "pubDate": "2021-05-26T07:46:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin and cryptocurrency prices have suddenly surged, bouncing back after a brutal week wiped more than $1 trillion from the crypto market...",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Mark Cuban Announces Investment In Polygon As Interest In Proof-Of-Stake Coins Skyrockets",
+      "link": "https://cryptopanic.com/news/matic-network/12003499/Mark-Cuban-Announces-Investment-In-Polygon-As-Interest-In-Proof-Of-Stake-Coins-Skyrockets",
+      "pubDate": "2021-05-26T07:34:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Billionaire investor Mark Cuban has revealed having made an investment in Polygon (MATIC), confirming as much via his website on Tuesday. Cuban, who owns the NBA’s Dallas Mavericks, is a big fan of cryptocurrencies and has spoken of Ethereum in quite glowing terms this year. While Cuban reckons Bitcoin is more of a way of […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @sandeepnailwal: \"I was a Polygon user and find myself using it more and more,\" Cuban said in an email. via @c…",
+      "link": "https://cryptopanic.com/news/matic-network/12002409/RT-sandeepnailwal-I-was-a-Polygon-user-and-find-myself-using-it-more-and-more-Cuban-said-in-an-email-via-c",
+      "pubDate": "2021-05-26T06:54:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "-",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Elon Musk Insists He Doesn’t Control Dogecoin",
+      "link": "https://cryptopanic.com/news/dogecoin/12000393/Elon-Musk-Insists-He-Doesnt-Control-Dogecoin",
+      "pubDate": "2021-05-26T05:57:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Elon Musk claims his ability to take action is limited when it comes to Dogecoin",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dfinity Launches $220M Fund for Internet Computer Developers",
+      "link": "https://cryptopanic.com/news/11999786/Dfinity-Launches-220M-Fund-for-Internet-Computer-Developers",
+      "pubDate": "2021-05-26T05:30:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The Dfinity Foundation has announced the launch of an Internet Computer Developer Ecosystem Program to support development on the decentralized global network.",
+      "currencies": [
+        "ICP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$223M fund for Internet Computer builders — but community is wary",
+      "link": "https://cryptopanic.com/news/11999385/223M-fund-for-Internet-Computer-builders-but-community-is-wary",
+      "pubDate": "2021-05-26T03:06:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The Dfinity Foundation has launched a fund of around $223 million to support development on its decentralized Internet Computer network.",
+      "currencies": [
+        "ICP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Uniswap v3 flips v2 on volume — and both versions flip Bitcoin on fee revenue",
+      "link": "https://cryptopanic.com/news/uniswap/11999363/Uniswap-v3-flips-v2-on-volume-and-both-versions-flip-Bitcoin-on-fee-revenue",
+      "pubDate": "2021-05-26T02:37:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Both iterations of the world’s most popular DEX now generate more fee revenue than Bitcoin.",
+      "currencies": [
+        "BTC",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Music NFT Platform OneOf Raises $63M",
+      "link": "https://cryptopanic.com/news/11999289/Music-NFT-Platform-OneOf-Raises-63M",
+      "pubDate": "2021-05-26T00:50:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "Music-centric NFT platform OneOf has announced that $63M in funds have been raised, with a large bulk of the funds going towards artist rights. Additionally, funding will supply team expansion, building the platform’s existing technology, and supporting independent artists. OneOf is preparing to launch the environmentally-focused NFT platform on the Tezos platform. The OneOf Launch […]",
+      "currencies": [
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Elon Musk Prefers Dogecoin Over Other Alts Because Of The Memes",
+      "link": "https://cryptopanic.com/news/dogecoin/11999263/Elon-Musk-Prefers-Dogecoin-Over-Other-Alts-Because-Of-The-Memes",
+      "pubDate": "2021-05-26T00:00:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Tesla CEO Elon Musk continues to promote Dogecoin by asking the crypto community to submit development ideas on GitHub. When asked why he prefers DOGE to other objectively superior alts, Musk gave a brief reply of: “Doge has dogs & memes, whereas the others do not.” At face value, it seems as though Musk is […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 33
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

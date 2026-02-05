@@ -1,0 +1,60 @@
+{
+  "date": "2017-12-19",
+  "fetchedAt": "2026-02-05T07:27:06.813Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "South Korean Cryptocurrency Exchange Hacked By North Korea",
+      "link": "https://cryptopanic.com/news/ethereum/615174/South-Korean-Cryptocurrency-Exchange-Hacked-By-North-Korea",
+      "pubDate": "2017-12-19T22:00:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Payment Processor BitPay To Add Support for Bitcoin Cash",
+      "link": "https://cryptopanic.com/news/613149/Payment-Processor-BitPay-To-Add-Support-for-Bitcoin-Cash",
+      "pubDate": "2017-12-19T15:00:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Kik CEO Drops Ethereum for Stellar, Claims Poor Scalability",
+      "link": "https://cryptopanic.com/news/stellar/613150/Kik-CEO-Drops-Ethereum-for-Stellar-Claims-Poor-Scalability",
+      "pubDate": "2017-12-19T14:00:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2019-09-22",
+  "fetchedAt": "2026-02-05T07:27:06.681Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Justin Sun Tweets About Upcoming Staking Model for TRON (TRX)",
+      "link": "https://cryptopanic.com/news/6649668/Justin-Sun-Tweets-About-Upcoming-Staking-Model-for-TRON-TRX",
+      "pubDate": "2019-09-22T15:21:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

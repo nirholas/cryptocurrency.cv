@@ -1,0 +1,37 @@
+{
+  "date": "2020-09-12",
+  "fetchedAt": "2026-02-05T07:27:07.895Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "$YFI Creator Wants To Cap the Token’s Supply",
+      "link": "https://cryptopanic.com/news/9956593/YFI-Creator-Wants-To-Cap-the-Tokens-Supply",
+      "pubDate": "2020-09-12T17:02:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "YFI"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "This paper discusses the opportunities &amp; challenges of #blockchain technologies in the education sector. We are hap…",
+      "link": "https://cryptopanic.com/news/9954623/This-paper-discusses-the-opportunities-amp-challenges-of-blockchain-technologies-in-the-education-sector-We-are-hap?mtm_campaign=API-OFA",
+      "pubDate": "2020-09-12T10:22:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "EDU"
+      ]
+    }
+  ]
+}

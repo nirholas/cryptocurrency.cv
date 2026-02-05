@@ -1,0 +1,72 @@
+{
+  "date": "2020-08-05",
+  "fetchedAt": "2026-02-05T07:27:06.864Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Hacker nets over $5 million in Ethereum Classic 51% attack",
+      "link": "https://cryptopanic.com/news/9577860/Hacker-nets-over-5-million-in-Ethereum-Classic-51-attack",
+      "pubDate": "2020-08-05T20:06:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "IOTA Becomes ?Key Innovator? in EU's ?80,000,000,000 Research Program",
+      "link": "https://cryptopanic.com/news/9577156/IOTA-Becomes-Key-Innovator-in-EUs-80000000000-Research-Program",
+      "pubDate": "2020-08-05T18:24:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 21,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "World’s 3rd Largest Pasta Producer Adopts VeChain (VET) and DNV GL’s Infection Risk Management Solution",
+      "link": "https://cryptopanic.com/news/9577457/Worlds-3rd-Largest-Pasta-Producer-Adopts-VeChain-VET-and-DNV-GLs-Infection-Risk-Management-Solution",
+      "pubDate": "2020-08-05T18:07:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We now help learners and professionals claim and advance their academic and career identity. #VCAD credentials can…",
+      "link": "https://cryptopanic.com/news/9572208/We-now-help-learners-and-professionals-claim-and-advance-their-academic-and-career-identity-VCAD-credentials-can?mtm_campaign=API-OFA",
+      "pubDate": "2020-08-05T09:35:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EDU"
+      ]
+    }
+  ]
+}

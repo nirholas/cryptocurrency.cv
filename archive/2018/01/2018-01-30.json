@@ -1,0 +1,43 @@
+{
+  "date": "2018-01-30",
+  "fetchedAt": "2026-02-05T07:27:06.964Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitfinex and Tether Receive U.S. Subpoenas (How is a USDT made?)",
+      "link": "https://cryptopanic.com/news/939773/Bitfinex-and-Tether-Receive-US-Subpoenas-How-is-a-USDT-made",
+      "pubDate": "2018-01-30T23:30:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Report: CFTC Sends Subpoenas to Bitfinex, Tether",
+      "link": "https://cryptopanic.com/news/936720/Report-CFTC-Sends-Subpoenas-to-Bitfinex-Tether",
+      "pubDate": "2018-01-30T18:50:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

@@ -1,0 +1,880 @@
+{
+  "date": "2024-01-11",
+  "fetchedAt": "2026-02-05T07:27:08.058Z",
+  "articleCount": 56,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Valkyrie Exec Expects SEC To Approve XRP ETF, Can This Push Price To $100?",
+      "link": "https://cryptopanic.com/news/19169536/Valkyrie-Exec-Expects-SEC-To-Approve-XRP-ETF-Can-This-Push-Price-To-100",
+      "pubDate": "2024-01-11T23:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "With the advent of Spot Bitcoin ETFs which were approved by the United States Securities and Exchange Commission (SEC) on Wednesday, crypto investors have quickly turned their attention to the next big thing which might be XRP ETFs. This is picking up steam as Steve McClurg, Chief Investment Officer (CIO) for Valkyrie, has lent his voice to the cause. Valkyrie Exec Says XRP ETF Could Be Next...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "OP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Ethereum-linked coins take the lead as altcoin market rallies",
+      "link": "https://cryptopanic.com/news/19169511/Ethereum-linked-coins-take-the-lead-as-altcoin-market-rallies",
+      "pubDate": "2024-01-11T22:30:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC",
+        "ENS"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP ETF optimism grows in the wake of Bitcoin ETF success",
+      "link": "https://cryptopanic.com/news/19169306/XRP-ETF-optimism-grows-in-the-wake-of-Bitcoin-ETF-success",
+      "pubDate": "2024-01-11T20:40:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "With the U.S. Securities and Exchange Commission (SEC) approving multiple Bitcoin spot exchange-traded funds (ETFs), speculation is mounting within the cryptocurrency community about the potential for an XRP ETF. Prominent crypto world figures are confident that such a development is imminent, particularly following the SEC’s recent approvals. Cryptocurrency experts anticipate XRP ETF launch...",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "OP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ethereum Name Service (ENS) Surges 50% in 24 Hours: Here’s Why",
+      "link": "https://cryptopanic.com/news/19169188/Ethereum-Name-Service-ENS-Surges-50-in-24-Hours-Heres-Why",
+      "pubDate": "2024-01-11T19:39:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ENS"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Spot Bitcoin ETFs Record $3.60 Billion in Trading Volume First Day",
+      "link": "https://cryptopanic.com/news/19169249/Spot-Bitcoin-ETFs-Record-360-Billion-in-Trading-Volume-First-Day",
+      "pubDate": "2024-01-11T19:03:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Hedera Up More Than 9% In 24 hours",
+      "link": "https://cryptopanic.com/news/19169147/Cryptocurrency-Hedera-Up-More-Than-9-In-24-hours",
+      "pubDate": "2024-01-11T19:02:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Cosmos Hub Up More Than 8% In 24 hours",
+      "link": "https://cryptopanic.com/news/19169149/Cryptocurrency-Cosmos-Hub-Up-More-Than-8-In-24-hours",
+      "pubDate": "2024-01-11T19:01:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ]
+    },
+    {
+      "title": "Ethereum Classic Rockets Up 34%: Can This Run Continue?",
+      "link": "https://cryptopanic.com/news/19169115/Ethereum-Classic-Rockets-Up-34-Can-This-Run-Continue",
+      "pubDate": "2024-01-11T19:00:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "XRP ETFs Set To Reach SEC’s Desk As Billions Ready To Pour Into XRP Following Ripple’s Huge Win Against SEC",
+      "link": "https://cryptopanic.com/news/19169088/XRP-ETFs-Set-To-Reach-SECs-Desk-As-Billions-Ready-To-Pour-Into-XRP-Following-Ripples-Huge-Win-Against-SEC",
+      "pubDate": "2024-01-11T18:45:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "XRP ETFs Could Soon Become A Reality Following...",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 9
+      }
+    },
+    {
+      "title": "Neo APAC Hackathon winner: magipop – a DAO focusing on community co-creation",
+      "link": "https://cryptopanic.com/news/19169024/Neo-APAC-Hackathon-winner-magipop-a-DAO-focusing-on-community-co-creation",
+      "pubDate": "2024-01-11T18:23:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Hedera and Algorand forge an alliance for crypto recovery",
+      "link": "https://cryptopanic.com/news/19168987/Hedera-and-Algorand-forge-an-alliance-for-crypto-recovery",
+      "pubDate": "2024-01-11T18:08:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALGO",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Ethereum, ETC Skyrocket Following SEC’s Bitcoin ETF Approval",
+      "link": "https://cryptopanic.com/news/19168990/Ethereum-ETC-Skyrocket-Following-SECs-Bitcoin-ETF-Approval",
+      "pubDate": "2024-01-11T18:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Here’s Why the Ethereum Name Service (ENS) Price Increased by 40% Today",
+      "link": "https://cryptopanic.com/news/19169094/Heres-Why-the-Ethereum-Name-Service-ENS-Price-Increased-by-40-Today",
+      "pubDate": "2024-01-11T18:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ENS"
+      ]
+    },
+    {
+      "title": "Justin Sun stored USDD reserves at HTX for proof-of-reserves",
+      "link": "https://cryptopanic.com/news/19168905/Justin-Sun-stored-USDD-reserves-at-HTX-for-proof-of-reserves",
+      "pubDate": "2024-01-11T17:38:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDD"
+      ]
+    },
+    {
+      "title": "Hedera and Algorand Forge Alliance for Decentralized Wallet Recovery",
+      "link": "https://cryptopanic.com/news/19168897/Hedera-and-Algorand-Forge-Alliance-for-Decentralized-Wallet-Recovery",
+      "pubDate": "2024-01-11T17:38:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALGO",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "FTX ready to sell Bahamas penthouse SBF ‘insisted’ on buying for inner circle",
+      "link": "https://cryptopanic.com/news/19168865/FTX-ready-to-sell-Bahamas-penthouse-SBF-insisted-on-buying-for-inner-circle",
+      "pubDate": "2024-01-11T17:28:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "Hedera, Algorand unite for wallet recovery",
+      "link": "https://cryptopanic.com/news/19168860/Hedera-Algorand-unite-for-wallet-recovery",
+      "pubDate": "2024-01-11T17:26:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALGO",
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Machine learning algorithm sets Ethereum Classic price for January 31, 2023",
+      "link": "https://cryptopanic.com/news/19168797/Machine-learning-algorithm-sets-Ethereum-Classic-price-for-January-31-2023",
+      "pubDate": "2024-01-11T17:00:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "Bitfinity secures $7m investment for Bitcoin sidechain on ICP",
+      "link": "https://cryptopanic.com/news/19168686/Bitfinity-secures-7m-investment-for-Bitcoin-sidechain-on-ICP",
+      "pubDate": "2024-01-11T16:23:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ICP"
+      ]
+    },
+    {
+      "title": "Is Pushd (PUSHD) Going To Be The Best Crypto Investment This Year? Top Analyst Thinks So Over Litecoin (LTC) And Internet Computer (ICP)",
+      "link": "https://cryptopanic.com/news/19168570/Is-Pushd-PUSHD-Going-To-Be-The-Best-Crypto-Investment-This-Year-Top-Analyst-Thinks-So-Over-Litecoin-LTC-And-Internet-Computer-ICP",
+      "pubDate": "2024-01-11T15:55:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "ICP"
+      ]
+    },
+    {
+      "title": "Injective rolls out Volan upgrade focused on real-world assets and connectivity with Cosmos chains",
+      "link": "https://cryptopanic.com/news/19168319/Injective-rolls-out-Volan-upgrade-focused-on-real-world-assets-and-connectivity-with-Cosmos-chains",
+      "pubDate": "2024-01-11T15:00:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ATOM",
+        "INJ"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Key Reasons Why Ethereum Classic (ETC) Blasted Higher by 50%",
+      "link": "https://cryptopanic.com/news/19168323/Key-Reasons-Why-Ethereum-Classic-ETC-Blasted-Higher-by-50",
+      "pubDate": "2024-01-11T14:58:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "Hedera and Algorand partner to develop decentralized wallet recovery system",
+      "link": "https://cryptopanic.com/news/19168148/Hedera-and-Algorand-partner-to-develop-decentralized-wallet-recovery-system",
+      "pubDate": "2024-01-11T14:14:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Blockchain ecosystems Hedera and Algorand collaborated on a new alliance and open source protocol to troubleshoot the need for decentralized recovery for digital assets.",
+      "currencies": [
+        "ALGO",
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Berachain unveils Artio public testnet ahead of anticipated mainnet in Q2",
+      "link": "https://cryptopanic.com/news/19168113/Berachain-unveils-Artio-public-testnet-ahead-of-anticipated-mainnet-in-Q2",
+      "pubDate": "2024-01-11T14:05:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ATOM"
+      ]
+    },
+    {
+      "title": "Bitfinity Aims to Enhance Bitcoin Ordinals With An Ethereum Virtual Machine On ICP",
+      "link": "https://cryptopanic.com/news/19168108/Bitfinity-Aims-to-Enhance-Bitcoin-Ordinals-With-An-Ethereum-Virtual-Machine-On-ICP",
+      "pubDate": "2024-01-11T14:01:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ICP"
+      ]
+    },
+    {
+      "title": "Q4 2023 Progress Report",
+      "link": "https://cryptopanic.com/news/19168139/Q4-2023-Progress-Report?mtm_campaign=API-OFA",
+      "pubDate": "2024-01-11T13:55:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "IOTA"
+      ]
+    },
+    {
+      "title": "Bitcoin Layer 2 Bitfinity raises token round at $130 million valuation",
+      "link": "https://cryptopanic.com/news/19167990/Bitcoin-Layer-2-Bitfinity-raises-token-round-at-130-million-valuation",
+      "pubDate": "2024-01-11T13:40:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ICP"
+      ]
+    },
+    {
+      "title": "Three major cryptocurrencies to outperform Bitcoin $BTC in Q1 2024",
+      "link": "https://cryptopanic.com/news/19168059/Three-major-cryptocurrencies-to-outperform-Bitcoin-BTC-in-Q1-2024",
+      "pubDate": "2024-01-11T13:26:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "KAS",
+        "ARB",
+        "TAO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Hedera and Algorand Blockchains Collaborate to Build DeRec Alliance for Assets Recovery",
+      "link": "https://cryptopanic.com/news/19167924/Hedera-and-Algorand-Blockchains-Collaborate-to-Build-DeRec-Alliance-for-Assets-Recovery",
+      "pubDate": "2024-01-11T13:23:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALGO",
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Economist Alex Krüger Warns That Bitcoin Upside Is ‘Clearly Capped’, Says Its Time for Ethereum To Take Over",
+      "link": "https://cryptopanic.com/news/19167787/Economist-Alex-Kruger-Warns-That-Bitcoin-Upside-Is-Clearly-Capped-Says-Its-Time-for-Ethereum-To-Take-Over",
+      "pubDate": "2024-01-11T12:45:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Widely followed economist Alex Krüger believes investor interest could soon shift from Bitcoin (BTC) to Ethereum (ETH). The analyst tells his 162,000 followers on the social media platform X that he believes Bitcoin has topped out and Ethereum will start to outperform Bitcoin (ETH/BTC). He says Tuesday’s false report that the U.S. Securities and Exchange […]",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Is Cardano The Next Solana? Institutional Investors Clamor For ADA Exposure",
+      "link": "https://cryptopanic.com/news/19167724/Is-Cardano-The-Next-Solana-Institutional-Investors-Clamor-For-ADA-Exposure",
+      "pubDate": "2024-01-11T12:30:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Crypto asset investment products started the year on a positive note, with Cardano making a comeback despite going on a price decline last week. According to the latest digital asset fund flow from CoinShares, crypto products saw total inflows of $151 million in the first week of 2024. Unsurprisingly, a larger part of this inflow went into Bitcoin, with Ethereum closely following behind....",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "XRP",
+        "SOL",
+        "AVAX",
+        "LTC",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Simplifying NFT Market Options with Top NFT Marketplaces",
+      "link": "https://cryptopanic.com/news/19167791/Simplifying-NFT-Market-Options-with-Top-NFT-Marketplaces",
+      "pubDate": "2024-01-11T12:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "AXS",
+        "IMX"
+      ]
+    },
+    {
+      "title": "5 Best AI Crypto Coins That Are Trending Nowadays",
+      "link": "https://cryptopanic.com/news/19167738/5-Best-AI-Crypto-Coins-That-Are-Trending-Nowadays",
+      "pubDate": "2024-01-11T12:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "GRT",
+        "RNDR",
+        "FET"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitget Reports 94% Surge in Spot Trading with 110% Spike in Bitget Token (BGB) Volume",
+      "link": "https://cryptopanic.com/news/19168564/Bitget-Reports-94-Surge-in-Spot-Trading-with-110-Spike-in-Bitget-Token-BGB-Volume",
+      "pubDate": "2024-01-11T12:18:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BGB"
+      ]
+    },
+    {
+      "title": "SEC’s historic decision sparks Ethereum classic’s remarkable 34% price rally",
+      "link": "https://cryptopanic.com/news/19167598/SECs-historic-decision-sparks-Ethereum-classics-remarkable-34-price-rally",
+      "pubDate": "2024-01-11T11:40:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "Ethereum Price Rises Amid Ethereum Spot ETF Speculations",
+      "link": "https://cryptopanic.com/news/bitcoin/19167580/Ethereum-Price-Rises-Amid-Ethereum-Spot-ETF-Speculations",
+      "pubDate": "2024-01-11T11:36:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum Price Peaks Post US Bitcoin ETF Approval; Ethereum ETF May Soon Follow, Says Analysts.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "US Politicians Turn To Crypto Investments Amid ETF Approval",
+      "link": "https://cryptopanic.com/news/bitcoin/19167450/US-Politicians-Turn-To-Crypto-Investments-Amid-ETF-Approval",
+      "pubDate": "2024-01-11T10:48:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "US Politicians Invests in Crypto Ahead of SEC's Bitcoin ETF Approval, Sparking Talks of an Ethereum ETF Soon.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Santiment Pointed to This Altcoin Exploding After Bitcoin ETF Approval! Answered the Question of Will the Rise Continue?",
+      "link": "https://cryptopanic.com/news/19167391/Santiment-Pointed-to-This-Altcoin-Exploding-After-Bitcoin-ETF-Approval-Answered-the-Question-of-Will-the-Rise-Continue",
+      "pubDate": "2024-01-11T10:27:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "Bulls Charge As Ethereum Barrels Past $2,600 – Is An ETF The Secret Weapon?",
+      "link": "https://cryptopanic.com/news/blockstack/19167256/Bulls-Charge-As-Ethereum-Barrels-Past-2600-Is-An-ETF-The-Secret-Weapon",
+      "pubDate": "2024-01-11T09:54:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT"
+      ]
+    },
+    {
+      "title": "Mantle (MNT) Reaches New All-Time High – Can It Go to $1?",
+      "link": "https://cryptopanic.com/news/19167310/Mantle-MNT-Reaches-New-All-Time-High-Can-It-Go-to-1",
+      "pubDate": "2024-01-11T09:31:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MNT",
+        "ARB"
+      ]
+    },
+    {
+      "title": "Reasons Bitcoin (BTC) Could Keep Rising Throughout Your Lifetime",
+      "link": "https://cryptopanic.com/news/19167308/Reasons-Bitcoin-BTC-Could-Keep-Rising-Throughout-Your-Lifetime",
+      "pubDate": "2024-01-11T09:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "IMX"
+      ]
+    },
+    {
+      "title": "AVAX up by 12% in 24 hours - What next?",
+      "link": "https://cryptopanic.com/news/19167106/AVAX-up-by-12-in-24-hours-What-next",
+      "pubDate": "2024-01-11T08:30:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Amidst market celebrations, AVAX surged by 12%, but questions linger on the rally's sustainability.",
+      "currencies": [
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Bitcoin ETF Approval Realizes: Is XRP ETF Launch the Next?",
+      "link": "https://cryptopanic.com/news/19167056/Bitcoin-ETF-Approval-Realizes-Is-XRP-ETF-Launch-the-Next",
+      "pubDate": "2024-01-11T08:13:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The crypto community is looking ahead to a potential XRP ETF launch in light of the SEC’s approval of the Spot Bitcoin ETF launch. However, James Seyffart, the Senior ETF Analyst at Bloomberg, hinted at the least possibility of an XRP ETF approval in 2024 due to the ongoing regulatory hurdles. In a recent interview, […]",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Elon Musk Considers Bitcoin as a Payment Method on Mars",
+      "link": "https://cryptopanic.com/news/19167057/Elon-Musk-Considers-Bitcoin-as-a-Payment-Method-on-Mars",
+      "pubDate": "2024-01-11T08:11:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Elon Musk reconsiders Bitcoin on Mars! Could a Lightning Network solve the transaction speed issue? Find out more.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$12,000,000,000,000 Bitcoin Market Cap Incoming, Predicts Anthony Scaramucci – Here’s the Timeline",
+      "link": "https://cryptopanic.com/news/bitcoin/19167017/12000000000000-Bitcoin-Market-Cap-Incoming-Predicts-Anthony-Scaramucci-Heres-the-Timeline",
+      "pubDate": "2024-01-11T08:04:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The founder and CEO of SkyBridge Capital Anthony Scaramucci believes that the total market capitalization of Bitcoin (BTC) could rise more than 13-fold from the current level. Scaramucci says in a new CNBC interview that BTC’s total market cap stands to potentially equal that of Bitcoin with the entry of mainstream investors following the potential […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Classic soars as momentum takes Ethereum above $2,600",
+      "link": "https://cryptopanic.com/news/19167031/Ethereum-Classic-soars-as-momentum-takes-Ethereum-above-2600",
+      "pubDate": "2024-01-11T08:04:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SOL & BONK Pump As Money Flows into Crypto Markets",
+      "link": "https://cryptopanic.com/news/19167121/SOL-BONK-Pump-As-Money-Flows-into-Crypto-Markets",
+      "pubDate": "2024-01-11T08:04:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "FLOW",
+        "OP",
+        "BONK"
+      ]
+    },
+    {
+      "title": "DOT Price (Polkadot) Pumps 15% As Bulls Aim For Surge To $10",
+      "link": "https://cryptopanic.com/news/19166764/DOT-Price-Polkadot-Pumps-15-As-Bulls-Aim-For-Surge-To-10",
+      "pubDate": "2024-01-11T05:28:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Polkadot (DOT) is gaining pace above the $7.50 resistance against the US Dollar. The price is up nearly 15% and might rise further toward $10.00. DOT is showing heavy bullish signs from the $6.65 support against the US Dollar. The price is trading above the $8.00 zone and the 100 simple moving average (4 hours). There was a break above a key bearish trend line with resistance near $7.80 on the...",
+      "currencies": [
+        "BTC",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "EOS Price Analysis: Bulls Face Key Hurdle at $0.78",
+      "link": "https://cryptopanic.com/news/19166741/EOS-Price-Analysis-Bulls-Face-Key-Hurdle-at-078",
+      "pubDate": "2024-01-11T05:08:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ]
+    },
+    {
+      "title": "Musk 'Open To The Idea Of Using Bitcoin On X,' Reveals Personal And SpaceX Crypto Holdings",
+      "link": "https://cryptopanic.com/news/19166738/Musk-Open-To-The-Idea-Of-Using-Bitcoin-On-X-Reveals-Personal-And-SpaceX-Crypto-Holdings",
+      "pubDate": "2024-01-11T04:52:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Elon Musk, in conversation with Ark Invest CEO Cathie Wood on Wednesday, shared his thoughts on the use of Bitcoin (CRYPTO: BTC). read more",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 24,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "These Altcoins Are Surging, Did the SEC Just Kick Off ‘Altseason?’",
+      "link": "https://cryptopanic.com/news/19166717/These-Altcoins-Are-Surging-Did-the-SEC-Just-Kick-Off-Altseason",
+      "pubDate": "2024-01-11T03:53:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "DOT",
+        "UNI",
+        "NEAR",
+        "ETC",
+        "FIL",
+        "IMX",
+        "ARB",
+        "OP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Classic Jumps 34% After Bitcoin ETF Nod, Outshines BTC, ETH Gains",
+      "link": "https://cryptopanic.com/news/19166683/Ethereum-Classic-Jumps-34-After-Bitcoin-ETF-Nod-Outshines-BTC-ETH-Gains",
+      "pubDate": "2024-01-11T03:53:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "Here’s how Binance compares to FTX in 2024",
+      "link": "https://cryptopanic.com/news/19166633/Heres-how-Binance-compares-to-FTX-in-2024",
+      "pubDate": "2024-01-11T03:30:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "FTT"
+      ]
+    },
+    {
+      "title": "Twitter confirms SEC X account was compromised and didn’t have 2FA enabled",
+      "link": "https://cryptopanic.com/news/19166612/Twitter-confirms-SEC-X-account-was-compromised-and-didnt-have-2FA-enabled",
+      "pubDate": "2024-01-11T03:15:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ]
+    },
+    {
+      "title": "24 Crypto Update, 10 Jan: Spot BTC ETF Approval Ignites Altcoin Fire",
+      "link": "https://cryptopanic.com/news/19167449/24-Crypto-Update-10-Jan-Spot-BTC-ETF-Approval-Ignites-Altcoin-Fire",
+      "pubDate": "2024-01-11T01:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ETC",
+        "MNT",
+        "BONK"
+      ]
+    },
+    {
+      "title": "Peter Schiff Says Spot Bitcoin Approval Means 'Eleven More Ways For Speculators To Place Their Bets'",
+      "link": "https://cryptopanic.com/news/19166503/Peter-Schiff-Says-Spot-Bitcoin-Approval-Means-Eleven-More-Ways-For-Speculators-To-Place-Their-Bets",
+      "pubDate": "2024-01-11T01:11:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    }
+  ]
+}

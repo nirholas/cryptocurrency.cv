@@ -1,0 +1,25 @@
+{
+  "date": "2020-01-23",
+  "fetchedAt": "2026-02-05T07:27:08.684Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Pornhub uses cryptocurrency in response to PayPal ban",
+      "link": "https://cryptopanic.com/news/tron/7726996/Pornhub-uses-cryptocurrency-in-response-to-PayPal-ban",
+      "pubDate": "2020-01-23T15:10:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    }
+  ]
+}

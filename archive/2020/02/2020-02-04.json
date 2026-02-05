@@ -1,0 +1,25 @@
+{
+  "date": "2020-02-04",
+  "fetchedAt": "2026-02-05T07:27:06.921Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ripple (XRP) Could See a Liquidity Push With New Perpetual Swaps",
+      "link": "https://cryptopanic.com/news/7836941/Ripple-XRP-Could-See-a-Liquidity-Push-With-New-Perpetual-Swaps",
+      "pubDate": "2020-02-04T13:00:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    }
+  ]
+}

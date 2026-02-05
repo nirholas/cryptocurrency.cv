@@ -1,0 +1,25 @@
+{
+  "date": "2020-07-31",
+  "fetchedAt": "2026-02-05T07:27:06.864Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "VeChain (VET) and Avery Dennison Intelligent Labs Showcase “Blockchain + IoT” Supply Chain Solutions",
+      "link": "https://cryptopanic.com/news/9520879/VeChain-VET-and-Avery-Dennison-Intelligent-Labs-Showcase-Blockchain-IoT-Supply-Chain-Solutions",
+      "pubDate": "2020-07-31T18:00:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

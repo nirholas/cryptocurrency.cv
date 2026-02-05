@@ -1,0 +1,333 @@
+{
+  "date": "2025-08-01",
+  "fetchedAt": "2026-02-05T07:27:08.679Z",
+  "articleCount": 24,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Is Cardano Heading to $6? This ADA Setup Feels Familiar",
+      "link": "https://cryptopanic.com/news/cardano/23876937/Is-Cardano-Heading-to-6-This-ADA-Setup-Feels-Familiar",
+      "pubDate": "2025-08-01T23:46:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "\"Could Cardano (ADA) be on the trajectory to reach $6 in the near future? This particular setup in the market seems strikingly familiar and reminiscent of previous patterns we've observed. As investors and analysts closely monitor price movements, there are growing speculations about whether the cryptocurrency is poised for significant upward momentum.\"",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Visa Adds More Stablecoin Support, Taps Stellar and Avalanche Chains",
+      "link": "https://cryptopanic.com/news/avalanche-2/23875980/Visa-Adds-More-Stablecoin-Support-Taps-Stellar-and-Avalanche-Chains",
+      "pubDate": "2025-08-01T22:24:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Uniswap, a16z, and allies urge Senate to carve out DeFi in market-structure bill",
+      "link": "https://cryptopanic.com/news/uniswap/23875710/Uniswap-a16z-and-allies-urge-Senate-to-carve-out-DeFi-in-market-structure-bill",
+      "pubDate": "2025-08-01T22:09:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Qubic’s ‘Warming up the Engines’ Report Details 51% Strategy Ahead of Showdown With Monero",
+      "link": "https://cryptopanic.com/news/monero/23874964/Qubics-Warming-up-the-Engines-Report-Details-51-Strategy-Ahead-of-Showdown-With-Monero",
+      "pubDate": "2025-08-01T21:30:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Polkadot Isn’t Done Yet—Breakout Point To Bigger Gains Ahead",
+      "link": "https://cryptopanic.com/news/polkadot/23873890/Polkadot-Isnt-Done-YetBreakout-Point-To-Bigger-Gains-Ahead",
+      "pubDate": "2025-08-01T21:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "DOT",
+        "TUSD"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Trader Says All Eyes on One Bitcoin Level After BTC Loses Critical Support Line, Updates Outlook on Cardano and Three Other Altcoins",
+      "link": "https://cryptopanic.com/news/filecoin/23870440/Trader-Says-All-Eyes-on-One-Bitcoin-Level-After-BTC-Loses-Critical-Support-Line-Updates-Outlook-on-Cardano-and-Three-Other-Altcoins",
+      "pubDate": "2025-08-01T18:05:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "LINK"
+      ]
+    },
+    {
+      "title": "$250 Investment to Explosive Gains with Ozak AI and Avalanche, Will This AI Presale Altcoin Create History?",
+      "link": "https://cryptopanic.com/news/avalanche-2/23869993/250-Investment-to-Explosive-Gains-with-Ozak-AI-and-Avalanche-Will-This-AI-Presale-Altcoin-Create-History",
+      "pubDate": "2025-08-01T17:50:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Polkadot's DOT Suffers 5% Decline as Intensified Selling Pressure Overwhelms Market",
+      "link": "https://cryptopanic.com/news/polkadot/23868677/Polkadots-DOT-Suffers-5-Decline-as-Intensified-Selling-Pressure-Overwhelms-Market",
+      "pubDate": "2025-08-01T16:48:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Price predictions 8/1: BTC, ETH, XRP, BNB, SOL, DOGE, ADA, HYPE, XLM, SUI",
+      "link": "https://cryptopanic.com/news/stellar/23866681/Price-predictions-81-BTC-ETH-XRP-BNB-SOL-DOGE-ADA-HYPE-XLM-SUI",
+      "pubDate": "2025-08-01T15:22:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Monero Faces Biggest Economic War From Qubic Network, Is XMR At Risk?",
+      "link": "https://cryptopanic.com/news/monero/23866164/Monero-Faces-Biggest-Economic-War-From-Qubic-Network-Is-XMR-At-Risk",
+      "pubDate": "2025-08-01T15:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Top 10 Slots Casinos That Accept LTC, POL, and TRX in 2025",
+      "link": "https://cryptopanic.com/news/litecoin/23865153/Top-10-Slots-Casinos-That-Accept-LTC-POL-and-TRX-in-2025",
+      "pubDate": "2025-08-01T14:45:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "LTC",
+        "POL"
+      ]
+    },
+    {
+      "title": "What Happens to Stellar (XLM) Price in August After 68% Monthly Rally?",
+      "link": "https://cryptopanic.com/news/stellar/23867304/What-Happens-to-Stellar-XLM-Price-in-August-After-68-Monthly-Rally",
+      "pubDate": "2025-08-01T14:22:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Filecoin Drops Over 6%, Breaks Key Support at the $2.38 Level",
+      "link": "https://cryptopanic.com/news/filecoin/23863520/Filecoin-Drops-Over-6-Breaks-Key-Support-at-the-238-Level",
+      "pubDate": "2025-08-01T13:29:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "10 Years In, Here's Why Aave's Founder Isn’t Done Betting on Ethereum - Ep. 878",
+      "link": "https://cryptopanic.com/news/aave/23862012/10-Years-In-Heres-Why-Aaves-Founder-Isnt-Done-Betting-on-Ethereum-Ep-878",
+      "pubDate": "2025-08-01T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "PancakeSwap Leads DEX Volume in July, Crosses $188 Billion Milestone",
+      "link": "https://cryptopanic.com/news/uniswap/23867280/PancakeSwap-Leads-DEX-Volume-in-July-Crosses-188-Billion-Milestone",
+      "pubDate": "2025-08-01T12:10:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Listings Weekly Recap (July 21 – 28): SOL Memes & ETH DeFi Drive Market Surge, New Assets on HTX Post Impressive Gains",
+      "link": "https://cryptopanic.com/news/huobi-token/23860710/Listings-Weekly-Recap-July-21-28-SOL-Memes-ETH-DeFi-Drive-Market-Surge-New-Assets-on-HTX-Post-Impressive-Gains",
+      "pubDate": "2025-08-01T11:29:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "VINE"
+      ]
+    },
+    {
+      "title": "Another Red August for XLM? Data Signals a Repeat of Its Historical Pattern",
+      "link": "https://cryptopanic.com/news/stellar/23858478/Another-Red-August-for-XLM-Data-Signals-a-Repeat-of-Its-Historical-Pattern",
+      "pubDate": "2025-08-01T10:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Best altcoins to buy now for August gains: VeChain (VET), Pi Coin (PI), Remittix (RTX) and Litecoin (LTC)",
+      "link": "https://cryptopanic.com/news/litecoin/23858098/Best-altcoins-to-buy-now-for-August-gains-VeChain-VET-Pi-Coin-PI-Remittix-RTX-and-Litecoin-LTC",
+      "pubDate": "2025-08-01T10:28:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "VET",
+        "PI"
+      ]
+    },
+    {
+      "title": "Visa Adds Support for PYUSD and USDG, Expands Settlement to Stellar and Avalanche",
+      "link": "https://cryptopanic.com/news/avalanche-2/23856514/Visa-Adds-Support-for-PYUSD-and-USDG-Expands-Settlement-to-Stellar-and-Avalanche",
+      "pubDate": "2025-08-01T09:40:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "XLM",
+        "PYUSD"
+      ]
+    },
+    {
+      "title": "Stellar Price Forecast: XLM risks wedge breakdown as Open Interest declines",
+      "link": "https://cryptopanic.com/news/stellar/23863569/Stellar-Price-Forecast-XLM-risks-wedge-breakdown-as-Open-Interest-declines",
+      "pubDate": "2025-08-01T08:59:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Algorand (ALGO) Sets Sights On $0.50 As Bulls Return Post-Q2 Report",
+      "link": "https://cryptopanic.com/news/algorand/23854981/Algorand-ALGO-Sets-Sights-On-050-As-Bulls-Return-Post-Q2-Report",
+      "pubDate": "2025-08-01T08:47:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Visa Expands Crypto Settlement with PYUSD, EURC, and More Blockchains",
+      "link": "https://cryptopanic.com/news/avalanche-2/23848605/Visa-Expands-Crypto-Settlement-with-PYUSD-EURC-and-More-Blockchains",
+      "pubDate": "2025-08-01T04:15:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "XLM",
+        "PYUSD"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash Among Top Weekly Gainers: Can The Uptrend Sustain?",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/23846733/Bitcoin-Cash-Among-Top-Weekly-Gainers-Can-The-Uptrend-Sustain",
+      "pubDate": "2025-08-01T02:52:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Cardano Hints at Cross-Chain Future with NEAR Integration in the Works",
+      "link": "https://cryptopanic.com/news/near/23843626/Cardano-Hints-at-Cross-Chain-Future-with-NEAR-Integration-in-the-Works",
+      "pubDate": "2025-08-01T00:01:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "NEAR"
+      ]
+    }
+  ]
+}

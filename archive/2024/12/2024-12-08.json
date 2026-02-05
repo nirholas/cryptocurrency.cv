@@ -1,0 +1,585 @@
+{
+  "date": "2024-12-08",
+  "fetchedAt": "2026-02-05T07:27:08.295Z",
+  "articleCount": 39,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tether Exits Europe: Will Trump Administration Push It Out Of US Too?",
+      "link": "https://cryptopanic.com/news/20380824/Tether-Exits-Europe-Will-Trump-Administration-Push-It-Out-Of-US-Too?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T22:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "EURt"
+      ]
+    },
+    {
+      "title": "LUNA’s golden cross: Will it trigger a sustained rally?",
+      "link": "https://cryptopanic.com/news/20380812/LUNAs-golden-cross-Will-it-trigger-a-sustained-rally?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T22:00:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LUNC"
+      ]
+    },
+    {
+      "title": "Analyst Predicts AVAX & DOT Surge—This New Coins Could Deliver Massive x100 Returns by Q1 2025!",
+      "link": "https://cryptopanic.com/news/20380882/Analyst-Predicts-AVAX-DOT-SurgeThis-New-Coins-Could-Deliver-Massive-x100-Returns-by-Q1-2025?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T21:36:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Amazon shareholders tells company to consider adding Bitcoin to its treasury",
+      "link": "https://cryptopanic.com/news/20380783/Amazon-shareholders-tells-company-to-consider-adding-Bitcoin-to-its-treasury?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T21:25:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Amazon shareholders are requesting the company to consider adding Bitcoin to its balance sheet as a way to protect against inflation. This follows a trend where companies, including Microsoft and Tesla, are exploring Bitcoin as an asset. Amazon’s shareholders are asking the company to consider adding Bitcoin to its balance sheet, following in the footsteps […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 29,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XYZ Presale Frenzy: Stage 7 Sells Out in Record Time, Drawing Attention From PNUT and MOODENG!",
+      "link": "https://cryptopanic.com/news/20380801/XYZ-Presale-Frenzy-Stage-7-Sells-Out-in-Record-Time-Drawing-Attention-From-PNUT-and-MOODENG?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T21:15:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PNUT",
+        "MOODENG"
+      ]
+    },
+    {
+      "title": "Traders watch DOGE, SUI, PEPE and FTM as Bitcoin range trades near $100K",
+      "link": "https://cryptopanic.com/news/20380712/Traders-watch-DOGE-SUI-PEPE-and-FTM-as-Bitcoin-range-trades-near-100K?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T20:42:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "FTM",
+        "PEPE",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Vitalik says Ethereum must prioritize verifiability and democracy",
+      "link": "https://cryptopanic.com/news/20380672/Vitalik-says-Ethereum-must-prioritize-verifiability-and-democracy?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T20:10:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TIA"
+      ]
+    },
+    {
+      "title": "Uniswap: $38 Billion Volume, Big Jump In Price, What’s Behind The Rise?",
+      "link": "https://cryptopanic.com/news/20380644/Uniswap-38-Billion-Volume-Big-Jump-In-Price-Whats-Behind-The-Rise?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T19:59:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "UNI"
+      ]
+    },
+    {
+      "title": "BONE Undervalued Gem? Analyst Predicts 5 to 20X Breakout Potential",
+      "link": "https://cryptopanic.com/news/20380623/BONE-Undervalued-Gem-Analyst-Predicts-5-to-20X-Breakout-Potential?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T19:45:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "BONE",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "US Treasury Calls Bitcoin 'Digital Gold,' Highlights Stablecoin Growth",
+      "link": "https://cryptopanic.com/news/20380580/US-Treasury-Calls-Bitcoin-Digital-Gold-Highlights-Stablecoin-Growth?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T19:18:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "US Treasury acknowledges Bitcoin as 'digital gold' and highlights stablecoins' rising role in linking traditional finance to blockchain innovation.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto market’s weekly winners and losers – HBAR, CRV, RAY, XLM",
+      "link": "https://cryptopanic.com/news/20380563/Crypto-markets-weekly-winners-and-losers-HBAR-CRV-RAY-XLM?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T19:00:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "HBAR",
+        "CRV",
+        "RAY"
+      ]
+    },
+    {
+      "title": "Is Cardano (ADA) in Danger of Being Overvalued? Key Indicators Raise Concerns",
+      "link": "https://cryptopanic.com/news/20380557/Is-Cardano-ADA-in-Danger-of-Being-Overvalued-Key-Indicators-Raise-Concerns?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T18:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "According to historical data, Cardano (ADA) may be approaching overvalued territory. This comes after an impressive 180% price increase over the last 30 days. For some investors, the timing might seem premature, especially with the much-anticipated altcoin season just beginning. However, on-chain indicators suggest that ADA might face a correction before establishing new highs. Cardano Metrics...",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Cardano Foundation X account hacked, scam links posted, then removed",
+      "link": "https://cryptopanic.com/news/20380504/Cardano-Foundation-X-account-hacked-scam-links-posted-then-removed?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T18:17:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The Cardano Foundation joins a long list of entities falling victim to X account hacks, including the Securities and Exchange Commission.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Microsoft Set to Vote on Adding Bitcoin to Its Portfolio This Week",
+      "link": "https://cryptopanic.com/news/20380465/Microsoft-Set-to-Vote-on-Adding-Bitcoin-to-Its-Portfolio-This-Week?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T18:00:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Microsoft's shareholders are preparing for a pivotal decision on December 10 regarding the company’s potential investment in Bitcoin. The post Microsoft Set to Vote on Adding Bitcoin to Its Portfolio This Week appeared first on Cryptodnes.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Forget AVAX and LINK, This Token Could Hit 42x Growth and Dominate DeFi in 2024",
+      "link": "https://cryptopanic.com/news/20380385/Forget-AVAX-and-LINK-This-Token-Could-Hit-42x-Growth-and-Dominate-DeFi-in-2024?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T17:20:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "LINK"
+      ]
+    },
+    {
+      "title": "XRP To Maintain Price Rally As Whales Reload Amidst Price Dip- Details",
+      "link": "https://cryptopanic.com/news/20380368/XRP-To-Maintain-Price-Rally-As-Whales-Reload-Amidst-Price-Dip-Details?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T17:00:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XRP",
+        "UNI",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Cardano Foundation X account under attack, hackers spread misinformation about SEC lawsuit",
+      "link": "https://cryptopanic.com/news/20380315/Cardano-Foundation-X-account-under-attack-hackers-spread-misinformation-about-SEC-lawsuit?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T16:17:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Cardano Foundation's official X social media account has been under attack, with hackers posting false information about a purported SEC lawsuit against the organization and promoting a fraudulent token.The hackers first claimed that Cardano was releasing a new token on the Solana blockchain, which was soon discovered to be a scam token. At the time of reporting, the post that advertised this...",
+      "currencies": [
+        "ADA",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Breaking News: Cardano X/Twitter Account Compromised, False Announcement Circulates",
+      "link": "https://cryptopanic.com/news/20380263/Breaking-News-Cardano-XTwitter-Account-Compromised-False-Announcement-Circulates?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T15:53:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The official Cardano X/Twitter account has been compromised, with a fake tweet claiming a SEC lawsuit against Cardano and stating the cessation of $ADA token support. The tweet, which was flagged as fraudulent, falsely claimed that the Cardano Foundation would cease support for $ADA in response to the alleged legal action. False Cardano Announcement Sparks Immediate Confusion The fraudulent...",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Hacked Cardano Foundation X account posts fake token, false SEC lawsuit notice",
+      "link": "https://cryptopanic.com/news/20380206/Hacked-Cardano-Foundation-X-account-posts-fake-token-false-SEC-lawsuit-notice?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T15:29:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The relatively sophisticated scam attempt had some Cardano users trading the token, which saw $500,000 in trading volume.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Stellar eyes $0.90: 2 bullish patterns set the stage for rally",
+      "link": "https://cryptopanic.com/news/20380172/Stellar-eyes-090-2-bullish-patterns-set-the-stage-for-rally?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T15:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana Network Experiences $2.2 Million Meme Coin Theft",
+      "link": "https://cryptopanic.com/news/20380438/Solana-Network-Experiences-22-Million-Meme-Coin-Theft?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T14:33:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "PNUT",
+        "ALCH",
+        "ZEREBRO"
+      ]
+    },
+    {
+      "title": "Microsoft shareholders to make Bitcoin investment decision on December 10",
+      "link": "https://cryptopanic.com/news/20380098/Microsoft-shareholders-to-make-Bitcoin-investment-decision-on-December-10?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T14:03:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Microsoft shareholders are set to decide on the firm’s Bitcoin investment stance on December 10. The digital asset’s cruise to $100k has been fueled by support from the United States President-elect Donald Trump and Tesla CEO and billionaire Elon Musk. However, Microsoft has yet to commit. The deadline for the decision will come later this […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BLUM Daily Video Codes 09 December 2024: Earn 250 BP Points",
+      "link": "https://cryptopanic.com/news/20380271/BLUM-Daily-Video-Codes-09-December-2024-Earn-250-BP-Points?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGS"
+      ]
+    },
+    {
+      "title": "Cats Youtube Code Today December 09, 2024: Boost Your Earnings",
+      "link": "https://cryptopanic.com/news/20380241/Cats-Youtube-Code-Today-December-09-2024-Boost-Your-Earnings?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T13:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS",
+        "TON"
+      ]
+    },
+    {
+      "title": "4 Best Crypto Coins for 2025: BlockDAG, Avalanche, PEPE, & Celestia — Which One Will Dominate Next Year?",
+      "link": "https://cryptopanic.com/news/20380359/4-Best-Crypto-Coins-for-2025-BlockDAG-Avalanche-PEPE-Celestia-Which-One-Will-Dominate-Next-Year?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T13:39:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "PEPE",
+        "TIA"
+      ]
+    },
+    {
+      "title": "Sushi Surges Over 24% in 24 Hours, Breaks $2.30 Mark",
+      "link": "https://cryptopanic.com/news/20381171/Sushi-Surges-Over-24-in-24-Hours-Breaks-230-Mark?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T13:33:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SUSHI"
+      ]
+    },
+    {
+      "title": "Uniswap (UNI) Price Surge in 2025? How Lightchain AI Could Impact Its Future",
+      "link": "https://cryptopanic.com/news/20380010/Uniswap-UNI-Price-Surge-in-2025-How-Lightchain-AI-Could-Impact-Its-Future?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T12:56:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Cardano Gets Constitutional Approval Amid Ecosystem’s Growth",
+      "link": "https://cryptopanic.com/news/20379685/Cardano-Gets-Constitutional-Approval-Amid-Ecosystems-Growth?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T11:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "WBTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Solana's Speed and Memecoin Edge Make the Case for a Stellar ETF",
+      "link": "https://cryptopanic.com/news/20379573/Solanas-Speed-and-Memecoin-Edge-Make-the-Case-for-a-Stellar-ETF?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T10:19:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "XLM"
+      ]
+    },
+    {
+      "title": "What is Decentralized AI and What Changes Does It Bring?",
+      "link": "https://cryptopanic.com/news/20379547/What-is-Decentralized-AI-and-What-Changes-Does-It-Bring?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T10:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "META"
+      ]
+    },
+    {
+      "title": "Avalanche: Here’s what can push AVAX to $65 soon",
+      "link": "https://cryptopanic.com/news/20379478/Avalanche-Heres-what-can-push-AVAX-to-65-soon?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T09:00:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "PEPE Market Cap Hits $10 Billion, Flips Litecoin After 18% Price Increase",
+      "link": "https://cryptopanic.com/news/20379504/PEPE-Market-Cap-Hits-10-Billion-Flips-Litecoin-After-18-Price-Increase?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T09:00:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "LTC",
+        "PEPE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 08 December 2024: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/20379340/Spell-Wallet-Daily-Puzzle-08-December-2024-Earn-Reward-of-1-MANA?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T05:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "CHATGPT thoughts on ADA, HBAR, ALGO and NEAR",
+      "link": "https://cryptopanic.com/news/near/20379837/CHATGPT-thoughts-on-ADA-HBAR-ALGO-and-NEAR",
+      "pubDate": "2024-12-08T04:03:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "NEAR",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Uniswap Consolidates At $17: A Calm Before The Bullish Storm?",
+      "link": "https://cryptopanic.com/news/20379187/Uniswap-Consolidates-At-17-A-Calm-Before-The-Bullish-Storm?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T03:30:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ]
+    },
+    {
+      "title": "Uniswap price prediction – UNI traders, when should you take profits?",
+      "link": "https://cryptopanic.com/news/20379114/Uniswap-price-prediction-UNI-traders-when-should-you-take-profits?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T02:00:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Two Under-the-Radar Altcoins Skyrocket in Price Following Friday Binance Listings",
+      "link": "https://cryptopanic.com/news/20379072/Two-Under-the-Radar-Altcoins-Skyrocket-in-Price-Following-Friday-Binance-Listings?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T01:00:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "ORCA",
+        "ACX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Targets $6,200 as ‘Secondary Bull Run Starts,’ Analysts Predict",
+      "link": "https://cryptopanic.com/news/20379076/Ethereum-Targets-6200-as-Secondary-Bull-Run-Starts-Analysts-Predict?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T00:05:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum's so-called 'secondary bull run' is now in full swing, with analysts targeting a price of $6,200 during the first quarter of 2025. The post Ethereum Targets $6,200 as ‘Secondary Bull Run Starts,’ Analysts Predict appeared first on Cryptonews.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Altcoin season alert – Ethereum’s golden cross might be the first sign!",
+      "link": "https://cryptopanic.com/news/20379004/Altcoin-season-alert-Ethereums-golden-cross-might-be-the-first-sign?mtm_campaign=API-OFA",
+      "pubDate": "2024-12-08T00:00:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum’s SMAs flashed a golden cross, and that may be good news for everyone.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

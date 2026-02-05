@@ -1,0 +1,44 @@
+{
+  "date": "2020-08-11",
+  "fetchedAt": "2026-02-05T07:27:06.980Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @PaxosGlobal: Recently, the @NYDFS issued a “greenlist” of tokens that are pre-approved for its virtual currency licensees to custody an…",
+      "link": "https://cryptopanic.com/news/9639883/RT-PaxosGlobal-Recently-the-NYDFS-issued-a-greenlist-of-tokens-that-are-pre-approved-for-its-virtual-currency-licensees-to-custody-an",
+      "pubDate": "2020-08-11T16:08:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "RT @travalacom: #Travala Lists $PAX as Payment Method to Book at over 2.2 Million Hotels &amp; Homes Worldwide including accommodations from Bo…",
+      "link": "https://cryptopanic.com/news/9639849/RT-travalacom-Travala-Lists-PAX-as-Payment-Method-to-Book-at-over-22-Million-Hotels-amp-Homes-Worldwide-including-accommodations-from-Bo",
+      "pubDate": "2020-08-11T16:05:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "RT @travalacom: #Travala Lists $PAX as Payment Method to Book at over 2.2 Million Hotels & Homes Worldwide including accommodations from Bo…",
+      "link": "https://cryptopanic.com/news/paxos-standard/9639849/RT-travalacom-Travala-Lists-PAX-as-Payment-Method-to-Book-at-over-22-Million-Hotels-amp-Homes-Worldwide-including-accommodations-from-Bo",
+      "pubDate": "2020-08-11T16:05:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    }
+  ]
+}

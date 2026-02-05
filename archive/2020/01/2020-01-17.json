@@ -1,0 +1,57 @@
+{
+  "date": "2020-01-17",
+  "fetchedAt": "2026-02-05T07:27:06.865Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "China: Media Portal Awards VeChain’s “Low Carbon Ecosystem” for Charity Work",
+      "link": "https://cryptopanic.com/news/7680260/China-Media-Portal-Awards-VeChains-Low-Carbon-Ecosystem-for-Charity-Work",
+      "pubDate": "2020-01-17T19:00:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin (BTC) Soft-Fork in 2020 Predicted By Analyst: Here's Why",
+      "link": "https://cryptopanic.com/news/7676118/Bitcoin-BTC-Soft-Fork-in-2020-Predicted-By-Analyst-Heres-Why",
+      "pubDate": "2020-01-17T12:35:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV",
+        "BTG"
+      ]
+    },
+    {
+      "title": "Ethereum Classic price goes ballistic, racks up 30% gains",
+      "link": "https://cryptopanic.com/news/7675332/Ethereum-Classic-price-goes-ballistic-racks-up-30-gains",
+      "pubDate": "2020-01-17T10:30:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

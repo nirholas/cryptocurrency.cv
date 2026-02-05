@@ -1,0 +1,656 @@
+{
+  "date": "2022-07-26",
+  "fetchedAt": "2026-02-05T07:27:07.536Z",
+  "articleCount": 42,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Unplayable",
+      "link": "https://cryptopanic.com/news/15876219/Unplayable",
+      "pubDate": "2022-07-26T23:04:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SPS"
+      ]
+    },
+    {
+      "title": "Bullish Sentiment Spills Over To Institutional Investors As Ethereum Inflows Balloons",
+      "link": "https://cryptopanic.com/news/15876206/Bullish-Sentiment-Spills-Over-To-Institutional-Investors-As-Ethereum-Inflows-Balloons",
+      "pubDate": "2022-07-26T23:00:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Institutional investors had been showing bearish sentiment towards Ethereum for the longest time. The second-largest cryptocurrency by market cap, which had initially caught their attention, was not doing as well as expected, and the outflows that followed were massive. However, it looks like sentiment among these large investors is beginning to turn positive as Ethereum has begun to record inflows. Ethereum Inflows Balloons Over the last several weeks, Ethereum inflows have been ramping up. Alt",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Will USDC Dethrone USDT? This Report Says Yes",
+      "link": "https://cryptopanic.com/news/15876183/Will-USDC-Dethrone-USDT-This-Report-Says-Yes",
+      "pubDate": "2022-07-26T22:42:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "One of the more unsettling events in the stablecoin sector occurred in May when Terra’s UST lost its 1:1 dollar peg. Chaos resulted from the de-peg, which also utterly destroyed Terra’s legitimacy. Nevertheless, the USDT and USDC survived the slaughter. Different stablecoins are working hard to fill the void left by it, though. The USD […]",
+      "currencies": [
+        "USDT",
+        "USDC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Bitcoin Slips To 1-Week Low Ahead Of Fed Hike Rate Decision",
+      "link": "https://cryptopanic.com/news/bitcoin/15876100/Bitcoin-Slips-To-1-Week-Low-Ahead-Of-Fed-Hike-Rate-Decision",
+      "pubDate": "2022-07-26T22:05:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "On July 26, the price of Bitcoin (BTC) fell to a level not seen in more than a week as investor anxiety grew in anticipation of the Federal Reserve raising interest rates. Bitcoin Slumps According to TradingView, the leading cryptocurrency is currently trading below $21,000 at $20,955, down 4.26 percent today and a further 7.17 percent over the past week. As a result, the total market value of...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "FTX CEO Sam Bankman-Fried Says He Wants To Give Voyager Customers 100% of the Lender’s Remaining Assets",
+      "link": "https://cryptopanic.com/news/ftx-token/15876102/FTX-CEO-Sam-Bankman-Fried-Says-He-Wants-To-Give-Voyager-Customers-100-of-the-Lenders-Remaining-Assets",
+      "pubDate": "2022-07-26T22:01:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "FTX CEO Sam Bankman-Fried is responding to claims that his company’s proposal to bail out customers of embattled crypto brokerage firm Voyager Digital is predatory in nature. Voyager Digital filed for bankruptcy earlier this month after crypto hedge fund Three Arrows Capital (3AC), defaulted on a $650 million loan. As Voyager faces insolvency, FTX announced […]",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Are NEAR investors far from recovering their 82.3% losses",
+      "link": "https://cryptopanic.com/news/15876088/Are-NEAR-investors-far-from-recovering-their-823-losses",
+      "pubDate": "2022-07-26T22:00:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "A fairly young blockchain in the cryptocurrency market has been the Near Protocol. It has only been around for the last two years with its first-ever block produced in the year 2022. However, despite being in development for more than a year, the blockchain was one of the few ones to launch post the pandemic. […]",
+      "currencies": [
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "“Every project is a new experience and opportunity to get knowledge about new things in the world,” says Formation…",
+      "link": "https://cryptopanic.com/news/15879457/Every-project-is-a-new-experience-and-opportunity-to-get-knowledge-about-new-things-in-the-world-says-Formation?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-26T20:52:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FORM"
+      ]
+    },
+    {
+      "title": "SPS Staking and Liquidity Provider Rewards page on PeakMonsters",
+      "link": "https://cryptopanic.com/news/15875750/SPS-Staking-and-Liquidity-Provider-Rewards-page-on-PeakMonsters",
+      "pubDate": "2022-07-26T20:04:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SPS"
+      ]
+    },
+    {
+      "title": "Robot Known for Outperforming Crypto Markets Increases Allocation to Ethereum, Polygon and Additional Smart Contract Competitor",
+      "link": "https://cryptopanic.com/news/15875563/Robot-Known-for-Outperforming-Crypto-Markets-Increases-Allocation-to-Ethereum-Polygon-and-Additional-Smart-Contract-Competitor",
+      "pubDate": "2022-07-26T19:00:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A robot that’s garnered a reputation for outpacing the crypto markets is revealing its latest portfolio allocations as the early July rally fizzles out. Every week the Real Vision Bot conducts surveys in order to create algorithmic portfolio assessments consistent with a “hive mind” consensus. The bot’s freshest data finds that traders’ risk appetite remains […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "ADA",
+        "AVAX",
+        "MATIC",
+        "LINK",
+        "UNI",
+        "ALGO",
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Coinbase Announces Support for Ethereum-Based Chainlink (LINK) Competitor As Crypto Markets Stall",
+      "link": "https://cryptopanic.com/news/15875421/Coinbase-Announces-Support-for-Ethereum-Based-Chainlink-LINK-Competitor-As-Crypto-Markets-Stall",
+      "pubDate": "2022-07-26T18:05:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "US crypto giant Coinbase is announcing support for a decentralized Ethereum (ETH)-based oracle. In a new announcement, Coinbase says it will add Nest Protocol (NEST) once liquidity conditions are met. “Trading will begin on or after 9 AM PT on 26 July 2022 if liquidity conditions are met. Once sufficient supply of this asset is established […]",
+      "currencies": [
+        "ETH",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano ($ADA) ‘Reigns As the Most Developed Asset in Crypto’, Says Santiment",
+      "link": "https://cryptopanic.com/news/15875349/Cardano-ADA-Reigns-As-the-Most-Developed-Asset-in-Crypto-Says-Santiment",
+      "pubDate": "2022-07-26T17:33:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "On Tuesday (July 26), crypto analytics firm Santiment said that Cardano ($ADA) continues to be the king of blockchains when it comes to the frequency of meaningful GitHub activity. According to a tweet posted by Santiment earlier today, Cardano “continues to see the most frequent notable GitHub activity,” followed closely by Flow ($FLOW), Polkadot ($DOT), […]",
+      "currencies": [
+        "ADA",
+        "DOT",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 28,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Let's welcome @HuobiGlobal to the #CEEK #Metaverse",
+      "link": "https://cryptopanic.com/news/15878036/Lets-welcome-HuobiGlobal-to-the-CEEK-Metaverse",
+      "pubDate": "2022-07-26T17:29:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CEEK"
+      ]
+    },
+    {
+      "title": "Bitcoin falls to a 1-week low as yet another Fed rate hike beckons",
+      "link": "https://cryptopanic.com/news/bitcoin/15874996/Bitcoin-falls-to-a-1-week-low-as-yet-another-Fed-rate-hike-beckons",
+      "pubDate": "2022-07-26T15:53:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The price of Bitcoin (BTC) dropped to a level not seen in more than a week on July 26, as... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 16
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Can DOGE hit $1 by December 2022? Here’s what the experts say",
+      "link": "https://cryptopanic.com/news/15874967/Can-DOGE-hit-1-by-December-2022-Heres-what-the-experts-say",
+      "pubDate": "2022-07-26T15:46:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "As the price of Dogecoin (DOGE) fluctuates over the past several weeks, influenced by the general cryptocurrency market sentiment, investors... Continue reading",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 23
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Total Stablecoin Supply Down By $35 Billion – Arcane Research",
+      "link": "https://cryptopanic.com/news/15874964/Total-Stablecoin-Supply-Down-By-35-Billion-Arcane-Research",
+      "pubDate": "2022-07-26T15:46:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "Summary: Stablecoin supply dropped by the end of the second quarter of 2022. Arcane Research data showed that the total supply was about $151 billion by Q2 of this year. The figure revealed an 18.8% drop over the last quarter, worth around $35 billion. It’s so far the largest supply drop in stablecoin history, per the report. Arcane’s data also showed that Circle’s USDC token could Flippen...",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "BUSD",
+        "DAI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "We can't keep this secret anymore... Tomorrow at 5:00 PM UTC $DASH trading begins on Kanga! 🤯 @Dashpay we are more…",
+      "link": "https://cryptopanic.com/news/dash/15880373/We-cant-keep-this-secret-anymore-Tomorrow-at-500-PM-UTC-DASH-trading-begins-on-Kanga-Dashpay-we-are-more",
+      "pubDate": "2022-07-26T15:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DASH",
+        "KNG"
+      ]
+    },
+    {
+      "title": "Good afternoon earthlings, what a red market again! I am going to compare #Dash $DASH and #Zcash $ZEC in the next f…",
+      "link": "https://cryptopanic.com/news/dash/15877603/Good-afternoon-earthlings-what-a-red-market-again-I-am-going-to-compare-Dash-DASH-and-Zcash-ZEC-in-the-next-f",
+      "pubDate": "2022-07-26T14:25:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEC",
+        "DASH",
+        "BABY"
+      ]
+    },
+    {
+      "title": "Bitcoin Price Crumbles As SEC Investigates Coinbase Over Alleged Securities Listing",
+      "link": "https://cryptopanic.com/news/bitcoin/15874514/Bitcoin-Price-Crumbles-As-SEC-Investigates-Coinbase-Over-Alleged-Securities-Listing",
+      "pubDate": "2022-07-26T13:58:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The regulator is ascertaining whether the exchange allowed Americans to trade unregistered securities on its platform.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Shiba Inu (SHIB) Nearing Breakdown From Short-Term Pattern",
+      "link": "https://cryptopanic.com/news/15874558/Shiba-Inu-SHIB-Nearing-Breakdown-From-Short-Term-Pattern",
+      "pubDate": "2022-07-26T13:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "While Shiba Inu (SHIB) has been moving upwards since June 18, it is trading inside a short-term corrective pattern, indicating that a breakdown could transpire.",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "F1 teams forced to remove crypto-related ads during the French Grand Prix",
+      "link": "https://cryptopanic.com/news/bitcoin/15874480/F1-teams-forced-to-remove-crypto-related-ads-during-the-French-Grand-Prix",
+      "pubDate": "2022-07-26T13:43:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The cryptocurrency sector and its digital assets like Bitcoin (BTC) are growing in popularity but some countries’ authorities are still... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 12
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Cardano Joins The Red Screen – How ADA Fell To $0.45 Over Last 24 Hours",
+      "link": "https://cryptopanic.com/news/15874446/Cardano-Joins-The-Red-Screen-How-ADA-Fell-To-045-Over-Last-24-Hours",
+      "pubDate": "2022-07-26T13:36:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano (ADA) is all flushed today as it plunged by 6% compared to yesterday’s high of $0.53. While it remains to hover above the 50-day moving average, ADA may drop further down by $0.45 in the next 24 hours as the bears take control of the market. ADA has a fantastic weekend as it glided way up to $0.52 on July 24. However, the coin slid to $0.48 as a result of the issues involved in the...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "XRP",
+        "SOL",
+        "DOGE",
+        "DOT",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "In this presentation, @deggen explains why #bitcoin is a Turing complete system. @MSinkec later joins him to talk a…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/15877796/In-this-presentation-deggen-explains-why-bitcoin-is-a-Turing-complete-system-MSinkec-later-joins-him-to-talk-a",
+      "pubDate": "2022-07-26T13:09:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "FTX holds discussions to acquire South Korean crypto exchange Bithumb",
+      "link": "https://cryptopanic.com/news/15874351/FTX-holds-discussions-to-acquire-South-Korean-crypto-exchange-Bithumb",
+      "pubDate": "2022-07-26T13:05:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Sam Bankman-Fried, the founder of cryptocurrency exchange FTX is accelerating his acquisition spree with plans to acquire the South Korean-based... Continue reading",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Frequency of ransomware attacks fell with bitcoin price drop: SonicWall",
+      "link": "https://cryptopanic.com/news/bitcoin/15874249/Frequency-of-ransomware-attacks-fell-with-bitcoin-price-drop-SonicWall",
+      "pubDate": "2022-07-26T12:36:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The number of ransomware attacks have trended down globally in the first half of 2022, according to cybersecurity firm SonicWall.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 14
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Today’s BUILD 🆙 # 1 hackathon workshop will be a demo on how to build a basic dApp on LUKSO using LUKSO Standard Pr…",
+      "link": "https://cryptopanic.com/news/15880591/Todays-BUILD-1-hackathon-workshop-will-be-a-demo-on-how-to-build-a-basic-dApp-on-LUKSO-using-LUKSO-Standard-Pr",
+      "pubDate": "2022-07-26T12:35:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "Klaytn Network’s Leading Lending Protocol Launches KLAP Token",
+      "link": "https://cryptopanic.com/news/klay-token/15874199/Klaytn-Networks-Leading-Lending-Protocol-Launches-KLAP-Token",
+      "pubDate": "2022-07-26T12:19:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "KLAY"
+      ]
+    },
+    {
+      "title": "TINUS Affiliate Program: OVER Launches Program to Create and Sell Dresses as NFTs in the OVER Metaverse",
+      "link": "https://cryptopanic.com/news/15874151/TINUS-Affiliate-Program-OVER-Launches-Program-to-Create-and-Sell-Dresses-as-NFTs-in-the-OVER-Metaverse",
+      "pubDate": "2022-07-26T12:07:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "AR"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Top #applications on the top blockchain i.t.o tx propagation over past 24h: @CryptoFights @Relysia_SV…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/15877797/Top-applications-on-the-top-blockchain-ito-tx-propagation-over-past-24h-CryptoFights-Relysia_SV",
+      "pubDate": "2022-07-26T12:02:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "Interest in Shiba Inu on Google falls to the lowest level in over a year",
+      "link": "https://cryptopanic.com/news/15874094/Interest-in-Shiba-Inu-on-Google-falls-to-the-lowest-level-in-over-a-year",
+      "pubDate": "2022-07-26T11:48:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "After making a name for itself as one of the most popular meme cryptocurrencies over the last year, Shiba Inu’s... Continue reading",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 12
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ava Labs CEO John Wu Says ‘Big Name’ Brands and Companies To Enter Avalanche (AVAX) Ecosystem in Next 12 Months",
+      "link": "https://cryptopanic.com/news/15874098/Ava-Labs-CEO-John-Wu-Says-Big-Name-Brands-and-Companies-To-Enter-Avalanche-AVAX-Ecosystem-in-Next-12-Months",
+      "pubDate": "2022-07-26T11:45:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "A senior executive at the tech firm behind Avalanche (AVAX) says big things are right around the corner for the Ethereum (ETH) challenger. In a new interview with Anthony Pompliano, Ava Labs president John Wu says that mainstream names from the world of finance and gaming will be onboarding with the Avalanche ecosystem. “I wish […]",
+      "currencies": [
+        "ETH",
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The blockchain community in Singapore came together this evening to celebrate the journey so far and to move forwar…",
+      "link": "https://cryptopanic.com/news/15878049/The-blockchain-community-in-Singapore-came-together-this-evening-to-celebrate-the-journey-so-far-and-to-move-forwar?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-26T11:24:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "CHEX"
+      ]
+    },
+    {
+      "title": "Shiba Inu (SHIB) Burn Rate Continues 200% Rally Following Crypto Card Release",
+      "link": "https://cryptopanic.com/news/shiba-inu/15873946/Shiba-Inu-SHIB-Burn-Rate-Continues-200-Rally-Following-Crypto-Card-Release",
+      "pubDate": "2022-07-26T10:34:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "More Shiba Inu getting burned after massive release for network",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "SHIB Can Now Be Utilized for Salaries Through This Shiba Inu Partnership",
+      "link": "https://cryptopanic.com/news/15873906/SHIB-Can-Now-Be-Utilized-for-Salaries-Through-This-Shiba-Inu-Partnership",
+      "pubDate": "2022-07-26T10:23:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "This partnership now makes it possible to be paid in SHIB",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "1/ Time for Klaytn’s 1st IRL developer meetup 🧵#KlayDevDay We're calling all global buidlers in Seoul during…",
+      "link": "https://cryptopanic.com/news/klay-token/15880464/1-Time-for-Klaytns-1st-IRL-developer-meetup-KlayDevDay-Were-calling-all-global-buidlers-in-Seoul-during",
+      "pubDate": "2022-07-26T09:33:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "Crypto market cap slides under $1 trillion as $40 billion leaves market in 24 hours",
+      "link": "https://cryptopanic.com/news/bitcoin/15872992/Crypto-market-cap-slides-under-1-trillion-as-40-billion-leaves-market-in-24-hours",
+      "pubDate": "2022-07-26T09:29:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "After enjoying a short-term rally that culminated in the general market regaining the $1 trillion market capitalisation, the crypto sector... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "You can now swap #Crypto on #Klaytn through @KrystalDefi",
+      "link": "https://cryptopanic.com/news/klay-token/15880465/You-can-now-swap-Crypto-on-Klaytn-through-KrystalDefi",
+      "pubDate": "2022-07-26T09:13:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "Another token giveaway by @KlaytnGames",
+      "link": "https://cryptopanic.com/news/klay-token/15880466/Another-token-giveaway-by-KlaytnGames",
+      "pubDate": "2022-07-26T09:09:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "There are 3 types of #NFTs in the Orbler game: Orb, #Orbler (Dragon), and Nest. Potential is a property that all t…",
+      "link": "https://cryptopanic.com/news/15881592/There-are-3-types-of-NFTs-in-the-Orbler-game-Orb-Orbler-Dragon-and-Nest-Potential-is-a-property-that-all-t?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-26T08:39:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "ORBR"
+      ]
+    },
+    {
+      "title": "1/ It’s time for Klaytn’s 1st IRL developer meetup 🧵#KlayDevDay We're calling all global buidlers in Seoul during…",
+      "link": "https://cryptopanic.com/news/klay-token/15880467/1-Its-time-for-Klaytns-1st-IRL-developer-meetup-KlayDevDay-Were-calling-all-global-buidlers-in-Seoul-during",
+      "pubDate": "2022-07-26T08:24:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "Singapore Blockchain Week 2022 is back, bigger and better. We are proud to be a part of @sg_blockchain.…",
+      "link": "https://cryptopanic.com/news/15878050/Singapore-Blockchain-Week-2022-is-back-bigger-and-better-We-are-proud-to-be-a-part-of-sg_blockchain?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-26T07:57:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHEX"
+      ]
+    },
+    {
+      "title": "RT @UgurMersin61: As promised i’m going to be hammering out some threads for a while explaining the different parts of @API3DAO, beginning…",
+      "link": "https://cryptopanic.com/news/15877058/RT-UgurMersin61-As-promised-im-going-to-be-hammering-out-some-threads-for-a-while-explaining-the-different-parts-of-API3DAO-beginning",
+      "pubDate": "2022-07-26T07:10:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "API3"
+      ]
+    },
+    {
+      "title": "RT @aaronmcdnz: Great first step in the governance process for @CENNZnet",
+      "link": "https://cryptopanic.com/news/15867799/RT-aaronmcdnz-Great-first-step-in-the-governance-process-for-CENNZnet",
+      "pubDate": "2022-07-26T01:51:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CENNZ"
+      ]
+    }
+  ]
+}

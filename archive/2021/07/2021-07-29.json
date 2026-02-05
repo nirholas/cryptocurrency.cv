@@ -1,0 +1,555 @@
+{
+  "date": "2021-07-29",
+  "fetchedAt": "2026-02-05T07:27:06.890Z",
+  "articleCount": 39,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Despite recent gains, this is what THETA traders should be concerned about",
+      "link": "https://cryptopanic.com/news/theta-token/12426716/Despite-recent-gains-this-is-what-THETA-traders-should-be-concerned-about",
+      "pubDate": "2021-07-29T23:30:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "THETA"
+      ]
+    },
+    {
+      "title": "XRP daily trading volume doubled in Q2 to $4 billion despite ongoing SEC lawsuit",
+      "link": "https://cryptopanic.com/news/ripple/12426464/XRP-daily-trading-volume-doubled-in-Q2-to-4-billion-despite-ongoing-SEC-lawsuit",
+      "pubDate": "2021-07-29T21:15:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The daily trading volume of XRP has soared amid the ongoing legal suit involving the token’s parent company Ripple and... Continue reading",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 27,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "US Lawmakers Fear Cryptocurrency Could Be a 'Financial 9/11', Says Congressman",
+      "link": "https://cryptopanic.com/news/12426238/US-Lawmakers-Fear-Cryptocurrency-Could-Be-a-Financial-911-Says-Congressman",
+      "pubDate": "2021-07-29T19:39:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @RVT5000: Thanks everyone for such a positive response. The Telcoin community is as passionate of a bunch as I’ve seen. These are excit…",
+      "link": "https://cryptopanic.com/news/12431767/RT-RVT5000-Thanks-everyone-for-such-a-positive-response-The-Telcoin-community-is-as-passionate-of-a-bunch-as-Ive-seen-These-are-excit",
+      "pubDate": "2021-07-29T19:29:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: is just #Bitcoin with Proof of Wait instead of Proof of Work. Few understand this.",
+      "link": "https://cryptopanic.com/news/12429662/RT-RichardHeartWin-is-just-Bitcoin-with-Proof-of-Wait-instead-of-Proof-of-Work-Few-understand-this",
+      "pubDate": "2021-07-29T19:27:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "BIG NEWS! The #ETNApp downloads break through a massive 3 million-mark months ahead of the ETN-Network’s Fourth Ann…",
+      "link": "https://cryptopanic.com/news/12426136/BIG-NEWS-The-ETNApp-downloads-break-through-a-massive-3-million-mark-months-ahead-of-the-ETN-Networks-Fourth-Ann",
+      "pubDate": "2021-07-29T19:13:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "Global XRP Volume Skyrocketed 98 Percent in Q2: Report",
+      "link": "https://cryptopanic.com/news/ripple/12426171/Global-XRP-Volume-Skyrocketed-98-Percent-in-Q2-Report",
+      "pubDate": "2021-07-29T19:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "XRP’s global trading volume and volatility exploded in the second quarter",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BNB Breakout Could Pave Way for BSC Tokens",
+      "link": "https://cryptopanic.com/news/12426123/BNB-Breakout-Could-Pave-Way-for-BSC-Tokens",
+      "pubDate": "2021-07-29T19:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Binance Coin (BNB) is following an ascending support line and attempting to break out above the $330 resistance area.",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Number of Crypto Users Doubled in Just 6 Months: Survey",
+      "link": "https://cryptopanic.com/news/dogecoin/12426046/Number-of-Crypto-Users-Doubled-in-Just-6-Months-Survey",
+      "pubDate": "2021-07-29T18:35:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The total number of crypto users has doubled during the first six months of 2021, mainly due to institutional adoption and the fever for memecoins like DOGE and SHIB.",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @safenetworktech: This week we’re sharing more details on DBCs &amp; how we’re integrating Pedersen Commitments—a form of Zero Knowledge Pro…",
+      "link": "https://cryptopanic.com/news/12426024/RT-safenetworktech-This-week-were-sharing-more-details-on-DBCs-amp-how-were-integrating-Pedersen-Commitmentsa-form-of-Zero-Knowledge-Pro",
+      "pubDate": "2021-07-29T18:35:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "Did you catch our Clubhouse call earlier this week? We sat down with the FDIC's Chief Innovation Officer (…",
+      "link": "https://cryptopanic.com/news/12431093/Did-you-catch-our-Clubhouse-call-earlier-this-week-We-sat-down-with-the-FDICs-Chief-Innovation-Officer",
+      "pubDate": "2021-07-29T18:27:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XPR"
+      ]
+    },
+    {
+      "title": "RT @sultanmeghji: Had a great time on the @Clubhouse 'bank' to the future last night talking OG #tech, #banking, #nft (#bayc @BoredApeYC),…",
+      "link": "https://cryptopanic.com/news/12431094/RT-sultanmeghji-Had-a-great-time-on-the-Clubhouse-bank-to-the-future-last-night-talking-OG-tech-banking-nft-bayc-BoredApeYC",
+      "pubDate": "2021-07-29T17:55:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "XPR"
+      ]
+    },
+    {
+      "title": "RT @eCashOfficial: “Their tech roadmap is sound. As far I am concerned, eCash is the continuation of the nascent currency perspective that…",
+      "link": "https://cryptopanic.com/news/ecash/12428350/RT-eCashOfficial-Their-tech-roadmap-is-sound-As-far-I-am-concerned-eCash-is-the-continuation-of-the-nascent-currency-perspective-that",
+      "pubDate": "2021-07-29T17:37:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC",
+        "BCHABC"
+      ]
+    },
+    {
+      "title": "RT @MonicaLongSF: Q2 2021 saw 4 of the highest volume days for XRP ever recorded, new liquidity developments with Swissborg and Liquid, and…",
+      "link": "https://cryptopanic.com/news/12425744/RT-MonicaLongSF-Q2-2021-saw-4-of-the-highest-volume-days-for-XRP-ever-recorded-new-liquidity-developments-with-Swissborg-and-Liquid-and",
+      "pubDate": "2021-07-29T17:07:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "CHSB"
+      ]
+    },
+    {
+      "title": "Congress Fears DeFi “Financial 9/11”: U.S. Legislator",
+      "link": "https://cryptopanic.com/news/12425752/Congress-Fears-DeFi-Financial-911-US-Legislator",
+      "pubDate": "2021-07-29T17:02:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "U.S. lawmakers express concern over the potential risks posed by decentralized finance (DeFi), likening its possible impact to a catastrophic event termed a \"Financial 9/11.\" They are worried that the rapid growth and lack of regulation in the DeFi space could lead to significant financial disruptions and systemic risks, prompting calls for stronger oversight and regulatory measures to...",
+      "currencies": [
+        "MKR"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 21
+      }
+    },
+    {
+      "title": "#Telcoin has been included as the largest component on an @indexcoop proposal by @0xPolygon to launch the first L2…",
+      "link": "https://cryptopanic.com/news/12431768/Telcoin-has-been-included-as-the-largest-component-on-an-indexcoop-proposal-by-0xPolygon-to-launch-the-first-L2",
+      "pubDate": "2021-07-29T16:01:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "Internet Computer (ICP) Usership Rising Despite Fluctuating Coin Value",
+      "link": "https://cryptopanic.com/news/12425468/Internet-Computer-ICP-Usership-Rising-Despite-Fluctuating-Coin-Value",
+      "pubDate": "2021-07-29T15:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Within 10 weeks of launching, blockchain Internet Computer (ICP) has attracted 500 developers and nearly 250,000 users of its applications.",
+      "currencies": [
+        "ICP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Cardano Price Analysis: ADA Bulls Loosing Steam, Struggling At $1.3 Resistance",
+      "link": "https://cryptopanic.com/news/cardano/12425392/Cardano-Price-Analysis-ADA-Bulls-Loosing-Steam-Struggling-At-13-Resistance",
+      "pubDate": "2021-07-29T15:01:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "ADA is up by 9% over the week as the coin sits at $1.27. Against bitcoin, ADA is battling to maintain support at 3200 SAT.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Improvements to the IOTA 2.0 Consensus Mechanism",
+      "link": "https://cryptopanic.com/news/12425386/Improvements-to-the-IOTA-20-Consensus-Mechanism",
+      "pubDate": "2021-07-29T14:57:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "TL;DR: We describe what we learned from the IOTA 2.0 DevNet, focusing on the consensus mechanism. We explain how we can improve the protocol by streamlining the FPC voting process via a mechanism we call On Tangle FPC on a set (OTFPC). At the IOTA Foundation, engineers and",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Thanks to @Benzinga for showcasing the recent Reef Chain launch in their roundup of DeFi Summer!",
+      "link": "https://cryptopanic.com/news/12431198/Thanks-to-Benzinga-for-showcasing-the-recent-Reef-Chain-launch-in-their-roundup-of-DeFi-Summer",
+      "pubDate": "2021-07-29T14:32:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ]
+    },
+    {
+      "title": "THORChain Shakes Off Recent Attacks with 39% Rally",
+      "link": "https://cryptopanic.com/news/12425166/THORChain-Shakes-Off-Recent-Attacks-with-39-Rally",
+      "pubDate": "2021-07-29T14:06:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "THORChain has demonstrated resilience by rebounding with a 39% rally following a series of recent attacks. This surge highlights the platform's recovery and strengthening as it overcomes challenges, attracting renewed investor confidence.",
+      "currencies": [
+        "RUNE"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "This is what you should know about investing in DOGE, Cardano, XRP",
+      "link": "https://cryptopanic.com/news/ripple/12425158/This-is-what-you-should-know-about-investing-in-DOGE-Cardano-XRP",
+      "pubDate": "2021-07-29T14:00:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Crypto-adoption across industries has not really been gradual and steady. The market has seen erratic waves of speculation, exuberance, and acceptance. The growth of altcoins such as Dogecoin, Cardano, and XRP has underlined the evolution of the crypto-ecosystem. These alts, technically, are the market’s “old” coins. Now, amidst the presence of hyped-up newer coins like […]",
+      "currencies": [
+        "ADA",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @RichardHeartWin: Live shortly.",
+      "link": "https://cryptopanic.com/news/12429664/RT-RichardHeartWin-Live-shortly",
+      "pubDate": "2021-07-29T13:24:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "Ripple Has Been In Talks With Central Banks For Quite A While: Senior RippleNet Executive",
+      "link": "https://cryptopanic.com/news/ripple/12424968/Ripple-Has-Been-In-Talks-With-Central-Banks-For-Quite-A-While-Senior-RippleNet-Executive",
+      "pubDate": "2021-07-29T12:57:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Asheesh Birla, the general manager at RippleNet, recently revealed that Ripple, the San Francisco-based distributed ledger startup, has been talking with central banks for a while now. Ripple Wants In On CBDCs While some in the crypto community have shunned XRP as a banker’s cryptocurrency that deviates from Satoshi Nakamoto’s original vision, Ripple is determined […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @CRYPTOtwenty: Congratulations to $THETA and $MATIC, the top performers in the C20 index this week. Learn more",
+      "link": "https://cryptopanic.com/news/theta-token/12429914/RT-CRYPTOtwenty-Congratulations-to-THETA-and-MATIC-the-top-performers-in-the-C20-index-this-week-Learn-more",
+      "pubDate": "2021-07-29T12:39:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "IHF"
+      ]
+    },
+    {
+      "title": "Congratulations to $THETA and $MATIC, the top performers in the C20 index this week. Learn more…",
+      "link": "https://cryptopanic.com/news/theta-token/12428530/Congratulations-to-THETA-and-MATIC-the-top-performers-in-the-C20-index-this-week-Learn-more",
+      "pubDate": "2021-07-29T12:39:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "C20"
+      ]
+    },
+    {
+      "title": "Clover Finance (CLV) and Quant (QNT) up over 20% following Binance listing",
+      "link": "https://cryptopanic.com/news/12424583/Clover-Finance-CLV-and-Quant-QNT-up-over-20-following-Binance-listing",
+      "pubDate": "2021-07-29T10:41:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Cryptocurrency exchange Binance has announced the listing of DeFi centered token Clover Finance (CLV) alongside Quant (QNT). Following the listing,... Continue reading",
+      "currencies": [
+        "QNT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "You're given $40,000. Which one do you spend it on?",
+      "link": "https://cryptopanic.com/news/12431935/Youre-given-40000-Which-one-do-you-spend-it-on",
+      "pubDate": "2021-07-29T10:33:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "“Their tech roadmap is sound. As far I am concerned, eCash is the continuation of the nascent currency perspective…",
+      "link": "https://cryptopanic.com/news/ecash/12432400/Their-tech-roadmap-is-sound-As-far-I-am-concerned-eCash-is-the-continuation-of-the-nascent-currency-perspective",
+      "pubDate": "2021-07-29T09:19:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Read the latest on the Theta vision for media and entertainment, how decentralized video delivery and Edge Nodes wo…",
+      "link": "https://cryptopanic.com/news/12423498/Read-the-latest-on-the-Theta-vision-for-media-and-entertainment-how-decentralized-video-delivery-and-Edge-Nodes-wo",
+      "pubDate": "2021-07-29T07:31:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "We’re excited to share that users can now obtain XSGD via @coinut_exchange through direct bank transfer.  Users ca…",
+      "link": "https://cryptopanic.com/news/12424003/Were-excited-to-share-that-users-can-now-obtain-XSGD-via-coinut_exchange-through-direct-bank-transfer-Users-ca",
+      "pubDate": "2021-07-29T07:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XSGD"
+      ]
+    },
+    {
+      "title": "Ripple Has Been Talking to Central Banks \"for a Long Time,\" Says RippleNet GM",
+      "link": "https://cryptopanic.com/news/ripple/12421322/Ripple-Has-Been-Talking-to-Central-Banks-for-a-Long-Time-Says-RippleNet-GM",
+      "pubDate": "2021-07-29T06:28:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Asheesh Birla claims that central banks won’t adopt the XRP Ledger overnight",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @highrewardcoin: is supporting @Theta_Network’s major upgrade and hard fork to version 3.1.0. $THETA and…",
+      "link": "https://cryptopanic.com/news/theta-token/12421577/RT-highrewardcoin-is-supporting-Theta_Networks-major-upgrade-and-hard-fork-to-version-310-THETA-and",
+      "pubDate": "2021-07-29T06:17:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "IONC"
+      ]
+    },
+    {
+      "title": "Hyperion Monthly Update — July, 2021",
+      "link": "https://cryptopanic.com/news/12421552/Hyperion-Monthly-Update-July-2021",
+      "pubDate": "2021-07-29T03:34:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "A Walkthrough to Hyperion POI Game Mechanism",
+      "link": "https://cryptopanic.com/news/12421556/A-Walkthrough-to-Hyperion-POI-Game-Mechanism",
+      "pubDate": "2021-07-29T03:16:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "SOMESING is very thrilled to announce that its cumulative TX on Klaytn mainnet has surpassed 9M! We will keep doing…",
+      "link": "https://cryptopanic.com/news/12423062/SOMESING-is-very-thrilled-to-announce-that-its-cumulative-TX-on-Klaytn-mainnet-has-surpassed-9M-We-will-keep-doing",
+      "pubDate": "2021-07-29T02:56:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "SSX"
+      ]
+    },
+    {
+      "title": "If you think about it, #BabySatoshi low key payed him a full day's salary in #BTC that he might've earned sleeping…",
+      "link": "https://cryptopanic.com/news/12427217/If-you-think-about-it-BabySatoshi-low-key-payed-him-a-full-days-salary-in-BTC-that-he-mightve-earned-sleeping?mtm_campaign=API-OFA",
+      "pubDate": "2021-07-29T02:20:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "SATS"
+      ]
+    },
+    {
+      "title": "#Telcoin is thrilled to announce that Ryan Tully @RVT5000, former product lead at Kraken cryptocurrency exchange, i…",
+      "link": "https://cryptopanic.com/news/12423539/Telcoin-is-thrilled-to-announce-that-Ryan-Tully-RVT5000-former-product-lead-at-Kraken-cryptocurrency-exchange-i",
+      "pubDate": "2021-07-29T02:12:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "For those in Korea, CCCV is having an art gallery event, where the art work is #NFT by various famous artists. Thi…",
+      "link": "https://cryptopanic.com/news/12419678/For-those-in-Korea-CCCV-is-having-an-art-gallery-event-where-the-art-work-is-NFT-by-various-famous-artists-Thi",
+      "pubDate": "2021-07-29T00:17:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    }
+  ]
+}

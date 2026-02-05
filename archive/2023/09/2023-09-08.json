@@ -1,0 +1,704 @@
+{
+  "date": "2023-09-08",
+  "fetchedAt": "2026-02-05T07:27:07.055Z",
+  "articleCount": 48,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "MakerDAO Explores Tokenized T-Bills With $100 Million Allocation Plan",
+      "link": "https://cryptopanic.com/news/18890320/MakerDAO-Explores-Tokenized-T-Bills-With-100-Million-Allocation-Plan",
+      "pubDate": "2023-09-08T23:00:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DAI",
+        "LTC"
+      ]
+    },
+    {
+      "title": "‘$100 Price Target For Solana (SOL),’ Projects Crypto Influencer",
+      "link": "https://cryptopanic.com/news/18890171/100-Price-Target-For-Solana-SOL-Projects-Crypto-Influencer",
+      "pubDate": "2023-09-08T21:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The decline in key network metrics of Solana may present an investment opportunity. A crypto influencer recently projected a $100 target for SOL, which would mark a 410% hike. The influencer cited Solana’s recent collaborations with Shopify, Visa, and MakerDAO as potential catalysts for SOL. Solana (SOL) may witness a 410% hike to soar all […]",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "MKR attempts recovery as MakerDAO makes a significant move. What next?",
+      "link": "https://cryptopanic.com/news/maker/18890138/MKR-attempts-recovery-as-MakerDAO-makes-a-significant-move-What-next",
+      "pubDate": "2023-09-08T20:30:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Top Tech Reviewer MKBHD on Solana Mobile’s ‘Saga’ Crypto Phone: “Don’t Buy It”",
+      "link": "https://cryptopanic.com/news/18890122/Top-Tech-Reviewer-MKBHD-on-Solana-Mobiles-Saga-Crypto-Phone-Dont-Buy-It",
+      "pubDate": "2023-09-08T20:18:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Background Solana Mobile, a subsidiary of Solana Labs, entered the smartphone market with its crypto phone, the “Saga,” in April 2023. A crypto phone is a specialized smartphone designed with enhanced security features to facilitate secure communications and transactions in the world of cryptocurrencies and blockchain technology. Initially priced at $1,000, the Saga’s price was […]",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 13
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ether Turns Inflationary As On-chain Activity Slides",
+      "link": "https://cryptopanic.com/news/18890114/Ether-Turns-Inflationary-As-On-chain-Activity-Slides",
+      "pubDate": "2023-09-08T20:16:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Deepening NFT Bear Market and Fading Memecoin Craze Contribute To Reduced ETH Burn Rate",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Why is Stellar (XLM) price up this week?",
+      "link": "https://cryptopanic.com/news/18890091/Why-is-Stellar-XLM-price-up-this-week",
+      "pubDate": "2023-09-08T20:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Whale, One of ApeCoin’s (APE) First Investors, Moves Large Amount of Tokens to OKX",
+      "link": "https://cryptopanic.com/news/18889983/Whale-One-of-ApeCoins-APE-First-Investors-Moves-Large-Amount-of-Tokens-to-OKX",
+      "pubDate": "2023-09-08T18:48:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "APE"
+      ]
+    },
+    {
+      "title": "Consensys-owned Infura plans to start decentralizing by end of 2023",
+      "link": "https://cryptopanic.com/news/18889784/Consensys-owned-Infura-plans-to-start-decentralizing-by-end-of-2023",
+      "pubDate": "2023-09-08T17:07:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Consensys-owned Infura said it plans to release a decentralized version of its service by the end of the year.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Spot ETFs: Research Firm Predicts Inflows Over 70,000 BTC, This Price Target",
+      "link": "https://cryptopanic.com/news/18889747/Bitcoin-Spot-ETFs-Research-Firm-Predicts-Inflows-Over-70000-BTC-This-Price-Target",
+      "pubDate": "2023-09-08T17:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Ripple acquires Fortress Trust, expands license portfolio in the US",
+      "link": "https://cryptopanic.com/news/18889740/Ripple-acquires-Fortress-Trust-expands-license-portfolio-in-the-US",
+      "pubDate": "2023-09-08T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Fortress holds a Nevada Trust license for asset custody. Ripple holds more than 30 licenses across the United States.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Axie Infinity (AXS) Analysis: Is the Top-Ranked Metaverse Token Going to Zero?",
+      "link": "https://cryptopanic.com/news/18889844/Axie-Infinity-AXS-Analysis-Is-the-Top-Ranked-Metaverse-Token-Going-to-Zero",
+      "pubDate": "2023-09-08T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "Binance NFT Marketplace Ends Support for Polygon in Effort to ‘Streamline'",
+      "link": "https://cryptopanic.com/news/18889731/Binance-NFT-Marketplace-Ends-Support-for-Polygon-in-Effort-to-Streamline",
+      "pubDate": "2023-09-08T16:42:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "Users have until the end of the year to withdraw their Polygon NFTs from the exchange's NFT Marketplace.",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Will Bitcoin Cash extend its stay below $200?",
+      "link": "https://cryptopanic.com/news/18889695/Will-Bitcoin-Cash-extend-its-stay-below-200",
+      "pubDate": "2023-09-08T16:30:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Shiba Inu’s Shibarium Milestones Prove Pivotal, But Is A Mind-Blowing SHIB Moonshot Still in Play?",
+      "link": "https://cryptopanic.com/news/18889706/Shiba-Inus-Shibarium-Milestones-Prove-Pivotal-But-Is-A-Mind-Blowing-SHIB-Moonshot-Still-in-Play",
+      "pubDate": "2023-09-08T16:24:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Initial optimism has waned for Shiba Inu (SHIB) holders after the relaunch of Shibarium; the network’s layer 2 solution failed to trigger a price...",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Vitalik Buterin Could Have Pushed SHIB up Over 46,000,000%, IOTA Closer to ETH Compatibility, First-Ever Cardano Static Website Kicks Off: Crypto News Digest by U.Today",
+      "link": "https://cryptopanic.com/news/18889641/Vitalik-Buterin-Could-Have-Pushed-SHIB-up-Over-46000000-IOTA-Closer-to-ETH-Compatibility-First-Ever-Cardano-Static-Website-Kicks-Off-Crypto-News-Digest-by-UToday",
+      "pubDate": "2023-09-08T16:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "SHIB",
+        "MIOTA"
+      ]
+    },
+    {
+      "title": "This Week in Crypto: Millionaires, Game Play and Will Exchanges Disappear?",
+      "link": "https://cryptopanic.com/news/18889670/This-Week-in-Crypto-Millionaires-Game-Play-and-Will-Exchanges-Disappear",
+      "pubDate": "2023-09-08T16:00:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "KCS",
+        "GALA"
+      ]
+    },
+    {
+      "title": "Biggest Movers: CRO Moves From 3-Month Low, XLM Extends Recent Gains",
+      "link": "https://cryptopanic.com/news/18889633/Biggest-Movers-CRO-Moves-From-3-Month-Low-XLM-Extends-Recent-Gains",
+      "pubDate": "2023-09-08T16:00:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO",
+        "XLM"
+      ]
+    },
+    {
+      "title": "The curious case of Solana’s declining TVL",
+      "link": "https://cryptopanic.com/news/18889544/The-curious-case-of-Solanas-declining-TVL",
+      "pubDate": "2023-09-08T15:30:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Most Solana projects registered a decline in their TVLs over the last seven days. Its NFT ecosystem, however, thrived.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 12
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "XLM Surges With 10% Rally – Can The Recovery Hold Its Ground?",
+      "link": "https://cryptopanic.com/news/18889533/XLM-Surges-With-10-Rally-Can-The-Recovery-Hold-Its-Ground",
+      "pubDate": "2023-09-08T15:30:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "LINK",
+        "XLM",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Shocking But True: Only XRP and BTC Are Certified as Nonsecurities in US",
+      "link": "https://cryptopanic.com/news/18889536/Shocking-But-True-Only-XRP-and-BTC-Are-Certified-as-Nonsecurities-in-US",
+      "pubDate": "2023-09-08T15:22:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cryptocurrency XDC Network's Price Increased More Than 7% Within 24 hours",
+      "link": "https://cryptopanic.com/news/18889501/Cryptocurrency-XDC-Networks-Price-Increased-More-Than-7-Within-24-hours",
+      "pubDate": "2023-09-08T15:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XDC"
+      ]
+    },
+    {
+      "title": "XLM Could Reach as High as $1.10 Soon, According to Trader",
+      "link": "https://cryptopanic.com/news/18889456/XLM-Could-Reach-as-High-as-110-Soon-According-to-Trader",
+      "pubDate": "2023-09-08T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "5 Shibarium features that could push SHIB above $0.001",
+      "link": "https://cryptopanic.com/news/18889390/5-Shibarium-features-that-could-push-SHIB-above-0001",
+      "pubDate": "2023-09-08T14:39:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "To enhance its utility, the Shiba Inu (SHIB) ecosystem introduced the Shibarium upgrade, aiming to compete with established cryptocurrency projects. … Continued",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "10 Million CHZ Transfer To Binance Identified As Grant By Chiliz",
+      "link": "https://cryptopanic.com/news/18889369/10-Million-CHZ-Transfer-To-Binance-Identified-As-Grant-By-Chiliz",
+      "pubDate": "2023-09-08T14:31:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "CHZ"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin worth $128 million sent to exchanges: What now?",
+      "link": "https://cryptopanic.com/news/18889380/Bitcoin-worth-128-million-sent-to-exchanges-What-now",
+      "pubDate": "2023-09-08T14:30:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "As per past projections, rising exchange balances could drive Bitcoin lower. However, the king coin has evaded another downtrend, and September's projections are in.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "A closer look at the changes in stablecoin supply as TUSD gains on market",
+      "link": "https://cryptopanic.com/news/18889387/A-closer-look-at-the-changes-in-stablecoin-supply-as-TUSD-gains-on-market",
+      "pubDate": "2023-09-08T14:30:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDC",
+        "BUSD",
+        "DAI",
+        "TUSD"
+      ]
+    },
+    {
+      "title": "Terra Luna Classic Proposes To Stop USTC Minting And Reminting",
+      "link": "https://cryptopanic.com/news/18889247/Terra-Luna-Classic-Proposes-To-Stop-USTC-Minting-And-Reminting",
+      "pubDate": "2023-09-08T14:26:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LUNC"
+      ]
+    },
+    {
+      "title": "Bitcoin Rises But Remains Below This Key Level; XDC Network Emerges As Top Gainer",
+      "link": "https://cryptopanic.com/news/18889331/Bitcoin-Rises-But-Remains-Below-This-Key-Level-XDC-Network-Emerges-As-Top-Gainer",
+      "pubDate": "2023-09-08T14:01:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XDC"
+      ]
+    },
+    {
+      "title": "Cardano Whales Sell 1.02 Billion ADA, More Pain Ahead?",
+      "link": "https://cryptopanic.com/news/18889295/Cardano-Whales-Sell-102-Billion-ADA-More-Pain-Ahead",
+      "pubDate": "2023-09-08T14:00:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "On-chain data shows the Cardano whales have sold more than a billion ADA during the past week, a sign that pain may not be over for the asset yet. Cardano Whales Have Participated In Some Distribution Recently Cardano didn’t have the best time in August, as the cryptocurrency registered a more than 18% drop. This new month of September hasn’t been any better for ADA, as the asset has only...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "DOGE",
+        "GRT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Native USDC Might Outperform Ethereum-Linked USDC in the Future",
+      "link": "https://cryptopanic.com/news/18889221/Native-USDC-Might-Outperform-Ethereum-Linked-USDC-in-the-Future",
+      "pubDate": "2023-09-08T13:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Stellar (XLM) Teases Major Innovation: Details",
+      "link": "https://cryptopanic.com/news/18889158/Stellar-XLM-Teases-Major-Innovation-Details",
+      "pubDate": "2023-09-08T13:11:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto price prediction: XDC Network, Cronos, Astar",
+      "link": "https://cryptopanic.com/news/18889119/Crypto-price-prediction-XDC-Network-Cronos-Astar",
+      "pubDate": "2023-09-08T13:04:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XDC"
+      ]
+    },
+    {
+      "title": "Announcement of SAND and MATIC from Binance!",
+      "link": "https://cryptopanic.com/news/18889085/Announcement-of-SAND-and-MATIC-from-Binance",
+      "pubDate": "2023-09-08T12:44:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "MATIC",
+        "SAND"
+      ]
+    },
+    {
+      "title": "Major Market Maker DWF Labs Bought This Altcoin, Which Has Attracted Attention With Its Recent Rise!",
+      "link": "https://cryptopanic.com/news/maker/18888993/Major-Market-Maker-DWF-Labs-Bought-This-Altcoin-Which-Has-Attracted-Attention-With-Its-Recent-Rise",
+      "pubDate": "2023-09-08T12:07:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Is Bitcoin Mining Turning Unprofitable? Hash Price Reaches All-Time Low",
+      "link": "https://cryptopanic.com/news/18889025/Is-Bitcoin-Mining-Turning-Unprofitable-Hash-Price-Reaches-All-Time-Low",
+      "pubDate": "2023-09-08T11:48:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "GRT"
+      ]
+    },
+    {
+      "title": "How A Spot Bitcoin ETF Could Affect Bitcoin Spark And Bitcoin Cash",
+      "link": "https://cryptopanic.com/news/18888979/How-A-Spot-Bitcoin-ETF-Could-Affect-Bitcoin-Spark-And-Bitcoin-Cash",
+      "pubDate": "2023-09-08T11:47:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Binance Ends NFT Staking Program And Polygon (MATIC) Network Support",
+      "link": "https://cryptopanic.com/news/18888841/Binance-Ends-NFT-Staking-Program-And-Polygon-MATIC-Network-Support",
+      "pubDate": "2023-09-08T11:43:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "MATIC",
+        "SAND"
+      ]
+    },
+    {
+      "title": "XRP Bottom Support Holds Strong: A Healthy Sign For The Crypto’s Price?",
+      "link": "https://cryptopanic.com/news/maker/18888609/XRP-Bottom-Support-Holds-Strong-A-Healthy-Sign-For-The-Cryptos-Price",
+      "pubDate": "2023-09-08T09:40:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "BNB",
+        "XRP"
+      ]
+    },
+    {
+      "title": "These Altcoins Saw the Biggest Gains in Price This Week",
+      "link": "https://cryptopanic.com/news/18888501/These-Altcoins-Saw-the-Biggest-Gains-in-Price-This-Week",
+      "pubDate": "2023-09-08T09:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XLM",
+        "MIOTA",
+        "SNX",
+        "RNDR"
+      ]
+    },
+    {
+      "title": "Bitcoin Price Pushes Above $26K, This Cohort of BTC Investors Reach ATH: Market Watch",
+      "link": "https://cryptopanic.com/news/18888474/Bitcoin-Price-Pushes-Above-26K-This-Cohort-of-BTC-Investors-Reach-ATH-Market-Watch",
+      "pubDate": "2023-09-08T08:54:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XDC"
+      ]
+    },
+    {
+      "title": "Crypto Exchange Boss and Siblings Sentenced to 12,000 Years After $2 Billion Fraud",
+      "link": "https://cryptopanic.com/news/18888502/Crypto-Exchange-Boss-and-Siblings-Sentenced-to-12000-Years-After-2-Billion-Fraud",
+      "pubDate": "2023-09-08T08:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash Analysis: Key Breakout Resistance Sits At $200",
+      "link": "https://cryptopanic.com/news/18888020/Bitcoin-Cash-Analysis-Key-Breakout-Resistance-Sits-At-200",
+      "pubDate": "2023-09-08T04:08:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Rocket Pool Price Prediction 2023-2032: Is RPL A Good Investment?",
+      "link": "https://cryptopanic.com/news/18887982/Rocket-Pool-Price-Prediction-2023-2032-Is-RPL-A-Good-Investment",
+      "pubDate": "2023-09-08T03:29:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "RPL"
+      ]
+    },
+    {
+      "title": "Rocket Pool price prediction 2024-2030: Is RPL A good investment?",
+      "link": "https://cryptopanic.com/news/18887982/Rocket-Pool-price-prediction-2024-2030-Is-RPL-A-good-investment",
+      "pubDate": "2023-09-08T03:29:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "RPL"
+      ]
+    },
+    {
+      "title": "Rocket Pool price prediction 2025-2031: Is RPL a good investment?",
+      "link": "https://cryptopanic.com/news/18887982/Rocket-Pool-price-prediction-2025-2031-Is-RPL-a-good-investment?mtm_campaign=API-OFA",
+      "pubDate": "2023-09-08T03:29:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "RPL"
+      ]
+    },
+    {
+      "title": "Axie Infinity: AXS to present a shorting opportunity?",
+      "link": "https://cryptopanic.com/news/18887942/Axie-Infinity-AXS-to-present-a-shorting-opportunity",
+      "pubDate": "2023-09-08T02:30:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "AXS"
+      ]
+    },
+    {
+      "title": "24 Crypto Update, 07 Sep: Crypto market shows slight recovery",
+      "link": "https://cryptopanic.com/news/18888201/24-Crypto-Update-07-Sep-Crypto-market-shows-slight-recovery",
+      "pubDate": "2023-09-08T01:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "XRP",
+        "SOL",
+        "DAI",
+        "RPL"
+      ]
+    },
+    {
+      "title": "XLM rebounds from key support: Is recovery sustainable?",
+      "link": "https://cryptopanic.com/news/18887847/XLM-rebounds-from-key-support-Is-recovery-sustainable",
+      "pubDate": "2023-09-08T00:30:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    }
+  ]
+}

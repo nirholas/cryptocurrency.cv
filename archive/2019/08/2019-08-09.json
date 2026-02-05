@@ -1,0 +1,25 @@
+{
+  "date": "2019-08-09",
+  "fetchedAt": "2026-02-05T07:27:06.994Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Litecoin (LTC) Acknowledged as Payment Token by IMF, Community Says It’s Unofficial",
+      "link": "https://cryptopanic.com/news/litecoin/6272887/Litecoin-LTC-Acknowledged-as-Payment-Token-by-IMF-Community-Says-Its-Unofficial",
+      "pubDate": "2019-08-09T12:10:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

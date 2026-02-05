@@ -1,0 +1,25 @@
+{
+  "date": "2019-11-18",
+  "fetchedAt": "2026-02-05T07:27:07.858Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tron (TRX) falls 9 percent following Justin Sun’s banking fiasco",
+      "link": "https://cryptopanic.com/news/7179479/Tron-TRX-falls-9-percent-following-Justin-Suns-banking-fiasco",
+      "pubDate": "2019-11-18T22:05:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

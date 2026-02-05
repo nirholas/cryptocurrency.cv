@@ -1,0 +1,37 @@
+{
+  "date": "2020-10-23",
+  "fetchedAt": "2026-02-05T07:27:06.991Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Blockchain·All-star Gala (Shanghai) Is Coming Soon! Whitecoin Invites You to Join Us! #crypto #Blockchain #XWC…",
+      "link": "https://cryptopanic.com/news/10332977/BlockchainAll-star-Gala-Shanghai-Is-Coming-Soon-Whitecoin-Invites-You-to-Join-Us-crypto-Blockchain-XWC",
+      "pubDate": "2020-10-23T09:38:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XWC"
+      ]
+    },
+    {
+      "title": "Here are the Most Exciting Projects Building on Polkadot",
+      "link": "https://cryptopanic.com/news/10333003/Here-are-the-Most-Exciting-Projects-Building-on-Polkadot",
+      "pubDate": "2020-10-23T09:34:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

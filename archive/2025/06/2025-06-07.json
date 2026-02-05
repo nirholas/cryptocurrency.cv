@@ -1,0 +1,306 @@
+{
+  "date": "2025-06-07",
+  "fetchedAt": "2026-02-05T07:27:08.635Z",
+  "articleCount": 20,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "VeChain (VET) & Algorand (ALGO): Which Enterprise-focused Blockchain Will Capture the Next Wave of Institutional Interest?",
+      "link": "https://cryptopanic.com/news/algorand/22388594/VeChain-VET-Algorand-ALGO-Which-Enterprise-focused-Blockchain-Will-Capture-the-Next-Wave-of-Institutional-Interest",
+      "pubDate": "2025-06-07T23:36:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALGO",
+        "VET"
+      ]
+    },
+    {
+      "title": "Justin Sun-connected BiT Global drops wBTC-related legal spat with Coinbase",
+      "link": "https://cryptopanic.com/news/wrapped-bitcoin/22387947/Justin-Sun-connected-BiT-Global-drops-wBTC-related-legal-spat-with-Coinbase",
+      "pubDate": "2025-06-07T21:42:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "WBTC"
+      ]
+    },
+    {
+      "title": "WBTC Delisting Fight Ends: Bit Global Drops Case Against Coinbase",
+      "link": "https://cryptopanic.com/news/wrapped-bitcoin/22387943/WBTC-Delisting-Fight-Ends-Bit-Global-Drops-Case-Against-Coinbase",
+      "pubDate": "2025-06-07T21:40:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "WBTC"
+      ]
+    },
+    {
+      "title": "Litecoin Price Prospects After Grayscale Exec Chimes In On Its Appeal",
+      "link": "https://cryptopanic.com/news/litecoin/22387646/Litecoin-Price-Prospects-After-Grayscale-Exec-Chimes-In-On-Its-Appeal",
+      "pubDate": "2025-06-07T21:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano, Litecoin and Remittix Look Ready To Soar In June If Bitcoin Plays Ball",
+      "link": "https://cryptopanic.com/news/litecoin/22386724/Cardano-Litecoin-and-Remittix-Look-Ready-To-Soar-In-June-If-Bitcoin-Plays-Ball",
+      "pubDate": "2025-06-07T18:35:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BAY Miner’s cloud mining contracts help investors earn up to $100,000 worth of BTC per day",
+      "link": "https://cryptopanic.com/news/litecoin/22386340/BAY-Miners-cloud-mining-contracts-help-investors-earn-up-to-100000-worth-of-BTC-per-day",
+      "pubDate": "2025-06-07T18:04:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Coinbase, BiT Global End Legal Fight Over WBTC Delisting",
+      "link": "https://cryptopanic.com/news/wrapped-bitcoin/22386243/Coinbase-BiT-Global-End-Legal-Fight-Over-WBTC-Delisting",
+      "pubDate": "2025-06-07T17:21:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "WBTC"
+      ]
+    },
+    {
+      "title": "Stacks-based Alex Lab to reimburse users after $8.3 million exploit as token drops 45%",
+      "link": "https://cryptopanic.com/news/blockstack/22385726/Stacks-based-Alex-Lab-to-reimburse-users-after-83-million-exploit-as-token-drops-45",
+      "pubDate": "2025-06-07T16:29:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STX",
+        "ALEX"
+      ]
+    },
+    {
+      "title": "Why Coinbase Brought Dogecoin and XRP to Ethereum Network Base",
+      "link": "https://cryptopanic.com/news/ethereum/22385722/Why-Coinbase-Brought-Dogecoin-and-XRP-to-Ethereum-Network-Base",
+      "pubDate": "2025-06-07T16:28:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Coinbase has released two new tokens that allow users to trade their Dogecoin and XRP on Base, the exchange's Ethereum layer-2 network.",
+      "currencies": [
+        "ETH",
+        "XRP",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 3
+      }
+    },
+    {
+      "title": "How Ethereum Is Faring Since Its Major Pectra Upgrade",
+      "link": "https://cryptopanic.com/news/ethereum/22384541/How-Ethereum-Is-Faring-Since-Its-Major-Pectra-Upgrade",
+      "pubDate": "2025-06-07T14:22:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Not only has ETH's price surged, but Ethereum's Pectra upgrade has made a sizable impact on the network ecosystem. Here's how.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Cardano (ADA) Price Prediction for June 7",
+      "link": "https://cryptopanic.com/news/cardano/22384028/Cardano-ADA-Price-Prediction-for-June-7",
+      "pubDate": "2025-06-07T13:58:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Can rise of Cardano (ADA) continue to $0. 70 upcoming week?",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Whale Accumulation and Aave’s “Umbrella” Upgrade Stir Market as AAVE Tests Technical Support",
+      "link": "https://cryptopanic.com/news/aave/22417121/Whale-Accumulation-and-Aaves-Umbrella-Upgrade-Stir-Market-as-AAVE-Tests-Technical-Support",
+      "pubDate": "2025-06-07T13:50:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AAVE",
+        "DONUT"
+      ]
+    },
+    {
+      "title": "$809,910,000 Cardano in 24 Hours, Futures Whale Fueling Rebound",
+      "link": "https://cryptopanic.com/news/cardano/22383938/809910000-Cardano-in-24-Hours-Futures-Whale-Fueling-Rebound",
+      "pubDate": "2025-06-07T13:42:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano open interest explodes with $809,910,000 in active futures trades",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Ethereum ETFs Record 15 Consecutive Days of Inflows, Outshining Bitcoin",
+      "link": "https://cryptopanic.com/news/bitcoin/22382418/Ethereum-ETFs-Record-15-Consecutive-Days-of-Inflows-Outshining-Bitcoin",
+      "pubDate": "2025-06-07T11:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Ether whales prepare for big price movements",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Circle rejected Ripple’s $5 billion buyout — now valued at over $20 billion after NYSE debut",
+      "link": "https://cryptopanic.com/news/usd-coin/22381580/Circle-rejected-Ripples-5-billion-buyout-now-valued-at-over-20-billion-after-NYSE-debut",
+      "pubDate": "2025-06-07T10:57:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Circle, the USDC stablecoin issuer, made a blockbuster debut on Wall Street this week, with shares soaring to as high as $123, briefly pushing its market capitalization close to $25 billion. At the close of its second trading day on the New York Stock Exchange (NYSE), the stock (CRCL) settled at $107, giving Circle a valuation of more than $21 billion nearly quadrupling not only its IPO pricing of $31 per share but also a reported $5 billion buyout offer previously made by Ripple. \"Now more th.",
+      "currencies": [
+        "USDC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ETF issuers’ latest warning – SEC’s approval process ‘kills innovation, aids giants’",
+      "link": "https://cryptopanic.com/news/litecoin/22380814/ETF-issuers-latest-warning-SECs-approval-process-kills-innovation-aids-giants",
+      "pubDate": "2025-06-07T10:00:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "DOGE"
+      ]
+    },
+    {
+      "title": "Michael Saylor Issues Victorious BTC Tweet: ‘Strategy Is Fully Torqued Bitcoin’",
+      "link": "https://cryptopanic.com/news/bitcoin/22377794/Michael-Saylor-Issues-Victorious-BTC-Tweet-Strategy-Is-Fully-Torqued-Bitcoin",
+      "pubDate": "2025-06-07T06:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Michael Saylor reveals how MSTR has surpassed world’s biggest companies and assets",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Uniswap v4 Surpasses $40B Swap Volume In Just 4 Months",
+      "link": "https://cryptopanic.com/news/uniswap/22417110/Uniswap-v4-Surpasses-40B-Swap-Volume-In-Just-4-Months",
+      "pubDate": "2025-06-07T04:55:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI",
+        "DONUT"
+      ]
+    },
+    {
+      "title": "Neow3j v3.24.0 adds Neo v3.8 support, introduces breaking changes",
+      "link": "https://cryptopanic.com/news/neo/22374866/Neow3j-v3240-adds-Neo-v38-support-introduces-breaking-changes",
+      "pubDate": "2025-06-07T01:02:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Coinbase Adds PancakeSwap to Listing Roadmap As the BNB Chain DEX Surges to Record $173,000,000,000 in Monthly Volume",
+      "link": "https://cryptopanic.com/news/pancakeswap-token/22373821/Coinbase-Adds-PancakeSwap-to-Listing-Roadmap-As-the-BNB-Chain-DEX-Surges-to-Record-173000000000-in-Monthly-Volume",
+      "pubDate": "2025-06-07T00:00:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "CAKE"
+      ]
+    }
+  ]
+}

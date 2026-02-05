@@ -1,0 +1,38 @@
+{
+  "date": "2019-05-14",
+  "fetchedAt": "2026-02-05T07:27:06.971Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOHK and Polymath Partner Up for First Security Token Blockchain",
+      "link": "https://cryptopanic.com/news/tron/5417726/IOHK-and-Polymath-Partner-Up-for-First-Security-Token-Blockchain",
+      "pubDate": "2019-05-14T14:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "This Unlucky Investor Just Paid $100,000 For Litecoin (LTC) on Binance",
+      "link": "https://cryptopanic.com/news/5416234/This-Unlucky-Investor-Just-Paid-100000-For-Litecoin-LTC-on-Binance",
+      "pubDate": "2019-05-14T11:32:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    }
+  ]
+}

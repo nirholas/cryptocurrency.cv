@@ -1,0 +1,26 @@
+{
+  "date": "2018-07-21",
+  "fetchedAt": "2026-02-05T07:27:07.891Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "EOS Underperforms & Disappoints Investors Since Mainnet Launch – Bearish Outlook",
+      "link": "https://cryptopanic.com/news/2598223/EOS-Underperforms-Disappoints-Investors-Since-Mainnet-Launch-Bearish-Outlook",
+      "pubDate": "2018-07-21T16:19:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 31
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2020-09-27",
+  "fetchedAt": "2026-02-05T07:27:07.879Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "DeFi protocols break $10 billion in total value locked",
+      "link": "https://cryptopanic.com/news/10095021/DeFi-protocols-break-10-billion-in-total-value-locked",
+      "pubDate": "2020-09-27T15:26:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

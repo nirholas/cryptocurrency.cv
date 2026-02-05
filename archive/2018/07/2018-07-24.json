@@ -1,0 +1,78 @@
+{
+  "date": "2018-07-24",
+  "fetchedAt": "2026-02-05T07:27:06.879Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tezos Hires 'Big Four' Firm PwC to Conduct External Audit",
+      "link": "https://cryptopanic.com/news/2634284/Tezos-Hires-Big-Four-Firm-PwC-to-Conduct-External-Audit",
+      "pubDate": "2018-07-24T19:20:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Binance Completes Its Mainnet Swap of VEN to VET",
+      "link": "https://cryptopanic.com/news/2631713/Binance-Completes-Its-Mainnet-Swap-of-VEN-to-VET",
+      "pubDate": "2018-07-24T16:22:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "VET"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron [TRX] Records Huge Gains on Acquisition, Set to Return Above $0.04?",
+      "link": "https://cryptopanic.com/news/2630205/Tron-TRX-Records-Huge-Gains-on-Acquisition-Set-to-Return-Above-004",
+      "pubDate": "2018-07-24T14:42:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "TRON Acquires BitTorrent, Making It the Largest Decentralized Internet Ecosystem Worldwide",
+      "link": "https://cryptopanic.com/news/2627188/TRON-Acquires-BitTorrent-Making-It-the-Largest-Decentralized-Internet-Ecosystem-Worldwide",
+      "pubDate": "2018-07-24T11:37:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 34,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

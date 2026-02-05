@@ -1,0 +1,25 @@
+{
+  "date": "2017-11-09",
+  "fetchedAt": "2026-02-05T07:27:06.999Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "UFC in Hot Water as Monero Miner found on Official Website",
+      "link": "https://cryptopanic.com/news/monero/428848/UFC-in-Hot-Water-as-Monero-Miner-found-on-Official-Website",
+      "pubDate": "2017-11-09T21:11:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

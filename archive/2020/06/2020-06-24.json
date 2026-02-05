@@ -1,0 +1,20 @@
+{
+  "date": "2020-06-24",
+  "fetchedAt": "2026-02-05T07:27:08.552Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @BittrexGlobal: BTC-ME market is now open for trading on . For more information about $ME…",
+      "link": "https://cryptopanic.com/news/11432267/RT-BittrexGlobal-BTC-ME-market-is-now-open-for-trading-on-For-more-information-about-ME?mtm_campaign=API-OFA",
+      "pubDate": "2020-06-24T10:57:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "ME"
+      ]
+    }
+  ]
+}

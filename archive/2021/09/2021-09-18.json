@@ -1,0 +1,427 @@
+{
+  "date": "2021-09-18",
+  "fetchedAt": "2026-02-05T07:27:06.554Z",
+  "articleCount": 27,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Cardano price dips after smart contract launch, Walmart working with Litecoin is fake news, Coinbase raises $2B from junk-bond sale: Hodler’s Digest, Sept. 12-18",
+      "link": "https://cryptopanic.com/news/litecoin/12810709/Cardano-price-dips-after-smart-contract-launch-Walmart-working-with-Litecoin-is-fake-news-Coinbase-raises-2B-from-junk-bond-sale-Hodlers-Digest-Sept-12-18",
+      "pubDate": "2021-09-18T21:30:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "-",
+      "currencies": [
+        "ADA",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 4
+      }
+    },
+    {
+      "title": "We are excited to share that #QuarkChain was selected as one of the Best San Francisco Companies and Startups of 20…",
+      "link": "https://cryptopanic.com/news/12813641/We-are-excited-to-share-that-QuarkChain-was-selected-as-one-of-the-Best-San-Francisco-Companies-and-Startups-of-20",
+      "pubDate": "2021-09-18T19:50:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QKC"
+      ]
+    },
+    {
+      "title": "RT @XhanxEC: Indonesian culture...@CainBCHA",
+      "link": "https://cryptopanic.com/news/12814672/RT-XhanxEC-Indonesian-cultureCainBCHA",
+      "pubDate": "2021-09-18T19:32:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "RT @Ebrahimh89: If you want to win this war just Hold Tight #Coinbase #BinanceFutures #coinbasepro #KuCoin #upbit #ABC #CryptocurrencyNews…",
+      "link": "https://cryptopanic.com/news/ecash/12814673/RT-Ebrahimh89-If-you-want-to-win-this-war-just-Hold-Tight-Coinbase-BinanceFutures-coinbasepro-KuCoin-upbit-ABC-CryptocurrencyNews",
+      "pubDate": "2021-09-18T19:30:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Shiba Inu’s days in the sun may be over; here’s why",
+      "link": "https://cryptopanic.com/news/dogecoin/12810508/Shiba-Inus-days-in-the-sun-may-be-over-heres-why",
+      "pubDate": "2021-09-18T19:30:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "In a market full of investment-worthy coins, there are a few meme-coins such as Shiba Inu that do not offer much value, be it in terms of use-case or a strong network. Thanks to its strong community though, SHIB managed to surprise the entire crypto space. However, it seems the community is not what it […]",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Uses a custom designed 0 fee, 0 slippage fixed rate swap AMM. That combined with @ensdomains for a automated swap o…",
+      "link": "https://cryptopanic.com/news/12811280/Uses-a-custom-designed-0-fee-0-slippage-fixed-rate-swap-AMM-That-combined-with-ensdomains-for-a-automated-swap-o?mtm_campaign=API-OFA",
+      "pubDate": "2021-09-18T18:08:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALCH"
+      ]
+    },
+    {
+      "title": "Over 40 days after Ethereum’s EIP-1559, here’s where it stands",
+      "link": "https://cryptopanic.com/news/ethereum/12810270/Over-40-days-after-Ethereums-EIP-1559-heres-where-it-stands",
+      "pubDate": "2021-09-18T17:00:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The last couple of months have seen Ethereum steal the show on the charts, as well as in the larger market. In fact, the implementation of EIP-1559 in the 1st week of August this year gave ETH much of its market-wide hype. That, coupled with the wider market’s resurgence, has allowed many in the mainstream […]",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 4
+      }
+    },
+    {
+      "title": "EY Taps Polygon Network to Improve Enterprise Clients’ Experience",
+      "link": "https://cryptopanic.com/news/matic-network/12810208/EY-Taps-Polygon-Network-to-Improve-Enterprise-Clients-Experience",
+      "pubDate": "2021-09-18T16:35:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "Ernst & Young (EY), a representative of the \"Big Four\" accounting firms in the US, has inked a partnership with the popular blockchain project Polygon.",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DOGE, SHIB and YFI Price Analysis for September 18",
+      "link": "https://cryptopanic.com/news/12810196/DOGE-SHIB-and-YFI-Price-Analysis-for-September-18",
+      "pubDate": "2021-09-18T16:25:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Has the time arrived for altcoins to start rising faster than Bitcoin (BTC)?",
+      "currencies": [
+        "BTC",
+        "SHIB",
+        "YFI"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @Casino_Xbit: Interesting Price jump before even start a Private Sale!!!?? We are going to build up our community with real users and le…",
+      "link": "https://cryptopanic.com/news/12811883/RT-Casino_Xbit-Interesting-Price-jump-before-even-start-a-Private-Sale-We-are-going-to-build-up-our-community-with-real-users-and-le",
+      "pubDate": "2021-09-18T15:23:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "What Is Avalanche? The Layer 1 Blockchain’s Ecosystem Unpacked",
+      "link": "https://cryptopanic.com/news/avalanche-2/12810047/What-Is-Avalanche-The-Layer-1-Blockchains-Ecosystem-Unpacked",
+      "pubDate": "2021-09-18T14:58:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 27,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano’s Hoskinson believes these two factors can spur next-gen DeFi",
+      "link": "https://cryptopanic.com/news/matic-network/12809822/Cardanos-Hoskinson-believes-these-two-factors-can-spur-next-gen-DeFi",
+      "pubDate": "2021-09-18T13:00:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Despite being a relatively new space, DeFi has quickly grown to become more appealing. What’s more, projects like Solana and Polygon have grown to compete with Ethereum. Recently, Cardano also brought DeFi smart contracts onto its platform after an Alonzo hard fork event. According to Founder Charles Hoskinson, however, DeFi is in an economic cycle […]",
+      "currencies": [
+        "ADA",
+        "SOL",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 44,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple And XRP Propped Up By Republican Senators As They Push Against SEC’s Scheme",
+      "link": "https://cryptopanic.com/news/ripple/12809804/Ripple-And-XRP-Propped-Up-By-Republican-Senators-As-They-Push-Against-SECs-Scheme",
+      "pubDate": "2021-09-18T12:45:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Key takeaways SEC chair Gary Gensler gets called out for the commission’s method of crypto-industry regulation by the Senate. Ripple co-founder calls out Gensler for contradictory statements on the crypto-industry. The SEC and Ripple lawsuit continues to drag on even as developments from the courtroom battle further, hammering the argument that the SEC has no […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @kaiynne: If you want some insight into how ridiculous the @synthetix_io community is, the author @0xAfif of this SIP",
+      "link": "https://cryptopanic.com/news/12814123/RT-kaiynne-If-you-want-some-insight-into-how-ridiculous-the-synthetix_io-community-is-the-author-0xAfif-of-this-SIP",
+      "pubDate": "2021-09-18T11:50:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SNX",
+        "SUSD"
+      ]
+    },
+    {
+      "title": "PayPal UK Completes Crypto Rollout, Lets All Eligible Customers Buy, Hold and Sell These Four Cryptocurrencies",
+      "link": "https://cryptopanic.com/news/12809741/PayPal-UK-Completes-Crypto-Rollout-Lets-All-Eligible-Customers-Buy-Hold-and-Sell-These-Four-Cryptocurrencies",
+      "pubDate": "2021-09-18T11:45:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Major global payments firm PayPal UK just launched crypto trading services for all of its eligible customers, giving them access to four top cryptocurrencies. On Friday, the company announced that all eligible PayPal UK users will now be able to buy, sell and hold Bitcoin (BTC), Ethereum (ETH), Bitcoin Cash (BCH) and Litecoin (LTC). We […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The direction of travel for the entire blockchain industry is away from privacy coins, with some countries banning…",
+      "link": "https://cryptopanic.com/news/12809609/The-direction-of-travel-for-the-entire-blockchain-industry-is-away-from-privacy-coins-with-some-countries-banning",
+      "pubDate": "2021-09-18T11:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "82 Million XRP Transferred by Ripple and Anonymous Whales",
+      "link": "https://cryptopanic.com/news/ripple/12809542/82-Million-XRP-Transferred-by-Ripple-and-Anonymous-Whales",
+      "pubDate": "2021-09-18T10:03:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple has sent two XRP lumps to its ODL corridors, while anon whales moved a large amount of the Ripple affiliated crypto",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "With development work being largely completed, a consistent price level and the DiaEx diamond trading platform set…",
+      "link": "https://cryptopanic.com/news/12812472/With-development-work-being-largely-completed-a-consistent-price-level-and-the-DiaEx-diamond-trading-platform-set",
+      "pubDate": "2021-09-18T09:20:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Bitcoin at 11-Day High: AVAX Marks Another All-time High (Weekend Watch)",
+      "link": "https://cryptopanic.com/news/avalanche-2/12808215/Bitcoin-at-11-Day-High-AVAX-Marks-Another-All-time-High-Weekend-Watch",
+      "pubDate": "2021-09-18T08:02:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Avalanche (AVAX) continues with its impressive run by charting yet another ATH. Bitcoin neared $49,000.",
+      "currencies": [
+        "BTC",
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "How we're moving crypto forward with updated KYC policies on #Binance.",
+      "link": "https://cryptopanic.com/news/12804109/How-were-moving-crypto-forward-with-updated-KYC-policies-on-Binance",
+      "pubDate": "2021-09-18T04:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "-",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "#Binance Will Support the Cortex $CTXC @CTXCBlockchain Network Upgrade &amp; Hard Fork",
+      "link": "https://cryptopanic.com/news/12804110/Binance-Will-Support-the-Cortex-CTXC-CTXCBlockchain-Network-Upgrade-amp-Hard-Fork",
+      "pubDate": "2021-09-18T04:36:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "-",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "#Binance Will Support the Cortex $CTXC @CTXCBlockchain Network Upgrade & Hard Fork",
+      "link": "https://cryptopanic.com/news/binancecoin/12804110/Binance-Will-Support-the-Cortex-CTXC-CTXCBlockchain-Network-Upgrade-amp-Hard-Fork",
+      "pubDate": "2021-09-18T04:36:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "-",
+      "currencies": [
+        "BNB",
+        "ETHDOWN",
+        "ETHUP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @RichardHeartWin: is awesome!",
+      "link": "https://cryptopanic.com/news/12805593/RT-RichardHeartWin-is-awesome",
+      "pubDate": "2021-09-18T02:49:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "HEX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @BscProjectOrg: Overview of @BinanceChain Ecosystem V2021.09",
+      "link": "https://cryptopanic.com/news/12804572/RT-BscProjectOrg-Overview-of-BinanceChain-Ecosystem-V202109",
+      "pubDate": "2021-09-18T02:43:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "COCOS"
+      ]
+    },
+    {
+      "title": "The @Hedera Governing Council has allocated $5 billion of $HBAR in an effort to incentivise and fund the expansion…",
+      "link": "https://cryptopanic.com/news/12805639/The-Hedera-Governing-Council-has-allocated-5-billion-of-HBAR-in-an-effort-to-incentivise-and-fund-the-expansion",
+      "pubDate": "2021-09-18T02:38:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Shiba Inu coin (SHIB) pumps and sees $2 billion traded after Coinbase listing",
+      "link": "https://cryptopanic.com/news/shiba-inu/12803272/Shiba-Inu-coin-SHIB-pumps-and-sees-2-billion-traded-after-Coinbase-listing",
+      "pubDate": "2021-09-18T01:00:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Shiba Inu coin (SHIB) believers were in for a surprise Friday morning after Coinbase, one of the world’s largest and most regulated crypto exchanges, listed the memecoin on its platform.",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 19
+      }
+    },
+    {
+      "title": "RT @MarshallHayner: No fees, say it with me. ️ $XPR",
+      "link": "https://cryptopanic.com/news/12807106/RT-MarshallHayner-No-fees-say-it-with-me-XPR",
+      "pubDate": "2021-09-18T00:16:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XPR"
+      ]
+    }
+  ]
+}

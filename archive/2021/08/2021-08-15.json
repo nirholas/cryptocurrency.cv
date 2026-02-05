@@ -1,0 +1,411 @@
+{
+  "date": "2021-08-15",
+  "fetchedAt": "2026-02-05T07:27:06.851Z",
+  "articleCount": 25,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Polygon makes the case for scaling solutions after ETH 2.0",
+      "link": "https://cryptopanic.com/news/matic-network/12544421/Polygon-makes-the-case-for-scaling-solutions-after-ETH-20",
+      "pubDate": "2021-08-15T23:11:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "London hard fork is live and Ethereum users are hoping high gas fees will be a thing of the past. Will ETH improvements phase out layer-2 scaling protocols? Polygon’s co-founder thinks not.",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @CENNZnet: Support @centralityai in the @hackernoon Startups of the year award  Check what @CENNZnet CEO @NicoleUpchurch5 has to say ab…",
+      "link": "https://cryptopanic.com/news/12545473/RT-CENNZnet-Support-centralityai-in-the-hackernoon-Startups-of-the-year-award-Check-what-CENNZnet-CEO-NicoleUpchurch5-has-to-say-ab",
+      "pubDate": "2021-08-15T22:44:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CENNZ"
+      ]
+    },
+    {
+      "title": "RT @DCAL_Gamevid4: Big moment for #SafeCoin. Wrapped token capabilities are live, which opens the doors to massive interoperability feature…",
+      "link": "https://cryptopanic.com/news/12547428/RT-DCAL_Gamevid4-Big-moment-for-SafeCoin-Wrapped-token-capabilities-are-live-which-opens-the-doors-to-massive-interoperability-feature",
+      "pubDate": "2021-08-15T17:08:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SAFE"
+      ]
+    },
+    {
+      "title": "DOGE ‘Strongest’ Crypto as Medium of Exchange, Says Mark Cuban",
+      "link": "https://cryptopanic.com/news/dogecoin/12543608/DOGE-Strongest-Crypto-as-Medium-of-Exchange-Says-Mark-Cuban",
+      "pubDate": "2021-08-15T14:34:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Leading Dogecoin (DOGE) advocates Mark Cuban and Elon Musk have voiced their support for the meme-inspired altcoin as its price continues to climb.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 28
+      }
+    },
+    {
+      "title": "Me; still waiting for Lambo.",
+      "link": "https://cryptopanic.com/news/12547900/Me-still-waiting-for-Lambo",
+      "pubDate": "2021-08-15T14:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "RT @PlayPolkadot: We are happy to announce our project just passed its first milestone delivery of the follow-up op…",
+      "link": "https://cryptopanic.com/news/12546739/RT-PlayPolkadot-We-are-happy-to-announce-our-project-just-passed-its-first-milestone-delivery-of-the-follow-up-op",
+      "pubDate": "2021-08-15T13:50:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MOG"
+      ]
+    },
+    {
+      "title": "Dogecoin to Feature on Watford F.C. Sleeves This Season",
+      "link": "https://cryptopanic.com/news/dogecoin/12543457/Dogecoin-to-Feature-on-Watford-FC-Sleeves-This-Season",
+      "pubDate": "2021-08-15T13:10:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin (DOGE) will serve as the shirt sleeve sponsor for Premier League football team Watford F.C. during the 2021/22 season.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 21,
+        "negative": 9
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Mark Cuban Argues He Doesn’t Shill Doge But Fans Using Dogecoin Will Pay Less",
+      "link": "https://cryptopanic.com/news/dogecoin/12543427/Mark-Cuban-Argues-He-Doesnt-Shill-Doge-But-Fans-Using-Dogecoin-Will-Pay-Less",
+      "pubDate": "2021-08-15T12:56:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Mark Cuban called Dogecoin \"the people's way to pay,\" as he refuted assumptions that he was trying to shill the meme coin.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 26
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "DOGE Is “People’s Way to Pay” As 95% of My Customers Choose Dogecoin: Billionaire Mark Cuban",
+      "link": "https://cryptopanic.com/news/dogecoin/12543354/DOGE-Is-Peoples-Way-to-Pay-As-95-of-My-Customers-Choose-Dogecoin-Billionaire-Mark-Cuban",
+      "pubDate": "2021-08-15T11:51:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Mark Cuban says he does not shill DOGE but 95% of sales in his companies are paid in Dogecoin now as he argues with a Morgan Creek Digital partner about DOGE and BTC",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 23,
+        "negative": 69
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Not Even Bitcoin, Ethereum, Cardano Comes Close to Dogecoin As An Exchange Medium – Mark Cuban",
+      "link": "https://cryptopanic.com/news/cardano/12543322/Not-Even-Bitcoin-Ethereum-Cardano-Comes-Close-to-Dogecoin-As-An-Exchange-Medium-Mark-Cuban",
+      "pubDate": "2021-08-15T11:45:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Mark Cuban is one of the few billionaires that, similar to Elon Musk, is bullish on Dogecoin. The billionaire entrepreneur who among other franchises owns the NBA professional basketball team, the Dallas Mavericks, in an interview with CNBC’s ‘Make It’ segment on Friday, has called DOGE the “strongest” contender among digital currencies for widespread use […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 24
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "XRP and Ethereum Classic Rise 10% Amid Slight Market Decline",
+      "link": "https://cryptopanic.com/news/ripple/12543286/XRP-and-Ethereum-Classic-Rise-10-Amid-Slight-Market-Decline",
+      "pubDate": "2021-08-15T11:19:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The market took a slight downturn today but XRP and Ethereum Classic are on the rise.",
+      "currencies": [
+        "ETH",
+        "XRP",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Soars to Three Month High as Price Climbs Above $1.30",
+      "link": "https://cryptopanic.com/news/ripple/12543263/XRP-Soars-to-Three-Month-High-as-Price-Climbs-Above-130",
+      "pubDate": "2021-08-15T11:03:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Ripple (XRP) remains one of the biggest gainers over the weekend following its price surge over $1.30 on Sunday.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @CryptoSlate: Theta Network (THETA) partners with ONE Championship to launch NFT Marketplace (via @shauryamalwa)",
+      "link": "https://cryptopanic.com/news/theta-token/12547707/RT-CryptoSlate-Theta-Network-THETA-partners-with-ONE-Championship-to-launch-NFT-Marketplace-via-shauryamalwa",
+      "pubDate": "2021-08-15T11:00:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "ONE",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Simplex partners with VeChain to enable seamless fiat onramp for VET token",
+      "link": "https://cryptopanic.com/news/12543240/Simplex-partners-with-VeChain-to-enable-seamless-fiat-onramp-for-VET-token",
+      "pubDate": "2021-08-15T10:40:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "August 13, 2021 – Tel Aviv, Israel VeChain is the latest cryptocurrency to be added by Simplex, allowing users to buy, sell and trade VET for fiat and other crypto assets. Announced Monday, August 9, 2021, fiat-to-crypto onramp infrastructure platform Simplex added VeChain to its list of supported crypto assets, enabling users to quickly purchase VET […]",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogecoin ‘Strongest’ Among Bitcoin And Crypto—Billionaires Elon Musk And Mark Cuban Help The Doge Price Soar",
+      "link": "https://cryptopanic.com/news/dogecoin/12543217/Dogecoin-Strongest-Among-Bitcoin-And-CryptoBillionaires-Elon-Musk-And-Mark-Cuban-Help-The-Doge-Price-Soar",
+      "pubDate": "2021-08-15T10:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Dogecoin has added more than 10% this week, helping it climb over 30 cents per doge token for the first time since mid-June...",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Market Back at $2 Trillion Market Cap as Bitcoin, ADA, XRP, DOGE Rise",
+      "link": "https://cryptopanic.com/news/dogecoin/12543187/Crypto-Market-Back-at-2-Trillion-Market-Cap-as-Bitcoin-ADA-XRP-DOGE-Rise",
+      "pubDate": "2021-08-15T09:49:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Now that Bitcoin, ADA, XRP and other altcoins are rallying, the overall cryptocurrency market has regained the $2 trillion level",
+      "currencies": [
+        "XRP",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "61 Million XRP Transferred by Major Exchanges, While XRP Spikes to $1.34",
+      "link": "https://cryptopanic.com/news/ripple/12543156/61-Million-XRP-Transferred-by-Major-Exchanges-While-XRP-Spikes-to-134",
+      "pubDate": "2021-08-15T09:04:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Over 60 million XRP has been wired by top-tier exchanges as XRP began rallying and reached $1.34 earlier today",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple (XRP) Explodes 60% Weekly, Surpassing $1.3: Bitcoin at $46K (Market Watch)",
+      "link": "https://cryptopanic.com/news/ripple/12541962/Ripple-XRP-Explodes-60-Weekly-Surpassing-13-Bitcoin-at-46K-Market-Watch",
+      "pubDate": "2021-08-15T07:42:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "While bitcoin and most alts have retraced following the latest gains, XRP has exploded by another 10% and has tapped $1.3.",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum, Cardano and Three Other Altcoins Have ‘Great Potential’ in Coming Weeks: Trader Elliot Wainman",
+      "link": "https://cryptopanic.com/news/matic-network/12541310/Ethereum-Cardano-and-Three-Other-Altcoins-Have-Great-Potential-in-Coming-Weeks-Trader-Elliot-Wainman",
+      "pubDate": "2021-08-15T07:04:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Crypto analyst and influencer Elliot Wainman is shining a spotlight on a handful of altcoins that he believes are ready to erupt in the coming weeks as the entire crypto market continues to rebound and Bitcoin floats within the $47,000 range. In a new strategy session, Wainman tells his 347,000 YouTube subscribers that Ethereum (ETH) […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "An Introduction To Solana: Innovations, Characteristics, And Criticism",
+      "link": "https://cryptopanic.com/news/avalanche-2/12540770/An-Introduction-To-Solana-Innovations-Characteristics-And-Criticism",
+      "pubDate": "2021-08-15T06:36:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Will Solana be the one? The race to be the prime smart-contract-enabled blockchain is heating up. Many projects are chasing Ethereum’s tail, offering faster and cheaper transactions plus technological innovations. What does Solana offer? An internal clock. An incredibly higher number of transactions. Fees so low that are almost non-existent. The possibility to scale to global adoption in their...",
+      "currencies": [
+        "USDC",
+        "SOL",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "CCCV partnering with \"House of Cards\" #NFT gallery to showcase Korean cultural figures in historical arts. #NFTs w…",
+      "link": "https://cryptopanic.com/news/12539487/CCCV-partnering-with-House-of-Cards-NFT-gallery-to-showcase-Korean-cultural-figures-in-historical-arts-NFTs-w",
+      "pubDate": "2021-08-15T02:16:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "#DOGEFACTS indeed. In retrospect, it was inevitable.",
+      "link": "https://cryptopanic.com/news/12541313/DOGEFACTS-indeed-In-retrospect-it-was-inevitable",
+      "pubDate": "2021-08-15T02:08:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "RT @highrewardcoin: XinFin selects Butterfly Protocol for XDC blockchain domain naming system",
+      "link": "https://cryptopanic.com/news/12540800/RT-highrewardcoin-XinFin-selects-Butterfly-Protocol-for-XDC-blockchain-domain-naming-system",
+      "pubDate": "2021-08-15T01:59:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XDC"
+      ]
+    },
+    {
+      "title": "Elon Musk and Mark Cuban See Dogecoin as the ‘Strongest’ Cryptocurrency for Payments",
+      "link": "https://cryptopanic.com/news/dogecoin/12539154/Elon-Musk-and-Mark-Cuban-See-Dogecoin-as-the-Strongest-Cryptocurrency-for-Payments",
+      "pubDate": "2021-08-15T01:00:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Tesla CEO Elon Musk and Shark Tank star Mark Cuban see dogecoin as the “strongest” cryptocurrency when it comes to using it as a means of payment. To promote the use of dogecoin further, the NBA team Dallas Mavericks will be offering “special pricing for those who pay with dogecoin.” Elon Musk Agrees With Mark […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 5
+      }
+    },
+    {
+      "title": "What does Bitcoin’s current trajectory mean for Cardano, XRP, MATIC, and Dogecoin",
+      "link": "https://cryptopanic.com/news/dogecoin/12538912/What-does-Bitcoins-current-trajectory-mean-for-Cardano-XRP-MATIC-and-Dogecoin",
+      "pubDate": "2021-08-15T00:00:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The past seven days have been a wild ride, with the bulls getting a clear upper hand this time. As the total crypto market cap went above the $2 trillion mark once again, anticipation around another rally peaked. However, in the last few months, weekends were especially hard on the market. Weekend blues brought with […]",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

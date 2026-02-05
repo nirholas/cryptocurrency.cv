@@ -1,0 +1,25 @@
+{
+  "date": "2020-11-08",
+  "fetchedAt": "2026-02-05T07:27:06.879Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Switzerland: Sygnum Bank Unveils Support for Tezos (XTZ) Trading and Staking",
+      "link": "https://cryptopanic.com/news/10477939/Switzerland-Sygnum-Bank-Unveils-Support-for-Tezos-XTZ-Trading-and-Staking",
+      "pubDate": "2020-11-08T11:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

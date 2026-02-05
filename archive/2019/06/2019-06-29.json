@@ -1,0 +1,45 @@
+{
+  "date": "2019-06-29",
+  "fetchedAt": "2026-02-05T07:27:06.921Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "MakerDAO Announces Multi Collateral DAI Issuances",
+      "link": "https://cryptopanic.com/news/5879362/MakerDAO-Announces-Multi-Collateral-DAI-Issuances",
+      "pubDate": "2019-06-29T22:00:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MKR",
+        "OMG",
+        "ZRX",
+        "REP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Might IOTA Price Test $0.5 Resistance Again? Downtrend Is Doubling Down",
+      "link": "https://cryptopanic.com/news/5877496/Might-IOTA-Price-Test-05-Resistance-Again-Downtrend-Is-Doubling-Down",
+      "pubDate": "2019-06-29T16:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

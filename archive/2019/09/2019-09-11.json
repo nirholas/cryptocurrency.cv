@@ -1,0 +1,25 @@
+{
+  "date": "2019-09-11",
+  "fetchedAt": "2026-02-05T07:27:06.977Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Parascom Games Launches Tangle-Based Development Platform with IOTA",
+      "link": "https://cryptopanic.com/news/6544444/Parascom-Games-Launches-Tangle-Based-Development-Platform-with-IOTA",
+      "pubDate": "2019-09-11T12:07:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "date": "2018-01-21",
+  "fetchedAt": "2026-02-05T07:27:06.972Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Stellar Lumens Has all it takes To Be a Top Cryptocurrency",
+      "link": "https://cryptopanic.com/news/855073/Stellar-Lumens-Has-all-it-takes-To-Be-a-Top-Cryptocurrency",
+      "pubDate": "2018-01-21T08:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

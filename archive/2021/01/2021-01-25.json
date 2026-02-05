@@ -1,0 +1,243 @@
+{
+  "date": "2021-01-25",
+  "fetchedAt": "2026-02-05T07:27:06.680Z",
+  "articleCount": 16,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Moonbeam Will Link Ocean Protocol and Polkadot",
+      "link": "https://cryptopanic.com/news/polkadot/11257489/Moonbeam-Will-Link-Ocean-Protocol-and-Polkadot",
+      "pubDate": "2021-01-25T20:42:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Moonbeam, a Polkadot-based smart contract platform, has announced that it is integrating with the decentralized data marketplace Ocean Protocol. Bridging Ocean and Polkadot Once complete, the integration will allow users of the Polkadot blockchain to publish, stake, and buy data. It will also bridge the Ethereum-based OCEAN token to the platform. “We have long envisioned Ocean to...",
+      "currencies": [
+        "ETH",
+        "DOT",
+        "OCEAN"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RAI Finance is selected as FEATURED PRODUCT on @cryptoatlas_io this week",
+      "link": "https://cryptopanic.com/news/11256477/RAI-Finance-is-selected-as-FEATURED-PRODUCT-on-cryptoatlas_io-this-week",
+      "pubDate": "2021-01-25T18:48:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STPT"
+      ]
+    },
+    {
+      "title": "RT @HamnettPhillip: One of the things we recently built at @ChintaiEOS is an equity token framework, with built in support for token #vesti…",
+      "link": "https://cryptopanic.com/news/11322590/RT-HamnettPhillip-One-of-the-things-we-recently-built-at-ChintaiEOS-is-an-equity-token-framework-with-built-in-support-for-token-vesti?mtm_campaign=API-OFA",
+      "pubDate": "2021-01-25T18:15:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHEX"
+      ]
+    },
+    {
+      "title": "Today we are happy to announce our ongoing collaboration with Axie Infinity! A great blockchain game with a strong community.",
+      "link": "https://cryptopanic.com/news/11258695/Today-we-are-happy-to-announce-our-ongoing-collaboration-with-Axie-Infinity-A-great-blockchain-game-with-a-strong-community",
+      "pubDate": "2021-01-25T18:07:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Michael Saylor Believes the Tether Fud is Irrelevant and Can’t Stop Bitcoin",
+      "link": "https://cryptopanic.com/news/11256289/Michael-Saylor-Believes-the-Tether-Fud-is-Irrelevant-and-Cant-Stop-Bitcoin",
+      "pubDate": "2021-01-25T18:03:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The Tether (USDT) debacle has been going on for a while, and market participants usually love a good crypto drama. Is Tether Driving the Market? MicroStrategy CEO Michael Saylor maintains his strong belief towards Bitcoin. In a recent interview, he said that Tether was “totally irrelevant” due to how corporate investment in bitcoin actually works. … Continued",
+      "currencies": [
+        "BTC",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "#crypto and fiat currencies offer two different sets of pros and cons. But, put together, the possibilities are inf…",
+      "link": "https://cryptopanic.com/news/11254955/crypto-and-fiat-currencies-offer-two-different-sets-of-pros-and-cons-But-put-together-the-possibilities-are-inf",
+      "pubDate": "2021-01-25T16:25:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "PLTC"
+      ]
+    },
+    {
+      "title": "We've received reports of this bug affecting some Basechain users, if you see a \"No chainId defined\" error please u…",
+      "link": "https://cryptopanic.com/news/11254938/Weve-received-reports-of-this-bug-affecting-some-Basechain-users-if-you-see-a-No-chainId-defined-error-please-u",
+      "pubDate": "2021-01-25T16:23:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "LOOM"
+      ]
+    },
+    {
+      "title": "Moonbeam and Ocean Protocol to bring a new data economy to Polkadot",
+      "link": "https://cryptopanic.com/news/polkadot/11254768/Moonbeam-and-Ocean-Protocol-to-bring-a-new-data-economy-to-Polkadot",
+      "pubDate": "2021-01-25T16:09:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Moonbeam, an Ethereum-compatible smart contract platform on Polkadot, today announced its integration with Ocean Protocol, a data exchange protocol for the Web3 data economy. The Moonbeam and Ocean teams have completed the first part of an initial integration: a successful deployment of Ocean’s contracts to Moonbeam. The full initial integration will also involve bridging OCEAN...",
+      "currencies": [
+        "DOT",
+        "OCEAN"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "A #hard_fork is derived from a #Blockchain network for many reasons. For instance, a new Blockchain network can b…",
+      "link": "https://cryptopanic.com/news/11252769/A-hard_fork-is-derived-from-a-Blockchain-network-for-many-reasons-For-instance-a-new-Blockchain-network-can-b",
+      "pubDate": "2021-01-25T13:09:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "Chainlink (LINK) Pumps to New All-Time High in a Bullish Resurgence",
+      "link": "https://cryptopanic.com/news/chainlink/11251957/Chainlink-LINK-Pumps-to-New-All-Time-High-in-a-Bullish-Resurgence",
+      "pubDate": "2021-01-25T11:25:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Technical indicators are still bullish and suggest that Chainlink is expected to continue increasing to reach even higher. Chainlink All-Time High Price On Jan. 15, 2021, LINK broke out above the previous all-time high. It returned to validate the level as support and proceeded to increase towards the current all-time high price of $25.78 … Continued",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Uniswap (UNI) to $50 By February? | A Fundamental Opinion",
+      "link": "https://cryptopanic.com/news/uniswap/11251904/Uniswap-UNI-to-50-By-February-A-Fundamental-Opinion",
+      "pubDate": "2021-01-25T11:06:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "#bitcoin #crypto #cryptocurrencies Looking to buy the bitcoin dip? Try Digifox 2.0 today 📈⬇️ https://go.digifox.finance/start ---------------------------------------------------------------------------------------------------------- Interested in our newsletter, the DashReport? 💹 http://nicholasmerten.com/dashreport/ Want to support my channel and get great perks? 💚➡️ http://patreon.com/data_dash -------------------------------------------------------------------------------------------------",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "As we wait for more exciting news coming up, let’s have a look back on how #TomoChain kick-started the previous one…",
+      "link": "https://cryptopanic.com/news/11251769/As-we-wait-for-more-exciting-news-coming-up-lets-have-a-look-back-on-how-TomoChain-kick-started-the-previous-one",
+      "pubDate": "2021-01-25T11:02:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "The second scaling cycle occurs after the 90th epoch. The minimum requirement for Map3 is reduced, from 550K to 308…",
+      "link": "https://cryptopanic.com/news/11251558/The-second-scaling-cycle-occurs-after-the-90th-epoch-The-minimum-requirement-for-Map3-is-reduced-from-550K-to-308",
+      "pubDate": "2021-01-25T10:25:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "RT @binance: #Binance Adds $BUSD Trading Pairs with 0 Trading Fees: $USDC/ $BUSD $TUSD/ $BUSD $PAX/ $BUSD",
+      "link": "https://cryptopanic.com/news/paxos-standard/11250713/RT-binance-Binance-Adds-BUSD-Trading-Pairs-with-0-Trading-Fees-USDC-BUSD-TUSD-BUSD-PAX-BUSD",
+      "pubDate": "2021-01-25T08:02:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "BUSD",
+        "TRX"
+      ]
+    },
+    {
+      "title": "#Binance Adds $EOS/ $EUR and $LTC/ $BRL Trading Pairs",
+      "link": "https://cryptopanic.com/news/11249895/Binance-Adds-EOS-EUR-and-LTC-BRL-Trading-Pairs",
+      "pubDate": "2021-01-25T04:02:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "-",
+      "currencies": [
+        "BNB",
+        "LTC",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "20 million users on #TRON 🥳 #TRX $TRX",
+      "link": "https://cryptopanic.com/news/11249436/20-million-users-on-TRON-TRX-TRX",
+      "pubDate": "2021-01-25T03:56:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

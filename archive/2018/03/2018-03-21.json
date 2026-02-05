@@ -1,0 +1,25 @@
+{
+  "date": "2018-03-21",
+  "fetchedAt": "2026-02-05T07:27:06.963Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tether Resumes Issuing Tokens with $300 Million Already Issued",
+      "link": "https://cryptopanic.com/news/1440937/Tether-Resumes-Issuing-Tokens-with-300-Million-Already-Issued",
+      "pubDate": "2018-03-21T21:35:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 7
+      }
+    }
+  ]
+}

@@ -1,0 +1,502 @@
+{
+  "date": "2022-07-04",
+  "fetchedAt": "2026-02-05T07:27:07.855Z",
+  "articleCount": 33,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "92% of Coinbase Users Trading Shiba Inu are Buying $SHIB, Exchange’s Data Shows",
+      "link": "https://cryptopanic.com/news/15675738/92-of-Coinbase-Users-Trading-Shiba-Inu-are-Buying-SHIB-Exchanges-Data-Shows",
+      "pubDate": "2022-07-04T21:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Data from the Nasdaq-listed cryptocurrency exchange Coinbase shows that 92% of the platform’s users who are trading the meme-inspired cryptocurrency Shiba Inu ($SHIB) are buying, amid an ongoing accumulation trend that has seen the price of SHIB hold relatively well over the past 30 days. According to data from Coinbase’s price pages, 92% of its […]",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 8
+      }
+    },
+    {
+      "title": "Celsius repays $120 million stablecoin debt to Maker protocol",
+      "link": "https://cryptopanic.com/news/15675486/Celsius-repays-120-million-stablecoin-debt-to-Maker-protocol",
+      "pubDate": "2022-07-04T19:14:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "Celsius Network pulled its bitcoin liquidation price below $5,000 by repaying a total sum of $120 million to Maker today.",
+      "currencies": [
+        "BTC",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 56,
+        "negative": 20
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "KuCoin CEO Addresses FUD, Says Crypto Exchange Has Zero Plans To Halt Withdrawals",
+      "link": "https://cryptopanic.com/news/15675426/KuCoin-CEO-Addresses-FUD-Says-Crypto-Exchange-Has-Zero-Plans-To-Halt-Withdrawals",
+      "pubDate": "2022-07-04T18:45:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "The chief executive officer of crypto exchange KuCoin is addressing the fear and uncertainty surrounding the platform and says that the company has no plans to halt its withdrawal services. KuCoin CEO Johnny Lyu dispels rumors that KuCoin is in dire financial straits due to the firm’s alleged exposure to embattled crypto projects such as […]",
+      "currencies": [
+        "KCS"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @Mandelliant: holy crap one of my @numerai models has earned 9 gold medals and I just never noticed",
+      "link": "https://cryptopanic.com/news/15675392/RT-Mandelliant-holy-crap-one-of-my-numerai-models-has-earned-9-gold-medals-and-I-just-never-noticed",
+      "pubDate": "2022-07-04T18:36:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NMR"
+      ]
+    },
+    {
+      "title": "Access your files remotely with guaranteed security and low latency by the combination of #nConnect and @ASUSTOR d…",
+      "link": "https://cryptopanic.com/news/15680330/Access-your-files-remotely-with-guaranteed-security-and-low-latency-by-the-combination-of-nConnect-and-ASUSTOR-d",
+      "pubDate": "2022-07-04T18:21:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "NKN"
+      ]
+    },
+    {
+      "title": "RT @ASUSTOR: Access your files remotely with guaranteed security and low latency by the combination of nConnect and ASUSTOR device! Retwee…",
+      "link": "https://cryptopanic.com/news/15680331/RT-ASUSTOR-Access-your-files-remotely-with-guaranteed-security-and-low-latency-by-the-combination-of-nConnect-and-ASUSTOR-device-Retwee",
+      "pubDate": "2022-07-04T18:20:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "NKN"
+      ]
+    },
+    {
+      "title": "Do you guys hold mostly DOT or KSM aswell ?",
+      "link": "https://cryptopanic.com/news/15675301/Do-you-guys-hold-mostly-DOT-or-KSM-aswell",
+      "pubDate": "2022-07-04T18:00:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "KSM",
+        "ACA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Price analysis 7/4: BTC, ETH, BNB, XRP, ADA, SOL, DOGE, DOT, LEO, SHIB",
+      "link": "https://cryptopanic.com/news/15675066/Price-analysis-74-BTC-ETH-BNB-XRP-ADA-SOL-DOGE-DOT-LEO-SHIB",
+      "pubDate": "2022-07-04T16:24:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin and altcoins have held their immediate support levels, suggesting the start of a relief rally in the short term.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "XRP",
+        "DOGE",
+        "DOT",
+        "SHIB",
+        "LEO"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Terra’s de-pegged stablecoin USTC gains 270% in 30 days",
+      "link": "https://cryptopanic.com/news/15675028/Terras-de-pegged-stablecoin-USTC-gains-270-in-30-days",
+      "pubDate": "2022-07-04T15:55:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "The Terra (LUNA) ecosystem’s infamous algorithmic stablecoin TerraClassicUSD (USTC) has recorded a spike in value despite the widespread crypto market... Continue reading",
+      "currencies": [
+        "USTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Cardano, Tron and Avalanche Post Price Gains as Altcoins See Relief Rally",
+      "link": "https://cryptopanic.com/news/15674866/Cardano-Tron-and-Avalanche-Post-Price-Gains-as-Altcoins-See-Relief-Rally",
+      "pubDate": "2022-07-04T15:16:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Avalanche (AVAX) and Tron (TRX) had increases of 7.43% and 6.23%, respectively",
+      "currencies": [
+        "TRX",
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SHIB transactions drop to 15-month low as meme coin sinks into the abyss",
+      "link": "https://cryptopanic.com/news/15674865/SHIB-transactions-drop-to-15-month-low-as-meme-coin-sinks-into-the-abyss",
+      "pubDate": "2022-07-04T15:14:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "As the cryptocurrency market struggles to recover in the midst of a bearish crisis that has affected most of its... Continue reading",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Finding lucrative early-stage #blockchain startups in a sea of hype is like finding a white cat in a snow storm.…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/15677211/Finding-lucrative-early-stage-blockchain-startups-in-a-sea-of-hype-is-like-finding-a-white-cat-in-a-snow-storm",
+      "pubDate": "2022-07-04T14:56:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "Hedge Fund Veteran Anthony Scaramucci Says FTX CEO Sam Bankman-Fried May Have Signalled Bottom in Crypto Markets",
+      "link": "https://cryptopanic.com/news/15674724/Hedge-Fund-Veteran-Anthony-Scaramucci-Says-FTX-CEO-Sam-Bankman-Fried-May-Have-Signalled-Bottom-in-Crypto-Markets",
+      "pubDate": "2022-07-04T14:30:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Skybridge Capital founder Anthony Scaramucci says that FTX CEO Sam Bankman-Fried’s decision to bail out crypto lending platform BlockFi is an indication that we may have reached the bear market’s bottom. In a new interview on CNBC, Scaramucci admits that the industry is facing serious challenges following news that crypto broker Voyager Digital is suspending […]",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Bitcoin declines 44% since last U.S. Independence Day; What’s next for BTC?",
+      "link": "https://cryptopanic.com/news/bitcoin/15674692/Bitcoin-declines-44-since-last-US-Independence-Day-Whats-next-for-BTC",
+      "pubDate": "2022-07-04T14:25:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The price of Bitcoin (BTC) continues to trade below $20,000, crashing to new yearly lows while driving the entire cryptocurrency... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Circle Denies USDC Trouble Rumors, Tether Supply Still Elevated on Curve",
+      "link": "https://cryptopanic.com/news/15674619/Circle-Denies-USDC-Trouble-Rumors-Tether-Supply-Still-Elevated-on-Curve",
+      "pubDate": "2022-07-04T14:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Crypto-skeptic Peter Schiff responds to his bank closure claiming ‘no evidence of crimes’",
+      "link": "https://cryptopanic.com/news/bitcoin/15674527/Crypto-skeptic-Peter-Schiff-responds-to-his-bank-closure-claiming-no-evidence-of-crimes",
+      "pubDate": "2022-07-04T13:39:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "U.S. economist and well-known cryptocurrency skeptic Peter Schiff responded to the news that the Euro Pacific International Bank, which he... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "is allowing Buyers and Sellers to connect like never before, by allowing freelancers to sca…",
+      "link": "https://cryptopanic.com/news/15674374/is-allowing-Buyers-and-Sellers-to-connect-like-never-before-by-allowing-freelancers-to-sca",
+      "pubDate": "2022-07-04T13:02:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "RT @Swopfi: ️Vote for the weight of the new $TSN - $USDN pool and provide liquidity to be eligible for the First Harvest with ~300% APY ne…",
+      "link": "https://cryptopanic.com/news/15674300/RT-Swopfi-Vote-for-the-weight-of-the-new-TSN-USDN-pool-and-provide-liquidity-to-be-eligible-for-the-First-Harvest-with-300-APY-ne",
+      "pubDate": "2022-07-04T12:37:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "WAVES",
+        "USDN"
+      ]
+    },
+    {
+      "title": "Hacker asks for 10 bitcoin for allegedly stolen data of a billion Chinese citizens",
+      "link": "https://cryptopanic.com/news/bitcoin/15674225/Hacker-asks-for-10-bitcoin-for-allegedly-stolen-data-of-a-billion-Chinese-citizens",
+      "pubDate": "2022-07-04T12:10:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "One anonymous hacker is claiming to sell the stolen information in exchange for 10 bitcoin, worth $200,000.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 16
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Celsius Network takes affirmative action to stave off bankruptcy",
+      "link": "https://cryptopanic.com/news/15674022/Celsius-Network-takes-affirmative-action-to-stave-off-bankruptcy",
+      "pubDate": "2022-07-04T11:09:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "According to the tech website CTech, Celsius Network laid off 150 workers in a bid to stay operational.",
+      "currencies": [
+        "CEL"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "️Vote for the weight of the new $TSN - $USDN pool and provide liquidity to be eligible for the First Harvest with…",
+      "link": "https://cryptopanic.com/news/15681719/Vote-for-the-weight-of-the-new-TSN-USDN-pool-and-provide-liquidity-to-be-eligible-for-the-First-Harvest-with",
+      "pubDate": "2022-07-04T09:40:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "USDN"
+      ]
+    },
+    {
+      "title": "Thank you for all your questions! Mark your calendars down for 6th July (Wed), 9.30am SGT/10.30am KST for an exci…",
+      "link": "https://cryptopanic.com/news/klay-token/15679553/Thank-you-for-all-your-questions-Mark-your-calendars-down-for-6th-July-Wed-930am-SGT1030am-KST-for-an-exci",
+      "pubDate": "2022-07-04T09:39:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "Coinbase-Backed Crypto Exchange Vauld is Latest to Pause Withdrawals, Deposits, and Trading",
+      "link": "https://cryptopanic.com/news/bitcoin/15672603/Coinbase-Backed-Crypto-Exchange-Vauld-is-Latest-to-Pause-Withdrawals-Deposits-and-Trading",
+      "pubDate": "2022-07-04T08:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Singapore-based crypto exchange Vauld is the latest crypto platform to suspend all withdrawals, deposits, and trading citing \"financial challenges\" amid lingering sour market conditions.... Read More: Coinbase-Backed Crypto Exchange Vauld is Latest to Pause Withdrawals, Deposits, and Trading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "14 KuCoin Labeled Wallets Went from $1.8 Billion to $10 Million: Here's What's Happening",
+      "link": "https://cryptopanic.com/news/15672466/14-KuCoin-Labeled-Wallets-Went-from-18-Billion-to-10-Million-Heres-Whats-Happening",
+      "pubDate": "2022-07-04T08:24:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "One of world's biggest exchanges is actively battling FUD allegations",
+      "currencies": [
+        "KCS"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Veteran Trader Tone Vays Warns of Another Bitcoin Collapse After ‘Disastrous’ Week – Here’s His Downside Target",
+      "link": "https://cryptopanic.com/news/bitcoin/15671109/Veteran-Trader-Tone-Vays-Warns-of-Another-Bitcoin-Collapse-After-Disastrous-Week-Heres-His-Downside-Target",
+      "pubDate": "2022-07-04T07:04:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Seasoned investor Tone Vays says that Bitcoin (BTC) is on the verge of another breakdown which could send the price of the leading crypto asset to a new 2022 low. In a new strategy session, Vays tells his 121,000 YouTube subscribers that Bitcoin’s outlook remains bleak as BTC tries to “desperately” cling to the $19,000 […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ethereum transaction fees are at the lowest point since 2020, currently standing at about $1.67 per transfer. “Bitc…",
+      "link": "https://cryptopanic.com/news/15677732/Ethereum-transaction-fees-are-at-the-lowest-point-since-2020-currently-standing-at-about-167-per-transfer-Bitc",
+      "pubDate": "2022-07-04T07:02:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "TriumphX to support new airdrop of KLAY in the KLAYswap TRIX pool from the 23rd",
+      "link": "https://cryptopanic.com/news/klay-token/15673273/TriumphX-to-support-new-airdrop-of-KLAY-in-the-KLAYswap-TRIX-pool-from-the-23rd",
+      "pubDate": "2022-07-04T07:01:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "TRIX"
+      ]
+    },
+    {
+      "title": "Everything you need to know about the Freeway platform and ecosystem is summed up in our short explainer video …",
+      "link": "https://cryptopanic.com/news/15671058/Everything-you-need-to-know-about-the-Freeway-platform-and-ecosystem-is-summed-up-in-our-short-explainer-video",
+      "pubDate": "2022-07-04T06:48:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FWT"
+      ]
+    },
+    {
+      "title": "Bifrost is borrowing 50,000 $KSM liquidity from @kusamanetwork Treasury, the proposal is voting on referenda now.…",
+      "link": "https://cryptopanic.com/news/15673466/Bifrost-is-borrowing-50000-KSM-liquidity-from-kusamanetwork-Treasury-the-proposal-is-voting-on-referenda-now",
+      "pubDate": "2022-07-04T03:52:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "KSM"
+      ]
+    },
+    {
+      "title": "RT @binance: #Binance will support the @aelfblockchain $ELF mainnet integration.",
+      "link": "https://cryptopanic.com/news/15673753/RT-binance-Binance-will-support-the-aelfblockchain-ELF-mainnet-integration",
+      "pubDate": "2022-07-04T03:18:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ELF"
+      ]
+    },
+    {
+      "title": "Here is an in depth description of AERGO Scan V2 by our team writer @coreycosta123",
+      "link": "https://cryptopanic.com/news/15669669/Here-is-an-in-depth-description-of-AERGO-Scan-V2-by-our-team-writer-coreycosta123",
+      "pubDate": "2022-07-04T03:09:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "RT @SynapseProtocol: Synapse assets are increasingly being adopted on @klaytn_official! After lending & borrowing on @klapfinance, Synaps…",
+      "link": "https://cryptopanic.com/news/klay-token/15671569/RT-SynapseProtocol-Synapse-assets-are-increasingly-being-adopted-on-klaytn_official-After-lending-amp-borrowing-on-klapfinance-Synaps",
+      "pubDate": "2022-07-04T02:11:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "Reminder to post your questions!",
+      "link": "https://cryptopanic.com/news/klay-token/15671570/Reminder-to-post-your-questions",
+      "pubDate": "2022-07-04T01:41:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    }
+  ]
+}

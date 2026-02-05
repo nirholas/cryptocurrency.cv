@@ -1,0 +1,25 @@
+{
+  "date": "2017-10-17",
+  "fetchedAt": "2026-02-05T07:27:06.901Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "JPMorgan Integrates Zcash Privacy Tech Into Quorum Blockchain",
+      "link": "https://cryptopanic.com/news/336295/JPMorgan-Integrates-Zcash-Privacy-Tech-Into-Quorum-Blockchain",
+      "pubDate": "2017-10-17T13:00:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

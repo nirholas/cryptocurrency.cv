@@ -1,0 +1,908 @@
+{
+  "date": "2023-07-31",
+  "fetchedAt": "2026-02-05T07:27:07.220Z",
+  "articleCount": 63,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Best Crypto to Buy Now 31 July – Optimism, Compound, Bitcoin Cash",
+      "link": "https://cryptopanic.com/news/18808601/Best-Crypto-to-Buy-Now-31-July-Optimism-Compound-Bitcoin-Cash",
+      "pubDate": "2023-07-31T23:29:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Dips Below $29K Amid Curve Jitters",
+      "link": "https://cryptopanic.com/news/18808525/Bitcoin-Dips-Below-29K-Amid-Curve-Jitters",
+      "pubDate": "2023-07-31T22:06:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "CRV"
+      ]
+    },
+    {
+      "title": "XRP, Cardano (ADA) and Solana (SOL) See Institutional Capital Flows As Altcoin Sentiment Brightens: CoinShares",
+      "link": "https://cryptopanic.com/news/18808515/XRP-Cardano-ADA-and-Solana-SOL-See-Institutional-Capital-Flows-As-Altcoin-Sentiment-Brightens-CoinShares",
+      "pubDate": "2023-07-31T22:01:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Digital assets manager CoinShares says institutional investors are becoming more optimistic on altcoins despite Bitcoin (BTC) and the overall markets suffering outflows for the second week in a row. In its latest Digital Asset Fund Flows Weekly Report, CoinShares finds that halfway through 2023, digital assets have seen almost half a billion in inflows. “Digital asset investment […]",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "XRP",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple (XRP) Price Experiencing Major Volatility! Here is the Reason",
+      "link": "https://cryptopanic.com/news/18808438/Ripple-XRP-Price-Experiencing-Major-Volatility-Here-is-the-Reason",
+      "pubDate": "2023-07-31T21:12:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The volatility has risen again in the XRP price, which has recently soared with a partial victory over the SEC. Continue Reading: Ripple (XRP) Price Experiencing Major Volatility! Here is the Reason",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 4
+      }
+    },
+    {
+      "title": "DeSantis Accuses Biden of 'War on Bitcoin,' Vows to Stop It if Elected President",
+      "link": "https://cryptopanic.com/news/18808387/DeSantis-Accuses-Biden-of-War-on-Bitcoin-Vows-to-Stop-It-if-Elected-President",
+      "pubDate": "2023-07-31T20:37:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Presidential candidate and Florida Governor Ron DeSantis (R-Fla.) called out the Biden Administration for its “war” on bitcoin and cryptocurrencies and said that he will end it should he become President.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Aave’s exposure to Curve hack, explained",
+      "link": "https://cryptopanic.com/news/18808362/Aaves-exposure-to-Curve-hack-explained",
+      "pubDate": "2023-07-31T20:35:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Since I live in the United States I can’t really use KuCoin without VPN. How can I transfer or sell my FRA on KuCoin?",
+      "link": "https://cryptopanic.com/news/18820289/Since-I-live-in-the-United-States-I-cant-really-use-KuCoin-without-VPN-How-can-I-transfer-or-sell-my-FRA-on-KuCoin",
+      "pubDate": "2023-07-31T19:31:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "Bitcoin Crucial Moment: Will Resistance At $29,500 Trigger A Sell-Off Or Surge?",
+      "link": "https://cryptopanic.com/news/18808219/Bitcoin-Crucial-Moment-Will-Resistance-At-29500-Trigger-A-Sell-Off-Or-Surge",
+      "pubDate": "2023-07-31T19:00:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "QNT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Curve Finance Vulnerability Exposes $100M+ Worth of Crypto; CRV Token Plummets",
+      "link": "https://cryptopanic.com/news/18808216/Curve-Finance-Vulnerability-Exposes-100M-Worth-of-Crypto-CRV-Token-Plummets",
+      "pubDate": "2023-07-31T19:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Binance CEO Reacts to CRV 697% Price Difference on DEXs and CEXs",
+      "link": "https://cryptopanic.com/news/18808402/Binance-CEO-Reacts-to-CRV-697-Price-Difference-on-DEXs-and-CEXs",
+      "pubDate": "2023-07-31T18:51:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Could a new surge in TUSD supply trigger another Bitcoin rally?",
+      "link": "https://cryptopanic.com/news/18808174/Could-a-new-surge-in-TUSD-supply-trigger-another-Bitcoin-rally",
+      "pubDate": "2023-07-31T18:45:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TUSD"
+      ]
+    },
+    {
+      "title": "South Korean Exchange Upbit Suspends Curve (CRV) Deposits And Withdrawals Following Exploit",
+      "link": "https://cryptopanic.com/news/18808084/South-Korean-Exchange-Upbit-Suspends-Curve-CRV-Deposits-And-Withdrawals-Following-Exploit",
+      "pubDate": "2023-07-31T18:00:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "2.86M INJ Tokens to be Unlocked in August, Will Traders Cash in?",
+      "link": "https://cryptopanic.com/news/18808294/286M-INJ-Tokens-to-be-Unlocked-in-August-Will-Traders-Cash-in",
+      "pubDate": "2023-07-31T17:58:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "INJ"
+      ]
+    },
+    {
+      "title": "MakerDAO founder thinks Curve crash could be last before bull market",
+      "link": "https://cryptopanic.com/news/18808066/MakerDAO-founder-thinks-Curve-crash-could-be-last-before-bull-market",
+      "pubDate": "2023-07-31T17:56:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Maker holders set to log over 50% profits, here’s how",
+      "link": "https://cryptopanic.com/news/maker/18807877/Maker-holders-set-to-log-over-50-profits-heres-how",
+      "pubDate": "2023-07-31T16:30:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Neo News: Week in Review – July 24 – July 30",
+      "link": "https://cryptopanic.com/news/18807856/Neo-News-Week-in-Review-July-24-July-30",
+      "pubDate": "2023-07-31T16:26:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Bitcoin Whales Dumpa Is Preparing According To This Indicator!",
+      "link": "https://cryptopanic.com/news/18807869/Bitcoin-Whales-Dumpa-Is-Preparing-According-To-This-Indicator",
+      "pubDate": "2023-07-31T16:26:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DAI"
+      ]
+    },
+    {
+      "title": "CRV Trades at Premium on Bithumb and CoinOne Following Curve Finance Hack",
+      "link": "https://cryptopanic.com/news/18807818/CRV-Trades-at-Premium-on-Bithumb-and-CoinOne-Following-Curve-Finance-Hack",
+      "pubDate": "2023-07-31T16:10:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Maker (MKR) Shows Strong 23% Rally, But This Metric Suggests Top May Be Here",
+      "link": "https://cryptopanic.com/news/maker/18807807/Maker-MKR-Shows-Strong-23-Rally-But-This-Metric-Suggests-Top-May-Be-Here",
+      "pubDate": "2023-07-31T16:00:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "US Presidential Candidate Defends Bitcoin, Calls Out Environmental Critics",
+      "link": "https://cryptopanic.com/news/flow/18807822/US-Presidential-Candidate-Defends-Bitcoin-Calls-Out-Environmental-Critics",
+      "pubDate": "2023-07-31T16:00:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "IOTA But Less Complex: Can New Cryptocurrency Presale IOTA20 Pump 13,628x Like the Original?",
+      "link": "https://cryptopanic.com/news/18807769/IOTA-But-Less-Complex-Can-New-Cryptocurrency-Presale-IOTA20-Pump-13628x-Like-the-Original",
+      "pubDate": "2023-07-31T15:53:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "SEC Files Lawsuit Against Richard Heart and Companies Hex, Pulsechain, and Pulsex",
+      "link": "https://cryptopanic.com/news/18807714/SEC-Files-Lawsuit-Against-Richard-Heart-and-Companies-Hex-Pulsechain-and-Pulsex",
+      "pubDate": "2023-07-31T15:30:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "Breaking: HEX Token Plummets 25% Following SEC Lawsuit Against Founder Richard Heart",
+      "link": "https://cryptopanic.com/news/18807666/Breaking-HEX-Token-Plummets-25-Following-SEC-Lawsuit-Against-Founder-Richard-Heart",
+      "pubDate": "2023-07-31T15:20:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The U.S. Securities and Exchange Commission (SEC) filed a lawsuit against Richard “Heart” Schueler and crypto projects HEX, PULSECHAIN, and PULSEX. According to a document filed with a court for the Eastern District of New York and shared on X by economist Alex Krüeger, the regulator is violating U.S. securities laws. Related Reading: Is Another Bitcoin Rally Coming Soon? This Pattern May Say So As of this writing, HEX is feeling the heat from the lawsuit. The token plummeted over 11% in today’s",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "DOGE",
+        "HEX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Biggest Movers: SHIB Stays Close to Recent 2-Month High on Monday",
+      "link": "https://cryptopanic.com/news/18807675/Biggest-Movers-SHIB-Stays-Close-to-Recent-2-Month-High-on-Monday",
+      "pubDate": "2023-07-31T15:19:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SHIB",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Is It A Good Idea To Buy Curve Now? Here’s What This Founder Thinks",
+      "link": "https://cryptopanic.com/news/18807595/Is-It-A-Good-Idea-To-Buy-Curve-Now-Heres-What-This-Founder-Thinks",
+      "pubDate": "2023-07-31T15:00:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "CRV"
+      ]
+    },
+    {
+      "title": "SEC files complaint against Hex founder for allegedly offering unregistered securities",
+      "link": "https://cryptopanic.com/news/18807581/SEC-files-complaint-against-Hex-founder-for-allegedly-offering-unregistered-securities",
+      "pubDate": "2023-07-31T14:55:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Crypto Exchange Upbit Suspends CRV Transactions As $100M At Risk In Curve Finance Hack",
+      "link": "https://cryptopanic.com/news/18807576/Crypto-Exchange-Upbit-Suspends-CRV-Transactions-As-100M-At-Risk-In-Curve-Finance-Hack",
+      "pubDate": "2023-07-31T14:39:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "The elusive Bitcoin $30,000 price range could be down to this metric",
+      "link": "https://cryptopanic.com/news/flow/18807521/The-elusive-Bitcoin-30000-price-range-could-be-down-to-this-metric",
+      "pubDate": "2023-07-31T14:30:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Ethereum Moves Lower; Bitcoin SV Emerges As Top Gainer",
+      "link": "https://cryptopanic.com/news/18807522/Ethereum-Moves-Lower-Bitcoin-SV-Emerges-As-Top-Gainer",
+      "pubDate": "2023-07-31T14:19:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BSV"
+      ]
+    },
+    {
+      "title": "Is It Too Late to Buy Bitcoin Cash? BCH Price Spikes Up 4% as Green Crypto Chimpzee Surges Past $1 Million",
+      "link": "https://cryptopanic.com/news/18807442/Is-It-Too-Late-to-Buy-Bitcoin-Cash-BCH-Price-Spikes-Up-4-as-Green-Crypto-Chimpzee-Surges-Past-1-Million",
+      "pubDate": "2023-07-31T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Is Another Bitcoin Rally Coming Soon? This Pattern May Say So",
+      "link": "https://cryptopanic.com/news/18807389/Is-Another-Bitcoin-Rally-Coming-Soon-This-Pattern-May-Say-So",
+      "pubDate": "2023-07-31T13:40:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDC",
+        "BUSD",
+        "DAI"
+      ]
+    },
+    {
+      "title": "XRP to hit $500 in 7 months, Wells Fargo Treasury manager predicts",
+      "link": "https://cryptopanic.com/news/18807322/XRP-to-hit-500-in-7-months-Wells-Fargo-Treasury-manager-predicts",
+      "pubDate": "2023-07-31T13:25:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "In a stunning turn of events, XRP has witnessed an impressive surge in recent weeks, briefly soaring above the $0.83 … Continued",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Compound (COMP) Defies Bearish Trends With a 3+% Price Ascent",
+      "link": "https://cryptopanic.com/news/18807633/Compound-COMP-Defies-Bearish-Trends-With-a-3-Price-Ascent",
+      "pubDate": "2023-07-31T13:08:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "COMP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "CRV Deposits and Withdrawals Suspended on Two Major Exchanges",
+      "link": "https://cryptopanic.com/news/18807275/CRV-Deposits-and-Withdrawals-Suspended-on-Two-Major-Exchanges",
+      "pubDate": "2023-07-31T13:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "XRP, STX, VET Shows Signs of Explosive Growth; Analyst",
+      "link": "https://cryptopanic.com/news/18807538/XRP-STX-VET-Shows-Signs-of-Explosive-Growth-Analyst",
+      "pubDate": "2023-07-31T12:35:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "VET",
+        "STX"
+      ]
+    },
+    {
+      "title": "Dogecoin Price Prospects: Can The Memecoin Climb To The $0.1 Level?",
+      "link": "https://cryptopanic.com/news/flow/18807170/Dogecoin-Price-Prospects-Can-The-Memecoin-Climb-To-The-01-Level",
+      "pubDate": "2023-07-31T12:30:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Curve DAO Tokens Suffer Millions In Hack Ahead Of White Hat Rescue Bid",
+      "link": "https://cryptopanic.com/news/18807082/Curve-DAO-Tokens-Suffer-Millions-In-Hack-Ahead-Of-White-Hat-Rescue-Bid",
+      "pubDate": "2023-07-31T11:50:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Google Bard predicts what will be Stellar price after Ripple wins SEC case",
+      "link": "https://cryptopanic.com/news/18807074/Google-Bard-predicts-what-will-be-Stellar-price-after-Ripple-wins-SEC-case",
+      "pubDate": "2023-07-31T11:47:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Amidst the artificial intelligence (AI) frenzy ignited by OpenAI’s ChatGPT, the tech landscape has witnessed fierce competition among industry giants … Continued",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Upbit Suspends CRV Trading after Curve Finance Exploit",
+      "link": "https://cryptopanic.com/news/18807071/Upbit-Suspends-CRV-Trading-after-Curve-Finance-Exploit",
+      "pubDate": "2023-07-31T11:45:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Curve DAO is Going to Zero After Blockchain Exploit and AI Crypto Analytics Platform yPredict Just Raised $3.2 Million – How Does it Work?",
+      "link": "https://cryptopanic.com/news/18807032/Curve-DAO-is-Going-to-Zero-After-Blockchain-Exploit-and-AI-Crypto-Analytics-Platform-yPredict-Just-Raised-32-Million-How-Does-it-Work",
+      "pubDate": "2023-07-31T11:26:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Curve Finance Warns Of Potential Arbitrum Pool Exploit",
+      "link": "https://cryptopanic.com/news/18806950/Curve-Finance-Warns-Of-Potential-Arbitrum-Pool-Exploit",
+      "pubDate": "2023-07-31T11:06:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "CRV"
+      ]
+    },
+    {
+      "title": "CRV trading at 600% premium on South Korean exchange Bithumb",
+      "link": "https://cryptopanic.com/news/18806939/CRV-trading-at-600-premium-on-South-Korean-exchange-Bithumb",
+      "pubDate": "2023-07-31T10:54:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "CRV Down 12.6% After $70M Curve Finance Exploit",
+      "link": "https://cryptopanic.com/news/18806903/CRV-Down-126-After-70M-Curve-Finance-Exploit",
+      "pubDate": "2023-07-31T10:20:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Price of Hacked CRV Rises 800 Percent on These Exchanges! Here is the Latest Status!",
+      "link": "https://cryptopanic.com/news/18806852/Price-of-Hacked-CRV-Rises-800-Percent-on-These-Exchanges-Here-is-the-Latest-Status",
+      "pubDate": "2023-07-31T10:18:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Quant Regains Bullish Momentum With $115 High Challenge",
+      "link": "https://cryptopanic.com/news/18807312/Quant-Regains-Bullish-Momentum-With-115-High-Challenge",
+      "pubDate": "2023-07-31T10:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "QNT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SEC Push to Delist Cryptocurrencies Except Bitcoin Could End Crypto: Coinbase CEO",
+      "link": "https://cryptopanic.com/news/18806791/SEC-Push-to-Delist-Cryptocurrencies-Except-Bitcoin-Could-End-Crypto-Coinbase-CEO",
+      "pubDate": "2023-07-31T09:58:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Brian Armstrong, CEO of cryptocurrency exchange Coinbase, disclosed in a July 31 interview with the Financial Times that the U.S. Securities and Exchange Commission (SEC) wanted the company to delist almost all cryptocurrencies, leaving only Bitcoin:And, we said, well how are you coming to that conclusion, because thats not our interpretation of the law. And they said, were not going to...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "SEC wanted Coinbase to offer only bitcoin trading",
+      "link": "https://cryptopanic.com/news/18806743/SEC-wanted-Coinbase-to-offer-only-bitcoin-trading",
+      "pubDate": "2023-07-31T09:38:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ]
+    },
+    {
+      "title": "Bitcoin SV Price Prediction as BSV Becomes Best Performing Coin on the Market – Can BSV Overtake Bitcoin?",
+      "link": "https://cryptopanic.com/news/18806748/Bitcoin-SV-Price-Prediction-as-BSV-Becomes-Best-Performing-Coin-on-the-Market-Can-BSV-Overtake-Bitcoin",
+      "pubDate": "2023-07-31T09:37:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ]
+    },
+    {
+      "title": "Curve Finance's Token Surges 500% on Bithumb After Major Exploit",
+      "link": "https://cryptopanic.com/news/18806696/Curve-Finances-Token-Surges-500-on-Bithumb-After-Major-Exploit",
+      "pubDate": "2023-07-31T09:25:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Here’s How Altcoins Could Regain Bullish Momentum, According to Analyst Michaël van de Poppe",
+      "link": "https://cryptopanic.com/news/18806685/Heres-How-Altcoins-Could-Regain-Bullish-Momentum-According-to-Analyst-Michael-van-de-Poppe",
+      "pubDate": "2023-07-31T09:15:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LINK",
+        "ATOM"
+      ]
+    },
+    {
+      "title": "XRP Struggles In Its Journey To $1: Market Observers Share Contrasting Views",
+      "link": "https://cryptopanic.com/news/flow/18806607/XRP-Struggles-In-Its-Journey-To-1-Market-Observers-Share-Contrasting-Views",
+      "pubDate": "2023-07-31T08:38:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SHIB",
+        "OP"
+      ]
+    },
+    {
+      "title": "Curve Finance loses millions as hackers exploit the Vyper bug – here’s a rundown",
+      "link": "https://cryptopanic.com/news/18806598/Curve-Finance-loses-millions-as-hackers-exploit-the-Vyper-bug-heres-a-rundown",
+      "pubDate": "2023-07-31T08:30:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Compound (COMP) up 9%, Here's Possible Reason",
+      "link": "https://cryptopanic.com/news/18806557/Compound-COMP-up-9-Heres-Possible-Reason",
+      "pubDate": "2023-07-31T08:07:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "COMP"
+      ]
+    },
+    {
+      "title": "XRP To Skyrocket To $500 Within 7 Months, Predicts Wells Fargo Treasury Manager",
+      "link": "https://cryptopanic.com/news/18806524/XRP-To-Skyrocket-To-500-Within-7-Months-Predicts-Wells-Fargo-Treasury-Manager",
+      "pubDate": "2023-07-31T08:00:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "In a recent statement, Wells Fargo’s Treasury Management officer Shannon Thorp provided an eye-catching price prediction for XRP. The forward-thinking executive anticipates a potential surge in XRP’s value to anywhere between $100 and $500 in the short term, specifically within the next 4 to 7 months. This price hike prediction represents an astounding 14,200 % to 71,400% increase from the...",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Upbit Halts CRV Withdrawal and Deposit After Curve Finance Exploit",
+      "link": "https://cryptopanic.com/news/18806547/Upbit-Halts-CRV-Withdrawal-and-Deposit-After-Curve-Finance-Exploit",
+      "pubDate": "2023-07-31T07:56:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Curve Finance Losses $47 Million in Hack, CRV Declines by 13%",
+      "link": "https://cryptopanic.com/news/18806708/Curve-Finance-Losses-47-Million-in-Hack-CRV-Declines-by-13",
+      "pubDate": "2023-07-31T07:22:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Crypto exchange Upbit suspends CRV deposits and withdrawals amid Curve Finance exploit",
+      "link": "https://cryptopanic.com/news/18806393/Crypto-exchange-Upbit-suspends-CRV-deposits-and-withdrawals-amid-Curve-Finance-exploit",
+      "pubDate": "2023-07-31T06:36:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Curve Finance Hacker Returns $5.4 Million, But CRV Dumps 15%",
+      "link": "https://cryptopanic.com/news/18806362/Curve-Finance-Hacker-Returns-54-Million-But-CRV-Dumps-15",
+      "pubDate": "2023-07-31T06:14:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Crypto Futures Show Bias for Uniswap's UNI Token After Curve Finance Exploit",
+      "link": "https://cryptopanic.com/news/18806361/Crypto-Futures-Show-Bias-for-Uniswaps-UNI-Token-After-Curve-Finance-Exploit",
+      "pubDate": "2023-07-31T06:11:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "CRV"
+      ]
+    },
+    {
+      "title": "Re-entrancy Exploit Hits Curve Finance",
+      "link": "https://cryptopanic.com/news/18806355/Re-entrancy-Exploit-Hits-Curve-Finance",
+      "pubDate": "2023-07-31T06:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "CRV"
+      ]
+    },
+    {
+      "title": "SEC Wanted Coinbase to Delist Shiba Inu (SHIB), Cardano (ADA), and Other Altcoins",
+      "link": "https://cryptopanic.com/news/18806342/SEC-Wanted-Coinbase-to-Delist-Shiba-Inu-SHIB-Cardano-ADA-and-Other-Altcoins",
+      "pubDate": "2023-07-31T05:40:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The U.S. Securities and Exchange Commission (SEC) reportedly sought to restrict Coinbase's trading to only Bitcoin, according to CEO Brian Armstrong",
+      "currencies": [
+        "ADA",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "What MakerDAO’s new proposal means for its investors",
+      "link": "https://cryptopanic.com/news/18806326/What-MakerDAOs-new-proposal-means-for-its-investors",
+      "pubDate": "2023-07-31T05:30:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DAI"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "SEC Told Coinbase to Stop Trading in all Cryptos Except Bitcoin Before Suing: FT",
+      "link": "https://cryptopanic.com/news/18806294/SEC-Told-Coinbase-to-Stop-Trading-in-all-Cryptos-Except-Bitcoin-Before-Suing-FT",
+      "pubDate": "2023-07-31T04:56:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The U.S. Securities and Exchange Commission (SEC) had asked Coinbase (COIN) to stop trading in all cryptocurrencies other than bitcoin (BTC) prior to suing the crypto exchange, according to a Financial Times report.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    }
+  ]
+}

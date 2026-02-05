@@ -1,0 +1,24 @@
+{
+  "date": "2019-08-23",
+  "fetchedAt": "2026-02-05T07:27:06.681Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tron Founder Justin Sun Bashed by Community Despite New BTT Listings",
+      "link": "https://cryptopanic.com/news/6384192/Tron-Founder-Justin-Sun-Bashed-by-Community-Despite-New-BTT-Listings",
+      "pubDate": "2019-08-23T08:34:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    }
+  ]
+}

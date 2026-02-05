@@ -1,0 +1,25 @@
+{
+  "date": "2019-10-21",
+  "fetchedAt": "2026-02-05T07:27:06.994Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "You Can Now Pay with Bitcoin, Ethereum, or Litecoin on Amazon",
+      "link": "https://cryptopanic.com/news/litecoin/6916014/You-Can-Now-Pay-with-Bitcoin-Ethereum-or-Litecoin-on-Amazon",
+      "pubDate": "2019-10-21T17:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 8
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "date": "2018-01-19",
+  "fetchedAt": "2026-02-05T07:27:06.948Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "More than $400,000 of Stellar Lumen Stolen By Hackers",
+      "link": "https://cryptopanic.com/news/847238/More-than-400000-of-Stellar-Lumen-Stolen-By-Hackers",
+      "pubDate": "2018-01-19T14:00:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "What’s Driving NEO’s Sudden Surge Into The Top-10 Cryptocurrencies?",
+      "link": "https://cryptopanic.com/news/846843/Whats-Driving-NEOs-Sudden-Surge-Into-The-Top-10-Cryptocurrencies",
+      "pubDate": "2018-01-19T12:30:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

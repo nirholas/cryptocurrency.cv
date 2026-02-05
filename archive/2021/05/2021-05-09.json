@@ -1,0 +1,782 @@
+{
+  "date": "2021-05-09",
+  "fetchedAt": "2026-02-05T07:27:06.962Z",
+  "articleCount": 50,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Dent data plan prices are too low",
+      "link": "https://cryptopanic.com/news/11905274/Dent-data-plan-prices-are-too-low",
+      "pubDate": "2021-05-09T22:38:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "RT @plug_net: Missed the AMA with @MXC_Exchange? Don’t worry we’ve got you covered. Check out the transcript here",
+      "link": "https://cryptopanic.com/news/11902852/RT-plug_net-Missed-the-AMA-with-MXC_Exchange-Dont-worry-weve-got-you-covered-Check-out-the-transcript-here",
+      "pubDate": "2021-05-09T22:38:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "CENNZ"
+      ]
+    },
+    {
+      "title": "One Sleeping Giant Ready for 7x Rally, Says Prominent Crypto Trader",
+      "link": "https://cryptopanic.com/news/tron/11901855/One-Sleeping-Giant-Ready-for-7x-Rally-Says-Prominent-Crypto-Trader",
+      "pubDate": "2021-05-09T22:05:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "High-profile crypto trader and crypto strategist Kaleo is preparing for one mid-cap altcoin to surge by over 600%. In a series of tweets, the pseudonymous analyst charts a bullish path ahead for scalable blockchain network Tron (TRX). Kaleo says that Tron is prepared to resume a breakout in its Bitcoin pair (TRX/BTC) after getting rejected […]",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Someone posted this LYXe Chart 3 days ago, and for now we can see that it is working perfectly. If it continues doing what it does we could se Lukso at around 67-68 dollars in next 45 days.",
+      "link": "https://cryptopanic.com/news/11905307/Someone-posted-this-LYXe-Chart-3-days-ago-and-for-now-we-can-see-that-it-is-working-perfectly-If-it-continues-doing-what-it-does-we-could-se-Lukso-at-around-67-68-dollars-in-next-45-days",
+      "pubDate": "2021-05-09T21:57:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "Spacex to Launch Dogecoin Paid DOGE-1 Mission to the Moon",
+      "link": "https://cryptopanic.com/news/dogecoin/11901757/Spacex-to-Launch-Dogecoin-Paid-DOGE-1-Mission-to-the-Moon",
+      "pubDate": "2021-05-09T21:30:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Spacex, the pioneer private space agency founded by Elon Musk, announced it will launch the DOGE-1 mission to the moon in coordination with Geometric Energy Corporation (GEC). The mission, whose objective will be to deliver a commercial payload to the moon, was paid in full using Dogecoin, the meme coin that has been made popular […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Literally to the moon — SpaceX payload funded by DOGE plans to reach lunar orbit in 2022",
+      "link": "https://cryptopanic.com/news/dogecoin/11901758/Literally-to-the-moon-SpaceX-payload-funded-by-DOGE-plans-to-reach-lunar-orbit-in-2022",
+      "pubDate": "2021-05-09T21:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "\"This mission will demonstrate the application of cryptocurrency beyond Earth orbit and set the foundation for interplanetary commerce,” said SpaceX's Tom Ochinero.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Do y’all want me to start publishing graph analysis everytime I see something interesting for Lukso?",
+      "link": "https://cryptopanic.com/news/11901711/Do-yall-want-me-to-start-publishing-graph-analysis-everytime-I-see-something-interesting-for-Lukso",
+      "pubDate": "2021-05-09T21:02:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "Dogecoin To The Actual Moon",
+      "link": "https://cryptopanic.com/news/dogecoin/11901670/Dogecoin-To-The-Actual-Moon",
+      "pubDate": "2021-05-09T20:47:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "While Dogecoin’s price may have failed to launch to the proverbial moon, it will board an actual lunar payload mission via a SpaceX Rocket.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 63,
+        "negative": 23
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum fees skyrocket as a DOGE knock-off surges 32,500% in 30 days",
+      "link": "https://cryptopanic.com/news/dogecoin/11901668/Ethereum-fees-skyrocket-as-a-DOGE-knock-off-surges-32500-in-30-days",
+      "pubDate": "2021-05-09T20:45:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The price of Shiba Inu (SHIB), a previously obscure token created to ape Dogecoin’s (DOGE) success, has surged by an astounding 32,500% over the past 30 days, resulting in a trading craze that congested Ethereum’s (ETH) blockchain and pushed transaction fees to prohibitively high levels yesterday.",
+      "currencies": [
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 13
+      }
+    },
+    {
+      "title": "Source of Wealth and 2-fact authentication",
+      "link": "https://cryptopanic.com/news/11905847/Source-of-Wealth-and-2-fact-authentication",
+      "pubDate": "2021-05-09T20:37:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHSB"
+      ]
+    },
+    {
+      "title": "Post the SNL bloodbath, here’s a ‘Dogecoin strategy’ that could work",
+      "link": "https://cryptopanic.com/news/dogecoin/11901634/Post-the-SNL-bloodbath-heres-a-Dogecoin-strategy-that-could-work",
+      "pubDate": "2021-05-09T20:00:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "It’s said that when you desperately want something, the universe conspires to make it happen. But, well, this adage wasn’t quite applicable in the case of DOGE. Following weeks of volatility and speculations revolving around DOGE, many traders would’ve anticipated the DOGE to surge to a new ATH. However, that wasn’t quite the case when […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Guys i have some dent coin on binance, it is not allowing me to withdraw, what should i do",
+      "link": "https://cryptopanic.com/news/11966425/Guys-i-have-some-dent-coin-on-binance-it-is-not-allowing-me-to-withdraw-what-should-i-do",
+      "pubDate": "2021-05-09T19:48:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "Dogecoin Mania ‘Good for Crypto Industry,’ Says Michael Saylor – Here’s Why",
+      "link": "https://cryptopanic.com/news/dogecoin/11901575/Dogecoin-Mania-Good-for-Crypto-Industry-Says-Michael-Saylor-Heres-Why",
+      "pubDate": "2021-05-09T18:45:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "MicroStrategy CEO Michael Saylor says the mania-driven Dogecoin (DOGE) rally is beneficial to the crypto sector at large. In an interview on Morning Invest, Saylor, whose company now owns 91,579 Bitcoin, says that the hype surrounding the meme crypto asset and other speculative investing strategies is likely fueled by an utter lack of confidence in […]",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "I can finally post this meme.",
+      "link": "https://cryptopanic.com/news/11901473/I-can-finally-post-this-meme",
+      "pubDate": "2021-05-09T18:10:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Top 5 cryptocurrencies to watch this week: BTC, BNB, ADA, LTC, LINK",
+      "link": "https://cryptopanic.com/news/chainlink/11901474/Top-5-cryptocurrencies-to-watch-this-week-BTC-BNB-ADA-LTC-LINK",
+      "pubDate": "2021-05-09T17:58:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin is still stuck in a predictable range below Binance Coin, Cardano, Litecoin and Chainlink have formed bullish patterns suggesting further upside in them.",
+      "currencies": [
+        "BTC",
+        "BNB",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 31,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "'Dogefather' Elon Musk jokingly calls token a hustle as price falls under $0.50",
+      "link": "https://cryptopanic.com/news/dogecoin/11901376/Dogefather-Elon-Musk-jokingly-calls-token-a-hustle-as-price-falls-under-050",
+      "pubDate": "2021-05-09T17:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Though Musk's mother briefly mentioned the token during the Saturday Night Live opening monologue, the Tesla CEO followed up with an in-depth look for his Weekend Update segment.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 36
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "\"DOGE-1 to the Moon\": Elon Musk's SpaceX Gets Paid in Dogecoin to Launch Lunar Payload",
+      "link": "https://cryptopanic.com/news/dogecoin/11901332/DOGE-1-to-the-Moon-Elon-Musks-SpaceX-Gets-Paid-in-Dogecoin-to-Launch-Lunar-Payload",
+      "pubDate": "2021-05-09T17:12:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Elon Musk wasn't kidding about sending Dogecoin to the Moon",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 23,
+        "negative": 11
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Derby winner Medina Spirit failed the drug test. This is Bob Baffert's fifth horse to fail a drug test in the past…",
+      "link": "https://cryptopanic.com/news/11902507/Derby-winner-Medina-Spirit-failed-the-drug-test-This-is-Bob-Bafferts-fifth-horse-to-fail-a-drug-test-in-the-past",
+      "pubDate": "2021-05-09T17:04:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REP"
+      ]
+    },
+    {
+      "title": "Matic is nearly wiped off of exchanges! What is the effect on the price?",
+      "link": "https://cryptopanic.com/news/matic-network/11901324/Matic-is-nearly-wiped-off-of-exchanges-What-is-the-effect-on-the-price",
+      "pubDate": "2021-05-09T17:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Ethereum’s price rally may have stunted the growth of most other altcoins, however, Polygon MATIC is now pretty much wiped off the exchanges. While in early January 2021, there was 1.24 Billion MATIC on spot exchanges and now in May 2021, in over 4 months, only 88.49 Million MATIC remains. On-chain sentiment suggests that retail […]",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 41,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano smashes new all-time high following 14% gain",
+      "link": "https://cryptopanic.com/news/11901242/Cardano-smashes-new-all-time-high-following-14-gain",
+      "pubDate": "2021-05-09T16:26:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "With a value of nearly $58 billion, ADA has flipped Tether in the market cap rankings.",
+      "currencies": [
+        "USDT",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 73,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Commemorative coin, fan art for fun. (One day maybe...)",
+      "link": "https://cryptopanic.com/news/11901225/Commemorative-coin-fan-art-for-fun-One-day-maybe",
+      "pubDate": "2021-05-09T16:02:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ]
+    },
+    {
+      "title": "Lukso Broke the Biggest Resistance after almost 2 Months. Next Preice Target?",
+      "link": "https://cryptopanic.com/news/11901214/Lukso-Broke-the-Biggest-Resistance-after-almost-2-Months-Next-Preice-Target",
+      "pubDate": "2021-05-09T16:02:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "Dogecoin Crashes After Musk SNL",
+      "link": "https://cryptopanic.com/news/dogecoin/11901171/Dogecoin-Crashes-After-Musk-SNL",
+      "pubDate": "2021-05-09T15:30:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Dogecoin dropped by 40% from 75 cent to about 40 cent following Elon Musk’s hosting of Saturday Night Live (SNL). In one segment Musk appears as the financial expert Lloyd...",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @binance: Who's the best person to follow on crypto Twitter?",
+      "link": "https://cryptopanic.com/news/11902768/RT-binance-Whos-the-best-person-to-follow-on-crypto-Twitter",
+      "pubDate": "2021-05-09T14:55:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BRG"
+      ]
+    },
+    {
+      "title": "Cardano, BCH, LTC, ETH, Chainlink and VET: Watch out for this sign when it comes to alts",
+      "link": "https://cryptopanic.com/news/chainlink/11901074/Cardano-BCH-LTC-ETH-Chainlink-and-VET-Watch-out-for-this-sign-when-it-comes-to-alts",
+      "pubDate": "2021-05-09T14:00:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The current altcoin season which kicked off with Dogecoin’s price rally may have slowed down for now. Altcoins like ADA, BCH, LTC, ETH, LINK and VET are currently offering double-digit gains when compared to last week’s prices. The growing interest in altcoins across exchanges is the key factor driving the prices. The other factor is […]",
+      "currencies": [
+        "ETH",
+        "LINK",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 26,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DOGE Leads Liquidations with $280 million in Last 12 Hours",
+      "link": "https://cryptopanic.com/news/dogecoin/11901031/DOGE-Leads-Liquidations-with-280-million-in-Last-12-Hours",
+      "pubDate": "2021-05-09T13:38:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin (DOGE) is at the top of the Bybt.com liquidations list from the last 12 hours, with over $280 million liquidated across exchanges.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 20
+      }
+    },
+    {
+      "title": "SwissBorg DAO Trading Analysis",
+      "link": "https://cryptopanic.com/news/11906191/SwissBorg-DAO-Trading-Analysis",
+      "pubDate": "2021-05-09T12:23:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHSB"
+      ]
+    },
+    {
+      "title": "Dogecoin Knockoff Puts $8 Billion in Ethereum Founder Buterin’s Wallet",
+      "link": "https://cryptopanic.com/news/dogecoin/11900956/Dogecoin-Knockoff-Puts-8-Billion-in-Ethereum-Founder-Buterins-Wallet",
+      "pubDate": "2021-05-09T12:17:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Shiba Inu (SHIB) has gone skyward. Vitalik Buterin, who received 50% of the SHIB supply from the developers, is its biggest whale.",
+      "currencies": [
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 10
+      }
+    },
+    {
+      "title": "REEF & Major Crypto Influencers",
+      "link": "https://cryptopanic.com/news/11901997/REEF-Major-Crypto-Influencers",
+      "pubDate": "2021-05-09T11:46:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ]
+    },
+    {
+      "title": "‘Time to Switch to Satoshis’ says Novogratz",
+      "link": "https://cryptopanic.com/news/dogecoin/11900917/Time-to-Switch-to-Satoshis-says-Novogratz",
+      "pubDate": "2021-05-09T11:39:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Mike Novogratz, CEO of Galaxy Digital, has taken to Twitter to make a case for Satoshis (SATS) to replace Bitcoin (BTC) on exchanges.",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 6
+      }
+    },
+    {
+      "title": "ADA Leapfrogs USDT as New All Time High Reaches $1.78",
+      "link": "https://cryptopanic.com/news/11900906/ADA-Leapfrogs-USDT-as-New-All-Time-High-Reaches-178",
+      "pubDate": "2021-05-09T10:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano (ADA) has reached another all time high on Sunday, touching $1.78 on Binance exchange.",
+      "currencies": [
+        "USDT",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 34,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Sharp Plummet for DOGE Following Musk Saturday Night Live Appearance",
+      "link": "https://cryptopanic.com/news/dogecoin/11900811/Sharp-Plummet-for-DOGE-Following-Musk-Saturday-Night-Live-Appearance",
+      "pubDate": "2021-05-09T10:08:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Elon Musk made his long-awaited appearance as host of Saturday Night Live. And it appears to have been anything but good for the price of Dogecoin (DOGE) as it plummets from yesterday's heights.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 14
+      }
+    },
+    {
+      "title": "Bonus for Signup/deposit",
+      "link": "https://cryptopanic.com/news/11920776/Bonus-for-Signupdeposit",
+      "pubDate": "2021-05-09T09:19:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHSB"
+      ]
+    },
+    {
+      "title": "Binance Smart Chain Daily Transaction Count hits New High of 9.168M",
+      "link": "https://cryptopanic.com/news/11900648/Binance-Smart-Chain-Daily-Transaction-Count-hits-New-High-of-9168M",
+      "pubDate": "2021-05-09T08:31:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Daily transactions on the Binance Smart Chain reached a new peak value of 9.168 million on May 3rd Since late April, the Binance Smart Chain has been handling over 7 million daily transactions Unique addresses on the Binance Smart Chain have exceeded 70.3 million On-chain metrics point towards a bullish future for Binance Coin (BNB) The number of daily transactions on the Binance Smart Chain continues to grow at an impressive rate and hit a peak value of 9.168 million […]",
+      "currencies": [
+        "ETH",
+        "BNB"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogecoin Plummets 30% From Highs Following Elon Musk’s SNL Appearance",
+      "link": "https://cryptopanic.com/news/dogecoin/11900343/Dogecoin-Plummets-30-From-Highs-Following-Elon-Musks-SNL-Appearance",
+      "pubDate": "2021-05-09T07:50:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Following weeks of speculation and extreme volatility, many traders were expecting Dogecoin to surge to new highs from Elon Musk’s Saturday Night Live appearance. In anticipation of the Tesla CEO’s debut on SNL, Dogecoin’s price surged nearly 100% in the past week alone. On Friday, Dogecoin hit its all high of $0.71 cents — up […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 11
+      }
+    },
+    {
+      "title": "Polygon Gained 21.54% today and is leading the Charts!",
+      "link": "https://cryptopanic.com/news/matic-network/11899534/Polygon-Gained-2154-today-and-is-leading-the-Charts",
+      "pubDate": "2021-05-09T07:42:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "-",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 25,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Risk is a constant part of the #crypto field. Hodling #EURS helps you stay safe and not cry about your investment d…",
+      "link": "https://cryptopanic.com/news/11904557/Risk-is-a-constant-part-of-the-crypto-field-Hodling-EURS-helps-you-stay-safe-and-not-cry-about-your-investment-d",
+      "pubDate": "2021-05-09T07:12:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "Sell The News: Dogecoin Drops 20% After Elon Musk’s SNL",
+      "link": "https://cryptopanic.com/news/dogecoin/11898154/Sell-The-News-Dogecoin-Drops-20-After-Elon-Musks-SNL",
+      "pubDate": "2021-05-09T06:21:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Many expected Elon Musk to pump Dogecoin once again, but what pumped instead were its clones. Dogecoin actually crashed 20% after the show in another classic 'buy the rumor, sell the news' incident.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 21
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Dogecoin Could See Significant Correction Before Surging Over 120%, Says Top Trader",
+      "link": "https://cryptopanic.com/news/dogecoin/11897944/Dogecoin-Could-See-Significant-Correction-Before-Surging-Over-120-Says-Top-Trader",
+      "pubDate": "2021-05-09T05:50:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "A widely-followed trader is issuing a warning that Dogecoin (DOGE) could face a significant pullback before it can kick off the next leg of its bull market. In a new tweet, crypto analyst Loma tells his 157,600 followers that he believes Tesla CEO Elon Musk’s appearance on the popular sketch comedy show Saturday Night Live […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 17
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "$DOGE Falls Over 25% After ‘Dogefather’ Elon Musk Admits Dogecoin ‘Is a Hustle’",
+      "link": "https://cryptopanic.com/news/dogecoin/11896983/DOGE-Falls-Over-25-After-Dogefather-Elon-Musk-Admits-Dogecoin-Is-a-Hustle",
+      "pubDate": "2021-05-09T05:20:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The Dogecoin ($DOGE) price fell over 20% shortly after Tesla CEO Elon Musk (aka “Dogefather”) admitted on U.S. TV’s comedy sketch show Saturday Night Live (SNL) that Dogecoin is “a hustle”. According to data by CryptoCompare, five minutes before Musk’s SNL hosting debut, Dogecoin was trading around $0.6760. 45 minutes after the start of the […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 12
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Robinhood Overwhelmed by Dogecoin Selloff After SNL Mention",
+      "link": "https://cryptopanic.com/news/dogecoin/11896938/Robinhood-Overwhelmed-by-Dogecoin-Selloff-After-SNL-Mention",
+      "pubDate": "2021-05-09T05:01:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Robinhood began experiencing trading problems while Dogecoin lover Elon Musk was hosting SNL.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Robinhood Reports Issues with Crypto Trading as Dogecoin Crashes 33 Percent Before Paring Some Losses",
+      "link": "https://cryptopanic.com/news/dogecoin/11896940/Robinhood-Reports-Issues-with-Crypto-Trading-as-Dogecoin-Crashes-33-Percent-Before-Paring-Some-Losses",
+      "pubDate": "2021-05-09T05:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Robinhood cannot handle the Dogecoin mayhem",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 4
+      }
+    },
+    {
+      "title": "\"Dogefather\" Elon Musk Says Dogecoin Is Going to Take Over the World on \"SNL,\" Mentions Bitcoin and Ethereum",
+      "link": "https://cryptopanic.com/news/dogecoin/11896899/Dogefather-Elon-Musk-Says-Dogecoin-Is-Going-to-Take-Over-the-World-on-SNL-Mentions-Bitcoin-and-Ethereum",
+      "pubDate": "2021-05-09T04:33:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Elon Musk said that Doge was an unstoppable financial vehicle during his \"SNL\" sketch",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 21,
+        "negative": 8
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogecoin dumps following mention from Elon Musk on Saturday Night Live",
+      "link": "https://cryptopanic.com/news/dogecoin/11896896/Dogecoin-dumps-following-mention-from-Elon-Musk-on-Saturday-Night-Live",
+      "pubDate": "2021-05-09T04:20:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "While the crowd seemed to enjoy his performance, DOGE traders soured on Elon Musk's shout-out.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Elon Musk Tells Maye Musk Dogecoin Is Her Mother's Day Gift",
+      "link": "https://cryptopanic.com/news/dogecoin/11896891/Elon-Musk-Tells-Maye-Musk-Dogecoin-Is-Her-Mothers-Day-Gift",
+      "pubDate": "2021-05-09T04:07:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Maye Musk is not impressed by Dogecoin",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 10
+      }
+    },
+    {
+      "title": "Elon Musk's Mom Name-Drops Dogecoin on SNL, Price Plunges",
+      "link": "https://cryptopanic.com/news/dogecoin/11896876/Elon-Musks-Mom-Name-Drops-Dogecoin-on-SNL-Price-Plunges",
+      "pubDate": "2021-05-09T03:54:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Bitcoin may be his safe word, but Dogecoin is his catchphrase.",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "When can we expect recovery phrase to work again?",
+      "link": "https://cryptopanic.com/news/11896791/When-can-we-expect-recovery-phrase-to-work-again",
+      "pubDate": "2021-05-09T02:02:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHSB"
+      ]
+    },
+    {
+      "title": "RT @DzambhalaHODL: 1) The focus on limited supply as the value proposition for Bitcoin is misleading people to view ETH as a superior inves…",
+      "link": "https://cryptopanic.com/news/11897290/RT-DzambhalaHODL-1-The-focus-on-limited-supply-as-the-value-proposition-for-Bitcoin-is-misleading-people-to-view-ETH-as-a-superior-inves",
+      "pubDate": "2021-05-09T01:40:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTCB"
+      ]
+    },
+    {
+      "title": "Just Filled My Bags",
+      "link": "https://cryptopanic.com/news/11899552/Just-Filled-My-Bags",
+      "pubDate": "2021-05-09T01:24:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ]
+    },
+    {
+      "title": "With the huge milestone achieved by ReefDeFi over the past few weeks, it is evident that the DeFi space is still yet to experience the full potential of Reef Finance.",
+      "link": "https://cryptopanic.com/news/11896521/With-the-huge-milestone-achieved-by-ReefDeFi-over-the-past-few-weeks-it-is-evident-that-the-DeFi-space-is-still-yet-to-experience-the-full-potential-of-Reef-Finance",
+      "pubDate": "2021-05-09T00:31:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

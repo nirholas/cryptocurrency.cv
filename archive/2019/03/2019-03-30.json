@@ -1,0 +1,25 @@
+{
+  "date": "2019-03-30",
+  "fetchedAt": "2026-02-05T07:27:07.000Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bithumb Responds to Allegations On Hackers Stealing 20 Mln XRP, 3 Mln EOS: “Accident Involving Insiders”",
+      "link": "https://cryptopanic.com/news/ripple/4991581/Bithumb-Responds-to-Allegations-On-Hackers-Stealing-20-Mln-XRP-3-Mln-EOS-Accident-Involving-Insiders",
+      "pubDate": "2019-03-30T11:10:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

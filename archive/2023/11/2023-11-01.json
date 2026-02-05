@@ -1,0 +1,1343 @@
+{
+  "date": "2023-11-01",
+  "fetchedAt": "2026-02-05T07:27:07.037Z",
+  "articleCount": 92,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Rising Institutional Demand Will Propel Bitcoin Price to $120,000 by Year’s End",
+      "link": "https://cryptopanic.com/news/19010435/Rising-Institutional-Demand-Will-Propel-Bitcoin-Price-to-120000-by-Years-End",
+      "pubDate": "2023-11-01T23:33:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ]
+    },
+    {
+      "title": "Cardano Analyst Presents Argument For Why ADA Price Will Reach $30",
+      "link": "https://cryptopanic.com/news/19010411/Cardano-Analyst-Presents-Argument-For-Why-ADA-Price-Will-Reach-30",
+      "pubDate": "2023-11-01T23:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Cardano continues to be a major player among the large cryptocurrencies and the price of its native ADA token has not escaped the attention of crypto analysts. One such analyst has made a very bullish prediction for the digital asset that has captured the attention of Cardano community members. Crypto Analyst Says ADA Price To […]",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 6
+      }
+    },
+    {
+      "title": "What’s Driving the Solana Rally?",
+      "link": "https://cryptopanic.com/news/19010401/Whats-Driving-the-Solana-Rally",
+      "pubDate": "2023-11-01T22:51:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Solana fell to as low as $8 after the collapse of FTX. It's now up over 80% in the last 30 days. What gives?",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Bitcoin Targets $40,000 as FOMC Leaves Interest Rates on Hold",
+      "link": "https://cryptopanic.com/news/19010398/Bitcoin-Targets-40000-as-FOMC-Leaves-Interest-Rates-on-Hold",
+      "pubDate": "2023-11-01T22:38:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin sets its sights on $40,000, energized by the Federal Open Market Committee’s (FOMC) recent decision to maintain interest rates. The market’s pulse quickened as the Federal Reserve reinforced its strategy to keep the federal funds rate at the 5.25% – 5.50% corridor. This move, although anticipated, has sent ripples through the financial markets, emboldening investors and traders...",
+      "currencies": [
+        "BTC",
+        "DOT",
+        "AVAX",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "ADA, AXS, MANA, ELON Showing Bullish Spikes in Onchain Metrics",
+      "link": "https://cryptopanic.com/news/19010393/ADA-AXS-MANA-ELON-Showing-Bullish-Spikes-in-Onchain-Metrics",
+      "pubDate": "2023-11-01T22:37:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "MANA",
+        "AXS"
+      ]
+    },
+    {
+      "title": "Bitcoin arrives on Cosmos with Nomic nBTC upgrade",
+      "link": "https://cryptopanic.com/news/19010390/Bitcoin-arrives-on-Cosmos-with-Nomic-nBTC-upgrade",
+      "pubDate": "2023-11-01T22:36:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Prosecutors Say Sam Bankman-Fried Is ‘Guilty Beyond Reasonable Doubt’ in Closing Statements",
+      "link": "https://cryptopanic.com/news/19010359/Prosecutors-Say-Sam-Bankman-Fried-Is-Guilty-Beyond-Reasonable-Doubt-in-Closing-Statements",
+      "pubDate": "2023-11-01T22:01:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "Crypto Whales Acquire 30,000 BTC In Under a Week as Bitcoin Soars",
+      "link": "https://cryptopanic.com/news/19010328/Crypto-Whales-Acquire-30000-BTC-In-Under-a-Week-as-Bitcoin-Soars",
+      "pubDate": "2023-11-01T21:39:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin's (BTC) bullish momentum has spread to the broader crypto market this week, with all major cryptocurrencies booking impressive gains.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana Labs unveils GameShift, a web3 suite for game developers",
+      "link": "https://cryptopanic.com/news/19010278/Solana-Labs-unveils-GameShift-a-web3-suite-for-game-developers",
+      "pubDate": "2023-11-01T21:10:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana Labs announced the beta launch of GameShift, its Web3 service for game developers, in a press release published on Oct. 31. Davis Hart, Product Lead for GameShift, said: “Integrating GameShift’s API to handle blockchain complexity under the hood allows developers to dedicate more resources directly to game development … developers can provide a Web2-friendly […]",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 13
+      }
+    },
+    {
+      "title": "FTX’s Sam Bankman-Fried Completes His Testimony, Here’s What To Expect Next",
+      "link": "https://cryptopanic.com/news/19010274/FTXs-Sam-Bankman-Fried-Completes-His-Testimony-Heres-What-To-Expect-Next",
+      "pubDate": "2023-11-01T21:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "November To Witness Over $450M In Token Unlocks: Aptos And Avalanche Take The Lead",
+      "link": "https://cryptopanic.com/news/19010253/November-To-Witness-Over-450M-In-Token-Unlocks-Aptos-And-Avalanche-Take-The-Lead",
+      "pubDate": "2023-11-01T21:00:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "APE"
+      ]
+    },
+    {
+      "title": "Solana Smashes Above $40 In Seemingly Unstoppable Stampede",
+      "link": "https://cryptopanic.com/news/19010254/Solana-Smashes-Above-40-In-Seemingly-Unstoppable-Stampede",
+      "pubDate": "2023-11-01T20:54:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana, the now seventh-ranked cryptocurrency by market cap, thanks to a recent runaway performance, has surpassed the $40 mark. Take a look at a close-up of the price action and see if the stampede by bulls is sustainable. Say Goodbye To Single-Digit SOL Forever Less than one year ago, Solana hit a low of under $10. Single-digit SOL proved to be too enticing for investors to pass up and it...",
+      "currencies": [
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 8
+      }
+    },
+    {
+      "title": "Can GameFi Pave the Way to Mass Adoption of NFTs?",
+      "link": "https://cryptopanic.com/news/19010345/Can-GameFi-Pave-the-Way-to-Mass-Adoption-of-NFTs",
+      "pubDate": "2023-11-01T20:46:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "GALA"
+      ]
+    },
+    {
+      "title": "Solana Surges to 14-Month High; Sell Pressure Lingers as FTX Unstakes $67M Tokens",
+      "link": "https://cryptopanic.com/news/19010227/Solana-Surges-to-14-Month-High-Sell-Pressure-Lingers-as-FTX-Unstakes-67M-Tokens",
+      "pubDate": "2023-11-01T20:29:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "tktk",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 10
+      }
+    },
+    {
+      "title": "Sam Bankman-Fried ‘doubled down’ by buying Binance’s stake in FTX — US prosecutors",
+      "link": "https://cryptopanic.com/news/19010150/Sam-Bankman-Fried-doubled-down-by-buying-Binances-stake-in-FTX-US-prosecutors",
+      "pubDate": "2023-11-01T20:03:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "Unique Fair Pricing Model Puts XRP Price Higher Than Bitcoin, Here’s How Much",
+      "link": "https://cryptopanic.com/news/19010132/Unique-Fair-Pricing-Model-Puts-XRP-Price-Higher-Than-Bitcoin-Heres-How-Much",
+      "pubDate": "2023-11-01T20:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "The Comeback Coin: Solana Soars 20% as Rally Rages On",
+      "link": "https://cryptopanic.com/news/19010155/The-Comeback-Coin-Solana-Soars-20-as-Rally-Rages-On",
+      "pubDate": "2023-11-01T19:58:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "SOL won't stop going up in price.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Shiba Inu Introduces Shiba Name Service (SNS) on Shibarium",
+      "link": "https://cryptopanic.com/news/19010101/Shiba-Inu-Introduces-Shiba-Name-Service-SNS-on-Shibarium",
+      "pubDate": "2023-11-01T19:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Time to Woof: Shiba Inu devs deploy Shiba Name Service (SNS) on Shibarium L2.",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana's SOL Token Soars to 18-Month High Amid Breakpoint Conference",
+      "link": "https://cryptopanic.com/news/19010130/Solanas-SOL-Token-Soars-to-18-Month-High-Amid-Breakpoint-Conference",
+      "pubDate": "2023-11-01T19:36:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana's native token is soaring to an 18-month high as a flurry of announcements have dropped during the Layer 1 blockchain's largest conference. SOL climbed by over 20% to as high as $45.3 Wednesday, the highest level since May 2022, when crypto was coo...",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Solana's SOL Token Soars to 14-Month High Amid Breakpoint Conference",
+      "link": "https://cryptopanic.com/news/19010154/Solanas-SOL-Token-Soars-to-14-Month-High-Amid-Breakpoint-Conference",
+      "pubDate": "2023-11-01T19:36:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana's native token is soaring to the highest since August 2022 as a flurry of announcements have dropped during the Layer 1 blockchain's largest conference.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Ripple (XRP) Price Prediction: 50% Surge Incoming in the Next Months (Analyst)",
+      "link": "https://cryptopanic.com/news/19010046/Ripple-XRP-Price-Prediction-50-Surge-Incoming-in-the-Next-Months-Analyst",
+      "pubDate": "2023-11-01T19:15:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "CrediBULL believes that XRP could soar to $0.90 by mid-2024.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Solana Rockets Up 23%: Here’s How This Run Can Continue",
+      "link": "https://cryptopanic.com/news/19010017/Solana-Rockets-Up-23-Heres-How-This-Run-Can-Continue",
+      "pubDate": "2023-11-01T19:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana has enjoyed a sharp rally of about 23% in the last few days. Here’s what’s required for this run to continue further. Solana Knocks On The Door Of $40 After Rapid Increase While most of the cryptocurrency has been flat in the last few days, Solana has decoupled from the pack and has shown […]",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Cryptocurrency NEAR Protocol Up More Than 18% In 24 hours",
+      "link": "https://cryptopanic.com/news/19010041/Cryptocurrency-NEAR-Protocol-Up-More-Than-18-In-24-hours",
+      "pubDate": "2023-11-01T19:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Uniswap Up More Than 11% In 24 hours",
+      "link": "https://cryptopanic.com/news/19010040/Cryptocurrency-Uniswap-Up-More-Than-11-In-24-hours",
+      "pubDate": "2023-11-01T19:00:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "TRON Up More Than 3% In 24 hours",
+      "link": "https://cryptopanic.com/news/19010042/TRON-Up-More-Than-3-In-24-hours",
+      "pubDate": "2023-11-01T19:00:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ]
+    },
+    {
+      "title": "Wallet performance issues resolved, ECC exiting Emergency Mode",
+      "link": "https://cryptopanic.com/news/19009973/Wallet-performance-issues-resolved-ECC-exiting-Emergency-Mode",
+      "pubDate": "2023-11-01T18:47:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Tron Price Prediction As TRX Approaches $0.1 Bolstered By 26.6% Dominance In The Stablecoin Market",
+      "link": "https://cryptopanic.com/news/19009830/Tron-Price-Prediction-As-TRX-Approaches-01-Bolstered-By-266-Dominance-In-The-Stablecoin-Market",
+      "pubDate": "2023-11-01T18:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ]
+    },
+    {
+      "title": "Price analysis 11/1: BTC, ETH, BNB, XRP, SOL, ADA, DOGE, TON, LINK, MATIC",
+      "link": "https://cryptopanic.com/news/19009831/Price-analysis-111-BTC-ETH-BNB-XRP-SOL-ADA-DOGE-TON-LINK-MATIC",
+      "pubDate": "2023-11-01T17:54:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "ADA",
+        "XRP",
+        "DOGE",
+        "MATIC",
+        "LINK",
+        "TON"
+      ]
+    },
+    {
+      "title": "The Possible Pivots Awaiting Filecoin (FIL) and Monero (XMR), But Is Change in The Air?",
+      "link": "https://cryptopanic.com/news/19009772/The-Possible-Pivots-Awaiting-Filecoin-FIL-and-Monero-XMR-But-Is-Change-in-The-Air",
+      "pubDate": "2023-11-01T17:25:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "FIL"
+      ]
+    },
+    {
+      "title": "Frax Finance Reports Domain Hijacking Incident",
+      "link": "https://cryptopanic.com/news/19009723/Frax-Finance-Reports-Domain-Hijacking-Incident",
+      "pubDate": "2023-11-01T17:05:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FRAX"
+      ]
+    },
+    {
+      "title": "Blockchain Protocol MakerDAO Transfers $250M From Coinbase To Protect DAI Stablecoin Peg",
+      "link": "https://cryptopanic.com/news/19009685/Blockchain-Protocol-MakerDAO-Transfers-250M-From-Coinbase-To-Protect-DAI-Stablecoin-Peg",
+      "pubDate": "2023-11-01T16:38:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "DAI"
+      ]
+    },
+    {
+      "title": "Cardano (ADA) Wallet Nami Becomes IOG Product, Charles Hoskinson Excited",
+      "link": "https://cryptopanic.com/news/19009652/Cardano-ADA-Wallet-Nami-Becomes-IOG-Product-Charles-Hoskinson-Excited",
+      "pubDate": "2023-11-01T16:25:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Nami, one of most popular independent wallets for ADA transactions, joins Input Output Global ecosystem of crypto tools",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron (TRX), Monero (XMR) or VC Spectra (SPCT): Who Will Deliver 10x Returns by Christmas 2023?",
+      "link": "https://cryptopanic.com/news/19009502/Tron-TRX-Monero-XMR-or-VC-Spectra-SPCT-Who-Will-Deliver-10x-Returns-by-Christmas-2023",
+      "pubDate": "2023-11-01T15:48:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "XMR"
+      ]
+    },
+    {
+      "title": "Speculation Abounds: Early Investors in Ethereum (ETH) and Monero (XMR) Pivot to a New Rising Crypto Star",
+      "link": "https://cryptopanic.com/news/19009435/Speculation-Abounds-Early-Investors-in-Ethereum-ETH-and-Monero-XMR-Pivot-to-a-New-Rising-Crypto-Star",
+      "pubDate": "2023-11-01T15:30:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XMR"
+      ]
+    },
+    {
+      "title": "TRON emerges as go-to blockchain for stablecoin transfers",
+      "link": "https://cryptopanic.com/news/19009420/TRON-emerges-as-go-to-blockchain-for-stablecoin-transfers",
+      "pubDate": "2023-11-01T15:12:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "While neither the world’s largest nor the world’s best-known blockchain, Tron (TRX) has been gaining ground when it comes to … Continued",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "‘That’s fraud,’ prosecutors say in closing arguments at Sam Bankman-Fried trial",
+      "link": "https://cryptopanic.com/news/19009379/Thats-fraud-prosecutors-say-in-closing-arguments-at-Sam-Bankman-Fried-trial",
+      "pubDate": "2023-11-01T15:08:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "Reddit's Hottest Crypto Picks: Are These the Next Big Winners? Shiba Inu (SHIB), Everlodge (ELDG), Toncoin (TON)",
+      "link": "https://cryptopanic.com/news/19009382/Reddits-Hottest-Crypto-Picks-Are-These-the-Next-Big-Winners-Shiba-Inu-SHIB-Everlodge-ELDG-Toncoin-TON",
+      "pubDate": "2023-11-01T15:04:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "TON"
+      ]
+    },
+    {
+      "title": "Bitcoin Whales Ramp Up Selling, BTC To Decline Below $32,000?",
+      "link": "https://cryptopanic.com/news/19009362/Bitcoin-Whales-Ramp-Up-Selling-BTC-To-Decline-Below-32000",
+      "pubDate": "2023-11-01T15:00:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "QNT"
+      ]
+    },
+    {
+      "title": "Litecoin Falls More Than 4% In 24 hours",
+      "link": "https://cryptopanic.com/news/19009413/Litecoin-Falls-More-Than-4-In-24-hours",
+      "pubDate": "2023-11-01T15:00:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Cardano releases milestone Mithril 2 paper; Here’s what it brings",
+      "link": "https://cryptopanic.com/news/19009360/Cardano-releases-milestone-Mithril-2-paper-Heres-what-it-brings",
+      "pubDate": "2023-11-01T14:54:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "After topping developer activity charts in October, leaving Polkadot (DOT) and Hedera (HBAR) behind, Cardano (ADA) has presented concrete results … Continued",
+      "currencies": [
+        "ADA",
+        "DOT",
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Will Ethereum (ETH) and Algorand (ALGO) Thrive or Take a Dive In the November Limelight?",
+      "link": "https://cryptopanic.com/news/19009352/Will-Ethereum-ETH-and-Algorand-ALGO-Thrive-or-Take-a-Dive-In-the-November-Limelight",
+      "pubDate": "2023-11-01T14:51:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Trader Predicts Legs Up for THORChain and One Ethereum-Based Altcoin, Updates Outlook on Polygon",
+      "link": "https://cryptopanic.com/news/19009264/Trader-Predicts-Legs-Up-for-THORChain-and-One-Ethereum-Based-Altcoin-Updates-Outlook-on-Polygon",
+      "pubDate": "2023-11-01T14:30:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MATIC",
+        "RUNE"
+      ]
+    },
+    {
+      "title": "Cardano May See 43.5% Rise in November, According to ADA Price History",
+      "link": "https://cryptopanic.com/news/19009265/Cardano-May-See-435-Rise-in-November-According-to-ADA-Price-History",
+      "pubDate": "2023-11-01T14:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "As Cardano enthusiasts bid October farewell with smile, November unfolds as thrilling chapter in popular cryptocurrency's price history, promising both potential highs and nail-biting lows",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Rockets Upwards, but What About Bitcoin Cash (BCH) and Litecoin (LTC)? A Deep Dive into Their Future",
+      "link": "https://cryptopanic.com/news/19009256/Bitcoin-Rockets-Upwards-but-What-About-Bitcoin-Cash-BCH-and-Litecoin-LTC-A-Deep-Dive-into-Their-Future",
+      "pubDate": "2023-11-01T14:20:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "The Graph (GRT) In a “Buy the Dip Mode”, According to Trader",
+      "link": "https://cryptopanic.com/news/19009208/The-Graph-GRT-In-a-Buy-the-Dip-Mode-According-to-Trader",
+      "pubDate": "2023-11-01T14:04:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GRT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Stellar (XLM) Price Reclaims $0.11: A Trend Reversal in Progress?",
+      "link": "https://cryptopanic.com/news/19009248/Stellar-XLM-Price-Reclaims-011-A-Trend-Reversal-in-Progress",
+      "pubDate": "2023-11-01T13:54:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Market Maker DWF Labs Added This Altcoin to Its Portfolio! Price Continues to Rise!",
+      "link": "https://cryptopanic.com/news/19009185/Market-Maker-DWF-Labs-Added-This-Altcoin-to-Its-Portfolio-Price-Continues-to-Rise",
+      "pubDate": "2023-11-01T13:52:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Ripple’s XRP Whales Anticipate ‘Monster Bull Move’ To $3 Price As Wallet Balances Hit All-Time High",
+      "link": "https://cryptopanic.com/news/19009144/Ripples-XRP-Whales-Anticipate-Monster-Bull-Move-To-3-Price-As-Wallet-Balances-Hit-All-Time-High",
+      "pubDate": "2023-11-01T13:36:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP has been making waves with its meteoric ascent in the month of October, and it's showing no signs of slowing down as November unfolds.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Ethereum Falls Below $1,800 Following ADP Report; Gala Becomes Top Loser",
+      "link": "https://cryptopanic.com/news/19009129/Ethereum-Falls-Below-1800-Following-ADP-Report-Gala-Becomes-Top-Loser",
+      "pubDate": "2023-11-01T13:32:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "GALA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "THORChain: Trading volume crosses ATH as RUNE rises 45%",
+      "link": "https://cryptopanic.com/news/19009089/THORChain-Trading-volume-crosses-ATH-as-RUNE-rises-45",
+      "pubDate": "2023-11-01T13:30:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RUNE"
+      ]
+    },
+    {
+      "title": "Cardano’s dormant holder activity hits 18-month high; Can it move ADA price?",
+      "link": "https://cryptopanic.com/news/19009065/Cardanos-dormant-holder-activity-hits-18-month-high-Can-it-move-ADA-price",
+      "pubDate": "2023-11-01T13:28:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "As the bullish trend in the cryptocurrency market starts to slow down, Cardano (ADA) has been leading the price decreases, … Continued",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana Bull Run Could Smash Through $40 Barrier This Week – Here’s How",
+      "link": "https://cryptopanic.com/news/19008966/Solana-Bull-Run-Could-Smash-Through-40-Barrier-This-Week-Heres-How",
+      "pubDate": "2023-11-01T13:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Solana (SOL) remains on a relentless upward trajectory, defying even recent reports of the embattled crypto exchange FTX moving millions of funds in SOL and other tokens. The cryptocurrency is now hovering close to a critical resistance point at $40, showcasing remarkable resilience and determination. As of the latest data from CoinGecko, the current SOL price stands at $37.96, reflecting a...",
+      "currencies": [
+        "ADA",
+        "SOL",
+        "RUNE"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RLB Jumps 15% After Large Purchases by Whales: On-Chain Data",
+      "link": "https://cryptopanic.com/news/19008983/RLB-Jumps-15-After-Large-Purchases-by-Whales-On-Chain-Data?mtm_campaign=API-OFA",
+      "pubDate": "2023-11-01T12:52:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RLB"
+      ]
+    },
+    {
+      "title": "Bitcoin (BTC) Price Could Hit $40,000 After Fed Rate Announcement – 4 Key Indicators",
+      "link": "https://cryptopanic.com/news/19009031/Bitcoin-BTC-Price-Could-Hit-40000-After-Fed-Rate-Announcement-4-Key-Indicators",
+      "pubDate": "2023-11-01T12:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "TON Becomes World’s Fastest Blockchain",
+      "link": "https://cryptopanic.com/news/19008943/TON-Becomes-Worlds-Fastest-Blockchain",
+      "pubDate": "2023-11-01T12:44:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "TON"
+      ]
+    },
+    {
+      "title": "FTX and Alameda Research Moves $13.1M in Crypto to Other Exchanges",
+      "link": "https://cryptopanic.com/news/19008944/FTX-and-Alameda-Research-Moves-131M-in-Crypto-to-Other-Exchanges",
+      "pubDate": "2023-11-01T12:40:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Cardano ($ADA) Ignites On-Chain Frenzy as Long-Term Holders Spring into Action, Says Santiment Research",
+      "link": "https://cryptopanic.com/news/19008946/Cardano-ADA-Ignites-On-Chain-Frenzy-as-Long-Term-Holders-Spring-into-Action-Says-Santiment-Research",
+      "pubDate": "2023-11-01T12:36:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Market intelligence firm Santiment has reported that Cardano (ADA), a notable competitor to Ethereum (ETH), has reached an important milestone in on-chain activity. According to a recent update on social media, Santiment observed that long-term ADA holders have begun to transfer a significant volume of tokens, marking the most substantial movement in over a year. […]",
+      "currencies": [
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Nym to bring mixnet privacy to NEAR blockchain ecosystem",
+      "link": "https://cryptopanic.com/news/19008916/Nym-to-bring-mixnet-privacy-to-NEAR-blockchain-ecosystem",
+      "pubDate": "2023-11-01T12:31:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Machine learning algorithm sets DOGE price for November 30, 2023",
+      "link": "https://cryptopanic.com/news/19008909/Machine-learning-algorithm-sets-DOGE-price-for-November-30-2023",
+      "pubDate": "2023-11-01T12:30:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Along with many other cryptocurrencies, Dogecoin (DOGE) has been experiencing a significant rally in the final days of October. The … Continued",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Circle to cease USDC minting for retail customers",
+      "link": "https://cryptopanic.com/news/19008853/Circle-to-cease-USDC-minting-for-retail-customers",
+      "pubDate": "2023-11-01T12:19:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC"
+      ]
+    },
+    {
+      "title": "Solana adds $6 billion to its market cap in a month as it targets $50",
+      "link": "https://cryptopanic.com/news/19008828/Solana-adds-6-billion-to-its-market-cap-in-a-month-as-it-targets-50",
+      "pubDate": "2023-11-01T12:05:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Following a great month of October, which saw Solana’s (SOL) market cap skyrocket over 62%, adding billions to its total … Continued",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ADA, SHIB, INJ, and DOGE Anticipate a Correction: Analyst Predicts",
+      "link": "https://cryptopanic.com/news/19008728/ADA-SHIB-INJ-and-DOGE-Anticipate-a-Correction-Analyst-Predicts",
+      "pubDate": "2023-11-01T11:22:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "DOGE",
+        "SHIB",
+        "INJ"
+      ]
+    },
+    {
+      "title": "Circle Announces Closure of Individual Consumer Accounts on November 30",
+      "link": "https://cryptopanic.com/news/19008659/Circle-Announces-Closure-of-Individual-Consumer-Accounts-on-November-30",
+      "pubDate": "2023-11-01T11:05:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC"
+      ]
+    },
+    {
+      "title": "SBF examined over “cozy relationship” with Bahamian government in fraud trail",
+      "link": "https://cryptopanic.com/news/19008666/SBF-examined-over-cozy-relationship-with-Bahamian-government-in-fraud-trail",
+      "pubDate": "2023-11-01T11:02:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "FTX and Alameda Research Transfers $13.6M to Binance: These Cryptos Are Concerned",
+      "link": "https://cryptopanic.com/news/19008577/FTX-and-Alameda-Research-Transfers-136M-to-Binance-These-Cryptos-Are-Concerned",
+      "pubDate": "2023-11-01T10:35:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "Onyx Protocol Victim of $2 Million Exploit: Reports",
+      "link": "https://cryptopanic.com/news/19008607/Onyx-Protocol-Victim-of-2-Million-Exploit-Reports",
+      "pubDate": "2023-11-01T10:35:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "WBTC",
+        "LINK",
+        "PAXG"
+      ]
+    },
+    {
+      "title": "Machine learning algorithm sets Bitcoin price for November 30, 2023",
+      "link": "https://cryptopanic.com/news/19008542/Machine-learning-algorithm-sets-Bitcoin-price-for-November-30-2023",
+      "pubDate": "2023-11-01T10:18:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Following its recent growth trend, Bitcoin (BTC) has surpassed the threshold of $34,000 and has overachieved its price forecast for … Continued",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance Delisting ADA, MATIC, SHIB, LUNA, LUNC & 18 Other Crypto Margin Pairs",
+      "link": "https://cryptopanic.com/news/19008456/Binance-Delisting-ADA-MATIC-SHIB-LUNA-LUNC-18-Other-Crypto-Margin-Pairs",
+      "pubDate": "2023-11-01T09:46:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "DOGE",
+        "AVAX",
+        "SHIB",
+        "MATIC",
+        "LINK",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Sam Bankman-Fried’s Defense Breaks Down: Testifies To Issues Within FTX",
+      "link": "https://cryptopanic.com/news/19008454/Sam-Bankman-Frieds-Defense-Breaks-Down-Testifies-To-Issues-Within-FTX",
+      "pubDate": "2023-11-01T09:45:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "Is $1 next for XRP after breaking $0.6 resistance?",
+      "link": "https://cryptopanic.com/news/19008434/Is-1-next-for-XRP-after-breaking-06-resistance",
+      "pubDate": "2023-11-01T09:31:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Although the majority of assets in the cryptocurrency market are starting to slow down their previous gains, XRP is still … Continued",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "FTX and Alameda Research wallets send $13.1M in crypto to exchanges overnight",
+      "link": "https://cryptopanic.com/news/19008399/FTX-and-Alameda-Research-wallets-send-131M-in-crypto-to-exchanges-overnight",
+      "pubDate": "2023-11-01T09:25:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "Neo completes APAC Hackathon tour with Hong Kong finale",
+      "link": "https://cryptopanic.com/news/19008380/Neo-completes-APAC-Hackathon-tour-with-Hong-Kong-finale",
+      "pubDate": "2023-11-01T09:15:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Frax Finance regains control over domain names after potential hijacking attempt",
+      "link": "https://cryptopanic.com/news/19008338/Frax-Finance-regains-control-over-domain-names-after-potential-hijacking-attempt",
+      "pubDate": "2023-11-01T08:59:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FRAX"
+      ]
+    },
+    {
+      "title": "Frax Finance regains control over domains after potential security breach, investigation underway",
+      "link": "https://cryptopanic.com/news/19008326/Frax-Finance-regains-control-over-domains-after-potential-security-breach-investigation-underway",
+      "pubDate": "2023-11-01T08:58:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FRAX"
+      ]
+    },
+    {
+      "title": "Why is Uniswap V4 A Game-Changer for the Finance Industry?",
+      "link": "https://cryptopanic.com/news/19008294/Why-is-Uniswap-V4-A-Game-Changer-for-the-Finance-Industry",
+      "pubDate": "2023-11-01T08:31:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "FTX Co-Founder Sam Bankman-Fried Defends Use of Client Funds as ‘Risk Management’ in Court Testimony",
+      "link": "https://cryptopanic.com/news/19008262/FTX-Co-Founder-Sam-Bankman-Fried-Defends-Use-of-Client-Funds-as-Risk-Management-in-Court-Testimony",
+      "pubDate": "2023-11-01T08:17:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "Near taps Nym for metadata privacy, encryption services",
+      "link": "https://cryptopanic.com/news/19008259/Near-taps-Nym-for-metadata-privacy-encryption-services",
+      "pubDate": "2023-11-01T08:17:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Circle Restricts Stablecoin Minting for Individual Users, Tether Releases Its Q3 Auditors’ Report",
+      "link": "https://cryptopanic.com/news/19008188/Circle-Restricts-Stablecoin-Minting-for-Individual-Users-Tether-Releases-Its-Q3-Auditors-Report",
+      "pubDate": "2023-11-01T07:34:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC"
+      ]
+    },
+    {
+      "title": "THORChain Beats Rivals In Top 100 Coin Rankings With 34% Rally – How RUNE Did It",
+      "link": "https://cryptopanic.com/news/19008173/THORChain-Beats-Rivals-In-Top-100-Coin-Rankings-With-34-Rally-How-RUNE-Did-It",
+      "pubDate": "2023-11-01T07:30:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "DOGE",
+        "RUNE"
+      ]
+    },
+    {
+      "title": "SushiSwap soars 20%, but is market manipulation involved?",
+      "link": "https://cryptopanic.com/news/19008165/SushiSwap-soars-20-but-is-market-manipulation-involved",
+      "pubDate": "2023-11-01T07:30:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SUSHI"
+      ]
+    },
+    {
+      "title": "ETH Spikes After Breaking Out From the Falling Wedge, Is There More?",
+      "link": "https://cryptopanic.com/news/19008163/ETH-Spikes-After-Breaking-Out-From-the-Falling-Wedge-Is-There-More",
+      "pubDate": "2023-11-01T07:29:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "USDC"
+      ]
+    },
+    {
+      "title": "DeFi Platform Was Hacked, The Price of This Altcoin Dropped!",
+      "link": "https://cryptopanic.com/news/19008160/DeFi-Platform-Was-Hacked-The-Price-of-This-Altcoin-Dropped",
+      "pubDate": "2023-11-01T07:28:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "FRAX",
+        "FXS"
+      ]
+    },
+    {
+      "title": "Circle to End Support for Consumer Accounts in Strategic Shift",
+      "link": "https://cryptopanic.com/news/19008045/Circle-to-End-Support-for-Consumer-Accounts-in-Strategic-Shift",
+      "pubDate": "2023-11-01T05:15:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC"
+      ]
+    },
+    {
+      "title": "Crypto Prices Today: Pepe Coin Falls, BTC & THETA Boost Market",
+      "link": "https://cryptopanic.com/news/19008003/Crypto-Prices-Today-Pepe-Coin-Falls-BTC-THETA-Boost-Market",
+      "pubDate": "2023-11-01T05:15:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "THETA"
+      ]
+    },
+    {
+      "title": "Fantom’s Q3 performance takes a hit; here’s why",
+      "link": "https://cryptopanic.com/news/19007969/Fantoms-Q3-performance-takes-a-hit-heres-why",
+      "pubDate": "2023-11-01T04:30:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FTM"
+      ]
+    },
+    {
+      "title": "Frax Finance Says its Domain Name Hijacking Has Been Resolved",
+      "link": "https://cryptopanic.com/news/19007970/Frax-Finance-Says-its-Domain-Name-Hijacking-Has-Been-Resolved",
+      "pubDate": "2023-11-01T04:23:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "FRAX"
+      ]
+    },
+    {
+      "title": "SBF Claims FTX Execs Told Him to ‘Stop Asking Questions’",
+      "link": "https://cryptopanic.com/news/19007982/SBF-Claims-FTX-Execs-Told-Him-to-Stop-Asking-Questions",
+      "pubDate": "2023-11-01T03:44:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "Solana Flying, Bulls Reverse Post-FTX Collapse Losses But SOL Analysts Cautious",
+      "link": "https://cryptopanic.com/news/19007892/Solana-Flying-Bulls-Reverse-Post-FTX-Collapse-Losses-But-SOL-Analysts-Cautious",
+      "pubDate": "2023-11-01T03:00:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "SOL",
+        "FTT"
+      ]
+    },
+    {
+      "title": "24 Crypto Update, 31 Oct: Crypto Awaits Fed's FOMC Meeting Decisions",
+      "link": "https://cryptopanic.com/news/19008047/24-Crypto-Update-31-Oct-Crypto-Awaits-Feds-FOMC-Meeting-Decisions",
+      "pubDate": "2023-11-01T01:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LTC",
+        "THETA"
+      ]
+    },
+    {
+      "title": "Invesco Galaxy spot Bitcoin ETF joins BlackRock on DTCC site",
+      "link": "https://cryptopanic.com/news/19007803/Invesco-Galaxy-spot-Bitcoin-ETF-joins-BlackRock-on-DTCC-site",
+      "pubDate": "2023-11-01T01:04:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The Invesco Galaxy Bitcoin ETF now appears on the clearing house’s site but doesn’t indicate an impending approval.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "A Chat With Dave Weisberger: Why Bitcoin Entered A “Perfect Storm”",
+      "link": "https://cryptopanic.com/news/19007790/A-Chat-With-Dave-Weisberger-Why-Bitcoin-Entered-A-Perfect-Storm",
+      "pubDate": "2023-11-01T01:00:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "XRP",
+        "DOGE",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Ethereum Has Over 10x Full-Time Developers Than Cardano: Will ADA Ever Catch Up?",
+      "link": "https://cryptopanic.com/news/19007756/Ethereum-Has-Over-10x-Full-Time-Developers-Than-Cardano-Will-ADA-Ever-Catch-Up",
+      "pubDate": "2023-11-01T00:00:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum is the most popular smart contract platform if the number of full-time developers is anything to go by. Based on the Developer Report, sourcing their data from GitHub, Ethereum had 1,889 full-time developers, more than 10X those working on Cardano (153), a competing platform, and more than triple those working on Polkadot (621), as of […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "SOL",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

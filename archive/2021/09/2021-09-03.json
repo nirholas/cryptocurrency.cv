@@ -1,0 +1,875 @@
+{
+  "date": "2021-09-03",
+  "fetchedAt": "2026-02-05T07:27:06.890Z",
+  "articleCount": 59,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Altcoin Roundup: Time to rotate! Data suggests traders are shifting from NFTs to DeFi",
+      "link": "https://cryptopanic.com/news/near/12691729/Altcoin-Roundup-Time-to-rotate-Data-suggests-traders-are-shifting-from-NFTs-to-DeFi",
+      "pubDate": "2021-09-03T22:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Timing the market is near impossible, but these five metrics can help traders identify when a sector rotation is underway.",
+      "currencies": [
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @ITRenewInc: We're proud to be making digital currency greener with @Chia_Project. Sesame by ITRenew offers the first 100% recertified s…",
+      "link": "https://cryptopanic.com/news/12693262/RT-ITRenewInc-Were-proud-to-be-making-digital-currency-greener-with-Chia_Project-Sesame-by-ITRenew-offers-the-first-100-recertified-s",
+      "pubDate": "2021-09-03T21:49:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XCH"
+      ]
+    },
+    {
+      "title": "RT @CainBCHA: Whatever you think of eCash, it's not a pump and dump. There are no guarantees in life. Sometimes you fail no matter how hard…",
+      "link": "https://cryptopanic.com/news/ecash/12697154/RT-CainBCHA-Whatever-you-think-of-eCash-its-not-a-pump-and-dump-There-are-no-guarantees-in-life-Sometimes-you-fail-no-matter-how-hard",
+      "pubDate": "2021-09-03T21:26:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "RT @deadalnix: Thanks for the shout out David. We created BCH, so we have an idea of two how the game is played. You got to keep the BCH…",
+      "link": "https://cryptopanic.com/news/ecash/12697155/RT-deadalnix-Thanks-for-the-shout-out-David-We-created-BCH-so-we-have-an-idea-of-two-how-the-game-is-played-You-got-to-keep-the-BCH",
+      "pubDate": "2021-09-03T21:24:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "[#ICYMI] The @CHAISE_EU Consortium is designed to boost the @EU_Commission's strategy for #blockchain #DLT skills!…",
+      "link": "https://cryptopanic.com/news/12694497/ICYMI-The-CHAISE_EU-Consortium-is-designed-to-boost-the-EU_Commissions-strategy-for-blockchain-DLT-skills",
+      "pubDate": "2021-09-03T21:00:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "These are the reasons behind Solana, Polkadot achieving ‘escape velocity’",
+      "link": "https://cryptopanic.com/news/polkadot/12691552/These-are-the-reasons-behind-Solana-Polkadot-achieving-escape-velocity",
+      "pubDate": "2021-09-03T20:30:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "There is no doubt that Ethereum was the premier in bringing smart contracts and DeFi to the cryptocurrency ecosystem, firmly establishing its rank as the most used blockchain in the world. Of late, however, several next-generation networks have emerged that sustain themselves on solving many of the problems faced by the older blockchain. While in […]",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @eCash1337: Just reached 7,000 members!!",
+      "link": "https://cryptopanic.com/news/ecash/12697156/RT-eCash1337-Just-reached-7000-members",
+      "pubDate": "2021-09-03T20:28:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "$XEC #1 Again! #eCash #XEC",
+      "link": "https://cryptopanic.com/news/ecash/12697157/XEC-1-Again-eCash-XEC",
+      "pubDate": "2021-09-03T20:20:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "RT @mouthy: Fantastic work by @chia_mine! The @chia_project developer ecosystem is growing and thriving!",
+      "link": "https://cryptopanic.com/news/12693263/RT-mouthy-Fantastic-work-by-chia_mine-The-chia_project-developer-ecosystem-is-growing-and-thriving",
+      "pubDate": "2021-09-03T20:11:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XCH"
+      ]
+    },
+    {
+      "title": "Price analysis 9/3: BTC, ETH, ADA, BNB, XRP, SOL, DOGE, DOT, UNI, LINK",
+      "link": "https://cryptopanic.com/news/dogecoin/12691520/Price-analysis-93-BTC-ETH-ADA-BNB-XRP-SOL-DOGE-DOT-UNI-LINK",
+      "pubDate": "2021-09-03T20:06:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "This week’s sharp rally in Bitcoin and Ether signals that bulls are back in control and altcoins are likely to follow.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @eCashOfficial: #eCash - Wealth Redefined \"To redefine. It's not about disrupting what is. It's about discovering what could be.\" ht…",
+      "link": "https://cryptopanic.com/news/ecash/12697158/RT-eCashOfficial-eCash-Wealth-Redefined-To-redefine-Its-not-about-disrupting-what-is-Its-about-discovering-what-could-be-ht",
+      "pubDate": "2021-09-03T19:16:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "RT @PerryLyfe: Build. We can’t wait to showcase the full buildout! #BuildRaiPay #RaiMail #Saipan #eCash @eCashOfficial",
+      "link": "https://cryptopanic.com/news/ecash/12697159/RT-PerryLyfe-Build-We-cant-wait-to-showcase-the-full-buildout-BuildRaiPay-RaiMail-Saipan-eCash-eCashOfficial",
+      "pubDate": "2021-09-03T19:10:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Keep your #eCash safe! Important information in this article from @CainBCHA #XEC $XEC",
+      "link": "https://cryptopanic.com/news/ecash/12697160/Keep-your-eCash-safe-Important-information-in-this-article-from-CainBCHA-XEC-XEC",
+      "pubDate": "2021-09-03T19:09:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "As Ethereum Approaches $4k, On-chain Data Shows Rally Will Continue Even Higher",
+      "link": "https://cryptopanic.com/news/near/12691392/As-Ethereum-Approaches-4k-On-chain-Data-Shows-Rally-Will-Continue-Even-Higher",
+      "pubDate": "2021-09-03T19:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Even with Ethereum’s strong run where the coin has reached near $4k, on-chain data shows there is still more room for the bull rally to continue. Ethereum All Exchanges Taker Buy Sell Ratio Shoots Up As pointed out by a CryptoQuant post, the ETH all exchanges taker buy sell volume has shown a huge spike today. The Ethereum all exchanges taker buy sell ratio (or volume) is an indicator that...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @alanchiu: @quantumVerd @zukoboba @vc @bobanetwork @TensorFlow From smart contracts to @awscloud Lambda to quantum computer - only on @b…",
+      "link": "https://cryptopanic.com/news/12691275/RT-alanchiu-quantumVerd-zukoboba-vc-bobanetwork-TensorFlow-From-smart-contracts-to-awscloud-Lambda-to-quantum-computer-only-on-b",
+      "pubDate": "2021-09-03T18:37:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "OMG"
+      ]
+    },
+    {
+      "title": "RT @BobaCommunity: We have many new followers, Welcome all of you! If you are more interested of what is happening in @bobanetwork and wan…",
+      "link": "https://cryptopanic.com/news/12691274/RT-BobaCommunity-We-have-many-new-followers-Welcome-all-of-you-If-you-are-more-interested-of-what-is-happening-in-bobanetwork-and-wan",
+      "pubDate": "2021-09-03T18:37:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "OMG"
+      ]
+    },
+    {
+      "title": "RT @DecredSociety: Is proof of work the best solution for the future security of a blockchain project? #Decred http…",
+      "link": "https://cryptopanic.com/news/12691219/RT-DecredSociety-Is-proof-of-work-the-best-solution-for-the-future-security-of-a-blockchain-project-Decred-http",
+      "pubDate": "2021-09-03T18:16:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DCR"
+      ]
+    },
+    {
+      "title": "#SafeCoin has a MAXIMUM Lifetime Supply of 36,000,000. The current Circulating Supply is 31,365,194, and 40% of tha…",
+      "link": "https://cryptopanic.com/news/12696006/SafeCoin-has-a-MAXIMUM-Lifetime-Supply-of-36000000-The-current-Circulating-Supply-is-31365194-and-40-of-tha",
+      "pubDate": "2021-09-03T17:15:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SAFE"
+      ]
+    },
+    {
+      "title": "1/  Band Protocol is excited to partner up with @NEARProtocol to support the #MetaBUIDL hackathon which has over $…",
+      "link": "https://cryptopanic.com/news/12692771/1-Band-Protocol-is-excited-to-partner-up-with-NEARProtocol-to-support-the-MetaBUIDL-hackathon-which-has-over",
+      "pubDate": "2021-09-03T16:12:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "RT @FlareFinance: #FlareFinance is pleased to announce our support for $LGCY across all modules. A portion of $LGCY will be dedicated to th…",
+      "link": "https://cryptopanic.com/news/12694785/RT-FlareFinance-FlareFinance-is-pleased-to-announce-our-support-for-LGCY-across-all-modules-A-portion-of-LGCY-will-be-dedicated-to-th?mtm_campaign=API-OFA",
+      "pubDate": "2021-09-03T15:31:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDL",
+        "LGCY"
+      ]
+    },
+    {
+      "title": "SEC Announces Probe Into UniSwap",
+      "link": "https://cryptopanic.com/news/uniswap/12690784/SEC-Announces-Probe-Into-UniSwap",
+      "pubDate": "2021-09-03T15:21:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The US Securities and Exchange Commission is launching a probe into Uniswap Labs, developer of the world’s largest decentralized exchange.",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Reef Finance  is thrilled to welcome @horizonprotocol to the Reef builder community! Horizon Protocol is a DeFi pl…",
+      "link": "https://cryptopanic.com/news/12695852/Reef-Finance-is-thrilled-to-welcome-horizonprotocol-to-the-Reef-builder-community-Horizon-Protocol-is-a-DeFi-pl",
+      "pubDate": "2021-09-03T14:57:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ]
+    },
+    {
+      "title": "Uniswap Token Falls on SEC Investigation Report",
+      "link": "https://cryptopanic.com/news/uniswap/12690605/Uniswap-Token-Falls-on-SEC-Investigation-Report",
+      "pubDate": "2021-09-03T14:54:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "-",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @JorgeChevalier: @gepvchess7 @Techconcatalina @BolivarCoin_XT Pana en Venezuela circulan BTC, ETH, DASH y ahora los SLP de Axie Infinity…",
+      "link": "https://cryptopanic.com/news/dash/12690558/RT-JorgeChevalier-gepvchess7-Techconcatalina-BolivarCoin_XT-Pana-en-Venezuela-circulan-BTC-ETH-DASH-y-ahora-los-SLP-de-Axie-Infinity",
+      "pubDate": "2021-09-03T14:44:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "DASH",
+        "BOLI"
+      ]
+    },
+    {
+      "title": "Internet Computer’s First NFT Drop Marred By Issues",
+      "link": "https://cryptopanic.com/news/12690489/Internet-Computers-First-NFT-Drop-Marred-By-Issues",
+      "pubDate": "2021-09-03T14:25:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "The first NFT drop on Internet Computer faced significant issues, causing frustration among participants. Technical glitches and operational challenges hindered the launch, impacting user experience and raising concerns about the platform's readiness for such events.",
+      "currencies": [
+        "ICP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 29
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @Ultraio_Support: We are planning to release an update to our platform on Monday, September 6th, at 7 AM UTC. During the deployment of t…",
+      "link": "https://cryptopanic.com/news/12696725/RT-Ultraio_Support-We-are-planning-to-release-an-update-to-our-platform-on-Monday-September-6th-at-7-AM-UTC-During-the-deployment-of-t",
+      "pubDate": "2021-09-03T14:18:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "UOS"
+      ]
+    },
+    {
+      "title": "SEC Investigating Uniswap",
+      "link": "https://cryptopanic.com/news/uniswap/12690268/SEC-Investigating-Uniswap",
+      "pubDate": "2021-09-03T13:29:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The US Securities and Exchanges Commission (SEC) is investigating the no order-book decentralized exchange Uniswap according to unnamed sources familiar with the matter. SEC is examining Uniswap Labs, the entity...",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 23
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "We have released the Mobile #Data Marketplace 2.0 for Android Now we have the most competitive worldwide #eSIM da…",
+      "link": "https://cryptopanic.com/news/12690163/We-have-released-the-Mobile-Data-Marketplace-20-for-Android-Now-we-have-the-most-competitive-worldwide-eSIM-da",
+      "pubDate": "2021-09-03T13:07:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: How long until @elonmusk discovers was what he was looking for all along?",
+      "link": "https://cryptopanic.com/news/12694305/RT-RichardHeartWin-How-long-until-elonmusk-discovers-was-what-he-was-looking-for-all-along",
+      "pubDate": "2021-09-03T12:48:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ESPN Tennis Analyst Brad Gilbert Gets GBTC, His Little Daughter Buys Dogecoin",
+      "link": "https://cryptopanic.com/news/dogecoin/12690072/ESPN-Tennis-Analyst-Brad-Gilbert-Gets-GBTC-His-Little-Daughter-Buys-Dogecoin",
+      "pubDate": "2021-09-03T12:39:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "ESPN's Brad Gilbert forays into crypto via Grayscale's GBTC, while his daughter buys DOGE",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Report: SEC Investigating DeFi Exchange Developer Uniswap Labs",
+      "link": "https://cryptopanic.com/news/uniswap/12690022/Report-SEC-Investigating-DeFi-Exchange-Developer-Uniswap-Labs",
+      "pubDate": "2021-09-03T12:25:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Under scrutiny is how the exchange is marketed, according to an unnamed source cited in the Wall Street Journal.",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Solana extends rally with another new high — Why is SOL price up by 70% in one week?",
+      "link": "https://cryptopanic.com/news/12689974/Solana-extends-rally-with-another-new-high-Why-is-SOL-price-up-by-70-in-one-week",
+      "pubDate": "2021-09-03T12:06:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The SOL price rally also appeared in the wake of “Ignition,” a global hackathon to build new platforms on the Solana blockchain.",
+      "currencies": [
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Markets Full Of Vim and Vigor; Bitcoin, Ethereum, Cardano & Solana Lead the Pack",
+      "link": "https://cryptopanic.com/news/12689980/Crypto-Markets-Full-Of-Vim-and-Vigor-Bitcoin-Ethereum-Cardano-Solana-Lead-the-Pack",
+      "pubDate": "2021-09-03T12:00:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin, Ethereum, Cardano and Solana Fly High As Crypto Markets Show New Vigor The crypto market is making a bullish reversal this week. The red lights are being replaced with green as Bitcoin and altcoins recover. At the time of this writing, many altcoins are up over 5%. Bitcoin, although still recording gains, is moving […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "SOL",
+        "QNT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "HUNT token is listed on the new Korean-based landing protocol called Donkey today!  #DeFi #HUNT",
+      "link": "https://cryptopanic.com/news/12694316/HUNT-token-is-listed-on-the-new-Korean-based-landing-protocol-called-Donkey-today-DeFi-HUNT",
+      "pubDate": "2021-09-03T11:57:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "HUNT"
+      ]
+    },
+    {
+      "title": "SEC reportedly investigates decentralized exchange Uniswap",
+      "link": "https://cryptopanic.com/news/uniswap/12689912/SEC-reportedly-investigates-decentralized-exchange-Uniswap",
+      "pubDate": "2021-09-03T11:40:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Enforcement attorneys are reportedly looking for information about Uniswap’s marketing and investor services.",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 11
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "The SEC Opens an Investigation Against Uniswap’s Developer: WSJ Report",
+      "link": "https://cryptopanic.com/news/uniswap/12689885/The-SEC-Opens-an-Investigation-Against-Uniswaps-Developer-WSJ-Report",
+      "pubDate": "2021-09-03T11:35:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The largest decentralized exchange Uniswap has reportedly come under the regulatory scope of the SEC.",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 10
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "SEC is investigating decentralized crypto exchange developer Uniswap Labs: Report",
+      "link": "https://cryptopanic.com/news/uniswap/12689853/SEC-is-investigating-decentralized-crypto-exchange-developer-Uniswap-Labs-Report",
+      "pubDate": "2021-09-03T11:30:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The U.S. SEC is reportedly investigating Uniswap Labs, the startup behind the largest decentralized cryptocurrency exchange.",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 21
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "DeFi Giant Uniswap Under SEC Investigation, The Wall Street Journal Reports",
+      "link": "https://cryptopanic.com/news/uniswap/12689854/DeFi-Giant-Uniswap-Under-SEC-Investigation-The-Wall-Street-Journal-Reports",
+      "pubDate": "2021-09-03T11:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Uniswap has reportedly become the latest target of the SEC",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 17
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @WaltWhiteCrypto: @tokenhodl is a gem HODL dash board New DOXXED CEO 3 exchanges listed BIGGEST BUY COMPETITION LIVE NOW head ov…",
+      "link": "https://cryptopanic.com/news/dash/12694369/RT-WaltWhiteCrypto-tokenhodl-is-a-gem-HODL-dash-board-New-DOXXED-CEO-3-exchanges-listed-BIGGEST-BUY-COMPETITION-LIVE-NOW-head-ov",
+      "pubDate": "2021-09-03T10:39:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "DASH",
+        "HODL"
+      ]
+    },
+    {
+      "title": "I am very happy and hope that we can have more cooperation in the future.",
+      "link": "https://cryptopanic.com/news/12694168/I-am-very-happy-and-hope-that-we-can-have-more-cooperation-in-the-future",
+      "pubDate": "2021-09-03T09:17:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DAO"
+      ]
+    },
+    {
+      "title": "\"Bitcoin Influencer\" Peter Schiff Opines on Why Bitcoin Is Losing Market Dominance",
+      "link": "https://cryptopanic.com/news/bitcoin/12689518/Bitcoin-Influencer-Peter-Schiff-Opines-on-Why-Bitcoin-Is-Losing-Market-Dominance",
+      "pubDate": "2021-09-03T09:17:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Gold bug Peter Schiff has suggested his opinion on why BTC is losing its market share and names \"the most significant difference\" between cryptocurrencies",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "The next few days will become very us look forward to the birth of the final work",
+      "link": "https://cryptopanic.com/news/12694169/The-next-few-days-will-become-very-us-look-forward-to-the-birth-of-the-final-work",
+      "pubDate": "2021-09-03T09:15:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DAO"
+      ]
+    },
+    {
+      "title": "RT @giulio_solito: 100x GEM HODL2.0 🤩NFTS 🤩HODL dash board 🤩New DOXXED CEO 🤩BNB REWARD TOKEN 🤩Gamification 🤩3 exchanges listed 🤩PUMPIN…",
+      "link": "https://cryptopanic.com/news/dash/12694371/RT-giulio_solito-100x-GEM-HODL20-NFTS-HODL-dash-board-New-DOXXED-CEO-BNB-REWARD-TOKEN-Gamification-3-exchanges-listed-PUMPIN",
+      "pubDate": "2021-09-03T09:14:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "DASH",
+        "HODL"
+      ]
+    },
+    {
+      "title": "RT @nomorebear: 1/ Have been thinking + tinker on how @BandProtocol can go multichain and keep up with the space with fast pace development…",
+      "link": "https://cryptopanic.com/news/12692772/RT-nomorebear-1-Have-been-thinking-tinker-on-how-BandProtocol-can-go-multichain-and-keep-up-with-the-space-with-fast-pace-development",
+      "pubDate": "2021-09-03T09:13:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "Shop.com now accepts Bitcoin payments after partnership with BitPay",
+      "link": "https://cryptopanic.com/news/dogecoin/12689452/Shopcom-now-accepts-Bitcoin-payments-after-partnership-with-BitPay",
+      "pubDate": "2021-09-03T08:52:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The e-commerce portal offers the option to pay with Bitcoin, Ether, Dogecoin as well as several major dollar-pegged stablecoins.",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 23,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Over $1 billion flocks into IOTA as price surges 25% in 24h",
+      "link": "https://cryptopanic.com/news/12689420/Over-1-billion-flocks-into-IOTA-as-price-surges-25-in-24h",
+      "pubDate": "2021-09-03T08:39:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "IOTA (MIOTA), a distributed ledger protocol that performs consensus and transaction confirmation using a patented technology called Tangle, has seen... Continue reading",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "🧐 #ChainBing Monthly Report 2020.08.01–08.31",
+      "link": "https://cryptopanic.com/news/12693240/ChainBing-Monthly-Report-202008010831",
+      "pubDate": "2021-09-03T08:34:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CBG"
+      ]
+    },
+    {
+      "title": "RT @AdaKaren18: @BinanceChain NFTS coming HODL dash board New management New structure Gamifications coming Exchanges set Pool building Inv…",
+      "link": "https://cryptopanic.com/news/dash/12694373/RT-AdaKaren18-BinanceChain-NFTS-coming-HODL-dash-board-New-management-New-structure-Gamifications-coming-Exchanges-set-Pool-building-Inv",
+      "pubDate": "2021-09-03T07:06:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "DASH",
+        "HODL"
+      ]
+    },
+    {
+      "title": "This Mid-Cap Altcoin Is Surging After Announcing Massive $318,000,000 Incentive Program",
+      "link": "https://cryptopanic.com/news/12685843/This-Mid-Cap-Altcoin-Is-Surging-After-Announcing-Massive-318000000-Incentive-Program",
+      "pubDate": "2021-09-03T07:04:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "A $318,000,000 incentive program is fueling the fast rise of the crypto asset Fantom (FTM). The team behind the smart contract platform and 70th-ranked altcoin says it’s committing the funds to support developers who want to build on the platform. “…We have decided to introduce a different kind of program to better align incentives between […]",
+      "currencies": [
+        "FTM"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana Spikes 20% to New ATH: Surpassing Dogecoin as Top 7 Crypto",
+      "link": "https://cryptopanic.com/news/dogecoin/12685519/Solana-Spikes-20-to-New-ATH-Surpassing-Dogecoin-as-Top-7-Crypto",
+      "pubDate": "2021-09-03T06:59:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana's price continues to conquer uncharted territory with yet another all-time high set at above $140.",
+      "currencies": [
+        "DOGE",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 30,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Trader Joe Raises $5M for DeFi on Avalanche",
+      "link": "https://cryptopanic.com/news/avalanche-2/12684288/Trader-Joe-Raises-5M-for-DeFi-on-Avalanche",
+      "pubDate": "2021-09-03T06:01:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Avalanche-based decentralized finance (DeFi) platform Trader Joe has become the latest to secure a round of funding from venture capital giants.",
+      "currencies": [
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance is adding a new trading pair for $XEC. XEC/USDT trading opens in ~5 hours!",
+      "link": "https://cryptopanic.com/news/ecash/12688000/Binance-is-adding-a-new-trading-pair-for-XEC-XECUSDT-trading-opens-in-5-hours",
+      "pubDate": "2021-09-03T05:00:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Nice looking chart! #eCash #XEC $XEC",
+      "link": "https://cryptopanic.com/news/ecash/12688001/Nice-looking-chart-eCash-XEC-XEC",
+      "pubDate": "2021-09-03T04:38:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "$XEC top gainer again! Another good day for #eCash #XEC",
+      "link": "https://cryptopanic.com/news/ecash/12688002/XEC-top-gainer-again-Another-good-day-for-eCash-XEC",
+      "pubDate": "2021-09-03T04:34:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "New research claims 21 accounts pumped the $4.4B EOS ICO with wash trades",
+      "link": "https://cryptopanic.com/news/12682693/New-research-claims-21-accounts-pumped-the-44B-EOS-ICO-with-wash-trades",
+      "pubDate": "2021-09-03T03:58:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "New research asserts that EOS and ETH were wash-traded on exchanges to manipulate prices during EOS’s multi-billion dollar ICO.",
+      "currencies": [
+        "ETH",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "HiWelcome to the Official Twitter for Fruits (#FRTS) ! Visit/follow our social media accounts and help support Fru…",
+      "link": "https://cryptopanic.com/news/12684654/HiWelcome-to-the-Official-Twitter-for-Fruits-FRTS-Visitfollow-our-social-media-accounts-and-help-support-Fru",
+      "pubDate": "2021-09-03T03:47:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FRTS"
+      ]
+    },
+    {
+      "title": "How Axie Infinity Has Become The Second Largest Fee Revenue Generator",
+      "link": "https://cryptopanic.com/news/12682626/How-Axie-Infinity-Has-Become-The-Second-Largest-Fee-Revenue-Generator",
+      "pubDate": "2021-09-03T03:09:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Axie Infinity has been on an absolute tear lately. The play-to-earn platform has become the face of a new integration of crypto and gaming that holds unbelievable potential. Axie Infinity has surpassed 1M daily active users, and is generating more revenue than any protocol or platform with the lone exception of Ethereum. Yes, Axie Infinity is yielding more fee revenue than major platforms such...",
+      "currencies": [
+        "ETH",
+        "AXS"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana Flips Dogecoin to Become Seventh-Largest Cryptocurrency",
+      "link": "https://cryptopanic.com/news/dogecoin/12682624/Solana-Flips-Dogecoin-to-Become-Seventh-Largest-Cryptocurrency",
+      "pubDate": "2021-09-03T03:06:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Amidst growing NFT and DeFi use, Solana continues its propulsive rise and dethrones the leading meme coin.",
+      "currencies": [
+        "SOL",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 26,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Curious about how the economy on @safenetworktech will run? Read about it in this week’s Dev update here:…",
+      "link": "https://cryptopanic.com/news/12682100/Curious-about-how-the-economy-on-safenetworktech-will-run-Read-about-it-in-this-weeks-Dev-update-here",
+      "pubDate": "2021-09-03T00:10:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    }
+  ]
+}

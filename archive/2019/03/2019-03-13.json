@@ -1,0 +1,71 @@
+{
+  "date": "2019-03-13",
+  "fetchedAt": "2026-02-05T07:27:06.971Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Stellar Lumens Is About to Begin Trading on Coinbase Pro",
+      "link": "https://cryptopanic.com/news/4826015/Stellar-Lumens-Is-About-to-Begin-Trading-on-Coinbase-Pro",
+      "pubDate": "2019-03-13T21:30:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 24,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Coinbase to list Stellar Lumens (XLM)",
+      "link": "https://cryptopanic.com/news/4825662/Coinbase-to-list-Stellar-Lumens-XLM",
+      "pubDate": "2019-03-13T20:39:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 28,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Alibaba Gains Victory In Lawsuit Against ABBC",
+      "link": "https://cryptopanic.com/news/4824752/Alibaba-Gains-Victory-In-Lawsuit-Against-ABBC",
+      "pubDate": "2019-03-13T19:00:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ABBC"
+      ]
+    },
+    {
+      "title": "IOTA Introduces Geo-Tag Transactions",
+      "link": "https://cryptopanic.com/news/4823815/IOTA-Introduces-Geo-Tag-Transactions",
+      "pubDate": "2019-03-13T17:03:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

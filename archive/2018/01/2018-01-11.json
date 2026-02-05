@@ -1,0 +1,40 @@
+{
+  "date": "2018-01-11",
+  "fetchedAt": "2026-02-05T07:27:06.798Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Cardano Surpasses SpaceX’s Market Cap to the Confusion of Cryptocurrency Veterans",
+      "link": "https://cryptopanic.com/news/cardano/782220/Cardano-Surpasses-SpaceXs-Market-Cap-to-the-Confusion-of-Cryptocurrency-Veterans",
+      "pubDate": "2018-01-11T21:35:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 5
+      }
+    },
+    {
+      "title": "North Korean hackers mining Monero to overcome UN sanctions",
+      "link": "https://cryptopanic.com/news/779197/North-Korean-hackers-mining-Monero-to-overcome-UN-sanctions",
+      "pubDate": "2018-01-11T16:00:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2018-06-04",
+  "fetchedAt": "2026-02-05T07:27:06.908Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "EOS Snapshot Reveals 10 Accounts Hold Almost 50 percent of Tokens: Voting Rights Massively Inequal",
+      "link": "https://cryptopanic.com/news/2119298/EOS-Snapshot-Reveals-10-Accounts-Hold-Almost-50-percent-of-Tokens-Voting-Rights-Massively-Inequal",
+      "pubDate": "2018-06-04T16:15:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

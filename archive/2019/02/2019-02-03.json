@@ -1,0 +1,45 @@
+{
+  "date": "2019-02-03",
+  "fetchedAt": "2026-02-05T07:27:08.685Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "DOGE, XRP, XLM, TRX: What’s in Store for Price in the Coming Weeks?",
+      "link": "https://cryptopanic.com/news/tron/4458868/DOGE-XRP-XLM-TRX-Whats-in-Store-for-Price-in-the-Coming-Weeks",
+      "pubDate": "2019-02-03T13:19:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "DOGE",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Satoshi Vision BSV - The Real Bitcoin?",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/4456686/Bitcoin-Satoshi-Vision-BSV-The-Real-Bitcoin",
+      "pubDate": "2019-02-03T01:50:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 21
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

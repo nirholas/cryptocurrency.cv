@@ -1,0 +1,25 @@
+{
+  "date": "2018-07-09",
+  "fetchedAt": "2026-02-05T07:27:06.907Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Block.One Is Taking a Bigger Role With EOS (And That's a Big Deal)",
+      "link": "https://cryptopanic.com/news/2483866/BlockOne-Is-Taking-a-Bigger-Role-With-EOS-And-Thats-a-Big-Deal",
+      "pubDate": "2018-07-09T13:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

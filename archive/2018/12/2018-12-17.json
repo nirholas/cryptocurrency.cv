@@ -1,0 +1,66 @@
+{
+  "date": "2018-12-17",
+  "fetchedAt": "2026-02-05T07:27:06.988Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "EOS Breaks Out of Trading Range With Bullish 12.5% Rise to Start the Week",
+      "link": "https://cryptopanic.com/news/4001823/EOS-Breaks-Out-of-Trading-Range-With-Bullish-125-Rise-to-Start-the-Week",
+      "pubDate": "2018-12-17T15:19:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "IOTA Details Its Four-month Collaboration Project With Audi",
+      "link": "https://cryptopanic.com/news/4000922/IOTA-Details-Its-Four-month-Collaboration-Project-With-Audi",
+      "pubDate": "2018-12-17T13:44:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 27,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Did You know? AVINOC really saves 1 Million tons CO2 emissions every year only by solving the global empty leg prob…",
+      "link": "https://cryptopanic.com/news/3998833/Did-You-know-AVINOC-really-saves-1-Million-tons-CO2-emissions-every-year-only-by-solving-the-global-empty-leg-prob",
+      "pubDate": "2018-12-17T09:13:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "AVINOC"
+      ]
+    },
+    {
+      "title": "RT @CryptoCoinsNews: New US Chief of Staff: Bitcoin is Good, ‘Not Manipulable by Any Government’",
+      "link": "https://cryptopanic.com/news/13334858/RT-CryptoCoinsNews-New-US-Chief-of-Staff-Bitcoin-is-Good-Not-Manipulable-by-Any-Government",
+      "pubDate": "2018-12-17T08:38:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "AVINOC"
+      ]
+    }
+  ]
+}

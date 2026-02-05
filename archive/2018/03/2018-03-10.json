@@ -1,0 +1,27 @@
+{
+  "date": "2018-03-10",
+  "fetchedAt": "2026-02-05T07:27:06.995Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Winklevoss Twins’ Crypto Trading Platform Gemini to Add Bitcoin Cash and Litecoin",
+      "link": "https://cryptopanic.com/news/litecoin/1335992/Winklevoss-Twins-Crypto-Trading-Platform-Gemini-to-Add-Bitcoin-Cash-and-Litecoin",
+      "pubDate": "2018-03-10T23:30:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

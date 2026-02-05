@@ -1,0 +1,717 @@
+{
+  "date": "2021-05-28",
+  "fetchedAt": "2026-02-05T07:27:06.753Z",
+  "articleCount": 48,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ethereum flipping Bitcoin – Here’s the full picture",
+      "link": "https://cryptopanic.com/news/polkadot/12017908/Ethereum-flipping-Bitcoin-Heres-the-full-picture",
+      "pubDate": "2021-05-28T22:30:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Ethereum has considerably reduced the gap to Bitcoin. While comparing their market caps would not bequeath such sentiment (BTC’s $680 billion to ETH’s $292 billion), in terms of exposure, fundamental developments, and overall market intrinsic value, Ethereum is right in the mix and no longer under its shade. Its rapid growth keeps bringing up the […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "XRP price outlook: Why it struggles to break past $1",
+      "link": "https://cryptopanic.com/news/ripple/12017898/XRP-price-outlook-Why-it-struggles-to-break-past-1",
+      "pubDate": "2021-05-28T22:20:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP is currently facing a primary battle to break past the $1 level despite making a remarkable recovery from the... Continue reading",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "XRP Ledger powered exchange platform GateHub adds support for Litecoin (LTC)",
+      "link": "https://cryptopanic.com/news/litecoin/12017960/XRP-Ledger-powered-exchange-platform-GateHub-adds-support-for-Litecoin-LTC",
+      "pubDate": "2021-05-28T21:23:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "GateHub, a platform for blockchain assets that operates on top of the distributed Ripple payment protocol, announced it has added support for Litecoin and will list LTC starting on June 2nd, 2021. The platform will fully support LTC for deposits, withdrawals, and trading on its XRPL-powered exchange. Moreover, LTC is available for trading with support […]",
+      "currencies": [
+        "XRP",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Why The VeChain Foundation Met With China’s Government Officials",
+      "link": "https://cryptopanic.com/news/12017761/Why-The-VeChain-Foundation-Met-With-Chinas-Government-Officials",
+      "pubDate": "2021-05-28T19:53:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Via its official Twitter handle, the VeChain Foundation confirmed a meeting with government officials from three important Chinese districts. Representatives from Shanghai, Changing, and Huangpu visited the organization’s office in Singapore. Per the report by the VeChain Foundation, the representatives from the enterprise blockchain platform and the governments talked about “potential...",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Gone too far? Here’s what Elon Musk’s new ‘strategy’ means for Dogecoin",
+      "link": "https://cryptopanic.com/news/dogecoin/12017741/Gone-too-far-Heres-what-Elon-Musks-new-strategy-means-for-Dogecoin",
+      "pubDate": "2021-05-28T19:30:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin is a meme-coin, a cryptocurrency not to be taken seriously owing to the fact that it came about as a joke. That is the sacrosanct truth. At least, that’s what many in the crypto-community would have you believe. However, one man, one very influential and powerful man, might just be seeking to turn that […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "\"Stop the War on Crypto\": XRP Army Stages Protest Outside SEC Headquarters",
+      "link": "https://cryptopanic.com/news/ripple/12017690/Stop-the-War-on-Crypto-XRP-Army-Stages-Protest-Outside-SEC-Headquarters",
+      "pubDate": "2021-05-28T18:46:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Several XRP holders held a protest outside the SEC headquarters earlier today",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 10
+      }
+    },
+    {
+      "title": "Yes Bitcoin and ETH would benefit tremendously if, they connect to the $90 billion diamond industry, through the Di…",
+      "link": "https://cryptopanic.com/news/12019601/Yes-Bitcoin-and-ETH-would-benefit-tremendously-if-they-connect-to-the-90-billion-diamond-industry-through-the-Di",
+      "pubDate": "2021-05-28T17:58:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Polygon Datasets Now Available on Google Cloud",
+      "link": "https://cryptopanic.com/news/matic-network/12017588/Polygon-Datasets-Now-Available-on-Google-Cloud",
+      "pubDate": "2021-05-28T17:36:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "-",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Significant Progress in Testing of ‘Fully Decentralized’ IOTA Announced",
+      "link": "https://cryptopanic.com/news/12017554/Significant-Progress-in-Testing-of-Fully-Decentralized-IOTA-Announced",
+      "pubDate": "2021-05-28T16:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Now, IOTA will focus on the next stage of their project labeled Nectar, which could be launched in a matter of weeks",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The ETN-Network has got several major integrations set to release soon! Find out more in the latest company update…",
+      "link": "https://cryptopanic.com/news/12019284/The-ETN-Network-has-got-several-major-integrations-set-to-release-soon-Find-out-more-in-the-latest-company-update",
+      "pubDate": "2021-05-28T16:01:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "Happy Friday everyone! Here are this week's stats What is your favourite stat? Which one surprised you the most? Le…",
+      "link": "https://cryptopanic.com/news/12019285/Happy-Friday-everyone-Here-are-this-weeks-stats-What-is-your-favourite-stat-Which-one-surprised-you-the-most-Le",
+      "pubDate": "2021-05-28T15:30:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "dUSD stablecoin protocol is live on Ethereum at ! 1:1 swaps of $USDP by @unitprotocol,…",
+      "link": "https://cryptopanic.com/news/paxos-standard/12019203/dUSD-stablecoin-protocol-is-live-on-Ethereum-at-11-swaps-of-USDP-by-unitprotocol",
+      "pubDate": "2021-05-28T15:25:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDP",
+        "DOGEN"
+      ]
+    },
+    {
+      "title": "There was a delay in the launch of our new non sports blogging domain due to circumstances beyond our control. The…",
+      "link": "https://cryptopanic.com/news/12021176/There-was-a-delay-in-the-launch-of-our-new-non-sports-blogging-domain-due-to-circumstances-beyond-our-control-The?mtm_campaign=API-OFA",
+      "pubDate": "2021-05-28T15:15:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SCR"
+      ]
+    },
+    {
+      "title": "Ripple Hiring in Push To Bring XRP Ledger to Central Banks and DeFi",
+      "link": "https://cryptopanic.com/news/ripple/12017405/Ripple-Hiring-in-Push-To-Bring-XRP-Ledger-to-Central-Banks-and-DeFi",
+      "pubDate": "2021-05-28T15:10:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Ripple is headhunting for a recruit who can take charge of its efforts to bring the XRP ledger to central banks and to the emerging world of decentralized finance (DeFi). The San Francisco-based payments company is hiring a product marketing manager to spearhead its strategy for tokenization. The new hire will determine the best ways […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @ZMiller_82: 1956 Olympic Men’s Field Hockey Tournament Recap",
+      "link": "https://cryptopanic.com/news/12021177/RT-ZMiller_82-1956-Olympic-Mens-Field-Hockey-Tournament-Recap?mtm_campaign=API-OFA",
+      "pubDate": "2021-05-28T15:09:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SCR"
+      ]
+    },
+    {
+      "title": "RT @ZMiller_82: 1960 Olympic Men’s Field Hockey Tournament Recap",
+      "link": "https://cryptopanic.com/news/12021178/RT-ZMiller_82-1960-Olympic-Mens-Field-Hockey-Tournament-Recap?mtm_campaign=API-OFA",
+      "pubDate": "2021-05-28T15:09:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SCR"
+      ]
+    },
+    {
+      "title": "RT @daniel_taze: Ac-Milan signs Mike Maignan as @gigiodonna1 nears exit.",
+      "link": "https://cryptopanic.com/news/12021179/RT-daniel_taze-Ac-Milan-signs-Mike-Maignan-as-gigiodonna1-nears-exit?mtm_campaign=API-OFA",
+      "pubDate": "2021-05-28T15:09:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SCR"
+      ]
+    },
+    {
+      "title": "Thanks, @we_are_mogul for giving us the wonderful opportunity to let the world know the power of $AIOZ Network &amp; it…",
+      "link": "https://cryptopanic.com/news/12018109/Thanks-we_are_mogul-for-giving-us-the-wonderful-opportunity-to-let-the-world-know-the-power-of-AIOZ-Network-amp-it?mtm_campaign=API-OFA",
+      "pubDate": "2021-05-28T15:08:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AIOZ"
+      ]
+    },
+    {
+      "title": "Billionaires Elon Musk and Mark Cuban Bullish On Dogecoin as DOGE Dominates Traditional Retail Market",
+      "link": "https://cryptopanic.com/news/dogecoin/12017359/Billionaires-Elon-Musk-and-Mark-Cuban-Bullish-On-Dogecoin-as-DOGE-Dominates-Traditional-Retail-Market",
+      "pubDate": "2021-05-28T15:00:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Popular meme-coin DOGE doesn’t seem to be slowing down anytime soon on being the center of attention. For critics, this continues to contradict their assertion that Dogecoin will stop being a hot topic in no time, yet the asset seems to remain highly talked about. For Dogecoiners, the grass remains greener on their end, for […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Sheetz chain of Convenience Stores To Accept BTC, ETH, LTC, DOGE",
+      "link": "https://cryptopanic.com/news/dogecoin/12017349/Sheetz-chain-of-Convenience-Stores-To-Accept-BTC-ETH-LTC-DOGE",
+      "pubDate": "2021-05-28T14:55:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Sheetz will soon start accepting digital asset payments in its stores The company has partnered with Flexa and NCR to offer crypto payments Users will have the options of paying with Bitcoin, Ethereum, Litecoin, Dogecoin and several other digital assets supported by Flexa Availability of digital payments will initially be at select Sheetz Cafe Stores this summer, with payments for fuel being...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Scammers Hack Official YouTube Channel of Spain's Oldest Law Enforcement Agency",
+      "link": "https://cryptopanic.com/news/ripple/12017356/XRP-Scammers-Hack-Official-YouTube-Channel-of-Spains-Oldest-Law-Enforcement-Agency",
+      "pubDate": "2021-05-28T14:54:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The official YouTube account of the Civil Guard has been hijacked to promote an XRP scam",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin Concludes Another Choppy Week Below $40K: The Crypto Weekly Recap",
+      "link": "https://cryptopanic.com/news/ethereum/12017288/Bitcoin-Concludes-Another-Choppy-Week-Below-40K-The-Crypto-Weekly-Recap",
+      "pubDate": "2021-05-28T14:13:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "We saw an entire week of choppy and indecisive price action as bitcoin was ultimately unable to decisively reclaim the $40K level.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Polygon (MATIC) Integrates its Blockchain Datasets in Google BigQuery",
+      "link": "https://cryptopanic.com/news/matic-network/12017240/Polygon-MATIC-Integrates-its-Blockchain-Datasets-in-Google-BigQuery",
+      "pubDate": "2021-05-28T14:00:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "Polygon has integrated its blockchain datasets to Google's BigQuery to provide accurate on-chain data for the protocol.",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 53,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Elon Musk and Mark Cuban Are Pushing Dogecoin for Payments—And BitPay Data Backs Them Up",
+      "link": "https://cryptopanic.com/news/dogecoin/12017138/Elon-Musk-and-Mark-Cuban-Are-Pushing-Dogecoin-for-PaymentsAnd-BitPay-Data-Backs-Them-Up",
+      "pubDate": "2021-05-28T12:45:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Dogecoin has ballooned to nearly 13% of BitPay's transaction volume, and its fourth-most popular payment option.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 29,
+        "negative": 26
+      }
+    },
+    {
+      "title": "Social Media Accounts",
+      "link": "https://cryptopanic.com/news/12063250/Social-Media-Accounts",
+      "pubDate": "2021-05-28T12:41:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FRTS"
+      ]
+    },
+    {
+      "title": "As The Market Struggles To Recover, Here Are 5 Cryptocurrencies Redditors Are Buying",
+      "link": "https://cryptopanic.com/news/ripple/12017078/As-The-Market-Struggles-To-Recover-Here-Are-5-Cryptocurrencies-Redditors-Are-Buying",
+      "pubDate": "2021-05-28T12:26:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Investor concerns about volatile technology stocks have been heightened by the wild collapse in cryptocurrency prices over the last week. Market analysts such as Cathie Wood, whose business, Ark Investment Management, is said to have the largest institutional investment in cryptocurrencies, have dismissed the recent drop in value of digital assets as a temporary setback, […]",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Decentralized IOTA Already Live in Testnet for Months: Dominik Schiener, IOTA Foundation",
+      "link": "https://cryptopanic.com/news/12017019/Decentralized-IOTA-Already-Live-in-Testnet-for-Months-Dominik-Schiener-IOTA-Foundation",
+      "pubDate": "2021-05-28T11:37:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Dominik Schiener, co-founder of IOTA Foundation, has revealed the progress of testing of \"fully decentralized\" IOTA",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 24,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "IOTA Joins International Alliance of Companies Working in Autonomous Driving Sector",
+      "link": "https://cryptopanic.com/news/12017010/IOTA-Joins-International-Alliance-of-Companies-Working-in-Autonomous-Driving-Sector",
+      "pubDate": "2021-05-28T11:22:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "IOTA and two other companies have become members of the global alliance that works with firms working on standards and software for autonomous driving",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin tumbles to $36K as Ark’s Cathie Wood addresses BTC regulatory fears",
+      "link": "https://cryptopanic.com/news/near/12016915/Bitcoin-tumbles-to-36K-as-Arks-Cathie-Wood-addresses-BTC-regulatory-fears",
+      "pubDate": "2021-05-28T10:25:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The flagship cryptocurrency faces a higher profit-taking sentiment near its 200-day simple moving average wave.",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Drops to $2,436 Three-Day Low, Loses 11% In One Day",
+      "link": "https://cryptopanic.com/news/ethereum/12016886/Ethereum-Drops-to-2436-Three-Day-Low-Loses-11-In-One-Day",
+      "pubDate": "2021-05-28T09:59:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The second biggest digital currency has crashed to $2,436 and is down 11 percent today",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Ripple shifts 204 Million XRP Along with Rippleworks and Binance",
+      "link": "https://cryptopanic.com/news/ripple/12016851/Ripple-shifts-204-Million-XRP-Along-with-Rippleworks-and-Binance",
+      "pubDate": "2021-05-28T09:36:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple crypto behemoth has wired a massive lump of XRP, following several smaller transactions from major crypto exchanges",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Are 73 SEC actions against crypto enough warning to Ripple about XRP?",
+      "link": "https://cryptopanic.com/news/ripple/12016837/Are-73-SEC-actions-against-crypto-enough-warning-to-Ripple-about-XRP",
+      "pubDate": "2021-05-28T09:25:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "SEC says Ripple had plenty of ‘notice’ that XRP transactions could be violating the law via its many enforcement actions against other crypto companies.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 3
+      }
+    },
+    {
+      "title": "RT @OhGodAGirl: If I'm going to talk about NFT's I gotta' do it with style, right?",
+      "link": "https://cryptopanic.com/news/12020377/RT-OhGodAGirl-If-Im-going-to-talk-about-NFTs-I-gotta-do-it-with-style-right",
+      "pubDate": "2021-05-28T09:16:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "XEM",
+        "XYM"
+      ]
+    },
+    {
+      "title": "Binance Smart Chain’s BurgerSwap drained of $7.2M in exploit",
+      "link": "https://cryptopanic.com/news/12016738/Binance-Smart-Chains-BurgerSwap-drained-of-72M-in-exploit",
+      "pubDate": "2021-05-28T08:16:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "The latest in a recent spate of decentralized finance hacks.",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Join our Head of StraitsX, @aymsalley, alongside @lemiscate, Integration Lead from @AaveAave and Cordillia from Tri…",
+      "link": "https://cryptopanic.com/news/12021879/Join-our-Head-of-StraitsX-aymsalley-alongside-lemiscate-Integration-Lead-from-AaveAave-and-Cordillia-from-Tri",
+      "pubDate": "2021-05-28T08:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "XSGD"
+      ]
+    },
+    {
+      "title": "The economic cycle created by PoC provides a unique blockchain economy that aims to revitalize global charity toget…",
+      "link": "https://cryptopanic.com/news/12063214/The-economic-cycle-created-by-PoC-provides-a-unique-blockchain-economy-that-aims-to-revitalize-global-charity-toget",
+      "pubDate": "2021-05-28T07:53:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FRTS"
+      ]
+    },
+    {
+      "title": "Fruits (#FRTS) is a platform where anyone can participate and be a part of with an economy that uses PoC algorithms…",
+      "link": "https://cryptopanic.com/news/12063216/Fruits-FRTS-is-a-platform-where-anyone-can-participate-and-be-a-part-of-with-an-economy-that-uses-PoC-algorithms",
+      "pubDate": "2021-05-28T07:53:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FRTS"
+      ]
+    },
+    {
+      "title": "Hello  Welcome to #FRTS Fruits Coin’s Official Twitter Account! Please feel free to follow our account to get upd…",
+      "link": "https://cryptopanic.com/news/12063218/Hello-Welcome-to-FRTS-Fruits-Coins-Official-Twitter-Account-Please-feel-free-to-follow-our-account-to-get-upd",
+      "pubDate": "2021-05-28T07:52:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FRTS"
+      ]
+    },
+    {
+      "title": "\"My driving force? I would say just making crypto accessible.\" - Viktor Radchenko, @vikmeup (CEO and Founder of Tru…",
+      "link": "https://cryptopanic.com/news/12016215/My-driving-force-I-would-say-just-making-crypto-accessible-Viktor-Radchenko-vikmeup-CEO-and-Founder-of-Tru",
+      "pubDate": "2021-05-28T07:28:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "There is a high chance we are in the transition stage between Phase B and C of the #Wyckoff #accumulation pattern.…",
+      "link": "https://cryptopanic.com/news/12016664/There-is-a-high-chance-we-are-in-the-transition-stage-between-Phase-B-and-C-of-the-Wyckoff-accumulation-pattern",
+      "pubDate": "2021-05-28T07:14:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SURE"
+      ]
+    },
+    {
+      "title": "RT @MetaMask: Alert to Ledger users! Chrome 91 breaks our support. MetaMask 9.5.6 will bring a workaround, coming asap. If you update Chrom…",
+      "link": "https://cryptopanic.com/news/12014576/RT-MetaMask-Alert-to-Ledger-users-Chrome-91-breaks-our-support-MetaMask-956-will-bring-a-workaround-coming-asap-If-you-update-Chrom",
+      "pubDate": "2021-05-28T04:44:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LOOM"
+      ]
+    },
+    {
+      "title": "OMG it's live!!  🤩 8 reasons to get excited about the @CENNZnet #NFT module",
+      "link": "https://cryptopanic.com/news/12013039/OMG-its-live-8-reasons-to-get-excited-about-the-CENNZnet-NFT-module",
+      "pubDate": "2021-05-28T04:28:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "OMG",
+        "CENNZ"
+      ]
+    },
+    {
+      "title": "Kindly take note that STP 8 Restorative Rebase looks at the TWAP of Tau Assets rather than the current price on Pan…",
+      "link": "https://cryptopanic.com/news/12012656/Kindly-take-note-that-STP-8-Restorative-Rebase-looks-at-the-TWAP-of-Tau-Assets-rather-than-the-current-price-on-Pan",
+      "pubDate": "2021-05-28T03:18:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTCST"
+      ]
+    },
+    {
+      "title": "Harvard Law BFI throws 10.5M votes behind own proposal to fund DeFi lobby with UNI",
+      "link": "https://cryptopanic.com/news/12012196/Harvard-Law-BFI-throws-105M-votes-behind-own-proposal-to-fund-DeFi-lobby-with-UNI",
+      "pubDate": "2021-05-28T02:20:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "It is not the first time Uniswap governance has been dominated by a whale.",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "45,000 Hotspots now providing decentralized wireless coverage on #ThePeoplesNetwork !",
+      "link": "https://cryptopanic.com/news/12014052/45000-Hotspots-now-providing-decentralized-wireless-coverage-on-ThePeoplesNetwork",
+      "pubDate": "2021-05-28T02:18:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "HNT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @CENNZnet: It was a full house at the #Blockchain 101 workshop yesterday! We discussed #Bitcoin, #consensus mechanisms, community gover…",
+      "link": "https://cryptopanic.com/news/12013040/RT-CENNZnet-It-was-a-full-house-at-the-Blockchain-101-workshop-yesterday-We-discussed-Bitcoin-consensus-mechanisms-community-gover",
+      "pubDate": "2021-05-28T00:56:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "CENNZ"
+      ]
+    },
+    {
+      "title": "This Crypto Project Billionaire Investor Bill Ackman Is Excited About Is up 1,100% YTD",
+      "link": "https://cryptopanic.com/news/12012125/This-Crypto-Project-Billionaire-Investor-Bill-Ackman-Is-Excited-About-Is-up-1100-YTD",
+      "pubDate": "2021-05-28T00:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The founder of hedge fund management company Pershing Square Capital Management, billionaire investor Bill Ackman, has revealed he is interested in cryptocurrency project Helium (HNT), even though he would not invest in top cryptocurrencies like bitcoin. During an interview with the New York City-based Fifth Avenue Synagogue, Ackman revealed that while he would not invest […]",
+      "currencies": [
+        "HNT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We thank all the early testers and supporters of Augur Turbo on @0xPolygon! Have feedback? Let us know @…",
+      "link": "https://cryptopanic.com/news/12012562/We-thank-all-the-early-testers-and-supporters-of-Augur-Turbo-on-0xPolygon-Have-feedback-Let-us-know",
+      "pubDate": "2021-05-28T00:17:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "REP"
+      ]
+    }
+  ]
+}

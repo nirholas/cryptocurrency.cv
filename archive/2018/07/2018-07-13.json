@@ -1,0 +1,30 @@
+{
+  "date": "2018-07-13",
+  "fetchedAt": "2026-02-05T07:27:07.880Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Breaking: Coinbase Exploring The Addition of Cardano, Basic Attention Token, Stellar Lumens, Zcash, and 0x",
+      "link": "https://cryptopanic.com/news/2531844/Breaking-Coinbase-Exploring-The-Addition-of-Cardano-Basic-Attention-Token-Stellar-Lumens-Zcash-and-0x",
+      "pubDate": "2018-07-13T20:29:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "XLM",
+        "ZEC",
+        "BAT",
+        "ZRX"
+      ],
+      "votes": {
+        "positive": 27,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

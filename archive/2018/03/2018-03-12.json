@@ -1,0 +1,25 @@
+{
+  "date": "2018-03-12",
+  "fetchedAt": "2026-02-05T07:27:06.948Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "The Best Cryptos to Own in March: NEO, GAS, DRGN, PRL, MTL and BRD",
+      "link": "https://cryptopanic.com/news/1350101/The-Best-Cryptos-to-Own-in-March-NEO-GAS-DRGN-PRL-MTL-and-BRD",
+      "pubDate": "2018-03-12T14:00:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

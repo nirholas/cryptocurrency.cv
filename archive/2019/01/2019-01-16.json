@@ -1,0 +1,25 @@
+{
+  "date": "2019-01-16",
+  "fetchedAt": "2026-02-05T07:27:06.947Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "NEO Is Becoming the most Developer-Friendly Blockchain for the Smart Economy Vision",
+      "link": "https://cryptopanic.com/news/4281051/NEO-Is-Becoming-the-most-Developer-Friendly-Blockchain-for-the-Smart-Economy-Vision",
+      "pubDate": "2019-01-16T03:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

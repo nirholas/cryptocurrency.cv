@@ -1,0 +1,25 @@
+{
+  "date": "2018-11-26",
+  "fetchedAt": "2026-02-05T07:27:07.856Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "More Developers Are Digging Deeper into Tron’s Technology, States TRON DApp Weekly Report",
+      "link": "https://cryptopanic.com/news/3796172/More-Developers-Are-Digging-Deeper-into-Trons-Technology-States-TRON-DApp-Weekly-Report",
+      "pubDate": "2018-11-26T12:59:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

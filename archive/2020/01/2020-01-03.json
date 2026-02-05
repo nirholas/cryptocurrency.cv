@@ -1,0 +1,25 @@
+{
+  "date": "2020-01-03",
+  "fetchedAt": "2026-02-05T07:27:06.971Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Justin Sun: Tron Will Keep Its 33 Bln TRX Intact and Launch TRX Buy-Back Program",
+      "link": "https://cryptopanic.com/news/7556355/Justin-Sun-Tron-Will-Keep-Its-33-Bln-TRX-Intact-and-Launch-TRX-Buy-Back-Program",
+      "pubDate": "2020-01-03T14:40:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

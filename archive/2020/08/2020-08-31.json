@@ -1,0 +1,66 @@
+{
+  "date": "2020-08-31",
+  "fetchedAt": "2026-02-05T07:27:06.979Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Crypto Intelligence Firm Claims Monero (XMR) Tracking Capabilities",
+      "link": "https://cryptopanic.com/news/monero/9841515/Crypto-Intelligence-Firm-Claims-Monero-XMR-Tracking-Capabilities",
+      "pubDate": "2020-08-31T20:44:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @PaxosGlobal: What is money? We often take our notion of money for granted. Paxos CEO &amp; Co-Founder Charles Cascarilla dissects the funda…",
+      "link": "https://cryptopanic.com/news/9841320/RT-PaxosGlobal-What-is-money-We-often-take-our-notion-of-money-for-granted-Paxos-CEO-amp-Co-Founder-Charles-Cascarilla-dissects-the-funda",
+      "pubDate": "2020-08-31T20:25:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "RT @PaxosGlobal: What is money? We often take our notion of money for granted. Paxos CEO & Co-Founder Charles Cascarilla dissects the funda…",
+      "link": "https://cryptopanic.com/news/paxos-standard/9841320/RT-PaxosGlobal-What-is-money-We-often-take-our-notion-of-money-for-granted-Paxos-CEO-amp-Co-Founder-Charles-Cascarilla-dissects-the-funda",
+      "pubDate": "2020-08-31T20:25:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "US Homeland Security Can Now Track Privacy Crypto Monero",
+      "link": "https://cryptopanic.com/news/9840306/US-Homeland-Security-Can-Now-Track-Privacy-Crypto-Monero",
+      "pubDate": "2020-08-31T18:06:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

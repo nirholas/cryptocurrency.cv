@@ -1,0 +1,76 @@
+{
+  "date": "2019-05-22",
+  "fetchedAt": "2026-02-05T07:27:06.681Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Dash brings anti-51 percent attack software upgrade to mainnet",
+      "link": "https://cryptopanic.com/news/dash/5502306/Dash-brings-anti-51-percent-attack-software-upgrade-to-mainnet",
+      "pubDate": "2019-05-22T21:06:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DASH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance Records Order Volume Higher Than 2017 Bull Run",
+      "link": "https://cryptopanic.com/news/matic-network/5501335/Binance-Records-Order-Volume-Higher-Than-2017-Bull-Run",
+      "pubDate": "2019-05-22T19:06:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 34,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Justin Sun’s TRON (TRX) Keeps Advancing – Sun Network About to Launch on Testnet",
+      "link": "https://cryptopanic.com/news/5496432/Justin-Suns-TRON-TRX-Keeps-Advancing-Sun-Network-About-to-Launch-on-Testnet",
+      "pubDate": "2019-05-22T10:32:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Bitcoin SV Takes Spot #11 on CMC After Doubling Its Value Thanks to Craig Wright’s Recent Move",
+      "link": "https://cryptopanic.com/news/5495858/Bitcoin-SV-Takes-Spot-11-on-CMC-After-Doubling-Its-Value-Thanks-to-Craig-Wrights-Recent-Move",
+      "pubDate": "2019-05-22T09:08:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 21
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

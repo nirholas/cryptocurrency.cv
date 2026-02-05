@@ -1,0 +1,38 @@
+{
+  "date": "2018-08-01",
+  "fetchedAt": "2026-02-05T07:27:06.987Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "EOS Looking Bearish: Trading Near Key Support",
+      "link": "https://cryptopanic.com/news/2699709/EOS-Looking-Bearish-Trading-Near-Key-Support",
+      "pubDate": "2018-08-01T15:57:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Watch out for a scam ETH token called \"Miner Calculation Token\" trying to cause confusion with $MCT - Just created…",
+      "link": "https://cryptopanic.com/news/2699482/Watch-out-for-a-scam-ETH-token-called-Miner-Calculation-Token-trying-to-cause-confusion-with-MCT-Just-created",
+      "pubDate": "2018-08-01T15:44:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "MCT"
+      ]
+    }
+  ]
+}

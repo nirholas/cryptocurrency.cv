@@ -1,0 +1,72 @@
+{
+  "date": "2018-11-14",
+  "fetchedAt": "2026-02-05T07:27:06.970Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ripple Wants to Take over Swift as Iran Gets Disconnected from The Service",
+      "link": "https://cryptopanic.com/news/3679758/Ripple-Wants-to-Take-over-Swift-as-Iran-Gets-Disconnected-from-The-Service",
+      "pubDate": "2018-11-14T21:00:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 12
+      }
+    },
+    {
+      "title": "IOTA Adds Two New Names to Its Research Team With William Sanders and Andreas Penzkofer",
+      "link": "https://cryptopanic.com/news/3677989/IOTA-Adds-Two-New-Names-to-Its-Research-Team-With-William-Sanders-and-Andreas-Penzkofer",
+      "pubDate": "2018-11-14T18:30:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Traders Now See No Winner in Bitcoin Cash Fork",
+      "link": "https://cryptopanic.com/news/3675896/Crypto-Traders-Now-See-No-Winner-in-Bitcoin-Cash-Fork",
+      "pubDate": "2018-11-14T16:15:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Kik Selects Stellar Over Ethereum for Token Launch",
+      "link": "https://cryptopanic.com/news/3674870/Kik-Selects-Stellar-Over-Ethereum-for-Token-Launch",
+      "pubDate": "2018-11-14T15:15:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 20,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

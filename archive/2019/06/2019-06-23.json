@@ -1,0 +1,42 @@
+{
+  "date": "2019-06-23",
+  "fetchedAt": "2026-02-05T07:27:06.789Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Crypto Enthusiasts Forecast Potential 100% Stellar (XLM) Price Growth in a Month",
+      "link": "https://cryptopanic.com/news/5816894/Crypto-Enthusiasts-Forecast-Potential-100-Stellar-XLM-Price-Growth-in-a-Month",
+      "pubDate": "2019-06-23T20:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Vechain (VET) Price On The Crossroads: Falling Wedge Or Breakout?",
+      "link": "https://cryptopanic.com/news/5811596/Vechain-VET-Price-On-The-Crossroads-Falling-Wedge-Or-Breakout",
+      "pubDate": "2019-06-23T06:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

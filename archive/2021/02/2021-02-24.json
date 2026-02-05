@@ -1,0 +1,308 @@
+{
+  "date": "2021-02-24",
+  "fetchedAt": "2026-02-05T07:27:06.843Z",
+  "articleCount": 20,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "XRP Gears up for Volatility, Bulls Prime Buys",
+      "link": "https://cryptopanic.com/news/ripple/11536212/XRP-Gears-up-for-Volatility-Bulls-Prime-Buys",
+      "pubDate": "2021-02-24T21:35:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP is currently at risk of being deemed a security by the U.S. Securities and Exchange Commission. However, one of the most prominent technical analysts in the industry believes that it may provide an opportunity for speculators to profit. XRP Price Movement Ahead According to 40-year trading veteran Peter Brandt, XRP seems to have developed an inverse head-and-shoulders pattern...",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Price analysis 2/24: BTC, ETH, BNB, DOT, ADA, XRP, LTC, LINK, BCH, XLM",
+      "link": "https://cryptopanic.com/news/polkadot/11536085/Price-analysis-224-BTC-ETH-BNB-DOT-ADA-XRP-LTC-LINK-BCH-XLM",
+      "pubDate": "2021-02-24T20:14:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin price is attempting to flip the $50,000 level back to support, while many altcoins are capitalizing on BTC's consolidation by moving higher.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @SotRos25: Who wants to see $MAID on @FTX_Official? Maybe if we ask @SBF_Alameda nicely he’ll let us in  #dataprivacy #maidsafe",
+      "link": "https://cryptopanic.com/news/11538543/RT-SotRos25-Who-wants-to-see-MAID-on-FTX_Official-Maybe-if-we-ask-SBF_Alameda-nicely-hell-let-us-in-dataprivacy-maidsafe",
+      "pubDate": "2021-02-24T20:09:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "Logan Paul Sells $3,500,000 in Crypto Art in Just 24 Hours Through Polkadot-Based Project",
+      "link": "https://cryptopanic.com/news/polkadot/11535806/Logan-Paul-Sells-3500000-in-Crypto-Art-in-Just-24-Hours-Through-Polkadot-Based-Project",
+      "pubDate": "2021-02-24T17:10:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "YouTube star Logan Paul just sold $3.5 million worth of crypto-backed digital art in less than 24 hours. Paul is collaborating with Bondly, a decentralized product in the Polkadot ecosystem, to create his own line of Pokemon-inspired non-fungible tokens (NFTs). NFTs feature identifying data in their smart contracts that make each one unique, which means […]",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DeFi User Accidentally Pays $42k in Gas to Move Funds to Uniswap",
+      "link": "https://cryptopanic.com/news/11535811/DeFi-User-Accidentally-Pays-42k-in-Gas-to-Move-Funds-to-Uniswap",
+      "pubDate": "2021-02-24T17:00:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDC",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "ARK is now available on LATOKEN Exchange, with $ARK / $USDT pairing.",
+      "link": "https://cryptopanic.com/news/11535736/ARK-is-now-available-on-LATOKEN-Exchange-with-ARK-USDT-pairing",
+      "pubDate": "2021-02-24T17:00:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Crypto laws are essential for the smooth and secure development of the crypto industry. With crypto payments gainin…",
+      "link": "https://cryptopanic.com/news/11538077/Crypto-laws-are-essential-for-the-smooth-and-secure-development-of-the-crypto-industry-With-crypto-payments-gainin",
+      "pubDate": "2021-02-24T16:30:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "2021: The Year of Quppy and The Evolution of Bank As A Service (BAAS)",
+      "link": "https://cryptopanic.com/news/11535539/2021-The-Year-of-Quppy-and-The-Evolution-of-Bank-As-A-Service-BAAS",
+      "pubDate": "2021-02-24T15:30:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Chainlink rolls out OCR system upgrade, reducing gas costs tenfold",
+      "link": "https://cryptopanic.com/news/chainlink/11535541/Chainlink-rolls-out-OCR-system-upgrade-reducing-gas-costs-tenfold",
+      "pubDate": "2021-02-24T15:21:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The Off-Chain Reporting upgrade changes how oracles aggregate data, easing the burden on the blockchains.",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 28,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "NEO Bounces and Aims For Higher Prices",
+      "link": "https://cryptopanic.com/news/11535520/NEO-Bounces-and-Aims-For-Higher-Prices",
+      "pubDate": "2021-02-24T15:10:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NEO should continue increasing towards the long-term $77 resistance area and potentially move higher. Current Movement The weekly chart shows that despite the ongoing decline, NEO may create a very long lower wick, resulting in a relatively bullish candlestick before the weekly close. Technical indicators are also bullish, evident by the bullish cross in the … Continued",
+      "currencies": [
+        "NEO"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Chainlink achieves scalability breakthrough with its Off-Chain Reporting solution",
+      "link": "https://cryptopanic.com/news/chainlink/11535576/Chainlink-achieves-scalability-breakthrough-with-its-Off-Chain-Reporting-solution",
+      "pubDate": "2021-02-24T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Chainlink has deployed its OCR solution to mainnet. Chainlink’s Sergey Nazarov says this will result in a 10x increase in the amount of real-world data that oracles can bring on-chain.",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The CORE team's new project is called DELTA, and the limited staking window is open *now*. After launch, DELTA will…",
+      "link": "https://cryptopanic.com/news/11539987/The-CORE-teams-new-project-is-called-DELTA-and-the-limited-staking-window-is-open-now-After-launch-DELTA-will",
+      "pubDate": "2021-02-24T14:05:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CORE"
+      ]
+    },
+    {
+      "title": "RT @Delta_Token: The first 24 hours of Delta's Limited Staking Window",
+      "link": "https://cryptopanic.com/news/11539988/RT-Delta_Token-The-first-24-hours-of-Deltas-Limited-Staking-Window",
+      "pubDate": "2021-02-24T13:35:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CORE"
+      ]
+    },
+    {
+      "title": "Bitmex to list ADA, DOT, EOS, UNI, XLM and YFI Perpetual Contracts",
+      "link": "https://cryptopanic.com/news/polkadot/11535011/Bitmex-to-list-ADA-DOT-EOS-UNI-XLM-and-YFI-Perpetual-Contracts",
+      "pubDate": "2021-02-24T11:29:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "In brief: Bitmex will list 6 new perpetual contracts in March of ADA, DOT, EOS, UNI, XLM and YFI The new contracts will be launched in batches with DOT and UNI going live on March 3rd Bitmex has fallen from being the top-ranked derivatives platform since the CFTC pursued charges against its top execs The new perpetual contracts and the Bitmex Mobile Apps, might attract new and old users back to...",
+      "currencies": [
+        "ADA",
+        "DOT",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitfinex, Tether banned in New York. No end yet to Ripple XRP’s SEC lawsuit woes. CBDC bridge for Asia and Middle East.",
+      "link": "https://cryptopanic.com/news/ripple/11534992/Bitfinex-Tether-banned-in-New-York-No-end-yet-to-Ripple-XRPs-SEC-lawsuit-woes-CBDC-bridge-for-Asia-and-Middle-East",
+      "pubDate": "2021-02-24T11:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Other top blockchain and crypto news: Bill Gates on bitcoin. Nvidia protects gamers from crypto miners with separate CMP and GeForce RTX graphics cards.",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "My bright spot of the day.",
+      "link": "https://cryptopanic.com/news/11534333/My-bright-spot-of-the-day",
+      "pubDate": "2021-02-24T07:28:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "RT @novogratz: This is very positive for the crypto community.  Removing @Tether_to fud is a big positive.  Many Wall Street banks pay f…",
+      "link": "https://cryptopanic.com/news/11534305/RT-novogratz-This-is-very-positive-for-the-crypto-community-Removing-Tether_to-fud-is-a-big-positive-Many-Wall-Street-banks-pay-f",
+      "pubDate": "2021-02-24T06:33:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "SURE"
+      ]
+    },
+    {
+      "title": "RT @Brad_Laurie: Today, FYI, I had a very candid and transparent #crypto convo with @dleonard00, CEO of @HifiFinance. I was impressed by ho…",
+      "link": "https://cryptopanic.com/news/11534347/RT-Brad_Laurie-Today-FYI-I-had-a-very-candid-and-transparent-crypto-convo-with-dleonard00-CEO-of-HifiFinance-I-was-impressed-by-ho",
+      "pubDate": "2021-02-24T03:46:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MFT"
+      ]
+    },
+    {
+      "title": "How to mine BCHABC",
+      "link": "https://cryptopanic.com/news/ecash/12211611/How-to-mine-BCHABC",
+      "pubDate": "2021-02-24T01:28:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Solana (SOL), Cosmos (ATOM) buck the trend to hit new highs after protocol upgrades",
+      "link": "https://cryptopanic.com/news/11531180/Solana-SOL-Cosmos-ATOM-buck-the-trend-to-hit-new-highs-after-protocol-upgrades",
+      "pubDate": "2021-02-24T01:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana (SOL) and Cosmos (ATOM) each saw the price of their tokens surge after new interoperability upgrades were revealed.",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

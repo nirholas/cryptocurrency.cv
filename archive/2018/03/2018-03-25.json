@@ -1,0 +1,26 @@
+{
+  "date": "2018-03-25",
+  "fetchedAt": "2026-02-05T07:27:06.812Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Analysis of SegWit and Bitcoin Cash Transaction Volumes: SegWit is Leaving Bitcoin Cash Behind",
+      "link": "https://cryptopanic.com/news/1477387/Analysis-of-SegWit-and-Bitcoin-Cash-Transaction-Volumes-SegWit-is-Leaving-Bitcoin-Cash-Behind",
+      "pubDate": "2018-03-25T20:50:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

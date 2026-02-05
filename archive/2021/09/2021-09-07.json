@@ -1,0 +1,942 @@
+{
+  "date": "2021-09-07",
+  "fetchedAt": "2026-02-05T07:27:06.671Z",
+  "articleCount": 62,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @xprfan: Introducing Proton Wallet ️ #xpr #pronton #xprfan",
+      "link": "https://cryptopanic.com/news/12723648/RT-xprfan-Introducing-Proton-Wallet-xpr-pronton-xprfan",
+      "pubDate": "2021-09-07T23:48:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XPR"
+      ]
+    },
+    {
+      "title": "RT @alanchiu: Excited to welcome @fraxfinance to @bobanetwork! The @BobaCommunity will appreciate Frax's stability, security, and decentral…",
+      "link": "https://cryptopanic.com/news/12719338/RT-alanchiu-Excited-to-welcome-fraxfinance-to-bobanetwork-The-BobaCommunity-will-appreciate-Fraxs-stability-security-and-decentral",
+      "pubDate": "2021-09-07T23:41:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "OMG"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: made another new all time high today. #Bitcoin #Ethereum #cardano #binance #BTC #ETH #bnb $BTC…",
+      "link": "https://cryptopanic.com/news/12722010/RT-RichardHeartWin-made-another-new-all-time-high-today-Bitcoin-Ethereum-cardano-binance-BTC-ETH-bnb-BTC",
+      "pubDate": "2021-09-07T23:24:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "-",
+      "currencies": [
+        "HEX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Price of ETH by 8am ET",
+      "link": "https://cryptopanic.com/news/12719276/Price-of-ETH-by-8am-ET",
+      "pubDate": "2021-09-07T23:05:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "REP"
+      ]
+    },
+    {
+      "title": "RT @XECbeliever: @CainBCHA Hodl the gem. #eCash $XEC @CainBCHA",
+      "link": "https://cryptopanic.com/news/ecash/12725305/RT-XECbeliever-CainBCHA-Hodl-the-gem-eCash-XEC-CainBCHA",
+      "pubDate": "2021-09-07T21:55:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Nice article on the eCash backstory, and what led to its birth. Well worth a read!",
+      "link": "https://cryptopanic.com/news/ecash/12725306/Nice-article-on-the-eCash-backstory-and-what-led-to-its-birth-Well-worth-a-read",
+      "pubDate": "2021-09-07T21:54:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Solana Advances Despite Broad Crypto Sell-Offs: Markets Wrap",
+      "link": "https://cryptopanic.com/news/bitcoin/12719116/Solana-Advances-Despite-Broad-Crypto-Sell-Offs-Markets-Wrap",
+      "pubDate": "2021-09-07T21:37:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Amid the sea of losses for major cryptos, Solana’s native token hit an all-time high of $194.82 on Tuesday morning.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @ThunderBCH: @CainBCHA Animated eCash GiF.",
+      "link": "https://cryptopanic.com/news/ecash/12725307/RT-ThunderBCH-CainBCHA-Animated-eCash-GiF",
+      "pubDate": "2021-09-07T20:26:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "New release of Bitcoin ABC has dropped! This is the full node software that powers the #eCash network. #XEC $XEC",
+      "link": "https://cryptopanic.com/news/ecash/12725308/New-release-of-Bitcoin-ABC-has-dropped-This-is-the-full-node-software-that-powers-the-eCash-network-XEC-XEC",
+      "pubDate": "2021-09-07T20:24:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "RT @Bitcoin_ABC: Bitcoin ABC 0.24.1 is now available! This release fixes a bug in the wallet notifications and brings improvements to some…",
+      "link": "https://cryptopanic.com/news/ecash/12725309/RT-Bitcoin_ABC-Bitcoin-ABC-0241-is-now-available-This-release-fixes-a-bug-in-the-wallet-notifications-and-brings-improvements-to-some",
+      "pubDate": "2021-09-07T20:22:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Bitcoin ABC 0.24.1 is now available! This release fixes a bug in the wallet notifications and brings improvements…",
+      "link": "https://cryptopanic.com/news/ecash/12720550/Bitcoin-ABC-0241-is-now-available-This-release-fixes-a-bug-in-the-wallet-notifications-and-brings-improvements",
+      "pubDate": "2021-09-07T20:01:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC",
+        "BCHABC"
+      ]
+    },
+    {
+      "title": "Dogecoin and Shiba Inu finally deliver as expected",
+      "link": "https://cryptopanic.com/news/dogecoin/12718850/Dogecoin-and-Shiba-Inu-finally-deliver-as-expected",
+      "pubDate": "2021-09-07T20:00:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "As the market began its impending corrections, at least momentarily, many coins took the hit. Among them was DOGE that fell by 7% in the last 24 hours, and SHIB dropped by 10% as well. This is in addition to the already falling price of Shiba Inu, which negated about 25.2% of all its July […]",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Solana Flips XRP as SOL Outpaces Bitcoin, Ethereum Crash Recovery",
+      "link": "https://cryptopanic.com/news/ripple/12718800/Solana-Flips-XRP-as-SOL-Outpaces-Bitcoin-Ethereum-Crash-Recovery",
+      "pubDate": "2021-09-07T19:37:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "While most of the market reels from this morning’s sudden downturn, SOL has jumped up another spot in the Top 10.",
+      "currencies": [
+        "ETH",
+        "XRP",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Analysts point to overleveraged traders after Bitcoin flash crashes to $43K",
+      "link": "https://cryptopanic.com/news/bitcoin/12718716/Analysts-point-to-overleveraged-traders-after-Bitcoin-flash-crashes-to-43K",
+      "pubDate": "2021-09-07T19:05:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Traders were hit hard as $3.5 billion in liquidations took place as Bitcoin price crashed below $43,000.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Major US crypto exchanges buckled as bitcoin’s price fell on Tuesday",
+      "link": "https://cryptopanic.com/news/bitcoin/12718669/Major-US-crypto-exchanges-buckled-as-bitcoins-price-fell-on-Tuesday",
+      "pubDate": "2021-09-07T18:43:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Crypto exchanges freeze up amid recent wild market dip.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Salvadoran Business Leader Slams Bitcoin Amid Brutal Price Crash",
+      "link": "https://cryptopanic.com/news/bitcoin/12718649/Salvadoran-Business-Leader-Slams-Bitcoin-Amid-Brutal-Price-Crash",
+      "pubDate": "2021-09-07T18:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Javier Siman’s department store has started accepting Bitcoin despite the owner’s aversion to the cryptocurrency",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Perpetual Futures powered by Synthetix are launching on @kwenta_io soon. They will be running a massive futures tra…",
+      "link": "https://cryptopanic.com/news/12724422/Perpetual-Futures-powered-by-Synthetix-are-launching-on-kwenta_io-soon-They-will-be-running-a-massive-futures-tra",
+      "pubDate": "2021-09-07T18:20:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SNX",
+        "SUSD"
+      ]
+    },
+    {
+      "title": "What a great day a big thanks to everyone that came to the #BlockchainExpo to watch Richard Ells on the ‘Central ba…",
+      "link": "https://cryptopanic.com/news/12718297/What-a-great-day-a-big-thanks-to-everyone-that-came-to-the-BlockchainExpo-to-watch-Richard-Ells-on-the-Central-ba",
+      "pubDate": "2021-09-07T17:00:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "RIF is building #opensource protocols for decentralized services that YOU can integrate into your project with supp…",
+      "link": "https://cryptopanic.com/news/12723710/RIF-is-building-opensource-protocols-for-decentralized-services-that-YOU-can-integrate-into-your-project-with-supp",
+      "pubDate": "2021-09-07T16:51:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RIF"
+      ]
+    },
+    {
+      "title": "Flash Crash, Ethereum Tests Support With 17% Drop And Risks Further Losses",
+      "link": "https://cryptopanic.com/news/bitcoin/12718244/Flash-Crash-Ethereum-Tests-Support-With-17-Drop-And-Risks-Further-Losses",
+      "pubDate": "2021-09-07T16:36:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "After leading the crypto market rally for several weeks, Ethereum faces the return of the bears. The second cryptocurrency by market cap was pushing into the $4,000 resistance before a selloff sent it back to critical support. At the time of writing, ETH trades at $3,466 with an 11.6% loss in the daily chart. Ethereum bounces back from the low of its current levels. Some exchange platforms...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @nomorebear: While token prices go down and gas prices shoot up, @BandProtocol continues to operate and is robustly feeding price data f…",
+      "link": "https://cryptopanic.com/news/12720393/RT-nomorebear-While-token-prices-go-down-and-gas-prices-shoot-up-BandProtocol-continues-to-operate-and-is-robustly-feeding-price-data-f",
+      "pubDate": "2021-09-07T16:36:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "Thank you for the mention @lilbutterfly during your ''Blockchain and digital assets in emerging markets' talk today…",
+      "link": "https://cryptopanic.com/news/12718225/Thank-you-for-the-mention-lilbutterfly-during-your-Blockchain-and-digital-assets-in-emerging-markets-talk-today",
+      "pubDate": "2021-09-07T16:35:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "Hey @eCashOfficial welcome to #MandalaMoonshots! FYI...Mandala Exchange has 2 $XEC trading pairs with: FULL Bin…",
+      "link": "https://cryptopanic.com/news/ecash/12722716/Hey-eCashOfficial-welcome-to-MandalaMoonshots-FYIMandala-Exchange-has-2-XEC-trading-pairs-with-FULL-Bin",
+      "pubDate": "2021-09-07T16:29:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XEC",
+        "MDX"
+      ]
+    },
+    {
+      "title": "With Bitcoin (BTC) Dominance at Multi-Week Lows, Peter Brandt Issues Alarming Observation for Bulls",
+      "link": "https://cryptopanic.com/news/bitcoin/12718118/With-Bitcoin-BTC-Dominance-at-Multi-Week-Lows-Peter-Brandt-Issues-Alarming-Observation-for-Bulls",
+      "pubDate": "2021-09-07T16:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Trading veteran Peter Brandt noticed the alarming pattern of Bitcoin Dominance indicator (BTC.D)",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin Volatility Going Crazy Right After Hitting Shocking 2021 Lows",
+      "link": "https://cryptopanic.com/news/bitcoin/12718042/Bitcoin-Volatility-Going-Crazy-Right-After-Hitting-Shocking-2021-Lows",
+      "pubDate": "2021-09-07T15:59:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin’s volatility is going crazy as the price dropped down 20% to $43k today, right after a week of shockingly low activity! Bitcoin 7-Day Volatility Declined To 2.3% Last Week As per the latest weekly report from Arcane Research, the 7-day volatility of the cryptocurrency declined again this past week. The volatility is an indicator […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Led By Litecoin, Mid-Cap Altcoins Bleed With Bitcoin",
+      "link": "https://cryptopanic.com/news/cardano/12718012/Led-By-Litecoin-Mid-Cap-Altcoins-Bleed-With-Bitcoin",
+      "pubDate": "2021-09-07T15:47:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Litecoin awoke from a month-long slumber to follow the general sentiment in the market. The price of LTC broke above the $200 resistance, only to drop with the crypto market flash crash. At the time of writing, Litecoin trades at $181 with a 17.31% loss in the daily chart. The market seems to be reacting to the events triggered by El Salvador making Bitcoin legal tender. Whales could have used...",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin Dumps $7K to Below $43K as $2.6 Billion Liquidated in Minutes",
+      "link": "https://cryptopanic.com/news/bitcoin/12718010/Bitcoin-Dumps-7K-to-Below-43K-as-26-Billion-Liquidated-in-Minutes",
+      "pubDate": "2021-09-07T15:40:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin crashed by more than $7000 in a matter of minutes, leaving around $2.6 billion in liquidations.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin Crashes 10% in Hours as Crypto Market Sheds $300 Billion",
+      "link": "https://cryptopanic.com/news/bitcoin/12717977/Bitcoin-Crashes-10-in-Hours-as-Crypto-Market-Sheds-300-Billion",
+      "pubDate": "2021-09-07T15:35:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "It’s all red across the market today as last week’s upward price action is largely reversed.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Bitcoin Price Bloodbath: Is El Salvador A “Sell The News” Event?",
+      "link": "https://cryptopanic.com/news/bitcoin/12717980/Bitcoin-Price-Bloodbath-Is-El-Salvador-A-Sell-The-News-Event",
+      "pubDate": "2021-09-07T15:31:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Today is one of the biggest days in the history of Bitcoin, with one of the most fundamentally bullish moments unfolding: the cryptocurrency has officially become legal tender in El Salvador. But Bitcoin price isn’t responding as expected. Instead, the market has responded with an absolute bloodbath and $10,000 drop per coin. Could this mean that Bitcoin’s big deal was merely a “buy the rumor,...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin price plunges below $43K in minutes in crypto market rout",
+      "link": "https://cryptopanic.com/news/bitcoin/12717907/Bitcoin-price-plunges-below-43K-in-minutes-in-crypto-market-rout",
+      "pubDate": "2021-09-07T15:11:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "An $8,000 daily loss leaves the market shaking its head on one of the most volatile days in Bitcoin since the China miner rout.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "EOS, Ethereum Classic, DASH Price Analysis: 07 September",
+      "link": "https://cryptopanic.com/news/dash/12717842/EOS-Ethereum-Classic-DASH-Price-Analysis-07-September",
+      "pubDate": "2021-09-07T15:00:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "The recent sell-off by miners may have this impact on Bitcoin’s price",
+      "link": "https://cryptopanic.com/news/bitcoin/12717732/The-recent-sell-off-by-miners-may-have-this-impact-on-Bitcoins-price",
+      "pubDate": "2021-09-07T14:30:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Throughout last week, Bitcoin’s price was struggling to hold above the $50k benchmark. However, the market’s king-coin has been trading well above the aforementioned threshold over the past day. In fact, BTC was valued at $51.7k at press time. Amid the renewed buying-interest, a certain category of stakeholders, has been booking their profits and cashing […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 18
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Iota Foundation to support EU blockchain initiative",
+      "link": "https://cryptopanic.com/news/12717631/Iota-Foundation-to-support-EU-blockchain-initiative",
+      "pubDate": "2021-09-07T14:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The Iota Foundation is one of seven enterprises chosen to support the early-stage innovation of a European blockchain venture.",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin needs to hold $50K to avoid a $44K bearish BTC price target",
+      "link": "https://cryptopanic.com/news/bitcoin/12717479/Bitcoin-needs-to-hold-50K-to-avoid-a-44K-bearish-BTC-price-target",
+      "pubDate": "2021-09-07T13:25:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Falling back lower than $49,500 would cause problems, traders say, while any impulse move has the potential to hit $58,000.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Miners Sold 1,570 BTC at $50,000 Recently: Report",
+      "link": "https://cryptopanic.com/news/bitcoin/12717500/Miners-Sold-1570-BTC-at-50000-Recently-Report",
+      "pubDate": "2021-09-07T13:24:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Recently shared data shows that Bitcoin miners have been dumping Bitcoin to lock in some profits",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "A quick chat with Richard's fellow panelist @dkarney, Head of Digital Assets, at Worldline before the panel.…",
+      "link": "https://cryptopanic.com/news/12717374/A-quick-chat-with-Richards-fellow-panelist-dkarney-Head-of-Digital-Assets-at-Worldline-before-the-panel",
+      "pubDate": "2021-09-07T13:05:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "IOTA Picked to Enable DLT Service Infrastructure in EU",
+      "link": "https://cryptopanic.com/news/12717361/IOTA-Picked-to-Enable-DLT-Service-Infrastructure-in-EU",
+      "pubDate": "2021-09-07T12:57:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "IOTA's DLT will now rival other blockchains to enable government services (that have gone fully digital) for companies and citizens across Europe",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "El Salvador: Thousands Of People Move to “Buy $30 Of Bitcoin” – But This Could Backfire",
+      "link": "https://cryptopanic.com/news/bitcoin/12717362/El-Salvador-Thousands-Of-People-Move-to-Buy-30-Of-Bitcoin-But-This-Could-Backfire",
+      "pubDate": "2021-09-07T12:54:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Jason Deane, a consultant for cryptocurrency exchange Luno and a Bitcoin miner, has raised concerns over plans permeating various social media platforms to buy $30 of Bitcoin to commemorate El Salvador’s Bitcoin law implementation. The “buy $30 Bitcoin” movement that first appeared on a Brazilian Reddit group has gained traction on Twitter too. Millions of […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "IOTA selected to participate in the European Blockchain Services Infrastructure (EBSI) network",
+      "link": "https://cryptopanic.com/news/12717204/IOTA-selected-to-participate-in-the-European-Blockchain-Services-Infrastructure-EBSI-network",
+      "pubDate": "2021-09-07T12:08:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The IOTA Foundation, the non-profit supporting the research and development of new distributed ledger technologies (DLT), including the IOTA Tangle, announced today it been selected to participate in the pre-commercial procurement process for the European Blockchain Services Infrastructure (EBSI), a network of blockchain nodes across the European Union (EU). Established in 2019 by the European Blockchain […] The post IOTA selected to participate in the European Blockchain Services Infrastructure",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Fantom Surges 27% Amid On-Chain D&D Hype",
+      "link": "https://cryptopanic.com/news/12717210/Fantom-Surges-27-Amid-On-Chain-DD-Hype",
+      "pubDate": "2021-09-07T12:06:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "-",
+      "currencies": [
+        "FTM"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "EBSI - Building a Distributed Ledger Technology for Europe",
+      "link": "https://cryptopanic.com/news/12717228/EBSI-Building-a-Distributed-Ledger-Technology-for-Europe",
+      "pubDate": "2021-09-07T12:06:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The IOTA Foundation is one of the seven contractors selected to design innovative DLT solutions to enable more demanding pan-European blockchain services. TL;DR: The IOTA Foundation has been selected as one of seven projects from 30+ applications, to participate in the first phase of the EU blockchain pre-commercial procurement",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bullish for Bitcoin Price? Wyckoff Accumulation Phase D Likely Completed – Phase E Next",
+      "link": "https://cryptopanic.com/news/bitcoin/12717163/Bullish-for-Bitcoin-Price-Wyckoff-Accumulation-Phase-D-Likely-Completed-Phase-E-Next",
+      "pubDate": "2021-09-07T11:53:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin’s recent 2-week consolidation breakout above $50.5k has likely concluded Phase D of Wyckoff Accumulation, preparing the cryptocurrency to enter the Phase E mark up. Wyckoff Accumulation is a technical and volume-based accumulation pattern with multiple phases that exhaust supply and enables larger players to build large positions as price consolidates. Extended periods of consolidation...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Cardano’s Smart Contracts Face Major Scalability Issue",
+      "link": "https://cryptopanic.com/news/cardano/12717130/Cardanos-Smart-Contracts-Face-Major-Scalability-Issue",
+      "pubDate": "2021-09-07T11:45:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "-",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 21
+      }
+    },
+    {
+      "title": "Here is an update on today's schedule! You can find Richard Ell's between 13:00 and 13:40 on the 'Central bank digi…",
+      "link": "https://cryptopanic.com/news/12717069/Here-is-an-update-on-todays-schedule-You-can-find-Richard-Ells-between-1300-and-1340-on-the-Central-bank-digi",
+      "pubDate": "2021-09-07T11:27:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "SOL price nears $200 after FTX’s Solana-enabled NFT marketplace goes live",
+      "link": "https://cryptopanic.com/news/12717029/SOL-price-nears-200-after-FTXs-Solana-enabled-NFT-marketplace-goes-live",
+      "pubDate": "2021-09-07T11:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "The latest bout of buying has pushed SOL/USD’s quarter-to-date gains up by more than 450%.",
+      "currencies": [
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 8
+      }
+    },
+    {
+      "title": "Solana (SOL) Exploding, What is Behind Hype? Crypto Influencer Answers",
+      "link": "https://cryptopanic.com/news/12716931/Solana-SOL-Exploding-What-is-Behind-Hype-Crypto-Influencer-Answers",
+      "pubDate": "2021-09-07T10:26:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "YouTuber and investor Lark Davis shared his thoughts on fundamentals behind Solana (SOL) euphoria",
+      "currencies": [
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 14
+      }
+    },
+    {
+      "title": "We’ve arrived at #TechEx for the #BlockchainExpo! Who’s looking forward to seeing Richard Ells’ on the ‘Central ban…",
+      "link": "https://cryptopanic.com/news/12716904/Weve-arrived-at-TechEx-for-the-BlockchainExpo-Whos-looking-forward-to-seeing-Richard-Ells-on-the-Central-ban",
+      "pubDate": "2021-09-07T10:20:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "Bitcoin Down by Almost $1,500 After El Salvador Pump",
+      "link": "https://cryptopanic.com/news/bitcoin/12716853/Bitcoin-Down-by-Almost-1500-After-El-Salvador-Pump",
+      "pubDate": "2021-09-07T09:51:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin is down even after bullish El Salvador BTC implementation news",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    },
+    {
+      "title": "#ElSalvador and President @NayibBukele made the history and formally adopted #BTC as legal tender! However, they ne…",
+      "link": "https://cryptopanic.com/news/12715704/ElSalvador-and-President-NayibBukele-made-the-history-and-formally-adopted-BTC-as-legal-tender-However-they-ne",
+      "pubDate": "2021-09-07T07:39:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "-",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BTC price further crushes resistance, nears $53K on El Salvador ‘Bitcoin Day’",
+      "link": "https://cryptopanic.com/news/near/12715221/BTC-price-further-crushes-resistance-nears-53K-on-El-Salvador-Bitcoin-Day",
+      "pubDate": "2021-09-07T07:34:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Daily liquidations near $500 million as El Salvador confirms the purchase of at least 400 BTC.",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana Surges to ATH, Passing $50B Market Cap and Flipping Dogecoin",
+      "link": "https://cryptopanic.com/news/dogecoin/12713568/Solana-Surges-to-ATH-Passing-50B-Market-Cap-and-Flipping-Dogecoin",
+      "pubDate": "2021-09-07T06:30:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "One of the best performing crypto assets over the past day by a clear margin is Solana’s SOL token as it powers up the market capitalization charts.",
+      "currencies": [
+        "SOL",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 23,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Big things are coming with Standard Hashrate Group in El Salvador @nayibbukele! Please stay tuned!",
+      "link": "https://cryptopanic.com/news/12720288/Big-things-are-coming-with-Standard-Hashrate-Group-in-El-Salvador-nayibbukele-Please-stay-tuned",
+      "pubDate": "2021-09-07T06:25:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "BTCST"
+      ]
+    },
+    {
+      "title": "RT @CobakOfficial: We are happy to announce the 1st whitelist public sale on Cobak! Please welcome Xreators(@xreators_tw) and prepare for t…",
+      "link": "https://cryptopanic.com/news/12714231/RT-CobakOfficial-We-are-happy-to-announce-the-1st-whitelist-public-sale-on-Cobak-Please-welcome-Xreatorsxreators_tw-and-prepare-for-t",
+      "pubDate": "2021-09-07T06:06:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MBL"
+      ]
+    },
+    {
+      "title": "We are happy to announce the 1st whitelist public sale on Cobak! Please welcome Xreators(@xreators_tw) and prepare…",
+      "link": "https://cryptopanic.com/news/12720955/We-are-happy-to-announce-the-1st-whitelist-public-sale-on-Cobak-Please-welcome-Xreatorsxreators_tw-and-prepare?mtm_campaign=API-OFA",
+      "pubDate": "2021-09-07T06:05:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CBK"
+      ]
+    },
+    {
+      "title": "This idea is very interesting, I hope it will bring you fun in GameDAO",
+      "link": "https://cryptopanic.com/news/12713156/This-idea-is-very-interesting-I-hope-it-will-bring-you-fun-in-GameDAO",
+      "pubDate": "2021-09-07T05:46:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DAO"
+      ]
+    },
+    {
+      "title": "RT @Cardano: #CardanoSummit2021 coming soon! Register NOW for a spot at a community-led event near you! 36 cities around the world …",
+      "link": "https://cryptopanic.com/news/near/12711110/RT-Cardano-CardanoSummit2021-coming-soon-Register-NOW-for-a-spot-at-a-community-led-event-near-you-36-cities-around-the-world",
+      "pubDate": "2021-09-07T03:31:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "-",
+      "currencies": [
+        "ADA",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "#CardanoSummit2021 coming soon! Register NOW for a spot at a community-led event near you! 36 cities around t…",
+      "link": "https://cryptopanic.com/news/near/12712129/CardanoSummit2021-coming-soon-Register-NOW-for-a-spot-at-a-community-led-event-near-you-36-cities-around-t",
+      "pubDate": "2021-09-07T03:29:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "-",
+      "currencies": [
+        "ADA",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "BigONE leveraged ETF adds XRP, XTZ, GRT, MKR, ETC, ATOM, SUSHI, THETA 3X leveraged trading pairs!…",
+      "link": "https://cryptopanic.com/news/theta-token/12711785/BigONE-leveraged-ETF-adds-XRP-XTZ-GRT-MKR-ETC-ATOM-SUSHI-THETA-3X-leveraged-trading-pairs",
+      "pubDate": "2021-09-07T03:10:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "ONE"
+      ]
+    },
+    {
+      "title": "Are altcoins looking more interesting than Bitcoin right now",
+      "link": "https://cryptopanic.com/news/matic-network/12711072/Are-altcoins-looking-more-interesting-than-Bitcoin-right-now",
+      "pubDate": "2021-09-07T03:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "All eyes should have been on Bitcoin as the king coin leapt past $51,000 and marked its highest price since mid-May. Yet, behavior analysis platform Santiment showed the Bitcoin discussion rate had dropped. The reason? Short-term traders were busy watching the trending alt coins. 📈 #Bitcoin closed out the weekend with a jump to $51,911, […]",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "September 2021 $AERGO Zoom AMA is up with our CMO Jae Shin and Blocko Co-CEO Wonbeom Kim.",
+      "link": "https://cryptopanic.com/news/12711362/September-2021-AERGO-Zoom-AMA-is-up-with-our-CMO-Jae-Shin-and-Blocko-Co-CEO-Wonbeom-Kim",
+      "pubDate": "2021-09-07T00:08:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "Looking pretty good  Ready to take on the #dApp world!",
+      "link": "https://cryptopanic.com/news/12712167/Looking-pretty-good-Ready-to-take-on-the-dApp-world",
+      "pubDate": "2021-09-07T00:02:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CENNZ"
+      ]
+    },
+    {
+      "title": "Ethereum Dominates TVL in DeFi Across All Platforms, But For How Much Longer?",
+      "link": "https://cryptopanic.com/news/ethereum/12710789/Ethereum-Dominates-TVL-in-DeFi-Across-All-Platforms-But-For-How-Much-Longer",
+      "pubDate": "2021-09-07T00:01:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "According to DeFi Llama, the Total Value Locked (TVL) across all networks is closing in at a record $180 billion, with the Ethereum network accounting for the vast majority of this. The data includes valuations from Ethereum, Polygon, Solona, Fantom, Terra, Avalanche, Binance, and other less prominent DeFi chains. Ethereum accounts for $131 billion of […]",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    }
+  ]
+}

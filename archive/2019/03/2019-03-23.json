@@ -1,0 +1,26 @@
+{
+  "date": "2019-03-23",
+  "fetchedAt": "2026-02-05T07:27:06.971Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tron (TRX) Falls Out of Top 10 List, Letting Cardano (ADA) Take Its Place",
+      "link": "https://cryptopanic.com/news/4910249/Tron-TRX-Falls-Out-of-Top-10-List-Letting-Cardano-ADA-Take-Its-Place",
+      "pubDate": "2019-03-23T09:14:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

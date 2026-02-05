@@ -1,0 +1,25 @@
+{
+  "date": "2019-01-05",
+  "fetchedAt": "2026-02-05T07:27:06.998Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "BitTorrent to Launch Tron-Based Native Token, BTT",
+      "link": "https://cryptopanic.com/news/tron/4165782/BitTorrent-to-Launch-Tron-Based-Native-Token-BTT",
+      "pubDate": "2019-01-05T13:00:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

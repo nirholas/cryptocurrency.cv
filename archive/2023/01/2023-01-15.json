@@ -1,0 +1,566 @@
+{
+  "date": "2023-01-15",
+  "fetchedAt": "2026-02-05T07:27:07.510Z",
+  "articleCount": 42,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "$BTC: El Salvador’s Congress Passes Legislation Enabling Raising Funds Via ‘Volcano Bonds’",
+      "link": "https://cryptopanic.com/news/bitcoin/17388584/BTC-El-Salvadors-Congress-Passes-Legislation-Enabling-Raising-Funds-Via-Volcano-Bonds",
+      "pubDate": "2023-01-15T23:12:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "El Salvador, the first country to make Bitcoin legal tender (in September 2021), has passed legislation allowing the country to issue sovereign Bitcoin-backed bonds. According to a report by Bloomberg, El Salvador’s congress has approved a new digital securities law that would allow for raising funds via the “world’s first sovereign blockchain bond.” The bill, […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "All the #security of a hardware wallet  - within a #DeFi trading app. Our vault is the only cold-storage technolog…",
+      "link": "https://cryptopanic.com/news/17388507/All-the-security-of-a-hardware-wallet-within-a-DeFi-trading-app-Our-vault-is-the-only-cold-storage-technolog",
+      "pubDate": "2023-01-15T22:15:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "VGX"
+      ]
+    },
+    {
+      "title": "Bitcoin Taking Out $20,000 Puts Solana, Polygon, XRP On The Cusp Of Huge Price Explosions",
+      "link": "https://cryptopanic.com/news/17388400/Bitcoin-Taking-Out-20000-Puts-Solana-Polygon-XRP-On-The-Cusp-Of-Huge-Price-Explosions",
+      "pubDate": "2023-01-15T20:44:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin is back above $20,000, days after breaking a two-month-long ranging-market spell and printing a string of green daily candles.",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @bittybitbit86: Tweeted this before but so goo i have to tweet it again: @CitadelDAO dash is so good. Look’s especially awesome on @brow…",
+      "link": "https://cryptopanic.com/news/dash/17389682/RT-bittybitbit86-Tweeted-this-before-but-so-goo-i-have-to-tweet-it-again-CitadelDAO-dash-is-so-good-Looks-especially-awesome-on-brow",
+      "pubDate": "2023-01-15T20:41:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DASH",
+        "XCT"
+      ]
+    },
+    {
+      "title": "RT @sasha35625: It's time for #WavesArmy to rise up! Once a week (during the regular AMA's) I will be picking a tweet with the following h…",
+      "link": "https://cryptopanic.com/news/waves/17388307/RT-sasha35625-Its-time-for-WavesArmy-to-rise-up-Once-a-week-during-the-regular-AMAs-I-will-be-picking-a-tweet-with-the-following-h",
+      "pubDate": "2023-01-15T19:55:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WAVES"
+      ]
+    },
+    {
+      "title": "Decentralized voting systems on blockchain have the potential to revolutionize the way we conduct elections and mak…",
+      "link": "https://cryptopanic.com/news/17390287/Decentralized-voting-systems-on-blockchain-have-the-potential-to-revolutionize-the-way-we-conduct-elections-and-mak",
+      "pubDate": "2023-01-15T19:37:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EVER"
+      ]
+    },
+    {
+      "title": "RT @Plebs_eth: Exciting things happening at @THORChain! Keep an eye out for lending, orderbooks, and bare-metal node implementations. $RUNE",
+      "link": "https://cryptopanic.com/news/thorchain/17392467/RT-Plebs_eth-Exciting-things-happening-at-THORChain-Keep-an-eye-out-for-lending-orderbooks-and-bare-metal-node-implementations-RUNE",
+      "pubDate": "2023-01-15T19:01:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "RUNE"
+      ]
+    },
+    {
+      "title": "There is a new version of the Pirate Chain Lite Wallet ready to download. Version 1.0.7 has several improvements an…",
+      "link": "https://cryptopanic.com/news/17391796/There-is-a-new-version-of-the-Pirate-Chain-Lite-Wallet-ready-to-download-Version-107-has-several-improvements-an",
+      "pubDate": "2023-01-15T18:52:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARRR"
+      ]
+    },
+    {
+      "title": "Solana Re-enters Top 10 Digital Asset With Impressive 135% Rally",
+      "link": "https://cryptopanic.com/news/17388232/Solana-Re-enters-Top-10-Digital-Asset-With-Impressive-135-Rally",
+      "pubDate": "2023-01-15T18:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Solana flipped Polygon to be the 10th largest crypto asset by market cap, following a seven-day rally that saw it rise by over 70%.",
+      "currencies": [
+        "SOL",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Cardano Developers Reveal Critical New Toolkit for Ethereum-Compatible Sidechains",
+      "link": "https://cryptopanic.com/news/17388123/Cardano-Developers-Reveal-Critical-New-Toolkit-for-Ethereum-Compatible-Sidechains",
+      "pubDate": "2023-01-15T17:55:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Input Output Global (IOG), the development team behind Ethereum (ETH) rival Cardano (ADA), is announcing the launch of a new toolkit that allows for the building of sidechains for the Cardano network. In a blog post, IOG says that the toolkit enables developers to build Ethereum virtual machine (EVM)-compatible chains with their own consensus algorithm […]",
+      "currencies": [
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "How to best transfer fiat to the card. I am waiting since 1+ month on my iban creation and don’t know the most efficient way to top up my card",
+      "link": "https://cryptopanic.com/news/17393989/How-to-best-transfer-fiat-to-the-card-I-am-waiting-since-1-month-on-my-iban-creation-and-dont-know-the-most-efficient-way-to-top-up-my-card",
+      "pubDate": "2023-01-15T17:53:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HI"
+      ]
+    },
+    {
+      "title": "RT @18decimals: $RUNE - “Make your application multichain by integrating THORChain.” It’s time to see the eco develop with products utiliz…",
+      "link": "https://cryptopanic.com/news/thorchain/17392468/RT-18decimals-RUNE-Make-your-application-multichain-by-integrating-THORChain-Its-time-to-see-the-eco-develop-with-products-utiliz",
+      "pubDate": "2023-01-15T17:46:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RUNE"
+      ]
+    },
+    {
+      "title": "EVER growth is impressive!",
+      "link": "https://cryptopanic.com/news/17390288/EVER-growth-is-impressive",
+      "pubDate": "2023-01-15T17:41:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EVER"
+      ]
+    },
+    {
+      "title": "In this thread we shall discuss stablecoins and give you some examples of how they can be used in the real world.…",
+      "link": "https://cryptopanic.com/news/17392659/In-this-thread-we-shall-discuss-stablecoins-and-give-you-some-examples-of-how-they-can-be-used-in-the-real-world?mtm_campaign=API-OFA",
+      "pubDate": "2023-01-15T16:32:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDB"
+      ]
+    },
+    {
+      "title": "Bitcoin fails to convince that bottom is in with $12K ‘still likely’",
+      "link": "https://cryptopanic.com/news/17387970/Bitcoin-fails-to-convince-that-bottom-is-in-with-12K-still-likely",
+      "pubDate": "2023-01-15T16:16:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "BTC price optimism is limited at best after multi-month highs, with Bitcoin traders fearing a reversion to macro lows.",
+      "currencies": [
+        "BTC",
+        "OP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "With Savers going up - Dual LP will become increasingly leveraged. Bet in the right direction and gains will be s…",
+      "link": "https://cryptopanic.com/news/thorchain/17392469/With-Savers-going-up-Dual-LP-will-become-increasingly-leveraged-Bet-in-the-right-direction-and-gains-will-be-s",
+      "pubDate": "2023-01-15T16:06:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RUNE"
+      ]
+    },
+    {
+      "title": "3% cashback instead of 100% for curve sub",
+      "link": "https://cryptopanic.com/news/17387923/3-cashback-instead-of-100-for-curve-sub",
+      "pubDate": "2023-01-15T16:04:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "HI"
+      ]
+    },
+    {
+      "title": "RT @oleprohon: I know it has only been 4 (volatile) days, but damn, 62.86% between a stablecoin and a high-quality asset is just 🥜🤯 My $-d…",
+      "link": "https://cryptopanic.com/news/thorchain/17392470/RT-oleprohon-I-know-it-has-only-been-4-volatile-days-but-damn-6286-between-a-stablecoin-and-a-high-quality-asset-is-just-My-d",
+      "pubDate": "2023-01-15T16:04:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "RUNE"
+      ]
+    },
+    {
+      "title": "RT @itspublu: hopping with excitement",
+      "link": "https://cryptopanic.com/news/17393114/RT-itspublu-hopping-with-excitement?mtm_campaign=API-OFA",
+      "pubDate": "2023-01-15T15:54:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QI",
+        "MIMATIC"
+      ]
+    },
+    {
+      "title": "Hey, community  The Weekly Recap is here, as always. These days have been amazing, and the building process never…",
+      "link": "https://cryptopanic.com/news/17392669/Hey-community-The-Weekly-Recap-is-here-as-always-These-days-have-been-amazing-and-the-building-process-never",
+      "pubDate": "2023-01-15T15:48:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "UTK"
+      ]
+    },
+    {
+      "title": "All the #security of a hardware wallet - coming to a #DeFi trading app. Our vault is the only cold-storage technolo…",
+      "link": "https://cryptopanic.com/news/17387853/All-the-security-of-a-hardware-wallet-coming-to-a-DeFi-trading-app-Our-vault-is-the-only-cold-storage-technolo",
+      "pubDate": "2023-01-15T15:27:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "VGX"
+      ]
+    },
+    {
+      "title": "Switched",
+      "link": "https://cryptopanic.com/news/17388565/Switched",
+      "pubDate": "2023-01-15T15:12:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HI"
+      ]
+    },
+    {
+      "title": "RT @robustus: @oleprohon @THORChain I did use Thorswap, and it was a $100 test tx. Slippage + fees was 7%. I realized it was quoting me bot…",
+      "link": "https://cryptopanic.com/news/thorchain/17392471/RT-robustus-oleprohon-THORChain-I-did-use-Thorswap-and-it-was-a-100-test-tx-Slippage-fees-was-7-I-realized-it-was-quoting-me-bot",
+      "pubDate": "2023-01-15T15:09:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RUNE"
+      ]
+    },
+    {
+      "title": "RT @ERC20_News: ERC20-NEWS DAILY DIGEST 14-1-2023 @SerenityShield_ partners with @Jackal_Protocol @Dashpay 's article on Dash Plat…",
+      "link": "https://cryptopanic.com/news/dash/17392724/RT-ERC20_News-ERC20-NEWS-DAILY-DIGEST-14-1-2023-SerenityShield_-partners-with-Jackal_Protocol-Dashpay-s-article-on-Dash-Plat",
+      "pubDate": "2023-01-15T14:03:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "DASH",
+        "UQC",
+        "DSS"
+      ]
+    },
+    {
+      "title": "This 2023, make a resolution to learn all you can about crypto markets 🤓 Read the most detailed and trusted researc…",
+      "link": "https://cryptopanic.com/news/leo-token/17387704/This-2023-make-a-resolution-to-learn-all-you-can-about-crypto-markets-Read-the-most-detailed-and-trusted-researc",
+      "pubDate": "2023-01-15T14:00:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "LEO"
+      ]
+    },
+    {
+      "title": "RT @HouseofChimera: The first @XcademyOfficial Plug-in and Android application statistics are in! The plug-in has 8,3K active monthly use…",
+      "link": "https://cryptopanic.com/news/zilliqa/17393068/RT-HouseofChimera-The-first-XcademyOfficial-Plug-in-and-Android-application-statistics-are-in-The-plug-in-has-83K-active-monthly-use",
+      "pubDate": "2023-01-15T13:50:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZIL",
+        "GZIL"
+      ]
+    },
+    {
+      "title": "Bitcoin Funding Rates Hit 14-Month High – What Could This Mean For The Market Leader?",
+      "link": "https://cryptopanic.com/news/quant-network/17387670/Bitcoin-Funding-Rates-Hit-14-Month-High-What-Could-This-Mean-For-The-Market-Leader",
+      "pubDate": "2023-01-15T13:37:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SHIB",
+        "QNT"
+      ]
+    },
+    {
+      "title": "RT @THOR_InfoBot: → Add to savings vault [ac7d]: 10.0 ETH Total: $15.3K (0.52% of vault) Savers cap is ▰▰▰▰▰▰▱▱▱▱ (58.2 %) full. You can…",
+      "link": "https://cryptopanic.com/news/thorchain/17392472/RT-THOR_InfoBot-Add-to-savings-vault-ac7d-100-ETH-Total-153K-052-of-vault-Savers-cap-is-582-full-You-can",
+      "pubDate": "2023-01-15T12:22:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "RUNE"
+      ]
+    },
+    {
+      "title": "Cardano Beats Dogecoin (DOGE) in Market Cap Top as ADA Price Spikes Higher",
+      "link": "https://cryptopanic.com/news/17387438/Cardano-Beats-Dogecoin-DOGE-in-Market-Cap-Top-as-ADA-Price-Spikes-Higher",
+      "pubDate": "2023-01-15T11:47:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Cardano finally reclaims its market cap top spot from DOGE",
+      "currencies": [
+        "ADA",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The #publicsale of #Fasttoken (FTN), the native cryptocurrency of the #Fastex ecosystem, will launch on January 18…",
+      "link": "https://cryptopanic.com/news/17390364/The-publicsale-of-Fasttoken-FTN-the-native-cryptocurrency-of-the-Fastex-ecosystem-will-launch-on-January-18?mtm_campaign=API-OFA",
+      "pubDate": "2023-01-15T11:42:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FTN"
+      ]
+    },
+    {
+      "title": "New roadmap for 2023",
+      "link": "https://cryptopanic.com/news/17388900/New-roadmap-for-2023",
+      "pubDate": "2023-01-15T11:27:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SPS"
+      ]
+    },
+    {
+      "title": "RT @therunetard: The doors are about close on the BTC savers pool on @THORChain… 96% 🤯",
+      "link": "https://cryptopanic.com/news/thorchain/17392473/RT-therunetard-The-doors-are-about-close-on-the-BTC-savers-pool-on-THORChain-96",
+      "pubDate": "2023-01-15T11:10:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "RUNE"
+      ]
+    },
+    {
+      "title": "Confused about #PoW vs #PoS? Learn the key differences between these two consensus mechanisms in the #blockchain wo…",
+      "link": "https://cryptopanic.com/news/17390979/Confused-about-PoW-vs-PoS-Learn-the-key-differences-between-these-two-consensus-mechanisms-in-the-blockchain-wo",
+      "pubDate": "2023-01-15T08:29:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KAI"
+      ]
+    },
+    {
+      "title": "RT @sasha35625: Power > Money $power airdrop terms announcement next week #powerdao",
+      "link": "https://cryptopanic.com/news/waves/17384710/RT-sasha35625-Power-gt-Money-power-airdrop-terms-announcement-next-week-powerdao",
+      "pubDate": "2023-01-15T07:29:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WAVES"
+      ]
+    },
+    {
+      "title": "Polygon Announces Proposed Hardfork To Improve Chain Performance",
+      "link": "https://cryptopanic.com/news/17384579/Polygon-Announces-Proposed-Hardfork-To-Improve-Chain-Performance",
+      "pubDate": "2023-01-15T07:05:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "Leading Ethereum scaling solution Polygon has unveiled its plans to implement a hardfork on its PoS chain on Jan 17, 2023. According to a tweet on Jan. 12, Polygon stated the proposed hardfork is “good news” for developers and users alike, as it will help create a “better” user experience. Via a blog post on […]",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @rune_holder: Holy shit. $THOR $RUNE. @THORSwap",
+      "link": "https://cryptopanic.com/news/thorchain/17386464/RT-rune_holder-Holy-shit-THOR-RUNE-THORSwap",
+      "pubDate": "2023-01-15T05:42:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RUNE"
+      ]
+    },
+    {
+      "title": "Former FTX US President lashes out at ‘insecure’ SBF in 49-part Twitter thread rant",
+      "link": "https://cryptopanic.com/news/17383378/Former-FTX-US-President-lashes-out-at-insecure-SBF-in-49-part-Twitter-thread-rant",
+      "pubDate": "2023-01-15T05:03:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "The first of our revamped weekly newsletter that provides more market insights in addition to current developments…",
+      "link": "https://cryptopanic.com/news/17386600/The-first-of-our-revamped-weekly-newsletter-that-provides-more-market-insights-in-addition-to-current-developments?mtm_campaign=API-OFA",
+      "pubDate": "2023-01-15T02:56:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LON",
+        "imBTC"
+      ]
+    },
+    {
+      "title": "List of All Lifestyle Subscriptions",
+      "link": "https://cryptopanic.com/news/17383237/List-of-All-Lifestyle-Subscriptions",
+      "pubDate": "2023-01-15T02:04:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HI"
+      ]
+    },
+    {
+      "title": "Axie Infinity [AXS]: A hike in user activity on the play-to-earn platform means that…",
+      "link": "https://cryptopanic.com/news/axie-infinity/17383212/Axie-Infinity-AXS-A-hike-in-user-activity-on-the-play-to-earn-platform-means-that",
+      "pubDate": "2023-01-15T01:30:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "One of the largest US colleges has begun teaching students about Bitcoin",
+      "link": "https://cryptopanic.com/news/bitcoin/17383203/One-of-the-largest-US-colleges-has-begun-teaching-students-about-Bitcoin",
+      "pubDate": "2023-01-15T01:27:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The professor said a “Programming Bitcoin” course will follow the first Bitcoin course, where students will learn how to “build a Bitcoin library from scratch.”",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 20,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @ceekvr: Step into the #CEEK #Metaverse to create an unforgettable #Avatar for your digital twin. #CeekVR #CEEKLAND",
+      "link": "https://cryptopanic.com/news/17383900/RT-ceekvr-Step-into-the-CEEK-Metaverse-to-create-an-unforgettable-Avatar-for-your-digital-twin-CeekVR-CEEKLAND",
+      "pubDate": "2023-01-15T00:23:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CEEK"
+      ]
+    }
+  ]
+}

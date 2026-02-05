@@ -1,0 +1,56 @@
+{
+  "date": "2018-11-27",
+  "fetchedAt": "2026-02-05T07:27:07.856Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Binance to add Paxos Standard as a base currency for trading pairs",
+      "link": "https://cryptopanic.com/news/paxos-standard/3810430/Binance-to-add-Paxos-Standard-as-a-base-currency-for-trading-pairs",
+      "pubDate": "2018-11-27T18:08:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "BitTorrent Now Accepts TRON [TRX], Binance Coin [BNB], and Bitcoin [BTC] for its Pro & Ads Free Products",
+      "link": "https://cryptopanic.com/news/3809888/BitTorrent-Now-Accepts-TRON-TRX-Binance-Coin-BNB-and-Bitcoin-BTC-for-its-Pro-Ads-Free-Products",
+      "pubDate": "2018-11-27T17:17:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BNB",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 23,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Cash Vs. Satoshi Vision - Hash War Over - Crypto Market Price Suffers",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/3803921/Bitcoin-Cash-Vs-Satoshi-Vision-Hash-War-Over-Crypto-Market-Price-Suffers",
+      "pubDate": "2018-11-27T04:28:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 11
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

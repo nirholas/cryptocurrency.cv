@@ -1,0 +1,97 @@
+{
+  "date": "2021-01-23",
+  "fetchedAt": "2026-02-05T07:27:06.986Z",
+  "articleCount": 7,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @ThomasBertani: 1/N Busy week ahead for @pNetworkDeFi - I cannot wait to share with everyone our first series of releases for Q1 2021 …",
+      "link": "https://cryptopanic.com/news/11239320/RT-ThomasBertani-1N-Busy-week-ahead-for-pNetworkDeFi-I-cannot-wait-to-share-with-everyone-our-first-series-of-releases-for-Q1-2021",
+      "pubDate": "2021-01-23T18:58:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "PLTC"
+      ]
+    },
+    {
+      "title": "PT1 : The bounty program consists of rewarding 100,000 WOZX to our most active community members for Content Creati…",
+      "link": "https://cryptopanic.com/news/11434489/PT1-The-bounty-program-consists-of-rewarding-100000-WOZX-to-our-most-active-community-members-for-Content-Creati",
+      "pubDate": "2021-01-23T18:35:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "To all our new followers, welcome! we want to give a special shoutout to @davidstalane because during the past thre…",
+      "link": "https://cryptopanic.com/news/11434492/To-all-our-new-followers-welcome-we-want-to-give-a-special-shoutout-to-davidstalane-because-during-the-past-thre",
+      "pubDate": "2021-01-23T18:34:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "Chainlink Hits a New All-Time High of $25",
+      "link": "https://cryptopanic.com/news/chainlink/11238956/Chainlink-Hits-a-New-All-Time-High-of-25",
+      "pubDate": "2021-01-23T17:54:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "2020's grizzliest bear still has some bite.",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @btsfav: #DeFinitely 40 - AKA Stop what you're doing and check if you can claim free #StakeDAO tokens! #defi",
+      "link": "https://cryptopanic.com/news/11237456/RT-btsfav-DeFinitely-40-AKA-Stop-what-youre-doing-and-check-if-you-can-claim-free-StakeDAO-tokens-defi",
+      "pubDate": "2021-01-23T13:53:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "What is #financial_risk? A situation in which there is a risk of partial or full loss of #assets is referred to a…",
+      "link": "https://cryptopanic.com/news/11236530/What-is-financial_risk-A-situation-in-which-there-is-a-risk-of-partial-or-full-loss-of-assets-is-referred-to-a",
+      "pubDate": "2021-01-23T10:52:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "RT @BrendanBlumer: @moore_chaney @JanetYellen #ProFi is absolutely the future. #EOS",
+      "link": "https://cryptopanic.com/news/11322593/RT-BrendanBlumer-moore_chaney-JanetYellen-ProFi-is-absolutely-the-future-EOS?mtm_campaign=API-OFA",
+      "pubDate": "2021-01-23T05:18:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "CHEX"
+      ]
+    }
+  ]
+}

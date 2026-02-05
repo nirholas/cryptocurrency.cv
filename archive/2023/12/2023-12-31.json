@@ -1,0 +1,275 @@
+{
+  "date": "2023-12-31",
+  "fetchedAt": "2026-02-05T07:27:08.125Z",
+  "articleCount": 19,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Crypto entrepreneurs: Top winners and losers of 2023",
+      "link": "https://cryptopanic.com/news/19143067/Crypto-entrepreneurs-Top-winners-and-losers-of-2023",
+      "pubDate": "2023-12-31T23:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "FTT"
+      ]
+    },
+    {
+      "title": "Orbit Chain’s bridge reportedly hacked for $81.5 million",
+      "link": "https://cryptopanic.com/news/19143045/Orbit-Chains-bridge-reportedly-hacked-for-815-million",
+      "pubDate": "2023-12-31T22:37:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "These Are the Top Altcoins for 2024 According to Experts",
+      "link": "https://cryptopanic.com/news/19143009/These-Are-the-Top-Altcoins-for-2024-According-to-Experts?mtm_campaign=API-OFA",
+      "pubDate": "2023-12-31T21:52:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "AVAX",
+        "ARB",
+        "SUI",
+        "OP",
+        "ETHDYDX"
+      ]
+    },
+    {
+      "title": "Bitcoin History Suggesting Significant Price Move Incoming, According to Benjamin Cowen – Here’s His Outlook",
+      "link": "https://cryptopanic.com/news/bitcoin/19142977/Bitcoin-History-Suggesting-Significant-Price-Move-Incoming-According-to-Benjamin-Cowen-Heres-His-Outlook",
+      "pubDate": "2023-12-31T21:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ICP price eyes $14: Are predictions calling for a happy new year?",
+      "link": "https://cryptopanic.com/news/internet-computer/19142966/ICP-price-eyes-14-Are-predictions-calling-for-a-happy-new-year",
+      "pubDate": "2023-12-31T20:30:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ]
+    },
+    {
+      "title": "U.S. Prosecutors Won’t Pursue Second Trial Against FTX Founder Sam Bankman-Fried: Report",
+      "link": "https://cryptopanic.com/news/19142941/US-Prosecutors-Wont-Pursue-Second-Trial-Against-FTX-Founder-Sam-Bankman-Fried-Report",
+      "pubDate": "2023-12-31T19:45:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "IOTA and Shimmer: Laying the Groundwork for Growth",
+      "link": "https://cryptopanic.com/news/19142764/IOTA-and-Shimmer-Laying-the-Groundwork-for-Growth?mtm_campaign=API-OFA",
+      "pubDate": "2023-12-31T15:55:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "2023 has been a revolutionary year for IOTA. From the launch of ShimmerEVM and its smart contracts to Stardust bringing tokenization to the IOTA mainnet, we have a lot to cover in our annual review.",
+      "currencies": [
+        "IOTA"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Capital Rotation: A How To Guide On Riding The Wave Of Inflows",
+      "link": "https://cryptopanic.com/news/19142752/Crypto-Capital-Rotation-A-How-To-Guide-On-Riding-The-Wave-Of-Inflows",
+      "pubDate": "2023-12-31T15:45:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Crypto Price Prediction For December 31: ICP, TRB, SEI",
+      "link": "https://cryptopanic.com/news/internet-computer/19142646/Crypto-Price-Prediction-For-December-31-ICP-TRB-SEI",
+      "pubDate": "2023-12-31T13:52:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ICP",
+        "SEI"
+      ]
+    },
+    {
+      "title": "Shiba Inu (SHIB) Is About to Be Topped by This Coin",
+      "link": "https://cryptopanic.com/news/internet-computer/19142511/Shiba-Inu-SHIB-Is-About-to-Be-Topped-by-This-Coin",
+      "pubDate": "2023-12-31T11:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "LTC",
+        "ICP"
+      ]
+    },
+    {
+      "title": "Why Maker (MKR) Can Reach $2,000 as New Year Fever Begins",
+      "link": "https://cryptopanic.com/news/19142484/Why-Maker-MKR-Can-Reach-2000-as-New-Year-Fever-Begins",
+      "pubDate": "2023-12-31T11:02:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "ATOM Accelerator DAO Enhances Cosmos Ecosystem through Community-Driven Initiative",
+      "link": "https://cryptopanic.com/news/19142467/ATOM-Accelerator-DAO-Enhances-Cosmos-Ecosystem-through-Community-Driven-Initiative",
+      "pubDate": "2023-12-31T10:41:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The Cosmos community has approved a significant allocation of over 975,000 ATOM tokens to establish the ATOM Accelerator DAO (AADAO), marking a major step forward in the evolution of the Cosmos ecosystem. The initiative is poised to create a long-lasting, community-owned organization dedicated to nurturing and advancing the Cosmos Hub and its native ATOM token. […]",
+      "currencies": [
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ICP Skyrockets 35% Daily, BTC Reclaims $42K and Eyes $43K (Weekend Watch)",
+      "link": "https://cryptopanic.com/news/internet-computer/19142398/ICP-Skyrockets-35-Daily-BTC-Reclaims-42K-and-Eyes-43K-Weekend-Watch",
+      "pubDate": "2023-12-31T09:45:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ICP"
+      ]
+    },
+    {
+      "title": "Quant Trades Sideways While The $150 Barrier Remains Stable",
+      "link": "https://cryptopanic.com/news/19142516/Quant-Trades-Sideways-While-The-150-Barrier-Remains-Stable",
+      "pubDate": "2023-12-31T08:56:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QNT"
+      ]
+    },
+    {
+      "title": "MKR surges 4% in 24 hours, is this why?",
+      "link": "https://cryptopanic.com/news/19142332/MKR-surges-4-in-24-hours-is-this-why",
+      "pubDate": "2023-12-31T08:30:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "ICP Closes the Year with a 30% Jump: Price Targets $14",
+      "link": "https://cryptopanic.com/news/internet-computer/19142320/ICP-Closes-the-Year-with-a-30-Jump-Price-Targets-14",
+      "pubDate": "2023-12-31T08:17:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ]
+    },
+    {
+      "title": "What is Synthetix’s Impact and Potential in the Burgeoning World of DeFi?",
+      "link": "https://cryptopanic.com/news/19142212/What-is-Synthetixs-Impact-and-Potential-in-the-Burgeoning-World-of-DeFi",
+      "pubDate": "2023-12-31T03:51:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SNX"
+      ]
+    },
+    {
+      "title": "How Decentraland Aims For A Fully Autonomous Virtual Universe with LAND and MANA",
+      "link": "https://cryptopanic.com/news/19142202/How-Decentraland-Aims-For-A-Fully-Autonomous-Virtual-Universe-with-LAND-and-MANA",
+      "pubDate": "2023-12-31T02:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MANA"
+      ]
+    },
+    {
+      "title": "Privacy-Focused Altcoins Suffer Price Drops After Crypto Exchange OKX Says It Will Delist Monero, Zcash and Dash",
+      "link": "https://cryptopanic.com/news/19142101/Privacy-Focused-Altcoins-Suffer-Price-Drops-After-Crypto-Exchange-OKX-Says-It-Will-Delist-Monero-Zcash-and-Dash",
+      "pubDate": "2023-12-31T01:00:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDC",
+        "XMR",
+        "ZEC",
+        "DASH"
+      ]
+    }
+  ]
+}

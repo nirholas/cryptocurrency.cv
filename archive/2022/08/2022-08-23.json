@@ -1,0 +1,527 @@
+{
+  "date": "2022-08-23",
+  "fetchedAt": "2026-02-05T07:27:07.718Z",
+  "articleCount": 36,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Institutional Investor Sentiment Remains Negative As Bitcoin Outflows Continue",
+      "link": "https://cryptopanic.com/news/16129290/Institutional-Investor-Sentiment-Remains-Negative-As-Bitcoin-Outflows-Continue",
+      "pubDate": "2022-08-23T23:00:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Institutional investor sentiment has been on the rocks for some time now. This follows the market trend with bitcoin falling below $22,000 and the total crypto market cap finally making its way below $1 trillion once more. With this, institutional investors continue to show a more bearish attitude toward the market. The numbers for last week are in, and the outflows from various digital assets show that big money is not betting on bitcoin. Institutional Investors Exit Bitcoin The exit from bitco",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ontario securities regulator warns against Kucoin in latest alert",
+      "link": "https://cryptopanic.com/news/16129139/Ontario-securities-regulator-warns-against-Kucoin-in-latest-alert",
+      "pubDate": "2022-08-23T21:59:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The OSC has issued another consumer alert warning residents of unregistered crypto platforms, including Kucoin.",
+      "currencies": [
+        "KCS"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Shibaswap Volume Crashes More Than $1.6B in Yearly Low",
+      "link": "https://cryptopanic.com/news/16129069/Shibaswap-Volume-Crashes-More-Than-16B-in-Yearly-Low",
+      "pubDate": "2022-08-23T21:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Shibaswap saw a steep fall in trading volume in July due to a decline in the liquidity poured into alternate coins (altcoins) listed on the platform.",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @flow_blockchain: If you haven't checked out @onjoyride yet, they just launched Trickshot Blitz - your classic pool game - and players h…",
+      "link": "https://cryptopanic.com/news/16135180/RT-flow_blockchain-If-you-havent-checked-out-onjoyride-yet-they-just-launched-Trickshot-Blitz-your-classic-pool-game-and-players-h",
+      "pubDate": "2022-08-23T19:10:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RLY"
+      ]
+    },
+    {
+      "title": "Great coverage of RLY Protocol by @thenewstack",
+      "link": "https://cryptopanic.com/news/16135181/Great-coverage-of-RLY-Protocol-by-thenewstack",
+      "pubDate": "2022-08-23T18:41:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RLY"
+      ]
+    },
+    {
+      "title": "Bitcoin Basher Peter Schiff Pounces Again, Warns BTC Doomed For Another Terrifying Crash",
+      "link": "https://cryptopanic.com/news/bitcoin/16128596/Bitcoin-Basher-Peter-Schiff-Pounces-Again-Warns-BTC-Doomed-For-Another-Terrifying-Crash",
+      "pubDate": "2022-08-23T18:23:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Peter Schiff, one of bitcoin’s most notorious bears, is sticking by his prediction that the benchmark cryptocurrency is on the verge of more bloodletting.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin (BTC) Will Not Reach New ATH Until 2025 – 7991 People Poll",
+      "link": "https://cryptopanic.com/news/bitcoin/16128579/Bitcoin-BTC-Will-Not-Reach-New-ATH-Until-2025-7991-People-Poll",
+      "pubDate": "2022-08-23T18:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "According to the results of a survey released today, 47% of respondents believe that Bitcoin (BTC) will not reach a new ATH until 2025. This result reflects the extremely pessimistic sentiment of cryptocurrency market participants, which is further confirmed by data from Google Trends.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Time for another #XYO heuristic spotlight! XYO is designed to witness heuristic data so it can be analyzed and turn…",
+      "link": "https://cryptopanic.com/news/16136690/Time-for-another-XYO-heuristic-spotlight-XYO-is-designed-to-witness-heuristic-data-so-it-can-be-analyzed-and-turn",
+      "pubDate": "2022-08-23T17:33:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XYO"
+      ]
+    },
+    {
+      "title": "How a Hacker Lost His ETH While Attacking Rainbow Bridge",
+      "link": "https://cryptopanic.com/news/16128416/How-a-Hacker-Lost-His-ETH-While-Attacking-Rainbow-Bridge",
+      "pubDate": "2022-08-23T17:25:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Aurora Labs’ security system warded off yet another bridge attack, slashing the attacker of $8,000 worth of ETH in the process.",
+      "currencies": [
+        "ETH",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "These #BitcoinSV tools and resources will help you develop, implement, and maintain an optimal node infrastructure:…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/16130862/These-BitcoinSV-tools-and-resources-will-help-you-develop-implement-and-maintain-an-optimal-node-infrastructure",
+      "pubDate": "2022-08-23T15:51:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "Find out how to get your hands on the #RIF ecosystem stablecoin #RDOC and start your #EverydayDeFi journey!",
+      "link": "https://cryptopanic.com/news/16135163/Find-out-how-to-get-your-hands-on-the-RIF-ecosystem-stablecoin-RDOC-and-start-your-EverydayDeFi-journey",
+      "pubDate": "2022-08-23T15:12:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "RIF"
+      ]
+    },
+    {
+      "title": "Very excited to announce @NexusMutual has deposited 15,348 ETH ($25M) into @enzymefinance to access attractive yiel…",
+      "link": "https://cryptopanic.com/news/16132168/Very-excited-to-announce-NexusMutual-has-deposited-15348-ETH-25M-into-enzymefinance-to-access-attractive-yiel",
+      "pubDate": "2022-08-23T15:10:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "MLN"
+      ]
+    },
+    {
+      "title": "DOGE and SHIB Have Never Been So Close to Losing Their Places at Market Cap Top",
+      "link": "https://cryptopanic.com/news/16127896/DOGE-and-SHIB-Have-Never-Been-So-Close-to-Losing-Their-Places-at-Market-Cap-Top",
+      "pubDate": "2022-08-23T15:02:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @NexusMutual: We’re excited to announce that 15,348 ETH has been deployed into our @enzymefinance vault and deposited in @Maven11Capital…",
+      "link": "https://cryptopanic.com/news/16132169/RT-NexusMutual-Were-excited-to-announce-that-15348-ETH-has-been-deployed-into-our-enzymefinance-vault-and-deposited-in-Maven11Capital",
+      "pubDate": "2022-08-23T15:00:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "MLN"
+      ]
+    },
+    {
+      "title": "Suggestions for improving Status? Please drop by our Github and make an issue!",
+      "link": "https://cryptopanic.com/news/16127839/Suggestions-for-improving-Status-Please-drop-by-our-Github-and-make-an-issue",
+      "pubDate": "2022-08-23T15:00:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SNT"
+      ]
+    },
+    {
+      "title": "El Salvador’s Bitcoin policy could lead the change in global monetary system – Simon Dixon",
+      "link": "https://cryptopanic.com/news/bitcoin/16127632/El-Salvadors-Bitcoin-policy-could-lead-the-change-in-global-monetary-system-Simon-Dixon",
+      "pubDate": "2022-08-23T14:00:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Prominent investor Simon Dixon recently described El Salvador’s Bitcoin policy as “very responsible” and said it could be the first domino to fall in bringing down the International Monetary Fund’s (IMF) “fiat-based Ponzi scheme” debt mechanism if it succeeds.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BitGo Acquisition Terminated- How Safe is WBTC Now?",
+      "link": "https://cryptopanic.com/news/wrapped-bitcoin/16127407/BitGo-Acquisition-Terminated-How-Safe-is-WBTC-Now",
+      "pubDate": "2022-08-23T13:00:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "✴︎Sign Up Here for the CT Club! https://patreon.com/cryptotips ✴︎Ledger hardware wallets 👉 https://shop.ledger.com/pages/ledger-nano-x/?r=67ef ✴︎Trezor hardware wallet 👉 https://shop.trezor.io/?offer_id=10&aff_id=10937 ✴︎Buy Gift Cards with Your Crypto! 👉 https://www.bitrefill.com/signup?code=47y2uwl4 ✴︎10% Binance Discount 👉https://www.binance.com/en/register?ref=OTL6ACPP ✴︎Begin Trading with Tradingview 👉 https://www.tradingview.com/gopro/?share_your_love=RealCryptoTips ✴︎Heidi Twitter: h",
+      "currencies": [
+        "WBTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Cryptonewsz highlighted that #Buyaladdin will enable entrepreneurs to maximize their profits and crypto enthusiasts…",
+      "link": "https://cryptopanic.com/news/16130261/Cryptonewsz-highlighted-that-Buyaladdin-will-enable-entrepreneurs-to-maximize-their-profits-and-crypto-enthusiasts",
+      "pubDate": "2022-08-23T12:41:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ABBC"
+      ]
+    },
+    {
+      "title": "As part of the ABBC ecosystem, the #Buyaladdin crypto online shopping mall will allow users from across the globe t…",
+      "link": "https://cryptopanic.com/news/16130262/As-part-of-the-ABBC-ecosystem-the-Buyaladdin-crypto-online-shopping-mall-will-allow-users-from-across-the-globe-t",
+      "pubDate": "2022-08-23T11:29:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ABBC"
+      ]
+    },
+    {
+      "title": "Using #Buyaladdin, shoppers can easily pay with cryptocurrency on their mobile devices. Initially, the app will be…",
+      "link": "https://cryptopanic.com/news/16130263/Using-Buyaladdin-shoppers-can-easily-pay-with-cryptocurrency-on-their-mobile-devices-Initially-the-app-will-be",
+      "pubDate": "2022-08-23T10:57:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ABBC"
+      ]
+    },
+    {
+      "title": "Ethereum overtakes reigning champion Cardano in terms of…",
+      "link": "https://cryptopanic.com/news/16126954/Ethereum-overtakes-reigning-champion-Cardano-in-terms-of",
+      "pubDate": "2022-08-23T10:30:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The developers of a blockchain network play a critical role in the growth and expansion of the network. From designing and maintaining the architecture to building smart contracts — developers do it all. And, in light of recent developments, Ethereum [ETH] has come out on top to have the maximum developer activity. All hail ETH […]",
+      "currencies": [
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @HashKeyDID: OST #Klaymakers22 will be available in an hour at 19:00 SGT. People who already joined our campaign before 11 a.m. 23. Aug…",
+      "link": "https://cryptopanic.com/news/klay-token/16133404/RT-HashKeyDID-OST-Klaymakers22-will-be-available-in-an-hour-at-1900-SGT-People-who-already-joined-our-campaign-before-11-am-23-Aug",
+      "pubDate": "2022-08-23T10:10:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "Watch this Q&A session at @EBlockchainCon where @VMarinchuk welcomes @_rafa_js, @JayGujral & @mikesoundoshi to answ…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/16130863/Watch-this-QampA-session-at-EBlockchainCon-where-VMarinchuk-welcomes-_rafa_js-JayGujral-amp-mikesoundoshi-to-answ",
+      "pubDate": "2022-08-23T10:06:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "Ethereum is currently the most actively developed crypto, Polkadot ranks 2nd",
+      "link": "https://cryptopanic.com/news/16125805/Ethereum-is-currently-the-most-actively-developed-crypto-Polkadot-ranks-2nd",
+      "pubDate": "2022-08-23T09:17:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "As the cryptocurrency sector navigates through a bear market, different projects appear unfazed by the conditions accelerating development activities on... Continue reading",
+      "currencies": [
+        "ETH",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "1 Day Left for #LUNA & #LUNC Listing Giveaway: 10,000 USDD Airdrop! @terra_money Deposit to win from 2,00…",
+      "link": "https://cryptopanic.com/news/usdd/16124684/1-Day-Left-for-LUNA-amp-LUNC-Listing-Giveaway-10000-USDD-Airdrop-terra_money-Deposit-to-win-from-200",
+      "pubDate": "2022-08-23T08:37:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDD",
+        "ETHW",
+        "ETHS"
+      ]
+    },
+    {
+      "title": "RT @sayantanxyz: coming soon @ProjectSerum",
+      "link": "https://cryptopanic.com/news/16125317/RT-sayantanxyz-coming-soon-ProjectSerum",
+      "pubDate": "2022-08-23T08:03:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SRM"
+      ]
+    },
+    {
+      "title": "Over 100k users watched Primebox X #ETH 2.0 Carnival on Huobi Live @Huobi_Research",
+      "link": "https://cryptopanic.com/news/16132405/Over-100k-users-watched-Primebox-X-ETH-20-Carnival-on-Huobi-Live-Huobi_Research?mtm_campaign=API-OFA",
+      "pubDate": "2022-08-23T07:52:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "HT",
+        "FLZ"
+      ]
+    },
+    {
+      "title": "$NPT $KLAY $TRX #Staking are now available! Download the #NEOPIN App now and stake your tokens to boost your earnin…",
+      "link": "https://cryptopanic.com/news/klay-token/16124248/NPT-KLAY-TRX-Staking-are-now-available-Download-the-NEOPIN-App-now-and-stake-your-tokens-to-boost-your-earnin",
+      "pubDate": "2022-08-23T05:52:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "KLAY",
+        "NPT"
+      ]
+    },
+    {
+      "title": "A major milestone for us in securing a Capital Markets Services licence granted by the Monetary Authority of Singap…",
+      "link": "https://cryptopanic.com/news/16121048/A-major-milestone-for-us-in-securing-a-Capital-Markets-Services-licence-granted-by-the-Monetary-Authority-of-Singap?mtm_campaign=API-OFA",
+      "pubDate": "2022-08-23T05:52:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "CHEX"
+      ]
+    },
+    {
+      "title": "Hacker Loses 5 ETH (~$8,000) In Failed Attack on NEAR Rainbow Bridge",
+      "link": "https://cryptopanic.com/news/16119910/Hacker-Loses-5-ETH-8000-In-Failed-Attack-on-NEAR-Rainbow-Bridge",
+      "pubDate": "2022-08-23T04:37:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Aurora Labs CEO Alex Shevchenko said that on Aug. 22 a hacker lost 5 Ethereum (ETH) in a failed attack on the NEAR/ETH Rainbow Bridge over the weekend. No user funds were lost.",
+      "currencies": [
+        "ETH",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Price Lost 20% Weekly, What’s The Key Support Now?",
+      "link": "https://cryptopanic.com/news/bitcoin/16119836/Ethereum-Price-Lost-20-Weekly-Whats-The-Key-Support-Now",
+      "pubDate": "2022-08-23T04:00:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum price has witnessed a tough time lately, the altcoin logged heavy losses over the past one week. Broader market weakness could be blamed for the coin’s current price momentum. Bitcoin slid on its chart and was trading at $21,000 at the time of writing. Other altcoin also depreciated following BTC’s price action. Over the last 24 hours, Ethereum price fell by 4%. It has been a...",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "I just published Axie Infinity Removes Prizes From Classic Games And Invites P2E Players To Move To New Mode Read…",
+      "link": "https://cryptopanic.com/news/axie-infinity/16123499/I-just-published-Axie-Infinity-Removes-Prizes-From-Classic-Games-And-Invites-P2E-Players-To-Move-To-New-Mode-Read",
+      "pubDate": "2022-08-23T03:02:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS",
+        "LEGO"
+      ]
+    },
+    {
+      "title": "RT @weiweigeng: Built on @RLYNetworkAssoc v2, the new Unite is also coming together with more exciting projects!",
+      "link": "https://cryptopanic.com/news/16124983/RT-weiweigeng-Built-on-RLYNetworkAssoc-v2-the-new-Unite-is-also-coming-together-with-more-exciting-projects",
+      "pubDate": "2022-08-23T02:56:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "RLY"
+      ]
+    },
+    {
+      "title": "From recording LP positions to managing community resources, the growing adoption of #NFT in #DeFi may have become…",
+      "link": "https://cryptopanic.com/news/16120702/From-recording-LP-positions-to-managing-community-resources-the-growing-adoption-of-NFT-in-DeFi-may-have-become",
+      "pubDate": "2022-08-23T02:01:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BEL"
+      ]
+    },
+    {
+      "title": "EOS Price Rallied By 10%, Coin To Retest $2?",
+      "link": "https://cryptopanic.com/news/16119542/EOS-Price-Rallied-By-10-Coin-To-Retest-2",
+      "pubDate": "2022-08-23T01:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "EOS price has propelled by 10% and now is one of the top gainers over the 24 hours. This has pushed the coin quite close to its next price resistance. The bulls were back on the 24 hour chart and that depicted positive price action for the coin. Despite Bitcoin falling on the chart and other major altcoins moving south EOS noted a considerable surge in price. EOS price also depicts a broad wedge pattern, this pattern is often tied to exhaustion of a trend. In this case, EOS price was reversing i",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @coin_with_us: If you want 10 free entries for the 100K XYO. You have 24 hours to claim your free entries. Alternatively, you can claim…",
+      "link": "https://cryptopanic.com/news/16126438/RT-coin_with_us-If-you-want-10-free-entries-for-the-100K-XYO-You-have-24-hours-to-claim-your-free-entries-Alternatively-you-can-claim",
+      "pubDate": "2022-08-23T00:08:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XYO"
+      ]
+    }
+  ]
+}

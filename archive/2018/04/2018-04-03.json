@@ -1,0 +1,26 @@
+{
+  "date": "2018-04-03",
+  "fetchedAt": "2026-02-05T07:27:06.972Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "After Championing the Blockchain Revolution, IBM is now Preaching Cryptocurrencies to Central Banks",
+      "link": "https://cryptopanic.com/news/1556430/After-Championing-the-Blockchain-Revolution-IBM-is-now-Preaching-Cryptocurrencies-to-Central-Banks",
+      "pubDate": "2018-04-03T21:00:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

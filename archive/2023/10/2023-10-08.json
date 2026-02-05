@@ -1,0 +1,374 @@
+{
+  "date": "2023-10-08",
+  "fetchedAt": "2026-02-05T07:27:07.051Z",
+  "articleCount": 27,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "These 2 Blockchains Dominated Transaction Fees Over Past 12 Months: Bloomberg Analyst",
+      "link": "https://cryptopanic.com/news/18955699/These-2-Blockchains-Dominated-Transaction-Fees-Over-Past-12-Months-Bloomberg-Analyst",
+      "pubDate": "2023-10-08T23:49:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Bloomberg crypto analyst Jamie Coutts declares that two blockchains have taken the lion’s share of transaction fees among all smart contract and Proof-of-Stake (PoS) blockchains over the last twelve months. The Ethereum and TRON networks accounted for a substantial 88% of the total transaction fees, with Ethereum leading at 57% and TRON following closely behind at 31%. Two...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Five teams receive awards at Singapore GAS Station, the final stop ahead of the grand finale in Hong Kong",
+      "link": "https://cryptopanic.com/news/18955683/Five-teams-receive-awards-at-Singapore-GAS-Station-the-final-stop-ahead-of-the-grand-finale-in-Hong-Kong",
+      "pubDate": "2023-10-08T23:30:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Will the Current Recovery Push LUNC Price Above $0.0001?",
+      "link": "https://cryptopanic.com/news/18955588/Will-the-Current-Recovery-Push-LUNC-Price-Above-00001",
+      "pubDate": "2023-10-08T20:07:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LUNC"
+      ]
+    },
+    {
+      "title": "Huobi Reclaims $8 Million In Stolen Ethereum After Offering Bounty to Hacker",
+      "link": "https://cryptopanic.com/news/18955512/Huobi-Reclaims-8-Million-In-Stolen-Ethereum-After-Offering-Bounty-to-Hacker",
+      "pubDate": "2023-10-08T18:31:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "HT"
+      ]
+    },
+    {
+      "title": "An Analyst Warns on TUSD, stUSDT, and Huobi/HTX",
+      "link": "https://cryptopanic.com/news/huobi-token/18955483/An-Analyst-Warns-on-TUSD-stUSDT-and-HuobiHTX",
+      "pubDate": "2023-10-08T17:55:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "Respected analyst Dylan Leclair has recently put together a thread warning crypto market participants about some questions around TUSD, stUSDT and other assets surrounding Huobi/HTX. In the spirit of starting the next bull market cleaner than we left the last one, NLW presents the thread: https://twitter. com/DylanLeClair_/status/1709712204675555651 Enjoying this content? SUBSCRIBE to the Podcast: https://pod. link/1438693620 Watch on YouTube: https://www",
+      "currencies": [
+        "TUSD",
+        "HT",
+        "HTX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "XMR breaks above $150: Can buyers extend gains?",
+      "link": "https://cryptopanic.com/news/18955462/XMR-breaks-above-150-Can-buyers-extend-gains",
+      "pubDate": "2023-10-08T17:30:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "This is the extent of Binance’s regulatory woes",
+      "link": "https://cryptopanic.com/news/18955408/This-is-the-extent-of-Binances-regulatory-woes",
+      "pubDate": "2023-10-08T16:30:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BUSD"
+      ]
+    },
+    {
+      "title": "Top Altcoins to Watch Next Week: LTC, SOL, and MATIC",
+      "link": "https://cryptopanic.com/news/18955405/Top-Altcoins-to-Watch-Next-Week-LTC-SOL-and-MATIC",
+      "pubDate": "2023-10-08T16:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "MATIC",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Here’s what ChatGPT thinks about Litecoin’s next move",
+      "link": "https://cryptopanic.com/news/18955260/Heres-what-ChatGPT-thinks-about-Litecoins-next-move",
+      "pubDate": "2023-10-08T14:22:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Bitcoin Mining Giant Bitmain Halted Employee Salaries",
+      "link": "https://cryptopanic.com/news/18955268/Bitcoin-Mining-Giant-Bitmain-Halted-Employee-Salaries",
+      "pubDate": "2023-10-08T14:22:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "ChatGPT has extremely high expectations for Filecoin’s 2023 journey",
+      "link": "https://cryptopanic.com/news/18955261/ChatGPT-has-extremely-high-expectations-for-Filecoins-2023-journey",
+      "pubDate": "2023-10-08T14:20:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "ChatGPT appears a tad too enthusiastic about Ethereum Classic’s 2023 prospects",
+      "link": "https://cryptopanic.com/news/18955230/ChatGPT-appears-a-tad-too-enthusiastic-about-Ethereum-Classics-2023-prospects",
+      "pubDate": "2023-10-08T13:50:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "I asked ChatGPT to forecast Polkadot’s 2023 price trends, it obliged",
+      "link": "https://cryptopanic.com/news/18955214/I-asked-ChatGPT-to-forecast-Polkadots-2023-price-trends-it-obliged",
+      "pubDate": "2023-10-08T13:42:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Coinbase Ranks As Second Largest ETH Staking Entity As Lido’s Dominance Raises Concerns",
+      "link": "https://cryptopanic.com/news/18955228/Coinbase-Ranks-As-Second-Largest-ETH-Staking-Entity-As-Lidos-Dominance-Raises-Concerns",
+      "pubDate": "2023-10-08T13:40:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "FLOW",
+        "LDO"
+      ]
+    },
+    {
+      "title": "Can Filecoin clear the $3.4 hurdle?",
+      "link": "https://cryptopanic.com/news/18955209/Can-Filecoin-clear-the-34-hurdle",
+      "pubDate": "2023-10-08T13:30:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "HBAR May Hold More Promise Than XRP, According to Analyst",
+      "link": "https://cryptopanic.com/news/18955155/HBAR-May-Hold-More-Promise-Than-XRP-According-to-Analyst",
+      "pubDate": "2023-10-08T12:49:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Ripple trial: Legal expert dismisses SEC’s odds, presents 2 alternative paths",
+      "link": "https://cryptopanic.com/news/18955127/Ripple-trial-Legal-expert-dismisses-SECs-odds-presents-2-alternative-paths",
+      "pubDate": "2023-10-08T12:19:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The legal dispute between blockchain company Ripple and the Securities and Exchange Commission (SEC) continues to capture significant attention as … Continued",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Highest Crypto Gainers of the Week; TWT, RNDR, BSV Price Analysis",
+      "link": "https://cryptopanic.com/news/18955090/Highest-Crypto-Gainers-of-the-Week-TWT-RNDR-BSV-Price-Analysis",
+      "pubDate": "2023-10-08T11:48:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ]
+    },
+    {
+      "title": "Why MKR’s Q4 rests on its whales",
+      "link": "https://cryptopanic.com/news/18955065/Why-MKRs-Q4-rests-on-its-whales",
+      "pubDate": "2023-10-08T11:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Weekly Cryptocurrency Market Analysis: Altcoins Continue Their Uptrend But Are In An Overbought Condition",
+      "link": "https://cryptopanic.com/news/18955157/Weekly-Cryptocurrency-Market-Analysis-Altcoins-Continue-Their-Uptrend-But-Are-In-An-Overbought-Condition",
+      "pubDate": "2023-10-08T09:38:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STX",
+        "RNDR",
+        "TWT"
+      ]
+    },
+    {
+      "title": "Cardano Founder Charles Hoskinson Refutes Claims of Abandoned Projects",
+      "link": "https://cryptopanic.com/news/18954948/Cardano-Founder-Charles-Hoskinson-Refutes-Claims-of-Abandoned-Projects",
+      "pubDate": "2023-10-08T09:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Cardano founder Charles Hoskinson recently took to X to voice spirited defense against allegations of abandoning projects",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 8
+      }
+    },
+    {
+      "title": "ChatGPT CEO warns US government wants to control Bitcoin",
+      "link": "https://cryptopanic.com/news/18954937/ChatGPT-CEO-warns-US-government-wants-to-control-Bitcoin",
+      "pubDate": "2023-10-08T09:14:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Sam Altman, the founder of OpenAI, the parent company behind the interactive artificial intelligence (AI) platform ChatGPT, has voiced his … Continued",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "These Are This Week’s Top Performers as Bitcoin Price Stalls at $28K (Weekend Watch)",
+      "link": "https://cryptopanic.com/news/18954914/These-Are-This-Weeks-Top-Performers-as-Bitcoin-Price-Stalls-at-28K-Weekend-Watch",
+      "pubDate": "2023-10-08T08:51:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TWT"
+      ]
+    },
+    {
+      "title": "Quant Hovers Over $85, Bearish Trend Approaching",
+      "link": "https://cryptopanic.com/news/18955156/Quant-Hovers-Over-85-Bearish-Trend-Approaching",
+      "pubDate": "2023-10-08T07:39:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "QNT"
+      ]
+    },
+    {
+      "title": "Tron: Is the bullish rebound enough for an uptrend?",
+      "link": "https://cryptopanic.com/news/18954861/Tron-Is-the-bullish-rebound-enough-for-an-uptrend",
+      "pubDate": "2023-10-08T07:30:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ]
+    },
+    {
+      "title": "Cosmos-Based Stride Governance Token, STRD, Surges 330% YTD, Outperforming ETH and LDO",
+      "link": "https://cryptopanic.com/news/18954770/Cosmos-Based-Stride-Governance-Token-STRD-Surges-330-YTD-Outperforming-ETH-and-LDO",
+      "pubDate": "2023-10-08T04:32:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ATOM",
+        "LDO"
+      ]
+    },
+    {
+      "title": "Huobi hacker returns 4997 ETH stolen via hot wallet breach, receives $400k bounty",
+      "link": "https://cryptopanic.com/news/18954763/Huobi-hacker-returns-4997-ETH-stolen-via-hot-wallet-breach-receives-400k-bounty",
+      "pubDate": "2023-10-08T04:00:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "HT"
+      ]
+    }
+  ]
+}

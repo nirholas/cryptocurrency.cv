@@ -1,0 +1,302 @@
+{
+  "date": "2021-02-17",
+  "fetchedAt": "2026-02-05T07:27:06.844Z",
+  "articleCount": 20,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "$PCI just passed $5. ATH",
+      "link": "https://cryptopanic.com/news/11505747/PCI-just-passed-5-ATH?mtm_campaign=API-OFA",
+      "pubDate": "2021-02-17T23:42:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PCI"
+      ]
+    },
+    {
+      "title": "Cosmos Upgrades to Stargate: Another 2017 ICO Very Nearly Completes Its Vision",
+      "link": "https://cryptopanic.com/news/11503083/Cosmos-Upgrades-to-Stargate-Another-2017-ICO-Very-Nearly-Completes-Its-Vision",
+      "pubDate": "2021-02-17T22:57:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The last step before inter-blockchain communication goes live early Thursday.",
+      "currencies": [
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Join Major League Hacking for a free online blockchain workshop this Friday the 19th at 7 PM EST and build a blockchain-based taco store!",
+      "link": "https://cryptopanic.com/news/11521826/Join-Major-League-Hacking-for-a-free-online-blockchain-workshop-this-Friday-the-19th-at-7-PM-EST-and-build-a-blockchain-based-taco-store",
+      "pubDate": "2021-02-17T22:51:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Check out the first @catnip_exchange market using @BalancerLabs smart pools! Trading will automatically halt before…",
+      "link": "https://cryptopanic.com/news/11503873/Check-out-the-first-catnip_exchange-market-using-BalancerLabs-smart-pools-Trading-will-automatically-halt-before",
+      "pubDate": "2021-02-17T22:28:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "REP"
+      ]
+    },
+    {
+      "title": "Why We Should Take Dogecoin Seriously",
+      "link": "https://cryptopanic.com/news/dogecoin/11503074/Why-We-Should-Take-Dogecoin-Seriously",
+      "pubDate": "2021-02-17T22:27:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin's rise reflects the power of collective belief and a longing for a more ideal form of crypto.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Dogecoin Prepares for a Bullish Impulse Towards New All-Time Highs",
+      "link": "https://cryptopanic.com/news/dogecoin/11502674/Dogecoin-Prepares-for-a-Bullish-Impulse-Towards-New-All-Time-Highs",
+      "pubDate": "2021-02-17T18:28:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Dogecoin entered a consolidation period after surging by nearly 1,100% in late January. Despite these gains, one of the most prominent technical analysts in the industry believes that DOGE has room for growth. Dogecoin May Resume Uptrend Peter Brandt, CEO of Factor LLC, recently commented on Dogecoin’s price action for the first time. Although the trading veteran maintains that Bitcoin...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 10
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Did you know #CounosBit offers 100 times more coins than #Bitcoin? Counos Bit, or #Cbits, is a new #hard_fork of…",
+      "link": "https://cryptopanic.com/news/11504318/Did-you-know-CounosBit-offers-100-times-more-coins-than-Bitcoin-Counos-Bit-or-Cbits-is-a-new-hard_fork-of",
+      "pubDate": "2021-02-17T18:25:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "IOTA Pumps But Fails to Reach Long-Term Resistance",
+      "link": "https://cryptopanic.com/news/11502642/IOTA-Pumps-But-Fails-to-Reach-Long-Term-Resistance",
+      "pubDate": "2021-02-17T18:07:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "While the long-term chart suggests that IOTA will eventually reach this area, it’s not yet clear if the short-term downward move has ended or if another low awaits. IOTA Approaches Long-Term Resistance The weekly chart shows that IOTA has increased significantly during the previous week and has resumed its upward movement this week. So far, … Continued",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Want to learn Solidity and get into the driver's seat of the DeFi craze? CryptoZombies continues to be one of the m…",
+      "link": "https://cryptopanic.com/news/11505328/Want-to-learn-Solidity-and-get-into-the-drivers-seat-of-the-DeFi-craze-CryptoZombies-continues-to-be-one-of-the-m",
+      "pubDate": "2021-02-17T17:47:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "LOOM"
+      ]
+    },
+    {
+      "title": "Dogecoin: Will it still be a joke if it touches $1?",
+      "link": "https://cryptopanic.com/news/dogecoin/11502590/Dogecoin-Will-it-still-be-a-joke-if-it-touches-1",
+      "pubDate": "2021-02-17T17:30:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "When Jackson Palmer created Dogecoin and launched the crypto-asset on 6 December 2013, he certainly did not expect a potential colonizer of Mars to be talking about it on a social media platform. Fast-forward to 2021, and Dogecoin has spiked by more than 800% in a flash, fueling chaos and pushing popular media outlets to […]",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 25
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Polkadot Officially Releases Parachain And Slot Auction Rollout Plan, Setting Up Full Protocol Launch",
+      "link": "https://cryptopanic.com/news/polkadot/11502301/Polkadot-Officially-Releases-Parachain-And-Slot-Auction-Rollout-Plan-Setting-Up-Full-Protocol-Launch",
+      "pubDate": "2021-02-17T15:34:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Polkadot, enabling custom side-chains to connect with public blockchains, released a roadmap outlining the next steps in their para chain rollout. Parachains facilitate the vision of Polkadot’s scalable multi-chain architecture enabled by on-chain governance. The rollout coincides with its DOT token soaring above $30, setting an all-time high for the crypto as Polkadot announces it’s in the...",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 25,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "“In the fully-realized digital age, the linkages that the internet creates along with digital asset representations…",
+      "link": "https://cryptopanic.com/news/11504175/In-the-fully-realized-digital-age-the-linkages-that-the-internet-creates-along-with-digital-asset-representations?mtm_campaign=API-OFA",
+      "pubDate": "2021-02-17T15:08:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHEX"
+      ]
+    },
+    {
+      "title": "Dubai Free Zone Becomes First UAE Government Entity to Accept Bitcoin",
+      "link": "https://cryptopanic.com/news/11501882/Dubai-Free-Zone-Becomes-First-UAE-Government-Entity-to-Accept-Bitcoin",
+      "pubDate": "2021-02-17T12:09:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The free zone accepts payments in bitcoin, ether and the tether stablecoin.",
+      "currencies": [
+        "BTC",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum CryptoPunks Are Selling for Outrageous Sums of Money",
+      "link": "https://cryptopanic.com/news/ethereum/11501819/Ethereum-CryptoPunks-Are-Selling-for-Outrageous-Sums-of-Money",
+      "pubDate": "2021-02-17T11:41:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A picture of a male “punk” sold for over 78 ETH (≈$136,000) this morning. But critics aren't impressed.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Polkadot indicator? Data shows Bitcoin has been following DOT price for months",
+      "link": "https://cryptopanic.com/news/polkadot/11501738/Polkadot-indicator-Data-shows-Bitcoin-has-been-following-DOT-price-for-months",
+      "pubDate": "2021-02-17T11:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Data shows DOT's price action has been a bellwether for Bitcoin over the past few months.",
+      "currencies": [
+        "BTC",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "68% of Dogecoin Supply in the Hands of Top 100 Wallets: Coin Metrics Data",
+      "link": "https://cryptopanic.com/news/dogecoin/11501693/68-of-Dogecoin-Supply-in-the-Hands-of-Top-100-Wallets-Coin-Metrics-Data",
+      "pubDate": "2021-02-17T10:10:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Investors are piling onto Dogecoin (DOGE) to elevate its price, but data pointed out by Coin Metrics shows that the supply is heavily concentrated in favor of whales. The top-100 wallets hold 68.1% of the 128 billion DOGE in circulation. Elon Musk, who has made headlines in the crypto space over the past few months, … Continued",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": ".@TomoFinance will adopt #TomoChain as the main chain, issue the same chain-based stable coin for the first time in…",
+      "link": "https://cryptopanic.com/news/11506402/TomoFinance-will-adopt-TomoChain-as-the-main-chain-issue-the-same-chain-based-stable-coin-for-the-first-time-in",
+      "pubDate": "2021-02-17T08:03:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "Paycoin to be supporting #BTC payment. Users will be able to use @Bitcoin in any of the #Paycoin merchants in Korea…",
+      "link": "https://cryptopanic.com/news/11500509/Paycoin-to-be-supporting-BTC-payment-Users-will-be-able-to-use-Bitcoin-in-any-of-the-Paycoin-merchants-in-Korea?mtm_campaign=API-OFA",
+      "pubDate": "2021-02-17T04:06:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "PCI"
+      ]
+    },
+    {
+      "title": "A new survey has found that 5% of companies are considering investing their cash reserves in #Bitcoin by end of 202…",
+      "link": "https://cryptopanic.com/news/11501426/A-new-survey-has-found-that-5-of-companies-are-considering-investing-their-cash-reserves-in-Bitcoin-by-end-of-202",
+      "pubDate": "2021-02-17T02:19:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "SURE"
+      ]
+    },
+    {
+      "title": "RT @Delta_Token: Delta: The 48 Hour Review Period",
+      "link": "https://cryptopanic.com/news/11501410/RT-Delta_Token-Delta-The-48-Hour-Review-Period",
+      "pubDate": "2021-02-17T01:01:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CORE"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2020-02-01",
+  "fetchedAt": "2026-02-05T07:27:08.686Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "VeChain 2.0 Integrating DeFi Operations | VET in Blockchain and Supply Chain",
+      "link": "https://cryptopanic.com/news/vechain/7814326/VeChain-20-Integrating-DeFi-Operations-VET-in-Blockchain-and-Supply-Chain",
+      "pubDate": "2020-02-01T16:43:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

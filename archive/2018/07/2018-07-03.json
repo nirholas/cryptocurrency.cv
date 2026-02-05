@@ -1,0 +1,43 @@
+{
+  "date": "2018-07-03",
+  "fetchedAt": "2026-02-05T07:27:06.866Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "VeChain Revises Roadmap to Address Token Swap Concerns",
+      "link": "https://cryptopanic.com/news/2441951/VeChain-Revises-Roadmap-to-Address-Token-Swap-Concerns",
+      "pubDate": "2018-07-03T19:45:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron Locks Up Billions of TRX Tokens",
+      "link": "https://cryptopanic.com/news/2437252/Tron-Locks-Up-Billions-of-TRX-Tokens",
+      "pubDate": "2018-07-03T13:14:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

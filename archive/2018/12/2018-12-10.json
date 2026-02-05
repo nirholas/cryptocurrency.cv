@@ -1,0 +1,90 @@
+{
+  "date": "2018-12-10",
+  "fetchedAt": "2026-02-05T07:27:06.959Z",
+  "articleCount": 5,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "The Stable Coins Revolution: Tether’s Dominance Had Dropped To a Three Years Low",
+      "link": "https://cryptopanic.com/news/3936165/The-Stable-Coins-Revolution-Tethers-Dominance-Had-Dropped-To-a-Three-Years-Low",
+      "pubDate": "2018-12-10T21:22:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "GUSD"
+      ]
+    },
+    {
+      "title": "TRON Releases Weekly Report, TRON Ecosystem Co-Builder Plan Will Be Launched Soon",
+      "link": "https://cryptopanic.com/news/3933480/TRON-Releases-Weekly-Report-TRON-Ecosystem-Co-Builder-Plan-Will-Be-Launched-Soon",
+      "pubDate": "2018-12-10T16:29:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Four Consecutive Doji Candles for Bitcoin Cash [BCH]",
+      "link": "https://cryptopanic.com/news/3932902/Four-Consecutive-Doji-Candles-for-Bitcoin-Cash-BCH",
+      "pubDate": "2018-12-10T15:39:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Tronics Support Plan Completes Phase Four As More Dapps Move to TRON",
+      "link": "https://cryptopanic.com/news/3931839/Tronics-Support-Plan-Completes-Phase-Four-As-More-Dapps-Move-to-TRON",
+      "pubDate": "2018-12-10T13:59:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "0x Launches Instant, a One-Click Solution to buy ERC Tokens from dApps",
+      "link": "https://cryptopanic.com/news/3927931/0x-Launches-Instant-a-One-Click-Solution-to-buy-ERC-Tokens-from-dApps",
+      "pubDate": "2018-12-10T03:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ZRX"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

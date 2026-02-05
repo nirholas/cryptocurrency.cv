@@ -1,0 +1,57 @@
+{
+  "date": "2018-09-04",
+  "fetchedAt": "2026-02-05T07:27:06.982Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Top 10 Altcoins for 2019",
+      "link": "https://cryptopanic.com/news/tron/3016802/Top-10-Altcoins-for-2019",
+      "pubDate": "2018-09-04T20:08:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "NEO Highlights Its Latest Developments in a New Monthly Report",
+      "link": "https://cryptopanic.com/news/3015717/NEO-Highlights-Its-Latest-Developments-in-a-New-Monthly-Report",
+      "pubDate": "2018-09-04T12:39:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "NEO"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Exchange Bittrex Delists Bitcoin Gold (BTG) over Refusal to Pay",
+      "link": "https://cryptopanic.com/news/3015362/Crypto-Exchange-Bittrex-Delists-Bitcoin-Gold-BTG-over-Refusal-to-Pay",
+      "pubDate": "2018-09-04T10:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BTG"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "date": "2019-03-06",
+  "fetchedAt": "2026-02-05T07:27:06.810Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ripple Consolidation Time: Bullish Above $0.32 Planning The Next Move – XRP Price Analysis Mar.6",
+      "link": "https://cryptopanic.com/news/4756038/Ripple-Consolidation-Time-Bullish-Above-032-Planning-The-Next-Move-XRP-Price-Analysis-Mar6",
+      "pubDate": "2019-03-06T17:50:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "I Larped as a Monero Developer and It Ended in Tears",
+      "link": "https://cryptopanic.com/news/monero/4753646/I-Larped-as-a-Monero-Developer-and-It-Ended-in-Tears",
+      "pubDate": "2019-03-06T14:00:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

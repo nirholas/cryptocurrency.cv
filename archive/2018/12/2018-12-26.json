@@ -1,0 +1,32 @@
+{
+  "date": "2018-12-26",
+  "fetchedAt": "2026-02-05T07:27:06.988Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Weekly Report of Dec.13~19, 2018",
+      "link": "https://cryptopanic.com/news/4086665/Weekly-Report-of-Dec1319-2018",
+      "pubDate": "2018-12-26T06:14:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CTC"
+      ]
+    },
+    {
+      "title": "Merry Christmas from the cryptoBLAST team! ️",
+      "link": "https://cryptopanic.com/news/4086558/Merry-Christmas-from-the-cryptoBLAST-team?mtm_campaign=API-OFA",
+      "pubDate": "2018-12-26T05:46:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BLAST"
+      ]
+    }
+  ]
+}

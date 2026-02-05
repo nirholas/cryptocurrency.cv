@@ -1,0 +1,38 @@
+{
+  "date": "2019-03-01",
+  "fetchedAt": "2026-02-05T07:27:06.982Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Man Behind “My Big Coin” Scam Charged by DOJ",
+      "link": "https://cryptopanic.com/news/4713571/Man-Behind-My-Big-Coin-Scam-Charged-by-DOJ",
+      "pubDate": "2019-03-01T17:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BTG"
+      ]
+    },
+    {
+      "title": "TRON unleashes its secret weapon for mass crypto adoption",
+      "link": "https://cryptopanic.com/news/tron/4712512/TRON-unleashes-its-secret-weapon-for-mass-crypto-adoption",
+      "pubDate": "2019-03-01T13:32:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

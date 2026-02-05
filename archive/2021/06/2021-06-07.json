@@ -1,0 +1,541 @@
+{
+  "date": "2021-06-07",
+  "fetchedAt": "2026-02-05T07:27:06.736Z",
+  "articleCount": 34,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Binance Coin, Litecoin, THETA Price Analysis: 07 June",
+      "link": "https://cryptopanic.com/news/theta-token/12073798/Binance-Coin-Litecoin-THETA-Price-Analysis-07-June",
+      "pubDate": "2021-06-07T23:00:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "LTC",
+        "THETA"
+      ]
+    },
+    {
+      "title": "Monero Team Receives Anonymous $500,000 Donation",
+      "link": "https://cryptopanic.com/news/monero/12073472/Monero-Team-Receives-Anonymous-500000-Donation",
+      "pubDate": "2021-06-07T20:51:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The Monero development team has received a significant anonymous donation of $500,000 to support its ongoing projects and initiatives. The contribution underscores growing interest and investment in the privacy-focused cryptocurrency, which aims to enhance user anonymity in digital transactions. The team plans to utilize the funds to further develop Monero's technology and ensure its...",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple CEO Replies To Former SEC Chairman On Crypto Regulation, They See Eye To Eye?",
+      "link": "https://cryptopanic.com/news/ripple/12073295/Ripple-CEO-Replies-To-Former-SEC-Chairman-On-Crypto-Regulation-They-See-Eye-To-Eye",
+      "pubDate": "2021-06-07T19:45:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Ripple and the U.S. Securities and Exchange Commission (SEC) have an ongoing legal battle. The regulator filed an action against the payment company at the end of 2020. Many believe that this was former SEC Chairman, Jay Clayton, decision before leaving office. During his administration, Clayton’s SEC denied several Bitcoin ETF proposals and was known […]",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Supply Shock Could Be Coming if Ripple Decides To Settle SEC Lawsuit, Says Crypto Legal Expert",
+      "link": "https://cryptopanic.com/news/ripple/12073273/XRP-Supply-Shock-Could-Be-Coming-if-Ripple-Decides-To-Settle-SEC-Lawsuit-Says-Crypto-Legal-Expert",
+      "pubDate": "2021-06-07T18:45:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "A crypto legal expert is predicting that Ripple’s native token XRP may face a supply shock if the San Francisco-based firm settles its lawsuit with the U.S Securities and Exchange Commission (SEC). In a new video, lawyer and XRP supporter Jeremy Hogan discusses a scenario in which Ripple is able to settle its legal battle […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Price analysis 6/7: BTC, ETH, BNB, ADA, DOGE, XRP, DOT, UNI, ICP, BCH",
+      "link": "https://cryptopanic.com/news/dogecoin/12073108/Price-analysis-67-BTC-ETH-BNB-ADA-DOGE-XRP-DOT-UNI-ICP-BCH",
+      "pubDate": "2021-06-07T18:33:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin and altcoins are likely to remain under pressure for a few days but lower levels could attract buying.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Open Interest in Red-Hot Ethereum Surpasses Open Interest in Bitcoin",
+      "link": "https://cryptopanic.com/news/near/12073083/Open-Interest-in-Red-Hot-Ethereum-Surpasses-Open-Interest-in-Bitcoin",
+      "pubDate": "2021-06-07T18:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Following the recent cryptocurrency market crash that saw the price of bitcoin plunge from a near $64,000 all-time high to $29,900 before it recovered to $36,000, open interest for bitcoin has dropped significantly, while for Ethereum it surged. According to CryptoCompare’s May 2021 Exchange Review, Ethereum’s priced ended the month of May down just 2.5%; […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin mining hardware maker Canaan opens new service center in Kazakhstan",
+      "link": "https://cryptopanic.com/news/12073062/Bitcoin-mining-hardware-maker-Canaan-opens-new-service-center-in-Kazakhstan",
+      "pubDate": "2021-06-07T18:11:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Chinese bitcoin mining machines manufacturer Canaan has set up its first overseas after-sales service center in Kazakhstan.",
+      "currencies": [
+        "BTC",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin isn't the only one making waves in El Salvador. With the use of #ETN, the people of El Salvador can already…",
+      "link": "https://cryptopanic.com/news/12072917/Bitcoin-isnt-the-only-one-making-waves-in-El-Salvador-With-the-use-of-ETN-the-people-of-El-Salvador-can-already",
+      "pubDate": "2021-06-07T17:30:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "One of NYSE’s largest market-makers is joining a Solana-based data project",
+      "link": "https://cryptopanic.com/news/12072875/One-of-NYSEs-largest-market-makers-is-joining-a-Solana-based-data-project",
+      "pubDate": "2021-06-07T17:09:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "One of the largest market makers on the NYSE is jumping on the Solana bandwagon.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @SotRos25: The #Blockchain Trilemma has a solution. Where $ETH, $BTC, $ADA &amp; so many others have compromised, @safenetworktech delivers…",
+      "link": "https://cryptopanic.com/news/12072771/RT-SotRos25-The-Blockchain-Trilemma-has-a-solution-Where-ETH-BTC-ADA-amp-so-many-others-have-compromised-safenetworktech-delivers",
+      "pubDate": "2021-06-07T16:46:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "QuarkChain Monthly Project Progress Report: May, 2021",
+      "link": "https://cryptopanic.com/news/12077505/QuarkChain-Monthly-Project-Progress-Report-May-2021",
+      "pubDate": "2021-06-07T16:36:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QKC"
+      ]
+    },
+    {
+      "title": "ENJ and THETA Close to Breaking Out, CHZ Could Follow Soon",
+      "link": "https://cryptopanic.com/news/12072686/ENJ-and-THETA-Close-to-Breaking-Out-CHZ-Could-Follow-Soon",
+      "pubDate": "2021-06-07T16:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "THETA (THETA) is in the process of breaking out from a descending parallel channel that has been in place since the April 16 all-time high.",
+      "currencies": [
+        "THETA",
+        "CHZ",
+        "ENJ"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SEC Keeps Kicking the Can Down the Road on Bitcoin, Ethereum and XRP Documents",
+      "link": "https://cryptopanic.com/news/ripple/12072625/SEC-Keeps-Kicking-the-Can-Down-the-Road-on-Bitcoin-Ethereum-and-XRP-Documents",
+      "pubDate": "2021-06-07T15:58:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The SEC needs more time to respond to Ripple’s demands for Bitcoin, Ethereum and XRP documents",
+      "currencies": [
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "PancakeSwap Posts a Week with 1 Million Unique Wallets",
+      "link": "https://cryptopanic.com/news/uniswap/12072502/PancakeSwap-Posts-a-Week-with-1-Million-Unique-Wallets",
+      "pubDate": "2021-06-07T15:29:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "While BSC led the charge for blockchains, with over 417,000 unique active wallets at month’s end, PancakeSwap led the dApp list, averaging 350,000 daily active wallets.",
+      "currencies": [
+        "UNI",
+        "CAKE"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Important update! Richard Ells will now be speaking at 14:35 BST on June 9th at the Blockchain For Europe Summit 20…",
+      "link": "https://cryptopanic.com/news/12072383/Important-update-Richard-Ells-will-now-be-speaking-at-1435-BST-on-June-9th-at-the-Blockchain-For-Europe-Summit-20",
+      "pubDate": "2021-06-07T15:00:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Huawei's AppGallery Adds Maiar Application by Elrond (EGLD): Details",
+      "link": "https://cryptopanic.com/news/12072369/Huaweis-AppGallery-Adds-Maiar-Application-by-Elrond-EGLD-Details",
+      "pubDate": "2021-06-07T14:44:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Multi-purpose blockchain application Maiar by Elrond Network (EGLD) now available for Huawei smartphone users",
+      "currencies": [
+        "EGLD"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Theta protocol updated v2.4.0 is out as the latest step toward Mainnet 3.0 later this month:…",
+      "link": "https://cryptopanic.com/news/theta-token/12078121/Theta-protocol-updated-v240-is-out-as-the-latest-step-toward-Mainnet-30-later-this-month",
+      "pubDate": "2021-06-07T14:41:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Quantfury latest app update brings 4 more crypto pairs $UNI $BCH $THETA $SOL to #tradewithcaution at Binance exchan…",
+      "link": "https://cryptopanic.com/news/theta-token/12077504/Quantfury-latest-app-update-brings-4-more-crypto-pairs-UNI-BCH-THETA-SOL-to-tradewithcaution-at-Binance-exchan",
+      "pubDate": "2021-06-07T14:10:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "BCH",
+        "QTF"
+      ]
+    },
+    {
+      "title": "Tezos Clears $4 a Token in 17% Uptick",
+      "link": "https://cryptopanic.com/news/12072075/Tezos-Clears-4-a-Token-in-17-Uptick",
+      "pubDate": "2021-06-07T13:25:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The proof-of-stake blockchain is on the up.",
+      "currencies": [
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @RSKsmart: Congratulations to #RSK Co-Founder @dieguito for becoming the newest member of the Crypto Hall of Fame!",
+      "link": "https://cryptopanic.com/news/12077550/RT-RSKsmart-Congratulations-to-RSK-Co-Founder-dieguito-for-becoming-the-newest-member-of-the-Crypto-Hall-of-Fame",
+      "pubDate": "2021-06-07T12:04:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RIF"
+      ]
+    },
+    {
+      "title": "BSC Project Clones Uniswap V3 Despite License",
+      "link": "https://cryptopanic.com/news/ethereum/12071667/BSC-Project-Clones-Uniswap-V3-Despite-License",
+      "pubDate": "2021-06-07T11:03:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "-",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "CoinShares lists physically backed crypto ETPs on German exchange",
+      "link": "https://cryptopanic.com/news/litecoin/12071570/CoinShares-lists-physically-backed-crypto-ETPs-on-German-exchange",
+      "pubDate": "2021-06-07T10:19:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Deutsche Boerse Xetra is listing CoinShares physical Bitcoin, Ether and Litecoin ETPs.",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Have you got your tickets for the Blockchain Summit 2021 yet? It's not too late. Get your tickets here:…",
+      "link": "https://cryptopanic.com/news/12071543/Have-you-got-your-tickets-for-the-Blockchain-Summit-2021-yet-Its-not-too-late-Get-your-tickets-here",
+      "pubDate": "2021-06-07T10:14:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "CEO of STASIS @gregoryklumov believes that “should anything happen to @Tether_to, one should stay away from crypto…",
+      "link": "https://cryptopanic.com/news/12077693/CEO-of-STASIS-gregoryklumov-believes-that-should-anything-happen-to-Tether_to-one-should-stay-away-from-crypto",
+      "pubDate": "2021-06-07T09:41:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "Bitcoin investors did join the dump trend, when BTC slumped a couple of weeks ago. There are unused funds with cryp…",
+      "link": "https://cryptopanic.com/news/12076076/Bitcoin-investors-did-join-the-dump-trend-when-BTC-slumped-a-couple-of-weeks-ago-There-are-unused-funds-with-cryp",
+      "pubDate": "2021-06-07T09:40:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Open-Grant Wave 9 DOTMog, all 3 Milestones delivered and accepted. Done! Looking forward to the next step now! @Polkadot @web3foundation",
+      "link": "https://cryptopanic.com/news/12076839/Open-Grant-Wave-9-DOTMog-all-3-Milestones-delivered-and-accepted-Done-Looking-forward-to-the-next-step-now-Polkadot-web3foundation",
+      "pubDate": "2021-06-07T09:33:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MOG"
+      ]
+    },
+    {
+      "title": "CoinShares lists Bitcoin, Ethereum and Litecoin ETPs on Germany’s Börse Xetra",
+      "link": "https://cryptopanic.com/news/litecoin/12071412/CoinShares-lists-Bitcoin-Ethereum-and-Litecoin-ETPs-on-Germanys-Borse-Xetra",
+      "pubDate": "2021-06-07T09:06:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "CoinShares has announced that its Bitcoin, Ethereum and Litecoin physically-backed exchange traded products have cross-listed on Germany’s Börse Xetra exchange.",
+      "currencies": [
+        "ETH",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 36,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Vitalik Buterin Responds to Elon Musk: ‘I Definitely Do Not Fear the DOGE!’",
+      "link": "https://cryptopanic.com/news/dogecoin/12070730/Vitalik-Buterin-Responds-to-Elon-Musk-I-Definitely-Do-Not-Fear-the-DOGE",
+      "pubDate": "2021-06-07T07:18:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Last Thursday (June 3), Vitalik Buterin, the author of the Ethereum white paper, addressed Elon Musk’s suggested improvements for Dogecoin ($DOGE) and talked about potential future interoperability between Dogecoin and Ethereum during a conversation with MIT AI Researcher Lex Fridman. The Russian-Canadian programmer’s comments about Dogecoin’s future were made during episode #188 of the “Lex...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 37,
+        "negative": 6
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Top Trader Is Buying the Big Dip on These 5 Altcoins",
+      "link": "https://cryptopanic.com/news/12070951/Top-Trader-Is-Buying-the-Big-Dip-on-These-5-Altcoins",
+      "pubDate": "2021-06-07T07:15:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Crypto strategist and trader Michaël van de Poppe is unveiling the five altcoins that he is betting on this June. In a new video, Van de Poppe says he is keeping an eye on liquidity aggregator Orion Protocol as he sees the low-cap altcoin holding up well against Bitcoin (ORN/BTC) despite overall market volatility. “The […]",
+      "currencies": [
+        "BTC",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "RT @iotex_io: Let the countdown begin. IoTeX ↔️ Polygon cross-chain bridge goes LIVE on June 10! We are taking ioTube v4 to the next level…",
+      "link": "https://cryptopanic.com/news/matic-network/12070266/RT-iotex_io-Let-the-countdown-begin-IoTeX-Polygon-cross-chain-bridge-goes-LIVE-on-June-10-We-are-taking-ioTube-v4-to-the-next-level",
+      "pubDate": "2021-06-07T06:53:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "-",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto mining rig maker Goldshell to launch ‘mine-at-home’ kits in Asia",
+      "link": "https://cryptopanic.com/news/12069695/Crypto-mining-rig-maker-Goldshell-to-launch-mine-at-home-kits-in-Asia",
+      "pubDate": "2021-06-07T06:33:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "Crypto mining equipment manufacturer Goldshell has announced that it will launch a new line of mining rigs designed specifically for home use in Asian markets.",
+      "currencies": [
+        "BTC",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$AERGO ARC2 = NFT",
+      "link": "https://cryptopanic.com/news/12074554/AERGO-ARC2-NFT",
+      "pubDate": "2021-06-07T06:27:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "Elon Musk Laughs at People Who Get Into Dogecoin Based on His Tweets",
+      "link": "https://cryptopanic.com/news/dogecoin/12068569/Elon-Musk-Laughs-at-People-Who-Get-Into-Dogecoin-Based-on-His-Tweets",
+      "pubDate": "2021-06-07T05:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Elon Musk is having fun watching people getting sucked into Dogecoin",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 25
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "This is the most recent interview with our CEO, Min Hoo Chang. In this interview, he mentions a new service…",
+      "link": "https://cryptopanic.com/news/13729175/This-is-the-most-recent-interview-with-our-CEO-Min-Hoo-Chang-In-this-interview-he-mentions-a-new-service",
+      "pubDate": "2021-06-07T02:01:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HUM"
+      ]
+    }
+  ]
+}

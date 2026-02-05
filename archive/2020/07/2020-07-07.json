@@ -1,0 +1,37 @@
+{
+  "date": "2020-07-07",
+  "fetchedAt": "2026-02-05T07:27:06.864Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Leading Steel Company Adopts VeChain-Powered Infection Risk Management Solution",
+      "link": "https://cryptopanic.com/news/9288081/Leading-Steel-Company-Adopts-VeChain-Powered-Infection-Risk-Management-Solution",
+      "pubDate": "2020-07-07T16:00:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "enjoy the journey, it makes the destination worth it.",
+      "link": "https://cryptopanic.com/news/9285079/enjoy-the-journey-it-makes-the-destination-worth-it",
+      "pubDate": "2020-07-07T10:50:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SNL"
+      ]
+    }
+  ]
+}

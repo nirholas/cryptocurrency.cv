@@ -1,0 +1,770 @@
+{
+  "date": "2021-10-08",
+  "fetchedAt": "2026-02-05T07:27:06.487Z",
+  "articleCount": 54,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "U.S. Government Drafts Unified Crypto Oversight Plan",
+      "link": "https://cryptopanic.com/news/bitcoin/12969243/US-Government-Drafts-Unified-Crypto-Oversight-Plan",
+      "pubDate": "2021-10-08T23:11:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Altcoin Roundup: DEXs come to the rescue after China bans crypto",
+      "link": "https://cryptopanic.com/news/uniswap/12969061/Altcoin-Roundup-DEXs-come-to-the-rescue-after-China-bans-crypto",
+      "pubDate": "2021-10-08T21:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "China’s wide-spanning crypto ban puts a hefty dent in token values, but the surge in DEX volumes and BTC’s pop above $55,000 suggest the move was a blessing in disguise.",
+      "currencies": [
+        "BTC",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @TronixTrx: According to @coinmetrics, #TRON ranks first in the number of transactions compared to #BTC, #ETH, #ADA, #XRP, #LINK, #ADA,…",
+      "link": "https://cryptopanic.com/news/12972932/RT-TronixTrx-According-to-coinmetrics-TRON-ranks-first-in-the-number-of-transactions-compared-to-BTC-ETH-ADA-XRP-LINK-ADA",
+      "pubDate": "2021-10-08T21:13:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "AMA"
+      ]
+    },
+    {
+      "title": "RT @TronixTrx: Since the inception of the coin burning system , #TRON has burned over 1,249,386,996 #TRX by transfer fees only 🤯",
+      "link": "https://cryptopanic.com/news/12972933/RT-TronixTrx-Since-the-inception-of-the-coin-burning-system-TRON-has-burned-over-1249386996-TRX-by-transfer-fees-only",
+      "pubDate": "2021-10-08T21:12:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AMA"
+      ]
+    },
+    {
+      "title": "RT @TRXSquad: #TronNetwork burned 3,129,093.68 #Tron #TRX today. Just wow.",
+      "link": "https://cryptopanic.com/news/12972934/RT-TRXSquad-TronNetwork-burned-312909368-Tron-TRX-today-Just-wow",
+      "pubDate": "2021-10-08T21:12:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AMA"
+      ]
+    },
+    {
+      "title": "Has Binance Found a Location for Its Headquarters? Crypto Exchange Says This Country Is on Its Radar: Report",
+      "link": "https://cryptopanic.com/news/bitcoin/12968956/Has-Binance-Found-a-Location-for-Its-Headquarters-Crypto-Exchange-Says-This-Country-Is-on-Its-Radar-Report",
+      "pubDate": "2021-10-08T20:00:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Leading cryptocurrency exchange Binance is looking at a potential place to maintain a physical headquarters as it transitions away from a decentralized structure. After months of scrutiny from global regulators regarding Binance’s operations, corporate registry documents now reveal that the company has registered three different firms in Ireland. In July, CEO Changpeng Zhao decided to […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @jerrysun_: As NKN continues to grow, interest in new applications and services should generate a flywheel between miners, developers, a…",
+      "link": "https://cryptopanic.com/news/12973016/RT-jerrysun_-As-NKN-continues-to-grow-interest-in-new-applications-and-services-should-generate-a-flywheel-between-miners-developers-a",
+      "pubDate": "2021-10-08T19:53:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "NKN"
+      ]
+    },
+    {
+      "title": "New interview is out!  #eCash Benevolent Dictator Amaury Séchet (@deadalnix) interviewed by @paulbarrontv…",
+      "link": "https://cryptopanic.com/news/12975002/New-interview-is-out-eCash-Benevolent-Dictator-Amaury-Sechet-deadalnix-interviewed-by-paulbarrontv",
+      "pubDate": "2021-10-08T19:03:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "New interview is out! #eCash Benevolent Dictator Amaury Séchet (@deadalnix) interviewed by @paulbarrontv…",
+      "link": "https://cryptopanic.com/news/ecash/12975002/New-interview-is-out-eCash-Benevolent-Dictator-Amaury-Sechet-deadalnix-interviewed-by-paulbarrontv",
+      "pubDate": "2021-10-08T19:03:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Shiba Inu Perpetual Swaps See 78x Increase In Volume, Surpasses $5 Billion For The First Time Ever",
+      "link": "https://cryptopanic.com/news/shiba-inu/12968688/Shiba-Inu-Perpetual-Swaps-See-78x-Increase-In-Volume-Surpasses-5-Billion-For-The-First-Time-Ever",
+      "pubDate": "2021-10-08T18:55:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "On Thursday, for the first time, Shiba Inu’s perpetual contracts reached an All-Time-High of $5 Billion, a 78x rally compared to October 1st as price put on a spirited bullish run that saw the token gain by over 45% on the day and 300% in just four days. A perpetual contract otherwise known as a perpetual […]",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 21,
+        "negative": 7
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Vitalik Buterin Slams El Salvador’s Bitcoin Adoption Policy",
+      "link": "https://cryptopanic.com/news/bitcoin/12968609/Vitalik-Buterin-Slams-El-Salvadors-Bitcoin-Adoption-Policy",
+      "pubDate": "2021-10-08T18:22:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "-",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Ethereum risks drop below $3.2K as ETH price faces heavy resistance",
+      "link": "https://cryptopanic.com/news/bitcoin/12968401/Ethereum-risks-drop-below-32K-as-ETH-price-faces-heavy-resistance",
+      "pubDate": "2021-10-08T17:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A confluence of at least three different bearish indicators appears on Ethereum's multi-timeframe charts, suggesting that its ongoing bull run risks exhaustion.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "We are in the final stages of testing Mainnet. Find the latest developments in the update below!",
+      "link": "https://cryptopanic.com/news/12972430/We-are-in-the-final-stages-of-testing-Mainnet-Find-the-latest-developments-in-the-update-below?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-08T17:00:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDL",
+        "LGCY"
+      ]
+    },
+    {
+      "title": "Early next week, shorting will be enabled on L2 with the Sargas release! During this release there will be no downt…",
+      "link": "https://cryptopanic.com/news/12974287/Early-next-week-shorting-will-be-enabled-on-L2-with-the-Sargas-release-During-this-release-there-will-be-no-downt",
+      "pubDate": "2021-10-08T16:36:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "SNX",
+        "SUSD"
+      ]
+    },
+    {
+      "title": "RT @MarshallHayner: Can you imagine when every exchange supports xTokens and sending and receiving XBTC, XETH and XUSDC becomes instant and…",
+      "link": "https://cryptopanic.com/news/12973549/RT-MarshallHayner-Can-you-imagine-when-every-exchange-supports-xTokens-and-sending-and-receiving-XBTC-XETH-and-XUSDC-becomes-instant-and",
+      "pubDate": "2021-10-08T16:20:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XPR"
+      ]
+    },
+    {
+      "title": "Dogecoin Rival Shiba Inu Starts Trading on Peter Thiel-Backed Cryptocurrency Exchange",
+      "link": "https://cryptopanic.com/news/dogecoin/12968231/Dogecoin-Rival-Shiba-Inu-Starts-Trading-on-Peter-Thiel-Backed-Cryptocurrency-Exchange",
+      "pubDate": "2021-10-08T16:03:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Shiba Inu is gaining more traction with exchanges after its explosive run-up",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 39,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @anytaskofficial: Introducing the Connector, the next hero to be included in the ETN-Network Heroes #NFTgiveaway collection! As usual, t…",
+      "link": "https://cryptopanic.com/news/12968168/RT-anytaskofficial-Introducing-the-Connector-the-next-hero-to-be-included-in-the-ETN-Network-Heroes-NFTgiveaway-collection-As-usual-t",
+      "pubDate": "2021-10-08T15:53:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "\"If Web 3.0 is the future of our global network, NKN is well-positioned to capture a much-needed component of infra…",
+      "link": "https://cryptopanic.com/news/12973018/If-Web-30-is-the-future-of-our-global-network-NKN-is-well-positioned-to-capture-a-much-needed-component-of-infra",
+      "pubDate": "2021-10-08T15:36:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NKN"
+      ]
+    },
+    {
+      "title": "The @RequestdApps launches on the @NEARProtocol to simplify #crypto invoicing and payments for businesses and indiv…",
+      "link": "https://cryptopanic.com/news/12968068/The-RequestdApps-launches-on-the-NEARProtocol-to-simplify-crypto-invoicing-and-payments-for-businesses-and-indiv",
+      "pubDate": "2021-10-08T15:20:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REQ"
+      ]
+    },
+    {
+      "title": "$BETA-BNB Farm is live on Pancakeswap! $BETA can be bought on Pancakeswap now. Be sure to make sure you are interac…",
+      "link": "https://cryptopanic.com/news/12970376/BETA-BNB-Farm-is-live-on-Pancakeswap-BETA-can-be-bought-on-Pancakeswap-now-Be-sure-to-make-sure-you-are-interac",
+      "pubDate": "2021-10-08T15:12:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CAKE",
+        "BETA"
+      ]
+    },
+    {
+      "title": "1/2 We’re grateful for the successful offering on #Binance Launchpad!  Currently, there are only BEP20 withdrawals…",
+      "link": "https://cryptopanic.com/news/12970377/12-Were-grateful-for-the-successful-offering-on-Binance-Launchpad-Currently-there-are-only-BEP20-withdrawals",
+      "pubDate": "2021-10-08T14:57:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BETA"
+      ]
+    },
+    {
+      "title": "RT @RequestdApps: Businesses using @NEARProtocol can now use Request’s compliance-ready invoicing tool, saving hundreds of hours annually…",
+      "link": "https://cryptopanic.com/news/12967848/RT-RequestdApps-Businesses-using-NEARProtocol-can-now-use-Requests-compliance-ready-invoicing-tool-saving-hundreds-of-hours-annually",
+      "pubDate": "2021-10-08T14:07:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REQ"
+      ]
+    },
+    {
+      "title": "Shiba Inu (SHIB) Climbs 204% in First Week of October as DeFi & Gaming Tokens Also Climb",
+      "link": "https://cryptopanic.com/news/12967794/Shiba-Inu-SHIB-Climbs-204-in-First-Week-of-October-as-DeFi-Gaming-Tokens-Also-Climb",
+      "pubDate": "2021-10-08T13:52:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "BeInCrypto takes a look at the seven altcoins that increased the most over the past seven days, from Oct 1 to 8.",
+      "currencies": [
+        "BTC",
+        "SHIB",
+        "AXS"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The earth is shaking once again... come out come out wherever you are @MineWithThorg",
+      "link": "https://cryptopanic.com/news/12967750/The-earth-is-shaking-once-again-come-out-come-out-wherever-you-are-MineWithThorg",
+      "pubDate": "2021-10-08T13:45:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GLM"
+      ]
+    },
+    {
+      "title": "SHIB Makes the News Achieving Several Major Wins, Glassnode Reports Warning Sign for Market: Crypto News Digest by U.Today",
+      "link": "https://cryptopanic.com/news/shiba-inu/12967777/SHIB-Makes-the-News-Achieving-Several-Major-Wins-Glassnode-Reports-Warning-Sign-for-Market-Crypto-News-Digest-by-UToday",
+      "pubDate": "2021-10-08T13:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Read U.Today’s crypto news digest to stay updated on all the top events",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Last league match of #CSL6 Satoshi's Dream $BTC vs DAO Attack $DASH Retweet! Task coming up in 30 min from now ⌛️ #CryptoSeLagaSixer",
+      "link": "https://cryptopanic.com/news/dash/12974812/Last-league-match-of-CSL6-Satoshis-Dream-BTC-vs-DAO-Attack-DASH-Retweet-Task-coming-up-in-30-min-from-now-CryptoSeLagaSixer",
+      "pubDate": "2021-10-08T13:30:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "DASH",
+        "WRX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "As #Bitcoin hashrate continues to rise, we at #BTCST continue to give #BTC rewards to all of our stakers. Not 1 day…",
+      "link": "https://cryptopanic.com/news/12970268/As-Bitcoin-hashrate-continues-to-rise-we-at-BTCST-continue-to-give-BTC-rewards-to-all-of-our-stakers-Not-1-day",
+      "pubDate": "2021-10-08T12:41:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTCST"
+      ]
+    },
+    {
+      "title": "Tether fires back; Easy Crypto closes Series A funding round",
+      "link": "https://cryptopanic.com/news/12967485/Tether-fires-back-Easy-Crypto-closes-Series-A-funding-round",
+      "pubDate": "2021-10-08T12:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Tether fires back while Easy Crypto closes Series A funding round",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Indian TikTok challenger raises $19M to launch social token on Solana",
+      "link": "https://cryptopanic.com/news/12967477/Indian-TikTok-challenger-raises-19M-to-launch-social-token-on-Solana",
+      "pubDate": "2021-10-08T12:24:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "“What Axie Infinity did for gaming, we want to do for social media,” Chingari co-founder and CEO Sumit Ghosh says.",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "AXS"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Jasmy is going to be listed on Bitfinex soon! #jasmycoin #Bitfinex",
+      "link": "https://cryptopanic.com/news/13046762/Jasmy-is-going-to-be-listed-on-Bitfinex-soon-jasmycoin-Bitfinex",
+      "pubDate": "2021-10-08T11:32:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "JASMY"
+      ]
+    },
+    {
+      "title": "Shiba Inu (SHIB) adds more than 30,000 new holders in two weeks",
+      "link": "https://cryptopanic.com/news/shiba-inu/12967278/Shiba-Inu-SHIB-adds-more-than-30000-new-holders-in-two-weeks",
+      "pubDate": "2021-10-08T11:10:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Amid an impressive recent performance, the decentralized meme token Shiba Inu (SHIB) has gained over 30,000 new holders in just... Continue reading",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 24,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Major French Bank Wants to Back the $DAI Stablecoin with $40M in Bonds",
+      "link": "https://cryptopanic.com/news/12967248/Major-French-Bank-Wants-to-Back-the-DAI-Stablecoin-with-40M-in-Bonds",
+      "pubDate": "2021-10-08T11:07:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Société Générale will experiment with using regulated security tokens on Ethereum to back a stablecoin loan in historic merging of TradFi and DeFi.",
+      "currencies": [
+        "ETH",
+        "DAI"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @qc_qizhou: Do you know that, following the dev philosophy of Ethereum @VitalikButerin ,QuarkChain is perhaps the ONLY blockchain projec…",
+      "link": "https://cryptopanic.com/news/12973584/RT-qc_qizhou-Do-you-know-that-following-the-dev-philosophy-of-Ethereum-VitalikButerin-QuarkChain-is-perhaps-the-ONLY-blockchain-projec",
+      "pubDate": "2021-10-08T10:51:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "QKC"
+      ]
+    },
+    {
+      "title": "RT @DefiWhiskey: While @renprotocol is clearly multi-chain in practice, it's multi-asset mainly in theory, with 96% of income coming from $…",
+      "link": "https://cryptopanic.com/news/12973693/RT-DefiWhiskey-While-renprotocol-is-clearly-multi-chain-in-practice-its-multi-asset-mainly-in-theory-with-96-of-income-coming-from",
+      "pubDate": "2021-10-08T10:43:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "RENBTC",
+        "REN"
+      ]
+    },
+    {
+      "title": "Well done",
+      "link": "https://cryptopanic.com/news/12971385/Well-done",
+      "pubDate": "2021-10-08T10:39:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EPS"
+      ]
+    },
+    {
+      "title": "RT @Coin98Insights: Beta Finance is a permissionless money market to lend, borrow and short all crypto assets. $BETA token sale subscriptio…",
+      "link": "https://cryptopanic.com/news/12970378/RT-Coin98Insights-Beta-Finance-is-a-permissionless-money-market-to-lend-borrow-and-short-all-crypto-assets-BETA-token-sale-subscriptio",
+      "pubDate": "2021-10-08T09:35:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BETA"
+      ]
+    },
+    {
+      "title": "SHIB Trading Volume on Derivatives Market Hit 78x Increase After 300% Growth",
+      "link": "https://cryptopanic.com/news/shiba-inu/12966980/SHIB-Trading-Volume-on-Derivatives-Market-Hit-78x-Increase-After-300-Growth",
+      "pubDate": "2021-10-08T08:51:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "While SHIB is correcting by 40%, derivative tied to it is growing significantly",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Continues Upwards While Shiba Inu (SHIB) Dumps 30% (Market Watch)",
+      "link": "https://cryptopanic.com/news/shiba-inu/12966945/Bitcoin-Continues-Upwards-While-Shiba-Inu-SHIB-Dumps-30-Market-Watch",
+      "pubDate": "2021-10-08T08:48:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin marked its new highest price line since mid-May at $56,000, while Shiba Inu has retraced by roughly 30% in a day.",
+      "currencies": [
+        "BTC",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple Shifts Whopping 101 Million XRP, Sending Part to Huobi Platform",
+      "link": "https://cryptopanic.com/news/ripple/12966947/Ripple-Shifts-Whopping-101-Million-XRP-Sending-Part-to-Huobi-Platform",
+      "pubDate": "2021-10-08T08:46:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple DLT company shifts 101 million XRP to its alternative wallets and moves part of it to Huobi in regular daily transactions",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @DavidBenKay: A big thank you to all of you who joined in our AMA and special thanks to our Community Wizards @marcusaleblanc and @Jerem…",
+      "link": "https://cryptopanic.com/news/12973555/RT-DavidBenKay-A-big-thank-you-to-all-of-you-who-joined-in-our-AMA-and-special-thanks-to-our-Community-Wizards-marcusaleblanc-and-Jerem",
+      "pubDate": "2021-10-08T08:21:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PUNDIX"
+      ]
+    },
+    {
+      "title": "Old News With Dubious Sources: Tether Responds to Bloomberg’s Accusations",
+      "link": "https://cryptopanic.com/news/12962948/Old-News-With-Dubious-Sources-Tether-Responds-to-Bloombergs-Accusations",
+      "pubDate": "2021-10-08T06:23:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Bloomberg has continued its campaign to discredit Tether with another article questioning the backing and reserves of the world’s most popular stablecoin.",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Compound Finance Passes Proposal to Fix COMP Distribution Bug",
+      "link": "https://cryptopanic.com/news/12962923/Compound-Finance-Passes-Proposal-to-Fix-COMP-Distribution-Bug",
+      "pubDate": "2021-10-08T06:13:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Decentralized finance lending platform Compound has passed a proposal that will fix a bug that resulted in millions of tokens being mistakenly distributed last week.",
+      "currencies": [
+        "COMP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @indrawnrt: Our @PundiXLabs community is expanding to discord, join here",
+      "link": "https://cryptopanic.com/news/12965137/RT-indrawnrt-Our-PundiXLabs-community-is-expanding-to-discord-join-here",
+      "pubDate": "2021-10-08T05:42:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PUNDIX"
+      ]
+    },
+    {
+      "title": "Check out our impressive farming APR! Join early for a higher return!",
+      "link": "https://cryptopanic.com/news/13024928/Check-out-our-impressive-farming-APR-Join-early-for-a-higher-return",
+      "pubDate": "2021-10-08T05:04:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDN"
+      ]
+    },
+    {
+      "title": "Remember to stake your SHAREN or stablecoins to participate in the additional issuance reward mechanism to receive…",
+      "link": "https://cryptopanic.com/news/13024931/Remember-to-stake-your-SHAREN-or-stablecoins-to-participate-in-the-additional-issuance-reward-mechanism-to-receive",
+      "pubDate": "2021-10-08T04:55:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDN"
+      ]
+    },
+    {
+      "title": "We are excited to announce that WENWEN Protocol V2 has launched! Check out our new functions, including accumulate…",
+      "link": "https://cryptopanic.com/news/13024933/We-are-excited-to-announce-that-WENWEN-Protocol-V2-has-launched-Check-out-our-new-functions-including-accumulate",
+      "pubDate": "2021-10-08T04:47:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDN"
+      ]
+    },
+    {
+      "title": "RT @IOHKMedia: Cardano enters the age of #AI. Shaping the future of robotics with @singularity_net This and more in @CryptoAmb To speak to…",
+      "link": "https://cryptopanic.com/news/12965668/RT-IOHKMedia-Cardano-enters-the-age-of-AI-Shaping-the-future-of-robotics-with-singularity_net-This-and-more-in-CryptoAmb-To-speak-to",
+      "pubDate": "2021-10-08T04:11:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "AGIX"
+      ]
+    },
+    {
+      "title": "Hurray!!! Glitzkoin GTN recovers from the 15% price drop. The rapid sell off apparently came from BTC investors, wh…",
+      "link": "https://cryptopanic.com/news/12963270/Hurray-Glitzkoin-GTN-recovers-from-the-15-price-drop-The-rapid-sell-off-apparently-came-from-BTC-investors-wh",
+      "pubDate": "2021-10-08T03:39:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "$STPT / $BUSD will be added on @binance together with HIVE/BUSD, SHIB/AUD, and UNI/AUD. Trading will be open at 202…",
+      "link": "https://cryptopanic.com/news/12965471/STPT-BUSD-will-be-added-on-binance-together-with-HIVEBUSD-SHIBAUD-and-UNIAUD-Trading-will-be-open-at-202",
+      "pubDate": "2021-10-08T03:20:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BUSD",
+        "SHIB",
+        "UNI",
+        "STPT"
+      ]
+    },
+    {
+      "title": "Introducing optimistic bridge with instant withdraw/mint feature, a new cross-chain solution between any 2 layer1 p…",
+      "link": "https://cryptopanic.com/news/12965168/Introducing-optimistic-bridge-with-instant-withdrawmint-feature-a-new-cross-chain-solution-between-any-2-layer1-p",
+      "pubDate": "2021-10-08T02:26:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "QKC"
+      ]
+    },
+    {
+      "title": "[WATCH] We are LIVE! Join the #PUNDIX AMA and chat at",
+      "link": "https://cryptopanic.com/news/12965138/WATCH-We-are-LIVE-Join-the-PUNDIX-AMA-and-chat-at",
+      "pubDate": "2021-10-08T02:05:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PUNDIX"
+      ]
+    },
+    {
+      "title": "Q3 2021 progress report and Pundi X Chain Launch AMA will be LIVE in 45 mins. CEO and Co-founder @zibin will host a…",
+      "link": "https://cryptopanic.com/news/12965139/Q3-2021-progress-report-and-Pundi-X-Chain-Launch-AMA-will-be-LIVE-in-45-mins-CEO-and-Co-founder-zibin-will-host-a",
+      "pubDate": "2021-10-08T01:14:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PUNDIX"
+      ]
+    },
+    {
+      "title": "Is Dogecoin set to follow Shiba Inu’s (SHIB) 400% breakout?",
+      "link": "https://cryptopanic.com/news/dogecoin/12960730/Is-Dogecoin-set-to-follow-Shiba-Inus-SHIB-400-breakout",
+      "pubDate": "2021-10-08T01:01:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "SHIB’s 400% rally brings attention back to dog-themed meme tokens and it could be a sign that DOGE is on the verge of an equal-sized breakout.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 39,
+        "negative": 26
+      }
+    },
+    {
+      "title": "$AERGO based @Pikkle_Service now has #NFT too? Wow! Great combining CCCV and Pikkle!",
+      "link": "https://cryptopanic.com/news/12961225/AERGO-based-Pikkle_Service-now-has-NFT-too-Wow-Great-combining-CCCV-and-Pikkle",
+      "pubDate": "2021-10-08T01:00:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    }
+  ]
+}

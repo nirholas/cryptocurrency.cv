@@ -1,0 +1,60 @@
+{
+  "date": "2019-01-04",
+  "fetchedAt": "2026-02-05T07:27:06.998Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tron Releases DApp Weekly Report, Justin Sun Hails a Successful Year",
+      "link": "https://cryptopanic.com/news/4157903/Tron-Releases-DApp-Weekly-Report-Justin-Sun-Hails-a-Successful-Year",
+      "pubDate": "2019-01-04T14:19:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron - Massive BitTorrent Announcement & Seducing Ethereum Devs to Leave",
+      "link": "https://cryptopanic.com/news/tron/4154462/Tron-Massive-BitTorrent-Announcement-Seducing-Ethereum-Devs-to-Leave",
+      "pubDate": "2019-01-04T04:39:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin and Bitcoin Cash Getting Gaslit by Craig Wright and Calvin Ayre?",
+      "link": "https://cryptopanic.com/news/4153818/Bitcoin-and-Bitcoin-Cash-Getting-Gaslit-by-Craig-Wright-and-Calvin-Ayre",
+      "pubDate": "2019-01-04T02:25:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    }
+  ]
+}

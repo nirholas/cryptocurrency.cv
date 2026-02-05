@@ -1,0 +1,29 @@
+{
+  "date": "2020-04-16",
+  "fetchedAt": "2026-02-05T07:27:07.893Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "FTX Exchange Review [2020] – The Complete Beginner’s Guide",
+      "link": "https://cryptopanic.com/news/8539534/FTX-Exchange-Review-2020-The-Complete-Beginners-Guide",
+      "pubDate": "2020-04-16T05:02:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDC",
+        "BNB",
+        "ADA",
+        "BUSD",
+        "FTT",
+        "TUSD",
+        "MKR",
+        "USDP",
+        "QNT"
+      ]
+    }
+  ]
+}

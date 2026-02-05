@@ -1,0 +1,420 @@
+{
+  "date": "2025-05-18",
+  "fetchedAt": "2026-02-05T07:27:08.573Z",
+  "articleCount": 30,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin impulse move toward new highs sets a fire under HYPE, ETH, XMR and AAVE",
+      "link": "https://cryptopanic.com/news/21898785/Bitcoin-impulse-move-toward-new-highs-sets-a-fire-under-HYPE-ETH-XMR-and-AAVE?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T23:40:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XMR",
+        "AAVE",
+        "HYPE"
+      ]
+    },
+    {
+      "title": "The Funding: Why big crypto VCs are joining Cobie’s Echo",
+      "link": "https://cryptopanic.com/news/21898217/The-Funding-Why-big-crypto-VCs-are-joining-Cobies-Echo?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T22:28:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PEOPLE",
+        "VC"
+      ]
+    },
+    {
+      "title": "XRP Futures Launch on CME: Can It Fuel XRP Crypto Price Breakout?",
+      "link": "https://cryptopanic.com/news/21897977/XRP-Futures-Launch-on-CME-Can-It-Fuel-XRP-Crypto-Price-Breakout?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T22:01:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The Chicago Mercantile Exchange (CME) will launch XRP futures contracts on Monday, marking a significant milestone for Ripple’s native token – and a potential bullish catalyst for the downtrodden XRP crypto price on Monday’s open. This move introduces XRP into the realm of regulated crypto derivatives, providing institutional investors with new avenues for exposure and.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Market Experts Say These Are the 4 Most Promising Cryptos in 2025: Here’s Why!",
+      "link": "https://cryptopanic.com/news/21897779/Market-Experts-Say-These-Are-the-4-Most-Promising-Cryptos-in-2025-Heres-Why?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T22:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "TRX",
+        "NEAR"
+      ]
+    },
+    {
+      "title": "XRP Primed for Epic $9 Price Explosion As Institutional Money Floods Back Heavily",
+      "link": "https://cryptopanic.com/news/21897176/XRP-Primed-for-Epic-9-Price-Explosion-As-Institutional-Money-Floods-Back-Heavily?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T20:47:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Expert trader Ali Martinez highlighted the chances of XRP moving past $2. 70 as the wider market flips green.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Chainlink and Cardano Show Signs of Strength",
+      "link": "https://cryptopanic.com/news/21896784/Chainlink-and-Cardano-Show-Signs-of-Strength?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T20:00:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Litecoin Price: What Holder Data Says About Long Term Prospects",
+      "link": "https://cryptopanic.com/news/21896589/Litecoin-Price-What-Holder-Data-Says-About-Long-Term-Prospects?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T19:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Solana Price Holds $166 Support After Rejection From $183 – What Comes Next?",
+      "link": "https://cryptopanic.com/news/21896010/Solana-Price-Holds-166-Support-After-Rejection-From-183-What-Comes-Next?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T19:00:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LUSD"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Crypto market’s weekly winners and losers – XCN, WIF, PI, OP",
+      "link": "https://cryptopanic.com/news/21896135/Crypto-markets-weekly-winners-and-losers-XCN-WIF-PI-OP?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T19:00:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XCN",
+        "OP",
+        "WIF",
+        "PI"
+      ]
+    },
+    {
+      "title": "Web3 ai Hits $4.1M, Polkadot Leads, Litecoin Eyes $100",
+      "link": "https://cryptopanic.com/news/21896007/Web3-ai-Hits-41M-Polkadot-Leads-Litecoin-Eyes-100?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T19:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Best Cryptos Right Now: Unstaked, Sui, Cosmos, & Polkadot",
+      "link": "https://cryptopanic.com/news/21895510/Best-Cryptos-Right-Now-Unstaked-Sui-Cosmos-Polkadot?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T18:00:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Use LAUNCH200 Now or Lose 3x BTFD Rewards—One of the 6 Best Meme Coins to Invest in Now with WIF, POPCAT in Tow!",
+      "link": "https://cryptopanic.com/news/21895432/Use-LAUNCH200-Now-or-Lose-3x-BTFD-RewardsOne-of-the-6-Best-Meme-Coins-to-Invest-in-Now-with-WIF-POPCAT-in-Tow?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T17:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WIF",
+        "POPCAT"
+      ]
+    },
+    {
+      "title": "Chainlink (LINK) Price Eyes Breakout: Key Support Holds, $19.77 in Sight?",
+      "link": "https://cryptopanic.com/news/21895420/Chainlink-LINK-Price-Eyes-Breakout-Key-Support-Holds-1977-in-Sight?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T17:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "4 Meme Coins That Could Be Ready for a Move, According to Crypto Expert",
+      "link": "https://cryptopanic.com/news/21895082/4-Meme-Coins-That-Could-Be-Ready-for-a-Move-According-to-Crypto-Expert?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T17:00:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "POPCAT"
+      ]
+    },
+    {
+      "title": "Best Crypto To Buy Before Summer 2025 for 100x Gains – Stellar, Punisher Coin and Floki Inu",
+      "link": "https://cryptopanic.com/news/21894859/Best-Crypto-To-Buy-Before-Summer-2025-for-100x-Gains-Stellar-Punisher-Coin-and-Floki-Inu?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T16:29:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "FLOKI"
+      ]
+    },
+    {
+      "title": "Can TON Coin Make A Strong Comeback In 2025?",
+      "link": "https://cryptopanic.com/news/21894847/Can-TON-Coin-Make-A-Strong-Comeback-In-2025?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T16:16:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TON"
+      ]
+    },
+    {
+      "title": "Don’t believe the noise: There can never be too many L2s",
+      "link": "https://cryptopanic.com/news/21893881/Dont-believe-the-noise-There-can-never-be-too-many-L2s?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "Opinion by: Igor Mandrigin, co-founder and CTPO of Gateway. fmEvery couple of weeks, it seems another layer 2 rolls out, much to the chagrin of some Web3 industry commentators who are concerned about fragmentation. A recent Gemini Institutional Insights report actually noted how a new Ethereum L2 solution is launched approximately every 19 days. In response to the seemingly endless conveyor belt of new zkEVMs and optimistic rollups coming to market, the chorus of criticism continues to grow loud",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Experts Believe BTFD’s Potential to Turn $3K Into $270K Makes It the Best Crypto to Buy Now Besides Ponke and Floki",
+      "link": "https://cryptopanic.com/news/21893530/Experts-Believe-BTFDs-Potential-to-Turn-3K-Into-270K-Makes-It-the-Best-Crypto-to-Buy-Now-Besides-Ponke-and-Floki?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T14:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FLOKI"
+      ]
+    },
+    {
+      "title": "Ripple’s XRP & Ether Lead Altcoin Traders’ Drive Following De-escalating US Macro Tensions",
+      "link": "https://cryptopanic.com/news/21893420/Ripples-XRP-Ether-Lead-Altcoin-Traders-Drive-Following-De-escalating-US-Macro-Tensions?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T14:09:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Arthur Breitman is betting on tokenized uranium, and it could be Tezos’ big comeback",
+      "link": "https://cryptopanic.com/news/21892361/Arthur-Breitman-is-betting-on-tokenized-uranium-and-it-could-be-Tezos-big-comeback?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T13:06:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XTZ"
+      ]
+    },
+    {
+      "title": "Don’t Miss the News: TAO and XRP Traders Are Watching This Early-Investment Platform",
+      "link": "https://cryptopanic.com/news/21894196/Dont-Miss-the-News-TAO-and-XRP-Traders-Are-Watching-This-Early-Investment-Platform?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T12:53:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "TAO"
+      ]
+    },
+    {
+      "title": "‘Epidemic of Scams’ Flooding Instagram and Facebook Affecting Many Different Industries, Says Meta: Report",
+      "link": "https://cryptopanic.com/news/21891320/Epidemic-of-Scams-Flooding-Instagram-and-Facebook-Affecting-Many-Different-Industries-Says-Meta-Report?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T11:45:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "META"
+      ]
+    },
+    {
+      "title": "Unstaked’s Presale Achieves $6M Milestone in Record Time! NEAR Targets $3.50 & TAO Builds Momentum",
+      "link": "https://cryptopanic.com/news/21889679/Unstakeds-Presale-Achieves-6M-Milestone-in-Record-Time-NEAR-Targets-350-TAO-Builds-Momentum?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T10:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR",
+        "TAO"
+      ]
+    },
+    {
+      "title": "EOS Price Coils Tightly — Breakout or Breakdown Next?",
+      "link": "https://cryptopanic.com/news/21889621/EOS-Price-Coils-Tightly-Breakout-or-Breakdown-Next?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T09:21:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ]
+    },
+    {
+      "title": "Movement Network Review: Merging Ethereum Security with MoveVM for Scalable Web3 Infrastructure",
+      "link": "https://cryptopanic.com/news/21888764/Movement-Network-Review-Merging-Ethereum-Security-with-MoveVM-for-Scalable-Web3-Infrastructure?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T09:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MOVE"
+      ]
+    },
+    {
+      "title": "JupiterDAO Proposes Exclusive Presale for JUP Stakers",
+      "link": "https://cryptopanic.com/news/21893782/JupiterDAO-Proposes-Exclusive-Presale-for-JUP-Stakers?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T05:27:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DAO",
+        "JUP"
+      ]
+    },
+    {
+      "title": "PENGU slips 9%, turns high-risk: Can buyers defend Pudgy Penguins once again?",
+      "link": "https://cryptopanic.com/news/21885160/PENGU-slips-9-turns-high-risk-Can-buyers-defend-Pudgy-Penguins-once-again?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T03:00:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PENGU",
+        "MEME"
+      ]
+    },
+    {
+      "title": "AI16Z dives 35% in 4 days – What traders fear will happen next",
+      "link": "https://cryptopanic.com/news/21884853/AI16Z-dives-35-in-4-days-What-traders-fear-will-happen-next?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T02:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AI16Z"
+      ]
+    },
+    {
+      "title": "XLM Eyes 126% Gains, ETH Struggles While Unstaked’s $0.008997 Entry and $1M Giveaway Draw Crypto Whales’ Attention!",
+      "link": "https://cryptopanic.com/news/21884766/XLM-Eyes-126-Gains-ETH-Struggles-While-Unstakeds-0008997-Entry-and-1M-Giveaway-Draw-Crypto-Whales-Attention?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T02:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Can XRP Still Surprise the Market?",
+      "link": "https://cryptopanic.com/news/21884017/Can-XRP-Still-Surprise-the-Market?mtm_campaign=API-OFA",
+      "pubDate": "2025-05-18T00:01:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Crypto trader and analyst Scott Melker believes the token isn’t done yet, though its next move depends on more than […] The post Can XRP Still Surprise the Market? appeared first on Coindoo.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    }
+  ]
+}

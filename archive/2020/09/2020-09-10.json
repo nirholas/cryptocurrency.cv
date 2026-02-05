@@ -1,0 +1,95 @@
+{
+  "date": "2020-09-10",
+  "fetchedAt": "2026-02-05T07:27:06.863Z",
+  "articleCount": 6,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @PaxosGlobal: Today’s the 2nd anniversary of $PAX @PaxosStandard - the 1st regulated USD-stablecoin. To date, more than $1.9B $PAX token…",
+      "link": "https://cryptopanic.com/news/9940661/RT-PaxosGlobal-Todays-the-2nd-anniversary-of-PAX-PaxosStandard-the-1st-regulated-USD-stablecoin-To-date-more-than-19B-PAX-token",
+      "pubDate": "2020-09-10T19:04:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "IOTA Foundation-Led Cost-Efficient Energy Trading Platform Is Now Business-Ready",
+      "link": "https://cryptopanic.com/news/9940177/IOTA-Foundation-Led-Cost-Efficient-Energy-Trading-Platform-Is-Now-Business-Ready",
+      "pubDate": "2020-09-10T18:00:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "VeChain, DNV GL Launch New COVID-19 Risk Assessment Solution for Hotels",
+      "link": "https://cryptopanic.com/news/9939130/VeChain-DNV-GL-Launch-New-COVID-19-Risk-Assessment-Solution-for-Hotels",
+      "pubDate": "2020-09-10T16:00:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The IRS Is Offering You $625,000 to Crack Monero",
+      "link": "https://cryptopanic.com/news/9937347/The-IRS-Is-Offering-You-625000-to-Crack-Monero",
+      "pubDate": "2020-09-10T13:02:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "YouTube Ignored Warnings About XRP ‘Giveaway’ Scams, Ripple Says",
+      "link": "https://cryptopanic.com/news/ripple/9935968/YouTube-Ignored-Warnings-About-XRP-Giveaway-Scams-Ripple-Says",
+      "pubDate": "2020-09-10T10:40:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Online MMORPG PC game ‘Astellia Royal’ which Way2Bit is servicing and Studio 8 is developing hold a CBT(Closed Beta…",
+      "link": "https://cryptopanic.com/news/9932871/Online-MMORPG-PC-game-Astellia-Royal-which-Way2Bit-is-servicing-and-Studio-8-is-developing-hold-a-CBTClosed-Beta",
+      "pubDate": "2020-09-10T02:04:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BORA"
+      ]
+    }
+  ]
+}

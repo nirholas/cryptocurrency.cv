@@ -1,0 +1,25 @@
+{
+  "date": "2020-01-24",
+  "fetchedAt": "2026-02-05T07:27:06.865Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Reebonz Luxury Goods Platform Adopts VeChain (VET)",
+      "link": "https://cryptopanic.com/news/7735780/Reebonz-Luxury-Goods-Platform-Adopts-VeChain-VET",
+      "pubDate": "2020-01-24T13:00:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

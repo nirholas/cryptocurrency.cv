@@ -1,0 +1,24 @@
+{
+  "date": "2019-05-07",
+  "fetchedAt": "2026-02-05T07:27:06.996Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Justin Sun Announces Tron (TRX) Return to Top 10, Promises BTT will Be Close Soon Too",
+      "link": "https://cryptopanic.com/news/tron/5344252/Justin-Sun-Announces-Tron-TRX-Return-to-Top-10-Promises-BTT-will-Be-Close-Soon-Too",
+      "pubDate": "2019-05-07T11:07:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 10
+      }
+    }
+  ]
+}

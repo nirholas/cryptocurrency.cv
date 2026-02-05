@@ -1,0 +1,43 @@
+{
+  "date": "2019-04-29",
+  "fetchedAt": "2026-02-05T07:27:06.978Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "NEO Token Payment Now Available in Stores Via Apple and Samsung Pay",
+      "link": "https://cryptopanic.com/news/5269081/NEO-Token-Payment-Now-Available-in-Stores-Via-Apple-and-Samsung-Pay",
+      "pubDate": "2019-04-29T12:19:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "IOTA Skyrockets 16 Percent on Jaguar Partnership. Will the Rally Continue?",
+      "link": "https://cryptopanic.com/news/5266051/IOTA-Skyrockets-16-Percent-on-Jaguar-Partnership-Will-the-Rally-Continue",
+      "pubDate": "2019-04-29T06:30:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

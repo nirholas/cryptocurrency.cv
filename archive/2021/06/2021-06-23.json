@@ -1,0 +1,607 @@
+{
+  "date": "2021-06-23",
+  "fetchedAt": "2026-02-05T07:27:06.667Z",
+  "articleCount": 41,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "LIVE AMA - Watch Now! ft. @mitchliu CEO @jieyilong CTO @wes_levitt Head of Strategy",
+      "link": "https://cryptopanic.com/news/theta-token/12192027/LIVE-AMA-Watch-Now-ft-mitchliu-CEO-jieyilong-CTO-wes_levitt-Head-of-Strategy",
+      "pubDate": "2021-06-23T23:01:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Dogecoin Co-Creator Buys $DOGE ‘After 8 Years of Vowing Never to Buy Crypto Again’",
+      "link": "https://cryptopanic.com/news/dogecoin/12186971/Dogecoin-Co-Creator-Buys-DOGE-After-8-Years-of-Vowing-Never-to-Buy-Crypto-Again",
+      "pubDate": "2021-06-23T22:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Billy Markus, one of the co-creators of the meme-inspired cryptocurrency Dogecoin (DOGE), has on social media revealed that “after 8 years of vowing never to buy crypto again” he decided to invest in the cryptocurrency he helped create. Markus’ tweet came after a wide cryptocurrency market crash that affect most top cryptoassets and was especially […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Top Crypto Analyst Says One Altcoin Set to Erupt 1,000%, Updates Forecast for Bitcoin and XRP",
+      "link": "https://cryptopanic.com/news/ripple/12186894/Top-Crypto-Analyst-Says-One-Altcoin-Set-to-Erupt-1000-Updates-Forecast-for-Bitcoin-and-XRP",
+      "pubDate": "2021-06-23T22:05:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Despite the rough crypto markets, a popular analyst and trader says this bull cycle is not over yet – and one altcoin in particular is gearing up for a huge rally. The pseudonymous trader known in the industry as Credible Crypto tells his 219,000 Twitter followers that while fear is widespread, he doesn’t believe that […]",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Get ready... we're live in 1 hour!",
+      "link": "https://cryptopanic.com/news/theta-token/12192028/Get-ready-were-live-in-1-hour",
+      "pubDate": "2021-06-23T22:01:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "RT @jieyilong: NFT are not just for digital collectibles. @Theta_Network’s newest U.S. patent leverages NFT for digital right management, p…",
+      "link": "https://cryptopanic.com/news/theta-token/12192029/RT-jieyilong-NFT-are-not-just-for-digital-collectibles-Theta_Networks-newest-US-patent-leverages-NFT-for-digital-right-management-p",
+      "pubDate": "2021-06-23T21:37:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "John McAfee Found Dead in Spanish Prison Ahead of Extradition to US, Report",
+      "link": "https://cryptopanic.com/news/near/12186786/John-McAfee-Found-Dead-in-Spanish-Prison-Ahead-of-Extradition-to-US-Report",
+      "pubDate": "2021-06-23T21:15:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Antivirus software mogul John McAfee has been found dead in his cell within the Brians 2 prison near Barcelona, Spain.",
+      "currencies": [
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Theta has now been awarded patent application approval for USPTO №17/218,245 (\"THETA-1003\") - decentralized DRM via…",
+      "link": "https://cryptopanic.com/news/theta-token/12192030/Theta-has-now-been-awarded-patent-application-approval-for-USPTO-No17218245-THETA-1003-decentralized-DRM-via",
+      "pubDate": "2021-06-23T18:34:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Crypto market cap recovers $76B, altcoins rally after Bitcoin hits $34K",
+      "link": "https://cryptopanic.com/news/dogecoin/12186292/Crypto-market-cap-recovers-76B-altcoins-rally-after-Bitcoin-hits-34K",
+      "pubDate": "2021-06-23T18:21:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin’s quick recovery to $34,800 ignited a rally in altcoins, boosting the total crypto market capitalization by $76 billion.",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "It's that time of the week again! The #Electroneum weekly stats update is here! Which stat surprised you the most t…",
+      "link": "https://cryptopanic.com/news/12186087/Its-that-time-of-the-week-again-The-Electroneum-weekly-stats-update-is-here-Which-stat-surprised-you-the-most-t",
+      "pubDate": "2021-06-23T17:01:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "get in, the coreDAO audits are almost complete #48flowers",
+      "link": "https://cryptopanic.com/news/12192660/get-in-the-coreDAO-audits-are-almost-complete-48flowers",
+      "pubDate": "2021-06-23T16:49:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CORE"
+      ]
+    },
+    {
+      "title": "The coreDAO voucher migration contracts are finalized and being audited right now.",
+      "link": "https://cryptopanic.com/news/12192661/The-coreDAO-voucher-migration-contracts-are-finalized-and-being-audited-right-now",
+      "pubDate": "2021-06-23T16:45:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CORE"
+      ]
+    },
+    {
+      "title": "Dogecoin Shaves Off $60 Billion In One Month, But DOGE HODLers Are Bullish For These Significant Reasons",
+      "link": "https://cryptopanic.com/news/dogecoin/12186064/Dogecoin-Shaves-Off-60-Billion-In-One-Month-But-DOGE-HODLers-Are-Bullish-For-These-Significant-Reasons",
+      "pubDate": "2021-06-23T16:41:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "At the time of this writing, Dogecoin has garnered gains of 15%, a major recovery from yesterday’s low, although the 7 day losses are still above 33%. The cryptocurrency market turned green at the later part of yesterday, and leading altcoins like Dogecoin followed suit as trading volume climbed up swiftly. Although the asset had […]",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 20
+      }
+    },
+    {
+      "title": "The #cryptocurrency field is full of pitfalls. Do your own careful evaluation when it comes to any new high-yield v…",
+      "link": "https://cryptopanic.com/news/12191647/The-cryptocurrency-field-is-full-of-pitfalls-Do-your-own-careful-evaluation-when-it-comes-to-any-new-high-yield-v",
+      "pubDate": "2021-06-23T16:12:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "Make sure you save the date ! On June 25th, we will be streaming Live from our office for a special edition of the…",
+      "link": "https://cryptopanic.com/news/12189602/Make-sure-you-save-the-date-On-June-25th-we-will-be-streaming-Live-from-our-office-for-a-special-edition-of-the",
+      "pubDate": "2021-06-23T15:57:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "DeFi Tokens Including Uniswap, Compound and Aave Recoup Losses",
+      "link": "https://cryptopanic.com/news/12185842/DeFi-Tokens-Including-Uniswap-Compound-and-Aave-Recoup-Losses",
+      "pubDate": "2021-06-23T15:37:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Major DeFi tokens are among the biggest gainers in the cryptocurrency market in the past 24 hours.",
+      "currencies": [
+        "AAVE",
+        "COMP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "This Chainlink trend can affect its price movement",
+      "link": "https://cryptopanic.com/news/chainlink/12185680/This-Chainlink-trend-can-affect-its-price-movement",
+      "pubDate": "2021-06-23T15:00:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "In the current market crash, with a drop in the price of several altcoins, LINK’s price was at the $18.91 level. Based on the price trend and charts, LINK does an 18-month cycle and repeats again but within a new price discovery range. This has been observed on the price chart and on-chain metrics like […]",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DOGE USD Millionaire Keeps Holding Despite Losing $167,000 in Dogecoin in One Day",
+      "link": "https://cryptopanic.com/news/dogecoin/12185345/DOGE-USD-Millionaire-Keeps-Holding-Despite-Losing-167000-in-Dogecoin-in-One-Day",
+      "pubDate": "2021-06-23T13:18:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Holder of $1 million worth of DOGE has lost almost $170,000 in one day but he keeps holding his meme coins",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 25,
+        "negative": 9
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Reef Finance  welcomes @OshenOfficial the adventure-based NFT marketplace to its expanding ecosystem of DAPPS …",
+      "link": "https://cryptopanic.com/news/12191538/Reef-Finance-welcomes-OshenOfficial-the-adventure-based-NFT-marketplace-to-its-expanding-ecosystem-of-DAPPS",
+      "pubDate": "2021-06-23T13:09:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @RSKsmart: Gitcoin Hackathon Winner Announcements",
+      "link": "https://cryptopanic.com/news/12191475/RT-RSKsmart-Gitcoin-Hackathon-Winner-Announcements",
+      "pubDate": "2021-06-23T13:07:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RIF"
+      ]
+    },
+    {
+      "title": "We’re thrilled to announce that @lcnem_ja, @karmapointApp, and FactorChain AI have concluded the inaugural phase…",
+      "link": "https://cryptopanic.com/news/12185243/Were-thrilled-to-announce-that-lcnem_ja-karmapointApp-and-FactorChain-AI-have-concluded-the-inaugural-phase",
+      "pubDate": "2021-06-23T13:01:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEM",
+        "XYM"
+      ]
+    },
+    {
+      "title": "Join the stream at 10am (GMT-3) to find out the winners of RIF's hackathon bounties!!",
+      "link": "https://cryptopanic.com/news/12191476/Join-the-stream-at-10am-GMT-3-to-find-out-the-winners-of-RIFs-hackathon-bounties",
+      "pubDate": "2021-06-23T12:10:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RIF"
+      ]
+    },
+    {
+      "title": "IOTA Mentioned in Latest Patent Application of British Biotech Giant Leica Biosystems",
+      "link": "https://cryptopanic.com/news/12185058/IOTA-Mentioned-in-Latest-Patent-Application-of-British-Biotech-Giant-Leica-Biosystems",
+      "pubDate": "2021-06-23T11:44:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The blockchain can be used in immutable-ledger-based workflow system of patient's Samples management",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Why ‘Ethereum’s woes’ have turned into Polygon’s wins?",
+      "link": "https://cryptopanic.com/news/matic-network/12184944/Why-Ethereums-woes-have-turned-into-Polygons-wins",
+      "pubDate": "2021-06-23T11:00:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The Polygon network emerged as an alternative to decentralized finance users amid the volatility-driven period. It not only posed as a competitor to the established Ethereum network but also Binance Smart Chain. According to data, in the past week, the top 10 DeFi applications on the Polygon network attracted just over 242,000 unique active wallets. […]",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin mining rig maker Canaan breaks ground in Kazakhstan",
+      "link": "https://cryptopanic.com/news/12184756/Bitcoin-mining-rig-maker-Canaan-breaks-ground-in-Kazakhstan",
+      "pubDate": "2021-06-23T09:38:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Canaan, one of the world's biggest crypto mining rig makers, has launched its own crypto mining business in Kazakhstan.",
+      "currencies": [
+        "BTC",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Good news... I hear about one of country in Asia will create an exchanger under government",
+      "link": "https://cryptopanic.com/news/12188919/Good-news-I-hear-about-one-of-country-in-Asia-will-create-an-exchanger-under-government?mtm_campaign=API-OFA",
+      "pubDate": "2021-06-23T09:09:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BB"
+      ]
+    },
+    {
+      "title": "Bitcoin price 'very near bottom' with $30K dip, says bullish institutional report",
+      "link": "https://cryptopanic.com/news/near/12184641/Bitcoin-price-very-near-bottom-with-30K-dip-says-bullish-institutional-report",
+      "pubDate": "2021-06-23T08:35:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Stack funds draws attention to this week's $2.3 billion Bitcoin options expiry, with a potential change in sentiment coming thereafter.",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BTC, ETH, XRP, CHZ, HBAR, XMR, HNT — Tech Analysis, June 23",
+      "link": "https://cryptopanic.com/news/12184619/BTC-ETH-XRP-CHZ-HBAR-XMR-HNT-Tech-Analysis-June-23",
+      "pubDate": "2021-06-23T08:25:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin (BTC) and ethereum (ETH) have created bullish hammer candlesticks. BTC has potentially reached the bottom of a bearish impulse.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "HNT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Goldman Sachs reportedly started trading on JPMorgan’s repo blockchain",
+      "link": "https://cryptopanic.com/news/ethereum/12183666/Goldman-Sachs-reportedly-started-trading-on-JPMorgans-repo-blockchain",
+      "pubDate": "2021-06-23T07:27:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Goldman Sachs reportedly traded digitized treasury bonds for JPM Coin on JPMorgan Chase's Onyx blockchain platform.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 7
+      }
+    },
+    {
+      "title": "HUNT is running a pre-sign up for the new HUNT DApp called @MintClubPro. #MINT will be minted via swapped #HUNT tok…",
+      "link": "https://cryptopanic.com/news/12181988/HUNT-is-running-a-pre-sign-up-for-the-new-HUNT-DApp-called-MintClubPro-MINT-will-be-minted-via-swapped-HUNT-tok",
+      "pubDate": "2021-06-23T06:02:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HUNT"
+      ]
+    },
+    {
+      "title": "a million mutiply , they are insane",
+      "link": "https://cryptopanic.com/news/ecash/12291445/a-million-mutiply-they-are-insane",
+      "pubDate": "2021-06-23T06:02:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "RT @harvest_finance: Volatile market needs stable yields; And still ~19x greater than what a fiat bank offers ‍ $USDC $DAI $USDT $USDP…",
+      "link": "https://cryptopanic.com/news/12183469/RT-harvest_finance-Volatile-market-needs-stable-yields-And-still-19x-greater-than-what-a-fiat-bank-offers-USDC-DAI-USDT-USDP",
+      "pubDate": "2021-06-23T05:39:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "DAI",
+        "EURS"
+      ]
+    },
+    {
+      "title": "Australian crypto exchange CoinJar lists BAL, ENJ, GRT, MATIC, USDT, and WBTC",
+      "link": "https://cryptopanic.com/news/12180297/Australian-crypto-exchange-CoinJar-lists-BAL-ENJ-GRT-MATIC-USDT-and-WBTC",
+      "pubDate": "2021-06-23T03:47:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "CoinJar, a popular Australian-based bitcoin/crypto exchange, today announced it has listed six new coins including BAL, ENJ, GRT, MATIC, ESDT, and WBTC. From today, users will be able to buy and sell all of these coins on CoinJar; joining the 24 cryptocurrencies that users can already trade, store and send. Six New Listings Balancer (BAL) […]",
+      "currencies": [
+        "BTC",
+        "WBTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "QuarkChain Gave a Keynote Speech at the Blockchain Trend Online Conference",
+      "link": "https://cryptopanic.com/news/12183265/QuarkChain-Gave-a-Keynote-Speech-at-the-Blockchain-Trend-Online-Conference",
+      "pubDate": "2021-06-23T03:45:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QKC"
+      ]
+    },
+    {
+      "title": "Don't forget to submit your AMA questions to the team here: The team will also take quest…",
+      "link": "https://cryptopanic.com/news/theta-token/12183888/Dont-forget-to-submit-your-AMA-questions-to-the-team-here-The-team-will-also-take-quest",
+      "pubDate": "2021-06-23T03:19:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Yahoo Finance, touts GTN as one of the 5 crypto market crash (mid May 2021) survivors. GTN trading since 2021.…",
+      "link": "https://cryptopanic.com/news/12181910/Yahoo-Finance-touts-GTN-as-one-of-the-5-crypto-market-crash-mid-May-2021-survivors-GTN-trading-since-2021",
+      "pubDate": "2021-06-23T03:10:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Dogecoin: Why ‘Even Elon can’t save this with his tweets’",
+      "link": "https://cryptopanic.com/news/dogecoin/12180242/Dogecoin-Why-Even-Elon-cant-save-this-with-his-tweets",
+      "pubDate": "2021-06-23T03:00:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "As Dogecoin was down 74.69% from its ATH 45 days ago, all eyes turned to the self-proclaimed Dogefather for some price-pumping tweets. Musk had single-handedly taken a meme-coin and placed it on a pedestal as one of the top ten cryptocurrencies. However, his bullishness on this joke coin couldn’t keep its value up for too […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "very dagerous coin",
+      "link": "https://cryptopanic.com/news/ecash/12211601/very-dagerous-coin",
+      "pubDate": "2021-06-23T01:34:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "RT @ThetaDrop: The Wait is Almost Over Welcome @Bitboy_Crypto to the @Theta_Network on July 22 at 12:00pm ET Redeemable NFTs & Exclusive…",
+      "link": "https://cryptopanic.com/news/theta-token/12183889/RT-ThetaDrop-The-Wait-is-Almost-Over-Welcome-Bitboy_Crypto-to-the-Theta_Network-on-July-22-at-1200pm-ET-Redeemable-NFTs-amp-Exclusive",
+      "pubDate": "2021-06-23T00:47:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Dogecoin ($DOGE) Price Will Plunge to $0.05, Says Bitcoin Bull",
+      "link": "https://cryptopanic.com/news/dogecoin/12179944/Dogecoin-DOGE-Price-Will-Plunge-to-005-Says-Bitcoin-Bull",
+      "pubDate": "2021-06-23T00:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A widely followed pseudonymous cryptocurrency analyst and bitcoin bull has predicted that the price of the meme-inspired cryptocurrency Dogecoin (DOGE) is “programmed” to plunge to $0.05 and that even Tesla CEO Elon Musk would be unable to save it. The pseudonymous analyst, going by Tyler Durden on social media, posted a chart showing that the […]",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 7
+      }
+    },
+    {
+      "title": "RT @RichardHeartWin: is just about the only coin still making all time highs! HEX's last all time high was 4 days a…",
+      "link": "https://cryptopanic.com/news/12181983/RT-RichardHeartWin-is-just-about-the-only-coin-still-making-all-time-highs-HEXs-last-all-time-high-was-4-days-a",
+      "pubDate": "2021-06-23T00:13:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "RT @THETAtv: Don't miss the @Theta_Network Live AMA @mitchliu CEO @jieyilong CTO @wes_levitt Head of Strategy Tomorrow (June 23) @ 4pm PT…",
+      "link": "https://cryptopanic.com/news/theta-token/12183890/RT-THETAtv-Dont-miss-the-Theta_Network-Live-AMA-mitchliu-CEO-jieyilong-CTO-wes_levitt-Head-of-Strategy-Tomorrow-June-23-4pm-PT",
+      "pubDate": "2021-06-23T00:11:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    }
+  ]
+}

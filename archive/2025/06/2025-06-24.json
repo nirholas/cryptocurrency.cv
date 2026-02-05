@@ -1,0 +1,586 @@
+{
+  "date": "2025-06-24",
+  "fetchedAt": "2026-02-05T07:27:08.674Z",
+  "articleCount": 41,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Chainlink and Mastercard Offer DEX Access to Billions of Cardholders",
+      "link": "https://cryptopanic.com/news/uniswap/22804407/Chainlink-and-Mastercard-Offer-DEX-Access-to-Billions-of-Cardholders",
+      "pubDate": "2025-06-24T23:35:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "UNI"
+      ]
+    },
+    {
+      "title": "Mastercard Partners With Chainlink (LINK) To Allow Over 3,000,000,000 Cardholders To Make Direct Crypto Purchases",
+      "link": "https://cryptopanic.com/news/uniswap/22802041/Mastercard-Partners-With-Chainlink-LINK-To-Allow-Over-3000000000-Cardholders-To-Make-Direct-Crypto-Purchases",
+      "pubDate": "2025-06-24T22:01:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum’s next big leap? Dev proposes halving block times for faster DeFi",
+      "link": "https://cryptopanic.com/news/ethereum/22802028/Ethereums-next-big-leap-Dev-proposes-halving-block-times-for-faster-DeFi",
+      "pubDate": "2025-06-24T22:00:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Could halving slot times make Ethereum faster for DeFi and rollups?",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Top Crypto Gainers For 2025: Why BlockDAG, XRP, ALGO, & XLM Could Explode This Year",
+      "link": "https://cryptopanic.com/news/algorand/22800774/Top-Crypto-Gainers-For-2025-Why-BlockDAG-XRP-ALGO-XLM-Could-Explode-This-Year",
+      "pubDate": "2025-06-24T21:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XLM",
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Old-School Crypto Assets Are Outpacing AI and DeFi Tokens in 2025, Data Show",
+      "link": "https://cryptopanic.com/news/litecoin/22800769/Old-School-Crypto-Assets-Are-Outpacing-AI-and-DeFi-Tokens-in-2025-Data-Show",
+      "pubDate": "2025-06-24T20:55:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "LTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Spot Ethereum ETFs record $1B inflows in 15 trading days, hitting $4B for the first time",
+      "link": "https://cryptopanic.com/news/ethereum/22800734/Spot-Ethereum-ETFs-record-1B-inflows-in-15-trading-days-hitting-4B-for-the-first-time",
+      "pubDate": "2025-06-24T20:45:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Spot Ethereum (ETH) exchange-traded funds (ETFs) listed in the US crossed $4 billion in cumulative net inflows on June 23, only eleven months after their market debut. The products launched on July 23, 2024, and required 216 US trading sessions to accumulate their first $3 billion by May 30.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 25 June 2025: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/decentraland/22802762/Spell-Wallet-Daily-Puzzle-25-June-2025-Earn-Reward-of-1-MANA",
+      "pubDate": "2025-06-24T20:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "AAVE Captures 28% of DeFi Market Share with $40B TVL – Can It Hit $300?",
+      "link": "https://cryptopanic.com/news/aave/22800140/AAVE-Captures-28-of-DeFi-Market-Share-with-40B-TVL-Can-It-Hit-300",
+      "pubDate": "2025-06-24T20:07:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AVAX",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "UNI Price Volatility Hits 12% Swing, SUI Token Crashes 10.8%, While Unstaked Eyes 2,700% ROI as Fastest-Growing Crypto",
+      "link": "https://cryptopanic.com/news/uniswap/22799667/UNI-Price-Volatility-Hits-12-Swing-SUI-Token-Crashes-108-While-Unstaked-Eyes-2700-ROI-as-Fastest-Growing-Crypto",
+      "pubDate": "2025-06-24T20:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "SUI"
+      ]
+    },
+    {
+      "title": "ETH trades near $2.5K, but weak demand clouds bullish outlook",
+      "link": "https://cryptopanic.com/news/ethereum/22799385/ETH-trades-near-25K-but-weak-demand-clouds-bullish-outlook",
+      "pubDate": "2025-06-24T19:11:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ether bounced 17% from its recent low, but data shows pro traders unwilling to flip bullish on ETH.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 6
+      }
+    },
+    {
+      "title": "SharpLink Gaming expands crypto treasury to 188,478 ETH in second ether acquisition",
+      "link": "https://cryptopanic.com/news/ethereum/22798557/SharpLink-Gaming-expands-crypto-treasury-to-188478-ETH-in-second-ether-acquisition",
+      "pubDate": "2025-06-24T18:59:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The move brings the firm's total ETH holdings to 188,478 ETH as SharpLink Gaming aims to become the largest corporate ether holder.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 7
+      }
+    },
+    {
+      "title": "SEC delays 21Shares spot Polkadot ETF",
+      "link": "https://cryptopanic.com/news/polkadot/22797866/SEC-delays-21Shares-spot-Polkadot-ETF",
+      "pubDate": "2025-06-24T17:58:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "CME XRP futures hit $542 million volume in first month, strengthening case for spot XRP ETFs",
+      "link": "https://cryptopanic.com/news/ripple/22797418/CME-XRP-futures-hit-542-million-volume-in-first-month-strengthening-case-for-spot-XRP-ETFs",
+      "pubDate": "2025-06-24T17:51:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "CME Group's XRP futures and Micro XRP futures have recorded $542 million in total trading volume since their launch on May 19, according to a new report from the leading derivatives marketplace. https://twitter. com/CMEGroup/status/1937518579135414407These XRP products got off to a strong start with $19 million in launch-day trading, but interest quickly accelerated as volume jumped 28 times over the first month. Global adoption is also growing, with nearly half of the activity coming from outsi",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "SEC Delays Decision on 21Shares’ Spot Polkadot ETF Application",
+      "link": "https://cryptopanic.com/news/polkadot/22797342/SEC-Delays-Decision-on-21Shares-Spot-Polkadot-ETF-Application",
+      "pubDate": "2025-06-24T17:30:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Craig Wright still owes $143M two years after Kleiman judgment",
+      "link": "https://cryptopanic.com/news/huobi-token/22797323/Craig-Wright-still-owes-143M-two-years-after-Kleiman-judgment",
+      "pubDate": "2025-06-24T17:25:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HT",
+        "GAL"
+      ]
+    },
+    {
+      "title": "Solana surges amid record futures sctivity and Kazakhstan partnership",
+      "link": "https://cryptopanic.com/news/solana/22796317/Solana-surges-amid-record-futures-sctivity-and-Kazakhstan-partnership",
+      "pubDate": "2025-06-24T17:03:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "25-6-2025 – Solana’s SOL token has surged to $145. 47, marking a robust 7. 63% gain over the past 24 hours, as institutional appetite reaches unprecedented levels with futures activity hitting extraordinary heights during a compelling rally that has captivated sophisticated investors across global markets. The cryptocurrency’s ascent has been particularly noteworthy during overnight trading sessions, with [",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Altcoin ETFs Seen as Near-Certain by Year-End, Say Bloomberg Analysts",
+      "link": "https://cryptopanic.com/news/ripple/22789901/Altcoin-ETFs-Seen-as-Near-Certain-by-Year-End-Say-Bloomberg-Analysts",
+      "pubDate": "2025-06-24T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Catenaa, Tuesday, June 24, 2025-Spot exchange-traded funds (ETFs) for several leading altcoins including Solana, XRP and Dogecoin are now seen as near-certainties for US Securities and Exchange Commission (SEC) approval by the end of 2025, according to top Bloomberg ETF analysts. The forecast signals a potential watershed moment in the expansion of crypto offerings on […]",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana treasury firm DeFi Dev Corp spins up Dogwifhat validator, plans to split WIF staking rewards with community",
+      "link": "https://cryptopanic.com/news/solana/22796063/Solana-treasury-firm-DeFi-Dev-Corp-spins-up-Dogwifhat-validator-plans-to-split-WIF-staking-rewards-with-community",
+      "pubDate": "2025-06-24T16:48:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "DeFi Dev Corp and the Dogwifhat community will split staking income and other validator rewards after deducting operational expenses.",
+      "currencies": [
+        "SOL",
+        "WIF"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Mastercard Teams Up with Chainlink to Power On-Chain Crypto Payments",
+      "link": "https://cryptopanic.com/news/uniswap/22796020/Mastercard-Teams-Up-with-Chainlink-to-Power-On-Chain-Crypto-Payments",
+      "pubDate": "2025-06-24T16:41:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "UNI"
+      ]
+    },
+    {
+      "title": "Just In: US SEC Postpones Decision on 21Shares Polkadot ETF",
+      "link": "https://cryptopanic.com/news/polkadot/22796015/Just-In-US-SEC-Postpones-Decision-on-21Shares-Polkadot-ETF",
+      "pubDate": "2025-06-24T16:39:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "SharpLink Gaming Becomes Largest Public Holder of Ethereum with $470M ETH Treasury",
+      "link": "https://cryptopanic.com/news/ethereum/22795874/SharpLink-Gaming-Becomes-Largest-Public-Holder-of-Ethereum-with-470M-ETH-Treasury",
+      "pubDate": "2025-06-24T16:18:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "25-6-2025 – SharpLink Gaming (SBET), a Minneapolis-based technology firm listed on public markets, has significantly bolstered its ether (ETH) reserves, cementing its position as a trailblazer among publicly traded companies diversifying into cryptocurrencies. On Tuesday, the company announced that its treasury now holds an impressive 188,478 ETH, valued at approximately $470 million at current market [. .",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Best New Crypto to Buy: Monero, Pi Network, & Cold Wallet",
+      "link": "https://cryptopanic.com/news/monero/22794624/Best-New-Crypto-to-Buy-Monero-Pi-Network-Cold-Wallet",
+      "pubDate": "2025-06-24T16:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "PI",
+        "A"
+      ]
+    },
+    {
+      "title": "Grayscale Submits Updated Solana ETF Application to SEC",
+      "link": "https://cryptopanic.com/news/solana/22795452/Grayscale-Submits-Updated-Solana-ETF-Application-to-SEC",
+      "pubDate": "2025-06-24T15:53:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "According to PANews, Grayscale has recently submitted an updated S-1/A application for its spot Solana ETF, known as the Grayscale Solana Trust (SOL), to the U. S. Securities and Exchange Commission (SEC). The filing reveals that the management fee for this trust product is set at 2. 5%.",
+      "currencies": [
+        "SOL",
+        "A"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SEC Delays Decision on 21Shares Polkadot ETF Approval",
+      "link": "https://cryptopanic.com/news/polkadot/22795451/SEC-Delays-Decision-on-21Shares-Polkadot-ETF-Approval",
+      "pubDate": "2025-06-24T15:53:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "61% of USDD collateral now in one vault — funded entirely by HTX",
+      "link": "https://cryptopanic.com/news/usdd/22794547/61-of-USDD-collateral-now-in-one-vault-funded-entirely-by-HTX",
+      "pubDate": "2025-06-24T15:46:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDD",
+        "DAO"
+      ]
+    },
+    {
+      "title": "Next Cryptocurrency to Explode – UNI, FLOKI, APE & New Meme Coins on Presale",
+      "link": "https://cryptopanic.com/news/uniswap/22797433/Next-Cryptocurrency-to-Explode-UNI-FLOKI-APE-New-Meme-Coins-on-Presale",
+      "pubDate": "2025-06-24T15:17:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "UNI",
+        "FLOKI"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "What Crypto Whales Are Buying After Israel-Iran Ceasefire Announcement",
+      "link": "https://cryptopanic.com/news/uniswap/22794334/What-Crypto-Whales-Are-Buying-After-Israel-Iran-Ceasefire-Announcement",
+      "pubDate": "2025-06-24T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Solaxy Token (SOLX) Drops 88% on Raydium, 68% on Uniswap After $58M Presale, Then Stabilizes",
+      "link": "https://cryptopanic.com/news/uniswap/22792895/Solaxy-Token-SOLX-Drops-88-on-Raydium-68-on-Uniswap-After-58M-Presale-Then-Stabilizes",
+      "pubDate": "2025-06-24T14:23:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "UNI"
+      ]
+    },
+    {
+      "title": "Chainlink and Mastercard Collaborate to Enhance Blockchain Transactions",
+      "link": "https://cryptopanic.com/news/uniswap/22793096/Chainlink-and-Mastercard-Collaborate-to-Enhance-Blockchain-Transactions",
+      "pubDate": "2025-06-24T14:03:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "UNI"
+      ]
+    },
+    {
+      "title": "KuCoin Achieves CER.live’s AAA Rating, Joining Top Crypto Exchanges In Security Ranking",
+      "link": "https://cryptopanic.com/news/kucoin-shares/22790382/KuCoin-Achieves-CERlives-AAA-Rating-Joining-Top-Crypto-Exchanges-In-Security-Ranking",
+      "pubDate": "2025-06-24T13:07:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "South Korea’s central bank warns against rushed stablecoins roll out",
+      "link": "https://cryptopanic.com/news/dai/22789809/South-Koreas-central-bank-warns-against-rushed-stablecoins-roll-out",
+      "pubDate": "2025-06-24T12:35:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DAI"
+      ]
+    },
+    {
+      "title": "Polkadot (DOT) Price Pushes To Levels Last Seen Almost 5 Years Ago",
+      "link": "https://cryptopanic.com/news/polkadot/22789803/Polkadot-DOT-Price-Pushes-To-Levels-Last-Seen-Almost-5-Years-Ago",
+      "pubDate": "2025-06-24T12:34:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Crypto Price Analysis 6-24: BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, ARBITRUM: ARB, UNISWAP: UNI, FILECOIN: FIL",
+      "link": "https://cryptopanic.com/news/uniswap/22789924/Crypto-Price-Analysis-6-24-BITCOIN-BTC-ETHEREUM-ETH-SOLANA-SOL-ARBITRUM-ARB-UNISWAP-UNI-FILECOIN-FIL",
+      "pubDate": "2025-06-24T12:33:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Aave Set to Expand to Aptos in First Non-EVM Integration",
+      "link": "https://cryptopanic.com/news/aave/22789062/Aave-Set-to-Expand-to-Aptos-in-First-Non-EVM-Integration",
+      "pubDate": "2025-06-24T12:05:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "DAO",
+        "APT"
+      ]
+    },
+    {
+      "title": "Litecoin Teeters on the Edge—Is It About to Snap or Soar?",
+      "link": "https://cryptopanic.com/news/litecoin/22785368/Litecoin-Teeters-on-the-EdgeIs-It-About-to-Snap-or-Soar",
+      "pubDate": "2025-06-24T09:56:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Anchorage Digital Integrates Uniswap for Institutional Access to DeFi",
+      "link": "https://cryptopanic.com/news/uniswap/22783439/Anchorage-Digital-Integrates-Uniswap-for-Institutional-Access-to-DeFi",
+      "pubDate": "2025-06-24T08:43:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Introducing World Computer Hacker League: Four-Month Global Competition to Build Next-Gen Apps",
+      "link": "https://cryptopanic.com/news/internet-computer/22783297/Introducing-World-Computer-Hacker-League-Four-Month-Global-Competition-to-Build-Next-Gen-Apps",
+      "pubDate": "2025-06-24T08:21:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ]
+    },
+    {
+      "title": "VeChain To Introduce ‘Build Your Body’ at UFC 317 – The Decentralized App Rewarding Fans For Exercise",
+      "link": "https://cryptopanic.com/news/vechain/22780727/VeChain-To-Introduce-Build-Your-Body-at-UFC-317-The-Decentralized-App-Rewarding-Fans-For-Exercise",
+      "pubDate": "2025-06-24T05:57:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET",
+        "B3TR"
+      ]
+    },
+    {
+      "title": "New Crypto Listing Solaxy (SOLX) Now On Uniswap – Best New Token To Buy?",
+      "link": "https://cryptopanic.com/news/uniswap/22777791/New-Crypto-Listing-Solaxy-SOLX-Now-On-Uniswap-Best-New-Token-To-Buy",
+      "pubDate": "2025-06-24T01:44:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "UNI"
+      ]
+    },
+    {
+      "title": "Trader Acquires 67.98 WBTC in Overnight Transaction",
+      "link": "https://cryptopanic.com/news/wrapped-bitcoin/22781919/Trader-Acquires-6798-WBTC-in-Overnight-Transaction",
+      "pubDate": "2025-06-24T01:13:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "WBTC"
+      ]
+    },
+    {
+      "title": "BlockDAG Confirms $0.0030 Jump June 24 as HYPE Volume Spikes and UNI Eyes Long-Term Rally",
+      "link": "https://cryptopanic.com/news/uniswap/22774686/BlockDAG-Confirms-00030-Jump-June-24-as-HYPE-Volume-Spikes-and-UNI-Eyes-Long-Term-Rally",
+      "pubDate": "2025-06-24T00:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "HYPE"
+      ]
+    }
+  ]
+}

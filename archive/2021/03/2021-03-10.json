@@ -1,0 +1,353 @@
+{
+  "date": "2021-03-10",
+  "fetchedAt": "2026-02-05T07:27:06.960Z",
+  "articleCount": 26,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "This entrepreneur weighs in on how to ‘definitely’ send DOGE to $1",
+      "link": "https://cryptopanic.com/news/dogecoin/11601658/This-entrepreneur-weighs-in-on-how-to-definitely-send-DOGE-to-1",
+      "pubDate": "2021-03-10T22:30:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "With Elon Musk gone quiet in the past two days, it seems like Mark Cuban is filling the void with some significant DOGE talk on Twitter. The entrepreneur who owns Dallas Mavericks has recently been warming up to the popular crypto, and recently stated that it has the potential to surge further. According to his […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Altcoins and BTC SPIKE",
+      "link": "https://cryptopanic.com/news/11607833/Altcoins-and-BTC-SPIKE",
+      "pubDate": "2021-03-10T20:55:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "KEaNU Keep network proposal",
+      "link": "https://cryptopanic.com/news/11601443/KEaNU-Keep-network-proposal",
+      "pubDate": "2021-03-10T20:31:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Validators on BNB staking",
+      "link": "https://cryptopanic.com/news/11602028/Validators-on-BNB-staking",
+      "pubDate": "2021-03-10T20:10:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "You can stake your $VOODOO for $WBNB or $SUPRA at APRs are 300%+ at the time of this tweet!",
+      "link": "https://cryptopanic.com/news/11603265/You-can-stake-your-VOODOO-for-WBNB-or-SUPRA-at-APRs-are-300-at-the-time-of-this-tweet?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-10T19:44:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SUPRA",
+        "FLP"
+      ]
+    },
+    {
+      "title": "Practical applications of nu and keanu?",
+      "link": "https://cryptopanic.com/news/11601119/Practical-applications-of-nu-and-keanu",
+      "pubDate": "2021-03-10T17:31:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Litecoin’s MimbleWimble Code To Be Ready by March 15th",
+      "link": "https://cryptopanic.com/news/litecoin/11601114/Litecoins-MimbleWimble-Code-To-Be-Ready-by-March-15th",
+      "pubDate": "2021-03-10T17:26:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "In brief: MimbleWimble core developer David Burkett has stated that code for the potential upgrade will be ready by March 15th On this date, the code will be ready for final review and formal auditing Miners will then agree on whether to implement the upgrade or not MimbleWimble has been running on the testnet for 3 months The code to Litecoin’s potential MimbleWimble (MWEB) upgrade will be...",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 38,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BNB staking",
+      "link": "https://cryptopanic.com/news/11617391/BNB-staking",
+      "pubDate": "2021-03-10T16:57:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "Nucypher, Numerai, Orchid, Algorand, Golem and Loom are my biggest bags. Don't lose hope in Nucypher because its been stagnant or not moving, its a good sign.",
+      "link": "https://cryptopanic.com/news/11601012/Nucypher-Numerai-Orchid-Algorand-Golem-and-Loom-are-my-biggest-bags-Dont-lose-hope-in-Nucypher-because-its-been-stagnant-or-not-moving-its-a-good-sign",
+      "pubDate": "2021-03-10T16:31:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "🤞",
+      "link": "https://cryptopanic.com/news/11600901/post-11600901",
+      "pubDate": "2021-03-10T15:31:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Who else is staking this month?",
+      "link": "https://cryptopanic.com/news/11600698/Who-else-is-staking-this-month",
+      "pubDate": "2021-03-10T14:02:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "$4M assets locked up via . HUNT price reaches $0.22 today - up over 4,600% within a year …",
+      "link": "https://cryptopanic.com/news/11603454/4M-assets-locked-up-via-HUNT-price-reaches-022-today-up-over-4600-within-a-year",
+      "pubDate": "2021-03-10T14:00:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HUNT"
+      ]
+    },
+    {
+      "title": "Manipulation",
+      "link": "https://cryptopanic.com/news/11600503/Manipulation",
+      "pubDate": "2021-03-10T12:31:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "CoinList staking",
+      "link": "https://cryptopanic.com/news/11600450/CoinList-staking",
+      "pubDate": "2021-03-10T12:02:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "SEC accuses Ripple of diverting court’s attention with ‘legally improper’ defenses",
+      "link": "https://cryptopanic.com/news/ripple/11600354/SEC-accuses-Ripple-of-diverting-courts-attention-with-legally-improper-defenses",
+      "pubDate": "2021-03-10T11:00:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The United States Securities and Exchange Commission (SEC) is in the news today after it hit back at Ripple again with a motion to strike the firm’s defense relating to the SEC’s “Lack of Due Process and Fair Notice.” In a letter addressed to Judge Torres, the SEC alleged that Ripple seeks to avoid liability […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Coinbase Lists MATIC, SUSHI and SKL, Coins Rise 8%, 46% and 80%",
+      "link": "https://cryptopanic.com/news/11600193/Coinbase-Lists-MATIC-SUSHI-and-SKL-Coins-Rise-8-46-and-80",
+      "pubDate": "2021-03-10T09:17:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Largest US-based crypto exchange is to add another three popular altcoins and now their exchange rates have seen a major rise",
+      "currencies": [
+        "SUSHI"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Xfers is proud to work with @notabene_id along with other virtual asset providers, @oncustodian, @LunoGlobal,…",
+      "link": "https://cryptopanic.com/news/11605251/Xfers-is-proud-to-work-with-notabene_id-along-with-other-virtual-asset-providers-oncustodian-LunoGlobal",
+      "pubDate": "2021-03-10T08:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XSGD"
+      ]
+    },
+    {
+      "title": "Charted: Binance Coin (BNB) Regains Strength, Bulls Aim Fresh Break above $300",
+      "link": "https://cryptopanic.com/news/near/11599554/Charted-Binance-Coin-BNB-Regains-Strength-Bulls-Aim-Fresh-Break-above-300",
+      "pubDate": "2021-03-10T07:08:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Binance coin price started a fresh rally above the $250 resistance against the USDT. BNB is gaining momentum and it is likely to clear the $300 barrier in the near term. Binance coin price started a fresh rally above the $250 and $260 resistance levels against the USDT. The price is now trading well above […]",
+      "currencies": [
+        "BNB",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Matic will be listed on Coinbase !",
+      "link": "https://cryptopanic.com/news/11601013/Matic-will-be-listed-on-Coinbase",
+      "pubDate": "2021-03-10T06:28:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "RT @Cointelegraph: LIVE  #BlockchainBooze session 50 welcomes your favorite shark @mcuban as host @levychain chats #DeFi adoption, the #…",
+      "link": "https://cryptopanic.com/news/11600007/RT-Cointelegraph-LIVE-BlockchainBooze-session-50-welcomes-your-favorite-shark-mcuban-as-host-levychain-chats-DeFi-adoption-the",
+      "pubDate": "2021-03-10T04:20:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SURE"
+      ]
+    },
+    {
+      "title": "TA: Bitcoin Corrects From $55.8K, Why Dips Could Be Limited",
+      "link": "https://cryptopanic.com/news/near/11596516/TA-Bitcoin-Corrects-From-558K-Why-Dips-Could-Be-Limited",
+      "pubDate": "2021-03-10T03:28:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin price extended its rise above the $55,000 resistance against the US Dollar. BTC is correcting lower from $55,800 and it could find bids near the $52,500 zone. Bitcoin climbed further above the $54,500 and $55,000 resistance levels. The price is now trading well above $52,500 and the 100 hourly simple moving average. There is […]",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @mobilejae: The @aergo_io team has more announcements to go. One of my old announcement, took a long time to put together, but it's fin…",
+      "link": "https://cryptopanic.com/news/11596732/RT-mobilejae-The-aergo_io-team-has-more-announcements-to-go-One-of-my-old-announcement-took-a-long-time-to-put-together-but-its-fin",
+      "pubDate": "2021-03-10T02:45:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "Nucypher Inactive Nodes, A Reason For Keep Merger?",
+      "link": "https://cryptopanic.com/news/11600049/Nucypher-Inactive-Nodes-A-Reason-For-Keep-Merger",
+      "pubDate": "2021-03-10T02:16:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Hey look NU is moving lol",
+      "link": "https://cryptopanic.com/news/11596366/Hey-look-NU-is-moving-lol",
+      "pubDate": "2021-03-10T01:31:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "For the love of God don’t sell just yet.",
+      "link": "https://cryptopanic.com/news/11600050/For-the-love-of-God-dont-sell-just-yet",
+      "pubDate": "2021-03-10T01:14:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Migrating Away from Modern Systems?",
+      "link": "https://cryptopanic.com/news/11596280/Migrating-Away-from-Modern-Systems",
+      "pubDate": "2021-03-10T00:03:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MFT"
+      ]
+    }
+  ]
+}

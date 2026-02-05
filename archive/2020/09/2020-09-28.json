@@ -1,0 +1,33 @@
+{
+  "date": "2020-09-28",
+  "fetchedAt": "2026-02-05T07:27:06.979Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @PaxosGlobal: Digital assets are going mainstream. It’s important to know that you’re trading reliable crypto. Paxos always puts custome…",
+      "link": "https://cryptopanic.com/news/10106087/RT-PaxosGlobal-Digital-assets-are-going-mainstream-Its-important-to-know-that-youre-trading-reliable-crypto-Paxos-always-puts-custome",
+      "pubDate": "2020-09-28T21:45:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "Hack of KuCoin did not affect ZEON Network and its financial services. Our team did hold the digital assets on KuCo…",
+      "link": "https://cryptopanic.com/news/10103580/Hack-of-KuCoin-did-not-affect-ZEON-Network-and-its-financial-services-Our-team-did-hold-the-digital-assets-on-KuCo",
+      "pubDate": "2020-09-28T16:09:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS",
+        "ZEON"
+      ]
+    }
+  ]
+}

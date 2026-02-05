@@ -1,0 +1,37 @@
+{
+  "date": "2018-12-11",
+  "fetchedAt": "2026-02-05T07:27:07.892Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA Creates a New Omega Team to Focus on Its Long-term Goals",
+      "link": "https://cryptopanic.com/news/3947091/IOTA-Creates-a-New-Omega-Team-to-Focus-on-Its-Long-term-Goals",
+      "pubDate": "2018-12-11T16:59:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "EOS Underperformance Accelerates With Steep Downtrend",
+      "link": "https://cryptopanic.com/news/3946668/EOS-Underperformance-Accelerates-With-Steep-Downtrend",
+      "pubDate": "2018-12-11T16:19:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2020-07-21",
+  "fetchedAt": "2026-02-05T07:27:06.864Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Italy’s Coldiretti and Princes Tap VeChain (VET) for Farm Produce Tracking",
+      "link": "https://cryptopanic.com/news/9418354/Italys-Coldiretti-and-Princes-Tap-VeChain-VET-for-Farm-Produce-Tracking",
+      "pubDate": "2020-07-21T18:00:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

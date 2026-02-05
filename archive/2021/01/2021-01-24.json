@@ -1,0 +1,166 @@
+{
+  "date": "2021-01-24",
+  "fetchedAt": "2026-02-05T07:27:06.809Z",
+  "articleCount": 10,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Top Trader Says This Crypto Newcomer Is Primed for a ‘Giga Move’ and Will Become One of the Largest Coins on the Market",
+      "link": "https://cryptopanic.com/news/ethereum/11247294/Top-Trader-Says-This-Crypto-Newcomer-Is-Primed-for-a-Giga-Move-and-Will-Become-One-of-the-Largest-Coins-on-the-Market",
+      "pubDate": "2021-01-24T22:15:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "A widely-followed crypto trader says one crypto newcomer is poised to print a massive move en route to becoming one of the largest coins in the industry. In a new tweet, the pseudonymous trader named Kaleo tells his audience of 50,700 that Avalanche (AVAX) is gearing up to triple its value against Bitcoin (BTC) as […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Blog: This economic crisis may not just be another crisis",
+      "link": "https://cryptopanic.com/news/11246006/Blog-This-economic-crisis-may-not-just-be-another-crisis",
+      "pubDate": "2021-01-24T19:00:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PLTC"
+      ]
+    },
+    {
+      "title": "Chainlink Active Addresses Growth is 143% Higher than 3 Months Ago",
+      "link": "https://cryptopanic.com/news/chainlink/11245710/Chainlink-Active-Addresses-Growth-is-143-Higher-than-3-Months-Ago",
+      "pubDate": "2021-01-24T18:10:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Quick take: Chainlink new daily active addresses are increasing at a rapid pace The number of new daily active addresses is 143% higher than three months ago Chainlink has found solid support above $23 and is attempting to convert $24 into a support zone also The new week could provide another opportunity for Chainlink to thrive in the crypto markets The Chainlink network is growing at a fast pace compared to three months ago. This is according to the analysis […]",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Puff Bar Implements Vechain, ETH, and BCH",
+      "link": "https://cryptopanic.com/news/11245200/Puff-Bar-Implements-Vechain-ETH-and-BCH",
+      "pubDate": "2021-01-24T16:44:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Puff Bar announced on Jan. 23 that it was implementing a variety of blockchain solutions in its business. The first of these implementations is with Vechain, which enables users to verify the authenticity of their Puff Bar products. The second of these is the integration of Ether and Bitcoin Cash as payment methods for Puff … Continued",
+      "currencies": [
+        "BCH",
+        "VET"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Why Polkadot Is The Hottest Crypto In China",
+      "link": "https://cryptopanic.com/news/polkadot/11245082/Why-Polkadot-Is-The-Hottest-Crypto-In-China",
+      "pubDate": "2021-01-24T16:19:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The network is especially popular among developers and investors in China. Here's why.",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "All the way back in 1988, it was predicted that in the near #future, we would have no recourse but to use a unifi…",
+      "link": "https://cryptopanic.com/news/11243468/All-the-way-back-in-1988-it-was-predicted-that-in-the-near-future-we-would-have-no-recourse-but-to-use-a-unifi",
+      "pubDate": "2021-01-24T11:34:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR",
+        "CCXX"
+      ]
+    },
+    {
+      "title": "Uniswap, Aave Inching Closer to Top 10 as Chainlink Keeps Setting New Highs",
+      "link": "https://cryptopanic.com/news/chainlink/11242933/Uniswap-Aave-Inching-Closer-to-Top-10-as-Chainlink-Keeps-Setting-New-Highs",
+      "pubDate": "2021-01-24T08:55:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "DeFi unicorns come to the fore, surpassing EOS (EOS) and Monero (XMR)",
+      "currencies": [
+        "LINK",
+        "XMR",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @btsfav: #Bitcoin Experiment: Financial Freedom with Faucets?! Week 28 #hive",
+      "link": "https://cryptopanic.com/news/11242885/RT-btsfav-Bitcoin-Experiment-Financial-Freedom-with-Faucets-Week-28-hive",
+      "pubDate": "2021-01-24T08:46:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "Aave and Chainlink hit new highs as Bitcoin price fights to hold $32K",
+      "link": "https://cryptopanic.com/news/polkadot/11241382/Aave-and-Chainlink-hit-new-highs-as-Bitcoin-price-fights-to-hold-32K",
+      "pubDate": "2021-01-24T02:01:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Chainlink and Aave soared to a new all-time high as Bitcoin bulls struggle to hold BTC price above $32,000.",
+      "currencies": [
+        "BTC",
+        "DOT",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @mindbayes: For all the creatives working on the @EfforceOfficial bounty program, here are some resources you can use !",
+      "link": "https://cryptopanic.com/news/11434487/RT-mindbayes-For-all-the-creatives-working-on-the-EfforceOfficial-bounty-program-here-are-some-resources-you-can-use",
+      "pubDate": "2021-01-24T00:11:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    }
+  ]
+}

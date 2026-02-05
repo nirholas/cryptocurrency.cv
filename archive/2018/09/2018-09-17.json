@@ -1,0 +1,62 @@
+{
+  "date": "2018-09-17",
+  "fetchedAt": "2026-02-05T07:27:06.907Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitfinex’s EOSfinex to Launch in Beta in Late September",
+      "link": "https://cryptopanic.com/news/3066654/Bitfinexs-EOSfinex-to-Launch-in-Beta-in-Late-September",
+      "pubDate": "2018-09-17T14:29:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "EOS Margin Trading Begins on OKEx, Receives Largely Positive Response",
+      "link": "https://cryptopanic.com/news/3066419/EOS-Margin-Trading-Begins-on-OKEx-Receives-Largely-Positive-Response",
+      "pubDate": "2018-09-17T13:29:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitfinex Introduces EOS-Based Crypto Exchange “EOSfinex”",
+      "link": "https://cryptopanic.com/news/3066362/Bitfinex-Introduces-EOS-Based-Crypto-Exchange-EOSfinex",
+      "pubDate": "2018-09-17T13:00:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "date": "2020-03-02",
+  "fetchedAt": "2026-02-05T07:27:07.858Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tron takeover? Steem community in uproar as crypto exchanges back reversal of blockchain governance soft fork",
+      "link": "https://cryptopanic.com/news/8089560/Tron-takeover-Steem-community-in-uproar-as-crypto-exchanges-back-reversal-of-blockchain-governance-soft-fork",
+      "pubDate": "2020-03-02T21:08:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "STEEM"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

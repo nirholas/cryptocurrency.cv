@@ -1,0 +1,25 @@
+{
+  "date": "2020-10-27",
+  "fetchedAt": "2026-02-05T07:27:06.993Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Analysis: ETH Miners Begin Selling as Twitter Sentiment Turns Bearish",
+      "link": "https://cryptopanic.com/news/ethereum/10364761/Analysis-ETH-Miners-Begin-Selling-as-Twitter-Sentiment-Turns-Bearish",
+      "pubDate": "2020-10-27T13:19:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

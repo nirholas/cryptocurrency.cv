@@ -1,0 +1,26 @@
+{
+  "date": "2018-01-25",
+  "fetchedAt": "2026-02-05T07:27:06.972Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Why a $39 Million ICO Chose Stellar Over Ethereum",
+      "link": "https://cryptopanic.com/news/887725/Why-a-39-Million-ICO-Chose-Stellar-Over-Ethereum",
+      "pubDate": "2018-01-25T14:00:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

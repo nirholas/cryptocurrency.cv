@@ -1,0 +1,282 @@
+{
+  "date": "2021-01-21",
+  "fetchedAt": "2026-02-05T07:27:06.782Z",
+  "articleCount": 18,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "What Is the ‘Grayscale Chainlink Trust’?",
+      "link": "https://cryptopanic.com/news/chainlink/11221491/What-Is-the-Grayscale-Chainlink-Trust",
+      "pubDate": "2021-01-21T23:46:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "An entity called the “Grayscale Chainlink Trust (LINK)” was incorporated last month in Delaware. Could the asset management firm Grayscale be behind it?",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Japan Rallies Behind XRP as Ripple Faces US Litigation",
+      "link": "https://cryptopanic.com/news/11221058/Japan-Rallies-Behind-XRP-as-Ripple-Faces-US-Litigation",
+      "pubDate": "2021-01-21T23:00:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Unlike the U.S., Japan considers XRP to be a cryptocurrency, not a security.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Outperforms BTC by 5% Following Biden Appointment",
+      "link": "https://cryptopanic.com/news/ripple/11219726/XRP-Outperforms-BTC-by-5-Following-Biden-Appointment",
+      "pubDate": "2021-01-21T21:31:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "XRP has had it’s back against the ropes for much of 2021. However, things are finally starting to look up for the fifth-ranked project by market capitalization. XRP saw relative strength on Thursday following the appointment of the incoming U.S President. Joe Biden is set to elect a new Head of the Office of the … Continued",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @safenetworktech: This week, we resolved the final issue blocking a public, shared testnet, released a view into the new #SafeNetwork A…",
+      "link": "https://cryptopanic.com/news/11219032/RT-safenetworktech-This-week-we-resolved-the-final-issue-blocking-a-public-shared-testnet-released-a-view-into-the-new-SafeNetwork-A",
+      "pubDate": "2021-01-21T20:33:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "Grayscale May Have a Secret Chainlink Trust",
+      "link": "https://cryptopanic.com/news/chainlink/11218619/Grayscale-May-Have-a-Secret-Chainlink-Trust",
+      "pubDate": "2021-01-21T19:41:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Grayscale Investments has been one of the loudest voices in crypto. And the first firm to offer crypto exposure to institutional investors. The company has been a vocal supporter of crypto. And previously said that Ethereum was of greater interest to its clients. So is this the beginning of the institutional foray into altcoins? Well, … Continued",
+      "currencies": [
+        "ETH",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Target Your Audiences 100% with YOUengine.com",
+      "link": "https://cryptopanic.com/news/11367211/Target-Your-Audiences-100-with-YOUenginecom",
+      "pubDate": "2021-01-21T19:19:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "YOUC"
+      ]
+    },
+    {
+      "title": "We are proud to announce that we are the first #crypto exchange and custodian to have completed both SOC 1 Type 2 a…",
+      "link": "https://cryptopanic.com/news/11217124/We-are-proud-to-announce-that-we-are-the-first-crypto-exchange-and-custodian-to-have-completed-both-SOC-1-Type-2-a",
+      "pubDate": "2021-01-21T17:22:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    },
+    {
+      "title": "Bitcoin Losses Near $200 Billion As JPMorgan Warns It’s The ‘Least Reliable’ Dollar Hedge",
+      "link": "https://cryptopanic.com/news/near/11217005/Bitcoin-Losses-Near-200-Billion-As-JPMorgan-Warns-Its-The-Least-Reliable-Dollar-Hedge",
+      "pubDate": "2021-01-21T17:06:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The world’s largest cryptocurrency is down nearly 10% over the past 24 hours.",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 23,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Germany: IOTA and Ethereum-Based Solution Used to Issue Coronavirus Digital Certificates",
+      "link": "https://cryptopanic.com/news/11217099/Germany-IOTA-and-Ethereum-Based-Solution-Used-to-Issue-Coronavirus-Digital-Certificates",
+      "pubDate": "2021-01-21T17:00:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The German district of Altötting is piloting a digital proof of vaccination project using technology offered by a Cologne-based firm, UBIRCH, becoming the first in the country, news sources on Jan 21 reveals. UBIRCH‘s IOTA and Ethereum-based Solution Used in Altötting Beginning this week, the district allows people who have been vaccinated against the zoonoticRead More",
+      "currencies": [
+        "ETH",
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "More Tether (USDT) is Now Being Routed To Tron than Ethereum",
+      "link": "https://cryptopanic.com/news/tron/11215461/More-Tether-USDT-is-Now-Being-Routed-To-Tron-than-Ethereum",
+      "pubDate": "2021-01-21T15:00:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "There is a spike of USDT transactions in Tron, a dPoS network, based on data from Coin Metrics, a blockchain analytics firm, a CoinDesk report on Jan 21 shows. USDT Transaction Count Explodes at Tron Data reveals that there was a considerable spike in Tron’s USDT transactions in the last three weeks. The surge meansRead More",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Sequoia Employees Can Now Get Paid in Bitcoin, Ethereum, and Bitcoin Cash",
+      "link": "https://cryptopanic.com/news/11214636/Sequoia-Employees-Can-Now-Get-Paid-in-Bitcoin-Ethereum-and-Bitcoin-Cash",
+      "pubDate": "2021-01-21T14:08:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Sequoia Holdings now offers its employees to receive salaries in cryptocurrencies",
+      "currencies": [
+        "BCH"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The #Blockchain technology is mostly associated with #crypto. But did you know that it has so much more potential…",
+      "link": "https://cryptopanic.com/news/11214199/The-Blockchain-technology-is-mostly-associated-with-crypto-But-did-you-know-that-it-has-so-much-more-potential",
+      "pubDate": "2021-01-21T13:33:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "ARK Ecosystem Interview with Travis Walker",
+      "link": "https://cryptopanic.com/news/11223185/ARK-Ecosystem-Interview-with-Travis-Walker",
+      "pubDate": "2021-01-21T12:23:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Former Ripple CTO Actively Dumping XRP Amid Legal Crisis",
+      "link": "https://cryptopanic.com/news/ripple/11212911/Former-Ripple-CTO-Actively-Dumping-XRP-Amid-Legal-Crisis",
+      "pubDate": "2021-01-21T11:28:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "One of Ripple’s co-founders has resumed the sale of his XRP holdings, putting significant downward pressure on the troubled token. Dumping Millions of Tokens Ripple’s founder and former CTO Jed McCaleb holds more than 9 billion XRP, which he acquired as part of the compensation plan for his role as one of the project’s main contributors. Following his departure from Ripple in...",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "$2M assets locked via , HUNT price reaches $0.11 today #NeverLoseMoney #DeFi $WRN $HUNT",
+      "link": "https://cryptopanic.com/news/11212796/2M-assets-locked-via-HUNT-price-reaches-011-today-NeverLoseMoney-DeFi-WRN-HUNT",
+      "pubDate": "2021-01-21T11:16:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "HUNT"
+      ]
+    },
+    {
+      "title": "$2M assets locked via , HUNT price reaches $1.11 today #NeverLoseMoney #DeFi $WRN $HUNT…",
+      "link": "https://cryptopanic.com/news/11212742/2M-assets-locked-via-HUNT-price-reaches-111-today-NeverLoseMoney-DeFi-WRN-HUNT",
+      "pubDate": "2021-01-21T11:08:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "HUNT"
+      ]
+    },
+    {
+      "title": "Guggenheim CIO Has Major Bearish Warning for Bitcoin Holders",
+      "link": "https://cryptopanic.com/news/11210500/Guggenheim-CIO-Has-Major-Bearish-Warning-for-Bitcoin-Holders",
+      "pubDate": "2021-01-21T06:17:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Guggenheim CIO is predicting a “full retracement” of the stellar Bitcoin rally",
+      "currencies": [
+        "BTC",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 6
+      }
+    },
+    {
+      "title": "IMF claims that only 24% of 150+ nations surveyed, can legally issue CBD. So what? Absolutely no cause for alarm sa…",
+      "link": "https://cryptopanic.com/news/11209617/IMF-claims-that-only-24-of-150-nations-surveyed-can-legally-issue-CBD-So-what-Absolutely-no-cause-for-alarm-sa",
+      "pubDate": "2021-01-21T04:06:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    }
+  ]
+}

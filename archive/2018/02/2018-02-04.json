@@ -1,0 +1,25 @@
+{
+  "date": "2018-02-04",
+  "fetchedAt": "2026-02-05T07:27:06.993Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ethereum Price Analysis: A Return to $650?",
+      "link": "https://cryptopanic.com/news/ethereum/981848/Ethereum-Price-Analysis-A-Return-to-650",
+      "pubDate": "2018-02-04T19:35:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

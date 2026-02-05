@@ -1,0 +1,692 @@
+{
+  "date": "2021-08-18",
+  "fetchedAt": "2026-02-05T07:27:06.510Z",
+  "articleCount": 46,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @telcoin_team: Seven new incentivized @BalancerLabs markets are live on #TELx across SMS Network &amp; TELxchange! The incentives duration i…",
+      "link": "https://cryptopanic.com/news/12572659/RT-telcoin_team-Seven-new-incentivized-BalancerLabs-markets-are-live-on-TELx-across-SMS-Network-amp-TELxchange-The-incentives-duration-i",
+      "pubDate": "2021-08-18T23:44:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "Seven new incentivized @BalancerLabs markets are live on #TELx across SMS Network &amp; TELxchange! The incentives dura…",
+      "link": "https://cryptopanic.com/news/12572660/Seven-new-incentivized-BalancerLabs-markets-are-live-on-TELx-across-SMS-Network-amp-TELxchange-The-incentives-dura",
+      "pubDate": "2021-08-18T23:41:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "Solana and Terra Tokens Rise Amid NFT Craze: Markets Wrap",
+      "link": "https://cryptopanic.com/news/terra-luna/12567402/Solana-and-Terra-Tokens-Rise-Amid-NFT-Craze-Markets-Wrap",
+      "pubDate": "2021-08-18T20:51:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "\"It’s great to see some divergence among different assets as we saw Solana (SOL) and Terra (LUNA) continue to hit all-time highs, which I believe shows that this asset class [will] continue to mature,\" said Founding Principal of BKCoin Capital Kevin Kang.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Avalanche to Add DeFi Protocols Aave and Curve",
+      "link": "https://cryptopanic.com/news/avalanche-2/12567296/Avalanche-to-Add-DeFi-Protocols-Aave-and-Curve",
+      "pubDate": "2021-08-18T20:17:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Avalanche will add more diverse offerings to its public blockchain as part of $180M liquidity mining incentive program",
+      "currencies": [
+        "AVAX",
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Quant, Arweave and Avalanche soar while Bitcoin searches for support",
+      "link": "https://cryptopanic.com/news/bitcoin/12567271/Quant-Arweave-and-Avalanche-soar-while-Bitcoin-searches-for-support",
+      "pubDate": "2021-08-18T20:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin's price is losing its bullish momentum, but this did little to stop QNT, AR and AVAX from notching double-digit gains today.",
+      "currencies": [
+        "BTC",
+        "AVAX",
+        "AR"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 6
+      }
+    },
+    {
+      "title": "ACH, ANT, FET, IOTX, ORN & PAX are now available to residents in Germany. Residents can log in to buy, convert, se…",
+      "link": "https://cryptopanic.com/news/paxos-standard/12567083/ACH-ANT-FET-IOTX-ORN-amp-PAX-are-now-available-to-residents-in-Germany-Residents-can-log-in-to-buy-convert-se",
+      "pubDate": "2021-08-18T19:06:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "COIN"
+      ]
+    },
+    {
+      "title": "Crypto Asset Management Market Will Near $10B by 2030, Says Study",
+      "link": "https://cryptopanic.com/news/near/12567092/Crypto-Asset-Management-Market-Will-Near-10B-by-2030-Says-Study",
+      "pubDate": "2021-08-18T19:01:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "According to estimates from Allied Market Research, the global crypto asset management market could grow tenfold by 2030.",
+      "currencies": [
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Bitcoin Trading Volume Sinks Without Decisive Retest Of $50,000",
+      "link": "https://cryptopanic.com/news/bitcoin/12567094/Bitcoin-Trading-Volume-Sinks-Without-Decisive-Retest-Of-50000",
+      "pubDate": "2021-08-18T19:00:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Data shows Bitcoin trading volume is once again on its way downwards as the cryptocurrency fails to retest the $50,000 mark. Bitcoin Trading Volume Goes Down As per a report from Arcane Research, while BTC hasn’t been able to test the $50k range yet, the trading volume is already moving downwards. The real Bitcoin trading […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Will Ethereum Reach Its All-Time-High Before Bitcoin?",
+      "link": "https://cryptopanic.com/news/bitcoin/12567070/Will-Ethereum-Reach-Its-All-Time-High-Before-Bitcoin",
+      "pubDate": "2021-08-18T19:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "As Bitcoin shows bearish signs, on-chain activity suggests Ethereum could be on the way to reach its all-time-high before BTC. Ethereum To Reach Its All-Time-High Price Earlier Than Bitcoin? As pointed out by CryptoQuant CEO Ki Young Ju in a post, indicators could suggest ETH will reach its ATH quicker than BTC in the long term. The exchange netflow is an indicator that depends on two metrics:...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "What topic would you like to see us do a deep-dive into?",
+      "link": "https://cryptopanic.com/news/12571907/What-topic-would-you-like-to-see-us-do-a-deep-dive-into",
+      "pubDate": "2021-08-18T18:58:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XPR"
+      ]
+    },
+    {
+      "title": "Twitter’s Jack Dorsey Is Now Mining Bitcoin. Here’s How",
+      "link": "https://cryptopanic.com/news/bitcoin/12567066/Twitters-Jack-Dorsey-Is-Now-Mining-Bitcoin-Heres-How",
+      "pubDate": "2021-08-18T18:56:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The Bitcoin maxi is now maxing his Bitcoin—mining BTC through a remote hosting service for rigs. Here’s how it works.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 5
+      }
+    },
+    {
+      "title": "These 2 indicators gave traders a buy signal hours before Filecoin and Near rallied",
+      "link": "https://cryptopanic.com/news/12566995/These-2-indicators-gave-traders-a-buy-signal-hours-before-Filecoin-and-Near-rallied",
+      "pubDate": "2021-08-18T18:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "In the crypto market, it’s often the early bird that gets the worm. Here’s how two quant-style indicators flashed a bullish signal for FIL and NEAR.",
+      "currencies": [
+        "NEAR",
+        "FIL"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Where I am BUYING Bitcoin",
+      "link": "https://cryptopanic.com/news/bitcoin/12567019/Where-I-am-BUYING-Bitcoin",
+      "pubDate": "2021-08-18T18:27:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "🚀 Learn Technical Analysis with The Chart Guys! 🚀https://www.chartguys.com/trading-community-membership Our goal is to review and discuss the most recent price action in the market in a manner that makes it useful to you. Using Technical Analysis, we perform an indepth review of the action in the stock market today and try provide you with our analysis on current patterns, developing trends, and our take on where the market is headed. Our Focus includes - Technical Analysis - Trade Education -",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "XRC20 token creation made simple. Launch a token to XDC network with no coding for just a few minutes at…",
+      "link": "https://cryptopanic.com/news/12566978/XRC20-token-creation-made-simple-Launch-a-token-to-XDC-network-with-no-coding-for-just-a-few-minutes-at",
+      "pubDate": "2021-08-18T18:25:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XDC"
+      ]
+    },
+    {
+      "title": "Complete this sentence: The most undervalued crypto right now is...",
+      "link": "https://cryptopanic.com/news/12572830/Complete-this-sentence-The-most-undervalued-crypto-right-now-is",
+      "pubDate": "2021-08-18T17:34:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "Built on #eCash #XEC $XEC",
+      "link": "https://cryptopanic.com/news/ecash/12573353/Built-on-eCash-XEC-XEC",
+      "pubDate": "2021-08-18T17:09:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Solana Will Suck Liquidity From Altcoin Market Over Next Few Days/Weeks, Says Analyst",
+      "link": "https://cryptopanic.com/news/12566817/Solana-Will-Suck-Liquidity-From-Altcoin-Market-Over-Next-Few-DaysWeeks-Says-Analyst",
+      "pubDate": "2021-08-18T17:05:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Earlier today, as nearly 80% of the top 50 cryptoassets by market cap were in the red, Solana ($SOL) was putting in another dazzling performance, surging to new all-time highs with a double digit percentage gain vs USD. $SOL is the native token of the Solana blockchain. Solana is “an open source project implementing a new, […]",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 24,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "#WARZONEWEDNESDAY 1v1 Battle Royale EU ⏰ 7PM 3 Space 1v1 Elimination Dash NA ⏰ 5PM *PT 1 Spa…",
+      "link": "https://cryptopanic.com/news/dash/12570584/WARZONEWEDNESDAY-1v1-Battle-Royale-EU-7PM-3-Space-1v1-Elimination-Dash-NA-5PM-PT-1-Spa",
+      "pubDate": "2021-08-18T16:49:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DASH",
+        "IGG"
+      ]
+    },
+    {
+      "title": "Congrats to out partners at @XinFin_Official! Proud to be working with you! $XDC $LGCY",
+      "link": "https://cryptopanic.com/news/12570903/Congrats-to-out-partners-at-XinFin_Official-Proud-to-be-working-with-you-XDC-LGCY",
+      "pubDate": "2021-08-18T16:45:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XDC"
+      ]
+    },
+    {
+      "title": "NEM Trust Update",
+      "link": "https://cryptopanic.com/news/12566680/NEM-Trust-Update",
+      "pubDate": "2021-08-18T16:34:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEM"
+      ]
+    },
+    {
+      "title": "Yesterday we hit 149,602 transactions! Pikkle is really gaining a lot of adoption and speed. eVoting on $AERGO!",
+      "link": "https://cryptopanic.com/news/12568430/Yesterday-we-hit-149602-transactions-Pikkle-is-really-gaining-a-lot-of-adoption-and-speed-eVoting-on-AERGO",
+      "pubDate": "2021-08-18T16:14:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "We’re proud to announce today's launch of the Chia Cultivation Grant program, as we continue to support innovation…",
+      "link": "https://cryptopanic.com/news/12569287/Were-proud-to-announce-todays-launch-of-the-Chia-Cultivation-Grant-program-as-we-continue-to-support-innovation",
+      "pubDate": "2021-08-18T15:26:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XCH"
+      ]
+    },
+    {
+      "title": "Transparency is still an issue in the #cryptocurrency space. The STASIS team has been focusing on that since day on…",
+      "link": "https://cryptopanic.com/news/12572174/Transparency-is-still-an-issue-in-the-cryptocurrency-space-The-STASIS-team-has-been-focusing-on-that-since-day-on",
+      "pubDate": "2021-08-18T14:33:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "Solana NFT Developers Are Killing Digital Llamas",
+      "link": "https://cryptopanic.com/news/12566284/Solana-NFT-Developers-Are-Killing-Digital-Llamas",
+      "pubDate": "2021-08-18T14:27:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "-",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 9
+      }
+    },
+    {
+      "title": "Avalanche launches $180 million DeFi incentive scheme with Aave and Curve",
+      "link": "https://cryptopanic.com/news/12566182/Avalanche-launches-180-million-DeFi-incentive-scheme-with-Aave-and-Curve",
+      "pubDate": "2021-08-18T14:00:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The Avalanche Foundation, the organization behind the Avalanche blockchain, has kicked off a new incentive program under the title Avalanche Rush.",
+      "currencies": [
+        "ETH",
+        "AVAX",
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto.com uses Circle API to launch USD bank transfers in over 60 countries",
+      "link": "https://cryptopanic.com/news/12566110/Cryptocom-uses-Circle-API-to-launch-USD-bank-transfers-in-over-60-countries",
+      "pubDate": "2021-08-18T13:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Institutional Crypto.com customers in more than 60 countries can now make U.S. dollar bank transfers to and from their USDC wallets.",
+      "currencies": [
+        "USDC"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Anticipated Retracement? Cardano Dips Below $2 Following Market Downturn (ADA Price Analysis)",
+      "link": "https://cryptopanic.com/news/cardano/12565984/Anticipated-Retracement-Cardano-Dips-Below-2-Following-Market-Downturn-ADA-Price-Analysis",
+      "pubDate": "2021-08-18T12:54:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "ADA might have dropped 6.5% today, but the coin is still up by a substantial 17% on the week. Against bitcoin, it fell from Sunday’s high around 4765 SAT to reach the current 4370 SAT level.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Bitcoin Will Remind Investors ‘Who the King Is’, Says Popular Crypto Trader",
+      "link": "https://cryptopanic.com/news/near/12565896/Bitcoin-Will-Remind-Investors-Who-the-King-Is-Says-Popular-Crypto-Trader",
+      "pubDate": "2021-08-18T12:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Popular cryptocurrency trader Pentoshi has revealed on social media he believes that if bitcoin rebounds from the $40,000 to $42,000 level in the near future it may move to a new all-time high and will “remind everyone who the kind is.” In a tweet published to his over 200,000 followers at a time in which […]",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Cardano’s ADA Sees $1.3 Million Inflows from Financial Institutions, Exceeding XRP, XLM, DOT",
+      "link": "https://cryptopanic.com/news/polkadot/12565846/Cardanos-ADA-Sees-13-Million-Inflows-from-Financial-Institutions-Exceeding-XRP-XLM-DOT",
+      "pubDate": "2021-08-18T11:54:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Figures published in the recent CoinShares report show that Cardano inflows recently have been exceeding those of other top altcoins",
+      "currencies": [
+        "ADA",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 35,
+        "negative": 6
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @MintClubPro: Exciting partnership with @OfficialCojam to build a prediction market platform using the Mint Club protocol 🤝 #MintClub #M…",
+      "link": "https://cryptopanic.com/news/12570444/RT-MintClubPro-Exciting-partnership-with-OfficialCojam-to-build-a-prediction-market-platform-using-the-Mint-Club-protocol-MintClub-M",
+      "pubDate": "2021-08-18T11:49:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HUNT"
+      ]
+    },
+    {
+      "title": "Binance Coin, Dogecoin and Two More Altcoins Jostling for Breakouts, According to Analyst Justin Bennett",
+      "link": "https://cryptopanic.com/news/dogecoin/12565957/Binance-Coin-Dogecoin-and-Two-More-Altcoins-Jostling-for-Breakouts-According-to-Analyst-Justin-Bennett",
+      "pubDate": "2021-08-18T11:45:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Top crypto analyst Justin Bennett is keeping an eye on Binance Coin (BNB), Dogecoin (DOGE) and two other altcoins that he says could be setting up for breakouts. The closely followed analyst tells his 63,000 followers that BNB is sitting right on the brink of a price spike, naming a key level to watch for […]",
+      "currencies": [
+        "ETH",
+        "BNB",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Not sure which Guardian Node or Elite Edge Node to delegate your stake to? Theta Explorer now shows the delegation…",
+      "link": "https://cryptopanic.com/news/theta-token/12572596/Not-sure-which-Guardian-Node-or-Elite-Edge-Node-to-delegate-your-stake-to-Theta-Explorer-now-shows-the-delegation",
+      "pubDate": "2021-08-18T11:12:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Ethereum co-founder’s new role might have this effect on Dogecoin",
+      "link": "https://cryptopanic.com/news/dogecoin/12565710/Ethereum-co-founders-new-role-might-have-this-effect-on-Dogecoin",
+      "pubDate": "2021-08-18T11:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The reasons behind Dogecoin‘s exponential growth were many, but DOGE’s utility and development activity were hardly ever a part of that. The network is now all set to be revamped after being more or less dead in terms of development in the past. According to a statement issued by the Dogecoin Foundation on Tuesday, the […]",
+      "currencies": [
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Crypto Analyst Lark Davis on Bitcoin: ‘Still Going to 100K by the End of Year’",
+      "link": "https://cryptopanic.com/news/bitcoin/12565606/Crypto-Analyst-Lark-Davis-on-Bitcoin-Still-Going-to-100K-by-the-End-of-Year",
+      "pubDate": "2021-08-18T10:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "With the Bitcoin price currently down 5-6% from its intraday high on August 14, which was just above the $48,000 level, some newcomers to Bitcoin are feeling a little nervous despite the fact that price of BTC has surged over 53% to roughly $45,350 since its intraday low of around $29,600 on July 20. When […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Blockchain Games Going One Step Further with Unreal Engine Graphics",
+      "link": "https://cryptopanic.com/news/12565527/Blockchain-Games-Going-One-Step-Further-with-Unreal-Engine-Graphics",
+      "pubDate": "2021-08-18T09:54:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Thanks to this year’s bull market and the craze for non-fungible tokens (NFTs), the blockchain gaming industry has expanded considerably. Its audience has registered steady growth figures, increasing roughly 148% just in Q1 of this year. A testament to that growth is the fact that the price of Axie Infinity Shards (AXS), the governance token […]",
+      "currencies": [
+        "AXS"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin (BTC) Loses 200-Day MA, Tries to Hold $45,000",
+      "link": "https://cryptopanic.com/news/bitcoin/12565520/Bitcoin-BTC-Loses-200-Day-MA-Tries-to-Hold-45000",
+      "pubDate": "2021-08-18T09:50:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "On Aug 17, the price closed below the 200-day moving average (MA). An ongoing breakdown from the short-term support line could take BTC to support in the $42,600 area.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Imagine how great it would be if we hosted 2 giveaways in the same week",
+      "link": "https://cryptopanic.com/news/12572832/Imagine-how-great-it-would-be-if-we-hosted-2-giveaways-in-the-same-week",
+      "pubDate": "2021-08-18T09:21:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "Can Dogecoin make it to $1",
+      "link": "https://cryptopanic.com/news/dogecoin/12562468/Can-Dogecoin-make-it-to-1",
+      "pubDate": "2021-08-18T07:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin became one of the biggest success stories of the year, as it went from being a “joke” coin to one of the most popular coins in the cryptocurrency sector. Mainly, on-chain activity, rising trading volumes on top exchanges, and an increase in attention from major influencers played a critical role in the crypto’s journey. […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 9
+      }
+    },
+    {
+      "title": "POW#52: “eCash for Beginners: Part 1”",
+      "link": "https://cryptopanic.com/news/ecash/12590103/POW52-eCash-for-Beginners-Part-1",
+      "pubDate": "2021-08-18T06:10:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "GameDAO (BSC) at 20:00 on August 23 (GMT+08:00), pledge $Lowb to earn NFT.@loser_coin",
+      "link": "https://cryptopanic.com/news/12589716/GameDAO-BSC-at-2000-on-August-23-GMT0800-pledge-Lowb-to-earn-NFTloser_coin",
+      "pubDate": "2021-08-18T05:03:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "DAO"
+      ]
+    },
+    {
+      "title": "Dogecoin Foundation re-established, Vitalik Buterin now on board",
+      "link": "https://cryptopanic.com/news/dogecoin/12559744/Dogecoin-Foundation-re-established-Vitalik-Buterin-now-on-board",
+      "pubDate": "2021-08-18T04:49:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Following a few years of inactivity, the Dogecoin Foundation is being reestablished with Ethereum co-founder Vitalik Buterin serving as the organization’s “blockchain and crypto adviser,” according to an announcement posted Tuesday on the foundation’s website. Fast facts Originally founded in 2014, the non-profit organization aims to support the Dogecoin ecosystem and community with a particular...",
+      "currencies": [
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Had been advising investors to include a Bitcoin exit strategy, within their Bitcoin investment plan. Evaluate risk…",
+      "link": "https://cryptopanic.com/news/12561749/Had-been-advising-investors-to-include-a-Bitcoin-exit-strategy-within-their-Bitcoin-investment-plan-Evaluate-risk",
+      "pubDate": "2021-08-18T03:33:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "TA: Bitcoin Breaks Key Support, Why BTC Could Revisit $40K",
+      "link": "https://cryptopanic.com/news/near/12559616/TA-Bitcoin-Breaks-Key-Support-Why-BTC-Could-Revisit-40K",
+      "pubDate": "2021-08-18T03:08:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin price failed to stay above the key $45,000 support zone against the US Dollar. BTC is showing a few bearish signs and it could correct lower to $40k. Bitcoin extended its decline below the $45,500 and $45,000 support levels. The price is now trading below $46,000 and the 100 hourly simple moving average. There is a key bearish trend line forming with resistance near $45,800 on the...",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Happy First Anniversary to DEGO Finance @dego_finance ! COCOS will Provide 60,000 COCOS for NFT Mining",
+      "link": "https://cryptopanic.com/news/12560792/Happy-First-Anniversary-to-DEGO-Finance-dego_finance-COCOS-will-Provide-60000-COCOS-for-NFT-Mining",
+      "pubDate": "2021-08-18T02:43:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "COCOS"
+      ]
+    },
+    {
+      "title": "Beta Finance will be supporting Verified Market for $BAND on Thursday August 19! This means users will be able to…",
+      "link": "https://cryptopanic.com/news/12560261/Beta-Finance-will-be-supporting-Verified-Market-for-BAND-on-Thursday-August-19-This-means-users-will-be-able-to",
+      "pubDate": "2021-08-18T02:42:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "These are the odds of Bitcoin touching $30k once again",
+      "link": "https://cryptopanic.com/news/near/12559429/These-are-the-odds-of-Bitcoin-touching-30k-once-again",
+      "pubDate": "2021-08-18T01:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "While Bitcoin is undergoing a correction in the short term at the moment, not many from the BTC community will be complaining or losing sleep over it. A period of uncertainty was looming large when BTC consolidated under $40,000 for an extended period of time, before holding fort near the $30,000 range. In fact, after […]",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

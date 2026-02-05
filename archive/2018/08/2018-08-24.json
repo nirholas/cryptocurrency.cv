@@ -1,0 +1,38 @@
+{
+  "date": "2018-08-24",
+  "fetchedAt": "2026-02-05T07:27:07.893Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "eToro Adds IOTA to Its Cryptocurrency Trading Platform",
+      "link": "https://cryptopanic.com/news/2962797/eToro-Adds-IOTA-to-Its-Cryptocurrency-Trading-Platform",
+      "pubDate": "2018-08-24T10:19:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @npccoin: Attention!! Do not send Coins $NPC to @YobitExchange until the block number is correctly synchronized. The block number must b…",
+      "link": "https://cryptopanic.com/news/11446114/RT-npccoin-Attention-Do-not-send-Coins-NPC-to-YobitExchange-until-the-block-number-is-correctly-synchronized-The-block-number-must-b?mtm_campaign=API-OFA",
+      "pubDate": "2018-08-24T09:21:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "NPC"
+      ]
+    }
+  ]
+}

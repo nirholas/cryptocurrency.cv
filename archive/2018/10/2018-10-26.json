@@ -1,0 +1,45 @@
+{
+  "date": "2018-10-26",
+  "fetchedAt": "2026-02-05T07:27:06.994Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ripple XRP Sales Double, Bitcoin/Ethereum Global Currencies And Litecoin Privacy",
+      "link": "https://cryptopanic.com/news/litecoin/3473699/Ripple-XRP-Sales-Double-BitcoinEthereum-Global-Currencies-And-Litecoin-Privacy",
+      "pubDate": "2018-10-26T15:26:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Where Does Ripple [XRP] Go From Here As Its Price Stagnates With Rest of the Market?",
+      "link": "https://cryptopanic.com/news/3473375/Where-Does-Ripple-XRP-Go-From-Here-As-Its-Price-Stagnates-With-Rest-of-the-Market",
+      "pubDate": "2018-10-26T14:58:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "ZRX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "date": "2017-09-23",
+  "fetchedAt": "2026-02-05T07:27:06.902Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Better in Byzantium? Ethereum Takes Baby Steps Toward a Privacy Boost",
+      "link": "https://cryptopanic.com/news/38991/Better-in-Byzantium-Ethereum-Takes-Baby-Steps-Toward-a-Privacy-Boost",
+      "pubDate": "2017-09-23T10:00:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ZEC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

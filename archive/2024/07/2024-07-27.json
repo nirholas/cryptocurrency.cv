@@ -1,0 +1,872 @@
+{
+  "date": "2024-07-27",
+  "fetchedAt": "2026-02-05T07:27:08.199Z",
+  "articleCount": 55,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Cardano Recovery Imminent? Whales Make Their Move With 17 Billion ADA",
+      "link": "https://cryptopanic.com/news/19732916/Cardano-Recovery-Imminent-Whales-Make-Their-Move-With-17-Billion-ADA",
+      "pubDate": "2024-07-27T23:00:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "XRP",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Sen. Lummis proposes US government purchase 5% of total Bitcoin supply",
+      "link": "https://cryptopanic.com/news/19732912/Sen-Lummis-proposes-US-government-purchase-5-of-total-Bitcoin-supply",
+      "pubDate": "2024-07-27T22:53:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The pro-crypto Senator introduced the Bitcoin Reserve Bill while declaring, “This is the solution, this is the answer, this is our Louisiana purchase moment. Thank you, Bitcoin!”",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano’s Node 9.1.0 Marks Final Step Before Chang Hard Fork and Voltaire Launch",
+      "link": "https://cryptopanic.com/news/19732950/Cardanos-Node-910-Marks-Final-Step-Before-Chang-Hard-Fork-and-Voltaire-Launch",
+      "pubDate": "2024-07-27T22:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano is moving closer to implementing its highly anticipated Chang hard fork. This progress follows the release of node validator software version 9.1.0, which includes critical updates necessary for the fork. On July 25, Intersect, an organization dedicated to the ADA ecosystem, announced that Node 9.1.0 is the final upgrade that will introduce on-chain decision-making to...",
+      "currencies": [
+        "BTC",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Europol Claims That Bitcoin Remains Top Choice for Criminals",
+      "link": "https://cryptopanic.com/news/19732825/Europol-Claims-That-Bitcoin-Remains-Top-Choice-for-Criminals",
+      "pubDate": "2024-07-27T21:51:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XMR"
+      ]
+    },
+    {
+      "title": "Trump says he’ll fire SEC Chair Gensler and create strategic bitcoin reserve if elected: Bitcoin 2024",
+      "link": "https://cryptopanic.com/news/19732787/Trump-says-hell-fire-SEC-Chair-Gensler-and-create-strategic-bitcoin-reserve-if-elected-Bitcoin-2024",
+      "pubDate": "2024-07-27T21:23:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Trump largely reiterated past talking points in his speech, but made a few new crypto-related promises in his address to the Bitcoin 2024 conference.",
+      "currencies": [
+        "BTC",
+        "PEOPLE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "That was the most important speech in #Bitcoin history. Donald Trump will convert 200,000 $BTC currently held by the Department of Justice into a National Strategic Reserve worth $13.4 BILLION. That's the starting pistol for nation state adoption. ‼️The race is ON!",
+      "link": "https://cryptopanic.com/news/bitcoin/19732743/That-was-the-most-important-speech-in-Bitcoin-history-Donald-Trump-will-convert-200000-BTC-currently-held-by-the-Department-of-Justice-into-a-National-Strategic-Reserve-worth-134-BILLION-Thats-the-starting-pistol-for-nation-state-adoption-The-race-is-ON",
+      "pubDate": "2024-07-27T21:04:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "-",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The US Will be The Crypto Capital of The Planet And The World’s Bitcoin Superpower – Donald Trump",
+      "link": "https://cryptopanic.com/news/19732738/The-US-Will-be-The-Crypto-Capital-of-The-Planet-And-The-Worlds-Bitcoin-Superpower-Donald-Trump",
+      "pubDate": "2024-07-27T21:02:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The moment most crypto investors have eagirly awaited this past few weeks - Donald Trump's keynote speech during the 2024 Bitcoin conference in Nashville, USA. At the end of the article you can follow the live coverage!",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Trump confirms Bitcoin will become a US strategic reserve asset if elected",
+      "link": "https://cryptopanic.com/news/19732715/Trump-confirms-Bitcoin-will-become-a-US-strategic-reserve-asset-if-elected",
+      "pubDate": "2024-07-27T20:54:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "US presidential candidate Donald Trump said he will make Bitcoin a strategic reserve asset if elected during his keynote speech today at the Bitcoin 2024 Conference.\"I am announcing that if I am elected, it will be the policy of my administration, United States of America, to keep 100% of all the bitcoin the us government currently holds or acquires into the future. We'll keep 100%,\" said...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "TRUMP: US GOVERNMENT WILL KEEP 100% OF CURRENT #BITCOIN IT HOLDS AS A NATIONAL STRATEGIC RESERVE",
+      "link": "https://cryptopanic.com/news/19732709/TRUMP-US-GOVERNMENT-WILL-KEEP-100-OF-CURRENT-BITCOIN-IT-HOLDS-AS-A-NATIONAL-STRATEGIC-RESERVE",
+      "pubDate": "2024-07-27T20:47:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "KEEP"
+      ]
+    },
+    {
+      "title": "Trump Says He Will Fire SEC Chair Gary Gensler On Day One If Elected As President",
+      "link": "https://cryptopanic.com/news/19732677/Trump-Says-He-Will-Fire-SEC-Chair-Gary-Gensler-On-Day-One-If-Elected-As-President",
+      "pubDate": "2024-07-27T20:40:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The Bitcoin conference is generating a lot of excitement, and with Trump’s remarks about firing the SEC Chair Gary Gensler attracted a lot of cheers from the fellow Bitcoiners. At the Nashville Bitcoin conference, Trump said, “I will fire Gary Gensler and appoint a new SEC Chair on day one and I will appoint new …",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Trump to end war on crypto if elected, says US will be ‘crypto capital of the planet’",
+      "link": "https://cryptopanic.com/news/19732655/Trump-to-end-war-on-crypto-if-elected-says-US-will-be-crypto-capital-of-the-planet",
+      "pubDate": "2024-07-27T20:27:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The former and prospective United States president made the announcement at the Bitcoin 2024 conference in Nashville, Tennessee.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "LATAM Crypto Roundup: Bancolombia’s Wenia Partners with Chainlink, Helium Expands Across Mexico, and More",
+      "link": "https://cryptopanic.com/news/19732643/LATAM-Crypto-Roundup-Bancolombias-Wenia-Partners-with-Chainlink-Helium-Expands-Across-Mexico-and-More",
+      "pubDate": "2024-07-27T19:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDC",
+        "SOL",
+        "MATIC",
+        "LINK",
+        "HNT",
+        "HIVE"
+      ]
+    },
+    {
+      "title": "MANA Soars As Market Optimism Returns, Next Stop $0.3713 Level",
+      "link": "https://cryptopanic.com/news/19732471/MANA-Soars-As-Market-Optimism-Returns-Next-Stop-03713-Level",
+      "pubDate": "2024-07-27T19:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "WATCH LIVE: Donald Trump to address Bitcoin 2024 conference",
+      "link": "https://cryptopanic.com/news/19732456/WATCH-LIVE-Donald-Trump-to-address-Bitcoin-2024-conference",
+      "pubDate": "2024-07-27T18:45:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "PEOPLE"
+      ]
+    },
+    {
+      "title": "Bitcoin eyes $70,000 as Trump prepares for Nashville speech",
+      "link": "https://cryptopanic.com/news/19732443/Bitcoin-eyes-70000-as-Trump-prepares-for-Nashville-speech",
+      "pubDate": "2024-07-27T18:39:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin is poised to surpass the $70,000 mark as anticipation builds for Donald Trump's upcoming speech at the Bitcoin 2024 Conference in Nashville. According to data from CoinGecko, earlier today, Bitcoin's price peaked at $69,300, reflecting a 3% increase over the past 24 hours.Trump has already arrived in Nashville, ready to deliver his keynote in less than 30 minutes. Speculations are rife...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Best 5 Memecoins That Could Explode 50x If Bitcoin Reach and Stabilizes Under $70,000",
+      "link": "https://cryptopanic.com/news/19732441/Best-5-Memecoins-That-Could-Explode-50x-If-Bitcoin-Reach-and-Stabilizes-Under-70000",
+      "pubDate": "2024-07-27T18:35:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SHIB",
+        "XLM",
+        "PEPE",
+        "BRETT"
+      ]
+    },
+    {
+      "title": "Mark Zuckerberg of $META says he wants to control his own tech “destiny” by releasing the largest open-source AI model ever, and avoiding the “soul-crushing” tactics of Apple, $AAPL, per Bloomberg",
+      "link": "https://cryptopanic.com/news/19732408/Mark-Zuckerberg-of-META-says-he-wants-to-control-his-own-tech-destiny-by-releasing-the-largest-open-source-AI-model-ever-and-avoiding-the-soul-crushing-tactics-of-Apple-AAPL-per-Bloomberg",
+      "pubDate": "2024-07-27T18:01:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "META"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Crypto Price Analysis 7-26 BTC, ETH, SOL, DOT, TRX, DOGE, WIF, ATOM",
+      "link": "https://cryptopanic.com/news/19741971/Crypto-Price-Analysis-7-26-BTC-ETH-SOL-DOT-TRX-DOGE-WIF-ATOM",
+      "pubDate": "2024-07-27T17:48:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "DOGE",
+        "DOT",
+        "TRX",
+        "ATOM",
+        "WIF"
+      ]
+    },
+    {
+      "title": "Cardano Founder Makes Unexpected Bitcoin Statement",
+      "link": "https://cryptopanic.com/news/19732275/Cardano-Founder-Makes-Unexpected-Bitcoin-Statement",
+      "pubDate": "2024-07-27T16:49:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Hoskinson highlighted his long-standing involvement with Bitcoin",
+      "currencies": [
+        "BTC",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Bitcoin Peaks at $69,404 as Short Liquidations Surpass $27M",
+      "link": "https://cryptopanic.com/news/19732233/Bitcoin-Peaks-at-69404-as-Short-Liquidations-Surpass-27M",
+      "pubDate": "2024-07-27T16:24:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "FDUSD"
+      ]
+    },
+    {
+      "title": "Shiba Inu’s Secret Weapon: Why SHIB Will Explode in 2024!",
+      "link": "https://cryptopanic.com/news/19732163/Shiba-Inus-Secret-Weapon-Why-SHIB-Will-Explode-in-2024?mtm_campaign=API-OFA",
+      "pubDate": "2024-07-27T15:52:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "BONE",
+        "LEASH"
+      ]
+    },
+    {
+      "title": "ETHFI to Migrate Funds to Separate Multi-Sig Wallets, What’s Happening?",
+      "link": "https://cryptopanic.com/news/19732161/ETHFI-to-Migrate-Funds-to-Separate-Multi-Sig-Wallets-Whats-Happening?mtm_campaign=API-OFA",
+      "pubDate": "2024-07-27T15:50:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETHFI"
+      ]
+    },
+    {
+      "title": "Investor Chris Burniske Says Ethereum Could Surprise Traders Amid ‘Extreme Sentiment’ – Here’s What He Means",
+      "link": "https://cryptopanic.com/news/19732125/Investor-Chris-Burniske-Says-Ethereum-Could-Surprise-Traders-Amid-Extreme-Sentiment-Heres-What-He-Means",
+      "pubDate": "2024-07-27T15:30:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ARK"
+      ]
+    },
+    {
+      "title": "WazirX to Resume Trading and Withdrawals with 55% of User Funds",
+      "link": "https://cryptopanic.com/news/19732076/WazirX-to-Resume-Trading-and-Withdrawals-with-55-of-User-Funds",
+      "pubDate": "2024-07-27T15:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WRX"
+      ]
+    },
+    {
+      "title": "Aptos market watch – Will 6% uptick initiate APT price rally?",
+      "link": "https://cryptopanic.com/news/19732053/Aptos-market-watch-Will-6-uptick-initiate-APT-price-rally",
+      "pubDate": "2024-07-27T15:00:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "APT"
+      ]
+    },
+    {
+      "title": "Catizen Leads Charge in Telegram Booming Gaming Ecosystem",
+      "link": "https://cryptopanic.com/news/19732029/Catizen-Leads-Charge-in-Telegram-Booming-Gaming-Ecosystem",
+      "pubDate": "2024-07-27T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS",
+        "TON",
+        "NOT"
+      ]
+    },
+    {
+      "title": "Solana (SOL) Flips BNB to Become the Fourth-Largest Cryptocurrency",
+      "link": "https://cryptopanic.com/news/19732070/Solana-SOL-Flips-BNB-to-Become-the-Fourth-Largest-Cryptocurrency",
+      "pubDate": "2024-07-27T14:59:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "SOL",
+        "LTC"
+      ]
+    },
+    {
+      "title": "SOL shorts suffer as price surges; Solana’s Poodlana hits $3 million milestone",
+      "link": "https://cryptopanic.com/news/19731945/SOL-shorts-suffer-as-price-surges-Solanas-Poodlana-hits-3-million-milestone",
+      "pubDate": "2024-07-27T14:06:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "SOL price rose to above $187 to see over $4 million short positions liquidated. Poodlana, the FashionFi meme coin, accelerated its presale as the sector surged amid US politics and bullish crypto predictions. POODL surpassed the $3 million mark on July 27, just 10 days after the presale launch. The cryptocurrency market has witnessed over […]",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Wazirx Rolls Out Socialized Loss Strategy Across All Users Post $230M Cyberattack",
+      "link": "https://cryptopanic.com/news/19731943/Wazirx-Rolls-Out-Socialized-Loss-Strategy-Across-All-Users-Post-230M-Cyberattack",
+      "pubDate": "2024-07-27T14:05:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "WRX"
+      ]
+    },
+    {
+      "title": "Cardano to Dethrone Bitcoin in the Future, According to Charles Hoskinson – Here is Why",
+      "link": "https://cryptopanic.com/news/19731930/Cardano-to-Dethrone-Bitcoin-in-the-Future-According-to-Charles-Hoskinson-Here-is-Why",
+      "pubDate": "2024-07-27T14:00:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Ethereum co-founder and Cardano founder Charles Hoskinson criticizes Bitcoin for its lack of innovation, comparing it to outdated platforms like Yahoo and MySpace that were overtaken by more advanced technologies. The post Cardano to Dethrone Bitcoin in the Future, According to Charles Hoskinson – Here is Why appeared first on Cryptodnes.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 11
+      }
+    },
+    {
+      "title": "Grayscale’s $1.16 Billion Outflows Overshadow Ethereum ETFs Successful Start",
+      "link": "https://cryptopanic.com/news/19731939/Grayscales-116-Billion-Outflows-Overshadow-Ethereum-ETFs-Successful-Start?mtm_campaign=API-OFA",
+      "pubDate": "2024-07-27T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ETHW",
+        "CETH"
+      ]
+    },
+    {
+      "title": "3 cryptocurrencies to avoid trading this week amid $190 million in unlocks",
+      "link": "https://cryptopanic.com/news/19731927/3-cryptocurrencies-to-avoid-trading-this-week-amid-190-million-in-unlocks?mtm_campaign=API-OFA",
+      "pubDate": "2024-07-27T13:59:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SUI",
+        "ZETA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Memecoins That Can Easily Make 30-50X in August: Meme Battle For Gains",
+      "link": "https://cryptopanic.com/news/19731845/Memecoins-That-Can-Easily-Make-30-50X-in-August-Meme-Battle-For-Gains",
+      "pubDate": "2024-07-27T13:14:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PEPE",
+        "BRETT"
+      ]
+    },
+    {
+      "title": "Weekly NFT Sales Rise to $108.59 Million, Up 7.59%",
+      "link": "https://cryptopanic.com/news/19731827/Weekly-NFT-Sales-Rise-to-10859-Million-Up-759?mtm_campaign=API-OFA",
+      "pubDate": "2024-07-27T13:09:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "NFT",
+        "ARB",
+        "MYTH",
+        "GODS",
+        "GOG"
+      ]
+    },
+    {
+      "title": "Cardano Moves One Huge Step Closer To Game-Changing Chang Hard Fork After Latest Node Release",
+      "link": "https://cryptopanic.com/news/19731801/Cardano-Moves-One-Huge-Step-Closer-To-Game-Changing-Chang-Hard-Fork-After-Latest-Node-Release",
+      "pubDate": "2024-07-27T12:59:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The Cardano network has inched closer to the final phase of a multiyear program to become a fully decentralized blockchain ecosystem. This milestone comes after the latest release of a major node validator software, which is the final development step needed to trigger the highly-awaited Chang hard fork. The Dawn Of The Voltaire Era The […]",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Altcoins Traders Brace For Over $350 Million Token Unlocks",
+      "link": "https://cryptopanic.com/news/19731782/Altcoins-Traders-Brace-For-Over-350-Million-Token-Unlocks",
+      "pubDate": "2024-07-27T12:46:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "GAL",
+        "AKT",
+        "ENA"
+      ]
+    },
+    {
+      "title": "Ethereum Open Interest Rises By $1.5 Billion – What This Means",
+      "link": "https://cryptopanic.com/news/19731573/Ethereum-Open-Interest-Rises-By-15-Billion-What-This-Means?mtm_campaign=API-OFA",
+      "pubDate": "2024-07-27T11:30:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "ETHW"
+      ]
+    },
+    {
+      "title": "U.S. Senator to Push Pro-Bitcoin Legislation Amid Nashville Conference Buzz",
+      "link": "https://cryptopanic.com/news/19731450/US-Senator-to-Push-Pro-Bitcoin-Legislation-Amid-Nashville-Conference-Buzz",
+      "pubDate": "2024-07-27T10:58:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Tennessee Senator Bill Hagerty has announced plans to introduce legislation supporting Bitcoin, stirring excitement in the crypto community.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin or Monero? We asked ChatGPT-4o which is the best buy for this bull market cycle",
+      "link": "https://cryptopanic.com/news/19731389/Bitcoin-or-Monero-We-asked-ChatGPT-4o-which-is-the-best-buy-for-this-bull-market-cycle",
+      "pubDate": "2024-07-27T10:35:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XMR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "WazirX launches fair fund recovery plan post $230M hack",
+      "link": "https://cryptopanic.com/news/19731385/WazirX-launches-fair-fund-recovery-plan-post-230M-hack",
+      "pubDate": "2024-07-27T10:31:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WRX"
+      ]
+    },
+    {
+      "title": "Meme Coin Rivalry: DOGE, RABT, or BONK – Who Will Dominate 2024?",
+      "link": "https://cryptopanic.com/news/19731379/Meme-Coin-Rivalry-DOGE-RABT-or-BONK-Who-Will-Dominate-2024",
+      "pubDate": "2024-07-27T10:27:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "BONK"
+      ]
+    },
+    {
+      "title": "Solana and Rollblock To Make New All-Time Highs In August; NEAR Protocol Likely To See Further Consolidation",
+      "link": "https://cryptopanic.com/news/19731370/Solana-and-Rollblock-To-Make-New-All-Time-Highs-In-August-NEAR-Protocol-Likely-To-See-Further-Consolidation",
+      "pubDate": "2024-07-27T10:21:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Ripple (XRP) and Shiba Inu (SHIB) are Among the Top 6 Altcoins With Most Holders: Details",
+      "link": "https://cryptopanic.com/news/19731363/Ripple-XRP-and-Shiba-Inu-SHIB-are-Among-the-Top-6-Altcoins-With-Most-Holders-Details",
+      "pubDate": "2024-07-27T10:17:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "DOGE",
+        "SHIB",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Is Cardano’s price recovery sustainable? Key indicators to watch are…",
+      "link": "https://cryptopanic.com/news/19731328/Is-Cardanos-price-recovery-sustainable-Key-indicators-to-watch-are",
+      "pubDate": "2024-07-27T10:00:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Cardano's charts saw a shift in momentum. Can it sustain itself?",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Analyst Says Chainlink Price Could Climb To $19 — Here’s How",
+      "link": "https://cryptopanic.com/news/19731255/Analyst-Says-Chainlink-Price-Could-Climb-To-19-Heres-How?mtm_campaign=API-OFA",
+      "pubDate": "2024-07-27T09:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "LINK",
+        "TON",
+        "ALI"
+      ]
+    },
+    {
+      "title": "Bitcoin Price Eyes $68K Again, Solana Soars to 2-Month Peak Above $185 (Weekend Watch)",
+      "link": "https://cryptopanic.com/news/19731228/Bitcoin-Price-Eyes-68K-Again-Solana-Soars-to-2-Month-Peak-Above-185-Weekend-Watch",
+      "pubDate": "2024-07-27T08:52:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "KAS",
+        "APT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Jupiter Skyrockets 20% Ahead Major Week And Announcement By Co-Founder",
+      "link": "https://cryptopanic.com/news/19731209/Jupiter-Skyrockets-20-Ahead-Major-Week-And-Announcement-By-Co-Founder",
+      "pubDate": "2024-07-27T08:34:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "JUP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Michigan Pension Fund Allocates $6.6 Million to Bitcoin ETF",
+      "link": "https://cryptopanic.com/news/19731229/Michigan-Pension-Fund-Allocates-66-Million-to-Bitcoin-ETF",
+      "pubDate": "2024-07-27T08:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ARK",
+        "ETN"
+      ]
+    },
+    {
+      "title": "Solana, Helium, And MEW Shine As Ethereum ETF Falls Short: Find SOL, HNT, MEW Price Prediction",
+      "link": "https://cryptopanic.com/news/19731147/Solana-Helium-And-MEW-Shine-As-Ethereum-ETF-Falls-Short-Find-SOL-HNT-MEW-Price-Prediction",
+      "pubDate": "2024-07-27T07:49:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "HNT"
+      ]
+    },
+    {
+      "title": "‘There’s a Very Big Move To Come’: Raoul Pal Says One Indicator Signaling Solana Will Vastly Outperform Bitcoin",
+      "link": "https://cryptopanic.com/news/19731104/Theres-a-Very-Big-Move-To-Come-Raoul-Pal-Says-One-Indicator-Signaling-Solana-Will-Vastly-Outperform-Bitcoin",
+      "pubDate": "2024-07-27T07:04:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Macro guru and Real Vision CEO Raoul Pal believes that Solana (SOL) will furiously outpace Bitcoin (BTC) this cycle. In a new YouTube strategy session, Pal says that Solana could be printing a classic bullish inverse head and shoulders pattern (I-HNS) pattern against Bitcoin. “That’s a killer inverse head and shoulders, cup and handle, whatever […] The post ‘There’s a Very Big Move To Come’: Raoul Pal Says One Indicator Signaling Solana Will Vastly Outperform Bitcoin appeared first on The Daily ",
+      "currencies": [
+        "BTC",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 3
+      }
+    },
+    {
+      "title": "WazirX Update: Indian Exchange to Lock 45% Assets In Recovery Plan",
+      "link": "https://cryptopanic.com/news/19731076/WazirX-Update-Indian-Exchange-to-Lock-45-Assets-In-Recovery-Plan",
+      "pubDate": "2024-07-27T06:54:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "WRX"
+      ]
+    },
+    {
+      "title": "Crypto News: Crypto Prices Hold Steady Amidst Market Trends",
+      "link": "https://cryptopanic.com/news/19731003/Crypto-News-Crypto-Prices-Hold-Steady-Amidst-Market-Trends",
+      "pubDate": "2024-07-27T06:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "SOL",
+        "XMR",
+        "BCH",
+        "FIL",
+        "CFX",
+        "JUP"
+      ]
+    },
+    {
+      "title": "Is This Solana Meme Coin The Next Dogwifhat (WIF)? $2.4 Million Buy Stuns Community",
+      "link": "https://cryptopanic.com/news/19730927/Is-This-Solana-Meme-Coin-The-Next-Dogwifhat-WIF-24-Million-Buy-Stuns-Community",
+      "pubDate": "2024-07-27T05:02:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "BONK",
+        "WIF"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RFK Jr. Proposes Massive Bitcoin Buy: Match US Gold Reserves with BTC",
+      "link": "https://cryptopanic.com/news/19730898/RFK-Jr-Proposes-Massive-Bitcoin-Buy-Match-US-Gold-Reserves-with-BTC",
+      "pubDate": "2024-07-27T04:15:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "United States presidential candidate Robert F. Kennedy Jr. has grand plans for Bitcoin adoption in America, stating he would take things much further than Donald Trump.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Low-Cap Altcoin Surges by More Than 27% This Week Amid New Involvement in CBDC Project",
+      "link": "https://cryptopanic.com/news/19730632/Low-Cap-Altcoin-Surges-by-More-Than-27-This-Week-Amid-New-Involvement-in-CBDC-Project",
+      "pubDate": "2024-07-27T00:00:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "COTI"
+      ]
+    }
+  ]
+}

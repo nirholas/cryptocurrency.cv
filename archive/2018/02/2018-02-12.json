@@ -1,0 +1,25 @@
+{
+  "date": "2018-02-12",
+  "fetchedAt": "2026-02-05T07:27:06.961Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "BitGrail Reports Loss of Millions of XRB: Trading Suspended Until Further Notice",
+      "link": "https://cryptopanic.com/news/1058347/BitGrail-Reports-Loss-of-Millions-of-XRB-Trading-Suspended-Until-Further-Notice",
+      "pubDate": "2018-02-12T14:30:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XNO"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2019-02-12",
+  "fetchedAt": "2026-02-05T07:27:08.684Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tron Weekly Report: Wallets, Smart Contracts, and New Years Celebrations",
+      "link": "https://cryptopanic.com/news/tron/4541137/Tron-Weekly-Report-Wallets-Smart-Contracts-and-New-Years-Celebrations",
+      "pubDate": "2019-02-12T12:21:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

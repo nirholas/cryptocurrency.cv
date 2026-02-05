@@ -1,0 +1,628 @@
+{
+  "date": "2023-08-15",
+  "fetchedAt": "2026-02-05T07:27:07.059Z",
+  "articleCount": 41,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Chinese Court Charges 5 People in Filecoin Based Fraud Pyramid Scheme",
+      "link": "https://cryptopanic.com/news/18839394/Chinese-Court-Charges-5-People-in-Filecoin-Based-Fraud-Pyramid-Scheme",
+      "pubDate": "2023-08-15T23:42:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "XRP Price Could See A Massive Run Soon, Analysts Say",
+      "link": "https://cryptopanic.com/news/18839383/XRP-Price-Could-See-A-Massive-Run-Soon-Analysts-Say",
+      "pubDate": "2023-08-15T23:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP price has been performing quite well over the last month after US Judge Analisa Torres declared that secondary sales of the asset on exchanges didn’t qualify as securities. The altcoin’s initial pump tapered off in a few days but XRP continues to retain most of those gains. Given the cryptocurrency’s performance trend over this […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "THORSwap (THOR) 300% Surge In A Week: What’s The Secret Behind Its Thunderous Rise?",
+      "link": "https://cryptopanic.com/news/18839248/THORSwap-THOR-300-Surge-In-A-Week-Whats-The-Secret-Behind-Its-Thunderous-Rise",
+      "pubDate": "2023-08-15T21:00:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MKR",
+        "RUNE"
+      ]
+    },
+    {
+      "title": "Institutional XRP Holdings Rise Rapidly Following Ripple’s Win Over SEC",
+      "link": "https://cryptopanic.com/news/18839150/Institutional-XRP-Holdings-Rise-Rapidly-Following-Ripples-Win-Over-SEC",
+      "pubDate": "2023-08-15T20:00:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Now that Ripple has prevailed over the SEC in court, major players are eager to get their hands on XRP. According to recent data, institutions have been getting their hands on the cryptocurrency at a steady rate, as reflected in the digital asset fund flows report. Institutional XRP Holdings Rise Rapidly In the days following Ripple’s partial victory in the SEC lawsuit, XRP volumes and prices rose dramatically as crypto traders rushed to the cryptocurrency in anticipation of a continued bull run",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Huobi’s 7th PrimeVote finishes with MinePlex (XFI) Coming out on Top",
+      "link": "https://cryptopanic.com/news/18839145/Huobis-7th-PrimeVote-finishes-with-MinePlex-XFI-Coming-out-on-Top",
+      "pubDate": "2023-08-15T19:59:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "HT"
+      ]
+    },
+    {
+      "title": "Why Has the Bitcoin Price Plunged? What is the Source of the New FUD?",
+      "link": "https://cryptopanic.com/news/18839111/Why-Has-the-Bitcoin-Price-Plunged-What-is-the-Source-of-the-New-FUD",
+      "pubDate": "2023-08-15T19:22:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin price experienced a significant drop within minutes. Investors are wondering about the source of the BTC price drop. Continue Reading: Why Has the Bitcoin Price Plunged? What is the Source of the New FUD?",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Despite SEC’s Legal Onslaught, These Altcoins Have Witnessed Resurgence in Trading Volume",
+      "link": "https://cryptopanic.com/news/18839071/Despite-SECs-Legal-Onslaught-These-Altcoins-Have-Witnessed-Resurgence-in-Trading-Volume",
+      "pubDate": "2023-08-15T19:00:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "SOL",
+        "MATIC",
+        "ALGO",
+        "FLOW",
+        "MANA",
+        "SAND",
+        "FIL",
+        "AXS"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Filecoin Falls More Than 3% In 24 hours",
+      "link": "https://cryptopanic.com/news/18839084/Cryptocurrency-Filecoin-Falls-More-Than-3-In-24-hours",
+      "pubDate": "2023-08-15T19:00:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "Trump hurtles toward crypto whale status with Ethereum wallet worth up to $5 million",
+      "link": "https://cryptopanic.com/news/18839057/Trump-hurtles-toward-crypto-whale-status-with-Ethereum-wallet-worth-up-to-5-million",
+      "pubDate": "2023-08-15T18:56:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Former President Donald Trump owns up to $5 million worth of ether and earned $4.9 million from NFT licensing fees, filings show.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bankrupt Crypto Lender Voyager Abruptly Moves Nearly $13,000,000 in Ethereum to Coinbase: On-Chain Data",
+      "link": "https://cryptopanic.com/news/18839047/Bankrupt-Crypto-Lender-Voyager-Abruptly-Moves-Nearly-13000000-in-Ethereum-to-Coinbase-On-Chain-Data",
+      "pubDate": "2023-08-15T18:45:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "STX"
+      ]
+    },
+    {
+      "title": "Solana (SOL) May Be Showing Promising Signs of a Long Rally",
+      "link": "https://cryptopanic.com/news/flow/18838915/Solana-SOL-May-Be-Showing-Promising-Signs-of-a-Long-Rally",
+      "pubDate": "2023-08-15T17:28:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Chiliz (CHZ) Empowers Smart Contracts With Upgrades – Positive Impact On Price?",
+      "link": "https://cryptopanic.com/news/18838864/Chiliz-CHZ-Empowers-Smart-Contracts-With-Upgrades-Positive-Impact-On-Price",
+      "pubDate": "2023-08-15T17:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "CHZ"
+      ]
+    },
+    {
+      "title": "Coinbase set to list Sei as blockchain’s mainnet goes live",
+      "link": "https://cryptopanic.com/news/18838796/Coinbase-set-to-list-Sei-as-blockchains-mainnet-goes-live",
+      "pubDate": "2023-08-15T16:11:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ATOM",
+        "KCS"
+      ]
+    },
+    {
+      "title": "The Sandbox Unlocks Over 300 Million Tokens, Sending SAND Price Tumbling",
+      "link": "https://cryptopanic.com/news/18838724/The-Sandbox-Unlocks-Over-300-Million-Tokens-Sending-SAND-Price-Tumbling",
+      "pubDate": "2023-08-15T15:47:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SAND"
+      ]
+    },
+    {
+      "title": "This Masterclass From A True Master Of The Blockchain Challenges Its Participants To Think Differently",
+      "link": "https://cryptopanic.com/news/18838718/This-Masterclass-From-A-True-Master-Of-The-Blockchain-Challenges-Its-Participants-To-Think-Differently",
+      "pubDate": "2023-08-15T15:27:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "Crypto market maker GSR scales back, CFO and other top executives depart",
+      "link": "https://cryptopanic.com/news/maker/18838664/Crypto-market-maker-GSR-scales-back-CFO-and-other-top-executives-depart",
+      "pubDate": "2023-08-15T15:14:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Stellar invests in MoneyGram, gets seat on board",
+      "link": "https://cryptopanic.com/news/18838639/Stellar-invests-in-MoneyGram-gets-seat-on-board",
+      "pubDate": "2023-08-15T15:06:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "After years of business partnership, the Stellar Development Foundation became a minority investor in payment firm MoneyGram International.",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cryptocurrency Hedera Up More Than 11% In 24 hours",
+      "link": "https://cryptopanic.com/news/18838655/Cryptocurrency-Hedera-Up-More-Than-11-In-24-hours",
+      "pubDate": "2023-08-15T15:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Ancient Dogecoin whales move 7 million DOGE after 9 years of inactivity",
+      "link": "https://cryptopanic.com/news/18838554/Ancient-Dogecoin-whales-move-7-million-DOGE-after-9-years-of-inactivity",
+      "pubDate": "2023-08-15T14:39:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Four ancient Dogecoin (DOGE) whales have been spotted since the beginning of 2023 moving hundreds of thousands of dollars in … Continued",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Why Litecoin prices might rally shortly",
+      "link": "https://cryptopanic.com/news/18838540/Why-Litecoin-prices-might-rally-shortly",
+      "pubDate": "2023-08-15T14:30:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "A bullish symmetrical triangle pattern was formed on LTC’s chart, which could result in a bull rally soon.",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Frax V2 enables permissionless DeFi validators",
+      "link": "https://cryptopanic.com/news/18838508/Frax-V2-enables-permissionless-DeFi-validators",
+      "pubDate": "2023-08-15T14:02:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "FRAX"
+      ]
+    },
+    {
+      "title": "Hedera (HBAR) Blooms 21% – Uncloaking The Factors Behind The Rise",
+      "link": "https://cryptopanic.com/news/18838464/Hedera-HBAR-Blooms-21-Uncloaking-The-Factors-Behind-The-Rise",
+      "pubDate": "2023-08-15T14:01:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Hedera (HBAR) has stolen the limelight by becoming the highest-gaining cryptocurrency in the past 24 hours. As investors eagerly accumulate, the token’s price exhibits a roller-coaster ride of volatility. While optimism fuels the anticipation of a price rally, caution is advised as HBAR’s Bollinger Bands cast a shadow of uncertainty over its immediate future. At the time of writing, HBAR’s...",
+      "currencies": [
+        "XRP",
+        "HBAR",
+        "TON"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Google Bard picks Solana over Cardano; Here is why",
+      "link": "https://cryptopanic.com/news/18838411/Google-Bard-picks-Solana-over-Cardano-Here-is-why",
+      "pubDate": "2023-08-15T13:47:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The rise of artificial intelligence (AI) has had a major impact on the cryptocurrency market. AI platforms like OpenAi’s ChatGPT … Continued",
+      "currencies": [
+        "ADA",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Will Ripple and Amazon Web Services Transform Online Trade with XRP?",
+      "link": "https://cryptopanic.com/news/18838305/Will-Ripple-and-Amazon-Web-Services-Transform-Online-Trade-with-XRP",
+      "pubDate": "2023-08-15T13:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Amazon Web Services partners with Ripple to integrate XRP, potentially revolutionizing global e-commerce transactions.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP price prediction as Ripple v. SEC final ruling looms",
+      "link": "https://cryptopanic.com/news/18838270/XRP-price-prediction-as-Ripple-v-SEC-final-ruling-looms",
+      "pubDate": "2023-08-15T12:55:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Much like the rest of the cryptocurrency market, XRP has been going through stagnation in terms of its price, consolidating … Continued",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "First Mover Americas: Europe's First Spot Bitcoin ETF Opens in Holland",
+      "link": "https://cryptopanic.com/news/18838244/First-Mover-Americas-Europes-First-Spot-Bitcoin-ETF-Opens-in-Holland",
+      "pubDate": "2023-08-15T12:39:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The latest price moves in bitcoin (BTC) and crypto markets in context for August 15, 2023. First Mover is CoinDesk’s daily newsletter that contextualizes the latest actions in the crypto markets.",
+      "currencies": [
+        "BTC",
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Mining service provider faces $100M lawsuit over pyramid scheme allegations in China",
+      "link": "https://cryptopanic.com/news/18838217/Mining-service-provider-faces-100M-lawsuit-over-pyramid-scheme-allegations-in-China",
+      "pubDate": "2023-08-15T12:31:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "ApeCoin, Oasis Network, Injective prepare for token unlocks",
+      "link": "https://cryptopanic.com/news/18838175/ApeCoin-Oasis-Network-Injective-prepare-for-token-unlocks",
+      "pubDate": "2023-08-15T12:16:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SAND",
+        "INJ"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Hedera price prediction as HBAR rockets over 25% in a week",
+      "link": "https://cryptopanic.com/news/18838182/Hedera-price-prediction-as-HBAR-rockets-over-25-in-a-week",
+      "pubDate": "2023-08-15T12:10:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "In an electrifying display of market momentum, Hedera (HBAR) cryptocurrency briefly surged by an impressive 25% over the past week. … Continued",
+      "currencies": [
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "China Cracks Down on People Exploiting Filecoin Blockchain Rewards",
+      "link": "https://cryptopanic.com/news/18838135/China-Cracks-Down-on-People-Exploiting-Filecoin-Blockchain-Rewards",
+      "pubDate": "2023-08-15T12:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XTZ",
+        "FIL"
+      ]
+    },
+    {
+      "title": "Sei Mainnet is Live After Testnet Sees More Than 7.5M Wallets Created",
+      "link": "https://cryptopanic.com/news/flow/18838150/Sei-Mainnet-is-Live-After-Testnet-Sees-More-Than-75M-Wallets-Created",
+      "pubDate": "2023-08-15T12:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Chinese Prosecutors Sued This Altcoin Company!",
+      "link": "https://cryptopanic.com/news/18838015/Chinese-Prosecutors-Sued-This-Altcoin-Company",
+      "pubDate": "2023-08-15T11:01:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FIL"
+      ]
+    },
+    {
+      "title": "Chinese Filecoin mining firm charged for allegedly orchestrating $83.3 million pyramid scheme",
+      "link": "https://cryptopanic.com/news/18837883/Chinese-Filecoin-mining-firm-charged-for-allegedly-orchestrating-833-million-pyramid-scheme",
+      "pubDate": "2023-08-15T09:54:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "THORChain (RUNE) up 65%: here’s why the token is rising",
+      "link": "https://cryptopanic.com/news/18837787/THORChain-RUNE-up-65-heres-why-the-token-is-rising",
+      "pubDate": "2023-08-15T09:15:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RUNE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ApeCoin: A rising whale interest and NFT growth could push APE toward…",
+      "link": "https://cryptopanic.com/news/18837703/ApeCoin-A-rising-whale-interest-and-NFT-growth-could-push-APE-toward",
+      "pubDate": "2023-08-15T08:30:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "APE"
+      ]
+    },
+    {
+      "title": "Voyager Sells 1.4 Trillion Shiba Inu, But There’s Good News For SHIB",
+      "link": "https://cryptopanic.com/news/18837691/Voyager-Sells-14-Trillion-Shiba-Inu-But-Theres-Good-News-For-SHIB",
+      "pubDate": "2023-08-15T08:25:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SHIB",
+        "MATIC",
+        "LINK",
+        "MANA",
+        "FTM",
+        "GALA"
+      ]
+    },
+    {
+      "title": "$RPL: Coinbase Ventures Shows Faith in Ethereum’s Liquid Staking Network Rocket Pool by Buying RPL Tokens",
+      "link": "https://cryptopanic.com/news/18837615/RPL-Coinbase-Ventures-Shows-Faith-in-Ethereums-Liquid-Staking-Network-Rocket-Pool-by-Buying-RPL-Tokens",
+      "pubDate": "2023-08-15T07:29:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "RPL"
+      ]
+    },
+    {
+      "title": "ChatGPT Maker Is Reportedly About To Go Bankrupt – Bad News For Crypto?",
+      "link": "https://cryptopanic.com/news/maker/18837583/ChatGPT-Maker-Is-Reportedly-About-To-Go-Bankrupt-Bad-News-For-Crypto",
+      "pubDate": "2023-08-15T07:14:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MKR"
+      ]
+    },
+    {
+      "title": "AR, FIL Could Gain Big in the Next Bull Run, Predicts Analyst",
+      "link": "https://cryptopanic.com/news/18837454/AR-FIL-Could-Gain-Big-in-the-Next-Bull-Run-Predicts-Analyst",
+      "pubDate": "2023-08-15T05:27:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "Cardano Whales Rapidly Accumulating, ADA Bull Run Incoming?",
+      "link": "https://cryptopanic.com/news/18837348/Cardano-Whales-Rapidly-Accumulating-ADA-Bull-Run-Incoming",
+      "pubDate": "2023-08-15T03:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "XRP",
+        "SOL",
+        "DOGE",
+        "TRX",
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "$XRP Funds Attract Institutional Investors as AUM Grow 127% YTD",
+      "link": "https://cryptopanic.com/news/18837290/XRP-Funds-Attract-Institutional-Investors-as-AUM-Grow-127-YTD",
+      "pubDate": "2023-08-15T01:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cryptocurrency investment products focusing on the native token of the XRP Ledger, $XRP, have seen their assets under management rise 127% so far this year, and reported their sixteenth consecutive week of inflows last week, with $500,000 being invested in them. According to CoinShares’ latest Digital Asset Fund Flows Weekly report, the figure represents 12% […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

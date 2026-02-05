@@ -1,0 +1,703 @@
+{
+  "date": "2021-09-28",
+  "fetchedAt": "2026-02-05T07:27:06.685Z",
+  "articleCount": 50,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @TronixTrx: Stay tuned for the surprise of the #TRON community on #Android and #iOS",
+      "link": "https://cryptopanic.com/news/12890066/RT-TronixTrx-Stay-tuned-for-the-surprise-of-the-TRON-community-on-Android-and-iOS",
+      "pubDate": "2021-09-28T23:25:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AMA"
+      ]
+    },
+    {
+      "title": "RT @justinsuntron: I have noticed that US Treasury Officials have expressed very legit concerns over the tech capacity of the chains suppor…",
+      "link": "https://cryptopanic.com/news/12890067/RT-justinsuntron-I-have-noticed-that-US-Treasury-Officials-have-expressed-very-legit-concerns-over-the-tech-capacity-of-the-chains-suppor",
+      "pubDate": "2021-09-28T23:25:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AMA"
+      ]
+    },
+    {
+      "title": "RT @TronixTrx: 27th September: #TRON burns more than 3,045,080 coins  with a net production ratio greater than zero 2,012,807 ️",
+      "link": "https://cryptopanic.com/news/12890068/RT-TronixTrx-27th-September-TRON-burns-more-than-3045080-coins-with-a-net-production-ratio-greater-than-zero-2012807",
+      "pubDate": "2021-09-28T23:24:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AMA"
+      ]
+    },
+    {
+      "title": "This is amazing, we love it!",
+      "link": "https://cryptopanic.com/news/12887445/This-is-amazing-we-love-it",
+      "pubDate": "2021-09-28T21:01:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BEL"
+      ]
+    },
+    {
+      "title": "Alibaba Has Banned the Sale of Crypto Miners",
+      "link": "https://cryptopanic.com/news/bitcoin/12885973/Alibaba-Has-Banned-the-Sale-of-Crypto-Miners",
+      "pubDate": "2021-09-28T20:39:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "-",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 5
+      }
+    },
+    {
+      "title": "RT @rstaudt2: Utilizing this new feature to provide an update on the Automatic Ticket Revocations Proposal - all development work has been…",
+      "link": "https://cryptopanic.com/news/12885832/RT-rstaudt2-Utilizing-this-new-feature-to-provide-an-update-on-the-Automatic-Ticket-Revocations-Proposal-all-development-work-has-been",
+      "pubDate": "2021-09-28T19:33:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DCR"
+      ]
+    },
+    {
+      "title": "Tech Stocks and Crypto Fall As US 10 Year Treasury Yield Hits Highest Level Since June",
+      "link": "https://cryptopanic.com/news/bitcoin/12885813/Tech-Stocks-and-Crypto-Fall-As-US-10-Year-Treasury-Yield-Hits-Highest-Level-Since-June",
+      "pubDate": "2021-09-28T19:19:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "On Tuesday (September 28), the yield on the U.S. 10 Year Treasury Note hit 1.559%, which is the highest it has been in over three months, as the result of which both tech stocks and cryptoassets have suffered losses. As CNBC reported earlier today, the yields on U.S. government bonds appear to be rising as […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Markets are down today...",
+      "link": "https://cryptopanic.com/news/12920702/Markets-are-down-today",
+      "pubDate": "2021-09-28T19:08:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BETA"
+      ]
+    },
+    {
+      "title": "RT @CainBCHA: Happy to hear @JihanWu is an XEC holder.",
+      "link": "https://cryptopanic.com/news/12892349/RT-CainBCHA-Happy-to-hear-JihanWu-is-an-XEC-holder",
+      "pubDate": "2021-09-28T19:03:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Bitcoin Bearish Signal: On-Chain Data Shows Whales Have Started Selling",
+      "link": "https://cryptopanic.com/news/bitcoin/12885762/Bitcoin-Bearish-Signal-On-Chain-Data-Shows-Whales-Have-Started-Selling",
+      "pubDate": "2021-09-28T19:00:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "On-chain data shows whale ratio has exceeded the 0.50 mark, historically a sign that whales are dumping in the short term. Bitcoin Whales Have Started Selling Their Coins As pointed out by a CryptoQuant post, the Bitcoin whale ratio has started going up above the 0.50 level. This signal has usually meant a bearish outlook for the crypto in the short term. The BTC all exchanges whale ratio is...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 24,
+        "negative": 27
+      }
+    },
+    {
+      "title": "Great news from SWAPSPACE, welcome to the party! #XEC #eCash",
+      "link": "https://cryptopanic.com/news/ecash/12892350/Great-news-from-SWAPSPACE-welcome-to-the-party-XEC-eCash",
+      "pubDate": "2021-09-28T18:28:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Leading crypto mining equipment maker Bitmain to halt sales in China",
+      "link": "https://cryptopanic.com/news/bitcoin/12885659/Leading-crypto-mining-equipment-maker-Bitmain-to-halt-sales-in-China",
+      "pubDate": "2021-09-28T18:25:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "Cryptocurrency hardware manufacturer Bitmain is reportedly planning to suspend the sale of machines in mainland China as a reaction to... Continue reading",
+      "currencies": [
+        "BTC",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 10
+      }
+    },
+    {
+      "title": "RT @eCashXEC: Congratulations @TheDesertLynx on a new view count milestone! The interview with @deadalnix is now the #1 video on @DigitalC…",
+      "link": "https://cryptopanic.com/news/ecash/12892351/RT-eCashXEC-Congratulations-TheDesertLynx-on-a-new-view-count-milestone-The-interview-with-deadalnix-is-now-the-1-video-on-DigitalC",
+      "pubDate": "2021-09-28T16:51:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "eCash top gainer in the top 100 on @CoinMarketCap #eCash #XEC $XEC",
+      "link": "https://cryptopanic.com/news/ecash/12892352/eCash-top-gainer-in-the-top-100-on-CoinMarketCap-eCash-XEC-XEC",
+      "pubDate": "2021-09-28T16:45:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "RT @IONmadness: @CoinMarketCap The #safecoin project is in its 4th year, is the first successful fork from #solana and has an amazingly low…",
+      "link": "https://cryptopanic.com/news/12891074/RT-IONmadness-CoinMarketCap-The-safecoin-project-is-in-its-4th-year-is-the-first-successful-fork-from-solana-and-has-an-amazingly-low",
+      "pubDate": "2021-09-28T16:18:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SAFE"
+      ]
+    },
+    {
+      "title": "Holders of $RDOC can now use @babelfishmoney’s XUSD to enjoy the advantages of combined stablecoin liquidity in the…",
+      "link": "https://cryptopanic.com/news/12890820/Holders-of-RDOC-can-now-use-babelfishmoneys-XUSD-to-enjoy-the-advantages-of-combined-stablecoin-liquidity-in-the",
+      "pubDate": "2021-09-28T16:15:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "RIF"
+      ]
+    },
+    {
+      "title": "RT @AndreCasterman: A series of customer use cases were presented today to #TFDInitiative members including the recent one involving @XinFi…",
+      "link": "https://cryptopanic.com/news/12892200/RT-AndreCasterman-A-series-of-customer-use-cases-were-presented-today-to-TFDInitiative-members-including-the-recent-one-involving-XinFi",
+      "pubDate": "2021-09-28T16:10:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XDC"
+      ]
+    },
+    {
+      "title": "RT @CryptoToit: The @TokenReactor $TOKE voting for the first 5 Reactors starting later today. First 5 project I would love to see go live:…",
+      "link": "https://cryptopanic.com/news/12891524/RT-CryptoToit-The-TokenReactor-TOKE-voting-for-the-first-5-Reactors-starting-later-today-First-5-project-I-would-love-to-see-go-live",
+      "pubDate": "2021-09-28T16:01:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SNX",
+        "SUSD"
+      ]
+    },
+    {
+      "title": "We have completed a first in tokenizing trade assets on Blockchain with @Tradeteq on the XDC Network. This is the f…",
+      "link": "https://cryptopanic.com/news/12892201/We-have-completed-a-first-in-tokenizing-trade-assets-on-Blockchain-with-Tradeteq-on-the-XDC-Network-This-is-the-f",
+      "pubDate": "2021-09-28T15:12:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XDC"
+      ]
+    },
+    {
+      "title": "$FRTS",
+      "link": "https://cryptopanic.com/news/12888922/FRTS",
+      "pubDate": "2021-09-28T15:11:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FRTS"
+      ]
+    },
+    {
+      "title": "The latest Reef Finance tutorial explains accounts on Reef Chain, and also contains information on how to prevent y…",
+      "link": "https://cryptopanic.com/news/12890908/The-latest-Reef-Finance-tutorial-explains-accounts-on-Reef-Chain-and-also-contains-information-on-how-to-prevent-y",
+      "pubDate": "2021-09-28T15:05:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ]
+    },
+    {
+      "title": "What to expect from Cardano’s ‘djed’ step towards decentralization",
+      "link": "https://cryptopanic.com/news/12884996/What-to-expect-from-Cardanos-djed-step-towards-decentralization",
+      "pubDate": "2021-09-28T15:00:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano was in the news over the weekend after a multitude of developments made headlines during Cardano Summit 2021. However, it can be argued that one of them made the most headlines. IOHK, the company behind Cardano’s development, has announced that the network’s stablecoin will be issued by the COTI platform. This newest piece in […]",
+      "currencies": [
+        "ADA",
+        "DAI"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @Bip32_Lab: #BTC #Blockchain #CryptocurrencyNews Analysis of BTC Trend with Long-term Holding Values — 70% in Circulation are Long-term…",
+      "link": "https://cryptopanic.com/news/12890007/RT-Bip32_Lab-BTC-Blockchain-CryptocurrencyNews-Analysis-of-BTC-Trend-with-Long-term-Holding-Values-70-in-Circulation-are-Long-term",
+      "pubDate": "2021-09-28T14:55:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "MOG"
+      ]
+    },
+    {
+      "title": "Keep innovating and building tech on #crypto adoption since 2017 #BUIDL #PUNDIX4GOOD #PUNDIX",
+      "link": "https://cryptopanic.com/news/12890777/Keep-innovating-and-building-tech-on-crypto-adoption-since-2017-BUIDL-PUNDIX4GOOD-PUNDIX",
+      "pubDate": "2021-09-28T14:43:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PUNDIX"
+      ]
+    },
+    {
+      "title": "wow！This project is great! Soon it brought benefits to GameDAO! Friends, hurry up and participate in mining!",
+      "link": "https://cryptopanic.com/news/12889002/wowThis-project-is-great-Soon-it-brought-benefits-to-GameDAO-Friends-hurry-up-and-participate-in-mining",
+      "pubDate": "2021-09-28T14:19:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "DAO"
+      ]
+    },
+    {
+      "title": "Cardano (ADA) Price Analysis for September 28",
+      "link": "https://cryptopanic.com/news/cardano/12884766/Cardano-ADA-Price-Analysis-for-September-28",
+      "pubDate": "2021-09-28T13:57:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Can Cardano (ADA) surpass the growth of the other top 10 coins?",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "It's about time The next #CSL6 match starts in 30 min. Internet of Nakamoto $VET vs DAO Attack $DASH Watch ou…",
+      "link": "https://cryptopanic.com/news/dash/12892110/Its-about-time-The-next-CSL6-match-starts-in-30-min-Internet-of-Nakamoto-VET-vs-DAO-Attack-DASH-Watch-ou",
+      "pubDate": "2021-09-28T13:35:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET",
+        "WRX"
+      ]
+    },
+    {
+      "title": "Master Work from Counos Platform #xbit",
+      "link": "https://cryptopanic.com/news/12888059/Master-Work-from-Counos-Platform-xbit",
+      "pubDate": "2021-09-28T13:34:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "Bitcoin whales move ‘record’ BTC value as metric sounds alarm over price volatility",
+      "link": "https://cryptopanic.com/news/bitcoin/12884634/Bitcoin-whales-move-record-BTC-value-as-metric-sounds-alarm-over-price-volatility",
+      "pubDate": "2021-09-28T13:25:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin price action may be boring for many, but whales have been busier than ever behind the scenes, data suggests.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Steve Hanke Calls Bitcoin Highly Speculative Asset with Fundamental Value of Zero",
+      "link": "https://cryptopanic.com/news/bitcoin/12884188/Steve-Hanke-Calls-Bitcoin-Highly-Speculative-Asset-with-Fundamental-Value-of-Zero",
+      "pubDate": "2021-09-28T10:54:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Steve Hanke has shared his negative take on Bitcoin, detailing why he does not think of BTC as a reliable asset",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "wow, very much looking forward to follow-up updates. GameDAO’s friends, come and see",
+      "link": "https://cryptopanic.com/news/12889003/wow-very-much-looking-forward-to-follow-up-updates-GameDAOs-friends-come-and-see",
+      "pubDate": "2021-09-28T10:07:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DAO"
+      ]
+    },
+    {
+      "title": "Check out the weekly growth of tokens listed on @MEXC_Global $DYDX $LUNA $AVAX $AXS $FTM $XTZ $XEC $UNI $ATOM…",
+      "link": "https://cryptopanic.com/news/ecash/12889784/Check-out-the-weekly-growth-of-tokens-listed-on-MEXC_Global-DYDX-LUNA-AVAX-AXS-FTM-XTZ-XEC-UNI-ATOM",
+      "pubDate": "2021-09-28T09:51:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MX",
+        "ETHW",
+        "ETHS"
+      ]
+    },
+    {
+      "title": "Meet your new BFF @MineWithThorg, a mining app powered by @golemproject using @0xPolygon L2, and start mining and e…",
+      "link": "https://cryptopanic.com/news/12883993/Meet-your-new-BFF-MineWithThorg-a-mining-app-powered-by-golemproject-using-0xPolygon-L2-and-start-mining-and-e",
+      "pubDate": "2021-09-28T09:31:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "GLM"
+      ]
+    },
+    {
+      "title": "ZZ Top Frontman Billy Gibbons Picks Cardano to Launch His Fresh-Played NFT Collection of Music",
+      "link": "https://cryptopanic.com/news/terra-luna/12884000/ZZ-Top-Frontman-Billy-Gibbons-Picks-Cardano-to-Launch-His-Fresh-Played-NFT-Collection-of-Music",
+      "pubDate": "2021-09-28T09:22:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "ZZ Top's Billy Gibbons launched his Cardano-based NFT collection of a digital music jam session at Terra Virtua over the weekend",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 25,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Markets Lose $100B: ETH Beneath $3K as BTC Failed at $44K (Market Watch)",
+      "link": "https://cryptopanic.com/news/bitcoin/12883894/Crypto-Markets-Lose-100B-ETH-Beneath-3K-as-BTC-Failed-at-44K-Market-Watch",
+      "pubDate": "2021-09-28T08:49:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The cryptocurrency market capitalization is down by $100 billion in a day as ETH struggles at $2,900 and BTC failed at $44,000.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 14
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "#Defi is coming to the #DENT ecosystem  - 30.09.2021  #Dentcoin #BTC #eSIM #ETH #GSMA #Mobile #Data #Swap",
+      "link": "https://cryptopanic.com/news/12883872/Defi-is-coming-to-the-DENT-ecosystem-30092021-Dentcoin-BTC-eSIM-ETH-GSMA-Mobile-Data-Swap",
+      "pubDate": "2021-09-28T08:37:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "$1.45 Billion in LINK Bought by Chainlink Whales, Holding 1 to 10 Million Coins, in Single Week",
+      "link": "https://cryptopanic.com/news/chainlink/12883332/145-Billion-in-LINK-Bought-by-Chainlink-Whales-Holding-1-to-10-Million-Coins-in-Single-Week",
+      "pubDate": "2021-09-28T08:09:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Recent analytics data shows that large Chainlink whales have purchased 3.4% of the total LINK supply on the dip",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 21,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The #upbit #eCash rebrand process starts today. #xec $xec",
+      "link": "https://cryptopanic.com/news/ecash/12883758/The-upbit-eCash-rebrand-process-starts-today-xec-xec",
+      "pubDate": "2021-09-28T08:03:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "XEC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BTC price loses $42K after fresh rejection puts focus on ‘worst case’ Bitcoin monthly close",
+      "link": "https://cryptopanic.com/news/bitcoin/12882940/BTC-price-loses-42K-after-fresh-rejection-puts-focus-on-worst-case-Bitcoin-monthly-close",
+      "pubDate": "2021-09-28T07:54:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "It’s all to play for as Bitcoin price action lingers above $40,000, but predictions are already in of a dip even lower.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Reading this @CNBC article, we can’t stop thinking about the importance of energy efficiency in order to fast track…",
+      "link": "https://cryptopanic.com/news/12888527/Reading-this-CNBC-article-we-cant-stop-thinking-about-the-importance-of-energy-efficiency-in-order-to-fast-track",
+      "pubDate": "2021-09-28T07:44:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "Attention $AERGO holders, the countdown to USDT/AERGO pair on @kucoincom is happening now!",
+      "link": "https://cryptopanic.com/news/12887010/Attention-AERGO-holders-the-countdown-to-USDTAERGO-pair-on-kucoincom-is-happening-now",
+      "pubDate": "2021-09-28T07:36:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "Bitcoin (BTC) Fails to Move Above $44,000 Resistance",
+      "link": "https://cryptopanic.com/news/bitcoin/12882364/Bitcoin-BTC-Fails-to-Move-Above-44000-Resistance",
+      "pubDate": "2021-09-28T07:33:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin is still trading inside the upper portion of a descending parallel channel, but the price action is lacking bullish signs.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Former US Treasurer Clarifies Her Statement About XRP",
+      "link": "https://cryptopanic.com/news/ripple/12880795/Former-US-Treasurer-Clarifies-Her-Statement-About-XRP",
+      "pubDate": "2021-09-28T06:44:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Rosie Rios clarified her comments after receiving pushback from the cryptocurrency community",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "A sixth of urban Indians are investors in cryptocurrency",
+      "link": "https://cryptopanic.com/news/dogecoin/12880790/A-sixth-of-urban-Indians-are-investors-in-cryptocurrency",
+      "pubDate": "2021-09-28T06:41:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "And according to a survey conducted by consulting firm Kantar, 19% of urban Indians intend to invest in virtual tokens in the next six months.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We are looking for community managers for DOTMog, feel free to contact us.",
+      "link": "https://cryptopanic.com/news/12881412/We-are-looking-for-community-managers-for-DOTMog-feel-free-to-contact-us",
+      "pubDate": "2021-09-28T06:27:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MOG"
+      ]
+    },
+    {
+      "title": "RT @BinanceChain: Note: Binance Bridge on BSC will suspend cross-chain transfer services on 29-2021-09 at 05:00 AM (UTC) for the Binance s…",
+      "link": "https://cryptopanic.com/news/12881124/RT-BinanceChain-Note-Binance-Bridge-on-BSC-will-suspend-cross-chain-transfer-services-on-29-2021-09-at-0500-AM-UTC-for-the-Binance-s",
+      "pubDate": "2021-09-28T06:16:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "LOOM"
+      ]
+    },
+    {
+      "title": "IOHK has big plans for Cardano, including Dish, Chainlink partnerships",
+      "link": "https://cryptopanic.com/news/chainlink/12878225/IOHK-has-big-plans-for-Cardano-including-Dish-Chainlink-partnerships",
+      "pubDate": "2021-09-28T03:40:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "At the Cardano Summit over the weekend, IOHK founder Charles Hoskinson revealed a slew of partnerships and other developments for the Cardano blockchain",
+      "currencies": [
+        "ADA",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Recap of this morning's live AMA session, featuring non-other than the Benevolent Dictator Amaury Séchet himself.…",
+      "link": "https://cryptopanic.com/news/12883759/Recap-of-this-mornings-live-AMA-session-featuring-non-other-than-the-Benevolent-Dictator-Amaury-Sechet-himself",
+      "pubDate": "2021-09-28T02:32:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "RT @ecash_is_art: #eCash WILL BE THE WORLD CURRENCY! @CainBCHA #100millionXEC100days @eCashOfficial",
+      "link": "https://cryptopanic.com/news/ecash/12883760/RT-ecash_is_art-eCash-WILL-BE-THE-WORLD-CURRENCY-CainBCHA-100millionXEC100days-eCashOfficial",
+      "pubDate": "2021-09-28T02:03:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "RT @kwenta_io: Bite-sized updates from the Kwenta Protocol will be headed your way more frequently if this is something you enjoy/would lik…",
+      "link": "https://cryptopanic.com/news/12882938/RT-kwenta_io-Bite-sized-updates-from-the-Kwenta-Protocol-will-be-headed-your-way-more-frequently-if-this-is-something-you-enjoywould-lik",
+      "pubDate": "2021-09-28T00:39:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "SNX",
+        "SUSD"
+      ]
+    }
+  ]
+}

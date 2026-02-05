@@ -1,0 +1,37 @@
+{
+  "date": "2019-04-10",
+  "fetchedAt": "2026-02-05T07:27:06.906Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Following Coinbase Pro Launch, EOS Spikes 7% – EOS Price Analysis April 10",
+      "link": "https://cryptopanic.com/news/5092921/Following-Coinbase-Pro-Launch-EOS-Spikes-7-EOS-Price-Analysis-April-10",
+      "pubDate": "2019-04-10T14:40:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ABBC Coin – Official Announcement",
+      "link": "https://cryptopanic.com/news/5090902/ABBC-Coin-Official-Announcement",
+      "pubDate": "2019-04-10T05:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ABBC"
+      ]
+    }
+  ]
+}

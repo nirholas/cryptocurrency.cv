@@ -1,0 +1,25 @@
+{
+  "date": "2020-10-21",
+  "fetchedAt": "2026-02-05T07:27:06.956Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Decred Announces its First Zero-Fees Decentralized Exchange: DCRDEX",
+      "link": "https://cryptopanic.com/news/10318063/Decred-Announces-its-First-Zero-Fees-Decentralized-Exchange-DCRDEX",
+      "pubDate": "2020-10-21T22:27:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "DCR"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

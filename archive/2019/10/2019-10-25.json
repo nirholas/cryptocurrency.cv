@@ -1,0 +1,37 @@
+{
+  "date": "2019-10-25",
+  "fetchedAt": "2026-02-05T07:27:06.954Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ethereum 2.0 Validators to Earn up to 10% Annually for Staking: Report,Ethereum 2.0 validators can expect to earn f…",
+      "link": "https://cryptopanic.com/news/7505252/Ethereum-20-Validators-to-Earn-up-to-10-Annually-for-Staking-ReportEthereum-20-validators-can-expect-to-earn-f",
+      "pubDate": "2019-10-25T22:36:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "RKN"
+      ]
+    },
+    {
+      "title": "Brave Browser v0.70 Brings Brave Ads to 20 More Countries",
+      "link": "https://cryptopanic.com/news/6957743/Brave-Browser-v070-Brings-Brave-Ads-to-20-More-Countries",
+      "pubDate": "2019-10-25T14:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BAT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "date": "2019-05-19",
+  "fetchedAt": "2026-02-05T07:27:08.685Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "XRP and Stellar Lumens [XLM] Start to Increase Against Bitcoin After Months of Declines [Price Analysis]",
+      "link": "https://cryptopanic.com/news/stellar/5468789/XRP-and-Stellar-Lumens-XLM-Start-to-Increase-Against-Bitcoin-After-Months-of-Declines-Price-Analysis",
+      "pubDate": "2019-05-19T10:44:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    }
+  ]
+}

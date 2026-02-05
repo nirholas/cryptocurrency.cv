@@ -1,0 +1,42 @@
+{
+  "date": "2020-10-06",
+  "fetchedAt": "2026-02-05T07:27:06.905Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Safer Than ICOs? Polkadot Explains How IPO Initial Parachain Offerings (IPOs) Will Work",
+      "link": "https://cryptopanic.com/news/polkadot/10178069/Safer-Than-ICOs-Polkadot-Explains-How-IPO-Initial-Parachain-Offerings-IPOs-Will-Work",
+      "pubDate": "2020-10-06T15:07:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Google Cloud Joins EOS Community to Become Block Producer: Block.one",
+      "link": "https://cryptopanic.com/news/10177947/Google-Cloud-Joins-EOS-Community-to-Become-Block-Producer-Blockone",
+      "pubDate": "2020-10-06T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 31,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

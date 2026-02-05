@@ -1,0 +1,43 @@
+{
+  "date": "2018-10-02",
+  "fetchedAt": "2026-02-05T07:27:08.685Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Electroneum Getting Ready for Another Run? Nice Pop for Zilliqa - Crypto Technical Analysis",
+      "link": "https://cryptopanic.com/news/zilliqa/3217208/Electroneum-Getting-Ready-for-Another-Run-Nice-Pop-for-Zilliqa-Crypto-Technical-Analysis",
+      "pubDate": "2018-10-02T18:56:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZIL",
+        "ETN"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The First Completely Free-to-Use Exchange StellarX Has One Key Downside",
+      "link": "https://cryptopanic.com/news/stellar/3212680/The-First-Completely-Free-to-Use-Exchange-StellarX-Has-One-Key-Downside",
+      "pubDate": "2018-10-02T12:19:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    }
+  ]
+}

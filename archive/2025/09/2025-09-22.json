@@ -1,0 +1,849 @@
+{
+  "date": "2025-09-22",
+  "fetchedAt": "2026-02-05T07:27:08.666Z",
+  "articleCount": 64,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Which Crypto Will Boom in 2025? SHIB Near $0.000014, XLM Faces Resistance, BlockDAG Awakening Testnet & Nears $410M Presale",
+      "link": "https://cryptopanic.com/news/stellar/25548656/Which-Crypto-Will-Boom-in-2025-SHIB-Near-0000014-XLM-Faces-Resistance-BlockDAG-Awakening-Testnet-Nears-410M-Presale",
+      "pubDate": "2025-09-22T23:59:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Polkadot’s Largest DeFi Protocol Hydration Launches Decentralized Stablecoin",
+      "link": "https://cryptopanic.com/news/polkadot/25550010/Polkadots-Largest-DeFi-Protocol-Hydration-Launches-Decentralized-Stablecoin",
+      "pubDate": "2025-09-22T23:08:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOT"
+      ]
+    },
+    {
+      "title": "Synthetix Prepares for Perpetuals DEX Launch on Ethereum Mainnet with $1M Trading Competition",
+      "link": "https://cryptopanic.com/news/ethereum/25547104/Synthetix-Prepares-for-Perpetuals-DEX-Launch-on-Ethereum-Mainnet-with-1M-Trading-Competition",
+      "pubDate": "2025-09-22T23:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH"
+      ]
+    },
+    {
+      "title": "Canary Reveals Fees for HBAR and Litecoin ETFs",
+      "link": "https://cryptopanic.com/news/litecoin/25560416/Canary-Reveals-Fees-for-HBAR-and-Litecoin-ETFs",
+      "pubDate": "2025-09-22T22:43:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Stellar XLM Consolidates at $0.35 Preparing for a Potential Rally Toward $0.50",
+      "link": "https://cryptopanic.com/news/stellar/25547022/Stellar-XLM-Consolidates-at-035-Preparing-for-a-Potential-Rally-Toward-050",
+      "pubDate": "2025-09-22T22:30:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Former White House exec invests in 'swiss army knife' of crypto",
+      "link": "https://cryptopanic.com/news/avalanche-2/25548480/Former-White-House-exec-invests-in-swiss-army-knife-of-crypto",
+      "pubDate": "2025-09-22T22:12:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "AVAX",
+        "WLFI"
+      ]
+    },
+    {
+      "title": "AgriFORCE Will Become AVAX One And Pursue 700 Million In AVAX Token Holdings",
+      "link": "https://cryptopanic.com/news/avalanche-2/25545659/AgriFORCE-Will-Become-AVAX-One-And-Pursue-700-Million-In-AVAX-Token-Holdings",
+      "pubDate": "2025-09-22T22:00:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Nasdaq-Listed AgriFORCE Pivots to AVAX Digital Asset Treasury, Renames to AVAX One",
+      "link": "https://cryptopanic.com/news/avalanche-2/25545557/Nasdaq-Listed-AgriFORCE-Pivots-to-AVAX-Digital-Asset-Treasury-Renames-to-AVAX-One",
+      "pubDate": "2025-09-22T21:28:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Uniswap Hits 915 Million Swaps In 2025 — Why Is UNI Still Flat?",
+      "link": "https://cryptopanic.com/news/uniswap/25545617/Uniswap-Hits-915-Million-Swaps-In-2025-Why-Is-UNI-Still-Flat",
+      "pubDate": "2025-09-22T20:44:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "AgriFORCE stock rallies on pivot to build AVAX treasury",
+      "link": "https://cryptopanic.com/news/avalanche-2/25544225/AgriFORCE-stock-rallies-on-pivot-to-build-AVAX-treasury",
+      "pubDate": "2025-09-22T20:40:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Anthony Scaramucci sticks to $150K Bitcoin call, says will add AVAX to SkyBridge treasury",
+      "link": "https://cryptopanic.com/news/avalanche-2/25543880/Anthony-Scaramucci-sticks-to-150K-Bitcoin-call-says-will-add-AVAX-to-SkyBridge-treasury",
+      "pubDate": "2025-09-22T20:05:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "TRON’s 9 mln daily transactions fail to lift TRX – Here’s why",
+      "link": "https://cryptopanic.com/news/tron/25543012/TRONs-9-mln-daily-transactions-fail-to-lift-TRX-Heres-why",
+      "pubDate": "2025-09-22T20:00:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ]
+    },
+    {
+      "title": "Swapping $50K+ in TRON - Best DEX Options?",
+      "link": "https://cryptopanic.com/news/tron/25562079/Swapping-50K-in-TRON-Best-DEX-Options",
+      "pubDate": "2025-09-22T18:45:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "WTRX"
+      ]
+    },
+    {
+      "title": "AVAX to join crypto treasury league with AgriFORCE's $550 million offering",
+      "link": "https://cryptopanic.com/news/avalanche-2/25556079/AVAX-to-join-crypto-treasury-league-with-AgriFORCEs-550-million-offering",
+      "pubDate": "2025-09-22T18:44:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Crypto.com CEO Denies Alleged 2023 Hack as CRO Faces Price Drop",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/25541356/Cryptocom-CEO-Denies-Alleged-2023-Hack-as-CRO-Faces-Price-Drop",
+      "pubDate": "2025-09-22T18:37:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Kris Marszalek refutes breach claims, highlights Crypto. com’s security culture, as CRO falls 6% after Trump Media partnership news.",
+      "currencies": [
+        "CRO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Avalanche Price Drop: AgriFORCE Rename as $AVAX One Help or Hurt?",
+      "link": "https://cryptopanic.com/news/avalanche-2/25542689/Avalanche-Price-Drop-AgriFORCE-Rename-as-AVAX-One-Help-or-Hurt",
+      "pubDate": "2025-09-22T17:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "What is Uniswap? Can UNI Make a HUGE Comeback in 2025 as a DeFi Giant?",
+      "link": "https://cryptopanic.com/news/uniswap/25539874/What-is-Uniswap-Can-UNI-Make-a-HUGE-Comeback-in-2025-as-a-DeFi-Giant",
+      "pubDate": "2025-09-22T17:28:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ]
+    },
+    {
+      "title": "PayPal joins Plasma and Polkadot’s Hydration in wave of new stablecoin initiatives",
+      "link": "https://cryptopanic.com/news/polkadot/25539830/PayPal-joins-Plasma-and-Polkadots-Hydration-in-wave-of-new-stablecoin-initiatives",
+      "pubDate": "2025-09-22T17:26:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Aster Forms Bullish Hammer At Key Support – Reversal Setup?",
+      "link": "https://cryptopanic.com/news/tron/25538541/Aster-Forms-Bullish-Hammer-At-Key-Support-Reversal-Setup",
+      "pubDate": "2025-09-22T17:00:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "PYUSD",
+        "ASTER"
+      ]
+    },
+    {
+      "title": "From ‘Crypto Owners’ to ‘Crypto Users’: The Path to Mass Adoption",
+      "link": "https://cryptopanic.com/news/tron/25539824/From-Crypto-Owners-to-Crypto-Users-The-Path-to-Mass-Adoption",
+      "pubDate": "2025-09-22T16:51:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "DAO",
+        "LCX"
+      ]
+    },
+    {
+      "title": "Anthony Scaramucci Involved as AgriFORCE One Rebrands to an AVAX Treasury Company; Shares Rise 132%",
+      "link": "https://cryptopanic.com/news/avalanche-2/25539920/Anthony-Scaramucci-Involved-as-AgriFORCE-One-Rebrands-to-an-AVAX-Treasury-Company-Shares-Rise-132",
+      "pubDate": "2025-09-22T16:34:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "AgriFORCE to relaunch as AVAX One with $550M Avalanche plan",
+      "link": "https://cryptopanic.com/news/avalanche-2/25538504/AgriFORCE-to-relaunch-as-AVAX-One-with-550M-Avalanche-plan",
+      "pubDate": "2025-09-22T16:31:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Algorand, Hedera, VeChain & Remittix Are The Best Crypto To Buy Now For The Highest Gains",
+      "link": "https://cryptopanic.com/news/algorand/25538398/Algorand-Hedera-VeChain-Remittix-Are-The-Best-Crypto-To-Buy-Now-For-The-Highest-Gains",
+      "pubDate": "2025-09-22T16:30:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALGO",
+        "VET",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Polkadot DeFi project Hydration debuts decentralized stablecoin",
+      "link": "https://cryptopanic.com/news/polkadot/25538364/Polkadot-DeFi-project-Hydration-debuts-decentralized-stablecoin",
+      "pubDate": "2025-09-22T16:11:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOT"
+      ]
+    },
+    {
+      "title": "Neo News: Week in Review – September 15 – September 21",
+      "link": "https://cryptopanic.com/news/neo/25538359/Neo-News-Week-in-Review-September-15-September-21",
+      "pubDate": "2025-09-22T16:07:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO",
+        "FLM"
+      ]
+    },
+    {
+      "title": "Arca CIO fires at Uniswap founder – ‘Turn on revenues, buybacks, or don’t have a token’",
+      "link": "https://cryptopanic.com/news/uniswap/25537827/Arca-CIO-fires-at-Uniswap-founder-Turn-on-revenues-buybacks-or-dont-have-a-token",
+      "pubDate": "2025-09-22T16:06:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "At this point with fees dropping, is staking and energy sales even worth it?",
+      "link": "https://cryptopanic.com/news/tron/25562077/At-this-point-with-fees-dropping-is-staking-and-energy-sales-even-worth-it",
+      "pubDate": "2025-09-22T16:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "WTRX"
+      ]
+    },
+    {
+      "title": "Anthony Scaramucci backs AVAX treasury aiming to raise $550 million",
+      "link": "https://cryptopanic.com/news/avalanche-2/25536864/Anthony-Scaramucci-backs-AVAX-treasury-aiming-to-raise-550-million",
+      "pubDate": "2025-09-22T15:32:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "PEOPLE"
+      ]
+    },
+    {
+      "title": "ETH faced its biggest liquidation cascade since 2021",
+      "link": "https://cryptopanic.com/news/ethereum/25536793/ETH-faced-its-biggest-liquidation-cascade-since-2021",
+      "pubDate": "2025-09-22T15:13:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "ETH saw its biggest daily liquidation event since May 2021, with mostly long positions affected. The current nominal liquidation, however, did not cause outsized price turbulence, and is instead seen as a regular occurrence for the crypto market.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Polkadot's Largest DeFi Protocol Hydration Launches Decentralized Stablecoin",
+      "link": "https://cryptopanic.com/news/polkadot/25535407/Polkadots-Largest-DeFi-Protocol-Hydration-Launches-Decentralized-Stablecoin",
+      "pubDate": "2025-09-22T14:58:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOT"
+      ]
+    },
+    {
+      "title": "Bitcoin Miner AgriFORCE’s Stock Jumps 200% on $550 Million Avalanche Treasury Move",
+      "link": "https://cryptopanic.com/news/avalanche-2/25535294/Bitcoin-Miner-AgriFORCEs-Stock-Jumps-200-on-550-Million-Avalanche-Treasury-Move",
+      "pubDate": "2025-09-22T14:35:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Crypto.com CEO Denies Silence on Alleged Hack as CRO Plunges 10%",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/25535212/Cryptocom-CEO-Denies-Silence-on-Alleged-Hack-as-CRO-Plunges-10",
+      "pubDate": "2025-09-22T14:28:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "AgriFORCE to rebrand as AVAX One in $550M bet on Avalanche Network",
+      "link": "https://cryptopanic.com/news/avalanche-2/25535285/AgriFORCE-to-rebrand-as-AVAX-One-in-550M-bet-on-Avalanche-Network",
+      "pubDate": "2025-09-22T14:22:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "AVAX recovers after AgriFORCE transformation into treasury company",
+      "link": "https://cryptopanic.com/news/avalanche-2/25534909/AVAX-recovers-after-AgriFORCE-transformation-into-treasury-company",
+      "pubDate": "2025-09-22T14:14:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "South Korea flags 36,684 suspicious crypto transactions",
+      "link": "https://cryptopanic.com/news/kucoin-shares/25534908/South-Korea-flags-36684-suspicious-crypto-transactions",
+      "pubDate": "2025-09-22T14:06:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "Crypto.com Capital bets on Moonlander: shake-up for Cronos derivatives",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/25536806/Cryptocom-Capital-bets-on-Moonlander-shake-up-for-Cronos-derivatives",
+      "pubDate": "2025-09-22T14:00:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO",
+        "Z"
+      ]
+    },
+    {
+      "title": "Altcoin Spotlight: AVAX and BNB Gain Massive Institutional Backing",
+      "link": "https://cryptopanic.com/news/avalanche-2/25538436/Altcoin-Spotlight-AVAX-and-BNB-Gain-Massive-Institutional-Backing",
+      "pubDate": "2025-09-22T13:50:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Crypto.com’s Cronos token dips 10% amid CEO denial of undisclosed cyberattack allegations",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/25532051/Cryptocoms-Cronos-token-dips-10-amid-CEO-denial-of-undisclosed-cyberattack-allegations",
+      "pubDate": "2025-09-22T13:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "BitMine’s Ethereum holdings top 2% of supply with 2.4 million ETH",
+      "link": "https://cryptopanic.com/news/ethereum/25531994/BitMines-Ethereum-holdings-top-2-of-supply-with-24-million-ETH",
+      "pubDate": "2025-09-22T12:50:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "BitMine also announced a $365 million raise at a 14% premium, with proceeds earmarked for additional Ethereum purchases.",
+      "currencies": [
+        "ETH",
+        "PEOPLE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Aave price slides 10% as bearish momentum sweeps crypto",
+      "link": "https://cryptopanic.com/news/aave/25531922/Aave-price-slides-10-as-bearish-momentum-sweeps-crypto",
+      "pubDate": "2025-09-22T12:41:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Layer Brett, Chainlink and Polkadot The Best Cryptos To Buy Now To 5–10x Portfolios By November",
+      "link": "https://cryptopanic.com/news/polkadot/25531827/Layer-Brett-Chainlink-and-Polkadot-The-Best-Cryptos-To-Buy-Now-To-510x-Portfolios-By-November",
+      "pubDate": "2025-09-22T12:30:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOT",
+        "LINK"
+      ]
+    },
+    {
+      "title": "Crypto Price Analysis 9-22: BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, RIPPLE: XRP, NEAR PROTOCOL: NEAR",
+      "link": "https://cryptopanic.com/news/near/25532629/Crypto-Price-Analysis-9-22-BITCOIN-BTC-ETHEREUM-ETH-SOLANA-SOL-RIPPLE-XRP-NEAR-PROTOCOL-NEAR",
+      "pubDate": "2025-09-22T12:18:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Chainlink & SOOHO.IO Trial KRW Stablecoin Payments for Tourists in Korea",
+      "link": "https://cryptopanic.com/news/chainlink/25538434/Chainlink-SOOHOIO-Trial-KRW-Stablecoin-Payments-for-Tourists-in-Korea",
+      "pubDate": "2025-09-22T12:12:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "FX",
+        "IO"
+      ]
+    },
+    {
+      "title": "AgriFORCE Growing Systems Plans $550 Million Strategy as First Avalanche-Focused Nasdaq Company",
+      "link": "https://cryptopanic.com/news/avalanche-2/25560366/AgriFORCE-Growing-Systems-Plans-550-Million-Strategy-as-First-Avalanche-Focused-Nasdaq-Company",
+      "pubDate": "2025-09-22T11:15:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Solana emerges as the go-to network for Wrapped Bitcoin: Impact on SOL?",
+      "link": "https://cryptopanic.com/news/wrapped-bitcoin/25528539/Solana-emerges-as-the-go-to-network-for-Wrapped-Bitcoin-Impact-on-SOL",
+      "pubDate": "2025-09-22T11:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "WBTC"
+      ]
+    },
+    {
+      "title": "Crypto.com Capital invests in Moonlander to boost decentralized derivatives on Cronos",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/25528349/Cryptocom-Capital-invests-in-Moonlander-to-boost-decentralized-derivatives-on-Cronos",
+      "pubDate": "2025-09-22T11:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "BNB Chain Generates $357M in Fee Revenue in Q3 2025",
+      "link": "https://cryptopanic.com/news/uniswap/25560362/BNB-Chain-Generates-357M-in-Fee-Revenue-in-Q3-2025",
+      "pubDate": "2025-09-22T10:52:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "UNI",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Please help",
+      "link": "https://cryptopanic.com/news/tron/25528285/Please-help",
+      "pubDate": "2025-09-22T10:35:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "WTRX"
+      ]
+    },
+    {
+      "title": "JustLendDAO Lowers Energy Rental Barrier! Win More DeFi Alpha with Cheaper TRON Gas",
+      "link": "https://cryptopanic.com/news/tron/25528220/JustLendDAO-Lowers-Energy-Rental-Barrier-Win-More-DeFi-Alpha-with-Cheaper-TRON-Gas",
+      "pubDate": "2025-09-22T10:28:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "WTRX"
+      ]
+    },
+    {
+      "title": "Altcoin News: Ether and Dogecoin Lead $1.5B Crypto Liquidation Wipeout as Bitcoin Falls Below $112K",
+      "link": "https://cryptopanic.com/news/tron/25560351/Altcoin-News-Ether-and-Dogecoin-Lead-15B-Crypto-Liquidation-Wipeout-as-Bitcoin-Falls-Below-112K",
+      "pubDate": "2025-09-22T10:16:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB"
+      ]
+    },
+    {
+      "title": "Vitalik’s Delusion: Why Ethereum Can’t Become the Next Google",
+      "link": "https://cryptopanic.com/news/aave/25529323/Vitaliks-Delusion-Why-Ethereum-Cant-Become-the-Next-Google",
+      "pubDate": "2025-09-22T10:11:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AAVE",
+        "A"
+      ]
+    },
+    {
+      "title": "Why Analysts Say XYZverse Could Overtake AVAX in Adoption This Cycle",
+      "link": "https://cryptopanic.com/news/avalanche-2/25526499/Why-Analysts-Say-XYZverse-Could-Overtake-AVAX-in-Adoption-This-Cycle",
+      "pubDate": "2025-09-22T09:57:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Why Investors Recognize BullZilla as the Best Crypto Presale Now While Chainlink and WLFI Expand DeFi Solutions",
+      "link": "https://cryptopanic.com/news/chainlink/25526220/Why-Investors-Recognize-BullZilla-as-the-Best-Crypto-Presale-Now-While-Chainlink-and-WLFI-Expand-DeFi-Solutions",
+      "pubDate": "2025-09-22T09:56:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "WLFI"
+      ]
+    },
+    {
+      "title": "PAXG Reaching a New All-Time High, Increase of 1.35% in 24 Hours",
+      "link": "https://cryptopanic.com/news/pax-gold/25526715/PAXG-Reaching-a-New-All-Time-High-Increase-of-135-in-24-Hours",
+      "pubDate": "2025-09-22T09:24:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "PAXG"
+      ]
+    },
+    {
+      "title": "Stellar (XLM) Price Consolidates as Traders Eye $0.50 Breakout",
+      "link": "https://cryptopanic.com/news/stellar/25524023/Stellar-XLM-Price-Consolidates-as-Traders-Eye-050-Breakout",
+      "pubDate": "2025-09-22T07:58:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Beetz Daily Answer the Oracle Today 22 September 2025 Revealed",
+      "link": "https://cryptopanic.com/news/avalanche-2/25524039/Beetz-Daily-Answer-the-Oracle-Today-22-September-2025-Revealed",
+      "pubDate": "2025-09-22T06:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Altcoin Losses Drag Crypto Market Cap Below $4T as Dogecoin, Cardano, and LINK Plunge",
+      "link": "https://cryptopanic.com/news/chainlink/25520404/Altcoin-Losses-Drag-Crypto-Market-Cap-Below-4T-as-Dogecoin-Cardano-and-LINK-Plunge",
+      "pubDate": "2025-09-22T05:59:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "DOGE"
+      ]
+    },
+    {
+      "title": "Uniswap Trading Volume Crosses $1 Trillion While UNI Token Falls",
+      "link": "https://cryptopanic.com/news/uniswap/25521158/Uniswap-Trading-Volume-Crosses-1-Trillion-While-UNI-Token-Falls",
+      "pubDate": "2025-09-22T05:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "TRON Daily Report: September 22, 2025 Whale Surge, Yield Race, and New Stablecoin Meta",
+      "link": "https://cryptopanic.com/news/tron/25522174/TRON-Daily-Report-September-22-2025-Whale-Surge-Yield-Race-and-New-Stablecoin-Meta",
+      "pubDate": "2025-09-22T04:37:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "WTRX"
+      ]
+    },
+    {
+      "title": "Coins for classrooms: CZ raises $1.3M in donations for Giggle Academy",
+      "link": "https://cryptopanic.com/news/thorchain/25517347/Coins-for-classrooms-CZ-raises-13M-in-donations-for-Giggle-Academy",
+      "pubDate": "2025-09-22T04:18:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RUNE"
+      ]
+    },
+    {
+      "title": "Uniswap Founder Sparks Debate Over Governance Token Model",
+      "link": "https://cryptopanic.com/news/uniswap/25514020/Uniswap-Founder-Sparks-Debate-Over-Governance-Token-Model",
+      "pubDate": "2025-09-22T02:10:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "0G Labs Launches Aristotle Mainnet With Largest Day-One Ecosystem for Decentralized AI",
+      "link": "https://cryptopanic.com/news/chainlink/25517342/0G-Labs-Launches-Aristotle-Mainnet-With-Largest-Day-One-Ecosystem-for-Decentralized-AI",
+      "pubDate": "2025-09-22T02:00:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "How Many AAVE Tokens Do You Need to Become a Millionaire by 2026?",
+      "link": "https://cryptopanic.com/news/aave/25517441/How-Many-AAVE-Tokens-Do-You-Need-to-Become-a-Millionaire-by-2026",
+      "pubDate": "2025-09-22T01:15:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Analyst Michaël van de Poppe Says Ethereum-Based Altcoin Flashing ‘One of the Best Setups’ in Crypto, Updates Outlook on VET and W",
+      "link": "https://cryptopanic.com/news/chainlink/25512822/Analyst-Michael-van-de-Poppe-Says-Ethereum-Based-Altcoin-Flashing-One-of-the-Best-Setups-in-Crypto-Updates-Outlook-on-VET-and-W",
+      "pubDate": "2025-09-22T00:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LINK"
+      ]
+    }
+  ]
+}

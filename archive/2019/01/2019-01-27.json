@@ -1,0 +1,56 @@
+{
+  "date": "2019-01-27",
+  "fetchedAt": "2026-02-05T07:27:06.998Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Top 5 Penny Cryptocurrencies by Market Cap in 2019: XRP, TRON, Stellar, Cardano & IOTA",
+      "link": "https://cryptopanic.com/news/tron/4392410/Top-5-Penny-Cryptocurrencies-by-Market-Cap-in-2019-XRP-TRON-Stellar-Cardano-IOTA",
+      "pubDate": "2019-01-27T18:29:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron TRX Had Gained 150% In 2 Months: Price Analysis Ahead of BitTorrent ICO (January.28)",
+      "link": "https://cryptopanic.com/news/tron/4390427/Tron-TRX-Had-Gained-150-In-2-Months-Price-Analysis-Ahead-of-BitTorrent-ICO-January28",
+      "pubDate": "2019-01-27T11:36:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "#screenshotsaturday Before &amp; After... Kit-bashing with #Paragon assets to block in big level features helps with t…",
+      "link": "https://cryptopanic.com/news/4389064/screenshotsaturday-Before-amp-After-Kit-bashing-with-Paragon-assets-to-block-in-big-level-features-helps-with-t?mtm_campaign=API-OFA",
+      "pubDate": "2019-01-27T04:25:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BLAST"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,523 @@
+{
+  "date": "2025-03-07",
+  "fetchedAt": "2026-02-05T07:27:08.440Z",
+  "articleCount": 37,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Price Crash Incoming? Why A Fall To $63,000 Is Possible If This Resistance Holds",
+      "link": "https://cryptopanic.com/news/20797290/Bitcoin-Price-Crash-Incoming-Why-A-Fall-To-63000-Is-Possible-If-This-Resistance-Holds?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T23:00:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The recent Bitcoin price crash below $90,000 came as a shock to the broader crypto community, especially amid expectations of a continued bull market rally. Despite the volatility and ongoing declines, a crypto analyst projects an even greater crash, suggesting that Bitcoin could fall as low as $63,000 if a certain resistance level holds. TradingView crypto analyst Alixjey has declared that the Bitcoin price must break past $99,500 to continue moving higher. He highlights that if this resistance",
+      "currencies": [
+        "BTC",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "All about Chainlink’s breakout – Is $30 on the cards next?",
+      "link": "https://cryptopanic.com/news/20797303/All-about-Chainlinks-breakout-Is-30-on-the-cards-next?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T23:00:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "‘You don’t care if it’s Saturday’ – Polygon CEO on why payments are blockchain’s killer app",
+      "link": "https://cryptopanic.com/news/20797337/You-dont-care-if-its-Saturday-Polygon-CEO-on-why-payments-are-blockchains-killer-app?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T22:58:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "MATIC"
+      ]
+    },
+    {
+      "title": "These 3 USA Coins Could Explode If Trump Announces Tax Relief For Made in USA Cryptocurrencies",
+      "link": "https://cryptopanic.com/news/20797230/These-3-USA-Coins-Could-Explode-If-Trump-Announces-Tax-Relief-For-Made-in-USA-Cryptocurrencies?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T22:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL",
+        "APT",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Will Tron Price Hit $1 As Analysts Predict Bullish Breakout",
+      "link": "https://cryptopanic.com/news/20797185/Will-Tron-Price-Hit-1-As-Analysts-Predict-Bullish-Breakout?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T22:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ]
+    },
+    {
+      "title": "How to build the ultimate crypto conference with Paris Blockchain Week’s Michael Amar",
+      "link": "https://cryptopanic.com/news/20797183/How-to-build-the-ultimate-crypto-conference-with-Paris-Blockchain-Weeks-Michael-Amar?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T22:11:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PEOPLE"
+      ]
+    },
+    {
+      "title": "Alchemy Pay Gains Approval for Crypto Payments in Switzerland",
+      "link": "https://cryptopanic.com/news/20797142/Alchemy-Pay-Gains-Approval-for-Crypto-Payments-in-Switzerland?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T22:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ACH"
+      ]
+    },
+    {
+      "title": "At crypto summit, Trump says he aims to have stablecoin legislation before August and will end crypto debanking",
+      "link": "https://cryptopanic.com/news/20797038/At-crypto-summit-Trump-says-he-aims-to-have-stablecoin-legislation-before-August-and-will-end-crypto-debanking?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T21:28:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "GAL",
+        "S"
+      ]
+    },
+    {
+      "title": "International law enforcement seize domains behind the sanctioned Russian crypto exchange Garantex",
+      "link": "https://cryptopanic.com/news/20796790/International-law-enforcement-seize-domains-behind-the-sanctioned-Russian-crypto-exchange-Garantex?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T20:14:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "GAL"
+      ]
+    },
+    {
+      "title": "Bitcoin, Ethereum, XRP Dip Ahead Of Crypto Summit, Dogecoin Shows Strength",
+      "link": "https://cryptopanic.com/news/20796828/Bitcoin-Ethereum-XRP-Dip-Ahead-Of-Crypto-Summit-Dogecoin-Shows-Strength?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T20:09:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "SOL",
+        "DOGE",
+        "SHIB",
+        "RAY",
+        "ENA",
+        "MOVE"
+      ]
+    },
+    {
+      "title": "Litecoin Holds Bullish Outlook As the MVRV Ratio Signals Strength – Analyst",
+      "link": "https://cryptopanic.com/news/20796734/Litecoin-Holds-Bullish-Outlook-As-the-MVRV-Ratio-Signals-Strength-Analyst?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T20:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Solana Co-Founder Anatoly Yakovenko Pushes Back Against US Crypto Reserve After Trump Includes SOL in Proposal",
+      "link": "https://cryptopanic.com/news/bitcoin/20796703/Solana-Co-Founder-Anatoly-Yakovenko-Pushes-Back-Against-US-Crypto-Reserve-After-Trump-Includes-SOL-in-Proposal",
+      "pubDate": "2025-03-07T19:45:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL"
+      ]
+    },
+    {
+      "title": "The Daily: Trump orders Strategic Bitcoin Reserve akin to ‘digital Fort Knox,’ Ripple co-founder’s XRP loss tied to LastPass hack and more",
+      "link": "https://cryptopanic.com/news/20796637/The-Daily-Trump-orders-Strategic-Bitcoin-Reserve-akin-to-digital-Fort-Knox-Ripple-co-founders-XRP-loss-tied-to-LastPass-hack-and-more?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T19:21:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "XRP",
+        "SOL",
+        "PEOPLE",
+        "S"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "$10 HBAR Incoming? Hedera Gains 5% as Volume Surges Past $650M",
+      "link": "https://cryptopanic.com/news/20796593/10-HBAR-Incoming-Hedera-Gains-5-as-Volume-Surges-Past-650M?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T18:03:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Top Crypto Exchange Binance Launches Trading Support for Brand-New Multichain Oracle Altcoin",
+      "link": "https://cryptopanic.com/news/20796280/Top-Crypto-Exchange-Binance-Launches-Trading-Support-for-Brand-New-Multichain-Oracle-Altcoin?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T17:55:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "RED"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Yescoin founder arrested in China following dispute with business partner, company says",
+      "link": "https://cryptopanic.com/news/20795972/Yescoin-founder-arrested-in-China-following-dispute-with-business-partner-company-says?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T16:43:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PEOPLE",
+        "GAL"
+      ]
+    },
+    {
+      "title": "ONDO Drops 10% Amid OUSG Deployment on the XRP Ledger",
+      "link": "https://cryptopanic.com/news/20795700/ONDO-Drops-10-Amid-OUSG-Deployment-on-the-XRP-Ledger?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T15:35:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ONDO",
+        "RWA"
+      ]
+    },
+    {
+      "title": "Crypto.com Adds USDC Support on Hedera",
+      "link": "https://cryptopanic.com/news/20795578/Cryptocom-Adds-USDC-Support-on-Hedera?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T15:10:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Ethereum Whales Accumulate Millions of Tokens: ETH Price Surge on the Way?",
+      "link": "https://cryptopanic.com/news/20795384/Ethereum-Whales-Accumulate-Millions-of-Tokens-ETH-Price-Surge-on-the-Way?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T14:30:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Despite the recent whales' activity, ETH's valuation remains deep in the red on an yearly scale.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polkadot Reaches New Milestone with On-Chain Doom",
+      "link": "https://cryptopanic.com/news/20795216/Polkadot-Reaches-New-Milestone-with-On-Chain-Doom?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T13:58:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "PancakeSwap Hits $1 Trillion in Trading Volume, a 3-Year High",
+      "link": "https://cryptopanic.com/news/20795193/PancakeSwap-Hits-1-Trillion-in-Trading-Volume-a-3-Year-High?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T13:51:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CAKE"
+      ]
+    },
+    {
+      "title": "21Shares Advances Polkadot ETF Plans with Updated SEC Filing",
+      "link": "https://cryptopanic.com/news/20795587/21Shares-Advances-Polkadot-ETF-Plans-with-Updated-SEC-Filing?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T13:42:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Trump’s Treasury Secretary Scott Bessent says Bitcoin acquisition plans are in discussion",
+      "link": "https://cryptopanic.com/news/20795111/Trumps-Treasury-Secretary-Scott-Bessent-says-Bitcoin-acquisition-plans-are-in-discussion?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T13:33:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Treasury Secretary Scott Bessent said Bitcoin acquisition plans are in discussion and the government will evaluate the path forward. Speaking on CNBC's Squawk Box on Friday, Bessent shared his perspective on President Trump's recent order to establish a Strategic Bitcoin Reserve.\"Generally, I'm a big proponent of the US taking the worldwide lead in crypto,\" Bessent said. \"I think we have to bring it onshore...use best practices and regulations.\"Addressing the rationale for forming the Bitcoin...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DappRadar: NFT Market Faces Harshest Drop Yet—50% Decline in February",
+      "link": "https://cryptopanic.com/news/20795040/DappRadar-NFT-Market-Faces-Harshest-Drop-Yet50-Decline-in-February?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T13:21:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "NFT"
+      ]
+    },
+    {
+      "title": "1inch hit by $5 million exploit in outdated smart contract",
+      "link": "https://cryptopanic.com/news/20794868/1inch-hit-by-5-million-exploit-in-outdated-smart-contract?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T12:48:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "1INCH"
+      ]
+    },
+    {
+      "title": "Tokenized US Treasuries Hit $4B, Ondo Finance at $1B TVL",
+      "link": "https://cryptopanic.com/news/20794203/Tokenized-US-Treasuries-Hit-4B-Ondo-Finance-at-1B-TVL?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T10:27:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ONDO"
+      ]
+    },
+    {
+      "title": "Trump Signs Executive Order to Create Bitcoin Strategic Reserve",
+      "link": "https://cryptopanic.com/news/20793960/Trump-Signs-Executive-Order-to-Create-Bitcoin-Strategic-Reserve?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T09:27:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "This bold decision cements Bitcoin’s role in the U.S. economy. It also signals the government’s long-term commitment to digital assets. This move is expected to put the U.S. ahead of the curve. It reinforces financial sovereignty and reduces reliance on traditional fiat currencies. Let’s discover more about a Bitcoin strategic reserve in the US. The […] The post Trump Signs Executive Order to Create Bitcoin Strategic Reserve appeared first on Altcoin Buzz.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "NFT Trading Volumes Plunge Over 60% in February Following Crypto Market Downturn",
+      "link": "https://cryptopanic.com/news/20794450/NFT-Trading-Volumes-Plunge-Over-60-in-February-Following-Crypto-Market-Downturn?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T06:44:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "NFT"
+      ]
+    },
+    {
+      "title": "Jito's New Tokenomics: Proposed Model for JTO Buybacks",
+      "link": "https://cryptopanic.com/news/20793292/Jitos-New-Tokenomics-Proposed-Model-for-JTO-Buybacks?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T06:09:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "JTO"
+      ]
+    },
+    {
+      "title": "Solana (SOL) Struggles to Rebound—Key Hurdles Blocking Recovery",
+      "link": "https://cryptopanic.com/news/20793049/Solana-SOL-Struggles-to-ReboundKey-Hurdles-Blocking-Recovery?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T04:08:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "SOL",
+        "LUSD"
+      ]
+    },
+    {
+      "title": "Bitcoin slides below $88,000; analysts say Trump’s Bitcoin reserve less bullish than anticipated",
+      "link": "https://cryptopanic.com/news/20792993/Bitcoin-slides-below-88000-analysts-say-Trumps-Bitcoin-reserve-less-bullish-than-anticipated?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T03:40:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "PEOPLE"
+      ]
+    },
+    {
+      "title": "Flamingo Finance launches OrderBook+ 2.0 on Neo N3 MainNet",
+      "link": "https://cryptopanic.com/news/20792900/Flamingo-Finance-launches-OrderBook-20-on-Neo-N3-MainNet?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T02:40:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Can Chainlink Price Defy Selling Pressure And Reach $20 Soon",
+      "link": "https://cryptopanic.com/news/20792624/Can-Chainlink-Price-Defy-Selling-Pressure-And-Reach-20-Soon?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T01:02:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "Sam Bankman-Fried’s crisis manager quits following FTX founder’s unexpected prison interview with Tucker Carlson: report",
+      "link": "https://cryptopanic.com/news/20792567/Sam-Bankman-Frieds-crisis-manager-quits-following-FTX-founders-unexpected-prison-interview-with-Tucker-Carlson-report?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T00:51:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "PEOPLE",
+        "GAL",
+        "S"
+      ]
+    },
+    {
+      "title": "President Trump signs order to establish Strategic Bitcoin Reserve, will hold as store of value akin to Fort Knox",
+      "link": "https://cryptopanic.com/news/20792560/President-Trump-signs-order-to-establish-Strategic-Bitcoin-Reserve-will-hold-as-store-of-value-akin-to-Fort-Knox?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T00:45:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "PEOPLE",
+        "GAL",
+        "S"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bancor’s Arb Fast Lane is now live on Berachain",
+      "link": "https://cryptopanic.com/news/20792571/Bancors-Arb-Fast-Lane-is-now-live-on-Berachain?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-07T00:25:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BNT"
+      ]
+    },
+    {
+      "title": "Breaking: President Trump signs executive order to create strategic Bitcoin (BTC) reserve",
+      "link": "https://cryptopanic.com/news/bitcoin/20792488/Breaking-President-Trump-signs-executive-order-to-create-strategic-Bitcoin-BTC-reserve",
+      "pubDate": "2025-03-07T00:21:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The President of the United States – Donald Trump has officially made the first move […]",
+      "currencies": [
+        "BTC",
+        "$1"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 6
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

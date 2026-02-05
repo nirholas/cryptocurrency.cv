@@ -1,0 +1,20 @@
+{
+  "date": "2018-06-23",
+  "fetchedAt": "2026-02-05T07:27:08.552Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Hello.",
+      "link": "https://cryptopanic.com/news/11437896/Hello?mtm_campaign=API-OFA",
+      "pubDate": "2018-06-23T21:17:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SAROS"
+      ]
+    }
+  ]
+}

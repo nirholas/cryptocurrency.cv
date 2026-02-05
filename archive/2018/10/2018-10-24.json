@@ -1,0 +1,83 @@
+{
+  "date": "2018-10-24",
+  "fetchedAt": "2026-02-05T07:27:06.995Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ripple CTO David Schwartz Presents Strong Arguments Supporting Blockchain in Payments at Money20/20 USA",
+      "link": "https://cryptopanic.com/news/3449234/Ripple-CTO-David-Schwartz-Presents-Strong-Arguments-Supporting-Blockchain-in-Payments-at-Money2020-USA",
+      "pubDate": "2018-10-24T17:29:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ICX"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple XRP Price Recovers Since 0x Project [ZRX] Listing",
+      "link": "https://cryptopanic.com/news/3446899/Ripple-XRP-Price-Recovers-Since-0x-Project-ZRX-Listing",
+      "pubDate": "2018-10-24T14:04:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "ZRX"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP On Coinbase Custody, Stellar Stable Coin And BTC/XRP/ETH Debit Card",
+      "link": "https://cryptopanic.com/news/stellar/3444728/XRP-On-Coinbase-Custody-Stellar-Stable-Coin-And-BTCXRPETH-Debit-Card",
+      "pubDate": "2018-10-24T10:30:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "CoinText SMS-based Cryptocurrency Wallet Launches in Brazil and Other European Nations",
+      "link": "https://cryptopanic.com/news/litecoin/3444465/CoinText-SMS-based-Cryptocurrency-Wallet-Launches-in-Brazil-and-Other-European-Nations",
+      "pubDate": "2018-10-24T10:00:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

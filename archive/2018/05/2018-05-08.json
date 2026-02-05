@@ -1,0 +1,26 @@
+{
+  "date": "2018-05-08",
+  "fetchedAt": "2026-02-05T07:27:06.961Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "TrafficJunky Follows Pornhub Move to Accept Privacy-Centric Cryptocurrency Verge as Payment Option",
+      "link": "https://cryptopanic.com/news/1882980/TrafficJunky-Follows-Pornhub-Move-to-Accept-Privacy-Centric-Cryptocurrency-Verge-as-Payment-Option",
+      "pubDate": "2018-05-08T13:30:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XVG"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

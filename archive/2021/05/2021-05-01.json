@@ -1,0 +1,561 @@
+{
+  "date": "2021-05-01",
+  "fetchedAt": "2026-02-05T07:27:06.916Z",
+  "articleCount": 37,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "New Fantom vaults. Enjoy",
+      "link": "https://cryptopanic.com/news/11858294/New-Fantom-vaults-Enjoy?mtm_campaign=API-OFA",
+      "pubDate": "2021-05-01T23:35:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FTM",
+        "SUPRA",
+        "FLP"
+      ]
+    },
+    {
+      "title": "Ethereum Is Suddenly Rocketing But Dogecoin Is Still The Crypto Price King",
+      "link": "https://cryptopanic.com/news/dogecoin/11857315/Ethereum-Is-Suddenly-Rocketing-But-Dogecoin-Is-Still-The-Crypto-Price-King",
+      "pubDate": "2021-05-01T23:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Even as ethereum investors and developers celebrate the soaring ether price, \"joke\" cryptocurrency dogecoin is rocketing further and faster—adding almost 50% to its price over the last week...",
+      "currencies": [
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 24,
+        "negative": 35
+      }
+    },
+    {
+      "title": "Supporting Bitcoin Cash Infrastructure",
+      "link": "https://cryptopanic.com/news/ecash/12211603/Supporting-Bitcoin-Cash-Infrastructure",
+      "pubDate": "2021-05-01T22:48:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH",
+        "XEC"
+      ]
+    },
+    {
+      "title": "Weareswissborg",
+      "link": "https://cryptopanic.com/news/11859789/Weareswissborg",
+      "pubDate": "2021-05-01T20:49:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHSB"
+      ]
+    },
+    {
+      "title": "VeChain (VET) listed in NASDAQ raises curiosity among beginners looking to invest in Altcoins :…",
+      "link": "https://cryptopanic.com/news/vechain/11859466/VeChain-VET-listed-in-NASDAQ-raises-curiosity-among-beginners-looking-to-invest-in-Altcoins",
+      "pubDate": "2021-05-01T20:47:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "VET",
+        "TCAT"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "10 signs $ETH is well on its way to $10k (Polygon is one of them.)",
+      "link": "https://cryptopanic.com/news/matic-network/11857171/10-signs-ETH-is-well-on-its-way-to-10k-Polygon-is-one-of-them",
+      "pubDate": "2021-05-01T20:02:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "-",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @safepress: When you dig into",
+      "link": "https://cryptopanic.com/news/11858738/RT-safepress-When-you-dig-into",
+      "pubDate": "2021-05-01T19:46:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "Interview with Fabian Vogelsteller talking about Lukso",
+      "link": "https://cryptopanic.com/news/11857120/Interview-with-Fabian-Vogelsteller-talking-about-Lukso",
+      "pubDate": "2021-05-01T19:02:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "Cardano, Litecoin, and One Forgotten Altcoin Primed To Erupt, Says Crypto Trader Michaël van de Poppe",
+      "link": "https://cryptopanic.com/news/litecoin/11857138/Cardano-Litecoin-and-One-Forgotten-Altcoin-Primed-To-Erupt-Says-Crypto-Trader-Michael-van-de-Poppe",
+      "pubDate": "2021-05-01T18:45:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "High-profile crypto strategist and trader Michaël van de Poppe is predicting that Cardano (ADA), Litecoin (LTC), and Zilliqa (ZIL) are almost ready to ignite the next phase of their bull cycles. In a new video, the crypto analyst tells his 76,700 YouTube subscribers that Cardano is ripe to end its multi-month consolidation against Bitcoin (ADA/BTC). […]",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 52,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "How is the XRP lawsuit going?",
+      "link": "https://cryptopanic.com/news/ripple/11857052/How-is-the-XRP-lawsuit-going",
+      "pubDate": "2021-05-01T17:30:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The ongoing conflict between the United States of America’s leading regulatory watchdogs, the SEC, and the San Francisco-based Ripple Labs, has left many frustrated. While recent legal developments have been very positive, the longer the ongoing case goes, many expect the question of regulatory clarity to become muddled even more. Ripple CEO Brad Garlinghouse is […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Elon Musk, DOGE market maker? Meme currency pumps as SNL skit looms",
+      "link": "https://cryptopanic.com/news/dogecoin/11856959/Elon-Musk-DOGE-market-maker-Meme-currency-pumps-as-SNL-skit-looms",
+      "pubDate": "2021-05-01T16:08:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "No one man should have all that Much Wow-er.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "RT @binance: What altcoin will you never sell?",
+      "link": "https://cryptopanic.com/news/11857909/RT-binance-What-altcoin-will-you-never-sell",
+      "pubDate": "2021-05-01T14:06:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BRG"
+      ]
+    },
+    {
+      "title": "XRP Drops 4% as Ripple Releases $1.6 Billion from Escrow Account",
+      "link": "https://cryptopanic.com/news/ripple/11856861/XRP-Drops-4-as-Ripple-Releases-16-Billion-from-Escrow-Account",
+      "pubDate": "2021-05-01T13:58:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple periodically sells XRP to keep the price of the token afloat.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Ex-hedge fund manager: Bitcoin is insurance, and the governments know that",
+      "link": "https://cryptopanic.com/news/dogecoin/11856842/Ex-hedge-fund-manager-Bitcoin-is-insurance-and-the-governments-know-that",
+      "pubDate": "2021-05-01T13:55:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Crypto investment firm Galaxy Digital CEO, ex-hedge fund manager, and billionaire Mike Novogratz has said bitcoin is a hedge against... Continue reading",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Large US Food Chain Restaurants to Enable Bitcoin Payments",
+      "link": "https://cryptopanic.com/news/11856836/Large-US-Food-Chain-Restaurants-to-Enable-Bitcoin-Payments",
+      "pubDate": "2021-05-01T13:42:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin holders will be able to purchase food from different US-based food chain restaurants, including Bubba Gump Shrimp and Muscle Maker Grill.",
+      "currencies": [
+        "BTC",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 27,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Due to PancakeSwap's recent upgrade to V2, there is a slight delay in giving out the daily BTC rewards for our BTCS…",
+      "link": "https://cryptopanic.com/news/11857745/Due-to-PancakeSwaps-recent-upgrade-to-V2-there-is-a-slight-delay-in-giving-out-the-daily-BTC-rewards-for-our-BTCS",
+      "pubDate": "2021-05-01T12:33:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTCST"
+      ]
+    },
+    {
+      "title": "What effect are XRP whales having on its price?",
+      "link": "https://cryptopanic.com/news/ripple/11856752/What-effect-are-XRP-whales-having-on-its-price",
+      "pubDate": "2021-05-01T12:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP and Ripple have been in the news almost every other day over the past few months, thanks to developments in the SEC’s lawsuit and the token’s price appreciation since December. However, of late, the said buzz has been instigated by the market’s XRP whales. In fact, over the past few days, these whales have […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Cant believe Tomo isnt performing like the rest. Where is the problem? Marketing? What do you think?",
+      "link": "https://cryptopanic.com/news/11857362/Cant-believe-Tomo-isnt-performing-like-the-rest-Where-is-the-problem-Marketing-What-do-you-think",
+      "pubDate": "2021-05-01T11:48:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "Dogecoin Up 12% As Influencers Keep Money Flowing",
+      "link": "https://cryptopanic.com/news/dogecoin/11856703/Dogecoin-Up-12-As-Influencers-Keep-Money-Flowing",
+      "pubDate": "2021-05-01T11:05:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Twitter, Instagram and Youtube influencers are helping Dogecoin fight its way to the top.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Online ticketing giant begins global expansion plans. Will the Glitzkoin-MyTicket partnersh…",
+      "link": "https://cryptopanic.com/news/11858415/Online-ticketing-giant-begins-global-expansion-plans-Will-the-Glitzkoin-MyTicket-partnersh",
+      "pubDate": "2021-05-01T10:32:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "RT @TheMoonCarl: What altcoin should I buy today?",
+      "link": "https://cryptopanic.com/news/11857910/RT-TheMoonCarl-What-altcoin-should-I-buy-today",
+      "pubDate": "2021-05-01T10:30:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BRG"
+      ]
+    },
+    {
+      "title": "BNB Sets All-Time High, Days After Binance Announces NFT Marketplace",
+      "link": "https://cryptopanic.com/news/11856651/BNB-Sets-All-Time-High-Days-After-Binance-Announces-NFT-Marketplace",
+      "pubDate": "2021-05-01T10:27:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "The exchange is launching an NFT auction house in June. That could ramp up demand for BNB.",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SEC to File Response to Ripple’s Individual Motions to Dismiss",
+      "link": "https://cryptopanic.com/news/ripple/11856648/SEC-to-File-Response-to-Ripples-Individual-Motions-to-Dismiss",
+      "pubDate": "2021-05-01T10:07:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The U.S. Securities and Exchange Commission (SEC) intends to file a response to Individual Motions to Dismiss. The newest development in their ongoing lawsuit against Ripple Labs.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "On April 30th we closed our Genesis Pool on the Public Beta Platform with crowd contributions exceeding our expecta…",
+      "link": "https://cryptopanic.com/news/11858205/On-April-30th-we-closed-our-Genesis-Pool-on-the-Public-Beta-Platform-with-crowd-contributions-exceeding-our-expecta",
+      "pubDate": "2021-05-01T10:07:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "Ava Labs President on Dogecoin: When Your CMO Is Elon Musk, ‘Anything Is Possible’",
+      "link": "https://cryptopanic.com/news/dogecoin/11856641/Ava-Labs-President-on-Dogecoin-When-Your-CMO-Is-Elon-Musk-Anything-Is-Possible",
+      "pubDate": "2021-05-01T09:58:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "As the Dogecoin community awaits Tesla CEO Elon Musk’s hosting appearance on TV show Saturday Night Live (SNL) on May 8, there are two questions on the minds of $DOGE holders. The first is will Musk, who seems to be biggest celebrity fan of Dogecoin with his regular references to the super popular meme cryptocurrency in […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 6
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Price Pumps, Ethereum Flippening, New Cardano Partnership, Food For BTC & XRP Whales Buying",
+      "link": "https://cryptopanic.com/news/ripple/11856643/Bitcoin-Price-Pumps-Ethereum-Flippening-New-Cardano-Partnership-Food-For-BTC-XRP-Whales-Buying",
+      "pubDate": "2021-05-01T09:52:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Become A Patreon! https://www.patreon.com/TheModernInvestor ------------------------------------------- MY SECOND CHANNEL: https://www.youtube.com/channel/UCH9HlTrjyLmLRS0iE1P4rrg ----------------------------------------- Protect And Store Your Crypto With A Ledger Nano: https://www.ledger.com?r=8af3ed38d3b7 ------------------------------------------- Open An Account With Binance! https://www.binance.com/?ref=22170588 ------------------------------------------- Rich Dad Poor Dad: https://amzn.to",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dent to the moon.",
+      "link": "https://cryptopanic.com/news/11856816/Dent-to-the-moon",
+      "pubDate": "2021-05-01T09:11:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "Ripple Unlocks 1 Billion XRP, While Exchanges Move 70 Million XRP",
+      "link": "https://cryptopanic.com/news/ripple/11856569/Ripple-Unlocks-1-Billion-XRP-While-Exchanges-Move-70-Million-XRP",
+      "pubDate": "2021-05-01T08:17:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Another billion XRP is out of Ripple escrow, meanwhile crypto exchanges have shifted 70 million XRP coins together with the fintech giant",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 33,
+        "negative": 8
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @wootraderS: $BAND marched its way to victory, so trading will be enabled at 14:00 (UTC+8) on Apr 30th. #Wootrade's network of 15+ insti…",
+      "link": "https://cryptopanic.com/news/11857766/RT-wootraderS-BAND-marched-its-way-to-victory-so-trading-will-be-enabled-at-1400-UTC8-on-Apr-30th-Wootrades-network-of-15-insti",
+      "pubDate": "2021-05-01T08:16:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "How might the IOTA Foundation, IOTA AS feud pan out?",
+      "link": "https://cryptopanic.com/news/11856566/How-might-the-IOTA-Foundation-IOTA-AS-feud-pan-out",
+      "pubDate": "2021-05-01T08:00:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "IOTA has had an interesting journey from being ranked as high as 4th on CoinMarketCap’s charts to being long out of the top-10, with the cryptocurrency now the 28th-largest cryptocurrency with a market cap of $5.77 billion. In fact, IOTA was in the news recently after the much-anticipated new Chrysalis network went live, with the IOTA […]",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "1 GBP",
+      "link": "https://cryptopanic.com/news/11856505/1-GBP",
+      "pubDate": "2021-05-01T07:42:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHSB"
+      ]
+    },
+    {
+      "title": "RT @btsfav: #DeFinitely 54 - The News in #DeFi -",
+      "link": "https://cryptopanic.com/news/11855816/RT-btsfav-DeFinitely-54-The-News-in-DeFi-",
+      "pubDate": "2021-05-01T07:10:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "Will CHSB hit a new ATH in May?",
+      "link": "https://cryptopanic.com/news/11860165/Will-CHSB-hit-a-new-ATH-in-May",
+      "pubDate": "2021-05-01T07:07:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHSB"
+      ]
+    },
+    {
+      "title": "Two Explosive Altcoins Could Enter Top 10 Crypto Assets by Market Cap, Says Trader Elliot Wainman",
+      "link": "https://cryptopanic.com/news/matic-network/11856027/Two-Explosive-Altcoins-Could-Enter-Top-10-Crypto-Assets-by-Market-Cap-Says-Trader-Elliot-Wainman",
+      "pubDate": "2021-05-01T07:04:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Popular trader and analyst Elliot Wainman is naming two altcoins that he says have a chance to break into the top 10 crypto assets by market cap. In a new video, Wainman addresses the explosion of new transactions on the Polygon (MATIC) platform. MATIC is an Ethereum token that powers the Polygon network, which is […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We are highly active on our Discord and often provide sneak peeks. So come join!",
+      "link": "https://cryptopanic.com/news/11857597/We-are-highly-active-on-our-Discord-and-often-provide-sneak-peeks-So-come-join?mtm_campaign=API-OFA",
+      "pubDate": "2021-05-01T06:58:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALCH"
+      ]
+    },
+    {
+      "title": "BNB Prints New All-Time High of $641, Here’s Why",
+      "link": "https://cryptopanic.com/news/11852732/BNB-Prints-New-All-Time-High-of-641-Heres-Why",
+      "pubDate": "2021-05-01T05:24:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Binance Coin has reached a new historic peak, leaving the April all-time high behind",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 23,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "OIN Finance deploying on Harmony blockchain to create a ONE-backed stablecoin",
+      "link": "https://cryptopanic.com/news/11852457/OIN-Finance-deploying-on-Harmony-blockchain-to-create-a-ONE-backed-stablecoin",
+      "pubDate": "2021-05-01T00:01:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "CryptoNinjas » OIN Finance deploying on Harmony blockchain to create a ONE-backed stablecoin Harmony, a sharding protocol with a trustless Ethereum bridge, has announced that OIN Finance, a decentralized stablecoin issuance & trading platform, will be deploying on Harmony, to create a ONE-backed or ONE-denominated stablecoin. A ONE-backed stablecoin is an important achievement for Harmony, as this helps grow its DeFi ecosystem; and helps establish an important DeFi […] CryptoNinjas » OIN Finance",
+      "currencies": [
+        "ETH",
+        "ONE"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

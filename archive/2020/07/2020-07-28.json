@@ -1,0 +1,26 @@
+{
+  "date": "2020-07-28",
+  "fetchedAt": "2026-02-05T07:27:06.953Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Austrian Telecom Giant Enables Bitcoin Payment Support",
+      "link": "https://cryptopanic.com/news/9487149/Austrian-Telecom-Giant-Enables-Bitcoin-Payment-Support",
+      "pubDate": "2020-07-28T16:00:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DASH"
+      ],
+      "votes": {
+        "positive": 26,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

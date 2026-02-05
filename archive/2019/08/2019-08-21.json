@@ -1,0 +1,25 @@
+{
+  "date": "2019-08-21",
+  "fetchedAt": "2026-02-05T07:27:06.978Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA Breaks into Retail Adoption with German Parking App",
+      "link": "https://cryptopanic.com/news/6367400/IOTA-Breaks-into-Retail-Adoption-with-German-Parking-App",
+      "pubDate": "2019-08-21T12:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 27,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

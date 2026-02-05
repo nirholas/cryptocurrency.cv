@@ -1,0 +1,646 @@
+{
+  "date": "2024-02-24",
+  "fetchedAt": "2026-02-05T07:27:08.039Z",
+  "articleCount": 42,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Polygon sets a new record as MATIC gears up for a move north",
+      "link": "https://cryptopanic.com/news/19277578/Polygon-sets-a-new-record-as-MATIC-gears-up-for-a-move-north",
+      "pubDate": "2024-02-24T23:30:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "Polygon concluded the week with a historic number of active addresses and a climb back to the $1 zone for MATIC.",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Why Bitcoin Inventor Satoshi Nakamoto Found FinTech Firm Ripple ‘Interesting’",
+      "link": "https://cryptopanic.com/news/19277539/Why-Bitcoin-Inventor-Satoshi-Nakamoto-Found-FinTech-Firm-Ripple-Interesting",
+      "pubDate": "2024-02-24T22:05:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "In a fascinating revelation from the early days of cryptocurrency, an email exchange from 2009 has surfaced, showcasing Bitcoin founder Satoshi Nakamoto’s praise for the Ripple project. This exchange involves Martti ‘Sirius’ Malmi, an active Bitcoin developer from 2009 to 2011, who played a crucial role in the initial development and growth of Bitcoin. Malmi […]",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 18
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Top Crypto Picks for High Returns with Low Risk",
+      "link": "https://cryptopanic.com/news/19277858/Top-Crypto-Picks-for-High-Returns-with-Low-Risk",
+      "pubDate": "2024-02-24T19:42:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ARB",
+        "JUP",
+        "SEI"
+      ]
+    },
+    {
+      "title": "Crypto Whales' Next Big Bet: Altcoins on the Verge of a Breakout",
+      "link": "https://cryptopanic.com/news/19277842/Crypto-Whales-Next-Big-Bet-Altcoins-on-the-Verge-of-a-Breakout",
+      "pubDate": "2024-02-24T19:37:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "SEI"
+      ]
+    },
+    {
+      "title": "Analysts Name Top Coins for This Spring",
+      "link": "https://cryptopanic.com/news/19277814/Analysts-Name-Top-Coins-for-This-Spring",
+      "pubDate": "2024-02-24T19:31:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ARB",
+        "SEI"
+      ]
+    },
+    {
+      "title": "Cosmos co-founder says GovGen will show how governance can be used in blockchain development",
+      "link": "https://cryptopanic.com/news/19277418/Cosmos-co-founder-says-GovGen-will-show-how-governance-can-be-used-in-blockchain-development",
+      "pubDate": "2024-02-24T19:30:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ]
+    },
+    {
+      "title": "New Crypto Wave is Here: 5 Coins with 1000% Upside Potential",
+      "link": "https://cryptopanic.com/news/19277800/New-Crypto-Wave-is-Here-5-Coins-with-1000-Upside-Potential",
+      "pubDate": "2024-02-24T19:25:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ARB",
+        "SEI"
+      ]
+    },
+    {
+      "title": "Ethereum Rise: What It Means for Smaller Altcoins?",
+      "link": "https://cryptopanic.com/news/19277771/Ethereum-Rise-What-It-Means-for-Smaller-Altcoins",
+      "pubDate": "2024-02-24T19:18:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ARB",
+        "JUP",
+        "SEI"
+      ]
+    },
+    {
+      "title": "Solana Drops Below 100-Day MA On 4-Hour Chart, SOL Price In Danger?",
+      "link": "https://cryptopanic.com/news/19277390/Solana-Drops-Below-100-Day-MA-On-4-Hour-Chart-SOL-Price-In-Danger",
+      "pubDate": "2024-02-24T19:00:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "XRP",
+        "SOL",
+        "LUSD"
+      ]
+    },
+    {
+      "title": "Brave integrates on-chain Solana wallet for reward payments",
+      "link": "https://cryptopanic.com/news/19277377/Brave-integrates-on-chain-Solana-wallet-for-reward-payments",
+      "pubDate": "2024-02-24T18:39:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Brave, the company recognized for its privacy-centric Brave browser, is taking a significant step forward in enhancing its Rewards program by integrating on-chain Solana payments. This new feature aims to empower its browser users to directly transfer BAT tokens to a self-custody Solana wallet, bypassing centralized exchanges. Brave adopts Solana wallet for rewards transfer The […]",
+      "currencies": [
+        "SOL",
+        "BAT"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "FIL breaks above early January highs – Is a move to $10 next?",
+      "link": "https://cryptopanic.com/news/19277373/FIL-breaks-above-early-January-highs-Is-a-move-to-10-next",
+      "pubDate": "2024-02-24T18:30:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "Stablecoin Market Jumps by Over $2.5 Billion in 10 Days, Led by Rise in Key Players",
+      "link": "https://cryptopanic.com/news/19277300/Stablecoin-Market-Jumps-by-Over-25-Billion-in-10-Days-Led-by-Rise-in-Key-Players",
+      "pubDate": "2024-02-24T17:30:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDC",
+        "DAI",
+        "FDUSD"
+      ]
+    },
+    {
+      "title": "New crypto opportunity at $0.04 for investors who missed SOL and AVAX price rally",
+      "link": "https://cryptopanic.com/news/19277237/New-crypto-opportunity-at-004-for-investors-who-missed-SOL-and-AVAX-price-rally",
+      "pubDate": "2024-02-24T16:25:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Solana (SOL) and Avalanche (AVAX) were top performers in 2021 and 2023, offering a more scalable solution to Ethereum (ETH). … Continue reading",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Hoskinson expresses willingness for MMA fight against Buterin",
+      "link": "https://cryptopanic.com/news/19277193/Hoskinson-expresses-willingness-for-MMA-fight-against-Buterin",
+      "pubDate": "2024-02-24T15:47:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Cryptocurrency enthusiasts are buzzing with excitement following a surprising declaration from Charles Hoskinson, the co-founder of Ethereum and founder of Cardano. In response to a social media post suggesting a potential MMA fight between him and Vitalik Buterin, Hoskinson expressed unexpected earnestness, stating his willingness to “train very hard for that one.” Origins of the […]",
+      "currencies": [
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Worldcoin's Wild Rise",
+      "link": "https://cryptopanic.com/news/19388507/Worldcoins-Wild-Rise",
+      "pubDate": "2024-02-24T15:14:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STRK"
+      ]
+    },
+    {
+      "title": "Hedera (HBAR) holders snap up DeeStream (DST) streaming money earner Pre Bitcoin (BTC) halving for major profits",
+      "link": "https://cryptopanic.com/news/19277098/Hedera-HBAR-holders-snap-up-DeeStream-DST-streaming-money-earner-Pre-Bitcoin-BTC-halving-for-major-profits",
+      "pubDate": "2024-02-24T14:46:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Dai investors shift interest towards Bitcoins mirrored coin BlockDAG",
+      "link": "https://cryptopanic.com/news/19276925/Dai-investors-shift-interest-towards-Bitcoins-mirrored-coin-BlockDAG",
+      "pubDate": "2024-02-24T13:45:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DAI"
+      ]
+    },
+    {
+      "title": "DeFi Coins Rocketing on Game-Chaining Uniswap (UNI) Milestone",
+      "link": "https://cryptopanic.com/news/19276922/DeFi-Coins-Rocketing-on-Game-Chaining-Uniswap-UNI-Milestone",
+      "pubDate": "2024-02-24T13:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "AAVE",
+        "SNX",
+        "DYDX"
+      ]
+    },
+    {
+      "title": "Binance's Regulatory Approach to Cryptocurrency Challenges",
+      "link": "https://cryptopanic.com/news/19437992/Binances-Regulatory-Approach-to-Cryptocurrency-Challenges",
+      "pubDate": "2024-02-24T13:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "SAFE"
+      ]
+    },
+    {
+      "title": "Forget AWS Storage, DePIN Storage Is The New Crypto Trend And It's Pumping Hard",
+      "link": "https://cryptopanic.com/news/19276882/Forget-AWS-Storage-DePIN-Storage-Is-The-New-Crypto-Trend-And-Its-Pumping-Hard",
+      "pubDate": "2024-02-24T13:11:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "FIL",
+        "RNDR"
+      ]
+    },
+    {
+      "title": "Uniswap 71% Single-Day Rally Raises Eyebrows – Can DeFi Maintain Momentum?",
+      "link": "https://cryptopanic.com/news/19276828/Uniswap-71-Single-Day-Rally-Raises-Eyebrows-Can-DeFi-Maintain-Momentum",
+      "pubDate": "2024-02-24T13:00:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI",
+        "AAVE",
+        "COMP",
+        "SC",
+        "SUSHI"
+      ]
+    },
+    {
+      "title": "ADA and Satoshi: Cardano Founder Reacts to Intriguing Correlation Tweet",
+      "link": "https://cryptopanic.com/news/19276790/ADA-and-Satoshi-Cardano-Founder-Reacts-to-Intriguing-Correlation-Tweet",
+      "pubDate": "2024-02-24T12:31:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Satoshi's earliest collaborator recently revealed 120 pages of email correspondences",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Scam Alert: XRP Competitor Hedera (HBAR) Warns About Fake Airdrop",
+      "link": "https://cryptopanic.com/news/19276771/Scam-Alert-XRP-Competitor-Hedera-HBAR-Warns-About-Fake-Airdrop",
+      "pubDate": "2024-02-24T12:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Starknet Token Plummets Over 60% in Value Amidst Sell-Offs and Airdrop Controversy",
+      "link": "https://cryptopanic.com/news/19276767/Starknet-Token-Plummets-Over-60-in-Value-Amidst-Sell-Offs-and-Airdrop-Controversy",
+      "pubDate": "2024-02-24T12:06:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "STRK"
+      ]
+    },
+    {
+      "title": "Bitcoin’s price rally driven by manipulation, criminal acts, and inadequate regulation: ECB officials",
+      "link": "https://cryptopanic.com/news/19276759/Bitcoins-price-rally-driven-by-manipulation-criminal-acts-and-inadequate-regulation-ECB-officials",
+      "pubDate": "2024-02-24T12:05:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin's current price rally is unlikely to be driven by fundamental factors. Instead, it's attributed to temporary and potentially unsustainable influences, including price manipulation, demand for illegal activities, and misguided regulations, said the European Central Bank (ECB) in a report published this week.\"While the current rally is fueled by temporary factors, there are three...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Cardano Creator Responds Seriously to MMA Fight With Vitalik Buterin",
+      "link": "https://cryptopanic.com/news/19276730/Cardano-Creator-Responds-Seriously-to-MMA-Fight-With-Vitalik-Buterin",
+      "pubDate": "2024-02-24T11:43:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Cardano's Charles Hoskinson surprises with serious response to challenge Ethereum's Vitalik Buterin in MMA fight",
+      "currencies": [
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Pro-Ripple Lawyer Tags Poor XRP Price Performance As Unnatural, Rally Imminent?",
+      "link": "https://cryptopanic.com/news/19276701/Pro-Ripple-Lawyer-Tags-Poor-XRP-Price-Performance-As-Unnatural-Rally-Imminent",
+      "pubDate": "2024-02-24T11:10:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "XRP",
+        "LINK",
+        "SC"
+      ]
+    },
+    {
+      "title": "$9.7M Stolen From Axie Infinity Co-Founder’s Personal Wallets",
+      "link": "https://cryptopanic.com/news/19276632/97M-Stolen-From-Axie-Infinity-Co-Founders-Personal-Wallets",
+      "pubDate": "2024-02-24T10:30:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AXS"
+      ]
+    },
+    {
+      "title": "Important Binance Update Affecting SOL, ETH, and FIL Users",
+      "link": "https://cryptopanic.com/news/19276605/Important-Binance-Update-Affecting-SOL-ETH-and-FIL-Users",
+      "pubDate": "2024-02-24T10:15:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDC",
+        "SOL",
+        "HBAR",
+        "FIL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Uniswap's New Plan Boosts Token Prices by 60%",
+      "link": "https://cryptopanic.com/news/19276587/Uniswaps-New-Plan-Boosts-Token-Prices-by-60",
+      "pubDate": "2024-02-24T10:04:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Uniswap's governance proposal spikes UNI prices, promising rewards for token holders",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Top DeFi Tokens Skyrocket as Uniswap Proposes Significant Change",
+      "link": "https://cryptopanic.com/news/19276561/Top-DeFi-Tokens-Skyrocket-as-Uniswap-Proposes-Significant-Change",
+      "pubDate": "2024-02-24T09:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "AAVE",
+        "CRV",
+        "DAO"
+      ]
+    },
+    {
+      "title": "Top 3 global exchange ByBit, lists CSPR with a 3,800,000 CSPR prize pool",
+      "link": "https://cryptopanic.com/news/19276435/Top-3-global-exchange-ByBit-lists-CSPR-with-a-3800000-CSPR-prize-pool",
+      "pubDate": "2024-02-24T08:00:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Casper (cspr), a future-proofed L1 blockchain built for DeFi and upgradability has been welcomed onto […]",
+      "currencies": [
+        "CSPR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Can Filecoin Solve Solana’s Data Accessibility Challenges? Forecasting a Bright Future for Monero & Rising AI Altcoin",
+      "link": "https://cryptopanic.com/news/filecoin/19276455/Can-Filecoin-Solve-Solanas-Data-Accessibility-Challenges-Forecasting-a-Bright-Future-for-Monero-Rising-AI-Altcoin",
+      "pubDate": "2024-02-24T08:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "XMR",
+        "FIL"
+      ]
+    },
+    {
+      "title": "Bitget Token (BGB) is Becoming the New Crypto Staple",
+      "link": "https://cryptopanic.com/news/19276630/Bitget-Token-BGB-is-Becoming-the-New-Crypto-Staple",
+      "pubDate": "2024-02-24T07:09:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BGB"
+      ]
+    },
+    {
+      "title": "Prices and news of the crypto Fetch.Ai (FET), Chainlink (LINK) and Theta Network (THETA)",
+      "link": "https://cryptopanic.com/news/theta-token/19276396/Prices-and-news-of-the-crypto-FetchAi-FET-Chainlink-LINK-and-Theta-Network-THETA",
+      "pubDate": "2024-02-24T07:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "THETA",
+        "FET"
+      ]
+    },
+    {
+      "title": "Fluidkey Launches to Tackle the Transaction Privacy Issues on EVM Chains",
+      "link": "https://cryptopanic.com/news/19276359/Fluidkey-Launches-to-Tackle-the-Transaction-Privacy-Issues-on-EVM-Chains",
+      "pubDate": "2024-02-24T06:30:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ENS"
+      ]
+    },
+    {
+      "title": "Starknet token unlock takes a new turn amidst criticisms, details here",
+      "link": "https://cryptopanic.com/news/19276358/Starknet-token-unlock-takes-a-new-turn-amidst-criticisms-details-here",
+      "pubDate": "2024-02-24T06:30:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STRK"
+      ]
+    },
+    {
+      "title": "24 Crypto Update, 23 Feb: BTC at $51K, UNI Explosive Growth",
+      "link": "https://cryptopanic.com/news/19276334/24-Crypto-Update-23-Feb-BTC-at-51K-UNI-Explosive-Growth",
+      "pubDate": "2024-02-24T06:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "UNI",
+        "AAVE",
+        "AXS",
+        "GALA",
+        "COMP",
+        "SC",
+        "SUSHI",
+        "FLR",
+        "RON"
+      ]
+    },
+    {
+      "title": "46% of largest crypto airdrops peaked within 14 days — CoinGecko",
+      "link": "https://cryptopanic.com/news/19276317/46-of-largest-crypto-airdrops-peaked-within-14-days-CoinGecko?mtm_campaign=API-OFA",
+      "pubDate": "2024-02-24T05:22:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "BLUR"
+      ]
+    },
+    {
+      "title": "Flare, Leading Blockchain for Data, Secures Round From Early Backers, Reducing Liquidity, Increasing Investment to Ecosystem",
+      "link": "https://cryptopanic.com/news/19276351/Flare-Leading-Blockchain-for-Data-Secures-Round-From-Early-Backers-Reducing-Liquidity-Increasing-Investment-to-Ecosystem",
+      "pubDate": "2024-02-24T04:51:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "FLR"
+      ]
+    },
+    {
+      "title": "3,248 ETH Stolen In Axie Infinity Co-Founder Hack – Here Are The Details",
+      "link": "https://cryptopanic.com/news/19276285/3248-ETH-Stolen-In-Axie-Infinity-Co-Founder-Hack-Here-Are-The-Details",
+      "pubDate": "2024-02-24T04:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "AXS",
+        "RON"
+      ]
+    },
+    {
+      "title": "Zcash (ZEC) Jumps More Than 20% After Digital Asset Manager Grayscale Proposes New ‘Privacy ETF’ to the SEC",
+      "link": "https://cryptopanic.com/news/19276181/Zcash-ZEC-Jumps-More-Than-20-After-Digital-Asset-Manager-Grayscale-Proposes-New-Privacy-ETF-to-the-SEC",
+      "pubDate": "2024-02-24T01:00:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

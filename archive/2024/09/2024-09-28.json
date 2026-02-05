@@ -1,0 +1,742 @@
+{
+  "date": "2024-09-28",
+  "fetchedAt": "2026-02-05T07:27:08.396Z",
+  "articleCount": 52,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Maker Price Heats Up, Soars 12% In A Week — Is $1,850 The Next Stop?",
+      "link": "https://cryptopanic.com/news/19950041/Maker-Price-Heats-Up-Soars-12-In-A-Week-Is-1850-The-Next-Stop?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T22:00:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MKR",
+        "WIF"
+      ]
+    },
+    {
+      "title": "5 Best Crypto Traders to Follow in October 2024",
+      "link": "https://cryptopanic.com/news/19950045/5-Best-Crypto-Traders-to-Follow-in-October-2024?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T22:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "NEAR",
+        "FTM",
+        "FET",
+        "PEPE",
+        "SUI",
+        "TAO",
+        "WIF"
+      ]
+    },
+    {
+      "title": "Analysts Says “SHIB Is on Fire”; Liken Potential 1,000% Shiba Inu Rally Just Like 2021",
+      "link": "https://cryptopanic.com/news/19950008/Analysts-Says-SHIB-Is-on-Fire-Liken-Potential-1000-Shiba-Inu-Rally-Just-Like-2021?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T21:45:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Shiba Inu (SHIB) emerged as the top gainer in a roundup of the top 10 crypto assets, with an impressive 36% gain over the past week.",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Analyst Now Says XRP Will Surge To $1,000",
+      "link": "https://cryptopanic.com/news/19950018/Analyst-Now-Says-XRP-Will-Surge-To-1000?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T21:45:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "An analyst now says XRP will surge to $1,000 based on several factors, one of which includes institutions adopting the crypto.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 3
+      }
+    },
+    {
+      "title": "3 Bullish Altcoins Predicted to Outperform Bitcoin in October 2024",
+      "link": "https://cryptopanic.com/news/19949962/3-Bullish-Altcoins-Predicted-to-Outperform-Bitcoin-in-October-2024?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T21:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "RUNE",
+        "FTM",
+        "STX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BlackRock’s spot Ethereum ETF surpasses $1 billion in value for the first time",
+      "link": "https://cryptopanic.com/news/19949876/BlackRocks-spot-Ethereum-ETF-surpasses-1-billion-in-value-for-the-first-time?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T19:38:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Weekly inflows to US-based spot Ethereum funds were positive for only the second time since the funds launched.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 3
+      }
+    },
+    {
+      "title": "U.S. SEC Settles With Solana-Based DEX Mango Markets for Nearly $700,000 Over Alleged Securities Violations",
+      "link": "https://cryptopanic.com/news/19949813/US-SEC-Settles-With-Solana-Based-DEX-Mango-Markets-for-Nearly-700000-Over-Alleged-Securities-Violations?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T18:45:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "DAO",
+        "MNGO"
+      ]
+    },
+    {
+      "title": "Notcoin Set For More Gains Following 13% Price Rally – Details",
+      "link": "https://cryptopanic.com/news/19949661/Notcoin-Set-For-More-Gains-Following-13-Price-Rally-Details?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T17:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "NOT",
+        "ALI"
+      ]
+    },
+    {
+      "title": "$700 Million Up for Grabs as Notcoin (NOT) Price Edges Closer to Another 30% Hike",
+      "link": "https://cryptopanic.com/news/19949764/700-Million-Up-for-Grabs-as-Notcoin-NOT-Price-Edges-Closer-to-Another-30-Hike?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "NOT"
+      ]
+    },
+    {
+      "title": "Hackers Plunder $2,000,000 Worth of Crypto From Liquid Restaking Protocol Bedrock",
+      "link": "https://cryptopanic.com/news/19949646/Hackers-Plunder-2000000-Worth-of-Crypto-From-Liquid-Restaking-Protocol-Bedrock?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T16:55:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "WBTC",
+        "UNI"
+      ]
+    },
+    {
+      "title": "XRP Bulls Take Over—Will Ripple’s Price Hit $0.75 After This Breakout?",
+      "link": "https://cryptopanic.com/news/19949617/XRP-Bulls-Take-OverWill-Ripples-Price-Hit-075-After-This-Breakout?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T16:34:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "RLY"
+      ]
+    },
+    {
+      "title": "iShares Ethereum ETF Reaches $1 Billion in Assets",
+      "link": "https://cryptopanic.com/news/19949553/iShares-Ethereum-ETF-Reaches-1-Billion-in-Assets?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T15:52:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "BlackRock’s iShares Ethereum ETF (ETHA) has exceeded $1 billion in assets, making it one of the top-performing ETFs in the U.S. within two months.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano (ADA) Price Short Term Warning Flashed by This Indicator",
+      "link": "https://cryptopanic.com/news/19949540/Cardano-ADA-Price-Short-Term-Warning-Flashed-by-This-Indicator?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T15:42:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Cardano (ADA) price has gained momentum since past week",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "21 Million MOODENG Sale Leaves Trader with $297 Instead of $6.3 Million",
+      "link": "https://cryptopanic.com/news/19949554/21-Million-MOODENG-Sale-Leaves-Trader-with-297-Instead-of-63-Million?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "BB",
+        "MOODENG"
+      ]
+    },
+    {
+      "title": "Last Chance: Mega Dice Ends Presale in 48 Hours, Over $1.9M Raised",
+      "link": "https://cryptopanic.com/news/19949453/Last-Chance-Mega-Dice-Ends-Presale-in-48-Hours-Over-19M-Raised?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T14:47:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CET",
+        "00"
+      ]
+    },
+    {
+      "title": "Polkastarter Price Prediction 2024 – 2030: Will POLS Price Hit $1 This Year?",
+      "link": "https://cryptopanic.com/news/19949366/Polkastarter-Price-Prediction-2024-2030-Will-POLS-Price-Hit-1-This-Year?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T14:03:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "POLS"
+      ]
+    },
+    {
+      "title": "XRP All Set To Reclaim $0.72: Smart Money Analyst",
+      "link": "https://cryptopanic.com/news/19949334/XRP-All-Set-To-Reclaim-072-Smart-Money-Analyst?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T13:48:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "FTM"
+      ]
+    },
+    {
+      "title": "Bitcoin targets $70K as stablecoin inflows and China stimulus boost rally",
+      "link": "https://cryptopanic.com/news/19949241/Bitcoin-targets-70K-as-stablecoin-inflows-and-China-stimulus-boost-rally?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "RLY"
+      ]
+    },
+    {
+      "title": "W-Coin Airdrop and Listing Date Coming Soon: Don't Miss Out!",
+      "link": "https://cryptopanic.com/news/19949447/W-Coin-Airdrop-and-Listing-Date-Coming-Soon-Dont-Miss-Out?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T12:55:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "W"
+      ]
+    },
+    {
+      "title": "Benzinga Bulls And Bears: Apple, Tesla, Novo Nordisk, Bitcoin — And Shiba Inu's Major Stablecoin Tease",
+      "link": "https://cryptopanic.com/news/19949216/Benzinga-Bulls-And-Bears-Apple-Tesla-Novo-Nordisk-Bitcoin-And-Shiba-Inus-Major-Stablecoin-Tease?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T12:42:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SHIB",
+        "META"
+      ]
+    },
+    {
+      "title": "Crypto investor loses $32 million in common mistake – How to avoid it?",
+      "link": "https://cryptopanic.com/news/19949176/Crypto-investor-loses-32-million-in-common-mistake-How-to-avoid-it?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T12:30:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Someone lost (yet another) millions of dollars worth of funds to a phishing attack while using decentralized finance (DeFi). This … Continue reading",
+      "currencies": [
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Expert Investor Who HODLed Polygon (POL) from $0.029 to $2.90 Just bought a bag of Another token Priced Below $0.10",
+      "link": "https://cryptopanic.com/news/19949147/Expert-Investor-Who-HODLed-Polygon-POL-from-0029-to-290-Just-bought-a-bag-of-Another-token-Priced-Below-010?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T12:14:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MATIC",
+        "POL"
+      ]
+    },
+    {
+      "title": "Top 3 Dogecoin and Shiba Inu Rivals to 300x Your $250 into $50,000 in 6 Months",
+      "link": "https://cryptopanic.com/news/19949116/Top-3-Dogecoin-and-Shiba-Inu-Rivals-to-300x-Your-250-into-50000-in-6-Months?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T12:01:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "SHIB",
+        "NEAR",
+        "FET"
+      ]
+    },
+    {
+      "title": "How is DePIN Revolutionizing the Crypto ecosystem and Decentralized Finance (DeFi)?",
+      "link": "https://cryptopanic.com/news/19949093/How-is-DePIN-Revolutionizing-the-Crypto-ecosystem-and-Decentralized-Finance-DeFi?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T12:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "FIL",
+        "HNT"
+      ]
+    },
+    {
+      "title": "Crypto Market Update: Hamster Kombat (HMSTR) Recent Developments, Shiba Inu Price Forecast for October, Rexas Finance’s (RXS) $15 Target in 2025",
+      "link": "https://cryptopanic.com/news/19949089/Crypto-Market-Update-Hamster-Kombat-HMSTR-Recent-Developments-Shiba-Inu-Price-Forecast-for-October-Rexas-Finances-RXS-15-Target-in-2025?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T11:57:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "HMSTR"
+      ]
+    },
+    {
+      "title": "Digital Product Ideas TapSwap Why Trending on Google",
+      "link": "https://cryptopanic.com/news/19949337/Digital-Product-Ideas-TapSwap-Why-Trending-on-Google?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T11:53:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HMSTR"
+      ]
+    },
+    {
+      "title": "Crypto Trader Says One Low-Cap Altcoin Has ‘Way More Upside,’ Updates Outlook on Bitcoin and dogwifhat",
+      "link": "https://cryptopanic.com/news/19949069/Crypto-Trader-Says-One-Low-Cap-Altcoin-Has-Way-More-Upside-Updates-Outlook-on-Bitcoin-and-dogwifhat?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T11:45:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ZIL",
+        "WIF"
+      ]
+    },
+    {
+      "title": "PundiX Price Prediction 2024, 2025, 2030: Is PUNDIX A Good Investment?",
+      "link": "https://cryptopanic.com/news/19949007/PundiX-Price-Prediction-2024-2025-2030-Is-PUNDIX-A-Good-Investment?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T11:15:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "PUNDIX"
+      ]
+    },
+    {
+      "title": "JASMY price prediction – What to expect over the weekend?",
+      "link": "https://cryptopanic.com/news/19948990/JASMY-price-prediction-What-to-expect-over-the-weekend?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T11:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "JASMY"
+      ]
+    },
+    {
+      "title": "Could Robinhood and Revolut Find Stablecoin Success Where PayPal Stumbled?",
+      "link": "https://cryptopanic.com/news/19948993/Could-Robinhood-and-Revolut-Find-Stablecoin-Success-Where-PayPal-Stumbled?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T11:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "PYUSD"
+      ]
+    },
+    {
+      "title": "Top 5 Crypto Coins That Skyrocketed in the Last 24 Hours : Did you Invest?",
+      "link": "https://cryptopanic.com/news/19948942/Top-5-Crypto-Coins-That-Skyrocketed-in-the-Last-24-Hours-Did-you-Invest?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T10:37:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "CKB"
+      ]
+    },
+    {
+      "title": "Hamster Kombat Season 2 Airdrop Date: What to Expect in 2025",
+      "link": "https://cryptopanic.com/news/19949132/Hamster-Kombat-Season-2-Airdrop-Date-What-to-Expect-in-2025?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T10:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HMSTR"
+      ]
+    },
+    {
+      "title": "4 Altcoins That Could Hit New All-Time Highs in October",
+      "link": "https://cryptopanic.com/news/19948955/4-Altcoins-That-Could-Hit-New-All-Time-Highs-in-October?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T10:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "SOL",
+        "SUI",
+        "OM",
+        "RENDER",
+        "ZRO",
+        "00"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Hamster Kombat Disappointed the Whole CEO: $HMSTR Struggle",
+      "link": "https://cryptopanic.com/news/19949082/Hamster-Kombat-Disappointed-the-Whole-CEO-HMSTR-Struggle?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T09:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HMSTR"
+      ]
+    },
+    {
+      "title": "Beware: Fake WalletConnect App Scams Users of $70,000",
+      "link": "https://cryptopanic.com/news/19949071/Beware-Fake-WalletConnect-App-Scams-Users-of-70000?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T09:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HMSTR"
+      ]
+    },
+    {
+      "title": "Hamster Kombat Season 2 End Date: What to Expect in 2025",
+      "link": "https://cryptopanic.com/news/19949048/Hamster-Kombat-Season-2-End-Date-What-to-Expect-in-2025?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T09:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HMSTR"
+      ]
+    },
+    {
+      "title": "Will Hamster Kombat Price Lose $0.6 Line Amid Community Backlash?",
+      "link": "https://cryptopanic.com/news/19948803/Will-Hamster-Kombat-Price-Lose-06-Line-Amid-Community-Backlash?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T09:16:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HMSTR"
+      ]
+    },
+    {
+      "title": "$16 Bln FTX Repayments To Begin Next Week: Ready For BIGGEST BULL RUN EVER",
+      "link": "https://cryptopanic.com/news/19948762/16-Bln-FTX-Repayments-To-Begin-Next-Week-Ready-For-BIGGEST-BULL-RUN-EVER?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T08:58:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EVER"
+      ]
+    },
+    {
+      "title": "Analyst predicts Bitcoin and altcoin bull run as FOMO returns",
+      "link": "https://cryptopanic.com/news/19948695/Analyst-predicts-Bitcoin-and-altcoin-bull-run-as-FOMO-returns?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T08:11:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SHIB",
+        "SEI",
+        "ENA"
+      ]
+    },
+    {
+      "title": "Moonbix Binance Listing Date: What Will Be The Listing Price",
+      "link": "https://cryptopanic.com/news/19948834/Moonbix-Binance-Listing-Date-What-Will-Be-The-Listing-Price?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T07:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "BNB",
+        "FDUSD"
+      ]
+    },
+    {
+      "title": "Render Token (RNDR) Price Momentum Slows as AI Coins Gain Market Share",
+      "link": "https://cryptopanic.com/news/19948630/Render-Token-RNDR-Price-Momentum-Slows-as-AI-Coins-Gain-Market-Share?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T07:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "FET",
+        "TAO",
+        "AKT"
+      ]
+    },
+    {
+      "title": "Assessing NOT’s price prospects after Notcoin bulls switched tactics",
+      "link": "https://cryptopanic.com/news/19948484/Assessing-NOTs-price-prospects-after-Notcoin-bulls-switched-tactics?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T06:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "NOT"
+      ]
+    },
+    {
+      "title": "SEC Settles with Mango DAO Over Token Sale",
+      "link": "https://cryptopanic.com/news/19948476/SEC-Settles-with-Mango-DAO-Over-Token-Sale?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T05:57:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DAO",
+        "MNGO"
+      ]
+    },
+    {
+      "title": "Earn $5,000 With A Drone TapSwap Why Trending on Google",
+      "link": "https://cryptopanic.com/news/19948657/Earn-5000-With-A-Drone-TapSwap-Why-Trending-on-Google?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T05:46:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HMSTR"
+      ]
+    },
+    {
+      "title": "Bitcoin ETFs See $494M Inflow, ARK Tops with $203M",
+      "link": "https://cryptopanic.com/news/19948464/Bitcoin-ETFs-See-494M-Inflow-ARK-Tops-with-203M?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T05:36:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ARK"
+      ]
+    },
+    {
+      "title": "Grayscale’s Bullish Forecast: The Top 20 Crypto To Watch In Q4",
+      "link": "https://cryptopanic.com/news/19948432/Grayscales-Bullish-Forecast-The-Top-20-Crypto-To-Watch-In-Q4?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T05:00:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "TRX",
+        "HNT",
+        "RUNE",
+        "CELO",
+        "UMA",
+        "MNT",
+        "SUI",
+        "OP",
+        "TAO"
+      ]
+    },
+    {
+      "title": "Mango Markets Settles SEC Charges for Unregistered MNGO Token Sales",
+      "link": "https://cryptopanic.com/news/19948628/Mango-Markets-Settles-SEC-Charges-for-Unregistered-MNGO-Token-Sales?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T05:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DAO",
+        "MNGO",
+        "G"
+      ]
+    },
+    {
+      "title": "Fantom: Can rising inflows push FTM to $0.86?",
+      "link": "https://cryptopanic.com/news/19948388/Fantom-Can-rising-inflows-push-FTM-to-086?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T04:00:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FTM"
+      ]
+    },
+    {
+      "title": "Why Wrapped Bitcoin on AAVE surged past $2B, explained",
+      "link": "https://cryptopanic.com/news/19948335/Why-Wrapped-Bitcoin-on-AAVE-surged-past-2B-explained?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T03:00:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "WBTC",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Mango DAO Settlement With SEC Finalized For $700,000 Fine",
+      "link": "https://cryptopanic.com/news/19948323/Mango-DAO-Settlement-With-SEC-Finalized-For-700000-Fine?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T02:50:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DAO",
+        "MNGO"
+      ]
+    },
+    {
+      "title": "Stacks targets $2.4: Will STX surge another 20%?",
+      "link": "https://cryptopanic.com/news/19948210/Stacks-targets-24-Will-STX-surge-another-20?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T01:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "STX"
+      ]
+    },
+    {
+      "title": "Bitcoin Breaks $65K With $365 Million In Spot ETF Inflows Fueling The Rally",
+      "link": "https://cryptopanic.com/news/19948159/Bitcoin-Breaks-65K-With-365-Million-In-Spot-ETF-Inflows-Fueling-The-Rally?mtm_campaign=API-OFA",
+      "pubDate": "2024-09-28T00:30:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "STX"
+      ]
+    }
+  ]
+}

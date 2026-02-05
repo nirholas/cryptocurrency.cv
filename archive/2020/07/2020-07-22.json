@@ -1,0 +1,25 @@
+{
+  "date": "2020-07-22",
+  "fetchedAt": "2026-02-05T07:27:06.962Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "South Korea’s Largest Blockchain Network, ICON, Integrates Band Protocol’s Cross Chain Oracles to Connect Real-World Data across Asia Pacific",
+      "link": "https://cryptopanic.com/news/9424216/South-Koreas-Largest-Blockchain-Network-ICON-Integrates-Band-Protocols-Cross-Chain-Oracles-to-Connect-Real-World-Data-across-Asia-Pacific",
+      "pubDate": "2020-07-22T10:01:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

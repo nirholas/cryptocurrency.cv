@@ -1,0 +1,42 @@
+{
+  "date": "2019-07-25",
+  "fetchedAt": "2026-02-05T07:27:06.955Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Users can now Withdraw BAT from Brave Browser",
+      "link": "https://cryptopanic.com/news/6125830/Users-can-now-Withdraw-BAT-from-Brave-Browser",
+      "pubDate": "2019-07-25T11:06:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BAT"
+      ],
+      "votes": {
+        "positive": 23,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "STMicroelectronics will integrate IOTA Tangle to Facilitate new IoT Solutions",
+      "link": "https://cryptopanic.com/news/6124961/STMicroelectronics-will-integrate-IOTA-Tangle-to-Facilitate-new-IoT-Solutions",
+      "pubDate": "2019-07-25T08:29:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 23,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

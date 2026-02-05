@@ -1,0 +1,49 @@
+{
+  "date": "2020-02-26",
+  "fetchedAt": "2026-02-05T07:27:06.990Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Hedgetrade’s HEDG Token Strengthens Its Market Position With Important Listing on Changelly.Com",
+      "link": "https://cryptopanic.com/news/8041448/Hedgetrades-HEDG-Token-Strengthens-Its-Market-Position-With-Important-Listing-on-ChangellyCom",
+      "pubDate": "2020-02-26T12:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEDG"
+      ]
+    },
+    {
+      "title": "Monero (XMR) to Implement New Technology to Become More Private",
+      "link": "https://cryptopanic.com/news/monero/8040818/Monero-XMR-to-Implement-New-Technology-to-Become-More-Private",
+      "pubDate": "2020-02-26T11:49:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Due to #KYC being fully against what #crypto stands for, and this being a community coin, we have lost our chance t…",
+      "link": "https://cryptopanic.com/news/8441599/Due-to-KYC-being-fully-against-what-crypto-stands-for-and-this-being-a-community-coin-we-have-lost-our-chance-t?mtm_campaign=API-OFA",
+      "pubDate": "2020-02-26T10:46:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AEVO"
+      ]
+    }
+  ]
+}

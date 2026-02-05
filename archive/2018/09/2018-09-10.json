@@ -1,0 +1,61 @@
+{
+  "date": "2018-09-10",
+  "fetchedAt": "2026-02-05T07:27:06.972Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA to Expand Collaboration With Bosch, Volkswagen & Fujitsu",
+      "link": "https://cryptopanic.com/news/3030904/IOTA-to-Expand-Collaboration-With-Bosch-Volkswagen-Fujitsu",
+      "pubDate": "2018-09-10T17:31:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BCH is a fiat money",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/3030545/BCH-is-a-fiat-money",
+      "pubDate": "2018-09-10T15:07:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Interstellar Arrives: Visa, Citi-Backed Chain Acquired By Stellar Startup",
+      "link": "https://cryptopanic.com/news/3029920/Interstellar-Arrives-Visa-Citi-Backed-Chain-Acquired-By-Stellar-Startup",
+      "pubDate": "2018-09-10T10:58:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

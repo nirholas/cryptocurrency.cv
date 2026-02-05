@@ -1,0 +1,24 @@
+{
+  "date": "2019-10-24",
+  "fetchedAt": "2026-02-05T07:27:07.000Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "XRP Is an Actual Cryptocurrency, Says US Congressman, Unlike Libra",
+      "link": "https://cryptopanic.com/news/ripple/6945660/XRP-Is-an-Actual-Cryptocurrency-Says-US-Congressman-Unlike-Libra",
+      "pubDate": "2019-10-24T11:12:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    }
+  ]
+}

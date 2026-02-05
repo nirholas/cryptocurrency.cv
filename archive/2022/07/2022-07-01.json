@@ -1,0 +1,538 @@
+{
+  "date": "2022-07-01",
+  "fetchedAt": "2026-02-05T07:27:07.540Z",
+  "articleCount": 36,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Rally founder @KevinChou on the value of #web3",
+      "link": "https://cryptopanic.com/news/15660556/Rally-founder-KevinChou-on-the-value-of-web3",
+      "pubDate": "2022-07-01T22:21:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "RLY"
+      ]
+    },
+    {
+      "title": "Another everyday example from @opensea of why data needs to be decentralized, and user-owned",
+      "link": "https://cryptopanic.com/news/15655371/Another-everyday-example-from-opensea-of-why-data-needs-to-be-decentralized-and-user-owned",
+      "pubDate": "2022-07-01T22:11:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "SC"
+      ]
+    },
+    {
+      "title": "Grayscale Faces Uphill Battle With Lawsuit Against SEC",
+      "link": "https://cryptopanic.com/news/bitcoin/15655331/Grayscale-Faces-Uphill-Battle-With-Lawsuit-Against-SEC",
+      "pubDate": "2022-07-01T21:49:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Crypto industry watchers are unconvinced Grayscale can win its lawsuit to overturn the SEC's decision on its spot bitcoin ETF",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "If you missed the AMA in our telegram yesterday we have it transcribed on our Medium. Looking forward to a great se…",
+      "link": "https://cryptopanic.com/news/15659121/If-you-missed-the-AMA-in-our-telegram-yesterday-we-have-it-transcribed-on-our-Medium-Looking-forward-to-a-great-se?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-01T20:28:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDL",
+        "LGCY"
+      ]
+    },
+    {
+      "title": "Electrum ABC 5.1.3 is released! This release focuses on command-line improvements, most notably a new enable_auto…",
+      "link": "https://cryptopanic.com/news/ecash/15656677/Electrum-ABC-513-is-released-This-release-focuses-on-command-line-improvements-most-notably-a-new-enable_auto",
+      "pubDate": "2022-07-01T20:01:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC",
+        "BCHABC"
+      ]
+    },
+    {
+      "title": "Data Shows Massive MATIC Accumulation By Whales As Polygon Ecosystem Flares With Activity",
+      "link": "https://cryptopanic.com/news/15655054/Data-Shows-Massive-MATIC-Accumulation-By-Whales-As-Polygon-Ecosystem-Flares-With-Activity",
+      "pubDate": "2022-07-01T19:51:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "MATIC 'sharks' and 'whales' have been in a colossal accumulation trend for about six weeks.",
+      "currencies": [
+        "USDT",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tether Reduces Commercial Paper Reserves by Another $5B",
+      "link": "https://cryptopanic.com/news/15654711/Tether-Reduces-Commercial-Paper-Reserves-by-Another-5B",
+      "pubDate": "2022-07-01T17:53:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "USDT issuer Tether is shifting its reserves away from commercial paper to low-risk U.S. treasury bills. Tether Cuts Paper Asset Reserves Tether is reducing its commercial paper reserves. The USDT...",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "What are the Incentives for the Validators of KLAY Token? Let’s find out here David Shin head of global adoptio…",
+      "link": "https://cryptopanic.com/news/klay-token/15659115/What-are-the-Incentives-for-the-Validators-of-KLAY-Token-Lets-find-out-here-David-Shin-head-of-global-adoptio",
+      "pubDate": "2022-07-01T17:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "LCX"
+      ]
+    },
+    {
+      "title": "Latest edition of the Numerai community-managed newsletter",
+      "link": "https://cryptopanic.com/news/15654431/Latest-edition-of-the-Numerai-community-managed-newsletter",
+      "pubDate": "2022-07-01T16:38:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NMR"
+      ]
+    },
+    {
+      "title": "Deutsche Bank Strategists Reveal The Real Reason Crypto Free Fall Is Likely To Continue",
+      "link": "https://cryptopanic.com/news/bitcoin/15654364/Deutsche-Bank-Strategists-Reveal-The-Real-Reason-Crypto-Free-Fall-Is-Likely-To-Continue",
+      "pubDate": "2022-07-01T16:15:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Meanwhile, analysts from Deutsche Bank believe cryptocurrencies are due for more pain.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 5
+      }
+    },
+    {
+      "title": "SpaceX’s ‘DOGE-1 Mission to the Moon’ reportedly still on despite delays",
+      "link": "https://cryptopanic.com/news/15654354/SpaceXs-DOGE-1-Mission-to-the-Moon-reportedly-still-on-despite-delays",
+      "pubDate": "2022-07-01T16:08:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "After Tesla (NASDAQ: TSLA) CEO Elon Musk revealed that his company would be launching a Dogecoin-themed space mission, questions have... Continue reading",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Since our last community update in March, four Universities have shared their intention to become validators on the…",
+      "link": "https://cryptopanic.com/news/15654282/Since-our-last-community-update-in-March-four-Universities-have-shared-their-intention-to-become-validators-on-the",
+      "pubDate": "2022-07-01T16:01:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "Shiba Inu Burn Rate Spikes by 230% as 357 Million SHIB Sent to Dead Wallet in 24 Hours",
+      "link": "https://cryptopanic.com/news/15653797/Shiba-Inu-Burn-Rate-Spikes-by-230-as-357-Million-SHIB-Sent-to-Dead-Wallet-in-24-Hours",
+      "pubDate": "2022-07-01T13:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Burn rate of Shiba Inu has significantly increased over past 24 hours",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polygon, Fantom Users Targeted in Ankr Gateway Hack",
+      "link": "https://cryptopanic.com/news/15653754/Polygon-Fantom-Users-Targeted-in-Ankr-Gateway-Hack",
+      "pubDate": "2022-07-01T13:49:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "The hack produced a popup window that encouraged Polygon and Fantom users to enter their wallet seed phrase. Hackers Compromise Gateways to Polygon, Fantom Two Ankr RPC gateways for accessing...",
+      "currencies": [
+        "MATIC",
+        "FTM"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Efforce Genesis will be migrated to the updated contribution model and rewards will be available again to claim sta…",
+      "link": "https://cryptopanic.com/news/15657756/Efforce-Genesis-will-be-migrated-to-the-updated-contribution-model-and-rewards-will-be-available-again-to-claim-sta",
+      "pubDate": "2022-07-01T13:02:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "Efforce platform will use @0xPolygon a carbon negative, low transaction fees scaling platform for Ethereum. WOZX is already multi-chain.",
+      "link": "https://cryptopanic.com/news/15657757/Efforce-platform-will-use-0xPolygon-a-carbon-negative-low-transaction-fees-scaling-platform-for-Ethereum-WOZX-is-already-multi-chain",
+      "pubDate": "2022-07-01T12:48:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "Next week we will open contributions to our second batch of energy efficiency projects, kickstarting our updated platform.",
+      "link": "https://cryptopanic.com/news/15657758/Next-week-we-will-open-contributions-to-our-second-batch-of-energy-efficiency-projects-kickstarting-our-updated-platform",
+      "pubDate": "2022-07-01T12:36:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "Hackers hijack Ankr gateway for Polygon and Fantom networks",
+      "link": "https://cryptopanic.com/news/15653489/Hackers-hijack-Ankr-gateway-for-Polygon-and-Fantom-networks",
+      "pubDate": "2022-07-01T12:28:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "Users of the two networks have been urged to use other node providers while the issue is being fixed.",
+      "currencies": [
+        "MATIC",
+        "FTM"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "#ARRR invisible money",
+      "link": "https://cryptopanic.com/news/15660272/ARRR-invisible-money",
+      "pubDate": "2022-07-01T12:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARRR"
+      ]
+    },
+    {
+      "title": "Crypto Investors Ready To Deploy $25,000,000,000 Once Bottom Is In, According to Quant Analyst",
+      "link": "https://cryptopanic.com/news/15653377/Crypto-Investors-Ready-To-Deploy-25000000000-Once-Bottom-Is-In-According-to-Quant-Analyst",
+      "pubDate": "2022-07-01T11:45:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "On-chain insights platform CryptoQuant CEO Ki Young Ju says crypto investors did not leave the market despite this year’s downturn. According to Ju, the current dip that sent Bitcoin (BTC) plunging below $20,000 from an all-time high of nearly $70,000 can be considered the crypto market’s first recession. “The first recession for crypto markets. The […]",
+      "currencies": [
+        "BTC",
+        "QNT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Crypto.com CRO PRICE RALLY Coming In? CRO Coin Price Prediction",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/15653343/Cryptocom-CRO-PRICE-RALLY-Coming-In-CRO-Coin-Price-Prediction",
+      "pubDate": "2022-07-01T11:26:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "🚀Find the most undervalued gems, up-to-date research, and NFT buys with Altcoin Buzz Access. Join the Altcoin Buzz Access PRO Plan now starting from just $99 per month🚀 ➡️https://bit.ly/AB-Access Crypto.com CRO lost its 4-hour uptrend and is now looking for a daily higher low. Maintaining the daily uptrend will be critical for the bulls. On the weekly time frame, we are seeing the MACD show an important signal that the bear market is losing steam. This is the histogram which is getting closer ",
+      "currencies": [
+        "CRO"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Crypto community sets bullish Bitcoin price projection for July 31, 2022",
+      "link": "https://cryptopanic.com/news/bitcoin/15653321/Crypto-community-sets-bullish-Bitcoin-price-projection-for-July-31-2022",
+      "pubDate": "2022-07-01T11:12:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "After the price of Bitcoin (BTC) fell below the critical support level of $20,000 in June, crypto traders and investors... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin drops 56% in Q2 2022 its worst quarterly performance in a decade",
+      "link": "https://cryptopanic.com/news/bitcoin/15653199/Bitcoin-drops-56-in-Q2-2022-its-worst-quarterly-performance-in-a-decade",
+      "pubDate": "2022-07-01T10:34:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The magnitude of Bitcoin’s ongoing slump is highlighted by the asset’s quarterly returns that have hit the worst value in... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 11
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin Just Posted Its Second-Worst Quarterly Performance Since Inception",
+      "link": "https://cryptopanic.com/news/bitcoin/15653158/Bitcoin-Just-Posted-Its-Second-Worst-Quarterly-Performance-Since-Inception",
+      "pubDate": "2022-07-01T10:24:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "It’s been a brutal three months for Bitcoin investors as the leading cryptocurrency lost more than 56% in value in Q2 2022.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "‘Cryptoqueen’ Has A $100,000 Bounty On Her Head Offered By The FBI",
+      "link": "https://cryptopanic.com/news/bitcoin/15653136/Cryptoqueen-Has-A-100000-Bounty-On-Her-Head-Offered-By-The-FBI",
+      "pubDate": "2022-07-01T10:14:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "She is known as the “Cryptoqueen” because she conned billions of dollars using a cryptocurrency that had no actual value before it vanished. The Federal Bureau of Investigation has now placed her on its list of the 10 most-wanted criminals. Ruja Ignatova, on the run since 2017, is suspected of orchestrating a vast Ponzi scam […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @ChangeNOW_io: NOW #KlaytnFam @klaytn_official merges the best features of public and private blockchains in an accessible developme…",
+      "link": "https://cryptopanic.com/news/klay-token/15659041/RT-ChangeNOW_io-NOW-KlaytnFam-klaytn_official-merges-the-best-features-of-public-and-private-blockchains-in-an-accessible-developme",
+      "pubDate": "2022-07-01T09:53:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "The #Klaytn Plugin is now available on the Remix IDE ️ Here is a guide on how to: 1. Deploy a smart contract on…",
+      "link": "https://cryptopanic.com/news/klay-token/15659042/The-Klaytn-Plugin-is-now-available-on-the-Remix-IDE-Here-is-a-guide-on-how-to-1-Deploy-a-smart-contract-on",
+      "pubDate": "2022-07-01T09:47:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "DeFi insurance is coming to Solana to protect users against exploits",
+      "link": "https://cryptopanic.com/news/15652430/DeFi-insurance-is-coming-to-Solana-to-protect-users-against-exploits",
+      "pubDate": "2022-07-01T09:25:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "CryptoSlate spoke to the founder of Amulet Protocol, Rupert Barksfield, about launching the first DeFi Insurance platform on Solana.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Even after 50 quadrillion baby doge are burnt, the price is still not affected fully. “U Today”…",
+      "link": "https://cryptopanic.com/news/15657221/Even-after-50-quadrillion-baby-doge-are-burnt-the-price-is-still-not-affected-fully-U-Today",
+      "pubDate": "2022-07-01T08:59:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "To make sure every user at and $FLZ holder are on the same page and officially up to date,…",
+      "link": "https://cryptopanic.com/news/15658047/To-make-sure-every-user-at-and-FLZ-holder-are-on-the-same-page-and-officially-up-to-date?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-01T08:17:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FLZ"
+      ]
+    },
+    {
+      "title": "Bitcoin Briefly Reclaims $20,000 Before Paring Gains",
+      "link": "https://cryptopanic.com/news/bitcoin/15645794/Bitcoin-Briefly-Reclaims-20000-Before-Paring-Gains",
+      "pubDate": "2022-07-01T05:23:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The recent Bitcoin rally was extremely short lived, with the largest cryptocurrency retracing back to the $19,000 level",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Klaytn projects are now supported by @SnapshotLabs 🪬 Secure decentralized decision-making ⬆️ Off-chain signing…",
+      "link": "https://cryptopanic.com/news/klay-token/15649317/Klaytn-projects-are-now-supported-by-SnapshotLabs-Secure-decentralized-decision-making-Off-chain-signing",
+      "pubDate": "2022-07-01T04:43:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "RT @CryptoRank_io: Despite the fact that #IDO &amp; #IEO activity was higher in June compared to May, only a few projects showed decent perform…",
+      "link": "https://cryptopanic.com/news/15648195/RT-CryptoRank_io-Despite-the-fact-that-IDO-amp-IEO-activity-was-higher-in-June-compared-to-May-only-a-few-projects-showed-decent-perform?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-01T04:07:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FLZ"
+      ]
+    },
+    {
+      "title": "Worst quarter in 11 years as Bitcoin price and activity plunge",
+      "link": "https://cryptopanic.com/news/bitcoin/15645516/Worst-quarter-in-11-years-as-Bitcoin-price-and-activity-plunge",
+      "pubDate": "2022-07-01T03:59:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Quarterly returns on Bitcoin haven’t been this bad since it was trading under $20 in the early days of Mt. Gox, but the stock market isn’t faring so hot either.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "The Pioneer NFT by @iskra_world allows token holders to operate a network node on the Iskra's blockchain 🦾 Hodler…",
+      "link": "https://cryptopanic.com/news/klay-token/15649318/The-Pioneer-NFT-by-iskra_world-allows-token-holders-to-operate-a-network-node-on-the-Iskras-blockchain-Hodler",
+      "pubDate": "2022-07-01T03:44:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "Bitcoin Millionaires Wiped Out | Ethereum Merge APPROACHING | BIG Polygon & Polkadot Crypto News",
+      "link": "https://cryptopanic.com/news/polkadot/15645512/Bitcoin-Millionaires-Wiped-Out-Ethereum-Merge-APPROACHING-BIG-Polygon-Polkadot-Crypto-News",
+      "pubDate": "2022-07-01T03:34:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin Millionaires get WIPED OUT, but new Whole Coiners EMERGE!! Ethereum pushes back its DIFFICULTY BOMB to the Merge launch, Ebay prepares for METAVERSE presence, OpenSea gives its community a life raft after MASSIVE EMAIL BREACH!! ⏱️ TIMESTAMPS 0:00 Major Headlines 0:35 Introduction 1:19 Bitcoin Millionaires Get Wiped Out 2:58 Ethereum Difficulty Bomb Delayed with New Hard Fork 3:44 Ebay Applies for Metaverse Trademarks 4:11 Polygon Launches Avail 4:53 Polkadot Working On New Governance Mod",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    }
+  ]
+}

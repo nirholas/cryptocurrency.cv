@@ -1,0 +1,548 @@
+{
+  "date": "2024-01-15",
+  "fetchedAt": "2026-02-05T07:27:08.098Z",
+  "articleCount": 39,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "MANTA joins Binance Launchpool as 44th project for staking",
+      "link": "https://cryptopanic.com/news/19177713/MANTA-joins-Binance-Launchpool-as-44th-project-for-staking",
+      "pubDate": "2024-01-15T23:23:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "FDUSD"
+      ]
+    },
+    {
+      "title": "Whales Accumulating Maker And Aave, Path To 2024 Highs?",
+      "link": "https://cryptopanic.com/news/19177688/Whales-Accumulating-Maker-And-Aave-Path-To-2024-Highs",
+      "pubDate": "2024-01-15T23:00:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DAI",
+        "AAVE",
+        "MKR",
+        "LDO"
+      ]
+    },
+    {
+      "title": "Neo Express updated with new commands and token standards validator",
+      "link": "https://cryptopanic.com/news/19177653/Neo-Express-updated-with-new-commands-and-token-standards-validator",
+      "pubDate": "2024-01-15T22:29:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Assassin's Creed Maker Ubisoft Backs Yet Another Crypto Gaming Network",
+      "link": "https://cryptopanic.com/news/19177645/Assassins-Creed-Maker-Ubisoft-Backs-Yet-Another-Crypto-Gaming-Network",
+      "pubDate": "2024-01-15T22:15:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Reports Suggest That Binance is Reviewing the Status of Privacy Coins on Its Platform",
+      "link": "https://cryptopanic.com/news/19177635/Reports-Suggest-That-Binance-is-Reviewing-the-Status-of-Privacy-Coins-on-Its-Platform",
+      "pubDate": "2024-01-15T22:00:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Why FTX Will Be in Focus at the WEF Summit in Davos",
+      "link": "https://cryptopanic.com/news/19177570/Why-FTX-Will-Be-in-Focus-at-the-WEF-Summit-in-Davos",
+      "pubDate": "2024-01-15T21:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "FTT",
+        "QNT"
+      ]
+    },
+    {
+      "title": "Cardano Founder Takes Jab at Internet Computer",
+      "link": "https://cryptopanic.com/news/19177504/Cardano-Founder-Takes-Jab-at-Internet-Computer",
+      "pubDate": "2024-01-15T20:10:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "ICP"
+      ]
+    },
+    {
+      "title": "Flare (FLR) price jumps after Google Cloud integration",
+      "link": "https://cryptopanic.com/news/19177423/Flare-FLR-price-jumps-after-Google-Cloud-integration",
+      "pubDate": "2024-01-15T19:44:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FLR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cryptocurrency Kaspa Down More Than 3% Within 24 hours",
+      "link": "https://cryptopanic.com/news/19177374/Cryptocurrency-Kaspa-Down-More-Than-3-Within-24-hours",
+      "pubDate": "2024-01-15T19:02:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KAS"
+      ]
+    },
+    {
+      "title": "Chainlink (LINK) Breakout: Accumulation Zone Points To Upside Potential, $20 In Sight",
+      "link": "https://cryptopanic.com/news/19177358/Chainlink-LINK-Breakout-Accumulation-Zone-Points-To-Upside-Potential-20-In-Sight",
+      "pubDate": "2024-01-15T19:00:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LINK",
+        "ENS"
+      ]
+    },
+    {
+      "title": "Celsius Executes $125 Million Transfer to Crypto Exchanges in Repayment Drive",
+      "link": "https://cryptopanic.com/news/19177339/Celsius-Executes-125-Million-Transfer-to-Crypto-Exchanges-in-Repayment-Drive",
+      "pubDate": "2024-01-15T18:58:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "FTT"
+      ]
+    },
+    {
+      "title": "Altcoins Thrive While Bitcoin Dips in a Dramatic Week of Crypto Trading",
+      "link": "https://cryptopanic.com/news/19177299/Altcoins-Thrive-While-Bitcoin-Dips-in-a-Dramatic-Week-of-Crypto-Trading",
+      "pubDate": "2024-01-15T18:30:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ENS",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Mantle Network v2 Testnet Sepolia: A Leap Forward in Layer-2 Technology",
+      "link": "https://cryptopanic.com/news/19177440/Mantle-Network-v2-Testnet-Sepolia-A-Leap-Forward-in-Layer-2-Technology",
+      "pubDate": "2024-01-15T18:13:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MNT"
+      ]
+    },
+    {
+      "title": "Smart Crypto Picks for Surviving and Thriving in Case of Economic Crisis",
+      "link": "https://cryptopanic.com/news/19177246/Smart-Crypto-Picks-for-Surviving-and-Thriving-in-Case-of-Economic-Crisis",
+      "pubDate": "2024-01-15T18:08:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OSMO",
+        "APT",
+        "ARB",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Solid TVL Slingshots SUI Price To Break $1 For New All-Time High – Details",
+      "link": "https://cryptopanic.com/news/19177249/Solid-TVL-Slingshots-SUI-Price-To-Break-1-For-New-All-Time-High-Details",
+      "pubDate": "2024-01-15T18:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "LINK",
+        "ENS",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Neo News: Week in Review – January 8 – January 14",
+      "link": "https://cryptopanic.com/news/19177223/Neo-News-Week-in-Review-January-8-January-14",
+      "pubDate": "2024-01-15T17:50:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Fantom slashes validator stake requirement by 90% to 50k FTM",
+      "link": "https://cryptopanic.com/news/19177217/Fantom-slashes-validator-stake-requirement-by-90-to-50k-FTM",
+      "pubDate": "2024-01-15T17:36:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FTM"
+      ]
+    },
+    {
+      "title": "Injective’s Big Bet: 50 Million INJ Staked Ahead of Tokenization Boom",
+      "link": "https://cryptopanic.com/news/19177221/Injectives-Big-Bet-50-Million-INJ-Staked-Ahead-of-Tokenization-Boom",
+      "pubDate": "2024-01-15T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "LINK",
+        "ALGO",
+        "INJ"
+      ]
+    },
+    {
+      "title": "Apecoin (APE), Axie Infinity (AXS), or Everlodge (ELDG) — Which Crypto Has Better Utility?",
+      "link": "https://cryptopanic.com/news/19177118/Apecoin-APE-Axie-Infinity-AXS-or-Everlodge-ELDG-Which-Crypto-Has-Better-Utility",
+      "pubDate": "2024-01-15T16:50:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "Testnet Node Software Upgrade: ZEN 5.0.0-rc1 is Available to Download",
+      "link": "https://cryptopanic.com/news/19177100/Testnet-Node-Software-Upgrade-ZEN-500-rc1-is-Available-to-Download",
+      "pubDate": "2024-01-15T16:45:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEN"
+      ]
+    },
+    {
+      "title": "10 Wallets Accumulate 3.55% of Maker’s Circulating Supply as MKR Soars 50% Monthly",
+      "link": "https://cryptopanic.com/news/19177084/10-Wallets-Accumulate-355-of-Makers-Circulating-Supply-as-MKR-Soars-50-Monthly",
+      "pubDate": "2024-01-15T16:39:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Alex Mashinsky seeks dismissal of two charges, asks court not to mention Celsius bankruptcy",
+      "link": "https://cryptopanic.com/news/19177077/Alex-Mashinsky-seeks-dismissal-of-two-charges-asks-court-not-to-mention-Celsius-bankruptcy",
+      "pubDate": "2024-01-15T16:32:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "CEL"
+      ]
+    },
+    {
+      "title": "Google Cloud Joins Flare Blockchain as Validator",
+      "link": "https://cryptopanic.com/news/19177055/Google-Cloud-Joins-Flare-Blockchain-as-Validator",
+      "pubDate": "2024-01-15T16:22:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FLR"
+      ]
+    },
+    {
+      "title": "Hitachi America Joins Hedera Council, Enhancing DLT-Based Industrial Solutions",
+      "link": "https://cryptopanic.com/news/19177003/Hitachi-America-Joins-Hedera-Council-Enhancing-DLT-Based-Industrial-Solutions",
+      "pubDate": "2024-01-15T16:09:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Ethereum Classic Falls More Than 4% In 24 hours",
+      "link": "https://cryptopanic.com/news/19176870/Cryptocurrency-Ethereum-Classic-Falls-More-Than-4-In-24-hours",
+      "pubDate": "2024-01-15T15:03:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "Hitachi Joins Hedera Council: Exploring Real-World Potential of DLT Solutions",
+      "link": "https://cryptopanic.com/news/19176841/Hitachi-Joins-Hedera-Council-Exploring-Real-World-Potential-of-DLT-Solutions",
+      "pubDate": "2024-01-15T15:02:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Ethereum Name Service Steals The Show: ENS Leaps 70%, Outperforming Crypto Market",
+      "link": "https://cryptopanic.com/news/19176817/Ethereum-Name-Service-Steals-The-Show-ENS-Leaps-70-Outperforming-Crypto-Market",
+      "pubDate": "2024-01-15T15:00:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LINK",
+        "ENS"
+      ]
+    },
+    {
+      "title": "Bankrupt FTX’s token valuation rebounds to over $1 billion as customers contest bankruptcy plan",
+      "link": "https://cryptopanic.com/news/19176772/Bankrupt-FTXs-token-valuation-rebounds-to-over-1-billion-as-customers-contest-bankruptcy-plan",
+      "pubDate": "2024-01-15T14:46:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "Indicator Signals Altcoin Season: Is Solana (SOL) Ready for Next Leg Up?",
+      "link": "https://cryptopanic.com/news/19176666/Indicator-Signals-Altcoin-Season-Is-Solana-SOL-Ready-for-Next-Leg-Up",
+      "pubDate": "2024-01-15T13:01:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "INJ",
+        "SEI",
+        "ORDI"
+      ]
+    },
+    {
+      "title": "Bombshell Report: Polygon Team’s Secret MATIC Sales Lead To Depressed Price",
+      "link": "https://cryptopanic.com/news/19176489/Bombshell-Report-Polygon-Teams-Secret-MATIC-Sales-Lead-To-Depressed-Price",
+      "pubDate": "2024-01-15T13:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MATIC",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Google Cloud Joins Flare Network as Validator, FLR Jumps 5%",
+      "link": "https://cryptopanic.com/news/19176483/Google-Cloud-Joins-Flare-Network-as-Validator-FLR-Jumps-5",
+      "pubDate": "2024-01-15T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FLR"
+      ]
+    },
+    {
+      "title": "Where Lido, Maker stand as DeFi TVL soars to 17-month high",
+      "link": "https://cryptopanic.com/news/19176402/Where-Lido-Maker-stand-as-DeFi-TVL-soars-to-17-month-high",
+      "pubDate": "2024-01-15T12:30:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Lack of Experience Presenting Difficulty in Crypto Space for Gaming",
+      "link": "https://cryptopanic.com/news/19178021/Lack-of-Experience-Presenting-Difficulty-in-Crypto-Space-for-Gaming",
+      "pubDate": "2024-01-15T11:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "BNB",
+        "XRP",
+        "IMX",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Preparing for the Bull, Giant Whales Are Accumulating This Altcoin! Whales, which purchased 66 million dollars in the last month, increased the price by 70 percent!",
+      "link": "https://cryptopanic.com/news/19176078/Preparing-for-the-Bull-Giant-Whales-Are-Accumulating-This-Altcoin-Whales-which-purchased-66-million-dollars-in-the-last-month-increased-the-price-by-70-percent",
+      "pubDate": "2024-01-15T10:33:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Toshi and Bonks Grow Over 40%, Rebel Satoshi Garners Attention",
+      "link": "https://cryptopanic.com/news/19176107/Toshi-and-Bonks-Grow-Over-40-Rebel-Satoshi-Garners-Attention",
+      "pubDate": "2024-01-15T10:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "UNI",
+        "IMX",
+        "BONK"
+      ]
+    },
+    {
+      "title": "Hacker’s Attempt To Steal Over $15 Billion in XRP From Bitfinex Fails",
+      "link": "https://cryptopanic.com/news/19175825/Hackers-Attempt-To-Steal-Over-15-Billion-in-XRP-From-Bitfinex-Fails",
+      "pubDate": "2024-01-15T08:51:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Bitfinex CEO reveals failed hacking attempt using XRP Ledger; nearly $15B in XRP targeted.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP ‘saved’ as Hong Kong-based exchange thwarts attack",
+      "link": "https://cryptopanic.com/news/19175778/XRP-saved-as-Hong-Kong-based-exchange-thwarts-attack",
+      "pubDate": "2024-01-15T08:30:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The attack, if successful, could have crashed XRP's price. However, that was not the case.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Celsius Network Moves Over $125 Million in Ethereum Ahead of Debts Payment",
+      "link": "https://cryptopanic.com/news/19175707/Celsius-Network-Moves-Over-125-Million-in-Ethereum-Ahead-of-Debts-Payment",
+      "pubDate": "2024-01-15T08:01:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Celsius Network plans to repay $2B in crypto debts after court approval; market reacts to asset moves.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "VanEck Advisor Observes Recent Shifts in Blockchain Narrative",
+      "link": "https://cryptopanic.com/news/19175452/VanEck-Advisor-Observes-Recent-Shifts-in-Blockchain-Narrative",
+      "pubDate": "2024-01-15T04:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "date": "2018-07-04",
+  "fetchedAt": "2026-02-05T07:27:07.892Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Are Whales Making EOS More Expensive? Social Media Conversations Heat Up",
+      "link": "https://cryptopanic.com/news/2449692/Are-Whales-Making-EOS-More-Expensive-Social-Media-Conversations-Heat-Up",
+      "pubDate": "2018-07-04T14:24:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "NEO Moves to Decentralization Today with new Ecosystem",
+      "link": "https://cryptopanic.com/news/2446647/NEO-Moves-to-Decentralization-Today-with-new-Ecosystem",
+      "pubDate": "2018-07-04T08:29:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "NEO"
+      ],
+      "votes": {
+        "positive": 32,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

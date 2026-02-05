@@ -1,0 +1,42 @@
+{
+  "date": "2020-02-13",
+  "fetchedAt": "2026-02-05T07:27:06.788Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA Foundation pauses network, says between $300K and $1.2M worth of tokens stolen from users of Trinity wallet",
+      "link": "https://cryptopanic.com/news/7926642/IOTA-Foundation-pauses-network-says-between-300K-and-12M-worth-of-tokens-stolen-from-users-of-Trinity-wallet",
+      "pubDate": "2020-02-13T18:59:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "XRP, XLM Prices Skyrocket, Analysts Extremely Bullish",
+      "link": "https://cryptopanic.com/news/7921328/XRP-XLM-Prices-Skyrocket-Analysts-Extremely-Bullish",
+      "pubDate": "2020-02-13T06:04:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,828 @@
+{
+  "date": "2021-10-01",
+  "fetchedAt": "2026-02-05T07:27:06.551Z",
+  "articleCount": 53,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Polygon Founder Says Ethereum Is Set To Replace Bitcoin As The Global Standard",
+      "link": "https://cryptopanic.com/news/matic-network/12913728/Polygon-Founder-Says-Ethereum-Is-Set-To-Replace-Bitcoin-As-The-Global-Standard",
+      "pubDate": "2021-10-01T23:00:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin still remains the top crypto project in the space. But it no secret that Ethereum has been quickly catching up with the pioneer cryptocurrency. Ethereum’s decentralized finance (DeFi) use cases have been the major contributor behind this space as investors have flocked to the blockchain to earning returns on their crypto holdings. This has given rise to popular Layer 2 solutions like...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Shout out to our team and private beta testers who helped fix and iterate over 37 new changes to our fixed rate len…",
+      "link": "https://cryptopanic.com/news/12916355/Shout-out-to-our-team-and-private-beta-testers-who-helped-fix-and-iterate-over-37-new-changes-to-our-fixed-rate-len",
+      "pubDate": "2021-10-01T22:34:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MFT"
+      ]
+    },
+    {
+      "title": "Solana NFT sells for $2.1 million, breaking previous network record",
+      "link": "https://cryptopanic.com/news/12913649/Solana-NFT-sells-for-21-million-breaking-previous-network-record",
+      "pubDate": "2021-10-01T22:11:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "SolanaMonkeyBusiness, a collection of 5,000 NFTs minted on the Solana blockchain, sold an NFT for 13,027 SOL.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ripple jumps on the NFT bandwagon, launches $250 million ‘Creator Fund’",
+      "link": "https://cryptopanic.com/news/ripple/12913632/Ripple-jumps-on-the-NFT-bandwagon-launches-250-million-Creator-Fund",
+      "pubDate": "2021-10-01T22:00:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "Ripple has recently announced the launching of a $250 million ‘Creator Fund’ aimed at exploring new use cases for non-fungible tokens (NFTs) on the XRP Ledger (XRPL).",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Grayscale adds Solana, Uniswap to Digital Large Cap Fund",
+      "link": "https://cryptopanic.com/news/uniswap/12913597/Grayscale-adds-Solana-Uniswap-to-Digital-Large-Cap-Fund",
+      "pubDate": "2021-10-01T21:52:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Head of legal says the fund group is considering products relating to themes of layer-1 protocols, gaming, the metaverse",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "OMG eyes a new all-time high after unveiling its 'Boba Network' layer-2 solution",
+      "link": "https://cryptopanic.com/news/12913477/OMG-eyes-a-new-all-time-high-after-unveiling-its-Boba-Network-layer-2-solution",
+      "pubDate": "2021-10-01T21:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "OMG"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Liquidity up to over $250k+ on Turbo and a handful of crypto token markets just went live",
+      "link": "https://cryptopanic.com/news/12913426/Liquidity-up-to-over-250k-on-Turbo-and-a-handful-of-crypto-token-markets-just-went-live",
+      "pubDate": "2021-10-01T20:59:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "REP"
+      ]
+    },
+    {
+      "title": "RT @TronixTrx: 30th September: #TRON burns more than 3,474,216 coins  with a net production ratio greater than zero 1,605,847 ️",
+      "link": "https://cryptopanic.com/news/12917101/RT-TronixTrx-30th-September-TRON-burns-more-than-3474216-coins-with-a-net-production-ratio-greater-than-zero-1605847",
+      "pubDate": "2021-10-01T20:41:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AMA"
+      ]
+    },
+    {
+      "title": "RT @TronixTrx: Everyone wishes to go back in time to buy #Bitcoin before its price rises , and this is impossible , but life gives you an…",
+      "link": "https://cryptopanic.com/news/12917102/RT-TronixTrx-Everyone-wishes-to-go-back-in-time-to-buy-Bitcoin-before-its-price-rises-and-this-is-impossible-but-life-gives-you-an",
+      "pubDate": "2021-10-01T20:41:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "AMA"
+      ]
+    },
+    {
+      "title": "RT @TronixTrx: The joining of #TRON to @coinbase is only a matter of time",
+      "link": "https://cryptopanic.com/news/12917103/RT-TronixTrx-The-joining-of-TRON-to-coinbase-is-only-a-matter-of-time",
+      "pubDate": "2021-10-01T20:41:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "AMA"
+      ]
+    },
+    {
+      "title": "Michaël van de Poppe Predicts Big Q4 for Bitcoin, Ethereum, and Three Altcoins, Tracks Cardano and Solana Trajectories",
+      "link": "https://cryptopanic.com/news/polkadot/12913319/Michael-van-de-Poppe-Predicts-Big-Q4-for-Bitcoin-Ethereum-and-Three-Altcoins-Tracks-Cardano-and-Solana-Trajectories",
+      "pubDate": "2021-10-01T19:55:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Popular analyst and trader Michaël van de Poppe sees leading cryptos Bitcoin (BTC) and Ethereum (ETH) heading back toward all-time highs while predicting rallies for several altcoins. In a new strategy session, Van de Poppe tells his 131,000 YouTube subscribers that he’s keeping an eye on $44,000 as a key level BTC needs to break […] The post Michaël van de Poppe Predicts Big Q4 for Bitcoin, Ethereum, and Three Altcoins, Tracks Cardano and Solana Trajectories appeared first on The Daily Hodl.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Price analysis 10/1: BTC, ETH, ADA, BNB, XRP, SOL, DOT, DOGE, LUNA, UNI",
+      "link": "https://cryptopanic.com/news/dogecoin/12913285/Price-analysis-101-BTC-ETH-ADA-BNB-XRP-SOL-DOT-DOGE-LUNA-UNI",
+      "pubDate": "2021-10-01T19:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Historical data suggests that October is a good month for Bitcoin bulls, and Oct. 1's push above $47,600 could be a signal of what's to come for BTC and altcoins.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Here’s what stands between Ethereum and $3,500",
+      "link": "https://cryptopanic.com/news/bitcoin/12913078/Heres-what-stands-between-Ethereum-and-3500",
+      "pubDate": "2021-10-01T18:30:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The month of September has been bearish for most of the market’s top coins. However, as October hit, renewed market anticipation was spotted among participants. The start of Q4 has been blasting, to say the least, with Bitcoin and Ethereum noting close to 10% gains in just 12 hours. Now, even though these significant gains […]",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Altcoins take the next leg up after Bitcoin price holds $47.5K",
+      "link": "https://cryptopanic.com/news/12913048/Altcoins-take-the-next-leg-up-after-Bitcoin-price-holds-475K",
+      "pubDate": "2021-10-01T18:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "ROSE, AXS and ICX notched 20% gains after bulls took control of the market and sent BTC price above $47,500.",
+      "currencies": [
+        "BTC",
+        "AXS",
+        "ICX"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @Bitcoin_ABC: Thank you for the kind words @CainBCHA. This is the positive customer experience we are aiming for. And thanks also for…",
+      "link": "https://cryptopanic.com/news/ecash/12919168/RT-Bitcoin_ABC-Thank-you-for-the-kind-words-CainBCHA-This-is-the-positive-customer-experience-we-are-aiming-for-And-thanks-also-for",
+      "pubDate": "2021-10-01T18:14:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Thank you for the kind words @CainBCHA. This is the positive customer experience we are aiming for. And thanks al…",
+      "link": "https://cryptopanic.com/news/ecash/12914793/Thank-you-for-the-kind-words-CainBCHA-This-is-the-positive-customer-experience-we-are-aiming-for-And-thanks-al",
+      "pubDate": "2021-10-01T18:01:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC",
+        "BCHABC"
+      ]
+    },
+    {
+      "title": "Axie Infinity is launching a decentralized exchange",
+      "link": "https://cryptopanic.com/news/12912979/Axie-Infinity-is-launching-a-decentralized-exchange",
+      "pubDate": "2021-10-01T17:55:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Axie Infinity is launching a DEX.",
+      "currencies": [
+        "AXS"
+      ],
+      "votes": {
+        "positive": 25,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "It’s Just A Matter Of Time Till Ethereum Overtakes Bitcoin As Leading Cryptocurrency, Says Polygon Co-Founder",
+      "link": "https://cryptopanic.com/news/matic-network/12912954/Its-Just-A-Matter-Of-Time-Till-Ethereum-Overtakes-Bitcoin-As-Leading-Cryptocurrency-Says-Polygon-Co-Founder",
+      "pubDate": "2021-10-01T17:46:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Polygon’s co-founder believes Ethereum has what it takes to flip Bitcoin to become the “global standard.” He remains bullish on Ethereum’s prospects in the face of rising competition from Cardano and Solana. Ethereum is the second-largest cryptocurrency and has a market capitalization of $382 billion. Sandeep Nailwal, Polygon’s cofounder, has tipped Ethereum to surpass Bitcoin […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "New Dash Branding Images Released, We Need Your Help! by @TaoOfSatoshi #dash #crypto #blog",
+      "link": "https://cryptopanic.com/news/dash/12912795/New-Dash-Branding-Images-Released-We-Need-Your-Help-by-TaoOfSatoshi-dash-crypto-blog",
+      "pubDate": "2021-10-01T17:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "DASH",
+        "ATMOS"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cosmos Bridge to Ethereum Is Slated to Launch in 2021",
+      "link": "https://cryptopanic.com/news/12912711/Cosmos-Bridge-to-Ethereum-Is-Slated-to-Launch-in-2021",
+      "pubDate": "2021-10-01T16:27:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The article announces the planned launch of the Cosmos Bridge to Ethereum in 2021, aiming to enhance interoperability between the two blockchain networks. This development is expected to allow seamless asset transfers and improve the functionality of decentralized applications across both platforms.",
+      "currencies": [
+        "ETH",
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "#PundiX4Good video campaign starts today till 31st Oct. Share the video you make on your twitter account and tag…",
+      "link": "https://cryptopanic.com/news/12917725/PundiX4Good-video-campaign-starts-today-till-31st-Oct-Share-the-video-you-make-on-your-twitter-account-and-tag",
+      "pubDate": "2021-10-01T16:20:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PUNDIX"
+      ]
+    },
+    {
+      "title": "Coinbase Multi-Factor Authentication Hacked, Users Lose Funds",
+      "link": "https://cryptopanic.com/news/bitcoin/12912560/Coinbase-Multi-Factor-Authentication-Hacked-Users-Lose-Funds",
+      "pubDate": "2021-10-01T15:42:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Hackers leveraged a vulnerability in the bitcoin exchange's SMS recovery system to steal cryptocurrency from 6,000 customers.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 43
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Introducing the new Theta Video API service, giving developers the power to bring Web 3.0 decentralized video to an…",
+      "link": "https://cryptopanic.com/news/12918462/Introducing-the-new-Theta-Video-API-service-giving-developers-the-power-to-bring-Web-30-decentralized-video-to-an",
+      "pubDate": "2021-10-01T15:42:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "You are amazing, Yunus. 🥰",
+      "link": "https://cryptopanic.com/news/12917850/You-are-amazing-Yunus",
+      "pubDate": "2021-10-01T15:37:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ]
+    },
+    {
+      "title": "Flow VPN has now integrated #DENT eSIM with the DENT Gigastore SDK: Download Flow VPN iOS App here:…",
+      "link": "https://cryptopanic.com/news/12912514/Flow-VPN-has-now-integrated-DENT-eSIM-with-the-DENT-Gigastore-SDK-Download-Flow-VPN-iOS-App-here",
+      "pubDate": "2021-10-01T15:32:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FLOW",
+        "DENT"
+      ]
+    },
+    {
+      "title": "If you need a reminder about what this update means for Electroneum and its users, Richard Ells broke everything do…",
+      "link": "https://cryptopanic.com/news/12912467/If-you-need-a-reminder-about-what-this-update-means-for-Electroneum-and-its-users-Richard-Ells-broke-everything-do",
+      "pubDate": "2021-10-01T15:24:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "Finance Redefined: dYdX milestone and $1M DeFi bounty, Sept. 24–Oct. 1",
+      "link": "https://cryptopanic.com/news/12912458/Finance-Redefined-dYdX-milestone-and-1M-DeFi-bounty-Sept-24Oct-1",
+      "pubDate": "2021-10-01T15:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "DYdX volume tops Coinbase for the day, Cardano enables a new stablecoin, and a DeFi bounty hunter is highly rewarded — all coming to you this week in Finance Redefined.",
+      "currencies": [
+        "ADA",
+        "DYDX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "1/  Who is ready for IBC Oracle Request? BandChain Phase 2 Proposal 4 is now live to enable one of the key featur…",
+      "link": "https://cryptopanic.com/news/12914609/1-Who-is-ready-for-IBC-Oracle-Request-BandChain-Phase-2-Proposal-4-is-now-live-to-enable-one-of-the-key-featur",
+      "pubDate": "2021-10-01T15:14:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "This is not a drill: @MineWithThorg became a bit too hungry and we're currently experiencing issues on…",
+      "link": "https://cryptopanic.com/news/12912306/This-is-not-a-drill-MineWithThorg-became-a-bit-too-hungry-and-were-currently-experiencing-issues-on",
+      "pubDate": "2021-10-01T14:32:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GLM"
+      ]
+    },
+    {
+      "title": "30 Minute Countdown... see you all there!",
+      "link": "https://cryptopanic.com/news/12918446/30-Minute-Countdown-see-you-all-there",
+      "pubDate": "2021-10-01T14:29:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SNX",
+        "SUSD"
+      ]
+    },
+    {
+      "title": "Cardano Rebounds Towards $2.5 To Reclaim 3rd Spot From Tether, How Long Can It Hold?",
+      "link": "https://cryptopanic.com/news/binancecoin/12912064/Cardano-Rebounds-Towards-25-To-Reclaim-3rd-Spot-From-Tether-How-Long-Can-It-Hold",
+      "pubDate": "2021-10-01T13:30:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Cardano has begun another rally that has positioned it comfortably above $2. This recent change comes after the digital asset had taken a beating down over the past few weeks that has placed it in a continuous downtrend. Cardano was not isolated in this as the broader crypto market had seen numerous crashes and dips that dragged their value down. But as the trading day draws open on Friday,...",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The Biggest Problems Plaguing Bitcoin, Ethereum, Cardano, Polygon",
+      "link": "https://cryptopanic.com/news/matic-network/12911976/The-Biggest-Problems-Plaguing-Bitcoin-Ethereum-Cardano-Polygon",
+      "pubDate": "2021-10-01T13:08:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Blockchain has been hailed as the best thing since the development of the internet but it is fraught with its own unique set of problems. Scalability issues and environmental concerns are some of the problems plaguing blockchain and stifling its adoption rates. Several solutions have been advanced in an attempt to find a solution to […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Price Analysis & Overview October 1st: Ethereum, Ripple, Cardano, Binance Coin, & Uniswap",
+      "link": "https://cryptopanic.com/news/12911863/Crypto-Price-Analysis-Overview-October-1st-Ethereum-Ripple-Cardano-Binance-Coin-Uniswap",
+      "pubDate": "2021-10-01T12:38:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum Ethereum is up a solid 9% today as the cryptocurrency surges past $3000 again. The coin has now broken the upper boundary of the previous range that it was trading inside over the past fortnight. The range was between $3150 and $2800 and Ethereum bounced from the lower boundary on Wednesday, where it found […]",
+      "currencies": [
+        "ETH",
+        "BNB",
+        "ADA",
+        "XRP",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @MariusCrypt0: Are you ready for the last 3-4 months of this bull run? $LUNA $ORION $ANC $LORDZ $PRE $GET $THETA LFG",
+      "link": "https://cryptopanic.com/news/theta-token/12916951/RT-MariusCrypt0-Are-you-ready-for-the-last-3-4-months-of-this-bull-run-LUNA-ORION-ANC-LORDZ-PRE-GET-THETA-LFG",
+      "pubDate": "2021-10-01T12:13:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "$LORDZ"
+      ]
+    },
+    {
+      "title": "Investment Banking Giant Wants to Take Out MakerDAO Loans",
+      "link": "https://cryptopanic.com/news/12911732/Investment-Banking-Giant-Wants-to-Take-Out-MakerDAO-Loans",
+      "pubDate": "2021-10-01T11:55:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "A leading investment banking firm is looking to secure loans from MakerDAO, a decentralized finance platform, signaling a growing interest from traditional finance in blockchain-based lending solutions. This move highlights the potential for collaboration between established financial institutions and innovative cryptocurrency platforms.",
+      "currencies": [
+        "ETH",
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Spikes Above $1, Adding 8 Percent Today",
+      "link": "https://cryptopanic.com/news/ripple/12911715/XRP-Spikes-Above-1-Adding-8-Percent-Today",
+      "pubDate": "2021-10-01T11:48:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "XRP rises 8%, following the surge of Bitcoin",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$2 Trillion Crypto Price Boom: Bitcoin, Ethereum, Cardano, BNB, XRP, Solana, Polkadot And Dogecoin Are Suddenly Soaring",
+      "link": "https://cryptopanic.com/news/dogecoin/12911661/2-Trillion-Crypto-Price-Boom-Bitcoin-Ethereum-Cardano-BNB-XRP-Solana-Polkadot-And-Dogecoin-Are-Suddenly-Soaring",
+      "pubDate": "2021-10-01T11:30:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin and cryptocurrency prices are suddenly soaring, with bitcoin coming within touching distance of $50,000 for the first time since early September...",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 27,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Transactions with the Request Network hit another all-time high in September. Generated primarily from #crypto invo…",
+      "link": "https://cryptopanic.com/news/12911531/Transactions-with-the-Request-Network-hit-another-all-time-high-in-September-Generated-primarily-from-crypto-invo",
+      "pubDate": "2021-10-01T10:51:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REQ"
+      ]
+    },
+    {
+      "title": "Polygon to Launch $1M Liquidity Mining for Augur Turbo",
+      "link": "https://cryptopanic.com/news/matic-network/12911613/Polygon-to-Launch-1M-Liquidity-Mining-for-Augur-Turbo",
+      "pubDate": "2021-10-01T10:49:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Ethereum layer 2 aggregator Polygon has announced a liquidating mining incentive to bootstrap the predictions platform Augur.",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "A New $250 Million Fund Aims to Bring ‘NFTs to Life on the XRP Ledger’",
+      "link": "https://cryptopanic.com/news/ripple/12911441/A-New-250-Million-Fund-Aims-to-Bring-NFTs-to-Life-on-the-XRP-Ledger",
+      "pubDate": "2021-10-01T10:03:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "A $250 million fund launched by Ripple — unveiled during the recent Apex XRPL Developer Summit (September 29-30) — aims to support those who want to “create and monetize accessible and innovative non-fungible token (NFT) experiences on the XRP Ledger (XRPL).” Ripple’ Creator Fund was launched on Wednesday (September 29) in collaboration with Mintable, mintNFT, and VSA […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana NFT “Iconics” defrauds people of $130,000 in SOL",
+      "link": "https://cryptopanic.com/news/12911442/Solana-NFT-Iconics-defrauds-people-of-130000-in-SOL",
+      "pubDate": "2021-10-01T10:00:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "Solana-based NFT project Iconics appears to have pulled off a rug pull, defrauding unsuspecting investors of over $130,000.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Solana ($SOL) Powered DEX Receives $18 Million Capital Injection",
+      "link": "https://cryptopanic.com/news/12911394/Solana-SOL-Powered-DEX-Receives-18-Million-Capital-Injection",
+      "pubDate": "2021-10-01T09:36:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Recently, Orca ($ORCA), a decentralized exchange (DEX) built on the Solana blockchain, announced an $18 million Series A funding round led by some of the industry’s biggest investors. According to a report by Decrypt, Orca recently closed on an $18 million Series A funding round led by Polychain, Placeholder and Three Arrows Capital. Jump Capital, […]",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Ripple Withdraws 1 Billion XRP from Escrow, Then Helps Shift 114.2 Million XRP",
+      "link": "https://cryptopanic.com/news/ripple/12910916/Ripple-Withdraws-1-Billion-XRP-from-Escrow-Then-Helps-Shift-1142-Million-XRP",
+      "pubDate": "2021-10-01T08:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "San Francisco fintech giant has unlocked another billion XRP on the first day of the new month",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @anytaskofficial: The Chainlord NFT #giveaway has come to an end as the block height on the Electroneum blockchain has been successfully…",
+      "link": "https://cryptopanic.com/news/12910697/RT-anytaskofficial-The-Chainlord-NFT-giveaway-has-come-to-an-end-as-the-block-height-on-the-Electroneum-blockchain-has-been-successfully",
+      "pubDate": "2021-10-01T08:14:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "RT @KyrosVentures: The explosion of many new #blockchain technologies offers up an opportunity for projects to deploy their products across…",
+      "link": "https://cryptopanic.com/news/12914352/RT-KyrosVentures-The-explosion-of-many-new-blockchain-technologies-offers-up-an-opportunity-for-projects-to-deploy-their-products-across",
+      "pubDate": "2021-10-01T07:58:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ANY"
+      ]
+    },
+    {
+      "title": "Bitcoin’s Price Will ‘Easily’ Go Over $100,000 in FOMO Rally, Says Industry Veteran Bobby Lee",
+      "link": "https://cryptopanic.com/news/litecoin/12907200/Bitcoins-Price-Will-Easily-Go-Over-100000-in-FOMO-Rally-Says-Industry-Veteran-Bobby-Lee",
+      "pubDate": "2021-10-01T06:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bobby Lee, a cryptocurrency industry veteran who co-founded the BTCC exchange and is the brother of Litecoin creator Charlie Lee, has revealed during an interview he expects bitcoin to see a rally driven by fear of missing out (FOMO) by the end of the year that will take its price above the $100,000 mark. During […]",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 30,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We've got $BOBA Token Airdrop details for $OMG Holders! Also, be sure to read about the early bird bridging bonus!…",
+      "link": "https://cryptopanic.com/news/12906890/Weve-got-BOBA-Token-Airdrop-details-for-OMG-Holders-Also-be-sure-to-read-about-the-early-bird-bridging-bonus",
+      "pubDate": "2021-10-01T06:19:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OMG"
+      ]
+    },
+    {
+      "title": "TA: Ethereum Consolidates, Why Bulls Could Aim Fresh Rally",
+      "link": "https://cryptopanic.com/news/near/12905266/TA-Ethereum-Consolidates-Why-Bulls-Could-Aim-Fresh-Rally",
+      "pubDate": "2021-10-01T05:08:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum is consolidating near the $3,000 zone against the US Dollar. ETH price could start a fresh rally if it clears $3,020 and $3,050. Ethereum corrected lower, but it found support near the $2,950 zone. The price is now trading above $2,950 and the 100 hourly simple moving average. There is a key contracting triangle forming with resistance near $3,020 on the hourly chart of ETH/USD (data...",
+      "currencies": [
+        "ETH",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Compound CEO Threatens to Report People Who Profited Off Of $70 Million Bug to IRS",
+      "link": "https://cryptopanic.com/news/12905251/Compound-CEO-Threatens-to-Report-People-Who-Profited-Off-Of-70-Million-Bug-to-IRS",
+      "pubDate": "2021-10-01T04:59:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Compound CEO Robert Leshner has faced a severe backlash over his recent comments",
+      "currencies": [
+        "COMP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "As previously announced, on November 1, 2021, the Mainnet of BORA will be transferred to Klaytn from Ethereum. We…",
+      "link": "https://cryptopanic.com/news/12905778/As-previously-announced-on-November-1-2021-the-Mainnet-of-BORA-will-be-transferred-to-Klaytn-from-Ethereum-We",
+      "pubDate": "2021-10-01T02:45:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "BORA"
+      ]
+    },
+    {
+      "title": "RT @BinanceBCF: Together we will build a more sustainable future with @PundiXLabs  Congratulations on 4th anniversary",
+      "link": "https://cryptopanic.com/news/12909318/RT-BinanceBCF-Together-we-will-build-a-more-sustainable-future-with-PundiXLabs-Congratulations-on-4th-anniversary",
+      "pubDate": "2021-10-01T02:07:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "PUNDIX"
+      ]
+    },
+    {
+      "title": "RT @AlphaLemonade: Pretty tasty APYs for LPs on @AugurProject turbo thanks to @0xPolygon",
+      "link": "https://cryptopanic.com/news/12904947/RT-AlphaLemonade-Pretty-tasty-APYs-for-LPs-on-AugurProject-turbo-thanks-to-0xPolygon",
+      "pubDate": "2021-10-01T01:39:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "REP"
+      ]
+    },
+    {
+      "title": "gm ️ the BETA token will be live in 1 week on Oct. 8! To help our community avoid scams this is our contract addre…",
+      "link": "https://cryptopanic.com/news/12920697/gm-the-BETA-token-will-be-live-in-1-week-on-Oct-8-To-help-our-community-avoid-scams-this-is-our-contract-addre",
+      "pubDate": "2021-10-01T01:04:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BETA"
+      ]
+    }
+  ]
+}

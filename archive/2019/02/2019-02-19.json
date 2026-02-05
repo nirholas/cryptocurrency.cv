@@ -1,0 +1,94 @@
+{
+  "date": "2019-02-19",
+  "fetchedAt": "2026-02-05T07:27:06.972Z",
+  "articleCount": 5,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "XRP vs TRON Price Action: XRP Records Two Bullish Days While TRX Forms Lower High",
+      "link": "https://cryptopanic.com/news/4609018/XRP-vs-TRON-Price-Action-XRP-Records-Two-Bullish-Days-While-TRX-Forms-Lower-High",
+      "pubDate": "2019-02-19T14:24:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Pensions and Endowments Advisor Urges Institutions to Bet on Crypto",
+      "link": "https://cryptopanic.com/news/4608754/Pensions-and-Endowments-Advisor-Urges-Institutions-to-Bet-on-Crypto",
+      "pubDate": "2019-02-19T13:59:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron Hosts Over 200 DApps, Justin Sun Says 9th ERC20 Coinburn Has Taken Place",
+      "link": "https://cryptopanic.com/news/tron/4607707/Tron-Hosts-Over-200-DApps-Justin-Sun-Says-9th-ERC20-Coinburn-Has-Taken-Place",
+      "pubDate": "2019-02-19T11:31:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$200B SBI Holdings CEO: Bitcoin’s Value Is Zero, Ripple Is The No.1 Cryptocurrency",
+      "link": "https://cryptopanic.com/news/ripple/4606676/200B-SBI-Holdings-CEO-Bitcoins-Value-Is-Zero-Ripple-Is-The-No1-Cryptocurrency",
+      "pubDate": "2019-02-19T08:50:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 21,
+        "negative": 17
+      }
+    },
+    {
+      "title": "Stellar (XLM) Price Predicted to Grow After IBM’s Major Announcement That Will Make Ripple Worried",
+      "link": "https://cryptopanic.com/news/4605954/Stellar-XLM-Price-Predicted-to-Grow-After-IBMs-Major-Announcement-That-Will-Make-Ripple-Worried",
+      "pubDate": "2019-02-19T06:30:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 22,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

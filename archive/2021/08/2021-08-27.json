@@ -1,0 +1,793 @@
+{
+  "date": "2021-08-27",
+  "fetchedAt": "2026-02-05T07:27:06.557Z",
+  "articleCount": 53,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @PlayPolkadot: Everything-is-a-token, the evolution of NewOmega Online by Wiktor Starczewski",
+      "link": "https://cryptopanic.com/news/12640616/RT-PlayPolkadot-Everything-is-a-token-the-evolution-of-NewOmega-Online-by-Wiktor-Starczewski",
+      "pubDate": "2021-08-27T22:02:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MOG"
+      ]
+    },
+    {
+      "title": "Ethereum Chain Splits Due to Bug: Devs Urging Users to Avoid any ETH Transactions",
+      "link": "https://cryptopanic.com/news/ethereum/12637087/Ethereum-Chain-Splits-Due-to-Bug-Devs-Urging-Users-to-Avoid-any-ETH-Transactions",
+      "pubDate": "2021-08-27T20:07:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The Ethereum network has split due to a bug in the old version of Geth, approximately 54% of the network nodes split from the mainnet.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 13
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Price analysis 8/27: BTC, ETH, ADA, BNB, XRP, DOGE, DOT, SOL, UNI, LUNA",
+      "link": "https://cryptopanic.com/news/12637084/Price-analysis-827-BTC-ETH-ADA-BNB-XRP-DOGE-DOT-SOL-UNI-LUNA",
+      "pubDate": "2021-08-27T20:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin and altcoins saw a strong bounce off their respective support levels, a sign that traders are still buying on dips.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "ADA",
+        "XRP",
+        "SOL",
+        "DOGE",
+        "DOT",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "How much would the gas fees be? 🧐",
+      "link": "https://cryptopanic.com/news/12642288/How-much-would-the-gas-fees-be",
+      "pubDate": "2021-08-27T19:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "As the overall cryptocurrency economy continues to grow, the need for cross-chain compatibility will only increase.…",
+      "link": "https://cryptopanic.com/news/12641327/As-the-overall-cryptocurrency-economy-continues-to-grow-the-need-for-cross-chain-compatibility-will-only-increase",
+      "pubDate": "2021-08-27T19:15:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XPR"
+      ]
+    },
+    {
+      "title": "NFTs Aren’t a Bubble, They’re a ‘Digital Flex’ for New Consumer Class: CoinShares’ Chief Strategy Officer",
+      "link": "https://cryptopanic.com/news/bitcoin/12636895/NFTs-Arent-a-Bubble-Theyre-a-Digital-Flex-for-New-Consumer-Class-CoinShares-Chief-Strategy-Officer",
+      "pubDate": "2021-08-27T18:45:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "The chief strategy officer of digital asset manager CoinShares says that the surging non-fungible token (NFT) market is not a bubble. In a new tweetstorm, Meltem Demirors points to the scarcity of various NFT projects and Bitcoin as a potential key factor motivating investors. “Are NFTs a bubble? No. Wealth is a bubble… For the […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "RT @b05crypto: @alanchiu helped me understand the big vision for what @bobanetwork is building &amp; how it works. Some very exciting innovatio…",
+      "link": "https://cryptopanic.com/news/12636851/RT-b05crypto-alanchiu-helped-me-understand-the-big-vision-for-what-bobanetwork-is-building-amp-how-it-works-Some-very-exciting-innovatio",
+      "pubDate": "2021-08-27T18:35:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "OMG"
+      ]
+    },
+    {
+      "title": "RT @blithyy02: @startup_space1 @bobanetwork @enyaai @BreederDodo Congratulations to this partnership! Boba has been providing us a safe, fa…",
+      "link": "https://cryptopanic.com/news/12636849/RT-blithyy02-startup_space1-bobanetwork-enyaai-BreederDodo-Congratulations-to-this-partnership-Boba-has-been-providing-us-a-safe-fa",
+      "pubDate": "2021-08-27T18:34:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "OMG"
+      ]
+    },
+    {
+      "title": "Another release of Bitcoin ABC, the eCash full node software. This release turns on the #eCash mode by default.…",
+      "link": "https://cryptopanic.com/news/ecash/12642697/Another-release-of-Bitcoin-ABC-the-eCash-full-node-software-This-release-turns-on-the-eCash-mode-by-default",
+      "pubDate": "2021-08-27T18:29:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "How A Security Vulnerability Affected Ethereum And Led To A Chain Split",
+      "link": "https://cryptopanic.com/news/ethereum/12636834/How-A-Security-Vulnerability-Affected-Ethereum-And-Led-To-A-Chain-Split",
+      "pubDate": "2021-08-27T18:23:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The Ethereum network is facing a chain split after an exploit forced over 50% of its nodes to upgrade their client to prevent further attacks. This security vulnerability was detected, reported, and fixed by Go Ethereum, developers of the affected client, Geth. On August 24th, 2021, via their official Twitter handle, Go Ethereum and its […]",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 21
+      }
+    },
+    {
+      "title": "Bitcoin ABC 0.24.0 is now available! This release supports the eCash rebrand by default and is the minimum versio…",
+      "link": "https://cryptopanic.com/news/ecash/12638465/Bitcoin-ABC-0240-is-now-available-This-release-supports-the-eCash-rebrand-by-default-and-is-the-minimum-versio",
+      "pubDate": "2021-08-27T18:06:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC",
+        "BCHABC"
+      ]
+    },
+    {
+      "title": "Were SEC Employees Permitted to Trade XRP and Ether? Ripple Wants to Find Out",
+      "link": "https://cryptopanic.com/news/ripple/12636736/Were-SEC-Employees-Permitted-to-Trade-XRP-and-Ether-Ripple-Wants-to-Find-Out",
+      "pubDate": "2021-08-27T17:47:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ripple wants to determine whether SEC employees had traded XRP before the issuance of the formal investigation order",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Check out the latest Theta blog on ecosystem development: Theta Validator unstaking to accelerate future ecosystem…",
+      "link": "https://cryptopanic.com/news/theta-token/12642065/Check-out-the-latest-Theta-blog-on-ecosystem-development-Theta-Validator-unstaking-to-accelerate-future-ecosystem",
+      "pubDate": "2021-08-27T17:42:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Your regularly scheduled reminder that , , and the chia-network proje…",
+      "link": "https://cryptopanic.com/news/12638785/Your-regularly-scheduled-reminder-that-and-the-chia-network-proje",
+      "pubDate": "2021-08-27T17:36:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XCH"
+      ]
+    },
+    {
+      "title": "Hey DeFi-ers! Here's 5 easy-to-follow tips on how to stay safe exploring the crypto world",
+      "link": "https://cryptopanic.com/news/12642289/Hey-DeFi-ers-Heres-5-easy-to-follow-tips-on-how-to-stay-safe-exploring-the-crypto-world",
+      "pubDate": "2021-08-27T17:20:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "Bitcoin Going For 5 Green Weeks In A Row, Sucking Liquidity Out Of Cardano, XRP, Dogecoin",
+      "link": "https://cryptopanic.com/news/dogecoin/12636642/Bitcoin-Going-For-5-Green-Weeks-In-A-Row-Sucking-Liquidity-Out-Of-Cardano-XRP-Dogecoin",
+      "pubDate": "2021-08-27T17:01:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin, the largest cryptocurrency by market valuation is in a crucial position at this time. For the second time since May 15th, the primary asset is close to cracking $50,000 again. After spending most of June and July range-bound below $40,000, the benchmark crypto is set for a breakout. Can Bitcoin Reclaim $50,000 this week? […]",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bug in Ethereum Interface Causes Inadvertent Chain Split, Chaos on Network",
+      "link": "https://cryptopanic.com/news/ethereum/12636575/Bug-in-Ethereum-Interface-Causes-Inadvertent-Chain-Split-Chaos-on-Network",
+      "pubDate": "2021-08-27T16:49:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "All hands on deck to fix bug created by an old version of the Geth client, which is used by 75% of the Ethereum nodes",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bithumb exchange has completed the rebrand to #eCash! Well done @BithumbOfficial! #XEC $XEC",
+      "link": "https://cryptopanic.com/news/ecash/12642698/Bithumb-exchange-has-completed-the-rebrand-to-eCash-Well-done-BithumbOfficial-XEC-XEC",
+      "pubDate": "2021-08-27T16:46:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Self Sovereign Identity empowers people with the tools to control their digital interactions and recover privacy in…",
+      "link": "https://cryptopanic.com/news/12641391/Self-Sovereign-Identity-empowers-people-with-the-tools-to-control-their-digital-interactions-and-recover-privacy-in",
+      "pubDate": "2021-08-27T16:42:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RIF"
+      ]
+    },
+    {
+      "title": "Bug in Ethereum client leads to split — EVM-compatible chains at risk",
+      "link": "https://cryptopanic.com/news/ethereum/12636576/Bug-in-Ethereum-client-leads-to-split-EVM-compatible-chains-at-risk",
+      "pubDate": "2021-08-27T16:38:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "“Stay away from doing [transactions] for a while till confirmed, unless you are sure you are submitting to latest Geth,” advised Andre Cronje.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Consensus Bug Causes Ethereum Chain Split",
+      "link": "https://cryptopanic.com/news/ethereum/12636552/Consensus-Bug-Causes-Ethereum-Chain-Split",
+      "pubDate": "2021-08-27T16:37:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "-",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ethereum Blockchain Splits as Software Bug Affects More Than Half the Network",
+      "link": "https://cryptopanic.com/news/ethereum/12636497/Ethereum-Blockchain-Splits-as-Software-Bug-Affects-More-Than-Half-the-Network",
+      "pubDate": "2021-08-27T16:17:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Despite a late fix to Ethereum client Geth on Tuesday, most users did not update to the latest version, causing a fork on the network.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 19
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Reef Chain  ️ opens the gates to yet another team of talented individuals wanting to help the Reef Ecosystem grow…",
+      "link": "https://cryptopanic.com/news/12641458/Reef-Chain-opens-the-gates-to-yet-another-team-of-talented-individuals-wanting-to-help-the-Reef-Ecosystem-grow",
+      "pubDate": "2021-08-27T16:16:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ]
+    },
+    {
+      "title": "Our website just got a fresh new update! Sparkles Check it out to see all our bulllllllllish developments recently…",
+      "link": "https://cryptopanic.com/news/12638228/Our-website-just-got-a-fresh-new-update-Sparkles-Check-it-out-to-see-all-our-bulllllllllish-developments-recently?mtm_campaign=API-OFA",
+      "pubDate": "2021-08-27T16:02:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SATS"
+      ]
+    },
+    {
+      "title": "Major Bug Hits Ethereum Network, Leading to Chain Split",
+      "link": "https://cryptopanic.com/news/ethereum/12636354/Major-Bug-Hits-Ethereum-Network-Leading-to-Chain-Split",
+      "pubDate": "2021-08-27T15:23:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A massive bug effectively forked more than half of all the nodes on the Ethereum blockchain earlier today",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Bug impacting over 50% of Ethereum clients leads to fork",
+      "link": "https://cryptopanic.com/news/ethereum/12636208/Bug-impacting-over-50-of-Ethereum-clients-leads-to-fork",
+      "pubDate": "2021-08-27T14:40:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A bug in older versions of an Ethereum network client has split those nodes off from the rest of the network.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 21
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Tickets are still available for the Blockchain Expo, taking place on the 6th and 7th of Sept, with Richard Ells app…",
+      "link": "https://cryptopanic.com/news/12636121/Tickets-are-still-available-for-the-Blockchain-Expo-taking-place-on-the-6th-and-7th-of-Sept-with-Richard-Ells-app",
+      "pubDate": "2021-08-27T14:30:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "XRP lawsuit update: Court grants Ripple, SEC’s expert discovery extension request",
+      "link": "https://cryptopanic.com/news/ripple/12636022/XRP-lawsuit-update-Court-grants-Ripple-SECs-expert-discovery-extension-request",
+      "pubDate": "2021-08-27T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Judge Sarah Netburn has granted Ripple and the SEC’s motion to extend the deadline for expert discovery. The update was first shared by James K. Filan, with the attorney revealing that the court has also granted an extension for filing pre-motion letters regarding a summary judgment. However, no due date has been set yet. The […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "does this mean #SATS holders can go to space?  asking for a friend...",
+      "link": "https://cryptopanic.com/news/12638229/does-this-mean-SATS-holders-can-go-to-space-asking-for-a-friend?mtm_campaign=API-OFA",
+      "pubDate": "2021-08-27T13:01:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SATS"
+      ]
+    },
+    {
+      "title": "Impressive animated meme comp submission! Picking a winner is going to be super difficult. Thanks @jodyydstr for th…",
+      "link": "https://cryptopanic.com/news/12638230/Impressive-animated-meme-comp-submission-Picking-a-winner-is-going-to-be-super-difficult-Thanks-jodyydstr-for-th?mtm_campaign=API-OFA",
+      "pubDate": "2021-08-27T13:00:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SATS"
+      ]
+    },
+    {
+      "title": "A few last-minute entries for our meme competition coming in!  Make sure you publish your submissions by tomorrow,…",
+      "link": "https://cryptopanic.com/news/12638231/A-few-last-minute-entries-for-our-meme-competition-coming-in-Make-sure-you-publish-your-submissions-by-tomorrow?mtm_campaign=API-OFA",
+      "pubDate": "2021-08-27T12:57:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SATS"
+      ]
+    },
+    {
+      "title": "Miss our #AMA? 🥴 Don't worry, we got you covered! Check out the roundup at the link below.",
+      "link": "https://cryptopanic.com/news/12638233/Miss-our-AMA-Dont-worry-we-got-you-covered-Check-out-the-roundup-at-the-link-below?mtm_campaign=API-OFA",
+      "pubDate": "2021-08-27T12:55:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SATS",
+        "FNSA"
+      ]
+    },
+    {
+      "title": "Korea’s new FSC chair speaks; Axie Infinity to work with governments",
+      "link": "https://cryptopanic.com/news/12635753/Koreas-new-FSC-chair-speaks-Axie-Infinity-to-work-with-governments",
+      "pubDate": "2021-08-27T12:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Korea’s new FSC chair speaks meanwhile Axie Infinity to work with governments",
+      "currencies": [
+        "AXS"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Moonriver (MOVR) Smart Contracts Platform Goes Live On Polkadot's Kusama",
+      "link": "https://cryptopanic.com/news/12635660/Moonriver-MOVR-Smart-Contracts-Platform-Goes-Live-On-Polkadots-Kusama",
+      "pubDate": "2021-08-27T11:54:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Polkadot's Moonbeam now has its \"canary network\" up and running on Kusama (KSM)",
+      "currencies": [
+        "KSM"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Veteran Bobby Lee Analyzes Bitcoin, Reveals What Could Prevent BTC From Reaching $1,000,000",
+      "link": "https://cryptopanic.com/news/bitcoin/12635688/Crypto-Veteran-Bobby-Lee-Analyzes-Bitcoin-Reveals-What-Could-Prevent-BTC-From-Reaching-1000000",
+      "pubDate": "2021-08-27T11:45:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Cryptocurrency veteran Bobby Lee is identifying what he thinks are the main factors that could stop Bitcoin’s price from hitting $1 million in the next three to five years. While exploring the probability of China declaring Bitcoin illegal, Lee says that such a ban is unlikely to occur in 2021, but that it could happen […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "You may have noticed that the way transaction fees are presented by your Ethereum wallet has changed a bit. This…",
+      "link": "https://cryptopanic.com/news/12640402/You-may-have-noticed-that-the-way-transaction-fees-are-presented-by-your-Ethereum-wallet-has-changed-a-bit-This",
+      "pubDate": "2021-08-27T11:38:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "LOOM"
+      ]
+    },
+    {
+      "title": "How Bitcoin and Ethereum are rekindling with equities",
+      "link": "https://cryptopanic.com/news/bitcoin/12635528/How-Bitcoin-and-Ethereum-are-rekindling-with-equities",
+      "pubDate": "2021-08-27T11:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "What is the relationship between crypto assets and stock prices? Macro strategist Ben Emons analyzes this week’s market trends.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Solana Decouples From Bitcoin Setting New All-Time High",
+      "link": "https://cryptopanic.com/news/12635496/Solana-Decouples-From-Bitcoin-Setting-New-All-Time-High",
+      "pubDate": "2021-08-27T10:59:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "-",
+      "currencies": [
+        "BTC",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 27,
+        "negative": 8
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Axie Infinity tweet suggests willingness to work with Philippines on tax demand",
+      "link": "https://cryptopanic.com/news/12635502/Axie-Infinity-tweet-suggests-willingness-to-work-with-Philippines-on-tax-demand",
+      "pubDate": "2021-08-27T10:54:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Axie Infinity, one of the world’s most popular non-fungible token (NFT) games, tweeted that it is “looking forward to working with physical nations” and called for its digital users to abide by the laws of their home countries, presumably a reference to local tax laws. Fast facts The tweet came just days after the Philippines government stated […]",
+      "currencies": [
+        "AXS"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Solana price hits all-time high as Bitcoin, crypto market dip",
+      "link": "https://cryptopanic.com/news/12635453/Solana-price-hits-all-time-high-as-Bitcoin-crypto-market-dip",
+      "pubDate": "2021-08-27T10:31:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin’s price dropped following a quick ascent past US$50K, but analysts say the rally is set to continue. Meanwhile, Solana again defied the overall market to post a new price high.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Dogecoin Millionaire Is ‘Going To Start Buying Up As Much Cardano As Humanly Possible’",
+      "link": "https://cryptopanic.com/news/dogecoin/12635415/Dogecoin-Millionaire-Is-Going-To-Start-Buying-Up-As-Much-Cardano-As-Humanly-Possible",
+      "pubDate": "2021-08-27T10:20:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "In a recent interview, Glauber Contessoto, the man who invested all of his savings (around $250,000) in Dogecoin ($DOGE) on February 5, said that he is going to start investing in Cardano ($ADA). On April 22, the 33-year-old man, who works at a music company in Los Angles, told CNBC’s “Make It” program that after […]",
+      "currencies": [
+        "ADA",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 39,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Cash, Cosmos, DASH Price Analysis: 27 August",
+      "link": "https://cryptopanic.com/news/dash/12635368/Bitcoin-Cash-Cosmos-DASH-Price-Analysis-27-August",
+      "pubDate": "2021-08-27T10:00:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Bitcoin to trade at $100k in 6 months but expect sell-offs, says Midas Touch MD",
+      "link": "https://cryptopanic.com/news/bitcoin/12635278/Bitcoin-to-trade-at-100k-in-6-months-but-expect-sell-offs-says-Midas-Touch-MD",
+      "pubDate": "2021-08-27T09:24:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Florian Grummes, the managing director of investment advisory firm Midas Touch Consulting has maintained that Bitcoin will likely trade at... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 7
+      }
+    },
+    {
+      "title": "@bitcoin tweets Binance-related post; Crypto Twitter assumes exchange bought it",
+      "link": "https://cryptopanic.com/news/bitcoin/12635211/bitcoin-tweets-Binance-related-post-Crypto-Twitter-assumes-exchange-bought-it",
+      "pubDate": "2021-08-27T08:50:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A Tweet posted on @bitcoin’s Twitter profile sparked speculation that Binance may have purchased the account on Thursday. Essentially the... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Play to earn！Play to fun！",
+      "link": "https://cryptopanic.com/news/12639690/Play-to-earnPlay-to-fun",
+      "pubDate": "2021-08-27T08:30:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DAO"
+      ]
+    },
+    {
+      "title": "Master #BUIDL-ers at work ️",
+      "link": "https://cryptopanic.com/news/12642292/Master-BUIDL-ers-at-work",
+      "pubDate": "2021-08-27T08:19:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "What Does Ethereum 2.0 Mean for Scaling Solutions Like Polygon?",
+      "link": "https://cryptopanic.com/news/matic-network/12633914/What-Does-Ethereum-20-Mean-for-Scaling-Solutions-Like-Polygon",
+      "pubDate": "2021-08-27T08:01:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Polygon has become a temporary solution for Ethereum's scaling issues. There's still a place for it after Ethereum 2.0 goes into effect.",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto payment gateway ForgingBlock to integrate Polygon",
+      "link": "https://cryptopanic.com/news/matic-network/12631123/Crypto-payment-gateway-ForgingBlock-to-integrate-Polygon",
+      "pubDate": "2021-08-27T06:33:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "ForgingBlock, a decentralized cryptocurrency payment gateway, announced today that they have started to integrate Polygon, a platform for Ethereum scaling and infrastructure development. The payment gateway includes e-commerce plugins, payment APIs, a checkout page, and servers with high security and can be easily integrated for both merchants and the Polygon developer community. This development supports the […] The post Crypto payment gateway ForgingBlock to integrate Polygon appeared first on",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 25,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BHEX Has Listed XEC/USDT Trading Pair BHEX has now launched XEC/USDT trading pair and opened the deposit service f…",
+      "link": "https://cryptopanic.com/news/ecash/12638159/BHEX-Has-Listed-XECUSDT-Trading-Pair-BHEX-has-now-launched-XECUSDT-trading-pair-and-opened-the-deposit-service-f",
+      "pubDate": "2021-08-27T05:58:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "BHT",
+        "HBC"
+      ]
+    },
+    {
+      "title": "\"Tapping into the societal concerns about privacy and mistrust of centralized powers, eCash’s blockchain focuses on…",
+      "link": "https://cryptopanic.com/news/ecash/12634087/Tapping-into-the-societal-concerns-about-privacy-and-mistrust-of-centralized-powers-eCashs-blockchain-focuses-on",
+      "pubDate": "2021-08-27T03:24:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "RT @coin98_wallet: Coin98 Wallet is thrilled to announce the collaboration with @enyaai, supporting their next-gen Ethereum Layer 2 Optimis…",
+      "link": "https://cryptopanic.com/news/12632182/RT-coin98_wallet-Coin98-Wallet-is-thrilled-to-announce-the-collaboration-with-enyaai-supporting-their-next-gen-Ethereum-Layer-2-Optimis",
+      "pubDate": "2021-08-27T03:07:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "OMG"
+      ]
+    },
+    {
+      "title": "Record $900-million month for NFT sales as CryptoPunks go stratospheric",
+      "link": "https://cryptopanic.com/news/12628851/Record-900-million-month-for-NFT-sales-as-CryptoPunks-go-stratospheric",
+      "pubDate": "2021-08-27T02:48:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "Almost $400 million has been spent on CryptoPunks over the past 30 days.",
+      "currencies": [
+        "ETH",
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "RT @safenetworktech: The latest #dev update highlights the results of our recent #UX research! Checkout the details here",
+      "link": "https://cryptopanic.com/news/12628777/RT-safenetworktech-The-latest-dev-update-highlights-the-results-of-our-recent-UX-research-Checkout-the-details-here",
+      "pubDate": "2021-08-27T02:08:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    }
+  ]
+}

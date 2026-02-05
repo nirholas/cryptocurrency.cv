@@ -1,0 +1,39 @@
+{
+  "date": "2018-06-13",
+  "fetchedAt": "2026-02-05T07:27:06.866Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Multi-Billion Dollar Logistics Giant DB Schenker to Use VeChain’s Blockchain Protocol",
+      "link": "https://cryptopanic.com/news/2239321/Multi-Billion-Dollar-Logistics-Giant-DB-Schenker-to-Use-VeChains-Blockchain-Protocol",
+      "pubDate": "2018-06-13T23:10:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Want to Get into the Bitcoin Gold Rush? Sell Shovels",
+      "link": "https://cryptopanic.com/news/2238431/Want-to-Get-into-the-Bitcoin-Gold-Rush-Sell-Shovels",
+      "pubDate": "2018-06-13T20:00:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BTG"
+      ]
+    }
+  ]
+}

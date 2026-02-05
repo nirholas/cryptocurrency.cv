@@ -1,0 +1,25 @@
+{
+  "date": "2018-05-24",
+  "fetchedAt": "2026-02-05T07:27:06.866Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "DNV GL Eyes New Assurance Products after Buying Stake in VeChain",
+      "link": "https://cryptopanic.com/news/2024763/DNV-GL-Eyes-New-Assurance-Products-after-Buying-Stake-in-VeChain",
+      "pubDate": "2018-05-24T11:00:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

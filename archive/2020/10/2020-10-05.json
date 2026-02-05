@@ -1,0 +1,25 @@
+{
+  "date": "2020-10-05",
+  "fetchedAt": "2026-02-05T07:27:08.686Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "My Filecoin Investing Strategy (Mainnet Launching October 15th)",
+      "link": "https://cryptopanic.com/news/filecoin/10169178/My-Filecoin-Investing-Strategy-Mainnet-Launching-October-15th",
+      "pubDate": "2020-10-05T17:20:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

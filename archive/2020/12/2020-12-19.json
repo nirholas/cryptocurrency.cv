@@ -1,0 +1,121 @@
+{
+  "date": "2020-12-19",
+  "fetchedAt": "2026-02-05T07:27:06.786Z",
+  "articleCount": 8,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "It's all about HRC30 via @YouTube",
+      "link": "https://cryptopanic.com/news/10869321/Its-all-about-HRC30-via-YouTube",
+      "pubDate": "2020-12-19T23:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "We are happy to announce first burning of 25,700,000,000 SNN  soon we will reach our target or reducing the supply…",
+      "link": "https://cryptopanic.com/news/10867707/We-are-happy-to-announce-first-burning-of-25700000000-SNN-soon-we-will-reach-our-target-or-reducing-the-supply?mtm_campaign=API-OFA",
+      "pubDate": "2020-12-19T18:35:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ACA",
+        "USDG",
+        "999"
+      ]
+    },
+    {
+      "title": "#Blockchain technology was officially included in the top 5 PRIORITY list in Vietnam to actively catch up with the…",
+      "link": "https://cryptopanic.com/news/10865533/Blockchain-technology-was-officially-included-in-the-top-5-PRIORITY-list-in-Vietnam-to-actively-catch-up-with-the",
+      "pubDate": "2020-12-19T14:01:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "RT @btsfav: #DeFinitely 35 - The News in #DeFi #hive -",
+      "link": "https://cryptopanic.com/news/10865518/RT-btsfav-DeFinitely-35-The-News-in-DeFi-hive-",
+      "pubDate": "2020-12-19T14:00:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "Counos centralized exchange provides fast, secure, and safe #cryptocurrency exchange. #Counos #Exchange has a powe…",
+      "link": "https://cryptopanic.com/news/10864979/Counos-centralized-exchange-provides-fast-secure-and-safe-cryptocurrency-exchange-Counos-Exchange-has-a-powe",
+      "pubDate": "2020-12-19T12:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "RT @btsfav: Lots of news this week! I don't mean to spoil you, but there are two news in particular that are bigger than all the others...…",
+      "link": "https://cryptopanic.com/news/10864204/RT-btsfav-Lots-of-news-this-week-I-dont-mean-to-spoil-you-but-there-are-two-news-in-particular-that-are-bigger-than-all-the-others",
+      "pubDate": "2020-12-19T08:13:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "Tezos (XTZ) Eyes Ethereum DeFi Market Share with Wrapped ETH",
+      "link": "https://cryptopanic.com/news/10864076/Tezos-XTZ-Eyes-Ethereum-DeFi-Market-Share-with-Wrapped-ETH",
+      "pubDate": "2020-12-19T06:45:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Massive Bitcoin Gains Are Being Dwarfed By Ripple’s XRP, Litecoin, Ethereum And These Minor Cryptocurrencies",
+      "link": "https://cryptopanic.com/news/10862251/Massive-Bitcoin-Gains-Are-Being-Dwarfed-By-Ripples-XRP-Litecoin-Ethereum-And-These-Minor-Cryptocurrencies",
+      "pubDate": "2020-12-19T00:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LTC",
+        "XLM",
+        "XEM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

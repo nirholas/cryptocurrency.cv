@@ -1,0 +1,44 @@
+{
+  "date": "2018-11-15",
+  "fetchedAt": "2026-02-05T07:27:08.685Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Why Xlm Flipped Eos & The Only Coin I'M Buying During This Bear Market?",
+      "link": "https://cryptopanic.com/news/stellar/3697876/WHY-XLM-FLIPPED-EOS-THE-ONLY-COIN-IM-BUYING-DURING-THIS-BEAR-MARKET",
+      "pubDate": "2018-11-15T20:03:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Nodes, Opcodes, and Satoshi’s Vision: Today’s Bitcoin Cash Hard Fork Explained",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/3689129/Nodes-Opcodes-and-Satoshis-Vision-Todays-Bitcoin-Cash-Hard-Fork-Explained",
+      "pubDate": "2018-11-15T13:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2019-04-07",
+  "fetchedAt": "2026-02-05T07:27:06.810Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Cash Price Prediction: Will BCH Cost $400 by Next Week? BCH Is to Break Resistance!",
+      "link": "https://cryptopanic.com/news/5067008/Bitcoin-Cash-Price-Prediction-Will-BCH-Cost-400-by-Next-Week-BCH-Is-to-Break-Resistance",
+      "pubDate": "2019-04-07T19:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

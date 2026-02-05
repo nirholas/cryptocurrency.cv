@@ -1,0 +1,26 @@
+{
+  "date": "2019-09-20",
+  "fetchedAt": "2026-02-05T07:27:07.000Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "South Korea’s Upbit Becomes Latest Exchange to Delist Privacy Coins",
+      "link": "https://cryptopanic.com/news/monero/6638797/South-Koreas-Upbit-Becomes-Latest-Exchange-to-Delist-Privacy-Coins",
+      "pubDate": "2019-09-20T21:34:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "ZEC",
+        "DASH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    }
+  ]
+}

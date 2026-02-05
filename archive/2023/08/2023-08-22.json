@@ -1,0 +1,543 @@
+{
+  "date": "2023-08-22",
+  "fetchedAt": "2026-02-05T07:27:07.167Z",
+  "articleCount": 36,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Cardano Threatens Ethereum’s Reign as NFT Floor Prices Surge",
+      "link": "https://cryptopanic.com/news/18853808/Cardano-Threatens-Ethereums-Reign-as-NFT-Floor-Prices-Surge",
+      "pubDate": "2023-08-22T22:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "With the NFT market slowing down, Cardano NFTs have surpassed Ethereum, signaling a major shift in the industry.",
+      "currencies": [
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Pro-Ripple Lawyer Says SEC Lawsuit Cost XRP Three Years Of Adoption",
+      "link": "https://cryptopanic.com/news/18853804/Pro-Ripple-Lawyer-Says-SEC-Lawsuit-Cost-XRP-Three-Years-Of-Adoption",
+      "pubDate": "2023-08-22T22:06:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Amidst all the twists and turns in Ripple’s legal battle with the U.S. Securities and Exchange (SEC), the XRP price recently plunged to where it was before the landmark ruling by Analisa Torres in July 2023.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "The Comeback Kid - Can EOS Return to Glory?",
+      "link": "https://cryptopanic.com/news/18853824/The-Comeback-Kid-Can-EOS-Return-to-Glory",
+      "pubDate": "2023-08-22T22:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ]
+    },
+    {
+      "title": "Btc, Qnt, Rune, Hbar Price Analysis",
+      "link": "https://cryptopanic.com/news/quant-network/18853741/BTC-QNT-RUNE-HBAR-PRICE-ANALYSIS",
+      "pubDate": "2023-08-22T20:27:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "HBAR",
+        "QNT"
+      ]
+    },
+    {
+      "title": "Is the 25% drop in PEPE, SHIB and APE a sign of a deepening crypto bear market?",
+      "link": "https://cryptopanic.com/news/18853706/Is-the-25-drop-in-PEPE-SHIB-and-APE-a-sign-of-a-deepening-crypto-bear-market",
+      "pubDate": "2023-08-22T20:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SHIB",
+        "APE"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Hedera Decreases More Than 3% Within 24 hours",
+      "link": "https://cryptopanic.com/news/18853673/Cryptocurrency-Hedera-Decreases-More-Than-3-Within-24-hours",
+      "pubDate": "2023-08-22T19:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "$0.001 SHIB Price In Sight As Shiba Inu Developers Plan Shibarium’s Public Reopening",
+      "link": "https://cryptopanic.com/news/shiba-inu/18853648/0001-SHIB-Price-In-Sight-As-Shiba-Inu-Developers-Plan-Shibariums-Public-Reopening",
+      "pubDate": "2023-08-22T18:47:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Shiba Inu has continued to face increasing selling pressure following the launch of the Layer 2 scaling protocol, Shibarium. The second-largest meme coin had rallied for nearly two months starting in July, as the SHIB community prepared for a game-changing rally after the launch of Shibarium. Contrary to their expectations, the new Ethereum Layer 2",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Custody Giant Prime Trust Files For Chapter 11 Bankruptcy But Says It Will Continue Operations",
+      "link": "https://cryptopanic.com/news/18853623/Custody-Giant-Prime-Trust-Files-For-Chapter-11-Bankruptcy-But-Says-It-Will-Continue-Operations",
+      "pubDate": "2023-08-22T18:29:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SHIB",
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "CRV down 20% on the week as traders scrutinize OTC deals",
+      "link": "https://cryptopanic.com/news/18853606/CRV-down-20-on-the-week-as-traders-scrutinize-OTC-deals",
+      "pubDate": "2023-08-22T18:19:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "ATOM drops to critical price level – More shorting gains likely?",
+      "link": "https://cryptopanic.com/news/18853554/ATOM-drops-to-critical-price-level-More-shorting-gains-likely",
+      "pubDate": "2023-08-22T17:30:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ]
+    },
+    {
+      "title": "Crypto Whales are Buying These 3 Altcoins for October Gains",
+      "link": "https://cryptopanic.com/news/18853605/Crypto-Whales-are-Buying-These-3-Altcoins-for-October-Gains",
+      "pubDate": "2023-08-22T17:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DAI",
+        "UNI",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Litecoin and Filecoin Hope For A Positive Response As Pomerdoge Makes A Case For The Next Market Bull Run",
+      "link": "https://cryptopanic.com/news/18853526/Litecoin-and-Filecoin-Hope-For-A-Positive-Response-As-Pomerdoge-Makes-A-Case-For-The-Next-Market-Bull-Run",
+      "pubDate": "2023-08-22T16:58:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "UNI",
+        "FIL"
+      ]
+    },
+    {
+      "title": "Tangem Releases Next Batch of Shiba Inu Hardware Wallets",
+      "link": "https://cryptopanic.com/news/maker/18853392/Tangem-Releases-Next-Batch-of-Shiba-Inu-Hardware-Wallets",
+      "pubDate": "2023-08-22T15:58:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "El Salvador’s Bonds Attract Wall Street: Volcano Bonds Next?",
+      "link": "https://cryptopanic.com/news/18853420/El-Salvadors-Bonds-Attract-Wall-Street-Volcano-Bonds-Next",
+      "pubDate": "2023-08-22T15:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "El Salvador’s dollar bonds seduce Wall Street investors: can Volcano Bonds follow the success?",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BREAKING: FTX’s Sam Bankman-Fried Pleads “Not Guilty” In Latest Hearing",
+      "link": "https://cryptopanic.com/news/18853414/BREAKING-FTXs-Sam-Bankman-Fried-Pleads-Not-Guilty-In-Latest-Hearing",
+      "pubDate": "2023-08-22T15:34:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Shiba Inu Partner Announces New Batch of SHIB Cold Wallets Ready for Sale",
+      "link": "https://cryptopanic.com/news/maker/18853352/Shiba-Inu-Partner-Announces-New-Batch-of-SHIB-Cold-Wallets-Ready-for-Sale",
+      "pubDate": "2023-08-22T15:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Algorand’s ALGO token nosedives amid SEC classification and deflating DeFi activity",
+      "link": "https://cryptopanic.com/news/18853279/Algorands-ALGO-token-nosedives-amid-SEC-classification-and-deflating-DeFi-activity",
+      "pubDate": "2023-08-22T14:45:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ALGO"
+      ]
+    },
+    {
+      "title": "RBN, MASK, FLOW, GT, C98 Unlocks May Lead to Trade Opportunities",
+      "link": "https://cryptopanic.com/news/flow/18853300/RBN-MASK-FLOW-GT-C98-Unlocks-May-Lead-to-Trade-Opportunities",
+      "pubDate": "2023-08-22T14:41:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Vitalik Buterin cashes out over $1 million in ETH before ‘anticipated dip to $1,000′",
+      "link": "https://cryptopanic.com/news/18853252/Vitalik-Buterin-cashes-out-over-1-million-in-ETH-before-anticipated-dip-to-1000",
+      "pubDate": "2023-08-22T14:39:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "In a recent analysis, popular crypto market analyst Ali Martinez issued a cautionary note to cryptocurrency investors, highlighting the critical … Continued The post Vitalik Buterin cashes out over $1 million in ETH before ‘anticipated dip to $1,000′ appeared first on Finbold.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Rumored XRP Listing on Robinhood Sparks Community Speculation",
+      "link": "https://cryptopanic.com/news/18853160/Rumored-XRP-Listing-on-Robinhood-Sparks-Community-Speculation",
+      "pubDate": "2023-08-22T14:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripples of speculation suggest an insider's whisper about XRP's potential arrival on Robinhood, igniting fervor in the crypto community.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Cash (BCH) Price Falls Below $200: Is the Worst Over?",
+      "link": "https://cryptopanic.com/news/18853206/Bitcoin-Cash-BCH-Price-Falls-Below-200-Is-the-Worst-Over",
+      "pubDate": "2023-08-22T13:25:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Mantle Stakes $66M of Ether on Lido as Part of Treasury Management Strategy",
+      "link": "https://cryptopanic.com/news/18852909/Mantle-Stakes-66M-of-Ether-on-Lido-as-Part-of-Treasury-Management-Strategy",
+      "pubDate": "2023-08-22T12:49:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "MNT"
+      ]
+    },
+    {
+      "title": "CRV, APE, AVAX, MATIC, SHIB Suffer the Biggest 24H Losses",
+      "link": "https://cryptopanic.com/news/18852904/CRV-APE-AVAX-MATIC-SHIB-Suffer-the-Biggest-24H-Losses",
+      "pubDate": "2023-08-22T12:41:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "SHIB",
+        "MATIC",
+        "APE",
+        "CRV"
+      ]
+    },
+    {
+      "title": "Filecoin price prediction: is it safe to buy the FIL dip?",
+      "link": "https://cryptopanic.com/news/18852822/Filecoin-price-prediction-is-it-safe-to-buy-the-FIL-dip",
+      "pubDate": "2023-08-22T12:13:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "Legal expert: ‘Arrogant’ SEC lawyers learned ‘nothing’ from Ripple case",
+      "link": "https://cryptopanic.com/news/18852735/Legal-expert-Arrogant-SEC-lawyers-learned-nothing-from-Ripple-case",
+      "pubDate": "2023-08-22T11:43:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "While the cryptocurrency industry is waiting for the final outcome of the protracted court battle between Ripple and the United … Continued",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "AVAX Crash Incoming? Avalanche to Unlock Over 9.5 Million Tokens This Week",
+      "link": "https://cryptopanic.com/news/18852502/AVAX-Crash-Incoming-Avalanche-to-Unlock-Over-95-Million-Tokens-This-Week",
+      "pubDate": "2023-08-22T10:28:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "XRP, ADA Post Highest Losses Among Majors; Bitcoin Steady as 'Buy the Dip' Mentions Fade",
+      "link": "https://cryptopanic.com/news/18852481/XRP-ADA-Post-Highest-Losses-Among-Majors-Bitcoin-Steady-as-Buy-the-Dip-Mentions-Fade",
+      "pubDate": "2023-08-22T10:11:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin and ether held steady over the past 24 hours, data from CoinGecko shows, with few fundamental catalysts to lift markets.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Terra.money website frozen to prevent more phishing scams",
+      "link": "https://cryptopanic.com/news/18852300/Terramoney-website-frozen-to-prevent-more-phishing-scams",
+      "pubDate": "2023-08-22T09:05:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LUNC"
+      ]
+    },
+    {
+      "title": "What’s next for XRP as whales boost holdings to over $8 billion?",
+      "link": "https://cryptopanic.com/news/18852304/Whats-next-for-XRP-as-whales-boost-holdings-to-over-8-billion",
+      "pubDate": "2023-08-22T09:03:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "In a turbulent week for the cryptocurrency market, XRP (XRP), the popular altcoin, experienced a significant price decline, plummeting to … Continued",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Coinbase Acquires Equity Stake in Circle; Companies Reshape USDC’s Future",
+      "link": "https://cryptopanic.com/news/18852298/Coinbase-Acquires-Equity-Stake-in-Circle-Companies-Reshape-USDCs-Future",
+      "pubDate": "2023-08-22T09:00:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "DAI"
+      ]
+    },
+    {
+      "title": "LUNC News: Terra Luna Classic L1TF Prepares For v2.2.0 Core Upgrade",
+      "link": "https://cryptopanic.com/news/18852207/LUNC-News-Terra-Luna-Classic-L1TF-Prepares-For-v220-Core-Upgrade",
+      "pubDate": "2023-08-22T08:59:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LUNC"
+      ]
+    },
+    {
+      "title": "Polygon (MATIC) At June Lows Again – Prospects For Bullish Recovery?",
+      "link": "https://cryptopanic.com/news/flow/18852241/Polygon-MATIC-At-June-Lows-Again-Prospects-For-Bullish-Recovery",
+      "pubDate": "2023-08-22T08:35:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "MATIC"
+      ]
+    },
+    {
+      "title": "Coinbase and Circle Dissolve Consortium Partnership as USDC Integrates with 6 New Blockchains",
+      "link": "https://cryptopanic.com/news/18852034/Coinbase-and-Circle-Dissolve-Consortium-Partnership-as-USDC-Integrates-with-6-New-Blockchains",
+      "pubDate": "2023-08-22T06:51:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "DOT",
+        "ATOM"
+      ]
+    },
+    {
+      "title": "Binance Coin (BNB) Woes Continue as Liquidation Fears Mount",
+      "link": "https://cryptopanic.com/news/18851948/Binance-Coin-BNB-Woes-Continue-as-Liquidation-Fears-Mount",
+      "pubDate": "2023-08-22T05:15:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BNB",
+        "BUSD"
+      ]
+    },
+    {
+      "title": "Why FTX deserves a second chance",
+      "link": "https://cryptopanic.com/news/18851829/Why-FTX-deserves-a-second-chance",
+      "pubDate": "2023-08-22T03:02:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RUNE Beyond Swaps: THORChain Introduces New Lending Protocol",
+      "link": "https://cryptopanic.com/news/18851730/RUNE-Beyond-Swaps-THORChain-Introduces-New-Lending-Protocol",
+      "pubDate": "2023-08-22T01:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "AVAX",
+        "LTC",
+        "RUNE"
+      ]
+    }
+  ]
+}

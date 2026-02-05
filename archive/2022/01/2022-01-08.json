@@ -1,0 +1,830 @@
+{
+  "date": "2022-01-08",
+  "fetchedAt": "2026-02-05T07:27:06.660Z",
+  "articleCount": 55,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @energywebx: Uruguay's grid operator, @UTE_ComCorp, and The Ministry of Industry, Energy and Mining @MIEM_Uruguay, have developed a Rene…",
+      "link": "https://cryptopanic.com/news/13909403/RT-energywebx-Uruguays-grid-operator-UTE_ComCorp-and-The-Ministry-of-Industry-Energy-and-Mining-MIEM_Uruguay-have-developed-a-Rene",
+      "pubDate": "2022-01-08T23:43:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "EWT"
+      ]
+    },
+    {
+      "title": "Bitcoin and Ethereum Primed To Rise to These Levels in 2022, According to Bloomberg Strategist Mike McGlone",
+      "link": "https://cryptopanic.com/news/ethereum/13907374/Bitcoin-and-Ethereum-Primed-To-Rise-to-These-Levels-in-2022-According-to-Bloomberg-Strategist-Mike-McGlone",
+      "pubDate": "2022-01-08T23:05:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bloomberg’s senior commodity strategist thinks both Bitcoin (BTC) and Ethereum (ETH) are primed to surge in 2022 despite the crypto market’s recent struggles. In a new analysis, Mike McGlone says both BTC and ETH have solid bases to build on. He predicts they will remain dominant among cryptos in 2022, with Bitcoin moving toward $100,000 […] The post Bitcoin and Ethereum Primed To Rise to These Levels in 2022, According to Bloomberg Strategist Mike McGlone appeared first on The Daily Hodl.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 36,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "HBAR has overtaken $DOT to be ranked #4 on Blocknomy",
+      "link": "https://cryptopanic.com/news/13907207/HBAR-has-overtaken-DOT-to-be-ranked-4-on-Blocknomy",
+      "pubDate": "2022-01-08T22:40:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "DOT",
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Only about 130 tickets remain! Let’s sell this out and get two people some $BSV coins! Only $1 to get in!…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/13909215/Only-about-130-tickets-remain-Lets-sell-this-out-and-get-two-people-some-BSV-coins-Only-1-to-get-in",
+      "pubDate": "2022-01-08T22:32:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BSV",
+        "DCD"
+      ]
+    },
+    {
+      "title": "Shiba Inu market cap shrunk by $3.5 billion in a week; What’s next for SHIB?",
+      "link": "https://cryptopanic.com/news/shiba-inu/13907057/Shiba-Inu-market-cap-shrunk-by-35-billion-in-a-week-Whats-next-for-SHIB",
+      "pubDate": "2022-01-08T21:28:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "After surging in popularity and value in 2021, meme cryptocurrency Shiba Inu has extended losses in 2022, with the token... Continue reading",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 31
+      }
+    },
+    {
+      "title": "Top Crypto Analyst Outlines Path Forward for Aave, Says Bottom Close for Bitcoin Before BTC Surges by Over 130%",
+      "link": "https://cryptopanic.com/news/13907155/Top-Crypto-Analyst-Outlines-Path-Forward-for-Aave-Says-Bottom-Close-for-Bitcoin-Before-BTC-Surges-by-Over-130",
+      "pubDate": "2022-01-08T21:00:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A popular crypto analyst is offering his opinion on what comes next for Bitcoin (BTC) and decentralized finance protocol Aave (AAVE). The analyst pseudonymously known as Smart Contracter tells his 199,700 Twitter followers that the native token of the Aave platform has potentially made a higher low, signaling a possible rebound. The cryptocurrency trader says that […]",
+      "currencies": [
+        "BTC",
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Just a little time left to enter our @phantombunch contest. If you don't get a chance to enter you won't want to m…",
+      "link": "https://cryptopanic.com/news/13944037/Just-a-little-time-left-to-enter-our-phantombunch-contest-If-you-dont-get-a-chance-to-enter-you-wont-want-to-m?mtm_campaign=API-OFA",
+      "pubDate": "2022-01-08T20:46:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SCR"
+      ]
+    },
+    {
+      "title": "RT @heyrutvik: Thank you for the present, @numerai! Looking forward to reading the book and applying its insights to improve my models. htt…",
+      "link": "https://cryptopanic.com/news/13906801/RT-heyrutvik-Thank-you-for-the-present-numerai-Looking-forward-to-reading-the-book-and-applying-its-insights-to-improve-my-models-htt",
+      "pubDate": "2022-01-08T19:40:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NMR"
+      ]
+    },
+    {
+      "title": "$ADA: SundaeSwap Team Tells Cardano Community What To Expect After Mainnet Launch",
+      "link": "https://cryptopanic.com/news/cardano/13906760/ADA-SundaeSwap-Team-Tells-Cardano-Community-What-To-Expect-After-Mainnet-Launch",
+      "pubDate": "2022-01-08T19:02:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "On Friday (January 7), SundaeSwap Labs, the team behind SundaeSwap, SundaeSwap, which calls itself “the sweetest decentralized exchange on Cardano”, told its community about “some of the expected operational constraints and limitations that the blockchain and the DEX will exhibit on opening day and through the first few weeks after launch.” What Is SundaeSwap ($SUNDAE)? […]",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 30,
+        "negative": 7
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Probably nothing 🤔",
+      "link": "https://cryptopanic.com/news/13911188/Probably-nothing",
+      "pubDate": "2022-01-08T18:33:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARRR"
+      ]
+    },
+    {
+      "title": "Web3 “Reminiscent of Early Internet Days” Says Signal Founder",
+      "link": "https://cryptopanic.com/news/ethereum/13906635/Web3-Reminiscent-of-Early-Internet-Days-Says-Signal-Founder",
+      "pubDate": "2022-01-08T18:31:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Moxie Marlinspike (pictured), the founder of Signal chatapp with its 40 million monthly active users and previously head of security at Twitter, has stated “nerds like me are excited to...",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "This Is Why Cosmos, Fantom and Near Are Surging Amid a Correction, Says Crypto Hedge Fund CEO Zhu Su",
+      "link": "https://cryptopanic.com/news/near/13906575/This-Is-Why-Cosmos-Fantom-and-Near-Are-Surging-Amid-a-Correction-Says-Crypto-Hedge-Fund-CEO-Zhu-Su",
+      "pubDate": "2022-01-08T17:55:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Three Arrows Capital CEO Zhu Su is offering his opinion on why Cosmos (ATOM), Fantom (FTM) and Near (NEAR) are appreciating as the rest of the market trends downwards. Su says in a series of tweets that the three digital assets are among the cryptocurrencies that macro investors own the least amount of. According to […]",
+      "currencies": [
+        "NEAR",
+        "ATOM",
+        "FTM"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polygon (MATIC) Gas Fees Rocketed Due to This Game",
+      "link": "https://cryptopanic.com/news/13906477/Polygon-MATIC-Gas-Fees-Rocketed-Due-to-This-Game",
+      "pubDate": "2022-01-08T17:34:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Users of decentralized applications on Polygon (MATIC) blockchain are ready to sign petition to prevent Sunflower Farmers from eating all its resources",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano may be facing a lull in terms of price action, but here’s why it still has hope",
+      "link": "https://cryptopanic.com/news/cardano/13906472/Cardano-may-be-facing-a-lull-in-terms-of-price-action-but-heres-why-it-still-has-hope",
+      "pubDate": "2022-01-08T17:30:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The Cardano blockchain has evolved significantly over the years. It is one of the most popular green cryptocurrencies on the market. (It uses the proof of stake blockchain verification system, which reduces processing power requirement and thus energy use. Therefore, instead of requiring heavy mining, the system chooses users with larger stakes to verify transactions […]",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "As you know, @BellaProtocol always cherishes friendships with our Turkish brothers and sisters! We are excited to s…",
+      "link": "https://cryptopanic.com/news/13908510/As-you-know-BellaProtocol-always-cherishes-friendships-with-our-Turkish-brothers-and-sisters-We-are-excited-to-s",
+      "pubDate": "2022-01-08T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BEL"
+      ]
+    },
+    {
+      "title": "RT @OKExInsights: As Congress prepares to examine the environmental impact of #Bitcoin mining, a report from @Chainalysis indicates that le…",
+      "link": "https://cryptopanic.com/news/13910938/RT-OKExInsights-As-Congress-prepares-to-examine-the-environmental-impact-of-Bitcoin-mining-a-report-from-Chainalysis-indicates-that-le",
+      "pubDate": "2022-01-08T16:52:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ]
+    },
+    {
+      "title": "reminder : Tomorrow to celebrate mine, bitcoins and z's birthday, I am airdropping 1 BSV to the top 25 $DCD holder…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/13909217/reminder-Tomorrow-to-celebrate-mine-bitcoins-and-zs-birthday-I-am-airdropping-1-BSV-to-the-top-25-DCD-holder",
+      "pubDate": "2022-01-08T16:51:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV",
+        "DCD"
+      ]
+    },
+    {
+      "title": "Welcome @MaitlandNiles !",
+      "link": "https://cryptopanic.com/news/13909220/Welcome-MaitlandNiles",
+      "pubDate": "2022-01-08T16:25:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XDB"
+      ]
+    },
+    {
+      "title": "RT @SimonCocking: Verge #Crypto, Quantum, Casino Coins, and #Cyber Insights with @itsmwittenberg and Mihael Radoslovic by @CryptoHipster @…",
+      "link": "https://cryptopanic.com/news/13906268/RT-SimonCocking-Verge-Crypto-Quantum-Casino-Coins-and-Cyber-Insights-with-itsmwittenberg-and-Mihael-Radoslovic-by-CryptoHipster",
+      "pubDate": "2022-01-08T16:25:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XVG"
+      ]
+    },
+    {
+      "title": "6.5 Billion SHIB Added by Crypto Whales to Their Holdings Within One Hour",
+      "link": "https://cryptopanic.com/news/shiba-inu/13906233/65-Billion-SHIB-Added-by-Crypto-Whales-to-Their-Holdings-Within-One-Hour",
+      "pubDate": "2022-01-08T16:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Whales keep purchasing SHIB, while the meme cryptocurrency is declining; major analyst thinks SHIB might “head into the unknown” if it goes below this crucial level",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 6
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "60 tickets sold! 140 remain available! Chance to win = $1 each TWO winners will be revealed to win physical BSV coi…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/13909218/60-tickets-sold-140-remain-available-Chance-to-win-1-each-TWO-winners-will-be-revealed-to-win-physical-BSV-coi",
+      "pubDate": "2022-01-08T15:30:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV",
+        "DCD"
+      ]
+    },
+    {
+      "title": "Will this time be different? Bitcoin eyes drop to $35K as BTC price paints ‘death cross’",
+      "link": "https://cryptopanic.com/news/bitcoin/13906116/Will-this-time-be-different-Bitcoin-eyes-drop-to-35K-as-BTC-price-paints-death-cross",
+      "pubDate": "2022-01-08T15:21:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "While recent bearish crossovers between Bitcoin‘s 50-day and 200-day exponential moving averages failed to push prices lower, this time could be different.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 27,
+        "negative": 29
+      }
+    },
+    {
+      "title": "Our core team members @itsmwittenberg and @mihael_cm talk $XVG, @VoiceLife_inc, @HypersphereTech and more for…",
+      "link": "https://cryptopanic.com/news/13906093/Our-core-team-members-itsmwittenberg-and-mihael_cm-talk-XVG-VoiceLife_inc-HypersphereTech-and-more-for",
+      "pubDate": "2022-01-08T15:18:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XVG"
+      ]
+    },
+    {
+      "title": "ICYMI: Check out John Gleeson's, COO @Storj article in @InsideBigData1 on Decentralized Storage…",
+      "link": "https://cryptopanic.com/news/13906063/ICYMI-Check-out-John-Gleesons-COO-Storj-article-in-InsideBigData1-on-Decentralized-Storage",
+      "pubDate": "2022-01-08T15:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STORJ"
+      ]
+    },
+    {
+      "title": "Nexo Co-Founder Predicts Bitcoin Reaching $100K by Mid 2022",
+      "link": "https://cryptopanic.com/news/13905886/Nexo-Co-Founder-Predicts-Bitcoin-Reaching-100K-by-Mid-2022",
+      "pubDate": "2022-01-08T13:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The co-founder of crypto lending platform Nexo has believes that Bitcoin will reach $100K by mid 2022 due to the influence of institutional treasuries and an influx of cheap money by the Fed. Speaking in an interview with CNBC’s “Street SIgns Asia”, Nexo’s Antoni Trenchev said that Bitcoin could see further upside and surge as […]",
+      "currencies": [
+        "BTC",
+        "NEXO"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Thanks for everyone that entered. We'll announce the lucky winner next week! #DigitalBits",
+      "link": "https://cryptopanic.com/news/13909221/Thanks-for-everyone-that-entered-Well-announce-the-lucky-winner-next-week-DigitalBits",
+      "pubDate": "2022-01-08T13:27:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XDB"
+      ]
+    },
+    {
+      "title": "Searches For “Sell Ethereum” Skyrockets 1000% In 24 Hours As Liquidity Supernova Turns Negative",
+      "link": "https://cryptopanic.com/news/ethereum/13905872/Searches-For-Sell-Ethereum-Skyrockets-1000-In-24-Hours-As-Liquidity-Supernova-Turns-Negative",
+      "pubDate": "2022-01-08T13:26:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The crypto market is currently experiencing a hit, and Ethereum is among the most affected. The crypto asset has dropped by 5% in price over a 24-hour period, with a 7-day loss of close to 15%. At the time of this writing. This drop has effectively taken the price all the way down to the […]",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 27,
+        "negative": 17
+      }
+    },
+    {
+      "title": "This Ethereum Competitor Could More Than Double Its Price in Coming Months, According to Coin Bureau",
+      "link": "https://cryptopanic.com/news/13905799/This-Ethereum-Competitor-Could-More-Than-Double-Its-Price-in-Coming-Months-According-to-Coin-Bureau",
+      "pubDate": "2022-01-08T12:45:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The host of popular crypto channel Coin Bureau is exploring if veteran altcoin Tezos (XTZ) has what it takes to recapture previous all-time highs during the current bull run. In a new video, the analyst known as Guy tells his 1.84 million YouTube subscribers that the Ethereum (ETH) competitor’s built-in adaptability is key to its […]",
+      "currencies": [
+        "ETH",
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "(1/2)Since the last vote on Transfer Fee, the whole market has gone through a lot, and Stabilize has kept running p…",
+      "link": "https://cryptopanic.com/news/13911800/12Since-the-last-vote-on-Transfer-Fee-the-whole-market-has-gone-through-a-lot-and-Stabilize-has-kept-running-p",
+      "pubDate": "2022-01-08T12:11:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SUSD"
+      ]
+    },
+    {
+      "title": "Top ETH Whales Grab MATIC, LINK, FTX as Market Remains in Decline",
+      "link": "https://cryptopanic.com/news/chainlink/13905637/Top-ETH-Whales-Grab-MATIC-LINK-FTX-as-Market-Remains-in-Decline",
+      "pubDate": "2022-01-08T11:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Recent analytics data shows that some of the biggest ETH whales have again acquired large amounts of MATIC, LINK and FTX as the crypto market remains in decline",
+      "currencies": [
+        "ETH",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Buying The Dip, Cardano DEX, What Are Millionaires Buying?, No Bill & Burn Shiba Burn",
+      "link": "https://cryptopanic.com/news/cardano/13905590/Buying-The-Dip-Cardano-DEX-What-Are-Millionaires-Buying-No-Bill-Burn-Shiba-Burn",
+      "pubDate": "2022-01-08T10:45:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Protect And Store Your Crypto With A Ledger Nano: https://www.ledger.com?r=8af3ed38d3b7 ------------------------------------------- Become A Patreon! https://www.patreon.com/TheModernInvestor ------------------------------------------- MY SECOND CHANNEL: https://www.youtube.com/channel/UCH9HlTrjyLmLRS0iE1P4rrg ----------------------------------------- Check Out My NFTs - New Pieces Drop Daily! https://rarible.com/tmi ------------------------------------------ Open An Account With Binance! https:",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @CBoisss: Gm #Vergefam, especially those who keep building and supporting a project that has never diluted its core values and is still…",
+      "link": "https://cryptopanic.com/news/13905554/RT-CBoisss-Gm-Vergefam-especially-those-who-keep-building-and-supporting-a-project-that-has-never-diluted-its-core-values-and-is-still",
+      "pubDate": "2022-01-08T10:16:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XVG"
+      ]
+    },
+    {
+      "title": "Whale Splurges $36,500,000 on Ethereum-Based Altcoin – Here’s What the Largest Crypto Investors on Earth Are Up To",
+      "link": "https://cryptopanic.com/news/ethereum/13905563/Whale-Splurges-36500000-on-Ethereum-Based-Altcoin-Heres-What-the-Largest-Crypto-Investors-on-Earth-Are-Up-To",
+      "pubDate": "2022-01-08T10:15:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Some of the world’s largest Ethereum (ETH) whales are gobbling up hundreds of millions of dollars worth of altcoins as the digital assets industry experiences a widespread pullback. According to whale-surveying robot WhaleStats, Ethereum whales are currently accumulating layer-2 ETH solution Polygon (MATIC), crypto exchange FTX Token (FTT), oracle network Chainlink (LINK), decentralized...",
+      "currencies": [
+        "ETH",
+        "MATIC",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano Emerging As The ‘Go-To Green’ Blockchain Following Samsung’s Groundbreaking Foray",
+      "link": "https://cryptopanic.com/news/cardano/13905540/Cardano-Emerging-As-The-Go-To-Green-Blockchain-Following-Samsungs-Groundbreaking-Foray",
+      "pubDate": "2022-01-08T10:09:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Electronics giant Samsung recently announced that it’s teaming up with Cardano-based reforestation project, Veritree, to plant 2 million trees as part of its efforts to combat climate change. During the 2022 Consumer Electronics Show, Samsung Electronics America officially announced the partnership with Veritree to plant 2 million mangrove trees near the Mahajanga region of Madagascar, […]",
+      "currencies": [
+        "ADA",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 46,
+        "negative": 8
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BTC, ETH, BNB, ADA, SOL Face Extreme Bearishness: Report",
+      "link": "https://cryptopanic.com/news/solana/13905539/BTC-ETH-BNB-ADA-SOL-Face-Extreme-Bearishness-Report",
+      "pubDate": "2022-01-08T10:04:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Recently published analytics report shows that some of the top ten cryptocurrencies are facing strong bearish sentiment and FUD",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Here is why Ethereum’s dominance in DeFi is falling",
+      "link": "https://cryptopanic.com/news/avalanche-2/13905510/Here-is-why-Ethereums-dominance-in-DeFi-is-falling",
+      "pubDate": "2022-01-08T09:45:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum is undoubtedly the leading blockchain in DeFi, but this could be about to change as analysts at JPMorgan have noted that the dominance of the asset in the space could already be fading.",
+      "currencies": [
+        "ETH",
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "103.2 Million SHIB Burned in Single Transfer by This Company: Details",
+      "link": "https://cryptopanic.com/news/shiba-inu/13905430/1032-Million-SHIB-Burned-in-Single-Transfer-by-This-Company-Details",
+      "pubDate": "2022-01-08T09:06:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Over 103 million SHIB destroyed in just one transaction by one of the companies that began to destroy the Shiba Inu supply last year",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "GM! WAGMI! Don't panic! Now is a good time to build and buy! I am going to buy 100 more #BTC! @nayibbukele @saylor",
+      "link": "https://cryptopanic.com/news/13904332/GM-WAGMI-Dont-panic-Now-is-a-good-time-to-build-and-buy-I-am-going-to-buy-100-more-BTC-nayibbukele-saylor",
+      "pubDate": "2022-01-08T08:23:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "-",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Trader Who Called Bitcoin’s 2018 Collapse Warns BTC Has Once Again Violated Its Parabolic Advance",
+      "link": "https://cryptopanic.com/news/bitcoin/13904363/Trader-Who-Called-Bitcoins-2018-Collapse-Warns-BTC-Has-Once-Again-Violated-Its-Parabolic-Advance",
+      "pubDate": "2022-01-08T08:04:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Longtime analyst and trader Peter Brandt says Bitcoin (BTC) has broken out of its parabolic advance. After taking steep price dives on Wednesday and Thursday, BTC is trading at $41,698.72 at time of writing, down more than 17% from where it was priced one month ago. Tweets Brandt, “I saw the violation of the parabolic […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Thanks for including #Bakeryswap as 1 of the Most Popular #DeFi App!",
+      "link": "https://cryptopanic.com/news/13908451/Thanks-for-including-Bakeryswap-as-1-of-the-Most-Popular-DeFi-App",
+      "pubDate": "2022-01-08T07:28:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BAKE"
+      ]
+    },
+    {
+      "title": "RT @OKEx: What would be your log-in pattern 🤫?",
+      "link": "https://cryptopanic.com/news/13903044/RT-OKEx-What-would-be-your-log-in-pattern",
+      "pubDate": "2022-01-08T07:26:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ]
+    },
+    {
+      "title": "RT @IAustinCrypto: Many of the NFT projects lack utility and the projects like blocktopia, @pixelverse1 are introducing their NFTs with var…",
+      "link": "https://cryptopanic.com/news/13903377/RT-IAustinCrypto-Many-of-the-NFT-projects-lack-utility-and-the-projects-like-blocktopia-pixelverse1-are-introducing-their-NFTs-with-var?mtm_campaign=API-OFA",
+      "pubDate": "2022-01-08T07:22:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "PIXEL"
+      ]
+    },
+    {
+      "title": "RT @lebron_gains: Want to give my congrats to @animalia for their successful #INOs on @pixelverse1 &amp; @xionfinance. Well done to the team…",
+      "link": "https://cryptopanic.com/news/13903378/RT-lebron_gains-Want-to-give-my-congrats-to-animalia-for-their-successful-INOs-on-pixelverse1-amp-xionfinance-Well-done-to-the-team?mtm_campaign=API-OFA",
+      "pubDate": "2022-01-08T07:22:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PIXEL"
+      ]
+    },
+    {
+      "title": "Ava Labs and EV maker Togg to build smart contract-based mobility services",
+      "link": "https://cryptopanic.com/news/avalanche-2/13898854/Ava-Labs-and-EV-maker-Togg-to-build-smart-contract-based-mobility-services",
+      "pubDate": "2022-01-08T05:01:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The partnership aims to fast-track Togg’s Use-Case Mobility initiative, which involves producing cars with more functionalities as compared with traditional EVs.",
+      "currencies": [
+        "AVAX",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "WE DID IT!! Truly amazing to see what the #CardanoCommunity achieved together ️ The reward for your contributio…",
+      "link": "https://cryptopanic.com/news/cardano/13899879/WE-DID-IT-Truly-amazing-to-see-what-the-CardanoCommunity-achieved-together-The-reward-for-your-contributio",
+      "pubDate": "2022-01-08T04:33:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "-",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @NoahCitron: Just read the @feiprotocol turbo contracts and I'm so bullish. This is going to be a new DAO primitive.",
+      "link": "https://cryptopanic.com/news/13904578/RT-NoahCitron-Just-read-the-feiprotocol-turbo-contracts-and-Im-so-bullish-This-is-going-to-be-a-new-DAO-primitive",
+      "pubDate": "2022-01-08T04:18:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FEI",
+        "TRIBE"
+      ]
+    },
+    {
+      "title": "TIKI Dash V1.0.5 Update Announcement - TIKI Staking Vault (from BankerDoge Platform) is now directly accessible v…",
+      "link": "https://cryptopanic.com/news/dash/13904505/TIKI-Dash-V105-Update-Announcement-TIKI-Staking-Vault-from-BankerDoge-Platform-is-now-directly-accessible-v",
+      "pubDate": "2022-01-08T03:48:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DASH",
+        "TIKI"
+      ]
+    },
+    {
+      "title": "1/ Coin98 partners with @auroraisnear to bring 1M+ users to an Ethereum Virtual Machine (#EVM) on the @NEARProtocol…",
+      "link": "https://cryptopanic.com/news/13900043/1-Coin98-partners-with-auroraisnear-to-bring-1M-users-to-an-Ethereum-Virtual-Machine-EVM-on-the-NEARProtocol",
+      "pubDate": "2022-01-08T03:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "C98"
+      ]
+    },
+    {
+      "title": "I am giving away 5 tickets for the physical $BSV coin draw! Drop your relayx paymail below! Two people will win a c…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/13900583/I-am-giving-away-5-tickets-for-the-physical-BSV-coin-draw-Drop-your-relayx-paymail-below-Two-people-will-win-a-c",
+      "pubDate": "2022-01-08T03:08:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BSV",
+        "DCD"
+      ]
+    },
+    {
+      "title": "🤩Wow! Last chance to be part of the #CardanoForest initiative! C’mon #CardanoCommunity let’s get our forest filled…",
+      "link": "https://cryptopanic.com/news/cardano/13899880/Wow-Last-chance-to-be-part-of-the-CardanoForest-initiative-Cmon-CardanoCommunity-lets-get-our-forest-filled",
+      "pubDate": "2022-01-08T02:24:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "-",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Top Dog Or A Meme Joke: Shiba Inu Slumps 5% As Whales Buy More",
+      "link": "https://cryptopanic.com/news/dogecoin/13898592/Top-Dog-Or-A-Meme-Joke-Shiba-Inu-Slumps-5-As-Whales-Buy-More",
+      "pubDate": "2022-01-08T02:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Shiba Inu first appeared on the scene as a joke-coin in 2020, aimed squarely at the top dog of the time Dogecoin. The meme coins uccessfully marketed its way to the position while avoiding rumors of a fraud and what appears to be a slow but steady start Shiba Inu Slumps 5% At press time, SHIB was down 5%, along with DOGE and other large cap crypto currencies, as the global cryptocurrency...",
+      "currencies": [
+        "ETH",
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    },
+    {
+      "title": "50/200 tickets have been sold! for $1 you could win a physical #bitcoin $BSV coin! There will be two winners in the…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/13900585/50200-tickets-have-been-sold-for-1-you-could-win-a-physical-bitcoin-BSV-coin-There-will-be-two-winners-in-the",
+      "pubDate": "2022-01-08T01:24:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV",
+        "DCD"
+      ]
+    },
+    {
+      "title": "Polkadot ($DOT) Is ‘Growing Faster Than Ethereum Did at Similar Points in Its History’",
+      "link": "https://cryptopanic.com/news/polkadot/13898549/Polkadot-DOT-Is-Growing-Faster-Than-Ethereum-Did-at-Similar-Points-in-Its-History",
+      "pubDate": "2022-01-08T01:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "From the global economy slowly starting to come back to life, only for it to shut down once again in the wake of Omicron rearing its ugly head in 2021, the year has had crypto investors all over the globe on the edge of their seats. While last year did see Bitcoin ($BTC) and Ethereum […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 63,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We're live! Come join us for the first #LiveAtFive of the year!",
+      "link": "https://cryptopanic.com/news/13898505/Were-live-Come-join-us-for-the-first-LiveAtFive-of-the-year",
+      "pubDate": "2022-01-08T01:01:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DIVI"
+      ]
+    },
+    {
+      "title": "Smart contracts 2.0 online is here!",
+      "link": "https://cryptopanic.com/news/13898504/Smart-contracts-20-online-is-here",
+      "pubDate": "2022-01-08T01:00:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    }
+  ]
+}

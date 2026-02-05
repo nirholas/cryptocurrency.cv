@@ -1,0 +1,26 @@
+{
+  "date": "2018-03-29",
+  "fetchedAt": "2026-02-05T07:27:06.812Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "The Death of Altcoins? Lightning Network Growing Rapidly, Nodes Now Exceed Those of Bitcoin Cash",
+      "link": "https://cryptopanic.com/news/1506939/The-Death-of-Altcoins-Lightning-Network-Growing-Rapidly-Nodes-Now-Exceed-Those-of-Bitcoin-Cash",
+      "pubDate": "2018-03-29T01:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

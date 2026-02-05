@@ -1,0 +1,789 @@
+{
+  "date": "2021-03-16",
+  "fetchedAt": "2026-02-05T07:27:06.805Z",
+  "articleCount": 52,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Yeah, on it, need to update the market cap.",
+      "link": "https://cryptopanic.com/news/11633752/Yeah-on-it-need-to-update-the-market-cap",
+      "pubDate": "2021-03-16T23:30:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QKC"
+      ]
+    },
+    {
+      "title": "RT @8848Community: 8848 community first round of give away! Like, follow, retweet and tag 3 friends, you might be able to win up to 800 usd…",
+      "link": "https://cryptopanic.com/news/11633753/RT-8848Community-8848-community-first-round-of-give-away-Like-follow-retweet-and-tag-3-friends-you-might-be-able-to-win-up-to-800-usd",
+      "pubDate": "2021-03-16T23:26:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QKC"
+      ]
+    },
+    {
+      "title": "Altcoins spike to new highs while Bitcoin bulls aim to recapture $57K",
+      "link": "https://cryptopanic.com/news/11630859/Altcoins-spike-to-new-highs-while-Bitcoin-bulls-aim-to-recapture-57K",
+      "pubDate": "2021-03-16T22:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Terra (LUNA), Basic Attention Token and Cardano spiked to new highs as Bitcoin and Ethereum attempted to recover from their recent correction.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "BAT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Join Travis and Justin tomorrow for an AMA with Cointelegraph, discussing all things ARK, upcoming product releases, and network upgrades.",
+      "link": "https://cryptopanic.com/news/11634791/Join-Travis-and-Justin-tomorrow-for-an-AMA-with-Cointelegraph-discussing-all-things-ARK-upcoming-product-releases-and-network-upgrades",
+      "pubDate": "2021-03-16T21:58:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Polkadot cross-chain asset platform Konomi closes $5M raise ahead of IDO",
+      "link": "https://cryptopanic.com/news/polkadot/11630800/Polkadot-cross-chain-asset-platform-Konomi-closes-5M-raise-ahead-of-IDO",
+      "pubDate": "2021-03-16T21:35:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "CryptoNinjas » Polkadot cross-chain asset platform Konomi closes $5M raise ahead of IDO Konomi Network, a full-suite asset management solution for cross-chain crypto-assets, today announced it has successfully closed a $5M raise in three rounds of investment to deliver on its product roadmap for improving lending, trading, and asset management in the Polkadot ecosystem. The $5 million...",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Here is a quick tutorial on how to lend USDC using our protocol",
+      "link": "https://cryptopanic.com/news/11632737/Here-is-a-quick-tutorial-on-how-to-lend-USDC-using-our-protocol",
+      "pubDate": "2021-03-16T21:21:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "MFT"
+      ]
+    },
+    {
+      "title": "MGT Solar (PTY) Launches an innovative new Project (MEGATECH MGT TOKEN) combining Blockchain with Sustainable Green Energy Solutions!!",
+      "link": "https://cryptopanic.com/news/11630687/MGT-Solar-PTY-Launches-an-innovative-new-Project-MEGATECH-MGT-TOKEN-combining-Blockchain-with-Sustainable-Green-Energy-Solutions",
+      "pubDate": "2021-03-16T20:31:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "VeChain Targets Highs After Increased Profit-Taking",
+      "link": "https://cryptopanic.com/news/11630720/VeChain-Targets-Highs-After-Increased-Profit-Taking",
+      "pubDate": "2021-03-16T20:27:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "While the cryptocurrency market kicked off the new weekly trading session on a negative note, VeChain stole the spotlight by rising to a new all-time high slightly above $0.08. VeChain Is on Track for Further Gains VeChain broke out of an inverse head-and-shoulders formation on Feb. 9. This pivotal moment occurred after a two-year-long consolidation period, adding more significance...",
+      "currencies": [
+        "BTC",
+        "VET"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We are happy to announce that Raydium Protocol, an on-chain order book AMM built on Solana, is coming to MarketSquare!",
+      "link": "https://cryptopanic.com/news/11635523/We-are-happy-to-announce-that-Raydium-Protocol-an-on-chain-order-book-AMM-built-on-Solana-is-coming-to-MarketSquare",
+      "pubDate": "2021-03-16T19:23:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "DEX aggregator 1inch lowers fees with v3 protocol launch",
+      "link": "https://cryptopanic.com/news/uniswap/11630571/DEX-aggregator-1inch-lowers-fees-with-v3-protocol-launch",
+      "pubDate": "2021-03-16T19:05:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "CryptoNinjas » DEX aggregator 1inch lowers fees with v3 protocol launch 1inch, a decentralized exchange aggregator that sources liquidity from various exchanges, today announced the upgrade to v3 of its DEX aggregation protocol. The main improvement in version 3 (v3) is the ability to substantially reduce gas fees thanks to assembly code optimization. v3 introduces lower transaction...",
+      "currencies": [
+        "UNI",
+        "1INCH"
+      ],
+      "votes": {
+        "positive": 22,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron Releases Details of New NFT Standard",
+      "link": "https://cryptopanic.com/news/11630491/Tron-Releases-Details-of-New-NFT-Standard",
+      "pubDate": "2021-03-16T18:16:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Elon Musk Open to Accept 420M DOGE for His NFT Music Track",
+      "link": "https://cryptopanic.com/news/dogecoin/11630487/Elon-Musk-Open-to-Accept-420M-DOGE-for-His-NFT-Music-Track",
+      "pubDate": "2021-03-16T18:01:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "In a March 15 tweet, Tesla CEO Elon Musk announced the sale of his new Techno music track produced as a non-fungible token (NFT). Another NFT Craze The track, which is about NFTs, features an animated gold trophy inscribed with “vanity trophy” and “HODL.” The musical non-fungible token also displays a moon with Shiba InuRead More",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Looking for Mod",
+      "link": "https://cryptopanic.com/news/11630358/Looking-for-Mod",
+      "pubDate": "2021-03-16T17:31:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Introducing the 1inch Aggregation Protocol v3",
+      "link": "https://cryptopanic.com/news/11630351/Introducing-the-1inch-Aggregation-Protocol-v3",
+      "pubDate": "2021-03-16T17:19:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The latest upgrade to the fastest and most advanced DEX aggregation protocol in the market. As we continue to work hard on offering users the best rates and the fastest trades, we are thrilled to unveil version 3 of the 1inch Aggregation Protocol, which facilitates lower gas fees. Lower transaction fees with v3 Transaction fees […]",
+      "currencies": [
+        "1INCH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The Reef teams official response to this saga.",
+      "link": "https://cryptopanic.com/news/11630303/The-Reef-teams-official-response-to-this-saga",
+      "pubDate": "2021-03-16T17:02:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "REEF"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tezos NFT Marketplace Introduces Digital Art Collection: Details",
+      "link": "https://cryptopanic.com/news/11630324/Tezos-NFT-Marketplace-Introduces-Digital-Art-Collection-Details",
+      "pubDate": "2021-03-16T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "Tezos (XTZ) shared updates on Hic et Nunc, its marketplace for non-fungible tokens",
+      "currencies": [
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "This is huge! Enj partnered to tokenise dance moves for video games",
+      "link": "https://cryptopanic.com/news/11630258/This-is-huge-Enj-partnered-to-tokenise-dance-moves-for-video-games",
+      "pubDate": "2021-03-16T16:40:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "ENJ"
+      ],
+      "votes": {
+        "positive": 20,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Open letter to NuCypher team from a WorkLock member",
+      "link": "https://cryptopanic.com/news/11630175/Open-letter-to-NuCypher-team-from-a-WorkLock-member",
+      "pubDate": "2021-03-16T16:02:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "New version of 1inch’s DEX aggregator makes it cheaper than Uniswap",
+      "link": "https://cryptopanic.com/news/uniswap/11630194/New-version-of-1inchs-DEX-aggregator-makes-it-cheaper-than-Uniswap",
+      "pubDate": "2021-03-16T16:01:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Using 1inch’s new aggregator saves gas over using Uniswap or other DEXs directly.",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum at a crossroads: Ether community turmoil over miner reward fees",
+      "link": "https://cryptopanic.com/news/ethereum/11630158/Ethereum-at-a-crossroads-Ether-community-turmoil-over-miner-reward-fees",
+      "pubDate": "2021-03-16T15:55:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ether miners coming out in force against the Ethereum Improvement Proposal that can slash the reward ratio by over 50%.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "XRP holders lose bid to intervene in Ripple-SEC case as a third-party defendant",
+      "link": "https://cryptopanic.com/news/ripple/11630138/XRP-holders-lose-bid-to-intervene-in-Ripple-SEC-case-as-a-third-party-defendant",
+      "pubDate": "2021-03-16T15:44:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The judge overseeing the SEC-Ripple lawsuit has denied the intervention of the assets holders to participate as third-party defendants in the legal battle. The move was dismissed by Judge Analisa Torres which was filed by John Deaton, an XRP hodler, of Deaton Law Firm LL. In a letter to Judge Torres, Deaton said he represented […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 7
+      }
+    },
+    {
+      "title": "#Firefly. The secure entry point to the new #IOTA ecosystem. Coming next week.",
+      "link": "https://cryptopanic.com/news/11632828/Firefly-The-secure-entry-point-to-the-new-IOTA-ecosystem-Coming-next-week",
+      "pubDate": "2021-03-16T15:37:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "-",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polkadot to Enhance Interoperability Between Networks by Releasing Decentralized Bridges",
+      "link": "https://cryptopanic.com/news/polkadot/11630129/Polkadot-to-Enhance-Interoperability-Between-Networks-by-Releasing-Decentralized-Bridges",
+      "pubDate": "2021-03-16T15:30:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The popular DLT project Polkadot plans to enable communication and connectivity between Substrate-based chains by deploying decentralized bridges.",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 27,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Judge Denies XRP Holders' Motion to Intervene in SEC v. Ripple Case",
+      "link": "https://cryptopanic.com/news/ripple/11629976/Judge-Denies-XRP-Holders-Motion-to-Intervene-in-SEC-v-Ripple-Case",
+      "pubDate": "2021-03-16T14:17:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "XRP holders have lost their bid to intervene in Ripple's legal battle with the SEC as a third-party defendant",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "ARK payments or donations - How can we improve them for you?",
+      "link": "https://cryptopanic.com/news/11669561/ARK-payments-or-donations-How-can-we-improve-them-for-you",
+      "pubDate": "2021-03-16T13:18:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Aave Protocol (AAVE) Releases Unique AMM Liquidity Pool, Uniswap (UNI) and Balancer (BAL) Tokens Onboard",
+      "link": "https://cryptopanic.com/news/uniswap/11629839/Aave-Protocol-AAVE-Releases-Unique-AMM-Liquidity-Pool-Uniswap-UNI-and-Balancer-BAL-Tokens-Onboard",
+      "pubDate": "2021-03-16T13:12:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Leading decentralized financial ecosystem Aave Protocol (AAVE) has integrated its first external liquidity pool tokens, from Uniswap and Balancer",
+      "currencies": [
+        "UNI",
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "KuCoin Will Add FTM/USDT, ENJ/USDT, MANA/USDT Trading Pairs",
+      "link": "https://cryptopanic.com/news/11629787/KuCoin-Will-Add-FTMUSDT-ENJUSDT-MANAUSDT-Trading-Pairs",
+      "pubDate": "2021-03-16T13:02:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "-",
+      "currencies": [
+        "MANA",
+        "KCS",
+        "FTM",
+        "ENJ"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Signal Messenger App. Now Accepts Donations in BTC, ETH, ZEC, LINK",
+      "link": "https://cryptopanic.com/news/chainlink/11629744/Signal-Messenger-App-Now-Accepts-Donations-in-BTC-ETH-ZEC-LINK",
+      "pubDate": "2021-03-16T12:46:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "In summary: Signal Messaging App now accepts donations in various digital assets Donations can be made in Bitcoin, Ethereum, ZCash, DAI, AMP, BAT, LINK, BCH, GUSD, LTC, STORJ and ZRX Signal is run as a non-profit organization and crypto donations can be claimed for Tax purposes in the USA Signal rose to prominence earlier this year as users fled Whatsapp You can now donate crypto towards the...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "AAVE Enables Uniswap and Balancer LP Tokens for Collateral",
+      "link": "https://cryptopanic.com/news/uniswap/11629748/AAVE-Enables-Uniswap-and-Balancer-LP-Tokens-for-Collateral",
+      "pubDate": "2021-03-16T12:40:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "One of the leading DeFi lending protocols, Aave, has enabled Uniswap and Balancer LP tokens to be used as collateral.",
+      "currencies": [
+        "UNI",
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Join now🤑🤑#XWC #whitecoin",
+      "link": "https://cryptopanic.com/news/11634580/Join-nowXWC-whitecoin",
+      "pubDate": "2021-03-16T11:59:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XWC"
+      ]
+    },
+    {
+      "title": "Signal Accepts Cryptocurrency Donations, App Goes Dark in China",
+      "link": "https://cryptopanic.com/news/11629548/Signal-Accepts-Cryptocurrency-Donations-App-Goes-Dark-in-China",
+      "pubDate": "2021-03-16T10:56:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "On March 16, 2021, Signal tweeted: “As a nonprofit organization, we depend on your support. If you’ve been patiently waiting for Signal to accept cryptocurrency donations, you no longer need to hodl back your generosity,” The app is accepting donations in bitcoin (BTC), Ethereum (ETH), Amp (AMP), Basic Attention Token (BAT), Bitcoin Cash (BCH), ChainLink … Continued",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LINK",
+        "BCH",
+        "BAT",
+        "AMP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "IOTA Foundation to Advance Blockchain Education in Europe, Here's How",
+      "link": "https://cryptopanic.com/news/11629515/IOTA-Foundation-to-Advance-Blockchain-Education-in-Europe-Heres-How",
+      "pubDate": "2021-03-16T10:42:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "IOTA Foundation announced that it joined CHAISE technology consortium together with Japanese ICT mogul Fujitsu",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "They see me trollin they hatin...",
+      "link": "https://cryptopanic.com/news/11629383/They-see-me-trollin-they-hatin",
+      "pubDate": "2021-03-16T09:31:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Reef has a solid defamation case against Alameda Research",
+      "link": "https://cryptopanic.com/news/11629205/Reef-has-a-solid-defamation-case-against-Alameda-Research",
+      "pubDate": "2021-03-16T07:34:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "-",
+      "currencies": [
+        "REEF"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "To much talk about different things when all the everyday public need to know is how to make my money into passive income inturn growing the company - Read on>>>>",
+      "link": "https://cryptopanic.com/news/11629202/To-much-talk-about-different-things-when-all-the-everyday-public-need-to-know-is-how-to-make-my-money-into-passive-income-inturn-growing-the-company-Read-on",
+      "pubDate": "2021-03-16T07:34:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "The circulation amount of #TRC20-#USDT issued by @Tether_to on #TRON network exceeded 17.7 Billion",
+      "link": "https://cryptopanic.com/news/tron/11628599/The-circulation-amount-of-TRC20-USDT-issued-by-Tether_to-on-TRON-network-exceeded-177-Billion",
+      "pubDate": "2021-03-16T07:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "-",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Theta Labs Granted 2nd US patent for Ultra-high Transaction Throughput Micropayments to Support Decentralized Video…",
+      "link": "https://cryptopanic.com/news/11628587/Theta-Labs-Granted-2nd-US-patent-for-Ultra-high-Transaction-Throughput-Micropayments-to-Support-Decentralized-Video",
+      "pubDate": "2021-03-16T06:52:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ],
+      "votes": {
+        "positive": 27,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Congrats @beefyfinance",
+      "link": "https://cryptopanic.com/news/11631557/Congrats-beefyfinance?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-16T05:51:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KOGE"
+      ]
+    },
+    {
+      "title": "Nu is my only holding going back up ! I knew it!!!!!!!!!",
+      "link": "https://cryptopanic.com/news/11629681/Nu-is-my-only-holding-going-back-up-I-knew-it",
+      "pubDate": "2021-03-16T05:27:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "A new contender is knocking Supra doors! Presenting our newest degen vault JIGG-BUSD!",
+      "link": "https://cryptopanic.com/news/11626853/A-new-contender-is-knocking-Supra-doors-Presenting-our-newest-degen-vault-JIGG-BUSD?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-16T04:12:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SUPRA",
+        "FLP"
+      ]
+    },
+    {
+      "title": "We have added list view on Supra Vaults! You can switch between Grid and List view on top bar!",
+      "link": "https://cryptopanic.com/news/11626854/We-have-added-list-view-on-Supra-Vaults-You-can-switch-between-Grid-and-List-view-on-top-bar?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-16T04:09:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SUPRA",
+        "FLP"
+      ]
+    },
+    {
+      "title": "Well we are moving up on popularity",
+      "link": "https://cryptopanic.com/news/11625526/Well-we-are-moving-up-on-popularity",
+      "pubDate": "2021-03-16T04:02:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "how centralized is NU?",
+      "link": "https://cryptopanic.com/news/11629577/how-centralized-is-NU",
+      "pubDate": "2021-03-16T03:56:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Bridge Oracle, a Chainlink-Alternative on Tron, Launched",
+      "link": "https://cryptopanic.com/news/tron/11625499/Bridge-Oracle-a-Chainlink-Alternative-on-Tron-Launched",
+      "pubDate": "2021-03-16T03:16:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Bridge Oracle, a Chainlink-alternative and the first in the decentralized, high-performant, and scalable Tron mainnet, is live after launching on Mar 11. An Oracle for Tron’s dApps and Smart Contracts The open-source solution seeking to provide a critical link–turbo-boosting events in the Tron blockchain, will, for the first time, provide external, vetted, trusted, and tamper-proofRead More",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Got my first rewards estimate update from staking on coinlist",
+      "link": "https://cryptopanic.com/news/11629931/Got-my-first-rewards-estimate-update-from-staking-on-coinlist",
+      "pubDate": "2021-03-16T03:15:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "My 1.5 cents",
+      "link": "https://cryptopanic.com/news/11625438/My-15-cents",
+      "pubDate": "2021-03-16T02:31:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "RT @JamesSpediacci: Crypto lately",
+      "link": "https://cryptopanic.com/news/11627137/RT-JamesSpediacci-Crypto-lately",
+      "pubDate": "2021-03-16T01:45:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Fintech company CenterPrime supported QuarkChain in SDK which enables QKC and QRC20 tokens to be used for payment s…",
+      "link": "https://cryptopanic.com/news/11628129/Fintech-company-CenterPrime-supported-QuarkChain-in-SDK-which-enables-QKC-and-QRC20-tokens-to-be-used-for-payment-s",
+      "pubDate": "2021-03-16T01:01:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QKC"
+      ]
+    },
+    {
+      "title": "SushiSwap DEX integrates with Avalanche",
+      "link": "https://cryptopanic.com/news/avalanche-2/11625352/SushiSwap-DEX-integrates-with-Avalanche",
+      "pubDate": "2021-03-16T00:43:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "CryptoNinjas » SushiSwap DEX integrates with Avalanche SushiSwap, the largest automated market-making (AMM) decentralized exchange (DEX) by total value locked (TVL), today announced it has expanded to Avalanche, offering users another high-quality trading venue in Avalanche’s decentralized finance (DeFi) ecosystem. Users can perform core swaps as they do with SushiSwap on Ethereum, but with lower fees and faster transaction finality. Since the […] CryptoNinjas » SushiSwap DEX integrates with Ava",
+      "currencies": [
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin bulls take a breather while BTC price slips below $55,000",
+      "link": "https://cryptopanic.com/news/11625329/Bitcoin-bulls-take-a-breather-while-BTC-price-slips-below-55000",
+      "pubDate": "2021-03-16T00:23:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Sellers pushed Bitcoin price below $55,000 even as record-high BTC futures open interest and optimism surrounding the issuance of $1,400 stimulus checks for Americans had traders anticipating a rally.",
+      "currencies": [
+        "BTC",
+        "VET"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "NuCypher+Keep Hard Merge Community Call",
+      "link": "https://cryptopanic.com/news/11625312/NuCypherKeep-Hard-Merge-Community-Call",
+      "pubDate": "2021-03-16T00:02:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "We are proud to announce our 2021 Vision and Road map. This is a more comprehensive explanation of our Road map re…",
+      "link": "https://cryptopanic.com/news/11625706/We-are-proud-to-announce-our-2021-Vision-and-Road-map-This-is-a-more-comprehensive-explanation-of-our-Road-map-re",
+      "pubDate": "2021-03-16T00:01:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    }
+  ]
+}

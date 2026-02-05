@@ -1,0 +1,25 @@
+{
+  "date": "2019-09-23",
+  "fetchedAt": "2026-02-05T07:27:06.906Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "EOS Developer Block.one to Create 170 Jobs in Virginia with Its New Headquarters",
+      "link": "https://cryptopanic.com/news/6660306/EOS-Developer-Blockone-to-Create-170-Jobs-in-Virginia-with-Its-New-Headquarters",
+      "pubDate": "2019-09-23T18:53:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

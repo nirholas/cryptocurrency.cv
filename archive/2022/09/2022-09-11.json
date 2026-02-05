@@ -1,0 +1,387 @@
+{
+  "date": "2022-09-11",
+  "fetchedAt": "2026-02-05T07:27:07.575Z",
+  "articleCount": 24,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @BorkowskiClem: This team is doing something special. Check them out @WhiteETHtoken $White #50X #privacymatters",
+      "link": "https://cryptopanic.com/news/16304929/RT-BorkowskiClem-This-team-is-doing-something-special-Check-them-out-WhiteETHtoken-White-50X-privacymatters?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-11T22:24:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "WHITE"
+      ]
+    },
+    {
+      "title": "RT @Cultmander76: @BitMartExchange Some will come and go. But those with real utility will stay. $WHITE, a fork of tornado cash, just rel…",
+      "link": "https://cryptopanic.com/news/16304930/RT-Cultmander76-BitMartExchange-Some-will-come-and-go-But-those-with-real-utility-will-stay-WHITE-a-fork-of-tornado-cash-just-rel?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-11T22:23:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "WHITE"
+      ]
+    },
+    {
+      "title": "Polkadot [DOT] investors should be aware of these updates before pulling out",
+      "link": "https://cryptopanic.com/news/16300063/Polkadot-DOT-investors-should-be-aware-of-these-updates-before-pulling-out",
+      "pubDate": "2022-09-11T21:30:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Polkadot is experiencing what we call a shake-up after mixed emotions surfaced on the network. Despite recent growth on the network, its development activity has slowed down of late. In fact, according to data analytics platform Santiment, Polkadot has been seeing a reverse trend in development activity over the last few days. Polkadot had a […]",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "New @priv8podcast clip! Host @dereksilva joins Bojan Simic, Co-founder and CEO of @HyprCorp to talk about the dec…",
+      "link": "https://cryptopanic.com/news/16303524/New-priv8podcast-clip-Host-dereksilva-joins-Bojan-Simic-Co-founder-and-CEO-of-HyprCorp-to-talk-about-the-dec",
+      "pubDate": "2022-09-11T20:42:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OXT"
+      ]
+    },
+    {
+      "title": "Crypto traders eye ATOM, APE, CHZ and QNT as Bitcoin flashes bottom signs",
+      "link": "https://cryptopanic.com/news/16299906/Crypto-traders-eye-ATOM-APE-CHZ-and-QNT-as-Bitcoin-flashes-bottom-signs",
+      "pubDate": "2022-09-11T19:52:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin, ATOM, APE, CHZ and QNT are facing resistance at higher levels, but the chart patterns suggest that the current recovery may extend for a few more days.",
+      "currencies": [
+        "BTC",
+        "ATOM",
+        "APE",
+        "QNT",
+        "CHZ"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "$BTC: Canada’s New Conservative Party Leader Pierre Poilievre Is a Bitcoiner",
+      "link": "https://cryptopanic.com/news/bitcoin/16299863/BTC-Canadas-New-Conservative-Party-Leader-Pierre-Poilievre-Is-a-Bitcoiner",
+      "pubDate": "2022-09-11T19:09:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "On Saturday (September 10), Pierre Poilievre — who said back in March that he would make Canada “the Blockchain capital of the world” if he becomes the next Prime Minister — won the leadership vote of the Conservative Party of Canada. According to a report by CBC, Poilievre, who has been a huge critic of […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Scaling Solution Polygon Plans To Aggressively Expand by Hiring 200 People in Coming Months: Report",
+      "link": "https://cryptopanic.com/news/16299782/Scaling-Solution-Polygon-Plans-To-Aggressively-Expand-by-Hiring-200-People-in-Coming-Months-Report",
+      "pubDate": "2022-09-11T18:45:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ethereum (ETH) scaling solution Polygon (MATIC) is reportedly planning to aggressively hire more workers to take advantage of the crypto downturn this year. According to a new report by Bloomberg, Polygon is going to broaden its workforce by 40% in the coming months to capitalize on the availability of talent after a number of crypto […]",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "MicroStrategy To Purchase More Bitcoin From Proceeds Of A $500 Million Stock Sale",
+      "link": "https://cryptopanic.com/news/bitcoin/16299704/MicroStrategy-To-Purchase-More-Bitcoin-From-Proceeds-Of-A-500-Million-Stock-Sale",
+      "pubDate": "2022-09-11T18:00:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "MicroStrategy, the largest publicly listed Bitcoin holding company in the world, plans to double down on its BTC purchases using proceeds from a $500 million sale of its stock.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 44,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Our friends at @Vertalo_ are enabling our launch on @tZERO. They are an amazing team with an amazing service and we…",
+      "link": "https://cryptopanic.com/news/16304977/Our-friends-at-Vertalo_-are-enabling-our-launch-on-tZERO-They-are-an-amazing-team-with-an-amazing-service-and-we",
+      "pubDate": "2022-09-11T17:30:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XYO"
+      ]
+    },
+    {
+      "title": "Algorand Foundation Discloses $35M Exposure in Hodlnaut",
+      "link": "https://cryptopanic.com/news/16299699/Algorand-Foundation-Discloses-35M-Exposure-in-Hodlnaut",
+      "pubDate": "2022-09-11T17:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Algorand Foundation has announced that it has a $35 million USDC exposure in troubled Singapore-based lender Holdnaut.",
+      "currencies": [
+        "USDC",
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Banking Giant DBS Announces Metaverse Partnership With The Sandbox (SAND)",
+      "link": "https://cryptopanic.com/news/16299610/Banking-Giant-DBS-Announces-Metaverse-Partnership-With-The-Sandbox-SAND",
+      "pubDate": "2022-09-11T16:55:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "One of the leading banking firms in Asia is venturing into the metaverse with a new partnership with virtual world platform The Sandbox (SAND). According to a new press release, multinational financial services giant DBS is collaborating with The Sandbox to create an interactive metaverse experience. The duo will create DBS BetterWorld, which aims to […] The post Banking Giant DBS Announces Metaverse Partnership With The Sandbox (SAND) appeared first on The Daily Hodl.",
+      "currencies": [
+        "SAND"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Algorand Foundation Discloses $37 Million USDC Exposure To Hodlnaut",
+      "link": "https://cryptopanic.com/news/16299558/Algorand-Foundation-Discloses-37-Million-USDC-Exposure-To-Hodlnaut",
+      "pubDate": "2022-09-11T16:22:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin Would Be Ready For $24,000 If This Happens; What Is That?",
+      "link": "https://cryptopanic.com/news/16299394/Bitcoin-Would-Be-Ready-For-24000-If-This-Happens-What-Is-That",
+      "pubDate": "2022-09-11T14:54:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin (BTC) despite showing bearish signs against tether (USDT) as the price plunged to $18,500 recently, with many traders and investors sweating on their long open position. The price of Bitcoin (BTC) quickly bounced off from that region after forming a bullish divergence on the four-hour chart and has shown no intention of stopping. (Data from Binance) Related Reading: Cosmos Touches...",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "SHIB, ADA Users Can Now Enjoy 8% Cashback on Binance Card Purchases: Details",
+      "link": "https://cryptopanic.com/news/16299366/SHIB-ADA-Users-Can-Now-Enjoy-8-Cashback-on-Binance-Card-Purchases-Details",
+      "pubDate": "2022-09-11T14:39:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cryptocurrency users to enjoy 8% rewards while spending on Binance Card",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "U.S. congressman says Bitcoin has ‘no societal value’, only suitable for tax evasion",
+      "link": "https://cryptopanic.com/news/bitcoin/16299309/US-congressman-says-Bitcoin-has-no-societal-value-only-suitable-for-tax-evasion",
+      "pubDate": "2022-09-11T14:09:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "United States congressman from Califonia Brad Sherman has once again slammed Bitcoin (BTC), stating that the flagship cryptocurrency has ‘no... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 44,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "What is PAX Gold (PAXG) and how does it work?",
+      "link": "https://cryptopanic.com/news/pax-gold/16299276/What-is-PAX-Gold-PAXG-and-how-does-it-work",
+      "pubDate": "2022-09-11T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PAXG"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Terra back from the dead? LUNA price rises 300% in September",
+      "link": "https://cryptopanic.com/news/16299249/Terra-back-from-the-dead-LUNA-price-rises-300-in-September",
+      "pubDate": "2022-09-11T13:35:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The incredible LUNA rally took place amid a flurry of positive and negative events while technicals suggest a correction is coming.",
+      "currencies": [
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Shiba Inu’s whales have this to say to SHIB’s traders",
+      "link": "https://cryptopanic.com/news/shiba-inu/16299246/Shiba-Inus-whales-have-this-to-say-to-SHIBs-traders",
+      "pubDate": "2022-09-11T13:30:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The euphoria around meme-based cryptocurrency Shiba Inu has translated into a rapid surge in accumulation recently. The number of SHIB holders has now hit an all-time high after peaking at 1.22 million. This historic peak comes after a period of strong accumulation of late. There has also been a hike in whale holdings as strong […]",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Which Blockchain Feature Do You Consider the Most Valuable?",
+      "link": "https://cryptopanic.com/news/16300891/Which-Blockchain-Feature-Do-You-Consider-the-Most-Valuable",
+      "pubDate": "2022-09-11T12:09:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ABBC"
+      ]
+    },
+    {
+      "title": "GM fam. Touch some grass and have a nice Sunday. 🫡",
+      "link": "https://cryptopanic.com/news/16301679/GM-fam-Touch-some-grass-and-have-a-nice-Sunday?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-11T10:56:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BORG"
+      ]
+    },
+    {
+      "title": "Today we will start sharing/answering some of the most frequently asked questions by our investors and community. W…",
+      "link": "https://cryptopanic.com/news/16301618/Today-we-will-start-sharinganswering-some-of-the-most-frequently-asked-questions-by-our-investors-and-community-W?mtm_campaign=API-OFA",
+      "pubDate": "2022-09-11T10:51:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CBK"
+      ]
+    },
+    {
+      "title": "There Is Big \"If\" in LUNC Burning Mechanism That Caused Most Recent Market Pump",
+      "link": "https://cryptopanic.com/news/16298968/There-Is-Big-If-in-LUNC-Burning-Mechanism-That-Caused-Most-Recent-Market-Pump",
+      "pubDate": "2022-09-11T10:48:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Things are not so obvious with LUNC burning mechanism and pump it caused",
+      "currencies": [
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Algorand Foundation has $35 million exposure to troubled crypto lender Hodlnaut",
+      "link": "https://cryptopanic.com/news/16298967/Algorand-Foundation-has-35-million-exposure-to-troubled-crypto-lender-Hodlnaut",
+      "pubDate": "2022-09-11T10:46:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The Algorand Foundation has $35 million exposure in USDC to Hodlnaut.",
+      "currencies": [
+        "USDC",
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Terra Luna Classic Crypto Price Prediction 2022 - Can LUNC Rocket to $0.00088?",
+      "link": "https://cryptopanic.com/news/16298762/Terra-Luna-Classic-Crypto-Price-Prediction-2022-Can-LUNC-Rocket-to-000088",
+      "pubDate": "2022-09-11T09:39:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Terra Luna Classic (LUNC) is now trading in a healthy consolidative retreat at $0.000442, currently down 25% from the $0.00059 swing high achieved on the 7th of September. The battle for control between the bulls and bears is still finding equilibrium but there is still scope for LUNC to push towards $0.00088. Can Terra Luna Classic maintain positive price momentum? ... Read...",
+      "currencies": [
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 3
+      }
+    }
+  ]
+}

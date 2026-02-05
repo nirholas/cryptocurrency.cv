@@ -1,0 +1,20 @@
+{
+  "date": "2019-12-13",
+  "fetchedAt": "2026-02-05T07:27:06.992Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @Bitcoin: Buy Bitcoin.",
+      "link": "https://cryptopanic.com/news/7403925/RT-Bitcoin-Buy-Bitcoin",
+      "pubDate": "2019-12-13T21:12:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "SNL"
+      ]
+    }
+  ]
+}

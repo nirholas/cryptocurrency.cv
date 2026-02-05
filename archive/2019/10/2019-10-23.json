@@ -1,0 +1,49 @@
+{
+  "date": "2019-10-23",
+  "fetchedAt": "2026-02-05T07:27:06.955Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Basic Attention Token Price Analysis: BAT Up 24% Biweekly, Despite Bitcoin’s Bloodbath",
+      "link": "https://cryptopanic.com/news/6936360/Basic-Attention-Token-Price-Analysis-BAT-Up-24-Biweekly-Despite-Bitcoins-Bloodbath",
+      "pubDate": "2019-10-23T15:03:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BAT"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Enterprise Ethereum Alliance’s Reward Token System Backed by Microsoft, Intel,Microsoft and Intel are backing a new…",
+      "link": "https://cryptopanic.com/news/7505258/Enterprise-Ethereum-Alliances-Reward-Token-System-Backed-by-Microsoft-IntelMicrosoft-and-Intel-are-backing-a-new",
+      "pubDate": "2019-10-23T11:33:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "RKN"
+      ]
+    },
+    {
+      "title": "UNICEF Launches Cryptocurrency Fund Supported by Ethereum Foundation,UNICEF, the United Nations Children's Fund, ha…",
+      "link": "https://cryptopanic.com/news/7505261/UNICEF-Launches-Cryptocurrency-Fund-Supported-by-Ethereum-FoundationUNICEF-the-United-Nations-Childrens-Fund-ha",
+      "pubDate": "2019-10-23T11:30:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "RKN"
+      ]
+    }
+  ]
+}

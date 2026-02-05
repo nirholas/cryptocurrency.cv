@@ -1,0 +1,37 @@
+{
+  "date": "2020-12-06",
+  "fetchedAt": "2026-02-05T07:27:06.986Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "29.5 Million XRP Tokens Dumped by Jed McCaleb in One Day. When Will He Stop?",
+      "link": "https://cryptopanic.com/news/ripple/10741680/295-Million-XRP-Tokens-Dumped-by-Jed-McCaleb-in-One-Day-When-Will-He-Stop",
+      "pubDate": "2020-12-06T18:25:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 18
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "#ccxx #counos #kryptoschweiz",
+      "link": "https://cryptopanic.com/news/10741284/ccxx-counos-kryptoschweiz",
+      "pubDate": "2020-12-06T17:14:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    }
+  ]
+}

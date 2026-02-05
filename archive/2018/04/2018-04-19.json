@@ -1,0 +1,26 @@
+{
+  "date": "2018-04-19",
+  "fetchedAt": "2026-02-05T07:27:06.812Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Cash Breakout: Back Above 0.10 Against Bitcoin",
+      "link": "https://cryptopanic.com/news/1705447/Bitcoin-Cash-Breakout-Back-Above-010-Against-Bitcoin",
+      "pubDate": "2018-04-19T20:15:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

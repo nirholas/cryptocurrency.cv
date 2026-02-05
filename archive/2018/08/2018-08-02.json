@@ -1,0 +1,25 @@
+{
+  "date": "2018-08-02",
+  "fetchedAt": "2026-02-05T07:27:07.883Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "BCH Does Fireworks on Independence Day; Transaction Volumes Reach High",
+      "link": "https://cryptopanic.com/news/2706743/BCH-Does-Fireworks-on-Independence-Day-Transaction-Volumes-Reach-High",
+      "pubDate": "2018-08-02T15:40:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    }
+  ]
+}

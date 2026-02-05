@@ -1,0 +1,106 @@
+{
+  "date": "2020-12-01",
+  "fetchedAt": "2026-02-05T07:27:06.984Z",
+  "articleCount": 8,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Confirmations not showing on Blockchair.com",
+      "link": "https://cryptopanic.com/news/ecash/12211623/Confirmations-not-showing-on-Blockchaircom",
+      "pubDate": "2020-12-01T22:09:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Trade YOUC on Bitforex",
+      "link": "https://cryptopanic.com/news/11367213/Trade-YOUC-on-Bitforex",
+      "pubDate": "2020-12-01T20:57:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "YOUC"
+      ]
+    },
+    {
+      "title": "We're excited to be donating to @HRF's Bitcoin Development Fund with the mission to support the next generation of…",
+      "link": "https://cryptopanic.com/news/10697290/Were-excited-to-be-donating-to-HRFs-Bitcoin-Development-Fund-with-the-mission-to-support-the-next-generation-of",
+      "pubDate": "2020-12-01T18:34:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    },
+    {
+      "title": "PayPal’s Bitcoin Adoption Expands PAX Stablecoin by $100 Million",
+      "link": "https://cryptopanic.com/news/paxos-standard/10695712/PayPals-Bitcoin-Adoption-Expands-PAX-Stablecoin-by-100-Million",
+      "pubDate": "2020-12-01T15:54:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT"
+      ]
+    },
+    {
+      "title": "November has been a big month for Hyperion. Atlas-chain has completed Mainnet $HYN swap. We’ll introduce more mainn…",
+      "link": "https://cryptopanic.com/news/10693058/November-has-been-a-big-month-for-Hyperion-Atlas-chain-has-completed-Mainnet-HYN-swap-Well-introduce-more-mainn",
+      "pubDate": "2020-12-01T12:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "RT @OdailyChina: Thanks for our amazing guests from @OKEx  @WhaleExchange @HyperionHYN @HashQuark  @imTokenOfficial @StaFi_Protocol @bifr…",
+      "link": "https://cryptopanic.com/news/10691048/RT-OdailyChina-Thanks-for-our-amazing-guests-from-OKEx-WhaleExchange-HyperionHYN-HashQuark-imTokenOfficial-StaFi_Protocol-bifr",
+      "pubDate": "2020-12-01T09:21:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "You will earn x2 Warren (WRN) tokens via HUNT lock-ups on the upcoming protocol  #DeFi…",
+      "link": "https://cryptopanic.com/news/10690778/You-will-earn-x2-Warren-WRN-tokens-via-HUNT-lock-ups-on-the-upcoming-protocol-DeFi",
+      "pubDate": "2020-12-01T08:24:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "HUNT"
+      ]
+    },
+    {
+      "title": "We are excited to announce the @RaiFinance Airdrop Event! The event will start from 7:00 PM PDT, Nov 30th and will…",
+      "link": "https://cryptopanic.com/news/10688958/We-are-excited-to-announce-the-RaiFinance-Airdrop-Event-The-event-will-start-from-700-PM-PDT-Nov-30th-and-will",
+      "pubDate": "2020-12-01T03:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STPT"
+      ]
+    }
+  ]
+}

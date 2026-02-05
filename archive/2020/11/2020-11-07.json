@@ -1,0 +1,38 @@
+{
+  "date": "2020-11-07",
+  "fetchedAt": "2026-02-05T07:27:07.000Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "The Long Collapse of Bitcoin Gold",
+      "link": "https://cryptopanic.com/news/10471951/The-Long-Collapse-of-Bitcoin-Gold",
+      "pubDate": "2020-11-07T16:01:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BTG"
+      ]
+    },
+    {
+      "title": "XRP Surges 10% Against Bitcoin, But Peter Brandt Claims It's \"Dead Cat Bounce\"",
+      "link": "https://cryptopanic.com/news/ripple/10471201/XRP-Surges-10-Against-Bitcoin-But-Peter-Brandt-Claims-Its-Dead-Cat-Bounce",
+      "pubDate": "2020-11-07T14:16:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

@@ -1,0 +1,292 @@
+{
+  "date": "2022-07-16",
+  "fetchedAt": "2026-02-05T07:27:07.854Z",
+  "articleCount": 18,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "New Robinhood Listing Spurs Gains for Ethereum-Based Decentralized Exchange Crypto Project",
+      "link": "https://cryptopanic.com/news/15786548/New-Robinhood-Listing-Spurs-Gains-for-Ethereum-Based-Decentralized-Exchange-Crypto-Project",
+      "pubDate": "2022-07-16T22:05:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Robinhood is expanding its crypto offerings by adding support for the native asset of decentralized crypto exchange Uniswap (UNI). This week, the trading giant added support for Uniswap, which is valued at $6.79 at time of writing, up nearly 13% in the past seven days, outpacing a stagnant crypto market. Robinhood crypto also offers services […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Is Crypto Exchange Coinbase The Next To Go Under? Here’s What’s Going On",
+      "link": "https://cryptopanic.com/news/bitcoin/15786436/Is-Crypto-Exchange-Coinbase-The-Next-To-Go-Under-Heres-Whats-Going-On",
+      "pubDate": "2022-07-16T20:39:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Something’s amiss at the largest US-based crypto exchange Coinbase, but it’s not yet clear whether that means the company is insolvent, as the rumors circulating across the cryptosphere imply.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 13
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ethereum Primed For Gargantuan Boost As Shadow Fork 9 Goes Live In Build-up To ‘The Merge’",
+      "link": "https://cryptopanic.com/news/15786430/Ethereum-Primed-For-Gargantuan-Boost-As-Shadow-Fork-9-Goes-Live-In-Build-up-To-The-Merge",
+      "pubDate": "2022-07-16T20:22:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum is staging a comeback rally following reports of an update on the journey to The Merge.",
+      "currencies": [
+        "ETH",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Under-the-Radar Altcoin Surges More Than 115% in Seven Days, Defying the Crypto Market Doldrums",
+      "link": "https://cryptopanic.com/news/15786362/Under-the-Radar-Altcoin-Surges-More-Than-115-in-Seven-Days-Defying-the-Crypto-Market-Doldrums",
+      "pubDate": "2022-07-16T20:00:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LDO"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "On-Chain Data Shows Bitcoin Miners May Be Preparing To Dump",
+      "link": "https://cryptopanic.com/news/bitcoin/15786289/On-Chain-Data-Shows-Bitcoin-Miners-May-Be-Preparing-To-Dump",
+      "pubDate": "2022-07-16T19:00:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "On-chain data shows Bitcoin miners withdrew a large amount of coins from their wallets yesterday, suggesting they may be planning to sell them. Bitcoin Miners Transferred 14k BTC Out Of Reserve Yesterday As pointed out by an analyst in a CryptoQuant post, the BTC miner reserve observed a plunge during the past day. The “miner […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 11
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ethereum Surges 13% Helped by Excitement Over Provisional Timeline for ‘The Merge’",
+      "link": "https://cryptopanic.com/news/15786204/Ethereum-Surges-13-Helped-by-Excitement-Over-Provisional-Timeline-for-The-Merge",
+      "pubDate": "2022-07-16T18:01:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "On Saturday (July 16), the Ethereum ($ETH) price is rallying hard since the Beacon Chain community manager revealed the provisional date for “The Merge” (i.e. the date on which the network is making the transition from proof-of-work to proof-of-stake). Here is how Ethereum Foundation explains The Merge: “It’s important to remember that initially, the Beacon Chain shipped separately...",
+      "currencies": [
+        "ETH",
+        "XCN"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Klaytn and BSC bridges are being built! Legends of Mitra's bridge-building activities let you use, buy, and sel…",
+      "link": "https://cryptopanic.com/news/klay-token/15789013/Klaytn-and-BSC-bridges-are-being-built-Legends-of-Mitras-bridge-building-activities-let-you-use-buy-and-sel",
+      "pubDate": "2022-07-16T17:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "MITA"
+      ]
+    },
+    {
+      "title": "Coin Bureau Debates Algorand vs Cardano Following Departure of John Woods",
+      "link": "https://cryptopanic.com/news/15786033/Coin-Bureau-Debates-Algorand-vs-Cardano-Following-Departure-of-John-Woods",
+      "pubDate": "2022-07-16T16:23:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Popular market commentary show Coin Bureau recently tackled whether Cardano ($ADA) or Algorand ($ALGO) will emerge as a top Ethereum ($ETH) competitor following John Woods’ move from IOG to Algorand Foundation. Speaking in a YouTube video released on July 11 , Coin Bureau host “Guy” told viewers that John Woods, the former Director of Cardano […]",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 3
+      }
+    },
+    {
+      "title": "RT @Alex_E_Benton: Amazing turn out to the first @numerai Council of Elders sponsored meetup! Lunch time and more amazing talks to come! @N…",
+      "link": "https://cryptopanic.com/news/15785857/RT-Alex_E_Benton-Amazing-turn-out-to-the-first-numerai-Council-of-Elders-sponsored-meetup-Lunch-time-and-more-amazing-talks-to-come-N",
+      "pubDate": "2022-07-16T15:17:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NMR"
+      ]
+    },
+    {
+      "title": "RT @KlaytnGames: 1st $NPT Giveaway event Total 1,000 NPT (worth of $1500) Due to 7/23(Sat) Rules 1️⃣ Follow @KlaytnGames & @NeopinOffi…",
+      "link": "https://cryptopanic.com/news/klay-token/15788930/RT-KlaytnGames-1st-NPT-Giveaway-event-Total-1000-NPT-worth-of-1500-Due-to-723Sat-Rules-1-Follow-KlaytnGames-amp-NeopinOffi",
+      "pubDate": "2022-07-16T14:18:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "We are inviting all participants of BUILD 🆙 # 1 and community members who are interested in learning more about bui…",
+      "link": "https://cryptopanic.com/news/15788990/We-are-inviting-all-participants-of-BUILD-1-and-community-members-who-are-interested-in-learning-more-about-bui",
+      "pubDate": "2022-07-16T12:37:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "Celsius Bankruptcy Could Compound Bitcoin Mining Woes",
+      "link": "https://cryptopanic.com/news/15785530/Celsius-Bankruptcy-Could-Compound-Bitcoin-Mining-Woes",
+      "pubDate": "2022-07-16T12:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Celsius Network filing for bankruptcy could spell more troubles for the crypto mining sector, especially if it decides to sell its own mining unit.",
+      "currencies": [
+        "BTC",
+        "CEL"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Polkadot Makes Strides as New Parachains Join the Party",
+      "link": "https://cryptopanic.com/news/15785428/Polkadot-Makes-Strides-as-New-Parachains-Join-the-Party",
+      "pubDate": "2022-07-16T11:27:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Polkadot, the sleeping giant of the cryptosphere, has just completed its most productive quarter to date. While industry eyes were focused on the carnage dominating its lending and venture capital sector, Polkadot developers quietly shipped hundreds of forkless upgrades across its Substrate-based chains, while the Web3 Foundation doled out dozens of grants. The multi-chain network is now in...",
+      "currencies": [
+        "DOT",
+        "KSM",
+        "XCN"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin SV is disrupting traditional models of #centralised systems in many ways. Wondering how this can benefit yo…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/15787549/Bitcoin-SV-is-disrupting-traditional-models-of-centralised-systems-in-many-ways-Wondering-how-this-can-benefit-yo",
+      "pubDate": "2022-07-16T10:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "Massive Short Squeeze for Bitcoin in Sight? Top Quant Analyst Looks at the State of BTC",
+      "link": "https://cryptopanic.com/news/15781305/Massive-Short-Squeeze-for-Bitcoin-in-Sight-Top-Quant-Analyst-Looks-at-the-State-of-BTC",
+      "pubDate": "2022-07-16T07:04:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The CEO of analytics platform CryptoQuant is revealing how a major event could impact the trend of Bitcoin (BTC). Ki Young Ju tells his 303,000 Twitter followers that he is waiting for a “big short squeeze,” similar to the one that occurred in the latter part of 2020 before Bitcoin ignited its bull cycle. A […]",
+      "currencies": [
+        "BTC",
+        "QNT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Ethereum Merge Now Has A Date, Price Jumps 12%",
+      "link": "https://cryptopanic.com/news/15780342/Ethereum-Merge-Now-Has-A-Date-Price-Jumps-12",
+      "pubDate": "2022-07-16T06:30:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A specific deadline for the transition to proof-of-stake has been been offered by Ethereum developers who are working on implementing the merging. Ethereum Merge Now Has A Date The Ethereum mainnet is now scheduled to launch the merging during the week of September 19, according to a recent developer teleconference. This will happen after switching the final testnet before the merge to PoS....",
+      "currencies": [
+        "ETH",
+        "XCN"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "MicroStrategy CEO Michael Saylor: ‘Pretty Obvious’ Ethereum ($ETH) Is a Security",
+      "link": "https://cryptopanic.com/news/bitcoin/15779192/MicroStrategy-CEO-Michael-Saylor-Pretty-Obvious-Ethereum-ETH-Is-a-Security",
+      "pubDate": "2022-07-16T05:30:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Michael J. Saylor, Co-Founder, Chairman, and CEO of Nasdaq-listed business intelligence company MicroStrategy Inc. (NASDAQ: MSTR), says that it’s “pretty obvious” that Ethereum ($ETH) is a security. According to a report by The Daily Hodl, Saylor, a well-known Bitcoin maximalist, made his comments on July 7 during an interview with crypto market commentary show “Altcoin Daily”. Saylor […]",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Greetings, #telfam  The latest #Telcoin Community Update is now available",
+      "link": "https://cryptopanic.com/news/15784273/Greetings-telfam-The-latest-Telcoin-Community-Update-is-now-available",
+      "pubDate": "2022-07-16T01:23:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    }
+  ]
+}

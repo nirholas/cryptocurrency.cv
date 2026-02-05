@@ -1,0 +1,253 @@
+{
+  "date": "2025-05-25",
+  "fetchedAt": "2026-02-05T07:27:08.638Z",
+  "articleCount": 17,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ethereum News: How Hackers Are Exploiting EIP-7702 To Drain Wallets",
+      "link": "https://cryptopanic.com/news/ethereum/22077840/Ethereum-News-How-Hackers-Are-Exploiting-EIP-7702-To-Drain-Wallets",
+      "pubDate": "2025-05-25T22:17:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "On May 24, Ethereum news saw a wallet freshly enabled with EIP-7702 lost about $150,000 when scammers tricked the user into approving a malicious batch of token transfers. Phishing attacks in crypto have surged. In April 2025 alone, scams drained roughly $5. 3 million from 7,565 wallets",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Why Billions Of Dollars Will Flood Into XRP if Ripple’s Circle Takeover Materializes",
+      "link": "https://cryptopanic.com/news/ripple/22077412/Why-Billions-Of-Dollars-Will-Flood-Into-XRP-if-Ripples-Circle-Takeover-Materializes",
+      "pubDate": "2025-05-25T21:37:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The Ripple and XRP communities are discussing the possibility of buying out the stablecoin giant Circle. If the community’s expectations are met, XRP will be expected to outperform in the long term. In a recent post that seems to tackle both subjects, Kate Young Ju, an alternative X account for Ki Young Ju, the founder […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Monero and Zcash Light up the Charts as Privacy Coins Quietly Hit $10B",
+      "link": "https://cryptopanic.com/news/monero/22077405/Monero-and-Zcash-Light-up-the-Charts-as-Privacy-Coins-Quietly-Hit-10B",
+      "pubDate": "2025-05-25T21:35:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB"
+      ]
+    },
+    {
+      "title": "Monero just $1 billion shy of overtaking Stellar’s market cap",
+      "link": "https://cryptopanic.com/news/monero/22076095/Monero-just-1-billion-shy-of-overtaking-Stellars-market-cap",
+      "pubDate": "2025-05-25T19:06:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "XMR"
+      ]
+    },
+    {
+      "title": "Bitcoin holds key support as HYPE, XMR, AAVE, WLD lead altcoin rally",
+      "link": "https://cryptopanic.com/news/monero/22075758/Bitcoin-holds-key-support-as-HYPE-XMR-AAVE-WLD-lead-altcoin-rally",
+      "pubDate": "2025-05-25T18:59:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XMR",
+        "HYPE"
+      ]
+    },
+    {
+      "title": "Top-Trending Crypto to Buy Now: BlockDAG, XRP, Polkadot & NEAR Protocol",
+      "link": "https://cryptopanic.com/news/polkadot/22075744/Top-Trending-Crypto-to-Buy-Now-BlockDAG-XRP-Polkadot-NEAR-Protocol",
+      "pubDate": "2025-05-25T18:45:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "DOT",
+        "NEAR"
+      ]
+    },
+    {
+      "title": "XRP network activity crashes 95%; What next?",
+      "link": "https://cryptopanic.com/news/ripple/22075248/XRP-network-activity-crashes-95-What-next",
+      "pubDate": "2025-05-25T17:36:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP is experiencing a noticeable slowdown in network activity as it struggles to maintain its price above the psychological level of $2. Specifically, the number of new daily XRP accounts created has dropped from an all-time high of 30,641 on December 2 to just 1,822 as of May 25. This represents a staggering 94.05% decline in under six months, according to data from XRP Scans retrieved by Finbold",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Hyperliquid whale turns bearish, flipping $1 billion BTC position from long to short",
+      "link": "https://cryptopanic.com/news/bitcoin/22074719/Hyperliquid-whale-turns-bearish-flipping-1-billion-BTC-position-from-long-to-short",
+      "pubDate": "2025-05-25T16:42:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "HYPE"
+      ]
+    },
+    {
+      "title": "Talking beers, bars, and $80 million losses with SportFi pioneer Chiliz’s Max Rabinovitch",
+      "link": "https://cryptopanic.com/news/chiliz/22074699/Talking-beers-bars-and-80-million-losses-with-SportFi-pioneer-Chilizs-Max-Rabinovitch",
+      "pubDate": "2025-05-25T16:32:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHZ"
+      ]
+    },
+    {
+      "title": "Uniswap Drives 73% Surge in Ethereum DEX Trader Activity",
+      "link": "https://cryptopanic.com/news/uniswap/22071113/Uniswap-Drives-73-Surge-in-Ethereum-DEX-Trader-Activity",
+      "pubDate": "2025-05-25T16:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ]
+    },
+    {
+      "title": "5 Best Altcoins to Buy Today for Huge Returns: BlockDAG, NEAR, Render, Chainlink, & Polkadot!",
+      "link": "https://cryptopanic.com/news/polkadot/22074746/5-Best-Altcoins-to-Buy-Today-for-Huge-Returns-BlockDAG-NEAR-Render-Chainlink-Polkadot",
+      "pubDate": "2025-05-25T13:20:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "LINK",
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Shiba Inu (SHIB) Just Dethroned Bitcoin Cash",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22071081/Shiba-Inu-SHIB-Just-Dethroned-Bitcoin-Cash",
+      "pubDate": "2025-05-25T11:42:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Elon Musk’s Company Tesla (TSLA) Owns 11,900 BTC Worth $1.2 Billion",
+      "link": "https://cryptopanic.com/news/bitcoin/22070132/Elon-Musks-Company-Tesla-TSLA-Owns-11900-BTC-Worth-12-Billion",
+      "pubDate": "2025-05-25T10:29:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Tesla (TSLA), an Electric Vehicle company owned by Billionaire Elon Musk, has 11,900 BTC worth around $1. 2 billion.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "USDC Activity on Ethereum Hits All-Time Highs",
+      "link": "https://cryptopanic.com/news/ethereum/22069192/USDC-Activity-on-Ethereum-Hits-All-Time-Highs",
+      "pubDate": "2025-05-25T09:30:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "While the total outstanding supply of USDC on Ethereum remains relatively stable at around $40 billion, both the volume and […] The post USDC Activity on Ethereum Hits All-Time Highs appeared first on Coindoo.",
+      "currencies": [
+        "ETH",
+        "USDC"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "These Are This Week’s Biggest Altcoin Gainers and Losers as BTC Slides to $108K (Weekend Watch)",
+      "link": "https://cryptopanic.com/news/monero/22067219/These-Are-This-Weeks-Biggest-Altcoin-Gainers-and-Losers-as-BTC-Slides-to-108K-Weekend-Watch",
+      "pubDate": "2025-05-25T07:24:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "HYPE"
+      ]
+    },
+    {
+      "title": "AAVE price prepares for 50% surge as rare bullish pattern forms",
+      "link": "https://cryptopanic.com/news/aave/22094085/AAVE-price-prepares-for-50-surge-as-rare-bullish-pattern-forms",
+      "pubDate": "2025-05-25T04:34:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AAVE",
+        "DONUT"
+      ]
+    },
+    {
+      "title": "Stacks Resumes Block Production Amid Warnings of ‘Occasional Degradation’",
+      "link": "https://cryptopanic.com/news/blockstack/22065210/Stacks-Resumes-Block-Production-Amid-Warnings-of-Occasional-Degradation",
+      "pubDate": "2025-05-25T04:30:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "STX"
+      ]
+    }
+  ]
+}

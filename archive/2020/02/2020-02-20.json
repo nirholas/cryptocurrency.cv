@@ -1,0 +1,32 @@
+{
+  "date": "2020-02-20",
+  "fetchedAt": "2026-02-05T07:27:06.991Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Get away from the #kyc bs and the joke of an exchange @TradeSatoshi. Join Graviex, we approve. $aevo",
+      "link": "https://cryptopanic.com/news/8441600/Get-away-from-the-kyc-bs-and-the-joke-of-an-exchange-TradeSatoshi-Join-Graviex-we-approve-aevo?mtm_campaign=API-OFA",
+      "pubDate": "2020-02-20T20:26:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "AEVO"
+      ]
+    },
+    {
+      "title": "RT @wjvill: Just posted an implementation, vision and background plan for eth2 phase 2 moving forward. This represents the work Quilt will…",
+      "link": "https://cryptopanic.com/news/7986498/RT-wjvill-Just-posted-an-implementation-vision-and-background-plan-for-eth2-phase-2-moving-forward-This-represents-the-work-Quilt-will",
+      "pubDate": "2020-02-20T10:52:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "SNL"
+      ]
+    }
+  ]
+}

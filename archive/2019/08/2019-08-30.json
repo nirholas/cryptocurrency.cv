@@ -1,0 +1,25 @@
+{
+  "date": "2019-08-30",
+  "fetchedAt": "2026-02-05T07:27:06.978Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA Demonstrates the Result of Its Big-Name Partnership with Jaguar",
+      "link": "https://cryptopanic.com/news/6443586/IOTA-Demonstrates-the-Result-of-Its-Big-Name-Partnership-with-Jaguar",
+      "pubDate": "2019-08-30T16:17:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

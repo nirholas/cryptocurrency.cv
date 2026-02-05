@@ -1,0 +1,25 @@
+{
+  "date": "2018-05-10",
+  "fetchedAt": "2026-02-05T07:27:06.961Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Power Ledger Blockchain to Bring Lights Back on in Puerto Rico",
+      "link": "https://cryptopanic.com/news/1907201/Power-Ledger-Blockchain-to-Bring-Lights-Back-on-in-Puerto-Rico",
+      "pubDate": "2018-05-10T23:00:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "POWR"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

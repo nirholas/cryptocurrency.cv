@@ -1,0 +1,27 @@
+{
+  "date": "2018-04-29",
+  "fetchedAt": "2026-02-05T07:27:06.961Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Request Network Teams up with Wikimedia, Releases Payment Plugin for WooCommerce",
+      "link": "https://cryptopanic.com/news/1807280/Request-Network-Teams-up-with-Wikimedia-Releases-Payment-Plugin-for-WooCommerce",
+      "pubDate": "2018-04-29T20:30:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "REQ"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "date": "2020-02-06",
+  "fetchedAt": "2026-02-05T07:27:06.680Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Justin Sun Boasts New Milestones on Number of Tron Accounts and Block Height Figures",
+      "link": "https://cryptopanic.com/news/tron/7861034/Justin-Sun-Boasts-New-Milestones-on-Number-of-Tron-Accounts-and-Block-Height-Figures",
+      "pubDate": "2020-02-06T18:38:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Good news for the @bitcoingold community! :) Our decentralized ad network has finished $BTG integration in cooperat…",
+      "link": "https://cryptopanic.com/news/7860592/Good-news-for-the-bitcoingold-community-Our-decentralized-ad-network-has-finished-BTG-integration-in-cooperat",
+      "pubDate": "2020-02-06T18:06:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTG",
+        "ADS"
+      ]
+    },
+    {
+      "title": "Tron CEO Justin Sun Finally Meets Warren Buffett ? As It Happened",
+      "link": "https://cryptopanic.com/news/7858631/Tron-CEO-Justin-Sun-Finally-Meets-Warren-Buffett-As-It-Happened",
+      "pubDate": "2020-02-06T14:46:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

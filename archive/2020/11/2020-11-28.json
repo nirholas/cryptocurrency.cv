@@ -1,0 +1,34 @@
+{
+  "date": "2020-11-28",
+  "fetchedAt": "2026-02-05T07:27:06.971Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "How to Use DeFi Crypto Exchange Uniswap: A Beginner’s Guide",
+      "link": "https://cryptopanic.com/news/10669151/How-to-Use-DeFi-Crypto-Exchange-Uniswap-A-Beginners-Guide",
+      "pubDate": "2020-11-28T17:26:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DAI",
+        "UNI"
+      ]
+    },
+    {
+      "title": "Electrum ABC Keys and Hashes?",
+      "link": "https://cryptopanic.com/news/ecash/12211624/Electrum-ABC-Keys-and-Hashes",
+      "pubDate": "2020-11-28T13:10:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    }
+  ]
+}

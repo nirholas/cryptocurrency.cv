@@ -1,0 +1,25 @@
+{
+  "date": "2020-09-20",
+  "fetchedAt": "2026-02-05T07:27:06.970Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Justin Sun Claims Number of Tron Users Exceeds World Population, Apologizes",
+      "link": "https://cryptopanic.com/news/10027771/Justin-Sun-Claims-Number-of-Tron-Users-Exceeds-World-Population-Apologizes",
+      "pubDate": "2020-09-20T10:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

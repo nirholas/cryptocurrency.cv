@@ -1,0 +1,401 @@
+{
+  "date": "2024-05-05",
+  "fetchedAt": "2026-02-05T07:27:08.005Z",
+  "articleCount": 26,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Crypto Whale Buys $10.4 Million in Meme Coin PEPE",
+      "link": "https://cryptopanic.com/news/19461961/Crypto-Whale-Buys-104-Million-in-Meme-Coin-PEPE",
+      "pubDate": "2024-05-05T22:36:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RNDR",
+        "INJ",
+        "PEPE"
+      ]
+    },
+    {
+      "title": "Sui Surpasses Solana in Daily Transactions Amidst Spam Token Frenzy",
+      "link": "https://cryptopanic.com/news/19461861/Sui-Surpasses-Solana-in-Daily-Transactions-Amidst-Spam-Token-Frenzy",
+      "pubDate": "2024-05-05T21:21:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "SUI"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Internet Computer Launches ckUSDC Sepolia, an ICP Copy of USDC in ckERC20 Token Standard",
+      "link": "https://cryptopanic.com/news/19461810/Internet-Computer-Launches-ckUSDC-Sepolia-an-ICP-Copy-of-USDC-in-ckERC20-Token-Standard",
+      "pubDate": "2024-05-05T20:20:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The testing version of the ckETH minter on Internet Computer (ICP) mainnet has been upgraded, now featuring the Sepolia version of the USDC token.",
+      "currencies": [
+        "USDC",
+        "ICP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Bitcoin’s Bullish Reversal: Is $83,500 in Sight Before July?",
+      "link": "https://cryptopanic.com/news/19461791/Bitcoins-Bullish-Reversal-Is-83500-in-Sight-Before-July",
+      "pubDate": "2024-05-05T19:51:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Crypto market’s weekly winners and losers – WIF, PEPE, SUI, CORE",
+      "link": "https://cryptopanic.com/news/19461754/Crypto-markets-weekly-winners-and-losers-WIF-PEPE-SUI-CORE",
+      "pubDate": "2024-05-05T19:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CORE",
+        "PEPE",
+        "SUI",
+        "WIF"
+      ]
+    },
+    {
+      "title": "Subsidiary of Kraken Becoming Under-the-Radar Beneficiary of Multi-Billion ETF Boom: Report",
+      "link": "https://cryptopanic.com/news/19461736/Subsidiary-of-Kraken-Becoming-Under-the-Radar-Beneficiary-of-Multi-Billion-ETF-Boom-Report",
+      "pubDate": "2024-05-05T18:45:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Cardano founder proposes Bitcoin Cash integration in X poll",
+      "link": "https://cryptopanic.com/news/19461731/Cardano-founder-proposes-Bitcoin-Cash-integration-in-X-poll",
+      "pubDate": "2024-05-05T18:38:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Charles Hoskinson Proposes Merging Cardano With Bitcoin Cash",
+      "link": "https://cryptopanic.com/news/19461701/Charles-Hoskinson-Proposes-Merging-Cardano-With-Bitcoin-Cash",
+      "pubDate": "2024-05-05T17:55:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Our Most Read Stories This Week: EigenLayer Airdrop, Fed Roils Markets, Stacks Update, Bitcoin Jesus",
+      "link": "https://cryptopanic.com/news/19461623/Our-Most-Read-Stories-This-Week-EigenLayer-Airdrop-Fed-Roils-Markets-Stacks-Update-Bitcoin-Jesus",
+      "pubDate": "2024-05-05T17:07:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "STX"
+      ]
+    },
+    {
+      "title": "Six Coinbase customers claim the exchange is violating securities laws in new lawsuit",
+      "link": "https://cryptopanic.com/news/19461474/Six-Coinbase-customers-claim-the-exchange-is-violating-securities-laws-in-new-lawsuit",
+      "pubDate": "2024-05-05T15:21:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Six Coinbase customers filed a new class-action lawsuit against crypto exchange Coinbase Global, two subsidiaries — Coinbase, Inc. and Coinbase Asset Management, LLC. — and its CEO, Brian Armstrong, on May 5. The lawsuit alleges that the digital assets listed on Coinbase are securities. This includes Solana (SOL), Polygon (MATIC), Near Protocol (NEAR), Decentraland (MANA), […]",
+      "currencies": [
+        "SOL",
+        "MATIC",
+        "NEAR",
+        "MANA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Is THIS threatening the Solana ecosystem? Yes, but here’s why SOL is safe",
+      "link": "https://cryptopanic.com/news/19461452/Is-THIS-threatening-the-Solana-ecosystem-Yes-but-heres-why-SOL-is-safe",
+      "pubDate": "2024-05-05T15:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Nouriel Roubini Criticizes Bitcoin's Security and Decentralization Claims",
+      "link": "https://cryptopanic.com/news/19461375/Nouriel-Roubini-Criticizes-Bitcoins-Security-and-Decentralization-Claims",
+      "pubDate": "2024-05-05T13:47:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Economist Nouriel Roubini criticizes Bitcoin's security and questions its decentralization",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano (ADA) Founder Floats Idea to Integrate Surprise Altcoin into Cardano",
+      "link": "https://cryptopanic.com/news/19461370/Cardano-ADA-Founder-Floats-Idea-to-Integrate-Surprise-Altcoin-into-Cardano",
+      "pubDate": "2024-05-05T13:44:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Grayscale Bitcoin Trust Records First Inflows After $17.5 Billion in Outflows",
+      "link": "https://cryptopanic.com/news/19461342/Grayscale-Bitcoin-Trust-Records-First-Inflows-After-175-Billion-in-Outflows",
+      "pubDate": "2024-05-05T13:29:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Grayscale Bitcoin Trust sees first inflows, reversing $17.5B outflow trend",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Weekly Roundup: MicroStrategy Building on Bitcoin, Aave V4, & More",
+      "link": "https://cryptopanic.com/news/19461210/Crypto-Weekly-Roundup-MicroStrategy-Building-on-Bitcoin-Aave-V4-More",
+      "pubDate": "2024-05-05T11:38:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "ALGO, AVAX, HNT, LINK Price Analysis: May 5",
+      "link": "https://cryptopanic.com/news/19461205/ALGO-AVAX-HNT-LINK-Price-Analysis-May-5",
+      "pubDate": "2024-05-05T11:27:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "LINK",
+        "ALGO",
+        "HNT"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash (BCH) and Chainlink (LINK) holders discover new token with potential upto 2000% ROI",
+      "link": "https://cryptopanic.com/news/19461159/Bitcoin-Cash-BCH-and-Chainlink-LINK-holders-discover-new-token-with-potential-upto-2000-ROI",
+      "pubDate": "2024-05-05T10:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "BCH"
+      ]
+    },
+    {
+      "title": "XRP LUNC Price Analysis: Tokens Aim at Recovery",
+      "link": "https://cryptopanic.com/news/19461118/XRP-LUNC-Price-Analysis-Tokens-Aim-at-Recovery",
+      "pubDate": "2024-05-05T10:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "XRP",
+        "LUNC"
+      ]
+    },
+    {
+      "title": "Coinbase faces new lawsuit over alleged investor deception",
+      "link": "https://cryptopanic.com/news/19461063/Coinbase-faces-new-lawsuit-over-alleged-investor-deception",
+      "pubDate": "2024-05-05T09:23:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "MATIC",
+        "UNI",
+        "NEAR",
+        "XLM",
+        "ALGO",
+        "XTZ",
+        "MANA"
+      ]
+    },
+    {
+      "title": "US Authorities Are Going After These Crypto Entities",
+      "link": "https://cryptopanic.com/news/19461048/US-Authorities-Are-Going-After-These-Crypto-Entities",
+      "pubDate": "2024-05-05T09:10:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "Will MakerDAO’s NST & NGT tokens be good news for MKR’s price?",
+      "link": "https://cryptopanic.com/news/19461039/Will-MakerDAOs-NST-NGT-tokens-be-good-news-for-MKRs-price",
+      "pubDate": "2024-05-05T09:00:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "New Coinbase Lawsuit Suggests Solana (SOL), NEAR (NEAR), Stellar (XLM) And Other Coins Are Securities",
+      "link": "https://cryptopanic.com/news/19461029/New-Coinbase-Lawsuit-Suggests-Solana-SOL-NEAR-NEAR-Stellar-XLM-And-Other-Coins-Are-Securities",
+      "pubDate": "2024-05-05T08:37:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "NEAR",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Uniswap Founder Shares His Two Cents On Good Token Distributions",
+      "link": "https://cryptopanic.com/news/19460976/Uniswap-Founder-Shares-His-Two-Cents-On-Good-Token-Distributions",
+      "pubDate": "2024-05-05T07:52:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "UNI",
+        "INJ"
+      ]
+    },
+    {
+      "title": "Sui Network clears up misunderstandings on token supply",
+      "link": "https://cryptopanic.com/news/19460943/Sui-Network-clears-up-misunderstandings-on-token-supply",
+      "pubDate": "2024-05-05T07:09:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SUI"
+      ]
+    },
+    {
+      "title": "Bitcoin Maintains $63K, Dogecoin’s Rise Continues With Another 6% Surge (Weekend Watch)",
+      "link": "https://cryptopanic.com/news/19460902/Bitcoin-Maintains-63K-Dogecoins-Rise-Continues-With-Another-6-Surge-Weekend-Watch",
+      "pubDate": "2024-05-05T06:12:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "DOGE and RNDR are the top performers from the larger-cap alts now.",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "RNDR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Bitcoin Relative Strength Jumps To 40%: 10x Research Reveals Next Steps From Here",
+      "link": "https://cryptopanic.com/news/19460702/Bitcoin-Relative-Strength-Jumps-To-40-10x-Research-Reveals-Next-Steps-From-Here",
+      "pubDate": "2024-05-05T00:10:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "ADA",
+        "FTM"
+      ]
+    }
+  ]
+}

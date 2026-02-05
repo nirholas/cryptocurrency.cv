@@ -1,0 +1,78 @@
+{
+  "date": "2021-01-30",
+  "fetchedAt": "2026-02-05T07:27:06.988Z",
+  "articleCount": 5,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "XRP price gains 86% after Wall Street Bets’ crypto wing says 'pump it'",
+      "link": "https://cryptopanic.com/news/dogecoin/11339288/XRP-price-gains-86-after-Wall-Street-Bets-crypto-wing-says-pump-it",
+      "pubDate": "2021-01-30T19:44:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP price rallied 86% as members of a Reddit-based investing group shifted their focus from Dogecoin.",
+      "currencies": [
+        "XRP",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 6
+      }
+    },
+    {
+      "title": "XRP's Price Just Jumped 40%. Here's Why",
+      "link": "https://cryptopanic.com/news/ripple/11338298/XRPs-Price-Just-Jumped-40-Heres-Why",
+      "pubDate": "2021-01-30T18:13:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "As Ripple pushes back in the courtroom, XRP’s price hikes.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @btsfav: #DeFinitely 41 - The News in #DeFi - #hive #ethereum #loopring",
+      "link": "https://cryptopanic.com/news/11336519/RT-btsfav-DeFinitely-41-The-News-in-DeFi-hive-ethereum-loopring",
+      "pubDate": "2021-01-30T16:04:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "We're delighted to announce that Titan wallet will have another upgrading on the #RedPocket, including location-bas…",
+      "link": "https://cryptopanic.com/news/11327625/Were-delighted-to-announce-that-Titan-wallet-will-have-another-upgrading-on-the-RedPocket-including-location-bas",
+      "pubDate": "2021-01-30T05:16:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Bitcoin burning hot! Time to convert your cash to BTC? Lila Ruzaini managing business development at Glitzkoin, has…",
+      "link": "https://cryptopanic.com/news/11327328/Bitcoin-burning-hot-Time-to-convert-your-cash-to-BTC-Lila-Ruzaini-managing-business-development-at-Glitzkoin-has",
+      "pubDate": "2021-01-30T04:03:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    }
+  ]
+}

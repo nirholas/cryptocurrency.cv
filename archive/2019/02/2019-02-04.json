@@ -1,0 +1,60 @@
+{
+  "date": "2019-02-04",
+  "fetchedAt": "2026-02-05T07:27:06.960Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Crypto Exchange Founder Dies With Only Password Leaving $262 Million in Client Funds Inaccessible",
+      "link": "https://cryptopanic.com/news/4467767/Crypto-Exchange-Founder-Dies-With-Only-Password-Leaving-262-Million-in-Client-Funds-Inaccessible",
+      "pubDate": "2019-02-04T16:04:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BCH",
+        "BTG"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "What Do the Most Popular TRON Dapps Look Like in 2019? Here’s a List of 10 Examples",
+      "link": "https://cryptopanic.com/news/4465838/What-Do-the-Most-Popular-TRON-Dapps-Look-Like-in-2019-Heres-a-List-of-10-Examples",
+      "pubDate": "2019-02-04T12:29:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "NANO Now Accepted by Blockchain-Powered Online Booking Platform Travala",
+      "link": "https://cryptopanic.com/news/4464394/NANO-Now-Accepted-by-Blockchain-Powered-Online-Booking-Platform-Travala",
+      "pubDate": "2019-02-04T08:08:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XNO"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

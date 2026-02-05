@@ -1,0 +1,33 @@
+{
+  "date": "2020-08-12",
+  "fetchedAt": "2026-02-05T07:27:06.980Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @PaxosGlobal: At Paxos, we take a compliance first approach. Check out the monthly attestations of the three Paxos-issued tokens - $PAX,…",
+      "link": "https://cryptopanic.com/news/9652215/RT-PaxosGlobal-At-Paxos-we-take-a-compliance-first-approach-Check-out-the-monthly-attestations-of-the-three-Paxos-issued-tokens-PAX",
+      "pubDate": "2020-08-12T16:12:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "Appeals Court Backs Coinbase in Bitcoin Gold Fork ‘Breach of Contract’ Lawsuit",
+      "link": "https://cryptopanic.com/news/9648365/Appeals-Court-Backs-Coinbase-in-Bitcoin-Gold-Fork-Breach-of-Contract-Lawsuit",
+      "pubDate": "2020-08-12T09:09:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BTG"
+      ]
+    }
+  ]
+}

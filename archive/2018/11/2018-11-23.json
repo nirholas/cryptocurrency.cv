@@ -1,0 +1,25 @@
+{
+  "date": "2018-11-23",
+  "fetchedAt": "2026-02-05T07:27:07.880Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Stellar Lumens [XLM] Briefly Becomes Fourth Largest Cryptocurrency",
+      "link": "https://cryptopanic.com/news/3774873/Stellar-Lumens-XLM-Briefly-Becomes-Fourth-Largest-Cryptocurrency",
+      "pubDate": "2018-11-23T16:49:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

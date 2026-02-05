@@ -1,0 +1,238 @@
+{
+  "date": "2023-12-10",
+  "fetchedAt": "2026-02-05T07:27:08.065Z",
+  "articleCount": 14,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Can the rising interest in Pudgy Penguins save the NFT sector?",
+      "link": "https://cryptopanic.com/news/19099407/Can-the-rising-interest-in-Pudgy-Penguins-save-the-NFT-sector",
+      "pubDate": "2023-12-10T23:30:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "APE"
+      ]
+    },
+    {
+      "title": "Shiba Inu Sees Trillions In Accumulation Spree By Mega Whales — $0.001 SHIB Price Now Highly In View",
+      "link": "https://cryptopanic.com/news/19099252/Shiba-Inu-Sees-Trillions-In-Accumulation-Spree-By-Mega-Whales-0001-SHIB-Price-Now-Highly-In-View",
+      "pubDate": "2023-12-10T20:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The Shiba Inu (SHIB) community received quite a positive transmission following a huge transaction involving over...",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Market Ultra Bullish as Top Coins Print Massive Gains",
+      "link": "https://cryptopanic.com/news/19099218/Crypto-Market-Ultra-Bullish-as-Top-Coins-Print-Massive-Gains",
+      "pubDate": "2023-12-10T20:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Amidst a surge in cryptocurrency values, diverse coins showcase remarkable gains, hinting at a bullish market sentiment and growth potential.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "SOL",
+        "DOGE",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Why Are NFTs Bad? The Problem And Legal Issues",
+      "link": "https://cryptopanic.com/news/19099220/Why-Are-NFTs-Bad-The-Problem-And-Legal-Issues",
+      "pubDate": "2023-12-10T20:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "IMX"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Whats With All The Mysterious Cryptocurrency Deaths",
+      "link": "https://cryptopanic.com/news/19099026/Whats-With-All-The-Mysterious-Cryptocurrency-Deaths",
+      "pubDate": "2023-12-10T17:00:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DAI"
+      ]
+    },
+    {
+      "title": "Our Most Read Stories This Week: HNT Launches Crypto Mobile Plan, ORDI Tops $1B, JTO Airdrop, $650M LINK Staked",
+      "link": "https://cryptopanic.com/news/19099006/Our-Most-Read-Stories-This-Week-HNT-Launches-Crypto-Mobile-Plan-ORDI-Tops-1B-JTO-Airdrop-650M-LINK-Staked",
+      "pubDate": "2023-12-10T16:27:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "HNT",
+        "ORDI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana flips Ethereum on NFT sales – SOL to $90?",
+      "link": "https://cryptopanic.com/news/19098985/Solana-flips-Ethereum-on-NFT-sales-SOL-to-90",
+      "pubDate": "2023-12-10T16:16:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Solana has emerged as a formidable contender in the crypto industry, challenging the supremacy of established platforms like Ethereum. The most recent arena where Solana has made waves is the booming market of Non-Fungible Tokens (NFTs), whose efficiency and scalability have propelled it ahead of Ethereum. Solana keeps up with the bull run Solana has ... Read more",
+      "currencies": [
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Are ApeCoin (APE) and Pepe Coin (PEPE) the Hidden Gems in Bitcoin's Shadow?",
+      "link": "https://cryptopanic.com/news/19098938/Are-ApeCoin-APE-and-Pepe-Coin-PEPE-the-Hidden-Gems-in-Bitcoins-Shadow",
+      "pubDate": "2023-12-10T15:30:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "APE",
+        "PEPE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Solana Surpasses Ethereum in NFT Sales",
+      "link": "https://cryptopanic.com/news/19098792/Solana-Surpasses-Ethereum-in-NFT-Sales",
+      "pubDate": "2023-12-10T13:33:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Solana's NFT sales have eclipsed those of Ethereum",
+      "currencies": [
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 11
+      }
+    },
+    {
+      "title": "Cardano Price Experiences Sharp Pullback After Hitting 18-Month High – Is The Top In?",
+      "link": "https://cryptopanic.com/news/19098726/Cardano-Price-Experiences-Sharp-Pullback-After-Hitting-18-Month-High-Is-The-Top-In",
+      "pubDate": "2023-12-10T12:40:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The Cardano price has shown a solid performance over the past week, soaring by an impressive 48% in the last seven days. This bullish momentum has pushed the cryptocurrency to reclaim the $0.6 level for the first time in more than a year. However, the price has been experiencing a correction since reaching the multi-month […]",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 8
+      }
+    },
+    {
+      "title": "Cardano founder says crypto industry ‘doesn’t need Bitcoin to survive’",
+      "link": "https://cryptopanic.com/news/bitcoin/19098656/Cardano-founder-says-crypto-industry-doesnt-need-Bitcoin-to-survive",
+      "pubDate": "2023-12-10T11:26:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Charles Hoskinson, the founder of the decentralized finance (DeFI) platform Cardano (ADA), has challenged the prevailing narrative by asserting that … Continued",
+      "currencies": [
+        "BTC",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 10
+      }
+    },
+    {
+      "title": "APT, 1NCH, APE, FLOW, CYBER Set to Undergo New Token Unlocks",
+      "link": "https://cryptopanic.com/news/19098504/APT-1NCH-APE-FLOW-CYBER-Set-to-Undergo-New-Token-Unlocks",
+      "pubDate": "2023-12-10T08:47:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FLOW",
+        "APE",
+        "APT"
+      ]
+    },
+    {
+      "title": "Bitcoin Rally Continues But Concerns About Pullback Loom",
+      "link": "https://cryptopanic.com/news/19098434/Bitcoin-Rally-Continues-But-Concerns-About-Pullback-Loom",
+      "pubDate": "2023-12-10T07:19:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin made a remarkable move, surging to $44,000 following the Wall Street opening on December...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 6
+      }
+    },
+    {
+      "title": "How Lido, Maker helped boost DeFi TVL to August highs",
+      "link": "https://cryptopanic.com/news/19098240/How-Lido-Maker-helped-boost-DeFi-TVL-to-August-highs",
+      "pubDate": "2023-12-10T00:30:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    }
+  ]
+}

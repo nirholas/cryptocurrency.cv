@@ -1,0 +1,735 @@
+{
+  "date": "2021-03-04",
+  "fetchedAt": "2026-02-05T07:27:06.582Z",
+  "articleCount": 48,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @cz_binance: $9.9 billion locked! #BSC",
+      "link": "https://cryptopanic.com/news/11724252/RT-cz_binance-99-billion-locked-BSC?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-04T23:40:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "DEEP"
+      ]
+    },
+    {
+      "title": "IF NUCYPHER HITS $1 I AM GROWING A MULLET",
+      "link": "https://cryptopanic.com/news/11573895/IF-NUCYPHER-HITS-1-I-AM-GROWING-A-MULLET",
+      "pubDate": "2021-03-04T23:02:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Polkadot futures market flippens Litecoin as its open interest hits $573M",
+      "link": "https://cryptopanic.com/news/polkadot/11573829/Polkadot-futures-market-flippens-Litecoin-as-its-open-interest-hits-573M",
+      "pubDate": "2021-03-04T22:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Polkadot raced past Litecoin to become the fourth largest futures market as its open interest reached $573 million this week.",
+      "currencies": [
+        "DOT",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 21,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "So many paper hands",
+      "link": "https://cryptopanic.com/news/11578849/So-many-paper-hands",
+      "pubDate": "2021-03-04T21:41:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Investors in Top Crypto Asset Chainlink Can Now Earn Interest on Their Holdings",
+      "link": "https://cryptopanic.com/news/chainlink/11573709/Investors-in-Top-Crypto-Asset-Chainlink-Can-Now-Earn-Interest-on-Their-Holdings",
+      "pubDate": "2021-03-04T20:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Crypto lending platform BlockFi is now offering interest payments to investors who deposit Chainlink (LINK). Currently, BlockFi offers interest on Bitcoin, Ethereum and stablecoins. According to CEO and co-founder Zac Prince, $35 million worth of interest payments were distributed to investors in February alone. BlockFi announced on Twitter the service is being extended to Chainlink. […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Much wow! The Dallas Mavericks to accept Dogecoin for tickets and merch",
+      "link": "https://cryptopanic.com/news/dogecoin/11573620/Much-wow-The-Dallas-Mavericks-to-accept-Dogecoin-for-tickets-and-merch",
+      "pubDate": "2021-03-04T19:52:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "\"We will HODL any we get,\" Mark Cuban told Cointelegraph.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Guessing where the bottom is.",
+      "link": "https://cryptopanic.com/news/11579790/Guessing-where-the-bottom-is",
+      "pubDate": "2021-03-04T18:45:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "RT @safenetworktech: Lots of activity happening—from @maidsafe AMAs &amp; community #SafeChats to the Routing function now being ready for the…",
+      "link": "https://cryptopanic.com/news/11576000/RT-safenetworktech-Lots-of-activity-happeningfrom-maidsafe-AMAs-amp-community-SafeChats-to-the-Routing-function-now-being-ready-for-the",
+      "pubDate": "2021-03-04T18:42:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "We're all excited about the IOTA #SmartContracts Alpha release. Tomorrow is your chance to listen to #IOTA's cofoun…",
+      "link": "https://cryptopanic.com/news/11575673/Were-all-excited-about-the-IOTA-SmartContracts-Alpha-release-Tomorrow-is-your-chance-to-listen-to-IOTAs-cofoun",
+      "pubDate": "2021-03-04T18:39:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Creator of $4.1 Billion Crypto Asset EOS Unveils New Altcoin Project",
+      "link": "https://cryptopanic.com/news/11573590/Creator-of-41-Billion-Crypto-Asset-EOS-Unveils-New-Altcoin-Project",
+      "pubDate": "2021-03-04T18:30:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Blockchain developer Dan Larimer is announcing Clarion, a new crypto project that aims to provide a decentralized social networking experience. Larimer created the crypto platform EOS in 2017, which raked in an historic $4.1 billion in its initial coin offering (ICO). He says that Clarion will offer a revamped solution to the problem of creating […]",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Enjin ENJ and THETA on Fire Crypto.com, Elrond, REEF, Paid NETWORK, Polygon, Litecoin",
+      "link": "https://cryptopanic.com/news/litecoin/11573426/Enjin-ENJ-and-THETA-on-Fire-Cryptocom-Elrond-REEF-Paid-NETWORK-Polygon-Litecoin",
+      "pubDate": "2021-03-04T17:42:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "Enjin (ENJ) hits new $1.45 all-time high with JumpNet and Efinity | Crypto.com (CRO) Launches $200 million VC Arm | Terra Virtua (TVK), Elrond (EGLD), Reef Finance, Plasma.Finance (PPAY) | PAID Network, Brave (BAT), Orion Protocol (ORN) | Linear Finance (LINA), Digicol, Polygon (MATIC), Injective Protocol | Grayscale Litecoin (LTC) Investment and MimbleWimble | Netflix to Buy Bitcoin? #Bitcoin #enjin #theta #litecoin #crypto #altcoins #altcoin #Chainlink #Ethereum #Investing #Litecoin #Cryptocur",
+      "currencies": [
+        "LTC",
+        "THETA",
+        "ENJ"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Surges 10 Percent on String of Bullish News While Other Top Coins Remain in the Red",
+      "link": "https://cryptopanic.com/news/ripple/11573402/XRP-Surges-10-Percent-on-String-of-Bullish-News-While-Other-Top-Coins-Remain-in-the-Red",
+      "pubDate": "2021-03-04T17:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP jumps 10 percent as Ripple executives move to dismiss the SEC lawsuit",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 24,
+        "negative": 13
+      }
+    },
+    {
+      "title": "Research Status Update March 2021 - We've seen new releases of our #Pollen testnet, as well as continued progress o…",
+      "link": "https://cryptopanic.com/news/11575675/Research-Status-Update-March-2021-Weve-seen-new-releases-of-our-Pollen-testnet-as-well-as-continued-progress-o",
+      "pubDate": "2021-03-04T17:21:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "A dark horse in the Ethereum scaling wars? Chainlink’s oracles find fertile ground on xDai",
+      "link": "https://cryptopanic.com/news/chainlink/11573346/A-dark-horse-in-the-Ethereum-scaling-wars-Chainlinks-oracles-find-fertile-ground-on-xDai",
+      "pubDate": "2021-03-04T17:08:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Chainlink is rolling out support for xDai, a layer-two sidechain whose perceived centralization hasn’t stopped major DApp players.",
+      "currencies": [
+        "ETH",
+        "LINK",
+        "GNO"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Announcing our stake Supra Earn Supra vault! You need a minimum of 0.001 FLP to deposit, let your $supra work for y…",
+      "link": "https://cryptopanic.com/news/11575410/Announcing-our-stake-Supra-Earn-Supra-vault-You-need-a-minimum-of-0001-FLP-to-deposit-let-your-supra-work-for-y?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-04T16:57:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SUPRA",
+        "FLP"
+      ]
+    },
+    {
+      "title": "Whether you're a wise silent stacker or a panic seller, education is good for the whole community..",
+      "link": "https://cryptopanic.com/news/11573253/Whether-youre-a-wise-silent-stacker-or-a-panic-seller-education-is-good-for-the-whole-community",
+      "pubDate": "2021-03-04T16:30:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "RT @Delta_Token: 10 Minutes Left in the Delta LSW",
+      "link": "https://cryptopanic.com/news/11577417/RT-Delta_Token-10-Minutes-Left-in-the-Delta-LSW",
+      "pubDate": "2021-03-04T16:17:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CORE"
+      ]
+    },
+    {
+      "title": "Binance Smart Chain DeFi Project Hacked for $31 Million",
+      "link": "https://cryptopanic.com/news/11573052/Binance-Smart-Chain-DeFi-Project-Hacked-for-31-Million",
+      "pubDate": "2021-03-04T14:41:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The BNB-BUSD yield farming “Vault 1” of the DeFi application Meerkat finance, a clone of Yearn Finance on Binance Smart Chain, was drained for $31 million this morning. Meerkat Finance Hackers Tinker With Smart Contract The hackers implemented a change in the ownership of the smart contract address on Meerkat Finance at 9 am UTC. Soon after, they began withdrawing from the smart contract to multiple addresses. The hacker’s primary BNB address is identified on the blockchain, tagged as “FakePhish",
+      "currencies": [
+        "BTC",
+        "BNB",
+        "BUSD",
+        "CAKE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 37
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Polkadot developer Parity Technologies to partner with UC Berkeley",
+      "link": "https://cryptopanic.com/news/polkadot/11572904/Polkadot-developer-Parity-Technologies-to-partner-with-UC-Berkeley",
+      "pubDate": "2021-03-04T13:34:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Parity would work closely with Berkeley’s blockchain community on education and proficiency in blockchain and Substrate.",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 21,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Parity To Educate Berkeley Students on Developing Blockchain Projects on Polkadot",
+      "link": "https://cryptopanic.com/news/polkadot/11572857/Parity-To-Educate-Berkeley-Students-on-Developing-Blockchain-Projects-on-Polkadot",
+      "pubDate": "2021-03-04T13:11:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Dr. Gavin Wood, the co-founder of Ethereum and Polkadot, will give a lecture at Berkeley after a partnership between the university’s blockchain program and Parity.",
+      "currencies": [
+        "ETH",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Iota releases Smart Contracts Protocol alpha ahead of Coordicide rollout",
+      "link": "https://cryptopanic.com/news/11572825/Iota-releases-Smart-Contracts-Protocol-alpha-ahead-of-Coordicide-rollout",
+      "pubDate": "2021-03-04T13:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Developers can now try out the upcoming WebAssembly smart contract platform.",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 25,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Moonbeam, Parity announce collaboration to port Balancer to Polkadot",
+      "link": "https://cryptopanic.com/news/polkadot/11572822/Moonbeam-Parity-announce-collaboration-to-port-Balancer-to-Polkadot",
+      "pubDate": "2021-03-04T13:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Balancer’s programmable liquidity will now be deployed on the Polkadot ecosystem. The deployment is a result of a collaboration between Moonbeam and Parity and Balancer Labs’ grant funding for exploring experimental deployments of the Balancer protocol to alternative Layer 1 blockchains. According to an announcement released earlier in the day by Moonbeam, “This move adds […]",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "IOTA to Roll Out Smart Contracts Protocol Alpha to Bring IOTA into DeFi World",
+      "link": "https://cryptopanic.com/news/11572792/IOTA-to-Roll-Out-Smart-Contracts-Protocol-Alpha-to-Bring-IOTA-into-DeFi-World",
+      "pubDate": "2021-03-04T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "IOTA is about to inch closer to the DeFi sphere with the upcoming release of Smart Contracts Protocol alpha, dapps and colored coins",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 27,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "IOTA Smart Contracts Protocol Alpha Release",
+      "link": "https://cryptopanic.com/news/11572872/IOTA-Smart-Contracts-Protocol-Alpha-Release",
+      "pubDate": "2021-03-04T12:56:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The release of the IOTA Smart Contracts Protocol (ISCP) Alpha marks a significant milestone in the development of the ISCP. The scale and nature of improvements over the previous “pre-alpha” version are significant and we now feel confident with the current state to release the “Alpha version”. The fundamental and",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "First Major Rug Pull on Binance Smart Chain? Over $30 Million Drained",
+      "link": "https://cryptopanic.com/news/11572768/First-Major-Rug-Pull-on-Binance-Smart-Chain-Over-30-Million-Drained",
+      "pubDate": "2021-03-04T12:37:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "BUSD"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Largest Binance Smart Chain Fraud: Meerkat Finance (MKAT) Rug Pulled with $32 Million Losses",
+      "link": "https://cryptopanic.com/news/11572740/Largest-Binance-Smart-Chain-Fraud-Meerkat-Finance-MKAT-Rug-Pulled-with-32-Million-Losses",
+      "pubDate": "2021-03-04T12:11:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Another day, another \"rug pull\" in DeFi corner. The team at Meerkat Finance (MKAT), BSC-based \"yield farming\" protocol, left with whopping $32 million in BUSD and BNB",
+      "currencies": [
+        "BNB",
+        "BUSD"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Seeking Podcast Guest from the ArkEcosystem team",
+      "link": "https://cryptopanic.com/news/11573848/Seeking-Podcast-Guest-from-the-ArkEcosystem-team",
+      "pubDate": "2021-03-04T11:56:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Ripple Makes Private Blockchain for Building Central Bank Digital Currencies",
+      "link": "https://cryptopanic.com/news/ripple/11572486/Ripple-Makes-Private-Blockchain-for-Building-Central-Bank-Digital-Currencies",
+      "pubDate": "2021-03-04T11:23:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The new CBDC Private Ledger is being developed with high throughput and interoperability as its main priorities, said Ripple.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 9
+      }
+    },
+    {
+      "title": "Ripple Helps Shift 40 Million XRP While Its Legal Battle with the SEC Continues",
+      "link": "https://cryptopanic.com/news/ripple/11572467/Ripple-Helps-Shift-40-Million-XRP-While-Its-Legal-Battle-with-the-SEC-Continues",
+      "pubDate": "2021-03-04T11:09:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Blockchain heavyweight Ripple and a minor crypto exchange have transferred 40 million XRP over the past 20 hours",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 8
+      }
+    },
+    {
+      "title": "Ripple CEO Gives Two Reasons to Dismiss SEC Lawsuit",
+      "link": "https://cryptopanic.com/news/ripple/11572438/Ripple-CEO-Gives-Two-Reasons-to-Dismiss-SEC-Lawsuit",
+      "pubDate": "2021-03-04T10:49:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Ripple CEO Brad Garlinghouse has provided two key arguments for the SEC to dismiss its complaint against his company.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Elrond (EGLD) Platform Now Seamlessly Accessible for Reef Finance (REEF) Users",
+      "link": "https://cryptopanic.com/news/11572434/Elrond-EGLD-Platform-Now-Seamlessly-Accessible-for-Reef-Finance-REEF-Users",
+      "pubDate": "2021-03-04T10:47:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Reef Finance (REEF), a pioneering cross-chain DeFi ecosystem, partners with Elrond (EGLD) high-performance blockchain to advance its liquidity and interoperability",
+      "currencies": [
+        "EGLD"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "You've walked through the overview of @LuaSwap &amp; $LUA token introduction. Now it's time to dig deeper into each fea…",
+      "link": "https://cryptopanic.com/news/11577103/Youve-walked-through-the-overview-of-LuaSwap-amp-LUA-token-introduction-Now-its-time-to-dig-deeper-into-each-fea",
+      "pubDate": "2021-03-04T10:02:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "Bithumb will suspend LOOM deposits and withdrawals on March 5th 2021 10:00 KST to prepare for the LOOM token swap…",
+      "link": "https://cryptopanic.com/news/11575939/Bithumb-will-suspend-LOOM-deposits-and-withdrawals-on-March-5th-2021-1000-KST-to-prepare-for-the-LOOM-token-swap",
+      "pubDate": "2021-03-04T09:56:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LOOM"
+      ]
+    },
+    {
+      "title": "SushiSwap Now Live on Fantom, Polygon, xDai, Binance, Moonbeam",
+      "link": "https://cryptopanic.com/news/uniswap/11572339/SushiSwap-Now-Live-on-Fantom-Polygon-xDai-Binance-Moonbeam",
+      "pubDate": "2021-03-04T09:49:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "One of Ethereum’s most popular decentralized exchanges is “going multichain.” SushiSwap Expands SushiSwap has launched on a host of new blockchain protocols. The decentralized exchange, which launched on Ethereum last summer, has deployed its contracts on Fantom, xDai, Binance Smart Chain, and Moonbeam. It’s also gone live on Polygon, one of Ethereum’s most vital Layer 2...",
+      "currencies": [
+        "ETH",
+        "UNI",
+        "SUSHI"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "zzz",
+      "link": "https://cryptopanic.com/news/11572132/zzz",
+      "pubDate": "2021-03-04T07:30:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Ripple CEO files motion to dismiss SEC complaint citing ‘abuse of prosecutorial discretion’",
+      "link": "https://cryptopanic.com/news/ripple/11571777/Ripple-CEO-files-motion-to-dismiss-SEC-complaint-citing-abuse-of-prosecutorial-discretion",
+      "pubDate": "2021-03-04T07:10:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Ripple CEO Brad Garlinghouse has filed a motion to dismiss the SEC’s amended complaint against him, calling it “regulatory overreach.” The exec took to Twitter to announce his position on the SEC’s charges against him and Ripple Labs Inc. by sharing a link to the letter filed on his behalf, saying that “it speaks for […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple CEO to File Motion to Dismiss SEC Lawsuit",
+      "link": "https://cryptopanic.com/news/ripple/11570594/Ripple-CEO-to-File-Motion-to-Dismiss-SEC-Lawsuit",
+      "pubDate": "2021-03-04T06:21:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Brad Garlinghouse’s XRP sales took place on foreign exchanges, his lawyers allege",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We have finalized the token swap terms with another big exchange, in light of this we've decided it would be best t…",
+      "link": "https://cryptopanic.com/news/11570602/We-have-finalized-the-token-swap-terms-with-another-big-exchange-in-light-of-this-weve-decided-it-would-be-best-t",
+      "pubDate": "2021-03-04T06:19:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "LOOM"
+      ]
+    },
+    {
+      "title": "Today, we are thrilled to share that Xfers has received a strategic investment of USD 30 million from @payfazz, and…",
+      "link": "https://cryptopanic.com/news/11571966/Today-we-are-thrilled-to-share-that-Xfers-has-received-a-strategic-investment-of-USD-30-million-from-payfazz-and",
+      "pubDate": "2021-03-04T04:55:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XSGD"
+      ]
+    },
+    {
+      "title": "RT @sharonlourdes: 2) Being in crypto, through bull and bear cycles, is one thing. Being in Crypto/Defi for Southeast Asia takes another le…",
+      "link": "https://cryptopanic.com/news/11571967/RT-sharonlourdes-2-Being-in-crypto-through-bull-and-bear-cycles-is-one-thing-Being-in-CryptoDefi-for-Southeast-Asia-takes-another-le",
+      "pubDate": "2021-03-04T04:42:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "XSGD"
+      ]
+    },
+    {
+      "title": "RT @DFXFinance: We’re very excited to announce that we have raised north of $5M from a great group of strategic partners led by @polychain…",
+      "link": "https://cryptopanic.com/news/11571968/RT-DFXFinance-Were-very-excited-to-announce-that-we-have-raised-north-of-5M-from-a-great-group-of-strategic-partners-led-by-polychain",
+      "pubDate": "2021-03-04T04:42:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XSGD"
+      ]
+    },
+    {
+      "title": "Sleeping Giant",
+      "link": "https://cryptopanic.com/news/11572492/Sleeping-Giant",
+      "pubDate": "2021-03-04T04:20:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "We are excited to announce that $STPT will be listed on the Korean top exchange @BithumbOfficial. STPT/BTC trading…",
+      "link": "https://cryptopanic.com/news/11571380/We-are-excited-to-announce-that-STPT-will-be-listed-on-the-Korean-top-exchange-BithumbOfficial-STPTBTC-trading",
+      "pubDate": "2021-03-04T03:19:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "STPT"
+      ]
+    },
+    {
+      "title": "Amazon Now Offering to Run Ethereum Nodes for Developers (incase any of you lot missed the nu’s 🤪) no direct mention of nu, but we all know they’re involved somehow...",
+      "link": "https://cryptopanic.com/news/11572493/Amazon-Now-Offering-to-Run-Ethereum-Nodes-for-Developers-incase-any-of-you-lot-missed-the-nus-no-direct-mention-of-nu-but-we-all-know-theyre-involved-somehow",
+      "pubDate": "2021-03-04T03:13:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "RT @DNV_Assurance: We're proud to have worked with @NorskHydroASA to enable trusted &amp; transparent sharing of their #sustainability claims.…",
+      "link": "https://cryptopanic.com/news/11571848/RT-DNV_Assurance-Were-proud-to-have-worked-with-NorskHydroASA-to-enable-trusted-amp-transparent-sharing-of-their-sustainability-claims",
+      "pubDate": "2021-03-04T02:26:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "VET",
+        "VTHO"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @DNV_Assurance: We're proud to have worked with @NorskHydroASA to enable trusted & transparent sharing of their #sustainability claims.…",
+      "link": "https://cryptopanic.com/news/vechain/11571848/RT-DNV_Assurance-Were-proud-to-have-worked-with-NorskHydroASA-to-enable-trusted-amp-transparent-sharing-of-their-sustainability-claims",
+      "pubDate": "2021-03-04T02:26:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "VET",
+        "VTHO",
+        "VEN"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Monthly report for Feb 2021, learn what's going on with QuarkChain",
+      "link": "https://cryptopanic.com/news/11571205/Monthly-report-for-Feb-2021-learn-whats-going-on-with-QuarkChain",
+      "pubDate": "2021-03-04T01:03:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QKC"
+      ]
+    },
+    {
+      "title": "Sign this petition for Binance listing",
+      "link": "https://cryptopanic.com/news/11568521/Sign-this-petition-for-Binance-listing",
+      "pubDate": "2021-03-04T00:02:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    }
+  ]
+}

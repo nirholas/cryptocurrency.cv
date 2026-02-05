@@ -1,0 +1,237 @@
+{
+  "date": "2023-08-27",
+  "fetchedAt": "2026-02-05T07:27:07.213Z",
+  "articleCount": 15,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitmain’s Upcoming Monero ASIC Miner Sparks Anxious Buzz Within XMR Community",
+      "link": "https://cryptopanic.com/news/18862738/Bitmains-Upcoming-Monero-ASIC-Miner-Sparks-Anxious-Buzz-Within-XMR-Community",
+      "pubDate": "2023-08-27T23:30:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Shopify to Accept USDC Payments Via Solana Pay Integration",
+      "link": "https://cryptopanic.com/news/18862668/Shopify-to-Accept-USDC-Payments-Via-Solana-Pay-Integration",
+      "pubDate": "2023-08-27T21:45:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana's native SOL, as well as the BONK token, will be added to the new payment option in the future.",
+      "currencies": [
+        "USDC",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Bitcoin price stability creates lucrative setups in TON, XMR, MNT and QNT",
+      "link": "https://cryptopanic.com/news/18862575/Bitcoin-price-stability-creates-lucrative-setups-in-TON-XMR-MNT-and-QNT",
+      "pubDate": "2023-08-27T19:08:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XMR",
+        "QNT",
+        "TON"
+      ]
+    },
+    {
+      "title": "Ripple (XRP) Attracts South Korea’s Young Investor Crowd: Report",
+      "link": "https://cryptopanic.com/news/18862552/Ripple-XRP-Attracts-South-Koreas-Young-Investor-Crowd-Report",
+      "pubDate": "2023-08-27T18:26:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "XRP investment ratio was high among all age groups, including those in their 20s.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "dYdX Founder Says Crypto Industry Should Give Up on US Customers As Market Not ‘Worth the Hassle’",
+      "link": "https://cryptopanic.com/news/18862489/dYdX-Founder-Says-Crypto-Industry-Should-Give-Up-on-US-Customers-As-Market-Not-Worth-the-Hassle",
+      "pubDate": "2023-08-27T16:55:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The founder of the decentralized exchange dYdX believes that crypto builders should focus on serving markets outside the United States for the next five to 10 years. Antonio Juliano tells his 49,400 followers on the social media platform X that the regulatory uncertainty in the United States is not worth the “hassle” or “compromises.” According […]",
+      "currencies": [
+        "DYDX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Apecoin loses most value among leading metaverse projects in the last week",
+      "link": "https://cryptopanic.com/news/18862464/Apecoin-loses-most-value-among-leading-metaverse-projects-in-the-last-week",
+      "pubDate": "2023-08-27T16:30:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "APE"
+      ]
+    },
+    {
+      "title": "I questioned ChatGPT about Filecoin’s 2023 performance, here’s what it said",
+      "link": "https://cryptopanic.com/news/18862349/I-questioned-ChatGPT-about-Filecoins-2023-performance-heres-what-it-said",
+      "pubDate": "2023-08-27T14:20:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "US Crypto Startups Face Adoption Slowdown and Difficult Regulations",
+      "link": "https://cryptopanic.com/news/18862341/US-Crypto-Startups-Face-Adoption-Slowdown-and-Difficult-Regulations",
+      "pubDate": "2023-08-27T13:58:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DYDX"
+      ]
+    },
+    {
+      "title": "I asked ChatGPT to forecast Ethereum Classic’s price",
+      "link": "https://cryptopanic.com/news/18862313/I-asked-ChatGPT-to-forecast-Ethereum-Classics-price",
+      "pubDate": "2023-08-27T13:50:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "Growing Use of AI in Making Web3 Games Hints at Accelerated Adoption of Blockchain — Cronos Labs MD",
+      "link": "https://cryptopanic.com/news/18862163/Growing-Use-of-AI-in-Making-Web3-Games-Hints-at-Accelerated-Adoption-of-Blockchain-Cronos-Labs-MD",
+      "pubDate": "2023-08-27T11:30:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Crypto Weekly Roundup: Fee Jump For Friend.Tech And More",
+      "link": "https://cryptopanic.com/news/18862125/Crypto-Weekly-Roundup-Fee-Jump-For-FriendTech-And-More",
+      "pubDate": "2023-08-27T10:41:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDC",
+        "SOL",
+        "MATIC",
+        "DYDX"
+      ]
+    },
+    {
+      "title": "Western Union Embraces Ripple Blockchain And XRP Token For Enhanced Money Transactions",
+      "link": "https://cryptopanic.com/news/18862071/Western-Union-Embraces-Ripple-Blockchain-And-XRP-Token-For-Enhanced-Money-Transactions",
+      "pubDate": "2023-08-27T09:40:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Global money transfer powerhouse Western Union is boldly venturing into the dynamic and rapidly evolving realm of cryptocurrencies, marking a significant and strategic move in its financial landscape. With a storied history of facilitating seamless cross-border transactions, Western Union’s decision to enter the highly-stacked cryptocurrency arena underscores its commitment to innovation and...",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Charles Hoskinson Believes Cardano Will Become Biggest Crypto in the World Serving As Backbone of New Digital Nation",
+      "link": "https://cryptopanic.com/news/18862046/Charles-Hoskinson-Believes-Cardano-Will-Become-Biggest-Crypto-in-the-World-Serving-As-Backbone-of-New-Digital-Nation",
+      "pubDate": "2023-08-27T09:15:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Input Output (IOHK) CEO Charles Hoskinson says he has a strong feeling that Cardano (ADA) will be the leading cryptocurrency of the future. During his keynote address at the Rare Evo 2023 event in Denver, Hoskinson tells participants that Cardano, which is currently the eighth largest digital asset by market cap, will surpass Bitcoin (BTC) […]",
+      "currencies": [
+        "BTC",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 7
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Is Cardano back on the path it trode in 2019?",
+      "link": "https://cryptopanic.com/news/18861940/Is-Cardano-back-on-the-path-it-trode-in-2019",
+      "pubDate": "2023-08-27T06:30:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The possibility of Cardano entering a depression phase months before Bitcoin’s next halving seemed likely to happen.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "CNBC Covers Solana, Drops Bitcoin Cash And Litecoin",
+      "link": "https://cryptopanic.com/news/18861902/CNBC-Covers-Solana-Drops-Bitcoin-Cash-And-Litecoin",
+      "pubDate": "2023-08-27T04:38:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "LTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

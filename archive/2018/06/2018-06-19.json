@@ -1,0 +1,25 @@
+{
+  "date": "2018-06-19",
+  "fetchedAt": "2026-02-05T07:27:06.999Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tron Bought BitTorrent And Crypto Won't Stop Talking About It",
+      "link": "https://cryptopanic.com/news/tron/2298928/Tron-Bought-BitTorrent-And-Crypto-Wont-Stop-Talking-About-It",
+      "pubDate": "2018-06-19T21:50:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

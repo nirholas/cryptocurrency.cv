@@ -1,0 +1,83 @@
+{
+  "date": "2019-01-31",
+  "fetchedAt": "2026-02-05T07:27:06.978Z",
+  "articleCount": 5,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "EOS stakeholders voting to burn 25 million EOS ($58 million)",
+      "link": "https://cryptopanic.com/news/eos/4437654/EOS-stakeholders-voting-to-burn-25-million-EOS-58-million",
+      "pubDate": "2019-01-31T19:09:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "IOTA Will Work With Energinet to Bring IoT to the Energy Market",
+      "link": "https://cryptopanic.com/news/4435587/IOTA-Will-Work-With-Energinet-to-Bring-IoT-to-the-Energy-Market",
+      "pubDate": "2019-01-31T15:59:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @GlobeAir: &gt; News: We are proud of disclosing our latest numbers, closing the month of #August2018 as the #Marke…",
+      "link": "https://cryptopanic.com/news/4434541/RT-GlobeAir-gt-News-We-are-proud-of-disclosing-our-latest-numbers-closing-the-month-of-August2018-as-the-Marke",
+      "pubDate": "2019-01-31T14:16:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVINOC"
+      ]
+    },
+    {
+      "title": "IOTA: Almost All Tokens From $11 Million Hack Have Been Found",
+      "link": "https://cryptopanic.com/news/4432324/IOTA-Almost-All-Tokens-From-11-Million-Hack-Have-Been-Found",
+      "pubDate": "2019-01-31T09:00:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @AriannaSimpson: Amazing how people outside the space seem to think crypto is dead. Dev activity is booming. It is 100% a full time job…",
+      "link": "https://cryptopanic.com/news/11446111/RT-AriannaSimpson-Amazing-how-people-outside-the-space-seem-to-think-crypto-is-dead-Dev-activity-is-booming-It-is-100-a-full-time-job?mtm_campaign=API-OFA",
+      "pubDate": "2019-01-31T06:37:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NPC"
+      ]
+    }
+  ]
+}

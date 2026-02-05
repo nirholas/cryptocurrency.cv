@@ -1,0 +1,517 @@
+{
+  "date": "2023-12-26",
+  "fetchedAt": "2026-02-05T07:27:08.103Z",
+  "articleCount": 35,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "2023’s Crypto Bounty: These Top 13 Airdrops Distributed Over $4 Billion",
+      "link": "https://cryptopanic.com/news/19133503/2023s-Crypto-Bounty-These-Top-13-Airdrops-Distributed-Over-4-Billion",
+      "pubDate": "2023-12-26T20:30:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ATOM",
+        "ARB",
+        "TIA"
+      ]
+    },
+    {
+      "title": "ATOM price rebounds, is a $13 prediction on the cards?",
+      "link": "https://cryptopanic.com/news/19133497/ATOM-price-rebounds-is-a-13-prediction-on-the-cards",
+      "pubDate": "2023-12-26T20:30:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "ATOM's one-day price chart shows that the market structure is bullish.",
+      "currencies": [
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano’s lead developer hints at groundbreaking developments in 2024",
+      "link": "https://cryptopanic.com/news/19133458/Cardanos-lead-developer-hints-at-groundbreaking-developments-in-2024",
+      "pubDate": "2023-12-26T19:48:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "In a recent statement that has sent ripples through the blockchain community, Sebastien Guillemot, the lead developer of Cardano, hinted at revolutionary developments slated for 2024. Amidst a downturn in Ethereum sentiment, Guillemot expressed his enthusiasm for a potential collaboration with Arbitrum, suggesting an impending fusion of Cardano with Arbitrum and Mina Protocol. This strategic...",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "ARB"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Coinbase’s Ethereum Layer-2 Solution’s Total Value Locked Hits New All-Time High, Reaches $742,000,000",
+      "link": "https://cryptopanic.com/news/19133460/Coinbases-Ethereum-Layer-2-Solutions-Total-Value-Locked-Hits-New-All-Time-High-Reaches-742000000",
+      "pubDate": "2023-12-26T19:45:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDC",
+        "DAI",
+        "OP"
+      ]
+    },
+    {
+      "title": "Year-End Surprise: Polkadot (DOT), Compound (COMP), and Algorand (ALGO) Setting Up for a Major Breakthrough?",
+      "link": "https://cryptopanic.com/news/19133441/Year-End-Surprise-Polkadot-DOT-Compound-COMP-and-Algorand-ALGO-Setting-Up-for-a-Major-Breakthrough",
+      "pubDate": "2023-12-26T19:35:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Explore the pivotal developments in the crypto world as 2023 draws to a close, focusing on DOT (Polkadot), COMP (Compound), and ALGO (Algorand). Uncover how these altcoins are shaping the future of blockchain with strategic partnerships, market trends, and innovative projects. Dive into our analysis to see what the end of the year holds for these leading cryptocurrencies.",
+      "currencies": [
+        "DOT",
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "PancakeSwap Price Prediction: What’s Next For $CAKE After 68% Weekly Surge?",
+      "link": "https://cryptopanic.com/news/19133370/PancakeSwap-Price-Prediction-Whats-Next-For-CAKE-After-68-Weekly-Surge",
+      "pubDate": "2023-12-26T18:54:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CAKE"
+      ]
+    },
+    {
+      "title": "MakerDAO closes the year with this milestone",
+      "link": "https://cryptopanic.com/news/19133350/MakerDAO-closes-the-year-with-this-milestone",
+      "pubDate": "2023-12-26T18:30:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DAI"
+      ]
+    },
+    {
+      "title": "Bitcoin, spot ETFs and a bull market — Why ETH, SOL, OKB and INJ could thrive in 2024",
+      "link": "https://cryptopanic.com/news/19133298/Bitcoin-spot-ETFs-and-a-bull-market-Why-ETH-SOL-OKB-and-INJ-could-thrive-in-2024",
+      "pubDate": "2023-12-26T17:43:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "OKB",
+        "INJ"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ORDI’s Record Rally — Leading the Charge in Bitcoin’s BRC20 Token Boom",
+      "link": "https://cryptopanic.com/news/19133283/ORDIs-Record-Rally-Leading-the-Charge-in-Bitcoins-BRC20-Token-Boom",
+      "pubDate": "2023-12-26T17:30:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ORDI"
+      ]
+    },
+    {
+      "title": "Check for yourself",
+      "link": "https://cryptopanic.com/news/19731535/Check-for-yourself",
+      "pubDate": "2023-12-26T16:31:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZRX"
+      ]
+    },
+    {
+      "title": "SOL Founder Says ‘Solana Is Ethereum,’ What Does He Mean?",
+      "link": "https://cryptopanic.com/news/19133092/SOL-Founder-Says-Solana-Is-Ethereum-What-Does-He-Mean",
+      "pubDate": "2023-12-26T15:30:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "SOL co-founder Anatoly Yakovenko recently highlighted the relationship between Solana and Ethereum as he said “Solana is Ethereum.” This assertion came in a post that also shed more light on the future of blockchain interoperability and Solana’s role in all of it. Why “Solana Is Ethereum” In a post on his X (formerly Twitter) platform, […]",
+      "currencies": [
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Osmosis [OSMO] up by 272% in December, could it be the next big crypto?",
+      "link": "https://cryptopanic.com/news/19132957/Osmosis-OSMO-up-by-272-in-December-could-it-be-the-next-big-crypto",
+      "pubDate": "2023-12-26T14:30:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OSMO"
+      ]
+    },
+    {
+      "title": "Cardano Lead Dev Teases Thrilling 2024 Plans Involving Arbitrum and Mina Protocol",
+      "link": "https://cryptopanic.com/news/19132946/Cardano-Lead-Dev-Teases-Thrilling-2024-Plans-Involving-Arbitrum-and-Mina-Protocol",
+      "pubDate": "2023-12-26T14:25:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano lead developer unveils bold vision for 2024, teasing game-changing integration with Arbitrum and Mina Protocol",
+      "currencies": [
+        "ADA",
+        "MINA",
+        "ARB"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "PanCakeSwap Team Burns 10 Mln Tokens, CAKE Price Soars 25%",
+      "link": "https://cryptopanic.com/news/19132922/PanCakeSwap-Team-Burns-10-Mln-Tokens-CAKE-Price-Soars-25",
+      "pubDate": "2023-12-26T14:14:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CAKE"
+      ]
+    },
+    {
+      "title": "Bitcoin Facing “Lack of Strength” Warnings, Yet This BTC Alternative Flashes Promise by Crossing $6 Million Presale Mark",
+      "link": "https://cryptopanic.com/news/19132841/Bitcoin-Facing-Lack-of-Strength-Warnings-Yet-This-BTC-Alternative-Flashes-Promise-by-Crossing-6-Million-Presale-Mark",
+      "pubDate": "2023-12-26T13:46:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Crypto Price Prediction For December 26th: ETH, HNT, ROSE",
+      "link": "https://cryptopanic.com/news/19132751/Crypto-Price-Prediction-For-December-26th-ETH-HNT-ROSE",
+      "pubDate": "2023-12-26T13:07:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ROSE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum: Balancing Act At $2,300 – Scaling The Heights Or Facing A Looming Drop?",
+      "link": "https://cryptopanic.com/news/19132761/Ethereum-Balancing-Act-At-2300-Scaling-The-Heights-Or-Facing-A-Looming-Drop",
+      "pubDate": "2023-12-26T13:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ATOM",
+        "OP"
+      ]
+    },
+    {
+      "title": "India Is Expanding Cryptocurrency, Blockchain, and AI Technologies",
+      "link": "https://cryptopanic.com/news/19132764/India-Is-Expanding-Cryptocurrency-Blockchain-and-AI-Technologies",
+      "pubDate": "2023-12-26T12:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Fantom (FTM) Forms 'W' Pattern in Bullish Move, Top Analyst Predicts $1.60 Target",
+      "link": "https://cryptopanic.com/news/fantom/19132678/Fantom-FTM-Forms-W-Pattern-in-Bullish-Move-Top-Analyst-Predicts-160-Target",
+      "pubDate": "2023-12-26T12:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FTM"
+      ]
+    },
+    {
+      "title": "Solana Winner: Trader Makes 2,570x Profit With Just 30 SOL",
+      "link": "https://cryptopanic.com/news/19132660/Solana-Winner-Trader-Makes-2570x-Profit-With-Just-30-SOL",
+      "pubDate": "2023-12-26T12:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Smart trader managed to earn impressive amount of funds on merely 30 SOL within last week",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "VeChain Rockets to a New High, Overtaking Cronos",
+      "link": "https://cryptopanic.com/news/19132606/VeChain-Rockets-to-a-New-High-Overtaking-Cronos",
+      "pubDate": "2023-12-26T11:38:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO",
+        "VET"
+      ]
+    },
+    {
+      "title": "Looking Deeper: Can ATOM Sustain Its 13% Surge Beyond The Network Buzz?",
+      "link": "https://cryptopanic.com/news/19132411/Looking-Deeper-Can-ATOM-Sustain-Its-13-Surge-Beyond-The-Network-Buzz",
+      "pubDate": "2023-12-26T10:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "ATOM",
+        "OSMO"
+      ]
+    },
+    {
+      "title": "Bitcoin (BTC) Falls Below $43K, SATS (1000SATS) Soars by 20% Daily (Market Watch)",
+      "link": "https://cryptopanic.com/news/19132394/Bitcoin-BTC-Falls-Below-43K-SATS-1000SATS-Soars-by-20-Daily-Market-Watch",
+      "pubDate": "2023-12-26T09:44:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ORDI"
+      ]
+    },
+    {
+      "title": "Why Osmosis (OSMO) & SATS Prices Are Skyrocketing Today?",
+      "link": "https://cryptopanic.com/news/19132392/Why-Osmosis-OSMO-SATS-Prices-Are-Skyrocketing-Today",
+      "pubDate": "2023-12-26T09:41:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "OSMO"
+      ]
+    },
+    {
+      "title": "ORDI Reaches Another All-Time High—Is $100 Within Reach?",
+      "link": "https://cryptopanic.com/news/19132471/ORDI-Reaches-Another-All-Time-HighIs-100-Within-Reach",
+      "pubDate": "2023-12-26T09:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ORDI"
+      ]
+    },
+    {
+      "title": "Fantom (FTM) Price Gearing for A 200% Price Rally Above This Breakout Level",
+      "link": "https://cryptopanic.com/news/fantom/19132359/Fantom-FTM-Price-Gearing-for-A-200-Price-Rally-Above-This-Breakout-Level",
+      "pubDate": "2023-12-26T09:20:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FTM"
+      ]
+    },
+    {
+      "title": "SAND Potentially Reaching Bottom, Analyst Hint at Future Upswing",
+      "link": "https://cryptopanic.com/news/19132251/SAND-Potentially-Reaching-Bottom-Analyst-Hint-at-Future-Upswing",
+      "pubDate": "2023-12-26T07:53:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SAND"
+      ]
+    },
+    {
+      "title": "ATOM pumps, but all’s not well with Cosmos: Here’s why",
+      "link": "https://cryptopanic.com/news/19132074/ATOM-pumps-but-alls-not-well-with-Cosmos-Heres-why",
+      "pubDate": "2023-12-26T05:30:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ]
+    },
+    {
+      "title": "5 Cryptos to Watch as the Year Ends: DOT, VET, OCEAN, AVAX, WOO",
+      "link": "https://cryptopanic.com/news/19132073/5-Cryptos-to-Watch-as-the-Year-Ends-DOT-VET-OCEAN-AVAX-WOO",
+      "pubDate": "2023-12-26T05:29:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "AVAX",
+        "VET",
+        "WOO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Prices Today: Market Rebounds As Bitcoin, Pepe Coin, ORDI Soar",
+      "link": "https://cryptopanic.com/news/19132057/Crypto-Prices-Today-Market-Rebounds-As-Bitcoin-Pepe-Coin-ORDI-Soar",
+      "pubDate": "2023-12-26T05:08:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ORDI"
+      ]
+    },
+    {
+      "title": "ORDI Token Close to All Time High Price by Market Cap",
+      "link": "https://cryptopanic.com/news/19132189/ORDI-Token-Close-to-All-Time-High-Price-by-Market-Cap",
+      "pubDate": "2023-12-26T04:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ORDI"
+      ]
+    },
+    {
+      "title": "Ripple Claims $11 Million In FTX Bankruptcy Case, Bolstering Legal Position",
+      "link": "https://cryptopanic.com/news/19131966/Ripple-Claims-11-Million-In-FTX-Bankruptcy-Case-Bolstering-Legal-Position",
+      "pubDate": "2023-12-26T02:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "FTT"
+      ]
+    },
+    {
+      "title": "LDO rises 9.75% in 24 hours: Will the growth last?",
+      "link": "https://cryptopanic.com/news/19131940/LDO-rises-975-in-24-hours-Will-the-growth-last",
+      "pubDate": "2023-12-26T01:30:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LDO"
+      ]
+    },
+    {
+      "title": "24 Crypto Update,25 Dec: Crypto Prices Hold Steady in Low-Volume Limbo",
+      "link": "https://cryptopanic.com/news/19132081/24-Crypto-Update25-Dec-Crypto-Prices-Hold-Steady-in-Low-Volume-Limbo",
+      "pubDate": "2023-12-26T01:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "SOL",
+        "SHIB",
+        "RUNE",
+        "OP",
+        "ORDI"
+      ]
+    },
+    {
+      "title": "Polkadot Shows Bearish Signal, Analyst Predicts Drawdown To This Target",
+      "link": "https://cryptopanic.com/news/19131908/Polkadot-Shows-Bearish-Signal-Analyst-Predicts-Drawdown-To-This-Target",
+      "pubDate": "2023-12-26T00:00:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "A cryptocurrency analyst has explained how Polkadot could potentially see a decline to this level because of a sell signal in in its weekly price chart. Polkadot Weekly Price Has Formed A TD Sequential Sell Setup Recently In a new post on X, analyst Ali has pointed out that a TD Sequential sell signal has been forming for Polkadot recently. The “TD Sequential” refers to a tool in technical...",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    }
+  ]
+}

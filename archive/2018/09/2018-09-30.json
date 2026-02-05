@@ -1,0 +1,25 @@
+{
+  "date": "2018-09-30",
+  "fetchedAt": "2026-02-05T07:27:06.999Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "TRON Blockchain to Augment BitTorrent Protocol",
+      "link": "https://cryptopanic.com/news/tron/3192561/TRON-Blockchain-to-Augment-BitTorrent-Protocol",
+      "pubDate": "2018-09-30T07:00:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

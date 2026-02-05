@@ -1,0 +1,26 @@
+{
+  "date": "2017-12-28",
+  "fetchedAt": "2026-02-05T07:27:06.978Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "MIT Criticizes IOTA: “Gaping Hole in its Software” and Deceptive Marketing",
+      "link": "https://cryptopanic.com/news/666425/MIT-Criticizes-IOTA-Gaping-Hole-in-its-Software-and-Deceptive-Marketing",
+      "pubDate": "2017-12-28T15:15:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

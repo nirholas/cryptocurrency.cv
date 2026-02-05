@@ -1,0 +1,290 @@
+{
+  "date": "2023-07-23",
+  "fetchedAt": "2026-02-05T07:27:07.262Z",
+  "articleCount": 18,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tesla Boots Bitcoin But Retains Once-Joke Crypto Dogecoin As A Means Of Payment",
+      "link": "https://cryptopanic.com/news/maker/18791346/Tesla-Boots-Bitcoin-But-Retains-Once-Joke-Crypto-Dogecoin-As-A-Means-Of-Payment",
+      "pubDate": "2023-07-23T20:16:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Electric car maker Tesla has removed the source code that once permitted BTC payments. However, the Elon Musk-owned company is retaining the OG meme cryptocurrency Dogecoin (DOGE) as a payment option.",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Futures Contracts Open Interest Peaks at $1.2B, Highest Since November 2021",
+      "link": "https://cryptopanic.com/news/18791338/XRP-Futures-Contracts-Open-Interest-Peaks-at-12B-Highest-Since-November-2021",
+      "pubDate": "2023-07-23T19:47:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Data from CoinGlass reveals that the open interest for XRP futures contracts has reached a staggering $1.2 billion",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Famous Analyst Draws Attention to Support-Resistance Points in Bitcoin and Dogecoin!",
+      "link": "https://cryptopanic.com/news/18791287/Famous-Analyst-Draws-Attention-to-Support-Resistance-Points-in-Bitcoin-and-Dogecoin",
+      "pubDate": "2023-07-23T18:42:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin On-chain data caught the attention of technical analyst Ali Martinez, who pointed out the highlights in Bitcoin. Continue Reading: Famous Analyst Draws Attention to Support-Resistance Points in Bitcoin and Dogecoin!",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin’s dull price action ignites buying interest in LINK, FIL, SNX and THETA",
+      "link": "https://cryptopanic.com/news/18791261/Bitcoins-dull-price-action-ignites-buying-interest-in-LINK-FIL-SNX-and-THETA",
+      "pubDate": "2023-07-23T18:10:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LINK",
+        "FIL",
+        "THETA",
+        "SNX"
+      ]
+    },
+    {
+      "title": "Quant Recovers, But Fluctuates Between $95 And $110",
+      "link": "https://cryptopanic.com/news/18791371/Quant-Recovers-But-Fluctuates-Between-95-And-110",
+      "pubDate": "2023-07-23T17:56:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QNT"
+      ]
+    },
+    {
+      "title": "Ripple Teams Up With Research and Development Firm To Run CBDC and Crypto Experiments",
+      "link": "https://cryptopanic.com/news/18791213/Ripple-Teams-Up-With-Research-and-Development-Firm-To-Run-CBDC-and-Crypto-Experiments",
+      "pubDate": "2023-07-23T16:55:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple Labs is teaming up with a Northern Europe-based research and development firm to run experiments centered on crypto assets and central bank digital currencies (CBDCs). In a new company blog post, Ripple says it will be collaborating with SUPER HOW?, a private blockchain technology research lab based in Latvia to work on the Axiology […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Google Bard Picks InQubeta (QUBE), Klaytn (KLAY), and Internet Computer (ICP) For Performance in Q3 2023",
+      "link": "https://cryptopanic.com/news/klay-token/18791126/Google-Bard-Picks-InQubeta-QUBE-Klaytn-KLAY-and-Internet-Computer-ICP-For-Performance-in-Q3-2023",
+      "pubDate": "2023-07-23T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ICP",
+        "KLAY"
+      ]
+    },
+    {
+      "title": "Cardano Founder Gives Update on Network Rollup Strategy",
+      "link": "https://cryptopanic.com/news/18791056/Cardano-Founder-Gives-Update-on-Network-Rollup-Strategy",
+      "pubDate": "2023-07-23T14:13:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano founder delivers interesting update on rollups",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 5
+      }
+    },
+    {
+      "title": "I asked ChatGPT about ETC rising to $50 this year, it portrayed confidence",
+      "link": "https://cryptopanic.com/news/18791017/I-asked-ChatGPT-about-ETC-rising-to-50-this-year-it-portrayed-confidence",
+      "pubDate": "2023-07-23T13:55:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "Crypto Weekly Roundup: UK Rejects Treasury’s Proposal And More",
+      "link": "https://cryptopanic.com/news/18791020/Crypto-Weekly-Roundup-UK-Rejects-Treasurys-Proposal-And-More",
+      "pubDate": "2023-07-23T13:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "SOL",
+        "MATIC",
+        "AR"
+      ]
+    },
+    {
+      "title": "Even if the SEC appealed, Ripple could win again, says pro-XRP lawyer John Deaton",
+      "link": "https://cryptopanic.com/news/18790998/Even-if-the-SEC-appealed-Ripple-could-win-again-says-pro-XRP-lawyer-John-Deaton",
+      "pubDate": "2023-07-23T13:39:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Renowned crypto lawyer John Deaton, who represents over 75,000 XRP holders, said on July 23 that an SEC appeal will not necessarily change the outcome of the Ripple ruling. In the ever-changing landscape of crypto regulations, the recent Ripple ruling has sparked hope and uncertainty for the crypto industry. Earlier this week, the U.S. Securities […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Americans bullish on cryptos despite growing regulatory concerns",
+      "link": "https://cryptopanic.com/news/18790996/Americans-bullish-on-cryptos-despite-growing-regulatory-concerns",
+      "pubDate": "2023-07-23T13:30:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Despite the pessimism around regulatory oversight, Americans still find faith in the long-term prospects of cryptocurrencies.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Will the SEC’s Appeal in the Ripple-SEC Case Cause Trouble for XRP? Lawyer Answered",
+      "link": "https://cryptopanic.com/news/18790977/Will-the-SECs-Appeal-in-the-Ripple-SEC-Case-Cause-Trouble-for-XRP-Lawyer-Answered",
+      "pubDate": "2023-07-23T13:19:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The implications of this are questionable after Ripple signaled that it would appeal the decision in the SEC case. Continue Reading: Will the SEC’s Appeal in the Ripple-SEC Case Cause Trouble for XRP? Lawyer Answered",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$ADA: Cardano’s Ecosystem Set for Major Boost as Mithril Nears Mainnet Release",
+      "link": "https://cryptopanic.com/news/18790912/ADA-Cardanos-Ecosystem-Set-for-Major-Boost-as-Mithril-Nears-Mainnet-Release",
+      "pubDate": "2023-07-23T12:19:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Mithril, is on the brink of its mainnet release. Developed by IO Global (IOG), the tech firm behind much of Cardano’s research, Mithril is set to tackle some of the biggest challenges in blockchain applications. Think of Cardano as a two-story building. The first floor, the Cardano Settlement Layer (CSL), is where the cryptocurrency ADA […]",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    },
+    {
+      "title": "KuCoin Data Shows Varied Crypto Habits in France, Germany For Gen Z, Y, X",
+      "link": "https://cryptopanic.com/news/18791001/KuCoin-Data-Shows-Varied-Crypto-Habits-in-France-Germany-For-Gen-Z-Y-X",
+      "pubDate": "2023-07-23T11:38:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "Once again, Elon Musk changed the Twitter Logo, which he once transformed into DOGE: CZ Reacts Too!",
+      "link": "https://cryptopanic.com/news/18790732/Once-again-Elon-Musk-changed-the-Twitter-Logo-which-he-once-transformed-into-DOGE-CZ-Reacts-Too",
+      "pubDate": "2023-07-23T09:02:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Billionaire Elon Musk informed the platform community that the Twitter logo will be permanently changed this time. Continue Reading: Once again, Elon Musk changed the Twitter Logo, which he once transformed into DOGE: CZ Reacts Too!",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Filecoin: Will the $5 hurdle offer a shorting opportunity again?",
+      "link": "https://cryptopanic.com/news/18790600/Filecoin-Will-the-5-hurdle-offer-a-shorting-opportunity-again",
+      "pubDate": "2023-07-23T05:30:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "SEC Contemplates Appeal Over Controversial XRP Ruling",
+      "link": "https://cryptopanic.com/news/18790549/SEC-Contemplates-Appeal-Over-Controversial-XRP-Ruling",
+      "pubDate": "2023-07-23T02:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "date": "2019-02-27",
+  "fetchedAt": "2026-02-05T07:27:06.907Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "EOS Begins Recovery Following Alleged $7.7M Hack – Feb.27 Price Analysis & Market Forecast",
+      "link": "https://cryptopanic.com/news/4686854/EOS-Begins-Recovery-Following-Alleged-77M-Hack-Feb27-Price-Analysis-Market-Forecast",
+      "pubDate": "2019-02-27T13:27:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin SV (BSV) Price Gains 20% — How Can It Reach Top 10 and Be a Serious Contender?",
+      "link": "https://cryptopanic.com/news/4684658/Bitcoin-SV-BSV-Price-Gains-20-How-Can-It-Reach-Top-10-and-Be-a-Serious-Contender",
+      "pubDate": "2019-02-27T09:46:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    }
+  ]
+}

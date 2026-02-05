@@ -1,0 +1,25 @@
+{
+  "date": "2018-01-04",
+  "fetchedAt": "2026-02-05T07:27:07.001Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "No New Crypto: Coinbase Squashes Exchange Listing Rumors",
+      "link": "https://cryptopanic.com/news/ripple/718265/No-New-Crypto-Coinbase-Squashes-Exchange-Listing-Rumors",
+      "pubDate": "2018-01-04T22:30:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 15
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

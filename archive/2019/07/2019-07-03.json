@@ -1,0 +1,25 @@
+{
+  "date": "2019-07-03",
+  "fetchedAt": "2026-02-05T07:27:07.890Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tezos scores billion dollar STO deal with investment bank",
+      "link": "https://cryptopanic.com/news/5914645/Tezos-scores-billion-dollar-STO-deal-with-investment-bank",
+      "pubDate": "2019-07-03T19:12:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

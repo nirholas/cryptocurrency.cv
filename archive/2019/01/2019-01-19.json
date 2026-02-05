@@ -1,0 +1,24 @@
+{
+  "date": "2019-01-19",
+  "fetchedAt": "2026-02-05T07:27:08.685Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Trust Wallet to Conduct BTT Airdrop, Tronics Long for Binance to Partake",
+      "link": "https://cryptopanic.com/news/tron/4318196/Trust-Wallet-to-Conduct-BTT-Airdrop-Tronics-Long-for-Binance-to-Partake",
+      "pubDate": "2019-01-19T15:01:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    }
+  ]
+}

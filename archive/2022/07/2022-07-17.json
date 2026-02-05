@@ -1,0 +1,125 @@
+{
+  "date": "2022-07-17",
+  "fetchedAt": "2026-02-05T07:27:07.851Z",
+  "articleCount": 8,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Thanks to #Fellaz VIPs for participating in our Fellaz By The Bay Party! it was a great time meeting with everyone.…",
+      "link": "https://cryptopanic.com/news/15794266/Thanks-to-Fellaz-VIPs-for-participating-in-our-Fellaz-By-The-Bay-Party-it-was-a-great-time-meeting-with-everyone?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-17T18:38:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FLZ"
+      ]
+    },
+    {
+      "title": "Dogecoin Comes Into Spotlight as DOGE-backed Aliens Basketball Team Snaps Up Medals",
+      "link": "https://cryptopanic.com/news/15791172/Dogecoin-Comes-Into-Spotlight-as-DOGE-backed-Aliens-Basketball-Team-Snaps-Up-Medals",
+      "pubDate": "2022-07-17T12:38:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin became part of Big3 basketball league",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Weekend reading, check out our new website, at",
+      "link": "https://cryptopanic.com/news/15796085/Weekend-reading-check-out-our-new-website-at",
+      "pubDate": "2022-07-17T12:24:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RLY"
+      ]
+    },
+    {
+      "title": "Shiba Inu Major Developer Trolls LTC, Litecoin Responds",
+      "link": "https://cryptopanic.com/news/15791137/Shiba-Inu-Major-Developer-Trolls-LTC-Litecoin-Responds",
+      "pubDate": "2022-07-17T12:06:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "LTC",
+        "KSM"
+      ]
+    },
+    {
+      "title": "Assessing the odds of Monero [XMR] retracing on the charts",
+      "link": "https://cryptopanic.com/news/15791110/Assessing-the-odds-of-Monero-XMR-retracing-on-the-charts",
+      "pubDate": "2022-07-17T12:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Monero [XMR] is among the few cryptos that have seen healthy recovery from its 2022 lows. In fact, it is up by more than 44% from its $96.50 June low. Even so, its press time position seemed to suggest that a bearish retracement is imminent. XMR peaked at $141.45 during Friday’s trading session. This represented […]",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "#EnterpriseBlockchain has failed to deliver. By returning to the original design of the #Bitcoin blockchain,…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/15793278/EnterpriseBlockchain-has-failed-to-deliver-By-returning-to-the-original-design-of-the-Bitcoin-blockchain",
+      "pubDate": "2022-07-17T10:08:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "Spain: Can the Spanish government help Decentraland from sinking sales?",
+      "link": "https://cryptopanic.com/news/15786988/Spain-Can-the-Spanish-government-help-Decentraland-from-sinking-sales",
+      "pubDate": "2022-07-17T05:00:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The Metaverse is a rapidly growing space with many important industry players supporting its growth. Huge organizations, including Grayscale Investments have even claimed it has the potential of being a $1 trillion industry. Doubling down on the same ideology, the Government of Spain is facilitating the growth of Metaverse in the country. This could impact […]",
+      "currencies": [
+        "MANA"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Axie Infinity: Re-engineering its destiny in the GameFi landscape",
+      "link": "https://cryptopanic.com/news/15786847/Axie-Infinity-Re-engineering-its-destiny-in-the-GameFi-landscape",
+      "pubDate": "2022-07-17T02:14:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Can Axie Infinity rise to its former glory, as a form of “extreme entrepreneurship” where success can happen overnight, amid the crypto winter and uncertain global economy?",
+      "currencies": [
+        "AXS"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

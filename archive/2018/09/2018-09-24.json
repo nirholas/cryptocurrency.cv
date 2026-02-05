@@ -1,0 +1,44 @@
+{
+  "date": "2018-09-24",
+  "fetchedAt": "2026-02-05T07:27:07.893Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Economist Florian Doebler Joins the IOTA Foundation",
+      "link": "https://cryptopanic.com/news/3125612/Economist-Florian-Doebler-Joins-the-IOTA-Foundation",
+      "pubDate": "2018-09-24T17:29:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dash Text Enables Remittance via SMS to Turn Venezuela Into a ‘Dash Nation’",
+      "link": "https://cryptopanic.com/news/3123358/Dash-Text-Enables-Remittance-via-SMS-to-Turn-Venezuela-Into-a-Dash-Nation",
+      "pubDate": "2018-09-24T13:59:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DASH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

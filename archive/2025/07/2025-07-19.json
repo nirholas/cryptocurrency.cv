@@ -1,0 +1,555 @@
+{
+  "date": "2025-07-19",
+  "fetchedAt": "2026-02-05T07:27:08.622Z",
+  "articleCount": 37,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "XLM to follow XRP’s bullish rally, Trump’s big crypto nod: Hodler’s Digest, July 13 – 19",
+      "link": "https://cryptopanic.com/news/stellar/23461458/XLM-to-follow-XRPs-bullish-rally-Trumps-big-crypto-nod-Hodlers-Digest-July-13-19",
+      "pubDate": "2025-07-19T23:38:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Best Cryptos to Buy Today: Why BlockDAG Leads VeChain, TRON, & Ondo in 2025",
+      "link": "https://cryptopanic.com/news/vechain/23461440/Best-Cryptos-to-Buy-Today-Why-BlockDAG-Leads-VeChain-TRON-Ondo-in-2025",
+      "pubDate": "2025-07-19T23:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "VET",
+        "ONDO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BlockDAG Crosses $343M With Daily Buyer Battles, AAVE Price Target Raised to $394, & Ethena Rally Hits New 30-Day High",
+      "link": "https://cryptopanic.com/news/aave/23460324/BlockDAG-Crosses-343M-With-Daily-Buyer-Battles-AAVE-Price-Target-Raised-to-394-Ethena-Rally-Hits-New-30-Day-High",
+      "pubDate": "2025-07-19T23:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "ENA"
+      ]
+    },
+    {
+      "title": "LTC & XLM Continue Fighting For Attention But Remittix’s PayFi Offering Could Show 12x Gains This Year",
+      "link": "https://cryptopanic.com/news/litecoin/23459156/LTC-XLM-Continue-Fighting-For-Attention-But-Remittixs-PayFi-Offering-Could-Show-12x-Gains-This-Year",
+      "pubDate": "2025-07-19T22:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Stellar (XLM), Litecoin (LTC), and the fast-growing Remittix ($RTX) DeFi project have taken over news headlines across the crypto market. These three altcoins are gaining significant traction in this quarter, with experts projecting that at least one of these tokens will deliver 10x gains this year. Considering their solid market fundamentals and rapid expansion, could. . . Read more",
+      "currencies": [
+        "LTC",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum ETFs Post Record-Breaking $1 Billion Surge in Just Two Days",
+      "link": "https://cryptopanic.com/news/ethereum/23459132/Ethereum-ETFs-Post-Record-Breaking-1-Billion-Surge-in-Just-Two-Days",
+      "pubDate": "2025-07-19T21:31:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Between July 16 and 17, U. S. -listed ETH ETFs pulled in $1.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "MEI Pharma Adopts Litecoin for $100 Million Treasury",
+      "link": "https://cryptopanic.com/news/litecoin/23457880/MEI-Pharma-Adopts-Litecoin-for-100-Million-Treasury",
+      "pubDate": "2025-07-19T20:16:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "MEI Pharma Unveils $100M Litecoin Treasury Plan",
+      "link": "https://cryptopanic.com/news/litecoin/23456750/MEI-Pharma-Unveils-100M-Litecoin-Treasury-Plan",
+      "pubDate": "2025-07-19T19:31:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Avalanche And Polkadot Fight For Altcoin Supremacy But Both Are Outmatched Remittix’s PayFi Offering",
+      "link": "https://cryptopanic.com/news/polkadot/23454400/Avalanche-And-Polkadot-Fight-For-Altcoin-Supremacy-But-Both-Are-Outmatched-Remittixs-PayFi-Offering",
+      "pubDate": "2025-07-19T18:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "XLM to $7? Here’s What Veteran Trader Peter Brandt Thinks",
+      "link": "https://cryptopanic.com/news/stellar/23454333/XLM-to-7-Heres-What-Veteran-Trader-Peter-Brandt-Thinks",
+      "pubDate": "2025-07-19T17:20:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "PYUSD"
+      ]
+    },
+    {
+      "title": "VET Stables, PI Faces Uncertainty & BDAG Drops NO VESTING PASS",
+      "link": "https://cryptopanic.com/news/vechain/23453139/VET-Stables-PI-Faces-Uncertainty-BDAG-Drops-NO-VESTING-PASS",
+      "pubDate": "2025-07-19T17:00:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET",
+        "PI"
+      ]
+    },
+    {
+      "title": "AAVE flashes ‘supertrend’ signal – KEY levels to watch next…",
+      "link": "https://cryptopanic.com/news/aave/23453133/AAVE-flashes-supertrend-signal-KEY-levels-to-watch-next",
+      "pubDate": "2025-07-19T17:00:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Most Promising Cryptos in 2025 With Real Utility and Long-Term Strength: BDAG, SOL, NEAR & ONDO!",
+      "link": "https://cryptopanic.com/news/near/23453135/Most-Promising-Cryptos-in-2025-With-Real-Utility-and-Long-Term-Strength-BDAG-SOL-NEAR-ONDO",
+      "pubDate": "2025-07-19T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "NEAR",
+        "ONDO"
+      ]
+    },
+    {
+      "title": "Litecoin’s double bottom breakout – 24% gain ahead if LTC breaches…",
+      "link": "https://cryptopanic.com/news/litecoin/23451992/Litecoins-double-bottom-breakout-24-gain-ahead-if-LTC-breaches",
+      "pubDate": "2025-07-19T16:00:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum at $30K? Tom Lee Says Corporate Treasuries Could Make It Happen",
+      "link": "https://cryptopanic.com/news/bitcoin/23451717/Ethereum-at-30K-Tom-Lee-Says-Corporate-Treasuries-Could-Make-It-Happen",
+      "pubDate": "2025-07-19T15:25:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Tom Lee believes Ethereum could surge to $30,000 if companies start using debt and equity to buy ETH like MicroStrategy did with Bitcoin.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Stellar (XLM) Price to $1? Top Crypto Trader Shares Bullish Prediction",
+      "link": "https://cryptopanic.com/news/stellar/23450257/Stellar-XLM-Price-to-1-Top-Crypto-Trader-Shares-Bullish-Prediction",
+      "pubDate": "2025-07-19T14:43:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Ethereum Price Prediction: Possible Pullback as BlackRock Doubles Down on ETH Over BTC",
+      "link": "https://cryptopanic.com/news/bitcoin/23450159/Ethereum-Price-Prediction-Possible-Pullback-as-BlackRock-Doubles-Down-on-ETH-Over-BTC",
+      "pubDate": "2025-07-19T14:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "In a span of seven days, Ethereum price appreciated by over $1,000 as it jumped from below $2,600 to a local peak of $3,674. As of the writing, the altcoin stood above the $3600 mark at $3 616 following a 6% increase in the past day.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "AVAX/BTC Pair Signals Strong Rally For AVAX Price",
+      "link": "https://cryptopanic.com/news/avalanche-2/23447759/AVAXBTC-Pair-Signals-Strong-Rally-For-AVAX-Price",
+      "pubDate": "2025-07-19T13:03:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Ethereum will be a larger asset than Bitcoin – EY blockchain lead",
+      "link": "https://cryptopanic.com/news/bitcoin/23447722/Ethereum-will-be-a-larger-asset-than-Bitcoin-EY-blockchain-lead",
+      "pubDate": "2025-07-19T13:00:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Option traders expected a rapid ETH surge above $4K by the end of July.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 7
+      }
+    },
+    {
+      "title": "BlockDAG’s 25% Referral Rewards Outshine Solana and Algorand’s Price Momentum – The Real Crypto Opportunity",
+      "link": "https://cryptopanic.com/news/algorand/23447450/BlockDAGs-25-Referral-Rewards-Outshine-Solana-and-Algorands-Price-Momentum-The-Real-Crypto-Opportunity",
+      "pubDate": "2025-07-19T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Litecoin Price Eyeing Ultra Bullish Breakout As Whale Interests Peak",
+      "link": "https://cryptopanic.com/news/litecoin/23447398/Litecoin-Price-Eyeing-Ultra-Bullish-Breakout-As-Whale-Interests-Peak",
+      "pubDate": "2025-07-19T12:46:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Ethereum Classic soars 17% – What’s fueling ETC’s 6-month high?",
+      "link": "https://cryptopanic.com/news/ethereum-classic/23446122/Ethereum-Classic-soars-17-Whats-fueling-ETCs-6-month-high",
+      "pubDate": "2025-07-19T12:00:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Charles Schwab Enters Crypto War, Launching Spot Bitcoin & Ethereum Trading",
+      "link": "https://cryptopanic.com/news/bitcoin/23445853/Charles-Schwab-Enters-Crypto-War-Launching-Spot-Bitcoin-Ethereum-Trading",
+      "pubDate": "2025-07-19T11:46:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "7 trillion in client assets, is moving closer to offering direct (spot) trading in Bitcoin and Ethereum. Meanwhile, CEO Rick Wurster just confirmed Schwab will soon launch spot trading for Bitcoin and Ethereum, hoping to help clients keep all their money, stocks, bonds, and crypto in …",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Hits 6-Month High: ETF Surge, Stablecoin Law Set the Stage",
+      "link": "https://cryptopanic.com/news/bitcoin/23445798/Ethereum-Hits-6-Month-High-ETF-Surge-Stablecoin-Law-Set-the-Stage",
+      "pubDate": "2025-07-19T11:32:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "93 trillion, with Bitcoin holding steady above $118,000. Ethereum is trading at $3,557 and XRP at $3. 43, both showing minimal movement in the day",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 6
+      }
+    },
+    {
+      "title": "AI Forecasts the Future of Solana, Cardano, and Polkadot: What to Expect by 2026",
+      "link": "https://cryptopanic.com/news/polkadot/23444272/AI-Forecasts-the-Future-of-Solana-Cardano-and-Polkadot-What-to-Expect-by-2026",
+      "pubDate": "2025-07-19T10:28:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "SOL",
+        "DOT"
+      ]
+    },
+    {
+      "title": "Tezos’ XTZ Price Jumps 25% – Can it Break the $0.85 Resistance?",
+      "link": "https://cryptopanic.com/news/tezos/23444241/Tezos-XTZ-Price-Jumps-25-Can-it-Break-the-085-Resistance",
+      "pubDate": "2025-07-19T10:27:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XTZ"
+      ]
+    },
+    {
+      "title": "Litecoin Is Waking Up—And $120 Might Be Closer Than It Looks",
+      "link": "https://cryptopanic.com/news/litecoin/23443976/Litecoin-Is-Waking-UpAnd-120-Might-Be-Closer-Than-It-Looks",
+      "pubDate": "2025-07-19T10:13:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Stellar (XLM) Hangs Tight at $0.47—But Is It Gearing Up for a Bigger Move?",
+      "link": "https://cryptopanic.com/news/stellar/23443561/Stellar-XLM-Hangs-Tight-at-047But-Is-It-Gearing-Up-for-a-Bigger-Move",
+      "pubDate": "2025-07-19T10:05:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Whale Activity on Cardano Spikes as ADA Price Climbs Nearly 15% in a Week",
+      "link": "https://cryptopanic.com/news/cardano/23441983/Whale-Activity-on-Cardano-Spikes-as-ADA-Price-Climbs-Nearly-15-in-a-Week",
+      "pubDate": "2025-07-19T09:13:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Cardano Price: According to analyst Ali Martinez, more than 137 transactions exceeding $1 million each have been recorded in just […] The post Whale Activity on Cardano Spikes as ADA Price Climbs Nearly 15% in a Week appeared first on Coindoo.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "SharpLink invests 6 billion in Ethereum",
+      "link": "https://cryptopanic.com/news/ethereum/23440705/SharpLink-invests-6-billion-in-Ethereum",
+      "pubDate": "2025-07-19T08:20:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "SharpLink invests $6 billion in Ethereum, marking the largest corporate move in the crypto sector.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Polkadot – Examining odds of a pullback after DOT’s 30% surge",
+      "link": "https://cryptopanic.com/news/polkadot/23439226/Polkadot-Examining-odds-of-a-pullback-after-DOTs-30-surge",
+      "pubDate": "2025-07-19T08:00:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Could XRP Really Overtake Ethereum This Cycle?",
+      "link": "https://cryptopanic.com/news/ethereum/23439158/Could-XRP-Really-Overtake-Ethereum-This-Cycle",
+      "pubDate": "2025-07-19T07:14:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Ethereum Classic Price Eyes $28 After 37% Weekly Rally, What’s Next?",
+      "link": "https://cryptopanic.com/news/ethereum-classic/23437610/Ethereum-Classic-Price-Eyes-28-After-37-Weekly-Rally-Whats-Next",
+      "pubDate": "2025-07-19T06:59:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "Ethereum to $30K? Tom Lee Thinks the Math Checks Out",
+      "link": "https://cryptopanic.com/news/ethereum/23438967/Ethereum-to-30K-Tom-Lee-Thinks-the-Math-Checks-Out",
+      "pubDate": "2025-07-19T06:53:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "\"Could Ethereum reach a value of $30,000? Renowned crypto analyst Tom Lee believes that the calculations and market trends support this optimistic prediction.\"",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Cardano volume jumps 92% amid controversy – Impact on ADA’s price?",
+      "link": "https://cryptopanic.com/news/cardano/23436360/Cardano-volume-jumps-92-amid-controversy-Impact-on-ADAs-price",
+      "pubDate": "2025-07-19T06:00:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "With derivatives data flashing green and ADA prices rallying, the market is watching closely. . . despite online chaos.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Why BlockDAG Might Be the Fastest-Growing Crypto Today, Beating Out XRP, DOT, & BNB",
+      "link": "https://cryptopanic.com/news/polkadot/23435189/Why-BlockDAG-Might-Be-the-Fastest-Growing-Crypto-Today-Beating-Out-XRP-DOT-BNB",
+      "pubDate": "2025-07-19T05:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "XRP",
+        "DOT"
+      ]
+    },
+    {
+      "title": "BlockDAG’s $342M Breakthrough And NO VESTING PASS Put Uniswap’s Chart And Pump.fun’s Hype Behind",
+      "link": "https://cryptopanic.com/news/uniswap/23430685/BlockDAGs-342M-Breakthrough-And-NO-VESTING-PASS-Put-Uniswaps-Chart-And-Pumpfuns-Hype-Behind",
+      "pubDate": "2025-07-19T02:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "PUMP"
+      ]
+    },
+    {
+      "title": "Stellar (XLM) Skyrockets 75% in a Week—Leaving XRP in the Dust",
+      "link": "https://cryptopanic.com/news/stellar/23434240/Stellar-XLM-Skyrockets-75-in-a-WeekLeaving-XRP-in-the-Dust",
+      "pubDate": "2025-07-19T01:19:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XLM"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "date": "2018-12-05",
+  "fetchedAt": "2026-02-05T07:27:07.884Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "NEO vs Amazon & Dropbox, NASDAQ & Fidelity Fund ErisX - Today's Crypto News",
+      "link": "https://cryptopanic.com/news/neo/3888105/NEO-vs-Amazon-Dropbox-NASDAQ-Fidelity-Fund-ErisX-Todays-Crypto-News",
+      "pubDate": "2018-12-05T16:16:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Cash [BCH] Continues to New 2018 Lows",
+      "link": "https://cryptopanic.com/news/3887519/Bitcoin-Cash-BCH-Continues-to-New-2018-Lows",
+      "pubDate": "2018-12-05T15:39:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

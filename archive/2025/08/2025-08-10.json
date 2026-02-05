@@ -1,0 +1,356 @@
+{
+  "date": "2025-08-10",
+  "fetchedAt": "2026-02-05T07:27:08.614Z",
+  "articleCount": 22,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "As of Aug 2025, HBAR is included in 27+ digital asset indexes and featured in 13 ETPs/ETFs - a clear sign of growing institutional trust and adoption. From top crypto benchmarks to leading smart contract funds, Hedera's footprint is growing.",
+      "link": "https://cryptopanic.com/news/ethereum-classic/24103540/As-of-Aug-2025-HBAR-is-included-in-27-digital-asset-indexes-and-featured-in-13-ETPsETFs-a-clear-sign-of-growing-institutional-trust-and-adoption-From-top-crypto-benchmarks-to-leading-smart-contract-funds-Hederas-footprint-is-growing",
+      "pubDate": "2025-08-10T19:44:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "3 Reasons BTC Rally Failed to Lift BCH Above 10-Day Resistance",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/24091896/3-Reasons-BTC-Rally-Failed-to-Lift-BCH-Above-10-Day-Resistance",
+      "pubDate": "2025-08-10T19:33:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Crypto market’s weekly winners and losers – AERO, LDO, XMR, TON",
+      "link": "https://cryptopanic.com/news/monero/24089175/Crypto-markets-weekly-winners-and-losers-AERO-LDO-XMR-TON",
+      "pubDate": "2025-08-10T19:00:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "LDO",
+        "TON"
+      ]
+    },
+    {
+      "title": "The Truth Behind Ethereum’s $4,300 Breakout and What’s Driving it: What You Need to Know",
+      "link": "https://cryptopanic.com/news/ethereum/24089091/The-Truth-Behind-Ethereums-4300-Breakout-and-Whats-Driving-it-What-You-Need-to-Know",
+      "pubDate": "2025-08-10T18:48:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Exploring the Factors That Led to Ethereum’s Remarkable $4,300 Breakout: Insights into the Driving Forces and Key Information You Should Be Aware Of.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Price Eyeing A Breakout? On-Chain Analysis Places Short-Term Target At $4,800",
+      "link": "https://cryptopanic.com/news/ethereum/24087858/Ethereum-Price-Eyeing-A-Breakout-On-Chain-Analysis-Places-Short-Term-Target-At-4800",
+      "pubDate": "2025-08-10T17:00:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The Ethereum price has roared on with a strong performance over this weekend, reclaiming the $4,200 level for the first time since 2021. According to data from CoinGecko, the “king of altcoins” has now increased in value by more than 25% on the weekly timeframe. Considering its strong momentum, the general expectation is that the Ethereum price will continue to climb over the next few days. However, the latest price analysis shows that the altcoin might currently be trapped within a resistance r",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "A"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "El Salvador's New Law Permits Bitcoin Services by Investment Banks",
+      "link": "https://cryptopanic.com/news/bitcoin/24087115/El-Salvadors-New-Law-Permits-Bitcoin-Services-by-Investment-Banks",
+      "pubDate": "2025-08-10T15:41:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "El Salvador enables licensed banks to offer Bitcoin services, positioning itself as a digital asset hub.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Base Layer 2: Huge User Surge, Fee Drop, and Strategic Moves Power Growth",
+      "link": "https://cryptopanic.com/news/ethereum/24086285/Base-Layer-2-Huge-User-Surge-Fee-Drop-and-Strategic-Moves-Power-Growth",
+      "pubDate": "2025-08-10T14:29:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Base, Coinbase’s Ethereum Layer 2, marks two years with nearly $4. 5B TVL, 1,280% user growth, 97. 7% fee reduction, and new Web3 app boosting SocialFi adoption.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP to $11? New Price Prediction Says Yes, Bull Triangle Pattern in Play",
+      "link": "https://cryptopanic.com/news/ripple/24086282/XRP-to-11-New-Price-Prediction-Says-Yes-Bull-Triangle-Pattern-in-Play",
+      "pubDate": "2025-08-10T14:21:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "New XRP price prediction points to $11 if this triangle pattern validates",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "From SWIFT to XRP: How Ripple’s 300+ Bank Partnerships Could Reshape $6 Trillion Payments Industry",
+      "link": "https://cryptopanic.com/news/tether/24086156/From-SWIFT-to-XRP-How-Ripples-300-Bank-Partnerships-Could-Reshape-6-Trillion-Payments-Industry",
+      "pubDate": "2025-08-10T14:02:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "In the world of cross-border payments, a quiet revolution is taking place. Traditional banking systems have long struggled with inefficiencies—slow transactions, high fees, and a reliance on multiple intermediaries. XRP, the cryptocurrency built on the Ripple network, claims to offer a solution. But can it truly live up to its promise of transforming cross-border payments, […]",
+      "currencies": [
+        "USDT",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Ethereum Right Now Is More 'Asymmetrical,' Says Pro-XRP Lawyer",
+      "link": "https://cryptopanic.com/news/ethereum/24085584/Ethereum-Right-Now-Is-More-Asymmetrical-Says-Pro-XRP-Lawyer",
+      "pubDate": "2025-08-10T13:55:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum at $4,200 could be best risk-reward play in years",
+      "currencies": [
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano (ADA) Price Prediction for August 10",
+      "link": "https://cryptopanic.com/news/cardano/24085458/Cardano-ADA-Price-Prediction-for-August-10",
+      "pubDate": "2025-08-10T13:09:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Institutions Quietly Scoop Up Billions in Ethereum Since July",
+      "link": "https://cryptopanic.com/news/ethereum/24085517/Institutions-Quietly-Scoop-Up-Billions-in-Ethereum-Since-July",
+      "pubDate": "2025-08-10T13:00:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "New blockchain data suggests a major Ethereum accumulation trend is underway among deep-pocketed investors - many believed to be U. S. -listed corporations and institutional asset managers.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "This Top Trending Crypto Is Gearing Up for 30x Gains, While These 3 Coins Lead the Market Narrative",
+      "link": "https://cryptopanic.com/news/polkadot/24087864/This-Top-Trending-Crypto-Is-Gearing-Up-for-30x-Gains-While-These-3-Coins-Lead-the-Market-Narrative",
+      "pubDate": "2025-08-10T11:36:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "RENDER"
+      ]
+    },
+    {
+      "title": "What Are Big Ethereum (ETH) Investors Up To?",
+      "link": "https://cryptopanic.com/news/ethereum/24083046/What-Are-Big-Ethereum-ETH-Investors-Up-To",
+      "pubDate": "2025-08-10T11:15:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "ETH whales now control over 23% of the asset's circulating supply.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP ETF global interest spikes 730%",
+      "link": "https://cryptopanic.com/news/ripple/24081598/XRP-ETF-global-interest-spikes-730",
+      "pubDate": "2025-08-10T10:07:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Global interest in a potential XRP exchange-traded fund (ETF) has surged, with Google search data showing a 733% increase over the past month. According to Google Trends, searches for ‘XRP ETF’ rose from a score of 12 on July 10 to 100 on August 10, marking the highest level of interest in the last 30 days, according to data retrieved by Finbold. XRP ETF global interest. Source: Google Trends Canada leads the search activity, followed by the United States, South Korea, Singapore, and Israel",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Next Ethereum (ETH) Wave to $5,600? Price Wave Theory",
+      "link": "https://cryptopanic.com/news/ethereum/24081064/Next-Ethereum-ETH-Wave-to-5600-Price-Wave-Theory",
+      "pubDate": "2025-08-10T09:46:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum's wave-like structure can send it to new heights",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin (BTC) Jumps to 10-Day High, Chainlink (LINK) Soars 7%: Weekend Watch",
+      "link": "https://cryptopanic.com/news/kucoin-shares/24080638/Bitcoin-BTC-Jumps-to-10-Day-High-Chainlink-LINK-Soars-7-Weekend-Watch",
+      "pubDate": "2025-08-10T09:08:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "LINK"
+      ]
+    },
+    {
+      "title": "Something Weird Is Happening The U.S. Dollar Is On Its Way Out & People Are Buying A LOT Of Bitcoin",
+      "link": "https://cryptopanic.com/news/bitcoin/24079900/Something-Weird-Is-Happening-The-US-Dollar-Is-On-Its-Way-Out-People-Are-Buying-A-LOT-Of-Bitcoin",
+      "pubDate": "2025-08-10T08:30:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A lot of people are just pretending that this isnt happening. . . or are even waiting for prices to fall more",
+      "currencies": [
+        "BTC",
+        "A"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "‘It’s a Generational Opportunity:’ SEC’s Crypto Pivot Could Supercharge Ethereum and DeFi",
+      "link": "https://cryptopanic.com/news/uniswap/24074885/Its-a-Generational-Opportunity-SECs-Crypto-Pivot-Could-Supercharge-Ethereum-and-DeFi",
+      "pubDate": "2025-08-10T03:44:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Where's my CRO?",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/24097714/Wheres-my-CRO",
+      "pubDate": "2025-08-10T02:45:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO",
+        "MCO"
+      ]
+    },
+    {
+      "title": "Eric Trump Issues Strong Warning to Bitcoin and Ethereum Bears",
+      "link": "https://cryptopanic.com/news/bitcoin/24073376/Eric-Trump-Issues-Strong-Warning-to-Bitcoin-and-Ethereum-Bears",
+      "pubDate": "2025-08-10T02:02:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "His comments arrive amid a sharp rally fueled by corporate treasury buying and a surge in institutional inflows.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Avalanche (AVAX) Could Be the Sleeper Altcoin That 10x’s in the Next Bull Run",
+      "link": "https://cryptopanic.com/news/avalanche-2/24073980/Avalanche-AVAX-Could-Be-the-Sleeper-Altcoin-That-10xs-in-the-Next-Bull-Run",
+      "pubDate": "2025-08-10T01:05:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    }
+  ]
+}

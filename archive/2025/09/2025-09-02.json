@@ -1,0 +1,724 @@
+{
+  "date": "2025-09-02",
+  "fetchedAt": "2026-02-05T07:27:08.601Z",
+  "articleCount": 53,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "XRP Gets Big Nod from China as Fintech Giant Leverages XRPL for Supply Chain Applications",
+      "link": "https://cryptopanic.com/news/tether/24907384/XRP-Gets-Big-Nod-from-China-as-Fintech-Giant-Leverages-XRPL-for-Supply-Chain-Applications",
+      "pubDate": "2025-09-02T21:52:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "XRP Ledger (XRPL) is getting a major nod from a leading fintech giant following the establishment of a strategic partnership aimed at advancing the global digital supply chain for financial applications. Linklogis, a leading Chinese-based supply chain fintech giant, reportedly announced its new collaboration with the leading decentralized blockchain ledger, XRPL. The partnership marks a […]",
+      "currencies": [
+        "USDT",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Solana Set for Major Speed Boost via Alpenglow Upgrade—Here's What to Expect",
+      "link": "https://cryptopanic.com/news/solana/24905850/Solana-Set-for-Major-Speed-Boost-via-Alpenglow-UpgradeHeres-What-to-Expect",
+      "pubDate": "2025-09-02T20:57:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana is gearing up for major improvements after validators passed a proposal Tuesday—here's what Alpenglow will do and when it's coming.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Pi Network Gears Up for Version 23 Upgrade, But Market Demand Stays Flat",
+      "link": "https://cryptopanic.com/news/stellar/24905873/Pi-Network-Gears-Up-for-Version-23-Upgrade-But-Market-Demand-Stays-Flat",
+      "pubDate": "2025-09-02T20:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "PI"
+      ]
+    },
+    {
+      "title": "Uniswap Foundation leads coalition urging Treasury Secretary Bessent to clarify legal framework for DAOs",
+      "link": "https://cryptopanic.com/news/uniswap/24905740/Uniswap-Foundation-leads-coalition-urging-Treasury-Secretary-Bessent-to-clarify-legal-framework-for-DAOs",
+      "pubDate": "2025-09-02T20:25:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "DAO"
+      ]
+    },
+    {
+      "title": "Ethena’s ENA holders set for cut of revenue as USDe locks in top-three spot",
+      "link": "https://cryptopanic.com/news/dai/24905727/Ethenas-ENA-holders-set-for-cut-of-revenue-as-USDe-locks-in-top-three-spot",
+      "pubDate": "2025-09-02T20:15:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "DAI",
+        "ENA",
+        "USDS"
+      ]
+    },
+    {
+      "title": "Whales Buy 1.25M LINK as AI Deal Expands — Is Chainlink Price Ready for $40?",
+      "link": "https://cryptopanic.com/news/chainlink/24905233/Whales-Buy-125M-LINK-as-AI-Deal-Expands-Is-Chainlink-Price-Ready-for-40",
+      "pubDate": "2025-09-02T20:08:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "Solana’s Alpenglow upgrade clears governance vote for implementation",
+      "link": "https://cryptopanic.com/news/solana/24904433/Solanas-Alpenglow-upgrade-clears-governance-vote-for-implementation",
+      "pubDate": "2025-09-02T19:52:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The Solana overhaul is expected to decrease transaction finality to 150 milliseconds — increasing the speed by about 100-fold.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Linea Airdrop Ignition: 1B Tokens Boost Aave, Euler, and Etherex",
+      "link": "https://cryptopanic.com/news/aave/24907291/Linea-Airdrop-Ignition-1B-Tokens-Boost-Aave-Euler-and-Etherex",
+      "pubDate": "2025-09-02T19:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "A"
+      ]
+    },
+    {
+      "title": "Shiba Inu Now on Folks Finance: First Memecoin with Cross-Chain Lending",
+      "link": "https://cryptopanic.com/news/chainlink/24899212/Shiba-Inu-Now-on-Folks-Finance-First-Memecoin-with-Cross-Chain-Lending",
+      "pubDate": "2025-09-02T17:00:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "LINK",
+        "MEME"
+      ]
+    },
+    {
+      "title": "Underpriced? Aave Crypto Reaches Peaks in TVL and Fees: What’s to Come?",
+      "link": "https://cryptopanic.com/news/aave/24899097/Underpriced-Aave-Crypto-Reaches-Peaks-in-TVL-and-Fees-Whats-to-Come",
+      "pubDate": "2025-09-02T16:48:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "Stellar Lumens Gains 3% Ahead of Network Infrastructure Overhaul",
+      "link": "https://cryptopanic.com/news/stellar/24900753/Stellar-Lumens-Gains-3-Ahead-of-Network-Infrastructure-Overhaul",
+      "pubDate": "2025-09-02T16:44:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Is Stellar (XLM) Setting Up for Its Next Major Breakout?",
+      "link": "https://cryptopanic.com/news/stellar/24899039/Is-Stellar-XLM-Setting-Up-for-Its-Next-Major-Breakout",
+      "pubDate": "2025-09-02T16:38:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Inside Solana’s governance as Alpenglow passes",
+      "link": "https://cryptopanic.com/news/solana/24898857/Inside-Solanas-governance-as-Alpenglow-passes",
+      "pubDate": "2025-09-02T16:18:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana’s Alpenglow has passed, targeting ~150ms finality",
+      "currencies": [
+        "SOL",
+        "DEFI"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Altcoin Check: LINK and HYPE Eye Bullish Continuation",
+      "link": "https://cryptopanic.com/news/chainlink/24901806/Altcoin-Check-LINK-and-HYPE-Eye-Bullish-Continuation",
+      "pubDate": "2025-09-02T16:00:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "HYPE"
+      ]
+    },
+    {
+      "title": "Bitget Token Soars Past $5 as Morph Partnership Begins, Best Wallet Token Raises $15M",
+      "link": "https://cryptopanic.com/news/okb/24901802/Bitget-Token-Soars-Past-5-as-Morph-Partnership-Begins-Best-Wallet-Token-Raises-15M",
+      "pubDate": "2025-09-02T15:43:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "OKB",
+        "BGB"
+      ]
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 03 September 2025: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/decentraland/24900727/Spell-Wallet-Daily-Puzzle-03-September-2025-Earn-Reward-of-1-MANA",
+      "pubDate": "2025-09-02T15:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "VeChain Price Prediction: Can VET Hit $0.035 in September 2025?",
+      "link": "https://cryptopanic.com/news/vechain/24896302/VeChain-Price-Prediction-Can-VET-Hit-0035-in-September-2025",
+      "pubDate": "2025-09-02T15:27:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ]
+    },
+    {
+      "title": "BGB token price explodes, $6 in view as Bitget partners with Morph Chain",
+      "link": "https://cryptopanic.com/news/chainlink/24894362/BGB-token-price-explodes-6-in-view-as-Bitget-partners-with-Morph-Chain",
+      "pubDate": "2025-09-02T14:13:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "BGB"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash (BCH) Confirms Golden Cross as Volume Shoots 40%",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/24894181/Bitcoin-Cash-BCH-Confirms-Golden-Cross-as-Volume-Shoots-40",
+      "pubDate": "2025-09-02T14:09:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ]
+    },
+    {
+      "title": "Avalanche, Toyota Blockchain designing autonomous robotaxi infrastructure",
+      "link": "https://cryptopanic.com/news/avalanche-2/24892795/Avalanche-Toyota-Blockchain-designing-autonomous-robotaxi-infrastructure",
+      "pubDate": "2025-09-02T13:47:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "BlackRock ETF XRP: Why the Asset Manager Isn’t Launching One",
+      "link": "https://cryptopanic.com/news/ripple/24892624/BlackRock-ETF-XRP-Why-the-Asset-Manager-Isnt-Launching-One",
+      "pubDate": "2025-09-02T13:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Despite strong community interest, BlackRock says it has no plans to launch an XRP ETF.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ep. 594 Michael Martin | Codebase: Avalanche’s Flagship Incubator",
+      "link": "https://cryptopanic.com/news/avalanche-2/24891361/Ep-594-Michael-Martin-Codebase-Avalanches-Flagship-Incubator",
+      "pubDate": "2025-09-02T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Uniswap vote opens on Wyoming DUNA",
+      "link": "https://cryptopanic.com/news/uniswap/24891052/Uniswap-vote-opens-on-Wyoming-DUNA",
+      "pubDate": "2025-09-02T12:52:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "These 2 cryptocurrencies can make you a millionaire by 2030, according to ChatGPT-5",
+      "link": "https://cryptopanic.com/news/chainlink/24890741/These-2-cryptocurrencies-can-make-you-a-millionaire-by-2030-according-to-ChatGPT-5",
+      "pubDate": "2025-09-02T12:37:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LINK",
+        "POL"
+      ]
+    },
+    {
+      "title": "Crypto Price Analysis 9-2: BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, FILECOIN: FIL, CELESTIA: TIA",
+      "link": "https://cryptopanic.com/news/filecoin/24890738/Crypto-Price-Analysis-9-2-BITCOIN-BTC-ETHEREUM-ETH-SOLANA-SOL-FILECOIN-FIL-CELESTIA-TIA",
+      "pubDate": "2025-09-02T12:36:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "PublicAI Collaborates with Chainlink to Enhance Data Capabilities",
+      "link": "https://cryptopanic.com/news/chainlink/24892648/PublicAI-Collaborates-with-Chainlink-to-Enhance-Data-Capabilities",
+      "pubDate": "2025-09-02T12:24:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "PUBLIC"
+      ]
+    },
+    {
+      "title": "ICP Advances 2.8% as Buying Interest Revives",
+      "link": "https://cryptopanic.com/news/internet-computer/24888858/ICP-Advances-28-as-Buying-Interest-Revives",
+      "pubDate": "2025-09-02T11:39:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ]
+    },
+    {
+      "title": "Another Crypto Hack News: Bunni Exchange Suffers $2.4M Loss",
+      "link": "https://cryptopanic.com/news/uniswap/24892631/Another-Crypto-Hack-News-Bunni-Exchange-Suffers-24M-Loss",
+      "pubDate": "2025-09-02T11:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Trump family’s crypto wealth balloons by $5 billion on paper following WLFI token debut",
+      "link": "https://cryptopanic.com/news/bitcoin/24885709/Trump-familys-crypto-wealth-balloons-by-5-billion-on-paper-following-WLFI-token-debut",
+      "pubDate": "2025-09-02T10:43:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "That puts the Trumps' crypto wealth at a higher value than their real estate empire, though actually realizing that value is another matter.",
+      "currencies": [
+        "BTC",
+        "PEOPLE",
+        "WLFI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Stellar Nears Make-or-Break Support as Bulls Eye Next Move",
+      "link": "https://cryptopanic.com/news/stellar/24885702/Stellar-Nears-Make-or-Break-Support-as-Bulls-Eye-Next-Move",
+      "pubDate": "2025-09-02T10:25:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Breaking: Uniswap-Powered DEX Bunni Suffers $2.4M Exploit on Ethereum, Unichain",
+      "link": "https://cryptopanic.com/news/uniswap/24885080/Breaking-Uniswap-Powered-DEX-Bunni-Suffers-24M-Exploit-on-Ethereum-Unichain",
+      "pubDate": "2025-09-02T10:21:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ]
+    },
+    {
+      "title": "Cardano Excluded From U.S. Blockchain Data Program: What It Signals for ADA’s Future",
+      "link": "https://cryptopanic.com/news/avalanche-2/24884737/Cardano-Excluded-From-US-Blockchain-Data-Program-What-It-Signals-for-ADAs-Future",
+      "pubDate": "2025-09-02T10:16:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Avalanche Balances on Key Levels as ETF Hopes Fuel Speculation",
+      "link": "https://cryptopanic.com/news/avalanche-2/24883436/Avalanche-Balances-on-Key-Levels-as-ETF-Hopes-Fuel-Speculation",
+      "pubDate": "2025-09-02T10:02:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Uniswap ‘hook’ Bunni hacked for over $8M after precision bug exploited",
+      "link": "https://cryptopanic.com/news/uniswap/24883104/Uniswap-hook-Bunni-hacked-for-over-8M-after-precision-bug-exploited",
+      "pubDate": "2025-09-02T09:39:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "DEFI",
+        "BUNNI"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Scam Alert: Uniswap V4's Bunni DEX Loses Millions to Hackers",
+      "link": "https://cryptopanic.com/news/uniswap/24883118/Scam-Alert-Uniswap-V4s-Bunni-DEX-Loses-Millions-to-Hackers",
+      "pubDate": "2025-09-02T09:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "What’s New in Polkadot: 12 Latest Updates of 2025 Explained",
+      "link": "https://cryptopanic.com/news/polkadot/24888217/Whats-New-in-Polkadot-12-Latest-Updates-of-2025-Explained",
+      "pubDate": "2025-09-02T09:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Chainlink Gears Up for a Breakout as Bulls Eye This Key Resistance Level: Here is What You Need to Watch",
+      "link": "https://cryptopanic.com/news/chainlink/24883182/Chainlink-Gears-Up-for-a-Breakout-as-Bulls-Eye-This-Key-Resistance-Level-Here-is-What-You-Need-to-Watch",
+      "pubDate": "2025-09-02T09:29:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The Easiest Way To Buy CRO",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/24881864/The-Easiest-Way-To-Buy-CRO",
+      "pubDate": "2025-09-02T08:56:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Why Remittix Is The Best Crypto To Buy This Month, Over Cardano, Polkadot & Algorand",
+      "link": "https://cryptopanic.com/news/polkadot/24883744/Why-Remittix-Is-The-Best-Crypto-To-Buy-This-Month-Over-Cardano-Polkadot-Algorand",
+      "pubDate": "2025-09-02T08:20:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "DOT",
+        "ALGO"
+      ]
+    },
+    {
+      "title": "XRP vs Litecoin: Just a Twitter Fight or Legal Trouble Incoming?",
+      "link": "https://cryptopanic.com/news/litecoin/24881574/XRP-vs-Litecoin-Just-a-Twitter-Fight-or-Legal-Trouble-Incoming",
+      "pubDate": "2025-09-02T08:07:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Mapping Avalanche’s bullish triangle – Can ETF buzz push AVAX past $24.8?",
+      "link": "https://cryptopanic.com/news/avalanche-2/24879088/Mapping-Avalanches-bullish-triangle-Can-ETF-buzz-push-AVAX-past-248",
+      "pubDate": "2025-09-02T08:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Decentralized exchange Bunni loses $2.3 million in smart contract exploit",
+      "link": "https://cryptopanic.com/news/uniswap/24876914/Decentralized-exchange-Bunni-loses-23-million-in-smart-contract-exploit",
+      "pubDate": "2025-09-02T06:58:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "DEFI",
+        "BUNNI"
+      ]
+    },
+    {
+      "title": "XRP Targets $3.12 as XLM Eyes $0.38 – Everything You Need to Know!",
+      "link": "https://cryptopanic.com/news/stellar/24878817/XRP-Targets-312-as-XLM-Eyes-038-Everything-You-Need-to-Know",
+      "pubDate": "2025-09-02T06:45:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Bitcoin and Ethereum May Have Hit New Highs In August, But This Exchange Token Really Said 'Hold My Beer' With 264% Gains",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/24876730/Bitcoin-and-Ethereum-May-Have-Hit-New-Highs-In-August-But-This-Exchange-Token-Really-Said-Hold-My-Beer-With-264-Gains",
+      "pubDate": "2025-09-02T06:06:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "BCH crosses $550, outperforms other major cryptos; Check forecast",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/24874896/BCH-crosses-550-outperforms-other-major-cryptos-Check-forecast",
+      "pubDate": "2025-09-02T05:47:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash Price Forecast: BCH targets $640 amid bullish reversal, Open Interest surge",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/24889032/Bitcoin-Cash-Price-Forecast-BCH-targets-640-amid-bullish-reversal-Open-Interest-surge",
+      "pubDate": "2025-09-02T05:24:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ]
+    },
+    {
+      "title": "Developers Are Flocking to These DeFi Projects – Chainlink Dominates the Pack",
+      "link": "https://cryptopanic.com/news/chainlink/24873420/Developers-Are-Flocking-to-These-DeFi-Projects-Chainlink-Dominates-the-Pack",
+      "pubDate": "2025-09-02T05:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "AAVE lending TVL hits $40B, fees skyrocket – Here’s why it matters",
+      "link": "https://cryptopanic.com/news/aave/24873398/AAVE-lending-TVL-hits-40B-fees-skyrocket-Heres-why-it-matters",
+      "pubDate": "2025-09-02T05:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "Thailand Moves Toward Launch of World's First Publicly Offered Tokenized Government Bond",
+      "link": "https://cryptopanic.com/news/kucoin-shares/24871353/Thailand-Moves-Toward-Launch-of-Worlds-First-Publicly-Offered-Tokenized-Government-Bond",
+      "pubDate": "2025-09-02T03:44:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "TRX Faces Fresh Volatility as Justin Sun Deepens WLFI Ties",
+      "link": "https://cryptopanic.com/news/litecoin/24873016/TRX-Faces-Fresh-Volatility-as-Justin-Sun-Deepens-WLFI-Ties",
+      "pubDate": "2025-09-02T03:40:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "LTC",
+        "WLFI"
+      ]
+    },
+    {
+      "title": "Neo X TestNet updated to v0.4.1 with audited ZK-DKG, full Anti-MEV functionality",
+      "link": "https://cryptopanic.com/news/neo/24869836/Neo-X-TestNet-updated-to-v041-with-audited-ZK-DKG-full-Anti-MEV-functionality",
+      "pubDate": "2025-09-02T02:47:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO",
+        "ZK"
+      ]
+    },
+    {
+      "title": "PAXG Reaching a New All-Time High, Increase of 1.99% in 24 Hours",
+      "link": "https://cryptopanic.com/news/pax-gold/24878744/PAXG-Reaching-a-New-All-Time-High-Increase-of-199-in-24-Hours",
+      "pubDate": "2025-09-02T01:17:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "PAXG"
+      ]
+    },
+    {
+      "title": "KuCoin token [KCS] rallies 41%, hits 2025 high: What should you expect now?",
+      "link": "https://cryptopanic.com/news/kucoin-shares/24867174/KuCoin-token-KCS-rallies-41-hits-2025-high-What-should-you-expect-now",
+      "pubDate": "2025-09-02T01:00:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    }
+  ]
+}

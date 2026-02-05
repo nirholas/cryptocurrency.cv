@@ -1,0 +1,42 @@
+{
+  "date": "2020-08-17",
+  "fetchedAt": "2026-02-05T07:27:06.863Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "VeChain Joins Forces with One of the World?s Largest Professional Services Networks to Roll Out New Blockchain Solutions",
+      "link": "https://cryptopanic.com/news/9700742/VeChain-Joins-Forces-with-One-of-the-Worlds-Largest-Professional-Services-Networks-to-Roll-Out-New-Blockchain-Solutions",
+      "pubDate": "2020-08-17T15:17:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "EOS (EOS) Powered Decentralized Social Media Platform Voice Now Live",
+      "link": "https://cryptopanic.com/news/9700247/EOS-EOS-Powered-Decentralized-Social-Media-Platform-Voice-Now-Live",
+      "pubDate": "2020-08-17T14:00:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,962 @@
+{
+  "date": "2021-12-12",
+  "fetchedAt": "2026-02-05T07:27:06.887Z",
+  "articleCount": 67,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Solana co-founder believes NFTs will eradicate ‘external poison marketplaces’",
+      "link": "https://cryptopanic.com/news/solana/13647496/Solana-co-founder-believes-NFTs-will-eradicate-external-poison-marketplaces",
+      "pubDate": "2021-12-12T23:30:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "The mania around Non-Fungible Tokens (NFT) has only seen a whirlwind spike over the past year, with sales crossing $12.7 billion. Such sales figures have made it the best-performing cryptocurrency sector. In fact, over 73,000 NFT sales worth a whopping $271.5 million have been made in just the past week alone. With an added boost […]",
+      "currencies": [
+        "SOL",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ZK-rollups step into the limelight after the quest to scale Ethereum evolves",
+      "link": "https://cryptopanic.com/news/ethereum/13647449/ZK-rollups-step-into-the-limelight-after-the-quest-to-scale-Ethereum-evolves",
+      "pubDate": "2021-12-12T23:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "ZK-rollups become the latest trending solution for scalability on the Ethereum network as developers strive to increase throughput capabilities while decreases transaction costs.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The Sandbox Partners With Metaverse Platform BlockchainSpace",
+      "link": "https://cryptopanic.com/news/13647399/The-Sandbox-Partners-With-Metaverse-Platform-BlockchainSpace",
+      "pubDate": "2021-12-12T22:45:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The blockchain-based gaming platform, The Sandbox, has partnered with BlockchainSpace, a metaverse platform, to amass more guilds and players.",
+      "currencies": [
+        "SAND"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @netswapofficial: #LINKMARINES can now bridge your $LINK with Metis Bridge and start swapping&amp;adding liquidity on",
+      "link": "https://cryptopanic.com/news/13651047/RT-netswapofficial-LINKMARINES-can-now-bridge-your-LINK-with-Metis-Bridge-and-start-swappingampadding-liquidity-on",
+      "pubDate": "2021-12-12T21:59:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "METIS"
+      ]
+    },
+    {
+      "title": "Cardano, its downtrend, and what can stop it",
+      "link": "https://cryptopanic.com/news/cardano/13647286/Cardano-its-downtrend-and-what-can-stop-it",
+      "pubDate": "2021-12-12T21:30:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "It has been a while since Cardano’s price rallied. Way back in September, it peaked at $3.101. Post that, however, things have only gone downhill for this altcoin. Towards mid-September, ADA’s price entered a symmetrical triangle on the charts. And, by mid-October, it broke below the lower support line to continue its extended downtrend. After […]",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 11
+      }
+    },
+    {
+      "title": "RT @Ehrls15: great article...give it a read..@investvoyager",
+      "link": "https://cryptopanic.com/news/13653322/RT-Ehrls15-great-articlegive-it-a-readinvestvoyager",
+      "pubDate": "2021-12-12T21:01:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VGX"
+      ]
+    },
+    {
+      "title": "Polygon Announces Nearly $500,000,000 Deal in Effort To Lead Ethereum-Scaling Solution Race",
+      "link": "https://cryptopanic.com/news/matic-network/13647246/Polygon-Announces-Nearly-500000000-Deal-in-Effort-To-Lead-Ethereum-Scaling-Solution-Race",
+      "pubDate": "2021-12-12T21:00:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum layer 2 solution Polygon is unveiling a massive acquisition worth hundreds of millions of dollars to expand its repertoire of scaling technologies. In a new blog post, Polygon (MATIC) announces the acquisition of Mir, a startup focused on developing zero-knowledge (ZK) technology. ZK-rollups are layer 2 solutions that bundle hundreds of transactions off-chain and […]",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 33,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Hackers take control of Indian prime minister’s Twitter account to promote bitcoin giveaway scam",
+      "link": "https://cryptopanic.com/news/bitcoin/13647162/Hackers-take-control-of-Indian-prime-ministers-Twitter-account-to-promote-bitcoin-giveaway-scam",
+      "pubDate": "2021-12-12T20:28:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The official Twitter account for India's prime minister, Narendra Modi, was briefly taken over by hackers and used to promote a bitcoin giveaway scam.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Bitcoin Bounces Back to $50K in Weekend Consolidation",
+      "link": "https://cryptopanic.com/news/bitcoin/13647127/Bitcoin-Bounces-Back-to-50K-in-Weekend-Consolidation",
+      "pubDate": "2021-12-12T20:04:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The gains come after a flash crash at the beginning of December.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "&gt;&gt; f for frens.",
+      "link": "https://cryptopanic.com/news/13650191/gtgt-f-for-frens",
+      "pubDate": "2021-12-12T20:01:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MFT"
+      ]
+    },
+    {
+      "title": "RT @jeongunlee1: @Ravencoin It's simple and clear, but this is the truth. Raven coins are increasing due to many actual use cases. We don't…",
+      "link": "https://cryptopanic.com/news/13651979/RT-jeongunlee1-Ravencoin-Its-simple-and-clear-but-this-is-the-truth-Raven-coins-are-increasing-due-to-many-actual-use-cases-We-dont",
+      "pubDate": "2021-12-12T19:50:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RVN"
+      ]
+    },
+    {
+      "title": "RT @RavenRickGrime1: It is with great honor I present to you a beautiful piece of craftsmanship by OG @Ravencoin Kawmunity member @nike8866…",
+      "link": "https://cryptopanic.com/news/13651981/RT-RavenRickGrime1-It-is-with-great-honor-I-present-to-you-a-beautiful-piece-of-craftsmanship-by-OG-Ravencoin-Kawmunity-member-nike8866",
+      "pubDate": "2021-12-12T19:49:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RVN"
+      ]
+    },
+    {
+      "title": "Great VC everyone! 45 minutes talk about the project, answering all the questions and we had a Quiz at the end of t…",
+      "link": "https://cryptopanic.com/news/13729104/Great-VC-everyone-45-minutes-talk-about-the-project-answering-all-the-questions-and-we-had-a-Quiz-at-the-end-of-t",
+      "pubDate": "2021-12-12T19:47:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SAFE"
+      ]
+    },
+    {
+      "title": "Anti-Corruption Watchdog Sues SEC To Comply With Freedom of Information Request, Alleges Conflict of Interest in XRP Lawsuit",
+      "link": "https://cryptopanic.com/news/ripple/13647128/Anti-Corruption-Watchdog-Sues-SEC-To-Comply-With-Freedom-of-Information-Request-Alleges-Conflict-of-Interest-in-XRP-Lawsuit",
+      "pubDate": "2021-12-12T19:45:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "A non-profit dedicated to government oversight is taking legal action against the U.S. Securities and Exchange Commission (SEC), alleging conflicts of interest in its handling of the crypto space. Empower Oversight is suing the SEC to compel the regulator to comply with the Freedom of Information Act (FOIA) and reveal communications between its senior officials […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @MetisDAO: Seems smartest #DeFi projects and minds in the industry are noticing the amazing business plan that our native Layer 2 DEX @n…",
+      "link": "https://cryptopanic.com/news/13651048/RT-MetisDAO-Seems-smartest-DeFi-projects-and-minds-in-the-industry-are-noticing-the-amazing-business-plan-that-our-native-Layer-2-DEX-n",
+      "pubDate": "2021-12-12T19:43:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "METIS"
+      ]
+    },
+    {
+      "title": "Metaface chart is looking good for itself..",
+      "link": "https://cryptopanic.com/news/13650998/Metaface-chart-is-looking-good-for-itself",
+      "pubDate": "2021-12-12T19:36:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MFT"
+      ]
+    },
+    {
+      "title": "Bitcoin DeFi and Bitcoin NFTs continue to blossom thanks to the builders leveraging Stacks and the Clarity smart co…",
+      "link": "https://cryptopanic.com/news/13652675/Bitcoin-DeFi-and-Bitcoin-NFTs-continue-to-blossom-thanks-to-the-builders-leveraging-Stacks-and-the-Clarity-smart-co",
+      "pubDate": "2021-12-12T19:25:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "STX"
+      ]
+    },
+    {
+      "title": "RT @joey__santoro: Tribe shirt by ⁦@SubvertedN⁩ getting me HYPED for Fei v2",
+      "link": "https://cryptopanic.com/news/13653079/RT-joey__santoro-Tribe-shirt-by-SubvertedN-getting-me-HYPED-for-Fei-v2",
+      "pubDate": "2021-12-12T18:35:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FEI",
+        "TRIBE"
+      ]
+    },
+    {
+      "title": "Is Ethereum in any position to trigger a DeFi summer right now",
+      "link": "https://cryptopanic.com/news/13646936/Is-Ethereum-in-any-position-to-trigger-a-DeFi-summer-right-now",
+      "pubDate": "2021-12-12T18:30:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The DeFi’s market movement has been quite dismal over the past few weeks. Right from MKR, AAVE, and COMP to UNI, SUSHI, and YFI, almost all the top tokens from this space have been incurring losses. Amidst the larger downtrend or ‘winter’ phase going on, the aggregate value locked in DeFi slipped to $85 billion […]",
+      "currencies": [
+        "ETH",
+        "COMP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Seems smartest #DeFi projects and minds in the industry are noticing the amazing business plan that our native Laye…",
+      "link": "https://cryptopanic.com/news/13651049/Seems-smartest-DeFi-projects-and-minds-in-the-industry-are-noticing-the-amazing-business-plan-that-our-native-Laye",
+      "pubDate": "2021-12-12T18:30:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "METIS"
+      ]
+    },
+    {
+      "title": "𝗗𝗶𝘀𝗰𝗹𝗮𝗶𝗺𝗲𝗿: Collecting NFTs on Proton can be addictive!  ️",
+      "link": "https://cryptopanic.com/news/13651839/Disclaimer-Collecting-NFTs-on-Proton-can-be-addictive",
+      "pubDate": "2021-12-12T18:29:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "XPR"
+      ]
+    },
+    {
+      "title": "Another awesome video featuring @elf_token, courtesy of Steven Clarke! Take some time to watch, one of the most res…",
+      "link": "https://cryptopanic.com/news/13649566/Another-awesome-video-featuring-elf_token-courtesy-of-Steven-Clarke-Take-some-time-to-watch-one-of-the-most-res",
+      "pubDate": "2021-12-12T18:01:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ELF"
+      ]
+    },
+    {
+      "title": "#HiveAdventCalendar question of the day: What's your favorite Hive-based #NFT that you own or wish you owned?",
+      "link": "https://cryptopanic.com/news/13650194/HiveAdventCalendar-question-of-the-day-Whats-your-favorite-Hive-based-NFT-that-you-own-or-wish-you-owned",
+      "pubDate": "2021-12-12T18:00:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "HIVE"
+      ]
+    },
+    {
+      "title": "Shiba Inu (SHIB) Suddenly Spikes 8%",
+      "link": "https://cryptopanic.com/news/shiba-inu/13646852/Shiba-Inu-SHIB-Suddenly-Spikes-8",
+      "pubDate": "2021-12-12T18:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Shiba (SHIB) is outperforming nearly all of the top 100 coins after a sudden price spike",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 40,
+        "negative": 8
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Cofounder Joe Lubin: High Gas Fees Are a 'Measure of Success'",
+      "link": "https://cryptopanic.com/news/ethereum/13646843/Ethereum-Cofounder-Joe-Lubin-High-Gas-Fees-Are-a-Measure-of-Success",
+      "pubDate": "2021-12-12T17:55:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Joe Lubin waded into the ongoing debate over Ethereum gas fees: they're a \"growth pain\" and a sign of the network's popularity, he says.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 7
+      }
+    },
+    {
+      "title": "3 reasons why Ethereum price can drop below $3K by the end of 2021",
+      "link": "https://cryptopanic.com/news/ethereum/13646761/3-reasons-why-Ethereum-price-can-drop-below-3K-by-the-end-of-2021",
+      "pubDate": "2021-12-12T17:23:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The bearish setup appears amid growing divergence between Ether’s price and momentum.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 8
+      }
+    },
+    {
+      "title": "Can We Define Bitcoin As A Religion?",
+      "link": "https://cryptopanic.com/news/bitcoin/13646732/Can-We-Define-Bitcoin-As-A-Religion",
+      "pubDate": "2021-12-12T17:13:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "This essay will attempt to answer a question often discussed yet semantically challenging.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Today 19pm UTC LIVE VOICECHAT with the #SpaceXliFe Dev DidaSync. Make sure to tune in and ask any questions about t…",
+      "link": "https://cryptopanic.com/news/13729110/Today-19pm-UTC-LIVE-VOICECHAT-with-the-SpaceXliFe-Dev-DidaSync-Make-sure-to-tune-in-and-ask-any-questions-about-t",
+      "pubDate": "2021-12-12T16:44:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "SAFE"
+      ]
+    },
+    {
+      "title": "RT @MetisDAO: We love the idea so much, $METIS actually executed the first ever community minted NFT. Sold for 16.1 ETH, proceeds split 256…",
+      "link": "https://cryptopanic.com/news/13651050/RT-MetisDAO-We-love-the-idea-so-much-METIS-actually-executed-the-first-ever-community-minted-NFT-Sold-for-161-ETH-proceeds-split-256",
+      "pubDate": "2021-12-12T16:38:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "METIS"
+      ]
+    },
+    {
+      "title": "You can now purchase #music, #apps, #movies, and much more, from one of the world's largest entertainment libraries…",
+      "link": "https://cryptopanic.com/news/13646548/You-can-now-purchase-music-apps-movies-and-much-more-from-one-of-the-worlds-largest-entertainment-libraries",
+      "pubDate": "2021-12-12T16:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "Great news - Buy tax has been dropped 4% for this week! Giving everyone the opportunity to load up their bags befor…",
+      "link": "https://cryptopanic.com/news/13649567/Great-news-Buy-tax-has-been-dropped-4-for-this-week-Giving-everyone-the-opportunity-to-load-up-their-bags-befor",
+      "pubDate": "2021-12-12T15:41:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ELF"
+      ]
+    },
+    {
+      "title": "my meal plan? crypto for breakfast, lunch, and dinner.",
+      "link": "https://cryptopanic.com/news/13652732/my-meal-plan-crypto-for-breakfast-lunch-and-dinner",
+      "pubDate": "2021-12-12T15:01:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STMX"
+      ]
+    },
+    {
+      "title": "What do you like most about Proton? ️",
+      "link": "https://cryptopanic.com/news/13651840/What-do-you-like-most-about-Proton",
+      "pubDate": "2021-12-12T14:17:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XPR"
+      ]
+    },
+    {
+      "title": "1st vote on Stabilize governance has ended, and we will raise the Transfer Fee to 15% based on the results of the v…",
+      "link": "https://cryptopanic.com/news/13652671/1st-vote-on-Stabilize-governance-has-ended-and-we-will-raise-the-Transfer-Fee-to-15-based-on-the-results-of-the-v",
+      "pubDate": "2021-12-12T14:00:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SUSD"
+      ]
+    },
+    {
+      "title": "Brand new arena mode is available now ！Details",
+      "link": "https://cryptopanic.com/news/13653394/Brand-new-arena-mode-is-available-now-Details",
+      "pubDate": "2021-12-12T13:52:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WIN"
+      ]
+    },
+    {
+      "title": "Heard @elonmusk has a pet CobraGoose.",
+      "link": "https://cryptopanic.com/news/13721599/Heard-elonmusk-has-a-pet-CobraGoose",
+      "pubDate": "2021-12-12T13:19:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CBG"
+      ]
+    },
+    {
+      "title": "ℹ️ We are hosting an AMA with @NotableNFT team, to talk about their successful presale &amp; the upcoming listing of th…",
+      "link": "https://cryptopanic.com/news/13648499/i-We-are-hosting-an-AMA-with-NotableNFT-team-to-talk-about-their-successful-presale-amp-the-upcoming-listing-of-th",
+      "pubDate": "2021-12-12T12:54:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "BAKE"
+      ]
+    },
+    {
+      "title": "Solana Gearing Up for 255% Rally Early Next Year: Crypto Exchange Kraken",
+      "link": "https://cryptopanic.com/news/ethereum/13646249/Solana-Gearing-Up-for-255-Rally-Early-Next-Year-Crypto-Exchange-Kraken",
+      "pubDate": "2021-12-12T12:45:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Crypto exchange Kraken is saying that Ethereum competitor and smart contract platform Solana (SOL) could be jockeying for a strong rally by early 2022. In a recent report, Kraken says that Solana has been trading within a large bullish pattern dating as far back as 2020. According to the crypto exchange, Solana’s corrective move from […]",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 49,
+        "negative": 22
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Gemini-Backed Flexa Adds Shiba Inu (SHIB) as a Payment Method",
+      "link": "https://cryptopanic.com/news/shiba-inu/13646209/Gemini-Backed-Flexa-Adds-Shiba-Inu-SHIB-as-a-Payment-Method",
+      "pubDate": "2021-12-12T12:44:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Users of Flexa's SPEDN application will now be able to pay with their SHIB tokens across a broad network of merchants including GameStop and Lowe's.",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 39,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @kitkatkitkat87: Thought I might share my Christmas card for this year, happy holidays everyone! Buddy and I are so happy to be on the #…",
+      "link": "https://cryptopanic.com/news/13649571/RT-kitkatkitkat87-Thought-I-might-share-my-Christmas-card-for-this-year-happy-holidays-everyone-Buddy-and-I-are-so-happy-to-be-on-the",
+      "pubDate": "2021-12-12T12:30:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ELF"
+      ]
+    },
+    {
+      "title": "Another #ElfToken YouTube video dropped last night! Check out what Jim Crypto has to say about the token!…",
+      "link": "https://cryptopanic.com/news/13649572/Another-ElfToken-YouTube-video-dropped-last-night-Check-out-what-Jim-Crypto-has-to-say-about-the-token",
+      "pubDate": "2021-12-12T12:29:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ELF"
+      ]
+    },
+    {
+      "title": "Bitcoin & Crypto Bull Run Will End In 2022",
+      "link": "https://cryptopanic.com/news/bitcoin/13646133/Bitcoin-Crypto-Bull-Run-Will-End-In-2022",
+      "pubDate": "2021-12-12T11:30:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin and cryptocurrency to pump well into 2022 surprising crypto world! 🤖 UNSTOPPABLE DOMAINS ►► https://cryptolark.co/UNSTOPPABLE 🔥 RECEIVE MY FREE INVESTMENT REPORT EVERY WEEK ►► https://cryptolark.co/WEALTHMASTERY 0:00 Today in Bitcoin 1:56 Bitcoin ETF 4:04 Cycles Getting Longer 6:00 Ethereum 7:52 Cardano and Others 9:15 NFTs 10:50 Gaming 12:16 Big Money #bitcoin #crypto #btc 💰 BINANCE BEST EXCHANGE FOR BUYING & TRADING CRYPTO 👉 10% OFF FEES & $700 BONUS ►► https://cryptolark.co/BINANC",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 11
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Possible shift!!!",
+      "link": "https://cryptopanic.com/news/13694783/Possible-shift",
+      "pubDate": "2021-12-12T11:10:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RACA"
+      ]
+    },
+    {
+      "title": "RT @alexpfeiffer: I created some #fanfrenchies for #mad2022 conference. Each frenchie represents a hosting university. See you 2022 :). The…",
+      "link": "https://cryptopanic.com/news/13646033/RT-alexpfeiffer-I-created-some-fanfrenchies-for-mad2022-conference-Each-frenchie-represents-a-hosting-university-See-you-2022-The",
+      "pubDate": "2021-12-12T10:46:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARDR"
+      ]
+    },
+    {
+      "title": "You Can Now Spend Shiba Inu at GameStop, Lowe’s and Nordstrom",
+      "link": "https://cryptopanic.com/news/shiba-inu/13646039/You-Can-Now-Spend-Shiba-Inu-at-GameStop-Lowes-and-Nordstrom",
+      "pubDate": "2021-12-12T10:42:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "GameStop, Nordstrom, Lowe’s, Petco, Bed Bath & Beyond and Ulta Beauty are among the merchants that can now accept the Shiba Inu cryptocurrency",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 49,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polygon Acquires Mir Protocol in $400M Deal in Order to Bolster ‘Groundbreaking ZK Rollup Tech’",
+      "link": "https://cryptopanic.com/news/matic-network/13646025/Polygon-Acquires-Mir-Protocol-in-400M-Deal-in-Order-to-Bolster-Groundbreaking-ZK-Rollup-Tech",
+      "pubDate": "2021-12-12T10:30:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "On December 9, Polygon co-founder Mihailo Bjelic announced that the project has acquired the Ethereum scaling startup Mir in a $400 million deal. The Mir team of cryptographers and engineers are joining Polygon in order to create a “highly-scalable, Ethereum-compatible ZK rollup” called Polygon Zero. Mihailo Bjelic: ‘Polygon Is Focused on Zero-Knowledge Cryptography as the […]",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Market Watch: Bitcoin Amid $49K, Cardano (ADA) Spikes 6%",
+      "link": "https://cryptopanic.com/news/cardano/13645957/Market-Watch-Bitcoin-Amid-49K-Cardano-ADA-Spikes-6",
+      "pubDate": "2021-12-12T09:41:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "While bitcoin and most altcoins have remained relatively still since yesterday, ADA has jumped by 6%.",
+      "currencies": [
+        "BTC",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Our community continues to grow rapidly (we even had to create a second TG group to accommodate more members). Than…",
+      "link": "https://cryptopanic.com/news/13651948/Our-community-continues-to-grow-rapidly-we-even-had-to-create-a-second-TG-group-to-accommodate-more-members-Than",
+      "pubDate": "2021-12-12T08:47:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "RACA"
+      ]
+    },
+    {
+      "title": "Solana Faces A Turbulent Future After Recent Network Outages — Why This Could Prove Fatal For SOL",
+      "link": "https://cryptopanic.com/news/ethereum/13644242/Solana-Faces-A-Turbulent-Future-After-Recent-Network-Outages-Why-This-Could-Prove-Fatal-For-SOL",
+      "pubDate": "2021-12-12T08:36:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana blockchain suffered a DDoS attack that slowed down the network’s speed. Cyber security enthusiasts say the attack portrays the security flaws of Solana’s PoH consensus framework. The incident is likely to heighten concerns over Solana. The Solana blockchain network has suffered a distributed denial of service (DDoS) attack. The attack was first highlighted by […]",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 33
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "No, Indian Government Didn’t Buy Bitcoin",
+      "link": "https://cryptopanic.com/news/bitcoin/13644236/No-Indian-Government-Didnt-Buy-Bitcoin",
+      "pubDate": "2021-12-12T08:33:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Prime Minister Narendra Modi was unwittingly promoting a Bitcoin scam earlier today",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Indian Prime Minister Modi’s Twitter Account Hacked By Bitcoin (BTC) Scammers",
+      "link": "https://cryptopanic.com/news/bitcoin/13644244/Indian-Prime-Minister-Modis-Twitter-Account-Hacked-By-Bitcoin-BTC-Scammers",
+      "pubDate": "2021-12-12T08:33:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Scammers took control of Indian Prime Minister Narendra Modi’s Twitter account. The account has over 73 million followers and it promoted a very known cryptocurrency scam that affected […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "⏳3-days countdown! Stay tuned to the SunSwap V2.0 launch on Dec 15th, 2021.",
+      "link": "https://cryptopanic.com/news/tron/13643579/3-days-countdown-Stay-tuned-to-the-SunSwap-V20-launch-on-Dec-15th-2021",
+      "pubDate": "2021-12-12T08:13:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Exchange AscendEX (Formerly Bitmax) Hacked: $80 Million Allegedly Stolen",
+      "link": "https://cryptopanic.com/news/ethereum/13643531/Crypto-Exchange-AscendEX-Formerly-Bitmax-Hacked-80-Million-Allegedly-Stolen",
+      "pubDate": "2021-12-12T08:08:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Another cryptocurrency exchange has fallen victim to a hack; this time it was AscendEX - formerly known as BitMax.",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "AscendEX loses $80M following ERC-20, BSC, Polygon hot wallet compromise",
+      "link": "https://cryptopanic.com/news/ethereum/13642378/AscendEX-loses-80M-following-ERC-20-BSC-Polygon-hot-wallet-compromise",
+      "pubDate": "2021-12-12T07:16:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Out of the lot, around $60 million worth of tokens were transferred over the Ethereum blockchain alone. Tokens stolen from BSC and Polygon are worth $9.2 million and $8.5 million, respectively.",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @Pursetoken: That’s right! Another poll..let’s get some more options going for what we can give away in 2022!  $PURSE @Pursetoken @Pla…",
+      "link": "https://cryptopanic.com/news/13643222/RT-Pursetoken-Thats-right-Another-polllets-get-some-more-options-going-for-what-we-can-give-away-in-2022-PURSE-Pursetoken-Pla",
+      "pubDate": "2021-12-12T07:11:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PUNDIX"
+      ]
+    },
+    {
+      "title": "India: PM Modi’s ‘briefly compromised’ Twitter account talks about ‘adopting Bitcoin’",
+      "link": "https://cryptopanic.com/news/bitcoin/13640784/India-PM-Modis-briefly-compromised-Twitter-account-talks-about-adopting-Bitcoin",
+      "pubDate": "2021-12-12T06:40:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Earlier today, Indian Prime Minister Narendra Modi’s Twitter account “announced” that the country had adopted Bitcoin as legal tender. Now, while there was some surprise and joy in some quarters, as expected, it soon turned out that the PM’s account had in fact been hacked. At around 2:00 am on 12 December, PM Modi “tweeted” […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @YoroiWallet: Incredible initiative from @singularity_net, providing ease-of-use &amp; interoperability between both #Cardano &amp; #Ethereum. A…",
+      "link": "https://cryptopanic.com/news/13643705/RT-YoroiWallet-Incredible-initiative-from-singularity_net-providing-ease-of-use-amp-interoperability-between-both-Cardano-amp-Ethereum-A",
+      "pubDate": "2021-12-12T06:29:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "AGIX"
+      ]
+    },
+    {
+      "title": "Indian prime minister Modi's hacked Twitter account attempts BTC scam",
+      "link": "https://cryptopanic.com/news/bitcoin/13639226/Indian-prime-minister-Modis-hacked-Twitter-account-attempts-BTC-scam",
+      "pubDate": "2021-12-12T05:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Soon after Modi's Twitter account, with over 73.4 million followers, got hacked, attackers shared misleading information about the mainstream adoption of Bitcoin and a 500 BTC giveaway.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 8
+      }
+    },
+    {
+      "title": "Hope everyone had a good day. The door dash giveaway is still going on! Get in on it for the chance to get a burger…",
+      "link": "https://cryptopanic.com/news/dash/13639857/Hope-everyone-had-a-good-day-The-door-dash-giveaway-is-still-going-on-Get-in-on-it-for-the-chance-to-get-a-burger",
+      "pubDate": "2021-12-12T04:25:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DASH",
+        "BRGB"
+      ]
+    },
+    {
+      "title": "RT @AdamPaigge: I collab with smaller BSV companies because I want to see them succeed in a space that is dominated by a few big players.",
+      "link": "https://cryptopanic.com/news/13640422/RT-AdamPaigge-I-collab-with-smaller-BSV-companies-because-I-want-to-see-them-succeed-in-a-space-that-is-dominated-by-a-few-big-players",
+      "pubDate": "2021-12-12T03:45:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "RT @kaiynne: This is a really good overview of the current state of synthetix. The only thing I think it underplays is the investment in ti…",
+      "link": "https://cryptopanic.com/news/13643999/RT-kaiynne-This-is-a-really-good-overview-of-the-current-state-of-synthetix-The-only-thing-I-think-it-underplays-is-the-investment-in-ti",
+      "pubDate": "2021-12-12T03:04:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SNX",
+        "SUSD"
+      ]
+    },
+    {
+      "title": "Chain of burn day 5+6: another 1 billion #RACA was burned. Praise the #RACA God!",
+      "link": "https://cryptopanic.com/news/13643304/Chain-of-burn-day-56-another-1-billion-RACA-was-burned-Praise-the-RACA-God",
+      "pubDate": "2021-12-12T02:43:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RACA"
+      ]
+    },
+    {
+      "title": "Ethereum Whale With $800 Million in Assets Accumulated Over 1.6 Trillion $SHIB",
+      "link": "https://cryptopanic.com/news/ethereum/13638972/Ethereum-Whale-With-800-Million-in-Assets-Accumulated-Over-16-Trillion-SHIB",
+      "pubDate": "2021-12-12T01:09:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "An Ethereum whale with over $800 million in various cryptocurrencies on its wallet has been accumulating Shiba Inu ($SHIB), so much so it now has over 1-67 trillion tokens of the meme-inspired cryptocurrency in its wallet. As first reported by Insider, the Ethereum whale has purchased close to $1.8 million worth of the cryptocurrency over […]",
+      "currencies": [
+        "ETH",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "You can build anything you want here",
+      "link": "https://cryptopanic.com/news/13643336/You-can-build-anything-you-want-here",
+      "pubDate": "2021-12-12T01:05:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RVN"
+      ]
+    },
+    {
+      "title": "RT @CryptoLyssa: Come learn!!!! It’s going to be #crypto #ETH #BTC #cryptocurrency #womenincrypto #ravencoin $rvn",
+      "link": "https://cryptopanic.com/news/13643337/RT-CryptoLyssa-Come-learn-Its-going-to-be-crypto-ETH-BTC-cryptocurrency-womenincrypto-ravencoin-rvn",
+      "pubDate": "2021-12-12T01:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "RVN"
+      ]
+    },
+    {
+      "title": "Radio Caca Just burned 1 billion RACA",
+      "link": "https://cryptopanic.com/news/13681042/Radio-Caca-Just-burned-1-billion-RACA",
+      "pubDate": "2021-12-12T00:55:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RACA"
+      ]
+    },
+    {
+      "title": "RT @iamZatoshi: I will give 5 $BSV ($700) to 1 person in 72 hours. Like, Retweet & Follow @relayxio",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/13640424/RT-iamZatoshi-I-will-give-5-BSV-700-to-1-person-in-72-hours-Like-Retweet-amp-Follow-relayxio",
+      "pubDate": "2021-12-12T00:37:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BSV",
+        "DCD"
+      ]
+    }
+  ]
+}

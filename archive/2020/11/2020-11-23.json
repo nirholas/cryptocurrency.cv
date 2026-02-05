@@ -1,0 +1,103 @@
+{
+  "date": "2020-11-23",
+  "fetchedAt": "2026-02-05T07:27:06.963Z",
+  "articleCount": 7,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "CHAINLINK KILLER? Why API3 could be an insane moonshot",
+      "link": "https://cryptopanic.com/news/chainlink/10622288/CHAINLINK-KILLER-Why-API3-could-be-an-insane-moonshot",
+      "pubDate": "2020-11-23T22:46:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "In case if you missed our recent guide on password changing procedure without getting your private key involved, we…",
+      "link": "https://cryptopanic.com/news/11328743/In-case-if-you-missed-our-recent-guide-on-password-changing-procedure-without-getting-your-private-key-involved-we",
+      "pubDate": "2020-11-23T14:03:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PROM"
+      ]
+    },
+    {
+      "title": "XRP Surpasses $22.2 Billion Market Cap, Hits Trading Volume Record, Reclaims Top 3 Crypto Spot Over Tether",
+      "link": "https://cryptopanic.com/news/10617391/XRP-Surpasses-222-Billion-Market-Cap-Hits-Trading-Volume-Record-Reclaims-Top-3-Crypto-Spot-Over-Tether",
+      "pubDate": "2020-11-23T14:00:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Are you accumulating #bitcoin, or buying into a position over time? Our customers can set up a recurring buy that r…",
+      "link": "https://cryptopanic.com/news/10615046/Are-you-accumulating-bitcoin-or-buying-into-a-position-over-time-Our-customers-can-set-up-a-recurring-buy-that-r",
+      "pubDate": "2020-11-23T09:00:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    },
+    {
+      "title": "Earn sweet $HONEY with $WMBL, and use VEST loan program! VEST will empower you at @RealCOSTV, @contentosio service.",
+      "link": "https://cryptopanic.com/news/10615022/Earn-sweet-HONEY-with-WMBL-and-use-VEST-loan-program-VEST-will-empower-you-at-RealCOSTV-contentosio-service",
+      "pubDate": "2020-11-23T08:55:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MBL"
+      ]
+    },
+    {
+      "title": "US signals an increase in crypto banking activity. It is sure that America, will set its own crypto priorities and…",
+      "link": "https://cryptopanic.com/news/10613594/US-signals-an-increase-in-crypto-banking-activity-It-is-sure-that-America-will-set-its-own-crypto-priorities-and",
+      "pubDate": "2020-11-23T03:43:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "What happen if #BITCOIN hits $20K?",
+      "link": "https://cryptopanic.com/news/10613400/What-happen-if-BITCOIN-hits-20K",
+      "pubDate": "2020-11-23T03:02:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    }
+  ]
+}

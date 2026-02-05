@@ -1,0 +1,322 @@
+{
+  "date": "2022-07-03",
+  "fetchedAt": "2026-02-05T07:27:07.630Z",
+  "articleCount": 19,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Project X is setting the stage and Announcing the Winner of the Biggest Comp yet!  More comps daily at…",
+      "link": "https://cryptopanic.com/news/15672528/Project-X-is-setting-the-stage-and-Announcing-the-Winner-of-the-Biggest-Comp-yet-More-comps-daily-at?mtm_campaign=API-OFA",
+      "pubDate": "2022-07-03T20:30:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "PXT"
+      ]
+    },
+    {
+      "title": "Top 5 cryptocurrencies to watch this week: BTC, SHIB, MATIC, ATOM, APE",
+      "link": "https://cryptopanic.com/news/15668906/Top-5-cryptocurrencies-to-watch-this-week-BTC-SHIB-MATIC-ATOM-APE",
+      "pubDate": "2022-07-03T20:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Traders are taking a hands-off approach to Bitcoin and altcoins until BTC successfully flips the $20,000 level back to support.",
+      "currencies": [
+        "BTC",
+        "SHIB",
+        "MATIC",
+        "ATOM",
+        "APE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Monero (XMR) \"Eating Bitcoin's Lunch\"; Here's What This Means",
+      "link": "https://cryptopanic.com/news/15668890/Monero-XMR-Eating-Bitcoins-Lunch-Heres-What-This-Means",
+      "pubDate": "2022-07-03T20:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Crypto enthusiasts demonstrated some stats to explain why protocol is heavily undervalued as money transfer instrument",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Shiba Inu (SHIB) has been listed at BitHash Exchange",
+      "link": "https://cryptopanic.com/news/dash/19388995/Shiba-Inu-SHIB-has-been-listed-at-BitHash-Exchange",
+      "pubDate": "2022-07-03T19:59:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "TON",
+        "BT"
+      ]
+    },
+    {
+      "title": "Dogecoin Traders Are Long 57% on Binance; Here’s What This Signifies for Price",
+      "link": "https://cryptopanic.com/news/15668828/Dogecoin-Traders-Are-Long-57-on-Binance-Heres-What-This-Signifies-for-Price",
+      "pubDate": "2022-07-03T19:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Number of ''long'' traders and market trend are inversely correlated",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tesla Expected to Report $440 Million Writedown on Its Bitcoin Holdings",
+      "link": "https://cryptopanic.com/news/bitcoin/15668724/Tesla-Expected-to-Report-440-Million-Writedown-on-Its-Bitcoin-Holdings",
+      "pubDate": "2022-07-03T18:40:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Tesla reported that it held roughly $2 billion worth of Bitcoin back in November",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Central African Republic launches national cryptocurrency called ‘Sango Coin’",
+      "link": "https://cryptopanic.com/news/bitcoin/15668723/Central-African-Republic-launches-national-cryptocurrency-called-Sango-Coin",
+      "pubDate": "2022-07-03T18:39:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The Central African Republic now has a new national cryptocurrency called Sango Coin that will be used to power its digital economy.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 5
+      }
+    },
+    {
+      "title": "BTC, BNB and ADA Price Analysis for July 3",
+      "link": "https://cryptopanic.com/news/binancecoin/15668725/BTC-BNB-and-ADA-Price-Analysis-for-July-3",
+      "pubDate": "2022-07-03T18:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Do bulls have any chances to seize the initiative against bears' pressure?",
+      "currencies": [
+        "BNB",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Cardano Critic Makes U-Turn After Calling It \"Ph.D. Graveyard,\" Praises Incoming Upgrades",
+      "link": "https://cryptopanic.com/news/15668683/Cardano-Critic-Makes-U-Turn-After-Calling-It-PhD-Graveyard-Praises-Incoming-Upgrades",
+      "pubDate": "2022-07-03T18:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano has received a lot of criticism in the past",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BNB Beacon Chain Becomes Open Source: What Does This Mean for Businesses?",
+      "link": "https://cryptopanic.com/news/15668638/BNB-Beacon-Chain-Becomes-Open-Source-What-Does-This-Mean-for-Businesses",
+      "pubDate": "2022-07-03T17:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "One of crucial elements of BNB Chain architecture is now fully open source: it unlocks amazing opportunities for crypto researchers and entrepreneurs",
+      "currencies": [
+        "BNB",
+        "XCN"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Shiba Inu Reaches This New Milestone Amid Price Declines",
+      "link": "https://cryptopanic.com/news/15668585/Shiba-Inu-Reaches-This-New-Milestone-Amid-Price-Declines",
+      "pubDate": "2022-07-03T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Shiba Inu's holder count continues to grow despite recent price drop",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Highlights of the KLAYTN 2022 roadmap Let’s find out here David Shin head of global adoption at…",
+      "link": "https://cryptopanic.com/news/klay-token/15671611/Highlights-of-the-KLAYTN-2022-roadmap-Lets-find-out-here-David-Shin-head-of-global-adoption-at",
+      "pubDate": "2022-07-03T16:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "LCX"
+      ]
+    },
+    {
+      "title": "In case you haven’t seen our CLOB educational series yet, check out Episode 1: Market Liquidity and Price Discovery…",
+      "link": "https://cryptopanic.com/news/15672807/In-case-you-havent-seen-our-CLOB-educational-series-yet-check-out-Episode-1-Market-Liquidity-and-Price-Discovery",
+      "pubDate": "2022-07-03T14:34:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SRM"
+      ]
+    },
+    {
+      "title": "Celsius Network Reportedly Lays Off 25% of its Workforce",
+      "link": "https://cryptopanic.com/news/15668322/Celsius-Network-Reportedly-Lays-Off-25-of-its-Workforce",
+      "pubDate": "2022-07-03T14:27:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Summary: Celsius Network has reportedly laid off 150 staff members who constitute 25% of its workforce. The team behind the lending platform had last month hired restructuring advisors. Celsius Network has also put forward three proposals for rebuilding through Bnk to The Future Capital: a restructuring to launch Celsius, a pool of most influential whales in Bitcoin to co-invest with the...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "CEL"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Cardano (ADA) Looks To Recover After Sliding To $0.43 – Pressure’s On For The Bulls",
+      "link": "https://cryptopanic.com/news/15668237/Cardano-ADA-Looks-To-Recover-After-Sliding-To-043-Pressures-On-For-The-Bulls",
+      "pubDate": "2022-07-03T13:28:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Cardano (ADA) price experienced a protracted run along a falling angle formed on June 27, when the price was $0.52. Since then, ADA has retreated gradually to find support at $0.44. Nonetheless, ADA may be slowly returning to the green zone, as its price increased throughout the weekend’s session after plummeting to a low of $0.43 on Friday. Cardano is a decentralized proof-of-stake blockchain...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "SOL",
+        "DOGE",
+        "DOT",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Ancient Bitcoin Whales Could Cause BTC Seller Exhaustion, Says Quant Analyst – Here’s What It Means",
+      "link": "https://cryptopanic.com/news/15668090/Ancient-Bitcoin-Whales-Could-Cause-BTC-Seller-Exhaustion-Says-Quant-Analyst-Heres-What-It-Means",
+      "pubDate": "2022-07-03T11:45:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A popular quant analyst says he’s keeping a close watch on the activities of ancient Bitcoin (BTC) whales as he notes the investor cohort could cause sellers to run out of supply. CryptoQuant chief executive Ki Young Ju tells his 301,700 Twitter followers that old Bitcoin whales, or entities that have held their large BTC […]",
+      "currencies": [
+        "BTC",
+        "QNT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "RT @Stratis_Faction: SDA UPDATE 4 Corgi Dash YES: 112 NO: 30 108 votes are needed! With 7 hours to go, it looks like the SDA is appro…",
+      "link": "https://cryptopanic.com/news/dash/15668005/RT-Stratis_Faction-SDA-UPDATE-4-Corgi-Dash-YES-112-NO-30-108-votes-are-needed-With-7-hours-to-go-it-looks-like-the-SDA-is-appro",
+      "pubDate": "2022-07-03T10:35:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STRAX",
+        "STRAT",
+        "CRS"
+      ]
+    },
+    {
+      "title": "Dogecoin Could EXPLODE IN PRICE + $500 MILLION Ethereum Layer 2 & Launch POSTPONED",
+      "link": "https://cryptopanic.com/news/dogecoin/15667693/Dogecoin-Could-EXPLODE-IN-PRICE-500-MILLION-Ethereum-Layer-2-Launch-POSTPONED",
+      "pubDate": "2022-07-03T09:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Protect And Store Your Crypto With A Ledger Nano: https://www.ledger.com?r=8af3ed38d3b7 ------------------------------------------- I Make Art Daily, Check It Out! https://opensea.io/collection/the-modern-artist-collection ------------------------------------------ Become A Patreon! https://www.patreon.com/TheModernInvestor ------------------------------------------- MY SECOND CHANNEL: https://www.youtube.com/channel/UCH9HlTrjyLmLRS0iE1P4rrg ----------------------------------------- Check Out My",
+      "currencies": [
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Blast From the Past: Napster Launching Own Token ($NAPSTER) on Algorand ($ALGO)",
+      "link": "https://cryptopanic.com/news/15663811/Blast-From-the-Past-Napster-Launching-Own-Token-NAPSTER-on-Algorand-ALGO",
+      "pubDate": "2022-07-03T04:45:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Music streaming service Napster is launching a token on the Algorand network in a bid to move towards Web3 integration. As Binance Research explained in a research report published in June 2019, Algorand is “a permissionless, pure proof of stake blockchain that ensures full participation, protection and speed within a truly decentralized network.” Algorand’s aim is “to remove technical...",
+      "currencies": [
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

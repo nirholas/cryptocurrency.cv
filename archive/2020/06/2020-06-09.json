@@ -1,0 +1,38 @@
+{
+  "date": "2020-06-09",
+  "fetchedAt": "2026-02-05T07:27:06.971Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Almost half of all PAX stablecoin transfers linked to ponzi: report",
+      "link": "https://cryptopanic.com/news/9044589/Almost-half-of-all-PAX-stablecoin-transfers-linked-to-ponzi-report",
+      "pubDate": "2020-06-09T20:36:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "Justin Sun Announces TRON 4.0 Launch in July But What Is TRON 2.0 and 3.0?",
+      "link": "https://cryptopanic.com/news/9038668/Justin-Sun-Announces-TRON-40-Launch-in-July-But-What-Is-TRON-20-and-30",
+      "pubDate": "2020-06-09T07:19:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

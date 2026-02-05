@@ -1,0 +1,26 @@
+{
+  "date": "2019-06-21",
+  "fetchedAt": "2026-02-05T07:27:06.976Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Craig Wright Is Satoshi Nakamoto (At Least Among the Council of Bogota)",
+      "link": "https://cryptopanic.com/news/5787857/Craig-Wright-Is-Satoshi-Nakamoto-At-Least-Among-the-Council-of-Bogota",
+      "pubDate": "2019-06-21T15:00:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

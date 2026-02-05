@@ -1,0 +1,38 @@
+{
+  "date": "2019-02-10",
+  "fetchedAt": "2026-02-05T07:27:07.858Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "TRON Price Prediction: Did TRX Just Break Down From the Support Line of the Triangle?",
+      "link": "https://cryptopanic.com/news/4524590/TRON-Price-Prediction-Did-TRX-Just-Break-Down-From-the-Support-Line-of-the-Triangle",
+      "pubDate": "2019-02-10T14:00:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "#screenshotsaturday Past WIP Dev Journal... Laying the foundation for homebase size. $ETC vs $ETH #madewithunreal…",
+      "link": "https://cryptopanic.com/news/4522379/screenshotsaturday-Past-WIP-Dev-Journal-Laying-the-foundation-for-homebase-size-ETC-vs-ETH-madewithunreal?mtm_campaign=API-OFA",
+      "pubDate": "2019-02-10T03:34:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETC",
+        "BLAST"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2018-06-15",
+  "fetchedAt": "2026-02-05T07:27:06.812Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Cash Developer says Network will “Scale to VISA Levels” of Handling Transactions",
+      "link": "https://cryptopanic.com/news/2255007/Bitcoin-Cash-Developer-says-Network-will-Scale-to-VISA-Levels-of-Handling-Transactions",
+      "pubDate": "2018-06-15T09:30:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    }
+  ]
+}

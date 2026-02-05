@@ -1,0 +1,481 @@
+{
+  "date": "2022-08-27",
+  "fetchedAt": "2026-02-05T07:27:07.562Z",
+  "articleCount": 30,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Why Bitcoin Cash [BCH] investors shouldn’t expect profits anytime soon",
+      "link": "https://cryptopanic.com/news/16169700/Why-Bitcoin-Cash-BCH-investors-shouldnt-expect-profits-anytime-soon",
+      "pubDate": "2022-08-27T23:30:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @AMWeigold: Facebook wants to use VR/AR technologies to bring physical real world people into the Metaverse. Decentryk wants to use its…",
+      "link": "https://cryptopanic.com/news/16170956/RT-AMWeigold-Facebook-wants-to-use-VRAR-technologies-to-bring-physical-real-world-people-into-the-Metaverse-Decentryk-wants-to-use-its",
+      "pubDate": "2022-08-27T23:20:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CTK"
+      ]
+    },
+    {
+      "title": "Just filed our latest patent application for our new NFT technology that promises to make Physical Asset NFTs much…",
+      "link": "https://cryptopanic.com/news/16170957/Just-filed-our-latest-patent-application-for-our-new-NFT-technology-that-promises-to-make-Physical-Asset-NFTs-much",
+      "pubDate": "2022-08-27T21:08:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "CTK"
+      ]
+    },
+    {
+      "title": "Is Ethereum Classic [ETC] the next safe haven for ETH miners? Here’s speculating",
+      "link": "https://cryptopanic.com/news/16169502/Is-Ethereum-Classic-ETC-the-next-safe-haven-for-ETH-miners-Heres-speculating",
+      "pubDate": "2022-08-27T20:30:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "ADA Ready To Roar Back To $1 As Cardano Founder Reveals Launch Date For Vasil Upgrade",
+      "link": "https://cryptopanic.com/news/16169434/ADA-Ready-To-Roar-Back-To-1-As-Cardano-Founder-Reveals-Launch-Date-For-Vasil-Upgrade",
+      "pubDate": "2022-08-27T19:50:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The Vasil hard fork is coming. Charles Hoskinson, the CEO and founder of IOG, the company behind Cardano, disclosed Friday when the long-delayed Vasil hard fork is likely to kick off.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 40,
+        "negative": 6
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Charles Hoskinson Addresses Return of Cardano “Ghost Chain” FUD",
+      "link": "https://cryptopanic.com/news/16169402/Charles-Hoskinson-Addresses-Return-of-Cardano-Ghost-Chain-FUD",
+      "pubDate": "2022-08-27T19:21:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "IOG founder says that “Ghost chain” FUD about Cardano chain is back, being spread by influencers",
+      "currencies": [
+        "ADA",
+        "XCN"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin, ETH, XRP, ADA Get Stuck In Tight Ranges As Investors Attune To The Jackson Hole Symposium",
+      "link": "https://cryptopanic.com/news/16169338/Bitcoin-ETH-XRP-ADA-Get-Stuck-In-Tight-Ranges-As-Investors-Attune-To-The-Jackson-Hole-Symposium",
+      "pubDate": "2022-08-27T18:43:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "On Friday, Bitcoin and Ethereum opened with their heads down, with the global crypto market volatility remaining suppressed for the week ahead of the much anticipated Jackson Whole Symposium.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "MakerDAO: It’s a bumpy ride to recovery as MKR declines 37% and TVL drops 10%",
+      "link": "https://cryptopanic.com/news/16169320/MakerDAO-Its-a-bumpy-ride-to-recovery-as-MKR-declines-37-and-TVL-drops-10",
+      "pubDate": "2022-08-27T18:30:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Mt. Gox rumors panic Bitcoin Twitter as BTC price returns below $20K",
+      "link": "https://cryptopanic.com/news/bitcoin/16169112/Mt-Gox-rumors-panic-Bitcoin-Twitter-as-BTC-price-returns-below-20K",
+      "pubDate": "2022-08-27T16:35:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Claims that 137,000 BTC are about to be offloaded on the open market are met with intense suspicion as BTC price volatility returns.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin Breaks Below $20,000 Amid Market Selloff",
+      "link": "https://cryptopanic.com/news/bitcoin/16169070/Bitcoin-Breaks-Below-20000-Amid-Market-Selloff",
+      "pubDate": "2022-08-27T16:10:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Ethereum also dipped below $1,500 Saturday. The crypto markets selloff hasnt let up.Bitcoin briefly dipped below $20,000 Saturday, extending its weeks-long losing streak. According to CoinGecko data, its down about 3.9% today and 18% over the past 14 days. Bitcoin last dropped below the crucial $20,000 level in mid-July but has been hit by volatility in August. Its currently trading at...",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Justin Sun: Why TRON-Powered Stablecoin $USDD Is Better Than ‘DAI, UST, and Other Stablecoins’",
+      "link": "https://cryptopanic.com/news/usdd/16169068/Justin-Sun-Why-TRON-Powered-Stablecoin-USDD-Is-Better-Than-DAI-UST-and-Other-Stablecoins",
+      "pubDate": "2022-08-27T16:09:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "USDD"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Question about moving to new blockchain - Klaytn",
+      "link": "https://cryptopanic.com/news/klay-token/16169919/Question-about-moving-to-new-blockchain-Klaytn",
+      "pubDate": "2022-08-27T16:04:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "JEWEL",
+        "DFKTEARS",
+        "CRYSTAL"
+      ]
+    },
+    {
+      "title": "If you want to get ahead of the #game you need to #learn and now it's the best time for it!! #Bitcoin #opportunity",
+      "link": "https://cryptopanic.com/news/16171131/If-you-want-to-get-ahead-of-the-game-you-need-to-learn-and-now-its-the-best-time-for-it-Bitcoin-opportunity?mtm_campaign=API-OFA",
+      "pubDate": "2022-08-27T13:38:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "DHN"
+      ]
+    },
+    {
+      "title": "TA- Binance Coin (BNB) Loses $300 Key Support, Are Bears Taking Over?",
+      "link": "https://cryptopanic.com/news/axie-infinity/16168680/TA-Binance-Coin-BNB-Loses-300-Key-Support-Are-Bears-Taking-Over",
+      "pubDate": "2022-08-27T13:11:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "BNB",
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Shiba Inu Users To Receive 5,555 BONE Reward on Singapore-based MEXC Exchange",
+      "link": "https://cryptopanic.com/news/16168626/Shiba-Inu-Users-To-Receive-5555-BONE-Reward-on-Singapore-based-MEXC-Exchange",
+      "pubDate": "2022-08-27T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Over $500 billion outflows Bitcoin’s market cap in 2022 as BTC grasps to hold at $20k",
+      "link": "https://cryptopanic.com/news/bitcoin/16168609/Over-500-billion-outflows-Bitcoins-market-cap-in-2022-as-BTC-grasps-to-hold-at-20k",
+      "pubDate": "2022-08-27T12:41:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The ongoing crypto market volatility continues to take a toll on Bitcoin (BTC) with the digital asset experiencing extended capital... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Here are the three biggest crypto stories of the past week",
+      "link": "https://cryptopanic.com/news/16168505/Here-are-the-three-biggest-crypto-stories-of-the-past-week",
+      "pubDate": "2022-08-27T11:48:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The Block brings you the most important updates of the week’s news cycle.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @nivitav: Ran into @jowyang of @RLYNetworkAssoc who gave a RLY interesting talk on #token economies at #HackSummitSF (appreciated the ve…",
+      "link": "https://cryptopanic.com/news/16172988/RT-nivitav-Ran-into-jowyang-of-RLYNetworkAssoc-who-gave-a-RLY-interesting-talk-on-token-economies-at-HackSummitSF-appreciated-the-ve",
+      "pubDate": "2022-08-27T11:29:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RLY"
+      ]
+    },
+    {
+      "title": "Canadian Standards Association announced a new regulation for crypto buying-and-selling platforms to file pre-regis…",
+      "link": "https://cryptopanic.com/news/16170177/Canadian-Standards-Association-announced-a-new-regulation-for-crypto-buying-and-selling-platforms-to-file-pre-regis",
+      "pubDate": "2022-08-27T11:24:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ABBC"
+      ]
+    },
+    {
+      "title": "US stocks lose $1.25T in a day — more than entire crypto market cap",
+      "link": "https://cryptopanic.com/news/bitcoin/16168404/US-stocks-lose-125T-in-a-day-more-than-entire-crypto-market-cap",
+      "pubDate": "2022-08-27T10:43:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Risk assets take a major blow as Fed Chair Jerome Powell stays firmly hawkish on inflation and monetary policy.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Axie Infinity Unveils Season 0 With High Expectations – Will It Pull AXS Up?",
+      "link": "https://cryptopanic.com/news/axie-infinity/16168368/Axie-Infinity-Unveils-Season-0-With-High-Expectations-Will-It-Pull-AXS-Up",
+      "pubDate": "2022-08-27T10:30:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EGLD",
+        "AXS"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Splinterlands - Preparing a liquid stash for an SPS pump in the incoming months",
+      "link": "https://cryptopanic.com/news/16168346/Splinterlands-Preparing-a-liquid-stash-for-an-SPS-pump-in-the-incoming-months",
+      "pubDate": "2022-08-27T10:27:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SPS"
+      ]
+    },
+    {
+      "title": "Analyst Who Called 2022 Bitcoin Collapse Flips Bullish on BTC – But There’s a Catch",
+      "link": "https://cryptopanic.com/news/bitcoin/16163704/Analyst-Who-Called-2022-Bitcoin-Collapse-Flips-Bullish-on-BTC-But-Theres-a-Catch",
+      "pubDate": "2022-08-27T07:04:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A popular crypto analyst who’s been bearish on Bitcoin for most of 2022 is revealing one potential silver lining for BTC. The pseudonymous trader Capo tells his 492,100 Twitter followers that trader activity following Bitcoin’s recent dip toward $20,000 means a short squeeze is possible, and now he’s optimistic about BTC until it recaptures the […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "RT @AlbertCultStein: I believe in MIRACLES. I believe in ABUNDANCE. I intuitively know I don't have control but the SOURCE inside us all do…",
+      "link": "https://cryptopanic.com/news/16167348/RT-AlbertCultStein-I-believe-in-MIRACLES-I-believe-in-ABUNDANCE-I-intuitively-know-I-dont-have-control-but-the-SOURCE-inside-us-all-do?mtm_campaign=API-OFA",
+      "pubDate": "2022-08-27T07:04:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WHITE"
+      ]
+    },
+    {
+      "title": "RT @btsfav: #DeFinitely 123 – The News in #DeFi -",
+      "link": "https://cryptopanic.com/news/16161435/RT-btsfav-DeFinitely-123-The-News-in-DeFi-",
+      "pubDate": "2022-08-27T05:29:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "$400M in Liquidations Daily as Bitcoin Dipped Below $20K",
+      "link": "https://cryptopanic.com/news/bitcoin/16161488/400M-in-Liquidations-Daily-as-Bitcoin-Dipped-Below-20K",
+      "pubDate": "2022-08-27T05:24:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The total value of liquidated positions is on the rise again as the crypto market turns red once more.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "#Klaymakers22 kickoff is in 3 days! On Monday, 29 Aug, you can finally start creating your #buidls on…",
+      "link": "https://cryptopanic.com/news/klay-token/16164522/Klaymakers22-kickoff-is-in-3-days-On-Monday-29-Aug-you-can-finally-start-creating-your-buidls-on",
+      "pubDate": "2022-08-27T04:00:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "When The Crypto Bear Or Bull Period Will Start, Analyzing The Facts",
+      "link": "https://cryptopanic.com/news/16161208/When-The-Crypto-Bear-Or-Bull-Period-Will-Start-Analyzing-The-Facts",
+      "pubDate": "2022-08-27T02:05:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "August 26 is the long-awaited day for a critical shift in the crypto market price movements. At the end of today, the bears or the bulls will take over the market, although everyone hopes for a reversal of the bearish trend. Recall that the last announcement of inflation data didn’t push the market down. Instead, investors saw some price rallies. But from this week’s price movement, it’s...",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BIG NEWS FOR SPLINTERLANDS TOKEN ECOSYSTEM - ALPHA FROM AGGROED",
+      "link": "https://cryptopanic.com/news/16161202/BIG-NEWS-FOR-SPLINTERLANDS-TOKEN-ECOSYSTEM-ALPHA-FROM-AGGROED",
+      "pubDate": "2022-08-27T02:04:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SPS"
+      ]
+    },
+    {
+      "title": "Ethereum Whales Shift Their Holding Into Reputable Exchanges",
+      "link": "https://cryptopanic.com/news/16161168/Ethereum-Whales-Shift-Their-Holding-Into-Reputable-Exchanges",
+      "pubDate": "2022-08-27T01:24:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Many people are already aware of the risks of trading or holding cryptocurrencies. Even those not overly concerned by the crypto market have some knowledge about the dangers. The volatility of certain digital currencies, such as Bitcoin and Ethereum, is why many individuals and firms seek ways to maintain the value of their assets. The Ethereum whales are no exception to this fact. Seeing the...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XCN"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    }
+  ]
+}

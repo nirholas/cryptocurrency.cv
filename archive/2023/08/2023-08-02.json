@@ -1,0 +1,743 @@
+{
+  "date": "2023-08-02",
+  "fetchedAt": "2026-02-05T07:27:07.061Z",
+  "articleCount": 52,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Zac Townsend – Meanwhile – The Smart Economy Podcast: Episode 43",
+      "link": "https://cryptopanic.com/news/18813780/Zac-Townsend-Meanwhile-The-Smart-Economy-Podcast-Episode-43",
+      "pubDate": "2023-08-02T23:56:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "wBTC transaction volume spikes. This is what it means for BTC…",
+      "link": "https://cryptopanic.com/news/flow/18813762/wBTC-transaction-volume-spikes-This-is-what-it-means-for-BTC",
+      "pubDate": "2023-08-02T23:30:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "KuCoin suspends Bitcoin, Litecoin mining amid shifting strategy and layoff rumors",
+      "link": "https://cryptopanic.com/news/18813745/KuCoin-suspends-Bitcoin-Litecoin-mining-amid-shifting-strategy-and-layoff-rumors",
+      "pubDate": "2023-08-02T23:00:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC",
+        "KCS"
+      ]
+    },
+    {
+      "title": "Best Crypto to Buy Now 2 August – XDC Network, Kaspa, Maker",
+      "link": "https://cryptopanic.com/news/18813716/Best-Crypto-to-Buy-Now-2-August-XDC-Network-Kaspa-Maker",
+      "pubDate": "2023-08-02T22:28:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Major cryptocurrencies saw an increase in their prices in the final hours of trading yesterday, coinciding with the news of MicroStrategy Inc's financial recovery in Q2. Considering this latest development of the business intelligence giant reporting a substantial improvement in its financial status, what are the best cryptos to buy now?... Read More: Best Crypto to Buy Now 2 August –...",
+      "currencies": [
+        "ETH",
+        "MKR",
+        "XDC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "KuCoin Shuts Down Bitcoin And Litecoin Mining Pools Amid Market Turmoil",
+      "link": "https://cryptopanic.com/news/18813680/KuCoin-Shuts-Down-Bitcoin-And-Litecoin-Mining-Pools-Amid-Market-Turmoil",
+      "pubDate": "2023-08-02T22:00:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC",
+        "UNI",
+        "KCS"
+      ]
+    },
+    {
+      "title": "HEX Plummets Over 40% After SEC Files Lawsuit Against Creator Richard Heart",
+      "link": "https://cryptopanic.com/news/18813614/HEX-Plummets-Over-40-After-SEC-Files-Lawsuit-Against-Creator-Richard-Heart",
+      "pubDate": "2023-08-02T21:30:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "UNI",
+        "HEX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Curve emergency DAO terminates rewards for hack-related pools",
+      "link": "https://cryptopanic.com/news/18813594/Curve-emergency-DAO-terminates-rewards-for-hack-related-pools",
+      "pubDate": "2023-08-02T21:19:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "BNB Nears $250 Level As Market Suffers Volatility; What’s Driving It?",
+      "link": "https://cryptopanic.com/news/maker/18813554/BNB-Nears-250-Level-As-Market-Suffers-Volatility-Whats-Driving-It",
+      "pubDate": "2023-08-02T21:00:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BNB",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Protocol to identify ‘systemically important’ blockchain banks could help prevent a market crash: Study",
+      "link": "https://cryptopanic.com/news/18813550/Protocol-to-identify-systemically-important-blockchain-banks-could-help-prevent-a-market-crash-Study",
+      "pubDate": "2023-08-02T21:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "COMP"
+      ]
+    },
+    {
+      "title": "Aave price takes double-digit hit, but strong fundamentals point to eventual recovery",
+      "link": "https://cryptopanic.com/news/18813524/Aave-price-takes-double-digit-hit-but-strong-fundamentals-point-to-eventual-recovery",
+      "pubDate": "2023-08-02T20:37:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "KuCoin To Suspend Mining Pool Services Starting August 15",
+      "link": "https://cryptopanic.com/news/18813332/KuCoin-To-Suspend-Mining-Pool-Services-Starting-August-15",
+      "pubDate": "2023-08-02T18:31:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC",
+        "KCS"
+      ]
+    },
+    {
+      "title": "Bitcoin And Litecoin Announcement From KuCoin!",
+      "link": "https://cryptopanic.com/news/18813283/Bitcoin-And-Litecoin-Announcement-From-KuCoin",
+      "pubDate": "2023-08-02T18:02:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC",
+        "KCS"
+      ]
+    },
+    {
+      "title": "Abracadabra Protocol To Counter CRV Risk With 200% Interest Rate Hike",
+      "link": "https://cryptopanic.com/news/18813276/Abracadabra-Protocol-To-Counter-CRV-Risk-With-200-Interest-Rate-Hike",
+      "pubDate": "2023-08-02T18:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "WBTC",
+        "CRV"
+      ]
+    },
+    {
+      "title": "Inside stablecoin supply dynamics as TUSD shakes up the market",
+      "link": "https://cryptopanic.com/news/18813222/Inside-stablecoin-supply-dynamics-as-TUSD-shakes-up-the-market",
+      "pubDate": "2023-08-02T17:30:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "DAI",
+        "TUSD"
+      ]
+    },
+    {
+      "title": "Why is the Bitcoin (BTC) Price Falling? What’s the Latest Market Update?",
+      "link": "https://cryptopanic.com/news/18813201/Why-is-the-Bitcoin-BTC-Price-Falling-Whats-the-Latest-Market-Update",
+      "pubDate": "2023-08-02T17:21:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin price showed a sudden drop in the evening with the news from the USA. So what is the main source of the decline? Continue Reading: Why is the Bitcoin (BTC) Price Falling? What’s the Latest Market Update?",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Buying Pressure Incoming? MicroStrategy Files Notice With SEC To Sell $750 Million In Stocks",
+      "link": "https://cryptopanic.com/news/flow/18813152/Buying-Pressure-Incoming-MicroStrategy-Files-Notice-With-SEC-To-Sell-750-Million-In-Stocks",
+      "pubDate": "2023-08-02T17:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Tether Excess Reserves Shatter $3,000,000,000 As Stablecoin Issuer Uses Profits To Back USDT",
+      "link": "https://cryptopanic.com/news/18813134/Tether-Excess-Reserves-Shatter-3000000000-As-Stablecoin-Issuer-Uses-Profits-To-Back-USDT",
+      "pubDate": "2023-08-02T16:55:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "DAI"
+      ]
+    },
+    {
+      "title": "ApeCoin Crashes Amidst Yuga's Legal Turmoil: An All-Time Low",
+      "link": "https://cryptopanic.com/news/18813098/ApeCoin-Crashes-Amidst-Yugas-Legal-Turmoil-An-All-Time-Low",
+      "pubDate": "2023-08-02T16:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "APE"
+      ]
+    },
+    {
+      "title": "KuCoin to halt bitcoin and litecoin mining pool services",
+      "link": "https://cryptopanic.com/news/18813010/KuCoin-to-halt-bitcoin-and-litecoin-mining-pool-services",
+      "pubDate": "2023-08-02T15:53:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC",
+        "KCS"
+      ]
+    },
+    {
+      "title": "Grayscale Research Manager Explained: \"Cryptocurrencies Rebound If This Happens!\"",
+      "link": "https://cryptopanic.com/news/18812935/Grayscale-Research-Manager-Explained-Cryptocurrencies-Rebound-If-This-Happens",
+      "pubDate": "2023-08-02T15:21:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Zach Pandl, who has been appointed as the head of research at Grayscale Investments LLC, explained the scenario in which cryptocurrencies will recover. Continue Reading: Grayscale Research Manager Explained: \"Cryptocurrencies Rebound If This Happens!\"",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "KuCoin suspends Bitcoin and Litecoin mining pools",
+      "link": "https://cryptopanic.com/news/18812841/KuCoin-suspends-Bitcoin-and-Litecoin-mining-pools",
+      "pubDate": "2023-08-02T15:01:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC",
+        "KCS"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Stacks Rises More Than 3% In 24 hours",
+      "link": "https://cryptopanic.com/news/18812891/Cryptocurrency-Stacks-Rises-More-Than-3-In-24-hours",
+      "pubDate": "2023-08-02T15:00:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STX"
+      ]
+    },
+    {
+      "title": "Uniswap Delists HEX Token After SEC Deems It An “Unregistered Security”",
+      "link": "https://cryptopanic.com/news/18812851/Uniswap-Delists-HEX-Token-After-SEC-Deems-It-An-Unregistered-Security",
+      "pubDate": "2023-08-02T15:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "UNI",
+        "HEX"
+      ]
+    },
+    {
+      "title": "Today in Crypto: Binance Denies Reports of Its Activities in China, Coinbase is Looking Into Adding Bitcoin Lightning Network, OKX Launches Account Abstraction Feature, Hyundai & Kia Partner With Hedera",
+      "link": "https://cryptopanic.com/news/18812846/Today-in-Crypto-Binance-Denies-Reports-of-Its-Activities-in-China-Coinbase-is-Looking-Into-Adding-Bitcoin-Lightning-Network-OKX-Launches-Account-Abstraction-Feature-Hyundai-Kia-Partner-With-Hedera",
+      "pubDate": "2023-08-02T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Hyundai and Kia tap Hedera Network for CO2 emission monitoring system",
+      "link": "https://cryptopanic.com/news/18812816/Hyundai-and-Kia-tap-Hedera-Network-for-CO2-emission-monitoring-system",
+      "pubDate": "2023-08-02T14:58:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Hyundai And Kia Partnered With This Altcoin, Price Moves!",
+      "link": "https://cryptopanic.com/news/18812812/Hyundai-And-Kia-Partnered-With-This-Altcoin-Price-Moves",
+      "pubDate": "2023-08-02T14:41:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "‘Rich Dad’ R. Kiyosaki warns US dollar ‘is toast,’ says BTC is ‘hedge against criminal money’",
+      "link": "https://cryptopanic.com/news/18812788/Rich-Dad-R-Kiyosaki-warns-US-dollar-is-toast-says-BTC-is-hedge-against-criminal-money",
+      "pubDate": "2023-08-02T14:35:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "As the next summit of the BRICS (Brazil, Russia, India, China, and South Africa) nations approaches, Robert Kiyosaki, the author … Continued",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Lido DAO (LDO) Bulls Outnumber Bears, Is Correction Imminent?",
+      "link": "https://cryptopanic.com/news/18812792/Lido-DAO-LDO-Bulls-Outnumber-Bears-Is-Correction-Imminent",
+      "pubDate": "2023-08-02T14:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LDO"
+      ]
+    },
+    {
+      "title": "Justin Sun says Huobi incurred losses in the last four quarters, expects break-even in Q3",
+      "link": "https://cryptopanic.com/news/18812760/Justin-Sun-says-Huobi-incurred-losses-in-the-last-four-quarters-expects-break-even-in-Q3",
+      "pubDate": "2023-08-02T14:24:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HT"
+      ]
+    },
+    {
+      "title": "Hedera Network Embraced by Hyundai and Kia for Innovation",
+      "link": "https://cryptopanic.com/news/18812709/Hedera-Network-Embraced-by-Hyundai-and-Kia-for-Innovation",
+      "pubDate": "2023-08-02T14:08:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "COMP and MKR lead altcoin rally as regulatory uncertainty rallies",
+      "link": "https://cryptopanic.com/news/18812705/COMP-and-MKR-lead-altcoin-rally-as-regulatory-uncertainty-rallies",
+      "pubDate": "2023-08-02T14:07:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI",
+        "MKR",
+        "COMP"
+      ]
+    },
+    {
+      "title": "Analyst Asserts 99.99% Chance of Cardano ADA Hitting $100 Milestone",
+      "link": "https://cryptopanic.com/news/18812711/Analyst-Asserts-9999-Chance-of-Cardano-ADA-Hitting-100-Milestone",
+      "pubDate": "2023-08-02T14:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "In a recent YouTube video, crypto influencer Ben Armstrong, popularly known as Bitboy, shared his insights on the possibility of Cardano (ADA) reaching the monumental $100 milestone. With unwavering confidence, Armstrong declared that the chances of ADA surging to that level are 99.99%, albeit over time. The catalyst behind this optimism is the recent launch […]",
+      "currencies": [
+        "ADA",
+        "OP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "The Dawn Of A New Era: Is Tradecurve Supplanting Centralized Exchanges Like Binance And Huobi?",
+      "link": "https://cryptopanic.com/news/18812697/The-Dawn-Of-A-New-Era-Is-Tradecurve-Supplanting-Centralized-Exchanges-Like-Binance-And-Huobi",
+      "pubDate": "2023-08-02T13:46:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "HT"
+      ]
+    },
+    {
+      "title": "Bitcoin Tops $29,000; XDC Network Emerges As Top Gainer",
+      "link": "https://cryptopanic.com/news/18812653/Bitcoin-Tops-29000-XDC-Network-Emerges-As-Top-Gainer",
+      "pubDate": "2023-08-02T13:37:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin (CRYPTO: BTC) traded higher, with the cryptocurrency prices rising past the key $29,000 level on Wednesday. Ethereum (CRYPTO: ETH) also moved higher, but remained below the key $1,900 mark this morning. read more",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XDC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "How to Mitigate CRV Risk? Abracadabra Proposes 200% Interest Rate Hike",
+      "link": "https://cryptopanic.com/news/18812534/How-to-Mitigate-CRV-Risk-Abracadabra-Proposes-200-Interest-Rate-Hike",
+      "pubDate": "2023-08-02T13:07:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "CRV Gets Plunge Protection on Binance as Market Makers Add Bid-Side Liquidity",
+      "link": "https://cryptopanic.com/news/18812554/CRV-Gets-Plunge-Protection-on-Binance-as-Market-Makers-Add-Bid-Side-Liquidity",
+      "pubDate": "2023-08-02T13:07:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Litecoin (LTC) Halving Just Hours Away, Here's How Many Blocks Left",
+      "link": "https://cryptopanic.com/news/18812538/Litecoin-LTC-Halving-Just-Hours-Away-Heres-How-Many-Blocks-Left",
+      "pubDate": "2023-08-02T13:07:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Litecoin experiencing boom in its network fundamentals ahead of halving event",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "P2E game tokens decline massively, is this the reason?",
+      "link": "https://cryptopanic.com/news/18812454/P2E-game-tokens-decline-massively-is-this-the-reason",
+      "pubDate": "2023-08-02T12:30:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "ApeCoin and BAYC Values Drop Following Otherside Metaverse Test",
+      "link": "https://cryptopanic.com/news/18812422/ApeCoin-and-BAYC-Values-Drop-Following-Otherside-Metaverse-Test",
+      "pubDate": "2023-08-02T12:16:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "APE"
+      ]
+    },
+    {
+      "title": "WBTC Up After Large Transactions Impacted Exchange Supply",
+      "link": "https://cryptopanic.com/news/18812389/WBTC-Up-After-Large-Transactions-Impacted-Exchange-Supply",
+      "pubDate": "2023-08-02T12:02:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "WBTC"
+      ]
+    },
+    {
+      "title": "Binance Coin (BNB) Price Gears Up For A 10% Upswing – Here’s How",
+      "link": "https://cryptopanic.com/news/18812421/Binance-Coin-BNB-Price-Gears-Up-For-A-10-Upswing-Heres-How",
+      "pubDate": "2023-08-02T11:58:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "MKR",
+        "CRV"
+      ]
+    },
+    {
+      "title": "Google Bard sets its Tezos price prediction for August",
+      "link": "https://cryptopanic.com/news/18812245/Google-Bard-sets-its-Tezos-price-prediction-for-August",
+      "pubDate": "2023-08-02T11:19:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XTZ"
+      ]
+    },
+    {
+      "title": "Weeks of Prosperity: MKR Holders See Wealth Grow By Over 100% Amidst Price Boom",
+      "link": "https://cryptopanic.com/news/18811978/Weeks-of-Prosperity-MKR-Holders-See-Wealth-Grow-By-Over-100-Amidst-Price-Boom",
+      "pubDate": "2023-08-02T09:30:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "MKR",
+        "CRV"
+      ]
+    },
+    {
+      "title": "LBank Labs Summer Bootcamp Concludes a Successful Global Competition in Collaboration with Top University Blockchain Clubs",
+      "link": "https://cryptopanic.com/news/18811928/LBank-Labs-Summer-Bootcamp-Concludes-a-Successful-Global-Competition-in-Collaboration-with-Top-University-Blockchain-Clubs",
+      "pubDate": "2023-08-02T09:07:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HT"
+      ]
+    },
+    {
+      "title": "Mantle (MNT) and Filecoin Prices in Decline, Analyst Anticipates 5000% Leap for Tradecurve in 2023",
+      "link": "https://cryptopanic.com/news/flow/18812386/Mantle-MNT-and-Filecoin-Prices-in-Decline-Analyst-Anticipates-5000-Leap-for-Tradecurve-in-2023",
+      "pubDate": "2023-08-02T09:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "FLOW",
+        "FIL",
+        "MNT"
+      ]
+    },
+    {
+      "title": "Aave Should Block Curve Token Borrowing, Risk Management Firm Proposes",
+      "link": "https://cryptopanic.com/news/18811842/Aave-Should-Block-Curve-Token-Borrowing-Risk-Management-Firm-Proposes",
+      "pubDate": "2023-08-02T08:29:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Curve Finance’s CRV Receives Support From Justin Sun And DCF God",
+      "link": "https://cryptopanic.com/news/18811778/Curve-Finances-CRV-Receives-Support-From-Justin-Sun-And-DCF-God",
+      "pubDate": "2023-08-02T07:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "TRX",
+        "AAVE",
+        "CRV"
+      ]
+    },
+    {
+      "title": "Curve DAO (CRV) Price Recovery Post-Exploit: What Would Be A Realistic Scenario?",
+      "link": "https://cryptopanic.com/news/18811748/Curve-DAO-CRV-Price-Recovery-Post-Exploit-What-Would-Be-A-Realistic-Scenario",
+      "pubDate": "2023-08-02T07:40:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "LTC",
+        "CRV"
+      ]
+    },
+    {
+      "title": "Crypto Custodian Hex Trust Expands European Foray With Registration in France",
+      "link": "https://cryptopanic.com/news/18811695/Crypto-Custodian-Hex-Trust-Expands-European-Foray-With-Registration-in-France",
+      "pubDate": "2023-08-02T07:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "Decentralized Exchange PancakeSwap to Reward $CAKE Stakers with Millions in Trading Fee Revenue",
+      "link": "https://cryptopanic.com/news/18811546/Decentralized-Exchange-PancakeSwap-to-Reward-CAKE-Stakers-with-Millions-in-Trading-Fee-Revenue",
+      "pubDate": "2023-08-02T04:49:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "CAKE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Curve founder looks to unexpected counterparties to rescue sinking DeFi loans",
+      "link": "https://cryptopanic.com/news/18811531/Curve-founder-looks-to-unexpected-counterparties-to-rescue-sinking-DeFi-loans",
+      "pubDate": "2023-08-02T04:35:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Terminal 3 Raises Pre-Seed Funding for Decentralized User Data Infrastructure",
+      "link": "https://cryptopanic.com/news/flow/18811303/Terminal-3-Raises-Pre-Seed-Funding-for-Decentralized-User-Data-Infrastructure",
+      "pubDate": "2023-08-02T00:05:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FLOW"
+      ]
+    }
+  ]
+}

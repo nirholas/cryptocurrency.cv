@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { 
   queryArchive, 
   getArchiveIndex, 
-  getArchiveStats 
+  getArchiveStats
 } from '@/lib/archive';
 import { translateArticles, isLanguageSupported, SUPPORTED_LANGUAGES } from '@/lib/translate';
 
@@ -97,6 +97,27 @@ export async function GET(request: NextRequest) {
       }, { status: 400 });
     }
     
+    // Fetch archive index to get available date range
+    const archiveIndex = await getArchiveIndex();
+    
+    // Check if requested dates are outside available range
+    let warning: string | null = null;
+    if (archiveIndex && (startDate || endDate)) {
+      const { earliest, latest } = archiveIndex.dateRange;
+      if (startDate && endDate) {
+        // Both dates provided - check if range is entirely outside archive
+        if (endDate < earliest || startDate > latest) {
+          warning = `Requested date range (${startDate} to ${endDate}) is outside the available archive range (${earliest} to ${latest}). No data available for this period.`;
+        } else if (startDate < earliest || endDate > latest) {
+          warning = `Part of the requested date range is outside the available archive range (${earliest} to ${latest}).`;
+        }
+      } else if (startDate && startDate > latest) {
+        warning = `Start date ${startDate} is after the latest archived date (${latest}).`;
+      } else if (endDate && endDate < earliest) {
+        warning = `End date ${endDate} is before the earliest archived date (${earliest}).`;
+      }
+    }
+    
     // Query archive
     const result = await queryArchive({
       startDate,
@@ -128,6 +149,8 @@ export async function GET(request: NextRequest) {
       pagination: result.pagination,
       lang: translatedLang,
       availableLanguages: Object.keys(SUPPORTED_LANGUAGES),
+      ...(warning && { warning }),
+      archiveDateRange: archiveIndex?.dateRange || null,
       filters: {
         start_date: startDate || null,
         end_date: endDate || null,

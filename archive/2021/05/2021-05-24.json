@@ -1,0 +1,529 @@
+{
+  "date": "2021-05-24",
+  "fetchedAt": "2026-02-05T07:27:06.803Z",
+  "articleCount": 35,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @PaulRBerg: I've seen so many happy @SablierHQ users that at this point the question is when, not if, money streaming becomes the global…",
+      "link": "https://cryptopanic.com/news/11995183/RT-PaulRBerg-Ive-seen-so-many-happy-SablierHQ-users-that-at-this-point-the-question-is-when-not-if-money-streaming-becomes-the-global",
+      "pubDate": "2021-05-24T21:03:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MFT"
+      ]
+    },
+    {
+      "title": "Algorand blockchain open API connector goes live on the SAP API Business Hub",
+      "link": "https://cryptopanic.com/news/11993187/Algorand-blockchain-open-API-connector-goes-live-on-the-SAP-API-Business-Hub",
+      "pubDate": "2021-05-24T20:28:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "CryptoNinjas » Algorand blockchain open API connector goes live on the SAP API Business Hub Algorand, the proof-of-stake blockchain platform, today announced that its open connector API is now live on the SAP Business Hub, providing much-needed interoperability between SAP enterprise applications on the SAP Cloud Platform (SCP) or standalone SAP Clients and the Algorand protocol. This...",
+      "currencies": [
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Augur Launches ‘Augur Turbo’ on Polygon to Expand Sports Betting Program",
+      "link": "https://cryptopanic.com/news/matic-network/11992874/Augur-Launches-Augur-Turbo-on-Polygon-to-Expand-Sports-Betting-Program",
+      "pubDate": "2021-05-24T19:20:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "Decentralized prediction market platform Augur has launched a new sportsbook, Augur Turbo, that will live on the Polygon Layer 2 network.",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 26,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "\"Augur Turbo’s intuitive user interface was designed with DeFi users and sports fans in mind. With @chainlink and…",
+      "link": "https://cryptopanic.com/news/11993614/Augur-Turbos-intuitive-user-interface-was-designed-with-DeFi-users-and-sports-fans-in-mind-With-chainlink-and",
+      "pubDate": "2021-05-24T18:50:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "REP"
+      ]
+    },
+    {
+      "title": "FYI We have a new guide on how to mint, market, and tokenize NFTs for under $0.001 on @0xPolygon ;)",
+      "link": "https://cryptopanic.com/news/11993438/FYI-We-have-a-new-guide-on-how-to-mint-market-and-tokenize-NFTs-for-under-0001-on-0xPolygon?mtm_campaign=API-OFA",
+      "pubDate": "2021-05-24T17:03:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "ALCH"
+      ]
+    },
+    {
+      "title": "RT @tomkysar: augur turbo, sports markets using @BalancerLabs AMM pools on @0xPolygon w/ @Chainlink for [very] fast resolution",
+      "link": "https://cryptopanic.com/news/11993616/RT-tomkysar-augur-turbo-sports-markets-using-BalancerLabs-AMM-pools-on-0xPolygon-w-Chainlink-for-very-fast-resolution",
+      "pubDate": "2021-05-24T16:19:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "REP"
+      ]
+    },
+    {
+      "title": "RT @chainlink: .@AugurProject has integrated #Chainlink into the Augur Turbo platform, now live on @0xPolygon, to deliver schedules, post-g…",
+      "link": "https://cryptopanic.com/news/11993617/RT-chainlink-AugurProject-has-integrated-Chainlink-into-the-Augur-Turbo-platform-now-live-on-0xPolygon-to-deliver-schedules-post-g",
+      "pubDate": "2021-05-24T16:19:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "REP"
+      ]
+    },
+    {
+      "title": "RT @CoinDesk: NEW: @AugurProject is chasing the surging sports betting market with a new sportsbook built on @0xPolygon and using @chainlin…",
+      "link": "https://cryptopanic.com/news/11993618/RT-CoinDesk-NEW-AugurProject-is-chasing-the-surging-sports-betting-market-with-a-new-sportsbook-built-on-0xPolygon-and-using-chainlin",
+      "pubDate": "2021-05-24T16:19:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "REP"
+      ]
+    },
+    {
+      "title": "RT @AugurProject: We are thrilled to announce that Augur Turbo is the world’s only fast-resolving, easy to use, decentralized betting platf…",
+      "link": "https://cryptopanic.com/news/11993619/RT-AugurProject-We-are-thrilled-to-announce-that-Augur-Turbo-is-the-worlds-only-fast-resolving-easy-to-use-decentralized-betting-platf",
+      "pubDate": "2021-05-24T16:07:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "REP"
+      ]
+    },
+    {
+      "title": "Talking LIVE about Augur Turbo right now is @tomkysar",
+      "link": "https://cryptopanic.com/news/11993620/Talking-LIVE-about-Augur-Turbo-right-now-is-tomkysar",
+      "pubDate": "2021-05-24T15:54:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REP"
+      ]
+    },
+    {
+      "title": "Ethereum DeFi Coins, Polygon Lead Crypto Market Recovery",
+      "link": "https://cryptopanic.com/news/matic-network/11992656/Ethereum-DeFi-Coins-Polygon-Lead-Crypto-Market-Recovery",
+      "pubDate": "2021-05-24T15:51:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The majority of cryptocurrencies are back in the green zone after last week’s “bloodbath”—and some of them nearly doubled in price already.",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Next 100x? Mr. Beast and KSI invested - XCAD Network on Zilliqa",
+      "link": "https://cryptopanic.com/news/zilliqa/11992604/Next-100x-Mr-Beast-and-KSI-invested-XCAD-Network-on-Zilliqa",
+      "pubDate": "2021-05-24T15:13:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZIL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We are thrilled to announce that Augur Turbo is the world’s only fast-resolving, easy to use, decentralized betting…",
+      "link": "https://cryptopanic.com/news/11993621/We-are-thrilled-to-announce-that-Augur-Turbo-is-the-worlds-only-fast-resolving-easy-to-use-decentralized-betting",
+      "pubDate": "2021-05-24T15:03:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "REP"
+      ]
+    },
+    {
+      "title": "SOMESING team is very pleased to announce that our cumulative TX on Klaytn has surpassed 8M today! We will keep doi…",
+      "link": "https://cryptopanic.com/news/11996778/SOMESING-team-is-very-pleased-to-announce-that-our-cumulative-TX-on-Klaytn-has-surpassed-8M-today-We-will-keep-doi",
+      "pubDate": "2021-05-24T14:49:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "SSX"
+      ]
+    },
+    {
+      "title": "RT @CoinDesk: Coming up on First Mover: Wyoming @GovernorGordon and @AugurProject's @tomkysar join #CDTV to discuss today's biggest actions…",
+      "link": "https://cryptopanic.com/news/11993622/RT-CoinDesk-Coming-up-on-First-Mover-Wyoming-GovernorGordon-and-AugurProjects-tomkysar-join-CDTV-to-discuss-todays-biggest-actions",
+      "pubDate": "2021-05-24T14:45:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REP"
+      ]
+    },
+    {
+      "title": "Investing in Ethereum should be correlated with positions in BNB, LINK, LTC; Why?",
+      "link": "https://cryptopanic.com/news/litecoin/11992434/Investing-in-Ethereum-should-be-correlated-with-positions-in-BNB-LINK-LTC-Why",
+      "pubDate": "2021-05-24T13:30:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Crypto-market corrections can be nasty and Ethereum suffered one of its worst drawdowns over the past couple of weeks. While the market decline was collective, the sentiment noted by Bitcoin and Ethereum was poles apart. The community’s beloved Bitcoin was identified as an opportunity, while ETH’s social sentiment touched a new low. According to Santiment, […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polkadot (DOT) Bounces and Attempts to Initiate a Bullish Reversal",
+      "link": "https://cryptopanic.com/news/polkadot/11992435/Polkadot-DOT-Bounces-and-Attempts-to-Initiate-a-Bullish-Reversal",
+      "pubDate": "2021-05-24T13:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Polkadot (DOT) has been moving downwards since May 15, when it reached an all-time high of $49.78. While it has temporarily halted the decrease with a significant bounce, the bullish reversal is not confirmed yet.",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 35,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "I Would Not Consider DOGE the Tech of the Future of Digital Finance: Cardano CTO",
+      "link": "https://cryptopanic.com/news/dogecoin/11992372/I-Would-Not-Consider-DOGE-the-Tech-of-the-Future-of-Digital-Finance-Cardano-CTO",
+      "pubDate": "2021-05-24T12:59:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "IOHK's Romain Pellerin believes Dogecoin is hardly anything more than a meme, and it is certainly not the tech of the future for digital currencies",
+      "currencies": [
+        "ADA",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Restorative Rebase ️ is taking place this epoch for both τDoge and τBTC. Restorative Rebase is a burn mechanism th…",
+      "link": "https://cryptopanic.com/news/11993720/Restorative-Rebase-is-taking-place-this-epoch-for-both-Doge-and-BTC-Restorative-Rebase-is-a-burn-mechanism-th",
+      "pubDate": "2021-05-24T12:59:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTCST"
+      ]
+    },
+    {
+      "title": "Happy Monday $AERGO community! Today we are posting an update about our circulating supply. Please take a look.",
+      "link": "https://cryptopanic.com/news/11993418/Happy-Monday-AERGO-community-Today-we-are-posting-an-update-about-our-circulating-supply-Please-take-a-look",
+      "pubDate": "2021-05-24T11:36:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "RT @Crypto_Dep: ️TOP #NFT Projects by Social Activity 24 May 2021 $DOGGY $RARI $CHZ $DGB $AXS $MANA $THETA $BSCS $OGN $ANRX",
+      "link": "https://cryptopanic.com/news/theta-token/11993704/RT-Crypto_Dep-TOP-NFT-Projects-by-Social-Activity-24-May-2021-DOGGY-RARI-CHZ-DGB-AXS-MANA-THETA-BSCS-OGN-ANRX",
+      "pubDate": "2021-05-24T11:32:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "-",
+      "currencies": [
+        "THETA",
+        "CHZ",
+        "BSCS"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "After Bitcoin and Dogecoin: Rapper Meek Mill Plans to Buy Shiba Inu (SHIB)",
+      "link": "https://cryptopanic.com/news/dogecoin/11992234/After-Bitcoin-and-Dogecoin-Rapper-Meek-Mill-Plans-to-Buy-Shiba-Inu-SHIB",
+      "pubDate": "2021-05-24T11:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "After buying BTC and DOGE, the rapper Meek Mill plans to allocate funds in the so-called Dogecoin-killer - Shiba Inu.",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple Price Analysis: XRP Sees 8% Daily Bounce but is $1 in Sight?",
+      "link": "https://cryptopanic.com/news/ripple/11992188/Ripple-Price-Analysis-XRP-Sees-8-Daily-Bounce-but-is-1-in-Sight",
+      "pubDate": "2021-05-24T10:29:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP bounced by 8% today to break back above the 2020 highs and reach $0.85. Against bitcoin, XRP found solid support at a .786 Fib and has bounced to 2330 SAT.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Vitalik Buterin Discusses Elon Musk’s Problematic Dogecoin Scalability Claims",
+      "link": "https://cryptopanic.com/news/dogecoin/11992121/Vitalik-Buterin-Discusses-Elon-Musks-Problematic-Dogecoin-Scalability-Claims",
+      "pubDate": "2021-05-24T09:23:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Vitalik Buterin published a post on the various scalability solutions for blockchains and how increasing parameters, as suggested by Musk, are inadvisable.",
+      "currencies": [
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 34,
+        "negative": 7
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @gregoryklumov: If you don’t buy the top digital assets these days - then what the hell are you doing on the #crypto market at all? http…",
+      "link": "https://cryptopanic.com/news/11996786/RT-gregoryklumov-If-you-dont-buy-the-top-digital-assets-these-days-then-what-the-hell-are-you-doing-on-the-crypto-market-at-all-http",
+      "pubDate": "2021-05-24T09:19:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "As the current CoinMarketCap does not reflect the exact circulating supply update of BORA, we hereby notify you the…",
+      "link": "https://cryptopanic.com/news/11993699/As-the-current-CoinMarketCap-does-not-reflect-the-exact-circulating-supply-update-of-BORA-we-hereby-notify-you-the",
+      "pubDate": "2021-05-24T08:32:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BORA"
+      ]
+    },
+    {
+      "title": "Glitzkoin continues to move ahead and build usage cases for the GTN token. This while crypto markets, are still rec…",
+      "link": "https://cryptopanic.com/news/11995033/Glitzkoin-continues-to-move-ahead-and-build-usage-cases-for-the-GTN-token-This-while-crypto-markets-are-still-rec",
+      "pubDate": "2021-05-24T08:27:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Crypto Markets Rebound $300 Billion: Bitcoin Above $36K Again (Market Watch)",
+      "link": "https://cryptopanic.com/news/near/11992069/Crypto-Markets-Rebound-300-Billion-Bitcoin-Above-36K-Again-Market-Watch",
+      "pubDate": "2021-05-24T08:20:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "After reaching a near 3-month low of $1.230 trillion, the crypto market cap has recovered $300 billion as bitcoin stands above $36,000.",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 64,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Is Ripple Behind Most of the Bitcoin Energy Usage FUD? CoinShares’ Meltem Demirors Thinks So",
+      "link": "https://cryptopanic.com/news/ripple/11992076/Is-Ripple-Behind-Most-of-the-Bitcoin-Energy-Usage-FUD-CoinShares-Meltem-Demirors-Thinks-So",
+      "pubDate": "2021-05-24T08:17:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The Bitcoin market hasn’t been a pretty sight of late. The top cryptocurrency seems to be struggling to beat back the bears as price take a hit after another. Notably, this crisis started when Tesla’s Elon Musk launched a scathing attack on BTC on account of the network’s massive power consumption. Elon’s company went on […]",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "US Rapper Meek Mill Attracted by Shiba-Inu Coins after Grabbing DOGE and Bitcoin",
+      "link": "https://cryptopanic.com/news/dogecoin/11992023/US-Rapper-Meek-Mill-Attracted-by-Shiba-Inu-Coins-after-Grabbing-DOGE-and-Bitcoin",
+      "pubDate": "2021-05-24T07:47:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Popular US rapper Meek Mill seems to be into Shiba-Inu coins as he continues his foray into cryptocurrencies, DOGE and Bitcoin already on his balance",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 6
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Anyone got a time machine? Asking for a friend",
+      "link": "https://cryptopanic.com/news/11991749/Anyone-got-a-time-machine-Asking-for-a-friend",
+      "pubDate": "2021-05-24T06:55:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "TA: Ethereum Faces Hurdles, Here’s What Could Trigger Strong Recovery",
+      "link": "https://cryptopanic.com/news/near/11989388/TA-Ethereum-Faces-Hurdles-Heres-What-Could-Trigger-Strong-Recovery",
+      "pubDate": "2021-05-24T05:08:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum extended its decline and traded close to the $1,700 zone against the US Dollar. ETH price is recovering, but it is facing a strong resistance near $2,200. Ethereum extended its decline below the $2,000 and $1,800 support levels. The price is well below the $2,500 level and the 100 hourly simple moving average. There […]",
+      "currencies": [
+        "ETH",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 21,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "\"6-8 weeks ago there were 10-15 signups a day. There are 15,000-20,000 signups a day. So they are playing baseball.…",
+      "link": "https://cryptopanic.com/news/11989692/6-8-weeks-ago-there-were-10-15-signups-a-day-There-are-15000-20000-signups-a-day-So-they-are-playing-baseball",
+      "pubDate": "2021-05-24T05:03:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Very pleased to announce that we are finally opening the ‘SSX Staking Service’ through Delio’s crypto finance platf…",
+      "link": "https://cryptopanic.com/news/11991351/Very-pleased-to-announce-that-we-are-finally-opening-the-SSX-Staking-Service-through-Delios-crypto-finance-platf",
+      "pubDate": "2021-05-24T05:01:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SSX"
+      ]
+    },
+    {
+      "title": "Bitcoin price plunges and altcoins sell-off as crypto market decline intensifies",
+      "link": "https://cryptopanic.com/news/ethereum/11989364/Bitcoin-price-plunges-and-altcoins-sell-off-as-crypto-market-decline-intensifies",
+      "pubDate": "2021-05-24T04:08:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin price and altcoins take a series of heavy hits as the weekend sell-off deepens. Reports of major Asian exchanges putting restrictions on Chinese customers, a blatant DeFi exit scam, and increasing regulator scrutiny in Hong Kong are destabilizing the crypto markets.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

@@ -1,0 +1,823 @@
+{
+  "date": "2022-10-26",
+  "fetchedAt": "2026-02-05T07:27:07.374Z",
+  "articleCount": 57,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Wishing major luck to @shingolavine and @adamlavine! They're taking part in the 400k min @stormxio invitational on…",
+      "link": "https://cryptopanic.com/news/16714068/Wishing-major-luck-to-shingolavine-and-adamlavine-Theyre-taking-part-in-the-400k-min-stormxio-invitational-on",
+      "pubDate": "2022-10-26T23:16:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "VGX"
+      ]
+    },
+    {
+      "title": "Here's finally our freshly pressed Monthly Update summarizing all important happenings in the $BAN $Banano ecosyste…",
+      "link": "https://cryptopanic.com/news/16715476/Heres-finally-our-freshly-pressed-Monthly-Update-summarizing-all-important-happenings-in-the-BAN-Banano-ecosyste?mtm_campaign=API-OFA",
+      "pubDate": "2022-10-26T22:14:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BAN"
+      ]
+    },
+    {
+      "title": "Head to TG to hear our latest AMA on Challenge Coin!",
+      "link": "https://cryptopanic.com/news/16715987/Head-to-TG-to-hear-our-latest-AMA-on-Challenge-Coin",
+      "pubDate": "2022-10-26T22:11:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HERO"
+      ]
+    },
+    {
+      "title": "Polkadot On A Bullish Run, Is This Price Level The New Target?",
+      "link": "https://cryptopanic.com/news/16713906/Polkadot-On-A-Bullish-Run-Is-This-Price-Level-The-New-Target",
+      "pubDate": "2022-10-26T22:00:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Polkadot price has registered a bullish revival on their 24-hour chart. Over the past day, DOT logged double-digit gains. In the past week, the altcoin has lost close to 3% of its market value. The major market movers have turned optimistic today, and most altcoins have followed suit. The technical indicator of Polkadot has registered bullish signals on the one-day chart. The demand for the...",
+      "currencies": [
+        "ADA",
+        "BUSD",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Elon Musk Visits Twitter HQ, Dogecoin Pumps",
+      "link": "https://cryptopanic.com/news/16713861/Elon-Musk-Visits-Twitter-HQ-Dogecoin-Pumps",
+      "pubDate": "2022-10-26T21:47:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Elon Musk visited Twitter on Wednesday as his planned acquisition of the social media company nears completion. Elon Musk is visiting Twitter headquarters.Musk entered the headquarters carrying a sink fixture, later tweeting \"Entering Twitter HQlet that sink in.\" He also changed his Twitter bio to read \"Chief Twit.\"Leslie Berland, Twitter's Chief Marketing Officer and Head of People,...",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Got plans for #Halloween yet? If not, join us at the $Banano discord server for the community-organized Haunted Man…",
+      "link": "https://cryptopanic.com/news/16715477/Got-plans-for-Halloween-yet-If-not-join-us-at-the-Banano-discord-server-for-the-community-organized-Haunted-Man?mtm_campaign=API-OFA",
+      "pubDate": "2022-10-26T21:43:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BAN"
+      ]
+    },
+    {
+      "title": "63% of Ethereum transaction blocks are now OFAC-compliant",
+      "link": "https://cryptopanic.com/news/16713793/63-of-Ethereum-transaction-blocks-are-now-OFAC-compliant",
+      "pubDate": "2022-10-26T21:03:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "At 63%, the number of blocks in compliance with U.S. sanctions on Ethereum continues to grow, adding to concerns over censorship.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 31
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Crypto Exchange Binance To Launch New Oracle Service on BNB Chain, Citing Huge Opportunity",
+      "link": "https://cryptopanic.com/news/16713794/Crypto-Exchange-Binance-To-Launch-New-Oracle-Service-on-BNB-Chain-Citing-Huge-Opportunity",
+      "pubDate": "2022-10-26T21:00:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Binance, the world’s largest crypto exchange platform by volume, is launching a new oracle service on its BNB blockchain. In a new company blog post, Binance says that it will be launching oracle services in a push to boost the BNB Chain ecosystem and the broader digital asset space. Oracles provide smart contracts with a […]",
+      "currencies": [
+        "BNB",
+        "XCN"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Changpeng Zhao Says Binance Zeroing In on Identity of Hacker Behind $570,000,000 Exploit",
+      "link": "https://cryptopanic.com/news/16713603/Changpeng-Zhao-Says-Binance-Zeroing-In-on-Identity-of-Hacker-Behind-570000000-Exploit",
+      "pubDate": "2022-10-26T20:00:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Binance CEO Changpeng Zhao says that the crypto exchange is making progress on identifying those responsible for the theft of Binance Coin (BNB) worth approximately $570 million in a cross-bridge exploit. Responding to a question on what can be done to reduce crypto hacking incidents, Zhao says in a new CNBC interview that the exchange […]",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "RT @CoinDesk: LIVE: $BTC rallies above $20,000, a new poll reveals a majority of U.S. voters want more crypto regulation and more. Former…",
+      "link": "https://cryptopanic.com/news/pax-gold/16715565/RT-CoinDesk-LIVE-BTC-rallies-above-20000-a-new-poll-reveals-a-majority-of-US-voters-want-more-crypto-regulation-and-more-Former",
+      "pubDate": "2022-10-26T19:43:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BUSD",
+        "PAXG",
+        "BKRW"
+      ]
+    },
+    {
+      "title": "RT @thegristleking: How do you get a #HeliumInTheWild shirt? Like many things in life, ya gotta show up. See ya in #Lisbon #London #Paris…",
+      "link": "https://cryptopanic.com/news/helium/16717841/RT-thegristleking-How-do-you-get-a-HeliumInTheWild-shirt-Like-many-things-in-life-ya-gotta-show-up-See-ya-in-Lisbon-London-Paris",
+      "pubDate": "2022-10-26T19:17:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ]
+    },
+    {
+      "title": "our man cryptovet spreading the good word!",
+      "link": "https://cryptopanic.com/news/16716480/our-man-cryptovet-spreading-the-good-word?mtm_campaign=API-OFA",
+      "pubDate": "2022-10-26T18:47:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DLC"
+      ]
+    },
+    {
+      "title": "A practical demonstration of the concept of decentralization, which also demonstrates why it's optimal or preferabl…",
+      "link": "https://cryptopanic.com/news/16721836/A-practical-demonstration-of-the-concept-of-decentralization-which-also-demonstrates-why-its-optimal-or-preferabl",
+      "pubDate": "2022-10-26T18:32:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XYO"
+      ]
+    },
+    {
+      "title": "Trader Who Accurately Predicted 2022 Crypto Crash Updates Outlook on Bitcoin and Ethereum As Volatility Spikes",
+      "link": "https://cryptopanic.com/news/16713232/Trader-Who-Accurately-Predicted-2022-Crypto-Crash-Updates-Outlook-on-Bitcoin-and-Ethereum-As-Volatility-Spikes",
+      "pubDate": "2022-10-26T18:05:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A widely followed trader known for calling this year’s crypto crash is warning that the current market bounce will ultimately turn into a deadly fakeout. The pseudonymous trader known as Capo tells his 563,000 Twitter followers that the big wave of short liquidations this week will mark the beginning of a correction to a new […]",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 18
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Zililqa (ZIL) Price Prediction: Why Collapse Below $0.028 Seems Imminent",
+      "link": "https://cryptopanic.com/news/16713126/Zililqa-ZIL-Price-Prediction-Why-Collapse-Below-0028-Seems-Imminent",
+      "pubDate": "2022-10-26T17:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The Zilliqa (ZIL) price has been consolidating above a descending support line over the past month and could soon initiate a short-term upward movement.",
+      "currencies": [
+        "ZIL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Dogecoin Sprints North As Musk Pledges To Close Twitter Acquisition Deal By Friday — $1 DOGE Coming?",
+      "link": "https://cryptopanic.com/news/16713108/Dogecoin-Sprints-North-As-Musk-Pledges-To-Close-Twitter-Acquisition-Deal-By-Friday-1-DOGE-Coming",
+      "pubDate": "2022-10-26T17:25:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin has been the only major cryptocurrency at the centre of the Twitter acquisition deal by Musk. Upon declaring his interest in acquiring the social network in April, the Tesla CEO shared his intention to “decentralize” it.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogecoin Skyrockets by Over 10% As Twitter Deal Likely to Close on Friday",
+      "link": "https://cryptopanic.com/news/16713034/Dogecoin-Skyrockets-by-Over-10-As-Twitter-Deal-Likely-to-Close-on-Friday",
+      "pubDate": "2022-10-26T17:06:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin (DOGE) skyrocketed by over 10% on Wednesday as the Twitter deal is likely to close on Friday. The whole crypto market is now following the current negotiations […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Is Ethereum A Security? Cardano’s Charles Hoskinson Sheds Some Light",
+      "link": "https://cryptopanic.com/news/16713027/Is-Ethereum-A-Security-Cardanos-Charles-Hoskinson-Sheds-Some-Light",
+      "pubDate": "2022-10-26T17:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Since Ethereum moved from a proof of work (PoW) to a proof of stake (PoW) mechanism, there has been an ongoing debate on whether the digital asset is now a security or a commodity. Notable figures have shared their insight on this and how the regulatory bodies are actually classifying cryptocurrencies. The latest is Cardano […]",
+      "currencies": [
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Assessing Lido’s [LDO] status post-Ethereum [ETH] merge",
+      "link": "https://cryptopanic.com/news/klay-token/16712900/Assessing-Lidos-LDO-status-post-Ethereum-ETH-merge",
+      "pubDate": "2022-10-26T16:30:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "HT",
+        "KLAY"
+      ]
+    },
+    {
+      "title": "Happy hour with @EthStorage @NKN_ORG @harmonyprotocol on \"Building Foundation for Future Web 3.0\". Friday Nov'4 6-9…",
+      "link": "https://cryptopanic.com/news/16719271/Happy-hour-with-EthStorage-NKN_ORG-harmonyprotocol-on-Building-Foundation-for-Future-Web-30-Friday-Nov4-6-9",
+      "pubDate": "2022-10-26T16:27:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "NKN"
+      ]
+    },
+    {
+      "title": "“Ethereum 2.0 upgrades are a huge gain for blockchain overall, but the continued use and development of layer 2 sol…",
+      "link": "https://cryptopanic.com/news/16721837/Ethereum-20-upgrades-are-a-huge-gain-for-blockchain-overall-but-the-continued-use-and-development-of-layer-2-sol",
+      "pubDate": "2022-10-26T16:19:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "XYO"
+      ]
+    },
+    {
+      "title": "Dogecoin Soars Past 12% As Elon Musk Twitter Saga Nears Completion",
+      "link": "https://cryptopanic.com/news/16712843/Dogecoin-Soars-Past-12-As-Elon-Musk-Twitter-Saga-Nears-Completion",
+      "pubDate": "2022-10-26T16:16:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin is up 12% as Musk’s Twitter acquisition inches closer to its end. The Musk-Twitter deal may soon be finalized by the end of this week. As per the data from Coinmarketcap, Dogecoin is currently up 12% in the last 24 hours and is trading at $0.06845. Per a recent Bloomberg report, Musk’s Twitter acquisition will reportedly end this Friday, which could play an elemental role in boosting Dogecoin’s popularity across the board. Why Is Dogecoin Up And Trending? Per […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Driving responsible innovation at scale. Expanding accessibility and utility of digital currencies. Harnessing…",
+      "link": "https://cryptopanic.com/news/pax-gold/16715566/Driving-responsible-innovation-at-scale-Expanding-accessibility-and-utility-of-digital-currencies-Harnessing",
+      "pubDate": "2022-10-26T16:14:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BUSD",
+        "PAXG",
+        "BKRW"
+      ]
+    },
+    {
+      "title": "Lock the doors, turn off the lights and get ready for the Dash Of the Dead Demo to drop on HELLOWEEN 🧟‍️ #crypto…",
+      "link": "https://cryptopanic.com/news/dash/16717770/Lock-the-doors-turn-off-the-lights-and-get-ready-for-the-Dash-Of-the-Dead-Demo-to-drop-on-HELLOWEEN-crypto",
+      "pubDate": "2022-10-26T16:03:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DASH",
+        "HELLO"
+      ]
+    },
+    {
+      "title": "Binance releases oracle service on BNB Chain, rivaling Chainlink",
+      "link": "https://cryptopanic.com/news/16712634/Binance-releases-oracle-service-on-BNB-Chain-rivaling-Chainlink",
+      "pubDate": "2022-10-26T15:24:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Crypto exchange Binance has released an oracle service called Binance Oracle, to link real-world data to blockchain applications.",
+      "currencies": [
+        "BNB",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 25,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "It’s TIME.. Come build and connect on this all-day TRAIN ride hackathon with a special line-up of #Helium spea…",
+      "link": "https://cryptopanic.com/news/helium/16717842/Its-TIME-Come-build-and-connect-on-this-all-day-TRAIN-ride-hackathon-with-a-special-line-up-of-Helium-spea",
+      "pubDate": "2022-10-26T14:28:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ]
+    },
+    {
+      "title": "Solana projects reopen after getting funds back from Mango Markets",
+      "link": "https://cryptopanic.com/news/16712380/Solana-projects-reopen-after-getting-funds-back-from-Mango-Markets",
+      "pubDate": "2022-10-26T14:24:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Two Solana-based protocols have taken initial steps to reopen their services after the Mango Markets exploit.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RSK peg-out service outage update: The improvement proposal for the RSK protocol has been published and is open fo…",
+      "link": "https://cryptopanic.com/news/16720604/RSK-peg-out-service-outage-update-The-improvement-proposal-for-the-RSK-protocol-has-been-published-and-is-open-fo",
+      "pubDate": "2022-10-26T14:08:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RBTC"
+      ]
+    },
+    {
+      "title": "Dogecoin Price Jumps 13% as Elon Musk Twitter Deal Nears Conclusion",
+      "link": "https://cryptopanic.com/news/16712036/Dogecoin-Price-Jumps-13-as-Elon-Musk-Twitter-Deal-Nears-Conclusion",
+      "pubDate": "2022-10-26T13:18:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Dogecoin is set to be in public eye if Twitter deal is successful",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Swapping your #ABBC coins to other networks such as Avalanche ABBC (AVABBC) using the ABBC Swap portal is just easy…",
+      "link": "https://cryptopanic.com/news/16714978/Swapping-your-ABBC-coins-to-other-networks-such-as-Avalanche-ABBC-AVABBC-using-the-ABBC-Swap-portal-is-just-easy",
+      "pubDate": "2022-10-26T13:17:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "ABBC"
+      ]
+    },
+    {
+      "title": "Did you know you receive a/b/g ‘fungible’ tokens when you deposit your money into Alpha, Beta, and Gamma? The a/b/…",
+      "link": "https://cryptopanic.com/news/16717367/Did-you-know-you-receive-abg-fungible-tokens-when-you-deposit-your-money-into-Alpha-Beta-and-Gamma-The-ab?mtm_campaign=API-OFA",
+      "pubDate": "2022-10-26T12:46:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FORM"
+      ]
+    },
+    {
+      "title": "Why These Major Crypto Wallets Acquired Over 100 Million XRP In Last 24 Hours",
+      "link": "https://cryptopanic.com/news/16711726/Why-These-Major-Crypto-Wallets-Acquired-Over-100-Million-XRP-In-Last-24-Hours",
+      "pubDate": "2022-10-26T12:00:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "XRP seems to have fallen short in capitalizing on the procedural wins that Ripple has gained from its ongoing legal battle against the SEC. Although the asset managed to increase by almost 2% over the last 24 hours, it is still down by 1.6% over past week. On a 14-day and 30-day period, the crypto is staring at losses of 5.3% and 7%, respectively. On a year-to-date basis, the 6th largest...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "TRX",
+        "MANA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "​​Crypto market aims to reclaim $1 trillion in capitalisation after 6 weeks in the shadows",
+      "link": "https://cryptopanic.com/news/16711675/Crypto-market-aims-to-reclaim-1-trillion-in-capitalisation-after-6-weeks-in-the-shadows",
+      "pubDate": "2022-10-26T11:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "There was a resurgence in the cryptocurrency market on October 26 as Bitcoin’s (BTC) price climbed above $20,000 for the first... Continue reading",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Aptos (APT) Price Prediction: Double Digits on Sight",
+      "link": "https://cryptopanic.com/news/16711668/Aptos-APT-Price-Prediction-Double-Digits-on-Sight",
+      "pubDate": "2022-10-26T11:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "APT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "ADSCARES",
+      "link": "https://cryptopanic.com/news/16711611/ADSCARES",
+      "pubDate": "2022-10-26T11:17:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ADS"
+      ]
+    },
+    {
+      "title": "Calling out to game developers on Astar Network!! Band VRF is now available on @AstarNetwork's Shibuya Testnet, m…",
+      "link": "https://cryptopanic.com/news/16715478/Calling-out-to-game-developers-on-Astar-Network-Band-VRF-is-now-available-on-AstarNetworks-Shibuya-Testnet-m",
+      "pubDate": "2022-10-26T11:12:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "Towards a better planet and a better #energy future, Efforce is launching its first office hour to discuss the upco…",
+      "link": "https://cryptopanic.com/news/16716857/Towards-a-better-planet-and-a-better-energy-future-Efforce-is-launching-its-first-office-hour-to-discuss-the-upco",
+      "pubDate": "2022-10-26T10:41:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "Join \"Evermoon at Binance LIVE: ABGA & KLAYTN Blockchain Gaming Hackathon Winners & Runner-ups demo 04\" ‼️…",
+      "link": "https://cryptopanic.com/news/klay-token/16717083/Join-Evermoon-at-Binance-LIVE-ABGA-amp-KLAYTN-Blockchain-Gaming-Hackathon-Winners-amp-Runner-ups-demo-04",
+      "pubDate": "2022-10-26T10:40:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "EVM"
+      ]
+    },
+    {
+      "title": "We are more than a community, We are a family  #PolyXfam",
+      "link": "https://cryptopanic.com/news/16719651/We-are-more-than-a-community-We-are-a-family-PolyXfam?mtm_campaign=API-OFA",
+      "pubDate": "2022-10-26T10:31:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PXT"
+      ]
+    },
+    {
+      "title": "Hi @CoinMarketCap, we’d like to update the circulating supply of $TITAN. Thank you.",
+      "link": "https://cryptopanic.com/news/16721210/Hi-CoinMarketCap-wed-like-to-update-the-circulating-supply-of-TITAN-Thank-you",
+      "pubDate": "2022-10-26T10:17:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TITAN"
+      ]
+    },
+    {
+      "title": "BLOCKCHAIN NEWS: The UK 🇬🇧 has voted in favor of recognizing #Bitcoin and other #Crypto assets as regulated financi…",
+      "link": "https://cryptopanic.com/news/16716286/BLOCKCHAIN-NEWS-The-UK-has-voted-in-favor-of-recognizing-Bitcoin-and-other-Crypto-assets-as-regulated-financi?mtm_campaign=API-OFA",
+      "pubDate": "2022-10-26T10:11:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "CBK"
+      ]
+    },
+    {
+      "title": "Got a great business idea but not into coding? Our new Blockchain Hustlers series introduce you to the Bitcoin SV-…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/16715620/Got-a-great-business-idea-but-not-into-coding-Our-new-Blockchain-Hustlers-series-introduce-you-to-the-Bitcoin-SV-",
+      "pubDate": "2022-10-26T10:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "Dash 2 Trade Signals Platform Raises $2.5 Million in Presale – How to Buy?",
+      "link": "https://cryptopanic.com/news/dash/16712114/Dash-2-Trade-Signals-Platform-Raises-25-Million-in-Presale-How-to-Buy",
+      "pubDate": "2022-10-26T10:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DASH"
+      ]
+    },
+    {
+      "title": "Dogecoin jumps above 10% in a day – is DOGE price pump on the horizon?",
+      "link": "https://cryptopanic.com/news/16711380/Dogecoin-jumps-above-10-in-a-day-is-DOGE-price-pump-on-the-horizon",
+      "pubDate": "2022-10-26T10:05:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "As the cryptocurrency market is finally waking up from the weeks-long dormancy, multiple assets are logging double-digit gains, including the... Continue reading",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @trondao: #TRONChad @justinsuntron appearing from coast to coast. From New York to California, #TRON is everywhere. #TronStrong #T…",
+      "link": "https://cryptopanic.com/news/usdd/16721330/RT-trondao-TRONChad-justinsuntron-appearing-from-coast-to-coast-From-New-York-to-California-TRON-is-everywhere-TronStrong-T",
+      "pubDate": "2022-10-26T09:50:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDD"
+      ]
+    },
+    {
+      "title": "Cardano Is a Rocket, European Parliament Member Says",
+      "link": "https://cryptopanic.com/news/16710917/Cardano-Is-a-Rocket-European-Parliament-Member-Says",
+      "pubDate": "2022-10-26T09:46:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano (ADA) was top gainer among top 10 cryptocurrencies, rising as much as 15%",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano Founder on Lack of Regulatory Clarity: Perhaps $ETH Is Now a Security",
+      "link": "https://cryptopanic.com/news/16711136/Cardano-Founder-on-Lack-of-Regulatory-Clarity-Perhaps-ETH-Is-Now-a-Security",
+      "pubDate": "2022-10-26T09:44:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Did you know, with @anytaskofficial you can keep 100% of your earnings?! The #freelance marketplace doesn't charge…",
+      "link": "https://cryptopanic.com/news/16709660/Did-you-know-with-anytaskofficial-you-can-keep-100-of-your-earnings-The-freelance-marketplace-doesnt-charge",
+      "pubDate": "2022-10-26T09:01:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "Splinterlands - SPS burning is a must for balancing the supply",
+      "link": "https://cryptopanic.com/news/16712775/Splinterlands-SPS-burning-is-a-must-for-balancing-the-supply",
+      "pubDate": "2022-10-26T08:49:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SPS"
+      ]
+    },
+    {
+      "title": "Join #IOSTStakingEvent for a chance to share a total prize pool of 100,000 $IOST. Only 50 slots available! End o…",
+      "link": "https://cryptopanic.com/news/16717951/Join-IOSTStakingEvent-for-a-chance-to-share-a-total-prize-pool-of-100000-IOST-Only-50-slots-available-End-o",
+      "pubDate": "2022-10-26T08:11:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "IOST"
+      ]
+    },
+    {
+      "title": "Attention all #USDD holders! We are adding 55,000 extra $USDD mining rewards to our USDD/3CRV Mining Pool on…",
+      "link": "https://cryptopanic.com/news/usdd/16710516/Attention-all-USDD-holders-We-are-adding-55000-extra-USDD-mining-rewards-to-our-USDD3CRV-Mining-Pool-on",
+      "pubDate": "2022-10-26T07:38:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "USDD"
+      ]
+    },
+    {
+      "title": "Axie Infinity investors, here’s where increased involvement has steered AXS",
+      "link": "https://cryptopanic.com/news/axie-infinity/16703933/Axie-Infinity-investors-heres-where-increased-involvement-has-steered-AXS",
+      "pubDate": "2022-10-26T02:30:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "#CEEK #Metaverse 🥇$CEEK",
+      "link": "https://cryptopanic.com/news/16705272/CEEK-Metaverse-CEEK",
+      "pubDate": "2022-10-26T02:15:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CEEK"
+      ]
+    },
+    {
+      "title": "Upcoming #AMA Topic: The Current State of the Klaytn Ecosystem Sam Seo, Chief Klaytn Officer Via Twitter Spa…",
+      "link": "https://cryptopanic.com/news/klay-token/16707647/Upcoming-AMA-Topic-The-Current-State-of-the-Klaytn-Ecosystem-Sam-Seo-Chief-Klaytn-Officer-Via-Twitter-Spa",
+      "pubDate": "2022-10-26T01:28:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "Dormant Whale Wallet Sends ETH Up by 8% After Making This Move",
+      "link": "https://cryptopanic.com/news/16703790/Dormant-Whale-Wallet-Sends-ETH-Up-by-8-After-Making-This-Move",
+      "pubDate": "2022-10-26T01:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "ETH whale wallet which has been dormant since 2016 come active amid a surge in the price of the token",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Unknown Miner Captured 64% of the #BitcoinSV Chain During the Past 7 Days, Empty BSV Blocks Renders Chain Useless a…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/16704325/Unknown-Miner-Captured-64-of-the-BitcoinSV-Chain-During-the-Past-7-Days-Empty-BSV-Blocks-Renders-Chain-Useless-a",
+      "pubDate": "2022-10-26T00:00:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV",
+        "XCN",
+        "AXN"
+      ]
+    },
+    {
+      "title": "Connect everything - Flare enables decentralized interoperability",
+      "link": "https://cryptopanic.com/news/16703711/Connect-everything-Flare-enables-decentralized-interoperability",
+      "pubDate": "2022-10-26T00:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Hugo Philion is the co-founder and CEO of Flare Networks. Flare enables secure interoperability between chains, scaling the use of blockchain by enabling all digital assets and on-chain data to flow freely.",
+      "currencies": [
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "date": "2018-11-20",
+  "fetchedAt": "2026-02-05T07:27:07.856Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Gold [BTG] Reverses Strong Performance with Sharp Declines",
+      "link": "https://cryptopanic.com/news/3744570/Bitcoin-Gold-BTG-Reverses-Strong-Performance-with-Sharp-Declines",
+      "pubDate": "2018-11-20T15:59:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTG"
+      ]
+    },
+    {
+      "title": "TRON [TRX] Now Available on the Huobi Wallet",
+      "link": "https://cryptopanic.com/news/3742217/TRON-TRX-Now-Available-on-the-Huobi-Wallet",
+      "pubDate": "2018-11-20T12:29:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Market Cap Will Grow, Market Manipulation Claims And Stellar Rises In Rank",
+      "link": "https://cryptopanic.com/news/stellar/3742330/Crypto-Market-Cap-Will-Grow-Market-Manipulation-Claims-And-Stellar-Rises-In-Rank",
+      "pubDate": "2018-11-20T12:15:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

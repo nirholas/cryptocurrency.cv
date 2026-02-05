@@ -1,0 +1,646 @@
+{
+  "date": "2021-08-11",
+  "fetchedAt": "2026-02-05T07:27:06.769Z",
+  "articleCount": 43,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "What are ‘Ethereum killers’ and what are their prospects with Eth2 under way?",
+      "link": "https://cryptopanic.com/news/12516929/What-are-Ethereum-killers-and-what-are-their-prospects-with-Eth2-under-way",
+      "pubDate": "2021-08-11T23:04:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "With Ethereum 2.0 still in development, rival blockchains like Cardano, Binance Smart Chain, Solana and Polkadot are hot on Eth's tail. Who might prevail, and why?",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "SOL",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Traders hope for a new altcoin season now that Bitcoin turned $45K to support",
+      "link": "https://cryptopanic.com/news/12516815/Traders-hope-for-a-new-altcoin-season-now-that-Bitcoin-turned-45K-to-support",
+      "pubDate": "2021-08-11T22:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin’s consecutive daily closes above $45,000 were followed by a 40% rally from ICP, RVN, VGX and EGLD, leading traders to believe that a new altcoin season is starting.",
+      "currencies": [
+        "BTC",
+        "THETA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @zbruceli: Ouch, AWS charges 80X (80000%) mark-up on data transmission cost in US/Canada. We all need a new kind of network @NKN_ORG if…",
+      "link": "https://cryptopanic.com/news/12520742/RT-zbruceli-Ouch-AWS-charges-80X-80000-mark-up-on-data-transmission-cost-in-USCanada-We-all-need-a-new-kind-of-network-NKN_ORG-if",
+      "pubDate": "2021-08-11T21:22:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "NKN"
+      ]
+    },
+    {
+      "title": "As we work to optimize the #Telcoin suite of user-owned exchange products, we are pleased to announce seven new inc…",
+      "link": "https://cryptopanic.com/news/12521965/As-we-work-to-optimize-the-Telcoin-suite-of-user-owned-exchange-products-we-are-pleased-to-announce-seven-new-inc",
+      "pubDate": "2021-08-11T21:21:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "SushiSwap Says Optimism Showed Favoritism to Uniswap During Layer 2 Launch",
+      "link": "https://cryptopanic.com/news/uniswap/12516650/SushiSwap-Says-Optimism-Showed-Favoritism-to-Uniswap-During-Layer-2-Launch",
+      "pubDate": "2021-08-11T21:16:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "SushiSwap has accused Optimism of showing favoritism towards Uniswap during the launch of its Layer 2 network. The criticism highlights concerns about the fairness and accessibility of the platform, suggesting that Uniswap received preferential treatment that could impact the competition within the decentralized finance (DeFi) space.",
+      "currencies": [
+        "UNI",
+        "SUSHI"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @gregoryklumov: tangibility demand is an excuse to climb the learning curve into something totally new",
+      "link": "https://cryptopanic.com/news/12521527/RT-gregoryklumov-tangibility-demand-is-an-excuse-to-climb-the-learning-curve-into-something-totally-new",
+      "pubDate": "2021-08-11T21:13:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "RT @MaDz_Crypto: #Safecoin is a Proof-of-Stake or #PoS network and has some nice advantages over a #PoW or Proof-of- work networks like #Bi…",
+      "link": "https://cryptopanic.com/news/12521549/RT-MaDz_Crypto-Safecoin-is-a-Proof-of-Stake-or-PoS-network-and-has-some-nice-advantages-over-a-PoW-or-Proof-of-work-networks-like-Bi",
+      "pubDate": "2021-08-11T20:58:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SAFE"
+      ]
+    },
+    {
+      "title": "RT @ItsFrankenSense: Interested on watching the price of @SafeCoins @coinbase has SafeCoin as a watchable asset. You'll see the SafeCoin na…",
+      "link": "https://cryptopanic.com/news/12521551/RT-ItsFrankenSense-Interested-on-watching-the-price-of-SafeCoins-coinbase-has-SafeCoin-as-a-watchable-asset-Youll-see-the-SafeCoin-na",
+      "pubDate": "2021-08-11T20:57:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SAFE"
+      ]
+    },
+    {
+      "title": "Price analysis 8/11: BTC, ETH, BNB, ADA, XRP, DOGE, DOT, UNI, LINK, SOL",
+      "link": "https://cryptopanic.com/news/dogecoin/12516589/Price-analysis-811-BTC-ETH-BNB-ADA-XRP-DOGE-DOT-UNI-LINK-SOL",
+      "pubDate": "2021-08-11T20:52:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin and most major altcoins remain above their respective 200-day moving average but the market's momentum will depend on whether BTC can pierce the $48,000 level.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin and Ether Maintain Upward Trend: Markets Wrap",
+      "link": "https://cryptopanic.com/news/ripple/12516588/Bitcoin-and-Ether-Maintain-Upward-Trend-Markets-Wrap",
+      "pubDate": "2021-08-11T20:51:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Altcoins like Cardano and XRP made significant gains on Wednesday, hiking 16.71% and 18.85% as of 4:00 pm ET.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Stellar-powered remittance corridor between 27 EU countries and Thailand goes live",
+      "link": "https://cryptopanic.com/news/12516443/Stellar-powered-remittance-corridor-between-27-EU-countries-and-Thailand-goes-live",
+      "pubDate": "2021-08-11T19:50:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "To accelerate cross-border payments through the blockchain, a global settlement network platform, Velo Labs has partnered with two other fintech... Continue reading",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 26,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "HODLing Ethereum? Is it still worth it",
+      "link": "https://cryptopanic.com/news/12516344/HODLing-Ethereum-Is-it-still-worth-it",
+      "pubDate": "2021-08-11T19:02:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "BNB",
+        "ADA",
+        "SOL"
+      ]
+    },
+    {
+      "title": "RT @P4Cap: @QuickswapDEX @CoinbasePro @0xPolygon Head to to begin earning $TEL, $QUICK, and fees on your #crypto! P…",
+      "link": "https://cryptopanic.com/news/12521966/RT-P4Cap-QuickswapDEX-CoinbasePro-0xPolygon-Head-to-to-begin-earning-TEL-QUICK-and-fees-on-your-crypto-P",
+      "pubDate": "2021-08-11T18:42:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "RT @P4Cap: Head to to begin earning $TEL, $QUICK, and fees on your #crypto! Power a global marketplace of user-owne…",
+      "link": "https://cryptopanic.com/news/12521967/RT-P4Cap-Head-to-to-begin-earning-TEL-QUICK-and-fees-on-your-crypto-Power-a-global-marketplace-of-user-owne",
+      "pubDate": "2021-08-11T18:41:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "How our holders sleep knowing they've been stackin' $SATS during the BTC pullback",
+      "link": "https://cryptopanic.com/news/12518215/How-our-holders-sleep-knowing-theyve-been-stackin-SATS-during-the-BTC-pullback?mtm_campaign=API-OFA",
+      "pubDate": "2021-08-11T18:21:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "SATS"
+      ]
+    },
+    {
+      "title": "With our new marketing plan, we're ready for blastoff",
+      "link": "https://cryptopanic.com/news/12518216/With-our-new-marketing-plan-were-ready-for-blastoff?mtm_campaign=API-OFA",
+      "pubDate": "2021-08-11T18:14:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SATS"
+      ]
+    },
+    {
+      "title": "Dogecoin Rising Faster Than the Market, Price Up 41% in a Week",
+      "link": "https://cryptopanic.com/news/dogecoin/12516205/Dogecoin-Rising-Faster-Than-the-Market-Price-Up-41-in-a-Week",
+      "pubDate": "2021-08-11T18:13:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The meme dream is alive and well for DOGE investors this week, including a 12% pop in the coin's price today alone.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 45
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ripple Continues Its Asia-Pacific Expansion Via New Partnership With One Of South Korea’s Largest Remittance Firms",
+      "link": "https://cryptopanic.com/news/ripple/12516096/Ripple-Continues-Its-Asia-Pacific-Expansion-Via-New-Partnership-With-One-Of-South-Koreas-Largest-Remittance-Firms",
+      "pubDate": "2021-08-11T17:45:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Blockchain payments firm Ripple will further expand its operations in the Asia-Pacific region after entering into a strategic partnership with Global Money Express Co. Ltd (GME Remittance), one of South Korea’s leading money transfer giants. GME Remittance Joins RippleNet According to a blog post on August 10, GME Remittance is now a RippleNet customer, joining […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Old Majors Bounce and Break Resistance Levels – ADA, LTC and BCH Analysis",
+      "link": "https://cryptopanic.com/news/litecoin/12516113/Old-Majors-Bounce-and-Break-Resistance-Levels-ADA-LTC-and-BCH-Analysis",
+      "pubDate": "2021-08-11T17:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano (ADA) has broken out from a descending resistance line and is trying to move above the $1.75-$1.83 resistance area.",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Poly Network Hacker Returns Stolen Funds After Requesting A Multisig Wallet",
+      "link": "https://cryptopanic.com/news/ethereum/12516041/Poly-Network-Hacker-Returns-Stolen-Funds-After-Requesting-A-Multisig-Wallet",
+      "pubDate": "2021-08-11T17:21:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The Poly Network hacker pledges a payback after the huge fraudulent withdrawal of $600 million of a cross-chain project. Update: PolyNetwork hackers have returned $253 million on the BSC chain. pic.twitter.com/jO0SiWDtyP — Wu Blockchain (@WuBlockchain) August 11, 2021 The hacking of crypto funds occurred across three chains of the Ploy Network. Notably, this series of […]",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Polygon Rallies as Whales Go Into Buying Spree",
+      "link": "https://cryptopanic.com/news/matic-network/12515878/Polygon-Rallies-as-Whales-Go-Into-Buying-Spree",
+      "pubDate": "2021-08-11T16:25:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "-",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "1/ Reef Finance  is announcing today that @ForwardProtocol is bringing its learning solution to Reef Chain, introd…",
+      "link": "https://cryptopanic.com/news/12521428/1-Reef-Finance-is-announcing-today-that-ForwardProtocol-is-bringing-its-learning-solution-to-Reef-Chain-introd",
+      "pubDate": "2021-08-11T16:16:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ]
+    },
+    {
+      "title": "Poly Network hacker returns less than 1% of the $600M theft",
+      "link": "https://cryptopanic.com/news/12515818/Poly-Network-hacker-returns-less-than-1-of-the-600M-theft",
+      "pubDate": "2021-08-11T16:07:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Like this tweet if you love big green candles.",
+      "link": "https://cryptopanic.com/news/12522126/Like-this-tweet-if-you-love-big-green-candles",
+      "pubDate": "2021-08-11T15:49:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "XRP price chart 'double bottom' puts next bullish target at $1",
+      "link": "https://cryptopanic.com/news/ripple/12515590/XRP-price-chart-double-bottom-puts-next-bullish-target-at-1",
+      "pubDate": "2021-08-11T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The classic \"double bottom\" pattern's success rate of hitting its profit target lies around 78.55%.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "July's Decred Journal is out! Check out the detailed report on development, network stats, ecosystem updates and ne…",
+      "link": "https://cryptopanic.com/news/12515464/Julys-Decred-Journal-is-out-Check-out-the-detailed-report-on-development-network-stats-ecosystem-updates-and-ne",
+      "pubDate": "2021-08-11T14:15:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DCR"
+      ]
+    },
+    {
+      "title": "Hop Protocol Cuts Polygon Withdrawal Times to Minutes",
+      "link": "https://cryptopanic.com/news/matic-network/12515231/Hop-Protocol-Cuts-Polygon-Withdrawal-Times-to-Minutes",
+      "pubDate": "2021-08-11T13:06:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "-",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Thanks for all your Crypto related puns, I had way too much fun reading them all - there were a lot of good ones as…",
+      "link": "https://cryptopanic.com/news/12522128/Thanks-for-all-your-Crypto-related-puns-I-had-way-too-much-fun-reading-them-all-there-were-a-lot-of-good-ones-as",
+      "pubDate": "2021-08-11T12:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "Stellar blockchain remittance corridor to power Thailand–Europe payments",
+      "link": "https://cryptopanic.com/news/12515006/Stellar-blockchain-remittance-corridor-to-power-ThailandEurope-payments",
+      "pubDate": "2021-08-11T11:51:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The new cross-border remittance corridor will be hosted on the Stellar blockchain and serve around 600 million customers.",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Likely to Dump When the Following Happens, CryptoQuant Chief Warns",
+      "link": "https://cryptopanic.com/news/ethereum/12514989/Ethereum-Likely-to-Dump-When-the-Following-Happens-CryptoQuant-Chief-Warns",
+      "pubDate": "2021-08-11T11:45:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "CEO of CryptoQuant believes that Ethereum is likely to go down significantly as more and more investors are entering the market",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "eCash lead dev Amaury Séchet on digital cash in 2017: \"This is a civilization-altering discovery in my opinion. T…",
+      "link": "https://cryptopanic.com/news/ecash/12522591/eCash-lead-dev-Amaury-Sechet-on-digital-cash-in-2017-This-is-a-civilization-altering-discovery-in-my-opinion-T",
+      "pubDate": "2021-08-11T11:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Why honest centralization is superior to chaotic decentralization",
+      "link": "https://cryptopanic.com/news/12514896/Why-honest-centralization-is-superior-to-chaotic-decentralization",
+      "pubDate": "2021-08-11T11:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Are DAOs and decentralization always beneficial for the group or the user? Antoni Trenchev of Nexo urges you to think again.",
+      "currencies": [
+        "NEXO"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Poly Network Hacker Starts Returning $600M Loot",
+      "link": "https://cryptopanic.com/news/matic-network/12514816/Poly-Network-Hacker-Starts-Returning-600M-Loot",
+      "pubDate": "2021-08-11T10:36:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Jed McCaleb Sells 80 Million XRP in Past Two Weeks, 647 Million Remains on His Balance",
+      "link": "https://cryptopanic.com/news/ripple/12514780/Jed-McCaleb-Sells-80-Million-XRP-in-Past-Two-Weeks-647-Million-Remains-on-His-Balance",
+      "pubDate": "2021-08-11T10:09:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "In the past 14 days, former CTO of Ripple has sold approximately 80 million XRP from his shrinking holdings",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 11
+      }
+    },
+    {
+      "title": "Now or never !!",
+      "link": "https://cryptopanic.com/news/ecash/12516747/Now-or-never",
+      "pubDate": "2021-08-11T09:17:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "XRP market cap surpasses $40 billion following GME’s RippleNet announcement",
+      "link": "https://cryptopanic.com/news/ripple/12514633/XRP-market-cap-surpasses-40-billion-following-GMEs-RippleNet-announcement",
+      "pubDate": "2021-08-11T08:59:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The San Francisco blockchain company XRP surpassed the $40 billion market cap on August 11 when its price reached a... Continue reading",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 21,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "POW#51: 100 million XEC in 100 days",
+      "link": "https://cryptopanic.com/news/ecash/12516467/POW51-100-million-XEC-in-100-days",
+      "pubDate": "2021-08-11T08:53:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "eCash",
+      "link": "https://cryptopanic.com/news/ecash/12516466/eCash",
+      "pubDate": "2021-08-11T07:20:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Cain on Twitter",
+      "link": "https://cryptopanic.com/news/ecash/12590470/Cain-on-Twitter",
+      "pubDate": "2021-08-11T06:49:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Why Ethereum (ETH) Could Accelerate Above $3,200, Dips Remain Attractive",
+      "link": "https://cryptopanic.com/news/near/12510090/Why-Ethereum-ETH-Could-Accelerate-Above-3200-Dips-Remain-Attractive",
+      "pubDate": "2021-08-11T05:38:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum is holding gains above the $3,000 pivot zone against the US Dollar. ETH price is likely to accelerate higher if there is a clear break above the $3,200 resistance zone. Ethereum is trading nicely above the $3,000 and $3,050 support levels. The price is now trading above $3,100 and the 100 hourly simple moving average. There is a major bullish trend line forming with support near...",
+      "currencies": [
+        "ETH",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "\"Privacy alone may no longer be sufficient in this ever-changing financial paradigm. Building sound money first is…",
+      "link": "https://cryptopanic.com/news/ecash/12514487/Privacy-alone-may-no-longer-be-sufficient-in-this-ever-changing-financial-paradigm-Building-sound-money-first-is",
+      "pubDate": "2021-08-11T04:08:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "What an amazing community we’re apart of! @LGCY_LEGION $LGCY",
+      "link": "https://cryptopanic.com/news/12512132/What-an-amazing-community-were-apart-of-LGCY_LEGION-LGCY?mtm_campaign=API-OFA",
+      "pubDate": "2021-08-11T04:00:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDL",
+        "LGCY"
+      ]
+    },
+    {
+      "title": "Decred Journal — July 2021",
+      "link": "https://cryptopanic.com/news/12509377/Decred-Journal-July-2021",
+      "pubDate": "2021-08-11T00:51:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "RUNE",
+        "DCR"
+      ]
+    }
+  ]
+}

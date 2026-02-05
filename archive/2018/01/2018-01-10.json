@@ -1,0 +1,43 @@
+{
+  "date": "2018-01-10",
+  "fetchedAt": "2026-02-05T07:27:06.813Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ethereum’s High Fees have Become an Issue for Applications and Exchanges",
+      "link": "https://cryptopanic.com/news/ethereum/768553/Ethereums-High-Fees-have-Become-an-Issue-for-Applications-and-Exchanges",
+      "pubDate": "2018-01-10T13:35:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Reddit Email Vulnerability results in Bitcoin Cash Embezzlement",
+      "link": "https://cryptopanic.com/news/763094/Reddit-Email-Vulnerability-results-in-Bitcoin-Cash-Embezzlement",
+      "pubDate": "2018-01-10T00:00:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

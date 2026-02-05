@@ -1,0 +1,605 @@
+{
+  "date": "2022-08-09",
+  "fetchedAt": "2026-02-05T07:27:07.622Z",
+  "articleCount": 39,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Billionaire Mike Novogratz Says Bitcoin At $30,000 Is Unlikely",
+      "link": "https://cryptopanic.com/news/16005210/Billionaire-Mike-Novogratz-Says-Bitcoin-At-30000-Is-Unlikely",
+      "pubDate": "2022-08-09T23:00:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin price has been a topic of debate since the digital asset first made its entry into the mainstream over a decade ago. With its continued growth, a lot of people have come forward to proffer their predictions for the price of the cryptocurrency both in the long and the short term. One of those is billionaire Mike Novogratz. However, despite being usually bullish on the price of bitcoin,...",
+      "currencies": [
+        "BTC",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "RT @arietrouw: Really like the care with which the ETH 2.0 developers are going about the fork. Definitely a measure twice (or 10 times) a…",
+      "link": "https://cryptopanic.com/news/16012475/RT-arietrouw-Really-like-the-care-with-which-the-ETH-20-developers-are-going-about-the-fork-Definitely-a-measure-twice-or-10-times-a",
+      "pubDate": "2022-08-09T21:50:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "XYO"
+      ]
+    },
+    {
+      "title": "Badger Support just got an upgrade. Users experiencing issues are now encouraged to log a ticket through the Suppor…",
+      "link": "https://cryptopanic.com/news/16006545/Badger-Support-just-got-an-upgrade-Users-experiencing-issues-are-now-encouraged-to-log-a-ticket-through-the-Suppor",
+      "pubDate": "2022-08-09T20:20:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BADGER"
+      ]
+    },
+    {
+      "title": "8/9 Patch Notes - Merit Rewards Flattened, Numerous Bug Fixes",
+      "link": "https://cryptopanic.com/news/16004710/89-Patch-Notes-Merit-Rewards-Flattened-Numerous-Bug-Fixes",
+      "pubDate": "2022-08-09T20:04:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SPS"
+      ]
+    },
+    {
+      "title": "Ethereum Investors Close 300k Long Positions on Bitfinex, Rally To Stop Soon?",
+      "link": "https://cryptopanic.com/news/16004568/Ethereum-Investors-Close-300k-Long-Positions-on-Bitfinex-Rally-To-Stop-Soon",
+      "pubDate": "2022-08-09T19:00:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Data shows around 300k in ETHUSD long positions have been closed on the Bitfinex Ethereum futures market, something that could provide impedance to the latest rally. Ethereum Long Positions Have Dropped By More Than 300k During The Last Few Days On Bitfinex As pointed out by an analyst in a CryptoQuant post, the past data of the ETHUSD long positions on the crypto exchange Bitfinex would...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "QNT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 11
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Litecoin: Can Twitter trolls affect LTC investors’ portfolio",
+      "link": "https://cryptopanic.com/news/16004468/Litecoin-Can-Twitter-trolls-affect-LTC-investors-portfolio",
+      "pubDate": "2022-08-09T18:30:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "LRC"
+      ]
+    },
+    {
+      "title": "Trading Bot Known for Beating Crypto Markets Chooses Cardano (ADA), Polygon (MATIC) and Chainlink (LINK)",
+      "link": "https://cryptopanic.com/news/16004402/Trading-Bot-Known-for-Beating-Crypto-Markets-Chooses-Cardano-ADA-Polygon-MATIC-and-Chainlink-LINK",
+      "pubDate": "2022-08-09T18:05:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "A robot that’s earned a reputation for outperforming the markets is unveiling its latest altcoin allocations as most cryptocurrencies give up their recent gains. Every week the Real Vision Bot conducts surveys in order to generate algorithmic portfolio assessments that reveal a “hive mind” consensus. The bot’s newest data finds that traders’ risk appetite remains […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "ADA",
+        "MATIC",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tech Billionaire Mark Cuban Touts Dogecoin, Saying It Boasts More Potential Applications Than Cardano",
+      "link": "https://cryptopanic.com/news/16004368/Tech-Billionaire-Mark-Cuban-Touts-Dogecoin-Saying-It-Boasts-More-Potential-Applications-Than-Cardano",
+      "pubDate": "2022-08-09T18:02:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "“Shark Tank” investor and owner of the National Basketball Association’s Dallas Mavericks Mark Cuban recently shared his take on the differences between smart contract network Cardano and original meme coin Dogecoin, and which he believes holds the most potential.",
+      "currencies": [
+        "ADA",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Here's an example of an important #XYO heuristic: Relative distance. This may be the most fundamental heuristic to…",
+      "link": "https://cryptopanic.com/news/16012476/Heres-an-example-of-an-important-XYO-heuristic-Relative-distance-This-may-be-the-most-fundamental-heuristic-to",
+      "pubDate": "2022-08-09T17:17:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XYO"
+      ]
+    },
+    {
+      "title": "Circle to ‘fully and solely support Ethereum PoS’",
+      "link": "https://cryptopanic.com/news/16004084/Circle-to-fully-and-solely-support-Ethereum-PoS",
+      "pubDate": "2022-08-09T16:42:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "USD Coin (USDC) issuer Circle has revealed that it would fully support the Ethereum (ETH) proof-of-stake (PoS) chain post-merge.",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "XCN"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "has launched a submission centre where you can contribute your #projects, #tools, libraries…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/16006744/has-launched-a-submission-centre-where-you-can-contribute-your-projects-tools-libraries",
+      "pubDate": "2022-08-09T15:47:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "Bitcoin’s next-level Taproot upgrade now stores 0.06% of all BTC",
+      "link": "https://cryptopanic.com/news/bitcoin/16003763/Bitcoins-next-level-Taproot-upgrade-now-stores-006-of-all-BTC",
+      "pubDate": "2022-08-09T15:09:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Since Bitcoin (BTC) underwent its Taproot upgrade in November 2021, the amount of the flagship cryptocurrency on its Pay-to-Taproot (P2TR)... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "It's 2022 and no other ecosystem has decentralized, in-browser light clients.",
+      "link": "https://cryptopanic.com/news/16009406/Its-2022-and-no-other-ecosystem-has-decentralized-in-browser-light-clients",
+      "pubDate": "2022-08-09T14:37:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KSM"
+      ]
+    },
+    {
+      "title": "RT @Cointelegraph: Klaytn metaverse blockchain integrates 1inch DEX aggregator as it looks to scale and improve token swaps and liquidity.…",
+      "link": "https://cryptopanic.com/news/klay-token/16005931/RT-Cointelegraph-Klaytn-metaverse-blockchain-integrates-1inch-DEX-aggregator-as-it-looks-to-scale-and-improve-token-swaps-and-liquidity",
+      "pubDate": "2022-08-09T14:20:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "1INCH"
+      ]
+    },
+    {
+      "title": "RT @FelixProducer: Watching the World University Basketball Series in person at Yoyogi Stadium Tokyo. Proud to be an official partner of @R…",
+      "link": "https://cryptopanic.com/news/16008271/RT-FelixProducer-Watching-the-World-University-Basketball-Series-in-person-at-Yoyogi-Stadium-Tokyo-Proud-to-be-an-official-partner-of-R?mtm_campaign=API-OFA",
+      "pubDate": "2022-08-09T14:14:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FLZ"
+      ]
+    },
+    {
+      "title": "Bitcoin network’s power demand drops by over 20% in 2022 as shift to renewables accelerates",
+      "link": "https://cryptopanic.com/news/bitcoin/16003553/Bitcoin-networks-power-demand-drops-by-over-20-in-2022-as-shift-to-renewables-accelerates",
+      "pubDate": "2022-08-09T14:12:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "In response to China’s cryptocurrency mining crackdown, Bitcoin (BTC) has turned to renewable energy sources, potentially one of the key... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 28,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Is The Most Prospective Blockchain For Web3, Hard Forks Not Necessary – DeBank",
+      "link": "https://cryptopanic.com/news/16003498/Ethereum-Is-The-Most-Prospective-Blockchain-For-Web3-Hard-Forks-Not-Necessary-DeBank",
+      "pubDate": "2022-08-09T14:07:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "DeBank labels Ethereum as the best chain for Web3 and will not support hard forks if they emerge.",
+      "currencies": [
+        "ETH",
+        "XCN"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "1inch plugs into Klaytn as Asia continues to climb aboard",
+      "link": "https://cryptopanic.com/news/klay-token/16003489/1inch-plugs-into-Klaytn-as-Asia-continues-to-climb-aboard",
+      "pubDate": "2022-08-09T14:07:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY"
+      ]
+    },
+    {
+      "title": "$FLOW $THETA $HNT Perpetual Contracts Are Now Live! @flow_blockchain @Theta_Network @helium Transfer & Trade to…",
+      "link": "https://cryptopanic.com/news/theta-token/16003396/FLOW-THETA-HNT-Perpetual-Contracts-Are-Now-Live-flow_blockchain-Theta_Network-helium-Transfer-amp-Trade-to",
+      "pubDate": "2022-08-09T13:59:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FLOW",
+        "ETHW",
+        "ETHS"
+      ]
+    },
+    {
+      "title": "Crypto trading guru sets key areas to watch for Bitcoin’s uptrend to persist",
+      "link": "https://cryptopanic.com/news/bitcoin/16003314/Crypto-trading-guru-sets-key-areas-to-watch-for-Bitcoins-uptrend-to-persist",
+      "pubDate": "2022-08-09T13:30:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The cryptocurrency market is still struggling to regain its strength after a row of unfavorable events in the industry, leading... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Tron DAO Reserve gives Wintermute the right to mint and burn USDD",
+      "link": "https://cryptopanic.com/news/16003292/Tron-DAO-Reserve-gives-Wintermute-the-right-to-mint-and-burn-USDD",
+      "pubDate": "2022-08-09T13:10:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Tron DAO Reserve (TDR), a group that governs the Decentralized USD (USDD) stablecoin, has signed up Wintermute as its latest member.",
+      "currencies": [
+        "TRX",
+        "USDD"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Getting #BSV listed on @latokens was no easy road. #BitcoinSV had to evidence its #technological and competitive ad…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/16006745/Getting-BSV-listed-on-latokens-was-no-easy-road-BitcoinSV-had-to-evidence-its-technological-and-competitive-ad",
+      "pubDate": "2022-08-09T13:02:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "Craig Wright Uses ‘F’ Word Against Interviewer In Asserting He Invented Bitcoin, During TV Guesting",
+      "link": "https://cryptopanic.com/news/bitcoin/16003061/Craig-Wright-Uses-F-Word-Against-Interviewer-In-Asserting-He-Invented-Bitcoin-During-TV-Guesting",
+      "pubDate": "2022-08-09T12:20:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Craig Wright, an Australian computer scientist, claims to be Satoshi Nakamoto – the alias used by whoever or whomever created bitcoin. In a recent interview with an Australian television program, Craig Wright reinforced his claims that he is the creator of Bitcoin, the largest cryptocurrency in the world. Wright emphasized that there are those who know […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Thailand’s central bank to get more power in crypto regulation overhaul: report",
+      "link": "https://cryptopanic.com/news/bitcoin/16003071/Thailands-central-bank-to-get-more-power-in-crypto-regulation-overhaul-report",
+      "pubDate": "2022-08-09T12:17:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Thailand’s central bank will receive more power as the South-East Asian nation steps up regulation of digital assets, said Thai Finance Minister Arkhom Termpittayapaisith. See related article: Thailand bans Bitcoin and crypto payments Fast facts Thailand plans to tighten its supervision of platforms and exchanges that offer trading in cryptocurrencies and other digital assets, Bloomberg […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "JPMorgan claims crypto market has ‘found a floor’",
+      "link": "https://cryptopanic.com/news/bitcoin/16002992/JPMorgan-claims-crypto-market-has-found-a-floor",
+      "pubDate": "2022-08-09T11:53:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Following the recent minor gains in the cryptocurrency market, banking giant JPMorgan (NYSE: JPM) has suggested that the sector has... Continue reading",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 10
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Cardano whales buy the dip accumulating $140 million worth of ADA in 8-day spell",
+      "link": "https://cryptopanic.com/news/16002880/Cardano-whales-buy-the-dip-accumulating-140-million-worth-of-ADA-in-8-day-spell",
+      "pubDate": "2022-08-09T11:20:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "As the Cardano (ADA) network founder Charles Hoskinson assured users that there should be no further delays to the Vasil... Continue reading",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 22,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Splintershards will be the new source of airdrops for Genesis League Sports",
+      "link": "https://cryptopanic.com/news/16002742/Splintershards-will-be-the-new-source-of-airdrops-for-Genesis-League-Sports",
+      "pubDate": "2022-08-09T10:34:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SPS"
+      ]
+    },
+    {
+      "title": "FTX Will Not Halt or Settle ETH Futures Prior to Merge",
+      "link": "https://cryptopanic.com/news/16002768/FTX-Will-Not-Halt-or-Settle-ETH-Futures-Prior-to-Merge",
+      "pubDate": "2022-08-09T10:34:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The upcoming Merge is slated to go live on September 19th after months of delays.",
+      "currencies": [
+        "ETH",
+        "FTT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "FTX says Ethereum merge shouldn’t affect ether derivatives trading",
+      "link": "https://cryptopanic.com/news/16002771/FTX-says-Ethereum-merge-shouldnt-affect-ether-derivatives-trading",
+      "pubDate": "2022-08-09T10:31:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "FTX has notified users that derivatives markets tied to ether (ETH) will remain unaffected prior to the merge.",
+      "currencies": [
+        "ETH",
+        "FTT"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Markets: Bitcoin loses steam, Ether continues run higher in late Asia trading",
+      "link": "https://cryptopanic.com/news/16002701/Markets-Bitcoin-loses-steam-Ether-continues-run-higher-in-late-Asia-trading",
+      "pubDate": "2022-08-09T10:19:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin fell back in late afternoon trading on Tuesday in Asia, losing steam after a run up of more than 4% in the past seven days. Ethereum continued its rally amid the buzz around the so-called “merge” when it shifts from proof-of-work to proof-of-stake, gaining more than 12% week-on-week. Polkadot and Solana fell back after […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "DOGE",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "In this #workshop, Frank Dickob, Liam Missim, and Simon Ordish showcase the future of transaction processing and…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/16006746/In-this-workshop-Frank-Dickob-Liam-Missim-and-Simon-Ordish-showcase-the-future-of-transaction-processing-and",
+      "pubDate": "2022-08-09T10:02:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "Billionaire Mike Novogratz downplays bullish Bitcoin scenario, says ‘$20-30k’ is comfortable zone",
+      "link": "https://cryptopanic.com/news/bitcoin/16001668/Billionaire-Mike-Novogratz-downplays-bullish-Bitcoin-scenario-says-20-30k-is-comfortable-zone",
+      "pubDate": "2022-08-09T09:26:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "With the cryptocurrency sector still reeling from the aftermath of a major rout that recently engulfed it, one of the... Continue reading The post Billionaire Mike Novogratz downplays bullish Bitcoin scenario, says ‘$20-30k’ is comfortable zone appeared first on Finbold.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Erik Voorhees urges MakerDAO community to exit USDC positions after Tornado Cash sanctions",
+      "link": "https://cryptopanic.com/news/16001166/Erik-Voorhees-urges-MakerDAO-community-to-exit-USDC-positions-after-Tornado-Cash-sanctions",
+      "pubDate": "2022-08-09T09:00:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "Shapeshift CEO and founder Erik Voorhees recommended the MakerDAO community take precautionary measures after the United States Treasury sanctioned Tornado Cash.",
+      "currencies": [
+        "USDC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Global Adoption Of Cryptocurrency – The First Cryptocurrency Backed By A Nation",
+      "link": "https://cryptopanic.com/news/16000352/Global-Adoption-Of-Cryptocurrency-The-First-Cryptocurrency-Backed-By-A-Nation",
+      "pubDate": "2022-08-09T08:38:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Cryptocurrency adoption across the globe has been moving slower than most would like, but there is no doubt that there has been a lot being done so far. It started with El Salvador’s adoption of bitcoin as a legal tender, and it has spiraled from there. One thing that is yet to be done is a cryptocurrency backed by a nation. While other countries have gone the path of the Central Bank Digital...",
+      "currencies": [
+        "BTC",
+        "WBTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano Sees Insane 270% YTD Jump In On-Chain Transfer Volume, Overtakes Bitcoin, Ether, And DOGE",
+      "link": "https://cryptopanic.com/news/15998812/Cardano-Sees-Insane-270-YTD-Jump-In-On-Chain-Transfer-Volume-Overtakes-Bitcoin-Ether-And-DOGE",
+      "pubDate": "2022-08-09T07:38:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Cardano recorded significant growth in transaction volume during which the volumes of major cryptocurrencies, including bitcoin, ethereum, and dogecoin, were struggling amidst the dire crypto winter landscape.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 21,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "At the busiest street on Gangnam, S. Korea, $AERGO and all the partners, @Blocko_io, @BOOOSTOfficial, CCCV, and Plu…",
+      "link": "https://cryptopanic.com/news/16006041/At-the-busiest-street-on-Gangnam-S-Korea-AERGO-and-all-the-partners-Blocko_io-BOOOSTOfficial-CCCV-and-Plu",
+      "pubDate": "2022-08-09T07:18:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "Singapore remains forward-looking in regulated Digital Assets because it has the potential to transform the future.…",
+      "link": "https://cryptopanic.com/news/15996266/Singapore-remains-forward-looking-in-regulated-Digital-Assets-because-it-has-the-potential-to-transform-the-future?mtm_campaign=API-OFA",
+      "pubDate": "2022-08-09T02:39:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHEX"
+      ]
+    },
+    {
+      "title": "Day 2 of @kbwofficial is about to start. All the various sponsor booths getting ready.",
+      "link": "https://cryptopanic.com/news/15995393/Day-2-of-kbwofficial-is-about-to-start-All-the-various-sponsor-booths-getting-ready",
+      "pubDate": "2022-08-09T00:37:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "Dogecoin Has More Potential Applications Than Cardano: Mark Cuban",
+      "link": "https://cryptopanic.com/news/15994748/Dogecoin-Has-More-Potential-Applications-Than-Cardano-Mark-Cuban",
+      "pubDate": "2022-08-09T00:21:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The billionaire investor shared his view on Cardano's lack of adoption, market caps, and Dogecoin on a recent podcast.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2019-01-11",
+  "fetchedAt": "2026-02-05T07:27:07.855Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tron [TRX] Outperforms Amid Bearish Market Declines",
+      "link": "https://cryptopanic.com/news/4226790/Tron-TRX-Outperforms-Amid-Bearish-Market-Declines",
+      "pubDate": "2019-01-11T16:24:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "date": "2019-02-17",
+  "fetchedAt": "2026-02-05T07:27:06.972Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Canadian Exchange Coinsquare Acquires StellarX Decentralized Exchange (DEX)",
+      "link": "https://cryptopanic.com/news/4590787/Canadian-Exchange-Coinsquare-Acquires-StellarX-Decentralized-Exchange-DEX",
+      "pubDate": "2019-02-17T11:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "#screenshotsaturday #conceptartsaturday Higher tier weapons will have a secondary firing mode. In this case, the ba…",
+      "link": "https://cryptopanic.com/news/4589826/screenshotsaturday-conceptartsaturday-Higher-tier-weapons-will-have-a-secondary-firing-mode-In-this-case-the-ba?mtm_campaign=API-OFA",
+      "pubDate": "2019-02-17T06:22:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BLAST"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "date": "2019-05-24",
+  "fetchedAt": "2026-02-05T07:27:06.810Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Cash Miners Undo Attacker’s Transactions With ‘51% Attack’",
+      "link": "https://cryptopanic.com/news/5522893/Bitcoin-Cash-Miners-Undo-Attackers-Transactions-With-51-Attack",
+      "pubDate": "2019-05-24T21:17:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 31
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

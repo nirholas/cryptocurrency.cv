@@ -1,0 +1,129 @@
+{
+  "date": "2025-03-09",
+  "fetchedAt": "2026-02-05T07:27:08.494Z",
+  "articleCount": 9,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Polygon nears $100B volume mark – Factors that will help POL",
+      "link": "https://cryptopanic.com/news/20802104/Polygon-nears-100B-volume-mark-Factors-that-will-help-POL?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-09T22:00:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "MATIC"
+      ]
+    },
+    {
+      "title": "BTC, ETH, XRP Lead $334.99M Crypto Liquidation, Key Trends To Watch?",
+      "link": "https://cryptopanic.com/news/20801596/BTC-ETH-XRP-Lead-33499M-Crypto-Liquidation-Key-Trends-To-Watch?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-09T16:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "XRP Transfers Explode Past $5 Billion In 24 Hours as Wallets Surge over 600%",
+      "link": "https://cryptopanic.com/news/20801260/XRP-Transfers-Explode-Past-5-Billion-In-24-Hours-as-Wallets-Surge-over-600?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-09T14:05:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP traded relatively flat following a sharp rebound on Tuesday, fueled by President Trump’s proposal for a U.S. strategic crypto reserve that includes XRP.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Polkadot (DOT) Nears Critical Zone: A Reversal Could Trigger 180% Surge",
+      "link": "https://cryptopanic.com/news/20801166/Polkadot-DOT-Nears-Critical-Zone-A-Reversal-Could-Trigger-180-Surge?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-09T13:30:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "DOT",
+        "ALI"
+      ]
+    },
+    {
+      "title": "Dogecoin Price Could Shoot Up To $2.74 – Here’s The Support Level To Watch",
+      "link": "https://cryptopanic.com/news/20800970/Dogecoin-Price-Could-Shoot-Up-To-274-Heres-The-Support-Level-To-Watch?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-09T12:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "ALI"
+      ]
+    },
+    {
+      "title": "Coinbase Adds AI Altcoin and DeFi Token to Listing Roadmap, Triggering Price Jumps",
+      "link": "https://cryptopanic.com/news/20800735/Coinbase-Adds-AI-Altcoin-and-DeFi-Token-to-Listing-Roadmap-Triggering-Price-Jumps?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-09T10:15:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ATH",
+        "SYRUP"
+      ]
+    },
+    {
+      "title": "Stellar Price Could Target $0.33 In Next Move — Time To Buy?",
+      "link": "https://cryptopanic.com/news/20800830/Stellar-Price-Could-Target-033-In-Next-Move-Time-To-Buy?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-09T09:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "ALI"
+      ]
+    },
+    {
+      "title": "Can Decentralized Platforms Fix Social Media’s Biggest Problems?",
+      "link": "https://cryptopanic.com/news/20800522/Can-Decentralized-Platforms-Fix-Social-Medias-Biggest-Problems?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-09T07:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DAO"
+      ]
+    },
+    {
+      "title": "XRP Price Is Consolidating Within This Pattern — What’s Next?",
+      "link": "https://cryptopanic.com/news/20800211/XRP-Price-Is-Consolidating-Within-This-Pattern-Whats-Next?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-09T02:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "ALI"
+      ]
+    }
+  ]
+}

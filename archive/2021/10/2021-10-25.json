@@ -1,0 +1,909 @@
+{
+  "date": "2021-10-25",
+  "fetchedAt": "2026-02-05T07:27:06.475Z",
+  "articleCount": 60,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Facebook CEO: Metaverse Will Be ‘Holy Grail of Social Experiences’",
+      "link": "https://cryptopanic.com/news/13113346/Facebook-CEO-Metaverse-Will-Be-Holy-Grail-of-Social-Experiences",
+      "pubDate": "2021-10-25T23:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "“This is not an investment that is going to be profitable for us anytime in the near future,” Zuckerberg said during the company’s third-quarter earnings call on Monday.",
+      "currencies": [
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "For the new comers to our community, please visit our website to learn more about $AERGO",
+      "link": "https://cryptopanic.com/news/13114196/For-the-new-comers-to-our-community-please-visit-our-website-to-learn-more-about-AERGO",
+      "pubDate": "2021-10-25T23:17:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "US SEC Set to Crack Down on Stablecoins in New Report",
+      "link": "https://cryptopanic.com/news/13113250/US-SEC-Set-to-Crack-Down-on-Stablecoins-in-New-Report",
+      "pubDate": "2021-10-25T22:44:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Bloomberg reported that the US Treasury Department and other government agencies are expected to publish a report this week explaining the SEC’s authority over stablecoins",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Shiba Inu ($SHIB) Trading Volume Briefly Surpasses That of Ethereum ($ETH)",
+      "link": "https://cryptopanic.com/news/shiba-inu/13113133/Shiba-Inu-SHIB-Trading-Volume-Briefly-Surpasses-That-of-Ethereum-ETH",
+      "pubDate": "2021-10-25T21:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The trading volume of the meme-inspired cryptocurrency Shiba Inu ($SHIB) has briefly surpassed that of the second-largest cryptocurrency by market capitalization Ethereum (ETH) by over $1.6 billion. According to cryptocurrency tracker Watcher Guru, in the last 24-hour period SHIB’s trading volume surpassed that of Ethereum. The cryptocurrency’s trading volume exploded along with interest for...",
+      "currencies": [
+        "ETH",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 7
+      }
+    },
+    {
+      "title": "RT @MarshallHayner: Today @Mastercard announced the ability for merchants and banks to interact with cryptocurrency on their network. This…",
+      "link": "https://cryptopanic.com/news/13118756/RT-MarshallHayner-Today-Mastercard-announced-the-ability-for-merchants-and-banks-to-interact-with-cryptocurrency-on-their-network-This",
+      "pubDate": "2021-10-25T21:12:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "-",
+      "currencies": [
+        "XPR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Yes please, we like seeing $XMT moving at 4,000 transactions per second🤘️ $MTL @metalpaysme",
+      "link": "https://cryptopanic.com/news/13118757/Yes-please-we-like-seeing-XMT-moving-at-4000-transactions-per-second-MTL-metalpaysme",
+      "pubDate": "2021-10-25T21:03:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XPR"
+      ]
+    },
+    {
+      "title": "RT @SignalLTC: @ShibalnuNews @BlastoiseInu @BlastoiseInu @elonmusk $BLAST As It's Always Said Markets Always Follows / Repeats History And…",
+      "link": "https://cryptopanic.com/news/13114891/RT-SignalLTC-ShibalnuNews-BlastoiseInu-BlastoiseInu-elonmusk-BLAST-As-Its-Always-Said-Markets-Always-Follows-Repeats-History-And?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-25T19:50:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BLAST"
+      ]
+    },
+    {
+      "title": "RT @iheartdefi: @BlastoiseInu Let's Go!!",
+      "link": "https://cryptopanic.com/news/13114893/RT-iheartdefi-BlastoiseInu-Lets-Go?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-25T19:34:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BLAST"
+      ]
+    },
+    {
+      "title": "RT @tradingtomax: #blastoiseinu im in this is moving.",
+      "link": "https://cryptopanic.com/news/13114894/RT-tradingtomax-blastoiseinu-im-in-this-is-moving?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-25T19:34:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BLAST"
+      ]
+    },
+    {
+      "title": "Terra's Do Kwon Talks SEC Subpoena: DeFi 'May Not Fit In Nicely' With Current Regulations",
+      "link": "https://cryptopanic.com/news/terra-luna/13112751/Terras-Do-Kwon-Talks-SEC-Subpoena-DeFi-May-Not-Fit-In-Nicely-With-Current-Regulations",
+      "pubDate": "2021-10-25T19:32:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Terra co-founder and CEO Do Kwon believes that friction between the SEC and DeFi may lead to a regulatory framework that favors innovation.",
+      "currencies": [
+        "NULL"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We were really impressed with @AaronTing8 in-depth analysis of our project",
+      "link": "https://cryptopanic.com/news/13112713/We-were-really-impressed-with-AaronTing8-in-depth-analysis-of-our-project",
+      "pubDate": "2021-10-25T19:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SSV"
+      ]
+    },
+    {
+      "title": "Harmony’s ONE Token Targets $1 After Breaking All-Time High",
+      "link": "https://cryptopanic.com/news/13112695/Harmonys-ONE-Token-Targets-1-After-Breaking-All-Time-High",
+      "pubDate": "2021-10-25T19:19:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The article discusses Harmony’s ONE token, which has recently surpassed its previous all-time high and is now targeting a price of $1. Factors contributing to this surge are explored, including market trends, investor interest, and developments within the Harmony ecosystem. The bullish momentum reflects growing confidence in the token's potential for future growth.",
+      "currencies": [
+        "ONE"
+      ],
+      "votes": {
+        "positive": 24,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "What is #crypto? Wrong answers only",
+      "link": "https://cryptopanic.com/news/13119586/What-is-crypto-Wrong-answers-only",
+      "pubDate": "2021-10-25T19:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STMX"
+      ]
+    },
+    {
+      "title": "Solana (SOL) Hits All-Time High, Extending Lead Over XRP",
+      "link": "https://cryptopanic.com/news/ripple/13112459/Solana-SOL-Hits-All-Time-High-Extending-Lead-Over-XRP",
+      "pubDate": "2021-10-25T17:53:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana is leading the crypto market recovery, logging a new all-time high",
+      "currencies": [
+        "XRP",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Super Bullish Prediction! Luna Could Hit $200+ In 30 Days!",
+      "link": "https://cryptopanic.com/news/terra-luna/13112445/SUPER-BULLISH-PREDICTION-LUNA-COULD-HIT-200-IN-30-DAYS",
+      "pubDate": "2021-10-25T17:48:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "✅ Follow Krown on Twitter: https://twitter.com/KrownCryptoCave ✅ Follow Krown on YT: https://www.youtube.com/krownscryptocave ✅ Follow EllioTrades on Twitter: https://twitter.com/elliotrades 🚨FOR EXPERIENCED TRADERS ONLY🚨 💰 $3,500 BONUS ON BYBIT 👉 https://partner.bybit.com/b/elliokrown21 ► 3.5% Deposit bonus up to $3,500, e.g. if you deposit 100k, you get $3,500!!! From now until November 1st, 10 lucky winners who sign up and deposit under referral code \"elliokrown21\" (link above) will each ",
+      "currencies": [
+        "NULL"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum competitor Near launches $800M developer fund as DeFi competition heats up",
+      "link": "https://cryptopanic.com/news/near/13112339/Ethereum-competitor-Near-launches-800M-developer-fund-as-DeFi-competition-heats-up",
+      "pubDate": "2021-10-25T17:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Total value locked across all decentralized finance projects topped $247 billion on Monday. Near and other smart contract platforms are looking to capitalize.",
+      "currencies": [
+        "ETH",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Supra Finance calculate the best strategy daily 🤓 it convert your $BOO to xBOO and then stake in the pool with the…",
+      "link": "https://cryptopanic.com/news/13116242/Supra-Finance-calculate-the-best-strategy-daily-it-convert-your-BOO-to-xBOO-and-then-stake-in-the-pool-with-the?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-25T17:12:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "SUPRA",
+        "FLP"
+      ]
+    },
+    {
+      "title": "Crypto Analyst Apologizes to $SHIB Army: $SHIB More a Competitor to $ETH Than $DOGE",
+      "link": "https://cryptopanic.com/news/dogecoin/13112301/Crypto-Analyst-Apologizes-to-SHIB-Army-SHIB-More-a-Competitor-to-ETH-Than-DOGE",
+      "pubDate": "2021-10-25T17:00:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "On Sunday (October 24), the host of the highly popular YouTube-based crypto analysis and trading show “Altcoin Daily” apologized to the Shiba Inu ($SHIB) community for thinking of this project as just another meme-based coin competing with Dogecoin ($DOGE) for attention. In a YouTube video released yesterday, at a time when $SHIB was trading around […]",
+      "currencies": [
+        "ETH",
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 41,
+        "negative": 28
+      }
+    },
+    {
+      "title": "Axie Infinity (AXS) Goes for New All-Time High as Other Gaming Tokens Lag Behind",
+      "link": "https://cryptopanic.com/news/13112294/Axie-Infinity-AXS-Goes-for-New-All-Time-High-as-Other-Gaming-Tokens-Lag-Behind",
+      "pubDate": "2021-10-25T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "AXS has broken out from a symmetrical triangle. It is gradually increasing and could soon reach a new all-time high price.",
+      "currencies": [
+        "AXS"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "On October 22, the #QuarkChain team returned to Shanghai Jiaotong University to give two technical lectures. The to…",
+      "link": "https://cryptopanic.com/news/13118792/On-October-22-the-QuarkChain-team-returned-to-Shanghai-Jiaotong-University-to-give-two-technical-lectures-The-to",
+      "pubDate": "2021-10-25T16:20:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QKC"
+      ]
+    },
+    {
+      "title": "RT @SignalLTC: @NFTmagzine @BlastoiseInu @BlastoiseInu @elonmusk $BLAST Is A HUGE Hidden  GEM Now All $Shib $Floki Community Coming Into $…",
+      "link": "https://cryptopanic.com/news/13114896/RT-SignalLTC-NFTmagzine-BlastoiseInu-BlastoiseInu-elonmusk-BLAST-Is-A-HUGE-Hidden-GEM-Now-All-Shib-Floki-Community-Coming-Into?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-25T16:09:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "BLAST"
+      ]
+    },
+    {
+      "title": "RT @TokenAlienNFTs: @CoinMarketCap $blast @BlastoiseInu next 100x",
+      "link": "https://cryptopanic.com/news/13114897/RT-TokenAlienNFTs-CoinMarketCap-blast-BlastoiseInu-next-100x?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-25T16:05:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "BLAST"
+      ]
+    },
+    {
+      "title": "RT @jamiecityx_: @cryptoxfire @BlastoiseInu wow that's cool! goodluck to ur team",
+      "link": "https://cryptopanic.com/news/13114899/RT-jamiecityx_-cryptoxfire-BlastoiseInu-wow-thats-cool-goodluck-to-ur-team?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-25T16:01:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BLAST"
+      ]
+    },
+    {
+      "title": "RT @favNOBODY1: @NFTmagzine @BlastoiseInu Awesome project 2 weeks old lot of potential",
+      "link": "https://cryptopanic.com/news/13114900/RT-favNOBODY1-NFTmagzine-BlastoiseInu-Awesome-project-2-weeks-old-lot-of-potential?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-25T16:01:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "BLAST"
+      ]
+    },
+    {
+      "title": "ZIL Breaks Out as Price Looks Set to Push to New All-Time Highs",
+      "link": "https://cryptopanic.com/news/13111944/ZIL-Breaks-Out-as-Price-Looks-Set-to-Push-to-New-All-Time-Highs",
+      "pubDate": "2021-10-25T15:32:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Ziliqa (ZIL) has moved above both diagonal and horizontal levels and is approaching the Sept highs.",
+      "currencies": [
+        "ZIL"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Shiba Inu (SHIB) NFTs Surge as Floor Price Now Sits Above 1 ETH",
+      "link": "https://cryptopanic.com/news/shiba-inu/13111881/Shiba-Inu-SHIB-NFTs-Surge-as-Floor-Price-Now-Sits-Above-1-ETH",
+      "pubDate": "2021-10-25T15:16:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "As the Shiba Inu (SHIB) took for the skies over the past couple of weeks, the Shiboshi NFTs are also charting considerable gains.",
+      "currencies": [
+        "ETH",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Excited to work with @binance on the trading competition! Participate in the link below to win a share of $150,000…",
+      "link": "https://cryptopanic.com/news/13114547/Excited-to-work-with-binance-on-the-trading-competition-Participate-in-the-link-below-to-win-a-share-of-150000",
+      "pubDate": "2021-10-25T15:04:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "LN",
+        "BTCST"
+      ]
+    },
+    {
+      "title": ".@trailblazers made 21 3s last game! The wheel has spoken and chosen @Zeref75049722! Please DM us to claim your $10…",
+      "link": "https://cryptopanic.com/news/13119587/trailblazers-made-21-3s-last-game-The-wheel-has-spoken-and-chosen-Zeref75049722-Please-DM-us-to-claim-your-10",
+      "pubDate": "2021-10-25T15:00:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STMX"
+      ]
+    },
+    {
+      "title": "Elon Musk to Become 1st DOGE Trillionaire, SHIB Hits New ATH, Surpasses Ether by Trading Volume: Crypto News Digest by U.Today",
+      "link": "https://cryptopanic.com/news/dogecoin/13111733/Elon-Musk-to-Become-1st-DOGE-Trillionaire-SHIB-Hits-New-ATH-Surpasses-Ether-by-Trading-Volume-Crypto-News-Digest-by-UToday",
+      "pubDate": "2021-10-25T14:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Read the top crypto news stories over the past weekend in U.Today’s news digest!",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Read the latest opinion piece from our CEO @dleonard00 here",
+      "link": "https://cryptopanic.com/news/13116813/Read-the-latest-opinion-piece-from-our-CEO-dleonard00-here",
+      "pubDate": "2021-10-25T13:50:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MFT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana Rises 10%, Overtaking XRP",
+      "link": "https://cryptopanic.com/news/ripple/13111335/Solana-Rises-10-Overtaking-XRP",
+      "pubDate": "2021-10-25T12:41:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "A variety of new Solana-specific projects, specifically in the realm of DeFi and DAOs, have played a role in the native token’s latest rise.",
+      "currencies": [
+        "XRP",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple Price Analysis: XRP Rangebound Around $1 as Breakout Appears Imminent",
+      "link": "https://cryptopanic.com/news/ripple/13111250/Ripple-Price-Analysis-XRP-Rangebound-Around-1-as-Breakout-Appears-Imminent",
+      "pubDate": "2021-10-25T12:14:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP's price has been consolidating around $1 for quite some time now. It appears that the range is getting more narrow and a breakout looks imminent.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 24,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Billion-Dollar Real Estate Firm To Accept Crypto for Ownership Shares of Second Homes",
+      "link": "https://cryptopanic.com/news/13111196/Billion-Dollar-Real-Estate-Firm-To-Accept-Crypto-for-Ownership-Shares-of-Second-Homes",
+      "pubDate": "2021-10-25T11:45:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Pacaso, a real estate platform focused on second homes, is now supporting cryptocurrency payments. The startup, which reached $1 billion in valuation months after its launch in October 2020, partnered with crypto payment service provider BitPay to allow clients to buy ownership shares in second homes using digital assets. In a statement, the firm says […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @feindura: Here are the promised infomormation. Lets make L15 a nice little testnet!",
+      "link": "https://cryptopanic.com/news/13117384/RT-feindura-Here-are-the-promised-infomormation-Lets-make-L15-a-nice-little-testnet",
+      "pubDate": "2021-10-25T11:42:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SHIB, ELON and DOGE Show Strong Inverse Correlation with This Indicator",
+      "link": "https://cryptopanic.com/news/dogecoin/13111098/SHIB-ELON-and-DOGE-Show-Strong-Inverse-Correlation-with-This-Indicator",
+      "pubDate": "2021-10-25T11:17:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Community-driven coins seem to rise only when the community forgets about them",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 22,
+        "negative": 8
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Think of all that’s changed in the world in the last two years. Meanwhile the #Ravencoin protocol, network and cod…",
+      "link": "https://cryptopanic.com/news/13118886/Think-of-all-thats-changed-in-the-world-in-the-last-two-years-Meanwhile-the-Ravencoin-protocol-network-and-cod",
+      "pubDate": "2021-10-25T10:55:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RVN"
+      ]
+    },
+    {
+      "title": "RT @zibin: #PundiXChain will connect into #BSC @BinanceChain this week.",
+      "link": "https://cryptopanic.com/news/13118766/RT-zibin-PundiXChain-will-connect-into-BSC-BinanceChain-this-week",
+      "pubDate": "2021-10-25T10:35:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "PUNDIX"
+      ]
+    },
+    {
+      "title": "Dogecoin, Shiba Inu Ride the Elon Musk Hype Cycle",
+      "link": "https://cryptopanic.com/news/dogecoin/13110977/Dogecoin-Shiba-Inu-Ride-the-Elon-Musk-Hype-Cycle",
+      "pubDate": "2021-10-25T10:31:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The Tesla and SpaceX CEO Elon Musk has set the prices of meme coins Dogecoin and Shiba Inu coin fluctuating with his Twitter musings.",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SHIB eclipses Ethereum’s 24-hour trading volume following period of high volatility",
+      "link": "https://cryptopanic.com/news/shiba-inu/13110922/SHIB-eclipses-Ethereums-24-hour-trading-volume-following-period-of-high-volatility",
+      "pubDate": "2021-10-25T10:01:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "In the previous 24 hours, the trading volume of the Shiba Inu (SHIB) decentralized token has surpassed that of Ethereum,... Continue reading",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 22,
+        "negative": 8
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogecoin ($DOGE): Elon Musk Explains Why He Decided To “Support the People’s Crypto”",
+      "link": "https://cryptopanic.com/news/dogecoin/13110880/Dogecoin-DOGE-Elon-Musk-Explains-Why-He-Decided-To-Support-the-Peoples-Crypto",
+      "pubDate": "2021-10-25T09:49:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "On Sunday (October 24), Tesla and Space X CEO Elon Musk, who must be Dogecoin’s number one celebrity fan, explained why he decided to support the highly popular dog meme based cryptocurrency. Dogecoin, which was initially released on 6 December 2013, as a “fun and friendly internet currency.” It was created by Billy Markus and Jackson Palmer. […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 20,
+        "negative": 22
+      }
+    },
+    {
+      "title": "Building the basics of a collaborative, decentralized Content Guild, our first post by an Aragon Ambassador…",
+      "link": "https://cryptopanic.com/news/13110856/Building-the-basics-of-a-collaborative-decentralized-Content-Guild-our-first-post-by-an-Aragon-Ambassador",
+      "pubDate": "2021-10-25T09:47:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "ANT"
+      ]
+    },
+    {
+      "title": "U.S. crypto miner Greenidge more than doubles Bitmain rig order to fuel growth",
+      "link": "https://cryptopanic.com/news/13110864/US-crypto-miner-Greenidge-more-than-doubles-Bitmain-rig-order-to-fuel-growth",
+      "pubDate": "2021-10-25T09:44:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "Greenidge Generation Holdings Inc., a U.S. Bitcoin mining and power generation company, has announced it plans to ramp up its operation across the U.S. by more than doubling its previous order with Chinese mining rig maker Bitmain. Fast facts Nasdaq-listed Greenidge said Thursday in a statement it plans to significantly expand beyond its current operating […]",
+      "currencies": [
+        "BTC",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SHIB Not Hurt by Elon Musk's Negative Tweet, David Gokhshtein Explains Why",
+      "link": "https://cryptopanic.com/news/shiba-inu/13110841/SHIB-Not-Hurt-by-Elon-Musks-Negative-Tweet-David-Gokhshtein-Explains-Why",
+      "pubDate": "2021-10-25T09:38:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Crypto influencer stresses that the recent SHIB rally has nothing to do with Elon Musk or Robinhood's potential listing",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 24,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Shiba Inu (SHIB) | The Cold Truth Behind The Hype",
+      "link": "https://cryptopanic.com/news/shiba-inu/13110176/Shiba-Inu-SHIB-The-Cold-Truth-Behind-The-Hype",
+      "pubDate": "2021-10-25T07:58:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "#bitcoin #crypto #cryptocurrencies Looking to buy Get Paid In Crypto? Sign up for Digifox 🦊📈➡️ https://digifox.finance Interested in our newsletter, the DashReport? 💹➡️ http://nicholasmerten.com/dashreport/ Want a DataDash Hoodie? 👘➡️ https://merch.nicholasmerten.com/ Want to support my channel and get great perks? 💚⬇️ http://patreon.com/data_dash ---------------------------------------------------------------------------------------------------------- If you want me to be able to contact y",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 4
+      }
+    },
+    {
+      "title": "#Binance Will Support the Boba Token $BOBA Airdrop Program for @omgnetworkhq $OMG Holders",
+      "link": "https://cryptopanic.com/news/13114792/Binance-Will-Support-the-Boba-Token-BOBA-Airdrop-Program-for-omgnetworkhq-OMG-Holders",
+      "pubDate": "2021-10-25T07:54:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "OMG"
+      ]
+    },
+    {
+      "title": "#Solana is rallying back. Who can predict its next ATH?",
+      "link": "https://cryptopanic.com/news/13110602/Solana-is-rallying-back-Who-can-predict-its-next-ATH",
+      "pubDate": "2021-10-25T07:35:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ZB"
+      ]
+    },
+    {
+      "title": "Does Elon Musk’s preference for Dogecoin over Shiba Inu make a difference",
+      "link": "https://cryptopanic.com/news/dogecoin/13109216/Does-Elon-Musks-preference-for-Dogecoin-over-Shiba-Inu-make-a-difference",
+      "pubDate": "2021-10-25T07:30:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "H2: Tesla CEO Musk has bought only Dogecoin, zero Shiba Inu and Floki tokens Tesla CEO, Elon Musk’s tweets helped Shiba Inu and Floki prices soar previously. However, this time around, his response plummeted the meme coin as he agreed to have bought no SHIB tokens. Meanwhile, another user curiously asked if he has invested […]",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "To all new members of our community, welcome! A big part of the daily communication with the team happens on the Of…",
+      "link": "https://cryptopanic.com/news/13115983/To-all-new-members-of-our-community-welcome-A-big-part-of-the-daily-communication-with-the-team-happens-on-the-Of",
+      "pubDate": "2021-10-25T07:11:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "TA: Ethereum Gearing For Another Lift-Off If It Clears This Level",
+      "link": "https://cryptopanic.com/news/near/13107824/TA-Ethereum-Gearing-For-Another-Lift-Off-If-It-Clears-This-Level",
+      "pubDate": "2021-10-25T06:32:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum extended its decline below $4,100 and spiked below $4,000 against the US Dollar. ETH is recovering, but it must break $4,175 before there was a fresh increase. Ethereum corrected lower below the $4,200 and $4,175 support levels. The price is now trading above $4,050 and the 100 hourly simple moving average. There is a key bullish trend line forming with support near $4,000 on the...",
+      "currencies": [
+        "ETH",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 31,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @peko0413: Had a productive #Sunday afternoon. Thank you #教育電台 National Education Radio for having me to talk about @PundiXLabs, #blockc…",
+      "link": "https://cryptopanic.com/news/13109283/RT-peko0413-Had-a-productive-Sunday-afternoon-Thank-you-National-Education-Radio-for-having-me-to-talk-about-PundiXLabs-blockc",
+      "pubDate": "2021-10-25T06:03:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PUNDIX"
+      ]
+    },
+    {
+      "title": "Elon Musk Calls Dogecoin “People’s Crypto,” Rejects Shiba Inu",
+      "link": "https://cryptopanic.com/news/dogecoin/13106960/Elon-Musk-Calls-Dogecoin-Peoples-Crypto-Rejects-Shiba-Inu",
+      "pubDate": "2021-10-25T05:52:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Elon Musk said that Dogecoin felt like “people’s crypto” to him after exerting selling pressure on Shiba Inu with just one word",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SHIB plummets 20% as Elon Musk reveals he owns none",
+      "link": "https://cryptopanic.com/news/shiba-inu/13106224/SHIB-plummets-20-as-Elon-Musk-reveals-he-owns-none",
+      "pubDate": "2021-10-25T04:49:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "SHIB quickly crashed 20% as Tesla CEO and dog-token proselytizer Elon Musk announced he owns none of the canine-themed coins.",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SHIB reaches new all-time high, as DOGE surges as well",
+      "link": "https://cryptopanic.com/news/dogecoin/13106203/SHIB-reaches-new-all-time-high-as-DOGE-surges-as-well",
+      "pubDate": "2021-10-25T04:25:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Dogecoin copycat token SHIB jumped almost 60% in less than 24 hours on Sunday to reach a new all-time high of US$0.00004442, as DOGE also surged over the weekend. SHIB was trading at US$0.00003937 at press time, and is now the 13th largest token by market cap, according to data from CoinMarketCap.com. Fast facts This […]",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Hey @WazirXIndia.",
+      "link": "https://cryptopanic.com/news/13106164/Hey-WazirXIndia",
+      "pubDate": "2021-10-25T03:55:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEM",
+        "XYM"
+      ]
+    },
+    {
+      "title": "Welcome to XYM City, @TakaoAsayama. 🤝",
+      "link": "https://cryptopanic.com/news/13106120/Welcome-to-XYM-City-TakaoAsayama",
+      "pubDate": "2021-10-25T03:18:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEM",
+        "XYM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Choosing your staking operator according to performance is still in its infancy. Very soon, it will become the stan…",
+      "link": "https://cryptopanic.com/news/13106052/Choosing-your-staking-operator-according-to-performance-is-still-in-its-infancy-Very-soon-it-will-become-the-stan",
+      "pubDate": "2021-10-25T02:18:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SSV"
+      ]
+    },
+    {
+      "title": "RT @MarshallHayner: One of the most packed sessions I’ve ever seen at @money2020 discussing the future of banking and cryptocurrency  $XP…",
+      "link": "https://cryptopanic.com/news/13109280/RT-MarshallHayner-One-of-the-most-packed-sessions-Ive-ever-seen-at-money2020-discussing-the-future-of-banking-and-cryptocurrency-XP",
+      "pubDate": "2021-10-25T02:17:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XPR"
+      ]
+    },
+    {
+      "title": "Elon Musk Says He Doesn’t Own Shiba Inu Tokens, Enraging SHIB Hodlers",
+      "link": "https://cryptopanic.com/news/ethereum/13106007/Elon-Musk-Says-He-Doesnt-Own-Shiba-Inu-Tokens-Enraging-SHIB-Hodlers",
+      "pubDate": "2021-10-25T01:47:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The Shiba Inu commuity is not happy with Elon Musk. $SHIB crashed after Musk revealed he didn't own it and only had BTC, ETH and DOGE.",
+      "currencies": [
+        "ETH",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 18
+      }
+    },
+    {
+      "title": "RT @selimimoberdorf: what a week at @0xliscon. meet so many new people and had great chats, especially with the @witnet_io #WittyCreatures…",
+      "link": "https://cryptopanic.com/news/13105870/RT-selimimoberdorf-what-a-week-at-0xliscon-meet-so-many-new-people-and-had-great-chats-especially-with-the-witnet_io-WittyCreatures",
+      "pubDate": "2021-10-25T00:32:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ANT"
+      ]
+    },
+    {
+      "title": "We are thrilled to announce that #Paycoin has signed an MOU with #BBrick, a #blockchain financial solution provider…",
+      "link": "https://cryptopanic.com/news/13109118/We-are-thrilled-to-announce-that-Paycoin-has-signed-an-MOU-with-BBrick-a-blockchain-financial-solution-provider?mtm_campaign=API-OFA",
+      "pubDate": "2021-10-25T00:31:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "PCI",
+        "WPCI"
+      ]
+    }
+  ]
+}

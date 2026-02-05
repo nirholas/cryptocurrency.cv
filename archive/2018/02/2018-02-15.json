@@ -1,0 +1,48 @@
+{
+  "date": "2018-02-15",
+  "fetchedAt": "2026-02-05T07:27:06.798Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ethereum Developer Resigns as Code Editor Citing Legal Concerns",
+      "link": "https://cryptopanic.com/news/ethereum/1091036/Ethereum-Developer-Resigns-as-Code-Editor-Citing-Legal-Concerns",
+      "pubDate": "2018-02-15T11:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin Isn't the Only Crypto Adding Lightning Tech Now",
+      "link": "https://cryptopanic.com/news/1090121/Bitcoin-Isnt-the-Only-Crypto-Adding-Lightning-Tech-Now",
+      "pubDate": "2018-02-15T09:00:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "LTC",
+        "XLM",
+        "XMR",
+        "ZEC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

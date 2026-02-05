@@ -1,0 +1,44 @@
+{
+  "date": "2018-08-09",
+  "fetchedAt": "2026-02-05T07:27:07.856Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tron [TRX] Price Recovery Welcome After Recent Bloodbath",
+      "link": "https://cryptopanic.com/news/2768557/Tron-TRX-Price-Recovery-Welcome-After-Recent-Bloodbath",
+      "pubDate": "2018-08-09T15:26:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Ethereum Classic Finally Comes to Coinbase",
+      "link": "https://cryptopanic.com/news/2766815/Ethereum-Classic-Finally-Comes-to-Coinbase",
+      "pubDate": "2018-08-09T13:08:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

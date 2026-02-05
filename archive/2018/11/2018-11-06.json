@@ -1,0 +1,43 @@
+{
+  "date": "2018-11-06",
+  "fetchedAt": "2026-02-05T07:27:06.999Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tron Exceeds One Million Transactions a Day; Surpasses Bitcoin, Ethereum, and Ripple",
+      "link": "https://cryptopanic.com/news/tron/3585852/Tron-Exceeds-One-Million-Transactions-a-Day-Surpasses-Bitcoin-Ethereum-and-Ripple",
+      "pubDate": "2018-11-06T15:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "IOTA Adds Another Longtime Contributor to Its Team Officially",
+      "link": "https://cryptopanic.com/news/3584691/IOTA-Adds-Another-Longtime-Contributor-to-Its-Team-Officially",
+      "pubDate": "2018-11-06T13:29:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "date": "2018-02-18",
+  "fetchedAt": "2026-02-05T07:27:06.993Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Doge Is Helping Ethereum Solve Its Biggest Issue",
+      "link": "https://cryptopanic.com/news/dogecoin/1115686/Doge-Is-Helping-Ethereum-Solve-Its-Biggest-Issue",
+      "pubDate": "2018-02-18T10:00:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

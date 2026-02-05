@@ -1,0 +1,61 @@
+{
+  "date": "2018-12-04",
+  "fetchedAt": "2026-02-05T07:27:06.992Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "TRON Nearly Triples Ethereum’s Transaction Number and More Announced in TRON’s Weekly Report",
+      "link": "https://cryptopanic.com/news/3875329/TRON-Nearly-Triples-Ethereums-Transaction-Number-and-More-Announced-in-TRONs-Weekly-Report",
+      "pubDate": "2018-12-04T13:29:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "A New Litecoin Whale Moves 60% of Coin’s Market Cap in One Day",
+      "link": "https://cryptopanic.com/news/3875112/A-New-Litecoin-Whale-Moves-60-of-Coins-Market-Cap-in-One-Day",
+      "pubDate": "2018-12-04T12:59:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogecoin Creator Creates a Twitter Script that Blocks the XRP Army",
+      "link": "https://cryptopanic.com/news/dogecoin/3872103/Dogecoin-Creator-Creates-a-Twitter-Script-that-Blocks-the-XRP-Army",
+      "pubDate": "2018-12-04T05:00:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

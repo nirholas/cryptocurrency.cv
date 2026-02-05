@@ -1,0 +1,98 @@
+{
+  "date": "2019-05-16",
+  "fetchedAt": "2026-02-05T07:27:06.810Z",
+  "articleCount": 5,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tether Ordered to Freeze Transfers to Bitfinex by New York Supreme Court",
+      "link": "https://cryptopanic.com/news/5445880/Tether-Ordered-to-Freeze-Transfers-to-Bitfinex-by-New-York-Supreme-Court",
+      "pubDate": "2019-05-16T23:33:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 8
+      }
+    },
+    {
+      "title": "Trading Expert Suggests Bitcoin Cash Price Is on the Verge of a Breakout",
+      "link": "https://cryptopanic.com/news/5443952/Trading-Expert-Suggests-Bitcoin-Cash-Price-Is-on-the-Verge-of-a-Breakout",
+      "pubDate": "2019-05-16T19:05:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "BCH",
+        "XVG"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "\"NO DOUBT BCH will overtake Bitcoin\" Ripple XRP Angel to Binance Board | Roger Ver Interview",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/5442580/NO-DOUBT-BCH-will-overtake-Bitcoin-Ripple-XRP-Angel-to-Binance-Board-Roger-Ver-Interview",
+      "pubDate": "2019-05-16T16:36:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Opera Will Soon Add Tron Support to Its In-Browser Crypto Wallet",
+      "link": "https://cryptopanic.com/news/tron/5440897/Opera-Will-Soon-Add-Tron-Support-to-Its-In-Browser-Crypto-Wallet",
+      "pubDate": "2019-05-16T14:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "What Is Dash Cryptocurrency? The Ultimate Guide",
+      "link": "https://cryptopanic.com/news/5438748/What-Is-Dash-Cryptocurrency-The-Ultimate-Guide",
+      "pubDate": "2019-05-16T10:09:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC",
+        "XMR",
+        "ZEC",
+        "DASH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

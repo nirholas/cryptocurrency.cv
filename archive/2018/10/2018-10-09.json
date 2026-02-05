@@ -1,0 +1,36 @@
+{
+  "date": "2018-10-09",
+  "fetchedAt": "2026-02-05T07:27:06.989Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ripple XRP \"Could Transform Global Commerce\"",
+      "link": "https://cryptopanic.com/news/ripple/3288249/Ripple-XRP-Could-Transform-Global-Commerce",
+      "pubDate": "2018-10-09T16:10:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    },
+    {
+      "title": "In some countries the credit rating system is not well-developed due to late credit industry development. Nearly 4…",
+      "link": "https://cryptopanic.com/news/3283628/In-some-countries-the-credit-rating-system-is-not-well-developed-due-to-late-credit-industry-development-Nearly-4",
+      "pubDate": "2018-10-09T08:45:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CTC"
+      ]
+    }
+  ]
+}

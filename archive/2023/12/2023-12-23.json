@@ -1,0 +1,494 @@
+{
+  "date": "2023-12-23",
+  "fetchedAt": "2026-02-05T07:27:08.081Z",
+  "articleCount": 32,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Downfall: Arthur Hayes Reveals What Will Make The Pioneer Crypto Fail",
+      "link": "https://cryptopanic.com/news/19129605/Bitcoin-Downfall-Arthur-Hayes-Reveals-What-Will-Make-The-Pioneer-Crypto-Fail",
+      "pubDate": "2023-12-23T23:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BNB",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Whales Bet Big on Ripple, Accumulate 360 Million XRP",
+      "link": "https://cryptopanic.com/news/19129549/Whales-Bet-Big-on-Ripple-Accumulate-360-Million-XRP",
+      "pubDate": "2023-12-23T21:48:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Whales appear to leverage the stagnant price action of XRP to secure discounted purchases. The most recent acquisition of over 360 million tokens coincides with amplified censure aimed at the US Securities and Exchange Commission (SEC) by Ripple executives. Over the past week, crypto whales were spotted buying XRP aggressively, signaling that a spike in price volatility is...",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple CTO Makes 5 Bold Predictions for Blockchain In 2024 — XRP Massive Adoption In The Offing",
+      "link": "https://cryptopanic.com/news/19129566/Ripple-CTO-Makes-5-Bold-Predictions-for-Blockchain-In-2024-XRP-Massive-Adoption-In-The-Offing",
+      "pubDate": "2023-12-23T21:41:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Notably, Schwartz emphasized the pivotal role of the XRP Ledger (XRPL), suggesting it could be instrumental in driving mainstream adoption.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Craig Wright ordered to pay $1 million as lawsuit takes new twist",
+      "link": "https://cryptopanic.com/news/bitcoin/19129485/Craig-Wright-ordered-to-pay-1-million-as-lawsuit-takes-new-twist",
+      "pubDate": "2023-12-23T20:18:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "In the unfolding legal saga surrounding the identity of Satoshi Nakamoto and the rights to Bitcoin, a recent development has shifted the focus. A British judge has rescheduled the trial between Craig Wright, who claimed to be Satoshi Nakamoto in 2016, and Bitcoin Core developers to February 5. Wright’s legal battle involves a lawsuit against […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana’s SOL Rallies Past $100, Continuing Torrid Month",
+      "link": "https://cryptopanic.com/news/19129465/Solanas-SOL-Rallies-Past-100-Continuing-Torrid-Month",
+      "pubDate": "2023-12-23T19:47:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Memecoin traders and airdrop farmers are bringing more attention to Solana.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana Smashes Past $100 for First Time Since April 2022",
+      "link": "https://cryptopanic.com/news/19129439/Solana-Smashes-Past-100-for-First-Time-Since-April-2022",
+      "pubDate": "2023-12-23T19:25:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Continuing its recent ascent, Solana pushed past the $100 mark Saturday to set a 20-month high, surpassing recent Bitcoin and Ethereum gains.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DAI Whitepaper: Creative and Robust Financial Tools for the Digital Age",
+      "link": "https://cryptopanic.com/news/19129390/DAI-Whitepaper-Creative-and-Robust-Financial-Tools-for-the-Digital-Age",
+      "pubDate": "2023-12-23T18:27:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "DAI"
+      ]
+    },
+    {
+      "title": "$10 Million Worth Of Dogecoin Exit Robinhood – What This Could Mean For Price",
+      "link": "https://cryptopanic.com/news/blockstack/19129359/10-Million-Worth-Of-Dogecoin-Exit-Robinhood-What-This-Could-Mean-For-Price",
+      "pubDate": "2023-12-23T18:00:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "STX",
+        "BONK"
+      ]
+    },
+    {
+      "title": "ALGO Blows Up To 42-Week High, Delighting Algorand Fans",
+      "link": "https://cryptopanic.com/news/19129236/ALGO-Blows-Up-To-42-Week-High-Delighting-Algorand-Fans",
+      "pubDate": "2023-12-23T16:00:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "ALGO",
+        "STX",
+        "BONK"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ethereum (ETH) Primed To Outperform Bitcoin (BTC) in 2024, According to Macro Guru Raoul Pal – Here’s Why",
+      "link": "https://cryptopanic.com/news/19129216/Ethereum-ETH-Primed-To-Outperform-Bitcoin-BTC-in-2024-According-to-Macro-Guru-Raoul-Pal-Heres-Why",
+      "pubDate": "2023-12-23T15:30:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Former Goldman Sachs executive Raoul Pal is predicting that Ethereum (ETH) will outperform Bitcoin (BTC) in 2024. The Real Vision CEO tells his one million followers on the social media platform X that Ethereum against Bitcoin (ETH/BTC) may repeat a similar 2021 bull market price pattern next year. “For all the ETH bears, in February […]",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto expert Ali Martinez: Breakthrough needed for MATIC’s growth",
+      "link": "https://cryptopanic.com/news/fantom/19129202/Crypto-expert-Ali-Martinez-Breakthrough-needed-for-MATICs-growth",
+      "pubDate": "2023-12-23T15:14:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MATIC",
+        "FTM",
+        "OP"
+      ]
+    },
+    {
+      "title": "Immutable X Whitepaper: Transforming the NFT Marketplace",
+      "link": "https://cryptopanic.com/news/19129180/Immutable-X-Whitepaper-Transforming-the-NFT-Marketplace",
+      "pubDate": "2023-12-23T15:02:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "IMX"
+      ]
+    },
+    {
+      "title": "Optimism And Immutable Price Rally Continues With Monthly Gains Of Over 75%",
+      "link": "https://cryptopanic.com/news/19129133/Optimism-And-Immutable-Price-Rally-Continues-With-Monthly-Gains-Of-Over-75",
+      "pubDate": "2023-12-23T14:20:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "IMX",
+        "OP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Investors in Ethereum Classic and Polkadot are migrating to a new cryptocurrency.",
+      "link": "https://cryptopanic.com/news/ethereum-classic/19129128/Investors-in-Ethereum-Classic-and-Polkadot-are-migrating-to-a-new-cryptocurrency",
+      "pubDate": "2023-12-23T14:13:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DOT",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Economy Swelled by $909 Billion This Year — INJ and KAS Lead 2023’s Explosive Growth",
+      "link": "https://cryptopanic.com/news/19129111/Crypto-Economy-Swelled-by-909-Billion-This-Year-INJ-and-KAS-Lead-2023s-Explosive-Growth",
+      "pubDate": "2023-12-23T14:03:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "INJ",
+        "KAS"
+      ]
+    },
+    {
+      "title": "Alert: Bitcoin on-chain data hints ‘whales are taking profits’",
+      "link": "https://cryptopanic.com/news/19129096/Alert-Bitcoin-on-chain-data-hints-whales-are-taking-profits",
+      "pubDate": "2023-12-23T13:59:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin (BTC) seems to have carved a local top in the $44,000 price zone, while on-chain whale activity hints at … Continued",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "ChatGPT predicts Cosmos (ATOM) price for start of 2024",
+      "link": "https://cryptopanic.com/news/19129044/ChatGPT-predicts-Cosmos-ATOM-price-for-start-of-2024",
+      "pubDate": "2023-12-23T13:05:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ]
+    },
+    {
+      "title": "Ethereum (ETH) Could Lead to A Fresh All-Time High in 2024;  Upcoming Rally for Kaspa (KAS) and InQubeta (QUBE)",
+      "link": "https://cryptopanic.com/news/19129039/Ethereum-ETH-Could-Lead-to-A-Fresh-All-Time-High-in-2024-Upcoming-Rally-for-Kaspa-KAS-and-InQubeta-QUBE",
+      "pubDate": "2023-12-23T13:05:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "KAS"
+      ]
+    },
+    {
+      "title": "Solana dethrones BNB to rank as the top 4th cryptocurrency globally",
+      "link": "https://cryptopanic.com/news/19128973/Solana-dethrones-BNB-to-rank-as-the-top-4th-cryptocurrency-globally",
+      "pubDate": "2023-12-23T12:09:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Solana (SOL) just reached a new milestone as the fourth most valuable cryptocurrency. This happens amid a fantastic year for … Continued",
+      "currencies": [
+        "BNB",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Internet Computer’s Rise in the Crypto Market",
+      "link": "https://cryptopanic.com/news/internet-computer/19128972/Internet-Computers-Rise-in-the-Crypto-Market",
+      "pubDate": "2023-12-23T12:02:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ]
+    },
+    {
+      "title": "Rumbling Ahead: Avalanche (AVAX) Set To Surge 20% Before Cooling Off – Details",
+      "link": "https://cryptopanic.com/news/blockstack/19128910/Rumbling-Ahead-Avalanche-AVAX-Set-To-Surge-20-Before-Cooling-Off-Details",
+      "pubDate": "2023-12-23T11:00:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "AVAX",
+        "OP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cosmos Stacks Developers Lend Helping Hand For Terra Luna Classic (LUNC) Revival",
+      "link": "https://cryptopanic.com/news/blockstack/19128889/Cosmos-Stacks-Developers-Lend-Helping-Hand-For-Terra-Luna-Classic-LUNC-Revival",
+      "pubDate": "2023-12-23T10:52:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STX",
+        "LUNC"
+      ]
+    },
+    {
+      "title": "‘Brace for a Strong Rally’ – Trader Says Ethereum Rival Has Entered Bullish Zone, Could Surge by Double Digits",
+      "link": "https://cryptopanic.com/news/fantom/19128856/Brace-for-a-Strong-Rally-Trader-Says-Ethereum-Rival-Has-Entered-Bullish-Zone-Could-Surge-by-Double-Digits",
+      "pubDate": "2023-12-23T10:15:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MATIC",
+        "FTM"
+      ]
+    },
+    {
+      "title": "AI Token Internet Computer (ICP) Cracks CMC Top 20; Is $7 Million Phenomenon Next?",
+      "link": "https://cryptopanic.com/news/internet-computer/19128927/AI-Token-Internet-Computer-ICP-Cracks-CMC-Top-20-Is-7-Million-Phenomenon-Next",
+      "pubDate": "2023-12-23T10:09:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ICP",
+        "OP"
+      ]
+    },
+    {
+      "title": "BitTorrent Coin: Will BitTorrent Coin Hit $1?",
+      "link": "https://cryptopanic.com/news/19128820/BitTorrent-Coin-Will-BitTorrent-Coin-Hit-1",
+      "pubDate": "2023-12-23T09:57:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTT"
+      ]
+    },
+    {
+      "title": "Understanding the Ebb and Flow of SOL Price in Thriving Cryptocurrency Exchanges",
+      "link": "https://cryptopanic.com/news/19128818/Understanding-the-Ebb-and-Flow-of-SOL-Price-in-Thriving-Cryptocurrency-Exchanges",
+      "pubDate": "2023-12-23T07:02:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "The blockchain aligned with GDPR is coming.",
+      "link": "https://cryptopanic.com/news/internet-computer/19128663/The-blockchain-aligned-with-GDPR-is-coming",
+      "pubDate": "2023-12-23T07:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ]
+    },
+    {
+      "title": "The Graph: the on-chain data indexing protocol aims to expand its services in the crypto world.",
+      "link": "https://cryptopanic.com/news/the-graph/19128664/The-Graph-the-on-chain-data-indexing-protocol-aims-to-expand-its-services-in-the-crypto-world",
+      "pubDate": "2023-12-23T07:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "GRT"
+      ]
+    },
+    {
+      "title": "Solana Saga Orders Scrapped As $30 Million BONK Token Package Overshadows Device’s Value",
+      "link": "https://cryptopanic.com/news/blockstack/19128539/Solana-Saga-Orders-Scrapped-As-30-Million-BONK-Token-Package-Overshadows-Devices-Value",
+      "pubDate": "2023-12-23T03:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "STX"
+      ]
+    },
+    {
+      "title": "Solana Ramps Up For Paxos’ Stablecoin Expansion With NYDFS’s Positive Nod For January 2024",
+      "link": "https://cryptopanic.com/news/19128469/Solana-Ramps-Up-For-Paxos-Stablecoin-Expansion-With-NYDFSs-Positive-Nod-For-January-2024",
+      "pubDate": "2023-12-23T00:30:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "In a significant development for the stablecoin industry, Paxos, one of the largest stablecoin issuers, has received regulatory approval to extend its product offering to the Solana (SOL) blockchain. The expansion, scheduled to launch on January 17, 2024, follows a directive from the financial regulator ordering Paxos to halt the minting of Binance’s BUSD tokens […]",
+      "currencies": [
+        "BUSD",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana Soars, Sparking Speculation: Can the ‘Ethereum Killer’ Live Up to the Hype?",
+      "link": "https://cryptopanic.com/news/19128453/Solana-Soars-Sparking-Speculation-Can-the-Ethereum-Killer-Live-Up-to-the-Hype",
+      "pubDate": "2023-12-23T00:07:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "SOL’s YTD performance is an 809.50% increase after starting the year below $10. Solana’s TVL has been recovering, but Ethereum stays on top of other chains. SOL may hit $100 before the year ends if the accumulation of the token increases. Solana (SOL), one of the top 10 cryptocurrencies in the market, is showing gains. […]",
+      "currencies": [
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Countdown To Bitcoin ETF 2024 Decision: Traders Employ Hedging Tactics, Bloomberg Unveils",
+      "link": "https://cryptopanic.com/news/blockstack/19128451/Countdown-To-Bitcoin-ETF-2024-Decision-Traders-Employ-Hedging-Tactics-Bloomberg-Unveils",
+      "pubDate": "2023-12-23T00:00:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    }
+  ]
+}

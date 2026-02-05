@@ -1,0 +1,25 @@
+{
+  "date": "2019-07-06",
+  "fetchedAt": "2026-02-05T07:27:07.000Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Monero Devs Disclose Nine XMR Bugs That Could Have Allowed Stealing XMR from Exchanges",
+      "link": "https://cryptopanic.com/news/monero/5936159/Monero-Devs-Disclose-Nine-XMR-Bugs-That-Could-Have-Allowed-Stealing-XMR-from-Exchanges",
+      "pubDate": "2019-07-06T11:10:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

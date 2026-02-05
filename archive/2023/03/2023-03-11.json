@@ -1,0 +1,889 @@
+{
+  "date": "2023-03-11",
+  "fetchedAt": "2026-02-05T07:27:07.345Z",
+  "articleCount": 65,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Let it be known that #Syscoin and the foundation are unaffected by the #SVBCollapse or other banking troubles of th…",
+      "link": "https://cryptopanic.com/news/17854685/Let-it-be-known-that-Syscoin-and-the-foundation-are-unaffected-by-the-SVBCollapse-or-other-banking-troubles-of-th",
+      "pubDate": "2023-03-11T23:46:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "SYS"
+      ]
+    },
+    {
+      "title": "Circle To ‘Stand Behind’ USDC, Cover $3.3 Billion Shortfall Held in Silicon Valley Bank",
+      "link": "https://cryptopanic.com/news/17854598/Circle-To-Stand-Behind-USDC-Cover-33-Billion-Shortfall-Held-in-Silicon-Valley-Bank",
+      "pubDate": "2023-03-11T22:26:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Circle stated it would use corporate resources and \"external capital if necessary\" to ensure that USDC is redeemable for the US Dollar at a 1:1 ratio.",
+      "currencies": [
+        "USDC"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "This is Europe’s Most Crypto-Curious Country (Study)",
+      "link": "https://cryptopanic.com/news/17854580/This-is-Europes-Most-Crypto-Curious-Country-Study",
+      "pubDate": "2023-03-11T22:03:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Dua Crypto determined that the Netherlands, Slovenia, and Switzerland are the most crypto-curious nations in Europe.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @ReggieMiddleton: On Jan. 6 I said what would happen if @Circle had a bank run during rapidly rising rates. Their reserves have historic…",
+      "link": "https://cryptopanic.com/news/17854544/RT-ReggieMiddleton-On-Jan-6-I-said-what-would-happen-if-Circle-had-a-bank-run-during-rapidly-rising-rates-Their-reserves-have-historic",
+      "pubDate": "2023-03-11T21:44:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "VERI"
+      ]
+    },
+    {
+      "title": "RT @ReggieMiddleton: Follow this snake in order to follow the contagion!",
+      "link": "https://cryptopanic.com/news/17854542/RT-ReggieMiddleton-Follow-this-snake-in-order-to-follow-the-contagion",
+      "pubDate": "2023-03-11T21:43:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VERI"
+      ]
+    },
+    {
+      "title": "Just listed @SingularityNET on VentiSwap! AGIX is currently able to be swapped with #USDT with further pairings to…",
+      "link": "https://cryptopanic.com/news/17858404/Just-listed-SingularityNET-on-VentiSwap-AGIX-is-currently-able-to-be-swapped-with-USDT-with-further-pairings-to",
+      "pubDate": "2023-03-11T21:43:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "AGIX"
+      ]
+    },
+    {
+      "title": "JUST IN: $USDD @usddio now on top 10 purchased tokens among 500 biggest #ETH whales in the last 24hrs Peep the t…",
+      "link": "https://cryptopanic.com/news/usdd/17855449/JUST-IN-USDD-usddio-now-on-top-10-purchased-tokens-among-500-biggest-ETH-whales-in-the-last-24hrs-Peep-the-t",
+      "pubDate": "2023-03-11T21:30:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDD",
+        "BBW"
+      ]
+    },
+    {
+      "title": "RT @CielProtocol: Want to earn some gold without having to buy it? Ciel Protocol has got you covered with $PAXG as one of the twelve…",
+      "link": "https://cryptopanic.com/news/pax-gold/17858286/RT-CielProtocol-Want-to-earn-some-gold-without-having-to-buy-it-Ciel-Protocol-has-got-you-covered-with-PAXG-as-one-of-the-twelve",
+      "pubDate": "2023-03-11T21:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PAXG",
+        "TRFX"
+      ]
+    },
+    {
+      "title": "USDC will remain redeemable 1 for 1 with U.S. dollar, Circle says",
+      "link": "https://cryptopanic.com/news/17854470/USDC-will-remain-redeemable-1-for-1-with-US-dollar-Circle-says",
+      "pubDate": "2023-03-11T20:54:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "The USDC issuer said its operations will resume as usual on Monday and that the stablecoin will remain redeemable one-for-one with the U.S. dollar after Silicon Valley Bank collapsed.",
+      "currencies": [
+        "USDC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$22 Trillion in US Banking System Backed by Just $225 Billion at FDIC: Bitcoin Proponent Gabor Gurbacs",
+      "link": "https://cryptopanic.com/news/bitcoin/17854452/22-Trillion-in-US-Banking-System-Backed-by-Just-225-Billion-at-FDIC-Bitcoin-Proponent-Gabor-Gurbacs",
+      "pubDate": "2023-03-11T20:46:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A strategy advisor at Vaneck/MVIS is highlighting the disparity between the money held at the Federal Deposit Insurance Corporation (FDIC) and the amount of money sitting in the US banking system. In a series of viral tweets, Gabor Gurbacs examines the latest data from the FDIC – a US agency whose mission is to maintain […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @knowcryptoshow: Beware of phishing attacks in the wake of the Silicon Valley Bank collapse. Don't click on any links or attachments in…",
+      "link": "https://cryptopanic.com/news/17854401/RT-knowcryptoshow-Beware-of-phishing-attacks-in-the-wake-of-the-Silicon-Valley-Bank-collapse-Dont-click-on-any-links-or-attachments-in",
+      "pubDate": "2023-03-11T20:27:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DIVI"
+      ]
+    },
+    {
+      "title": "USDC slowly repegs on unconfirmed reports of SVB resolution",
+      "link": "https://cryptopanic.com/news/17854305/USDC-slowly-repegs-on-unconfirmed-reports-of-SVB-resolution",
+      "pubDate": "2023-03-11T19:21:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "According to insiders, 50% of uninsured deposits will be paid out by next week.",
+      "currencies": [
+        "USDC"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ICYMI: We're now offering support for Civic Pass on Ethereum and Polygon. Now you can protect your community from b…",
+      "link": "https://cryptopanic.com/news/17854266/ICYMI-Were-now-offering-support-for-Civic-Pass-on-Ethereum-and-Polygon-Now-you-can-protect-your-community-from-b",
+      "pubDate": "2023-03-11T19:10:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "CVC"
+      ]
+    },
+    {
+      "title": "ATOM bulls watch closely as Cosmos interchain security prepares for March 15 launch",
+      "link": "https://cryptopanic.com/news/17854246/ATOM-bulls-watch-closely-as-Cosmos-interchain-security-prepares-for-March-15-launch",
+      "pubDate": "2023-03-11T19:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Cosmos governance has approved the v9-Lambda upgrade, including interchain security and possibly kicking off a “virtuous real yield cycle.”",
+      "currencies": [
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @ChannelVeritas: @ReggieMiddleton @ReggieMiddleton aka ‘The Godfather’ remember when you red-pilled Coinbase/MakerDao October 2022 - Tod…",
+      "link": "https://cryptopanic.com/news/17854087/RT-ChannelVeritas-ReggieMiddleton-ReggieMiddleton-aka-The-Godfather-remember-when-you-red-pilled-CoinbaseMakerDao-October-2022-Tod",
+      "pubDate": "2023-03-11T17:41:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "VERI"
+      ]
+    },
+    {
+      "title": "The medical applications for this technology are often overlooked but its a sector we believe has a world of oppurt…",
+      "link": "https://cryptopanic.com/news/17857134/The-medical-applications-for-this-technology-are-often-overlooked-but-its-a-sector-we-believe-has-a-world-of-oppurt",
+      "pubDate": "2023-03-11T17:16:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HERO"
+      ]
+    },
+    {
+      "title": "RT @lucianmincu: Always in the front row when it comes to supporting the next wave of builders entering Web3 ️",
+      "link": "https://cryptopanic.com/news/elrond-erd-2/17857207/RT-lucianmincu-Always-in-the-front-row-when-it-comes-to-supporting-the-next-wave-of-builders-entering-Web3",
+      "pubDate": "2023-03-11T17:03:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EGLD",
+        "WEGLD"
+      ]
+    },
+    {
+      "title": "Prediction markets rely on natural language questions, ones that have messier logic than predictions around an asse…",
+      "link": "https://cryptopanic.com/news/17858317/Prediction-markets-rely-on-natural-language-questions-ones-that-have-messier-logic-than-predictions-around-an-asse",
+      "pubDate": "2023-03-11T17:00:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "UMA"
+      ]
+    },
+    {
+      "title": "#CEEK #Metaverse continues innovation in Music, Sports &amp; Entertainment. Bringing mainstream users to the #Metaverse…",
+      "link": "https://cryptopanic.com/news/17855667/CEEK-Metaverse-continues-innovation-in-Music-Sports-amp-Entertainment-Bringing-mainstream-users-to-the-Metaverse",
+      "pubDate": "2023-03-11T16:36:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CEEK"
+      ]
+    },
+    {
+      "title": "️VIP-102 Has succeeded and will execute in 48 hours. Please, take note this change will impact the borrow APY for…",
+      "link": "https://cryptopanic.com/news/17858405/VIP-102-Has-succeeded-and-will-execute-in-48-hours-Please-take-note-this-change-will-impact-the-borrow-APY-for",
+      "pubDate": "2023-03-11T16:07:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XVS",
+        "VAI"
+      ]
+    },
+    {
+      "title": "RT @ReggieMiddleton: @makerDAO scrambling to plug holes THEY CREATED in using centralized $USDC w/ counterparty/infringement risk. I warned…",
+      "link": "https://cryptopanic.com/news/17853856/RT-ReggieMiddleton-makerDAO-scrambling-to-plug-holes-THEY-CREATED-in-using-centralized-USDC-w-counterpartyinfringement-risk-I-warned",
+      "pubDate": "2023-03-11T15:31:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "VERI"
+      ]
+    },
+    {
+      "title": "Hackers Exploit Ethereum (ETH) Rival, Normal Activity Paused To Prevent Theft of More Tokens",
+      "link": "https://cryptopanic.com/news/17853863/Hackers-Exploit-Ethereum-ETH-Rival-Normal-Activity-Paused-To-Prevent-Theft-of-More-Tokens",
+      "pubDate": "2023-03-11T15:30:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Layer-1 blockchain Hedera (HBAR) had to pause normal activity this week due to a hack on its smart contract service code. The Ethereum (ETH) competitor acknowledged the exploit in a tweet on Thursday. “Today, attackers exploited the Smart Contract Service code of the Hedera mainnet to transfer Hedera Token Service tokens held by victims’ accounts […]",
+      "currencies": [
+        "ETH",
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @ReggieMiddleton: Six months ago I warned that @coinbase customers &amp; shareholders are taking risks they aren't aware of. Coinbase accoun…",
+      "link": "https://cryptopanic.com/news/17853820/RT-ReggieMiddleton-Six-months-ago-I-warned-that-coinbase-customers-amp-shareholders-are-taking-risks-they-arent-aware-of-Coinbase-accoun",
+      "pubDate": "2023-03-11T15:06:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "VERI"
+      ]
+    },
+    {
+      "title": "USDC Stablecoin Falls to 87 Cents After Circle Discloses Exposure to Silicon Valley Bank",
+      "link": "https://cryptopanic.com/news/usdd/17853761/USDC-Stablecoin-Falls-to-87-Cents-After-Circle-Discloses-Exposure-to-Silicon-Valley-Bank",
+      "pubDate": "2023-03-11T14:27:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "USDD"
+      ]
+    },
+    {
+      "title": "RT @BannersNft: We're in the final stages of preparation for @callthe_banners S4, our @lootproject inspired, @G7_DAO funded, CC0 discord g…",
+      "link": "https://cryptopanic.com/news/17855206/RT-BannersNft-Were-in-the-final-stages-of-preparation-for-callthe_banners-S4-our-lootproject-inspired-G7_DAO-funded-CC0-discord-g?mtm_campaign=API-OFA",
+      "pubDate": "2023-03-11T14:09:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "AGLD"
+      ]
+    },
+    {
+      "title": "Need funds? Try Bitfinex Borrow ⬇️ Get a loan using your crypto, fiat or even Tether Gold as collateral! It’s e…",
+      "link": "https://cryptopanic.com/news/leo-token/17853663/Need-funds-Try-Bitfinex-Borrow-Get-a-loan-using-your-crypto-fiat-or-even-Tether-Gold-as-collateral-Its-e",
+      "pubDate": "2023-03-11T14:00:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "LEO",
+        "XAUT"
+      ]
+    },
+    {
+      "title": "RT @chaos_labs: We are closely monitoring the situation with our partners to mitigate any concerns and will share more details as they beco…",
+      "link": "https://cryptopanic.com/news/17855387/RT-chaos_labs-We-are-closely-monitoring-the-situation-with-our-partners-to-mitigate-any-concerns-and-will-share-more-details-as-they-beco?mtm_campaign=API-OFA",
+      "pubDate": "2023-03-11T13:28:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QI",
+        "SAVAX"
+      ]
+    },
+    {
+      "title": "RT @coinlucidcom: *** Trading Alert *** 𝗕𝘂𝘆 XTZ Time to Long #XTZUSDT #TEZOS is at $0.985 with a volume of 29.1 at 202…",
+      "link": "https://cryptopanic.com/news/tezos/17857264/RT-coinlucidcom-Trading-Alert-Buy-XTZ-Time-to-Long-XTZUSDT-TEZOS-is-at-0985-with-a-volume-of-291-at-202",
+      "pubDate": "2023-03-11T13:19:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "XTZ",
+        "NATAS"
+      ]
+    },
+    {
+      "title": "RT @WadeTeamer: You know, I do believe @ReggieMiddleton said this would happen. And I believe he SHOWED how it would happen. Always trust…",
+      "link": "https://cryptopanic.com/news/17853563/RT-WadeTeamer-You-know-I-do-believe-ReggieMiddleton-said-this-would-happen-And-I-believe-he-SHOWED-how-it-would-happen-Always-trust",
+      "pubDate": "2023-03-11T13:17:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VERI"
+      ]
+    },
+    {
+      "title": "RT @ReggieMiddleton: @elonmusk We should really talk! For real!",
+      "link": "https://cryptopanic.com/news/17853529/RT-ReggieMiddleton-elonmusk-We-should-really-talk-For-real",
+      "pubDate": "2023-03-11T13:01:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VERI"
+      ]
+    },
+    {
+      "title": "#Stablecoins don’t seem so *stable* anymore? Follow the market movement of $USDC in Multiply and take advantage of…",
+      "link": "https://cryptopanic.com/news/17858515/Stablecoins-dont-seem-so-stable-anymore-Follow-the-market-movement-of-USDC-in-Multiply-and-take-advantage-of",
+      "pubDate": "2023-03-11T12:54:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "WXT"
+      ]
+    },
+    {
+      "title": "What do you do to support the gender gap decrease in #Web3?",
+      "link": "https://cryptopanic.com/news/17858323/What-do-you-do-to-support-the-gender-gap-decrease-in-Web3",
+      "pubDate": "2023-03-11T12:42:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "UTK"
+      ]
+    },
+    {
+      "title": "RT @THORmaximalist: .@THORChain is the bank.",
+      "link": "https://cryptopanic.com/news/thorchain/17858115/RT-THORmaximalist-THORChain-is-the-bank",
+      "pubDate": "2023-03-11T12:37:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "RUNE"
+      ]
+    },
+    {
+      "title": "RT @TheRuneRanger: If you’re trying to speculate/arb on some stablecoins today $USDC, $BUSD, $DAI and $USDT are all available liquidity on…",
+      "link": "https://cryptopanic.com/news/thorchain/17858116/RT-TheRuneRanger-If-youre-trying-to-speculatearb-on-some-stablecoins-today-USDC-BUSD-DAI-and-USDT-are-all-available-liquidity-on",
+      "pubDate": "2023-03-11T12:37:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "DAI",
+        "RUNE"
+      ]
+    },
+    {
+      "title": "RT @HouseofChimera: How secure is @zilliqa? The $ZIL ecosystem utilizes various layers of defence to ensure network security. The networ…",
+      "link": "https://cryptopanic.com/news/zilliqa/17858649/RT-HouseofChimera-How-secure-is-zilliqa-The-ZIL-ecosystem-utilizes-various-layers-of-defence-to-ensure-network-security-The-networ",
+      "pubDate": "2023-03-11T12:25:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ZIL",
+        "GZIL"
+      ]
+    },
+    {
+      "title": "Cardano Founder Says Algorithmic Stablecoins Are Essential for Bitcoin (BTC) to Achieve Its Vision",
+      "link": "https://cryptopanic.com/news/bitcoin/17853448/Cardano-Founder-Says-Algorithmic-Stablecoins-Are-Essential-for-Bitcoin-BTC-to-Achieve-Its-Vision",
+      "pubDate": "2023-03-11T12:08:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "This comes in wake of embattled Silvergate and Silicon Valley Bank (SVB) buzz",
+      "currencies": [
+        "BTC",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 6
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @ReggieMiddleton: I'm not going to say \"I told you so!\", but I am going to walk you through a literal landmine of existential risks, tha…",
+      "link": "https://cryptopanic.com/news/17853423/RT-ReggieMiddleton-Im-not-going-to-say-I-told-you-so-but-I-am-going-to-walk-you-through-a-literal-landmine-of-existential-risks-tha",
+      "pubDate": "2023-03-11T12:00:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VERI"
+      ]
+    },
+    {
+      "title": "RT @wingriderscom: Riders, we are continuously improving and are glad to present you the new dashboard of the latest TVL/APR on #WingRiders…",
+      "link": "https://cryptopanic.com/news/17858528/RT-wingriderscom-Riders-we-are-continuously-improving-and-are-glad-to-present-you-the-new-dashboard-of-the-latest-TVLAPR-on-WingRiders",
+      "pubDate": "2023-03-11T11:57:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "WMT"
+      ]
+    },
+    {
+      "title": "Splinterlands - We need more filters on the Battle Formation page",
+      "link": "https://cryptopanic.com/news/17854481/Splinterlands-We-need-more-filters-on-the-Battle-Formation-page",
+      "pubDate": "2023-03-11T11:45:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SPS"
+      ]
+    },
+    {
+      "title": "Quant (#QNT) Bucks Trend With 10% Gain & Amidst #Crypto Market Bloodbath #CryptoMarket #CryptoNews #QUANT",
+      "link": "https://cryptopanic.com/news/quant-network/17858298/Quant-QNT-Bucks-Trend-With-10-Gain-amp-Amidst-Crypto-Market-Bloodbath-CryptoMarket-CryptoNews-QUANT",
+      "pubDate": "2023-03-11T11:34:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QNT",
+        "TWJ"
+      ]
+    },
+    {
+      "title": "Theta community - you may have seen some unusual activity in our Discord today. An admin acct was hacked, and they…",
+      "link": "https://cryptopanic.com/news/17858114/Theta-community-you-may-have-seen-some-unusual-activity-in-our-Discord-today-An-admin-acct-was-hacked-and-they",
+      "pubDate": "2023-03-11T11:25:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Circle’s USDC instability causes domino effect on DAI, USDD stablecoins",
+      "link": "https://cryptopanic.com/news/usdd/17853297/Circles-USDC-instability-causes-domino-effect-on-DAI-USDD-stablecoins",
+      "pubDate": "2023-03-11T10:44:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "BUSD"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Which crypto wallet allows you to store, send and receive tokens on the digitalbits blockchain? ️🤔",
+      "link": "https://cryptopanic.com/news/17856045/Which-crypto-wallet-allows-you-to-store-send-and-receive-tokens-on-the-digitalbits-blockchain",
+      "pubDate": "2023-03-11T10:23:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XDB"
+      ]
+    },
+    {
+      "title": "SEC Chairman @GaryGensler recently commented that, except for Bitcoin, all crypto are securities How does the ba…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/17855549/SEC-Chairman-GaryGensler-recently-commented-that-except-for-Bitcoin-all-crypto-are-securities-How-does-the-ba",
+      "pubDate": "2023-03-11T10:09:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "RT @beniaminmincu: Monitoring the US & SVB situation. Temporary storm unfolding. Potential systemic level risk apparent & rising. SVB goi…",
+      "link": "https://cryptopanic.com/news/elrond-erd-2/17857208/RT-beniaminmincu-Monitoring-the-US-amp-SVB-situation-Temporary-storm-unfolding-Potential-systemic-level-risk-apparent-amp-rising-SVB-goi",
+      "pubDate": "2023-03-11T10:04:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EGLD",
+        "WEGLD"
+      ]
+    },
+    {
+      "title": "How to convert HI into cash you can spend into the card?",
+      "link": "https://cryptopanic.com/news/17861073/How-to-convert-HI-into-cash-you-can-spend-into-the-card",
+      "pubDate": "2023-03-11T10:04:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HI"
+      ]
+    },
+    {
+      "title": "RT @iceman00008: Reminder: how to easily check @THORChain ‘s solvency. Fully on-chain, fully transparent.",
+      "link": "https://cryptopanic.com/news/thorchain/17858117/RT-iceman00008-Reminder-how-to-easily-check-THORChain-s-solvency-Fully-on-chain-fully-transparent",
+      "pubDate": "2023-03-11T09:44:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "RUNE"
+      ]
+    },
+    {
+      "title": "Check out our Medium article about how Warrior Orc Level 1 made his way to the Battle Arena!…",
+      "link": "https://cryptopanic.com/news/17857390/Check-out-our-Medium-article-about-how-Warrior-Orc-Level-1-made-his-way-to-the-Battle-Arena",
+      "pubDate": "2023-03-11T09:42:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ORC"
+      ]
+    },
+    {
+      "title": "RT @mave99a: \"AI prompt engineering has the potential to revolutionize LLM-based applications! But relying solely on OpenAI API call warper…",
+      "link": "https://cryptopanic.com/news/17855326/RT-mave99a-AI-prompt-engineering-has-the-potential-to-revolutionize-LLM-based-applications-But-relying-solely-on-OpenAI-API-call-warper?mtm_campaign=API-OFA",
+      "pubDate": "2023-03-11T08:34:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ABT"
+      ]
+    },
+    {
+      "title": "RT @mave99a: \"AI prompt engineering is the future for LLM applications but a mere OpenAI API call isn't enough! With ArcBlock AIKit, buildi…",
+      "link": "https://cryptopanic.com/news/17855327/RT-mave99a-AI-prompt-engineering-is-the-future-for-LLM-applications-but-a-mere-OpenAI-API-call-isnt-enough-With-ArcBlock-AIKit-buildi?mtm_campaign=API-OFA",
+      "pubDate": "2023-03-11T08:34:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ABT"
+      ]
+    },
+    {
+      "title": "To mitigate potential counterpart risks and market risks, we have paused minting $USX from LSR for the time-being.…",
+      "link": "https://cryptopanic.com/news/17852568/To-mitigate-potential-counterpart-risks-and-market-risks-we-have-paused-minting-USX-from-LSR-for-the-time-being",
+      "pubDate": "2023-03-11T08:02:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDX"
+      ]
+    },
+    {
+      "title": "USDC investor shells out $2M to receive $0.05 USDT trying to evade crash",
+      "link": "https://cryptopanic.com/news/17850227/USDC-investor-shells-out-2M-to-receive-005-USDT-trying-to-evade-crash",
+      "pubDate": "2023-03-11T07:42:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "UNI"
+      ]
+    },
+    {
+      "title": "RT @paoloardoino: #tether doesn't have any exposure to SVB",
+      "link": "https://cryptopanic.com/news/17849743/RT-paoloardoino-tether-doesnt-have-any-exposure-to-SVB?mtm_campaign=API-OFA",
+      "pubDate": "2023-03-11T07:28:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "XAUT",
+        "EURt",
+        "USDTE",
+        "CEUSDT",
+        "MXNT",
+        "GBPT",
+        "ZUSDT"
+      ]
+    },
+    {
+      "title": "For those curious, we are fortunate to not be exposed to SVB or Silvergate in any form. We hope for a positive outc…",
+      "link": "https://cryptopanic.com/news/17852834/For-those-curious-we-are-fortunate-to-not-be-exposed-to-SVB-or-Silvergate-in-any-form-We-hope-for-a-positive-outc",
+      "pubDate": "2023-03-11T06:38:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WOO"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: To all the techbros that just lost it all in SVB. Do you wish you'd used #cryptocurrency instead? We have stable coins…",
+      "link": "https://cryptopanic.com/news/17851846/RT-RichardHeartWin-To-all-the-techbros-that-just-lost-it-all-in-SVB-Do-you-wish-youd-used-cryptocurrency-instead-We-have-stable-coins?mtm_campaign=API-OFA",
+      "pubDate": "2023-03-11T04:50:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SATS"
+      ]
+    },
+    {
+      "title": "Why settle for low bank APYs when you can earn higher rewards by investing in crypto? With financial instability, s…",
+      "link": "https://cryptopanic.com/news/17851847/Why-settle-for-low-bank-APYs-when-you-can-earn-higher-rewards-by-investing-in-crypto-With-financial-instability-s?mtm_campaign=API-OFA",
+      "pubDate": "2023-03-11T04:50:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "SATS"
+      ]
+    },
+    {
+      "title": "Circle Confirms $3.3B of USDC's Cash Reserves Stuck at Failed Silicon Valley Bank",
+      "link": "https://cryptopanic.com/news/17847341/Circle-Confirms-33B-of-USDCs-Cash-Reserves-Stuck-at-Failed-Silicon-Valley-Bank",
+      "pubDate": "2023-03-11T03:52:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Silicon Valley Bank, one of the reserve banking partner for Circle's USDC stablecoin, was shut down by regulators on Friday.",
+      "currencies": [
+        "USDC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 20
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Circle says $3.3 billion of USDC reserves are with Silicon Valley Bank",
+      "link": "https://cryptopanic.com/news/17847303/Circle-says-33-billion-of-USDC-reserves-are-with-Silicon-Valley-Bank",
+      "pubDate": "2023-03-11T03:26:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Circle says USDC's exposure to Silicon Valley Bank stands at $3.3 billion.",
+      "currencies": [
+        "USDC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 10
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Band Protocol feeds actual market prices and do not treat $USDC as $1. We use reliable sources that report current…",
+      "link": "https://cryptopanic.com/news/17847994/Band-Protocol-feeds-actual-market-prices-and-do-not-treat-USDC-as-1-We-use-reliable-sources-that-report-current",
+      "pubDate": "2023-03-11T03:04:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "GM! How do you spend your weekend?",
+      "link": "https://cryptopanic.com/news/17847555/GM-How-do-you-spend-your-weekend",
+      "pubDate": "2023-03-11T03:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NFT"
+      ]
+    },
+    {
+      "title": "USDC is in BIG TROUBLE - US BANKS are Collapsing",
+      "link": "https://cryptopanic.com/news/usd-coin/17846995/USDC-is-in-BIG-TROUBLE-US-BANKS-are-Collapsing",
+      "pubDate": "2023-03-11T01:58:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "USDC has 25% of USDC is being held in 6 different banks, one of which is SVB. With SBV collapsing after failing to raise capital is USDC in trouble? Will FDIC deposit insurance cover the hole? CORRECTION: USDC has 25% of CASH reserves spread between 6 banks. 25% of USDC is being held in 6 different banks, one of which is SVB ●▬▬▬▬▬▬▬Recommendations▬▬▬▬▬▬▬● 📖 Guides, tutorials and insights: https://boxmining.com/ Recommendation List: https://www.cryptoatlas.io/Boxmining 🌼Buy & Sell Bitcoin: htt",
+      "currencies": [
+        "USDC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Circle’s USDC Endured $1B of Net Redemptions Since Silicon Valley Bank's Shutdown",
+      "link": "https://cryptopanic.com/news/17847050/Circles-USDC-Endured-1B-of-Net-Redemptions-Since-Silicon-Valley-Banks-Shutdown",
+      "pubDate": "2023-03-11T01:01:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Stablecoin issuer Circle held an undisclosed amount of USDC’s cash reserves at failed Silicon Valley Bank.",
+      "currencies": [
+        "USDC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @gmsteele3: It’s a great morning to be in the UMAverse!! Woke up to 28.5% APY for staking @UMAprotocol and also reached 3X multiplier on…",
+      "link": "https://cryptopanic.com/news/17852558/RT-gmsteele3-Its-a-great-morning-to-be-in-the-UMAverse-Woke-up-to-285-APY-for-staking-UMAprotocol-and-also-reached-3X-multiplier-on",
+      "pubDate": "2023-03-11T00:26:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "UMA"
+      ]
+    },
+    {
+      "title": "USDC Stablecoin Depegs From $1; Circle Says Operations Are Normal",
+      "link": "https://cryptopanic.com/news/17846951/USDC-Stablecoin-Depegs-From-1-Circle-Says-Operations-Are-Normal",
+      "pubDate": "2023-03-11T00:01:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "USDC dropped to $0.973, its lowest level since the collapse of FTX.",
+      "currencies": [
+        "USDT",
+        "USDC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "An optimistic oracle such as UMA's is able to secure event contracts such as we see in RWA insurance or…",
+      "link": "https://cryptopanic.com/news/17852559/An-optimistic-oracle-such-as-UMAs-is-able-to-secure-event-contracts-such-as-we-see-in-RWA-insurance-or",
+      "pubDate": "2023-03-11T00:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "UMA"
+      ]
+    }
+  ]
+}

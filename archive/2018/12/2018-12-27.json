@@ -1,0 +1,26 @@
+{
+  "date": "2018-12-27",
+  "fetchedAt": "2026-02-05T07:27:06.998Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Blockchain Cuties Is the First Gaming Dapp to Be Launched on Tron Arcade",
+      "link": "https://cryptopanic.com/news/tron/4099571/Blockchain-Cuties-Is-the-First-Gaming-Dapp-to-Be-Launched-on-Tron-Arcade",
+      "pubDate": "2018-12-27T21:00:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

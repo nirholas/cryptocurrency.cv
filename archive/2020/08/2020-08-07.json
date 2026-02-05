@@ -1,0 +1,60 @@
+{
+  "date": "2020-08-07",
+  "fetchedAt": "2026-02-05T07:27:06.863Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Hacker swiped $1.7 million in second Ethereum Classic attack",
+      "link": "https://cryptopanic.com/news/9599430/Hacker-swiped-17-million-in-second-Ethereum-Classic-attack",
+      "pubDate": "2020-08-07T18:46:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "IOTA (MIOTA) Continues to Inch Closer to IOTA 2.0 Launch",
+      "link": "https://cryptopanic.com/news/9598923/IOTA-MIOTA-Continues-to-Inch-Closer-to-IOTA-20-Launch",
+      "pubDate": "2020-08-07T18:07:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Vechain (VET) Rolls Out Blockchain-Based Food Safety Solution",
+      "link": "https://cryptopanic.com/news/9598644/Vechain-VET-Rolls-Out-Blockchain-Based-Food-Safety-Solution",
+      "pubDate": "2020-08-07T17:35:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

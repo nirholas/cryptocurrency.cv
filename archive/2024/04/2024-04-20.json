@@ -1,0 +1,661 @@
+{
+  "date": "2024-04-20",
+  "fetchedAt": "2026-02-05T07:27:08.017Z",
+  "articleCount": 42,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Yuga Labs Sold Two Gaming IPs to Faraway",
+      "link": "https://cryptopanic.com/news/19423302/Yuga-Labs-Sold-Two-Gaming-IPs-to-Faraway",
+      "pubDate": "2024-04-20T23:39:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "MTL"
+      ]
+    },
+    {
+      "title": "New Stablecoin Bill Faces Criticism for Stifling Innovation and Breaching First Amendment",
+      "link": "https://cryptopanic.com/news/19423196/New-Stablecoin-Bill-Faces-Criticism-for-Stifling-Innovation-and-Breaching-First-Amendment",
+      "pubDate": "2024-04-20T21:25:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LUNC"
+      ]
+    },
+    {
+      "title": "New Solana Memecoin Flying Monkey (FLYMONK) Will Surge 3,500% Within 24 Hours, While SHIB and WIF Struggle",
+      "link": "https://cryptopanic.com/news/19423179/New-Solana-Memecoin-Flying-Monkey-FLYMONK-Will-Surge-3500-Within-24-Hours-While-SHIB-and-WIF-Struggle",
+      "pubDate": "2024-04-20T20:58:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Shiba Inu (SHIB) and DogWifHat (WIF) have struggled to build momentum in recent weeks, while...",
+      "currencies": [
+        "SOL",
+        "SHIB",
+        "WIF"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Persistence One – Cosmos Liquid Staking & Restaking",
+      "link": "https://cryptopanic.com/news/19423300/Persistence-One-Cosmos-Liquid-Staking-Restaking",
+      "pubDate": "2024-04-20T20:50:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XPRT"
+      ]
+    },
+    {
+      "title": "Sleepy Shiba (SLESHIB) Will Rally 13,000%, Challenge SHIB and BOME With Huge MEXC Listing",
+      "link": "https://cryptopanic.com/news/19423144/Sleepy-Shiba-SLESHIB-Will-Rally-13000-Challenge-SHIB-and-BOME-With-Huge-MEXC-Listing?mtm_campaign=API-OFA",
+      "pubDate": "2024-04-20T20:28:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "BOME"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "EY Launches Ethereum-Based OpsChain Contract Manager for Business Contracts",
+      "link": "https://cryptopanic.com/news/19423140/EY-Launches-Ethereum-Based-OpsChain-Contract-Manager-for-Business-Contracts",
+      "pubDate": "2024-04-20T20:20:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "EY selected Ethereum's public blockchain over a private network for cost efficiency, confidentiality, and fair competition.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polygon’s ‘1 million’ milestone leaves MATIC whales with THIS decision",
+      "link": "https://cryptopanic.com/news/19423126/Polygons-1-million-milestone-leaves-MATIC-whales-with-THIS-decision",
+      "pubDate": "2024-04-20T20:00:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "Over the past month, Polygon has consistently exceeded 1 million daily active users.",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "New Solana Memecoin Scientist Doge (SCDOGE) to Explode 6,000% Within 72 Hours – Can it Challenge SHIB and DOGE?",
+      "link": "https://cryptopanic.com/news/19423122/New-Solana-Memecoin-Scientist-Doge-SCDOGE-to-Explode-6000-Within-72-Hours-Can-it-Challenge-SHIB-and-DOGE",
+      "pubDate": "2024-04-20T19:57:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Shiba Inu Insider Confident SHIB Price Still On Course For Ultra Bullish Supercycle",
+      "link": "https://cryptopanic.com/news/19423088/Shiba-Inu-Insider-Confident-SHIB-Price-Still-On-Course-For-Ultra-Bullish-Supercycle",
+      "pubDate": "2024-04-20T19:04:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Lucie has shared some insights on the potential price movement of Shiba Inu (SHIB).",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Shiba Inu (SHIB) Price Jumps On Growing Support From 1.4 Million Holders",
+      "link": "https://cryptopanic.com/news/19423033/Shiba-Inu-SHIB-Price-Jumps-On-Growing-Support-From-14-Million-Holders",
+      "pubDate": "2024-04-20T18:00:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "DOGE",
+        "SHIB",
+        "INJ"
+      ]
+    },
+    {
+      "title": "Solana – Long or short? Here’s the position SOL traders are taking",
+      "link": "https://cryptopanic.com/news/19423028/Solana-Long-or-short-Heres-the-position-SOL-traders-are-taking",
+      "pubDate": "2024-04-20T18:00:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The devnet glitch added another chapter to Solana's ill-famed network disruptions.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Pax Dollar Temporarily Unpegs Due to Trading Anomalies, Not Protocol Flaws, Says Paxos Spokesperson",
+      "link": "https://cryptopanic.com/news/19422983/Pax-Dollar-Temporarily-Unpegs-Due-to-Trading-Anomalies-Not-Protocol-Flaws-Says-Paxos-Spokesperson",
+      "pubDate": "2024-04-20T17:22:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "New Release 5.9.0",
+      "link": "https://cryptopanic.com/news/19422981/New-Release-590",
+      "pubDate": "2024-04-20T17:00:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Short squeeze alert: Two cryptocurrencies with huge potential next week",
+      "link": "https://cryptopanic.com/news/19422938/Short-squeeze-alert-Two-cryptocurrencies-with-huge-potential-next-week",
+      "pubDate": "2024-04-20T16:48:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Sleepy Shiba (SLESHIB) to Rally 13,000%, Take on SHIB and BOME With Huge MEXC Listing",
+      "link": "https://cryptopanic.com/news/19422909/Sleepy-Shiba-SLESHIB-to-Rally-13000-Take-on-SHIB-and-BOME-With-Huge-MEXC-Listing?mtm_campaign=API-OFA",
+      "pubDate": "2024-04-20T16:17:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Sleepy Shiba (SLESHIB) could become a viral memecoin, like Shiba Inu (SHIB) and Book of...",
+      "currencies": [
+        "SHIB",
+        "BOME"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "4 crypto underdogs that could be ready to shine in the bull run",
+      "link": "https://cryptopanic.com/news/19422892/4-crypto-underdogs-that-could-be-ready-to-shine-in-the-bull-run",
+      "pubDate": "2024-04-20T16:00:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SUI",
+        "TIA",
+        "ENA"
+      ]
+    },
+    {
+      "title": "Don’t let bitcoin be defined by its price",
+      "link": "https://cryptopanic.com/news/19422734/Dont-let-bitcoin-be-defined-by-its-price",
+      "pubDate": "2024-04-20T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "OP"
+      ]
+    },
+    {
+      "title": "Opportunity? This $1 cryptocurrency could surge as Bitcoin fees skyrocket",
+      "link": "https://cryptopanic.com/news/19422664/Opportunity-This-1-cryptocurrency-could-surge-as-Bitcoin-fees-skyrocket",
+      "pubDate": "2024-04-20T13:18:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin (BTC) fees skyrocketed to their highest level, above $100, as the halving occurred, racking up over $2.4 million in … Continue reading",
+      "currencies": [
+        "BTC",
+        "XNO"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Crypto Prices 20 Apr: Is Bitcoin Halving Rally Fizzling Out?",
+      "link": "https://cryptopanic.com/news/19422660/Crypto-Prices-20-Apr-Is-Bitcoin-Halving-Rally-Fizzling-Out",
+      "pubDate": "2024-04-20T13:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "SHIB",
+        "ICP",
+        "AR",
+        "FET",
+        "SEI"
+      ]
+    },
+    {
+      "title": "ORDI – How did Bitcoin’s halving, Runes launch impact this altcoin?",
+      "link": "https://cryptopanic.com/news/19422646/ORDI-How-did-Bitcoins-halving-Runes-launch-impact-this-altcoin",
+      "pubDate": "2024-04-20T13:00:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ORDI"
+      ]
+    },
+    {
+      "title": "Bullish Cardano Metric Signals Upcoming 75% Rally Toward $1",
+      "link": "https://cryptopanic.com/news/19422648/Bullish-Cardano-Metric-Signals-Upcoming-75-Rally-Toward-1",
+      "pubDate": "2024-04-20T13:00:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Crypto analyst Ali Martinez has drawn the Cardano (ADA) community’s attention to a crucial indicator that could be bullish for Cardano’s price. Based on his analysis, the crypto token could experience a rally that would cause it to rise to as high as $1. Related Reading: Stablecoins Get A Seat At The Table: US Senators […]",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 6
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Sold $8K Last Halving, Soared 721% After: Will History Repeat?",
+      "link": "https://cryptopanic.com/news/19422589/Bitcoin-Sold-8K-Last-Halving-Soared-721-After-Will-History-Repeat",
+      "pubDate": "2024-04-20T12:19:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Here’s why you should closely watch these 3 cryptocurrencies",
+      "link": "https://cryptopanic.com/news/19422552/Heres-why-you-should-closely-watch-these-3-cryptocurrencies",
+      "pubDate": "2024-04-20T12:07:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "TIA"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Trader Says Solana Rival Forming Decent Trade Setup, Updates Outlook on Pepe, Ethena and Celestia",
+      "link": "https://cryptopanic.com/news/19422514/Crypto-Trader-Says-Solana-Rival-Forming-Decent-Trade-Setup-Updates-Outlook-on-Pepe-Ethena-and-Celestia",
+      "pubDate": "2024-04-20T11:45:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "PEPE",
+        "TIA",
+        "SEI",
+        "ENA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "RNDR and INJ Gain: Is an Uptrend on the Horizon for a New Player?",
+      "link": "https://cryptopanic.com/news/19422506/RNDR-and-INJ-Gain-Is-an-Uptrend-on-the-Horizon-for-a-New-Player",
+      "pubDate": "2024-04-20T11:39:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RNDR",
+        "INJ"
+      ]
+    },
+    {
+      "title": "Buckle Up, Injective (INJ) Primed For Takeoff Towards $50 — Analyst",
+      "link": "https://cryptopanic.com/news/19422488/Buckle-Up-Injective-INJ-Primed-For-Takeoff-Towards-50-Analyst",
+      "pubDate": "2024-04-20T11:30:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "INJ"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin fees above $100 for the first time; Sell-off incoming?",
+      "link": "https://cryptopanic.com/news/19422411/Bitcoin-fees-above-100-for-the-first-time-Sell-off-incoming",
+      "pubDate": "2024-04-20T10:34:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin (BTC) average transaction fees crossed the $100 mark for the first time on April 20, following the halving event. … Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Billionaire Tim Draper Predicts Unbelievable $10 Million for Bitcoin Price",
+      "link": "https://cryptopanic.com/news/19422386/Billionaire-Tim-Draper-Predicts-Unbelievable-10-Million-for-Bitcoin-Price",
+      "pubDate": "2024-04-20T10:18:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Billionaire investor Tim Draper made an incredible prediction about the Bitcoin price in his statement. Continue Reading: Billionaire Tim Draper Predicts Unbelievable $10 Million for Bitcoin Price",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Analyst Issues Cardano Alert, Warns ADA Could Crash by up to 74% – Here’s His Outlook",
+      "link": "https://cryptopanic.com/news/19422309/Crypto-Analyst-Issues-Cardano-Alert-Warns-ADA-Could-Crash-by-up-to-74-Heres-His-Outlook",
+      "pubDate": "2024-04-20T09:15:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "A cryptocurrency analyst and trader is expressing bearish sentiment on Cardano (ADA). In a new video, the analyst pseudonymously known as Credible Crypto tells his 48,700 YouTube subscribers that Cardano currently “does not look great”. According to Credible Crypto, Cardano faces the risk of falling further even after correcting by over 90% from its all-time […]",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Uniswap Resurgence Incoming? Analyst Predicts 30% Surge For UNI Price",
+      "link": "https://cryptopanic.com/news/19422285/Uniswap-Resurgence-Incoming-Analyst-Predicts-30-Surge-For-UNI-Price",
+      "pubDate": "2024-04-20T08:49:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "UNI",
+        "INJ"
+      ]
+    },
+    {
+      "title": "WIF, ICP, ADA Price Analysis as Bitcoin Completes 4th Halving",
+      "link": "https://cryptopanic.com/news/19422282/WIF-ICP-ADA-Price-Analysis-as-Bitcoin-Completes-4th-Halving",
+      "pubDate": "2024-04-20T08:47:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "ICP",
+        "WIF"
+      ]
+    },
+    {
+      "title": "Stacks and Bittensor investors are turning to the DTX Exchange presale, anticipating 3000% gains",
+      "link": "https://cryptopanic.com/news/19422220/Stacks-and-Bittensor-investors-are-turning-to-the-DTX-Exchange-presale-anticipating-3000-gains",
+      "pubDate": "2024-04-20T07:44:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "STX",
+        "TAO"
+      ]
+    },
+    {
+      "title": "Google Ads Promote Fake Version Of Crypto Whales Market",
+      "link": "https://cryptopanic.com/news/19422304/Google-Ads-Promote-Fake-Version-Of-Crypto-Whales-Market",
+      "pubDate": "2024-04-20T07:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SAFE"
+      ]
+    },
+    {
+      "title": "BREAKING: Bitcoin Halving 2024 Is Complete! Here’s What To Expect",
+      "link": "https://cryptopanic.com/news/19422191/BREAKING-Bitcoin-Halving-2024-Is-Complete-Heres-What-To-Expect",
+      "pubDate": "2024-04-20T07:05:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin has now successfully undergone its fourth halving event, with miners’ block rewards slashed in half again (from 6.25 to 3.125 BTC). The Bitcoin halving (also called “the halvening”) is programmed to happen every 210,000 blocks – approximately every four years. With miners set to receive 50% fewer BTC, the rate of Bitcoin creation will […]",
+      "currencies": [
+        "BTC",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Analyst Predicts Cardano (ADA) To Rally By 75% As MVRV Ratio Plummets",
+      "link": "https://cryptopanic.com/news/19422273/Analyst-Predicts-Cardano-ADA-To-Rally-By-75-As-MVRV-Ratio-Plummets?mtm_campaign=API-OFA",
+      "pubDate": "2024-04-20T06:00:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "ALI"
+      ]
+    },
+    {
+      "title": "Crypto Prices April 20: $64K Stability Amid Halving Frenzy",
+      "link": "https://cryptopanic.com/news/19422096/Crypto-Prices-April-20-64K-Stability-Amid-Halving-Frenzy",
+      "pubDate": "2024-04-20T06:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "ADA",
+        "XRP",
+        "ICP",
+        "RUNE",
+        "TON",
+        "TIA",
+        "ENA"
+      ]
+    },
+    {
+      "title": "BLP, OP, and SOL: Why Is Everyone Talking About These Tokens?",
+      "link": "https://cryptopanic.com/news/19422027/BLP-OP-and-SOL-Why-Is-Everyone-Talking-About-These-Tokens",
+      "pubDate": "2024-04-20T05:15:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "OP"
+      ]
+    },
+    {
+      "title": "Bitcoin (BTC) Price Remains Stable at $64K on Halving Day (Weekend Watch)",
+      "link": "https://cryptopanic.com/news/19422011/Bitcoin-BTC-Price-Remains-Stable-at-64K-on-Halving-Day-Weekend-Watch",
+      "pubDate": "2024-04-20T04:56:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "ICP"
+      ]
+    },
+    {
+      "title": "We Asked ChatGPT if MEW Can Become the Biggest Solana Meme Coin in 2024",
+      "link": "https://cryptopanic.com/news/19422004/We-Asked-ChatGPT-if-MEW-Can-Become-the-Biggest-Solana-Meme-Coin-in-2024?mtm_campaign=API-OFA",
+      "pubDate": "2024-04-20T04:38:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "MEW",
+        "MEME"
+      ]
+    },
+    {
+      "title": "Polkadot Unveils Major Upgrade Plan: Relay Chain Replacement And 10M DOT Prize Incentive",
+      "link": "https://cryptopanic.com/news/19421980/Polkadot-Unveils-Major-Upgrade-Plan-Relay-Chain-Replacement-And-10M-DOT-Prize-Incentive",
+      "pubDate": "2024-04-20T04:00:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Gavin Wood, the founder of the Polkadot protocol, has unveiled a new Gray Paper outlining the forthcoming Join-Accumulate Machine (JAM) upgrade for the network. This announcement occurred during Wood’s presentation on Polkadot’s future at the Token2049 crypto conference in Dubai. Wood introduced the JAM Implementer’s Prize, a 10 Million DOT prize pool, to encourage diverse development of the...",
+      "currencies": [
+        "USDT",
+        "DOT",
+        "TUSD"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Injective Votes On Major Upgrade To Make INJ Even More Deflationary: Will Prices Recover?",
+      "link": "https://cryptopanic.com/news/19421915/Injective-Votes-On-Major-Upgrade-To-Make-INJ-Even-More-Deflationary-Will-Prices-Recover",
+      "pubDate": "2024-04-20T02:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "INJ"
+      ]
+    },
+    {
+      "title": "Runes Protocol Launches on Bitcoin, Sending Fees Soaring as Users Rush to Mint Tokens",
+      "link": "https://cryptopanic.com/news/19421905/Runes-Protocol-Launches-on-Bitcoin-Sending-Fees-Soaring-as-Users-Rush-to-Mint-Tokens",
+      "pubDate": "2024-04-20T01:35:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ORDI"
+      ]
+    }
+  ]
+}

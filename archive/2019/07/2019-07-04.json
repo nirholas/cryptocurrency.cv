@@ -1,0 +1,104 @@
+{
+  "date": "2019-07-04",
+  "fetchedAt": "2026-02-05T07:27:06.879Z",
+  "articleCount": 6,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Chinese Ponzi scheme victims accuse Justin Sun of complicity through silence",
+      "link": "https://cryptopanic.com/news/5923267/Chinese-Ponzi-scheme-victims-accuse-Justin-Sun-of-complicity-through-silence",
+      "pubDate": "2019-07-04T17:49:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Brazilian bank to issue $1 billion worth of security tokens with Dalma Capital",
+      "link": "https://cryptopanic.com/news/5922728/Brazilian-bank-to-issue-1-billion-worth-of-security-tokens-with-Dalma-Capital",
+      "pubDate": "2019-07-04T16:36:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTG"
+      ]
+    },
+    {
+      "title": "Brazilian Bank Plans to Use Tezos Blockchain for STOs Worth $1 Billion",
+      "link": "https://cryptopanic.com/news/5920972/Brazilian-Bank-Plans-to-Use-Tezos-Blockchain-for-STOs-Worth-1-Billion",
+      "pubDate": "2019-07-04T13:00:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XTZ",
+        "BTG"
+      ]
+    },
+    {
+      "title": "Tezos Foundation Bags $1 Billion STO Deal with Major Financial Institutions",
+      "link": "https://cryptopanic.com/news/5920481/Tezos-Foundation-Bags-1-Billion-STO-Deal-with-Major-Financial-Institutions",
+      "pubDate": "2019-07-04T12:00:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XTZ",
+        "BTG"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tether Prints Another $100M in USDT: Weekend Action Ahead For Bitcoin?",
+      "link": "https://cryptopanic.com/news/5920323/Tether-Prints-Another-100M-in-USDT-Weekend-Action-Ahead-For-Bitcoin",
+      "pubDate": "2019-07-04T11:46:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tezos Announces Partnership With Brazil’s Largest Investment Bank, XTZ Price Up 20%",
+      "link": "https://cryptopanic.com/news/5919833/Tezos-Announces-Partnership-With-Brazils-Largest-Investment-Bank-XTZ-Price-Up-20",
+      "pubDate": "2019-07-04T10:24:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XTZ",
+        "BTG"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

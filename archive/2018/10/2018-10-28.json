@@ -1,0 +1,43 @@
+{
+  "date": "2018-10-28",
+  "fetchedAt": "2026-02-05T07:27:06.973Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Starlight: A Payment Rail Enabling Secure and Private Transactions on Stellar",
+      "link": "https://cryptopanic.com/news/stellar/3490371/Starlight-A-Payment-Rail-Enabling-Secure-and-Private-Transactions-on-Stellar",
+      "pubDate": "2018-10-28T19:00:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Roger Ver and his Struggling Battle for Bitcoin Cash Supremacy",
+      "link": "https://cryptopanic.com/news/3486951/Roger-Ver-and-his-Struggling-Battle-for-Bitcoin-Cash-Supremacy",
+      "pubDate": "2018-10-28T07:00:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

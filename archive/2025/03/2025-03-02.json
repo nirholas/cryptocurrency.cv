@@ -1,0 +1,798 @@
+{
+  "date": "2025-03-02",
+  "fetchedAt": "2026-02-05T07:27:08.447Z",
+  "articleCount": 52,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ethereum Developers Address Holesky Testnet Validator Issues",
+      "link": "https://cryptopanic.com/news/20770989/Ethereum-Developers-Address-Holesky-Testnet-Validator-Issues?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T23:33:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "X"
+      ]
+    },
+    {
+      "title": "Crypto’s First Act: How 2013 Set the Stage for a Financial Revolution",
+      "link": "https://cryptopanic.com/news/20770344/Cryptos-First-Act-How-2013-Set-the-Stage-for-a-Financial-Revolution?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T23:30:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ]
+    },
+    {
+      "title": "FLOKI: Key factors favoring the bears as the memecoin sinks lower",
+      "link": "https://cryptopanic.com/news/20770121/FLOKI-Key-factors-favoring-the-bears-as-the-memecoin-sinks-lower?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T21:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FLOKI",
+        "MEME",
+        "$1"
+      ]
+    },
+    {
+      "title": "President Trump Reveals U.S. Crypto Reserve Bombshell — Sending BTC, ETH, Ripple’s XRP, Solana, And Cardano Rocketing",
+      "link": "https://cryptopanic.com/news/20770004/President-Trump-Reveals-US-Crypto-Reserve-Bombshell-Sending-BTC-ETH-Ripples-XRP-Solana-And-Cardano-Rocketing?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T19:31:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The prices of XRP, Solana (SOL), and other crypto assets have soared after Trump announced that the aforementioned tokens would be part of the strategic cryptocurrency reserve.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "XRP",
+        "SOL",
+        "S"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "MICHAEL SAYLOR: \"Bitcoin is the foundation of the crypto economy.\"",
+      "link": "https://cryptopanic.com/news/20769970/MICHAEL-SAYLOR-Bitcoin-is-the-foundation-of-the-crypto-economy?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T19:14:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "-",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple’s XRP Bulls Show Dominant Presence as Bears Get Rejected at Major 2017-2018 Support Level",
+      "link": "https://cryptopanic.com/news/20769950/Ripples-XRP-Bulls-Show-Dominant-Presence-as-Bears-Get-Rejected-at-Major-2017-2018-Support-Level?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T19:10:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP price action has got the crypto community talking after the third-largest cryptocurrency hit a historic support level.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto market’s weekly winners and losers – IP, BERA, LDO, ENS",
+      "link": "https://cryptopanic.com/news/20769926/Crypto-markets-weekly-winners-and-losers-IP-BERA-LDO-ENS?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T19:00:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LDO",
+        "ENS",
+        "IP",
+        "BERA"
+      ]
+    },
+    {
+      "title": "Elon Musk’s D.O.G.E tightens grip on ‘what did you do last week?’ emails",
+      "link": "https://cryptopanic.com/news/20769893/Elon-Musks-DOGE-tightens-grip-on-what-did-you-do-last-week-emails?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T18:50:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "G",
+        "D",
+        "O"
+      ]
+    },
+    {
+      "title": "Qubetics Crypto ICO Presale Surges Past $14.4M – This CertiK-Audited Project Thrives While Bitcoin & Litecoin Push the Market to New Heights in 2025",
+      "link": "https://cryptopanic.com/news/20771812/Qubetics-Crypto-ICO-Presale-Surges-Past-144M-This-CertiK-Audited-Project-Thrives-While-Bitcoin-Litecoin-Push-the-Market-to-New-Heights-in-2025?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T18:21:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ]
+    },
+    {
+      "title": "XRP Surges 30% With Increased Buying Pressure After Trump’s US Crypto Reserve",
+      "link": "https://cryptopanic.com/news/20769810/XRP-Surges-30-With-Increased-Buying-Pressure-After-Trumps-US-Crypto-Reserve?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T17:38:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "MOVE",
+        "ATH",
+        "00",
+        "PDA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana Price Could Rebound After $120 Support; But Expert Advises to Keep Eye On These Altcoins",
+      "link": "https://cryptopanic.com/news/20769714/Solana-Price-Could-Rebound-After-120-Support-But-Expert-Advises-to-Keep-Eye-On-These-Altcoins?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T17:34:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "PNUT"
+      ]
+    },
+    {
+      "title": "Crypto Czar Hints At Expansion Of Valuable Digital Assets",
+      "link": "https://cryptopanic.com/news/20770983/Crypto-Czar-Hints-At-Expansion-Of-Valuable-Digital-Assets?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T17:23:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "X"
+      ]
+    },
+    {
+      "title": "Bitcoin Will Explode Over $120,000 on Monday as ETF Demand Skyrockets Amid Trump’s BTC Reserve Announcement",
+      "link": "https://cryptopanic.com/news/20769674/Bitcoin-Will-Explode-Over-120000-on-Monday-as-ETF-Demand-Skyrockets-Amid-Trumps-BTC-Reserve-Announcement?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T17:20:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "In a move signaling a significant shift in U.S. cryptocurrency policy, President Donald Trump announced the inclusion of several digital assets—namely Bitcoin (BTC), Ethereum (ETH), Solana (SOL), XRP (XRP), and Cardano’s ADA (ADA)—into a newly established U.S. Crypto Strategic Reserve. This initiative underscores the administration’s commitment to positioning the United States as a leader in the rapidly evolving digital asset landscape. Bitcoin to Hit $120,000 on Monday Bitcoin has already exper",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "XRP",
+        "SOL",
+        "S"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Breaking: Trump Announces U.S. Crypto Strategic Reserve Including XRP, SOL, ADA, BTC, and ETH",
+      "link": "https://cryptopanic.com/news/20769643/Breaking-Trump-Announces-US-Crypto-Strategic-Reserve-Including-XRP-SOL-ADA-BTC-and-ETH?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T17:11:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The post Breaking: Trump Announces U.S. Crypto Strategic Reserve Including XRP, SOL, ADA, BTC, and ETH appeared first on Coinpedia Fintech News In a big move to strengthen the U.S. cryptocurrency sector, President Donald Trump has announced plans for a “Crypto Strategic Reserve,” which will include Bitcoin (BTC) and Ethereum (ETH) alongside popular altcoins like XRP, SOL, and ADA. The reserve aims to elevate the industry after what Trump describes as “years of corrupt attacks” by the …",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "XRP",
+        "SOL",
+        "S"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Best Meme Coins To Buy Now | Which Top Meme Coins Are Booming Right Now Ahead of Bull Run",
+      "link": "https://cryptopanic.com/news/20769639/Best-Meme-Coins-To-Buy-Now-Which-Top-Meme-Coins-Are-Booming-Right-Now-Ahead-of-Bull-Run?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T17:07:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "PEPE",
+        "SPX",
+        "PENGU",
+        "MEOW"
+      ]
+    },
+    {
+      "title": "Why Is Crypto Market Pumping?",
+      "link": "https://cryptopanic.com/news/20769638/Why-Is-Crypto-Market-Pumping?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T17:06:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "X"
+      ]
+    },
+    {
+      "title": "Whale Movements Suggest This $0.18 Altcoin Could Outperform XRP & AVAX Before Q3 2025",
+      "link": "https://cryptopanic.com/news/20769581/Whale-Movements-Suggest-This-018-Altcoin-Could-Outperform-XRP-AVAX-Before-Q3-2025?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T16:51:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Trump says Bitcoin and Ethereum will be included in US crypto reserve",
+      "link": "https://cryptopanic.com/news/20769569/Trump-says-Bitcoin-and-Ethereum-will-be-included-in-US-crypto-reserve?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T16:46:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "President Donald Trump said today that Bitcoin and Ethereum will be included in his proposed US crypto reserve, expanding the plan that featured XRP, Solana, and Cardano.The proposed policy would establish government holdings of crypto assets as part of US financial reserves, similar to gold. Trump critiqued the Biden administration for what he called \"corrupt attacks\" on crypto, referring to...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "XRP",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Bloodbath: Can DTX Exchange Save Avalanche and Cardano Traders From Q2 Dump?",
+      "link": "https://cryptopanic.com/news/20769436/Crypto-Bloodbath-Can-DTX-Exchange-Save-Avalanche-and-Cardano-Traders-From-Q2-Dump?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T16:16:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "President Trump announces a Crypto Strategic Reserve that includes XRP, SOL, and ADA",
+      "link": "https://cryptopanic.com/news/20769419/President-Trump-announces-a-Crypto-Strategic-Reserve-that-includes-XRP-SOL-and-ADA?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T16:01:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "After long weeks of waiting, US President Donald Trump has finally decided to give the crypto industry what it wants the most; a strategic crypto reserve.",
+      "currencies": [
+        "ADA",
+        "XRP",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "AAVE tests $194 support as breakout nears – Will bulls take control?",
+      "link": "https://cryptopanic.com/news/20769338/AAVE-tests-194-support-as-breakout-nears-Will-bulls-take-control?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T16:00:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "who's the real competition?",
+      "link": "https://cryptopanic.com/news/internet-computer/20772050/whos-the-real-competition",
+      "pubDate": "2025-03-02T15:54:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "HBAR",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Trump directs working group to ‘move forward’ on SOL, XRP, and ADA Crypto Strategic Reserve",
+      "link": "https://cryptopanic.com/news/20769328/Trump-directs-working-group-to-move-forward-on-SOL-XRP-and-ADA-Crypto-Strategic-Reserve?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T15:47:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The announcement notably excludes Bitcoin, which the federal government already holds $17 billion worth.",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "XRP",
+        "SOL",
+        "S"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Trump to include XRP, SOL, and ADA in US crypto reserve",
+      "link": "https://cryptopanic.com/news/20769299/Trump-to-include-XRP-SOL-and-ADA-in-US-crypto-reserve?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T15:34:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "President Donald Trump proposed establishing a US Crypto Reserve and directed the Presidential Working Group to include XRP, SOL, and ADA digital assets in an effort to position the US as a global crypto hub.The initiative comes as a response to what Trump characterized as attacks on the crypto industry by the Biden Administration. The proposed reserve would aim to strengthen the digital asset sector in the United States.The plan specifically highlights the inclusion of three prominent crypto...",
+      "currencies": [
+        "ADA",
+        "XRP",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 22,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Can This Viral Crypto Outpace Solana’s 21% Fall? Experts Compare Top AI Contenders",
+      "link": "https://cryptopanic.com/news/20769300/Can-This-Viral-Crypto-Outpace-Solanas-21-Fall-Experts-Compare-Top-AI-Contenders?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T15:32:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "TAO"
+      ]
+    },
+    {
+      "title": "XRP Sky-High Target: Analyst Predicts $385 – Here’s The Case",
+      "link": "https://cryptopanic.com/news/20769279/XRP-Sky-High-Target-Analyst-Predicts-385-Heres-The-Case?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T15:30:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "SOL",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Investor Arthur Cheong Predicts Solana (SOL) Will Soon Be ‘Substantially Higher’ – Here’s His Timeline",
+      "link": "https://cryptopanic.com/news/20769284/Investor-Arthur-Cheong-Predicts-Solana-SOL-Will-Soon-Be-Substantially-Higher-Heres-His-Timeline?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T15:30:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "JUP",
+        "JTO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana and Avalanche Holders Aggressively Buy Coldware (COLD) Presale, Rallying 100% Per Day",
+      "link": "https://cryptopanic.com/news/20769696/Solana-and-Avalanche-Holders-Aggressively-Buy-Coldware-COLD-Presale-Rallying-100-Per-Day?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T15:13:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Bitcoin Mining Platforms Approach Profitability Amid Price Increase",
+      "link": "https://cryptopanic.com/news/20770960/Bitcoin-Mining-Platforms-Approach-Profitability-Amid-Price-Increase?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T13:33:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "T",
+        "W",
+        "X"
+      ]
+    },
+    {
+      "title": "Onyxcoin Fails Breakout Despite Whales Accumulating 368 Million XCN",
+      "link": "https://cryptopanic.com/news/20769042/Onyxcoin-Fails-Breakout-Despite-Whales-Accumulating-368-Million-XCN?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T13:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XCN"
+      ]
+    },
+    {
+      "title": "Cronos Introduces ‘Instant’ Crypto Off-Ramp with Prepaid Card Integration",
+      "link": "https://cryptopanic.com/news/20768965/Cronos-Introduces-Instant-Crypto-Off-Ramp-with-Prepaid-Card-Integration?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T12:51:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Crypto Weekly Roundup: SEC Drops Coinbase and Uniswap Lawsuits, & More",
+      "link": "https://cryptopanic.com/news/20768856/Crypto-Weekly-Roundup-SEC-Drops-Coinbase-and-Uniswap-Lawsuits-More?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T12:33:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "XRP Price Bubble Burst? This Pattern Suggests Imminent Drop To $1.1",
+      "link": "https://cryptopanic.com/news/20768837/XRP-Price-Bubble-Burst-This-Pattern-Suggests-Imminent-Drop-To-11?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T12:30:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "ALI"
+      ]
+    },
+    {
+      "title": "KAITO Token Surges 53.4% This Week: This Is Behind The Rapid Price Increase",
+      "link": "https://cryptopanic.com/news/20768897/KAITO-Token-Surges-534-This-Week-This-Is-Behind-The-Rapid-Price-Increase?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T12:29:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "KAITO"
+      ]
+    },
+    {
+      "title": "Snoop Dogg’s Tune.fm Partnership Drives HBAR Token Surge: Up 10.9% in Past 24 Hours",
+      "link": "https://cryptopanic.com/news/20768896/Snoop-Doggs-Tunefm-Partnership-Drives-HBAR-Token-Surge-Up-109-in-Past-24-Hours?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T12:06:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Tether And Circle Freeze Addresses Linked To Bybit Hack",
+      "link": "https://cryptopanic.com/news/20770957/Tether-And-Circle-Freeze-Addresses-Linked-To-Bybit-Hack?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T11:53:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "USDC",
+        "TRX"
+      ]
+    },
+    {
+      "title": "YZi Labs Offers Priority Review for Projects Based on CZ's \"Crazy Idea for Token Issuance\"",
+      "link": "https://cryptopanic.com/news/20770955/YZi-Labs-Offers-Priority-Review-for-Projects-Based-on-CZs-Crazy-Idea-for-Token-Issuance?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T10:42:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "X"
+      ]
+    },
+    {
+      "title": "BTC touches $78K, Tariffs Blamed, Crypto Market-cap below 2021!",
+      "link": "https://cryptopanic.com/news/20768584/BTC-touches-78K-Tariffs-Blamed-Crypto-Market-cap-below-2021?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T10:13:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "SOL",
+        "UNI",
+        "NEAR"
+      ]
+    },
+    {
+      "title": "U.S. spends the largest federal revenue share on debt since early 1990s",
+      "link": "https://cryptopanic.com/news/20768582/US-spends-the-largest-federal-revenue-share-on-debt-since-early-1990s?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T10:10:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "S",
+        "ATH"
+      ]
+    },
+    {
+      "title": "Best Presales to Buy After Binance Denies Rumors About Dumping Solana",
+      "link": "https://cryptopanic.com/news/20768562/Best-Presales-to-Buy-After-Binance-Denies-Rumors-About-Dumping-Solana?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T10:09:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "BONK",
+        "TRUMP",
+        "MELANIA"
+      ]
+    },
+    {
+      "title": "Bitcoin STH Average Cost Basis At $90,950 — Why Is It Relevant?",
+      "link": "https://cryptopanic.com/news/20768497/Bitcoin-STH-Average-Cost-Basis-At-90950-Why-Is-It-Relevant?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T09:30:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "LTC",
+        "MOVE",
+        "ALI"
+      ]
+    },
+    {
+      "title": "Will A Close Above $136 Confirm Litecoin Price’s Bullish Breakout?",
+      "link": "https://cryptopanic.com/news/20768465/Will-A-Close-Above-136-Confirm-Litecoin-Prices-Bullish-Breakout?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T09:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "El Salvador continues to buy the Bitcoin dip adding to its National Reserve",
+      "link": "https://cryptopanic.com/news/20768374/El-Salvador-continues-to-buy-the-Bitcoin-dip-adding-to-its-National-Reserve?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T08:10:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "El Salvador bought the Bitcoin dip again and added more BTC to their strategic Bitcoin reserve, bringing their total holdings to 6,093.18 BTC worth over $523M.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Short-term BONK holders at record losses! Is there more pain ahead?",
+      "link": "https://cryptopanic.com/news/20768344/Short-term-BONK-holders-at-record-losses-Is-there-more-pain-ahead?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T08:00:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BONK",
+        "MEME",
+        "$1"
+      ]
+    },
+    {
+      "title": "THORChain (RUNE) Tipped For 70% Decline Amid North Korean Transactions Debacle",
+      "link": "https://cryptopanic.com/news/20768350/THORChain-RUNE-Tipped-For-70-Decline-Amid-North-Korean-Transactions-Debacle?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T08:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "DOGE",
+        "TRX",
+        "RUNE"
+      ]
+    },
+    {
+      "title": "Senator Lummis to discuss US Bitcoin reserve bill with industry leaders on March 11",
+      "link": "https://cryptopanic.com/news/20768340/Senator-Lummis-to-discuss-US-Bitcoin-reserve-bill-with-industry-leaders-on-March-11?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T07:49:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Senator Cynthia Lummis is actively working on a bill related to a US Bitcoin reserve and has scheduled a gathering on March 11 in Washington DC to discuss the initiative with industry leaders, said Bitwise CEO Hunter Horsley on CNBCs Fast Money this week.When asked about the current status of the potential establishment of a strategic Bitcoin reserve in the US, given the perceived lack of...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Examining if dogwifhat traders can push WIF past THIS major hurdle",
+      "link": "https://cryptopanic.com/news/20768216/Examining-if-dogwifhat-traders-can-push-WIF-past-THIS-major-hurdle?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T06:00:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "WIF",
+        "MEME",
+        "$1"
+      ]
+    },
+    {
+      "title": "Stellar (XLM) Chart Signals Major Rally —Is A 330% Surge Coming?",
+      "link": "https://cryptopanic.com/news/20768252/Stellar-XLM-Chart-Signals-Major-Rally-Is-A-330-Surge-Coming?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T05:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "SOL",
+        "DOGE",
+        "XLM",
+        "MOVE",
+        "ALI"
+      ]
+    },
+    {
+      "title": "Hedera [HBAR] defies market trend – All you need to know about altcoin’s 27% hike!",
+      "link": "https://cryptopanic.com/news/20767960/Hedera-HBAR-defies-market-trend-All-you-need-to-know-about-altcoins-27-hike?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T03:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Strong inflows into ARK 21Shares, Fidelity Bitcoin ETFs end 8-day outflow streak",
+      "link": "https://cryptopanic.com/news/20767897/Strong-inflows-into-ARK-21Shares-Fidelity-Bitcoin-ETFs-end-8-day-outflow-streak?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T02:01:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ARK"
+      ]
+    },
+    {
+      "title": "Why Berachain (BERA) Price Rallied 35% Last Week, Despite $900M liquidations in BTC, ETH and SOL",
+      "link": "https://cryptopanic.com/news/20767847/Why-Berachain-BERA-Price-Rallied-35-Last-Week-Despite-900M-liquidations-in-BTC-ETH-and-SOL?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T01:23:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "BERA"
+      ]
+    },
+    {
+      "title": "Top 5 Underpriced Cryptos To Buy Before The Market Rebounds: Solana, Pi Network, Remittix, PEPE and AVAX",
+      "link": "https://cryptopanic.com/news/20767808/Top-5-Underpriced-Cryptos-To-Buy-Before-The-Market-Rebounds-Solana-Pi-Network-Remittix-PEPE-and-AVAX?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-02T00:49:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "AVAX",
+        "PEPE"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "date": "2020-09-25",
+  "fetchedAt": "2026-02-05T07:27:06.862Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "VeChain Adopts Coinbase's Standard to Increase Blockchain Interoperability",
+      "link": "https://cryptopanic.com/news/10081264/VeChain-Adopts-Coinbases-Standard-to-Increase-Blockchain-Interoperability",
+      "pubDate": "2020-09-25T16:00:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "China’s Blockchain-Based Service Network (BSN) Integrates Tezos",
+      "link": "https://cryptopanic.com/news/10078491/Chinas-Blockchain-Based-Service-Network-BSN-Integrates-Tezos",
+      "pubDate": "2020-09-25T10:49:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

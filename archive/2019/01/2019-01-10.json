@@ -1,0 +1,58 @@
+{
+  "date": "2019-01-10",
+  "fetchedAt": "2026-02-05T07:27:06.797Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "VeChain Foundation Reflects on 2018 and States Goals For 2019",
+      "link": "https://cryptopanic.com/news/4216333/VeChain-Foundation-Reflects-on-2018-and-States-Goals-For-2019",
+      "pubDate": "2019-01-10T17:59:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "200 Partnerships for Ripple! XRP has Competitive Advantage over other Cryptocurrencies - Crypto News",
+      "link": "https://cryptopanic.com/news/ripple/4214461/200-Partnerships-for-Ripple-XRP-has-Competitive-Advantage-over-other-Cryptocurrencies-Crypto-News",
+      "pubDate": "2019-01-10T14:40:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Crypto Mining Malware Has Netted Nearly 5% of All Monero, Says Research",
+      "link": "https://cryptopanic.com/news/4210448/Crypto-Mining-Malware-Has-Netted-Nearly-5-of-All-Monero-Says-Research",
+      "pubDate": "2019-01-10T05:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

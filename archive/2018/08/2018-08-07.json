@@ -1,0 +1,20 @@
+{
+  "date": "2018-08-07",
+  "fetchedAt": "2026-02-05T07:27:06.986Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Got a phishing email pretending to be from @BittrexExchange, saying they will list $MCT on Bittrex if we send a 1.5…",
+      "link": "https://cryptopanic.com/news/2742407/Got-a-phishing-email-pretending-to-be-from-BittrexExchange-saying-they-will-list-MCT-on-Bittrex-if-we-send-a-15",
+      "pubDate": "2018-08-07T13:24:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "MCT"
+      ]
+    }
+  ]
+}

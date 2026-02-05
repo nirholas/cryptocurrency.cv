@@ -1,0 +1,25 @@
+{
+  "date": "2019-02-11",
+  "fetchedAt": "2026-02-05T07:27:06.998Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tron CEO Justin Sun Offers Job to Former BitTorrent Employee Who Lost All His Life Savings After Death of QuadrigaCX CEO",
+      "link": "https://cryptopanic.com/news/tron/4535504/Tron-CEO-Justin-Sun-Offers-Job-to-Former-BitTorrent-Employee-Who-Lost-All-His-Life-Savings-After-Death-of-QuadrigaCX-CEO",
+      "pubDate": "2019-02-11T20:02:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

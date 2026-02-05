@@ -1,0 +1,45 @@
+{
+  "date": "2018-10-03",
+  "fetchedAt": "2026-02-05T07:27:06.961Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "5 Altcoins That Could be Worthless by 2020",
+      "link": "https://cryptopanic.com/news/tether/3228203/5-Altcoins-That-Could-be-Worthless-by-2020",
+      "pubDate": "2018-10-03T16:09:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Nano Launches new Update, Goes Live on investFeed, BitGrail Lawsuit Gets Withdrawn",
+      "link": "https://cryptopanic.com/news/3221304/Nano-Launches-new-Update-Goes-Live-on-investFeed-BitGrail-Lawsuit-Gets-Withdrawn",
+      "pubDate": "2018-10-03T02:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XNO"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

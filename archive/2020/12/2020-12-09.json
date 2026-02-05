@@ -1,0 +1,120 @@
+{
+  "date": "2020-12-09",
+  "fetchedAt": "2026-02-05T07:27:06.952Z",
+  "articleCount": 8,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Fidelity to Offer Bitcoin-Backed Cash Loans via BlockFi",
+      "link": "https://cryptopanic.com/news/10773275/Fidelity-to-Offer-Bitcoin-Backed-Cash-Loans-via-BlockFi",
+      "pubDate": "2020-12-09T22:59:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "NEXO"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tune in today at 6:30PM ET/7:30AM SGT for a live interview by @MartinSoong with our founders @cameron and @tyler on…",
+      "link": "https://cryptopanic.com/news/10773215/Tune-in-today-at-630PM-ET730AM-SGT-for-a-live-interview-by-MartinSoong-with-our-founders-cameron-and-tyler-on",
+      "pubDate": "2020-12-09T22:51:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    },
+    {
+      "title": "BNB48's BSC main-net validator just upgraded to V1.0.4",
+      "link": "https://cryptopanic.com/news/11377802/BNB48s-BSC-main-net-validator-just-upgraded-to-V104?mtm_campaign=API-OFA",
+      "pubDate": "2020-12-09T15:34:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KOGE"
+      ]
+    },
+    {
+      "title": "Bitwise Joins Grayscale, Launches Crypto Index for Institutions",
+      "link": "https://cryptopanic.com/news/chainlink/10768843/Bitwise-Joins-Grayscale-Launches-Crypto-Index-for-Institutions",
+      "pubDate": "2020-12-09T14:46:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Analysts at Messari Name 28 Crypto Assets They’re Holding As 2021 Approaches",
+      "link": "https://cryptopanic.com/news/10767429/Crypto-Analysts-at-Messari-Name-28-Crypto-Assets-Theyre-Holding-As-2021-Approaches",
+      "pubDate": "2020-12-09T12:00:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LTC",
+        "ZEC"
+      ]
+    },
+    {
+      "title": "module 'ecdsa' has no attribute 'generator_secp256k1'",
+      "link": "https://cryptopanic.com/news/ecash/12211621/module-ecdsa-has-no-attribute-generator_secp256k1",
+      "pubDate": "2020-12-09T10:29:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "It seems that #BITCOIN fails to break $18000 now. Are you still buying it or buying altcoin?",
+      "link": "https://cryptopanic.com/news/10766270/It-seems-that-BITCOIN-fails-to-break-18000-now-Are-you-still-buying-it-or-buying-altcoin",
+      "pubDate": "2020-12-09T09:00:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Are new crypto players driving Altcoin demand? It does seem so and is something that, needs to be celebrated.…",
+      "link": "https://cryptopanic.com/news/10764619/Are-new-crypto-players-driving-Altcoin-demand-It-does-seem-so-and-is-something-that-needs-to-be-celebrated",
+      "pubDate": "2020-12-09T04:23:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    }
+  ]
+}

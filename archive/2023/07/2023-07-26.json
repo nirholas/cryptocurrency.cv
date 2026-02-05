@@ -1,0 +1,687 @@
+{
+  "date": "2023-07-26",
+  "fetchedAt": "2026-02-05T07:27:07.258Z",
+  "articleCount": 48,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Why Axie Infinity’s NFT partnership could be in trouble",
+      "link": "https://cryptopanic.com/news/18798959/Why-Axie-Infinitys-NFT-partnership-could-be-in-trouble",
+      "pubDate": "2023-07-26T22:30:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "FDUSD: Is Binance’s Latest Addition Another Stablecoin By Tron’s Justin Sun?",
+      "link": "https://cryptopanic.com/news/18798945/FDUSD-Is-Binances-Latest-Addition-Another-Stablecoin-By-Trons-Justin-Sun",
+      "pubDate": "2023-07-26T22:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "TUSD"
+      ]
+    },
+    {
+      "title": "Dogecoin Jumps Past Cardano Amid Hopes Twitter’s X Rebrand Will Introduce A DOGE Payment Option",
+      "link": "https://cryptopanic.com/news/18798930/Dogecoin-Jumps-Past-Cardano-Amid-Hopes-Twitters-X-Rebrand-Will-Introduce-A-DOGE-Payment-Option",
+      "pubDate": "2023-07-26T21:56:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "OG meme coin Dogecoin has overtaken Cardano in terms of market capitalization as investors scoop up DOGE in hopes of the token playing a bigger role on Twitter, which rebranded as “everything app” X on July 24.",
+      "currencies": [
+        "ADA",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "MKR price outlook after Paradigm’s $3.5M deposit to Coinbase",
+      "link": "https://cryptopanic.com/news/maker/18798915/MKR-price-outlook-after-Paradigms-35M-deposit-to-Coinbase",
+      "pubDate": "2023-07-26T21:45:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Avalanche Foundation Commits $50 Million To Tokenized Asset Purchases",
+      "link": "https://cryptopanic.com/news/maker/18798858/Avalanche-Foundation-Commits-50-Million-To-Tokenized-Asset-Purchases",
+      "pubDate": "2023-07-26T21:00:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Paradigm Moves $3.5M in MakerDAO's MKR Tokens Following Peer a16z's Maneuver",
+      "link": "https://cryptopanic.com/news/maker/18798807/Paradigm-Moves-35M-in-MakerDAOs-MKR-Tokens-Following-Peer-a16zs-Maneuver",
+      "pubDate": "2023-07-26T20:35:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "FOMC Delivers Expected 0.25% Rate Hike, Bitcoin Holds Steady Above $29,000",
+      "link": "https://cryptopanic.com/news/18798784/FOMC-Delivers-Expected-025-Rate-Hike-Bitcoin-Holds-Steady-Above-29000",
+      "pubDate": "2023-07-26T20:15:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "COMP"
+      ]
+    },
+    {
+      "title": "Tron (TRX) Price Falls, Early Solana (SOL) Investor Buys into Pomerdoge (POMD) Presale",
+      "link": "https://cryptopanic.com/news/18798716/Tron-TRX-Price-Falls-Early-Solana-SOL-Investor-Buys-into-Pomerdoge-POMD-Presale",
+      "pubDate": "2023-07-26T19:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "BUSD",
+        "SOL",
+        "TRX"
+      ]
+    },
+    {
+      "title": "Judge suggests IRS issued $4K refund over tax lawsuit based on quality of lawyers: Report",
+      "link": "https://cryptopanic.com/news/18798714/Judge-suggests-IRS-issued-4K-refund-over-tax-lawsuit-based-on-quality-of-lawyers-Report",
+      "pubDate": "2023-07-26T19:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Block.one Faces Lawsuit from EOS Network Foundation",
+      "link": "https://cryptopanic.com/news/18798691/Blockone-Faces-Lawsuit-from-EOS-Network-Foundation",
+      "pubDate": "2023-07-26T19:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ]
+    },
+    {
+      "title": "EOS Network Foundation preparing to sue Block.one over unfulfilled $1B investment promise",
+      "link": "https://cryptopanic.com/news/18798663/EOS-Network-Foundation-preparing-to-sue-Blockone-over-unfulfilled-1B-investment-promise",
+      "pubDate": "2023-07-26T19:15:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ]
+    },
+    {
+      "title": "McDonald’s in the metaverse, pro players to try Web3: Nifty Newsletter",
+      "link": "https://cryptopanic.com/news/18798606/McDonalds-in-the-metaverse-pro-players-to-try-Web3-Nifty-Newsletter",
+      "pubDate": "2023-07-26T19:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "XRP Verdict: SEC Appeal Could Actually ‘Amplify’ Ripple’s Landmark Victory, CLO Asserts",
+      "link": "https://cryptopanic.com/news/18798558/XRP-Verdict-SEC-Appeal-Could-Actually-Amplify-Ripples-Landmark-Victory-CLO-Asserts",
+      "pubDate": "2023-07-26T18:22:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Stuart Alderoty, legal chief at Ripple, has dismissed concerns about a likely appeal by the U.S. Securities and Exchange Commission (SEC) to the historic XRP ruling earlier this month.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Compound (COMP) Bulls Strengthen Market Control With 13% Rally",
+      "link": "https://cryptopanic.com/news/18798500/Compound-COMP-Bulls-Strengthen-Market-Control-With-13-Rally",
+      "pubDate": "2023-07-26T18:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "COMP"
+      ]
+    },
+    {
+      "title": "MakerDAO Considers Boosting DAI Savings Rate To 8%",
+      "link": "https://cryptopanic.com/news/18798463/MakerDAO-Considers-Boosting-DAI-Savings-Rate-To-8",
+      "pubDate": "2023-07-26T17:57:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "DAI",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Best Crypto to Buy Now 26 July – Compound, Maker, Theta Network",
+      "link": "https://cryptopanic.com/news/18798828/Best-Crypto-to-Buy-Now-26-July-Compound-Maker-Theta-Network",
+      "pubDate": "2023-07-26T17:43:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "THETA"
+      ]
+    },
+    {
+      "title": "Ripple Has Partnered With The Island Nation!",
+      "link": "https://cryptopanic.com/news/18798206/Ripple-Has-Partnered-With-The-Island-Nation",
+      "pubDate": "2023-07-26T16:16:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Having won an important victory against the SEC in the SEC-XRP lawsuit, Ripple continues to forge new partnerships. At this point, Ripple signed a stablecoin agreement with Palau, an island country in the Pacific. As The Block reports, the Palau government has partnered with Ripple to pilot a US dollar-backed stablecoin. The new stablecoin will […] Continue Reading: Ripple Has...",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SHIB Burn Up 140% Since Starting ETHToronto Ticket Giveaway",
+      "link": "https://cryptopanic.com/news/18798176/SHIB-Burn-Up-140-Since-Starting-ETHToronto-Ticket-Giveaway",
+      "pubDate": "2023-07-26T16:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "SHIB Army members keep their eyes on the prize as SHIB Token dishes out a couple of free conference tickets.",
+      "currencies": [
+        "ETH",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Maker (MKR) Shows Positive Moves As Top Coins Land In The Red",
+      "link": "https://cryptopanic.com/news/18798181/Maker-MKR-Shows-Positive-Moves-As-Top-Coins-Land-In-The-Red",
+      "pubDate": "2023-07-26T16:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DAI",
+        "LTC",
+        "MKR",
+        "XDC",
+        "COMP"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash (BCH) price forms a falling wedge: Is it safe to buy?",
+      "link": "https://cryptopanic.com/news/18798098/Bitcoin-Cash-BCH-price-forms-a-falling-wedge-Is-it-safe-to-buy",
+      "pubDate": "2023-07-26T15:31:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin Cash price has formed a falling wedge pattern on the 4H chart. Focus shifts to the upcoming interest rate decision by the Fed. Bitcoin Cash price has retreated in the past few weeks as the recent momentum in the crypto industry waned. The coin dropped to a low of $240 on Wednesday, much lower […]",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Edges Lower; XDC Network, Pepe Among Top Losers",
+      "link": "https://cryptopanic.com/news/18797969/Ethereum-Edges-Lower-XDC-Network-Pepe-Among-Top-Losers",
+      "pubDate": "2023-07-26T14:30:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XDC"
+      ]
+    },
+    {
+      "title": "EOS Foundation to sue Block​.one for alleged failure to honor $1B commitment",
+      "link": "https://cryptopanic.com/news/18797886/EOS-Foundation-to-sue-Blockone-for-alleged-failure-to-honor-1B-commitment",
+      "pubDate": "2023-07-26T14:07:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Jesper Johansen – Northstake – The Smart Economy Podcast: Episode 42",
+      "link": "https://cryptopanic.com/news/18797843/Jesper-Johansen-Northstake-The-Smart-Economy-Podcast-Episode-42",
+      "pubDate": "2023-07-26T14:06:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Rebranding Twitter to X Sends Dogecoin On A Rally — Here’s Why DOGE Could Explode to $1",
+      "link": "https://cryptopanic.com/news/18797778/Rebranding-Twitter-to-X-Sends-Dogecoin-On-A-Rally-Heres-Why-DOGE-Could-Explode-to-1",
+      "pubDate": "2023-07-26T13:45:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "At the start of the week, Twitter ditched the bird logo for X in a rebrand that has sent the community buzzing, but amid the chatter, Dogecoin (DOGE) has ridden the wave to go on a strong rally.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "STX’s MarketCap Holds Its Shape Despite PullBack in Q2’23: Reports",
+      "link": "https://cryptopanic.com/news/18798108/STXs-MarketCap-Holds-Its-Shape-Despite-PullBack-in-Q223-Reports",
+      "pubDate": "2023-07-26T13:32:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STX"
+      ]
+    },
+    {
+      "title": "Binance Rolls Out Zero-Fee Stablecoin But Hits Pause Soon After: Here’s Why",
+      "link": "https://cryptopanic.com/news/maker/18797639/Binance-Rolls-Out-Zero-Fee-Stablecoin-But-Hits-Pause-Soon-After-Heres-Why",
+      "pubDate": "2023-07-26T13:00:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "LTC",
+        "MKR"
+      ]
+    },
+    {
+      "title": "KuCoin Denies Mass Layoffs Amidst Allegations",
+      "link": "https://cryptopanic.com/news/18797467/KuCoin-Denies-Mass-Layoffs-Amidst-Allegations",
+      "pubDate": "2023-07-26T12:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "Ethereum Whales Sell Off Massive Amounts of ETH and Wrapped Bitcoin As Crypto Markets Weaken: On-Chain Data",
+      "link": "https://cryptopanic.com/news/18797382/Ethereum-Whales-Sell-Off-Massive-Amounts-of-ETH-and-Wrapped-Bitcoin-As-Crypto-Markets-Weaken-On-Chain-Data",
+      "pubDate": "2023-07-26T11:45:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "WBTC",
+        "UNI"
+      ]
+    },
+    {
+      "title": "Binance halts trading of FDUSD stablecoin due to ‘technical issues’",
+      "link": "https://cryptopanic.com/news/maker/18797264/Binance-halts-trading-of-FDUSD-stablecoin-due-to-technical-issues",
+      "pubDate": "2023-07-26T11:02:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "This Ethereum Meme Coin Token Gaining More Momentum Than Cosmos (ATOM) and Tezos (XTZ)",
+      "link": "https://cryptopanic.com/news/tezos/18797558/This-Ethereum-Meme-Coin-Token-Gaining-More-Momentum-Than-Cosmos-ATOM-and-Tezos-XTZ",
+      "pubDate": "2023-07-26T11:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XTZ"
+      ]
+    },
+    {
+      "title": "Stablecoin Giant Tether (USDT) Reaches All-Time Highest Market Cap!",
+      "link": "https://cryptopanic.com/news/18797244/Stablecoin-Giant-Tether-USDT-Reaches-All-Time-Highest-Market-Cap",
+      "pubDate": "2023-07-26T10:59:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Tether's market cap has hit an all-time high, once confirming confidence in the stablecoin. Continue Reading: Stablecoin Giant Tether (USDT) Reaches All-Time Highest Market Cap!",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "3 Altcoins That May Present Great Trading Opportunities This Week",
+      "link": "https://cryptopanic.com/news/maker/18797600/3-Altcoins-That-May-Present-Great-Trading-Opportunities-This-Week",
+      "pubDate": "2023-07-26T10:51:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Lido Finance DAO Mulls Introducing New Dual Governance Model",
+      "link": "https://cryptopanic.com/news/18797225/Lido-Finance-DAO-Mulls-Introducing-New-Dual-Governance-Model",
+      "pubDate": "2023-07-26T10:50:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LDO"
+      ]
+    },
+    {
+      "title": "SHIB's Market Cap Soars, Coin Regains 16th Place, Here's What's Pushing It",
+      "link": "https://cryptopanic.com/news/18797210/SHIBs-Market-Cap-Soars-Coin-Regains-16th-Place-Heres-Whats-Pushing-It",
+      "pubDate": "2023-07-26T10:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Shiba Inu seems to be regaining its recent losses on crypto market in terms of market cap",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Pepecoin (PEPE) Continues Its Downward Spiral – VC Spectra (SPCT) Investors Prepare for Massive Gains, ApeCoin (APE) Follows",
+      "link": "https://cryptopanic.com/news/apecoin/18797206/Pepecoin-PEPE-Continues-Its-Downward-Spiral-VC-Spectra-SPCT-Investors-Prepare-for-Massive-Gains-ApeCoin-APE-Follows",
+      "pubDate": "2023-07-26T10:16:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "APE"
+      ]
+    },
+    {
+      "title": "Golden Cask Club (GCC): Your Gateway to Alternative Investments in the Luxury Spirits Market, Set to Dwarf Dogecoin (DOGE) and Filecoin (FIL)",
+      "link": "https://cryptopanic.com/news/filecoin/18797207/Golden-Cask-Club-GCC-Your-Gateway-to-Alternative-Investments-in-the-Luxury-Spirits-Market-Set-to-Dwarf-Dogecoin-DOGE-and-Filecoin-FIL",
+      "pubDate": "2023-07-26T10:12:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "FIL"
+      ]
+    },
+    {
+      "title": "Crypto Exchange Kucoin Denies Rumors of Massive Layoffs, Says Company Is Growing",
+      "link": "https://cryptopanic.com/news/18797059/Crypto-Exchange-Kucoin-Denies-Rumors-of-Massive-Layoffs-Says-Company-Is-Growing",
+      "pubDate": "2023-07-26T09:53:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "KuCoin CEO Sheds Light on Allegations of Mass Layoffs",
+      "link": "https://cryptopanic.com/news/18796810/KuCoin-CEO-Sheds-Light-on-Allegations-of-Mass-Layoffs",
+      "pubDate": "2023-07-26T07:59:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "Shiba Inu: Will This Bullish Formation Lead To A 25% Upsurge?",
+      "link": "https://cryptopanic.com/news/18796786/Shiba-Inu-Will-This-Bullish-Formation-Lead-To-A-25-Upsurge",
+      "pubDate": "2023-07-26T07:39:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Shiba Inu (SHIB) has recently caught the attention of traders and investors as it forms an ascending triangle pattern on the price chart. This technical pattern is characterized by higher lows, converging with a horizontal resistance level. The current price of SHIB stands at $0.00000789, experiencing a meager 1% in increase in the last 24 hours and recording a modest seven-day gain of 0.6%,...",
+      "currencies": [
+        "ADA",
+        "SHIB",
+        "XDC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Sky Mavis and CyberKongz Plan to Win Together",
+      "link": "https://cryptopanic.com/news/18796723/Sky-Mavis-and-CyberKongz-Plan-to-Win-Together",
+      "pubDate": "2023-07-26T06:56:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "Tezos Price Prediction: XTZ Weak as TOADS Presale Approaches $6.5 Million",
+      "link": "https://cryptopanic.com/news/tezos/18796764/Tezos-Price-Prediction-XTZ-Weak-as-TOADS-Presale-Approaches-65-Million",
+      "pubDate": "2023-07-26T06:53:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XTZ"
+      ]
+    },
+    {
+      "title": "Dogecoin Registers Biggest Single-Day Gain in 4 Months, Futures Open Interest Tops $500M",
+      "link": "https://cryptopanic.com/news/18796632/Dogecoin-Registers-Biggest-Single-Day-Gain-in-4-Months-Futures-Open-Interest-Tops-500M",
+      "pubDate": "2023-07-26T05:16:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "DOGE jumped 10% on Tuesday, its biggest single-day percentage gain since April 3.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogecoin Shorts Worth $5M Liquidated As 'Good Boi' Surpasses Cardano To Become 7th Largest Crypto",
+      "link": "https://cryptopanic.com/news/18796627/Dogecoin-Shorts-Worth-5M-Liquidated-As-Good-Boi-Surpasses-Cardano-To-Become-7th-Largest-Crypto",
+      "pubDate": "2023-07-26T05:01:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin (CRYPTO: DOGE) has emerged as the top-performing cryptocurrency recording 7% gains, outperforming even Bitcoin (CRYPTO: BTC) and Ethereum (CRYPTO: read more",
+      "currencies": [
+        "ADA",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "KuCoin Denies Rumours Of 30% Staff Cut, Here’s Their Side Of The Story",
+      "link": "https://cryptopanic.com/news/18796493/KuCoin-Denies-Rumours-Of-30-Staff-Cut-Heres-Their-Side-Of-The-Story",
+      "pubDate": "2023-07-26T02:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "KuCoin denies mass layoffs, says cuts are part of normal operations",
+      "link": "https://cryptopanic.com/news/18796455/KuCoin-denies-mass-layoffs-says-cuts-are-part-of-normal-operations",
+      "pubDate": "2023-07-26T01:20:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "Tezos (XTZ) Loses Steam In Q2, Market Cap Drops 30% Following SEC Crackdown",
+      "link": "https://cryptopanic.com/news/18796450/Tezos-XTZ-Loses-Steam-In-Q2-Market-Cap-Drops-30-Following-SEC-Crackdown",
+      "pubDate": "2023-07-26T01:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XTZ"
+      ]
+    },
+    {
+      "title": "Coinbase Custody Is The Largest Validator in Tezos, Cause For Worry?",
+      "link": "https://cryptopanic.com/news/18796447/Coinbase-Custody-Is-The-Largest-Validator-in-Tezos-Cause-For-Worry",
+      "pubDate": "2023-07-26T01:00:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Open Exchange’s OX Token Up 10% Following Metaverse Venture With UFC Star",
+      "link": "https://cryptopanic.com/news/18796416/Open-Exchanges-OX-Token-Up-10-Following-Metaverse-Venture-With-UFC-Star",
+      "pubDate": "2023-07-26T00:28:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2018-11-29",
+  "fetchedAt": "2026-02-05T07:27:06.901Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Coinbase Adds Privacy-Centric Crypto Zcash to Pro Trading Exchange",
+      "link": "https://cryptopanic.com/news/3833310/Coinbase-Adds-Privacy-Centric-Crypto-Zcash-to-Pro-Trading-Exchange",
+      "pubDate": "2018-11-29T18:19:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

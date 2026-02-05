@@ -1,0 +1,91 @@
+{
+  "date": "2020-11-13",
+  "fetchedAt": "2026-02-05T07:27:06.981Z",
+  "articleCount": 6,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Thinking of making some extra cash mining $BTG? With graphics cards you may already have? Start today with 2Miners…",
+      "link": "https://cryptopanic.com/news/10532409/Thinking-of-making-some-extra-cash-mining-BTG-With-graphics-cards-you-may-already-have-Start-today-with-2Miners",
+      "pubDate": "2020-11-13T23:31:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "BTG"
+      ]
+    },
+    {
+      "title": "Uniswap’s UNI is Looking “Quite Attractive” as It Rebounds from Key Support",
+      "link": "https://cryptopanic.com/news/uniswap/10532242/Uniswaps-UNI-is-Looking-Quite-Attractive-as-It-Rebounds-from-Key-Support",
+      "pubDate": "2020-11-13T23:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "New crypto laws and regulations being deployed. Time for exchanges and governments to work together and trash out c…",
+      "link": "https://cryptopanic.com/news/10526151/New-crypto-laws-and-regulations-being-deployed-Time-for-exchanges-and-governments-to-work-together-and-trash-out-c",
+      "pubDate": "2020-11-13T10:14:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Analysts Fear Ethereum Has Topped After $470 Resistance Is Tapped Twice",
+      "link": "https://cryptopanic.com/news/ethereum/10526128/Analysts-Fear-Ethereum-Has-Topped-After-470-Resistance-Is-Tapped-Twice",
+      "pubDate": "2020-11-13T10:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "3 years! Now payments has been an excellent partner! Thank you for supporting BTG!",
+      "link": "https://cryptopanic.com/news/10525143/3-years-Now-payments-has-been-an-excellent-partner-Thank-you-for-supporting-BTG",
+      "pubDate": "2020-11-13T07:22:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTG"
+      ]
+    },
+    {
+      "title": "Did you buy $BTC today?",
+      "link": "https://cryptopanic.com/news/10524167/Did-you-buy-BTC-today",
+      "pubDate": "2020-11-13T04:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    }
+  ]
+}

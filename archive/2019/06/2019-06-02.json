@@ -1,0 +1,41 @@
+{
+  "date": "2019-06-02",
+  "fetchedAt": "2026-02-05T07:27:06.906Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tron Price Analysis: TRX Surges 8% After Justin Sun’s Upcoming Announcement Tweet",
+      "link": "https://cryptopanic.com/news/tron/5600280/Tron-Price-Analysis-TRX-Surges-8-After-Justin-Suns-Upcoming-Announcement-Tweet",
+      "pubDate": "2019-06-02T16:34:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Coinbase Adds EOS to Its Crypto Education Rewards Program",
+      "link": "https://cryptopanic.com/news/5596950/Coinbase-Adds-EOS-to-Its-Crypto-Education-Rewards-Program",
+      "pubDate": "2019-06-02T02:05:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

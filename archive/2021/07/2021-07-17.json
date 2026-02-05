@@ -1,0 +1,323 @@
+{
+  "date": "2021-07-17",
+  "fetchedAt": "2026-02-05T07:27:06.579Z",
+  "articleCount": 23,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Who’s betting on swimming?",
+      "link": "https://cryptopanic.com/news/12345831/Whos-betting-on-swimming",
+      "pubDate": "2021-07-17T20:51:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REP"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: Vitalik is cool with what we're doing. Thanks @VitalikButerin! For supporting SENS for years a…",
+      "link": "https://cryptopanic.com/news/12347651/RT-RichardHeartWin-Vitalik-is-cool-with-what-were-doing-Thanks-VitalikButerin-For-supporting-SENS-for-years-a",
+      "pubDate": "2021-07-17T20:20:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: If you're donating to from the UK, you have to use their UK crypto addresses at the bottom of…",
+      "link": "https://cryptopanic.com/news/12347652/RT-RichardHeartWin-If-youre-donating-to-from-the-UK-you-have-to-use-their-UK-crypto-addresses-at-the-bottom-of",
+      "pubDate": "2021-07-17T20:10:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: Everyone that is trying to donate to for the sacrifice phase. You must…",
+      "link": "https://cryptopanic.com/news/12347653/RT-RichardHeartWin-Everyone-that-is-trying-to-donate-to-for-the-sacrifice-phase-You-must",
+      "pubDate": "2021-07-17T19:36:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "Binance USD (BUSD) Becomes a Top 10 Crypto, Market Cap Exceeds $11B",
+      "link": "https://cryptopanic.com/news/12345612/Binance-USD-BUSD-Becomes-a-Top-10-Crypto-Market-Cap-Exceeds-11B",
+      "pubDate": "2021-07-17T18:25:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Binance USD (BUSD) is now ranked 10th on Coinmarketcap Binance USD’s market cap has exceeded $11 Billion There are now three stablecoins in the top 10 rankings according to market cap The use of Binance USD in DeFi is gaining popularity The Binance USD (BUSD) stablecoin is now a top 10 digital asset on Coinmarketcap. Binance USD now has a total market cap of $11.198 Billion as highlighted on the...",
+      "currencies": [
+        "BUSD"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance and its CEO have been instrumental in developing the crypto industry.",
+      "link": "https://cryptopanic.com/news/12347609/Binance-and-its-CEO-have-been-instrumental-in-developing-the-crypto-industry",
+      "pubDate": "2021-07-17T18:06:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Binance CEO CZ Has Eyes Peeled For An Ether vs. BNB Tussle As Network Wars Intensify",
+      "link": "https://cryptopanic.com/news/tron/12345584/Binance-CEO-CZ-Has-Eyes-Peeled-For-An-Ether-vs-BNB-Tussle-As-Network-Wars-Intensify",
+      "pubDate": "2021-07-17T18:06:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The network rivalry between Ethereum and Tron may have been the most pronounced in the past, and most recently, that onlookers may have forgotten that the former is also a Binance competitor, thanks to the arrival of the Binance smart chain. An Ether and BNB rivalry is brewing With the arrival of the Binance smart […]",
+      "currencies": [
+        "ETH",
+        "BNB",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @RichardHeartWin: This is really awesome.",
+      "link": "https://cryptopanic.com/news/12347654/RT-RichardHeartWin-This-is-really-awesome",
+      "pubDate": "2021-07-17T18:01:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "‘Never Said The Word Sell’—Elon Musk Boosts The Price Of Dogecoin As Bitcoin And Crypto Lose Billions",
+      "link": "https://cryptopanic.com/news/dogecoin/12345545/Never-Said-The-Word-SellElon-Musk-Boosts-The-Price-Of-Dogecoin-As-Bitcoin-And-Crypto-Lose-Billions",
+      "pubDate": "2021-07-17T17:38:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Elon Musk, the dogecoin-touting Tesla billionare, has boosted the price of the meme-based cryptocurrency, tweeting his son is \"holding his doge like a champ\"...",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Dogecoin Prints Green Candle as Elon Musk Praises His Son \"Lil X\" for Hodling DOGE “Like a Champ”",
+      "link": "https://cryptopanic.com/news/dogecoin/12345546/Dogecoin-Prints-Green-Candle-as-Elon-Musk-Praises-His-Son-Lil-X-for-Hodling-DOGE-Like-a-Champ",
+      "pubDate": "2021-07-17T17:32:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Tesla CEO Elon Musk has jokingly admired his son \"Lil X\" for holding his Dogecoins and never thinking of selling them",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 5
+      }
+    },
+    {
+      "title": "XinFin Network (XDC) Now Listed on Crypto Exchange Bittrex Global",
+      "link": "https://cryptopanic.com/news/12345508/XinFin-Network-XDC-Now-Listed-on-Crypto-Exchange-Bittrex-Global",
+      "pubDate": "2021-07-17T17:16:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Leading crypto exchange Bittrex Global has now listed XDC. Users will have access to the projects powered by XDC. Read here. XinFin’s Mainnet Token XDC is now available on a leading cryptocurrency exchange Bittrex Global. Bittrex has listed XDC on July 13, 2021. 🚨 #NewListingAlert 🚨The XDC Network (XDC) wallets are now enabled.The the BTC-XDC […]",
+      "currencies": [
+        "XDC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Ledger Foundation Opens New Office in This Innovative European Country",
+      "link": "https://cryptopanic.com/news/ripple/12345402/XRP-Ledger-Foundation-Opens-New-Office-in-This-Innovative-European-Country",
+      "pubDate": "2021-07-17T16:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "XRP Ledger Foundation has set up a new office in a European country, choosing the new location for regulatory benefits and little red tape",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Did you know that users can top up their mobile phones with data and airtime in over 160 countries? Just log onto t…",
+      "link": "https://cryptopanic.com/news/12345235/Did-you-know-that-users-can-top-up-their-mobile-phones-with-data-and-airtime-in-over-160-countries-Just-log-onto-t",
+      "pubDate": "2021-07-17T14:30:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Join #CrossingTheYellowBlocks - let’s shake the movie industry 🤪",
+      "link": "https://cryptopanic.com/news/12347185/Join-CrossingTheYellowBlocks-lets-shake-the-movie-industry?mtm_campaign=API-OFA",
+      "pubDate": "2021-07-17T14:14:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CBK"
+      ]
+    },
+    {
+      "title": "RT @btsfav: #DeFinitely 65 - The News in #DeFi",
+      "link": "https://cryptopanic.com/news/12345096/RT-btsfav-DeFinitely-65-The-News-in-DeFi",
+      "pubDate": "2021-07-17T13:15:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "RT @safepress: Here's a nice summary of a new movement that includes many projects including I think : The Public In…",
+      "link": "https://cryptopanic.com/news/12345079/RT-safepress-Heres-a-nice-summary-of-a-new-movement-that-includes-many-projects-including-I-think-The-Public-In",
+      "pubDate": "2021-07-17T13:04:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: Oh, and you may get a tax write off, or free coins!",
+      "link": "https://cryptopanic.com/news/12347656/RT-RichardHeartWin-Oh-and-you-may-get-a-tax-write-off-or-free-coins",
+      "pubDate": "2021-07-17T07:18:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: The biggest #Ethereum #USDC send we've seen hit so far was $10,000,000. The biggest #Bitcoin #BTC send was $704,000? $…",
+      "link": "https://cryptopanic.com/news/12347657/RT-RichardHeartWin-The-biggest-Ethereum-USDC-send-weve-seen-hit-so-far-was-10000000-The-biggest-Bitcoin-BTC-send-was-704000",
+      "pubDate": "2021-07-17T07:18:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: #Bitcoin bros. Now is the time for you to show you are the best #cryptocurrency community in the world! We've seen way…",
+      "link": "https://cryptopanic.com/news/12347658/RT-RichardHeartWin-Bitcoin-bros-Now-is-the-time-for-you-to-show-you-are-the-best-cryptocurrency-community-in-the-world-Weve-seen-way",
+      "pubDate": "2021-07-17T07:18:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "Discussing the Future Of eCash And Avalanche With Anthony Zegers (Part I)",
+      "link": "https://cryptopanic.com/news/ecash/12356352/Discussing-the-Future-Of-eCash-And-Avalanche-With-Anthony-Zegers-Part-I",
+      "pubDate": "2021-07-17T03:50:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "XEC"
+      ]
+    },
+    {
+      "title": "Holding stablecoins during the market downtrend? $USDT $USDC $DAI $TUSD $sUSD $BUSD $PAX $GUSD $UST Put those…",
+      "link": "https://cryptopanic.com/news/paxos-standard/12343945/Holding-stablecoins-during-the-market-downtrend-USDT-USDC-DAI-TUSD-sUSD-BUSD-PAX-GUSD-UST-Put-those",
+      "pubDate": "2021-07-17T03:44:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "DAI",
+        "SMTY"
+      ]
+    },
+    {
+      "title": "POW#44: My four year journey from Bitcoin, to Bitcoin Cash, to eCash",
+      "link": "https://cryptopanic.com/news/ecash/12379021/POW44-My-four-year-journey-from-Bitcoin-to-Bitcoin-Cash-to-eCash",
+      "pubDate": "2021-07-17T02:32:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: Going live",
+      "link": "https://cryptopanic.com/news/12342373/RT-RichardHeartWin-Going-live",
+      "pubDate": "2021-07-17T01:02:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    }
+  ]
+}

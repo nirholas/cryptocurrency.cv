@@ -1,0 +1,32 @@
+{
+  "date": "2020-08-25",
+  "fetchedAt": "2026-02-05T07:27:06.979Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @PaxosGlobal: PAX Gold $PAXG is now listed on @binance and will be traded against $BUSD, $BTC, and $BNB starting tomorrow at 8AM ET! $PA…",
+      "link": "https://cryptopanic.com/news/9778478/RT-PaxosGlobal-PAX-Gold-PAXG-is-now-listed-on-binance-and-will-be-traded-against-BUSD-BTC-and-BNB-starting-tomorrow-at-8AM-ET-PA",
+      "pubDate": "2020-08-25T14:59:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "Binance Exchange to List Paxos’ Gold-Backed Cryptocurrency",
+      "link": "https://cryptopanic.com/news/9778180/Binance-Exchange-to-List-Paxos-Gold-Backed-Cryptocurrency",
+      "pubDate": "2020-08-25T14:19:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    }
+  ]
+}

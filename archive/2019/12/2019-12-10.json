@@ -1,0 +1,51 @@
+{
+  "date": "2019-12-10",
+  "fetchedAt": "2026-02-05T07:27:06.980Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "BitPay merchants can now accept 3 stablecoins as payment",
+      "link": "https://cryptopanic.com/news/7374036/BitPay-merchants-can-now-accept-3-stablecoins-as-payment",
+      "pubDate": "2019-12-10T21:35:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "USDP"
+      ]
+    },
+    {
+      "title": "Gemini Dollar (GUSD) and Other Stablecoins Now Supported by BitPay",
+      "link": "https://cryptopanic.com/news/7371244/Gemini-Dollar-GUSD-and-Other-Stablecoins-Now-Supported-by-BitPay",
+      "pubDate": "2019-12-10T16:17:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "How MakerDAO plans to fix potential $340 million cryptocurrency exploit",
+      "link": "https://cryptopanic.com/news/7371042/How-MakerDAO-plans-to-fix-potential-340-million-cryptocurrency-exploit",
+      "pubDate": "2019-12-10T15:54:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "date": "2019-03-29",
+  "fetchedAt": "2026-02-05T07:27:06.996Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Justin Sun Draws Heat From Tron Fans for Waffling on Promised Prizes",
+      "link": "https://cryptopanic.com/news/tron/4987544/Justin-Sun-Draws-Heat-From-Tron-Fans-for-Waffling-on-Promised-Prizes",
+      "pubDate": "2019-03-29T21:15:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Where’s My Tesla? Justin Sun Refuses to Honor Competition Winner",
+      "link": "https://cryptopanic.com/news/4980054/Wheres-My-Tesla-Justin-Sun-Refuses-to-Honor-Competition-Winner",
+      "pubDate": "2019-03-29T12:34:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 23
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Cardano [ADA] & ICON [ICX] Price Action – Cardano Continues Increase to Weekly Resistance",
+      "link": "https://cryptopanic.com/news/4977937/Cardano-ADA-ICON-ICX-Price-Action-Cardano-Continues-Increase-to-Weekly-Resistance",
+      "pubDate": "2019-03-29T09:19:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "ICX"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

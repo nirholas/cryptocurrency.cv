@@ -1,0 +1,346 @@
+{
+  "date": "2022-06-19",
+  "fetchedAt": "2026-02-05T07:27:07.576Z",
+  "articleCount": 20,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Analyst Michaël van de Poppe Unveils Altcoin Picks, Says He’s Bullish on Ethereum and Three ETH Rivals",
+      "link": "https://cryptopanic.com/news/15543640/Analyst-Michael-van-de-Poppe-Unveils-Altcoin-Picks-Says-Hes-Bullish-on-Ethereum-and-Three-ETH-Rivals",
+      "pubDate": "2022-06-19T22:05:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A widely followed crypto strategist is unveiling his top altcoin picks amid the crypto pullback, which includes Ethereum (ETH) and three of its challengers. Michaël van de Poppe tells his 611,800 Twitter followers that he is positioned for huge rallies in smart contract platforms Ethereum, Cardano (ADA), Avalanche (AVAX) and Fantom (FTM), as well as […]",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "AVAX",
+        "MATIC",
+        "FTM"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Top 5 cryptocurrencies to watch this week: BTC, SOL, LTC, LINK, BSV",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/15543567/Top-5-cryptocurrencies-to-watch-this-week-BTC-SOL-LTC-LINK-BSV",
+      "pubDate": "2022-06-19T21:19:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin is flashing some early signs of a relief rally, and SOL, LTC, LINK and BSV could follow if bulls reclaim $20,000 as a support level for BTC.",
+      "currencies": [
+        "BTC",
+        "LTC",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Derivatives Exchange Reserve Surges Up As BTC Continues To Plunge",
+      "link": "https://cryptopanic.com/news/15543370/Bitcoin-Derivatives-Exchange-Reserve-Surges-Up-As-BTC-Continues-To-Plunge",
+      "pubDate": "2022-06-19T19:00:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "On-chain data shows the Bitcoin reserve of derivative exchanges has surged up recently as the price of the crypto has continued to crash down. Bitcoin Derivatives Exchange Reserve Observes Sharp Uptrend As explained by an analyst in a CryptoQuant post, the crashing BTC price may be forcing whales and long-term holders to open short positions in order to hedge their portfolios. The “derivative...",
+      "currencies": [
+        "BTC",
+        "QNT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Worst Crypto Bear Market Of All Time?",
+      "link": "https://cryptopanic.com/news/blockstack/15543373/Worst-Crypto-Bear-Market-Of-All-Time",
+      "pubDate": "2022-06-19T18:51:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "STACKS is the best place to hear how crypto investors, traders, and analysts are navigating the market. Hosted by Luke Martin, this podcast covers the biggest questions & opportunities in crypto. GUEST: Dan Matuszewski is the Co-Founder of CMS Holdings, a crypto proprietary trading firm. Zaheer Ebtikar is a Portfolio Manager at Ledger Prime, a quantitative crypto trading firm. Both traders have serious experience surviving crypto cycles and we talk about all the topics that are causing investors",
+      "currencies": [
+        "STX"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Dogecoin Surges 20% As Billionaire Elon Musk Vows To Boost Purchasing Power On DOGE",
+      "link": "https://cryptopanic.com/news/dogecoin/15543214/Dogecoin-Surges-20-As-Billionaire-Elon-Musk-Vows-To-Boost-Purchasing-Power-On-DOGE",
+      "pubDate": "2022-06-19T17:45:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "On Sunday, Dogecoin (DOGE) sprung up over 10% following a tweet by Billionaire Elon Musk stating that he would...",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 6
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Alameda Research lends Voyager Digital 200M USDC and 15k Bitcoin to Safeguard Customer Assets During the Bear Market",
+      "link": "https://cryptopanic.com/news/15543102/Alameda-Research-lends-Voyager-Digital-200M-USDC-and-15k-Bitcoin-to-Safeguard-Customer-Assets-During-the-Bear-Market",
+      "pubDate": "2022-06-19T16:30:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Key takeaways: Sam Bankman-Fried’s Alameda Research has lent Voyager digital 200 million USDC and 15k Bitcoin. The digital assets are meant to safeguard Voyager Digital’s customers’ assets during the current crypto market volatility. The term sheet between Alameda Research and Voyager Digital provides a revolving term of credit facilities expiring December 2024 with an annual interest rate of 5%....",
+      "currencies": [
+        "BTC",
+        "USDC",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Solend Team Proposes to ‘Take Over’ a Solana Whale Account Facing Liquidation That Could Affect the DEX’s Liquidity",
+      "link": "https://cryptopanic.com/news/15543037/Solend-Team-Proposes-to-Take-Over-a-Solana-Whale-Account-Facing-Liquidation-That-Could-Affect-the-DEXs-Liquidity",
+      "pubDate": "2022-06-19T15:54:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Summary: The team at Solend is concerned that a Solana whale might be liquidated, causing a cascade of liquidations that would hurt the platform’s liquidity. The Solend team has attempted to contact the SOL whale to no avail. They have since proposed to grant Solend Labs emergency power to temporarily take over the account so that the liquidation can be executed through an OTC trade, safeguarding...",
+      "currencies": [
+        "BTC",
+        "USDC",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "May I Have Your Attention",
+      "link": "https://cryptopanic.com/news/15546051/May-I-Have-Your-Attention",
+      "pubDate": "2022-06-19T15:31:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HOO"
+      ]
+    },
+    {
+      "title": "Stop Looking at the BTC Chart, Your Bitcoin Investment is Safe and Will Grow After the Bear Market, Says President Bukele",
+      "link": "https://cryptopanic.com/news/15542998/Stop-Looking-at-the-BTC-Chart-Your-Bitcoin-Investment-is-Safe-and-Will-Grow-After-the-Bear-Market-Says-President-Bukele",
+      "pubDate": "2022-06-19T15:30:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Key takeaways: El Salvador’s President Nayib Bukele has advised crypto traders to stop looking at the Bitcoin chart and enjoy life. President Bukele also reassured Bitcoin holders that their investment is safe and its value will immensely grow after the bear market. According to Bitcoin Treasuries, President Bukuele’s Bitcoin purchase on behalf of El Salvador is currently at 62.2% in unrealized...",
+      "currencies": [
+        "BTC",
+        "USDC",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 80,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Money is made during bull market but Millionaires are made during the bear market. The smart ones are accumulating…",
+      "link": "https://cryptopanic.com/news/15547153/Money-is-made-during-bull-market-but-Millionaires-are-made-during-the-bear-market-The-smart-ones-are-accumulating?mtm_campaign=API-OFA",
+      "pubDate": "2022-06-19T14:28:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "PXT"
+      ]
+    },
+    {
+      "title": "Do Kwon and Terraform Labs Sued for Misleading Investors",
+      "link": "https://cryptopanic.com/news/15542884/Do-Kwon-and-Terraform-Labs-Sued-for-Misleading-Investors",
+      "pubDate": "2022-06-19T14:16:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The Terra collapse continues to make headlines with a new lawsuit against the firm, founders, and VCs in the US.",
+      "currencies": [
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "SafeMoon loses almost 80% of its value in 2022 despite V2 migration",
+      "link": "https://cryptopanic.com/news/15542714/SafeMoon-loses-almost-80-of-its-value-in-2022-despite-V2-migration",
+      "pubDate": "2022-06-19T12:35:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The value of the decentralized finance (DeFi) token SafeMoon, an altcoin project on the Binance Smart Chain (BSC), has plunged... Continue reading",
+      "currencies": [
+        "XCN"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 10
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Dogecoin Pumps 8% After Elon Musk Says He's Still Buying",
+      "link": "https://cryptopanic.com/news/dogecoin/15542685/Dogecoin-Pumps-8-After-Elon-Musk-Says-Hes-Still-Buying",
+      "pubDate": "2022-06-19T12:14:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Even amid a brutal bear market, a Musk support tweet predictably gives the best-known meme coin a brief price surge.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogecoin Pumps By Over 10% On Elon Musk’s Tweets That He’ll Keep Supporting and Buying DOGE",
+      "link": "https://cryptopanic.com/news/15542600/Dogecoin-Pumps-By-Over-10-On-Elon-Musks-Tweets-That-Hell-Keep-Supporting-and-Buying-DOGE",
+      "pubDate": "2022-06-19T11:22:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Summary: Dogecoin has pumped by over 10% after Elon Musk tweeted that he will keep supporting DOGE. In a follow-up Tweet, Elon Musk said he would keep buying Dogecoin. Elon Musk, Tesla, and SpaceX are facing a $258 billion lawsuit for promoting a Dogecoin ‘pyramid scheme’. The popular meme-coin of Dogecoin (DOGE) has experienced a knee-jerk reaction after the CEO of Tesla and Founder of SpaceX,...",
+      "currencies": [
+        "BTC",
+        "USDC",
+        "SOL",
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 6
+      }
+    },
+    {
+      "title": "The #BitcoinSV #Transpiler is a long-awaited #solution that lets you transcribe any #Ethereum #SmartContract to sCr…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/15544740/The-BitcoinSV-Transpiler-is-a-long-awaited-solution-that-lets-you-transcribe-any-Ethereum-SmartContract-to-sCr",
+      "pubDate": "2022-06-19T10:10:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "DOGE shoots up as Elon Musk affirms he’s accumulating Dogecoin",
+      "link": "https://cryptopanic.com/news/15541917/DOGE-shoots-up-as-Elon-Musk-affirms-hes-accumulating-Dogecoin",
+      "pubDate": "2022-06-19T09:16:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Meme cryptocurrency Dogecoin has put aside the ongoing market correction to trade in the green zone after Tesla (NASDAQ: TSLA)... Continue reading",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Elon Musk’s support for Dogecoin grows stronger following $258B lawsuit",
+      "link": "https://cryptopanic.com/news/dogecoin/15541144/Elon-Musks-support-for-Dogecoin-grows-stronger-following-258B-lawsuit",
+      "pubDate": "2022-06-19T08:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Musk was seemingly unshaken about the allegation as he doubled down on his love for the Dogecoin ecosystem with a tweet saying, “I will keep supporting Dogecoin.”",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Tesla CEO Elon Musk Pledges Support for Dogeoin, Says He Is Buying $DOGE",
+      "link": "https://cryptopanic.com/news/15540700/Tesla-CEO-Elon-Musk-Pledges-Support-for-Dogeoin-Says-He-Is-Buying-DOGE",
+      "pubDate": "2022-06-19T07:52:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "On Sunday (June 19), Tesla and Space X CEO Elon Musk voiced his support for popular meme-based cryptocurrency Dogecoin, helping it to become the top percentage gainer amongst the top 10 cryptoassets in the past 24 hours. Dogecoin was initially released on 6 December 2013, as a “fun and friendly internet currency.” It was created by Billy Markus […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 10
+      }
+    },
+    {
+      "title": "Ethereum (ETH) Hammered Down To $950 As Crypto Selloff Deepens",
+      "link": "https://cryptopanic.com/news/15540536/Ethereum-ETH-Hammered-Down-To-950-As-Crypto-Selloff-Deepens",
+      "pubDate": "2022-06-19T07:49:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum (ETH) has fallen below $1,000 for the first time in more than a year as the broader crypto market continues to slide south with no quick remedy in sight, or at least not yet. Ether (ETH) was one of the cryptocurrencies that performed particularly poorly, falling 7.32 percent over the past day to follow Bitcoin’s loss. The second largest cryptocurrency by market capitalization is...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Tether confirms DDOS attack on tether.io",
+      "link": "https://cryptopanic.com/news/15537998/Tether-confirms-DDOS-attack-on-tetherio",
+      "pubDate": "2022-06-19T00:11:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Tether CTO, Paolo Ardoino, has confirmed that the Tether website, tether.io, is currently suffering a DDOS attack.",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

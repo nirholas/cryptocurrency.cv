@@ -1,0 +1,49 @@
+{
+  "date": "2020-10-09",
+  "fetchedAt": "2026-02-05T07:27:06.941Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "New top for our Masternode's Fleet, in progress ! #SSX #StakeShare",
+      "link": "https://cryptopanic.com/news/11330411/New-top-for-our-Masternodes-Fleet-in-progress-SSX-StakeShare",
+      "pubDate": "2020-10-09T13:19:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SSX"
+      ]
+    },
+    {
+      "title": "SSX as reach the phase 24, the block rewards is now 6.25 ssx/Block ! #SSX #StakeShare #blockchain",
+      "link": "https://cryptopanic.com/news/11330416/SSX-as-reach-the-phase-24-the-block-rewards-is-now-625-ssxBlock-SSX-StakeShare-blockchain",
+      "pubDate": "2020-10-09T13:16:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SSX"
+      ]
+    },
+    {
+      "title": "IOTA-Based Project IOT2TANGLE Launches Open-Source Hub, Bosch and Raspberry On Board",
+      "link": "https://cryptopanic.com/news/10208663/IOTA-Based-Project-IOT2TANGLE-Launches-Open-Source-Hub-Bosch-and-Raspberry-On-Board",
+      "pubDate": "2020-10-09T12:58:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

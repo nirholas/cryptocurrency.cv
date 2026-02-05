@@ -1,0 +1,551 @@
+{
+  "date": "2024-04-06",
+  "fetchedAt": "2026-02-05T07:27:08.066Z",
+  "articleCount": 34,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Aave’s Marc Zeller teases fee switch vote for token holders",
+      "link": "https://cryptopanic.com/news/19386270/Aaves-Marc-Zeller-teases-fee-switch-vote-for-token-holders",
+      "pubDate": "2024-04-06T23:52:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "DAO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano – Understanding why ADA’s whales aren’t ‘buying the dip’",
+      "link": "https://cryptopanic.com/news/19386228/Cardano-Understanding-why-ADAs-whales-arent-buying-the-dip",
+      "pubDate": "2024-04-06T23:00:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Whales are busy for Cardano. No, they aren't accumulating. Instead, they are...",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 3
+      }
+    },
+    {
+      "title": "AaveDAO Evaluates DAI Limits Amid eUSD Stability Concerns",
+      "link": "https://cryptopanic.com/news/19386049/AaveDAO-Evaluates-DAI-Limits-Amid-eUSD-Stability-Concerns",
+      "pubDate": "2024-04-06T19:38:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "DAI",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Optimism Continues Downward Spiral – Brace For Impact",
+      "link": "https://cryptopanic.com/news/19386038/Optimism-Continues-Downward-Spiral-Brace-For-Impact",
+      "pubDate": "2024-04-06T19:30:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "OP"
+      ]
+    },
+    {
+      "title": "Bitcoin ETFs See 4-Day Inflow Surge as Investor Appetite Grows",
+      "link": "https://cryptopanic.com/news/19386018/Bitcoin-ETFs-See-4-Day-Inflow-Surge-as-Investor-Appetite-Grows",
+      "pubDate": "2024-04-06T19:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin investment surges with billions flowing into Spot Bitcoin ETFs despite price hovering below its all-time high.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Pendle Finance Could Be the Next Big Leap in DeFi’s Evolution",
+      "link": "https://cryptopanic.com/news/19386059/Pendle-Finance-Could-Be-the-Next-Big-Leap-in-DeFis-Evolution",
+      "pubDate": "2024-04-06T19:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MNT",
+        "ARB",
+        "ENA"
+      ]
+    },
+    {
+      "title": "3 Solana ecosystem tokens to avoid in April",
+      "link": "https://cryptopanic.com/news/19385998/3-Solana-ecosystem-tokens-to-avoid-in-April",
+      "pubDate": "2024-04-06T18:46:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana (SOL) is going through delicate times facing network issues, congestion bugs, transaction failures, and rug pulls within its DeFi … Continue reading",
+      "currencies": [
+        "SOL",
+        "BONK",
+        "WIF",
+        "JUP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Bearish signal for ADA as Cardano whale activity lulls",
+      "link": "https://cryptopanic.com/news/19385923/Bearish-signal-for-ADA-as-Cardano-whale-activity-lulls",
+      "pubDate": "2024-04-06T17:20:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Cardano (ADA) now faces significant bearish signals with a whale and DeFi activity drop, while testing price support. Investors see … Continue reading",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ripple’s XRP Primed For Massive Price Shakeup as Expert Says ‘Non-Security’ Status Could Be in Jeopardy",
+      "link": "https://cryptopanic.com/news/19385914/Ripples-XRP-Primed-For-Massive-Price-Shakeup-as-Expert-Says-Non-Security-Status-Could-Be-in-Jeopardy",
+      "pubDate": "2024-04-06T17:04:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The legal battle between Ripple Labs and the Securities and Exchange Commission (SEC) over the classification of XRP as a security is becoming increasingly complex.",
+      "currencies": [
+        "USDT",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Ethena Labs Onboards Bitcoin as a Backing Asset for the Crypto Project’s Synthetic Dollar",
+      "link": "https://cryptopanic.com/news/19385897/Ethena-Labs-Onboards-Bitcoin-as-a-Backing-Asset-for-the-Crypto-Projects-Synthetic-Dollar",
+      "pubDate": "2024-04-06T16:55:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ENA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Grayscale Axes Cardano (ADA) from Crypto Fund",
+      "link": "https://cryptopanic.com/news/19385866/Grayscale-Axes-Cardano-ADA-from-Crypto-Fund",
+      "pubDate": "2024-04-06T16:20:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Grayscale, the world's largest crypto asset manager, has significantly adjusted its Digital Large Cap Fund (GDLC), removing Cardano (ADA) from the fund's portfolio.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Solana Boosts Pantera Capital’s Fund by 66% in Q1: Insights",
+      "link": "https://cryptopanic.com/news/19385806/Solana-Boosts-Pantera-Capitals-Fund-by-66-in-Q1-Insights",
+      "pubDate": "2024-04-06T15:27:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Pantera Capital has reported a remarkable 66% growth in its crypto fund during the first quarter of the year. Notably, Pantera’s Liquid Token Fund increase coincides with Solana’s performance, which saw a 99% price increase in Q1. How Solana Aided Pantera Capital’s Growth The fund is now valued at around $300 million. This can be attributed to a strategic shift in investment...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "STX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Solana price prediction as network issues escalate",
+      "link": "https://cryptopanic.com/news/19385781/Solana-price-prediction-as-network-issues-escalate",
+      "pubDate": "2024-04-06T15:03:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Solana (SOL) continues to stand out as one of the top performers in the current crypto bull run, showcasing its … Continue reading",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Fidelity raises eyebrows at Ethereum’s validator boom, analysts predict stellar year for this AI altcoin",
+      "link": "https://cryptopanic.com/news/19385702/Fidelity-raises-eyebrows-at-Ethereums-validator-boom-analysts-predict-stellar-year-for-this-AI-altcoin",
+      "pubDate": "2024-04-06T14:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XLM"
+      ]
+    },
+    {
+      "title": "3 Meme Coins Gaining Massive Popularity on Solana: Book of Meme (BOME), Cat in a Dogs World (MEW), Hump (HUMP)",
+      "link": "https://cryptopanic.com/news/19385662/3-Meme-Coins-Gaining-Massive-Popularity-on-Solana-Book-of-Meme-BOME-Cat-in-a-Dogs-World-MEW-Hump-HUMP?mtm_campaign=API-OFA",
+      "pubDate": "2024-04-06T13:32:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "MEW",
+        "BOME"
+      ]
+    },
+    {
+      "title": "Crypto News April 6: BTC and ETH Steady Amidst Altcoin Surge",
+      "link": "https://cryptopanic.com/news/19385641/Crypto-News-April-6-BTC-and-ETH-Steady-Amidst-Altcoin-Surge",
+      "pubDate": "2024-04-06T13:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "SOL",
+        "XEC",
+        "NFT",
+        "ENA",
+        "ORDI"
+      ]
+    },
+    {
+      "title": "Benzinga Bulls And Bears: Tesla, Apple, Meta And A 2013 Bitcoin Supporter Now Says 'Yes' To Shiba Inu",
+      "link": "https://cryptopanic.com/news/19385633/Benzinga-Bulls-And-Bears-Tesla-Apple-Meta-And-A-2013-Bitcoin-Supporter-Now-Says-Yes-To-Shiba-Inu",
+      "pubDate": "2024-04-06T12:56:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SHIB",
+        "META"
+      ]
+    },
+    {
+      "title": "3 cryptocurrencies to watch for the week",
+      "link": "https://cryptopanic.com/news/19385589/3-cryptocurrencies-to-watch-for-the-week",
+      "pubDate": "2024-04-06T12:36:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ENA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP holdings increase in Grayscale’s digital large-cap fund",
+      "link": "https://cryptopanic.com/news/19385570/XRP-holdings-increase-in-Grayscales-digital-large-cap-fund?mtm_campaign=API-OFA",
+      "pubDate": "2024-04-06T12:25:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "XRP",
+        "DLC"
+      ]
+    },
+    {
+      "title": "Legendary Cryptocurrency Developer and Altcoin Founder Speaks About the Issues at Solana: “Indication of Success”",
+      "link": "https://cryptopanic.com/news/19385525/Legendary-Cryptocurrency-Developer-and-Altcoin-Founder-Speaks-About-the-Issues-at-Solana-Indication-of-Success",
+      "pubDate": "2024-04-06T12:02:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "FTM"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Fantom CEO defends Solana amid network woes",
+      "link": "https://cryptopanic.com/news/19385503/Fantom-CEO-defends-Solana-amid-network-woes",
+      "pubDate": "2024-04-06T11:40:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Fantom creator Andre Cronje referred to the Solana network as a victim of success.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Shiba Inu Scores Major Exchange Listing Amid Surging Adoption",
+      "link": "https://cryptopanic.com/news/19385460/Shiba-Inu-Scores-Major-Exchange-Listing-Amid-Surging-Adoption",
+      "pubDate": "2024-04-06T11:00:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "NEXO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Weekend Watch: ETH, SOL, ICP, LINK, and ADA – Where are the Prices Headed?",
+      "link": "https://cryptopanic.com/news/19385295/Weekend-Watch-ETH-SOL-ICP-LINK-and-ADA-Where-are-the-Prices-Headed",
+      "pubDate": "2024-04-06T08:48:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "SOL",
+        "LINK",
+        "ICP"
+      ]
+    },
+    {
+      "title": "U.S. CFPB flags risks in virtual worlds’ crypto economy",
+      "link": "https://cryptopanic.com/news/19385257/US-CFPB-flags-risks-in-virtual-worlds-crypto-economy",
+      "pubDate": "2024-04-06T08:06:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SAND"
+      ]
+    },
+    {
+      "title": "Cardano Price In Turmoil: Can Whales Drive ADA’s Resurrection From Recent Dump?",
+      "link": "https://cryptopanic.com/news/19385248/Cardano-Price-In-Turmoil-Can-Whales-Drive-ADAs-Resurrection-From-Recent-Dump?mtm_campaign=API-OFA",
+      "pubDate": "2024-04-06T08:00:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "SOL",
+        "ALI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogwifhat (WIF) Chasing After DOGE and SHIB: New Top Dog Meme Coin to Come?",
+      "link": "https://cryptopanic.com/news/19385192/Dogwifhat-WIF-Chasing-After-DOGE-and-SHIB-New-Top-Dog-Meme-Coin-to-Come",
+      "pubDate": "2024-04-06T07:04:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The Solana-based token, despite being 4 months old, is entering the elite meme coin scene.",
+      "currencies": [
+        "SOL",
+        "DOGE",
+        "SHIB",
+        "WIF"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin (BTC) Challenges $68K, Dogecoin (DOGE) Soars 5% Daily (Weekend Watch)",
+      "link": "https://cryptopanic.com/news/19385145/Bitcoin-BTC-Challenges-68K-Dogecoin-DOGE-Soars-5-Daily-Weekend-Watch",
+      "pubDate": "2024-04-06T06:25:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "AVAX",
+        "NEAR",
+        "STX",
+        "TON"
+      ]
+    },
+    {
+      "title": "Crypto News April 05: Bitcoin Passes $67K, ETH Exceeds $3300",
+      "link": "https://cryptopanic.com/news/19385125/Crypto-News-April-05-Bitcoin-Passes-67K-ETH-Exceeds-3300",
+      "pubDate": "2024-04-06T06:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOGE",
+        "NEAR",
+        "BCH",
+        "NFT",
+        "INJ",
+        "CORE",
+        "MNT"
+      ]
+    },
+    {
+      "title": "US Jury Finds Do Kwon, Terraform Labs Liable For Fraud In SEC Trial",
+      "link": "https://cryptopanic.com/news/19385119/US-Jury-Finds-Do-Kwon-Terraform-Labs-Liable-For-Fraud-In-SEC-Trial",
+      "pubDate": "2024-04-06T05:45:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "LUNC"
+      ]
+    },
+    {
+      "title": "SEC Gains Court Victory Against Terraform Labs and Do Kwon: Report",
+      "link": "https://cryptopanic.com/news/19385113/SEC-Gains-Court-Victory-Against-Terraform-Labs-and-Do-Kwon-Report",
+      "pubDate": "2024-04-06T05:40:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "LUNC"
+      ]
+    },
+    {
+      "title": "How MATIC whales getting ‘greedy’ can push altcoin to $1",
+      "link": "https://cryptopanic.com/news/19385046/How-MATIC-whales-getting-greedy-can-push-altcoin-to-1",
+      "pubDate": "2024-04-06T03:00:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "An analysis of MATIC's fundamental and technical indicators flashed mixed signals...",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Is Not Holding ADA A ‘Red Flag’? Cardano’s Founder Thinks So, Community Pokes At Solana",
+      "link": "https://cryptopanic.com/news/19385010/Is-Not-Holding-ADA-A-Red-Flag-Cardanos-Founder-Thinks-So-Community-Pokes-At-Solana",
+      "pubDate": "2024-04-06T02:00:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano (ADA)’s founder is a man of many words and many GIFs. Charles Hoskinson’s comments, whether you agree or disagree with them, tend to spark discussions in the crypto community. Hoskinson’s latest X reply spree covered issues from dating advice to his confidence in the ecosystem to Solana’s recent struggles. As a result, several conversations regarding those topics and Cardano’s...",
+      "currencies": [
+        "ADA",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Solana, thank Jupiter? How JUP may have come to SOL’s rescue in Q1",
+      "link": "https://cryptopanic.com/news/19384937/Solana-thank-Jupiter-How-JUP-may-have-come-to-SOLs-rescue-in-Q1",
+      "pubDate": "2024-04-06T01:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "JUP"
+      ]
+    },
+    {
+      "title": "Flamingo Finance to host a three-month data dashboard hackathon",
+      "link": "https://cryptopanic.com/news/19384892/Flamingo-Finance-to-host-a-three-month-data-dashboard-hackathon",
+      "pubDate": "2024-04-06T00:00:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    }
+  ]
+}

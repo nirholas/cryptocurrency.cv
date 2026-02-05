@@ -1,0 +1,714 @@
+{
+  "date": "2021-04-07",
+  "fetchedAt": "2026-02-05T07:27:06.677Z",
+  "articleCount": 50,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Transaction Export Plugin",
+      "link": "https://cryptopanic.com/news/11773574/Transaction-Export-Plugin",
+      "pubDate": "2021-04-07T23:40:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "RT @SotRos25: Great summary showing just how hard @maidsafe has been working on @safenetworktech. One thing to note is $MAID will be exchan…",
+      "link": "https://cryptopanic.com/news/11736529/RT-SotRos25-Great-summary-showing-just-how-hard-maidsafe-has-been-working-on-safenetworktech-One-thing-to-note-is-MAID-will-be-exchan",
+      "pubDate": "2021-04-07T23:02:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "These Five Big Name Crypto Assets Are Ready To Explode, According to Prominent Trader",
+      "link": "https://cryptopanic.com/news/11734354/These-Five-Big-Name-Crypto-Assets-Are-Ready-To-Explode-According-to-Prominent-Trader",
+      "pubDate": "2021-04-07T22:05:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "A widely-followed crypto strategist who continues to build his following amid savvy altcoin calls is naming five big-name crypto assets that he says are poised to erupt. In a new tweet, the trader known as Kaleo tells his 137,400 followers that he sees peer-to-peer digital currency Litecoin (LTC/USD) surging to as high as $2,300 from […]",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Access to SEC Documents Will Aid Ripple’s Defense",
+      "link": "https://cryptopanic.com/news/ripple/11734279/Access-to-SEC-Documents-Will-Aid-Ripples-Defense",
+      "pubDate": "2021-04-07T20:52:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The judge presiding over the SEC’s case against Ripple has ordered the regulator to share documents. Those documents will reveal the SEC’s stance on which cryptocurrencies are considered securities. Ripple Gains Access to SEC Docs In December 2020, the U.S. Securities and Exchange Commission (SEC) filed a legal complaint alleging that Ripple and its executives raised over $1.3 billion...",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "New Petition Urges SEC Chair Nominee Gary Gensler to Drop Ripple Lawsuit",
+      "link": "https://cryptopanic.com/news/ripple/11734153/New-Petition-Urges-SEC-Chair-Nominee-Gary-Gensler-to-Drop-Ripple-Lawsuit",
+      "pubDate": "2021-04-07T19:12:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The XRP Army is already trying to court Gary Gensler even before his confirmation",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BTG Pactual’s new Bitcoin fund teams up with Gemini for custody",
+      "link": "https://cryptopanic.com/news/11737012/BTG-Pactuals-new-Bitcoin-fund-teams-up-with-Gemini-for-custody",
+      "pubDate": "2021-04-07T19:05:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTG"
+      ]
+    },
+    {
+      "title": "Ripple Nets Legal Victory In Quest To Access SEC’s Documents Relating To Classification Of Cryptoassets As Securities",
+      "link": "https://cryptopanic.com/news/ripple/11734113/Ripple-Nets-Legal-Victory-In-Quest-To-Access-SECs-Documents-Relating-To-Classification-Of-Cryptoassets-As-Securities",
+      "pubDate": "2021-04-07T18:54:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Since last December, Ripple has been in a legal battle with the United States Securities Exchange Commission (SEC), which accused the San Francisco-based blockchain payments firm of conducting an unregistered security offering of its XRP token. On Tuesday, a federal judge in the Southern District Court of New York granted Ripple’s motion to compel discovery. […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Sushi swap now on Harmony 🧑‍",
+      "link": "https://cryptopanic.com/news/11733990/Sushi-swap-now-on-Harmony",
+      "pubDate": "2021-04-07T17:31:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "ONE",
+        "SUSHI"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Enjin Listed on Coinbase Pro",
+      "link": "https://cryptopanic.com/news/11733984/Enjin-Listed-on-Coinbase-Pro",
+      "pubDate": "2021-04-07T17:31:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "-",
+      "currencies": [
+        "ENJ"
+      ],
+      "votes": {
+        "positive": 53,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ENJ has been listed on Coinbase Pro",
+      "link": "https://cryptopanic.com/news/11733985/ENJ-has-been-listed-on-Coinbase-Pro",
+      "pubDate": "2021-04-07T17:31:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "-",
+      "currencies": [
+        "ENJ"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple announces Python implementation for interacting with XRP Ledger",
+      "link": "https://cryptopanic.com/news/ripple/11734002/Ripple-announces-Python-implementation-for-interacting-with-XRP-Ledger",
+      "pubDate": "2021-04-07T17:30:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple, the San Francisco-based blockchain firm, is in the news today after its most recent project announcement. The team behind the RippleX development platform has for long been focused on XRPL-oriented solutions. It has now released a brand new library, one that significantly mitigates the process of coding on XRP Ledger. According to an announcement, […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "What is DENT Wireless and DENT Coin?",
+      "link": "https://cryptopanic.com/news/11738774/What-is-DENT-Wireless-and-DENT-Coin",
+      "pubDate": "2021-04-07T17:28:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "RT @salevid: You like NFTs? You need to experience this. Actual useful case, get a head start in a new trend and fashion standard. @demater…",
+      "link": "https://cryptopanic.com/news/11736410/RT-salevid-You-like-NFTs-You-need-to-experience-this-Actual-useful-case-get-a-head-start-in-a-new-trend-and-fashion-standard-demater",
+      "pubDate": "2021-04-07T17:24:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "RT @dematerialised: Our first dedicated magazine feature is here! Thank you @_Stylion_ for the interview with co-founder @karinnanobbs  #d…",
+      "link": "https://cryptopanic.com/news/11736411/RT-dematerialised-Our-first-dedicated-magazine-feature-is-here-Thank-you-_Stylion_-for-the-interview-with-co-founder-karinnanobbs-d",
+      "pubDate": "2021-04-07T17:20:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "Hey there, Leute! ARK's Crypto Podcast in German goes into its 106th round.",
+      "link": "https://cryptopanic.com/news/11755653/Hey-there-Leute-ARKs-Crypto-Podcast-in-German-goes-into-its-106th-round",
+      "pubDate": "2021-04-07T15:32:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Whiteheart community explores the possible ways of utilizing $WHETH and $WHWBTC in lending/borrowing purposes as a…",
+      "link": "https://cryptopanic.com/news/11738004/Whiteheart-community-explores-the-possible-ways-of-utilizing-WHETH-and-WHWBTC-in-lendingborrowing-purposes-as-a?mtm_campaign=API-OFA",
+      "pubDate": "2021-04-07T15:24:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "WHITE"
+      ]
+    },
+    {
+      "title": "Chintai early investment opportunity",
+      "link": "https://cryptopanic.com/news/11752504/Chintai-early-investment-opportunity?mtm_campaign=API-OFA",
+      "pubDate": "2021-04-07T15:14:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHEX"
+      ]
+    },
+    {
+      "title": "Here's How IOTA Solves Authenticity Issues in Partnership with IT Veterans CGI",
+      "link": "https://cryptopanic.com/news/11733772/Heres-How-IOTA-Solves-Authenticity-Issues-in-Partnership-with-IT-Veterans-CGI",
+      "pubDate": "2021-04-07T15:06:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "IOTA Foundation cohosted series of experiments with blockchain-based data verification with leading IT vendors CGI and Nordakademie, a top-league private university",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @polygondressing: @lukso_io @m_h_d_v here is the english version :-)",
+      "link": "https://cryptopanic.com/news/11736412/RT-polygondressing-lukso_io-m_h_d_v-here-is-the-english-version-",
+      "pubDate": "2021-04-07T14:03:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "As we prepare to launch our fully decentralized liquidity mining program, we have completely open sourced our entir…",
+      "link": "https://cryptopanic.com/news/11737609/As-we-prepare-to-launch-our-fully-decentralized-liquidity-mining-program-we-have-completely-open-sourced-our-entir",
+      "pubDate": "2021-04-07T14:01:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "STRK"
+      ]
+    },
+    {
+      "title": "TrueUSD Stablecoin to Launch on Tron Blockchain in 2 Days",
+      "link": "https://cryptopanic.com/news/11733555/TrueUSD-Stablecoin-to-Launch-on-Tron-Blockchain-in-2-Days",
+      "pubDate": "2021-04-07T13:19:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "Following USDT, another dollar-backed stablecoin is about to launch on the Tron network",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @karinnanobbs: Hahshahaha yes Woody!! 🤩",
+      "link": "https://cryptopanic.com/news/11736413/RT-karinnanobbs-Hahshahaha-yes-Woody",
+      "pubDate": "2021-04-07T13:02:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "Please do your research",
+      "link": "https://cryptopanic.com/news/11733472/Please-do-your-research",
+      "pubDate": "2021-04-07T12:40:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "CEL"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Tokenomics for Lukso",
+      "link": "https://cryptopanic.com/news/11738271/Tokenomics-for-Lukso",
+      "pubDate": "2021-04-07T12:04:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "RT @voguebusiness: #KarlLagerfeld's photographic legacy is moving to the #blockchain. The tie-up between #fashion and blockchain continues…",
+      "link": "https://cryptopanic.com/news/11736414/RT-voguebusiness-KarlLagerfelds-photographic-legacy-is-moving-to-the-blockchain-The-tie-up-between-fashion-and-blockchain-continues",
+      "pubDate": "2021-04-07T12:02:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "RT @LuksoNews: @KarlLagerfeld and Pfrunder knows way better than \"us\" investors how to innovate and stays ahead of times. Mr. Lagerfeld did…",
+      "link": "https://cryptopanic.com/news/11736415/RT-LuksoNews-KarlLagerfeld-and-Pfrunder-knows-way-better-than-us-investors-how-to-innovate-and-stays-ahead-of-times-Mr-Lagerfeld-did",
+      "pubDate": "2021-04-07T12:01:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "XRP Re-Takes 4th Spot on CMC; Ripple Boss Says “Today Was a Good Day”",
+      "link": "https://cryptopanic.com/news/ripple/11733436/XRP-Re-Takes-4th-Spot-on-CMC-Ripple-Boss-Says-Today-Was-a-Good-Day",
+      "pubDate": "2021-04-07T12:00:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple CEO Brad Garlinghouse tweeted, “Today was a good day.” And he’s right; there’s a lot for XRP investors to be pleased about right now. Chief among which is how yesterday’s court hearing did not go the way the SEC had anticipated. Today was a good day. — Brad Garlinghouse (@bgarlinghouse) April 6, 2021 SEC […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "For the German-speaking audience: Read this great feature including perspectives from @m_h_d_v.",
+      "link": "https://cryptopanic.com/news/11736416/For-the-German-speaking-audience-Read-this-great-feature-including-perspectives-from-m_h_d_v",
+      "pubDate": "2021-04-07T11:43:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "RT @karinnanobbs: TRUE STORY #Meta_VS",
+      "link": "https://cryptopanic.com/news/11736417/RT-karinnanobbs-TRUE-STORY-Meta_VS",
+      "pubDate": "2021-04-07T10:46:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "RT @dematerialised: Wise words and a must read article on the potential of  and #NFTs in @voguebusiness today from @EdelsonSharon focusing…",
+      "link": "https://cryptopanic.com/news/11736418/RT-dematerialised-Wise-words-and-a-must-read-article-on-the-potential-of-and-NFTs-in-voguebusiness-today-from-EdelsonSharon-focusing",
+      "pubDate": "2021-04-07T10:44:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "Jump Trading invests in sports fan token ecosystem Chiliz",
+      "link": "https://cryptopanic.com/news/11733262/Jump-Trading-invests-in-sports-fan-token-ecosystem-Chiliz",
+      "pubDate": "2021-04-07T10:20:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Chicago-based high-frequency trading firm Jump Trading has made an investment in sports fan token platform Chiliz.",
+      "currencies": [
+        "CHZ"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "This is the most recent interview with our CEO, Min Hoo Chang. In this interview, he emphasizes the value…",
+      "link": "https://cryptopanic.com/news/13729185/This-is-the-most-recent-interview-with-our-CEO-Min-Hoo-Chang-In-this-interview-he-emphasizes-the-value",
+      "pubDate": "2021-04-07T09:59:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HUM"
+      ]
+    },
+    {
+      "title": "XRP Skyrockets, Cardano Acceleration, Alt Season Starts, Banks Buying Bitcoin & NFT Bubble Pop",
+      "link": "https://cryptopanic.com/news/ripple/11733213/XRP-Skyrockets-Cardano-Acceleration-Alt-Season-Starts-Banks-Buying-Bitcoin-NFT-Bubble-Pop",
+      "pubDate": "2021-04-07T09:39:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Become A Patreon! https://www.patreon.com/TheModernInvestor ------------------------------------------- MY SECOND CHANNEL: https://www.youtube.com/channel/UCH9HlTrjyLmLRS0iE1P4rrg ----------------------------------------- Protect And Store Your Crypto With A Ledger Nano: https://www.ledger.com?r=8af3ed38d3b7 ------------------------------------------- Open An Account With Binance! https://www.binance.com/?ref=22170588 ------------------------------------------- Rich Dad Poor Dad: https://amzn.to",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Loom SDK 3.0 is coming ... We are looking for ideas for what features the community wants to see next !",
+      "link": "https://cryptopanic.com/news/11736478/Loom-SDK-30-is-coming-We-are-looking-for-ideas-for-what-features-the-community-wants-to-see-next",
+      "pubDate": "2021-04-07T09:39:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LOOM"
+      ]
+    },
+    {
+      "title": "Ripple wins access to SEC’s internal documents on Bitcoin and Ether",
+      "link": "https://cryptopanic.com/news/ripple/11733154/Ripple-wins-access-to-SECs-internal-documents-on-Bitcoin-and-Ether",
+      "pubDate": "2021-04-07T09:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "In a ruling that can boost Ripple's defense, judge says SEC must disclose discussions on whether XRP, Bitcoin and Ether are securities. Is a settlement now near?",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We have just created an announcement channel for #Paycoin. This channel will be in both English and Korean. Feel fr…",
+      "link": "https://cryptopanic.com/news/11737028/We-have-just-created-an-announcement-channel-for-Paycoin-This-channel-will-be-in-both-English-and-Korean-Feel-fr?mtm_campaign=API-OFA",
+      "pubDate": "2021-04-07T09:00:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PCI"
+      ]
+    },
+    {
+      "title": "RT @dematerialised: Today  #Meta_VS",
+      "link": "https://cryptopanic.com/news/11736420/RT-dematerialised-Today-Meta_VS",
+      "pubDate": "2021-04-07T08:41:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "RT @Staunch_Tweet: @dematerialised I was just about to say this is where I'll be chilling while waiting for the party to start.",
+      "link": "https://cryptopanic.com/news/11736421/RT-Staunch_Tweet-dematerialised-I-was-just-about-to-say-this-is-where-Ill-be-chilling-while-waiting-for-the-party-to-start",
+      "pubDate": "2021-04-07T08:41:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "209.2 Million XRP Shifted by Binance and Other Top-Tier Exchanges As XRP Holds Near $1",
+      "link": "https://cryptopanic.com/news/near/11733078/2092-Million-XRP-Shifted-by-Binance-and-Other-Top-Tier-Exchanges-As-XRP-Holds-Near-1",
+      "pubDate": "2021-04-07T08:10:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Almost 209.2 million XRP has been transferred by Binance and top-tier crypto exchanges, among them those that delisted XRP in January",
+      "currencies": [
+        "XRP",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "\"Lagerfeld once remarked, “I continue to embrace the present and invent the future,” [Pfrunder] points out. Placing…",
+      "link": "https://cryptopanic.com/news/11736422/Lagerfeld-once-remarked-I-continue-to-embrace-the-present-and-invent-the-future-Pfrunder-points-out-Placing",
+      "pubDate": "2021-04-07T07:51:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "When do you believe the bull comes to an end?🧐",
+      "link": "https://cryptopanic.com/news/11736164/When-do-you-believe-the-bull-comes-to-an-end",
+      "pubDate": "2021-04-07T07:28:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "TIME TO BUYYY",
+      "link": "https://cryptopanic.com/news/11733676/TIME-TO-BUYYY",
+      "pubDate": "2021-04-07T07:09:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "There's a new crypto lobby group in town. Let's hope they nudge policy makers and regulators in everyone's best int…",
+      "link": "https://cryptopanic.com/news/11736479/Theres-a-new-crypto-lobby-group-in-town-Lets-hope-they-nudge-policy-makers-and-regulators-in-everyones-best-int",
+      "pubDate": "2021-04-07T06:48:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LOOM"
+      ]
+    },
+    {
+      "title": "RT @jayjars: This has been so much fun! Visit the URL below and jump right in and explore the history of #DigitalFashion by @dematerialised…",
+      "link": "https://cryptopanic.com/news/11731260/RT-jayjars-This-has-been-so-much-fun-Visit-the-URL-below-and-jump-right-in-and-explore-the-history-of-DigitalFashion-by-dematerialised",
+      "pubDate": "2021-04-07T06:19:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "Shill Me on MarketSquare",
+      "link": "https://cryptopanic.com/news/11751898/Shill-Me-on-MarketSquare",
+      "pubDate": "2021-04-07T05:07:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "XRP lawsuit update: Ripple scores point after Court grants access to SEC’s Bitcoin, Ether documents",
+      "link": "https://cryptopanic.com/news/ripple/11729497/XRP-lawsuit-update-Ripple-scores-point-after-Court-grants-access-to-SECs-Bitcoin-Ether-documents",
+      "pubDate": "2021-04-07T04:35:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "In what is a major victory for the San Francisco-based Ripple Labs, the blockchain firm has been granted access to the United States Securities and Exchange Commission’s documents and discussions about whether Ripple’s XRP tokens are similar to cryptocurrencies like Bitcoin and Ether. A motion to compel the SEC to produce Bitcoin and Ethereum documentation […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Hey guys! Just added new vaults on Supra Finance, Thanks for being part of our family! I hope you enjoy Palm-BNB an…",
+      "link": "https://cryptopanic.com/news/11730747/Hey-guys-Just-added-new-vaults-on-Supra-Finance-Thanks-for-being-part-of-our-family-I-hope-you-enjoy-Palm-BNB-an?mtm_campaign=API-OFA",
+      "pubDate": "2021-04-07T03:13:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SUPRA",
+        "FLP"
+      ]
+    },
+    {
+      "title": "Get the latest on #ECOMI, how we're progressing with the #VeVe app, and a couple of Q2 brand confirmations to boot!…",
+      "link": "https://cryptopanic.com/news/11730594/Get-the-latest-on-ECOMI-how-were-progressing-with-the-VeVe-app-and-a-couple-of-Q2-brand-confirmations-to-boot?mtm_campaign=API-OFA",
+      "pubDate": "2021-04-07T02:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "OMI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Balancer to enable programmable liquidity for the Algorand ecosystem",
+      "link": "https://cryptopanic.com/news/11729316/Balancer-to-enable-programmable-liquidity-for-the-Algorand-ecosystem",
+      "pubDate": "2021-04-07T00:48:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "CryptoNinjas » Balancer to enable programmable liquidity for the Algorand ecosystem Blockchain platform Algorand today announced that Balancer, one of the largest automated market makers (AMM), will soon be available on Algorand to expand liquidity to its growing community. This initiative explores how the Balancer platform can work in different environments, given the different...",
+      "currencies": [
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple wins access to SEC discussions on defining crypto assets as securities",
+      "link": "https://cryptopanic.com/news/ripple/11729307/Ripple-wins-access-to-SEC-discussions-on-defining-crypto-assets-as-securities",
+      "pubDate": "2021-04-07T00:34:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Ripple’s lawyers will dig through the SEC's internal discussion on crypto for mention of XRP.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 22,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

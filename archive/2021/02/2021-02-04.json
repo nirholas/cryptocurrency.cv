@@ -1,0 +1,589 @@
+{
+  "date": "2021-02-04",
+  "fetchedAt": "2026-02-05T07:27:06.686Z",
+  "articleCount": 39,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "TomoChain Coins on My Ether Wallet - I bought in around the 2018/2019 timeframe and I cant transfer my coins. Was there a token swamp at some point and I've missed the boat?",
+      "link": "https://cryptopanic.com/news/11417555/TomoChain-Coins-on-My-Ether-Wallet-I-bought-in-around-the-20182019-timeframe-and-I-cant-transfer-my-coins-Was-there-a-token-swamp-at-some-point-and-Ive-missed-the-boat",
+      "pubDate": "2021-02-04T23:22:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "$11 Million Gone in Yearn Finance Exploit",
+      "link": "https://cryptopanic.com/news/11412562/11-Million-Gone-in-Yearn-Finance-Exploit",
+      "pubDate": "2021-02-04T23:00:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DAI"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Yearn Finance DAI Vault ‘Has Suffered an Exploit’; $11M Drained",
+      "link": "https://cryptopanic.com/news/11411930/Yearn-Finance-DAI-Vault-Has-Suffered-an-Exploit-11M-Drained",
+      "pubDate": "2021-02-04T22:19:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "“Attacker got away with 2.8m, dai vault lost 11.1m,” a Yearn Finance developer posted in Discord.",
+      "currencies": [
+        "DAI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @HamnettPhillip: #Building on #EOSIO is pretty easy, because it uses Javascript and C++ for application building. They are two of the mo…",
+      "link": "https://cryptopanic.com/news/11411246/RT-HamnettPhillip-Building-on-EOSIO-is-pretty-easy-because-it-uses-Javascript-and-C-for-application-building-They-are-two-of-the-mo?mtm_campaign=API-OFA",
+      "pubDate": "2021-02-04T21:53:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHEX"
+      ]
+    },
+    {
+      "title": "OMG on Brink of Bull Run, Network Metrics Suggest",
+      "link": "https://cryptopanic.com/news/11410989/OMG-on-Brink-of-Bull-Run-Network-Metrics-Suggest",
+      "pubDate": "2021-02-04T21:36:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Network activity on the OMG blockchain is rising at a meaningful rate, which may signal that its market value is about to explode. Large Quantity of New Addresses OMG seems primed to enter a new parabolic advance from a fundamental perspective. Its network has expanded exponentially over the past week, with several new addresses created. OMG New Daily Addresses by...",
+      "currencies": [
+        "BTC",
+        "OMG"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Want to learn more about working with blockchain technology? Join MLH this Friday, February 5th at 5pm EST for a free ARK blockchain workshop and build a blockchain based taco store!",
+      "link": "https://cryptopanic.com/news/11418064/Want-to-learn-more-about-working-with-blockchain-technology-Join-MLH-this-Friday-February-5th-at-5pm-EST-for-a-free-ARK-blockchain-workshop-and-build-a-blockchain-based-taco-store",
+      "pubDate": "2021-02-04T21:32:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Calling all #developers who want to build user-friendly #dApps that ensure #data privacy on the perpetual web! We’r…",
+      "link": "https://cryptopanic.com/news/11410061/Calling-all-developers-who-want-to-build-user-friendly-dApps-that-ensure-data-privacy-on-the-perpetual-web-Wer",
+      "pubDate": "2021-02-04T20:48:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "RT @CointelegraphMT: DeFi boom pushes Universal Market Access (UMA), SwissBorg and Siacoin (SC) higher",
+      "link": "https://cryptopanic.com/news/11409915/RT-CointelegraphMT-DeFi-boom-pushes-Universal-Market-Access-UMA-SwissBorg-and-Siacoin-SC-higher",
+      "pubDate": "2021-02-04T20:41:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SC",
+        "CHSB",
+        "SURE"
+      ]
+    },
+    {
+      "title": "Today we at ARK feel ‘much excite’ to bring you our partnership with the Dogecoin community. Much wow!",
+      "link": "https://cryptopanic.com/news/11409202/Today-we-at-ARK-feel-much-excite-to-bring-you-our-partnership-with-the-Dogecoin-community-Much-wow",
+      "pubDate": "2021-02-04T20:02:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "ARK"
+      ]
+    },
+    {
+      "title": "Top 20 Dogecoin Addresses Hold Over 50% of DOGE Supply",
+      "link": "https://cryptopanic.com/news/dogecoin/11408452/Top-20-Dogecoin-Addresses-Hold-Over-50-of-DOGE-Supply",
+      "pubDate": "2021-02-04T19:04:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin’s Wealth Distribution Dogecoin blockchain data shows that over half of all DOGE is controlled by just 20 wallets. In fact, a single address holds around five billion of the almost 130 billion coins currently in circulation. On Thursday, Feb 4., Binance CEO Changpeng Zhao highlighted the wealth concentration via Twitter: Some pros/risks of #Doge. … Continued",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @safenetworktech: The vast majority of our time this week has been focused on releasing a public-shared network. See here for details on…",
+      "link": "https://cryptopanic.com/news/11407839/RT-safenetworktech-The-vast-majority-of-our-time-this-week-has-been-focused-on-releasing-a-public-shared-network-See-here-for-details-on",
+      "pubDate": "2021-02-04T18:51:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "DOT Mog (Android Emulator) of our #substrate based #unity3d game, join us.",
+      "link": "https://cryptopanic.com/news/11407746/DOT-Mog-Android-Emulator-of-our-substrate-based-unity3d-game-join-us",
+      "pubDate": "2021-02-04T18:46:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MOG"
+      ]
+    },
+    {
+      "title": "DOT Mog Alpha Game (Android) via @YouTube",
+      "link": "https://cryptopanic.com/news/11406662/DOT-Mog-Alpha-Game-Android-via-YouTube",
+      "pubDate": "2021-02-04T17:52:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "MOG"
+      ]
+    },
+    {
+      "title": "CORE is not undergoing a “migration of LP”. The Bao team, who released a statement saying so, is incorrect. CORE LP…",
+      "link": "https://cryptopanic.com/news/11406384/CORE-is-not-undergoing-a-migration-of-LP-The-Bao-team-who-released-a-statement-saying-so-is-incorrect-CORE-LP",
+      "pubDate": "2021-02-04T17:36:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CORE"
+      ]
+    },
+    {
+      "title": "Tezos (XTZ) Ranks 7th in Top Staked Assets, Records Highest Number of Contract Calls",
+      "link": "https://cryptopanic.com/news/11406820/Tezos-XTZ-Ranks-7th-in-Top-Staked-Assets-Records-Highest-Number-of-Contract-Calls",
+      "pubDate": "2021-02-04T17:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Tezos (XTZ) just had the largest number of contract calls in January, with several dApps due to launch. Tezos also ranks 7th among the best staking crypto assets. In February, there is the opportunity to launch some new dApps and the most distinctive modification of the Tezos: Edo. Smart Contract Call Record Tezos is oneRead More",
+      "currencies": [
+        "LINK",
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Online broker tastyworks adds BTC, ETH, LTC and BCH trading",
+      "link": "https://cryptopanic.com/news/litecoin/11405098/Online-broker-tastyworks-adds-BTC-ETH-LTC-and-BCH-trading",
+      "pubDate": "2021-02-04T16:38:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "CryptoNinjas » Online broker tastyworks adds BTC, ETH, LTC and BCH trading tastyworks, an online broker based out of Chicago, today announced that its platform now supports trading four of the most actively traded cryptocurrencies: Bitcoin, Ethereum, Litecoin, and Bitcoin Cash. As of now, customers can request approval for their margin or cash accounts, and will be able to use BTC...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @safenetworktech: We’re building the #SafeNetwork to preserve your right to privacy. Join us in providing secure access for everyone.",
+      "link": "https://cryptopanic.com/news/11404628/RT-safenetworktech-Were-building-the-SafeNetwork-to-preserve-your-right-to-privacy-Join-us-in-providing-secure-access-for-everyone",
+      "pubDate": "2021-02-04T16:16:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "Croatia’s Tifon Gas Stations Hope to Tap Tourist Trade With Crypto Payment Support",
+      "link": "https://cryptopanic.com/news/11404718/Croatias-Tifon-Gas-Stations-Hope-to-Tap-Tourist-Trade-With-Crypto-Payment-Support",
+      "pubDate": "2021-02-04T16:14:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Forty-six fuel stops will accept bitcoin, ether, stellar, XRP and EOS through a partnership with local platform PayCek.",
+      "currencies": [
+        "XRP",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dozens of Ethereum 2.0 Validators Slashed Due to Staking Pool Error",
+      "link": "https://cryptopanic.com/news/ethereum/11403131/Dozens-of-Ethereum-20-Validators-Slashed-Due-to-Staking-Pool-Error",
+      "pubDate": "2021-02-04T15:15:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "75 validators were suspended from Ethereum 2.0 in a slashing event due to an operational bug by Staked, an ETH2 staking pool, which led to competing blocks produced on the network. Ethereum 2.0 Staking Pool Introduces a Bug Staked was using Prysm’s client and had separately introduced performance upgrades to improve validating blocks’ efficiency. However, their upgrades introduced a...",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Aave (AAVE) Whales Have Increased by 23% in One Month",
+      "link": "https://cryptopanic.com/news/11402652/Aave-AAVE-Whales-Have-Increased-by-23-in-One-Month",
+      "pubDate": "2021-02-04T14:52:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Quick take: The number of Aave (AAVE) whales has increased from 266 to 327 in the past month This is a 23% increment in the stated time period Aave (AAVE) has been on a massive bullish climb since the year began AAVE opened 2021 at roughly $90 and has just set a new all-time high of $459 – Binance rate The number of Aave (AAVE) whales has seen a 23% increment in the last month. This is according...",
+      "currencies": [
+        "ETH",
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Former SEC Official Says There’s a Good Chance Agency Loses Its Case Against Ripple and XRP – Here’s Why",
+      "link": "https://cryptopanic.com/news/11402170/Former-SEC-Official-Says-Theres-a-Good-Chance-Agency-Loses-Its-Case-Against-Ripple-and-XRP-Heres-Why",
+      "pubDate": "2021-02-04T14:35:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Former U.S. Securities and Exchange Commission (SEC) executive Joseph Hall thinks there’s a strong chance the SEC loses its case against Ripple. Hall, a partner at the law firm Davis Polk, says in a new interview on Thinking Crypto that he found the SEC case “pretty astonishing.” He argues that a judge reviewing the lawsuit […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 33,
+        "negative": 6
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance Coin hits all-time highs as BNB surpasses Bitcoin Cash by market cap",
+      "link": "https://cryptopanic.com/news/11401629/Binance-Coin-hits-all-time-highs-as-BNB-surpasses-Bitcoin-Cash-by-market-cap",
+      "pubDate": "2021-02-04T14:00:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin Cash is now in danger of being ejected from the top 10 cryptocurrencies by market cap.",
+      "currencies": [
+        "BTC",
+        "BNB",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "First-Ever Massive Slashing Took Place in Ethereum 2.0. What Happened?",
+      "link": "https://cryptopanic.com/news/ethereum/11401439/First-Ever-Massive-Slashing-Took-Place-in-Ethereum-20-What-Happened",
+      "pubDate": "2021-02-04T13:56:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Accelerate your passive income - stake YOUC  Don't want to sell YOUC, but need cash - borrow against them at competitive rates",
+      "link": "https://cryptopanic.com/news/11418487/Accelerate-your-passive-income-stake-YOUC-Dont-want-to-sell-YOUC-but-need-cash-borrow-against-them-at-competitive-rates",
+      "pubDate": "2021-02-04T13:41:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "YOUC"
+      ]
+    },
+    {
+      "title": "27% of All Dogecoin (DOGE) is Held By a Single Address – CZ",
+      "link": "https://cryptopanic.com/news/dogecoin/11399012/27-of-All-Dogecoin-DOGE-is-Held-By-a-Single-Address-CZ",
+      "pubDate": "2021-02-04T11:26:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Quick take: CZ has shared the pros and cons of Dogecoin (DOGE) He has pointed out that DOGE has a cool PR manager in Elon Musk However, it is somewhat centralized with 27% of all DOGE held by one address Furthermore, the top 20 addresses hold more than 20% of all Dogecoin (DOGE) Earlier today, the CEO of Binance, CZ, shared a brief analysis of Dogecoin (DOGE) in which he tabulated the pros and...",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 36
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Thanks for your messages. As promised, we have compiled the DiaEx explanation into a brief video. We understand tha…",
+      "link": "https://cryptopanic.com/news/11398746/Thanks-for-your-messages-As-promised-we-have-compiled-the-DiaEx-explanation-into-a-brief-video-We-understand-tha",
+      "pubDate": "2021-02-04T11:11:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "China's blockchain service network announces Cosmos integration",
+      "link": "https://cryptopanic.com/news/11398191/Chinas-blockchain-service-network-announces-Cosmos-integration",
+      "pubDate": "2021-02-04T10:28:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Cosmos becomes the first public blockchain to be added to the China-only version of the Blockchain-based Service Network.",
+      "currencies": [
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Elon Musk Can’t Stop Pumping Dogecoin on Twitter",
+      "link": "https://cryptopanic.com/news/dogecoin/11397640/Elon-Musk-Cant-Stop-Pumping-Dogecoin-on-Twitter",
+      "pubDate": "2021-02-04T09:42:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Tesla and SpaceX CEO, Elon Musk, has tweeted again about Dogecoin, causing a rapid increase in the price of the project’s native currency, DOGE. Elon Musk Tweet Moons DOGE Earlier this week, the billionaire clarified his stance on Dogecoin. He has stated that his tweets regarding Dogecoin are done in jest and not meant to be taken seriously. The market couldn’t disagree...",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 14
+      }
+    },
+    {
+      "title": "We've just released our 5 part #Aergo Hub (Beta) Tutorial on Youtube! This is the KR version for the time being, bu…",
+      "link": "https://cryptopanic.com/news/11397506/Weve-just-released-our-5-part-Aergo-Hub-Beta-Tutorial-on-Youtube-This-is-the-KR-version-for-the-time-being-bu",
+      "pubDate": "2021-02-04T09:41:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "Tomorrow February 5th, the AERGO Swap service will be down for maintenance, from 1:00PM to 9:00PM KST",
+      "link": "https://cryptopanic.com/news/11397459/Tomorrow-February-5th-the-AERGO-Swap-service-will-be-down-for-maintenance-from-100PM-to-900PM-KST",
+      "pubDate": "2021-02-04T09:39:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "TomoChain Halving ️",
+      "link": "https://cryptopanic.com/news/11427399/TomoChain-Halving",
+      "pubDate": "2021-02-04T09:03:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "Finance giant SBI expands cryptocurrency lending service to XRP",
+      "link": "https://cryptopanic.com/news/11396408/Finance-giant-SBI-expands-cryptocurrency-lending-service-to-XRP",
+      "pubDate": "2021-02-04T08:48:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "After launching its crypto lending service in late 2020, SBI has now added support for XRP.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 6
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DOGE Skyrockets 80% As Elon Musk Tweets Once Again",
+      "link": "https://cryptopanic.com/news/dogecoin/11396214/DOGE-Skyrockets-80-As-Elon-Musk-Tweets-Once-Again",
+      "pubDate": "2021-02-04T08:34:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "World’s richest man Elon Musk has done it again with another Dogecoin tweet that immediately pushed the token's price.",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 5
+      }
+    },
+    {
+      "title": "DOGE Soars 50% As Elon Musk Tweets “DOGE” Once Again, But Removes Bitcoin from His Twitter Bio",
+      "link": "https://cryptopanic.com/news/dogecoin/11395387/DOGE-Soars-50-As-Elon-Musk-Tweets-DOGE-Once-Again-But-Removes-Bitcoin-from-His-Twitter-Bio",
+      "pubDate": "2021-02-04T08:00:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Tesla CEO Elon Musk, who has recently been converted into Bitcoin, has tweeted DOGE after praising Bitcoin just recently",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 14
+      }
+    },
+    {
+      "title": "Japanese Financial Giant SBI Group Introduces XRP Lending",
+      "link": "https://cryptopanic.com/news/11393993/Japanese-Financial-Giant-SBI-Group-Introduces-XRP-Lending",
+      "pubDate": "2021-02-04T06:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "You can now lend up to 100,000 XRP with SBI VC Trade",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 24,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We are excited to announce that we have officially launched the community governance feature on the STP 2.0 website…",
+      "link": "https://cryptopanic.com/news/11393893/We-are-excited-to-announce-that-we-have-officially-launched-the-community-governance-feature-on-the-STP-20-website",
+      "pubDate": "2021-02-04T06:04:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STPT"
+      ]
+    },
+    {
+      "title": "WARNING: There is a project offering a high yield for CORE LP, and that project (whose name we will not specify) ha…",
+      "link": "https://cryptopanic.com/news/11391885/WARNING-There-is-a-project-offering-a-high-yield-for-CORE-LP-and-that-project-whose-name-we-will-not-specify-ha",
+      "pubDate": "2021-02-04T01:39:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CORE"
+      ]
+    },
+    {
+      "title": "Can Ark replace the ETH? Why and why not?",
+      "link": "https://cryptopanic.com/news/11419378/Can-Ark-replace-the-ETH-Why-and-why-not",
+      "pubDate": "2021-02-04T01:15:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "DeFi users flock to Flamingo (FLM) to escape high Ethereum gas fees",
+      "link": "https://cryptopanic.com/news/ethereum/11390970/DeFi-users-flock-to-Flamingo-FLM-to-escape-high-Ethereum-gas-fees",
+      "pubDate": "2021-02-04T00:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Flamingo’s (FLM) rally to a new all-time high is backed by record trading volume, increased governance capabilities and DeFi users searching for Ethereum alternatives.",
+      "currencies": [
+        "ETH",
+        "NEO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

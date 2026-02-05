@@ -1,0 +1,858 @@
+{
+  "date": "2025-08-04",
+  "fetchedAt": "2026-02-05T07:27:08.618Z",
+  "articleCount": 58,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "DeFi Giant Aave Hits Major Buyback Milestone, Eyes Record Year",
+      "link": "https://cryptopanic.com/news/aave/23946030/DeFi-Giant-Aave-Hits-Major-Buyback-Milestone-Eyes-Record-Year",
+      "pubDate": "2025-08-04T23:01:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Crypto News Today: Bitcoin Price Recovery Eyes $117K — ETH, XRP, BNB, SOL, DOGE, ADA, XLM Forecasts Mixed as Bulls Struggle",
+      "link": "https://cryptopanic.com/news/stellar/23956409/Crypto-News-Today-Bitcoin-Price-Recovery-Eyes-117K-ETH-XRP-BNB-SOL-DOGE-ADA-XLM-Forecasts-Mixed-as-Bulls-Struggle",
+      "pubDate": "2025-08-04T22:20:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Solana begins shipping Seeker mobile device in over 50 countries",
+      "link": "https://cryptopanic.com/news/solana/23945802/Solana-begins-shipping-Seeker-mobile-device-in-over-50-countries",
+      "pubDate": "2025-08-04T22:18:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin Cash Price Forecast: BCH Eyes $650 as Whale Transactions Drop to $200M",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/23946787/Bitcoin-Cash-Price-Forecast-BCH-Eyes-650-as-Whale-Transactions-Drop-to-200M",
+      "pubDate": "2025-08-04T22:05:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Bitcoin Holds Steady As Ethereum, XRP, Dogecoin Lead Altcoin Rally",
+      "link": "https://cryptopanic.com/news/litecoin/23943697/Bitcoin-Holds-Steady-As-Ethereum-XRP-Dogecoin-Lead-Altcoin-Rally",
+      "pubDate": "2025-08-04T20:27:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Solana Treasury Company DeFi Dev Corp Buys the SOL Dip, Stacks Another $18 Million",
+      "link": "https://cryptopanic.com/news/blockstack/23943610/Solana-Treasury-Company-DeFi-Dev-Corp-Buys-the-SOL-Dip-Stacks-Another-18-Million",
+      "pubDate": "2025-08-04T20:22:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The Solana treasury company bought the dip, boosting its Solana holdings.",
+      "currencies": [
+        "SOL",
+        "STX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "NFT Season Back? AI-Related Collection Prints +420% Gains",
+      "link": "https://cryptopanic.com/news/near/23943714/NFT-Season-Back-AI-Related-Collection-Prints-420-Gains",
+      "pubDate": "2025-08-04T20:20:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "NEAR",
+        "HOT"
+      ]
+    },
+    {
+      "title": "Missed Avalanche’s (AVAX) Run? Ruvi AI’s (RUVI) Presale Just Became One of the Fastest After CoinMarketCap Listing, Over 13,200% ROI Predicted",
+      "link": "https://cryptopanic.com/news/avalanche-2/23944916/Missed-Avalanches-AVAX-Run-Ruvi-AIs-RUVI-Presale-Just-Became-One-of-the-Fastest-After-CoinMarketCap-Listing-Over-13200-ROI-Predicted",
+      "pubDate": "2025-08-04T20:10:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Base L2 Network Surpasses Solana in Launched Tokens for the First Time",
+      "link": "https://cryptopanic.com/news/solana/23942215/Base-L2-Network-Surpasses-Solana-in-Launched-Tokens-for-the-First-Time",
+      "pubDate": "2025-08-04T19:11:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Base L2 network, backed by Coinbase, surpasses Solana in daily token launches, driven by Zora and Farcaster integration, marking a major milestone in crypto.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Institutional Buyers Keep Ethereum’s Long-Term Rally on Track",
+      "link": "https://cryptopanic.com/news/bitcoin/23941613/Institutional-Buyers-Keep-Ethereums-Long-Term-Rally-on-Track",
+      "pubDate": "2025-08-04T19:01:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The broader crypto market has been weighed down by Bitcoin’s drop toward $110,000, yet several analysts say Ethereum’s underlying momentum […] The post Institutional Buyers Keep Ethereum’s Long-Term Rally on Track appeared first on Coindoo.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "3 Made In USA Tokens to Watch Before Trump’s Global Tariffs on August 7",
+      "link": "https://cryptopanic.com/news/stellar/23942777/3-Made-In-USA-Tokens-to-Watch-Before-Trumps-Global-Tariffs-on-August-7",
+      "pubDate": "2025-08-04T19:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "INJ",
+        "USA"
+      ]
+    },
+    {
+      "title": "Quant Analyst PlanB Predicts Contrarian $300,000 Bitcoin Price Target – Here’s His Timeline",
+      "link": "https://cryptopanic.com/news/quant-network/23941461/Quant-Analyst-PlanB-Predicts-Contrarian-300000-Bitcoin-Price-Target-Heres-His-Timeline",
+      "pubDate": "2025-08-04T18:41:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "QNT"
+      ]
+    },
+    {
+      "title": "Aave’s Buyback Nets $2.6M Profit, Signals Stronger DeFi Position",
+      "link": "https://cryptopanic.com/news/aave/23941621/Aaves-Buyback-Nets-26M-Profit-Signals-Stronger-DeFi-Position",
+      "pubDate": "2025-08-04T17:49:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "$XLM Jumps 5% to $0.41 After PayPal PYUSD and Visa Deals – Is $0.46 Next?",
+      "link": "https://cryptopanic.com/news/stellar/23940298/XLM-Jumps-5-to-041-After-PayPal-PYUSD-and-Visa-Deals-Is-046-Next",
+      "pubDate": "2025-08-04T17:39:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "PYUSD"
+      ]
+    },
+    {
+      "title": "Major Cardano (ADA) Community Announcement: Details",
+      "link": "https://cryptopanic.com/news/cardano/23940188/Major-Cardano-ADA-Community-Announcement-Details",
+      "pubDate": "2025-08-04T17:19:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "\"Thank you everyone for your support and trust. Let's get it done,\" Charles Hoskinson said.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Chainlink powers tokenized RWAs with new U.S. stock and ETF Data Streams",
+      "link": "https://cryptopanic.com/news/chainlink/23940242/Chainlink-powers-tokenized-RWAs-with-new-US-stock-and-ETF-Data-Streams",
+      "pubDate": "2025-08-04T17:15:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Chainlink has launched Data Streams for U. S. equities and ETFs to power secure tokenized real-world assets.",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tired Of The BTC Price Plunge? QFSCOIN’s Best Free Cloud Mining Lets You Mine Bitcoin, Dogecoin, And Litecoin Without Trading",
+      "link": "https://cryptopanic.com/news/litecoin/23939300/Tired-Of-The-BTC-Price-Plunge-QFSCOINs-Best-Free-Cloud-Mining-Lets-You-Mine-Bitcoin-Dogecoin-And-Litecoin-Without-Trading",
+      "pubDate": "2025-08-04T17:01:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "LTC"
+      ]
+    },
+    {
+      "title": "BitMine Immersion’s $2.9B ETH Haul Tops 5% of Supply – But Can the Run Last?",
+      "link": "https://cryptopanic.com/news/ethereum/23939079/BitMine-Immersions-29B-ETH-Haul-Tops-5-of-Supply-But-Can-the-Run-Last",
+      "pubDate": "2025-08-04T16:49:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "BitMine Immersion Technologies said it is positioning itself as the largest holder of ETH among corporate treasuries, accumulating 833,137 ETH valued at over $2. 9 billion as of August 3.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Price predictions 8/4: SPX, DXY, BTC, ETH, XRP, BNB, SOL, DOGE, ADA, XLM",
+      "link": "https://cryptopanic.com/news/stellar/23938971/Price-predictions-84-SPX-DXY-BTC-ETH-XRP-BNB-SOL-DOGE-ADA-XLM",
+      "pubDate": "2025-08-04T16:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "SharpLink Ups Ethereum Bets, Closes In On 500,000 ETH Holdings",
+      "link": "https://cryptopanic.com/news/bitcoin/23939000/SharpLink-Ups-Ethereum-Bets-Closes-In-On-500000-ETH-Holdings",
+      "pubDate": "2025-08-04T16:18:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "SharpLink Gaming Inc. (NASDAQ:SBET) has continued its aggressive expansion into digital assets with a fresh $66. 63 million purchase of read more",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cold Wallet’s $270M Plus Wallet Takeover, XRP Whale Moves, & NEAR Protocol Price Rally Unfold",
+      "link": "https://cryptopanic.com/news/near/23937688/Cold-Wallets-270M-Plus-Wallet-Takeover-XRP-Whale-Moves-NEAR-Protocol-Price-Rally-Unfold",
+      "pubDate": "2025-08-04T16:00:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Litecoin Price Breaks Key Level – Is $131 the Next Target?",
+      "link": "https://cryptopanic.com/news/litecoin/23937680/Litecoin-Price-Breaks-Key-Level-Is-131-the-Next-Target",
+      "pubDate": "2025-08-04T16:00:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ]
+    },
+    {
+      "title": "New Ethereum Whale Receives $84 Million in ETH",
+      "link": "https://cryptopanic.com/news/ethereum/23938524/New-Ethereum-Whale-Receives-84-Million-in-ETH",
+      "pubDate": "2025-08-04T15:57:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Whales keep buying Ethereum (ETH) following a recent price drop",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum unlikely to break $3,800 without stronger institutional demand",
+      "link": "https://cryptopanic.com/news/ethereum/23937679/Ethereum-unlikely-to-break-3800-without-stronger-institutional-demand",
+      "pubDate": "2025-08-04T15:56:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum faces weak institutional demand and lacks catalysts, keeping ETH price tied to broader altcoin trends and economic uncertainty.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "NEAR Protocol Surges 4% Amid Institutional Activity and Ecosystem Expansion",
+      "link": "https://cryptopanic.com/news/near/23938927/NEAR-Protocol-Surges-4-Amid-Institutional-Activity-and-Ecosystem-Expansion",
+      "pubDate": "2025-08-04T15:53:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Stellar (XLM) Bulls in Action as Price Suddenly Jumps 7%",
+      "link": "https://cryptopanic.com/news/stellar/23937653/Stellar-XLM-Bulls-in-Action-as-Price-Suddenly-Jumps-7",
+      "pubDate": "2025-08-04T15:47:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 05 August 2025: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/decentraland/23940250/Spell-Wallet-Daily-Puzzle-05-August-2025-Earn-Reward-of-1-MANA",
+      "pubDate": "2025-08-04T15:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "Solana lender Credix pledges full reimbursement after $4.5 million DeFi exploit",
+      "link": "https://cryptopanic.com/news/solana/23937152/Solana-lender-Credix-pledges-full-reimbursement-after-45-million-DeFi-exploit",
+      "pubDate": "2025-08-04T15:17:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Decentralized lender Credix lost about $4. 5 million after an attacker took control of an admin wallet and exploited bridge privileges.",
+      "currencies": [
+        "SOL",
+        "DEFI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Tom Lee’s BitMine Abruptly Accumulates $3,030,000,000 of Ethereum (ETH) in New Altcoin Treasury Strategy",
+      "link": "https://cryptopanic.com/news/bitcoin/23936655/Tom-Lees-BitMine-Abruptly-Accumulates-3030000000-of-Ethereum-ETH-in-New-Altcoin-Treasury-Strategy",
+      "pubDate": "2025-08-04T15:11:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "One of the first public companies to test an Ethereum treasury strategy has rapidly accumulated more than $3 billion of the second-largest crypto asset by market cap. BitMine says it has rapidly stockpiled the largest Ethereum treasury in the world, now holding 833,000 ETH worth more than $3. 03 billion at time of publishing",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Price Analysis 8-4: BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, UNISWAP: UNI, ONDO FINANCE: ONDO",
+      "link": "https://cryptopanic.com/news/uniswap/23936265/Crypto-Price-Analysis-8-4-BITCOIN-BTC-ETHEREUM-ETH-SOLANA-SOL-UNISWAP-UNI-ONDO-FINANCE-ONDO",
+      "pubDate": "2025-08-04T15:06:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Aave DAO buyback strategy nets $2.6 million in unrealized profits",
+      "link": "https://cryptopanic.com/news/aave/23935709/Aave-DAO-buyback-strategy-nets-26-million-in-unrealized-profits",
+      "pubDate": "2025-08-04T14:30:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "DAO"
+      ]
+    },
+    {
+      "title": "The Ether Machine and GameSquare buy millions of dollars more ETH as Ethereum treasury play accelerates",
+      "link": "https://cryptopanic.com/news/ethereum/23933776/The-Ether-Machine-and-GameSquare-buy-millions-of-dollars-more-ETH-as-Ethereum-treasury-play-accelerates",
+      "pubDate": "2025-08-04T13:44:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The Ether Machine purchased 10,605 ETH for approximately $40 million, while GameSquare added 2,717 ETH for approximately $10 million.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana Mobile’s Seeker smartphone begins shipping today with over 150K units pre‑ordered",
+      "link": "https://cryptopanic.com/news/solana/23933765/Solana-Mobiles-Seeker-smartphone-begins-shipping-today-with-over-150K-units-preordered",
+      "pubDate": "2025-08-04T13:36:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana Mobile started shipping the first pre-ordered batch of 150K Seeker smartphones today, promising to bridge the gap between crypto and mobile.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Cardano Golden Cross Confirmed, Has Price Bottomed Out?",
+      "link": "https://cryptopanic.com/news/cardano/23933770/Cardano-Golden-Cross-Confirmed-Has-Price-Bottomed-Out",
+      "pubDate": "2025-08-04T13:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Cardano price bullish, creating golden cross flip on three-hour chart",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 6
+      }
+    },
+    {
+      "title": "CoinDesk 20 Performance Update: Litecoin (LTC) Jumps 9.7% Over Weekend",
+      "link": "https://cryptopanic.com/news/litecoin/23934703/CoinDesk-20-Performance-Update-Litecoin-LTC-Jumps-97-Over-Weekend",
+      "pubDate": "2025-08-04T13:18:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Bitcoin Sees Significant Outflows While Ethereum Holds Steady",
+      "link": "https://cryptopanic.com/news/bitcoin/23932437/Bitcoin-Sees-Significant-Outflows-While-Ethereum-Holds-Steady",
+      "pubDate": "2025-08-04T13:16:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Between July 28 and August 1, 2025, Bitcoin ETFs saw their largest outflows since April, while Ethereum ETFs maintained steady inflows despite late-week losses.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tom Lee’s BitMine now owns $2.9 billion in Ethereum, flipping SharpLink as largest holder",
+      "link": "https://cryptopanic.com/news/ethereum/23932453/Tom-Lees-BitMine-now-owns-29-billion-in-Ethereum-flipping-SharpLink-as-largest-holder",
+      "pubDate": "2025-08-04T13:15:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "BitMine Immersion Technologies has taken the number one spot when it comes to corporate Ethereum holdings. On Monday, the Las Vegas-based company confirmed that its Ethereum holdings hit 833,137 ETH, putting the total value above $2. 9 billion, according to a press release sent through PR Newswire. That massive haul puts the company ahead of SharpLink […]",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Price Recovery Gains Steam – But Will $3,000 Support Hold or Crack?",
+      "link": "https://cryptopanic.com/news/ethereum/23932078/Ethereum-Price-Recovery-Gains-Steam-But-Will-3000-Support-Hold-or-Crack",
+      "pubDate": "2025-08-04T13:11:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "While the asset is still down more than 8% on the week, analysts are split on whether the current rebound […] The post Ethereum Price Recovery Gains Steam – But Will $3,000 Support Hold or Crack? appeared first on Coindoo.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "PancakeSwap: After failed breakout, Will CAKE trap late bears with bounce to $2.95?",
+      "link": "https://cryptopanic.com/news/pancakeswap-token/23931765/PancakeSwap-After-failed-breakout-Will-CAKE-trap-late-bears-with-bounce-to-295",
+      "pubDate": "2025-08-04T13:00:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CAKE"
+      ]
+    },
+    {
+      "title": "Monero 51% attack disrupted by alleged DDoS attack on Qubic mining pool",
+      "link": "https://cryptopanic.com/news/monero/23931006/Monero-51-attack-disrupted-by-alleged-DDoS-attack-on-Qubic-mining-pool",
+      "pubDate": "2025-08-04T12:26:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Ethereum To Break All-Time Highs in Coming Months, Predicts Analyst Benjamin Cowen – Here’s When",
+      "link": "https://cryptopanic.com/news/ethereum/23930074/Ethereum-To-Break-All-Time-Highs-in-Coming-Months-Predicts-Analyst-Benjamin-Cowen-Heres-When",
+      "pubDate": "2025-08-04T12:20:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A widely followed crypto analyst says that Ethereum (ETH) looks set to reach a new all-time high within the next few months.",
+      "currencies": [
+        "ETH",
+        "MIN",
+        "A"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polkadot Powers Up: Breakout Structure Signals A Bullish Week Ahead",
+      "link": "https://cryptopanic.com/news/polkadot/23929425/Polkadot-Powers-Up-Breakout-Structure-Signals-A-Bullish-Week-Ahead",
+      "pubDate": "2025-08-04T12:00:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "DOT",
+        "A"
+      ]
+    },
+    {
+      "title": "Neo News: Week in Review – July 28 – August 3",
+      "link": "https://cryptopanic.com/news/neo/23929432/Neo-News-Week-in-Review-July-28-August-3",
+      "pubDate": "2025-08-04T12:00:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO",
+        "FLM"
+      ]
+    },
+    {
+      "title": "XLM Crypto Price Pushes Higher, $0.49 Breakout in Focus",
+      "link": "https://cryptopanic.com/news/stellar/23931756/XLM-Crypto-Price-Pushes-Higher-049-Breakout-in-Focus",
+      "pubDate": "2025-08-04T11:59:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Ethereum Record Purchases: Whales Return",
+      "link": "https://cryptopanic.com/news/ethereum/23929354/Ethereum-Record-Purchases-Whales-Return",
+      "pubDate": "2025-08-04T11:46:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Crypto whales are back in business: record Ethereum purchases and strong institutional interest indicate a new phase of accumulation.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "ENA Doubles to $0.60, UNI Launches Angstrom, but Cold Wallet’s $0.00942 Presale With 100% Gas Cashback Headlines in August!",
+      "link": "https://cryptopanic.com/news/uniswap/23937685/ENA-Doubles-to-060-UNI-Launches-Angstrom-but-Cold-Wallets-000942-Presale-With-100-Gas-Cashback-Headlines-in-August",
+      "pubDate": "2025-08-04T11:44:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "ENA"
+      ]
+    },
+    {
+      "title": "Algorand Price Forecast: ALGO eyes over 10% increase as it nears breakout from wedge pattern",
+      "link": "https://cryptopanic.com/news/algorand/23933877/Algorand-Price-Forecast-ALGO-eyes-over-10-increase-as-it-nears-breakout-from-wedge-pattern",
+      "pubDate": "2025-08-04T10:14:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Base’s daily token issuances outpace Solana amid surge in Zora creator coins",
+      "link": "https://cryptopanic.com/news/solana/23925116/Bases-daily-token-issuances-outpace-Solana-amid-surge-in-Zora-creator-coins",
+      "pubDate": "2025-08-04T09:36:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "This is attributed to the incorporation of onchain social media Zora and Farcaster into the rebranded Base App last month.",
+      "currencies": [
+        "SOL",
+        "ZORA"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Crypto Insiders Are Betting Big on This Presale: Will It Outshine Ethereum Classic and Litecoin in 2025?",
+      "link": "https://cryptopanic.com/news/litecoin/23925069/Crypto-Insiders-Are-Betting-Big-on-This-Presale-Will-It-Outshine-Ethereum-Classic-and-Litecoin-in-2025",
+      "pubDate": "2025-08-04T09:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "LTC",
+        "ETC"
+      ]
+    },
+    {
+      "title": "XRP’s Wild Ride: From $3.65 Glory to a Harsh Reality Check",
+      "link": "https://cryptopanic.com/news/stellar/23923414/XRPs-Wild-Ride-From-365-Glory-to-a-Harsh-Reality-Check",
+      "pubDate": "2025-08-04T08:46:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XLM",
+        "SKY"
+      ]
+    },
+    {
+      "title": "Ethereum Just Rallied 60%—But Is This the Calm Before Another Blast-Off?",
+      "link": "https://cryptopanic.com/news/ethereum/23921609/Ethereum-Just-Rallied-60But-Is-This-the-Calm-Before-Another-Blast-Off",
+      "pubDate": "2025-08-04T07:41:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "\"Ethereum has recently experienced an impressive rally, soaring by an astonishing 60% in value within a short period of time. However, despite this significant surge, many analysts and investors are now left wondering whether this impressive momentum is merely a brief period of calm before another explosive rise in price and adoption of the cryptocurrency. As the market sentiment shifts and various factors come into play, the big question remains: will this be a moment of consolidation, or is Et",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Market Update—BTC & ETH Prove Resilient Against Tariff Volatility; ENA, XLM & INJ Lead the Gainers",
+      "link": "https://cryptopanic.com/news/stellar/23919962/Crypto-Market-UpdateBTC-ETH-Prove-Resilient-Against-Tariff-Volatility-ENA-XLM-INJ-Lead-the-Gainers",
+      "pubDate": "2025-08-04T05:19:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Top Trending Crypto for 2025: Analysts Compare BlockDAG, Chainlink, Stellar, and Cardano",
+      "link": "https://cryptopanic.com/news/stellar/23917750/Top-Trending-Crypto-for-2025-Analysts-Compare-BlockDAG-Chainlink-Stellar-and-Cardano",
+      "pubDate": "2025-08-04T04:23:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "LINK",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Cold Wallet Targets $2 After $0.00942 Presale While Dogecoin & Polkadot Struggle to Regain Momentum",
+      "link": "https://cryptopanic.com/news/polkadot/23917714/Cold-Wallet-Targets-2-After-000942-Presale-While-Dogecoin-Polkadot-Struggle-to-Regain-Momentum",
+      "pubDate": "2025-08-04T04:20:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "DOT"
+      ]
+    },
+    {
+      "title": "Top Crypto Gainers: Ethena, Conflux, Stellar signal bullish reversal with double-digit gains",
+      "link": "https://cryptopanic.com/news/stellar/23933871/Top-Crypto-Gainers-Ethena-Conflux-Stellar-signal-bullish-reversal-with-double-digit-gains",
+      "pubDate": "2025-08-04T03:21:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "CFX",
+        "ENA"
+      ]
+    },
+    {
+      "title": "Whats going on with the STX staking?",
+      "link": "https://cryptopanic.com/news/blockstack/23959699/Whats-going-on-with-the-STX-staking",
+      "pubDate": "2025-08-04T01:57:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STX",
+        "MCO"
+      ]
+    },
+    {
+      "title": "Significant Token Unlocks Scheduled for August",
+      "link": "https://cryptopanic.com/news/avalanche-2/23937831/Significant-Token-Unlocks-Scheduled-for-August",
+      "pubDate": "2025-08-04T00:58:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "APT",
+        "ENA"
+      ]
+    },
+    {
+      "title": "Base Network Surpasses Solana in Daily Token Issuance",
+      "link": "https://cryptopanic.com/news/ethereum/23913611/Base-Network-Surpasses-Solana-in-Daily-Token-Issuance",
+      "pubDate": "2025-08-04T00:04:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Base, an Ethereum Layer 2 network, overtakes Solana in token issuance, driven by Zora.",
+      "currencies": [
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

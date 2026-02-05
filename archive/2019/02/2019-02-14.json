@@ -1,0 +1,24 @@
+{
+  "date": "2019-02-14",
+  "fetchedAt": "2026-02-05T07:27:06.998Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "TRX Price Predicted to Grow as Tron Expands Its Reach Entering the Gaming Sector",
+      "link": "https://cryptopanic.com/news/tron/4564974/TRX-Price-Predicted-to-Grow-as-Tron-Expands-Its-Reach-Entering-the-Gaming-Sector",
+      "pubDate": "2019-02-14T11:50:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 5
+      }
+    }
+  ]
+}

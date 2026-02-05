@@ -1,0 +1,27 @@
+{
+  "date": "2020-06-16",
+  "fetchedAt": "2026-02-05T07:27:06.973Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Cash (BCH) Is a Shitcoin, According to BitMEX CEO Arthur Hayes",
+      "link": "https://cryptopanic.com/news/9101354/Bitcoin-Cash-BCH-Is-a-Shitcoin-According-to-BitMEX-CEO-Arthur-Hayes",
+      "pubDate": "2020-06-16T09:23:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

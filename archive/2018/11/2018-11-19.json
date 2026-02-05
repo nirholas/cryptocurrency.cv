@@ -1,0 +1,62 @@
+{
+  "date": "2018-11-19",
+  "fetchedAt": "2026-02-05T07:27:06.972Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @ChildrensAirAmb: When critically ill babies and children need to get to specialist care fast, it's YOU that get them there. Thank you f…",
+      "link": "https://cryptopanic.com/news/3733911/RT-ChildrensAirAmb-When-critically-ill-babies-and-children-need-to-get-to-specialist-care-fast-its-YOU-that-get-them-there-Thank-you-f",
+      "pubDate": "2018-11-19T18:15:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVINOC"
+      ]
+    },
+    {
+      "title": "Team #AVINOC @MEASA Aviation Show. @emirates @flydubai @EtihadAirways Airways had very specific questions around ho…",
+      "link": "https://cryptopanic.com/news/3733838/Team-AVINOC-MEASA-Aviation-Show-emirates-flydubai-EtihadAirways-Airways-had-very-specific-questions-around-ho",
+      "pubDate": "2018-11-19T18:09:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "AVINOC"
+      ]
+    },
+    {
+      "title": "Bitcoin Gold [BTG] Is Best Performer in Top Twenty Over Last 24 Hours",
+      "link": "https://cryptopanic.com/news/3733513/Bitcoin-Gold-BTG-Is-Best-Performer-in-Top-Twenty-Over-Last-24-Hours",
+      "pubDate": "2018-11-19T17:34:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTG"
+      ]
+    },
+    {
+      "title": "Payments Platform Kin Announces Token Migration from Ethereum to Custom Stellar Fork",
+      "link": "https://cryptopanic.com/news/3726504/Payments-Platform-Kin-Announces-Token-Migration-from-Ethereum-to-Custom-Stellar-Fork",
+      "pubDate": "2018-11-19T02:00:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

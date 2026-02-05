@@ -1,0 +1,50 @@
+{
+  "date": "2020-12-05",
+  "fetchedAt": "2026-02-05T07:27:06.992Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ethereum Could Plunge Below $500 Despite Ongoing Rebound, Claims Analyst",
+      "link": "https://cryptopanic.com/news/ethereum/10736934/Ethereum-Could-Plunge-Below-500-Despite-Ongoing-Rebound-Claims-Analyst",
+      "pubDate": "2020-12-05T22:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "For the first 3300 Blocks (12 Hours), the amount of FANNY tokens distributed among staked CORE will be 10x. Enjoy the staking!",
+      "link": "https://cryptopanic.com/news/11320738/For-the-first-3300-Blocks-12-Hours-the-amount-of-FANNY-tokens-distributed-among-staked-CORE-will-be-10x-Enjoy-the-staking",
+      "pubDate": "2020-12-05T06:54:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CORE"
+      ]
+    },
+    {
+      "title": "Get Ready for the Grand Opening of the Fanny Vault",
+      "link": "https://cryptopanic.com/news/11320741/Get-Ready-for-the-Grand-Opening-of-the-Fanny-Vault",
+      "pubDate": "2020-12-05T01:19:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CORE"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,362 @@
+{
+  "date": "2021-07-20",
+  "fetchedAt": "2026-02-05T07:27:06.515Z",
+  "articleCount": 25,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @CENNZnet: What goes into building a #blockchain using #Rust? Our newest junior software engineer at the @CENNZnet project provides an…",
+      "link": "https://cryptopanic.com/news/12365096/RT-CENNZnet-What-goes-into-building-a-blockchain-using-Rust-Our-newest-junior-software-engineer-at-the-CENNZnet-project-provides-an",
+      "pubDate": "2021-07-20T23:26:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CENNZ"
+      ]
+    },
+    {
+      "title": "RT @ThetaDrop: We are actively working on bringing KYC & withdrawals to the ThetaDrop platform ASAP. Thanks for your patience!",
+      "link": "https://cryptopanic.com/news/theta-token/12367984/RT-ThetaDrop-We-are-actively-working-on-bringing-KYC-amp-withdrawals-to-the-ThetaDrop-platform-ASAP-Thanks-for-your-patience",
+      "pubDate": "2021-07-20T23:12:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Theta staking is at all-time high at 64% of total supply, but we can do better to increase network security! If you…",
+      "link": "https://cryptopanic.com/news/theta-token/12367985/Theta-staking-is-at-all-time-high-at-64-of-total-supply-but-we-can-do-better-to-increase-network-security-If-you",
+      "pubDate": "2021-07-20T21:44:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "RT @BMcGleenon: Pulsechain has raised approx $25 million for SRF longevity research: 'largest charitable donation ever in the history of cr…",
+      "link": "https://cryptopanic.com/news/12366052/RT-BMcGleenon-Pulsechain-has-raised-approx-25-million-for-SRF-longevity-research-largest-charitable-donation-ever-in-the-history-of-cr",
+      "pubDate": "2021-07-20T21:25:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: Just a reminder that I called the #Bitcoin top on the day. Here's #BTC price now, overlaid over last cycle. $BTC is im…",
+      "link": "https://cryptopanic.com/news/12366053/RT-RichardHeartWin-Just-a-reminder-that-I-called-the-Bitcoin-top-on-the-day-Heres-BTC-price-now-overlaid-over-last-cycle-BTC-is-im",
+      "pubDate": "2021-07-20T20:07:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "Flare to Airdrop Canary Network Token to XRP Holders",
+      "link": "https://cryptopanic.com/news/ripple/12362932/Flare-to-Airdrop-Canary-Network-Token-to-XRP-Holders",
+      "pubDate": "2021-07-20T18:07:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "-",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @P4Cap: Thank you for joining @khamzah22 and everyone who came out! I will download the Twitter spaces AMA and we will post it on YouTub…",
+      "link": "https://cryptopanic.com/news/12368034/RT-P4Cap-Thank-you-for-joining-khamzah22-and-everyone-who-came-out-I-will-download-the-Twitter-spaces-AMA-and-we-will-post-it-on-YouTub",
+      "pubDate": "2021-07-20T17:03:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "XRP Lawsuit update: SEC Commissioners’ ‘gift’ to Ripple might have this effect",
+      "link": "https://cryptopanic.com/news/ripple/12362664/XRP-Lawsuit-update-SEC-Commissioners-gift-to-Ripple-might-have-this-effect",
+      "pubDate": "2021-07-20T16:30:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The United States Securities and Exchange Commission [SEC] pulled up Ripple and its executives for allegedly raising funds through the sales of unregistered securities back in December. Now, while the lawsuit since has been tightly fought, many believe that Ripple has had the upper hand over the past few months, especially since the firm has […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Join @P4Cap from #Telcoin and @khamzah22 from @0xPolygon for an AMA in 1.5 hours and ask them anything!…",
+      "link": "https://cryptopanic.com/news/12368035/Join-P4Cap-from-Telcoin-and-khamzah22-from-0xPolygon-for-an-AMA-in-15-hours-and-ask-them-anything",
+      "pubDate": "2021-07-20T14:28:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "Transparency is the key \"winning feature\" in the #stablecoin field. We have been pioneering it since 2018.…",
+      "link": "https://cryptopanic.com/news/12367565/Transparency-is-the-key-winning-feature-in-the-stablecoin-field-We-have-been-pioneering-it-since-2018",
+      "pubDate": "2021-07-20T13:51:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "Mastercard and Circle Partner to Trial USDC Settlements",
+      "link": "https://cryptopanic.com/news/12361957/Mastercard-and-Circle-Partner-to-Trial-USDC-Settlements",
+      "pubDate": "2021-07-20T13:09:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "Mastercard will test utilizing USDC as a means for card issuers to settle payments and transactions on its platforms.",
+      "currencies": [
+        "USDC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Virtual Machine Now Compatible with Solana via Neon Labs",
+      "link": "https://cryptopanic.com/news/12361897/Ethereum-Virtual-Machine-Now-Compatible-with-Solana-via-Neon-Labs",
+      "pubDate": "2021-07-20T12:59:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "-",
+      "currencies": [
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Drop Under $1 Will Make ADA Crash Further Quickly: Bitcoiner Max Keiser",
+      "link": "https://cryptopanic.com/news/cardano/12361388/Drop-Under-1-Will-Make-ADA-Crash-Further-Quickly-Bitcoiner-Max-Keiser",
+      "pubDate": "2021-07-20T09:33:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Famous Bitcoin maximalist warns that, should Cardano's ADA go below the $1 level, it may continue rolling down to another major low",
+      "currencies": [
+        "BTC",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Uniswap (UNI) to Be Allocated 49.95% of Grayscale’s New DeFi Fund",
+      "link": "https://cryptopanic.com/news/12361328/Uniswap-UNI-to-Be-Allocated-4995-of-Grayscales-New-DeFi-Fund",
+      "pubDate": "2021-07-20T09:09:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Grayscale Investments is has launched a new DeFi fund The DeFi fund will provide investors with weighted exposure to the top 10 DeFi tokens according to market cap They include Uniswap (UNI), Aave (AAVE), Compound (COMP), Curve (CRV), MakerDAO (MKR), SushiSwap (SUSHI), Synthetix (SNX), Yearn Finance (YFI), UMA Protocol (UMA) and Bancor (BNT) Uniswap will be allocated the lions share of the fund...",
+      "currencies": [
+        "UNI",
+        "AAVE",
+        "COMP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "No hard fork love for Ethereum as ETH price falls to a three-week low",
+      "link": "https://cryptopanic.com/news/ethereum/12361327/No-hard-fork-love-for-Ethereum-as-ETH-price-falls-to-a-three-week-low",
+      "pubDate": "2021-07-20T09:03:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ether continues to trade lower under the shadow of Bitcoin in days leading up to its supply-crunching hard fork event.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 13
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @mirror_protocol: Poll 124 (Register JNJ Parameters) was listed by an external community member and states that the Band oracle feeder i…",
+      "link": "https://cryptopanic.com/news/12364696/RT-mirror_protocol-Poll-124-Register-JNJ-Parameters-was-listed-by-an-external-community-member-and-states-that-the-Band-oracle-feeder-i",
+      "pubDate": "2021-07-20T08:39:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "RT @mogwaicoin: @CoinMarketCap $DMOG from because Mogwai #NFTs wear  horns!",
+      "link": "https://cryptopanic.com/news/12366754/RT-mogwaicoin-CoinMarketCap-DMOG-from-because-Mogwai-NFTs-wear-horns",
+      "pubDate": "2021-07-20T07:22:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "MOG"
+      ]
+    },
+    {
+      "title": "$200 Billion Crypto Price Crash: Bitcoin Suddenly Crashes Under $30,000 As Ethereum, Binance’s BNB, Cardano, XRP And Dogecoin Go Into Freefall",
+      "link": "https://cryptopanic.com/news/dogecoin/12359630/200-Billion-Crypto-Price-Crash-Bitcoin-Suddenly-Crashes-Under-30000-As-Ethereum-Binances-BNB-Cardano-XRP-And-Dogecoin-Go-Into-Freefall",
+      "pubDate": "2021-07-20T07:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin and cryptocurrency prices have suddenly crashed lower, falling sharply after weeks of malaise...",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "RT @RichardHeartWin: When I want to know what's going on with the HEX price, I go to . There's some really smart guy…",
+      "link": "https://cryptopanic.com/news/12358605/RT-RichardHeartWin-When-I-want-to-know-whats-going-on-with-the-HEX-price-I-go-to-Theres-some-really-smart-guy",
+      "pubDate": "2021-07-20T05:52:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: 21 minutes left!",
+      "link": "https://cryptopanic.com/news/12358606/RT-RichardHeartWin-21-minutes-left",
+      "pubDate": "2021-07-20T04:29:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "RT @agfnzn1: I leave you my recent publication about the NBA and the details of the game #scorum @SCORUM_en #NBAFin…",
+      "link": "https://cryptopanic.com/news/12360226/RT-agfnzn1-I-leave-you-my-recent-publication-about-the-NBA-and-the-details-of-the-game-scorum-SCORUM_en-NBAFin?mtm_campaign=API-OFA",
+      "pubDate": "2021-07-20T04:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SCR"
+      ]
+    },
+    {
+      "title": "Crypto Analyst Predicts 430% Rally for Ethereum, Says Bitcoin Flippening Likely – Here’s When",
+      "link": "https://cryptopanic.com/news/polkadot/12356828/Crypto-Analyst-Predicts-430-Rally-for-Ethereum-Says-Bitcoin-Flippening-Likely-Heres-When",
+      "pubDate": "2021-07-20T03:40:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A popular crypto trader and analyst is suggesting that Ethereum’s price could jump 430% by 2022. The trader, known as Capo, says that he is betting on Ethereum (ETH) over Bitcoin (BTC) if the crypto market enters a new bullish period. He also bets that ETH will flip BTC’s market cap and become the top-ranked […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We are excited to announce the STP 2.0 Beta Launch Test Event Participant List, which is composed of 25 experienced…",
+      "link": "https://cryptopanic.com/news/12360136/We-are-excited-to-announce-the-STP-20-Beta-Launch-Test-Event-Participant-List-which-is-composed-of-25-experienced",
+      "pubDate": "2021-07-20T03:33:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STPT"
+      ]
+    },
+    {
+      "title": "Dozens of fake Linkedin profiles, many claiming to be staff or agents of top notch crypto exchanges. Many of these…",
+      "link": "https://cryptopanic.com/news/12358527/Dozens-of-fake-Linkedin-profiles-many-claiming-to-be-staff-or-agents-of-top-notch-crypto-exchanges-Many-of-these",
+      "pubDate": "2021-07-20T03:10:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "RT @alanchiu: Strong espresso and amazing builders - great way to kick off #ethcc @EthCCWeek @ethcc",
+      "link": "https://cryptopanic.com/news/12356350/RT-alanchiu-Strong-espresso-and-amazing-builders-great-way-to-kick-off-ethcc-EthCCWeek-ethcc",
+      "pubDate": "2021-07-20T00:00:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "OMG"
+      ]
+    }
+  ]
+}

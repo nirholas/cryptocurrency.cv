@@ -1,0 +1,26 @@
+{
+  "date": "2018-03-17",
+  "fetchedAt": "2026-02-05T07:27:06.992Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Cardano Review",
+      "link": "https://cryptopanic.com/news/cardano/1393276/Cardano-Review",
+      "pubDate": "2018-03-17T18:00:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

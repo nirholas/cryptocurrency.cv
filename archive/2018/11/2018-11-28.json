@@ -1,0 +1,41 @@
+{
+  "date": "2018-11-28",
+  "fetchedAt": "2026-02-05T07:27:07.001Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tron [TRX] Top Performer Among the Top 20 Cryptocurrencies Today",
+      "link": "https://cryptopanic.com/news/3820857/Tron-TRX-Top-Performer-Among-the-Top-20-Cryptocurrencies-Today",
+      "pubDate": "2018-11-28T16:39:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Infographic: How crypto news generates fake Ripple hype",
+      "link": "https://cryptopanic.com/news/ripple/3819550/Infographic-How-crypto-news-generates-fake-Ripple-hype",
+      "pubDate": "2018-11-28T14:14:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    }
+  ]
+}

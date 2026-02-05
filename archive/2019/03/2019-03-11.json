@@ -1,0 +1,38 @@
+{
+  "date": "2019-03-11",
+  "fetchedAt": "2026-02-05T07:27:06.990Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Alibaba Forces ABBC Foundation to Drop Its Trademark",
+      "link": "https://cryptopanic.com/news/4802984/Alibaba-Forces-ABBC-Foundation-to-Drop-Its-Trademark",
+      "pubDate": "2019-03-11T17:41:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ABBC"
+      ]
+    },
+    {
+      "title": "Tron (TRX) Reports 27 Mln More Daily Operations Than ETH and EOS Do Together",
+      "link": "https://cryptopanic.com/news/tron/4799086/Tron-TRX-Reports-27-Mln-More-Daily-Operations-Than-ETH-and-EOS-Do-Together",
+      "pubDate": "2019-03-11T11:03:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TRX",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 4
+      }
+    }
+  ]
+}

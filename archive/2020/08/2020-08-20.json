@@ -1,0 +1,32 @@
+{
+  "date": "2020-08-20",
+  "fetchedAt": "2026-02-05T07:27:06.980Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @PaxosGlobal: As a regulated Trust company that is tech-native, Paxos can connect the traditional financial services and blockchain tech…",
+      "link": "https://cryptopanic.com/news/9734829/RT-PaxosGlobal-As-a-regulated-Trust-company-that-is-tech-native-Paxos-can-connect-the-traditional-financial-services-and-blockchain-tech",
+      "pubDate": "2020-08-20T15:58:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "Kindly be informed that will be undergone server reformat, system upgrading and maintenanc…",
+      "link": "https://cryptopanic.com/news/9730965/Kindly-be-informed-that-will-be-undergone-server-reformat-system-upgrading-and-maintenanc?mtm_campaign=API-OFA",
+      "pubDate": "2020-08-20T08:22:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NPC"
+      ]
+    }
+  ]
+}

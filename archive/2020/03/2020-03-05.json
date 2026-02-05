@@ -1,0 +1,26 @@
+{
+  "date": "2020-03-05",
+  "fetchedAt": "2026-02-05T07:27:06.979Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA (MIOTA) Compared to Cardano (ADA) By Analysts: Results",
+      "link": "https://cryptopanic.com/news/8116044/IOTA-MIOTA-Compared-to-Cardano-ADA-By-Analysts-Results",
+      "pubDate": "2020-03-05T11:23:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

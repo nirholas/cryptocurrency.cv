@@ -1,0 +1,39 @@
+{
+  "date": "2018-11-17",
+  "fetchedAt": "2026-02-05T07:27:06.981Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "BitGo Adds Support For Stablecoins; Set Sights on Listing 100 Cryptos and Tokens by the End of 2018",
+      "link": "https://cryptopanic.com/news/3716552/BitGo-Adds-Support-For-Stablecoins-Set-Sights-on-Listing-100-Cryptos-and-Tokens-by-the-End-of-2018",
+      "pubDate": "2018-11-17T17:00:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDP"
+      ]
+    },
+    {
+      "title": "IOTA’s Serguei Popov Introduces the IOTA Research Council",
+      "link": "https://cryptopanic.com/news/3713798/IOTAs-Serguei-Popov-Introduces-the-IOTA-Research-Council",
+      "pubDate": "2018-11-17T11:59:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

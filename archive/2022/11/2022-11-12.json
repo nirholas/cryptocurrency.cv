@@ -1,0 +1,821 @@
+{
+  "date": "2022-11-12",
+  "fetchedAt": "2026-02-05T07:27:07.364Z",
+  "articleCount": 58,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Sam Bankman-Fried is ‘under supervision’ in Bahamas, looking to flee to Dubai",
+      "link": "https://cryptopanic.com/news/16880644/Sam-Bankman-Fried-is-under-supervision-in-Bahamas-looking-to-flee-to-Dubai",
+      "pubDate": "2022-11-12T23:22:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "It is understood that Sam Bankman-Fried and two former FTX associates are currently “under supervision” by Bahamian authorities.",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "@carnavalartNFT's @connieansaldi and @t_taringa's @_CrisSancho talk about bringing the ownership revolution to Bi…",
+      "link": "https://cryptopanic.com/news/16884110/carnavalartNFTs-connieansaldi-and-t_taringas-_CrisSancho-talk-about-bringing-the-ownership-revolution-to-Bi",
+      "pubDate": "2022-11-12T23:21:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "RBTC"
+      ]
+    },
+    {
+      "title": "RT @PeiChen01: Long lines at the #Rootstock booth during LabitConf. Well done, marketing at @RSKsmart",
+      "link": "https://cryptopanic.com/news/16884111/RT-PeiChen01-Long-lines-at-the-Rootstock-booth-during-LabitConf-Well-done-marketing-at-RSKsmart",
+      "pubDate": "2022-11-12T22:40:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RBTC"
+      ]
+    },
+    {
+      "title": "If you wonder what happened with aUSD \"Market Price\" today - check CMC",
+      "link": "https://cryptopanic.com/news/16884957/If-you-wonder-what-happened-with-aUSD-Market-Price-today-check-CMC",
+      "pubDate": "2022-11-12T22:13:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ACA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance CEO Changpeng Zhao Lists Five Classic Red Flags in Crypto Projects Amid FTX Collapse",
+      "link": "https://cryptopanic.com/news/16880434/Binance-CEO-Changpeng-Zhao-Lists-Five-Classic-Red-Flags-in-Crypto-Projects-Amid-FTX-Collapse",
+      "pubDate": "2022-11-12T21:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Binance CEO Changpeng Zhao is warning people after FTX’s collapse to avoid crypto projects that are displaying five key red flags. Zhao tells his 7.5 million Twitter followers what to look out for when getting involved with crypto-related enterprises. “FTX aside, avoid businesses/exchanges/projects that: – are not profitable (musical chairs) – survive by selling their […]",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Peter Schiff On Why Bitcoin Will Never Hit $69,000 Again",
+      "link": "https://cryptopanic.com/news/bitcoin/16880410/Peter-Schiff-On-Why-Bitcoin-Will-Never-Hit-69000-Again",
+      "pubDate": "2022-11-12T20:31:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Peter Schiff, the chief market strategist of Euro Pacific Asset Management, has hit out at the benchmark cryptocurrency Bitcoin (BTC), stating that it will never again reach its Nov. 2021 all-time high (ATH) price of $69,000.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 5
+      }
+    },
+    {
+      "title": "\"Bitcoin is better than a year ago. Services built on Bitcoin surpass in security, adoption and UX. Despite FTX.\"…",
+      "link": "https://cryptopanic.com/news/16884112/Bitcoin-is-better-than-a-year-ago-Services-built-on-Bitcoin-surpass-in-security-adoption-and-UX-Despite-FTX",
+      "pubDate": "2022-11-12T19:41:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "RBTC"
+      ]
+    },
+    {
+      "title": "Hello @XGo_official, we’re loving the app, especially the UI 🤩. Will you be integrating your trading platform and i…",
+      "link": "https://cryptopanic.com/news/16881424/Hello-XGo_official-were-loving-the-app-especially-the-UI-Will-you-be-integrating-your-trading-platform-and-i?mtm_campaign=API-OFA",
+      "pubDate": "2022-11-12T19:25:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BAN"
+      ]
+    },
+    {
+      "title": "UPDATE: Paxos, at the direction of US Federal Law enforcement, froze 11,184.38 PAXG tokens valued at ~$19M. These t…",
+      "link": "https://cryptopanic.com/news/pax-gold/16881478/UPDATE-Paxos-at-the-direction-of-US-Federal-Law-enforcement-froze-1118438-PAXG-tokens-valued-at-19M-These-t",
+      "pubDate": "2022-11-12T19:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BUSD",
+        "PAXG",
+        "BKRW"
+      ]
+    },
+    {
+      "title": "RT @thegristleking: Paris @helium meetup tomorrow (13th) at La Felicita, 10 AM. See ya there! #HeliumInTheWild @HeliumFndn",
+      "link": "https://cryptopanic.com/news/helium/16882662/RT-thegristleking-Paris-helium-meetup-tomorrow-13th-at-La-Felicita-10-AM-See-ya-there-HeliumInTheWild-HeliumFndn",
+      "pubDate": "2022-11-12T18:52:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ]
+    },
+    {
+      "title": "RT @luiseddie: @HodlDee @DeFiDaniel @thisisbitcoin What about Bitcoin on @RSKsmart using @SovrynBTC for #bitcoin DeFi needs?",
+      "link": "https://cryptopanic.com/news/16884114/RT-luiseddie-HodlDee-DeFiDaniel-thisisbitcoin-What-about-Bitcoin-on-RSKsmart-using-SovrynBTC-for-bitcoin-DeFi-needs",
+      "pubDate": "2022-11-12T18:45:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "RBTC"
+      ]
+    },
+    {
+      "title": "SHIB price prediction for December 31, 2022 – Can Shiba Inu rebound?",
+      "link": "https://cryptopanic.com/news/16880159/SHIB-price-prediction-for-December-31-2022-Can-Shiba-Inu-rebound",
+      "pubDate": "2022-11-12T18:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Disclaimer:The CoinMarketCap cryptocurrency community price estimate is based only on the votes of its users. Estimates do not guarantee end-of-month... Continue reading",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "\"Where we see an opportunity to grow, we will be there; that’s our goal. To empower vulnerable people and bring the…",
+      "link": "https://cryptopanic.com/news/16884116/Where-we-see-an-opportunity-to-grow-we-will-be-there-thats-our-goal-To-empower-vulnerable-people-and-bring-the",
+      "pubDate": "2022-11-12T18:33:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RBTC"
+      ]
+    },
+    {
+      "title": "RT @Ceeefs: Crypto has become such a dangerous space lately and that makes me appreciate how much of a safe haven we have built over the la…",
+      "link": "https://cryptopanic.com/news/16881425/RT-Ceeefs-Crypto-has-become-such-a-dangerous-space-lately-and-that-makes-me-appreciate-how-much-of-a-safe-haven-we-have-built-over-the-la?mtm_campaign=API-OFA",
+      "pubDate": "2022-11-12T18:26:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BAN"
+      ]
+    },
+    {
+      "title": "The #Metaverse will soon be part of our daily lives According to @WunThompson eCommerce, socializing and entertain…",
+      "link": "https://cryptopanic.com/news/16881615/The-Metaverse-will-soon-be-part-of-our-daily-lives-According-to-WunThompson-eCommerce-socializing-and-entertain",
+      "pubDate": "2022-11-12T18:06:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "CEEK"
+      ]
+    },
+    {
+      "title": "USDP Stablecoin Makes It to Top 50, Who's Next?",
+      "link": "https://cryptopanic.com/news/16880106/USDP-Stablecoin-Makes-It-to-Top-50-Whos-Next",
+      "pubDate": "2022-11-12T17:58:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "Sam Bankman-Fried denies rumors that he fled to Argentina",
+      "link": "https://cryptopanic.com/news/16880077/Sam-Bankman-Fried-denies-rumors-that-he-fled-to-Argentina",
+      "pubDate": "2022-11-12T17:47:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "Making it happen",
+      "link": "https://cryptopanic.com/news/16880060/Making-it-happen",
+      "pubDate": "2022-11-12T17:38:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SYS"
+      ]
+    },
+    {
+      "title": "Want to be part of the future? Wondering what you should know about the #Metaverse? Learn how the metaverse is di…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/16881507/Want-to-be-part-of-the-future-Wondering-what-you-should-know-about-the-Metaverse-Learn-how-the-metaverse-is-di",
+      "pubDate": "2022-11-12T16:53:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "RT @innovatio_space: Some great pictures of the @RSKsmart @rootstock_sp event on Buenos Aires! Team Innovatio present!",
+      "link": "https://cryptopanic.com/news/16884118/RT-innovatio_space-Some-great-pictures-of-the-RSKsmart-rootstock_sp-event-on-Buenos-Aires-Team-Innovatio-present",
+      "pubDate": "2022-11-12T16:40:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RBTC"
+      ]
+    },
+    {
+      "title": "FTX reportedly hacked as officials flag abnormal wallet activity",
+      "link": "https://cryptopanic.com/news/16879904/FTX-reportedly-hacked-as-officials-flag-abnormal-wallet-activity",
+      "pubDate": "2022-11-12T16:14:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Wallets tied to FTX and FTX US have seen $659 million in cumulative outflows over the past 24 hours, according to Nansen.",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "ICYMI: An important message from our CEO, @arietrouw.",
+      "link": "https://cryptopanic.com/news/16884763/ICYMI-An-important-message-from-our-CEO-arietrouw",
+      "pubDate": "2022-11-12T16:02:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XYO"
+      ]
+    },
+    {
+      "title": "Terra Luna Classic Price Prediction – Can LUNC Recover and Hit $1",
+      "link": "https://cryptopanic.com/news/16879831/Terra-Luna-Classic-Price-Prediction-Can-LUNC-Recover-and-Hit-1",
+      "pubDate": "2022-11-12T15:52:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Terra Luna Classic (LUNC) price sell-off continues unabated in the wake of the collapse of FTX and its affiliated companies. The total cryptocurrency market cap sunk deeper below the $1 trillion mark as investors reacted to the bloody mess caused by the now never-ending troubles at one of the world's largest cryptocurrency exchanges.... Read More: Terra Luna Classic Price Prediction – Can...",
+      "currencies": [
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "If you had to double take, you’ve spent way too much time on Twitter the past few days",
+      "link": "https://cryptopanic.com/news/16883096/If-you-had-to-double-take-youve-spent-way-too-much-time-on-Twitter-the-past-few-days",
+      "pubDate": "2022-11-12T15:37:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LOOKS"
+      ]
+    },
+    {
+      "title": "IOVLab's booth at @labitconf! Make sure to stop by!",
+      "link": "https://cryptopanic.com/news/16884122/IOVLabs-booth-at-labitconf-Make-sure-to-stop-by",
+      "pubDate": "2022-11-12T15:26:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RBTC"
+      ]
+    },
+    {
+      "title": "‘Rich Dad’ R. Kiyosaki shares his stance on current crypto market downturn",
+      "link": "https://cryptopanic.com/news/bitcoin/16879746/Rich-Dad-R-Kiyosaki-shares-his-stance-on-current-crypto-market-downturn",
+      "pubDate": "2022-11-12T15:14:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Robert Kiyosaki, the author of the personal finance book ‘Rich Dad, Poor Dad’ has delved into the current state of... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "\"Let's stop blaming Bitcoin for energy consumption; the problem is how the energy is generated, not who uses it.\"…",
+      "link": "https://cryptopanic.com/news/16884123/Lets-stop-blaming-Bitcoin-for-energy-consumption-the-problem-is-how-the-energy-is-generated-not-who-uses-it",
+      "pubDate": "2022-11-12T15:05:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "RBTC"
+      ]
+    },
+    {
+      "title": "RT @travalacom: 🇹🇷 Hey @zilliqa and @zilliqaco, who's attending Istanbul Blockchain Week this Nov 14-17? Istanbul is also our destinati…",
+      "link": "https://cryptopanic.com/news/zilliqa/16884841/RT-travalacom-Hey-zilliqa-and-zilliqaco-whos-attending-Istanbul-Blockchain-Week-this-Nov-14-17-Istanbul-is-also-our-destinati",
+      "pubDate": "2022-11-12T14:07:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZIL",
+        "GZIL"
+      ]
+    },
+    {
+      "title": "RT @Zeniq_corp: The panel discussion at the Smart Chain Forum 2022 will highlight the game-changing trends and strategic decisions that can…",
+      "link": "https://cryptopanic.com/news/16881128/RT-Zeniq_corp-The-panel-discussion-at-the-Smart-Chain-Forum-2022-will-highlight-the-game-changing-trends-and-strategic-decisions-that-can",
+      "pubDate": "2022-11-12T13:36:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XCN",
+        "AVINOC"
+      ]
+    },
+    {
+      "title": "Ripple Lawsuit: SEC’s Win Against This Blockchain Firm in High-Profile Securities Case Unnerves XRP Army",
+      "link": "https://cryptopanic.com/news/16879462/Ripple-Lawsuit-SECs-Win-Against-This-Blockchain-Firm-in-High-Profile-Securities-Case-Unnerves-XRP-Army",
+      "pubDate": "2022-11-12T13:28:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Ripple adherents have continued to fret over a recent U.S. Securities and Exchange Commission(SEC) win in a securities lawsuit filed against blockchain-based file-sharing network LBRY.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 6
+      }
+    },
+    {
+      "title": "RT @ardor_world: I am actively developing a new Ardor blockchain explorer. I hope to release it soon.",
+      "link": "https://cryptopanic.com/news/16879433/RT-ardor_world-I-am-actively-developing-a-new-Ardor-blockchain-explorer-I-hope-to-release-it-soon",
+      "pubDate": "2022-11-12T13:20:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARDR"
+      ]
+    },
+    {
+      "title": "The most anticipated feature of the #Orbler project isn’t only its unique #NFT integration into a fun and engaging…",
+      "link": "https://cryptopanic.com/news/16883572/The-most-anticipated-feature-of-the-Orbler-project-isnt-only-its-unique-NFT-integration-into-a-fun-and-engaging?mtm_campaign=API-OFA",
+      "pubDate": "2022-11-12T13:11:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "ORBR"
+      ]
+    },
+    {
+      "title": "Bitcoin will shrug off FTX 'black swan' just like Mt. Gox — analysis",
+      "link": "https://cryptopanic.com/news/16879421/Bitcoin-will-shrug-off-FTX-black-swan-just-like-Mt-Gox-analysis",
+      "pubDate": "2022-11-12T13:02:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "There might not be much new to worry about when it comes to the FTX aftermath and Bitcoin resilience.",
+      "currencies": [
+        "BTC",
+        "FTT"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto.com Reveals $2,800,000,000 in Bitcoin and Altcoin Reserves in Bid for Transparency",
+      "link": "https://cryptopanic.com/news/16879386/Cryptocom-Reveals-2800000000-in-Bitcoin-and-Altcoin-Reserves-in-Bid-for-Transparency",
+      "pubDate": "2022-11-12T12:45:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The chief executive of a prominent crypto exchange is revealing some of the platform’s reserve assets in a first step towards transparency. Crypto.com CEO Kris Marszalek says that investors can expect the crypto exchange to remain safe and transparent while announcing a full audit that would prove Crypto.com has the 1:1 ratio of reserve assets […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SBF built bespoke ‘backdoor’ to outwit FTX compliance systems: Reuters",
+      "link": "https://cryptopanic.com/news/16879371/SBF-built-bespoke-backdoor-to-outwit-FTX-compliance-systems-Reuters",
+      "pubDate": "2022-11-12T12:35:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Sam Bankman-Fried, who has since resigned as CEO, denied such a \"backdoor\" existed when asked by Reuters.",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "The saga continues",
+      "link": "https://cryptopanic.com/news/16883098/The-saga-continues",
+      "pubDate": "2022-11-12T11:42:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LOOKS"
+      ]
+    },
+    {
+      "title": "Binance CEO CZ on FTX crash: 'We’ve been set back a few years'",
+      "link": "https://cryptopanic.com/news/16879232/Binance-CEO-CZ-on-FTX-crash-Weve-been-set-back-a-few-years",
+      "pubDate": "2022-11-12T11:18:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "With one of the biggest crypto businesses falling overnight after getting caught misappropriating user funds, CZ believed the episode was devastating for the industry, which took away a lot of consumer confidence.",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Rich Dad Poor Dad Author Robert Kiyosaki Says BTC Will Bottom at This Price, Not Worried About Crash",
+      "link": "https://cryptopanic.com/news/16879234/Rich-Dad-Poor-Dad-Author-Robert-Kiyosaki-Says-BTC-Will-Bottom-at-This-Price-Not-Worried-About-Crash",
+      "pubDate": "2022-11-12T11:12:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Robert Kiyosaki, the best-selling author of Rich Dad Poor Dad, believes Bitcoin may go as low as $10,000 as the dust from the FTX fallout settles. The sudden collapse of FTX, once the third-largest cryptocurrency exchange, has dragged the entire crypto space into another cycle of fear, uncertainty, and doubt (FUD). Consequently, all major crypto assets have taken a heavy hit, and Bitcoin...",
+      "currencies": [
+        "BTC",
+        "FTT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @HouseofChimera: What projects keep building, through bad and good times? @XcademyOfficial is a tech pioneer and can revolutionize a 2…",
+      "link": "https://cryptopanic.com/news/zilliqa/16884842/RT-HouseofChimera-What-projects-keep-building-through-bad-and-good-times-XcademyOfficial-is-a-tech-pioneer-and-can-revolutionize-a-2",
+      "pubDate": "2022-11-12T10:08:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZIL",
+        "GZIL"
+      ]
+    },
+    {
+      "title": "Sending #crypto doesn't need to be complicated. With the #ETNApp users can initiate a transfer in seconds using a Q…",
+      "link": "https://cryptopanic.com/news/16878648/Sending-crypto-doesnt-need-to-be-complicated-With-the-ETNApp-users-can-initiate-a-transfer-in-seconds-using-a-Q",
+      "pubDate": "2022-11-12T10:00:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "FTX Hit by Nine-Figure Hack as Meltdown Continues",
+      "link": "https://cryptopanic.com/news/16878670/FTX-Hit-by-Nine-Figure-Hack-as-Meltdown-Continues",
+      "pubDate": "2022-11-12T09:51:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "FTX.US General Counsel Ryne Miller said that assets had been moved to cold storage to mitigate damage upon observing unauthorized transactions. FTX, the collapsed cryptocurrency exchange thats been at the center of a rapidly developing drama this week, has been hacked.Hours after the embattled firm announced it was filing for Chapter 11 bankruptcy, a number of on-chain sleuths took to Twitter...",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "FTX Suffers $400M Hack After Declaring Bankruptcy, Remaining Funds Moved to Cold Storage",
+      "link": "https://cryptopanic.com/news/16876873/FTX-Suffers-400M-Hack-After-Declaring-Bankruptcy-Remaining-Funds-Moved-to-Cold-Storage",
+      "pubDate": "2022-11-12T08:38:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "About $400 million worth of cryptocurrency was siphoned from the beleaguered FTX exchange in the last few hours. After declaring bankruptcy just hours before, the exchange stated that it had been hacked.",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @FIFAWCAILEAGUE: @FIFAWorldCup Think you know how the @FIFAWorldCup is going to play out? Predict #FIFAWorldCup matches now and score ep…",
+      "link": "https://cryptopanic.com/news/16881616/RT-FIFAWCAILEAGUE-FIFAWorldCup-Think-you-know-how-the-FIFAWorldCup-is-going-to-play-out-Predict-FIFAWorldCup-matches-now-and-score-ep",
+      "pubDate": "2022-11-12T08:24:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CENNZ"
+      ]
+    },
+    {
+      "title": "Another win for the ecosystem",
+      "link": "https://cryptopanic.com/news/16881618/Another-win-for-the-ecosystem",
+      "pubDate": "2022-11-12T08:24:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CENNZ"
+      ]
+    },
+    {
+      "title": "RT @shahafbg: While @COTInetwork had NO EXPOSURE to @FTX_Official or Alameda, our hearts are with all those who are affected by it. We're b…",
+      "link": "https://cryptopanic.com/news/16881628/RT-shahafbg-While-COTInetwork-had-NO-EXPOSURE-to-FTX_Official-or-Alameda-our-hearts-are-with-all-those-who-are-affected-by-it-Were-b",
+      "pubDate": "2022-11-12T08:07:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "COTI"
+      ]
+    },
+    {
+      "title": "RT @btsfav: #DeFinitely 134 – The News in #DeFi -",
+      "link": "https://cryptopanic.com/news/16876057/RT-btsfav-DeFinitely-134-The-News-in-DeFi-",
+      "pubDate": "2022-11-12T07:59:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "Correct + Stay away from projects without a development team #ETCArmy #ETC $ETC #EthereumClassic $HEBE #NFT",
+      "link": "https://cryptopanic.com/news/ethereum-classic/16882652/Correct-Stay-away-from-projects-without-a-development-team-ETCArmy-ETC-ETC-EthereumClassic-HEBE-NFT",
+      "pubDate": "2022-11-12T07:52:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETC",
+        "WETC",
+        "HEBE"
+      ]
+    },
+    {
+      "title": "This Exchange Holds 20% of its Reserves in Shiba Inu",
+      "link": "https://cryptopanic.com/news/16875545/This-Exchange-Holds-20-of-its-Reserves-in-Shiba-Inu",
+      "pubDate": "2022-11-12T07:30:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The CEO of a popular exchange released a Proof of Reserves that reveals the second largest holding of their reserves is in Shiba Inu.",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "FTX Says It’s Been Hacked As $383,000,000 in Crypto Appears To Exit Crumbling Exchange",
+      "link": "https://cryptopanic.com/news/16875063/FTX-Says-Its-Been-Hacked-As-383000000-in-Crypto-Appears-To-Exit-Crumbling-Exchange",
+      "pubDate": "2022-11-12T07:15:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "The crumbling crypto exchange FTX says it’s been hacked. As a flood of users began reporting sudden $0 balances and on-chain analysts began tracking millions of dollars appearing to exit the exchange, FTX general counsel Ryne Miller released a statement on the company’s Telegram channel. “FTX has been hacked. Chat is open. Don’t go to […]",
+      "currencies": [
+        "ETH",
+        "FTT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Solana Price Prediction – SOL Is Up 60% From The Lows, Can it Reach $30 Soon?",
+      "link": "https://cryptopanic.com/news/16873995/Solana-Price-Prediction-SOL-Is-Up-60-From-The-Lows-Can-it-Reach-30-Soon",
+      "pubDate": "2022-11-12T06:23:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Solana price prediction is bearish; as the SOL/USD pair is unable to break above an immediate resistance level of $21.60. Since November 6, the value of the SOL token has fallen by more than 70% to $11.50. However, a bullish retracement was triggered by weaker US CPI figures and technical indicators, keeping SOL 60% higher from its low on November 9th.... Read More: Solana Price...",
+      "currencies": [
+        "SOL",
+        "FTT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 10
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Given these days circumstances, the debate on the pros and cons  about decentralized exchange (DEX) vs centralized…",
+      "link": "https://cryptopanic.com/news/16881274/Given-these-days-circumstances-the-debate-on-the-pros-and-cons-about-decentralized-exchange-DEX-vs-centralized?mtm_campaign=API-OFA",
+      "pubDate": "2022-11-12T06:00:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ABT"
+      ]
+    },
+    {
+      "title": "FTX Telegram admin claims exchange hacked",
+      "link": "https://cryptopanic.com/news/16873405/FTX-Telegram-admin-claims-exchange-hacked",
+      "pubDate": "2022-11-12T05:52:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "FTX posted in its official Telegram it has been hacked and \"all funds seem to be gone.\"",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Over $400M worth of tokens FTX funds drained from company accounts",
+      "link": "https://cryptopanic.com/news/16872612/Over-400M-worth-of-tokens-FTX-funds-drained-from-company-accounts",
+      "pubDate": "2022-11-12T04:44:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Crypto exchange FTX is seeing millions of dollars flow out of its exchange with early reports of some user account balances being drained completely.",
+      "currencies": [
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "#DecentralizedFinance $LAYER",
+      "link": "https://cryptopanic.com/news/16878241/DecentralizedFinance-LAYER?mtm_campaign=API-OFA",
+      "pubDate": "2022-11-12T04:15:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LAYER",
+        "LAYERX"
+      ]
+    },
+    {
+      "title": "RT @edwardcbyers: The United States lost a Legend and Hero today. Medal of Honor Recipient Hershel “Woody” Williams. USMC Iwo Jima Flamethr…",
+      "link": "https://cryptopanic.com/news/16873805/RT-edwardcbyers-The-United-States-lost-a-Legend-and-Hero-today-Medal-of-Honor-Recipient-Hershel-Woody-Williams-USMC-Iwo-Jima-Flamethr",
+      "pubDate": "2022-11-12T02:11:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "HERO"
+      ]
+    },
+    {
+      "title": "RT @edwardcbyers: Choose @Challenge_Coin_",
+      "link": "https://cryptopanic.com/news/16873806/RT-edwardcbyers-Choose-Challenge_Coin_",
+      "pubDate": "2022-11-12T02:11:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HERO"
+      ]
+    },
+    {
+      "title": "RT @edwardcbyers: Taking @Challenge_Coin_ back to its roots. Challenge Coins began with the Roman Empire. We are now in Crypto and here t…",
+      "link": "https://cryptopanic.com/news/16873807/RT-edwardcbyers-Taking-Challenge_Coin_-back-to-its-roots-Challenge-Coins-began-with-the-Roman-Empire-We-are-now-in-Crypto-and-here-t",
+      "pubDate": "2022-11-12T02:10:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HERO"
+      ]
+    },
+    {
+      "title": "\"Today we are making it visible that the Rootstock brand no longer belongs to IOVLabs but belongs to the community.…",
+      "link": "https://cryptopanic.com/news/16877586/Today-we-are-making-it-visible-that-the-Rootstock-brand-no-longer-belongs-to-IOVLabs-but-belongs-to-the-community",
+      "pubDate": "2022-11-12T00:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RBTC"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "date": "2020-09-03",
+  "fetchedAt": "2026-02-05T07:27:06.979Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @PaxosGlobal: Starting today, you can deposit $PAXG in a @TheRealBlockFi Interest Account, with an initial APY at 4% on your holdings. T…",
+      "link": "https://cryptopanic.com/news/9877162/RT-PaxosGlobal-Starting-today-you-can-deposit-PAXG-in-a-TheRealBlockFi-Interest-Account-with-an-initial-APY-at-4-on-your-holdings-T",
+      "pubDate": "2020-09-03T20:39:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "YFI, Tron Rise as Bitcoin, Ethereum Crypto Markets Sink",
+      "link": "https://cryptopanic.com/news/tron/9876303/YFI-Tron-Rise-as-Bitcoin-Ethereum-Crypto-Markets-Sink",
+      "pubDate": "2020-09-03T18:59:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Chainlink Is Now 35% Below Its ATH Reached Just 2 Weeks Ago (LINK Price Analysis)",
+      "link": "https://cryptopanic.com/news/chainlink/9873763/Chainlink-Is-Now-35-Below-Its-ATH-Reached-Just-2-Weeks-Ago-LINK-Price-Analysis",
+      "pubDate": "2020-09-03T15:16:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 5
+      }
+    }
+  ]
+}

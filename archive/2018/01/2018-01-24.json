@@ -1,0 +1,25 @@
+{
+  "date": "2018-01-24",
+  "fetchedAt": "2026-02-05T07:27:06.972Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Stellar Run Ahead? XLM Flirts With Price Breakout",
+      "link": "https://cryptopanic.com/news/879429/Stellar-Run-Ahead-XLM-Flirts-With-Price-Breakout",
+      "pubDate": "2018-01-24T14:25:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

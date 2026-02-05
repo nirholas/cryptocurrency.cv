@@ -1,0 +1,49 @@
+{
+  "date": "2020-11-14",
+  "fetchedAt": "2026-02-05T07:27:06.991Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RapidView of @QIAN_Stablecoin",
+      "link": "https://cryptopanic.com/news/11377805/RapidView-of-QIAN_Stablecoin?mtm_campaign=API-OFA",
+      "pubDate": "2020-11-14T05:55:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "KOGE"
+      ]
+    },
+    {
+      "title": "DeFi Oracle Provider, DIA, Integrating Into Polkadot",
+      "link": "https://cryptopanic.com/news/polkadot/10533791/DeFi-Oracle-Provider-DIA-Integrating-Into-Polkadot",
+      "pubDate": "2020-11-14T05:00:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Good morning folks! It's Saturday!",
+      "link": "https://cryptopanic.com/news/10533550/Good-morning-folks-Its-Saturday",
+      "pubDate": "2020-11-14T04:02:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    }
+  ]
+}

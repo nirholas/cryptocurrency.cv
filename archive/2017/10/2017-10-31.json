@@ -1,0 +1,42 @@
+{
+  "date": "2017-10-31",
+  "fetchedAt": "2026-02-05T07:27:06.817Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Cash Developers Propose Date for November Hard Fork",
+      "link": "https://cryptopanic.com/news/398988/Bitcoin-Cash-Developers-Propose-Date-for-November-Hard-Fork",
+      "pubDate": "2017-10-31T07:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Bitcoin Cash: Hard Fork Planned for Better EDA on Nov 13",
+      "link": "https://cryptopanic.com/news/398490/Bitcoin-Cash-Hard-Fork-Planned-for-Better-EDA-on-Nov-13",
+      "pubDate": "2017-10-31T01:45:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    }
+  ]
+}

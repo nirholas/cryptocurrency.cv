@@ -1,0 +1,32 @@
+{
+  "date": "2019-12-03",
+  "fetchedAt": "2026-02-05T07:27:06.992Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "\"One good thing about being in business is you learn to compromise. And so you learn to strike a deal that maybe is…",
+      "link": "https://cryptopanic.com/news/7306178/One-good-thing-about-being-in-business-is-you-learn-to-compromise-And-so-you-learn-to-strike-a-deal-that-maybe-is?mtm_campaign=API-OFA",
+      "pubDate": "2019-12-03T08:46:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DEEP"
+      ]
+    },
+    {
+      "title": "RT @VitalikButerin: Anyone claiming ethereum is \"reckless\" and bitcoin maximalism is somehow \"responsible\", I invite you to find even one t…",
+      "link": "https://cryptopanic.com/news/7304333/RT-VitalikButerin-Anyone-claiming-ethereum-is-reckless-and-bitcoin-maximalism-is-somehow-responsible-I-invite-you-to-find-even-one-t",
+      "pubDate": "2019-12-03T03:01:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "SNL"
+      ]
+    }
+  ]
+}

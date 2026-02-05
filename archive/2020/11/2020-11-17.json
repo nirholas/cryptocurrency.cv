@@ -1,0 +1,113 @@
+{
+  "date": "2020-11-17",
+  "fetchedAt": "2026-02-05T07:27:06.970Z",
+  "articleCount": 8,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "We are proud to announce that Gemini has been selected as the custodian for the @eaglebrook Bitcoin SMA, which will…",
+      "link": "https://cryptopanic.com/news/10564800/We-are-proud-to-announce-that-Gemini-has-been-selected-as-the-custodian-for-the-eaglebrook-Bitcoin-SMA-which-will",
+      "pubDate": "2020-11-17T21:01:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    },
+    {
+      "title": "We've answered some common questions about the upcoming LOOM token swap",
+      "link": "https://cryptopanic.com/news/10562239/Weve-answered-some-common-questions-about-the-upcoming-LOOM-token-swap",
+      "pubDate": "2020-11-17T17:01:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LOOM"
+      ]
+    },
+    {
+      "title": "RT @PaxosGlobal: $PAX is the first regulated #stablecoin now green-listed by @NYDFS. How did Paxos design its minimal smart contact? Learn…",
+      "link": "https://cryptopanic.com/news/10561925/RT-PaxosGlobal-PAX-is-the-first-regulated-stablecoin-now-green-listed-by-NYDFS-How-did-Paxos-design-its-minimal-smart-contact-Learn",
+      "pubDate": "2020-11-17T16:47:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "$PAX is the first regulated #stablecoin now green-listed by @NYDFS. How did Paxos design its minimal smart contact?…",
+      "link": "https://cryptopanic.com/news/paxos-standard/10561878/PAX-is-the-first-regulated-stablecoin-now-green-listed-by-NYDFS-How-did-Paxos-design-its-minimal-smart-contact",
+      "pubDate": "2020-11-17T16:45:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "BUSD",
+        "PAXG",
+        "BKRW"
+      ]
+    },
+    {
+      "title": "Detailed Analysis of Paxos Standard (PAX) PAX is a stablecoin that allows users to exchange US dollars for Paxos…",
+      "link": "https://cryptopanic.com/news/paxos-standard/10558524/Detailed-Analysis-of-Paxos-Standard-PAX-PAX-is-a-stablecoin-that-allows-users-to-exchange-US-dollars-for-Paxos",
+      "pubDate": "2020-11-17T12:01:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "PAX",
+        "EMRX"
+      ]
+    },
+    {
+      "title": "As DeFi Grows, Investors Look to Polkadot to Be the Next Ethereum",
+      "link": "https://cryptopanic.com/news/10558072/As-DeFi-Grows-Investors-Look-to-Polkadot-to-Be-the-Next-Ethereum",
+      "pubDate": "2020-11-17T11:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Do you know you can earn $HYN from #Map3 staking?",
+      "link": "https://cryptopanic.com/news/10555413/Do-you-know-you-can-earn-HYN-from-Map3-staking",
+      "pubDate": "2020-11-17T02:53:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "$DMCH Privacy Makes Freedom",
+      "link": "https://cryptopanic.com/news/11443737/DMCH-Privacy-Makes-Freedom",
+      "pubDate": "2020-11-17T01:17:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DMCH"
+      ]
+    }
+  ]
+}

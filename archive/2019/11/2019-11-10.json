@@ -1,0 +1,25 @@
+{
+  "date": "2019-11-10",
+  "fetchedAt": "2026-02-05T07:27:06.996Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Not a Surprise: Tron (TRX) To Be Added To Poloniex Exchange",
+      "link": "https://cryptopanic.com/news/tron/7103734/Not-a-Surprise-Tron-TRX-To-Be-Added-To-Poloniex-Exchange",
+      "pubDate": "2019-11-10T10:01:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

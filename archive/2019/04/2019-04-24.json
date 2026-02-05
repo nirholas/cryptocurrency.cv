@@ -1,0 +1,59 @@
+{
+  "date": "2019-04-24",
+  "fetchedAt": "2026-02-05T07:27:06.921Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Samsung Invests $2.9 Million in Crypto Hardware Startup Ledger",
+      "link": "https://cryptopanic.com/news/5233015/Samsung-Invests-29-Million-in-Crypto-Hardware-Startup-Ledger",
+      "pubDate": "2019-04-24T21:30:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Liverpool F.C. denies “partnership” with TRON",
+      "link": "https://cryptopanic.com/news/tron/5229639/Liverpool-FC-denies-partnership-with-TRON",
+      "pubDate": "2019-04-24T14:14:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "XRP Price Prediction: Will a Catch-Up to $0.5 Happen, or Is It Time to Sell Your XRP Reserves Right Now?",
+      "link": "https://cryptopanic.com/news/ripple/5224884/XRP-Price-Prediction-Will-a-Catch-Up-to-05-Happen-or-Is-It-Time-to-Sell-Your-XRP-Reserves-Right-Now",
+      "pubDate": "2019-04-24T03:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

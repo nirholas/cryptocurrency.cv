@@ -1,0 +1,86 @@
+{
+  "date": "2020-11-21",
+  "fetchedAt": "2026-02-05T07:27:06.963Z",
+  "articleCount": 5,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Good moring everyone",
+      "link": "https://cryptopanic.com/news/10605841/Good-moring-everyone",
+      "pubDate": "2020-11-21T23:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash is what Bitcoin was from 2009 to 2015. Don’t miss the opportunity of a lifetime, twice!",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/10605561/Bitcoin-Cash-is-what-Bitcoin-was-from-2009-to-2015-Dont-miss-the-opportunity-of-a-lifetime-twice",
+      "pubDate": "2020-11-21T22:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "This is how people make their choice $HYN",
+      "link": "https://cryptopanic.com/news/10601666/This-is-how-people-make-their-choice-HYN",
+      "pubDate": "2020-11-21T11:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "XRP Massively Moves 20% And ETH Surpasses $500",
+      "link": "https://cryptopanic.com/news/litecoin/10601208/XRP-Massively-Moves-20-And-ETH-Surpasses-500",
+      "pubDate": "2020-11-21T09:04:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Liquidity Indexes Surging as XRP Hits $0.37",
+      "link": "https://cryptopanic.com/news/10601170/XRP-Liquidity-Indexes-Surging-as-XRP-Hits-037",
+      "pubDate": "2020-11-21T08:58:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 5
+      }
+    }
+  ]
+}

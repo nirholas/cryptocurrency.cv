@@ -1,0 +1,576 @@
+{
+  "date": "2024-10-26",
+  "fetchedAt": "2026-02-05T07:27:08.366Z",
+  "articleCount": 42,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Former President Trump floats idea of eliminating federal income tax",
+      "link": "https://cryptopanic.com/news/20100830/Former-President-Trump-floats-idea-of-eliminating-federal-income-tax?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T22:04:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "JOE"
+      ]
+    },
+    {
+      "title": "Vitalik Buterin outlines ways to reduce Ethereum’s bloat in ‘Purge’ upgrade roadmap",
+      "link": "https://cryptopanic.com/news/20100612/Vitalik-Buterin-outlines-ways-to-reduce-Ethereums-bloat-in-Purge-upgrade-roadmap?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T19:56:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "PEOPLE"
+      ]
+    },
+    {
+      "title": "Cardano’s Hoskinson Turns Bullish On Bitcoin, Predicts BTC DeFi Will Eclipse That Of Ethereum And Solana",
+      "link": "https://cryptopanic.com/news/20100594/Cardanos-Hoskinson-Turns-Bullish-On-Bitcoin-Predicts-BTC-DeFi-Will-Eclipse-That-Of-Ethereum-And-Solana?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T19:23:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Despite the Bitcoin network’s lackluster speeds and a sub-optimal user experience, Cardano's Hoskinson is super optimistic about DeFi in the Bitcoin ecosystem.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Animoca Brands Buys 20 Million SAND Tokens, Pump Incoming?",
+      "link": "https://cryptopanic.com/news/20100498/Animoca-Brands-Buys-20-Million-SAND-Tokens-Pump-Incoming?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T18:36:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SAND"
+      ]
+    },
+    {
+      "title": "Solana’s Bull Run Halts with 3-Month High Liquidations After 7% Price Drop",
+      "link": "https://cryptopanic.com/news/20100536/Solanas-Bull-Run-Halts-with-3-Month-High-Liquidations-After-7-Price-Drop?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T18:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "RAY"
+      ]
+    },
+    {
+      "title": "Do autocompounders (beefy.fi) put my wallet at risk?",
+      "link": "https://cryptopanic.com/news/fantom/20104630/Do-autocompounders-beefyfi-put-my-wallet-at-risk",
+      "pubDate": "2024-10-26T17:25:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "FTM",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "WazirX Hack Victims Plan Class-Action Lawsuit Against the Exchange",
+      "link": "https://cryptopanic.com/news/20100327/WazirX-Hack-Victims-Plan-Class-Action-Lawsuit-Against-the-Exchange?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T17:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "WRX"
+      ]
+    },
+    {
+      "title": "Cybro attracts investors seeking higher returns than Solana and Polygon",
+      "link": "https://cryptopanic.com/news/20100322/Cybro-attracts-investors-seeking-higher-returns-than-Solana-and-Polygon?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T17:15:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "MATIC"
+      ]
+    },
+    {
+      "title": "Can BDAG Reach Top Listings? Aptos Struggles and Kaspa’s Revival",
+      "link": "https://cryptopanic.com/news/20100187/Can-BDAG-Reach-Top-Listings-Aptos-Struggles-and-Kaspas-Revival?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T17:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KAS",
+        "APT"
+      ]
+    },
+    {
+      "title": "Hacker Who Looted $20,000,000 From a US Government Address Returns the Vast Majority of Stolen Funds: Arkham",
+      "link": "https://cryptopanic.com/news/20100167/Hacker-Who-Looted-20000000-From-a-US-Government-Address-Returns-the-Vast-Majority-of-Stolen-Funds-Arkham?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T16:55:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARKM"
+      ]
+    },
+    {
+      "title": "Analysts Tip Rollblock As The Crypto To Dominate November, Solana Price Prediction & Kaspa Ghost Chain Woes",
+      "link": "https://cryptopanic.com/news/20100134/Analysts-Tip-Rollblock-As-The-Crypto-To-Dominate-November-Solana-Price-Prediction-Kaspa-Ghost-Chain-Woes?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T16:33:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "KAS"
+      ]
+    },
+    {
+      "title": "Unpacking Polygon’s Q3 struggles – Can POL bounce back in Q4?",
+      "link": "https://cryptopanic.com/news/20100033/Unpacking-Polygons-Q3-struggles-Can-POL-bounce-back-in-Q4?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T16:00:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "MATIC"
+      ]
+    },
+    {
+      "title": "Cardano Founder Reveals Epic Bitcoin Plan: Details",
+      "link": "https://cryptopanic.com/news/20099978/Cardano-Founder-Reveals-Epic-Bitcoin-Plan-Details?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T15:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Charles Hoskinson predicts that DeFi coming to Bitcoin, and it will dwarf anything Solana and Ethereum have done",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Raydium Price Prediction 2024 – 2030: Will RAY Price Soar 100% This Year?",
+      "link": "https://cryptopanic.com/news/20099966/Raydium-Price-Prediction-2024-2030-Will-RAY-Price-Soar-100-This-Year?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T15:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "RAY"
+      ]
+    },
+    {
+      "title": "Sandbox “SAND” Creator Sells 20 Million Tokens From Binance!",
+      "link": "https://cryptopanic.com/news/20099602/Sandbox-SAND-Creator-Sells-20-Million-Tokens-From-Binance?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T13:41:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "SAND"
+      ]
+    },
+    {
+      "title": "Coinbase To Delist This a16z-Backed Crypto Token, Price Crashes",
+      "link": "https://cryptopanic.com/news/20099580/Coinbase-To-Delist-This-a16z-Backed-Crypto-Token-Price-Crashes?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T13:23:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DESO"
+      ]
+    },
+    {
+      "title": "Bitcoin Could See ‘One Last Shakeout’ In November, Here Are The Levels To Watch",
+      "link": "https://cryptopanic.com/news/20099453/Bitcoin-Could-See-One-Last-Shakeout-In-November-Here-Are-The-Levels-To-Watch?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T13:00:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "ATH",
+        "MEW"
+      ]
+    },
+    {
+      "title": "Scroll (SCR) Price Prediction: Market Trends for the Next Decade",
+      "link": "https://cryptopanic.com/news/20099433/Scroll-SCR-Price-Prediction-Market-Trends-for-the-Next-Decade?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SCR"
+      ]
+    },
+    {
+      "title": "SUI & SEI Prices Attempt for a Rebound-Here’s What’s Awaited For Them By the End of the Month",
+      "link": "https://cryptopanic.com/news/20099429/SUI-SEI-Prices-Attempt-for-a-Rebound-Heres-Whats-Awaited-For-Them-By-the-End-of-the-Month?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T12:52:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SUI",
+        "SEI"
+      ]
+    },
+    {
+      "title": "What is happening to crypto market today: Crypto News Update",
+      "link": "https://cryptopanic.com/news/20099794/What-is-happening-to-crypto-market-today-Crypto-News-Update?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T12:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "XRP",
+        "SOL",
+        "PEPE",
+        "ARB",
+        "OP",
+        "BONE"
+      ]
+    },
+    {
+      "title": "Benzinga Bulls And Bears: Nvidia, Tesla, MicroStrategy, Plug Power — And Crypto Traders Anticipate Dogecoin Topping 50 Cents",
+      "link": "https://cryptopanic.com/news/20099417/Benzinga-Bulls-And-Bears-Nvidia-Tesla-MicroStrategy-Plug-Power-And-Crypto-Traders-Anticipate-Dogecoin-Topping-50-Cents?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T12:29:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "META"
+      ]
+    },
+    {
+      "title": "Polymarket founder defends platform’s integrity amid election betting surge",
+      "link": "https://cryptopanic.com/news/20099335/Polymarket-founder-defends-platforms-integrity-amid-election-betting-surge?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T12:04:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MATIC"
+      ]
+    },
+    {
+      "title": "TeamTNT Intensifies Docker Exploits for Cryptocurrency Mining",
+      "link": "https://cryptopanic.com/news/20099645/TeamTNT-Intensifies-Docker-Exploits-for-Cryptocurrency-Mining?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T12:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Goatseus Maximum Price Still Bullish Despite Market Fall: What’s The Secret?",
+      "link": "https://cryptopanic.com/news/20099118/Goatseus-Maximum-Price-Still-Bullish-Despite-Market-Fall-Whats-The-Secret?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T11:12:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "RLY"
+      ]
+    },
+    {
+      "title": "Bitcoin Bull Run Not Over Yet? This Ratio Has Just Seen A Golden Cross",
+      "link": "https://cryptopanic.com/news/20098752/Bitcoin-Bull-Run-Not-Over-Yet-This-Ratio-Has-Just-Seen-A-Golden-Cross?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T10:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "DOGE",
+        "GRT"
+      ]
+    },
+    {
+      "title": "Trader Says One Ethereum (ETH) Rival Will Break All-Time Highs, Updates Outlook on Goatseus Maximus (GOAT)",
+      "link": "https://cryptopanic.com/news/20098688/Trader-Says-One-Ethereum-ETH-Rival-Will-Break-All-Time-Highs-Updates-Outlook-on-Goatseus-Maximus-GOAT?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T09:15:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "GOAT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cat in a Dogs World Price Prediction 2025, 2026 – 2030: Will MEW Price Hit $0.02?",
+      "link": "https://cryptopanic.com/news/20098482/Cat-in-a-Dogs-World-Price-Prediction-2025-2026-2030-Will-MEW-Price-Hit-002?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T08:52:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "MEW"
+      ]
+    },
+    {
+      "title": "CROS Airdrop Distribution Delayed to October 28: Fact or Fiction",
+      "link": "https://cryptopanic.com/news/20098824/CROS-Airdrop-Distribution-Delayed-to-October-28-Fact-or-Fiction?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T08:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "KCS"
+      ]
+    },
+    {
+      "title": "Treasure Tapper Daily Code 27 October 2024, Tap to Earn $TREZ",
+      "link": "https://cryptopanic.com/news/20098770/Treasure-Tapper-Daily-Code-27-October-2024-Tap-to-Earn-TREZ?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T08:02:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "GALA"
+      ]
+    },
+    {
+      "title": "Nova Labs cuts 36% workforce, shifts Helium Mobile focus to crypto",
+      "link": "https://cryptopanic.com/news/20098236/Nova-Labs-cuts-36-workforce-shifts-Helium-Mobile-focus-to-crypto?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T07:41:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ]
+    },
+    {
+      "title": "Cats Youtube Code Today October 27, 2024: Boost Your Earnings",
+      "link": "https://cryptopanic.com/news/20098676/Cats-Youtube-Code-Today-October-27-2024-Boost-Your-Earnings?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T07:13:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS",
+        "TON"
+      ]
+    },
+    {
+      "title": "MEW hits second ATH in a week after Bitstamp listing – What’s next?",
+      "link": "https://cryptopanic.com/news/20098091/MEW-hits-second-ATH-in-a-week-after-Bitstamp-listing-Whats-next?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T07:00:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "ATH",
+        "MEW",
+        "MEME"
+      ]
+    },
+    {
+      "title": "Axie Infinity: Why AXS will surge 28% toward $6.85 after breakout",
+      "link": "https://cryptopanic.com/news/20097907/Axie-Infinity-Why-AXS-will-surge-28-toward-685-after-breakout?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T06:00:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "Ethereum Underperforming, Don’t Blame The Network Or Leadership: Here’s Why",
+      "link": "https://cryptopanic.com/news/20097870/Ethereum-Underperforming-Dont-Blame-The-Network-Or-Leadership-Heres-Why?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T05:30:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "SOL",
+        "DOGE",
+        "TRX",
+        "ATH",
+        "MEW"
+      ]
+    },
+    {
+      "title": "Memecoin risks: Investor loses $500k in Solana’s ANT token in under an hour",
+      "link": "https://cryptopanic.com/news/20097868/Memecoin-risks-Investor-loses-500k-in-Solanas-ANT-token-in-under-an-hour?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T05:30:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "ANT"
+      ]
+    },
+    {
+      "title": "Essence Finance Rug Pull Suspected as CHI Drops 92% in 24 Hours",
+      "link": "https://cryptopanic.com/news/20097769/Essence-Finance-Rug-Pull-Suspected-as-CHI-Drops-92-in-24-Hours?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T04:44:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SCR"
+      ]
+    },
+    {
+      "title": "New Nova Labs Layoffs Affect 36% of Employees",
+      "link": "https://cryptopanic.com/news/20097636/New-Nova-Labs-Layoffs-Affect-36-of-Employees?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T03:33:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ]
+    },
+    {
+      "title": "Celestia: Why TIA should be on your watchlist in Q4",
+      "link": "https://cryptopanic.com/news/20097565/Celestia-Why-TIA-should-be-on-your-watchlist-in-Q4?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T03:00:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TIA"
+      ]
+    },
+    {
+      "title": "FET Price Under Pressure: RSI Flags Extended Bearish Move Toward $0.966",
+      "link": "https://cryptopanic.com/news/20097531/FET-Price-Under-Pressure-RSI-Flags-Extended-Bearish-Move-Toward-0966?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T02:30:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FET"
+      ]
+    },
+    {
+      "title": "Whale dumps 9.23M GOAT: Is this why the memecoin plummeted +20%?",
+      "link": "https://cryptopanic.com/news/20097448/Whale-dumps-923M-GOAT-Is-this-why-the-memecoin-plummeted-20?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T02:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "MEME",
+        "GOAT"
+      ]
+    },
+    {
+      "title": "SAFE crypto up 76% in 24 hours: Will the breakout lead to $2.37?",
+      "link": "https://cryptopanic.com/news/20097194/SAFE-crypto-up-76-in-24-hours-Will-the-breakout-lead-to-237?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T00:00:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SAFE"
+      ]
+    },
+    {
+      "title": "Altcoin Tied to Security-Focused Wallet Jumps More Than 43% in One Day, Outpacing Broader Crypto Market",
+      "link": "https://cryptopanic.com/news/20097196/Altcoin-Tied-to-Security-Focused-Wallet-Jumps-More-Than-43-in-One-Day-Outpacing-Broader-Crypto-Market?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-26T00:00:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "SAFE"
+      ]
+    }
+  ]
+}

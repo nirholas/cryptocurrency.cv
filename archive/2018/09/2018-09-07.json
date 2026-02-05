@@ -1,0 +1,62 @@
+{
+  "date": "2018-09-07",
+  "fetchedAt": "2026-02-05T07:27:07.856Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tron [TRX] Price Remains Above Lows Amid Market Crash",
+      "link": "https://cryptopanic.com/news/3024838/Tron-TRX-Price-Remains-Above-Lows-Amid-Market-Crash",
+      "pubDate": "2018-09-07T13:35:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Netcoins Adds EOS and BCH, Expands Global Network to 21,000 Virtual Crypto ATMs",
+      "link": "https://cryptopanic.com/news/3024599/Netcoins-Adds-EOS-and-BCH-Expands-Global-Network-to-21000-Virtual-Crypto-ATMs",
+      "pubDate": "2018-09-07T12:28:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Huawei’s Max Nixon Joins IOTA for Smart City Program",
+      "link": "https://cryptopanic.com/news/3023930/Huaweis-Max-Nixon-Joins-IOTA-for-Smart-City-Program",
+      "pubDate": "2018-09-07T06:29:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

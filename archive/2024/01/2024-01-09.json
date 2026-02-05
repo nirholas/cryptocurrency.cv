@@ -1,0 +1,710 @@
+{
+  "date": "2024-01-09",
+  "fetchedAt": "2026-02-05T07:27:08.059Z",
+  "articleCount": 46,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Privacy Token Liquidity Hits Record Low of $5 Million Amid Market Volatility, Report",
+      "link": "https://cryptopanic.com/news/19162980/Privacy-Token-Liquidity-Hits-Record-Low-of-5-Million-Amid-Market-Volatility-Report",
+      "pubDate": "2024-01-09T23:10:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XMR",
+        "ZEC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "BREAKING: Elon Musk Gets Involved in Fake Bitcoin Spot ETF Drama – He Tweeted About Dogecoin",
+      "link": "https://cryptopanic.com/news/19162921/BREAKING-Elon-Musk-Gets-Involved-in-Fake-Bitcoin-Spot-ETF-Drama-He-Tweeted-About-Dogecoin",
+      "pubDate": "2024-01-09T22:22:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "According to the latest development, Elon Musk also made his comment after the SEC's Twitter account was hacked and a fake Tweet was sent about the approval of Bitcoin Spot ETFs. Under a post making fun of the hacking of the SEC's Twitter account and discussing what the SEC's Twitter password could be, Musk wrote […] Continue Reading: BREAKING: Elon Musk Gets Involved in Fake Bitcoin...",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Hacker Commandeers Official SEC X Account, Falsely Claims Regulator Has Approved Spot Bitcoin ETF",
+      "link": "https://cryptopanic.com/news/bitcoin/19162893/Hacker-Commandeers-Official-SEC-X-Account-Falsely-Claims-Regulator-Has-Approved-Spot-Bitcoin-ETF",
+      "pubDate": "2024-01-09T22:18:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "SEC Social Media Hacked, Spreads False News on Bitcoin ETF Approval",
+      "link": "https://cryptopanic.com/news/bitcoin/19162883/SEC-Social-Media-Hacked-Spreads-False-News-on-Bitcoin-ETF-Approval",
+      "pubDate": "2024-01-09T22:14:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Gary Gensler, the chair of the SEC, reveals that the agency’s X (formerly Twitter) account was compromised, spreading false news about the approval of a spot Bitcoin exchange-traded fund (ETF). “The SEC gov Twitter account was compromised, and an unauthorized tweet was posted,” Gensler posted. Gensler Declares the Bitcoin ETF Announcement is False On X, Gensler announced that...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BREAKING: Gary Gensler says BTC ETFs haven’t been approved, SEC Twitter account hacked",
+      "link": "https://cryptopanic.com/news/bitcoin/19162855/BREAKING-Gary-Gensler-says-BTC-ETFs-havent-been-approved-SEC-Twitter-account-hacked",
+      "pubDate": "2024-01-09T22:08:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The U.S. Securities and Exchange Commission (SEC) encountered a security breach in a recent development that has stirred the cryptocurrency market. The SEC’s official Twitter account was hacked, leading to the false announcement of the approval of Bitcoin Spot Exchange-Traded Funds (ETFs). SEC Chairman Gary Gensler promptly addressed the situation, clarifying that the tweet was […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BREAKING: Gary Gensler Says SEC’s X Account Hacked, Bitcoin Spot ETFs Not Yet Approved",
+      "link": "https://cryptopanic.com/news/19162740/BREAKING-Gary-Gensler-Says-SECs-X-Account-Hacked-Bitcoin-Spot-ETFs-Not-Yet-Approved",
+      "pubDate": "2024-01-09T21:30:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "According to the SEC chairman's statement, the post announcing the approval of Bitcoin Spot ETFs was made by the hacker who took over the SEC's official X account. So currently Bitcoin Spot ETFs have not received official approval. On the other hand, the relevant confirmation post was deleted from the SEC's Twitter account. Gensler said […] Continue Reading: BREAKING: Gary Gensler Says...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 17
+      }
+    },
+    {
+      "title": "How Much Will Flow Into BTC Post ETF Approval?",
+      "link": "https://cryptopanic.com/news/flow/19162737/How-Much-Will-Flow-Into-BTC-Post-ETF-Approval",
+      "pubDate": "2024-01-09T21:28:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "SEC Account Compromised Stating ETFs Approved",
+      "link": "https://cryptopanic.com/news/bitcoin/19162694/SEC-Account-Compromised-Stating-ETFs-Approved",
+      "pubDate": "2024-01-09T21:20:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "“Today the SEC grants approval for Bitcoin ETFs for listing on all registered national securities exchanges. The approved Bitcoin ETFs will be subject to ongoing surveillance and compliance measures to.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 32,
+        "negative": 6
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BREAKING: Good News Finally Arrives – SEC Approves Bitcoin Spot ETFs",
+      "link": "https://cryptopanic.com/news/bitcoin/19162700/BREAKING-Good-News-Finally-Arrives-SEC-Approves-Bitcoin-Spot-ETFs",
+      "pubDate": "2024-01-09T21:13:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "According to breaking information, the SEC has finally decided to allow Bitcoin Spot ETFs to be traded in the US market. Continue Reading: BREAKING: Good News Finally Arrives – SEC Approves Bitcoin Spot ETFs",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Fox Launches Protocol for Content Verification on Polygon",
+      "link": "https://cryptopanic.com/news/19162605/Fox-Launches-Protocol-for-Content-Verification-on-Polygon",
+      "pubDate": "2024-01-09T20:10:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "89,000 pieces of content have been registered so far.",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "NeoGo updated to v0.105.0 with RPC infrastructure and CLI utility enhancements",
+      "link": "https://cryptopanic.com/news/19162569/NeoGo-updated-to-v01050-with-RPC-infrastructure-and-CLI-utility-enhancements",
+      "pubDate": "2024-01-09T20:09:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "OKX Delisting Compounds Privacy Token Liquidity Woes",
+      "link": "https://cryptopanic.com/news/19162570/OKX-Delisting-Compounds-Privacy-Token-Liquidity-Woes",
+      "pubDate": "2024-01-09T20:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Here’re the Top Trending Cryptocurrencies in the Past 24 Hours",
+      "link": "https://cryptopanic.com/news/19162533/Herere-the-Top-Trending-Cryptocurrencies-in-the-Past-24-Hours",
+      "pubDate": "2024-01-09T19:43:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "LTC",
+        "VET",
+        "STX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cryptocurrency Filecoin Down More Than 6% Within 24 hours",
+      "link": "https://cryptopanic.com/news/filecoin/19162443/Cryptocurrency-Filecoin-Down-More-Than-6-Within-24-hours",
+      "pubDate": "2024-01-09T19:02:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "STX Hits 52-Week High! Ascending Channel Points to Bullish Trajectory",
+      "link": "https://cryptopanic.com/news/blockstack/19162365/STX-Hits-52-Week-High-Ascending-Channel-Points-to-Bullish-Trajectory",
+      "pubDate": "2024-01-09T18:46:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "STX",
+        "OP"
+      ]
+    },
+    {
+      "title": "Huge Claim: “CEO of the Company with Bitcoin Spot ETF Application Says Ripple (XRP) Spot ETF is Next”",
+      "link": "https://cryptopanic.com/news/19162328/Huge-Claim-CEO-of-the-Company-with-Bitcoin-Spot-ETF-Application-Says-Ripple-XRP-Spot-ETF-is-Next",
+      "pubDate": "2024-01-09T18:22:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "According to journalist Jacquelyn Melinek's claim, Valkyrie CEO said that after Bitcoin Spot ETF, it is Ripple's turn. Continue Reading: Huge Claim: “CEO of the Company with Bitcoin Spot ETF Application Says Ripple (XRP) Spot ETF is Next”",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Top 3 Affordable Crypto Picks For January",
+      "link": "https://cryptopanic.com/news/19162257/Top-3-Affordable-Crypto-Picks-For-January?mtm_campaign=API-OFA",
+      "pubDate": "2024-01-09T18:06:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "IOTA"
+      ]
+    },
+    {
+      "title": "These Altcoins Are Showing Most Bullish & Bearish Divergences: Santiment",
+      "link": "https://cryptopanic.com/news/19162226/These-Altcoins-Are-Showing-Most-Bullish-Bearish-Divergences-Santiment",
+      "pubDate": "2024-01-09T18:00:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MKR",
+        "BONK",
+        "SEI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "CLAIM: Dogecoin’s Mascot Dog Allegedly Died, DOGE Price Makes Sudden Moves",
+      "link": "https://cryptopanic.com/news/19162159/CLAIM-Dogecoins-Mascot-Dog-Allegedly-Died-DOGE-Price-Makes-Sudden-Moves",
+      "pubDate": "2024-01-09T17:40:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE"
+      ]
+    },
+    {
+      "title": "AxLabs launches 1ClickNode, its Web3 node deployment service",
+      "link": "https://cryptopanic.com/news/19162106/AxLabs-launches-1ClickNode-its-Web3-node-deployment-service",
+      "pubDate": "2024-01-09T17:20:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Cardano’s 2024 Rollercoaster: Price Plunges 18% Despite 250% Surge In Development Activity",
+      "link": "https://cryptopanic.com/news/19162069/Cardanos-2024-Rollercoaster-Price-Plunges-18-Despite-250-Surge-In-Development-Activity",
+      "pubDate": "2024-01-09T17:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "MATIC",
+        "MKR",
+        "OP"
+      ]
+    },
+    {
+      "title": "Wemix blockchain to cease block minting rewards",
+      "link": "https://cryptopanic.com/news/19162003/Wemix-blockchain-to-cease-block-minting-rewards",
+      "pubDate": "2024-01-09T16:44:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WEMIX"
+      ]
+    },
+    {
+      "title": "Cosmos developers propose reducing ATOM inflation rate",
+      "link": "https://cryptopanic.com/news/19161888/Cosmos-developers-propose-reducing-ATOM-inflation-rate",
+      "pubDate": "2024-01-09T16:02:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ]
+    },
+    {
+      "title": "Global Mega Bank Standard Chartered Releases Bullish Forecast For Spot Bitcoin ETFs",
+      "link": "https://cryptopanic.com/news/19161858/Global-Mega-Bank-Standard-Chartered-Releases-Bullish-Forecast-For-Spot-Bitcoin-ETFs",
+      "pubDate": "2024-01-09T16:00:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Standard Chartered Bank is the latest to give its predictions on the impact Spot Bitcoin ETFs could have on Bitcoin’s price in the long term. The bank took a bullish stance as they predicted that BTC could rise to unprecedented heights by the end of 2025. Bitcoin Could Hit $200,000 By End Of 2024 According to a report by Standard Chartered shared on the X (formerly Twitter) platform, BTC’s...",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "SHIB",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Long Consolidation Period Looming for Crypto As Markets Have Already Used Up All the Juice, Says Analyst",
+      "link": "https://cryptopanic.com/news/19161783/Long-Consolidation-Period-Looming-for-Crypto-As-Markets-Have-Already-Used-Up-All-the-Juice-Says-Analyst",
+      "pubDate": "2024-01-09T15:30:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XLM",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Juniper Networks Jumps 21.8% After Reports of $13B Acquisition Offer",
+      "link": "https://cryptopanic.com/news/19161748/Juniper-Networks-Jumps-218-After-Reports-of-13B-Acquisition-Offer",
+      "pubDate": "2024-01-09T15:15:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Lido DAO's Price Increased More Than 7% Within 24 hours",
+      "link": "https://cryptopanic.com/news/19161733/Cryptocurrency-Lido-DAOs-Price-Increased-More-Than-7-Within-24-hours",
+      "pubDate": "2024-01-09T15:02:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LDO"
+      ]
+    },
+    {
+      "title": "Filecoin: Rocky Start Hits Protocol With Slow New Year Progress – Here’s Why",
+      "link": "https://cryptopanic.com/news/19161704/Filecoin-Rocky-Start-Hits-Protocol-With-Slow-New-Year-Progress-Heres-Why",
+      "pubDate": "2024-01-09T15:00:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MATIC",
+        "FIL",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Hackathon Boosts Web3 Knowledge in Tunisian Universities",
+      "link": "https://cryptopanic.com/news/19161385/Hackathon-Boosts-Web3-Knowledge-in-Tunisian-Universities",
+      "pubDate": "2024-01-09T13:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Santiment Pointed to Six Altcoins: \"Three Give Bullish Signals, Three Give Bearish Signals!\"",
+      "link": "https://cryptopanic.com/news/19161255/Santiment-Pointed-to-Six-Altcoins-Three-Give-Bullish-Signals-Three-Give-Bearish-Signals",
+      "pubDate": "2024-01-09T12:49:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BNB",
+        "MKR",
+        "BONK",
+        "SEI"
+      ]
+    },
+    {
+      "title": "NFT Craze Explodes: Collectible Tokens Like ICP, STX, IMX, RNDR, THETA Soar!",
+      "link": "https://cryptopanic.com/news/19161257/NFT-Craze-Explodes-Collectible-Tokens-Like-ICP-STX-IMX-RNDR-THETA-Soar",
+      "pubDate": "2024-01-09T12:41:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "ICP",
+        "THETA",
+        "STX",
+        "IMX",
+        "RNDR"
+      ]
+    },
+    {
+      "title": "Maker Takes The Spotlight With 34% Gain – Can MKR Hold This Position?",
+      "link": "https://cryptopanic.com/news/19161072/Maker-Takes-The-Spotlight-With-34-Gain-Can-MKR-Hold-This-Position",
+      "pubDate": "2024-01-09T12:00:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MATIC",
+        "MKR",
+        "INJ"
+      ]
+    },
+    {
+      "title": "Crypto Roundup 09 Jan: BTC Peaks, ETF Approval Hovers on the Horizon",
+      "link": "https://cryptopanic.com/news/19160988/Crypto-Roundup-09-Jan-BTC-Peaks-ETF-Approval-Hovers-on-the-Horizon",
+      "pubDate": "2024-01-09T11:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "GRT"
+      ]
+    },
+    {
+      "title": "Bitget Report 2023: Remarkable 94% Surge in Spot Trading, Accompanied by a 110% Spike in BGB Volume",
+      "link": "https://cryptopanic.com/news/19160955/Bitget-Report-2023-Remarkable-94-Surge-in-Spot-Trading-Accompanied-by-a-110-Spike-in-BGB-Volume",
+      "pubDate": "2024-01-09T11:25:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BGB"
+      ]
+    },
+    {
+      "title": "Evmos Foundation takes back $7.6 million in tokens from departed co-founder",
+      "link": "https://cryptopanic.com/news/19160801/Evmos-Foundation-takes-back-76-million-in-tokens-from-departed-co-founder",
+      "pubDate": "2024-01-09T10:38:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ]
+    },
+    {
+      "title": "Top 5 Cryptocurrency that has Power to Establish Metaverse Transaction",
+      "link": "https://cryptopanic.com/news/19161038/Top-5-Cryptocurrency-that-has-Power-to-Establish-Metaverse-Transaction",
+      "pubDate": "2024-01-09T10:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MANA",
+        "SAND",
+        "AXS"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Will Fantom Network Activity Give FTM Price A Shot In The Arm?",
+      "link": "https://cryptopanic.com/news/19160685/Will-Fantom-Network-Activity-Give-FTM-Price-A-Shot-In-The-Arm",
+      "pubDate": "2024-01-09T10:00:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MATIC",
+        "FTM",
+        "INJ"
+      ]
+    },
+    {
+      "title": "Spot Bitcoin ETFs Could Trade 8% Above Fair Value: Renowned Expert",
+      "link": "https://cryptopanic.com/news/19160543/Spot-Bitcoin-ETFs-Could-Trade-8-Above-Fair-Value-Renowned-Expert",
+      "pubDate": "2024-01-09T09:00:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Bears Lose Over $100 Million Amid BTC Price Rise",
+      "link": "https://cryptopanic.com/news/bitcoin/19160372/Bears-Lose-Over-100-Million-Amid-BTC-Price-Rise",
+      "pubDate": "2024-01-09T07:37:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin's Price Surge Leads to $100M Loss for Short Traders Amid Anticipation of U.S. ETF Approval.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "How ‘Undervalued’ Ethereum Could Become the Next Spot ETF Hype Wave",
+      "link": "https://cryptopanic.com/news/19160521/How-Undervalued-Ethereum-Could-Become-the-Next-Spot-ETF-Hype-Wave",
+      "pubDate": "2024-01-09T07:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "SOL",
+        "DOT",
+        "AVAX",
+        "MATIC",
+        "FLOW",
+        "ICP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Jim Cramer Now Says Bitcoin Is 'Topping Out'",
+      "link": "https://cryptopanic.com/news/bitcoin/19160361/Jim-Cramer-Now-Says-Bitcoin-Is-Topping-Out",
+      "pubDate": "2024-01-09T07:29:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Cramer’s picks have the tendency to move in the opposite direction he touts.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Price Dip After ETF Approval Predicted, How Low Could It Go?",
+      "link": "https://cryptopanic.com/news/19160229/Bitcoin-Price-Dip-After-ETF-Approval-Predicted-How-Low-Could-It-Go",
+      "pubDate": "2024-01-09T06:08:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Solana now boasts more than 2,500 monthly active developers",
+      "link": "https://cryptopanic.com/news/19160198/Solana-now-boasts-more-than-2500-monthly-active-developers",
+      "pubDate": "2024-01-09T06:08:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The Solana Foundation notched a 50% increase in developer retention on the network over the last three months.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Jim Cramer: Bitcoin (BTC) Price Is “Topping Out”",
+      "link": "https://cryptopanic.com/news/bitcoin/19160206/Jim-Cramer-Bitcoin-BTC-Price-Is-Topping-Out",
+      "pubDate": "2024-01-09T05:56:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Jim Cramer, known for his bold market predictions, recently suggested that Bitcoin (BTC) is \"topping out\"",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Will Fantom’s network activity help FTM beat the bears?",
+      "link": "https://cryptopanic.com/news/19160048/Will-Fantoms-network-activity-help-FTM-beat-the-bears",
+      "pubDate": "2024-01-09T03:30:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FTM"
+      ]
+    },
+    {
+      "title": "Binance Defense Gains Momentum As Experts Question Terra Ruling’s Impact",
+      "link": "https://cryptopanic.com/news/19159904/Binance-Defense-Gains-Momentum-As-Experts-Question-Terra-Rulings-Impact",
+      "pubDate": "2024-01-09T01:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BUSD"
+      ]
+    }
+  ]
+}

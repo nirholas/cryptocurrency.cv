@@ -1,0 +1,539 @@
+{
+  "date": "2021-09-26",
+  "fetchedAt": "2026-02-05T07:27:06.841Z",
+  "articleCount": 35,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @Michael15364227: @nobilitytoken @IronsidePC OMG  I just woke up and I see I won that beautiful 🤩 PC I’m so happy  I literally jumping…",
+      "link": "https://cryptopanic.com/news/12873133/RT-Michael15364227-nobilitytoken-IronsidePC-OMG-I-just-woke-up-and-I-see-I-won-that-beautiful-PC-Im-so-happy-I-literally-jumping",
+      "pubDate": "2021-09-26T23:18:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "OMG"
+      ]
+    },
+    {
+      "title": "RT @TehSlaw: Dash is on the way. The project has been hard at work building a Dash bifrost bridge to connect the chain to @THORChain A few…",
+      "link": "https://cryptopanic.com/news/dash/12874069/RT-TehSlaw-Dash-is-on-the-way-The-project-has-been-hard-at-work-building-a-Dash-bifrost-bridge-to-connect-the-chain-to-THORChain-A-few",
+      "pubDate": "2021-09-26T23:02:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "RUNE",
+        "DASH"
+      ]
+    },
+    {
+      "title": "Axie Infinity Co-Founder: Gaming Is the Key to Crypto Adoption",
+      "link": "https://cryptopanic.com/news/12870269/Axie-Infinity-Co-Founder-Gaming-Is-the-Key-to-Crypto-Adoption",
+      "pubDate": "2021-09-26T22:02:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Sky Mavis has big plans to spur crypto adoption through NFT gaming, and Axie Infinity is just its first step.",
+      "currencies": [
+        "AXS"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bullish: Cardano Gearing Up To Fully Dominate The Smart Contracts Market With New Chainlink Partnership",
+      "link": "https://cryptopanic.com/news/chainlink/12870225/Bullish-Cardano-Gearing-Up-To-Fully-Dominate-The-Smart-Contracts-Market-With-New-Chainlink-Partnership",
+      "pubDate": "2021-09-26T21:26:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Smart contracts have only just arrived on the Cardano network, but it seems like developers are not taking a break. In their quest for dominance, the team at Cardano is joining forces with Chainlink, one of the promising blockchains, to accelerate the growth of smart contracts on the network. Cardano recently revealed that it had […]",
+      "currencies": [
+        "ADA",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Top 5 cryptocurrencies to watch this week: BTC, AVAX, ALGO, XTZ, EGLD",
+      "link": "https://cryptopanic.com/news/avalanche-2/12870089/Top-5-cryptocurrencies-to-watch-this-week-BTC-AVAX-ALGO-XTZ-EGLD",
+      "pubDate": "2021-09-26T19:47:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bears continue to pressure BTC price but any signs of consolidation could lead to a breakout in AVAX. ALGO, XTZ, and EGLD.",
+      "currencies": [
+        "BTC",
+        "AVAX",
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Good overview of what we're working on for the future of eCash. Worth a read! #eCash…",
+      "link": "https://cryptopanic.com/news/ecash/12874583/Good-overview-of-what-were-working-on-for-the-future-of-eCash-Worth-a-read-eCash",
+      "pubDate": "2021-09-26T19:44:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Ripple’s Garlinghouse expects ‘absolute certainty,’ from the U.S. SEC",
+      "link": "https://cryptopanic.com/news/ripple/12870006/Ripples-Garlinghouse-expects-absolute-certainty-from-the-US-SEC",
+      "pubDate": "2021-09-26T19:00:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The XRP lawsuit began in December last year, when the U.S. SEC took action against Ripple. Yet, uncertainty prevails till date, even as the proceedings continue to unfold. With reference to the same, Ripple CEO Brad Garlinghouse doesn’t hold back. Be it in the past or the present. During his interview with Fox Business, Ripple […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 22,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano Partners With Chainlink for DeFi Smart Contracts Development",
+      "link": "https://cryptopanic.com/news/chainlink/12869979/Cardano-Partners-With-Chainlink-for-DeFi-Smart-Contracts-Development",
+      "pubDate": "2021-09-26T18:52:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Cardano has announced a strategic partnership with Chainlink to provide oracle integration for smart contract developers.",
+      "currencies": [
+        "ADA",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 74,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "China’s latest crypto crackdown is its toughest yet",
+      "link": "https://cryptopanic.com/news/bitcoin/12869967/Chinas-latest-crypto-crackdown-is-its-toughest-yet",
+      "pubDate": "2021-09-26T18:45:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "China has gradually restricted crypto in the past, but its latest rules isolate the industry.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Absolute BEST DOT And KSM Gems!",
+      "link": "https://cryptopanic.com/news/polkadot/12869978/Absolute-BEST-DOT-And-KSM-Gems",
+      "pubDate": "2021-09-26T18:37:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "#Moonbeam or #Moonriver? That is the question of the day. What say you? Do you even know the difference? If you don’t, fret not. We got you covered. We’re deciding to take a brief #FUD intermission to talk about two of the hottest projects in the #Polkadot and #Kusama ecosystems. We’re breaking down what makes these #altcoins special, what the differences between the two are, and which one you should be paying attention to. One thing we can say without a doubt, is that we’re bullish on most Polk",
+      "currencies": [
+        "DOT",
+        "KSM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dolce & Gabbana Wants to Crown Dogecoin Fan Elon Musk as \"King of Crypto\"",
+      "link": "https://cryptopanic.com/news/dogecoin/12869959/Dolce-Gabbana-Wants-to-Crown-Dogecoin-Fan-Elon-Musk-as-King-of-Crypto",
+      "pubDate": "2021-09-26T18:33:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Will Elon Musk be crowned as the new crypto king?",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 66
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @RequestdApps: Soon, you'll be able to send an invoice in fiat that can be paid by your client via bank transfer, while you receive paym…",
+      "link": "https://cryptopanic.com/news/12869837/RT-RequestdApps-Soon-youll-be-able-to-send-an-invoice-in-fiat-that-can-be-paid-by-your-client-via-bank-transfer-while-you-receive-paym",
+      "pubDate": "2021-09-26T17:29:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "REQ"
+      ]
+    },
+    {
+      "title": "China Crypto Ban: Crypto Exchange Huobi To Retire User Accounts",
+      "link": "https://cryptopanic.com/news/bitcoin/12869808/China-Crypto-Ban-Crypto-Exchange-Huobi-To-Retire-User-Accounts",
+      "pubDate": "2021-09-26T17:00:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Top Crypto Exchange Huobi Global has said it will suspend all China-based user accounts later this year. The exchange said in an announcement on Sunday that it has discontinued account registration for new users in Mainland China. This event comes after China’s central bank intensifies its crackdown on crypto activities. Last week, China intensified a crackdown on cryptocurrencies. […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Follow the @PirateARRRmada for a collection of great merchants accepting $ARRR as payment. Transact privately.…",
+      "link": "https://cryptopanic.com/news/12873322/Follow-the-PirateARRRmada-for-a-collection-of-great-merchants-accepting-ARRR-as-payment-Transact-privately",
+      "pubDate": "2021-09-26T16:40:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ARRR"
+      ]
+    },
+    {
+      "title": "\"DFINITY Foundation’s Internet Computer blockchain is bringing smart-contract capabilities to the Bitcoin (#BTC) ne…",
+      "link": "https://cryptopanic.com/news/12869657/DFINITY-Foundations-Internet-Computer-blockchain-is-bringing-smart-contract-capabilities-to-the-Bitcoin-BTC-ne",
+      "pubDate": "2021-09-26T15:46:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "-",
+      "currencies": [
+        "BTC",
+        "ICP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "@JihanWu's @realMatrixport is supporting the eCash rebrand #eCash #XEC $XEC",
+      "link": "https://cryptopanic.com/news/ecash/12874584/JihanWus-realMatrixport-is-supporting-the-eCash-rebrand-eCash-XEC-XEC",
+      "pubDate": "2021-09-26T15:15:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Why will #eCash use both PoW and Avalanche together? Because using both technologies together allows the downside…",
+      "link": "https://cryptopanic.com/news/ecash/12874585/Why-will-eCash-use-both-PoW-and-Avalanche-together-Because-using-both-technologies-together-allows-the-downside",
+      "pubDate": "2021-09-26T14:42:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "XEC"
+      ]
+    },
+    {
+      "title": "Solana Adoption Speed Is Ridiculous, Crypto Asset Is Likely the Ethereum of This Cycle: Macro Guru Raoul Pal",
+      "link": "https://cryptopanic.com/news/12869613/Solana-Adoption-Speed-Is-Ridiculous-Crypto-Asset-Is-Likely-the-Ethereum-of-This-Cycle-Macro-Guru-Raoul-Pal",
+      "pubDate": "2021-09-26T14:30:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Marco guru Raoul Pal says smart contract platform Solana is poised to be one of the best performers this cycle as he believes it is following the footsteps of Ethereum’s 2017 bull cycle. In a new interview on BitBoy Crypto, the founder of Real Vision and Global Macro Investor identifies key factors that could make SOL […]",
+      "currencies": [
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 40,
+        "negative": 20
+      }
+    },
+    {
+      "title": "Bitcoin To Become The 21st Century’s Digital Gold, Deutsche Bank’s Analyst Posits",
+      "link": "https://cryptopanic.com/news/near/12869462/Bitcoin-To-Become-The-21st-Centurys-Digital-Gold-Deutsche-Banks-Analyst-Posits",
+      "pubDate": "2021-09-26T13:36:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin’s near $1 trillion feasible market valuation and its potential for further growth have made it impossible for banks to continue ignoring its validity, according to Marion Laboure, a research analyst at Deutsche Bank. Laboure, a senior economist and market strategist at Deutsche Bank, said that people have always sought to store their wealth in […]",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 50,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @RequestdApps: Are you getting paid in #crypto?",
+      "link": "https://cryptopanic.com/news/12869383/RT-RequestdApps-Are-you-getting-paid-in-crypto",
+      "pubDate": "2021-09-26T12:54:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REQ"
+      ]
+    },
+    {
+      "title": "These factors are helping Avalanche, Terra stay afloat in stormy waters",
+      "link": "https://cryptopanic.com/news/avalanche-2/12869368/These-factors-are-helping-Avalanche-Terra-stay-afloat-in-stormy-waters",
+      "pubDate": "2021-09-26T12:30:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "With the market crashing after the news of crypto ban in China hit the floor, Bitcoin saw a close to 10% price drop. On the back of the BTC losses, a market-wide crash began which resulted in most of the top altcoins shedding their prices too. However, some alts showed higher resistance to the crash […]",
+      "currencies": [
+        "BTC",
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple CEO Brad Garlinghouse Says He’s Open to Settling Landmark XRP Case With SEC",
+      "link": "https://cryptopanic.com/news/ripple/12869337/Ripple-CEO-Brad-Garlinghouse-Says-Hes-Open-to-Settling-Landmark-XRP-Case-With-SEC",
+      "pubDate": "2021-09-26T11:45:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Ripple’s chief executive Brad Garlinghouse says the San Francisco-based payments firm is open to settling its lawsuit with the U.S. Securities and Exchange Commission (SEC) under one condition. In a new interview with Fox Business, Garlinghouse says Ripple would be willing to settle with the SEC if the regulator clearly defines the regulatory status of […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ravencoin has no central control, no board, no treasury, no CEO, no executives and no legal structure. Ravencoin i…",
+      "link": "https://cryptopanic.com/news/12873533/Ravencoin-has-no-central-control-no-board-no-treasury-no-CEO-no-executives-and-no-legal-structure-Ravencoin-i",
+      "pubDate": "2021-09-26T11:34:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "RVN"
+      ]
+    },
+    {
+      "title": "With its future prospects looking bright, can Tezos upset Ethereum’s DeFi dominance",
+      "link": "https://cryptopanic.com/news/12869264/With-its-future-prospects-looking-bright-can-Tezos-upset-Ethereums-DeFi-dominance",
+      "pubDate": "2021-09-26T11:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ever since August, the market has been witnessing uptrends and downtrends in phases. However, during every phase, there have been exceptions defying the broader trend. Cardano, Solana, Avalanche, Fantom and Cosmos have been a few of those resistant coins. As the market continues to consolidate, yet another alt has made both traders and investors take […]",
+      "currencies": [
+        "ETH",
+        "ATOM",
+        "XTZ",
+        "FTM"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto In Q4, Burger King NFTs, Bitcoin Rat, Bitcoin Smart Contracts & XRP NFTs Coming",
+      "link": "https://cryptopanic.com/news/ripple/12869158/Crypto-In-Q4-Burger-King-NFTs-Bitcoin-Rat-Bitcoin-Smart-Contracts-XRP-NFTs-Coming",
+      "pubDate": "2021-09-26T09:33:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Check Out My NFTs - New Pieces Drop Daily! https://rarible.com/tmi ------------------------------------------ Art Instagram: https://www.instagram.com/theartistmodern/ ------------------------------------------- Become A Patreon! https://www.patreon.com/TheModernInvestor ------------------------------------------- MY SECOND CHANNEL: https://www.youtube.com/channel/UCH9HlTrjyLmLRS0iE1P4rrg ----------------------------------------- Protect And Store Your Crypto With A Ledger Nano: https://www.ledg",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Theta's @wes_levitt joined the @Ultra_platform \"Ultra Chill\" podcast with Co-CEO Nicolas Gilot to chat about Theta…",
+      "link": "https://cryptopanic.com/news/theta-token/12874056/Thetas-wes_levitt-joined-the-Ultra_platform-Ultra-Chill-podcast-with-Co-CEO-Nicolas-Gilot-to-chat-about-Theta",
+      "pubDate": "2021-09-26T09:32:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Analyst Predicts Fresh All-Time Highs for Two Explosive Altcoins, Says Chainlink Is Primed To Rally",
+      "link": "https://cryptopanic.com/news/ftx-token/12869109/Crypto-Analyst-Predicts-Fresh-All-Time-Highs-for-Two-Explosive-Altcoins-Says-Chainlink-Is-Primed-To-Rally",
+      "pubDate": "2021-09-26T09:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "A prominent crypto strategist and trader is predicting new all-time highs for two explosive altcoins, while anticipating a surge in the value of Chainlink (LINK). The trader known in the industry as Inmortal tells his 72,600 followers that he’s keeping a close watch on FTX Token (FTT), the utility token of crypto exchange FTX. According […]",
+      "currencies": [
+        "BTC",
+        "LINK",
+        "FTT"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @DefiLlama: Now tracking @AnyswapNetwork on @ethereum @BinanceChain @OKExChain @FantomFDN @xdaichain @HECO_Chain @0xPolygon @KCCOfficial…",
+      "link": "https://cryptopanic.com/news/12871117/RT-DefiLlama-Now-tracking-AnyswapNetwork-on-ethereum-BinanceChain-OKExChain-FantomFDN-xdaichain-HECO_Chain-0xPolygon-KCCOfficial",
+      "pubDate": "2021-09-26T08:45:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ANY"
+      ]
+    },
+    {
+      "title": "[Research by @thefintechtimes] Asia Pacific POS Terminals Market Set for Rapid Growth $40Billion by 2026…",
+      "link": "https://cryptopanic.com/news/12873462/Research-by-thefintechtimes-Asia-Pacific-POS-Terminals-Market-Set-for-Rapid-Growth-40Billion-by-2026",
+      "pubDate": "2021-09-26T07:42:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PUNDIX"
+      ]
+    },
+    {
+      "title": "RT @tungdin53550391: Anyswap Cross-chain protocol @AnyswapNetwork  will be a \"Bridge invader\" in the multichain world! Let me explain why:…",
+      "link": "https://cryptopanic.com/news/12871118/RT-tungdin53550391-Anyswap-Cross-chain-protocol-AnyswapNetwork-will-be-a-Bridge-invader-in-the-multichain-world-Let-me-explain-why",
+      "pubDate": "2021-09-26T07:23:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ANY"
+      ]
+    },
+    {
+      "title": "We are very pleased to announce that #ABBC is now listed on Liquid Exchange with ABBC/BTC, ABBC/USDT, and ABBC/USD…",
+      "link": "https://cryptopanic.com/news/12865743/We-are-very-pleased-to-announce-that-ABBC-is-now-listed-on-Liquid-Exchange-with-ABBCBTC-ABBCUSDT-and-ABBCUSD",
+      "pubDate": "2021-09-26T05:32:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "ABBC"
+      ]
+    },
+    {
+      "title": "RT @mindbayes: To all of the people giving out to FUD, I really hope you’ll be able to take some time to read this thread  $WOZX",
+      "link": "https://cryptopanic.com/news/12866666/RT-mindbayes-To-all-of-the-people-giving-out-to-FUD-I-really-hope-youll-be-able-to-take-some-time-to-read-this-thread-WOZX",
+      "pubDate": "2021-09-26T05:15:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "[THREAD OF TWEETS] Efforce represents the best chance to enter a completely new asset class which is not tied in an…",
+      "link": "https://cryptopanic.com/news/12866667/THREAD-OF-TWEETS-Efforce-represents-the-best-chance-to-enter-a-completely-new-asset-class-which-is-not-tied-in-an",
+      "pubDate": "2021-09-26T05:06:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "Wallet Accounts on #BitTorrent Speed exceeded 279,000,000！ #BitTorrent Speed aims to incentivize more users to…",
+      "link": "https://cryptopanic.com/news/bittorrent/12866052/Wallet-Accounts-on-BitTorrent-Speed-exceeded-279000000-BitTorrent-Speed-aims-to-incentivize-more-users-to",
+      "pubDate": "2021-09-26T03:27:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "BTT",
+        "BTTOLD"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @LispNYC: We’re thrilled to share the recording of this month’s @chia_project talk by @bramcohen and @richardkiss.",
+      "link": "https://cryptopanic.com/news/12866310/RT-LispNYC-Were-thrilled-to-share-the-recording-of-this-months-chia_project-talk-by-bramcohen-and-richardkiss",
+      "pubDate": "2021-09-26T01:37:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XCH"
+      ]
+    }
+  ]
+}

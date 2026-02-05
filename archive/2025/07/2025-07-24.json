@@ -1,0 +1,479 @@
+{
+  "date": "2025-07-24",
+  "fetchedAt": "2026-02-05T07:27:08.620Z",
+  "articleCount": 33,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "BlackRock’s Ethereum ETF Rockets to $10B, Third-Fastest in History",
+      "link": "https://cryptopanic.com/news/ethereum/23641687/BlackRocks-Ethereum-ETF-Rockets-to-10B-Third-Fastest-in-History",
+      "pubDate": "2025-07-24T23:35:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "BlackRock's iShares Ethereum Trust has reached $10 billion, faster than all but two funds in the ETF industry's 32-year history.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tether Freezes $1.6 Million USDT Linked to Gaza Network",
+      "link": "https://cryptopanic.com/news/tether/23641531/Tether-Freezes-16-Million-USDT-Linked-to-Gaza-Network",
+      "pubDate": "2025-07-24T23:18:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Tether and U. S. authorities freeze $1. 6 million USDT linked to Gaza's BuyCash for suspected terrorism financing.",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Franklin Templeton Adds VeChain to $780M Tokenized Fund: Will VET Price Surge?",
+      "link": "https://cryptopanic.com/news/vechain/23642935/Franklin-Templeton-Adds-VeChain-to-780M-Tokenized-Fund-Will-VET-Price-Surge",
+      "pubDate": "2025-07-24T21:47:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "VET"
+      ]
+    },
+    {
+      "title": "Ripple Co-Founder Offloaded $140 Million in XRP After All-Time High",
+      "link": "https://cryptopanic.com/news/ripple/23640385/Ripple-Co-Founder-Offloaded-140-Million-in-XRP-After-All-Time-High",
+      "pubDate": "2025-07-24T21:11:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "XRP dropped over 11% from its July 17 high of $3. 65 after Ripple co-founder Chris Larsen transferred 50 million XRP to several addresses. Blockchain sleuth ZachXBT reported that approximately $140 million worth of those tokens landed on centralized exchanges or off-ramp services. Chart Shows Clear On-Chain Correlation With XRP Price Drop The move sparked market volatility and renewed scrutiny of founder-linked wallets",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Justin Sun, Whales, Withdraw $1.7 Billion ETH From Aave, What’s Going On?",
+      "link": "https://cryptopanic.com/news/aave/23637348/Justin-Sun-Whales-Withdraw-17-Billion-ETH-From-Aave-Whats-Going-On",
+      "pubDate": "2025-07-24T20:18:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TRX",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Solana Targets Major Performance Boost With New Upgrade",
+      "link": "https://cryptopanic.com/news/solana/23636429/Solana-Targets-Major-Performance-Boost-With-New-Upgrade",
+      "pubDate": "2025-07-24T20:01:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Why DeSoc Could Dominate The Crypto Space In 2025 Over Tron And Litecoin",
+      "link": "https://cryptopanic.com/news/litecoin/23636234/Why-DeSoc-Could-Dominate-The-Crypto-Space-In-2025-Over-Tron-And-Litecoin",
+      "pubDate": "2025-07-24T19:47:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Polkadot's DOT Bounces After 7% Decline",
+      "link": "https://cryptopanic.com/news/polkadot/23636206/Polkadots-DOT-Bounces-After-7-Decline",
+      "pubDate": "2025-07-24T19:06:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Ether to show Bitcoin 'leadership' as BTC ETFs lose $285M: Research",
+      "link": "https://cryptopanic.com/news/bitcoin/23634919/Ether-to-show-Bitcoin-039leadership039-as-BTC-ETFs-lose-285M-Research",
+      "pubDate": "2025-07-24T18:46:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Ether versus Bitcoin in the US spot ETF world becomes a major talking point, with Swissblock research seeing ETH coming out winning in the long term.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "How Algorand Can Help You Offset Energy Bills",
+      "link": "https://cryptopanic.com/news/algorand/23634935/How-Algorand-Can-Help-You-Offset-Energy-Bills",
+      "pubDate": "2025-07-24T18:45:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALGO"
+      ]
+    },
+    {
+      "title": "BlackRock’s ETHA becomes third-fastest ETF to $10B",
+      "link": "https://cryptopanic.com/news/bitcoin/23634711/BlackRocks-ETHA-becomes-third-fastest-ETF-to-10B",
+      "pubDate": "2025-07-24T18:20:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "BlackRock’s U. S. -listed Ethereum ETF is now among the fastest-growing funds in history. Bloomberg Senior ETF analyst, Eric Balchunas disclosed this, noting that BlackRock iShares Ethereum Trust (ETHA) has passed $10 billion in assets. According to Balchunas, ETHA is the third-fastest ETF to hit the $10 billion mark, coming behind two spot Bitcoin ETFs, BlackRock IBIT […]",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum stakers face 9-day wait as stETH loops fall into the red",
+      "link": "https://cryptopanic.com/news/aave/23633246/Ethereum-stakers-face-9-day-wait-as-stETH-loops-fall-into-the-red",
+      "pubDate": "2025-07-24T17:03:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AAVE",
+        "DEFI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Litecoin Structural Integrity: Long-Term Trendline Remains Unbroken Since 2020",
+      "link": "https://cryptopanic.com/news/litecoin/23632102/Litecoin-Structural-Integrity-Long-Term-Trendline-Remains-Unbroken-Since-2020",
+      "pubDate": "2025-07-24T17:00:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Ethereum holding company GameSquare purchases CryptoPunk NFT as treasury asset for $5.15 million in preferred shares",
+      "link": "https://cryptopanic.com/news/ethereum/23632076/Ethereum-holding-company-GameSquare-purchases-CryptoPunk-NFT-as-treasury-asset-for-515-million-in-preferred-shares",
+      "pubDate": "2025-07-24T16:55:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Unlike many ETH treasury plays, GameSquare is looking to maximize returns by deploying into novel sectors like DeFi and NFTs.",
+      "currencies": [
+        "ETH",
+        "NFT",
+        "PEOPLE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ICP Falls Sharply From $5.76 High Amid Renewed Bearish Pressure",
+      "link": "https://cryptopanic.com/news/internet-computer/23633477/ICP-Falls-Sharply-From-576-High-Amid-Renewed-Bearish-Pressure",
+      "pubDate": "2025-07-24T16:55:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ]
+    },
+    {
+      "title": "VeChain eyes 33% surge after unveiling strategic partnership with Franklin Templeton, BitGo and Keyrock",
+      "link": "https://cryptopanic.com/news/vechain/23663367/VeChain-eyes-33-surge-after-unveiling-strategic-partnership-with-Franklin-Templeton-BitGo-and-Keyrock",
+      "pubDate": "2025-07-24T16:51:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ]
+    },
+    {
+      "title": "ADA Holds Steady as Analyst Eyes Next Leg Up: Can Cardano Still Flip Ethereum in 2025?",
+      "link": "https://cryptopanic.com/news/ethereum/23632045/ADA-Holds-Steady-as-Analyst-Eyes-Next-Leg-Up-Can-Cardano-Still-Flip-Ethereum-in-2025",
+      "pubDate": "2025-07-24T16:47:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "A"
+      ]
+    },
+    {
+      "title": "What is Litecoin? How Does it Work, and Why is it the Silver to Bitcoin’s Gold?",
+      "link": "https://cryptopanic.com/news/litecoin/23632011/What-is-Litecoin-How-Does-it-Work-and-Why-is-it-the-Silver-to-Bitcoins-Gold",
+      "pubDate": "2025-07-24T16:41:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ]
+    },
+    {
+      "title": "NEAR Protocol Rebounds 9% as Investors Capitalize on Market Dislocation",
+      "link": "https://cryptopanic.com/news/near/23633473/NEAR-Protocol-Rebounds-9-as-Investors-Capitalize-on-Market-Dislocation",
+      "pubDate": "2025-07-24T16:32:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Franklin Templeton to bring BENJI platform to VeChain for enterprise payments",
+      "link": "https://cryptopanic.com/news/stellar/23627300/Franklin-Templeton-to-bring-BENJI-platform-to-VeChain-for-enterprise-payments",
+      "pubDate": "2025-07-24T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "VET",
+        "BENJI"
+      ]
+    },
+    {
+      "title": "AAVE Down 13% Weekly: Here’s the Key Bounce Zone",
+      "link": "https://cryptopanic.com/news/aave/23627023/AAVE-Down-13-Weekly-Heres-the-Key-Bounce-Zone",
+      "pubDate": "2025-07-24T13:40:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Lido faces three-year low in Ethereum staking market amid stETH depeg turmoil",
+      "link": "https://cryptopanic.com/news/aave/23626974/Lido-faces-three-year-low-in-Ethereum-staking-market-amid-stETH-depeg-turmoil",
+      "pubDate": "2025-07-24T13:37:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "VeChain Renaissance Overview: A Series of Major VeChainThor Upgrades Paving the Road to Blockchain Mass Adoption",
+      "link": "https://cryptopanic.com/news/vechain/23625907/VeChain-Renaissance-Overview-A-Series-of-Major-VeChainThor-Upgrades-Paving-the-Road-to-Blockchain-Mass-Adoption",
+      "pubDate": "2025-07-24T12:40:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET",
+        "DEFI",
+        "A"
+      ]
+    },
+    {
+      "title": "Apple Farm Season 2 goes live on Etherlink after record-breaking first run",
+      "link": "https://cryptopanic.com/news/tezos/23623337/Apple-Farm-Season-2-goes-live-on-Etherlink-after-record-breaking-first-run",
+      "pubDate": "2025-07-24T12:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "XTZ"
+      ]
+    },
+    {
+      "title": "Apple Farm season 2 now live on Etherlink with $3M in rewards",
+      "link": "https://cryptopanic.com/news/tezos/23623340/Apple-Farm-season-2-now-live-on-Etherlink-with-3M-in-rewards",
+      "pubDate": "2025-07-24T12:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "XTZ",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "Litecoin Pops 20%—But Is the Run Just Getting Started?",
+      "link": "https://cryptopanic.com/news/litecoin/23621442/Litecoin-Pops-20But-Is-the-Run-Just-Getting-Started",
+      "pubDate": "2025-07-24T10:22:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Litecoin has experienced a remarkable surge, jumping a significant 20% in value recently. However, there are pressing questions among investors and analysts—could this impressive rally be just the beginning of a more extensive upward momentum in the cryptocurrency market? Many are curious to see if this trend will continue and what factors might drive further growth for Litecoin in the near future.",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "xU3O8 Token Debuts on KuCoin, MEXC, and Gate.com, Opening Uranium Markets to Global Investors",
+      "link": "https://cryptopanic.com/news/kucoin-shares/23620443/xU3O8-Token-Debuts-on-KuCoin-MEXC-and-Gatecom-Opening-Uranium-Markets-to-Global-Investors",
+      "pubDate": "2025-07-24T10:06:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "XRP vs. XLM: Is It Really a Choice… or Are Both Worth Holding?",
+      "link": "https://cryptopanic.com/news/stellar/23620148/XRP-vs-XLM-Is-It-Really-a-Choice-or-Are-Both-Worth-Holding",
+      "pubDate": "2025-07-24T10:05:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Crypto News: DEX Tokens Quietly Surging But The Real Driver Is…",
+      "link": "https://cryptopanic.com/news/uniswap/23619738/Crypto-News-DEX-Tokens-Quietly-Surging-But-The-Real-Driver-Is",
+      "pubDate": "2025-07-24T09:32:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Stellar XLM Price on the Verge of a Breakdown, Should You Sell or Hold?",
+      "link": "https://cryptopanic.com/news/stellar/23616233/Stellar-XLM-Price-on-the-Verge-of-a-Breakdown-Should-You-Sell-or-Hold",
+      "pubDate": "2025-07-24T07:23:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Litecoin Price Eyes 27% Rally With Bulls In Charge, But…",
+      "link": "https://cryptopanic.com/news/litecoin/23616298/Litecoin-Price-Eyes-27-Rally-With-Bulls-In-Charge-But",
+      "pubDate": "2025-07-24T03:39:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Large Aave Withdrawals Trigger Liquidity Squeeze",
+      "link": "https://cryptopanic.com/news/aave/23609868/Large-Aave-Withdrawals-Trigger-Liquidity-Squeeze",
+      "pubDate": "2025-07-24T02:39:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Ethereum whales and SharpLink gaming accumulate $400M+ in ETH amid market consolidation",
+      "link": "https://cryptopanic.com/news/ethereum/23609824/Ethereum-whales-and-SharpLink-gaming-accumulate-400M-in-ETH-amid-market-consolidation",
+      "pubDate": "2025-07-24T02:21:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "24-7-2025 – Major Ethereum (ETH) investors, including whales and SharpLink Gaming, have significantly increased their holdings, capitalizing on a recent price dip, according to data from Lookonchain and Onchain Lens. A newly created wallet, identified as 0x8eEa, acquired 33,644 ETH worth $125. 73 million via FalconX, bringing its total to 105,977 ETH ($397 million) over four [.",
+      "currencies": [
+        "ETH",
+        "A"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

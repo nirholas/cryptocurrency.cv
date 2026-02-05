@@ -1,0 +1,25 @@
+{
+  "date": "2018-01-13",
+  "fetchedAt": "2026-02-05T07:27:06.971Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Charlie Lee Suggests a New Fee Estimation Method",
+      "link": "https://cryptopanic.com/news/795981/Charlie-Lee-Suggests-a-New-Fee-Estimation-Method",
+      "pubDate": "2018-01-13T14:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    }
+  ]
+}

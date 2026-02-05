@@ -1,0 +1,62 @@
+{
+  "date": "2017-12-15",
+  "fetchedAt": "2026-02-05T07:27:06.971Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "How Amazon Could Topple Bitcoin",
+      "link": "https://cryptopanic.com/news/ethereum/592926/How-Amazon-Could-Topple-Bitcoin",
+      "pubDate": "2017-12-15T20:15:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Why are there Discrepancies Between Cryptcurrency Exchange Prices?",
+      "link": "https://cryptopanic.com/news/592155/Why-are-there-Discrepancies-Between-Cryptcurrency-Exchange-Prices",
+      "pubDate": "2017-12-15T16:10:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Browser Bug Could Put User Funds At Risk",
+      "link": "https://cryptopanic.com/news/ethereum/591668/Ethereum-Browser-Bug-Could-Put-User-Funds-At-Risk",
+      "pubDate": "2017-12-15T12:05:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

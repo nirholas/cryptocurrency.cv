@@ -1,0 +1,461 @@
+{
+  "date": "2025-07-20",
+  "fetchedAt": "2026-02-05T07:27:08.621Z",
+  "articleCount": 30,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Litecoin as MEI Pharma's Primary Reserve Allocation",
+      "link": "https://cryptopanic.com/news/litecoin/23490609/Litecoin-as-MEI-Pharmas-Primary-Reserve-Allocation",
+      "pubDate": "2025-07-20T20:46:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Vitalik Buterin touts ‘safe’ scaling as Ethereum gas limit ticks up",
+      "link": "https://cryptopanic.com/news/ethereum/23490575/Vitalik-Buterin-touts-safe-scaling-as-Ethereum-gas-limit-ticks-up",
+      "pubDate": "2025-07-20T20:23:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Calls to \"pump the gas\" have borne fruit as Ethereum increases the amount of processing power each block can handle.",
+      "currencies": [
+        "ETH",
+        "BLOCK"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 8
+      }
+    },
+    {
+      "title": "$HBAR: Accenture Public Sector + Neuron UK CAA",
+      "link": "https://cryptopanic.com/news/quant-network/23506394/HBAR-Accenture-Public-Sector-Neuron-UK-CAA",
+      "pubDate": "2025-07-20T19:55:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HBAR",
+        "QNT",
+        "XDC"
+      ]
+    },
+    {
+      "title": "Ethereum tearing up towards $4,000 as ETH displays ‘main character moment’",
+      "link": "https://cryptopanic.com/news/ethereum/23488892/Ethereum-tearing-up-towards-4000-as-ETH-displays-main-character-moment",
+      "pubDate": "2025-07-20T19:12:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum (ETH) is once again stealing the cryptocurrency market spotlight, with the asset now targeting the $4,000 level.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Litecoin Price Crosses $110 Level After 20% Rally — What’s Next For LTC?",
+      "link": "https://cryptopanic.com/news/litecoin/23488087/Litecoin-Price-Crosses-110-Level-After-20-Rally-Whats-Next-For-LTC",
+      "pubDate": "2025-07-20T19:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "$100 Million Worth of ETH Shorts Obliterated as Top Altcoin Approaches $4,000",
+      "link": "https://cryptopanic.com/news/ethereum/23488032/100-Million-Worth-of-ETH-Shorts-Obliterated-as-Top-Altcoin-Approaches-4000",
+      "pubDate": "2025-07-20T18:27:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum (ETH) is eyeing $4,000 after approaching a new year-to-date peak",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 7
+      }
+    },
+    {
+      "title": "XRP Ledger Activity Surges as Price Nears 2018 Highs",
+      "link": "https://cryptopanic.com/news/ripple/23486900/XRP-Ledger-Activity-Surges-as-Price-Nears-2018-Highs",
+      "pubDate": "2025-07-20T17:46:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The day saw nearly 1. 5 billion XRP move across accounts, with transaction counts also pushing upward to 1. 4 million.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Litecoin Price Hits 4-Month High, But Whale Selling Could Bring Risks",
+      "link": "https://cryptopanic.com/news/litecoin/23486859/Litecoin-Price-Hits-4-Month-High-But-Whale-Selling-Could-Bring-Risks",
+      "pubDate": "2025-07-20T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "BlockDAG’s 3,025% ROI Window Ends August 11 as FIL Gains & NEAR Expands Across Web3 and Layer-1 Utilities",
+      "link": "https://cryptopanic.com/news/near/23485701/BlockDAGs-3025-ROI-Window-Ends-August-11-as-FIL-Gains-NEAR-Expands-Across-Web3-and-Layer-1-Utilities",
+      "pubDate": "2025-07-20T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR",
+        "FIL"
+      ]
+    },
+    {
+      "title": "Ethereum Eyes $4,000 as Whales and ETFs Pour Billions into Market",
+      "link": "https://cryptopanic.com/news/ethereum/23485668/Ethereum-Eyes-4000-as-Whales-and-ETFs-Pour-Billions-into-Market",
+      "pubDate": "2025-07-20T15:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum is drawing heightened attention from institutional investors and crypto whales, pushing its price toward the $4,000 mark for the first time since late 2024. On July 20, blockchain analytics firm Lookonchain reported that two newly created wallets purchased 58,268 ETH, worth approximately $212 million. The wallets, suspected to belong to institutional investors or whales, acquired the assets from Galaxy Digital and FalconX. Ethereum Gains $450 Billion Market Cap as Institutional Bets Int",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "TON and Monero (XMR) Rally on Privacy Trends, This New Contender Emerges As “XRP 2.0”",
+      "link": "https://cryptopanic.com/news/monero/23482954/TON-and-Monero-XMR-Rally-on-Privacy-Trends-This-New-Contender-Emerges-As-XRP-20",
+      "pubDate": "2025-07-20T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "TON"
+      ]
+    },
+    {
+      "title": "Charles Hoskinson promises full ADA audit by mid-August to refute $600M token allegations",
+      "link": "https://cryptopanic.com/news/cardano/23482935/Charles-Hoskinson-promises-full-ADA-audit-by-mid-August-to-refute-600M-token-allegations",
+      "pubDate": "2025-07-20T14:49:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "HBAR Traders Face $46 Million Liquidation Risk Despite Latest Rally",
+      "link": "https://cryptopanic.com/news/stellar/23484354/HBAR-Traders-Face-46-Million-Liquidation-Risk-Despite-Latest-Rally",
+      "pubDate": "2025-07-20T14:16:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Stellar Blade’s X account hacked to promote fake token",
+      "link": "https://cryptopanic.com/news/stellar/23479578/Stellar-Blades-X-account-hacked-to-promote-fake-token",
+      "pubDate": "2025-07-20T12:26:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Ethereum Set To Hit $10,000, Elliott Wave Analysis Predicts",
+      "link": "https://cryptopanic.com/news/ethereum/23478072/Ethereum-Set-To-Hit-10000-Elliott-Wave-Analysis-Predicts",
+      "pubDate": "2025-07-20T11:30:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Over the past week, the Ethereum (ETH) market recorded a solid positive price performance, reaching as high as $3,600. Notably, the second-largest cryptocurrency, among many altcoins, is experiencing a strong bullish momentum as evidenced by price gains of 45. 48% over the last month. Amid the present market euphoria, Dutch market analyst Gert Van Lagen has backed Ethereum’s chances for sustained price gain based on an Elliott wave analysis",
+      "currencies": [
+        "ETH",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 8
+      }
+    },
+    {
+      "title": "SEC Anticipates Unified Decision on Ethereum ETF Amendments",
+      "link": "https://cryptopanic.com/news/ethereum/23477629/SEC-Anticipates-Unified-Decision-on-Ethereum-ETF-Amendments",
+      "pubDate": "2025-07-20T11:16:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "SEC likely to approve Ethereum ETF changes soon; focuses on collateral and staking, affecting top asset managers.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 7
+      }
+    },
+    {
+      "title": "BlackRock's Ethereum Trust Sparks SEC Approval Debate",
+      "link": "https://cryptopanic.com/news/ethereum/23476628/BlackRocks-Ethereum-Trust-Sparks-SEC-Approval-Debate",
+      "pubDate": "2025-07-20T10:46:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "BlackRock's new Ethereum Trust stirs SEC approval process debate among industry players.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Ethereum ETF Staking Approval Timeline Extended",
+      "link": "https://cryptopanic.com/news/ethereum/23476661/Ethereum-ETF-Staking-Approval-Timeline-Extended",
+      "pubDate": "2025-07-20T10:33:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "According to Odaily, Bloomberg ETF analyst James Seyffart shared on the X platform that several institutions have submitted applications for Ethereum ETF staking options, which will require more time to complete. The final deadline for early applications is set for late October 2025, while BlackRock's Ethereum ETH staking application is expected to be reviewed by April 2026. However, it is anticipated that approval could occur as early as the fourth quarter of 2025. Meanwhile, VanEck, 21Shares, ",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Ethereum's Demand Surges Amid Stablecoin Legislation",
+      "link": "https://cryptopanic.com/news/bitcoin/23476650/Ethereums-Demand-Surges-Amid-Stablecoin-Legislation",
+      "pubDate": "2025-07-20T09:53:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "According to Foresight News, Hong Hao, CEO and Chief Global Asset Allocation Officer at Huafu International, has highlighted the pivotal roles of Ethereum and Bitcoin in the digital world. Bitcoin is seen as a store of value, while Ethereum serves as a transactional tool. The 'GENIUS Act' has granted legal status to stablecoins, significantly boosting the demand for Ethereum as a settlement network for these digital currencies. This surge in demand has led Ethereum to outperform Bitcoin in July ",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Ethereum Surges 3.5% to Break Above $3,700",
+      "link": "https://cryptopanic.com/news/bitcoin/23476589/Ethereum-Surges-35-to-Break-Above-3700",
+      "pubDate": "2025-07-20T08:46:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum posted a 3. 48% 24-hour gain, climbing past $3,500 as a wave of regulatory clarity and institutional appetite accelerated inflows into ETH. The post Ethereum Surges 3.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano Audit Hype Meets Bullish Charts: ADA’s Perfect Storm?",
+      "link": "https://cryptopanic.com/news/cardano/23473407/Cardano-Audit-Hype-Meets-Bullish-Charts-ADAs-Perfect-Storm",
+      "pubDate": "2025-07-20T08:20:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Cardano (ADA) surges with bullish technicals and growing community confidence as founder Charles Hoskinson signals a mid-August release for the long-awaited audit report. <p>The post Cardano Audit Hype Meets Bullish Charts: ADA’s Perfect Storm? first appeared on Ecoinimist. </p>",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Helium’s 10% rally under threat: Will HNT see a 35% drop next?",
+      "link": "https://cryptopanic.com/news/helium/23471796/Heliums-10-rally-under-threat-Will-HNT-see-a-35-drop-next",
+      "pubDate": "2025-07-20T07:30:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ]
+    },
+    {
+      "title": "Cardano's ADA Holdings Audit Report Set for Mid-August Release",
+      "link": "https://cryptopanic.com/news/cardano/23472320/Cardanos-ADA-Holdings-Audit-Report-Set-for-Mid-August-Release",
+      "pubDate": "2025-07-20T07:05:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Charles Hoskinson says audit report ‘shaping up’ for August release",
+      "link": "https://cryptopanic.com/news/cardano/23470300/Charles-Hoskinson-says-audit-report-shaping-up-for-August-release",
+      "pubDate": "2025-07-20T06:38:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Cardano founder Charles Hoskinson says he will read the full audit report over a livestream when it is released next month.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Litecoin Skyrockets by Double-Digits, Bitcoin Price Stalls at $118K: Weekend Watch",
+      "link": "https://cryptopanic.com/news/litecoin/23470289/Litecoin-Skyrockets-by-Double-Digits-Bitcoin-Price-Stalls-at-118K-Weekend-Watch",
+      "pubDate": "2025-07-20T06:28:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Tezos [XTZ] bulls reclaim $0.7, but should traders expect a pullback now?",
+      "link": "https://cryptopanic.com/news/tezos/23469008/Tezos-XTZ-bulls-reclaim-07-but-should-traders-expect-a-pullback-now",
+      "pubDate": "2025-07-20T06:00:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XTZ"
+      ]
+    },
+    {
+      "title": "Litecoin Sharp Pullback: Scalping Opportunities Emerge While LTCBTC Seeks Stability",
+      "link": "https://cryptopanic.com/news/litecoin/23465143/Litecoin-Sharp-Pullback-Scalping-Opportunities-Emerge-While-LTCBTC-Seeks-Stability",
+      "pubDate": "2025-07-20T02:30:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Steller (XLM) Price Faces Challenge Amid Mounting Outflows",
+      "link": "https://cryptopanic.com/news/stellar/23464110/Steller-XLM-Price-Faces-Challenge-Amid-Mounting-Outflows",
+      "pubDate": "2025-07-20T01:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Best Cheap Penny Cryptos To Buy That Could Soar Past $1 In 2025: VET, RTX, JASMY and KAS",
+      "link": "https://cryptopanic.com/news/vechain/23462624/Best-Cheap-Penny-Cryptos-To-Buy-That-Could-Soar-Past-1-In-2025-VET-RTX-JASMY-and-KAS",
+      "pubDate": "2025-07-20T01:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "VET",
+        "KAS"
+      ]
+    },
+    {
+      "title": "Top Trending Cryptocurrency Today: Whales Go Shopping On Ethereum Tokens PEPE, RTX, LDO and AAVE",
+      "link": "https://cryptopanic.com/news/aave/23461474/Top-Trending-Cryptocurrency-Today-Whales-Go-Shopping-On-Ethereum-Tokens-PEPE-RTX-LDO-and-AAVE",
+      "pubDate": "2025-07-20T00:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AAVE",
+        "PEPE"
+      ]
+    }
+  ]
+}

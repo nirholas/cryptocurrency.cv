@@ -1,0 +1,38 @@
+{
+  "date": "2018-10-19",
+  "fetchedAt": "2026-02-05T07:27:06.988Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitfinex Announces Margin Trading and Funding for ZRX",
+      "link": "https://cryptopanic.com/news/3395689/Bitfinex-Announces-Margin-Trading-and-Funding-for-ZRX",
+      "pubDate": "2018-10-19T13:14:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "ZRX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "CTC Project Weekly Report (Oct. 11, 2018 – Oct. 17, 2018)",
+      "link": "https://cryptopanic.com/news/3392926/CTC-Project-Weekly-Report-Oct-11-2018-Oct-17-2018",
+      "pubDate": "2018-10-19T07:28:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CTC"
+      ]
+    }
+  ]
+}

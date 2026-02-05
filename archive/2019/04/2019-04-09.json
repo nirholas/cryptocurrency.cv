@@ -1,0 +1,38 @@
+{
+  "date": "2019-04-09",
+  "fetchedAt": "2026-02-05T07:27:06.975Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "ABBC Coin Surges 100 Percent During Major Price Pump",
+      "link": "https://cryptopanic.com/news/5085773/ABBC-Coin-Surges-100-Percent-During-Major-Price-Pump",
+      "pubDate": "2019-04-09T19:16:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ABBC"
+      ]
+    },
+    {
+      "title": "Reuters: Chinese National Agency Wants to Ban Bitcoin Mining",
+      "link": "https://cryptopanic.com/news/5080756/Reuters-Chinese-National-Agency-Wants-to-Ban-Bitcoin-Mining",
+      "pubDate": "2019-04-09T09:43:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,394 @@
+{
+  "date": "2025-06-18",
+  "fetchedAt": "2026-02-05T07:27:08.631Z",
+  "articleCount": 28,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "BlockDAG’s $600M Target & 2M Miners Position It Among Cryptos to Dominate, as Aave & Hedera Watch from the Sidelines",
+      "link": "https://cryptopanic.com/news/aave/22666061/BlockDAGs-600M-Target-2M-Miners-Position-It-Among-Cryptos-to-Dominate-as-Aave-Hedera-Watch-from-the-Sidelines",
+      "pubDate": "2025-06-18T23:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "HBAR",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Solana Price Prediction: SOL Staking Deposits Cross $730M as VanEck Lists SOL ETF on DTCC",
+      "link": "https://cryptopanic.com/news/solana/22675885/Solana-Price-Prediction-SOL-Staking-Deposits-Cross-730M-as-VanEck-Lists-SOL-ETF-on-DTCC",
+      "pubDate": "2025-06-18T22:34:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Solana price fell to $143 on Wednesday, marking three consecutive days of decline with a 9% weekly drop. Despite bearish price action, on-chain data reveals $730 million in new staking deposits, suggesting investor confidence in long-term recovery prospects.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "KuCoin to Introduce Dormancy Fees on Inactive Accounts – Best Alternative Bitcoin Wallets",
+      "link": "https://cryptopanic.com/news/kucoin-shares/22663286/KuCoin-to-Introduce-Dormancy-Fees-on-Inactive-Accounts-Best-Alternative-Bitcoin-Wallets",
+      "pubDate": "2025-06-18T19:08:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "KCS"
+      ]
+    },
+    {
+      "title": "EigenLayer Reveals EigenCloud and $70 Million Investment from A16z",
+      "link": "https://cryptopanic.com/news/ethereum/22662505/EigenLayer-Reveals-EigenCloud-and-70-Million-Investment-from-A16z",
+      "pubDate": "2025-06-18T19:07:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The Ethereum restaking protocol is expanding its development footprint with EigenCloud, designed to provide trust and verifiability to applications both on-chain and off-chain.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Ethereum and the battle for yield: What is ETH’s future?",
+      "link": "https://cryptopanic.com/news/ethereum/22661709/Ethereum-and-the-battle-for-yield-What-is-ETHs-future",
+      "pubDate": "2025-06-18T18:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum staking yields are falling as yield-bearing stablecoins and DeFi protocols offer more competitive returns. Can ETH regain the upper hand in the yield wars?",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 5
+      }
+    },
+    {
+      "title": "VanEck Spot Solana ETF Listed for Prelaunch by DTCC",
+      "link": "https://cryptopanic.com/news/solana/22661648/VanEck-Spot-Solana-ETF-Listed-for-Prelaunch-by-DTCC",
+      "pubDate": "2025-06-18T18:24:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "VSOL ticker signals potential SEC approval for trading. Solana ETF tracks price, may include staking features. DTCC listing shows institutional readiness for Solana. Tickered VanEck spot Solana ETF DTCC lists VSOL under the active and pre-launch funds section",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The Daily: Senate passes stablecoin bill, K33 eyes long SOL/short LTC ETF trade, and more",
+      "link": "https://cryptopanic.com/news/litecoin/22660490/The-Daily-Senate-passes-stablecoin-bill-K33-eyes-long-SOLshort-LTC-ETF-trade-and-more",
+      "pubDate": "2025-06-18T17:41:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "MATIC",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Price predictions 6/18: BTC, ETH, XRP, BNB, SOL, DOGE, ADA, HYPE, SUI, BCH",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22660489/Price-predictions-618-BTC-ETH-XRP-BNB-SOL-DOGE-ADA-HYPE-SUI-BCH",
+      "pubDate": "2025-06-18T17:36:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Predicate, Paxos, and the policy layer",
+      "link": "https://cryptopanic.com/news/uniswap/22660296/Predicate-Paxos-and-the-policy-layer",
+      "pubDate": "2025-06-18T17:07:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "Institutions warm to ‘invisible DeFi’ as crypto-native yield platforms mature, Artemis report finds",
+      "link": "https://cryptopanic.com/news/aave/22659470/Institutions-warm-to-invisible-DeFi-as-crypto-native-yield-platforms-mature-Artemis-report-finds",
+      "pubDate": "2025-06-18T17:01:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "Publicly Traded Solana Treasury Firm Is 'Showing What's Next' for Strategy's Bitcoin Model",
+      "link": "https://cryptopanic.com/news/bitcoin/22659177/Publicly-Traded-Solana-Treasury-Firm-Is-Showing-Whats-Next-for-Strategys-Bitcoin-Model",
+      "pubDate": "2025-06-18T16:33:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Newly established Solana treasury company DeFi Development Corp. is taking a unique approach in building its digital asset stash.",
+      "currencies": [
+        "BTC",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "NEAR Price Slips & Bittensor Loses Steam, Yet Cold Wallet Grabs Market Attention With Its 4,900% ROI Potential!",
+      "link": "https://cryptopanic.com/news/near/22657914/NEAR-Price-Slips-Bittensor-Loses-Steam-Yet-Cold-Wallet-Grabs-Market-Attention-With-Its-4900-ROI-Potential",
+      "pubDate": "2025-06-18T16:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "NEAR",
+        "TAO"
+      ]
+    },
+    {
+      "title": "Ethereum Forms ‘Golden Cross’ Pattern",
+      "link": "https://cryptopanic.com/news/ethereum/22656961/Ethereum-Forms-Golden-Cross-Pattern",
+      "pubDate": "2025-06-18T15:06:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Traders and investors are closely watching %Ethereum (CRYPTO: $ETH) after the second largest %Cryptocurrency by market capitalization formed a bullish \"Golden Cross\" technical pattern. Ethereum is",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 6
+      }
+    },
+    {
+      "title": "NEAR Protocol Plunges 6% as Middle East Tensions Fuel Crypto Selloff",
+      "link": "https://cryptopanic.com/news/near/22656464/NEAR-Protocol-Plunges-6-as-Middle-East-Tensions-Fuel-Crypto-Selloff",
+      "pubDate": "2025-06-18T14:20:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Bitcoin Shakes Market With $80B Drop—Qubetics, HYPE, and Tezos Are Now the Best Crypto to Buy for June 2025",
+      "link": "https://cryptopanic.com/news/tezos/22653181/Bitcoin-Shakes-Market-With-80B-DropQubetics-HYPE-and-Tezos-Are-Now-the-Best-Crypto-to-Buy-for-June-2025",
+      "pubDate": "2025-06-18T12:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XTZ",
+        "HYPE"
+      ]
+    },
+    {
+      "title": "Crypto Price Analysis 6-18: BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, UNISWAP: UNI, CELESTIA: TIA, BITTENSOR: TAO",
+      "link": "https://cryptopanic.com/news/uniswap/22653251/Crypto-Price-Analysis-6-18-BITCOIN-BTC-ETHEREUM-ETH-SOLANA-SOL-UNISWAP-UNI-CELESTIA-TIA-BITTENSOR-TAO",
+      "pubDate": "2025-06-18T12:27:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Earn Bitcoin and Dogecoin as passive income: the 13 best free Bitcoin cloud mining platforms with the highest ROI in 2025",
+      "link": "https://cryptopanic.com/news/litecoin/22655068/Earn-Bitcoin-and-Dogecoin-as-passive-income-the-13-best-free-Bitcoin-cloud-mining-platforms-with-the-highest-ROI-in-2025",
+      "pubDate": "2025-06-18T12:17:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "LTC"
+      ]
+    },
+    {
+      "title": "New spot altcoin ETFs could unlock compelling directional strategies, says K33",
+      "link": "https://cryptopanic.com/news/litecoin/22651490/New-spot-altcoin-ETFs-could-unlock-compelling-directional-strategies-says-K33",
+      "pubDate": "2025-06-18T11:29:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash price forecast: BCH steady despite profit taking",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22651565/Bitcoin-Cash-price-forecast-BCH-steady-despite-profit-taking",
+      "pubDate": "2025-06-18T11:25:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Global Dark Web Drug Market Archetyp Dismantled by Authorities",
+      "link": "https://cryptopanic.com/news/monero/22651566/Global-Dark-Web-Drug-Market-Archetyp-Dismantled-by-Authorities",
+      "pubDate": "2025-06-18T11:13:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Dfinity Foundation announces Solana integration on ICP",
+      "link": "https://cryptopanic.com/news/internet-computer/22650025/Dfinity-Foundation-announces-Solana-integration-on-ICP",
+      "pubDate": "2025-06-18T10:37:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "ICP"
+      ]
+    },
+    {
+      "title": "Stellar and ApeCoin Price Prediction: XLM and APE at risk of further losses as technical weakness grows",
+      "link": "https://cryptopanic.com/news/apecoin/22656159/Stellar-and-ApeCoin-Price-Prediction-XLM-and-APE-at-risk-of-further-losses-as-technical-weakness-grows",
+      "pubDate": "2025-06-18T10:31:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "APE"
+      ]
+    },
+    {
+      "title": "Το ChatGPT προβλέπει εκρηκτική άνοδο για XRP, Shiba Inu και Bitcoin Cash έως το τέλος του 2025",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22649324/ChatGPT-XRP-Shiba-Inu-Bitcoin-Cash-2025",
+      "pubDate": "2025-06-18T10:10:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash Price Prediction: BCH bulls show resilience as buy-side pressure builds",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22656152/Bitcoin-Cash-Price-Prediction-BCH-bulls-show-resilience-as-buy-side-pressure-builds",
+      "pubDate": "2025-06-18T06:23:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ]
+    },
+    {
+      "title": "Kraken-Backed Ink Foundation to Airdrop INK Token, Starting With Aave-Powered Liquidity Protocol",
+      "link": "https://cryptopanic.com/news/aave/22643273/Kraken-Backed-Ink-Foundation-to-Airdrop-INK-Token-Starting-With-Aave-Powered-Liquidity-Protocol",
+      "pubDate": "2025-06-18T06:22:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Litecoin Nears Oversold Levels – What’s Next for LTC Price?",
+      "link": "https://cryptopanic.com/news/litecoin/22639649/Litecoin-Nears-Oversold-Levels-Whats-Next-for-LTC-Price",
+      "pubDate": "2025-06-18T01:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "US DOJ, Europol seize world’s largest dark web drug market operating via Monero",
+      "link": "https://cryptopanic.com/news/monero/22638370/US-DOJ-Europol-seize-worlds-largest-dark-web-drug-market-operating-via-Monero",
+      "pubDate": "2025-06-18T01:00:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 18 June 2025: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/decentraland/22639790/Spell-Wallet-Daily-Puzzle-18-June-2025-Earn-Reward-of-1-MANA",
+      "pubDate": "2025-06-18T01:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    }
+  ]
+}

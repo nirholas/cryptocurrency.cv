@@ -1,0 +1,419 @@
+{
+  "date": "2022-07-25",
+  "fetchedAt": "2026-02-05T07:27:07.537Z",
+  "articleCount": 27,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @TigonTamer: HAPPENING TONIGHT We'll be live on with @ultralight_tv, @hederjon, Dan Heder, @justintwinters…",
+      "link": "https://cryptopanic.com/news/theta-token/15872533/RT-TigonTamer-HAPPENING-TONIGHT-Well-be-live-on-with-ultralight_tv-hederjon-Dan-Heder-justintwinters",
+      "pubDate": "2022-07-25T23:45:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "RT @ThetaLands: BREAKING 🤖 @Theta_NFT_BOT tracking now all sales on secondary market @ThetaDrop above 10$. NFT promoters & collectors are…",
+      "link": "https://cryptopanic.com/news/theta-token/15872534/RT-ThetaLands-BREAKING-Theta_NFT_BOT-tracking-now-all-sales-on-secondary-market-ThetaDrop-above-10-NFT-promoters-amp-collectors-are",
+      "pubDate": "2022-07-25T23:45:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Chipotle takes 'buy the dip' literally with new $200K crypto giveaway",
+      "link": "https://cryptopanic.com/news/15865835/Chipotle-takes-buy-the-dip-literally-with-new-200K-crypto-giveaway",
+      "pubDate": "2022-07-25T21:25:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The restaurant chain will give away Bitcoin, Ether, Solana, Avalanche, and Dogecoin through its online game.",
+      "currencies": [
+        "DOGE",
+        "AVAX",
+        "XCN"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "#CEEK believes the true power of a #Metaverse cannot be fully realized without total immersion. @ceekvr allows bot…",
+      "link": "https://cryptopanic.com/news/15867795/CEEK-believes-the-true-power-of-a-Metaverse-cannot-be-fully-realized-without-total-immersion-ceekvr-allows-bot",
+      "pubDate": "2022-07-25T17:11:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CEEK"
+      ]
+    },
+    {
+      "title": "Dogecoin Nodes Migrating to Recently Released Core Version: Details",
+      "link": "https://cryptopanic.com/news/15864860/Dogecoin-Nodes-Migrating-to-Recently-Released-Core-Version-Details",
+      "pubDate": "2022-07-25T15:51:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin developers released Core 1.14.6 update last Thursday",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "\"We have more advanced #Metaverse ecosystems such as #Ceek which mainly focuses on adding value to the creator ec…",
+      "link": "https://cryptopanic.com/news/15867796/We-have-more-advanced-Metaverse-ecosystems-such-as-Ceek-which-mainly-focuses-on-adding-value-to-the-creator-ec",
+      "pubDate": "2022-07-25T15:50:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CEEK"
+      ]
+    },
+    {
+      "title": "Layer 1 Blockchain Aptos Raises $150M From FTX, Jump Crypto",
+      "link": "https://cryptopanic.com/news/15864856/Layer-1-Blockchain-Aptos-Raises-150M-From-FTX-Jump-Crypto",
+      "pubDate": "2022-07-25T15:50:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "The Series A funding round has brought Aptos Labs total capital raised in 2022 to $350 million. Former Meta employees have raised $150 million in hopes of bringing Diems original objectives to fruition.Aptos Labs announced Monday that it had raised $150 million in a Series A funding round led by FTX Ventures and Jump Crypto, bringing its total funds raised in 2022 to $350 million. A host of...",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano (ADA) Spikes 8%, Overtakes XRP In Last 24 Hours",
+      "link": "https://cryptopanic.com/news/dash/15864763/Cardano-ADA-Spikes-8-Overtakes-XRP-In-Last-24-Hours",
+      "pubDate": "2022-07-25T15:26:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "ADA",
+        "XRP"
+      ]
+    },
+    {
+      "title": "July 27 at 5pm CEST, join the #PolkadotCommunityCall to learn about the latest updates in the Polkadot &amp; Kusama eco…",
+      "link": "https://cryptopanic.com/news/15871549/July-27-at-5pm-CEST-join-the-PolkadotCommunityCall-to-learn-about-the-latest-updates-in-the-Polkadot-amp-Kusama-eco",
+      "pubDate": "2022-07-25T15:06:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "KSM"
+      ]
+    },
+    {
+      "title": "Bitcoin, Cardano, XRP, Ether Plunges Ahead Of This Week’s Interest Rate Decision",
+      "link": "https://cryptopanic.com/news/bitcoin/15864598/Bitcoin-Cardano-XRP-Ether-Plunges-Ahead-Of-This-Weeks-Interest-Rate-Decision",
+      "pubDate": "2022-07-25T14:44:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Despite struggling to keep its head above $22,800 on Sunday, Bitcoin plunged on Monday to as low as $21,400 during the Asian Market session as traders took a risk off-approach ahead of this week’s interest rate decision by the FED.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Chipotle Launches ‘Buy the Dip’ Game That Will Give Away $200K in Cryptocurrency",
+      "link": "https://cryptopanic.com/news/15864410/Chipotle-Launches-Buy-the-Dip-Game-That-Will-Give-Away-200K-in-Cryptocurrency",
+      "pubDate": "2022-07-25T13:49:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "On Monday (July 25), Chipotle Mexican Grill, Inc. (NYSE: CMG) today announced the launch of a new interactive game called “Buy The Dip” that will give away more than $200,000 in $BTC, $ETH, $SOL, $AVAX, and $DOGE. According to Chipotle’s press release, “starting at 10am PT today, fans can access the ‘Buy The Dip’ game by visiting: www.chipotlebuythedip.xyz.” The game will […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOGE",
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Moonbeam now lets you swap tokens between Polkadot and Cosmos",
+      "link": "https://cryptopanic.com/news/15864270/Moonbeam-now-lets-you-swap-tokens-between-Polkadot-and-Cosmos",
+      "pubDate": "2022-07-25T13:16:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Moonbeam has integrated with Axelar and Osmosis to enable the transfer of tokens between the Polkadot and Cosmos ecosystems.",
+      "currencies": [
+        "DOT",
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Telcoin Price Prediction 2023-2032: Is TEL a Good Investment?",
+      "link": "https://cryptopanic.com/news/15864419/Telcoin-Price-Prediction-2023-2032-Is-TEL-a-Good-Investment",
+      "pubDate": "2022-07-25T13:09:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "Telcoin Price Prediction 2024-2030: Will TEL reach $0.1?",
+      "link": "https://cryptopanic.com/news/15864419/Telcoin-Price-Prediction-2024-2030-Will-TEL-reach-01",
+      "pubDate": "2022-07-25T13:09:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "Resolve your concerns and questions about #BitcoinSV, like the gigantic #block size of #BSV, transaction fees for…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/15867574/Resolve-your-concerns-and-questions-about-BitcoinSV-like-the-gigantic-block-size-of-BSV-transaction-fees-for",
+      "pubDate": "2022-07-25T13:07:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "Bitcoin and Ethereum Turn Volatile as Fed Meeting Nears",
+      "link": "https://cryptopanic.com/news/bitcoin/15863989/Bitcoin-and-Ethereum-Turn-Volatile-as-Fed-Meeting-Nears",
+      "pubDate": "2022-07-25T11:53:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Uncertainty is mounting in the crypto market ahead of this week's Federal Open Market Committee. Furthermore, upcoming earnings reports from America's five biggest tech companies and other reports could impact crypto prices over the next few days. Volatility has struck the cryptocurrency market as speculation mounts around a series of highly anticipated meetings this week.Of particular significance to crypto market participants is the next Federal Open Market Committee, which is scheduled to ...",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Voyager Says FTX’s Buyout Offer Was Misleading “Low-Ball Bid,” SBF Fires Back",
+      "link": "https://cryptopanic.com/news/15863895/Voyager-Says-FTXs-Buyout-Offer-Was-Misleading-Low-Ball-Bid-SBF-Fires-Back",
+      "pubDate": "2022-07-25T11:02:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Commenting on Voyagers response to the proposal, FTX founder and CEO Sam-Bankman Fried said that only the bankruptcy lawyers would benefit from dragging out the proceedings, while the customers would get fucked. Voyager Digital's lawyers and FTX's Sam-Bankman Fried have entered a public spat over Voyager's bankruptcy.In a Sunday court filing, the lawyers representing the bankrupt...",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @H_O_L_O_: We're now in the second week of the Holochain Immersive and it is going very well. The eight developers completed the Rust po…",
+      "link": "https://cryptopanic.com/news/15869723/RT-H_O_L_O_-Were-now-in-the-second-week-of-the-Holochain-Immersive-and-it-is-going-very-well-The-eight-developers-completed-the-Rust-po",
+      "pubDate": "2022-07-25T10:57:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HOT"
+      ]
+    },
+    {
+      "title": "Vitalik Buterin: Ethereum Classic Is Fine Chain",
+      "link": "https://cryptopanic.com/news/15863844/Vitalik-Buterin-Ethereum-Classic-Is-Fine-Chain",
+      "pubDate": "2022-07-25T10:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Creator of Ethereum blockchain says there is nothing wrong with using POW version of Ethereum",
+      "currencies": [
+        "ETH",
+        "ETC",
+        "XCN"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitfinex and Tether launch peer-to-peer video calling app Keet",
+      "link": "https://cryptopanic.com/news/15863843/Bitfinex-and-Tether-launch-peer-to-peer-video-calling-app-Keet",
+      "pubDate": "2022-07-25T10:44:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Bitfinex, Tether and Hypercore have built Keet, a peer-to-peer video calling app, on their newly launched Holepunch protocol.",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Celsius and Do Kwon get hit with yet another class action suit by U.S. law firm",
+      "link": "https://cryptopanic.com/news/15863565/Celsius-and-Do-Kwon-get-hit-with-yet-another-class-action-suit-by-US-law-firm",
+      "pubDate": "2022-07-25T09:41:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "As the fallout caused by the blockchain company Terraform Labs (TFL) and cryptocurrency lending firm Celsius continues to claim victims... Continue reading",
+      "currencies": [
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Voyager rejects FTX’s ‘low ball’ offer, calls it ‘misleading’",
+      "link": "https://cryptopanic.com/news/15862860/Voyager-rejects-FTXs-low-ball-offer-calls-it-misleading",
+      "pubDate": "2022-07-25T09:05:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Struggling crypto lender Voyager Digital rejected FTX’s offer to buy all its assets and refund customers in a July 24 letter due to it being a “low-ball” offer that may “hurt customers.” FTX’s liquidity offer for Voyager’s customers On July 22, FTX submitted a joint proposal that would have seen it provide liquidity for customers […]",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Elon Musk On Fire: Tesla CEO Had An Affair With Google Co-Founder’s Wife – Report",
+      "link": "https://cryptopanic.com/news/15859503/Elon-Musk-On-Fire-Tesla-CEO-Had-An-Affair-With-Google-Co-Founders-Wife-Report",
+      "pubDate": "2022-07-25T05:44:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Elon Musk, a cryptocurrency advocate, played the proverbial fire with the wife of his close friend, Sergey Brin, who co-founded Google in 1998. The hanky-panky caused Brin to file for divorce early this year, putting an end to the tech mogul’s lengthy friendship with Musk, according to Sunday’s article in The Wall Street Journal, which […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 5
+      }
+    },
+    {
+      "title": "''Innovation is a mixture of the old and the new with a dash of surprise'' - Al Etmanski We blend the timeless be…",
+      "link": "https://cryptopanic.com/news/dash/15861759/Innovation-is-a-mixture-of-the-old-and-the-new-with-a-dash-of-surprise-Al-Etmanski-We-blend-the-timeless-be",
+      "pubDate": "2022-07-25T05:13:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DASH",
+        "NFTT"
+      ]
+    },
+    {
+      "title": "Bitcoin and Ethereum Correct Gains, Altcoins Show Bearish Signs",
+      "link": "https://cryptopanic.com/news/15859116/Bitcoin-and-Ethereum-Correct-Gains-Altcoins-Show-Bearish-Signs",
+      "pubDate": "2022-07-25T04:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin price started another decline after it failed to settle above the USD 23,000 zone. BTC corrected gains and traded below the USD 22,000 level. It is currently (04:09 UTC) trading near USD 21,900 and is down over 2% in a day and still up 5% in a week. Similarly, most major altcoins have declined. ETH topped near USD 1,665 and declined below USD 1,550. XRP traded below the USD 0.35...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "ADA",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Join us tmr for an #AMA session with Jerry Won, our head of partnerships who will sharing about guiding Web2 giants…",
+      "link": "https://cryptopanic.com/news/klay-token/15861236/Join-us-tmr-for-an-AMA-session-with-Jerry-Won-our-head-of-partnerships-who-will-sharing-about-guiding-Web2-giants",
+      "pubDate": "2022-07-25T00:38:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "AERGO Connect 2.2.0 has been submitted to Google for review and is being escalated. AERGO Connect is down but will…",
+      "link": "https://cryptopanic.com/news/15859284/AERGO-Connect-220-has-been-submitted-to-Google-for-review-and-is-being-escalated-AERGO-Connect-is-down-but-will",
+      "pubDate": "2022-07-25T00:02:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    }
+  ]
+}

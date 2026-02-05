@@ -1,0 +1,682 @@
+{
+  "date": "2022-10-13",
+  "fetchedAt": "2026-02-05T07:27:07.385Z",
+  "articleCount": 48,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "The Community deserves more...",
+      "link": "https://cryptopanic.com/news/16598212/The-Community-deserves-more",
+      "pubDate": "2022-10-13T22:04:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SPS"
+      ]
+    },
+    {
+      "title": "As announced the previous week, we will be holding an incentivized testnet in preparation for the official launch o…",
+      "link": "https://cryptopanic.com/news/16599618/As-announced-the-previous-week-we-will-be-holding-an-incentivized-testnet-in-preparation-for-the-official-launch-o",
+      "pubDate": "2022-10-13T21:41:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BFC"
+      ]
+    },
+    {
+      "title": "DAO Proposal - Boosting rewards for league appropriate level cards",
+      "link": "https://cryptopanic.com/news/16733531/DAO-Proposal-Boosting-rewards-for-league-appropriate-level-cards",
+      "pubDate": "2022-10-13T19:44:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SPS"
+      ]
+    },
+    {
+      "title": "Pirate was featured in this notable article. Thank you for the mention @lisabert.",
+      "link": "https://cryptopanic.com/news/16603623/Pirate-was-featured-in-this-notable-article-Thank-you-for-the-mention-lisabert",
+      "pubDate": "2022-10-13T19:30:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARRR"
+      ]
+    },
+    {
+      "title": "RT @rich_teo: Leadership is willing to ruffle some feathers for the greater good of the organization. Not everything mentioned here jives w…",
+      "link": "https://cryptopanic.com/news/pax-gold/16599647/RT-rich_teo-Leadership-is-willing-to-ruffle-some-feathers-for-the-greater-good-of-the-organization-Not-everything-mentioned-here-jives-w",
+      "pubDate": "2022-10-13T19:16:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BUSD",
+        "PAXG",
+        "BKRW"
+      ]
+    },
+    {
+      "title": "The #Helium 5G Network just crossed: 6,000+ #5G Radios! 1332 cities 49 states.. That’s over 1,000 radios in…",
+      "link": "https://cryptopanic.com/news/helium/16601762/The-Helium-5G-Network-just-crossed-6000-5G-Radios-1332-cities-49-states-Thats-over-1000-radios-in",
+      "pubDate": "2022-10-13T19:14:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ]
+    },
+    {
+      "title": "Binance Burns as Many BNB Tokens as Hacker Minted From Thin Air",
+      "link": "https://cryptopanic.com/news/16597729/Binance-Burns-as-Many-BNB-Tokens-as-Hacker-Minted-From-Thin-Air",
+      "pubDate": "2022-10-13T19:05:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "The burn removed over 2 million BNB from the circulating supply.",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Elon Musk Launches Foul Fragrance, Accepts Payment in Bitcoin, Ethereum, Dogecoin and Additional Altcoins",
+      "link": "https://cryptopanic.com/news/16597657/Elon-Musk-Launches-Foul-Fragrance-Accepts-Payment-in-Bitcoin-Ethereum-Dogecoin-and-Additional-Altcoins",
+      "pubDate": "2022-10-13T18:41:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Elon Musk is adding a new quirky product to his company’s lineup of goods and services that can be paid for with crypto. The billionaire’s tunneling startup Boring Company just launched a perfume called Burnt Hair, which Musk describes as “the finest fragrance on Earth.” “With a name like mine, getting into the fragrance business […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Developers disclose major vulnerability in all IBC-enabled chains on Cosmos",
+      "link": "https://cryptopanic.com/news/16597621/Developers-disclose-major-vulnerability-in-all-IBC-enabled-chains-on-Cosmos",
+      "pubDate": "2022-10-13T18:33:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Developers have disclosed a critical software vulnerability within all Cosmos blockchains that run the inter-blockchain communication protocol (IBC).",
+      "currencies": [
+        "BNB",
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 13
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @ThetaDrop: A Moveable Feast: Works by India’s foremost artists to celebrate @SrBachchan 80th birthday. In collaboration with @Sony Ent…",
+      "link": "https://cryptopanic.com/news/theta-token/16604681/RT-ThetaDrop-A-Moveable-Feast-Works-by-Indias-foremost-artists-to-celebrate-SrBachchan-80th-birthday-In-collaboration-with-Sony-Ent",
+      "pubDate": "2022-10-13T17:52:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "RT @helium_mobile: What’s a cryptocarrier? Glad you asked: 🧵 A thread..",
+      "link": "https://cryptopanic.com/news/helium/16601763/RT-helium_mobile-Whats-a-cryptocarrier-Glad-you-asked-A-thread",
+      "pubDate": "2022-10-13T17:44:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ]
+    },
+    {
+      "title": "Tether eliminates commercial paper from reserves",
+      "link": "https://cryptopanic.com/news/16597416/Tether-eliminates-commercial-paper-from-reserves",
+      "pubDate": "2022-10-13T17:31:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Stablecoin issuer Tether has said for months it planned to improve the quality of its reserves.",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Stratis becomes an Open Banking Technical Service Provider signalling the next major step for GBPT…",
+      "link": "https://cryptopanic.com/news/16597237/Stratis-becomes-an-Open-Banking-Technical-Service-Provider-signalling-the-next-major-step-for-GBPT",
+      "pubDate": "2022-10-13T17:00:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "STRAX"
+      ]
+    },
+    {
+      "title": "#CEEK #Metaverse #NFT gems will unlock powers, $Ceek, access to VIP events and much more in #CEEKLAND Look out for…",
+      "link": "https://cryptopanic.com/news/16599942/CEEK-Metaverse-NFT-gems-will-unlock-powers-Ceek-access-to-VIP-events-and-much-more-in-CEEKLAND-Look-out-for",
+      "pubDate": "2022-10-13T16:15:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "CEEK"
+      ]
+    },
+    {
+      "title": "Ethereum Becoming Highly Centralized After Transition To Proof-of-Stake, Pundits Warn",
+      "link": "https://cryptopanic.com/news/16596964/Ethereum-Becoming-Highly-Centralized-After-Transition-To-Proof-of-Stake-Pundits-Warn",
+      "pubDate": "2022-10-13T15:50:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The Ethereum Merge took the blockchain to a Proof-of-Stake (POS) consensus mechanism, ridding it of miners and replacing them with validators. While switching to PoS has several benefits, the downside is now trickling home.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 36
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @MoonbeamNetwork: 1/  New integration  @renprotocol now supports direct token transfers to &amp; from Moonbeam for Ren assets, such as $BT…",
+      "link": "https://cryptopanic.com/news/16604001/RT-MoonbeamNetwork-1-New-integration-renprotocol-now-supports-direct-token-transfers-to-amp-from-Moonbeam-for-Ren-assets-such-as-BT",
+      "pubDate": "2022-10-13T15:28:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RENBTC",
+        "REN"
+      ]
+    },
+    {
+      "title": "Someone abused FTX’s withdrawal fee subsidy to mint $70,000 of XEN",
+      "link": "https://cryptopanic.com/news/16596896/Someone-abused-FTXs-withdrawal-fee-subsidy-to-mint-70000-of-XEN",
+      "pubDate": "2022-10-13T15:28:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "The exchange may have failed to recognize that it was minting XEN tokens on behalf of the attacker, per analysts.",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Blending in with the crowd at #BitcoinAmsterdam - Freeway's very own renaissance men",
+      "link": "https://cryptopanic.com/news/16601359/Blending-in-with-the-crowd-at-BitcoinAmsterdam-Freeways-very-own-renaissance-men",
+      "pubDate": "2022-10-13T14:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "FWT"
+      ]
+    },
+    {
+      "title": "Terra Coin Price Balloons 30% – But Can LUNA Reach Higher Terrain?",
+      "link": "https://cryptopanic.com/news/16596634/Terra-Coin-Price-Balloons-30-But-Can-LUNA-Reach-Higher-Terrain",
+      "pubDate": "2022-10-13T14:25:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Terra (LUNA) woke up to a good day on Wednesday as the token made an impressive 30% jump in its price on the way to tallying a high of $3.08. Terra accounted for 25.06% of the entire token holdings among the top 100 ETH whales LUNA price surged by 30% today and hit $3.08 Bullish momentum is possible and trading price might reach $3.25 The crypto, though, immediately experienced price...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "USDC",
+        "APE",
+        "HT",
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Over $8 billion outflows Bitcoin within hours after U.S. inflation hits 8.2%",
+      "link": "https://cryptopanic.com/news/bitcoin/16596629/Over-8-billion-outflows-Bitcoin-within-hours-after-US-inflation-hits-82",
+      "pubDate": "2022-10-13T14:24:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin (BTC) is experiencing a spike in selling pressure moments after the United States inflation figures for September came in... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Upgrade complete",
+      "link": "https://cryptopanic.com/news/16602533/Upgrade-complete",
+      "pubDate": "2022-10-13T14:16:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LOOKS"
+      ]
+    },
+    {
+      "title": "Why Does Blockchain Matter?",
+      "link": "https://cryptopanic.com/news/16599110/Why-Does-Blockchain-Matter",
+      "pubDate": "2022-10-13T13:57:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ABBC"
+      ]
+    },
+    {
+      "title": "Conferences are always a chance to meet and greet! One thing we  at Freeway is meeting members of the #FreewayFam…",
+      "link": "https://cryptopanic.com/news/16601361/Conferences-are-always-a-chance-to-meet-and-greet-One-thing-we-at-Freeway-is-meeting-members-of-the-FreewayFam",
+      "pubDate": "2022-10-13T13:39:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FWT"
+      ]
+    },
+    {
+      "title": "RT @qubix_eth: Nailed it",
+      "link": "https://cryptopanic.com/news/16602534/RT-qubix_eth-Nailed-it",
+      "pubDate": "2022-10-13T13:23:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "LOOKS"
+      ]
+    },
+    {
+      "title": "India police launches blockchain-based complaint portal on Polygon",
+      "link": "https://cryptopanic.com/news/16596389/India-police-launches-blockchain-based-complaint-portal-on-Polygon",
+      "pubDate": "2022-10-13T13:22:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "The Indian police unit in Firozabad city in the northern state of Uttar Pradesh has launched an online complaint portal powered by Ethereum scaler Polygon. See related article: Blockchain in India got off on wrong foot, says former finance chief Fast facts The pilot portal, policecomplaintonblockchain.in, leverages blockchain technology’s immutability, which means complaints cannot be […]",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Analysts warn Bitcoin’s price could tank further as volatility cools down",
+      "link": "https://cryptopanic.com/news/bitcoin/16596234/Analysts-warn-Bitcoins-price-could-tank-further-as-volatility-cools-down",
+      "pubDate": "2022-10-13T12:53:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "For years, Bitcoin (BTC) has long been associated with high price volatility, a factor that has kept most investors away.... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "$UCOIL Game is on! Good luck to all participants! $VET $BEPRO $HNT $BTC $ETH",
+      "link": "https://cryptopanic.com/news/helium/16605081/UCOIL-Game-is-on-Good-luck-to-all-participants-VET-BEPRO-HNT-BTC-ETH",
+      "pubDate": "2022-10-13T12:49:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "HNT",
+        "UCOIL"
+      ]
+    },
+    {
+      "title": "RT @amirhaleem: tremendous work from the @helium community on improving the security of IoT proof of coverage via secure hardware. i am alw…",
+      "link": "https://cryptopanic.com/news/helium/16601764/RT-amirhaleem-tremendous-work-from-the-helium-community-on-improving-the-security-of-IoT-proof-of-coverage-via-secure-hardware-i-am-alw",
+      "pubDate": "2022-10-13T12:33:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ]
+    },
+    {
+      "title": "U.S. Inflation Is Sticky at 8.2%. What’s Next for Bitcoin?",
+      "link": "https://cryptopanic.com/news/bitcoin/16596123/US-Inflation-Is-Sticky-at-82-Whats-Next-for-Bitcoin",
+      "pubDate": "2022-10-13T12:31:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Inflation has now cooled for three consecutive months. U.S. inflation keeps fallingbut its still running hotter than the Federal Reserve would like.The Bureau of Labor Statistics dropped the latest Consumer Price Index report Thursday, showing that inflation cooled by 10 basis points in September.The price of goods rose by 8.2% on a yearly basis last month, falling higher than economists broad...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 10
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Stalk Monsters are one of the new monsters that Miners should look out for in the upcoming Mines of Dalarnia 1.1: D…",
+      "link": "https://cryptopanic.com/news/16602947/Stalk-Monsters-are-one-of-the-new-monsters-that-Miners-should-look-out-for-in-the-upcoming-Mines-of-Dalarnia-11-D",
+      "pubDate": "2022-10-13T12:00:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "DAR"
+      ]
+    },
+    {
+      "title": "JUST IN: $AXS @axieinfinity one of the MOST USED smart contracts among top 500 #ETH whales in the last 24hrs Peep…",
+      "link": "https://cryptopanic.com/news/axie-infinity/16599495/JUST-IN-AXS-axieinfinity-one-of-the-MOST-USED-smart-contracts-among-top-500-ETH-whales-in-the-last-24hrs-Peep",
+      "pubDate": "2022-10-13T11:39:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "AXS",
+        "BBW"
+      ]
+    },
+    {
+      "title": "5 Cryptos Whose Price Could Be Spooked by the Halloween Effect",
+      "link": "https://cryptopanic.com/news/axie-infinity/16595838/5-Cryptos-Whose-Price-Could-Be-Spooked-by-the-Halloween-Effect",
+      "pubDate": "2022-10-13T11:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MATIC",
+        "AXS",
+        "CHZ"
+      ]
+    },
+    {
+      "title": "Axie Infinity NFT Game Loses 62% of Players in One Year",
+      "link": "https://cryptopanic.com/news/axie-infinity/16595637/Axie-Infinity-NFT-Game-Loses-62-of-Players-in-One-Year",
+      "pubDate": "2022-10-13T10:12:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Klaytn's integration with @vtvlco will help builders automate token vesting and distribution 🦾 You can now: 🪙 Mint…",
+      "link": "https://cryptopanic.com/news/klay-token/16602268/Klaytns-integration-with-vtvlco-will-help-builders-automate-token-vesting-and-distribution-You-can-now-Mint",
+      "pubDate": "2022-10-13T09:40:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "Solana wipes out almost $1.5 billion in a week as network-related hacks mount",
+      "link": "https://cryptopanic.com/news/16594919/Solana-wipes-out-almost-15-billion-in-a-week-as-network-related-hacks-mount",
+      "pubDate": "2022-10-13T09:39:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Decentralized finance (DeFi) asset Solana (SOL) is recording significant capital outflow, with the network facing various challenges, including hacks and... Continue reading",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Let's have some  for breakfast to greet it!",
+      "link": "https://cryptopanic.com/news/16599504/Lets-have-some-for-breakfast-to-greet-it",
+      "pubDate": "2022-10-13T09:10:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BAKE"
+      ]
+    },
+    {
+      "title": "RT @taxninja: Yo @LooksRare nice to see you on the @Brave browser. Nice ad and thanks for the $BAT!",
+      "link": "https://cryptopanic.com/news/16602535/RT-taxninja-Yo-LooksRare-nice-to-see-you-on-the-Brave-browser-Nice-ad-and-thanks-for-the-BAT",
+      "pubDate": "2022-10-13T08:26:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LOOKS"
+      ]
+    },
+    {
+      "title": "Our talented developers are a global community. At #Golem, you’ll be working on innovative projects alongside inte…",
+      "link": "https://cryptopanic.com/news/16592649/Our-talented-developers-are-a-global-community-At-Golem-youll-be-working-on-innovative-projects-alongside-inte",
+      "pubDate": "2022-10-13T08:12:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GLM"
+      ]
+    },
+    {
+      "title": "#Cryptocurrency is an ideal solution for #FinancialExclusion, which affects more than one-fifth of the world’s popu…",
+      "link": "https://cryptopanic.com/news/16591821/Cryptocurrency-is-an-ideal-solution-for-FinancialExclusion-which-affects-more-than-one-fifth-of-the-worlds-popu",
+      "pubDate": "2022-10-13T07:40:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "Thanks for including #BakerySwap in the ranking!",
+      "link": "https://cryptopanic.com/news/16599505/Thanks-for-including-BakerySwap-in-the-ranking",
+      "pubDate": "2022-10-13T07:33:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BAKE"
+      ]
+    },
+    {
+      "title": "Our Total Supply is over 800 Million! Why choose #USDD? 🤔 - a decentralized and over-collateralized #StableCoin…",
+      "link": "https://cryptopanic.com/news/usdd/16594720/Our-Total-Supply-is-over-800-Million-Why-choose-USDD-a-decentralized-and-over-collateralized-StableCoin",
+      "pubDate": "2022-10-13T07:32:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDD"
+      ]
+    },
+    {
+      "title": "PSA: It's been a while since #TheMerge, did you know that you were airdropped the same amount of $ETHW (ETHPoW) tok…",
+      "link": "https://cryptopanic.com/news/16594523/PSA-Its-been-a-while-since-TheMerge-did-you-know-that-you-were-airdropped-the-same-amount-of-ETHW-ETHPoW-tok?mtm_campaign=API-OFA",
+      "pubDate": "2022-10-13T06:09:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETHW",
+        "LON",
+        "imBTC"
+      ]
+    },
+    {
+      "title": "We're very excited to have early access to a brand new \"Live Discussion Board\" function launching on @CoinMarketCap…",
+      "link": "https://cryptopanic.com/news/16592749/Were-very-excited-to-have-early-access-to-a-brand-new-Live-Discussion-Board-function-launching-on-CoinMarketCap",
+      "pubDate": "2022-10-13T02:42:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NKN"
+      ]
+    },
+    {
+      "title": "Shiba Inu: $SHIB Army Seems to Be Loving Collectible Card Game Shiba Eternity",
+      "link": "https://cryptopanic.com/news/16588198/Shiba-Inu-SHIB-Army-Seems-to-Be-Loving-Collectible-Card-Game-Shiba-Eternity",
+      "pubDate": "2022-10-13T02:42:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The community behind the meme-inspired cryptocurrency Shiba Inu ($SHIB) appears to be enjoying its collectible card game Shiba Eternity, which was released earlier this month and allows players to “fight without violence” with Shiboshis. The game has so far amassed a 4.6 rating out of 5 on the Google Play store, with over 11,000 users […]",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "MATIC investors can expect the next bull rally after…",
+      "link": "https://cryptopanic.com/news/16588186/MATIC-investors-can-expect-the-next-bull-rally-after",
+      "pubDate": "2022-10-13T02:30:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Sandeep Nailwal, the co-founder of Polygon [MATIC] recently tweeted about the growing gaming ecosystem in the Polygon network. As per the tweet shared by the co-founder, Polygon was the biggest blockchain in the gaming space. Just look at the growth of gaming users on @0xPolygon Growth is \"ORDERS OF MAGNITUTE\" bigger than any other chain […]",
+      "currencies": [
+        "MATIC",
+        "XCN"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @BIFROSTio: Easily execute all kinds of blockchain transactions without having to know complex technology and build an optimal multichai…",
+      "link": "https://cryptopanic.com/news/16589174/RT-BIFROSTio-Easily-execute-all-kinds-of-blockchain-transactions-without-having-to-know-complex-technology-and-build-an-optimal-multichai",
+      "pubDate": "2022-10-13T02:19:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BFC"
+      ]
+    },
+    {
+      "title": "MFT listing Binance,Is that what all players want?",
+      "link": "https://cryptopanic.com/news/16592705/MFT-listing-BinanceIs-that-what-all-players-want",
+      "pubDate": "2022-10-13T02:12:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "MFT"
+      ]
+    },
+    {
+      "title": "Polygon powers India police complaint portal, battling corruption",
+      "link": "https://cryptopanic.com/news/16587951/Polygon-powers-India-police-complaint-portal-battling-corruption",
+      "pubDate": "2022-10-13T00:22:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "The First Information Report (FIR) launched on Polygon allows the citizens of Firozabad to register complaints against the police without worry of it being dismissed or manipulated.",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

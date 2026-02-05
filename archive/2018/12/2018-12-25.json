@@ -1,0 +1,37 @@
+{
+  "date": "2018-12-25",
+  "fetchedAt": "2026-02-05T07:27:06.970Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ripple XRP Is Now a Base-pair on Binance: What Does This Mean For the Future of ‘The Standard’?",
+      "link": "https://cryptopanic.com/news/4083105/Ripple-XRP-Is-Now-a-Base-pair-on-Binance-What-Does-This-Mean-For-the-Future-of-The-Standard",
+      "pubDate": "2018-12-25T14:51:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 31,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "AVINOC will start into the next year with a present to you all who own some AVINOC tokens. Utilization could start…",
+      "link": "https://cryptopanic.com/news/4082974/AVINOC-will-start-into-the-next-year-with-a-present-to-you-all-who-own-some-AVINOC-tokens-Utilization-could-start",
+      "pubDate": "2018-12-25T14:36:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVINOC"
+      ]
+    }
+  ]
+}

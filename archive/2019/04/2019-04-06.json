@@ -1,0 +1,83 @@
+{
+  "date": "2019-04-06",
+  "fetchedAt": "2026-02-05T07:27:06.790Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Forbes: Litecoin (LTC) Price Triples in Q1 2019, Gaining Over 200%",
+      "link": "https://cryptopanic.com/news/litecoin/5060057/Forbes-Litecoin-LTC-Price-Triples-in-Q1-2019-Gaining-Over-200",
+      "pubDate": "2019-04-06T14:43:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "No Dice: Ethereum Loses dApps Race to EOS and Tron",
+      "link": "https://cryptopanic.com/news/5058917/No-Dice-Ethereum-Loses-dApps-Race-to-EOS-and-Tron",
+      "pubDate": "2019-04-06T10:57:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TRX",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Tron (TRX), Binance Coin (BNB), Tezos (XTZ) Are Leaders in Market Sentiment This Year: Report",
+      "link": "https://cryptopanic.com/news/5058716/Tron-TRX-Binance-Coin-BNB-Tezos-XTZ-Are-Leaders-in-Market-Sentiment-This-Year-Report",
+      "pubDate": "2019-04-06T09:54:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "TRX",
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Litecoin (LTC), EOS (EOS), IOTA (MIOTA), Stellar (XLM) Price Prediction: Cryptocurrency Weekly Overview",
+      "link": "https://cryptopanic.com/news/5058539/Litecoin-LTC-EOS-EOS-IOTA-MIOTA-Stellar-XLM-Price-Prediction-Cryptocurrency-Weekly-Overview",
+      "pubDate": "2019-04-06T09:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC",
+        "XLM",
+        "EOS",
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

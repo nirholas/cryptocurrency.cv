@@ -1,0 +1,459 @@
+{
+  "date": "2024-10-06",
+  "fetchedAt": "2026-02-05T07:27:08.372Z",
+  "articleCount": 31,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin’s rise above $62,000 could pull APT, WIF, FTM, and BGB higher",
+      "link": "https://cryptopanic.com/news/19975002/Bitcoins-rise-above-62000-could-pull-APT-WIF-FTM-and-BGB-higher?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T20:32:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FTM",
+        "APT",
+        "WIF",
+        "BGB"
+      ]
+    },
+    {
+      "title": "LATAM Crypto Roundup: Binance Secures VASP Registration in Argentina, Ripple Expands in Brazil, and More",
+      "link": "https://cryptopanic.com/news/19974989/LATAM-Crypto-Roundup-Binance-Secures-VASP-Registration-in-Argentina-Ripple-Expands-in-Brazil-and-More?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T20:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "FX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Academic paper suggests governments should attack public blockchains",
+      "link": "https://cryptopanic.com/news/19974907/Academic-paper-suggests-governments-should-attack-public-blockchains?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T19:15:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Crypto market’s weekly winners and losers – FTT, POPCAT, NOT, ENA",
+      "link": "https://cryptopanic.com/news/19974887/Crypto-markets-weekly-winners-and-losers-FTT-POPCAT-NOT-ENA?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T19:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NOT",
+        "ENA",
+        "POPCAT"
+      ]
+    },
+    {
+      "title": "Blake3 Now Most Profitable PoW Algorithm for Crypto Miners, KAS Slips in Rankings",
+      "link": "https://cryptopanic.com/news/19974787/Blake3-Now-Most-Profitable-PoW-Algorithm-for-Crypto-Miners-KAS-Slips-in-Rankings?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T17:30:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "KAS",
+        "ALPH"
+      ]
+    },
+    {
+      "title": "Keep your generous donations and support coming. Thank you all!",
+      "link": "https://cryptopanic.com/news/monero/20014549/Keep-your-generous-donations-and-support-coming-Thank-you-all",
+      "pubDate": "2024-10-06T16:29:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Crypto Companies Raise $823 Million in September",
+      "link": "https://cryptopanic.com/news/20217629/Crypto-Companies-Raise-823-Million-in-September?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T16:07:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TON",
+        "TIA"
+      ]
+    },
+    {
+      "title": "What Blockchain Project is Leading Development Activity in the Gaming Sector?",
+      "link": "https://cryptopanic.com/news/19974656/What-Blockchain-Project-is-Leading-Development-Activity-in-the-Gaming-Sector?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T16:00:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "EGLD"
+      ]
+    },
+    {
+      "title": "Lido (LDO) Faces Massive Correction As Token Losses Mount To 20%",
+      "link": "https://cryptopanic.com/news/19974617/Lido-LDO-Faces-Massive-Correction-As-Token-Losses-Mount-To-20?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T15:30:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SHIB",
+        "LDO",
+        "DAO"
+      ]
+    },
+    {
+      "title": "Crypto Analyst Shares Bullish Outlook on Solana and Two Other Altcoins",
+      "link": "https://cryptopanic.com/news/19974562/Crypto-Analyst-Shares-Bullish-Outlook-on-Solana-and-Two-Other-Altcoins?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T15:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "CRV",
+        "DAO"
+      ]
+    },
+    {
+      "title": "72% Of ETHUSDT Traders On Binance Go Long – Is This The Buy Signal You Need?",
+      "link": "https://cryptopanic.com/news/19974520/72-Of-ETHUSDT-Traders-On-Binance-Go-Long-Is-This-The-Buy-Signal-You-Need?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T14:30:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "SHIB",
+        "INJ"
+      ]
+    },
+    {
+      "title": "BitGo’s WBTC Retains Over 65% Market Dominance Despite Criticism of Custody Model: Report",
+      "link": "https://cryptopanic.com/news/19974519/BitGos-WBTC-Retains-Over-65-Market-Dominance-Despite-Criticism-of-Custody-Model-Report?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T14:28:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "WBTC"
+      ]
+    },
+    {
+      "title": "3 cryptocurrencies to avoid trading this week amid unlocks",
+      "link": "https://cryptopanic.com/news/19974512/3-cryptocurrencies-to-avoid-trading-this-week-amid-unlocks?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T14:22:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "APT",
+        "EIGEN"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Dogecoin Large Transactions On The Rise — Can This Fuel DOGE Price Recovery?",
+      "link": "https://cryptopanic.com/news/19974383/Dogecoin-Large-Transactions-On-The-Rise-Can-This-Fuel-DOGE-Price-Recovery?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T13:00:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DOGE",
+        "ALI"
+      ]
+    },
+    {
+      "title": "Mark Cuban Says FTX and Three Arrows Capital Would Still Be Operating if Gary Gensler Had Done the Right Thing",
+      "link": "https://cryptopanic.com/news/19974231/Mark-Cuban-Says-FTX-and-Three-Arrows-Capital-Would-Still-Be-Operating-if-Gary-Gensler-Had-Done-the-Right-Thing?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T11:45:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "W"
+      ]
+    },
+    {
+      "title": "Nigeria’s Oil-for-Naira Program, Blackrock’s New Stablecoin, and More — Week in Review",
+      "link": "https://cryptopanic.com/news/19974215/Nigerias-Oil-for-Naira-Program-Blackrocks-New-Stablecoin-and-More-Week-in-Review?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T11:30:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "ENA",
+        "HMSTR",
+        "MOODENG"
+      ]
+    },
+    {
+      "title": "Explained Monero's FCMP++ Explained for Beginners",
+      "link": "https://cryptopanic.com/news/monero/20014550/Explained-Moneros-FCMP-Explained-for-Beginners",
+      "pubDate": "2024-10-06T11:29:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Bitcoin Lags Under STH Realized Price Of $63,000 — What Does This Mean?",
+      "link": "https://cryptopanic.com/news/19974110/Bitcoin-Lags-Under-STH-Realized-Price-Of-63000-What-Does-This-Mean?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T10:00:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "ALI"
+      ]
+    },
+    {
+      "title": "Skepticism Sunday – October 06, 2024",
+      "link": "https://cryptopanic.com/news/monero/20014547/Skepticism-Sunday-October-06-2024",
+      "pubDate": "2024-10-06T10:00:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "NOT"
+      ]
+    },
+    {
+      "title": "Binance Market Update (2024-10-06)",
+      "link": "https://cryptopanic.com/news/20217628/Binance-Market-Update-2024-10-06?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T09:30:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "BNB",
+        "ADA",
+        "XRP",
+        "SOL",
+        "DOGE",
+        "TRX",
+        "AVAX",
+        "SHIB",
+        "CVC",
+        "TON"
+      ]
+    },
+    {
+      "title": "U.S. Spot Bitcoin ETFs Experience $300 Million Weekly Outflow, Ending Three-Week Inflow Trend",
+      "link": "https://cryptopanic.com/news/20217627/US-Spot-Bitcoin-ETFs-Experience-300-Million-Weekly-Outflow-Ending-Three-Week-Inflow-Trend?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T09:24:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ETHW",
+        "FBTC"
+      ]
+    },
+    {
+      "title": "90% Cardano (ADA) Price Drop Predicted by Max Kaiser: Details",
+      "link": "https://cryptopanic.com/news/19974037/90-Cardano-ADA-Price-Drop-Predicted-by-Max-Kaiser-Details?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T09:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Cardano currently unable to show performance that Bitcoin bulls would consider convincing",
+      "currencies": [
+        "BTC",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Margin Calls Plague Quant Hedge Funds as Chinese Stock Market Booms",
+      "link": "https://cryptopanic.com/news/19974019/Margin-Calls-Plague-Quant-Hedge-Funds-as-Chinese-Stock-Market-Booms?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T09:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QNT"
+      ]
+    },
+    {
+      "title": "KAS Price Prediction: Kaspa and Its Altcoin Competitor Are Ready for an ‘Unstoppable’ 1000x Rally to $5 by 2025",
+      "link": "https://cryptopanic.com/news/19973927/KAS-Price-Prediction-Kaspa-and-Its-Altcoin-Competitor-Are-Ready-for-an-Unstoppable-1000x-Rally-to-5-by-2025?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T07:45:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "KAS"
+      ]
+    },
+    {
+      "title": "Analyst PlanB Unveils Potential Trigger for Next Bitcoin ‘Pump,’ Says Whales Waiting for Outcome of One Event",
+      "link": "https://cryptopanic.com/news/19973895/Analyst-PlanB-Unveils-Potential-Trigger-for-Next-Bitcoin-Pump-Says-Whales-Waiting-for-Outcome-of-One-Event?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T07:04:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "QNT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "EigenLayer Token Issues Leave Community Worried After Recent Hack",
+      "link": "https://cryptopanic.com/news/19973780/EigenLayer-Token-Issues-Leave-Community-Worried-After-Recent-Hack?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T04:56:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EIGEN"
+      ]
+    },
+    {
+      "title": "Bitcoin Price Fall Increases Buying Momentum, Pushes Exchange BTC Balances To 6-Year Lows",
+      "link": "https://cryptopanic.com/news/19973725/Bitcoin-Price-Fall-Increases-Buying-Momentum-Pushes-Exchange-BTC-Balances-To-6-Year-Lows?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T04:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "INJ"
+      ]
+    },
+    {
+      "title": "Paypal Completes First Corporate Transaction Using PYUSD Stablecoin",
+      "link": "https://cryptopanic.com/news/19973589/Paypal-Completes-First-Corporate-Transaction-Using-PYUSD-Stablecoin?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T01:30:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "PYUSD"
+      ]
+    },
+    {
+      "title": "Crypto Analyst Predicts Bitcoin Price Will Hit New All-Time High If It Breaks This Level",
+      "link": "https://cryptopanic.com/news/19973570/Crypto-Analyst-Predicts-Bitcoin-Price-Will-Hit-New-All-Time-High-If-It-Breaks-This-Level?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T01:00:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "INJ"
+      ]
+    },
+    {
+      "title": "Sui, Celestia, Aptos Token Unlocks: How Will They Affect Bitcoin and Ethereum?",
+      "link": "https://cryptopanic.com/news/19973568/Sui-Celestia-Aptos-Token-Unlocks-How-Will-They-Affect-Bitcoin-and-Ethereum?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T00:50:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "APT",
+        "SUI",
+        "TIA"
+      ]
+    },
+    {
+      "title": "MultiversX (EGLD) Continues To Lead All Crypto Gaming Projects in Level of Development Activity: Santiment",
+      "link": "https://cryptopanic.com/news/19973539/MultiversX-EGLD-Continues-To-Lead-All-Crypto-Gaming-Projects-in-Level-of-Development-Activity-Santiment?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-06T00:00:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EGLD"
+      ]
+    }
+  ]
+}

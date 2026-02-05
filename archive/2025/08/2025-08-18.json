@@ -1,0 +1,980 @@
+{
+  "date": "2025-08-18",
+  "fetchedAt": "2026-02-05T07:27:08.610Z",
+  "articleCount": 70,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Monero (XMR) Suffers 51% Attack, Kraken Halts Deposits",
+      "link": "https://cryptopanic.com/news/monero/24329596/Monero-XMR-Suffers-51-Attack-Kraken-Halts-Deposits",
+      "pubDate": "2025-08-18T23:55:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "SEC delays decisions on several crypto ETFs amid work on streamlined approval process",
+      "link": "https://cryptopanic.com/news/litecoin/24328843/SEC-delays-decisions-on-several-crypto-ETFs-amid-work-on-streamlined-approval-process",
+      "pubDate": "2025-08-18T23:00:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "DOGE"
+      ]
+    },
+    {
+      "title": "Perplexity AI Compares XRP to 3 Top Altcoin Performers, Which is Best?",
+      "link": "https://cryptopanic.com/news/stellar/24328637/Perplexity-AI-Compares-XRP-to-3-Top-Altcoin-Performers-Which-is-Best",
+      "pubDate": "2025-08-18T22:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "SOL"
+      ]
+    },
+    {
+      "title": "OpenAI’s ChatGPT Predicts the Price of XRP, XMR, and ADA After Recent Market Crash",
+      "link": "https://cryptopanic.com/news/monero/24328623/OpenAIs-ChatGPT-Predicts-the-Price-of-XRP-XMR-and-ADA-After-Recent-Market-Crash",
+      "pubDate": "2025-08-18T22:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "XRP"
+      ]
+    },
+    {
+      "title": "BitMine accumulates $6.6B in ETH, rivaling BTC treasury companies",
+      "link": "https://cryptopanic.com/news/bitcoin/24326812/BitMine-accumulates-66B-in-ETH-rivaling-BTC-treasury-companies",
+      "pubDate": "2025-08-18T20:50:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "BitMine (BMNR) now holds over 1. 52M ETH, valued at $6. 6B, the biggest crypto reserve behind Strategy's BTC holdings. BitMine surpassed the Mara Holdings BTC treasury, valued at $5. 9B.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum treasury firm BTCS to pay ETH dividend and ‘loyalty payment’ in part to ward off short sellers",
+      "link": "https://cryptopanic.com/news/ethereum/24326621/Ethereum-treasury-firm-BTCS-to-pay-ETH-dividend-and-loyalty-payment-in-part-to-ward-off-short-sellers",
+      "pubDate": "2025-08-18T20:49:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The one-time, conditional loyalty payment is an attempt to reduce the amount of liquidity available to short sellers.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SEC Delays Decision on XRP, DOGE, LTC, and Truth Social Crypto ETFs to October",
+      "link": "https://cryptopanic.com/news/litecoin/24326539/SEC-Delays-Decision-on-XRP-DOGE-LTC-and-Truth-Social-Crypto-ETFs-to-October",
+      "pubDate": "2025-08-18T20:23:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Dogecoin Under Fire as Qubic Targets DOGE After Monero Attack: Can Bulls Prevent a Freefall?",
+      "link": "https://cryptopanic.com/news/monero/24325562/Dogecoin-Under-Fire-as-Qubic-Targets-DOGE-After-Monero-Attack-Can-Bulls-Prevent-a-Freefall",
+      "pubDate": "2025-08-18T20:00:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "XMR"
+      ]
+    },
+    {
+      "title": "CRO futures added to Bitunix",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/24422946/CRO-futures-added-to-Bitunix",
+      "pubDate": "2025-08-18T19:37:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO",
+        "MCO",
+        "I"
+      ]
+    },
+    {
+      "title": "After Attacking Monero, Qubic Sets Its Sights on Dogecoin—Here's Why",
+      "link": "https://cryptopanic.com/news/monero/24325470/After-Attacking-Monero-Qubic-Sets-Its-Sights-on-DogecoinHeres-Why",
+      "pubDate": "2025-08-18T19:31:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "XMR"
+      ]
+    },
+    {
+      "title": "Tom Lee’s BitMine Builds $6.6 Billion Ether Stash, Now Second-Largest Public Crypto Treasury After Strategy",
+      "link": "https://cryptopanic.com/news/ethereum/24324522/Tom-Lees-BitMine-Builds-66-Billion-Ether-Stash-Now-Second-Largest-Public-Crypto-Treasury-After-Strategy",
+      "pubDate": "2025-08-18T18:55:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "BitMine Immersion Technologies announced on Monday that it now has $6. 6 billion worth of Ethereum in its coffers.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Dominates Institutional Attention As Crypto Products See $3,750,000,000 in Flows: CoinShares",
+      "link": "https://cryptopanic.com/news/litecoin/24325581/Ethereum-Dominates-Institutional-Attention-As-Crypto-Products-See-3750000000-in-Flows-CoinShares",
+      "pubDate": "2025-08-18T18:41:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Stellar Development Foundation Invests in Archax, Aiming to Boost Tokenization",
+      "link": "https://cryptopanic.com/news/stellar/24325262/Stellar-Development-Foundation-Invests-in-Archax-Aiming-to-Boost-Tokenization",
+      "pubDate": "2025-08-18T18:36:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "U.S. SEC Delays Truth Social’s Bitcoin and Ether ETFs Alongside XRP and Litecoin ETFs",
+      "link": "https://cryptopanic.com/news/litecoin/24325436/US-SEC-Delays-Truth-Socials-Bitcoin-and-Ether-ETFs-Alongside-XRP-and-Litecoin-ETFs",
+      "pubDate": "2025-08-18T18:27:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "SEC Delays Decision on CoinShares Spot Litecoin ETF",
+      "link": "https://cryptopanic.com/news/litecoin/24323216/SEC-Delays-Decision-on-CoinShares-Spot-Litecoin-ETF",
+      "pubDate": "2025-08-18T18:00:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Cold Wallet $6.2M Presale And Cashback System Overshadows ADA Midnight Gains And OKB 102% Breakout Momentum",
+      "link": "https://cryptopanic.com/news/okb/24323211/Cold-Wallet-62M-Presale-And-Cashback-System-Overshadows-ADA-Midnight-Gains-And-OKB-102-Breakout-Momentum",
+      "pubDate": "2025-08-18T18:00:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "OKB"
+      ]
+    },
+    {
+      "title": "XRP Bulls vs Bears: Will Price Rebound or Collapse?",
+      "link": "https://cryptopanic.com/news/monero/24322087/XRP-Bulls-vs-Bears-Will-Price-Rebound-or-Collapse",
+      "pubDate": "2025-08-18T17:01:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XMR"
+      ]
+    },
+    {
+      "title": "SEC delays decisions on Truth Social’s Bitcoin and Ethereum ETF, along with XRP and Litecoin funds",
+      "link": "https://cryptopanic.com/news/litecoin/24322121/SEC-delays-decisions-on-Truth-Socials-Bitcoin-and-Ethereum-ETF-along-with-XRP-and-Litecoin-funds",
+      "pubDate": "2025-08-18T17:01:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Chaos Labs debates USDe risks as Pendle looping trade swells Ethena’s Aave footprint to $6.6 billion",
+      "link": "https://cryptopanic.com/news/aave/24321864/Chaos-Labs-debates-USDe-risks-as-Pendle-looping-trade-swells-Ethenas-Aave-footprint-to-66-billion",
+      "pubDate": "2025-08-18T16:46:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "ENA",
+        "PENDLE"
+      ]
+    },
+    {
+      "title": "Is Proof-of-Work Truly Unbreakable? Next Qubic Move Could Shatter the Illusion",
+      "link": "https://cryptopanic.com/news/monero/24321846/Is-Proof-of-Work-Truly-Unbreakable-Next-Qubic-Move-Could-Shatter-the-Illusion",
+      "pubDate": "2025-08-18T16:39:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "XMR"
+      ]
+    },
+    {
+      "title": "Stellar's XLM Token Drops 6% as Selling Pressure Intensifies",
+      "link": "https://cryptopanic.com/news/stellar/24322340/Stellars-XLM-Token-Drops-6-as-Selling-Pressure-Intensifies",
+      "pubDate": "2025-08-18T16:31:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Will Stellar [XLM] drop to $0.378 after bearish breakdown?",
+      "link": "https://cryptopanic.com/news/stellar/24320482/Will-Stellar-XLM-drop-to-0378-after-bearish-breakdown",
+      "pubDate": "2025-08-18T16:00:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Neo News: Week in Review – August 11 – August 17",
+      "link": "https://cryptopanic.com/news/neo/24320486/Neo-News-Week-in-Review-August-11-August-17",
+      "pubDate": "2025-08-18T15:53:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "NEO",
+        "FLM"
+      ]
+    },
+    {
+      "title": "DOGE Next? Kraken Freezes Monero (XMR) After 51% Control Grab",
+      "link": "https://cryptopanic.com/news/monero/24321781/DOGE-Next-Kraken-Freezes-Monero-XMR-After-51-Control-Grab",
+      "pubDate": "2025-08-18T15:49:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "XMR"
+      ]
+    },
+    {
+      "title": "ICP Loses Key Support as Token Falls 7% in Heavy Institutional Selling",
+      "link": "https://cryptopanic.com/news/internet-computer/24320622/ICP-Loses-Key-Support-as-Token-Falls-7-in-Heavy-Institutional-Selling",
+      "pubDate": "2025-08-18T15:48:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ]
+    },
+    {
+      "title": "Crypto analyst drops 'Buy' signal as controversial AI project goes after Dogecoin",
+      "link": "https://cryptopanic.com/news/monero/24320264/Crypto-analyst-drops-Buy-signal-as-controversial-AI-project-goes-after-Dogecoin",
+      "pubDate": "2025-08-18T15:02:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "XMR"
+      ]
+    },
+    {
+      "title": "Top 5 Cryptos to Buy in August Before They Explode — $0.005 Ethereum AI Project Aiming for $1 Listing",
+      "link": "https://cryptopanic.com/news/polkadot/24319111/Top-5-Cryptos-to-Buy-in-August-Before-They-Explode-0005-Ethereum-AI-Project-Aiming-for-1-Listing",
+      "pubDate": "2025-08-18T15:01:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XRP",
+        "DOT"
+      ]
+    },
+    {
+      "title": "Qubic failed to 51% attack Monero, but Dogecoin is next",
+      "link": "https://cryptopanic.com/news/monero/24318862/Qubic-failed-to-51-attack-Monero-but-Dogecoin-is-next",
+      "pubDate": "2025-08-18T14:48:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "XMR",
+        "QUBIC"
+      ]
+    },
+    {
+      "title": "Ethereum’s fate in jeopardy as largest-ever ETH shorts emerge",
+      "link": "https://cryptopanic.com/news/ethereum/24318795/Ethereums-fate-in-jeopardy-as-largest-ever-ETH-shorts-emerge",
+      "pubDate": "2025-08-18T14:38:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Speculators have built the largest leveraged short position in Ethereum (ETH) history, raising concerns about the cryptocurrency’s near-term outlook.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Stellar (XLM) and Cardano (ADA) Set to Break $1, While Coldware Pushes Towards 11,000% for Early Adopters",
+      "link": "https://cryptopanic.com/news/stellar/24317463/Stellar-XLM-and-Cardano-ADA-Set-to-Break-1-While-Coldware-Pushes-Towards-11000-for-Early-Adopters",
+      "pubDate": "2025-08-18T14:03:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Stellar Traders’ Uncertainty May Intensify XLM Price Downtrend Below $0.40",
+      "link": "https://cryptopanic.com/news/stellar/24318894/Stellar-Traders-Uncertainty-May-Intensify-XLM-Price-Downtrend-Below-040",
+      "pubDate": "2025-08-18T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Crypto Price Analysis 8-18: BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, CHAINLINK: LINK, FILECOIN: FIL",
+      "link": "https://cryptopanic.com/news/filecoin/24317328/Crypto-Price-Analysis-8-18-BITCOIN-BTC-ETHEREUM-ETH-SOLANA-SOL-CHAINLINK-LINK-FILECOIN-FIL",
+      "pubDate": "2025-08-18T13:55:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Monero Surges After 51% Attack Scare",
+      "link": "https://cryptopanic.com/news/monero/24317313/Monero-Surges-After-51-Attack-Scare",
+      "pubDate": "2025-08-18T13:53:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "From $88 to $114: Can OKB stand strong amid whale transfers and reach $130?",
+      "link": "https://cryptopanic.com/news/okb/24317126/From-88-to-114-Can-OKB-stand-strong-amid-whale-transfers-and-reach-130",
+      "pubDate": "2025-08-18T13:30:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ]
+    },
+    {
+      "title": "CoinDesk 20 Performance Update: Stellar (XLM) Drops 4.3%, Leading Index Lower",
+      "link": "https://cryptopanic.com/news/stellar/24317452/CoinDesk-20-Performance-Update-Stellar-XLM-Drops-43-Leading-Index-Lower",
+      "pubDate": "2025-08-18T13:26:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "NEO price dips 7% as Binance ends support for Neo Legacy Network",
+      "link": "https://cryptopanic.com/news/neo/24317224/NEO-price-dips-7-as-Binance-ends-support-for-Neo-Legacy-Network",
+      "pubDate": "2025-08-18T13:24:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Monero Price Prediction: Could XMR Price Rebound After Qubic Crash?",
+      "link": "https://cryptopanic.com/news/monero/24316975/Monero-Price-Prediction-Could-XMR-Price-Rebound-After-Qubic-Crash",
+      "pubDate": "2025-08-18T13:19:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Is Dogecoin Going to Zero? DOGE Holders In Terror as Qubic Community Targets Dogecoin After Monero",
+      "link": "https://cryptopanic.com/news/monero/24316973/Is-Dogecoin-Going-to-Zero-DOGE-Holders-In-Terror-as-Qubic-Community-Targets-Dogecoin-After-Monero",
+      "pubDate": "2025-08-18T13:17:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "XMR"
+      ]
+    },
+    {
+      "title": "After Monero Hit, Qubic Group Puts Dogecoin On Target List",
+      "link": "https://cryptopanic.com/news/monero/24315650/After-Monero-Hit-Qubic-Group-Puts-Dogecoin-On-Target-List",
+      "pubDate": "2025-08-18T13:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "XMR",
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Kraken Enables Monero (XMR) Deposits As Privacy Coin Struggles With 51% Attack",
+      "link": "https://cryptopanic.com/news/monero/24319121/Kraken-Enables-Monero-XMR-Deposits-As-Privacy-Coin-Struggles-With-51-Attack",
+      "pubDate": "2025-08-18T12:45:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Monero Price Climbs Post 51% Attack: Here Are Two Likely Reasons",
+      "link": "https://cryptopanic.com/news/monero/24315174/Monero-Price-Climbs-Post-51-Attack-Here-Are-Two-Likely-Reasons",
+      "pubDate": "2025-08-18T12:17:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XMR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Influencer Jailed For $3.5M Cryptojacking Scheme",
+      "link": "https://cryptopanic.com/news/monero/24313618/Crypto-Influencer-Jailed-For-35M-Cryptojacking-Scheme",
+      "pubDate": "2025-08-18T11:31:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Stellar Price Targets $2 as On-chain Factors Strengthen",
+      "link": "https://cryptopanic.com/news/stellar/24315184/Stellar-Price-Targets-2-as-On-chain-Factors-Strengthen",
+      "pubDate": "2025-08-18T11:20:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "KuCoin Pay Teams Up with Umy to Bring Crypto to the Travel Sector",
+      "link": "https://cryptopanic.com/news/kucoin-shares/24313307/KuCoin-Pay-Teams-Up-with-Umy-to-Bring-Crypto-to-the-Travel-Sector",
+      "pubDate": "2025-08-18T11:20:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "XMR Climbs After Qubic’s Monero Control Claim and Kraken Freeze",
+      "link": "https://cryptopanic.com/news/monero/24313742/XMR-Climbs-After-Qubics-Monero-Control-Claim-and-Kraken-Freeze",
+      "pubDate": "2025-08-18T11:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogecoin’s $2.3M daily mining profits lure Qubic after Monero network takeover",
+      "link": "https://cryptopanic.com/news/monero/24311746/Dogecoins-23M-daily-mining-profits-lure-Qubic-after-Monero-network-takeover",
+      "pubDate": "2025-08-18T10:46:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "XMR",
+        "QUBIC"
+      ]
+    },
+    {
+      "title": "HTX Hot Listings Weekly Recap (Aug 4-11): DONKEY Up 197% as Meme Coin and Ethereum Ecosystem Tokens Rally",
+      "link": "https://cryptopanic.com/news/huobi-token/24311741/HTX-Hot-Listings-Weekly-Recap-Aug-4-11-DONKEY-Up-197-as-Meme-Coin-and-Ethereum-Ecosystem-Tokens-Rally",
+      "pubDate": "2025-08-18T10:13:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "HT",
+        "MEMEFI"
+      ]
+    },
+    {
+      "title": "BlackRock and Ethereum Drive Crypto Inflows to $3.75 Billion",
+      "link": "https://cryptopanic.com/news/bitcoin/24311739/BlackRock-and-Ethereum-Drive-Crypto-Inflows-to-375-Billion",
+      "pubDate": "2025-08-18T09:52:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Crypto inflows surged last week, exceeding the one before sixfold. Amidst the capital influx into digital asset investment products, two names dominated the charts: BlackRock and Ethereum. It marks a steady series of positive flows, driving assets under management (AuM) to an all-time high (ATH) of US$244 billion. Crypto Inflows Surge Sixfold as BlackRock and Ethereum Lead According to the latest CoinShares report, crypto inflows soared to $3",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ATH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Whale Withdraws Significant Cryptocurrency Amid Market Downturn",
+      "link": "https://cryptopanic.com/news/wrapped-bitcoin/24311713/Whale-Withdraws-Significant-Cryptocurrency-Amid-Market-Downturn",
+      "pubDate": "2025-08-18T09:24:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "WBTC"
+      ]
+    },
+    {
+      "title": "Significant Withdrawal of WBTC and ETH Raises Speculation",
+      "link": "https://cryptopanic.com/news/wrapped-bitcoin/24311711/Significant-Withdrawal-of-WBTC-and-ETH-Raises-Speculation",
+      "pubDate": "2025-08-18T09:23:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "WBTC"
+      ]
+    },
+    {
+      "title": "Crypto Token Unlock: Bearish Concerns Ahead of SOL, DOGE, AVAX Release",
+      "link": "https://cryptopanic.com/news/avalanche-2/24313037/Crypto-Token-Unlock-Bearish-Concerns-Ahead-of-SOL-DOGE-AVAX-Release",
+      "pubDate": "2025-08-18T09:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Qubic Targets Dogecoin After Monero 51% Attack",
+      "link": "https://cryptopanic.com/news/monero/24308132/Qubic-Targets-Dogecoin-After-Monero-51-Attack",
+      "pubDate": "2025-08-18T09:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "XMR"
+      ]
+    },
+    {
+      "title": "Ether ETFs smash records as crypto products see $3.75B inflows",
+      "link": "https://cryptopanic.com/news/bitcoin/24308126/Ether-ETFs-smash-records-as-crypto-products-see-375B-inflows",
+      "pubDate": "2025-08-18T08:50:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ether continued dominating ETP inflows last week despite Bitcoin printing new highs above $124,000 and ETH only nearing all-time highs.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana DeFi takes over liquidations during recent SOL market slump",
+      "link": "https://cryptopanic.com/news/solana/24308047/Solana-DeFi-takes-over-liquidations-during-recent-SOL-market-slump",
+      "pubDate": "2025-08-18T08:33:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Solana saw more on-chain liquidations, as traffic shifted to perpetual futures trading through Phantom. Hyperliquid open interest on SOL also reached an all-time high.",
+      "currencies": [
+        "SOL",
+        "HYPE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Dogecoin Could Face Monero-Like 51% Attack, DOGE Price Under Pressure",
+      "link": "https://cryptopanic.com/news/monero/24315478/Dogecoin-Could-Face-Monero-Like-51-Attack-DOGE-Price-Under-Pressure",
+      "pubDate": "2025-08-18T08:07:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "XMR",
+        "IP"
+      ]
+    },
+    {
+      "title": "Here’s why ‘Litecoin’s price to $150’ is NOT a bad call to make for traders",
+      "link": "https://cryptopanic.com/news/litecoin/24306566/Heres-why-Litecoins-price-to-150-is-NOT-a-bad-call-to-make-for-traders",
+      "pubDate": "2025-08-18T08:00:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "NOT"
+      ]
+    },
+    {
+      "title": "Solana Briefly Hits 100K TPS Under Stress Load, Boosting SOL Appeal",
+      "link": "https://cryptopanic.com/news/solana/24307734/Solana-Briefly-Hits-100K-TPS-Under-Stress-Load-Boosting-SOL-Appeal",
+      "pubDate": "2025-08-18T07:54:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "\"Under a significant stress load, Solana briefly achieved an impressive milestone by reaching 100,000 transactions per second (TPS), which has greatly enhanced the appeal of its native cryptocurrency, SOL, among investors and developers alike.\"",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP News: Can Ripple Replace Banks Worldwide?",
+      "link": "https://cryptopanic.com/news/monero/24307200/XRP-News-Can-Ripple-Replace-Banks-Worldwide",
+      "pubDate": "2025-08-18T07:11:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XMR"
+      ]
+    },
+    {
+      "title": "Key Crypto and Macro Events to Watch This Week",
+      "link": "https://cryptopanic.com/news/aave/24304807/Key-Crypto-and-Macro-Events-to-Watch-This-Week",
+      "pubDate": "2025-08-18T07:00:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Bad News for DOGE? Qubic Community Votes to Target Dogecoin After Monero 51% Attack",
+      "link": "https://cryptopanic.com/news/monero/24304798/Bad-News-for-DOGE-Qubic-Community-Votes-to-Target-Dogecoin-After-Monero-51-Attack",
+      "pubDate": "2025-08-18T06:54:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "XMR"
+      ]
+    },
+    {
+      "title": "Security alert for Monero: Kraken stops XMR deposits after the shock of the 51% attack",
+      "link": "https://cryptopanic.com/news/monero/24309781/Security-alert-for-Monero-Kraken-stops-XMR-deposits-after-the-shock-of-the-51-attack",
+      "pubDate": "2025-08-18T06:38:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "Z"
+      ]
+    },
+    {
+      "title": "Litecoin Issues Warning: The Age of True Decentralization Is Over",
+      "link": "https://cryptopanic.com/news/litecoin/24304709/Litecoin-Issues-Warning-The-Age-of-True-Decentralization-Is-Over",
+      "pubDate": "2025-08-18T06:30:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Dogecoin Sellers in Control as Monero Attacker Votes to Target DOGE; Bitcoin Below $116K",
+      "link": "https://cryptopanic.com/news/monero/24304306/Dogecoin-Sellers-in-Control-as-Monero-Attacker-Votes-to-Target-DOGE-Bitcoin-Below-116K",
+      "pubDate": "2025-08-18T05:47:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "XMR"
+      ]
+    },
+    {
+      "title": "Monero Price Forecast: XMR eyes wedge breakout rally amid Qubic hashrate dominance",
+      "link": "https://cryptopanic.com/news/monero/24313599/Monero-Price-Forecast-XMR-eyes-wedge-breakout-rally-amid-Qubic-hashrate-dominance",
+      "pubDate": "2025-08-18T05:26:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Circle-Backed Company's Yen Stablecoin Nears Official Approval In Japan (UPDATED)",
+      "link": "https://cryptopanic.com/news/avalanche-2/24303246/Circle-Backed-Companys-Yen-Stablecoin-Nears-Official-Approval-In-Japan-UPDATED",
+      "pubDate": "2025-08-18T05:08:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDC",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Dogecoin Price Forecast: Qubic community votes to target DOGE after Monero attack",
+      "link": "https://cryptopanic.com/news/monero/24313598/Dogecoin-Price-Forecast-Qubic-community-votes-to-target-DOGE-after-Monero-attack",
+      "pubDate": "2025-08-18T04:54:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "XMR"
+      ]
+    },
+    {
+      "title": "Monero Bounces Back After 51% Attack Scare",
+      "link": "https://cryptopanic.com/news/monero/24301587/Monero-Bounces-Back-After-51-Attack-Scare",
+      "pubDate": "2025-08-18T03:56:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Former Monero Developer’s Viral XRP Post Ignites Crypto Culture War",
+      "link": "https://cryptopanic.com/news/monero/24300588/Former-Monero-Developers-Viral-XRP-Post-Ignites-Crypto-Culture-War",
+      "pubDate": "2025-08-18T03:30:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XMR",
+        "A"
+      ]
+    },
+    {
+      "title": "Crypto Influencer Sentenced for Cryptojacking Scheme Defrauding Cloud Providers",
+      "link": "https://cryptopanic.com/news/litecoin/24358635/Crypto-Influencer-Sentenced-for-Cryptojacking-Scheme-Defrauding-Cloud-Providers",
+      "pubDate": "2025-08-18T01:53:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "LTC",
+        "XMR"
+      ]
+    },
+    {
+      "title": "AVAX Price On The Verge Of A Bullish Breakout Amid Rising Interest?",
+      "link": "https://cryptopanic.com/news/avalanche-2/24297435/AVAX-Price-On-The-Verge-Of-A-Bullish-Breakout-Amid-Rising-Interest",
+      "pubDate": "2025-08-18T01:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AVAX",
+        "A"
+      ]
+    }
+  ]
+}

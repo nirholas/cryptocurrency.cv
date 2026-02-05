@@ -1,0 +1,32 @@
+{
+  "date": "2019-12-18",
+  "fetchedAt": "2026-02-05T07:27:06.991Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @Bitcoin: This is fine.",
+      "link": "https://cryptopanic.com/news/7445955/RT-Bitcoin-This-is-fine",
+      "pubDate": "2019-12-18T23:09:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "SNL"
+      ]
+    },
+    {
+      "title": "Your thoughts for next year Cryptocurrency Market? We're going 🆙️",
+      "link": "https://cryptopanic.com/news/7440236/Your-thoughts-for-next-year-Cryptocurrency-Market-Were-going?mtm_campaign=API-OFA",
+      "pubDate": "2019-12-18T12:53:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DEEP"
+      ]
+    }
+  ]
+}

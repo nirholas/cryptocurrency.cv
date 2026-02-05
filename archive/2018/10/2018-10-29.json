@@ -1,0 +1,45 @@
+{
+  "date": "2018-10-29",
+  "fetchedAt": "2026-02-05T07:27:07.891Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "New EOS Referendum Tool Could Enter Public Beta This Week",
+      "link": "https://cryptopanic.com/news/3500405/New-EOS-Referendum-Tool-Could-Enter-Public-Beta-This-Week",
+      "pubDate": "2018-10-29T17:59:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "GenerEOS Calculates That EOS Is 66,000 Times More Energy Efficient Than Bitcoin",
+      "link": "https://cryptopanic.com/news/3500069/GenerEOS-Calculates-That-EOS-Is-66000-Times-More-Energy-Efficient-Than-Bitcoin",
+      "pubDate": "2018-10-29T17:29:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

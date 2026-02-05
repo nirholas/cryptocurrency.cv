@@ -1,0 +1,379 @@
+{
+  "date": "2021-01-05",
+  "fetchedAt": "2026-02-05T07:27:06.785Z",
+  "articleCount": 25,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Announcing coreDEX",
+      "link": "https://cryptopanic.com/news/11320717/Announcing-coreDEX",
+      "pubDate": "2021-01-05T23:24:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "CORE"
+      ]
+    },
+    {
+      "title": "AAVE price soars to $123 all-time high as TVL rises and fundamentals improve",
+      "link": "https://cryptopanic.com/news/11036423/AAVE-price-soars-to-123-all-time-high-as-TVL-rises-and-fundamentals-improve",
+      "pubDate": "2021-01-05T23:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Aave’s rising total value locked, improving fundamentals and renewed interest in DeFi tokens triggered a double-digit rally in AAVE price.",
+      "currencies": [
+        "ETH",
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "#ccxx #counos",
+      "link": "https://cryptopanic.com/news/11036205/ccxx-counos",
+      "pubDate": "2021-01-05T22:56:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "Giving Up On Ripple: Grayscale Joins The Queue Of Institutional Investors Wiping XRP Off",
+      "link": "https://cryptopanic.com/news/ripple/11036020/Giving-Up-On-Ripple-Grayscale-Joins-The-Queue-Of-Institutional-Investors-Wiping-XRP-Off",
+      "pubDate": "2021-01-05T22:27:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Over the last few weeks, XRP has begun to lose its significance in the crypto space as the recent SEC lawsuit against Ripple has caused an adverse impact on the performance of the cryptocurrency. Recent reports have revealed several cases of diverse top exchanges delisting XRP from their trading services, thus resulting in a significant […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 14
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "One of the Largest XRP Holders in Existence Sold Nearly Half a Billion in Crypto in the Last Year",
+      "link": "https://cryptopanic.com/news/ripple/11035922/One-of-the-Largest-XRP-Holders-in-Existence-Sold-Nearly-Half-a-Billion-in-Crypto-in-the-Last-Year",
+      "pubDate": "2021-01-05T22:15:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple co-founder and one of the biggest XRP whales in history, Jed McCaleb, is entering 2021 with massive profits from selling the digital asset. Despite Ripple’s legal battles with the U.S. Securities and Exchange Commission (SEC), the Ripple co-founder was able to net $411 million in XRP sales throughout the past calendar year, bringing his […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Market Wrap: Bitcoin Breaks $34K as Ether Futures Interest Jumps $350M in a Day",
+      "link": "https://cryptopanic.com/news/tron/11035533/Market-Wrap-Bitcoin-Breaks-34K-as-Ether-Futures-Interest-Jumps-350M-in-a-Day",
+      "pubDate": "2021-01-05T21:38:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin breaks $34K while ether futures continue to gain steam.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Blog: Jste chytří v obchodování a nákupu kryptoměn?",
+      "link": "https://cryptopanic.com/news/11033837/Blog-Jste-chytri-v-obchodovani-a-nakupu-kryptomen",
+      "pubDate": "2021-01-05T19:01:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PLTC"
+      ]
+    },
+    {
+      "title": "XLM Exploded by 40% As Ukraine Picks Stellar to Develop Its Digital Asset Infrastructure",
+      "link": "https://cryptopanic.com/news/11033857/XLM-Exploded-by-40-As-Ukraine-Picks-Stellar-to-Develop-Its-Digital-Asset-Infrastructure",
+      "pubDate": "2021-01-05T19:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "XLM skyrockets by 40% in a day after Stellar announced a partnership with Ukraine to develop a digital asset infrastructure and a CBDC.",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP whales are sinking fast",
+      "link": "https://cryptopanic.com/news/ripple/11033530/XRP-whales-are-sinking-fast",
+      "pubDate": "2021-01-05T18:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The number of XRP addresses holding at least 1 million tokens has declined sharply over the past two weeks.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Crypto Asset Manager Grayscale Dumps XRP Amid Ripple-SEC Legal Fiasco",
+      "link": "https://cryptopanic.com/news/ripple/11030545/Crypto-Asset-Manager-Grayscale-Dumps-XRP-Amid-Ripple-SEC-Legal-Fiasco",
+      "pubDate": "2021-01-05T15:55:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The largest cryptocurrency asset manager, Grayscale, has removed XRP from its fund.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Grayscale Drops XRP From Large Cap Crypto Fund Following Ripple SEC Suit",
+      "link": "https://cryptopanic.com/news/ripple/11029521/Grayscale-Drops-XRP-From-Large-Cap-Crypto-Fund-Following-Ripple-SEC-Suit",
+      "pubDate": "2021-01-05T14:52:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Grayscale announced it ditched XRP on Dec. 31. Additionally, the firm's XRP Trust stopped accepting new subscriptions on Dec. 23.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Grayscale Suspends XRP Trust Fund, Removes Ripple from Large-Cap Index",
+      "link": "https://cryptopanic.com/news/ethereum/11029291/Grayscale-Suspends-XRP-Trust-Fund-Removes-Ripple-from-Large-Cap-Index",
+      "pubDate": "2021-01-05T14:48:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Grayscale LLC has liquidated XRP positions from its Digital Large Cap Fund (OTCQX: GDLC) after the funds’ partner exchange temporarily suspended XRP trading. Grayscale Liquidates XRP Grayscale LLC liquidated its XRP position from the large-cap fund, which accounted for 1.46% of the portfolio. The fund was rebalanced on Jan. 4, 2021, during the fund’s quarterly review....",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Grayscale Removes XRP from Its Digital Large Cap Fund",
+      "link": "https://cryptopanic.com/news/ripple/11029009/Grayscale-Removes-XRP-from-Its-Digital-Large-Cap-Fund",
+      "pubDate": "2021-01-05T14:27:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Grayscale crypto fund has just announced it no longer holds XRP in its DLC fund",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Grayscale dumps XRP: Here's where it's putting the cash",
+      "link": "https://cryptopanic.com/news/ripple/11029133/Grayscale-dumps-XRP-Heres-where-its-putting-the-cash",
+      "pubDate": "2021-01-05T14:25:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Grayscale Investments is the latest major crypto player to drop its association with Ripple's token.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Some members will host their own #AERGO Node to participate in the alliance. Though despite having a private blockc…",
+      "link": "https://cryptopanic.com/news/11028828/Some-members-will-host-their-own-AERGO-Node-to-participate-in-the-alliance-Though-despite-having-a-private-blockc",
+      "pubDate": "2021-01-05T14:20:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "A survey has shown that 75% of people believe #crypto #transactions are too difficult and complicated. So, without…",
+      "link": "https://cryptopanic.com/news/11027537/A-survey-has-shown-that-75-of-people-believe-crypto-transactions-are-too-difficult-and-complicated-So-without",
+      "pubDate": "2021-01-05T12:44:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "Stellar’s XLM Soars 40% After Ducking XRP Correlation; What’s Next?",
+      "link": "https://cryptopanic.com/news/11027256/Stellars-XLM-Soars-40-After-Ducking-XRP-Correlation-Whats-Next",
+      "pubDate": "2021-01-05T12:17:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Stellar’s native token XLM surged by approx 40 percent in just three days of trading, becoming one of the best top-cap cryptocurrencies based on week-to-date returns. The XLM/USD exchange rate reached $0.178 on Tuesday, its best level in three weeks, after showing signs of decoupling from XRP, a rival cryptocurrency issued by San Francisco-based Ripple […]",
+      "currencies": [
+        "XRP",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @H_Daskalov: While the @OpenSource_Uni project is part of the global \"#Education #Blockchain Market Map\", it is worth outlining it on th…",
+      "link": "https://cryptopanic.com/news/11024738/RT-H_Daskalov-While-the-OpenSource_Uni-project-is-part-of-the-global-Education-Blockchain-Market-Map-it-is-worth-outlining-it-on-th?mtm_campaign=API-OFA",
+      "pubDate": "2021-01-05T08:44:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EDU"
+      ]
+    },
+    {
+      "title": "RT @hackerb0t: Bitcoin Gold underwent a 51% attack for the third time in 3 years",
+      "link": "https://cryptopanic.com/news/11024482/RT-hackerb0t-Bitcoin-Gold-underwent-a-51-attack-for-the-third-time-in-3-years",
+      "pubDate": "2021-01-05T08:17:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTG"
+      ]
+    },
+    {
+      "title": "has been featured on Product Hunt! If you have a PH account, please support us by upvoting…",
+      "link": "https://cryptopanic.com/news/11024321/has-been-featured-on-Product-Hunt-If-you-have-a-PH-account-please-support-us-by-upvoting",
+      "pubDate": "2021-01-05T08:08:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HUNT"
+      ]
+    },
+    {
+      "title": "Proposal about 2021Q1 Koge Burning",
+      "link": "https://cryptopanic.com/news/11377797/Proposal-about-2021Q1-Koge-Burning?mtm_campaign=API-OFA",
+      "pubDate": "2021-01-05T07:15:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KOGE"
+      ]
+    },
+    {
+      "title": "If you make a transaction on #Ethereum you have to pay at least $19.19, but on our mainnet, Atlas, it costs you $0.…",
+      "link": "https://cryptopanic.com/news/11021500/If-you-make-a-transaction-on-Ethereum-you-have-to-pay-at-least-1919-but-on-our-mainnet-Atlas-it-costs-you-0",
+      "pubDate": "2021-01-05T02:30:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "The first 100 COVID-19 vaccination records for medical personnel at The Mediterranean Hospital of Cyprus are now se…",
+      "link": "https://cryptopanic.com/news/11021365/The-first-100-COVID-19-vaccination-records-for-medical-personnel-at-The-Mediterranean-Hospital-of-Cyprus-are-now-se",
+      "pubDate": "2021-01-05T02:09:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "VET",
+        "VTHO"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "@FoxNews \"Big Tech loves to track us and they have geolocation capabilities built into their respective websites an…",
+      "link": "https://cryptopanic.com/news/11021361/FoxNews-Big-Tech-loves-to-track-us-and-they-have-geolocation-capabilities-built-into-their-respective-websites-an",
+      "pubDate": "2021-01-05T02:07:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Gemini has submitted our comment letter that expressed our concern about the substance of FinCEN's proposed rule re…",
+      "link": "https://cryptopanic.com/news/11021281/Gemini-has-submitted-our-comment-letter-that-expressed-our-concern-about-the-substance-of-FinCENs-proposed-rule-re",
+      "pubDate": "2021-01-05T01:55:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    }
+  ]
+}

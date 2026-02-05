@@ -1,0 +1,44 @@
+{
+  "date": "2019-05-08",
+  "fetchedAt": "2026-02-05T07:27:06.997Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "TRX Will Pass Cardano, BTT To Rise, ETH 2.0 Testnet, Cardano Roadmap & Bitcoin Gambling Device",
+      "link": "https://cryptopanic.com/news/tron/5358537/TRX-Will-Pass-Cardano-BTT-To-Rise-ETH-20-Testnet-Cardano-Roadmap-Bitcoin-Gambling-Device",
+      "pubDate": "2019-05-08T12:18:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitfinex Confirms Initial Exchange Offering to Raise Up to $1 Billion in Tether",
+      "link": "https://cryptopanic.com/news/5357447/Bitfinex-Confirms-Initial-Exchange-Offering-to-Raise-Up-to-1-Billion-in-Tether",
+      "pubDate": "2019-05-08T10:06:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 16
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

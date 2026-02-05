@@ -1,0 +1,25 @@
+{
+  "date": "2019-11-29",
+  "fetchedAt": "2026-02-05T07:27:06.977Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA to Release a Digital Identity Experimental Application in the First Half of 2020",
+      "link": "https://cryptopanic.com/news/7275639/IOTA-to-Release-a-Digital-Identity-Experimental-Application-in-the-First-Half-of-2020",
+      "pubDate": "2019-11-29T07:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

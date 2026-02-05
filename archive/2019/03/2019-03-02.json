@@ -1,0 +1,58 @@
+{
+  "date": "2019-03-02",
+  "fetchedAt": "2026-02-05T07:27:06.997Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "OMG! The EOS Blockchain Is Already 4TB In Size!",
+      "link": "https://cryptopanic.com/news/eos/4720260/OMG-The-EOS-Blockchain-Is-Already-4TB-In-Size",
+      "pubDate": "2019-03-02T14:42:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 11
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Why I Think EOS Is Being Chosen By So Many Dapp Developers",
+      "link": "https://cryptopanic.com/news/eos/4720259/Why-I-Think-EOS-Is-Being-Chosen-By-So-Many-Dapp-Developers",
+      "pubDate": "2019-03-02T14:01:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 5
+      }
+    },
+    {
+      "title": "McAfee Sends Love to Tron-Based Platform, Hoping It Will Be YouTube Killer",
+      "link": "https://cryptopanic.com/news/tron/4719284/McAfee-Sends-Love-to-Tron-Based-Platform-Hoping-It-Will-Be-YouTube-Killer",
+      "pubDate": "2019-03-02T10:07:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

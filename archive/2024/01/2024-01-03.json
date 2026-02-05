@@ -1,0 +1,662 @@
+{
+  "date": "2024-01-03",
+  "fetchedAt": "2026-02-05T07:27:08.060Z",
+  "articleCount": 42,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "VC roundup: blockchain storage, rollups, and Bitcoin rewards draw investors",
+      "link": "https://cryptopanic.com/news/19148795/VC-roundup-blockchain-storage-rollups-and-Bitcoin-rewards-draw-investors",
+      "pubDate": "2024-01-03T20:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ATOM"
+      ]
+    },
+    {
+      "title": "Institutions Double Down on Bitcoin Price Predictions for 2024 Despite Recent Volatility",
+      "link": "https://cryptopanic.com/news/19148793/Institutions-Double-Down-on-Bitcoin-Price-Predictions-for-2024-Despite-Recent-Volatility",
+      "pubDate": "2024-01-03T20:24:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XLM",
+        "ETC",
+        "FLOW",
+        "OP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "At Least 3 SEC Commissioners Are For ETF Approval Says Bloomberg Analyst",
+      "link": "https://cryptopanic.com/news/19148732/At-Least-3-SEC-Commissioners-Are-For-ETF-Approval-Says-Bloomberg-Analyst",
+      "pubDate": "2024-01-03T20:08:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Eric Balchunas, a senior ETF analyst for Bloomberg, has stated that at least 3, out of the 5 SEC commissioners, are in favor of approving the bitcoin spot ETFs.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 36,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Dives 9% Amid Matrixport Report Fury, Jihan Wu’s Defense, and BTC Funding Rates Debate",
+      "link": "https://cryptopanic.com/news/19148700/Bitcoin-Dives-9-Amid-Matrixport-Report-Fury-Jihan-Wus-Defense-and-BTC-Funding-Rates-Debate",
+      "pubDate": "2024-01-03T19:50:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Cosmos Hub Falls More Than 10% In 24 hours",
+      "link": "https://cryptopanic.com/news/19148627/Cryptocurrency-Cosmos-Hub-Falls-More-Than-10-In-24-hours",
+      "pubDate": "2024-01-03T19:03:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Top Altcoins To Buy January 3: MKR, SOL, BONK",
+      "link": "https://cryptopanic.com/news/19148591/Top-Altcoins-To-Buy-January-3-MKR-SOL-BONK",
+      "pubDate": "2024-01-03T19:00:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "MKR",
+        "BONK"
+      ]
+    },
+    {
+      "title": "XRP Army Bank On A Massive Bull Run As Analyst Foresees Ripple Emerging as Market Leader Amid IPO Rumors",
+      "link": "https://cryptopanic.com/news/19148570/XRP-Army-Bank-On-A-Massive-Bull-Run-As-Analyst-Foresees-Ripple-Emerging-as-Market-Leader-Amid-IPO-Rumors",
+      "pubDate": "2024-01-03T18:54:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The pundit highlighted Ripple's focus on cross-border payments and involvement in helping governments form Central Bank digital currencies as key factors contributing to its potential market leadership.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Gaming Tokens IMX, SAND and AXS Plunge Following Bitcoin Flash Crash",
+      "link": "https://cryptopanic.com/news/19148521/Gaming-Tokens-IMX-SAND-and-AXS-Plunge-Following-Bitcoin-Flash-Crash",
+      "pubDate": "2024-01-03T18:33:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SAND",
+        "AXS",
+        "GALA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "These 3 Narratives Could Drive Crypto in 2024: 15 Altcoins to Watch",
+      "link": "https://cryptopanic.com/news/19148519/These-3-Narratives-Could-Drive-Crypto-in-2024-15-Altcoins-to-Watch",
+      "pubDate": "2024-01-03T18:11:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "DOGE",
+        "SHIB",
+        "SAND",
+        "ICP",
+        "AXS",
+        "GALA",
+        "IMX",
+        "RNDR",
+        "FET",
+        "TAO",
+        "BONK",
+        "ORDI"
+      ]
+    },
+    {
+      "title": "Crypto Analyst Blasts $20,000 XRP Price Target, Reveals Why It’s Impossible",
+      "link": "https://cryptopanic.com/news/19148439/Crypto-Analyst-Blasts-20000-XRP-Price-Target-Reveals-Why-Its-Impossible",
+      "pubDate": "2024-01-03T18:00:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Santiment Named Six Altcoins: \"Bitcoin Stimulated These Altcoins, Their Rise May Continue!\"",
+      "link": "https://cryptopanic.com/news/19148449/Santiment-Named-Six-Altcoins-Bitcoin-Stimulated-These-Altcoins-Their-Rise-May-Continue",
+      "pubDate": "2024-01-03T17:55:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MKR",
+        "BSV",
+        "SEI"
+      ]
+    },
+    {
+      "title": "By The Numbers: Crypto Users Lose $300 Million To Phishing Scams In 2023",
+      "link": "https://cryptopanic.com/news/internet-computer/19148282/By-The-Numbers-Crypto-Users-Lose-300-Million-To-Phishing-Scams-In-2023",
+      "pubDate": "2024-01-03T16:30:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDC",
+        "ICP"
+      ]
+    },
+    {
+      "title": "SEC Meeting ETF Issuers – Approval Potentially Imminent",
+      "link": "https://cryptopanic.com/news/bitcoin/19148250/SEC-Meeting-ETF-Issuers-Approval-Potentially-Imminent",
+      "pubDate": "2024-01-03T16:29:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The Securities and Exchanges Commission (SEC) is holding meetings today with the exchanges, Nasdaq, CBOE and NYSE to finalize comments on the 19b-4s submitted by the BTC Spot ETF issuers.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 33,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin ETF may get rejected and trigger 20% price drop, Matrixport predicts",
+      "link": "https://cryptopanic.com/news/bitcoin/19148237/Bitcoin-ETF-may-get-rejected-and-trigger-20-price-drop-Matrixport-predicts",
+      "pubDate": "2024-01-03T16:26:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Vitalik Buterin Wants Ethereum to go Back to Cybherpunk, Ethereum Classic Records 24% Spike, Pullix Stage 5 Begins",
+      "link": "https://cryptopanic.com/news/19148167/Vitalik-Buterin-Wants-Ethereum-to-go-Back-to-Cybherpunk-Ethereum-Classic-Records-24-Spike-Pullix-Stage-5-Begins",
+      "pubDate": "2024-01-03T16:04:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "Korean gaming firm Wemade owes $41M in taxes after launching $100M Web3 fund",
+      "link": "https://cryptopanic.com/news/19148122/Korean-gaming-firm-Wemade-owes-41M-in-taxes-after-launching-100M-Web3-fund",
+      "pubDate": "2024-01-03T15:48:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WEMIX"
+      ]
+    },
+    {
+      "title": "Matt Bell – Turbofish – The Smart Economy Podcast: Episode 54",
+      "link": "https://cryptopanic.com/news/19148119/Matt-Bell-Turbofish-The-Smart-Economy-Podcast-Episode-54",
+      "pubDate": "2024-01-03T15:46:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Webb: Unmasking Farmington - FTX, Fluent Finance and the Coming Digital Dollar",
+      "link": "https://cryptopanic.com/news/19147990/Webb-Unmasking-Farmington-FTX-Fluent-Finance-and-the-Coming-Digital-Dollar",
+      "pubDate": "2024-01-03T15:01:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "U.S. SEC Will Reject Bitcoin ETF: Matrixport Predicts",
+      "link": "https://cryptopanic.com/news/19147984/US-SEC-Will-Reject-Bitcoin-ETF-Matrixport-Predicts",
+      "pubDate": "2024-01-03T14:56:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Matrixport report predicts SEC Bitcoin ETF rejections, causing a drop in Bitcoin price and showing the market's sensitivity to news.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "The SEC Will Not Approve Spot Bitcoin ETFs in January: Matrixport",
+      "link": "https://cryptopanic.com/news/bitcoin/19147668/The-SEC-Will-Not-Approve-Spot-Bitcoin-ETFs-in-January-Matrixport",
+      "pubDate": "2024-01-03T13:06:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Matrixport cautioned of a severe downturn in Bitcoin, anticipating a 20% decline, should the SEC reject the proposed spot ETFs.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano In 2024: Dollar Dream Or Downward Spiral For ADA?",
+      "link": "https://cryptopanic.com/news/19147630/Cardano-In-2024-Dollar-Dream-Or-Downward-Spiral-For-ADA",
+      "pubDate": "2024-01-03T13:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "After a spectacular climb of over 150% in 2023, Cardano (ADA) has reached a new yearly high, touching a peak of $0.67 for the second time last month. Notably, the increase coincides with an impressive rise in important Cardano ecosystem components, with the leading Decentralized Exchange (DEX) Minswap witnessing an astounding 26,000% gain and drawing a sizable influx of new users. On its...",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "5 Altcoins on Fire: Can SEI, ARB, HBAR, RUNE, and GMX Sustain the Rally?",
+      "link": "https://cryptopanic.com/news/19147645/5-Altcoins-on-Fire-Can-SEI-ARB-HBAR-RUNE-and-GMX-Sustain-the-Rally",
+      "pubDate": "2024-01-03T12:54:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "HBAR",
+        "RUNE",
+        "ARB",
+        "SEI"
+      ]
+    },
+    {
+      "title": "Bitcoin Spot ETF Proposals to Be Rejected by SEC: Matrixport",
+      "link": "https://cryptopanic.com/news/19147615/Bitcoin-Spot-ETF-Proposals-to-Be-Rejected-by-SEC-Matrixport",
+      "pubDate": "2024-01-03T12:53:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "\"SEC Chair Gensler is not embracing crypto in the U.S., and it might even be a very long shot to expect that he would vote to approve bitcoin spot ETFs,\" Matrixport said.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Crypto Price Prediction For January 3: SOL, ICP, MKR",
+      "link": "https://cryptopanic.com/news/19147599/Crypto-Price-Prediction-For-January-3-SOL-ICP-MKR",
+      "pubDate": "2024-01-03T12:48:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "ICP",
+        "MKR"
+      ]
+    },
+    {
+      "title": "SEC will reject all bitcoin spot ETFs in January, says Matrixport analyst",
+      "link": "https://cryptopanic.com/news/19147521/SEC-will-reject-all-bitcoin-spot-ETFs-in-January-says-Matrixport-analyst",
+      "pubDate": "2024-01-03T12:20:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Analyst Markus Thielen argued the applications still fall short of a critical requirement that must be met before the SEC can approve them.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 15
+      }
+    },
+    {
+      "title": "Peter Schiff says spot Bitcoin ETF could crash BTC price",
+      "link": "https://cryptopanic.com/news/bitcoin/19147534/Peter-Schiff-says-spot-Bitcoin-ETF-could-crash-BTC-price",
+      "pubDate": "2024-01-03T12:19:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Matrixport Knew the Drop in Bitcoin! Here is that report",
+      "link": "https://cryptopanic.com/news/19147527/Matrixport-Knew-the-Drop-in-Bitcoin-Here-is-that-report",
+      "pubDate": "2024-01-03T12:17:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "In its latest report, Matrixport claimed that the SEC will reject all Bitcoin spot ETFs in January and BTC could fall to $38,000. Continue Reading: Matrixport Knew the Drop in Bitcoin! Here is that report",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "There was a sudden drop in Bitcoin (BTC) price! What is the reason for the decline?",
+      "link": "https://cryptopanic.com/news/19147528/There-was-a-sudden-drop-in-Bitcoin-BTC-price-What-is-the-reason-for-the-decline",
+      "pubDate": "2024-01-03T12:12:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin (BTC) fell sharply to $42,242. What is the source of the decline? Will the SEC approve Bitcoin ETFs? Continue Reading: There was a sudden drop in Bitcoin (BTC) price! What is the reason for the decline?",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Xbox Bans User for One Year for Capturing Gameplay Footage in ‘Baldur’s Gate 3’",
+      "link": "https://cryptopanic.com/news/19147496/Xbox-Bans-User-for-One-Year-for-Capturing-Gameplay-Footage-in-Baldurs-Gate-3",
+      "pubDate": "2024-01-03T12:07:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "GT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Here’s Why the Internet Computer (ICP) Price Increased by 150% in 20 Days",
+      "link": "https://cryptopanic.com/news/internet-computer/19147517/Heres-Why-the-Internet-Computer-ICP-Price-Increased-by-150-in-20-Days",
+      "pubDate": "2024-01-03T12:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ICP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "ICP Defies Market Movements With 14% Surge, BTC Maintains $45K (Market Watch)",
+      "link": "https://cryptopanic.com/news/internet-computer/19147147/ICP-Defies-Market-Movements-With-14-Surge-BTC-Maintains-45K-Market-Watch",
+      "pubDate": "2024-01-03T09:46:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ICP"
+      ]
+    },
+    {
+      "title": "Internet Computer Protocol Grabs Limelight With 222% ICP Price Rally",
+      "link": "https://cryptopanic.com/news/internet-computer/19147128/Internet-Computer-Protocol-Grabs-Limelight-With-222-ICP-Price-Rally",
+      "pubDate": "2024-01-03T09:38:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ]
+    },
+    {
+      "title": "Binance backs Zilliqa and Sei upgrades amid a new play-to-earn memecoin presale",
+      "link": "https://cryptopanic.com/news/19147026/Binance-backs-Zilliqa-and-Sei-upgrades-amid-a-new-play-to-earn-memecoin-presale",
+      "pubDate": "2024-01-03T08:46:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ZIL",
+        "SEI"
+      ]
+    },
+    {
+      "title": "Chainlink Bullish Chart Pattern Hints At $34 Target – But Can It Break Through?",
+      "link": "https://cryptopanic.com/news/internet-computer/19146933/Chainlink-Bullish-Chart-Pattern-Hints-At-34-Target-But-Can-It-Break-Through",
+      "pubDate": "2024-01-03T08:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "LINK",
+        "ICP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Is Internet Computer (ICP) The Next Big Thing? 60% Jump Raises Eyebrows",
+      "link": "https://cryptopanic.com/news/19146767/Is-Internet-Computer-ICP-The-Next-Big-Thing-60-Jump-Raises-Eyebrows",
+      "pubDate": "2024-01-03T06:21:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ICP",
+        "BSV",
+        "OP",
+        "SEI"
+      ]
+    },
+    {
+      "title": "Bitcoin (BTC) Miners Mint $4 Billion In Fees Over the Last Month",
+      "link": "https://cryptopanic.com/news/19146677/Bitcoin-BTC-Miners-Mint-4-Billion-In-Fees-Over-the-Last-Month",
+      "pubDate": "2024-01-03T04:44:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "GALA"
+      ]
+    },
+    {
+      "title": "Crypto Prices Today: Bitcoin, Ethereum Slip Into Red While KAS Surges",
+      "link": "https://cryptopanic.com/news/19146654/Crypto-Prices-Today-Bitcoin-Ethereum-Slip-Into-Red-While-KAS-Surges",
+      "pubDate": "2024-01-03T04:10:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "KAS"
+      ]
+    },
+    {
+      "title": "3 Altcoins That Could Replicate Solana’s 975% Annual Growth",
+      "link": "https://cryptopanic.com/news/19146652/3-Altcoins-That-Could-Replicate-Solanas-975-Annual-Growth",
+      "pubDate": "2024-01-03T04:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDC",
+        "MATIC",
+        "CFX",
+        "WEMIX"
+      ]
+    },
+    {
+      "title": "Bitcoin L2 Stacks rises 10%; here’s why",
+      "link": "https://cryptopanic.com/news/blockstack/19146616/Bitcoin-L2-Stacks-rises-10-heres-why",
+      "pubDate": "2024-01-03T03:30:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "STX"
+      ]
+    },
+    {
+      "title": "South Korean blockchain Klaytn onboards gold RWA DeFi platform",
+      "link": "https://cryptopanic.com/news/19146552/South-Korean-blockchain-Klaytn-onboards-gold-RWA-DeFi-platform",
+      "pubDate": "2024-01-03T02:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "KLAY"
+      ]
+    },
+    {
+      "title": "Osmosis hits $1 billion in monthly volume as interest in Cosmos surges",
+      "link": "https://cryptopanic.com/news/19146510/Osmosis-hits-1-billion-in-monthly-volume-as-interest-in-Cosmos-surges",
+      "pubDate": "2024-01-03T01:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "OSMO"
+      ]
+    },
+    {
+      "title": "Dymension Expands Reach into Solana Community: Unveils Massive $DYM Airdrop for Active Solana Users",
+      "link": "https://cryptopanic.com/news/19789722/Dymension-Expands-Reach-into-Solana-Community-Unveils-Massive-DYM-Airdrop-for-Active-Solana-Users?mtm_campaign=API-OFA",
+      "pubDate": "2024-01-03T00:30:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "NFT",
+        "DYM"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "date": "2020-11-12",
+  "fetchedAt": "2026-02-05T07:27:06.937Z",
+  "articleCount": 6,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "All financial service activities, decentralized financial applications of ZEON Network will be authorized by the F…",
+      "link": "https://cryptopanic.com/news/10520775/All-financial-service-activities-decentralized-financial-applications-of-ZEON-Network-will-be-authorized-by-the-F",
+      "pubDate": "2020-11-12T20:25:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEON"
+      ]
+    },
+    {
+      "title": "Releasing #IOTA Identity Alpha: A Standard Framework for #DigitalIdentity! Check all the code resources and docs av…",
+      "link": "https://cryptopanic.com/news/10518812/Releasing-IOTA-Identity-Alpha-A-Standard-Framework-for-DigitalIdentity-Check-all-the-code-resources-and-docs-av",
+      "pubDate": "2020-11-12T17:01:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "IOTA Implements \"Post-Quantum\" Upgrade, Dominik Schiener Teases \"Exciting Times To Come\"",
+      "link": "https://cryptopanic.com/news/10518204/IOTA-Implements-Post-Quantum-Upgrade-Dominik-Schiener-Teases-Exciting-Times-To-Come",
+      "pubDate": "2020-11-12T16:00:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Like this tweet and let us know who wants a giveaway🧐",
+      "link": "https://cryptopanic.com/news/10512388/Like-this-tweet-and-let-us-know-who-wants-a-giveaway",
+      "pubDate": "2020-11-12T01:52:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "RT @chainlink: Cross-chain DeFi blockchain @Whitecoiner is making #Chainlink its recommended oracle provider and will use Chainlink Price F…",
+      "link": "https://cryptopanic.com/news/10512379/RT-chainlink-Cross-chain-DeFi-blockchain-Whitecoiner-is-making-Chainlink-its-recommended-oracle-provider-and-will-use-Chainlink-Price-F",
+      "pubDate": "2020-11-12T01:48:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "XWC"
+      ]
+    },
+    {
+      "title": "RT @BitcoinKingom: #Bitcoin Transaction Volume continues to pick up on PAX A920 #XPOS here in America it feels great to see all of this com…",
+      "link": "https://cryptopanic.com/news/paxos-standard/10512057/RT-BitcoinKingom-Bitcoin-Transaction-Volume-continues-to-pick-up-on-PAX-A920-XPOS-here-in-America-it-feels-great-to-see-all-of-this-com",
+      "pubDate": "2020-11-12T00:48:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "NPXS",
+        "PXS",
+        "NPXSXEM"
+      ]
+    }
+  ]
+}

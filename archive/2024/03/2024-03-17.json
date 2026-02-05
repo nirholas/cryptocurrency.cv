@@ -1,0 +1,495 @@
+{
+  "date": "2024-03-17",
+  "fetchedAt": "2026-02-05T07:27:08.070Z",
+  "articleCount": 30,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Cardano Hydra moves forward despite FUD, says Charles Hoskinson",
+      "link": "https://cryptopanic.com/news/19334625/Cardano-Hydra-moves-forward-despite-FUD-says-Charles-Hoskinson",
+      "pubDate": "2024-03-17T23:54:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Charles Hoskinson, the founder of Cardano, addressed concerns surrounding the development of Hydra. This layer-two scaling solution aims to bolster the Cardano blockchain’s transaction processing capabilities. Amidst circulating rumors of its abandonment, Hoskinson affirmed that Hydra’s development team is both productive and motivated. Addressing the Hydra concerns Hydra stands as a...",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Shiba Inu Burns Millions of SHIB Tokens, Aiming for Rarity Amidst Price Volatility",
+      "link": "https://cryptopanic.com/news/19334585/Shiba-Inu-Burns-Millions-of-SHIB-Tokens-Aiming-for-Rarity-Amidst-Price-Volatility",
+      "pubDate": "2024-03-17T23:06:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Recent data from the Shibburn tracker reveals a significant amount of Shiba Inu (SHIB) meme...",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Despite “Loser Coin” Tag, Ripple’s XRP Army Strongly Expect Monstrous Rally For This One Factor",
+      "link": "https://cryptopanic.com/news/19334500/Despite-Loser-Coin-Tag-Ripples-XRP-Army-Strongly-Expect-Monstrous-Rally-For-This-One-Factor",
+      "pubDate": "2024-03-17T21:47:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP's recent price decline has sparked a heated debate among investors and analysts, with some predicting a further decline and others expecting a massive rebound.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 8
+      }
+    },
+    {
+      "title": "Market Trends Show Early Dogecoin (DOGE) & PancakeSwap (CAKE) Investors Pour Huge Capital Into Newly Released Raffle Coin (RAFF): Lets Understand Why",
+      "link": "https://cryptopanic.com/news/pancakeswap-token/19334574/Market-Trends-Show-Early-Dogecoin-DOGE-PancakeSwap-CAKE-Investors-Pour-Huge-Capital-Into-Newly-Released-Raffle-Coin-RAFF-Lets-Understand-Why",
+      "pubDate": "2024-03-17T21:46:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "CAKE"
+      ]
+    },
+    {
+      "title": "Shiba Inu’s Silent Rise: Outshining Bitcoin and Ethereum",
+      "link": "https://cryptopanic.com/news/19334427/Shiba-Inus-Silent-Rise-Outshining-Bitcoin-and-Ethereum",
+      "pubDate": "2024-03-17T20:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Shiba Inu has emerged as one of the top-performing digital assets this year, surpassing crypto market giants like Bitcoin and Ethereum. Notably, this milestone occurred amid the Shibarium, reaching a record number of transactions. Shiba Inu Outperforms Bitcoin and Ethereum Despite receiving less attention, Shiba Inu has silently surpassed Bitcoin and Ethereum price performance...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "This Week in Crypto Games: PRIME Pumps on 'Parallel' Maker’s Solana Game News, Airdrop Mania Continues",
+      "link": "https://cryptopanic.com/news/19334396/This-Week-in-Crypto-Games-PRIME-Pumps-on-Parallel-Makers-Solana-Game-News-Airdrop-Mania-Continues?mtm_campaign=API-OFA",
+      "pubDate": "2024-03-17T20:01:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "NFT",
+        "PRIME"
+      ]
+    },
+    {
+      "title": "Bittensor, Render tokens rebound as BitBot popularity rises",
+      "link": "https://cryptopanic.com/news/19334384/Bittensor-Render-tokens-rebound-as-BitBot-popularity-rises",
+      "pubDate": "2024-03-17T19:51:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RNDR",
+        "TAO"
+      ]
+    },
+    {
+      "title": "DeeStream (DST) Emerges as the New Darling: Filecoin (FIL) and Near Protocol (NEAR) Communities Enthralled by Its Potential",
+      "link": "https://cryptopanic.com/news/19334377/DeeStream-DST-Emerges-as-the-New-Darling-Filecoin-FIL-and-Near-Protocol-NEAR-Communities-Enthralled-by-Its-Potential",
+      "pubDate": "2024-03-17T19:36:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "NEAR",
+        "FIL"
+      ]
+    },
+    {
+      "title": "BTC and ETH Derivative Tokens Dominate by Securing Several Top Positions in the Crypto Economy",
+      "link": "https://cryptopanic.com/news/19334375/BTC-and-ETH-Derivative-Tokens-Dominate-by-Securing-Several-Top-Positions-in-the-Crypto-Economy",
+      "pubDate": "2024-03-17T19:30:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "WBTC"
+      ]
+    },
+    {
+      "title": "DeeStream (DST) Captivates Bitcoin Cash (BCH) and Stellar (XLM) Admirers: A Presale Poised for Historical Gains",
+      "link": "https://cryptopanic.com/news/19334363/DeeStream-DST-Captivates-Bitcoin-Cash-BCH-and-Stellar-XLM-Admirers-A-Presale-Poised-for-Historical-Gains",
+      "pubDate": "2024-03-17T19:25:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Crypto market’s weekly winners and losers – BOME, JUP, SHIB, BSV",
+      "link": "https://cryptopanic.com/news/19334311/Crypto-markets-weekly-winners-and-losers-BOME-JUP-SHIB-BSV",
+      "pubDate": "2024-03-17T18:30:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "BSV",
+        "JUP"
+      ]
+    },
+    {
+      "title": "Bitcoin price consolidation preps NEAR, APT, RNDR and MKR for more upside",
+      "link": "https://cryptopanic.com/news/19334303/Bitcoin-price-consolidation-preps-NEAR-APT-RNDR-and-MKR-for-more-upside",
+      "pubDate": "2024-03-17T18:21:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "NEAR",
+        "MKR",
+        "RNDR",
+        "APT"
+      ]
+    },
+    {
+      "title": "Tether (USDT) and Ethereum Classic (ETC) Holders Eye Kelexo (KLXO) Presale Amidst Bitcoin (BTC) ATH Surge",
+      "link": "https://cryptopanic.com/news/19334301/Tether-USDT-and-Ethereum-Classic-ETC-Holders-Eye-Kelexo-KLXO-Presale-Amidst-Bitcoin-BTC-ATH-Surge",
+      "pubDate": "2024-03-17T18:16:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "ETC"
+      ]
+    },
+    {
+      "title": "Solana’s network hit with massive congestion; Will SOL retreat?",
+      "link": "https://cryptopanic.com/news/19334228/Solanas-network-hit-with-massive-congestion-Will-SOL-retreat",
+      "pubDate": "2024-03-17T17:25:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The decentralized finance (DeFi) crypto project Solana (SOL) has experienced a significant surge in investor interest, propelling the native token … Continue reading",
+      "currencies": [
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Was the meme coin boom a top signal for crypto?",
+      "link": "https://cryptopanic.com/news/19334211/Was-the-meme-coin-boom-a-top-signal-for-crypto",
+      "pubDate": "2024-03-17T17:06:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WIF"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Invest in the future: Solana adoption, Hedera Hashgraph prediction, BlockDAG  presale",
+      "link": "https://cryptopanic.com/news/19334144/Invest-in-the-future-Solana-adoption-Hedera-Hashgraph-prediction-BlockDAG-presale",
+      "pubDate": "2024-03-17T16:00:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano Achieves Historic Milestone With Fiat-Backed Stablecoin",
+      "link": "https://cryptopanic.com/news/19334116/Cardano-Achieves-Historic-Milestone-With-Fiat-Backed-Stablecoin",
+      "pubDate": "2024-03-17T15:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "USDM token will be first of its kind on Cardano",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Explosive Memecoin Surge Sends Solana DEX Volume to Record Highs: On-Chain Data",
+      "link": "https://cryptopanic.com/news/19334046/Explosive-Memecoin-Surge-Sends-Solana-DEX-Volume-to-Record-Highs-On-Chain-Data",
+      "pubDate": "2024-03-17T14:30:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "BONK",
+        "WIF",
+        "JUP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance CEO Predicts Bitcoin Rally Past $80,000 As Investments In Crypto ETFs Surge",
+      "link": "https://cryptopanic.com/news/19334030/Binance-CEO-Predicts-Bitcoin-Rally-Past-80000-As-Investments-In-Crypto-ETFs-Surge",
+      "pubDate": "2024-03-17T14:11:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Binance CEO Richard Teng has shared his bullish stance on Bitcoin, predicting that the cryptocurrency will soar above $80,000 driven by increasing institutional investments in crypto-backed exchange-traded funds (ETFs).",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDC",
+        "TUSD"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Unveiling ‘Mr. 100’ — The Mystery Bitcoin Wallet Linked to Upbit’s Cold Storage",
+      "link": "https://cryptopanic.com/news/19333987/Unveiling-Mr-100-The-Mystery-Bitcoin-Wallet-Linked-to-Upbits-Cold-Storage?mtm_campaign=API-OFA",
+      "pubDate": "2024-03-17T13:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ARKM"
+      ]
+    },
+    {
+      "title": "Introducing Book Of Meme (BOME), The Latest $1 Billion Crypto Sensation",
+      "link": "https://cryptopanic.com/news/19333879/Introducing-Book-Of-Meme-BOME-The-Latest-1-Billion-Crypto-Sensation",
+      "pubDate": "2024-03-17T12:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "DOGE",
+        "SHIB",
+        "KCS",
+        "PEPE",
+        "BONK",
+        "WIF",
+        "FLOKI"
+      ]
+    },
+    {
+      "title": "Fantom drops 10% in 24 hours: Is $1.4 too far for FTM?",
+      "link": "https://cryptopanic.com/news/19333757/Fantom-drops-10-in-24-hours-Is-14-too-far-for-FTM",
+      "pubDate": "2024-03-17T10:30:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FTM"
+      ]
+    },
+    {
+      "title": "Cardano Founder Shuts Down 'FUD' About Hydra",
+      "link": "https://cryptopanic.com/news/19333694/Cardano-Founder-Shuts-Down-FUD-About-Hydra",
+      "pubDate": "2024-03-17T09:58:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano's Charles Hoskinson addresses rumors about Hydra project",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Charles Hoskinson debunks FUD, confirms active development of Cardano Hydra",
+      "link": "https://cryptopanic.com/news/19333679/Charles-Hoskinson-debunks-FUD-confirms-active-development-of-Cardano-Hydra",
+      "pubDate": "2024-03-17T09:41:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Hydra, Cardano’s layer-2 scaling solution, remains actively developed and operational despite recent rumors suggesting otherwise. Charles Hoskinson, the founder of Cardano, addressed the rumors directly, emphasizing that the project is more productive than ever. Through a post on X, Hoskinson consistently refuted claims of abandonment, reinforcing the team’s commitment to advancing the...",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Can Cardano (ADA) Price Reach $5? Popular Analyst Shares Price Predictions",
+      "link": "https://cryptopanic.com/news/19333553/Can-Cardano-ADA-Price-Reach-5-Popular-Analyst-Shares-Price-Predictions",
+      "pubDate": "2024-03-17T07:03:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Is it possible for the price of Cardano (ADA), one of the popular and old altcoins, to reach the $5 level? Here is the analyst's opinion. Continue Reading: Can Cardano (ADA) Price Reach $5? Popular Analyst Shares Price Predictions",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "MATIC Price Slumps 10% Amidst Market Downturn – Here Are Key Levels To Watch",
+      "link": "https://cryptopanic.com/news/19333540/MATIC-Price-Slumps-10-Amidst-Market-Downturn-Here-Are-Key-Levels-To-Watch?mtm_campaign=API-OFA",
+      "pubDate": "2024-03-17T06:51:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "MATIC",
+        "ATH",
+        "ALI"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Crypto Analyst Sets $5 Target For Cardano Price – Here’s How",
+      "link": "https://cryptopanic.com/news/19333494/Crypto-Analyst-Sets-5-Target-For-Cardano-Price-Heres-How",
+      "pubDate": "2024-03-17T05:13:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The price action of Cardano (ADA) over the past week is a story of two halves, with the token notching a new multi-month high early in the week only to crash by over 18% a few days afterward. This recent decline in ADA price reflects a broader bearish climate in the cryptocurrency market. Interestingly, a […]",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano’s Hoskinson Denies Abandoning Scaling Solution",
+      "link": "https://cryptopanic.com/news/19333492/Cardanos-Hoskinson-Denies-Abandoning-Scaling-Solution",
+      "pubDate": "2024-03-17T05:01:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Charles Hoskinson confirms that Hydra is more productive than ever, with exciting announcements on the horizon.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cashing out shitcoins from metamask w/o eth in the U.S.?",
+      "link": "https://cryptopanic.com/news/decentraland/19333431/Cashing-out-shitcoins-from-metamask-wo-eth-in-the-US",
+      "pubDate": "2024-03-17T02:41:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "MATIC",
+        "MOON"
+      ]
+    },
+    {
+      "title": "AVAX prices see weekly gains of 36% – Predictions coming true?",
+      "link": "https://cryptopanic.com/news/19333406/AVAX-prices-see-weekly-gains-of-36-Predictions-coming-true",
+      "pubDate": "2024-03-17T02:30:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Positive sentiment around Avalanche surged as its value went up by 22% in the last 24 hours.",
+      "currencies": [
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "date": "2021-07-18",
+  "fetchedAt": "2026-02-05T07:27:06.792Z",
+  "articleCount": 16,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "VERY PRODUCTIVE WEEK ALL THINGS #SAFEMOON LOADS OF UPDATES TO COME OVER THE NEXT FEW WEEKS/MONTHS! AS #SAFEMOON GRO…",
+      "link": "https://cryptopanic.com/news/12353338/VERY-PRODUCTIVE-WEEK-ALL-THINGS-SAFEMOON-LOADS-OF-UPDATES-TO-COME-OVER-THE-NEXT-FEW-WEEKSMONTHS-AS-SAFEMOON-GRO",
+      "pubDate": "2021-07-18T23:21:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "SAFEMOON"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Top 5 cryptocurrencies to watch this week: BTC, MATIC, THETA, CRO, LEO",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/12350798/Top-5-cryptocurrencies-to-watch-this-week-BTC-MATIC-THETA-CRO-LEO",
+      "pubDate": "2021-07-18T22:43:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "MATIC, THETA, CRO and LEO could push higher this week if Bitcoin price holds above the $30,000 level.",
+      "currencies": [
+        "BTC",
+        "MATIC",
+        "THETA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple Is Braced For A Bombshell As XRP Nears Price ‘Death Cross’",
+      "link": "https://cryptopanic.com/news/ripple/12350749/Ripple-Is-Braced-For-A-Bombshell-As-XRP-Nears-Price-Death-Cross",
+      "pubDate": "2021-07-18T22:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Ripple, the company behind the XRP cryptocurrency, is braced for a bombshell after a judge ruled a former regulatory official can be questioned as part of the ongoing legal battle over the sale of $1.3 billion worth of XRP...",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 9
+      }
+    },
+    {
+      "title": "Ethereum Co-Founder Says He’s Quitting Crypto – Here’s Why",
+      "link": "https://cryptopanic.com/news/ethereum/12350562/Ethereum-Co-Founder-Says-Hes-Quitting-Crypto-Heres-Why",
+      "pubDate": "2021-07-18T20:00:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Anthony Di Iorio, co-founder of Ethereum and crypto entrepreneur, says he’s quitting crypto. In a new report from Bloomberg, Di Iorio says that he’s leaving crypto behind, partially due to “safety concerns.” Di Iorio is the CEO and co-founder of Canadian blockchain company Decentral, which created Jaxx, one of the most popular crypto wallets in […]",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "$31.5K Bitcoin price on track for lowest weekly close of 2021",
+      "link": "https://cryptopanic.com/news/12350401/315K-Bitcoin-price-on-track-for-lowest-weekly-close-of-2021",
+      "pubDate": "2021-07-18T18:13:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Performance remains grimly sideways on the day of the largest GBTC unlocking event.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "AMP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Binance Burns $393.6 Million Worth of BNB Tokens",
+      "link": "https://cryptopanic.com/news/12350331/Binance-Burns-3936-Million-Worth-of-BNB-Tokens",
+      "pubDate": "2021-07-18T17:28:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Binance has announced another major token burn",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 23,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogecoin Spikes 10% After Elon Musk Updates Twitter Picture to Doge Eyes",
+      "link": "https://cryptopanic.com/news/dogecoin/12350062/Dogecoin-Spikes-10-After-Elon-Musk-Updates-Twitter-Picture-to-Doge-Eyes",
+      "pubDate": "2021-07-18T14:46:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Musk’s new profile picture shows him with Doge eyes.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Wall Street Journal on Yield Farming in DeFi: \"Scams, Volatility, High Returns\"",
+      "link": "https://cryptopanic.com/news/12350005/Wall-Street-Journal-on-Yield-Farming-in-DeFi-Scams-Volatility-High-Returns",
+      "pubDate": "2021-07-18T14:16:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Iconic business-focused daily newspaper covered latest episodes in DeFi insanity: boom of \"yield farming,\" Aave Finance (AAVE) outbreak, Mark Cuban's Iron Finance (TITAN) disaster",
+      "currencies": [
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "A NEW MILESTONE REACHED: $100,000 in fees  generated by Whiteheart and distributed among the $sWHITE (staked…",
+      "link": "https://cryptopanic.com/news/12353892/A-NEW-MILESTONE-REACHED-100000-in-fees-generated-by-Whiteheart-and-distributed-among-the-sWHITE-staked?mtm_campaign=API-OFA",
+      "pubDate": "2021-07-18T11:02:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WHITE"
+      ]
+    },
+    {
+      "title": "Elon Musk Thrills Dogecoin Community with New Twitter Profile Picture",
+      "link": "https://cryptopanic.com/news/dogecoin/12349654/Elon-Musk-Thrills-Dogecoin-Community-with-New-Twitter-Profile-Picture",
+      "pubDate": "2021-07-18T10:08:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Elon Musk now has Doge reflections in his sunglasses",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 23,
+        "negative": 50
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Federal Judge Allows Ripple To Question Former SEC Director in XRP Lawsuit",
+      "link": "https://cryptopanic.com/news/ripple/12349653/Federal-Judge-Allows-Ripple-To-Question-Former-SEC-Director-in-XRP-Lawsuit",
+      "pubDate": "2021-07-18T09:00:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The US Securities and Exchange Commission’s (SEC) lawsuit against Ripple is taking a new turn, as a federal judge declares Ripple can depose former SEC Director of Corporation Finance William Hinman. The SEC previously sought to block Ripple from having Hinman questioned, stating that the San Francisco-based company doesn’t have the “exceptional circumstances” necessary to […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @RichardHeartWin: Congratulations #EOS! sacrifice phase is bringing you adoption! $EOS is now valid for sacrif…",
+      "link": "https://cryptopanic.com/news/12352344/RT-RichardHeartWin-Congratulations-EOS-sacrifice-phase-is-bringing-you-adoption-EOS-is-now-valid-for-sacrif",
+      "pubDate": "2021-07-18T07:08:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS",
+        "HEX"
+      ]
+    },
+    {
+      "title": "RT @safenetworktech: Here’s the latest from @maidsafe, including the return of the Thursday Weekly #Dev Update &amp; the upcoming integration o…",
+      "link": "https://cryptopanic.com/news/12347247/RT-safenetworktech-Heres-the-latest-from-maidsafe-including-the-return-of-the-Thursday-Weekly-Dev-Update-amp-the-upcoming-integration-o",
+      "pubDate": "2021-07-18T06:07:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "Great news for all #TRONICS! #TRON come back to @PancakeSwap Syrup Pool! 🤗Stake $CAKE to earn $TRX. A new TRX S…",
+      "link": "https://cryptopanic.com/news/tron/12348844/Great-news-for-all-TRONICS-TRON-come-back-to-PancakeSwap-Syrup-Pool-Stake-CAKE-to-earn-TRX-A-new-TRX-S",
+      "pubDate": "2021-07-18T04:04:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "TRX",
+        "CAKE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Like this tweet if you have more money in crypto than you do in cash.",
+      "link": "https://cryptopanic.com/news/12348287/Like-this-tweet-if-you-have-more-money-in-crypto-than-you-do-in-cash",
+      "pubDate": "2021-07-18T02:42:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "CAKE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Monero’s long-term may be sorted, but what about its short-term?",
+      "link": "https://cryptopanic.com/news/12346494/Moneros-long-term-may-be-sorted-but-what-about-its-short-term",
+      "pubDate": "2021-07-18T02:30:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Monero [XMR], the market’s leading privacy coin, has seen its fair share of ups and downs this year. The altcoin massively rallied during the initial few months of the year, hit its local 3-year high in May, and commenced its downfall right after that. At the time of writing, XMR’s state was quite congruent to […]",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    }
+  ]
+}

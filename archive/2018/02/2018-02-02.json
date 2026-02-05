@@ -1,0 +1,43 @@
+{
+  "date": "2018-02-02",
+  "fetchedAt": "2026-02-05T07:27:06.995Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Botnet Infects Half a Million Servers to Mine Thousands of Monero",
+      "link": "https://cryptopanic.com/news/monero/968463/Botnet-Infects-Half-a-Million-Servers-to-Mine-Thousands-of-Monero",
+      "pubDate": "2018-02-02T18:46:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Victoria Harbourcats: Another Sports Franchise Begins Accepting Bitcoin, Ethereum, and Litecoin",
+      "link": "https://cryptopanic.com/news/litecoin/968365/Victoria-Harbourcats-Another-Sports-Franchise-Begins-Accepting-Bitcoin-Ethereum-and-Litecoin",
+      "pubDate": "2018-02-02T18:30:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "date": "2019-01-21",
+  "fetchedAt": "2026-02-05T07:27:06.978Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Major VR Gaming Platform Reveals Details of Its Partnership with IOTA",
+      "link": "https://cryptopanic.com/news/4336092/Major-VR-Gaming-Platform-Reveals-Details-of-Its-Partnership-with-IOTA",
+      "pubDate": "2019-01-21T17:32:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron Price Prediction: TRX Is Trying to Break Out of a Symmetrical Triangle",
+      "link": "https://cryptopanic.com/news/tron/4333188/Tron-Price-Prediction-TRX-Is-Trying-to-Break-Out-of-a-Symmetrical-Triangle",
+      "pubDate": "2019-01-21T14:14:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SF Summit Shows BitTorrent Is Boosting Tron’s Appeal",
+      "link": "https://cryptopanic.com/news/tron/4330393/SF-Summit-Shows-BitTorrent-Is-Boosting-Trons-Appeal",
+      "pubDate": "2019-01-21T10:00:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

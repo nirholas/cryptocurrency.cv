@@ -1,0 +1,26 @@
+{
+  "date": "2018-04-28",
+  "fetchedAt": "2026-02-05T07:27:06.972Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ethereum-Based Decentralized Crypto Exchange Trades More Than $1 Million On First Day",
+      "link": "https://cryptopanic.com/news/1800922/Ethereum-Based-Decentralized-Crypto-Exchange-Trades-More-Than-1-Million-On-First-Day",
+      "pubDate": "2018-04-28T23:15:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

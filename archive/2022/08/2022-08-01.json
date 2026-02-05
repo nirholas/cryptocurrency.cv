@@ -1,0 +1,523 @@
+{
+  "date": "2022-08-01",
+  "fetchedAt": "2026-02-05T07:27:07.567Z",
+  "articleCount": 35,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "UniswapV3 simulator helps #DeFi users maximize their strategies' performance with backtesting. Compare strategies…",
+      "link": "https://cryptopanic.com/news/15932541/UniswapV3-simulator-helps-DeFi-users-maximize-their-strategies-performance-with-backtesting-Compare-strategies",
+      "pubDate": "2022-08-01T23:47:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BEL"
+      ]
+    },
+    {
+      "title": "Huobi will list SPS on August 3rd",
+      "link": "https://cryptopanic.com/news/15930950/Huobi-will-list-SPS-on-August-3rd",
+      "pubDate": "2022-08-01T22:05:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HT",
+        "SPS"
+      ]
+    },
+    {
+      "title": "Dogecoin’s $1 Dream Price Met With Skepticism By Market Watchers",
+      "link": "https://cryptopanic.com/news/15930892/Dogecoins-1-Dream-Price-Met-With-Skepticism-By-Market-Watchers",
+      "pubDate": "2022-08-01T21:37:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The current market conditions brought on by the Crypto Winter have significantly exacerbated the meme coins' bad days.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Crypto Markets Bet Big on What’s Next For Ethereum Miners",
+      "link": "https://cryptopanic.com/news/15930714/Crypto-Markets-Bet-Big-on-Whats-Next-For-Ethereum-Miners",
+      "pubDate": "2022-08-01T20:24:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "BTG"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ADA Up 22% In Last 7 Days; Remains On Track To Test $0.6 Barrier",
+      "link": "https://cryptopanic.com/news/15930617/ADA-Up-22-In-Last-7-Days-Remains-On-Track-To-Test-06-Barrier",
+      "pubDate": "2022-08-01T19:40:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "It’s game face on for the bulls as Cardano (ADA) swerved up to $0.54 as seen overnight. ADA price spotted below key resistance level of $0.55. Meanwhile, traders are optimistic that a looming breakout may happen up to $0.6 by next week. Cardano (ADA) price is on a bull run as the price shoots way up forming a bullish hammer pattern seen on the daily chart. The uptrend precipitated on July 27,...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "ADA",
+        "XRP",
+        "SOL",
+        "DOGE",
+        "DOT",
+        "XCN"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "The last week was a beehive of activity as the Holo dev team prepared the release of the Publish hApps milestone fo…",
+      "link": "https://cryptopanic.com/news/15934867/The-last-week-was-a-beehive-of-activity-as-the-Holo-dev-team-prepared-the-release-of-the-Publish-hApps-milestone-fo",
+      "pubDate": "2022-08-01T19:17:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HOT"
+      ]
+    },
+    {
+      "title": "Bankrupt Crypto Lender Celsius Could Leave Customers Last In Line To Get Paid",
+      "link": "https://cryptopanic.com/news/15930559/Bankrupt-Crypto-Lender-Celsius-Could-Leave-Customers-Last-In-Line-To-Get-Paid",
+      "pubDate": "2022-08-01T19:14:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Bankrupt crypto lender Celsius Network claimed to operate like a bank, only better. However, because it was not actually a bank, many of its depositors are about to find out that they may have to wait a very long time to get reimbursed.",
+      "currencies": [
+        "CEL"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Renting My Cards Out - Need Help",
+      "link": "https://cryptopanic.com/news/15931084/Renting-My-Cards-Out-Need-Help",
+      "pubDate": "2022-08-01T16:23:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SPS"
+      ]
+    },
+    {
+      "title": "\"We as the @KusamaNetwork community need to examine what Kusama is here for. It is an experimentalist network, it i…",
+      "link": "https://cryptopanic.com/news/15936975/We-as-the-KusamaNetwork-community-need-to-examine-what-Kusama-is-here-for-It-is-an-experimentalist-network-it-i",
+      "pubDate": "2022-08-01T16:14:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KSM"
+      ]
+    },
+    {
+      "title": "Craig Wright Wins One Pound, Bitcoin & Ethereum Flows, Ledger's Deal, Soulbound Binance + More News",
+      "link": "https://cryptopanic.com/news/15929816/Craig-Wright-Wins-One-Pound-Bitcoin-Ethereum-Flows-Ledgers-Deal-Soulbound-Binance-More-News",
+      "pubDate": "2022-08-01T15:37:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Get your daily, bite-sized digest of cryptoasset and blockchain-related news – investigating the stories flying under the radar of today’s crypto news. __________... Read More: Craig Wright Wins One Pound, Bitcoin & Ethereum Flows, Ledger's Deal, Soulbound Binance + More News",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "XRP",
+        "DOGE",
+        "LTC",
+        "FTT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "#CEEK is proud to welcome city of #Miami Gardens home of #SuperBowl #TennisOpen #JITG #Formula1 #FIFA2026 + many o…",
+      "link": "https://cryptopanic.com/news/15932907/CEEK-is-proud-to-welcome-city-of-Miami-Gardens-home-of-SuperBowl-TennisOpen-JITG-Formula1-FIFA2026-many-o",
+      "pubDate": "2022-08-01T15:13:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CEEK"
+      ]
+    },
+    {
+      "title": "The Flippening: Why Market Pundits Say Ethereum Is Set To Become The No. 1 Cryptocurrency",
+      "link": "https://cryptopanic.com/news/bitcoin/15929542/The-Flippening-Why-Market-Pundits-Say-Ethereum-Is-Set-To-Become-The-No-1-Cryptocurrency",
+      "pubDate": "2022-08-01T14:30:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "the scenario in which ether inevitably overtakes bitcoin and becomes the number one cryptocurrency has been setting the community abuzz, as it...",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Shiba Inu Marks Second Anniversary; Here's How Journey Progressed",
+      "link": "https://cryptopanic.com/news/15929256/Shiba-Inu-Marks-Second-Anniversary-Heres-How-Journey-Progressed",
+      "pubDate": "2022-08-01T13:18:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Shiba Inu has witnessed growth on all fronts",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Don't miss the #workshop video that @MSinkec, Software Engineer at sCrypt, gave the attendees at @WeAreDevs World C…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/15932661/Dont-miss-the-workshop-video-that-MSinkec-Software-Engineer-at-sCrypt-gave-the-attendees-at-WeAreDevs-World-C",
+      "pubDate": "2022-08-01T13:02:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "You want to resell a #DENT #eSIM within your App? ️ This is the smooth &amp; sound user experience on iOS We are onbo…",
+      "link": "https://cryptopanic.com/news/15928968/You-want-to-resell-a-DENT-eSIM-within-your-App-This-is-the-smooth-amp-sound-user-experience-on-iOS-We-are-onbo",
+      "pubDate": "2022-08-01T12:07:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "Our 1st Crypto Pools $BUSD - $BNB has passed its incentive vote and will be available for voting  for next week’s…",
+      "link": "https://cryptopanic.com/news/15933917/Our-1st-Crypto-Pools-BUSD-BNB-has-passed-its-incentive-vote-and-will-be-available-for-voting-for-next-weeks",
+      "pubDate": "2022-08-01T12:04:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BUSD",
+        "EPS"
+      ]
+    },
+    {
+      "title": "#BitcoinSV is now listed on @latokens - a global #digitalasset #exchange for the next billion traders and the next…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/15932662/BitcoinSV-is-now-listed-on-latokens-a-global-digitalasset-exchange-for-the-next-billion-traders-and-the-next",
+      "pubDate": "2022-08-01T11:45:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "TRON becomes the second-largest public chain by stablecoin market cap",
+      "link": "https://cryptopanic.com/news/15928836/TRON-becomes-the-second-largest-public-chain-by-stablecoin-market-cap",
+      "pubDate": "2022-08-01T11:10:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "After the cryptocurrency sector finally reclaimed the $1 trillion market capitalization, most of its projects are recording improvements across the... Continue reading",
+      "currencies": [
+        "TRX",
+        "XCN"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance loses 90% of users after implementing KYC, losing billions in revenue",
+      "link": "https://cryptopanic.com/news/bitcoin/15928720/Binance-loses-90-of-users-after-implementing-KYC-losing-billions-in-revenue",
+      "pubDate": "2022-08-01T10:36:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "One of the world’s largest cryptocurrency exchanges, Binance, like most of its counterparts, has to face the challenges of money... Continue reading The post Binance loses 90% of users after implementing KYC, losing billions in revenue appeared first on Finbold.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 25
+      }
+    },
+    {
+      "title": "RT @ASUSTOR: Our Winners for #ASUSTOR x @NKN_ORG Twitter campaign are out! Big Congrats!  ASUSTOR NAS for the 1st prize winner @TheBrentch…",
+      "link": "https://cryptopanic.com/news/15936247/RT-ASUSTOR-Our-Winners-for-ASUSTOR-x-NKN_ORG-Twitter-campaign-are-out-Big-Congrats-ASUSTOR-NAS-for-the-1st-prize-winner-TheBrentch",
+      "pubDate": "2022-08-01T09:36:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NKN"
+      ]
+    },
+    {
+      "title": "RT @ImagineReplay: was featured in a Trend Watch report from @Variety! The point? Media orgs. are looking to empo…",
+      "link": "https://cryptopanic.com/news/theta-token/15927743/RT-ImagineReplay-was-featured-in-a-Trend-Watch-report-from-Variety-The-point-Media-orgs-are-looking-to-empo",
+      "pubDate": "2022-08-01T09:10:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Filecoin surges over 80% in a week as investors’ interest returns to FIL",
+      "link": "https://cryptopanic.com/news/15927355/Filecoin-surges-over-80-in-a-week-as-investors-interest-returns-to-FIL",
+      "pubDate": "2022-08-01T08:49:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "In tandem with the climb in the broader cryptocurrency market, Filecoin (FIL) has also experienced solid gains in the last... Continue reading",
+      "currencies": [
+        "FIL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Some of the team en route to the #HolochainImmersive in Austria which wrapped up last week.",
+      "link": "https://cryptopanic.com/news/15934868/Some-of-the-team-en-route-to-the-HolochainImmersive-in-Austria-which-wrapped-up-last-week",
+      "pubDate": "2022-08-01T08:29:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HOT"
+      ]
+    },
+    {
+      "title": "Bitcoin and Nasdaq the worst performing assets in 2022 yet some opportunity remains",
+      "link": "https://cryptopanic.com/news/bitcoin/15926562/Bitcoin-and-Nasdaq-the-worst-performing-assets-in-2022-yet-some-opportunity-remains",
+      "pubDate": "2022-08-01T07:52:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The first month of the second half of 2022 has officially ended, and the volatility in the markets has not... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 6
+      }
+    },
+    {
+      "title": "RT @Jelurida: We are glad to announce that @Jelurida_Korea will represent #Jelurida at the #Korea Blockchain Week, Asia’s largest #blockcha…",
+      "link": "https://cryptopanic.com/news/15925652/RT-Jelurida-We-are-glad-to-announce-that-Jelurida_Korea-will-represent-Jelurida-at-the-Korea-Blockchain-Week-Asias-largest-blockcha",
+      "pubDate": "2022-08-01T07:17:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARDR"
+      ]
+    },
+    {
+      "title": "Aave DAO Approves Overcollateralized Stablecoin GHO",
+      "link": "https://cryptopanic.com/news/15925348/Aave-DAO-Approves-Overcollateralized-Stablecoin-GHO",
+      "pubDate": "2022-08-01T06:54:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The Aave DAO community voted in support of the proposal and the DeFi protocol will now work toward creating the GHO stablecoin.",
+      "currencies": [
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "[Klaytn x @MARBLEXofficial at #KBW2022] Enter MARBLEX’s Gaming World at Korea Blockchain Week 2022! Come by the…",
+      "link": "https://cryptopanic.com/news/klay-token/15926113/Klaytn-x-MARBLEXofficial-at-KBW2022-Enter-MARBLEXs-Gaming-World-at-Korea-Blockchain-Week-2022-Come-by-the",
+      "pubDate": "2022-08-01T06:11:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "XRP Price in the Red as Ripple Unlocks 1 Billion Tokens From Its Escrow Wallet",
+      "link": "https://cryptopanic.com/news/15924600/XRP-Price-in-the-Red-as-Ripple-Unlocks-1-Billion-Tokens-From-Its-Escrow-Wallet",
+      "pubDate": "2022-08-01T06:01:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The XRP token is trading in the red after the cryptocurrency market capped off its best month of the year",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "We’re seeking a strategic and highly-organised Project Manager to support the planning and execution of all marke…",
+      "link": "https://cryptopanic.com/news/15925566/Were-seeking-a-strategic-and-highly-organised-Project-Manager-to-support-the-planning-and-execution-of-all-marke",
+      "pubDate": "2022-08-01T05:42:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FWT"
+      ]
+    },
+    {
+      "title": "Aave DAO Approves Crypto-Backed Stablecoin GHO",
+      "link": "https://cryptopanic.com/news/15923965/Aave-DAO-Approves-Crypto-Backed-Stablecoin-GHO",
+      "pubDate": "2022-08-01T04:57:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Aave users and borrowers will be allowed to mint GHO against their supplied collaterals while earning interest on the underlying",
+      "currencies": [
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Join the DOSI's pre-launch airdrop events and grab a chance to earn unique DOSI Citizen NFTs! DOSI Citizen is a PFP…",
+      "link": "https://cryptopanic.com/news/15926185/Join-the-DOSIs-pre-launch-airdrop-events-and-grab-a-chance-to-earn-unique-DOSI-Citizen-NFTs-DOSI-Citizen-is-a-PFP",
+      "pubDate": "2022-08-01T04:37:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "LN"
+      ]
+    },
+    {
+      "title": "10 days til #KlayDevDay in Seoul! 🇰🇷 Sign up to #Klaytn's first-ever IRL dev meetup and discuss how to bring you…",
+      "link": "https://cryptopanic.com/news/klay-token/15926114/10-days-til-KlayDevDay-in-Seoul-Sign-up-to-Klaytns-first-ever-IRL-dev-meetup-and-discuss-how-to-bring-you",
+      "pubDate": "2022-08-01T02:33:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "Bitcoin Mining Isn’t Wasteful — It Creates Abundance",
+      "link": "https://cryptopanic.com/news/bitcoin/15923668/Bitcoin-Mining-Isnt-Wasteful-It-Creates-Abundance",
+      "pubDate": "2022-08-01T01:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The role mining can play in enabling energy grids to provide greater utility at lower cost is completely misunderstood.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "#CEEK #Metaverse team is building non stop to deliver the best for the community. ️️️ #ceekarmy",
+      "link": "https://cryptopanic.com/news/15924609/CEEK-Metaverse-team-is-building-non-stop-to-deliver-the-best-for-the-community-ceekarmy",
+      "pubDate": "2022-08-01T00:55:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CEEK"
+      ]
+    },
+    {
+      "title": "$AERGO will be a Gold sponsor at the Korea Block Chain Week 2022 @kbwofficial! Lots of demo at the booth! Please…",
+      "link": "https://cryptopanic.com/news/15924087/AERGO-will-be-a-Gold-sponsor-at-the-Korea-Block-Chain-Week-2022-kbwofficial-Lots-of-demo-at-the-booth-Please",
+      "pubDate": "2022-08-01T00:47:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XCN",
+        "AERGO"
+      ]
+    }
+  ]
+}

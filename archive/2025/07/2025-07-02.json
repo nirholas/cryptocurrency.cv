@@ -1,0 +1,566 @@
+{
+  "date": "2025-07-02",
+  "fetchedAt": "2026-02-05T07:27:08.629Z",
+  "articleCount": 39,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Algorand Dominates 70% of RWA Market as Stablecoins Surge 137% – Can ALGO Hit $0.20?",
+      "link": "https://cryptopanic.com/news/algorand/23001176/Algorand-Dominates-70-of-RWA-Market-as-Stablecoins-Surge-137-Can-ALGO-Hit-020",
+      "pubDate": "2025-07-02T23:13:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "ALGO",
+        "RWA"
+      ]
+    },
+    {
+      "title": "LTC under $90: Buying opportunity or warning sign?",
+      "link": "https://cryptopanic.com/news/litecoin/22999424/LTC-under-90-Buying-opportunity-or-warning-sign",
+      "pubDate": "2025-07-02T21:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Polemos launches $PLMS utility token",
+      "link": "https://cryptopanic.com/news/uniswap/22994145/Polemos-launches-PLMS-utility-token",
+      "pubDate": "2025-07-02T21:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Solana Price Prediction – With ETF Approval Now ‘Almost Certain,’ Could SOL Flip Ethereum in the Next Cycle?",
+      "link": "https://cryptopanic.com/news/ethereum/22998389/Solana-Price-Prediction-With-ETF-Approval-Now-Almost-Certain-Could-SOL-Flip-Ethereum-in-the-Next-Cycle",
+      "pubDate": "2025-07-02T20:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Solana Treasury Firm DeFi Development Corp. Boosts Convertible Notes Offering to $112 Million",
+      "link": "https://cryptopanic.com/news/solana/22998272/Solana-Treasury-Firm-DeFi-Development-Corp-Boosts-Convertible-Notes-Offering-to-112-Million",
+      "pubDate": "2025-07-02T20:14:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Shares of DeFi Development Corp. (DFDV) finished the day down by 3% following its upsized convertible notes offering to buy more Solana.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Byreal Launches DeFi Platform for Real Assets on Solana",
+      "link": "https://cryptopanic.com/news/solana/22993627/Byreal-Launches-DeFi-Platform-for-Real-Assets-on-Solana",
+      "pubDate": "2025-07-02T20:13:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Catenaa, Tuesday, July 01, 2025- Byreal, a new onchain liquidity platform focused on real assets, officially launched June 21, 2025, with strategic backing from Bybit and the Solana Foundation. The Budapest-based project aims to build a transparent, decentralized financial system that integrates professional and retail participants within a unified onchain economy. Byreal seeks to reset […]",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Cake Wallet onboards dEURO decentralized stablecoin, offers 10% yield on collateral",
+      "link": "https://cryptopanic.com/news/monero/22997765/Cake-Wallet-onboards-dEURO-decentralized-stablecoin-offers-10-yield-on-collateral",
+      "pubDate": "2025-07-02T20:01:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XMR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SOL news update: REX Shares Solana ETF boosts price, but for how long?",
+      "link": "https://cryptopanic.com/news/solana/22996406/SOL-news-update-REX-Shares-Solana-ETF-boosts-price-but-for-how-long",
+      "pubDate": "2025-07-02T18:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "SOL rallied after the launch of the REX Shares Solana ETF, but bulls need to hold the price above $160.",
+      "currencies": [
+        "SOL",
+        "REX"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 3
+      }
+    },
+    {
+      "title": "REX Shares Launches First US Staked Crypto ETF",
+      "link": "https://cryptopanic.com/news/solana/22995585/REX-Shares-Launches-First-US-Staked-Crypto-ETF",
+      "pubDate": "2025-07-02T18:01:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The REX-Osprey SOL + Staking ETF offers investors exposure to Solana's native token and its staking rewards.",
+      "currencies": [
+        "SOL",
+        "REX"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 3
+      }
+    },
+    {
+      "title": "BlackRock's Bitcoin ETF Surpasses S&P 500 ETF In Revenue As XRP, Dogecoin ETF Approval Predicted To Follow Soon",
+      "link": "https://cryptopanic.com/news/polkadot/22995555/BlackRocks-Bitcoin-ETF-Surpasses-SampP-500-ETF-In-Revenue-As-XRP-Dogecoin-ETF-Approval-Predicted-To-Follow-Soon",
+      "pubDate": "2025-07-02T17:46:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Best Crypto Coins for 2025: BlockDAG Leads with Massive Presale Gains While HYPE, ONDO, and XMR Follow",
+      "link": "https://cryptopanic.com/news/monero/23017775/Best-Crypto-Coins-for-2025-BlockDAG-Leads-with-Massive-Presale-Gains-While-HYPE-ONDO-and-XMR-Follow",
+      "pubDate": "2025-07-02T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "ONDO",
+        "HYPE"
+      ]
+    },
+    {
+      "title": "ETH news update: Ether rangebreak possible due to spot ETF inflows",
+      "link": "https://cryptopanic.com/news/ethereum/22993425/ETH-news-update-Ether-rangebreak-possible-due-to-spot-ETF-inflows",
+      "pubDate": "2025-07-02T16:07:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "ETH price has been stuck in a range despite months of steady spot Ether ETF inflows, but this situation could change quickly.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Sui (SUI), Near Protocol (NEAR), and Sonic (S) Poised to Lead Altcoin Surge",
+      "link": "https://cryptopanic.com/news/near/22992638/Sui-SUI-Near-Protocol-NEAR-and-Sonic-S-Poised-to-Lead-Altcoin-Surge",
+      "pubDate": "2025-07-02T15:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "NEAR",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Top Interop Protocol Wormhole Adds Stacks to Bridge Bitcoin to Multi-Chain DeFi",
+      "link": "https://cryptopanic.com/news/blockstack/22992072/Top-Interop-Protocol-Wormhole-Adds-Stacks-to-Bridge-Bitcoin-to-Multi-Chain-DeFi",
+      "pubDate": "2025-07-02T15:12:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Coinbase Acquires Liquifi to Make Token Launches Easier",
+      "link": "https://cryptopanic.com/news/uniswap/22991655/Coinbase-Acquires-Liquifi-to-Make-Token-Launches-Easier",
+      "pubDate": "2025-07-02T15:04:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "This is how $1,000 in Anthony Scaramucci’s crypto portfolio performed in H1 2025",
+      "link": "https://cryptopanic.com/news/polkadot/22990971/This-is-how-1000-in-Anthony-Scaramuccis-crypto-portfolio-performed-in-H1-2025",
+      "pubDate": "2025-07-02T14:26:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Breaking: SOL Price Spikes as First Solana ETF Goes Live",
+      "link": "https://cryptopanic.com/news/solana/22990722/Breaking-SOL-Price-Spikes-as-First-Solana-ETF-Goes-Live",
+      "pubDate": "2025-07-02T14:08:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The first U. S. -listed Solana exchange-traded fund (ETF) has officially gone live",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Eyes Breakout as Bitwise CIO Predicts $10B ETF Surge",
+      "link": "https://cryptopanic.com/news/ethereum/22990002/Ethereum-Eyes-Breakout-as-Bitwise-CIO-Predicts-10B-ETF-Surge",
+      "pubDate": "2025-07-02T14:06:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The Ethereum daily chart hints at a potential breakout just as Bitwise CIO Matt Hougan predicts a massive $10 billion surge in ETF inflows for the second half of 2025. <p>The post Ethereum Eyes Breakout as Bitwise CIO Predicts $10B ETF Surge first appeared on Ecoinimist. </p>",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Investing for Growth? Neo Pepe Coin ($NEOP) Identified as 2025’s Best Crypto Meme Coin Opportunities",
+      "link": "https://cryptopanic.com/news/polkadot/22989701/Investing-for-Growth-Neo-Pepe-Coin-NEOP-Identified-as-2025s-Best-Crypto-Meme-Coin-Opportunities",
+      "pubDate": "2025-07-02T14:03:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "AVAX",
+        "LINK"
+      ]
+    },
+    {
+      "title": "KBC Bank to offer Bitcoin, Ethereum to retail customers: Report",
+      "link": "https://cryptopanic.com/news/bitcoin/22989471/KBC-Bank-to-offer-Bitcoin-Ethereum-to-retail-customers-Report",
+      "pubDate": "2025-07-02T13:50:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Belgium’s KBC Bank reportedly plans to let retail customers invest in Bitcoin and Ether via its Bolero platform, pending regulatory approval this autumn.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Crypto Price Analysis 7-2: BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, TONCOIN: TON, RIPPLE: XRP, INTERNET COMPUTER: ICP",
+      "link": "https://cryptopanic.com/news/internet-computer/22991166/Crypto-Price-Analysis-7-2-BITCOIN-BTC-ETHEREUM-ETH-SOLANA-SOL-TONCOIN-TON-RIPPLE-XRP-INTERNET-COMPUTER-ICP",
+      "pubDate": "2025-07-02T13:41:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Coinbase acquires web3 startup Liquifi after $2.9B Deribit deal",
+      "link": "https://cryptopanic.com/news/uniswap/22987773/Coinbase-acquires-web3-startup-Liquifi-after-29B-Deribit-deal",
+      "pubDate": "2025-07-02T12:58:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "OP",
+        "ENA"
+      ]
+    },
+    {
+      "title": "Grayscale Converts Large-Cap Fund Into SEC-Approved Crypto ETF",
+      "link": "https://cryptopanic.com/news/litecoin/22987762/Grayscale-Converts-Large-Cap-Fund-Into-SEC-Approved-Crypto-ETF",
+      "pubDate": "2025-07-02T12:55:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "DP World Tour Welcomes Nexo as Official Digital Asset and Wealth Partner",
+      "link": "https://cryptopanic.com/news/nexo/22987537/DP-World-Tour-Welcomes-Nexo-as-Official-Digital-Asset-and-Wealth-Partner",
+      "pubDate": "2025-07-02T12:25:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEXO"
+      ]
+    },
+    {
+      "title": "Solana Staking ETF Marks Institutional Entry Point",
+      "link": "https://cryptopanic.com/news/solana/22986069/Solana-Staking-ETF-Marks-Institutional-Entry-Point",
+      "pubDate": "2025-07-02T11:56:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "USA launch first staking ETF with Solana – direct SOL investment plus passive on-chain staking now possible. The article Solana Staking ETF Marks Institutional Entry Point was first published on Crypto Valley Journal.",
+      "currencies": [
+        "SOL",
+        "USA"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Litecoin Faces Mounting Pressure — Is a Pullback Inevitable?",
+      "link": "https://cryptopanic.com/news/litecoin/22986000/Litecoin-Faces-Mounting-Pressure-Is-a-Pullback-Inevitable",
+      "pubDate": "2025-07-02T11:40:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Nexo Inks First Crypto-Golf Deal, Becomes DP World Tour’s Official Digital Wealth Partner",
+      "link": "https://cryptopanic.com/news/nexo/22986003/Nexo-Inks-First-Crypto-Golf-Deal-Becomes-DP-World-Tours-Official-Digital-Wealth-Partner",
+      "pubDate": "2025-07-02T11:38:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "NEXO"
+      ]
+    },
+    {
+      "title": "Digital Wealth Platform Nexo to Sponsor Golf Championship in Partnership With DP World Tour",
+      "link": "https://cryptopanic.com/news/nexo/22985936/Digital-Wealth-Platform-Nexo-to-Sponsor-Golf-Championship-in-Partnership-With-DP-World-Tour",
+      "pubDate": "2025-07-02T11:30:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEXO",
+        "A"
+      ]
+    },
+    {
+      "title": "SpoonOS launches Developer Call initiative to kickstart AI community development",
+      "link": "https://cryptopanic.com/news/neo/22984426/SpoonOS-launches-Developer-Call-initiative-to-kickstart-AI-community-development",
+      "pubDate": "2025-07-02T10:38:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Nexo Becomes First-Ever Digital Asset and Wealth Partner of the DP World Tour, Launches Nexo Golf Championship",
+      "link": "https://cryptopanic.com/news/nexo/22983510/Nexo-Becomes-First-Ever-Digital-Asset-and-Wealth-Partner-of-the-DP-World-Tour-Launches-Nexo-Golf-Championship",
+      "pubDate": "2025-07-02T10:04:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEXO"
+      ]
+    },
+    {
+      "title": "Why NEO Could Be the Most UNDERRATED L1 This Cycle",
+      "link": "https://cryptopanic.com/news/neo/22983883/Why-NEO-Could-Be-the-Most-UNDERRATED-L1-This-Cycle",
+      "pubDate": "2025-07-02T10:00:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Ethereum surges 36% in Q2 after devastating first quarter losses",
+      "link": "https://cryptopanic.com/news/ethereum/22982940/Ethereum-surges-36-in-Q2-after-devastating-first-quarter-losses",
+      "pubDate": "2025-07-02T09:37:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "2-7-2025 – Ethereum staged a dramatic comeback in the second quarter of 2025, posting gains of 36. 48% as institutional and retail investors returned to the world’s second-largest cryptocurrency, according to data from Coinglass. The recovery marks a sharp reversal from Ethereum’s brutal first quarter performance, when the token plummeted 45. 41% amid broader market turmoil and [",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 5
+      }
+    },
+    {
+      "title": "BCH outperforms BTC: Can Bitcoin Cash continue its bull run beyond $600?",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22981674/BCH-outperforms-BTC-Can-Bitcoin-Cash-continue-its-bull-run-beyond-600",
+      "pubDate": "2025-07-02T09:00:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Cipher Mining Stock Is Up Over 6% In Wednesday's Pre-Market: What's Going On?",
+      "link": "https://cryptopanic.com/news/litecoin/22981444/Cipher-Mining-Stock-Is-Up-Over-6-In-Wednesdays-Pre-Market-Whats-Going-On",
+      "pubDate": "2025-07-02T08:33:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "LTC"
+      ]
+    },
+    {
+      "title": "XRP, Solana, Litecoin ETFs Could Be Approved – Altcoin Market Set For Billions in Inflows?",
+      "link": "https://cryptopanic.com/news/litecoin/22981435/XRP-Solana-Litecoin-ETFs-Could-Be-Approved-Altcoin-Market-Set-For-Billions-in-Inflows",
+      "pubDate": "2025-07-02T07:05:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Litecoin Price Forecast: Whale offloads LTC tokens, raising correction concerns",
+      "link": "https://cryptopanic.com/news/litecoin/22979897/Litecoin-Price-Forecast-Whale-offloads-LTC-tokens-raising-correction-concerns",
+      "pubDate": "2025-07-02T06:27:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Why Has The Pudgy Penguins Token Shot Up 50% In The Past Week?",
+      "link": "https://cryptopanic.com/news/litecoin/22977304/Why-Has-The-Pudgy-Penguins-Token-Shot-Up-50-In-The-Past-Week",
+      "pubDate": "2025-07-02T05:13:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Bitcoin’s slip to $105,000 fuels market pullback – FARTCOIN, SPX, ALGO lead the losses",
+      "link": "https://cryptopanic.com/news/algorand/22977624/Bitcoins-slip-to-105000-fuels-market-pullback-FARTCOIN-SPX-ALGO-lead-the-losses",
+      "pubDate": "2025-07-02T03:43:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ALGO",
+        "FARTCOIN"
+      ]
+    },
+    {
+      "title": "AAVE Withdrawal from CEX After Seven-Month Dormancy",
+      "link": "https://cryptopanic.com/news/aave/23017644/AAVE-Withdrawal-from-CEX-After-Seven-Month-Dormancy",
+      "pubDate": "2025-07-02T02:13:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    }
+  ]
+}

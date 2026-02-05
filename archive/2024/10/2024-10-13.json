@@ -1,0 +1,456 @@
+{
+  "date": "2024-10-13",
+  "fetchedAt": "2026-02-05T07:27:08.400Z",
+  "articleCount": 33,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Microstrategy Stock MSTR Soars 1,620% — Outshining Bitcoin, S&P 500, and the Magnificent 7",
+      "link": "https://cryptopanic.com/news/19999666/Microstrategy-Stock-MSTR-Soars-1620-Outshining-Bitcoin-SP-500-and-the-Magnificent-7?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T23:20:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "META"
+      ]
+    },
+    {
+      "title": "Shoutout to the Cryptocurrencies that haven't paid influencers to promote their coin but rather let their tech/ideas do the talking",
+      "link": "https://cryptopanic.com/news/monero/19999974/Shoutout-to-the-Cryptocurrencies-that-havent-paid-influencers-to-promote-their-coin-but-rather-let-their-techideas-do-the-talking",
+      "pubDate": "2024-10-13T22:35:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "AVAX",
+        "MOON"
+      ]
+    },
+    {
+      "title": "Bitcoin Search Volumes Hit 1-Year Low As Memecoins Surge",
+      "link": "https://cryptopanic.com/news/20217735/Bitcoin-Search-Volumes-Hit-1-Year-Low-As-Memecoins-Surge?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T21:53:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "TRX",
+        "RAY"
+      ]
+    },
+    {
+      "title": "Asia & MENA Crypto Roundup: South Korea Investigates Upbeat, and More",
+      "link": "https://cryptopanic.com/news/19999476/Asia-MENA-Crypto-Roundup-South-Korea-Investigates-Upbeat-and-More?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T19:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MATIC",
+        "STX",
+        "GALA"
+      ]
+    },
+    {
+      "title": "A call to action: USE HAVENO!",
+      "link": "https://cryptopanic.com/news/monero/20014566/A-call-to-action-USE-HAVENO",
+      "pubDate": "2024-10-13T19:25:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "THE"
+      ]
+    },
+    {
+      "title": "Coinbase-Backed Base Hits 6M Daily Transactions, Leads Layer-2 Race",
+      "link": "https://cryptopanic.com/news/19999368/Coinbase-Backed-Base-Hits-6M-Daily-Transactions-Leads-Layer-2-Race?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T19:15:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Coinbase-backed Base surpasses 6 million daily transactions, outpacing rivals like Arbitrum and Optimism, driven by its integration with Coinbase and rapid growth.",
+      "currencies": [
+        "ARB"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto market’s weekly winners and losers – NEIRO, SUI, FTT, KAS",
+      "link": "https://cryptopanic.com/news/19999350/Crypto-markets-weekly-winners-and-losers-NEIRO-SUI-FTT-KAS?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T19:00:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KAS",
+        "SUI",
+        "NEIRO"
+      ]
+    },
+    {
+      "title": "Total $AXS staked have increased by 11.34% since October, 2023",
+      "link": "https://cryptopanic.com/news/19999299/Total-AXS-staked-have-increased-by-1134-since-October-2023?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T18:00:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "Uniswap: New Crypto Developments Lift UNI Price Up by 17% – Details",
+      "link": "https://cryptopanic.com/news/19999286/Uniswap-New-Crypto-Developments-Lift-UNI-Price-Up-by-17-Details?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T18:00:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "UNI",
+        "HNT"
+      ]
+    },
+    {
+      "title": "Bitcoin Network Sees 32% Fee Increase With Runes Transactions Rising",
+      "link": "https://cryptopanic.com/news/19999351/Bitcoin-Network-Sees-32-Fee-Increase-With-Runes-Transactions-Rising?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T18:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOG"
+      ]
+    },
+    {
+      "title": "EigenLayer Faces Criticism for Failing to Meet Investor Expectations",
+      "link": "https://cryptopanic.com/news/19999236/EigenLayer-Faces-Criticism-for-Failing-to-Meet-Investor-Expectations?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T17:00:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "EIGEN"
+      ]
+    },
+    {
+      "title": "3 AI Altcoins Set for 500% Gains Amid 2024 Adoption Boom",
+      "link": "https://cryptopanic.com/news/19999114/3-AI-Altcoins-Set-for-500-Gains-Amid-2024-Adoption-Boom?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T15:31:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FET",
+        "TAO"
+      ]
+    },
+    {
+      "title": "ARB and AXS Tokens to Unlock Approximately $220 Million Worth Next Week",
+      "link": "https://cryptopanic.com/news/20217734/ARB-and-AXS-Tokens-to-Unlock-Approximately-220-Million-Worth-Next-Week?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T15:14:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS",
+        "STRK",
+        "ARB"
+      ]
+    },
+    {
+      "title": "Aptos Outperforms Broader Market By 18% – Here’s Why",
+      "link": "https://cryptopanic.com/news/19998993/Aptos-Outperforms-Broader-Market-By-18-Heres-Why?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T14:00:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "HNT",
+        "APT"
+      ]
+    },
+    {
+      "title": "Crypto Investor Reaps 28,900% Profit  in Less Than a Year",
+      "link": "https://cryptopanic.com/news/19998935/Crypto-Investor-Reaps-28900-Profit-in-Less-Than-a-Year?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T14:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "SPX"
+      ]
+    },
+    {
+      "title": "SUI, CHZ, COIN: 3 top cryptocurrencies to watch this week",
+      "link": "https://cryptopanic.com/news/chiliz/19998939/SUI-CHZ-COIN-3-top-cryptocurrencies-to-watch-this-week",
+      "pubDate": "2024-10-13T13:17:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHZ",
+        "SUI",
+        "MOON"
+      ]
+    },
+    {
+      "title": "Self-Proclaimed Satoshi Launches New Lawsuit",
+      "link": "https://cryptopanic.com/news/19998824/Self-Proclaimed-Satoshi-Launches-New-Lawsuit?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T13:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ]
+    },
+    {
+      "title": "Hamster Kombat Clarifies Gotbit Ties Amid Market Manipulation Concerns",
+      "link": "https://cryptopanic.com/news/19998815/Hamster-Kombat-Clarifies-Gotbit-Ties-Amid-Market-Manipulation-Concerns?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HMSTR"
+      ]
+    },
+    {
+      "title": "Cardano Is Evolving, Not Failing – Charles Hoskinson",
+      "link": "https://cryptopanic.com/news/19998725/Cardano-Is-Evolving-Not-Failing-Charles-Hoskinson?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T12:00:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Charles Hoskinson, the founder of Cardano (ADA), has addressed the rising negative sentiment surrounding his project on social media.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Coinbase-Backed Base Surpasses 6 Million Daily Transactions",
+      "link": "https://cryptopanic.com/news/19998799/Coinbase-Backed-Base-Surpasses-6-Million-Daily-Transactions?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T11:51:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "WBTC",
+        "AAVE",
+        "ARB"
+      ]
+    },
+    {
+      "title": "This New Cheap Token Under $0.10 Is Set to Make Early Investors Rich, Just Like NEIRO Did Last Month",
+      "link": "https://cryptopanic.com/news/19998558/This-New-Cheap-Token-Under-010-Is-Set-to-Make-Early-Investors-Rich-Just-Like-NEIRO-Did-Last-Month?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T10:18:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEIRO"
+      ]
+    },
+    {
+      "title": "Skepticism Sunday – October 13, 2024",
+      "link": "https://cryptopanic.com/news/monero/20014564/Skepticism-Sunday-October-13-2024",
+      "pubDate": "2024-10-13T10:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "NOT"
+      ]
+    },
+    {
+      "title": "Serial Entrepreneur: Web3 Stagnant, Echoing 1980s AI",
+      "link": "https://cryptopanic.com/news/19998489/Serial-Entrepreneur-Web3-Stagnant-Echoing-1980s-AI?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T09:30:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FIL",
+        "AR"
+      ]
+    },
+    {
+      "title": "Will SAND breakout, rally 15%? Assessing key factors",
+      "link": "https://cryptopanic.com/news/19998350/Will-SAND-breakout-rally-15-Assessing-key-factors?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T08:00:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SAND"
+      ]
+    },
+    {
+      "title": "First Neiro on Ethereum (NEIRO) Climbs to New All-Time High, but Reversal Signs Emerge",
+      "link": "https://cryptopanic.com/news/19998500/First-Neiro-on-Ethereum-NEIRO-Climbs-to-New-All-Time-High-but-Reversal-Signs-Emerge?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T08:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "NEIRO"
+      ]
+    },
+    {
+      "title": "NEIRO Price Forecast: SHIB Rival Rockets to Top 100 After Hitting New All-Time High",
+      "link": "https://cryptopanic.com/news/19998393/NEIRO-Price-Forecast-SHIB-Rival-Rockets-to-Top-100-After-Hitting-New-All-Time-High?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T07:52:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "NEIRO"
+      ]
+    },
+    {
+      "title": "Revuo Monero Issue 213 - Weekly newsletter",
+      "link": "https://cryptopanic.com/news/monero/20014563/Revuo-Monero-Issue-213-Weekly-newsletter",
+      "pubDate": "2024-10-13T07:09:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Trump's Election Odds On Polymarket, Gary Gensler's Doubts About Cryptocurrency's Future, Shiba Inu Lead Developer's Cryptic Post Sparks Intrigue And More: This Week In Crypto",
+      "link": "https://cryptopanic.com/news/19998206/Trumps-Election-Odds-On-Polymarket-Gary-Genslers-Doubts-About-Cryptocurrencys-Future-Shiba-Inu-Lead-Developers-Cryptic-Post-Sparks-Intrigue-And-More-This-Week-In-Crypto?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T05:44:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SHIB",
+        "KSM"
+      ]
+    },
+    {
+      "title": "The Altcoins Under 1 US Dollar With Millionaire Making Pedigree",
+      "link": "https://cryptopanic.com/news/19998141/The-Altcoins-Under-1-US-Dollar-With-Millionaire-Making-Pedigree?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T04:06:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "FTM"
+      ]
+    },
+    {
+      "title": "FET price prediction – 100% rally on the cards or wishful thinking?",
+      "link": "https://cryptopanic.com/news/19998039/FET-price-prediction-100-rally-on-the-cards-or-wishful-thinking?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T02:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FET"
+      ]
+    },
+    {
+      "title": "Suggestions on leveraging graph neural nets for LP",
+      "link": "https://cryptopanic.com/news/the-graph/19999403/Suggestions-on-leveraging-graph-neural-nets-for-LP",
+      "pubDate": "2024-10-13T01:46:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GRT",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "Whales Hoard $90 Million In Bitcoin: A Sign Of What’s To Come?",
+      "link": "https://cryptopanic.com/news/19997988/Whales-Hoard-90-Million-In-Bitcoin-A-Sign-Of-Whats-To-Come?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T01:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "HNT"
+      ]
+    },
+    {
+      "title": "Ethereum-Based Virtual Reality Platform Decentraland Tops Santiment’s Rankings of NFT Projects by Development",
+      "link": "https://cryptopanic.com/news/19997930/Ethereum-Based-Virtual-Reality-Platform-Decentraland-Tops-Santiments-Rankings-of-NFT-Projects-by-Development?mtm_campaign=API-OFA",
+      "pubDate": "2024-10-13T00:00:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "FLOW",
+        "MANA"
+      ]
+    }
+  ]
+}

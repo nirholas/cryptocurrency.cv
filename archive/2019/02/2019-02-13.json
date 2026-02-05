@@ -1,0 +1,42 @@
+{
+  "date": "2019-02-13",
+  "fetchedAt": "2026-02-05T07:27:06.998Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Cryptocurrencies to Have in 2019",
+      "link": "https://cryptopanic.com/news/tron/4559968/Cryptocurrencies-to-Have-in-2019",
+      "pubDate": "2019-02-13T21:26:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "The Awesome Tron",
+      "link": "https://cryptopanic.com/news/tron/4553399/The-Awesome-Tron",
+      "pubDate": "2019-02-13T13:07:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 5
+      }
+    }
+  ]
+}

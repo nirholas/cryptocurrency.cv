@@ -1,0 +1,21 @@
+{
+  "date": "2019-05-23",
+  "fetchedAt": "2026-02-05T07:27:06.976Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Price Drops Again Whilst BSV Takes Biggest Hit After USCO Snubbed Craig Wright",
+      "link": "https://cryptopanic.com/news/5505454/Bitcoin-Price-Drops-Again-Whilst-BSV-Takes-Biggest-Hit-After-USCO-Snubbed-Craig-Wright",
+      "pubDate": "2019-05-23T05:59:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ]
+    }
+  ]
+}

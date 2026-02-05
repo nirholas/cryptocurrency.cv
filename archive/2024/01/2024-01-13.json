@@ -1,0 +1,302 @@
+{
+  "date": "2024-01-13",
+  "fetchedAt": "2026-02-05T07:27:08.058Z",
+  "articleCount": 18,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Analyst: Vanguard May Reconsider Bitcoin Stance as Cryptocurrency Gains Momentum",
+      "link": "https://cryptopanic.com/news/19173949/Analyst-Vanguard-May-Reconsider-Bitcoin-Stance-as-Cryptocurrency-Gains-Momentum",
+      "pubDate": "2024-01-13T22:36:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Vanguard, a prominent investment firm, is currently at the center of speculation regarding a potential shift in its long-standing anti-Bitcoin stance. According to insights from Bloomberg’s senior analyst, Eric Balchunas, the investment firm may be reevaluating its position on Bitcoin as market dynamics evolve and the demand for diversified portfolios gains momentum. Vanguard’s current Bitcoin...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Arbitrum (ARB) Dominates Ethereum Layer 2 Networks",
+      "link": "https://cryptopanic.com/news/19173834/Arbitrum-ARB-Dominates-Ethereum-Layer-2-Networks",
+      "pubDate": "2024-01-13T19:12:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Arbitrum, a layer 2 network built on the Ethereum blockchain, is witnessing a robust performance as the new year unfolds. Notably, the platform has experienced significant upswings in trading volume and the valuation of its native token, ARB. Indeed, this positive momentum signals a promising trajectory for Arbitrum in the early stages of the year. Arbitrum’s Thriving DeFi...",
+      "currencies": [
+        "ETH",
+        "FLOW",
+        "ARB"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "GameStop exits the NFT space after shutting down its marketplace",
+      "link": "https://cryptopanic.com/news/19173739/GameStop-exits-the-NFT-space-after-shutting-down-its-marketplace",
+      "pubDate": "2024-01-13T18:45:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "GameStop has decided to exit the NFT business, shutting down its NFT marketplace about a year and a half after its launch. The publicly-traded video game retailer cited regulatory uncertainty in the cryptocurrency space as the reason for winding down its platform, which supported gaming NFTs and other collectibles across Ethereum scaling networks Immutable X […]",
+      "currencies": [
+        "ETH",
+        "IMX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Unusual trading volumes detected on Upbit for Altcoins",
+      "link": "https://cryptopanic.com/news/19173732/Unusual-trading-volumes-detected-on-Upbit-for-Altcoins?mtm_campaign=API-OFA",
+      "pubDate": "2024-01-13T18:39:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "APT",
+        "BLUR"
+      ]
+    },
+    {
+      "title": "Bitcoin Drops Below $43,000: Experts Call it a Chance to Buy Cheap",
+      "link": "https://cryptopanic.com/news/19173724/Bitcoin-Drops-Below-43000-Experts-Call-it-a-Chance-to-Buy-Cheap",
+      "pubDate": "2024-01-13T18:21:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Despite the recent launch of ten Bitcoin ETFs, bitcoin dips below $43,000 amid market corrections; experts stay hopeful for its recovery.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Three Bullish Tokens Investors Should Consider in Q1 of 2024: Everlodge (ELDG), Cardano (ADA) and Ethereum Classic (ETC)",
+      "link": "https://cryptopanic.com/news/19173571/Three-Bullish-Tokens-Investors-Should-Consider-in-Q1-of-2024-Everlodge-ELDG-Cardano-ADA-and-Ethereum-Classic-ETC",
+      "pubDate": "2024-01-13T16:31:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "ETC"
+      ]
+    },
+    {
+      "title": "Celestia Network: How To Stake TIA And Position For 5-Figure Airdrops",
+      "link": "https://cryptopanic.com/news/19173527/Celestia-Network-How-To-Stake-TIA-And-Position-For-5-Figure-Airdrops",
+      "pubDate": "2024-01-13T16:00:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "ATOM",
+        "INJ",
+        "TIA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin's Elite: Who Owns Most Bitcoin (BTC) in 2024? Eos (EOS) & Rebel Satoshi ($RBLZ) Gain Momentum",
+      "link": "https://cryptopanic.com/news/19173490/Bitcoins-Elite-Who-Owns-Most-Bitcoin-BTC-in-2024-Eos-EOS-Rebel-Satoshi-RBLZ-Gain-Momentum",
+      "pubDate": "2024-01-13T15:45:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano Soars: Records Remarkable Yearly Growth, Spikes With 24 Million Transactions",
+      "link": "https://cryptopanic.com/news/19173426/Cardano-Soars-Records-Remarkable-Yearly-Growth-Spikes-With-24-Million-Transactions",
+      "pubDate": "2024-01-13T14:42:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Native tokens have also added 1.9 million in impressive growth",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 8
+      }
+    },
+    {
+      "title": "XRPL validators torn on AMM feature amid Ripple’s advocacy",
+      "link": "https://cryptopanic.com/news/19173093/XRPL-validators-torn-on-AMM-feature-amid-Ripples-advocacy",
+      "pubDate": "2024-01-13T11:06:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Hedera network approves $408M of HBAR for ecosystem growth",
+      "link": "https://cryptopanic.com/news/19172951/Hedera-network-approves-408M-of-HBAR-for-ecosystem-growth",
+      "pubDate": "2024-01-13T09:25:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP ETF speculation rises after BlackRock CEO comment",
+      "link": "https://cryptopanic.com/news/19172959/XRP-ETF-speculation-rises-after-BlackRock-CEO-comment",
+      "pubDate": "2024-01-13T09:24:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "In recent developments in cryptocurrency and exchange-traded funds (ETFs), BlackRock CEO Larry Fink has commented noteworthy about the potential for an XRP ETF. This statement was made during an interview with FOX senior correspondent Charles Gasparino, amidst growing interest in cryptocurrency-based ETFs following the U.S. regulator’s approval of a Bitcoin spot ETF. BlackRock’s stance on...",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Bitcoin (BTC) Is Likely to Fall Below $42,000, Here’s Why",
+      "link": "https://cryptopanic.com/news/19172971/Bitcoin-BTC-Is-Likely-to-Fall-Below-42000-Heres-Why",
+      "pubDate": "2024-01-13T09:20:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Buyer exhaustion and increased selling pressure could lead BTC to $40,500. A breakdown below the 50 EMA may accelerate the dump below $40,000. If buyers rebound the price to $45,000, then BTC might rally to $52,000 later. Bitcoin’s (BTC) plunge in the last 24 hours might not be the end of its correction phase, analyst […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "The Role of Cryptocurrency in Offshore Betting Transactions",
+      "link": "https://cryptopanic.com/news/19172878/The-Role-of-Cryptocurrency-in-Offshore-Betting-Transactions",
+      "pubDate": "2024-01-13T08:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Bitcoin Price Suffers Post-Spot ETF Blues, Drops 7% To $43,200",
+      "link": "https://cryptopanic.com/news/blockstack/19172644/Bitcoin-Price-Suffers-Post-Spot-ETF-Blues-Drops-7-To-43200",
+      "pubDate": "2024-01-13T02:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "STX"
+      ]
+    },
+    {
+      "title": "Crypto Whales Accumulate 2.39 Trillion SHIB in a Month as Burn Rate Skyrockets",
+      "link": "https://cryptopanic.com/news/19172640/Crypto-Whales-Accumulate-239-Trillion-SHIB-in-a-Month-as-Burn-Rate-Skyrockets",
+      "pubDate": "2024-01-13T01:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "A cryptocurrency whale has recently sent a whopping 136.8 billion tokens of the meme-inspired cryptocurrency Shiba Inu ($SHIB) to a newly created wallet, at a time in which SHIB’s burn rate has been increasing significantly. According to on-chain analysis service Lookonchain, a newly created whale wallet accumulated the 136.8 billion tokens worth over $1.38 million […]",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "SEC Chair releases official statement concerning cybersecurity breach following false Bitcoin ETF approval tweet",
+      "link": "https://cryptopanic.com/news/19172602/SEC-Chair-releases-official-statement-concerning-cybersecurity-breach-following-false-Bitcoin-ETF-approval-tweet",
+      "pubDate": "2024-01-13T00:50:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Hedera partners with Algorand to revolutionize decentralized asset recovery",
+      "link": "https://cryptopanic.com/news/19172565/Hedera-partners-with-Algorand-to-revolutionize-decentralized-asset-recovery",
+      "pubDate": "2024-01-13T00:09:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Hedera has joined forces with Algorand to launch the DeRec Alliance. This initiative, announced at the Crypto Finance Conference in St. Moritz, Switzerland, focuses on revolutionizing how digital assets are secured and recovered across the Web3 space. Revolutionizing digital asset security The DeRec Alliance, with key players like the HBAR Foundation, Algorand Foundation, the Hashgraph […]",
+      "currencies": [
+        "ALGO",
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

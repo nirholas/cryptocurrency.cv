@@ -1,0 +1,676 @@
+{
+  "date": "2021-03-03",
+  "fetchedAt": "2026-02-05T07:27:06.806Z",
+  "articleCount": 46,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "NU above 0.70",
+      "link": "https://cryptopanic.com/news/11568733/NU-above-070",
+      "pubDate": "2021-03-03T22:59:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Broke 5000 members",
+      "link": "https://cryptopanic.com/news/11568412/Broke-5000-members",
+      "pubDate": "2021-03-03T22:31:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "RT @HamnettPhillip: I'm looking forward to giving a talk at @block_one_'s #EOSIO #hackathon alongside @Google and @glxyint. I hope you can…",
+      "link": "https://cryptopanic.com/news/11569408/RT-HamnettPhillip-Im-looking-forward-to-giving-a-talk-at-block_one_s-EOSIO-hackathon-alongside-Google-and-glxyint-I-hope-you-can?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-03T22:30:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHEX"
+      ]
+    },
+    {
+      "title": "With Amazon heading in a very strong crypto direction, I see only great things for NuCypher.",
+      "link": "https://cryptopanic.com/news/11568310/With-Amazon-heading-in-a-very-strong-crypto-direction-I-see-only-great-things-for-NuCypher",
+      "pubDate": "2021-03-03T21:31:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Preview: IBM z/OS V2.5",
+      "link": "https://cryptopanic.com/news/11568282/Preview-IBM-zOS-V25",
+      "pubDate": "2021-03-03T21:03:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MFT"
+      ]
+    },
+    {
+      "title": "EOS Creator Dan Larimer Reveals Next Big Project: Clarion",
+      "link": "https://cryptopanic.com/news/11568205/EOS-Creator-Dan-Larimer-Reveals-Next-Big-Project-Clarion",
+      "pubDate": "2021-03-03T20:01:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Blockchain developer Dan Larimer's fourth blockchain project is yet another decentralized social network, aimed at disrupting Big Tech.",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 32
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "VeChain Technicals Suggest Bull Cycle Has Begun",
+      "link": "https://cryptopanic.com/news/11568180/VeChain-Technicals-Suggest-Bull-Cycle-Has-Begun",
+      "pubDate": "2021-03-03T19:57:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "VeChain has rebounded from a critical support barrier after a market-wide correction saw its price drop by 46%. Now, VET seems primed to resume its uptrend towards new all-time highs. VeChain Enters New Bullish Cycle VeChain broke out of an inverse head-and-shoulders formation on Feb. 9 following a two-year-long consolidation period. Slicing through the $0.035 resistance level...",
+      "currencies": [
+        "ETH",
+        "VET"
+      ],
+      "votes": {
+        "positive": 45,
+        "negative": 6
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "You think your Mogwai, will be unique? It will be for sure! Join us for the upcoming release of DOTMog…",
+      "link": "https://cryptopanic.com/news/11570740/You-think-your-Mogwai-will-be-unique-It-will-be-for-sure-Join-us-for-the-upcoming-release-of-DOTMog",
+      "pubDate": "2021-03-03T19:44:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MOG"
+      ]
+    },
+    {
+      "title": "We are thrilled to announce that inSure #DeFi will be minting a limited number of #NFTs with a predefined…",
+      "link": "https://cryptopanic.com/news/11572100/We-are-thrilled-to-announce-that-inSure-DeFi-will-be-minting-a-limited-number-of-NFTs-with-a-predefined",
+      "pubDate": "2021-03-03T19:44:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SURE"
+      ]
+    },
+    {
+      "title": "Ripple Engaging with Central Banks to Pitch Private Version of XRP Ledger",
+      "link": "https://cryptopanic.com/news/ripple/11568178/Ripple-Engaging-with-Central-Banks-to-Pitch-Private-Version-of-XRP-Ledger",
+      "pubDate": "2021-03-03T19:43:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Ripple has designed a private version of the XRP Ledger that is specifically tuned for central banks",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DeFi Is The Fastest Growing Sector In Crypto",
+      "link": "https://cryptopanic.com/news/11568158/DeFi-Is-The-Fastest-Growing-Sector-In-Crypto",
+      "pubDate": "2021-03-03T19:17:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "DeFi is King According to the research, the native tokens of many DeFi projects saw more linear growth in price this year. This seems to be dwarfed by the exponential growth seen in the summer of last year. This is despite the growth of several of the largest decentralized finance projects such as Aave and … Continued",
+      "currencies": [
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "5 Reasons ARK Crypto is Easy",
+      "link": "https://cryptopanic.com/news/11568056/5-Reasons-ARK-Crypto-is-Easy",
+      "pubDate": "2021-03-03T19:00:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "VeChain (VET), DNV’s Blockchain Solution Tapped for Aluminium Traceability",
+      "link": "https://cryptopanic.com/news/11568118/VeChain-VET-DNVs-Blockchain-Solution-Tapped-for-Aluminium-Traceability",
+      "pubDate": "2021-03-03T19:00:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Norwegian firm, Hydro, has adopted the “Tag.Trace.Trust.” traceability blockchain solution co-developed by VeChain (VET) and DNV. Hydro aims to use the distributed ledger technology (DLT) solution to prove to its clients that its aluminum is produced in accordance with sustainable standards, according to a LedgerInsights report on March 3, 2021. Hydro Taps VeChain (VET) DLTRead More",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Price analysis 3/3: BTC, ETH, ADA, BNB, DOT, XRP, LTC, LINK, BCH, XLM",
+      "link": "https://cryptopanic.com/news/polkadot/11568046/Price-analysis-33-BTC-ETH-ADA-BNB-DOT-XRP-LTC-LINK-BCH-XLM",
+      "pubDate": "2021-03-03T18:42:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Now that Bitcoin price has flipped $50,000 back to support, small and large-cap altcoins are gearing up for a move higher.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Price analysis 3/3: BTC, ETH, ADA, BNB, DOT, XRP, LTC, LINK,  BCH, XLM",
+      "link": "https://cryptopanic.com/news/11568046/Price-analysis-33-BTC-ETH-ADA-BNB-DOT-XRP-LTC-LINK-BCH-XLM",
+      "pubDate": "2021-03-03T18:42:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Now that Bitcoin price has flipped $50,000 back to support, small and large-cap altcoins are gearing up for a move higher.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "ADA",
+        "XRP",
+        "DOT",
+        "LTC",
+        "LINK",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Today we are happy to be partnering with DYGYCON - a recurring virtual event for connecting with people from all over the blockchain industry!",
+      "link": "https://cryptopanic.com/news/11568691/Today-we-are-happy-to-be-partnering-with-DYGYCON-a-recurring-virtual-event-for-connecting-with-people-from-all-over-the-blockchain-industry",
+      "pubDate": "2021-03-03T18:42:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Low effort post incoming  (But actually though, we're seeing some pretty strong support lines)",
+      "link": "https://cryptopanic.com/news/11568493/Low-effort-post-incoming-But-actually-though-were-seeing-some-pretty-strong-support-lines",
+      "pubDate": "2021-03-03T18:34:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Enjin (ENJ) EXPLODES on Bullish NFT News | Binance Smart Chain, The Graph and THETA Network + STACK",
+      "link": "https://cryptopanic.com/news/theta-token/11568033/Enjin-ENJ-EXPLODES-on-Bullish-NFT-News-Binance-Smart-Chain-The-Graph-and-THETA-Network-STACK",
+      "pubDate": "2021-03-03T18:31:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "Enjin (ENJ) Blasts to $1.19 all-time high | Have NFTs peaked? | PAID Network, DAO Maker, Binance Smart Chain (BSC), Graph Protocol (GRT) | Mantra DAO, Polygon (MATIC), Stellar (XLM) Horizon, Power Ledger (POWR) | Origin Protocol, SONY as Theta Network Validator | Stacker Ventures Overview (STACK) #Bitcoin #crypto #ENJIN #altcoins #altcoin #crypto #Chainlink #Ethereum #THETA #Investing #Litecoin #Cryptocurrency #Invest #Binance #news #BTC #success #finance #entrepreneur #business #market #polkado",
+      "currencies": [
+        "THETA",
+        "GRT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ALGO Bounces At Long-Term Support, Despite Drop",
+      "link": "https://cryptopanic.com/news/11567967/ALGO-Bounces-At-Long-Term-Support-Despite-Drop",
+      "pubDate": "2021-03-03T17:51:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Despite the failure to confirm the bullish trend, ALGO will likely move upwards towards the closest resistance area. ALGO’s Long-Term Levels ALGO has been decreasing since Feb. 12, when it reached a high of $1.84. The drop took it to a low of $0.83 on Feb. 23, but it created a long lower wick and … Continued",
+      "currencies": [
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Our 2nd token burn 1 billion ZEON being burned and being removed from the ecosystem forever. This equates to around…",
+      "link": "https://cryptopanic.com/news/11572028/Our-2nd-token-burn-1-billion-ZEON-being-burned-and-being-removed-from-the-ecosystem-forever-This-equates-to-around",
+      "pubDate": "2021-03-03T17:28:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEON"
+      ]
+    },
+    {
+      "title": "Retail Goliath Rakuten Now Allows Users To Pay With Bitcoin, Ethereum and Bitcoin Cash",
+      "link": "https://cryptopanic.com/news/11567898/Retail-Goliath-Rakuten-Now-Allows-Users-To-Pay-With-Bitcoin-Ethereum-and-Bitcoin-Cash",
+      "pubDate": "2021-03-03T17:10:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Japanese e-commerce titan Rakuten is now allowing customers to pay with Bitcoin (BTC), Ethereum (ETH), and Bitcoin Cash (BCH). In a new announcement, the retail giant reveals it’s integrating the company’s crypto exchange subsidiary with their Rakuten Pay app. The integration will allow customers to seamlessly convert their crypto into Rakuten Cash tokens which can […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The new IOTA Client Libraries: Harder, Better, Faster, Stronger",
+      "link": "https://cryptopanic.com/news/11567864/The-new-IOTA-Client-Libraries-Harder-Better-Faster-Stronger",
+      "pubDate": "2021-03-03T16:49:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Over the years a lot of developers in our ecosystem have been using our client libraries to integrate IOTA into their applications. Available in many different programming languages, both officially supported and community driven projects made it possible to utilize the IOTA tangle in many projects: From IoT devices using",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dan Larimer’s newest project is another attempt at decentralized social media",
+      "link": "https://cryptopanic.com/news/11567732/Dan-Larimers-newest-project-is-another-attempt-at-decentralized-social-media",
+      "pubDate": "2021-03-03T16:01:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The former founder of Steemit and Block.one is tackling social media once more.",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Travala (AVA) Adds Chainlink (LINK) for Booking Payments, Reports $1 Million Revenue in February",
+      "link": "https://cryptopanic.com/news/chainlink/11567697/Travala-AVA-Adds-Chainlink-LINK-for-Booking-Payments-Reports-1-Million-Revenue-in-February",
+      "pubDate": "2021-03-03T16:01:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Pioneering crypto-friendly booking operator Travala (AVA) starts accepting LINK. It also witnesses 187% spike in revenue compared to February 2020",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "PayPal buys Algorand partner Curv",
+      "link": "https://cryptopanic.com/news/11567687/PayPal-buys-Algorand-partner-Curv",
+      "pubDate": "2021-03-03T16:00:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @SotRos25: @OzfromLA @safenetworktech @safenetforum Timeframe to $MAID OMNI ↔️ #ERC20 swap is TBD, but MaidSafe is keen to work with fir…",
+      "link": "https://cryptopanic.com/news/11570648/RT-SotRos25-OzfromLA-safenetworktech-safenetforum-Timeframe-to-MAID-OMNI-ERC20-swap-is-TBD-but-MaidSafe-is-keen-to-work-with-fir",
+      "pubDate": "2021-03-03T15:50:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "RT @safenetworktech: You’ve got questions; we’ve got answers! @maidsafe’s UX Designer @jimcollinson is holding an AMA on the #SafeNetwork.…",
+      "link": "https://cryptopanic.com/news/11570649/RT-safenetworktech-Youve-got-questions-weve-got-answers-maidsafes-UX-Designer-jimcollinson-is-holding-an-AMA-on-the-SafeNetwork",
+      "pubDate": "2021-03-03T13:44:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "EOS Creator Dan Larimer Introduces Latest Project After Jumping Ship",
+      "link": "https://cryptopanic.com/news/11567377/EOS-Creator-Dan-Larimer-Introduces-Latest-Project-After-Jumping-Ship",
+      "pubDate": "2021-03-03T13:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Larimer claims that the aim of the project is “to give everyone in the world the tools to broadcast their message to everyone who wants to hear their message without creating dependencies on centralized infrastructure.” What is Clarion? In the announcement, Larimer described Clarion OS as a friend-to-friend message propagation protocol. He said it would … Continued",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Dan Larimer Reveals New Project to Combat “Tyranny” of Twitter",
+      "link": "https://cryptopanic.com/news/11567285/Dan-Larimer-Reveals-New-Project-to-Combat-Tyranny-of-Twitter",
+      "pubDate": "2021-03-03T12:49:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ]
+    },
+    {
+      "title": "The Graph Adds Support for Binance Smart Chain",
+      "link": "https://cryptopanic.com/news/11567214/The-Graph-Adds-Support-for-Binance-Smart-Chain",
+      "pubDate": "2021-03-03T12:05:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "The Graph is expanding to Binance Smart Chain. The Graph Expands The Graph, the indexing and querying protocol for the Web3 ecosystem, has added support for Binance Smart Chain. Binance announced the move via its blog earlier today. The Binance-owned chain is now integrated in the protocol, allowing developers to create Application Programming Interfaces. These APIs, referred...",
+      "currencies": [
+        "UNI",
+        "GRT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "66 Million XRP Moved by Top Exchanges After Someone Pays $4,480 Fee for XRP Transfer",
+      "link": "https://cryptopanic.com/news/ripple/11567174/66-Million-XRP-Moved-by-Top-Exchanges-After-Someone-Pays-4480-Fee-for-XRP-Transfer",
+      "pubDate": "2021-03-03T11:36:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "66 million XRP tokens have been shifted by two major U.S.-based exchanges; meanwhile, someone paid $4,480 for an XRP transaction a few days ago",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 6
+      }
+    },
+    {
+      "title": "I have seen a few questions on how to stake Nucypher so here is the easiest way to on Coinlist (instructions and ref link)",
+      "link": "https://cryptopanic.com/news/11568848/I-have-seen-a-few-questions-on-how-to-stake-Nucypher-so-here-is-the-easiest-way-to-on-Coinlist-instructions-and-ref-link",
+      "pubDate": "2021-03-03T11:26:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Dogecoin Becomes More Popular Than Bitcoin on Twitter",
+      "link": "https://cryptopanic.com/news/dogecoin/11567152/Dogecoin-Becomes-More-Popular-Than-Bitcoin-on-Twitter",
+      "pubDate": "2021-03-03T11:23:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Last month, everyone on Twitter was talking about Dogecoin—even more than they were talking about Bitcoin.",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Lets make a thread of basic understandable info and analogies to educate this sub on Nu's world-changing potential.",
+      "link": "https://cryptopanic.com/news/11567360/Lets-make-a-thread-of-basic-understandable-info-and-analogies-to-educate-this-sub-on-Nus-world-changing-potential",
+      "pubDate": "2021-03-03T09:31:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "What happened to Hyperion after the acquisition? Here're Jed's opinions.",
+      "link": "https://cryptopanic.com/news/11570303/What-happened-to-Hyperion-after-the-acquisition-Herere-Jeds-opinions",
+      "pubDate": "2021-03-03T08:54:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "RT @btsfav: #HIVE Dollar Interest Distributions Begin on the Hive Blockchain - zero gas zero fees",
+      "link": "https://cryptopanic.com/news/11571543/RT-btsfav-HIVE-Dollar-Interest-Distributions-Begin-on-the-Hive-Blockchain-zero-gas-zero-fees",
+      "pubDate": "2021-03-03T08:21:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "Charted: Polkadot (DOT) Steadies Above $35, Why Bulls Aim $40 or Higher",
+      "link": "https://cryptopanic.com/news/polkadot/11566044/Charted-Polkadot-DOT-Steadies-Above-35-Why-Bulls-Aim-40-or-Higher",
+      "pubDate": "2021-03-03T07:08:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Polkadot’s DOT corrected lower from $42.00, but it remained stable above $30.00 against the US Dollar. It is now rising and it seems like the bulls are eyeing a fresh increase to $40.00 and $42.00. DOT is holding the ground above the $30.00 and $35.00 levels against the US dollar. The price is trading nicely […]",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 24,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Big shout out to one of our advisors, @cayblood for his work on this - we’ve been using managed ETH instances for s…",
+      "link": "https://cryptopanic.com/news/11570265/Big-shout-out-to-one-of-our-advisors-cayblood-for-his-work-on-this-weve-been-using-managed-ETH-instances-for-s",
+      "pubDate": "2021-03-03T06:50:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "MFT"
+      ]
+    },
+    {
+      "title": "For those with Weak hands , we are growing !this was a month ago , now be patient  believed in each other and stop panic selling 🤦‍️",
+      "link": "https://cryptopanic.com/news/11567361/For-those-with-Weak-hands-we-are-growing-this-was-a-month-ago-now-be-patient-believed-in-each-other-and-stop-panic-selling",
+      "pubDate": "2021-03-03T06:16:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "The healthcare market is valued at trillions of dollars, yet it's rife with inefficiencies and poor solutions. We t…",
+      "link": "https://cryptopanic.com/news/11565026/The-healthcare-market-is-valued-at-trillions-of-dollars-yet-its-rife-with-inefficiencies-and-poor-solutions-We-t",
+      "pubDate": "2021-03-03T04:53:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "LOOM"
+      ]
+    },
+    {
+      "title": "The Graph brings Indexing and Querying to Binance Smart Chain",
+      "link": "https://cryptopanic.com/news/11563317/The-Graph-brings-Indexing-and-Querying-to-Binance-Smart-Chain",
+      "pubDate": "2021-03-03T03:31:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "-",
+      "currencies": [
+        "GRT"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "It looks like @Nucypher is working something with Amazon Web Service now.",
+      "link": "https://cryptopanic.com/news/11566965/It-looks-like-Nucypher-is-working-something-with-Amazon-Web-Service-now",
+      "pubDate": "2021-03-03T03:25:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Still hangin in there!! Who’s with me?",
+      "link": "https://cryptopanic.com/news/11566404/Still-hangin-in-there-Whos-with-me",
+      "pubDate": "2021-03-03T03:08:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "DeFi token CRV spikes after reports PayPal acquired unrelated custody firm Curv",
+      "link": "https://cryptopanic.com/news/11563267/DeFi-token-CRV-spikes-after-reports-PayPal-acquired-unrelated-custody-firm-Curv",
+      "pubDate": "2021-03-03T02:49:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "5k members! Hey all the new people, welcome to the space!",
+      "link": "https://cryptopanic.com/news/11563147/5k-members-Hey-all-the-new-people-welcome-to-the-space",
+      "pubDate": "2021-03-03T01:02:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "New version announced from NuCypher team on twitter.",
+      "link": "https://cryptopanic.com/news/11563007/New-version-announced-from-NuCypher-team-on-twitter",
+      "pubDate": "2021-03-03T00:31:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    }
+  ]
+}

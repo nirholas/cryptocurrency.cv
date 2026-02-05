@@ -1,0 +1,641 @@
+{
+  "date": "2023-07-18",
+  "fetchedAt": "2026-02-05T07:27:07.172Z",
+  "articleCount": 45,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Why This Upcoming Event Is Bearish For Axie Infinity (AXS)",
+      "link": "https://cryptopanic.com/news/18782220/Why-This-Upcoming-Event-Is-Bearish-For-Axie-Infinity-AXS",
+      "pubDate": "2023-07-18T23:00:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BNB",
+        "AXS"
+      ]
+    },
+    {
+      "title": "Shinhan Bank, SCB TechX pilot cross-border stablecoin payments on the Hedera",
+      "link": "https://cryptopanic.com/news/18782038/Shinhan-Bank-SCB-TechX-pilot-cross-border-stablecoin-payments-on-the-Hedera",
+      "pubDate": "2023-07-18T20:45:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Makes Its Way To Injective Ecosystem As IIP-238 Passes",
+      "link": "https://cryptopanic.com/news/18781977/XRP-Makes-Its-Way-To-Injective-Ecosystem-As-IIP-238-Passes",
+      "pubDate": "2023-07-18T20:00:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "In a momentous decision, the Injective community has voted in favor of IIP-238, a proposal that solidifies the integration of XRP into the expanding Injective ecosystem. This groundbreaking collaboration between Injective and Ripple heralds a significant milestone in the decentralized finance (DeFi) sector. With resounding support from the community, the integration of XRP into the […]",
+      "currencies": [
+        "XRP",
+        "INJ"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The Trailing Finality Layer: A stepping stone to proof of stake in Zcash",
+      "link": "https://cryptopanic.com/news/18783794/The-Trailing-Finality-Layer-A-stepping-stone-to-proof-of-stake-in-Zcash",
+      "pubDate": "2023-07-18T19:54:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "What is a token maker, and how does it work?",
+      "link": "https://cryptopanic.com/news/maker/18781958/What-is-a-token-maker-and-how-does-it-work",
+      "pubDate": "2023-07-18T19:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Scarce Open Market Supply of Top Two Gold Tokens as Concentration Levels Run High Among Top Holders",
+      "link": "https://cryptopanic.com/news/18781935/Scarce-Open-Market-Supply-of-Top-Two-Gold-Tokens-as-Concentration-Levels-Run-High-Among-Top-Holders",
+      "pubDate": "2023-07-18T19:30:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "PAXG",
+        "XAUT"
+      ]
+    },
+    {
+      "title": "ApeCoin witnesses sell-offs, but are sharks to the rescue?",
+      "link": "https://cryptopanic.com/news/18781934/ApeCoin-witnesses-sell-offs-but-are-sharks-to-the-rescue",
+      "pubDate": "2023-07-18T19:30:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "APE"
+      ]
+    },
+    {
+      "title": "South Korea’s Oldest Bank Completes Stablecoin Trial On Hedera Network",
+      "link": "https://cryptopanic.com/news/18781885/South-Koreas-Oldest-Bank-Completes-Stablecoin-Trial-On-Hedera-Network",
+      "pubDate": "2023-07-18T19:00:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Aave Launches New Algorithmic Stablecoin GHO on the Ethereum (ETH) Mainnet",
+      "link": "https://cryptopanic.com/news/18781862/Aave-Launches-New-Algorithmic-Stablecoin-GHO-on-the-Ethereum-ETH-Mainnet",
+      "pubDate": "2023-07-18T18:45:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "South Korean Shinhan Bank completes stablecoin remittance pilot with Asian partners",
+      "link": "https://cryptopanic.com/news/18781811/South-Korean-Shinhan-Bank-completes-stablecoin-remittance-pilot-with-Asian-partners",
+      "pubDate": "2023-07-18T18:26:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "XRP Unseats Bitcoin As The Most Traded Crypto Asset, Demonstrating High Confidence",
+      "link": "https://cryptopanic.com/news/18781806/XRP-Unseats-Bitcoin-As-The-Most-Traded-Crypto-Asset-Demonstrating-High-Confidence",
+      "pubDate": "2023-07-18T18:15:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The tides are shifting the crypto market of late. Frenzied trading has pushed XRP to garner trading volumes higher than those of Bitcoin, otherwise leading the pack in trading volumes.",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Whales Send Hundreds of Millions of Dollars Worth of Bitcoin and Altcoins to Exchanges As Markets Pause",
+      "link": "https://cryptopanic.com/news/18781781/Crypto-Whales-Send-Hundreds-of-Millions-of-Dollars-Worth-of-Bitcoin-and-Altcoins-to-Exchanges-As-Markets-Pause",
+      "pubDate": "2023-07-18T18:05:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "STX"
+      ]
+    },
+    {
+      "title": "Chiliz (CHZ) Received US Approval for \"FAN TOKEN\" Brand!",
+      "link": "https://cryptopanic.com/news/18781784/Chiliz-CHZ-Received-US-Approval-for-FAN-TOKEN-Brand",
+      "pubDate": "2023-07-18T18:02:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Chiliz received approval from the USA for the FAN TOKEN brand. CHZ continues to trade below its ATH of $0.92 at $0.079. Continue Reading: Chiliz (CHZ) Received US Approval for \"FAN TOKEN\" Brand!",
+      "currencies": [
+        "CHZ"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Turmoil: Market Slump, Heavy Liquidations, and Unexpected Gainers",
+      "link": "https://cryptopanic.com/news/18781714/Crypto-Turmoil-Market-Slump-Heavy-Liquidations-and-Unexpected-Gainers",
+      "pubDate": "2023-07-18T17:36:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LINK",
+        "APE"
+      ]
+    },
+    {
+      "title": "Litecoin Whales Deposit Big To Exchanges, Bearish Sign?",
+      "link": "https://cryptopanic.com/news/18781609/Litecoin-Whales-Deposit-Big-To-Exchanges-Bearish-Sign",
+      "pubDate": "2023-07-18T16:30:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC",
+        "STX"
+      ]
+    },
+    {
+      "title": "Web3 projects see 78% drop in VC investments as crypto funding falls",
+      "link": "https://cryptopanic.com/news/flow/18781572/Web3-projects-see-78-drop-in-VC-investments-as-crypto-funding-falls",
+      "pubDate": "2023-07-18T15:55:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Crypto Entrepreneur, Tron Founder Justin Sun Faces Lawsuit Over TrueUSD Acquisition",
+      "link": "https://cryptopanic.com/news/18781531/Crypto-Entrepreneur-Tron-Founder-Justin-Sun-Faces-Lawsuit-Over-TrueUSD-Acquisition",
+      "pubDate": "2023-07-18T15:53:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "TUSD"
+      ]
+    },
+    {
+      "title": "Ripple Court Ruling Unlikely to Impact Celsius Wind-Up, Crypto Lender’s Counsel Says",
+      "link": "https://cryptopanic.com/news/18781425/Ripple-Court-Ruling-Unlikely-to-Impact-Celsius-Wind-Up-Crypto-Lenders-Counsel-Says",
+      "pubDate": "2023-07-18T15:21:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "CEL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Shinhan Bank Explores Stablecoin Payments on Hedera Network",
+      "link": "https://cryptopanic.com/news/18781674/Shinhan-Bank-Explores-Stablecoin-Payments-on-Hedera-Network",
+      "pubDate": "2023-07-18T15:09:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Today in Crypto: Shinhan Bank Tests Stablecoin Payments on Hedera Network, Marathon Shareholders File Lawsuit Against CEO & Top Execs, Cronos Partners with Ubisoft",
+      "link": "https://cryptopanic.com/news/18781374/Today-in-Crypto-Shinhan-Bank-Tests-Stablecoin-Payments-on-Hedera-Network-Marathon-Shareholders-File-Lawsuit-Against-CEO-Top-Execs-Cronos-Partners-with-Ubisoft",
+      "pubDate": "2023-07-18T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "CRO",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Is It Too Late to Buy GALA? GALA Price Rockets Up 11% and AI Crypto Signals Platform yPredict Raises $3 Million – How Does it Work?",
+      "link": "https://cryptopanic.com/news/18781319/Is-It-Too-Late-to-Buy-GALA-GALA-Price-Rockets-Up-11-and-AI-Crypto-Signals-Platform-yPredict-Raises-3-Million-How-Does-it-Work",
+      "pubDate": "2023-07-18T14:42:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "GALA"
+      ]
+    },
+    {
+      "title": "XRP Is Getting Listed on One of the World’s Most Prestigious Crypto Exchanges",
+      "link": "https://cryptopanic.com/news/18781291/XRP-Is-Getting-Listed-on-One-of-the-Worlds-Most-Prestigious-Crypto-Exchanges",
+      "pubDate": "2023-07-18T14:28:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "LCX, the Liechtenstein Cryptoassets Exchange, is a fintech company that has been contributing to capital markets since 2018. With five years of innovation, LCX has significantly influenced the digital asset industry by delivering a robust blockchain infrastructure, characterized by exceptional security, efficiency, and transparency. The company has secured nine regulatory registrations in...",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "APE Rises on Listing News by Major South Korean Exchange, Trading Begins Today",
+      "link": "https://cryptopanic.com/news/18781209/APE-Rises-on-Listing-News-by-Major-South-Korean-Exchange-Trading-Begins-Today",
+      "pubDate": "2023-07-18T14:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "APE"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash is Going to Zero as BCH Price Plummets 12% But Eco-Friendly BTC20 May Be the Next Crypto to Explode – How to Buy Early?",
+      "link": "https://cryptopanic.com/news/18781089/Bitcoin-Cash-is-Going-to-Zero-as-BCH-Price-Plummets-12-But-Eco-Friendly-BTC20-May-Be-the-Next-Crypto-to-Explode-How-to-Buy-Early",
+      "pubDate": "2023-07-18T13:24:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Hedera Hosts Korean Shinhan Bank's Stablecoin Testing",
+      "link": "https://cryptopanic.com/news/18781075/Hedera-Hosts-Korean-Shinhan-Banks-Stablecoin-Testing",
+      "pubDate": "2023-07-18T13:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Shinhan Bank Uses This Altcoin Network For Cross-Border Payments!",
+      "link": "https://cryptopanic.com/news/18780980/Shinhan-Bank-Uses-This-Altcoin-Network-For-Cross-Border-Payments",
+      "pubDate": "2023-07-18T12:45:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Justin Sun Accused of Covertly Acquiring TrueUSD: Archblock Lawsuit",
+      "link": "https://cryptopanic.com/news/18781327/Justin-Sun-Accused-of-Covertly-Acquiring-TrueUSD-Archblock-Lawsuit",
+      "pubDate": "2023-07-18T12:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "TUSD"
+      ]
+    },
+    {
+      "title": "Chainlink CCIP Goes Live On Mainnet, LINK Jumps By Nearly 10%",
+      "link": "https://cryptopanic.com/news/18780948/Chainlink-CCIP-Goes-Live-On-Mainnet-LINK-Jumps-By-Nearly-10",
+      "pubDate": "2023-07-18T12:30:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MATIC",
+        "LINK",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Russia's Crypto Mining Industry Surpasses $3.5B Amidst Controversy",
+      "link": "https://cryptopanic.com/news/18810970/Russias-Crypto-Mining-Industry-Surpasses-35B-Amidst-Controversy",
+      "pubDate": "2023-07-18T12:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "UNI and SNX Eye Critical Zones After Recent Developments",
+      "link": "https://cryptopanic.com/news/18781265/UNI-and-SNX-Eye-Critical-Zones-After-Recent-Developments",
+      "pubDate": "2023-07-18T12:26:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "SNX"
+      ]
+    },
+    {
+      "title": "Judge Orders Ripple And SEC To Schedule Settlement Conference",
+      "link": "https://cryptopanic.com/news/18780900/Judge-Orders-Ripple-And-SEC-To-Schedule-Settlement-Conference",
+      "pubDate": "2023-07-18T12:15:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "In the ongoing legal battle between Ripple Labs and the U.S. Securities and Exchange Commission (SEC), District Judge Analisa Torres has referred the case to Magistrate Judge Sarah Netburn for General Pretrial, including the crucial aspects of scheduling, discovery, non-dispositive pretrial motions, and settlement. The General Pretrial refers to a pre-trial hearing where the attorneys […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ICP Bearish Dive Paves the Way for Potential Bullish Reversal",
+      "link": "https://cryptopanic.com/news/18781210/ICP-Bearish-Dive-Paves-the-Way-for-Potential-Bullish-Reversal",
+      "pubDate": "2023-07-18T12:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ]
+    },
+    {
+      "title": "Aave Introduces New Features With Lens Protocol V2",
+      "link": "https://cryptopanic.com/news/18780815/Aave-Introduces-New-Features-With-Lens-Protocol-V2",
+      "pubDate": "2023-07-18T11:47:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "S. Korea’s Shinhan Bank, SCB TechX, complete second stablecoin trial on Hedera",
+      "link": "https://cryptopanic.com/news/18780787/S-Koreas-Shinhan-Bank-SCB-TechX-complete-second-stablecoin-trial-on-Hedera",
+      "pubDate": "2023-07-18T11:32:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Internet Computer will be a key alternative to AWS-like services — Dfinity exec",
+      "link": "https://cryptopanic.com/news/18780666/Internet-Computer-will-be-a-key-alternative-to-AWS-like-services-Dfinity-exec",
+      "pubDate": "2023-07-18T10:58:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ubisoft and Cronos Alliance: A New Chapter for Blockchain in Gaming",
+      "link": "https://cryptopanic.com/news/18810971/Ubisoft-and-Cronos-Alliance-A-New-Chapter-for-Blockchain-in-Gaming",
+      "pubDate": "2023-07-18T10:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "CRO"
+      ]
+    },
+    {
+      "title": "South Korea’s Shinhan Bank tests stablecoin payments on Hedera network",
+      "link": "https://cryptopanic.com/news/18780583/South-Koreas-Shinhan-Bank-tests-stablecoin-payments-on-Hedera-network",
+      "pubDate": "2023-07-18T10:15:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "South Korea's Shinhan Bank completed a feasibility test for stablecoin remittance payments using Hedera's distributed ledger technology.",
+      "currencies": [
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Quant and Bitdao Holders Worried Due To Price Dips, Experienced Traders Are Making Easy Money With Tradecurve",
+      "link": "https://cryptopanic.com/news/quant-network/18780671/Quant-and-Bitdao-Holders-Worried-Due-To-Price-Dips-Experienced-Traders-Are-Making-Easy-Money-With-Tradecurve",
+      "pubDate": "2023-07-18T10:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "QNT",
+        "BIT"
+      ]
+    },
+    {
+      "title": "Bankrupt Celsius to spend $24M from GK8 sale on legal expenses",
+      "link": "https://cryptopanic.com/news/18780423/Bankrupt-Celsius-to-spend-24M-from-GK8-sale-on-legal-expenses",
+      "pubDate": "2023-07-18T09:03:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "CEL"
+      ]
+    },
+    {
+      "title": "Trillions of Dollars Could Flow to Crypto Amid ‘Ridiculous’ Levels of Innovation, Says Anthony Scaramucci",
+      "link": "https://cryptopanic.com/news/flow/18780210/Trillions-of-Dollars-Could-Flow-to-Crypto-Amid-Ridiculous-Levels-of-Innovation-Says-Anthony-Scaramucci",
+      "pubDate": "2023-07-18T07:04:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Celsius Estate Settles With Series B Holders Over Proceeds of GK8 Sale",
+      "link": "https://cryptopanic.com/news/18780045/Celsius-Estate-Settles-With-Series-B-Holders-Over-Proceeds-of-GK8-Sale",
+      "pubDate": "2023-07-18T04:13:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CEL"
+      ]
+    },
+    {
+      "title": "Ethereum Four Straight Days Down: Bullish Or Bearish?",
+      "link": "https://cryptopanic.com/news/18779957/Ethereum-Four-Straight-Days-Down-Bullish-Or-Bearish",
+      "pubDate": "2023-07-18T02:00:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "QNT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Polychain Monsters launches Neosphere Pioneers Saga booster pack series",
+      "link": "https://cryptopanic.com/news/18779947/Polychain-Monsters-launches-Neosphere-Pioneers-Saga-booster-pack-series",
+      "pubDate": "2023-07-18T01:47:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Why XRP Is Poised To Wildly Outperform Bitcoin And Ethereum",
+      "link": "https://cryptopanic.com/news/18779910/Why-XRP-Is-Poised-To-Wildly-Outperform-Bitcoin-And-Ethereum",
+      "pubDate": "2023-07-18T01:01:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The recent ruling in favor of XRP has dispelled any negative regulatory challenges it had been facing, resulting in a head-turning rally over nearly 100% in 24 hours. Enough people are now paying attention to Ripple’s cryptocurrency, that it’s starting to pull capital from Bitcoin and Ethereum. And according to the charts of the three […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "GhostMarket publishes updated roadmap for 2023",
+      "link": "https://cryptopanic.com/news/18779884/GhostMarket-publishes-updated-roadmap-for-2023",
+      "pubDate": "2023-07-18T00:12:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    }
+  ]
+}

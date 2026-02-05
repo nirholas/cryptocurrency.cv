@@ -1,0 +1,26 @@
+{
+  "date": "2020-10-12",
+  "fetchedAt": "2026-02-05T07:27:06.796Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Monero Leads Rally in Privacy Coins, Rising to Two-Year Highs",
+      "link": "https://cryptopanic.com/news/10232299/Monero-Leads-Rally-in-Privacy-Coins-Rising-to-Two-Year-Highs",
+      "pubDate": "2020-10-12T16:34:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "ZEC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

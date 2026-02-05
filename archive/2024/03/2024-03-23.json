@@ -1,0 +1,513 @@
+{
+  "date": "2024-03-23",
+  "fetchedAt": "2026-02-05T07:27:08.097Z",
+  "articleCount": 33,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Crypto Jobs on the Rise as Bitcoin Trades Near All-Time Highs",
+      "link": "https://cryptopanic.com/news/19351221/Crypto-Jobs-on-the-Rise-as-Bitcoin-Trades-Near-All-Time-Highs",
+      "pubDate": "2024-03-23T23:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LINK",
+        "XLM"
+      ]
+    },
+    {
+      "title": "How XRP Ledger's New AMM Makes Crypto Trading Easier Than Ever",
+      "link": "https://cryptopanic.com/news/19351051/How-XRP-Ledgers-New-AMM-Makes-Crypto-Trading-Easier-Than-Ever",
+      "pubDate": "2024-03-23T20:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The XRP Ledger (XRPL) recently integrated Automated Market Makers (AMMs), a major step towards a more robust DeFi ecosystem.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BakerySwap Finalizes Refunds for PUMP Presale: A Comprehensive Update",
+      "link": "https://cryptopanic.com/news/19350988/BakerySwap-Finalizes-Refunds-for-PUMP-Presale-A-Comprehensive-Update",
+      "pubDate": "2024-03-23T19:09:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "CAKE",
+        "BAKE"
+      ]
+    },
+    {
+      "title": "Ripple’s XRP Army Unveil Crazy Price Milestones As Whales Move Millions Of XRP",
+      "link": "https://cryptopanic.com/news/19350898/Ripples-XRP-Army-Unveil-Crazy-Price-Milestones-As-Whales-Move-Millions-Of-XRP",
+      "pubDate": "2024-03-23T17:44:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The cryptocurrency market witnessed significant activity in the XRP ecosystem as over 70 million XRP coins were transferred in four noteworthy transactions.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Hedera Hashgraph joins UK crypto asset business council, HBAR price sees minor impact",
+      "link": "https://cryptopanic.com/news/19350910/Hedera-Hashgraph-joins-UK-crypto-asset-business-council-HBAR-price-sees-minor-impact",
+      "pubDate": "2024-03-23T17:35:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "In a strategic move aimed at bolstering its presence in the rapidly evolving cryptocurrency landscape, Hedera Hashgraph, the team behind the HBAR token, has announced its membership in the UK Cryptoasset Business Council (UKCBC). The decision comes from Hedera’s commitment to fostering innovation and advocating for well-crafted policies within the UK’s crypto ecosystem. Hedera’s entry […]",
+      "currencies": [
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "March Sees Nearly $1 Billion In Ethereum Netflow To Centralized Exchanges – What’s Happening?",
+      "link": "https://cryptopanic.com/news/19350886/March-Sees-Nearly-1-Billion-In-Ethereum-Netflow-To-Centralized-Exchanges-Whats-Happening",
+      "pubDate": "2024-03-23T17:30:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "DOGE",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Top NFT tokens with 100X returns in 2024 – Apecoin (APE), Fetch.ai (FET), NFT Finance (NFTFN)",
+      "link": "https://cryptopanic.com/news/19350879/Top-NFT-tokens-with-100X-returns-in-2024-Apecoin-APE-Fetchai-FET-NFT-Finance-NFTFN",
+      "pubDate": "2024-03-23T17:28:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "APE",
+        "NFT",
+        "FET"
+      ]
+    },
+    {
+      "title": "Uniswap UNI) and Filecoin (FIL) Stakeholders See Pushd as the Catalyst for an Online Shopping Revolution",
+      "link": "https://cryptopanic.com/news/19350876/Uniswap-UNI-and-Filecoin-FIL-Stakeholders-See-Pushd-as-the-Catalyst-for-an-Online-Shopping-Revolution",
+      "pubDate": "2024-03-23T17:21:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "FIL"
+      ]
+    },
+    {
+      "title": "THORChain and Theta Network Users Embrace Fezoo, Betting on Its Success Against Established Trading Giants",
+      "link": "https://cryptopanic.com/news/19350870/THORChain-and-Theta-Network-Users-Embrace-Fezoo-Betting-on-Its-Success-Against-Established-Trading-Giants",
+      "pubDate": "2024-03-23T17:08:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "RUNE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Raffle Coin (RAFF) Presale Draws Crowds, Promising 100X Growth - A Must-See for Hedera (HBAR) and Injective (INJ) Investors!",
+      "link": "https://cryptopanic.com/news/19350865/Raffle-Coin-RAFF-Presale-Draws-Crowds-Promising-100X-Growth-A-Must-See-for-Hedera-HBAR-and-Injective-INJ-Investors",
+      "pubDate": "2024-03-23T17:04:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HBAR",
+        "INJ"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Claude Opus AI predicts SHIB price for the end of 2024",
+      "link": "https://cryptopanic.com/news/19350844/Claude-Opus-AI-predicts-SHIB-price-for-the-end-of-2024",
+      "pubDate": "2024-03-23T16:51:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "While the broader cryptocurrency market has witnessed short-term volatility, meme coin Shiba Inu (SHIB) has notably stood out by mainly … Continue reading",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BlockDAG Mobile Mining and Limited Presale Alert for Batch 4 with 550M Coins Remaining, SUI and GRT Offer Promising Outlooks",
+      "link": "https://cryptopanic.com/news/19350812/BlockDAG-Mobile-Mining-and-Limited-Presale-Alert-for-Batch-4-with-550M-Coins-Remaining-SUI-and-GRT-Offer-Promising-Outlooks",
+      "pubDate": "2024-03-23T16:26:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "GRT",
+        "SUI"
+      ]
+    },
+    {
+      "title": "ADA to Reach $1? Cardano Sees Spike in Whale Transactions and Active Addresses",
+      "link": "https://cryptopanic.com/news/19350776/ADA-to-Reach-1-Cardano-Sees-Spike-in-Whale-Transactions-and-Active-Addresses",
+      "pubDate": "2024-03-23T15:52:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano (ADA) enthusiasts are eagerly eyeing the $1 mark as the cryptocurrency shows promising growth.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 6
+      }
+    },
+    {
+      "title": "OKX Founder Could Be Under Investigation by US Authorities",
+      "link": "https://cryptopanic.com/news/19350770/OKX-Founder-Could-Be-Under-Investigation-by-US-Authorities",
+      "pubDate": "2024-03-23T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OKB",
+        "GALA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Vitalik Buterin Doubles Grant for ENS, Fueling Growth and Innovation in Web3 Addresses",
+      "link": "https://cryptopanic.com/news/19350675/Vitalik-Buterin-Doubles-Grant-for-ENS-Fueling-Growth-and-Innovation-in-Web3-Addresses",
+      "pubDate": "2024-03-23T14:30:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Nick Johnson, the brain behind Ethereum Name Service (ENS), embarked on this project with uncertain...",
+      "currencies": [
+        "ETH",
+        "ENS"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Going Multichain with NFT Pulse",
+      "link": "https://cryptopanic.com/news/19388566/Going-Multichain-with-NFT-Pulse",
+      "pubDate": "2024-03-23T14:20:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "NFT",
+        "ENS",
+        "RON"
+      ]
+    },
+    {
+      "title": "Why This Token Is Poised to Outperform AEVO in the Upcoming Bull Run",
+      "link": "https://cryptopanic.com/news/19350552/Why-This-Token-Is-Poised-to-Outperform-AEVO-in-the-Upcoming-Bull-Run?mtm_campaign=API-OFA",
+      "pubDate": "2024-03-23T13:24:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AEVO"
+      ]
+    },
+    {
+      "title": "Crypto News: TERRA Luna and Classic Outpace Crypto Giants",
+      "link": "https://cryptopanic.com/news/19350534/Crypto-News-TERRA-Luna-and-Classic-Outpace-Crypto-Giants",
+      "pubDate": "2024-03-23T13:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "BCH",
+        "KCS",
+        "GALA",
+        "NFT",
+        "ENS",
+        "CFX",
+        "TON"
+      ]
+    },
+    {
+      "title": "Something's Cooking on Shibarium With BONE, SHIB Team Tweets",
+      "link": "https://cryptopanic.com/news/19350491/Somethings-Cooking-on-Shibarium-With-BONE-SHIB-Team-Tweets?mtm_campaign=API-OFA",
+      "pubDate": "2024-03-23T12:44:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "BONE"
+      ]
+    },
+    {
+      "title": "Hedera Forges Strategic Alliance with UK Cryptoasset Business Council",
+      "link": "https://cryptopanic.com/news/19350438/Hedera-Forges-Strategic-Alliance-with-UK-Cryptoasset-Business-Council",
+      "pubDate": "2024-03-23T12:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Name Service Integrated in Google’s Search Engine",
+      "link": "https://cryptopanic.com/news/19350369/Ethereum-Name-Service-Integrated-in-Googles-Search-Engine",
+      "pubDate": "2024-03-23T11:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ENS"
+      ]
+    },
+    {
+      "title": "Tech Giant Google Integrates ENS Wallet Balance in Search Results",
+      "link": "https://cryptopanic.com/news/19350342/Tech-Giant-Google-Integrates-ENS-Wallet-Balance-in-Search-Results",
+      "pubDate": "2024-03-23T11:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ENS"
+      ]
+    },
+    {
+      "title": "Ethereum Weathers the Storm: On-Chain Analysis by IntoTheBlock Suggests Resilience Amidst FUD",
+      "link": "https://cryptopanic.com/news/19350194/Ethereum-Weathers-the-Storm-On-Chain-Analysis-by-IntoTheBlock-Suggests-Resilience-Amidst-FUD",
+      "pubDate": "2024-03-23T09:20:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "In the March 22nd issue of his firm’s “On-Chain Insights” newsletter, Lucas Outumuro, Head of Research at crypto analytics firm IntoTheBlock (ITB), dives into the recent criticism and scepticism surrounding Ethereum (ETH). He addresses concerns about ETH’s price performance and perceived regulatory threats, counterbalancing them with on-chain metrics that point to continued growth and bullish...",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "OKX Founder Dismisses Rumors About His Arrest in the United States",
+      "link": "https://cryptopanic.com/news/19350100/OKX-Founder-Dismisses-Rumors-About-His-Arrest-in-the-United-States",
+      "pubDate": "2024-03-23T08:02:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "OKB"
+      ]
+    },
+    {
+      "title": "Do Kwon To Be Released From Prison But Remanded To Montenegro – Details",
+      "link": "https://cryptopanic.com/news/19350075/Do-Kwon-To-Be-Released-From-Prison-But-Remanded-To-Montenegro-Details",
+      "pubDate": "2024-03-23T07:33:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LUNC"
+      ]
+    },
+    {
+      "title": "Bitcoin ETF Netflows May Experience Rebound If This Price Is Attained, Analyst Explains",
+      "link": "https://cryptopanic.com/news/19350067/Bitcoin-ETF-Netflows-May-Experience-Rebound-If-This-Price-Is-Attained-Analyst-Explains",
+      "pubDate": "2024-03-23T07:25:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "QNT"
+      ]
+    },
+    {
+      "title": "BlockDAG kicks off batch 4 presale: A 5000x ROI prospect",
+      "link": "https://cryptopanic.com/news/19349991/BlockDAG-kicks-off-batch-4-presale-A-5000x-ROI-prospect",
+      "pubDate": "2024-03-23T06:05:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ]
+    },
+    {
+      "title": "Crypto Prices Today March 23: Crypto Market Loses Its Steam",
+      "link": "https://cryptopanic.com/news/19349982/Crypto-Prices-Today-March-23-Crypto-Market-Loses-Its-Steam",
+      "pubDate": "2024-03-23T06:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOGE",
+        "DOT",
+        "BCH",
+        "NFT",
+        "TON",
+        "FLOKI",
+        "TIA"
+      ]
+    },
+    {
+      "title": "Chainlink Dethrones Cardano as Leading Dev Platform",
+      "link": "https://cryptopanic.com/news/19349953/Chainlink-Dethrones-Cardano-as-Leading-Dev-Platform",
+      "pubDate": "2024-03-23T04:37:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana Meme Coin Mania Breaks Records: DEX Volume Surges, Yet Failed Transactions Hit 72%",
+      "link": "https://cryptopanic.com/news/19349904/Solana-Meme-Coin-Mania-Breaks-Records-DEX-Volume-Surges-Yet-Failed-Transactions-Hit-72",
+      "pubDate": "2024-03-23T03:00:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "SOL",
+        "LUSD",
+        "BONK",
+        "WIF"
+      ]
+    },
+    {
+      "title": "Cathie Wood Says Bitcoin Could Skyrocket To $3.8M By 2030 Thanks To 'Institutional Green Light'",
+      "link": "https://cryptopanic.com/news/19349890/Cathie-Wood-Says-Bitcoin-Could-Skyrocket-To-38M-By-2030-Thanks-To-Institutional-Green-Light",
+      "pubDate": "2024-03-23T02:18:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "WOO",
+        "ARK"
+      ]
+    },
+    {
+      "title": "Solana CEO Anatoly Yakovenko denounces influx of racist and offensive memecoins",
+      "link": "https://cryptopanic.com/news/19349812/Solana-CEO-Anatoly-Yakovenko-denounces-influx-of-racist-and-offensive-memecoins",
+      "pubDate": "2024-03-23T00:37:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL"
+      ]
+    },
+    {
+      "title": "Bitcoin Long-Term Holders & Price Top: Glassnode Reveals Pattern",
+      "link": "https://cryptopanic.com/news/19349808/Bitcoin-Long-Term-Holders-Price-Top-Glassnode-Reveals-Pattern",
+      "pubDate": "2024-03-23T00:30:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH",
+        "GRT"
+      ]
+    }
+  ]
+}

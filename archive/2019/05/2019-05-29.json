@@ -1,0 +1,61 @@
+{
+  "date": "2019-05-29",
+  "fetchedAt": "2026-02-05T07:27:06.929Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA is Finally Killing off Its Centralized Coordinator",
+      "link": "https://cryptopanic.com/news/5560545/IOTA-is-Finally-Killing-off-Its-Centralized-Coordinator",
+      "pubDate": "2019-05-29T16:00:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Did Bitcoin Cash SV Surge 50% Because Of Fake News?",
+      "link": "https://cryptopanic.com/news/5559489/Did-Bitcoin-Cash-SV-Surge-50-Because-Of-Fake-News",
+      "pubDate": "2019-05-29T14:57:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Bitcoin SV’s Craig Wright Sues Peter McCormack For 100,000 GBP For Libel",
+      "link": "https://cryptopanic.com/news/5558115/Bitcoin-SVs-Craig-Wright-Sues-Peter-McCormack-For-100000-GBP-For-Libel",
+      "pubDate": "2019-05-29T12:37:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 17
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

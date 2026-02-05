@@ -1,0 +1,24 @@
+{
+  "date": "2017-12-16",
+  "fetchedAt": "2026-02-05T07:27:06.994Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "New Progress on Casper: “Replacing PoW Completely is the next step”",
+      "link": "https://cryptopanic.com/news/ethereum/597027/New-Progress-on-Casper-Replacing-PoW-Completely-is-the-next-step",
+      "pubDate": "2017-12-16T22:00:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    }
+  ]
+}

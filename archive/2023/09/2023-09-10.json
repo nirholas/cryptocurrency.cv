@@ -1,0 +1,361 @@
+{
+  "date": "2023-09-10",
+  "fetchedAt": "2026-02-05T07:27:07.212Z",
+  "articleCount": 25,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "dYdX Foundation Releases Semi-Annual Report, Reveals Ecosystem Growth in 2023",
+      "link": "https://cryptopanic.com/news/18892984/dYdX-Foundation-Releases-Semi-Annual-Report-Reveals-Ecosystem-Growth-in-2023",
+      "pubDate": "2023-09-10T21:25:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DYDX"
+      ]
+    },
+    {
+      "title": "Shiba Inu Whales Envision Massive Price Explosion With Trillions Of SHIB On The Move",
+      "link": "https://cryptopanic.com/news/18892958/Shiba-Inu-Whales-Envision-Massive-Price-Explosion-With-Trillions-Of-SHIB-On-The-Move",
+      "pubDate": "2023-09-10T20:43:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "This increased level of activity by whales comes following the launch of Shibarium – Layer 2 solution, which catapulted Shiba Inu into the...",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP may be headed for $130 – analyst says",
+      "link": "https://cryptopanic.com/news/18892914/XRP-may-be-headed-for-130-analyst-says",
+      "pubDate": "2023-09-10T19:37:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "XRP Captain sees a massive rally in the altcoin ahead. The analyst explained why in a recent post on X. Ripple’s XRP is currently right below its 20-day MA. XRP Captain – a notable crypto analyst and influencer sees a massive rally in the altcoin ahead even though it has been rather dull in recent […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Cryptocurrency Security Company Detects an Issue with Lido DAO (LDO) Token Contract",
+      "link": "https://cryptopanic.com/news/18892891/Cryptocurrency-Security-Company-Detects-an-Issue-with-Lido-DAO-LDO-Token-Contract",
+      "pubDate": "2023-09-10T19:04:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "LDO"
+      ]
+    },
+    {
+      "title": "TON, XLM, XMR, and MKR could attract buyers if Bitcoin rises above $26,500",
+      "link": "https://cryptopanic.com/news/18892874/TON-XLM-XMR-and-MKR-could-attract-buyers-if-Bitcoin-rises-above-26500",
+      "pubDate": "2023-09-10T18:58:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XLM",
+        "XMR",
+        "MKR",
+        "TON"
+      ]
+    },
+    {
+      "title": "Terra Classic submits a new proposal; Will it change LUNC’s future?",
+      "link": "https://cryptopanic.com/news/18892862/Terra-Classic-submits-a-new-proposal-Will-it-change-LUNCs-future",
+      "pubDate": "2023-09-10T18:30:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin User Just Paid Half a Million Dollars for a Single Transaction",
+      "link": "https://cryptopanic.com/news/18892872/Bitcoin-User-Just-Paid-Half-a-Million-Dollars-for-a-Single-Transaction",
+      "pubDate": "2023-09-10T18:28:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ]
+    },
+    {
+      "title": "Ethereum (ETH), Filecoin (FIL), Everlodge (ELDG): Top Three Blockchain Titans That Should Be on Everyone's Radar",
+      "link": "https://cryptopanic.com/news/18892826/Ethereum-ETH-Filecoin-FIL-Everlodge-ELDG-Top-Three-Blockchain-Titans-That-Should-Be-on-Everyones-Radar",
+      "pubDate": "2023-09-10T17:59:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "FIL"
+      ]
+    },
+    {
+      "title": "Battle Hardened launches Vendor smart contract, alternative token distribution method for new projects",
+      "link": "https://cryptopanic.com/news/18892785/Battle-Hardened-launches-Vendor-smart-contract-alternative-token-distribution-method-for-new-projects",
+      "pubDate": "2023-09-10T17:05:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "PayPal’s PYUSD Stablecoin Faces Limited Adoption Despite Hype",
+      "link": "https://cryptopanic.com/news/18892783/PayPals-PYUSD-Stablecoin-Faces-Limited-Adoption-Despite-Hype",
+      "pubDate": "2023-09-10T16:56:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Near protocol sees a surge in daily active users as…",
+      "link": "https://cryptopanic.com/news/18892753/Near-protocol-sees-a-surge-in-daily-active-users-as",
+      "pubDate": "2023-09-10T16:30:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "DWF Labs Founder Hints at Funding Rates of Two Altcoins, Sells Within an Hour",
+      "link": "https://cryptopanic.com/news/maker/18892728/DWF-Labs-Founder-Hints-at-Funding-Rates-of-Two-Altcoins-Sells-Within-an-Hour",
+      "pubDate": "2023-09-10T16:02:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Centralized Exchanges Recorded Lowest Spot and Derivatives Trading Volume in August: Data",
+      "link": "https://cryptopanic.com/news/18892673/Centralized-Exchanges-Recorded-Lowest-Spot-and-Derivatives-Trading-Volume-in-August-Data",
+      "pubDate": "2023-09-10T15:17:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "HT"
+      ]
+    },
+    {
+      "title": "I asked ChatGPT when Filecoin will reach $200, the bot’s outlook was bearish",
+      "link": "https://cryptopanic.com/news/18892612/I-asked-ChatGPT-when-Filecoin-will-reach-200-the-bots-outlook-was-bearish",
+      "pubDate": "2023-09-10T14:20:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "ChatGPT analyzes whether Ethereum Classic can reach upwards of $150 anytime soon",
+      "link": "https://cryptopanic.com/news/18892573/ChatGPT-analyzes-whether-Ethereum-Classic-can-reach-upwards-of-150-anytime-soon",
+      "pubDate": "2023-09-10T13:50:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "RNDR Token Projected to $3.45 Amid 10% Surge in Seven Performance",
+      "link": "https://cryptopanic.com/news/18892426/RNDR-Token-Projected-to-345-Amid-10-Surge-in-Seven-Performance",
+      "pubDate": "2023-09-10T11:34:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "RNDR"
+      ]
+    },
+    {
+      "title": "Maker ($MKR) Surges Despite Vitalik’s Dump, Savvy Investors Cash Out To Buy $DOMI",
+      "link": "https://cryptopanic.com/news/maker/18892686/Maker-MKR-Surges-Despite-Vitaliks-Dump-Savvy-Investors-Cash-Out-To-Buy-DOMI",
+      "pubDate": "2023-09-10T11:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Cardano Catalyst Being Heavily Manipulated, Here's How",
+      "link": "https://cryptopanic.com/news/18892382/Cardano-Catalyst-Being-Heavily-Manipulated-Heres-How",
+      "pubDate": "2023-09-10T10:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Perfect solution for decentralized governance becomes subject of manipulation",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "XLM Defies Bitcoin, Skyrocketing 14%, How High Can XLM Go?",
+      "link": "https://cryptopanic.com/news/18892313/XLM-Defies-Bitcoin-Skyrocketing-14-How-High-Can-XLM-Go",
+      "pubDate": "2023-09-10T09:24:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "ATOM hits another year low: Can sellers extend gains?",
+      "link": "https://cryptopanic.com/news/18892272/ATOM-hits-another-year-low-Can-sellers-extend-gains",
+      "pubDate": "2023-09-10T08:30:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Terra Classic contemplates deposit hike to curb spam proposals",
+      "link": "https://cryptopanic.com/news/18892239/Terra-Classic-contemplates-deposit-hike-to-curb-spam-proposals",
+      "pubDate": "2023-09-10T07:52:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LUNC"
+      ]
+    },
+    {
+      "title": "Cronos Labs and Crypto.com as a ”strong engine” for Web3",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/18892186/Cronos-Labs-and-Cryptocom-as-a-strong-engine-for-Web3",
+      "pubDate": "2023-09-10T06:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "What Are Stablecoins? A Simple Explanation of the Digital Asset Bridging Crypto and Fiat",
+      "link": "https://cryptopanic.com/news/18892135/What-Are-Stablecoins-A-Simple-Explanation-of-the-Digital-Asset-Bridging-Crypto-and-Fiat",
+      "pubDate": "2023-09-10T04:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "USDC",
+        "BUSD",
+        "DAI",
+        "TUSD"
+      ]
+    },
+    {
+      "title": "XLM soars 15% in 7 days, but short traders remain resilient",
+      "link": "https://cryptopanic.com/news/18892108/XLM-soars-15-in-7-days-but-short-traders-remain-resilient",
+      "pubDate": "2023-09-10T02:30:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Trader Says One Dogecoin (DOGE) Rival Could Easily Crash by Over 50%, Updates Outlook on Bitcoin Cash (BCH)",
+      "link": "https://cryptopanic.com/news/18892047/Trader-Says-One-Dogecoin-DOGE-Rival-Could-Easily-Crash-by-Over-50-Updates-Outlook-on-Bitcoin-Cash-BCH",
+      "pubDate": "2023-09-10T00:00:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "date": "2019-01-14",
+  "fetchedAt": "2026-02-05T07:27:07.858Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tron Takes the Spot Within Best Crypto Performers Ahead of Massive Selloff",
+      "link": "https://cryptopanic.com/news/4251970/Tron-Takes-the-Spot-Within-Best-Crypto-Performers-Ahead-of-Massive-Selloff",
+      "pubDate": "2019-01-14T11:07:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 15
+      }
+    }
+  ]
+}

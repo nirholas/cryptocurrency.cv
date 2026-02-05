@@ -1,0 +1,395 @@
+{
+  "date": "2020-12-30",
+  "fetchedAt": "2026-02-05T07:27:06.786Z",
+  "articleCount": 24,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Coinbase faces class action lawsuit in California over XRP sale",
+      "link": "https://cryptopanic.com/news/ripple/10971656/Coinbase-faces-class-action-lawsuit-in-California-over-XRP-sale",
+      "pubDate": "2020-12-30T22:08:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Grayscale Allegedly Dumps Over 9 Million XRP Following SEC Lawsuit Against Ripple",
+      "link": "https://cryptopanic.com/news/ripple/10971130/Grayscale-Allegedly-Dumps-Over-9-Million-XRP-Following-SEC-Lawsuit-Against-Ripple",
+      "pubDate": "2020-12-30T20:59:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Binance US To Delist Ripple Following The SEC Lawsuit: XRP Plunges Below $0.2",
+      "link": "https://cryptopanic.com/news/ripple/10970997/Binance-US-To-Delist-Ripple-Following-The-SEC-Lawsuit-XRP-Plunges-Below-02",
+      "pubDate": "2020-12-30T20:47:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Binance US Says It Will Delist XRP on Jan. 13",
+      "link": "https://cryptopanic.com/news/ripple/10970913/Binance-US-Says-It-Will-Delist-XRP-on-Jan-13",
+      "pubDate": "2020-12-30T20:29:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 8
+      }
+    },
+    {
+      "title": "Coinbase Sued for Allowing the Sale of XRP",
+      "link": "https://cryptopanic.com/news/ripple/10970716/Coinbase-Sued-for-Allowing-the-Sale-of-XRP",
+      "pubDate": "2020-12-30T20:11:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "BREAKING: Binance U.S. to Delist XRP",
+      "link": "https://cryptopanic.com/news/ripple/10970726/BREAKING-Binance-US-to-Delist-XRP",
+      "pubDate": "2020-12-30T20:11:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Zilliqa has been added to Asset Dash!",
+      "link": "https://cryptopanic.com/news/10970185/Zilliqa-has-been-added-to-Asset-Dash",
+      "pubDate": "2020-12-30T19:20:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZIL"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BREAKING: Coinbase Sued Over \"Illegal\" XRP Sales",
+      "link": "https://cryptopanic.com/news/ripple/10969645/BREAKING-Coinbase-Sued-Over-Illegal-XRP-Sales",
+      "pubDate": "2020-12-30T18:27:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 22
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Grayscale reportedly dumps massive stakes in XRP, XLM",
+      "link": "https://cryptopanic.com/news/10968312/Grayscale-reportedly-dumps-massive-stakes-in-XRP-XLM",
+      "pubDate": "2020-12-30T15:41:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 18
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "More Damage to Ripple as Bittrex Delists XRP",
+      "link": "https://cryptopanic.com/news/ripple/10967869/More-Damage-to-Ripple-as-Bittrex-Delists-XRP",
+      "pubDate": "2020-12-30T14:54:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "After Ripple is SEC set to target Tether?",
+      "link": "https://cryptopanic.com/news/ripple/10967126/After-Ripple-is-SEC-set-to-target-Tether",
+      "pubDate": "2020-12-30T13:30:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Polkadot (DOT) Surges 60% Weekly as Binance Announced a $10M Support Fund",
+      "link": "https://cryptopanic.com/news/polkadot/10967005/Polkadot-DOT-Surges-60-Weekly-as-Binance-Announced-a-10M-Support-Fund",
+      "pubDate": "2020-12-30T13:11:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple Fires Back Saying SEC to Blame For Harm to Innocent XRP Holders",
+      "link": "https://cryptopanic.com/news/ripple/10966566/Ripple-Fires-Back-Saying-SEC-to-Blame-For-Harm-to-Innocent-XRP-Holders",
+      "pubDate": "2020-12-30T12:01:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @btsfav: Slots: Grinded some bonuses today @betfury_io -",
+      "link": "https://cryptopanic.com/news/10966358/RT-btsfav-Slots-Grinded-some-bonuses-today-betfury_io-",
+      "pubDate": "2020-12-30T11:33:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "Bittrex joins Coinbase in delisting Ripple’s XRP following SEC lawsuit",
+      "link": "https://cryptopanic.com/news/ripple/10965824/Bittrex-joins-Coinbase-in-delisting-Ripples-XRP-following-SEC-lawsuit",
+      "pubDate": "2020-12-30T09:42:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ethereum Rival Polkadot Soars After Receiving Burst of Support From Binance",
+      "link": "https://cryptopanic.com/news/polkadot/10965747/Ethereum-Rival-Polkadot-Soars-After-Receiving-Burst-of-Support-From-Binance",
+      "pubDate": "2020-12-30T09:29:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bittrex delists XRP in wake of SEC proceedings against Ripple",
+      "link": "https://cryptopanic.com/news/ripple/10965730/Bittrex-delists-XRP-in-wake-of-SEC-proceedings-against-Ripple",
+      "pubDate": "2020-12-30T09:29:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "US crypto exchange Bittrex is removing XRP trading pairs",
+      "link": "https://cryptopanic.com/news/ripple/10965697/US-crypto-exchange-Bittrex-is-removing-XRP-trading-pairs",
+      "pubDate": "2020-12-30T09:20:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "We are delighted to announce the #Airdrop function for the Red Pocket game, $RP is now ready and open to the public…",
+      "link": "https://cryptopanic.com/news/10964948/We-are-delighted-to-announce-the-Airdrop-function-for-the-Red-Pocket-game-RP-is-now-ready-and-open-to-the-public",
+      "pubDate": "2020-12-30T07:25:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "🦠",
+      "link": "https://cryptopanic.com/news/10964566/post-10964566",
+      "pubDate": "2020-12-30T06:22:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Bittrex to Delist XRP Next Month. Could Binance Be Next?",
+      "link": "https://cryptopanic.com/news/ripple/10964564/Bittrex-to-Delist-XRP-Next-Month-Could-Binance-Be-Next",
+      "pubDate": "2020-12-30T06:12:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Biden crypto policy not likely to be very different from Trump's. The guessing game is quite amusing.…",
+      "link": "https://cryptopanic.com/news/10963865/Biden-crypto-policy-not-likely-to-be-very-different-from-Trumps-The-guessing-game-is-quite-amusing",
+      "pubDate": "2020-12-30T04:04:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Even Bittrex Is Halting Trading of XRP",
+      "link": "https://cryptopanic.com/news/ripple/10963745/Even-Bittrex-Is-Halting-Trading-of-XRP",
+      "pubDate": "2020-12-30T03:31:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "What's new with @tezos? @CoinMarketCal selects $XTZ as a coin to keep an eye on this week! Analysis ⬇ #Huobi",
+      "link": "https://cryptopanic.com/news/huobi-token/10962834/Whats-new-with-tezos-CoinMarketCal-selects-XTZ-as-a-coin-to-keep-an-eye-on-this-week-Analysis-Huobi",
+      "pubDate": "2020-12-30T01:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XTZ",
+        "HT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

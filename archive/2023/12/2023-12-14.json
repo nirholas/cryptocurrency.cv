@@ -1,0 +1,626 @@
+{
+  "date": "2023-12-14",
+  "fetchedAt": "2026-02-05T07:27:08.124Z",
+  "articleCount": 44,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "How To Accept Crypto Payments And Who Accepts Bitcoins?",
+      "link": "https://cryptopanic.com/news/19110601/How-To-Accept-Crypto-Payments-And-Who-Accepts-Bitcoins",
+      "pubDate": "2023-12-14T23:59:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "USDC",
+        "XRP",
+        "DOGE",
+        "LTC",
+        "FLOW",
+        "IMX"
+      ]
+    },
+    {
+      "title": "Politeia Digest 65 — September 27 — December 12 2023",
+      "link": "https://cryptopanic.com/news/19110577/Politeia-Digest-65-September-27-December-12-2023",
+      "pubDate": "2023-12-14T23:36:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DCR"
+      ]
+    },
+    {
+      "title": "Dogecoin Rival BONK Surpasses Shiba Inu in Trading Volume As Price Leaps Over 40% in 24 Hours: CoinMarketCap",
+      "link": "https://cryptopanic.com/news/19110539/Dogecoin-Rival-BONK-Surpasses-Shiba-Inu-in-Trading-Volume-As-Price-Leaps-Over-40-in-24-Hours-CoinMarketCap",
+      "pubDate": "2023-12-14T23:01:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "DOGE",
+        "SHIB",
+        "BONK"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Top 5 Bitcoin BRC-20 Tokens That Could 10X Your Crypto Portfolio",
+      "link": "https://cryptopanic.com/news/19110536/Top-5-Bitcoin-BRC-20-Tokens-That-Could-10X-Your-Crypto-Portfolio",
+      "pubDate": "2023-12-14T23:00:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ORDI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Galaxy Digital plans to launch Euro stablecoin with DWS and Flow Traders",
+      "link": "https://cryptopanic.com/news/19110523/Galaxy-Digital-plans-to-launch-Euro-stablecoin-with-DWS-and-Flow-Traders",
+      "pubDate": "2023-12-14T22:57:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "FLOW",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Neo APAC Hackathon winner: RESPECT – a Telegram-based customized-strategy trading bot",
+      "link": "https://cryptopanic.com/news/19110342/Neo-APAC-Hackathon-winner-RESPECT-a-Telegram-based-customized-strategy-trading-bot",
+      "pubDate": "2023-12-14T20:52:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "AxLabs updates Neow3j to v3.21.2 with latest Neo enhancements",
+      "link": "https://cryptopanic.com/news/19110337/AxLabs-updates-Neow3j-to-v3212-with-latest-Neo-enhancements",
+      "pubDate": "2023-12-14T20:41:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Kaspa Rises More Than 5% In 24 hours",
+      "link": "https://cryptopanic.com/news/19110161/Cryptocurrency-Kaspa-Rises-More-Than-5-In-24-hours",
+      "pubDate": "2023-12-14T19:00:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KAS"
+      ]
+    },
+    {
+      "title": "Bad Timing For Sam Bankman-Fried? Here’s How Much FTX Assets Would Be Worth Now",
+      "link": "https://cryptopanic.com/news/19110026/Bad-Timing-For-Sam-Bankman-Fried-Heres-How-Much-FTX-Assets-Would-Be-Worth-Now",
+      "pubDate": "2023-12-14T18:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "Another Ethereum Layer-2 Enters The Race: Cronos Labs Launches zkEVM Testnet",
+      "link": "https://cryptopanic.com/news/19109905/Another-Ethereum-Layer-2-Enters-The-Race-Cronos-Labs-Launches-zkEVM-Testnet",
+      "pubDate": "2023-12-14T16:37:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "CRO"
+      ]
+    },
+    {
+      "title": "Polkadot (DOT) and Algorand (ALGO) Go Bullish, Can They Sustain The Momentum? Meme Moguls (MGLS) Could Have Higher Growth Potential",
+      "link": "https://cryptopanic.com/news/19109662/Polkadot-DOT-and-Algorand-ALGO-Go-Bullish-Can-They-Sustain-The-Momentum-Meme-Moguls-MGLS-Could-Have-Higher-Growth-Potential",
+      "pubDate": "2023-12-14T15:55:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Immutable teases gas-free web3 gaming with zkEVM",
+      "link": "https://cryptopanic.com/news/19109715/Immutable-teases-gas-free-web3-gaming-with-zkEVM",
+      "pubDate": "2023-12-14T15:36:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "IMX"
+      ]
+    },
+    {
+      "title": "Fantom (FTM) Suddenly Jumps 18%, Is FTM Dip Finally Over?",
+      "link": "https://cryptopanic.com/news/fantom/19109615/Fantom-FTM-Suddenly-Jumps-18-Is-FTM-Dip-Finally-Over",
+      "pubDate": "2023-12-14T15:34:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FTM"
+      ]
+    },
+    {
+      "title": "Axie Infinity The Launch of Axie Part Evolutions: A New Era for Axie Infinity",
+      "link": "https://cryptopanic.com/news/19109549/Axie-Infinity-The-Launch-of-Axie-Part-Evolutions-A-New-Era-for-Axie-Infinity",
+      "pubDate": "2023-12-14T15:20:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "Cronos broadens scaling roadmap from Cosmos to Ethereum",
+      "link": "https://cryptopanic.com/news/19109540/Cronos-broadens-scaling-roadmap-from-Cosmos-to-Ethereum",
+      "pubDate": "2023-12-14T15:07:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "CRO"
+      ]
+    },
+    {
+      "title": "EOS Labs and ENF Partners with Stablecoin Provider ESCC",
+      "link": "https://cryptopanic.com/news/19109502/EOS-Labs-and-ENF-Partners-with-Stablecoin-Provider-ESCC",
+      "pubDate": "2023-12-14T15:04:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "EOS"
+      ]
+    },
+    {
+      "title": "Ethereum Supply Turns Deflationary Post-Merge, Here’s How Much ETH Has Left Circulation",
+      "link": "https://cryptopanic.com/news/19109391/Ethereum-Supply-Turns-Deflationary-Post-Merge-Heres-How-Much-ETH-Has-Left-Circulation",
+      "pubDate": "2023-12-14T14:30:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XRP",
+        "SHIB",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "IOTA 2.0: All You Need to Know",
+      "link": "https://cryptopanic.com/news/19109312/IOTA-20-All-You-Need-to-Know?mtm_campaign=API-OFA",
+      "pubDate": "2023-12-14T13:55:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "IOTA"
+      ]
+    },
+    {
+      "title": "EOS Network Enhances Its Stablecoins Ecosystem via Partnership with EOS Stable Coin Chain (ESCC)",
+      "link": "https://cryptopanic.com/news/19109235/EOS-Network-Enhances-Its-Stablecoins-Ecosystem-via-Partnership-with-EOS-Stable-Coin-Chain-ESCC",
+      "pubDate": "2023-12-14T13:38:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "EOS"
+      ]
+    },
+    {
+      "title": "Crypto Price Prediction December 14: BONK, INJ, BTT",
+      "link": "https://cryptopanic.com/news/19109144/Crypto-Price-Prediction-December-14-BONK-INJ-BTT",
+      "pubDate": "2023-12-14T13:18:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BTT"
+      ]
+    },
+    {
+      "title": "Crypto.com Partner Cronos Launches Layer 2 zkEVM Testnet Chain with Matter Labs",
+      "link": "https://cryptopanic.com/news/19109098/Cryptocom-Partner-Cronos-Launches-Layer-2-zkEVM-Testnet-Chain-with-Matter-Labs",
+      "pubDate": "2023-12-14T13:09:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "CRO"
+      ]
+    },
+    {
+      "title": "Shiba Inu (SHIB) Erases Zero Once Again, Enters New Market Phase",
+      "link": "https://cryptopanic.com/news/19109000/Shiba-Inu-SHIB-Erases-Zero-Once-Again-Enters-New-Market-Phase",
+      "pubDate": "2023-12-14T12:21:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Shiba Inu stays relevant but need more support from whales",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dora Factory Closes New Strategic Raise, Announces New Ecosystem Partnerships",
+      "link": "https://cryptopanic.com/news/blockstack/19108969/Dora-Factory-Closes-New-Strategic-Raise-Announces-New-Ecosystem-Partnerships",
+      "pubDate": "2023-12-14T12:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STX"
+      ]
+    },
+    {
+      "title": "Bitcoin Exchange OKX Completed the 22nd Burn of Its Native Token OKB! Here is the Amount of OCD Burned!",
+      "link": "https://cryptopanic.com/news/19108897/Bitcoin-Exchange-OKX-Completed-the-22nd-Burn-of-Its-Native-Token-OKB-Here-is-the-Amount-of-OCD-Burned",
+      "pubDate": "2023-12-14T11:58:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "OKB"
+      ]
+    },
+    {
+      "title": "Latest news and price analysis for the crypto Hedera (HBAR), Cronos (CRO), and Beam (BEAM).",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/19108878/Latest-news-and-price-analysis-for-the-crypto-Hedera-HBAR-Cronos-CRO-and-Beam-BEAM",
+      "pubDate": "2023-12-14T11:34:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CRO",
+        "HBAR",
+        "BEAM"
+      ]
+    },
+    {
+      "title": "Solana Shows Its Mettle As SOL Barrels Past $70 – Details",
+      "link": "https://cryptopanic.com/news/19108845/Solana-Shows-Its-Mettle-As-SOL-Barrels-Past-70-Details",
+      "pubDate": "2023-12-14T11:30:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "IMX"
+      ]
+    },
+    {
+      "title": "Ubisoft Unveils ‘Champions Tactics’ Ethereum NFTs, Announces Free Mint Date",
+      "link": "https://cryptopanic.com/news/19108805/Ubisoft-Unveils-Champions-Tactics-Ethereum-NFTs-Announces-Free-Mint-Date",
+      "pubDate": "2023-12-14T11:26:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XTZ"
+      ]
+    },
+    {
+      "title": "Shiba Inu (SHIB) Users: Important Update From Binance",
+      "link": "https://cryptopanic.com/news/19108658/Shiba-Inu-SHIB-Users-Important-Update-From-Binance",
+      "pubDate": "2023-12-14T10:39:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "SAND"
+      ]
+    },
+    {
+      "title": "Prices and news of the crypto EOS (EOS), Internet Computer (ICP), and Polkadot (DOT).",
+      "link": "https://cryptopanic.com/news/internet-computer/19108689/Prices-and-news-of-the-crypto-EOS-EOS-Internet-Computer-ICP-and-Polkadot-DOT",
+      "pubDate": "2023-12-14T10:20:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOT",
+        "ICP",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Beyond Bitcoin: Exploring the Potential of VC Spectra and The Sandbox as Alternatives",
+      "link": "https://cryptopanic.com/news/19108617/Beyond-Bitcoin-Exploring-the-Potential-of-VC-Spectra-and-The-Sandbox-as-Alternatives",
+      "pubDate": "2023-12-14T10:12:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SAND"
+      ]
+    },
+    {
+      "title": "Flipster Debuts “The Dragon’s Treasure” Trading Competition Series",
+      "link": "https://cryptopanic.com/news/19108708/Flipster-Debuts-The-Dragons-Treasure-Trading-Competition-Series",
+      "pubDate": "2023-12-14T09:58:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "QNT",
+        "STX"
+      ]
+    },
+    {
+      "title": "Donald Trump is bullish on U.S. economy – Here is why",
+      "link": "https://cryptopanic.com/news/19108525/Donald-Trump-is-bullish-on-US-economy-Here-is-why",
+      "pubDate": "2023-12-14T09:46:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FLOW"
+      ]
+    },
+    {
+      "title": "BorroeFinance Aims to Be Next AVAX or XRP after Raising Millions",
+      "link": "https://cryptopanic.com/news/19108514/BorroeFinance-Aims-to-Be-Next-AVAX-or-XRP-after-Raising-Millions",
+      "pubDate": "2023-12-14T09:23:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "AVAX",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Cronos Labs Unveils Public zkEVM Chain Testnet to Foster Mainstream Adoption",
+      "link": "https://cryptopanic.com/news/19108388/Cronos-Labs-Unveils-Public-zkEVM-Chain-Testnet-to-Foster-Mainstream-Adoption",
+      "pubDate": "2023-12-14T09:00:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Why Have ORDI, Meme Moguls & The Sandbox Surged In Popularity",
+      "link": "https://cryptopanic.com/news/19108515/Why-Have-ORDI-Meme-Moguls-The-Sandbox-Surged-In-Popularity",
+      "pubDate": "2023-12-14T08:58:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SAND",
+        "MKR",
+        "ORDI"
+      ]
+    },
+    {
+      "title": "3 cryptocurrencies to buy next week under $1",
+      "link": "https://cryptopanic.com/news/19108344/3-cryptocurrencies-to-buy-next-week-under-1",
+      "pubDate": "2023-12-14T08:37:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Banking On Ethereum: JPMorgan Says Ether Will Rise Above Bitcoin In 2024",
+      "link": "https://cryptopanic.com/news/19108316/Banking-On-Ethereum-JPMorgan-Says-Ether-Will-Rise-Above-Bitcoin-In-2024",
+      "pubDate": "2023-12-14T08:25:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "IMX",
+        "ARB",
+        "OP"
+      ]
+    },
+    {
+      "title": "‘There Are Probably Larger Washouts Coming,’ Warns Top Crypto Trader As Bitcoin Stumbles",
+      "link": "https://cryptopanic.com/news/19108270/There-Are-Probably-Larger-Washouts-Coming-Warns-Top-Crypto-Trader-As-Bitcoin-Stumbles",
+      "pubDate": "2023-12-14T08:04:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Market Recovers Some Ground After BTC Drops to $40K. GFOX Presale Pushes Closer to $1Million",
+      "link": "https://cryptopanic.com/news/19108341/Market-Recovers-Some-Ground-After-BTC-Drops-to-40K-GFOX-Presale-Pushes-Closer-to-1Million",
+      "pubDate": "2023-12-14T07:42:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "ATOM",
+        "FLOW",
+        "HBAR",
+        "TIA"
+      ]
+    },
+    {
+      "title": "EOS Price Analysis: Key Uptrend Support Intact At $0.72",
+      "link": "https://cryptopanic.com/news/19108140/EOS-Price-Analysis-Key-Uptrend-Support-Intact-At-072",
+      "pubDate": "2023-12-14T07:08:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ]
+    },
+    {
+      "title": "Axie Infinity NFTs Can Soon Evolve Like Pokémon—Here's How",
+      "link": "https://cryptopanic.com/news/19108135/Axie-Infinity-NFTs-Can-Soon-Evolve-Like-PokemonHeres-How",
+      "pubDate": "2023-12-14T07:01:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "Neo ecosystem representatives visit Capitol Hill in Washington, D.C. for policy discussions",
+      "link": "https://cryptopanic.com/news/19107816/Neo-ecosystem-representatives-visit-Capitol-Hill-in-Washington-DC-for-policy-discussions",
+      "pubDate": "2023-12-14T01:48:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Ethereum Gaming Altcoin Rallies As Massive Whale Withdraws From Binance: On-Chain Data",
+      "link": "https://cryptopanic.com/news/19107785/Ethereum-Gaming-Altcoin-Rallies-As-Massive-Whale-Withdraws-From-Binance-On-Chain-Data",
+      "pubDate": "2023-12-14T01:00:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "IMX"
+      ]
+    },
+    {
+      "title": "Crypto’s Silver Lining: Market Dips Are Stepping Stones To Soaring Heights – Analyst",
+      "link": "https://cryptopanic.com/news/19107782/Cryptos-Silver-Lining-Market-Dips-Are-Stepping-Stones-To-Soaring-Heights-Analyst",
+      "pubDate": "2023-12-14T01:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LINK",
+        "NEAR",
+        "ALGO",
+        "EGLD"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,698 @@
+{
+  "date": "2022-08-26",
+  "fetchedAt": "2026-02-05T07:27:07.846Z",
+  "articleCount": 49,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "We are excited to announce the next partner for Theta Metachain's launch in December, and the first building in the…",
+      "link": "https://cryptopanic.com/news/16166759/We-are-excited-to-announce-the-next-partner-for-Theta-Metachains-launch-in-December-and-the-first-building-in-the",
+      "pubDate": "2022-08-26T21:46:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "RT @vladlykhonis: Earn rewards and pay no gas fees? Yes! Lukso hackathon project is here",
+      "link": "https://cryptopanic.com/news/16164621/RT-vladlykhonis-Earn-rewards-and-pay-no-gas-fees-Yes-Lukso-hackathon-project-is-here",
+      "pubDate": "2022-08-26T21:15:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "Upcoming Ethereum Upgrade Could Do More Harm Than Good to Crypto Sector Worth Over $140,000,000,000: DappRadar",
+      "link": "https://cryptopanic.com/news/16160397/Upcoming-Ethereum-Upgrade-Could-Do-More-Harm-Than-Good-to-Crypto-Sector-Worth-Over-140000000000-DappRadar",
+      "pubDate": "2022-08-26T19:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A new report by decentralized application information platform DappRadar is warning that Ethereum’s (ETH) upcoming Merge could cause harm to one key sector of the crypto industry. Citing crypto investment giant Grayscale, the report says that stablecoins, which currently enjoy a market cap of $142.82 billion, could be an unintended casualty of Ethereum’s transition to […]",
+      "currencies": [
+        "ETH",
+        "DAI"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin falls below $21,000, ether plunges more than 7%: Today in markets",
+      "link": "https://cryptopanic.com/news/bitcoin/16160194/Bitcoin-falls-below-21000-ether-plunges-more-than-7-Today-in-markets",
+      "pubDate": "2022-08-26T17:55:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Crypto prices fell on Friday in line with broader financial markets as traders digest interest rate prospects.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Hawkish Fed comments and Bitcoin derivatives data point to further BTC downside",
+      "link": "https://cryptopanic.com/news/bitcoin/16160103/Hawkish-Fed-comments-and-Bitcoin-derivatives-data-point-to-further-BTC-downside",
+      "pubDate": "2022-08-26T17:24:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "BTC and stocks sold-off after comments from the Federal Reserve re-emphasized the Fed’s commitment to lowering high inflation in the United States.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Regulators have a weak case against FTX on deposit insurance",
+      "link": "https://cryptopanic.com/news/ftx-token/16160041/Regulators-have-a-weak-case-against-FTX-on-deposit-insurance",
+      "pubDate": "2022-08-26T17:05:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "FTX made an error in messaging when it suggested depositors were insured, but federal regulators will have a hard time proving the exchange did so with sinister motives.",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Price feeds on Terra Luna Classic, and therefore Mirror Protocol, have ceased as per previous announcement. We supp…",
+      "link": "https://cryptopanic.com/news/16162055/Price-feeds-on-Terra-Luna-Classic-and-therefore-Mirror-Protocol-have-ceased-as-per-previous-announcement-We-supp",
+      "pubDate": "2022-08-26T16:33:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "Waves-based stablecoin Neutrino USD (USDN) has again lost its peg to the US dollar. On the KuCoin exchange, paired…",
+      "link": "https://cryptopanic.com/news/16162194/Waves-based-stablecoin-Neutrino-USD-USDN-has-again-lost-its-peg-to-the-US-dollar-On-the-KuCoin-exchange-paired",
+      "pubDate": "2022-08-26T15:34:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "KCS",
+        "USDN"
+      ]
+    },
+    {
+      "title": "We're entering a new era for Ethereum, and soon a new era for Status as well",
+      "link": "https://cryptopanic.com/news/16159534/Were-entering-a-new-era-for-Ethereum-and-soon-a-new-era-for-Status-as-well",
+      "pubDate": "2022-08-26T15:01:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "SNT"
+      ]
+    },
+    {
+      "title": "178 South Korean Darkweb Users Arrested on Suspicion of Crypto-powered Drug Trading",
+      "link": "https://cryptopanic.com/news/bitcoin/16159594/178-South-Korean-Darkweb-Users-Arrested-on-Suspicion-of-Crypto-powered-Drug-Trading",
+      "pubDate": "2022-08-26T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Police in Seoul, South Korea, have arrested 178 people on suspicion of buying and selling drugs online using cryptoassets as a means of payment. According to JTBC, Seoul Metropolitan Police officers said they had arrested 12 suspected drug dealers and 166 of their alleged customers, stating that the individuals had all made use of darkweb portals and crypto payments.... Read More: 178...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Whether you're a bored ape or an average Joe, the #Telcoin App gives you access to @ApeCoin with just a few taps of…",
+      "link": "https://cryptopanic.com/news/16166832/Whether-youre-a-bored-ape-or-an-average-Joe-the-Telcoin-App-gives-you-access-to-ApeCoin-with-just-a-few-taps-of",
+      "pubDate": "2022-08-26T14:51:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "Game of the week: #trickshotblitz from @onjoyride which is using RLY Protocol.",
+      "link": "https://cryptopanic.com/news/16166041/Game-of-the-week-trickshotblitz-from-onjoyride-which-is-using-RLY-Protocol",
+      "pubDate": "2022-08-26T14:45:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RLY"
+      ]
+    },
+    {
+      "title": "XRP, Binance Coin (BNB) and Two Mid-Cap Altcoins Flashing Bullish in One Metric, Says Analytics Firm Santiment",
+      "link": "https://cryptopanic.com/news/theta-token/16159473/XRP-Binance-Coin-BNB-and-Two-Mid-Cap-Altcoins-Flashing-Bullish-in-One-Metric-Says-Analytics-Firm-Santiment",
+      "pubDate": "2022-08-26T14:30:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Market intelligence firm Santiment is naming four altcoins that are currently witnessing bullish sentiment based on an indicator that gauges the overall attitude of crypto traders and investors. Santiment says that the highest levels of positive sentiment are being enjoyed by XRP, Binance Coin (BNB), decentralized finance blockchain PancakeSwap (CAKE) and decentralized video platform Theta...",
+      "currencies": [
+        "ETH",
+        "BNB",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "New website live",
+      "link": "https://cryptopanic.com/news/16167256/New-website-live?mtm_campaign=API-OFA",
+      "pubDate": "2022-08-26T14:13:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VICE"
+      ]
+    },
+    {
+      "title": "Crypto Exchange CoinSwitch Kuber Raided By India’s Enforcement Directorate Agents",
+      "link": "https://cryptopanic.com/news/bitcoin/16159202/Crypto-Exchange-CoinSwitch-Kuber-Raided-By-Indias-Enforcement-Directorate-Agents",
+      "pubDate": "2022-08-26T13:30:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Crypto exchanges that don’t follow the rules are seriously dealt with by India’s law enforcement authorities. One of the biggest crypto exchanges in India has been raided by agents of the country’s Enforcement Directorate. The raid was due to a money laundering probe to monitor 365 instant loan apps. As per the official report, five […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Axie Infinity (AXS) Risks Sharp Correction",
+      "link": "https://cryptopanic.com/news/axie-infinity/16159199/Axie-Infinity-AXS-Risks-Sharp-Correction",
+      "pubDate": "2022-08-26T13:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Poloniex Weekly Highlights 10,000 USDD Airdrop to Celebrate the Listing of #SSV! Poloniex’s new APIs help pr…",
+      "link": "https://cryptopanic.com/news/usdd/16159137/Poloniex-Weekly-Highlights-10000-USDD-Airdrop-to-Celebrate-the-Listing-of-SSV-Poloniexs-new-APIs-help-pr",
+      "pubDate": "2022-08-26T13:25:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDD",
+        "ETHW",
+        "ETHS"
+      ]
+    },
+    {
+      "title": "Terra Classic climbs 20% in a day adding $130 million to its market cap",
+      "link": "https://cryptopanic.com/news/16159081/Terra-Classic-climbs-20-in-a-day-adding-130-million-to-its-market-cap",
+      "pubDate": "2022-08-26T13:00:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Terra Classic (LUNC), the original chain of the now collapsed Terra (LUNA) token, is recording increased buying pressure driving its... Continue reading",
+      "currencies": [
+        "XCN"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 9
+      }
+    },
+    {
+      "title": "BTSE will support the @klaytn_official ($KLAY) network upgrade at the Klaytn block height of 99,841,497 -- starting…",
+      "link": "https://cryptopanic.com/news/klay-token/16162002/BTSE-will-support-the-klaytn_official-KLAY-network-upgrade-at-the-Klaytn-block-height-of-99841497-starting",
+      "pubDate": "2022-08-26T12:52:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "BTSE",
+        "WXMR"
+      ]
+    },
+    {
+      "title": "We have a surprise for you! From August 31st- September 3rd we will be at Promised Land Art Festival, proudly showc…",
+      "link": "https://cryptopanic.com/news/16165078/We-have-a-surprise-for-you-From-August-31st-September-3rd-we-will-be-at-Promised-Land-Art-Festival-proudly-showc",
+      "pubDate": "2022-08-26T12:47:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HERO"
+      ]
+    },
+    {
+      "title": "Over 50% of all Bitcoin trades on exchanges are fake, new analysis reveals",
+      "link": "https://cryptopanic.com/news/bitcoin/16158920/Over-50-of-all-Bitcoin-trades-on-exchanges-are-fake-new-analysis-reveals",
+      "pubDate": "2022-08-26T12:24:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The cryptocurrency space is still relatively young and volatile, with over 20,000 individual tokens in circulation, but Bitcoin (BTC) remains... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "#EverydayDeFi will change the way future generations partake in finance. Children of today will grow up with every…",
+      "link": "https://cryptopanic.com/news/16166023/EverydayDeFi-will-change-the-way-future-generations-partake-in-finance-Children-of-today-will-grow-up-with-every",
+      "pubDate": "2022-08-26T12:04:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "RIF"
+      ]
+    },
+    {
+      "title": "South Korea Says 75% Of Illicit Forex Transactions In The Country Are Crypto-Related",
+      "link": "https://cryptopanic.com/news/bitcoin/16158651/South-Korea-Says-75-Of-Illicit-Forex-Transactions-In-The-Country-Are-Crypto-Related",
+      "pubDate": "2022-08-26T11:27:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "A significant number of cryptocurrency holders reside in South Korea. As the bitcoin sector becomes more mainstream, the rate of cryptocurrency acceptance in the East Asian nation has increased dramatically. Recent research, however, suggests that some of these crypto transactions may be used for unlawful operations. Bloomberg reported that the majority of unlawful foreign currency...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Our new Demo Days series shines the spotlight on some of the unique products and projects in the #BitcoinSV…",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/16162203/Our-new-Demo-Days-series-shines-the-spotlight-on-some-of-the-unique-products-and-projects-in-the-BitcoinSV",
+      "pubDate": "2022-08-26T11:26:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BSV"
+      ]
+    },
+    {
+      "title": "RT @avantgardefi: How can we encourage the gradual adoption of #DeFi frameworks? A quick 🧵 (1/8)",
+      "link": "https://cryptopanic.com/news/16163336/RT-avantgardefi-How-can-we-encourage-the-gradual-adoption-of-DeFi-frameworks-A-quick-18",
+      "pubDate": "2022-08-26T11:22:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "MLN"
+      ]
+    },
+    {
+      "title": "ANNOUNCEMENT Mandala will support the KLAYTN (KLAY) network upgrade 🤝 @klaytn_official",
+      "link": "https://cryptopanic.com/news/klay-token/16164920/ANNOUNCEMENT-Mandala-will-support-the-KLAYTN-KLAY-network-upgrade-klaytn_official",
+      "pubDate": "2022-08-26T11:05:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "MDX"
+      ]
+    },
+    {
+      "title": "It's time to earn some serious prize! #USDD and @HuobiGlobal are giving you a chance to win UP TO 100,000 $USDD!…",
+      "link": "https://cryptopanic.com/news/usdd/16167069/Its-time-to-earn-some-serious-prize-USDD-and-HuobiGlobal-are-giving-you-a-chance-to-win-UP-TO-100000-USDD",
+      "pubDate": "2022-08-26T10:59:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDD"
+      ]
+    },
+    {
+      "title": "Can you guess the 4 crypto words from these triangular puzzles🧩? Comment them below and tag some of your crypto fri…",
+      "link": "https://cryptopanic.com/news/16161671/Can-you-guess-the-4-crypto-words-from-these-triangular-puzzles-Comment-them-below-and-tag-some-of-your-crypto-fri",
+      "pubDate": "2022-08-26T10:59:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ABBC"
+      ]
+    },
+    {
+      "title": "🤑 Earning #USDD has never been this simple!! Participate in #USDD and @GateEarn's Lock and Earn for an APR of 10…",
+      "link": "https://cryptopanic.com/news/usdd/16167070/Earning-USDD-has-never-been-this-simple-Participate-in-USDD-and-GateEarns-Lock-and-Earn-for-an-APR-of-10",
+      "pubDate": "2022-08-26T10:36:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDD"
+      ]
+    },
+    {
+      "title": "We'll be having an #AMA session with @BTSEcom More details about the AMA will be revealed soon!",
+      "link": "https://cryptopanic.com/news/klay-token/16164523/Well-be-having-an-AMA-session-with-BTSEcom-More-details-about-the-AMA-will-be-revealed-soon",
+      "pubDate": "2022-08-26T10:09:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "BTSE is excited to welcome Klaytn as the upcoming AMA guest! ️ Complete 2 tasks below to share up to $500 KLAY to…",
+      "link": "https://cryptopanic.com/news/klay-token/16162003/BTSE-is-excited-to-welcome-Klaytn-as-the-upcoming-AMA-guest-Complete-2-tasks-below-to-share-up-to-500-KLAY-to",
+      "pubDate": "2022-08-26T10:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "BTSE",
+        "WXMR"
+      ]
+    },
+    {
+      "title": "U.S. senatorial candidate expresses support for Bitcoin says the ‘dollar is a melting ice cube’",
+      "link": "https://cryptopanic.com/news/bitcoin/16158392/US-senatorial-candidate-expresses-support-for-Bitcoin-says-the-dollar-is-a-melting-ice-cube",
+      "pubDate": "2022-08-26T09:54:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "United States senatorial candidate for New Hampshire Bruce Fenton has extended his support for Bitcoin (BTC) while opposing any government... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Waves-backed stablecoin USDN breaks peg again amid protocol upgrade",
+      "link": "https://cryptopanic.com/news/16158198/Waves-backed-stablecoin-USDN-breaks-peg-again-amid-protocol-upgrade",
+      "pubDate": "2022-08-26T09:41:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDN"
+      ]
+    },
+    {
+      "title": "End-of-Week Ethereum: Merge News Fails to Hold Price Up, Traders Discuss Merge-Related Sell-Off, Binance Joins Exchanges Preparing for Possible Fork",
+      "link": "https://cryptopanic.com/news/16157765/End-of-Week-Ethereum-Merge-News-Fails-to-Hold-Price-Up-Traders-Discuss-Merge-Related-Sell-Off-Binance-Joins-Exchanges-Preparing-for-Possible-Fork",
+      "pubDate": "2022-08-26T09:32:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "is supporting the Klaytn (KLAY) network upgrade ️ Scheduled at block 99,841,497 or ex…",
+      "link": "https://cryptopanic.com/news/klay-token/16162855/is-supporting-the-Klaytn-KLAY-network-upgrade-Scheduled-at-block-99841497-or-ex",
+      "pubDate": "2022-08-26T09:30:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO",
+        "MCO",
+        "WCRO"
+      ]
+    },
+    {
+      "title": "RT @KlaytnGames: You can apply for the Hero Badge NFT WL at Klaytn Games! Don’t miss the chance to get a new NFT WL Entry Airdrop Event…",
+      "link": "https://cryptopanic.com/news/klay-token/16164519/RT-KlaytnGames-You-can-apply-for-the-Hero-Badge-NFT-WL-at-Klaytn-Games-Dont-miss-the-chance-to-get-a-new-NFT-WL-Entry-Airdrop-Event",
+      "pubDate": "2022-08-26T09:13:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "DICE"
+      ]
+    },
+    {
+      "title": "In @sasha35625's interview with @CryptoSlate he talks on $USDN stability, the new $SURF token and @viresfinance liq…",
+      "link": "https://cryptopanic.com/news/16157189/In-sasha35625s-interview-with-CryptoSlate-he-talks-on-USDN-stability-the-new-SURF-token-and-viresfinance-liq",
+      "pubDate": "2022-08-26T09:12:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WAVES",
+        "USDN"
+      ]
+    },
+    {
+      "title": "#Binance will support the @klaytn_official $KLAY network upgrade.",
+      "link": "https://cryptopanic.com/news/klay-token/16162161/Binance-will-support-the-klaytn_official-KLAY-network-upgrade",
+      "pubDate": "2022-08-26T08:12:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "ETHDOWN",
+        "ETHUP"
+      ]
+    },
+    {
+      "title": "Miners Eye Ethereum Classic Activity as Merge Nears",
+      "link": "https://cryptopanic.com/news/16155530/Miners-Eye-Ethereum-Classic-Activity-as-Merge-Nears",
+      "pubDate": "2022-08-26T07:57:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The hash rate of ETC hits an all-time high, which reduces the risks of a \"51% attack.\"",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "🤔Why was USDD developed in the first place? \"It's very important to provide a decentralized #StableCoin solution…",
+      "link": "https://cryptopanic.com/news/usdd/16157650/Why-was-USDD-developed-in-the-first-place-Its-very-important-to-provide-a-decentralized-StableCoin-solution",
+      "pubDate": "2022-08-26T07:44:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "USDD"
+      ]
+    },
+    {
+      "title": "Still surfing the web for new ideas? We believe inspiration is like feeling the wind at your back. That's why we’ve…",
+      "link": "https://cryptopanic.com/news/16154834/Still-surfing-the-web-for-new-ideas-We-believe-inspiration-is-like-feeling-the-wind-at-your-back-Thats-why-weve",
+      "pubDate": "2022-08-26T07:43:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GLM"
+      ]
+    },
+    {
+      "title": "Revolut Expands Crypto Offerings, Adding Elrond",
+      "link": "https://cryptopanic.com/news/16154739/Revolut-Expands-Crypto-Offerings-Adding-Elrond",
+      "pubDate": "2022-08-26T07:30:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Aspiring metaverse master opens a fintech portal for EGLD in some 30 countries",
+      "currencies": [
+        "EGLD"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "3 days to go until our partner, @DrawshopKingdom, launches their #metaverse! Hold on to a DKR NFT and $JOY tokens s…",
+      "link": "https://cryptopanic.com/news/klay-token/16154697/3-days-to-go-until-our-partner-DrawshopKingdom-launches-their-metaverse-Hold-on-to-a-DKR-NFT-and-JOY-tokens-s",
+      "pubDate": "2022-08-26T07:29:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "We're happy to announce that the world's largest cryptocurrency exchange, @binance, will also support the long-anti…",
+      "link": "https://cryptopanic.com/news/klay-token/16154698/Were-happy-to-announce-that-the-worlds-largest-cryptocurrency-exchange-binance-will-also-support-the-long-anti",
+      "pubDate": "2022-08-26T07:21:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "A great summary of #Klaytn by one of our supporters who attended #KBW2022 and our Keynote speech by Sam!",
+      "link": "https://cryptopanic.com/news/klay-token/16154699/A-great-summary-of-Klaytn-by-one-of-our-supporters-who-attended-KBW2022-and-our-Keynote-speech-by-Sam",
+      "pubDate": "2022-08-26T07:14:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "$XYM payments are coming to @HEXANFT - a Polygon-based NFT marketplace.",
+      "link": "https://cryptopanic.com/news/18279934/XYM-payments-are-coming-to-HEXANFT-a-Polygon-based-NFT-marketplace",
+      "pubDate": "2022-08-26T06:56:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "XYM"
+      ]
+    },
+    {
+      "title": "Magma hard fork activation reminder Block No: 99841497 29 Aug (Mon), 11:45 AM (UTC+9) For node operators: U…",
+      "link": "https://cryptopanic.com/news/klay-token/16154700/Magma-hard-fork-activation-reminder-Block-No-99841497-29-Aug-Mon-1145-AM-UTC9-For-node-operators-U",
+      "pubDate": "2022-08-26T05:34:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "WKLAY"
+      ]
+    },
+    {
+      "title": "USDN loses peg again as Neutrino upgrade to “stabilize protocol” goes live",
+      "link": "https://cryptopanic.com/news/16150840/USDN-loses-peg-again-as-Neutrino-upgrade-to-stabilize-protocol-goes-live",
+      "pubDate": "2022-08-26T02:16:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDN"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Theta Metachain development is progressing well, and on track for December release. Today we're happy to open-sourc…",
+      "link": "https://cryptopanic.com/news/16157269/Theta-Metachain-development-is-progressing-well-and-on-track-for-December-release-Today-were-happy-to-open-sourc",
+      "pubDate": "2022-08-26T01:12:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    }
+  ]
+}

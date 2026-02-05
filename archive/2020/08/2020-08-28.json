@@ -1,0 +1,25 @@
+{
+  "date": "2020-08-28",
+  "fetchedAt": "2026-02-05T07:27:06.942Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA Wallet Balance Can Now Be Checked via Amazon Alexa",
+      "link": "https://cryptopanic.com/news/9811511/IOTA-Wallet-Balance-Can-Now-Be-Checked-via-Amazon-Alexa",
+      "pubDate": "2020-08-28T14:19:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

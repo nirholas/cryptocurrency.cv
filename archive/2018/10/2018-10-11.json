@@ -1,0 +1,33 @@
+{
+  "date": "2018-10-11",
+  "fetchedAt": "2026-02-05T07:27:06.989Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "We all know the value of block chain",
+      "link": "https://cryptopanic.com/news/3308472/We-all-know-the-value-of-block-chain",
+      "pubDate": "2018-10-11T10:14:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XCN",
+        "CTC"
+      ]
+    },
+    {
+      "title": "AI CRYPTO - Connecting Mining and AI Deep Learning with GPUs",
+      "link": "https://cryptopanic.com/news/11430489/AI-CRYPTO-Connecting-Mining-and-AI-Deep-Learning-with-GPUs?mtm_campaign=API-OFA",
+      "pubDate": "2018-10-11T02:48:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "AIC"
+      ]
+    }
+  ]
+}

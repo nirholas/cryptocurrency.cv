@@ -1,0 +1,730 @@
+{
+  "date": "2021-07-28",
+  "fetchedAt": "2026-02-05T07:27:06.974Z",
+  "articleCount": 52,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Very interesting, everyone is welcome to join",
+      "link": "https://cryptopanic.com/news/12589739/Very-interesting-everyone-is-welcome-to-join",
+      "pubDate": "2021-07-28T23:46:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DAO"
+      ]
+    },
+    {
+      "title": "$AERGO @Apple iPhone wallet is now in the appstore!",
+      "link": "https://cryptopanic.com/news/12419679/AERGO-Apple-iPhone-wallet-is-now-in-the-appstore",
+      "pubDate": "2021-07-28T22:16:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "RT @ZMiller_82: 2021 Olympic Men’s Rugby Tournament Recap",
+      "link": "https://cryptopanic.com/news/12423158/RT-ZMiller_82-2021-Olympic-Mens-Rugby-Tournament-Recap?mtm_campaign=API-OFA",
+      "pubDate": "2021-07-28T22:13:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SCR"
+      ]
+    },
+    {
+      "title": "Over 300 ETH lost to ‘failed transactions’ upon Stoner Cats NFTs launch",
+      "link": "https://cryptopanic.com/news/ethereum/12418842/Over-300-ETH-lost-to-failed-transactions-upon-Stoner-Cats-NFTs-launch",
+      "pubDate": "2021-07-28T22:00:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "On-chain data shows users have lost just under 310 ETH due to failed mints of Stoner Cats NFTs.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 17
+      }
+    },
+    {
+      "title": "XRP Is Now Powering the First Ever ODL Service Implementation in Japan",
+      "link": "https://cryptopanic.com/news/ripple/12418806/XRP-Is-Now-Powering-the-First-Ever-ODL-Service-Implementation-in-Japan",
+      "pubDate": "2021-07-28T21:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple is set to tap into the nearly $2 billion a year remittance market between Japan and the Philippines through the use of its on-demand liquidity (ODL) services, which leverages the XRP token. In a blog post, the company noted that the traditional system of international payments is “often slow and expensive” and can siphon […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Safecoin is making available its first public Testnet, an important step for us as we look to expand and accommodat…",
+      "link": "https://cryptopanic.com/news/12423101/Safecoin-is-making-available-its-first-public-Testnet-an-important-step-for-us-as-we-look-to-expand-and-accommodat",
+      "pubDate": "2021-07-28T21:27:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SAFE"
+      ]
+    },
+    {
+      "title": "RT @ItsFrankenSense: More and more happening every week with @SafeCoins Public test net was just released. $SAFE #safecoin",
+      "link": "https://cryptopanic.com/news/12423102/RT-ItsFrankenSense-More-and-more-happening-every-week-with-SafeCoins-Public-test-net-was-just-released-SAFE-safecoin",
+      "pubDate": "2021-07-28T21:20:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SAFE"
+      ]
+    },
+    {
+      "title": "Our long staking feature will close today at 3:00pm PST. All existing long stakes will continue to function as norm…",
+      "link": "https://cryptopanic.com/news/12422841/Our-long-staking-feature-will-close-today-at-300pm-PST-All-existing-long-stakes-will-continue-to-function-as-norm",
+      "pubDate": "2021-07-28T20:37:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XPR"
+      ]
+    },
+    {
+      "title": "Burger King Brazil Is Taking Dogecoin for Dog Treats",
+      "link": "https://cryptopanic.com/news/dogecoin/12418576/Burger-King-Brazil-Is-Taking-Dogecoin-for-Dog-Treats",
+      "pubDate": "2021-07-28T20:05:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "-",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "VORTECS™ Spotlight: Here’s why Telcoin’s (TEL) rebound eclipsed most altcoins",
+      "link": "https://cryptopanic.com/news/12418520/VORTECSTM-Spotlight-Heres-why-Telcoins-TEL-rebound-eclipsed-most-altcoins",
+      "pubDate": "2021-07-28T19:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TEL"
+      ]
+    },
+    {
+      "title": "New release of the eCash full node software, Bitcoin ABC! #eCash #XEC $XEC",
+      "link": "https://cryptopanic.com/news/ecash/12424167/New-release-of-the-eCash-full-node-software-Bitcoin-ABC-eCash-XEC-XEC",
+      "pubDate": "2021-07-28T19:23:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Bitcoin ABC 0.23.9 is now available! This release brings improvements to test performance and to the Avalanche ex…",
+      "link": "https://cryptopanic.com/news/ecash/12420110/Bitcoin-ABC-0239-is-now-available-This-release-brings-improvements-to-test-performance-and-to-the-Avalanche-ex",
+      "pubDate": "2021-07-28T19:14:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "XEC",
+        "BCHABC"
+      ]
+    },
+    {
+      "title": "DOGE For Dogs: Burger King Brazil Now Accepts Dogecoin For Dog Food",
+      "link": "https://cryptopanic.com/news/dogecoin/12418410/DOGE-For-Dogs-Burger-King-Brazil-Now-Accepts-Dogecoin-For-Dog-Food",
+      "pubDate": "2021-07-28T19:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Burger King Brazil has announced that customers can now purchase “dogpper” dog food using the Dogecoin (DOGE) cryptocurrency. Burger King Brazil Accepts Dogecoin As Payment For Dog Biscuits The fast-food chain has introduced a new product called Dogpper, a meat-flavored dog snack in the shape of a bone. The name of the Dogpper is a […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "How'd it feel to receive your first #Bitcoin reward simply for holding #BABYSATOSHI ? As you can see, our community…",
+      "link": "https://cryptopanic.com/news/12427218/Howd-it-feel-to-receive-your-first-Bitcoin-reward-simply-for-holding-BABYSATOSHI-As-you-can-see-our-community?mtm_campaign=API-OFA",
+      "pubDate": "2021-07-28T18:49:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "SATS"
+      ]
+    },
+    {
+      "title": "Hold $SATS &amp; stack sats. Seriously. Check out this chart to find out why short-term profit takers are rekt and…",
+      "link": "https://cryptopanic.com/news/12427219/Hold-SATS-amp-stack-sats-Seriously-Check-out-this-chart-to-find-out-why-short-term-profit-takers-are-rekt-and?mtm_campaign=API-OFA",
+      "pubDate": "2021-07-28T18:33:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SATS"
+      ]
+    },
+    {
+      "title": "DiaEx starts adding Glitzkoin GTN trading volume! The ongoing second pilot test run of the platform uses, real trad…",
+      "link": "https://cryptopanic.com/news/12421332/DiaEx-starts-adding-Glitzkoin-GTN-trading-volume-The-ongoing-second-pilot-test-run-of-the-platform-uses-real-trad",
+      "pubDate": "2021-07-28T18:27:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Bitcoin Indicators Point to Possible Inevitable Break Above $40K Resistance",
+      "link": "https://cryptopanic.com/news/12418226/Bitcoin-Indicators-Point-to-Possible-Inevitable-Break-Above-40K-Resistance",
+      "pubDate": "2021-07-28T18:00:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin has been rejected several times after a push north of the $40,000 mark. At the time of writing, BTC trades at $36,621 with a 3.2% profit in the daily and a 31.9% in the weekly chart. The sentiment is growing bullish, as Bitcoin continues to tackle the important resistance at key levels. In addition, data from CryptoQuant points towards bullish indicators. Despite an increase in BTC...",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 43,
+        "negative": 7
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @tomkysar: happy one year birthday to augur v2 (&amp; three year birthday to v1)",
+      "link": "https://cryptopanic.com/news/12418152/RT-tomkysar-happy-one-year-birthday-to-augur-v2-amp-three-year-birthday-to-v1",
+      "pubDate": "2021-07-28T17:34:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REP"
+      ]
+    },
+    {
+      "title": "NKN is proud to be @joinffl (Founder Friendly Labs) Summer 2018 alumni. Kudos to @mendelc and @samanthaquist for b…",
+      "link": "https://cryptopanic.com/news/12422288/NKN-is-proud-to-be-joinffl-Founder-Friendly-Labs-Summer-2018-alumni-Kudos-to-mendelc-and-samanthaquist-for-b",
+      "pubDate": "2021-07-28T17:33:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NKN"
+      ]
+    },
+    {
+      "title": "Another Polygon Yield Farm Crashes to Zero After Exploit",
+      "link": "https://cryptopanic.com/news/matic-network/12418167/Another-Polygon-Yield-Farm-Crashes-to-Zero-After-Exploit",
+      "pubDate": "2021-07-28T17:32:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "-",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 18
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "In the coming months, can Cardano seize a position in the top 3",
+      "link": "https://cryptopanic.com/news/cardano/12418062/In-the-coming-months-can-Cardano-seize-a-position-in-the-top-3",
+      "pubDate": "2021-07-28T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano, one of the market’s largest altcoins, has bounced back satisfactorily well over the past week. The alt had been trading at its one-month low ($1.05) on the 20th of July, but pumped by more than 16% in the week that followed. ADA was valued at $1.38 at the time of writing. At this stage, […]",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 5
+      }
+    },
+    {
+      "title": "We are delighted to unveil a much-needed upgrade to the native #STASIS wallet — giving you functionality that ena…",
+      "link": "https://cryptopanic.com/news/12423068/We-are-delighted-to-unveil-a-much-needed-upgrade-to-the-native-STASIS-wallet-giving-you-functionality-that-ena",
+      "pubDate": "2021-07-28T16:14:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "RT @OfficialTravlad:  $FORM : Very awesome stuff coming out from @FormationFi, I have been talking about these guys for quite some time, g…",
+      "link": "https://cryptopanic.com/news/12421205/RT-OfficialTravlad-FORM-Very-awesome-stuff-coming-out-from-FormationFi-I-have-been-talking-about-these-guys-for-quite-some-time-g?mtm_campaign=API-OFA",
+      "pubDate": "2021-07-28T15:01:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FORM"
+      ]
+    },
+    {
+      "title": "The ephemeral-testnet L15 is incoming, followed by L16 soon™️",
+      "link": "https://cryptopanic.com/news/12421903/The-ephemeral-testnet-L15-is-incoming-followed-by-L16-soonTM",
+      "pubDate": "2021-07-28T14:59:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "Amazing community!",
+      "link": "https://cryptopanic.com/news/12421904/Amazing-community",
+      "pubDate": "2021-07-28T14:58:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "RT @ReefDeFi: 1/ Reef Finance  is ecstatic to announce a Strategic Partnership with Klever, and that the Reef Chain mainnet is now live!",
+      "link": "https://cryptopanic.com/news/12422969/RT-ReefDeFi-1-Reef-Finance-is-ecstatic-to-announce-a-Strategic-Partnership-with-Klever-and-that-the-Reef-Chain-mainnet-is-now-live",
+      "pubDate": "2021-07-28T13:57:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ]
+    },
+    {
+      "title": "XRP Hits 5-Week High After Launching Liquidity Service in Japan",
+      "link": "https://cryptopanic.com/news/ripple/12417455/XRP-Hits-5-Week-High-After-Launching-Liquidity-Service-in-Japan",
+      "pubDate": "2021-07-28T13:37:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "XRP has spiked by more than 10% after Ripple announced the company’s first On-Demand Liquidity (ODL) service implementation in Japan.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple Price Analysis: XRP Surges 15% as Ripple Targets $1.8B Filipino Remittance Corridor",
+      "link": "https://cryptopanic.com/news/ripple/12417421/Ripple-Price-Analysis-XRP-Surges-15-as-Ripple-Targets-18B-Filipino-Remittance-Corridor",
+      "pubDate": "2021-07-28T13:23:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP surged by a powerful 15% today as the coin hits resistance at the 200-day MA. This comes amid a recent announcement on behalf of Ripple.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "1/ Reef Finance  is ecstatic to announce a Strategic Partnership with Klever, and that the Reef Chain mainnet is now live!",
+      "link": "https://cryptopanic.com/news/12422970/1-Reef-Finance-is-ecstatic-to-announce-a-Strategic-Partnership-with-Klever-and-that-the-Reef-Chain-mainnet-is-now-live",
+      "pubDate": "2021-07-28T13:04:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ]
+    },
+    {
+      "title": "Join the Theta team for a live AMA this Friday July 30 on ! @mitchliu, @jieyilong, and…",
+      "link": "https://cryptopanic.com/news/theta-token/12423499/Join-the-Theta-team-for-a-live-AMA-this-Friday-July-30-on-mitchliu-jieyilong-and",
+      "pubDate": "2021-07-28T12:28:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP price skyrockets by 17% as double bottom chart pattern takes shape",
+      "link": "https://cryptopanic.com/news/ripple/12417036/XRP-price-skyrockets-by-17-as-double-bottom-chart-pattern-takes-shape",
+      "pubDate": "2021-07-28T11:28:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Ripple’s XRP token is in the middle of a bullish breakout, which could open the door to $1 next.",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The RIF Multisig offers all of the features of @gnosisSafe + additional SDK methods, bringing the multisig solutio…",
+      "link": "https://cryptopanic.com/news/12422889/The-RIF-Multisig-offers-all-of-the-features-of-gnosisSafe-additional-SDK-methods-bringing-the-multisig-solutio",
+      "pubDate": "2021-07-28T11:25:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "RIF"
+      ]
+    },
+    {
+      "title": "BTC, ETH, XRP, ZEC, YFII, DEGO, THETA — Technical Analysis July 28",
+      "link": "https://cryptopanic.com/news/theta-token/12416942/BTC-ETH-XRP-ZEC-YFII-DEGO-THETA-Technical-Analysis-July-28",
+      "pubDate": "2021-07-28T10:46:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "THETA"
+      ]
+    },
+    {
+      "title": "XRP Rises 19% on The News of Ripple Launching New ODL Corridor in Japan",
+      "link": "https://cryptopanic.com/news/ripple/12416911/XRP-Rises-19-on-The-News-of-Ripple-Launching-New-ODL-Corridor-in-Japan",
+      "pubDate": "2021-07-28T10:23:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple-affiliated XRP has printed an over 19 percent rise after the news announced by Ripple",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "“I think that the internet is going to be one of the major forces for reducing the role of government. The one thin…",
+      "link": "https://cryptopanic.com/news/ecash/12424168/I-think-that-the-internet-is-going-to-be-one-of-the-major-forces-for-reducing-the-role-of-government-The-one-thin",
+      "pubDate": "2021-07-28T10:16:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "New integration loading...",
+      "link": "https://cryptopanic.com/news/12423723/New-integration-loading",
+      "pubDate": "2021-07-28T09:55:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "Ripple partners with SBI Remit, Coins.ph to use XRP for Japan-Philippines remittances",
+      "link": "https://cryptopanic.com/news/ripple/12416774/Ripple-partners-with-SBI-Remit-Coinsph-to-use-XRP-for-Japan-Philippines-remittances",
+      "pubDate": "2021-07-28T09:29:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "San Francisco-based payments technology company Ripple has partnered with SBI Remit, Japan’s largest money transfer provider, mobile payments service Coins.ph and digital asset exchange platform SBI VC Trade to use XRP for remittances between Japan and the Philippines, according to a company statement. Fast facts The partnership — Ripple’s first on-demand liquidity service implementation in […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 41,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Japan to test Ripple’s ODL service for money transfers to the Philippines",
+      "link": "https://cryptopanic.com/news/ripple/12416683/Japan-to-test-Ripples-ODL-service-for-money-transfers-to-the-Philippines",
+      "pubDate": "2021-07-28T08:40:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Japan’s first On-Demand Liquidity service implementation helps Ripple drive the adoption of crypto-enabled services.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple Announces New ODL Corridor in Japan",
+      "link": "https://cryptopanic.com/news/ripple/12414329/Ripple-Announces-New-ODL-Corridor-in-Japan",
+      "pubDate": "2021-07-28T06:49:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The ODL product makes it possible to instantly convert XRP to the Philippine peso",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 45,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We've just launched the first token that automatically gives #BTC rewards to holders. Hold $SATS and stack sats …",
+      "link": "https://cryptopanic.com/news/12427221/Weve-just-launched-the-first-token-that-automatically-gives-BTC-rewards-to-holders-Hold-SATS-and-stack-sats?mtm_campaign=API-OFA",
+      "pubDate": "2021-07-28T05:55:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "SATS"
+      ]
+    },
+    {
+      "title": "RT @highrewardcoin: #Binance Will Support the @Theta_Network $THETA Upgrade & Hard Fork",
+      "link": "https://cryptopanic.com/news/theta-token/12413962/RT-highrewardcoin-Binance-Will-Support-the-Theta_Network-THETA-Upgrade-amp-Hard-Fork",
+      "pubDate": "2021-07-28T05:54:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "IONC"
+      ]
+    },
+    {
+      "title": "How many #Ethereum Layer 2s can you find on this list?",
+      "link": "https://cryptopanic.com/news/12412072/How-many-Ethereum-Layer-2s-can-you-find-on-this-list",
+      "pubDate": "2021-07-28T05:30:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "OMG"
+      ]
+    },
+    {
+      "title": "RT @decredmemelord: 1/n #Decred's staking percentage growth from 50% to 60% over the last 9 months is a testament of community's commitment…",
+      "link": "https://cryptopanic.com/news/12411926/RT-decredmemelord-1n-Decreds-staking-percentage-growth-from-50-to-60-over-the-last-9-months-is-a-testament-of-communitys-commitment",
+      "pubDate": "2021-07-28T03:53:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DCR"
+      ]
+    },
+    {
+      "title": "@WhiteCoiner releases @Penguin_XWC, another innovative #DecentralizedStorage program. Different from @ethswarm,…",
+      "link": "https://cryptopanic.com/news/12411898/WhiteCoiner-releases-Penguin_XWC-another-innovative-DecentralizedStorage-program-Different-from-ethswarm",
+      "pubDate": "2021-07-28T03:36:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "XWC"
+      ]
+    },
+    {
+      "title": "@WhiteCoiner releases @Penguin_XWC, another innovative #DecentralizedStorage program. Different from @ethswarm ,…",
+      "link": "https://cryptopanic.com/news/12411895/WhiteCoiner-releases-Penguin_XWC-another-innovative-DecentralizedStorage-program-Different-from-ethswarm",
+      "pubDate": "2021-07-28T03:35:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "XWC"
+      ]
+    },
+    {
+      "title": "@WhiteCoiner releases @Penguin_XWC , another innovative decentralized storage program. Different from @ethswarm,…",
+      "link": "https://cryptopanic.com/news/12411878/WhiteCoiner-releases-Penguin_XWC-another-innovative-decentralized-storage-program-Different-from-ethswarm",
+      "pubDate": "2021-07-28T03:23:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "XWC"
+      ]
+    },
+    {
+      "title": "TA: Bitcoin Resumes Rally, Why BTC Could Accelerate Above $40K",
+      "link": "https://cryptopanic.com/news/near/12411866/TA-Bitcoin-Resumes-Rally-Why-BTC-Could-Accelerate-Above-40K",
+      "pubDate": "2021-07-28T03:08:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin price found support near $36,400 and it started a fresh increase against the US Dollar. BTC is showing positive signs and it could rally further above $40,000. Bitcoin remained well bid above the $36,400 and $36,500 support levels. The price is now trading well above $37,000 and the 100 hourly simple moving average. There is a crucial bullish trend line forming with support near...",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 31,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "What you need to know about Monero’s decoy selection bug",
+      "link": "https://cryptopanic.com/news/monero/12411748/What-you-need-to-know-about-Moneros-decoy-selection-bug",
+      "pubDate": "2021-07-28T02:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The developers of privacy-centric cryptocurrency, Monero have identified a “rather significant” bug in the algorithm that could allow for transaction destinations to be identified. According to a Twitter thread by the developers: “If users spend funds immediately following the lock time in the first 2 blocks allowable by consensus rules (~20 minutes after receiving funds), […]",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Traders anticipate 'DeFi Summer 2.0’ after TVL and token prices rise",
+      "link": "https://cryptopanic.com/news/uniswap/12411732/Traders-anticipate-DeFi-Summer-20-after-TVL-and-token-prices-rise",
+      "pubDate": "2021-07-28T01:48:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "A rally in blue-chip DeFi tokens and the sector’s rising total value locked has traders hopeful that a prolonged rally will take place.",
+      "currencies": [
+        "UNI",
+        "SUSHI"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @SwingTradeBot: Rose Above Previous Day's High today: $PM $BJUL $BANC $TSN $CYH $JDIV $QUBT $ZIXI $QVAL $LYL $TLC $CLPS $BSCR ... https:…",
+      "link": "https://cryptopanic.com/news/12415549/RT-SwingTradeBot-Rose-Above-Previous-Days-High-today-PM-BJUL-BANC-TSN-CYH-JDIV-QUBT-ZIXI-QVAL-LYL-TLC-CLPS-BSCR-https?mtm_campaign=API-OFA",
+      "pubDate": "2021-07-28T01:25:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "SCR"
+      ]
+    },
+    {
+      "title": "RT @ZMiller_82: 2021 Olympic Softball Tournament Recap",
+      "link": "https://cryptopanic.com/news/12415550/RT-ZMiller_82-2021-Olympic-Softball-Tournament-Recap?mtm_campaign=API-OFA",
+      "pubDate": "2021-07-28T01:18:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SCR"
+      ]
+    },
+    {
+      "title": "RT @ultra_rad1: In part 2 of the interview with @LeJournalDuCoin, the two CEOs of @ultra_io shared juicy details on Partnerships, NFT Utili…",
+      "link": "https://cryptopanic.com/news/12416142/RT-ultra_rad1-In-part-2-of-the-interview-with-LeJournalDuCoin-the-two-CEOs-of-ultra_io-shared-juicy-details-on-Partnerships-NFT-Utili",
+      "pubDate": "2021-07-28T00:50:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "UOS"
+      ]
+    }
+  ]
+}

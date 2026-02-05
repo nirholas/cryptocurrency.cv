@@ -1,0 +1,26 @@
+{
+  "date": "2017-12-21",
+  "fetchedAt": "2026-02-05T07:27:07.000Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Edward Snowden Loves Zcash, Or At Least the Tech Behind It",
+      "link": "https://cryptopanic.com/news/monero/625917/Edward-Snowden-Loves-Zcash-Or-At-Least-the-Tech-Behind-It",
+      "pubDate": "2017-12-21T14:00:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XMR",
+        "ZEC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    }
+  ]
+}

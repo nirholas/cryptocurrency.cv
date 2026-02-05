@@ -1,0 +1,409 @@
+{
+  "date": "2025-03-10",
+  "fetchedAt": "2026-02-05T07:27:08.502Z",
+  "articleCount": 28,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "How Floki’s 24-hour crash sparked huge whale accumulation",
+      "link": "https://cryptopanic.com/news/20807294/How-Flokis-24-hour-crash-sparked-huge-whale-accumulation?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T23:30:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FLOKI",
+        "MEME",
+        "$1"
+      ]
+    },
+    {
+      "title": "Cathie Wood Predicts “Deflationary Boom” As Bitcoin Price Falls Below $80,000",
+      "link": "https://cryptopanic.com/news/20807142/Cathie-Wood-Predicts-Deflationary-Boom-As-Bitcoin-Price-Falls-Below-80000?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T22:16:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ARK"
+      ]
+    },
+    {
+      "title": "Bitcoin, Ethereum, XRP, Dogecoin Slide As 'Dump On Sunday, Continuation On Monday' Becomes The Norm",
+      "link": "https://cryptopanic.com/news/20806803/Bitcoin-Ethereum-XRP-Dogecoin-Slide-As-Dump-On-Sunday-Continuation-On-Monday-Becomes-The-Norm?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T20:17:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "SOL",
+        "DOGE",
+        "SHIB",
+        "MKR",
+        "LDO",
+        "APT"
+      ]
+    },
+    {
+      "title": "Solana $SOL ETF registered",
+      "link": "https://cryptopanic.com/news/solana/20806769/Solana-SOL-ETF-registered",
+      "pubDate": "2025-03-10T20:04:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "JUST IN: VanEck's spot Solana $SOL ETF registered in Delaware. submitted by /u/SikafieOnlineHustler [link] [comments]",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Ethereum Price Bottom? $1.8B ETH Outflow Sparks Market Speculation",
+      "link": "https://cryptopanic.com/news/20806624/Ethereum-Price-Bottom-18B-ETH-Outflow-Sparks-Market-Speculation?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T19:41:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum (ETH) price saw its largest weekly exchange outflow since Dec. 2022, with $1.8 billion in withdrawals. Despite ongoing bearish sentiment, the movement suggests accumulation among investors. However, technical indicators reveal a critical resistance level that ETH must reclaim to confirm a price bottom. Ethereum Exchange Outflows Hit 27-Month High According to IntoTheBlock, Ethereum outflows from exchanges […] The post Ethereum Price Bottom? $1.8B ETH Outflow Sparks Market Speculation ap",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The Daily: Strategy’s latest $21 billion bitcoin plan, ‘signs of capitulation’ amid crypto market sell-off and more",
+      "link": "https://cryptopanic.com/news/20806346/The-Daily-Strategys-latest-21-billion-bitcoin-plan-signs-of-capitulation-amid-crypto-market-sell-off-and-more?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T18:40:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "SOL",
+        "PEOPLE",
+        "S"
+      ]
+    },
+    {
+      "title": "Acting SEC Chair Mark Uyeda says agency may abandon Regulation ATS proposed rule that loops in crypto exchanges",
+      "link": "https://cryptopanic.com/news/20806250/Acting-SEC-Chair-Mark-Uyeda-says-agency-may-abandon-Regulation-ATS-proposed-rule-that-loops-in-crypto-exchanges?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T18:14:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "GAL",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "PayPal and Ripple stablecoins still sub-1% despite ‘stablecoin gold rush’",
+      "link": "https://cryptopanic.com/news/20806080/PayPal-and-Ripple-stablecoins-still-sub-1-despite-stablecoin-gold-rush?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T17:31:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Despite excellent political and banking conditions for stablecoins, PayPal’s PYUSD and Ripple’s RLUSD are still less than 1% of the market. The post PayPal and Ripple stablecoins still sub-1% despite ‘stablecoin gold rush’ appeared first on Protos.",
+      "currencies": [
+        "PYUSD"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Stocks Plummet from Feb’s Peak as Market Woes Mount",
+      "link": "https://cryptopanic.com/news/20805971/Stocks-Plummet-from-Febs-Peak-as-Market-Woes-Mount?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T17:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "META"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Top 3 Altcoins Top Traders Are Long After Recent Crypto Market Crash",
+      "link": "https://cryptopanic.com/news/20805940/Top-3-Altcoins-Top-Traders-Are-Long-After-Recent-Crypto-Market-Crash?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T16:52:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Arbitrage as Infrastructure",
+      "link": "https://cryptopanic.com/news/20805957/Arbitrage-as-Infrastructure?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T16:36:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BNT"
+      ]
+    },
+    {
+      "title": "CZ Seeks Elon Musk to Ban Bots on X Now",
+      "link": "https://cryptopanic.com/news/20805884/CZ-Seeks-Elon-Musk-to-Ban-Bots-on-X-Now?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T16:35:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "X"
+      ]
+    },
+    {
+      "title": "Neo News: Week in Review – March 3 – March 9",
+      "link": "https://cryptopanic.com/news/20805853/Neo-News-Week-in-Review-March-3-March-9?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T16:28:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Crypto Market Slumps as Fear & Greed Index Drops to 17, Signaling Extreme Fear",
+      "link": "https://cryptopanic.com/news/20845299/Crypto-Market-Slumps-as-Fear-Greed-Index-Drops-to-17-Signaling-Extreme-Fear?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T16:09:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "RAY"
+      ]
+    },
+    {
+      "title": "Chainlink Price Eyes a 120% Surge as Founder Spots $350T Opportunity Ahead of SWFT Pilot",
+      "link": "https://cryptopanic.com/news/20805640/Chainlink-Price-Eyes-a-120-Surge-as-Founder-Spots-350T-Opportunity-Ahead-of-SWFT-Pilot?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T15:38:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "Notcoin (NOT) Launches Not Games Amidst a Sharp Decline in TON Users",
+      "link": "https://cryptopanic.com/news/20808151/Notcoin-NOT-Launches-Not-Games-Amidst-a-Sharp-Decline-in-TON-Users?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T15:32:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TON",
+        "NOT"
+      ]
+    },
+    {
+      "title": "Analyst Explains Why Retail Investors Should Stay Away From Ethena (ENA)",
+      "link": "https://cryptopanic.com/news/20805369/Analyst-Explains-Why-Retail-Investors-Should-Stay-Away-From-Ethena-ENA?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T14:50:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ENA"
+      ]
+    },
+    {
+      "title": "Research: AI Agent Sector Overview",
+      "link": "https://cryptopanic.com/news/20805068/Research-AI-Agent-Sector-Overview?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T14:01:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "VIRTUAL",
+        "AI16Z",
+        "ARC"
+      ]
+    },
+    {
+      "title": "NodeOps ‘Re-Invents’ NFT Launches with Inclusivity-First Proof-of-Conviction Mechanism",
+      "link": "https://cryptopanic.com/news/20805066/NodeOps-Re-Invents-NFT-Launches-with-Inclusivity-First-Proof-of-Conviction-Mechanism?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "NFT"
+      ]
+    },
+    {
+      "title": "1.1M in ETH: What Are Ethereum Whales Preparing For?",
+      "link": "https://cryptopanic.com/news/20805000/11M-in-ETH-What-Are-Ethereum-Whales-Preparing-For?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T13:51:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum sees massive whale buying and the biggest exchange outflow since 2022 despite heightened market gloom.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "4 Blue Chip Altcoins Investors Are Talking About After Bitcoin’s Sub-$80K Crash",
+      "link": "https://cryptopanic.com/news/20804104/4-Blue-Chip-Altcoins-Investors-Are-Talking-About-After-Bitcoins-Sub-80K-Crash?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T11:04:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "UNI",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Arkham Launches Wallet Tracking for X Users with Over 100K Followers",
+      "link": "https://cryptopanic.com/news/20804444/Arkham-Launches-Wallet-Tracking-for-X-Users-with-Over-100K-Followers?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T10:39:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARKM"
+      ]
+    },
+    {
+      "title": "Trump Excluded Binance Coin And Litecoin From US Crypto Reserves,  Analysts Say China, CZ's Past And Privacy Concerns Behind The Move",
+      "link": "https://cryptopanic.com/news/20803942/Trump-Excluded-Binance-Coin-And-Litecoin-From-US-Crypto-Reserves-Analysts-Say-China-CZs-Past-And-Privacy-Concerns-Behind-The-Move?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T10:15:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "ADA",
+        "XRP",
+        "SOL",
+        "LTC"
+      ]
+    },
+    {
+      "title": "$JUP Flirts with All-Time Low Amidst Controversial Governance Proposal",
+      "link": "https://cryptopanic.com/news/20803876/JUP-Flirts-with-All-Time-Low-Amidst-Controversial-Governance-Proposal?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T10:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DAO",
+        "JUP"
+      ]
+    },
+    {
+      "title": "Bitcoin, Dogecoin Bled But These Gold-Backed Cryptos Preserved Investors' Wealth Last Week",
+      "link": "https://cryptopanic.com/news/20802818/Bitcoin-Dogecoin-Bled-But-These-Gold-Backed-Cryptos-Preserved-Investors-Wealth-Last-Week?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T05:09:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "XRP",
+        "SOL",
+        "DOGE",
+        "SHIB",
+        "BCH",
+        "PAXG",
+        "PEPE"
+      ]
+    },
+    {
+      "title": "Bitcoin Price Dives Once More—Is a Deeper Correction Underway?",
+      "link": "https://cryptopanic.com/news/20802620/Bitcoin-Price-Dives-Once-MoreIs-a-Deeper-Correction-Underway?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T03:30:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "TUSD"
+      ]
+    },
+    {
+      "title": "Litecoin Price Struggles Below $100, Will Bearish Sentiment Prevail?",
+      "link": "https://cryptopanic.com/news/20802568/Litecoin-Price-Struggles-Below-100-Will-Bearish-Sentiment-Prevail?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T02:48:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Litecoin Rallies in Sight As Crypto Whales Snap Up $43,825,600 in LTC in Just Two Days, According to Analyst",
+      "link": "https://cryptopanic.com/news/20802256/Litecoin-Rallies-in-Sight-As-Crypto-Whales-Snap-Up-43825600-in-LTC-in-Just-Two-Days-According-to-Analyst?mtm_campaign=API-OFA",
+      "pubDate": "2025-03-10T00:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    }
+  ]
+}

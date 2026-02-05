@@ -1,0 +1,578 @@
+{
+  "date": "2023-07-21",
+  "fetchedAt": "2026-02-05T07:27:07.221Z",
+  "articleCount": 42,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "ASIC Manufacturer Bitmain Unveils $38K Filecoin Mining Rig",
+      "link": "https://cryptopanic.com/news/18789395/ASIC-Manufacturer-Bitmain-Unveils-38K-Filecoin-Mining-Rig",
+      "pubDate": "2023-07-21T23:30:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "Transcript: Polychain Monsters discusses its collectible booster packs on Neo N3",
+      "link": "https://cryptopanic.com/news/18789389/Transcript-Polychain-Monsters-discusses-its-collectible-booster-packs-on-Neo-N3",
+      "pubDate": "2023-07-21T23:27:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "GMX Price Prediction as GMX Slumps 6.5% - Here’s Where the DEX Token Could Be Headed Next",
+      "link": "https://cryptopanic.com/news/18789348/GMX-Price-Prediction-as-GMX-Slumps-65-Heres-Where-the-DEX-Token-Could-Be-Headed-Next?mtm_campaign=API-OFA",
+      "pubDate": "2023-07-21T22:26:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "GMX"
+      ]
+    },
+    {
+      "title": "Crypto Projects Worth Keeping an Eye On",
+      "link": "https://cryptopanic.com/news/18789325/Crypto-Projects-Worth-Keeping-an-Eye-On",
+      "pubDate": "2023-07-21T22:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MATIC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "11 Days to the Litecoin Halving: Does Santiment Predict a Rise or Fall?",
+      "link": "https://cryptopanic.com/news/18789318/11-Days-to-the-Litecoin-Halving-Does-Santiment-Predict-a-Rise-or-Fall",
+      "pubDate": "2023-07-21T21:59:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "There are 11 days left until the halving of mining rewards in Litecoin, one of the old old cryptocurrencies. Continue Reading: 11 Days to the Litecoin Halving: Does Santiment Predict a Rise or Fall?",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BREAKING: SEC Made a Statement About XRP and Terra!",
+      "link": "https://cryptopanic.com/news/18789288/BREAKING-SEC-Made-a-Statement-About-XRP-and-Terra",
+      "pubDate": "2023-07-21T21:35:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "According to the latest information, the SEC, which was defeated in the XRP case, has issued a new statement about the judge's decision. Continue Reading: BREAKING: SEC Made a Statement About XRP and Terra!",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 11
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Wormhole Foundation Unveils New Bridge To Cosmos Ecosystem",
+      "link": "https://cryptopanic.com/news/18789153/Wormhole-Foundation-Unveils-New-Bridge-To-Cosmos-Ecosystem",
+      "pubDate": "2023-07-21T20:00:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ATOM"
+      ]
+    },
+    {
+      "title": "Cryptocurrency EOS Rises More Than 4% In 24 hours",
+      "link": "https://cryptopanic.com/news/18789090/Cryptocurrency-EOS-Rises-More-Than-4-In-24-hours",
+      "pubDate": "2023-07-21T19:00:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Cronos Up More Than 3% In 24 hours",
+      "link": "https://cryptopanic.com/news/18789091/Cryptocurrency-Cronos-Up-More-Than-3-In-24-hours",
+      "pubDate": "2023-07-21T19:00:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Maker Price Prediction as MKR Pumps 13% on Token Buyback Scheme – Can it Break This Key Resistance?",
+      "link": "https://cryptopanic.com/news/18788988/Maker-Price-Prediction-as-MKR-Pumps-13-on-Token-Buyback-Scheme-Can-it-Break-This-Key-Resistance",
+      "pubDate": "2023-07-21T18:06:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DAI",
+        "MKR"
+      ]
+    },
+    {
+      "title": "MakerDAO’s MKR Soars 28% in a Week as Token Buyback Scheme Goes Live",
+      "link": "https://cryptopanic.com/news/maker/18788810/MakerDAOs-MKR-Soars-28-in-a-Week-as-Token-Buyback-Scheme-Goes-Live",
+      "pubDate": "2023-07-21T16:33:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "XRP, XLM and LINK record huge gains: is the altcoins season here?",
+      "link": "https://cryptopanic.com/news/18788788/XRP-XLM-and-LINK-record-huge-gains-is-the-altcoins-season-here",
+      "pubDate": "2023-07-21T16:23:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Key takeaways XRP, XLM and LINK added more than 20% to their values over the past seven days, outperforming Bitcoin. Shiba Memu has now raised more than $1 million in its presale. XRP, XLM and LINK have been the best performers amongst the top 50 cryptocurrencies by market cap over the past few days. Their […] The post XRP, XLM and LINK record huge gains: is the altcoins season here? appeared first on CoinJournal.",
+      "currencies": [
+        "LINK",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Outcompeting Traditional Finance: How Radix Is Bringing A Radically Better Experience To DeFi",
+      "link": "https://cryptopanic.com/news/18788809/Outcompeting-Traditional-Finance-How-Radix-Is-Bringing-A-Radically-Better-Experience-To-DeFi?mtm_campaign=API-OFA",
+      "pubDate": "2023-07-21T16:19:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "XRD"
+      ]
+    },
+    {
+      "title": "McDonald’s debuts McNuggets Land in The Sandbox",
+      "link": "https://cryptopanic.com/news/18788781/McDonalds-debuts-McNuggets-Land-in-The-Sandbox",
+      "pubDate": "2023-07-21T16:18:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SAND"
+      ]
+    },
+    {
+      "title": "Nexus Mutual diversifies $27.3 million into Rocket Pool ETH using CoW Swap",
+      "link": "https://cryptopanic.com/news/18788785/Nexus-Mutual-diversifies-273-million-into-Rocket-Pool-ETH-using-CoW-Swap",
+      "pubDate": "2023-07-21T16:10:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "RPL"
+      ]
+    },
+    {
+      "title": "Top Crypto Analyst Says Little-Known Altcoin That’s Exploded 390% in a Month Primed To Surge by Another 3x",
+      "link": "https://cryptopanic.com/news/flow/18788507/Top-Crypto-Analyst-Says-Little-Known-Altcoin-Thats-Exploded-390-in-a-Month-Primed-To-Surge-by-Another-3x",
+      "pubDate": "2023-07-21T14:30:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Is it Too Late to Buy ApeCoin? APE Price Rallies 10% in a Week But Global Investors are Stacking This Other Meme Coin Instead – Here's Why",
+      "link": "https://cryptopanic.com/news/18788530/Is-it-Too-Late-to-Buy-ApeCoin-APE-Price-Rallies-10-in-a-Week-But-Global-Investors-are-Stacking-This-Other-Meme-Coin-Instead-Heres-Why",
+      "pubDate": "2023-07-21T14:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "APE"
+      ]
+    },
+    {
+      "title": "Ethereum Falls Below $1,900; Rocket Pool, MultiversX Among Top Losers",
+      "link": "https://cryptopanic.com/news/18788491/Ethereum-Falls-Below-1900-Rocket-Pool-MultiversX-Among-Top-Losers",
+      "pubDate": "2023-07-21T13:41:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "EGLD"
+      ]
+    },
+    {
+      "title": "Maker (MKR) Records Higher Gains As Market Turns Red, What’s Behind It?",
+      "link": "https://cryptopanic.com/news/maker/18788368/Maker-MKR-Records-Higher-Gains-As-Market-Turns-Red-Whats-Behind-It",
+      "pubDate": "2023-07-21T13:30:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "MKR"
+      ]
+    },
+    {
+      "title": "FCA Launches Permanent Digital Sandbox to Foster Fintech Innovation",
+      "link": "https://cryptopanic.com/news/18788294/FCA-Launches-Permanent-Digital-Sandbox-to-Foster-Fintech-Innovation",
+      "pubDate": "2023-07-21T13:02:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SAND"
+      ]
+    },
+    {
+      "title": "Bitcoin Fails to Generate Block for Over an Hour, Here's What Happened",
+      "link": "https://cryptopanic.com/news/18788300/Bitcoin-Fails-to-Generate-Block-for-Over-an-Hour-Heres-What-Happened",
+      "pubDate": "2023-07-21T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin: No new blocks produced for an hour in unprecedented glitch",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Former Archblock CEO Daniel Jaiyong An is suing Archblock",
+      "link": "https://cryptopanic.com/news/18788145/Former-Archblock-CEO-Daniel-Jaiyong-An-is-suing-Archblock",
+      "pubDate": "2023-07-21T12:02:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TUSD"
+      ]
+    },
+    {
+      "title": "Crypto price prediction: XDC Network, Polkadot, dYdX",
+      "link": "https://cryptopanic.com/news/18788132/Crypto-price-prediction-XDC-Network-Polkadot-dYdX",
+      "pubDate": "2023-07-21T12:02:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOT",
+        "XDC"
+      ]
+    },
+    {
+      "title": "Trading expert picks top 5 cryptocurrencies to buy in a bull cycle",
+      "link": "https://cryptopanic.com/news/18788005/Trading-expert-picks-top-5-cryptocurrencies-to-buy-in-a-bull-cycle",
+      "pubDate": "2023-07-21T11:03:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "After a tumultuous year in 2022 marked by an extreme downturn in the cryptocurrency market, 2023 brings a promising turnaround … Continued",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOT",
+        "LINK",
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Compound Finance’s [COMP] TVL May Not Stop a Pullback, Here’s Why",
+      "link": "https://cryptopanic.com/news/18788302/Compound-Finances-COMP-TVL-May-Not-Stop-a-Pullback-Heres-Why",
+      "pubDate": "2023-07-21T11:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "COMP"
+      ]
+    },
+    {
+      "title": "Fantom Coin is Going to Zero as FTM Price Plummets 15% But All Attention is On Evil Pepe After Raising $160,000 – How to Buy Early?",
+      "link": "https://cryptopanic.com/news/18787958/Fantom-Coin-is-Going-to-Zero-as-FTM-Price-Plummets-15-But-All-Attention-is-On-Evil-Pepe-After-Raising-160000-How-to-Buy-Early",
+      "pubDate": "2023-07-21T10:44:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FTM"
+      ]
+    },
+    {
+      "title": "Notorious North Korean hackers targeted a US software company to steal crypto data",
+      "link": "https://cryptopanic.com/news/18787916/Notorious-North-Korean-hackers-targeted-a-US-software-company-to-steal-crypto-data",
+      "pubDate": "2023-07-21T10:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "Wormhole unveils a Cosmos appchain called Gateway",
+      "link": "https://cryptopanic.com/news/18787889/Wormhole-unveils-a-Cosmos-appchain-called-Gateway",
+      "pubDate": "2023-07-21T10:13:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ]
+    },
+    {
+      "title": "Wormhole Launches New Blockchain Connecting to Any Cosmos Appchain",
+      "link": "https://cryptopanic.com/news/18787855/Wormhole-Launches-New-Blockchain-Connecting-to-Any-Cosmos-Appchain",
+      "pubDate": "2023-07-21T10:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ]
+    },
+    {
+      "title": "MKR Price Prediction: What to Expect in The Next 48 Hours",
+      "link": "https://cryptopanic.com/news/maker/18788113/MKR-Price-Prediction-What-to-Expect-in-The-Next-48-Hours",
+      "pubDate": "2023-07-21T09:56:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "DOGE 2.0 Rockets Up 30,000% But Crypto Whales Are Accumulating This Other Token Before it Lists on Exchanges – 100x Potential?",
+      "link": "https://cryptopanic.com/news/flow/18787829/DOGE-20-Rockets-Up-30000-But-Crypto-Whales-Are-Accumulating-This-Other-Token-Before-it-Lists-on-Exchanges-100x-Potential",
+      "pubDate": "2023-07-21T09:44:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Crypto Trader Warns It Could Get ‘Really Ugly’ for Binance Coin (BNB), Updates Outlook on Two Ethereum Rivals",
+      "link": "https://cryptopanic.com/news/18787736/Crypto-Trader-Warns-It-Could-Get-Really-Ugly-for-Binance-Coin-BNB-Updates-Outlook-on-Two-Ethereum-Rivals",
+      "pubDate": "2023-07-21T09:15:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "BNB",
+        "AVAX",
+        "ATOM"
+      ]
+    },
+    {
+      "title": "MKR Shows Enormous 20% Increase, This Is What Caused It",
+      "link": "https://cryptopanic.com/news/maker/18787653/MKR-Shows-Enormous-20-Increase-This-Is-What-Caused-It",
+      "pubDate": "2023-07-21T08:37:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Bitmain’s new machines for mining Filecoin",
+      "link": "https://cryptopanic.com/news/filecoin/18787630/Bitmains-new-machines-for-mining-Filecoin",
+      "pubDate": "2023-07-21T08:06:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "Lido bounces from $2: What’s ahead?",
+      "link": "https://cryptopanic.com/news/18787557/Lido-bounces-from-2-Whats-ahead",
+      "pubDate": "2023-07-21T07:30:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LDO"
+      ]
+    },
+    {
+      "title": "Prominent Analyst Asserts XRP May Never Surpass Its Peak",
+      "link": "https://cryptopanic.com/news/18787468/Prominent-Analyst-Asserts-XRP-May-Never-Surpass-Its-Peak",
+      "pubDate": "2023-07-21T06:09:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Recently, a popular crypto analyst sparked a debate in the XRP community by suggesting that the digital asset may never exceed its all-time high (which was around $3.40 and reached on 7 January 2018). The pseudonymous analyst, known as “The Wolf,” shared his thoughts on Twitter, triggering a flurry of responses from the crypto community. […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Cosmos prices could jump past $10.6 if…",
+      "link": "https://cryptopanic.com/news/18787337/Cosmos-prices-could-jump-past-106-if",
+      "pubDate": "2023-07-21T03:30:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ]
+    },
+    {
+      "title": "Stablecoin dominance slides as market cap falls to near 2-year lows: CCData",
+      "link": "https://cryptopanic.com/news/18787321/Stablecoin-dominance-slides-as-market-cap-falls-to-near-2-year-lows-CCData",
+      "pubDate": "2023-07-21T03:07:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DAI",
+        "LUNC"
+      ]
+    },
+    {
+      "title": "“Parabolic” Signal Suggests Litecoin & XRP Will Lead, While Bitcoin & Ethereum Lag",
+      "link": "https://cryptopanic.com/news/18787257/Parabolic-Signal-Suggests-Litecoin-XRP-Will-Lead-While-Bitcoin-Ethereum-Lag",
+      "pubDate": "2023-07-21T01:23:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin and Ethereum might be the two top cryptocurrencies by market cap, but according to a “parabolic” high timeframe signal, Litecoin and XRP could soon lead the market higher. The lack of the technical tool being triggered in BTC and ETH suggests that these two front runners could lag behind the lower-ranked altcoins. Here’s a […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "TOTHEMOON announces its second Comet Drop NFT sale",
+      "link": "https://cryptopanic.com/news/18787251/TOTHEMOON-announces-its-second-Comet-Drop-NFT-sale",
+      "pubDate": "2023-07-21T01:08:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Over 2 Million XRP Traded Every Minute, Path To Second Place After Bitcoin?",
+      "link": "https://cryptopanic.com/news/18787233/Over-2-Million-XRP-Traded-Every-Minute-Path-To-Second-Place-After-Bitcoin",
+      "pubDate": "2023-07-21T01:00:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "KCS"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Unleashing the Potential of Web3: MetaBlox and its User-Centric Network Revolution",
+      "link": "https://cryptopanic.com/news/18787208/Unleashing-the-Potential-of-Web3-MetaBlox-and-its-User-Centric-Network-Revolution",
+      "pubDate": "2023-07-21T00:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    }
+  ]
+}

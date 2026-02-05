@@ -1,0 +1,662 @@
+{
+  "date": "2024-04-07",
+  "fetchedAt": "2026-02-05T07:27:08.027Z",
+  "articleCount": 43,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "What’s driving Ethereum’s 32 million transactions on L2s?",
+      "link": "https://cryptopanic.com/news/19387510/Whats-driving-Ethereums-32-million-transactions-on-L2s",
+      "pubDate": "2024-04-07T23:00:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The results of Ethereum's Dencun upgrade are finally starting to show.",
+      "currencies": [
+        "ETH",
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Why ApeCoin, BAYC, MAYC fell behind Bitcoin NFTs in Q4 2023",
+      "link": "https://cryptopanic.com/news/19387467/Why-ApeCoin-BAYC-MAYC-fell-behind-Bitcoin-NFTs-in-Q4-2023",
+      "pubDate": "2024-04-07T22:00:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "APE"
+      ]
+    },
+    {
+      "title": "Billionaire Investor Cathie Wood Talks About Her $1.5 Million Bitcoin Prediction: Why Does She Think So?",
+      "link": "https://cryptopanic.com/news/19387406/Billionaire-Investor-Cathie-Wood-Talks-About-Her-15-Million-Bitcoin-Prediction-Why-Does-She-Think-So",
+      "pubDate": "2024-04-07T21:26:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ARK"
+      ]
+    },
+    {
+      "title": "Aave Chan founder teases fee distribution for holders",
+      "link": "https://cryptopanic.com/news/19387394/Aave-Chan-founder-teases-fee-distribution-for-holders",
+      "pubDate": "2024-04-07T21:02:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "DAO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cathie Wood cheers crypto optimism and applauds Hong Kong’s web3 move",
+      "link": "https://cryptopanic.com/news/19387344/Cathie-Wood-cheers-crypto-optimism-and-applauds-Hong-Kongs-web3-move",
+      "pubDate": "2024-04-07T20:07:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "The founder and CEO of ARK Investment Management LLC and a reputable investor, Cathie Wood, was a guest speaker at the Hong Kong web3carnival.focusing on flaws, she talked about crypto and blockchain technologies’ advantages and voiced her point of view. Wood’s statement articulates that Web3 space is going to be shining in the future as […]",
+      "currencies": [
+        "ARK"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Toncoin Shows Resilience with 4% Gains Amid Top 10 Crypto Slump",
+      "link": "https://cryptopanic.com/news/19387292/Toncoin-Shows-Resilience-with-4-Gains-Amid-Top-10-Crypto-Slump",
+      "pubDate": "2024-04-07T19:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The cryptocurrency market faced a subdued week with major coins dipping in value, but Toncoin defied the trend.",
+      "currencies": [
+        "TON"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto market’s weekly winners and losers – CORE, PENDLE, W, FLOKI",
+      "link": "https://cryptopanic.com/news/19387281/Crypto-markets-weekly-winners-and-losers-CORE-PENDLE-W-FLOKI",
+      "pubDate": "2024-04-07T19:00:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CORE",
+        "FLOKI"
+      ]
+    },
+    {
+      "title": "XRP Price Explosion to $5 Closer Than Ever With Ripple’s Foray Into the $154 Billion Stablecoin Market",
+      "link": "https://cryptopanic.com/news/19387266/XRP-Price-Explosion-to-5-Closer-Than-Ever-With-Ripples-Foray-Into-the-154-Billion-Stablecoin-Market",
+      "pubDate": "2024-04-07T18:54:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "With the stablecoin market forecasted to exceed $2.8 trillion by 2028, Ripple's foray into the stablecoin market is set to position XRP into...",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Celestia’s Blobstream goes live on Arbitrum Orbit",
+      "link": "https://cryptopanic.com/news/19387263/Celestias-Blobstream-goes-live-on-Arbitrum-Orbit",
+      "pubDate": "2024-04-07T18:45:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "ARB",
+        "TIA"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Profitable cryptocurrency whale buys $3 million of this token",
+      "link": "https://cryptopanic.com/news/19387254/Profitable-cryptocurrency-whale-buys-3-million-of-this-token",
+      "pubDate": "2024-04-07T18:31:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ENA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Jumps Above $69,000 As 4/20 Halving Approaches; $100,000 Price Tag Imminent?",
+      "link": "https://cryptopanic.com/news/19387244/Bitcoin-Jumps-Above-69000-As-420-Halving-Approaches-100000-Price-Tag-Imminent",
+      "pubDate": "2024-04-07T18:20:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDC",
+        "TUSD"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "dYdX community approves 20M token stake as network activity soars",
+      "link": "https://cryptopanic.com/news/19387211/dYdX-community-approves-20M-token-stake-as-network-activity-soars",
+      "pubDate": "2024-04-07T17:48:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DYDX"
+      ]
+    },
+    {
+      "title": "Bullish signal: Bitcoin whale accumulates $90 million in a month",
+      "link": "https://cryptopanic.com/news/19387199/Bullish-signal-Bitcoin-whale-accumulates-90-million-in-a-month",
+      "pubDate": "2024-04-07T17:34:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Highly capitalized investors have been accumulating Bitcoin (BTC) since the year started, driving the asset’s price to an all-time high. … Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BlockDAG Redefines Crypto with V2 Whitepaper Launch and $13.9M Presale, Outshining AAVE’s Rise and SEI’s Strategic Developments",
+      "link": "https://cryptopanic.com/news/19387196/BlockDAG-Redefines-Crypto-with-V2-Whitepaper-Launch-and-139M-Presale-Outshining-AAVEs-Rise-and-SEIs-Strategic-Developments",
+      "pubDate": "2024-04-07T17:32:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "SEI"
+      ]
+    },
+    {
+      "title": "Dogecoin price prediction; Can DOGE flip XRP’s market cap?",
+      "link": "https://cryptopanic.com/news/19387138/Dogecoin-price-prediction-Can-DOGE-flip-XRPs-market-cap",
+      "pubDate": "2024-04-07T16:56:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Pantera Capital Records 66% Gain in Q1 for Liquid Crypto Fund – Here’s Some of Its Altcoin Positions: Report",
+      "link": "https://cryptopanic.com/news/19387135/Pantera-Capital-Records-66-Gain-in-Q1-for-Liquid-Crypto-Fund-Heres-Some-of-Its-Altcoin-Positions-Report",
+      "pubDate": "2024-04-07T16:55:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "STX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "A dead star and a black hole may have collided",
+      "link": "https://cryptopanic.com/news/19387130/A-dead-star-and-a-black-hole-may-have-collided",
+      "pubDate": "2024-04-07T16:41:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Ethereum and Polygon Attract Majority of New Users: Flipside Report",
+      "link": "https://cryptopanic.com/news/19387121/Ethereum-and-Polygon-Attract-Majority-of-New-Users-Flipside-Report",
+      "pubDate": "2024-04-07T16:36:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MATIC",
+        "NFT",
+        "ARB",
+        "OP"
+      ]
+    },
+    {
+      "title": "2024's Crypto Harvest: 5 Altcoins for Stellar Returns",
+      "link": "https://cryptopanic.com/news/19387137/2024s-Crypto-Harvest-5-Altcoins-for-Stellar-Returns",
+      "pubDate": "2024-04-07T16:03:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XLM"
+      ]
+    },
+    {
+      "title": "How Aave’s Proposed Fee Switch Incentivizes Long-Term Holding",
+      "link": "https://cryptopanic.com/news/19387009/How-Aaves-Proposed-Fee-Switch-Incentivizes-Long-Term-Holding",
+      "pubDate": "2024-04-07T15:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "$TNSR Token Airdrop From Tensor Arrives in Less Than 24 Hours: Here's What You Need to Know",
+      "link": "https://cryptopanic.com/news/19789854/TNSR-Token-Airdrop-From-Tensor-Arrives-in-Less-Than-24-Hours-Heres-What-You-Need-to-Know?mtm_campaign=API-OFA",
+      "pubDate": "2024-04-07T14:37:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TNSR"
+      ]
+    },
+    {
+      "title": "Andre Cronje to Help Launch Meme Coins on Fantom",
+      "link": "https://cryptopanic.com/news/19386984/Andre-Cronje-to-Help-Launch-Meme-Coins-on-Fantom",
+      "pubDate": "2024-04-07T14:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "BNB",
+        "SOL",
+        "DOGE",
+        "AVAX",
+        "SHIB",
+        "FTM",
+        "PEPE",
+        "WIF"
+      ]
+    },
+    {
+      "title": "Cathie Wood’s ARK Invest Accidentally Owns $15,000 Bitcoin Puppet",
+      "link": "https://cryptopanic.com/news/19386944/Cathie-Woods-ARK-Invest-Accidentally-Owns-15000-Bitcoin-Puppet",
+      "pubDate": "2024-04-07T14:15:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ARK"
+      ]
+    },
+    {
+      "title": "Pantera Capital Gains 66% in Q1 Despite Dumping BTC, ETH",
+      "link": "https://cryptopanic.com/news/19386934/Pantera-Capital-Gains-66-in-Q1-Despite-Dumping-BTC-ETH",
+      "pubDate": "2024-04-07T14:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Pantera Capital, a $5.2 billion asset manager, takes a rather unique approach: reducing exposure to Bitcoin.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Former FTX Associates Enter Crosshairs, Bitcoin Halving Inches Closer, and More — Week in Review",
+      "link": "https://cryptopanic.com/news/19386806/Former-FTX-Associates-Enter-Crosshairs-Bitcoin-Halving-Inches-Closer-and-More-Week-in-Review",
+      "pubDate": "2024-04-07T12:38:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ENA"
+      ]
+    },
+    {
+      "title": "Solana (SOL) About to Explode? Hidden Metric Tells a Lot",
+      "link": "https://cryptopanic.com/news/19386794/Solana-SOL-About-to-Explode-Hidden-Metric-Tells-a-Lot",
+      "pubDate": "2024-04-07T12:31:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana could be on verge of volatility explosion as another metric goes up",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Aave’s Fee Distribution Plan Is a Win for Holders",
+      "link": "https://cryptopanic.com/news/19386785/Aaves-Fee-Distribution-Plan-Is-a-Win-for-Holders",
+      "pubDate": "2024-04-07T12:19:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "DAI",
+        "UNI",
+        "AAVE",
+        "DAO"
+      ]
+    },
+    {
+      "title": "Claude Opus AI predicts Cardano price for the end of 2024",
+      "link": "https://cryptopanic.com/news/19386762/Claude-Opus-AI-predicts-Cardano-price-for-the-end-of-2024",
+      "pubDate": "2024-04-07T12:11:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Despite the overall market trending positively, decentralized finance (DeFi) project Cardano (ADA) has predominantly experienced losses in recent weeks with … Continue reading",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Top altcoins to buy in April 2024 - Algotech (ALGT), Injective (INJ), and Dogecoin (DOGE) Lead the crypto market",
+      "link": "https://cryptopanic.com/news/19386740/Top-altcoins-to-buy-in-April-2024-Algotech-ALGT-Injective-INJ-and-Dogecoin-DOGE-Lead-the-crypto-market",
+      "pubDate": "2024-04-07T12:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "INJ"
+      ]
+    },
+    {
+      "title": "Shiba Inu's Shibarium Skyrockets 6,823% in Key Metric",
+      "link": "https://cryptopanic.com/news/19386736/Shiba-Inus-Shibarium-Skyrockets-6823-in-Key-Metric?mtm_campaign=API-OFA",
+      "pubDate": "2024-04-07T11:51:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "BONE"
+      ]
+    },
+    {
+      "title": "Crypto Weekly Roundup: SEC Look Into Ethereum ETFs, Aave vs MakerDAO, & More",
+      "link": "https://cryptopanic.com/news/19386704/Crypto-Weekly-Roundup-SEC-Look-Into-Ethereum-ETFs-Aave-vs-MakerDAO-More",
+      "pubDate": "2024-04-07T11:25:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "This Week In Crypto Twitter: Meme Coins and Base are Booming While Solana Strains",
+      "link": "https://cryptopanic.com/news/19386677/This-Week-In-Crypto-Twitter-Meme-Coins-and-Base-are-Booming-While-Solana-Strains",
+      "pubDate": "2024-04-07T11:01:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "ENA"
+      ]
+    },
+    {
+      "title": "Investors optimistic on MEDA presale as Bitcoin Cash and Ethereum Classic register gains",
+      "link": "https://cryptopanic.com/news/19386626/Investors-optimistic-on-MEDA-presale-as-Bitcoin-Cash-and-Ethereum-Classic-register-gains",
+      "pubDate": "2024-04-07T10:07:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BCH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "Pantera Capital’s Crypto Fund Records 66% Profit In 2024 Q1: Report",
+      "link": "https://cryptopanic.com/news/19386622/Pantera-Capitals-Crypto-Fund-Records-66-Profit-In-2024-Q1-Report",
+      "pubDate": "2024-04-07T10:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "SOL",
+        "STX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "111,000 BTC Move Out Of Exchange Wallets In A Month – Impact On Bitcoin Price?",
+      "link": "https://cryptopanic.com/news/19386609/111000-BTC-Move-Out-Of-Exchange-Wallets-In-A-Month-Impact-On-Bitcoin-Price?mtm_campaign=API-OFA",
+      "pubDate": "2024-04-07T09:50:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "NEAR",
+        "ALI"
+      ]
+    },
+    {
+      "title": "Aave contemplates fee distribution in DeFi shake-up",
+      "link": "https://cryptopanic.com/news/19386526/Aave-contemplates-fee-distribution-in-DeFi-shake-up",
+      "pubDate": "2024-04-07T08:06:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Aave DAO To Follow Frax Finance & Uniswap in Improving Stakers’ Rewards",
+      "link": "https://cryptopanic.com/news/19386444/Aave-DAO-To-Follow-Frax-Finance-Uniswap-in-Improving-Stakers-Rewards",
+      "pubDate": "2024-04-07T06:03:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "AAVE",
+        "DAO"
+      ]
+    },
+    {
+      "title": "DOGE, WIF Emerge as Today’s Top Performers, BTC Aims at $70K (Weekend Watch)",
+      "link": "https://cryptopanic.com/news/19386442/DOGE-WIF-Emerge-as-Todays-Top-Performers-BTC-Aims-at-70K-Weekend-Watch",
+      "pubDate": "2024-04-07T06:02:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "MNT",
+        "WIF"
+      ]
+    },
+    {
+      "title": "S&P Global Downgrades Five US Banks, Warns Lenders Hold Billions of Dollars in Loans That May Face ‘Material Deterioration’",
+      "link": "https://cryptopanic.com/news/19386367/SP-Global-Downgrades-Five-US-Banks-Warns-Lenders-Hold-Billions-of-Dollars-in-Loans-That-May-Face-Material-Deterioration",
+      "pubDate": "2024-04-07T03:04:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "T"
+      ]
+    },
+    {
+      "title": "How Cardano’s WMT, SNEK, Earthnode are doing what ADA’s price isn’t",
+      "link": "https://cryptopanic.com/news/19386330/How-Cardanos-WMT-SNEK-Earthnode-are-doing-what-ADAs-price-isnt",
+      "pubDate": "2024-04-07T02:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Despite market uncertainty, activity and transactions on the Cardano network continue to remain robust.",
+      "currencies": [
+        "ADA",
+        "WMT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Robert Kiyosaki Responds to Bitcoin Crashing to $200 Prediction by Economist Harry Dent",
+      "link": "https://cryptopanic.com/news/19386318/Robert-Kiyosaki-Responds-to-Bitcoin-Crashing-to-200-Prediction-by-Economist-Harry-Dent",
+      "pubDate": "2024-04-07T01:36:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DENT"
+      ]
+    },
+    {
+      "title": "Analyst Says New Altcoin Primed To Surge by a Few Multiples in Weeks, Updates Outlook on Solana and Celestia",
+      "link": "https://cryptopanic.com/news/19386275/Analyst-Says-New-Altcoin-Primed-To-Surge-by-a-Few-Multiples-in-Weeks-Updates-Outlook-on-Solana-and-Celestia",
+      "pubDate": "2024-04-07T00:00:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "TIA",
+        "JUP"
+      ]
+    },
+    {
+      "title": "How Base’s 3M transactions can help it overtake Arbitrum, Optimism",
+      "link": "https://cryptopanic.com/news/19386278/How-Bases-3M-transactions-can-help-it-overtake-Arbitrum-Optimism",
+      "pubDate": "2024-04-07T00:00:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "Base surpassed Arbitrum and Optimism on several fronts, all exhibiting strong performances.",
+      "currencies": [
+        "ARB"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "date": "2018-07-19",
+  "fetchedAt": "2026-02-05T07:27:07.857Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "EOS Smashes Blockchain Records With Transaction Speeds Faster Than Visa",
+      "link": "https://cryptopanic.com/news/2587253/EOS-Smashes-Blockchain-Records-With-Transaction-Speeds-Faster-Than-Visa",
+      "pubDate": "2018-07-19T21:39:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 41,
+        "negative": 11
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron Falls to Support Level After Huge Price Appreciations – Bullish Ascending Triangle Pattern in Play",
+      "link": "https://cryptopanic.com/news/2586636/Tron-Falls-to-Support-Level-After-Huge-Price-Appreciations-Bullish-Ascending-Triangle-Pattern-in-Play",
+      "pubDate": "2018-07-19T17:54:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "date": "2018-04-10",
+  "fetchedAt": "2026-02-05T07:27:06.958Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ledger Wallet Users Can't Access Their Bitcoin Cash",
+      "link": "https://cryptopanic.com/news/1624237/Ledger-Wallet-Users-Cant-Access-Their-Bitcoin-Cash",
+      "pubDate": "2018-04-10T19:20:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "OmiseGo Partners with South Korea’s Largest Credit Card Company",
+      "link": "https://cryptopanic.com/news/1623133/OmiseGo-Partners-with-South-Koreas-Largest-Credit-Card-Company",
+      "pubDate": "2018-04-10T17:00:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XRP",
+        "OMG"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

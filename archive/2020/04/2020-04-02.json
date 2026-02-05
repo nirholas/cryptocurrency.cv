@@ -1,0 +1,25 @@
+{
+  "date": "2020-04-02",
+  "fetchedAt": "2026-02-05T07:27:06.977Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA (MIOTA) Network To Be Decentralized: Coordicide Explained by IOTA Foundation",
+      "link": "https://cryptopanic.com/news/8410321/IOTA-MIOTA-Network-To-Be-Decentralized-Coordicide-Explained-by-IOTA-Foundation",
+      "pubDate": "2020-04-02T12:50:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

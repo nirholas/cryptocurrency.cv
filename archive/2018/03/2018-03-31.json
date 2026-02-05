@@ -1,0 +1,25 @@
+{
+  "date": "2018-03-31",
+  "fetchedAt": "2026-02-05T07:27:08.685Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IBM Is Finally Getting Serious About Cryptocurrency",
+      "link": "https://cryptopanic.com/news/stellar/1525447/IBM-Is-Finally-Getting-Serious-About-Cryptocurrency",
+      "pubDate": "2018-03-31T12:05:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

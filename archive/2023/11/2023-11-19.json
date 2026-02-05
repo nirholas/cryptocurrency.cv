@@ -1,0 +1,644 @@
+{
+  "date": "2023-11-19",
+  "fetchedAt": "2026-02-05T07:27:07.025Z",
+  "articleCount": 44,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "JUST IN: Pro-Bitcoin Candidate Javier Milei Wins Election in Argentina, BTC Breaks $37,000",
+      "link": "https://cryptopanic.com/news/19048931/JUST-IN-Pro-Bitcoin-Candidate-Javier-Milei-Wins-Election-in-Argentina-BTC-Breaks-37000",
+      "pubDate": "2023-11-19T23:40:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin supporter presidential candidate Javier Milei, who was left behind in the first round in Argentina, managed to win the elections in the second round. Continue Reading: JUST IN: Pro-Bitcoin Candidate Javier Milei Wins Election in Argentina, BTC Breaks $37,000",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 36,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple (XRP): Three Reasons to be Bullish, One to be Cautious",
+      "link": "https://cryptopanic.com/news/19048946/Ripple-XRP-Three-Reasons-to-be-Bullish-One-to-be-Cautious",
+      "pubDate": "2023-11-19T23:15:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Solana has the crowd behind it: Can SOL hit $100?",
+      "link": "https://cryptopanic.com/news/19048855/Solana-has-the-crowd-behind-it-Can-SOL-hit-100",
+      "pubDate": "2023-11-19T21:30:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The atmosphere around Solana continued to be bullish at press time. SOL has the potential to reach $75 in a few weeks, and $100 in a few months. Solana [SOL] has jumped above $60 after the c",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "dYdX increases margin and implements trade restrictions",
+      "link": "https://cryptopanic.com/news/19048830/dYdX-increases-margin-and-implements-trade-restrictions?mtm_campaign=API-OFA",
+      "pubDate": "2023-11-19T21:05:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETHDYDX"
+      ]
+    },
+    {
+      "title": "Crypto Whales Sell Off Ethereum (ETH)-Based Altcoin Before Massive 40% Correction: On-Chain Data",
+      "link": "https://cryptopanic.com/news/19048824/Crypto-Whales-Sell-Off-Ethereum-ETH-Based-Altcoin-Before-Massive-40-Correction-On-Chain-Data",
+      "pubDate": "2023-11-19T21:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "YFI"
+      ]
+    },
+    {
+      "title": "Thorchain Rises to Third in Decentralized Exchange Rankings, Hits $1.8B Weekly Trade Volume",
+      "link": "https://cryptopanic.com/news/19048803/Thorchain-Rises-to-Third-in-Decentralized-Exchange-Rankings-Hits-18B-Weekly-Trade-Volume",
+      "pubDate": "2023-11-19T20:30:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "UNI",
+        "RUNE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polygon (MATIC) Looks to Extend Growth as PoS Activity Soars",
+      "link": "https://cryptopanic.com/news/19048792/Polygon-MATIC-Looks-to-Extend-Growth-as-PoS-Activity-Soars",
+      "pubDate": "2023-11-19T20:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SOL, LINK, NEAR and THETA flash bullish as Bitcoin takes a breather",
+      "link": "https://cryptopanic.com/news/19048764/SOL-LINK-NEAR-and-THETA-flash-bullish-as-Bitcoin-takes-a-breather",
+      "pubDate": "2023-11-19T19:45:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin price range trades as SOL, LINK, NEAR and THETA play catch up.",
+      "currencies": [
+        "BTC",
+        "LINK",
+        "NEAR",
+        "THETA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Market Predictions Place Rebel Satoshi Ahead of XRP and TRON in Race to $1 Valuation",
+      "link": "https://cryptopanic.com/news/19048765/Market-Predictions-Place-Rebel-Satoshi-Ahead-of-XRP-and-TRON-in-Race-to-1-Valuation",
+      "pubDate": "2023-11-19T19:43:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "TRX"
+      ]
+    },
+    {
+      "title": "Testing the Waters: OpenChat To Experiment With Facial Recognition In Blockchain",
+      "link": "https://cryptopanic.com/news/19048751/Testing-the-Waters-OpenChat-To-Experiment-With-Facial-Recognition-In-Blockchain",
+      "pubDate": "2023-11-19T19:30:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ]
+    },
+    {
+      "title": "Over 80 Million Shiba Inu (SHIB) Burned as Lead Developer Suggests AI Pivot",
+      "link": "https://cryptopanic.com/news/19048738/Over-80-Million-Shiba-Inu-SHIB-Burned-as-Lead-Developer-Suggests-AI-Pivot",
+      "pubDate": "2023-11-19T19:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The SHIB token burn rate saw a remarkable surge of around 60% in the past 24 hours, marked by the incineration of approximately 80 million tokens. This notable increase in burning activity follows speculations of a potential shift of the memecoin’s focus toward artificial intelligence. Data from Shibburn shows that 81.2 million SHIB tokens were burnt during the past day. Over 80...",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Kronos Research Halts Operations After Losing $26 Million In Security Breach",
+      "link": "https://cryptopanic.com/news/19048720/Kronos-Research-Halts-Operations-After-Losing-26-Million-In-Security-Breach",
+      "pubDate": "2023-11-19T19:00:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Decentralized Exchange dYdX Faces $9 Million Loss in Targeted Attack, Investigations Underway",
+      "link": "https://cryptopanic.com/news/19048697/Decentralized-Exchange-dYdX-Faces-9-Million-Loss-in-Targeted-Attack-Investigations-Underway?mtm_campaign=API-OFA",
+      "pubDate": "2023-11-19T18:33:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ETHDYDX"
+      ]
+    },
+    {
+      "title": "Exchange Token FTT’s 200% Spike in 2 Weeks Defies Bankruptcy and Bankman-Fried’s Fraud Conviction Woes",
+      "link": "https://cryptopanic.com/news/19048691/Exchange-Token-FTTs-200-Spike-in-2-Weeks-Defies-Bankruptcy-and-Bankman-Frieds-Fraud-Conviction-Woes",
+      "pubDate": "2023-11-19T18:30:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "Top Altcoins You Need to Keep an Eye On – Solana (SOL), Chainlink (LINK), Avalanche (AVAX)",
+      "link": "https://cryptopanic.com/news/19048650/Top-Altcoins-You-Need-to-Keep-an-Eye-On-Solana-SOL-Chainlink-LINK-Avalanche-AVAX",
+      "pubDate": "2023-11-19T17:57:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "AVAX",
+        "LINK"
+      ]
+    },
+    {
+      "title": "dYdX raises margin requirements in some markets, bans “highly profitable trades”",
+      "link": "https://cryptopanic.com/news/19048638/dYdX-raises-margin-requirements-in-some-markets-bans-highly-profitable-trades?mtm_campaign=API-OFA",
+      "pubDate": "2023-11-19T17:34:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ETHDYDX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "How MATIC reacted to Polygon’s surging network activity",
+      "link": "https://cryptopanic.com/news/19048637/How-MATIC-reacted-to-Polygons-surging-network-activity",
+      "pubDate": "2023-11-19T17:30:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "MATIC"
+      ]
+    },
+    {
+      "title": "While Bitcoin Dominance Shadows Altcoins, Could Polygon (MATIC) and Litecoin (LTC) Be Overlooked Treasures?",
+      "link": "https://cryptopanic.com/news/19048598/While-Bitcoin-Dominance-Shadows-Altcoins-Could-Polygon-MATIC-and-Litecoin-LTC-Be-Overlooked-Treasures",
+      "pubDate": "2023-11-19T16:59:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MATIC",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Hashkey-Affiliated Wallet Sells Over $90 Million ETH In 10 Days – Report",
+      "link": "https://cryptopanic.com/news/19048590/Hashkey-Affiliated-Wallet-Sells-Over-90-Million-ETH-In-10-Days-Report",
+      "pubDate": "2023-11-19T16:40:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "USDC"
+      ]
+    },
+    {
+      "title": "Cardano (ADA) Jumps 7% as Crucial Pattern Sets to Emerge on Charts",
+      "link": "https://cryptopanic.com/news/19048564/Cardano-ADA-Jumps-7-as-Crucial-Pattern-Sets-to-Emerge-on-Charts",
+      "pubDate": "2023-11-19T16:12:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano (ADA) might double, based on this chart pattern breakout",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Cardano Founder Pitches AI Collaboration to Sam Altman",
+      "link": "https://cryptopanic.com/news/19048538/Cardano-Founder-Pitches-AI-Collaboration-to-Sam-Altman",
+      "pubDate": "2023-11-19T15:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano founder Charles Hoskinson reached out to AI firm's recently ousted CEO",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 8
+      }
+    },
+    {
+      "title": "Altcoin Market Corrections Test Algorand (ALGO) and GALA (GALA) Strength, Will They Stay Firm?",
+      "link": "https://cryptopanic.com/news/19048522/Altcoin-Market-Corrections-Test-Algorand-ALGO-and-GALA-GALA-Strength-Will-They-Stay-Firm",
+      "pubDate": "2023-11-19T15:29:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALGO",
+        "GALA"
+      ]
+    },
+    {
+      "title": "Polygon (MATIC) Aims at Another Uptick as PoS Activity Surges",
+      "link": "https://cryptopanic.com/news/19048482/Polygon-MATIC-Aims-at-Another-Uptick-as-PoS-Activity-Surges",
+      "pubDate": "2023-11-19T14:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MATIC"
+      ]
+    },
+    {
+      "title": "Toncoin (TON) Targets $2.43, Thanks to the Rise Above Chainlink",
+      "link": "https://cryptopanic.com/news/19048433/Toncoin-TON-Targets-243-Thanks-to-the-Rise-Above-Chainlink",
+      "pubDate": "2023-11-19T13:43:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "TON"
+      ]
+    },
+    {
+      "title": "Should you buy Bitcoin while it is above $30,000?",
+      "link": "https://cryptopanic.com/news/19048379/Should-you-buy-Bitcoin-while-it-is-above-30000",
+      "pubDate": "2023-11-19T13:04:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "As Bitcoin (BTC) maintains its position above the $30,000 mark, a prevalent question lingers among the crypto community and the … Continued",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Yearn Finance (YFI) price nosedives amid alleged market manipulation",
+      "link": "https://cryptopanic.com/news/19048344/Yearn-Finance-YFI-price-nosedives-amid-alleged-market-manipulation?mtm_campaign=API-OFA",
+      "pubDate": "2023-11-19T12:33:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETHDYDX"
+      ]
+    },
+    {
+      "title": "Cardano Founder Courts OpenAI’s Sam Altman – What Does He Want To Build?",
+      "link": "https://cryptopanic.com/news/19048320/Cardano-Founder-Courts-OpenAIs-Sam-Altman-What-Does-He-Want-To-Build",
+      "pubDate": "2023-11-19T12:00:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "OpenAI recently announced a shocking leadership change with Sam Altman being ousted as CEO. After five years of being at the helm of taking OpenAI from a $0 to $80 billion valuation, the AI company is now at a crossroads with Altman departing and former Chief Technology Officer (CTO), Mira Murati taking over as interim CEO. Altman hasn’t provided specifics of his next actions; however, he has posted on social media that he “will have more to say about what’s next later.” In light of this, Charle",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 10
+      }
+    },
+    {
+      "title": "3 cryptocurrencies to buy under $10 next week",
+      "link": "https://cryptopanic.com/news/19048255/3-cryptocurrencies-to-buy-under-10-next-week",
+      "pubDate": "2023-11-19T10:48:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The current cryptocurrency market is witnessing a substantial surge, capturing the attention of investors. While cryptocurrencies like Bitcoin and Ethereum … Continued",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "UNI",
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Prices Today: RNDR Jumps 5% while ETH and SHIB Stalled in Uncertainty",
+      "link": "https://cryptopanic.com/news/19048245/Crypto-Prices-Today-RNDR-Jumps-5-while-ETH-and-SHIB-Stalled-in-Uncertainty",
+      "pubDate": "2023-11-19T10:31:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SHIB",
+        "RNDR"
+      ]
+    },
+    {
+      "title": "Wall Street Expert Convinced Ripple Will Go Public In May 2024: Can It Drive XRP Price To $10?",
+      "link": "https://cryptopanic.com/news/19048230/Wall-Street-Expert-Convinced-Ripple-Will-Go-Public-In-May-2024-Can-It-Drive-XRP-Price-To-10",
+      "pubDate": "2023-11-19T10:18:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The Wall Street investment veteran’s forecast hinges on a wider economic outlook, envisioning a meteoric bull run buoyed by lowering inflation and interest rates, thus creating a favourable environment for public offerings.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "dYdX Founder Calls Foul Play In $9 Million Insurance Fund Loss",
+      "link": "https://cryptopanic.com/news/19048227/dYdX-Founder-Calls-Foul-Play-In-9-Million-Insurance-Fund-Loss",
+      "pubDate": "2023-11-19T10:11:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "YFI"
+      ]
+    },
+    {
+      "title": "dYdX User Funds Not Affected by YFI Hack, Says dYdX Founder",
+      "link": "https://cryptopanic.com/news/19048198/dYdX-User-Funds-Not-Affected-by-YFI-Hack-Says-dYdX-Founder?mtm_campaign=API-OFA",
+      "pubDate": "2023-11-19T09:43:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETHDYDX"
+      ]
+    },
+    {
+      "title": "Shiba Inu (SHIB) Slips Below Toncoin (TON); Key Reasons Why",
+      "link": "https://cryptopanic.com/news/19048192/Shiba-Inu-SHIB-Slips-Below-Toncoin-TON-Key-Reasons-Why",
+      "pubDate": "2023-11-19T09:37:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "TON"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "We Asked ChatGPT if Solana (SOL) Will Flip Ripple (XRP) This Year",
+      "link": "https://cryptopanic.com/news/19048168/We-Asked-ChatGPT-if-Solana-SOL-Will-Flip-Ripple-XRP-This-Year",
+      "pubDate": "2023-11-19T09:04:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Justin Sun: Poloniex hacker’s identity has been confirmed",
+      "link": "https://cryptopanic.com/news/19048155/Justin-Sun-Poloniex-hackers-identity-has-been-confirmed",
+      "pubDate": "2023-11-19T08:50:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ]
+    },
+    {
+      "title": "Stablecoin Giant Tether Seeks to Be Major Bitcoin Miner, Pledges $500M",
+      "link": "https://cryptopanic.com/news/19048148/Stablecoin-Giant-Tether-Seeks-to-Be-Major-Bitcoin-Miner-Pledges-500M",
+      "pubDate": "2023-11-19T08:32:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT"
+      ]
+    },
+    {
+      "title": "Quant Price Moves Sideways But Threatens A Drop To $91",
+      "link": "https://cryptopanic.com/news/19048289/Quant-Price-Moves-Sideways-But-Threatens-A-Drop-To-91",
+      "pubDate": "2023-11-19T08:24:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "QNT"
+      ]
+    },
+    {
+      "title": "One year on: Top 3 gainers after the ‘FTX crash bottom’",
+      "link": "https://cryptopanic.com/news/19048115/One-year-on-Top-3-gainers-after-the-FTX-crash-bottom",
+      "pubDate": "2023-11-19T07:52:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LINK",
+        "FTT",
+        "OKB"
+      ]
+    },
+    {
+      "title": "Polkadot marks Pivotal Transformation: A New Era Under Web3 Foundation’s Leadership",
+      "link": "https://cryptopanic.com/news/19048105/Polkadot-marks-Pivotal-Transformation-A-New-Era-Under-Web3-Foundations-Leadership",
+      "pubDate": "2023-11-19T07:31:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "dYdX hit in 'targeted attack,' YFI caught in the middle",
+      "link": "https://cryptopanic.com/news/19048102/dYdX-hit-in-targeted-attack-YFI-caught-in-the-middle?mtm_campaign=API-OFA",
+      "pubDate": "2023-11-19T07:30:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETHDYDX"
+      ]
+    },
+    {
+      "title": "BNB Faces Downward Pressure, While VC Spectra and ORDI Show Promising Uptrends",
+      "link": "https://cryptopanic.com/news/19048070/BNB-Faces-Downward-Pressure-While-VC-Spectra-and-ORDI-Show-Promising-Uptrends",
+      "pubDate": "2023-11-19T06:56:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BNB"
+      ]
+    },
+    {
+      "title": "Searching for 2023’s Greatest Gains? Consider Polygon (MATIC) and This Emerging Crypto",
+      "link": "https://cryptopanic.com/news/19048071/Searching-for-2023s-Greatest-Gains-Consider-Polygon-MATIC-and-This-Emerging-Crypto",
+      "pubDate": "2023-11-19T06:53:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "MATIC"
+      ]
+    },
+    {
+      "title": "Cardano Improvement Proposal to go under vote, more inside",
+      "link": "https://cryptopanic.com/news/19048034/Cardano-Improvement-Proposal-to-go-under-vote-more-inside",
+      "pubDate": "2023-11-19T05:30:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Users of the Cardano wallet can now access a multitasking feature. Governance may become more efficient if the community approves the proposal. Input Output, the pre-eminent engineering arm",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Could this move from 1Inch affect Uniswap prices",
+      "link": "https://cryptopanic.com/news/19047920/Could-this-move-from-1Inch-affect-Uniswap-prices",
+      "pubDate": "2023-11-19T00:30:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "date": "2019-06-14",
+  "fetchedAt": "2026-02-05T07:27:07.892Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Self-proclaimed Bitcoin creator Craig Wright committed fraud according to Florida court documents",
+      "link": "https://cryptopanic.com/news/5717604/Self-proclaimed-Bitcoin-creator-Craig-Wright-committed-fraud-according-to-Florida-court-documents",
+      "pubDate": "2019-06-14T20:11:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 35,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

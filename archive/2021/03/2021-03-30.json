@@ -1,0 +1,729 @@
+{
+  "date": "2021-03-30",
+  "fetchedAt": "2026-02-05T07:27:06.521Z",
+  "articleCount": 49,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Supra Dollar, April 3rd 00:00 UTC. New mission incoming from Top Secret agents. Stay tuned.",
+      "link": "https://cryptopanic.com/news/11698939/Supra-Dollar-April-3rd-0000-UTC-New-mission-incoming-from-Top-Secret-agents-Stay-tuned?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-30T23:44:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "SUPRA",
+        "FLP"
+      ]
+    },
+    {
+      "title": "Reminder: Earn 300$/week with ArkFAH Folding@Home team",
+      "link": "https://cryptopanic.com/news/11756573/Reminder-Earn-300week-with-ArkFAH-FoldingHome-team",
+      "pubDate": "2021-03-30T23:13:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Stock To Flow - Measuring The Bitcoin Peak Using Data Science",
+      "link": "https://cryptopanic.com/news/flow/11697414/Stock-To-Flow-Measuring-The-Bitcoin-Peak-Using-Data-Science",
+      "pubDate": "2021-03-30T22:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Technical analyst Rekt Capital looks at the Bitcoin Stock-to-flow model to assess the next Bitcoin market peak. In bull markets, Bitcoin overshoots the Stock-to-flow model.",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$11 Billion in ‘Fake’ Uniswap Volume Causes DeFi Project and DEX to Clash",
+      "link": "https://cryptopanic.com/news/uniswap/11697346/11-Billion-in-Fake-Uniswap-Volume-Causes-DeFi-Project-and-DEX-to-Clash",
+      "pubDate": "2021-03-30T22:12:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Someone’s figured out how to make Number Go Up.",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Chainlink’s Hackathon offers $125K in bounties, LINK going to $100?",
+      "link": "https://cryptopanic.com/news/chainlink/11697280/Chainlinks-Hackathon-offers-125K-in-bounties-LINK-going-to-100",
+      "pubDate": "2021-03-30T21:07:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "With a start date of March 15th, The Spring 2021 Chainlink Virtual Hackathon records more than 3,500 participants. According to an official post, the participants are “building the next generation of smart contracts”. The event will end on April 11th. However, those who wish to claim the $125,000 will have until today to register and […]",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "VeChain Technicals Spell Trouble for the Bulls",
+      "link": "https://cryptopanic.com/news/11697247/VeChain-Technicals-Spell-Trouble-for-the-Bulls",
+      "pubDate": "2021-03-30T20:58:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "A crucial resistance level has rejected VeChain’s uptrend. Now, VET seems primed for further losses as several sell signals pop up. VeChain Flashes Multiple Sell Signals VeChain posted massive gains throughout March, rising by nearly 150%. The coin opened the monthly trading session at a low of $0.04 and surged to a new high of nearly $0.10 on Mar. 22. A wave of profit-taking...",
+      "currencies": [
+        "BTC",
+        "VET"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 4
+      }
+    },
+    {
+      "title": "RT @paulgebheim: Does anyone wanna earn a quick 1k DAI by modifying our hardhat configs &amp;&amp; getting the @AugurProject sidechain contracts de…",
+      "link": "https://cryptopanic.com/news/11697900/RT-paulgebheim-Does-anyone-wanna-earn-a-quick-1k-DAI-by-modifying-our-hardhat-configs-ampamp-getting-the-AugurProject-sidechain-contracts-de",
+      "pubDate": "2021-03-30T20:55:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "DAI",
+        "REP"
+      ]
+    },
+    {
+      "title": "ARK'S JOURNEY TO THE TOP",
+      "link": "https://cryptopanic.com/news/11702334/ARKS-JOURNEY-TO-THE-TOP",
+      "pubDate": "2021-03-30T20:22:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "PayPal Launches Crypto Pay Services in US for Bitcoin, Ether, Altcoins",
+      "link": "https://cryptopanic.com/news/11697046/PayPal-Launches-Crypto-Pay-Services-in-US-for-Bitcoin-Ether-Altcoins",
+      "pubDate": "2021-03-30T18:31:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Ark always keep on top of Github Development Activitiy",
+      "link": "https://cryptopanic.com/news/11697612/Ark-always-keep-on-top-of-Github-Development-Activitiy",
+      "pubDate": "2021-03-30T18:28:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "DeFi Ethereum VS Binance Smart chain part 1, PowWow #12/50",
+      "link": "https://cryptopanic.com/news/11697356/DeFi-Ethereum-VS-Binance-Smart-chain-part-1-PowWow-1250",
+      "pubDate": "2021-03-30T18:13:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "CHSB"
+      ]
+    },
+    {
+      "title": "1$ 2$ 3$ 4$ 10$ 30$ 70$",
+      "link": "https://cryptopanic.com/news/11696993/1-2-3-4-10-30-70",
+      "pubDate": "2021-03-30T18:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "RT @GenerEOSAus: It's incentives like this that make the #EOS ecosystem so brilliant to be a part of. Hats off to @ChintaiEOS for always lo…",
+      "link": "https://cryptopanic.com/news/11698269/RT-GenerEOSAus-Its-incentives-like-this-that-make-the-EOS-ecosystem-so-brilliant-to-be-a-part-of-Hats-off-to-ChintaiEOS-for-always-lo?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-30T17:40:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHEX"
+      ]
+    },
+    {
+      "title": "PayPal Establishes Cryptocurrency Checkout Service",
+      "link": "https://cryptopanic.com/news/litecoin/11696941/PayPal-Establishes-Cryptocurrency-Checkout-Service",
+      "pubDate": "2021-03-30T16:52:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "PayPal will begin allowing U.S. consumers to utilize their crypto holdings to make payments at millions of its online merchants globally, a move that could significantly uplift the use of digital assets in everyday commerce. A Convenient Route for U.S Crypto Traders PayPal’s Checkout will allow Bitcoin (BTC), Ether (ETH), Bitcoin Cash (BCH), and LitecoinRead More",
+      "currencies": [
+        "BTC",
+        "LTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "New ARK meme !",
+      "link": "https://cryptopanic.com/news/11701994/New-ARK-meme",
+      "pubDate": "2021-03-30T15:59:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Ripple Labs to Acquire 40% Stake in Tranglo",
+      "link": "https://cryptopanic.com/news/ripple/11696789/Ripple-Labs-to-Acquire-40-Stake-in-Tranglo",
+      "pubDate": "2021-03-30T15:38:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple said that the acquisition would help the company meet the demand for the use of its native token XRP in transactions. This comes a week after Brooks Entwistle became Ripple’s managing director in Southeast Asia. Entwistle is a former executive at Goldman Sachs and Uber. Tranglo is based in Malaysia. The cross-border payments specialist … Continued",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Community App",
+      "link": "https://cryptopanic.com/news/11707930/Community-App",
+      "pubDate": "2021-03-30T14:19:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHSB"
+      ]
+    },
+    {
+      "title": "PayPal Rolls Out Bitcoin, Ethereum, Litecoin and Bitcoin Cash Payments",
+      "link": "https://cryptopanic.com/news/litecoin/11696625/PayPal-Rolls-Out-Bitcoin-Ethereum-Litecoin-and-Bitcoin-Cash-Payments",
+      "pubDate": "2021-03-30T14:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Some 26 million merchants that have integrated PayPal will now be able to accept some of the four most prominent cryptocurrencies, including bitcoin, ethereum, litecoin and BCH. “As the use...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 58,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tether stablecoin is fully backed, says new assurance report",
+      "link": "https://cryptopanic.com/news/11696578/Tether-stablecoin-is-fully-backed-says-new-assurance-report",
+      "pubDate": "2021-03-30T13:54:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Tether’s reserves for its USDT stablecoin exceed the amount required to redeem the digital asset tokens, according to auditing firm Moore Cayman.",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 28,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @HamnettPhillip: Withdrawing $EOS from @Coinbase should work seamlessly for the next week, as they are guaranteed to not run out of reso…",
+      "link": "https://cryptopanic.com/news/11698271/RT-HamnettPhillip-Withdrawing-EOS-from-Coinbase-should-work-seamlessly-for-the-next-week-as-they-are-guaranteed-to-not-run-out-of-reso?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-30T13:22:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "EOS",
+        "CHEX"
+      ]
+    },
+    {
+      "title": "Cosmos (ATOM) Finally Activates Inter-Blockchain Communication (IBC) Protocol",
+      "link": "https://cryptopanic.com/news/11696508/Cosmos-ATOM-Finally-Activates-Inter-Blockchain-Communication-IBC-Protocol",
+      "pubDate": "2021-03-30T13:01:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The Cosmos (ATOM) development team has finally activated the Inter-Blockchain Communication (IBC) protocol on the platform following a vote by members of the Cosmos ecosystem. The team says IBC fosters interoperability between Cosmos and other blockchains, while also solving scalability issues via sharding, according to a tweet on March 29, 2021. IBC Live on CosmosRead More",
+      "currencies": [
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "PayPal Launches Crypto Checkout Payment Solution",
+      "link": "https://cryptopanic.com/news/litecoin/11696384/PayPal-Launches-Crypto-Checkout-Payment-Solution",
+      "pubDate": "2021-03-30T12:19:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "In an article released before the official announcement, Reuters reports that PayPal will let users pay with bitcoin (BTC), ether (ETH), Bitcoin Cash (BCH), and Litecoin (LTC). The mechanism is called “Checkout with Crypto.” The integration is automatic and will appear for users if they have enough crypto holdings to cover the cost. PayPal introduced … Continued",
+      "currencies": [
+        "BTC",
+        "LTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Pow Wow 30 March",
+      "link": "https://cryptopanic.com/news/11696772/Pow-Wow-30-March",
+      "pubDate": "2021-03-30T11:21:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHSB"
+      ]
+    },
+    {
+      "title": "XRP holders step closer to joining Ripple in fighting SEC lawsuit",
+      "link": "https://cryptopanic.com/news/ripple/11696271/XRP-holders-step-closer-to-joining-Ripple-in-fighting-SEC-lawsuit",
+      "pubDate": "2021-03-30T11:12:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "In a new ruling, the judge presiding over SEC v. Ripple Labs opens the door to allowing XRP holders to intervene as a third party in the government's lawsuit.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Buy, collect, and sell assets that exclusively exist in virtual worlds with Trust Wallet.",
+      "link": "https://cryptopanic.com/news/11700755/Buy-collect-and-sell-assets-that-exclusively-exist-in-virtual-worlds-with-Trust-Wallet",
+      "pubDate": "2021-03-30T10:56:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "Holo (HOT) Price Spikes Following US Patent Approval",
+      "link": "https://cryptopanic.com/news/11696227/Holo-HOT-Price-Spikes-Following-US-Patent-Approval",
+      "pubDate": "2021-03-30T10:53:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Speculation for the February surge linked it to a live Youtube AMA, held by Holo. HOT Blasts Off An initial spike occurred on March 15. This stabilized at around $0.007874 but jumped to $0.010415 and then to its current price of $0.015827 in quick succession. Despite the small value, this is 106 times higher than its … Continued",
+      "currencies": [
+        "HOT"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DeFi Wallet Links Aave, Uniswap, and Compound Straight to Bank Account",
+      "link": "https://cryptopanic.com/news/uniswap/11696157/DeFi-Wallet-Links-Aave-Uniswap-and-Compound-Straight-to-Bank-Account",
+      "pubDate": "2021-03-30T10:01:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "DeFi innovation continues as the Dharma wallet introduces a way to transfer bank funds straight to DeFi on one platform. Developing DeFi The Dharma wallet announced yesterday that users could now send funds to Aave, Uniswap, Yearn, and Compound from their traditional bank accounts with a daily limit of $25,000. 1/ Say hello 👋🏻 to a whole new Dharma — the Ethereum wallet...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Why TomoChain Twitter and Medium accounts are banned?",
+      "link": "https://cryptopanic.com/news/11702438/Why-TomoChain-Twitter-and-Medium-accounts-are-banned",
+      "pubDate": "2021-03-30T09:45:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "The wait is over! @tauprotocol staking will begin this Friday April 2nd! Airdrops will also begin on 4/2, kindly r…",
+      "link": "https://cryptopanic.com/news/11697976/The-wait-is-over-tauprotocol-staking-will-begin-this-Friday-April-2nd-Airdrops-will-also-begin-on-42-kindly-r",
+      "pubDate": "2021-03-30T09:28:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTCST"
+      ]
+    },
+    {
+      "title": "XRP Holders Permitted to Intervene in Ripple’s Lawsuit Against the SEC",
+      "link": "https://cryptopanic.com/news/ripple/11696055/XRP-Holders-Permitted-to-Intervene-in-Ripples-Lawsuit-Against-the-SEC",
+      "pubDate": "2021-03-30T09:05:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Holders of Ripple's XRP token will be able to intervene in the legal battle between the company and the SEC, the District Judge ruled.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple acquires stake in cross-border payments firm",
+      "link": "https://cryptopanic.com/news/ripple/11696011/Ripple-acquires-stake-in-cross-border-payments-firm",
+      "pubDate": "2021-03-30T08:45:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple has agreed to acquire a 40% stake in cross-border payments firm Tranglo to further expand its ODL service in Southeast Asia.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple Expands Reach of Its XRP-Powered ODL Service in Southeast Asia Region",
+      "link": "https://cryptopanic.com/news/ripple/11695990/Ripple-Expands-Reach-of-Its-XRP-Powered-ODL-Service-in-Southeast-Asia-Region",
+      "pubDate": "2021-03-30T08:17:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "FinTech firm Ripple has announced that it has invested in one of Southeast Asia’s leading cross-border payment specialists, thereby expanding the reach of RippleNet’s On-Demand Liquidity (ODL) service. Ripple announced via a blog post yesterday (March 29) that it had agreed to acquire 40% of Tranglo, which was founded in 2008 by a Malaysian serial […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ICYMI: ARK is supported by Nuvei!",
+      "link": "https://cryptopanic.com/news/11696856/ICYMI-ARK-is-supported-by-Nuvei",
+      "pubDate": "2021-03-30T08:11:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "2 cents within reach",
+      "link": "https://cryptopanic.com/news/11696923/2-cents-within-reach",
+      "pubDate": "2021-03-30T07:50:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "Ripple acquires 40% stake in Trango to address SE Asia’s ‘fragmented payments landscape’",
+      "link": "https://cryptopanic.com/news/ripple/11695034/Ripple-acquires-40-stake-in-Trango-to-address-SE-Asias-fragmented-payments-landscape",
+      "pubDate": "2021-03-30T06:51:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple, the San Francisco-based blockchain firm, is in the news today after it announced that it has acquired a 40% stake in Asian cross-border payments pioneer Tranglo as part of its expansion of Ripplenet’s On-Demand Liquidity (ODL) in Southeast Asia. The timing of the said announcement is particularly interesting, especially since it is evidence of […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Holders Granted Permission to File Request for Motion to Intervene in SEC vs Ripple Case",
+      "link": "https://cryptopanic.com/news/ripple/11694435/XRP-Holders-Granted-Permission-to-File-Request-for-Motion-to-Intervene-in-SEC-vs-Ripple-Case",
+      "pubDate": "2021-03-30T06:36:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "SEC’s attempt to prevent the XRP community from intervening in the SEC vs Ripple case has been rejected by court, a request to intervene can now be submitted",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SOMESING was selected as a winner in the E-service category in the 15th Korea Service Satisfaction Award hosted by…",
+      "link": "https://cryptopanic.com/news/11695065/SOMESING-was-selected-as-a-winner-in-the-E-service-category-in-the-15th-Korea-Service-Satisfaction-Award-hosted-by",
+      "pubDate": "2021-03-30T06:25:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SSX"
+      ]
+    },
+    {
+      "title": "Visa Settlements Enhance Ethereum as ‘Ultra Sound Money’",
+      "link": "https://cryptopanic.com/news/11694147/Visa-Settlements-Enhance-Ethereum-as-Ultra-Sound-Money",
+      "pubDate": "2021-03-30T06:24:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "On March 29, global payments company Visa announced the use of Circle’s USD Coin to settle transactions on its network. Visa is launching a pilot program with the Crypto.com platform, which will settle payments over the Ethereum network. In reaction to the big news, David Hoffman penned his latest Bankless DeFi newsletter titled “Visa is … Continued",
+      "currencies": [
+        "ETH",
+        "USDC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We are thrilled to announce our partnership with @WemixNetwork. Users will soon be able to use $PCI to purchase var…",
+      "link": "https://cryptopanic.com/news/11694766/We-are-thrilled-to-announce-our-partnership-with-WemixNetwork-Users-will-soon-be-able-to-use-PCI-to-purchase-var?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-30T05:32:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PCI"
+      ]
+    },
+    {
+      "title": "WAY2BIT has registered 2 technology patents that can be applied to blockchain content services, including blockchai…",
+      "link": "https://cryptopanic.com/news/11692729/WAY2BIT-has-registered-2-technology-patents-that-can-be-applied-to-blockchain-content-services-including-blockchai",
+      "pubDate": "2021-03-30T05:09:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BORA"
+      ]
+    },
+    {
+      "title": "Paxos Standard (PAX) on 4 Areas to Consider When Adding Crypto to Apps : #⃣:…",
+      "link": "https://cryptopanic.com/news/paxos-standard/11695464/Paxos-Standard-PAX-on-4-Areas-to-Consider-When-Adding-Crypto-to-Apps",
+      "pubDate": "2021-03-30T05:00:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TCAT",
+        "PAX"
+      ]
+    },
+    {
+      "title": "Cosmos launches Inter-Blockchain Communication to enable cross-chain DeFi",
+      "link": "https://cryptopanic.com/news/11692408/Cosmos-launches-Inter-Blockchain-Communication-to-enable-cross-chain-DeFi",
+      "pubDate": "2021-03-30T04:58:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Cosmos is now building a cross-chain DEX for IBC-enabled blockchains, dubbed Gravity",
+      "currencies": [
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP holders claim major victory over SEC as court grants permission to file motion to intervene",
+      "link": "https://cryptopanic.com/news/ripple/11692386/XRP-holders-claim-major-victory-over-SEC-as-court-grants-permission-to-file-motion-to-intervene",
+      "pubDate": "2021-03-30T04:30:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "In what is a major victory for many in the XRP Community, Attorney John Deaton has been granted permission to file a motion to intervene in the ongoing case between the SEC and Ripple Labs on behalf of a section of XRP holders by Judge Analisa Torres. In an order passed a few hours ago, […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 36,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Watching dent prices this past week got me like",
+      "link": "https://cryptopanic.com/news/11695953/Watching-dent-prices-this-past-week-got-me-like",
+      "pubDate": "2021-03-30T03:08:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "Ubitquity teams with VeChain on blockchain-powered tools for title industry",
+      "link": "https://cryptopanic.com/news/11692305/Ubitquity-teams-with-VeChain-on-blockchain-powered-tools-for-title-industry",
+      "pubDate": "2021-03-30T02:52:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "CryptoNinjas » Ubitquity teams with VeChain on blockchain-powered tools for title industry Ubitquity, an enterprise blockchain-secured platform for real estate and title recordkeeping, has announced that it is now a business partner of VeChain. According to their website: VeChain ToolChain is a comprehensive blockchain platform offering diverse services including product lifecycle management, supply chain process control, data deposit, data certification, and process certification. VeChain curre",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cosmos enables Inter-Blockchain Communication (IBC) token transfers",
+      "link": "https://cryptopanic.com/news/11692251/Cosmos-enables-Inter-Blockchain-Communication-IBC-token-transfers",
+      "pubDate": "2021-03-30T01:37:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "CryptoNinjas » Cosmos enables Inter-Blockchain Communication (IBC) token transfers Cosmos, an interoperable blockchain network, announced that it has enabled Inter-Blockchain Communication (IBC) transfers on the Cosmos Hub, making it possible for sovereign blockchains to transfer cryptocurrency tokens and data between one another. As of today at Monday, March 29th, 8:40 AM UTC, a parameter change on the Cosmos Hub has enabled IBC-compatible blockchains to […] CryptoNinjas » Cosmos enables Inter-",
+      "currencies": [
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "When is the likely release of Community Premium?",
+      "link": "https://cryptopanic.com/news/11695918/When-is-the-likely-release-of-Community-Premium",
+      "pubDate": "2021-03-30T01:15:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHSB"
+      ]
+    },
+    {
+      "title": "RT @SpendCard: The Strike Token $STRK is now available on the #Spend App. All $SPND and $SPNDB conversions within the Spend App are complet…",
+      "link": "https://cryptopanic.com/news/11716395/RT-SpendCard-The-Strike-Token-STRK-is-now-available-on-the-Spend-App-All-SPND-and-SPNDB-conversions-within-the-Spend-App-are-complet",
+      "pubDate": "2021-03-30T01:11:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STRK"
+      ]
+    },
+    {
+      "title": "We’re thrilled to announce that from now on you can freely move SURE Tokens between #Ethereum and #BSC (…",
+      "link": "https://cryptopanic.com/news/11695885/Were-thrilled-to-announce-that-from-now-on-you-can-freely-move-SURE-Tokens-between-Ethereum-and-BSC",
+      "pubDate": "2021-03-30T00:09:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "SURE"
+      ]
+    }
+  ]
+}

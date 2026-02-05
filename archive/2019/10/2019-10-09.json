@@ -1,0 +1,50 @@
+{
+  "date": "2019-10-09",
+  "fetchedAt": "2026-02-05T07:27:06.977Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "On October 8th, within the framework of WCIT 2019, a Gala Dinner was held for government officials, #WCIT2019 speak…",
+      "link": "https://cryptopanic.com/news/11432273/On-October-8th-within-the-framework-of-WCIT-2019-a-Gala-Dinner-was-held-for-government-officials-WCIT2019-speak?mtm_campaign=API-OFA",
+      "pubDate": "2019-10-09T14:19:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GALA",
+        "ME"
+      ]
+    },
+    {
+      "title": "IOTA Foundation and Dell Amongst Participants for Industrial IoT Challenge",
+      "link": "https://cryptopanic.com/news/6808850/IOTA-Foundation-and-Dell-Amongst-Participants-for-Industrial-IoT-Challenge",
+      "pubDate": "2019-10-09T14:00:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Our team was excited to share our vision with tech savvy journalists from Forbes, Merkle and MoneyCrush who visited…",
+      "link": "https://cryptopanic.com/news/11432274/Our-team-was-excited-to-share-our-vision-with-tech-savvy-journalists-from-Forbes-Merkle-and-MoneyCrush-who-visited?mtm_campaign=API-OFA",
+      "pubDate": "2019-10-09T11:35:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ME"
+      ]
+    }
+  ]
+}

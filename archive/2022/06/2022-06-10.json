@@ -1,0 +1,435 @@
+{
+  "date": "2022-06-10",
+  "fetchedAt": "2026-02-05T07:27:07.647Z",
+  "articleCount": 28,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Shitcoin Season Over? ERC-20 Token Creations Drops 39% In One Month",
+      "link": "https://cryptopanic.com/news/dogecoin/15463425/Shitcoin-Season-Over-ERC-20-Token-Creations-Drops-39-In-One-Month",
+      "pubDate": "2022-06-10T23:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "ERC-20 token creation had ramped up during the bull runs of 2021. These altcoins had been propelled forward by the success enjoyed by the likes of Dogecoin and Shiba Inu, causing a large influx of new coins into the market. These “shitcoins” had mostly turned out to be scams or quick pump and dump schemes, […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum To Delayed Merge?, ETH Price Plunges Below $1,700",
+      "link": "https://cryptopanic.com/news/15463402/Ethereum-To-Delayed-Merge-ETH-Price-Plunges-Below-1700",
+      "pubDate": "2022-06-10T22:51:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum has broken below $1,700 since July 2021. At that time, ETH’s price was reacting to the downside due to an increase in selling pressure across the crypto market. Related Reading | TA: Ethereum Holds Key Support, Why ETH Must Clear This Hurdle This time, Ethereum seems to be reacting to poor macro-economic conditions, and a potential delay in its most important milestone in recent...",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "DOGE",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 3
+      }
+    },
+    {
+      "title": "RT @TheCitadel_DAO: This coming Monday we will be joining our friends at @TokenReactor to discuss the upcoming Knighting Round, what it mea…",
+      "link": "https://cryptopanic.com/news/15464502/RT-TheCitadel_DAO-This-coming-Monday-we-will-be-joining-our-friends-at-TokenReactor-to-discuss-the-upcoming-Knighting-Round-what-it-mea",
+      "pubDate": "2022-06-10T22:09:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BADGER"
+      ]
+    },
+    {
+      "title": "RT @NumeraiCoE: If interested in attending, please register below",
+      "link": "https://cryptopanic.com/news/15463036/RT-NumeraiCoE-If-interested-in-attending-please-register-below",
+      "pubDate": "2022-06-10T20:24:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NMR"
+      ]
+    },
+    {
+      "title": "Solana To Support DeFi, NFT, And GameFi In South Korea With A $100M Fund",
+      "link": "https://cryptopanic.com/news/klay-token/15462961/Solana-To-Support-DeFi-NFT-And-GameFi-In-South-Korea-With-A-100M-Fund",
+      "pubDate": "2022-06-10T20:00:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "FTT",
+        "KLAY"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "MoneyGram Rolls Out Crypto-to-Cash Service on Stellar Network",
+      "link": "https://cryptopanic.com/news/15462838/MoneyGram-Rolls-Out-Crypto-to-Cash-Service-on-Stellar-Network",
+      "pubDate": "2022-06-10T19:04:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Money transfer company MoneyGram has launched its Stellar-based service after months of testing",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "MoneyGram’s USDC transfer service launches in several countries",
+      "link": "https://cryptopanic.com/news/15462783/MoneyGrams-USDC-transfer-service-launches-in-several-countries",
+      "pubDate": "2022-06-10T19:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "The payment service, which is powered by the Stellar blockchain, will enable USDC settlement with MoneyGram in “near-real-time.”",
+      "currencies": [
+        "USDC",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "US Court Orders Embattled Terra (LUNA) Founder Do Kwon To Comply With SEC Subpoena",
+      "link": "https://cryptopanic.com/news/15462754/US-Court-Orders-Embattled-Terra-LUNA-Founder-Do-Kwon-To-Comply-With-SEC-Subpoena",
+      "pubDate": "2022-06-10T18:45:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Terraform Labs CEO Do Kwon will be required to cooperate with an inquiry issued by the U.S. Securities and Exchange Commission (SEC). In a new ruling, a court in New York City has denied an appeal Kwon filed against the SEC regarding Terraform’s Mirror Protocol (MIR). Last October, the SEC subpoenaed Do Kwon while he […]",
+      "currencies": [
+        "USTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "CZ visits Palau to kick off BNB Chain-supported ID NFTs for digital residency program",
+      "link": "https://cryptopanic.com/news/15462660/CZ-visits-Palau-to-kick-off-BNB-Chain-supported-ID-NFTs-for-digital-residency-program",
+      "pubDate": "2022-06-10T18:14:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "The tiny country introduced its digital residency program at the beginning of the year in the hope that it will help to retain the youthful population and attract business and industry.",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @Jasobieja: If you want to become part of collection that's been in the space since December with cool 1/1 custom PFP matched to it - bu…",
+      "link": "https://cryptopanic.com/news/15468814/RT-Jasobieja-If-you-want-to-become-part-of-collection-thats-been-in-the-space-since-December-with-cool-11-custom-PFP-matched-to-it-bu",
+      "pubDate": "2022-06-10T18:10:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RAD"
+      ]
+    },
+    {
+      "title": "MoneyGram is launching a crypto-to-cash service on the Stellar blockchain",
+      "link": "https://cryptopanic.com/news/15462476/MoneyGram-is-launching-a-crypto-to-cash-service-on-the-Stellar-blockchain",
+      "pubDate": "2022-06-10T17:15:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The company is working in partnership with Stellar Development Foundation, a non-profit that develops the Stellar blockchain.",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Howdy #Consensus2022. Come swing by our booth and say hello @superlayerio @RLYNetworkAssoc @Unite_io_real",
+      "link": "https://cryptopanic.com/news/15468850/Howdy-Consensus2022-Come-swing-by-our-booth-and-say-hello-superlayerio-RLYNetworkAssoc-Unite_io_real",
+      "pubDate": "2022-06-10T16:35:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RLY"
+      ]
+    },
+    {
+      "title": "Monero’s Tail Emission: Everything You Need to Know",
+      "link": "https://cryptopanic.com/news/15462206/Moneros-Tail-Emission-Everything-You-Need-to-Know",
+      "pubDate": "2022-06-10T16:05:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Monero's \"tail emission\" upgrade is set to mark a \"big departure from Bitcoin's security model.\"",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @SourceProtocol_: We are proud to sponsor &amp; support the exclusive cinema premier of @theYellowBlocks alongside @FTX_ES @Atani_Official @…",
+      "link": "https://cryptopanic.com/news/15465360/RT-SourceProtocol_-We-are-proud-to-sponsor-amp-support-the-exclusive-cinema-premier-of-theYellowBlocks-alongside-FTX_ES-Atani_Official?mtm_campaign=API-OFA",
+      "pubDate": "2022-06-10T15:28:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "CBK"
+      ]
+    },
+    {
+      "title": "RT @twManuelMachado: See you all in Andorra this afternoon for the premiere of @theYellowBlocks with @elixir_launcher by @SatoshisGames #Bl…",
+      "link": "https://cryptopanic.com/news/15465361/RT-twManuelMachado-See-you-all-in-Andorra-this-afternoon-for-the-premiere-of-theYellowBlocks-with-elixir_launcher-by-SatoshisGames-Bl?mtm_campaign=API-OFA",
+      "pubDate": "2022-06-10T15:28:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "CBK"
+      ]
+    },
+    {
+      "title": "First Team 6 Medal of Honor recipient and Challenge Coin co-founder @edwardcbyers bullish on @Challenge_Coin_",
+      "link": "https://cryptopanic.com/news/15884355/First-Team-6-Medal-of-Honor-recipient-and-Challenge-Coin-co-founder-edwardcbyers-bullish-on-Challenge_Coin_",
+      "pubDate": "2022-06-10T14:36:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HERO"
+      ]
+    },
+    {
+      "title": "Vitalik Buterin's Japanese Name, \"Pig Forest,\" Evokes Comic Reactions: TRON Founder",
+      "link": "https://cryptopanic.com/news/15461823/Vitalik-Buterins-Japanese-Name-Pig-Forest-Evokes-Comic-Reactions-TRON-Founder",
+      "pubDate": "2022-06-10T14:21:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "This has elicited amusing reactions from market participants, like TRON founder Justin Sun",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogecoin Market Cap Shed $6-B Last Month – Will Bearish Pressure Continue The Pulldown?",
+      "link": "https://cryptopanic.com/news/15461426/Dogecoin-Market-Cap-Shed-6-B-Last-Month-Will-Bearish-Pressure-Continue-The-Pulldown",
+      "pubDate": "2022-06-10T12:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Dogecoin was one of the cryptocurrencies that took a heavy blow from a market crisis that broke out in March, resulting in a precipitous decline in its market capitalization. According to a chart by Coingecko on Friday, Dogecoin (DOGE) is trading at $0.079378, a decrease of 4.1% over the past week. Its most recent price activity resulted in a market cap of $10,637,807,407 USD. The popular...",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Here’s What’s Next for Solana (SOL), Avalanche (AVAX), Chainlink (LINK) and ApeCoin (APE) According to Top Crypto Analyst",
+      "link": "https://cryptopanic.com/news/15461217/Heres-Whats-Next-for-Solana-SOL-Avalanche-AVAX-Chainlink-LINK-and-ApeCoin-APE-According-to-Top-Crypto-Analyst",
+      "pubDate": "2022-06-10T11:45:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "A closely followed crypto analyst is giving his outlook for Solana (SOL), Avalanche (AVAX), Chainlink (LINK) and ApeCoin (APE) amid the uncertainties in the crypto market. Pseudonymous crypto trader Altcoin Sherpa tells his 176,500 Twitter followers Solana is bound to recoup its all-time high, but in the short term, SOL could go up by 25% […]",
+      "currencies": [
+        "SOL",
+        "AVAX",
+        "LINK",
+        "FLOW",
+        "APE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Circle Adds Support For Polygon USDC To Accelerate Cheaper Payments",
+      "link": "https://cryptopanic.com/news/15461103/Circle-Adds-Support-For-Polygon-USDC-To-Accelerate-Cheaper-Payments",
+      "pubDate": "2022-06-10T11:00:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "Circle, a USDC stablecoin issuer, is incorporating the use of Polygon USDC into its payment system. The organization stated this on Tuesday, June 7. As a result, operations on Circle APIs will now take a new dimension for developers. For example, integrating fiat currencies into Polygon USDC is now a simple task. Several emerging NFT […]",
+      "currencies": [
+        "USDC",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Solana price just one breakdown away from a 40% slide in June — here's why",
+      "link": "https://cryptopanic.com/news/15461069/Solana-price-just-one-breakdown-away-from-a-40-slide-in-June-heres-why",
+      "pubDate": "2022-06-10T10:52:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "FLOW",
+        "LUNC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "AMA This evening with @JordannaFoxx join our TG",
+      "link": "https://cryptopanic.com/news/15470116/AMA-This-evening-with-JordannaFoxx-join-our-TG?mtm_campaign=API-OFA",
+      "pubDate": "2022-06-10T10:28:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VICE"
+      ]
+    },
+    {
+      "title": "Charles Hoskinson affirms Cardano is ‘growing exponentially’ as it prepares for major upgrade",
+      "link": "https://cryptopanic.com/news/15460613/Charles-Hoskinson-affirms-Cardano-is-growing-exponentially-as-it-prepares-for-major-upgrade",
+      "pubDate": "2022-06-10T09:34:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "While the cryptocurrency market continues its bearish streak, the founder of Cardano (ADA) is not the least bit concerned as... Continue reading",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @CoinMarketCap: CoinMarketCap takes a deep dive into Klaytn, an enterprise-grade blockchain for the metaverse. Klaytn complements the E…",
+      "link": "https://cryptopanic.com/news/klay-token/15467178/RT-CoinMarketCap-CoinMarketCap-takes-a-deep-dive-into-Klaytn-an-enterprise-grade-blockchain-for-the-metaverse-Klaytn-complements-the-E",
+      "pubDate": "2022-06-10T08:50:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY"
+      ]
+    },
+    {
+      "title": "The Klaytn team will be at #Consensus2022 and so will our partner @MARBLEXofficial too! Join their #Giveaway now an…",
+      "link": "https://cryptopanic.com/news/klay-token/15457026/The-Klaytn-team-will-be-at-Consensus2022-and-so-will-our-partner-MARBLEXofficial-too-Join-their-Giveaway-now-an",
+      "pubDate": "2022-06-10T04:15:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY"
+      ]
+    },
+    {
+      "title": "🧙‍️ Our tech wizards are continuously working to improve the Freeway platform by adding new features and upgrades…",
+      "link": "https://cryptopanic.com/news/15456201/Our-tech-wizards-are-continuously-working-to-improve-the-Freeway-platform-by-adding-new-features-and-upgrades",
+      "pubDate": "2022-06-10T02:29:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FWT"
+      ]
+    },
+    {
+      "title": "NEW: @fandom_global has entered #Klaytn's metaverse. Creators get direct support & fans get more connected. All…",
+      "link": "https://cryptopanic.com/news/klay-token/15457028/NEW-fandom_global-has-entered-Klaytns-metaverse-Creators-get-direct-support-amp-fans-get-more-connected-All",
+      "pubDate": "2022-06-10T02:21:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY"
+      ]
+    },
+    {
+      "title": "Supply chain thwacking: VeChain’s $100M sponsorship deal with UFC",
+      "link": "https://cryptopanic.com/news/15453183/Supply-chain-thwacking-VeChains-100M-sponsorship-deal-with-UFC",
+      "pubDate": "2022-06-10T01:05:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The multi-year deal will see VeChain’s brand incorporated across multiple UFC marketing assets and reach an estimated 900 million households who watch the events worldwide.",
+      "currencies": [
+        "VET",
+        "XCN"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

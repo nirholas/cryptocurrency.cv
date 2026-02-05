@@ -1,0 +1,44 @@
+{
+  "date": "2019-04-14",
+  "fetchedAt": "2026-02-05T07:27:06.906Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "EOS Price Prediction: +50% Growth and $8 Value Before July. EOS Smashes Resistance to Atoms!",
+      "link": "https://cryptopanic.com/news/5127313/EOS-Price-Prediction-50-Growth-and-8-Value-Before-July-EOS-Smashes-Resistance-to-Atoms",
+      "pubDate": "2019-04-14T18:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Bottom In! Vechain, Adidas & Game of Thrones! Ethereum 2.0, Elon Musk and more - Crypto News",
+      "link": "https://cryptopanic.com/news/bitcoin-cash-sv/5126755/Bitcoin-Bottom-In-Vechain-Adidas-Game-of-Thrones-Ethereum-20-Elon-Musk-and-more-Crypto-News",
+      "pubDate": "2019-04-14T15:59:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

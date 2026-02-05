@@ -1,0 +1,637 @@
+{
+  "date": "2021-08-30",
+  "fetchedAt": "2026-02-05T07:27:06.556Z",
+  "articleCount": 40,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ripple Fights Back: Seeks to Expose SEC Employees XRP Holdings",
+      "link": "https://cryptopanic.com/news/ripple/12656155/Ripple-Fights-Back-Seeks-to-Expose-SEC-Employees-XRP-Holdings",
+      "pubDate": "2021-08-30T23:45:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The company’s recent motion cites a five-year window in which SEC members were “free to buy, sell, and hold XRP”.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Mempool Shows Low Demand?, Why Bears Could Stage A Comeback",
+      "link": "https://cryptopanic.com/news/bitcoin/12655942/Bitcoin-Mempool-Shows-Low-Demand-Why-Bears-Could-Stage-A-Comeback",
+      "pubDate": "2021-08-30T22:00:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "There is a before and after in one particular Bitcoin indicator that could be signaling bearish price action in the short term. As stated by many experts, the current bullish momentum can only be supported by strong demand, otherwise, BTC’s price could move sideways or risk returning to its former range below $40,000. If anything has me concerned it's this. Where is the demand?...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "“We are very excited about the mutual prospects of bringing payments on the Algorand #blockchain to Panama” - Micha…",
+      "link": "https://cryptopanic.com/news/12656799/We-are-very-excited-about-the-mutual-prospects-of-bringing-payments-on-the-Algorand-blockchain-to-Panama-Micha",
+      "pubDate": "2021-08-30T19:34:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Fantom Foundation Unveils 370M FTM Incentive Program",
+      "link": "https://cryptopanic.com/news/12655602/Fantom-Foundation-Unveils-370M-FTM-Incentive-Program",
+      "pubDate": "2021-08-30T19:16:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Fantom Foundation has announced they will be committing 370,000,000 Fantom (FTM) to a new rewards program.",
+      "currencies": [
+        "FTM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "PlanB: S2F Model Predicts Bitcoin To Break $100k By Christmas",
+      "link": "https://cryptopanic.com/news/12655524/PlanB-S2F-Model-Predicts-Bitcoin-To-Break-100k-By-Christmas",
+      "pubDate": "2021-08-30T19:00:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "PlanB, the popularizer behind the Bitcoin S2F method, says the model predicts BTC will break $100k by this Christmas. The Bitcoin Stock-To-Flow Model According to PlanB on Twitter, the BTC stock-to-flow (or S2F in short) model predicts that the cryptocurrency is on its way to break $100k by Christmas. The S2F model is a method to predict the price of an asset based on the ratio of the stock...",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 37,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin drops from $50k to $48k. Ups and downs will happen but this drop - shows the maturity of crypto investors!…",
+      "link": "https://cryptopanic.com/news/12658586/Bitcoin-drops-from-50k-to-48k-Ups-and-downs-will-happen-but-this-drop-shows-the-maturity-of-crypto-investors",
+      "pubDate": "2021-08-30T18:59:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "RT @enyaai: Boba Network is our next-gen Ethereum Layer 2 Optimistic Rollup scaling solution that reduces gas fees, improves transaction th…",
+      "link": "https://cryptopanic.com/news/12655374/RT-enyaai-Boba-Network-is-our-next-gen-Ethereum-Layer-2-Optimistic-Rollup-scaling-solution-that-reduces-gas-fees-improves-transaction-th",
+      "pubDate": "2021-08-30T18:14:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "OMG"
+      ]
+    },
+    {
+      "title": "CELO, Fantom and Keep3rV1 rally after liquidity mining programs launch",
+      "link": "https://cryptopanic.com/news/12655326/CELO-Fantom-and-Keep3rV1-rally-after-liquidity-mining-programs-launch",
+      "pubDate": "2021-08-30T17:56:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Newly launched incentive programs and protocol upgrades were followed by 50% rallies in CELO, FTM and KP3R.",
+      "currencies": [
+        "FTM"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Burn completed",
+      "link": "https://cryptopanic.com/news/12657306/Burn-completed?mtm_campaign=API-OFA",
+      "pubDate": "2021-08-30T17:07:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BB"
+      ]
+    },
+    {
+      "title": "Cardano (ADA) Getting Ready For A $3 Retest?",
+      "link": "https://cryptopanic.com/news/12655198/Cardano-ADA-Getting-Ready-For-A-3-Retest",
+      "pubDate": "2021-08-30T17:00:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "At this point, there is not a crypto investor that has not heard of Cardano. The network is famed for being the number 1 competitor to Ethereum, seeing that one of its co-founders had created Cardano after exiting the project. Its growth has been tremendous in the past month alone. Giving returns of over 100% in the space of a single month alone. Related Reading | Crypto Analyst Lays Out...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 57,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple Price Analysis: XRP Loses 9% in a Week But a Big Move Could be Ahead",
+      "link": "https://cryptopanic.com/news/ripple/12655192/Ripple-Price-Analysis-XRP-Loses-9-in-a-Week-But-a-Big-Move-Could-be-Ahead",
+      "pubDate": "2021-08-30T16:55:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP is down a sharp 9% this week as the coin consolidates inside a symmetrical triangle. Against BTC, XRP is trading inside a descending wedge pattern as it battles to hold above 2300 SAT.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Burn Will start at 5pm UTC today on 30th August... #blackberrytoken",
+      "link": "https://cryptopanic.com/news/12657307/Burn-Will-start-at-5pm-UTC-today-on-30th-August-blackberrytoken?mtm_campaign=API-OFA",
+      "pubDate": "2021-08-30T16:45:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BB"
+      ]
+    },
+    {
+      "title": "1/  We are proud to share the second article in our BandChain Phase 2 Whitepaper Digest series with our community…",
+      "link": "https://cryptopanic.com/news/12657098/1-We-are-proud-to-share-the-second-article-in-our-BandChain-Phase-2-Whitepaper-Digest-series-with-our-community",
+      "pubDate": "2021-08-30T16:40:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "Ripple files motion to expose XRP holdings of SEC employees",
+      "link": "https://cryptopanic.com/news/ripple/12655115/Ripple-files-motion-to-expose-XRP-holdings-of-SEC-employees",
+      "pubDate": "2021-08-30T16:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The court has reportedly given the U.S. SEC until Sept. 3 to respond to Ripple’s motion to compel the authority to provide data on its employees’ XRP holdings.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Fantom Rallies 71% as DeFi Ecosystem Expands",
+      "link": "https://cryptopanic.com/news/12655098/Fantom-Rallies-71-as-DeFi-Ecosystem-Expands",
+      "pubDate": "2021-08-30T16:16:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The cryptocurrency Fantom has experienced a remarkable 71% surge in value, driven by the expansion of its decentralized finance (DeFi) ecosystem. As new projects and applications emerge on the platform, investor interest and market activity have increased significantly, contributing to the token's rapid price growth.",
+      "currencies": [
+        "FTM"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polkadot-based DeFi protocol Parallel Finance raises $22 million in Series A funding",
+      "link": "https://cryptopanic.com/news/polkadot/12655076/Polkadot-based-DeFi-protocol-Parallel-Finance-raises-22-million-in-Series-A-funding",
+      "pubDate": "2021-08-30T16:00:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Parallel Finance, a Polkadot-based DeFi protocol, has raised $22 million in a Series A funding round.",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 27,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Russian Law Enforcement Imprisons A Man For 3 Years For Stealing Cryptocurrency Mining Equipment",
+      "link": "https://cryptopanic.com/news/dash/12655069/Russian-Law-Enforcement-Imprisons-A-Man-For-3-Years-For-Stealing-Cryptocurrency-Mining-Equipment",
+      "pubDate": "2021-08-30T16:00:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DASH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "(1) The ETN-Network team are investigating the anomalous activity. Meticulous investigations are currently in progr…",
+      "link": "https://cryptopanic.com/news/12654970/1-The-ETN-Network-team-are-investigating-the-anomalous-activity-Meticulous-investigations-are-currently-in-progr",
+      "pubDate": "2021-08-30T15:43:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "RT @binance: #Binance Will Support the Paxos Standard $PAX Rebrand to Pax Dollar $USDP",
+      "link": "https://cryptopanic.com/news/12657221/RT-binance-Binance-Will-Support-the-Paxos-Standard-PAX-Rebrand-to-Pax-Dollar-USDP",
+      "pubDate": "2021-08-30T15:21:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BUSD",
+        "USDP",
+        "PAXG"
+      ]
+    },
+    {
+      "title": "Three Arrows Capital CEO Explains Why He Is ‘Very Bullish’ on Dogecoin ($DOGE)",
+      "link": "https://cryptopanic.com/news/dogecoin/12654752/Three-Arrows-Capital-CEO-Explains-Why-He-Is-Very-Bullish-on-Dogecoin-DOGE",
+      "pubDate": "2021-08-30T14:19:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Recently, Su Zhu, Co-Founder, CIO, and CEO of Singapore-based crypto-focused hedge fund Three Arrows Capital talked about what makes him very bullish on Dogecoin. Zhu’s comments were made during an episode of the “Uncommon Core” podcast that was released on August 25. In short, as reported by The Daily Hodl, Zhu said that his bullishness is due […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 6
+      }
+    },
+    {
+      "title": "The IOTA Foundation Joins the Gaia-X Community",
+      "link": "https://cryptopanic.com/news/12654789/The-IOTA-Foundation-Joins-the-Gaia-X-Community",
+      "pubDate": "2021-08-30T14:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Building a federated infrastructure to host the next generation of data and services in Europe What is Gaia-X, why does it exist, and how does it work? Gaia-X is an initiative driven by leading enterprises, research institutions, and the European public sector, aiming to enable secure, open, and sovereign use",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Elrond-Based Assets and EGLD Token Added by Copper.co Custody Services Provider",
+      "link": "https://cryptopanic.com/news/12654561/Elrond-Based-Assets-and-EGLD-Token-Added-by-Copperco-Custody-Services-Provider",
+      "pubDate": "2021-08-30T13:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "High-performance blockchain platform Elrond (EGLD) is now supported by Copper.co",
+      "currencies": [
+        "EGLD"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$XEC is newly listed at instant exchange! #eCash #XEC",
+      "link": "https://cryptopanic.com/news/ecash/12661736/XEC-is-newly-listed-at-instant-exchange-eCash-XEC",
+      "pubDate": "2021-08-30T13:28:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "very interesting! We look forward to it! More interesting things will happen in the coming week!",
+      "link": "https://cryptopanic.com/news/12658537/very-interesting-We-look-forward-to-it-More-interesting-things-will-happen-in-the-coming-week",
+      "pubDate": "2021-08-30T13:19:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DAO"
+      ]
+    },
+    {
+      "title": "Leading DeFi projects launch $100M global adoption initiative",
+      "link": "https://cryptopanic.com/news/12654392/Leading-DeFi-projects-launch-100M-global-adoption-initiative",
+      "pubDate": "2021-08-30T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The initiative — built on the Celo ecosystem — identified the lack of inclusivity and accessibility in the traditional financial markets.",
+      "currencies": [
+        "CELO",
+        "SUSHI"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "You can trade major cryptos like Bitcoin, Ethereum, Litecoin, Dash etc. on and earn 80% pay…",
+      "link": "https://cryptopanic.com/news/dash/12660831/You-can-trade-major-cryptos-like-Bitcoin-Ethereum-Litecoin-Dash-etc-on-and-earn-80-pay",
+      "pubDate": "2021-08-30T11:31:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "SXDT",
+        "SXUT"
+      ]
+    },
+    {
+      "title": "XRP Searches for Support After Rejection from Resistance",
+      "link": "https://cryptopanic.com/news/ripple/12654113/XRP-Searches-for-Support-After-Rejection-from-Resistance",
+      "pubDate": "2021-08-30T10:56:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "XRP has been increasing since bouncing at the $0.62 long-term horizontal support area at the end of July. So far, it has reached a high of $1.35.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Here’s what happens to Ethereum (ETH) revenue after multimillion NFT sales",
+      "link": "https://cryptopanic.com/news/flow/12653970/Heres-what-happens-to-Ethereum-ETH-revenue-after-multimillion-NFT-sales",
+      "pubDate": "2021-08-30T10:00:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The latest research from crypto analytics company Nansen analyzed the flow of ether (ETH) that has come into the NFT market to determine whether it had any effect on ETH’s price.",
+      "currencies": [
+        "ETH",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "​​Cream Finance DeFi platform loses $19M in a flash loan hack",
+      "link": "https://cryptopanic.com/news/12653896/Cream-Finance-DeFi-platform-loses-19M-in-a-flash-loan-hack",
+      "pubDate": "2021-08-30T09:34:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The Cream Finance hacker gained $18.8 million by exploiting a reentrancy bug in the AMP token in a set of 17 transactions.",
+      "currencies": [
+        "AMP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Standard Chartered launches blockchain trade platform with Chinese fintech",
+      "link": "https://cryptopanic.com/news/12653855/Standard-Chartered-launches-blockchain-trade-platform-with-Chinese-fintech",
+      "pubDate": "2021-08-30T09:18:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The joint venture operating the new blockchain-powered platform will be headquartered in Singapore and led by SC Ventures’ Amelia Ng as CEO.",
+      "currencies": [
+        "SC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple May Have To Wait Before Settling SEC Lawsuit, According to Legal Expert Jeremy Hogan – Here’s Why",
+      "link": "https://cryptopanic.com/news/ripple/12653835/Ripple-May-Have-To-Wait-Before-Settling-SEC-Lawsuit-According-to-Legal-Expert-Jeremy-Hogan-Heres-Why",
+      "pubDate": "2021-08-30T09:00:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Attorney and crypto legal expert Jeremy Hogan says Ripple may have to wait a few months before trying to settle their lawsuit with the U.S. Securities and Exchange Commission (SEC) The SEC sued Ripple late last year for allegedly selling XRP as a security. In a new video, Hogan notes that the lawsuit’s discovery phase […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$20 billion outflows crypto market in a day as BTC waits to re-take $50k",
+      "link": "https://cryptopanic.com/news/12653800/20-billion-outflows-crypto-market-in-a-day-as-BTC-waits-to-re-take-50k",
+      "pubDate": "2021-08-30T08:56:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "As investors grow wary after the recent surge in digital tokens, cryptocurrency prices fluctuated on Monday. At the time of... Continue reading",
+      "currencies": [
+        "BTC",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 33,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum network splits into two; update is urged",
+      "link": "https://cryptopanic.com/news/ethereum/12653804/Ethereum-network-splits-into-two-update-is-urged",
+      "pubDate": "2021-08-30T08:56:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A network patch designed to fix a bug on the Geth network has led to the world’s second-largest blockchain splitting in two.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "#Binance Will Support the Paxos Standard $PAX Rebrand to Pax Dollar $USDP",
+      "link": "https://cryptopanic.com/news/12657214/Binance-Will-Support-the-Paxos-Standard-PAX-Rebrand-to-Pax-Dollar-USDP",
+      "pubDate": "2021-08-30T08:14:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "USDP"
+      ]
+    },
+    {
+      "title": "Cream Finance Loses $18 Million in Crypto In Second Hackers’ Attack This Year",
+      "link": "https://cryptopanic.com/news/12653030/Cream-Finance-Loses-18-Million-in-Crypto-In-Second-Hackers-Attack-This-Year",
+      "pubDate": "2021-08-30T07:58:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Cream Finance has been attacked by cyber criminals, who managed to steal around $18 million in cryptocurrencies from it, pushing AMP and CREAM down",
+      "currencies": [
+        "AMP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 13
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @Cointelegraph: New partnerships with banks and FinTech giants, and a handful of exchange listings sent #XinFin $XDC price to a new all-…",
+      "link": "https://cryptopanic.com/news/12658666/RT-Cointelegraph-New-partnerships-with-banks-and-FinTech-giants-and-a-handful-of-exchange-listings-sent-XinFin-XDC-price-to-a-new-all-",
+      "pubDate": "2021-08-30T07:55:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XDC"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: I'm afraid to show people the real price chart. Look at where it is pointed. $1,000,000+ per H…",
+      "link": "https://cryptopanic.com/news/12658672/RT-RichardHeartWin-Im-afraid-to-show-people-the-real-price-chart-Look-at-where-it-is-pointed-1000000-per-H",
+      "pubDate": "2021-08-30T07:32:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Elon Musk Highlights Importance of New Doge Upgrade That Prepares Ground for Fees Reduction",
+      "link": "https://cryptopanic.com/news/dogecoin/12652371/Elon-Musk-Highlights-Importance-of-New-Doge-Upgrade-That-Prepares-Ground-for-Fees-Reduction",
+      "pubDate": "2021-08-30T07:25:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Head of Tesla and the most influential Dogecoin fan has supported the call of the Doge community to spread the new upgrade to as many computers as possible",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 26,
+        "negative": 7
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "has the best price chart in the history of the universe.",
+      "link": "https://cryptopanic.com/news/12658673/has-the-best-price-chart-in-the-history-of-the-universe",
+      "pubDate": "2021-08-30T07:04:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "-",
+      "currencies": [
+        "HEX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin (BTC) Drops Back After Failure to Reclaim Support",
+      "link": "https://cryptopanic.com/news/bitcoin/12650655/Bitcoin-BTC-Drops-Back-After-Failure-to-Reclaim-Support",
+      "pubDate": "2021-08-30T05:48:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The bitcoin (BTC) price decreased only slightly last week, opening at $49,239 and closing at $48,524. Technical indicator readings are mixed.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

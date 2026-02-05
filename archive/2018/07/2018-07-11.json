@@ -1,0 +1,27 @@
+{
+  "date": "2018-07-11",
+  "fetchedAt": "2026-02-05T07:27:07.857Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tron [TRX] Transactions Fast and Cheap – Users Over the Moon",
+      "link": "https://cryptopanic.com/news/2502363/Tron-TRX-Transactions-Fast-and-Cheap-Users-Over-the-Moon",
+      "pubDate": "2018-07-11T13:09:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 21,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

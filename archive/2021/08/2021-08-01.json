@@ -1,0 +1,200 @@
+{
+  "date": "2021-08-01",
+  "fetchedAt": "2026-02-05T07:27:06.985Z",
+  "articleCount": 13,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "$SATS now has the highest redistribution on #BSC, all paid out in BTC and automatically sent to your wallets every…",
+      "link": "https://cryptopanic.com/news/12447013/SATS-now-has-the-highest-redistribution-on-BSC-all-paid-out-in-BTC-and-automatically-sent-to-your-wallets-every?mtm_campaign=API-OFA",
+      "pubDate": "2021-08-01T23:45:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "SATS"
+      ]
+    },
+    {
+      "title": "eCash Official Telegram group has reached 1000 members! Join the party here: Onward and…",
+      "link": "https://cryptopanic.com/news/ecash/12449956/eCash-Official-Telegram-group-has-reached-1000-members-Join-the-party-here-Onward-and",
+      "pubDate": "2021-08-01T22:53:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Prominent Analyst Outlines Key Bullish Levels for Bitcoin, Chainlink and One Low-Cap Altcoin",
+      "link": "https://cryptopanic.com/news/chainlink/12445881/Prominent-Analyst-Outlines-Key-Bullish-Levels-for-Bitcoin-Chainlink-and-One-Low-Cap-Altcoin",
+      "pubDate": "2021-08-01T18:45:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Popular crypto analyst Josh Rager is outlining the key bullish levels for Bitcoin, Chainlink and one low-cap altcoin. The crypto veteran tells his 179,600 Twitter followers that Chainlink might be flashing signals of a potential rally that breaks the $26.50 level. “If price gets a pullback soon, would like to buy a potential retest of […]",
+      "currencies": [
+        "BTC",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Eat, sleep, crypto, repeat.",
+      "link": "https://cryptopanic.com/news/12449650/Eat-sleep-crypto-repeat",
+      "pubDate": "2021-08-01T17:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "Litecoin Becomes Latest Payment Option Added to BitPay",
+      "link": "https://cryptopanic.com/news/litecoin/12445412/Litecoin-Becomes-Latest-Payment-Option-Added-to-BitPay",
+      "pubDate": "2021-08-01T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Global provider of bitcoin (BTC) and crypto payment services BitPay has announced it now supports Litecoin (LTC). As such, companies using BitPay should now accept LTC as a payment option.",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @RichardHeartWin: Only 1 day 17 hours 28 minutes left!",
+      "link": "https://cryptopanic.com/news/12448032/RT-RichardHeartWin-Only-1-day-17-hours-28-minutes-left",
+      "pubDate": "2021-08-01T11:21:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "Panic Is Suddenly Spreading Among Bitcoin, Ethereum, BNB, XRP And Dogecoin Traders Even As The Market Soars Toward A $1.7 Trillion Price",
+      "link": "https://cryptopanic.com/news/dogecoin/12445139/Panic-Is-Suddenly-Spreading-Among-Bitcoin-Ethereum-BNB-XRP-And-Dogecoin-Traders-Even-As-The-Market-Soars-Toward-A-17-Trillion-Price",
+      "pubDate": "2021-08-01T11:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Crypto traders are feeling nervous due to the $550 billion bipartisan infrastructure bill that's currently making its way through U.S. legislature and includes a provision to to raise $28 billion from crypto investors, with some warning it could \"kill\" the industry...",
+      "currencies": [
+        "XRP",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 8
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Xbit Project: Blockchain-based Online Gaming #blockchain #cryptocurrency #CryptoNews…",
+      "link": "https://cryptopanic.com/news/12447431/Xbit-Project-Blockchain-based-Online-Gaming-blockchain-cryptocurrency-CryptoNews",
+      "pubDate": "2021-08-01T11:18:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "We are thrilled to announce that we have partnered with @0xPolygon team to bring our community-based #crypto portfo…",
+      "link": "https://cryptopanic.com/news/12449964/We-are-thrilled-to-announce-that-we-have-partnered-with-0xPolygon-team-to-bring-our-community-based-crypto-portfo",
+      "pubDate": "2021-08-01T09:10:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "SURE"
+      ]
+    },
+    {
+      "title": "Crypto Market Cap at 6-Week High: Polkadot (DOT) Explodes 16% (Market Watch)",
+      "link": "https://cryptopanic.com/news/polkadot/12444953/Crypto-Market-Cap-at-6-Week-High-Polkadot-DOT-Explodes-16-Market-Watch",
+      "pubDate": "2021-08-01T08:18:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The cryptocurrency market cap has reached a six-month high at $1.660T as bitcoin and most of the altcoins are deep in green.",
+      "currencies": [
+        "BTC",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "An updated #ABBC Roadmap is now available on our website. Visit our website now to stay informed with the latest AB…",
+      "link": "https://cryptopanic.com/news/12446873/An-updated-ABBC-Roadmap-is-now-available-on-our-website-Visit-our-website-now-to-stay-informed-with-the-latest-AB",
+      "pubDate": "2021-08-01T08:00:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ABBC"
+      ]
+    },
+    {
+      "title": "Did Ethereum’s breach of $2,400 have ANY impact on Cardano, Uniswap",
+      "link": "https://cryptopanic.com/news/uniswap/12441592/Did-Ethereums-breach-of-2400-have-ANY-impact-on-Cardano-Uniswap",
+      "pubDate": "2021-08-01T00:30:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum confirmed a strong bullish signal yesterday after it closed a daily candle above $2,400. In fact, the crypto-asset crossed above its psychological resistance for the first time since 14 June. Historically, when this has happened, Ether has triggered minor altcoin rallies too. We analyzed some of the top correlated assets with Ethereum to understand […]",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP’s Average Daily Trading Volume Doubled to $4 Billion in Q2 Amid Heightened Volatility",
+      "link": "https://cryptopanic.com/news/ripple/12441581/XRPs-Average-Daily-Trading-Volume-Doubled-to-4-Billion-in-Q2-Amid-Heightened-Volatility",
+      "pubDate": "2021-08-01T00:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The average daily trading volume of the XRP token has surged in the second quarter of the year, despite the ongoing legal dispute involving its largest player Ripple and the U.S. Securities and Exchange Commission (SEC). According to an XRP market report published by Ripple, the daily trading volume of the cryptocurrency doubled to $4.49 […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

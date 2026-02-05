@@ -1,0 +1,208 @@
+{
+  "date": "2025-08-16",
+  "fetchedAt": "2026-02-05T07:27:08.684Z",
+  "articleCount": 15,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Kraken pauses Monero deposits following 51% attack",
+      "link": "https://cryptopanic.com/news/monero/24274791/Kraken-pauses-Monero-deposits-following-51-attack",
+      "pubDate": "2025-08-16T23:13:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Kraken Suspends Monero Deposits After 51% Attack Linked to Qubic Pool",
+      "link": "https://cryptopanic.com/news/monero/24273504/Kraken-Suspends-Monero-Deposits-After-51-Attack-Linked-to-Qubic-Pool",
+      "pubDate": "2025-08-16T21:15:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XMR"
+      ]
+    },
+    {
+      "title": "Kraken suspends Monero deposits after 51% attack",
+      "link": "https://cryptopanic.com/news/monero/24272874/Kraken-suspends-Monero-deposits-after-51-attack",
+      "pubDate": "2025-08-16T20:19:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "Best Crypto Coins for 2025 – BlockDAG Presale Beats Avalanche, Litecoin & XRP",
+      "link": "https://cryptopanic.com/news/avalanche-2/24270851/Best-Crypto-Coins-for-2025-BlockDAG-Presale-Beats-Avalanche-Litecoin-XRP",
+      "pubDate": "2025-08-16T17:30:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "AVAX",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Will XRP Break $3.26? SWIFT Spotlights Ripple & Stellar for Cross-Border Shakeup",
+      "link": "https://cryptopanic.com/news/ripple/24270734/Will-XRP-Break-326-SWIFT-Spotlights-Ripple-Stellar-for-Cross-Border-Shakeup",
+      "pubDate": "2025-08-16T17:11:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "XRP must break $3. 26 to eye $3. 90, as SWIFT draws attention to Ripple and Stellar as potential disruptors in cross-border payments.",
+      "currencies": [
+        "XRP",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Stellar (XLM) Price Prediction for August 16",
+      "link": "https://cryptopanic.com/news/stellar/24267682/Stellar-XLM-Price-Prediction-for-August-16",
+      "pubDate": "2025-08-16T13:54:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Pi Network News: What Stellar’s 100M Smart Contract Success Means for Pi Pioneers",
+      "link": "https://cryptopanic.com/news/stellar/24268592/Pi-Network-News-What-Stellars-100M-Smart-Contract-Success-Means-for-Pi-Pioneers",
+      "pubDate": "2025-08-16T13:53:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "PI"
+      ]
+    },
+    {
+      "title": "Cold Wallet Raises $6M, OKB Surges 102%, ADA Grows With Midnight: Top Crypto to Buy 2025 Found?",
+      "link": "https://cryptopanic.com/news/okb/24270891/Cold-Wallet-Raises-6M-OKB-Surges-102-ADA-Grows-With-Midnight-Top-Crypto-to-Buy-2025-Found",
+      "pubDate": "2025-08-16T13:41:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "ADA",
+        "OKB"
+      ]
+    },
+    {
+      "title": "Top Crypto Buys Right Now: Remittix, Arbitrum, And Avalanche Ranked By Analysts For Q3 Portfolios",
+      "link": "https://cryptopanic.com/news/avalanche-2/24267637/Top-Crypto-Buys-Right-Now-Remittix-Arbitrum-And-Avalanche-Ranked-By-Analysts-For-Q3-Portfolios",
+      "pubDate": "2025-08-16T13:30:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "ARB",
+        "A"
+      ]
+    },
+    {
+      "title": "Aave Shatters Records as DeFi Lending Hits New Heights",
+      "link": "https://cryptopanic.com/news/aave/24266409/Aave-Shatters-Records-as-DeFi-Lending-Hits-New-Heights",
+      "pubDate": "2025-08-16T12:17:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Trump's World Liberty Financial Invests $18.6M in ETH and WBTC",
+      "link": "https://cryptopanic.com/news/wrapped-bitcoin/24265402/Trumps-World-Liberty-Financial-Invests-186M-in-ETH-and-WBTC",
+      "pubDate": "2025-08-16T09:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "WBTC"
+      ]
+    },
+    {
+      "title": "Litecoin Trailing Ethereum Pattern, Is LTC To $240 In View?",
+      "link": "https://cryptopanic.com/news/litecoin/24257302/Litecoin-Trailing-Ethereum-Pattern-Is-LTC-To-240-In-View",
+      "pubDate": "2025-08-16T05:04:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Trump Family Wallet Acquires Significant WBTC and ETH Holdings",
+      "link": "https://cryptopanic.com/news/wrapped-bitcoin/24255775/Trump-Family-Wallet-Acquires-Significant-WBTC-and-ETH-Holdings",
+      "pubDate": "2025-08-16T03:37:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "WBTC"
+      ]
+    },
+    {
+      "title": "Qubic Says It Controlled 52% of Monero’s Network in Test",
+      "link": "https://cryptopanic.com/news/monero/24254580/Qubic-Says-It-Controlled-52-of-Moneros-Network-in-Test",
+      "pubDate": "2025-08-16T02:31:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "WLFI Address Acquires ETH and WBTC Using USDC",
+      "link": "https://cryptopanic.com/news/wrapped-bitcoin/24253923/WLFI-Address-Acquires-ETH-and-WBTC-Using-USDC",
+      "pubDate": "2025-08-16T02:07:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDC",
+        "WBTC"
+      ]
+    }
+  ]
+}

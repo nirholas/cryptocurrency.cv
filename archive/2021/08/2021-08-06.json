@@ -1,0 +1,615 @@
+{
+  "date": "2021-08-06",
+  "fetchedAt": "2026-02-05T07:27:06.559Z",
+  "articleCount": 41,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Alleged Tether (USDT) ‘shadow banker’ set for 2022 trial",
+      "link": "https://cryptopanic.com/news/12484270/Alleged-Tether-USDT-shadow-banker-set-for-2022-trial",
+      "pubDate": "2021-08-06T22:00:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Reggie Fowler, a former NFL team owner and the suspected “shadow banker” involved in the Tether and Bitfinex saga, will finally have his day in court as his trial is scheduled for early 2022.",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @RoKhanna: We absolutely need to ensure tax compliance for crypto but without picking winners and losers in the industry or ensnaring so…",
+      "link": "https://cryptopanic.com/news/12485674/RT-RoKhanna-We-absolutely-need-to-ensure-tax-compliance-for-crypto-but-without-picking-winners-and-losers-in-the-industry-or-ensnaring-so",
+      "pubDate": "2021-08-06T21:52:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XCH"
+      ]
+    },
+    {
+      "title": "Crypto Spot Volumes Fall to Yearly Low as Open Interest Rises",
+      "link": "https://cryptopanic.com/news/ethereum/12484244/Crypto-Spot-Volumes-Fall-to-Yearly-Low-as-Open-Interest-Rises",
+      "pubDate": "2021-08-06T21:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Chainlink Expands Its Services to Incorporate Decentralized Off-Chain Computation",
+      "link": "https://cryptopanic.com/news/chainlink/12484198/Chainlink-Expands-Its-Services-to-Incorporate-Decentralized-Off-Chain-Computation",
+      "pubDate": "2021-08-06T21:33:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Chainlink has introduced a service known as decentralized off-chain computation to monitor and automate triggers to blockchain smart contracts. The Chainlink Keeper Network service was announced during Chainlink’s annual event. It will also facilitate what has been called anti-fraud and anti-risk methods on blockchains when they are exchanging data with other blockchains. Additionally, parties to...",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Game Axie Infinity Daily Users Grow 10X Since June to Hit 1 Million",
+      "link": "https://cryptopanic.com/news/12484183/Ethereum-Game-Axie-Infinity-Daily-Users-Grow-10X-Since-June-to-Hit-1-Million",
+      "pubDate": "2021-08-06T21:21:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Axie’s recent surge continues as the game sets a new user benchmark, but not everyone has the NFTs needed to play.",
+      "currencies": [
+        "ETH",
+        "AXS"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Elrond Becomes First Carbon Negative Blockchain in Europe",
+      "link": "https://cryptopanic.com/news/12484083/Elrond-Becomes-First-Carbon-Negative-Blockchain-in-Europe",
+      "pubDate": "2021-08-06T20:45:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Elrond announced today that it is now the first blockchain company to become carbon negative in Europe.",
+      "currencies": [
+        "EGLD"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "CFTC Commissioner Brian Quintenz Fires Back At SEC, Affirms It Has No Authority Over Crypto Assets",
+      "link": "https://cryptopanic.com/news/ripple/12483992/CFTC-Commissioner-Brian-Quintenz-Fires-Back-At-SEC-Affirms-It-Has-No-Authority-Over-Crypto-Assets",
+      "pubDate": "2021-08-06T20:09:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Cryptocurrencies have received a lot of heat in recent times as governments have tried to bring the runaway “wildcat” industry under regulation. US regulatory bodies, courts, and Congress are all brainstorming how to favorably satisfy the public’s expectation of them concerning cryptocurrencies. While crypto regulation still has a long way to go before there is […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Did you miss our AMA with @relitefinance? That's okay, the full AMA is now available on Relite's YouTube channel! W…",
+      "link": "https://cryptopanic.com/news/12488187/Did-you-miss-our-AMA-with-relitefinance-Thats-okay-the-full-AMA-is-now-available-on-Relites-YouTube-channel-W",
+      "pubDate": "2021-08-06T19:03:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ]
+    },
+    {
+      "title": "Bitcoin Nears $43k, Indicators Suggest Bull Market Ahead",
+      "link": "https://cryptopanic.com/news/flow/12483794/Bitcoin-Nears-43k-Indicators-Suggest-Bull-Market-Ahead",
+      "pubDate": "2021-08-06T19:00:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The Bitcoin fund flow ratio for all exchanges is on a decline, while BTC transactions are rising. This could suggest a bull market is ahead. Bitcoin Fund Flow Ratio For All Exchanges Goes Down As pointed out by a CryptoQuant post, the BTC fund flow ratio for all exchanges seems to be on a downwards trend. Also, BTC transactions are going up. The Bitcoin fund flow ratio is an indicator that’s...",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 21,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Roars as Crypto Takes Center Stage in Congress",
+      "link": "https://cryptopanic.com/news/near/12483740/Bitcoin-Roars-as-Crypto-Takes-Center-Stage-in-Congress",
+      "pubDate": "2021-08-06T18:31:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin has jumped some 6% to near $43,000 as cryptos become the debate in Congress and thus all mainstream media following the movements of the Infrastructure bill. “Cryptocurrency brawl bogs...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Whether you're buying and selling NFTs, creating your own, or just want to earn passive income in the form of royal…",
+      "link": "https://cryptopanic.com/news/12488055/Whether-youre-buying-and-selling-NFTs-creating-your-own-or-just-want-to-earn-passive-income-in-the-form-of-royal",
+      "pubDate": "2021-08-06T18:04:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "XPR"
+      ]
+    },
+    {
+      "title": "Reef Finance is happy to announce an important new collaboration with @curio_invest, a Real World Assets Fractional…",
+      "link": "https://cryptopanic.com/news/12488188/Reef-Finance-is-happy-to-announce-an-important-new-collaboration-with-curio_invest-a-Real-World-Assets-Fractional",
+      "pubDate": "2021-08-06T16:59:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ]
+    },
+    {
+      "title": "Terra’s LUNA in Overbought Territory After 180% Rally",
+      "link": "https://cryptopanic.com/news/terra-luna/12483398/Terras-LUNA-in-Overbought-Territory-After-180-Rally",
+      "pubDate": "2021-08-06T16:59:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "-",
+      "currencies": [
+        "NULL"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "New SEC Regulations Add Cryptocurrency Under Security-Based Swap Rules",
+      "link": "https://cryptopanic.com/news/ethereum/12483348/New-SEC-Regulations-Add-Cryptocurrency-Under-Security-Based-Swap-Rules",
+      "pubDate": "2021-08-06T16:34:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The cryptocurrency industry might soon be flooded with different kinds of rules to checkmate its operations. The recent developments in the sector point towards a new SEC rule that will guide the security swaps occurring in many financial assets, including crypto. This information came from the SEC Chairman during a speech he gave to the American Bar Association Derivative & Future Law...",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 16
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Stairway to the moon... Yes we still have faith .....on it",
+      "link": "https://cryptopanic.com/news/12485448/Stairway-to-the-moon-Yes-we-still-have-faith-on-it?mtm_campaign=API-OFA",
+      "pubDate": "2021-08-06T16:32:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BB"
+      ]
+    },
+    {
+      "title": ".@Ethereum just got an upgrade. Read about the new London Hard Fork by #Ethereum from our clever friends at @BinanceAcademy ⬇️",
+      "link": "https://cryptopanic.com/news/12488884/Ethereum-just-got-an-upgrade-Read-about-the-new-London-Hard-Fork-by-Ethereum-from-our-clever-friends-at-BinanceAcademy",
+      "pubDate": "2021-08-06T16:27:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "On Aug 4, a press release announced an unaffiliated project called “Weownomy” will use eCash. The eCash team has n…",
+      "link": "https://cryptopanic.com/news/ecash/12489223/On-Aug-4-a-press-release-announced-an-unaffiliated-project-called-Weownomy-will-use-eCash-The-eCash-team-has-n",
+      "pubDate": "2021-08-06T16:09:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Elon Musk's Latest Twitter Profile Change Is Bad News for Dogecoin Community",
+      "link": "https://cryptopanic.com/news/dogecoin/12483261/Elon-Musks-Latest-Twitter-Profile-Change-Is-Bad-News-for-Dogecoin-Community",
+      "pubDate": "2021-08-06T16:06:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "After a multi-week reign, Doge is no longer on Elon Musk's Twitter profile picture",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "XRP Case Gets Heated As Ripple’s Garlinghouse Ponders On SEC Creating Regulatory Confusion Around Crypto",
+      "link": "https://cryptopanic.com/news/ripple/12483154/XRP-Case-Gets-Heated-As-Ripples-Garlinghouse-Ponders-On-SEC-Creating-Regulatory-Confusion-Around-Crypto",
+      "pubDate": "2021-08-06T15:49:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Prominent figures in the cryptocurrency space have continued to remark on the implied intensifying crypto-hostile atmosphere that was expressed by the US SEC Chair Gary Gensler on Tuesday, during the agency’s most elaborate commentary about its view on the cryptocurrency market. In so many words, Gensler said that the SEC stands on the various sectors […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Theta blockchain is now compatible with ETH RPC API suite, Metamask, and dev tools Truffle, Hardhat, and Remix! Thi…",
+      "link": "https://cryptopanic.com/news/theta-token/12488680/Theta-blockchain-is-now-compatible-with-ETH-RPC-API-suite-Metamask-and-dev-tools-Truffle-Hardhat-and-Remix-Thi",
+      "pubDate": "2021-08-06T15:43:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "THETA",
+        "TFUEL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tezos Successfully Completes Granada Network Upgrade",
+      "link": "https://cryptopanic.com/news/12483109/Tezos-Successfully-Completes-Granada-Network-Upgrade",
+      "pubDate": "2021-08-06T15:36:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "-",
+      "currencies": [
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "\"The ETN-Network team is focused on ensuring the best timing for all future releases\" - Richard Ells. Read the late…",
+      "link": "https://cryptopanic.com/news/12483061/The-ETN-Network-team-is-focused-on-ensuring-the-best-timing-for-all-future-releases-Richard-Ells-Read-the-late",
+      "pubDate": "2021-08-06T15:30:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "THETA Bulls Dominate After The Announcement Of Metamask Support : #⃣: ️: dan saada…",
+      "link": "https://cryptopanic.com/news/theta-token/12488755/THETA-Bulls-Dominate-After-The-Announcement-Of-Metamask-Support-dan-saada",
+      "pubDate": "2021-08-06T14:17:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TCAT"
+      ]
+    },
+    {
+      "title": "Binance’s ‘commitment to compliance’ now means this for Hong Kong’s users",
+      "link": "https://cryptopanic.com/news/12482744/Binances-commitment-to-compliance-now-means-this-for-Hong-Kongs-users",
+      "pubDate": "2021-08-06T14:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Binance, arguably the world’s biggest crypto-exchange, has been under a lot of regulatory fire in recent months. Many authorities around the world are now seeking to clamp down on the exchange, and by extension, the crypto-market. These actions have had an impact on Binance Coin’s price as well, with the altcoin noting major corrections over […]",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Inside the Polkadot network and ecosystem with Rob Habermeier",
+      "link": "https://cryptopanic.com/news/polkadot/12482731/Inside-the-Polkadot-network-and-ecosystem-with-Rob-Habermeier",
+      "pubDate": "2021-08-06T13:41:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Polkadot co-founder Rob Habermeier chats with The Block's Frank Chaparro in the latest episode of The Scoop podcast.",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "*Hey Siri, wake me up when I'm a millionaire*",
+      "link": "https://cryptopanic.com/news/12488885/Hey-Siri-wake-me-up-when-Im-a-millionaire",
+      "pubDate": "2021-08-06T13:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "Good sign for today... It's time to kill more zero.. and wait for our NFT gaming platform ... Don't Miss the train.",
+      "link": "https://cryptopanic.com/news/12485449/Good-sign-for-today-Its-time-to-kill-more-zero-and-wait-for-our-NFT-gaming-platform-Dont-Miss-the-train?mtm_campaign=API-OFA",
+      "pubDate": "2021-08-06T13:19:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "BB"
+      ]
+    },
+    {
+      "title": "RT @BitrueOfficial: Four new options have just been added for credit card purchases! You can now buy $SOL, $VET, $XDC and $SHIB directly on…",
+      "link": "https://cryptopanic.com/news/12482607/RT-BitrueOfficial-Four-new-options-have-just-been-added-for-credit-card-purchases-You-can-now-buy-SOL-VET-XDC-and-SHIB-directly-on",
+      "pubDate": "2021-08-06T13:16:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "VET",
+        "XDC",
+        "VTHO"
+      ]
+    },
+    {
+      "title": "Create a token on XDC Network with NO CODING right from your browser. All you need to do is to fill in the paramet…",
+      "link": "https://cryptopanic.com/news/12482524/Create-a-token-on-XDC-Network-with-NO-CODING-right-from-your-browser-All-you-need-to-do-is-to-fill-in-the-paramet",
+      "pubDate": "2021-08-06T12:59:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XDC"
+      ]
+    },
+    {
+      "title": "RT @bantg: DeFi is Punk",
+      "link": "https://cryptopanic.com/news/12482486/RT-bantg-DeFi-is-Punk",
+      "pubDate": "2021-08-06T12:43:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "REP"
+      ]
+    },
+    {
+      "title": "Kusama Introduces First-Ever Stablecoin kUSD, Teases KAR Liquidity Programs",
+      "link": "https://cryptopanic.com/news/12482430/Kusama-Introduces-First-Ever-Stablecoin-kUSD-Teases-KAR-Liquidity-Programs",
+      "pubDate": "2021-08-06T12:16:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Karura (KAR) community approves stablecoin release and launch of new liquidity initiatives",
+      "currencies": [
+        "KSM"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @BLACKBERRYBSC: We proudly announce that our new website has been launch... Stay tune for the next....",
+      "link": "https://cryptopanic.com/news/12485450/RT-BLACKBERRYBSC-We-proudly-announce-that-our-new-website-has-been-launch-Stay-tune-for-the-next?mtm_campaign=API-OFA",
+      "pubDate": "2021-08-06T11:12:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BB"
+      ]
+    },
+    {
+      "title": "Like to see such great mints on our platform",
+      "link": "https://cryptopanic.com/news/12484938/Like-to-see-such-great-mints-on-our-platform?mtm_campaign=API-OFA",
+      "pubDate": "2021-08-06T11:06:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALCH"
+      ]
+    },
+    {
+      "title": "We proudly announce that our new website has been launch... Stay tune for the next....",
+      "link": "https://cryptopanic.com/news/12485451/We-proudly-announce-that-our-new-website-has-been-launch-Stay-tune-for-the-next?mtm_campaign=API-OFA",
+      "pubDate": "2021-08-06T10:38:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BB"
+      ]
+    },
+    {
+      "title": "Ripple expands XRP into NFTs amid escalating legal battles",
+      "link": "https://cryptopanic.com/news/ripple/12482103/Ripple-expands-XRP-into-NFTs-amid-escalating-legal-battles",
+      "pubDate": "2021-08-06T09:51:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "As court grants CEO request to obtain info from Binance to bolster defense in SEC lawsuit, Ripple seeks to expand use cases for XRP Ledger.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$BAND will be listed on @krakenfx, a major licensed US-based digital asset trading platform, and begin trading on…",
+      "link": "https://cryptopanic.com/news/12485247/BAND-will-be-listed-on-krakenfx-a-major-licensed-US-based-digital-asset-trading-platform-and-begin-trading-on",
+      "pubDate": "2021-08-06T09:15:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "New Bitcoin Users Activity Spikes To New All-Time Highs, What Does It Mean?",
+      "link": "https://cryptopanic.com/news/near/12481480/New-Bitcoin-Users-Activity-Spikes-To-New-All-Time-Highs-What-Does-It-Mean",
+      "pubDate": "2021-08-06T08:19:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The new Bitcoin users graph is a sight to behold. Even though Bitcoin’s price was horizontal for a while there, the network kept growing. And, with each new participant, the network expands infinitely. And, with that, the value of the network increases in the same magnitude. Such is the nature of the “network effect” phenomenon. That is what this chart by on-chain analyst Will Clemente shows:...",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 25,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$XEC trading is now live at Binance! Thanks @binance @cz_binance for supporting eCash.",
+      "link": "https://cryptopanic.com/news/ecash/12481381/XEC-trading-is-now-live-at-Binance-Thanks-binance-cz_binance-for-supporting-eCash",
+      "pubDate": "2021-08-06T04:46:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Announcing 16th Annual \"Seoul Drama Awards\" voting will begin on August 9th to the 20th on $AERGO based eVoting ap…",
+      "link": "https://cryptopanic.com/news/12476756/Announcing-16th-Annual-Seoul-Drama-Awards-voting-will-begin-on-August-9th-to-the-20th-on-AERGO-based-eVoting-ap",
+      "pubDate": "2021-08-06T02:18:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "RT @BlocksterCom: We're proud to partner with @InsureToken, a project helping DeFi users insure their portfolio of digital assets. Head to…",
+      "link": "https://cryptopanic.com/news/12481398/RT-BlocksterCom-Were-proud-to-partner-with-InsureToken-a-project-helping-DeFi-users-insure-their-portfolio-of-digital-assets-Head-to",
+      "pubDate": "2021-08-06T00:26:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SURE"
+      ]
+    },
+    {
+      "title": "Bitcoin bulls overtake the $40K barrier ahead of Friday’s $625M options expiry",
+      "link": "https://cryptopanic.com/news/12475711/Bitcoin-bulls-overtake-the-40K-barrier-ahead-of-Fridays-625M-options-expiry",
+      "pubDate": "2021-08-06T00:00:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Securing a close above $40,000 will give bullish pro traders a sizeable advantage in Friday's $625 million BTC options expiry.",
+      "currencies": [
+        "BTC",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

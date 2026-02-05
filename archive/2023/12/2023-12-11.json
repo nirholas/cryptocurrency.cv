@@ -1,0 +1,467 @@
+{
+  "date": "2023-12-11",
+  "fetchedAt": "2026-02-05T07:27:08.100Z",
+  "articleCount": 31,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "FTX says IRS demand for $24 billion in unpaid taxes is delaying recovery of user funds",
+      "link": "https://cryptopanic.com/news/19101873/FTX-says-IRS-demand-for-24-billion-in-unpaid-taxes-is-delaying-recovery-of-user-funds",
+      "pubDate": "2023-12-11T21:08:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "Bitcoin (BTC) Correction to $39,000 Likely, According to On-Chain Analyst Willy Woo – Here’s Why",
+      "link": "https://cryptopanic.com/news/bitcoin/19101855/Bitcoin-BTC-Correction-to-39000-Likely-According-to-On-Chain-Analyst-Willy-Woo-Heres-Why",
+      "pubDate": "2023-12-11T21:00:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "On-chain analyst Willy Woo says he’s anticipating Bitcoin (BTC) will retest the $39,000 zone before any potential bullish continuation. Woo tells his one million followers on the social media platform X that Bitcoin has a gap near $39,700 on the Chicago Mercantile Exchange (CME) futures market. Trading gaps happen when an asset’s price opens significantly […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 4
+      }
+    },
+    {
+      "title": "FIFA Abandons Algorand, Chooses a New Altcoin Network for World Cup Tickets",
+      "link": "https://cryptopanic.com/news/19101813/FIFA-Abandons-Algorand-Chooses-a-New-Altcoin-Network-for-World-Cup-Tickets",
+      "pubDate": "2023-12-11T20:32:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Crypto’s Gainers and Losers: BTT and BONK Spike Amidst Overall Downturn",
+      "link": "https://cryptopanic.com/news/19101712/Cryptos-Gainers-and-Losers-BTT-and-BONK-Spike-Amidst-Overall-Downturn",
+      "pubDate": "2023-12-11T19:30:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTT",
+        "BONK"
+      ]
+    },
+    {
+      "title": "Can Bitcoin Hit $1Can Bitcoin Hit $100k Following SEC’s ETF Delay? Pullix And NEO Prepare To Surge",
+      "link": "https://cryptopanic.com/news/19101655/Can-Bitcoin-Hit-1Can-Bitcoin-Hit-100k-Following-SECs-ETF-Delay-Pullix-And-NEO-Prepare-To-Surge",
+      "pubDate": "2023-12-11T19:04:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "NEO"
+      ]
+    },
+    {
+      "title": "It’s Not Just Electricity And Water — Bitcoin Mines Use A Lot Of Air, Too",
+      "link": "https://cryptopanic.com/news/bitcoin/19101436/Its-Not-Just-Electricity-And-Water-Bitcoin-Mines-Use-A-Lot-Of-Air-Too",
+      "pubDate": "2023-12-11T17:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ]
+    },
+    {
+      "title": "Trader Joe Launches New DEX ‘Merchant Moe’ for Mantle Network",
+      "link": "https://cryptopanic.com/news/19101375/Trader-Joe-Launches-New-DEX-Merchant-Moe-for-Mantle-Network",
+      "pubDate": "2023-12-11T17:01:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "MNT"
+      ]
+    },
+    {
+      "title": "Analysts Predict This Could Be The Next Dogecoin or Decentraland",
+      "link": "https://cryptopanic.com/news/decentraland/19101368/Analysts-Predict-This-Could-Be-The-Next-Dogecoin-or-Decentraland",
+      "pubDate": "2023-12-11T16:56:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "MANA"
+      ]
+    },
+    {
+      "title": "Immutable Climbs 10% While Most Gaming Tokens Fall With Bitcoin and Ethereum",
+      "link": "https://cryptopanic.com/news/19101299/Immutable-Climbs-10-While-Most-Gaming-Tokens-Fall-With-Bitcoin-and-Ethereum",
+      "pubDate": "2023-12-11T16:41:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "IMX"
+      ]
+    },
+    {
+      "title": "Anatoly Yakovenko and Mert Mumtaz break down what’s only possible on Solana",
+      "link": "https://cryptopanic.com/news/19101195/Anatoly-Yakovenko-and-Mert-Mumtaz-break-down-whats-only-possible-on-Solana",
+      "pubDate": "2023-12-11T15:54:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana co-founder Anatoly Yakovenko and Helius co-founder Mert Mumtaz unpack why they thinkSolana has an edge over other blockchains.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cryptoassets Eclipse Traditional Assets in Recent Market Shift, Notes ETC Group’s Head of Research",
+      "link": "https://cryptopanic.com/news/19101181/Cryptoassets-Eclipse-Traditional-Assets-in-Recent-Market-Shift-Notes-ETC-Groups-Head-of-Research",
+      "pubDate": "2023-12-11T15:50:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Overlooked Gems: Why Whales and Institutions Are Betting Big on RLB, FXS, and Bitcoin Minetrix",
+      "link": "https://cryptopanic.com/news/19101088/Overlooked-Gems-Why-Whales-and-Institutions-Are-Betting-Big-on-RLB-FXS-and-Bitcoin-Minetrix",
+      "pubDate": "2023-12-11T15:29:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FRAX",
+        "FXS"
+      ]
+    },
+    {
+      "title": "Lido DAO’s TVL Breaks 20-Month Milestone, LDO Price to Soar?",
+      "link": "https://cryptopanic.com/news/19101064/Lido-DAOs-TVL-Breaks-20-Month-Milestone-LDO-Price-to-Soar",
+      "pubDate": "2023-12-11T15:19:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "LDO"
+      ]
+    },
+    {
+      "title": "VeChain News: What Caused VeThor (VTHO) to Rise 45%",
+      "link": "https://cryptopanic.com/news/19101072/VeChain-News-What-Caused-VeThor-VTHO-to-Rise-45",
+      "pubDate": "2023-12-11T15:16:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ]
+    },
+    {
+      "title": "Crypto Price Prediction For December 11: BTT, BONK, LUNA",
+      "link": "https://cryptopanic.com/news/19100993/Crypto-Price-Prediction-For-December-11-BTT-BONK-LUNA",
+      "pubDate": "2023-12-11T14:59:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BTT"
+      ]
+    },
+    {
+      "title": "Immutable (IMX) Moves Above $2 for the First Time Since April 2022",
+      "link": "https://cryptopanic.com/news/19100858/Immutable-IMX-Moves-Above-2-for-the-First-Time-Since-April-2022",
+      "pubDate": "2023-12-11T13:33:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "IMX"
+      ]
+    },
+    {
+      "title": "Giant Market Maker DWF Labs Bought This Altcoin Listed on Binance! Price has moved!",
+      "link": "https://cryptopanic.com/news/19100731/Giant-Market-Maker-DWF-Labs-Bought-This-Altcoin-Listed-on-Binance-Price-has-moved",
+      "pubDate": "2023-12-11T13:14:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Neo News: Week in Review – December 4 – December 10",
+      "link": "https://cryptopanic.com/news/19100642/Neo-News-Week-in-Review-December-4-December-10",
+      "pubDate": "2023-12-11T12:46:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "The Sandbox Unveils New ERC-1155 Token CATALYSTs on Polygon to Empower Creators",
+      "link": "https://cryptopanic.com/news/19100458/The-Sandbox-Unveils-New-ERC-1155-Token-CATALYSTs-on-Polygon-to-Empower-Creators",
+      "pubDate": "2023-12-11T11:30:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "MATIC",
+        "SAND"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano Founder Unintentionally Promotes Memecoin In Social Media Slip",
+      "link": "https://cryptopanic.com/news/19100454/Cardano-Founder-Unintentionally-Promotes-Memecoin-In-Social-Media-Slip",
+      "pubDate": "2023-12-11T11:30:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Charles Hoskinson, the founder and creator of Cardano has recently caused quite a frenzy in the cryptocurrency community when he unwittingly promoted a meme coin crypto project known as Freya through social media. Significance Of The Cardano Founder’s Unwitting Mistake The recent development took place after Charles Hoskinson posted an adorable photo of him and […]",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Solana-based Helium’s unlimited plan launch propels HNT to yearly high",
+      "link": "https://cryptopanic.com/news/19100393/Solana-based-Heliums-unlimited-plan-launch-propels-HNT-to-yearly-high",
+      "pubDate": "2023-12-11T11:18:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana Founder Reflects on Humble Beginnings as SOL Soars 312%",
+      "link": "https://cryptopanic.com/news/19100354/Solana-Founder-Reflects-on-Humble-Beginnings-as-SOL-Soars-312",
+      "pubDate": "2023-12-11T10:56:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Recently, Anatoly Yakovenko, one of the co-founders of Solana, took to X (formerly Twitter) to reflect on the journey that led to the creation of Solana, a crypto project that has now grown to a valuation exceeding $30 billion. In the post on X (formerly Twitter), Yakovenko remarked that December 9 marks exactly six years […]",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Markets Witness Downturn: Ethereum and Altcoins Experience Declines",
+      "link": "https://cryptopanic.com/news/19100299/Crypto-Markets-Witness-Downturn-Ethereum-and-Altcoins-Experience-Declines",
+      "pubDate": "2023-12-11T10:36:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Channels for Acquiring KAS, the Most Promising POW Coin in 2023",
+      "link": "https://cryptopanic.com/news/19100486/Channels-for-Acquiring-KAS-the-Most-Promising-POW-Coin-in-2023",
+      "pubDate": "2023-12-11T10:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "KAS"
+      ]
+    },
+    {
+      "title": "Will Bitcoin (BTC) to $50K Come Sooner or Later? Interest in Hedera (HBAR) & InQubeta (QUBE) Surges",
+      "link": "https://cryptopanic.com/news/19100230/Will-Bitcoin-BTC-to-50K-Come-Sooner-or-Later-Interest-in-Hedera-HBAR-InQubeta-QUBE-Surges",
+      "pubDate": "2023-12-11T10:17:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "BlackRock Warns SEC: Classifying Bitcoin as a Security Would Cause Troubles",
+      "link": "https://cryptopanic.com/news/bitcoin/19100211/BlackRock-Warns-SEC-Classifying-Bitcoin-as-a-Security-Would-Cause-Troubles",
+      "pubDate": "2023-12-11T10:04:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "BlackRock warns SEC: Classifying Bitcoin as a security could disrupt trading and lower its value, echoing Ripple's legal struggles.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bonk (BONK) surges to become third-largest memecoin",
+      "link": "https://cryptopanic.com/news/19100047/Bonk-BONK-surges-to-become-third-largest-memecoin",
+      "pubDate": "2023-12-11T09:09:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "In a surprising turn of events, the Solana-based dog-themed memecoin, Bonk (BONK), has climbed the ranks to become the third-largest memecoin by market capitalization. This unexpected surge occurred on December 8th, as Bonk’s recent price growth soared by an impressive 370% in just the last month. CoinGecko data now reveals that Bonk boasts a market ... Read more",
+      "currencies": [
+        "BONK"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Market Sees Red With $350M in Liquidations Over 12 Hours",
+      "link": "https://cryptopanic.com/news/19099861/Crypto-Market-Sees-Red-With-350M-in-Liquidations-Over-12-Hours",
+      "pubDate": "2023-12-11T07:16:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOT",
+        "AVAX",
+        "SHIB",
+        "MATIC",
+        "LTC",
+        "LINK",
+        "IMX",
+        "INJ"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Prices Today: BTC, Pepe Coin Slip As BTT Surges Ahead of Inflation Data",
+      "link": "https://cryptopanic.com/news/19099654/Crypto-Prices-Today-BTC-Pepe-Coin-Slip-As-BTT-Surges-Ahead-of-Inflation-Data",
+      "pubDate": "2023-12-11T05:04:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BTT",
+        "PEPE"
+      ]
+    },
+    {
+      "title": "Solana Closes Gap on Ethereum with Over $16M in NFT Sales",
+      "link": "https://cryptopanic.com/news/19099511/Solana-Closes-Gap-on-Ethereum-with-Over-16M-in-NFT-Sales",
+      "pubDate": "2023-12-11T01:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Solana emerges as a formidable threat to Ethereum's throne as the network looks to outshine it from different angles.",
+      "currencies": [
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Top Trader Says Solana Grinding for a Pop, Predicts Breakout Rally for Chainlink After Month-Long Consolidation",
+      "link": "https://cryptopanic.com/news/19099487/Top-Trader-Says-Solana-Grinding-for-a-Pop-Predicts-Breakout-Rally-for-Chainlink-After-Month-Long-Consolidation",
+      "pubDate": "2023-12-11T01:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LINK",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

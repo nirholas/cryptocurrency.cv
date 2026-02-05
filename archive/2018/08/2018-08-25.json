@@ -1,0 +1,45 @@
+{
+  "date": "2018-08-25",
+  "fetchedAt": "2026-02-05T07:27:06.948Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Walmart-Backed Canadian Blockchain ETF to Begin Trading in September 2018",
+      "link": "https://cryptopanic.com/news/2969710/Walmart-Backed-Canadian-Blockchain-ETF-to-Begin-Trading-in-September-2018",
+      "pubDate": "2018-08-25T22:00:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "NEO"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Stellar Lumens-to-Fiat Withdrawals to Be Made Available on the New Decentralised Stellar Cryptocurrency Exchange",
+      "link": "https://cryptopanic.com/news/2968645/Stellar-Lumens-to-Fiat-Withdrawals-to-Be-Made-Available-on-the-New-Decentralised-Stellar-Cryptocurrency-Exchange",
+      "pubDate": "2018-08-25T12:45:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

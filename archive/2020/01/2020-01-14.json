@@ -1,0 +1,43 @@
+{
+  "date": "2020-01-14",
+  "fetchedAt": "2026-02-05T07:27:06.980Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Paxos’ Tokenized Gold Futures Are Now Trading on FTX Exchange",
+      "link": "https://cryptopanic.com/news/7646495/Paxos-Tokenized-Gold-Futures-Are-Now-Trading-on-FTX-Exchange",
+      "pubDate": "2020-01-14T15:00:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin and Dash spike following Venezuela Internet shutdown",
+      "link": "https://cryptopanic.com/news/7644932/Bitcoin-and-Dash-spike-following-Venezuela-Internet-shutdown",
+      "pubDate": "2020-01-14T12:29:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DASH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

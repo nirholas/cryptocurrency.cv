@@ -1,0 +1,26 @@
+{
+  "date": "2020-05-01",
+  "fetchedAt": "2026-02-05T07:27:06.994Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "New Collaboration Brings Chainlink (LINK) Oracles to Tezos (XTZ) Ecosystem",
+      "link": "https://cryptopanic.com/news/chainlink/8655423/New-Collaboration-Brings-Chainlink-LINK-Oracles-to-Tezos-XTZ-Ecosystem",
+      "pubDate": "2020-05-01T04:00:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

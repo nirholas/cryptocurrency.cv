@@ -1,0 +1,837 @@
+{
+  "date": "2022-06-21",
+  "fetchedAt": "2026-02-05T07:27:07.542Z",
+  "articleCount": 50,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @vicewrld_: Coming soon on our #youtube channel",
+      "link": "https://cryptopanic.com/news/15568539/RT-vicewrld_-Coming-soon-on-our-youtube-channel?mtm_campaign=API-OFA",
+      "pubDate": "2022-06-21T23:32:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VICE"
+      ]
+    },
+    {
+      "title": "Lead Shiba Inu Developer Says Bear Market Is an Opportunity to ‘Buy or Burn’ $SHIB",
+      "link": "https://cryptopanic.com/news/15561137/Lead-Shiba-Inu-Developer-Says-Bear-Market-Is-an-Opportunity-to-Buy-or-Burn-SHIB",
+      "pubDate": "2022-06-21T22:17:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "KSM"
+      ]
+    },
+    {
+      "title": "You Won’t Believe Elon Musk’s Reason For Supporting Dogecoin",
+      "link": "https://cryptopanic.com/news/dogecoin/15560860/You-Wont-Believe-Elon-Musks-Reason-For-Supporting-Dogecoin",
+      "pubDate": "2022-06-21T20:12:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Nothing will stop Tesla/SpaceX CEO Elon Musk from publicly voicing his support for meme king Dogecoin (DOGE).",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 3
+      }
+    },
+    {
+      "title": "As Tether Faces Billions in Redemptions, Circle's USDC Is Gaining Ground",
+      "link": "https://cryptopanic.com/news/15560787/As-Tether-Faces-Billions-in-Redemptions-Circles-USDC-Is-Gaining-Ground",
+      "pubDate": "2022-06-21T19:46:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Tether's market cap has dropped by 19% since the start of May, while USDC's has climbed by 5%.",
+      "currencies": [
+        "USDT",
+        "USDC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "⭐️New Listing - PAX Dollar⭐️ @PaxDollarUSDP is now live on Learn more about $USDP on…",
+      "link": "https://cryptopanic.com/news/paxos-standard/15563180/New-Listing-PAX-Dollar-PaxDollarUSDP-is-now-live-on-Learn-more-about-USDP-on",
+      "pubDate": "2022-06-21T18:36:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CMERGE",
+        "CMOS"
+      ]
+    },
+    {
+      "title": "Analyst Says Cardano Appears Ready to Break Out, Updates Outlook on Chainlink and Verasity",
+      "link": "https://cryptopanic.com/news/15560484/Analyst-Says-Cardano-Appears-Ready-to-Break-Out-Updates-Outlook-on-Chainlink-and-Verasity",
+      "pubDate": "2022-06-21T18:05:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Widely followed crypto analyst Michaël van de Poppe is eyeing three popular altcoins for potential entry points and price targets. The trader tells his 612,700 Twitter followers that proof-of-stake blockchain Cardano faces an important test just above $0.50, which if passed could take ADA as high as $0.63. “Looking solid and ready for a break […]",
+      "currencies": [
+        "ADA",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 20,
+        "negative": 10
+      }
+    },
+    {
+      "title": "RT @ThetaDrop: Don't miss @SonyElectronics showcasing @Theta_Network 3D NFTs at @NFT_NYC! Stop by Sony's Booth #26 at #NFTNYC2022 #NFTNYC…",
+      "link": "https://cryptopanic.com/news/theta-token/15567914/RT-ThetaDrop-Dont-miss-SonyElectronics-showcasing-Theta_Network-3D-NFTs-at-NFT_NYC-Stop-by-Sonys-Booth-26-at-NFTNYC2022-NFTNYC",
+      "pubDate": "2022-06-21T18:05:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Bitfarms sold 3K Bitcoin as part of strategy to improve liquidity and pay debts",
+      "link": "https://cryptopanic.com/news/bitcoin/15560316/Bitfarms-sold-3K-Bitcoin-as-part-of-strategy-to-improve-liquidity-and-pay-debts",
+      "pubDate": "2022-06-21T17:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "“Selling a portion of our BTC holdings and daily production as a source of liquidity is the best and least expensive method in the current market environment,\" said chief financial officeJeff Lucas.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @planetmindbody: Crazy4Cryptos .com has offered $THETA and $TFUEL for more than 2 years via a partnership w/ Changenow. The advantage of…",
+      "link": "https://cryptopanic.com/news/theta-token/15566277/RT-planetmindbody-Crazy4Cryptos-com-has-offered-THETA-and-TFUEL-for-more-than-2-years-via-a-partnership-w-Changenow-The-advantage-of",
+      "pubDate": "2022-06-21T17:08:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NOW"
+      ]
+    },
+    {
+      "title": "Axie Infinity top NFT community in 112 countries",
+      "link": "https://cryptopanic.com/news/15560276/Axie-Infinity-top-NFT-community-in-112-countries",
+      "pubDate": "2022-06-21T17:00:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "Axie Infinity is the most popular NFT community in 112 countries, according to a recent study by CashNetUSA.",
+      "currencies": [
+        "AXS"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Battle Of The Stablecoins: USDC Transactions On Ethereum Surpass USDT",
+      "link": "https://cryptopanic.com/news/15560271/Battle-Of-The-Stablecoins-USDC-Transactions-On-Ethereum-Surpass-USDT",
+      "pubDate": "2022-06-21T17:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "With the crypto market crash has come a renewed interest in the cover that stablecoins provide investors. As a result of this, crypto investors had flocked to stablecoins such as USDT, BUSD, USDC, etc, for this exact reason. What followed was fierce competition between these stables as they pulled for more market dominance. Evidently, USDT […]",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "USDC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Bitcoin Investors Lock in Over $7,325,000,000 in Losses Amid Three Days of Deep Capitulation: Glassnode",
+      "link": "https://cryptopanic.com/news/bitcoin/15560236/Bitcoin-Investors-Lock-in-Over-7325000000-in-Losses-Amid-Three-Days-of-Deep-Capitulation-Glassnode",
+      "pubDate": "2022-06-21T16:55:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Crypto analytics firm Glassnode finds that over half a million Bitcoin (BTC) were sold at a loss as panic sweeps across the digital asset landscape. In a new detailed analysis, Glassnode says that over a three-day period, Bitcoin sellers racked up more than $7.32 billion in losses as they scurried to the exits while unloading […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Hello Zurich! Our Technology Chief and Founder, @HamnettPhillip, is at the Point Zero Forum 2022 this week. We will…",
+      "link": "https://cryptopanic.com/news/15562875/Hello-Zurich-Our-Technology-Chief-and-Founder-HamnettPhillip-is-at-the-Point-Zero-Forum-2022-this-week-We-will?mtm_campaign=API-OFA",
+      "pubDate": "2022-06-21T16:04:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHEX"
+      ]
+    },
+    {
+      "title": "Richard Ells will be attending an event at the UK’s #HousesOfParliament tomorrow where he will be presenting inform…",
+      "link": "https://cryptopanic.com/news/15559726/Richard-Ells-will-be-attending-an-event-at-the-UKs-HousesOfParliament-tomorrow-where-he-will-be-presenting-inform",
+      "pubDate": "2022-06-21T14:47:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "Shiba Inu and Other Cryptos Now Accepted by Swiss Luxury Maker Hublot in US Stores",
+      "link": "https://cryptopanic.com/news/15559708/Shiba-Inu-and-Other-Cryptos-Now-Accepted-by-Swiss-Luxury-Maker-Hublot-in-US-Stores",
+      "pubDate": "2022-06-21T14:33:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "This means of payment is exclusively limited to customers of the Hublot United States eBoutique",
+      "currencies": [
+        "SHIB",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Analyst says Bitcoin correction towards $10k still on the table despite minor gains",
+      "link": "https://cryptopanic.com/news/bitcoin/15559705/Analyst-says-Bitcoin-correction-towards-10k-still-on-the-table-despite-minor-gains",
+      "pubDate": "2022-06-21T14:30:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Gareth Soloway, the chief market strategist at InTheMoneyStocks.com, has maintained that Bitcoin is in line for further correction below $20,000... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 11
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "One of Biggest Bitcoin Mining Firms in Canada to Start Selling Its Holdings",
+      "link": "https://cryptopanic.com/news/bitcoin/15559552/One-of-Biggest-Bitcoin-Mining-Firms-in-Canada-to-Start-Selling-Its-Holdings",
+      "pubDate": "2022-06-21T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Mining companies are intensifying their Bitcoin holdings sales as first cryptocurrency shows too much volatility on market",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "World’s Richest Person Explains Why He Continues to Support Dogecoin",
+      "link": "https://cryptopanic.com/news/15559492/Worlds-Richest-Person-Explains-Why-He-Continues-to-Support-Dogecoin",
+      "pubDate": "2022-06-21T13:40:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "On Tuesday (June 21), Tesla and SpaceX CEO Elon Musk, who is the world’s richest person with an estimated net worth of around $214 billion (as of 21 June 2022) according to Forbes, explained why he feels that the need to support meme-based cryptocurrency Dogecoin ($DOGE). Dogecoin was initially released on 6 December 2013, as a “fun […]",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Crypto Lender Blockfi Bags $250 Credit Facility From FTX",
+      "link": "https://cryptopanic.com/news/15559444/Crypto-Lender-Blockfi-Bags-250-Credit-Facility-From-FTX",
+      "pubDate": "2022-06-21T13:38:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Blockfi and FTX agree $250 million credit facility as SBF steps in to stop crypto contagion.",
+      "currencies": [
+        "BTC",
+        "FTT",
+        "UNI",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Shoutout to those at @NFT_NYC: Head over to Soul Night AI NFT Exhibition for great art, vibes and more! You can…",
+      "link": "https://cryptopanic.com/news/klay-token/15565374/Shoutout-to-those-at-NFT_NYC-Head-over-to-Soul-Night-AI-NFT-Exhibition-for-great-art-vibes-and-more-You-can",
+      "pubDate": "2022-06-21T13:14:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "KLAY"
+      ]
+    },
+    {
+      "title": "Celsius Says Maintaining Financial Stability Will Take Time",
+      "link": "https://cryptopanic.com/news/bitcoin/15559338/Celsius-Says-Maintaining-Financial-Stability-Will-Take-Time",
+      "pubDate": "2022-06-21T13:00:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Celsius, one of the top crypto lenders, halted withdrawals on its platform last week due to a terrible liquidity crisis. And now, the crypto lending network has stated that it will take more time to get back on track financially as they are still recovering from financial crises. Celsius is a cryptocurrency lending and interest-paying […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Solana whale shuffles $25 million to reduce risk to DeFi protocol Solend",
+      "link": "https://cryptopanic.com/news/15559264/Solana-whale-shuffles-25-million-to-reduce-risk-to-DeFi-protocol-Solend",
+      "pubDate": "2022-06-21T12:46:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The Solana whale who came on the verge of getting liquidated last week has started moving their funds to mitigate risk to Solend.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 25
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Celsius token CEL rises 300% in one week amid a GameStop-like 'short squeeze' event",
+      "link": "https://cryptopanic.com/news/15559214/Celsius-token-CEL-rises-300-in-one-week-amid-a-GameStop-like-short-squeeze-event",
+      "pubDate": "2022-06-21T12:31:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The crypto lending platform's insolvency risks puts CEL price at risk of a 70% drop.",
+      "currencies": [
+        "CEL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Tether Prepares Full Audit to Improve USDT Reserves Transparency",
+      "link": "https://cryptopanic.com/news/15559249/Tether-Prepares-Full-Audit-to-Improve-USDT-Reserves-Transparency",
+      "pubDate": "2022-06-21T12:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Tether, the world's largest stablecoin with $68 billion in assets, will undertake a full audit with a top 12 accounting firm in order to improve transparency on its USDT reserves.",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "‘Bitcoin Dead’ Google Seaches Skyrocketed to Yearly Highs When BTC Fell Below $20K",
+      "link": "https://cryptopanic.com/news/bitcoin/15559188/Bitcoin-Dead-Google-Seaches-Skyrocketed-to-Yearly-Highs-When-BTC-Fell-Below-20K",
+      "pubDate": "2022-06-21T12:25:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The number of \"bitcoin\" and \"bitcoin dead\" searches on Google have skyrocketed to new highs as BTC slumped in value.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "BlockFi secures $250 million bailout from FTX",
+      "link": "https://cryptopanic.com/news/ftx-token/15559131/BlockFi-secures-250-million-bailout-from-FTX",
+      "pubDate": "2022-06-21T12:06:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The crypto lender says the deal 'bolsters our balance sheet and platform strength.'",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ad spending by big crypto firms plunged 90% after Bitcoin’s all-time high",
+      "link": "https://cryptopanic.com/news/bitcoin/15559128/Ad-spending-by-big-crypto-firms-plunged-90-after-Bitcoins-all-time-high",
+      "pubDate": "2022-06-21T12:01:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Following the crypto market meltdown in 2022, most companies in the space are now cutting down their marketing spending after... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Celsius Token Up 65% as Traders Pull Short Squeeze",
+      "link": "https://cryptopanic.com/news/15559043/Celsius-Token-Up-65-as-Traders-Pull-Short-Squeeze",
+      "pubDate": "2022-06-21T11:49:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The crypto lender Celsius CEL token has become the target of a retail-driven short squeeze. #CELShortSqueeze Mania Hits the Market The CEL token is going parabolic. Days after experiencing a...",
+      "currencies": [
+        "CEL"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Cardano Founder Charles Hoskinson Comments on XRP Lawsuit, Calls It ‘Regulation Through Enforcement’",
+      "link": "https://cryptopanic.com/news/15559048/Cardano-Founder-Charles-Hoskinson-Comments-on-XRP-Lawsuit-Calls-It-Regulation-Through-Enforcement",
+      "pubDate": "2022-06-21T11:45:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Cardano (ADA) founder Charles Hoskinson doesn’t think highly of the U.S. Securities and Exchange Commission’s (SEC) lawsuit against Ripple. The SEC sued Ripple in late 2020, alleging the payments firm sold XRP as an unregistered security. In a new interview with BitBoy Crypto, Hoskinson says regulators shouldn’t operate on a case-by-case basis, which he says […] The post Cardano Founder Charles Hoskinson Comments on XRP Lawsuit, Calls It ‘Regulation Through Enforcement’ appeared first on The Dai",
+      "currencies": [
+        "ADA",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Coming soon on our #youtube channel",
+      "link": "https://cryptopanic.com/news/15568540/Coming-soon-on-our-youtube-channel?mtm_campaign=API-OFA",
+      "pubDate": "2022-06-21T11:32:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VICE"
+      ]
+    },
+    {
+      "title": "Fairlead Strategies founder sets key Bitcoin support level in play to watch",
+      "link": "https://cryptopanic.com/news/bitcoin/15558881/Fairlead-Strategies-founder-sets-key-Bitcoin-support-level-in-play-to-watch",
+      "pubDate": "2022-06-21T10:45:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "As the cryptocurrency market seems to finally be getting some respite after a long bearish period, some technical analysts, like... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Bitcoin S2F model gives false sense of certainty, says Vitalik Buterin",
+      "link": "https://cryptopanic.com/news/bitcoin/15558809/Bitcoin-S2F-model-gives-false-sense-of-certainty-says-Vitalik-Buterin",
+      "pubDate": "2022-06-21T10:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin S2F model gained a lot of popularity during the peak of the bull run, and even though there was criticism, most of it was ignored as the price seemed to follow the chart.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin’s crash is good for the climate",
+      "link": "https://cryptopanic.com/news/bitcoin/15558793/Bitcoins-crash-is-good-for-the-climate",
+      "pubDate": "2022-06-21T10:17:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Energy use from bitcoin mining is falling faster than it has in years, thanks to the crash in cryptocurrency.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Our tech wizards are continuously working to improve the Freeway platform by adding new features and upgrades…",
+      "link": "https://cryptopanic.com/news/15564532/Our-tech-wizards-are-continuously-working-to-improve-the-Freeway-platform-by-adding-new-features-and-upgrades",
+      "pubDate": "2022-06-21T10:12:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FWT"
+      ]
+    },
+    {
+      "title": "Celsius Up 50% Amid GameStop-Style Short Squeeze Attempt",
+      "link": "https://cryptopanic.com/news/15558792/Celsius-Up-50-Amid-GameStop-Style-Short-Squeeze-Attempt",
+      "pubDate": "2022-06-21T10:10:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The embattled crypto lender's CEL token reached a high of $1.56 as holders attempted to orchestrate a short squeeze.",
+      "currencies": [
+        "CEL"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Elon Musk Gives One Reason Why He Supports Dogecoin: Details",
+      "link": "https://cryptopanic.com/news/15558781/Elon-Musk-Gives-One-Reason-Why-He-Supports-Dogecoin-Details",
+      "pubDate": "2022-06-21T10:07:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Elon Musk has been vocal advocate of Dogecoin since April 2019",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Elon Musk doubles down on support for dogecoin despite market turmoil",
+      "link": "https://cryptopanic.com/news/dogecoin/15558467/Elon-Musk-doubles-down-on-support-for-dogecoin-despite-market-turmoil",
+      "pubDate": "2022-06-21T09:43:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The Tesla CEO has reiterated his support for the cryptocurrency dogecoin in an interview at the Qatar Economic Forum.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Elon Musk: ‘I have never said people should invest in crypto’",
+      "link": "https://cryptopanic.com/news/15556911/Elon-Musk-I-have-never-said-people-should-invest-in-crypto",
+      "pubDate": "2022-06-21T08:57:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "While the cryptocurrency industry starts to recover after the market-wide carnage that engulfed it during recent days, billionaire entrepreneur and... Continue reading The post Elon Musk: ‘I have never said people should invest in crypto’ appeared first on Finbold.",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 10
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin Spikes to 4-Days High, SOL, AVAX, DOT, and MATIC Soar Double-Digits (Market Watch)",
+      "link": "https://cryptopanic.com/news/15556912/Bitcoin-Spikes-to-4-Days-High-SOL-AVAX-DOT-and-MATIC-Soar-Double-Digits-Market-Watch",
+      "pubDate": "2022-06-21T08:54:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The crypto markets are in the green once again, with several altcoins registering notable double-digit gains. BTC stands above $21K.",
+      "currencies": [
+        "BTC",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "C. Hoskinson says Vasil hardfork is ADA’s biggest upgrade and ‘stakes have never been higher’",
+      "link": "https://cryptopanic.com/news/15556681/C-Hoskinson-says-Vasil-hardfork-is-ADAs-biggest-upgrade-and-stakes-have-never-been-higher",
+      "pubDate": "2022-06-21T08:46:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "On June 20, it was announced that the highly anticipated launch of the Cardano (ADA) Vasil hardfork had been postponed,... Continue reading",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "️ Last week, we shared a new video featuring our Chief Investment Advisor and ‘Billion Dollar Man’, Joel Krueger,…",
+      "link": "https://cryptopanic.com/news/15564533/Last-week-we-shared-a-new-video-featuring-our-Chief-Investment-Advisor-and-Billion-Dollar-Man-Joel-Krueger",
+      "pubDate": "2022-06-21T08:46:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FWT"
+      ]
+    },
+    {
+      "title": "RT @okx: NEW IN: 1️⃣5️⃣ #USDC Spot trading pairs are now listed @OKX! $CEL @CelsiusNetwork $THETA @Theta_Network $FLM @FlamingoFina…",
+      "link": "https://cryptopanic.com/news/theta-token/15563046/RT-okx-NEW-IN-15-USDC-Spot-trading-pairs-are-now-listed-OKX-CEL-CelsiusNetwork-THETA-Theta_Network-FLM-FlamingoFina",
+      "pubDate": "2022-06-21T08:23:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "CHZ",
+        "ARG",
+        "PFL"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @WebDevLaw: Privacy labour is a concept we should talk about more",
+      "link": "https://cryptopanic.com/news/15554856/RT-WebDevLaw-Privacy-labour-is-a-concept-we-should-talk-about-more",
+      "pubDate": "2022-06-21T07:37:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "Crypto exchanges hit by Cloudflare web outage",
+      "link": "https://cryptopanic.com/news/15555220/Crypto-exchanges-hit-by-Cloudflare-web-outage",
+      "pubDate": "2022-06-21T07:30:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "An issue with Cloudflare has brought several crypto exchanges to a halt.",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Along with Discord and a significant porition of the internet, we are experiencing issues on…",
+      "link": "https://cryptopanic.com/news/15555714/Along-with-Discord-and-a-significant-porition-of-the-internet-we-are-experiencing-issues-on?mtm_campaign=API-OFA",
+      "pubDate": "2022-06-21T06:52:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOLO",
+        "META",
+        "MASK",
+        "BEAM",
+        "ANIME",
+        "WHALE",
+        "ALPACA",
+        "DUCK",
+        "PUNK",
+        "UWU",
+        "NFTX",
+        "PUNK-BASIC",
+        "PUNK-FEMALE",
+        "PUNK-ATTR-4",
+        "PUNK-ATTR-5",
+        "PUNK-ZOMBIE",
+        "AVASTR",
+        "COOL",
+        "BAYC",
+        "KITTY",
+        "BERRY",
+        "FACE",
+        "HYPER",
+        "MINUTE",
+        "PATH",
+        "WAIFU",
+        "BGAN",
+        "BUNNY",
+        "BONSAI",
+        "CARD",
+        "MOONCAT",
+        "GLYPH",
+        "MEEB",
+        "SQGL",
+        "BAKC",
+        "ENERGY",
+        "RINGER",
+        "MANEKI",
+        "SPUNK",
+        "PASTA",
+        "PUPS",
+        "TOSHIMON",
+        "SODIUM",
+        "CNHPD",
+        "PHUNK",
+        "HDPUNK",
+        "KONGZ",
+        "MORPH",
+        "WIZARD",
+        "COLLECTIVE",
+        "KAMAX",
+        "TOPDOG",
+        "DFNORM",
+        "CLOCK",
+        "CITIES",
+        "LONDON",
+        "MILADY"
+      ]
+    },
+    {
+      "title": "VICEWRLD is now on establishing ourselves as household adult content producer. #adult…",
+      "link": "https://cryptopanic.com/news/15557887/VICEWRLD-is-now-on-establishing-ourselves-as-household-adult-content-producer-adult?mtm_campaign=API-OFA",
+      "pubDate": "2022-06-21T06:03:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VICE"
+      ]
+    },
+    {
+      "title": "[EVENT] MediBloc successfully completes 2022 Spring Conference of the Korea Information Technology of Hospital Ass…",
+      "link": "https://cryptopanic.com/news/15555366/EVENT-MediBloc-successfully-completes-2022-Spring-Conference-of-the-Korea-Information-Technology-of-Hospital-Ass",
+      "pubDate": "2022-06-21T05:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MED"
+      ]
+    },
+    {
+      "title": "Watch @GunnisonCap astute presentation on Digital Assets and Tokenisation: Roadmap to Building a Competitive Advant…",
+      "link": "https://cryptopanic.com/news/15552653/Watch-GunnisonCap-astute-presentation-on-Digital-Assets-and-Tokenisation-Roadmap-to-Building-a-Competitive-Advant?mtm_campaign=API-OFA",
+      "pubDate": "2022-06-21T04:15:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHEX"
+      ]
+    },
+    {
+      "title": "To build a blockchain with high scalability but also low latency and transaction fee is no easy feat. We've made a…",
+      "link": "https://cryptopanic.com/news/klay-token/15554874/To-build-a-blockchain-with-high-scalability-but-also-low-latency-and-transaction-fee-is-no-easy-feat-Weve-made-a",
+      "pubDate": "2022-06-21T02:48:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY"
+      ]
+    },
+    {
+      "title": "Ethereum testnet Beacon Chain launched and ready for trial merge",
+      "link": "https://cryptopanic.com/news/15551332/Ethereum-testnet-Beacon-Chain-launched-and-ready-for-trial-merge",
+      "pubDate": "2022-06-21T01:28:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The Sepolia testnet is the next in line after Ropsten to undergo a merge trial run since its Beacon Chain is now live and ready to give developers valuable information leading up to the real thing.",
+      "currencies": [
+        "ETH",
+        "XCN"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

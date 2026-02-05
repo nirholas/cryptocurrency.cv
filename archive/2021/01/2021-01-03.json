@@ -1,0 +1,83 @@
+{
+  "date": "2021-01-03",
+  "fetchedAt": "2026-02-05T07:27:06.981Z",
+  "articleCount": 5,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Grayscale Did Not Unload 9 Million XRP Amidst Ongoing Ripple Lawsuit",
+      "link": "https://cryptopanic.com/news/ripple/11005734/Grayscale-Did-Not-Unload-9-Million-XRP-Amidst-Ongoing-Ripple-Lawsuit",
+      "pubDate": "2021-01-03T18:29:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Grayscale Investments LLC has dumped more than 9 million XRP following the bombshell lawsuit brought against parent company Ripple by the SEC.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Best of #2020 ! Thank you to @ESTIEMtweets for the great article!",
+      "link": "https://cryptopanic.com/news/11002101/Best-of-2020-Thank-you-to-ESTIEMtweets-for-the-great-article?mtm_campaign=API-OFA",
+      "pubDate": "2021-01-03T11:23:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EDU"
+      ]
+    },
+    {
+      "title": "RT @btsfav: #Bitcoin Experiment: Financial Freedom with Faucets?! Week 25",
+      "link": "https://cryptopanic.com/news/11001517/RT-btsfav-Bitcoin-Experiment-Financial-Freedom-with-Faucets-Week-25",
+      "pubDate": "2021-01-03T09:22:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "Crypto Trader Names 7 Explosive Altcoins That Could 20x in 2021",
+      "link": "https://cryptopanic.com/news/11001154/Crypto-Trader-Names-7-Explosive-Altcoins-That-Could-20x-in-2021",
+      "pubDate": "2021-01-03T08:04:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Crypto trader Ben Armstrong is revealing his top seven altcoin picks that he says have the potential to print 20x gains this year. In a recent video, the trader known in the industry as BitBoy Crypto tells his 205,000 subscribers that Basic Attention Token (BAT), which is the Ethereum-based crypto asset of the privacy-centric browser, […]",
+      "currencies": [
+        "BAT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogecoin (DOGE) surges over 100% as Bitcoin bull run takes BTC to $33,000",
+      "link": "https://cryptopanic.com/news/dogecoin/10998860/Dogecoin-DOGE-surges-over-100-as-Bitcoin-bull-run-takes-BTC-to-33000",
+      "pubDate": "2021-01-03T00:55:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin has exploded higher over the past 24 hours yet again, moving higher rapidly after passing the $30,000 price resistance level.",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 11
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

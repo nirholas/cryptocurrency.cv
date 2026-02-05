@@ -1,0 +1,287 @@
+{
+  "date": "2023-09-09",
+  "fetchedAt": "2026-02-05T07:27:07.313Z",
+  "articleCount": 20,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Watch Out: Vitalik Buterin’s Twitter Account Has Been Hacked – Don’t Click on the Link He Shared",
+      "link": "https://cryptopanic.com/news/18892042/Watch-Out-Vitalik-Buterins-Twitter-Account-Has-Been-Hacked-Dont-Click-on-the-Link-He-Shared",
+      "pubDate": "2023-09-09T23:41:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The Twitter (X) account of Ethereum founder Vitalik Buterin appears to have been hacked. Be careful about sharing from the account. Continue Reading: Watch Out: Vitalik Buterin’s Twitter Account Has Been Hacked – Don’t Click on the Link He Shared",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "ApeCoin DAO weighs 4 proposals to “expand ecosystem” – details inside",
+      "link": "https://cryptopanic.com/news/18892012/ApeCoin-DAO-weighs-4-proposals-to-expand-ecosystem-details-inside",
+      "pubDate": "2023-09-09T22:30:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "APE"
+      ]
+    },
+    {
+      "title": "Ripple’s XRP Primed For Ballistic Rally Amid Adoption By Banks in Indonesia, Philippines, Vietnam",
+      "link": "https://cryptopanic.com/news/18891976/Ripples-XRP-Primed-For-Ballistic-Rally-Amid-Adoption-By-Banks-in-Indonesia-Philippines-Vietnam",
+      "pubDate": "2023-09-09T21:32:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "SBI Remit is increasing its reach in the region with the help of Ripple.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Stellar (XLM) Soars By 17% In A Single Week – Can Bulls Maintain Push To $1?",
+      "link": "https://cryptopanic.com/news/18891749/Stellar-XLM-Soars-By-17-In-A-Single-Week-Can-Bulls-Maintain-Push-To-1",
+      "pubDate": "2023-09-09T17:00:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "XRP",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Chainalysis Denounces Bitcoin Core Contributor As “Unqualified”",
+      "link": "https://cryptopanic.com/news/18891740/Chainalysis-Denounces-Bitcoin-Core-Contributor-As-Unqualified",
+      "pubDate": "2023-09-09T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "RNDR"
+      ]
+    },
+    {
+      "title": "Fourth Consecutive Week of Decline: NFT Sales Dip 6.75%",
+      "link": "https://cryptopanic.com/news/18891687/Fourth-Consecutive-Week-of-Decline-NFT-Sales-Dip-675",
+      "pubDate": "2023-09-09T16:00:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "CRO"
+      ]
+    },
+    {
+      "title": "SEC Files Appeal Against Ripple as Legal Battle Intensifies",
+      "link": "https://cryptopanic.com/news/18891630/SEC-Files-Appeal-Against-Ripple-as-Legal-Battle-Intensifies",
+      "pubDate": "2023-09-09T15:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The SEC levels allegations against Ripple, accusing the company of stalling resolution to preserve unregulated XRP sales.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Biggest Movers: DOGE Moves Away From Support Level, XLM Nears 1-Month High",
+      "link": "https://cryptopanic.com/news/18891550/Biggest-Movers-DOGE-Moves-Away-From-Support-Level-XLM-Nears-1-Month-High",
+      "pubDate": "2023-09-09T14:00:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Binance NFT Marketplace Ends Support For Polygon Network",
+      "link": "https://cryptopanic.com/news/18891512/Binance-NFT-Marketplace-Ends-Support-For-Polygon-Network",
+      "pubDate": "2023-09-09T13:23:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "MATIC",
+        "SAND"
+      ]
+    },
+    {
+      "title": "Terra Luna Classic Community Votes On Major Proposal, LUNC And LUNA Reversal?",
+      "link": "https://cryptopanic.com/news/18891450/Terra-Luna-Classic-Community-Votes-On-Major-Proposal-LUNC-And-LUNA-Reversal",
+      "pubDate": "2023-09-09T13:10:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LUNC"
+      ]
+    },
+    {
+      "title": "BULLRUN READY SANDBOX SAND | Explosive LAND Update",
+      "link": "https://cryptopanic.com/news/the-sandbox/18891462/BULLRUN-READY-SANDBOX-SAND-Explosive-LAND-Update",
+      "pubDate": "2023-09-09T12:51:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SAND"
+      ]
+    },
+    {
+      "title": "XLM Sees 4+% Price Increase, Analyst Predicts Run To $0.136",
+      "link": "https://cryptopanic.com/news/18891405/XLM-Sees-4-Price-Increase-Analyst-Predicts-Run-To-0136",
+      "pubDate": "2023-09-09T12:27:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "SEC Accuses Ripple of Slowing the Lawsuit to Keep Selling XRP",
+      "link": "https://cryptopanic.com/news/18891252/SEC-Accuses-Ripple-of-Slowing-the-Lawsuit-to-Keep-Selling-XRP",
+      "pubDate": "2023-09-09T11:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ]
+    },
+    {
+      "title": "Binance Coin Price Prediction: Will Correction Trend Push BNB Under $200?",
+      "link": "https://cryptopanic.com/news/18891223/Binance-Coin-Price-Prediction-Will-Correction-Trend-Push-BNB-Under-200",
+      "pubDate": "2023-09-09T11:02:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "BNB",
+        "SHIB",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Stellar (XLM) Is Up 8%, and This Could Be Why",
+      "link": "https://cryptopanic.com/news/18890786/Stellar-XLM-Is-Up-8-and-This-Could-Be-Why",
+      "pubDate": "2023-09-09T10:36:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Stellar (XLM) notches biggest daily gains among top 100 cryptocurrencies",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Shiba Inu Tallies 77% Accumulation By Major Investors – Good For SHIB Price?",
+      "link": "https://cryptopanic.com/news/18890683/Shiba-Inu-Tallies-77-Accumulation-By-Major-Investors-Good-For-SHIB-Price",
+      "pubDate": "2023-09-09T09:10:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SHIB",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Bitcoin (BTC) Loses $26K Again, Stellar (XLM) Defies Market Sentiment: Weekend Watch",
+      "link": "https://cryptopanic.com/news/18890657/Bitcoin-BTC-Loses-26K-Again-Stellar-XLM-Defies-Market-Sentiment-Weekend-Watch",
+      "pubDate": "2023-09-09T08:48:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Stellar (XLM) would trade at this price if XLM hits its all-time high market cap",
+      "link": "https://cryptopanic.com/news/18890557/Stellar-XLM-would-trade-at-this-price-if-XLM-hits-its-all-time-high-market-cap",
+      "pubDate": "2023-09-09T07:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Shiba Inu’s ($SHIB) Origin Update, Maker ($MKR) and Borroe.Finance ($ROE) Surges Explained",
+      "link": "https://cryptopanic.com/news/maker/18891611/Shiba-Inus-SHIB-Origin-Update-Maker-MKR-and-BorroeFinance-ROE-Surges-Explained",
+      "pubDate": "2023-09-09T07:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "Analyst Updates Outlook on Chainlink, Avalanche, Fantom and One Altcoin That’s Exploded Over 700% in Matter of Weeks",
+      "link": "https://cryptopanic.com/news/18890348/Analyst-Updates-Outlook-on-Chainlink-Avalanche-Fantom-and-One-Altcoin-Thats-Exploded-Over-700-in-Matter-of-Weeks",
+      "pubDate": "2023-09-09T00:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "LINK",
+        "FTM"
+      ]
+    }
+  ]
+}

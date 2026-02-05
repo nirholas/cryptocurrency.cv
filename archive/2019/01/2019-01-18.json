@@ -1,0 +1,72 @@
+{
+  "date": "2019-01-18",
+  "fetchedAt": "2026-02-05T07:27:06.988Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "The Future of Aviation - visit our updated website #Aviation #Cloud…",
+      "link": "https://cryptopanic.com/news/4312087/The-Future-of-Aviation-visit-our-updated-website-Aviation-Cloud",
+      "pubDate": "2019-01-18T17:46:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVINOC"
+      ]
+    },
+    {
+      "title": "TRON Announces Key BitTorrent Features to Stimulate Native Token Adoption",
+      "link": "https://cryptopanic.com/news/tron/4310586/TRON-Announces-Key-BitTorrent-Features-to-Stimulate-Native-Token-Adoption",
+      "pubDate": "2019-01-18T15:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Stellar joins Bitcoin, Ripple on real, non-seedy asset fund",
+      "link": "https://cryptopanic.com/news/stellar/4309419/Stellar-joins-Bitcoin-Ripple-on-real-non-seedy-asset-fund",
+      "pubDate": "2019-01-18T12:42:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "3 Blockchain Projects With A Substantial User Base Right Now",
+      "link": "https://cryptopanic.com/news/tron/4309347/3-Blockchain-Projects-With-A-Substantial-User-Base-Right-Now",
+      "pubDate": "2019-01-18T12:41:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

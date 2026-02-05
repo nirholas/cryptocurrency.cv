@@ -1,0 +1,25 @@
+{
+  "date": "2018-11-16",
+  "fetchedAt": "2026-02-05T07:27:06.811Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Major Exchanges Are Already Distributing New Bitcoin Cash Tokens",
+      "link": "https://cryptopanic.com/news/3704975/Major-Exchanges-Are-Already-Distributing-New-Bitcoin-Cash-Tokens",
+      "pubDate": "2018-11-16T13:31:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 4
+      }
+    }
+  ]
+}

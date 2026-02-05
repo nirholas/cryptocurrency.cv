@@ -1,0 +1,25 @@
+{
+  "date": "2019-08-14",
+  "fetchedAt": "2026-02-05T07:27:06.901Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Barclays Is No Longer Banking Coinbase",
+      "link": "https://cryptopanic.com/news/6306931/Barclays-Is-No-Longer-Banking-Coinbase",
+      "pubDate": "2019-08-14T01:08:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "date": "2019-02-22",
+  "fetchedAt": "2026-02-05T07:27:06.907Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Brazil’s BTG Pactual Bank to Add Security Token to Portfolio",
+      "link": "https://cryptopanic.com/news/4643678/Brazils-BTG-Pactual-Bank-to-Add-Security-Token-to-Portfolio",
+      "pubDate": "2019-02-22T23:00:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BTG"
+      ]
+    },
+    {
+      "title": "Epic Games CEO Shows Support for EOS on Twitter",
+      "link": "https://cryptopanic.com/news/4642224/Epic-Games-CEO-Shows-Support-for-EOS-on-Twitter",
+      "pubDate": "2019-02-22T19:17:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "One Big Step Done - from today AVINOC is a Registered Trade Mark of the European Union #Aviation #BizAv #blockchain",
+      "link": "https://cryptopanic.com/news/4639009/One-Big-Step-Done-from-today-AVINOC-is-a-Registered-Trade-Mark-of-the-European-Union-Aviation-BizAv-blockchain",
+      "pubDate": "2019-02-22T13:14:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVINOC"
+      ]
+    },
+    {
+      "title": "Litecoin Price Forecast 2019: Set Sail to Break the $50 Iceberg and Swim as Far as $230",
+      "link": "https://cryptopanic.com/news/litecoin/4638517/Litecoin-Price-Forecast-2019-Set-Sail-to-Break-the-50-Iceberg-and-Swim-as-Far-as-230",
+      "pubDate": "2019-02-22T11:44:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

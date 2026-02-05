@@ -1,0 +1,636 @@
+{
+  "date": "2021-07-22",
+  "fetchedAt": "2026-02-05T07:27:06.513Z",
+  "articleCount": 42,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Stacks (STX) price rallies 195% after revealing plans to bring DeFi to Bitcoin",
+      "link": "https://cryptopanic.com/news/12379151/Stacks-STX-price-rallies-195-after-revealing-plans-to-bring-DeFi-to-Bitcoin",
+      "pubDate": "2021-07-22T23:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "STX price rallied 195% after the introduction of smart contracts enabled the launch of DeFi and NFTs on the Bitcoin network.",
+      "currencies": [
+        "BTC",
+        "STX"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We released a new mainnet version v2.1.5, adding enhanced security mechanism for sigchain miner selection. Miners:…",
+      "link": "https://cryptopanic.com/news/12382278/We-released-a-new-mainnet-version-v215-adding-enhanced-security-mechanism-for-sigchain-miner-selection-Miners",
+      "pubDate": "2021-07-22T22:53:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "NKN"
+      ]
+    },
+    {
+      "title": "Ripple Handed a ‘Gift’ That Could Help Them Win Against the SEC, Says American Attorney",
+      "link": "https://cryptopanic.com/news/ripple/12378780/Ripple-Handed-a-Gift-That-Could-Help-Them-Win-Against-the-SEC-Says-American-Attorney",
+      "pubDate": "2021-07-22T20:00:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Jeremy Hogan, a partner at the American law firm Hogan & Hogan, says a recent public statement by two “brave” members of the U.S. Securities and Exchange Commission (SEC) could help Ripple win the lawsuit filed against them by the SEC in December 2020. On 22 December 2020, the SEC announced that it had “filed an action […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @CREAM_listing: The Listing Committee has voted to list $PAX & $PAXG on ETH v1 market @PaxosGlobal @PaxosStandard",
+      "link": "https://cryptopanic.com/news/paxos-standard/12380696/RT-CREAM_listing-The-Listing-Committee-has-voted-to-list-PAX-amp-PAXG-on-ETH-v1-market-PaxosGlobal-PaxosStandard",
+      "pubDate": "2021-07-22T19:51:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "CREAM",
+        "PAX",
+        "CRETH2"
+      ]
+    },
+    {
+      "title": "\"It's my biggest milestone,\" Lebron James said in 2014. \"And if I happen to get it, if I happen to be a billion-dol…",
+      "link": "https://cryptopanic.com/news/12378692/Its-my-biggest-milestone-Lebron-James-said-in-2014-And-if-I-happen-to-get-it-if-I-happen-to-be-a-billion-dol",
+      "pubDate": "2021-07-22T19:39:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REP"
+      ]
+    },
+    {
+      "title": "Ripple vs. SEC Lawsuit Takes A Surprising Turn As New Bombshell Case Springs Up",
+      "link": "https://cryptopanic.com/news/ripple/12378586/Ripple-vs-SEC-Lawsuit-Takes-A-Surprising-Turn-As-New-Bombshell-Case-Springs-Up",
+      "pubDate": "2021-07-22T18:48:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "A recent development in the case of Ripple and the SEC, that saw two independent defendants file a letter to have their connection with the case summarily dismissed, may turn the case in Ripple’s favor. In a letter filed by co-founders of Ripple, Bradley Garlinghouse and Christian A. Larsen asked the court to dismiss their […]",
+      "currencies": [
+        "USDT",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @safenetworktech: Here’s the latest on DBC integration, #UXD, bug squashing, and more! #opensource #Crypto #data…",
+      "link": "https://cryptopanic.com/news/12378565/RT-safenetworktech-Heres-the-latest-on-DBC-integration-UXD-bug-squashing-and-more-opensource-Crypto-data",
+      "pubDate": "2021-07-22T18:42:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "US Megabank JPMorgan To Let All Retail Customers Invest In Bitcoin, Ethereum, And Bitcoin Cash Funds",
+      "link": "https://cryptopanic.com/news/12378544/US-Megabank-JPMorgan-To-Let-All-Retail-Customers-Invest-In-Bitcoin-Ethereum-And-Bitcoin-Cash-Funds",
+      "pubDate": "2021-07-22T18:22:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Major American investment bank JPMorgan Chase & Co will give its wealth management clients access to a selection of cryptocurrency funds, becoming the largest and unlikeliest United States banking giant to open crypto trading to all clients. JPMorgan Expands Cryptocurrency Access JPMorgan’s financial advisors have been approved to execute trades with the shares of Bitcoin, […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 36,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Lawsuit Claims Dfinity ICP Token is Unregistered Security",
+      "link": "https://cryptopanic.com/news/12378455/Lawsuit-Claims-Dfinity-ICP-Token-is-Unregistered-Security",
+      "pubDate": "2021-07-22T17:51:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Polychain, Andreessen Horowitz, and Dfinity's founder have also been implicated in the suit.",
+      "currencies": [
+        "ICP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @lukebp_: The \"Automatic Ticket Revocations Consensus Change\" proposal has officially been approved by the $dcr stakeholders. This propo…",
+      "link": "https://cryptopanic.com/news/12378388/RT-lukebp_-The-Automatic-Ticket-Revocations-Consensus-Change-proposal-has-officially-been-approved-by-the-dcr-stakeholders-This-propo",
+      "pubDate": "2021-07-22T17:33:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DCR"
+      ]
+    },
+    {
+      "title": "GameDAO will grow with HSC. We prepared Games,for your brilliant ideas,Hopes you can enjoy it",
+      "link": "https://cryptopanic.com/news/12589743/GameDAO-will-grow-with-HSC-We-prepared-Gamesfor-your-brilliant-ideasHopes-you-can-enjoy-it",
+      "pubDate": "2021-07-22T17:30:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DAO"
+      ]
+    },
+    {
+      "title": "Every day, we are inspired by people who make a difference to fulfill our mission. Today’s #greenquote comes from…",
+      "link": "https://cryptopanic.com/news/12381049/Every-day-we-are-inspired-by-people-who-make-a-difference-to-fulfill-our-mission-Todays-greenquote-comes-from",
+      "pubDate": "2021-07-22T17:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "The latest Theta protocol release version 3.1.0 will soon be released on July 25 as a significant milestone for usa…",
+      "link": "https://cryptopanic.com/news/theta-token/12383473/The-latest-Theta-protocol-release-version-310-will-soon-be-released-on-July-25-as-a-significant-milestone-for-usa",
+      "pubDate": "2021-07-22T17:21:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Wolfram Blockchain Labs minting NFT! Shall we have a rule 110 or MOCA for $NKN?",
+      "link": "https://cryptopanic.com/news/12382279/Wolfram-Blockchain-Labs-minting-NFT-Shall-we-have-a-rule-110-or-MOCA-for-NKN",
+      "pubDate": "2021-07-22T17:18:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "NKN"
+      ]
+    },
+    {
+      "title": "We would like to register for the CoinMarketCap - Self management Dashboard @CoinMarketCap",
+      "link": "https://cryptopanic.com/news/12381392/We-would-like-to-register-for-the-CoinMarketCap-Self-management-Dashboard-CoinMarketCap",
+      "pubDate": "2021-07-22T16:35:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Ripple Price Analysis: XRP Bulls Regroup to Retest $0.6, Recovery Inbound?",
+      "link": "https://cryptopanic.com/news/ripple/12378206/Ripple-Price-Analysis-XRP-Bulls-Regroup-to-Retest-06-Recovery-Inbound",
+      "pubDate": "2021-07-22T16:35:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP climbed by around 2% today as it heads toward $0.60. Against BTC, the cryptocurrency attempts to reclaim 1800 SAT after falling to 1750 SAT.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "MoneyGram Reportedly Receives Preliminary Takeover Interest From Stellar Foundation",
+      "link": "https://cryptopanic.com/news/12378105/MoneyGram-Reportedly-Receives-Preliminary-Takeover-Interest-From-Stellar-Foundation",
+      "pubDate": "2021-07-22T16:05:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Major international money-transfer service, MoneyGram, has received primary takeover interest from Stellar Development Foundation and Advent International.",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Stellar's (XLM) DeFis Experiment with New Type of Smart Contracts: Details",
+      "link": "https://cryptopanic.com/news/12377772/Stellars-XLM-DeFis-Experiment-with-New-Type-of-Smart-Contracts-Details",
+      "pubDate": "2021-07-22T14:26:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Project Venus is working on empowering dApps on Stellar (XLM) with entirely novel type of smart contracts",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "It's intersting that in uniswap, the liquidity tab shows bid support on the right, and sell resistance on the left.…",
+      "link": "https://cryptopanic.com/news/12381453/Its-intersting-that-in-uniswap-the-liquidity-tab-shows-bid-support-on-the-right-and-sell-resistance-on-the-left",
+      "pubDate": "2021-07-22T13:45:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "RT @PlayPolkadot: Follow us on Telegram",
+      "link": "https://cryptopanic.com/news/12382127/RT-PlayPolkadot-Follow-us-on-Telegram",
+      "pubDate": "2021-07-22T13:30:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MOG"
+      ]
+    },
+    {
+      "title": "USDT Will Keep Leading the Pack in Transparency – Tether CTO",
+      "link": "https://cryptopanic.com/news/12377566/USDT-Will-Keep-Leading-the-Pack-in-Transparency-Tether-CTO",
+      "pubDate": "2021-07-22T13:11:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Tether CTO, Paolo Ardoino, has emphasized that Tether will keep leading the pack in transparency Mr. Ardoino also pointed out that Tether is working on a full audit with regulators His comments on Tether come after the team at Paxos, stated that USDT and USDC are not regulated digital assets since they are backed by illiquid and risky debt obligations The CTO at both Bitfinex and Tether, Paolo...",
+      "currencies": [
+        "USDT",
+        "USDC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Space Heaters, Starlink, Mining Batteries Are Musk’s Plans For Bitcoin",
+      "link": "https://cryptopanic.com/news/dogecoin/12377438/Space-Heaters-Starlink-Mining-Batteries-Are-Musks-Plans-For-Bitcoin",
+      "pubDate": "2021-07-22T12:34:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "“Let’s say you need a little space heater, and normally your space heater would be pure entropy, but what if that space heater also was a bitcoin, ethereum, doge mining...",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Upward From Here? Analyst Strongly Insists Bitcoin Has Fully Bottomed Out",
+      "link": "https://cryptopanic.com/news/12377414/Upward-From-Here-Analyst-Strongly-Insists-Bitcoin-Has-Fully-Bottomed-Out",
+      "pubDate": "2021-07-22T12:24:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Over the past weeks, analysts have been dropping hot takes on Bitcoin, and a majority of them have been bullish. On the other hand, skeptics insist that Bitcoin has not fully bottomed out, insisting like JPMorgan that Bitcoin could still go as low as $20,000 before a bounce-back could make its way into the market. […]",
+      "currencies": [
+        "BTC",
+        "QNT"
+      ],
+      "votes": {
+        "positive": 33,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "“eCash combines Bitcoin’s core features—the same fixed supply, halving schedule, and genesis block—with the latest…",
+      "link": "https://cryptopanic.com/news/ecash/12384065/eCash-combines-Bitcoins-core-featuresthe-same-fixed-supply-halving-schedule-and-genesis-blockwith-the-latest",
+      "pubDate": "2021-07-22T11:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "RT @jieyilong: Here we go! 40% TFUEL staked @Theta_Network",
+      "link": "https://cryptopanic.com/news/theta-token/12383474/RT-jieyilong-Here-we-go-40-TFUEL-staked-Theta_Network",
+      "pubDate": "2021-07-22T10:37:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogecoin becomes the 7th cryptocurrency accepted on Coinbase Commerce",
+      "link": "https://cryptopanic.com/news/dogecoin/12376907/Dogecoin-becomes-the-7th-cryptocurrency-accepted-on-Coinbase-Commerce",
+      "pubDate": "2021-07-22T08:43:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Coinbase’s e-commerce platform now offers a new way to spend Elon Musk’s favorite meme cryptocurrency.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "219.3 Million XRP Transferred to Bitstamp, While XRP Approaches $0.6",
+      "link": "https://cryptopanic.com/news/ripple/12376895/2193-Million-XRP-Transferred-to-Bitstamp-While-XRP-Approaches-06",
+      "pubDate": "2021-07-22T08:36:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "An amount close to 220 million XRP has been shifted to the Bitstamp crypto exchange; the transfer totals $123.6 million in fiat",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Chainlink (LINK) price feeds are now live on Avalanche",
+      "link": "https://cryptopanic.com/news/12376890/Chainlink-LINK-price-feeds-are-now-live-on-Avalanche",
+      "pubDate": "2021-07-22T08:35:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Chainlink ‘Price Feeds’ are now live on the Avalanche (AVAX) mainnet, bringing price reference data to protocol developers across a variety of asset classes, as per a release shared with CryptoSlate today.",
+      "currencies": [
+        "AVAX",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin traders split on $40K chances as altcoins eye potential ‘80%–150%’ gains",
+      "link": "https://cryptopanic.com/news/dogecoin/12376860/Bitcoin-traders-split-on-40K-chances-as-altcoins-eye-potential-80150-gains",
+      "pubDate": "2021-07-22T08:14:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Ranging continues for BTC/USD, but conditions may be right for a late surge to range highs above $40,000.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tether Claims it Will Conduct an Audit in ‘a Matter of Months’",
+      "link": "https://cryptopanic.com/news/12376051/Tether-Claims-it-Will-Conduct-an-Audit-in-a-Matter-of-Months",
+      "pubDate": "2021-07-22T07:30:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Tether General Counsel Stuart Hoegner said that an audit of Tether’s reserves could be released in a few month's time.",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Elon Musk: I Personally Own Bitcoin, Ethereum and Dogecoin",
+      "link": "https://cryptopanic.com/news/dogecoin/12375817/Elon-Musk-I-Personally-Own-Bitcoin-Ethereum-and-Dogecoin",
+      "pubDate": "2021-07-22T07:27:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Amid the B Word Event, the Tesla CEO revealed that he has BTC, ETH, and DOGE, while his aerospace company SpaceX owns Bitcoin.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Elon Musk Says He Owns Bitcoin, Ethereum and Dogecoin, With Tesla and SpaceX Holding BTC for the Long Run",
+      "link": "https://cryptopanic.com/news/dogecoin/12375839/Elon-Musk-Says-He-Owns-Bitcoin-Ethereum-and-Dogecoin-With-Tesla-and-SpaceX-Holding-BTC-for-the-Long-Run",
+      "pubDate": "2021-07-22T07:15:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Tesla CEO Elon Musk is pulling back the curtain on his crypto portfolio. In a new discussion at the virtual B Word Conference, Musk says that he personally owns Bitcoin (BTC), Ethereum and Dogecoin (DOGE). The CEO also confirms that Tesla and his other tech company SpaceX both hold Bitcoin on their balance sheets. “I […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @PromoTeamPD: Recently @web3foundation has celebrated the 10th wave of Open and General grants and 27 teams were funded. Let’s look thr…",
+      "link": "https://cryptopanic.com/news/12382129/RT-PromoTeamPD-Recently-web3foundation-has-celebrated-the-10th-wave-of-Open-and-General-grants-and-27-teams-were-funded-Lets-look-thr",
+      "pubDate": "2021-07-22T07:04:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MOG"
+      ]
+    },
+    {
+      "title": "Ripple Rival Stellar in Talks to Acquire MoneyGram",
+      "link": "https://cryptopanic.com/news/12372248/Ripple-Rival-Stellar-in-Talks-to-Acquire-MoneyGram",
+      "pubDate": "2021-07-22T04:38:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "After terminating its partnership with Ripple, MoneyGram could end up being acquired by Stellar",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Here is an update from one of our incubated project Banana Clips by Crispy Whale. #NFT clips on $AERGO platform.",
+      "link": "https://cryptopanic.com/news/12372411/Here-is-an-update-from-one-of-our-incubated-project-Banana-Clips-by-Crispy-Whale-NFT-clips-on-AERGO-platform",
+      "pubDate": "2021-07-22T03:25:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "Tether promises an audit in 'months' as Paxos claims USDT is not a real stablecoin",
+      "link": "https://cryptopanic.com/news/12372138/Tether-promises-an-audit-in-months-as-Paxos-claims-USDT-is-not-a-real-stablecoin",
+      "pubDate": "2021-07-22T03:15:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Tether’s general counsel said a full audit is coming in months.",
+      "currencies": [
+        "USDT"
+      ]
+    },
+    {
+      "title": "TA: Bitcoin Trim Losses, Why Bulls Need To Overcome $32.5K For More Upsides",
+      "link": "https://cryptopanic.com/news/near/12372122/TA-Bitcoin-Trim-Losses-Why-Bulls-Need-To-Overcome-325K-For-More-Upsides",
+      "pubDate": "2021-07-22T03:08:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin price started a strong upward move from the $29,250 support zone against the US Dollar. BTC must settle above $32,000 and $32,500 for more upsides in the near term. Bitcoin started a strong increase above the $30,000 and $31,000 resistance levels. The price is now trading well above $31,000 and the 100 hourly simple moving average. There was a break above a major bearish trend line...",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin has disappointed many but, let's not equate crypto space to BTC. A lot happening in the crypto industry and…",
+      "link": "https://cryptopanic.com/news/12374013/Bitcoin-has-disappointed-many-but-lets-not-equate-crypto-space-to-BTC-A-lot-happening-in-the-crypto-industry-and",
+      "pubDate": "2021-07-22T02:28:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Must be a day of milestones for $AERGO! Another achievement: AERGO incubated project CCCV adds #NFT sales function…",
+      "link": "https://cryptopanic.com/news/12372412/Must-be-a-day-of-milestones-for-AERGO-Another-achievement-AERGO-incubated-project-CCCV-adds-NFT-sales-function",
+      "pubDate": "2021-07-22T02:15:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "Double #TEL and #DFX incentives are now live on @DFXFinance and will be integrated into the #TELx staking portal ve…",
+      "link": "https://cryptopanic.com/news/12376221/Double-TEL-and-DFX-incentives-are-now-live-on-DFXFinance-and-will-be-integrated-into-the-TELx-staking-portal-ve",
+      "pubDate": "2021-07-22T00:40:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "Introducing Paycoin's two new features, Paycoin Games and Paycoin Gift! Users will now be able to claim $PCI as rew…",
+      "link": "https://cryptopanic.com/news/12375244/Introducing-Paycoins-two-new-features-Paycoin-Games-and-Paycoin-Gift-Users-will-now-be-able-to-claim-PCI-as-rew?mtm_campaign=API-OFA",
+      "pubDate": "2021-07-22T00:18:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PCI"
+      ]
+    },
+    {
+      "title": "RT @protonheim: Just bought some new @protonxpr NFTs and looking to give them away - leave your proton username below and your favorite ite…",
+      "link": "https://cryptopanic.com/news/12375475/RT-protonheim-Just-bought-some-new-protonxpr-NFTs-and-looking-to-give-them-away-leave-your-proton-username-below-and-your-favorite-ite",
+      "pubDate": "2021-07-22T00:16:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "XPR"
+      ]
+    }
+  ]
+}

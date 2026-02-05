@@ -1,0 +1,42 @@
+{
+  "date": "2020-08-14",
+  "fetchedAt": "2026-02-05T07:27:06.863Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "VeChain, DNV GL’s My Care Solution Verifies Portsmouth International Port’s Infection Risk Protocols",
+      "link": "https://cryptopanic.com/news/9677383/VeChain-DNV-GLs-My-Care-Solution-Verifies-Portsmouth-International-Ports-Infection-Risk-Protocols",
+      "pubDate": "2020-08-14T18:00:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Chrysalis (IOTA 1.5) Phase 1 Set for August 19 Release on IOTA Mainnet",
+      "link": "https://cryptopanic.com/news/9676072/Chrysalis-IOTA-15-Phase-1-Set-for-August-19-Release-on-IOTA-Mainnet",
+      "pubDate": "2020-08-14T16:00:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

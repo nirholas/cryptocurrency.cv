@@ -1,0 +1,62 @@
+{
+  "date": "2019-03-14",
+  "fetchedAt": "2026-02-05T07:27:06.964Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Stellar (XLM) Overtakes Binance Coin (BNB)",
+      "link": "https://cryptopanic.com/news/4833160/Stellar-XLM-Overtakes-Binance-Coin-BNB",
+      "pubDate": "2019-03-14T15:39:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "TRON Dapp Transaction Volume Surpasses EOS, While TRX and BTT Enjoy Listings on More Exchanges",
+      "link": "https://cryptopanic.com/news/4830950/TRON-Dapp-Transaction-Volume-Surpasses-EOS-While-TRX-and-BTT-Enjoy-Listings-on-More-Exchanges",
+      "pubDate": "2019-03-14T11:59:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "TRX",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Breaking: Tether Silently Updates Its Terms – USDT May Not Be 100% Backed By FIAT",
+      "link": "https://cryptopanic.com/news/4830815/Breaking-Tether-Silently-Updates-Its-Terms-USDT-May-Not-Be-100-Backed-By-FIAT",
+      "pubDate": "2019-03-14T11:31:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

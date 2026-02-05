@@ -1,0 +1,37 @@
+{
+  "date": "2020-09-21",
+  "fetchedAt": "2026-02-05T07:27:06.983Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Is Andre Cronje (YFI’s Founder) Working on a Fantom-Based Uniswap Competitor?",
+      "link": "https://cryptopanic.com/news/uniswap/10034545/Is-Andre-Cronje-YFIs-Founder-Working-on-a-Fantom-Based-Uniswap-Competitor",
+      "pubDate": "2020-09-21T08:58:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BORA partner 'TWAVE' is a fintech company providing ‘imin’ service, a social fintech service grafting IT technology…",
+      "link": "https://cryptopanic.com/news/10032339/BORA-partner-TWAVE-is-a-fintech-company-providing-imin-service-a-social-fintech-service-grafting-IT-technology",
+      "pubDate": "2020-09-21T01:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BORA"
+      ]
+    }
+  ]
+}

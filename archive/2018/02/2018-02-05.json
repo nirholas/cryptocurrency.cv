@@ -1,0 +1,45 @@
+{
+  "date": "2018-02-05",
+  "fetchedAt": "2026-02-05T07:27:06.866Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Litecoin Payment Processor and Card Provider Litepay Launches February 2018",
+      "link": "https://cryptopanic.com/news/litecoin/986589/Litecoin-Payment-Processor-and-Card-Provider-Litepay-Launches-February-2018",
+      "pubDate": "2018-02-05T10:45:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Stellar, Neo and VeChain: the Top Performing Cryptocurrencies of January 2018",
+      "link": "https://cryptopanic.com/news/983668/Stellar-Neo-and-VeChain-the-Top-Performing-Cryptocurrencies-of-January-2018",
+      "pubDate": "2018-02-05T01:45:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "VET",
+        "NEO"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

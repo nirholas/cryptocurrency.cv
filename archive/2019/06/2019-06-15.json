@@ -1,0 +1,37 @@
+{
+  "date": "2019-06-15",
+  "fetchedAt": "2026-02-05T07:27:06.991Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Hello to the community, following our hosting problem, we have put this form in place so that you can find your inv…",
+      "link": "https://cryptopanic.com/news/11330450/Hello-to-the-community-following-our-hosting-problem-we-have-put-this-form-in-place-so-that-you-can-find-your-inv",
+      "pubDate": "2019-06-15T19:45:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SSX"
+      ]
+    },
+    {
+      "title": "Tron (TRX) Now Fuels IEOs on Latoken Exchange, TRX Liquidity Expected to Rise",
+      "link": "https://cryptopanic.com/news/tron/5721200/Tron-TRX-Now-Fuels-IEOs-on-Latoken-Exchange-TRX-Liquidity-Expected-to-Rise",
+      "pubDate": "2019-06-15T08:38:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

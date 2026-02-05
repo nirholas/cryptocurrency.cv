@@ -1,0 +1,383 @@
+{
+  "date": "2020-12-31",
+  "fetchedAt": "2026-02-05T07:27:06.786Z",
+  "articleCount": 25,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @GhamariPooyan: 6 New Coins Added to Counos Paper Wallet",
+      "link": "https://cryptopanic.com/news/10981391/RT-GhamariPooyan-6-New-Coins-Added-to-Counos-Paper-Wallet",
+      "pubDate": "2020-12-31T23:24:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "RT @GhamariPooyan: Wishing all of you holiday cheer and a Happy New Year.",
+      "link": "https://cryptopanic.com/news/10981389/RT-GhamariPooyan-Wishing-all-of-you-holiday-cheer-and-a-Happy-New-Year",
+      "pubDate": "2020-12-31T23:24:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "Polkadot Projects Can Make You Rich In 2021!",
+      "link": "https://cryptopanic.com/news/polkadot/10981378/POLKADOT-PROJECTS-CAN-MAKE-YOU-RICH-IN-2021",
+      "pubDate": "2020-12-31T23:10:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Faulty data? Grayscale didn’t liquidate massive amounts of XRP and XLM",
+      "link": "https://cryptopanic.com/news/10980391/Faulty-data-Grayscale-didnt-liquidate-massive-amounts-of-XRP-and-XLM",
+      "pubDate": "2020-12-31T20:47:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Grayscale’s XRP, XLM Trust Products Bleed Value Amid Ripple Lawsuit",
+      "link": "https://cryptopanic.com/news/ethereum/10979752/Grayscales-XRP-XLM-Trust-Products-Bleed-Value-Amid-Ripple-Lawsuit",
+      "pubDate": "2020-12-31T19:04:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "XRP Trading to Be Suspended Next Month on Bittrex, eToro US, Binance.US",
+      "link": "https://cryptopanic.com/news/ripple/10978552/XRP-Trading-to-Be-Suspended-Next-Month-on-Bittrex-eToro-US-BinanceUS",
+      "pubDate": "2020-12-31T16:27:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Wishing you all a blissful and prosperous new year!",
+      "link": "https://cryptopanic.com/news/10978257/Wishing-you-all-a-blissful-and-prosperous-new-year",
+      "pubDate": "2020-12-31T15:59:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Remarkable things did happen in the blockchain industry this year, both in the crypto-asset market and application…",
+      "link": "https://cryptopanic.com/news/10978087/Remarkable-things-did-happen-in-the-blockchain-industry-this-year-both-in-the-crypto-asset-market-and-application",
+      "pubDate": "2020-12-31T15:41:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "eToro is suspending XRP trading in the US",
+      "link": "https://cryptopanic.com/news/ripple/10977971/eToro-is-suspending-XRP-trading-in-the-US",
+      "pubDate": "2020-12-31T15:15:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "US exchanges are suspending or delisting XRP left and right",
+      "link": "https://cryptopanic.com/news/ripple/10977897/US-exchanges-are-suspending-or-delisting-XRP-left-and-right",
+      "pubDate": "2020-12-31T15:02:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Lets head into November, this month it was a little bit quite but in the background a lot of work has been done !…",
+      "link": "https://cryptopanic.com/news/11320904/Lets-head-into-November-this-month-it-was-a-little-bit-quite-but-in-the-background-a-lot-of-work-has-been-done",
+      "pubDate": "2020-12-31T14:28:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MOG"
+      ]
+    },
+    {
+      "title": "Ripple Executive Says It Became Impossible for Company to Give Away Its Massive XRP Holdings",
+      "link": "https://cryptopanic.com/news/ripple/10977384/Ripple-Executive-Says-It-Became-Impossible-for-Company-to-Give-Away-Its-Massive-XRP-Holdings",
+      "pubDate": "2020-12-31T13:55:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Here some screenshots",
+      "link": "https://cryptopanic.com/news/11320906/Here-some-screenshots",
+      "pubDate": "2020-12-31T13:38:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MOG"
+      ]
+    },
+    {
+      "title": "Not far from the next alpha on our new substrate testnet ...",
+      "link": "https://cryptopanic.com/news/11320908/Not-far-from-the-next-alpha-on-our-new-substrate-testnet",
+      "pubDate": "2020-12-31T13:28:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MOG"
+      ]
+    },
+    {
+      "title": "Ripple Decacorn Helps Top Exchanges Move 679 Million XRP",
+      "link": "https://cryptopanic.com/news/ripple/10976984/Ripple-Decacorn-Helps-Top-Exchanges-Move-679-Million-XRP",
+      "pubDate": "2020-12-31T13:10:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 12
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Polkadot Overtakes Bitcoin Cash in First Year of Activity",
+      "link": "https://cryptopanic.com/news/polkadot/10976588/Polkadot-Overtakes-Bitcoin-Cash-in-First-Year-of-Activity",
+      "pubDate": "2020-12-31T12:22:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Grayscale Dumps Over 9 Million XRP Among Ripple SEC Charges",
+      "link": "https://cryptopanic.com/news/ripple/10976471/Grayscale-Dumps-Over-9-Million-XRP-Among-Ripple-SEC-Charges",
+      "pubDate": "2020-12-31T11:56:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Polkadot's founder looks back on the year, teases Substrate 3.0 in early 2021",
+      "link": "https://cryptopanic.com/news/polkadot/10976162/Polkadots-founder-looks-back-on-the-year-teases-Substrate-30-in-early-2021",
+      "pubDate": "2020-12-31T11:02:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance.US to Delist XRP Amid Ripple Lawsuit",
+      "link": "https://cryptopanic.com/news/ripple/10975910/BinanceUS-to-Delist-XRP-Amid-Ripple-Lawsuit",
+      "pubDate": "2020-12-31T10:10:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "XRP Up 5% Despite Binance US and Genesis Trading Planning to Suspend XRP Trading",
+      "link": "https://cryptopanic.com/news/ripple/10975586/XRP-Up-5-Despite-Binance-US-and-Genesis-Trading-Planning-to-Suspend-XRP-Trading",
+      "pubDate": "2020-12-31T08:56:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "i made a steemit account just to see what it was. and i need some info",
+      "link": "https://cryptopanic.com/news/11493789/i-made-a-steemit-account-just-to-see-what-it-was-and-i-need-some-info",
+      "pubDate": "2020-12-31T08:51:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "Last Market Watch of 2020: Bitcoin Price Eyes $30K, Polkadot (DOT) Breaks ATH",
+      "link": "https://cryptopanic.com/news/polkadot/10975233/Last-Market-Watch-of-2020-Bitcoin-Price-Eyes-30K-Polkadot-DOT-Breaks-ATH",
+      "pubDate": "2020-12-31T08:08:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "fuck COVER",
+      "link": "https://cryptopanic.com/news/11377799/fuck-COVER?mtm_campaign=API-OFA",
+      "pubDate": "2020-12-31T03:45:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KOGE"
+      ]
+    },
+    {
+      "title": "Thanks everyone for your support! For those who leave your questions under the AMA tweet, please DM QuarkChain and…",
+      "link": "https://cryptopanic.com/news/10973557/Thanks-everyone-for-your-support-For-those-who-leave-your-questions-under-the-AMA-tweet-please-DM-QuarkChain-and",
+      "pubDate": "2020-12-31T02:29:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QKC"
+      ]
+    },
+    {
+      "title": "What's your plan for the coming New Year's Eve?",
+      "link": "https://cryptopanic.com/news/10973521/Whats-your-plan-for-the-coming-New-Years-Eve",
+      "pubDate": "2020-12-31T02:20:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    }
+  ]
+}

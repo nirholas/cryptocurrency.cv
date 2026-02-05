@@ -1,0 +1,38 @@
+{
+  "date": "2018-12-12",
+  "fetchedAt": "2026-02-05T07:27:06.984Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Stablecoins Experience a Major Increase in On-Chain Transactions Despite Bear Market",
+      "link": "https://cryptopanic.com/news/3956648/Stablecoins-Experience-a-Major-Increase-in-On-Chain-Transactions-Despite-Bear-Market",
+      "pubDate": "2018-12-12T14:30:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "GUSD"
+      ]
+    },
+    {
+      "title": "Monero Claims to Be the Sleeping Giant of Cryptocurrency, Here Is Why",
+      "link": "https://cryptopanic.com/news/3955464/Monero-Claims-to-Be-the-Sleeping-Giant-of-Cryptocurrency-Here-Is-Why",
+      "pubDate": "2018-12-12T12:29:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2019-11-27",
+  "fetchedAt": "2026-02-05T07:27:06.993Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "UpBit Exchange Hacked: Confirms $50 Million Worth Of Ethereum (ETH) Stolen",
+      "link": "https://cryptopanic.com/news/ethereum/7258542/UpBit-Exchange-Hacked-Confirms-50-Million-Worth-Of-Ethereum-ETH-Stolen",
+      "pubDate": "2019-11-27T09:58:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

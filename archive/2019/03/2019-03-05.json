@@ -1,0 +1,63 @@
+{
+  "date": "2019-03-05",
+  "fetchedAt": "2026-02-05T07:27:06.968Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Crypto Market Update Mar.5: Coinbase Scandals, BNB Breaks Records, and Bitcoin At Starbucks?",
+      "link": "https://cryptopanic.com/news/4744785/Crypto-Market-Update-Mar5-Coinbase-Scandals-BNB-Breaks-Records-and-Bitcoin-At-Starbucks",
+      "pubDate": "2019-03-05T16:01:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BNB"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron Partners with Tether to Make New USDT Tokens, Both Platforms Expect to Benefit",
+      "link": "https://cryptopanic.com/news/tron/4742318/Tron-Partners-with-Tether-to-Make-New-USDT-Tokens-Both-Platforms-Expect-to-Benefit",
+      "pubDate": "2019-03-05T11:11:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bakkt Coffee, Lightning Radio, TRON + Tether, Bitcoin Bull Signal & XRP Loans",
+      "link": "https://cryptopanic.com/news/tron/4742029/Bakkt-Coffee-Lightning-Radio-TRON-Tether-Bitcoin-Bull-Signal-XRP-Loans",
+      "pubDate": "2019-03-05T10:33:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

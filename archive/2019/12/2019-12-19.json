@@ -1,0 +1,42 @@
+{
+  "date": "2019-12-19",
+  "fetchedAt": "2026-02-05T07:27:06.977Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "New IOTA Roadmap Details Released: Privacy, Scalability, & Software Upgrade",
+      "link": "https://cryptopanic.com/news/7451993/New-IOTA-Roadmap-Details-Released-Privacy-Scalability-Software-Upgrade",
+      "pubDate": "2019-12-19T14:28:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "PlusToken Dump Continues: $100 Million Worth Of Ethereum (ETH) Transferred Out Of PlusToken’s Wallet",
+      "link": "https://cryptopanic.com/news/ethereum/7449972/PlusToken-Dump-Continues-100-Million-Worth-Of-Ethereum-ETH-Transferred-Out-Of-PlusTokens-Wallet",
+      "pubDate": "2019-12-19T10:01:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

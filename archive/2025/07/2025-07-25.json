@@ -1,0 +1,379 @@
+{
+  "date": "2025-07-25",
+  "fetchedAt": "2026-02-05T07:27:08.619Z",
+  "articleCount": 27,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "ECC Roadmap: Q3 2025",
+      "link": "https://cryptopanic.com/news/zcash/23677858/ECC-Roadmap-Q3-2025",
+      "pubDate": "2025-07-25T21:18:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "The Daily: Galaxy moves $3.5 billion in bitcoin, ex-BlackRock exec joins Ethereum treasury firm, OSL raises $300 million, and more",
+      "link": "https://cryptopanic.com/news/bitcoin/23676540/The-Daily-Galaxy-moves-35-billion-in-bitcoin-ex-BlackRock-exec-joins-Ethereum-treasury-firm-OSL-raises-300-million-and-more",
+      "pubDate": "2025-07-25T20:44:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Galaxy Digital moved nearly 30,000 BTC — worth around $3. 5 billion — to exchanges. SharpLink has named Joseph Chalom as its new co-CEO.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Here Are Major Milestones for Litecoin So Far in 2025",
+      "link": "https://cryptopanic.com/news/litecoin/23676485/Here-Are-Major-Milestones-for-Litecoin-So-Far-in-2025",
+      "pubDate": "2025-07-25T20:28:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Ethereum Price To Continue Rising in the Months Ahead Driven by One Catalyst, According to Bitwise CIO Matt Hougan",
+      "link": "https://cryptopanic.com/news/ethereum/23675214/Ethereum-Price-To-Continue-Rising-in-the-Months-Ahead-Driven-by-One-Catalyst-According-to-Bitwise-CIO-Matt-Hougan",
+      "pubDate": "2025-07-25T19:55:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The chief investment officer of the crypto asset management firm Bitwise says that Ethereum should continue growing in the coming months as demand for ETH increases.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Hedera Price Prediction: Robinhood Listing Propels HBAR Above Litecoin, Avalanche",
+      "link": "https://cryptopanic.com/news/avalanche-2/23676484/Hedera-Price-Prediction-Robinhood-Listing-Propels-HBAR-Above-Litecoin-Avalanche",
+      "pubDate": "2025-07-25T19:45:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "LTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "ETH price still on track for $4K even as Bitcoin, altcoins sell-off",
+      "link": "https://cryptopanic.com/news/bitcoin/23675167/ETH-price-still-on-track-for-4K-even-as-Bitcoin-altcoins-sell-off",
+      "pubDate": "2025-07-25T19:45:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Data shows the market still favors ETH even after Bitcoin’s sharp sell-off to $115,000.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Experts Recommend Ruvi AI (RUVI) Over Avalanche (AVAX), Its Partnership With CoinMarketCap Strengthens 138000% ROI Prediction",
+      "link": "https://cryptopanic.com/news/avalanche-2/23675222/Experts-Recommend-Ruvi-AI-RUVI-Over-Avalanche-AVAX-Its-Partnership-With-CoinMarketCap-Strengthens-138000-ROI-Prediction",
+      "pubDate": "2025-07-25T19:34:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Price predictions 7/25: BTC, ETH, XRP, BNB, SOL, DOGE, ADA, HYPE, XLM, SUI",
+      "link": "https://cryptopanic.com/news/stellar/23673732/Price-predictions-725-BTC-ETH-XRP-BNB-SOL-DOGE-ADA-HYPE-XLM-SUI",
+      "pubDate": "2025-07-25T18:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Algorand Just Tokenized US Bonds",
+      "link": "https://cryptopanic.com/news/algorand/23673712/Algorand-Just-Tokenized-US-Bonds",
+      "pubDate": "2025-07-25T18:15:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Trader Predicts 109% Dogecoin Rally if Major Level Is Reclaimed, Updates Outlook on Avalanche and Two Other Altcoins",
+      "link": "https://cryptopanic.com/news/avalanche-2/23672810/Trader-Predicts-109-Dogecoin-Rally-if-Major-Level-Is-Reclaimed-Updates-Outlook-on-Avalanche-and-Two-Other-Altcoins",
+      "pubDate": "2025-07-25T18:05:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "AVAX",
+        "TAO"
+      ]
+    },
+    {
+      "title": "Uniswap Foundation Launches Angstrom DEX with MEV Protection",
+      "link": "https://cryptopanic.com/news/uniswap/23670759/Uniswap-Foundation-Launches-Angstrom-DEX-with-MEV-Protection",
+      "pubDate": "2025-07-25T16:57:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ]
+    },
+    {
+      "title": "Polkadot's DOT Faces Bearish Pressure Despite Recovery Attempts",
+      "link": "https://cryptopanic.com/news/polkadot/23671792/Polkadots-DOT-Faces-Bearish-Pressure-Despite-Recovery-Attempts",
+      "pubDate": "2025-07-25T16:53:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 26 July 2025: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/decentraland/23672182/Spell-Wallet-Daily-Puzzle-26-July-2025-Earn-Reward-of-1-MANA",
+      "pubDate": "2025-07-25T15:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "Crypto Price Analysis 7-25: BITCOIN: BTC, ETHEREUM: ETH, SOLANA: SOL, NEAR PROTOCOL: NEAR, CHAINLINK: LINK",
+      "link": "https://cryptopanic.com/news/near/23668428/Crypto-Price-Analysis-7-25-BITCOIN-BTC-ETHEREUM-ETH-SOLANA-SOL-NEAR-PROTOCOL-NEAR-CHAINLINK-LINK",
+      "pubDate": "2025-07-25T15:17:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "HTX Gives Away $500,000 Rewards to Celebrate Ethereum’s 10th Anniversary: Newcomers, Traders, and Loyal Users All Win",
+      "link": "https://cryptopanic.com/news/huobi-token/23667334/HTX-Gives-Away-500000-Rewards-to-Celebrate-Ethereums-10th-Anniversary-Newcomers-Traders-and-Loyal-Users-All-Win",
+      "pubDate": "2025-07-25T13:42:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "HT"
+      ]
+    },
+    {
+      "title": "Breaking: SEC Starts Proceedings on VanEck Avalanche Crypto ETF, AVAX Price to $36",
+      "link": "https://cryptopanic.com/news/avalanche-2/23665312/Breaking-SEC-Starts-Proceedings-on-VanEck-Avalanche-Crypto-ETF-AVAX-Price-to-36",
+      "pubDate": "2025-07-25T13:37:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin L2 Stacks (STX) price drops heavily after transaction suspension",
+      "link": "https://cryptopanic.com/news/blockstack/23664388/Bitcoin-L2-Stacks-STX-price-drops-heavily-after-transaction-suspension",
+      "pubDate": "2025-07-25T12:58:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "STX"
+      ]
+    },
+    {
+      "title": "NEAR Rallies 6.9% as Bulls Reclaim Control After Overnight Selloff",
+      "link": "https://cryptopanic.com/news/near/23665189/NEAR-Rallies-69-as-Bulls-Reclaim-Control-After-Overnight-Selloff",
+      "pubDate": "2025-07-25T12:50:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Avalanche (AVAX) Breakout Imminent? $36 Target If $27 Cracks",
+      "link": "https://cryptopanic.com/news/avalanche-2/23663487/Avalanche-AVAX-Breakout-Imminent-36-Target-If-27-Cracks",
+      "pubDate": "2025-07-25T12:49:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Off the Grid Skin Sale Volume Nears $30K as the Avalanche Shooter Hits OpenSea",
+      "link": "https://cryptopanic.com/news/avalanche-2/23661571/Off-the-Grid-Skin-Sale-Volume-Nears-30K-as-the-Avalanche-Shooter-Hits-OpenSea",
+      "pubDate": "2025-07-25T12:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "XLM Price Falls 12%, Open Interest Drops 33% as Stellar Traders Exit Market",
+      "link": "https://cryptopanic.com/news/stellar/23663501/XLM-Price-Falls-12-Open-Interest-Drops-33-as-Stellar-Traders-Exit-Market",
+      "pubDate": "2025-07-25T12:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash up 7% as bulls defy BTC dump, eye gains on rising volume",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/23660241/Bitcoin-Cash-up-7-as-bulls-defy-BTC-dump-eye-gains-on-rising-volume",
+      "pubDate": "2025-07-25T10:58:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Ethereum ETFs soar past Bitcoin in new flows as institutional focus shifts",
+      "link": "https://cryptopanic.com/news/bitcoin/23659204/Ethereum-ETFs-soar-past-Bitcoin-in-new-flows-as-institutional-focus-shifts",
+      "pubDate": "2025-07-25T10:35:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Ethereum exchange-traded funds (ETFs) are recording a remarkable surge in investor interest, consistently outperforming their Bitcoin counterparts throughout the past week. SoSo Value data shows that spot ETH ETFs attracted $231. 23 million in new capital on July 24, edging past the $226. 61 million net inflows recorded by spot Bitcoin ETFs",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "HTX Hot Listings Weekly Recap (July 15 – 21): Ethereum Leads the Rally as Market Trends Ignite Wealth Effect",
+      "link": "https://cryptopanic.com/news/huobi-token/23659258/HTX-Hot-Listings-Weekly-Recap-July-15-21-Ethereum-Leads-the-Rally-as-Market-Trends-Ignite-Wealth-Effect",
+      "pubDate": "2025-07-25T09:53:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "HT"
+      ]
+    },
+    {
+      "title": "Stellar, Hedera, PEPE Rally—But XYZVerse’s Unique Tokenomics Could Steal Their Thunder",
+      "link": "https://cryptopanic.com/news/stellar/23659246/Stellar-Hedera-PEPE-RallyBut-XYZVerses-Unique-Tokenomics-Could-Steal-Their-Thunder",
+      "pubDate": "2025-07-25T09:42:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "HBAR",
+        "PEPE"
+      ]
+    },
+    {
+      "title": "USDD 2.0 Reaches Six-Month Milestone, Focused on ‘Growth That Lasts’",
+      "link": "https://cryptopanic.com/news/usdd/23655020/USDD-20-Reaches-Six-Month-Milestone-Focused-on-Growth-That-Lasts",
+      "pubDate": "2025-07-25T08:57:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDD"
+      ]
+    },
+    {
+      "title": "Franklin Templeton brings BENJI to VeChain: revolution for corporate payments",
+      "link": "https://cryptopanic.com/news/vechain/23654867/Franklin-Templeton-brings-BENJI-to-VeChain-revolution-for-corporate-payments",
+      "pubDate": "2025-07-25T07:44:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET",
+        "BENJI",
+        "Z"
+      ]
+    }
+  ]
+}

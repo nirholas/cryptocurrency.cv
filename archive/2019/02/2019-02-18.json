@@ -1,0 +1,75 @@
+{
+  "date": "2019-02-18",
+  "fetchedAt": "2026-02-05T07:27:06.866Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "VeChainThor Enables DApp Development for Enterprises via Amazon Cloud",
+      "link": "https://cryptopanic.com/news/4601780/VeChainThor-Enables-DApp-Development-for-Enterprises-via-Amazon-Cloud",
+      "pubDate": "2019-02-18T18:48:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Ethereum Litecoin XRP TRX BNB DASH NEO Technical Analysis Chart 2/18/2019 by ChartGuys.com",
+      "link": "https://cryptopanic.com/news/tron/4601118/Bitcoin-Ethereum-Litecoin-XRP-TRX-BNB-DASH-NEO-Technical-Analysis-Chart-2182019-by-ChartGuyscom",
+      "pubDate": "2019-02-18T17:46:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "NEO 3.0 DevCon, XRP Exchange Partnership, Ethereum MonoPlasma & Ethereum Price Spike",
+      "link": "https://cryptopanic.com/news/neo/4598104/NEO-30-DevCon-XRP-Exchange-Partnership-Ethereum-MonoPlasma-Ethereum-Price-Spike",
+      "pubDate": "2019-02-18T11:14:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XRP",
+        "NEO"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tether Price Forecast 2019 - Overcoming the Gap Between $1 and $5 Is Still Possible",
+      "link": "https://cryptopanic.com/news/4596789/Tether-Price-Forecast-2019-Overcoming-the-Gap-Between-1-and-5-Is-Still-Possible",
+      "pubDate": "2019-02-18T07:38:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT"
+      ]
+    }
+  ]
+}

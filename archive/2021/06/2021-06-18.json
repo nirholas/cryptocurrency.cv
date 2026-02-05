@@ -1,0 +1,476 @@
+{
+  "date": "2021-06-18",
+  "fetchedAt": "2026-02-05T07:27:06.883Z",
+  "articleCount": 31,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Giving out 100 POW tokens to anyone who comments below with their SLPA address",
+      "link": "https://cryptopanic.com/news/ecash/12291480/Giving-out-100-POW-tokens-to-anyone-who-comments-below-with-their-SLPA-address",
+      "pubDate": "2021-06-18T23:53:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "eCash is now live on Coin Dance!",
+      "link": "https://cryptopanic.com/news/ecash/12291476/eCash-is-now-live-on-Coin-Dance",
+      "pubDate": "2021-06-18T23:31:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "This Little-Known Altcoin Surged Over 200% While Bitcoin Moved Sideways",
+      "link": "https://cryptopanic.com/news/12156030/This-Little-Known-Altcoin-Surged-Over-200-While-Bitcoin-Moved-Sideways",
+      "pubDate": "2021-06-18T22:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "At a time in which the price of bitcoin has been moving sideways a lot of large-cap altcoins have been steadily dropping, a little-known altcoin called Amp (AMP) has surged over 200% outperforming the rest of the market. As first reported by Daily Hodl, AMP is a collateral-as-a-service token that is designed to power instant, […]",
+      "currencies": [
+        "BTC",
+        "AMP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Billionaire Crypto Exchange CEO Reveals Dogecoin Surprise",
+      "link": "https://cryptopanic.com/news/dogecoin/12156018/Billionaire-Crypto-Exchange-CEO-Reveals-Dogecoin-Surprise",
+      "pubDate": "2021-06-18T22:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Sam Bankman-Fried, the billionaire chief executive of cryptocurrency exchange FTX, has said dogecoin is the \"asset of the year for 2020 and 2021\"...",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Cardano, Polkadot and Three Altcoins Are Technologically Superior to Ethereum, According to Weiss Ratings",
+      "link": "https://cryptopanic.com/news/polkadot/12156033/Cardano-Polkadot-and-Three-Altcoins-Are-Technologically-Superior-to-Ethereum-According-to-Weiss-Ratings",
+      "pubDate": "2021-06-18T22:05:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Five cryptocurrency projects are more technologically advanced than Ethereum, according to a veteran financial ratings agency. The latest update from Weiss Ratings shows Cardano (ADA), Polkadot (DOT), Tezos (XTZ), Cosmos (ATOM) and Fantom (FTM) have “excellent” technology ratings. Ethereum (ETH) lags behind with a “good” rating, alongside Holo (HOT), Iota (IOTA), Grin (GRIN), Bitshares (BTS),...",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Texas crypto users will soon be able to buy and sell tokens at major supermarket chain",
+      "link": "https://cryptopanic.com/news/dogecoin/12155781/Texas-crypto-users-will-soon-be-able-to-buy-and-sell-tokens-at-major-supermarket-chain",
+      "pubDate": "2021-06-18T20:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The state is already becoming known for attracting miners and attempting to pass pro-crypto legislation, with Governor Greg Abbott saying he was a \"crypto law proposal supporter.\"",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 41,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @Blocktane: We are Blocktane!",
+      "link": "https://cryptopanic.com/news/12159531/RT-Blocktane-We-are-Blocktane",
+      "pubDate": "2021-06-18T20:18:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "21 trillion eCash",
+      "link": "https://cryptopanic.com/news/ecash/12291496/21-trillion-eCash",
+      "pubDate": "2021-06-18T19:13:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Nexo founder: More Latin America countries to adopt BTC pushing price to $100k",
+      "link": "https://cryptopanic.com/news/12155566/Nexo-founder-More-Latin-America-countries-to-adopt-BTC-pushing-price-to-100k",
+      "pubDate": "2021-06-18T18:51:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Crypto lending platform Nexo co-founder Antoni Trenchev has projected that bitcoin might hit the $100,000 mark within a year backed... Continue reading",
+      "currencies": [
+        "BTC",
+        "NEXO"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Recent IRS Memorandum Reaffirms Bitcoin, Ether & Litecoin Exchanges Are Not Like-Kind",
+      "link": "https://cryptopanic.com/news/ethereum/12155404/Recent-IRS-Memorandum-Reaffirms-Bitcoin-Ether-Litecoin-Exchanges-Are-Not-Like-Kind",
+      "pubDate": "2021-06-18T17:49:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "IRS reaffirms that crypto-to-crypto trades (BTC, ETH & LTC) are not eligible for the like-kind of exchange treatment.",
+      "currencies": [
+        "ETH",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "1/  Leading up to the launch of BandChain Phase 2, we are releasing a series to explore different use-cases enabl…",
+      "link": "https://cryptopanic.com/news/12156835/1-Leading-up-to-the-launch-of-BandChain-Phase-2-we-are-releasing-a-series-to-explore-different-use-cases-enabl",
+      "pubDate": "2021-06-18T16:44:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "With the ETN-Network surpassing 250,000 airtime and data top-ups, we want to know if you're one of them! Please com…",
+      "link": "https://cryptopanic.com/news/12155188/With-the-ETN-Network-surpassing-250000-airtime-and-data-top-ups-we-want-to-know-if-youre-one-of-them-Please-com",
+      "pubDate": "2021-06-18T16:30:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "Ethereum’s ‘London’ hardfork set to go live on testnets starting June 24",
+      "link": "https://cryptopanic.com/news/ethereum/12155223/Ethereums-London-hardfork-set-to-go-live-on-testnets-starting-June-24",
+      "pubDate": "2021-06-18T16:29:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Three Ethereum testnets now have a set date for the London hard fork, a key step toward a full mainnet implementation.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Even Elon Musk can't save Dogecoin from crashing another 60%, analyst asserts",
+      "link": "https://cryptopanic.com/news/dogecoin/12155121/Even-Elon-Musk-cant-save-Dogecoin-from-crashing-another-60-analyst-asserts",
+      "pubDate": "2021-06-18T16:06:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The meme cryptocurrency has crashed by over 60% from its May 8 peak and one analyst believes it has another 60% deeper to go.",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 9
+      }
+    },
+    {
+      "title": "Here are the stats for this week's update! The ETN-Network has passed 250,000 data and airtime topups! Next stop...…",
+      "link": "https://cryptopanic.com/news/12155076/Here-are-the-stats-for-this-weeks-update-The-ETN-Network-has-passed-250000-data-and-airtime-topups-Next-stop",
+      "pubDate": "2021-06-18T16:00:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "Reef Finance and Pinknode have come together to provide secure and reliable API endpoints to Reef’s ever-evolving e…",
+      "link": "https://cryptopanic.com/news/12159416/Reef-Finance-and-Pinknode-have-come-together-to-provide-secure-and-reliable-API-endpoints-to-Reefs-ever-evolving-e",
+      "pubDate": "2021-06-18T14:59:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ]
+    },
+    {
+      "title": "We’ve launched the latest @safenetworktech Testnet! Join us on Fleming v6, &amp; checkout the significant improvements…",
+      "link": "https://cryptopanic.com/news/12154762/Weve-launched-the-latest-safenetworktech-Testnet-Join-us-on-Fleming-v6-amp-checkout-the-significant-improvements",
+      "pubDate": "2021-06-18T14:35:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "An estate in virtual world Decentraland just sold for nearly a million dollars",
+      "link": "https://cryptopanic.com/news/12154574/An-estate-in-virtual-world-Decentraland-just-sold-for-nearly-a-million-dollars",
+      "pubDate": "2021-06-18T13:32:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Digital real estate firm Republic Realm bought the estate for $913,000 worth of the game’s native MANA token.",
+      "currencies": [
+        "ETH",
+        "MANA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ever wondered what #BTCST's Tau Sage does and why we joined the @BinanceChain MVB II Program to prevent duplicate…",
+      "link": "https://cryptopanic.com/news/12156805/Ever-wondered-what-BTCSTs-Tau-Sage-does-and-why-we-joined-the-BinanceChain-MVB-II-Program-to-prevent-duplicate",
+      "pubDate": "2021-06-18T13:18:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTCST"
+      ]
+    },
+    {
+      "title": "Crypto Trading Platform SwissBorg Adds Support for XRP, ‘The Most Scalable Digital Asset’",
+      "link": "https://cryptopanic.com/news/ripple/12154345/Crypto-Trading-Platform-SwissBorg-Adds-Support-for-XRP-The-Most-Scalable-Digital-Asset",
+      "pubDate": "2021-06-18T12:15:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "On Thursday (June 17), Switzerland-headquartered crypto startup SwissBorg announced its support for XRP. Here is an overview of SwissBorg’s history: SwissBorg’s mobile app (which is available for iOS and Android) lets you buy, sell, and exchange cryptocurrencies (sixteen including XRP), with support for 15 fiat currencies (CHF, EUR, GBP, CAD, BGN, SEK, HKD, RON, CZK, […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We are excited and proud to be partnering with @mogulofficial_, who believe in our vision of revolutionizing the…",
+      "link": "https://cryptopanic.com/news/12156539/We-are-excited-and-proud-to-be-partnering-with-mogulofficial_-who-believe-in-our-vision-of-revolutionizing-the?mtm_campaign=API-OFA",
+      "pubDate": "2021-06-18T10:40:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AIOZ"
+      ]
+    },
+    {
+      "title": "Elrond Dev Toolkit Developer Raises $5.3 million",
+      "link": "https://cryptopanic.com/news/12154066/Elrond-Dev-Toolkit-Developer-Raises-53-million",
+      "pubDate": "2021-06-18T10:34:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The Elrond Dev Toolkit developer Runtime Verification has raised $5.3 million in investment during its latest funding round",
+      "currencies": [
+        "EGLD"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @gregoryklumov: Another day, just another story. This is a decent example of \"climbing the learning curve in crypto\".",
+      "link": "https://cryptopanic.com/news/12159532/RT-gregoryklumov-Another-day-just-another-story-This-is-a-decent-example-of-climbing-the-learning-curve-in-crypto",
+      "pubDate": "2021-06-18T10:25:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "Elon Musk Laughs at SHIBA INU (SHIB) Community As They Claim Nobody Will Use DOGE",
+      "link": "https://cryptopanic.com/news/dogecoin/12154026/Elon-Musk-Laughs-at-SHIBA-INU-SHIB-Community-As-They-Claim-Nobody-Will-Use-DOGE",
+      "pubDate": "2021-06-18T10:13:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Centibillionaire Elon Musk has made fun of the DOGE-rival SHIB community as they claimed that some people only use Dogecoin because of Musk",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 20,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Grayscale is exploring 13 more investment products, including ones for Solana and Polygon",
+      "link": "https://cryptopanic.com/news/matic-network/12153794/Grayscale-is-exploring-13-more-investment-products-including-ones-for-Solana-and-Polygon",
+      "pubDate": "2021-06-18T08:31:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Crypto asset manager Grayscale is exploring 13 more investment trust products, including ones tied to Solana and Polygon tokens.",
+      "currencies": [
+        "SOL",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Grayscale eyes 13 more crypto assets including Polygon, Bancor",
+      "link": "https://cryptopanic.com/news/matic-network/12153757/Grayscale-eyes-13-more-crypto-assets-including-Polygon-Bancor",
+      "pubDate": "2021-06-18T08:10:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Institutional digital asset manager Grayscale announced today that it is exploring 13 more assets for its trusts, mainly related to decentralized finance.",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Grayscale is Exploring the Addition of MATIC & Solana to its Products",
+      "link": "https://cryptopanic.com/news/litecoin/12152918/Grayscale-is-Exploring-the-Addition-of-MATIC-Solana-to-its-Products",
+      "pubDate": "2021-06-18T07:38:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Grayscale has updated the list of digital assets it has been exploring as potential additions to its product offerings Grayscale has added 13 digital assets to the list including Polygon (MATIC) and Solana (SOL) Grayscale now has $34.4 Billion in assets under management In the last 30 days, Grayscale has purchased several altcoins including Filecoin, Chainlink, MANA, Liverpeer, ZEC, BCH and...",
+      "currencies": [
+        "SOL",
+        "LTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 33,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "#EURS market cap is currently over 100 million in $USD equivalent. This milestone represents 3x growth in 2021! Eur…",
+      "link": "https://cryptopanic.com/news/12152388/EURS-market-cap-is-currently-over-100-million-in-USD-equivalent-This-milestone-represents-3x-growth-in-2021-Eur",
+      "pubDate": "2021-06-18T04:59:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "TA: Bitcoin Trims Gains, What Could Trigger Fresh Drop To $35K",
+      "link": "https://cryptopanic.com/news/near/12148848/TA-Bitcoin-Trims-Gains-What-Could-Trigger-Fresh-Drop-To-35K",
+      "pubDate": "2021-06-18T03:08:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin price started a fresh decline after it failed to stay above $40,000 against the US Dollar. BTC is moving lower and it could even decline towards $35,000 in the near term. Bitcoin started a fresh decline from well above the $40,000 pivot level. The price is now trading well below $39,000 and the 100 […]",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Statement on Rumors of BORA Upbit Delisting",
+      "link": "https://cryptopanic.com/news/12149336/Statement-on-Rumors-of-BORA-Upbit-Delisting",
+      "pubDate": "2021-06-18T03:00:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BORA"
+      ]
+    },
+    {
+      "title": "Digital land in Decentraland sells for $913K... to a virtual property developer",
+      "link": "https://cryptopanic.com/news/12148776/Digital-land-in-Decentraland-sells-for-913K-to-a-virtual-property-developer",
+      "pubDate": "2021-06-18T02:15:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "A virtual real estate investment firm has a new platform record for the most expensive digital land plot in Decentraland’s metaverse after spending $913,000 on 259 parcels.",
+      "currencies": [
+        "MANA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

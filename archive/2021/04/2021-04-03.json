@@ -1,0 +1,463 @@
+{
+  "date": "2021-04-03",
+  "fetchedAt": "2026-02-05T07:27:06.875Z",
+  "articleCount": 31,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "How Chainlink will help secure Polkadot’s environment",
+      "link": "https://cryptopanic.com/news/polkadot/11717522/How-Chainlink-will-help-secure-Polkadots-environment",
+      "pubDate": "2021-04-03T20:00:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Polkadot has integrated with Chainlink to incorporate its oracle service into its multi-chain environment. Thus, the different teams building on Polkadot will be able to count on a “flexible and reliable” solution to feed parachains with information. Chainlink Price Feeds have been enabled as a Substrate Oracle pallet and can be accessed by any other […]",
+      "currencies": [
+        "DOT",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 27,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @SotRos25: The internet is about to get a lot safer thanks to @safenetworktech—the decentralized internet &amp; #dApp platform @maidsafe is…",
+      "link": "https://cryptopanic.com/news/11718767/RT-SotRos25-The-internet-is-about-to-get-a-lot-safer-thanks-to-safenetworktechthe-decentralized-internet-amp-dApp-platform-maidsafe-is",
+      "pubDate": "2021-04-03T16:12:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "+600,000 $USDC have just been deposited into the Whiteheart hedging pool. Transaction hash:…",
+      "link": "https://cryptopanic.com/news/11719706/600000-USDC-have-just-been-deposited-into-the-Whiteheart-hedging-pool-Transaction-hash?mtm_campaign=API-OFA",
+      "pubDate": "2021-04-03T15:45:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "WHITE"
+      ]
+    },
+    {
+      "title": "Within 24 hours of @tauprotocol launching, total TVL has surpassed $200M USD!This is an increase of 600% from 24 h…",
+      "link": "https://cryptopanic.com/news/11717937/Within-24-hours-of-tauprotocol-launching-total-TVL-has-surpassed-200M-USDThis-is-an-increase-of-600-from-24-h",
+      "pubDate": "2021-04-03T14:12:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTCST"
+      ]
+    },
+    {
+      "title": "Whale Moves $1.3 Billion to DeFi After ETH Sets New All-Time High",
+      "link": "https://cryptopanic.com/news/11717224/Whale-Moves-13-Billion-to-DeFi-After-ETH-Sets-New-All-Time-High",
+      "pubDate": "2021-04-03T13:43:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A mysterious whale transferred 629,000 ETH to DeFi lending protocol Compound shortly after ETH set its latest all-time-high.",
+      "currencies": [
+        "ETH",
+        "COMP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Looking good bois",
+      "link": "https://cryptopanic.com/news/11717202/Looking-good-bois",
+      "pubDate": "2021-04-03T13:30:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "Road To Redemption? Coinbase Rumored To Be Doing Backend Work To Relist XRP",
+      "link": "https://cryptopanic.com/news/ripple/11717198/Road-To-Redemption-Coinbase-Rumored-To-Be-Doing-Backend-Work-To-Relist-XRP",
+      "pubDate": "2021-04-03T13:19:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "There’s some talk about San Francisco-headquartered crypto exchange Coinbase bringing back XRP trading on its platform. However, since a community member posted a tweet on April 2 about the major U.S. exchange relisting XRP, there has been no positive confirmation on the matter — yet. Rumor Alleges Coinbase Has Began Backend Work To Relist XRP […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP lawsuit update: Ripple gets its motion to seal approved",
+      "link": "https://cryptopanic.com/news/ripple/11717196/XRP-lawsuit-update-Ripple-gets-its-motion-to-seal-approved",
+      "pubDate": "2021-04-03T13:15:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Ripple has been fighting the lawsuit filed by the United States’ Securities and Exchange Commission [SEC] for a while now. However, the regulatory body had been digging deep into the personal information of its executives. Ripple met with the SEC lawyers on 1 April to request that they keep their documents out of the public’s […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Following Tim Draper Endorsement, Tezos Enjoys Hefty Uptick",
+      "link": "https://cryptopanic.com/news/11717149/Following-Tim-Draper-Endorsement-Tezos-Enjoys-Hefty-Uptick",
+      "pubDate": "2021-04-03T12:24:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Thanks to Draper Goren Holm, developers will now have the resources they need to build their decentralized applications on top of the Tezos protocol. Tezos Gains Crucial Endorsement Draper Goren Holm announced that it had added the Tezos ecosystem to its $25 million venture fund. The Los Angeles-based investment firm revealed that it would “incubate and accelerate” some of the most...",
+      "currencies": [
+        "BTC",
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The Magnificent Seven: HOT, FIL, BTT, SC, HNT, RUNE, DENT – Biggest Gainers from March 26th to April 2nd",
+      "link": "https://cryptopanic.com/news/11720558/The-Magnificent-Seven-HOT-FIL-BTT-SC-HNT-RUNE-DENT-Biggest-Gainers-from-March-26th-to-April-2nd",
+      "pubDate": "2021-04-03T12:00:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "1000x who agrees",
+      "link": "https://cryptopanic.com/news/11717118/1000x-who-agrees",
+      "pubDate": "2021-04-03T11:31:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "WIN"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The moon DENT 0.02usd",
+      "link": "https://cryptopanic.com/news/11717114/The-moon-DENT-002usd",
+      "pubDate": "2021-04-03T11:30:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "If you are experiencing issues staking or unstaking, you can hard refresh your browser and try again. We have compl…",
+      "link": "https://cryptopanic.com/news/11717938/If-you-are-experiencing-issues-staking-or-unstaking-you-can-hard-refresh-your-browser-and-try-again-We-have-compl",
+      "pubDate": "2021-04-03T10:43:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTCST"
+      ]
+    },
+    {
+      "title": "Polkadot Soars, Ethereum To $3000, Litecoin Rises, Cardano Partnership, BTC Ferrari & DOGE Flights",
+      "link": "https://cryptopanic.com/news/dogecoin/11717085/Polkadot-Soars-Ethereum-To-3000-Litecoin-Rises-Cardano-Partnership-BTC-Ferrari-DOGE-Flights",
+      "pubDate": "2021-04-03T10:18:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Become A Patreon! https://www.patreon.com/TheModernInvestor ------------------------------------------- MY SECOND CHANNEL: https://www.youtube.com/channel/UCH9HlTrjyLmLRS0iE1P4rrg ----------------------------------------- Protect And Store Your Crypto With A Ledger Nano: https://www.ledger.com?r=8af3ed38d3b7 ------------------------------------------- Open An Account With Binance! https://www.binance.com/?ref=22170588 ------------------------------------------- Rich Dad Poor Dad: https://amzn.to",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Chainlink Price Feeds Available as a Substrate Oracle Pallet, $DOT Sets New ATH",
+      "link": "https://cryptopanic.com/news/polkadot/11717064/Chainlink-Price-Feeds-Available-as-a-Substrate-Oracle-Pallet-DOT-Sets-New-ATH",
+      "pubDate": "2021-04-03T09:53:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "On Friday (April 2), the Polkadot ($DOT) team announced that Chainlink had made their price feeds available as a Substrate oracle pallet. Within less than 24 hours, Polkadot’s DOT token had broken through the $46 level, setting a new all-time high. According to Polkadot’s blog post, which was published yesterday (April 2), until now, there […]",
+      "currencies": [
+        "DOT",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The moon 0.02usd",
+      "link": "https://cryptopanic.com/news/11717732/The-moon-002usd",
+      "pubDate": "2021-04-03T09:35:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "RT @BinanceChain: #BinanceSmartChain project #BTCST is bridging the #Bitcoin and #DeFi worlds! Backed by 12% of the entire Bitcoin hashrate…",
+      "link": "https://cryptopanic.com/news/11717939/RT-BinanceChain-BinanceSmartChain-project-BTCST-is-bridging-the-Bitcoin-and-DeFi-worlds-Backed-by-12-of-the-entire-Bitcoin-hashrate",
+      "pubDate": "2021-04-03T09:29:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTCST"
+      ]
+    },
+    {
+      "title": "RT @btsfav: #DeFinitely Easter edition! Check what's going on in our bubble",
+      "link": "https://cryptopanic.com/news/11719422/RT-btsfav-DeFinitely-Easter-edition-Check-whats-going-on-in-our-bubble",
+      "pubDate": "2021-04-03T09:10:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "As Promised, half a mil - the was some fluctuation when swapping coins -45k",
+      "link": "https://cryptopanic.com/news/11716123/As-Promised-half-a-mil-the-was-some-fluctuation-when-swapping-coins-45k",
+      "pubDate": "2021-04-03T07:36:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "Bitcoin Dominance at 7-Month Low: Polkadot Soars 20% To New ATH (Market Watch)",
+      "link": "https://cryptopanic.com/news/polkadot/11715785/Bitcoin-Dominance-at-7-Month-Low-Polkadot-Soars-20-To-New-ATH-Market-Watch",
+      "pubDate": "2021-04-03T07:12:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Days of records in the altcoin space as Ethereum surged to $2,150, while Polkadot's 22% increase took it to a new ATH above $46.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "193 Million XRP Moved between Binance and Top-Tier Crypto Custodian",
+      "link": "https://cryptopanic.com/news/ripple/11715534/193-Million-XRP-Moved-between-Binance-and-Top-Tier-Crypto-Custodian",
+      "pubDate": "2021-04-03T07:07:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Over the past thirteen hours, a whopping 193 million XRP has been shifted by the largest crypto exchange by volume – Binance",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "With @p2pb2b soon to list $MAID, the exchange footprint is expanding as we speed towards launching @safenetworktech…",
+      "link": "https://cryptopanic.com/news/11714651/With-p2pb2b-soon-to-list-MAID-the-exchange-footprint-is-expanding-as-we-speed-towards-launching-safenetworktech",
+      "pubDate": "2021-04-03T05:37:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "For @BinanceChain #BSC users, @tauprotocol has started a special $BTCB - $tBTC vault for you! APY is estimated at…",
+      "link": "https://cryptopanic.com/news/11713362/For-BinanceChain-BSC-users-tauprotocol-has-started-a-special-BTCB-tBTC-vault-for-you-APY-is-estimated-at",
+      "pubDate": "2021-04-03T05:18:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTCST"
+      ]
+    },
+    {
+      "title": "I will buy 500k AUD worth of DENT in the next 10 mins.",
+      "link": "https://cryptopanic.com/news/11717075/I-will-buy-500k-AUD-worth-of-DENT-in-the-next-10-mins",
+      "pubDate": "2021-04-03T05:13:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "ICON blockchain core developers add integration with Polkadot ecosystem",
+      "link": "https://cryptopanic.com/news/polkadot/11713036/ICON-blockchain-core-developers-add-integration-with-Polkadot-ecosystem",
+      "pubDate": "2021-04-03T01:51:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "CryptoNinjas » ICON blockchain core developers add integration with Polkadot ecosystem BTP (Blockchain Transmission Protocol) Working Group, a team of ICON core members and third-party developers working towards true blockchain interoperability, has announced its first integrations of BTP into the Polkadot ecosystem. Acala, Moonbeam, Edgeware, and Plasm, four of the top parachain...",
+      "currencies": [
+        "DOT",
+        "ICX"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @GunnisonCap: @APompliano Broadly correct, the biggest aspect coming in that regard beyond convention market making (AMM) are issuance a…",
+      "link": "https://cryptopanic.com/news/11713616/RT-GunnisonCap-APompliano-Broadly-correct-the-biggest-aspect-coming-in-that-regard-beyond-convention-market-making-AMM-are-issuance-a?mtm_campaign=API-OFA",
+      "pubDate": "2021-04-03T01:36:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHEX"
+      ]
+    },
+    {
+      "title": "I dropping half a mil (AUD) on dent in approx 2 hours",
+      "link": "https://cryptopanic.com/news/11716124/I-dropping-half-a-mil-AUD-on-dent-in-approx-2-hours",
+      "pubDate": "2021-04-03T01:36:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "Great video on why Solana will comfortably outdo Etheruem in April 2021. Sold all my ETH for SOL and feeling good about it :)",
+      "link": "https://cryptopanic.com/news/11713015/Great-video-on-why-Solana-will-comfortably-outdo-Etheruem-in-April-2021-Sold-all-my-ETH-for-SOL-and-feeling-good-about-it",
+      "pubDate": "2021-04-03T01:10:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Chainlink (LINK) brings its price oracles to Polkadot (DOT)",
+      "link": "https://cryptopanic.com/news/polkadot/11713017/Chainlink-LINK-brings-its-price-oracles-to-Polkadot-DOT",
+      "pubDate": "2021-04-03T01:00:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Parachains based on Polkadot’s (DOT) Substrate framework now can integrate Chainlink’s (LINK) price oracles data feed in the form of a simple module, the companies announced today.",
+      "currencies": [
+        "DOT",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Almost 1M TVL at first minutes of Supra Dollar! Join us!",
+      "link": "https://cryptopanic.com/news/11714188/Almost-1M-TVL-at-first-minutes-of-Supra-Dollar-Join-us?mtm_campaign=API-OFA",
+      "pubDate": "2021-04-03T00:44:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SUPRA",
+        "FLP"
+      ]
+    },
+    {
+      "title": "Coin Bureau: This Interesting Crypto Project ‘Is Hot as Hell’",
+      "link": "https://cryptopanic.com/news/11712996/Coin-Bureau-This-Interesting-Crypto-Project-Is-Hot-as-Hell",
+      "pubDate": "2021-04-03T00:28:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Recently, crypto influencer “Coin Bureau” (“@coinbureau” on Twitter) talked about what he considers one of the most interesting projects in the crypto space. In a video (titled “Chiliz: Crypto, NFTs & Sport Fans – ULTIMATE Combo??“) released on YouTube channel “Coin Bureau“, the show’s pseudonymous host told the channel’s over 615K subscribers about Chiliz (CHZ). Here is how the […]",
+      "currencies": [
+        "CHZ"
+      ],
+      "votes": {
+        "positive": 31,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "date": "2020-05-19",
+  "fetchedAt": "2026-02-05T07:27:06.982Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "New Partnership to Integrate Litecoin (LTC) Into Atari Ecosystem",
+      "link": "https://cryptopanic.com/news/litecoin/8848769/New-Partnership-to-Integrate-Litecoin-LTC-Into-Atari-Ecosystem",
+      "pubDate": "2020-05-19T18:35:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Largest Investment Bank in Latin America Used Tezos To Launch A Security Token",
+      "link": "https://cryptopanic.com/news/8848393/Largest-Investment-Bank-in-Latin-America-Used-Tezos-To-Launch-A-Security-Token",
+      "pubDate": "2020-05-19T17:48:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XTZ",
+        "BTG"
+      ]
+    }
+  ]
+}

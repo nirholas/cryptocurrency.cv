@@ -1,0 +1,26 @@
+{
+  "date": "2018-06-22",
+  "fetchedAt": "2026-02-05T07:27:06.996Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Research Reveals New Instances of Plagiarism in Tron’s Code, States Project Faces “Technical Challenges” before Mainnet Launch",
+      "link": "https://cryptopanic.com/news/tron/2326539/Research-Reveals-New-Instances-of-Plagiarism-in-Trons-Code-States-Project-Faces-Technical-Challenges-before-Mainnet-Launch",
+      "pubDate": "2018-06-22T02:00:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 16
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

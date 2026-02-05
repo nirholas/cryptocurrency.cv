@@ -17,6 +17,40 @@ Free Crypto News provides multiple integration points for AI agents:
 
 ---
 
+## Critical: Terminal Command Safety
+
+**Before running ANY terminal command, agents MUST:**
+
+1. **Verify the current working directory**
+2. **Use absolute paths OR explicitly `cd` to the correct directory first**
+3. **Use `pwd` to confirm location when uncertain**
+
+### Safe Command Patterns
+
+```bash
+# CORRECT - Always start with cd and pwd
+cd /workspaces/free-crypto-news && pwd && npm run build
+
+# CORRECT - Use absolute paths
+node /workspaces/free-crypto-news/scripts/archive/import-historical-dataset.js
+
+# WRONG - Don't assume current directory
+npm run build  # Could be in wrong directory!
+```
+
+### Destructive Operations
+
+Before ANY destructive operation (rm, mv, overwrite), verify:
+- You're in the correct directory (`pwd`)
+- The target files are correct (`ls -la <target>`)
+
+```bash
+# CORRECT - Verify before removing
+cd /workspaces/free-crypto-news && pwd && ls scripts/archive/*.js && rm scripts/archive/old-file.js
+```
+
+---
+
 ## MCP Server (40 Tools)
 
 The Model Context Protocol server provides 40 read-only tools for AI assistants across 6 categories.

@@ -1,0 +1,62 @@
+{
+  "date": "2019-01-07",
+  "fetchedAt": "2026-02-05T07:27:06.993Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Coinbase Suspends Ethereum Classic After Blockchain History Rewrites",
+      "link": "https://cryptopanic.com/news/ethereum/4183700/Coinbase-Suspends-Ethereum-Classic-After-Blockchain-History-Rewrites",
+      "pubDate": "2019-01-07T20:19:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 14
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "TRON Weekly Report: TRON Is Aiming To Have More DApps Than EOS By the End of Jan",
+      "link": "https://cryptopanic.com/news/4181851/TRON-Weekly-Report-TRON-Is-Aiming-To-Have-More-DApps-Than-EOS-By-the-End-of-Jan",
+      "pubDate": "2019-01-07T16:44:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Popular Ethereum DApp EtherGoo Has Converted to TRON With New TronGoo DApp",
+      "link": "https://cryptopanic.com/news/4180224/Popular-Ethereum-DApp-EtherGoo-Has-Converted-to-TRON-With-New-TronGoo-DApp",
+      "pubDate": "2019-01-07T13:44:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

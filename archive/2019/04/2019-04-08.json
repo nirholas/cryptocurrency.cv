@@ -1,0 +1,27 @@
+{
+  "date": "2019-04-08",
+  "fetchedAt": "2026-02-05T07:27:06.907Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Coinbase Pro Lists EOS, Augur’s REP and MakerDAO’s MKR Tokens",
+      "link": "https://cryptopanic.com/news/5076594/Coinbase-Pro-Lists-EOS-Augurs-REP-and-MakerDAOs-MKR-Tokens",
+      "pubDate": "2019-04-08T20:38:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "EOS",
+        "MKR",
+        "REP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

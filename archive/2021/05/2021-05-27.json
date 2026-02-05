@@ -1,0 +1,829 @@
+{
+  "date": "2021-05-27",
+  "fetchedAt": "2026-02-05T07:27:06.754Z",
+  "articleCount": 51,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Litecoin, Theta, VeChain Price Analysis: 27 May",
+      "link": "https://cryptopanic.com/news/theta-token/12012038/Litecoin-Theta-VeChain-Price-Analysis-27-May",
+      "pubDate": "2021-05-27T23:00:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "VET",
+        "THETA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple (XRP) likely to go public after its legal battle with SEC is over, CEO confirms",
+      "link": "https://cryptopanic.com/news/ripple/12011989/Ripple-XRP-likely-to-go-public-after-its-legal-battle-with-SEC-is-over-CEO-confirms",
+      "pubDate": "2021-05-27T22:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The likelihood of Ripple, the company behind the XRP token and blockchain-based payments network RippleNet, to go public is “very high at some point”—but not before its legal battle with the United States Securities and Exchange Commission (SEC) is resolved, said the firm’s CEO Brad Garlinghouse.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Analyst Explains $ADA and $MATIC Could Explode Over Next Few Weeks",
+      "link": "https://cryptopanic.com/news/chainlink/12011976/Crypto-Analyst-Explains-ADA-and-MATIC-Could-Explode-Over-Next-Few-Weeks",
+      "pubDate": "2021-05-27T21:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The host of popular crypto YouTube channel Altcoin Daily has named seven cryptoassets he believes could surge in June based on various factors. The host, Aaron Arnold, kicked off the list with Cardano (ADA) ahead of its smart contract functionality deployment. In a video published to the channel’s over 800,000 subscribers, Arnold pointed out that […]",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 46,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "This Bitcoin Startup Has an Unusual Plan to Improve Dogecoin",
+      "link": "https://cryptopanic.com/news/dogecoin/12011965/This-Bitcoin-Startup-Has-an-Unusual-Plan-to-Improve-Dogecoin",
+      "pubDate": "2021-05-27T21:41:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Crypto startup VeriBlock proposes piggybacking Dogecoin on Bitcoin, benefitting from its security while providing further justification for Bitcoin’s massive energy footprint.",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "RT @tomkysar: have polygon USDC? should try a trade on Turbo",
+      "link": "https://cryptopanic.com/news/12012563/RT-tomkysar-have-polygon-USDC-should-try-a-trade-on-Turbo",
+      "pubDate": "2021-05-27T21:06:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MATIC",
+        "REP"
+      ]
+    },
+    {
+      "title": "RT @qtum: Happening now! Qtum AMA live streaming on @THETAtv powered by @Theta_Network. Join at",
+      "link": "https://cryptopanic.com/news/theta-token/12015997/RT-qtum-Happening-now-Qtum-AMA-live-streaming-on-THETAtv-powered-by-Theta_Network-Join-at",
+      "pubDate": "2021-05-27T21:04:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "QTUM",
+        "TFUEL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Why SafeMoon security concerns might halt asset’s growth despite upgrades",
+      "link": "https://cryptopanic.com/news/12011892/Why-SafeMoon-security-concerns-might-halt-assets-growth-despite-upgrades",
+      "pubDate": "2021-05-27T20:46:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "SafeMoon has attracted the crypto community’s attention within months, banking on several factors, including a value proposition to reward long-term... Continue reading",
+      "currencies": [
+        "SAFEMOON"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 23
+      }
+    },
+    {
+      "title": "Veriblock Reveals Initiative to Recycle Bitcoin’s Energy Consumption by Securing Dogecoin",
+      "link": "https://cryptopanic.com/news/dogecoin/12011806/Veriblock-Reveals-Initiative-to-Recycle-Bitcoins-Energy-Consumption-by-Securing-Dogecoin",
+      "pubDate": "2021-05-27T19:30:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "On Wednesday, the Veriblock project, a blockchain that leverages the implementation of proof-of-proof (PoP) consensus, announced an initiative to secure the Dogecoin blockchain using Bitcoin. The Veriblock Foundation believes the effort counters the hostile ‘Blood Bitcoin’ narrative in regard to recent environmental concerns over proof-of-work (PoW). Veriblock to Secure Dogecoin via PoP and...",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Representing Augur Turbo at the prediction markets panel, with none other than THE @robinhanson, is @paulgebheim! T…",
+      "link": "https://cryptopanic.com/news/12012565/Representing-Augur-Turbo-at-the-prediction-markets-panel-with-none-other-than-THE-robinhanson-is-paulgebheim-T",
+      "pubDate": "2021-05-27T18:19:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REP"
+      ]
+    },
+    {
+      "title": "Ren Launches Polygon Bridge with Support for Bitcoin",
+      "link": "https://cryptopanic.com/news/matic-network/12011711/Ren-Launches-Polygon-Bridge-with-Support-for-Bitcoin",
+      "pubDate": "2021-05-27T18:17:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "-",
+      "currencies": [
+        "BTC",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Pumped up by volume? 5 crypto assets that traders loved this month (and their prices)",
+      "link": "https://cryptopanic.com/news/matic-network/12011658/Pumped-up-by-volume-5-crypto-assets-that-traders-loved-this-month-and-their-prices",
+      "pubDate": "2021-05-27T17:31:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Trading volume in crypto markets can be a key indicator of price volatility — but is there a direct correlation that traders can use to help inform their investment decisions?",
+      "currencies": [
+        "ETH",
+        "MATIC",
+        "OKB"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RippleX Launches Grants Program For Projects on the XRP Ledger",
+      "link": "https://cryptopanic.com/news/ripple/12011592/RippleX-Launches-Grants-Program-For-Projects-on-the-XRP-Ledger",
+      "pubDate": "2021-05-27T16:33:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "RippleX has announced the launch of a community grants program for projects building on the XRP ledger The Grants Program will focus on NFTs, Core infrastructure, developer tooling, Developer UX and security The team encourages projects focused on NFTs for the first round of grant applications There is a June 10th deadline for the first round Successful applicants will be teamed up with mentors...",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @TaiPanich_: Catch @tansawit of @BandProtocol, @d0h0k1 of @terra_money @mirror_protocol @anchor_protocol &amp; @tascha_panpan of @AlphaFinan…",
+      "link": "https://cryptopanic.com/news/12012698/RT-TaiPanich_-Catch-tansawit-of-BandProtocol-d0h0k1-of-terra_money-mirror_protocol-anchor_protocol-amp-tascha_panpan-of-AlphaFinan",
+      "pubDate": "2021-05-27T16:02:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "‍ Band Protocol has successfully coordinated the first stock split with @Mirror_Protocol for $VIXY and $IAU. Than…",
+      "link": "https://cryptopanic.com/news/12012699/Band-Protocol-has-successfully-coordinated-the-first-stock-split-with-Mirror_Protocol-for-VIXY-and-IAU-Than",
+      "pubDate": "2021-05-27T16:02:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polygon: Why MATIC is well poised to break into the top 5",
+      "link": "https://cryptopanic.com/news/matic-network/12011520/Polygon-Why-MATIC-is-well-poised-to-break-into-the-top-5",
+      "pubDate": "2021-05-27T15:55:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "In the last 15 months, cryptocurrencies have gained massive traction primarily driven by institutional investments and widespread adoption. While Bitcoin... Continue reading",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 52,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Why Polygon (MATIC) is in My Portfolio",
+      "link": "https://cryptopanic.com/news/matic-network/12011517/Why-Polygon-MATIC-is-in-My-Portfolio",
+      "pubDate": "2021-05-27T15:40:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "Sign Up Here for the CT Club! https://patreon.com/cryptotips Get My Free Newsletter: https://learningcrypto.com Heidi Twitter: https://twitter.com/blockchainchick Toby Twitter: https://twitter.com/juststacksats Instagram: https://www.instagram.com/realcryptotips/ LBRY: https://lbry.tv/@Crypto-Tips:b Interested in Ledger hardware wallets and want to support this channel? Use my affiliate link here: https://shop.ledger.com/pages/ledger-nano-x?r=67ef Earn a Passive Income with BlockFi: https://bloc",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SEC Investigating Ripple’s XRP “Lobbying Efforts”",
+      "link": "https://cryptopanic.com/news/ripple/12011454/SEC-Investigating-Ripples-XRP-Lobbying-Efforts",
+      "pubDate": "2021-05-27T15:22:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "-",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @mitchliu: Welcome on board CAA! Now you're in good company Google, Sony, Samsung et al!",
+      "link": "https://cryptopanic.com/news/theta-token/12015998/RT-mitchliu-Welcome-on-board-CAA-Now-youre-in-good-company-Google-Sony-Samsung-et-al",
+      "pubDate": "2021-05-27T15:10:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Five Low-Cap Altcoins Positioning for Big Breakouts, According to Trader Michaël van de Poppe",
+      "link": "https://cryptopanic.com/news/12011497/Five-Low-Cap-Altcoins-Positioning-for-Big-Breakouts-According-to-Trader-Michael-van-de-Poppe",
+      "pubDate": "2021-05-27T15:10:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Crypto analyst Michaël van de Poppe is tracking the prices of five low-cap altcoins he thinks could break out. Van de Poppe tells his 320,900 Twitter followers that the scalable blockchain network Elrond (EGLD) will likely bounce off a major support level en route to an all-time high. “Quite following this old chart and path. […]",
+      "currencies": [
+        "BTC",
+        "EGLD"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @CoinDesk: Top sports and talent agency CAA will run a validator node for @Theta_Network, a blockchain-based video distribution platform…",
+      "link": "https://cryptopanic.com/news/theta-token/12015999/RT-CoinDesk-Top-sports-and-talent-agency-CAA-will-run-a-validator-node-for-Theta_Network-a-blockchain-based-video-distribution-platform",
+      "pubDate": "2021-05-27T15:02:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "Ripple will go public? CEO says ‘very soon’ but…",
+      "link": "https://cryptopanic.com/news/ripple/12011382/Ripple-will-go-public-CEO-says-very-soon-but",
+      "pubDate": "2021-05-27T14:30:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple‘s plans of following Coinbase’s footsteps may have been hindered by an obstacle but didn’t deter it. The said hindrance was caused by the ongoing XRP SEC lawsuit. Well, apart from the obvious effect it had on XRP’s price (when the news broke), it did however result in an increase in interest in Ripple. The […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 19
+      }
+    },
+    {
+      "title": "MATIC, SOLANA, CHAINLINK: This makes it likely that these 3 alts will make this price movement",
+      "link": "https://cryptopanic.com/news/chainlink/12011326/MATIC-SOLANA-CHAINLINK-This-makes-it-likely-that-these-3-alts-will-make-this-price-movement",
+      "pubDate": "2021-05-27T14:00:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The altcoin recovery is well on its way, and top altcoins like MATIC, SOL, LINK made a comeback. MATIC’s price was up 36%, SOL was up 22% and LINK’s price was up 23.9%, respectively in the past 24 hours. Since these altcoins have recovered faster than most others, there is an increase in social volume […]",
+      "currencies": [
+        "SOL",
+        "MATIC",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 46,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "MATIC, SOLANA, CHAINLINK:  This makes it likely that these 3 alts will make this price movement",
+      "link": "https://cryptopanic.com/news/12011326/MATIC-SOLANA-CHAINLINK-This-makes-it-likely-that-these-3-alts-will-make-this-price-movement",
+      "pubDate": "2021-05-27T14:00:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The altcoin recovery is well on its way, and top altcoins like MATIC, SOL, LINK made a comeback. MATIC’s price was up 36%, SOL was up 22% and LINK’s price was up 23.9%, respectively in the past 24 hours. Since these altcoins have recovered faster than most others, there is an increase in social volume […]",
+      "currencies": [
+        "SOL",
+        "MATIC",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 46,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Austrian Post combines NFT and NFC tech for digital postage stamp",
+      "link": "https://cryptopanic.com/news/near/12011252/Austrian-Post-combines-NFT-and-NFC-tech-for-digital-postage-stamp",
+      "pubDate": "2021-05-27T13:22:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "The Austrian post is set to incorporate near-field communication to its award-winning nonfungible token digital postage stamp.",
+      "currencies": [
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "When it comes to this, Ripple’s CEO says ‘Let’s make sure what we’re talking about’",
+      "link": "https://cryptopanic.com/news/ripple/12011212/When-it-comes-to-this-Ripples-CEO-says-Lets-make-sure-what-were-talking-about",
+      "pubDate": "2021-05-27T13:00:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple’s ongoing lawsuit with the United States’ SEC has kept the company and XRP, in the news. In a recent interview on CNBC’s Squawk Box, the company’s CEO, Brad Garlinghouse expressed his frustration over the lack of regulatory clarity in the US. Asserting that other countries had already invested “time and energy” to provide clarity […]",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Uniswap to Launch on Layer 2 Solution Arbitrum",
+      "link": "https://cryptopanic.com/news/uniswap/12011078/Uniswap-to-Launch-on-Layer-2-Solution-Arbitrum",
+      "pubDate": "2021-05-27T12:05:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "-",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DOGE’s road to $1 stagnates despite Musk’s sustained support",
+      "link": "https://cryptopanic.com/news/dogecoin/12011085/DOGEs-road-to-1-stagnates-despite-Musks-sustained-support",
+      "pubDate": "2021-05-27T12:04:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin’s price has surged 38% following the weekend market crash, but the meme-inspired cryptocurrency is still trading on a downward... Continue reading",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 21,
+        "negative": 50
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Billionaire Mark Cuban Invests in Polygon After $MATIC Surges 9,000%",
+      "link": "https://cryptopanic.com/news/matic-network/12011017/Billionaire-Mark-Cuban-Invests-in-Polygon-After-MATIC-Surges-9000",
+      "pubDate": "2021-05-27T11:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Billionaire investor and entrepreneur Mark Cuban has invested in Ethereum layer-two scaling solution Polygon (MATIC) but has not disclosed the size of his position on the cryptocurrency. The investment has been disclosed on one of his websites. As Cointelegraph reports, the addition of Polygon to Mark Cuban’s portfolio seemingly reaffirms the billionaire’s backing of the […]",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 21,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple Price Analysis: XRP Battling to Remain Above $1 as Bulls Struggle with Momentum",
+      "link": "https://cryptopanic.com/news/ripple/12010978/Ripple-Price-Analysis-XRP-Battling-to-Remain-Above-1-as-Bulls-Struggle-with-Momentum",
+      "pubDate": "2021-05-27T10:56:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP is down by a total of 2% today as it continues to battle to maintain $1.00. Against bitcoin, XRP is testing resistance at 2660 SAT.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "How Ripple found new ways to grow XRP business despite SEC lawsuit",
+      "link": "https://cryptopanic.com/news/ripple/12010971/How-Ripple-found-new-ways-to-grow-XRP-business-despite-SEC-lawsuit",
+      "pubDate": "2021-05-27T10:49:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Ripple’s CEO Brad Garlinghouse says Ripple was hit hard financially after SEC filed its lawsuit, but the company is now expanding uses for XRP's technology.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "‘Come Over To DOGE-land’ – Elon Musk Urges Developers",
+      "link": "https://cryptopanic.com/news/dogecoin/12010972/Come-Over-To-DOGE-land-Elon-Musk-Urges-Developers",
+      "pubDate": "2021-05-27T10:42:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The great grand influencer of the crypto-space and self-acclaimed dogefather, Elon Musk, recently put out a clarion call on through his personal Twitter handle, calling on all developers to hop on the Dogecoin opensource development team. The call made by the CEO of Tesla is the latest in a series of efforts towards finding a […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 55
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Check out to turn NFTs and collection of NFTs into a DAO!",
+      "link": "https://cryptopanic.com/news/12012407/Check-out-to-turn-NFTs-and-collection-of-NFTs-into-a-DAO?mtm_campaign=API-OFA",
+      "pubDate": "2021-05-27T10:28:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "ALCH"
+      ]
+    },
+    {
+      "title": "U.S. SEC brings Ripple (XRP) transactions under scrutiny",
+      "link": "https://cryptopanic.com/news/ripple/12010914/US-SEC-brings-Ripple-XRP-transactions-under-scrutiny",
+      "pubDate": "2021-05-27T10:00:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The legal case against Ripple Labs Inc keeps developing as the United States Securities and Exchange Commission (SEC) filed a new request for additional discovery in connection with XRP transactions.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Trust reputable and transparent solutions only, when you are not certain about the market's next move.…",
+      "link": "https://cryptopanic.com/news/12015590/Trust-reputable-and-transparent-solutions-only-when-you-are-not-certain-about-the-markets-next-move",
+      "pubDate": "2021-05-27T09:24:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "Bitcoin Rejected at $40,000 as Ethereum Fails at $3,000 (Market Watch)",
+      "link": "https://cryptopanic.com/news/ethereum/12010808/Bitcoin-Rejected-at-40000-as-Ethereum-Fails-at-3000-Market-Watch",
+      "pubDate": "2021-05-27T08:34:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The crypto market cap has declined by $100 billion in a day as bitcoin slipped beneath $40,000 and the altcoins failed to increase any further.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 5
+      }
+    },
+    {
+      "title": "So we built a trillion $ crypto market, fortified by the unbeatable Bitcoin. Then comes Elon boy - one single shot…",
+      "link": "https://cryptopanic.com/news/12013927/So-we-built-a-trillion-crypto-market-fortified-by-the-unbeatable-Bitcoin-Then-comes-Elon-boy-one-single-shot",
+      "pubDate": "2021-05-27T08:32:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "This Crypto Asset Is Racing Toward Top 10 After 11,200% Surge in Five Months",
+      "link": "https://cryptopanic.com/news/matic-network/12010023/This-Crypto-Asset-Is-Racing-Toward-Top-10-After-11200-Surge-in-Five-Months",
+      "pubDate": "2021-05-27T07:15:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "A once overlooked altcoin is making headlines in 2021 after skyrocketing towards the top 10. At the beginning of 2021, Ethereum-based asset Polygon (MATIC) was ranked 113th with a price of $0.019 and a market cap of $96.12 million. Since then, Polygon has shot up more than 11,200% to a high of $2.45 and a […]",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Uniswap Governance Votes for Arbitrum L2 Scaling Deployment",
+      "link": "https://cryptopanic.com/news/uniswap/12009081/Uniswap-Governance-Votes-for-Arbitrum-L2-Scaling-Deployment",
+      "pubDate": "2021-05-27T07:02:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "An ongoing vote by Uniswap’s governance community is strongly in favor of deploying v3 on Arbitrum’s Layer 2 scaling mainnet.",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We're always looking to expand the usage of $VET in the crypto world. KuCoin Pool-X is offering $VEED rewards fo…",
+      "link": "https://cryptopanic.com/news/vechain/12009688/Were-always-looking-to-expand-the-usage-of-VET-in-the-crypto-world-KuCoin-Pool-X-is-offering-VEED-rewards-fo",
+      "pubDate": "2021-05-27T06:02:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "VET",
+        "VTHO",
+        "VEN"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple CEO Says IPO Highly Likely After SEC Case Concludes",
+      "link": "https://cryptopanic.com/news/ripple/12007136/Ripple-CEO-Says-IPO-Highly-Likely-After-SEC-Case-Concludes",
+      "pubDate": "2021-05-27T06:02:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Ripple CEO, Brad Garlinghouse, says its \"highly likely\" that the company will go public after its SEC lawsuit is concluded.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 25,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "About Fruits (FRTS)",
+      "link": "https://cryptopanic.com/news/12063251/About-Fruits-FRTS",
+      "pubDate": "2021-05-27T05:22:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FRTS"
+      ]
+    },
+    {
+      "title": "Ren launches bridge to Polygon for seven top crypto assets",
+      "link": "https://cryptopanic.com/news/matic-network/12005596/Ren-launches-bridge-to-Polygon-for-seven-top-crypto-assets",
+      "pubDate": "2021-05-27T05:18:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "The new bridge will allow Ren’s ERC-20 representations of BTC, BCH, DOGE, FIL, LUNA, ZEC and DGB, which can now be transferred onto the Polygon network.",
+      "currencies": [
+        "MATIC",
+        "ZEC",
+        "DGB"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @mobilejae: Tune in and hear @Blocko_io CEO Allan Kim speak at the Blockchain Trend Conference regarding digital namecard and NFT on @ae…",
+      "link": "https://cryptopanic.com/news/12005696/RT-mobilejae-Tune-in-and-hear-Blocko_io-CEO-Allan-Kim-speak-at-the-Blockchain-Trend-Conference-regarding-digital-namecard-and-NFT-on-ae",
+      "pubDate": "2021-05-27T05:17:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "Anthurine, CMO of QuarkChain, will speak about the next generation of DeFi/NFT network at BTConference online. You…",
+      "link": "https://cryptopanic.com/news/12008739/Anthurine-CMO-of-QuarkChain-will-speak-about-the-next-generation-of-DeFiNFT-network-at-BTConference-online-You",
+      "pubDate": "2021-05-27T05:15:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "QKC"
+      ]
+    },
+    {
+      "title": "TA: Ethereum Corrects Gains, Here’s Why 100 SMA Is The Key for Fresh Increase",
+      "link": "https://cryptopanic.com/news/near/12005590/TA-Ethereum-Corrects-Gains-Heres-Why-100-SMA-Is-The-Key-for-Fresh-Increase",
+      "pubDate": "2021-05-27T05:08:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum failed to continue above $2,900 against the US Dollar. ETH price corrected gains and it is now trading near a major support at $2,640 and the 100 hourly SMA. Ethereum broke the $2,850 resistance, but it failed to gain pace above $2,900. The price is now testing the $2,650 support and the 100 hourly […]",
+      "currencies": [
+        "ETH",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto couple tells court the IRS has no right to tax newly mined coins",
+      "link": "https://cryptopanic.com/news/12005567/Crypto-couple-tells-court-the-IRS-has-no-right-to-tax-newly-mined-coins",
+      "pubDate": "2021-05-27T04:33:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Coins earned by staking have been “created” and are untaxable until sold, according to one couple in the United States.",
+      "currencies": [
+        "XTZ"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Uniswap v3 looks set for layer-two scaling on both Arbitrum and Optimism",
+      "link": "https://cryptopanic.com/news/12005555/Uniswap-v3-looks-set-for-layer-two-scaling-on-both-Arbitrum-and-Optimism",
+      "pubDate": "2021-05-27T04:10:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Uniswap is now planning layer-two deployments on both Arbitrum and Optimism.",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Standard Hashrate Group and #BTCST invest $3.1 million USD to jointly acquire and operate a #Bitcoin mining facil…",
+      "link": "https://cryptopanic.com/news/12005975/Standard-Hashrate-Group-and-BTCST-invest-31-million-USD-to-jointly-acquire-and-operate-a-Bitcoin-mining-facil",
+      "pubDate": "2021-05-27T02:46:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTCST"
+      ]
+    },
+    {
+      "title": "XRP must up act. The fragility of crypto markets with BTC controlling a major share of trade, was exposed by ONE MA…",
+      "link": "https://cryptopanic.com/news/12007294/XRP-must-up-act-The-fragility-of-crypto-markets-with-BTC-controlling-a-major-share-of-trade-was-exposed-by-ONE-MA",
+      "pubDate": "2021-05-27T02:20:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "ONE",
+        "GTN"
+      ]
+    },
+    {
+      "title": "We are thrilled to be working with the @StacksOrg to integrate @Stacks with the Paycoin App. We will enable a uniqu…",
+      "link": "https://cryptopanic.com/news/12008503/We-are-thrilled-to-be-working-with-the-StacksOrg-to-integrate-Stacks-with-the-Paycoin-App-We-will-enable-a-uniqu?mtm_campaign=API-OFA",
+      "pubDate": "2021-05-27T00:43:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PCI"
+      ]
+    },
+    {
+      "title": "We are happy to announce that @Xangle_official disclosures are integrated on the $AERGO public mainnet!…",
+      "link": "https://cryptopanic.com/news/12005697/We-are-happy-to-announce-that-Xangle_official-disclosures-are-integrated-on-the-AERGO-public-mainnet",
+      "pubDate": "2021-05-27T00:04:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2020-03-30",
+  "fetchedAt": "2026-02-05T07:27:06.996Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Biscuit Labs’ Blockchain-Based Game Knight Story To Launch On TRON’s Network",
+      "link": "https://cryptopanic.com/news/tron/8377050/Biscuit-Labs-Blockchain-Based-Game-Knight-Story-To-Launch-On-TRONs-Network",
+      "pubDate": "2020-03-30T15:00:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

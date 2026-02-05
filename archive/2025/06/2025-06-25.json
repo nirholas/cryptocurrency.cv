@@ -1,0 +1,416 @@
+{
+  "date": "2025-06-25",
+  "fetchedAt": "2026-02-05T07:27:08.629Z",
+  "articleCount": 29,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Coinbase’s Base adds ADA and LTC as wrapped assets gain momentum",
+      "link": "https://cryptopanic.com/news/litecoin/22831147/Coinbases-Base-adds-ADA-and-LTC-as-wrapped-assets-gain-momentum",
+      "pubDate": "2025-06-25T22:35:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "LTC"
+      ]
+    },
+    {
+      "title": "Global M2 Can’t Predict Bitcoin Price, Says Quant Analyst",
+      "link": "https://cryptopanic.com/news/quant-network/22831108/Global-M2-Cant-Predict-Bitcoin-Price-Says-Quant-Analyst",
+      "pubDate": "2025-06-25T22:30:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "QNT"
+      ]
+    },
+    {
+      "title": "What is Cardano ADA, and is it Worth Buying in 2025?",
+      "link": "https://cryptopanic.com/news/blockstack/22830210/What-is-Cardano-ADA-and-is-it-Worth-Buying-in-2025",
+      "pubDate": "2025-06-25T21:50:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ]
+    },
+    {
+      "title": "Invesco and Galaxy enter race for Solana ETF with new SEC filing",
+      "link": "https://cryptopanic.com/news/solana/22829437/Invesco-and-Galaxy-enter-race-for-Solana-ETF-with-new-SEC-filing",
+      "pubDate": "2025-06-25T21:01:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Investment management company Invesco and crypto-focused firm Galaxy Digital have joined the race for a Solana exchange-traded fund.",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin, Dogecoin Hold Gains While Ethereum Drops",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22829046/Bitcoin-Dogecoin-Hold-Gains-While-Ethereum-Drops",
+      "pubDate": "2025-06-25T20:00:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Coinbase launches Cardano and Litecoin wrapped tokens cbADA, cbLTC on Base",
+      "link": "https://cryptopanic.com/news/cardano/22828044/Coinbase-launches-Cardano-and-Litecoin-wrapped-tokens-cbADA-cbLTC-on-Base",
+      "pubDate": "2025-06-25T19:21:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Coinbase launched wrapped tokens for Cardano (cbADA) and Litecoin (cbLTC) on its Base layer-2 network, the exchange said in a June 25 post. Each synthetic token is backed 1:1 by the underlying asset held in Coinbase custody, and proof-of-reserves pages list the on-chain addresses securing the collateral.",
+      "currencies": [
+        "ADA",
+        "LTC",
+        "DEFI"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 8
+      }
+    },
+    {
+      "title": "DePIN's Power Players: Analyzing Helium (HNT) vs. Render (RENDER) and Akash Network (AKT)",
+      "link": "https://cryptopanic.com/news/helium/22826860/DePINs-Power-Players-Analyzing-Helium-HNT-vs-Render-RENDER-and-Akash-Network-AKT",
+      "pubDate": "2025-06-25T18:30:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HNT",
+        "AKT",
+        "RENDER"
+      ]
+    },
+    {
+      "title": "Price predictions 6/25: BTC, ETH, XRP, BNB, SOL, DOGE, ADA, HYPE, BCH, SUI",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22826844/Price-predictions-625-BTC-ETH-XRP-BNB-SOL-DOGE-ADA-HYPE-BCH-SUI",
+      "pubDate": "2025-06-25T18:20:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Cash Breaks Out, Cardano Breaks Down as Crypto Traders Hold Breath on Fed: Analysis",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22826790/Bitcoin-Cash-Breaks-Out-Cardano-Breaks-Down-as-Crypto-Traders-Hold-Breath-on-Fed-Analysis",
+      "pubDate": "2025-06-25T18:14:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Stablecoins Approach $250 Billion, Anchoring 8% Of Global Crypto",
+      "link": "https://cryptopanic.com/news/dai/22825846/Stablecoins-Approach-250-Billion-Anchoring-8-Of-Global-Crypto",
+      "pubDate": "2025-06-25T18:00:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDC"
+      ]
+    },
+    {
+      "title": "zkLend Winds Down Operations After $9.5 Million Exploit",
+      "link": "https://cryptopanic.com/news/kucoin-shares/22825834/zkLend-Winds-Down-Operations-After-95-Million-Exploit",
+      "pubDate": "2025-06-25T17:56:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS",
+        "STRK",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "Proposal Aims to Reduce NEAR Inflation, Boost Sustainability",
+      "link": "https://cryptopanic.com/news/near/22825720/Proposal-Aims-to-Reduce-NEAR-Inflation-Boost-Sustainability",
+      "pubDate": "2025-06-25T17:30:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Solana Price Prediction: Institutional Demand Hits New High – $1,000 SOL Incoming",
+      "link": "https://cryptopanic.com/news/solana/22824199/Solana-Price-Prediction-Institutional-Demand-Hits-New-High-1000-SOL-Incoming",
+      "pubDate": "2025-06-25T16:15:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The Solana price has climbed back up to $145 today, returning to the level it was at the start of the week, before the US launched strikes against Iran.This means that SOL is up by 17.5% in the past month, with the altcoin holding on to a 6% gain in the past year.This is a modest return, but recent data has emerged that shows institutional demand for SOL reaching new highs, after Solana futures on the CME hit a volume of 1",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Fed’s Powell says Bitcoin and crypto have matured and become more mainstream",
+      "link": "https://cryptopanic.com/news/bitcoin/22823590/Feds-Powell-says-Bitcoin-and-crypto-have-matured-and-become-more-mainstream",
+      "pubDate": "2025-06-25T16:06:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Federal Reserve Chair Jerome Powell said Wednesday that Bitcoin and other crypto assets have matured and become more mainstream, and that the central bank is reassessing policy statements made during the Biden era. Powells comments came in response to a question from Senator Cynthia Lummis during his June 25 testimony before the Senate Banking Committee. Lummis questioned what had changed regarding stablecoin risks since the Feds 2023 policy under Section 9(13), and pressed Powell on whether th.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Spell Wallet Daily Puzzle 26 June 2025: Earn Reward of 1 MANA",
+      "link": "https://cryptopanic.com/news/decentraland/22825729/Spell-Wallet-Daily-Puzzle-26-June-2025-Earn-Reward-of-1-MANA",
+      "pubDate": "2025-06-25T15:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "MANA"
+      ]
+    },
+    {
+      "title": "New XRP Ledger Update Could Set Stage for Bullish Price Shift",
+      "link": "https://cryptopanic.com/news/ripple/22821672/New-XRP-Ledger-Update-Could-Set-Stage-for-Bullish-Price-Shift",
+      "pubDate": "2025-06-25T14:57:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "RippleX has launched a major XRP Ledger upgrade with seven new amendments, just as XRP's price shows quiet resilience against bearish indicators. <p>The post New XRP Ledger Update Could Set Stage for Bullish Price Shift first appeared on Ecoinimist. </p>",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Buy Crypto With Your Mastercard? Chainlink Just Made It Real",
+      "link": "https://cryptopanic.com/news/uniswap/22821468/Buy-Crypto-With-Your-Mastercard-Chainlink-Just-Made-It-Real",
+      "pubDate": "2025-06-25T14:37:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "UNI"
+      ]
+    },
+    {
+      "title": "Meme2Earn launches NUDES trading competition on Flamingo Finance",
+      "link": "https://cryptopanic.com/news/neo/22821455/Meme2Earn-launches-NUDES-trading-competition-on-Flamingo-Finance",
+      "pubDate": "2025-06-25T14:32:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Near Protocol faces pivotal vote to slash token inflation by half",
+      "link": "https://cryptopanic.com/news/near/22818355/Near-Protocol-faces-pivotal-vote-to-slash-token-inflation-by-half",
+      "pubDate": "2025-06-25T12:51:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR",
+        "HOT",
+        "A"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash resumes rally after testing $430 support, eyes $550",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/22818103/Bitcoin-Cash-resumes-rally-after-testing-430-support-eyes-550",
+      "pubDate": "2025-06-25T12:07:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "South Korea: stablecoins should first be issued by banks",
+      "link": "https://cryptopanic.com/news/dai/22817322/South-Korea-stablecoins-should-first-be-issued-by-banks",
+      "pubDate": "2025-06-25T08:49:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DAI",
+        "Z",
+        "STABLE"
+      ]
+    },
+    {
+      "title": "Qubetics’ $18.1M Presale Surge Makes it The Top Crypto Presale to Watch as Filecoin and BNB Gain Attention",
+      "link": "https://cryptopanic.com/news/filecoin/22809169/Qubetics-181M-Presale-Surge-Makes-it-The-Top-Crypto-Presale-to-Watch-as-Filecoin-and-BNB-Gain-Attention",
+      "pubDate": "2025-06-25T06:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "FIL"
+      ]
+    },
+    {
+      "title": "Binance to Delist Three Spot Trading Pairs on June 27",
+      "link": "https://cryptopanic.com/news/zilliqa/22810679/Binance-to-Delist-Three-Spot-Trading-Pairs-on-June-27",
+      "pubDate": "2025-06-25T06:05:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BNB",
+        "KAITO"
+      ]
+    },
+    {
+      "title": "Stacks Price Forecast: STX extends rally ahead of SIP-031 improvement proposal voting",
+      "link": "https://cryptopanic.com/news/blockstack/22821582/Stacks-Price-Forecast-STX-extends-rally-ahead-of-SIP-031-improvement-proposal-voting",
+      "pubDate": "2025-06-25T05:52:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "STX"
+      ]
+    },
+    {
+      "title": "Neo X TestNet v0.4.0 upgrade introduces ZK-based DKG verification and execution",
+      "link": "https://cryptopanic.com/news/neo/22808058/Neo-X-TestNet-v040-upgrade-introduces-ZK-based-DKG-verification-and-execution",
+      "pubDate": "2025-06-25T05:15:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO",
+        "ZK"
+      ]
+    },
+    {
+      "title": "Polkadot ETF Approval: Why Is the SEC Delaying the Decision?",
+      "link": "https://cryptopanic.com/news/polkadot/22809299/Polkadot-ETF-Approval-Why-Is-the-SEC-Delaying-the-Decision",
+      "pubDate": "2025-06-25T05:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Theta Price Prediction 2026 Hints at Recovery, but Qubetics Emerges as the Smarter Buy",
+      "link": "https://cryptopanic.com/news/theta-token/22807224/Theta-Price-Prediction-2026-Hints-at-Recovery-but-Qubetics-Emerges-as-the-Smarter-Buy",
+      "pubDate": "2025-06-25T04:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "THETA"
+      ]
+    },
+    {
+      "title": "Korean Central Bank Advocates Measured Stablecoin Approach",
+      "link": "https://cryptopanic.com/news/dai/22805190/Korean-Central-Bank-Advocates-Measured-Stablecoin-Approach",
+      "pubDate": "2025-06-25T01:55:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DAI"
+      ]
+    },
+    {
+      "title": "Near Community Proposes Inflation Reduction for NEAR Token Economy",
+      "link": "https://cryptopanic.com/news/near/22816704/Near-Community-Proposes-Inflation-Reduction-for-NEAR-Token-Economy",
+      "pubDate": "2025-06-25T01:53:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    }
+  ]
+}

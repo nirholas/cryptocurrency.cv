@@ -1,0 +1,42 @@
+{
+  "date": "2019-02-02",
+  "fetchedAt": "2026-02-05T07:27:07.892Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA Launches Its New Documentation Portal",
+      "link": "https://cryptopanic.com/news/4453237/IOTA-Launches-Its-New-Documentation-Portal",
+      "pubDate": "2019-02-02T13:54:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron (TRX) Becomes Top Gainer in 2019, Justin Sun Gets Over 4 Mln Facebook Followers",
+      "link": "https://cryptopanic.com/news/tron/4452811/Tron-TRX-Becomes-Top-Gainer-in-2019-Justin-Sun-Gets-Over-4-Mln-Facebook-Followers",
+      "pubDate": "2019-02-02T12:19:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

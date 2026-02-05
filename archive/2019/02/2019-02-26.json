@@ -1,0 +1,47 @@
+{
+  "date": "2019-02-26",
+  "fetchedAt": "2026-02-05T07:27:06.997Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "What is Ethereum? The ULTIMATE Research-Backed ETH Guide",
+      "link": "https://cryptopanic.com/news/4671818/What-is-Ethereum-The-ULTIMATE-Research-Backed-ETH-Guide",
+      "pubDate": "2019-02-26T13:24:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "TRX",
+        "ETC",
+        "XEM",
+        "XNO"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "TRON (TRX) to Target Institutional Investment in Upcoming Hard Fork",
+      "link": "https://cryptopanic.com/news/tron/4669466/TRON-TRX-to-Target-Institutional-Investment-in-Upcoming-Hard-Fork",
+      "pubDate": "2019-02-26T07:00:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

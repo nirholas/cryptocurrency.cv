@@ -1,0 +1,350 @@
+{
+  "date": "2024-01-01",
+  "fetchedAt": "2026-02-05T07:27:08.061Z",
+  "articleCount": 24,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "FTX bankruptcy could go on for years, legal expert says",
+      "link": "https://cryptopanic.com/news/19144229/FTX-bankruptcy-could-go-on-for-years-legal-expert-says",
+      "pubDate": "2024-01-01T23:06:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "Ethereum “Set For Further Gains,” Analyst Puts This Target",
+      "link": "https://cryptopanic.com/news/19144176/Ethereum-Set-For-Further-Gains-Analyst-Puts-This-Target",
+      "pubDate": "2024-01-01T22:00:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "An analyst has explained that Ethereum could be set to see a further rally based on on-chain data. Here’s the level ETH may end up surpassing. Ethereum Has No Significant On-Chain Resistance Ahead In a new post on X, analyst Ali has discussed how Ethereum’s support and resistance levels are looking like based on on-chain data. In on-chain analysis, the potential for any level to provide any...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "GRT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Neo News: Week in Review – December 25 – December 31",
+      "link": "https://cryptopanic.com/news/19144173/Neo-News-Week-in-Review-December-25-December-31",
+      "pubDate": "2024-01-01T22:00:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Five Bitcoin mining pools dominated 2023 with 84% of total blocks",
+      "link": "https://cryptopanic.com/news/19144093/Five-Bitcoin-mining-pools-dominated-2023-with-84-of-total-blocks",
+      "pubDate": "2024-01-01T20:23:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "In the span from December 30, 2022, to December 30, 2023, the Bitcoin mining landscape experienced a transformative year marked by significant achievements and industry-leading players. A total of 54,002 bitcoin blocks were mined during this period, with Foundry USA emerging as the top contributor, mining an impressive 16,492 blocks. The mining community navigated through […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "The year in data: 5 charts that show how crypto changed in 2023",
+      "link": "https://cryptopanic.com/news/19144073/The-year-in-data-5-charts-that-show-how-crypto-changed-in-2023",
+      "pubDate": "2024-01-01T20:01:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "USDC",
+        "BUSD"
+      ]
+    },
+    {
+      "title": "Bitcoin’s 2024 Forecast: From $60,000 To $500,000, Top Experts Share Bold Predictions",
+      "link": "https://cryptopanic.com/news/19144071/Bitcoins-2024-Forecast-From-60000-To-500000-Top-Experts-Share-Bold-Predictions",
+      "pubDate": "2024-01-01T20:00:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "MKR",
+        "OP"
+      ]
+    },
+    {
+      "title": "VanEck CEO Forecasts Bitcoin’s Return to Historic Peak; The Graph and Rebel Satoshi to Erupt",
+      "link": "https://cryptopanic.com/news/19144025/VanEck-CEO-Forecasts-Bitcoins-Return-to-Historic-Peak-The-Graph-and-Rebel-Satoshi-to-Erupt",
+      "pubDate": "2024-01-01T19:26:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "GRT"
+      ]
+    },
+    {
+      "title": "Major token unlocks slated for January with Aptos leading at $234 million",
+      "link": "https://cryptopanic.com/news/19144017/Major-token-unlocks-slated-for-January-with-Aptos-leading-at-234-million",
+      "pubDate": "2024-01-01T19:16:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "APE",
+        "AXS",
+        "APT"
+      ]
+    },
+    {
+      "title": "DYDX Unlocks $98 Million Worth of Tokens, Impacting Market Circulation",
+      "link": "https://cryptopanic.com/news/19143917/DYDX-Unlocks-98-Million-Worth-of-Tokens-Impacting-Market-Circulation?mtm_campaign=API-OFA",
+      "pubDate": "2024-01-01T17:33:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETHDYDX"
+      ]
+    },
+    {
+      "title": "Tellor (TRB) Leaves Market In Shock With 75% Price Crash, Here’s What Happened",
+      "link": "https://cryptopanic.com/news/19143878/Tellor-TRB-Leaves-Market-In-Shock-With-75-Price-Crash-Heres-What-Happened",
+      "pubDate": "2024-01-01T17:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Enjoying the world of Baldur’s Gate 3 without DnD experience",
+      "link": "https://cryptopanic.com/news/19143793/Enjoying-the-world-of-Baldurs-Gate-3-without-DnD-experience",
+      "pubDate": "2024-01-01T15:24:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GT"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Bitcoin SV's Price Increased More Than 13% Within 24 hours",
+      "link": "https://cryptopanic.com/news/19143777/Cryptocurrency-Bitcoin-SVs-Price-Increased-More-Than-13-Within-24-hours",
+      "pubDate": "2024-01-01T15:01:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Filecoin Up More Than 18% In 24 hours",
+      "link": "https://cryptopanic.com/news/filecoin/19143778/Cryptocurrency-Filecoin-Up-More-Than-18-In-24-hours",
+      "pubDate": "2024-01-01T15:00:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "Shiba Inu Faces First Big Drama of 2024, Here's What SHIB Holders Should Know",
+      "link": "https://cryptopanic.com/news/internet-computer/19143728/Shiba-Inu-Faces-First-Big-Drama-of-2024-Heres-What-SHIB-Holders-Should-Know",
+      "pubDate": "2024-01-01T14:33:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "ICP"
+      ]
+    },
+    {
+      "title": "Bitcoin Fork Linked to Self-Proclaimed Satoshi Records Massive Price Spike",
+      "link": "https://cryptopanic.com/news/19143729/Bitcoin-Fork-Linked-to-Self-Proclaimed-Satoshi-Records-Massive-Price-Spike",
+      "pubDate": "2024-01-01T14:23:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ]
+    },
+    {
+      "title": "Crypto Price Prediction For January 1: 1INCH, FIL, KLAY",
+      "link": "https://cryptopanic.com/news/19143686/Crypto-Price-Prediction-For-January-1-1INCH-FIL-KLAY",
+      "pubDate": "2024-01-01T14:01:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FIL",
+        "KLAY"
+      ]
+    },
+    {
+      "title": "Sam Bankman-Fried: Pro-Bitcoin Presidential Alleges Other Reasons Behind Dropped Charges",
+      "link": "https://cryptopanic.com/news/19143685/Sam-Bankman-Fried-Pro-Bitcoin-Presidential-Alleges-Other-Reasons-Behind-Dropped-Charges",
+      "pubDate": "2024-01-01T14:00:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "4 altcoins to buy under $1 for start of 2024",
+      "link": "https://cryptopanic.com/news/19143677/4-altcoins-to-buy-under-1-for-start-of-2024",
+      "pubDate": "2024-01-01T14:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "After altcoins took a breather in the final weeks of December 2023, cryptocurrencies other than Bitcoin (BTC) entered 2024 with … Continued",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "XRP",
+        "MATIC",
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Internet computer (ICP) strong performance challenges crypto market norms",
+      "link": "https://cryptopanic.com/news/internet-computer/19143593/Internet-computer-ICP-strong-performance-challenges-crypto-market-norms",
+      "pubDate": "2024-01-01T12:37:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ]
+    },
+    {
+      "title": "Cardano (ADA) Skyrockets in This Bullish Metric, Finishing 2023 Strong",
+      "link": "https://cryptopanic.com/news/19143576/Cardano-ADA-Skyrockets-in-This-Bullish-Metric-Finishing-2023-Strong",
+      "pubDate": "2024-01-01T12:14:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Majority of growth occurred in mid-December",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Crypto Analyst Says History Shows What Might Be Next For Bitcoin, But Is It Good Or Bad?",
+      "link": "https://cryptopanic.com/news/19143548/Crypto-Analyst-Says-History-Shows-What-Might-Be-Next-For-Bitcoin-But-Is-It-Good-Or-Bad",
+      "pubDate": "2024-01-01T12:00:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "ATOM flags bearish warning: Will prices hit $9?",
+      "link": "https://cryptopanic.com/news/19143510/ATOM-flags-bearish-warning-Will-prices-hit-9",
+      "pubDate": "2024-01-01T11:30:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Orbit Chain Becomes Victim of $81M Hack on New Year’s Eve",
+      "link": "https://cryptopanic.com/news/19143463/Orbit-Chain-Becomes-Victim-of-81M-Hack-on-New-Years-Eve",
+      "pubDate": "2024-01-01T09:38:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "WBTC"
+      ]
+    },
+    {
+      "title": "Orbit Bridge, hacked for $82 million in major crypto breach",
+      "link": "https://cryptopanic.com/news/19143131/Orbit-Bridge-hacked-for-82-million-in-major-crypto-breach",
+      "pubDate": "2024-01-01T01:48:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

@@ -1,0 +1,940 @@
+{
+  "date": "2021-04-06",
+  "fetchedAt": "2026-02-05T07:27:06.776Z",
+  "articleCount": 61,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @SotRos25: It’s go time!!  $MAID",
+      "link": "https://cryptopanic.com/news/11731357/RT-SotRos25-Its-go-time-MAID",
+      "pubDate": "2021-04-06T22:29:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "XRP Tops A Three-Year High Above $1 Amid New Turn In Ripple Lawsuit",
+      "link": "https://cryptopanic.com/news/ripple/11729150/XRP-Tops-A-Three-Year-High-Above-1-Amid-New-Turn-In-Ripple-Lawsuit",
+      "pubDate": "2021-04-06T21:48:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "XRP is going from strength to strength, shattering its way to new highs. On Tuesday, the price of the now fourth-ranked cryptocurrency jumped above $1 for the very first time since 2018. The remarkable milestone comes amid a market-wide rally whilst foregoing the fact that Ripple — the blockchain startup behind XRP — is stuck […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple Wins Ruling to Expose SEC Docs on Bitcoin, Ethereum",
+      "link": "https://cryptopanic.com/news/ripple/11729148/Ripple-Wins-Ruling-to-Expose-SEC-Docs-on-Bitcoin-Ethereum",
+      "pubDate": "2021-04-06T21:37:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The price of XRP is up 22% in the last 24 hours, its highest level since 2018.",
+      "currencies": [
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Its a bad sign when $BTG pamps and everything else is down...",
+      "link": "https://cryptopanic.com/news/11730520/Its-a-bad-sign-when-BTG-pamps-and-everything-else-is-down",
+      "pubDate": "2021-04-06T21:01:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTG"
+      ]
+    },
+    {
+      "title": "After Bitcoin and Ethereum, CoinShares Launched a Physically-Backed Litecoin ETP",
+      "link": "https://cryptopanic.com/news/litecoin/11729076/After-Bitcoin-and-Ethereum-CoinShares-Launched-a-Physically-Backed-Litecoin-ETP",
+      "pubDate": "2021-04-06T20:56:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "CoinShares continues with its product expansion by releasing a physically-backed Litecoin ETP on Switzerland's SIX Exchange.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Litecoin On The Verge Of Monster Move Against Bitcoin",
+      "link": "https://cryptopanic.com/news/litecoin/11729014/Litecoin-On-The-Verge-Of-Monster-Move-Against-Bitcoin",
+      "pubDate": "2021-04-06T20:00:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Litecoin has been among the worst performers in the crypto market in 2020 and 2021 thus far, despite the coin’s longevity in the top ten assets by market cap. The coin’s fortunes could soon turn completely around, due to what looks to be a monster-sized move brewing against Bitcoin on the altcoin trading pair. Here’s […]",
+      "currencies": [
+        "BTC",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SwissBorg institutional products, DeFi Binance Smart Chain part 2, PowWow #13/50",
+      "link": "https://cryptopanic.com/news/11728943/SwissBorg-institutional-products-DeFi-Binance-Smart-Chain-part-2-PowWow-1350",
+      "pubDate": "2021-04-06T19:31:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CHSB"
+      ]
+    },
+    {
+      "title": "RT @LuksoNews: \"Jumping into a #LUKSO Future\" my #Meta_VS selfie @dematerialised @lukso_io",
+      "link": "https://cryptopanic.com/news/11731261/RT-LuksoNews-Jumping-into-a-LUKSO-Future-my-Meta_VS-selfie-dematerialised-lukso_io",
+      "pubDate": "2021-04-06T19:22:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "RT @CryptoDanye: @lukso_io @dematerialised @cryptoartadvisr @RTFKTstudios But the one who got me \"WOW\" was this one (the Phenix )",
+      "link": "https://cryptopanic.com/news/11731262/RT-CryptoDanye-lukso_io-dematerialised-cryptoartadvisr-RTFKTstudios-But-the-one-who-got-me-WOW-was-this-one-the-Phenix",
+      "pubDate": "2021-04-06T19:22:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ]
+    },
+    {
+      "title": "This is me today :’)",
+      "link": "https://cryptopanic.com/news/11728863/This-is-me-today",
+      "pubDate": "2021-04-06T18:31:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "Apart from OMG, STX, UNI, and BAT, which top-100 alts will see an upswing soon?",
+      "link": "https://cryptopanic.com/news/11728874/Apart-from-OMG-STX-UNI-and-BAT-which-top-100-alts-will-see-an-upswing-soon",
+      "pubDate": "2021-04-06T18:30:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Peter Brandt Turns Bullish on XRP After Spotting Extremely Rare Pattern",
+      "link": "https://cryptopanic.com/news/ripple/11728860/Peter-Brandt-Turns-Bullish-on-XRP-After-Spotting-Extremely-Rare-Pattern",
+      "pubDate": "2021-04-06T18:13:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP has just formed an incredibly rare pattern, according to trading legend Peter Brandt",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 27,
+        "negative": 10
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "CoinShares Launches Litecoin-backed Exchange Traded Product (ETP)",
+      "link": "https://cryptopanic.com/news/litecoin/11728861/CoinShares-Launches-Litecoin-backed-Exchange-Traded-Product-ETP",
+      "pubDate": "2021-04-06T18:00:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "CoinShares has announced the launch of a Litecoin backed exchange-traded product (ETF). This development increases the number of crypto-backed investment products launched by CoinShares to seven. Litecoin ETP Listed on Swiss SIX Exchange CoinShares revealed this launch of the Litecoin exchange product on April 6, 2021, and it will be listed using the ticker LITE.Read More",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @certik_io: $EURS, the first Euro pegged #stablecoin from @stasisnet, has had its token contract audited by #CertiK! With 0 Medium - Cri…",
+      "link": "https://cryptopanic.com/news/11732160/RT-certik_io-EURS-the-first-Euro-pegged-stablecoin-from-stasisnet-has-had-its-token-contract-audited-by-CertiK-With-0-Medium-Cri",
+      "pubDate": "2021-04-06T17:52:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "RT @Spendcom: While we examine the issues and work with @Kucoincom and @OKEx to finalize the swap, we have temporarily re-enabled $SPND dep…",
+      "link": "https://cryptopanic.com/news/11732423/RT-Spendcom-While-we-examine-the-issues-and-work-with-Kucoincom-and-OKEx-to-finalize-the-swap-we-have-temporarily-re-enabled-SPND-dep",
+      "pubDate": "2021-04-06T17:30:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STRK"
+      ]
+    },
+    {
+      "title": "Stellar Cryptocurrency Nodes Go Dark for 9 Hours and Counting",
+      "link": "https://cryptopanic.com/news/11728784/Stellar-Cryptocurrency-Nodes-Go-Dark-for-9-Hours-and-Counting",
+      "pubDate": "2021-04-06T17:18:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Some nodes on the Stellar network have stopped validating transactions. The Stellar Development Foundation is trying to determine why.",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Bitcoin ABC 0.23.1 is now available! This release is mostly a developer release, with improvements to the avalanche…",
+      "link": "https://cryptopanic.com/news/ecash/11729977/Bitcoin-ABC-0231-is-now-available-This-release-is-mostly-a-developer-release-with-improvements-to-the-avalanche",
+      "pubDate": "2021-04-06T17:10:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC",
+        "BCHABC"
+      ]
+    },
+    {
+      "title": "Polkadot-ecosystem platform Polkatrain loses $3 million in a rebate arbitrage attack",
+      "link": "https://cryptopanic.com/news/polkadot/11728766/Polkadot-ecosystem-platform-Polkatrain-loses-3-million-in-a-rebate-arbitrage-attack",
+      "pubDate": "2021-04-06T17:04:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "On April 5, 2021, Polkatrain, a decentralized fundraising platform operating in the Polkadot ecosystem, suffered a rebate arbitrage attack resulting... Continue reading",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 36
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Reef about to breakout and comparison to some hyped coins",
+      "link": "https://cryptopanic.com/news/11728748/Reef-about-to-breakout-and-comparison-to-some-hyped-coins",
+      "pubDate": "2021-04-06T17:02:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "REEF"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We are happy to announce there are 4 relevant news coming up, the first will be announced between the 12th and 14th…",
+      "link": "https://cryptopanic.com/news/11730637/We-are-happy-to-announce-there-are-4-relevant-news-coming-up-the-first-will-be-announced-between-the-12th-and-14th",
+      "pubDate": "2021-04-06T16:44:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "$Dent. Time to buy some more",
+      "link": "https://cryptopanic.com/news/11734463/Dent-Time-to-buy-some-more",
+      "pubDate": "2021-04-06T15:50:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "Stellar Faces Outage as Some Validator Nodes Go Offline",
+      "link": "https://cryptopanic.com/news/11728662/Stellar-Faces-Outage-as-Some-Validator-Nodes-Go-Offline",
+      "pubDate": "2021-04-06T15:45:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The Stellar blockchain faced a technical issue causing the validator nodes to be unable to process transactions. Bitstamp Halts Stellar XLM An unknown technical glitch caused core validators to drop off the Stellar network. According to an official update by Stellar Development Foundation (SDF), the main development team behind the blockchain, around 8 am UTC, the SDF nodes stopped validating transactions. The team is currently working to determine the cause and to resolve the issue, and bring S",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "A huge thanks to all the exchanges that, sent us attractive offers to list the Glitzkoin GTN token. The closure of…",
+      "link": "https://cryptopanic.com/news/11730865/A-huge-thanks-to-all-the-exchanges-that-sent-us-attractive-offers-to-list-the-Glitzkoin-GTN-token-The-closure-of",
+      "pubDate": "2021-04-06T15:41:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Bitcoin Miners Dumping Half A Million BTC Couldn’t Dent Bull Rally",
+      "link": "https://cryptopanic.com/news/11728617/Bitcoin-Miners-Dumping-Half-A-Million-BTC-Couldnt-Dent-Bull-Rally",
+      "pubDate": "2021-04-06T15:30:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin price is still fighting to break back above $60,000 per coin, but things could push higher according to miner behavior. After dumping more than a half a million BTC on the market during the bull rally, and barely being able to make a dent in terms of price decline, miners might have finally given in and started holding their coins for the sudden surge ahead. Miners Dump More Than Half...",
+      "currencies": [
+        "BTC",
+        "DENT"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BTC, XRP and DOT Price Analysis for April 6",
+      "link": "https://cryptopanic.com/news/polkadot/11728564/BTC-XRP-and-DOT-Price-Analysis-for-April-6",
+      "pubDate": "2021-04-06T15:16:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "How good are Bitcoin (BTC) and Polkadot's (DOT) chances to grow like XRP?",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano Fund Invests in COTI Ahead of Smart Contract Launch",
+      "link": "https://cryptopanic.com/news/polkadot/11728601/Cardano-Fund-Invests-in-COTI-Ahead-of-Smart-Contract-Launch",
+      "pubDate": "2021-04-06T15:10:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "cFund, Cardano’s venture fund, is investing in COTI. Cardano Makes VC Investment The investment will set the path for the two projects to explore “cooperation and collaboration.” COTI builds fintech infrastructure for blockchain, allowing for the creation of native payment solutions. It focuses on bringing scalability to blockchain-based payments, which have traditionally been...",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "This hurt! But we will recover!",
+      "link": "https://cryptopanic.com/news/11728451/This-hurt-But-we-will-recover",
+      "pubDate": "2021-04-06T14:31:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "XRP breaks above $1, retaking 4th place among top cryptos",
+      "link": "https://cryptopanic.com/news/ripple/11728480/XRP-breaks-above-1-retaking-4th-place-among-top-cryptos",
+      "pubDate": "2021-04-06T14:30:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Despite the ongoing legal battle with the United States Securities and Exchange Commission (SEC), the price of Ripple’s XRP token has nearly doubled in the last 24 hours, reaching over $1.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 23,
+        "negative": 27
+      }
+    },
+    {
+      "title": "XRP Moves Above $1 For the First Time in 3 Years",
+      "link": "https://cryptopanic.com/news/ripple/11728479/XRP-Moves-Above-1-For-the-First-Time-in-3-Years",
+      "pubDate": "2021-04-06T14:30:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Following a massive price explosion over the past two days, XRP rose to a three-year high of $1.10. XRP Makes New Yearly High Ripple’s XRP made headlines after rising above the $1 mark for the first time since mid-February 2018. The sudden upswing came after the fourth-largest cryptocurrency by market capitalization broke out of an inverse head-and-shoulders. This altcoin...",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple Rises From the Ashes",
+      "link": "https://cryptopanic.com/news/ripple/11728359/Ripple-Rises-From-the-Ashes",
+      "pubDate": "2021-04-06T13:37:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple has risen by about 40% today, surpassing $1 for the first time in three years with the currency not far off from regaining its third place. Its market cap...",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 4
+      }
+    },
+    {
+      "title": "BNB Hits $400 All-Time High, Reducing Market Cap Distance from Ethereum",
+      "link": "https://cryptopanic.com/news/11728346/BNB-Hits-400-All-Time-High-Reducing-Market-Cap-Distance-from-Ethereum",
+      "pubDate": "2021-04-06T13:31:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Third largest cryptocurrency, BNB, has for the first time surpassed $400 all-time high",
+      "currencies": [
+        "ETH",
+        "BNB"
+      ],
+      "votes": {
+        "positive": 25,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Breaks $1 to Reach a Top Five Position",
+      "link": "https://cryptopanic.com/news/polkadot/11728380/XRP-Breaks-1-to-Reach-a-Top-Five-Position",
+      "pubDate": "2021-04-06T13:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The new high pushes XRP past cardano (ADA) and polkadot (DOT), the longtime frontrunners in the altcoin bull market.",
+      "currencies": [
+        "ADA",
+        "XRP",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Stellar hit by transaction issues, developers say ‘network is still online’ despite node outage",
+      "link": "https://cryptopanic.com/news/11728340/Stellar-hit-by-transaction-issues-developers-say-network-is-still-online-despite-node-outage",
+      "pubDate": "2021-04-06T13:26:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The Stellar network has not processed transactions for hours, according to publicly available data.",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 30
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Thanks to @p2pb2b for hosting the $MAID AMA this morning &amp; to everyone who joined as well! If you missed it or stil…",
+      "link": "https://cryptopanic.com/news/11731359/Thanks-to-p2pb2b-for-hosting-the-MAID-AMA-this-morning-amp-to-everyone-who-joined-as-well-If-you-missed-it-or-stil",
+      "pubDate": "2021-04-06T13:21:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "Ethereum-based DeFi protocol Balancer to expand on Algorand",
+      "link": "https://cryptopanic.com/news/11728253/Ethereum-based-DeFi-protocol-Balancer-to-expand-on-Algorand",
+      "pubDate": "2021-04-06T13:00:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Decentralized finance (DeFi) protocol Balancer, built on Ethereum, is set to expand on Algorand.",
+      "currencies": [
+        "ETH",
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SEC Used to Call XRP Digital Currency, Has to Explain in Court Why It Backs Off Now: Lawyer Jeremy Hogan",
+      "link": "https://cryptopanic.com/news/ripple/11728198/SEC-Used-to-Call-XRP-Digital-Currency-Has-to-Explain-in-Court-Why-It-Backs-Off-Now-Lawyer-Jeremy-Hogan",
+      "pubDate": "2021-04-06T12:26:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Partner at the law company Hogan and Hogan who has been following the case of the SEC against Ripple says the SEC has some important issue to explain to the court",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "A Litecoin (LTC) ETP just launched in Switzerland",
+      "link": "https://cryptopanic.com/news/litecoin/11728172/A-Litecoin-LTC-ETP-just-launched-in-Switzerland",
+      "pubDate": "2021-04-06T12:18:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Litecoin, the world’s ninth-largest cryptocurrency by market cap, will soon see an institutional listing in the form of an exchange-traded product (ETP) in Switzerland, as per a press release by crypto investment firm CoinShares today.",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @BinanceChain: Synthetic asset protocol brought by @BTCST2020",
+      "link": "https://cryptopanic.com/news/11729836/RT-BinanceChain-Synthetic-asset-protocol-brought-by-BTCST2020",
+      "pubDate": "2021-04-06T12:00:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTCST"
+      ]
+    },
+    {
+      "title": "Swissborg vs Coinbase",
+      "link": "https://cryptopanic.com/news/11734193/Swissborg-vs-Coinbase",
+      "pubDate": "2021-04-06T11:52:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "CHSB"
+      ]
+    },
+    {
+      "title": "Bitfinex Pauses XLM Withdrawals Due to Issues on Stellar Blockchain",
+      "link": "https://cryptopanic.com/news/11728083/Bitfinex-Pauses-XLM-Withdrawals-Due-to-Issues-on-Stellar-Blockchain",
+      "pubDate": "2021-04-06T11:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Bitfinex CTO has tweeted that XLM withdrawals have been held up",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 17
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "CoinShares launches physically backed Litecoin ETP",
+      "link": "https://cryptopanic.com/news/litecoin/11728062/CoinShares-launches-physically-backed-Litecoin-ETP",
+      "pubDate": "2021-04-06T11:00:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Major European digital asset investment firm CoinShares has launched its third physically backed ETP in 2021.",
+      "currencies": [
+        "LTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP surpasses $1 for the first time since 2018: What’s behind the new rally?",
+      "link": "https://cryptopanic.com/news/ripple/11728002/XRP-surpasses-1-for-the-first-time-since-2018-Whats-behind-the-new-rally",
+      "pubDate": "2021-04-06T10:35:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP has surpassed $1 for the first time in 37 months as major cap altcoins are starting to follow Ethereum.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Price Soars to $1 In Anticipation of Today’s Ripple-SEC Hearing",
+      "link": "https://cryptopanic.com/news/ripple/11727991/XRP-Price-Soars-to-1-In-Anticipation-of-Todays-Ripple-SEC-Hearing",
+      "pubDate": "2021-04-06T10:22:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP’s price has surged to a 3-year high of $1 as Ripple prepares for today’s hearing against the SEC.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polkadot (DOT), Kusama (KSM) to Be Next Platforms for Tether (USDT). Why Is This Important?",
+      "link": "https://cryptopanic.com/news/polkadot/11727986/Polkadot-DOT-Kusama-KSM-to-Be-Next-Platforms-for-Tether-USDT-Why-Is-This-Important",
+      "pubDate": "2021-04-06T10:20:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Most popular and liquid stablecoin, U.S. Dollar Tether (USDT) by Tether Limited, drops a bombshell by going live on Polkadot and its \"canary network,\" Kusama",
+      "currencies": [
+        "USDT",
+        "DOT",
+        "KSM"
+      ],
+      "votes": {
+        "positive": 29,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tether Is Planning to Launch New Version of USDT on Polkadot and Kusama",
+      "link": "https://cryptopanic.com/news/polkadot/11727980/Tether-Is-Planning-to-Launch-New-Version-of-USDT-on-Polkadot-and-Kusama",
+      "pubDate": "2021-04-06T10:04:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "On Tuesday (April 6), Tether Operations Limited (“Tether”), the company that issues the largest stablecoin by market capitalization, announced that it is planning to launch Tether tokens (“USDt”) on the Polkadot network. Before USDt gets launched on Polkadot, it will go live on Kusama, which is currently serving as a canary/test network (or pre-production environment) […]",
+      "currencies": [
+        "USDT",
+        "DOT",
+        "KSM"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tether to launch USDT stablecoin on Polkadot and Kusama",
+      "link": "https://cryptopanic.com/news/polkadot/11727943/Tether-to-launch-USDT-stablecoin-on-Polkadot-and-Kusama",
+      "pubDate": "2021-04-06T10:00:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Tether announced Tuesday that it would launch its USDT stablecoin on the Polkadot and Kusama networks.",
+      "currencies": [
+        "USDT",
+        "DOT",
+        "KSM"
+      ],
+      "votes": {
+        "positive": 31,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$XRP Price Going Parabolic, Breaks $1 for First Time Since 5 March 2018",
+      "link": "https://cryptopanic.com/news/ripple/11727933/XRP-Price-Going-Parabolic-Breaks-1-for-First-Time-Since-5-March-2018",
+      "pubDate": "2021-04-06T09:32:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "At 08:55 UTC on Tuesday (April 6), on crypto exchange Bitstamp, the XRP price reached an intraday high of $1.01307. This is the highest price XRP has seen in 1,128 days. According to data by TradingView, currently (as of 09:20 UTC on April 6), XRP is trading around $0.98114, which means that in the past […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Recaptures Top-4 Spot on CoinMarketCap, Inching Real Close to $1",
+      "link": "https://cryptopanic.com/news/ripple/11727848/XRP-Recaptures-Top-4-Spot-on-CoinMarketCap-Inching-Real-Close-to-1",
+      "pubDate": "2021-04-06T08:42:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "XRP has regained the top-four spot after staying for a long while at the top-seven position",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Soars to $0.94, While 72.6 Million XRP Gets Moved With Major XRP Delister Bitstamp’s Participation",
+      "link": "https://cryptopanic.com/news/ripple/11727792/XRP-Soars-to-094-While-726-Million-XRP-Gets-Moved-With-Major-XRP-Delister-Bitstamps-Participation",
+      "pubDate": "2021-04-06T08:02:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Whale Alert detects almost 73 million XRP moved by two of Ripple ODL corridors and a few other crypto exchanges; meanwhile XRP has surged to $0.94",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Altcoin Season 2021 Booming as Bitcoin Dominance at 1-Year Low (Market Watch)",
+      "link": "https://cryptopanic.com/news/11727598/Altcoin-Season-2021-Booming-as-Bitcoin-Dominance-at-1-Year-Low-Market-Watch",
+      "pubDate": "2021-04-06T07:24:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Ripple continues with its impressive performers following another double-digit increase to a 3-year high, while BNB has marked a new record above $380.",
+      "currencies": [
+        "BTC",
+        "BNB"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "We are thrilled to announce that we have signed a #MOU with @Tokamak_Network. We will soon integrate Tokamak Networ…",
+      "link": "https://cryptopanic.com/news/11726603/We-are-thrilled-to-announce-that-we-have-signed-a-MOU-with-Tokamak_Network-We-will-soon-integrate-Tokamak-Networ?mtm_campaign=API-OFA",
+      "pubDate": "2021-04-06T06:11:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PCI"
+      ]
+    },
+    {
+      "title": "This viseo got me even more hyped on Dent. Covers fundamentals really well",
+      "link": "https://cryptopanic.com/news/11728145/This-viseo-got-me-even-more-hyped-on-Dent-Covers-fundamentals-really-well",
+      "pubDate": "2021-04-06T05:55:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "What's your top tip for people new to #crypto?⬇️",
+      "link": "https://cryptopanic.com/news/12559132/Whats-your-top-tip-for-people-new-to-crypto",
+      "pubDate": "2021-04-06T04:25:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CTC"
+      ]
+    },
+    {
+      "title": "An unfortunate situation...",
+      "link": "https://cryptopanic.com/news/11724497/An-unfortunate-situation",
+      "pubDate": "2021-04-06T03:31:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHSB"
+      ]
+    },
+    {
+      "title": "Garlinghouse Backtracks on BTC as Ripple Gains Ground on SEC & XRP Soars",
+      "link": "https://cryptopanic.com/news/11724489/Garlinghouse-Backtracks-on-BTC-as-Ripple-Gains-Ground-on-SEC-XRP-Soars",
+      "pubDate": "2021-04-06T03:30:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "ARK"
+      ]
+    },
+    {
+      "title": "8BTC: #COCOS-1808 #NFT standard features: it can carry Frostmourne across World of Warcraft and Hearthstone",
+      "link": "https://cryptopanic.com/news/11725136/8BTC-COCOS-1808-NFT-standard-features-it-can-carry-Frostmourne-across-World-of-Warcraft-and-Hearthstone",
+      "pubDate": "2021-04-06T03:16:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "COCOS"
+      ]
+    },
+    {
+      "title": "Nexo faces lawsuit for liquidating $5M in client collateral amid XRP delisting",
+      "link": "https://cryptopanic.com/news/11724486/Nexo-faces-lawsuit-for-liquidating-5M-in-client-collateral-amid-XRP-delisting",
+      "pubDate": "2021-04-06T03:09:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "NEXO"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "How to buy DENT (US residents)",
+      "link": "https://cryptopanic.com/news/11733500/How-to-buy-DENT-US-residents",
+      "pubDate": "2021-04-06T02:52:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    },
+    {
+      "title": "We hear your voice, something you are always expecting is coming this week",
+      "link": "https://cryptopanic.com/news/11726755/We-hear-your-voice-something-you-are-always-expecting-is-coming-this-week",
+      "pubDate": "2021-04-06T00:59:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "QKC"
+      ]
+    },
+    {
+      "title": "Altcoins notch triple-digit gains as Bitcoin price pushes toward $60K",
+      "link": "https://cryptopanic.com/news/tron/11724400/Altcoins-notch-triple-digit-gains-as-Bitcoin-price-pushes-toward-60K",
+      "pubDate": "2021-04-06T00:58:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Traders say the multi-year highs seen from many tokens prove that an altcoin season is at hand.",
+      "currencies": [
+        "BTC",
+        "TRX",
+        "BTT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "How Do I Buy Dent",
+      "link": "https://cryptopanic.com/news/11728086/How-Do-I-Buy-Dent",
+      "pubDate": "2021-04-06T00:15:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DENT"
+      ]
+    }
+  ]
+}

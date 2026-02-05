@@ -1,0 +1,37 @@
+{
+  "date": "2020-09-23",
+  "fetchedAt": "2026-02-05T07:27:06.983Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "FEW Brings Out DeFi Risks: Ethereum Proponents Caught Planning to Dump on Investors",
+      "link": "https://cryptopanic.com/news/ethereum/10055693/FEW-Brings-Out-DeFi-Risks-Ethereum-Proponents-Caught-Planning-to-Dump-on-Investors",
+      "pubDate": "2020-09-23T08:32:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Based on the partnership with Gala Lab, WAY2BIT will operate game publishing service of the MMORPG ‘Flyff’ and ‘Rap…",
+      "link": "https://cryptopanic.com/news/10053118/Based-on-the-partnership-with-Gala-Lab-WAY2BIT-will-operate-game-publishing-service-of-the-MMORPG-Flyff-and-Rap",
+      "pubDate": "2020-09-23T01:14:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BORA"
+      ]
+    }
+  ]
+}

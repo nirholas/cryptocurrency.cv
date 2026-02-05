@@ -1,0 +1,37 @@
+{
+  "date": "2020-01-26",
+  "fetchedAt": "2026-02-05T07:27:06.982Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Gold (BTG) Suffers 51 Percent Attack with Barely Anyone Noticing",
+      "link": "https://cryptopanic.com/news/7759406/Bitcoin-Gold-BTG-Suffers-51-Percent-Attack-with-Barely-Anyone-Noticing",
+      "pubDate": "2020-01-26T21:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTG"
+      ]
+    },
+    {
+      "title": "Over $70,000 Double Spent As Bitcoin Gold Experiences Its Second 51% Attack",
+      "link": "https://cryptopanic.com/news/7755101/Over-70000-Double-Spent-As-Bitcoin-Gold-Experiences-Its-Second-51-Attack",
+      "pubDate": "2020-01-26T13:36:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTG"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

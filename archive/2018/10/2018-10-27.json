@@ -1,0 +1,45 @@
+{
+  "date": "2018-10-27",
+  "fetchedAt": "2026-02-05T07:27:08.685Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Now LEGAL in China, plus EOS and Unibright - Today's Crypto News",
+      "link": "https://cryptopanic.com/news/eos/3484206/Bitcoin-Now-LEGAL-in-China-plus-EOS-and-Unibright-Todays-Crypto-News",
+      "pubDate": "2018-10-27T19:21:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "5 Projects That Could be Next on Coinbase",
+      "link": "https://cryptopanic.com/news/stellar/3481367/5-Projects-That-Could-be-Next-on-Coinbase",
+      "pubDate": "2018-10-27T11:29:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 20,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,501 @@
+{
+  "date": "2021-07-08",
+  "fetchedAt": "2026-02-05T07:27:06.515Z",
+  "articleCount": 35,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "RT @RichardHeartWin: You work hard for your money, but the government prints more and more every day, so what you earned is worth less and…",
+      "link": "https://cryptopanic.com/news/12288695/RT-RichardHeartWin-You-work-hard-for-your-money-but-the-government-prints-more-and-more-every-day-so-what-you-earned-is-worth-less-and",
+      "pubDate": "2021-07-08T23:40:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "Bitcoin Whale Movements Signal Crypto Market Bottom Is In, Says On-Chain Analyst Willy Woo",
+      "link": "https://cryptopanic.com/news/flow/12286137/Bitcoin-Whale-Movements-Signal-Crypto-Market-Bottom-Is-In-Says-On-Chain-Analyst-Willy-Woo",
+      "pubDate": "2021-07-08T22:05:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "New data on the amount of Bitcoin being scooped up by crypto whales and retail traders signals the bottom is in, according to on-chain analyst Will Woo. Woo is taking a close look at the flow of BTC to and from crypto exchanges. He says despite sideways price action, investors appear to be buying coins […]",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP’s Use Cases Are ‘Basically the Same as Bitcoin’, Says Ripple Exec",
+      "link": "https://cryptopanic.com/news/ripple/12286018/XRPs-Use-Cases-Are-Basically-the-Same-as-Bitcoin-Says-Ripple-Exec",
+      "pubDate": "2021-07-08T21:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Ripple’s Director of Developer Relations, Matt Hamilton, has claimed on social media that XRP was created by Bitcoin developers as a “better” version of the cryptocurrency once they realized “bitcoin’s energy usage was not scalable,” and that XRP’s use cases are “basically the same as Bitcoin. Hamilton’s words came as he discussed the cryptocurrency with […]",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 8
+      }
+    },
+    {
+      "title": "Note for TELx miners: in its current V1 form, the staking portal is designed for web browsers like Chrome. We are w…",
+      "link": "https://cryptopanic.com/news/12290701/Note-for-TELx-miners-in-its-current-V1-form-the-staking-portal-is-designed-for-web-browsers-like-Chrome-We-are-w",
+      "pubDate": "2021-07-08T20:20:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "Thank you to @kevinzhangTO and @DFXFinance for joining us today! We are excited to launch the SMS Network on DFX, w…",
+      "link": "https://cryptopanic.com/news/12290702/Thank-you-to-kevinzhangTO-and-DFXFinance-for-joining-us-today-We-are-excited-to-launch-the-SMS-Network-on-DFX-w",
+      "pubDate": "2021-07-08T20:15:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "Join Telcoin and DFX on a live twitter spaces ama in 3 minutes with your questions! #telcoin $tel #dfx $dfx",
+      "link": "https://cryptopanic.com/news/12290703/Join-Telcoin-and-DFX-on-a-live-twitter-spaces-ama-in-3-minutes-with-your-questions-telcoin-tel-dfx-dfx",
+      "pubDate": "2021-07-08T19:13:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "RT @telcoin_team: Join the Telcoin team and @DFXFinance on twitter spaces for an AMA in 15 minutes! #telcoin #dfx #…",
+      "link": "https://cryptopanic.com/news/12290704/RT-telcoin_team-Join-the-Telcoin-team-and-DFXFinance-on-twitter-spaces-for-an-AMA-in-15-minutes-telcoin-dfx",
+      "pubDate": "2021-07-08T19:03:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "Join the Telcoin team and @DFXFinance on twitter spaces for an AMA in 15 minutes! #telcoin…",
+      "link": "https://cryptopanic.com/news/12290705/Join-the-Telcoin-team-and-DFXFinance-on-twitter-spaces-for-an-AMA-in-15-minutes-telcoin",
+      "pubDate": "2021-07-08T19:01:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "\"It's not about disrupting what is, it's about discovering what could be.\" #eCash #XEC $XEC",
+      "link": "https://cryptopanic.com/news/ecash/12368719/Its-not-about-disrupting-what-is-its-about-discovering-what-could-be-eCash-XEC-XEC",
+      "pubDate": "2021-07-08T18:56:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Can the SEC go after Cardano or Polkadot next?",
+      "link": "https://cryptopanic.com/news/polkadot/12285599/Can-the-SEC-go-after-Cardano-or-Polkadot-next",
+      "pubDate": "2021-07-08T18:30:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Regulatory concerns have been looming over cryptocurrencies and related businesses all around the world. With crypto-assets like XRP being accused of being a security by the United States Securities and Exchange Commission [SEC] and Binance facing strict warnings all over, the crypto-industry may want to remain cautious. With XRP’s fate in the USA being discussed […]",
+      "currencies": [
+        "ADA",
+        "XRP",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Reef Finance  is pleased to share with our bustling community that @parsiq_net, the solution turning blockchain da…",
+      "link": "https://cryptopanic.com/news/12290127/Reef-Finance-is-pleased-to-share-with-our-bustling-community-that-parsiq_net-the-solution-turning-blockchain-da",
+      "pubDate": "2021-07-08T16:34:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "POW#40: Wealth Redefined",
+      "link": "https://cryptopanic.com/news/ecash/12291384/POW40-Wealth-Redefined",
+      "pubDate": "2021-07-08T16:23:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "1/  In counting down to our BandChain Phase 2 Laozi Mainnet upgrade on July 13, let's go over some of the new feat…",
+      "link": "https://cryptopanic.com/news/12287365/1-In-counting-down-to-our-BandChain-Phase-2-Laozi-Mainnet-upgrade-on-July-13-lets-go-over-some-of-the-new-feat",
+      "pubDate": "2021-07-08T15:53:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "NKN is listed on India's largest exchange @WazirXIndia , and gained another fiat trading pair against Indian Rupee…",
+      "link": "https://cryptopanic.com/news/12289495/NKN-is-listed-on-Indias-largest-exchange-WazirXIndia-and-gained-another-fiat-trading-pair-against-Indian-Rupee",
+      "pubDate": "2021-07-08T15:48:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "NKN"
+      ]
+    },
+    {
+      "title": "Reef Finance  is happy to share its Q2 2021 update highlighting all the collaborations, product updates and enhanc…",
+      "link": "https://cryptopanic.com/news/12290128/Reef-Finance-is-happy-to-share-its-Q2-2021-update-highlighting-all-the-collaborations-product-updates-and-enhanc",
+      "pubDate": "2021-07-08T14:25:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "USDC Provider Circle to go Public in $4.5B SPAC Deal",
+      "link": "https://cryptopanic.com/news/12284598/USDC-Provider-Circle-to-go-Public-in-45B-SPAC-Deal",
+      "pubDate": "2021-07-08T13:07:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "-",
+      "currencies": [
+        "USDC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @RichardHeartWin: The UK's biggest newspaper.",
+      "link": "https://cryptopanic.com/news/12288696/RT-RichardHeartWin-The-UKs-biggest-newspaper",
+      "pubDate": "2021-07-08T13:04:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "Would love to have a crystal ball right about now... anyone have one I could borrow? I'll give it back soon, I prom…",
+      "link": "https://cryptopanic.com/news/12290893/Would-love-to-have-a-crystal-ball-right-about-now-anyone-have-one-I-could-borrow-Ill-give-it-back-soon-I-prom",
+      "pubDate": "2021-07-08T12:27:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "Shiba Inu ‘devastatingly’ fails in DeFi safety score yet its DEX locks in $1.5B in a day",
+      "link": "https://cryptopanic.com/news/shiba-inu/12284374/Shiba-Inu-devastatingly-fails-in-DeFi-safety-score-yet-its-DEX-locks-in-15B-in-a-day",
+      "pubDate": "2021-07-08T11:54:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "On July 6, the makers of the dog-inspired cryptocurrency Shiba Inu (SHIB) have launched the decentralized exchange (DEX) ShibaSwap. Following... Continue reading",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Bitcoin, Ethereum and Dogecoin Prices Slump Overnight",
+      "link": "https://cryptopanic.com/news/dogecoin/12284090/Bitcoin-Ethereum-and-Dogecoin-Prices-Slump-Overnight",
+      "pubDate": "2021-07-08T09:53:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Prices of many of the top 10 cryptocurrencies, including Bitcoin and Ethereum, are sliding today, while NFT platform Flow surged by 20%.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Dogecoin Suddenly Crashes After Major Investor Backs A Radical New Crypto Coin—Sending Its Price 1,000% Higher",
+      "link": "https://cryptopanic.com/news/dogecoin/12284072/Dogecoin-Suddenly-Crashes-After-Major-Investor-Backs-A-Radical-New-Crypto-CoinSending-Its-Price-1000-Higher",
+      "pubDate": "2021-07-08T09:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The dogecoin price is down almost 20% over the last week, dropping after YouTuber and dogecoin investor Matt Wallace announced he was buying a new Tiger King-branded cryptocurrency...",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "You don't want to miss todays conversation and AMA with @DFXFinance, Kicking off at 11am PST, watch it live here:…",
+      "link": "https://cryptopanic.com/news/12290706/You-dont-want-to-miss-todays-conversation-and-AMA-with-DFXFinance-Kicking-off-at-11am-PST-watch-it-live-here",
+      "pubDate": "2021-07-08T08:52:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "Cardano Price Analysis: ADA Battling at Critical Support, Huge Move Incoming?",
+      "link": "https://cryptopanic.com/news/cardano/12283885/Cardano-Price-Analysis-ADA-Battling-at-Critical-Support-Huge-Move-Incoming",
+      "pubDate": "2021-07-08T08:18:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "ADA is down 5% today as it drops into support at the 20-day MA line. Against bitcoin, ADA is currently battling the 50-day MA as it consolidates inside an ascending triangle.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "How do we buy ecash??",
+      "link": "https://cryptopanic.com/news/ecash/12291396/How-do-we-buy-ecash",
+      "pubDate": "2021-07-08T07:44:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "RT @elonmusk: I love this 🤣🤣",
+      "link": "https://cryptopanic.com/news/12288857/RT-elonmusk-I-love-this",
+      "pubDate": "2021-07-08T07:39:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "The wait is over! The #TELx staking portal is now live for the first 6 incentivized #Quickswap markets, 3 with doub…",
+      "link": "https://cryptopanic.com/news/12283161/The-wait-is-over-The-TELx-staking-portal-is-now-live-for-the-first-6-incentivized-Quickswap-markets-3-with-doub",
+      "pubDate": "2021-07-08T05:49:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Is ShibaSwap safe? DeFi Safety review gives it a score of just 3%",
+      "link": "https://cryptopanic.com/news/shiba-inu/12279812/Is-ShibaSwap-safe-DeFi-Safety-review-gives-it-a-score-of-just-3",
+      "pubDate": "2021-07-08T05:44:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "There are concerns over ShibaSwap’s transparency and security.",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Hello CBK holders, you can now trade CBK on MEXC!",
+      "link": "https://cryptopanic.com/news/12280112/Hello-CBK-holders-you-can-now-trade-CBK-on-MEXC?mtm_campaign=API-OFA",
+      "pubDate": "2021-07-08T05:01:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CBK"
+      ]
+    },
+    {
+      "title": "We are pleased to announce the release of version 1.2.0 which includes the official pooling protocol. @bramcohen on…",
+      "link": "https://cryptopanic.com/news/12280073/We-are-pleased-to-announce-the-release-of-version-120-which-includes-the-official-pooling-protocol-bramcohen-on",
+      "pubDate": "2021-07-08T05:00:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XCH"
+      ]
+    },
+    {
+      "title": "Here is our answer to what actions $AERGO will take to become carbon neutral. Our continued series of climate disc…",
+      "link": "https://cryptopanic.com/news/12279426/Here-is-our-answer-to-what-actions-AERGO-will-take-to-become-carbon-neutral-Our-continued-series-of-climate-disc",
+      "pubDate": "2021-07-08T04:32:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AERGO"
+      ]
+    },
+    {
+      "title": "On-Chain Analyst Expects Bitcoin Price to Explode Due to Impending Supply Shock",
+      "link": "https://cryptopanic.com/news/near/12279256/On-Chain-Analyst-Expects-Bitcoin-Price-to-Explode-Due-to-Impending-Supply-Shock",
+      "pubDate": "2021-07-08T04:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Popular bitcoin analyst Willy Woo has predicted a potential supply shock for Bitcoin could see the price of the flagship cryptocurrency surge in the near future, as long-term bitocin holders have been accumulating coins while short-term holders have been selling. According to Woo, as Cointelegraph reports, the ratio of Bitcoin held by long-term investors is […]",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "We are excited to announce the STP 2.0 Platform, an all-in-one cross-chain synthetic asset platform that facilitate…",
+      "link": "https://cryptopanic.com/news/12282718/We-are-excited-to-announce-the-STP-20-Platform-an-all-in-one-cross-chain-synthetic-asset-platform-that-facilitate",
+      "pubDate": "2021-07-08T03:01:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STPT"
+      ]
+    },
+    {
+      "title": "RT @ETHUniversity: ETH Summer is now accepting applications from undergraduates interesting in diving deep and learning how to build on Eth…",
+      "link": "https://cryptopanic.com/news/12279136/RT-ETHUniversity-ETH-Summer-is-now-accepting-applications-from-undergraduates-interesting-in-diving-deep-and-learning-how-to-build-on-Eth",
+      "pubDate": "2021-07-08T02:57:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "OMG"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: Check out the new testimonials!",
+      "link": "https://cryptopanic.com/news/12281055/RT-RichardHeartWin-Check-out-the-new-testimonials",
+      "pubDate": "2021-07-08T02:57:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "1/6: DeFi investors have had a wild ride over the last year, jumping on yield farming returns that would make tradi…",
+      "link": "https://cryptopanic.com/news/12280833/16-DeFi-investors-have-had-a-wild-ride-over-the-last-year-jumping-on-yield-farming-returns-that-would-make-tradi?mtm_campaign=API-OFA",
+      "pubDate": "2021-07-08T02:53:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "FORM"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

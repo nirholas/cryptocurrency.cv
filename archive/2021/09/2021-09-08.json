@@ -1,0 +1,730 @@
+{
+  "date": "2021-09-08",
+  "fetchedAt": "2026-02-05T07:27:06.710Z",
+  "articleCount": 48,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA Foundation Selected to Participate in Europe’s Blockchain Infrastructure Project",
+      "link": "https://cryptopanic.com/news/12728135/IOTA-Foundation-Selected-to-Participate-in-Europes-Blockchain-Infrastructure-Project",
+      "pubDate": "2021-09-08T23:55:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "IOTA is among the seven projects chosen by the European Commission to take part in the EU blockchain initiative.",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Digital Scarcity: How Ethereum is Beating Bitcoin At Its Own Game",
+      "link": "https://cryptopanic.com/news/bitcoin/12728026/Digital-Scarcity-How-Ethereum-is-Beating-Bitcoin-At-Its-Own-Game",
+      "pubDate": "2021-09-08T23:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Ethereum has long been put against top crypto Bitcoin for the majority of its existence. The fact that the former possesses more use cases has led a lot of investors to believe that it will be more valuable than bitcoin in the long run. When it comes to performance, Ethereum has actually lived up to […]",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 6
+      }
+    },
+    {
+      "title": "RT @gospaceport: Wondering what up with all the negative press on #Chia miners reported to reselling used gear as new and FUD in general? Y…",
+      "link": "https://cryptopanic.com/news/12730011/RT-gospaceport-Wondering-what-up-with-all-the-negative-press-on-Chia-miners-reported-to-reselling-used-gear-as-new-and-FUD-in-general-Y",
+      "pubDate": "2021-09-08T22:22:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "XCH"
+      ]
+    },
+    {
+      "title": "RT @RequestdApps: 1/ Finally, there's a better way for freelancers and companies to manage their invoices and payments in cryptocurrency.…",
+      "link": "https://cryptopanic.com/news/12727868/RT-RequestdApps-1-Finally-theres-a-better-way-for-freelancers-and-companies-to-manage-their-invoices-and-payments-in-cryptocurrency",
+      "pubDate": "2021-09-08T22:13:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REQ"
+      ]
+    },
+    {
+      "title": "RT @DefiantNews: ‍In this week's edition of #DefiantDegens, @DeFi_Dad shows you how to earn future $BETA tokens by Lending, Borrowing, an…",
+      "link": "https://cryptopanic.com/news/12920709/RT-DefiantNews-In-this-weeks-edition-of-DefiantDegens-DeFi_Dad-shows-you-how-to-earn-future-BETA-tokens-by-Lending-Borrowing-an",
+      "pubDate": "2021-09-08T21:47:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BETA"
+      ]
+    },
+    {
+      "title": "Mark your calendar (Friday September 10th at 11AM PST), NKN CTO @YilunZhang4 will give a tech overview and quick st…",
+      "link": "https://cryptopanic.com/news/12732186/Mark-your-calendar-Friday-September-10th-at-11AM-PST-NKN-CTO-YilunZhang4-will-give-a-tech-overview-and-quick-st",
+      "pubDate": "2021-09-08T21:40:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NKN"
+      ]
+    },
+    {
+      "title": "RT @gitcoin: Join @vegaprotocol @uniswapgrants @sperax_io @perpprotocol @iotex_io @akashnet_ @idlefinance @vitelabs @1inch @0xhabitat @NKN_…",
+      "link": "https://cryptopanic.com/news/12732187/RT-gitcoin-Join-vegaprotocol-uniswapgrants-sperax_io-perpprotocol-iotex_io-akashnet_-idlefinance-vitelabs-1inch-0xhabitat-NKN_",
+      "pubDate": "2021-09-08T21:14:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "NKN"
+      ]
+    },
+    {
+      "title": "Ripple Lawyers Slam SEC Response To Motion That Could Expose Regulator Employees’ XRP Trading History",
+      "link": "https://cryptopanic.com/news/ripple/12727569/Ripple-Lawyers-Slam-SEC-Response-To-Motion-That-Could-Expose-Regulator-Employees-XRP-Trading-History",
+      "pubDate": "2021-09-08T19:55:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Lawyers representing Ripple have responded to the U.S. Securities and Exchange Commission (SEC) after it opposed their efforts to determine whether SEC employees were allowed to purchase XRP while simultaneously conducting an investigation of Ripple for securities fraud. The SEC alleges that Ripple issued XRP as an unregistered security and that the crypto is still […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana Surpasses XRP Amid Unstoppable Rally",
+      "link": "https://cryptopanic.com/news/ripple/12727470/Solana-Surpasses-XRP-Amid-Unstoppable-Rally",
+      "pubDate": "2021-09-08T19:33:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "XRP has ceded ground to red-hot Solana",
+      "currencies": [
+        "XRP",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 21,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ALGO Reaches New Yearly High",
+      "link": "https://cryptopanic.com/news/12727495/ALGO-Reaches-New-Yearly-High",
+      "pubDate": "2021-09-08T19:20:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Algorand (ALGO) has been moving upwards since breaking out from a descending wedge on Aug. 7.",
+      "currencies": [
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum, Cardano, and Algorand Will Rise Due to ‘Great Use Cases’: SkyBridge Capital Chief Anthony Scaramucci",
+      "link": "https://cryptopanic.com/news/12727400/Ethereum-Cardano-and-Algorand-Will-Rise-Due-to-Great-Use-Cases-SkyBridge-Capital-Chief-Anthony-Scaramucci",
+      "pubDate": "2021-09-08T18:41:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "SkyBridge Capital founder and co-managing partner Anthony Scaramucci says altcoins like Ethereum (ETH), Cardano (ADA), and Algorand (ALGO) will likely continue to grow because of their clear utility. In a new interview on CNBC, the investment veteran says that despite the sharp correction that crypto markets experienced on the same day that El Salvador officially […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @metalpaysme: We are pleased to announce that Kevin Taylor, formerly the Managing Director and Head of Global Compliance for Pershing at…",
+      "link": "https://cryptopanic.com/news/12732835/RT-metalpaysme-We-are-pleased-to-announce-that-Kevin-Taylor-formerly-the-Managing-Director-and-Head-of-Global-Compliance-for-Pershing-at",
+      "pubDate": "2021-09-08T18:09:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XPR"
+      ]
+    },
+    {
+      "title": "Standard Chartered Values Ethereum at $26k to $35k ‘Structually’",
+      "link": "https://cryptopanic.com/news/bitcoin/12727233/Standard-Chartered-Values-Ethereum-at-26k-to-35k-Structually",
+      "pubDate": "2021-09-08T18:04:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The bank’s analysts are incredibly bullish on Ethereum, predicting that ETH will “catch up to BTC”.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    },
+    {
+      "title": "RT @RequestdApps: 1/ Cumulative payments made: $122m by end August, up 32% from last month",
+      "link": "https://cryptopanic.com/news/12727135/RT-RequestdApps-1-Cumulative-payments-made-122m-by-end-August-up-32-from-last-month",
+      "pubDate": "2021-09-08T17:39:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REQ"
+      ]
+    },
+    {
+      "title": "Yes they are!",
+      "link": "https://cryptopanic.com/news/12730897/Yes-they-are",
+      "pubDate": "2021-09-08T17:17:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FRTS"
+      ]
+    },
+    {
+      "title": "Standard Chartered is Bullish on Ethereum, But Only if Bitcoin Rises",
+      "link": "https://cryptopanic.com/news/bitcoin/12726969/Standard-Chartered-is-Bullish-on-Ethereum-But-Only-if-Bitcoin-Rises",
+      "pubDate": "2021-09-08T16:44:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Standard Chartered’s digital asset research team thinks that Ethereum can hit $35,000 in the next few years.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ethereum Price Analysis: Here Are the Next Critical Levels to Watch for ETH After the Crash",
+      "link": "https://cryptopanic.com/news/bitcoin/12726975/Ethereum-Price-Analysis-Here-Are-the-Next-Critical-Levels-to-Watch-for-ETH-After-the-Crash",
+      "pubDate": "2021-09-08T16:41:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum is down by a sharp 9% today as the cryptocurrency falls beneath the 20-day MA. Against BTC, ETH is now beneath 0.074 BTC as it battles to hold the .382 FIb at 0.0733 BTC.",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Is Cardano’s drop to $2 more than just a bearish breakout",
+      "link": "https://cryptopanic.com/news/cardano/12726944/Is-Cardanos-drop-to-2-more-than-just-a-bearish-breakout",
+      "pubDate": "2021-09-08T16:30:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Over the past few weeks, Cardano had kept the altcoin market and its investors engaged, as the asset breached into a new all-time high of $3.10. However, since breaking above $3, Cardano did not demonstrate the same strength, and over the past 7-days, the asset dipped regularly on the chart. Now, as ADA’s value dropped […]",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 23
+      }
+    },
+    {
+      "title": "Thanks to @SAP Solution Architect @andrewlunde for joining as a judge for the Theta Hackathon! Join now to build th…",
+      "link": "https://cryptopanic.com/news/theta-token/12733611/Thanks-to-SAP-Solution-Architect-andrewlunde-for-joining-as-a-judge-for-the-Theta-Hackathon-Join-now-to-build-th",
+      "pubDate": "2021-09-08T16:12:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    },
+    {
+      "title": "We love to see initiatives like this one! Thanks to @KanaloaNetwork for creating this event for our combined commun…",
+      "link": "https://cryptopanic.com/news/12732961/We-love-to-see-initiatives-like-this-one-Thanks-to-KanaloaNetwork-for-creating-this-event-for-our-combined-commun",
+      "pubDate": "2021-09-08T16:01:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ]
+    },
+    {
+      "title": "Bitcoin Still Looks Troublesome After the Unexpected Crash",
+      "link": "https://cryptopanic.com/news/bitcoin/12726666/Bitcoin-Still-Looks-Troublesome-After-the-Unexpected-Crash",
+      "pubDate": "2021-09-08T15:19:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Dubai Oct 14-15: https://UnderstandingBTC.com Join the MRI Alerts Channel: https://t.me/joinchat/AAAAAE4Hy84LAsx7HaRgSg * The alerts are not a buy/sell indication, you need to understand how to trade the MRI indicator to use them properly. See https://tonevays.com/indicator GBTC w/ Tyler Jenks: https://www.youtube.com/watch?v=R4oJngaKeQY https://ToneVays.com Events --- Bitcoin: https://unconfiscatable.com/ Finance/Trading/Investing https://thefinancialsummit.com/ How to Use Bitcoin Tech: https:/",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @FreemoonFaucet: A big thank you to @AnyswapNetwork for officially listing $FMN and $FREE on their @FUSIONProtocol DEX. $FREE and and $F…",
+      "link": "https://cryptopanic.com/news/12729191/RT-FreemoonFaucet-A-big-thank-you-to-AnyswapNetwork-for-officially-listing-FMN-and-FREE-on-their-FUSIONProtocol-DEX-FREE-and-and-F",
+      "pubDate": "2021-09-08T14:55:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ANY"
+      ]
+    },
+    {
+      "title": "Reef Finance is thrilled to welcome the @ethbox_official team to the community! ethbox is an escrow service that pr…",
+      "link": "https://cryptopanic.com/news/12732962/Reef-Finance-is-thrilled-to-welcome-the-ethbox_official-team-to-the-community-ethbox-is-an-escrow-service-that-pr",
+      "pubDate": "2021-09-08T14:52:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ]
+    },
+    {
+      "title": "XRP Lawsuit: Ripple takes aim at the ‘obvious tension’ in the SEC’s ‘broad theory’",
+      "link": "https://cryptopanic.com/news/ripple/12726414/XRP-Lawsuit-Ripple-takes-aim-at-the-obvious-tension-in-the-SECs-broad-theory",
+      "pubDate": "2021-09-08T14:00:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The XRP community was left fuming on 3 September after the United States Securities and Exchange Commission [SEC] filed its opposition to Ripple’s motion compelling the regulator to produce information about SEC employees’ XRP, Bitcoin, and Ether holdings. On 7 September, Ripple filed its reply, touching upon three of the SEC’s reasons for refusal, to further […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RIF, built on @RSKsmart, is solving the complexities of building Web 3.0 by providing a complete tech stack for the…",
+      "link": "https://cryptopanic.com/news/12732895/RIF-built-on-RSKsmart-is-solving-the-complexities-of-building-Web-30-by-providing-a-complete-tech-stack-for-the",
+      "pubDate": "2021-09-08T13:34:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "RIF"
+      ]
+    },
+    {
+      "title": "Algorand Climbs 30% During Market Downturn",
+      "link": "https://cryptopanic.com/news/12726240/Algorand-Climbs-30-During-Market-Downturn",
+      "pubDate": "2021-09-08T13:19:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Algorand's cryptocurrency surged by 30% despite a broader market downturn, highlighting its resilience and growing interest among investors amid overall volatility in the digital currency market.",
+      "currencies": [
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 25,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "While The U.S Stalls, A Carbon-Negative Bitcoin ETF Has Just Made A Grand Debut In Canada",
+      "link": "https://cryptopanic.com/news/near/12726246/While-The-US-Stalls-A-Carbon-Negative-Bitcoin-ETF-Has-Just-Made-A-Grand-Debut-In-Canada",
+      "pubDate": "2021-09-08T13:17:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "While the U.S. is dragging its feet in approving a cryptocurrency exchange-traded fund, Canada, its near neighbor, is leading the way in cryptocurrency ETF adoption. Canada already has around 25 cryptocurrency ETF tickers trading on its Toronto Stock Exchange. On Tuesday, another Canadian launched ETF was in the news as Accelerate Financial Technologies Inc. announced […]",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Fly Underwater is live now at . Reef Finance CEO @denkomancheski is part of the next panel!",
+      "link": "https://cryptopanic.com/news/12732963/Fly-Underwater-is-live-now-at-Reef-Finance-CEO-denkomancheski-is-part-of-the-next-panel",
+      "pubDate": "2021-09-08T13:16:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ]
+    },
+    {
+      "title": "IOTA Foundation Selected to Develop European Blockchain Network",
+      "link": "https://cryptopanic.com/news/12726207/IOTA-Foundation-Selected-to-Develop-European-Blockchain-Network",
+      "pubDate": "2021-09-08T12:51:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The IOTA Foundation was selected as one of seven contractors to design distributed ledger technology (DLT) for a European blockchain network.",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Grayscale BTC, ETH and ETC Funds Hit New Negative Lows While LTC Trades Positively",
+      "link": "https://cryptopanic.com/news/12725868/Grayscale-BTC-ETH-and-ETC-Funds-Hit-New-Negative-Lows-While-LTC-Trades-Positively",
+      "pubDate": "2021-09-08T11:27:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Fund's premium rate hits new lows even after Bitcoin plunges by 20%",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LTC",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "OpenSea bug destroys $100,000 worth of NFTs, including historical ENS name",
+      "link": "https://cryptopanic.com/news/ethereum/12725789/OpenSea-bug-destroys-100000-worth-of-NFTs-including-historical-ENS-name",
+      "pubDate": "2021-09-08T10:58:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "A bug in the OpenSea marketplace burned 42 NFTs, making them lost forever, including the first registered ENS name.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Ethereum Fees Skyrocket on Marketwide Crash and NFT Minting Event",
+      "link": "https://cryptopanic.com/news/ethereum/12725697/Ethereum-Fees-Skyrocket-on-Marketwide-Crash-and-NFT-Minting-Event",
+      "pubDate": "2021-09-08T10:19:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum saw its average network fees surge by 300% yesterday, probably caused by the marketwide collapse and a minting event of a hyped project.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Monero, NEM, ATOM Price Analysis: 08 September",
+      "link": "https://cryptopanic.com/news/12725666/Monero-NEM-ATOM-Price-Analysis-08-September",
+      "pubDate": "2021-09-08T10:00:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "ATOM",
+        "XEM"
+      ]
+    },
+    {
+      "title": "Coinbase Reveals Serious Warning Amid Sudden $400 Billion Bitcoin And Crypto Price Crash",
+      "link": "https://cryptopanic.com/news/bitcoin/12725589/Coinbase-Reveals-Serious-Warning-Amid-Sudden-400-Billion-Bitcoin-And-Crypto-Price-Crash",
+      "pubDate": "2021-09-08T09:30:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Major bitcoin and cryptocurrency exchange Coinbase has revealed the U.S. Securities and Exchange Commission (SEC) has warned it will sue Coinbase if it launches a new digital asset lending product...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin Overtakes Etheruem, Solana, Cardano, XRP and Polkadot in Institutional Inflows As Market Volatility Heats Up: CoinShares",
+      "link": "https://cryptopanic.com/news/polkadot/12725591/Bitcoin-Overtakes-Etheruem-Solana-Cardano-XRP-and-Polkadot-in-Institutional-Inflows-As-Market-Volatility-Heats-Up-CoinShares",
+      "pubDate": "2021-09-08T09:00:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Institutional players in the crypto markets appear to be rotating capital back to Bitcoin (BTC) after altcoins stole the spotlight in August. According to data analysis from crypto asset management firm CoinShares, Bitcoin saw inflows totaling $59 million in the week ending September 3rd, painting a changing picture of investor sentiment as the previous eight […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "We are excited to see the new Bitcoin Libre wallet from BPs Quantumblok and SoftAtom showing off $XBTC with payment…",
+      "link": "https://cryptopanic.com/news/12723647/We-are-excited-to-see-the-new-Bitcoin-Libre-wallet-from-BPs-Quantumblok-and-SoftAtom-showing-off-XBTC-with-payment",
+      "pubDate": "2021-09-08T07:26:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XPR"
+      ]
+    },
+    {
+      "title": "“President Sato of JASMY gave an important speech at ESTOC2021, revealing that the Personal Data…” by @JasmyMGT",
+      "link": "https://cryptopanic.com/news/13046798/President-Sato-of-JASMY-gave-an-important-speech-at-ESTOC2021-revealing-that-the-Personal-Data-by-JasmyMGT",
+      "pubDate": "2021-09-08T07:24:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "JASMY"
+      ]
+    },
+    {
+      "title": "Trader Who Nailed Steep Bitcoin Correction Issues Fresh Warning on BTC Price",
+      "link": "https://cryptopanic.com/news/bitcoin/12724021/Trader-Who-Nailed-Steep-Bitcoin-Correction-Issues-Fresh-Warning-on-BTC-Price",
+      "pubDate": "2021-09-08T07:04:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A popular crypto strategist and trader who accurately called the latest Bitcoin correction says his bear case remains valid unless BTC can recover a crucial level. The analyst, pseudonymously known as Capo, tells his 154,200 Twitter followers that Bitcoin’s current market structure resembles its price action in April when BTC topped out above $60,000 before […]",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "1/  Band Protocol is reducing the barrier to entry for enterprises and broadening the horizons of data availabilit…",
+      "link": "https://cryptopanic.com/news/12729451/1-Band-Protocol-is-reducing-the-barrier-to-entry-for-enterprises-and-broadening-the-horizons-of-data-availabilit",
+      "pubDate": "2021-09-08T06:20:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "The BTC bull attempt few days ago was premature. Glitzkoin did say that future platforms could implement the Bitcoi…",
+      "link": "https://cryptopanic.com/news/12721931/The-BTC-bull-attempt-few-days-ago-was-premature-Glitzkoin-did-say-that-future-platforms-could-implement-the-Bitcoi",
+      "pubDate": "2021-09-08T06:13:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Japanese Financial Services Giant Launching Crypto Fund That Will Invest in XRP",
+      "link": "https://cryptopanic.com/news/ripple/12721152/Japanese-Financial-Services-Giant-Launching-Crypto-Fund-That-Will-Invest-in-XRP",
+      "pubDate": "2021-09-08T05:54:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Japanese financial giant SBI Holdings is reportedly launching the country’s first cryptoasset fund, which will invest in XRP and four other popular digital assets. According to a report by Bloomberg, SBI intends to launch a fund that will invest in Bitcoin, Ethereum, XRP, Bitcoin Cash and Litecoin. Tomoya Asakura, the President of SBI affiliate Morningstar […]",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @bsc_daily: Fresh from the oven! Masterminds of Hip Hop  #NFT Mystery Box Sale will be on @bakery_swap from Sep 8, in partnership with…",
+      "link": "https://cryptopanic.com/news/12720379/RT-bsc_daily-Fresh-from-the-oven-Masterminds-of-Hip-Hop-NFT-Mystery-Box-Sale-will-be-on-bakery_swap-from-Sep-8-in-partnership-with",
+      "pubDate": "2021-09-08T05:34:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "BAKE"
+      ]
+    },
+    {
+      "title": "El Salvador says merchants must process BTC transactions — Or they may face action",
+      "link": "https://cryptopanic.com/news/bitcoin/12719809/El-Salvador-says-merchants-must-process-BTC-transactions-Or-they-may-face-action",
+      "pubDate": "2021-09-08T04:07:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A Salvadoran government official has said that while businesses must accept BTC transactions, they can choose whether to receive BTC or USD upon settling transactions.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @ARJatnika: calm everything will be fine. we have to believe in those great people. @eCashOfficial @CainBCHA #eCash $XEC",
+      "link": "https://cryptopanic.com/news/ecash/12725304/RT-ARJatnika-calm-everything-will-be-fine-we-have-to-believe-in-those-great-people-eCashOfficial-CainBCHA-eCash-XEC",
+      "pubDate": "2021-09-08T03:50:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @PotluckProtocol: Very excited to announce our partnership with @AnyswapNetwork! With that comes our official bridge for moving $PTLKX f…",
+      "link": "https://cryptopanic.com/news/12720134/RT-PotluckProtocol-Very-excited-to-announce-our-partnership-with-AnyswapNetwork-With-that-comes-our-official-bridge-for-moving-PTLKX-f",
+      "pubDate": "2021-09-08T03:37:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ANY"
+      ]
+    },
+    {
+      "title": "TA: Bitcoin Recovers Heavy Losses, Why BTC Could Resume Decline",
+      "link": "https://cryptopanic.com/news/bitcoin/12719710/TA-Bitcoin-Recovers-Heavy-Losses-Why-BTC-Could-Resume-Decline",
+      "pubDate": "2021-09-08T03:08:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin price declined over 15% and tested $42,000 against the US Dollar. BTC is recovering, but it could face sellers near the $48,500 and $49,000 resistance levels. Bitcoin started a major decline below the $50,000 and $48,500 support levels. The price is now trading well below $50,000 and the 100 hourly simple moving average. There was a break below a key bullish trend line with support...",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "There is no better time to #BUIDL, always good time to $BUIDL!",
+      "link": "https://cryptopanic.com/news/12723045/There-is-no-better-time-to-BUIDL-always-good-time-to-BUIDL",
+      "pubDate": "2021-09-08T01:54:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NKN"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: 783,302% rise in 610 days is the cleanest price rise in history. Since you can't short it, n…",
+      "link": "https://cryptopanic.com/news/12722009/RT-RichardHeartWin-783302-rise-in-610-days-is-the-cleanest-price-rise-in-history-Since-you-cant-short-it-n",
+      "pubDate": "2021-09-08T00:40:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

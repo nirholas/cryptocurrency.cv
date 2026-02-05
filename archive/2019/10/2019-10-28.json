@@ -1,0 +1,77 @@
+{
+  "date": "2019-10-28",
+  "fetchedAt": "2026-02-05T07:27:06.680Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "TRON Will Now Be Available in Samsung’s Blockchain Keystore",
+      "link": "https://cryptopanic.com/news/tron/6985529/TRON-Will-Now-Be-Available-in-Samsungs-Blockchain-Keystore",
+      "pubDate": "2019-10-28T17:18:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 6
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dell, Linux Foundation, IOTA collaborate to rate the trustworthiness of data",
+      "link": "https://cryptopanic.com/news/6984560/Dell-Linux-Foundation-IOTA-collaborate-to-rate-the-trustworthiness-of-data",
+      "pubDate": "2019-10-28T15:45:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron (TRX) Spikes 19% Following Justin Sun’s Protocol Update News",
+      "link": "https://cryptopanic.com/news/6984148/Tron-TRX-Spikes-19-Following-Justin-Suns-Protocol-Update-News",
+      "pubDate": "2019-10-28T15:16:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "EOS Remains in First Place on China's Updated Crypto Rankings. What About Tron, Ethereum and Other Coins?",
+      "link": "https://cryptopanic.com/news/tron/6980162/EOS-Remains-in-First-Place-on-Chinas-Updated-Crypto-Rankings-What-About-Tron-Ethereum-and-Other-Coins",
+      "pubDate": "2019-10-28T06:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TRX",
+        "EOS"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

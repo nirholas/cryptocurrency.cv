@@ -1,0 +1,25 @@
+{
+  "date": "2019-08-13",
+  "fetchedAt": "2026-02-05T07:27:06.958Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "ICON Launches ICX Giveaway for Its Community Members Who Will Participate in Public Representatives Election",
+      "link": "https://cryptopanic.com/news/6300506/ICON-Launches-ICX-Giveaway-for-Its-Community-Members-Who-Will-Participate-in-Public-Representatives-Election",
+      "pubDate": "2019-08-13T11:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ICX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

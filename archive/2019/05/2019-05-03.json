@@ -1,0 +1,24 @@
+{
+  "date": "2019-05-03",
+  "fetchedAt": "2026-02-05T07:27:06.973Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Fake Satoshi Craig Wright Sues ‘Bitcoin Jesus’ Roger Ver for Libel",
+      "link": "https://cryptopanic.com/news/5309934/Fake-Satoshi-Craig-Wright-Sues-Bitcoin-Jesus-Roger-Ver-for-Libel",
+      "pubDate": "2019-05-03T09:38:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,1726 @@
+{
+  "date": "2025-01-10",
+  "fetchedAt": "2026-02-05T07:27:08.488Z",
+  "articleCount": 113,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bank Of America’s XRP Adoption: Impact, Price Prediction",
+      "link": "https://cryptopanic.com/news/20534737/Bank-Of-Americas-XRP-Adoption-Impact-Price-Prediction?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T23:42:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ]
+    },
+    {
+      "title": "SEC Chair Gary Gensler says crypto cases traumatized him, thinks Elon Musk’s D.O.G.E is unnecessary",
+      "link": "https://cryptopanic.com/news/20534707/SEC-Chair-Gary-Gensler-says-crypto-cases-traumatized-him-thinks-Elon-Musks-DOGE-is-unnecessary?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T23:15:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "G"
+      ]
+    },
+    {
+      "title": "Hedge Funds Targeting Altcoins for New ATH Rally: Cardano, IntelMarkets, and Polkadot Lead Interest",
+      "link": "https://cryptopanic.com/news/polkadot/20536230/Hedge-Funds-Targeting-Altcoins-for-New-ATH-Rally-Cardano-IntelMarkets-and-Polkadot-Lead-Interest",
+      "pubDate": "2025-01-10T22:25:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "DOT",
+        "ATH"
+      ]
+    },
+    {
+      "title": "Solana ICO Holder Reactivates Wallet to Sell $2.8M WIF: His Next Purchase Could Yield 100x at Launch",
+      "link": "https://cryptopanic.com/news/20536070/Solana-ICO-Holder-Reactivates-Wallet-to-Sell-28M-WIF-His-Next-Purchase-Could-Yield-100x-at-Launch?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T22:19:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "WIF"
+      ]
+    },
+    {
+      "title": "Bitcoin corporate treasury shareholder proposal submitted to Meta",
+      "link": "https://cryptopanic.com/news/20534470/Bitcoin-corporate-treasury-shareholder-proposal-submitted-to-Meta?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T21:53:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "META"
+      ]
+    },
+    {
+      "title": "Anthony Scaramucci’s 2025 Crypto Picks: Top Altcoins To Buy This Year",
+      "link": "https://cryptopanic.com/news/20534398/Anthony-Scaramuccis-2025-Crypto-Picks-Top-Altcoins-To-Buy-This-Year?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T21:30:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "DOT",
+        "AVAX",
+        "ALGO",
+        "APT",
+        "SUI"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Whales Bought These Altcoins in the First Week of January 2025",
+      "link": "https://cryptopanic.com/news/20534627/Crypto-Whales-Bought-These-Altcoins-in-the-First-Week-of-January-2025?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T21:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "FET",
+        "TON",
+        "ARB"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash: Assessing if BCH will fall below $365",
+      "link": "https://cryptopanic.com/news/20534338/Bitcoin-Cash-Assessing-if-BCH-will-fall-below-365?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T21:00:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Sky Protocol grows USDS supply to new record as demand for yield remains strong",
+      "link": "https://cryptopanic.com/news/20534300/Sky-Protocol-grows-USDS-supply-to-new-record-as-demand-for-yield-remains-strong?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T20:55:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "SOL",
+        "DAI"
+      ]
+    },
+    {
+      "title": "World Surpasses 10 Million Human Verifications",
+      "link": "https://cryptopanic.com/news/20534294/World-Surpasses-10-Million-Human-Verifications?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T20:54:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WLD"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin, Ethereum, XRP, Dogecoin In The Green On Friday: 'Weekend Altcoin Season' Coming?",
+      "link": "https://cryptopanic.com/news/20534292/Bitcoin-Ethereum-XRP-Dogecoin-In-The-Green-On-Friday-Weekend-Altcoin-Season-Coming?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T20:38:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "SOL",
+        "DOGE",
+        "SHIB",
+        "ALGO",
+        "BSV",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Happy first year anniversary to US Bitcoin ETFs. Here’s how far they’ve brought us",
+      "link": "https://cryptopanic.com/news/20534273/Happy-first-year-anniversary-to-US-Bitcoin-ETFs-Heres-how-far-theyve-brought-us?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T20:35:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ARK",
+        "FBTC"
+      ]
+    },
+    {
+      "title": "Ethena Stablecoin Nears $6B Market Cap, Tops $250M in Revenue",
+      "link": "https://cryptopanic.com/news/20534244/Ethena-Stablecoin-Nears-6B-Market-Cap-Tops-250M-in-Revenue?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T20:30:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "ENA",
+        "USDe",
+        "S",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "DOGS memecoin releases roadmap for first half of 2025",
+      "link": "https://cryptopanic.com/news/20534187/DOGS-memecoin-releases-roadmap-for-first-half-of-2025?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T20:11:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TON",
+        "DOGS",
+        "MINI"
+      ]
+    },
+    {
+      "title": "Bitcoin analysts explain why BTC could avoid a drop under $90K",
+      "link": "https://cryptopanic.com/news/20534170/Bitcoin-analysts-explain-why-BTC-could-avoid-a-drop-under-90K?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T20:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "AMP"
+      ]
+    },
+    {
+      "title": "Binance, Uniswap, Bitget traders see $14.8B market cap rise as exchange tokens rebound",
+      "link": "https://cryptopanic.com/news/20536879/Binance-Uniswap-Bitget-traders-see-148B-market-cap-rise-as-exchange-tokens-rebound?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T19:52:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "UNI",
+        "BGB"
+      ]
+    },
+    {
+      "title": "Uniswap Teams with Venmo NEAR Price Rises Investors Flock to Lightchain AI Presale in the January",
+      "link": "https://cryptopanic.com/news/20534120/Uniswap-Teams-with-Venmo-NEAR-Price-Rises-Investors-Flock-to-Lightchain-AI-Presale-in-the-January?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T19:44:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "NEAR"
+      ]
+    },
+    {
+      "title": "What is DeFAI? How AI is driving the next wave of DeFi innovation",
+      "link": "https://cryptopanic.com/news/20534006/What-is-DeFAI-How-AI-is-driving-the-next-wave-of-DeFi-innovation?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T19:12:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "T"
+      ]
+    },
+    {
+      "title": "10,000% Gains Predicted as Catzilla Catches Whale Attention— DOGE and WIF Days!",
+      "link": "https://cryptopanic.com/news/20534221/10000-Gains-Predicted-as-Catzilla-Catches-Whale-Attention-DOGE-and-WIF-Days?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T19:10:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "WIF"
+      ]
+    },
+    {
+      "title": "Usual Money Under Fire For Altering Asset Floor Price",
+      "link": "https://cryptopanic.com/news/20533995/Usual-Money-Under-Fire-For-Altering-Asset-Floor-Price?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T19:06:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "USD0"
+      ]
+    },
+    {
+      "title": "Best Crypto Wallets for 2025: A Comprehensive Guide to Top Wallets for Your Crypto Journey",
+      "link": "https://cryptopanic.com/news/20533996/Best-Crypto-Wallets-for-2025-A-Comprehensive-Guide-to-Top-Wallets-for-Your-Crypto-Journey?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T19:05:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KAS"
+      ]
+    },
+    {
+      "title": "Cardano Teams Up with FC Barcelona to Revolutionize Fan Engagement",
+      "link": "https://cryptopanic.com/news/20533981/Cardano-Teams-Up-with-FC-Barcelona-to-Revolutionize-Fan-Engagement?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T19:00:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The growing influence of the cryptocurrency sector has paved the way for various high-profile partnerships, and one of the most notable recent collaborations is between Cardano (ADA) and football giant FC Barcelona. The post Cardano Teams Up with FC Barcelona to Revolutionize Fan Engagement appeared first on Cryptodnes.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Solana poised for 2025 rally, Fetch.ai launches $10M fund: Finance Redefined",
+      "link": "https://cryptopanic.com/news/20533980/Solana-poised-for-2025-rally-Fetchai-launches-10M-fund-Finance-Redefined?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T19:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "FET",
+        "DEFI",
+        "DCF"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BlockDAG Ecosystem Eyes $600 Million in 2025 While Aptos Price Surges & Litecoin Predictions Lose Momentum",
+      "link": "https://cryptopanic.com/news/20534754/BlockDAG-Ecosystem-Eyes-600-Million-in-2025-While-Aptos-Price-Surges-Litecoin-Predictions-Lose-Momentum?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T18:59:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "APT"
+      ]
+    },
+    {
+      "title": "Expert Explains Crypto Trading Strategies If You Have $1K, $10K, $100K & $1M",
+      "link": "https://cryptopanic.com/news/20533954/Expert-Explains-Crypto-Trading-Strategies-If-You-Have-1K-10K-100K-1M?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T18:58:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FARTCOIN",
+        "AI16Z",
+        "X"
+      ]
+    },
+    {
+      "title": "Coinbase to Suspend FTM-PERP Trading; Price Dip Ahead?",
+      "link": "https://cryptopanic.com/news/20533892/Coinbase-to-Suspend-FTM-PERP-Trading-Price-Dip-Ahead?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T18:35:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FTM",
+        "PERP",
+        "X"
+      ]
+    },
+    {
+      "title": "CGPT token soars 90% on Binance listing as AI agents trend upward",
+      "link": "https://cryptopanic.com/news/20533813/CGPT-token-soars-90-on-Binance-listing-as-AI-agents-trend-upward?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T18:18:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "DAO",
+        "AIXBT",
+        "CGPT",
+        "COOKIE"
+      ]
+    },
+    {
+      "title": "Analyst Who Correctly Predicted Bitcoin’s 2024 Rebound Unveils New Price Traget — And It May Surprise You",
+      "link": "https://cryptopanic.com/news/20533747/Analyst-Who-Correctly-Predicted-Bitcoins-2024-Rebound-Unveils-New-Price-Traget-And-It-May-Surprise-You?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T17:58:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDC",
+        "TUSD"
+      ]
+    },
+    {
+      "title": "Grayscale Reveals Nearly 40 Altcoins For Investment Consideration",
+      "link": "https://cryptopanic.com/news/20533823/Grayscale-Reveals-Nearly-40-Altcoins-For-Investment-Consideration?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T17:47:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "DOGE",
+        "TRX",
+        "HBAR",
+        "HNT",
+        "RUNE",
+        "AR",
+        "IMX",
+        "FET",
+        "INJ",
+        "TON",
+        "STRK",
+        "KAS",
+        "APT",
+        "MNT",
+        "ARB",
+        "ONDO",
+        "TIA",
+        "PYTH",
+        "JUP",
+        "SEI",
+        "AKT",
+        "ENA",
+        "HYPE",
+        "S",
+        "WLD",
+        "JTO",
+        "PENDLE",
+        "GRASS",
+        "VIRTUAL",
+        "AERO",
+        "EIGEN",
+        "AI16Z"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Raydium Launches Perpetual Futures Trading on Solana with Zero Gas Fees",
+      "link": "https://cryptopanic.com/news/20533555/Raydium-Launches-Perpetual-Futures-Trading-on-Solana-with-Zero-Gas-Fees?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T17:00:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "RAY"
+      ]
+    },
+    {
+      "title": "Binance Lists ChainGPT (CGPT): Unlocking a New Era for AI-Powered Blockchain Solutions",
+      "link": "https://cryptopanic.com/news/20533483/Binance-Lists-ChainGPT-CGPT-Unlocking-a-New-Era-for-AI-Powered-Blockchain-Solutions?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T16:41:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "CGPT"
+      ]
+    },
+    {
+      "title": "$STX Has been consolidating between ~$1.3 and $2 for the better part of last year. I'm watching for another break of $2 which would lead to another test of the highs I'm assuming. The recent Nakamoto upgrade and network increases have made it so block times are now quick (not…",
+      "link": "https://cryptopanic.com/news/blockstack/20533563/STX-Has-been-consolidating-between-13-and-2-for-the-better-part-of-last-year-Im-watching-for-another-break-of-2-which-would-lead-to-another-test-of-the-highs-Im-assuming-The-recent-Nakamoto-upgrade-and-network-increases-have-made-it-so-block-times-are-now-quick-not",
+      "pubDate": "2025-01-10T16:41:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "STX"
+      ]
+    },
+    {
+      "title": "Aptos Network incorporates Chainlink data feeds for verifiable data",
+      "link": "https://cryptopanic.com/news/20533475/Aptos-Network-incorporates-Chainlink-data-feeds-for-verifiable-data?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T16:35:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "APT"
+      ]
+    },
+    {
+      "title": "Whales Cashing Out MKR Crypto Amid Slight Recovery, Will It Keep Up The Pump?",
+      "link": "https://cryptopanic.com/news/20533301/Whales-Cashing-Out-MKR-Crypto-Amid-Slight-Recovery-Will-It-Keep-Up-The-Pump?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T16:07:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Is HTX redeeming 80% of TrueUSD?",
+      "link": "https://cryptopanic.com/news/20533211/Is-HTX-redeeming-80-of-TrueUSD?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T15:58:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TUSD"
+      ]
+    },
+    {
+      "title": "Why These Altcoins Are Trending Today — January 10",
+      "link": "https://cryptopanic.com/news/20533365/Why-These-Altcoins-Are-Trending-Today-January-10?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T15:56:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DAO",
+        "AIXBT",
+        "CGPT",
+        "COOKIE"
+      ]
+    },
+    {
+      "title": "4 of the Best Meme Coins Gaining Popularity Among Influencers",
+      "link": "https://cryptopanic.com/news/20533157/4-of-the-Best-Meme-Coins-Gaining-Popularity-Among-Influencers?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T15:44:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "PEPE",
+        "SPX",
+        "X",
+        "FLOCK",
+        "SPORE",
+        "PIPPIN"
+      ]
+    },
+    {
+      "title": "Why This AI Agent Crypto AIXBT is Up 55% Today?",
+      "link": "https://cryptopanic.com/news/20533137/Why-This-AI-Agent-Crypto-AIXBT-is-Up-55-Today?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T15:37:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "AIXBT",
+        "X"
+      ]
+    },
+    {
+      "title": "USD0++ Drops to $0.92 Following Usual’s Update—Can the Stablecoin Recover?",
+      "link": "https://cryptopanic.com/news/20533134/USD0-Drops-to-092-Following-Usuals-UpdateCan-the-Stablecoin-Recover?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T15:36:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USD0"
+      ]
+    },
+    {
+      "title": "Dogecoin and Shiba Inu Rival Primed To Explode by 114% in Next Couple of Months, According to Crypto Analyst",
+      "link": "https://cryptopanic.com/news/20533085/Dogecoin-and-Shiba-Inu-Rival-Primed-To-Explode-by-114-in-Next-Couple-of-Months-According-to-Crypto-Analyst?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T15:30:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "SHIB",
+        "SUI",
+        "FLOKI",
+        "X"
+      ]
+    },
+    {
+      "title": "86% of Bitcoin’s sell-off driven by short-term retail traders",
+      "link": "https://cryptopanic.com/news/20533058/86-of-Bitcoins-sell-off-driven-by-short-term-retail-traders?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T15:21:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ALPHA"
+      ]
+    },
+    {
+      "title": "Polkadot‘s Largest LST – vDOT, Reached $2.2M Supply Cap on Hydration MM within 15 Hours",
+      "link": "https://cryptopanic.com/news/polkadot/20533066/Polkadots-Largest-LST-vDOT-Reached-22M-Supply-Cap-on-Hydration-MM-within-15-Hours",
+      "pubDate": "2025-01-10T15:14:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Crypto Exchange WazirX Shares Recovery Roadmap after $235M Hack",
+      "link": "https://cryptopanic.com/news/20535398/Crypto-Exchange-WazirX-Shares-Recovery-Roadmap-after-235M-Hack?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T15:07:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "WRX"
+      ]
+    },
+    {
+      "title": "Usual Labs’ USD0++ Falls to $0.92 as Ecosystem Questions New Redemption Model",
+      "link": "https://cryptopanic.com/news/20535397/Usual-Labs-USD0-Falls-to-092-as-Ecosystem-Questions-New-Redemption-Model?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T15:05:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USD0",
+        "USUAL"
+      ]
+    },
+    {
+      "title": "Binance Report: Low-Cap AI Agents Could Be Listed – Part 1",
+      "link": "https://cryptopanic.com/news/20532934/Binance-Report-Low-Cap-AI-Agents-Could-Be-Listed-Part-1?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T14:53:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "If you’ve been paying attention, you’ll notice that AI agents are making waves in crypto. According to a recent Binance report, some low-cap AI agents may soon find their way onto the exchange. Let’s explore some low-cap AI agents that might get listed and uncover what they offer. What Are AI Agents? Think of AI […] The post Binance Report: Low-Cap AI Agents Could Be Listed – Part 1 appeared...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Virtuals Protocol Unveils Jihoz-Inspired AI Agent and Token: $JAIHOZ Goes Live",
+      "link": "https://cryptopanic.com/news/20532896/Virtuals-Protocol-Unveils-Jihoz-Inspired-AI-Agent-and-Token-JAIHOZ-Goes-Live?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T14:43:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "VIRTUAL"
+      ]
+    },
+    {
+      "title": "Can Raydium’s New Perps Platform Siphon Market Share From Jupiter, Drift?",
+      "link": "https://cryptopanic.com/news/20532878/Can-Raydiums-New-Perps-Platform-Siphon-Market-Share-From-Jupiter-Drift?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T14:38:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "RAY",
+        "JUP"
+      ]
+    },
+    {
+      "title": "Whale Bets Big on AI Agents: VIRTUAL, FAI, and AIXBT Target 2x Gains",
+      "link": "https://cryptopanic.com/news/20535396/Whale-Bets-Big-on-AI-Agents-VIRTUAL-FAI-and-AIXBT-Target-2x-Gains?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T14:12:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "VIRTUAL",
+        "FAI",
+        "AIXBT"
+      ]
+    },
+    {
+      "title": "Crypto News Today (Jan 10th, 2025): Bitcoin Builds Momentum at $94k | AI16Z Surges 12.35%!",
+      "link": "https://cryptopanic.com/news/20532634/Crypto-News-Today-Jan-10th-2025-Bitcoin-Builds-Momentum-at-94k-AI16Z-Surges-1235?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T13:49:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "AI16Z"
+      ]
+    },
+    {
+      "title": "US FV Bank Adds PayPal’s PYUSD to Deposit and Payment Options",
+      "link": "https://cryptopanic.com/news/20532710/US-FV-Bank-Adds-PayPals-PYUSD-to-Deposit-and-Payment-Options?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T13:45:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "PYUSD"
+      ]
+    },
+    {
+      "title": "Coinbase Announces Removing Fantom Trading, FTM Price Dip Ahead?",
+      "link": "https://cryptopanic.com/news/20532464/Coinbase-Announces-Removing-Fantom-Trading-FTM-Price-Dip-Ahead?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T13:18:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "FTM",
+        "PERP"
+      ]
+    },
+    {
+      "title": "Binance Lists AIXBT, ChainGPT, and Cookie DAO: A Game-Changer for Crypto Market",
+      "link": "https://cryptopanic.com/news/20532421/Binance-Lists-AIXBT-ChainGPT-and-Cookie-DAO-A-Game-Changer-for-Crypto-Market?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T13:13:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "DAO",
+        "AIXBT",
+        "CGPT",
+        "00",
+        "COOKIE"
+      ]
+    },
+    {
+      "title": "Shytoshi Kusama Reveals Why Success Of Shiba Inu Requires Patience and Precision",
+      "link": "https://cryptopanic.com/news/20532422/Shytoshi-Kusama-Reveals-Why-Success-Of-Shiba-Inu-Requires-Patience-and-Precision?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T13:10:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "KSM"
+      ]
+    },
+    {
+      "title": "Grayscale Considers DOGE, HBAR, AI16Z Among 39 Crypto for Investment Products",
+      "link": "https://cryptopanic.com/news/20532375/Grayscale-Considers-DOGE-HBAR-AI16Z-Among-39-Crypto-for-Investment-Products?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T13:04:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "DOGE",
+        "HBAR",
+        "KAS",
+        "APT",
+        "AI16Z"
+      ]
+    },
+    {
+      "title": "Can dogwifhat (WIF) Price Hold Above $1.44 Amid Whale Accumulation?",
+      "link": "https://cryptopanic.com/news/20532293/Can-dogwifhat-WIF-Price-Hold-Above-144-Amid-Whale-Accumulation?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T12:59:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "WIF"
+      ]
+    },
+    {
+      "title": "Binance Adds AIXBT, CGPT, and COOKIE to Earn, Buy Crypto, Convert, and Margin",
+      "link": "https://cryptopanic.com/news/20532493/Binance-Adds-AIXBT-CGPT-and-COOKIE-to-Earn-Buy-Crypto-Convert-and-Margin?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T12:56:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "DAO",
+        "AIXBT",
+        "CGPT",
+        "00",
+        "COOKIE"
+      ]
+    },
+    {
+      "title": "Grayscale Considers 30+ New Digital Assets for Future Investment Products",
+      "link": "https://cryptopanic.com/news/20532277/Grayscale-Considers-30-New-Digital-Assets-for-Future-Investment-Products?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T12:51:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "DOGE",
+        "TRX",
+        "HBAR",
+        "RUNE",
+        "FET",
+        "TON",
+        "KAS",
+        "APT",
+        "ARB",
+        "PYTH"
+      ]
+    },
+    {
+      "title": "Walgreens Boots Alliance Reports Better than Expected Results for Q1 FY’25",
+      "link": "https://cryptopanic.com/news/20532115/Walgreens-Boots-Alliance-Reports-Better-than-Expected-Results-for-Q1-FY25?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T12:15:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EPS",
+        "S"
+      ]
+    },
+    {
+      "title": "Binance Research: Crypto, DeFi, NFT Markets in Dec 2024",
+      "link": "https://cryptopanic.com/news/20532764/Binance-Research-Crypto-DeFi-NFT-Markets-in-Dec-2024?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T12:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "SOL",
+        "DOGE",
+        "TRX",
+        "NFT",
+        "SUI",
+        "HYPE",
+        "PENGU",
+        "ATH",
+        "RWA"
+      ]
+    },
+    {
+      "title": "New Year, Big Wins: The Best Crypto to Buy Now for Maximum Growth in January 2025",
+      "link": "https://cryptopanic.com/news/20531947/New-Year-Big-Wins-The-Best-Crypto-to-Buy-Now-for-Maximum-Growth-in-January-2025?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T12:04:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "FET",
+        "INJ",
+        "RENDER"
+      ]
+    },
+    {
+      "title": "Stacks Completes Major Network Upgrade Enhancing Bitcoin Layer2 Capabilities",
+      "link": "https://cryptopanic.com/news/20532492/Stacks-Completes-Major-Network-Upgrade-Enhancing-Bitcoin-Layer2-Capabilities?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T12:03:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "STX"
+      ]
+    },
+    {
+      "title": "Gate.io launches a startup airdrop program featuring a Camino Network initial free offering",
+      "link": "https://cryptopanic.com/news/20531946/Gateio-launches-a-startup-airdrop-program-featuring-a-Camino-Network-initial-free-offering?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T12:03:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GT"
+      ]
+    },
+    {
+      "title": "Top Cryptocurrencies Making a Comeback: Sui (SUI), Render (RENDER), and Fantom (FTM) Lead the Charge",
+      "link": "https://cryptopanic.com/news/20531941/Top-Cryptocurrencies-Making-a-Comeback-Sui-SUI-Render-RENDER-and-Fantom-FTM-Lead-the-Charge?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T12:02:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FTM",
+        "SUI",
+        "RENDER"
+      ]
+    },
+    {
+      "title": "Meme Coins to Buy This Week – Doge Uprising, FLOKI, and BONK",
+      "link": "https://cryptopanic.com/news/20531871/Meme-Coins-to-Buy-This-Week-Doge-Uprising-FLOKI-and-BONK?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T11:54:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BONK",
+        "FLOKI"
+      ]
+    },
+    {
+      "title": "Delta Air Lines Projects EPS to Be $7.35+ for 2025, Reports Record December Quarter",
+      "link": "https://cryptopanic.com/news/20531862/Delta-Air-Lines-Projects-EPS-to-Be-735-for-2025-Reports-Record-December-Quarter?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T11:53:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EPS"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Stablecoin issuer ‘Usual’ faces sell-off after redemption update",
+      "link": "https://cryptopanic.com/news/20531823/Stablecoin-issuer-Usual-faces-sell-off-after-redemption-update?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T11:43:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USD0",
+        "USUAL",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "SWAN ICO Set to Launch Today: Anticipation Soars for MiCA-Compliant Meme Coin",
+      "link": "https://cryptopanic.com/news/20531989/SWAN-ICO-Set-to-Launch-Today-Anticipation-Soars-for-MiCA-Compliant-Meme-Coin?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T11:39:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "MOVE",
+        "X",
+        "CET",
+        "00"
+      ]
+    },
+    {
+      "title": "Bithumb Adds New Sonic SVM and AHT Market Pairs with Unique Features and Rewards",
+      "link": "https://cryptopanic.com/news/20531833/Bithumb-Adds-New-Sonic-SVM-and-AHT-Market-Pairs-with-Unique-Features-and-Rewards?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T11:36:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SAFE",
+        "AHT",
+        "SONIC"
+      ]
+    },
+    {
+      "title": "Binance Listing AIXBT, CGPT, COOKIE AI Coins Sparks Buzz; Prices Soar Over 50%",
+      "link": "https://cryptopanic.com/news/20531793/Binance-Listing-AIXBT-CGPT-COOKIE-AI-Coins-Sparks-Buzz-Prices-Soar-Over-50?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T11:35:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DAO",
+        "AIXBT",
+        "CGPT",
+        "COOKIE"
+      ]
+    },
+    {
+      "title": "TREAT Token Sees Major Pre-Launch Listing, Shiba Inu Exec Highlights",
+      "link": "https://cryptopanic.com/news/20531792/TREAT-Token-Sees-Major-Pre-Launch-Listing-Shiba-Inu-Exec-Highlights?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T11:35:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "KCS"
+      ]
+    },
+    {
+      "title": "Usual Money's USD0 Experiences Decline Following Protocol Update",
+      "link": "https://cryptopanic.com/news/20532486/Usual-Moneys-USD0-Experiences-Decline-Following-Protocol-Update?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T11:23:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "S",
+        "USD0",
+        "USUAL"
+      ]
+    },
+    {
+      "title": "Usual Money’s protocol update sparks community concern as USD0++ drops below 92 cents",
+      "link": "https://cryptopanic.com/news/20531720/Usual-Moneys-protocol-update-sparks-community-concern-as-USD0-drops-below-92-cents?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T11:17:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USD0",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "Binance Research: Crypto Market Hits $3.91T in December 2024, Bitcoin Peaks at $108K, Key Trends for January 2025",
+      "link": "https://cryptopanic.com/news/20532484/Binance-Research-Crypto-Market-Hits-391T-in-December-2024-Bitcoin-Peaks-at-108K-Key-Trends-for-January-2025?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T11:16:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "SOL",
+        "DOGE",
+        "TRX",
+        "NFT",
+        "SUI",
+        "HYPE",
+        "PENGU",
+        "RWA",
+        "888",
+        "NAVI"
+      ]
+    },
+    {
+      "title": "Shiba Inu TREAT Token Launch, Hints Of New Partnerships",
+      "link": "https://cryptopanic.com/news/20532324/Shiba-Inu-TREAT-Token-Launch-Hints-Of-New-Partnerships?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T11:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SHIB",
+        "UNI",
+        "KCS",
+        "X"
+      ]
+    },
+    {
+      "title": "Coinbase, ai16z Members Back New Crypto x AI DAO, Aiccelerate",
+      "link": "https://cryptopanic.com/news/20531643/Coinbase-ai16z-Members-Back-New-Crypto-x-AI-DAO-Aiccelerate?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T10:34:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "DAO",
+        "VIRTUAL",
+        "AI16Z",
+        "X"
+      ]
+    },
+    {
+      "title": "Trader Issues Urgent Bitcoin Alert, Says BTC Will Start ‘Looking Really Bad’ if Critical Support Level Crumbles",
+      "link": "https://cryptopanic.com/news/20531408/Trader-Issues-Urgent-Bitcoin-Alert-Says-BTC-Will-Start-Looking-Really-Bad-if-Critical-Support-Level-Crumbles?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T10:15:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ]
+    },
+    {
+      "title": "Grayscale Considers New Digital Assets for Investment Products",
+      "link": "https://cryptopanic.com/news/20531574/Grayscale-Considers-New-Digital-Assets-for-Investment-Products?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T10:14:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BNB",
+        "DOGE",
+        "TRX",
+        "HBAR",
+        "HNT",
+        "RUNE",
+        "AR",
+        "IMX",
+        "FET",
+        "INJ",
+        "TON",
+        "STRK",
+        "KAS",
+        "APT",
+        "MNT",
+        "ARB",
+        "ONDO",
+        "TIA",
+        "PYTH",
+        "JUP",
+        "SEI",
+        "AKT",
+        "ENA",
+        "S",
+        "WLD",
+        "JTO",
+        "PENDLE",
+        "AERO",
+        "EIGEN"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "3 AI Agent Tokens Skyrocket on Binance Listing Announcement",
+      "link": "https://cryptopanic.com/news/20531642/3-AI-Agent-Tokens-Skyrocket-on-Binance-Listing-Announcement?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T09:51:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "DAO",
+        "AIXBT",
+        "CGPT",
+        "00",
+        "COOKIE"
+      ]
+    },
+    {
+      "title": "$BTC Now in its 13th green hourly candle in a row. The past few days we also saw $ETH hit 13 red 4H candles in a row. Market is either up only or down only on these smaller timeframes. In the end many get chopped up. Zooming out is my recommendation :)",
+      "link": "https://cryptopanic.com/news/bitcoin/20531234/BTC-Now-in-its-13th-green-hourly-candle-in-a-row-The-past-few-days-we-also-saw-ETH-hit-13-red-4H-candles-in-a-row-Market-is-either-up-only-or-down-only-on-these-smaller-timeframes-In-the-end-many-get-chopped-up-Zooming-out-is-my-recommendation",
+      "pubDate": "2025-01-10T09:39:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "-",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogen Crypto To Make Crypto Millionaires in 2025",
+      "link": "https://cryptopanic.com/news/20531790/Dogen-Crypto-To-Make-Crypto-Millionaires-in-2025?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T09:32:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "SOL",
+        "DOGE",
+        "FLOKI"
+      ]
+    },
+    {
+      "title": "Ripple Transfers 300 Million XRP, Fueling Market Speculation",
+      "link": "https://cryptopanic.com/news/20531213/Ripple-Transfers-300-Million-XRP-Fueling-Market-Speculation?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T09:30:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple Labs recently made headlines after transferring a massive 300 million XRP, valued at over $682 million, to an undisclosed wallet, raising questions about the company’s strategy. The post Ripple Transfers 300 Million XRP, Fueling Market Speculation appeared first on Cryptodnes.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance Market Update: Top Stories January 10, 2025",
+      "link": "https://cryptopanic.com/news/20531569/Binance-Market-Update-Top-Stories-January-10-2025?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T09:30:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "ADA",
+        "XRP",
+        "SOL",
+        "DOGE",
+        "TRX",
+        "AVAX",
+        "TON",
+        "IQ",
+        "SUI",
+        "S"
+      ]
+    },
+    {
+      "title": "Bitcoin Accumulation Trend Score Turns Red: More Decline Coming?",
+      "link": "https://cryptopanic.com/news/20531170/Bitcoin-Accumulation-Trend-Score-Turns-Red-More-Decline-Coming?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T09:30:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "GRT",
+        "X"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "AI16Z Leads Market Gains with 8% Jump, but Rally’s Strength Is Questioned",
+      "link": "https://cryptopanic.com/news/20531338/AI16Z-Leads-Market-Gains-with-8-Jump-but-Rallys-Strength-Is-Questioned?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T09:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AI16Z"
+      ]
+    },
+    {
+      "title": "$2.6B Worth Token Unlock Set to Shake Crypto Market in January",
+      "link": "https://cryptopanic.com/news/20531824/26B-Worth-Token-Unlock-Set-to-Shake-Crypto-Market-in-January?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T09:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ONDO",
+        "SEI"
+      ]
+    },
+    {
+      "title": "Binance to List AIXBT by Virtuals (AIXBT), ChainGPT (CGPT), and Cookie DAO (COOKIE) with Seed Tag Applied",
+      "link": "https://cryptopanic.com/news/20531568/Binance-to-List-AIXBT-by-Virtuals-AIXBT-ChainGPT-CGPT-and-Cookie-DAO-COOKIE-with-Seed-Tag-Applied?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T09:07:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "DAO",
+        "AIXBT",
+        "CGPT",
+        "00",
+        "COOKIE"
+      ]
+    },
+    {
+      "title": "Market Sentiments Turn Bullish on XDC, JASMU & ALGO Prices; A Strong Rebound is on the Horizon",
+      "link": "https://cryptopanic.com/news/20530990/Market-Sentiments-Turn-Bullish-on-XDC-JASMU-ALGO-Prices-A-Strong-Rebound-is-on-the-Horizon?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T08:48:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ALGO",
+        "XDC",
+        "JASMY"
+      ]
+    },
+    {
+      "title": "Indian crypto exchange WazirX charts recovery path after $235M cyberattack",
+      "link": "https://cryptopanic.com/news/20530941/Indian-crypto-exchange-WazirX-charts-recovery-path-after-235M-cyberattack?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T08:38:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "WRX"
+      ]
+    },
+    {
+      "title": "Polkadot‘s Largest LST - vDOT, Reached $2.2M Supply Cap on Hydration MM within 15 Hours",
+      "link": "https://cryptopanic.com/news/polkadot/20530924/Polkadots-Largest-LST-vDOT-Reached-22M-Supply-Cap-on-Hydration-MM-within-15-Hours",
+      "pubDate": "2025-01-10T08:32:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ]
+    },
+    {
+      "title": "Hong Kong introduces ‘supervisory incubator’ to guide banks in blockchain adoption",
+      "link": "https://cryptopanic.com/news/20530702/Hong-Kong-introduces-supervisory-incubator-to-guide-banks-in-blockchain-adoption?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T07:32:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "DFI"
+      ]
+    },
+    {
+      "title": "Bitcoin (BTC) Supply Shock Unlikely in 2025: Here’s Why",
+      "link": "https://cryptopanic.com/news/20530701/Bitcoin-BTC-Supply-Shock-Unlikely-in-2025-Heres-Why?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T07:32:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "IO",
+        "BTCUSD"
+      ]
+    },
+    {
+      "title": "FXGuys ($FXG) Catches The Fancy Of Litecoin And RENDER Investors Seeking Huge Profits In This Bull Run",
+      "link": "https://cryptopanic.com/news/20530665/FXGuys-FXG-Catches-The-Fancy-Of-Litecoin-And-RENDER-Investors-Seeking-Huge-Profits-In-This-Bull-Run?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T07:26:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "RENDER"
+      ]
+    },
+    {
+      "title": "Rats Kingdom Snapshot Date Today: What to Expect on $RATS Listing",
+      "link": "https://cryptopanic.com/news/20531097/Rats-Kingdom-Snapshot-Date-Today-What-to-Expect-on-RATS-Listing?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T07:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KCS"
+      ]
+    },
+    {
+      "title": "Federal Reserve Officials Maintain Neutral Stance Amid Strong Economic Performance",
+      "link": "https://cryptopanic.com/news/20531562/Federal-Reserve-Officials-Maintain-Neutral-Stance-Amid-Strong-Economic-Performance?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T06:53:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "S",
+        "W"
+      ]
+    },
+    {
+      "title": "Solana (SOL), Polkadot (DOT) or Remittix (RTX)? Who Will Take Gold By The End Of January?",
+      "link": "https://cryptopanic.com/news/polkadot/20530499/Solana-SOL-Polkadot-DOT-or-Remittix-RTX-Who-Will-Take-Gold-By-The-End-Of-January",
+      "pubDate": "2025-01-10T06:31:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "DOT"
+      ]
+    },
+    {
+      "title": "Weekly Market Highlights - Crypto Marches On Towards Institutionalization",
+      "link": "https://cryptopanic.com/news/20530523/Weekly-Market-Highlights-Crypto-Marches-On-Towards-Institutionalization?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T06:29:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "LINK",
+        "NFT",
+        "ARB",
+        "S",
+        "MOVE",
+        "ZK",
+        "RLUSD",
+        "G",
+        "RWA"
+      ]
+    },
+    {
+      "title": "Fed officials lean ‘neutral’ on policy but expect clarity once Trump begins",
+      "link": "https://cryptopanic.com/news/20530489/Fed-officials-lean-neutral-on-policy-but-expect-clarity-once-Trump-begins?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T06:25:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "W",
+        "JEFF"
+      ]
+    },
+    {
+      "title": "Bithumb Adds New Trading Pairs: SONIC, SAFE, and AHT Join the Platform",
+      "link": "https://cryptopanic.com/news/20530382/Bithumb-Adds-New-Trading-Pairs-SONIC-SAFE-and-AHT-Join-the-Platform?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T05:48:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SAFE",
+        "00",
+        "AHT",
+        "SONIC"
+      ]
+    },
+    {
+      "title": "Whale Wallet Sells 4.7 Million SPX for $5.77 Million in USDT and USDC",
+      "link": "https://cryptopanic.com/news/20530516/Whale-Wallet-Sells-47-Million-SPX-for-577-Million-in-USDT-and-USDC?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T05:34:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "SPX"
+      ]
+    },
+    {
+      "title": "Crypto sentiment index drops to October levels as Bitcoin dips under $92K",
+      "link": "https://cryptopanic.com/news/20530325/Crypto-sentiment-index-drops-to-October-levels-as-Bitcoin-dips-under-92K?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T05:15:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "AMP"
+      ]
+    },
+    {
+      "title": "Which Cryptos Are Whales Buying for the Bull Run Solana (SOL), Lightchain AI, Kaspa?",
+      "link": "https://cryptopanic.com/news/20530293/Which-Cryptos-Are-Whales-Buying-for-the-Bull-Run-Solana-SOL-Lightchain-AI-Kaspa?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T05:05:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "KAS"
+      ]
+    },
+    {
+      "title": "Standard Chartered to offer crypto custody services in EU with new Luxembourg license",
+      "link": "https://cryptopanic.com/news/20530203/Standard-Chartered-to-offer-crypto-custody-services-in-EU-with-new-Luxembourg-license?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T04:23:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DFI"
+      ]
+    },
+    {
+      "title": "Coinbase Subpoenaed Over Polymarket Involvement, Federal Agency Seeks Customer Information (UPDATED)",
+      "link": "https://cryptopanic.com/news/20530142/Coinbase-Subpoenaed-Over-Polymarket-Involvement-Federal-Agency-Seeks-Customer-Information-UPDATED?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T03:39:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "POL"
+      ]
+    },
+    {
+      "title": "Bitcoin USD Falls to $92K as Indicators Point to Increasing Demand",
+      "link": "https://cryptopanic.com/news/20530003/Bitcoin-USD-Falls-to-92K-as-Indicators-Point-to-Increasing-Demand?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T02:52:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The start of the new year has been turbulent for Bitcoin USD, with the price plummeting 6% to reach below $96,000 over the past 24 hours, but indicators are now showing rising demand. The drop is one of the biggest daily drops in recent weeks, as traders and investors attempt to figure out why that […] The post Bitcoin USD Falls to $92K as Indicators Point to Increasing Demand appeared first...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin Price Under Pressure: BTC Struggles to Stay Afloat",
+      "link": "https://cryptopanic.com/news/20529999/Bitcoin-Price-Under-Pressure-BTC-Struggles-to-Stay-Afloat?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T02:51:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "TUSD"
+      ]
+    },
+    {
+      "title": "SPX6900 (SPX) Faces 15% Decline Pressure After Strong Weekly Rally",
+      "link": "https://cryptopanic.com/news/20530120/SPX6900-SPX-Faces-15-Decline-Pressure-After-Strong-Weekly-Rally?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T02:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SPX"
+      ]
+    },
+    {
+      "title": "Block could be the first firm with a BTC strategy in the S&amp;P 500: VanEck",
+      "link": "https://cryptopanic.com/news/20529972/Block-could-be-the-first-firm-with-a-BTC-strategy-in-the-SampP-500-VanEck?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T02:38:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "AMP",
+        "S"
+      ]
+    },
+    {
+      "title": "WIF Price Sinks to 4-Month Low Amid Broader Meme Coin Market Correction",
+      "link": "https://cryptopanic.com/news/20529970/WIF-Price-Sinks-to-4-Month-Low-Amid-Broader-Meme-Coin-Market-Correction?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T01:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "WIF",
+        "ADX"
+      ]
+    },
+    {
+      "title": "Texas Court Seizes $124M in Bitcoin – Is Crypto Privacy a Joke Now?",
+      "link": "https://cryptopanic.com/news/monero/20532354/Texas-Court-Seizes-124M-in-Bitcoin-Is-Crypto-Privacy-a-Joke-Now",
+      "pubDate": "2025-01-10T01:29:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XMR"
+      ]
+    },
+    {
+      "title": "Curve Data Reveals USD0++ Dominance In Liquidity Pool",
+      "link": "https://cryptopanic.com/news/20530415/Curve-Data-Reveals-USD0-Dominance-In-Liquidity-Pool?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T01:03:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "USD0"
+      ]
+    },
+    {
+      "title": "Raydium Protocol Launches Beta Perpetual Futures Trading with 40x Leverage, Gas-Free Trading, and 90+ Markets for 8.4 Million Users",
+      "link": "https://cryptopanic.com/news/20529998/Raydium-Protocol-Launches-Beta-Perpetual-Futures-Trading-with-40x-Leverage-Gas-Free-Trading-and-90-Markets-for-84-Million-Users?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T01:00:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "RAY"
+      ]
+    },
+    {
+      "title": "Bitcoin Not Reached ‘Extreme Euphoria’ Phase Yet, Glassnode Reveals",
+      "link": "https://cryptopanic.com/news/20529690/Bitcoin-Not-Reached-Extreme-Euphoria-Phase-Yet-Glassnode-Reveals?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T00:30:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "GRT",
+        "X"
+      ]
+    },
+    {
+      "title": "Solana DEX Raydium Launches Perpetual Futures Trading with Orderly Network",
+      "link": "https://cryptopanic.com/news/20530067/Solana-DEX-Raydium-Launches-Perpetual-Futures-Trading-with-Orderly-Network?mtm_campaign=API-OFA",
+      "pubDate": "2025-01-10T00:09:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "RAY",
+        "ORDER"
+      ]
+    }
+  ]
+}

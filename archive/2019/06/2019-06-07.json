@@ -1,0 +1,44 @@
+{
+  "date": "2019-06-07",
+  "fetchedAt": "2026-02-05T07:27:06.820Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ethereum Classic to Test Code for ‘Atlantis’ Upgrade This Month",
+      "link": "https://cryptopanic.com/news/5649978/Ethereum-Classic-to-Test-Code-for-Atlantis-Upgrade-This-Month",
+      "pubDate": "2019-06-07T16:05:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Giant Peter Brandt: It's Time to Buy Litecoin and XRP",
+      "link": "https://cryptopanic.com/news/litecoin/5647814/Crypto-Giant-Peter-Brandt-Its-Time-to-Buy-Litecoin-and-XRP",
+      "pubDate": "2019-06-07T12:09:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

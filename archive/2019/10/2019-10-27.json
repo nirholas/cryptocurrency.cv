@@ -1,0 +1,25 @@
+{
+  "date": "2019-10-27",
+  "fetchedAt": "2026-02-05T07:27:06.947Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "NEO and Other Made-in-China Cryptocurrencies See Huge Price Gains",
+      "link": "https://cryptopanic.com/news/6976618/NEO-and-Other-Made-in-China-Cryptocurrencies-See-Huge-Price-Gains",
+      "pubDate": "2019-10-27T18:40:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

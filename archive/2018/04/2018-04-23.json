@@ -1,0 +1,25 @@
+{
+  "date": "2018-04-23",
+  "fetchedAt": "2026-02-05T07:27:06.999Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "All About Verge: The $1 Billion Cryptocurrency That's Pumping On Porn",
+      "link": "https://cryptopanic.com/news/monero/1735114/All-About-Verge-The-1-Billion-Cryptocurrency-Thats-Pumping-On-Porn",
+      "pubDate": "2018-04-23T03:30:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "XVG"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    }
+  ]
+}

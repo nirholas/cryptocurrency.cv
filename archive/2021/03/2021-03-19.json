@@ -1,0 +1,581 @@
+{
+  "date": "2021-03-19",
+  "fetchedAt": "2026-02-05T07:27:06.778Z",
+  "articleCount": 38,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Price analysis 3/19: BTC, ETH, BNB, ADA, DOT, XRP, UNI, LTC, LINK, BCH",
+      "link": "https://cryptopanic.com/news/polkadot/11647805/Price-analysis-319-BTC-ETH-BNB-ADA-DOT-XRP-UNI-LTC-LINK-BCH",
+      "pubDate": "2021-03-19T23:09:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Several altcoins are moving to new all-time highs as bulls struggle to lift Bitcoin price above $60,000.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bullishness for Bitcoin continues despite its struggle to reclaim $60,000",
+      "link": "https://cryptopanic.com/news/uniswap/11647752/Bullishness-for-Bitcoin-continues-despite-its-struggle-to-reclaim-60000",
+      "pubDate": "2021-03-19T22:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin bulls attempt to chip away at the $60,000 resistance level as rising U.S. Treasury yields continue to cause havoc in global financial markets.",
+      "currencies": [
+        "BTC",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Deutsche Bank Reveals Real Reason Bitcoin’s Now ‘Too Important To Ignore’ (& Why Its Price Could Continue To Rise)",
+      "link": "https://cryptopanic.com/news/11647746/Deutsche-Bank-Reveals-Real-Reason-Bitcoins-Now-Too-Important-To-Ignore-Why-Its-Price-Could-Continue-To-Rise",
+      "pubDate": "2021-03-19T22:01:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "With bitcoin continuing to increase in value, analysts at Deutsche Bank are in agreement when they assert that the cryptocurrency isn’t going anywhere. Unless you’ve been living under a rock, you’re more than aware of bitcoin’s stellar growth over the past months. Data from CoinMarketCap shows that it is currently trading at $58,687.91, with a […]",
+      "currencies": [
+        "BTC",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Fresh wave of interest pushes Cardano near all-time highs",
+      "link": "https://cryptopanic.com/news/near/11647682/Fresh-wave-of-interest-pushes-Cardano-near-all-time-highs",
+      "pubDate": "2021-03-19T21:13:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "ADA recently came within a penny of its previous U.S. dollar all-time price high.",
+      "currencies": [
+        "ADA",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 36,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Brave and BAT Join Forces With Binance Smart Chain",
+      "link": "https://cryptopanic.com/news/11647687/Brave-and-BAT-Join-Forces-With-Binance-Smart-Chain",
+      "pubDate": "2021-03-19T20:55:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Brave’s Basic Attention Token (BAT) is now part of the Binance Smart Chain (BSC) ecosystem, according to a blog post from Brave. BAT on Binance Smart Chain According to Brave, BAT is now available as a wrapped token on BSC. BAT is natively built on the Ethereum blockchain and continues to circulate on that chain. This news simply means that the original token can be exchanged for a...",
+      "currencies": [
+        "ETH",
+        "BAT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "US Court allows Ripple’s co-founders to file a motion to dismiss case",
+      "link": "https://cryptopanic.com/news/ripple/11647610/US-Court-allows-Ripples-co-founders-to-file-a-motion-to-dismiss-case",
+      "pubDate": "2021-03-19T20:30:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Another development occurred in the ongoing Ripple-SEC lawsuit. Ripple co-founders Brad Garlinghouse and Chris Larsen have been allowed by the court “to file a motion to dismiss the cases against them.” According to legal documents, US District Judge Analisa Torres has allowed Larsen and Garlinghouse to file their motion to dismiss by 12 April. The […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SEC Tells Judge That XRP Cannot Be Compared to Bitcoin and Ethereum During Hearing",
+      "link": "https://cryptopanic.com/news/ethereum/11647594/SEC-Tells-Judge-That-XRP-Cannot-Be-Compared-to-Bitcoin-and-Ethereum-During-Hearing",
+      "pubDate": "2021-03-19T20:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The SEC has explained the difference between XRP and Bitcoin to the judge",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "ALTCOINS ROCKETING: Harmony, StormX, Crypto.com, Polkadot, Chainlink, Chiliz and GeoDB",
+      "link": "https://cryptopanic.com/news/chiliz/11647508/ALTCOINS-ROCKETING-Harmony-StormX-Cryptocom-Polkadot-Chainlink-Chiliz-and-GeoDB",
+      "pubDate": "2021-03-19T19:03:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Bitcoin and Ethereum Market Movers Roundup | Injective Labs, Cartesi, Crypto.com CRO, Plasma.Finance PPAY | Clover, The Graph GRT, Polkadot DOT, OIN Finance, Chainlink | Contentos, OpenSea NFTs, PAID Network, Superfarm, Chiliz CHZ | Grayscale now at $45 billion AUM | GeoDB: Earn GEO and Passive Income by Selling your data #Harmony #Chiliz #stormx #bitcoin #THETA #altcoins #VeChain #btc #ethereum #eth #altcoin #ENJ #VET #altcoinbuzz #investing #cryptocurrency #crypto #invest #binance #news #succe",
+      "currencies": [
+        "CHZ"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "5 Things All DeFi Enthusiasts Should Know",
+      "link": "https://cryptopanic.com/news/11647519/5-Things-All-DeFi-Enthusiasts-Should-Know",
+      "pubDate": "2021-03-19T18:51:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Could someone please summarise the financial benefits of running a node?",
+      "link": "https://cryptopanic.com/news/11651820/Could-someone-please-summarise-the-financial-benefits-of-running-a-node",
+      "pubDate": "2021-03-19T18:51:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "New in NU here",
+      "link": "https://cryptopanic.com/news/11651191/New-in-NU-here",
+      "pubDate": "2021-03-19T18:09:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Good luck to all the #MarchMadness bettors today!",
+      "link": "https://cryptopanic.com/news/11648213/Good-luck-to-all-the-MarchMadness-bettors-today",
+      "pubDate": "2021-03-19T17:23:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REP"
+      ]
+    },
+    {
+      "title": "BTC instead of gold? Higher ROI might not be enough to draw gold investments to Bitcoin. A significant increase in…",
+      "link": "https://cryptopanic.com/news/11649216/BTC-instead-of-gold-Higher-ROI-might-not-be-enough-to-draw-gold-investments-to-Bitcoin-A-significant-increase-in",
+      "pubDate": "2021-03-19T17:15:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "We are happy to announce our project just passed its first milestone delivery and is now of…",
+      "link": "https://cryptopanic.com/news/11649773/We-are-happy-to-announce-our-project-just-passed-its-first-milestone-delivery-and-is-now-of",
+      "pubDate": "2021-03-19T17:11:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MOG"
+      ]
+    },
+    {
+      "title": "In response to /r/nucypher I made a video about running an Ursula node for staking.",
+      "link": "https://cryptopanic.com/news/11647301/In-response-to-rnucypher-I-made-a-video-about-running-an-Ursula-node-for-staking",
+      "pubDate": "2021-03-19T17:03:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Nucypher",
+      "link": "https://cryptopanic.com/news/11647732/Nucypher",
+      "pubDate": "2021-03-19T16:58:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "NU Staking New York",
+      "link": "https://cryptopanic.com/news/11651085/NU-Staking-New-York",
+      "pubDate": "2021-03-19T16:08:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Lindsay Lohan Partnering With TRON ($TRX), Paris Hilton Also Wants to Launch her NFTs on TRON",
+      "link": "https://cryptopanic.com/news/11647154/Lindsay-Lohan-Partnering-With-TRON-TRX-Paris-Hilton-Also-Wants-to-Launch-her-NFTs-on-TRON",
+      "pubDate": "2021-03-19T15:49:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "BTC, ETH, BCH and ADA Price Analysis for March 19",
+      "link": "https://cryptopanic.com/news/11647149/BTC-ETH-BCH-and-ADA-Price-Analysis-for-March-19",
+      "pubDate": "2021-03-19T15:42:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Can Bitcoin (BTC) rise faster than the altcoins in the upcoming pump?",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "After I finish this soda enchanced with stardust rocket fuel, Nu's going to the moon :D",
+      "link": "https://cryptopanic.com/news/11647582/After-I-finish-this-soda-enchanced-with-stardust-rocket-fuel-Nus-going-to-the-moon-D",
+      "pubDate": "2021-03-19T15:41:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "BeInCrypto Weekly News Round-Up: March 19, 2021",
+      "link": "https://cryptopanic.com/news/11647136/BeInCrypto-Weekly-News-Round-Up-March-19-2021",
+      "pubDate": "2021-03-19T15:24:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "This week several altcoins have performed exceptionally well, with a number of them hitting new all-time highs. The native token for the crypto game My Neighbor Alice debuted on Binance this week, sending its price soaring. Meanwhile, the Brave browser’s native Basic Attention Token (BAT) has also seen a boost. Additionally, Cardano’s price spiked over … Continued",
+      "currencies": [
+        "ADA",
+        "BAT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Is IOTA Actually Feeless? Cardano Creator Sparks Debate",
+      "link": "https://cryptopanic.com/news/11647081/Is-IOTA-Actually-Feeless-Cardano-Creator-Sparks-Debate",
+      "pubDate": "2021-03-19T15:11:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano creator says that IOTA actually has fees, but many disagree",
+      "currencies": [
+        "ADA",
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Nu and NFTs",
+      "link": "https://cryptopanic.com/news/11651693/Nu-and-NFTs",
+      "pubDate": "2021-03-19T15:06:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "1: Weekly Update #5: The farms for Gaia were launched this week in addition to the first block, which is set to go…",
+      "link": "https://cryptopanic.com/news/11650376/1-Weekly-Update-5-The-farms-for-Gaia-were-launched-this-week-in-addition-to-the-first-block-which-is-set-to-go?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-19T15:02:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDX",
+        "USDF",
+        "SHARE"
+      ]
+    },
+    {
+      "title": "Chiliz Launches Manchester City NFT",
+      "link": "https://cryptopanic.com/news/11646943/Chiliz-Launches-Manchester-City-NFT",
+      "pubDate": "2021-03-19T13:54:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "Manchester City’s global fanbase will be able to use the NFT to access exclusive rewards, promotions, games, and AR-enabled features. Fan token holders will also have voting rights in certain binding and non-binding polls on Socios.com. Additionally, fans of the FC that are already registered as “Cityzens” are eligible to receive a free $CITY fan … Continued",
+      "currencies": [
+        "CHZ"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polkadot becomes latest to use Simplex's fiat on-ramp",
+      "link": "https://cryptopanic.com/news/polkadot/11646796/Polkadot-becomes-latest-to-use-Simplexs-fiat-on-ramp",
+      "pubDate": "2021-03-19T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The integration with Simplex will provide DOT users another route from fiat into crypto.",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 24,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$HUNT made a new all time high today - $0.43, and also hit over $6 million TVL …",
+      "link": "https://cryptopanic.com/news/11649256/HUNT-made-a-new-all-time-high-today-043-and-also-hit-over-6-million-TVL",
+      "pubDate": "2021-03-19T12:46:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "HUNT"
+      ]
+    },
+    {
+      "title": "Attorney Kevin Chen: SEC Does Not Fully Understand Ripple’s ‘Fair Notice’ Defense",
+      "link": "https://cryptopanic.com/news/ripple/11646732/Attorney-Kevin-Chen-SEC-Does-Not-Fully-Understand-Ripples-Fair-Notice-Defense",
+      "pubDate": "2021-03-19T12:17:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Earlier this week, Kevin Chen, an attorney at Homiak Law LLC, took a closer look at the “fair notice” defense used by Ripple Labs in the lawsuit (over the sale of XRP tokens) brought against it by the U.S. Securities and Exchange Commission (SEC). Homiak Law is “a full-service boutique law firm that specializes in […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "COBOL programming language behind Iowa's unemployment system over 60 years old: \"Iowa says it's not among the states facing challenges with 'creaky' code\" [United States of America]",
+      "link": "https://cryptopanic.com/news/11647581/COBOL-programming-language-behind-Iowas-unemployment-system-over-60-years-old-Iowa-says-its-not-among-the-states-facing-challenges-with-creaky-code-United-States-of-America",
+      "pubDate": "2021-03-19T12:05:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MFT"
+      ]
+    },
+    {
+      "title": "IOTA announces Chrysalis Network migration for April",
+      "link": "https://cryptopanic.com/news/11646643/IOTA-announces-Chrysalis-Network-migration-for-April",
+      "pubDate": "2021-03-19T11:30:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "IOTA is heading towards production readiness and to keep up with the demand in the market, it has altered the platform with aspects that fit industry standards. The team had deployed the first phase of Chrysalis in August 2020 for the same, and now, it is moving towards the final phase of the biggest upgrade […]",
+      "currencies": [
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Predection For The Next 4-5 Days?",
+      "link": "https://cryptopanic.com/news/11651729/Predection-For-The-Next-4-5-Days",
+      "pubDate": "2021-03-19T10:21:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Crypto Derivatives Exchange Bybit Announces ADA, DOT, and UNI Trading Pairs",
+      "link": "https://cryptopanic.com/news/polkadot/11646511/Crypto-Derivatives-Exchange-Bybit-Announces-ADA-DOT-and-UNI-Trading-Pairs",
+      "pubDate": "2021-03-19T10:19:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cryptocurrency derivatives exchange Bybit has announced the addition of three new USDT trading pairs with Cardano (ADA), Polkadot (DOT) and Uniswap (UNI). According to a press release shared with CryptoGlobe, the Singapore-based exchange has introduced new trading pairs in an effort to expands its altcoin selection for clients. The new crypto-assets join Bybit’s selection of […]",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Top Crypto Trader Says One Altcoin Set for Major Breakout, Warns Bitcoin May Soon Retreat",
+      "link": "https://cryptopanic.com/news/matic-network/11646460/Top-Crypto-Trader-Says-One-Altcoin-Set-for-Major-Breakout-Warns-Bitcoin-May-Soon-Retreat",
+      "pubDate": "2021-03-19T09:05:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A closely-followed trader and analyst known in the industry as Smart Contracter says one altcoin that is just shy of the top 50 projects by market cap appears primed to erupt. The trader is sharing a chart with his 113,300 Twitter followers that indicates Polygon (MATIC) could shoot up to the $0.48/0.49 price range in […]",
+      "currencies": [
+        "BTC",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ripple appoints former Uber exec to lead Southeast Asian expansion",
+      "link": "https://cryptopanic.com/news/ripple/11646360/Ripple-appoints-former-Uber-exec-to-lead-Southeast-Asian-expansion",
+      "pubDate": "2021-03-19T08:57:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple's expansion plans haven't been halted by an ongoing XRP securities lawsuit, as it appoints a new managing director for the Southeast Asia region.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "I put in my nucypher balance from coinbase two weeks ago. And it is till pending. Will it start the 31? or is something wrong?",
+      "link": "https://cryptopanic.com/news/11647398/I-put-in-my-nucypher-balance-from-coinbase-two-weeks-ago-And-it-is-till-pending-Will-it-start-the-31-or-is-something-wrong",
+      "pubDate": "2021-03-19T07:52:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "We are thrilled to announce that we established a strategic partnership with IFA Group, an HK-based investment grou…",
+      "link": "https://cryptopanic.com/news/11649331/We-are-thrilled-to-announce-that-we-established-a-strategic-partnership-with-IFA-Group-an-HK-based-investment-grou",
+      "pubDate": "2021-03-19T06:26:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Another Vlad Finance vault joins to Supra Partyyy!",
+      "link": "https://cryptopanic.com/news/11644028/Another-Vlad-Finance-vault-joins-to-Supra-Partyyy?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-19T02:13:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SUPRA",
+        "FLP"
+      ]
+    },
+    {
+      "title": "RT @LivingEos: For all #business interested in #blockchain this ground-up presentation by the CTO of lays out the m…",
+      "link": "https://cryptopanic.com/news/11643395/RT-LivingEos-For-all-business-interested-in-blockchain-this-ground-up-presentation-by-the-CTO-of-lays-out-the-m?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-19T01:13:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CHEX"
+      ]
+    }
+  ]
+}

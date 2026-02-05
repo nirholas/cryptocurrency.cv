@@ -1,0 +1,110 @@
+{
+  "date": "2019-06-03",
+  "fetchedAt": "2026-02-05T07:27:06.681Z",
+  "articleCount": 6,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Here’s How Much Tron CEO Justin Sun Paid for Warren Buffett's Charity Lunch",
+      "link": "https://cryptopanic.com/news/5609599/Heres-How-Much-Tron-CEO-Justin-Sun-Paid-for-Warren-Buffetts-Charity-Lunch",
+      "pubDate": "2019-06-03T18:27:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Tron CEO Pays $4.5 Million to Give Warren Buffett His Best Crypto Pitch",
+      "link": "https://cryptopanic.com/news/5608974/Tron-CEO-Pays-45-Million-to-Give-Warren-Buffett-His-Best-Crypto-Pitch",
+      "pubDate": "2019-06-03T17:38:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 15
+      }
+    },
+    {
+      "title": "Block.One to Release EOS-Based Social Media App ‘Voice’",
+      "link": "https://cryptopanic.com/news/5606592/BlockOne-to-Release-EOS-Based-Social-Media-App-Voice",
+      "pubDate": "2019-06-03T13:29:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin SV Price Top Performer on CMC Due to Craig Wright’s Recent Allegations Against Binance",
+      "link": "https://cryptopanic.com/news/5605570/Bitcoin-SV-Price-Top-Performer-on-CMC-Due-to-Craig-Wrights-Recent-Allegations-Against-Binance",
+      "pubDate": "2019-06-03T11:31:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 23
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Tron Price in Red Despite Justin Sun’s Promise of Big Announcement on June 3",
+      "link": "https://cryptopanic.com/news/5604909/Tron-Price-in-Red-Despite-Justin-Suns-Promise-of-Big-Announcement-on-June-3",
+      "pubDate": "2019-06-03T09:53:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Block.one Unveils Plan to Launch a Social Media Platform over EOS",
+      "link": "https://cryptopanic.com/news/5604684/Blockone-Unveils-Plan-to-Launch-a-Social-Media-Platform-over-EOS",
+      "pubDate": "2019-06-03T09:00:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

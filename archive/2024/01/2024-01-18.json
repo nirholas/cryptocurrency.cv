@@ -1,0 +1,934 @@
+{
+  "date": "2024-01-18",
+  "fetchedAt": "2026-02-05T07:27:08.057Z",
+  "articleCount": 64,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Polygon’s Transfer Troubles: Is MATIC Facing A Trust Crisis?",
+      "link": "https://cryptopanic.com/news/19186645/Polygons-Transfer-Troubles-Is-MATIC-Facing-A-Trust-Crisis",
+      "pubDate": "2024-01-18T22:30:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "MATIC",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "This New Tool Aims to Address Risks in DeFi Protocols",
+      "link": "https://cryptopanic.com/news/19186583/This-New-Tool-Aims-to-Address-Risks-in-DeFi-Protocols",
+      "pubDate": "2024-01-18T21:22:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "These Are the Top 5 Altcoins With the Highest Staking Reward",
+      "link": "https://cryptopanic.com/news/19186427/These-Are-the-Top-5-Altcoins-With-the-Highest-Staking-Reward",
+      "pubDate": "2024-01-18T20:16:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RUNE",
+        "CAKE"
+      ]
+    },
+    {
+      "title": "Ripple Pitches XRP Ledger To Major Investment Firm: Franklin Templeton",
+      "link": "https://cryptopanic.com/news/19186385/Ripple-Pitches-XRP-Ledger-To-Major-Investment-Firm-Franklin-Templeton",
+      "pubDate": "2024-01-18T20:09:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple's CTO pitches XRP Ledger to Franklin Templeton, highlighting its efficiency and potential amid growing crypto interest.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "dYdX Becomes Top DEX By Daily Volume",
+      "link": "https://cryptopanic.com/news/19186349/dYdX-Becomes-Top-DEX-By-Daily-Volume",
+      "pubDate": "2024-01-18T19:48:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "DYDX"
+      ]
+    },
+    {
+      "title": "SEI, SUI, RUNE slump as Bitcoin drops amid Grayscale dump",
+      "link": "https://cryptopanic.com/news/19186346/SEI-SUI-RUNE-slump-as-Bitcoin-drops-amid-Grayscale-dump",
+      "pubDate": "2024-01-18T19:45:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "RUNE",
+        "SUI"
+      ]
+    },
+    {
+      "title": "Sam Bankman-Fried’s Parents File Motion To Block FTX From Recovering Assets Transferred to the Couple",
+      "link": "https://cryptopanic.com/news/19186341/Sam-Bankman-Frieds-Parents-File-Motion-To-Block-FTX-From-Recovering-Assets-Transferred-to-the-Couple",
+      "pubDate": "2024-01-18T19:45:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "FTT"
+      ]
+    },
+    {
+      "title": "Tether Now Holding at Least $2,821,269,600 in Bitcoin As BTC Accumulation Spree Continues, Says Quant Analyst",
+      "link": "https://cryptopanic.com/news/19186342/Tether-Now-Holding-at-Least-2821269600-in-Bitcoin-As-BTC-Accumulation-Spree-Continues-Says-Quant-Analyst",
+      "pubDate": "2024-01-18T19:41:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "QNT"
+      ]
+    },
+    {
+      "title": "XRP Ledger Pitched To $1.6 Trillion Asset Manager As Ripple Prepares For Institutional Use Of XRP",
+      "link": "https://cryptopanic.com/news/19186278/XRP-Ledger-Pitched-To-16-Trillion-Asset-Manager-As-Ripple-Prepares-For-Institutional-Use-Of-XRP",
+      "pubDate": "2024-01-18T19:16:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple’s Chief Technology Officer (CTO) David Schwartz has pitched the merits of the XRP Ledger (XRPL) to behemoth asset manager Franklin Templeton even as traditional finance giants increasingly pivot towards the crypto space.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Secure Node Full Deprecation Timeline & EON Forger Node Instructions",
+      "link": "https://cryptopanic.com/news/19186236/Secure-Node-Full-Deprecation-Timeline-EON-Forger-Node-Instructions",
+      "pubDate": "2024-01-18T19:01:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ZEN"
+      ]
+    },
+    {
+      "title": "Bitcoin NVT Golden Cross Shoots Bullish Signal, Rally To Restart?",
+      "link": "https://cryptopanic.com/news/19186226/Bitcoin-NVT-Golden-Cross-Shoots-Bullish-Signal-Rally-To-Restart",
+      "pubDate": "2024-01-18T19:00:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "QNT"
+      ]
+    },
+    {
+      "title": "Sudden Decline in Bitcoin Price – Here’s the Reason for the Drop",
+      "link": "https://cryptopanic.com/news/19186213/Sudden-Decline-in-Bitcoin-Price-Heres-the-Reason-for-the-Drop",
+      "pubDate": "2024-01-18T18:43:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "There has been a sudden decline in the Bitcoin price in recent hours. The real reason for the decline was revealed when onchain data was examined. Continue Reading: Sudden Decline in Bitcoin Price – Here’s the Reason for the Drop",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "TUSD inches closer to $1 amid redemption issues",
+      "link": "https://cryptopanic.com/news/19186204/TUSD-inches-closer-to-1-amid-redemption-issues",
+      "pubDate": "2024-01-18T18:37:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FLOW",
+        "TUSD"
+      ]
+    },
+    {
+      "title": "Robinhood, Mega Whales Gobbling Trillions Of SHIB — A Mind-Blowing Shiba Inu Price Moonshot In View?",
+      "link": "https://cryptopanic.com/news/19186144/Robinhood-Mega-Whales-Gobbling-Trillions-Of-SHIB-A-Mind-Blowing-Shiba-Inu-Price-Moonshot-In-View",
+      "pubDate": "2024-01-18T18:15:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "In a notable development, giant US brokerage firm Robinhood has made a significant move, amassing an astonishing 233 billion Shiba Inu (SHIB) tokens in...",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin, Ethereum, and XRP Flash On-Chain Warning Signs",
+      "link": "https://cryptopanic.com/news/19186113/Bitcoin-Ethereum-and-XRP-Flash-On-Chain-Warning-Signs",
+      "pubDate": "2024-01-18T18:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Warning signals flash as Bitcoin, Ethereum, and XRP defy historical averages, posing a looming threat of a potential mass selloff.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "DeFi Exchange dYdX Dethrones Ethereum's Uniswap as Token Outpaces the Market",
+      "link": "https://cryptopanic.com/news/19186112/DeFi-Exchange-dYdX-Dethrones-Ethereums-Uniswap-as-Token-Outpaces-the-Market",
+      "pubDate": "2024-01-18T18:00:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI",
+        "DYDX"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Mamba updated to v2.4.0 with improved iterator handling and buffer support in unwrap helpers",
+      "link": "https://cryptopanic.com/news/19186056/Mamba-updated-to-v240-with-improved-iterator-handling-and-buffer-support-in-unwrap-helpers",
+      "pubDate": "2024-01-18T17:46:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Ripple-Linked Flare (FLR) Becomes Only Top 100 Crypto With Double-Digit Gains",
+      "link": "https://cryptopanic.com/news/19186043/Ripple-Linked-Flare-FLR-Becomes-Only-Top-100-Crypto-With-Double-Digit-Gains",
+      "pubDate": "2024-01-18T17:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "FLR"
+      ]
+    },
+    {
+      "title": "Bitcoin ETFs See $10 Billion Traded in Just Three Days, Ripple and Hedera Leaders Meet for Groundbreaking Chat, Robinhood Adds Billions in SHIB: Crypto News Digest by U.Today",
+      "link": "https://cryptopanic.com/news/19186003/Bitcoin-ETFs-See-10-Billion-Traded-in-Just-Three-Days-Ripple-and-Hedera-Leaders-Meet-for-Groundbreaking-Chat-Robinhood-Adds-Billions-in-SHIB-Crypto-News-Digest-by-UToday",
+      "pubDate": "2024-01-18T17:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Injective On A Roll: Crypto Analyst Predicts Massive Breakout Against Bitcoin",
+      "link": "https://cryptopanic.com/news/19185976/Injective-On-A-Roll-Crypto-Analyst-Predicts-Massive-Breakout-Against-Bitcoin",
+      "pubDate": "2024-01-18T17:00:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "FLOW",
+        "INJ",
+        "APT",
+        "SUI"
+      ]
+    },
+    {
+      "title": "‘ADA Whale’ Explains Cardano’s ($ADA) Potential Attraction for Institutional and TradFi Investment Funds",
+      "link": "https://cryptopanic.com/news/19185921/ADA-Whale-Explains-Cardanos-ADA-Potential-Attraction-for-Institutional-and-TradFi-Investment-Funds",
+      "pubDate": "2024-01-18T16:49:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Recently, in a comprehensive thread on social media platform X, ADA Whale, a prominent Cardano ecosystem analyst, outlined the reasons why institutional and traditional finance (TradFi) investors should consider exposure to Cardano ($ADA). 1. Institutional Interest in Crypto ADA Whale began by noting that more institutional and TradFi money is expected to flow into crypto […]",
+      "currencies": [
+        "ADA",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Bitcoin ETFs Banned in Singapore Over Eligibility Concerns",
+      "link": "https://cryptopanic.com/news/19185871/Bitcoin-ETFs-Banned-in-Singapore-Over-Eligibility-Concerns",
+      "pubDate": "2024-01-18T16:35:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The Monetary Authority of Singapore has restricted the local listing of Bitcoin ETFs, fueling investor interest in U.S options.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Delphi Labs and Astroport Foundation Launch Asteroid Protocol on Cosmos Hub",
+      "link": "https://cryptopanic.com/news/19185772/Delphi-Labs-and-Astroport-Foundation-Launch-Asteroid-Protocol-on-Cosmos-Hub",
+      "pubDate": "2024-01-18T15:56:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ]
+    },
+    {
+      "title": "Top Crypto Gainers After SEC Decision on Bitcoin ETF – Cardano, Ethereum Classic, and NuggetRush",
+      "link": "https://cryptopanic.com/news/19185750/Top-Crypto-Gainers-After-SEC-Decision-on-Bitcoin-ETF-Cardano-Ethereum-Classic-and-NuggetRush",
+      "pubDate": "2024-01-18T15:46:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Conflux adds EVM-compatible solution to interact with Bitcoin",
+      "link": "https://cryptopanic.com/news/19185726/Conflux-adds-EVM-compatible-solution-to-interact-with-Bitcoin",
+      "pubDate": "2024-01-18T15:36:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "CFX"
+      ]
+    },
+    {
+      "title": "Massive Shiba Inu Accumulation: Tron Founder Stacks Up SHIB Holdings",
+      "link": "https://cryptopanic.com/news/blockstack/19185716/Massive-Shiba-Inu-Accumulation-Tron-Founder-Stacks-Up-SHIB-Holdings",
+      "pubDate": "2024-01-18T15:30:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX",
+        "LINK"
+      ]
+    },
+    {
+      "title": "Cryptocurrency Immutable Falls More Than 3% In 24 hours",
+      "link": "https://cryptopanic.com/news/19185641/Cryptocurrency-Immutable-Falls-More-Than-3-In-24-hours",
+      "pubDate": "2024-01-18T15:02:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "IMX"
+      ]
+    },
+    {
+      "title": "Uniswap Unveils New Security Feature: Will It Boost UNI Demand?",
+      "link": "https://cryptopanic.com/news/19185585/Uniswap-Unveils-New-Security-Feature-Will-It-Boost-UNI-Demand",
+      "pubDate": "2024-01-18T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Astar (ASTR) Hits Historic Network Milestones, Price Reacts",
+      "link": "https://cryptopanic.com/news/19185591/Astar-ASTR-Hits-Historic-Network-Milestones-Price-Reacts",
+      "pubDate": "2024-01-18T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ASTR"
+      ]
+    },
+    {
+      "title": "Bitcoin, Ethereum Fall Following Jobless Claims Data; THORChain Becomes Top Loser",
+      "link": "https://cryptopanic.com/news/19185556/Bitcoin-Ethereum-Fall-Following-Jobless-Claims-Data-THORChain-Becomes-Top-Loser",
+      "pubDate": "2024-01-18T14:33:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "RUNE"
+      ]
+    },
+    {
+      "title": "dYdX native token surpasses $3 as it becomes top DEX by daily volume",
+      "link": "https://cryptopanic.com/news/19185458/dYdX-native-token-surpasses-3-as-it-becomes-top-DEX-by-daily-volume",
+      "pubDate": "2024-01-18T14:19:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "DYDX"
+      ]
+    },
+    {
+      "title": "Cardano (ADA) Whales Wake up With $13 Billion in Large Transactions",
+      "link": "https://cryptopanic.com/news/19185422/Cardano-ADA-Whales-Wake-up-With-13-Billion-in-Large-Transactions",
+      "pubDate": "2024-01-18T14:08:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano whales are waking up massively with enormous transaction activity surge",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Crypto market maker Flowdesk reaches $250 million valuation with Series B round featuring Ripple and others",
+      "link": "https://cryptopanic.com/news/19185387/Crypto-market-maker-Flowdesk-reaches-250-million-valuation-with-Series-B-round-featuring-Ripple-and-others",
+      "pubDate": "2024-01-18T14:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "These Cryptos Will Explode Even If Altseason Doesn’t Come",
+      "link": "https://cryptopanic.com/news/19185313/These-Cryptos-Will-Explode-Even-If-Altseason-Doesnt-Come?mtm_campaign=API-OFA",
+      "pubDate": "2024-01-18T13:33:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "APT",
+        "SEI",
+        "BLUR"
+      ]
+    },
+    {
+      "title": "Cardano's Story from the Beginning to its Current State",
+      "link": "https://cryptopanic.com/news/19185324/Cardanos-Story-from-the-Beginning-to-its-Current-State",
+      "pubDate": "2024-01-18T13:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "In the modern digital world, businesses and entrepreneurs are discovering numerous new income opportunities. One increasingly popular business model centers around blockchain technology, which offers unique features and capabilities. Among the flourishing blockchain platforms, Cardano has experienced significant growth, attracting partnerships with various businesses. So, come...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    },
+    {
+      "title": "dYdX Overtakes Uniswap in Daily Transaction Volumes",
+      "link": "https://cryptopanic.com/news/19185266/dYdX-Overtakes-Uniswap-in-Daily-Transaction-Volumes",
+      "pubDate": "2024-01-18T13:16:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI",
+        "DYDX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "First Mover Americas: dYdX Beats Uniswap, Bitcoin Outlook Dour",
+      "link": "https://cryptopanic.com/news/19185221/First-Mover-Americas-dYdX-Beats-Uniswap-Bitcoin-Outlook-Dour",
+      "pubDate": "2024-01-18T13:01:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DYDX"
+      ]
+    },
+    {
+      "title": "China's Popular Altcoin Announced Its New Feature, There Was a Sudden Rise in Price!",
+      "link": "https://cryptopanic.com/news/19185209/Chinas-Popular-Altcoin-Announced-Its-New-Feature-There-Was-a-Sudden-Rise-in-Price",
+      "pubDate": "2024-01-18T12:54:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "CFX"
+      ]
+    },
+    {
+      "title": "Investment giant backs ETH and SOL after Bitcoin ETF launch",
+      "link": "https://cryptopanic.com/news/19185176/Investment-giant-backs-ETH-and-SOL-after-Bitcoin-ETF-launch",
+      "pubDate": "2024-01-18T12:53:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Franklin Templeton is a global investment firm that recently launched one of the new Bitcoin ETFs in the United States. … Continue reading",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Delphi Labs, Astroport Foundation introduce Asteroid protocol, enabling inscriptions on Cosmos Hub",
+      "link": "https://cryptopanic.com/news/19185119/Delphi-Labs-Astroport-Foundation-introduce-Asteroid-protocol-enabling-inscriptions-on-Cosmos-Hub",
+      "pubDate": "2024-01-18T12:36:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ]
+    },
+    {
+      "title": "DYDX Price Increases Above $3 as Bullish Momentum Builds",
+      "link": "https://cryptopanic.com/news/19185281/DYDX-Price-Increases-Above-3-as-Bullish-Momentum-Builds",
+      "pubDate": "2024-01-18T12:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DYDX"
+      ]
+    },
+    {
+      "title": "Why Is Bitcoin Price Trading Sideways? 3 Key Factors",
+      "link": "https://cryptopanic.com/news/19184974/Why-Is-Bitcoin-Price-Trading-Sideways-3-Key-Factors",
+      "pubDate": "2024-01-18T12:00:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Algorand’s New Update Speeds Up Block Time By 20%",
+      "link": "https://cryptopanic.com/news/19184837/Algorands-New-Update-Speeds-Up-Block-Time-By-20",
+      "pubDate": "2024-01-18T11:11:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Algorand blockchain implements Dynamic Lambda update, reducing block creation times",
+      "link": "https://cryptopanic.com/news/19184744/Algorand-blockchain-implements-Dynamic-Lambda-update-reducing-block-creation-times",
+      "pubDate": "2024-01-18T10:49:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALGO"
+      ]
+    },
+    {
+      "title": "BlackRock Made a New Bitcoin Purchase! How Much BTC Is He Holding?",
+      "link": "https://cryptopanic.com/news/bitcoin/19184752/BlackRock-Made-a-New-Bitcoin-Purchase-How-Much-BTC-Is-He-Holding",
+      "pubDate": "2024-01-18T10:48:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "BlackRock, whose Spot Bitcoin ETF application was approved, purchased approximately 10,000 more BTC. Here are the details of the news... Continue Reading: BlackRock Made a New Bitcoin Purchase! How Much BTC Is He Holding?",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Analyst Says Ethereum-Based Altcoin Set To Skyrocket by Over 100%, Updates Outlook on Chainlink and Fetch.ai",
+      "link": "https://cryptopanic.com/news/19184670/Analyst-Says-Ethereum-Based-Altcoin-Set-To-Skyrocket-by-Over-100-Updates-Outlook-on-Chainlink-and-Fetchai?mtm_campaign=API-OFA",
+      "pubDate": "2024-01-18T10:15:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "BLUR"
+      ]
+    },
+    {
+      "title": "Cosmos-powered dYdX claims top spot in DeFi, beats Uniswap in daily trading",
+      "link": "https://cryptopanic.com/news/19184563/Cosmos-powered-dYdX-claims-top-spot-in-DeFi-beats-Uniswap-in-daily-trading",
+      "pubDate": "2024-01-18T09:47:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI",
+        "ATOM",
+        "DYDX"
+      ]
+    },
+    {
+      "title": "Post-ETF Approval Stagnation Continues as Bitcoin Price Fails to Overcome $43K (Market Watch)",
+      "link": "https://cryptopanic.com/news/19184531/Post-ETF-Approval-Stagnation-Continues-as-Bitcoin-Price-Fails-to-Overcome-43K-Market-Watch",
+      "pubDate": "2024-01-18T09:39:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FLR"
+      ]
+    },
+    {
+      "title": "SEC Warns Coinbase Against Reinterpreting The Howey Test Amid Legal Battle",
+      "link": "https://cryptopanic.com/news/19184542/SEC-Warns-Coinbase-Against-Reinterpreting-The-Howey-Test-Amid-Legal-Battle",
+      "pubDate": "2024-01-18T09:35:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "US Judge questions SEC on crypto rules, possibly leading to new views on cryptocurrencies like XRP as non-securities.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cryptocurrency Exchange Received 9 Million Dollars of Investment, This Altcoin Price Mobilized!",
+      "link": "https://cryptopanic.com/news/19184545/Cryptocurrency-Exchange-Received-9-Million-Dollars-of-Investment-This-Altcoin-Price-Mobilized",
+      "pubDate": "2024-01-18T09:31:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "WOO"
+      ]
+    },
+    {
+      "title": "Robinhood Goes Shiba Crazy, Buys 230 Billion SHIB In 24 Hours – Here’s The Scoop",
+      "link": "https://cryptopanic.com/news/19184536/Robinhood-Goes-Shiba-Crazy-Buys-230-Billion-SHIB-In-24-Hours-Heres-The-Scoop",
+      "pubDate": "2024-01-18T09:31:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SHIB",
+        "LTC",
+        "MKR",
+        "RNDR"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Woo Raises $9M to Boost Liquidity of WOO X Exchange",
+      "link": "https://cryptopanic.com/news/19184412/Woo-Raises-9M-to-Boost-Liquidity-of-WOO-X-Exchange",
+      "pubDate": "2024-01-18T08:47:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "WOO"
+      ]
+    },
+    {
+      "title": "Crypto exchange WOO X raises $9 million to improve liquidity",
+      "link": "https://cryptopanic.com/news/19184425/Crypto-exchange-WOO-X-raises-9-million-to-improve-liquidity",
+      "pubDate": "2024-01-18T08:46:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "WOO"
+      ]
+    },
+    {
+      "title": "SEC v. Coinbase: Federal Judge Says “Tokens Are Not Securities”",
+      "link": "https://cryptopanic.com/news/19184402/SEC-v-Coinbase-Federal-Judge-Says-Tokens-Are-Not-Securities",
+      "pubDate": "2024-01-18T08:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The legal brawl between the SEC and crypto exchanges took a new turn in a recent hearing where United States Judge Katherine Polk Failla cross-examined the regulator. The judge remains unsatisfied with the SEC’s statements against Coinbase, and XRP advocate Bill Morgan believes this is a sign that cryptocurrencies will eventually be acknowledged as non-securities […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Some New Coins After ETF Approval Had Nothing to Do With Bitcoin",
+      "link": "https://cryptopanic.com/news/19184501/Some-New-Coins-After-ETF-Approval-Had-Nothing-to-Do-With-Bitcoin",
+      "pubDate": "2024-01-18T08:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ETC"
+      ]
+    },
+    {
+      "title": "New DEX Ruler In Town: dYdX Takes Over Uniswap With $757M Daily Volume",
+      "link": "https://cryptopanic.com/news/19184359/New-DEX-Ruler-In-Town-dYdX-Takes-Over-Uniswap-With-757M-Daily-Volume",
+      "pubDate": "2024-01-18T08:09:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "DYDX"
+      ]
+    },
+    {
+      "title": "Miners Sell Off Their Stash as Bitcoin Records Biggest Single Transaction",
+      "link": "https://cryptopanic.com/news/19184322/Miners-Sell-Off-Their-Stash-as-Bitcoin-Records-Biggest-Single-Transaction",
+      "pubDate": "2024-01-18T08:08:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Record $665M Bitcoin moved in a single transaction, leading to massive sales by miners as BTC prices hover around $42K-$43K.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Will X Unleash The Doge? Platform Users Eager To Embrace The Meme Coin",
+      "link": "https://cryptopanic.com/news/19184207/Will-X-Unleash-The-Doge-Platform-Users-Eager-To-Embrace-The-Meme-Coin",
+      "pubDate": "2024-01-18T07:00:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "SHIB",
+        "CHZ"
+      ]
+    },
+    {
+      "title": "dYdX flips Uniswap as top DEX by volume; Pullix sees increased demand",
+      "link": "https://cryptopanic.com/news/19184113/dYdX-flips-Uniswap-as-top-DEX-by-volume-Pullix-sees-increased-demand",
+      "pubDate": "2024-01-18T06:08:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "DYDX"
+      ]
+    },
+    {
+      "title": "EOS Price Analysis: Risk of Downside Break Below $0.75",
+      "link": "https://cryptopanic.com/news/19184089/EOS-Price-Analysis-Risk-of-Downside-Break-Below-075",
+      "pubDate": "2024-01-18T05:48:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ]
+    },
+    {
+      "title": "Algorand shaves block times by 20% after Dynamic Lambda upgrade",
+      "link": "https://cryptopanic.com/news/19184040/Algorand-shaves-block-times-by-20-after-Dynamic-Lambda-upgrade",
+      "pubDate": "2024-01-18T04:41:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALGO"
+      ]
+    },
+    {
+      "title": "Laser-Eyed Franklin Templeton Sets Sights on Ethereum, Solana After Bitcoin",
+      "link": "https://cryptopanic.com/news/19183943/Laser-Eyed-Franklin-Templeton-Sets-Sights-on-Ethereum-Solana-After-Bitcoin",
+      "pubDate": "2024-01-18T03:08:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The investment giant highlighted Solana's vision and Ethereum's ecosystem in its bullish Twitter thread.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Exchanges Trading Volume Hit $10.3T in 2023, New Data Shows",
+      "link": "https://cryptopanic.com/news/19183838/Crypto-Exchanges-Trading-Volume-Hit-103T-in-2023-New-Data-Shows",
+      "pubDate": "2024-01-18T02:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "RUNE"
+      ]
+    },
+    {
+      "title": "Trader Issues Warning on Solana Rival That’s Up 247% in One Month, Updates Outlook on LDO and One Other Altcoin",
+      "link": "https://cryptopanic.com/news/19183790/Trader-Issues-Warning-on-Solana-Rival-Thats-Up-247-in-One-Month-Updates-Outlook-on-LDO-and-One-Other-Altcoin",
+      "pubDate": "2024-01-18T01:00:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LDO",
+        "SEI"
+      ]
+    }
+  ]
+}

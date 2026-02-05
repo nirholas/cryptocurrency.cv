@@ -1,0 +1,670 @@
+{
+  "date": "2021-07-09",
+  "fetchedAt": "2026-02-05T07:27:06.852Z",
+  "articleCount": 43,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "The Top DOGE: Bitcoin And Ethereum Too Slow, Elon Musk",
+      "link": "https://cryptopanic.com/news/dogecoin/12294206/The-Top-DOGE-Bitcoin-And-Ethereum-Too-Slow-Elon-Musk",
+      "pubDate": "2021-07-09T23:00:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Musk continues to show his support for Doge as time goes by. This time, the billionaire has opined that Bitcoin and Ethereum transactions layers are too slow. Comparing this with the speed of Doge, Musk explained that the cost of transactions remains too high. It is true that bitcoin and ethereum confirmation times become quite […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Here Are Top Five Altcoins To Watch Based on VC Backing, According to Coin Bureau",
+      "link": "https://cryptopanic.com/news/polkadot/12294210/Here-Are-Top-Five-Altcoins-To-Watch-Based-on-VC-Backing-According-to-Coin-Bureau",
+      "pubDate": "2021-07-09T22:05:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Popular cryptocurrency analyst and Coin Bureau host, Guy, says investments by venture capitalists in later-stage cryptocurrency projects indicate the high potential those particular projects have. Guy kicks off his list of five cryptocurrency projects with high-performance blockchain Solana (SOL), which is among the many projects that have received massive financial backing from venture...",
+      "currencies": [
+        "SOL",
+        "DOT",
+        "KSM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "New Dogecoin (DOGE) update has this key ‘merit,’ says Elon Musk",
+      "link": "https://cryptopanic.com/news/dogecoin/12294122/New-Dogecoin-DOGE-update-has-this-key-merit-says-Elon-Musk",
+      "pubDate": "2021-07-09T22:00:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Matt Wallace, a popular proponent of Dogecoin, reminded the Dogecoin community today about an upcoming update that would speed up transactions and make the network even cheaper.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "This VeChain Partnership Will Enable VET Holders To Buy On Ebay, Amazon And Others",
+      "link": "https://cryptopanic.com/news/12294102/This-VeChain-Partnership-Will-Enable-VET-Holders-To-Buy-On-Ebay-Amazon-And-Others",
+      "pubDate": "2021-07-09T22:00:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The VeChain Foundation has announced a partnership with Shopping.io, an e-commerce platform of international scope that has been integrating crypto payments. From today July 9th, consumers can use VET tokens to purchase at Amazon, eBay, Walmart, and Etsy. In addition, VET holders can benefit from a 2% discount on all items, from electronics, novelty, everyday […]",
+      "currencies": [
+        "VET"
+      ],
+      "votes": {
+        "positive": 33,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "It has come to our attention that someone has created a token on the Stellar network named Chia, using the Chia log…",
+      "link": "https://cryptopanic.com/news/12295271/It-has-come-to-our-attention-that-someone-has-created-a-token-on-the-Stellar-network-named-Chia-using-the-Chia-log",
+      "pubDate": "2021-07-09T20:05:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "XCH"
+      ]
+    },
+    {
+      "title": "We are happy to announce that @m_h_d_v , who co-founded @lukso_io and @dematerialised , joins #CryptoArtWeekAsia,…",
+      "link": "https://cryptopanic.com/news/12296491/We-are-happy-to-announce-that-m_h_d_v-who-co-founded-lukso_io-and-dematerialised-joins-CryptoArtWeekAsia",
+      "pubDate": "2021-07-09T19:09:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NULL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "CoinMarketCap data says it all. Glitzkoin GTN is doing fine. We remain committed to the role that Altcoins are now…",
+      "link": "https://cryptopanic.com/news/12296027/CoinMarketCap-data-says-it-all-Glitzkoin-GTN-is-doing-fine-We-remain-committed-to-the-role-that-Altcoins-are-now",
+      "pubDate": "2021-07-09T16:47:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "Bullish to Go Public with $9 Billion SPAC Merger",
+      "link": "https://cryptopanic.com/news/12293414/Bullish-to-Go-Public-with-9-Billion-SPAC-Merger",
+      "pubDate": "2021-07-09T16:42:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Bullish Exchange is set for a big launch thanks to a merger with a SPAC called Far Peak.",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "What you should know about these long-term Ethereum risks",
+      "link": "https://cryptopanic.com/news/ethereum/12293382/What-you-should-know-about-these-long-term-Ethereum-risks",
+      "pubDate": "2021-07-09T16:30:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Bitcoin and Ethereum are the two of the largest cryptocurrencies in the world. While Bitcoin and Ethereum have both secured a major share of the cryptocurrency market’s value, their purposes are widely different. What this competition between the two has also done is fueled conversations about which crypto is better than the other. So, is […]",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Reef Finance is excited to announce a new collaboration with @elk_finance, making it seamless for anyone to exchang…",
+      "link": "https://cryptopanic.com/news/12297523/Reef-Finance-is-excited-to-announce-a-new-collaboration-with-elk_finance-making-it-seamless-for-anyone-to-exchang",
+      "pubDate": "2021-07-09T16:20:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REEF"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "EOS Pumps 10% as Bullish Announces Planned NYSE Listing via SPAC Merger",
+      "link": "https://cryptopanic.com/news/12293302/EOS-Pumps-10-as-Bullish-Announces-Planned-NYSE-Listing-via-SPAC-Merger",
+      "pubDate": "2021-07-09T16:08:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The number of cryptocurrency companies announcing plans to go public continues to increase with the latest one being Block.one's Bullish.",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "36.9% of TFUEL’s Circulating Supply is Now Staked On the Theta Network",
+      "link": "https://cryptopanic.com/news/theta-token/12293276/369-of-TFUELs-Circulating-Supply-is-Now-Staked-On-the-Theta-Network",
+      "pubDate": "2021-07-09T15:54:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The #ETN_Network blockchain upgrade is under intense testing to ensure it is 100% secure and operational. Read all…",
+      "link": "https://cryptopanic.com/news/12293011/The-ETN_Network-blockchain-upgrade-is-under-intense-testing-to-ensure-it-is-100-secure-and-operational-Read-all",
+      "pubDate": "2021-07-09T14:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "New Bitcoin entities near all-time high as analyst heralds 'positive whale activity'",
+      "link": "https://cryptopanic.com/news/near/12292948/New-Bitcoin-entities-near-all-time-high-as-analyst-heralds-positive-whale-activity",
+      "pubDate": "2021-07-09T14:02:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Appetite for BTC is real at current levels, data shows, with bears needing to search hard for an on-chain metric that is not positive.",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @RichardHeartWin: Livestream in 6 minutes!",
+      "link": "https://cryptopanic.com/news/12296084/RT-RichardHeartWin-Livestream-in-6-minutes",
+      "pubDate": "2021-07-09T13:54:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "Dogecoin Briefly Spikes 13% on Elon Musk Plan to Make it Superior to Bitcoin",
+      "link": "https://cryptopanic.com/news/dogecoin/12292852/Dogecoin-Briefly-Spikes-13-on-Elon-Musk-Plan-to-Make-it-Superior-to-Bitcoin",
+      "pubDate": "2021-07-09T13:35:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Elon Musk has criticized Bitcoin and Ethereum's scaling efforts while promoting Dogecoin's plans.",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bullish will use @EOSIO to securely execute and immutably record all financial movements on the platform. Cryptogra…",
+      "link": "https://cryptopanic.com/news/12292679/Bullish-will-use-EOSIO-to-securely-execute-and-immutably-record-all-financial-movements-on-the-platform-Cryptogra",
+      "pubDate": "2021-07-09T12:39:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "-",
+      "currencies": [
+        "EOS"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Elon Musk Forgets DOGE Is Merge-Mined with Litecoin When Slamming BTC and ETH: VanEck’s Digital Asset Director",
+      "link": "https://cryptopanic.com/news/dogecoin/12292615/Elon-Musk-Forgets-DOGE-Is-Merge-Mined-with-Litecoin-When-Slamming-BTC-and-ETH-VanEcks-Digital-Asset-Director",
+      "pubDate": "2021-07-09T12:07:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Elon Musk praises DOGE transfer speed over BTC and ETH, forgetting Dogecoin is merge-mined with Litecoin, whose transactions are also slow, VanEck's Gabor Gurbacs says",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Legal Expert Weighs Likelihood That Cardano, Dogecoin, Polkadot and Uniswap Will Face Regulatory Action From the SEC",
+      "link": "https://cryptopanic.com/news/cardano/12292697/Legal-Expert-Weighs-Likelihood-That-Cardano-Dogecoin-Polkadot-and-Uniswap-Will-Face-Regulatory-Action-From-the-SEC",
+      "pubDate": "2021-07-09T11:45:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Legal expert and XRP advocate Jeremy Hogan is sharing his outlook on the likelihood that several large-cap digital assets will face future securities lawsuits from the U.S. Securities and Exchange Commission (SEC). Hogan analyzes how likely the SEC is to go after Cardano (ADA), Dogecoin (DOGE), Polkadot (DOT), and Uniswap (UNI) based on a “danger […]",
+      "currencies": [
+        "ADA",
+        "XRP",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Another step into burgeoning #DeFi field! We are happy to confirm that the #EURS pool on @CommunityTon is live!…",
+      "link": "https://cryptopanic.com/news/12297620/Another-step-into-burgeoning-DeFi-field-We-are-happy-to-confirm-that-the-EURS-pool-on-CommunityTon-is-live",
+      "pubDate": "2021-07-09T11:11:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: See at #3 in the top 5 #Ethereum #DeFi.",
+      "link": "https://cryptopanic.com/news/12296085/RT-RichardHeartWin-See-at-3-in-the-top-5-Ethereum-DeFi",
+      "pubDate": "2021-07-09T11:00:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "Unique Addresses on the Binance Smart Chain Hit a New ATH of 83.152M",
+      "link": "https://cryptopanic.com/news/12292380/Unique-Addresses-on-the-Binance-Smart-Chain-Hit-a-New-ATH-of-83152M",
+      "pubDate": "2021-07-09T10:12:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Unique addresses on the Binance Smart Chain have hit a new all-time high of 83.152 million However, the daily transaction count on the Binance Smart chain has dropped by 66.38% since its peak value in mid-May Total value locked on the Binance Smart Chain now stands at $25.933 Billion and has dropped by 51.4% since its peak value of $57.374 Billion in mid-May The drop in daily transactions and...",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogecoin gains 8% after Elon Musk says DOGE payments compete with Bitcoin, Ethereum",
+      "link": "https://cryptopanic.com/news/dogecoin/12292349/Dogecoin-gains-8-after-Elon-Musk-says-DOGE-payments-compete-with-Bitcoin-Ethereum",
+      "pubDate": "2021-07-09T10:01:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The billionaire’s latest public praise of Dogecoin yields few returns but a lot of mockery.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 4
+      }
+    },
+    {
+      "title": "XRP To Hit New All-Time High, Predicts Analyst Benjamin Cowen – But There’s a Catch",
+      "link": "https://cryptopanic.com/news/ripple/12292228/XRP-To-Hit-New-All-Time-High-Predicts-Analyst-Benjamin-Cowen-But-Theres-a-Catch",
+      "pubDate": "2021-07-09T09:00:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Popular crypto analyst Benjamin Cowen says XRP will hit new all-time highs, but he thinks traders will have to wait a while. Cowen tells his 478,000 YouTube subscribers that the market needs to consolidate, and no crazy price action is likely to happen with the sixth-largest crypto asset anytime soon. He does, however, believe market […]",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Elon Musk Explains Why Dogecoin Will Be Superior to Bitcoin and Ethereum After Its Big Upgrade",
+      "link": "https://cryptopanic.com/news/dogecoin/12292130/Elon-Musk-Explains-Why-Dogecoin-Will-Be-Superior-to-Bitcoin-and-Ethereum-After-Its-Big-Upgrade",
+      "pubDate": "2021-07-09T08:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Elon Musk claims that Bitcoin and Ethereum are slow and expensive to make a case for Dogecoin's big upgrade",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 28
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Dogecoin Forms Reversal Pattern, Peter Brandt Says Further Decline May Occur",
+      "link": "https://cryptopanic.com/news/dogecoin/12292103/Dogecoin-Forms-Reversal-Pattern-Peter-Brandt-Says-Further-Decline-May-Occur",
+      "pubDate": "2021-07-09T08:03:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Trader Peter Brandt has posted a Dogecoin chart with a Head & Shoulders pattern forming on it – that usually signifies a reverse in the direction of the asset’s movement",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 8
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Elon Musk: BTC & ETH Are Slow, There is Merit for Dogecoin",
+      "link": "https://cryptopanic.com/news/dogecoin/12291176/Elon-Musk-BTC-ETH-Are-Slow-There-is-Merit-for-Dogecoin",
+      "pubDate": "2021-07-09T07:53:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "An upcoming update for Dogecoin has pushed Elon Musk to assert that there's merit to using DOGE as BTC and ETH are slow.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 28
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Update: Tesla Billionaire Elon Musk Outlines ‘Visa Speed’ Dogecoin Upgrade Plan After Serious Bitcoin And Ethereum Warning",
+      "link": "https://cryptopanic.com/news/dogecoin/12290971/Update-Tesla-Billionaire-Elon-Musk-Outlines-Visa-Speed-Dogecoin-Upgrade-Plan-After-Serious-Bitcoin-And-Ethereum-Warning",
+      "pubDate": "2021-07-09T07:47:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Tesla billionaire Elon Musk, who's repeatedly backed dogecoin over bitcoin, ethereum and other cryptocurrencies in recent months, has again gone to bat for the meme-based cryptocurrency...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 30
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @CoinCheckup: [PR] Global charity blockchain solution @Fruitscoin_frts has completed the integration of $FRTS tokens on @ProBit_Exchange…",
+      "link": "https://cryptopanic.com/news/12295921/RT-CoinCheckup-PR-Global-charity-blockchain-solution-Fruitscoin_frts-has-completed-the-integration-of-FRTS-tokens-on-ProBit_Exchange",
+      "pubDate": "2021-07-09T07:35:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "FRTS"
+      ]
+    },
+    {
+      "title": "SEC says Ripple not entitled to testimony on XRP from ex-director",
+      "link": "https://cryptopanic.com/news/ripple/12289205/SEC-says-Ripple-not-entitled-to-testimony-on-XRP-from-ex-director",
+      "pubDate": "2021-07-09T06:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Is William Hinman a former ‘high-ranking’ SEC official exempt from disclosing his prior communications on XRP, or must he provide testimony to Ripple?",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "How's the $MED Army doing!? We've got some big things inbound for the future! Stick around and stay tuned! …",
+      "link": "https://cryptopanic.com/news/12291392/Hows-the-MED-Army-doing-Weve-got-some-big-things-inbound-for-the-future-Stick-around-and-stay-tuned",
+      "pubDate": "2021-07-09T05:34:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MED"
+      ]
+    },
+    {
+      "title": "RT @DanielMoncada80: @David91512363 @camerondallas @MiniEverDoge I want all the holders to benefit man, including myself. I have films to…",
+      "link": "https://cryptopanic.com/news/12291404/RT-DanielMoncada80-David91512363-camerondallas-MiniEverDoge-I-want-all-the-holders-to-benefit-man-including-myself-I-have-films-to",
+      "pubDate": "2021-07-09T04:56:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "MED"
+      ]
+    },
+    {
+      "title": "@Binance will be supporting the BandChain Phase 2 Mainnet launch - thank you to their team for supporting $BAND f…",
+      "link": "https://cryptopanic.com/news/12287364/Binance-will-be-supporting-the-BandChain-Phase-2-Mainnet-launch-thank-you-to-their-team-for-supporting-BAND-f",
+      "pubDate": "2021-07-09T04:41:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "Hey! @elonmusk Don't let @DanielMoncada80 ask twice! We all saw what happened on Breaking Bad!  We are the best an…",
+      "link": "https://cryptopanic.com/news/12291411/Hey-elonmusk-Dont-let-DanielMoncada80-ask-twice-We-all-saw-what-happened-on-Breaking-Bad-We-are-the-best-an",
+      "pubDate": "2021-07-09T04:27:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "MED"
+      ]
+    },
+    {
+      "title": "RT @DanielMoncada80: @camerondallas @MiniEverDoge @elonmusk where are you at? 🤠We hear you like Meme coins...This one has utility/usabili…",
+      "link": "https://cryptopanic.com/news/12291413/RT-DanielMoncada80-camerondallas-MiniEverDoge-elonmusk-where-are-you-at-We-hear-you-like-Meme-coinsThis-one-has-utilityusabili",
+      "pubDate": "2021-07-09T04:24:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "MED"
+      ]
+    },
+    {
+      "title": "The new coin you don't want to miss is here! Wise words spoken by @camerondallas Join the $MED army and let's go to…",
+      "link": "https://cryptopanic.com/news/12291416/The-new-coin-you-dont-want-to-miss-is-here-Wise-words-spoken-by-camerondallas-Join-the-MED-army-and-lets-go-to",
+      "pubDate": "2021-07-09T04:19:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MED"
+      ]
+    },
+    {
+      "title": "RT @DanielMoncada80: @camerondallas @MiniEverDoge You definitely know what's up man 🪓a Meme coin with Utility ️ $MED",
+      "link": "https://cryptopanic.com/news/12291422/RT-DanielMoncada80-camerondallas-MiniEverDoge-You-definitely-know-whats-up-man-a-Meme-coin-with-Utility-MED",
+      "pubDate": "2021-07-09T04:13:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "MED"
+      ]
+    },
+    {
+      "title": "RT @camerondallas:  new coin going up up @MiniEverDoge",
+      "link": "https://cryptopanic.com/news/12291426/RT-camerondallas-new-coin-going-up-up-MiniEverDoge",
+      "pubDate": "2021-07-09T04:04:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "MED"
+      ]
+    },
+    {
+      "title": "We won't spoil the surprise! Join the community Telegram to find out and grab your bags before we take off again! L…",
+      "link": "https://cryptopanic.com/news/12291434/We-wont-spoil-the-surprise-Join-the-community-Telegram-to-find-out-and-grab-your-bags-before-we-take-off-again-L",
+      "pubDate": "2021-07-09T03:31:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MED"
+      ]
+    },
+    {
+      "title": "#Binance Staking Launches $GRT @graphprotocol Staking with Up to 17.38% APY ️",
+      "link": "https://cryptopanic.com/news/binance-peg-busd/12287437/Binance-Staking-Launches-GRT-graphprotocol-Staking-with-Up-to-1738-APY",
+      "pubDate": "2021-07-09T03:26:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "-",
+      "currencies": [
+        "BNB",
+        "ETHDOWN",
+        "ETHUP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Glitzkoin GTN 24 hour trade just crossed $680k. That number is moving around, but reaching heights never reached be…",
+      "link": "https://cryptopanic.com/news/12288635/Glitzkoin-GTN-24-hour-trade-just-crossed-680k-That-number-is-moving-around-but-reaching-heights-never-reached-be",
+      "pubDate": "2021-07-09T02:33:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "It doesn't sound good...",
+      "link": "https://cryptopanic.com/news/12288856/It-doesnt-sound-good",
+      "pubDate": "2021-07-09T02:31:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "Dogecoin Is a ‘Scam’ That Will End ‘Very Badly’ Says Legendary Financial Advisor",
+      "link": "https://cryptopanic.com/news/dogecoin/12286351/Dogecoin-Is-a-Scam-That-Will-End-Very-Badly-Says-Legendary-Financial-Advisor",
+      "pubDate": "2021-07-09T00:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Legendary financial advisor and best-selling author Ric Edelman has revealed he believes meme-inspired cryptocurrency Dogecoin ($DOGE) is a “scam” that will end “very badly,” even though he is bullish on the cryptocurrency space in general. During an interview with Yahoo Finance, Edelman revealed he believes cryptocurrencies are becoming mainstream “very, very quickly” and although they’re...",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 3
+      }
+    }
+  ]
+}

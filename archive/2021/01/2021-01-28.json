@@ -1,0 +1,482 @@
+{
+  "date": "2021-01-28",
+  "fetchedAt": "2026-02-05T07:27:06.781Z",
+  "articleCount": 32,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Stellar Lumens Primed to Recover Lost Ground",
+      "link": "https://cryptopanic.com/news/11303045/Stellar-Lumens-Primed-to-Recover-Lost-Ground",
+      "pubDate": "2021-01-28T22:57:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Stellar’s market outlook seems to be improving in the aftermath of a three-week-long consolidation period. Stellar Is Breaking Out Stellar Lumens (XLM), the eleventh-largest cryptocurrency by market cap, appears to be breaking out of a descending triangle that has been developing on its 4-hour chart since Jan. 7. Since then, the price of XLM has been making a series of lower...",
+      "currencies": [
+        "BTC",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DOGE tweet volume up 1800%, becomes first altcoin to surpass Bitcoin ever: The Tie",
+      "link": "https://cryptopanic.com/news/dogecoin/11303042/DOGE-tweet-volume-up-1800-becomes-first-altcoin-to-surpass-Bitcoin-ever-The-Tie",
+      "pubDate": "2021-01-28T22:51:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The meme-based cryptocurrency has exploded on Twitter over the past 24 hours, mirroring the rapid appreciation in DOGE price.",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @CointelegraphMT: If #Bitcoin sustains above $32,000, $RSR, $ZRX, and $KNC could resume their uptrend as each project has strong fundame…",
+      "link": "https://cryptopanic.com/news/11302275/RT-CointelegraphMT-If-Bitcoin-sustains-above-32000-RSR-ZRX-and-KNC-could-resume-their-uptrend-as-each-project-has-strong-fundame",
+      "pubDate": "2021-01-28T21:56:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "KNC",
+        "SURE"
+      ]
+    },
+    {
+      "title": "Crypto asset management app Enzyme integrates Chainlink",
+      "link": "https://cryptopanic.com/news/chainlink/11301892/Crypto-asset-management-app-Enzyme-integrates-Chainlink",
+      "pubDate": "2021-01-28T21:24:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "CryptoNinjas » Crypto asset management app Enzyme integrates Chainlink Enzyme (formerly Melon), an Ethereum-based protocol for decentralized on-chain asset management, today announced live integration with oracle solution Chainlink, leveraging its Price Feed oracles as a means to expand the asset selection available to users on Enzyme. The integration significantly opens up the possibilities for asset management strategies on Enzyme, making it possible to include […] CryptoNinjas » Crypto asset ",
+      "currencies": [
+        "LINK"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @safenetworktech: It’s been a busy week! We were on the fence today, but decided to hold off on the next testnet for a few more days. Th…",
+      "link": "https://cryptopanic.com/news/11300870/RT-safenetworktech-Its-been-a-busy-week-We-were-on-the-fence-today-but-decided-to-hold-off-on-the-next-testnet-for-a-few-more-days-Th",
+      "pubDate": "2021-01-28T20:12:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MAID"
+      ]
+    },
+    {
+      "title": "New Grayscale trust filings spin rumour mill into overdrive for Cardano, Polkadot, Cosmos and more",
+      "link": "https://cryptopanic.com/news/polkadot/11300558/New-Grayscale-trust-filings-spin-rumour-mill-into-overdrive-for-Cardano-Polkadot-Cosmos-and-more",
+      "pubDate": "2021-01-28T19:48:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Crypto asset manager Grayscale Investments filed new trusts for Aave, Cardano, Cosmos, Monero, and Polkadot in the Delaware corporate registry.",
+      "currencies": [
+        "DOT",
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 20,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Very exciting to see StarkWare making progress on building composable ZK-Rollups! We need more people battle-testin…",
+      "link": "https://cryptopanic.com/news/11300032/Very-exciting-to-see-StarkWare-making-progress-on-building-composable-ZK-Rollups-We-need-more-people-battle-testin",
+      "pubDate": "2021-01-28T19:14:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "LOOM"
+      ]
+    },
+    {
+      "title": "Today we are happy to announce our partnership with Dcent! Specializing in NFT authenticated merchandise and fine goods.",
+      "link": "https://cryptopanic.com/news/11312719/Today-we-are-happy-to-announce-our-partnership-with-Dcent-Specializing-in-NFT-authenticated-merchandise-and-fine-goods",
+      "pubDate": "2021-01-28T18:42:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "The third and final UK survey poll: what percentage of UK #crypto investors are in a relationship?  #GeminiUK",
+      "link": "https://cryptopanic.com/news/11299530/The-third-and-final-UK-survey-poll-what-percentage-of-UK-crypto-investors-are-in-a-relationship-GeminiUK",
+      "pubDate": "2021-01-28T18:40:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    },
+    {
+      "title": "The answer is 62.5%! We always knew #crypto investors were early adopters of technology. We're looking at you…",
+      "link": "https://cryptopanic.com/news/11299046/The-answer-is-625-We-always-knew-crypto-investors-were-early-adopters-of-technology-Were-looking-at-you",
+      "pubDate": "2021-01-28T18:03:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    },
+    {
+      "title": "We should",
+      "link": "https://cryptopanic.com/news/11299036/We-should",
+      "pubDate": "2021-01-28T18:03:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "Crypto asset security platform Curv integrates Algorand blockchain",
+      "link": "https://cryptopanic.com/news/11298241/Crypto-asset-security-platform-Curv-integrates-Algorand-blockchain",
+      "pubDate": "2021-01-28T17:01:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "CryptoNinjas » Crypto asset security platform Curv integrates Algorand blockchain Curv, a blockchain asset security platform, and Algorand, a proof-of-stake blockchain, today announced a partnership that will see Curv integrate Algorand within its asset-agnostic technology infrastructure. Algorand will also be leveraging Curv’s solutions for internal use. The partnership will allow...",
+      "currencies": [
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin Rebounds From Early Losses, Markets Still Distracted by GameStop",
+      "link": "https://cryptopanic.com/news/dogecoin/11298236/Bitcoin-Rebounds-From-Early-Losses-Markets-Still-Distracted-by-GameStop",
+      "pubDate": "2021-01-28T17:00:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "GameStop's stock drama has had a galvanizing effect on stocks, bitcoin and even dogecoin.",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "GameStop Vibes: Dogecoin (DOGE) Collapses 35 Percent in Minutes",
+      "link": "https://cryptopanic.com/news/dogecoin/11297430/GameStop-Vibes-Dogecoin-DOGE-Collapses-35-Percent-in-Minutes",
+      "pubDate": "2021-01-28T16:11:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The meme coin is performing just like meme stocks as volatility kicks into high gear",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @3speakonline: @elonmusk #getonhive Elon",
+      "link": "https://cryptopanic.com/news/11296885/RT-3speakonline-elonmusk-getonhive-Elon",
+      "pubDate": "2021-01-28T15:49:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "Check out the article from @Crypto_Briefing about how STP 2.0 protocol users will be able to access cross-chain syn…",
+      "link": "https://cryptopanic.com/news/11296675/Check-out-the-article-from-Crypto_Briefing-about-how-STP-20-protocol-users-will-be-able-to-access-cross-chain-syn",
+      "pubDate": "2021-01-28T15:35:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STPT"
+      ]
+    },
+    {
+      "title": "The correct answer is 41.6% (or 2 in 5)! The UK #crypto market is more diverse than ever. We're excited to see more…",
+      "link": "https://cryptopanic.com/news/11294890/The-correct-answer-is-416-or-2-in-5-The-UK-crypto-market-is-more-diverse-than-ever-Were-excited-to-see-more",
+      "pubDate": "2021-01-28T13:52:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    },
+    {
+      "title": "Grayscale Expected to Launch 3 DeFi Trusts According to New Filings",
+      "link": "https://cryptopanic.com/news/monero/11294856/Grayscale-Expected-to-Launch-3-DeFi-Trusts-According-to-New-Filings",
+      "pubDate": "2021-01-28T13:42:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "New filing documents indicate that the digital asset firm Grayscale is considering the launch of three trusts for DeFi projects. Grayscale Entering DeFi? Grayscale, the world’s largest digital asset manager, registered trusts on Jan. 27, 2020, for Aave, Cosmos, and Polkadot in Delaware, along with Monero and Cardano. 🚨 Looks like @Grayscale has laid the groundworks for an $AAVE...",
+      "currencies": [
+        "BTC",
+        "XMR"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Grayscale prepares for DeFi future with new cryptocurrency trust filings",
+      "link": "https://cryptopanic.com/news/polkadot/11294452/Grayscale-prepares-for-DeFi-future-with-new-cryptocurrency-trust-filings",
+      "pubDate": "2021-01-28T13:16:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The world's largest cryptocurrency asset management firm could be set to dip its toes into DeFi after filing five new coin trust registrations.",
+      "currencies": [
+        "ADA",
+        "DOT",
+        "ATOM"
+      ],
+      "votes": {
+        "positive": 12,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Grayscale has incorporated six more trusts, including ones for Polkadot and Aave",
+      "link": "https://cryptopanic.com/news/polkadot/11294461/Grayscale-has-incorporated-six-more-trusts-including-ones-for-Polkadot-and-Aave",
+      "pubDate": "2021-01-28T13:15:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Crypto asset manager Grayscale has incorporated six more trusts, including those tied to Polkadot (DOT) and Aave (AAVE) tokens.",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "DOT"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "‘It’s Doge Time’: Dogecoin Surges As Reddit Traders Push To Make It The Crypto GameStop",
+      "link": "https://cryptopanic.com/news/dogecoin/11294328/Its-Doge-Time-Dogecoin-Surges-As-Reddit-Traders-Push-To-Make-It-The-Crypto-GameStop",
+      "pubDate": "2021-01-28T12:39:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "After whipping up a market frenzy in stocks for GameStop and BlockBuster, Redditors are on a new mission: to get joke cryptocurrency Dogecoin to $1 a coin.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Last quarter we launched a UK🇬🇧 survey on #crypto investment. We can't wait to share some insights with you! But fi…",
+      "link": "https://cryptopanic.com/news/11293304/Last-quarter-we-launched-a-UK-survey-on-crypto-investment-We-cant-wait-to-share-some-insights-with-you-But-fi",
+      "pubDate": "2021-01-28T11:16:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    },
+    {
+      "title": "Chainlink (LINK) Eyes Another Record Peak as Bitcoin Gets Choppier",
+      "link": "https://cryptopanic.com/news/chainlink/11293148/Chainlink-LINK-Eyes-Another-Record-Peak-as-Bitcoin-Gets-Choppier",
+      "pubDate": "2021-01-28T11:00:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Chainlink (LINK) was soaring high in the early European trading session Thursday as traders continued to seek hedge in the cryptocurrency market against a choppy Bitcoin. The LINK-to-dollar exchange rate surged to $24.9, up 15.16 percent from its intraday opening value. The latest upside appeared near a confluence of supports around the $19-20 price range, […]",
+      "currencies": [
+        "BTC",
+        "LINK",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "So why is the crypto community so keen to see a quick launch of the Glitzkoin DiaEx diamond trading platform?…",
+      "link": "https://cryptopanic.com/news/11307195/So-why-is-the-crypto-community-so-keen-to-see-a-quick-launch-of-the-Glitzkoin-DiaEx-diamond-trading-platform",
+      "pubDate": "2021-01-28T10:31:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "RT @Lition_Block: 1/ #Lition launches a liquidity mining program to reward $LIT/ $USDT (TRC21) to Liquidity Providers on @LuaSwap on #TomoC…",
+      "link": "https://cryptopanic.com/news/11291879/RT-Lition_Block-1-Lition-launches-a-liquidity-mining-program-to-reward-LIT-USDT-TRC21-to-Liquidity-Providers-on-LuaSwap-on-TomoC",
+      "pubDate": "2021-01-28T09:01:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "Wall Street Bets ‘Chairman’ Tweet Sends Dogecoin (DOGE) Soaring 200% in Hours (Updated)",
+      "link": "https://cryptopanic.com/news/dogecoin/11291630/Wall-Street-Bets-Chairman-Tweet-Sends-Dogecoin-DOGE-Soaring-200-in-Hours-Updated",
+      "pubDate": "2021-01-28T08:30:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The 'Chairman' of the Wall Street Bets group asked about Dogecoin on Twitter. This alone saw the price of DOGE soar 85% immediately after, and over 200% later.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @BinanceChain: Project @pNetworkDeFi will release a BSC-Ethereum bridge, enabling major #cryptocurrencies and non-fungible tokens to be…",
+      "link": "https://cryptopanic.com/news/11291383/RT-BinanceChain-Project-pNetworkDeFi-will-release-a-BSC-Ethereum-bridge-enabling-major-cryptocurrencies-and-non-fungible-tokens-to-be",
+      "pubDate": "2021-01-28T08:12:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "PLTC"
+      ]
+    },
+    {
+      "title": "Six Crypto Assets Are Booming Despite Bitcoin Breakdown",
+      "link": "https://cryptopanic.com/news/11291364/Six-Crypto-Assets-Are-Booming-Despite-Bitcoin-Breakdown",
+      "pubDate": "2021-01-28T08:04:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A number of decentralized finance (DeFi) assets are surging despite Bitcoin’s current stagnation. This week, as Bitcoin plunges roughly 10% and retests the $30,000 support level, the native token of the pool-based lending protocol Alpha Finance (ALPHA) has rallied 104% according to CoinGecko. Meanwhile, the decentralized lending protocol Aave is up more than 45%. The […]",
+      "currencies": [
+        "BTC",
+        "UNI",
+        "AAVE",
+        "ALPHA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @btsfav: #WallStreetBets on #HIVE",
+      "link": "https://cryptopanic.com/news/11290217/RT-btsfav-WallStreetBets-on-HIVE",
+      "pubDate": "2021-01-28T06:23:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "Dogecoin pumps by 90% amid WallStreetBets drama",
+      "link": "https://cryptopanic.com/news/dogecoin/11290064/Dogecoin-pumps-by-90-amid-WallStreetBets-drama",
+      "pubDate": "2021-01-28T06:07:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The Reddit community WallStreetBets’ drama with main street hedge funds has now permeated the cryptocurrency sector with Dogecoin’s price pumping by 90% in a matter of hours. This surge has contributed to DOGE nearing its old ATH on the charts. Dogecoin has been in mainstream media due to a host of reasons, some of which […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "We are excited to announce STP 2.0, a new iteration of the Standard Tokenization Protocol that facilitates the issu…",
+      "link": "https://cryptopanic.com/news/11288212/We-are-excited-to-announce-STP-20-a-new-iteration-of-the-Standard-Tokenization-Protocol-that-facilitates-the-issu",
+      "pubDate": "2021-01-28T02:01:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STPT"
+      ]
+    },
+    {
+      "title": "We're excited to announce that BTCSGD and ETHSGD are now available for trading on ActiveTrader™ and API!…",
+      "link": "https://cryptopanic.com/news/11287543/Were-excited-to-announce-that-BTCSGD-and-ETHSGD-are-now-available-for-trading-on-ActiveTraderTM-and-API",
+      "pubDate": "2021-01-28T00:43:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "GUSD"
+      ]
+    }
+  ]
+}

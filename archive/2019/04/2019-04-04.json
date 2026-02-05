@@ -1,0 +1,26 @@
+{
+  "date": "2019-04-04",
+  "fetchedAt": "2026-02-05T07:27:07.892Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "IOTA Price Prediction For April: Can It Rise By 45% To Hit The Target of $0.50?",
+      "link": "https://cryptopanic.com/news/5039388/IOTA-Price-Prediction-For-April-Can-It-Rise-By-45-To-Hit-The-Target-of-050",
+      "pubDate": "2019-04-04T11:42:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

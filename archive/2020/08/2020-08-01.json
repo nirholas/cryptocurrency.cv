@@ -1,0 +1,26 @@
+{
+  "date": "2020-08-01",
+  "fetchedAt": "2026-02-05T07:27:07.884Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ethereum Classic experiences 3,693 block-long reorg",
+      "link": "https://cryptopanic.com/news/9527999/Ethereum-Classic-experiences-3693-block-long-reorg",
+      "pubDate": "2020-08-01T15:24:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    }
+  ]
+}

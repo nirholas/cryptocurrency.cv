@@ -1,0 +1,836 @@
+{
+  "date": "2021-06-01",
+  "fetchedAt": "2026-02-05T07:27:06.771Z",
+  "articleCount": 53,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Exchange LocalBitcoins Adds Dogecoin, Cardano and More",
+      "link": "https://cryptopanic.com/news/dogecoin/12035679/Bitcoin-Exchange-LocalBitcoins-Adds-Dogecoin-Cardano-and-More",
+      "pubDate": "2021-06-01T22:16:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "LocalBitcoins is now moving beyond Bitcoin, and Dogecoin is the most active trading pair among the select few altcoins.",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tron Founder Justin Sun Says Crypto Bull Market Gearing Up for Next Rally – Here’s When",
+      "link": "https://cryptopanic.com/news/tron/12035682/Tron-Founder-Justin-Sun-Says-Crypto-Bull-Market-Gearing-Up-for-Next-Rally-Heres-When",
+      "pubDate": "2021-06-01T22:05:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Justin Sun, founder of Tron (TRX), believes that the crypto bull market is still intact and that a new rally is just around the corner. In an interview with Bloomberg, Sun predicts that there will be a “price adjustment” in June before a rally is experienced in the two months thereafter. “I believe June is […]",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Coinbase Pro Dogecoin Deposits Now Open — Trading Begins on June 3",
+      "link": "https://cryptopanic.com/news/dogecoin/12035663/Coinbase-Pro-Dogecoin-Deposits-Now-Open-Trading-Begins-on-June-3",
+      "pubDate": "2021-06-01T22:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The notorious dogecoin will be open for trading on Thursday, June 3, on the popular trading platform Coinbase Pro. In mid-May, Coinbase CEO Brian Armstrong revealed the meme-inspired crypto asset would be listed in six to eight weeks. It only took 18 days to get dogecoin added to Coinbase Pro but the coin is not […]",
+      "currencies": [
+        "DOGE",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Coinbase Pro to add support for dogecoin later this week",
+      "link": "https://cryptopanic.com/news/dogecoin/12035631/Coinbase-Pro-to-add-support-for-dogecoin-later-this-week",
+      "pubDate": "2021-06-01T21:36:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Dogecoin, the popular and volatile meme-themed cryptocurrency, is headed to Coinbase's pro-oriented crypto exchange.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 6
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polkadot ETP hits Swedish stock market",
+      "link": "https://cryptopanic.com/news/polkadot/12035616/Polkadot-ETP-hits-Swedish-stock-market",
+      "pubDate": "2021-06-01T21:24:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The mainstream market now has a new way of buying and selling the crypto asset Polkadot — via an exchange-traded product.",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Coinbase Pro Will Begin Trading Dogecoin On Thursday",
+      "link": "https://cryptopanic.com/news/dogecoin/12035614/Coinbase-Pro-Will-Begin-Trading-Dogecoin-On-Thursday",
+      "pubDate": "2021-06-01T21:10:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "-",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 34,
+        "negative": 9
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Much hype: Memecoin DOGE set for listing on Coinbase Pro",
+      "link": "https://cryptopanic.com/news/dogecoin/12035564/Much-hype-Memecoin-DOGE-set-for-listing-on-Coinbase-Pro",
+      "pubDate": "2021-06-01T20:33:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "DOGE trading will be rolled out in three phases, the exchange said. Traders will be able to access the coin via BTC, ETH, USDT, the U.S. dollar and the euro.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogecoin Music Festival Gets Backing From Elon Musk",
+      "link": "https://cryptopanic.com/news/dogecoin/12035553/Dogecoin-Music-Festival-Gets-Backing-From-Elon-Musk",
+      "pubDate": "2021-06-01T20:28:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "-",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 9
+      }
+    },
+    {
+      "title": "Indian Crypto Exchange Launches Country’s First NFT Marketplace",
+      "link": "https://cryptopanic.com/news/12035548/Indian-Crypto-Exchange-Launches-Countrys-First-NFT-Marketplace",
+      "pubDate": "2021-06-01T20:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "WRX"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BNB Bounces And Reclaims Long-Term Support",
+      "link": "https://cryptopanic.com/news/12035513/BNB-Bounces-And-Reclaims-Long-Term-Support",
+      "pubDate": "2021-06-01T19:40:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Binance Coin (BNB) has been moving upwards since May 23 and has reclaimed the $330 support area.",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Coinbase Finally Adds Dogecoin, Price Spikes",
+      "link": "https://cryptopanic.com/news/dogecoin/12035502/Coinbase-Finally-Adds-Dogecoin-Price-Spikes",
+      "pubDate": "2021-06-01T19:34:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Coinbase Pro users can now transfer DOGE into their accounts.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 23,
+        "negative": 35
+      }
+    },
+    {
+      "title": "Dogecoin Listed on Coinbase Pro",
+      "link": "https://cryptopanic.com/news/dogecoin/12035497/Dogecoin-Listed-on-Coinbase-Pro",
+      "pubDate": "2021-06-01T19:28:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Coinbase Pro has listed Dogecoin",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 45,
+        "negative": 24
+      }
+    },
+    {
+      "title": "$ADA and $MATIC: Crypto Analyst Explains Why He Is Expecting Huge Gains in June",
+      "link": "https://cryptopanic.com/news/matic-network/12035501/ADA-and-MATIC-Crypto-Analyst-Explains-Why-He-Is-Expecting-Huge-Gains-in-June",
+      "pubDate": "2021-06-01T19:24:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Earlier today (June 1), popular New Zealand-based crypto analyst Lark Davis (@TheCryptoLark on Twitter), talked about five altcoins that he expects to do very well this month and the reasons for his bullishness. The five crypto projects that Davis discussed in a video released on his YouTube channel were Cardano ($ADA), Polygon ($MATIC), Theta Network ($THETA), […]",
+      "currencies": [
+        "ADA",
+        "MATIC",
+        "THETA"
+      ],
+      "votes": {
+        "positive": 79,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$THETA is up more than 12% in the last 24 hours! Launched in March 2019, @Theta_Network is a blockchain-powered…",
+      "link": "https://cryptopanic.com/news/theta-token/12038598/THETA-is-up-more-than-12-in-the-last-24-hours-Launched-in-March-2019-Theta_Network-is-a-blockchain-powered",
+      "pubDate": "2021-06-01T19:23:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NOW"
+      ]
+    },
+    {
+      "title": "Bitcoin ABC 0.23.5 is now available! This release brings networking improvements and various minor fixes. Download…",
+      "link": "https://cryptopanic.com/news/ecash/12036542/Bitcoin-ABC-0235-is-now-available-This-release-brings-networking-improvements-and-various-minor-fixes-Download",
+      "pubDate": "2021-06-01T19:08:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC",
+        "BCHABC"
+      ]
+    },
+    {
+      "title": "RT @CoasterCrypto: Today the CryptoCoaster thinks that SURE - INSURE DEFI is worth a look! Disclaimer: Education and Information only. This…",
+      "link": "https://cryptopanic.com/news/12040372/RT-CoasterCrypto-Today-the-CryptoCoaster-thinks-that-SURE-INSURE-DEFI-is-worth-a-look-Disclaimer-Education-and-Information-only-This",
+      "pubDate": "2021-06-01T19:04:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "SURE"
+      ]
+    },
+    {
+      "title": "F*#K the SEC… actually f*^k Clayton; I stand with XRP, says…",
+      "link": "https://cryptopanic.com/news/ripple/12035474/FK-the-SEC-actually-fk-Clayton-I-stand-with-XRP-says",
+      "pubDate": "2021-06-01T19:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The ongoing litigation between the US watchdogs SEC and XRP has left many in the crypto community agitated. A majority of them pointed fingers at the previous SEC chairman, Jay Clayton, and his team for the lack of transparency in terms of regulations. Michael Arrington, founder of TechCrunch appeared in a recent ‘Thinking Crypto’ interview […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Building Production eCash Apps",
+      "link": "https://cryptopanic.com/news/ecash/12211602/Building-Production-eCash-Apps",
+      "pubDate": "2021-06-01T18:46:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Revolut adds Chainlink, Polygon, Algorand, and 5 more tokens to trade via its app",
+      "link": "https://cryptopanic.com/news/chainlink/12035359/Revolut-adds-Chainlink-Polygon-Algorand-and-5-more-tokens-to-trade-via-its-app",
+      "pubDate": "2021-06-01T17:24:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "UK-based challenger bank Revolut has onboarded eight more cryptocurrencies as the platform moves closer to becoming a super finance app. ... Continue reading",
+      "currencies": [
+        "MATIC",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 29,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tesla Competitor to Launch First Electric Car That Mines Bitcoin and Dogecoin",
+      "link": "https://cryptopanic.com/news/dogecoin/12035354/Tesla-Competitor-to-Launch-First-Electric-Car-That-Mines-Bitcoin-and-Dogecoin",
+      "pubDate": "2021-06-01T17:13:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Daymak's feature-rich three-wheeler will be capable of mining cryptocurrencies",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 92,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @Blocktane: We're happy to be on this journey with our partners at @stasisnet. Check out our ongoing competition in our pinned posts, fo…",
+      "link": "https://cryptopanic.com/news/12039365/RT-Blocktane-Were-happy-to-be-on-this-journey-with-our-partners-at-stasisnet-Check-out-our-ongoing-competition-in-our-pinned-posts-fo",
+      "pubDate": "2021-06-01T16:46:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "RT @Blocktane: What’s better than stablecoins? Free stablecoins! Create, verify and top up your account with 10 EURS or more for your chanc…",
+      "link": "https://cryptopanic.com/news/12039366/RT-Blocktane-Whats-better-than-stablecoins-Free-stablecoins-Create-verify-and-top-up-your-account-with-10-EURS-or-more-for-your-chanc",
+      "pubDate": "2021-06-01T16:46:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "Who doesn´t like FREE #crypto! What will be the best performing house(winner) by the end of $QUICK vs. $THETA wa…",
+      "link": "https://cryptopanic.com/news/theta-token/12037097/Who-doesn-t-like-FREE-crypto-What-will-be-the-best-performing-housewinner-by-the-end-of-QUICK-vs-THETA-wa",
+      "pubDate": "2021-06-01T16:34:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "DOTX"
+      ]
+    },
+    {
+      "title": "The Bucks, who swept the Miami Heat behind Giannis Antetokounmpo's first career playoff triple-double, have dominat…",
+      "link": "https://cryptopanic.com/news/12036316/The-Bucks-who-swept-the-Miami-Heat-behind-Giannis-Antetokounmpos-first-career-playoff-triple-double-have-dominat",
+      "pubDate": "2021-06-01T15:56:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REP"
+      ]
+    },
+    {
+      "title": "How to Move tokens from Ethereum ERC20 to Polygon Matic Network and BSC | Zeroswap",
+      "link": "https://cryptopanic.com/news/matic-network/12035226/How-to-Move-tokens-from-Ethereum-ERC20-to-Polygon-Matic-Network-and-BSC-Zeroswap",
+      "pubDate": "2021-06-01T15:37:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "ZeroSwap is a DEX aggregator protocol that supports multi-chain, gasless transactions (no platform fee but users need to pay the network fee) and zero trading fee facilities to the users. Recently, ZeroSwap launched the ETH to BSC Bridge. Using the ETH-BSC Bridge, users can convert their ERC20 standard ZEE token into a BEP20 standard to make it compatible with Binance Smart Chain and vice-versa. Zeroswap also works with DFYN AMM dex on Polygon previously Matic Network. #polygon #zeroswap #MATIC ",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "So lookin' forward to this fight!",
+      "link": "https://cryptopanic.com/news/12036317/So-lookin-forward-to-this-fight",
+      "pubDate": "2021-06-01T15:29:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "REP"
+      ]
+    },
+    {
+      "title": "Whale Watching: Bitcoin Long Positions Near All-Time High",
+      "link": "https://cryptopanic.com/news/near/12035183/Whale-Watching-Bitcoin-Long-Positions-Near-All-Time-High",
+      "pubDate": "2021-06-01T15:24:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The transparency blockchain provides lets fundamental analysts see when whales are loading up on Bitcoin, but it can’t tell when technicals take a turn. However, whale behavior might still be the key to understanding price action. Right now, whales on the long-standing crypto exchange Bitfinex have amassed one of the largest collective long positions ever. […]",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Algorand releases version 1.0 of platform’s dApp builder, including upgrades to smart contracts",
+      "link": "https://cryptopanic.com/news/12035114/Algorand-releases-version-10-of-platforms-dApp-builder-including-upgrades-to-smart-contracts",
+      "pubDate": "2021-06-01T14:33:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Environment-centered cryptocurrency platform Algorand (ALGO) has released version 1.0 of the Algo Builder platform that facilitates the building of dApps... Continue reading The post Algorand releases version 1.0 of platform’s dApp builder, including upgrades to smart contracts appeared first on Finbold.",
+      "currencies": [
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 27,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Uniswap Joins Forces with Professional Dota 2 Team to Reach New Audiences",
+      "link": "https://cryptopanic.com/news/uniswap/12035066/Uniswap-Joins-Forces-with-Professional-Dota-2-Team-to-Reach-New-Audiences",
+      "pubDate": "2021-06-01T14:06:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Team Secret will be focused on developing esports activations for Uniswap",
+      "currencies": [
+        "UNI"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Good news! @zaifdotjp are now accepting $XYM deposits and withdrawals.",
+      "link": "https://cryptopanic.com/news/12038567/Good-news-zaifdotjp-are-now-accepting-XYM-deposits-and-withdrawals",
+      "pubDate": "2021-06-01T14:02:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XEM",
+        "XYM"
+      ]
+    },
+    {
+      "title": "We continue to explore new horizons. To celebrate the latest #EURS integration, @stasisnet and @Blocktane are launc…",
+      "link": "https://cryptopanic.com/news/12039367/We-continue-to-explore-new-horizons-To-celebrate-the-latest-EURS-integration-stasisnet-and-Blocktane-are-launc",
+      "pubDate": "2021-06-01T13:50:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "CNBC Changes Ripple to XRP After CEO Complains",
+      "link": "https://cryptopanic.com/news/ripple/12035002/CNBC-Changes-Ripple-to-XRP-After-CEO-Complains",
+      "pubDate": "2021-06-01T13:38:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "CNBC now shows XRP instead of Ripple after getting called out by CEO Brad Garlinghouse on Twitter",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 19,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @JetonNetwork: There is more to solve then just #NFTs",
+      "link": "https://cryptopanic.com/news/12038497/RT-JetonNetwork-There-is-more-to-solve-then-just-NFTs",
+      "pubDate": "2021-06-01T13:31:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "MOG"
+      ]
+    },
+    {
+      "title": "RT @j1mmy_0X: Soon... 06-03-2021 noon EST Get ready and join the pool! $ALCH #rewards #staking #nft #dao",
+      "link": "https://cryptopanic.com/news/12036139/RT-j1mmy_0X-Soon-06-03-2021-noon-EST-Get-ready-and-join-the-pool-ALCH-rewards-staking-nft-dao?mtm_campaign=API-OFA",
+      "pubDate": "2021-06-01T13:07:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "ALCH"
+      ]
+    },
+    {
+      "title": "Ethereum, Cardano and XRP: Analysts bet that these alts could pull this off",
+      "link": "https://cryptopanic.com/news/ripple/12034930/Ethereum-Cardano-and-XRP-Analysts-bet-that-these-alts-could-pull-this-off",
+      "pubDate": "2021-06-01T13:00:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Amid the broader market correction in the crypto-space, the three evergreen altcoins, from the top 10, managed to stand out this week. As the global market’s capitalization hardly recorded any difference when compared to the past day, ETH, ADA and XRP were comfortably trading in green at press time. Several analysts have previously pointed out […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Theta Network On Track To Launch Mainnet 3, TFUEL Staking on June 30th",
+      "link": "https://cryptopanic.com/news/theta-token/12034910/Theta-Network-On-Track-To-Launch-Mainnet-3-TFUEL-Staking-on-June-30th",
+      "pubDate": "2021-06-01T12:55:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dogecoin Creator Says Crypto Price is 99.9% Driven By Greater Fools",
+      "link": "https://cryptopanic.com/news/dogecoin/12034829/Dogecoin-Creator-Says-Crypto-Price-is-999-Driven-By-Greater-Fools",
+      "pubDate": "2021-06-01T12:00:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Thanks for your submission &lt;3",
+      "link": "https://cryptopanic.com/news/12036140/Thanks-for-your-submission-lt3?mtm_campaign=API-OFA",
+      "pubDate": "2021-06-01T10:50:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALCH"
+      ]
+    },
+    {
+      "title": "Thanks for your submission, we love it!",
+      "link": "https://cryptopanic.com/news/12036141/Thanks-for-your-submission-we-love-it?mtm_campaign=API-OFA",
+      "pubDate": "2021-06-01T10:50:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ALCH"
+      ]
+    },
+    {
+      "title": "XRP vs XLM — Which Will Perform Better In June?",
+      "link": "https://cryptopanic.com/news/ripple/12034652/XRP-vs-XLM-Which-Will-Perform-Better-In-June",
+      "pubDate": "2021-06-01T09:44:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "In this article, BeInCrypto will take a look at the movement of XRP and XLM in order to determine which has a higher potential for increases in the month of June.",
+      "currencies": [
+        "XRP",
+        "XLM"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "1/  @BalancedDAO, the first #DeFi application on @helloiconworld, has secured $225M without incident in the 5 week…",
+      "link": "https://cryptopanic.com/news/12036433/1-BalancedDAO-the-first-DeFi-application-on-helloiconworld-has-secured-225M-without-incident-in-the-5-week",
+      "pubDate": "2021-06-01T09:12:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "Ripple Giant Kicks Out Yet Another Billion XRP, While Coin Trades Above $1",
+      "link": "https://cryptopanic.com/news/ripple/12034617/Ripple-Giant-Kicks-Out-Yet-Another-Billion-XRP-While-Coin-Trades-Above-1",
+      "pubDate": "2021-06-01T09:11:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple DLT giant has shifted another billion XRP as June 1 arrived, while the coin is still trading above the $1 level",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 11
+      }
+    },
+    {
+      "title": "Veteran trader Peter Brandt sees Bitcoin crashing further after May’s 50% drop",
+      "link": "https://cryptopanic.com/news/near/12034556/Veteran-trader-Peter-Brandt-sees-Bitcoin-crashing-further-after-Mays-50-drop",
+      "pubDate": "2021-06-01T09:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Peter Brandt, a veteran financial analyst and trader, is questioning whether Bitcoin has more upside in the near term.",
+      "currencies": [
+        "BTC",
+        "NEAR"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Stellar (XLM) to Undergo Protocol 17 Hardfork with Crucial Update. Why Does It Matter?",
+      "link": "https://cryptopanic.com/news/12034577/Stellar-XLM-to-Undergo-Protocol-17-Hardfork-with-Crucial-Update-Why-Does-It-Matter",
+      "pubDate": "2021-06-01T08:58:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Today's upgrade advances regulatory compliance of Stellar (XLM) blockchain",
+      "currencies": [
+        "XLM"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Elon Musk “Approves” of Bath Tub Actually Heated by Bitcoin Mining After Similar Idea with Doge",
+      "link": "https://cryptopanic.com/news/dogecoin/12034362/Elon-Musk-Approves-of-Bath-Tub-Actually-Heated-by-Bitcoin-Mining-After-Similar-Idea-with-Doge",
+      "pubDate": "2021-06-01T07:45:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Tesla CEO believes bath tubs heated by crypto mining is a “nice” use case – first it was DOGE mining, now it’s Bitcoin and it's actually working",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Here’s What’s Coming for Cardano and Six Altcoins, According to Trader Michaël van de Poppe",
+      "link": "https://cryptopanic.com/news/chainlink/12033631/Heres-Whats-Coming-for-Cardano-and-Six-Altcoins-According-to-Trader-Michael-van-de-Poppe",
+      "pubDate": "2021-06-01T07:04:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Crypto trader and analyst Michaël van de Poppe is highlighting what he thinks is next for Cardano (ADA) and six other altcoins. In a new video, the trader says Cardano is looking strong relative to other crypto assets during the market correction, consistently making higher lows in its price action. According to him, the next […]",
+      "currencies": [
+        "ADA",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 33,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "0x API Launches on Polygon for Fast DEX Liquidity",
+      "link": "https://cryptopanic.com/news/matic-network/12031061/0x-API-Launches-on-Polygon-for-Fast-DEX-Liquidity",
+      "pubDate": "2021-06-01T05:35:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The 0x platform has expanded into the Polygon ecosystem to bring Layer 2 scaling to decentralized exchange liquidity aggregation.",
+      "currencies": [
+        "MATIC",
+        "ZRX"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance Smart Chain Announces Flash Loan Hacks, Calls For Actions",
+      "link": "https://cryptopanic.com/news/chainlink/12030469/Binance-Smart-Chain-Announces-Flash-Loan-Hacks-Calls-For-Actions",
+      "pubDate": "2021-06-01T04:07:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "The controversial Binance Smart Chain is back on the news. Apparently, the Dapps it hosts have been the target of eight flash loan hacks in the last few days. Unofficially, it’s rumored that the amount lost is close to a whopping one billion dollars. Binance thinks “well organized hackers are targeting BSC now.” Twitter is […]",
+      "currencies": [
+        "LINK",
+        "CAKE"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 46
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "SOMESING is thrilled to announce that it will be featured in the 'Google Play Store's Marketing Campaign' that will…",
+      "link": "https://cryptopanic.com/news/12033476/SOMESING-is-thrilled-to-announce-that-it-will-be-featured-in-the-Google-Play-Stores-Marketing-Campaign-that-will",
+      "pubDate": "2021-06-01T01:20:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SSX"
+      ]
+    },
+    {
+      "title": "U.S. courts deny SEC from viewing Ripple’s legal documents pertaining to XRP",
+      "link": "https://cryptopanic.com/news/ripple/12030360/US-courts-deny-SEC-from-viewing-Ripples-legal-documents-pertaining-to-XRP",
+      "pubDate": "2021-06-01T01:00:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The US Security and Exchange Commission´s (SEC) motion to access Ripple Labs´ legal communications regarding XRP‘s regulatory status was denied, a new filing shows.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 24,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DCG CEO Barry Silbert: Dogecoin (DOGE) Is ‘Not Worth $37 Billion’",
+      "link": "https://cryptopanic.com/news/dogecoin/12030322/DCG-CEO-Barry-Silbert-Dogecoin-DOGE-Is-Not-Worth-37-Billion",
+      "pubDate": "2021-06-01T00:19:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Barry Silbert, founder and CEO of the Digital Currency Group, the firm behind crypto industry giants such as Grayscale Investments and CoinDesk, has revealed he believes the meme-inspired cryptocurrency Dogecoin is not worth $37 billion. The former CEO of Grayscale noted that DOGE is a cryptocurrency that will “certainly” not go away because of its […]",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Great work teams",
+      "link": "https://cryptopanic.com/news/12031168/Great-work-teams",
+      "pubDate": "2021-06-01T00:06:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CENNZ"
+      ]
+    },
+    {
+      "title": "Judge Netburn Denies The SEC Access To Ripple’s Legal Communication",
+      "link": "https://cryptopanic.com/news/ripple/12030311/Judge-Netburn-Denies-The-SEC-Access-To-Ripples-Legal-Communication",
+      "pubDate": "2021-06-01T00:00:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The Securities and Exchange Commission (SEC) was dealt a huge blow following Judge Netburn’s denial of its motion to access Ripple’s legal communications. Ripple On A Roll Earlier this month, the U.S securities regulator filed a motion seeking access to “all communications constituting, transmitting, or discussing any legal advice Ripple sought or received as to […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

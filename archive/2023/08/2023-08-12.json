@@ -1,0 +1,554 @@
+{
+  "date": "2023-08-12",
+  "fetchedAt": "2026-02-05T07:27:07.216Z",
+  "articleCount": 34,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Fantom retest yearly lows – when is recovery likely?",
+      "link": "https://cryptopanic.com/news/18834121/Fantom-retest-yearly-lows-when-is-recovery-likely",
+      "pubDate": "2023-08-12T23:30:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FTM"
+      ]
+    },
+    {
+      "title": "AAVE’s troubles predate the Curve hack; here’s how",
+      "link": "https://cryptopanic.com/news/18834064/AAVEs-troubles-predate-the-Curve-hack-heres-how",
+      "pubDate": "2023-08-12T21:30:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Lido TVL hits new ATH: Did LDO feel the impact?",
+      "link": "https://cryptopanic.com/news/18834038/Lido-TVL-hits-new-ATH-Did-LDO-feel-the-impact",
+      "pubDate": "2023-08-12T20:30:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "LDO"
+      ]
+    },
+    {
+      "title": "DOGE Co-Founder Slams Bitcoin Maxis as 'Mentally Ill Group of Insecure Losers'",
+      "link": "https://cryptopanic.com/news/18834022/DOGE-Co-Founder-Slams-Bitcoin-Maxis-as-Mentally-Ill-Group-of-Insecure-Losers",
+      "pubDate": "2023-08-12T20:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOGE"
+      ]
+    },
+    {
+      "title": "Ethereum (ETH) Competitor Cardano (ADA) Witnesses Surge in DApp Activity in Q2 As NFT Volume Slumps: Messari",
+      "link": "https://cryptopanic.com/news/18834016/Ethereum-ETH-Competitor-Cardano-ADA-Witnesses-Surge-in-DApp-Activity-in-Q2-As-NFT-Volume-Slumps-Messari",
+      "pubDate": "2023-08-12T19:55:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Crypto analytics firm Messari says that the Ethereum (ETH) competitor Cardano (ADA) displayed conflicting trends in the second quarter of 2023. In a new analysis, the analytics firm notes that Cardano clocked an average of 57,881 daily decentralized application (DApp) transactions, an increase of 49% compared to Q1. The Cardano blockchain also registered $151.7 million […]",
+      "currencies": [
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 4
+      }
+    },
+    {
+      "title": "New All-Time High Envisioned For XRP Price Even As SEC Seeks To Appeal Landmark Ripple Ruling",
+      "link": "https://cryptopanic.com/news/18833980/New-All-Time-High-Envisioned-For-XRP-Price-Even-As-SEC-Seeks-To-Appeal-Landmark-Ripple-Ruling",
+      "pubDate": "2023-08-12T18:33:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "While initial reactions to this have been negative, with some spreading “fear, uncertainty, and doubt” (FUD) that XRP’s status as a non-security may be under threat, this is clearly not the case.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano (ADA) Welcomes Wrapped Bitcoin on Mainnet",
+      "link": "https://cryptopanic.com/news/18833914/Cardano-ADA-Welcomes-Wrapped-Bitcoin-on-Mainnet",
+      "pubDate": "2023-08-12T17:55:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "One of the highlights of this week on the Cardano (ADA) network is the integration of the ability to wrap Bitcoin (BTC) on the mainnet. The deployment of cBTC on the Cardano mainnet was introduced by anetaBTC, a protocol known to bring on-chain wrapped Bitcoin to blockchains. This significant step which brings BTC to the",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "WBTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Can These 10 Bullish Fundamentals for Ethereum Move ETH Prices?",
+      "link": "https://cryptopanic.com/news/18833924/Can-These-10-Bullish-Fundamentals-for-Ethereum-Move-ETH-Prices",
+      "pubDate": "2023-08-12T17:35:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Ethereum prices have been in a languid state of inactivity for five months, trading sideways with volume and volatility diminishing.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "NFT Sales Jump 6.59%: A Week of Growth, Dominance of Ethereum, and Record-Breaking Collections",
+      "link": "https://cryptopanic.com/news/18833923/NFT-Sales-Jump-659-A-Week-of-Growth-Dominance-of-Ethereum-and-Record-Breaking-Collections",
+      "pubDate": "2023-08-12T17:30:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "MATIC",
+        "XTZ"
+      ]
+    },
+    {
+      "title": "Will Shiba Inu flip Tron and breach the Top 10?",
+      "link": "https://cryptopanic.com/news/18833922/Will-Shiba-Inu-flip-Tron-and-breach-the-Top-10",
+      "pubDate": "2023-08-12T17:30:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Shiba Inu’s Altrank once again became #1, which is a bullish signal. But will this uptrend be enough to flip TRX and reach the Top 10?",
+      "currencies": [
+        "TRX",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Documents show XRP community had a huge impact to Ripple v. SEC case",
+      "link": "https://cryptopanic.com/news/18833868/Documents-show-XRP-community-had-a-huge-impact-to-Ripple-v-SEC-case",
+      "pubDate": "2023-08-12T16:24:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The recent decision declaring XRP not to be a security in the Ripple vs. Securities Exchange Commission (SEC) case was … Continued",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano Successfully Mints BTC as Big Phase Unveils for Network",
+      "link": "https://cryptopanic.com/news/18833779/Cardano-Successfully-Mints-BTC-as-Big-Phase-Unveils-for-Network",
+      "pubDate": "2023-08-12T14:57:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Integration of wrapped Bitcoin with Cardano ecosystem is noteworthy",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "WBTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Crypto Thunderstruck: THORChain (RUNE) 21% Charge Emerges As Top Weekly Gainer",
+      "link": "https://cryptopanic.com/news/18833777/Crypto-Thunderstruck-THORChain-RUNE-21-Charge-Emerges-As-Top-Weekly-Gainer?mtm_campaign=API-OFA",
+      "pubDate": "2023-08-12T14:50:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "GMX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RippleX Shares Impressive Update on XRP Ledger DeFi AMM",
+      "link": "https://cryptopanic.com/news/18833714/RippleX-Shares-Impressive-Update-on-XRP-Ledger-DeFi-AMM",
+      "pubDate": "2023-08-12T13:47:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "XLS-30d designed as XRPL-native protocol",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin has bottomed despite ‘astonishing’ BTC price action — Analyst",
+      "link": "https://cryptopanic.com/news/flow/18833626/Bitcoin-has-bottomed-despite-astonishing-BTC-price-action-Analyst",
+      "pubDate": "2023-08-12T12:59:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "Dogecoin, Shiba Inu, ApeCoin, PEPE Finally Decoupling From Bitcoin?",
+      "link": "https://cryptopanic.com/news/18833553/Dogecoin-Shiba-Inu-ApeCoin-PEPE-Finally-Decoupling-From-Bitcoin",
+      "pubDate": "2023-08-12T12:21:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Crypto News: Altcoins Dogecoin (DOGE), Shiba Inu (SHIB), ApeCoin (APE), and PEPE Coin have been showing strong resilience away from the Bitcoin correlation, in what could be a sign of increased market volatility in the crypto market in days to come. This comes amid the continuation of Bitcoin price in sideways path around the $30,000",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "SHIB",
+        "APE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Polkadot Bearish Trends Set The Stage For Bullish Possibilities – Here’s Why",
+      "link": "https://cryptopanic.com/news/18833546/Polkadot-Bearish-Trends-Set-The-Stage-For-Bullish-Possibilities-Heres-Why",
+      "pubDate": "2023-08-12T11:40:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "DOT",
+        "FLOW",
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Why are Dogecoin, Shiba Inu and PEPE Surging? What’s Behind the Price Increase?",
+      "link": "https://cryptopanic.com/news/18833524/Why-are-Dogecoin-Shiba-Inu-and-PEPE-Surging-Whats-Behind-the-Price-Increase",
+      "pubDate": "2023-08-12T11:20:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The most recognizable memecoins of the cryptocurrency market, DOGE, SHIB, and PEPE, are on the rise. So what is the reason behind the rise? Continue Reading: Why are Dogecoin, Shiba Inu and PEPE Surging? What’s Behind the Price Increase?",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Trump Holds Ethereum",
+      "link": "https://cryptopanic.com/news/18833514/Trump-Holds-Ethereum",
+      "pubDate": "2023-08-12T11:05:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "The Republican presidential candidate and former US president Donald Trump holds between $250,000 and $500,000 eth.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Solana Price Sparkles With 9% Increase, But Why Do Buyers Remain Cautious?",
+      "link": "https://cryptopanic.com/news/18833482/Solana-Price-Sparkles-With-9-Increase-But-Why-Do-Buyers-Remain-Cautious",
+      "pubDate": "2023-08-12T10:24:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Solana (SOL) has managed to shake off recent price dips, rekindling bullish optimism among investors. This resurgence comes on the heels of a determined effort by sellers to flip the altcoin’s trajectory bearish, following a price rejection at the critical $29 resistance level. However, SOL’s retreat from this resistance proved to be a strategic move as it found support in the bullish order...",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "SHIB",
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "CRO Price Could Climb 1600% In The Next 18 Months: Investor",
+      "link": "https://cryptopanic.com/news/18833431/CRO-Price-Could-Climb-1600-In-The-Next-18-Months-Investor",
+      "pubDate": "2023-08-12T09:31:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "One Mid-Cap Ethereum and Solana Rival Is Flashing a Bullish Signal, According to Crypto Analytics Firm Santiment",
+      "link": "https://cryptopanic.com/news/maker/18833419/One-Mid-Cap-Ethereum-and-Solana-Rival-Is-Flashing-a-Bullish-Signal-According-to-Crypto-Analytics-Firm-Santiment",
+      "pubDate": "2023-08-12T09:15:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "SHIB, APE, PEPE Jump 8% Daily, Bitcoin Maintains $29K: Weekend Watch",
+      "link": "https://cryptopanic.com/news/18833391/SHIB-APE-PEPE-Jump-8-Daily-Bitcoin-Maintains-29K-Weekend-Watch",
+      "pubDate": "2023-08-12T08:40:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "SHIB continues to gain momentum, and so has done another asset from the Shiba Inu ecosystem - BONE.",
+      "currencies": [
+        "BTC",
+        "SHIB",
+        "PEPE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Sam Bankman-Fried Sent to Jail for Witness Tampering: Report",
+      "link": "https://cryptopanic.com/news/18833382/Sam-Bankman-Fried-Sent-to-Jail-for-Witness-Tampering-Report",
+      "pubDate": "2023-08-12T08:25:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Disgraced FTX CEO Sam Bankman-Fried's bail has been revoked. He will be detained in jail until the start of his criminal trial in October.",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Shiba Inu Keeps Energy Alive, Snags 26% Gain – Here’s The Inside Scoop",
+      "link": "https://cryptopanic.com/news/18833357/Shiba-Inu-Keeps-Energy-Alive-Snags-26-Gain-Heres-The-Inside-Scoop",
+      "pubDate": "2023-08-12T07:48:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Shiba Inu (SHIB) has transformed its breakout into a remarkable rally, continuing to build momentum in the ever-evolving crypto landscape. The surge has not only captivated the attention of crypto enthusiasts but has also brought a considerable number of meme token holders out of the depths of losses, marking a significant turning point in their investment journey. With SHIB’s current price...",
+      "currencies": [
+        "SHIB",
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$SHIB: Shiba Inu’s Futures Open Interest Surges As Shibarium Gets Closer to Launch",
+      "link": "https://cryptopanic.com/news/flow/18833319/SHIB-Shiba-Inus-Futures-Open-Interest-Surges-As-Shibarium-Gets-Closer-to-Launch",
+      "pubDate": "2023-08-12T06:57:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Open interest, for those unfamiliar, refers to the total number of outstanding derivative contracts, such as futures and options, that haven’t been settled. It’s a metric that offers a glimpse into the flow of money into a particular asset, indicating the level of trading activity and potential future price movements. As CoinDesk reported earlier today, […]",
+      "currencies": [
+        "SHIB",
+        "FLOW"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "MakerDAO’s DAI supply surges but on-chain activity tells a different tale",
+      "link": "https://cryptopanic.com/news/18833297/MakerDAOs-DAI-supply-surges-but-on-chain-activity-tells-a-different-tale",
+      "pubDate": "2023-08-12T06:30:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DAI"
+      ]
+    },
+    {
+      "title": "A Bitcoin Warning Signal Blares From Surging Interest in Shiba Inu",
+      "link": "https://cryptopanic.com/news/18833270/A-Bitcoin-Warning-Signal-Blares-From-Surging-Interest-in-Shiba-Inu",
+      "pubDate": "2023-08-12T05:22:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "SHIB meme coin signals trouble for bitcoin's price (Atsuko Sato)",
+      "currencies": [
+        "BTC",
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "AAVE hits bearish zone: Are shorting gains likely?",
+      "link": "https://cryptopanic.com/news/18833252/AAVE-hits-bearish-zone-Are-shorting-gains-likely",
+      "pubDate": "2023-08-12T04:30:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "SHIB could be headed for a bearish retracement and evidence suggests…",
+      "link": "https://cryptopanic.com/news/shiba-inu/18833226/SHIB-could-be-headed-for-a-bearish-retracement-and-evidence-suggests",
+      "pubDate": "2023-08-12T03:30:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "SHIB’s RSI was notably lower than it was on 5 August. This could be an indication of the price forming a price-RSI divergence. This could mean that Shiba Inu bulls were losing their edge and the ongoing price action was running out of steam.",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "How Aave plans to support GHO’s liquidity with CRV tokens",
+      "link": "https://cryptopanic.com/news/18833202/How-Aave-plans-to-support-GHOs-liquidity-with-CRV-tokens",
+      "pubDate": "2023-08-12T02:30:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "AAVE",
+        "CRV"
+      ]
+    },
+    {
+      "title": "Maker: As bulls lend a hand to MKR, traders can expect this in coming days",
+      "link": "https://cryptopanic.com/news/maker/18833171/Maker-As-bulls-lend-a-hand-to-MKR-traders-can-expect-this-in-coming-days",
+      "pubDate": "2023-08-12T01:30:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "GMX Drops 24% in 1 Month, Whales Rapidly Selling: What’s Going On?",
+      "link": "https://cryptopanic.com/news/18833151/GMX-Drops-24-in-1-Month-Whales-Rapidly-Selling-Whats-Going-On?mtm_campaign=API-OFA",
+      "pubDate": "2023-08-12T01:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "AVAX",
+        "ARB",
+        "GMX"
+      ]
+    },
+    {
+      "title": "Ethereum Ecosystem Altcoin Jumps in Price After Coinbase Ventures Invests in the Project",
+      "link": "https://cryptopanic.com/news/18833110/Ethereum-Ecosystem-Altcoin-Jumps-in-Price-After-Coinbase-Ventures-Invests-in-the-Project",
+      "pubDate": "2023-08-12T00:00:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "RPL"
+      ]
+    }
+  ]
+}

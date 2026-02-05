@@ -1,0 +1,26 @@
+{
+  "date": "2019-04-17",
+  "fetchedAt": "2026-02-05T07:27:06.997Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tether’s USDT Launches on Tron (TRX) Network",
+      "link": "https://cryptopanic.com/news/tron/5167258/Tethers-USDT-Launches-on-Tron-TRX-Network",
+      "pubDate": "2019-04-17T12:53:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

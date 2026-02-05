@@ -1,0 +1,2249 @@
+{
+  "date": "2025-10-28",
+  "fetchedAt": "2026-02-05T07:27:08.681Z",
+  "articleCount": 168,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "XRP vs Bitcoin: Fight or Flight, Dogecoin Volume Jumps 62% as DOGE Price Eyes Rally, Shiba Inu to Add Zero If History Repeats — Crypto News Digest",
+      "link": "https://cryptopanic.com/news/shiba-inu/26567929/XRP-vs-Bitcoin-Fight-or-Flight-Dogecoin-Volume-Jumps-62-as-DOGE-Price-Eyes-Rally-Shiba-Inu-to-Add-Zero-If-History-Repeats-Crypto-News-Digest",
+      "pubDate": "2025-10-28T23:31:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "DOGE"
+      ]
+    },
+    {
+      "title": "SOL, HBAR, LTC ETFs Begin Trading in US, Marking New Era for Regulated Crypto Access",
+      "link": "https://cryptopanic.com/news/litecoin/26567907/SOL-HBAR-LTC-ETFs-Begin-Trading-in-US-Marking-New-Era-for-Regulated-Crypto-Access",
+      "pubDate": "2025-10-28T23:30:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Coinbase to Delist Multiple Trading Pairs Citing Liquidity Issues",
+      "link": "https://cryptopanic.com/news/axie-infinity/26567250/Coinbase-to-Delist-Multiple-Trading-Pairs-Citing-Liquidity-Issues",
+      "pubDate": "2025-10-28T23:17:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AXS",
+        "MINA",
+        "SNX"
+      ]
+    },
+    {
+      "title": "Whales Quietly Accumulate ADA as Cardano Nears Bullish Triangle Breakout, Is $5 Next?",
+      "link": "https://cryptopanic.com/news/cardano/26566855/Whales-Quietly-Accumulate-ADA-as-Cardano-Nears-Bullish-Triangle-Breakout-Is-5-Next",
+      "pubDate": "2025-10-28T23:00:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "DOGE"
+      ]
+    },
+    {
+      "title": "Bitwise Solana Staking ETF notches $55M trading volume on debut",
+      "link": "https://cryptopanic.com/news/litecoin/26566505/Bitwise-Solana-Staking-ETF-notches-55M-trading-volume-on-debut",
+      "pubDate": "2025-10-28T22:53:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Gemini AI Predicts the Price of BTC, SOL, XRP by the End of 2025",
+      "link": "https://cryptopanic.com/news/litecoin/26566018/Gemini-AI-Predicts-the-Price-of-BTC-SOL-XRP-by-the-End-of-2025",
+      "pubDate": "2025-10-28T22:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Trump’s Truth Social Now Hosts Major Event Predictions",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/26566962/Trumps-Truth-Social-Now-Hosts-Major-Event-Predictions",
+      "pubDate": "2025-10-28T22:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "OceanPal raises $120M to build NEAR token treasury company",
+      "link": "https://cryptopanic.com/news/near/26565896/OceanPal-raises-120M-to-build-NEAR-token-treasury-company",
+      "pubDate": "2025-10-28T21:50:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Solana, Hedera, and Litecoin ETFs debut — Here’s how the market reacted",
+      "link": "https://cryptopanic.com/news/litecoin/26565967/Solana-Hedera-and-Litecoin-ETFs-debut-Heres-how-the-market-reacted",
+      "pubDate": "2025-10-28T21:50:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Nasdaq-Listed OceanPal Launches AI and Crypto Platform With NEAR Protocol",
+      "link": "https://cryptopanic.com/news/near/26565861/Nasdaq-Listed-OceanPal-Launches-AI-and-Crypto-Platform-With-NEAR-Protocol",
+      "pubDate": "2025-10-28T21:50:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "Crrypto News: Coinbase and Figment Expand Institutional Staking Past Ethereum",
+      "link": "https://cryptopanic.com/news/avalanche-2/26565079/Crrypto-News-Coinbase-and-Figment-Expand-Institutional-Staking-Past-Ethereum",
+      "pubDate": "2025-10-28T21:40:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Cardano Integrates Coinbase’s x402 Standard to Enable AI-Powered Onchain Payments — Here Is How It Could Transform ADA’s Future",
+      "link": "https://cryptopanic.com/news/cardano/26564857/Cardano-Integrates-Coinbases-x402-Standard-to-Enable-AI-Powered-Onchain-Payments-Here-Is-How-It-Could-Transform-ADAs-Future",
+      "pubDate": "2025-10-28T21:25:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ]
+    },
+    {
+      "title": "XRP-Based Loans to Launch in December: Details",
+      "link": "https://cryptopanic.com/news/usd-coin/26564806/XRP-Based-Loans-to-Launch-in-December-Details",
+      "pubDate": "2025-10-28T21:05:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Dogecoin Open Interest Crashes 50% From October Highs, Volume Is Worse, What’s Going On?",
+      "link": "https://cryptopanic.com/news/kucoin-shares/26564733/Dogecoin-Open-Interest-Crashes-50-From-October-Highs-Volume-Is-Worse-Whats-Going-On",
+      "pubDate": "2025-10-28T21:00:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "KCS",
+        "HYPE"
+      ]
+    },
+    {
+      "title": "Japan’s $2 Trillion Payment Network Embraces Blockchain Through Partnership With Avalanche",
+      "link": "https://cryptopanic.com/news/avalanche-2/26564712/Japans-2-Trillion-Payment-Network-Embraces-Blockchain-Through-Partnership-With-Avalanche",
+      "pubDate": "2025-10-28T20:50:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Cardano Price Prediction: Experts Warn ADA May Lag Behind as Layer Brett Captures Trader’s Eyes In October",
+      "link": "https://cryptopanic.com/news/cardano/26563576/Cardano-Price-Prediction-Experts-Warn-ADA-May-Lag-Behind-as-Layer-Brett-Captures-Traders-Eyes-In-October",
+      "pubDate": "2025-10-28T20:30:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ADA"
+      ]
+    },
+    {
+      "title": "NEAR Inflation Halving Voting Starts, 12% Missing for Approval",
+      "link": "https://cryptopanic.com/news/near/26564896/NEAR-Inflation-Halving-Voting-Starts-12-Missing-for-Approval",
+      "pubDate": "2025-10-28T20:26:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "New crypto ETFs tracking Litecoin, Hedera and Solana generate $65 million in day-one trading volume",
+      "link": "https://cryptopanic.com/news/litecoin/26563494/New-crypto-ETFs-tracking-Litecoin-Hedera-and-Solana-generate-65-million-in-day-one-trading-volume",
+      "pubDate": "2025-10-28T20:20:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LTC",
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Circle launches Arc blockchain testnet with participation from BlackRock, Visa, and AWS",
+      "link": "https://cryptopanic.com/news/usd-coin/26563477/Circle-launches-Arc-blockchain-testnet-with-participation-from-BlackRock-Visa-and-AWS",
+      "pubDate": "2025-10-28T20:10:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC"
+      ]
+    },
+    {
+      "title": "OceanPal launches SovereignAI for $120M NEAR Protocol crypto treasury",
+      "link": "https://cryptopanic.com/news/near/26563410/OceanPal-launches-SovereignAI-for-120M-NEAR-Protocol-crypto-treasury",
+      "pubDate": "2025-10-28T19:55:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR",
+        "PIPE"
+      ]
+    },
+    {
+      "title": "Theft of 17,693 USDC from x402 Cross-Chain Protocol",
+      "link": "https://cryptopanic.com/news/usd-coin/26563375/Theft-of-17693-USDC-from-x402-Cross-Chain-Protocol",
+      "pubDate": "2025-10-28T19:53:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC"
+      ]
+    },
+    {
+      "title": "Bitcoin, XRP Stay Range-Bound As Ethereum, Dogecoin Slip 2% Ahead Of Fed Meeting",
+      "link": "https://cryptopanic.com/news/shiba-inu/26563408/Bitcoin-XRP-Stay-Range-Bound-As-Ethereum-Dogecoin-Slip-2-Ahead-Of-Fed-Meeting",
+      "pubDate": "2025-10-28T19:51:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Solana Price Prediction: SOL Price Crushes the $200 Resistance as ETF Listings Begin – Is $250 Coming in November 2025?",
+      "link": "https://cryptopanic.com/news/litecoin/26563352/Solana-Price-Prediction-SOL-Price-Crushes-the-200-Resistance-as-ETF-Listings-Begin-Is-250-Coming-in-November-2025",
+      "pubDate": "2025-10-28T19:48:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "TRON Price Prediction: TRON Dominates 95.4% of LATAM Stablecoin Payments — Can TRX Reach $0.45 Next?",
+      "link": "https://cryptopanic.com/news/tron/26563350/TRON-Price-Prediction-TRON-Dominates-954-of-LATAM-Stablecoin-Payments-Can-TRX-Reach-045-Next",
+      "pubDate": "2025-10-28T19:47:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "4"
+      ]
+    },
+    {
+      "title": "CHART: USDC is growing faster than USDT under Trump",
+      "link": "https://cryptopanic.com/news/usd-coin/26562142/CHART-USDC-is-growing-faster-than-USDT-under-Trump",
+      "pubDate": "2025-10-28T19:06:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC"
+      ]
+    },
+    {
+      "title": "Binance Whales Turn Active On Uniswap As Outflows Hit Multi-Month Highs – Details",
+      "link": "https://cryptopanic.com/news/uniswap/26562064/Binance-Whales-Turn-Active-On-Uniswap-As-Outflows-Hit-Multi-Month-Highs-Details",
+      "pubDate": "2025-10-28T19:00:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "UNI"
+      ]
+    },
+    {
+      "title": "Helium Mobile Surpasses 500,000 Sign-ups as $HNT Buybacks Gain Momentum",
+      "link": "https://cryptopanic.com/news/helium/26560495/Helium-Mobile-Surpasses-500000-Sign-ups-as-HNT-Buybacks-Gain-Momentum",
+      "pubDate": "2025-10-28T18:43:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HNT",
+        "DEPIN"
+      ]
+    },
+    {
+      "title": "Shiba Inu Price Prediction: Analysts See Parallels Between Shiba Inu’s 2021 Rise and Layer Brett’s Current Trajectory",
+      "link": "https://cryptopanic.com/news/shiba-inu/26561406/Shiba-Inu-Price-Prediction-Analysts-See-Parallels-Between-Shiba-Inus-2021-Rise-and-Layer-Bretts-Current-Trajectory",
+      "pubDate": "2025-10-28T18:30:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SHIB"
+      ]
+    },
+    {
+      "title": "Chainlink Underpins Balcony's $240B Real Estate Tokenization Platform",
+      "link": "https://cryptopanic.com/news/chainlink/26562139/Chainlink-Underpins-Balconys-240B-Real-Estate-Tokenization-Platform",
+      "pubDate": "2025-10-28T18:24:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "Fintech Firm Issues Japan’s First Yen-Denominated Stablecoin on Ethereum, Avalanche and Polygon",
+      "link": "https://cryptopanic.com/news/avalanche-2/26564236/Fintech-Firm-Issues-Japans-First-Yen-Denominated-Stablecoin-on-Ethereum-Avalanche-and-Polygon",
+      "pubDate": "2025-10-28T18:05:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AVAX",
+        "POL"
+      ]
+    },
+    {
+      "title": "Bitcoin's Offshoot, BCH, Edges Up 1% to Challenge Downtrend",
+      "link": "https://cryptopanic.com/news/bitcoin-cash/26560725/Bitcoins-Offshoot-BCH-Edges-Up-1-to-Challenge-Downtrend",
+      "pubDate": "2025-10-28T18:01:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ]
+    },
+    {
+      "title": "The Daily: Trump’s Truth Social gets into prediction markets, Circle launches Arc public testnet, MetaMask goes multichain, and more",
+      "link": "https://cryptopanic.com/news/usd-coin/26560577/The-Daily-Trumps-Truth-Social-gets-into-prediction-markets-Circle-launches-Arc-public-testnet-MetaMask-goes-multichain-and-more",
+      "pubDate": "2025-10-28T17:50:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Nasdaq-Listed Streamex Taps Chainlink to Power GLDY Stablecoin",
+      "link": "https://cryptopanic.com/news/chainlink/26560593/Nasdaq-Listed-Streamex-Taps-Chainlink-to-Power-GLDY-Stablecoin",
+      "pubDate": "2025-10-28T17:45:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "Coinbase, Figment broaden institutional staking beyond Ethereum",
+      "link": "https://cryptopanic.com/news/avalanche-2/26560541/Coinbase-Figment-broaden-institutional-staking-beyond-Ethereum",
+      "pubDate": "2025-10-28T17:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "SOL",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Kernel DAO Price Surge on Chainlink Deal: Can Live Airdrop Eye $1?",
+      "link": "https://cryptopanic.com/news/chainlink/26563328/Kernel-DAO-Price-Surge-on-Chainlink-Deal-Can-Live-Airdrop-Eye-1",
+      "pubDate": "2025-10-28T17:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LINK",
+        "DAO"
+      ]
+    },
+    {
+      "title": "Circle Launches Arc Layer-1 Blockchain but CRCL Stock Dips 2%",
+      "link": "https://cryptopanic.com/news/usd-coin/26560410/Circle-Launches-Arc-Layer-1-Blockchain-but-CRCL-Stock-Dips-2",
+      "pubDate": "2025-10-28T17:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC"
+      ]
+    },
+    {
+      "title": "Altcoins today: Solana, Litecoin, and Hedera ETFs debut; TRUMP rebounds",
+      "link": "https://cryptopanic.com/news/litecoin/26560406/Altcoins-today-Solana-Litecoin-and-Hedera-ETFs-debut-TRUMP-rebounds",
+      "pubDate": "2025-10-28T17:13:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Big News: First Spot ETFs for Solana, Litecoin, and Hedera Go Live with $14.4M in First-Hour Volume",
+      "link": "https://cryptopanic.com/news/litecoin/26560698/Big-News-First-Spot-ETFs-for-Solana-Litecoin-and-Hedera-Go-Live-with-144M-in-First-Hour-Volume",
+      "pubDate": "2025-10-28T17:06:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "MetaMask airdrop rumors spike after users spot ‘claim’ page – Details",
+      "link": "https://cryptopanic.com/news/uniswap/26559236/MetaMask-airdrop-rumors-spike-after-users-spot-claim-page-Details",
+      "pubDate": "2025-10-28T17:00:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "UNI",
+        "MASK"
+      ]
+    },
+    {
+      "title": "Circle Launches Arc Public Testnet with Over 100 Participants Including BlackRock, Goldman Sachs",
+      "link": "https://cryptopanic.com/news/usd-coin/26560401/Circle-Launches-Arc-Public-Testnet-with-Over-100-Participants-Including-BlackRock-Goldman-Sachs",
+      "pubDate": "2025-10-28T16:57:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC"
+      ]
+    },
+    {
+      "title": "Move Over Bitcoin: Stablecoins Become the Real Apex Predators of Digital Finance",
+      "link": "https://cryptopanic.com/news/usd-coin/26559954/Move-Over-Bitcoin-Stablecoins-Become-the-Real-Apex-Predators-of-Digital-Finance",
+      "pubDate": "2025-10-28T16:57:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT"
+      ]
+    },
+    {
+      "title": "XLM Gains 2.3% to $0.3314 as Payment Networks Drive Institutional Interest",
+      "link": "https://cryptopanic.com/news/stellar/26560485/XLM-Gains-23-to-03314-as-Payment-Networks-Drive-Institutional-Interest",
+      "pubDate": "2025-10-28T16:31:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Trump Media Teams Up With Crypto.com to Roll Out “Truth Predict” Market Platform",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/26558713/Trump-Media-Teams-Up-With-Cryptocom-to-Roll-Out-Truth-Predict-Market-Platform",
+      "pubDate": "2025-10-28T16:29:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Crypto News: Solana Expected to Attract Billions as ETFs Gain Investor Interest",
+      "link": "https://cryptopanic.com/news/litecoin/26558588/Crypto-News-Solana-Expected-to-Attract-Billions-as-ETFs-Gain-Investor-Interest",
+      "pubDate": "2025-10-28T16:15:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Hedera Jumps 25.7% Breaking Key Resistance as Spot ETF Launches",
+      "link": "https://cryptopanic.com/news/hedera-hashgraph/26558710/Hedera-Jumps-257-Breaking-Key-Resistance-as-Spot-ETF-Launches",
+      "pubDate": "2025-10-28T16:10:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Solana’s ICO Revival: How MetaDAO and Metaplex Are Redefining Token Launches",
+      "link": "https://cryptopanic.com/news/solana/26558561/Solanas-ICO-Revival-How-MetaDAO-and-Metaplex-Are-Redefining-Token-Launches",
+      "pubDate": "2025-10-28T16:04:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "MetaDAO and Metaplex are reshaping Solana’s ICO scene with fairness and transparency, generating over $927K monthly in Revenue",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "ICP Hovers Around $3.20 Resistance With 115% Volume Surge",
+      "link": "https://cryptopanic.com/news/internet-computer/26558598/ICP-Hovers-Around-320-Resistance-With-115-Volume-Surge",
+      "pubDate": "2025-10-28T16:02:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ]
+    },
+    {
+      "title": "HBAR ETF Debut? Hedera Price Jumps 16% On SEC Lock-Down",
+      "link": "https://cryptopanic.com/news/hedera-hashgraph/26559976/HBAR-ETF-Debut-Hedera-Price-Jumps-16-On-SEC-Lock-Down",
+      "pubDate": "2025-10-28T16:01:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Need a small TRX top-up (about $5) to move my USDT stuck in Exodus",
+      "link": "https://cryptopanic.com/news/tron/26558574/Need-a-small-TRX-top-up-about-5-to-move-my-USDT-stuck-in-Exodus",
+      "pubDate": "2025-10-28T15:49:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "WTRX"
+      ]
+    },
+    {
+      "title": "Litecoin Price Prediction: Is the LTC Price About to Explode Above $150 as First LTC ETF Lists Today?",
+      "link": "https://cryptopanic.com/news/litecoin/26557376/Litecoin-Price-Prediction-Is-the-LTC-Price-About-to-Explode-Above-150-as-First-LTC-ETF-Lists-Today",
+      "pubDate": "2025-10-28T15:33:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Why Hedera (HBAR) Token Price Up Today?",
+      "link": "https://cryptopanic.com/news/hedera-hashgraph/26558590/Why-Hedera-HBAR-Token-Price-Up-Today",
+      "pubDate": "2025-10-28T15:14:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Top legal expert slams regulators for holding back XRP amid spot ETF delay",
+      "link": "https://cryptopanic.com/news/ripple/26556665/Top-legal-expert-slams-regulators-for-holding-back-XRP-amid-spot-ETF-delay",
+      "pubDate": "2025-10-28T15:06:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "A legal expert has criticized regulators for what he sees as a persistent bias against XRP, following the rapid approval and launch of several new cryptocurrency exchange-traded funds (ETFs). Specifically, pro-Ripple lawyer Bill Morgan expressed frustration after it emerged that spot ETFs for Solana (SOL), Litecoin (LTC), and Hedera (HBAR) had been cleared to begin trading on major U.S. exchanges",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "-19,685,880,237 Shiba Inu (SHIB) in 24 Hours: Netflows Turn into Downfalls",
+      "link": "https://cryptopanic.com/news/shiba-inu/26556673/-19685880237-Shiba-Inu-SHIB-in-24-Hours-Netflows-Turn-into-Downfalls",
+      "pubDate": "2025-10-28T15:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB"
+      ]
+    },
+    {
+      "title": "Michael Saylor’s Strategy Expands Bitcoin Holdings To 640,808 BTC With Latest Purchase",
+      "link": "https://cryptopanic.com/news/usd-coin/26556643/Michael-Saylors-Strategy-Expands-Bitcoin-Holdings-To-640808-BTC-With-Latest-Purchase",
+      "pubDate": "2025-10-28T15:00:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDC"
+      ]
+    },
+    {
+      "title": "Solana, Litecoin, Hedera ETFs go live on NYSE – A first without SEC review!",
+      "link": "https://cryptopanic.com/news/litecoin/26556625/Solana-Litecoin-Hedera-ETFs-go-live-on-NYSE-A-first-without-SEC-review",
+      "pubDate": "2025-10-28T15:00:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "CRO Jumps After Trump’s Truth Social Announces Prediction Market Partnership with Crypto.Com",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/26556567/CRO-Jumps-After-Trumps-Truth-Social-Announces-Prediction-Market-Partnership-with-CryptoCom",
+      "pubDate": "2025-10-28T14:57:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Hedera (HBAR) Skyrockets 11% After ETF Launch Confirmation — Here Is Whether the Rally Can Last",
+      "link": "https://cryptopanic.com/news/hedera-hashgraph/26556538/Hedera-HBAR-Skyrockets-11-After-ETF-Launch-Confirmation-Here-Is-Whether-the-Rally-Can-Last",
+      "pubDate": "2025-10-28T14:46:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "VET Analysis: this week’s key levels as momentum stalls",
+      "link": "https://cryptopanic.com/news/vechain/26558299/VET-Analysis-this-weeks-key-levels-as-momentum-stalls",
+      "pubDate": "2025-10-28T14:38:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "VET",
+        "Z"
+      ]
+    },
+    {
+      "title": "Shipping Firm OceanPal Adds AI Arm With $120M PIPE Deal, Eyes 10% of NEAR Supply",
+      "link": "https://cryptopanic.com/news/near/26558461/Shipping-Firm-OceanPal-Adds-AI-Arm-With-120M-PIPE-Deal-Eyes-10-of-NEAR-Supply",
+      "pubDate": "2025-10-28T14:38:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR",
+        "PIPE"
+      ]
+    },
+    {
+      "title": "Cardano (ADA) Price Analysis for October 28",
+      "link": "https://cryptopanic.com/news/cardano/26556477/Cardano-ADA-Price-Analysis-for-October-28",
+      "pubDate": "2025-10-28T14:34:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ]
+    },
+    {
+      "title": "Crypto payments expand as SwissBullion adds XRP and ETH",
+      "link": "https://cryptopanic.com/news/usd-coin/26558297/Crypto-payments-expand-as-SwissBullion-adds-XRP-and-ETH",
+      "pubDate": "2025-10-28T14:31:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT"
+      ]
+    },
+    {
+      "title": "Solana, Litecoin, Hedera Spot ETFs Launch on NYSE and Nasdaq",
+      "link": "https://cryptopanic.com/news/litecoin/26556338/Solana-Litecoin-Hedera-Spot-ETFs-Launch-on-NYSE-and-Nasdaq",
+      "pubDate": "2025-10-28T14:27:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "VeChain (VET) Crashes to $0.01 but Analysts Call It a Blessing — Here Is Why the Downturn Could Be a Long-Term Opportunity",
+      "link": "https://cryptopanic.com/news/vechain/26556099/VeChain-VET-Crashes-to-001-but-Analysts-Call-It-a-Blessing-Here-Is-Why-the-Downturn-Could-Be-a-Long-Term-Opportunity",
+      "pubDate": "2025-10-28T14:06:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "VET"
+      ]
+    },
+    {
+      "title": "HBAR Price Prediction: Analysts Target $0.54 in Q4",
+      "link": "https://cryptopanic.com/news/hedera-hashgraph/26556698/HBAR-Price-Prediction-Analysts-Target-054-in-Q4",
+      "pubDate": "2025-10-28T14:02:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BNB",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Zcash’s social hype isn’t fading, but ZEC’s price is – Why?",
+      "link": "https://cryptopanic.com/news/zcash/26555431/Zcashs-social-hype-isnt-fading-but-ZECs-price-is-Why",
+      "pubDate": "2025-10-28T14:00:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Circle Just Dropped a Blockchain That Could Change the Global Economy Forever",
+      "link": "https://cryptopanic.com/news/chainlink/26556697/Circle-Just-Dropped-a-Blockchain-That-Could-Change-the-Global-Economy-Forever",
+      "pubDate": "2025-10-28T14:00:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "Morning Minute: Solana Staking ETF Goes Live Today",
+      "link": "https://cryptopanic.com/news/litecoin/26555486/Morning-Minute-Solana-Staking-ETF-Goes-Live-Today",
+      "pubDate": "2025-10-28T13:57:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LTC",
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Wall Street Launches First Spot ETFs for Solana, Litecoin, and Hedera",
+      "link": "https://cryptopanic.com/news/litecoin/26558400/Wall-Street-Launches-First-Spot-ETFs-for-Solana-Litecoin-and-Hedera",
+      "pubDate": "2025-10-28T13:53:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "New York Stock Exchange To List Solana And Litecoin Spot ETFs",
+      "link": "https://cryptopanic.com/news/litecoin/26554696/New-York-Stock-Exchange-To-List-Solana-And-Litecoin-Spot-ETFs",
+      "pubDate": "2025-10-28T13:48:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "OceanPal Inc. Completes $120 Million PIPE Transaction to Enhance Digital Asset Strategy",
+      "link": "https://cryptopanic.com/news/near/26558398/OceanPal-Inc-Completes-120-Million-PIPE-Transaction-to-Enhance-Digital-Asset-Strategy",
+      "pubDate": "2025-10-28T13:47:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR",
+        "PIPE"
+      ]
+    },
+    {
+      "title": "Truth Social Bets Big: Partners With Crypto.com to Bring Prediction Markets to Social Media",
+      "link": "https://cryptopanic.com/news/crypto-com-chain/26554579/Truth-Social-Bets-Big-Partners-With-Cryptocom-to-Bring-Prediction-Markets-to-Social-Media",
+      "pubDate": "2025-10-28T13:32:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CRO"
+      ]
+    },
+    {
+      "title": "Circle News: Circle Launches Payments-Focused Blockchain Testnet ‘Arc’",
+      "link": "https://cryptopanic.com/news/usd-coin/26554506/Circle-News-Circle-Launches-Payments-Focused-Blockchain-Testnet-Arc",
+      "pubDate": "2025-10-28T13:30:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC"
+      ]
+    },
+    {
+      "title": "OceanPal closes $120 million offering to launch SovereignAI and digital asset treasury in collaboration with NEAR Foundation",
+      "link": "https://cryptopanic.com/news/near/26554487/OceanPal-closes-120-million-offering-to-launch-SovereignAI-and-digital-asset-treasury-in-collaboration-with-NEAR-Foundation",
+      "pubDate": "2025-10-28T13:20:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEAR"
+      ]
+    },
+    {
+      "title": "CoinDesk 20 Performance Update: Hedera (HBAR) Surges 14.4% While Index Trades Lower",
+      "link": "https://cryptopanic.com/news/hedera-hashgraph/26554651/CoinDesk-20-Performance-Update-Hedera-HBAR-Surges-144-While-Index-Trades-Lower",
+      "pubDate": "2025-10-28T13:09:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HBAR",
+        "4"
+      ]
+    },
+    {
+      "title": "Can Pi Network’s ISO 20022 upgrade measure up to XRP Ledger and Stellar Network?",
+      "link": "https://cryptopanic.com/news/stellar/26554342/Can-Pi-Networks-ISO-20022-upgrade-measure-up-to-XRP-Ledger-and-Stellar-Network",
+      "pubDate": "2025-10-28T13:07:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XLM",
+        "PI"
+      ]
+    },
+    {
+      "title": "SEC Poised to Approve HBAR ETF — Hedera’s Gregg Bell Calls It ‘New Chapter’ for Regulated Crypto Access",
+      "link": "https://cryptopanic.com/news/litecoin/26554304/SEC-Poised-to-Approve-HBAR-ETF-Hederas-Gregg-Bell-Calls-It-New-Chapter-for-Regulated-Crypto-Access",
+      "pubDate": "2025-10-28T13:05:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "AI predicts HBAR price for the end of 2025",
+      "link": "https://cryptopanic.com/news/hedera-hashgraph/26554281/AI-predicts-HBAR-price-for-the-end-of-2025",
+      "pubDate": "2025-10-28T13:01:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "What Will DeFi’s Next Phase Look Like? 5 Key Takeaways from 1inch’s Unite DeFi Singapore",
+      "link": "https://cryptopanic.com/news/aave/26554577/What-Will-DeFis-Next-Phase-Look-Like-5-Key-Takeaways-from-1inchs-Unite-DeFi-Singapore",
+      "pubDate": "2025-10-28T12:55:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Charles Hoskinson Outlines Bold Vision for Cardano’s Future by 2030",
+      "link": "https://cryptopanic.com/news/cardano/26554945/Charles-Hoskinson-Outlines-Bold-Vision-for-Cardanos-Future-by-2030",
+      "pubDate": "2025-10-28T12:53:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ]
+    },
+    {
+      "title": "SWIFT Flywheel Spins XRP Or XLM For ISO Adoption",
+      "link": "https://cryptopanic.com/news/stellar/26554340/SWIFT-Flywheel-Spins-XRP-Or-XLM-For-ISO-Adoption",
+      "pubDate": "2025-10-28T12:49:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Uniswap Price Prediction 2025: Will UNI Crypto Hit $22 Before Year-End?",
+      "link": "https://cryptopanic.com/news/uniswap/26554515/Uniswap-Price-Prediction-2025-Will-UNI-Crypto-Hit-22-Before-Year-End",
+      "pubDate": "2025-10-28T12:30:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI"
+      ]
+    },
+    {
+      "title": "Canary Capital Launches First Litecoin and HBAR ETFs in the US",
+      "link": "https://cryptopanic.com/news/litecoin/26554240/Canary-Capital-Launches-First-Litecoin-and-HBAR-ETFs-in-the-US",
+      "pubDate": "2025-10-28T12:30:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Best Altcoins To Buy: Whales Are Investing In Chainlink, Aster and Bitcoin Hyper",
+      "link": "https://cryptopanic.com/news/chainlink/26556692/Best-Altcoins-To-Buy-Whales-Are-Investing-In-Chainlink-Aster-and-Bitcoin-Hyper",
+      "pubDate": "2025-10-28T12:30:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Altcoin News Today: Coins to Watch Include HBAR, TAO, LTC and VIRTUAL",
+      "link": "https://cryptopanic.com/news/litecoin/26553898/Altcoin-News-Today-Coins-to-Watch-Include-HBAR-TAO-LTC-and-VIRTUAL",
+      "pubDate": "2025-10-28T12:18:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "HBAR",
+        "TAO"
+      ]
+    },
+    {
+      "title": "Circle launches Arc public testnet with over 100 institutional participants including BlackRock, Visa and Anthropic",
+      "link": "https://cryptopanic.com/news/usd-coin/26552343/Circle-launches-Arc-public-testnet-with-over-100-institutional-participants-including-BlackRock-Visa-and-Anthropic",
+      "pubDate": "2025-10-28T12:04:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "DFI"
+      ]
+    },
+    {
+      "title": "Japan's $2T Payment Provider TIS Rolls Out Multi-Token Platform With Avalanche",
+      "link": "https://cryptopanic.com/news/avalanche-2/26553910/Japans-2T-Payment-Provider-TIS-Rolls-Out-Multi-Token-Platform-With-Avalanche",
+      "pubDate": "2025-10-28T12:01:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "CoinGate Data Shows: Amid Stablecoin Rise, Bitcoin Remains the Top Choice for Retail Crypto Payments",
+      "link": "https://cryptopanic.com/news/usd-coin/26553043/CoinGate-Data-Shows-Amid-Stablecoin-Rise-Bitcoin-Remains-the-Top-Choice-for-Retail-Crypto-Payments",
+      "pubDate": "2025-10-28T12:00:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDC"
+      ]
+    },
+    {
+      "title": "Coinbase Prime and Figment expand institutional staking to Solana, Cardano, Sui and other networks",
+      "link": "https://cryptopanic.com/news/cardano/26552232/Coinbase-Prime-and-Figment-expand-institutional-staking-to-Solana-Cardano-Sui-and-other-networks",
+      "pubDate": "2025-10-28T12:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ADA",
+        "SOL"
+      ]
+    },
+    {
+      "title": "Crypto Markets Today: BTC Holds at $114.5K, HBAR Soars on ETF News",
+      "link": "https://cryptopanic.com/news/hedera-hashgraph/26553908/Crypto-Markets-Today-BTC-Holds-at-1145K-HBAR-Soars-on-ETF-News",
+      "pubDate": "2025-10-28T12:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "AgriFORCE Growing Systems Plans $300 Million PIPE Financing",
+      "link": "https://cryptopanic.com/news/avalanche-2/26553896/AgriFORCE-Growing-Systems-Plans-300-Million-PIPE-Financing",
+      "pubDate": "2025-10-28T11:57:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AVAX",
+        "PIPE"
+      ]
+    },
+    {
+      "title": "Avalanche (AVAX) Poised for Rally as Technicals Turn Bullish and Volume Surges",
+      "link": "https://cryptopanic.com/news/avalanche-2/26552156/Avalanche-AVAX-Poised-for-Rally-as-Technicals-Turn-Bullish-and-Volume-Surges",
+      "pubDate": "2025-10-28T11:46:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "5 Best Crypto Casinos in 2025 – Top No ID Verification Online Casinos (November Update)",
+      "link": "https://cryptopanic.com/news/litecoin/26552169/5-Best-Crypto-Casinos-in-2025-Top-No-ID-Verification-Online-Casinos-November-Update",
+      "pubDate": "2025-10-28T11:44:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT"
+      ]
+    },
+    {
+      "title": "Bitcoin Dips Below $115,000 As Ethereum, Dogecoin, XRP Consolidate Weekend Gains",
+      "link": "https://cryptopanic.com/news/shiba-inu/26552225/Bitcoin-Dips-Below-115000-As-Ethereum-Dogecoin-XRP-Consolidate-Weekend-Gains",
+      "pubDate": "2025-10-28T11:43:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Shiba Inu Set for 1,200% Rally, Dogecoin Aims for 800%, While Lyno ($LYNO) Could Deliver 8,566% Gains",
+      "link": "https://cryptopanic.com/news/shiba-inu/26552093/Shiba-Inu-Set-for-1200-Rally-Dogecoin-Aims-for-800-While-Lyno-LYNO-Could-Deliver-8566-Gains",
+      "pubDate": "2025-10-28T11:37:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ]
+    },
+    {
+      "title": "HBAR Price Rallies 17% To Recover October Losses; What’s Next",
+      "link": "https://cryptopanic.com/news/hedera-hashgraph/26552328/HBAR-Price-Rallies-17-To-Recover-October-Losses-Whats-Next",
+      "pubDate": "2025-10-28T11:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Cardano Price Set for Breakout After Major AI Upgrade Sparks Investor Excitement",
+      "link": "https://cryptopanic.com/news/cardano/26551949/Cardano-Price-Set-for-Breakout-After-Major-AI-Upgrade-Sparks-Investor-Excitement",
+      "pubDate": "2025-10-28T11:20:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ]
+    },
+    {
+      "title": "Circle Launches Testnet for Arc Blockchain with Key Partners",
+      "link": "https://cryptopanic.com/news/usd-coin/26551946/Circle-Launches-Testnet-for-Arc-Blockchain-with-Key-Partners",
+      "pubDate": "2025-10-28T11:17:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC"
+      ]
+    },
+    {
+      "title": "Is Shiba Inu About to Break Out? Here's What You Need to Know",
+      "link": "https://cryptopanic.com/news/shiba-inu/26551777/Is-Shiba-Inu-About-to-Break-Out-Heres-What-You-Need-to-Know",
+      "pubDate": "2025-10-28T11:16:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "A"
+      ]
+    },
+    {
+      "title": "Circle Advances Arc Blockchain Testing with Major Institutions",
+      "link": "https://cryptopanic.com/news/usd-coin/26553893/Circle-Advances-Arc-Blockchain-Testing-with-Major-Institutions",
+      "pubDate": "2025-10-28T11:12:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC"
+      ]
+    },
+    {
+      "title": "Circle, Issuer of USDC, Starts Testing Arc Blockchain With Big Institutions Onboard",
+      "link": "https://cryptopanic.com/news/usd-coin/26552100/Circle-Issuer-of-USDC-Starts-Testing-Arc-Blockchain-With-Big-Institutions-Onboard",
+      "pubDate": "2025-10-28T11:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC"
+      ]
+    },
+    {
+      "title": "Nasdaq-listed AgriFORCE eyes $700M Avalanche treasury bet; AVAX price outlook",
+      "link": "https://cryptopanic.com/news/avalanche-2/26551773/Nasdaq-listed-AgriFORCE-eyes-700M-Avalanche-treasury-bet-AVAX-price-outlook",
+      "pubDate": "2025-10-28T10:58:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "AVAX"
+      ]
+    },
+    {
+      "title": "Whales Start Dumping Zcash on Its 9th Birthday",
+      "link": "https://cryptopanic.com/news/zcash/26554585/Whales-Start-Dumping-Zcash-on-Its-9th-Birthday",
+      "pubDate": "2025-10-28T10:55:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Morning Crypto Report: $1 Billion XRP Secured, Litecoin Price Spikes Ahead of ETF Launch, Zcash (ZEC) Overbought: Warning",
+      "link": "https://cryptopanic.com/news/litecoin/26550066/Morning-Crypto-Report-1-Billion-XRP-Secured-Litecoin-Price-Spikes-Ahead-of-ETF-Launch-Zcash-ZEC-Overbought-Warning",
+      "pubDate": "2025-10-28T10:46:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "LTC",
+        "ZEC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Hedera price forecast: HBAR eyes $0.23 amid ETF listing",
+      "link": "https://cryptopanic.com/news/hedera-hashgraph/26550644/Hedera-price-forecast-HBAR-eyes-023-amid-ETF-listing",
+      "pubDate": "2025-10-28T10:41:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Dogecoin Indicator That Ignited 2024 Rally Turns Bullish — DOGE and Viral Penny Token Lyno ($LYNO) to Rise 8,644%",
+      "link": "https://cryptopanic.com/news/shiba-inu/26549977/Dogecoin-Indicator-That-Ignited-2024-Rally-Turns-Bullish-DOGE-and-Viral-Penny-Token-Lyno-LYNO-to-Rise-8644",
+      "pubDate": "2025-10-28T10:36:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "DOGE",
+        "SHIB"
+      ]
+    },
+    {
+      "title": "Anthony Scaramucci Reacts to Major Hedera ETF Update",
+      "link": "https://cryptopanic.com/news/hedera-hashgraph/26549994/Anthony-Scaramucci-Reacts-to-Major-Hedera-ETF-Update",
+      "pubDate": "2025-10-28T10:33:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "I used the automatic USDT to USDC exchange service in Coinbase Wallet. I received USDC for small transactions, but not for large transactions.",
+      "link": "https://cryptopanic.com/news/usd-coin/26558830/I-used-the-automatic-USDT-to-USDC-exchange-service-in-Coinbase-Wallet-I-received-USDC-for-small-transactions-but-not-for-large-transactions",
+      "pubDate": "2025-10-28T10:31:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "TRX",
+        "COIN"
+      ]
+    },
+    {
+      "title": "Litecoin at a Major Turning Point as ETF and Privacy Narratives Converge",
+      "link": "https://cryptopanic.com/news/litecoin/26549985/Litecoin-at-a-Major-Turning-Point-as-ETF-and-Privacy-Narratives-Converge",
+      "pubDate": "2025-10-28T10:19:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Litecoin Price Prediction of $135 Ahead of ETF Launch as PEPENODE Soars",
+      "link": "https://cryptopanic.com/news/litecoin/26549805/Litecoin-Price-Prediction-of-135-Ahead-of-ETF-Launch-as-PEPENODE-Soars",
+      "pubDate": "2025-10-28T10:08:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Cup-and-Handle Ignites XRP — $4 in Sight Amid 20-Day Moving Average Reclaim",
+      "link": "https://cryptopanic.com/news/ripple/26549717/Cup-and-Handle-Ignites-XRP-4-in-Sight-Amid-20-Day-Moving-Average-Reclaim",
+      "pubDate": "2025-10-28T09:52:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cup-and-handle pattern shapes up for XRP as price reclaims the 20-Day moving average (MA), putting its $4 breakout in play.",
+      "currencies": [
+        "XRP",
+        "4"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "HBAR Analysis: 3 key levels to watch this week amid neutral trend",
+      "link": "https://cryptopanic.com/news/hedera-hashgraph/26549649/HBAR-Analysis-3-key-levels-to-watch-this-week-amid-neutral-trend",
+      "pubDate": "2025-10-28T09:45:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HBAR",
+        "Z"
+      ]
+    },
+    {
+      "title": "Shiba Inu Burn Rate Explodes 88,250% in 24 Hours, Rally Incoming?",
+      "link": "https://cryptopanic.com/news/shiba-inu/26549055/Shiba-Inu-Burn-Rate-Explodes-88250-in-24-Hours-Rally-Incoming",
+      "pubDate": "2025-10-28T09:37:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "4"
+      ]
+    },
+    {
+      "title": "Why is Tether So Profitable, and Will It Last?",
+      "link": "https://cryptopanic.com/news/usd-coin/26548691/Why-is-Tether-So-Profitable-and-Will-It-Last",
+      "pubDate": "2025-10-28T09:33:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "USA"
+      ]
+    },
+    {
+      "title": "Chainlink expands into $240B property tokenization with Balcony; check price forecast",
+      "link": "https://cryptopanic.com/news/chainlink/26549636/Chainlink-expands-into-240B-property-tokenization-with-Balcony-check-price-forecast",
+      "pubDate": "2025-10-28T09:33:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "Hedera, Litecoin, and Solana ETFs Go Live This Week on NYSE",
+      "link": "https://cryptopanic.com/news/litecoin/26548465/Hedera-Litecoin-and-Solana-ETFs-Go-Live-This-Week-on-NYSE",
+      "pubDate": "2025-10-28T09:32:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "We Are About To See An AVALANCHE Of Money Hitting Bitcoin Cardano ADA Makes A MAJOR Announcement",
+      "link": "https://cryptopanic.com/news/cardano/26549218/We-Are-About-To-See-An-AVALANCHE-Of-Money-Hitting-Bitcoin-Cardano-ADA-Makes-A-MAJOR-Announcement",
+      "pubDate": "2025-10-28T09:30:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "AVAX"
+      ]
+    },
+    {
+      "title": "David Bailey Predicts $145,000 End-of-Year Price Point For Bitcoin Amid Whispers Of An Extended Bear Rally",
+      "link": "https://cryptopanic.com/news/usd-coin/26548014/David-Bailey-Predicts-145000-End-of-Year-Price-Point-For-Bitcoin-Amid-Whispers-Of-An-Extended-Bear-Rally",
+      "pubDate": "2025-10-28T09:09:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "USDC"
+      ]
+    },
+    {
+      "title": "ZEC ‘Bubble’ Bigger Than 2021, CryptoQuant Data Shows",
+      "link": "https://cryptopanic.com/news/zcash/26549713/ZEC-Bubble-Bigger-Than-2021-CryptoQuant-Data-Shows",
+      "pubDate": "2025-10-28T09:06:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Ripple CTO Reveals Stunning XRP Escrow Fact as Rights May Be Sold",
+      "link": "https://cryptopanic.com/news/ripple/26547982/Ripple-CTO-Reveals-Stunning-XRP-Escrow-Fact-as-Rights-May-Be-Sold",
+      "pubDate": "2025-10-28T09:06:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "CTO David Schwartz says Ripple can sell off rights to XRP locked in escrow, sparking debate on what really counts as supply on the altcoin market.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Altcoin ETFs Approval: Solana, Litecoin and Hedera ETFs to Launch",
+      "link": "https://cryptopanic.com/news/litecoin/26550817/Altcoin-ETFs-Approval-Solana-Litecoin-and-Hedera-ETFs-to-Launch",
+      "pubDate": "2025-10-28T09:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "‘Very Big For Cardano’ Charles Hoskinson Hails Incoming Payment Mechanism For AI Agents",
+      "link": "https://cryptopanic.com/news/cardano/26547956/Very-Big-For-Cardano-Charles-Hoskinson-Hails-Incoming-Payment-Mechanism-For-AI-Agents",
+      "pubDate": "2025-10-28T08:58:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ]
+    },
+    {
+      "title": "Exclusive XRP News: Bill Morgan Connects XRP ETF Delay to Ripple’s History with SEC",
+      "link": "https://cryptopanic.com/news/litecoin/26549727/Exclusive-XRP-News-Bill-Morgan-Connects-XRP-ETF-Delay-to-Ripples-History-with-SEC",
+      "pubDate": "2025-10-28T08:52:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XRP",
+        "SOL",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "First Hedera and Litecoin ETFs approved: HBAR and LTC prices take off",
+      "link": "https://cryptopanic.com/news/litecoin/26547933/First-Hedera-and-Litecoin-ETFs-approved-HBAR-and-LTC-prices-take-off",
+      "pubDate": "2025-10-28T08:45:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "LTC Analysis: daily trend neutral, 3 scenarios to watch",
+      "link": "https://cryptopanic.com/news/litecoin/26549643/LTC-Analysis-daily-trend-neutral-3-scenarios-to-watch",
+      "pubDate": "2025-10-28T08:44:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "Z"
+      ]
+    },
+    {
+      "title": "Cardano’s $3 Target May Hit, but Ozak AI Could Become the Breakout Winner",
+      "link": "https://cryptopanic.com/news/cardano/26547796/Cardanos-3-Target-May-Hit-but-Ozak-AI-Could-Become-the-Breakout-Winner",
+      "pubDate": "2025-10-28T08:35:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ]
+    },
+    {
+      "title": "UNI Analysis: this week’s momentum check and 3 levels to watch",
+      "link": "https://cryptopanic.com/news/uniswap/26549642/UNI-Analysis-this-weeks-momentum-check-and-3-levels-to-watch",
+      "pubDate": "2025-10-28T08:09:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "UNI"
+      ]
+    },
+    {
+      "title": "Zcash Price Forecast: ZEC faces correction risks as retail activity rises, momentum weakens",
+      "link": "https://cryptopanic.com/news/zcash/26548694/Zcash-Price-Forecast-ZEC-faces-correction-risks-as-retail-activity-rises-momentum-weakens",
+      "pubDate": "2025-10-28T08:08:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Solana, Litecoin, Hedera ETFs Ready? Experts Expect Tuesday Launch Despite Goverment Shutdown",
+      "link": "https://cryptopanic.com/news/litecoin/26546074/Solana-Litecoin-Hedera-ETFs-Ready-Experts-Expect-Tuesday-Launch-Despite-Goverment-Shutdown",
+      "pubDate": "2025-10-28T08:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "XRP"
+      ]
+    },
+    {
+      "title": "Stellar (XLM) Faces Rejection at Key Resistance as Altcoin Liquidity Dries Up",
+      "link": "https://cryptopanic.com/news/stellar/26546036/Stellar-XLM-Faces-Rejection-at-Key-Resistance-as-Altcoin-Liquidity-Dries-Up",
+      "pubDate": "2025-10-28T07:48:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "ADA Analysis: price holds below EMAs, things to watch this week",
+      "link": "https://cryptopanic.com/news/cardano/26546047/ADA-Analysis-price-holds-below-EMAs-things-to-watch-this-week",
+      "pubDate": "2025-10-28T07:36:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "ADA",
+        "ATR"
+      ]
+    },
+    {
+      "title": "Hedera Price Breaks $0.20, Is $0.233 the Next Stop?",
+      "link": "https://cryptopanic.com/news/hedera-hashgraph/26546893/Hedera-Price-Breaks-020-Is-0233-the-Next-Stop",
+      "pubDate": "2025-10-28T07:17:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "HBAR ETF Goes Live on Nasdaq — What Hedera’s First U.S. Listing Means for Investors",
+      "link": "https://cryptopanic.com/news/hedera-hashgraph/26546035/HBAR-ETF-Goes-Live-on-Nasdaq-What-Hederas-First-US-Listing-Means-for-Investors",
+      "pubDate": "2025-10-28T07:12:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "What Is Token Burning and Why Do Crypto Projects Do It?",
+      "link": "https://cryptopanic.com/news/shiba-inu/26545648/What-Is-Token-Burning-and-Why-Do-Crypto-Projects-Do-It",
+      "pubDate": "2025-10-28T06:40:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SHIB",
+        "DEFI"
+      ]
+    },
+    {
+      "title": "IBM Teams With Crypto Wallet Provider to Transform Traditional Banking",
+      "link": "https://cryptopanic.com/news/chainlink/26545996/IBM-Teams-With-Crypto-Wallet-Provider-to-Transform-Traditional-Banking",
+      "pubDate": "2025-10-28T06:30:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "Litecoin Activity Surges as MWEB Privacy Feature Hits 260K LTC — Is a Rally Next?",
+      "link": "https://cryptopanic.com/news/litecoin/26545784/Litecoin-Activity-Surges-as-MWEB-Privacy-Feature-Hits-260K-LTC-Is-a-Rally-Next",
+      "pubDate": "2025-10-28T06:09:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "Spot Solana, Litecoin, And HBAR ETFs Set To Go Live Tuesday As US Exchange Posts Listings",
+      "link": "https://cryptopanic.com/news/litecoin/26544204/Spot-Solana-Litecoin-And-HBAR-ETFs-Set-To-Go-Live-Tuesday-As-US-Exchange-Posts-Listings",
+      "pubDate": "2025-10-28T06:05:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "x402 Protocol Hack: GoPlus Warns of $17.6K USDC Theft",
+      "link": "https://cryptopanic.com/news/usd-coin/26546068/x402-Protocol-Hack-GoPlus-Warns-of-176K-USDC-Theft",
+      "pubDate": "2025-10-28T05:55:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC"
+      ]
+    },
+    {
+      "title": "HBAR ETF Goes Live on Nasdaq During U.S Government Shutdown",
+      "link": "https://cryptopanic.com/news/hedera-hashgraph/26545679/HBAR-ETF-Goes-Live-on-Nasdaq-During-US-Government-Shutdown",
+      "pubDate": "2025-10-28T05:49:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Altcoin ETFs Could Hit U.S. Markets This Week as Solana, Litecoin and HBAR Enter the Spotlight",
+      "link": "https://cryptopanic.com/news/litecoin/26544079/Altcoin-ETFs-Could-Hit-US-Markets-This-Week-as-Solana-Litecoin-and-HBAR-Enter-the-Spotlight",
+      "pubDate": "2025-10-28T05:30:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LTC",
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano Price Forecast: ADA eyes breakout as whale accumulation and on-chain data turn bullish",
+      "link": "https://cryptopanic.com/news/cardano/26545850/Cardano-Price-Forecast-ADA-eyes-breakout-as-whale-accumulation-and-on-chain-data-turn-bullish",
+      "pubDate": "2025-10-28T05:30:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ]
+    },
+    {
+      "title": "Cardano price prediction – Whales unlikely to send ADA’s price soaring just yet!",
+      "link": "https://cryptopanic.com/news/cardano/26544030/Cardano-price-prediction-Whales-unlikely-to-send-ADAs-price-soaring-just-yet",
+      "pubDate": "2025-10-28T05:05:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ]
+    },
+    {
+      "title": "Can Cardano Still Hit $6.25 This Cycle? Analyst Answers",
+      "link": "https://cryptopanic.com/news/cardano/26544001/Can-Cardano-Still-Hit-625-This-Cycle-Analyst-Answers",
+      "pubDate": "2025-10-28T05:00:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ]
+    },
+    {
+      "title": "Crypto ETF News: Litecoin and Hedera ETFs to Begin Trading on Nasdaq",
+      "link": "https://cryptopanic.com/news/litecoin/26544000/Crypto-ETF-News-Litecoin-and-Hedera-ETFs-to-Begin-Trading-on-Nasdaq",
+      "pubDate": "2025-10-28T05:00:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "XLM Price Prediction: Could XLM Reach $1.00 While AlphaPepe Becomes the Best Crypto to Buy Today",
+      "link": "https://cryptopanic.com/news/stellar/26543999/XLM-Price-Prediction-Could-XLM-Reach-100-While-AlphaPepe-Becomes-the-Best-Crypto-to-Buy-Today",
+      "pubDate": "2025-10-28T05:00:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XLM"
+      ]
+    },
+    {
+      "title": "Top Gainers Include MemeCore, Official Trump Coin, Hedera: Best Crypto to Buy Now?",
+      "link": "https://cryptopanic.com/news/hedera-hashgraph/26544137/Top-Gainers-Include-MemeCore-Official-Trump-Coin-Hedera-Best-Crypto-to-Buy-Now",
+      "pubDate": "2025-10-28T04:51:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HBAR",
+        "TRUMP",
+        "M"
+      ]
+    },
+    {
+      "title": "LINK on the Verge of Breakout: Whales Accumulate $9M as Bulls Target $23 and Beyond",
+      "link": "https://cryptopanic.com/news/chainlink/26543970/LINK-on-the-Verge-of-Breakout-Whales-Accumulate-9M-as-Bulls-Target-23-and-Beyond",
+      "pubDate": "2025-10-28T04:47:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "Citi and Coinbase Join Forces to Bring Stablecoin Payments to Clients",
+      "link": "https://cryptopanic.com/news/usd-coin/26543961/Citi-and-Coinbase-Join-Forces-to-Bring-Stablecoin-Payments-to-Clients",
+      "pubDate": "2025-10-28T04:43:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "USDC"
+      ]
+    },
+    {
+      "title": "TRON Daily Report: October 28, 2025 – Protocol Volatility, Meme Rotation, New Alpha Pools",
+      "link": "https://cryptopanic.com/news/tron/26543962/TRON-Daily-Report-October-28-2025-Protocol-Volatility-Meme-Rotation-New-Alpha-Pools",
+      "pubDate": "2025-10-28T04:40:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "WTRX"
+      ]
+    },
+    {
+      "title": "Top Crypto Gainers: Official Trump, Helium, Hedera shine bright among rising altcoins",
+      "link": "https://cryptopanic.com/news/hedera-hashgraph/26544748/Top-Crypto-Gainers-Official-Trump-Helium-Hedera-shine-bright-among-rising-altcoins",
+      "pubDate": "2025-10-28T04:35:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HBAR",
+        "HNT",
+        "TRUMP"
+      ]
+    },
+    {
+      "title": "NYSE Shocks Market With Four New Spot Crypto ETFs During Shutdown",
+      "link": "https://cryptopanic.com/news/litecoin/26543345/NYSE-Shocks-Market-With-Four-New-Spot-Crypto-ETFs-During-Shutdown",
+      "pubDate": "2025-10-28T04:26:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "HBAR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Will Cardano’s Token Burn Strategy Boost ADA to New Highs? Analysts Weigh In",
+      "link": "https://cryptopanic.com/news/cardano/26543013/Will-Cardanos-Token-Burn-Strategy-Boost-ADA-to-New-Highs-Analysts-Weigh-In",
+      "pubDate": "2025-10-28T04:13:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA"
+      ]
+    },
+    {
+      "title": "Litecoin Price Forecast: LTC eyes $135 as spot ETF launch on Nasdaq boosts bullish momentum",
+      "link": "https://cryptopanic.com/news/litecoin/26544058/Litecoin-Price-Forecast-LTC-eyes-135-as-spot-ETF-launch-on-Nasdaq-boosts-bullish-momentum",
+      "pubDate": "2025-10-28T04:06:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LTC"
+      ]
+    },
+    {
+      "title": "HBAR Token Rallies 8% Ahead Of Nasdaq ETF Debut — Anthony Scaramucci Describes It As The 'Sound Of Inevitability'",
+      "link": "https://cryptopanic.com/news/hedera-hashgraph/26543010/HBAR-Token-Rallies-8-Ahead-Of-Nasdaq-ETF-Debut-Anthony-Scaramucci-Describes-It-As-The-Sound-Of-Inevitability",
+      "pubDate": "2025-10-28T03:56:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Security Alert Issued for x402 Cross-Chain Protocol",
+      "link": "https://cryptopanic.com/news/usd-coin/26544670/Security-Alert-Issued-for-x402-Cross-Chain-Protocol",
+      "pubDate": "2025-10-28T03:53:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "USDC"
+      ]
+    },
+    {
+      "title": "Why XRP Is Missing From the Spot ETF Approvals Set for Tomorrow?",
+      "link": "https://cryptopanic.com/news/litecoin/26543986/Why-XRP-Is-Missing-From-the-Spot-ETF-Approvals-Set-for-Tomorrow",
+      "pubDate": "2025-10-28T03:52:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "XRP",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "ClearBank Joins Circle to Bring USDC and EURC to Europe’s Banking Rails",
+      "link": "https://cryptopanic.com/news/usd-coin/26543008/ClearBank-Joins-Circle-to-Bring-USDC-and-EURC-to-Europes-Banking-Rails",
+      "pubDate": "2025-10-28T03:47:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "EURC"
+      ]
+    },
+    {
+      "title": "Bitcoin Buzz: Michael Saylor Drops ‘Orange Dot Day’ Hint",
+      "link": "https://cryptopanic.com/news/zcash/26541832/Bitcoin-Buzz-Michael-Saylor-Drops-Orange-Dot-Day-Hint",
+      "pubDate": "2025-10-28T03:00:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Chainlink whales drain $9M from Binance – Can LINK bulls break $20 wall?",
+      "link": "https://cryptopanic.com/news/chainlink/26540795/Chainlink-whales-drain-9M-from-Binance-Can-LINK-bulls-break-20-wall",
+      "pubDate": "2025-10-28T02:00:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "LINK"
+      ]
+    },
+    {
+      "title": "Canary files 8-A registrations for Litecoin and HBAR ETFs",
+      "link": "https://cryptopanic.com/news/litecoin/26540615/Canary-files-8-A-registrations-for-Litecoin-and-HBAR-ETFs",
+      "pubDate": "2025-10-28T01:42:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "HBAR",
+        "A"
+      ]
+    },
+    {
+      "title": "Triple madness! New Crypto.com Exchange users can win US$20 in CRO instantly, and everyone* can compete for USDC + CRO rewards.",
+      "link": "https://cryptopanic.com/news/usd-coin/26542702/Triple-madness-New-Cryptocom-Exchange-users-can-win-US20-in-CRO-instantly-and-everyone-can-compete-for-USDC-CRO-rewards",
+      "pubDate": "2025-10-28T01:26:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "submitted by /u/MarkY_Crypto [link] [comments]",
+      "currencies": [
+        "USDC",
+        "CRO",
+        "MCO"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The USDC Aptos Deposit Campaign ends tomorrow",
+      "link": "https://cryptopanic.com/news/usd-coin/26542700/The-USDC-Aptos-Deposit-Campaign-ends-tomorrow",
+      "pubDate": "2025-10-28T01:25:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "APT",
+        "MCO"
+      ]
+    },
+    {
+      "title": "⏳ October's PAXG App Campaign ends on 4 Nov",
+      "link": "https://cryptopanic.com/news/pax-gold/26542698/Octobers-PAXG-App-Campaign-ends-on-4-Nov",
+      "pubDate": "2025-10-28T01:24:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "PAXG",
+        "MCO",
+        "4"
+      ]
+    },
+    {
+      "title": "Zcash price prediction – Is another 100% rally in sight soon?",
+      "link": "https://cryptopanic.com/news/zcash/26540463/Zcash-price-prediction-Is-another-100-rally-in-sight-soon",
+      "pubDate": "2025-10-28T01:00:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Litecoin, HBAR, Solana ETFs Set to List on Nasdaq",
+      "link": "https://cryptopanic.com/news/litecoin/26539426/Litecoin-HBAR-Solana-ETFs-Set-to-List-on-Nasdaq",
+      "pubDate": "2025-10-28T00:04:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "SOL",
+        "LTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "HBAR steps onto Wall Street: Canary’s Hedera ETF Going Live on Nasdaq Imminently",
+      "link": "https://cryptopanic.com/news/litecoin/26540529/HBAR-steps-onto-Wall-Street-Canarys-Hedera-ETF-Going-Live-on-Nasdaq-Imminently",
+      "pubDate": "2025-10-28T00:04:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "LTC",
+        "HBAR"
+      ]
+    },
+    {
+      "title": "Crypto Market Prediction: Bitcoin (BTC) Destroyed $600,000,000 Resistance Level, Shiba Inu (SHIB) Price Battle Next, Is Ethereum's (ETH) $4,200 Temporary?",
+      "link": "https://cryptopanic.com/news/shiba-inu/26539442/Crypto-Market-Prediction-Bitcoin-BTC-Destroyed-600000000-Resistance-Level-Shiba-Inu-SHIB-Price-Battle-Next-Is-Ethereums-ETH-4200-Temporary",
+      "pubDate": "2025-10-28T00:01:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "SHIB"
+      ]
+    },
+    {
+      "title": "Zcash (ZEC) Soars Past 2021 Highs as Arthur Hayes Predicts $10K and Privacy Narrative Reignites",
+      "link": "https://cryptopanic.com/news/zcash/26539409/Zcash-ZEC-Soars-Past-2021-Highs-as-Arthur-Hayes-Predicts-10K-and-Privacy-Narrative-Reignites",
+      "pubDate": "2025-10-28T00:00:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEC",
+        "A"
+      ]
+    },
+    {
+      "title": "Circle News: ClearBank and Circle Forge Strategic Alliance to Supercharge USDC Access in Europe",
+      "link": "https://cryptopanic.com/news/usd-coin/26539408/Circle-News-ClearBank-and-Circle-Forge-Strategic-Alliance-to-Supercharge-USDC-Access-in-Europe",
+      "pubDate": "2025-10-28T00:00:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "USDC",
+        "EURC"
+      ]
+    }
+  ]
+}

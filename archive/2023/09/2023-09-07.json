@@ -1,0 +1,513 @@
+{
+  "date": "2023-09-07",
+  "fetchedAt": "2026-02-05T07:27:07.056Z",
+  "articleCount": 35,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "CFTC Goes After Opyn, Other DeFi Operations in Enforcement Sweep",
+      "link": "https://cryptopanic.com/news/18887762/CFTC-Goes-After-Opyn-Other-DeFi-Operations-in-Enforcement-Sweep",
+      "pubDate": "2023-09-07T23:01:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ZRX"
+      ]
+    },
+    {
+      "title": "SNX pumps 18% ahead of V3 upgrade",
+      "link": "https://cryptopanic.com/news/18887732/SNX-pumps-18-ahead-of-V3-upgrade",
+      "pubDate": "2023-09-07T22:30:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SNX"
+      ]
+    },
+    {
+      "title": "Bitcoin Surges Suddenly: What’s the Latest Data?",
+      "link": "https://cryptopanic.com/news/18887619/Bitcoin-Surges-Suddenly-Whats-the-Latest-Data",
+      "pubDate": "2023-09-07T21:29:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "There was a sudden movement in Bitcoin, the world's largest cryptocurrency, with an increase of over 2 percent. Here are the details. Continue Reading: Bitcoin Surges Suddenly: What’s the Latest Data?",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Fourth FTX Executive Pleads Guilty In FTX Fraud Case",
+      "link": "https://cryptopanic.com/news/18887602/Fourth-FTX-Executive-Pleads-Guilty-In-FTX-Fraud-Case",
+      "pubDate": "2023-09-07T21:19:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Ryan Salame has agreed to pay $11 million in fines and major asset forfeitures after confessing to campaign finance violations.",
+      "currencies": [
+        "FTT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Coinbase and Aave Unite to Drive Tokenized Asset Adoption",
+      "link": "https://cryptopanic.com/news/18887464/Coinbase-and-Aave-Unite-to-Drive-Tokenized-Asset-Adoption",
+      "pubDate": "2023-09-07T20:38:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "TOKEN2049 Singapore Set to Be World’s Largest Web3 Event",
+      "link": "https://cryptopanic.com/news/18887462/TOKEN2049-Singapore-Set-to-Be-Worlds-Largest-Web3-Event",
+      "pubDate": "2023-09-07T20:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TRX",
+        "EOS",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Is Axie Infinity Worth Playing? A Gamer's Perspective",
+      "link": "https://cryptopanic.com/news/18887436/Is-Axie-Infinity-Worth-Playing-A-Gamers-Perspective",
+      "pubDate": "2023-09-07T19:38:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "Ledger partners with HAYVN to bring secure off-ramping to customers",
+      "link": "https://cryptopanic.com/news/maker/18887388/Ledger-partners-with-HAYVN-to-bring-secure-off-ramping-to-customers",
+      "pubDate": "2023-09-07T19:11:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Building sustainability and resilience into ‘Dev Fund 2’",
+      "link": "https://cryptopanic.com/news/18887007/Building-sustainability-and-resilience-into-Dev-Fund-2",
+      "pubDate": "2023-09-07T16:11:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEC"
+      ]
+    },
+    {
+      "title": "Biggest Movers: TON Moves Towards $1.90, XLM Remains Near Recent Highs",
+      "link": "https://cryptopanic.com/news/18886969/Biggest-Movers-TON-Moves-Towards-190-XLM-Remains-Near-Recent-Highs",
+      "pubDate": "2023-09-07T16:04:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XLM",
+        "TON"
+      ]
+    },
+    {
+      "title": "XRP Poised for Take-Off in the US via Ripple’s ODL as Pundit Sees Potential Adoption By Big Banks",
+      "link": "https://cryptopanic.com/news/18886902/XRP-Poised-for-Take-Off-in-the-US-via-Ripples-ODL-as-Pundit-Sees-Potential-Adoption-By-Big-Banks",
+      "pubDate": "2023-09-07T15:25:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "This sparked hope that banks could soon be using ODL in the US. Ripple Chief Technology Officer David Schwartz said one day after the ruling...",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano Holders Unstake $45M in 7 Days – What Next For ADA Price",
+      "link": "https://cryptopanic.com/news/18886859/Cardano-Holders-Unstake-45M-in-7-Days-What-Next-For-ADA-Price",
+      "pubDate": "2023-09-07T15:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Over the past three weeks, Cardano’s (ADA) price has consolidated within the $0.25 – $0.28 territory. But recent on-chain data trends could tilt the momentum in favor of the bears. The pensive mood surrounding the global altcoin market has recently seen Cardano’s price stagnate around the $0.25 range. The recent on-chain activity among ADA price speculators and DeFi stakers raises even...",
+      "currencies": [
+        "BTC",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "ICP’s Bullish Surge Faces Strong Resistance as Momentum Fades",
+      "link": "https://cryptopanic.com/news/18886670/ICPs-Bullish-Surge-Faces-Strong-Resistance-as-Momentum-Fades",
+      "pubDate": "2023-09-07T14:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "ICP"
+      ]
+    },
+    {
+      "title": "Node Software Upgrade: ZEN 4.1.0 is Available to Download",
+      "link": "https://cryptopanic.com/news/18886643/Node-Software-Upgrade-ZEN-410-is-Available-to-Download",
+      "pubDate": "2023-09-07T14:15:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEN"
+      ]
+    },
+    {
+      "title": "Bitcoin Could Decline Further Before A Rebound, Here’s Why",
+      "link": "https://cryptopanic.com/news/18886614/Bitcoin-Could-Decline-Further-Before-A-Rebound-Heres-Why",
+      "pubDate": "2023-09-07T14:09:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "QNT"
+      ]
+    },
+    {
+      "title": "Ripple CTO Confirms Ripple Will Announce IPO, SEC Settlement at NYC Party",
+      "link": "https://cryptopanic.com/news/18886545/Ripple-CTO-Confirms-Ripple-Will-Announce-IPO-SEC-Settlement-at-NYC-Party",
+      "pubDate": "2023-09-07T13:34:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "As Ripple gears up to celebrate its recent legal triumph over the U.S. regulator, there have been a lot of speculations swirling around the possibility of the firm making groundbreaking announcements to the community of XRP enthusiasts. Interestingly, a Ripple executive has confirmed the community’s speculation in a recent Twitter exchange. In a tweet, XRPP, […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Shatters Volume Records as Major Stakeholders Make Waves",
+      "link": "https://cryptopanic.com/news/18886461/XRP-Shatters-Volume-Records-as-Major-Stakeholders-Make-Waves",
+      "pubDate": "2023-09-07T13:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "XRP has smashed 7-month volume records, fueled by major stakeholders, amid Ripple's legal showdown with the SEC.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Tokenization Advocacy Group Wants to Bring the 'Next Trillion' of Assets to Blockchain",
+      "link": "https://cryptopanic.com/news/18886453/Tokenization-Advocacy-Group-Wants-to-Bring-the-Next-Trillion-of-Assets-to-Blockchain",
+      "pubDate": "2023-09-07T13:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Binance Releases New Proof-of-Reserves Report With Some Tokens Missing",
+      "link": "https://cryptopanic.com/news/18886392/Binance-Releases-New-Proof-of-Reserves-Report-With-Some-Tokens-Missing",
+      "pubDate": "2023-09-07T12:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "BUSD"
+      ]
+    },
+    {
+      "title": "IOTA closer to ETH compatibility as Shimmer nears key milestone",
+      "link": "https://cryptopanic.com/news/18886350/IOTA-closer-to-ETH-compatibility-as-Shimmer-nears-key-milestone",
+      "pubDate": "2023-09-07T12:29:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "IOTA now step closer to ETH interoperability",
+      "currencies": [
+        "ETH",
+        "MIOTA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto trading sinks to 2019 levels as Binance sees market dip and Huobi volumes surge",
+      "link": "https://cryptopanic.com/news/18886339/Crypto-trading-sinks-to-2019-levels-as-Binance-sees-market-dip-and-Huobi-volumes-surge",
+      "pubDate": "2023-09-07T12:20:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "HT"
+      ]
+    },
+    {
+      "title": "Coinbase and Aave Form Coalition to Promote Tokenized Assets",
+      "link": "https://cryptopanic.com/news/18885384/Coinbase-and-Aave-Form-Coalition-to-Promote-Tokenized-Assets",
+      "pubDate": "2023-09-07T12:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Members Include Circle, Centrifuge and Goldfinch",
+      "currencies": [
+        "AAVE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "BUSD Loses Global Ranking — Is It Time to Look for Another Stablecoin?",
+      "link": "https://cryptopanic.com/news/18886194/BUSD-Loses-Global-Ranking-Is-It-Time-to-Look-for-Another-Stablecoin",
+      "pubDate": "2023-09-07T11:28:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "BUSD"
+      ]
+    },
+    {
+      "title": "dYdX Foundation publishes semi-annual report tracking ecosystem growth",
+      "link": "https://cryptopanic.com/news/18886130/dYdX-Foundation-publishes-semi-annual-report-tracking-ecosystem-growth",
+      "pubDate": "2023-09-07T11:01:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DYDX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano Introduces New Technology: Warp Transactions",
+      "link": "https://cryptopanic.com/news/18886136/Cardano-Introduces-New-Technology-Warp-Transactions",
+      "pubDate": "2023-09-07T11:01:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "New technology noticed by Charles Hoskinson",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 7
+      }
+    },
+    {
+      "title": "XRP Ledger to Get Major Upgrade With Game-Changing Features",
+      "link": "https://cryptopanic.com/news/18886056/XRP-Ledger-to-Get-Major-Upgrade-With-Game-Changing-Features",
+      "pubDate": "2023-09-07T10:38:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "RippleX announces significant step forward in bringing DeFi AMM to XRP mainnet",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Crypto Phishing Victim Loses $24 Million in Wallet Approval Scam",
+      "link": "https://cryptopanic.com/news/18885701/Crypto-Phishing-Victim-Loses-24-Million-in-Wallet-Approval-Scam",
+      "pubDate": "2023-09-07T08:15:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "RPL"
+      ]
+    },
+    {
+      "title": "$ADA: A Closer Look at Cardano-Powered DEX WingRiders’ Launchpad Platform",
+      "link": "https://cryptopanic.com/news/maker/18885708/ADA-A-Closer-Look-at-Cardano-Powered-DEX-WingRiders-Launchpad-Platform",
+      "pubDate": "2023-09-07T08:06:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "ADA",
+        "MKR"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin Exchange Binance Will Not Charge Fees for Spot Transactions Made with the Currencies of These Three Countries!",
+      "link": "https://cryptopanic.com/news/maker/18885641/Bitcoin-Exchange-Binance-Will-Not-Charge-Fees-for-Spot-Transactions-Made-with-the-Currencies-of-These-Three-Countries",
+      "pubDate": "2023-09-07T07:46:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "MKR"
+      ]
+    },
+    {
+      "title": "XMR bulls stand firm amid a sluggish market: Is a rally on the cards?",
+      "link": "https://cryptopanic.com/news/18885607/XMR-bulls-stand-firm-amid-a-sluggish-market-Is-a-rally-on-the-cards",
+      "pubDate": "2023-09-07T07:30:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XMR"
+      ]
+    },
+    {
+      "title": "B2Binpay V17 Is Live With Major Feature Enhancements and Competitive Prices",
+      "link": "https://cryptopanic.com/news/18885592/B2Binpay-V17-Is-Live-With-Major-Feature-Enhancements-and-Competitive-Prices",
+      "pubDate": "2023-09-07T06:26:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "TUSD"
+      ]
+    },
+    {
+      "title": "Ripple’s Chris Larsen Criticizes U.S. Crypto Policy, Says San Francisco Lost its Status as Blockchain Capital",
+      "link": "https://cryptopanic.com/news/18885478/Ripples-Chris-Larsen-Criticizes-US-Crypto-Policy-Says-San-Francisco-Lost-its-Status-as-Blockchain-Capital",
+      "pubDate": "2023-09-07T05:50:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "On September 6, 2023, Chris Larsen, the Co-Founder and Executive Chairman of Ripple Labs, sat down for an interview with Ed Ludlow, co-host of Bloomberg Technology, which is a daily tech news show on Bloomberg TV. U.S. Crypto Policy Criticisms Larsen was highly critical of the United States’ approach to cryptocurrency and blockchain regulation. He […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Maker [MKR] stalls at this key Fib level — will its rally sustain?",
+      "link": "https://cryptopanic.com/news/maker/18885455/Maker-MKR-stalls-at-this-key-Fib-level-will-its-rally-sustain",
+      "pubDate": "2023-09-07T05:30:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "EOS Price Analysis: Key Breakdown Support Intact At $0.555",
+      "link": "https://cryptopanic.com/news/18885412/EOS-Price-Analysis-Key-Breakdown-Support-Intact-At-0555",
+      "pubDate": "2023-09-07T04:48:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "EOS"
+      ]
+    },
+    {
+      "title": "Flamingo Finance now sponsoring Meme2Earn contests",
+      "link": "https://cryptopanic.com/news/18885331/Flamingo-Finance-now-sponsoring-Meme2Earn-contests",
+      "pubDate": "2023-09-07T03:02:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    }
+  ]
+}

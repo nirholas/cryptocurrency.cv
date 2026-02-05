@@ -1,0 +1,37 @@
+{
+  "date": "2019-05-17",
+  "fetchedAt": "2026-02-05T07:27:06.964Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitfinex Will List Its New Exchange Token Starting Monday",
+      "link": "https://cryptopanic.com/news/5453003/Bitfinex-Will-List-Its-New-Exchange-Token-Starting-Monday",
+      "pubDate": "2019-05-17T16:08:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "USDT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Justin Sun: We should have fired former-CTO Lucien Chen earlier",
+      "link": "https://cryptopanic.com/news/tron/5451588/Justin-Sun-We-should-have-fired-former-CTO-Lucien-Chen-earlier",
+      "pubDate": "2019-05-17T14:00:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ]
+    }
+  ]
+}

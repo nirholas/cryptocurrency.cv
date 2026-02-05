@@ -1,0 +1,43 @@
+{
+  "date": "2018-06-06",
+  "fetchedAt": "2026-02-05T07:27:06.981Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ripple CEO Believes Bitcoin May Face Similar Fate To Napster",
+      "link": "https://cryptopanic.com/news/ripple/2156289/Ripple-CEO-Believes-Bitcoin-May-Face-Similar-Fate-To-Napster",
+      "pubDate": "2018-06-06T21:45:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 7
+      }
+    },
+    {
+      "title": "Bitcoin Gold to Implement New PoW Algorithm Preventing Future 51 Percent Attacks",
+      "link": "https://cryptopanic.com/news/2142165/Bitcoin-Gold-to-Implement-New-PoW-Algorithm-Preventing-Future-51-Percent-Attacks",
+      "pubDate": "2018-06-06T09:45:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BTG"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "date": "2019-10-15",
+  "fetchedAt": "2026-02-05T07:27:06.681Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "TRON (TRX) Price Analysis: TRX/BTC Breaks Through the Important Resistance",
+      "link": "https://cryptopanic.com/news/6862623/TRON-TRX-Price-Analysis-TRXBTC-Breaks-Through-the-Important-Resistance",
+      "pubDate": "2019-10-15T15:30:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,411 @@
+{
+  "date": "2021-03-14",
+  "fetchedAt": "2026-02-05T07:27:06.829Z",
+  "articleCount": 28,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Newb",
+      "link": "https://cryptopanic.com/news/11620649/Newb",
+      "pubDate": "2021-03-14T23:31:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TOMO"
+      ]
+    },
+    {
+      "title": "COBOL Programmers are Back In Demand. Seriously.",
+      "link": "https://cryptopanic.com/news/11620876/COBOL-Programmers-are-Back-In-Demand-Seriously",
+      "pubDate": "2021-03-14T21:33:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MFT"
+      ]
+    },
+    {
+      "title": "Age Of Rust: excited to play! Tips for a smooth experience?",
+      "link": "https://cryptopanic.com/news/11620513/Age-Of-Rust-excited-to-play-Tips-for-a-smooth-experience",
+      "pubDate": "2021-03-14T21:31:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "ENJ"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Meme says it all",
+      "link": "https://cryptopanic.com/news/11620420/Meme-says-it-all",
+      "pubDate": "2021-03-14T20:02:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "Dark mode implemented on Supra Finance!",
+      "link": "https://cryptopanic.com/news/11621735/Dark-mode-implemented-on-Supra-Finance?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-14T19:32:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SUPRA",
+        "FLP"
+      ]
+    },
+    {
+      "title": "To the paper hands: I'LL WAVE FROM THE TOP!",
+      "link": "https://cryptopanic.com/news/11620392/To-the-paper-hands-ILL-WAVE-FROM-THE-TOP",
+      "pubDate": "2021-03-14T19:31:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "The Co-Founder of Ark created the petition proposing that the Banque de France be able to buy cryptocurrencies",
+      "link": "https://cryptopanic.com/news/11621107/The-Co-Founder-of-Ark-created-the-petition-proposing-that-the-Banque-de-France-be-able-to-buy-cryptocurrencies",
+      "pubDate": "2021-03-14T19:25:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Top 5 cryptocurrencies to watch this week: BTC, ETH, VET, XMR, FTT",
+      "link": "https://cryptopanic.com/news/ftx-token/11620382/Top-5-cryptocurrencies-to-watch-this-week-BTC-ETH-VET-XMR-FTT",
+      "pubDate": "2021-03-14T19:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "If Bitcoin can hold $58,000 as support, altcoins like ETH, VET, XMR and FTT may resume their uptrend and hit new highs this week.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "VET"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Over 100 Companies to Shift from Ethereum to Cardano: Charles Hoskinson",
+      "link": "https://cryptopanic.com/news/uniswap/11620313/Over-100-Companies-to-Shift-from-Ethereum-to-Cardano-Charles-Hoskinson",
+      "pubDate": "2021-03-14T18:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Cardano’s Charles Hoskinson compares Uniswap to Beanie Babies, dismissing Ethereum",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 92,
+        "negative": 21
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bought more NU! Always love a good sale",
+      "link": "https://cryptopanic.com/news/11620300/Bought-more-NU-Always-love-a-good-sale",
+      "pubDate": "2021-03-14T18:02:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "NU Sale",
+      "link": "https://cryptopanic.com/news/11620776/NU-Sale",
+      "pubDate": "2021-03-14T18:01:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "3M+ ZIL Removed From Circulation Since Zilliqa Introduced ‘Burning’",
+      "link": "https://cryptopanic.com/news/11620218/3M-ZIL-Removed-From-Circulation-Since-Zilliqa-Introduced-Burning",
+      "pubDate": "2021-03-14T16:17:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "In brief: Over 3 million Zilliqa coins have been removed from circulation since the network implemented its version of burning ZIL ZIL fee burning, simply sends the gas paid out in each transaction to a special address where all mining rewards come from This gas can then be used for block rewards in a process known as ‘recycling’ The President of Zilliqa, Amrit Kummer, has updated the ZIL...",
+      "currencies": [
+        "ZIL"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Few understand $FLP",
+      "link": "https://cryptopanic.com/news/11621736/Few-understand-FLP?mtm_campaign=API-OFA",
+      "pubDate": "2021-03-14T15:40:38.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SUPRA",
+        "FLP"
+      ]
+    },
+    {
+      "title": "Just joined the NU club and I’m surprised by the panic mood of some posts",
+      "link": "https://cryptopanic.com/news/11620164/Just-joined-the-NU-club-and-Im-surprised-by-the-panic-mood-of-some-posts",
+      "pubDate": "2021-03-14T15:31:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "SBI Holdings Continues to Give More Weight to Ripple and XRP",
+      "link": "https://cryptopanic.com/news/ripple/11620120/SBI-Holdings-Continues-to-Give-More-Weight-to-Ripple-and-XRP",
+      "pubDate": "2021-03-14T14:57:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Japanese Strategic Business Innovator Group, commonly known as SBI Holdings stated that it will reward its shareholders with Ripple’s XRP for the second year in a row, after a successful first round that’s ending on March 31. SBI Holdings said in an official statement that Shareholders with 100 or more shares will get $22.92 or […]",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "This is the reward for early adopters who believe in the project and hodl.",
+      "link": "https://cryptopanic.com/news/11620042/This-is-the-reward-for-early-adopters-who-believe-in-the-project-and-hodl",
+      "pubDate": "2021-03-14T13:31:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "XEM Snapshot for XYM Airdrop Completed: Binance",
+      "link": "https://cryptopanic.com/news/11620039/XEM-Snapshot-for-XYM-Airdrop-Completed-Binance",
+      "pubDate": "2021-03-14T13:13:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "The NEM Network plans to release its new Symbol network on Mar. 15. It will run in separately from the old network, and the team will maintain both networks. It does use a new token, called XYM. XEM will still be used on the old network. To get the new network in gear, NEM will … Continued",
+      "currencies": [
+        "XEM"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "About quiet holders.",
+      "link": "https://cryptopanic.com/news/11620011/About-quiet-holders",
+      "pubDate": "2021-03-14T12:50:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "ALGO"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Getting started with COBOL development on Fedora Linux 33 -- \"COBOL is still powering business critical operations within many major organizations. As the need to update, upgrade and troubleshoot these applications grows, so may the demand for anyone with COBOL development knowledge.\"",
+      "link": "https://cryptopanic.com/news/11620076/Getting-started-with-COBOL-development-on-Fedora-Linux-33-COBOL-is-still-powering-business-critical-operations-within-many-major-organizations-As-the-need-to-update-upgrade-and-troubleshoot-these-applications-grows-so-may-the-demand-for-anyone-with-COBOL-d",
+      "pubDate": "2021-03-14T10:01:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MFT"
+      ]
+    },
+    {
+      "title": "9 Crypto Assets Have Massive Potential in March and April, According to Altcoin Daily’s Austin Arnold",
+      "link": "https://cryptopanic.com/news/chainlink/11619802/9-Crypto-Assets-Have-Massive-Potential-in-March-and-April-According-to-Altcoin-Dailys-Austin-Arnold",
+      "pubDate": "2021-03-14T08:04:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "Altcoin Daily host and crypto analyst Austin Arnold is listing the top projects that he has on his radar in the coming weeks. In a new video, Arnold tells his 562,000 YouTube subscribers that Ethereum (ETH) is the number one project he is keeping an eye on over the coming period. The trader highlights that […]",
+      "currencies": [
+        "ETH",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 14,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @btsfav: #Bitcoin Experiment: Financial Freedom with Faucets?! Week 35 #hive",
+      "link": "https://cryptopanic.com/news/11619377/RT-btsfav-Bitcoin-Experiment-Financial-Freedom-with-Faucets-Week-35-hive",
+      "pubDate": "2021-03-14T06:45:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "STEEM"
+      ]
+    },
+    {
+      "title": "$2,000 $CAKE GIVEAWAY To enter: 🥞 Follow @PancakeSwap 🥞 Retweet Also, if you haven't set up #BSC on your Met…",
+      "link": "https://cryptopanic.com/news/pancakeswap-token/11619000/2000-CAKE-GIVEAWAY-To-enter-Follow-PancakeSwap-Retweet-Also-if-you-havent-set-up-BSC-on-your-Met",
+      "pubDate": "2021-03-14T05:53:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "CAKE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Imagine coinbase could give rewards for staking Nucypher with a 10% APY and keep the other 12% for gas fees or whatever else they need it for! Imagine the growth",
+      "link": "https://cryptopanic.com/news/11620098/Imagine-coinbase-could-give-rewards-for-staking-Nucypher-with-a-10-APY-and-keep-the-other-12-for-gas-fees-or-whatever-else-they-need-it-for-Imagine-the-growth",
+      "pubDate": "2021-03-14T05:31:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "NU"
+      ]
+    },
+    {
+      "title": "It took #Bitcoin 3.6x less time than Microsoft to reach $1 trillion market cap.",
+      "link": "https://cryptopanic.com/news/11617886/It-took-Bitcoin-36x-less-time-than-Microsoft-to-reach-1-trillion-market-cap",
+      "pubDate": "2021-03-14T05:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "-",
+      "currencies": [
+        "BNB"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 2
+      }
+    },
+    {
+      "title": "At VeChain, we focus on unleashing the power of blockchain on the real economy. Learn how Yizhiji, Sino-French cos…",
+      "link": "https://cryptopanic.com/news/vechain/11619575/At-VeChain-we-focus-on-unleashing-the-power-of-blockchain-on-the-real-economy-Learn-how-Yizhiji-Sino-French-cos",
+      "pubDate": "2021-03-14T03:00:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "VET",
+        "VTHO",
+        "VEN"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ICYMI: Ark Desktop Wallet has over 500,000 downloads and is still one of the best cryptocurrency wallets",
+      "link": "https://cryptopanic.com/news/11619754/ICYMI-Ark-Desktop-Wallet-has-over-500000-downloads-and-is-still-one-of-the-best-cryptocurrency-wallets",
+      "pubDate": "2021-03-14T02:07:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "1st ARK in outer space via  SpaceX Starlink  #amongthestars",
+      "link": "https://cryptopanic.com/news/11620181/1st-ARK-in-outer-space-via-SpaceX-Starlink-amongthestars",
+      "pubDate": "2021-03-14T01:24:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "ARK"
+      ]
+    },
+    {
+      "title": "Bitcoin price rally to $61,800 shows BTC bulls are in full control",
+      "link": "https://cryptopanic.com/news/11617439/Bitcoin-price-rally-to-61800-shows-BTC-bulls-are-in-full-control",
+      "pubDate": "2021-03-14T00:17:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "As Bitcoin price skyrocketed to a new all-time high above $61,800, altcoins like Decentraland rallied more than 90%.",
+      "currencies": [
+        "BTC",
+        "MANA"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

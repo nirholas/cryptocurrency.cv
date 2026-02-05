@@ -1,0 +1,45 @@
+{
+  "date": "2019-04-27",
+  "fetchedAt": "2026-02-05T07:27:06.981Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bitcoin Price Reaction to Tether Fiasco May Signal Strong Fundamental Strength",
+      "link": "https://cryptopanic.com/news/5258024/Bitcoin-Price-Reaction-to-Tether-Fiasco-May-Signal-Strong-Fundamental-Strength",
+      "pubDate": "2019-04-27T19:30:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT"
+      ],
+      "votes": {
+        "positive": 27,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Up to $100 Million Paxos Stablecoins to Be Issued on Ontology Blockchain",
+      "link": "https://cryptopanic.com/news/5253977/Up-to-100-Million-Paxos-Stablecoins-to-Be-Issued-on-Ontology-Blockchain",
+      "pubDate": "2019-04-27T02:50:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDP",
+        "ONT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

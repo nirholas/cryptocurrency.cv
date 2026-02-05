@@ -1,0 +1,73 @@
+{
+  "date": "2020-08-18",
+  "fetchedAt": "2026-02-05T07:27:06.960Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Another Bitcoin on Ethereum DeFi token is taking off",
+      "link": "https://cryptopanic.com/news/9716016/Another-Bitcoin-on-Ethereum-DeFi-token-is-taking-off",
+      "pubDate": "2020-08-18T21:36:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "WBTC"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @PaxosGlobal: We often take money and how it works for granted. So what are the key properties that make money money in today’s world? H…",
+      "link": "https://cryptopanic.com/news/9715122/RT-PaxosGlobal-We-often-take-money-and-how-it-works-for-granted-So-what-are-the-key-properties-that-make-money-money-in-todays-world-H",
+      "pubDate": "2020-08-18T19:43:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "USDP"
+      ]
+    },
+    {
+      "title": "SXP Token Just Exploded 25 Percent on This Swipe News",
+      "link": "https://cryptopanic.com/news/9713263/SXP-Token-Just-Exploded-25-Percent-on-This-Swipe-News",
+      "pubDate": "2020-08-18T15:58:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SXP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Steem vs Tron: The rebellion against a cryptocurrency empire",
+      "link": "https://cryptopanic.com/news/9710894/Steem-vs-Tron-The-rebellion-against-a-cryptocurrency-empire",
+      "pubDate": "2020-08-18T13:01:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

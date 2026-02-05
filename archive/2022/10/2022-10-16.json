@@ -1,0 +1,333 @@
+{
+  "date": "2022-10-16",
+  "fetchedAt": "2026-02-05T07:27:07.381Z",
+  "articleCount": 21,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Islamic Coin Claims it Will Scale Like Bitcoin and Hit $1 Trillion in Value",
+      "link": "https://cryptopanic.com/news/bitcoin/16622029/Islamic-Coin-Claims-it-Will-Scale-Like-Bitcoin-and-Hit-1-Trillion-in-Value",
+      "pubDate": "2022-10-16T22:48:13.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Islamic Coin is an emerging cryptocurrency that complies with the rules of Shariah. Will hit $1 trillion in value, like the founders say? The post Islamic Coin Claims it Will Scale Like Bitcoin and Hit $1 Trillion in Value appeared first on BeInCrypto.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Shark Tank Billionaire Kevin O’Leary Updates Crypto Bear Market Outlook, Says SEC Can Spark Next Bull Run",
+      "link": "https://cryptopanic.com/news/helium/16621974/Shark-Tank-Billionaire-Kevin-OLeary-Updates-Crypto-Bear-Market-Outlook-Says-SEC-Can-Spark-Next-Bull-Run",
+      "pubDate": "2022-10-16T22:05:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Shark Tank star and venture capitalist Kevin O’Leary is weighing in on the state of the crypto bear market, including some of his recent altcoin portfolio allocations. In a new interview on Crypto Banter, O’Leary says his fund is looking at putting more crypto positions into Helium (HNT) and Pollen (PCN), both of which pertain […]",
+      "currencies": [
+        "BTC",
+        "HNT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Crossing The Yellow Blocks is available on all the following platforms @AppleTV @YouTube @GooglePlay @PrimeVideo an…",
+      "link": "https://cryptopanic.com/news/16623397/Crossing-The-Yellow-Blocks-is-available-on-all-the-following-platforms-AppleTV-YouTube-GooglePlay-PrimeVideo-an?mtm_campaign=API-OFA",
+      "pubDate": "2022-10-16T21:26:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "CBK"
+      ]
+    },
+    {
+      "title": "Bitcoin Holds Steady Despite US CPI Data Spooking Investors — Is A Crash To $12,000 In The Offing?",
+      "link": "https://cryptopanic.com/news/bitcoin/16621856/Bitcoin-Holds-Steady-Despite-US-CPI-Data-Spooking-Investors-Is-A-Crash-To-12000-In-The-Offing",
+      "pubDate": "2022-10-16T20:45:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "After staying flat for most of the week, Bitcoin plunged by about 7% to $18,200 on Thursday following a hotter-than-expected Consumer Price Index (CPI). However, the price managed to chalk up a dramatic...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Man Faces 25 Years Behind Bars for Illegally Converting Bitcoin (BTC) to US Dollars in Money Laundering Scheme",
+      "link": "https://cryptopanic.com/news/bitcoin/16621658/Man-Faces-25-Years-Behind-Bars-for-Illegally-Converting-Bitcoin-BTC-to-US-Dollars-in-Money-Laundering-Scheme",
+      "pubDate": "2022-10-16T18:45:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A man from New York is facing 25 years in prison after being convicted of running an unlicensed money transmitting business as part of a scheme to launder Bitcoin (BTC). According to a new press release from the U.S. Department of Justice (DOJ), a federal jury convicted Mustafa Goklu of laundering BTC obtained through the […] The post Man Faces 25 Years Behind Bars for Illegally Converting Bitcoin (BTC) to US Dollars in Money Laundering Scheme appeared first on The Daily Hodl.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Cardano founder urges regulatory regime to appreciate the liberty crypto provides to people",
+      "link": "https://cryptopanic.com/news/16621645/Cardano-founder-urges-regulatory-regime-to-appreciate-the-liberty-crypto-provides-to-people",
+      "pubDate": "2022-10-16T18:34:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Charles Hoskinson, the co-founder of the decentralized finance (DeFi) platform Cardano (ADA), has delved into the crypto regulation debate sharing... Continue reading",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 24,
+        "negative": 4
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "KYC to stake your ETH? It's probably coming to the US",
+      "link": "https://cryptopanic.com/news/16621636/KYC-to-stake-your-ETH-Its-probably-coming-to-the-US",
+      "pubDate": "2022-10-16T18:23:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "It shouldn’t surprise anyone if regulators begin telling node validators to impose KYC and AML requirements on users staking Ether.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "XYO begins at the geospatial level. The data you generate as an #XYO node using @coin_with_us comes from your real…",
+      "link": "https://cryptopanic.com/news/16626755/XYO-begins-at-the-geospatial-level-The-data-you-generate-as-an-XYO-node-using-coin_with_us-comes-from-your-real",
+      "pubDate": "2022-10-16T17:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XYO"
+      ]
+    },
+    {
+      "title": "Happy Sunday! Anyone setting up radios today?",
+      "link": "https://cryptopanic.com/news/helium/16624227/Happy-Sunday-Anyone-setting-up-radios-today",
+      "pubDate": "2022-10-16T16:23:29.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HNT"
+      ]
+    },
+    {
+      "title": "EthereumPoW Ecosystem Continues to Grow as Support for Mining Remains",
+      "link": "https://cryptopanic.com/news/16621208/EthereumPoW-Ecosystem-Continues-to-Grow-as-Support-for-Mining-Remains?mtm_campaign=API-OFA",
+      "pubDate": "2022-10-16T14:29:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Proof-of-work Ethereum fork ETHW has attracted a lot of support since the Merge transitioned the network away from mining a month ago.",
+      "currencies": [
+        "ETH",
+        "ETHW"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "What if support ends?",
+      "link": "https://cryptopanic.com/news/16622133/What-if-support-ends",
+      "pubDate": "2022-10-16T13:52:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SPS"
+      ]
+    },
+    {
+      "title": "Chainlink (LINK) Makes Top 10 List Of Most Purchased Tokens In Last 24 Hours",
+      "link": "https://cryptopanic.com/news/16621108/Chainlink-LINK-Makes-Top-10-List-Of-Most-Purchased-Tokens-In-Last-24-Hours",
+      "pubDate": "2022-10-16T13:24:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Chainlink (LINK) managed to trim its week-to-date losses after going down by as much as 10% following massive altcoin price correction a couple of days ago. The crypto, trading at $7.04 according to latest tracking from Coingecko, managed to stop further price bleeding, increasing by 2.1% over the last 24-hours and lowering its seven-day decline to 5.5%. But even with its price woes that made...",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LINK"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Crypto Winter Is Rough. Here Are Five Essential Survival Tips",
+      "link": "https://cryptopanic.com/news/16621005/Crypto-Winter-Is-Rough-Here-Are-Five-Essential-Survival-Tips",
+      "pubDate": "2022-10-16T12:01:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "It's been a brutal year for crypto investors. After an extended market rally saw the global cryptocurrency market capitalization top $3 trillion in late 2021, Bitcoin and other digital assets have been battered by macroeconomic turmoil, suffering a decline that's sent many of last year's new crypto adopters running for the exit. Today the space is worth just under $1 trillion, with Bitcoin and...",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "We recently identified a critical bug + in order to debug we had to copy the mainnet onto a local machine, write a…",
+      "link": "https://cryptopanic.com/news/16624152/We-recently-identified-a-critical-bug-in-order-to-debug-we-had-to-copy-the-mainnet-onto-a-local-machine-write-a?mtm_campaign=API-OFA",
+      "pubDate": "2022-10-16T11:14:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "GIGA"
+      ]
+    },
+    {
+      "title": "Ex-Morgan Stanley CEO admits crypto could be ‘a huge way’ powering monetary transactions",
+      "link": "https://cryptopanic.com/news/bitcoin/16620857/Ex-Morgan-Stanley-CEO-admits-crypto-could-be-a-huge-way-powering-monetary-transactions",
+      "pubDate": "2022-10-16T10:22:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "As the cryptocurrency sector matures, there remains uncertainties regarding how the industry will evolve and integrate into the traditional financial... Continue reading",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "InvestAnswers Host on Why $SOL, $MATIC, and $FTM Are His Top Three Altcoin Picks",
+      "link": "https://cryptopanic.com/news/16620843/InvestAnswers-Host-on-Why-SOL-MATIC-and-FTM-Are-His-Top-Three-Altcoin-Picks",
+      "pubDate": "2022-10-16T10:10:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "On Friday (October 14), James Mullarney, the host of the very popular YouTube channel “InvestAnswers”, talked about why he the altcoins he is most bullish on are Solana ($SOL), Polygon ($MATIC), and Fantom ($FTM. Mullarney said: “The only two things that I’ve purchased this whole year, other than sell stuff, was Bitcoin and Solana,. That’s […]",
+      "currencies": [
+        "BTC",
+        "SOL",
+        "MATIC",
+        "FTM"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @CsharpCorner: #BCrypt22 India Web 3.0 Roadshow - @SatyaKarki from @stratisplatform, is here virtually to share her knowledge on Stratis…",
+      "link": "https://cryptopanic.com/news/16620129/RT-CsharpCorner-BCrypt22-India-Web-30-Roadshow-SatyaKarki-from-stratisplatform-is-here-virtually-to-share-her-knowledge-on-Stratis",
+      "pubDate": "2022-10-16T09:22:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "STRAX"
+      ]
+    },
+    {
+      "title": "#ETN moves internationally within minutes thanks to the #Electroneum #blockchain and #NGO miners, who use their blo…",
+      "link": "https://cryptopanic.com/news/16619835/ETN-moves-internationally-within-minutes-thanks-to-the-Electroneum-blockchain-and-NGO-miners-who-use-their-blo",
+      "pubDate": "2022-10-16T09:00:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "mining",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "Bitcoin Struggles To Break Past $19,500 As New Twist Surfaces, Here’s What To Expect",
+      "link": "https://cryptopanic.com/news/16619278/Bitcoin-Struggles-To-Break-Past-19500-As-New-Twist-Surfaces-Heres-What-To-Expect",
+      "pubDate": "2022-10-16T08:17:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "BTC’s price shows strength but has struggled to break past $19,500 as the price continues to move in circles. BTC bounced from a low of $18,200 after the price rallied toward $19,800 but was rejected by sellers. The price of BTC continues to trade below 50 and 200 Exponential Moving Averages (EMA) ahead of the weekly close. The price movement of Bitcoin (BTC) has shown some great price action lately as the price garnered momentum to bounce from a low of $18,200 to $19,800d against tether (USDT).",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Bitcoin’s Mining Reserves Plunge To 12-Year Low — What This Means For BTC Price",
+      "link": "https://cryptopanic.com/news/bitcoin/16618662/Bitcoins-Mining-Reserves-Plunge-To-12-Year-Low-What-This-Means-For-BTC-Price",
+      "pubDate": "2022-10-16T07:34:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin mining reserves have been a shadow of themselves in recent months due to unsavoury market conditions plaguing the virtual currency industry.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Great to meet some of the #web3 builders of the future at Neo’s #DecodingWeb3 stop at @UofIllinois!",
+      "link": "https://cryptopanic.com/news/16617260/Great-to-meet-some-of-the-web3-builders-of-the-future-at-Neos-DecodingWeb3-stop-at-UofIllinois?mtm_campaign=API-OFA",
+      "pubDate": "2022-10-16T05:52:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO",
+        "GAS"
+      ]
+    }
+  ]
+}

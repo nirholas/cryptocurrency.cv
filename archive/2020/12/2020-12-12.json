@@ -1,0 +1,99 @@
+{
+  "date": "2020-12-12",
+  "fetchedAt": "2026-02-05T07:27:06.523Z",
+  "articleCount": 6,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "XRP Tanks Following Hyped Airdrop That Catalyzed Parabolic Rally",
+      "link": "https://cryptopanic.com/news/ripple/10799802/XRP-Tanks-Following-Hyped-Airdrop-That-Catalyzed-Parabolic-Rally",
+      "pubDate": "2020-12-12T23:00:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 13
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Want to stake some Zeon on pool ??",
+      "link": "https://cryptopanic.com/news/10799486/Want-to-stake-some-Zeon-on-pool",
+      "pubDate": "2020-12-12T22:07:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEON"
+      ]
+    },
+    {
+      "title": "Crypto Traders Can Now Buy Bitcoin and Ethereum With Apple Pay – Here’s How",
+      "link": "https://cryptopanic.com/news/10798870/Crypto-Traders-Can-Now-Buy-Bitcoin-and-Ethereum-With-Apple-Pay-Heres-How",
+      "pubDate": "2020-12-12T19:30:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "USDC"
+      ],
+      "votes": {
+        "positive": 26,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP Price Crashes By 8% After Flare Network Airdrops Free Crypto",
+      "link": "https://cryptopanic.com/news/ripple/10797090/XRP-Price-Crashes-By-8-After-Flare-Network-Airdrops-Free-Crypto",
+      "pubDate": "2020-12-12T14:20:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "There are many ways to make money off of the #Blockchain_boom. Jump on the bandwagon now and watch the video in thi…",
+      "link": "https://cryptopanic.com/news/10796766/There-are-many-ways-to-make-money-off-of-the-Blockchain_boom-Jump-on-the-bandwagon-now-and-watch-the-video-in-thi",
+      "pubDate": "2020-12-12T13:33:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "CCXX"
+      ]
+    },
+    {
+      "title": "Steemit - Earning TRX & Steem (Platform Review)",
+      "link": "https://cryptopanic.com/news/11100851/Steemit-Earning-TRX-Steem-Platform-Review",
+      "pubDate": "2020-12-12T02:51:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "STEEM"
+      ]
+    }
+  ]
+}

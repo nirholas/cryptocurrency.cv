@@ -1,0 +1,27 @@
+{
+  "date": "2018-11-08",
+  "fetchedAt": "2026-02-05T07:27:08.688Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ethereum 2.0 IS Coming and will Prove the Haters Wrong! JP Morgan Loves ETH & Bancor EOS ETH DEX",
+      "link": "https://cryptopanic.com/news/eos/3605099/Ethereum-20-IS-Coming-and-will-Prove-the-Haters-Wrong-JP-Morgan-Loves-ETH-Bancor-EOS-ETH-DEX",
+      "pubDate": "2018-11-08T06:00:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "EOS",
+        "BNT"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

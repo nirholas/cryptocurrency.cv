@@ -1,0 +1,45 @@
+{
+  "date": "2018-11-05",
+  "fetchedAt": "2026-02-05T07:27:07.883Z",
+  "articleCount": 2,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "When Will Ripple’s XRP Break From Its Range?",
+      "link": "https://cryptopanic.com/news/3573938/When-Will-Ripples-XRP-Break-From-Its-Range",
+      "pubDate": "2018-11-05T14:14:07.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 5
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "NEO Global Development Monthly Report of October: A Month of Achievements",
+      "link": "https://cryptopanic.com/news/3573170/NEO-Global-Development-Monthly-Report-of-October-A-Month-of-Achievements",
+      "pubDate": "2018-11-05T12:59:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "NEO"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "date": "2020-08-29",
+  "fetchedAt": "2026-02-05T07:27:06.993Z",
+  "articleCount": 3,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Ethereum Classic Hit by Third 51% Attack in a Month",
+      "link": "https://cryptopanic.com/news/ethereum/9822540/Ethereum-Classic-Hit-by-Third-51-Attack-in-a-Month",
+      "pubDate": "2020-08-29T23:00:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "ETC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Polkadot About To Go Parabolic!!!",
+      "link": "https://cryptopanic.com/news/polkadot/9818145/POLKADOT-ABOUT-TO-GO-PARABOLIC",
+      "pubDate": "2020-08-29T08:39:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Poll Results!  The Touch Social community has voted and the winner is - Touch Alpha TSD/TST Exchange as the next u…",
+      "link": "https://cryptopanic.com/news/11440710/Poll-Results-The-Touch-Social-community-has-voted-and-the-winner-is-Touch-Alpha-TSDTST-Exchange-as-the-next-u?mtm_campaign=API-OFA",
+      "pubDate": "2020-08-29T00:54:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "TST"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,529 @@
+{
+  "date": "2021-07-07",
+  "fetchedAt": "2026-02-05T07:27:06.750Z",
+  "articleCount": 35,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "XRP Has Same Use Cases As Bitcoin, Ripple Director Asserts",
+      "link": "https://cryptopanic.com/news/ripple/12278766/XRP-Has-Same-Use-Cases-As-Bitcoin-Ripple-Director-Asserts",
+      "pubDate": "2021-07-07T22:32:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Ripple’s native cryptocurrency, XRP, often gets a bad rep for having no real use cases, with some regulators going as far as to call it a security. In a series of tweets recently, the Director of Developer Relations at Ripple, Matt Hamilton, has attempted to set the record straight on the XRP cryptocurrency. XRP’s Use […]",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Israel Moves to Seize Bitcoin, Tether, Dogecoin From Hamas",
+      "link": "https://cryptopanic.com/news/dogecoin/12278711/Israel-Moves-to-Seize-Bitcoin-Tether-Dogecoin-From-Hamas",
+      "pubDate": "2021-07-07T22:05:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "The militant organization—and designated terrorist group by many world powers—has received lots of crypto recently.",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Price analysis 7/7: BTC, ETH, BNB, ADA, DOGE, XRP, DOT, UNI, BCH, SOL",
+      "link": "https://cryptopanic.com/news/12278626/Price-analysis-77-BTC-ETH-BNB-ADA-DOGE-XRP-DOT-UNI-BCH-SOL",
+      "pubDate": "2021-07-07T21:20:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Altcoin prices are moving higher as Bitcoin price holds a pattern of daily higher lows, a sign that the downtrend could be coming to an end.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "BNB",
+        "ADA",
+        "XRP",
+        "SOL",
+        "DOGE",
+        "DOT",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Theta awarded patent application approval for USPTO Number 17/224,109 (“THETA-1005”) — Preventing denial-of-service…",
+      "link": "https://cryptopanic.com/news/theta-token/12283119/Theta-awarded-patent-application-approval-for-USPTO-Number-17224109-THETA-1005-Preventing-denial-of-service",
+      "pubDate": "2021-07-07T21:05:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "ShibaSwap, SHIB’s DEX, Tops $1B TVL 24-hours After Launch",
+      "link": "https://cryptopanic.com/news/dogecoin/12278506/ShibaSwap-SHIBs-DEX-Tops-1B-TVL-24-hours-After-Launch",
+      "pubDate": "2021-07-07T20:25:39.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Shiba Inu new DeFi platform, ShibaSwap, has topped $1 billion in total value locked in just 24 hours after launch, and it is hiking Ethereum network fees. Shiba Inu Is A Product Of A Meme Coin Dogecoin (DOGE) has shown the world that even a joke project can grow in value and notoriety in the […]",
+      "currencies": [
+        "ETH",
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @qc_qizhou: QuarkChain EIP155 code is in ! With EIP155, users can use metamask to participant dApp on QuarkChain…",
+      "link": "https://cryptopanic.com/news/12282480/RT-qc_qizhou-QuarkChain-EIP155-code-is-in-With-EIP155-users-can-use-metamask-to-participant-dApp-on-QuarkChain",
+      "pubDate": "2021-07-07T19:31:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "QKC"
+      ]
+    },
+    {
+      "title": "Shibu Inu (SHIB) DEX ShibaSwap surpasses $1B TVL 24-hours after launch",
+      "link": "https://cryptopanic.com/news/uniswap/12278365/Shibu-Inu-SHIB-DEX-ShibaSwap-surpasses-1B-TVL-24-hours-after-launch",
+      "pubDate": "2021-07-07T19:09:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "24-hours after launching, SHIB’s new ShibaSwap DeFi platform surpassed $1 billion in total value locked and it is raising fees on the Ethereum network.",
+      "currencies": [
+        "ETH",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Shiba Inu (SHIB) DEX ShibaSwap surpasses $1B TVL 24-hours after launch",
+      "link": "https://cryptopanic.com/news/uniswap/12278365/Shiba-Inu-SHIB-DEX-ShibaSwap-surpasses-1B-TVL-24-hours-after-launch",
+      "pubDate": "2021-07-07T19:09:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "24-hours after launching, SHIB’s new ShibaSwap DeFi platform surpassed $1 billion in total value locked and it is raising fees on the Ethereum network.",
+      "currencies": [
+        "ETH",
+        "SHIB",
+        "UNI"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Alchemy Partners with Polygon (MATIC) to Improve Network Capabilities",
+      "link": "https://cryptopanic.com/news/matic-network/12278256/Alchemy-Partners-with-Polygon-MATIC-to-Improve-Network-Capabilities",
+      "pubDate": "2021-07-07T18:15:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "Ethereum blockchain developer platform Alchemy has integrated Polygon to supercharge development and provide more tools for dApp developers",
+      "currencies": [
+        "ETH",
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin struggles to maintain price levels. Takeshi Shinji might be right about, DiaEx disappointing BTC investors…",
+      "link": "https://cryptopanic.com/news/12280966/Bitcoin-struggles-to-maintain-price-levels-Takeshi-Shinji-might-be-right-about-DiaEx-disappointing-BTC-investors",
+      "pubDate": "2021-07-07T18:05:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "RT @eCashOfficial: \"One project capturing my attention is eCash, or Bitcoin ABC as it was known formally.\" ... \"A competent group of develo…",
+      "link": "https://cryptopanic.com/news/ecash/12279782/RT-eCashOfficial-One-project-capturing-my-attention-is-eCash-or-Bitcoin-ABC-as-it-was-known-formally-A-competent-group-of-develo",
+      "pubDate": "2021-07-07T17:36:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC",
+        "BCHABC"
+      ]
+    },
+    {
+      "title": "Have you ever wondered why Efforce uses the Blockchain? Today’s #FAQ has the answers as well as the ways in which T…",
+      "link": "https://cryptopanic.com/news/12280568/Have-you-ever-wondered-why-Efforce-uses-the-Blockchain-Todays-FAQ-has-the-answers-as-well-as-the-ways-in-which-T",
+      "pubDate": "2021-07-07T17:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "WOZX"
+      ]
+    },
+    {
+      "title": "\"One project capturing my attention is eCash, or Bitcoin ABC as it was known formally.\" ... \"A competent group of d…",
+      "link": "https://cryptopanic.com/news/ecash/12368721/One-project-capturing-my-attention-is-eCash-or-Bitcoin-ABC-as-it-was-known-formally-A-competent-group-of-d",
+      "pubDate": "2021-07-07T17:17:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "XEC"
+      ]
+    },
+    {
+      "title": "Support $NKN in India's largest exchange @WazirXIndia and contribute to building new kind of communication network…",
+      "link": "https://cryptopanic.com/news/12281940/Support-NKN-in-Indias-largest-exchange-WazirXIndia-and-contribute-to-building-new-kind-of-communication-network",
+      "pubDate": "2021-07-07T16:16:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "NKN"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Israeli Government Moves to Seize $7.3 Million Worth of Bitcoin, Dogecoin, XRP and Other Cryptocurrencies from Hamas",
+      "link": "https://cryptopanic.com/news/ripple/12277926/Israeli-Government-Moves-to-Seize-73-Million-Worth-of-Bitcoin-Dogecoin-XRP-and-Other-Cryptocurrencies-from-Hamas",
+      "pubDate": "2021-07-07T16:01:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Hamas militants heavily rely on cryptocurrency donations",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Terra and Harmony announce DeFi partnership focused on UST stablecoin integration",
+      "link": "https://cryptopanic.com/news/terra-luna/12277872/Terra-and-Harmony-announce-DeFi-partnership-focused-on-UST-stablecoin-integration",
+      "pubDate": "2021-07-07T16:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "“Terra is excited to expand our growing portfolio of DeFi products to multiple chains and working with Harmony to bring UST and Anchor to another growing ecosystem,” said Do Kwon, co-founder and CEO of Terra.",
+      "currencies": [
+        "NULL"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @FantomFDN: We are proud to share that with the help of @BandProtocol, Fantom’s DeFi ecosystem has been able to grow and operate with un…",
+      "link": "https://cryptopanic.com/news/12279667/RT-FantomFDN-We-are-proud-to-share-that-with-the-help-of-BandProtocol-Fantoms-DeFi-ecosystem-has-been-able-to-grow-and-operate-with-un",
+      "pubDate": "2021-07-07T15:44:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "BAND"
+      ]
+    },
+    {
+      "title": "RT @ultra_rad1: The two CEOs of @ultra_io recently talked Mainnet's launch, NFTs, Sercret sauce, Competition and made fishing jokes with wi…",
+      "link": "https://cryptopanic.com/news/12283412/RT-ultra_rad1-The-two-CEOs-of-ultra_io-recently-talked-Mainnets-launch-NFTs-Sercret-sauce-Competition-and-made-fishing-jokes-with-wi",
+      "pubDate": "2021-07-07T14:31:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "UOS"
+      ]
+    },
+    {
+      "title": "Polygon (MATIC) Now Supported by Alchemy Development Platform. Why Is It Crucial?",
+      "link": "https://cryptopanic.com/news/matic-network/12277635/Polygon-MATIC-Now-Supported-by-Alchemy-Development-Platform-Why-Is-It-Crucial",
+      "pubDate": "2021-07-07T14:31:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "The Alchemy platform for Ethereum-oriented developers has integrated Polygon to advance developer experience for customers",
+      "currencies": [
+        "MATIC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "People all over the world are using #ETN to top up their mobile phones with data and airtime, simply and directly f…",
+      "link": "https://cryptopanic.com/news/12277587/People-all-over-the-world-are-using-ETN-to-top-up-their-mobile-phones-with-data-and-airtime-simply-and-directly-f",
+      "pubDate": "2021-07-07T14:30:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETN"
+      ]
+    },
+    {
+      "title": "Happening now! Join Alan Chiu and Zaki Manian @zmanian as they discuss L2 Optimistic Rollups",
+      "link": "https://cryptopanic.com/news/12277516/Happening-now-Join-Alan-Chiu-and-Zaki-Manian-zmanian-as-they-discuss-L2-Optimistic-Rollups",
+      "pubDate": "2021-07-07T14:06:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "layer2",
+      "description": "NULL",
+      "currencies": [
+        "OMG"
+      ]
+    },
+    {
+      "title": "XRP’s Use Cases Are Basically Same as Bitcoin: Ripple’s Director of Developer Relations",
+      "link": "https://cryptopanic.com/news/ripple/12277464/XRPs-Use-Cases-Are-Basically-Same-as-Bitcoin-Ripples-Director-of-Developer-Relations",
+      "pubDate": "2021-07-07T13:41:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Ripple’s Matt Hamilton says XRP has the same use cases as Bitcoin and both coins are decentralized and why XRP is not similar to NANO",
+      "currencies": [
+        "BTC",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @DFXFinance: Excited to be working with the @telcoin_team on a journey to build a user-owned, decentralized international money transfer…",
+      "link": "https://cryptopanic.com/news/12283162/RT-DFXFinance-Excited-to-be-working-with-the-telcoin_team-on-a-journey-to-build-a-user-owned-decentralized-international-money-transfer",
+      "pubDate": "2021-07-07T13:27:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "Listed Glitzkoin GTN on 5 new exchanges in the past 6 weeks. GTN price climbs from $0.07 to $0.26. Daily trade jump…",
+      "link": "https://cryptopanic.com/news/12280967/Listed-Glitzkoin-GTN-on-5-new-exchanges-in-the-past-6-weeks-GTN-price-climbs-from-007-to-026-Daily-trade-jump",
+      "pubDate": "2021-07-07T12:12:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "GTN"
+      ]
+    },
+    {
+      "title": "So… there’s this little thing called market cycles.",
+      "link": "https://cryptopanic.com/news/12283368/So-theres-this-little-thing-called-market-cycles",
+      "pubDate": "2021-07-07T11:44:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TWT"
+      ]
+    },
+    {
+      "title": "RT @MintClubPro: Mint Club Launching Partners have been selected and the closed beta test on the #BinanceSmartChain main net begins today!…",
+      "link": "https://cryptopanic.com/news/12281067/RT-MintClubPro-Mint-Club-Launching-Partners-have-been-selected-and-the-closed-beta-test-on-the-BinanceSmartChain-main-net-begins-today",
+      "pubDate": "2021-07-07T11:31:47.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "HUNT"
+      ]
+    },
+    {
+      "title": "Millennial DOGE Millionaire YouTuber Quits Day Job, Now Gets Paid in Dogecoin",
+      "link": "https://cryptopanic.com/news/dogecoin/12277052/Millennial-DOGE-Millionaire-YouTuber-Quits-Day-Job-Now-Gets-Paid-in-Dogecoin",
+      "pubDate": "2021-07-07T11:26:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "The Dogecoin millionaire whose story is followed by CNBC has given up his day job and is getting more DOGE via his YouTube channel",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @RichardHeartWin: YAY #Bitcoin #Ethereum #BNB #ADA #DOGE #XRP #DOT #BTC #ETH $BTC $ETH #DOT #UNI #BCH #SOL #LTC #LINK #ICP #MATIC #THETA…",
+      "link": "https://cryptopanic.com/news/12281057/RT-RichardHeartWin-YAY-Bitcoin-Ethereum-BNB-ADA-DOGE-XRP-DOT-BTC-ETH-BTC-ETH-DOT-UNI-BCH-SOL-LTC-LINK-ICP-MATIC-THETA",
+      "pubDate": "2021-07-07T11:21:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "Ripple vs SEC Case Has Gone “A Bit Cold” Some in XRP Community Believe",
+      "link": "https://cryptopanic.com/news/ripple/12276849/Ripple-vs-SEC-Case-Has-Gone-A-Bit-Cold-Some-in-XRP-Community-Believe",
+      "pubDate": "2021-07-07T09:50:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "The Ripple vs SEC case may have become “a bit cold” some in the XRP community believe, wondering if the case will continue behind closed doors from now on",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Jed McCaleb Receives 291.5 Million XRP from Ripple, Sells 10 Million At Once",
+      "link": "https://cryptopanic.com/news/ripple/12276603/Jed-McCaleb-Receives-2915-Million-XRP-from-Ripple-Sells-10-Million-At-Once",
+      "pubDate": "2021-07-07T08:04:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Ripple fintech giant has moved another XRP lump to McCaleb as part of the compensation agreement, but his XRP holdings keep shrinking",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Up next on our XSGD DeFi showcase, we have @DFXFinance , a decentralised foreign exchange protocol optimised for s…",
+      "link": "https://cryptopanic.com/news/12276389/Up-next-on-our-XSGD-DeFi-showcase-we-have-DFXFinance-a-decentralised-foreign-exchange-protocol-optimised-for-s",
+      "pubDate": "2021-07-07T07:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "XSGD"
+      ]
+    },
+    {
+      "title": "You ready?",
+      "link": "https://cryptopanic.com/news/12275003/You-ready",
+      "pubDate": "2021-07-07T06:10:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "-",
+      "currencies": [
+        "CAKE"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Ahead of the launch of SMS Network, we’re interviewing @DFXFinance founder @kevinzhangTO on YouTube, followed by a…",
+      "link": "https://cryptopanic.com/news/12275965/Ahead-of-the-launch-of-SMS-Network-were-interviewing-DFXFinance-founder-kevinzhangTO-on-YouTube-followed-by-a",
+      "pubDate": "2021-07-07T04:58:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "China’s regulators asked the APP stores to remove ride-hailing app, Didi chuxing on June 3rd due to its data protec…",
+      "link": "https://cryptopanic.com/news/12274037/Chinas-regulators-asked-the-APP-stores-to-remove-ride-hailing-app-Didi-chuxing-on-June-3rd-due-to-its-data-protec",
+      "pubDate": "2021-07-07T03:15:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    },
+    {
+      "title": "RT @planetmindbody: It's official: The Crazy 4 Cryptos @ThetaDrop NFTs will go live on July 8, 4 PT. About 47 hours from now. Check out the…",
+      "link": "https://cryptopanic.com/news/theta-token/12275919/RT-planetmindbody-Its-official-The-Crazy-4-Cryptos-ThetaDrop-NFTs-will-go-live-on-July-8-4-PT-About-47-hours-from-now-Check-out-the",
+      "pubDate": "2021-07-07T00:42:16.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "THETA",
+        "TFUEL"
+      ]
+    }
+  ]
+}

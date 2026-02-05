@@ -1,0 +1,24 @@
+{
+  "date": "2018-01-08",
+  "fetchedAt": "2026-02-05T07:27:06.999Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Bright Future or Dark Clouds Ahead for TRON?",
+      "link": "https://cryptopanic.com/news/tron/745415/Bright-Future-or-Dark-Clouds-Ahead-for-TRON",
+      "pubDate": "2018-01-08T06:00:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 4
+      }
+    }
+  ]
+}

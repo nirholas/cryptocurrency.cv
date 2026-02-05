@@ -1,0 +1,486 @@
+{
+  "date": "2021-07-16",
+  "fetchedAt": "2026-02-05T07:27:06.580Z",
+  "articleCount": 33,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "NEM, Augur and District0x price push higher while Bitcoin trades below $32K",
+      "link": "https://cryptopanic.com/news/12340383/NEM-Augur-and-District0x-price-push-higher-while-Bitcoin-trades-below-32K",
+      "pubDate": "2021-07-16T23:30:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XEM"
+      ]
+    },
+    {
+      "title": "Harmony announces $1M hackathon aimed at merging traditional finance and DeFi",
+      "link": "https://cryptopanic.com/news/12340191/Harmony-announces-1M-hackathon-aimed-at-merging-traditional-finance-and-DeFi",
+      "pubDate": "2021-07-16T21:36:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The hackathon will run for roughly six weeks from Aug. 15 to Sept. 30 and include four challenges from three different categories.",
+      "currencies": [
+        "ONE"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Ethereum Co-Founder to Sell Firm, Quit Cryptocurrency: Report",
+      "link": "https://cryptopanic.com/news/ethereum/12340164/Ethereum-Co-Founder-to-Sell-Firm-Quit-Cryptocurrency-Report",
+      "pubDate": "2021-07-16T21:26:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Anthony Di Iorio founded Ethereum in 2014 alongside Vitalik Buterin, Gavin Wood, Charles Hoskinson, Joseph Lubin, and others.",
+      "currencies": [
+        "ETH"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Hacking group Anonymous launches Anon Inu crypto token “to fight Musk and China”",
+      "link": "https://cryptopanic.com/news/dogecoin/12339892/Hacking-group-Anonymous-launches-Anon-Inu-crypto-token-to-fight-Musk-and-China",
+      "pubDate": "2021-07-16T19:00:40.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "The decentralized hacker collective known as Anonymous is set to launch a crypto token called Anon Inu on the Binance Smart Chain (BSC).",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Have you missed some sky-high APYs on the largest crypto euro? Don't miss out now! Get back in the game with our ne…",
+      "link": "https://cryptopanic.com/news/12343752/Have-you-missed-some-sky-high-APYs-on-the-largest-crypto-euro-Dont-miss-out-now-Get-back-in-the-game-with-our-ne",
+      "pubDate": "2021-07-16T17:09:32.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "Binance USD Stablecoin Market Cap Surpasses $10 Billion",
+      "link": "https://cryptopanic.com/news/12339345/Binance-USD-Stablecoin-Market-Cap-Surpasses-10-Billion",
+      "pubDate": "2021-07-16T15:41:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "Second U.S. Dollar Tether (USDT) rival joins 11-digit club: BUSD breaks into top 10",
+      "currencies": [
+        "USDT",
+        "BUSD"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The XinFin community has reduced the supply of $XDCE tokens by 10 Million and the token burn continues until XDCE c…",
+      "link": "https://cryptopanic.com/news/12344575/The-XinFin-community-has-reduced-the-supply-of-XDCE-tokens-by-10-Million-and-the-token-burn-continues-until-XDCE-c",
+      "pubDate": "2021-07-16T15:13:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "XDC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "The TELxDFX AMA is live on youtube! Thank you @kevinzhangTO and the @DFXFinance team for joining. Check out the vid…",
+      "link": "https://cryptopanic.com/news/12344168/The-TELxDFX-AMA-is-live-on-youtube-Thank-you-kevinzhangTO-and-the-DFXFinance-team-for-joining-Check-out-the-vid",
+      "pubDate": "2021-07-16T14:55:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TEL"
+      ]
+    },
+    {
+      "title": "RT @RSKsmart: RSK Community Call - Iris 3.0.0. Hard-Fork introduction and overview",
+      "link": "https://cryptopanic.com/news/12343608/RT-RSKsmart-RSK-Community-Call-Iris-300-Hard-Fork-introduction-and-overview",
+      "pubDate": "2021-07-16T14:49:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RIF"
+      ]
+    },
+    {
+      "title": "Pontem to Use Polkadot to Connect Diem and DeFi",
+      "link": "https://cryptopanic.com/news/polkadot/12339157/Pontem-to-Use-Polkadot-to-Connect-Diem-and-DeFi",
+      "pubDate": "2021-07-16T14:46:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "-",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @RichardHeartWin: Someone made a sacrifice tracker (ETH network only)",
+      "link": "https://cryptopanic.com/news/12342374/RT-RichardHeartWin-Someone-made-a-sacrifice-tracker-ETH-network-only",
+      "pubDate": "2021-07-16T14:03:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "RT @aubreydegrey: We’re all working tirelessly to keep up with donors and hold up our part of the process. We are probably closing in on th…",
+      "link": "https://cryptopanic.com/news/12342375/RT-aubreydegrey-Were-all-working-tirelessly-to-keep-up-with-donors-and-hold-up-our-part-of-the-process-We-are-probably-closing-in-on-th",
+      "pubDate": "2021-07-16T13:49:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "RT @aubreydegrey: Our work will be greatly accelerated, resulting in huge numbers of lives saved in the future, as a direct result of Richa…",
+      "link": "https://cryptopanic.com/news/12342376/RT-aubreydegrey-Our-work-will-be-greatly-accelerated-resulting-in-huge-numbers-of-lives-saved-in-the-future-as-a-direct-result-of-Richa",
+      "pubDate": "2021-07-16T13:49:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: @cz_binance MAKE SURE YOU ARE SACRIFICING FROM YOUR OWN WALLET YOU HAVE THE KEYS TO! NOT FROM AN EXCHANGE!",
+      "link": "https://cryptopanic.com/news/12342378/RT-RichardHeartWin-cz_binance-MAKE-SURE-YOU-ARE-SACRIFICING-FROM-YOUR-OWN-WALLET-YOU-HAVE-THE-KEYS-TO-NOT-FROM-AN-EXCHANGE",
+      "pubDate": "2021-07-16T13:13:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: Great news! sacrifice phase is bringing adoption to #BinanceSmartChain. Thanks @cz_binance…",
+      "link": "https://cryptopanic.com/news/12342379/RT-RichardHeartWin-Great-news-sacrifice-phase-is-bringing-adoption-to-BinanceSmartChain-Thanks-cz_binance",
+      "pubDate": "2021-07-16T13:11:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "The #cryptocurrency world development is driven by challenges and innovations, and not just speculations. Lower you…",
+      "link": "https://cryptopanic.com/news/12343753/The-cryptocurrency-world-development-is-driven-by-challenges-and-innovations-and-not-just-speculations-Lower-you",
+      "pubDate": "2021-07-16T13:09:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "EURS"
+      ]
+    },
+    {
+      "title": "PayPal users can now buy $100,000 worth of Bitcoin, Ethereum, Litecoin, and Bitcoin Cash weekly",
+      "link": "https://cryptopanic.com/news/12338842/PayPal-users-can-now-buy-100000-worth-of-Bitcoin-Ethereum-Litecoin-and-Bitcoin-Cash-weekly",
+      "pubDate": "2021-07-16T13:00:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "US financial player PayPal has announced that its users can now purchase as much as $100,000 worth of supported cryptocurrencies via its platform starting this week. The post PayPal users can now buy $100,000 worth of Bitcoin, Ethereum, Litecoin, and Bitcoin Cash weekly appeared first on CryptoSlate.",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 16,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Judge Denies SEC Motion to Suppress Deposition in Ripple Case",
+      "link": "https://cryptopanic.com/news/ripple/12338508/Judge-Denies-SEC-Motion-to-Suppress-Deposition-in-Ripple-Case",
+      "pubDate": "2021-07-16T11:07:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "US District Court Judge Sarah Netburn denied the SEC's motion in its case against Ripple to suppress the deposition of William Hinman.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 15,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Dorsey Plans DeFi on Bitcoin, Critics Point to Ethereum",
+      "link": "https://cryptopanic.com/news/ethereum/12338451/Dorsey-Plans-DeFi-on-Bitcoin-Critics-Point-to-Ethereum",
+      "pubDate": "2021-07-16T10:37:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "-",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @PulsechainCom: You don't need to use to sacrifice #Ethereum or ERC20s to 0x9Cd83BE15a79646A3D22B81fc8dDf7B7240a…",
+      "link": "https://cryptopanic.com/news/12342380/RT-PulsechainCom-You-dont-need-to-use-to-sacrifice-Ethereum-or-ERC20s-to-0x9Cd83BE15a79646A3D22B81fc8dDf7B7240a",
+      "pubDate": "2021-07-16T10:24:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: is having problems estimating the \"gas limit\" that it should use by default to send erc20s. I…",
+      "link": "https://cryptopanic.com/news/12342381/RT-RichardHeartWin-is-having-problems-estimating-the-gas-limit-that-it-should-use-by-default-to-send-erc20s-I",
+      "pubDate": "2021-07-16T10:20:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "DeFi darling ThorChain (RUNE) suffers multi-million dollar exploit",
+      "link": "https://cryptopanic.com/news/ethereum/12338390/DeFi-darling-ThorChain-RUNE-suffers-multi-million-dollar-exploit",
+      "pubDate": "2021-07-16T10:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "ThorChain, a decentralized finance (DeFi) token swap protocol based on the Cosmos blockchain, lost roughly $4.8 million worth of Ethereum (ETH) from its liquidity pools to a hacker attack today.",
+      "currencies": [
+        "ETH",
+        "ATOM",
+        "RUNE"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 3
+      }
+    },
+    {
+      "title": "$5M in Ethereum Lost in THORChain Exploit",
+      "link": "https://cryptopanic.com/news/ethereum/12338297/5M-in-Ethereum-Lost-in-THORChain-Exploit",
+      "pubDate": "2021-07-16T09:28:14.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "A recent exploit of the THORChain platform resulted in the loss of $5 million in Ethereum. The incident highlights vulnerabilities in decentralized finance protocols, raising concerns about security measures within the crypto space. Efforts are underway to investigate the breach and mitigate future risks.",
+      "currencies": [
+        "ETH",
+        "RUNE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 7
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @RichardHeartWin: Come with with us. | |",
+      "link": "https://cryptopanic.com/news/12342382/RT-RichardHeartWin-Come-with-with-us",
+      "pubDate": "2021-07-16T09:10:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "Thorchain’s RUNE Token Slides 15% Following Multi-Million Dollar Exploit",
+      "link": "https://cryptopanic.com/news/ethereum/12338143/Thorchains-RUNE-Token-Slides-15-Following-Multi-Million-Dollar-Exploit",
+      "pubDate": "2021-07-16T08:27:12.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Decentralized finance protocol Thorchain will use its treasury funds to reimburse the Ethereum liquidity providers affected by the recent hack.",
+      "currencies": [
+        "ETH",
+        "RUNE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Court grants Ripple bid to force ex-SEC director to testify in XRP case",
+      "link": "https://cryptopanic.com/news/ripple/12337912/Court-grants-Ripple-bid-to-force-ex-SEC-director-to-testify-in-XRP-case",
+      "pubDate": "2021-07-16T07:52:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Ripple scores major discovery win as judge rules ex-SEC official William Hinman must answer ‘central question’ on Ethereum in the globally-watched case about XRP.",
+      "currencies": [
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "THORChain Exploited for $5 Million in Latest DeFi Attack",
+      "link": "https://cryptopanic.com/news/12334128/THORChain-Exploited-for-5-Million-in-Latest-DeFi-Attack",
+      "pubDate": "2021-07-16T05:42:25.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Cross-chain decentralized exchange (DEX) THORChain has been added to the lengthening list of exploited protocols as details emerge of a multi-million dollar hack. The post THORChain Exploited for $5 Million in Latest DeFi Attack appeared first on BeInCrypto.",
+      "currencies": [
+        "RUNE"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "RT @RichardHeartWin: People often ask me, HEX or sacrifice? I pulled the number 1/3 HEX (You'll get it on 2 chains at the fork) and 2/3 sac…",
+      "link": "https://cryptopanic.com/news/12335382/RT-RichardHeartWin-People-often-ask-me-HEX-or-sacrifice-I-pulled-the-number-13-HEX-Youll-get-it-on-2-chains-at-the-fork-and-23-sac",
+      "pubDate": "2021-07-16T04:47:26.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: You can watch the millions of dollars pouring into in real time! https…",
+      "link": "https://cryptopanic.com/news/12335383/RT-RichardHeartWin-You-can-watch-the-millions-of-dollars-pouring-into-in-real-time-https",
+      "pubDate": "2021-07-16T04:31:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "RT @RichardHeartWin: Congrats on the 50x @MichaelSuppo!",
+      "link": "https://cryptopanic.com/news/12335384/RT-RichardHeartWin-Congrats-on-the-50x-MichaelSuppo",
+      "pubDate": "2021-07-16T03:57:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HEX"
+      ]
+    },
+    {
+      "title": "PNY @PNYTechnologies just announced 2 Chia optimized NVMe drives - Our own @LebanonJon rece…",
+      "link": "https://cryptopanic.com/news/12334417/PNY-PNYTechnologies-just-announced-2-Chia-optimized-NVMe-drives-Our-own-LebanonJon-rece",
+      "pubDate": "2021-07-16T03:12:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "XCH"
+      ]
+    },
+    {
+      "title": "Judge allows Ripple to depose SEC official who decided ETH is not a security",
+      "link": "https://cryptopanic.com/news/ripple/12333426/Judge-allows-Ripple-to-depose-SEC-official-who-decided-ETH-is-not-a-security",
+      "pubDate": "2021-07-16T02:51:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Bill Hinman could be called to testify on his 2018 comments regarding Ethereum’s security status.",
+      "currencies": [
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 11,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Join @DeFinePlatform airdrop event on #Blockzone and share $5000 $USDT. For more details",
+      "link": "https://cryptopanic.com/news/12336983/Join-DeFinePlatform-airdrop-event-on-Blockzone-and-share-5000-USDT-For-more-details",
+      "pubDate": "2021-07-16T02:07:59.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "STPT"
+      ]
+    }
+  ]
+}

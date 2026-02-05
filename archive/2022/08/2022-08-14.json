@@ -1,0 +1,389 @@
+{
+  "date": "2022-08-14",
+  "fetchedAt": "2026-02-05T07:27:07.851Z",
+  "articleCount": 24,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Dogecoin Competitor Shiba Inu Erupts, Hitting $10,000,000,000 Market Cap As Bitcoin and Ethereum Tap Resistance",
+      "link": "https://cryptopanic.com/news/16049824/Dogecoin-Competitor-Shiba-Inu-Erupts-Hitting-10000000000-Market-Cap-As-Bitcoin-and-Ethereum-Tap-Resistance",
+      "pubDate": "2022-08-14T21:41:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Capital in the crypto markets is shifting to meme coins as a new week kicks off. The Ethereum-based dog-themed crypto asset Shiba Inu (SHIB) soared 40% in the last 24-hours, briefly shattering a $10,000,000,000 market cap. The Dogecoin (DOGE) rival’s rise from $0.00001259 to as high as $0.00001762 comes just after Bitcoin and Ethereum tapped […]",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DOGE",
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 2
+      }
+    },
+    {
+      "title": "Shiba Inu eyes 50% rally as SHIB price enters ‘cup-and-handle’ breakout mode",
+      "link": "https://cryptopanic.com/news/16049772/Shiba-Inu-eyes-50-rally-as-SHIB-price-enters-cup-and-handle-breakout-mode",
+      "pubDate": "2022-08-14T21:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The Shiba Inu breakout appears almost ten days after SHIB’s addition to Binance Card.",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Top 5 cryptocurrencies to watch this week: BTC, ADA, UNI, LINK, CHZ",
+      "link": "https://cryptopanic.com/news/16049617/Top-5-cryptocurrencies-to-watch-this-week-BTC-ADA-UNI-LINK-CHZ",
+      "pubDate": "2022-08-14T19:54:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Bitcoin price is targeting $25,000 and holding this level could trigger breakouts in ADA, UNI, LINK and CHZ.",
+      "currencies": [
+        "BTC",
+        "ADA",
+        "LINK",
+        "UNI",
+        "CHZ"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 3
+      }
+    },
+    {
+      "title": "Polygon, Fantom Poised for Significant Price Action",
+      "link": "https://cryptopanic.com/news/16049478/Polygon-Fantom-Poised-for-Significant-Price-Action",
+      "pubDate": "2022-08-14T18:13:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Polygon's MATIC and Fantom's FTM have shown a negative correlation coefficient over the weekend. The former appears to be bound for higher highs, while the latter could be about to enter a steep correction. Volatility has struck the cryptocurrency market, and altcoins like MATIC and FTM look poised for significant price movement.MATIC has enjoyed impressive bullish momentum, surging nearly 13%...",
+      "currencies": [
+        "MATIC",
+        "FTM"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Over 1.2 Billion aUSD Minted in an Exploit of Polkadot’s DeFi Hub Acala",
+      "link": "https://cryptopanic.com/news/16049438/Over-12-Billion-aUSD-Minted-in-an-Exploit-of-Polkadots-DeFi-Hub-Acala",
+      "pubDate": "2022-08-14T17:57:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "Acala has become the latest DeFi protocol to come under attack as hackers mint 1.2 billion aUSD from thin air.",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 14
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Youtube Crypto Influencer BitBoy Crypto Warns That He Is Planning Something That “Will Permanently Change Crypto”",
+      "link": "https://cryptopanic.com/news/bitcoin/16049404/Youtube-Crypto-Influencer-BitBoy-Crypto-Warns-That-He-Is-Planning-Something-That-Will-Permanently-Change-Crypto",
+      "pubDate": "2022-08-14T17:25:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "TL;DR Ben Armstrong, also known as BitBoy Crypto warns his followers that he is planning something which will change the crypto industry forever. BitBoy Crypto is a Youtube influencer that has more than 1.5 million followers on his YouTube account. The controversial but well-known youtube crypto influencer Ben Armstrong, also known as BitBoy Crypto by his Youtube community, posted...",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 6
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Kevin O’Leary Says Arrest of Tornado Cash Developer Worth the ‘Sacrifice’ – Here’s Why",
+      "link": "https://cryptopanic.com/news/bitcoin/16049332/Kevin-OLeary-Says-Arrest-of-Tornado-Cash-Developer-Worth-the-Sacrifice-Heres-Why",
+      "pubDate": "2022-08-14T16:55:33.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Shark Tank investor Kevin O’Leary says that the recent arrest of the suspected developer of coin mixing service Tornado Cash is a worthy sacrifice on the road to a more regulated crypto industry. In a panel discussion on Crypto Banter, the venture capitalist says that Tornado Cash and similar services are part of a “crypto […]",
+      "currencies": [
+        "BTC",
+        "ETH"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Peter Schiff Predicts Bitcoin Crashing To $10k, Warns HODLers To Dump Before It’s Too Late",
+      "link": "https://cryptopanic.com/news/bitcoin/16049174/Peter-Schiff-Predicts-Bitcoin-Crashing-To-10k-Warns-HODLers-To-Dump-Before-Its-Too-Late",
+      "pubDate": "2022-08-14T15:19:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Staunch Bitcoin critic Peter Schiff has called on crypto hodlers to dump their BTC holdings before it’s too late.",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 38,
+        "negative": 15
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @hotlinexyz: \"RLY Protocol also provides both developers and community members with an opportunity to earn financial rewards in the form…",
+      "link": "https://cryptopanic.com/news/16053756/RT-hotlinexyz-RLY-Protocol-also-provides-both-developers-and-community-members-with-an-opportunity-to-earn-financial-rewards-in-the-form",
+      "pubDate": "2022-08-14T14:55:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "RLY"
+      ]
+    },
+    {
+      "title": "This new #XYO example oracle dApp intakes a payload of #Uniswap pair data and outputs it in a human-readable format…",
+      "link": "https://cryptopanic.com/news/16054805/This-new-XYO-example-oracle-dApp-intakes-a-payload-of-Uniswap-pair-data-and-outputs-it-in-a-human-readable-format",
+      "pubDate": "2022-08-14T14:50:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "XYO"
+      ]
+    },
+    {
+      "title": "Polygon Team Reports Apps On The Network Surge By 400%",
+      "link": "https://cryptopanic.com/news/16049100/Polygon-Team-Reports-Apps-On-The-Network-Surge-By-400",
+      "pubDate": "2022-08-14T14:40:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "While the crypto market remains in its winter, some other sectors in the industry are experiencing a steady rise, one of the prominent examples of these sectors is the operational teams in the Polygon network. As of March this year, its total monthly active teams were around 8,000. However, recent data shows that the current monthly active teams for the network as of last month are about...",
+      "currencies": [
+        "ETH",
+        "DOT",
+        "MATIC",
+        "SAND",
+        "FIL"
+      ],
+      "votes": {
+        "positive": 18,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "RT @CryptoWJB: $white has 70% less fees than it’s competitors  get in before it’s too late  #whiteeth",
+      "link": "https://cryptopanic.com/news/16137217/RT-CryptoWJB-white-has-70-less-fees-than-its-competitors-get-in-before-its-too-late-whiteeth?mtm_campaign=API-OFA",
+      "pubDate": "2022-08-14T13:53:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "WHITE"
+      ]
+    },
+    {
+      "title": "Polkadot-based stablecoin aUSD depegs after Acala Network breach",
+      "link": "https://cryptopanic.com/news/16049012/Polkadot-based-stablecoin-aUSD-depegs-after-Acala-Network-breach",
+      "pubDate": "2022-08-14T13:49:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "Acala Network, the decentralized finance hub of Polkadot, was breached and its stablecoin depegged from the dollar.",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 9
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Which Indicator Do You Prefer the Most to Trade Crypto?",
+      "link": "https://cryptopanic.com/news/16050701/Which-Indicator-Do-You-Prefer-the-Most-to-Trade-Crypto",
+      "pubDate": "2022-08-14T13:14:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ABBC"
+      ]
+    },
+    {
+      "title": "Shiba Inu, Dogecoin Post Gains as Meme Cryptocurrencies' Trading Volumes Spike 151%",
+      "link": "https://cryptopanic.com/news/16048852/Shiba-Inu-Dogecoin-Post-Gains-as-Meme-Cryptocurrencies-Trading-Volumes-Spike-151",
+      "pubDate": "2022-08-14T12:08:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Trading volumes of this class of assets have increased by staggering 151%",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$1.5 billion enters SHIB’s market cap in 24 hours as meme coin gains 22%",
+      "link": "https://cryptopanic.com/news/16048770/15-billion-enters-SHIBs-market-cap-in-24-hours-as-meme-coin-gains-22",
+      "pubDate": "2022-08-14T11:05:36.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "After experiencing a significant price correction in 2022, interest in meme cryptocurrency Shiba Inu (SHIB) is gaining momentum recording increased... Continue reading",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 10,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin hits $25K as bearish voices call BTC price ‘double top’",
+      "link": "https://cryptopanic.com/news/16048664/Bitcoin-hits-25K-as-bearish-voices-call-BTC-price-double-top",
+      "pubDate": "2022-08-14T10:01:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "A casual dash over the $25,000 mark is fully retraced as weekend trading produces some classic volatility.",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "DASH"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Once your deposit enters the fund you will receive Alpha and/or Beta and/or Gamma Fund Tokens as well as your NFT.…",
+      "link": "https://cryptopanic.com/news/16052126/Once-your-deposit-enters-the-fund-you-will-receive-Alpha-andor-Beta-andor-Gamma-Fund-Tokens-as-well-as-your-NFT?mtm_campaign=API-OFA",
+      "pubDate": "2022-08-14T09:00:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "FORM"
+      ]
+    },
+    {
+      "title": "“DeFi Hub of Polkadot” Suffers Major Hack",
+      "link": "https://cryptopanic.com/news/16046792/DeFi-Hub-of-Polkadot-Suffers-Major-Hack",
+      "pubDate": "2022-08-14T07:46:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "The decentralized hub of the Polkadot network has suffered a security breach, which resulted in the de-pegging of the AUSD stablecoin",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Polkadot (DOT) To Retest $9.88 Resistance – Can Bulls Regain Solid Footing?",
+      "link": "https://cryptopanic.com/news/16045778/Polkadot-DOT-To-Retest-988-Resistance-Can-Bulls-Regain-Solid-Footing",
+      "pubDate": "2022-08-14T06:40:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Polkadot (DOT) price reveals that the extreme bullish movement pumped the price reaching $9.54. DOT price extremely bullish; set to retest $9.88 key resistance level. Support spotted at the $9.29 zone. Polkadot pumped up its price to $9.54. DOT’s price trendline has spiked for the past couple of weeks following the coin’s overwhelming gains over the past few days. Today, DOT/USD is trying to...",
+      "currencies": [
+        "BTC",
+        "DOT",
+        "MANA",
+        "FIL"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 4
+      }
+    },
+    {
+      "title": "There’s still a chance to deposit $KLAY to share $100 rewards! 🧡",
+      "link": "https://cryptopanic.com/news/klay-token/16044968/Theres-still-a-chance-to-deposit-KLAY-to-share-100-rewards",
+      "pubDate": "2022-08-14T04:14:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KLAY",
+        "BTSE",
+        "WXMR"
+      ]
+    },
+    {
+      "title": "The little Hireling that could. :-)",
+      "link": "https://cryptopanic.com/news/16049453/The-little-Hireling-that-could-",
+      "pubDate": "2022-08-14T02:44:55.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "SPS"
+      ]
+    },
+    {
+      "title": "SPLINTERLANDS SPS TOKEN ANALYSIS: BIG PRICE CATALYSTS INCOMING",
+      "link": "https://cryptopanic.com/news/16044416/SPLINTERLANDS-SPS-TOKEN-ANALYSIS-BIG-PRICE-CATALYSTS-INCOMING",
+      "pubDate": "2022-08-14T01:04:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "SPS"
+      ]
+    },
+    {
+      "title": "LISTING GIVEAWAY To celebrate $DASH on @FCFpay, we're giving away $25 in #Dash and $25 in $FCF Revenue Sharing…",
+      "link": "https://cryptopanic.com/news/dash/16046106/LISTING-GIVEAWAY-To-celebrate-DASH-on-FCFpay-were-giving-away-25-in-Dash-and-25-in-FCF-Revenue-Sharing",
+      "pubDate": "2022-08-14T00:32:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "DASH",
+        "FCF"
+      ]
+    }
+  ]
+}

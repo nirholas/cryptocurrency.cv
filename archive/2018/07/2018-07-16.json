@@ -1,0 +1,26 @@
+{
+  "date": "2018-07-16",
+  "fetchedAt": "2026-02-05T07:27:07.857Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tron (TRX) Price Analysis – Bullish Reaction to Renewed Cryptocurrency Optimism",
+      "link": "https://cryptopanic.com/news/2556920/Tron-TRX-Price-Analysis-Bullish-Reaction-to-Renewed-Cryptocurrency-Optimism",
+      "pubDate": "2018-07-16T18:59:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

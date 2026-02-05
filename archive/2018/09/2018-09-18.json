@@ -1,0 +1,26 @@
+{
+  "date": "2018-09-18",
+  "fetchedAt": "2026-02-05T07:27:07.856Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Tron Foundation Launches SEEDgerminator",
+      "link": "https://cryptopanic.com/news/3072707/Tron-Foundation-Launches-SEEDgerminator",
+      "pubDate": "2018-09-18T14:29:52.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

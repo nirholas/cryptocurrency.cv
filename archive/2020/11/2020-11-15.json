@@ -1,0 +1,63 @@
+{
+  "date": "2020-11-15",
+  "fetchedAt": "2026-02-05T07:27:06.991Z",
+  "articleCount": 4,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Top 5 cryptocurrencies to watch this week: BTC, ETH, XRP, XMR, UNI",
+      "link": "https://cryptopanic.com/news/uniswap/10542674/Top-5-cryptocurrencies-to-watch-this-week-BTC-ETH-XRP-XMR-UNI",
+      "pubDate": "2020-11-15T18:16:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Latest Updates from BNB48 Club® — 2020 Nov 16th",
+      "link": "https://cryptopanic.com/news/11377804/Latest-Updates-from-BNB48-Club-2020-Nov-16th?mtm_campaign=API-OFA",
+      "pubDate": "2020-11-15T17:28:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "KOGE"
+      ]
+    },
+    {
+      "title": "The 2020 KTV Film Festival Begins on Monday, 16th at MovieBloc",
+      "link": "https://cryptopanic.com/news/10539641/The-2020-KTV-Film-Festival-Begins-on-Monday-16th-at-MovieBloc",
+      "pubDate": "2020-11-15T04:43:57.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MBL"
+      ]
+    },
+    {
+      "title": "What's your Sunday plan?",
+      "link": "https://cryptopanic.com/news/10539560/Whats-your-Sunday-plan",
+      "pubDate": "2020-11-15T04:04:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "HYN"
+      ]
+    }
+  ]
+}

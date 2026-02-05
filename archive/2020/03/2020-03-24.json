@@ -1,0 +1,25 @@
+{
+  "date": "2020-03-24",
+  "fetchedAt": "2026-02-05T07:27:08.125Z",
+  "articleCount": 1,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "Brave taps Binance for crypto trading widget in browser",
+      "link": "https://cryptopanic.com/news/8323249/Brave-taps-Binance-for-crypto-trading-widget-in-browser",
+      "pubDate": "2020-03-24T20:09:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "BAT"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    }
+  ]
+}

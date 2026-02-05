@@ -1,0 +1,846 @@
+{
+  "date": "2023-08-01",
+  "fetchedAt": "2026-02-05T07:27:07.062Z",
+  "articleCount": 59,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "ApeCoin Price Sinks to All-Time Low as Bored Ape NFTs Dip Again",
+      "link": "https://cryptopanic.com/news/18811280/ApeCoin-Price-Sinks-to-All-Time-Low-as-Bored-Ape-NFTs-Dip-Again",
+      "pubDate": "2023-08-01T23:39:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "nft",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "APE"
+      ]
+    },
+    {
+      "title": "Dogecoin (DOGE) Price Sees Increased Activity: What’s the Reason?",
+      "link": "https://cryptopanic.com/news/18811210/Dogecoin-DOGE-Price-Sees-Increased-Activity-Whats-the-Reason",
+      "pubDate": "2023-08-01T22:32:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "A spike in the price of the most popular memecoin, Dogecoin, has begun. So what is the source of the rise, what was the trigger? Continue Reading: Dogecoin (DOGE) Price Sees Increased Activity: What’s the Reason?",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Michael Egorov’s $100 Million Position, A Risk To Curve Finance And DeFi?",
+      "link": "https://cryptopanic.com/news/18811207/Michael-Egorovs-100-Million-Position-A-Risk-To-Curve-Finance-And-DeFi",
+      "pubDate": "2023-08-01T22:30:50.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "AAVE",
+        "CRV",
+        "FRAX"
+      ]
+    },
+    {
+      "title": "Bitcoin Reverts to $29.6K as Dollar Index, Treasury Yields Shrug Off U.S. Rating Downgrade",
+      "link": "https://cryptopanic.com/news/18811191/Bitcoin-Reverts-to-296K-as-Dollar-Index-Treasury-Yields-Shrug-Off-US-Rating-Downgrade",
+      "pubDate": "2023-08-01T22:12:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "SOL",
+        "TRX",
+        "CRV"
+      ]
+    },
+    {
+      "title": "Binance To Enter Japan With A Bang, Will List More Tokens Than Any Local Exchange",
+      "link": "https://cryptopanic.com/news/18811124/Binance-To-Enter-Japan-With-A-Bang-Will-List-More-Tokens-Than-Any-Local-Exchange",
+      "pubDate": "2023-08-01T21:30:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "USDT",
+        "BNB",
+        "SOL",
+        "AVAX",
+        "AXS",
+        "RNDR"
+      ]
+    },
+    {
+      "title": "Large CRV-backed Loans Threaten to Destabilize DeFi",
+      "link": "https://cryptopanic.com/news/18810847/Large-CRV-backed-Loans-Threaten-to-Destabilize-DeFi",
+      "pubDate": "2023-08-01T20:37:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Bitcoin Drops Under $29,000, Here’s Where BTC Could Find Support Next",
+      "link": "https://cryptopanic.com/news/18810848/Bitcoin-Drops-Under-29000-Heres-Where-BTC-Could-Find-Support-Next",
+      "pubDate": "2023-08-01T20:30:53.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "QNT"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "XRP Doomed? SEC Veteran Convinced Historic Ripple Ruling In ‘Big Trouble’ After Rejection By Federal Judge",
+      "link": "https://cryptopanic.com/news/18810782/XRP-Doomed-SEC-Veteran-Convinced-Historic-Ripple-Ruling-In-Big-Trouble-After-Rejection-By-Federal-Judge",
+      "pubDate": "2023-08-01T20:01:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "A former official at the U.S. Securities and Exchange Commission (SEC) has cautioned that the legal predicament for Ripple Labs is about to get worse after a recent high-stakes court decision.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 5
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Cryptocurrency XDC Network Up More Than 8% In 24 hours",
+      "link": "https://cryptopanic.com/news/18810711/Cryptocurrency-XDC-Network-Up-More-Than-8-In-24-hours",
+      "pubDate": "2023-08-01T19:00:37.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "read more",
+      "currencies": [
+        "XDC"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cryptocurrency Maker Up More Than 7% In 24 hours",
+      "link": "https://cryptopanic.com/news/maker/18810713/Cryptocurrency-Maker-Up-More-Than-7-In-24-hours",
+      "pubDate": "2023-08-01T19:00:15.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "MKR"
+      ]
+    },
+    {
+      "title": "What to expect as ATOM dips under $9",
+      "link": "https://cryptopanic.com/news/18810534/What-to-expect-as-ATOM-dips-under-9",
+      "pubDate": "2023-08-01T17:30:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ATOM"
+      ]
+    },
+    {
+      "title": "Curve founder dumps CRV on Justin Sun to avoid liquidation",
+      "link": "https://cryptopanic.com/news/18810499/Curve-founder-dumps-CRV-on-Justin-Sun-to-avoid-liquidation",
+      "pubDate": "2023-08-01T17:14:35.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Shiba Inu (SHIB) Looks Stronger Than You Think",
+      "link": "https://cryptopanic.com/news/18810472/Shiba-Inu-SHIB-Looks-Stronger-Than-You-Think",
+      "pubDate": "2023-08-01T17:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "From Cardano's surprising dip to Shiba Inu's stability and Ethereum's bearish turn, crypto market's rollercoaster ride continues",
+      "currencies": [
+        "SHIB"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 1
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Pressure on Cryptocurrency Exchanges from Ukraine!",
+      "link": "https://cryptopanic.com/news/18810403/Pressure-on-Cryptocurrency-Exchanges-from-Ukraine",
+      "pubDate": "2023-08-01T16:31:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "The Ukrainian government has recently requested local cryptocurrency platforms to provide certain financial information. Continue Reading: Pressure on Cryptocurrency Exchanges from Ukraine!",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 3
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Lomesh Dutta, VP of Growth at DFINITY, on Internet Computer, Bitcoin DeFi, and ckBTC | Ep. 252",
+      "link": "https://cryptopanic.com/news/18810359/Lomesh-Dutta-VP-of-Growth-at-DFINITY-on-Internet-Computer-Bitcoin-DeFi-and-ckBTC-Ep-252",
+      "pubDate": "2023-08-01T16:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "In an exclusive interview with cryptonews.com, Lomesh Dutta, Vice President of Growth at DFINITY, talks about the Internet Computer (IC), the future of Bitcoin-based DeFi, and ckBTC.... Read More: Lomesh Dutta, VP of Growth at DFINITY, on Internet Computer, Bitcoin DeFi, and ckBTC | Ep. 252",
+      "currencies": [
+        "BTC",
+        "ICP"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Bitcoin’s Plunge Below $29K Triggers $92 Million in Derivatives Liquidations; Crypto Markets Tremble",
+      "link": "https://cryptopanic.com/news/18810329/Bitcoins-Plunge-Below-29K-Triggers-92-Million-in-Derivatives-Liquidations-Crypto-Markets-Tremble",
+      "pubDate": "2023-08-01T16:00:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "HEX"
+      ]
+    },
+    {
+      "title": "CRV prices spiral downward after exploit, is a recovery in sight",
+      "link": "https://cryptopanic.com/news/18810227/CRV-prices-spiral-downward-after-exploit-is-a-recovery-in-sight",
+      "pubDate": "2023-08-01T15:30:02.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Curve Finance Hack’s Update and Current High Debt Situation",
+      "link": "https://cryptopanic.com/news/18810243/Curve-Finance-Hacks-Update-and-Current-High-Debt-Situation",
+      "pubDate": "2023-08-01T15:29:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV",
+        "FRAX"
+      ]
+    },
+    {
+      "title": "Tron Founder Justin Sun Makes Big Bet On Curve Finance, Purchases $2.9M Worth Of CRV",
+      "link": "https://cryptopanic.com/news/18810254/Tron-Founder-Justin-Sun-Makes-Big-Bet-On-Curve-Finance-Purchases-29M-Worth-Of-CRV",
+      "pubDate": "2023-08-01T15:17:45.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "CRV"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash Down More Than 3% Within 24 hours",
+      "link": "https://cryptopanic.com/news/18810218/Bitcoin-Cash-Down-More-Than-3-Within-24-hours",
+      "pubDate": "2023-08-01T15:00:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BCH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "DeFi Platform Term Finance Brings Fixed Rate Lending to Ethereum",
+      "link": "https://cryptopanic.com/news/18810189/DeFi-Platform-Term-Finance-Brings-Fixed-Rate-Lending-to-Ethereum",
+      "pubDate": "2023-08-01T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Today in Crypto: FTX Proposes Possible Restart of FTX.com for 'Dotcom Customers', US IRS Says Income From Staking Crypto Must be Reported, Justin Sun Announces Tron-Curve Partnership and Buys $3M Worth of CRV for $2M",
+      "link": "https://cryptopanic.com/news/18810196/Today-in-Crypto-FTX-Proposes-Possible-Restart-of-FTXcom-for-Dotcom-Customers-US-IRS-Says-Income-From-Staking-Crypto-Must-be-Reported-Justin-Sun-Announces-Tron-Curve-Partnership-and-Buys-3M-Worth-of-CRV-for-2M",
+      "pubDate": "2023-08-01T15:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "MATIC",
+        "FTT",
+        "CRV"
+      ]
+    },
+    {
+      "title": "ApeCoin Team Claims Another 4.6M Tokens From Treasury Allocation",
+      "link": "https://cryptopanic.com/news/18810168/ApeCoin-Team-Claims-Another-46M-Tokens-From-Treasury-Allocation",
+      "pubDate": "2023-08-01T14:59:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "APE"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Neo opens registration for APAC Hackathon Ho Chi Minh City GAS Station on Aug. 12 and 13",
+      "link": "https://cryptopanic.com/news/18810154/Neo-opens-registration-for-APAC-Hackathon-Ho-Chi-Minh-City-GAS-Station-on-Aug-12-and-13",
+      "pubDate": "2023-08-01T14:51:30.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "Bitcoin (BTC) Price Prediction – Maker (MKR) and Borroe ($ROE) Surge",
+      "link": "https://cryptopanic.com/news/maker/18810142/Bitcoin-BTC-Price-Prediction-Maker-MKR-and-Borroe-ROE-Surge",
+      "pubDate": "2023-08-01T14:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XRP",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Neo to host Java-based coding workshop and panel on infrastructure",
+      "link": "https://cryptopanic.com/news/18810139/Neo-to-host-Java-based-coding-workshop-and-panel-on-infrastructure",
+      "pubDate": "2023-08-01T14:44:31.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "BREAKING! Coinbase Adds Support to XRP and LTC, Price Responds!",
+      "link": "https://cryptopanic.com/news/18810123/BREAKING-Coinbase-Adds-Support-to-XRP-and-LTC-Price-Responds",
+      "pubDate": "2023-08-01T14:38:04.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "Coinbase Global has listed XRP and LTC on futures markets. After Coinbase's listing, LTC had a 5% response and XRP a 2% response. Continue Reading: BREAKING! Coinbase Adds Support to XRP and LTC, Price Responds!",
+      "currencies": [
+        "XRP",
+        "LTC"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Top Trader Says One Ethereum Altcoin Has Now Reached ‘Blue Chip Status’ and Is Primed for Next Bull Run",
+      "link": "https://cryptopanic.com/news/flow/18810118/Top-Trader-Says-One-Ethereum-Altcoin-Has-Now-Reached-Blue-Chip-Status-and-Is-Primed-for-Next-Bull-Run",
+      "pubDate": "2023-08-01T14:30:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "UNI"
+      ]
+    },
+    {
+      "title": "Justin Sun, DCF God and Others Line Up to Buy Curve Finance Founder’s CRV Tokens",
+      "link": "https://cryptopanic.com/news/18810081/Justin-Sun-DCF-God-and-Others-Line-Up-to-Buy-Curve-Finance-Founders-CRV-Tokens",
+      "pubDate": "2023-08-01T14:27:01.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "AAVE",
+        "CRV"
+      ]
+    },
+    {
+      "title": "Ethereum DeFi TVL Down $3.55B Since Curve Crisis",
+      "link": "https://cryptopanic.com/news/18810036/Ethereum-DeFi-TVL-Down-355B-Since-Curve-Crisis",
+      "pubDate": "2023-08-01T14:07:49.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "TRX",
+        "MKR",
+        "CRV"
+      ]
+    },
+    {
+      "title": "Tron’s Justin Sun Buys 5M CRV Tokens to Help Curve Finance’s Bad Debt Situation",
+      "link": "https://cryptopanic.com/news/18810037/Trons-Justin-Sun-Buys-5M-CRV-Tokens-to-Help-Curve-Finances-Bad-Debt-Situation",
+      "pubDate": "2023-08-01T14:05:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Risk of Black Swan Event Could End DeFi? A Look into CRV Liquidity Crisis",
+      "link": "https://cryptopanic.com/news/18810034/Risk-of-Black-Swan-Event-Could-End-DeFi-A-Look-into-CRV-Liquidity-Crisis",
+      "pubDate": "2023-08-01T14:04:20.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Is Tether the Safest Stablecoin To Store Your Crypto? Tradecurve Skyrockets, Hits $4Million",
+      "link": "https://cryptopanic.com/news/18809993/Is-Tether-the-Safest-Stablecoin-To-Store-Your-Crypto-Tradecurve-Skyrockets-Hits-4Million",
+      "pubDate": "2023-08-01T13:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "HT"
+      ]
+    },
+    {
+      "title": "Bitcoin Falls Below This Key Level; Compound, Aave Among Top Losers",
+      "link": "https://cryptopanic.com/news/18809969/Bitcoin-Falls-Below-This-Key-Level-Compound-Aave-Among-Top-Losers",
+      "pubDate": "2023-08-01T13:31:24.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "AAVE"
+      ]
+    },
+    {
+      "title": "Uniswap (UNI) Stays Afloat With 12% Gain As Rest Of Top 50 Coins Sink",
+      "link": "https://cryptopanic.com/news/18809896/Uniswap-UNI-Stays-Afloat-With-12-Gain-As-Rest-Of-Top-50-Coins-Sink",
+      "pubDate": "2023-08-01T13:10:43.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "CRV"
+      ]
+    },
+    {
+      "title": "Tron (TRX) Founder Justin Sun Just Purchased 5 Million CRV on OTC",
+      "link": "https://cryptopanic.com/news/18809901/Tron-TRX-Founder-Justin-Sun-Just-Purchased-5-Million-CRV-on-OTC",
+      "pubDate": "2023-08-01T13:10:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "CRV"
+      ]
+    },
+    {
+      "title": "Testnet Node Software Upgrade: ZEN 4.1.0-rc1 is Available to Download",
+      "link": "https://cryptopanic.com/news/18809844/Testnet-Node-Software-Upgrade-ZEN-410-rc1-is-Available-to-Download",
+      "pubDate": "2023-08-01T13:05:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ZEN"
+      ]
+    },
+    {
+      "title": "Curve Founder Sells ~$40M in CRV Tokens Amid Liquidation Risk",
+      "link": "https://cryptopanic.com/news/18809927/Curve-Founder-Sells-40M-in-CRV-Tokens-Amid-Liquidation-Risk",
+      "pubDate": "2023-08-01T12:53:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Is It Too Late to Buy Bitcoin SV? BSV Price Pumps Up 12% and AI Crypto Signals Platform yPredict Just Hit $3.25m",
+      "link": "https://cryptopanic.com/news/18809731/Is-It-Too-Late-to-Buy-Bitcoin-SV-BSV-Price-Pumps-Up-12-and-AI-Crypto-Signals-Platform-yPredict-Just-Hit-325m",
+      "pubDate": "2023-08-01T12:17:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BSV"
+      ]
+    },
+    {
+      "title": "Could Uniswap (UNI) Take Advantage of Curve Finance’s (CRV) Fall?",
+      "link": "https://cryptopanic.com/news/18809720/Could-Uniswap-UNI-Take-Advantage-of-Curve-Finances-CRV-Fall",
+      "pubDate": "2023-08-01T12:16:18.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "UNI",
+        "CRV"
+      ]
+    },
+    {
+      "title": "Bitcoin Cash price prediction as volatility and volume slumps",
+      "link": "https://cryptopanic.com/news/18809681/Bitcoin-Cash-price-prediction-as-volatility-and-volume-slumps",
+      "pubDate": "2023-08-01T12:04:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "BCH"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Google Bard predicts what will be DOGE price if Elon Musk’s X integrates payments",
+      "link": "https://cryptopanic.com/news/18809690/Google-Bard-predicts-what-will-be-DOGE-price-if-Elon-Musks-X-integrates-payments",
+      "pubDate": "2023-08-01T12:01:54.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "As the hype around artificial intelligence (AI) revival continues, ignited by OpenAI releasing its text-based AI tool ChatGPT, other similar … Continued",
+      "currencies": [
+        "DOGE"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 1
+      }
+    },
+    {
+      "title": "Curve founder Michael Egorov sells more CRV to DCFGod and others",
+      "link": "https://cryptopanic.com/news/18809605/Curve-founder-Michael-Egorov-sells-more-CRV-to-DCFGod-and-others",
+      "pubDate": "2023-08-01T11:39:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "CRV"
+      ]
+    },
+    {
+      "title": "MKR, COMP lead DeFi revival against rough patch",
+      "link": "https://cryptopanic.com/news/18809595/MKR-COMP-lead-DeFi-revival-against-rough-patch",
+      "pubDate": "2023-08-01T11:30:51.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "COMP"
+      ]
+    },
+    {
+      "title": "Curve Finance and Owner’s $100M Debt: Catastrophe or Slight Inconvenience?",
+      "link": "https://cryptopanic.com/news/18809565/Curve-Finance-and-Owners-100M-Debt-Catastrophe-or-Slight-Inconvenience",
+      "pubDate": "2023-08-01T11:11:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "CRV",
+        "FRAX"
+      ]
+    },
+    {
+      "title": "Buying The Dip: Tron Founder Justin Sun Buys 5 Million CRV In OTC Deal",
+      "link": "https://cryptopanic.com/news/18809519/Buying-The-Dip-Tron-Founder-Justin-Sun-Buys-5-Million-CRV-In-OTC-Deal",
+      "pubDate": "2023-08-01T11:00:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "TRX",
+        "CRV"
+      ]
+    },
+    {
+      "title": "Exploited CurveFi Boss Faces Liquidation Threat Should CRV Crash 33%",
+      "link": "https://cryptopanic.com/news/18809482/Exploited-CurveFi-Boss-Faces-Liquidation-Threat-Should-CRV-Crash-33",
+      "pubDate": "2023-08-01T10:44:58.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Justin Sun buys $2.9 million of CRV from Michael Egorov and partners with Curve",
+      "link": "https://cryptopanic.com/news/18809403/Justin-Sun-buys-29-million-of-CRV-from-Michael-Egorov-and-partners-with-Curve",
+      "pubDate": "2023-08-01T10:16:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Curve Finance founder’s $100M debt could trigger a DeFi implosion: Report",
+      "link": "https://cryptopanic.com/news/18809332/Curve-Finance-founders-100M-debt-could-trigger-a-DeFi-implosion-Report",
+      "pubDate": "2023-08-01T10:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Curve Founder Deploys New Liquidity Pool to Address FRAX Debt Situation",
+      "link": "https://cryptopanic.com/news/18809331/Curve-Founder-Deploys-New-Liquidity-Pool-to-Address-FRAX-Debt-Situation",
+      "pubDate": "2023-08-01T09:53:22.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV",
+        "FRAX"
+      ]
+    },
+    {
+      "title": "Open interest in CRV-linked futures skyrockets as Curve token reels from recent attack",
+      "link": "https://cryptopanic.com/news/18809279/Open-interest-in-CRV-linked-futures-skyrockets-as-Curve-token-reels-from-recent-attack",
+      "pubDate": "2023-08-01T09:22:42.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Has The Curve Finance Exploit Put Aave And DeFi At Risk?",
+      "link": "https://cryptopanic.com/news/18809181/Has-The-Curve-Finance-Exploit-Put-Aave-And-DeFi-At-Risk",
+      "pubDate": "2023-08-01T08:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "USDT",
+        "USDC",
+        "UNI",
+        "AAVE",
+        "CRV",
+        "FRAX"
+      ]
+    },
+    {
+      "title": "Ethereum DeFi Coins Plunge As Curve Concerns Threaten Major Market Crash",
+      "link": "https://cryptopanic.com/news/18809093/Ethereum-DeFi-Coins-Plunge-As-Curve-Concerns-Threaten-Major-Market-Crash",
+      "pubDate": "2023-08-01T07:45:41.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "AAVE",
+        "CRV",
+        "COMP",
+        "FRAX"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 1
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Upbit Suspends CRV Transactions Following Curve Finance Exploit",
+      "link": "https://cryptopanic.com/news/18809086/Upbit-Suspends-CRV-Transactions-Following-Curve-Finance-Exploit",
+      "pubDate": "2023-08-01T07:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Traders Pile Into CRV Shorts Amid Concerns Over Curve Founder's Collateralized Borrowing",
+      "link": "https://cryptopanic.com/news/18808927/Traders-Pile-Into-CRV-Shorts-Amid-Concerns-Over-Curve-Founders-Collateralized-Borrowing",
+      "pubDate": "2023-08-01T05:52:09.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "defi",
+      "description": "NULL",
+      "currencies": [
+        "CRV"
+      ]
+    },
+    {
+      "title": "Axie Infinity traders, be prepared! AXS likely to fall to $5.8",
+      "link": "https://cryptopanic.com/news/18808790/Axie-Infinity-traders-be-prepared-AXS-likely-to-fall-to-58",
+      "pubDate": "2023-08-01T03:30:48.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "Is sticking to XRP the key to long-term gains?",
+      "link": "https://cryptopanic.com/news/18808741/Is-sticking-to-XRP-the-key-to-long-term-gains",
+      "pubDate": "2023-08-01T02:30:03.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Since becoming the 4th largest asset in market cap, doubts have spread about the long-term value of XRP. But there was optimism in some corners.",
+      "currencies": [
+        "XRP",
+        "OP"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Perlin Finance launches lend and borrow platform on Neo N3 TestNet",
+      "link": "https://cryptopanic.com/news/18808738/Perlin-Finance-launches-lend-and-borrow-platform-on-Neo-N3-TestNet",
+      "pubDate": "2023-08-01T02:10:21.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "NEO"
+      ]
+    },
+    {
+      "title": "First Mover Asia: BTC, ETH Stable While COMP and AAVE in the Red",
+      "link": "https://cryptopanic.com/news/18808697/First-Mover-Asia-BTC-ETH-Stable-While-COMP-and-AAVE-in-the-Red",
+      "pubDate": "2023-08-01T01:06:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "LTC",
+        "AAVE",
+        "COMP"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,495 @@
+{
+  "date": "2023-10-07",
+  "fetchedAt": "2026-02-05T07:27:07.049Z",
+  "articleCount": 32,
+  "source": "historical-import",
+  "articles": [
+    {
+      "title": "How Cardano surpassed Polkadot and Kusama in this metric",
+      "link": "https://cryptopanic.com/news/18954652/How-Cardano-surpassed-Polkadot-and-Kusama-in-this-metric",
+      "pubDate": "2023-10-07T22:30:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Development activity on Cardano rallies in the last month, placing the Layer 1 network ahead of Polkadot and Kusama.",
+      "currencies": [
+        "ADA",
+        "DOT",
+        "KSM"
+      ],
+      "votes": {
+        "positive": 13,
+        "negative": 3
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "$ADA: Cardano’s Latest Weekly Update: 146 Launched Projects and 76.1 Million Transactions",
+      "link": "https://cryptopanic.com/news/18954562/ADA-Cardanos-Latest-Weekly-Update-146-Launched-Projects-and-761-Million-Transactions",
+      "pubDate": "2023-10-07T19:07:46.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "On October 6, Essential Cardano provided the latest weekly development report about Cardano’s ecosystem. Core Technology: Making the Rules and Keeping the Peace The Cardano ledger team has been hard at work, setting up a constitutional committee to oversee the blockchain’s rules. They’ve also improved how the treasury functions and ensured that transactions comply with […]",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 17,
+        "negative": 6
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "XRP On Edge Of Massive Run to $3 Price If This Happens In Ripple vs. SEC Fight",
+      "link": "https://cryptopanic.com/news/18954550/XRP-On-Edge-Of-Massive-Run-to-3-Price-If-This-Happens-In-Ripple-vs-SEC-Fight",
+      "pubDate": "2023-10-07T18:52:11.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "The ongoing legal brawl between the SEC and Ripple has seen another major development.",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 4
+      }
+    },
+    {
+      "title": "Polkadot in Q3: Of staking, developments, and a new roadmap",
+      "link": "https://cryptopanic.com/news/18954524/Polkadot-in-Q3-Of-staking-developments-and-a-new-roadmap",
+      "pubDate": "2023-10-07T18:30:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "Although its native token failed to put up an impressive show, Polkadot made a lot of progress in Q3. Here are some of the major ones.",
+      "currencies": [
+        "DOT"
+      ],
+      "votes": {
+        "positive": 3,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Warren Buffett’s Right Hand Man Charlie Munger Answers Bitcoin Question",
+      "link": "https://cryptopanic.com/news/18954494/Warren-Buffetts-Right-Hand-Man-Charlie-Munger-Answers-Bitcoin-Question",
+      "pubDate": "2023-10-07T18:08:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 2
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "TRON Founder and Ethereum Co-Founder Conduct Major ETH Moves",
+      "link": "https://cryptopanic.com/news/18954432/TRON-Founder-and-Ethereum-Co-Founder-Conduct-Major-ETH-Moves",
+      "pubDate": "2023-10-07T17:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TRX"
+      ]
+    },
+    {
+      "title": "Unexpected Update: Hacker Who Stole 5,000 Ethereum from Huobi Returns the Funds",
+      "link": "https://cryptopanic.com/news/18954394/Unexpected-Update-Hacker-Who-Stole-5000-Ethereum-from-Huobi-Returns-the-Funds",
+      "pubDate": "2023-10-07T16:34:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "HT"
+      ],
+      "votes": {
+        "positive": 1,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Binance Immense XRP Holdings Exposed In Detailed Proof of Reserves Report",
+      "link": "https://cryptopanic.com/news/18954362/Binance-Immense-XRP-Holdings-Exposed-In-Detailed-Proof-of-Reserves-Report",
+      "pubDate": "2023-10-07T16:10:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "USDC",
+        "BNB",
+        "XRP",
+        "BUSD",
+        "DOGE",
+        "LTC"
+      ]
+    },
+    {
+      "title": "September Marked Record Profits for Bitcoin Miners",
+      "link": "https://cryptopanic.com/news/18954347/September-Marked-Record-Profits-for-Bitcoin-Miners",
+      "pubDate": "2023-10-07T16:10:06.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Bitcoin Shines as the Unprecedented Financial Star of 2023",
+      "link": "https://cryptopanic.com/news/18954346/Bitcoin-Shines-as-the-Unprecedented-Financial-Star-of-2023",
+      "pubDate": "2023-10-07T16:05:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "XLM"
+      ]
+    },
+    {
+      "title": "Just In: HTX Global Hacker Makes Full Refund of Stolen Funds",
+      "link": "https://cryptopanic.com/news/18954306/Just-In-HTX-Global-Hacker-Makes-Full-Refund-of-Stolen-Funds",
+      "pubDate": "2023-10-07T15:20:56.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "HT"
+      ]
+    },
+    {
+      "title": "Justin Sun’s $132M ETH Withdrawal: Is He About to Dump?",
+      "link": "https://cryptopanic.com/news/18954290/Justin-Suns-132M-ETH-Withdrawal-Is-He-About-to-Dump",
+      "pubDate": "2023-10-07T15:09:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TRX"
+      ]
+    },
+    {
+      "title": "Bitcoin Could Plunge by Nearly 50%, According to Crypto Analyst Nicholas Merten – Here’s Why",
+      "link": "https://cryptopanic.com/news/18954242/Bitcoin-Could-Plunge-by-Nearly-50-According-to-Crypto-Analyst-Nicholas-Merten-Heres-Why",
+      "pubDate": "2023-10-07T14:30:19.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC"
+      ]
+    },
+    {
+      "title": "Biggest Movers: BCH, TRX Snap Losing Streak to Start the Weekend",
+      "link": "https://cryptopanic.com/news/18954253/Biggest-Movers-BCH-TRX-Snap-Losing-Streak-to-Start-the-Weekend",
+      "pubDate": "2023-10-07T14:30:17.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "TRX",
+        "BCH"
+      ]
+    },
+    {
+      "title": "Ripple Says XRP Ledger XLS-30 AMM Testing Completed, What's Next?",
+      "link": "https://cryptopanic.com/news/18954236/Ripple-Says-XRP-Ledger-XLS-30-AMM-Testing-Completed-Whats-Next",
+      "pubDate": "2023-10-07T14:13:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Extensive performance testing of AMM on XRP Ledger concluded, protocol proceeds to mainnet",
+      "currencies": [
+        "XRP"
+      ],
+      "votes": {
+        "positive": 6,
+        "negative": 2
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Uranium-Backed Stablecoin? Maker Proposal Goes Nuclear",
+      "link": "https://cryptopanic.com/news/18954215/Uranium-Backed-Stablecoin-Maker-Proposal-Goes-Nuclear",
+      "pubDate": "2023-10-07T14:01:28.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "DAI",
+        "MKR"
+      ]
+    },
+    {
+      "title": "Crypto Prices Today: SUI, XMR, LDO Prices Rise In The Last 24H",
+      "link": "https://cryptopanic.com/news/18954109/Crypto-Prices-Today-SUI-XMR-LDO-Prices-Rise-In-The-Last-24H",
+      "pubDate": "2023-10-07T12:29:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "XMR",
+        "LDO"
+      ]
+    },
+    {
+      "title": "'Don't Get Me Started On Bitcoins': Berkshire Hathaway's Charlie Munger Calls Crypto The 'Stupidest Investment I Ever Saw'",
+      "link": "https://cryptopanic.com/news/18954103/Dont-Get-Me-Started-On-Bitcoins-Berkshire-Hathaways-Charlie-Munger-Calls-Crypto-The-Stupidest-Investment-I-Ever-Saw",
+      "pubDate": "2023-10-07T12:14:27.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Charlie Munger, the vice chairman of Warren Buffett‘s Berkshire Hathaway (NYSE:BRK) (NYSE:BRK), expressed skepticism about the hype around artificial intelligence, or AI, and criticized cryptocurrencies read more",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 4,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Avalanche Friend.tech Copycat Stars Arena Suffers Second Attack in Three Days",
+      "link": "https://cryptopanic.com/news/18954060/Avalanche-Friendtech-Copycat-Stars-Arena-Suffers-Second-Attack-in-Three-Days",
+      "pubDate": "2023-10-07T11:56:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "regulation",
+      "description": "Novel Avalanche-based SocialFi exploited by same attacker with $2.9 million lost",
+      "currencies": [
+        "AVAX"
+      ],
+      "votes": {
+        "positive": 0,
+        "negative": 4
+      },
+      "sentiment": "bearish"
+    },
+    {
+      "title": "Inside Job Suspected As Huobi Wallet Falls Victim To $263,000 Exploit",
+      "link": "https://cryptopanic.com/news/18954041/Inside-Job-Suspected-As-Huobi-Wallet-Falls-Victim-To-263000-Exploit",
+      "pubDate": "2023-10-07T11:40:08.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "USDT",
+        "TRX",
+        "HT"
+      ]
+    },
+    {
+      "title": "Here Are The Top 5 Crypto Token Unlocks For October 2023",
+      "link": "https://cryptopanic.com/news/18954017/Here-Are-The-Top-5-Crypto-Token-Unlocks-For-October-2023",
+      "pubDate": "2023-10-07T11:20:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "AXS"
+      ]
+    },
+    {
+      "title": "Justin Sun and Vitalik Buterin’s Cryptocurrency Wallets Experiencing Multiple Outward Transfers",
+      "link": "https://cryptopanic.com/news/18954018/Justin-Sun-and-Vitalik-Buterins-Cryptocurrency-Wallets-Experiencing-Multiple-Outward-Transfers",
+      "pubDate": "2023-10-07T11:12:05.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "There were large outflows from the wallets of Tron founder Vitalik Buterin and Ethereum founder Vitalik Buterin. Continue Reading: Justin Sun and Vitalik Buterin’s Cryptocurrency Wallets Experiencing Multiple Outward Transfers",
+      "currencies": [
+        "ETH",
+        "TRX"
+      ],
+      "votes": {
+        "positive": 2,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Jefferies: Bitcoin is a ‘critical hedge’ against inflation, belongs in same bag as gold",
+      "link": "https://cryptopanic.com/news/18954002/Jefferies-Bitcoin-is-a-critical-hedge-against-inflation-belongs-in-same-bag-as-gold",
+      "pubDate": "2023-10-07T11:03:34.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "Recently, Bitcoin (BTC) has garnered growing support from traditional financial institutions that see the asset as a potential hedge against … Continued",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "Cardano (ADA) Outshines DOT, LINK, ETH in This Area: Details",
+      "link": "https://cryptopanic.com/news/18953970/Cardano-ADA-Outshines-DOT-LINK-ETH-in-This-Area-Details",
+      "pubDate": "2023-10-07T10:46:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "ethereum",
+      "description": "Cardano (ADA) leads peers in developer activities",
+      "currencies": [
+        "ETH",
+        "ADA"
+      ],
+      "votes": {
+        "positive": 8,
+        "negative": 5
+      }
+    },
+    {
+      "title": "Bitcoin is 2023’s best-performing asset among 40 wealth classes",
+      "link": "https://cryptopanic.com/news/18953900/Bitcoin-is-2023s-best-performing-asset-among-40-wealth-classes",
+      "pubDate": "2023-10-07T09:49:10.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "bitcoin",
+      "description": "In a year marked by economic uncertainty, persistently high inflation, and concerns over rising interest rates, Bitcoin (BTC) has emerged … Continued",
+      "currencies": [
+        "BTC"
+      ],
+      "votes": {
+        "positive": 5,
+        "negative": 0
+      },
+      "sentiment": "bullish"
+    },
+    {
+      "title": "This Decentralized Data Storage Altcoin Could Explode by Over 1,700% As AI Economy Booms: Arthur Hayes",
+      "link": "https://cryptopanic.com/news/18953874/This-Decentralized-Data-Storage-Altcoin-Could-Explode-by-Over-1700-As-AI-Economy-Booms-Arthur-Hayes",
+      "pubDate": "2023-10-07T09:15:44.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "FIL"
+      ]
+    },
+    {
+      "title": "Millions of SAND Tokens Transferred to Exchanges: Selloff Coming?",
+      "link": "https://cryptopanic.com/news/18953859/Millions-of-SAND-Tokens-Transferred-to-Exchanges-Selloff-Coming",
+      "pubDate": "2023-10-07T08:57:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "exchange",
+      "description": "NULL",
+      "currencies": [
+        "SAND"
+      ]
+    },
+    {
+      "title": "Crypto Daily Roundup, 07 Oct: Crypto market thrives on positive data",
+      "link": "https://cryptopanic.com/news/18958658/Crypto-Daily-Roundup-07-Oct-Crypto-market-thrives-on-positive-data",
+      "pubDate": "2023-10-07T06:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "stablecoin",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "FLOW"
+      ]
+    },
+    {
+      "title": "24 Crypto Update, 06 Oct: Cryptocurrency surge driven by positive data",
+      "link": "https://cryptopanic.com/news/18956044/24-Crypto-Update-06-Oct-Cryptocurrency-surge-driven-by-positive-data",
+      "pubDate": "2023-10-07T05:45:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "trading",
+      "description": "NULL",
+      "currencies": [
+        "BTC",
+        "ETH",
+        "XRP",
+        "AVAX",
+        "LTC",
+        "RUNE"
+      ]
+    },
+    {
+      "title": "Solana (SOL) Sets Itself up for Golden Cross",
+      "link": "https://cryptopanic.com/news/18953556/Solana-SOL-Sets-Itself-up-for-Golden-Cross",
+      "pubDate": "2023-10-07T01:00:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Solana's price movement might become basis for upcoming golden cross",
+      "currencies": [
+        "SOL"
+      ],
+      "votes": {
+        "positive": 7,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Cardano Founder Hoskinson Claps Back At Claims of Dishonesty",
+      "link": "https://cryptopanic.com/news/18953549/Cardano-Founder-Hoskinson-Claps-Back-At-Claims-of-Dishonesty",
+      "pubDate": "2023-10-07T00:50:00.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "altcoin",
+      "description": "Cardano Founder comes with a dossier of source material to clear the misinformation surrounding Hydra’s throughput.",
+      "currencies": [
+        "ADA"
+      ],
+      "votes": {
+        "positive": 9,
+        "negative": 6
+      }
+    },
+    {
+      "title": "Top-100 Crypto Wallet Altcoin Jumps by More Than 20% This Week Amid Rollout of New Update",
+      "link": "https://cryptopanic.com/news/18953514/Top-100-Crypto-Wallet-Altcoin-Jumps-by-More-Than-20-This-Week-Amid-Rollout-of-New-Update",
+      "pubDate": "2023-10-07T00:00:23.000Z",
+      "source": "Historical",
+      "sourceKey": "historical",
+      "category": "general",
+      "description": "NULL",
+      "currencies": [
+        "ETH",
+        "TWT"
+      ]
+    }
+  ]
+}
