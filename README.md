@@ -614,6 +614,67 @@ curl "https://news-crypto.vercel.app/api/bitcoin?lang=zh-CN"
 3. **Groq** - `GROQ_API_KEY` (llama-3.3-70b-versatile default) ⭐ FREE
 4. **OpenRouter** - `OPENROUTER_API_KEY` (llama-3-8b-instruct default)
 
+### 🧠 RAG System (Retrieval-Augmented Generation)
+
+Production-grade question answering over crypto news using vector search + LLMs.
+
+```typescript
+import { askUltimate, askFast, searchNews } from '@/lib/rag';
+
+// Ask natural language questions
+const answer = await askUltimate("What happened to Bitcoin after the ETF approval?");
+// Returns: answer + sources + confidence score + suggested follow-ups
+
+// Fast mode for quick queries  
+const quick = await askFast("BTC price news");
+
+// Search documents
+const results = await searchNews("Ethereum merge", { currencies: ['ETH'] });
+```
+
+**RAG Capabilities:**
+
+| Feature | Description |
+|---------|-------------|
+| **Hybrid Search** | BM25 + semantic vector search with RRF fusion |
+| **Query Routing** | Intelligent strategy selection (semantic/keyword/temporal/agentic) |
+| **Advanced Reranking** | LLM reranking + time decay + source credibility + MMR diversity |
+| **Self-RAG** | Adaptive retrieval with hallucination detection |
+| **Contextual Compression** | Extract key facts, reduce context to relevant content |
+| **Answer Attribution** | Inline citations `[1]`, `[2]` with source quotes |
+| **Confidence Scoring** | Multi-dimensional quality assessment (high/medium/low) |
+| **Conversation Memory** | Multi-turn context for follow-up questions |
+| **Suggested Questions** | AI-generated follow-up questions |
+| **Related Articles** | Content discovery based on context |
+
+**Service Modes:**
+
+| Mode | Function | Speed | Use Case |
+|------|----------|-------|----------|
+| Fast | `askFast()` | ~220ms | Quick queries, high volume |
+| Balanced | `askUltimate()` | ~520ms | Most use cases (recommended) |
+| Complete | `askComplete()` | ~850ms | Maximum quality, all features |
+
+**Example Response:**
+
+```json
+{
+  "answer": "Bitcoin rose 10% [1] after the SEC approved spot ETFs [2]...",
+  "sources": [
+    { "title": "Bitcoin Surges Post-ETF", "source": "CoinDesk", "url": "..." }
+  ],
+  "confidence": { "overall": 0.87, "level": "high" },
+  "suggestedQuestions": [
+    { "question": "How did other cryptocurrencies react?", "type": "expansion" }
+  ],
+  "citations": {
+    "claims": [{ "claim": "Bitcoin rose 10%", "sourceIndex": 1 }]
+  }
+}
+```
+
+📖 **Full RAG documentation:** [docs/RAG.md](docs/RAG.md) | **Roadmap:** [docs/RAG-ROADMAP.md](docs/RAG-ROADMAP.md)
+
 ### 📊 Analytics & Intelligence
 
 | Endpoint                     | Description                                                                                                  |
@@ -1376,6 +1437,8 @@ Step-by-step tutorials with full working code for every API endpoint:
 | [API Reference](docs/API.md)                         | Full API documentation             |
 | [**Tutorials**](docs/tutorials/index.md)             | **19 step-by-step guides with code** |
 | [AI Features](docs/AI-FEATURES.md)                   | AI endpoint documentation          |
+| [**RAG System**](docs/RAG.md)                        | **Question answering over news**   |
+| [RAG Roadmap](docs/RAG-ROADMAP.md)                   | RAG future enhancements            |
 | [Architecture](docs/CDA-ARCHITECTURE-COMPLETE.md)    | System architecture                |
 | [Developer Guide](docs/DEVELOPER-GUIDE.md)           | Contributing & development         |
 | [Quickstart](docs/QUICKSTART.md)                     | Getting started guide              |
@@ -3413,6 +3476,9 @@ Please read our [**Contributing Guide**](CONTRIBUTING.md) to get started.
 | ------------------------------------------ | ------------------------------------------- |
 | [User Guide](docs/USER-GUIDE.md)           | End-user features, keyboard shortcuts, PWA  |
 | [Developer Guide](docs/DEVELOPER-GUIDE.md) | Architecture, components, extending the app |
+| [API Reference](docs/API.md)               | Full API documentation                      |
+| [RAG System](docs/RAG.md)                  | Retrieval-Augmented Generation documentation |
+| [RAG Roadmap](docs/RAG-ROADMAP.md)         | RAG future enhancements & timeline          |
 | [Contributing](CONTRIBUTING.md)            | How to contribute                           |
 | [Changelog](CHANGELOG.md)                  | Version history                             |
 | [Security](SECURITY.md)                    | Security policy                             |

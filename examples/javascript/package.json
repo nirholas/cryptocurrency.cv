@@ -20,7 +20,7 @@
     "sentiment-analysis"
   ],
   "author": "Free Crypto News Team",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "news": "node news.js",
     "ai": "node ai.js",

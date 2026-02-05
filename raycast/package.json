@@ -6,7 +6,7 @@
   "icon": "extension-icon.png",
   "author": "free-crypto-news",
   "categories": ["News", "Finance"],
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "commands": [
     {
       "name": "latest",

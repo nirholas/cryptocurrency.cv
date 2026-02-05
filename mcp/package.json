@@ -15,7 +15,7 @@
   },
   "keywords": ["mcp", "crypto", "news", "claude", "chatgpt", "ai", "developer-mode"],
   "author": "nirholas",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0"
   }
