@@ -5,6 +5,18 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { fetchCoinGecko } from '@/lib/coingecko';
 
+interface Coin {
+  id: string;
+  symbol: string;
+  name: string;
+  image: string;
+  current_price: number;
+  market_cap: number;
+  market_cap_rank: number;
+  price_change_percentage_24h: number;
+  price_change_percentage_7d_in_currency?: number;
+}
+
 export const metadata: Metadata = {
   title: 'Market Heatmap | Crypto Overview',
   description:
@@ -17,7 +29,7 @@ export const metadata: Metadata = {
 };
 
 async function getCoins() {
-  const data = await fetchCoinGecko<Record<string, unknown>[]>(
+  const data = await fetchCoinGecko<Coin[]>(
     'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=200&page=1&sparkline=false&price_change_percentage=24h,7d',
     { revalidate: 120 }
   );
