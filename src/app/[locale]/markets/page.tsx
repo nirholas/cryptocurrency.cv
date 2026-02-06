@@ -26,9 +26,8 @@ import CategoryTabs from './components/CategoryTabs';
 import SearchAndFilters from './components/SearchAndFilters';
 import CoinsTable from './components/CoinsTable';
 import { AnomalyAlertsBanner } from '@/components/AnomalyAlertsBanner';
+import { SITE_URL } from '@/lib/constants';
 import type { SortField, SortOrder } from './components/SortableHeader';
-
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://cryptocurrency.cv';
 
 export async function generateMetadata(): Promise<Metadata> {
   // Fetch current market data for dynamic OG image
@@ -43,7 +42,7 @@ export async function generateMetadata(): Promise<Metadata> {
       : '$0';
     const btcChange = (global?.market_cap_change_percentage_24h_usd ?? 0).toFixed(2);
     
-    const ogImageUrl = `${BASE_URL}/api/og/market?type=overview&btc=${encodeURIComponent(btcPrice)}&btc_change=${btcChange}&fear_greed=${fearGreed?.value ?? 50}&fear_greed_label=${encodeURIComponent(fearGreed?.value_classification ?? 'Neutral')}`;
+    const ogImageUrl = `${SITE_URL}/api/og/market?type=overview&btc=${encodeURIComponent(btcPrice)}&btc_change=${btcChange}&fear_greed=${fearGreed?.value ?? 50}&fear_greed_label=${encodeURIComponent(fearGreed?.value_classification ?? 'Neutral')}`;
 
     return {
       title: 'Crypto Markets - Free Crypto News',

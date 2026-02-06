@@ -27,6 +27,7 @@ import { CoinArbitrageOpportunities } from '@/components/CoinArbitrageOpportunit
 import { CoinFundingRates } from '@/components/CoinFundingRates';
 import { CoinSocialBuzz } from '@/components/CoinSocialBuzz';
 import { CoinNewsCorrelation } from '@/components/CoinNewsCorrelation';
+import { SITE_URL } from '@/lib/constants';
 
 // Enable on-demand ISR for coins not pre-rendered
 export const dynamicParams = true;
@@ -56,12 +57,10 @@ const coinMeta: Record<string, { name: string; symbol: string; keywords: string[
   'matic-network': { name: 'Polygon', symbol: 'MATIC', keywords: ['polygon', 'matic'] },
 };
 
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://cryptocurrency.cv';
-
 // Generate metadata for SEO
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { coinId, locale } = await params;
-  const canonicalUrl = `${BASE_URL}/en/coin/${coinId}`;
+  const canonicalUrl = `${SITE_URL}/en/coin/${coinId}`;
   
   try {
     const coinData = await getCoinDetails(coinId);
@@ -79,7 +78,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const name = coinData.name || coinId;
     
     // Generate dynamic OG image for viral sharing
-    const ogImageUrl = `${BASE_URL}/api/og/coin?name=${encodeURIComponent(name)}&symbol=${encodeURIComponent(symbol)}&price=${encodeURIComponent(formatPrice(price))}&change=${encodeURIComponent(formatPercent(change24h))}`;
+    const ogImageUrl = `${SITE_URL}/api/og/coin?name=${encodeURIComponent(name)}&symbol=${encodeURIComponent(symbol)}&price=${encodeURIComponent(formatPrice(price))}&change=${encodeURIComponent(formatPercent(change24h))}`;
 
     return {
       title: `${name} (${symbol}) Price, Chart & Market Cap | Free Crypto News`,
