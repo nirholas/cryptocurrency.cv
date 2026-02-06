@@ -187,11 +187,12 @@ export async function POST(request: NextRequest) {
       result,
       statusCode: 200,
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : 'Unknown error';
     return NextResponse.json({
       jobRunID: Date.now().toString(),
       status: 'errored',
-      error: error.message,
+      error: message,
       statusCode: 500,
     }, { status: 500 });
   }

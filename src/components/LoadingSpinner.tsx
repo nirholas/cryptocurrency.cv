@@ -133,7 +133,7 @@ export default function LoadingSpinner({
         <div
           className={`
             absolute inset-0 ${sizeClasses[size]}
-            bg-gradient-to-r from-brand-500 via-amber-500 to-orange-500
+            bg-gradient-to-r from-gray-600 via-gray-400 to-gray-300
             rounded-full blur-md opacity-30
             animate-pulse
             motion-reduce:animate-none
@@ -155,9 +155,9 @@ export default function LoadingSpinner({
           >
             <defs>
               <linearGradient id="spinner-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#f59e0b" />
-                <stop offset="50%" stopColor="#d97706" />
-                <stop offset="100%" stopColor="#f59e0b" />
+                <stop offset="0%" stopColor="#ffffff" />
+                <stop offset="50%" stopColor="#a3a3a3" />
+                <stop offset="100%" stopColor="#ffffff" />
               </linearGradient>
             </defs>
             <circle

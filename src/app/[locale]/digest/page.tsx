@@ -96,7 +96,7 @@ export default async function DigestPage() {
           {digest ? (
             <div className="space-y-6">
               {/* Headline */}
-              <div className="bg-gradient-to-r from-yellow-400 to-orange-400 dark:from-yellow-500 dark:to-orange-500 rounded-2xl p-8 text-center">
+              <div className="bg-gradient-to-r from-gray-600 to-gray-700 dark:from-gray-500 dark:to-gray-600 rounded-2xl p-8 text-center">
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">{digest.headline}</h2>
                 <p className="text-lg text-gray-800">{digest.tldr}</p>
               </div>

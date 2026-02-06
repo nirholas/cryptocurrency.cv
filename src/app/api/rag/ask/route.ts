@@ -1,20 +1,21 @@
 /**
- * RAG API - Ask questions about crypto news
+ * RAG Ask API — Full Ultimate RAG endpoint
  *
- * POST /api/rag
- * Query the news archive using natural language with RAG.
- * Now powered by the Ultimate RAG Service with full pipeline features.
+ * POST /api/rag/ask
+ * Run a query through the Ultimate RAG pipeline with all optional features.
  *
- * GET /api/rag
- * Returns service status, vector store stats, and endpoint directory.
+ * Uses: query routing, hybrid search, HyDE, self-RAG, contextual compression,
+ *       answer attribution, confidence scoring, suggested questions, related articles,
+ *       conversation memory, multi-layer caching, and full observability.
+ *
+ * Request body matches AskRequestSchema (see ../schemas.ts).
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { vectorStore } from '@/lib/rag';
 import { askUltimate } from '@/lib/rag/ultimate-rag-service';
 import type { UltimateRAGOptions } from '@/lib/rag/ultimate-rag-service';
-import { AskRequestSchema, formatValidationError } from './schemas';
-import { applyRateLimit, withRateLimitHeaders, handleAPIError, logRequest } from './middleware';
+import { AskRequestSchema, formatValidationError } from '../schemas';
+import { applyRateLimit, withRateLimitHeaders, handleAPIError, logRequest } from '../middleware';
 
 export const runtime = 'nodejs';
 export const maxDuration = 60;
@@ -28,7 +29,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     logRequest(request, 'ask', body);
 
-    // Validate with Zod schema
+    // Validate
     const parsed = AskRequestSchema.safeParse(body);
     if (!parsed.success) {
       return NextResponse.json(formatValidationError(parsed.error), { status: 400 });
@@ -36,7 +37,7 @@ export async function POST(request: NextRequest) {
 
     const { query, options } = parsed.data;
 
-    // Map to UltimateRAGOptions with sensible defaults for this endpoint
+    // Map validated request to UltimateRAGOptions
     const ragOptions: UltimateRAGOptions = {
       limit: options?.limit ?? 10,
       similarityThreshold: options?.similarityThreshold ?? 0.5,
@@ -57,37 +58,17 @@ export async function POST(request: NextRequest) {
       conversationId: options?.conversationId,
     };
 
+    const start = Date.now();
     const result = await askUltimate(query, ragOptions);
+    const processingTime = Date.now() - start;
 
-    const response = NextResponse.json(result);
+    const response = NextResponse.json({
+      ...result,
+      processingTime,
+    });
+
     return withRateLimitHeaders(response, request, 'ask');
   } catch (error) {
-    return handleAPIError(error, 'rag');
-  }
-}
-
-export async function GET(request: NextRequest) {
-  try {
-    const stats = await vectorStore.getStats();
-
-    return NextResponse.json({
-      status: 'ok',
-      message: 'RAG service is running — Ultimate RAG pipeline active',
-      stats,
-      endpoints: {
-        ask: 'POST /api/rag - Ask questions (Ultimate RAG)',
-        askAdvanced: 'POST /api/rag/ask - Ask with full feature toggles',
-        search: 'POST /api/rag/search - Search without generating response',
-        stream: 'POST /api/rag/stream - Streaming RAG response',
-        similar: 'GET /api/rag/similar/:id - Find similar articles',
-        summary: 'GET /api/rag/summary/:crypto - Summarize crypto news',
-        stats: 'GET /api/rag/stats - Get vector store statistics',
-        batch: 'POST /api/rag/batch - Batch parallel queries (1-10)',
-        feedback: 'POST /api/rag/feedback - Submit feedback on responses',
-        metrics: 'GET /api/rag/metrics - Observability metrics',
-      },
-    });
-  } catch (error) {
-    return handleAPIError(error, 'rag-status');
+    return handleAPIError(error, 'ask');
   }
 }

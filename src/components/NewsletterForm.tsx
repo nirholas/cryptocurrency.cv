@@ -52,7 +52,7 @@ export function NewsletterForm({ variant = 'card' }: NewsletterFormProps) {
     if (!showBanner) return null;
     
     return (
-      <div className="relative bg-gradient-to-r from-amber-500 to-orange-500 text-white py-3 px-4">
+      <div className="relative bg-gradient-to-r from-gray-800 to-gray-900 text-white py-3 px-4">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-3">
           <div className="flex items-center gap-2">
             <Mail className="w-5 h-5" />
@@ -100,7 +100,7 @@ export function NewsletterForm({ variant = 'card' }: NewsletterFormProps) {
         <button
           type="submit"
           disabled={status === 'loading' || status === 'success'}
-          className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-lg font-medium text-sm disabled:opacity-50 flex items-center gap-2"
+          className="px-4 py-2 bg-white hover:bg-gray-100 text-black rounded-lg font-medium text-sm disabled:opacity-50 flex items-center gap-2"
         >
           {status === 'loading' && <Loader2 className="w-4 h-4 animate-spin" />}
           {status === 'success' ? 'Subscribed!' : 'Subscribe'}
@@ -111,7 +111,7 @@ export function NewsletterForm({ variant = 'card' }: NewsletterFormProps) {
 
   // Card variant (default)
   return (
-    <div className="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 rounded-xl p-6 border border-amber-100 dark:border-amber-800">
+    <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/20 dark:to-gray-800/20 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
       <div className="flex items-center gap-3 mb-4">
         <div className="p-2 bg-amber-100 dark:bg-amber-900/50 rounded-lg">
           <Mail className="w-6 h-6 text-amber-600" />
@@ -167,7 +167,7 @@ export function NewsletterForm({ variant = 'card' }: NewsletterFormProps) {
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="w-full py-2.5 bg-amber-500 hover:bg-amber-600 text-white rounded-lg font-medium disabled:opacity-50 flex items-center justify-center gap-2 transition-colors"
+            className="w-full py-2.5 bg-white hover:bg-gray-100 text-black rounded-lg font-medium disabled:opacity-50 flex items-center justify-center gap-2 transition-colors"
           >
             {status === 'loading' && <Loader2 className="w-4 h-4 animate-spin" />}
             Subscribe for Free

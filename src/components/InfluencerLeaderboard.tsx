@@ -388,7 +388,7 @@ export function InfluencerLeaderboard({
   return (
     <div className="bg-white dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden">
       {/* Header */}
-      <div className="px-6 py-4 border-b border-neutral-200 dark:border-neutral-800 bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-red-500/10">
+      <div className="px-6 py-4 border-b border-neutral-200 dark:border-neutral-800 bg-gradient-to-r from-gray-500/10 via-gray-400/10 to-gray-300/10">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="text-3xl">🏆</div>

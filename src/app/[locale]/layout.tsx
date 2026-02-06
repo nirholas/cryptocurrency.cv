@@ -22,10 +22,7 @@ import { AlternateLinks } from '@/components/AlternateLinks';
 import { locales, isRtlLocale, type Locale } from '@/i18n/config';
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#000000' },
-    { media: '(prefers-color-scheme: dark)', color: '#000000' },
-  ],
+  themeColor: '#000000',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,

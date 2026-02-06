@@ -154,7 +154,7 @@ export function WhaleAlerts({
   function getSignificanceStyle(significance: WhaleTransaction['significance']) {
     switch (significance) {
       case 'massive':
-        return 'border-l-4 border-l-amber-500 bg-amber-50 dark:bg-amber-900/20';
+        return 'border-l-4 border-l-gray-400 bg-gray-50 dark:bg-gray-800/20';
       case 'notable':
         return 'border-l-4 border-l-blue-500 bg-blue-50 dark:bg-blue-900/10';
       default:
@@ -199,7 +199,7 @@ export function WhaleAlerts({
           </p>
           <button
             onClick={fetchWhaleAlerts}
-            className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-lg text-sm font-medium transition-colors"
+            className="px-4 py-2 bg-white hover:bg-gray-100 text-black rounded-lg text-sm font-medium transition-colors"
           >
             Retry
           </button>
@@ -309,7 +309,7 @@ export function WhaleAlerts({
                         ({formatUsd(alert.amountUsd)})
                       </span>
                       {alert.significance === 'massive' && (
-                        <span className="px-2 py-0.5 text-xs font-medium bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-400 rounded-full">
+                        <span className="px-2 py-0.5 text-xs font-medium bg-gray-100 dark:bg-gray-800/30 text-gray-800 dark:text-gray-400 rounded-full">
                           🔥 Massive
                         </span>
                       )}
@@ -330,7 +330,7 @@ export function WhaleAlerts({
                         href={`https://${alert.blockchain === 'Ethereum' ? 'etherscan.io/tx/' : 'blockchain.com/btc/tx/'}${alert.hash}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs text-amber-600 dark:text-amber-400 hover:underline"
+                        className="text-xs text-gray-600 dark:text-gray-400 hover:underline"
                       >
                         View TX
                       </a>

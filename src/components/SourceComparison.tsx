@@ -273,7 +273,7 @@ export function SourceComparison() {
                 <span className="w-32 text-sm truncate">{source.name}</span>
                 <div className="flex-1 h-6 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-amber-500 rounded-full transition-all flex items-center justify-end pr-2"
+                    className="h-full bg-gray-400 rounded-full transition-all flex items-center justify-end pr-2"
                     style={{ width: `${percentage}%` }}
                   >
                     <span className="text-xs font-medium text-white">

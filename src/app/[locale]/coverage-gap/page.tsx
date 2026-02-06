@@ -22,7 +22,7 @@ export default async function CoverageGapPage() {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-gray-200 to-white bg-clip-text text-transparent">
               Coverage Gap Analysis
             </span>
           </h1>

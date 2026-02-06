@@ -176,7 +176,7 @@ export function ChartError({ error, onRetry }: { error: string; onRetry?: () => 
       </svg>
       <p className="text-gray-500 dark:text-slate-400 text-sm mb-3">{error}</p>
       {onRetry && (
-        <button onClick={onRetry} className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-medium rounded-lg transition-colors">
+        <button onClick={onRetry} className="px-4 py-2 bg-white hover:bg-gray-100 text-black text-sm font-medium rounded-lg transition-colors">
           Try Again
         </button>
       )}

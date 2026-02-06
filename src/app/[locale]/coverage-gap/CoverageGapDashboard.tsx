@@ -217,8 +217,8 @@ export default function CoverageGapDashboard() {
         <div className="space-y-6">
           {/* Recommendations */}
           {report.recommendations.length > 0 && (
-            <div className="bg-amber-900/20 border border-amber-700/50 rounded-xl p-4">
-              <h3 className="text-lg font-semibold text-amber-400 mb-3">Recommendations</h3>
+            <div className="bg-gray-800/20 border border-gray-600/50 rounded-xl p-4">
+              <h3 className="text-lg font-semibold text-gray-300 mb-3">Recommendations</h3>
               <ul className="space-y-2">
                 {report.recommendations.map((rec, i) => (
                   <li key={i} className="text-gray-300">{rec}</li>
@@ -268,7 +268,7 @@ export default function CoverageGapDashboard() {
                     key={category}
                     className="text-center p-3 bg-gray-900/50 rounded-lg"
                   >
-                    <p className="text-xl font-bold text-amber-400">{count}</p>
+                    <p className="text-xl font-bold text-gray-300">{count}</p>
                     <p className="text-sm text-gray-400 capitalize">{category}</p>
                   </div>
                 ))}
@@ -356,7 +356,7 @@ export default function CoverageGapDashboard() {
                     {trend.changePercent > 0 ? '+' : ''}{trend.changePercent}%
                   </p>
                   {trend.needsMoreCoverage && (
-                    <span className="text-xs bg-amber-500/20 text-amber-400 px-2 py-0.5 rounded">
+                    <span className="text-xs bg-gray-500/20 text-gray-300 px-2 py-0.5 rounded">
                       Needs Coverage
                     </span>
                   )}
@@ -417,7 +417,7 @@ export default function CoverageGapDashboard() {
                   <div className="w-24 truncate text-sm text-gray-300">{source.name}</div>
                   <div className="flex-1 h-4 bg-gray-700 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-amber-500"
+                      className="h-full bg-gray-400"
                       style={{ width: `${source.percentage}%` }}
                     />
                   </div>
@@ -431,8 +431,8 @@ export default function CoverageGapDashboard() {
 
           {/* Recommendations */}
           {sources.recommendations.length > 0 && (
-            <div className="bg-amber-900/20 border border-amber-700/50 rounded-xl p-4">
-              <h3 className="text-lg font-semibold text-amber-400 mb-3">Source Recommendations</h3>
+            <div className="bg-gray-800/20 border border-gray-600/50 rounded-xl p-4">
+              <h3 className="text-lg font-semibold text-gray-300 mb-3">Source Recommendations</h3>
               <ul className="space-y-2">
                 {sources.recommendations.map((rec, i) => (
                   <li key={i} className="text-gray-300">⚠️ {rec}</li>

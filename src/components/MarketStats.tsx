@@ -30,7 +30,7 @@ export default async function MarketStats() {
         <div className="flex items-center justify-between mb-6">
           <h3 className="font-bold text-lg text-gray-900 dark:text-slate-100 flex items-center gap-2">
             <span 
-              className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-amber-500 flex items-center justify-center text-black shadow-lg shadow-brand-500/25"
+              className="w-8 h-8 rounded-lg bg-gradient-to-br from-gray-700 to-gray-500 flex items-center justify-center text-black shadow-lg shadow-gray-500/25"
               aria-hidden="true"
             >
               📊
@@ -39,7 +39,7 @@ export default async function MarketStats() {
           </h3>
           <Link 
             href="/markets" 
-            className="group text-sm font-semibold text-brand-700 dark:text-amber-400 hover:text-brand-800 dark:hover:text-amber-300 transition-colors focus-ring rounded-lg px-3 py-1.5 -mr-3 hover:bg-brand-50 dark:hover:bg-amber-500/10 flex items-center gap-1"
+            className="group text-sm font-semibold text-brand-700 dark:text-gray-300 hover:text-brand-800 dark:hover:text-gray-200 transition-colors focus-ring rounded-lg px-3 py-1.5 -mr-3 hover:bg-brand-50 dark:hover:bg-gray-500/10 flex items-center gap-1"
           >
             View All
             <span className="group-hover:translate-x-0.5 transition-transform" aria-hidden="true">→</span>
@@ -160,12 +160,12 @@ export default async function MarketStats() {
                     key={coin.id}
                     className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition-all hover:scale-105 active:scale-95 cursor-default ${
                       index === 0 
-                        ? 'bg-gradient-to-r from-amber-100 to-orange-100 dark:from-amber-900/40 dark:to-orange-900/40 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-700/50'
+                        ? 'bg-gradient-to-r from-gray-100 to-gray-50 dark:from-gray-800/40 dark:to-gray-700/40 text-gray-800 dark:text-gray-300 border border-gray-200 dark:border-gray-600/50'
                         : 'bg-gray-100 dark:bg-slate-700/50 text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-slate-700 border border-gray-200 dark:border-slate-600/50'
                     }`}
                     role="listitem"
                   >
-                    {index === 0 && <span className="text-amber-500" aria-hidden="true">👑</span>}
+                    {index === 0 && <span className="text-gray-400" aria-hidden="true">👑</span>}
                     <img 
                       src={coin.thumb} 
                       alt="" 

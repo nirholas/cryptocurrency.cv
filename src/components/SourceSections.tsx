@@ -2,7 +2,6 @@
  * Source Section - "More from [Source]" article rows
  * Groups articles by news source for the bottom section
  */
-'use client';
 
 import Link from 'next/link';
 import NewsCard from '@/components/NewsCard';

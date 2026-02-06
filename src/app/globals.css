@@ -612,35 +612,7 @@ body {
   color: #f87171;
 }
 
-/* System preference fallback (when no class is set) */
-@media (prefers-color-scheme: dark) {
-  :root:not(.light) {
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
-  }
-  
-  :root:not(.light) ::-webkit-scrollbar-track {
-    background: #1e293b;
-  }
-  
-  :root:not(.light) ::-webkit-scrollbar-thumb {
-    background: #475569;
-  }
-  
-  :root:not(.light) ::-webkit-scrollbar-thumb:hover {
-    background: #64748b;
-  }
-  
-  :root:not(.light) .skeleton {
-    background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
-    background-size: 200% 100%;
-  }
-  
-  :root:not(.light) .glass {
-    background: rgba(15, 23, 42, 0.8);
-  }
-}
+/* System preference fallback removed — dark mode is always forced via .dark class */
 
 /* ============================================
    Live Price & Connection Status Indicators

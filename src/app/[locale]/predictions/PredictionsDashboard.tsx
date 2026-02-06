@@ -231,7 +231,7 @@ export default function PredictionsDashboard() {
   if (loading) {
     return (
       <div className="flex items-center justify-center py-20">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-500" />
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white" />
       </div>
     );
   }
@@ -254,7 +254,7 @@ export default function PredictionsDashboard() {
     <div className="space-y-6">
       {/* User Stats Card */}
       {userStats && (
-        <div className="bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-500/30 rounded-xl p-6">
+        <div className="bg-gradient-to-r from-gray-500/20 to-gray-400/20 border border-gray-500/30 rounded-xl p-6">
           <h3 className="font-bold text-white mb-4">Your Stats</h3>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             <div className="text-center">
@@ -266,7 +266,7 @@ export default function PredictionsDashboard() {
               <div className="text-xs text-gray-400">Correct</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-amber-400">{userStats.accuracy.toFixed(1)}%</div>
+              <div className="text-2xl font-bold text-gray-300">{userStats.accuracy.toFixed(1)}%</div>
               <div className="text-xs text-gray-400">Accuracy</div>
             </div>
             <div className="text-center">
@@ -289,7 +289,7 @@ export default function PredictionsDashboard() {
             onClick={() => setActiveTab(tab)}
             className={`px-4 py-2 rounded-t-lg font-medium transition-colors ${
               activeTab === tab
-                ? 'bg-amber-500 text-gray-900'
+                ? 'bg-white text-gray-900'
                 : 'text-gray-400 hover:text-white hover:bg-gray-800'
             }`}
           >
@@ -323,7 +323,7 @@ export default function PredictionsDashboard() {
                 <select
                   value={asset}
                   onChange={(e) => setAsset(e.target.value)}
-                  className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-amber-500"
+                  className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-gray-400"
                 >
                   <option value="bitcoin">Bitcoin (BTC) - {formatPrice(currentPrices.bitcoin)}</option>
                   <option value="ethereum">Ethereum (ETH) - {formatPrice(currentPrices.ethereum)}</option>
@@ -375,7 +375,7 @@ export default function PredictionsDashboard() {
                     value={targetPrice}
                     onChange={(e) => setTargetPrice(e.target.value)}
                     placeholder={currentPrices[asset as keyof typeof currentPrices]?.toString() || '0'}
-                    className="w-full pl-8 pr-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-amber-500"
+                    className="w-full pl-8 pr-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-gray-400"
                     required
                   />
                 </div>
@@ -387,7 +387,7 @@ export default function PredictionsDashboard() {
                 <select
                   value={deadline}
                   onChange={(e) => setDeadline(e.target.value)}
-                  className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-amber-500"
+                  className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-gray-400"
                 >
                   <option value="1d">24 Hours</option>
                   <option value="7d">1 Week</option>
@@ -425,14 +425,14 @@ export default function PredictionsDashboard() {
                 onChange={(e) => setReasoning(e.target.value)}
                 placeholder="Why do you think this will happen?"
                 rows={3}
-                className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-amber-500 resize-none"
+                className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-gray-400 resize-none"
               />
             </div>
 
             <button
               type="submit"
               disabled={creating || !targetPrice}
-              className="w-full px-6 py-3 bg-amber-500 text-gray-900 rounded-lg font-bold hover:bg-amber-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full px-6 py-3 bg-white text-gray-900 rounded-lg font-bold hover:bg-gray-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {creating ? (
                 <>
@@ -512,7 +512,7 @@ export default function PredictionsDashboard() {
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold ${
                     index === 0 ? 'bg-yellow-500 text-gray-900' :
                     index === 1 ? 'bg-gray-300 text-gray-900' :
-                    index === 2 ? 'bg-amber-600 text-white' :
+                    index === 2 ? 'bg-gray-500 text-white' :
                     'bg-gray-700 text-gray-400'
                   }`}>
                     {index + 1}
@@ -526,7 +526,7 @@ export default function PredictionsDashboard() {
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="font-bold text-amber-400">{entry.accuracy.toFixed(1)}%</div>
+                    <div className="font-bold text-gray-300">{entry.accuracy.toFixed(1)}%</div>
                     <div className="text-xs text-gray-400">{entry.points.toLocaleString()} pts</div>
                   </div>
                 </div>

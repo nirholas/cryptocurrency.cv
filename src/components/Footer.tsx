@@ -43,8 +43,8 @@ export default function Footer() {
       
       {/* Gradient divider with glow */}
       <div className="relative">
-        <div className="h-1.5 bg-gradient-to-r from-brand-400 via-amber-500 to-orange-500" aria-hidden="true" />
-        <div className="absolute inset-0 h-1.5 bg-gradient-to-r from-brand-400 via-amber-500 to-orange-500 blur-sm" aria-hidden="true" />
+        <div className="h-1.5 bg-gradient-to-r from-gray-600 via-gray-400 to-gray-300" aria-hidden="true" />
+        <div className="absolute inset-0 h-1.5 bg-gradient-to-r from-gray-600 via-gray-400 to-gray-300 blur-sm" aria-hidden="true" />
       </div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
@@ -53,7 +53,7 @@ export default function Footer() {
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="inline-flex items-center gap-3 text-2xl font-black mb-6 focus-ring rounded group">
               <span aria-hidden="true" className="text-3xl">📰</span>
-              <span className="bg-gradient-to-r from-brand-400 via-amber-400 to-orange-400 bg-clip-text text-transparent group-hover:from-brand-300 group-hover:to-orange-300 transition-all duration-300">
+              <span className="bg-gradient-to-r from-gray-300 via-gray-200 to-white bg-clip-text text-transparent group-hover:from-white group-hover:to-gray-200 transition-all duration-300">
                 {tCommon('appName')}
               </span>
             </Link>

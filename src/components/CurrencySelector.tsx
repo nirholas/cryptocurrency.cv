@@ -85,7 +85,7 @@ export function CurrencyProvider({ children }: CurrencyProviderProps) {
   useEffect(() => {
     async function fetchRates() {
       try {
-        const res = await fetch('https://api.coingecko.com/api/v3/exchange_rates', {
+        const res = await fetch('/api/exchange-rates', {
           next: { revalidate: 300 },
         });
         if (res.ok) {

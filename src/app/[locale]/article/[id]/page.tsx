@@ -28,6 +28,10 @@ import BookmarkButton from '@/components/BookmarkButton';
 import TrendingNews from '@/components/sidebar/TrendingNews';
 import NewsletterSignup from '@/components/sidebar/NewsletterSignup';
 import { SentimentMeter, TickerCard } from './components';
+import { FactCheckPanel } from '@/components/FactCheckPanel';
+import { BullBearDebate } from '@/components/BullBearDebate';
+import { ArticleTimeline } from '@/components/ArticleTimeline';
+import { SentimentContext } from '@/components/SentimentContext';
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -393,6 +397,32 @@ export default async function ArticlePage({ params }: Props) {
                     </div>
                   )}
                 </div>
+              </div>
+
+              {/* Deep Intelligence Panel */}
+              <div className="space-y-6">
+                {/* Fact Check */}
+                <FactCheckPanel
+                  articleUrl={article.link}
+                  articleTitle={article.title}
+                  source={article.source}
+                />
+
+                {/* Bull vs Bear Debate */}
+                <BullBearDebate topic={article.title} />
+
+                {/* Story Origins Timeline */}
+                {article.tickers.length > 0 && (
+                  <ArticleTimeline tickers={article.tickers} />
+                )}
+
+                {/* Sentiment Context */}
+                {article.tickers.length > 0 && (
+                  <SentimentContext
+                    tickers={article.tickers}
+                    articleSentiment={article.sentiment?.label || 'neutral'}
+                  />
+                )}
               </div>
 
               {/* Article Reactions */}

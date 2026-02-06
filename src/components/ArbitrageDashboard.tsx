@@ -225,7 +225,7 @@ export function ArbitrageDashboard() {
           <p className="text-sm text-gray-500 dark:text-slate-400 mb-4">{error}</p>
           <button
             onClick={fetchData}
-            className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-lg text-sm font-medium transition-colors"
+            className="px-4 py-2 bg-white hover:bg-gray-100 text-black rounded-lg text-sm font-medium transition-colors"
           >
             Retry
           </button>
@@ -339,7 +339,7 @@ export function ArbitrageDashboard() {
 
       {/* Best Opportunity Highlight */}
       {summary.bestOpportunity && (
-        <div className="bg-gradient-to-r from-amber-500 to-orange-500 rounded-xl p-4 text-white">
+        <div className="bg-gradient-to-r from-gray-700 to-gray-800 rounded-xl p-4 text-white">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm opacity-80">🏆 Best Opportunity</p>

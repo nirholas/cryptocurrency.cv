@@ -104,9 +104,9 @@ export default function X402PaymentButton({
   };
 
   const variantClasses = {
-    primary: 'bg-amber-500 hover:bg-amber-600 text-black',
+    primary: 'bg-white hover:bg-gray-100 text-black',
     secondary: 'bg-blue-500 hover:bg-blue-600 text-white',
-    outline: 'border-2 border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-black',
+    outline: 'border-2 border-gray-300 text-gray-300 hover:bg-white hover:text-black',
   };
 
   return (
@@ -316,7 +316,7 @@ function X402PaymentModal({ details, onClose, onPaymentComplete }: X402PaymentMo
 
               <button
                 onClick={() => setStep('connect')}
-                className="w-full bg-amber-500 hover:bg-amber-600 text-black font-semibold py-3 rounded-xl transition-all"
+                className="w-full bg-white hover:bg-gray-100 text-black font-semibold py-3 rounded-xl transition-all"
               >
                 Continue to Payment
               </button>
@@ -423,7 +423,7 @@ function X402PaymentModal({ details, onClose, onPaymentComplete }: X402PaymentMo
 
               <button
                 onClick={handleSign}
-                className="w-full bg-amber-500 hover:bg-amber-600 text-black font-semibold py-3 rounded-xl transition-all"
+                className="w-full bg-white hover:bg-gray-100 text-black font-semibold py-3 rounded-xl transition-all"
               >
                 Sign & Pay
               </button>

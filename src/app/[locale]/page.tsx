@@ -16,6 +16,8 @@ import TrendingSidebar from '@/components/TrendingSidebar';
 import SourceSections from '@/components/SourceSections';
 import { ScrollIndicator } from '@/components/ScrollIndicator';
 import { WebsiteStructuredData, OrganizationStructuredData, NewsListStructuredData } from '@/components/StructuredData';
+import WhaleAlerts from '@/components/WhaleAlerts';
+import LiquidationsFeed from '@/components/LiquidationsFeed';
 import { getHomepageNews, getSourceCount } from '@/lib/crypto-news';
 import { categories } from '@/lib/categories';
 import { Link } from '@/i18n/navigation';
@@ -80,11 +82,6 @@ export default async function Home({ params }: Props) {
       {/* Main Content */}
       <main id="main-content" className="max-w-[1400px] mx-auto">
         
-        {/* Market Overview Strip */}
-        <section className="px-4 sm:px-6 lg:px-8 mb-8">
-          <HomeMarketStrip />
-        </section>
-
         {/* Hero Section - Compact Featured Article */}
         {heroArticle && (
           <section className="px-4 sm:px-6 lg:px-8 mb-8">
@@ -172,6 +169,27 @@ export default async function Home({ params }: Props) {
             <TrendingSidebar trendingArticles={trendingArticles} />
           </div>
         </div>
+
+        {/* Market Overview Strip */}
+        <section className="px-4 sm:px-6 lg:px-8 mt-12 mb-8">
+          <HomeMarketStrip />
+        </section>
+
+        {/* Real-Time Activity: Whale Alerts + Liquidations */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Real-time market activity">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-1 h-8 bg-brand-500 rounded-full" />
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Live Market Activity</h2>
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500" />
+            </span>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-6">
+            <WhaleAlerts />
+            <LiquidationsFeed />
+          </div>
+        </section>
 
         {/* Source Sections */}
         <section className="px-4 sm:px-6 lg:px-8 mt-12" aria-label="News by source">

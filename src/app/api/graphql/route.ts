@@ -246,8 +246,9 @@ async function executeQuery(query: string, variables?: Record<string, any>) {
   try {
     const data = await resolver({ ...parsed.args, ...variables });
     return { data: { [parsed.field]: data } };
-  } catch (error: any) {
-    return { errors: [{ message: error.message }] };
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : 'Unknown error';
+    return { errors: [{ message }] };
   }
 }
 
@@ -313,7 +314,8 @@ export async function POST(request: NextRequest) {
     
     const result = await executeQuery(query, variables);
     return NextResponse.json(result);
-  } catch (error: any) {
-    return NextResponse.json({ errors: [{ message: error.message }] }, { status: 500 });
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : 'Unknown error';
+    return NextResponse.json({ errors: [{ message }] }, { status: 500 });
   }
 }

@@ -252,13 +252,13 @@ export default function DeveloperPortalContent() {
               {health.latency && (
                 <span className="text-xs text-gray-500">• {health.latency}ms</span>
               )}
-              <Link href="/status" className="text-xs text-amber-500 hover:text-amber-400 ml-2">
+              <Link href="/status" className="text-xs text-gray-300 hover:text-white ml-2">
                 View Status →
               </Link>
             </div>
 
             <h1 className="text-5xl md:text-6xl font-black text-white mb-6">
-              Build with <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">Crypto News</span>
+              Build with <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-white">Crypto News</span>
             </h1>
             
             <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
@@ -298,7 +298,7 @@ export default function DeveloperPortalContent() {
                   <div className="flex items-center gap-2 font-mono text-sm">
                     <span className="text-green-400">$</span>
                     <span className="text-gray-300">curl</span>
-                    <span className="text-amber-400">&quot;https://cryptocurrency.cv/api/news?limit=3&quot;</span>
+                    <span className="text-gray-300">&quot;https://cryptocurrency.cv/api/news?limit=3&quot;</span>
                     <button
                       onClick={() => copyToClipboard('curl "https://cryptocurrency.cv/api/news?limit=3"', 'hero-curl')}
                       className="ml-auto px-2 py-1 text-xs text-gray-500 hover:text-white transition-colors"
@@ -328,7 +328,7 @@ export default function DeveloperPortalContent() {
                 onClick={() => setActiveSection(item.id as typeof activeSection)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all ${
                   activeSection === item.id
-                    ? 'bg-amber-500 text-black'
+                    ? 'bg-white text-black'
                     : 'text-gray-400 hover:text-white hover:bg-gray-800'
                 }`}
               >
@@ -468,13 +468,13 @@ function QuickStartSection({
                 type="text"
                 value={tryItEndpoint}
                 onChange={(e) => setTryItEndpoint(e.target.value)}
-                className="flex-1 px-3 py-2 bg-gray-900 border border-gray-700 rounded-lg text-white font-mono text-sm focus:outline-none focus:border-amber-500"
+                className="flex-1 px-3 py-2 bg-gray-900 border border-gray-700 rounded-lg text-white font-mono text-sm focus:outline-none focus:border-gray-400"
                 placeholder="/api/news?limit=5"
               />
               <button
                 onClick={tryEndpoint}
                 disabled={tryItLoading}
-                className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-black font-semibold rounded-lg transition-colors disabled:opacity-50"
+                className="px-4 py-2 bg-white hover:bg-gray-100 text-black font-semibold rounded-lg transition-colors disabled:opacity-50"
               >
                 {tryItLoading ? 'Loading...' : 'Send'}
               </button>
@@ -494,7 +494,7 @@ function QuickStartSection({
       {/* Step 2: Code Examples */}
       <div>
         <div className="flex items-center gap-3 mb-6">
-          <div className="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-black font-bold text-sm">2</div>
+          <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black font-bold text-sm">2</div>
           <h2 className="text-2xl font-bold text-white">Copy & Paste Code</h2>
         </div>
 
@@ -546,10 +546,10 @@ function QuickStartSection({
           <Link
             key={card.title}
             href={card.href}
-            className="p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-amber-500/50 transition-all group"
+            className="p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-gray-400/50 transition-all group"
           >
             <div className="text-2xl mb-2">{card.icon}</div>
-            <div className="font-semibold text-white group-hover:text-amber-500 transition-colors">{card.title}</div>
+            <div className="font-semibold text-white group-hover:text-white transition-colors">{card.title}</div>
             <div className="text-sm text-gray-500">{card.desc}</div>
           </Link>
         ))}
@@ -594,7 +594,7 @@ function EndpointsSection({ copiedText, copyToClipboard }: { copiedText: string 
               onClick={() => setFilter(f.id as typeof filter)}
               className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
                 filter === f.id
-                  ? 'bg-amber-500 text-black'
+                  ? 'bg-white text-black'
                   : 'bg-gray-800 text-gray-400 hover:text-white'
               }`}
             >
@@ -626,7 +626,7 @@ function EndpointsSection({ copiedText, copyToClipboard }: { copiedText: string 
                     </span>
                   </td>
                   <td className="p-4">
-                    <code className="text-amber-400 font-mono text-sm">{endpoint.path}</code>
+                    <code className="text-gray-300 font-mono text-sm">{endpoint.path}</code>
                     {endpoint.example && (
                       <code className="text-gray-500 font-mono text-xs ml-1">{endpoint.example}</code>
                     )}
@@ -651,7 +651,7 @@ function EndpointsSection({ copiedText, copyToClipboard }: { copiedText: string 
       </div>
 
       <div className="text-center">
-        <Link href="/docs/API" className="text-amber-500 hover:text-amber-400 font-medium">
+        <Link href="/docs/API" className="text-gray-300 hover:text-white font-medium">
           View all 100+ endpoints in full documentation →
         </Link>
       </div>
@@ -731,7 +731,7 @@ function SDKsSection({ copiedText, copyToClipboard }: { copiedText: string | nul
             </div>
             
             <div className="border-t border-gray-700 p-4">
-              <Link href={sdk.docs} className="text-sm text-amber-500 hover:text-amber-400">
+              <Link href={sdk.docs} className="text-sm text-gray-300 hover:text-white">
                 View documentation →
               </Link>
             </div>
@@ -818,7 +818,7 @@ function APIKeysSection({
         </div>
         <button
           onClick={() => setShowKeyModal(true)}
-          className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-black font-semibold rounded-lg transition-colors flex items-center gap-2"
+          className="px-4 py-2 bg-white hover:bg-gray-100 text-black font-semibold rounded-lg transition-colors flex items-center gap-2"
         >
           <span>+</span> Create Key
         </button>
@@ -833,7 +833,7 @@ function APIKeysSection({
           </p>
           <button
             onClick={() => setShowKeyModal(true)}
-            className="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-black font-semibold rounded-lg transition-colors"
+            className="px-6 py-3 bg-white hover:bg-gray-100 text-black font-semibold rounded-lg transition-colors"
           >
             Create Your First Key
           </button>
@@ -886,7 +886,7 @@ function APIKeysSection({
           ].map((tier) => (
             <div key={tier.name} className="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
               <div className="font-semibold text-white">{tier.name}</div>
-              <div className="text-2xl font-bold text-amber-500 mb-2">{tier.price}</div>
+              <div className="text-2xl font-bold text-gray-300 mb-2">{tier.price}</div>
               <div className="text-sm text-gray-500 mb-3">{tier.limit} requests</div>
               <ul className="space-y-1">
                 {tier.features.map((f) => (
@@ -899,7 +899,7 @@ function APIKeysSection({
           ))}
         </div>
         <div className="mt-4 text-center">
-          <Link href="/pricing" className="text-amber-500 hover:text-amber-400 text-sm">
+          <Link href="/pricing" className="text-gray-300 hover:text-white text-sm">
             View full pricing →
           </Link>
         </div>
@@ -922,7 +922,7 @@ function APIKeysSection({
                 value={newKeyName}
                 onChange={(e) => setNewKeyName(e.target.value)}
                 placeholder="e.g., My Trading Bot"
-                className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-amber-500"
+                className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gray-400"
               />
             </div>
 
@@ -935,7 +935,7 @@ function APIKeysSection({
               </button>
               <button
                 onClick={createApiKey}
-                className="flex-1 px-4 py-3 bg-amber-500 hover:bg-amber-600 text-black rounded-lg font-semibold transition-colors"
+                className="flex-1 px-4 py-3 bg-white hover:bg-gray-100 text-black rounded-lg font-semibold transition-colors"
               >
                 Create
               </button>

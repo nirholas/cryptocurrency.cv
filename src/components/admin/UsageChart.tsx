@@ -110,8 +110,8 @@ export function UsageChart({
                   <div
                     className={`absolute bottom-0 left-0 right-0 rounded-t transition-all duration-200 ${
                       isToday
-                        ? 'bg-amber-500 hover:bg-amber-400'
-                        : 'bg-amber-500/60 hover:bg-amber-500/80'
+                        ? 'bg-gray-400 hover:bg-gray-300'
+                        : 'bg-gray-400/60 hover:bg-gray-400/80'
                     }`}
                     style={{
                       height: `${Math.max(barHeight, 1)}%`,
@@ -123,7 +123,7 @@ export function UsageChart({
                   <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
                     <div className="bg-neutral-800 border border-neutral-700 rounded-lg px-3 py-2 text-sm whitespace-nowrap shadow-lg">
                       <div className="font-medium">{formatDate(item.date)}</div>
-                      <div className="text-amber-400">{formatNumber(item.requests)} requests</div>
+                      <div className="text-gray-300">{formatNumber(item.requests)} requests</div>
                     </div>
                   </div>
                 </div>
@@ -158,7 +158,7 @@ interface SparklineProps {
   color?: string;
 }
 
-export function Sparkline({ data, width = 80, height = 24, color = '#f59e0b' }: SparklineProps) {
+export function Sparkline({ data, width = 80, height = 24, color = '#a3a3a3' }: SparklineProps) {
   if (!data || data.length < 2) {
     return <div style={{ width, height }} className="bg-neutral-800 rounded" />;
   }

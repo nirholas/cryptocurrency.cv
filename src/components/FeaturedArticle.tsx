@@ -23,7 +23,7 @@ const sourceGradients: Record<string, {
     badge: 'bg-blue-500 text-white',
   },
   'CoinTelegraph': {
-    gradient: 'from-orange-900 via-red-800 to-amber-900',
+    gradient: 'from-gray-900 via-gray-800 to-gray-700',
     accent: 'bg-orange-500',
     mesh: 'radial-gradient(circle at 30% 20%, rgba(249, 115, 22, 0.4) 0%, transparent 50%), radial-gradient(circle at 70% 80%, rgba(239, 68, 68, 0.3) 0%, transparent 50%), radial-gradient(circle at 50% 40%, rgba(245, 158, 11, 0.2) 0%, transparent 70%)',
     badge: 'bg-orange-500 text-white',
@@ -41,10 +41,10 @@ const sourceGradients: Record<string, {
     badge: 'bg-emerald-500 text-white',
   },
   'Bitcoin Magazine': {
-    gradient: 'from-amber-900 via-yellow-800 to-orange-900',
-    accent: 'bg-amber-500',
+    gradient: 'from-gray-900 via-gray-800 to-gray-700',
+    accent: 'bg-gray-400',
     mesh: 'radial-gradient(circle at 30% 30%, rgba(245, 158, 11, 0.4) 0%, transparent 50%), radial-gradient(circle at 70% 70%, rgba(234, 179, 8, 0.3) 0%, transparent 50%), radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.2) 0%, transparent 70%)',
-    badge: 'bg-amber-500 text-black',
+    badge: 'bg-gray-200 text-black',
   },
   'Blockworks': {
     gradient: 'from-indigo-900 via-blue-900 to-slate-900',

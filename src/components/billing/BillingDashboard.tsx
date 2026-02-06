@@ -571,7 +571,7 @@ export default function BillingDashboard() {
                     summaryStats.usagePercentage >= 90
                       ? 'bg-red-500'
                       : summaryStats.usagePercentage >= 75
-                      ? 'bg-amber-500'
+                      ? 'bg-gray-400'
                       : 'bg-blue-500'
                   }`}
                   style={{ width: `${Math.min(summaryStats.usagePercentage, 100)}%` }}

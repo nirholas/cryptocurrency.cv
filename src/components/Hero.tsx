@@ -8,7 +8,7 @@ import Link from 'next/link';
 export default function Hero() {
   return (
     <section 
-      className="relative overflow-hidden bg-gradient-to-br from-brand-400 via-brand-500 to-amber-500"
+      className="relative overflow-hidden bg-gradient-to-br from-gray-800 via-gray-900 to-black"
       aria-labelledby="hero-heading"
     >
       {/* Animated Mesh Background */}

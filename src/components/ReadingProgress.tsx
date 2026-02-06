@@ -81,7 +81,7 @@ export default function ReadingProgress({ className = '' }: ReadingProgressProps
       aria-label="Reading progress"
     >
       <div
-        className="h-full bg-gradient-to-r from-brand-500 to-amber-500 transition-all duration-150 ease-out"
+        className="h-full bg-gradient-to-r from-gray-600 to-gray-400 transition-all duration-150 ease-out"
         style={{ width: `${progress}%` }}
       />
     </div>

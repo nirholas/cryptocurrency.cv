@@ -151,7 +151,7 @@ async function sendVerificationEmail(subscriber: Subscriber, token: string): Pro
 </head>
 <body style="margin: 0; padding: 20px; background-color: #f5f5f5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
   <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden;">
-    <div style="padding: 32px; background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); text-align: center;">
+    <div style="padding: 32px; background: #000000; text-align: center;">
       <h1 style="margin: 0; color: #000; font-size: 24px;">📰 Free Crypto News</h1>
     </div>
     <div style="padding: 32px;">
@@ -161,7 +161,7 @@ async function sendVerificationEmail(subscriber: Subscriber, token: string): Pro
         Click the button below to verify your email address and start receiving updates.
       </p>
       <div style="text-align: center; margin: 32px 0;">
-        <a href="${verifyUrl}" style="display: inline-block; padding: 12px 32px; background-color: #F59E0B; color: #000; text-decoration: none; border-radius: 8px; font-weight: 600;">
+        <a href="${verifyUrl}" style="display: inline-block; padding: 12px 32px; background-color: #ffffff; color: #000; text-decoration: none; border-radius: 8px; font-weight: 600;">
           Verify Email
         </a>
       </div>
@@ -381,7 +381,7 @@ export function generateDigestHtml(
   <table width="100%" cellpadding="0" cellspacing="0" style="max-width: 600px; margin: 0 auto; background-color: #ffffff;">
     <!-- Header -->
     <tr>
-      <td style="padding: 32px; background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); text-align: center;">
+      <td style="padding: 32px; background: #000000; text-align: center;">
         <h1 style="margin: 0; color: #000; font-size: 24px;">📰 Crypto News Digest</h1>
         <p style="margin: 8px 0 0; color: #333; font-size: 14px;">Your ${subscriber.frequency} crypto news summary</p>
       </td>
