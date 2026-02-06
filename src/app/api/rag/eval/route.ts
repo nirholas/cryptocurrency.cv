@@ -12,7 +12,7 @@ import { RAGEvaluator } from '@/lib/rag/evaluator';
 import type { EvalTestCase, EvalPipelineOutput } from '@/lib/rag/evaluator';
 import { askFast } from '@/lib/rag/ultimate-rag-service';
 import { EvalRequestSchema, formatValidationError } from '../schemas';
-import { applyRateLimit, handleAPIError, logRequest } from '../middleware';
+import { applyRateLimit, handleAPIError } from '../middleware';
 import testCaseData from '@/lib/rag/eval-test-cases.json';
 
 // ═══════════════════════════════════════════════════════════════
@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
       id: tc.id,
       query: tc.query,
       expectedAnswer: tc.expectedAnswer,
-      expectedDocIds: tc.expectedDocIds,
+      expectedDocIds: 'expectedDocIds' in tc ? (tc as { expectedDocIds?: string[] }).expectedDocIds : undefined,
       tags: tc.tags,
       difficulty: tc.difficulty as EvalTestCase['difficulty'],
     }));
@@ -75,11 +75,11 @@ export async function POST(request: NextRequest) {
         query,
         answer: result.answer,
         documents: result.sources.map((s, i) => ({
-          id: s.id ?? `src-${i}`,
+          id: `src-${i}`,
           title: s.title ?? 'Unknown',
-          content: s.content ?? '',
+          content: `${s.title} - ${s.source}`,
           source: s.source ?? 'unknown',
-          score: s.score ?? 0,
+          score: s.voteScore ?? 0,
         })),
         processingTime: Date.now() - pipeStart,
       };
@@ -88,14 +88,11 @@ export async function POST(request: NextRequest) {
     // Run batch evaluation
     const runResult = await evaluator.evaluateBatch(cases, pipelineFn);
 
-    logRequest('POST', '/api/rag/eval', Date.now() - start, 200);
-
     return NextResponse.json({
       ...runResult,
       processingTimeMs: Date.now() - start,
     });
   } catch (error) {
-    logRequest('POST', '/api/rag/eval', Date.now() - start, 500);
-    return handleAPIError(error);
+    return handleAPIError(error, 'eval');
   }
 }

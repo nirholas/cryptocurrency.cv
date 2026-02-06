@@ -15,6 +15,7 @@
  */
 
 import { callGroq, parseGroqJson } from '../groq';
+import type { GroqMessage } from '../groq';
 import { gradeRetrievals } from './self-rag';
 import { detectHallucinations } from './self-rag';
 import type { ConfidenceScore } from './confidence-scorer';
@@ -203,7 +204,8 @@ Respond with JSON:
 }`;
 
   try {
-    const response = await callGroq(prompt, { temperature: 0.1, maxTokens: 1200 });
+    const messages: GroqMessage[] = [{ role: 'user', content: prompt }];
+    const response = await callGroq(messages, { temperature: 0.1, maxTokens: 1200 });
     const parsed = parseGroqJson<{
       claims: Array<{ claim: string; verdict: string; evidence: string }>;
       totalClaims: number;
@@ -267,7 +269,8 @@ Respond with JSON:
 }`;
 
   try {
-    const response = await callGroq(prompt, { temperature: 0.1, maxTokens: 500 });
+    const messages: GroqMessage[] = [{ role: 'user', content: prompt }];
+    const response = await callGroq(messages, { temperature: 0.1, maxTokens: 500 });
     const parsed = parseGroqJson<{
       topicality: number;
       completeness: number;
@@ -385,7 +388,8 @@ Respond with JSON:
 }`;
 
   try {
-    const response = await callGroq(prompt, { temperature: 0.1, maxTokens: 600 });
+    const messages: GroqMessage[] = [{ role: 'user', content: prompt }];
+    const response = await callGroq(messages, { temperature: 0.1, maxTokens: 600 });
     const parsed = parseGroqJson<{
       coveredTopics: string[];
       uncoveredTopics: string[];
