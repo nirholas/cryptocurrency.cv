@@ -50,10 +50,10 @@ export default function ArticleScreen() {
       headerRight: () => (
         <View style={styles.headerButtons}>
           <TouchableOpacity style={styles.headerButton} onPress={handleShare}>
-            <Ionicons name="share-outline" size={22} color="#f7931a" />
+            <Ionicons name="share-outline" size={22} color="#ffffff" />
           </TouchableOpacity>
           <TouchableOpacity style={styles.headerButton} onPress={handleOpenExternal}>
-            <Ionicons name="open-outline" size={22} color="#f7931a" />
+            <Ionicons name="open-outline" size={22} color="#ffffff" />
           </TouchableOpacity>
         </View>
       ),
@@ -68,7 +68,7 @@ export default function ArticleScreen() {
         startInLoadingState={true}
         renderLoading={() => (
           <View style={styles.loadingContainer}>
-            <ActivityIndicator size="large" color="#f7931a" />
+            <ActivityIndicator size="large" color="#ffffff" />
             <Text style={styles.loadingText}>Loading article...</Text>
           </View>
         )}

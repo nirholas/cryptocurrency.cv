@@ -193,7 +193,7 @@ export default async function CoinPage({ params, searchParams }: Props) {
 
   // Fetch all data in parallel for performance
   const [coinData, tickersData, ohlcData, developerData, communityData, newsData] = await Promise.all([
-    getCoinDetails(coinId) as Promise<CoinData | null>,
+    getCoinDetails(coinId).catch(() => null) as Promise<CoinData | null>,
     getCoinTickers(coinId, 1).catch(() => ({ name: coinId, tickers: [] as Ticker[] })),
     getOHLC(coinId, 30).catch(() => [] as OHLCData[]),
     getCoinDeveloperData(coinId).catch(() => null as DeveloperData | null),

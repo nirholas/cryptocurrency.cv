@@ -230,7 +230,7 @@ function getDashboardHTML(): string {
 <head>
   <style>
     body { font-family: system-ui; padding: 20px; background: #1e1e1e; color: #fff; }
-    h1 { color: #f7931a; }
+    h1 { color: #ffffff; }
     .card { background: #2d2d2d; border-radius: 8px; padding: 16px; margin: 12px 0; }
     .bullish { color: #00ff88; }
     .bearish { color: #ff4444; }

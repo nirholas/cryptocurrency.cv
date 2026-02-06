@@ -5,7 +5,7 @@ export const runtime = 'nodejs';
 export const dynamic = 'force-static';
 export const revalidate = 3600;
 
-const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://freecryptonews.com';
+const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://cryptocurrency.cv';
 
 export async function GET() {
   const posts = getAllPosts();
@@ -34,7 +34,7 @@ export async function GET() {
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${SITE_URL}/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
-      <url>${SITE_URL}/logo.png</url>
+      <url>${SITE_URL}/icons/icon-192x192.png</url>
       <title>Free Crypto News Blog</title>
       <link>${SITE_URL}/blog</link>
     </image>

@@ -4,9 +4,6 @@ import React, { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import {
   Settings,
-  Moon,
-  Sun,
-  Monitor,
   DollarSign,
   Bell,
   Volume2,
@@ -20,10 +17,9 @@ import {
   Download,
   Upload,
   Info,
-  Check,
   Languages,
 } from 'lucide-react';
-import { useTheme } from '@/components/ThemeProvider';
+
 import { useToast } from '@/components/Toast';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 
@@ -53,7 +49,7 @@ const STORAGE_KEY = 'crypto-user-preferences';
 export default function SettingsPage() {
   const t = useTranslations('settings');
   const tCommon = useTranslations('common');
-  const { theme, setTheme } = useTheme();
+
   const { addToast } = useToast();
   
   const [preferences, setPreferences] = useState<UserPreferences>(DEFAULT_PREFERENCES);
@@ -181,7 +177,7 @@ export default function SettingsPage() {
         </div>
 
         <div className="space-y-6">
-          {/* Theme */}
+          {/* Theme (dark mode only) */}
           <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6">
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               {t('appearance')}
@@ -191,35 +187,7 @@ export default function SettingsPage() {
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
                   {t('theme')}
                 </label>
-                <div className="grid grid-cols-3 gap-3">
-                  {[
-                    { value: 'light', icon: Sun, label: t('light') },
-                    { value: 'dark', icon: Moon, label: t('dark') },
-                    { value: 'system', icon: Monitor, label: t('system') },
-                  ].map(({ value, icon: Icon, label }) => (
-                    <button
-                      key={value}
-                      onClick={() => setTheme(value as 'light' | 'dark' | 'system')}
-                      className={`flex flex-col items-center gap-2 p-4 rounded-xl border-2 transition-all ${
-                        theme === value
-                          ? 'border-blue-500 bg-blue-50 dark:bg-blue-500/10'
-                          : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'
-                      }`}
-                    >
-                      <Icon className={`w-6 h-6 ${
-                        theme === value ? 'text-blue-600 dark:text-blue-400' : 'text-gray-500'
-                      }`} />
-                      <span className={`text-sm font-medium ${
-                        theme === value ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300'
-                      }`}>
-                        {label}
-                      </span>
-                      {theme === value && (
-                        <Check className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-                      )}
-                    </button>
-                  ))}
-                </div>
+                <p className="text-sm text-gray-500 dark:text-gray-400">Dark mode is always enabled.</p>
               </div>
 
               <div className="flex items-center justify-between py-3 border-t border-gray-200 dark:border-gray-700">

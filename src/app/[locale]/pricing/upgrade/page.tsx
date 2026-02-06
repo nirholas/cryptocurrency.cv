@@ -68,7 +68,7 @@ function UpgradeContent() {
   // Load key info when API key is provided
   const loadKeyInfo = async () => {
     if (!apiKey || !apiKey.startsWith('cda_')) {
-      setError('Please enter a valid API key (starts with cda_)');
+      setError('Please enter a valid API key (starts with cda_). Get one at /developers');
       return;
     }
 
@@ -252,9 +252,9 @@ function UpgradeContent() {
             <ArrowLeft className="w-4 h-4" />
             Back to Pricing
           </Link>
-          <h1 className="text-3xl font-bold text-black dark:text-white">Upgrade Your Plan</h1>
+          <h1 className="text-3xl font-bold text-black dark:text-white">Upgrade Your API Key</h1>
           <p className="text-neutral-600 dark:text-neutral-400 mt-2">
-            Upgrade to Pro for more requests and premium features
+            Unlock higher rate limits and premium features with x402 USDC payments
           </p>
         </div>
 
@@ -337,7 +337,7 @@ function UpgradeContent() {
               type="text"
               value={apiKey}
               onChange={(e) => setApiKey(e.target.value)}
-              placeholder="cda_free_..."
+              placeholder="cda_..."
               className="flex-1 min-w-[200px] px-4 py-2 border-2 border-neutral-200 dark:border-neutral-800 rounded-lg bg-white dark:bg-black text-black dark:text-white focus:border-black dark:focus:border-white outline-none font-mono"
             />
             <button

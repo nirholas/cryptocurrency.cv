@@ -133,7 +133,7 @@ export default function SettingsScreen() {
       disabled={item.type === 'toggle'}
     >
       <View style={styles.iconContainer}>
-        <Ionicons name={item.icon} size={22} color="#f7931a" />
+        <Ionicons name={item.icon} size={22} color="#ffffff" />
       </View>
       <View style={styles.itemContent}>
         <Text style={styles.itemTitle}>{item.title}</Text>
@@ -143,7 +143,7 @@ export default function SettingsScreen() {
         <Switch
           value={item.value}
           onValueChange={item.onPress}
-          trackColor={{ false: isDark ? '#2a2a2a' : '#e0e0e0', true: '#f7931a' }}
+          trackColor={{ false: isDark ? '#2a2a2a' : '#e0e0e0', true: '#ffffff' }}
           thumbColor={item.value ? '#ffffff' : isDark ? '#888' : '#f4f4f4'}
         />
       )}
@@ -199,7 +199,7 @@ const createStyles = (isDark: boolean) =>
       width: 80,
       height: 80,
       borderRadius: 20,
-      backgroundColor: '#f7931a',
+      backgroundColor: '#000000',
       justifyContent: 'center',
       alignItems: 'center',
       marginBottom: 16,

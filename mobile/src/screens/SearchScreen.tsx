@@ -73,7 +73,7 @@ export default function SearchScreen() {
         </View>
       ) : loading ? (
         <View style={styles.loadingContainer}>
-          <ActivityIndicator size="large" color="#f7931a" />
+          <ActivityIndicator size="large" color="#ffffff" />
         </View>
       ) : error ? (
         <View style={styles.errorContainer}>

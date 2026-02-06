@@ -58,7 +58,7 @@
 
 import { useEffect, useState, useCallback, createContext, useContext, ReactNode } from 'react';
 import { useRouter } from 'next/navigation';
-import { useTheme } from './ThemeProvider';
+
 
 interface ShortcutsContextType {
   showHelp: boolean;
@@ -86,7 +86,7 @@ export function KeyboardShortcutsProvider({ children }: KeyboardShortcutsProvide
   const [openSearch, setOpenSearch] = useState(false);
   const [gPressed, setGPressed] = useState(false);
   const router = useRouter();
-  const { toggleTheme } = useTheme();
+
 
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
     // Don't trigger shortcuts when typing in inputs
@@ -175,12 +175,7 @@ export function KeyboardShortcutsProvider({ children }: KeyboardShortcutsProvide
         setGPressed(false);
         break;
 
-      case 'd':
-        if (!e.metaKey && !e.ctrlKey) {
-          e.preventDefault();
-          toggleTheme();
-        }
-        break;
+
 
       case 'w':
         // Toggle watchlist on coin pages - dispatch custom event
@@ -230,7 +225,7 @@ export function KeyboardShortcutsProvider({ children }: KeyboardShortcutsProvide
         }
         break;
     }
-  }, [gPressed, router, toggleTheme]);
+  }, [gPressed, router]);
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);

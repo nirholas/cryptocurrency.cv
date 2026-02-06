@@ -560,7 +560,7 @@ curl -H "Authorization: Bearer YOUR_API_KEY" \
 
 ## Support
 
-- **Pro:** support@freecryptonews.com (24h response)
+- **Pro:** support@cryptocurrency.cv (24h response)
 - **Enterprise:** Dedicated Slack channel, 4h response SLA
 
 ---

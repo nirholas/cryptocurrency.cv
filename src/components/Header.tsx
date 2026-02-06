@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { MobileNav } from './MobileNav';
-import { ThemeToggle } from './ThemeProvider';
+
 import { SearchModal } from './SearchModal';
 import { CommandPalette } from './CommandPalette';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -520,7 +520,7 @@ export default function Header() {
 
           {/* Main Navigation - Desktop */}
           <nav 
-            className="hidden lg:flex items-center gap-0.5 flex-shrink min-w-0" 
+            className="hidden lg:flex items-center gap-0.5 flex-shrink min-w-0 overflow-hidden" 
             aria-label="Main navigation"
             role="menubar"
           >
@@ -566,8 +566,9 @@ export default function Header() {
 
           {/* Actions */}
           <div className="flex items-center gap-1 flex-shrink-0">
-            {/* Price Widget - Desktop only */}
-            <div className="hidden xl:block mr-2">
+            {/* Price Widget - Desktop only (2xl+ to avoid crowding nav) */}
+            <div className="hidden 2xl:flex items-center mr-2">
+              <div className="w-px h-5 bg-gray-200 dark:bg-slate-700 mr-3" />
               <Suspense fallback={<div className="w-48 h-6 bg-gray-100 dark:bg-gray-800 rounded animate-pulse" />}>
                 <PriceWidget variant="compact" />
               </Suspense>
@@ -587,8 +588,7 @@ export default function Header() {
               </span>
             </button>
 
-            {/* Theme Toggle */}
-            <ThemeToggle />
+
 
             {/* Language Switcher */}
             <div className="hidden sm:block">

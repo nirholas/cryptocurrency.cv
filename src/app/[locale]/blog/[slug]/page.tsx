@@ -88,12 +88,12 @@ export default async function BlogPostPage({ params }: PageProps) {
       name: 'Free Crypto News',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://freecryptonews.com/logo.png',
+        url: 'https://cryptocurrency.cv/icons/icon-512x512.png',
       },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://freecryptonews.com/${locale}/blog/${slug}`,
+      '@id': `https://cryptocurrency.cv/${locale}/blog/${slug}`,
     },
   };
   
@@ -217,7 +217,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             <h3 className="text-sm font-medium text-gray-500 mb-3">Share this article</h3>
             <div className="flex gap-3">
               <a
-                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://freecryptonews.com/blog/${slug}`)}`}
+                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://cryptocurrency.cv/blog/${slug}`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-lg transition-colors"
@@ -225,7 +225,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 Twitter
               </a>
               <a
-                href={`https://t.me/share/url?url=${encodeURIComponent(`https://freecryptonews.com/blog/${slug}`)}&text=${encodeURIComponent(post.title)}`}
+                href={`https://t.me/share/url?url=${encodeURIComponent(`https://cryptocurrency.cv/blog/${slug}`)}&text=${encodeURIComponent(post.title)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-lg transition-colors"
@@ -233,7 +233,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 Telegram
               </a>
               <a
-                href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://freecryptonews.com/blog/${slug}`)}`}
+                href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://cryptocurrency.cv/blog/${slug}`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-lg transition-colors"

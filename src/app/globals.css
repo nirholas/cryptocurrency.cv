@@ -12,17 +12,17 @@
 
 /* CSS Custom Properties */
 :root {
-  /* Brand Colors */
-  --color-brand-50: #fffbeb;
-  --color-brand-100: #fef3c7;
-  --color-brand-200: #fde68a;
-  --color-brand-300: #fcd34d;
-  --color-brand-400: #fbbf24;
-  --color-brand-500: #f7931a;
-  --color-brand-600: #d97706;
-  --color-brand-700: #b45309;
-  --color-brand-800: #92400e;
-  --color-brand-900: #78350f;
+  /* Brand Colors - Monochrome */
+  --color-brand-50: #fafafa;
+  --color-brand-100: #f5f5f5;
+  --color-brand-200: #e5e5e5;
+  --color-brand-300: #d4d4d4;
+  --color-brand-400: #a3a3a3;
+  --color-brand-500: #737373;
+  --color-brand-600: #525252;
+  --color-brand-700: #404040;
+  --color-brand-800: #262626;
+  --color-brand-900: #171717;
   
   /* Semantic Colors - WCAG AA compliant */
   --color-success: #047857;      /* 4.65:1 on white - AA compliant */

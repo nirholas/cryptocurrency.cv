@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
-  SUBSCRIPTION_TIERS,
   FEATURE_COMPARISON,
   PAY_PER_REQUEST,
   PREMIUM_ENDPOINTS,
@@ -15,7 +14,6 @@ import {
 } from '@/lib/x402/features';
 
 export default function PricingContent() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [showAllFeatures, setShowAllFeatures] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
@@ -46,8 +44,8 @@ export default function PricingContent() {
 
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
             <strong>{freeCount} free endpoints</strong> for everyone. Unlock{' '}
-            <strong>{premiumCount} premium endpoints</strong> with a subscription or pay-per-request
-            starting at <strong>{cheapestPrice}</strong>.
+            <strong>{premiumCount} premium endpoints</strong> with x402 pay-per-request
+            starting at <strong>{cheapestPrice}</strong>. No subscriptions &mdash; pay only for what you use.
           </p>
 
           {/* Stats */}
@@ -72,110 +70,110 @@ export default function PricingContent() {
         </motion.div>
       </div>
 
-      {/* Billing Toggle */}
-      <div className="flex justify-center mb-12">
-        <div className="bg-gray-100 dark:bg-gray-800 p-1 rounded-xl inline-flex">
-          <button
-            onClick={() => setBillingCycle('monthly')}
-            className={`px-6 py-2 rounded-lg text-sm font-medium transition-all ${
-              billingCycle === 'monthly'
-                ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
-                : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
-            }`}
-          >
-            Monthly
-          </button>
-          <button
-            onClick={() => setBillingCycle('yearly')}
-            className={`px-6 py-2 rounded-lg text-sm font-medium transition-all ${
-              billingCycle === 'yearly'
-                ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
-                : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
-            }`}
-          >
-            Yearly <span className="text-green-500 ml-1">Save 17%</span>
-          </button>
-        </div>
-      </div>
+      {/* Two-Model Pricing Cards */}
+      <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-20">
+        {/* Free Tier */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="relative bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700"
+        >
+          <div className="mb-6">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Free</h3>
+            <p className="text-gray-500 dark:text-gray-400 text-sm">
+              Perfect for exploring the API and personal projects
+            </p>
+          </div>
 
-      {/* Pricing Cards */}
-      <div className="grid md:grid-cols-3 gap-8 mb-20">
-        {SUBSCRIPTION_TIERS.map((tier, index) => (
-          <motion.div
-            key={tier.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            className={`relative bg-white dark:bg-gray-800 rounded-2xl p-8 ${
-              tier.highlighted
-                ? 'ring-2 ring-amber-500 shadow-xl scale-105'
-                : 'border border-gray-200 dark:border-gray-700'
-            }`}
-          >
-            {tier.highlighted && (
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                <span className="bg-amber-500 text-black text-xs font-bold px-4 py-1 rounded-full">
-                  MOST POPULAR
-                </span>
-              </div>
-            )}
-
-            <div className="mb-6">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{tier.name}</h3>
-              <p className="text-gray-500 dark:text-gray-400 text-sm">{tier.description}</p>
+          <div className="mb-6">
+            <div className="flex items-baseline gap-1">
+              <span className="text-4xl font-bold text-gray-900 dark:text-white">$0</span>
             </div>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">No API key required</p>
+          </div>
 
-            <div className="mb-6">
-              <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-bold text-gray-900 dark:text-white">
-                  {tier.price === 0
-                    ? 'Free'
-                    : billingCycle === 'monthly'
-                      ? `$${tier.price}`
-                      : `$${Math.round(tier.price * 10)}`}
-                </span>
-                {tier.price > 0 && (
-                  <span className="text-gray-500 dark:text-gray-400">
-                    /{billingCycle === 'monthly' ? 'mo' : 'yr'}
-                  </span>
-                )}
-              </div>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{tier.rateLimit}</p>
+          <ul className="space-y-3 mb-8">
+            {[
+              'All free news endpoints',
+              'RSS/Atom feeds',
+              'Basic sentiment analysis',
+              'Top 100 cryptocurrencies',
+              '7 days historical data',
+              'Community support',
+              'No sign-up needed',
+            ].map((feature, i) => (
+              <li key={i} className="flex items-start gap-3 text-sm">
+                <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="text-gray-600 dark:text-gray-300">{feature}</span>
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href="/developers"
+            className="block w-full text-center py-3 px-6 rounded-xl font-semibold transition-all bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-900 dark:text-white"
+          >
+            Get Started
+          </a>
+        </motion.div>
+
+        {/* x402 Pay-Per-Request */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="relative bg-white dark:bg-gray-800 rounded-2xl p-8 ring-2 ring-amber-500 shadow-xl"
+        >
+          <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+            <span className="bg-amber-500 text-black text-xs font-bold px-4 py-1 rounded-full">
+              PAY AS YOU GO
+            </span>
+          </div>
+
+          <div className="mb-6">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">x402 Pay-Per-Request</h3>
+            <p className="text-gray-500 dark:text-gray-400 text-sm">
+              No subscription needed. Pay only for what you use with USDC micropayments.
+            </p>
+          </div>
+
+          <div className="mb-6">
+            <div className="flex items-baseline gap-1">
+              <span className="text-4xl font-bold text-gray-900 dark:text-white">{cheapestPrice}</span>
+              <span className="text-gray-500 dark:text-gray-400">/request</span>
             </div>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">USDC on Base network</p>
+          </div>
 
-            <ul className="space-y-3 mb-8">
-              {tier.features.map((feature, i) => (
-                <li key={i} className="flex items-start gap-3 text-sm">
-                  <svg
-                    className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span className="text-gray-600 dark:text-gray-300">{feature}</span>
-                </li>
-              ))}
-            </ul>
+          <ul className="space-y-3 mb-8">
+            {[
+              'All premium endpoints',
+              'No monthly commitment',
+              'AI-powered analysis',
+              'Full historical data',
+              'CSV/JSON bulk exports',
+              'Webhooks & price alerts',
+              'Perfect for AI agents',
+            ].map((feature, i) => (
+              <li key={i} className="flex items-start gap-3 text-sm">
+                <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="text-gray-600 dark:text-gray-300">{feature}</span>
+              </li>
+            ))}
+          </ul>
 
-            <a
-              href={tier.ctaLink}
-              className={`block w-full text-center py-3 px-6 rounded-xl font-semibold transition-all ${
-                tier.highlighted
-                  ? 'bg-amber-500 hover:bg-amber-600 text-black'
-                  : 'bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-900 dark:text-white'
-              }`}
-            >
-              {tier.cta}
-            </a>
-          </motion.div>
-        ))}
+          <a
+            href="/developers"
+            className="block w-full text-center py-3 px-6 rounded-xl font-semibold transition-all bg-amber-500 hover:bg-amber-600 text-black"
+          >
+            Get Your API Key
+          </a>
+        </motion.div>
       </div>
 
       {/* Pay-Per-Request Section */}
@@ -254,8 +252,8 @@ export default function PricingContent() {
           Premium API Endpoints
         </h2>
         <p className="text-gray-600 dark:text-gray-300 text-center mb-8 max-w-2xl mx-auto">
-          Access powerful market data, analytics, and AI features. Pay per request or subscribe for
-          unlimited access.
+          Access powerful market data, analytics, and AI features. Pay per request with x402 &mdash;
+          no subscription needed.
         </p>
 
         {/* Category Tabs */}
@@ -366,7 +364,7 @@ export default function PricingContent() {
           Feature Comparison
         </h2>
         <p className="text-gray-600 dark:text-gray-300 text-center mb-8">
-          Compare what you get with each plan
+          Compare what&apos;s included for free vs. premium pay-per-request access
         </p>
 
         <div className="overflow-x-auto">
@@ -445,12 +443,12 @@ export default function PricingContent() {
             answer="When you hit a premium endpoint without auth, you get a 402 response with payment details. Use an x402-compatible wallet or SDK to sign the payment and include it in your request header."
           />
           <FAQItem
-            question="Can I switch between subscription and pay-per-request?"
-            answer="Yes! You can use your API key for subscription access or pay-per-request via x402. Both work on premium endpoints."
+            question="Do I need a subscription?"
+            answer="No! There are no subscriptions. Free endpoints are open to everyone. For premium endpoints, just pay per request with USDC via the x402 protocol."
           />
           <FAQItem
             question="What cryptocurrencies do you accept?"
-            answer="We accept USDC on Base network for x402 payments. Subscriptions can be paid with major cryptocurrencies or credit card."
+            answer="We accept USDC on the Base network for x402 payments. Connect any Web3 wallet like MetaMask or Coinbase Wallet."
           />
           <FAQItem
             question="Is there an API for AI agents?"

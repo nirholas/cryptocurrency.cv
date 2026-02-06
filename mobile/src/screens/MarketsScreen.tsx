@@ -37,7 +37,7 @@ export default function MarketsScreen() {
     return (
       <SafeAreaView style={styles.container}>
         <View style={styles.loadingContainer}>
-          <ActivityIndicator size="large" color="#f7931a" />
+          <ActivityIndicator size="large" color="#ffffff" />
           <Text style={styles.loadingText}>Loading markets...</Text>
         </View>
       </SafeAreaView>
@@ -65,8 +65,8 @@ export default function MarketsScreen() {
           <RefreshControl
             refreshing={loading}
             onRefresh={refresh}
-            tintColor="#f7931a"
-            colors={['#f7931a']}
+            tintColor="#ffffff"
+            colors={['#ffffff']}
           />
         }
         showsVerticalScrollIndicator={false}

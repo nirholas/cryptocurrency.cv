@@ -53,7 +53,7 @@ export default function AlertsScreen() {
   const renderAlert = ({ item }: { item: Alert }) => (
     <View style={styles.alertCard}>
       <View style={styles.iconContainer}>
-        <Ionicons name={getIcon(item.type)} size={24} color="#f7931a" />
+        <Ionicons name={getIcon(item.type)} size={24} color="#ffffff" />
       </View>
       <View style={styles.alertContent}>
         <Text style={styles.alertAsset}>${item.asset}</Text>
@@ -62,7 +62,7 @@ export default function AlertsScreen() {
       <Switch
         value={item.enabled}
         onValueChange={() => toggleAlert(item.id)}
-        trackColor={{ false: isDark ? '#2a2a2a' : '#e0e0e0', true: '#f7931a' }}
+        trackColor={{ false: isDark ? '#2a2a2a' : '#e0e0e0', true: '#ffffff' }}
         thumbColor={item.enabled ? '#ffffff' : isDark ? '#888' : '#f4f4f4'}
       />
     </View>
@@ -99,7 +99,7 @@ export default function AlertsScreen() {
 
       {/* Info Card */}
       <View style={styles.infoCard}>
-        <Ionicons name="information-circle" size={20} color="#f7931a" />
+        <Ionicons name="information-circle" size={20} color="#ffffff" />
         <Text style={styles.infoText}>
           Alerts are powered by the Free Crypto News API and delivered in real-time.
         </Text>
@@ -127,7 +127,7 @@ const createStyles = (isDark: boolean) =>
       color: isDark ? '#ffffff' : '#000000',
     },
     addButton: {
-      backgroundColor: '#f7931a',
+      backgroundColor: '#ffffff',
       width: 40,
       height: 40,
       borderRadius: 20,

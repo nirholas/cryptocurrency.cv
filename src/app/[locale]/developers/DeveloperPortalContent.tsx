@@ -177,22 +177,39 @@ export default function DeveloperPortalContent() {
 
   const createApiKey = async () => {
     if (!newKeyName.trim()) return;
-    
-    const newKey: APIKey = {
-      id: `key_${Date.now()}`,
-      key: `fcn_${generateRandomString(32)}`,
-      name: newKeyName,
-      tier: 'free',
-      createdAt: new Date().toISOString(),
-      usageToday: 0,
-      usageMonth: 0,
-      rateLimit: 1000,
-      active: true,
-    };
-    
-    setApiKeys([...apiKeys, newKey]);
-    setShowKeyModal(false);
-    setNewKeyName('');
+
+    try {
+      const res = await fetch('/api/keys', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: newKeyName }),
+      });
+      const data = await res.json();
+
+      if (!res.ok) {
+        console.error('Failed to create API key:', data);
+        return;
+      }
+
+      const newKey: APIKey = {
+        id: data.id ?? `key_${Date.now()}`,
+        key: data.key,
+        name: newKeyName,
+        tier: data.tier ?? 'free',
+        createdAt: data.createdAt ?? new Date().toISOString(),
+        usageToday: 0,
+        usageMonth: 0,
+        rateLimit: data.rateLimit ?? 1000,
+        active: true,
+      };
+
+      setApiKeys([...apiKeys, newKey]);
+    } catch (err) {
+      console.error('Failed to create API key:', err);
+    } finally {
+      setShowKeyModal(false);
+      setNewKeyName('');
+    }
   };
 
   const tryEndpoint = async () => {
@@ -862,11 +879,10 @@ function APIKeysSection({
       {/* Tier Comparison */}
       <div className="bg-gray-800/30 border border-gray-700 rounded-xl p-6">
         <h3 className="text-lg font-bold text-white mb-4">API Key Tiers</h3>
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           {[
-            { name: 'Free', price: '$0', limit: '1,000/day', features: ['Basic endpoints', 'Standard rate limit'] },
-            { name: 'Pro', price: '$29/mo', limit: '50,000/day', features: ['All endpoints', 'Priority support', 'Webhooks'] },
-            { name: 'Enterprise', price: 'Custom', limit: 'Unlimited', features: ['Dedicated support', 'SLA', 'Custom integrations'] },
+            { name: 'Free', price: '$0', limit: '1,000/day', features: ['Free news endpoints', 'Standard rate limit', 'No credit card required'] },
+            { name: 'Pay-Per-Request', price: 'x402', limit: 'Unlimited', features: ['All premium endpoints', 'Pay in USDC on Base', 'No subscription needed'] },
           ].map((tier) => (
             <div key={tier.name} className="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
               <div className="font-semibold text-white">{tier.name}</div>
@@ -935,7 +951,4 @@ function APIKeysSection({
 // UTILITIES
 // =============================================================================
 
-function generateRandomString(length: number): string {
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  return Array.from({ length }, () => chars.charAt(Math.floor(Math.random() * chars.length))).join('');
-}
+

@@ -92,7 +92,7 @@ const createStyles = (isDark: boolean, compact: boolean) =>
     source: {
       fontSize: 12,
       fontWeight: '600',
-      color: '#f7931a',
+      color: '#ffffff',
       textTransform: 'uppercase',
     },
     time: {
@@ -122,6 +122,6 @@ const createStyles = (isDark: boolean, compact: boolean) =>
     tickerText: {
       fontSize: 12,
       fontWeight: '600',
-      color: '#f7931a',
+      color: '#ffffff',
     },
   });

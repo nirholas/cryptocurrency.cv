@@ -47,80 +47,19 @@ interface ThemeProviderProps {
 
 export function ThemeProvider({ 
   children, 
-  defaultTheme = 'dark',
 }: ThemeProviderProps) {
-  const [theme, setThemeState] = useState<Theme>(defaultTheme);
-  const [resolvedTheme, setResolvedTheme] = useState<ResolvedTheme>('light');
-  const [mounted, setMounted] = useState(false);
+  // Dark mode is forced — light mode is disabled
+  const setTheme = useCallback(() => {}, []);
+  const toggleTheme = useCallback(() => {}, []);
 
-  // Initialize theme from storage on mount
   useEffect(() => {
-    const stored = getStoredTheme();
-    setThemeState(stored);
-    setMounted(true);
+    const root = document.documentElement;
+    root.classList.remove('light');
+    root.classList.add('dark');
   }, []);
-
-  // Update resolved theme when theme or system preference changes
-  useEffect(() => {
-    if (!mounted) return;
-
-    const updateResolvedTheme = () => {
-      const resolved = theme === 'system' ? getSystemTheme() : theme;
-      setResolvedTheme(resolved);
-      
-      // Apply to document
-      const root = document.documentElement;
-      root.classList.remove('light', 'dark');
-      root.classList.add(resolved);
-      
-      // Update meta theme-color
-      const metaThemeColor = document.querySelector('meta[name="theme-color"]');
-      if (metaThemeColor) {
-        metaThemeColor.setAttribute(
-          'content',
-          resolved === 'dark' ? '#0a0a0a' : '#f7931a'
-        );
-      }
-    };
-
-    updateResolvedTheme();
-
-    // Listen for system preference changes
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleChange = () => {
-      if (theme === 'system') {
-        updateResolvedTheme();
-      }
-    };
-
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, [theme, mounted]);
-
-  const setTheme = useCallback((newTheme: Theme) => {
-    setThemeState(newTheme);
-    try {
-      localStorage.setItem(STORAGE_KEY, newTheme);
-    } catch {
-      // localStorage not available
-    }
-  }, []);
-
-  const toggleTheme = useCallback(() => {
-    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
-  }, [resolvedTheme, setTheme]);
-
-  // Prevent flash of wrong theme
-  if (!mounted) {
-    return (
-      <ThemeContext.Provider value={{ theme: 'system', resolvedTheme: 'light', setTheme: () => {}, toggleTheme: () => {} }}>
-        {children}
-      </ThemeContext.Provider>
-    );
-  }
 
   return (
-    <ThemeContext.Provider value={{ theme, resolvedTheme, setTheme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme: 'dark', resolvedTheme: 'dark', setTheme, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );
@@ -203,14 +142,7 @@ export function ThemeToggle({ className = '' }: { className?: string }) {
 export function ThemeScript() {
   const script = `
     (function() {
-      try {
-        var theme = localStorage.getItem('${STORAGE_KEY}') || 'system';
-        var resolved = theme;
-        if (theme === 'system') {
-          resolved = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        }
-        document.documentElement.classList.add(resolved);
-      } catch (e) {}
+      document.documentElement.classList.add('dark');
     })();
   `;
 

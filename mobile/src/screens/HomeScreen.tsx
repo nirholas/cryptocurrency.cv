@@ -70,7 +70,7 @@ export default function HomeScreen() {
     return (
       <SafeAreaView style={styles.container}>
         <View style={styles.loadingContainer}>
-          <ActivityIndicator size="large" color="#f7931a" />
+          <ActivityIndicator size="large" color="#ffffff" />
           <Text style={styles.loadingText}>Loading news...</Text>
         </View>
       </SafeAreaView>
@@ -88,8 +88,8 @@ export default function HomeScreen() {
           <RefreshControl
             refreshing={activeData.loading}
             onRefresh={activeData.refresh}
-            tintColor="#f7931a"
-            colors={['#f7931a']}
+            tintColor="#ffffff"
+            colors={['#ffffff']}
           />
         }
         onEndReached={activeTab === 'latest' ? latestNews.loadMore : undefined}
@@ -134,7 +134,7 @@ const createStyles = (isDark: boolean) =>
       backgroundColor: isDark ? '#1a1a1a' : '#ffffff',
     },
     activeTab: {
-      backgroundColor: '#f7931a',
+      backgroundColor: '#ffffff',
     },
     tabText: {
       fontSize: 14,

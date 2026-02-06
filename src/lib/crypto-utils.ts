@@ -457,7 +457,7 @@ export function getSentimentColor(
   const colors = {
     bullish: '#16c784',
     bearish: '#ea3943',
-    neutral: '#f7931a',
+    neutral: '#737373',
   };
   return colors[sentiment];
 }

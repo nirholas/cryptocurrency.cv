@@ -23,15 +23,15 @@ import { locales, isRtlLocale, type Locale } from '@/i18n/config';
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#f7931a' },
-    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
+    { media: '(prefers-color-scheme: light)', color: '#000000' },
+    { media: '(prefers-color-scheme: dark)', color: '#000000' },
   ],
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
   viewportFit: 'cover',
-  colorScheme: 'dark light',
+  colorScheme: 'dark',
 };
 
 export const metadata: Metadata = {
@@ -102,7 +102,7 @@ export const metadata: Metadata = {
       {
         rel: 'mask-icon',
         url: '/safari-pinned-tab.svg',
-        color: '#f7931a',
+        color: '#000000',
       },
     ],
   },
@@ -144,7 +144,7 @@ export const metadata: Metadata = {
   category: 'news',
   classification: 'Cryptocurrency News',
   other: {
-    'msapplication-TileColor': '#f7931a',
+    'msapplication-TileColor': '#000000',
     'msapplication-config': '/browserconfig.xml',
     'mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-capable': 'yes',

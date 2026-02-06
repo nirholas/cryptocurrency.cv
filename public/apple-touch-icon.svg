@@ -1,25 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a1a2e"/>
-      <stop offset="100%" style="stop-color:#0a0a0a"/>
-    </linearGradient>
-    <linearGradient id="coinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#f7931a"/>
-      <stop offset="50%" style="stop-color:#ffb84d"/>
-      <stop offset="100%" style="stop-color:#f7931a"/>
-    </linearGradient>
-  </defs>
-  
-  <!-- Background with Apple's required rounded corners -->
-  <rect width="180" height="180" rx="40" fill="url(#bgGrad)"/>
-  
-  <!-- Bitcoin circle -->
-  <circle cx="90" cy="75" r="42" fill="url(#coinGrad)"/>
-  
-  <!-- Bitcoin symbol -->
-  <text x="90" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="800" fill="#0a0a0a" text-anchor="middle">₿</text>
-  
-  <!-- NEWS text -->
-  <text x="90" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="3">NEWS</text>
+  <rect width="180" height="180" rx="40" fill="#000"/>
+  <text x="90" y="105" font-family="system-ui, -apple-system, sans-serif" font-size="90" font-weight="700" fill="#fff" text-anchor="middle">₿</text>
 </svg>
