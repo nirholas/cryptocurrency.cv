@@ -1,0 +1,111 @@
+{
+  "version": "1.0.0",
+  "description": "Ground truth test cases for RAG evaluation. Each case has a query, expected answer, tags, and difficulty.",
+  "testCases": [
+    {
+      "id": "tc-001",
+      "query": "What is Bitcoin?",
+      "expectedAnswer": "Bitcoin is a decentralized digital cryptocurrency created in 2009 by the pseudonymous Satoshi Nakamoto. It operates on a peer-to-peer network using blockchain technology, allowing users to send and receive payments without intermediaries like banks.",
+      "tags": ["factual", "basic"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "tc-002",
+      "query": "What is Ethereum's consensus mechanism?",
+      "expectedAnswer": "Ethereum uses a Proof of Stake (PoS) consensus mechanism since The Merge in September 2022, which replaced the original Proof of Work (PoW) system. Validators stake 32 ETH to participate in block validation and earn rewards.",
+      "tags": ["factual", "technical"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "tc-003",
+      "query": "How does a Bitcoin halving affect the market?",
+      "expectedAnswer": "Bitcoin halving reduces the block reward miners receive by 50%, decreasing the rate of new BTC supply. Historically, halvings have preceded significant bull runs, though past performance does not guarantee future results. The reduced supply coupled with steady or growing demand tends to create upward price pressure.",
+      "tags": ["analysis", "market", "temporal"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "tc-004",
+      "query": "Compare Solana and Ethereum transaction speeds",
+      "expectedAnswer": "Solana can theoretically process up to 65,000 transactions per second (TPS) with sub-second finality, while Ethereum's base layer handles roughly 15-30 TPS with ~12 second block times. However, Ethereum's Layer 2 solutions like Arbitrum and Optimism significantly increase its effective throughput. Solana achieves speed through its Proof of History mechanism combined with Tower BFT consensus.",
+      "tags": ["comparison", "technical"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "tc-005",
+      "query": "What are the risks of DeFi yield farming?",
+      "expectedAnswer": "Key risks include: smart contract vulnerabilities and exploits, impermanent loss when providing liquidity, rug pulls by malicious developers, protocol insolvency, regulatory uncertainty, oracle manipulation attacks, and high gas fees eroding profits. Users should research protocols thoroughly, start with established platforms, and never invest more than they can afford to lose.",
+      "tags": ["analysis", "defi", "risk"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "tc-006",
+      "query": "What caused the FTX collapse?",
+      "expectedAnswer": "FTX collapsed in November 2022 primarily due to the misuse of customer funds by Alameda Research, FTX's sister trading firm. A CoinDesk report revealed Alameda's balance sheet was heavily dependent on FTT tokens. This triggered a bank run when Binance CEO CZ announced selling FTT holdings. FTX could not meet withdrawal demands, revealing an estimated $8 billion shortfall. Founder Sam Bankman-Fried was later convicted of fraud.",
+      "tags": ["factual", "historical", "temporal"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "tc-007",
+      "query": "Explain how MEV works in Ethereum",
+      "expectedAnswer": "Maximal Extractable Value (MEV) refers to the profit validators and searchers can extract by reordering, inserting, or censoring transactions within a block. Common MEV strategies include sandwich attacks (front-running and back-running a large trade), arbitrage between DEXs, and liquidation hunting in lending protocols. MEV can result in higher costs for regular users. Solutions like Flashbots and MEV-Boost aim to democratize MEV extraction and reduce its negative effects.",
+      "tags": ["technical", "defi", "advanced"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "tc-008",
+      "query": "What is the current regulatory landscape for crypto in the US?",
+      "expectedAnswer": "The US crypto regulatory landscape involves multiple agencies: the SEC classifies many tokens as securities, the CFTC oversees crypto derivatives and considers Bitcoin a commodity, and FinCEN handles AML/KYC compliance. There is ongoing debate about whether a comprehensive federal framework is needed. Key developments include SEC enforcement actions, the approval of Bitcoin spot ETFs in January 2024, and proposed stablecoin legislation.",
+      "tags": ["regulatory", "temporal", "factual"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "tc-009",
+      "query": "How do zero-knowledge proofs improve blockchain scalability?",
+      "expectedAnswer": "Zero-knowledge proofs (ZKPs) improve scalability by allowing one party to prove a statement is true without revealing the underlying data. ZK-rollups batch hundreds of transactions off-chain and generate a cryptographic proof (SNARK or STARK) that is verified on-chain in a single transaction. This dramatically reduces on-chain data and computation. Projects like zkSync, StarkNet, and Polygon zkEVM use this approach to achieve thousands of TPS while inheriting Ethereum's security.",
+      "tags": ["technical", "scalability", "advanced"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "tc-010",
+      "query": "What is the difference between a hot wallet and a cold wallet?",
+      "expectedAnswer": "A hot wallet is connected to the internet (e.g., MetaMask, exchange wallets) offering convenience for frequent transactions but higher security risk. A cold wallet is offline (e.g., Ledger, Trezor hardware wallets, paper wallets) providing stronger security against hacking but less convenience. Best practice is to use hot wallets for small amounts and daily use, and cold wallets for long-term storage of larger holdings.",
+      "tags": ["factual", "security", "basic"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "tc-011",
+      "query": "What happened to Terra Luna?",
+      "expectedAnswer": "In May 2022, the Terra ecosystem collapsed when its algorithmic stablecoin UST lost its dollar peg. UST maintained its peg through a mint/burn mechanism with LUNA. When UST depegged, a death spiral ensued: mass selling of UST caused hyperinflation of LUNA as the algorithm minted more LUNA to try to restore the peg. LUNA's price crashed from ~$80 to near zero, wiping out approximately $40 billion in market value. Founder Do Kwon was later arrested.",
+      "tags": ["historical", "temporal", "factual"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "tc-012",
+      "query": "How does Bitcoin mining work and what is its environmental impact?",
+      "expectedAnswer": "Bitcoin mining uses Proof of Work where miners compete to solve cryptographic puzzles using specialized ASIC hardware. The first to solve a block receives the block reward (currently 3.125 BTC after the April 2024 halving) plus transaction fees. Mining consumes significant electricity — estimated 150+ TWh annually, comparable to some countries. However, an increasing share comes from renewable sources, with estimates ranging from 40-60%. The debate continues over whether Bitcoin's energy use is justified by its utility.",
+      "tags": ["technical", "environmental", "analysis"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "tc-013",
+      "query": "What are Bitcoin spot ETFs and why do they matter?",
+      "expectedAnswer": "Bitcoin spot ETFs are exchange-traded funds that directly hold Bitcoin, allowing investors to gain BTC exposure through traditional brokerage accounts without managing private keys. The SEC approved 11 spot Bitcoin ETFs in January 2024, including products from BlackRock (IBIT), Fidelity (FBTC), and Grayscale (GBTC). They matter because they lower the barrier for institutional and retail investors, bring regulatory legitimacy, and have attracted billions in inflows, significantly impacting Bitcoin's price and market structure.",
+      "tags": ["factual", "market", "temporal", "institutional"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "tc-014",
+      "query": "Explain cross-chain bridges and their security challenges",
+      "expectedAnswer": "Cross-chain bridges connect different blockchains, enabling transfer of assets between networks. They work by locking tokens on one chain and minting equivalent tokens on another. Security challenges are significant: bridges hold large pools of locked assets making them attractive targets, many rely on multisig schemes that can be compromised, and smart contract vulnerabilities have led to massive exploits. Notable bridge hacks include Ronin ($625M), Wormhole ($320M), and Nomad ($190M). Newer approaches like ZK-bridges and canonical rollup bridges aim to improve security.",
+      "tags": ["technical", "security", "advanced"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "tc-015",
+      "query": "What is the impact of stablecoin regulation on DeFi?",
+      "expectedAnswer": "Stablecoin regulation could significantly reshape DeFi. Requiring reserve audits and licensing for issuers would increase transparency but could concentrate power among compliant players. KYC requirements on stablecoin transfers might conflict with DeFi's permissionless nature. USDC's compliance-first approach contrasts with more decentralized options like DAI. Proposed US legislation (e.g., the GENIUS Act) could establish a federal framework. Over-regulation might push DeFi activity offshore, while reasonable regulation could boost institutional adoption.",
+      "tags": ["regulatory", "defi", "analysis"],
+      "difficulty": "hard"
+    }
+  ]
+}

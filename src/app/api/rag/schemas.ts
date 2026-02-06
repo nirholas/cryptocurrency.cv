@@ -138,6 +138,29 @@ export const MetricsQuerySchema = z.object({
 export type MetricsQuery = z.infer<typeof MetricsQuerySchema>;
 
 // ═══════════════════════════════════════════════════════════════
+// EVAL ENDPOINT (POST /api/rag/eval)
+// ═══════════════════════════════════════════════════════════════
+
+export const EvalRequestSchema = z.object({
+  /** Inline test cases. If omitted, uses built-in ground truth set. */
+  testCases: z.array(z.object({
+    id: z.string().min(1),
+    query: z.string().min(1).max(2000),
+    expectedAnswer: z.string().max(5000).optional(),
+    expectedDocIds: z.array(z.string()).optional(),
+    tags: z.array(z.string()).optional(),
+    difficulty: z.enum(['easy', 'medium', 'hard']).optional(),
+  })).min(1).max(50).optional(),
+  /** Evaluation config overrides */
+  config: z.object({
+    passThreshold: z.number().min(0).max(1).optional(),
+    concurrency: z.number().int().min(1).max(5).optional(),
+  }).optional(),
+});
+
+export type EvalRequest = z.infer<typeof EvalRequestSchema>;
+
+// ═══════════════════════════════════════════════════════════════
 // ERROR RESPONSE
 // ═══════════════════════════════════════════════════════════════
 

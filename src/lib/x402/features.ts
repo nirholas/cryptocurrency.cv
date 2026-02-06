@@ -594,7 +594,7 @@ export const SUBSCRIPTION_TIERS: TierInfo[] = [
       'Custom integrations',
     ],
     cta: 'Contact Sales',
-    ctaLink: 'mailto:enterprise@free-crypto-news.com',
+    ctaLink: 'mailto:enterprise@cryptocurrency.cv',
   },
 ];
 

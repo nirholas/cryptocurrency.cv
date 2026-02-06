@@ -11,9 +11,20 @@
 
 import { NextResponse } from 'next/server';
 import { kv } from '@vercel/kv';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 export const revalidate = 0; // Always fresh
+
+// Read version from package.json at module load time
+let APP_VERSION = '1.0.0';
+try {
+  const pkg = JSON.parse(readFileSync(join(process.cwd(), 'package.json'), 'utf-8'));
+  APP_VERSION = pkg.version || APP_VERSION;
+} catch {
+  // fallback to default
+}
 
 interface HealthCheck {
   status: 'healthy' | 'degraded' | 'unhealthy';
@@ -69,14 +80,21 @@ async function checkCache(): Promise<HealthCheck> {
 /**
  * Check x402 facilitator status
  */
-async function checkX402Facilitator(): Promise<HealthCheck> {
+async function checkX402Facilitator(): Promise<HealthCheck | null> {
+  // Only check x402 if it's configured
+  const facilitatorUrl = process.env.X402_FACILITATOR_URL;
+  const paymentAddress = process.env.X402_PAYMENT_ADDRESS;
+  if (!facilitatorUrl && !paymentAddress) {
+    return null; // x402 not configured, skip check
+  }
+  
   const start = Date.now();
-  const facilitatorUrl = process.env.X402_FACILITATOR_URL || 'https://x402.org/facilitator';
+  const url = facilitatorUrl || 'https://x402.org/facilitator';
   
   try {
-    const response = await fetch(`${facilitatorUrl}/health`, {
+    const response = await fetch(`${url}/health`, {
       method: 'GET',
-      signal: AbortSignal.timeout(5000), // 5 second timeout
+      signal: AbortSignal.timeout(5000),
     });
     
     if (response.ok) {
@@ -147,19 +165,24 @@ export async function GET() {
     checkExternalAPIs(),
   ]);
 
-  const checks = {
+  const checks: Record<string, HealthCheck> = {
     api: {
       status: 'healthy' as const,
       responseTime: Date.now() - startTime,
     },
     cache,
-    x402Facilitator: x402,
     externalAPIs: external,
   };
 
-  // Determine overall status
-  const unhealthyCount = Object.values(checks).filter(c => c.status === 'unhealthy').length;
-  const degradedCount = Object.values(checks).filter(c => c.status === 'degraded').length;
+  // Only include x402 if configured and checked
+  if (x402) {
+    checks.x402Facilitator = x402;
+  }
+
+  // Determine overall status (exclude optional services from overall calculation)
+  const coreChecks = [checks.api, checks.cache, checks.externalAPIs];
+  const unhealthyCount = coreChecks.filter(c => c.status === 'unhealthy').length;
+  const degradedCount = coreChecks.filter(c => c.status === 'degraded').length;
   
   let overallStatus: 'healthy' | 'degraded' | 'unhealthy';
   if (unhealthyCount > 0) {
@@ -173,9 +196,9 @@ export async function GET() {
   const response: HealthResponse = {
     status: overallStatus,
     timestamp: new Date().toISOString(),
-    version: process.env.NEXT_PUBLIC_APP_VERSION || '1.0.0',
-    uptime: 0, // process.uptime() not available in Edge runtime
-    checks,
+    version: APP_VERSION,
+    uptime: Math.floor(process.uptime()),
+    checks: checks as HealthResponse['checks'],
   };
 
   // Return appropriate status code

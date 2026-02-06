@@ -30,7 +30,7 @@ interface HealthResponse {
   checks: {
     api: HealthCheck;
     cache: HealthCheck;
-    x402Facilitator: HealthCheck;
+    x402Facilitator?: HealthCheck;
     externalAPIs: HealthCheck;
   };
 }
@@ -179,12 +179,14 @@ export default async function StatusPage() {
                   responseTime={health.checks.externalAPIs.responseTime}
                   message={health.checks.externalAPIs.message}
                 />
-                <StatusRow
-                  name="x402 Facilitator"
-                  status={health.checks.x402Facilitator.status}
-                  responseTime={health.checks.x402Facilitator.responseTime}
-                  message={health.checks.x402Facilitator.message}
-                />
+                {health.checks.x402Facilitator && (
+                  <StatusRow
+                    name="x402 Facilitator"
+                    status={health.checks.x402Facilitator.status}
+                    responseTime={health.checks.x402Facilitator.responseTime}
+                    message={health.checks.x402Facilitator.message}
+                  />
+                )}
               </>
             ) : (
               <div className="px-6 py-8 text-center text-gray-500">
@@ -216,21 +218,29 @@ export default async function StatusPage() {
             <h2 className="text-lg font-semibold">API Endpoints</h2>
           </div>
           <div className="divide-y divide-gray-800">
-            <EndpointRow endpoint="/api/news" description="Latest crypto news" />
-            <EndpointRow endpoint="/api/search" description="Search articles" />
-            <EndpointRow endpoint="/api/bitcoin" description="Bitcoin news feed" />
-            <EndpointRow endpoint="/api/market" description="Market data" />
-            <EndpointRow endpoint="/api/fear-greed" description="Fear & Greed index" />
-            <EndpointRow endpoint="/api/ai" description="AI analysis" />
-            <EndpointRow endpoint="/api/sse" description="Real-time stream" />
+            {(() => {
+              const apiStatus = health?.checks.api.status;
+              return (
+                <>
+                  <EndpointRow endpoint="/api/news" description="Latest crypto news" apiStatus={apiStatus} />
+                  <EndpointRow endpoint="/api/search" description="Search articles" apiStatus={apiStatus} />
+                  <EndpointRow endpoint="/api/bitcoin" description="Bitcoin news feed" apiStatus={apiStatus} />
+                  <EndpointRow endpoint="/api/market" description="Market data" apiStatus={apiStatus} />
+                  <EndpointRow endpoint="/api/fear-greed" description="Fear & Greed index" apiStatus={apiStatus} />
+                  <EndpointRow endpoint="/api/ai" description="AI analysis" apiStatus={apiStatus} />
+                  <EndpointRow endpoint="/api/sse" description="Real-time stream" apiStatus={apiStatus} />
+                </>
+              );
+            })()}
           </div>
         </div>
         
         {/* Top Sources */}
         {stats && stats.bySource.length > 0 && (
           <div className="bg-gray-900 rounded-xl border border-gray-800 mb-8">
-            <div className="px-6 py-4 border-b border-gray-800">
+            <div className="px-6 py-4 border-b border-gray-800 flex items-center justify-between">
               <h2 className="text-lg font-semibold">News Sources (Last 24h)</h2>
+              <span className="text-sm text-gray-500">Top 10 of {stats.summary.activeSources}</span>
             </div>
             <div className="divide-y divide-gray-800">
               {stats.bySource.slice(0, 10).map((source) => (
@@ -313,14 +323,18 @@ function MetricCard({ label, value }: { label: string; value: string }) {
   );
 }
 
-function EndpointRow({ endpoint, description }: { endpoint: string; description: string }) {
+function EndpointRow({ endpoint, description, apiStatus }: { endpoint: string; description: string; apiStatus?: 'healthy' | 'degraded' | 'unhealthy' }) {
   return (
     <div className="px-6 py-3 flex items-center justify-between">
       <div>
         <code className="text-blue-400">{endpoint}</code>
         <div className="text-sm text-gray-500">{description}</div>
       </div>
-      <StatusBadge status="healthy" />
+      {apiStatus ? (
+        <StatusBadge status={apiStatus} />
+      ) : (
+        <span className="text-xs text-gray-600">—</span>
+      )}
     </div>
   );
 }

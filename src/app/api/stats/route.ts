@@ -25,6 +25,7 @@ export async function GET() {
     ]);
     
     const articles = newsData.articles;
+    const totalArticleCount = newsData.totalCount || articles.length;
     const now = new Date();
     
     // Articles per source
@@ -79,16 +80,16 @@ export async function GET() {
       .map(([category, count]) => ({ category, count }))
       .sort((a, b) => b.count - a.count);
     
-    // Average articles per hour
+    // Average articles per hour (use total count, not capped sample)
     const totalHours = 24;
-    const avgPerHour = Math.round((articles.length / totalHours) * 10) / 10;
+    const avgPerHour = Math.round((totalArticleCount / totalHours) * 10) / 10;
     
     // Active sources count
     const activeSources = sourcesData.sources.filter(s => s.status === 'active').length;
     
     return NextResponse.json({
       summary: {
-        totalArticles: articles.length,
+        totalArticles: totalArticleCount,
         activeSources,
         totalSources: sourcesData.sources.length,
         avgArticlesPerHour: avgPerHour,

@@ -52,7 +52,7 @@
  * | `w` | Toggle watchlist (on coin page) |
  * | `a` | Open alert modal (on coin page) |
  * 
- * @see {@link https://docs.free-crypto-news.com/user-guide#keyboard-shortcuts User Guide}
+ * @see {@link https://docs.cryptocurrency.cv/user-guide#keyboard-shortcuts User Guide}
  */
 'use client';
 
