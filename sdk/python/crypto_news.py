@@ -20,7 +20,7 @@ from typing import Optional, List, Dict, Any
 class CryptoNews:
     """Free Crypto News API client."""
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     def __init__(self, base_url: Optional[str] = None):
         """

@@ -46,7 +46,7 @@ from telegram.ext import (
     InlineQueryHandler,
 )
 
-API_BASE = "https://news-crypto.vercel.app/api"
+API_BASE = "https://cryptocurrency.cv/api"
 
 
 async def get_news(limit: int = 5, category: str = None) -> dict:

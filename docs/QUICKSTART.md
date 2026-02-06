@@ -22,20 +22,20 @@ Get up and running with Free Crypto News in 5 minutes.
 No signup, no API key - just call it:
 
 ```bash
-curl https://news-crypto.vercel.app/api/news
+curl https://cryptocurrency.cv/api/news
 ```
 
 ### 2. Filter by Topic
 
 ```bash
 # Bitcoin news only
-curl https://news-crypto.vercel.app/api/bitcoin
+curl https://cryptocurrency.cv/api/bitcoin
 
 # DeFi news
-curl https://news-crypto.vercel.app/api/defi
+curl https://cryptocurrency.cv/api/defi
 
 # Search for specific topics
-curl "https://news-crypto.vercel.app/api/search?q=ethereum+ETF"
+curl "https://cryptocurrency.cv/api/search?q=ethereum+ETF"
 ```
 
 ### 3. Use an SDK
@@ -89,7 +89,7 @@ eventSource.addEventListener('breaking', (event) => {
 ### 5. Add AI Analysis
 
 ```bash
-curl -X POST https://news-crypto.vercel.app/api/ai \
+curl -X POST https://cryptocurrency.cv/api/ai \
   -H "Content-Type: application/json" \
   -d '{
     "action": "sentiment",
@@ -202,7 +202,7 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBit
 
 client.on('messageCreate', async (message) => {
   if (message.content === '!news') {
-    const res = await fetch('https://news-crypto.vercel.app/api/news?limit=5');
+    const res = await fetch('https://cryptocurrency.cv/api/news?limit=5');
     const { articles } = await res.json();
     
     const text = articles.map(a => `📰 **${a.title}**\n${a.link}`).join('\n\n');
@@ -225,7 +225,7 @@ const app = new App({
 });
 
 app.message('crypto news', async ({ message, say }) => {
-  const res = await fetch('https://news-crypto.vercel.app/api/news?limit=5');
+  const res = await fetch('https://cryptocurrency.cv/api/news?limit=5');
   const { articles } = await res.json();
   
   await say({
@@ -248,7 +248,7 @@ from telegram.ext import Application, CommandHandler
 import requests
 
 async def news(update: Update, context):
-    res = requests.get('https://news-crypto.vercel.app/api/news?limit=5')
+    res = requests.get('https://cryptocurrency.cv/api/news?limit=5')
     articles = res.json()['articles']
     
     text = '\n\n'.join([f"📰 *{a['title']}*\n{a['link']}" for a in articles])
@@ -264,7 +264,7 @@ app.run_polling()
 ```html
 <!-- Add to your HTML -->
 <div id="crypto-news-widget"></div>
-<script src="https://news-crypto.vercel.app/widget/ticker.js"></script>
+<script src="https://cryptocurrency.cv/widget/ticker.js"></script>
 <script>
   CryptoNewsWidget.init('#crypto-news-widget', {
     limit: 5,

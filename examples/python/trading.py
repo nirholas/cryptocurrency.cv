@@ -10,7 +10,7 @@ import requests
 import json
 from typing import Optional, List
 
-BASE_URL = "https://news-crypto.vercel.app"
+BASE_URL = "https://cryptocurrency.cv"
 
 
 # =============================================================================

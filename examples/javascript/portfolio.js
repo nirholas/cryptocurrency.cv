@@ -6,7 +6,7 @@
  * Note: These endpoints require authentication (API key).
  */
 
-const BASE_URL = 'https://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
 
 // =============================================================================
 // HELPER

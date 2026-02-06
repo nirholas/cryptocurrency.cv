@@ -39,7 +39,7 @@ News feed with search and sentiment display.
 ```tsx
 import React, { useState, useEffect } from 'react';
 
-const BASE_URL = 'https://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
 
 interface Article {
   title: string;
@@ -151,7 +151,7 @@ Live prices, charts, and Fear & Greed Index.
 ```tsx
 import React, { useState, useEffect } from 'react';
 
-const BASE_URL = 'https://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
 
 interface Coin {
   id: string;
@@ -278,7 +278,7 @@ Watchlist management with alerts.
 ```tsx
 import React, { useState, useEffect, useCallback } from 'react';
 
-const BASE_URL = 'https://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
 
 interface WatchlistItem {
   symbol: string;
@@ -431,7 +431,7 @@ Server-Sent Events for live updates.
 ```tsx
 import React, { useState, useEffect, useRef } from 'react';
 
-const BASE_URL = 'https://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
 
 interface StreamEvent {
   type: string;
@@ -559,7 +559,7 @@ Signals, orderbook, and arbitrage opportunities.
 ```tsx
 import React, { useState, useEffect } from 'react';
 
-const BASE_URL = 'https://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
 
 // Trading Signals
 export function TradingSignals() {

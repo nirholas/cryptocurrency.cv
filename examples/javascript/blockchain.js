@@ -5,7 +5,7 @@
  * On-chain data, DeFi TVL, NFTs, security, and more.
  */
 
-const BASE_URL = 'https://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
 
 // =============================================================================
 // ON-CHAIN DATA

@@ -20,10 +20,10 @@
  *
  * @example
  * // No auth needed if CRON_SECRET not set
- * curl "https://news-crypto.vercel.app/api/cron/archive"
+ * curl "https://cryptocurrency.cv/api/cron/archive"
  *
  * // With auth (if CRON_SECRET is set)
- * curl "https://news-crypto.vercel.app/api/cron/archive?secret=YOUR_SECRET"
+ * curl "https://cryptocurrency.cv/api/cron/archive?secret=YOUR_SECRET"
  */
 
 import { NextRequest, NextResponse } from 'next/server';

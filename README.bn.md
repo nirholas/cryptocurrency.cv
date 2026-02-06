@@ -21,7 +21,7 @@
 একটি API কল দিয়ে **200+ উৎস** থেকে রিয়েল-টাইম ক্রিপ্টো নিউজ পান।
 
 ```bash
-curl https://news-crypto.vercel.app/api/news
+curl https://cryptocurrency.cv/api/news
 ```
 
 ---
@@ -55,13 +55,13 @@ curl https://news-crypto.vercel.app/api/news
 
 ```bash
 # সাম্প্রতিক নিউজ পান
-curl "https://news-crypto.vercel.app/api/news?limit=10"
+curl "https://cryptocurrency.cv/api/news?limit=10"
 
 # Bitcoin সেন্টিমেন্ট পান
-curl "https://news-crypto.vercel.app/api/ai/sentiment?asset=BTC"
+curl "https://cryptocurrency.cv/api/ai/sentiment?asset=BTC"
 
 # আর্টিকেল অনুসন্ধান
-curl "https://news-crypto.vercel.app/api/search?q=ethereum%20upgrade"
+curl "https://cryptocurrency.cv/api/search?q=ethereum%20upgrade"
 ```
 
 ---

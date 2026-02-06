@@ -111,7 +111,7 @@ async function extractWithReadability(
   const response = await fetch(url, {
     headers: {
       'User-Agent':
-        'Mozilla/5.0 (compatible; FCN-Bot/1.0; +https://news-crypto.vercel.app)',
+        'Mozilla/5.0 (compatible; FCN-Bot/1.0; +https://cryptocurrency.cv)',
       Accept:
         'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
     },

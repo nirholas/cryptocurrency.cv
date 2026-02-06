@@ -27,14 +27,14 @@ Check your premium subscription status and available features.
     def get_premium_status():
         """Get premium subscription status."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/premium/status"
+            "https://cryptocurrency.cv/api/premium/status"
         )
         return response.json()
     
     def get_premium_features():
         """Get available premium features."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/premium/features"
+            "https://cryptocurrency.cv/api/premium/features"
         )
         return response.json()
     
@@ -89,14 +89,14 @@ Check your premium subscription status and available features.
     ```javascript
     async function getPremiumStatus() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/premium/status'
+            'https://cryptocurrency.cv/api/premium/status'
         );
         return response.json();
     }
     
     async function getPremiumFeatures() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/premium/features'
+            'https://cryptocurrency.cv/api/premium/features'
         );
         return response.json();
     }
@@ -134,13 +134,13 @@ Check your premium subscription status and available features.
 === "cURL"
     ```bash
     # Get premium status
-    curl "https://news-crypto.vercel.app/api/premium/status" | jq
+    curl "https://cryptocurrency.cv/api/premium/status" | jq
     
     # Get premium features
-    curl "https://news-crypto.vercel.app/api/premium/features" | jq
+    curl "https://cryptocurrency.cv/api/premium/features" | jq
     
     # Check if premium
-    curl "https://news-crypto.vercel.app/api/premium/status" | jq '.isPremium'
+    curl "https://cryptocurrency.cv/api/premium/status" | jq '.isPremium'
     ```
 
 ---
@@ -157,14 +157,14 @@ Monitor your API usage and rate limits.
     def get_api_usage():
         """Get API usage statistics."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/premium/usage"
+            "https://cryptocurrency.cv/api/premium/usage"
         )
         return response.json()
     
     def get_rate_limits():
         """Get rate limits and quotas."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/premium/limits"
+            "https://cryptocurrency.cv/api/premium/limits"
         )
         return response.json()
     
@@ -236,14 +236,14 @@ Monitor your API usage and rate limits.
     ```javascript
     async function getApiUsage() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/premium/usage'
+            'https://cryptocurrency.cv/api/premium/usage'
         );
         return response.json();
     }
     
     async function getRateLimits() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/premium/limits'
+            'https://cryptocurrency.cv/api/premium/limits'
         );
         return response.json();
     }
@@ -281,16 +281,16 @@ Monitor your API usage and rate limits.
 === "cURL"
     ```bash
     # Get API usage
-    curl "https://news-crypto.vercel.app/api/premium/usage" | jq
+    curl "https://cryptocurrency.cv/api/premium/usage" | jq
     
     # Get rate limits
-    curl "https://news-crypto.vercel.app/api/premium/limits" | jq
+    curl "https://cryptocurrency.cv/api/premium/limits" | jq
     
     # Get remaining requests
-    curl "https://news-crypto.vercel.app/api/premium/usage" | jq '.requests.remaining'
+    curl "https://cryptocurrency.cv/api/premium/usage" | jq '.requests.remaining'
     
     # Get usage by endpoint
-    curl "https://news-crypto.vercel.app/api/premium/usage" | jq '.byEndpoint[:5]'
+    curl "https://cryptocurrency.cv/api/premium/usage" | jq '.byEndpoint[:5]'
     ```
 
 ---
@@ -310,7 +310,7 @@ Access premium analytics and insights.
             query_params.update(params)
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/premium/analytics",
+            "https://cryptocurrency.cv/api/premium/analytics",
             params=query_params
         )
         return response.json()
@@ -400,7 +400,7 @@ Access premium analytics and insights.
     async function getAdvancedAnalytics(reportType, params = {}) {
         const queryParams = new URLSearchParams({ type: reportType, ...params });
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/premium/analytics?${queryParams}`
+            `https://cryptocurrency.cv/api/premium/analytics?${queryParams}`
         );
         return response.json();
     }
@@ -453,16 +453,16 @@ Access premium analytics and insights.
 === "cURL"
     ```bash
     # Get correlation analysis
-    curl "https://news-crypto.vercel.app/api/premium/analytics?type=correlations&assets=BTC,ETH,SOL&period=30d" | jq
+    curl "https://cryptocurrency.cv/api/premium/analytics?type=correlations&assets=BTC,ETH,SOL&period=30d" | jq
     
     # Get sentiment trends
-    curl "https://news-crypto.vercel.app/api/premium/analytics?type=sentiment-trends&assets=BTC&period=7d" | jq
+    curl "https://cryptocurrency.cv/api/premium/analytics?type=sentiment-trends&assets=BTC&period=7d" | jq
     
     # Get whale activity
-    curl "https://news-crypto.vercel.app/api/premium/analytics?type=whale-activity&minValue=1000000" | jq
+    curl "https://cryptocurrency.cv/api/premium/analytics?type=whale-activity&minValue=1000000" | jq
     
     # Get on-chain metrics
-    curl "https://news-crypto.vercel.app/api/premium/analytics?type=onchain-metrics&asset=BTC" | jq
+    curl "https://cryptocurrency.cv/api/premium/analytics?type=onchain-metrics&asset=BTC" | jq
     ```
 
 ---
@@ -479,7 +479,7 @@ Generate and retrieve custom reports.
     def create_report(report_config: dict):
         """Create a custom report."""
         response = requests.post(
-            "https://news-crypto.vercel.app/api/premium/reports",
+            "https://cryptocurrency.cv/api/premium/reports",
             json=report_config
         )
         return response.json()
@@ -487,14 +487,14 @@ Generate and retrieve custom reports.
     def get_report(report_id: str):
         """Get a generated report."""
         response = requests.get(
-            f"https://news-crypto.vercel.app/api/premium/reports/{report_id}"
+            f"https://cryptocurrency.cv/api/premium/reports/{report_id}"
         )
         return response.json()
     
     def list_reports():
         """List all reports."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/premium/reports"
+            "https://cryptocurrency.cv/api/premium/reports"
         )
         return response.json()
     
@@ -579,7 +579,7 @@ Generate and retrieve custom reports.
     ```javascript
     async function createReport(config) {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/premium/reports',
+            'https://cryptocurrency.cv/api/premium/reports',
             {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -591,14 +591,14 @@ Generate and retrieve custom reports.
     
     async function getReport(reportId) {
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/premium/reports/${reportId}`
+            `https://cryptocurrency.cv/api/premium/reports/${reportId}`
         );
         return response.json();
     }
     
     async function listReports() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/premium/reports'
+            'https://cryptocurrency.cv/api/premium/reports'
         );
         return response.json();
     }
@@ -644,7 +644,7 @@ Generate and retrieve custom reports.
 === "cURL"
     ```bash
     # Create a custom report
-    curl -X POST "https://news-crypto.vercel.app/api/premium/reports" \
+    curl -X POST "https://cryptocurrency.cv/api/premium/reports" \
       -H "Content-Type: application/json" \
       -d '{
         "name": "Weekly Analysis",
@@ -654,10 +654,10 @@ Generate and retrieve custom reports.
       }' | jq
     
     # Get a report
-    curl "https://news-crypto.vercel.app/api/premium/reports/REPORT_ID" | jq
+    curl "https://cryptocurrency.cv/api/premium/reports/REPORT_ID" | jq
     
     # List all reports
-    curl "https://news-crypto.vercel.app/api/premium/reports" | jq
+    curl "https://cryptocurrency.cv/api/premium/reports" | jq
     ```
 
 ---
@@ -673,7 +673,7 @@ Access priority processing for faster responses.
     def get_priority_status():
         """Check priority queue status."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/premium/priority"
+            "https://cryptocurrency.cv/api/premium/priority"
         )
         return response.json()
     
@@ -682,7 +682,7 @@ Access priority processing for faster responses.
         headers = {"X-Priority": "true"}
         
         response = requests.get(
-            f"https://news-crypto.vercel.app{endpoint}",
+            f"https://cryptocurrency.cv{endpoint}",
             params=params or {},
             headers=headers
         )
@@ -716,7 +716,7 @@ Access priority processing for faster responses.
     
     start = time.time()
     standard = requests.get(
-        "https://news-crypto.vercel.app/api/news",
+        "https://cryptocurrency.cv/api/news",
         params={"limit": 50}
     )
     standard_time = (time.time() - start) * 1000
@@ -743,7 +743,7 @@ Access priority processing for faster responses.
     ```javascript
     async function getPriorityStatus() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/premium/priority'
+            'https://cryptocurrency.cv/api/premium/priority'
         );
         return response.json();
     }
@@ -753,7 +753,7 @@ Access priority processing for faster responses.
         const start = performance.now();
         
         const response = await fetch(
-            `https://news-crypto.vercel.app${endpoint}?${queryParams}`,
+            `https://cryptocurrency.cv${endpoint}?${queryParams}`,
             { headers: { 'X-Priority': 'true' } }
         );
         
@@ -779,7 +779,7 @@ Access priority processing for faster responses.
     console.log("\n📊 Response Time Comparison:");
     
     const standardStart = performance.now();
-    await fetch('https://news-crypto.vercel.app/api/news?limit=50');
+    await fetch('https://cryptocurrency.cv/api/news?limit=50');
     const standardTime = performance.now() - standardStart;
     
     const priorityResult = await makePriorityRequest('/api/news', { limit: 50 });
@@ -791,13 +791,13 @@ Access priority processing for faster responses.
 === "cURL"
     ```bash
     # Check priority status
-    curl "https://news-crypto.vercel.app/api/premium/priority" | jq
+    curl "https://cryptocurrency.cv/api/premium/priority" | jq
     
     # Make priority request
-    curl -H "X-Priority: true" "https://news-crypto.vercel.app/api/news?limit=50" -w "\nTime: %{time_total}s\n"
+    curl -H "X-Priority: true" "https://cryptocurrency.cv/api/news?limit=50" -w "\nTime: %{time_total}s\n"
     
     # Compare with standard request
-    curl "https://news-crypto.vercel.app/api/news?limit=50" -w "\nTime: %{time_total}s\n"
+    curl "https://cryptocurrency.cv/api/news?limit=50" -w "\nTime: %{time_total}s\n"
     ```
 
 ---
@@ -815,7 +815,7 @@ from typing import Dict, Any
 class PremiumDashboard:
     """Premium features dashboard."""
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     def __init__(self):
         self.session = requests.Session()

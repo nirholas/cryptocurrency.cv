@@ -195,7 +195,7 @@ export default function AnalyticsPage() {
                 Developer Portal
               </Link>
               <Link
-                href="https://news-crypto.vercel.app/api/docs"
+                href="https://cryptocurrency.cv/api/docs"
                 target="_blank"
                 className="px-6 py-3 bg-white/20 text-white font-semibold rounded-lg hover:bg-white/30 transition-colors"
               >

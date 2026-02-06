@@ -472,7 +472,7 @@ None! The core API works without any configuration.
 |----------|-------------|---------|
 | `NODE_ENV` | Environment mode | `development` |
 | `PORT` | Server port | `3000` |
-| `NEXT_PUBLIC_BASE_URL` | Public app URL | `https://news-crypto.vercel.app` |
+| `NEXT_PUBLIC_BASE_URL` | Public app URL | `https://cryptocurrency.cv` |
 | `GOOGLE_CLOUD_API_KEY` | Translation API | - |
 
 ### Setting Up Vercel KV (Upstash Redis)

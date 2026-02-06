@@ -69,7 +69,7 @@ except ImportError:
 # CONFIGURATION
 # =============================================================================
 
-API_BASE = "https://news-crypto.vercel.app"
+API_BASE = "https://cryptocurrency.cv"
 
 RESEARCH_SYSTEM_PROMPT = """You are an expert cryptocurrency research assistant with access to real-time news from 130+ trusted sources.
 

@@ -95,7 +95,7 @@ actor CryptoNewsClient {
     private let session: URLSession
     private let decoder: JSONDecoder
     
-    init(apiKey: String? = nil, baseURL: String = "https://news-crypto.vercel.app") {
+    init(apiKey: String? = nil, baseURL: String = "https://cryptocurrency.cv") {
         self.baseURL = URL(string: baseURL)!
         
         let config = URLSessionConfiguration.default
@@ -242,7 +242,7 @@ class CryptoNewsStream: NSObject, URLSessionWebSocketDelegate {
     var onConnect: (() -> Void)?
     var onDisconnect: (() -> Void)?
     
-    init(baseURL: String = "wss://news-crypto.vercel.app") {
+    init(baseURL: String = "wss://cryptocurrency.cv") {
         self.baseURL = baseURL
         super.init()
     }

@@ -7,7 +7,7 @@
 
 import { NextResponse } from 'next/server';
 
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://news-crypto.vercel.app';
+const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://cryptocurrency.cv';
 
 export const runtime = 'edge';
 
@@ -26,7 +26,7 @@ export async function GET() {
       url: `${BASE_URL}/api/openapi.json`,
     },
     logo_url: `${BASE_URL}/icons/icon-512x512.png`,
-    contact_email: 'support@news-crypto.vercel.app',
+    contact_email: 'support@cryptocurrency.cv',
     legal_info_url: `${BASE_URL}/legal`,
     
     // Extended metadata for AI discovery

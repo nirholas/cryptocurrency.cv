@@ -49,12 +49,12 @@ from pydantic import BaseModel, Field
 
 class Tools:
     def __init__(self):
-        self.base_url = "https://news-crypto.vercel.app"
+        self.base_url = "https://cryptocurrency.cv"
         self.valves = self.Valves()
     
     class Valves(BaseModel):
         base_url: str = Field(
-            default="https://news-crypto.vercel.app",
+            default="https://cryptocurrency.cv",
             description="API base URL"
         )
         default_limit: int = Field(
@@ -403,7 +403,7 @@ from typing import Optional
 
 class Functions:
     def __init__(self):
-        self.base_url = "https://news-crypto.vercel.app"
+        self.base_url = "https://cryptocurrency.cv"
 
     async def get_crypto_data(
         self,
@@ -462,7 +462,7 @@ SYSTEM """
 You are a cryptocurrency news analyst with access to real-time market data.
 
 When users ask about crypto news or markets, use the Free Crypto News API:
-- Base URL: https://news-crypto.vercel.app
+- Base URL: https://cryptocurrency.cv
 - No API key required
 
 Key endpoints:
@@ -553,7 +553,7 @@ Would you like me to dive deeper into any of these topics?
 
 1. Test the endpoint:
 ```bash
-curl https://news-crypto.vercel.app/api/news?limit=5
+curl https://cryptocurrency.cv/api/news?limit=5
 ```
 
 2. Check network connectivity from container
@@ -573,4 +573,4 @@ curl https://news-crypto.vercel.app/api/news?limit=5
 - **OpenWebUI Docs:** https://docs.openwebui.com
 - **OpenWebUI GitHub:** https://github.com/open-webui/open-webui
 - **Ollama:** https://ollama.ai
-- **API Documentation:** https://news-crypto.vercel.app/docs/api
+- **API Documentation:** https://cryptocurrency.cv/docs/api

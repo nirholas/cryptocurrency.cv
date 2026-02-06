@@ -1042,7 +1042,7 @@ export function initializeOurDataset(): void {
     ],
     year: 2025,
     venue: 'GitHub',
-    url: 'https://news-crypto.vercel.app',
+    url: 'https://cryptocurrency.cv',
     abstract:
       'A comprehensive cryptocurrency news aggregation platform providing real-time news, market data, sentiment analysis, and research-ready datasets for academic and commercial use.',
     keywords: [

@@ -111,7 +111,7 @@ export interface CryptoNewsProps {
 // CONSTANTS
 // ═══════════════════════════════════════════════════════════════
 
-const DEFAULT_BASE_URL = 'https://news-crypto.vercel.app';
+const DEFAULT_BASE_URL = 'https://cryptocurrency.cv';
 
 const SOURCE_COLORS: Record<string, string> = {
   coindesk: '#1652f0',

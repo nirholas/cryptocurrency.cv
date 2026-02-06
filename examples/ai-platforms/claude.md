@@ -111,7 +111,7 @@ For Claude Pro users, you can create a project with crypto news context.
 You have access to the Free Crypto News API for real-time cryptocurrency data.
 
 ### API Base URL
-https://news-crypto.vercel.app
+https://cryptocurrency.cv
 
 ### Key Endpoints
 
@@ -171,7 +171,7 @@ client = anthropic.Anthropic(api_key="your-api-key")
 # Fetch crypto news
 def get_crypto_news(limit=10):
     response = requests.get(
-        f"https://news-crypto.vercel.app/api/news?limit={limit}"
+        f"https://cryptocurrency.cv/api/news?limit={limit}"
     )
     return response.json()
 
@@ -223,7 +223,7 @@ const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
 async function getCryptoNews(limit = 10) {
   const response = await fetch(
-    `https://news-crypto.vercel.app/api/news?limit=${limit}`
+    `https://cryptocurrency.cv/api/news?limit=${limit}`
   );
   return response.json();
 }
@@ -440,7 +440,7 @@ tail -f ~/Library/Logs/Claude/mcp*.log
 
 1. Test the API directly:
 ```bash
-curl https://news-crypto.vercel.app/api/news?limit=5
+curl https://cryptocurrency.cv/api/news?limit=5
 ```
 
 2. Check if MCP server starts correctly:

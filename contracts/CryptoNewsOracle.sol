@@ -22,7 +22,7 @@ contract CryptoNewsOracle is ChainlinkClient, ConfirmedOwner {
     // Chainlink config
     bytes32 private jobId;
     uint256 private fee;
-    string public oracleUrl = "https://news-crypto.vercel.app/api/oracle/chainlink?format=standard";
+    string public oracleUrl = "https://cryptocurrency.cv/api/oracle/chainlink?format=standard";
 
     // Events
     event SentimentUpdated(uint256 sentiment, uint256 fearGreed, uint256 timestamp);

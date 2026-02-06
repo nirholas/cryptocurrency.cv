@@ -35,11 +35,11 @@ function generateAtom(articles: any[], title: string, subtitle: string, feedUrl:
   <title>${escapeXml(title)}</title>
   <subtitle>${escapeXml(subtitle)}</subtitle>
   <link href="${escapeXml(feedUrl)}" rel="self" type="application/atom+xml"/>
-  <link href="https://news-crypto.vercel.app" rel="alternate" type="text/html"/>
-  <id>https://news-crypto.vercel.app/</id>
+  <link href="https://cryptocurrency.cv" rel="alternate" type="text/html"/>
+  <id>https://cryptocurrency.cv/</id>
   <updated>${updated}</updated>
   <generator uri="https://github.com/nirholas/free-crypto-news" version="1.0">Free Crypto News</generator>
-  <icon>https://news-crypto.vercel.app/icon.png</icon>
+  <icon>https://cryptocurrency.cv/icon.png</icon>
   ${entries}
 </feed>`;
 }
@@ -60,19 +60,19 @@ export async function GET(request: NextRequest) {
         data = await getDefiNews(limit);
         title = 'Free Crypto News - DeFi Feed';
         subtitle = 'DeFi news aggregated from top crypto sources';
-        feedUrl = 'https://news-crypto.vercel.app/api/atom?feed=defi';
+        feedUrl = 'https://cryptocurrency.cv/api/atom?feed=defi';
         break;
       case 'bitcoin':
         data = await getBitcoinNews(limit);
         title = 'Free Crypto News - Bitcoin Feed';
         subtitle = 'Bitcoin news aggregated from top crypto sources';
-        feedUrl = 'https://news-crypto.vercel.app/api/atom?feed=bitcoin';
+        feedUrl = 'https://cryptocurrency.cv/api/atom?feed=bitcoin';
         break;
       default:
         data = await getLatestNews(limit);
         title = 'Free Crypto News - All Sources';
         subtitle = 'Crypto news aggregated from 130+ top sources - 100% FREE';
-        feedUrl = 'https://news-crypto.vercel.app/api/atom';
+        feedUrl = 'https://cryptocurrency.cv/api/atom';
     }
     
     const atom = generateAtom(data.articles, title, subtitle, feedUrl);

@@ -1,7 +1,7 @@
 import { List, ActionPanel, Action, Icon, Color } from "@raycast/api";
 import { useFetch } from "@raycast/utils";
 
-const API_BASE = "https://news-crypto.vercel.app/api";
+const API_BASE = "https://cryptocurrency.cv/api";
 
 interface Topic {
   topic: string;
@@ -37,7 +37,7 @@ export default function TrendingTopics() {
             actions={
               <ActionPanel>
                 <Action.OpenInBrowser 
-                  url={`https://news-crypto.vercel.app/search?q=${encodeURIComponent(topic.topic)}`} 
+                  url={`https://cryptocurrency.cv/search?q=${encodeURIComponent(topic.topic)}`} 
                 />
                 <Action.CopyToClipboard title="Copy Topic" content={topic.topic} />
               </ActionPanel>

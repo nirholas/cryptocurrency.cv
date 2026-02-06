@@ -43,7 +43,7 @@ You are an expert cryptocurrency news analyst with access to real-time data from
 8. Monitor whale activity
 
 ## API Base URL:
-https://news-crypto.vercel.app
+https://cryptocurrency.cv
 
 ## How to Respond:
 - Always fetch fresh data when asked about current events
@@ -69,7 +69,7 @@ For "How is the market feeling?":
 ### Step 3: Add Actions (OpenAPI Schema)
 
 1. Click **"Create new action"**
-2. Import from URL: `https://news-crypto.vercel.app/chatgpt/openapi.yaml`
+2. Import from URL: `https://cryptocurrency.cv/chatgpt/openapi.yaml`
 
 Or paste this schema:
 
@@ -80,7 +80,7 @@ info:
   description: Real-time cryptocurrency news from 200+ sources
   version: 2.0.0
 servers:
-  - url: https://news-crypto.vercel.app
+  - url: https://cryptocurrency.cv
 paths:
   /api/news:
     get:
@@ -355,7 +355,7 @@ Always verify current prices before trading.
 
 ### "Action failed" Error
 
-1. Check if the API is accessible: `curl https://news-crypto.vercel.app/api/news`
+1. Check if the API is accessible: `curl https://cryptocurrency.cv/api/news`
 2. Ensure your OpenAPI schema is valid
 3. Try refreshing the GPT editor
 
@@ -409,7 +409,7 @@ You are a crypto research assistant. For every query:
 
 ## Links
 
-- **OpenAPI Schema:** https://news-crypto.vercel.app/chatgpt/openapi.yaml
-- **API Documentation:** https://news-crypto.vercel.app/docs/api
+- **OpenAPI Schema:** https://cryptocurrency.cv/chatgpt/openapi.yaml
+- **API Documentation:** https://cryptocurrency.cv/docs/api
 - **MCP Server:** https://github.com/nirholas/free-crypto-news/tree/main/mcp
-- **Live API:** https://news-crypto.vercel.app/api/news
+- **Live API:** https://cryptocurrency.cv/api/news

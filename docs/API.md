@@ -2,7 +2,7 @@
 
 Complete documentation for the Free Crypto News API. All endpoints are **100% free** with no API keys required.
 
-**Base URL:** `https://news-crypto.vercel.app`
+**Base URL:** `https://cryptocurrency.cv`
 
 ---
 
@@ -173,7 +173,7 @@ Fetch aggregated news from all 7 sources.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/news?limit=5&source=coindesk"
+curl "https://cryptocurrency.cv/api/news?limit=5&source=coindesk"
 ```
 
 **Response:**
@@ -256,19 +256,19 @@ Fetch news from international crypto news sources with optional translation to E
 **Example - Get Korean news:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/news/international?language=ko&limit=10"
+curl "https://cryptocurrency.cv/api/news/international?language=ko&limit=10"
 ```
 
 **Example - Get all Asian news with translation:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/news/international?region=asia&translate=true"
+curl "https://cryptocurrency.cv/api/news/international?region=asia&translate=true"
 ```
 
 **Example - Get source information:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/news/international?sources=true"
+curl "https://cryptocurrency.cv/api/news/international?sources=true"
 ```
 
 **Response:**
@@ -331,7 +331,7 @@ Extract full article content from a URL, including metadata.
 **Example:**
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/news/extract" \
+curl -X POST "https://cryptocurrency.cv/api/news/extract" \
   -H "Content-Type: application/json" \
   -d '{"url": "https://coindesk.com/article/..."}'
 ```
@@ -366,7 +366,7 @@ Bitcoin-specific news from all sources.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/bitcoin?limit=5"
+curl "https://cryptocurrency.cv/api/bitcoin?limit=5"
 ```
 
 ---
@@ -385,7 +385,7 @@ DeFi and decentralized finance news.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/defi?limit=10"
+curl "https://cryptocurrency.cv/api/defi?limit=10"
 ```
 
 ---
@@ -406,7 +406,7 @@ Latest breaking news (higher refresh rate).
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/breaking"
+curl "https://cryptocurrency.cv/api/breaking"
 ```
 
 ---
@@ -426,7 +426,7 @@ Search news by keywords.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/search?q=ethereum+etf&limit=20"
+curl "https://cryptocurrency.cv/api/search?q=ethereum+etf&limit=20"
 ```
 
 **Response includes:**
@@ -455,7 +455,7 @@ Trending topics extracted from recent news.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/trending"
+curl "https://cryptocurrency.cv/api/trending"
 ```
 
 **Response:**
@@ -503,7 +503,7 @@ AI-generated daily news digest.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/digest?period=24h&format=full"
+curl "https://cryptocurrency.cv/api/digest?period=24h&format=full"
 ```
 
 **Response:**
@@ -591,7 +591,7 @@ Summarize a specific article.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/summarize?url=https://coindesk.com/article/..."
+curl "https://cryptocurrency.cv/api/summarize?url=https://coindesk.com/article/..."
 ```
 
 ---
@@ -609,7 +609,7 @@ Ask questions about recent crypto news.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ask?q=What%20happened%20with%20Bitcoin%20today"
+curl "https://cryptocurrency.cv/api/ask?q=What%20happened%20with%20Bitcoin%20today"
 ```
 
 ---
@@ -631,7 +631,7 @@ Unified AI endpoint for advanced analysis.
 **Example:**
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/ai" \
+curl -X POST "https://cryptocurrency.cv/api/ai" \
   -H "Content-Type: application/json" \
   -d '{
     "action": "sentiment",
@@ -675,7 +675,7 @@ Generate a comprehensive daily crypto news brief.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ai/brief?date=2026-01-22&format=full"
+curl "https://cryptocurrency.cv/api/ai/brief?date=2026-01-22&format=full"
 ```
 
 **Response:**
@@ -722,7 +722,7 @@ Generate balanced bull vs bear perspectives on any article or topic.
 **Example:**
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/ai/debate" \
+curl -X POST "https://cryptocurrency.cv/api/ai/debate" \
   -H "Content-Type: application/json" \
   -d '{"topic": "Bitcoin reaching $200k in 2026"}'
 ```
@@ -776,7 +776,7 @@ Challenge any claim with structured counter-arguments.
 **Example:**
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/ai/counter" \
+curl -X POST "https://cryptocurrency.cv/api/ai/counter" \
   -H "Content-Type: application/json" \
   -d '{"claim": "Bitcoin will replace the US dollar by 2030"}'
 ```
@@ -829,7 +829,7 @@ Auto-clusters duplicate news articles and synthesizes them into comprehensive su
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ai/synthesize?limit=5"
+curl "https://cryptocurrency.cv/api/ai/synthesize?limit=5"
 ```
 
 **Response:**
@@ -876,7 +876,7 @@ AI-powered explanation for why a topic is trending with full context.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ai/explain?topic=Bitcoin&includePrice=true"
+curl "https://cryptocurrency.cv/api/ai/explain?topic=Bitcoin&includePrice=true"
 ```
 
 **Response:**
@@ -918,7 +918,7 @@ Scores news articles by relevance to your portfolio holdings.
 **Example:**
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/ai/portfolio-news" \
+curl -X POST "https://cryptocurrency.cv/api/ai/portfolio-news" \
   -H "Content-Type: application/json" \
   -d '{
     "holdings": [
@@ -970,7 +970,7 @@ Detects potential correlations between news articles and price movements.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ai/correlation"
+curl "https://cryptocurrency.cv/api/ai/correlation"
 ```
 
 **Response:**
@@ -1013,7 +1013,7 @@ Ultra-short AI-generated summary of top crypto stories. Perfect for voice assist
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ai/flash-briefing?stories=3"
+curl "https://cryptocurrency.cv/api/ai/flash-briefing?stories=3"
 ```
 
 **Response:**
@@ -1055,7 +1055,7 @@ Tracks crypto narratives through their lifecycle: emerging, growing, peak, decli
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ai/narratives"
+curl "https://cryptocurrency.cv/api/ai/narratives"
 ```
 
 **Response:**
@@ -1109,7 +1109,7 @@ Detects when Asian/European sources break news before Western sources. Identifie
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ai/cross-lingual"
+curl "https://cryptocurrency.cv/api/ai/cross-lingual"
 ```
 
 **Response:**
@@ -1173,10 +1173,10 @@ AI-powered scoring of news sources and clickbait detection.
 
 ```bash
 # Analyze specific source
-curl "https://news-crypto.vercel.app/api/ai/source-quality?source=CoinDesk"
+curl "https://cryptocurrency.cv/api/ai/source-quality?source=CoinDesk"
 
 # Detect clickbait
-curl "https://news-crypto.vercel.app/api/ai/source-quality?clickbait=true"
+curl "https://cryptocurrency.cv/api/ai/source-quality?clickbait=true"
 ```
 
 **Response (source analysis):**
@@ -1240,16 +1240,16 @@ Deep-dive research on any crypto topic with comprehensive analysis.
 
 ```bash
 # Full research report
-curl "https://news-crypto.vercel.app/api/ai/research?topic=Solana"
+curl "https://cryptocurrency.cv/api/ai/research?topic=Solana"
 
 # Quick take
-curl "https://news-crypto.vercel.app/api/ai/research?topic=DeFi&mode=quick"
+curl "https://cryptocurrency.cv/api/ai/research?topic=DeFi&mode=quick"
 
 # Compare assets
-curl "https://news-crypto.vercel.app/api/ai/research?compare=BTC,ETH"
+curl "https://cryptocurrency.cv/api/ai/research?compare=BTC,ETH"
 
 # Contrarian opportunities
-curl "https://news-crypto.vercel.app/api/ai/research?contrarian=true"
+curl "https://cryptocurrency.cv/api/ai/research?contrarian=true"
 ```
 
 **Response (full report):**
@@ -1370,7 +1370,7 @@ Create configurable alert rules with various conditions.
 **Create Alert Rule:**
 
 ```bash
-curl -X POST https://news-crypto.vercel.app/api/alerts \
+curl -X POST https://cryptocurrency.cv/api/alerts \
   -H "Content-Type: application/json" \
   -d '{
     "name": "BTC Above 100k",
@@ -1434,7 +1434,7 @@ List all alert rules or get user alerts.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/alerts"
+curl "https://cryptocurrency.cv/api/alerts"
 ```
 
 **Response:**
@@ -1461,7 +1461,7 @@ curl "https://news-crypto.vercel.app/api/alerts"
 Get a single alert rule.
 
 ```bash
-curl "https://news-crypto.vercel.app/api/alerts/alert_123"
+curl "https://cryptocurrency.cv/api/alerts/alert_123"
 ```
 
 ### PUT /api/alerts/[id]
@@ -1469,7 +1469,7 @@ curl "https://news-crypto.vercel.app/api/alerts/alert_123"
 Update an alert rule.
 
 ```bash
-curl -X PUT https://news-crypto.vercel.app/api/alerts/alert_123 \
+curl -X PUT https://cryptocurrency.cv/api/alerts/alert_123 \
   -H "Content-Type: application/json" \
   -d '{
     "name": "BTC Above 120k",
@@ -1486,7 +1486,7 @@ curl -X PUT https://news-crypto.vercel.app/api/alerts/alert_123 \
 Delete an alert rule.
 
 ```bash
-curl -X DELETE https://news-crypto.vercel.app/api/alerts/alert_123
+curl -X DELETE https://cryptocurrency.cv/api/alerts/alert_123
 ```
 
 ### POST /api/alerts/[id]?action=test
@@ -1494,7 +1494,7 @@ curl -X DELETE https://news-crypto.vercel.app/api/alerts/alert_123
 Test trigger an alert (for testing webhooks).
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/alerts/alert_123?action=test"
+curl -X POST "https://cryptocurrency.cv/api/alerts/alert_123?action=test"
 ```
 
 ---
@@ -1540,7 +1540,7 @@ Newsletter API information and verification endpoints.
 **Example - Verify subscription:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/newsletter?action=verify&token=xxx"
+curl "https://cryptocurrency.cv/api/newsletter?action=verify&token=xxx"
 ```
 
 ---
@@ -1593,7 +1593,7 @@ Track portfolio holdings and get relevant news.
 **Get portfolio value:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/portfolio?id=portfolio-123"
+curl "https://cryptocurrency.cv/api/portfolio?id=portfolio-123"
 ```
 
 **Response:**
@@ -1765,7 +1765,7 @@ List all available news sources.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/sources"
+curl "https://cryptocurrency.cv/api/sources"
 ```
 
 **Response:**
@@ -1862,13 +1862,13 @@ Query historical archived news articles.
 
 ```bash
 # Get articles from a specific date
-curl "https://news-crypto.vercel.app/api/archive?date=2026-01-15"
+curl "https://cryptocurrency.cv/api/archive?date=2026-01-15"
 
 # Search Bitcoin news from last week
-curl "https://news-crypto.vercel.app/api/archive?ticker=BTC&start=2026-01-17"
+curl "https://cryptocurrency.cv/api/archive?ticker=BTC&start=2026-01-17"
 
 # Get archive stats
-curl "https://news-crypto.vercel.app/api/archive?stats=true"
+curl "https://cryptocurrency.cv/api/archive?stats=true"
 ```
 
 ---
@@ -1880,7 +1880,7 @@ Check archive health and get setup instructions.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/archive/status"
+curl "https://cryptocurrency.cv/api/archive/status"
 ```
 
 **Response:**
@@ -1949,13 +1949,13 @@ Query the enriched archive with advanced filtering, sentiment analysis, and tick
 **Example - Get enriched articles:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/archive?ticker=BTC&sentiment=positive&limit=20"
+curl "https://cryptocurrency.cv/api/archive?ticker=BTC&sentiment=positive&limit=20"
 ```
 
 **Example - Get trending tickers:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/archive?trending=true&hours=24"
+curl "https://cryptocurrency.cv/api/archive?trending=true&hours=24"
 ```
 
 **Response (trending):**
@@ -1974,7 +1974,7 @@ curl "https://news-crypto.vercel.app/api/archive?trending=true&hours=24"
 **Example - Get archive stats:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/archive?stats=true"
+curl "https://cryptocurrency.cv/api/archive?stats=true"
 ```
 
 **Response (stats):**
@@ -2010,10 +2010,10 @@ If `CRON_SECRET` environment variable is set:
 
 ```bash
 # Zero-config mode (no auth)
-curl "https://news-crypto.vercel.app/api/cron/archive"
+curl "https://cryptocurrency.cv/api/cron/archive"
 
 # With authentication
-curl "https://news-crypto.vercel.app/api/cron/archive?secret=YOUR_SECRET"
+curl "https://cryptocurrency.cv/api/cron/archive?secret=YOUR_SECRET"
 ```
 
 **Response:**
@@ -2052,7 +2052,7 @@ Archive news with optional GitHub commit. Returns archived articles in response 
 **Example:**
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/archive/webhook"
+curl -X POST "https://cryptocurrency.cv/api/archive/webhook"
 ```
 
 **Response:**
@@ -2095,7 +2095,7 @@ Track how article headlines change over time.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/analytics/headlines?hours=24&changesOnly=true"
+curl "https://cryptocurrency.cv/api/analytics/headlines?hours=24&changesOnly=true"
 ```
 
 **Response:**
@@ -2155,7 +2155,7 @@ Get credibility scores for news sources based on accuracy, timeliness, consisten
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/analytics/credibility?sortBy=accuracy"
+curl "https://cryptocurrency.cv/api/analytics/credibility?sortBy=accuracy"
 ```
 
 **Response:**
@@ -2215,7 +2215,7 @@ Detect unusual patterns in news flow including volume spikes, coordinated publis
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/analytics/anomalies?hours=24&severity=high"
+curl "https://cryptocurrency.cv/api/analytics/anomalies?hours=24&severity=high"
 ```
 
 **Response:**
@@ -2304,7 +2304,7 @@ The Oracle - Natural language queries over all crypto intelligence.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/oracle?q=What%20are%20VCs%20investing%20in%20this%20month"
+curl "https://cryptocurrency.cv/api/oracle?q=What%20are%20VCs%20investing%20in%20this%20month"
 ```
 
 **Response:**
@@ -2337,7 +2337,7 @@ AI Market Intelligence Agent for autonomous analysis.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ai/agent?query=analyze%20bitcoin%20whale%20activity"
+curl "https://cryptocurrency.cv/api/ai/agent?query=analyze%20bitcoin%20whale%20activity"
 ```
 
 ---
@@ -2370,10 +2370,10 @@ Monitor Discord and Telegram channels for crypto sentiment.
 
 ```bash
 # Get monitored sentiment
-curl "https://news-crypto.vercel.app/api/social/monitor?platform=discord"
+curl "https://cryptocurrency.cv/api/social/monitor?platform=discord"
 
 # Ingest message via webhook
-curl -X POST "https://news-crypto.vercel.app/api/social/monitor" \
+curl -X POST "https://cryptocurrency.cv/api/social/monitor" \
   -H "Content-Type: application/json" \
   -d '{"platform": "discord", "channel": "alpha", "content": "BTC looking strong"}'
 ```
@@ -2411,7 +2411,7 @@ Content-addressable storage using IPFS-style hashing.
 **POST (store content):**
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/storage/cas" \
+curl -X POST "https://cryptocurrency.cv/api/storage/cas" \
   -H "Content-Type: application/json" \
   -d '{"content": "Article content...", "metadata": {"source": "coindesk"}}'
 ```
@@ -2457,7 +2457,7 @@ List export jobs or get schemas.
 **Example - List jobs:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/exports"
+curl "https://cryptocurrency.cv/api/exports"
 ```
 
 **Response:**
@@ -2480,7 +2480,7 @@ curl "https://news-crypto.vercel.app/api/exports"
 **Example - Get schemas:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/exports?schema=true"
+curl "https://cryptocurrency.cv/api/exports?schema=true"
 ```
 
 ---
@@ -2498,7 +2498,7 @@ Get export job status or download result.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/exports/export_abc123"
+curl "https://cryptocurrency.cv/api/exports/export_abc123"
 ```
 
 **Response:**
@@ -2539,7 +2539,7 @@ List and manage export jobs.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/export/jobs?status=completed"
+curl "https://cryptocurrency.cv/api/export/jobs?status=completed"
 ```
 
 **Response:**
@@ -2588,7 +2588,7 @@ Backtest trading strategies using historical news data.
 **Example:**
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/research/backtest" \
+curl -X POST "https://cryptocurrency.cv/api/research/backtest" \
   -H "Content-Type: application/json" \
   -d '{
     "strategy": "sentiment_momentum",
@@ -2613,7 +2613,7 @@ Academic access program for researchers.
 **POST (register):**
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/academic" \
+curl -X POST "https://cryptocurrency.cv/api/academic" \
   -H "Content-Type: application/json" \
   -d '{
     "name": "Dr. Jane Smith",
@@ -2653,7 +2653,7 @@ Prediction tracking with accuracy scoring.
 **POST (submit prediction):**
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/predictions" \
+curl -X POST "https://cryptocurrency.cv/api/predictions" \
   -H "Content-Type: application/json" \
   -d '{
     "asset": "BTC",
@@ -2682,7 +2682,7 @@ RSS 2.0 feed output.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/rss?feed=bitcoin"
+curl "https://cryptocurrency.cv/api/rss?feed=bitcoin"
 ```
 
 Returns XML RSS feed.
@@ -2709,7 +2709,7 @@ OPML export of all source feeds.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/opml" > crypto-feeds.opml
+curl "https://cryptocurrency.cv/api/opml" > crypto-feeds.opml
 ```
 
 Import this into any RSS reader to subscribe to all sources.
@@ -2803,7 +2803,7 @@ Clear all caches (news, AI, and translation).
 
 Visual system status dashboard showing real-time health of all services.
 
-**URL:** `https://news-crypto.vercel.app/status`
+**URL:** `https://cryptocurrency.cv/status`
 
 This is a **UI page** (not a JSON API) that displays:
 
@@ -2841,7 +2841,7 @@ Get all tags with categories for filtering news.
 **Example - Get all tags:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/tags"
+curl "https://cryptocurrency.cv/api/tags"
 ```
 
 **Response:**
@@ -2873,7 +2873,7 @@ curl "https://news-crypto.vercel.app/api/tags"
 **Example - Get single tag:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/tags?slug=bitcoin"
+curl "https://cryptocurrency.cv/api/tags?slug=bitcoin"
 ```
 
 **Response:**
@@ -2902,7 +2902,7 @@ Get detailed tag information with matching articles.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/tags/bitcoin"
+curl "https://cryptocurrency.cv/api/tags/bitcoin"
 ```
 
 **Response:**
@@ -2960,7 +2960,7 @@ Unified gateway endpoint for calling multiple API functions. Useful for MCP inte
 **Example:**
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/gateway" \
+curl -X POST "https://cryptocurrency.cv/api/gateway" \
   -H "Content-Type: application/json" \
   -d '{
     "apiName": "getLatestNews",
@@ -3150,7 +3150,7 @@ Get article view counts for popularity metrics.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/views?limit=10&sort=views"
+curl "https://cryptocurrency.cv/api/views?limit=10&sort=views"
 ```
 
 **Response:**
@@ -3213,7 +3213,7 @@ Scan for cross-exchange arbitrage opportunities.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/arbitrage?pairs=BTC,ETH&minSpread=1"
+curl "https://cryptocurrency.cv/api/arbitrage?pairs=BTC,ETH&minSpread=1"
 ```
 
 **Response:**
@@ -3507,7 +3507,7 @@ Detect AI-generated content using statistical and linguistic analysis. Works ent
 **Single Text Example:**
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/detect/ai-content" \
+curl -X POST "https://cryptocurrency.cv/api/detect/ai-content" \
   -H "Content-Type: application/json" \
   -d '{"text": "In today'\''s fast-paced world of cryptocurrency, it'\''s important to note that markets are constantly evolving..."}'
 ```
@@ -3515,7 +3515,7 @@ curl -X POST "https://news-crypto.vercel.app/api/detect/ai-content" \
 **Batch Analysis Example:**
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/detect/ai-content" \
+curl -X POST "https://cryptocurrency.cv/api/detect/ai-content" \
   -H "Content-Type: application/json" \
   -d '{"texts": ["First article content...", "Second article content..."]}'
 ```
@@ -3608,13 +3608,13 @@ AI Market Intelligence Agent providing real-time market analysis with signal agg
 
 ```bash
 # Full market intelligence
-curl "https://news-crypto.vercel.app/api/ai/agent"
+curl "https://cryptocurrency.cv/api/ai/agent"
 
 # Summary only
-curl "https://news-crypto.vercel.app/api/ai/agent?format=summary"
+curl "https://cryptocurrency.cv/api/ai/agent?format=summary"
 
 # Active signals
-curl "https://news-crypto.vercel.app/api/ai/agent?format=signals"
+curl "https://cryptocurrency.cv/api/ai/agent?format=signals"
 ```
 
 **Response (Full):**
@@ -3704,7 +3704,7 @@ Query the AI Market Agent with natural language.
 **Example:**
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/ai/agent" \
+curl -X POST "https://cryptocurrency.cv/api/ai/agent" \
   -H "Content-Type: application/json" \
   -d '{
     "question": "What is driving Bitcoin price action today?",
@@ -4070,7 +4070,7 @@ Detect unusual patterns in news flow including volume spikes, coordinated publis
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/analytics/anomalies?hours=12&severity=high"
+curl "https://cryptocurrency.cv/api/analytics/anomalies?hours=12&severity=high"
 ```
 
 **Response:**
@@ -4135,7 +4135,7 @@ Track how article headlines change over time.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/analytics/headlines?changesOnly=true"
+curl "https://cryptocurrency.cv/api/analytics/headlines?changesOnly=true"
 ```
 
 **Response:**
@@ -4187,13 +4187,13 @@ Perform causal analysis between news events and market movements.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/analytics/causality?asset=BTC&limit=10"
+curl "https://cryptocurrency.cv/api/analytics/causality?asset=BTC&limit=10"
 ```
 
 **POST Request (Perform Analysis):**
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/analytics/causality" \
+curl -X POST "https://cryptocurrency.cv/api/analytics/causality" \
   -H "Content-Type: application/json" \
   -d '{
     "action": "analyze",
@@ -4264,7 +4264,7 @@ Get credibility scores for news sources.
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/analytics/credibility?sortBy=accuracy"
+curl "https://cryptocurrency.cv/api/analytics/credibility?sortBy=accuracy"
 ```
 
 **Response:**
@@ -4316,16 +4316,16 @@ Track and score user predictions with leaderboards.
 
 ```bash
 # Get leaderboard
-curl "https://news-crypto.vercel.app/api/predictions?action=leaderboard"
+curl "https://cryptocurrency.cv/api/predictions?action=leaderboard"
 
 # Get user predictions
-curl "https://news-crypto.vercel.app/api/predictions?userId=user_123"
+curl "https://cryptocurrency.cv/api/predictions?userId=user_123"
 ```
 
 **POST Request (Create Prediction):**
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/predictions" \
+curl -X POST "https://cryptocurrency.cv/api/predictions" \
   -H "Content-Type: application/json" \
   -d '{
     "userId": "user_123",
@@ -4374,10 +4374,10 @@ Track influencer prediction reliability and accuracy.
 
 ```bash
 # Get top reliable influencers
-curl "https://news-crypto.vercel.app/api/influencers?sortBy=accuracy&minCalls=10"
+curl "https://cryptocurrency.cv/api/influencers?sortBy=accuracy&minCalls=10"
 
 # Get overall stats
-curl "https://news-crypto.vercel.app/api/influencers?view=stats"
+curl "https://cryptocurrency.cv/api/influencers?view=stats"
 ```
 
 **Response:**
@@ -4524,7 +4524,7 @@ Include your API key in the header:
 
 ```bash
 curl -H "Authorization: Bearer YOUR_API_KEY" \
-  "https://news-crypto.vercel.app/api/premium/..."
+  "https://cryptocurrency.cv/api/premium/..."
 ```
 
 ---
@@ -4873,7 +4873,7 @@ The `lang` parameter supports 18 languages:
 **Example:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/news?lang=ja-JP"
+curl "https://cryptocurrency.cv/api/news?lang=ja-JP"
 ```
 
 ---

@@ -21,7 +21,7 @@
 Dobijte crypto vijesti u stvarnom vremenu iz **200+ izvora** jednim API pozivom.
 
 ```bash
-curl https://news-crypto.vercel.app/api/news
+curl https://cryptocurrency.cv/api/news
 ```
 
 ---
@@ -55,13 +55,13 @@ Dobijte crypto vijesti iz **75 međunarodnih izvora** na 18 jezika — s automat
 
 ```bash
 # Dohvati najnovije vijesti
-curl "https://news-crypto.vercel.app/api/news?limit=10"
+curl "https://cryptocurrency.cv/api/news?limit=10"
 
 # Dohvati Bitcoin sentiment
-curl "https://news-crypto.vercel.app/api/ai/sentiment?asset=BTC"
+curl "https://cryptocurrency.cv/api/ai/sentiment?asset=BTC"
 
 # Pretraži članke
-curl "https://news-crypto.vercel.app/api/search?q=ethereum%20upgrade"
+curl "https://cryptocurrency.cv/api/search?q=ethereum%20upgrade"
 ```
 
 ---

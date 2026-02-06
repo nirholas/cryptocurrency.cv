@@ -66,10 +66,10 @@ No API keys, no sign-up, no rate limits. Just make requests and get data.
 
     ```bash
     # Get latest news
-    curl https://news-crypto.vercel.app/api/news
+    curl https://cryptocurrency.cv/api/news
     
     # Get AI summary
-    curl https://news-crypto.vercel.app/api/digest
+    curl https://cryptocurrency.cv/api/digest
     ```
 
 === "Python"
@@ -77,7 +77,7 @@ No API keys, no sign-up, no rate limits. Just make requests and get data.
     ```python
     import requests
     
-    news = requests.get("https://news-crypto.vercel.app/api/news").json()
+    news = requests.get("https://cryptocurrency.cv/api/news").json()
     
     for article in news["articles"][:5]:
         print(f"📰 {article['title']}")
@@ -86,7 +86,7 @@ No API keys, no sign-up, no rate limits. Just make requests and get data.
 === "JavaScript"
 
     ```javascript
-    const response = await fetch('https://news-crypto.vercel.app/api/news');
+    const response = await fetch('https://cryptocurrency.cv/api/news');
     const { articles } = await response.json();
     
     articles.slice(0, 5).forEach(article => {

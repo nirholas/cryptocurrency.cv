@@ -195,7 +195,7 @@ crypto-news --json
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `FCN_BASE_URL` | API base URL | `https://news-crypto.vercel.app` |
+| `FCN_BASE_URL` | API base URL | `https://cryptocurrency.cv` |
 | `FCN_API_KEY` | API key (optional) | |
 | `NO_COLOR` | Disable colors | |
 
@@ -287,7 +287,7 @@ jobs:
 1. Check internet connection
 2. Verify API is accessible:
    ```bash
-   curl https://news-crypto.vercel.app/api/health
+   curl https://cryptocurrency.cv/api/health
    ```
 3. Try with `--json` flag to see raw response
 

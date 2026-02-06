@@ -391,7 +391,7 @@ News in 17 non-English languages:
 ### List All Sources
 
 ```bash
-curl https://news-crypto.vercel.app/api/sources
+curl https://cryptocurrency.cv/api/sources
 ```
 
 Response:
@@ -413,23 +413,23 @@ Response:
 ### Filter by Category
 
 ```bash
-curl https://news-crypto.vercel.app/api/news?source=coindesk,theblock
+curl https://cryptocurrency.cv/api/news?source=coindesk,theblock
 ```
 
 ### Filter by Category
 
 ```bash
-curl https://news-crypto.vercel.app/api/news?category=defi
+curl https://cryptocurrency.cv/api/news?category=defi
 ```
 
 ### International News
 
 ```bash
 # Get news in specific language
-curl https://news-crypto.vercel.app/api/news/international?lang=es
+curl https://cryptocurrency.cv/api/news/international?lang=es
 
 # Get all international news
-curl https://news-crypto.vercel.app/api/news/international
+curl https://cryptocurrency.cv/api/news/international
 ```
 
 ---

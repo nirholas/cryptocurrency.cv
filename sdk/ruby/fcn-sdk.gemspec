@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.metadata = {
     'bug_tracker_uri'   => 'https://github.com/WilliamAGH/free-crypto-news/issues',
     'changelog_uri'     => 'https://github.com/WilliamAGH/free-crypto-news/blob/main/CHANGELOG.md',
-    'documentation_uri' => 'https://news-crypto.vercel.app/docs',
+    'documentation_uri' => 'https://cryptocurrency.cv/docs',
     'homepage_uri'      => spec.homepage,
     'source_code_uri'   => 'https://github.com/WilliamAGH/free-crypto-news/tree/main/sdk/ruby',
     'rubygems_mfa_required' => 'true'

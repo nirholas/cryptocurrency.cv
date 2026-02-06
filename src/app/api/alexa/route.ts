@@ -9,7 +9,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 
-const API_BASE = process.env.NEXT_PUBLIC_BASE_URL || 'https://news-crypto.vercel.app';
+const API_BASE = process.env.NEXT_PUBLIC_BASE_URL || 'https://cryptocurrency.cv';
 
 interface AlexaRequest {
   version: string;
@@ -381,6 +381,6 @@ export async function GET() {
       'Alexa, ask Crypto News what is the Fear and Greed Index',
       'Alexa, ask Crypto News for the price of Ethereum',
     ],
-    endpoint: 'https://news-crypto.vercel.app/api/alexa',
+    endpoint: 'https://cryptocurrency.cv/api/alexa',
   });
 }

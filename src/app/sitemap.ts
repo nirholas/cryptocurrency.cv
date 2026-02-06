@@ -9,7 +9,7 @@ import { MetadataRoute } from 'next';
 import { getAllSlugs, CATEGORIES } from '@/lib/blog';
 import { getAllTags } from '@/lib/tags';
 
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://news-crypto.vercel.app';
+const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://cryptocurrency.cv';
 
 // Supported locales
 const locales = ['en', 'es', 'fr', 'de', 'ja', 'ko', 'zh-CN', 'zh-TW', 'pt', 'ru', 'ar', 'it', 'nl', 'pl', 'tr', 'id', 'th', 'vi'];

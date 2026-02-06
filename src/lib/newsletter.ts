@@ -140,7 +140,7 @@ export async function subscribe(
  * Send verification email using configured provider
  */
 async function sendVerificationEmail(subscriber: Subscriber, token: string): Promise<void> {
-  const verifyUrl = `${process.env.NEXT_PUBLIC_BASE_URL || 'https://news-crypto.vercel.app'}/api/newsletter?action=verify&token=${token}`;
+  const verifyUrl = `${process.env.NEXT_PUBLIC_BASE_URL || 'https://cryptocurrency.cv'}/api/newsletter?action=verify&token=${token}`;
   
   const html = `
 <!DOCTYPE html>
@@ -212,7 +212,7 @@ async function sendEmail(email: DigestEmail): Promise<boolean> {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          from: process.env.EMAIL_FROM || 'noreply@news-crypto.vercel.app',
+          from: process.env.EMAIL_FROM || 'noreply@cryptocurrency.cv',
           to: email.to,
           subject: email.subject,
           html: email.html,
@@ -236,7 +236,7 @@ async function sendEmail(email: DigestEmail): Promise<boolean> {
         },
         body: JSON.stringify({
           personalizations: [{ to: [{ email: email.to }] }],
-          from: { email: process.env.EMAIL_FROM || 'noreply@news-crypto.vercel.app' },
+          from: { email: process.env.EMAIL_FROM || 'noreply@cryptocurrency.cv' },
           subject: email.subject,
           content: [
             { type: 'text/plain', value: email.text },
@@ -260,7 +260,7 @@ async function sendEmail(email: DigestEmail): Promise<boolean> {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          From: process.env.EMAIL_FROM || 'noreply@news-crypto.vercel.app',
+          From: process.env.EMAIL_FROM || 'noreply@cryptocurrency.cv',
           To: email.to,
           Subject: email.subject,
           HtmlBody: email.html,
@@ -403,12 +403,12 @@ export function generateDigestHtml(
           You're receiving this because you subscribed to Free Crypto News.
         </p>
         <p style="margin: 8px 0 0;">
-          <a href="https://news-crypto.vercel.app/unsubscribe?token=${subscriber.unsubscribeToken}" 
+          <a href="https://cryptocurrency.cv/unsubscribe?token=${subscriber.unsubscribeToken}" 
              style="color: #999; font-size: 12px;">
             Unsubscribe
           </a>
           •
-          <a href="https://news-crypto.vercel.app/preferences?token=${subscriber.unsubscribeToken}" 
+          <a href="https://cryptocurrency.cv/preferences?token=${subscriber.unsubscribeToken}" 
              style="color: #999; font-size: 12px;">
             Update Preferences
           </a>
@@ -439,8 +439,8 @@ Your ${subscriber.frequency} crypto news summary
 ${articlesList}
 
 ---
-Unsubscribe: https://news-crypto.vercel.app/unsubscribe?token=${subscriber.unsubscribeToken}
-Update Preferences: https://news-crypto.vercel.app/preferences?token=${subscriber.unsubscribeToken}
+Unsubscribe: https://cryptocurrency.cv/unsubscribe?token=${subscriber.unsubscribeToken}
+Update Preferences: https://cryptocurrency.cv/preferences?token=${subscriber.unsubscribeToken}
   `.trim();
 }
 
@@ -462,7 +462,7 @@ export async function sendViaResend(email: DigestEmail): Promise<boolean> {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'Crypto News <digest@news-crypto.vercel.app>',
+        from: 'Crypto News <digest@cryptocurrency.cv>',
         to: email.to,
         subject: email.subject,
         html: email.html,
@@ -496,7 +496,7 @@ export async function sendViaSendGrid(email: DigestEmail): Promise<boolean> {
       },
       body: JSON.stringify({
         personalizations: [{ to: [{ email: email.to }] }],
-        from: { email: 'digest@news-crypto.vercel.app', name: 'Crypto News' },
+        from: { email: 'digest@cryptocurrency.cv', name: 'Crypto News' },
         subject: email.subject,
         content: [
           { type: 'text/plain', value: email.text },

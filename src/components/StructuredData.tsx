@@ -44,10 +44,10 @@ export function ArticleStructuredData({ article, url }: ArticleStructuredDataPro
     publisher: {
       '@type': 'Organization',
       name: 'Free Crypto News',
-      url: 'https://news-crypto.vercel.app',
+      url: 'https://cryptocurrency.cv',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://news-crypto.vercel.app/icons/icon-512x512.png',
+        url: 'https://cryptocurrency.cv/icons/icon-512x512.png',
         width: 512,
         height: 512,
       },
@@ -111,7 +111,7 @@ export function BreadcrumbStructuredData({ items }: BreadcrumbStructuredDataProp
 export function WebsiteStructuredData({ 
   name = 'Free Crypto News',
   description = '100% free crypto news API. No API keys. No rate limits. Real-time cryptocurrency news aggregation.',
-  url = 'https://news-crypto.vercel.app'
+  url = 'https://cryptocurrency.cv'
 }: WebsiteStructuredDataProps) {
   const structuredData = {
     '@context': 'https://schema.org',
@@ -154,8 +154,8 @@ export function OrganizationStructuredData() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Free Crypto News',
-    url: 'https://news-crypto.vercel.app',
-    logo: 'https://news-crypto.vercel.app/icons/icon-512x512.png',
+    url: 'https://cryptocurrency.cv',
+    logo: 'https://cryptocurrency.cv/icons/icon-512x512.png',
     description: '100% free crypto news API aggregating news from CoinDesk, The Block, Decrypt, and more.',
     sameAs: [
       'https://github.com/nirholas/free-crypto-news',
@@ -247,7 +247,7 @@ export function APIStructuredData() {
     applicationCategory: 'DeveloperApplication',
     operatingSystem: 'All',
     description: '100% free crypto news API. No API keys required. No rate limits. Real-time cryptocurrency news aggregation from 200+ sources.',
-    url: 'https://news-crypto.vercel.app/developers',
+    url: 'https://cryptocurrency.cv/developers',
     offers: {
       '@type': 'Offer',
       price: '0',
@@ -263,7 +263,7 @@ export function APIStructuredData() {
     author: {
       '@type': 'Organization',
       name: 'Free Crypto News',
-      url: 'https://news-crypto.vercel.app',
+      url: 'https://cryptocurrency.cv',
     },
   };
 

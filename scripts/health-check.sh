@@ -19,7 +19,7 @@ BLUE='\033[0;34m'
 NC='\033[0m'
 
 # Default URL
-BASE_URL="https://news-crypto.vercel.app"
+BASE_URL="https://cryptocurrency.cv"
 TIMEOUT=10
 VERBOSE=false
 FAILED=0

@@ -22,7 +22,7 @@ Dynamic sitemap generation supporting:
 ```typescript
 // Example sitemap entry
 {
-  url: 'https://news-crypto.vercel.app/en/markets',
+  url: 'https://cryptocurrency.cv/en/markets',
   lastModified: new Date(),
   changeFrequency: 'hourly',
   priority: 0.9,
@@ -296,13 +296,13 @@ Already configured in layout:
 
 ```bash
 # Validate structured data
-curl https://news-crypto.vercel.app/en | grep -o '<script type="application/ld+json">[^<]*'
+curl https://cryptocurrency.cv/en | grep -o '<script type="application/ld+json">[^<]*'
 
 # Check sitemap
-curl https://news-crypto.vercel.app/sitemap.xml
+curl https://cryptocurrency.cv/sitemap.xml
 
 # Check robots.txt
-curl https://news-crypto.vercel.app/robots.txt
+curl https://cryptocurrency.cv/robots.txt
 ```
 
 ---

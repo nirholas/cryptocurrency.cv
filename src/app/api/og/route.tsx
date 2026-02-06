@@ -121,7 +121,7 @@ export async function GET(request: NextRequest) {
           {/* Footer */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <span style={{ color: '#64748b', fontSize: '20px' }}>
-              news-crypto.vercel.app
+              cryptocurrency.cv
             </span>
             <div style={{ display: 'flex', gap: '8px' }}>
               <span style={{ color: '#22c55e', fontSize: '18px' }}>● LIVE</span>

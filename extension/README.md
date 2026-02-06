@@ -51,7 +51,7 @@ Click the gear icon or right-click the extension → Options:
 ## Privacy
 
 This extension:
-- ✅ Only fetches from `news-crypto.vercel.app`
+- ✅ Only fetches from `cryptocurrency.cv`
 - ✅ Stores cache locally in your browser
 - ✅ Does not track you
 - ✅ Does not collect any personal data

@@ -5,7 +5,7 @@
 
 Free Crypto News API 的完整文档。所有端点都是 **100% 免费** 的，无需 API 密钥。
 
-**基础 URL：** `https://news-crypto.vercel.app`
+**基础 URL：** `https://cryptocurrency.cv`
 
 ---
 
@@ -167,7 +167,7 @@ Free Crypto News API 的完整文档。所有端点都是 **100% 免费** 的，
 **示例：**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/news?limit=5&source=coindesk"
+curl "https://cryptocurrency.cv/api/news?limit=5&source=coindesk"
 ```
 
 **响应：**
@@ -250,19 +250,19 @@ curl "https://news-crypto.vercel.app/api/news?limit=5&source=coindesk"
 **示例 - 获取韩语新闻：**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/news/international?language=ko&limit=10"
+curl "https://cryptocurrency.cv/api/news/international?language=ko&limit=10"
 ```
 
 **示例 - 获取所有亚洲新闻并翻译：**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/news/international?region=asia&translate=true"
+curl "https://cryptocurrency.cv/api/news/international?region=asia&translate=true"
 ```
 
 **示例 - 获取来源信息：**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/news/international?sources=true"
+curl "https://cryptocurrency.cv/api/news/international?sources=true"
 ```
 
 **响应：**
@@ -325,7 +325,7 @@ curl "https://news-crypto.vercel.app/api/news/international?sources=true"
 **示例：**
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/news/extract" \
+curl -X POST "https://cryptocurrency.cv/api/news/extract" \
   -H "Content-Type: application/json" \
   -d '{"url": "https://coindesk.com/article/..."}'
 ```
@@ -360,7 +360,7 @@ curl -X POST "https://news-crypto.vercel.app/api/news/extract" \
 **示例：**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/bitcoin?limit=5"
+curl "https://cryptocurrency.cv/api/bitcoin?limit=5"
 ```
 
 ---
@@ -379,7 +379,7 @@ curl "https://news-crypto.vercel.app/api/bitcoin?limit=5"
 **示例：**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/defi?limit=10"
+curl "https://cryptocurrency.cv/api/defi?limit=10"
 ```
 
 ---
@@ -400,7 +400,7 @@ curl "https://news-crypto.vercel.app/api/defi?limit=10"
 **示例：**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/breaking"
+curl "https://cryptocurrency.cv/api/breaking"
 ```
 
 ---
@@ -420,7 +420,7 @@ curl "https://news-crypto.vercel.app/api/breaking"
 **示例：**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/search?q=ethereum+etf&limit=20"
+curl "https://cryptocurrency.cv/api/search?q=ethereum+etf&limit=20"
 ```
 
 **响应包括：**
@@ -449,7 +449,7 @@ curl "https://news-crypto.vercel.app/api/search?q=ethereum+etf&limit=20"
 **示例：**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/trending"
+curl "https://cryptocurrency.cv/api/trending"
 ```
 
 **响应：**
@@ -497,7 +497,7 @@ AI 生成的每日新闻摘要。
 **示例：**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/digest?period=24h&format=full"
+curl "https://cryptocurrency.cv/api/digest?period=24h&format=full"
 ```
 
 **响应：**
@@ -507,7 +507,7 @@ undefined
 测试触发警报（用于测试Webhooks）。
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/alerts/alert_123?action=test"
+curl -X POST "https://cryptocurrency.cv/api/alerts/alert_123?action=test"
 ```
 
 ---
@@ -553,7 +553,7 @@ curl -X POST "https://news-crypto.vercel.app/api/alerts/alert_123?action=test"
 **示例 - 验证订阅：**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/newsletter?action=verify&token=xxx"
+curl "https://cryptocurrency.cv/api/newsletter?action=verify&token=xxx"
 ```
 
 ---
@@ -606,7 +606,7 @@ curl "https://news-crypto.vercel.app/api/newsletter?action=verify&token=xxx"
 **获取投资组合价值：**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/portfolio?id=portfolio-123"
+curl "https://cryptocurrency.cv/api/portfolio?id=portfolio-123"
 ```
 
 **响应：**
@@ -778,7 +778,7 @@ Authorization: Bearer <ADMIN_TOKEN>
 **示例：**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/sources"
+curl "https://cryptocurrency.cv/api/sources"
 ```
 
 **响应：**
@@ -875,13 +875,13 @@ API使用统计和详细指标。
 
 ```bash
 # 获取特定日期的文章
-curl "https://news-crypto.vercel.app/api/archive?date=2026-01-15"
+curl "https://cryptocurrency.cv/api/archive?date=2026-01-15"
 
 # 搜索比特币新闻，时间范围为上周
-curl "https://news-crypto.vercel.app/api/archive?ticker=BTC&start=2026-01-17"
+curl "https://cryptocurrency.cv/api/archive?ticker=BTC&start=2026-01-17"
 
 # 获取归档统计数据
-curl "https://news-crypto.vercel.app/api/archive?stats=true"
+curl "https://cryptocurrency.cv/api/archive?stats=true"
 ```
 
 ---
@@ -893,7 +893,7 @@ curl "https://news-crypto.vercel.app/api/archive?stats=true"
 **示例：**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/archive/status"
+curl "https://cryptocurrency.cv/api/archive/status"
 ```
 
 **响应：**
@@ -952,13 +952,13 @@ curl "https://news-crypto.vercel.app/api/archive/status"
 **示例 - 获取增强文章：**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/archive?ticker=BTC&sentiment=positive&limit=20"
+curl "https://cryptocurrency.cv/api/archive?ticker=BTC&sentiment=positive&limit=20"
 ```
 
 **示例 - 获取热门ticker：**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/archive?trending=true&hours=24"
+curl "https://cryptocurrency.cv/api/archive?trending=true&hours=24"
 ```
 
 **响应（热门ticker）：**
@@ -977,7 +977,7 @@ curl "https://news-crypto.vercel.app/api/archive?trending=true&hours=24"
 **示例 - 获取归档统计数据：**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/archive?stats=true"
+curl "https://cryptocurrency.cv/api/archive?stats=true"
 ```
 
 **响应（统计数据）：**
@@ -1002,7 +1002,7 @@ curl "https://news-crypto.vercel.app/api/archive?stats=true"
 触发新闻归档。适用于外部cron服务。
 
 ```bash
-curl "https://news-crypto.vercel.app/api/cron/archive"
+curl "https://cryptocurrency.cv/api/cron/archive"
 ```
 undefined
 undefined

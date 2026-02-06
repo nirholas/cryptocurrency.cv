@@ -149,7 +149,7 @@ export async function GET() {
         steps: [
           '1. Create free account at cron-job.org',
           '2. Click "CREATE CRONJOB"',
-          '3. URL: https://news-crypto.vercel.app/api/cron/archive',
+          '3. URL: https://cryptocurrency.cv/api/cron/archive',
           '4. Schedule: Every hour (0 * * * *)',
           '5. Save - done!',
         ],
@@ -159,12 +159,12 @@ export async function GET() {
         steps: [
           '1. Create free account',
           '2. Add New Monitor → HTTP(s)',
-          '3. URL: https://news-crypto.vercel.app/api/cron/archive',
+          '3. URL: https://cryptocurrency.cv/api/cron/archive',
           '4. Monitoring Interval: 1 hour',
           '5. Save',
         ],
       },
-      manual: 'curl https://news-crypto.vercel.app/api/cron/archive',
+      manual: 'curl https://cryptocurrency.cv/api/cron/archive',
       withAuth: 'Set CRON_SECRET env var, then use ?secret=YOUR_SECRET',
     },
   });

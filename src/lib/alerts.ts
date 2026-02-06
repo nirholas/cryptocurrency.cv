@@ -784,7 +784,7 @@ export async function evaluateCondition(
         
         try {
           // Fetch from our whale alerts API
-          const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://news-crypto.vercel.app';
+          const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://cryptocurrency.cv';
           const response = await fetch(
             `${baseUrl}/api/premium/alerts/whales?coins=${coin}&minThreshold=${minThreshold}`,
             { 

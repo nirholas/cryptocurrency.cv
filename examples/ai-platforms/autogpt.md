@@ -61,7 +61,7 @@ class CryptoNewsPlugin(AutoGPTPluginTemplate):
         self._name = "Free-Crypto-News"
         self._version = "1.0.0"
         self._description = "Real-time cryptocurrency news and market data"
-        self.api_base = "https://news-crypto.vercel.app"
+        self.api_base = "https://cryptocurrency.cv"
 
     def _fetch(self, endpoint: str, params: Dict[str, Any] = None) -> Dict:
         """Fetch data from the API."""
@@ -430,7 +430,7 @@ Or `plugins_config.yaml`:
 CryptoNewsPlugin:
   enabled: true
   config:
-    api_base: "https://news-crypto.vercel.app"
+    api_base: "https://cryptocurrency.cv"
 ```
 
 ---
@@ -447,7 +447,7 @@ Add commands directly to AutoGPT:
 import requests
 from autogpt.commands.command import command
 
-API_BASE = "https://news-crypto.vercel.app"
+API_BASE = "https://cryptocurrency.cv"
 
 
 @command(
@@ -636,4 +636,4 @@ Tasks:
 - **AutoGPT Docs:** https://docs.agpt.co
 - **AutoGPT Forge:** https://github.com/Significant-Gravitas/AutoGPT/tree/master/autogpts/forge
 - **Plugin Template:** https://github.com/Significant-Gravitas/Auto-GPT-Plugin-Template
-- **Free Crypto News API:** https://news-crypto.vercel.app
+- **Free Crypto News API:** https://cryptocurrency.cv

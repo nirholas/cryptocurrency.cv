@@ -83,8 +83,8 @@ export async function GET() {
         name: 'Free Crypto News API',
         description:
           'Real-time cryptocurrency news, prices, and market data via x402 micropayments',
-        url: 'https://news-crypto.vercel.app',
-        docs: 'https://news-crypto.vercel.app/docs',
+        url: 'https://cryptocurrency.cv',
+        docs: 'https://cryptocurrency.cv/docs',
         github: 'https://github.com/nirholas/free-crypto-news',
       },
 
@@ -128,11 +128,11 @@ export async function GET() {
 
       // Usage examples for AI agents
       examples: {
-        curl: `curl -H "X-Payment: <payment_signature>" https://news-crypto.vercel.app/api/v1/news`,
+        curl: `curl -H "X-Payment: <payment_signature>" https://cryptocurrency.cv/api/v1/news`,
         javascript: `import { payFetch } from '@x402/fetch';
-const response = await payFetch('https://news-crypto.vercel.app/api/v1/news', { wallet });`,
+const response = await payFetch('https://cryptocurrency.cv/api/v1/news', { wallet });`,
         python: `import x402
-response = x402.get('https://news-crypto.vercel.app/api/v1/news', wallet=wallet)`,
+response = x402.get('https://cryptocurrency.cv/api/v1/news', wallet=wallet)`,
       },
 
       // SDK links

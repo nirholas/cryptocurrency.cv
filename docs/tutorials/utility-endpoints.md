@@ -30,21 +30,21 @@ Monitor API health and system status.
     def check_health():
         """Check API health."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/health"
+            "https://cryptocurrency.cv/api/health"
         )
         return response.json()
     
     def get_status():
         """Get detailed system status."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/status"
+            "https://cryptocurrency.cv/api/status"
         )
         return response.json()
     
     def get_version():
         """Get API version."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/version"
+            "https://cryptocurrency.cv/api/version"
         )
         return response.json()
     
@@ -116,21 +116,21 @@ Monitor API health and system status.
     ```javascript
     async function checkHealth() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/health'
+            'https://cryptocurrency.cv/api/health'
         );
         return response.json();
     }
     
     async function getStatus() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/status'
+            'https://cryptocurrency.cv/api/status'
         );
         return response.json();
     }
     
     async function getVersion() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/version'
+            'https://cryptocurrency.cv/api/version'
         );
         return response.json();
     }
@@ -171,16 +171,16 @@ Monitor API health and system status.
 === "cURL"
     ```bash
     # Health check
-    curl "https://news-crypto.vercel.app/api/health" | jq
+    curl "https://cryptocurrency.cv/api/health" | jq
     
     # Detailed status
-    curl "https://news-crypto.vercel.app/api/status" | jq
+    curl "https://cryptocurrency.cv/api/status" | jq
     
     # Version info
-    curl "https://news-crypto.vercel.app/api/version" | jq
+    curl "https://cryptocurrency.cv/api/version" | jq
     
     # Quick health check (returns 200 if healthy)
-    curl -s -o /dev/null -w "%{http_code}" "https://news-crypto.vercel.app/api/health"
+    curl -s -o /dev/null -w "%{http_code}" "https://cryptocurrency.cv/api/health"
     ```
 
 ---
@@ -202,7 +202,7 @@ Get information about available news sources.
             params["language"] = language
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/sources",
+            "https://cryptocurrency.cv/api/sources",
             params=params
         )
         return response.json()
@@ -265,7 +265,7 @@ Get information about available news sources.
         if (options.language) params.set('language', options.language);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/sources?${params}`
+            `https://cryptocurrency.cv/api/sources?${params}`
         );
         return response.json();
     }
@@ -303,16 +303,16 @@ Get information about available news sources.
 === "cURL"
     ```bash
     # Get all sources
-    curl "https://news-crypto.vercel.app/api/sources" | jq
+    curl "https://cryptocurrency.cv/api/sources" | jq
     
     # Get crypto sources only
-    curl "https://news-crypto.vercel.app/api/sources?category=crypto" | jq
+    curl "https://cryptocurrency.cv/api/sources?category=crypto" | jq
     
     # Get English sources
-    curl "https://news-crypto.vercel.app/api/sources?language=en" | jq
+    curl "https://cryptocurrency.cv/api/sources?language=en" | jq
     
     # Count sources
-    curl "https://news-crypto.vercel.app/api/sources" | jq '.count'
+    curl "https://cryptocurrency.cv/api/sources" | jq '.count'
     ```
 
 ---
@@ -328,7 +328,7 @@ Get article categories and classification systems.
     def get_categories():
         """Get article categories."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/categories"
+            "https://cryptocurrency.cv/api/categories"
         )
         return response.json()
     
@@ -382,7 +382,7 @@ Get article categories and classification systems.
     ```javascript
     async function getCategories() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/categories'
+            'https://cryptocurrency.cv/api/categories'
         );
         return response.json();
     }
@@ -420,13 +420,13 @@ Get article categories and classification systems.
 === "cURL"
     ```bash
     # Get categories
-    curl "https://news-crypto.vercel.app/api/categories" | jq
+    curl "https://cryptocurrency.cv/api/categories" | jq
     
     # Get category names only
-    curl "https://news-crypto.vercel.app/api/categories" | jq '.categories[].name'
+    curl "https://cryptocurrency.cv/api/categories" | jq '.categories[].name'
     
     # Get trending categories
-    curl "https://news-crypto.vercel.app/api/categories" | jq '.categories | map(select(.trending))'
+    curl "https://cryptocurrency.cv/api/categories" | jq '.categories | map(select(.trending))'
     ```
 
 ---
@@ -442,14 +442,14 @@ Get supported currencies and languages.
     def get_currencies():
         """Get supported currencies."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/currencies"
+            "https://cryptocurrency.cv/api/currencies"
         )
         return response.json()
     
     def get_languages():
         """Get supported languages."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/languages"
+            "https://cryptocurrency.cv/api/languages"
         )
         return response.json()
     
@@ -518,14 +518,14 @@ Get supported currencies and languages.
     ```javascript
     async function getCurrencies() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/currencies'
+            'https://cryptocurrency.cv/api/currencies'
         );
         return response.json();
     }
     
     async function getLanguages() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/languages'
+            'https://cryptocurrency.cv/api/languages'
         );
         return response.json();
     }
@@ -566,16 +566,16 @@ Get supported currencies and languages.
 === "cURL"
     ```bash
     # Get currencies
-    curl "https://news-crypto.vercel.app/api/currencies" | jq
+    curl "https://cryptocurrency.cv/api/currencies" | jq
     
     # Get just fiat currencies
-    curl "https://news-crypto.vercel.app/api/currencies" | jq '.currencies | map(select(.type=="fiat"))'
+    curl "https://cryptocurrency.cv/api/currencies" | jq '.currencies | map(select(.type=="fiat"))'
     
     # Get languages
-    curl "https://news-crypto.vercel.app/api/languages" | jq
+    curl "https://cryptocurrency.cv/api/languages" | jq
     
     # Get language codes
-    curl "https://news-crypto.vercel.app/api/languages" | jq '.languages[].code'
+    curl "https://cryptocurrency.cv/api/languages" | jq '.languages[].code'
     ```
 
 ---
@@ -592,14 +592,14 @@ Get API configuration and documentation.
     def get_config():
         """Get API configuration."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/config"
+            "https://cryptocurrency.cv/api/config"
         )
         return response.json()
     
     def get_openapi_spec():
         """Get OpenAPI specification."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/openapi"
+            "https://cryptocurrency.cv/api/openapi"
         )
         return response.json()
     
@@ -674,14 +674,14 @@ Get API configuration and documentation.
     ```javascript
     async function getConfig() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/config'
+            'https://cryptocurrency.cv/api/config'
         );
         return response.json();
     }
     
     async function getOpenApiSpec() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/openapi'
+            'https://cryptocurrency.cv/api/openapi'
         );
         return response.json();
     }
@@ -721,16 +721,16 @@ Get API configuration and documentation.
 === "cURL"
     ```bash
     # Get configuration
-    curl "https://news-crypto.vercel.app/api/config" | jq
+    curl "https://cryptocurrency.cv/api/config" | jq
     
     # Get OpenAPI spec
-    curl "https://news-crypto.vercel.app/api/openapi" | jq
+    curl "https://cryptocurrency.cv/api/openapi" | jq
     
     # Get just rate limits
-    curl "https://news-crypto.vercel.app/api/config" | jq '.rateLimits'
+    curl "https://cryptocurrency.cv/api/config" | jq '.rateLimits'
     
     # List all endpoints
-    curl "https://news-crypto.vercel.app/api/openapi" | jq '.paths | keys'
+    curl "https://cryptocurrency.cv/api/openapi" | jq '.paths | keys'
     ```
 
 ---
@@ -748,7 +748,7 @@ from typing import Dict, Any
 class UtilityDashboard:
     """API utility dashboard."""
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     def __init__(self):
         self.session = requests.Session()

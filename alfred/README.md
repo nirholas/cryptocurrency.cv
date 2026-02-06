@@ -51,7 +51,7 @@ cn trending           # Trending topics
 
 ## Privacy
 
-- Only fetches from `news-crypto.vercel.app`
+- Only fetches from `cryptocurrency.cv`
 - No tracking, no data collection
 - Open source
 

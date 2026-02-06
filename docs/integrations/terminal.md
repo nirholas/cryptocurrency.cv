@@ -181,7 +181,7 @@ import blessed from 'blessed';
 import contrib from 'blessed-contrib';
 import EventSource from 'eventsource';
 
-const API_BASE = 'https://news-crypto.vercel.app/api';
+const API_BASE = 'https://cryptocurrency.cv/api';
 
 // Create screen
 const screen = blessed.screen({

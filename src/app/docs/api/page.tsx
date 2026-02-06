@@ -65,7 +65,7 @@ export default function ApiDocsPage() {
                 1. Get Latest News
               </h3>
               <pre className="bg-gray-900 text-green-400 p-4 rounded overflow-x-auto text-sm">
-{`curl https://news-crypto.vercel.app/api/news?limit=10`}
+{`curl https://cryptocurrency.cv/api/news?limit=10`}
               </pre>
             </div>
             
@@ -74,7 +74,7 @@ export default function ApiDocsPage() {
                 2. Filter by Category
               </h3>
               <pre className="bg-gray-900 text-green-400 p-4 rounded overflow-x-auto text-sm">
-{`curl https://news-crypto.vercel.app/api/news?category=bitcoin&limit=5`}
+{`curl https://cryptocurrency.cv/api/news?category=bitcoin&limit=5`}
               </pre>
             </div>
             
@@ -84,7 +84,7 @@ export default function ApiDocsPage() {
               </h3>
               <pre className="bg-gray-900 text-green-400 p-4 rounded overflow-x-auto text-sm">
 {`curl -H "X-API-Key: your-api-key" \\
-  https://news-crypto.vercel.app/api/v1/coins`}
+  https://cryptocurrency.cv/api/v1/coins`}
               </pre>
             </div>
           </div>

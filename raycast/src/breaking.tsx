@@ -1,7 +1,7 @@
 import { List, ActionPanel, Action, Icon, Color } from "@raycast/api";
 import { useFetch } from "@raycast/utils";
 
-const API_BASE = "https://news-crypto.vercel.app/api";
+const API_BASE = "https://cryptocurrency.cv/api";
 
 interface Article {
   title: string;

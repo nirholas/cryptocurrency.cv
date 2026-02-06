@@ -23,7 +23,7 @@
 透過一次 API 呼叫從 7 個主要來源獲取即時加密貨幣新聞。
 
 ```bash
-curl https://news-crypto.vercel.app/api/news
+curl https://cryptocurrency.cv/api/news
 ```
 
 ---
@@ -75,13 +75,13 @@ npm install && npm run dev
 
 ```bash
 # 獲取所有國際新聞
-curl "https://news-crypto.vercel.app/api/news/international"
+curl "https://cryptocurrency.cv/api/news/international"
 
 # 獲取韓語新聞並翻譯成英語
-curl "https://news-crypto.vercel.app/api/news/international?language=ko&translate=true"
+curl "https://cryptocurrency.cv/api/news/international?language=ko&translate=true"
 
 # 獲取亞洲地區新聞
-curl "https://news-crypto.vercel.app/api/news/international?region=asia&limit=20"
+curl "https://cryptocurrency.cv/api/news/international?region=asia&limit=20"
 ```
 
 ### 功能特點
@@ -117,7 +117,7 @@ Free Crypto News 是一個**完全可安裝的 PWA**，支援離線使用。
 ### 安裝應用程式
 
 **桌面（Chrome/Edge）：**
-1. 造訪 [news-crypto.vercel.app](https://news-crypto.vercel.app)
+1. 造訪 [cryptocurrency.cv](https://cryptocurrency.cv)
 2. 點擊網址列中的安裝圖示（⊕）
 3. 點擊「安裝」
 
@@ -233,23 +233,23 @@ PWA 使用智慧快取策略：
 
 ```bash
 # 獲取最新新聞
-curl "https://news-crypto.vercel.app/api/news"
+curl "https://cryptocurrency.cv/api/news"
 
 # 搜尋新聞
-curl "https://news-crypto.vercel.app/api/search?q=ethereum"
+curl "https://cryptocurrency.cv/api/search?q=ethereum"
 
 # 獲取 AI 摘要
-curl "https://news-crypto.vercel.app/api/digest"
+curl "https://cryptocurrency.cv/api/digest"
 
 # 獲取恐懼與貪婪指數
-curl "https://news-crypto.vercel.app/api/fear-greed"
+curl "https://cryptocurrency.cv/api/fear-greed"
 ```
 
 ### 使用 JavaScript
 
 ```javascript
 // 獲取最新新聞
-const response = await fetch('https://news-crypto.vercel.app/api/news');
+const response = await fetch('https://cryptocurrency.cv/api/news');
 const data = await response.json();
 
 console.log(data.articles);
@@ -262,7 +262,7 @@ console.log(data.articles);
 import requests
 
 # 獲取最新新聞
-response = requests.get('https://news-crypto.vercel.app/api/news')
+response = requests.get('https://cryptocurrency.cv/api/news')
 data = response.json()
 
 for article in data['articles'][:5]:
@@ -355,5 +355,5 @@ MIT License - 請參閱 [LICENSE](LICENSE) 文件。
 <p align="center">
   用 ❤️ 為加密貨幣社群打造
   <br>
-  <a href="https://news-crypto.vercel.app">news-crypto.vercel.app</a>
+  <a href="https://cryptocurrency.cv">cryptocurrency.cv</a>
 </p>

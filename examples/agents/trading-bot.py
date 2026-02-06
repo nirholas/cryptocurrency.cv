@@ -68,7 +68,7 @@ except ImportError:
 # CONFIGURATION
 # =============================================================================
 
-API_BASE = "https://news-crypto.vercel.app"
+API_BASE = "https://cryptocurrency.cv"
 
 # Trading strategies with risk parameters
 STRATEGIES = {

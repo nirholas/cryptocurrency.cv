@@ -37,7 +37,7 @@ jobs:
       
       - name: Run enhanced archive collection
         env:
-          API_URL: ${{ secrets.API_URL || 'https://news-crypto.vercel.app' }}
+          API_URL: ${{ secrets.API_URL || 'https://cryptocurrency.cv' }}
           ARCHIVE_DIR: ${{ github.workspace }}/archive
           # X/Twitter authentication (get from xactions login)
           X_AUTH_TOKEN: ${{ secrets.X_AUTH_TOKEN }}

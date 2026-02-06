@@ -19,10 +19,10 @@
  *
  * @example
  * // Zero-config mode (no env vars needed)
- * curl -X POST "https://news-crypto.vercel.app/api/archive/webhook"
+ * curl -X POST "https://cryptocurrency.cv/api/archive/webhook"
  *
  * // With authentication (if CRON_SECRET is set)
- * curl -X POST "https://news-crypto.vercel.app/api/archive/webhook" \
+ * curl -X POST "https://cryptocurrency.cv/api/archive/webhook" \
  *   -H "Authorization: Bearer YOUR_CRON_SECRET"
  */
 
@@ -361,7 +361,7 @@ export async function GET() {
       },
     ],
     example: {
-      curl: 'curl -X POST "https://news-crypto.vercel.app/api/archive/webhook" -H "Authorization: Bearer YOUR_CRON_SECRET"',
+      curl: 'curl -X POST "https://cryptocurrency.cv/api/archive/webhook" -H "Authorization: Bearer YOUR_CRON_SECRET"',
     },
   });
 }

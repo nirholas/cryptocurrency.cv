@@ -131,7 +131,7 @@ export async function GET(request: NextRequest) {
               Real-time crypto market data
             </span>
             <span style={{ color: '#64748b', fontSize: '20px' }}>
-              news-crypto.vercel.app
+              cryptocurrency.cv
             </span>
           </div>
         </div>

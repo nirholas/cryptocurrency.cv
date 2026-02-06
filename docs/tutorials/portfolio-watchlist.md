@@ -28,14 +28,14 @@ Get a complete view of portfolio holdings and value.
     def get_portfolio():
         """Get portfolio overview."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/portfolio"
+            "https://cryptocurrency.cv/api/portfolio"
         )
         return response.json()
     
     def get_holdings():
         """Get portfolio holdings."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/portfolio/holdings"
+            "https://cryptocurrency.cv/api/portfolio/holdings"
         )
         return response.json()
     
@@ -88,14 +88,14 @@ Get a complete view of portfolio holdings and value.
     ```javascript
     async function getPortfolio() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/portfolio'
+            'https://cryptocurrency.cv/api/portfolio'
         );
         return response.json();
     }
     
     async function getHoldings() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/portfolio/holdings'
+            'https://cryptocurrency.cv/api/portfolio/holdings'
         );
         return response.json();
     }
@@ -133,16 +133,16 @@ Get a complete view of portfolio holdings and value.
 === "cURL"
     ```bash
     # Get portfolio overview
-    curl "https://news-crypto.vercel.app/api/portfolio" | jq
+    curl "https://cryptocurrency.cv/api/portfolio" | jq
     
     # Get holdings
-    curl "https://news-crypto.vercel.app/api/portfolio/holdings" | jq
+    curl "https://cryptocurrency.cv/api/portfolio/holdings" | jq
     
     # Get just total value
-    curl "https://news-crypto.vercel.app/api/portfolio" | jq '.totalValue'
+    curl "https://cryptocurrency.cv/api/portfolio" | jq '.totalValue'
     
     # Get top holding
-    curl "https://news-crypto.vercel.app/api/portfolio/holdings" | jq '.holdings[0]'
+    curl "https://cryptocurrency.cv/api/portfolio/holdings" | jq '.holdings[0]'
     ```
 
 ---
@@ -175,7 +175,7 @@ Track all portfolio transactions.
             params["endDate"] = end_date
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/portfolio/transactions",
+            "https://cryptocurrency.cv/api/portfolio/transactions",
             params=params
         )
         return response.json()
@@ -240,7 +240,7 @@ Track all portfolio transactions.
         if (options.endDate) params.set('endDate', options.endDate);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/portfolio/transactions?${params}`
+            `https://cryptocurrency.cv/api/portfolio/transactions?${params}`
         );
         return response.json();
     }
@@ -274,16 +274,16 @@ Track all portfolio transactions.
 === "cURL"
     ```bash
     # Get all transactions
-    curl "https://news-crypto.vercel.app/api/portfolio/transactions?limit=50" | jq
+    curl "https://cryptocurrency.cv/api/portfolio/transactions?limit=50" | jq
     
     # Get BTC transactions
-    curl "https://news-crypto.vercel.app/api/portfolio/transactions?asset=BTC" | jq
+    curl "https://cryptocurrency.cv/api/portfolio/transactions?asset=BTC" | jq
     
     # Get buy transactions only
-    curl "https://news-crypto.vercel.app/api/portfolio/transactions?type=buy" | jq
+    curl "https://cryptocurrency.cv/api/portfolio/transactions?type=buy" | jq
     
     # Get transactions in date range
-    curl "https://news-crypto.vercel.app/api/portfolio/transactions?startDate=2024-01-01&endDate=2024-12-31" | jq
+    curl "https://cryptocurrency.cv/api/portfolio/transactions?startDate=2024-01-01&endDate=2024-12-31" | jq
     ```
 
 ---
@@ -299,7 +299,7 @@ Analyze portfolio performance over time.
     def get_performance(period: str = "1M"):
         """Get portfolio performance metrics."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/portfolio/performance",
+            "https://cryptocurrency.cv/api/portfolio/performance",
             params={"period": period}
         )
         return response.json()
@@ -355,7 +355,7 @@ Analyze portfolio performance over time.
     ```javascript
     async function getPerformance(period = '1M') {
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/portfolio/performance?period=${period}`
+            `https://cryptocurrency.cv/api/portfolio/performance?period=${period}`
         );
         return response.json();
     }
@@ -391,13 +391,13 @@ Analyze portfolio performance over time.
 === "cURL"
     ```bash
     # Get 1M performance
-    curl "https://news-crypto.vercel.app/api/portfolio/performance?period=1M" | jq
+    curl "https://cryptocurrency.cv/api/portfolio/performance?period=1M" | jq
     
     # Get all-time performance
-    curl "https://news-crypto.vercel.app/api/portfolio/performance?period=ALL" | jq
+    curl "https://cryptocurrency.cv/api/portfolio/performance?period=ALL" | jq
     
     # Get just return percent
-    curl "https://news-crypto.vercel.app/api/portfolio/performance?period=1Y" | jq '.returnPercent'
+    curl "https://cryptocurrency.cv/api/portfolio/performance?period=1Y" | jq '.returnPercent'
     ```
 
 ---
@@ -413,7 +413,7 @@ Create and manage your crypto watchlist.
     def get_watchlist():
         """Get user watchlist."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/watchlist"
+            "https://cryptocurrency.cv/api/watchlist"
         )
         return response.json()
     
@@ -424,7 +424,7 @@ Create and manage your crypto watchlist.
             data["alertPrice"] = alert_price
         
         response = requests.post(
-            "https://news-crypto.vercel.app/api/watchlist/add",
+            "https://cryptocurrency.cv/api/watchlist/add",
             json=data
         )
         return response.json()
@@ -432,7 +432,7 @@ Create and manage your crypto watchlist.
     def remove_from_watchlist(symbol: str):
         """Remove asset from watchlist."""
         response = requests.delete(
-            "https://news-crypto.vercel.app/api/watchlist/remove",
+            "https://cryptocurrency.cv/api/watchlist/remove",
             params={"symbol": symbol}
         )
         return response.json()
@@ -440,7 +440,7 @@ Create and manage your crypto watchlist.
     def get_watchlist_alerts():
         """Get watchlist price alerts."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/watchlist/alerts"
+            "https://cryptocurrency.cv/api/watchlist/alerts"
         )
         return response.json()
     
@@ -492,7 +492,7 @@ Create and manage your crypto watchlist.
     ```javascript
     async function getWatchlist() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/watchlist'
+            'https://cryptocurrency.cv/api/watchlist'
         );
         return response.json();
     }
@@ -502,7 +502,7 @@ Create and manage your crypto watchlist.
         if (alertPrice) body.alertPrice = alertPrice;
         
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/watchlist/add',
+            'https://cryptocurrency.cv/api/watchlist/add',
             {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -514,7 +514,7 @@ Create and manage your crypto watchlist.
     
     async function removeFromWatchlist(symbol) {
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/watchlist/remove?symbol=${symbol}`,
+            `https://cryptocurrency.cv/api/watchlist/remove?symbol=${symbol}`,
             { method: 'DELETE' }
         );
         return response.json();
@@ -522,7 +522,7 @@ Create and manage your crypto watchlist.
     
     async function getWatchlistAlerts() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/watchlist/alerts'
+            'https://cryptocurrency.cv/api/watchlist/alerts'
         );
         return response.json();
     }
@@ -560,18 +560,18 @@ Create and manage your crypto watchlist.
 === "cURL"
     ```bash
     # Get watchlist
-    curl "https://news-crypto.vercel.app/api/watchlist" | jq
+    curl "https://cryptocurrency.cv/api/watchlist" | jq
     
     # Add to watchlist
-    curl -X POST "https://news-crypto.vercel.app/api/watchlist/add" \
+    curl -X POST "https://cryptocurrency.cv/api/watchlist/add" \
       -H "Content-Type: application/json" \
       -d '{"symbol": "SOL", "alertPrice": 200.00}' | jq
     
     # Remove from watchlist
-    curl -X DELETE "https://news-crypto.vercel.app/api/watchlist/remove?symbol=SOL" | jq
+    curl -X DELETE "https://cryptocurrency.cv/api/watchlist/remove?symbol=SOL" | jq
     
     # Get alerts
-    curl "https://news-crypto.vercel.app/api/watchlist/alerts" | jq
+    curl "https://cryptocurrency.cv/api/watchlist/alerts" | jq
     ```
 
 ---
@@ -591,7 +591,7 @@ from typing import Dict, Any, Optional
 class PortfolioManager:
     """Portfolio management client."""
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     def __init__(self):
         self.session = requests.Session()

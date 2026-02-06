@@ -106,7 +106,7 @@ public class CryptoNewsClient : IDisposable
     private readonly string _baseUrl;
     private readonly JsonSerializerOptions _jsonOptions;
 
-    public CryptoNewsClient(string? apiKey = null, string baseUrl = "https://news-crypto.vercel.app")
+    public CryptoNewsClient(string? apiKey = null, string baseUrl = "https://cryptocurrency.cv")
     {
         _baseUrl = baseUrl;
         _http = new HttpClient();
@@ -260,7 +260,7 @@ public class CryptoNewsStream : IDisposable
     public event Action<WhaleAlert>? OnWhale;
     public event Action<Exception>? OnError;
 
-    public CryptoNewsStream(string baseUrl = "wss://news-crypto.vercel.app")
+    public CryptoNewsStream(string baseUrl = "wss://cryptocurrency.cv")
     {
         _wsUrl = $"{baseUrl}/api/ws";
     }

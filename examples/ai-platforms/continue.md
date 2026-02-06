@@ -98,7 +98,7 @@ Create `~/.continue/context-providers/crypto-news.js`:
  * Crypto News Context Provider for Continue
  */
 
-const API_BASE = "https://news-crypto.vercel.app";
+const API_BASE = "https://cryptocurrency.cv";
 
 async function fetchApi(endpoint, params = {}) {
   const url = new URL(`${API_BASE}${endpoint}`);
@@ -221,7 +221,7 @@ Add to `~/.continue/config.json`:
       "name": "crypto-news",
       "description": "Get latest cryptocurrency news",
       "run": async function* (sdk) {
-        const response = await fetch('https://news-crypto.vercel.app/api/news?limit=5');
+        const response = await fetch('https://cryptocurrency.cv/api/news?limit=5');
         const data = await response.json();
         
         let result = "📰 **Latest Crypto News**\n\n";
@@ -238,7 +238,7 @@ Add to `~/.continue/config.json`:
       "name": "crypto-fear-greed",
       "description": "Get Fear & Greed Index",
       "run": async function* (sdk) {
-        const response = await fetch('https://news-crypto.vercel.app/api/market/fear-greed');
+        const response = await fetch('https://cryptocurrency.cv/api/market/fear-greed');
         const data = await response.json();
         
         const emoji = data.value < 25 ? '😱' : data.value < 45 ? '😰' : data.value < 55 ? '😐' : data.value < 75 ? '😊' : '🤑';
@@ -251,7 +251,7 @@ Add to `~/.continue/config.json`:
       "description": "Get sentiment for a cryptocurrency",
       "run": async function* (sdk, input) {
         const asset = input?.trim().toUpperCase() || 'BTC';
-        const response = await fetch(`https://news-crypto.vercel.app/api/ai/sentiment?asset=${asset}`);
+        const response = await fetch(`https://cryptocurrency.cv/api/ai/sentiment?asset=${asset}`);
         const data = await response.json();
         
         const emoji = data.score > 0.3 ? '🚀' : data.score < -0.3 ? '📉' : '😐';
@@ -268,7 +268,7 @@ Add to `~/.continue/config.json`:
           return;
         }
         
-        const response = await fetch(`https://news-crypto.vercel.app/api/search?q=${encodeURIComponent(query)}&limit=5`);
+        const response = await fetch(`https://cryptocurrency.cv/api/search?q=${encodeURIComponent(query)}&limit=5`);
         const data = await response.json();
         
         if (!data.articles?.length) {
@@ -322,8 +322,8 @@ Add to `~/.continue/config.json`:
   "docs": [
     {
       "title": "Free Crypto News API",
-      "startUrl": "https://news-crypto.vercel.app/docs/api",
-      "faviconUrl": "https://news-crypto.vercel.app/favicon.ico"
+      "startUrl": "https://cryptocurrency.cv/docs/api",
+      "faviconUrl": "https://cryptocurrency.cv/favicon.ico"
     }
   ]
 }
@@ -373,7 +373,7 @@ Full `~/.continue/config.json`:
   "docs": [
     {
       "title": "Free Crypto News API",
-      "startUrl": "https://news-crypto.vercel.app/docs/api"
+      "startUrl": "https://cryptocurrency.cv/docs/api"
     }
   ],
   
@@ -381,7 +381,7 @@ Full `~/.continue/config.json`:
     {
       "name": "crypto",
       "description": "Get crypto market overview",
-      "run": "async function*(sdk) { const [news, fg] = await Promise.all([fetch('https://news-crypto.vercel.app/api/news?limit=3').then(r=>r.json()), fetch('https://news-crypto.vercel.app/api/market/fear-greed').then(r=>r.json())]); yield `**Market Update**\\n\\nFear & Greed: ${fg.value}/100\\n\\n${news.articles.map(a=>`• ${a.title}`).join('\\n')}`; }"
+      "run": "async function*(sdk) { const [news, fg] = await Promise.all([fetch('https://cryptocurrency.cv/api/news?limit=3').then(r=>r.json()), fetch('https://cryptocurrency.cv/api/market/fear-greed').then(r=>r.json())]); yield `**Market Update**\\n\\nFear & Greed: ${fg.value}/100\\n\\n${news.articles.map(a=>`• ${a.title}`).join('\\n')}`; }"
     }
   ],
   
@@ -389,11 +389,11 @@ Full `~/.continue/config.json`:
     {
       "name": "crypto-component",
       "description": "Generate a crypto data component",
-      "prompt": "Create a React component that fetches data from the Free Crypto News API (https://news-crypto.vercel.app). The component should: {{{ input }}}"
+      "prompt": "Create a React component that fetches data from the Free Crypto News API (https://cryptocurrency.cv). The component should: {{{ input }}}"
     }
   ],
   
-  "systemMessage": "When working with cryptocurrency data, use the Free Crypto News API at https://news-crypto.vercel.app. No API key is required."
+  "systemMessage": "When working with cryptocurrency data, use the Free Crypto News API at https://cryptocurrency.cv. No API key is required."
 }
 ```
 
@@ -468,4 +468,4 @@ Now create a Python trading bot that:
 - **Continue Docs:** https://docs.continue.dev
 - **Continue GitHub:** https://github.com/continuedev/continue
 - **MCP Support:** https://docs.continue.dev/customize/mcp
-- **Free Crypto News API:** https://news-crypto.vercel.app
+- **Free Crypto News API:** https://cryptocurrency.cv

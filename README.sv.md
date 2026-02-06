@@ -16,7 +16,7 @@
 Få realtids kryptonyheter från **200+ källor** med ett API-anrop.
 
 ```bash
-curl https://news-crypto.vercel.app/api/news
+curl https://cryptocurrency.cv/api/news
 ```
 
 ---
@@ -39,13 +39,13 @@ curl https://news-crypto.vercel.app/api/news
 
 ```bash
 # Senaste nyheterna
-curl "https://news-crypto.vercel.app/api/news?limit=10"
+curl "https://cryptocurrency.cv/api/news?limit=10"
 
 # Bitcoin-nyheter
-curl "https://news-crypto.vercel.app/api/news?ticker=BTC"
+curl "https://cryptocurrency.cv/api/news?ticker=BTC"
 
 # Breaking news
-curl "https://news-crypto.vercel.app/api/breaking"
+curl "https://cryptocurrency.cv/api/breaking"
 ```
 
 ### Python-exempel
@@ -53,7 +53,7 @@ curl "https://news-crypto.vercel.app/api/breaking"
 ```python
 import requests
 
-BASE_URL = "https://news-crypto.vercel.app"
+BASE_URL = "https://cryptocurrency.cv"
 
 # Hämta senaste nyheterna
 news = requests.get(f"{BASE_URL}/api/news?limit=10").json()
@@ -72,7 +72,7 @@ print(f"Marknad: {fg['classification']} ({fg['value']}/100)")
 ### JavaScript-exempel
 
 ```javascript
-const BASE_URL = 'https://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
 
 // Hämta senaste nyheterna
 const news = await fetch(`${BASE_URL}/api/news?limit=10`).then(r => r.json());
@@ -121,10 +121,10 @@ Hämta nyheter på 18 språk:
 
 ```bash
 # Svenska nyheter (om tillgängliga)
-curl "https://news-crypto.vercel.app/api/news/international?language=sv"
+curl "https://cryptocurrency.cv/api/news/international?language=sv"
 
 # Med engelsk översättning
-curl "https://news-crypto.vercel.app/api/news/international?language=ko&translate=true"
+curl "https://cryptocurrency.cv/api/news/international?language=ko&translate=true"
 ```
 
 ---
@@ -143,8 +143,8 @@ npm start
 
 ## 🔗 Länkar
 
-- **API**: https://news-crypto.vercel.app
-- **Dokumentation**: https://news-crypto.vercel.app/docs
+- **API**: https://cryptocurrency.cv
+- **Dokumentation**: https://cryptocurrency.cv/docs
 - **GitHub**: https://github.com/AItoolsbyai/free-crypto-news
 
 ---

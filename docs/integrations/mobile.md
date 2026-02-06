@@ -240,7 +240,7 @@ Key configuration options:
 Create `.env` file:
 
 ```env
-EXPO_PUBLIC_API_URL=https://news-crypto.vercel.app
+EXPO_PUBLIC_API_URL=https://cryptocurrency.cv
 ```
 
 ## Theming

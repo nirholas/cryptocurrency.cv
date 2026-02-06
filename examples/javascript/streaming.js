@@ -8,8 +8,8 @@
 const WebSocket = require('ws');
 const EventSource = require('eventsource');
 
-const BASE_URL = 'https://news-crypto.vercel.app';
-const WS_URL = 'wss://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
+const WS_URL = 'wss://cryptocurrency.cv';
 
 // =============================================================================
 // WebSocket - Real-time News Stream

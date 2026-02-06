@@ -21,7 +21,7 @@
 Få realtids crypto nyheder fra **200+ kilder** med ét API-kald.
 
 ```bash
-curl https://news-crypto.vercel.app/api/news
+curl https://cryptocurrency.cv/api/news
 ```
 
 ---
@@ -55,13 +55,13 @@ Få crypto nyheder fra **75 internationale kilder** på 18 sprog — med automat
 
 ```bash
 # Hent seneste nyheder
-curl "https://news-crypto.vercel.app/api/news?limit=10"
+curl "https://cryptocurrency.cv/api/news?limit=10"
 
 # Hent Bitcoin sentiment
-curl "https://news-crypto.vercel.app/api/ai/sentiment?asset=BTC"
+curl "https://cryptocurrency.cv/api/ai/sentiment?asset=BTC"
 
 # Søg artikler
-curl "https://news-crypto.vercel.app/api/search?q=ethereum%20upgrade"
+curl "https://cryptocurrency.cv/api/search?q=ethereum%20upgrade"
 ```
 
 ---

@@ -165,7 +165,7 @@ export class CryptoNewsClient {
   private timeout: number;
 
   constructor(options: { apiKey?: string; baseUrl?: string; timeout?: number } = {}) {
-    this.baseUrl = options.baseUrl || 'https://news-crypto.vercel.app';
+    this.baseUrl = options.baseUrl || 'https://cryptocurrency.cv';
     this.apiKey = options.apiKey;
     this.timeout = options.timeout || 30000;
   }

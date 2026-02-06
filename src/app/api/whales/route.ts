@@ -14,7 +14,7 @@ export async function GET(request: NextRequest) {
   const min_usd = searchParams.get('min_usd') || '1000000';
   
   // Forward to whale-alerts endpoint
-  const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://news-crypto.vercel.app';
+  const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://cryptocurrency.cv';
   
   try {
     const response = await fetch(

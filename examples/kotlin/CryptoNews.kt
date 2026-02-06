@@ -135,7 +135,7 @@ data class CoinPrice(
 
 class CryptoNewsClient(
     private val apiKey: String? = null,
-    private val baseUrl: String = "https://news-crypto.vercel.app"
+    private val baseUrl: String = "https://cryptocurrency.cv"
 ) {
     private val json = Json { 
         ignoreUnknownKeys = true 
@@ -255,7 +255,7 @@ class CryptoNewsClient(
 // ═══════════════════════════════════════════════════════════════
 
 class CryptoNewsStream(
-    private val baseUrl: String = "wss://news-crypto.vercel.app"
+    private val baseUrl: String = "wss://cryptocurrency.cv"
 ) {
     private val client = HttpClient(CIO) {
         install(WebSockets)

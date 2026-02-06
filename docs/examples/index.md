@@ -40,7 +40,7 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 client.on('interactionCreate', async interaction => {
   if (interaction.commandName === 'news') {
-    const res = await fetch('https://news-crypto.vercel.app/api/news?limit=5');
+    const res = await fetch('https://cryptocurrency.cv/api/news?limit=5');
     const { articles } = await res.json();
     
     const embed = {
@@ -67,7 +67,7 @@ import httpx
 
 async def news(update: Update, context):
     async with httpx.AsyncClient() as client:
-        r = await client.get("https://news-crypto.vercel.app/api/news?limit=5")
+        r = await client.get("https://cryptocurrency.cv/api/news?limit=5")
         articles = r.json()["articles"]
     
     message = "📰 *Latest Crypto News*\n\n"
@@ -90,9 +90,9 @@ import requests
 @tool
 def get_crypto_news(query: str = "") -> str:
     """Get latest cryptocurrency news. Optionally filter by search query."""
-    url = "https://news-crypto.vercel.app/api/news"
+    url = "https://cryptocurrency.cv/api/news"
     if query:
-        url = f"https://news-crypto.vercel.app/api/search?q={query}"
+        url = f"https://cryptocurrency.cv/api/search?q={query}"
     
     response = requests.get(url)
     articles = response.json()["articles"][:5]

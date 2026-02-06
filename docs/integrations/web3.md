@@ -22,13 +22,13 @@ Publish crypto news to the decentralized Nostr network.
 ### Get Published Events
 
 ```bash
-curl "https://news-crypto.vercel.app/api/nostr"
+curl "https://cryptocurrency.cv/api/nostr"
 ```
 
 ### Publish News to Nostr
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/nostr" \
+curl -X POST "https://cryptocurrency.cv/api/nostr" \
   -H "Content-Type: application/json" \
   -d '{
     "content": "Bitcoin breaks $100K milestone!",
@@ -60,14 +60,14 @@ curl -X POST "https://news-crypto.vercel.app/api/nostr" \
 import requests
 
 # Get events from Nostr
-events = requests.get("https://news-crypto.vercel.app/api/nostr").json()
+events = requests.get("https://cryptocurrency.cv/api/nostr").json()
 
 for event in events["events"]:
     print(f"[{event['created_at']}] {event['content']}")
 
 # Publish to Nostr
 response = requests.post(
-    "https://news-crypto.vercel.app/api/nostr",
+    "https://cryptocurrency.cv/api/nostr",
     json={
         "content": "ETH 2.0 staking rewards increase",
         "tags": ["ethereum", "staking"]
@@ -86,16 +86,16 @@ Archive news articles to decentralized, permanent storage.
 
 ```bash
 # Get all archived items
-curl "https://news-crypto.vercel.app/api/archive/ipfs"
+curl "https://cryptocurrency.cv/api/archive/ipfs"
 
 # Get specific CID
-curl "https://news-crypto.vercel.app/api/archive/ipfs?cid=QmYwAPJzv5..."
+curl "https://cryptocurrency.cv/api/archive/ipfs?cid=QmYwAPJzv5..."
 ```
 
 ### Archive New Content
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/archive/ipfs" \
+curl -X POST "https://cryptocurrency.cv/api/archive/ipfs" \
   -H "Content-Type: application/json" \
   -d '{
     "url": "https://coindesk.com/article/btc-100k",
@@ -130,7 +130,7 @@ curl -X POST "https://news-crypto.vercel.app/api/archive/ipfs" \
 
 ```javascript
 // Archive an article
-const archive = await fetch('https://news-crypto.vercel.app/api/archive/ipfs', {
+const archive = await fetch('https://cryptocurrency.cv/api/archive/ipfs', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
@@ -154,13 +154,13 @@ Provide news sentiment data for on-chain smart contracts.
 ### Get Oracle Data
 
 ```bash
-curl "https://news-crypto.vercel.app/api/oracle/chainlink"
+curl "https://cryptocurrency.cv/api/oracle/chainlink"
 ```
 
 ### Chainlink Job Format (POST)
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/oracle/chainlink" \
+curl -X POST "https://cryptocurrency.cv/api/oracle/chainlink" \
   -H "Content-Type: application/json" \
   -d '{
     "id": "1",
@@ -203,7 +203,7 @@ contract CryptoSentiment is ChainlinkClient {
             address(this),
             this.fulfill.selector
         );
-        req.add("get", "https://news-crypto.vercel.app/api/oracle/chainlink");
+        req.add("get", "https://cryptocurrency.cv/api/oracle/chainlink");
         req.add("path", "data.sentiment");
         sendChainlinkRequest(req, fee);
     }
@@ -223,13 +223,13 @@ Interactive news frames for Farcaster/Warpcast.
 ### Get Frame HTML
 
 ```bash
-curl "https://news-crypto.vercel.app/api/frames"
+curl "https://cryptocurrency.cv/api/frames"
 ```
 
 ### Handle Frame Actions
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/frames" \
+curl -X POST "https://cryptocurrency.cv/api/frames" \
   -H "Content-Type: application/json" \
   -d '{
     "untrustedData": {
@@ -255,7 +255,7 @@ curl -X POST "https://news-crypto.vercel.app/api/frames" \
 Share this URL in Warpcast to display the interactive frame:
 
 ```
-https://news-crypto.vercel.app/api/frames
+https://cryptocurrency.cv/api/frames
 ```
 
 ---
@@ -267,7 +267,7 @@ Bet on crypto news outcomes and track prediction accuracy.
 ### Get Active Markets
 
 ```bash
-curl "https://news-crypto.vercel.app/api/predictions/markets"
+curl "https://cryptocurrency.cv/api/predictions/markets"
 ```
 
 ### Response
@@ -299,7 +299,7 @@ curl "https://news-crypto.vercel.app/api/predictions/markets"
 ### Place a Bet (POST)
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/predictions/markets" \
+curl -X POST "https://cryptocurrency.cv/api/predictions/markets" \
   -H "Content-Type: application/json" \
   -d '{
     "marketId": "mkt_eth_etf_q1",
@@ -317,13 +317,13 @@ Generate AI video summaries of crypto news.
 ### Get Available Anchors
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ai-anchor"
+curl "https://cryptocurrency.cv/api/ai-anchor"
 ```
 
 ### Generate Video
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/ai-anchor" \
+curl -X POST "https://cryptocurrency.cv/api/ai-anchor" \
   -H "Content-Type: application/json" \
   -d '{
     "style": "professional",
@@ -347,7 +347,7 @@ curl -X POST "https://news-crypto.vercel.app/api/ai-anchor" \
 ### Check Video Status
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ai-anchor?jobId=vid_abc123"
+curl "https://cryptocurrency.cv/api/ai-anchor?jobId=vid_abc123"
 ```
 
 ### Available Anchors
@@ -390,11 +390,11 @@ npx hardhat verify --network mainnet DEPLOYED_ADDRESS
 
 ```python
 # Archive breaking news to IPFS immediately
-news = requests.get("https://news-crypto.vercel.app/api/breaking").json()
+news = requests.get("https://cryptocurrency.cv/api/breaking").json()
 
 for article in news["articles"][:5]:
     archived = requests.post(
-        "https://news-crypto.vercel.app/api/archive/ipfs",
+        "https://cryptocurrency.cv/api/archive/ipfs",
         json={"url": article["link"], "storage": "both"}
     ).json()
     print(f"Archived: {archived['archived']['cid']}")

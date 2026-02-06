@@ -26,7 +26,7 @@ Search across all news articles with powerful query options.
     from typing import Optional
     from datetime import datetime, timedelta
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     
     def search_news(
@@ -81,7 +81,7 @@ Search across all news articles with powerful query options.
 === "JavaScript"
 
     ```javascript
-    const BASE_URL = "https://news-crypto.vercel.app";
+    const BASE_URL = "https://cryptocurrency.cv";
     
     /**
      * Full-text search across all news articles.
@@ -118,13 +118,13 @@ Search across all news articles with powerful query options.
 
     ```bash
     # Basic search
-    curl "https://news-crypto.vercel.app/api/search?q=Ethereum%20ETF&limit=10"
+    curl "https://cryptocurrency.cv/api/search?q=Ethereum%20ETF&limit=10"
     
     # Search with date range
-    curl "https://news-crypto.vercel.app/api/search?q=Bitcoin&from=2026-01-01&to=2026-01-31"
+    curl "https://cryptocurrency.cv/api/search?q=Bitcoin&from=2026-01-01&to=2026-01-31"
     
     # Pretty print titles only
-    curl -s "https://news-crypto.vercel.app/api/search?q=DeFi" | jq '.articles[].title'
+    curl -s "https://cryptocurrency.cv/api/search?q=DeFi" | jq '.articles[].title'
     ```
 
 ---
@@ -288,10 +288,10 @@ Get the hottest topics being discussed right now.
 
     ```bash
     # Get top 10 trending topics
-    curl "https://news-crypto.vercel.app/api/trending?limit=10"
+    curl "https://cryptocurrency.cv/api/trending?limit=10"
     
     # Extract just keywords
-    curl -s "https://news-crypto.vercel.app/api/trending?limit=10" | \
+    curl -s "https://cryptocurrency.cv/api/trending?limit=10" | \
         jq '.topics[] | .keyword // .'
     ```
 
@@ -367,10 +367,10 @@ Discover and explore content organized by tags.
 
     ```bash
     # Get all tags
-    curl "https://news-crypto.vercel.app/api/tags"
+    curl "https://cryptocurrency.cv/api/tags"
     
     # Get specific category
-    curl "https://news-crypto.vercel.app/api/tags?category=coins"
+    curl "https://cryptocurrency.cv/api/tags?category=coins"
     ```
 
 ### Get Articles by Tag
@@ -442,10 +442,10 @@ Discover and explore content organized by tags.
 
     ```bash
     # Get articles tagged with 'bitcoin'
-    curl "https://news-crypto.vercel.app/api/tags/bitcoin?limit=10"
+    curl "https://cryptocurrency.cv/api/tags/bitcoin?limit=10"
     
     # Get DeFi articles
-    curl "https://news-crypto.vercel.app/api/tags/defi?limit=10"
+    curl "https://cryptocurrency.cv/api/tags/defi?limit=10"
     ```
 
 ---
@@ -464,7 +464,7 @@ Discover and explore content organized by tags.
     import requests
     from datetime import datetime, timedelta
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     
     class CryptoNewsSearch:
@@ -549,7 +549,7 @@ Discover and explore content organized by tags.
      * Interactive CLI for searching crypto news.
      */
     
-    const BASE_URL = "https://news-crypto.vercel.app";
+    const BASE_URL = "https://cryptocurrency.cv";
     
     class CryptoNewsSearch {
         async search(query, options = {}) {

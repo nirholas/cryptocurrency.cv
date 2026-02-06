@@ -11,7 +11,7 @@ import json
 from typing import Optional, List
 from datetime import datetime, timedelta
 
-BASE_URL = "https://news-crypto.vercel.app"
+BASE_URL = "https://cryptocurrency.cv"
 
 
 # =============================================================================

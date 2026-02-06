@@ -8,7 +8,7 @@
     "alarms"
   ],
   "host_permissions": [
-    "https://news-crypto.vercel.app/*"
+    "https://cryptocurrency.cv/*"
   ],
   "action": {
     "default_popup": "popup.html",

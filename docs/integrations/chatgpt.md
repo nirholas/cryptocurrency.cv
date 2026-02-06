@@ -18,14 +18,14 @@ The Free Crypto News ChatGPT Plugin allows ChatGPT to access real-time crypto ne
 2. Go to **Settings** → **Beta features**
 3. Enable **Plugins**
 4. Click **Plugin store** → **Install an unverified plugin**
-5. Enter: `https://news-crypto.vercel.app`
+5. Enter: `https://cryptocurrency.cv`
 6. Click **Install**
 
 ### For ChatGPT Enterprise
 
 Contact your administrator to whitelist:
 ```
-https://news-crypto.vercel.app
+https://cryptocurrency.cv
 ```
 
 ## Available Actions
@@ -64,7 +64,7 @@ ChatGPT will return news from the last 2 hours.
 
 The plugin uses the OpenAPI specification at:
 ```
-https://news-crypto.vercel.app/chatgpt/openapi.yaml
+https://cryptocurrency.cv/chatgpt/openapi.yaml
 ```
 
 ### Endpoints
@@ -123,7 +123,7 @@ Based on recent coverage:
 
 The plugin manifest is available at:
 ```
-https://news-crypto.vercel.app/.well-known/ai-plugin.json
+https://cryptocurrency.cv/.well-known/ai-plugin.json
 ```
 
 ```json
@@ -136,7 +136,7 @@ https://news-crypto.vercel.app/.well-known/ai-plugin.json
   "auth": { "type": "none" },
   "api": {
     "type": "openapi",
-    "url": "https://news-crypto.vercel.app/chatgpt/openapi.yaml"
+    "url": "https://cryptocurrency.cv/chatgpt/openapi.yaml"
   }
 }
 ```
@@ -163,7 +163,7 @@ https://your-domain.vercel.app
 
 Check if the API is accessible:
 ```bash
-curl https://news-crypto.vercel.app/api/health
+curl https://cryptocurrency.cv/api/health
 ```
 
 ### Rate Limiting

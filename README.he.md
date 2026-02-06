@@ -18,7 +18,7 @@
 קבלו חדשות קריפטו בזמן אמת מ-**200+ מקורות** עם קריאת API אחת.
 
 ```bash
-curl https://news-crypto.vercel.app/api/news
+curl https://cryptocurrency.cv/api/news
 ```
 
 ---
@@ -41,13 +41,13 @@ curl https://news-crypto.vercel.app/api/news
 
 ```bash
 # חדשות אחרונות
-curl "https://news-crypto.vercel.app/api/news?limit=10"
+curl "https://cryptocurrency.cv/api/news?limit=10"
 
 # חדשות ביטקוין
-curl "https://news-crypto.vercel.app/api/news?ticker=BTC"
+curl "https://cryptocurrency.cv/api/news?ticker=BTC"
 
 # חדשות חמות
-curl "https://news-crypto.vercel.app/api/breaking"
+curl "https://cryptocurrency.cv/api/breaking"
 ```
 
 ### דוגמת Python
@@ -55,7 +55,7 @@ curl "https://news-crypto.vercel.app/api/breaking"
 ```python
 import requests
 
-BASE_URL = "https://news-crypto.vercel.app"
+BASE_URL = "https://cryptocurrency.cv"
 
 # קבל חדשות אחרונות
 news = requests.get(f"{BASE_URL}/api/news?limit=10").json()
@@ -74,7 +74,7 @@ print(f"שוק: {fg['classification']} ({fg['value']}/100)")
 ### דוגמת JavaScript
 
 ```javascript
-const BASE_URL = 'https://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
 
 // קבל חדשות אחרונות
 const news = await fetch(`${BASE_URL}/api/news?limit=10`).then(r => r.json());
@@ -123,10 +123,10 @@ console.log(summary.summary);
 
 ```bash
 # חדשות בעברית (אם זמינות)
-curl "https://news-crypto.vercel.app/api/news/international?language=he"
+curl "https://cryptocurrency.cv/api/news/international?language=he"
 
 # עם תרגום לאנגלית
-curl "https://news-crypto.vercel.app/api/news/international?language=ko&translate=true"
+curl "https://cryptocurrency.cv/api/news/international?language=ko&translate=true"
 ```
 
 ---
@@ -145,8 +145,8 @@ npm start
 
 ## 🔗 קישורים
 
-- **API**: https://news-crypto.vercel.app
-- **תיעוד**: https://news-crypto.vercel.app/docs
+- **API**: https://cryptocurrency.cv
+- **תיעוד**: https://cryptocurrency.cv/docs
 - **GitHub**: https://github.com/AItoolsbyai/free-crypto-news
 
 ---

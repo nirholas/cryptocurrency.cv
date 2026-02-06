@@ -47,7 +47,7 @@ const app = new App({
   appToken: process.env.SLACK_APP_TOKEN,
 });
 
-const API_BASE = 'https://news-crypto.vercel.app/api';
+const API_BASE = 'https://cryptocurrency.cv/api';
 
 // Fetch news
 async function getNews(limit = 5, category = null) {

@@ -29,7 +29,7 @@ Get a comprehensive AI-generated summary of the day's most important crypto news
     def get_daily_digest(period: str = "24h", format: str = "detailed"):
         """Get AI-generated daily digest."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/digest",
+            "https://cryptocurrency.cv/api/digest",
             params={"period": period, "format": format}
         )
         return response.json()
@@ -57,7 +57,7 @@ Get a comprehensive AI-generated summary of the day's most important crypto news
     async function getDailyDigest(period = '24h', format = 'detailed') {
         const params = new URLSearchParams({ period, format });
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/digest?${params}`
+            `https://cryptocurrency.cv/api/digest?${params}`
         );
         return response.json();
     }
@@ -79,10 +79,10 @@ Get a comprehensive AI-generated summary of the day's most important crypto news
 === "cURL"
     ```bash
     # Get daily digest
-    curl "https://news-crypto.vercel.app/api/digest?period=24h&format=detailed" | jq
+    curl "https://cryptocurrency.cv/api/digest?period=24h&format=detailed" | jq
     
     # Get weekly digest
-    curl "https://news-crypto.vercel.app/api/digest?period=7d" | jq '.summary'
+    curl "https://cryptocurrency.cv/api/digest?period=7d" | jq '.summary'
     ```
 
 ---
@@ -98,7 +98,7 @@ Summarize any crypto article by URL.
     def summarize_article(url: str, max_sentences: int = 3):
         """Summarize an article from URL."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/summarize",
+            "https://cryptocurrency.cv/api/summarize",
             params={"url": url, "sentences": max_sentences}
         )
         return response.json()
@@ -119,7 +119,7 @@ Summarize any crypto article by URL.
     async function summarizeArticle(url, sentences = 3) {
         const params = new URLSearchParams({ url, sentences: sentences.toString() });
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/summarize?${params}`
+            `https://cryptocurrency.cv/api/summarize?${params}`
         );
         return response.json();
     }
@@ -136,7 +136,7 @@ Summarize any crypto article by URL.
 === "cURL"
     ```bash
     # Summarize an article
-    curl -G "https://news-crypto.vercel.app/api/summarize" \
+    curl -G "https://cryptocurrency.cv/api/summarize" \
       --data-urlencode "url=https://www.coindesk.com/article-example" \
       | jq '.summary'
     ```
@@ -158,7 +158,7 @@ Ask natural language questions about crypto markets and news.
             params["context"] = context
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/ask",
+            "https://cryptocurrency.cv/api/ask",
             params=params
         )
         return response.json()
@@ -184,7 +184,7 @@ Ask natural language questions about crypto markets and news.
         if (context) params.set('context', context);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/ask?${params}`
+            `https://cryptocurrency.cv/api/ask?${params}`
         );
         return response.json();
     }
@@ -206,12 +206,12 @@ Ask natural language questions about crypto markets and news.
 === "cURL"
     ```bash
     # Ask a question
-    curl -G "https://news-crypto.vercel.app/api/ask" \
+    curl -G "https://cryptocurrency.cv/api/ask" \
       --data-urlencode "q=What's driving Bitcoin's price today?" \
       | jq '.answer'
     
     # With context
-    curl -G "https://news-crypto.vercel.app/api/ask" \
+    curl -G "https://cryptocurrency.cv/api/ask" \
       --data-urlencode "q=Should I buy?" \
       --data-urlencode "context=Bitcoin is at $60,000" \
       | jq '.answer'
@@ -235,7 +235,7 @@ Get a professionally formatted market brief suitable for newsletters or reports.
             params["date"] = date
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/ai/brief",
+            "https://cryptocurrency.cv/api/ai/brief",
             params=params
         )
         return response.json()
@@ -261,7 +261,7 @@ Get a professionally formatted market brief suitable for newsletters or reports.
         if (date) params.set('date', date);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/ai/brief?${params}`
+            `https://cryptocurrency.cv/api/ai/brief?${params}`
         );
         return response.json();
     }
@@ -285,10 +285,10 @@ Get a professionally formatted market brief suitable for newsletters or reports.
 === "cURL"
     ```bash
     # Get newsletter format brief
-    curl "https://news-crypto.vercel.app/api/ai/brief?format=newsletter" | jq
+    curl "https://cryptocurrency.cv/api/ai/brief?format=newsletter" | jq
     
     # Get specific date brief
-    curl "https://news-crypto.vercel.app/api/ai/brief?date=2024-01-15" | jq '.content'
+    curl "https://cryptocurrency.cv/api/ai/brief?date=2024-01-15" | jq '.content'
     ```
 
 ---
@@ -308,7 +308,7 @@ Generate balanced debates on controversial crypto topics.
             payload["article"] = article
         
         response = requests.post(
-            "https://news-crypto.vercel.app/api/ai/debate",
+            "https://cryptocurrency.cv/api/ai/debate",
             json=payload
         )
         return response.json()
@@ -338,7 +338,7 @@ Generate balanced debates on controversial crypto topics.
     ```javascript
     async function generateDebate(topic, article = null) {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/ai/debate',
+            'https://cryptocurrency.cv/api/ai/debate',
             {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -369,7 +369,7 @@ Generate balanced debates on controversial crypto topics.
 === "cURL"
     ```bash
     # Generate debate
-    curl -X POST "https://news-crypto.vercel.app/api/ai/debate" \
+    curl -X POST "https://cryptocurrency.cv/api/ai/debate" \
       -H "Content-Type: application/json" \
       -d '{"topic": "Bitcoin will replace gold as the primary store of value"}' \
       | jq
@@ -392,7 +392,7 @@ Generate counter-arguments to any claim.
             payload["context"] = context
         
         response = requests.post(
-            "https://news-crypto.vercel.app/api/ai/counter",
+            "https://cryptocurrency.cv/api/ai/counter",
             json=payload
         )
         return response.json()
@@ -417,7 +417,7 @@ Generate counter-arguments to any claim.
     ```javascript
     async function generateCounter(claim, context = null) {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/ai/counter',
+            'https://cryptocurrency.cv/api/ai/counter',
             {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -439,7 +439,7 @@ Generate counter-arguments to any claim.
 === "cURL"
     ```bash
     # Generate counter-arguments
-    curl -X POST "https://news-crypto.vercel.app/api/ai/counter" \
+    curl -X POST "https://cryptocurrency.cv/api/ai/counter" \
       -H "Content-Type: application/json" \
       -d '{"claim": "Ethereum will flip Bitcoin by 2025"}' \
       | jq '.counterArguments'
@@ -464,7 +464,7 @@ Query an AI agent that can perform complex research tasks.
             payload["timeHorizon"] = time_horizon
         
         response = requests.post(
-            "https://news-crypto.vercel.app/api/ai/agent",
+            "https://cryptocurrency.cv/api/ai/agent",
             json=payload
         )
         return response.json()
@@ -496,7 +496,7 @@ Query an AI agent that can perform complex research tasks.
     ```javascript
     async function queryAIAgent(question, options = {}) {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/ai/agent',
+            'https://cryptocurrency.cv/api/ai/agent',
             {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -526,7 +526,7 @@ Query an AI agent that can perform complex research tasks.
 === "cURL"
     ```bash
     # Query AI agent
-    curl -X POST "https://news-crypto.vercel.app/api/ai/agent" \
+    curl -X POST "https://cryptocurrency.cv/api/ai/agent" \
       -H "Content-Type: application/json" \
       -d '{
         "question": "What are the key factors affecting BTC price?",
@@ -548,7 +548,7 @@ Detect AI-generated content in articles or text.
     def detect_ai_content(text: str, quick: bool = False):
         """Detect if content is AI-generated."""
         response = requests.post(
-            "https://news-crypto.vercel.app/api/detect/ai-content",
+            "https://cryptocurrency.cv/api/detect/ai-content",
             json={"text": text, "quick": quick}
         )
         return response.json()
@@ -556,7 +556,7 @@ Detect AI-generated content in articles or text.
     def detect_ai_content_batch(texts: list):
         """Batch detect AI content."""
         response = requests.post(
-            "https://news-crypto.vercel.app/api/detect/ai-content",
+            "https://cryptocurrency.cv/api/detect/ai-content",
             json={"texts": texts}
         )
         return response.json()
@@ -586,7 +586,7 @@ Detect AI-generated content in articles or text.
     ```javascript
     async function detectAIContent(text, quick = false) {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/detect/ai-content',
+            'https://cryptocurrency.cv/api/detect/ai-content',
             {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -598,7 +598,7 @@ Detect AI-generated content in articles or text.
     
     async function detectAIContentBatch(texts) {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/detect/ai-content',
+            'https://cryptocurrency.cv/api/detect/ai-content',
             {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -624,13 +624,13 @@ Detect AI-generated content in articles or text.
 === "cURL"
     ```bash
     # Detect AI content in text
-    curl -X POST "https://news-crypto.vercel.app/api/detect/ai-content" \
+    curl -X POST "https://cryptocurrency.cv/api/detect/ai-content" \
       -H "Content-Type: application/json" \
       -d '{"text": "Bitcoin is showing bullish momentum today."}' \
       | jq
     
     # Batch detection
-    curl -X POST "https://news-crypto.vercel.app/api/detect/ai-content" \
+    curl -X POST "https://cryptocurrency.cv/api/detect/ai-content" \
       -H "Content-Type: application/json" \
       -d '{"texts": ["First article...", "Second article..."]}' \
       | jq
@@ -647,7 +647,7 @@ Use the unified `/api/ai` endpoint for any AI action.
     import requests
     
     class AIClient:
-        BASE_URL = "https://news-crypto.vercel.app/api/ai"
+        BASE_URL = "https://cryptocurrency.cv/api/ai"
         
         def request(self, action: str, **kwargs):
             """Make unified AI request."""
@@ -685,7 +685,7 @@ Use the unified `/api/ai` endpoint for any AI action.
 === "JavaScript"
     ```javascript
     class AIClient {
-        constructor(baseUrl = 'https://news-crypto.vercel.app/api/ai') {
+        constructor(baseUrl = 'https://cryptocurrency.cv/api/ai') {
             this.baseUrl = baseUrl;
         }
         
@@ -730,12 +730,12 @@ Use the unified `/api/ai` endpoint for any AI action.
 === "cURL"
     ```bash
     # Summarize
-    curl -X POST "https://news-crypto.vercel.app/api/ai" \
+    curl -X POST "https://cryptocurrency.cv/api/ai" \
       -H "Content-Type: application/json" \
       -d '{"action": "summarize", "text": "Bitcoin ETF..."}' | jq
     
     # Sentiment analysis
-    curl -X POST "https://news-crypto.vercel.app/api/ai" \
+    curl -X POST "https://cryptocurrency.cv/api/ai" \
       -H "Content-Type: application/json" \
       -d '{"action": "sentiment", "text": "Bitcoin ETF..."}' | jq
     ```
@@ -757,7 +757,7 @@ from typing import Optional
 class CryptoAIAnalyzer:
     """AI-powered crypto analysis client."""
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     def __init__(self):
         self.session = requests.Session()

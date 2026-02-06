@@ -5,7 +5,7 @@
 
 import { NextResponse } from 'next/server';
 
-const BASE_URL = 'https://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
 
 interface Article {
   title: string;
@@ -100,8 +100,8 @@ export async function GET() {
       <height>192</height>
     </image>
     <copyright>MIT License - Free Crypto News ${new Date().getFullYear()}</copyright>
-    <managingEditor>noreply@news-crypto.vercel.app (Free Crypto News)</managingEditor>
-    <webMaster>noreply@news-crypto.vercel.app (Free Crypto News)</webMaster>
+    <managingEditor>noreply@cryptocurrency.cv (Free Crypto News)</managingEditor>
+    <webMaster>noreply@cryptocurrency.cv (Free Crypto News)</webMaster>
     <category>Technology</category>
     <category>Finance</category>
     <category>Cryptocurrency</category>

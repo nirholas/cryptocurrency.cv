@@ -59,7 +59,7 @@ Add to your Claude Desktop configuration (`~/Library/Application Support/Claude/
       "command": "node",
       "args": ["/path/to/mcp/index.js"],
       "env": {
-        "FCN_BASE_URL": "https://news-crypto.vercel.app"
+        "FCN_BASE_URL": "https://cryptocurrency.cv"
       }
     }
   }
@@ -274,7 +274,7 @@ curl -X POST http://localhost:3001/mcp \
 | Variable | Default | Description |
 |----------|---------|-------------|
 | `PORT` | `3001` | HTTP server port |
-| `API_BASE` | `https://news-crypto.vercel.app` | Backend API URL |
+| `API_BASE` | `https://cryptocurrency.cv` | Backend API URL |
 
 ## Troubleshooting
 
@@ -289,7 +289,7 @@ curl -X POST http://localhost:3001/mcp \
 Check if the API is accessible:
 
 ```bash
-curl https://news-crypto.vercel.app/api/health
+curl https://cryptocurrency.cv/api/health
 ```
 
 ### ChatGPT Not Seeing Tools

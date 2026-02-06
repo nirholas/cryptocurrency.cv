@@ -21,7 +21,7 @@
 Makakuha ng real-time na crypto news mula sa **200+ mga pinagmulan** sa isang API call.
 
 ```bash
-curl https://news-crypto.vercel.app/api/news
+curl https://cryptocurrency.cv/api/news
 ```
 
 ---
@@ -55,13 +55,13 @@ Makakuha ng crypto news mula sa **75 internasyonal na pinagmulan** sa 18 wika â€
 
 ```bash
 # Kunin ang pinakabagong balita
-curl "https://news-crypto.vercel.app/api/news?limit=10"
+curl "https://cryptocurrency.cv/api/news?limit=10"
 
 # Kunin ang Bitcoin sentiment
-curl "https://news-crypto.vercel.app/api/ai/sentiment?asset=BTC"
+curl "https://cryptocurrency.cv/api/ai/sentiment?asset=BTC"
 
 # Maghanap ng mga artikulo
-curl "https://news-crypto.vercel.app/api/search?q=ethereum%20upgrade"
+curl "https://cryptocurrency.cv/api/search?q=ethereum%20upgrade"
 ```
 
 ---

@@ -125,7 +125,7 @@ The collection uses these variables:
 
 | Variable | Default Value | Description |
 |----------|---------------|-------------|
-| `baseUrl` | `https://news-crypto.vercel.app` | API base URL |
+| `baseUrl` | `https://cryptocurrency.cv` | API base URL |
 | `apiKey` | (empty) | Optional API key |
 
 ### Setting Variables

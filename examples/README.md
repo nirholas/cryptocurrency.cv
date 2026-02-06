@@ -2,7 +2,7 @@
 
 Complete examples and SDK implementations for all 184 API endpoints across 5 programming languages + AI agent templates.
 
-[![API Status](https://img.shields.io/badge/API-Live-brightgreen)](https://news-crypto.vercel.app)
+[![API Status](https://img.shields.io/badge/API-Live-brightgreen)](https://cryptocurrency.cv)
 [![License](https://img.shields.io/badge/License-MIT-blue)](../LICENSE)
 [![Tutorials](https://img.shields.io/badge/Tutorials-19%20Guides-purple)](../docs/tutorials/index.md)
 
@@ -54,7 +54,7 @@ pip install -r requirements.txt
 ```python
 import requests
 
-BASE_URL = "https://news-crypto.vercel.app"
+BASE_URL = "https://cryptocurrency.cv"
 
 # Get latest crypto news
 response = requests.get(f"{BASE_URL}/api/news", params={"limit": 10})
@@ -104,7 +104,7 @@ npm install
 ### Quick Start
 
 ```javascript
-const BASE_URL = 'https://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
 
 // Get latest crypto news
 const newsResponse = await fetch(`${BASE_URL}/api/news?limit=10`);
@@ -405,13 +405,13 @@ cd examples/kotlin
 
 ```bash
 # Get latest news
-curl "https://news-crypto.vercel.app/api/news?limit=10"
+curl "https://cryptocurrency.cv/api/news?limit=10"
 
 # Get Bitcoin sentiment
-curl "https://news-crypto.vercel.app/api/ai/sentiment?asset=BTC"
+curl "https://cryptocurrency.cv/api/ai/sentiment?asset=BTC"
 
 # Get Fear & Greed Index
-curl "https://news-crypto.vercel.app/api/market/fear-greed"
+curl "https://cryptocurrency.cv/api/market/fear-greed"
 ```
 
 Run all examples:
@@ -586,7 +586,7 @@ node realtime-stream.js
 
 ## No API Keys Required!
 
-All examples connect to the free API at `https://news-crypto.vercel.app` - no authentication needed.
+All examples connect to the free API at `https://cryptocurrency.cv` - no authentication needed.
 
 ## Self-Hosted
 
@@ -675,7 +675,7 @@ go run x402-client.go
 | `/api/v1/analysis` | $0.005 |
 | `/api/v1/export` | $0.01 |
 
-Check all endpoints at: `https://news-crypto.vercel.app/api/.well-known/x402`
+Check all endpoints at: `https://cryptocurrency.cv/api/.well-known/x402`
 
 ---
 
@@ -764,5 +764,5 @@ Check all endpoints at: `https://news-crypto.vercel.app/api/.well-known/x402`
 
 **Made with ❤️ by the Free Crypto News Team**
 
-🌐 [Website](https://news-crypto.vercel.app) | 📚 [Docs](https://news-crypto.vercel.app/docs) | 🐙 [GitHub](https://github.com/nirholas/free-crypto-news)
+🌐 [Website](https://cryptocurrency.cv) | 📚 [Docs](https://cryptocurrency.cv/docs) | 🐙 [GitHub](https://github.com/nirholas/free-crypto-news)
 

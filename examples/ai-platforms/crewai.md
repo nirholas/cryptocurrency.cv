@@ -41,7 +41,7 @@ from pydantic import BaseModel, Field
 import requests
 
 
-API_BASE = "https://news-crypto.vercel.app"
+API_BASE = "https://cryptocurrency.cv"
 
 
 def fetch_api(endpoint: str, params: dict = None) -> dict:
@@ -733,4 +733,4 @@ RECOMMENDATIONS
 - **CrewAI Docs:** https://docs.crewai.com
 - **CrewAI GitHub:** https://github.com/crewAIInc/crewAI
 - **CrewAI Tools:** https://github.com/crewAIInc/crewAI-tools
-- **Free Crypto News API:** https://news-crypto.vercel.app
+- **Free Crypto News API:** https://cryptocurrency.cv

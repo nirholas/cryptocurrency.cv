@@ -23,7 +23,7 @@ pip install langchain langchain-openai httpx
 from langchain.tools import tool
 import httpx
 
-API_BASE = "https://news-crypto.vercel.app/api"
+API_BASE = "https://cryptocurrency.cv/api"
 
 
 @tool

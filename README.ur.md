@@ -23,7 +23,7 @@
 **200+ ذرائع** سے ریئل ٹائم کرپٹو خبریں ایک API کال سے حاصل کریں۔
 
 ```bash
-curl https://news-crypto.vercel.app/api/news
+curl https://cryptocurrency.cv/api/news
 ```
 
 ---
@@ -57,13 +57,13 @@ curl https://news-crypto.vercel.app/api/news
 
 ```bash
 # تازہ ترین خبریں حاصل کریں
-curl "https://news-crypto.vercel.app/api/news?limit=10"
+curl "https://cryptocurrency.cv/api/news?limit=10"
 
 # Bitcoin sentiment حاصل کریں
-curl "https://news-crypto.vercel.app/api/ai/sentiment?asset=BTC"
+curl "https://cryptocurrency.cv/api/ai/sentiment?asset=BTC"
 
 # مضامین تلاش کریں
-curl "https://news-crypto.vercel.app/api/search?q=ethereum%20upgrade"
+curl "https://cryptocurrency.cv/api/search?q=ethereum%20upgrade"
 ```
 
 ---

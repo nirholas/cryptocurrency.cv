@@ -10,7 +10,7 @@ export const revalidate = 3600; // 1 hour
  * Returns all available news categories with source counts.
  * 
  * @example
- * curl https://news-crypto.vercel.app/api/news/categories
+ * curl https://cryptocurrency.cv/api/news/categories
  * 
  * Response:
  * {

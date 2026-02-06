@@ -6,7 +6,7 @@
  * 
  * To get your token:
  * 1. Go to https://search.google.com/search-console
- * 2. Add your property (https://news-crypto.vercel.app)
+ * 2. Add your property (https://cryptocurrency.cv)
  * 3. Choose "HTML tag" verification method
  * 4. Copy the content value from the meta tag
  * 5. Set GOOGLE_SITE_VERIFICATION environment variable

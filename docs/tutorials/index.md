@@ -2,7 +2,7 @@
 
 Complete tutorials and code examples for building with the Free Crypto News API. Every endpoint is covered with working code in multiple languages.
 
-**Base URL:** `https://news-crypto.vercel.app`
+**Base URL:** `https://cryptocurrency.cv`
 
 ---
 
@@ -14,7 +14,7 @@ Complete tutorials and code examples for building with the Free Crypto News API.
     import requests
     
     # Fetch latest news
-    response = requests.get("https://news-crypto.vercel.app/api/news?limit=5")
+    response = requests.get("https://cryptocurrency.cv/api/news?limit=5")
     news = response.json()
     
     for article in news["articles"]:
@@ -25,7 +25,7 @@ Complete tutorials and code examples for building with the Free Crypto News API.
 
     ```javascript
     // Fetch latest news
-    const response = await fetch("https://news-crypto.vercel.app/api/news?limit=5");
+    const response = await fetch("https://cryptocurrency.cv/api/news?limit=5");
     const news = await response.json();
     
     news.articles.forEach(article => {
@@ -36,7 +36,7 @@ Complete tutorials and code examples for building with the Free Crypto News API.
 === "cURL"
 
     ```bash
-    curl "https://news-crypto.vercel.app/api/news?limit=5" | jq '.articles[].title'
+    curl "https://cryptocurrency.cv/api/news?limit=5" | jq '.articles[].title'
     ```
 
 ---

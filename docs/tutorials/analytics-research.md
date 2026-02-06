@@ -28,7 +28,7 @@ Identify and track emerging narratives in the crypto space.
     def get_narratives(period: str = "24h", limit: int = 10):
         """Detect narrative clusters in news."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/narratives",
+            "https://cryptocurrency.cv/api/narratives",
             params={"period": period, "limit": limit}
         )
         return response.json()
@@ -74,7 +74,7 @@ Identify and track emerging narratives in the crypto space.
     async function getNarratives(period = '24h', limit = 10) {
         const params = new URLSearchParams({ period, limit: limit.toString() });
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/narratives?${params}`
+            `https://cryptocurrency.cv/api/narratives?${params}`
         );
         return response.json();
     }
@@ -108,13 +108,13 @@ Identify and track emerging narratives in the crypto space.
 === "cURL"
     ```bash
     # Get narratives for last 24 hours
-    curl "https://news-crypto.vercel.app/api/narratives?period=24h&limit=10" | jq
+    curl "https://cryptocurrency.cv/api/narratives?period=24h&limit=10" | jq
     
     # Get weekly narratives
-    curl "https://news-crypto.vercel.app/api/narratives?period=7d" | jq '.narratives[:5]'
+    curl "https://cryptocurrency.cv/api/narratives?period=7d" | jq '.narratives[:5]'
     
     # Extract just themes
-    curl "https://news-crypto.vercel.app/api/narratives" | jq '.narratives[].theme'
+    curl "https://cryptocurrency.cv/api/narratives" | jq '.narratives[].theme'
     ```
 
 ---
@@ -136,7 +136,7 @@ Track regulatory developments across jurisdictions.
             params["type"] = type
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/regulatory",
+            "https://cryptocurrency.cv/api/regulatory",
             params=params
         )
         return response.json()
@@ -178,7 +178,7 @@ Track regulatory developments across jurisdictions.
         if (type) params.set('type', type);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/regulatory?${params}`
+            `https://cryptocurrency.cv/api/regulatory?${params}`
         );
         return response.json();
     }
@@ -215,13 +215,13 @@ Track regulatory developments across jurisdictions.
 === "cURL"
     ```bash
     # Get all regulatory news
-    curl "https://news-crypto.vercel.app/api/regulatory" | jq
+    curl "https://cryptocurrency.cv/api/regulatory" | jq
     
     # Filter by jurisdiction
-    curl "https://news-crypto.vercel.app/api/regulatory?jurisdiction=US" | jq '.items[:5]'
+    curl "https://cryptocurrency.cv/api/regulatory?jurisdiction=US" | jq '.items[:5]'
     
     # Filter by type (e.g., enforcement, legislation)
-    curl "https://news-crypto.vercel.app/api/regulatory?type=enforcement" | jq
+    curl "https://cryptocurrency.cv/api/regulatory?type=enforcement" | jq
     ```
 
 ---
@@ -241,7 +241,7 @@ Track crypto influencers and their impact.
             params["platform"] = platform
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/influencers",
+            "https://cryptocurrency.cv/api/influencers",
             params=params
         )
         return response.json()
@@ -283,7 +283,7 @@ Track crypto influencers and their impact.
         if (platform) params.set('platform', platform);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/influencers?${params}`
+            `https://cryptocurrency.cv/api/influencers?${params}`
         );
         return response.json();
     }
@@ -312,13 +312,13 @@ Track crypto influencers and their impact.
 === "cURL"
     ```bash
     # Get top influencers
-    curl "https://news-crypto.vercel.app/api/influencers?limit=10" | jq
+    curl "https://cryptocurrency.cv/api/influencers?limit=10" | jq
     
     # Filter by platform
-    curl "https://news-crypto.vercel.app/api/influencers?platform=twitter" | jq
+    curl "https://cryptocurrency.cv/api/influencers?platform=twitter" | jq
     
     # Sort by engagement
-    curl "https://news-crypto.vercel.app/api/influencers?sortBy=engagement" | jq '.influencers[:5]'
+    curl "https://cryptocurrency.cv/api/influencers?sortBy=engagement" | jq '.influencers[:5]'
     ```
 
 ---
@@ -339,7 +339,7 @@ Detect unusual patterns in news and market activity.
             params["severity"] = severity
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/analytics/anomalies",
+            "https://cryptocurrency.cv/api/analytics/anomalies",
             params=params
         )
         return response.json()
@@ -381,7 +381,7 @@ Detect unusual patterns in news and market activity.
         if (severity) params.set('severity', severity);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/analytics/anomalies?${params}`
+            `https://cryptocurrency.cv/api/analytics/anomalies?${params}`
         );
         return response.json();
     }
@@ -419,13 +419,13 @@ Detect unusual patterns in news and market activity.
 === "cURL"
     ```bash
     # Get all anomalies
-    curl "https://news-crypto.vercel.app/api/analytics/anomalies?hours=24" | jq
+    curl "https://cryptocurrency.cv/api/analytics/anomalies?hours=24" | jq
     
     # Get critical anomalies only
-    curl "https://news-crypto.vercel.app/api/analytics/anomalies?severity=critical" | jq
+    curl "https://cryptocurrency.cv/api/analytics/anomalies?severity=critical" | jq
     
     # Get high and critical
-    curl "https://news-crypto.vercel.app/api/analytics/anomalies?severity=high" | jq '.anomalies'
+    curl "https://cryptocurrency.cv/api/analytics/anomalies?severity=high" | jq '.anomalies'
     ```
 
 ---
@@ -441,7 +441,7 @@ Track changes and patterns in news headlines.
     def get_headlines(hours: int = 24, changes_only: bool = False):
         """Track headline patterns and changes."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/analytics/headlines",
+            "https://cryptocurrency.cv/api/analytics/headlines",
             params={"hours": hours, "changesOnly": changes_only}
         )
         return response.json()
@@ -483,7 +483,7 @@ Track changes and patterns in news headlines.
         });
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/analytics/headlines?${params}`
+            `https://cryptocurrency.cv/api/analytics/headlines?${params}`
         );
         return response.json();
     }
@@ -520,13 +520,13 @@ Track changes and patterns in news headlines.
 === "cURL"
     ```bash
     # Get headline analysis
-    curl "https://news-crypto.vercel.app/api/analytics/headlines?hours=24" | jq
+    curl "https://cryptocurrency.cv/api/analytics/headlines?hours=24" | jq
     
     # Get only changed headlines
-    curl "https://news-crypto.vercel.app/api/analytics/headlines?changesOnly=true" | jq
+    curl "https://cryptocurrency.cv/api/analytics/headlines?changesOnly=true" | jq
     
     # Get patterns
-    curl "https://news-crypto.vercel.app/api/analytics/headlines" | jq '.patterns'
+    curl "https://cryptocurrency.cv/api/analytics/headlines" | jq '.patterns'
     ```
 
 ---
@@ -546,7 +546,7 @@ Analyze credibility scores for news sources.
             params["source"] = source
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/analytics/credibility",
+            "https://cryptocurrency.cv/api/analytics/credibility",
             params=params
         )
         return response.json()
@@ -587,7 +587,7 @@ Analyze credibility scores for news sources.
         if (source) params.set('source', source);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/analytics/credibility?${params}`
+            `https://cryptocurrency.cv/api/analytics/credibility?${params}`
         );
         return response.json();
     }
@@ -621,13 +621,13 @@ Analyze credibility scores for news sources.
 === "cURL"
     ```bash
     # Get all sources sorted by credibility
-    curl "https://news-crypto.vercel.app/api/analytics/credibility?sortBy=score" | jq
+    curl "https://cryptocurrency.cv/api/analytics/credibility?sortBy=score" | jq
     
     # Get specific source credibility
-    curl "https://news-crypto.vercel.app/api/analytics/credibility?source=coindesk" | jq
+    curl "https://cryptocurrency.cv/api/analytics/credibility?source=coindesk" | jq
     
     # Get top 5 sources
-    curl "https://news-crypto.vercel.app/api/analytics/credibility" | jq '.sources[:5]'
+    curl "https://cryptocurrency.cv/api/analytics/credibility" | jq '.sources[:5]'
     ```
 
 ---
@@ -651,7 +651,7 @@ Understand cause-and-effect relationships between events and market movements.
             params["asset"] = asset
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/analytics/causality",
+            "https://cryptocurrency.cv/api/analytics/causality",
             params=params
         )
         return response.json()
@@ -690,7 +690,7 @@ Understand cause-and-effect relationships between events and market movements.
         if (asset) params.set('asset', asset);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/analytics/causality?${params}`
+            `https://cryptocurrency.cv/api/analytics/causality?${params}`
         );
         return response.json();
     }
@@ -723,13 +723,13 @@ Understand cause-and-effect relationships between events and market movements.
 === "cURL"
     ```bash
     # Get causal analysis for BTC
-    curl "https://news-crypto.vercel.app/api/analytics/causality?asset=BTC" | jq
+    curl "https://cryptocurrency.cv/api/analytics/causality?asset=BTC" | jq
     
     # Get specific event analysis
-    curl "https://news-crypto.vercel.app/api/analytics/causality?eventId=evt_123" | jq
+    curl "https://cryptocurrency.cv/api/analytics/causality?eventId=evt_123" | jq
     
     # Get by event type
-    curl "https://news-crypto.vercel.app/api/analytics/causality?type=regulatory" | jq
+    curl "https://cryptocurrency.cv/api/analytics/causality?type=regulatory" | jq
     ```
 
 ---
@@ -748,7 +748,7 @@ from datetime import datetime
 class AnalyticsDashboard:
     """Crypto analytics dashboard client."""
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     def __init__(self):
         self.session = requests.Session()

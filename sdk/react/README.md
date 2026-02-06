@@ -278,7 +278,7 @@ function SearchPage() {
 
 ## No API Key Required!
 
-This package uses the free API at `news-crypto.vercel.app` - no authentication needed!
+This package uses the free API at `cryptocurrency.cv` - no authentication needed!
 
 ## License
 

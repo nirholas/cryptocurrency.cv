@@ -30,7 +30,7 @@ Complete tutorials for using Free Crypto News with AI assistants and development
 ```
 You are a crypto news expert. Use the Free Crypto News API to fetch real-time cryptocurrency news.
 
-API Base: https://news-crypto.vercel.app
+API Base: https://cryptocurrency.cv
 
 Available endpoints:
 - GET /api/news - Latest news
@@ -42,7 +42,7 @@ Available endpoints:
 
 4. Under **Actions**, import the OpenAPI schema:
    ```
-   https://news-crypto.vercel.app/chatgpt/openapi.yaml
+   https://cryptocurrency.cv/chatgpt/openapi.yaml
    ```
 
 ### Method 2: ChatGPT Actions
@@ -55,7 +55,7 @@ info:
   title: Free Crypto News
   version: 1.0.0
 servers:
-  - url: https://news-crypto.vercel.app
+  - url: https://cryptocurrency.cv
 paths:
   /api/news:
     get:
@@ -139,7 +139,7 @@ npm install
 ```json
 {
   "identifier": "crypto-news",
-  "manifest": "https://news-crypto.vercel.app/.well-known/ai-plugin.json",
+  "manifest": "https://cryptocurrency.cv/.well-known/ai-plugin.json",
   "type": "custom"
 }
 ```
@@ -182,7 +182,7 @@ import requests
 
 class Tools:
     def __init__(self):
-        self.base_url = "https://news-crypto.vercel.app"
+        self.base_url = "https://cryptocurrency.cv"
     
     def get_news(self, limit: int = 10) -> str:
         """Get latest crypto news."""
@@ -229,7 +229,7 @@ Add to your project's context:
 ```markdown
 ## Crypto News API
 
-Base URL: https://news-crypto.vercel.app
+Base URL: https://cryptocurrency.cv
 
 ### Endpoints
 - GET /api/news - Latest news
@@ -268,7 +268,7 @@ Add a `.cascade/context.md`:
 
 This project uses the Free Crypto News API for market data.
 
-API Base: https://news-crypto.vercel.app
+API Base: https://cryptocurrency.cv
 - /api/news - Get latest news
 - /api/ai/sentiment - Get market sentiment
 - /api/fear-greed - Fear & Greed Index
@@ -288,7 +288,7 @@ Add to `.continue/config.json`:
     {
       "name": "crypto-news",
       "params": {
-        "apiUrl": "https://news-crypto.vercel.app"
+        "apiUrl": "https://cryptocurrency.cv"
       }
     }
   ],
@@ -312,7 +312,7 @@ export default {
   name: "crypto-news",
   async getContext(query: string) {
     const response = await fetch(
-      `https://news-crypto.vercel.app/api/search?q=${query}`
+      `https://cryptocurrency.cv/api/search?q=${query}`
     );
     const { articles } = await response.json();
     return articles.map(a => ({
@@ -337,7 +337,7 @@ import requests
 @tool
 def get_crypto_news(query: str = "") -> str:
     """Get the latest cryptocurrency news. Optionally filter by search query."""
-    base_url = "https://news-crypto.vercel.app"
+    base_url = "https://cryptocurrency.cv"
     
     if query:
         url = f"{base_url}/api/search?q={query}&limit=10"
@@ -355,7 +355,7 @@ def get_crypto_news(query: str = "") -> str:
 @tool
 def get_crypto_sentiment(asset: str) -> str:
     """Get sentiment analysis for a cryptocurrency symbol (e.g., BTC, ETH)."""
-    url = f"https://news-crypto.vercel.app/api/ai/sentiment?asset={asset}"
+    url = f"https://cryptocurrency.cv/api/ai/sentiment?asset={asset}"
     response = requests.get(url)
     data = response.json()
     return f"{asset}: {data['label']} (score: {data['score']:.2f}, confidence: {data['confidence']:.0%})"
@@ -402,7 +402,7 @@ import requests
 
 class CryptoNewsPlugin:
     def __init__(self):
-        self.base_url = "https://news-crypto.vercel.app"
+        self.base_url = "https://cryptocurrency.cv"
     
     def get_news(self, limit: int = 10) -> list:
         response = requests.get(f"{self.base_url}/api/news?limit={limit}")
@@ -429,9 +429,9 @@ class CryptoNewsTool(BaseTool):
     
     def _run(self, query: str = "") -> str:
         if query:
-            url = f"https://news-crypto.vercel.app/api/search?q={query}"
+            url = f"https://cryptocurrency.cv/api/search?q={query}"
         else:
-            url = "https://news-crypto.vercel.app/api/news?limit=10"
+            url = "https://cryptocurrency.cv/api/news?limit=10"
         
         response = requests.get(url)
         articles = response.json().get("articles", [])

@@ -13,7 +13,7 @@
  * ```
  */
 
-const BASE_URL = "https://news-crypto.vercel.app";
+const BASE_URL = "https://cryptocurrency.cv";
 
 // =============================================================================
 // TYPE DEFINITIONS

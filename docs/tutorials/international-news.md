@@ -35,7 +35,7 @@ Access crypto news from global sources in multiple languages.
             params["region"] = region
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/news/international",
+            "https://cryptocurrency.cv/api/news/international",
             params=params
         )
         return response.json()
@@ -89,7 +89,7 @@ Access crypto news from global sources in multiple languages.
         if (options.region) params.set('region', options.region);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/news/international?${params}`
+            `https://cryptocurrency.cv/api/news/international?${params}`
         );
         return response.json();
     }
@@ -140,19 +140,19 @@ Access crypto news from global sources in multiple languages.
 === "cURL"
     ```bash
     # Get all international news
-    curl "https://news-crypto.vercel.app/api/news/international?limit=20" | jq
+    curl "https://cryptocurrency.cv/api/news/international?limit=20" | jq
     
     # Get Japanese news
-    curl "https://news-crypto.vercel.app/api/news/international?language=ja&limit=10" | jq
+    curl "https://cryptocurrency.cv/api/news/international?language=ja&limit=10" | jq
     
     # Get German news with translation
-    curl "https://news-crypto.vercel.app/api/news/international?language=de&translate=true" | jq
+    curl "https://cryptocurrency.cv/api/news/international?language=de&translate=true" | jq
     
     # Get news by region
-    curl "https://news-crypto.vercel.app/api/news/international?region=asia" | jq
+    curl "https://cryptocurrency.cv/api/news/international?region=asia" | jq
     
     # Get available languages
-    curl "https://news-crypto.vercel.app/api/news/international/languages" | jq
+    curl "https://cryptocurrency.cv/api/news/international/languages" | jq
     ```
 
 ---
@@ -177,7 +177,7 @@ Get news filtered by geographic region.
     def get_regional_news(region: str, limit: int = 20):
         """Get news by region."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/news/international",
+            "https://cryptocurrency.cv/api/news/international",
             params={"region": region, "limit": limit}
         )
         return response.json()
@@ -231,7 +231,7 @@ Get news filtered by geographic region.
     async function getRegionalNews(region, limit = 20) {
         const params = new URLSearchParams({ region, limit: limit.toString() });
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/news/international?${params}`
+            `https://cryptocurrency.cv/api/news/international?${params}`
         );
         return response.json();
     }
@@ -272,16 +272,16 @@ Get news filtered by geographic region.
 === "cURL"
     ```bash
     # Get Americas news
-    curl "https://news-crypto.vercel.app/api/news/international?region=americas" | jq
+    curl "https://cryptocurrency.cv/api/news/international?region=americas" | jq
     
     # Get European news
-    curl "https://news-crypto.vercel.app/api/news/international?region=europe" | jq
+    curl "https://cryptocurrency.cv/api/news/international?region=europe" | jq
     
     # Get Asian news
-    curl "https://news-crypto.vercel.app/api/news/international?region=asia" | jq
+    curl "https://cryptocurrency.cv/api/news/international?region=asia" | jq
     
     # Get available regions
-    curl "https://news-crypto.vercel.app/api/news/international/regions" | jq
+    curl "https://cryptocurrency.cv/api/news/international/regions" | jq
     ```
 
 ---
@@ -297,14 +297,14 @@ Query available international sources and supported languages.
     def get_international_sources():
         """Get available international sources."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/news/international/sources"
+            "https://cryptocurrency.cv/api/news/international/sources"
         )
         return response.json()
     
     def get_supported_languages():
         """Get supported languages."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/news/international/languages"
+            "https://cryptocurrency.cv/api/news/international/languages"
         )
         return response.json()
     
@@ -346,14 +346,14 @@ Query available international sources and supported languages.
     ```javascript
     async function getInternationalSources() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/news/international/sources'
+            'https://cryptocurrency.cv/api/news/international/sources'
         );
         return response.json();
     }
     
     async function getSupportedLanguages() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/news/international/languages'
+            'https://cryptocurrency.cv/api/news/international/languages'
         );
         return response.json();
     }
@@ -393,16 +393,16 @@ Query available international sources and supported languages.
 === "cURL"
     ```bash
     # Get all international sources
-    curl "https://news-crypto.vercel.app/api/news/international/sources" | jq
+    curl "https://cryptocurrency.cv/api/news/international/sources" | jq
     
     # Get supported languages
-    curl "https://news-crypto.vercel.app/api/news/international/languages" | jq
+    curl "https://cryptocurrency.cv/api/news/international/languages" | jq
     
     # Get source count
-    curl "https://news-crypto.vercel.app/api/news/international/sources" | jq '.count'
+    curl "https://cryptocurrency.cv/api/news/international/sources" | jq '.count'
     
     # Get language codes
-    curl "https://news-crypto.vercel.app/api/news/international/languages" | jq '.languages[].code'
+    curl "https://cryptocurrency.cv/api/news/international/languages" | jq '.languages[].code'
     ```
 
 ---
@@ -422,7 +422,7 @@ from typing import Dict, List, Any
 class InternationalNewsAggregator:
     """International crypto news aggregator."""
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     def __init__(self):
         self.session = requests.Session()

@@ -25,7 +25,7 @@ Get an AI-analyzed summary of current market sentiment across all news.
     import requests
     from typing import Optional
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     
     def get_sentiment(asset: Optional[str] = None, limit: int = 20) -> dict:
@@ -80,7 +80,7 @@ Get an AI-analyzed summary of current market sentiment across all news.
 === "JavaScript"
 
     ```javascript
-    const BASE_URL = "https://news-crypto.vercel.app";
+    const BASE_URL = "https://cryptocurrency.cv";
     
     /**
      * Get AI-powered sentiment analysis.
@@ -115,13 +115,13 @@ Get an AI-analyzed summary of current market sentiment across all news.
 
     ```bash
     # Overall market sentiment
-    curl "https://news-crypto.vercel.app/api/sentiment?limit=50"
+    curl "https://cryptocurrency.cv/api/sentiment?limit=50"
     
     # Bitcoin-specific sentiment
-    curl "https://news-crypto.vercel.app/api/sentiment?asset=BTC&limit=30"
+    curl "https://cryptocurrency.cv/api/sentiment?asset=BTC&limit=30"
     
     # Pretty print
-    curl -s "https://news-crypto.vercel.app/api/sentiment" | jq '.market'
+    curl -s "https://cryptocurrency.cv/api/sentiment" | jq '.market'
     ```
 
 ---
@@ -292,7 +292,7 @@ Analyze the sentiment of any text using the AI endpoint.
 
     ```bash
     # Analyze a headline
-    curl -X POST "https://news-crypto.vercel.app/api/ai" \
+    curl -X POST "https://cryptocurrency.cv/api/ai" \
       -H "Content-Type: application/json" \
       -d '{
         "action": "sentiment",
@@ -300,7 +300,7 @@ Analyze the sentiment of any text using the AI endpoint.
       }'
     
     # Analyze with content
-    curl -X POST "https://news-crypto.vercel.app/api/ai" \
+    curl -X POST "https://cryptocurrency.cv/api/ai" \
       -H "Content-Type: application/json" \
       -d '{
         "action": "sentiment",
@@ -418,13 +418,13 @@ Get the crypto market Fear & Greed Index with historical data.
 
     ```bash
     # Current Fear & Greed
-    curl "https://news-crypto.vercel.app/api/fear-greed"
+    curl "https://cryptocurrency.cv/api/fear-greed"
     
     # With 30-day history
-    curl "https://news-crypto.vercel.app/api/fear-greed?days=30"
+    curl "https://cryptocurrency.cv/api/fear-greed?days=30"
     
     # Just the value and classification
-    curl -s "https://news-crypto.vercel.app/api/fear-greed" | \
+    curl -s "https://cryptocurrency.cv/api/fear-greed" | \
         jq '{value, classification}'
     ```
 
@@ -518,13 +518,13 @@ Get sentiment aggregated from social media platforms.
 
     ```bash
     # Overall social sentiment
-    curl "https://news-crypto.vercel.app/api/social"
+    curl "https://cryptocurrency.cv/api/social"
     
     # Bitcoin social sentiment
-    curl "https://news-crypto.vercel.app/api/social?asset=BTC"
+    curl "https://cryptocurrency.cv/api/social?asset=BTC"
     
     # Specific platforms
-    curl "https://news-crypto.vercel.app/api/social?asset=ETH&platforms=twitter,reddit"
+    curl "https://cryptocurrency.cv/api/social?asset=ETH&platforms=twitter,reddit"
     ```
 
 ---
@@ -543,7 +543,7 @@ Get sentiment aggregated from social media platforms.
     import requests
     from datetime import datetime
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     
     class SentimentDashboard:

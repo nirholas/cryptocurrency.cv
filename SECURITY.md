@@ -13,7 +13,7 @@ We take security seriously. If you discover a security vulnerability, please rep
 ### How to Report
 
 1. **DO NOT** open a public GitHub issue for security vulnerabilities
-2. Email: security@news-crypto.vercel.app (or open a private security advisory)
+2. Email: security@cryptocurrency.cv (or open a private security advisory)
 3. Include:
    - Description of the vulnerability
    - Steps to reproduce

@@ -226,7 +226,7 @@ export default function PricingContent() {
           <div className="bg-gray-900 rounded-xl p-6 font-mono text-sm overflow-x-auto">
             <div className="text-gray-400 mb-2"># Request premium endpoint without auth</div>
             <div className="text-green-400 mb-4">
-              curl https://news-crypto.vercel.app/api/v1/coins
+              curl https://cryptocurrency.cv/api/v1/coins
             </div>
 
             <div className="text-gray-400 mb-2"># Response: 402 Payment Required</div>

@@ -45,7 +45,7 @@ Access archived news data from past dates.
             params["ticker"] = ticker
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/archive",
+            "https://cryptocurrency.cv/api/archive",
             params=params
         )
         return response.json()
@@ -114,7 +114,7 @@ Access archived news data from past dates.
         if (options.ticker) params.set('ticker', options.ticker);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/archive?${params}`
+            `https://cryptocurrency.cv/api/archive?${params}`
         );
         return response.json();
     }
@@ -159,19 +159,19 @@ Access archived news data from past dates.
 === "cURL"
     ```bash
     # Query specific date
-    curl "https://news-crypto.vercel.app/api/archive?date=2024-01-15&limit=20" | jq
+    curl "https://cryptocurrency.cv/api/archive?date=2024-01-15&limit=20" | jq
     
     # Query date range
-    curl "https://news-crypto.vercel.app/api/archive?start=2024-01-01&end=2024-01-31" | jq '.totalCount'
+    curl "https://cryptocurrency.cv/api/archive?start=2024-01-01&end=2024-01-31" | jq '.totalCount'
     
     # Filter by source
-    curl "https://news-crypto.vercel.app/api/archive?source=coindesk&limit=10" | jq
+    curl "https://cryptocurrency.cv/api/archive?source=coindesk&limit=10" | jq
     
     # Filter by ticker
-    curl "https://news-crypto.vercel.app/api/archive?ticker=BTC&limit=10" | jq
+    curl "https://cryptocurrency.cv/api/archive?ticker=BTC&limit=10" | jq
     
     # Get article titles only
-    curl "https://news-crypto.vercel.app/api/archive?date=2024-01-15" | jq '.articles[].title'
+    curl "https://cryptocurrency.cv/api/archive?date=2024-01-15" | jq '.articles[].title'
     ```
 
 ---
@@ -210,7 +210,7 @@ Use the enhanced V2 archive API with additional filtering options.
             params["category"] = category
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/archive",
+            "https://cryptocurrency.cv/api/archive",
             params=params
         )
         return response.json()
@@ -290,7 +290,7 @@ Use the enhanced V2 archive API with additional filtering options.
         if (options.category) params.set('category', options.category);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/archive?${params}`
+            `https://cryptocurrency.cv/api/archive?${params}`
         );
         return response.json();
     }
@@ -330,16 +330,16 @@ Use the enhanced V2 archive API with additional filtering options.
 === "cURL"
     ```bash
     # Query with sentiment filter
-    curl "https://news-crypto.vercel.app/api/archive?sentiment=bullish&limit=10" | jq
+    curl "https://cryptocurrency.cv/api/archive?sentiment=bullish&limit=10" | jq
     
     # Search in archive
-    curl "https://news-crypto.vercel.app/api/archive?q=ETF+approval&start_date=2024-01-01" | jq
+    curl "https://cryptocurrency.cv/api/archive?q=ETF+approval&start_date=2024-01-01" | jq
     
     # Filter by category
-    curl "https://news-crypto.vercel.app/api/archive?category=defi&limit=10" | jq
+    curl "https://cryptocurrency.cv/api/archive?category=defi&limit=10" | jq
     
     # Combined filters
-    curl "https://news-crypto.vercel.app/api/archive?source=coindesk&sentiment=bearish&start_date=2024-01-01&end_date=2024-01-31" | jq
+    curl "https://cryptocurrency.cv/api/archive?source=coindesk&sentiment=bearish&start_date=2024-01-01&end_date=2024-01-31" | jq
     ```
 
 ---
@@ -355,7 +355,7 @@ Check the status and coverage of the archive.
     def get_archive_status():
         """Get archive status and statistics."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/archive/status"
+            "https://cryptocurrency.cv/api/archive/status"
         )
         return response.json()
     
@@ -407,7 +407,7 @@ Check the status and coverage of the archive.
     ```javascript
     async function getArchiveStatus() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/archive/status'
+            'https://cryptocurrency.cv/api/archive/status'
         );
         return response.json();
     }
@@ -446,16 +446,16 @@ Check the status and coverage of the archive.
 === "cURL"
     ```bash
     # Get archive status
-    curl "https://news-crypto.vercel.app/api/archive/status" | jq
+    curl "https://cryptocurrency.cv/api/archive/status" | jq
     
     # Get total article count
-    curl "https://news-crypto.vercel.app/api/archive/status" | jq '.totalArticles'
+    curl "https://cryptocurrency.cv/api/archive/status" | jq '.totalArticles'
     
     # Get source coverage
-    curl "https://news-crypto.vercel.app/api/archive/status" | jq '.sourcesCoverage'
+    curl "https://cryptocurrency.cv/api/archive/status" | jq '.sourcesCoverage'
     
     # Get health status
-    curl "https://news-crypto.vercel.app/api/archive/status" | jq '.health'
+    curl "https://cryptocurrency.cv/api/archive/status" | jq '.health'
     ```
 
 ---
@@ -491,7 +491,7 @@ Export news data in various formats.
             params["to"] = to_date
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/export",
+            "https://cryptocurrency.cv/api/export",
             params=params
         )
         
@@ -570,7 +570,7 @@ Export news data in various formats.
         if (options.to) params.set('to', options.to);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/export?${params}`
+            `https://cryptocurrency.cv/api/export?${params}`
         );
         
         if (options.format === 'json' || !options.format) {
@@ -618,19 +618,19 @@ Export news data in various formats.
 === "cURL"
     ```bash
     # Export as JSON
-    curl "https://news-crypto.vercel.app/api/export?format=json&limit=10" -o news.json
+    curl "https://cryptocurrency.cv/api/export?format=json&limit=10" -o news.json
     
     # Export as CSV
-    curl "https://news-crypto.vercel.app/api/export?format=csv&limit=100" -o news.csv
+    curl "https://cryptocurrency.cv/api/export?format=csv&limit=100" -o news.csv
     
     # Export as RSS
-    curl "https://news-crypto.vercel.app/api/export?format=rss&limit=20" -o news.xml
+    curl "https://cryptocurrency.cv/api/export?format=rss&limit=20" -o news.xml
     
     # Filtered export
-    curl "https://news-crypto.vercel.app/api/export?source=coindesk&from=2024-01-01&to=2024-01-31" -o coindesk_jan.json
+    curl "https://cryptocurrency.cv/api/export?source=coindesk&from=2024-01-01&to=2024-01-31" -o coindesk_jan.json
     
     # View JSON export
-    curl "https://news-crypto.vercel.app/api/export?format=json&limit=5" | jq '.articles[].title'
+    curl "https://cryptocurrency.cv/api/export?format=json&limit=5" | jq '.articles[].title'
     ```
 
 ---
@@ -646,7 +646,7 @@ Check available export formats and their options.
     def get_export_formats():
         """Get available export formats."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/export/formats"
+            "https://cryptocurrency.cv/api/export/formats"
         )
         return response.json()
     
@@ -687,7 +687,7 @@ Check available export formats and their options.
     ```javascript
     async function getExportFormats() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/export/formats'
+            'https://cryptocurrency.cv/api/export/formats'
         );
         return response.json();
     }
@@ -709,10 +709,10 @@ Check available export formats and their options.
 === "cURL"
     ```bash
     # Get available export formats
-    curl "https://news-crypto.vercel.app/api/export/formats" | jq
+    curl "https://cryptocurrency.cv/api/export/formats" | jq
     
     # List format names
-    curl "https://news-crypto.vercel.app/api/export/formats" | jq '.formats[].name'
+    curl "https://cryptocurrency.cv/api/export/formats" | jq '.formats[].name'
     ```
 
 ---
@@ -735,7 +735,7 @@ from pathlib import Path
 class ArchiveExporter:
     """Archive and export tool."""
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     def __init__(self, output_dir: str = "./exports"):
         self.session = requests.Session()

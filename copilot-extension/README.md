@@ -51,13 +51,13 @@ Or ask any crypto question:
 
 Access settings via `Preferences > Settings > Extensions > Crypto News`:
 
-- `cryptonews.apiUrl` - API endpoint (default: https://news-crypto.vercel.app)
+- `cryptonews.apiUrl` - API endpoint (default: https://cryptocurrency.cv)
 - `cryptonews.defaultLimit` - Number of items to fetch (default: 5)
 - `cryptonews.showSentiment` - Show sentiment indicators (default: true)
 
 ## API
 
-This extension uses the [Free Crypto News API](https://news-crypto.vercel.app):
+This extension uses the [Free Crypto News API](https://cryptocurrency.cv):
 
 - 200+ news sources
 - Real-time updates
@@ -80,6 +80,6 @@ MIT License - see LICENSE file.
 
 ## Links
 
-- [Free Crypto News](https://news-crypto.vercel.app)
-- [API Documentation](https://news-crypto.vercel.app/developers)
+- [Free Crypto News](https://cryptocurrency.cv)
+- [API Documentation](https://cryptocurrency.cv/developers)
 - [GitHub Repository](https://github.com/nirholas/free-crypto-news)

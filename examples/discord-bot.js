@@ -7,7 +7,7 @@
 
 const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
 
-const API_BASE = 'https://news-crypto.vercel.app';
+const API_BASE = 'https://cryptocurrency.cv';
 const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
 const CHANNEL_ID = process.env.DISCORD_CHANNEL_ID;
 

@@ -108,7 +108,7 @@ async function subscribeToPush() {
     applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY)
   });
   
-  await fetch('https://news-crypto.vercel.app/api/push', {
+  await fetch('https://cryptocurrency.cv/api/push', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -327,8 +327,8 @@ function createNotificationPayload(article: {
   return {
     title: `📰 ${article.source}`,
     body: article.title,
-    icon: 'https://news-crypto.vercel.app/icon.png',
-    badge: 'https://news-crypto.vercel.app/badge.png',
+    icon: 'https://cryptocurrency.cv/icon.png',
+    badge: 'https://cryptocurrency.cv/badge.png',
     url: article.link,
     tag: 'crypto-news'
   };

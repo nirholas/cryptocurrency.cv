@@ -32,7 +32,7 @@ const PRICE_INTERVAL = 10000; // 10 seconds for prices
 const WHALE_INTERVAL = 60000; // 1 minute for whales
 const SENTIMENT_INTERVAL = 300000; // 5 minutes for Fear & Greed
 const ALERT_EVAL_INTERVAL = 30000; // 30 seconds for alert evaluation
-const NEWS_API = process.env.NEWS_API || 'https://news-crypto.vercel.app';
+const NEWS_API = process.env.NEWS_API || 'https://cryptocurrency.cv';
 
 // =============================================================================
 // MESSAGE TYPES

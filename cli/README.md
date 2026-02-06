@@ -108,7 +108,7 @@ crypto-news --json | jq -r '.articles[0] | "📰 \(.title) - \(.source)"' | curl
 
 ---
 Powered by Free Crypto News API
-https://news-crypto.vercel.app
+https://cryptocurrency.cv
 ```
 
 ## License

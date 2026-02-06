@@ -187,7 +187,7 @@ node scripts/load-test.js --users=100
 ./scripts/benchmark.sh --load --requests=500 --concurrency=20
 
 # Custom URL
-./scripts/benchmark.sh --url=https://news-crypto.vercel.app
+./scripts/benchmark.sh --url=https://cryptocurrency.cv
 ```
 
 ## Health Checks

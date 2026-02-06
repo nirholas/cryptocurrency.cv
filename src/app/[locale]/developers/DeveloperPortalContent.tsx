@@ -66,16 +66,16 @@ const ENDPOINTS = {
 
 const CODE_EXAMPLES = {
   curl: `# Get latest news
-curl "https://news-crypto.vercel.app/api/news?limit=5"
+curl "https://cryptocurrency.cv/api/news?limit=5"
 
 # Search for Bitcoin ETF news
-curl "https://news-crypto.vercel.app/api/search?q=bitcoin+ETF"
+curl "https://cryptocurrency.cv/api/search?q=bitcoin+ETF"
 
 # Get AI digest
-curl "https://news-crypto.vercel.app/api/digest?period=24h"`,
+curl "https://cryptocurrency.cv/api/digest?period=24h"`,
 
   javascript: `// Using fetch
-const response = await fetch('https://news-crypto.vercel.app/api/news?limit=5');
+const response = await fetch('https://cryptocurrency.cv/api/news?limit=5');
 const { articles } = await response.json();
 
 articles.forEach(article => {
@@ -91,7 +91,7 @@ const news = await client.getLatest({ limit: 5, category: 'bitcoin' });`,
   python: `import requests
 
 # Get latest news
-response = requests.get('https://news-crypto.vercel.app/api/news', 
+response = requests.get('https://cryptocurrency.cv/api/news', 
     params={'limit': 5, 'category': 'bitcoin'})
 data = response.json()
 
@@ -113,7 +113,7 @@ import (
 )
 
 func main() {
-    resp, _ := http.Get("https://news-crypto.vercel.app/api/news?limit=5")
+    resp, _ := http.Get("https://cryptocurrency.cv/api/news?limit=5")
     defer resp.Body.Close()
     
     var data map[string]interface{}
@@ -281,9 +281,9 @@ export default function DeveloperPortalContent() {
                   <div className="flex items-center gap-2 font-mono text-sm">
                     <span className="text-green-400">$</span>
                     <span className="text-gray-300">curl</span>
-                    <span className="text-amber-400">&quot;https://news-crypto.vercel.app/api/news?limit=3&quot;</span>
+                    <span className="text-amber-400">&quot;https://cryptocurrency.cv/api/news?limit=3&quot;</span>
                     <button
-                      onClick={() => copyToClipboard('curl "https://news-crypto.vercel.app/api/news?limit=3"', 'hero-curl')}
+                      onClick={() => copyToClipboard('curl "https://cryptocurrency.cv/api/news?limit=3"', 'hero-curl')}
                       className="ml-auto px-2 py-1 text-xs text-gray-500 hover:text-white transition-colors"
                     >
                       {copiedText === 'hero-curl' ? '✓ Copied' : 'Copy'}
@@ -618,7 +618,7 @@ function EndpointsSection({ copiedText, copyToClipboard }: { copiedText: string 
                   <td className="p-4 text-right">
                     <button
                       onClick={() => copyToClipboard(
-                        `curl "https://news-crypto.vercel.app${endpoint.path}${endpoint.example}"`,
+                        `curl "https://cryptocurrency.cv${endpoint.path}${endpoint.example}"`,
                         endpoint.path
                       )}
                       className="text-xs text-gray-500 hover:text-white transition-colors"

@@ -14,7 +14,7 @@ Embed crypto news on any website with our JavaScript widgets.
 Add this single line to any HTML page:
 
 ```html
-<script src="https://news-crypto.vercel.app/widget/crypto-news.js"></script>
+<script src="https://cryptocurrency.cv/widget/crypto-news.js"></script>
 ```
 
 A news feed will automatically appear.
@@ -25,7 +25,7 @@ A news feed will automatically appear.
 
 ```html
 <div id="crypto-news-feed"></div>
-<script src="https://news-crypto.vercel.app/widget/feed.js"></script>
+<script src="https://cryptocurrency.cv/widget/feed.js"></script>
 ```
 
 ### With Options
@@ -44,7 +44,7 @@ A news feed will automatically appear.
     refreshInterval: 300000, // 5 minutes
   };
 </script>
-<script src="https://news-crypto.vercel.app/widget/feed.js"></script>
+<script src="https://cryptocurrency.cv/widget/feed.js"></script>
 ```
 
 ### Options Reference
@@ -70,7 +70,7 @@ Horizontal scrolling headlines for headers/footers.
 
 ```html
 <div id="crypto-ticker"></div>
-<script src="https://news-crypto.vercel.app/widget/ticker.js"></script>
+<script src="https://cryptocurrency.cv/widget/ticker.js"></script>
 ```
 
 ### With Options
@@ -87,7 +87,7 @@ Horizontal scrolling headlines for headers/footers.
     theme: 'dark',
   };
 </script>
-<script src="https://news-crypto.vercel.app/widget/ticker.js"></script>
+<script src="https://cryptocurrency.cv/widget/ticker.js"></script>
 ```
 
 ### Ticker Options
@@ -107,7 +107,7 @@ Rotating news cards with transitions.
 
 ```html
 <div id="crypto-carousel"></div>
-<script src="https://news-crypto.vercel.app/widget/carousel.js"></script>
+<script src="https://cryptocurrency.cv/widget/carousel.js"></script>
 ```
 
 ### With Options
@@ -125,7 +125,7 @@ Rotating news cards with transitions.
     transition: 'slide', // 'slide', 'fade'
   };
 </script>
-<script src="https://news-crypto.vercel.app/widget/carousel.js"></script>
+<script src="https://cryptocurrency.cv/widget/carousel.js"></script>
 ```
 
 ## Price Ticker Widget
@@ -136,7 +136,7 @@ Live cryptocurrency prices.
 
 ```html
 <div id="crypto-prices"></div>
-<script src="https://news-crypto.vercel.app/widget/prices.js"></script>
+<script src="https://cryptocurrency.cv/widget/prices.js"></script>
 ```
 
 ### With Options
@@ -153,7 +153,7 @@ Live cryptocurrency prices.
     compact: false,
   };
 </script>
-<script src="https://news-crypto.vercel.app/widget/prices.js"></script>
+<script src="https://cryptocurrency.cv/widget/prices.js"></script>
 ```
 
 ## Styling
@@ -229,7 +229,7 @@ function CryptoNewsWidget() {
     };
     
     const script = document.createElement('script');
-    script.src = 'https://news-crypto.vercel.app/widget/feed.js';
+    script.src = 'https://cryptocurrency.cv/widget/feed.js';
     document.body.appendChild(script);
     
     return () => script.remove();
@@ -255,7 +255,7 @@ export default {
     };
     
     const script = document.createElement('script');
-    script.src = 'https://news-crypto.vercel.app/widget/feed.js';
+    script.src = 'https://cryptocurrency.cv/widget/feed.js';
     document.body.appendChild(script);
   }
 };
@@ -279,7 +279,7 @@ function crypto_news_widget() {
   <script>
     window.CryptoNewsFeed = { limit: 10, theme: 'dark' };
   </script>
-  <script src="https://news-crypto.vercel.app/widget/feed.js"></script>
+  <script src="https://cryptocurrency.cv/widget/feed.js"></script>
   <?php
 }
 ```
@@ -290,12 +290,12 @@ Host widgets on your own server:
 
 ```bash
 # Download widgets
-curl -O https://news-crypto.vercel.app/widget/feed.js
-curl -O https://news-crypto.vercel.app/widget/ticker.js
-curl -O https://news-crypto.vercel.app/widget/carousel.js
+curl -O https://cryptocurrency.cv/widget/feed.js
+curl -O https://cryptocurrency.cv/widget/ticker.js
+curl -O https://cryptocurrency.cv/widget/carousel.js
 
 # Configure API endpoint
-sed -i 's|https://news-crypto.vercel.app|https://your-domain.com|g' *.js
+sed -i 's|https://cryptocurrency.cv|https://your-domain.com|g' *.js
 ```
 
 ## Source Code

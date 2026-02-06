@@ -23,7 +23,7 @@
 Dapatkan berita crypto real-time dari 7 sumber utama hanya dengan satu panggilan API.
 
 ```bash
-curl https://news-crypto.vercel.app/api/news
+curl https://cryptocurrency.cv/api/news
 ```
 
 ---
@@ -75,13 +75,13 @@ Dapatkan berita crypto dari **12 sumber internasional** dalam bahasa Korea, Cina
 
 ```bash
 # Dapatkan semua berita internasional
-curl "https://news-crypto.vercel.app/api/news/international"
+curl "https://cryptocurrency.cv/api/news/international"
 
 # Dapatkan berita Korea dengan terjemahan Inggris
-curl "https://news-crypto.vercel.app/api/news/international?language=ko&translate=true"
+curl "https://cryptocurrency.cv/api/news/international?language=ko&translate=true"
 
 # Dapatkan berita dari wilayah Asia
-curl "https://news-crypto.vercel.app/api/news/international?region=asia&limit=20"
+curl "https://cryptocurrency.cv/api/news/international?region=asia&limit=20"
 ```
 
 ### Fitur
@@ -117,7 +117,7 @@ Free Crypto News adalah **PWA yang sepenuhnya dapat diinstal** yang berfungsi se
 ### Instalasi Aplikasi
 
 **Desktop (Chrome/Edge):**
-1. Kunjungi [news-crypto.vercel.app](https://news-crypto.vercel.app)
+1. Kunjungi [cryptocurrency.cv](https://cryptocurrency.cv)
 2. Klik ikon instal (⊕) di bilah alamat
 3. Klik "Instal"
 
@@ -233,23 +233,23 @@ Kami mengagregasi dari **7 situs berita terpercaya**:
 
 ```bash
 # Dapatkan berita terbaru
-curl "https://news-crypto.vercel.app/api/news"
+curl "https://cryptocurrency.cv/api/news"
 
 # Cari berita
-curl "https://news-crypto.vercel.app/api/search?q=ethereum"
+curl "https://cryptocurrency.cv/api/search?q=ethereum"
 
 # Dapatkan AI digest
-curl "https://news-crypto.vercel.app/api/digest"
+curl "https://cryptocurrency.cv/api/digest"
 
 # Dapatkan Fear & Greed Index
-curl "https://news-crypto.vercel.app/api/fear-greed"
+curl "https://cryptocurrency.cv/api/fear-greed"
 ```
 
 ### Menggunakan JavaScript
 
 ```javascript
 // Dapatkan berita terbaru
-const response = await fetch('https://news-crypto.vercel.app/api/news');
+const response = await fetch('https://cryptocurrency.cv/api/news');
 const data = await response.json();
 
 console.log(data.articles);
@@ -262,7 +262,7 @@ console.log(data.articles);
 import requests
 
 # Dapatkan berita terbaru
-response = requests.get('https://news-crypto.vercel.app/api/news')
+response = requests.get('https://cryptocurrency.cv/api/news')
 data = response.json()
 
 for article in data['articles'][:5]:
@@ -355,5 +355,5 @@ MIT License - lihat file [LICENSE](LICENSE).
 <p align="center">
   Dibuat dengan ❤️ untuk komunitas crypto
   <br>
-  <a href="https://news-crypto.vercel.app">news-crypto.vercel.app</a>
+  <a href="https://cryptocurrency.cv">cryptocurrency.cv</a>
 </p>

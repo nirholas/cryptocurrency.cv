@@ -47,7 +47,7 @@ const client = new Client({
   ],
 });
 
-const API_BASE = 'https://news-crypto.vercel.app/api';
+const API_BASE = 'https://cryptocurrency.cv/api';
 
 // Fetch news from API
 async function getNews(limit = 5, category = null) {

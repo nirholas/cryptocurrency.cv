@@ -59,7 +59,7 @@ interface StatsResponse {
 
 async function getHealth(): Promise<HealthResponse | null> {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://news-crypto.vercel.app';
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://cryptocurrency.cv';
     const res = await fetch(`${baseUrl}/api/health`, {
       cache: 'no-store',
     });
@@ -72,7 +72,7 @@ async function getHealth(): Promise<HealthResponse | null> {
 
 async function getStats(): Promise<StatsResponse | null> {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://news-crypto.vercel.app';
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://cryptocurrency.cv';
     const res = await fetch(`${baseUrl}/api/stats`, {
       cache: 'no-store',
     });

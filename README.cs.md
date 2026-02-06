@@ -16,7 +16,7 @@
 Získejte krypto novinky v reálném čase z **200+ zdrojů** jedním API voláním.
 
 ```bash
-curl https://news-crypto.vercel.app/api/news
+curl https://cryptocurrency.cv/api/news
 ```
 
 ---
@@ -39,13 +39,13 @@ curl https://news-crypto.vercel.app/api/news
 
 ```bash
 # Nejnovější zprávy
-curl "https://news-crypto.vercel.app/api/news?limit=10"
+curl "https://cryptocurrency.cv/api/news?limit=10"
 
 # Bitcoin zprávy
-curl "https://news-crypto.vercel.app/api/news?ticker=BTC"
+curl "https://cryptocurrency.cv/api/news?ticker=BTC"
 
 # Breaking news
-curl "https://news-crypto.vercel.app/api/breaking"
+curl "https://cryptocurrency.cv/api/breaking"
 ```
 
 ### Příklad Python
@@ -53,7 +53,7 @@ curl "https://news-crypto.vercel.app/api/breaking"
 ```python
 import requests
 
-BASE_URL = "https://news-crypto.vercel.app"
+BASE_URL = "https://cryptocurrency.cv"
 
 # Získat nejnovější zprávy
 news = requests.get(f"{BASE_URL}/api/news?limit=10").json()
@@ -72,7 +72,7 @@ print(f"Trh: {fg['classification']} ({fg['value']}/100)")
 ### Příklad JavaScript
 
 ```javascript
-const BASE_URL = 'https://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
 
 // Získat nejnovější zprávy
 const news = await fetch(`${BASE_URL}/api/news?limit=10`).then(r => r.json());
@@ -121,10 +121,10 @@ Získejte zprávy v 18 jazycích:
 
 ```bash
 # České zprávy (pokud jsou k dispozici)
-curl "https://news-crypto.vercel.app/api/news/international?language=cs"
+curl "https://cryptocurrency.cv/api/news/international?language=cs"
 
 # S anglickým překladem
-curl "https://news-crypto.vercel.app/api/news/international?language=ko&translate=true"
+curl "https://cryptocurrency.cv/api/news/international?language=ko&translate=true"
 ```
 
 ---
@@ -143,8 +143,8 @@ npm start
 
 ## 🔗 Odkazy
 
-- **API**: https://news-crypto.vercel.app
-- **Dokumentace**: https://news-crypto.vercel.app/docs
+- **API**: https://cryptocurrency.cv
+- **Dokumentace**: https://cryptocurrency.cv/docs
 - **GitHub**: https://github.com/AItoolsbyai/free-crypto-news
 
 ---

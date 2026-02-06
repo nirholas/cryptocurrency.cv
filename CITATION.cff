@@ -7,7 +7,7 @@ authors:
   - family-names: "Nirholas"
     affiliation: "Free Crypto News"
 repository-code: "https://github.com/nirholas/free-crypto-news"
-url: "https://news-crypto.vercel.app"
+url: "https://cryptocurrency.cv"
 license: MIT
 version: "1.0.2"
 date-released: "2025-01-01"
@@ -24,4 +24,4 @@ keywords:
 references:
   - type: software
     title: "Free Crypto News Documentation"
-    url: "https://news-crypto.vercel.app/developers"
+    url: "https://cryptocurrency.cv/developers"

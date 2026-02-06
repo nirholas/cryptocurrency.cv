@@ -68,7 +68,7 @@ except ImportError:
 # CONFIGURATION
 # =============================================================================
 
-API_URL = "https://news-crypto.vercel.app"
+API_URL = "https://cryptocurrency.cv"
 
 # Cryptocurrency keywords mapping (symbol -> search keywords)
 CRYPTO_KEYWORDS = {

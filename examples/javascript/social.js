@@ -5,7 +5,7 @@
  * Social media feeds, sentiment, and community tracking.
  */
 
-const BASE_URL = 'https://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
 
 // =============================================================================
 // X (TWITTER) ENDPOINTS

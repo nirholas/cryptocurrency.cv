@@ -9,7 +9,7 @@ import { NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { generateArticleSlug } from '@/lib/archive-v2';
 
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://news-crypto.vercel.app';
+const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://cryptocurrency.cv';
 
 // Supported locales for Google News
 const locales = ['en', 'es', 'fr', 'de', 'ja', 'ko', 'zh-CN', 'zh-TW', 'pt', 'ru', 'ar', 'it', 'nl', 'pl', 'tr'];

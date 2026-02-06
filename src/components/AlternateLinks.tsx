@@ -6,7 +6,7 @@
 
 import { locales, type Locale } from '@/i18n/config';
 
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://news-crypto.vercel.app';
+const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://cryptocurrency.cv';
 
 interface AlternateLinksProps {
   currentLocale: string;

@@ -18,7 +18,7 @@
 اخبار رمزارز را در زمان واقعی از **200+ منبع** با یک فراخوانی API دریافت کنید.
 
 ```bash
-curl https://news-crypto.vercel.app/api/news
+curl https://cryptocurrency.cv/api/news
 ```
 
 ---
@@ -41,13 +41,13 @@ curl https://news-crypto.vercel.app/api/news
 
 ```bash
 # آخرین اخبار
-curl "https://news-crypto.vercel.app/api/news?limit=10"
+curl "https://cryptocurrency.cv/api/news?limit=10"
 
 # اخبار بیت‌کوین
-curl "https://news-crypto.vercel.app/api/news?ticker=BTC"
+curl "https://cryptocurrency.cv/api/news?ticker=BTC"
 
 # اخبار فوری
-curl "https://news-crypto.vercel.app/api/breaking"
+curl "https://cryptocurrency.cv/api/breaking"
 ```
 
 ### مثال Python
@@ -55,7 +55,7 @@ curl "https://news-crypto.vercel.app/api/breaking"
 ```python
 import requests
 
-BASE_URL = "https://news-crypto.vercel.app"
+BASE_URL = "https://cryptocurrency.cv"
 
 # دریافت آخرین اخبار
 news = requests.get(f"{BASE_URL}/api/news?limit=10").json()
@@ -74,7 +74,7 @@ print(f"بازار: {fg['classification']} ({fg['value']}/100)")
 ### مثال JavaScript
 
 ```javascript
-const BASE_URL = 'https://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
 
 // دریافت آخرین اخبار
 const news = await fetch(`${BASE_URL}/api/news?limit=10`).then(r => r.json());
@@ -130,10 +130,10 @@ console.log(summary.summary);
 
 ```bash
 # اخبار فارسی
-curl "https://news-crypto.vercel.app/api/news/international?language=fa"
+curl "https://cryptocurrency.cv/api/news/international?language=fa"
 
 # با ترجمه انگلیسی
-curl "https://news-crypto.vercel.app/api/news/international?language=fa&translate=true"
+curl "https://cryptocurrency.cv/api/news/international?language=fa&translate=true"
 ```
 
 ---
@@ -152,8 +152,8 @@ npm start
 
 ## 🔗 لینک‌ها
 
-- **API**: https://news-crypto.vercel.app
-- **مستندات**: https://news-crypto.vercel.app/docs
+- **API**: https://cryptocurrency.cv
+- **مستندات**: https://cryptocurrency.cv/docs
 - **GitHub**: https://github.com/AItoolsbyai/free-crypto-news
 
 ---

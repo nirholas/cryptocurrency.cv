@@ -75,7 +75,7 @@ jobs:
           mkdir -p "$ARCHIVE_DIR"
           
           # Fetch latest news from API
-          NEWS=$(curl -s "https://news-crypto.vercel.app/api/news? limit=100" || echo '{"articles":[]}')
+          NEWS=$(curl -s "https://cryptocurrency.cv/api/news? limit=100" || echo '{"articles":[]}')
           
           # Create hourly entry
           HOURLY_ENTRY=$(echo "$NEWS" | jq --arg ts "$TIMESTAMP" --arg hr "$HOUR" '{

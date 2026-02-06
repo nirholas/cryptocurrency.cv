@@ -29,7 +29,7 @@ Find price discrepancies across exchanges.
     import requests
     from typing import Optional, List
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     
     def get_arbitrage(
@@ -92,7 +92,7 @@ Find price discrepancies across exchanges.
 === "JavaScript"
 
     ```javascript
-    const BASE_URL = "https://news-crypto.vercel.app";
+    const BASE_URL = "https://cryptocurrency.cv";
     
     async function getArbitrage(options = {}) {
         const { pairs, minSpread = 0.5, exchanges } = options;
@@ -120,13 +120,13 @@ Find price discrepancies across exchanges.
 
     ```bash
     # Find all opportunities > 0.5% spread
-    curl "https://news-crypto.vercel.app/api/arbitrage?minSpread=0.5"
+    curl "https://cryptocurrency.cv/api/arbitrage?minSpread=0.5"
     
     # Specific pairs
-    curl "https://news-crypto.vercel.app/api/arbitrage?pairs=BTCUSDT,ETHUSDT&minSpread=0.3"
+    curl "https://cryptocurrency.cv/api/arbitrage?pairs=BTCUSDT,ETHUSDT&minSpread=0.3"
     
     # Filter exchanges
-    curl "https://news-crypto.vercel.app/api/arbitrage?exchanges=binance,coinbase,kraken"
+    curl "https://cryptocurrency.cv/api/arbitrage?exchanges=binance,coinbase,kraken"
     ```
 
 ---
@@ -234,13 +234,13 @@ Get AI-powered trading signals with confidence scores.
 
     ```bash
     # BTC signals on 1-hour timeframe
-    curl "https://news-crypto.vercel.app/api/signals?asset=BTC&timeframe=1h"
+    curl "https://cryptocurrency.cv/api/signals?asset=BTC&timeframe=1h"
     
     # ETH daily signals
-    curl "https://news-crypto.vercel.app/api/signals?asset=ETH&timeframe=1d"
+    curl "https://cryptocurrency.cv/api/signals?asset=ETH&timeframe=1d"
     
     # All assets, 4-hour
-    curl "https://news-crypto.vercel.app/api/signals?timeframe=4h"
+    curl "https://cryptocurrency.cv/api/signals?timeframe=4h"
     ```
 
 ---
@@ -330,13 +330,13 @@ Track funding rates across exchanges.
 
     ```bash
     # All funding rates
-    curl "https://news-crypto.vercel.app/api/funding"
+    curl "https://cryptocurrency.cv/api/funding"
     
     # Specific symbol
-    curl "https://news-crypto.vercel.app/api/funding?symbol=BTCUSDT"
+    curl "https://cryptocurrency.cv/api/funding?symbol=BTCUSDT"
     
     # Specific exchanges
-    curl "https://news-crypto.vercel.app/api/funding?exchanges=binance,bybit"
+    curl "https://cryptocurrency.cv/api/funding?exchanges=binance,bybit"
     ```
 
 ---
@@ -433,10 +433,10 @@ Track options market activity and flows.
 
     ```bash
     # BTC options flow
-    curl "https://news-crypto.vercel.app/api/options?asset=BTC"
+    curl "https://cryptocurrency.cv/api/options?asset=BTC"
     
     # ETH calls only
-    curl "https://news-crypto.vercel.app/api/options?asset=ETH&type=call"
+    curl "https://cryptocurrency.cv/api/options?asset=ETH&type=call"
     ```
 
 ---
@@ -539,13 +539,13 @@ Track market liquidations in real-time.
 
     ```bash
     # All liquidations > $500k
-    curl "https://news-crypto.vercel.app/api/liquidations?minValue=500000"
+    curl "https://cryptocurrency.cv/api/liquidations?minValue=500000"
     
     # BTC only
-    curl "https://news-crypto.vercel.app/api/liquidations?symbol=BTCUSDT"
+    curl "https://cryptocurrency.cv/api/liquidations?symbol=BTCUSDT"
     
     # Long liquidations only
-    curl "https://news-crypto.vercel.app/api/liquidations?side=long"
+    curl "https://cryptocurrency.cv/api/liquidations?side=long"
     ```
 
 ---
@@ -655,13 +655,13 @@ Track large blockchain transactions.
 
     ```bash
     # Whale alerts > $5M
-    curl "https://news-crypto.vercel.app/api/whale-alerts?minValue=5000000"
+    curl "https://cryptocurrency.cv/api/whale-alerts?minValue=5000000"
     
     # BTC whales
-    curl "https://news-crypto.vercel.app/api/whale-alerts?asset=BTC"
+    curl "https://cryptocurrency.cv/api/whale-alerts?asset=BTC"
     
     # Exchange outflows only
-    curl "https://news-crypto.vercel.app/api/whale-alerts?type=exchange_outflow"
+    curl "https://cryptocurrency.cv/api/whale-alerts?type=exchange_outflow"
     ```
 
 ---
@@ -752,10 +752,10 @@ Get aggregated order book data.
 
     ```bash
     # BTC/USDT order book
-    curl "https://news-crypto.vercel.app/api/orderbook?symbol=BTCUSDT&depth=20"
+    curl "https://cryptocurrency.cv/api/orderbook?symbol=BTCUSDT&depth=20"
     
     # ETH order book from specific exchanges
-    curl "https://news-crypto.vercel.app/api/orderbook?symbol=ETHUSDT&exchanges=binance,coinbase"
+    curl "https://cryptocurrency.cv/api/orderbook?symbol=ETHUSDT&exchanges=binance,coinbase"
     ```
 
 ---
@@ -774,7 +774,7 @@ Get aggregated order book data.
     import requests
     from datetime import datetime
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     
     def main():

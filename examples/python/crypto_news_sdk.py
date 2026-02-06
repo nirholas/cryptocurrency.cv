@@ -20,7 +20,7 @@ from datetime import datetime
 import json
 
 
-BASE_URL = "https://news-crypto.vercel.app"
+BASE_URL = "https://cryptocurrency.cv"
 
 
 # =============================================================================

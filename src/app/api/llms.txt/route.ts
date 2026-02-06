@@ -37,7 +37,7 @@ export async function GET(request: NextRequest) {
 
 ## Quick Start
 \`\`\`bash
-curl https://news-crypto.vercel.app/api/news
+curl https://cryptocurrency.cv/api/news
 \`\`\`
 
 ## Endpoints
@@ -48,7 +48,7 @@ curl https://news-crypto.vercel.app/api/news
 - GET /api/market/coins - Market data
 
 ## Links
-- Docs: https://news-crypto.vercel.app/docs
+- Docs: https://cryptocurrency.cv/docs
 - GitHub: https://github.com/nirholas/free-crypto-news
 `;
 

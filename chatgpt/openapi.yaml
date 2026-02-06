@@ -10,7 +10,7 @@ info:
     url: https://github.com/nirholas/free-crypto-news
 
 servers:
-  - url: https://news-crypto.vercel.app
+  - url: https://cryptocurrency.cv
 
 paths:
   /api/news:

@@ -1,6 +1,6 @@
 // Background service worker for Free Crypto News extension
 
-const API_BASE = 'https://news-crypto.vercel.app/api';
+const API_BASE = 'https://cryptocurrency.cv/api';
 const REFRESH_INTERVAL = 5; // minutes
 
 // Set up periodic refresh
@@ -74,7 +74,7 @@ async function refreshCache() {
 
 // Handle notification click
 chrome.notifications.onClicked.addListener((notificationId) => {
-  chrome.tabs.create({ url: 'https://news-crypto.vercel.app' });
+  chrome.tabs.create({ url: 'https://cryptocurrency.cv' });
 });
 
 // Initial cache on install

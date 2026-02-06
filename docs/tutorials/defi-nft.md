@@ -33,7 +33,7 @@ Get the latest DeFi news and protocol updates.
             params["protocol"] = protocol
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/defi",
+            "https://cryptocurrency.cv/api/defi",
             params=params
         )
         return response.json()
@@ -84,7 +84,7 @@ Get the latest DeFi news and protocol updates.
         if (options.protocol) params.set('protocol', options.protocol);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/defi?${params}`
+            `https://cryptocurrency.cv/api/defi?${params}`
         );
         return response.json();
     }
@@ -119,16 +119,16 @@ Get the latest DeFi news and protocol updates.
 === "cURL"
     ```bash
     # Get all DeFi news
-    curl "https://news-crypto.vercel.app/api/defi?limit=20" | jq
+    curl "https://cryptocurrency.cv/api/defi?limit=20" | jq
     
     # Get lending news
-    curl "https://news-crypto.vercel.app/api/defi?category=lending" | jq
+    curl "https://cryptocurrency.cv/api/defi?category=lending" | jq
     
     # Get Uniswap news
-    curl "https://news-crypto.vercel.app/api/defi?protocol=uniswap" | jq
+    curl "https://cryptocurrency.cv/api/defi?protocol=uniswap" | jq
     
     # Get DEX news
-    curl "https://news-crypto.vercel.app/api/defi?category=dex" | jq
+    curl "https://cryptocurrency.cv/api/defi?category=dex" | jq
     ```
 
 ---
@@ -148,7 +148,7 @@ Get data on DeFi protocols including TVL, users, and metrics.
             params["category"] = category
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/defi/protocols",
+            "https://cryptocurrency.cv/api/defi/protocols",
             params=params
         )
         return response.json()
@@ -156,7 +156,7 @@ Get data on DeFi protocols including TVL, users, and metrics.
     def get_protocol_tvl():
         """Get TVL data for all protocols."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/defi/tvl"
+            "https://cryptocurrency.cv/api/defi/tvl"
         )
         return response.json()
     
@@ -221,14 +221,14 @@ Get data on DeFi protocols including TVL, users, and metrics.
         if (options.category) params.set('category', options.category);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/defi/protocols?${params}`
+            `https://cryptocurrency.cv/api/defi/protocols?${params}`
         );
         return response.json();
     }
     
     async function getProtocolTvl() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/defi/tvl'
+            'https://cryptocurrency.cv/api/defi/tvl'
         );
         return response.json();
     }
@@ -262,16 +262,16 @@ Get data on DeFi protocols including TVL, users, and metrics.
 === "cURL"
     ```bash
     # Get all protocols
-    curl "https://news-crypto.vercel.app/api/defi/protocols?limit=50" | jq
+    curl "https://cryptocurrency.cv/api/defi/protocols?limit=50" | jq
     
     # Get lending protocols
-    curl "https://news-crypto.vercel.app/api/defi/protocols?category=Lending" | jq
+    curl "https://cryptocurrency.cv/api/defi/protocols?category=Lending" | jq
     
     # Get TVL data
-    curl "https://news-crypto.vercel.app/api/defi/tvl" | jq
+    curl "https://cryptocurrency.cv/api/defi/tvl" | jq
     
     # Get top 10 by TVL
-    curl "https://news-crypto.vercel.app/api/defi/protocols" | jq '.protocols | sort_by(-.tvl) | .[0:10]'
+    curl "https://cryptocurrency.cv/api/defi/protocols" | jq '.protocols | sort_by(-.tvl) | .[0:10]'
     ```
 
 ---
@@ -296,7 +296,7 @@ Find the best yield farming opportunities across protocols.
             params["minApy"] = min_apy
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/defi/yields",
+            "https://cryptocurrency.cv/api/defi/yields",
             params=params
         )
         return response.json()
@@ -356,7 +356,7 @@ Find the best yield farming opportunities across protocols.
         if (options.minApy) params.set('minApy', options.minApy);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/defi/yields?${params}`
+            `https://cryptocurrency.cv/api/defi/yields?${params}`
         );
         return response.json();
     }
@@ -394,16 +394,16 @@ Find the best yield farming opportunities across protocols.
 === "cURL"
     ```bash
     # Get all yields
-    curl "https://news-crypto.vercel.app/api/defi/yields?limit=50" | jq
+    curl "https://cryptocurrency.cv/api/defi/yields?limit=50" | jq
     
     # Get stablecoin yields
-    curl "https://news-crypto.vercel.app/api/defi/yields?stablecoin=true" | jq
+    curl "https://cryptocurrency.cv/api/defi/yields?stablecoin=true" | jq
     
     # Get high APY opportunities
-    curl "https://news-crypto.vercel.app/api/defi/yields?minApy=50" | jq
+    curl "https://cryptocurrency.cv/api/defi/yields?minApy=50" | jq
     
     # Get Ethereum yields
-    curl "https://news-crypto.vercel.app/api/defi/yields?chain=Ethereum" | jq
+    curl "https://cryptocurrency.cv/api/defi/yields?chain=Ethereum" | jq
     ```
 
 ---
@@ -425,7 +425,7 @@ Get news and data about NFTs and digital collectibles.
             params["category"] = category
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/nft",
+            "https://cryptocurrency.cv/api/nft",
             params=params
         )
         return response.json()
@@ -437,7 +437,7 @@ Get news and data about NFTs and digital collectibles.
             params["chain"] = chain
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/nft/collections",
+            "https://cryptocurrency.cv/api/nft/collections",
             params=params
         )
         return response.json()
@@ -445,7 +445,7 @@ Get news and data about NFTs and digital collectibles.
     def get_nft_sales(limit: int = 50):
         """Get recent NFT sales."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/nft/sales",
+            "https://cryptocurrency.cv/api/nft/sales",
             params={"limit": limit}
         )
         return response.json()
@@ -498,7 +498,7 @@ Get news and data about NFTs and digital collectibles.
         if (options.category) params.set('category', options.category);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/nft?${params}`
+            `https://cryptocurrency.cv/api/nft?${params}`
         );
         return response.json();
     }
@@ -510,14 +510,14 @@ Get news and data about NFTs and digital collectibles.
         if (options.chain) params.set('chain', options.chain);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/nft/collections?${params}`
+            `https://cryptocurrency.cv/api/nft/collections?${params}`
         );
         return response.json();
     }
     
     async function getNftSales(limit = 50) {
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/nft/sales?limit=${limit}`
+            `https://cryptocurrency.cv/api/nft/sales?limit=${limit}`
         );
         return response.json();
     }
@@ -556,16 +556,16 @@ Get news and data about NFTs and digital collectibles.
 === "cURL"
     ```bash
     # Get NFT news
-    curl "https://news-crypto.vercel.app/api/nft?limit=20" | jq
+    curl "https://cryptocurrency.cv/api/nft?limit=20" | jq
     
     # Get NFT collections
-    curl "https://news-crypto.vercel.app/api/nft/collections?limit=20" | jq
+    curl "https://cryptocurrency.cv/api/nft/collections?limit=20" | jq
     
     # Get recent sales
-    curl "https://news-crypto.vercel.app/api/nft/sales?limit=20" | jq
+    curl "https://cryptocurrency.cv/api/nft/sales?limit=20" | jq
     
     # Get Ethereum NFTs only
-    curl "https://news-crypto.vercel.app/api/nft/collections?chain=ethereum" | jq
+    curl "https://cryptocurrency.cv/api/nft/collections?chain=ethereum" | jq
     ```
 
 ---
@@ -585,7 +585,7 @@ from typing import Dict, Any
 class DeFiNFTDashboard:
     """DeFi and NFT monitoring dashboard."""
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     def __init__(self):
         self.session = requests.Session()

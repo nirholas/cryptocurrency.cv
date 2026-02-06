@@ -52,7 +52,7 @@ GET /api/sse
 **Example with filters:**
 
 ```bash
-curl -N "https://news-crypto.vercel.app/api/sse?sources=coindesk,theblock&categories=bitcoin&breaking=true"
+curl -N "https://cryptocurrency.cv/api/sse?sources=coindesk,theblock&categories=bitcoin&breaking=true"
 ```
 
 ### Events
@@ -162,7 +162,7 @@ import requests
 import json
 
 def stream_news():
-    url = 'https://news-crypto.vercel.app/api/sse'
+    url = 'https://cryptocurrency.cv/api/sse'
     
     with requests.get(url, stream=True) as response:
         client = sseclient.SSEClient(response)
@@ -214,7 +214,7 @@ node ws-server.js
 
 ```env
 PORT=8080
-NEWS_API=https://news-crypto.vercel.app
+NEWS_API=https://cryptocurrency.cv
 ```
 
 ### HTTP Endpoints
@@ -478,7 +478,7 @@ Configurable alerts for price movements, breaking news, and custom conditions wi
 ### Create Alert Rule
 
 ```bash
-curl -X POST https://news-crypto.vercel.app/api/alerts \
+curl -X POST https://cryptocurrency.cv/api/alerts \
   -H "Content-Type: application/json" \
   -d '{
     "name": "BTC Above 100k",
@@ -907,7 +907,7 @@ Server-to-server notifications with HMAC signatures.
 ### Register Webhook
 
 ```bash
-curl -X POST https://news-crypto.vercel.app/api/webhooks \
+curl -X POST https://cryptocurrency.cv/api/webhooks \
   -H "Content-Type: application/json" \
   -d '{
     "url": "https://your-server.com/webhook",
@@ -1060,7 +1060,7 @@ CMD ["node", "ws-server.js"]
 
 ```bash
 docker build -t crypto-news-ws .
-docker run -p 8080:8080 -e NEWS_API_URL=https://news-crypto.vercel.app crypto-news-ws
+docker run -p 8080:8080 -e NEWS_API_URL=https://cryptocurrency.cv crypto-news-ws
 ```
 
 ---

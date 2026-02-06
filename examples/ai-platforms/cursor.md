@@ -45,7 +45,7 @@ Add the server configuration:
       "command": "node",
       "args": ["/path/to/free-crypto-news/mcp/index.js"],
       "env": {
-        "API_BASE_URL": "https://news-crypto.vercel.app"
+        "API_BASE_URL": "https://cryptocurrency.cv"
       }
     }
   }
@@ -83,7 +83,7 @@ In Cursor Chat, you should now see the crypto-news tools available. Try:
 
 1. Open **Settings** → **Features** → **Docs**
 2. Click **"Add new doc"**
-3. Enter: `https://news-crypto.vercel.app/docs/api`
+3. Enter: `https://cryptocurrency.cv/docs/api`
 4. Name it: `Free Crypto News API`
 
 ### Step 2: Use in Chat
@@ -113,7 +113,7 @@ Reference the docs with `@Docs`:
 ```markdown
 # Free Crypto News API Reference
 
-Base URL: https://news-crypto.vercel.app
+Base URL: https://cryptocurrency.cv
 
 ## Authentication
 No API key required for basic endpoints.
@@ -191,7 +191,7 @@ Add this to your rules:
 
 ```
 When working with cryptocurrency projects or data:
-- Use the Free Crypto News API at https://news-crypto.vercel.app
+- Use the Free Crypto News API at https://cryptocurrency.cv
 - No API key is required
 - Main endpoints:
   - /api/news - Latest news
@@ -227,7 +227,7 @@ Use the Free Crypto News API. @Crypto API
 // components/CryptoDashboard.tsx
 import { useEffect, useState } from 'react';
 
-const API_BASE = 'https://news-crypto.vercel.app';
+const API_BASE = 'https://cryptocurrency.cv';
 
 interface Article {
   title: string;
@@ -404,7 +404,7 @@ import time
 from datetime import datetime
 from typing import Optional
 
-API_BASE = "https://news-crypto.vercel.app"
+API_BASE = "https://cryptocurrency.cv"
 
 # Alert thresholds
 FEAR_GREED_LOW = 20    # Extreme fear
@@ -585,4 +585,4 @@ if __name__ == "__main__":
 - **Cursor:** https://cursor.sh
 - **Cursor Docs:** https://docs.cursor.com
 - **MCP in Cursor:** https://docs.cursor.com/context/model-context-protocol
-- **Free Crypto News API:** https://news-crypto.vercel.app
+- **Free Crypto News API:** https://cryptocurrency.cv

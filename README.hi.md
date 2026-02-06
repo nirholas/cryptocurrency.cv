@@ -16,7 +16,7 @@
 एक API कॉल से **200+ स्रोतों** से रियल-टाइम क्रिप्टो न्यूज़ प्राप्त करें।
 
 ```bash
-curl https://news-crypto.vercel.app/api/news
+curl https://cryptocurrency.cv/api/news
 ```
 
 ---
@@ -39,13 +39,13 @@ curl https://news-crypto.vercel.app/api/news
 
 ```bash
 # नवीनतम समाचार
-curl "https://news-crypto.vercel.app/api/news?limit=10"
+curl "https://cryptocurrency.cv/api/news?limit=10"
 
 # बिटकॉइन समाचार
-curl "https://news-crypto.vercel.app/api/news?ticker=BTC"
+curl "https://cryptocurrency.cv/api/news?ticker=BTC"
 
 # ब्रेकिंग न्यूज़
-curl "https://news-crypto.vercel.app/api/breaking"
+curl "https://cryptocurrency.cv/api/breaking"
 ```
 
 ### Python उदाहरण
@@ -53,7 +53,7 @@ curl "https://news-crypto.vercel.app/api/breaking"
 ```python
 import requests
 
-BASE_URL = "https://news-crypto.vercel.app"
+BASE_URL = "https://cryptocurrency.cv"
 
 # नवीनतम समाचार प्राप्त करें
 news = requests.get(f"{BASE_URL}/api/news?limit=10").json()
@@ -72,7 +72,7 @@ print(f"मार्केट: {fg['classification']} ({fg['value']}/100)")
 ### JavaScript उदाहरण
 
 ```javascript
-const BASE_URL = 'https://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
 
 // नवीनतम समाचार प्राप्त करें
 const news = await fetch(`${BASE_URL}/api/news?limit=10`).then(r => r.json());
@@ -129,10 +129,10 @@ console.log(summary.summary);
 
 ```bash
 # हिंदी समाचार प्राप्त करें
-curl "https://news-crypto.vercel.app/api/news/international?language=hi"
+curl "https://cryptocurrency.cv/api/news/international?language=hi"
 
 # अंग्रेजी अनुवाद के साथ
-curl "https://news-crypto.vercel.app/api/news/international?language=hi&translate=true"
+curl "https://cryptocurrency.cv/api/news/international?language=hi&translate=true"
 ```
 
 ---
@@ -151,8 +151,8 @@ npm start
 
 ## 🔗 लिंक
 
-- **API**: https://news-crypto.vercel.app
-- **डॉक्युमेंटेशन**: https://news-crypto.vercel.app/docs
+- **API**: https://cryptocurrency.cv
+- **डॉक्युमेंटेशन**: https://cryptocurrency.cv/docs
 - **GitHub**: https://github.com/AItoolsbyai/free-crypto-news
 
 ---

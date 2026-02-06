@@ -61,7 +61,7 @@ Stream real-time updates without WebSocket complexity.
         <div id="news-feed"></div>
         
         <script>
-            const BASE_URL = "https://news-crypto.vercel.app";
+            const BASE_URL = "https://cryptocurrency.cv";
             const statusEl = document.getElementById("status");
             const feedEl = document.getElementById("news-feed");
             
@@ -176,7 +176,7 @@ Stream real-time updates without WebSocket complexity.
     
     const EventSource = require("eventsource");
     
-    const BASE_URL = "https://news-crypto.vercel.app";
+    const BASE_URL = "https://cryptocurrency.cv";
     
     class CryptoNewsStream {
         constructor() {
@@ -326,7 +326,7 @@ Stream real-time updates without WebSocket complexity.
         private breakingHandlers: EventHandler<Article>[] = [];
         private priceHandlers: EventHandler<PriceUpdate>[] = [];
         
-        constructor(baseUrl = "https://news-crypto.vercel.app") {
+        constructor(baseUrl = "https://cryptocurrency.cv") {
             this.baseUrl = baseUrl;
         }
         
@@ -434,7 +434,7 @@ Stream real-time updates without WebSocket complexity.
     import sseclient
     
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     
     class CryptoNewsStream:
@@ -584,7 +584,7 @@ Stream real-time updates without WebSocket complexity.
     from aiohttp_sse_client import client as sse_client
     
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     
     class AsyncCryptoNewsStream:
@@ -816,7 +816,7 @@ Get WebSocket connection details:
 === "cURL"
 
     ```bash
-    curl "https://news-crypto.vercel.app/api/ws"
+    curl "https://cryptocurrency.cv/api/ws"
     ```
 
 ---

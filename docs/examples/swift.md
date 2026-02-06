@@ -89,7 +89,7 @@ actor CryptoNewsClient {
     private let session: URLSession
     private let decoder: JSONDecoder
     
-    init(baseURL: String = "https://news-crypto.vercel.app") {
+    init(baseURL: String = "https://cryptocurrency.cv") {
         self.baseURL = URL(string: baseURL)!
         
         let config = URLSessionConfiguration.default

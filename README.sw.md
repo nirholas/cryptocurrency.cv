@@ -21,7 +21,7 @@
 Pata habari za crypto za wakati halisi kutoka **vyanzo 200+** kwa simu moja ya API.
 
 ```bash
-curl https://news-crypto.vercel.app/api/news
+curl https://cryptocurrency.cv/api/news
 ```
 
 ---
@@ -55,13 +55,13 @@ Pata habari za crypto kutoka **vyanzo 75 vya kimataifa** katika lugha 18 — na 
 
 ```bash
 # Pata habari za hivi karibuni
-curl "https://news-crypto.vercel.app/api/news?limit=10"
+curl "https://cryptocurrency.cv/api/news?limit=10"
 
 # Pata hisia za Bitcoin
-curl "https://news-crypto.vercel.app/api/ai/sentiment?asset=BTC"
+curl "https://cryptocurrency.cv/api/ai/sentiment?asset=BTC"
 
 # Tafuta makala
-curl "https://news-crypto.vercel.app/api/search?q=ethereum%20upgrade"
+curl "https://cryptocurrency.cv/api/search?q=ethereum%20upgrade"
 ```
 
 ---

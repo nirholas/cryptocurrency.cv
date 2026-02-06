@@ -95,7 +95,7 @@ Enable in Alfred Preferences → Features → Snippets
 1. Check internet connection
 2. Test API directly:
    ```bash
-   curl https://news-crypto.vercel.app/api/health
+   curl https://cryptocurrency.cv/api/health
    ```
 3. Clear workflow cache
 

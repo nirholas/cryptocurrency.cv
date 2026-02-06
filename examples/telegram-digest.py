@@ -42,7 +42,7 @@ from telegram.ext import (
 
 # Configuration
 BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN', 'YOUR_BOT_TOKEN_HERE')
-API_BASE = 'https://news-crypto.vercel.app'
+API_BASE = 'https://cryptocurrency.cv'
 
 # Storage for subscribed users (use database in production)
 subscribed_users: dict[int, dict] = {}

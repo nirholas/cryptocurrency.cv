@@ -5,7 +5,7 @@
  * News analytics, trends, sentiment tracking, and reporting.
  */
 
-const BASE_URL = 'https://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
 
 // =============================================================================
 // OVERVIEW & TRENDS

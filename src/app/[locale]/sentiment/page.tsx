@@ -36,7 +36,7 @@ interface SentimentData {
 
 async function getSentiment(): Promise<SentimentData | null> {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'https://news-crypto.vercel.app'}/api/sentiment?limit=20`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'https://cryptocurrency.cv'}/api/sentiment?limit=20`, {
       next: { revalidate: 300 },
     });
     if (!res.ok) return null;

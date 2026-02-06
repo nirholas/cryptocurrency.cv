@@ -21,8 +21,8 @@ require 'openssl'
 #
 module FCN
   VERSION = '0.2.0'
-  BASE_URL = 'https://news-crypto.vercel.app/api'
-  WS_URL = 'wss://news-crypto.vercel.app/ws'
+  BASE_URL = 'https://cryptocurrency.cv/api'
+  WS_URL = 'wss://cryptocurrency.cv/ws'
 
   # Custom error class for API errors
   class APIError < StandardError

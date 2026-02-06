@@ -38,9 +38,9 @@ export async function GET() {
 ${outlines}
     </outline>
     <outline text="Free Crypto News Aggregated Feeds" title="Aggregated Feeds">
-      <outline text="All News" title="All News" type="rss" xmlUrl="https://news-crypto.vercel.app/api/rss" htmlUrl="https://news-crypto.vercel.app"/>
-      <outline text="DeFi News" title="DeFi News" type="rss" xmlUrl="https://news-crypto.vercel.app/api/rss?feed=defi" htmlUrl="https://news-crypto.vercel.app"/>
-      <outline text="Bitcoin News" title="Bitcoin News" type="rss" xmlUrl="https://news-crypto.vercel.app/api/rss?feed=bitcoin" htmlUrl="https://news-crypto.vercel.app"/>
+      <outline text="All News" title="All News" type="rss" xmlUrl="https://cryptocurrency.cv/api/rss" htmlUrl="https://cryptocurrency.cv"/>
+      <outline text="DeFi News" title="DeFi News" type="rss" xmlUrl="https://cryptocurrency.cv/api/rss?feed=defi" htmlUrl="https://cryptocurrency.cv"/>
+      <outline text="Bitcoin News" title="Bitcoin News" type="rss" xmlUrl="https://cryptocurrency.cv/api/rss?feed=bitcoin" htmlUrl="https://cryptocurrency.cv"/>
     </outline>
   </body>
 </opml>`;

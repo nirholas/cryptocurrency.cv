@@ -186,7 +186,7 @@ For dynamic content that can't be pre-translated, we provide a real-time transla
 
 ```bash
 # Translate single text
-curl -X POST "https://news-crypto.vercel.app/api/translate" \
+curl -X POST "https://cryptocurrency.cv/api/translate" \
   -H "Content-Type: application/json" \
   -d '{
     "text": "Bitcoin reaches new all-time high",
@@ -207,7 +207,7 @@ curl -X POST "https://news-crypto.vercel.app/api/translate" \
 
 ```bash
 # Translate multiple texts at once
-curl -X POST "https://news-crypto.vercel.app/api/translate" \
+curl -X POST "https://cryptocurrency.cv/api/translate" \
   -H "Content-Type: application/json" \
   -d '{
     "texts": [
@@ -278,20 +278,20 @@ All API responses can be translated using the `Accept-Language` header or `lang`
 
 ```bash
 # Get news in Spanish
-curl -H "Accept-Language: es" "https://news-crypto.vercel.app/api/news"
+curl -H "Accept-Language: es" "https://cryptocurrency.cv/api/news"
 
 # Get market data in Japanese
-curl -H "Accept-Language: ja" "https://news-crypto.vercel.app/api/markets"
+curl -H "Accept-Language: ja" "https://cryptocurrency.cv/api/markets"
 ```
 
 ### Using Query Parameter
 
 ```bash
 # Get news in Arabic
-curl "https://news-crypto.vercel.app/api/news?lang=ar"
+curl "https://cryptocurrency.cv/api/news?lang=ar"
 
 # Get AI brief in Korean
-curl "https://news-crypto.vercel.app/api/ai/brief?lang=ko"
+curl "https://cryptocurrency.cv/api/ai/brief?lang=ko"
 ```
 
 ### Localized Error Messages
@@ -350,16 +350,16 @@ In addition to UI translations, we aggregate news from **75 native-language cryp
 
 ```bash
 # Get all international news
-curl "https://news-crypto.vercel.app/api/news/international"
+curl "https://cryptocurrency.cv/api/news/international"
 
 # Get Korean news with English translation
-curl "https://news-crypto.vercel.app/api/news/international?language=ko&translate=true"
+curl "https://cryptocurrency.cv/api/news/international?language=ko&translate=true"
 
 # Get Asian region news
-curl "https://news-crypto.vercel.app/api/news/international?region=asia&limit=20"
+curl "https://cryptocurrency.cv/api/news/international?region=asia&limit=20"
 
 # Get European news without translation
-curl "https://news-crypto.vercel.app/api/news/international?region=europe"
+curl "https://cryptocurrency.cv/api/news/international?region=europe"
 ```
 
 See [API.md](/docs/API.md#get-apinewsinternational) for full endpoint documentation.
@@ -398,13 +398,13 @@ The API supports response translation via the `lang` parameter:
 
 ```bash
 # Get news in Spanish
-curl "https://news-crypto.vercel.app/api/news?lang=es"
+curl "https://cryptocurrency.cv/api/news?lang=es"
 
 # Get news in Japanese
-curl "https://news-crypto.vercel.app/api/news?lang=ja"
+curl "https://cryptocurrency.cv/api/news?lang=ja"
 
 # Get news in Arabic
-curl "https://news-crypto.vercel.app/api/news?lang=ar"
+curl "https://cryptocurrency.cv/api/news?lang=ar"
 ```
 
 ### Response Format

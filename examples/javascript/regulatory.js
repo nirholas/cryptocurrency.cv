@@ -5,7 +5,7 @@
  * Regulatory news, ETF updates, SEC filings, and compliance data.
  */
 
-const BASE_URL = 'https://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
 
 // =============================================================================
 // REGULATORY NEWS

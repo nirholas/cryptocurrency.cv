@@ -4,13 +4,13 @@
  * This file contains working examples for ALL API endpoints.
  * No API key required - all endpoints are free and open.
  * 
- * Base URL: https://news-crypto.vercel.app
+ * Base URL: https://cryptocurrency.cv
  * 
  * @author Free Crypto News
  * @license MIT
  */
 
-const BASE_URL = "https://news-crypto.vercel.app";
+const BASE_URL = "https://cryptocurrency.cv";
 
 // =============================================================================
 // UTILITY FUNCTIONS

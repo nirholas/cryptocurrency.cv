@@ -38,7 +38,7 @@ jobs:
           mkdir -p archive/$YEAR/$MONTH
           
           # Fetch news from main API (or use backup sources)
-          API_URL="${{ secrets.API_URL || 'https://news-crypto.vercel.app' }}"
+          API_URL="${{ secrets.API_URL || 'https://cryptocurrency.cv' }}"
           
           echo "Fetching from $API_URL..."
           

@@ -9,7 +9,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 
-const API_BASE = process.env.NEXT_PUBLIC_BASE_URL || 'https://news-crypto.vercel.app';
+const API_BASE = process.env.NEXT_PUBLIC_BASE_URL || 'https://cryptocurrency.cv';
 
 // GraphQL Schema
 const SCHEMA = `

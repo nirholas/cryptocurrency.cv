@@ -108,7 +108,7 @@ public class CryptoNewsClient : IDisposable
     private readonly string _baseUrl;
     private readonly JsonSerializerOptions _jsonOptions;
 
-    public CryptoNewsClient(string? apiKey = null, string baseUrl = "https://news-crypto.vercel.app")
+    public CryptoNewsClient(string? apiKey = null, string baseUrl = "https://cryptocurrency.cv")
     {
         _baseUrl = baseUrl;
         _client = new HttpClient();
@@ -302,7 +302,7 @@ class Program
 // Program.cs
 builder.Services.AddHttpClient<CryptoNewsClient>(client =>
 {
-    client.BaseAddress = new Uri("https://news-crypto.vercel.app");
+    client.BaseAddress = new Uri("https://cryptocurrency.cv");
     client.DefaultRequestHeaders.Add("Accept", "application/json");
 });
 
@@ -434,7 +434,7 @@ public class NewsStreamService : IDisposable
     
     public event EventHandler<NewsArticle>? OnNewsReceived;
 
-    public async Task ConnectAsync(string url = "wss://news-crypto.vercel.app/ws")
+    public async Task ConnectAsync(string url = "wss://cryptocurrency.cv/ws")
     {
         _socket = new ClientWebSocket();
         _cts = new CancellationTokenSource();

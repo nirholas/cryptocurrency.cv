@@ -6,7 +6,7 @@
 # Complete cURL examples for all API endpoints
 # =============================================================================
 
-BASE_URL="https://news-crypto.vercel.app"
+BASE_URL="https://cryptocurrency.cv"
 
 # =============================================================================
 # NEWS ENDPOINTS

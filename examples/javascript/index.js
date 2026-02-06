@@ -28,7 +28,7 @@ module.exports = {
   ...streaming,
   
   // Base URL
-  BASE_URL: 'https://news-crypto.vercel.app',
+  BASE_URL: 'https://cryptocurrency.cv',
   
   // Version
   VERSION: '1.0.0'

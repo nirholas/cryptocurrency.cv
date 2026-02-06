@@ -52,7 +52,7 @@ https://raw.githubusercontent.com/nirholas/free-crypto-news/main/postman/Free_Cr
 
 | Variable | Default Value |
 |----------|---------------|
-| `baseUrl` | `https://news-crypto.vercel.app` |
+| `baseUrl` | `https://cryptocurrency.cv` |
 
 Change `baseUrl` to test against your self-hosted instance.
 

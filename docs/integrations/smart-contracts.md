@@ -36,7 +36,7 @@ contract CryptoNewsOracle is ChainlinkClient, ConfirmedOwner {
     uint256 public breakingCount;    // Number of breaking news
     uint256 public lastUpdate;       // Timestamp of last update
 
-    string public oracleUrl = "https://news-crypto.vercel.app/api/oracle/chainlink?format=standard";
+    string public oracleUrl = "https://cryptocurrency.cv/api/oracle/chainlink?format=standard";
     
     // ... (full source in contracts/)
 }
@@ -281,7 +281,7 @@ contract SentimentWeightedVoting {
 The contract fetches data from:
 
 ```
-https://news-crypto.vercel.app/api/oracle/chainlink?format=standard
+https://cryptocurrency.cv/api/oracle/chainlink?format=standard
 ```
 
 ### Response Format

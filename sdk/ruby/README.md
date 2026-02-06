@@ -1,6 +1,6 @@
 # Free Crypto News Ruby SDK
 
-Production-ready Ruby client for the [Free Crypto News API](https://news-crypto.vercel.app).
+Production-ready Ruby client for the [Free Crypto News API](https://cryptocurrency.cv).
 
 ## Features
 
@@ -306,7 +306,7 @@ For higher rate limits:
 client = FCN::Client.new(api_key: 'your_api_key')
 ```
 
-Get your free API key at: https://news-crypto.vercel.app/dashboard
+Get your free API key at: https://cryptocurrency.cv/dashboard
 
 ## Error Handling
 

@@ -34,7 +34,7 @@ Or edit `~/.codeium/windsurf/mcp_config.json`:
       "command": "node",
       "args": ["/path/to/free-crypto-news/mcp/index.js"],
       "env": {
-        "API_BASE_URL": "https://news-crypto.vercel.app"
+        "API_BASE_URL": "https://cryptocurrency.cv"
       }
     }
   }
@@ -92,7 +92,7 @@ In Windsurf Chat, type:
 ```
 @memories add crypto-api:
 Free Crypto News API Reference
-Base URL: https://news-crypto.vercel.app
+Base URL: https://cryptocurrency.cv
 No API key required
 
 Endpoints:
@@ -128,7 +128,7 @@ Cascade can autonomously build complete features using the API.
 **User:**
 ```
 Use Cascade to build a cryptocurrency news dashboard component:
-- Fetch news from https://news-crypto.vercel.app/api/news
+- Fetch news from https://cryptocurrency.cv/api/news
 - Show Fear & Greed from /api/market/fear-greed
 - Display trending topics from /api/trending
 - Use React with TypeScript
@@ -159,7 +159,7 @@ Go to **Settings** → **AI** → **Rules**
 ## Cryptocurrency Development Rules
 
 When working with crypto data:
-1. Use Free Crypto News API: https://news-crypto.vercel.app
+1. Use Free Crypto News API: https://cryptocurrency.cv
 2. No API key required for public endpoints
 3. Rate limit: 100 requests/minute
 4. Always handle network errors
@@ -197,7 +197,7 @@ Build a complete crypto trading assistant with these features:
 Use:
 - React + TypeScript
 - Tailwind CSS
-- Free Crypto News API (https://news-crypto.vercel.app)
+- Free Crypto News API (https://cryptocurrency.cv)
 - React Query for data fetching
 - Toast notifications for alerts
 ```
@@ -206,7 +206,7 @@ Use:
 
 ```tsx
 // lib/api.ts
-const API_BASE = 'https://news-crypto.vercel.app';
+const API_BASE = 'https://cryptocurrency.cv';
 
 export async function fetchWithTimeout<T>(
   url: string, 
@@ -444,7 +444,7 @@ export function SentimentPanel() {
 ### Cascade Not Using API
 
 1. Add the API to Memories
-2. Be explicit: "Use https://news-crypto.vercel.app"
+2. Be explicit: "Use https://cryptocurrency.cv"
 3. Provide endpoint details in the prompt
 
 ### Slow Performance
@@ -460,4 +460,4 @@ export function SentimentPanel() {
 - **Windsurf:** https://codeium.com/windsurf
 - **Codeium Docs:** https://docs.codeium.com
 - **Windsurf Discord:** https://discord.gg/codeium
-- **Free Crypto News API:** https://news-crypto.vercel.app
+- **Free Crypto News API:** https://cryptocurrency.cv

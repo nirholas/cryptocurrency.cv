@@ -40,7 +40,7 @@ Get comprehensive market data for cryptocurrencies.
             params["ids"] = ids
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/market/coins",
+            "https://cryptocurrency.cv/api/market/coins",
             params=params
         )
         return response.json()
@@ -93,7 +93,7 @@ Get comprehensive market data for cryptocurrencies.
         if (options.ids) params.set('ids', options.ids);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/market/coins?${params}`
+            `https://cryptocurrency.cv/api/market/coins?${params}`
         );
         return response.json();
     }
@@ -131,16 +131,16 @@ Get comprehensive market data for cryptocurrencies.
 === "cURL"
     ```bash
     # Get top 20 coins
-    curl "https://news-crypto.vercel.app/api/market/coins?per_page=20&vs_currency=usd" | jq
+    curl "https://cryptocurrency.cv/api/market/coins?per_page=20&vs_currency=usd" | jq
     
     # Get specific coins
-    curl "https://news-crypto.vercel.app/api/market/coins?ids=bitcoin,ethereum,solana" | jq
+    curl "https://cryptocurrency.cv/api/market/coins?ids=bitcoin,ethereum,solana" | jq
     
     # Get coins sorted by volume
-    curl "https://news-crypto.vercel.app/api/market/coins?order=volume_desc&per_page=10" | jq
+    curl "https://cryptocurrency.cv/api/market/coins?order=volume_desc&per_page=10" | jq
     
     # Get in different currency
-    curl "https://news-crypto.vercel.app/api/market/coins?vs_currency=eur&per_page=5" | jq
+    curl "https://cryptocurrency.cv/api/market/coins?vs_currency=eur&per_page=5" | jq
     ```
 
 ---
@@ -161,7 +161,7 @@ Get historical OHLC (Open, High, Low, Close) data for charting.
             params["interval"] = interval
         
         response = requests.get(
-            f"https://news-crypto.vercel.app/api/market/ohlc/{coin_id}",
+            f"https://cryptocurrency.cv/api/market/ohlc/{coin_id}",
             params=params
         )
         return response.json()
@@ -216,7 +216,7 @@ Get historical OHLC (Open, High, Low, Close) data for charting.
         if (interval) params.set('interval', interval);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/market/ohlc/${coinId}?${params}`
+            `https://cryptocurrency.cv/api/market/ohlc/${coinId}?${params}`
         );
         return response.json();
     }
@@ -255,13 +255,13 @@ Get historical OHLC (Open, High, Low, Close) data for charting.
 === "cURL"
     ```bash
     # Get 7-day OHLC for Bitcoin
-    curl "https://news-crypto.vercel.app/api/market/ohlc/bitcoin?days=7" | jq
+    curl "https://cryptocurrency.cv/api/market/ohlc/bitcoin?days=7" | jq
     
     # Get 30-day OHLC for Ethereum
-    curl "https://news-crypto.vercel.app/api/market/ohlc/ethereum?days=30" | jq
+    curl "https://cryptocurrency.cv/api/market/ohlc/ethereum?days=30" | jq
     
     # Get daily interval
-    curl "https://news-crypto.vercel.app/api/market/ohlc/bitcoin?days=30&interval=daily" | jq
+    curl "https://cryptocurrency.cv/api/market/ohlc/bitcoin?days=30&interval=daily" | jq
     ```
 
 ---
@@ -277,7 +277,7 @@ Get information about cryptocurrency exchanges.
     def get_exchanges():
         """Get exchange data."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/market/exchanges"
+            "https://cryptocurrency.cv/api/market/exchanges"
         )
         return response.json()
     
@@ -327,7 +327,7 @@ Get information about cryptocurrency exchanges.
     ```javascript
     async function getExchanges() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/market/exchanges'
+            'https://cryptocurrency.cv/api/market/exchanges'
         );
         return response.json();
     }
@@ -361,13 +361,13 @@ Get information about cryptocurrency exchanges.
 === "cURL"
     ```bash
     # Get all exchanges
-    curl "https://news-crypto.vercel.app/api/market/exchanges" | jq
+    curl "https://cryptocurrency.cv/api/market/exchanges" | jq
     
     # Get top 10 exchanges
-    curl "https://news-crypto.vercel.app/api/market/exchanges" | jq '.exchanges[:10]'
+    curl "https://cryptocurrency.cv/api/market/exchanges" | jq '.exchanges[:10]'
     
     # Get exchange names and volumes
-    curl "https://news-crypto.vercel.app/api/market/exchanges" | jq '.exchanges[] | {name, volume: .trade_volume_24h_btc}'
+    curl "https://cryptocurrency.cv/api/market/exchanges" | jq '.exchanges[] | {name, volume: .trade_volume_24h_btc}'
     ```
 
 ---
@@ -383,7 +383,7 @@ Get derivatives market data including futures and perpetuals.
     def get_derivatives():
         """Get derivatives market data."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/market/derivatives"
+            "https://cryptocurrency.cv/api/market/derivatives"
         )
         return response.json()
     
@@ -426,7 +426,7 @@ Get derivatives market data including futures and perpetuals.
     ```javascript
     async function getDerivatives() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/market/derivatives'
+            'https://cryptocurrency.cv/api/market/derivatives'
         );
         return response.json();
     }
@@ -457,10 +457,10 @@ Get derivatives market data including futures and perpetuals.
 === "cURL"
     ```bash
     # Get derivatives data
-    curl "https://news-crypto.vercel.app/api/market/derivatives" | jq
+    curl "https://cryptocurrency.cv/api/market/derivatives" | jq
     
     # Get top 10 by volume
-    curl "https://news-crypto.vercel.app/api/market/derivatives" | jq '.derivatives | sort_by(-.volume_24h)[:10]'
+    curl "https://cryptocurrency.cv/api/market/derivatives" | jq '.derivatives | sort_by(-.volume_24h)[:10]'
     ```
 
 ---
@@ -476,7 +476,7 @@ Explore different market categories and sectors.
     def get_categories():
         """Get market categories."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/market/categories"
+            "https://cryptocurrency.cv/api/market/categories"
         )
         return response.json()
     
@@ -524,7 +524,7 @@ Explore different market categories and sectors.
     ```javascript
     async function getCategories() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/market/categories'
+            'https://cryptocurrency.cv/api/market/categories'
         );
         return response.json();
     }
@@ -566,13 +566,13 @@ Explore different market categories and sectors.
 === "cURL"
     ```bash
     # Get all categories
-    curl "https://news-crypto.vercel.app/api/market/categories" | jq
+    curl "https://cryptocurrency.cv/api/market/categories" | jq
     
     # Get top 10 by market cap
-    curl "https://news-crypto.vercel.app/api/market/categories" | jq '.categories | sort_by(-.market_cap)[:10]'
+    curl "https://cryptocurrency.cv/api/market/categories" | jq '.categories | sort_by(-.market_cap)[:10]'
     
     # Get category names
-    curl "https://news-crypto.vercel.app/api/market/categories" | jq '.categories[].name'
+    curl "https://cryptocurrency.cv/api/market/categories" | jq '.categories[].name'
     ```
 
 ---
@@ -588,7 +588,7 @@ Search for coins, exchanges, and other market entities.
     def search_market(query: str):
         """Search market data."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/market/search",
+            "https://cryptocurrency.cv/api/market/search",
             params={"q": query}
         )
         return response.json()
@@ -626,7 +626,7 @@ Search for coins, exchanges, and other market entities.
     async function searchMarket(query) {
         const params = new URLSearchParams({ q: query });
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/market/search?${params}`
+            `https://cryptocurrency.cv/api/market/search?${params}`
         );
         return response.json();
     }
@@ -659,10 +659,10 @@ Search for coins, exchanges, and other market entities.
 === "cURL"
     ```bash
     # Search for "bitcoin"
-    curl "https://news-crypto.vercel.app/api/market/search?q=bitcoin" | jq
+    curl "https://cryptocurrency.cv/api/market/search?q=bitcoin" | jq
     
     # Search for "defi"
-    curl "https://news-crypto.vercel.app/api/market/search?q=defi" | jq '.coins[:5]'
+    curl "https://cryptocurrency.cv/api/market/search?q=defi" | jq '.coins[:5]'
     ```
 
 ---
@@ -678,7 +678,7 @@ Get the crypto Fear & Greed Index.
     def get_fear_greed(days: int = 7):
         """Get Fear & Greed Index."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/fear-greed",
+            "https://cryptocurrency.cv/api/fear-greed",
             params={"days": days}
         )
         return response.json()
@@ -739,7 +739,7 @@ Get the crypto Fear & Greed Index.
     async function getFearGreed(days = 7) {
         const params = new URLSearchParams({ days: days.toString() });
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/fear-greed?${params}`
+            `https://cryptocurrency.cv/api/fear-greed?${params}`
         );
         return response.json();
     }
@@ -782,13 +782,13 @@ Get the crypto Fear & Greed Index.
 === "cURL"
     ```bash
     # Get current Fear & Greed
-    curl "https://news-crypto.vercel.app/api/fear-greed" | jq
+    curl "https://cryptocurrency.cv/api/fear-greed" | jq
     
     # Get 30-day history
-    curl "https://news-crypto.vercel.app/api/fear-greed?days=30" | jq
+    curl "https://cryptocurrency.cv/api/fear-greed?days=30" | jq
     
     # Get just the value
-    curl "https://news-crypto.vercel.app/api/fear-greed" | jq '{value, classification}'
+    curl "https://cryptocurrency.cv/api/fear-greed" | jq '{value, classification}'
     ```
 
 ---
@@ -807,7 +807,7 @@ from datetime import datetime
 class MarketDashboard:
     """Crypto market dashboard."""
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     def __init__(self):
         self.session = requests.Session()

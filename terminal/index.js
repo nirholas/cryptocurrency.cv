@@ -20,7 +20,7 @@ import figlet from 'figlet';
 import { program } from 'commander';
 import EventSource from 'eventsource';
 
-const API_BASE = 'https://news-crypto.vercel.app/api';
+const API_BASE = 'https://cryptocurrency.cv/api';
 
 // Parse CLI arguments
 program

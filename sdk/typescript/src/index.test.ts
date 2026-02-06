@@ -13,7 +13,7 @@ describe('CryptoNews', () => {
   describe('constructor', () => {
     it('should use default base URL', () => {
       const client = new CryptoNews();
-      expect(client['baseUrl']).toBe('https://news-crypto.vercel.app');
+      expect(client['baseUrl']).toBe('https://cryptocurrency.cv');
     });
 
     it('should accept custom base URL', () => {
@@ -40,7 +40,7 @@ describe('CryptoNews', () => {
       const articles = await client.getLatest(10);
 
       expect(mockFetch).toHaveBeenCalledWith(
-        'https://news-crypto.vercel.app/api/news?limit=10',
+        'https://cryptocurrency.cv/api/news?limit=10',
         expect.any(Object)
       );
       expect(articles).toEqual(mockResponse.articles);
@@ -56,7 +56,7 @@ describe('CryptoNews', () => {
       await client.getLatest(5, 'coindesk');
 
       expect(mockFetch).toHaveBeenCalledWith(
-        'https://news-crypto.vercel.app/api/news?limit=5&source=coindesk',
+        'https://cryptocurrency.cv/api/news?limit=5&source=coindesk',
         expect.any(Object)
       );
     });
@@ -73,7 +73,7 @@ describe('CryptoNews', () => {
       await client.search('bitcoin, ethereum');
 
       expect(mockFetch).toHaveBeenCalledWith(
-        'https://news-crypto.vercel.app/api/search?q=bitcoin%2C%20ethereum&limit=10',
+        'https://cryptocurrency.cv/api/search?q=bitcoin%2C%20ethereum&limit=10',
         expect.any(Object)
       );
     });
@@ -90,7 +90,7 @@ describe('CryptoNews', () => {
       await client.getDefi(15);
 
       expect(mockFetch).toHaveBeenCalledWith(
-        'https://news-crypto.vercel.app/api/defi?limit=15',
+        'https://cryptocurrency.cv/api/defi?limit=15',
         expect.any(Object)
       );
     });
@@ -107,7 +107,7 @@ describe('CryptoNews', () => {
       await client.getBitcoin();
 
       expect(mockFetch).toHaveBeenCalledWith(
-        'https://news-crypto.vercel.app/api/bitcoin?limit=10',
+        'https://cryptocurrency.cv/api/bitcoin?limit=10',
         expect.any(Object)
       );
     });
@@ -124,7 +124,7 @@ describe('CryptoNews', () => {
       await client.getBreaking();
 
       expect(mockFetch).toHaveBeenCalledWith(
-        'https://news-crypto.vercel.app/api/breaking?limit=5',
+        'https://cryptocurrency.cv/api/breaking?limit=5',
         expect.any(Object)
       );
     });
@@ -170,12 +170,12 @@ describe('CryptoNews', () => {
   describe('getRSSUrl', () => {
     it('should return RSS URL for all feeds', () => {
       const client = new CryptoNews();
-      expect(client.getRSSUrl()).toBe('https://news-crypto.vercel.app/api/rss');
+      expect(client.getRSSUrl()).toBe('https://cryptocurrency.cv/api/rss');
     });
 
     it('should return RSS URL for specific feed', () => {
       const client = new CryptoNews();
-      expect(client.getRSSUrl('defi')).toBe('https://news-crypto.vercel.app/api/rss?feed=defi');
+      expect(client.getRSSUrl('defi')).toBe('https://cryptocurrency.cv/api/rss?feed=defi');
     });
   });
 

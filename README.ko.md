@@ -23,7 +23,7 @@
 하나의 API 호출로 7개 주요 소스에서 실시간 암호화폐 뉴스를 받아보세요.
 
 ```bash
-curl https://news-crypto.vercel.app/api/news
+curl https://cryptocurrency.cv/api/news
 ```
 
 ---
@@ -75,13 +75,13 @@ npm install && npm run dev
 
 ```bash
 # 모든 국제 뉴스 가져오기
-curl "https://news-crypto.vercel.app/api/news/international"
+curl "https://cryptocurrency.cv/api/news/international"
 
 # 한국어 뉴스를 영어로 번역해서 가져오기
-curl "https://news-crypto.vercel.app/api/news/international?language=ko&translate=true"
+curl "https://cryptocurrency.cv/api/news/international?language=ko&translate=true"
 
 # 아시아 지역 뉴스 가져오기
-curl "https://news-crypto.vercel.app/api/news/international?region=asia&limit=20"
+curl "https://cryptocurrency.cv/api/news/international?region=asia&limit=20"
 ```
 
 ### 기능
@@ -117,7 +117,7 @@ Free Crypto News는 오프라인 지원이 되는 **완전히 설치 가능한 P
 ### 앱 설치
 
 **데스크톱 (Chrome/Edge):**
-1. [news-crypto.vercel.app](https://news-crypto.vercel.app) 방문
+1. [cryptocurrency.cv](https://cryptocurrency.cv) 방문
 2. URL 바의 설치 아이콘 (⊕) 클릭
 3. "설치" 클릭
 
@@ -233,23 +233,23 @@ PWA는 스마트 캐싱 전략을 사용합니다:
 
 ```bash
 # 최신 뉴스 가져오기
-curl "https://news-crypto.vercel.app/api/news"
+curl "https://cryptocurrency.cv/api/news"
 
 # 뉴스 검색
-curl "https://news-crypto.vercel.app/api/search?q=ethereum"
+curl "https://cryptocurrency.cv/api/search?q=ethereum"
 
 # AI 다이제스트 가져오기
-curl "https://news-crypto.vercel.app/api/digest"
+curl "https://cryptocurrency.cv/api/digest"
 
 # 공포 & 탐욕 지수 가져오기
-curl "https://news-crypto.vercel.app/api/fear-greed"
+curl "https://cryptocurrency.cv/api/fear-greed"
 ```
 
 ### JavaScript 사용
 
 ```javascript
 // 최신 뉴스 가져오기
-const response = await fetch('https://news-crypto.vercel.app/api/news');
+const response = await fetch('https://cryptocurrency.cv/api/news');
 const data = await response.json();
 
 console.log(data.articles);
@@ -262,7 +262,7 @@ console.log(data.articles);
 import requests
 
 # 최신 뉴스 가져오기
-response = requests.get('https://news-crypto.vercel.app/api/news')
+response = requests.get('https://cryptocurrency.cv/api/news')
 data = response.json()
 
 for article in data['articles'][:5]:
@@ -355,5 +355,5 @@ MIT License - [LICENSE](LICENSE) 파일을 참조하세요.
 <p align="center">
   암호화폐 커뮤니티를 위해 ❤️로 제작됨
   <br>
-  <a href="https://news-crypto.vercel.app">news-crypto.vercel.app</a>
+  <a href="https://cryptocurrency.cv">cryptocurrency.cv</a>
 </p>

@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 
-const API_BASE = 'https://news-crypto.vercel.app';
+const API_BASE = 'https://cryptocurrency.cv';
 
 interface NewsArticle {
   title: string;
@@ -252,7 +252,7 @@ function getDashboardHTML(): string {
     </ul>
   </div>
   <div class="card">
-    <p>Powered by <a href="https://news-crypto.vercel.app">Free Crypto News API</a></p>
+    <p>Powered by <a href="https://cryptocurrency.cv">Free Crypto News API</a></p>
   </div>
 </body>
 </html>`;

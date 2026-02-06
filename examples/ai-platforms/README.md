@@ -47,7 +47,7 @@ Complete tutorials for using Free Crypto News API with various AI assistants and
 ```
 You are a crypto news expert. Use the Free Crypto News API to fetch real-time cryptocurrency news.
 
-API Base: https://news-crypto.vercel.app
+API Base: https://cryptocurrency.cv
 
 Available endpoints:
 - GET /api/news - Latest news
@@ -58,7 +58,7 @@ Available endpoints:
 ```
 
 4. Under "Actions", add the OpenAPI schema from:
-   `https://news-crypto.vercel.app/chatgpt/openapi.yaml`
+   `https://cryptocurrency.cv/chatgpt/openapi.yaml`
 
 ### Method 2: Developer Mode (Advanced)
 
@@ -161,7 +161,7 @@ import requests
 def get_crypto_news(limit: int = 10) -> str:
     """Get latest crypto news."""
     response = requests.get(
-        "https://news-crypto.vercel.app/api/news",
+        "https://cryptocurrency.cv/api/news",
         params={"limit": limit}
     )
     return response.json()
@@ -237,19 +237,19 @@ See [crewai.md](crewai.md) for complete crew implementations.
 
 ```bash
 # Latest news
-curl https://news-crypto.vercel.app/api/news?limit=10
+curl https://cryptocurrency.cv/api/news?limit=10
 
 # Search
-curl "https://news-crypto.vercel.app/api/search?q=bitcoin+etf"
+curl "https://cryptocurrency.cv/api/search?q=bitcoin+etf"
 
 # Sentiment
-curl https://news-crypto.vercel.app/api/ai/sentiment?asset=BTC
+curl https://cryptocurrency.cv/api/ai/sentiment?asset=BTC
 
 # Fear & Greed
-curl https://news-crypto.vercel.app/api/market/fear-greed
+curl https://cryptocurrency.cv/api/market/fear-greed
 
 # Trending
-curl https://news-crypto.vercel.app/api/trending
+curl https://cryptocurrency.cv/api/trending
 ```
 
 ---
@@ -273,8 +273,8 @@ https://plugins.support/sse
 
 ## Links
 
-- **API Documentation:** https://news-crypto.vercel.app/docs/api
+- **API Documentation:** https://cryptocurrency.cv/docs/api
 - **MCP Server:** /mcp/ in this repository
-- **OpenAPI Schema:** https://news-crypto.vercel.app/chatgpt/openapi.yaml
+- **OpenAPI Schema:** https://cryptocurrency.cv/chatgpt/openapi.yaml
 - **Code Examples:** ../python/, ../javascript/, ../typescript/
 - **GitHub:** https://github.com/nirholas/free-crypto-news

@@ -124,7 +124,7 @@ export DIGEST_EMAIL_TO="recipient@example.com"
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    Free Crypto News API                      │
-│            https://news-crypto.vercel.app/api/*             │
+│            https://cryptocurrency.cv/api/*             │
 │                                                              │
 │  /api/news    /api/search    /api/trending    /api/breaking │
 └─────────────────────────────────────────────────────────────┘
@@ -200,6 +200,6 @@ MIT - Use freely in your projects!
 
 ## Related
 
-- [Free Crypto News API](https://news-crypto.vercel.app) - The underlying API
+- [Free Crypto News API](https://cryptocurrency.cv) - The underlying API
 - [LangChain Tool](../langchain-tool.py) - Simple LangChain integration
 - [Sentiment Analysis](../sentiment-analysis.py) - Standalone sentiment tool

@@ -82,7 +82,7 @@ See [examples/README.md](../examples/README.md) for:
 
 ## Quick Links
 
-- **Live API:** https://news-crypto.vercel.app
+- **Live API:** https://cryptocurrency.cv
 - **GitHub:** https://github.com/nirholas/free-crypto-news
 - **Discussions:** https://github.com/nirholas/free-crypto-news/discussions
 - **Issues:** https://github.com/nirholas/free-crypto-news/issues

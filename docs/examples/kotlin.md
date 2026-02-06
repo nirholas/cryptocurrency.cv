@@ -112,7 +112,7 @@ data class CoinPrice(
 
 ```kotlin
 class CryptoNewsClient(
-    private val baseUrl: String = "https://news-crypto.vercel.app",
+    private val baseUrl: String = "https://cryptocurrency.cv",
     private val apiKey: String? = null
 ) {
     private val client = HttpClient(CIO) {

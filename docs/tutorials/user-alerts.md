@@ -24,7 +24,7 @@ Create custom alerts and receive real-time notifications via webhooks.
     import requests
     from typing import Optional, List
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     
     def create_alert(
@@ -122,7 +122,7 @@ Create custom alerts and receive real-time notifications via webhooks.
 === "JavaScript"
 
     ```javascript
-    const BASE_URL = "https://news-crypto.vercel.app";
+    const BASE_URL = "https://cryptocurrency.cv";
     
     async function createAlert(options) {
         const { name, condition, channels = ["webhook"], webhookUrl, cooldown = 300 } = options;
@@ -177,7 +177,7 @@ Create custom alerts and receive real-time notifications via webhooks.
 
     ```bash
     # Create keyword alert
-    curl -X POST "https://news-crypto.vercel.app/api/alerts" \
+    curl -X POST "https://cryptocurrency.cv/api/alerts" \
       -H "Content-Type: application/json" \
       -d '{
         "name": "Bitcoin ETF News",
@@ -192,7 +192,7 @@ Create custom alerts and receive real-time notifications via webhooks.
       }'
     
     # Create price alert
-    curl -X POST "https://news-crypto.vercel.app/api/alerts" \
+    curl -X POST "https://cryptocurrency.cv/api/alerts" \
       -H "Content-Type: application/json" \
       -d '{
         "name": "BTC Above 100K",
@@ -281,10 +281,10 @@ Create custom alerts and receive real-time notifications via webhooks.
 
     ```bash
     # List all alerts
-    curl "https://news-crypto.vercel.app/api/alerts"
+    curl "https://cryptocurrency.cv/api/alerts"
     
     # Filter by user
-    curl "https://news-crypto.vercel.app/api/alerts?userId=user123"
+    curl "https://cryptocurrency.cv/api/alerts?userId=user123"
     ```
 
 ---
@@ -367,15 +367,15 @@ Create custom alerts and receive real-time notifications via webhooks.
 
     ```bash
     # Get alert
-    curl "https://news-crypto.vercel.app/api/alerts/alert_abc123"
+    curl "https://cryptocurrency.cv/api/alerts/alert_abc123"
     
     # Update alert
-    curl -X PUT "https://news-crypto.vercel.app/api/alerts/alert_abc123" \
+    curl -X PUT "https://cryptocurrency.cv/api/alerts/alert_abc123" \
       -H "Content-Type: application/json" \
       -d '{"active": false}'
     
     # Delete alert
-    curl -X DELETE "https://news-crypto.vercel.app/api/alerts/alert_abc123"
+    curl -X DELETE "https://cryptocurrency.cv/api/alerts/alert_abc123"
     ```
 
 ---
@@ -408,7 +408,7 @@ Trigger a test notification for an alert:
 === "cURL"
 
     ```bash
-    curl -X POST "https://news-crypto.vercel.app/api/alerts/alert_abc123?action=test"
+    curl -X POST "https://cryptocurrency.cv/api/alerts/alert_abc123?action=test"
     ```
 
 ---
@@ -501,7 +501,7 @@ Register a webhook to receive events:
 === "cURL"
 
     ```bash
-    curl -X POST "https://news-crypto.vercel.app/api/webhooks" \
+    curl -X POST "https://cryptocurrency.cv/api/webhooks" \
       -H "Content-Type: application/json" \
       -d '{
         "url": "https://your-server.com/webhook",
@@ -696,7 +696,7 @@ Test your webhook endpoint:
 === "cURL"
 
     ```bash
-    curl -X POST "https://news-crypto.vercel.app/api/webhooks/test" \
+    curl -X POST "https://cryptocurrency.cv/api/webhooks/test" \
       -H "Content-Type: application/json" \
       -d '{"webhookId": "webhook_abc123"}'
     ```
@@ -735,7 +735,7 @@ Monitor your webhook delivery queue:
 === "cURL"
 
     ```bash
-    curl "https://news-crypto.vercel.app/api/webhooks/queue"
+    curl "https://cryptocurrency.cv/api/webhooks/queue"
     ```
 
 ---
@@ -756,7 +756,7 @@ Monitor your webhook delivery queue:
     import hmac
     import hashlib
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     WEBHOOK_SECRET = "your-secret-key"
     
     

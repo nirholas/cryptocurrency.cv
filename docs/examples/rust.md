@@ -41,7 +41,7 @@ use anyhow::Result;
 use reqwest::Client;
 use serde::{Deserialize, Serialize};
 
-const BASE_URL: &str = "https://news-crypto.vercel.app";
+const BASE_URL: &str = "https://cryptocurrency.cv";
 
 #[derive(Debug, Deserialize)]
 pub struct Article {
@@ -188,7 +188,7 @@ use anyhow::Result;
 use reqwest::Client;
 use serde::{Deserialize, Serialize};
 
-const BASE_URL: &str = "https://news-crypto.vercel.app";
+const BASE_URL: &str = "https://cryptocurrency.cv";
 
 #[derive(Debug, Deserialize)]
 pub struct Analysis {
@@ -365,7 +365,7 @@ use anyhow::Result;
 use reqwest::Client;
 use serde::{Deserialize, Serialize};
 
-const BASE_URL: &str = "https://news-crypto.vercel.app";
+const BASE_URL: &str = "https://cryptocurrency.cv";
 
 #[derive(Debug, Deserialize, Serialize)]
 pub struct WatchlistItem {
@@ -537,7 +537,7 @@ use eventsource_client::{Client as SSEClient, SSE};
 use futures::stream::StreamExt;
 use serde::Deserialize;
 
-const BASE_URL: &str = "https://news-crypto.vercel.app";
+const BASE_URL: &str = "https://cryptocurrency.cv";
 
 #[derive(Debug, Deserialize)]
 pub struct StreamEvent {
@@ -679,7 +679,7 @@ use anyhow::Result;
 use reqwest::Client;
 use serde::Deserialize;
 
-const BASE_URL: &str = "https://news-crypto.vercel.app";
+const BASE_URL: &str = "https://cryptocurrency.cv";
 
 #[derive(Debug, Deserialize)]
 pub struct Signal {

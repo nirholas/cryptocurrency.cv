@@ -21,7 +21,7 @@
 **200+ மூலங்களிலிருந்து** நிகழ்நேர கிரிப்டோ செய்திகளை ஒரே API அழைப்பில் பெறுங்கள்.
 
 ```bash
-curl https://news-crypto.vercel.app/api/news
+curl https://cryptocurrency.cv/api/news
 ```
 
 ---
@@ -55,13 +55,13 @@ curl https://news-crypto.vercel.app/api/news
 
 ```bash
 # சமீபத்திய செய்திகளைப் பெறுங்கள்
-curl "https://news-crypto.vercel.app/api/news?limit=10"
+curl "https://cryptocurrency.cv/api/news?limit=10"
 
 # Bitcoin sentiment பெறுங்கள்
-curl "https://news-crypto.vercel.app/api/ai/sentiment?asset=BTC"
+curl "https://cryptocurrency.cv/api/ai/sentiment?asset=BTC"
 
 # கட்டுரைகளைத் தேடுங்கள்
-curl "https://news-crypto.vercel.app/api/search?q=ethereum%20upgrade"
+curl "https://cryptocurrency.cv/api/search?q=ethereum%20upgrade"
 ```
 
 ---

@@ -31,7 +31,7 @@ Get combined sentiment analysis from multiple social platforms.
             params["platforms"] = platforms
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/social",
+            "https://cryptocurrency.cv/api/social",
             params=params
         )
         return response.json()
@@ -86,7 +86,7 @@ Get combined sentiment analysis from multiple social platforms.
         if (platforms) params.set('platforms', platforms);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/social?${params}`
+            `https://cryptocurrency.cv/api/social?${params}`
         );
         return response.json();
     }
@@ -134,16 +134,16 @@ Get combined sentiment analysis from multiple social platforms.
 === "cURL"
     ```bash
     # Get overall social sentiment
-    curl "https://news-crypto.vercel.app/api/social" | jq
+    curl "https://cryptocurrency.cv/api/social" | jq
     
     # Get sentiment for specific asset
-    curl "https://news-crypto.vercel.app/api/social?asset=BTC" | jq
+    curl "https://cryptocurrency.cv/api/social?asset=BTC" | jq
     
     # Get sentiment from specific platforms
-    curl "https://news-crypto.vercel.app/api/social?platforms=twitter,reddit" | jq
+    curl "https://cryptocurrency.cv/api/social?platforms=twitter,reddit" | jq
     
     # Extract overall score
-    curl "https://news-crypto.vercel.app/api/social" | jq '.overall'
+    curl "https://cryptocurrency.cv/api/social" | jq '.overall'
     ```
 
 ---
@@ -165,7 +165,7 @@ Get detailed sentiment analysis from Twitter/X.
             params["accounts"] = accounts
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/social/x/sentiment",
+            "https://cryptocurrency.cv/api/social/x/sentiment",
             params=params
         )
         return response.json()
@@ -232,7 +232,7 @@ Get detailed sentiment analysis from Twitter/X.
         if (accounts) params.set('accounts', accounts);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/social/x/sentiment?${params}`
+            `https://cryptocurrency.cv/api/social/x/sentiment?${params}`
         );
         return response.json();
     }
@@ -282,16 +282,16 @@ Get detailed sentiment analysis from Twitter/X.
 === "cURL"
     ```bash
     # Get overall Twitter sentiment
-    curl "https://news-crypto.vercel.app/api/social/x/sentiment" | jq
+    curl "https://cryptocurrency.cv/api/social/x/sentiment" | jq
     
     # Search specific query
-    curl "https://news-crypto.vercel.app/api/social/x/sentiment?query=%23Bitcoin" | jq
+    curl "https://cryptocurrency.cv/api/social/x/sentiment?query=%23Bitcoin" | jq
     
     # Track specific accounts
-    curl "https://news-crypto.vercel.app/api/social/x/sentiment?accounts=VitalikButerin,saboroivmilk" | jq
+    curl "https://cryptocurrency.cv/api/social/x/sentiment?accounts=VitalikButerin,saboroivmilk" | jq
     
     # Get sentiment breakdown
-    curl "https://news-crypto.vercel.app/api/social/x/sentiment" | jq '.breakdown'
+    curl "https://cryptocurrency.cv/api/social/x/sentiment" | jq '.breakdown'
     ```
 
 ---
@@ -312,7 +312,7 @@ Monitor crypto communities across platforms.
             params["platform"] = platform
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/social/monitor",
+            "https://cryptocurrency.cv/api/social/monitor",
             params=params
         )
         return response.json()
@@ -371,7 +371,7 @@ Monitor crypto communities across platforms.
         if (platform) params.set('platform', platform);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/social/monitor?${params}`
+            `https://cryptocurrency.cv/api/social/monitor?${params}`
         );
         return response.json();
     }
@@ -423,16 +423,16 @@ Monitor crypto communities across platforms.
 === "cURL"
     ```bash
     # Get community monitoring data
-    curl "https://news-crypto.vercel.app/api/social/monitor?hours=24" | jq
+    curl "https://cryptocurrency.cv/api/social/monitor?hours=24" | jq
     
     # Filter by platform
-    curl "https://news-crypto.vercel.app/api/social/monitor?platform=reddit" | jq
+    curl "https://cryptocurrency.cv/api/social/monitor?platform=reddit" | jq
     
     # Get trending topics
-    curl "https://news-crypto.vercel.app/api/social/monitor" | jq '.trending[:10]'
+    curl "https://cryptocurrency.cv/api/social/monitor" | jq '.trending[:10]'
     
     # Get alerts only
-    curl "https://news-crypto.vercel.app/api/social/monitor" | jq '.alerts'
+    curl "https://cryptocurrency.cv/api/social/monitor" | jq '.alerts'
     ```
 
 ---
@@ -454,7 +454,7 @@ Get detailed influencer scores and analytics.
             params["platform"] = platform
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/social/influencer-score",
+            "https://cryptocurrency.cv/api/social/influencer-score",
             params=params
         )
         return response.json()
@@ -514,7 +514,7 @@ Get detailed influencer scores and analytics.
         if (platform) params.set('platform', platform);
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/social/influencer-score?${params}`
+            `https://cryptocurrency.cv/api/social/influencer-score?${params}`
         );
         return response.json();
     }
@@ -560,16 +560,16 @@ Get detailed influencer scores and analytics.
 === "cURL"
     ```bash
     # Get influencer rankings
-    curl "https://news-crypto.vercel.app/api/social/influencer-score" | jq
+    curl "https://cryptocurrency.cv/api/social/influencer-score" | jq
     
     # Get specific influencer
-    curl "https://news-crypto.vercel.app/api/social/influencer-score?username=VitalikButerin" | jq
+    curl "https://cryptocurrency.cv/api/social/influencer-score?username=VitalikButerin" | jq
     
     # Filter by platform
-    curl "https://news-crypto.vercel.app/api/social/influencer-score?platform=twitter" | jq
+    curl "https://cryptocurrency.cv/api/social/influencer-score?platform=twitter" | jq
     
     # Get top 10 by score
-    curl "https://news-crypto.vercel.app/api/social/influencer-score" | jq '.influencers[:10]'
+    curl "https://cryptocurrency.cv/api/social/influencer-score" | jq '.influencers[:10]'
     ```
 
 ---
@@ -589,7 +589,7 @@ from typing import Dict, Any
 class SocialIntelligence:
     """Social intelligence dashboard client."""
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     def __init__(self):
         self.session = requests.Session()

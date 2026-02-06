@@ -5,7 +5,7 @@
  * RSS, Atom, JSON feeds, exports, and integration formats.
  */
 
-const BASE_URL = 'https://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
 
 // =============================================================================
 // RSS FEEDS
@@ -347,7 +347,7 @@ async function runExamples() {
     
     // oEmbed
     console.log('6. Fetching oEmbed data...');
-    const oembed = await getOEmbed('https://news-crypto.vercel.app/article/example');
+    const oembed = await getOEmbed('https://cryptocurrency.cv/article/example');
     console.log(`   Type: ${oembed.type || 'N/A'}`);
     
     console.log('\n✅ All feeds & export examples completed!\n');

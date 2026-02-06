@@ -21,7 +21,7 @@ const examples = [
 # Free Crypto News API - curl examples
 # No API key required!
 
-API="https://news-crypto.vercel.app"
+API="https://cryptocurrency.cv"
 
 echo "📰 Latest News"
 curl -s "$API/api/news?limit=3" | jq '.articles[] | {title, source, timeAgo}'
@@ -59,7 +59,7 @@ curl -s "$API/api/sources" | jq '.sources[] | {name, status}'`,
 
 const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
 
-const API_BASE = 'https://news-crypto.vercel.app';
+const API_BASE = 'https://cryptocurrency.cv';
 const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
 const CHANNEL_ID = process.env.DISCORD_CHANNEL_ID;
 
@@ -143,7 +143,7 @@ client.login(DISCORD_TOKEN);`,
  */
 
 const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL;
-const NEWS_API = 'https://news-crypto.vercel.app';
+const NEWS_API = 'https://cryptocurrency.cv';
 
 async function fetchNews(endpoint = '/api/news', limit = 5) {
   const url = \`\${NEWS_API}\${endpoint}?limit=\${limit}\`;
@@ -230,7 +230,7 @@ import aiohttp
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 
-API_BASE = "https://news-crypto.vercel.app"
+API_BASE = "https://cryptocurrency.cv"
 BOT_TOKEN = "YOUR_BOT_TOKEN"  # Get from @BotFather
 
 async def fetch_news(endpoint="/api/news", limit=5):
@@ -313,7 +313,7 @@ from langchain.agents import AgentExecutor, create_openai_functions_agent
 from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
 import requests
 
-API_BASE = "https://news-crypto.vercel.app"
+API_BASE = "https://cryptocurrency.cv"
 
 @tool
 def get_crypto_news(limit: int = 5) -> str:
@@ -394,7 +394,7 @@ if __name__ == "__main__":
     language: 'javascript',
     filename: 'fetch-example.js',
     code: `// Free Crypto News API - No API key required!
-const API_BASE = 'https://news-crypto.vercel.app';
+const API_BASE = 'https://cryptocurrency.cv';
 
 // Get latest news
 async function getLatestNews(limit = 10) {
@@ -455,7 +455,7 @@ No API key required!
 
 import requests
 
-API_BASE = "https://news-crypto.vercel.app"
+API_BASE = "https://cryptocurrency.cv"
 
 def get_latest_news(limit=10):
     """Get latest crypto news"""

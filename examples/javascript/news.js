@@ -5,7 +5,7 @@
  * Examples for all news-related endpoints.
  */
 
-const BASE_URL = 'https://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
 
 // =============================================================================
 // GET /api/news - Main News Feed

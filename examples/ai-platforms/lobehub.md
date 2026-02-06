@@ -44,7 +44,7 @@ Create a file `crypto-news-plugin.json`:
     {
       "name": "getNews",
       "description": "Get latest cryptocurrency news",
-      "url": "https://news-crypto.vercel.app/api/news",
+      "url": "https://cryptocurrency.cv/api/news",
       "method": "GET",
       "parameters": {
         "type": "object",
@@ -69,7 +69,7 @@ Create a file `crypto-news-plugin.json`:
     {
       "name": "searchNews",
       "description": "Search cryptocurrency news",
-      "url": "https://news-crypto.vercel.app/api/search",
+      "url": "https://cryptocurrency.cv/api/search",
       "method": "GET",
       "parameters": {
         "type": "object",
@@ -90,7 +90,7 @@ Create a file `crypto-news-plugin.json`:
     {
       "name": "getSentiment",
       "description": "Get sentiment analysis for a cryptocurrency",
-      "url": "https://news-crypto.vercel.app/api/ai/sentiment",
+      "url": "https://cryptocurrency.cv/api/ai/sentiment",
       "method": "GET",
       "parameters": {
         "type": "object",
@@ -107,25 +107,25 @@ Create a file `crypto-news-plugin.json`:
     {
       "name": "getFearGreed",
       "description": "Get Fear & Greed Index",
-      "url": "https://news-crypto.vercel.app/api/market/fear-greed",
+      "url": "https://cryptocurrency.cv/api/market/fear-greed",
       "method": "GET"
     },
     {
       "name": "getTrending",
       "description": "Get trending crypto topics",
-      "url": "https://news-crypto.vercel.app/api/trending",
+      "url": "https://cryptocurrency.cv/api/trending",
       "method": "GET"
     },
     {
       "name": "getBreaking",
       "description": "Get breaking news (last 2 hours)",
-      "url": "https://news-crypto.vercel.app/api/breaking",
+      "url": "https://cryptocurrency.cv/api/breaking",
       "method": "GET"
     },
     {
       "name": "getCoins",
       "description": "Get cryptocurrency prices",
-      "url": "https://news-crypto.vercel.app/api/coins",
+      "url": "https://cryptocurrency.cv/api/coins",
       "method": "GET",
       "parameters": {
         "type": "object",
@@ -140,19 +140,19 @@ Create a file `crypto-news-plugin.json`:
     {
       "name": "getArbitrage",
       "description": "Get arbitrage opportunities",
-      "url": "https://news-crypto.vercel.app/api/trading/arbitrage",
+      "url": "https://cryptocurrency.cv/api/trading/arbitrage",
       "method": "GET"
     },
     {
       "name": "getWhales",
       "description": "Get whale movements",
-      "url": "https://news-crypto.vercel.app/api/trading/whales",
+      "url": "https://cryptocurrency.cv/api/trading/whales",
       "method": "GET"
     },
     {
       "name": "getGas",
       "description": "Get Ethereum gas prices",
-      "url": "https://news-crypto.vercel.app/api/blockchain/gas",
+      "url": "https://cryptocurrency.cv/api/blockchain/gas",
       "method": "GET"
     }
   ],
@@ -160,14 +160,14 @@ Create a file `crypto-news-plugin.json`:
     "name": "Free Crypto News",
     "description": "Real-time cryptocurrency news, market data, and AI analysis from 200+ sources",
     "author": "Free Crypto News",
-    "homepage": "https://news-crypto.vercel.app",
+    "homepage": "https://cryptocurrency.cv",
     "version": "1.0.0",
     "schema_version": "1"
   },
   "settings": {
     "base_url": {
       "type": "string",
-      "default": "https://news-crypto.vercel.app",
+      "default": "https://cryptocurrency.cv",
       "description": "API base URL"
     }
   }
@@ -216,7 +216,7 @@ You are an expert cryptocurrency news analyst with access to the Free Crypto New
 
 ## API Endpoints
 
-Base URL: `https://news-crypto.vercel.app`
+Base URL: `https://cryptocurrency.cv`
 
 ### News Endpoints
 - `GET /api/news?limit={n}` - Latest news (1-50 articles)
@@ -344,7 +344,7 @@ For full API coverage, use this extended manifest:
     {
       "name": "getNews",
       "description": "Get latest cryptocurrency news from 200+ sources",
-      "url": "https://news-crypto.vercel.app/api/news",
+      "url": "https://cryptocurrency.cv/api/news",
       "method": "GET",
       "parameters": {
         "type": "object",
@@ -359,7 +359,7 @@ For full API coverage, use this extended manifest:
     {
       "name": "searchNews",
       "description": "Search news with keywords",
-      "url": "https://news-crypto.vercel.app/api/search",
+      "url": "https://cryptocurrency.cv/api/search",
       "method": "GET",
       "parameters": {
         "type": "object",
@@ -375,7 +375,7 @@ For full API coverage, use this extended manifest:
     {
       "name": "getSentiment",
       "description": "AI sentiment analysis for any cryptocurrency",
-      "url": "https://news-crypto.vercel.app/api/ai/sentiment",
+      "url": "https://cryptocurrency.cv/api/ai/sentiment",
       "method": "GET",
       "parameters": {
         "type": "object",
@@ -388,7 +388,7 @@ For full API coverage, use this extended manifest:
     {
       "name": "summarizeArticle",
       "description": "AI summarization of any article",
-      "url": "https://news-crypto.vercel.app/api/ai/summarize",
+      "url": "https://cryptocurrency.cv/api/ai/summarize",
       "method": "POST",
       "parameters": {
         "type": "object",
@@ -402,7 +402,7 @@ For full API coverage, use this extended manifest:
     {
       "name": "askAI",
       "description": "Ask AI questions about crypto news",
-      "url": "https://news-crypto.vercel.app/api/ai/ask",
+      "url": "https://cryptocurrency.cv/api/ai/ask",
       "method": "POST",
       "parameters": {
         "type": "object",
@@ -416,13 +416,13 @@ For full API coverage, use this extended manifest:
     {
       "name": "getFearGreed",
       "description": "Get crypto Fear & Greed Index",
-      "url": "https://news-crypto.vercel.app/api/market/fear-greed",
+      "url": "https://cryptocurrency.cv/api/market/fear-greed",
       "method": "GET"
     },
     {
       "name": "getCoins",
       "description": "Get cryptocurrency prices and market data",
-      "url": "https://news-crypto.vercel.app/api/coins",
+      "url": "https://cryptocurrency.cv/api/coins",
       "method": "GET",
       "parameters": {
         "type": "object",
@@ -435,19 +435,19 @@ For full API coverage, use this extended manifest:
     {
       "name": "getTrending",
       "description": "Get trending crypto topics and hashtags",
-      "url": "https://news-crypto.vercel.app/api/trending",
+      "url": "https://cryptocurrency.cv/api/trending",
       "method": "GET"
     },
     {
       "name": "getBreaking",
       "description": "Get breaking news from the last 2 hours",
-      "url": "https://news-crypto.vercel.app/api/breaking",
+      "url": "https://cryptocurrency.cv/api/breaking",
       "method": "GET"
     },
     {
       "name": "getArbitrage",
       "description": "Get cross-exchange arbitrage opportunities",
-      "url": "https://news-crypto.vercel.app/api/trading/arbitrage",
+      "url": "https://cryptocurrency.cv/api/trading/arbitrage",
       "method": "GET",
       "parameters": {
         "type": "object",
@@ -459,7 +459,7 @@ For full API coverage, use this extended manifest:
     {
       "name": "getSignals",
       "description": "Get AI trading signals",
-      "url": "https://news-crypto.vercel.app/api/trading/signals",
+      "url": "https://cryptocurrency.cv/api/trading/signals",
       "method": "GET",
       "parameters": {
         "type": "object",
@@ -471,7 +471,7 @@ For full API coverage, use this extended manifest:
     {
       "name": "getWhales",
       "description": "Get whale transaction alerts",
-      "url": "https://news-crypto.vercel.app/api/trading/whales",
+      "url": "https://cryptocurrency.cv/api/trading/whales",
       "method": "GET",
       "parameters": {
         "type": "object",
@@ -483,25 +483,25 @@ For full API coverage, use this extended manifest:
     {
       "name": "getGas",
       "description": "Get Ethereum gas prices",
-      "url": "https://news-crypto.vercel.app/api/blockchain/gas",
+      "url": "https://cryptocurrency.cv/api/blockchain/gas",
       "method": "GET"
     },
     {
       "name": "getDeFiTVL",
       "description": "Get DeFi Total Value Locked",
-      "url": "https://news-crypto.vercel.app/api/blockchain/defi/tvl",
+      "url": "https://cryptocurrency.cv/api/blockchain/defi/tvl",
       "method": "GET"
     },
     {
       "name": "getRegulatoryNews",
       "description": "Get regulatory and legal news",
-      "url": "https://news-crypto.vercel.app/api/regulatory/news",
+      "url": "https://cryptocurrency.cv/api/regulatory/news",
       "method": "GET"
     },
     {
       "name": "getETFNews",
       "description": "Get crypto ETF news",
-      "url": "https://news-crypto.vercel.app/api/regulatory/etf",
+      "url": "https://cryptocurrency.cv/api/regulatory/etf",
       "method": "GET"
     }
   ]
@@ -561,7 +561,7 @@ The overall sentiment is strongly bullish, driven by:
 
 1. Test endpoint directly:
 ```bash
-curl https://news-crypto.vercel.app/api/news?limit=5
+curl https://cryptocurrency.cv/api/news?limit=5
 ```
 
 2. Check rate limits
@@ -579,5 +579,5 @@ curl https://news-crypto.vercel.app/api/news?limit=5
 
 - **LobeHub:** https://lobehub.com
 - **LobeChat Docs:** https://lobehub.com/docs
-- **API Documentation:** https://news-crypto.vercel.app/docs/api
+- **API Documentation:** https://cryptocurrency.cv/docs/api
 - **Plugin Development:** https://lobehub.com/docs/plugin-development

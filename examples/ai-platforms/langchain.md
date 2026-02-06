@@ -40,7 +40,7 @@ from langchain.pydantic_v1 import BaseModel, Field
 import requests
 
 
-API_BASE = "https://news-crypto.vercel.app"
+API_BASE = "https://cryptocurrency.cv"
 
 
 class NewsInput(BaseModel):
@@ -402,7 +402,7 @@ npm install langchain @langchain/openai @langchain/core
 import { DynamicStructuredTool } from "@langchain/core/tools";
 import { z } from "zod";
 
-const API_BASE = "https://news-crypto.vercel.app";
+const API_BASE = "https://cryptocurrency.cv";
 
 async function fetchApi(endpoint: string, params: Record<string, any> = {}) {
   const url = new URL(`${API_BASE}${endpoint}`);
@@ -619,7 +619,7 @@ class CryptoNewsLoader(BaseLoader):
         query: str = None,
         category: str = None,
         limit: int = 50,
-        api_base: str = "https://news-crypto.vercel.app"
+        api_base: str = "https://cryptocurrency.cv"
     ):
         self.query = query
         self.category = category
@@ -693,7 +693,7 @@ from langchain_core.tools import BaseTool
 class CryptoNewsToolkit(BaseToolkit):
     """Toolkit for Free Crypto News API."""
     
-    api_base: str = "https://news-crypto.vercel.app"
+    api_base: str = "https://cryptocurrency.cv"
     
     def get_tools(self) -> List[BaseTool]:
         """Get all crypto tools."""
@@ -752,4 +752,4 @@ agent_executor.invoke({
 - **LangChain JS:** https://js.langchain.com
 - **LangGraph:** https://langchain-ai.github.io/langgraph/
 - **LangSmith:** https://smith.langchain.com
-- **Free Crypto News API:** https://news-crypto.vercel.app
+- **Free Crypto News API:** https://cryptocurrency.cv

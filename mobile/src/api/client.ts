@@ -2,7 +2,7 @@
  * Free Crypto News API Client for React Native
  */
 
-const BASE_URL = 'https://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
 
 export interface Article {
   title: string;

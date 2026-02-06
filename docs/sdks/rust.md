@@ -72,7 +72,7 @@ use std::time::Duration;
 let config = ClientConfig::new()
     .with_api_key("your_api_key")  // Optional for premium
     .with_timeout(Duration::from_secs(60))
-    .with_base_url("https://news-crypto.vercel.app")
+    .with_base_url("https://cryptocurrency.cv")
     .with_max_retries(3);
 
 let client = Client::with_config(config)?;

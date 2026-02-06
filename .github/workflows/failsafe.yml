@@ -35,7 +35,7 @@ jobs:
       - name: Update failsafe cache
         run: |
           TIMESTAMP=$(date -u +%Y-%m-%dT%H:%M:%S.000Z)
-          API_URL="${{ secrets.API_URL || 'https://news-crypto.vercel.app' }}"
+          API_URL="${{ secrets.API_URL || 'https://cryptocurrency.cv' }}"
           
           echo "🔄 Updating failsafe cache from $API_URL"
           

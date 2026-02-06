@@ -31,7 +31,7 @@ Webhooks allow your application to receive real-time notifications when events o
     def get_webhook_events():
         """Get available webhook event types."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/webhooks/events"
+            "https://cryptocurrency.cv/api/webhooks/events"
         )
         return response.json()
     
@@ -54,7 +54,7 @@ Webhooks allow your application to receive real-time notifications when events o
     ```javascript
     async function getWebhookEvents() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/webhooks/events'
+            'https://cryptocurrency.cv/api/webhooks/events'
         );
         return response.json();
     }
@@ -76,10 +76,10 @@ Webhooks allow your application to receive real-time notifications when events o
 === "cURL"
     ```bash
     # Get available webhook events
-    curl "https://news-crypto.vercel.app/api/webhooks/events" | jq
+    curl "https://cryptocurrency.cv/api/webhooks/events" | jq
     
     # Get just event names
-    curl "https://news-crypto.vercel.app/api/webhooks/events" | jq '.events | keys'
+    curl "https://cryptocurrency.cv/api/webhooks/events" | jq '.events | keys'
     ```
 
 ---
@@ -113,7 +113,7 @@ Create webhooks to receive notifications at your endpoint.
             data["filters"] = filters
         
         response = requests.post(
-            "https://news-crypto.vercel.app/api/webhooks/create",
+            "https://cryptocurrency.cv/api/webhooks/create",
             json=data
         )
         return response.json()
@@ -121,7 +121,7 @@ Create webhooks to receive notifications at your endpoint.
     def list_webhooks():
         """List all webhooks."""
         response = requests.get(
-            "https://news-crypto.vercel.app/api/webhooks"
+            "https://cryptocurrency.cv/api/webhooks"
         )
         return response.json()
     
@@ -190,7 +190,7 @@ Create webhooks to receive notifications at your endpoint.
     ```javascript
     async function createWebhook(config) {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/webhooks/create',
+            'https://cryptocurrency.cv/api/webhooks/create',
             {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -202,7 +202,7 @@ Create webhooks to receive notifications at your endpoint.
     
     async function listWebhooks() {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/webhooks'
+            'https://cryptocurrency.cv/api/webhooks'
         );
         return response.json();
     }
@@ -256,7 +256,7 @@ Create webhooks to receive notifications at your endpoint.
 === "cURL"
     ```bash
     # Create a webhook
-    curl -X POST "https://news-crypto.vercel.app/api/webhooks/create" \
+    curl -X POST "https://cryptocurrency.cv/api/webhooks/create" \
       -H "Content-Type: application/json" \
       -d '{
         "url": "https://your-server.com/webhooks/news",
@@ -269,7 +269,7 @@ Create webhooks to receive notifications at your endpoint.
       }' | jq
     
     # List all webhooks
-    curl "https://news-crypto.vercel.app/api/webhooks" | jq
+    curl "https://cryptocurrency.cv/api/webhooks" | jq
     ```
 
 ---
@@ -285,14 +285,14 @@ Update, pause, and delete webhooks.
     def get_webhook(webhook_id: str):
         """Get a specific webhook."""
         response = requests.get(
-            f"https://news-crypto.vercel.app/api/webhooks/{webhook_id}"
+            f"https://cryptocurrency.cv/api/webhooks/{webhook_id}"
         )
         return response.json()
     
     def update_webhook(webhook_id: str, updates: dict):
         """Update a webhook."""
         response = requests.patch(
-            f"https://news-crypto.vercel.app/api/webhooks/{webhook_id}",
+            f"https://cryptocurrency.cv/api/webhooks/{webhook_id}",
             json=updates
         )
         return response.json()
@@ -300,7 +300,7 @@ Update, pause, and delete webhooks.
     def delete_webhook(webhook_id: str):
         """Delete a webhook."""
         response = requests.delete(
-            f"https://news-crypto.vercel.app/api/webhooks/{webhook_id}"
+            f"https://cryptocurrency.cv/api/webhooks/{webhook_id}"
         )
         return response.json()
     
@@ -366,14 +366,14 @@ Update, pause, and delete webhooks.
     ```javascript
     async function getWebhook(webhookId) {
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/webhooks/${webhookId}`
+            `https://cryptocurrency.cv/api/webhooks/${webhookId}`
         );
         return response.json();
     }
     
     async function updateWebhook(webhookId, updates) {
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/webhooks/${webhookId}`,
+            `https://cryptocurrency.cv/api/webhooks/${webhookId}`,
             {
                 method: 'PATCH',
                 headers: { 'Content-Type': 'application/json' },
@@ -385,7 +385,7 @@ Update, pause, and delete webhooks.
     
     async function deleteWebhook(webhookId) {
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/webhooks/${webhookId}`,
+            `https://cryptocurrency.cv/api/webhooks/${webhookId}`,
             { method: 'DELETE' }
         );
         return response.json();
@@ -430,10 +430,10 @@ Update, pause, and delete webhooks.
 === "cURL"
     ```bash
     # Get webhook
-    curl "https://news-crypto.vercel.app/api/webhooks/wh_123456789" | jq
+    curl "https://cryptocurrency.cv/api/webhooks/wh_123456789" | jq
     
     # Update webhook
-    curl -X PATCH "https://news-crypto.vercel.app/api/webhooks/wh_123456789" \
+    curl -X PATCH "https://cryptocurrency.cv/api/webhooks/wh_123456789" \
       -H "Content-Type: application/json" \
       -d '{
         "events": ["news.breaking", "news.trending"],
@@ -441,12 +441,12 @@ Update, pause, and delete webhooks.
       }' | jq
     
     # Pause webhook
-    curl -X PATCH "https://news-crypto.vercel.app/api/webhooks/wh_123456789" \
+    curl -X PATCH "https://cryptocurrency.cv/api/webhooks/wh_123456789" \
       -H "Content-Type: application/json" \
       -d '{"active": false}' | jq
     
     # Delete webhook
-    curl -X DELETE "https://news-crypto.vercel.app/api/webhooks/wh_123456789" | jq
+    curl -X DELETE "https://cryptocurrency.cv/api/webhooks/wh_123456789" | jq
     ```
 
 ---
@@ -466,7 +466,7 @@ Test webhook delivery before going live.
             data["eventType"] = event_type
         
         response = requests.post(
-            f"https://news-crypto.vercel.app/api/webhooks/{webhook_id}/test",
+            f"https://cryptocurrency.cv/api/webhooks/{webhook_id}/test",
             json=data
         )
         return response.json()
@@ -474,7 +474,7 @@ Test webhook delivery before going live.
     def get_webhook_logs(webhook_id: str, limit: int = 50):
         """Get webhook delivery logs."""
         response = requests.get(
-            f"https://news-crypto.vercel.app/api/webhooks/{webhook_id}/logs",
+            f"https://cryptocurrency.cv/api/webhooks/{webhook_id}/logs",
             params={"limit": limit}
         )
         return response.json()
@@ -547,7 +547,7 @@ Test webhook delivery before going live.
         const body = eventType ? { eventType } : {};
         
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/webhooks/${webhookId}/test`,
+            `https://cryptocurrency.cv/api/webhooks/${webhookId}/test`,
             {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -559,7 +559,7 @@ Test webhook delivery before going live.
     
     async function getWebhookLogs(webhookId, limit = 50) {
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/webhooks/${webhookId}/logs?limit=${limit}`
+            `https://cryptocurrency.cv/api/webhooks/${webhookId}/logs?limit=${limit}`
         );
         return response.json();
     }
@@ -604,15 +604,15 @@ Test webhook delivery before going live.
 === "cURL"
     ```bash
     # Test webhook
-    curl -X POST "https://news-crypto.vercel.app/api/webhooks/wh_123/test" \
+    curl -X POST "https://cryptocurrency.cv/api/webhooks/wh_123/test" \
       -H "Content-Type: application/json" \
       -d '{"eventType": "news.breaking"}' | jq
     
     # Get delivery logs
-    curl "https://news-crypto.vercel.app/api/webhooks/wh_123/logs?limit=20" | jq
+    curl "https://cryptocurrency.cv/api/webhooks/wh_123/logs?limit=20" | jq
     
     # Get just recent failures
-    curl "https://news-crypto.vercel.app/api/webhooks/wh_123/logs" | jq '.logs | map(select(.statusCode != 200))'
+    curl "https://cryptocurrency.cv/api/webhooks/wh_123/logs" | jq '.logs | map(select(.statusCode != 200))'
     ```
 
 ---
@@ -865,7 +865,7 @@ from datetime import datetime
 class WebhookManager:
     """Webhook management client."""
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     def __init__(self):
         self.session = requests.Session()

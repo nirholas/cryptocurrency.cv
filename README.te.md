@@ -21,7 +21,7 @@
 **200+ మూలాల** నుండి రియల్-టైమ్ క్రిప్టో వార్తలను ఒకే API కాల్‌తో పొందండి.
 
 ```bash
-curl https://news-crypto.vercel.app/api/news
+curl https://cryptocurrency.cv/api/news
 ```
 
 ---
@@ -55,13 +55,13 @@ curl https://news-crypto.vercel.app/api/news
 
 ```bash
 # తాజా వార్తలు పొందండి
-curl "https://news-crypto.vercel.app/api/news?limit=10"
+curl "https://cryptocurrency.cv/api/news?limit=10"
 
 # Bitcoin sentiment పొందండి
-curl "https://news-crypto.vercel.app/api/ai/sentiment?asset=BTC"
+curl "https://cryptocurrency.cv/api/ai/sentiment?asset=BTC"
 
 # ఆర్టికల్స్ శోధించండి
-curl "https://news-crypto.vercel.app/api/search?q=ethereum%20upgrade"
+curl "https://cryptocurrency.cv/api/search?q=ethereum%20upgrade"
 ```
 
 ---

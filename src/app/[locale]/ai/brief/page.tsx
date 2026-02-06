@@ -53,7 +53,7 @@ async function getBrief(date?: string): Promise<DailyBrief | null> {
   }
 
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://news-crypto.vercel.app';
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://cryptocurrency.cv';
     const url = date 
       ? `${baseUrl}/api/ai/brief?date=${date}&format=full`
       : `${baseUrl}/api/ai/brief?format=full`;

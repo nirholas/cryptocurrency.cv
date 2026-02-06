@@ -31,7 +31,7 @@ No API key required! All endpoints are free and open.
     import requests
     from datetime import datetime
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     
     def get_news(limit: int = 20, source: str = None, category: str = None) -> dict:
@@ -76,7 +76,7 @@ No API key required! All endpoints are free and open.
 === "JavaScript"
 
     ```javascript
-    const BASE_URL = "https://news-crypto.vercel.app";
+    const BASE_URL = "https://cryptocurrency.cv";
     
     /**
      * Fetch crypto news from all sources.
@@ -156,7 +156,7 @@ No API key required! All endpoints are free and open.
         page?: number;
     }
     
-    const BASE_URL = "https://news-crypto.vercel.app";
+    const BASE_URL = "https://cryptocurrency.cv";
     
     async function getNews(options: GetNewsOptions = {}): Promise<NewsResponse> {
         const { limit = 20, source, category, page = 1 } = options;
@@ -195,16 +195,16 @@ No API key required! All endpoints are free and open.
 
     ```bash
     # Basic fetch - latest 10 articles
-    curl "https://news-crypto.vercel.app/api/news?limit=10"
+    curl "https://cryptocurrency.cv/api/news?limit=10"
     
     # Pretty print with jq
-    curl -s "https://news-crypto.vercel.app/api/news?limit=5" | jq '.articles[] | {title, source, timeAgo}'
+    curl -s "https://cryptocurrency.cv/api/news?limit=5" | jq '.articles[] | {title, source, timeAgo}'
     
     # Filter by source
-    curl "https://news-crypto.vercel.app/api/news?source=coindesk&limit=5"
+    curl "https://cryptocurrency.cv/api/news?source=coindesk&limit=5"
     
     # Filter by category
-    curl "https://news-crypto.vercel.app/api/news?category=defi&limit=5"
+    curl "https://cryptocurrency.cv/api/news?category=defi&limit=5"
     ```
 
 ---
@@ -284,7 +284,7 @@ No API key required! All endpoints are free and open.
 === "cURL"
 
     ```bash
-    curl "https://news-crypto.vercel.app/api/bitcoin?limit=5"
+    curl "https://cryptocurrency.cv/api/bitcoin?limit=5"
     ```
 
 ### DeFi News
@@ -319,7 +319,7 @@ No API key required! All endpoints are free and open.
 === "cURL"
 
     ```bash
-    curl "https://news-crypto.vercel.app/api/defi?limit=5"
+    curl "https://cryptocurrency.cv/api/defi?limit=5"
     ```
 
 ### Breaking News
@@ -358,7 +358,7 @@ No API key required! All endpoints are free and open.
 === "cURL"
 
     ```bash
-    curl "https://news-crypto.vercel.app/api/breaking"
+    curl "https://cryptocurrency.cv/api/breaking"
     ```
 
 ---
@@ -402,7 +402,7 @@ No API key required! All endpoints are free and open.
 === "cURL"
 
     ```bash
-    curl "https://news-crypto.vercel.app/api/sources" | jq '.sources[].name'
+    curl "https://cryptocurrency.cv/api/sources" | jq '.sources[].name'
     ```
 
 ---
@@ -442,7 +442,7 @@ No API key required! All endpoints are free and open.
 === "cURL"
 
     ```bash
-    curl "https://news-crypto.vercel.app/api/news/categories"
+    curl "https://cryptocurrency.cv/api/news/categories"
     ```
 
 ---
@@ -615,7 +615,7 @@ Filter news by date range:
     import requests
     from datetime import datetime
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     
     def main():
@@ -664,7 +664,7 @@ Filter news by date range:
         print(f"   {', '.join(source_names)}")
         
         print("\n" + "=" * 70)
-        print("✅ Dashboard complete! All data from news-crypto.vercel.app")
+        print("✅ Dashboard complete! All data from cryptocurrency.cv")
         print("=" * 70)
     
     
@@ -680,7 +680,7 @@ Filter news by date range:
      * Demonstrates fetching news from multiple endpoints.
      */
     
-    const BASE_URL = "https://news-crypto.vercel.app";
+    const BASE_URL = "https://cryptocurrency.cv";
     
     async function main() {
         console.log("=".repeat(70));

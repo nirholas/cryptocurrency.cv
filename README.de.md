@@ -20,7 +20,7 @@
 Erhalten Sie Echtzeit-Krypto-Nachrichten von 7 großen Quellen mit einem einzigen API-Aufruf.
 
 ```bash
-curl https://news-crypto.vercel.app/api/news
+curl https://cryptocurrency.cv/api/news
 ```
 ---
 
@@ -54,13 +54,13 @@ Erhalten Sie Krypto-Nachrichten von **75 internationalen Quellen** in 18 Sprache
 
 ```bash
 # Alle internationalen Nachrichten abrufen
-curl "https://news-crypto.vercel.app/api/news/international"
+curl "https://cryptocurrency.cv/api/news/international"
 
 # Koreanische Nachrichten mit englischer Übersetzung
-curl "https://news-crypto.vercel.app/api/news/international?language=ko&translate=true"
+curl "https://cryptocurrency.cv/api/news/international?language=ko&translate=true"
 
 # Nachrichten aus der asiatischen Region
-curl "https://news-crypto.vercel.app/api/news/international?region=asia&limit=20"
+curl "https://cryptocurrency.cv/api/news/international?region=asia&limit=20"
 ```
 
 ### Funktionen
@@ -91,7 +91,7 @@ Free Crypto News ist eine **vollständig installierbare PWA**, die offline funkt
 ### App Installieren
 
 **Desktop (Chrome/Edge):**
-1. Besuchen Sie [news-crypto.vercel.app](https://news-crypto.vercel.app)
+1. Besuchen Sie [cryptocurrency.cv](https://cryptocurrency.cv)
 2. Klicken Sie auf das Installations-Symbol (⊕) in der Adressleiste
 3. Klicken Sie auf "Installieren"
 
@@ -159,7 +159,7 @@ Wir aggregieren von **7 vertrauenswürdigen Medien**:
 | [Go](sdk/go/) | Go-Client-Bibliothek |
 | [PHP](sdk/php/) | PHP SDK |
 
-**Basis-URL:** `https://news-crypto.vercel.app`
+**Basis-URL:** `https://cryptocurrency.cv`
 
 ---
 

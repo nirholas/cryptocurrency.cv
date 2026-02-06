@@ -221,7 +221,7 @@ import { CryptoNewsProvider } from '@fcn/react';
 
 <CryptoNewsProvider
   config={{
-    baseUrl: 'https://news-crypto.vercel.app',
+    baseUrl: 'https://cryptocurrency.cv',
     defaultLanguage: 'en',
     cacheTime: 5 * 60 * 1000, // 5 minutes
     staleTime: 60 * 1000, // 1 minute

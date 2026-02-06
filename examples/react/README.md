@@ -200,4 +200,4 @@ import type {
 
 ## API Reference
 
-See the [full documentation](https://news-crypto.vercel.app/docs/sdk/react).
+See the [full documentation](https://cryptocurrency.cv/docs/sdk/react).

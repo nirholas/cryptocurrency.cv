@@ -16,7 +16,7 @@
 Saat reaaliaikaisia kryptouutisia **200+ lähteestä** yhdellä API-kutsulla.
 
 ```bash
-curl https://news-crypto.vercel.app/api/news
+curl https://cryptocurrency.cv/api/news
 ```
 
 ---
@@ -39,13 +39,13 @@ curl https://news-crypto.vercel.app/api/news
 
 ```bash
 # Uusimmat uutiset
-curl "https://news-crypto.vercel.app/api/news?limit=10"
+curl "https://cryptocurrency.cv/api/news?limit=10"
 
 # Bitcoin-uutiset
-curl "https://news-crypto.vercel.app/api/news?ticker=BTC"
+curl "https://cryptocurrency.cv/api/news?ticker=BTC"
 
 # Breaking news
-curl "https://news-crypto.vercel.app/api/breaking"
+curl "https://cryptocurrency.cv/api/breaking"
 ```
 
 ### Python-esimerkki
@@ -53,7 +53,7 @@ curl "https://news-crypto.vercel.app/api/breaking"
 ```python
 import requests
 
-BASE_URL = "https://news-crypto.vercel.app"
+BASE_URL = "https://cryptocurrency.cv"
 
 # Hae uusimmat uutiset
 news = requests.get(f"{BASE_URL}/api/news?limit=10").json()
@@ -72,7 +72,7 @@ print(f"Markkinat: {fg['classification']} ({fg['value']}/100)")
 ### JavaScript-esimerkki
 
 ```javascript
-const BASE_URL = 'https://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
 
 // Hae uusimmat uutiset
 const news = await fetch(`${BASE_URL}/api/news?limit=10`).then(r => r.json());
@@ -121,10 +121,10 @@ Saat uutisia 18 kielellä:
 
 ```bash
 # Suomalaiset uutiset (jos saatavilla)
-curl "https://news-crypto.vercel.app/api/news/international?language=fi"
+curl "https://cryptocurrency.cv/api/news/international?language=fi"
 
 # Englanninkielisellä käännöksellä
-curl "https://news-crypto.vercel.app/api/news/international?language=ko&translate=true"
+curl "https://cryptocurrency.cv/api/news/international?language=ko&translate=true"
 ```
 
 ---
@@ -143,8 +143,8 @@ npm start
 
 ## 🔗 Linkit
 
-- **API**: https://news-crypto.vercel.app
-- **Dokumentaatio**: https://news-crypto.vercel.app/docs
+- **API**: https://cryptocurrency.cv
+- **Dokumentaatio**: https://cryptocurrency.cv/docs
 - **GitHub**: https://github.com/AItoolsbyai/free-crypto-news
 
 ---

@@ -141,4 +141,4 @@ fn main() {
 
 ## API Reference
 
-See the [full API documentation](https://news-crypto.vercel.app/docs/sdk/rust).
+See the [full API documentation](https://cryptocurrency.cv/docs/sdk/rust).

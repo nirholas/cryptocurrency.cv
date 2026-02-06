@@ -90,8 +90,8 @@ GET /.well-known/x402
   ],
   
   "links": {
-    "documentation": "https://news-crypto.vercel.app/docs",
-    "openapi": "https://news-crypto.vercel.app/api/openapi.json",
+    "documentation": "https://cryptocurrency.cv/docs",
+    "openapi": "https://cryptocurrency.cv/api/openapi.json",
     "github": "https://github.com/nirholas/free-crypto-news"
   }
 }
@@ -101,10 +101,10 @@ GET /.well-known/x402
 
 ```bash
 # Discover available paid endpoints
-curl https://news-crypto.vercel.app/.well-known/x402
+curl https://cryptocurrency.cv/.well-known/x402
 
 # Check if x402 is configured
-curl -s https://news-crypto.vercel.app/.well-known/x402 | jq '.configured'
+curl -s https://cryptocurrency.cv/.well-known/x402 | jq '.configured'
 ```
 
 ---
@@ -137,7 +137,7 @@ GET /api/openapi.json
     "version": "1.0.0"
   },
   "servers": [
-    { "url": "https://news-crypto.vercel.app" }
+    { "url": "https://cryptocurrency.cv" }
   ],
   "paths": {
     "/api/news": { ... },
@@ -160,11 +160,11 @@ GET /api/openapi.json
 
 ```bash
 # Get OpenAPI spec
-curl https://news-crypto.vercel.app/api/openapi.json
+curl https://cryptocurrency.cv/api/openapi.json
 
 # Use with code generators
 npx openapi-generator-cli generate \
-  -i https://news-crypto.vercel.app/api/openapi.json \
+  -i https://cryptocurrency.cv/api/openapi.json \
   -g typescript-axios \
   -o ./sdk
 ```
@@ -190,7 +190,7 @@ GET /api/docs
 
 ### Access
 
-Open in browser: [https://news-crypto.vercel.app/api/docs](https://news-crypto.vercel.app/api/docs)
+Open in browser: [https://cryptocurrency.cv/api/docs](https://cryptocurrency.cv/api/docs)
 
 ---
 
@@ -227,7 +227,7 @@ The ChatGPT plugin expects the manifest at:
   "auth": { "type": "none" },
   "api": {
     "type": "openapi",
-    "url": "https://news-crypto.vercel.app/chatgpt/openapi.yaml"
+    "url": "https://cryptocurrency.cv/chatgpt/openapi.yaml"
   }
 }
 ```
@@ -244,15 +244,15 @@ AI agents can discover this API's capabilities automatically:
 import httpx
 
 # 1. Check x402 for paid endpoints
-x402 = httpx.get("https://news-crypto.vercel.app/.well-known/x402").json()
+x402 = httpx.get("https://cryptocurrency.cv/.well-known/x402").json()
 print(f"Available endpoints: {len(x402['resources'])}")
 
 # 2. Get OpenAPI spec for full API details
-openapi = httpx.get("https://news-crypto.vercel.app/api/openapi.json").json()
+openapi = httpx.get("https://cryptocurrency.cv/api/openapi.json").json()
 print(f"API version: {openapi['info']['version']}")
 
 # 3. Start using the API
-news = httpx.get("https://news-crypto.vercel.app/api/news").json()
+news = httpx.get("https://cryptocurrency.cv/api/news").json()
 ```
 
 ### MCP Server Discovery
@@ -298,19 +298,19 @@ Access-Control-Allow-Origin: *
 
 ```bash
 # x402 discovery
-curl -s https://news-crypto.vercel.app/.well-known/x402 | jq '.name'
+curl -s https://cryptocurrency.cv/.well-known/x402 | jq '.name'
 
 # OpenAPI spec
-curl -s https://news-crypto.vercel.app/api/openapi.json | jq '.info.title'
+curl -s https://cryptocurrency.cv/api/openapi.json | jq '.info.title'
 
 # ChatGPT plugin
-curl -s https://news-crypto.vercel.app/chatgpt/openapi.yaml | head -10
+curl -s https://cryptocurrency.cv/chatgpt/openapi.yaml | head -10
 ```
 
 ### Health Check
 
 ```bash
-curl https://news-crypto.vercel.app/api/health
+curl https://cryptocurrency.cv/api/health
 ```
 
 Response:

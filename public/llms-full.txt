@@ -2,7 +2,7 @@
 # Free Crypto News - Complete API Reference
 # Version: 1.0.0
 # Updated: 2026-02-02
-# Summary: https://news-crypto.vercel.app/llms.txt
+# Summary: https://cryptocurrency.cv/llms.txt
 
 This is the full documentation for AI agents and LLMs.
 
@@ -10,7 +10,7 @@ This is the full documentation for AI agents and LLMs.
 
 Free Crypto News is a 100% free, open-source cryptocurrency news aggregator API. No API keys, no rate limits, no authentication required.
 
-**Base URL:** https://news-crypto.vercel.app
+**Base URL:** https://cryptocurrency.cv
 
 ---
 
@@ -241,7 +241,7 @@ Cross-exchange arbitrage opportunities.
 Server-sent events stream for live news.
 
 ```javascript
-const eventSource = new EventSource('https://news-crypto.vercel.app/api/sse/news');
+const eventSource = new EventSource('https://cryptocurrency.cv/api/sse/news');
 eventSource.onmessage = (event) => {
   const article = JSON.parse(event.data);
   console.log('New article:', article.title);
@@ -253,7 +253,7 @@ Live price updates via SSE.
 
 ### WebSocket
 ```javascript
-const ws = new WebSocket('wss://news-crypto.vercel.app/ws');
+const ws = new WebSocket('wss://cryptocurrency.cv/ws');
 ws.onmessage = (event) => {
   const data = JSON.parse(event.data);
 };
@@ -334,4 +334,4 @@ MIT License - Free for commercial and personal use.
 
 - GitHub: https://github.com/nirholas/free-crypto-news
 - Issues: https://github.com/nirholas/free-crypto-news/issues
-- Documentation: https://news-crypto.vercel.app/docs
+- Documentation: https://cryptocurrency.cv/docs

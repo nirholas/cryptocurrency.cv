@@ -22,7 +22,7 @@
 Obtén noticias cripto en tiempo real de 7 fuentes principales con una sola llamada a la API.
 
 ```bash
-curl https://news-crypto.vercel.app/api/news
+curl https://cryptocurrency.cv/api/news
 ```
 ---
 
@@ -71,13 +71,13 @@ Obtén noticias cripto de **12 fuentes internacionales** en coreano, chino, japo
 
 ```bash
 # Obtener todas las noticias internacionales
-curl "https://news-crypto.vercel.app/api/news/international"
+curl "https://cryptocurrency.cv/api/news/international"
 
 # Obtener noticias coreanas con traducción al inglés
-curl "https://news-crypto.vercel.app/api/news/international?language=ko&translate=true"
+curl "https://cryptocurrency.cv/api/news/international?language=ko&translate=true"
 
 # Obtener noticias de la región asiática
-curl "https://news-crypto.vercel.app/api/news/international?region=asia&limit=20"
+curl "https://cryptocurrency.cv/api/news/international?region=asia&limit=20"
 ```
 
 ### Características
@@ -113,7 +113,7 @@ Free Crypto News es una **PWA completamente instalable** que funciona sin conexi
 ### Instalar la App
 
 **Escritorio (Chrome/Edge):**
-1. Visita [news-crypto.vercel.app](https://news-crypto.vercel.app)
+1. Visita [cryptocurrency.cv](https://cryptocurrency.cv)
 2. Haz clic en el icono de instalación (⊕) en la barra de direcciones
 3. Haz clic en "Instalar"
 
@@ -288,7 +288,7 @@ La aplicación web incluye páginas completas para datos de mercado, gestión de
 | [PHP](sdk/php/) | SDK PHP |
 | [Componentes UI](docs/components.md) | Componentes internos de navegación y búsqueda |
 
-**URL Base:** `https://news-crypto.vercel.app`
+**URL Base:** `https://cryptocurrency.cv`
 
 **Mirror de Respaldo:** `https://nirholas.github.io/free-crypto-news/`
 
@@ -319,22 +319,22 @@ La aplicación web incluye páginas completas para datos de mercado, gestión de
 
 **Hacer preguntas sobre noticias cripto:**
 ```bash
-curl "https://news-crypto.vercel.app/api/ask?q=What%20is%20happening%20with%20Bitcoin%20today"
+curl "https://cryptocurrency.cv/api/ask?q=What%20is%20happening%20with%20Bitcoin%20today"
 ```
 
 **Obtener resúmenes potenciados por IA:**
 ```bash
-curl "https://news-crypto.vercel.app/api/summarize?limit=5&style=brief"
+curl "https://cryptocurrency.cv/api/summarize?limit=5&style=brief"
 ```
 
 **Resumen diario:**
 ```bash
-curl "https://news-crypto.vercel.app/api/digest?period=24h"
+curl "https://cryptocurrency.cv/api/digest?period=24h"
 ```
 
 **Análisis profundo de sentimiento:**
 ```bash
-curl "https://news-crypto.vercel.app/api/sentiment?asset=BTC"
+curl "https://cryptocurrency.cv/api/sentiment?asset=BTC"
 ```
 
 ---
@@ -380,7 +380,7 @@ breaking = news.get_breaking(5)
 **Una línea:**
 ```python
 import urllib.request, json
-news = json.loads(urllib.request.urlopen("https://news-crypto.vercel.app/api/news?limit=5").read())
+news = json.loads(urllib.request.urlopen("https://cryptocurrency.cv/api/news?limit=5").read())
 print(news["articles"][0]["title"])
 ```
 

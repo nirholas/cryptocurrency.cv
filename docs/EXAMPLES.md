@@ -25,7 +25,7 @@ go get github.com/nirholas/free-crypto-news/sdk/go
 ```python
 import requests
 
-response = requests.get("https://news-crypto.vercel.app/api/news?limit=5")
+response = requests.get("https://cryptocurrency.cv/api/news?limit=5")
 news = response.json()
 
 for article in news.get("articles", news)[:5]:
@@ -37,7 +37,7 @@ for article in news.get("articles", news)[:5]:
 <summary><b>JavaScript</b></summary>
 
 ```javascript
-const response = await fetch("https://news-crypto.vercel.app/api/news?limit=5");
+const response = await fetch("https://cryptocurrency.cv/api/news?limit=5");
 const news = await response.json();
 
 news.articles.forEach(article => {
@@ -50,7 +50,7 @@ news.articles.forEach(article => {
 <summary><b>Go</b></summary>
 
 ```go
-resp, _ := http.Get("https://news-crypto.vercel.app/api/news?limit=5")
+resp, _ := http.Get("https://cryptocurrency.cv/api/news?limit=5")
 defer resp.Body.Close()
 body, _ := io.ReadAll(resp.Body)
 fmt.Println(string(body))
@@ -61,7 +61,7 @@ fmt.Println(string(body))
 <summary><b>cURL</b></summary>
 
 ```bash
-curl "https://news-crypto.vercel.app/api/news?limit=5"
+curl "https://cryptocurrency.cv/api/news?limit=5"
 ```
 </details>
 
@@ -78,13 +78,13 @@ curl "https://news-crypto.vercel.app/api/news?limit=5"
 import requests
 
 # Basic fetch
-response = requests.get("https://news-crypto.vercel.app/api/news", params={
+response = requests.get("https://cryptocurrency.cv/api/news", params={
     "limit": 20
 })
 news = response.json()
 
 # With filters
-response = requests.get("https://news-crypto.vercel.app/api/news", params={
+response = requests.get("https://cryptocurrency.cv/api/news", params={
     "limit": 50,
     "category": "bitcoin",
     "source": "coindesk"
@@ -98,12 +98,12 @@ filtered_news = response.json()
 
 ```javascript
 // Basic fetch
-const response = await fetch("https://news-crypto.vercel.app/api/news?limit=20");
+const response = await fetch("https://cryptocurrency.cv/api/news?limit=20");
 const news = await response.json();
 
 // With filters
 const filtered = await fetch(
-  "https://news-crypto.vercel.app/api/news?limit=50&category=bitcoin&source=coindesk"
+  "https://cryptocurrency.cv/api/news?limit=50&category=bitcoin&source=coindesk"
 );
 const filteredNews = await filtered.json();
 ```
@@ -114,10 +114,10 @@ const filteredNews = await filtered.json();
 
 ```bash
 # Basic fetch
-curl "https://news-crypto.vercel.app/api/news?limit=20"
+curl "https://cryptocurrency.cv/api/news?limit=20"
 
 # With filters
-curl "https://news-crypto.vercel.app/api/news?limit=50&category=bitcoin&source=coindesk"
+curl "https://cryptocurrency.cv/api/news?limit=50&category=bitcoin&source=coindesk"
 ```
 </details>
 
@@ -130,14 +130,14 @@ curl "https://news-crypto.vercel.app/api/news?limit=50&category=bitcoin&source=c
 import requests
 
 # Korean news, translated
-response = requests.get("https://news-crypto.vercel.app/api/news/international", params={
+response = requests.get("https://cryptocurrency.cv/api/news/international", params={
     "lang": "ko",
     "translate": "true"
 })
 korean_news = response.json()
 
 # Japanese news, original
-response = requests.get("https://news-crypto.vercel.app/api/news/international", params={
+response = requests.get("https://cryptocurrency.cv/api/news/international", params={
     "lang": "ja",
     "translate": "false"
 })
@@ -154,7 +154,7 @@ japanese_news = response.json()
 import requests
 
 response = requests.post(
-    "https://news-crypto.vercel.app/api/news/extract",
+    "https://cryptocurrency.cv/api/news/extract",
     json={"url": "https://example.com/article"},
     headers={"Content-Type": "application/json"}
 )
@@ -167,28 +167,28 @@ print(f"Content: {article['content'][:500]}...")
 ### GET /api/bitcoin - Bitcoin News
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/bitcoin?limit=20")
+response = requests.get("https://cryptocurrency.cv/api/bitcoin?limit=20")
 btc_news = response.json()
 ```
 
 ### GET /api/defi - DeFi News
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/defi?limit=20")
+response = requests.get("https://cryptocurrency.cv/api/defi?limit=20")
 defi_news = response.json()
 ```
 
 ### GET /api/breaking - Breaking News
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/breaking")
+response = requests.get("https://cryptocurrency.cv/api/breaking")
 breaking = response.json()
 ```
 
 ### GET /api/search - Search News
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/search", params={
+response = requests.get("https://cryptocurrency.cv/api/search", params={
     "q": "Ethereum ETF",
     "limit": 50,
     "from": "2024-01-01",
@@ -200,14 +200,14 @@ results = response.json()
 ### GET /api/trending - Trending Topics
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/trending?limit=10")
+response = requests.get("https://cryptocurrency.cv/api/trending?limit=10")
 trending = response.json()
 ```
 
 ### GET /api/digest - AI Daily Digest
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/digest")
+response = requests.get("https://cryptocurrency.cv/api/digest")
 digest = response.json()
 ```
 
@@ -224,7 +224,7 @@ digest = response.json()
 import requests
 
 # Get BTC sentiment
-response = requests.get("https://news-crypto.vercel.app/api/sentiment", params={
+response = requests.get("https://cryptocurrency.cv/api/sentiment", params={
     "asset": "BTC",
     "limit": 50
 })
@@ -240,7 +240,7 @@ print(f"Negative: {sentiment['negative']}")
 ### GET /api/summarize - Article Summarization
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/summarize", params={
+response = requests.get("https://cryptocurrency.cv/api/summarize", params={
     "url": "https://example.com/long-article"
 })
 summary = response.json()
@@ -250,7 +250,7 @@ print(summary['summary'])
 ### GET /api/ask - Ask AI Questions
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/ask", params={
+response = requests.get("https://cryptocurrency.cv/api/ask", params={
     "q": "What is the current Bitcoin market sentiment?",
     "context": "Include recent news analysis"
 })
@@ -261,7 +261,7 @@ print(answer['response'])
 ### GET /api/ai/brief - Market Brief
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/ai/brief")
+response = requests.get("https://cryptocurrency.cv/api/ai/brief")
 brief = response.json()
 print(brief['summary'])
 ```
@@ -270,7 +270,7 @@ print(brief['summary'])
 
 ```python
 response = requests.post(
-    "https://news-crypto.vercel.app/api/ai/debate",
+    "https://cryptocurrency.cv/api/ai/debate",
     json={"topic": "Bitcoin will reach $100k by end of year"},
     headers={"Content-Type": "application/json"}
 )
@@ -282,7 +282,7 @@ print(f"Bear Case: {debate['bear']}")
 ### GET /api/ai/oracle - Price Predictions
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/ai/oracle", params={
+response = requests.get("https://cryptocurrency.cv/api/ai/oracle", params={
     "asset": "BTC"
 })
 prediction = response.json()
@@ -291,7 +291,7 @@ prediction = response.json()
 ### GET /api/entities - Entity Extraction
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/entities", params={
+response = requests.get("https://cryptocurrency.cv/api/entities", params={
     "text": "Vitalik Buterin announced Ethereum's next upgrade at ETHDenver"
 })
 entities = response.json()
@@ -301,14 +301,14 @@ entities = response.json()
 ### GET /api/narratives - Narrative Detection
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/narratives?limit=10")
+response = requests.get("https://cryptocurrency.cv/api/narratives?limit=10")
 narratives = response.json()
 ```
 
 ### GET /api/clickbait - Clickbait Detection
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/clickbait", params={
+response = requests.get("https://cryptocurrency.cv/api/clickbait", params={
     "title": "You WON'T BELIEVE what Bitcoin just did!!!"
 })
 result = response.json()
@@ -318,7 +318,7 @@ print(f"Clickbait Score: {result['score']}")  # 0-1
 ### GET /api/factcheck - Fact Checking
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/factcheck", params={
+response = requests.get("https://cryptocurrency.cv/api/factcheck", params={
     "claim": "Bitcoin uses more energy than Argentina"
 })
 check = response.json()
@@ -328,7 +328,7 @@ check = response.json()
 
 ```python
 response = requests.post(
-    "https://news-crypto.vercel.app/api/detect/ai-content",
+    "https://cryptocurrency.cv/api/detect/ai-content",
     json={"text": "Your text to analyze..."},
     headers={"Content-Type": "application/json"}
 )
@@ -343,7 +343,7 @@ print(f"AI Probability: {result['probability']}")
 ### GET /api/market/coins - All Coins
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/market/coins", params={
+response = requests.get("https://cryptocurrency.cv/api/market/coins", params={
     "limit": 100,
     "page": 1,
     "order": "market_cap_desc"
@@ -354,7 +354,7 @@ coins = response.json()
 ### GET /api/market/ohlc/{coinId} - OHLC Candlestick Data
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/market/ohlc/bitcoin", params={
+response = requests.get("https://cryptocurrency.cv/api/market/ohlc/bitcoin", params={
     "days": 30
 })
 ohlc = response.json()
@@ -364,7 +364,7 @@ ohlc = response.json()
 ### GET /api/market/history/{coinId} - Price History
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/market/history/ethereum", params={
+response = requests.get("https://cryptocurrency.cv/api/market/history/ethereum", params={
     "days": 90
 })
 history = response.json()
@@ -373,14 +373,14 @@ history = response.json()
 ### GET /api/market/exchanges - Exchange Data
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/market/exchanges?limit=50")
+response = requests.get("https://cryptocurrency.cv/api/market/exchanges?limit=50")
 exchanges = response.json()
 ```
 
 ### GET /api/market/compare - Compare Coins
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/market/compare", params={
+response = requests.get("https://cryptocurrency.cv/api/market/compare", params={
     "coins": "bitcoin,ethereum,solana"
 })
 comparison = response.json()
@@ -389,7 +389,7 @@ comparison = response.json()
 ### GET /api/fear-greed - Fear & Greed Index
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/fear-greed")
+response = requests.get("https://cryptocurrency.cv/api/fear-greed")
 fg = response.json()
 print(f"Value: {fg['value']} ({fg['classification']})")
 ```
@@ -401,7 +401,7 @@ print(f"Value: {fg['value']} ({fg['classification']})")
 ### GET /api/arbitrage - Arbitrage Opportunities
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/arbitrage", params={
+response = requests.get("https://cryptocurrency.cv/api/arbitrage", params={
     "min_spread": 0.5,
     "limit": 20
 })
@@ -415,7 +415,7 @@ for opp in opportunities:
 ### GET /api/signals - Trading Signals
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/signals", params={
+response = requests.get("https://cryptocurrency.cv/api/signals", params={
     "asset": "BTC",
     "timeframe": "4h"
 })
@@ -425,21 +425,21 @@ signals = response.json()
 ### GET /api/funding - Funding Rates
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/funding")
+response = requests.get("https://cryptocurrency.cv/api/funding")
 funding = response.json()
 ```
 
 ### GET /api/options - Options Data
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/options?asset=BTC")
+response = requests.get("https://cryptocurrency.cv/api/options?asset=BTC")
 options = response.json()
 ```
 
 ### GET /api/liquidations - Liquidation Data
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/liquidations", params={
+response = requests.get("https://cryptocurrency.cv/api/liquidations", params={
     "timeframe": "24h",
     "min_value": 500000
 })
@@ -449,7 +449,7 @@ liquidations = response.json()
 ### GET /api/whale-alerts - Whale Transactions
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/whale-alerts", params={
+response = requests.get("https://cryptocurrency.cv/api/whale-alerts", params={
     "min_value": 5000000,
     "limit": 20
 })
@@ -459,7 +459,7 @@ whales = response.json()
 ### GET /api/orderbook - Order Book
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/orderbook", params={
+response = requests.get("https://cryptocurrency.cv/api/orderbook", params={
     "symbol": "BTCUSDT",
     "exchange": "binance",
     "depth": 20
@@ -474,7 +474,7 @@ orderbook = response.json()
 ### GET /api/social/x - Twitter/X Feed
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/social/x", params={
+response = requests.get("https://cryptocurrency.cv/api/social/x", params={
     "asset": "BTC",
     "limit": 20
 })
@@ -484,7 +484,7 @@ tweets = response.json()
 ### GET /api/social/reddit - Reddit Feed
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/social/reddit", params={
+response = requests.get("https://cryptocurrency.cv/api/social/reddit", params={
     "subreddit": "cryptocurrency",
     "limit": 20
 })
@@ -494,21 +494,21 @@ posts = response.json()
 ### GET /api/social/youtube - YouTube Videos
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/social/youtube?limit=20")
+response = requests.get("https://cryptocurrency.cv/api/social/youtube?limit=20")
 videos = response.json()
 ```
 
 ### GET /api/social/influencers - Crypto Influencers
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/social/influencers?limit=50")
+response = requests.get("https://cryptocurrency.cv/api/social/influencers?limit=50")
 influencers = response.json()
 ```
 
 ### GET /api/governance - DAO Governance
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/governance", params={
+response = requests.get("https://cryptocurrency.cv/api/governance", params={
     "protocol": "aave",
     "limit": 20
 })
@@ -518,7 +518,7 @@ proposals = response.json()
 ### GET /api/events - Crypto Events
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/events", params={
+response = requests.get("https://cryptocurrency.cv/api/events", params={
     "type": "conference",
     "limit": 20
 })
@@ -532,14 +532,14 @@ events = response.json()
 ### GET /api/nft - NFT News
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/nft?limit=20")
+response = requests.get("https://cryptocurrency.cv/api/nft?limit=20")
 nft_news = response.json()
 ```
 
 ### GET /api/onchain - On-Chain Data
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/onchain", params={
+response = requests.get("https://cryptocurrency.cv/api/onchain", params={
     "chain": "ethereum",
     "metric": "transactions"
 })
@@ -549,7 +549,7 @@ onchain = response.json()
 ### GET /api/onchain/gas - Gas Prices
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/onchain/gas?chain=ethereum")
+response = requests.get("https://cryptocurrency.cv/api/onchain/gas?chain=ethereum")
 gas = response.json()
 print(f"Fast: {gas['fast']} gwei")
 print(f"Standard: {gas['standard']} gwei")
@@ -559,28 +559,28 @@ print(f"Slow: {gas['slow']} gwei")
 ### GET /api/onchain/defi - DeFi TVL
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/onchain/defi")
+response = requests.get("https://cryptocurrency.cv/api/onchain/defi")
 tvl = response.json()
 ```
 
 ### GET /api/staking - Staking Opportunities
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/staking?asset=ETH")
+response = requests.get("https://cryptocurrency.cv/api/staking?asset=ETH")
 staking = response.json()
 ```
 
 ### GET /api/layer2 - Layer 2 Data
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/layer2")
+response = requests.get("https://cryptocurrency.cv/api/layer2")
 l2 = response.json()
 ```
 
 ### GET /api/yields - DeFi Yields
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/yields", params={
+response = requests.get("https://cryptocurrency.cv/api/yields", params={
     "chain": "ethereum",
     "min_apy": 10
 })
@@ -590,14 +590,14 @@ yields = response.json()
 ### GET /api/airdrops - Airdrop Opportunities
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/airdrops?status=active")
+response = requests.get("https://cryptocurrency.cv/api/airdrops?status=active")
 airdrops = response.json()
 ```
 
 ### GET /api/security - Security Alerts
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/security", params={
+response = requests.get("https://cryptocurrency.cv/api/security", params={
     "severity": "high",
     "limit": 20
 })
@@ -607,7 +607,7 @@ alerts = response.json()
 ### GET /api/hacks - Hack Reports
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/hacks?limit=20")
+response = requests.get("https://cryptocurrency.cv/api/hacks?limit=20")
 hacks = response.json()
 ```
 
@@ -618,7 +618,7 @@ hacks = response.json()
 ### GET /api/regulatory - Regulatory News
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/regulatory", params={
+response = requests.get("https://cryptocurrency.cv/api/regulatory", params={
     "region": "us",
     "limit": 20
 })
@@ -628,28 +628,28 @@ regulatory = response.json()
 ### GET /api/regulatory/etf - ETF News
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/regulatory/etf?type=bitcoin")
+response = requests.get("https://cryptocurrency.cv/api/regulatory/etf?type=bitcoin")
 etf = response.json()
 ```
 
 ### GET /api/regulatory/sec - SEC News
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/regulatory/sec?limit=20")
+response = requests.get("https://cryptocurrency.cv/api/regulatory/sec?limit=20")
 sec = response.json()
 ```
 
 ### GET /api/regulatory/enforcement - Enforcement Actions
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/regulatory/enforcement?limit=20")
+response = requests.get("https://cryptocurrency.cv/api/regulatory/enforcement?limit=20")
 enforcement = response.json()
 ```
 
 ### GET /api/regulatory/cbdc - CBDC Developments
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/regulatory/cbdc")
+response = requests.get("https://cryptocurrency.cv/api/regulatory/cbdc")
 cbdc = response.json()
 ```
 
@@ -660,20 +660,20 @@ cbdc = response.json()
 ### GET /api/rss - RSS Feed (XML)
 
 ```bash
-curl "https://news-crypto.vercel.app/api/rss?category=bitcoin&limit=50"
+curl "https://cryptocurrency.cv/api/rss?category=bitcoin&limit=50"
 ```
 
 ### GET /api/rss.json - RSS Feed (JSON)
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/rss.json?limit=50")
+response = requests.get("https://cryptocurrency.cv/api/rss.json?limit=50")
 feed = response.json()
 ```
 
 ### GET /api/export/csv - CSV Export
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/export/csv?limit=100")
+response = requests.get("https://cryptocurrency.cv/api/export/csv?limit=100")
 csv_data = response.text
 
 # Save to file
@@ -684,7 +684,7 @@ with open("crypto_news.csv", "w") as f:
 ### GET /api/export/json - JSON Export
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/export/json", params={
+response = requests.get("https://cryptocurrency.cv/api/export/json", params={
     "limit": 100,
     "pretty": "true"
 })
@@ -694,13 +694,13 @@ json_data = response.json()
 ### GET /api/llms.txt - LLM-Friendly Format
 
 ```bash
-curl "https://news-crypto.vercel.app/api/llms.txt"
+curl "https://cryptocurrency.cv/api/llms.txt"
 ```
 
 ### GET /api/archive - News Archive
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/archive", params={
+response = requests.get("https://cryptocurrency.cv/api/archive", params={
     "year": 2024,
     "month": 6
 })
@@ -714,14 +714,14 @@ archive = response.json()
 ### GET /api/analytics/overview - Analytics Dashboard
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/analytics/overview")
+response = requests.get("https://cryptocurrency.cv/api/analytics/overview")
 overview = response.json()
 ```
 
 ### GET /api/analytics/trends - Trend Analysis
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/analytics/trends", params={
+response = requests.get("https://cryptocurrency.cv/api/analytics/trends", params={
     "period": "7d",
     "category": "bitcoin"
 })
@@ -731,21 +731,21 @@ trends = response.json()
 ### GET /api/credibility - Source Credibility
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/credibility")
+response = requests.get("https://cryptocurrency.cv/api/credibility")
 credibility = response.json()
 ```
 
 ### GET /api/impact - News Impact
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/impact?period=24h")
+response = requests.get("https://cryptocurrency.cv/api/impact?period=24h")
 impact = response.json()
 ```
 
 ### GET /api/correlations - News-Price Correlations
 
 ```python
-response = requests.get("https://news-crypto.vercel.app/api/correlations", params={
+response = requests.get("https://cryptocurrency.cv/api/correlations", params={
     "asset": "BTC",
     "period": "30d"
 })
@@ -767,13 +767,13 @@ headers = {"X-API-Key": "your-api-key"}
 ```python
 # Get portfolio
 response = requests.get(
-    "https://news-crypto.vercel.app/api/portfolio",
+    "https://cryptocurrency.cv/api/portfolio",
     headers=headers
 )
 
 # Add holding
 response = requests.post(
-    "https://news-crypto.vercel.app/api/portfolio/add",
+    "https://cryptocurrency.cv/api/portfolio/add",
     headers={**headers, "Content-Type": "application/json"},
     json={"symbol": "BTC", "amount": 0.5, "price": 45000}
 )
@@ -784,7 +784,7 @@ response = requests.post(
 ```python
 # Create price alert
 response = requests.post(
-    "https://news-crypto.vercel.app/api/alerts",
+    "https://cryptocurrency.cv/api/alerts",
     headers={**headers, "Content-Type": "application/json"},
     json={
         "type": "price",
@@ -797,7 +797,7 @@ response = requests.post(
 
 # Get alerts
 response = requests.get(
-    "https://news-crypto.vercel.app/api/alerts",
+    "https://cryptocurrency.cv/api/alerts",
     headers=headers
 )
 ```
@@ -807,14 +807,14 @@ response = requests.get(
 ```python
 # Add to watchlist
 response = requests.post(
-    "https://news-crypto.vercel.app/api/watchlist",
+    "https://cryptocurrency.cv/api/watchlist",
     headers={**headers, "Content-Type": "application/json"},
     json={"symbol": "SOL"}
 )
 
 # Get watchlist
 response = requests.get(
-    "https://news-crypto.vercel.app/api/watchlist",
+    "https://cryptocurrency.cv/api/watchlist",
     headers=headers
 )
 ```
@@ -826,7 +826,7 @@ response = requests.get(
 ### WebSocket - News Stream
 
 ```javascript
-const ws = new WebSocket('wss://news-crypto.vercel.app/api/stream/news');
+const ws = new WebSocket('wss://cryptocurrency.cv/api/stream/news');
 
 ws.onmessage = (event) => {
   const article = JSON.parse(event.data);
@@ -843,7 +843,7 @@ ws.send(JSON.stringify({
 ### SSE - Server-Sent Events
 
 ```javascript
-const es = new EventSource('https://news-crypto.vercel.app/api/sse/news?category=bitcoin');
+const es = new EventSource('https://cryptocurrency.cv/api/sse/news?category=bitcoin');
 
 es.onmessage = (event) => {
   const article = JSON.parse(event.data);
@@ -854,7 +854,7 @@ es.onmessage = (event) => {
 ### WebSocket - Market Data
 
 ```javascript
-const ws = new WebSocket('wss://news-crypto.vercel.app/api/stream/market');
+const ws = new WebSocket('wss://cryptocurrency.cv/api/stream/market');
 
 ws.send(JSON.stringify({
   type: 'subscribe',

@@ -5,7 +5,7 @@
  * Examples for all AI-powered endpoints.
  */
 
-const BASE_URL = 'https://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
 
 // =============================================================================
 // POST /api/ai - Main AI Endpoint

@@ -45,7 +45,7 @@ $client = new CryptoNews();
 
 // Custom configuration
 $client = new CryptoNews([
-    'base_url' => 'https://news-crypto.vercel.app',
+    'base_url' => 'https://cryptocurrency.cv',
     'timeout' => 30,
     'verify_ssl' => true,
 ]);
@@ -156,7 +156,7 @@ try {
 // config/services.php
 return [
     'fcn' => [
-        'base_url' => env('FCN_BASE_URL', 'https://news-crypto.vercel.app'),
+        'base_url' => env('FCN_BASE_URL', 'https://cryptocurrency.cv'),
         'timeout' => env('FCN_TIMEOUT', 30),
     ],
 ];

@@ -149,7 +149,7 @@ OPENROUTER_MODEL=meta-llama/llama-3-8b-instruct
 ### Check Configuration
 
 ```bash
-curl https://news-crypto.vercel.app/api/ai
+curl https://cryptocurrency.cv/api/ai
 ```
 
 Response:
@@ -217,7 +217,7 @@ Generate concise summaries of articles.
 **Request:**
 
 ```bash
-curl -X POST https://news-crypto.vercel.app/api/ai \
+curl -X POST https://cryptocurrency.cv/api/ai \
   -H "Content-Type: application/json" \
   -d '{
     "action": "summarize",
@@ -256,7 +256,7 @@ Analyze market sentiment with confidence scores.
 **Request:**
 
 ```bash
-curl -X POST https://news-crypto.vercel.app/api/ai \
+curl -X POST https://cryptocurrency.cv/api/ai \
   -H "Content-Type: application/json" \
   -d '{
     "action": "sentiment",
@@ -298,7 +298,7 @@ Extract structured information from articles.
 **Request:**
 
 ```bash
-curl -X POST https://news-crypto.vercel.app/api/ai \
+curl -X POST https://cryptocurrency.cv/api/ai \
   -H "Content-Type: application/json" \
   -d '{
     "action": "facts",
@@ -344,7 +344,7 @@ Evaluate claims made in articles.
 **Request:**
 
 ```bash
-curl -X POST https://news-crypto.vercel.app/api/ai \
+curl -X POST https://cryptocurrency.cv/api/ai \
   -H "Content-Type: application/json" \
   -d '{
     "action": "factcheck",
@@ -399,7 +399,7 @@ Generate follow-up questions readers might have.
 **Request:**
 
 ```bash
-curl -X POST https://news-crypto.vercel.app/api/ai \
+curl -X POST https://cryptocurrency.cv/api/ai \
   -H "Content-Type: application/json" \
   -d '{
     "action": "questions",
@@ -432,7 +432,7 @@ Auto-categorize articles by topic.
 **Request:**
 
 ```bash
-curl -X POST https://news-crypto.vercel.app/api/ai \
+curl -X POST https://cryptocurrency.cv/api/ai \
   -H "Content-Type: application/json" \
   -d '{
     "action": "categorize",
@@ -478,7 +478,7 @@ Translate content to any language.
 **Request:**
 
 ```bash
-curl -X POST https://news-crypto.vercel.app/api/ai \
+curl -X POST https://cryptocurrency.cv/api/ai \
   -H "Content-Type: application/json" \
   -d '{
     "action": "translate",
@@ -637,7 +637,7 @@ Generate a comprehensive daily digest of crypto news with market overview, top s
 **Request:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ai/brief?date=2026-01-22&format=full"
+curl "https://cryptocurrency.cv/api/ai/brief?date=2026-01-22&format=full"
 ```
 
 **Response:**
@@ -711,7 +711,7 @@ Generate balanced bull and bear perspectives on any article or topic.
 **Request:**
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/ai/debate" \
+curl -X POST "https://cryptocurrency.cv/api/ai/debate" \
   -H "Content-Type: application/json" \
   -d '{
     "topic": "Bitcoin reaching $200k in 2026"
@@ -793,7 +793,7 @@ Challenge any claim with structured counter-arguments, assumption analysis, and 
 **Request:**
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/ai/counter" \
+curl -X POST "https://cryptocurrency.cv/api/ai/counter" \
   -H "Content-Type: application/json" \
   -d '{
     "claim": "Bitcoin will replace the US dollar by 2030"
@@ -891,7 +891,7 @@ Automatically clusters duplicate/similar news articles and synthesizes them into
 **Request:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ai/synthesize?limit=5"
+curl "https://cryptocurrency.cv/api/ai/synthesize?limit=5"
 ```
 
 **Response:**
@@ -941,7 +941,7 @@ AI-powered explanation for why any topic is trending, with background context an
 **Request:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ai/explain?topic=Bitcoin&includePrice=true"
+curl "https://cryptocurrency.cv/api/ai/explain?topic=Bitcoin&includePrice=true"
 ```
 
 **Response:**
@@ -994,7 +994,7 @@ Scores news articles by relevance to your specific portfolio holdings, categoriz
 **Request:**
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/ai/portfolio-news" \
+curl -X POST "https://cryptocurrency.cv/api/ai/portfolio-news" \
   -H "Content-Type: application/json" \
   -d '{"holdings": [{"symbol": "BTC", "name": "Bitcoin", "allocation": 0.5}]}'
 ```
@@ -1043,7 +1043,7 @@ Detects potential correlations between news articles and cryptocurrency price mo
 **Request:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ai/correlation"
+curl "https://cryptocurrency.cv/api/ai/correlation"
 ```
 
 **Response:**
@@ -1092,7 +1092,7 @@ Ultra-short AI-generated summary of top crypto stories. Perfect for voice assist
 **Request:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ai/flash-briefing?stories=3"
+curl "https://cryptocurrency.cv/api/ai/flash-briefing?stories=3"
 ```
 
 **Response:**
@@ -1136,7 +1136,7 @@ Tracks crypto narratives through their complete lifecycle: emerging → growing 
 **Request:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ai/narratives"
+curl "https://cryptocurrency.cv/api/ai/narratives"
 ```
 
 **Response:**
@@ -1192,7 +1192,7 @@ Detects when Asian/European sources break news before Western sources. Identifie
 **Request:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ai/cross-lingual"
+curl "https://cryptocurrency.cv/api/ai/cross-lingual"
 ```
 
 **Response:**
@@ -1259,7 +1259,7 @@ AI-powered analysis of news source quality, reliability, and clickbait detection
 **Analyze Source:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ai/source-quality?source=CoinDesk"
+curl "https://cryptocurrency.cv/api/ai/source-quality?source=CoinDesk"
 ```
 
 ```json
@@ -1283,7 +1283,7 @@ curl "https://news-crypto.vercel.app/api/ai/source-quality?source=CoinDesk"
 **Detect Clickbait:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ai/source-quality?clickbait=true"
+curl "https://cryptocurrency.cv/api/ai/source-quality?clickbait=true"
 ```
 
 ```json
@@ -1333,7 +1333,7 @@ Deep-dive AI research on any crypto topic. Generates comprehensive reports with 
 **Full Research Report:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ai/research?topic=Solana"
+curl "https://cryptocurrency.cv/api/ai/research?topic=Solana"
 ```
 
 ```json
@@ -1377,19 +1377,19 @@ curl "https://news-crypto.vercel.app/api/ai/research?topic=Solana"
 **Quick Take:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ai/research?topic=DeFi&mode=quick"
+curl "https://cryptocurrency.cv/api/ai/research?topic=DeFi&mode=quick"
 ```
 
 **Compare Assets:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ai/research?compare=BTC,ETH"
+curl "https://cryptocurrency.cv/api/ai/research?compare=BTC,ETH"
 ```
 
 **Contrarian Opportunities:**
 
 ```bash
-curl "https://news-crypto.vercel.app/api/ai/research?contrarian=true"
+curl "https://cryptocurrency.cv/api/ai/research?contrarian=true"
 ```
 
 ```json
@@ -1549,25 +1549,25 @@ The AI Market Agent provides revolutionary market analysis through multi-source 
 
 ```bash
 # Full market intelligence
-curl "https://news-crypto.vercel.app/api/ai/agent"
+curl "https://cryptocurrency.cv/api/ai/agent"
 
 # Summary format
-curl "https://news-crypto.vercel.app/api/ai/agent?format=summary"
+curl "https://cryptocurrency.cv/api/ai/agent?format=summary"
 
 # Signals only
-curl "https://news-crypto.vercel.app/api/ai/agent?format=signals"
+curl "https://cryptocurrency.cv/api/ai/agent?format=signals"
 
 # Trading opportunities
-curl "https://news-crypto.vercel.app/api/ai/agent?format=opportunities"
+curl "https://cryptocurrency.cv/api/ai/agent?format=opportunities"
 
 # Risk alerts
-curl "https://news-crypto.vercel.app/api/ai/agent?format=risks"
+curl "https://cryptocurrency.cv/api/ai/agent?format=risks"
 ```
 
 ### POST Request (Query the Agent)
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/ai/agent" \
+curl -X POST "https://cryptocurrency.cv/api/ai/agent" \
   -H "Content-Type: application/json" \
   -d '{
     "question": "What is driving Bitcoin price action today?",
@@ -1620,7 +1620,7 @@ The Oracle provides a natural language query interface for cryptocurrency intell
 ### Request
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/oracle" \
+curl -X POST "https://cryptocurrency.cv/api/oracle" \
   -H "Content-Type: application/json" \
   -d '{
     "query": "What is happening with Bitcoin today?",
@@ -1673,7 +1673,7 @@ Detect AI-generated content in news articles using statistical and linguistic an
 ### Request (Single Text)
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/detect/ai-content" \
+curl -X POST "https://cryptocurrency.cv/api/detect/ai-content" \
   -H "Content-Type: application/json" \
   -d '{
     "text": "In today'\''s fast-paced world of cryptocurrency..."
@@ -1683,7 +1683,7 @@ curl -X POST "https://news-crypto.vercel.app/api/detect/ai-content" \
 ### Request (Batch)
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/detect/ai-content" \
+curl -X POST "https://cryptocurrency.cv/api/detect/ai-content" \
   -H "Content-Type: application/json" \
   -d '{
     "texts": ["Article 1 content...", "Article 2 content..."]
@@ -1693,7 +1693,7 @@ curl -X POST "https://news-crypto.vercel.app/api/detect/ai-content" \
 ### Quick Check (Faster, Less Detailed)
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/detect/ai-content" \
+curl -X POST "https://cryptocurrency.cv/api/detect/ai-content" \
   -H "Content-Type: application/json" \
   -d '{
     "text": "Content to check...",
@@ -1779,7 +1779,7 @@ Extract comprehensive named entities from crypto news with relationship mapping.
 ### Request
 
 ```bash
-curl "https://news-crypto.vercel.app/api/entities?limit=30&type=person"
+curl "https://cryptocurrency.cv/api/entities?limit=30&type=person"
 ```
 
 ### Response
@@ -1893,7 +1893,7 @@ Automatically classify crypto news events by type with confidence scoring.
 ### Request
 
 ```bash
-curl -X POST "https://news-crypto.vercel.app/api/classify" \
+curl -X POST "https://cryptocurrency.cv/api/classify" \
   -H "Content-Type: application/json" \
   -d '{
     "title": "Coinbase Raises $500M in Series E Funding",

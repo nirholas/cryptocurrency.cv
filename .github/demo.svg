@@ -37,7 +37,7 @@
   <!-- Command Line 1 -->
   <text x="40" y="85" class="terminal-text">
     <tspan class="prompt">$</tspan>
-    <tspan class="command"> curl https://news-crypto.vercel.app/api/news?limit=2</tspan>
+    <tspan class="command"> curl https://cryptocurrency.cv/api/news?limit=2</tspan>
   </text>
   
   <!-- Animated cursor for command -->

@@ -134,21 +134,21 @@ export default async function AboutPage({ params }: Props) {
                 <div>
                   <p className="text-gray-400 text-sm mb-2">Get latest news:</p>
                   <code className="block bg-gray-800 p-3 rounded-lg text-green-400 text-sm overflow-x-auto">
-                    curl https://news-crypto.vercel.app/api/news?limit=10
+                    curl https://cryptocurrency.cv/api/news?limit=10
                   </code>
                 </div>
 
                 <div>
                   <p className="text-gray-400 text-sm mb-2">Search news:</p>
                   <code className="block bg-gray-800 p-3 rounded-lg text-green-400 text-sm overflow-x-auto">
-                    curl https://news-crypto.vercel.app/api/search?q=bitcoin
+                    curl https://cryptocurrency.cv/api/search?q=bitcoin
                   </code>
                 </div>
 
                 <div>
                   <p className="text-gray-400 text-sm mb-2">Get Bitcoin news:</p>
                   <code className="block bg-gray-800 p-3 rounded-lg text-green-400 text-sm overflow-x-auto">
-                    curl https://news-crypto.vercel.app/api/bitcoin?limit=5
+                    curl https://cryptocurrency.cv/api/bitcoin?limit=5
                   </code>
                 </div>
               </div>

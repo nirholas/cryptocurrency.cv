@@ -88,7 +88,7 @@ export function generateOpenAPISpec(): OpenAPISpec {
     },
     servers: [
       {
-        url: 'https://news-crypto.vercel.app',
+        url: 'https://cryptocurrency.cv',
         description: 'Production server',
       },
       {

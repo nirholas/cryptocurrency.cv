@@ -60,7 +60,7 @@ FCN.configure do |config|
   config.api_key = 'your_api_key'  # Optional for premium features
   config.timeout = 60
   config.max_retries = 3
-  config.base_url = 'https://news-crypto.vercel.app'
+  config.base_url = 'https://cryptocurrency.cv'
 end
 
 client = FCN::Client.new

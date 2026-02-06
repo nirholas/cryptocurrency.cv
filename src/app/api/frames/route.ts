@@ -10,7 +10,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://news-crypto.vercel.app';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://cryptocurrency.cv';
 const API_BASE = `${BASE_URL}/api`;
 
 interface FrameAction {

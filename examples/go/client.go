@@ -12,7 +12,7 @@ import (
 	"time"
 )
 
-const BaseURL = "https://news-crypto.vercel.app"
+const BaseURL = "https://cryptocurrency.cv"
 
 // Client is the API client
 type Client struct {

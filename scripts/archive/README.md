@@ -10,10 +10,10 @@ Scripts for collecting, enriching, and managing the Free Crypto News historical 
 
 ```bash
 # Test archiving right now - just visit in browser or curl:
-curl https://news-crypto.vercel.app/api/cron/archive
+curl https://cryptocurrency.cv/api/cron/archive
 
 # Check archive status
-curl https://news-crypto.vercel.app/api/archive/status
+curl https://cryptocurrency.cv/api/archive/status
 ```
 
 ### Set Up Automated Archiving (FREE)
@@ -21,14 +21,14 @@ curl https://news-crypto.vercel.app/api/archive/status
 **Option 1: cron-job.org** (Recommended)
 1. Go to [cron-job.org](https://cron-job.org) → Create free account
 2. Click "CREATE CRONJOB"
-3. URL: `https://news-crypto.vercel.app/api/cron/archive`
+3. URL: `https://cryptocurrency.cv/api/cron/archive`
 4. Schedule: `Every hour` or `0 * * * *`
 5. Save → Done! ✅
 
 **Option 2: Uptime Robot**
 1. Go to [uptimerobot.com](https://uptimerobot.com) → Create free account
 2. Add Monitor → HTTP(s)
-3. URL: `https://news-crypto.vercel.app/api/cron/archive`
+3. URL: `https://cryptocurrency.cv/api/cron/archive`
 4. Interval: 1 hour
 5. Save → Done! ✅
 
@@ -94,7 +94,7 @@ Full-featured collection with all intelligence services:
 node scripts/archive/collect-enhanced.js
 
 # Environment variables
-API_URL=https://news-crypto.vercel.app  # API base URL
+API_URL=https://cryptocurrency.cv  # API base URL
 ARCHIVE_DIR=./archive                         # Output directory
 FEATURE_MARKET=true                           # Market data (CoinGecko, DeFiLlama)
 FEATURE_ONCHAIN=true                          # On-chain events
@@ -414,19 +414,19 @@ Using the API:
 
 ```bash
 # Get articles mentioning BTC
-curl "https://news-crypto.vercel.app/api/archive?ticker=BTC"
+curl "https://cryptocurrency.cv/api/archive?ticker=BTC"
 
 # Get positive sentiment articles
-curl "https://news-crypto.vercel.app/api/archive?sentiment=positive"
+curl "https://cryptocurrency.cv/api/archive?sentiment=positive"
 
 # Search by keyword
-curl "https://news-crypto.vercel.app/api/archive?q=ETF"
+curl "https://cryptocurrency.cv/api/archive?q=ETF"
 
 # Get trending tickers
-curl "https://news-crypto.vercel.app/api/archive?trending=true"
+curl "https://cryptocurrency.cv/api/archive?trending=true"
 
 # Get archive stats
-curl "https://news-crypto.vercel.app/api/archive?stats=true"
+curl "https://cryptocurrency.cv/api/archive?stats=true"
 ```
 
 Using the raw files:

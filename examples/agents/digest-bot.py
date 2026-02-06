@@ -93,7 +93,7 @@ except ImportError:
 # CONFIGURATION
 # =============================================================================
 
-API_BASE = "https://news-crypto.vercel.app"
+API_BASE = "https://cryptocurrency.cv"
 
 # Categories for digest sections
 DIGEST_CATEGORIES = [
@@ -186,7 +186,7 @@ EMAIL_TEMPLATE = """
     </div>
     
     <div class="footer">
-        <p>Powered by <a href="https://news-crypto.vercel.app">Free Crypto News API</a></p>
+        <p>Powered by <a href="https://cryptocurrency.cv">Free Crypto News API</a></p>
         <p>{{ timestamp }}</p>
     </div>
 </body>
@@ -563,7 +563,7 @@ class MarkdownFormatter(OutputFormatter):
             "---",
             "",
             f"*Generated at {digest.timestamp}*",
-            "*Powered by [Free Crypto News API](https://news-crypto.vercel.app)*"
+            "*Powered by [Free Crypto News API](https://cryptocurrency.cv)*"
         ])
         
         return "\n".join(lines)

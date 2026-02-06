@@ -228,14 +228,14 @@ paths:
             default: 10
 ```
 
-Full spec: [/chatgpt/openapi.yaml](https://news-crypto.vercel.app/chatgpt/openapi.yaml)
+Full spec: [/chatgpt/openapi.yaml](https://cryptocurrency.cv/chatgpt/openapi.yaml)
 
 ### Installation
 
 1. Open ChatGPT → Profile → Settings
 2. Enable **Plugins** under Beta features
 3. Plugin Store → Install unverified plugin
-4. Enter: `https://news-crypto.vercel.app`
+4. Enter: `https://cryptocurrency.cv`
 
 ---
 
@@ -250,7 +250,7 @@ from langchain.tools import Tool
 from langchain.agents import initialize_agent
 import requests
 
-API_BASE = "https://news-crypto.vercel.app"
+API_BASE = "https://cryptocurrency.cv"
 
 tools = [
     Tool(
@@ -307,7 +307,7 @@ AI agents can discover and pay for premium endpoints automatically:
 import httpx
 
 # 1. Discover available endpoints
-discovery = httpx.get("https://news-crypto.vercel.app/.well-known/x402").json()
+discovery = httpx.get("https://cryptocurrency.cv/.well-known/x402").json()
 
 for resource in discovery['resources']:
     print(f"{resource['path']}: {resource['price']}")

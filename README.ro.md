@@ -16,7 +16,7 @@
 Obține știri crypto în timp real din **200+ surse** cu un singur apel API.
 
 ```bash
-curl https://news-crypto.vercel.app/api/news
+curl https://cryptocurrency.cv/api/news
 ```
 
 ---
@@ -39,13 +39,13 @@ curl https://news-crypto.vercel.app/api/news
 
 ```bash
 # Ultimele știri
-curl "https://news-crypto.vercel.app/api/news?limit=10"
+curl "https://cryptocurrency.cv/api/news?limit=10"
 
 # Știri Bitcoin
-curl "https://news-crypto.vercel.app/api/news?ticker=BTC"
+curl "https://cryptocurrency.cv/api/news?ticker=BTC"
 
 # Breaking news
-curl "https://news-crypto.vercel.app/api/breaking"
+curl "https://cryptocurrency.cv/api/breaking"
 ```
 
 ### Exemplu Python
@@ -53,7 +53,7 @@ curl "https://news-crypto.vercel.app/api/breaking"
 ```python
 import requests
 
-BASE_URL = "https://news-crypto.vercel.app"
+BASE_URL = "https://cryptocurrency.cv"
 
 # Obține ultimele știri
 news = requests.get(f"{BASE_URL}/api/news?limit=10").json()
@@ -72,7 +72,7 @@ print(f"Piață: {fg['classification']} ({fg['value']}/100)")
 ### Exemplu JavaScript
 
 ```javascript
-const BASE_URL = 'https://news-crypto.vercel.app';
+const BASE_URL = 'https://cryptocurrency.cv';
 
 // Obține ultimele știri
 const news = await fetch(`${BASE_URL}/api/news?limit=10`).then(r => r.json());
@@ -121,10 +121,10 @@ Obține știri în 18 limbi:
 
 ```bash
 # Știri românești (dacă sunt disponibile)
-curl "https://news-crypto.vercel.app/api/news/international?language=ro"
+curl "https://cryptocurrency.cv/api/news/international?language=ro"
 
 # Cu traducere în engleză
-curl "https://news-crypto.vercel.app/api/news/international?language=ko&translate=true"
+curl "https://cryptocurrency.cv/api/news/international?language=ko&translate=true"
 ```
 
 ---
@@ -143,8 +143,8 @@ npm start
 
 ## 🔗 Linkuri
 
-- **API**: https://news-crypto.vercel.app
-- **Documentație**: https://news-crypto.vercel.app/docs
+- **API**: https://cryptocurrency.cv
+- **Documentație**: https://cryptocurrency.cv/docs
 - **GitHub**: https://github.com/AItoolsbyai/free-crypto-news
 
 ---

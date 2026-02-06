@@ -23,7 +23,7 @@ export const revalidate = 300; // 5 minutes
 async function fetchInternationalNews(): Promise<RegionalArticle[]> {
   // This would call the international news API
   try {
-    const response = await fetch('https://news-crypto.vercel.app/api/news/international?limit=100&translate=true');
+    const response = await fetch('https://cryptocurrency.cv/api/news/international?limit=100&translate=true');
     if (!response.ok) throw new Error('Failed to fetch international news');
     
     const data = await response.json();

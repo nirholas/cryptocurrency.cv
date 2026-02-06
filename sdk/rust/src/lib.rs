@@ -48,8 +48,8 @@ use futures_util::{Stream, StreamExt};
 use tokio_tungstenite::tungstenite::Message;
 
 /// Base URL for the API
-pub const BASE_URL: &str = "https://news-crypto.vercel.app/api";
-pub const WS_URL: &str = "wss://news-crypto.vercel.app/ws";
+pub const BASE_URL: &str = "https://cryptocurrency.cv/api";
+pub const WS_URL: &str = "wss://cryptocurrency.cv/ws";
 
 // =============================================================================
 // ERROR TYPES

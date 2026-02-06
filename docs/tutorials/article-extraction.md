@@ -27,14 +27,14 @@ Get full article content using its slug or ID.
     def get_article(slug: str):
         """Get full article by slug."""
         response = requests.get(
-            f"https://news-crypto.vercel.app/api/article/{slug}"
+            f"https://cryptocurrency.cv/api/article/{slug}"
         )
         return response.json()
     
     def get_article_metadata(slug: str):
         """Get article metadata only."""
         response = requests.get(
-            f"https://news-crypto.vercel.app/api/article/{slug}/metadata"
+            f"https://cryptocurrency.cv/api/article/{slug}/metadata"
         )
         return response.json()
     
@@ -93,14 +93,14 @@ Get full article content using its slug or ID.
     ```javascript
     async function getArticle(slug) {
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/article/${slug}`
+            `https://cryptocurrency.cv/api/article/${slug}`
         );
         return response.json();
     }
     
     async function getArticleMetadata(slug) {
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/article/${slug}/metadata`
+            `https://cryptocurrency.cv/api/article/${slug}/metadata`
         );
         return response.json();
     }
@@ -140,13 +140,13 @@ Get full article content using its slug or ID.
 === "cURL"
     ```bash
     # Get full article
-    curl "https://news-crypto.vercel.app/api/article/bitcoin-reaches-new-all-time-high" | jq
+    curl "https://cryptocurrency.cv/api/article/bitcoin-reaches-new-all-time-high" | jq
     
     # Get metadata only
-    curl "https://news-crypto.vercel.app/api/article/bitcoin-reaches-new-all-time-high/metadata" | jq
+    curl "https://cryptocurrency.cv/api/article/bitcoin-reaches-new-all-time-high/metadata" | jq
     
     # Get just title and sentiment
-    curl "https://news-crypto.vercel.app/api/article/bitcoin-reaches-new-all-time-high" | jq '{title, sentiment}'
+    curl "https://cryptocurrency.cv/api/article/bitcoin-reaches-new-all-time-high" | jq '{title, sentiment}'
     ```
 
 ---
@@ -166,7 +166,7 @@ Extract article content from any URL.
             data.update(options)
         
         response = requests.post(
-            "https://news-crypto.vercel.app/api/article/extract",
+            "https://cryptocurrency.cv/api/article/extract",
             json=data
         )
         return response.json()
@@ -237,7 +237,7 @@ Extract article content from any URL.
     ```javascript
     async function extractArticle(url, options = {}) {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/article/extract',
+            'https://cryptocurrency.cv/api/article/extract',
             {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -286,7 +286,7 @@ Extract article content from any URL.
 === "cURL"
     ```bash
     # Extract article
-    curl -X POST "https://news-crypto.vercel.app/api/article/extract" \
+    curl -X POST "https://cryptocurrency.cv/api/article/extract" \
       -H "Content-Type: application/json" \
       -d '{
         "url": "https://www.coindesk.com/markets/2024/01/15/example/",
@@ -295,7 +295,7 @@ Extract article content from any URL.
       }' | jq
     
     # Extract just content
-    curl -X POST "https://news-crypto.vercel.app/api/article/extract" \
+    curl -X POST "https://cryptocurrency.cv/api/article/extract" \
       -H "Content-Type: application/json" \
       -d '{"url": "https://example.com/article"}' | jq '.article.content'
     ```
@@ -317,7 +317,7 @@ Get clean, reader-friendly article content.
             params.update(options)
         
         response = requests.get(
-            "https://news-crypto.vercel.app/api/article/reader",
+            "https://cryptocurrency.cv/api/article/reader",
             params=params
         )
         return response.json()
@@ -366,7 +366,7 @@ Get clean, reader-friendly article content.
     async function getReaderMode(urlOrSlug, options = {}) {
         const params = new URLSearchParams({ url: urlOrSlug, ...options });
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/article/reader?${params}`
+            `https://cryptocurrency.cv/api/article/reader?${params}`
         );
         return response.json();
     }
@@ -399,10 +399,10 @@ Get clean, reader-friendly article content.
 === "cURL"
     ```bash
     # Get reader mode
-    curl "https://news-crypto.vercel.app/api/article/reader?url=https://example.com/article" | jq
+    curl "https://cryptocurrency.cv/api/article/reader?url=https://example.com/article" | jq
     
     # Get just clean content
-    curl "https://news-crypto.vercel.app/api/article/reader?url=https://example.com/article" | jq '.content'
+    curl "https://cryptocurrency.cv/api/article/reader?url=https://example.com/article" | jq '.content'
     ```
 
 ---
@@ -418,7 +418,7 @@ Get articles related to a specific article.
     def get_related_articles(slug: str, limit: int = 10):
         """Get related articles."""
         response = requests.get(
-            f"https://news-crypto.vercel.app/api/article/{slug}/related",
+            f"https://cryptocurrency.cv/api/article/{slug}/related",
             params={"limit": limit}
         )
         return response.json()
@@ -461,7 +461,7 @@ Get articles related to a specific article.
     ```javascript
     async function getRelatedArticles(slug, limit = 10) {
         const response = await fetch(
-            `https://news-crypto.vercel.app/api/article/${slug}/related?limit=${limit}`
+            `https://cryptocurrency.cv/api/article/${slug}/related?limit=${limit}`
         );
         return response.json();
     }
@@ -486,10 +486,10 @@ Get articles related to a specific article.
 === "cURL"
     ```bash
     # Get related articles
-    curl "https://news-crypto.vercel.app/api/article/bitcoin-etf/related?limit=10" | jq
+    curl "https://cryptocurrency.cv/api/article/bitcoin-etf/related?limit=10" | jq
     
     # Get just titles
-    curl "https://news-crypto.vercel.app/api/article/bitcoin-etf/related" | jq '.articles[].title'
+    curl "https://cryptocurrency.cv/api/article/bitcoin-etf/related" | jq '.articles[].title'
     ```
 
 ---
@@ -511,7 +511,7 @@ Analyze content to detect if it was AI-generated.
             data["url"] = url
         
         response = requests.post(
-            "https://news-crypto.vercel.app/api/detect/ai-content",
+            "https://cryptocurrency.cv/api/detect/ai-content",
             json=data
         )
         return response.json()
@@ -581,7 +581,7 @@ Analyze content to detect if it was AI-generated.
     ```javascript
     async function detectAiContent(options) {
         const response = await fetch(
-            'https://news-crypto.vercel.app/api/detect/ai-content',
+            'https://cryptocurrency.cv/api/detect/ai-content',
             {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -628,17 +628,17 @@ Analyze content to detect if it was AI-generated.
 === "cURL"
     ```bash
     # Detect from text
-    curl -X POST "https://news-crypto.vercel.app/api/detect/ai-content" \
+    curl -X POST "https://cryptocurrency.cv/api/detect/ai-content" \
       -H "Content-Type: application/json" \
       -d '{"text": "Bitcoin has reached a new all-time high..."}' | jq
     
     # Detect from URL
-    curl -X POST "https://news-crypto.vercel.app/api/detect/ai-content" \
+    curl -X POST "https://cryptocurrency.cv/api/detect/ai-content" \
       -H "Content-Type: application/json" \
       -d '{"url": "https://example.com/article"}' | jq
     
     # Get just the result
-    curl -X POST "https://news-crypto.vercel.app/api/detect/ai-content" \
+    curl -X POST "https://cryptocurrency.cv/api/detect/ai-content" \
       -H "Content-Type: application/json" \
       -d '{"text": "Sample text..."}' | jq '{isAiGenerated, confidence}'
     ```
@@ -658,7 +658,7 @@ from typing import Dict, Any, Optional
 class ArticleManager:
     """Article content management client."""
     
-    BASE_URL = "https://news-crypto.vercel.app"
+    BASE_URL = "https://cryptocurrency.cv"
     
     def __init__(self):
         self.session = requests.Session()

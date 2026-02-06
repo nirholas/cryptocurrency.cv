@@ -12,7 +12,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export const runtime = 'edge';
 
-const API_BASE = process.env.NEXT_PUBLIC_BASE_URL || 'https://news-crypto.vercel.app';
+const API_BASE = process.env.NEXT_PUBLIC_BASE_URL || 'https://cryptocurrency.cv';
 
 // Edge-compatible SHA-256 hash function
 async function sha256(message: string): Promise<string> {
