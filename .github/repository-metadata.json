@@ -1,0 +1,15 @@
+{
+    "name": "free-crypto-news",
+    "description": "Free crypto news API - real-time aggregator for Bitcoin, Ethereum, DeFi, Solana & altcoins. No API key required. RSS/Atom feeds, JSON REST API, historical archive with market context, embeddable widgets, ChatGPT plugin, Claude MCP server, SDKs (Python, TypeScript, Go, React, PHP). AI/LLM ready. Vibe coding friendly. Open source.",
+    "version": "1.0.0",
+    "publisher": "nirholas",
+    "repository": "https://github.com/nirholas/free-crypto-news",
+    "language": "TypeScript",
+    "topics": [
+        "news",
+        "crypto",
+        "nirholas",
+        "free",
+        "open-source"
+    ]
+}

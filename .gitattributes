@@ -2,3 +2,15 @@ archive/search/article-meta.json export-ignore
 archive/search/title-index.json export-ignore
 archive/indexes/*.json export-ignore
 archive/articles/*.jsonl export-ignore
+
+# TypeScript / JavaScript
+*.ts text eol=lf
+*.tsx text eol=lf
+*.js text eol=lf
+*.jsx text eol=lf
+
+# Python
+*.py text eol=lf
+
+# Solidity
+*.sol text eol=lf

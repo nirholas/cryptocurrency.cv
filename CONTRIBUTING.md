@@ -192,3 +192,7 @@ Contributors will be:
 ---
 
 **Thank you for contributing!** Every contribution, no matter how small, helps make this project better for everyone. 🚀
+
+## Code of Conduct
+
+Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md).
