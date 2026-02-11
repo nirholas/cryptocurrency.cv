@@ -16,7 +16,7 @@ mcp_server: "@anthropic-ai/mcp-server-crypto-news"
 ---
 
 # 🆓 Free Crypto News API 
-
+ 
 <p align="center">
   <a href="https://github.com/nirholas/free-crypto-news/stargazers"><img src="https://img.shields.io/github/stars/nirholas/free-crypto-news?style=for-the-badge&logo=github&color=yellow" alt="GitHub Stars"></a>
   <a href="https://github.com/nirholas/free-crypto-news/blob/main/LICENSE"><img src="https://img.shields.io/github/license/nirholas/free-crypto-news?style=for-the-badge&color=blue" alt="License"></a>
