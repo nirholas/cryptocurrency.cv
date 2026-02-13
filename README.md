@@ -1,5 +1,5 @@
 ---
-name: Free Crypto News API 
+name: Free Crypto News API  
 type: api
 category: cryptocurrency
 auth: none
