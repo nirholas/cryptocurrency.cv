@@ -3,16 +3,14 @@
  * 
  * Provides system health status including:
  * - API availability
- * - Database connectivity
+ * - Cache connectivity (Redis or Vercel KV)
  * - External service status
- * - Cache status
- * - x402 facilitator status
  */
 
 import { NextResponse } from 'next/server';
-import { kv } from '@vercel/kv';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { isRedisAvailable, redisGet, redisSet } from '@/lib/redis';
 import { COINGECKO_BASE } from '@/lib/constants';
 
 export const runtime = 'nodejs';
@@ -38,85 +36,60 @@ interface HealthResponse {
   timestamp: string;
   version: string;
   uptime: number;
-  checks: {
-    api: HealthCheck;
-    cache: HealthCheck;
-    x402Facilitator: HealthCheck;
-    externalAPIs: HealthCheck;
-  };
+  checks: Record<string, HealthCheck>;
 }
 
 /**
- * Check cache (Vercel KV) connectivity
+ * Check cache connectivity — uses Redis (self-hosted) or Vercel KV
  */
 async function checkCache(): Promise<HealthCheck> {
   const start = Date.now();
-  
-  try {
-    // Try to set and get a test key
-    await kv.set('health:check', Date.now(), { ex: 10 });
-    const result = await kv.get('health:check');
-    
-    if (result) {
-      return {
-        status: 'healthy',
-        responseTime: Date.now() - start,
-      };
-    }
-    
-    return {
-      status: 'degraded',
-      message: 'Cache accessible but returned unexpected result',
-      responseTime: Date.now() - start,
-    };
-  } catch (error) {
-    return {
-      status: 'unhealthy',
-      message: error instanceof Error ? error.message : 'Cache unavailable',
-      responseTime: Date.now() - start,
-    };
-  }
-}
 
-/**
- * Check x402 facilitator status
- */
-async function checkX402Facilitator(): Promise<HealthCheck | null> {
-  // Only check x402 if it's configured
-  const facilitatorUrl = process.env.X402_FACILITATOR_URL;
-  const paymentAddress = process.env.X402_PAYMENT_ADDRESS;
-  if (!facilitatorUrl && !paymentAddress) {
-    return null; // x402 not configured, skip check
-  }
-  
-  const start = Date.now();
-  const url = facilitatorUrl || 'https://x402.org/facilitator';
-  
-  try {
-    const response = await fetch(`${url}/health`, {
-      method: 'GET',
-      signal: AbortSignal.timeout(5000),
-    });
-    
-    if (response.ok) {
+  // Try Redis first (self-hosted / Docker)
+  if (isRedisAvailable()) {
+    try {
+      await redisSet('health:check', Date.now(), 10);
+      const result = await redisGet('health:check');
       return {
-        status: 'healthy',
+        status: result ? 'healthy' : 'degraded',
+        message: result ? 'Redis connected' : 'Redis accessible but returned unexpected result',
+        responseTime: Date.now() - start,
+      };
+    } catch (error) {
+      return {
+        status: 'unhealthy',
+        message: error instanceof Error ? error.message : 'Redis unavailable',
         responseTime: Date.now() - start,
       };
     }
-    
-    return {
-      status: 'degraded',
-      message: `Facilitator returned ${response.status}`,
-      responseTime: Date.now() - start,
-    };
-  } catch (error) {
-    return {
-      status: 'unhealthy',
-      message: error instanceof Error ? error.message : 'Facilitator unreachable',
-      responseTime: Date.now() - start,
-    };
   }
+
+  // Try Vercel KV (only if env vars suggest it's configured)
+  if (process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN) {
+    try {
+      const { kv } = await import('@vercel/kv');
+      await kv.set('health:check', Date.now(), { ex: 10 });
+      const result = await kv.get('health:check');
+      return {
+        status: result ? 'healthy' : 'degraded',
+        message: result ? 'Vercel KV connected' : 'KV accessible but returned unexpected result',
+        responseTime: Date.now() - start,
+      };
+    } catch (error) {
+      return {
+        status: 'unhealthy',
+        message: error instanceof Error ? error.message : 'Vercel KV unavailable',
+        responseTime: Date.now() - start,
+      };
+    }
+  }
+
+  // No cache configured — use in-memory (degraded but functional)
+  return {
+    status: 'degraded',
+    message: 'No Redis or Vercel KV configured, using in-memory cache',
+    responseTime: Date.now() - start,
+  };
 }
 
 /**
@@ -126,7 +99,6 @@ async function checkExternalAPIs(): Promise<HealthCheck> {
   const start = Date.now();
   
   try {
-    // Quick check to CoinGecko ping endpoint
     const response = await fetch(`${COINGECKO_BASE}/ping`, {
       method: 'GET',
       signal: AbortSignal.timeout(5000),
@@ -144,7 +116,7 @@ async function checkExternalAPIs(): Promise<HealthCheck> {
       message: 'External API responding slowly or with errors',
       responseTime: Date.now() - start,
     };
-  } catch (error) {
+  } catch {
     return {
       status: 'degraded',
       message: 'External APIs may be slow or unavailable',
@@ -159,10 +131,8 @@ async function checkExternalAPIs(): Promise<HealthCheck> {
 export async function GET() {
   const startTime = Date.now();
   
-  // Run all health checks in parallel
-  const [cache, x402, external] = await Promise.all([
+  const [cache, external] = await Promise.all([
     checkCache(),
-    checkX402Facilitator(),
     checkExternalAPIs(),
   ]);
 
@@ -175,12 +145,30 @@ export async function GET() {
     externalAPIs: external,
   };
 
-  // Only include x402 if configured and checked
-  if (x402) {
-    checks.x402Facilitator = x402;
+  // Check x402 only if configured
+  if (process.env.X402_FACILITATOR_URL || process.env.X402_PAYMENT_ADDRESS) {
+    const url = process.env.X402_FACILITATOR_URL || 'https://x402.org/facilitator';
+    const start = Date.now();
+    try {
+      const response = await fetch(`${url}/health`, {
+        method: 'GET',
+        signal: AbortSignal.timeout(5000),
+      });
+      checks.x402Facilitator = {
+        status: response.ok ? 'healthy' : 'degraded',
+        message: response.ok ? undefined : `Facilitator returned ${response.status}`,
+        responseTime: Date.now() - start,
+      };
+    } catch (error) {
+      checks.x402Facilitator = {
+        status: 'unhealthy',
+        message: error instanceof Error ? error.message : 'Facilitator unreachable',
+        responseTime: Date.now() - start,
+      };
+    }
   }
 
-  // Determine overall status (exclude optional services from overall calculation)
+  // Determine overall status
   const coreChecks = [checks.api, checks.cache, checks.externalAPIs];
   const unhealthyCount = coreChecks.filter(c => c.status === 'unhealthy').length;
   const degradedCount = coreChecks.filter(c => c.status === 'degraded').length;
@@ -199,12 +187,10 @@ export async function GET() {
     timestamp: new Date().toISOString(),
     version: APP_VERSION,
     uptime: Math.floor(process.uptime()),
-    checks: checks as HealthResponse['checks'],
+    checks,
   };
 
-  // Return appropriate status code
-  const statusCode = overallStatus === 'healthy' ? 200 : 
-                     overallStatus === 'degraded' ? 200 : 503;
+  const statusCode = overallStatus === 'unhealthy' ? 503 : 200;
 
   return NextResponse.json(response, {
     status: statusCode,
