@@ -1,6 +1,6 @@
 /**
  * Free Crypto News - Professional Homepage
- * Inspired by CoinDesk/CoinTelegraph layouts
+ * Inspired by CoinDesk, The Block, and Google News layouts
  */
 
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -9,9 +9,12 @@ import Footer from '@/components/Footer';
 import PriceTicker from '@/components/PriceTicker';
 import BreakingNewsBanner from '@/components/BreakingNewsBanner';
 import HeroArticle from '@/components/HeroArticle';
-import EditorsPicks from '@/components/EditorsPicks';
+import FeaturedStoryTabs from '@/components/FeaturedStoryTabs';
 import HomeMarketStrip from '@/components/HomeMarketStrip';
 import NewsCard from '@/components/NewsCard';
+import NewsCluster from '@/components/NewsCluster';
+import LatestNewsFeed from '@/components/LatestNewsFeed';
+import MostRead from '@/components/MostRead';
 import TrendingSidebar from '@/components/TrendingSidebar';
 import SourceSections from '@/components/SourceSections';
 import { ScrollIndicator } from '@/components/ScrollIndicator';
@@ -26,6 +29,7 @@ import { AskAboutThis } from '@/components/AskAboutThis';
 import { AIFlashBrief } from '@/components/AIFlashBrief';
 import { TrendingTopicsLive } from '@/components/TrendingTopicsLive';
 import { getHomepageNews, getSourceCount } from '@/lib/crypto-news';
+import { clusterSimilarArticles } from '@/lib/ai-intelligence';
 import { categories } from '@/lib/categories';
 import { Link } from '@/i18n/navigation';
 
@@ -54,13 +58,20 @@ export default async function Home({ params }: Props) {
 
   // Use trending articles for hero and featured sections
   const heroArticle = trendingData.articles[0]; // Top trending article as hero
-  const editorsPicks = trendingData.articles.slice(1, 4); // Articles 2-4 from trending
+  const heroSidebarArticles = trendingData.articles.slice(1, 7); // Articles 2-7 for hero sidebar list
+  const featuredArticles = newsData.articles.slice(0, 20); // CoinDesk-style tabbed featured stories
+  
+  // Cluster similar articles for Google News-style multi-source view
+  const newsClusters = clusterSimilarArticles(newsData.articles.slice(0, 30));
   
   // Deduplicate: exclude trending articles from latest news to avoid showing same content
   const trendingLinks = new Set(trendingData.articles.map(a => a.link));
   const latestNews = newsData.articles
     .filter(article => !trendingLinks.has(article.link))
     .slice(0, 12); // First 12 unique latest articles
+  
+  // CoinDesk-style timeline feed (left column)
+  const timelineFeedArticles = newsData.articles.slice(0, 15);
   
   const trendingArticles = trendingData.articles.slice(0, 10); // Top 10 for sidebar
   const sourceArticles = newsData.articles.slice(12); // Rest for source sections
@@ -92,17 +103,17 @@ export default async function Home({ params }: Props) {
       {/* Main Content */}
       <main id="main-content" className="max-w-[1400px] mx-auto">
 
-        {/* AI Ask Bar */}
-        <section className="px-4 sm:px-6 lg:px-8 mb-6">
-          <AskAboutThis context="crypto market news today" contextType="general" placeholder="Ask anything about crypto..." />
-        </section>
-        
-        {/* Hero Section - Compact Featured Article */}
+        {/* Hero Section - CoinDesk-style split layout */}
         {heroArticle && (
           <section className="px-4 sm:px-6 lg:px-8 mb-8">
-            <HeroArticle article={heroArticle} />
+            <HeroArticle article={heroArticle} sidebarArticles={heroSidebarArticles} />
           </section>
         )}
+
+        {/* Market Overview - CoinDesk-style ranked table (moved higher) */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-8">
+          <HomeMarketStrip />
+        </section>
 
         {/* AI Flash Briefing */}
         <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Flash briefing">
@@ -141,21 +152,33 @@ export default async function Home({ params }: Props) {
           <TrendingTopicsLive />
         </section>
 
-        {/* Trending Stories Section */}
-        <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Trending Stories">
-          <EditorsPicks articles={editorsPicks} />
+        {/* CoinDesk-style Featured Stories with Topic Tabs */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Featured Stories">
+          <FeaturedStoryTabs articles={featuredArticles} maxArticles={6} />
         </section>
+
+        {/* Google News-style Multi-Source Clusters */}
+        {newsClusters.length > 0 && (
+          <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Story clusters">
+            <NewsCluster clusters={newsClusters} maxClusters={4} />
+          </section>
+        )}
 
         {/* Trending Narratives */}
         <section className="px-4 sm:px-6 lg:px-8 mb-8" aria-label="Trending narratives">
           <TrendingNarratives />
         </section>
 
-        {/* Main Content Grid: Latest News + Sidebar */}
+        {/* Main Content: CoinDesk-style 3-column layout */}
         <div className="px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-[1fr_380px] gap-8 xl:gap-12">
+          <div className="grid lg:grid-cols-[320px_1fr_380px] gap-8 xl:gap-10">
             
-            {/* Left Column: Latest News */}
+            {/* Left Column: CoinDesk-style Latest News Timeline */}
+            <div className="hidden lg:block">
+              <LatestNewsFeed articles={timelineFeedArticles} maxArticles={15} />
+            </div>
+
+            {/* Center Column: Latest News Cards */}
             <section aria-labelledby="latest-heading">
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
@@ -175,8 +198,8 @@ export default async function Home({ params }: Props) {
                 </Link>
               </div>
 
-              {/* News Grid - 2 columns on medium, 3 on large, 4 on 2xl when no sidebar */}
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* News Grid - 2 columns in the center column */}
+              <div className="grid sm:grid-cols-2 gap-6">
                 {latestNews.map((article) => (
                   <NewsCard 
                     key={article.link} 
@@ -205,9 +228,9 @@ export default async function Home({ params }: Props) {
           </div>
         </div>
 
-        {/* Market Overview Strip */}
-        <section className="px-4 sm:px-6 lg:px-8 mt-12 mb-8">
-          <HomeMarketStrip />
+        {/* Most Read - CoinDesk-inspired numbered section */}
+        <section className="px-4 sm:px-6 lg:px-8 mt-12 mb-8" aria-label="Most read articles">
+          <MostRead articles={trendingData.articles} maxArticles={7} />
         </section>
 
         {/* Whale Activity Feed - Enhanced */}

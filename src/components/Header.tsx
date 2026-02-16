@@ -483,29 +483,23 @@ export default function Header() {
 
       <header 
         ref={headerRef}
-        className={`sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-gray-100 dark:border-slate-800 transition-all duration-300 w-full max-w-full ${
-          isScrolled ? 'shadow-md' : 'shadow-sm'
+        className={`sticky top-0 z-40 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 transition-all duration-300 w-full max-w-full ${
+          isScrolled ? 'shadow-sm' : ''
         }`}
         style={{
-          height: isScrolled ? '64px' : '80px',
+          height: isScrolled ? '56px' : '64px',
         }}
       >
         <div 
-          className="flex justify-between items-center px-4 lg:px-6 max-w-7xl mx-auto h-full transition-all duration-300"
+          className="flex justify-between items-center px-4 lg:px-6 max-w-[1400px] mx-auto h-full transition-all duration-300"
         >
-          {/* Logo */}
+          {/* Logo - The Block inspired bold wordmark */}
           <div className="flex items-center flex-shrink-0">
             <Link 
               href="/" 
-              className="text-xl font-bold flex items-center gap-2 focus-ring px-1 py-1 -mx-1"
+              className="flex items-center gap-2.5 focus-ring px-1 py-1 -mx-1"
             >
-              <span className="hidden sm:inline text-gray-900 dark:text-white font-bold tracking-tight">
-                FCN
-              </span>
-              <span className="sm:hidden text-gray-900 dark:text-white font-bold tracking-tight">
-                FCN
-              </span>
-              <span className="hidden md:inline text-[11px] font-medium text-gray-400 dark:text-slate-500 ml-1 border-l border-gray-200 dark:border-slate-700 pl-2">
+              <span className="text-lg sm:text-xl font-black tracking-tight text-gray-900 dark:text-white uppercase">
                 Free Crypto News
               </span>
             </Link>
@@ -513,7 +507,7 @@ export default function Header() {
 
           {/* Main Navigation - Desktop */}
           <nav 
-            className="hidden lg:flex items-center gap-0.5 flex-shrink min-w-0 overflow-hidden" 
+            className="hidden lg:flex items-center gap-0 flex-shrink min-w-0 overflow-hidden" 
             aria-label="Main navigation"
             role="menubar"
           >
@@ -526,10 +520,10 @@ export default function Header() {
               >
                 <Link 
                   href={item.href}
-                  className={`flex items-center gap-1 px-2.5 py-1.5 text-[13px] font-medium transition-colors duration-100 focus-ring whitespace-nowrap ${
+                  className={`flex items-center gap-1 px-3 py-2 text-sm font-semibold transition-colors duration-100 focus-ring whitespace-nowrap ${
                     activeMenu === item.label
                       ? 'text-gray-900 dark:text-white'
-                      : 'text-gray-500 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white'
+                      : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
                   }`}
                   role="menuitem"
                   aria-haspopup={item.megaMenu ? 'true' : undefined}
@@ -539,7 +533,7 @@ export default function Header() {
                   <span>{item.label}</span>
                   {item.megaMenu && (
                     <svg 
-                      className={`w-4 h-4 transition-transform duration-200 ${activeMenu === item.label ? 'rotate-180' : ''}`} 
+                      className={`w-3.5 h-3.5 transition-transform duration-200 ${activeMenu === item.label ? 'rotate-180' : ''}`} 
                       fill="none" 
                       stroke="currentColor" 
                       viewBox="0 0 24 24"
@@ -587,12 +581,12 @@ export default function Header() {
               <LanguageSwitcher variant="compact" />
             </div>
 
-            {/* GitHub Link */}
+            {/* GitHub Link - Clean CTA */}
             <a
               href="https://github.com/nirholas/free-crypto-news"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:flex items-center gap-1.5 ml-1 px-3 py-1.5 bg-gray-900 dark:bg-slate-700 text-white text-[13px] font-medium hover:bg-gray-800 dark:hover:bg-slate-600 active:scale-[0.98] transition-all duration-100 focus-ring"
+              className="hidden sm:flex items-center gap-1.5 ml-1 px-3 py-1.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-[13px] font-bold hover:bg-gray-700 dark:hover:bg-gray-100 active:scale-[0.98] transition-all duration-100 focus-ring rounded-sm"
               aria-label="View on GitHub"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

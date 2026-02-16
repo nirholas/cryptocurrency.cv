@@ -13,5 +13,8 @@
   },
   "fcn:newsletter_subscribers:sub_5b4fef2e-a06c-4f0a-81b9-131ef00d074d": {
     "value": "{\"id\":\"sub_5b4fef2e-a06c-4f0a-81b9-131ef00d074d\",\"data\":{\"id\":\"sub_5b4fef2e-a06c-4f0a-81b9-131ef00d074d\",\"email\":\"test-1770017513820@example.com\",\"frequency\":\"daily\",\"categories\":[],\"sources\":[],\"verified\":false,\"createdAt\":\"2026-02-02T07:31:53.863Z\",\"unsubscribeToken\":\"27fd101a565e4ae3b397cb487379cb80109d57e9\",\"verificationToken\":\"6be5b62714b549649a45bc460f727bb2840f2bb4\"},\"createdAt\":\"2026-02-02T07:31:53.863Z\",\"updatedAt\":\"2026-02-02T07:31:53.863Z\",\"version\":1,\"metadata\":{\"email\":\"test-1770017513820@example.com\",\"frequency\":\"daily\",\"verified\":false}}"
+  },
+  "fcn:portfolio:tax:demo": {
+    "value": "[]"
   }
 }

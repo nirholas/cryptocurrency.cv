@@ -542,7 +542,13 @@ export class AIMarketAgent {
     const signals: MarketSignal[] = [];
     
     try {
-      const response = await fetch('/api/news?limit=20', { next: { revalidate: 300 } });
+      // Construct absolute URL for edge runtime compatibility
+      const baseUrl = typeof process !== 'undefined' 
+        ? (process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL 
+          ? `https://${process.env.VERCEL_URL}` 
+          : 'http://localhost:3000')
+        : 'http://localhost:3000';
+      const response = await fetch(`${baseUrl}/api/news?limit=20`, { next: { revalidate: 300 } });
       if (response.ok) {
         const data = await response.json();
         const articles = data.articles || [];

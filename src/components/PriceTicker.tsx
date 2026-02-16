@@ -1,103 +1,85 @@
 /**
  * Live Price Ticker Bar
- * Displays BTC, ETH, SOL prices with 24h change
+ * Inspired by The Block's LMAX Digital live ticker strip
+ * Displays scrolling crypto prices with live indicator
  */
 
-import { getSimplePrices, getFearGreedIndex, formatPrice, formatPercent, getFearGreedColor } from '@/lib/market-data';
+import Link from 'next/link';
+import { getTopCoins, getFearGreedIndex, formatPrice, formatPercent, getFearGreedColor } from '@/lib/market-data';
 
 interface PriceTickerProps {
   className?: string;
 }
 
 export default async function PriceTicker({ className = '' }: PriceTickerProps) {
-  const [prices, fearGreed] = await Promise.all([
-    getSimplePrices(),
+  const [coins, fearGreed] = await Promise.all([
+    getTopCoins(10),
     getFearGreedIndex(),
   ]);
 
-  const coins = [
-    { 
-      symbol: 'BTC', 
-      name: 'Bitcoin',
-      icon: '₿',
-      color: 'text-orange-400',
-      price: prices.bitcoin?.usd,
-      change: prices.bitcoin?.usd_24h_change,
-    },
-    { 
-      symbol: 'ETH', 
-      name: 'Ethereum',
-      icon: 'Ξ',
-      color: 'text-purple-400',
-      price: prices.ethereum?.usd,
-      change: prices.ethereum?.usd_24h_change,
-    },
-    { 
-      symbol: 'SOL', 
-      name: 'Solana',
-      icon: '◎',
-      color: 'text-gradient-to-r from-purple-400 to-green-400',
-      price: prices.solana?.usd,
-      change: prices.solana?.usd_24h_change,
-    },
-  ];
+  const tickerCoins = coins.map((coin: any) => ({
+    id: coin.id,
+    symbol: (coin.symbol || '').toUpperCase(),
+    name: coin.name,
+    image: coin.image,
+    price: coin.current_price,
+    change: coin.price_change_percentage_24h,
+  }));
 
   return (
     <div 
-      className={`bg-gray-900 text-white py-2.5 overflow-hidden ${className}`}
+      className={`bg-black text-white py-1.5 border-b border-gray-800 overflow-hidden ${className}`}
       role="region"
       aria-label="Cryptocurrency prices"
     >
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-between gap-6 text-sm overflow-x-auto scrollbar-hide">
-          {/* Price Tickers */}
-          <div className="flex items-center gap-6" role="list" aria-label="Current prices">
-            {coins.map((coin) => {
+      <div className="max-w-[1400px] mx-auto px-4">
+        <div className="flex items-center gap-4 text-[13px] overflow-x-auto scrollbar-hide">
+          {/* Live indicator */}
+          <div className="flex items-center gap-2 pr-4 border-r border-gray-700 flex-shrink-0">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
+            </span>
+            <span className="text-gray-400 font-medium text-xs uppercase tracking-wider">Live</span>
+          </div>
+
+          {/* Scrolling price tickers */}
+          <div className="flex items-center gap-5 overflow-x-auto scrollbar-hide" role="list" aria-label="Current prices">
+            {tickerCoins.map((coin) => {
               const isPositive = (coin.change || 0) >= 0;
               return (
-                <div 
-                  key={coin.symbol} 
-                  className="flex items-center gap-2 whitespace-nowrap"
+                <Link
+                  key={coin.symbol}
+                  href={`/coin/${coin.id}`}
+                  className="flex items-center gap-1.5 whitespace-nowrap hover:opacity-80 transition-opacity"
                   role="listitem"
                 >
-                  <span className={coin.color} aria-hidden="true">{coin.icon}</span>
-                  <span className="text-gray-400 font-medium">{coin.symbol}</span>
-                  <span className="font-semibold">{formatPrice(coin.price)}</span>
+                  <span className="text-gray-500 font-semibold">{coin.symbol}USD</span>
+                  <span className="font-bold text-white tabular-nums">{formatPrice(coin.price)}</span>
                   <span 
-                    className={`inline-flex items-center gap-0.5 text-xs font-medium ${
+                    className={`text-xs font-semibold tabular-nums ${
                       isPositive ? 'text-green-400' : 'text-red-400'
                     }`}
                   >
-                    {/* Arrow indicator */}
-                    <svg 
-                      className={`w-3 h-3 ${isPositive ? '' : 'rotate-180'}`} 
-                      fill="currentColor" 
-                      viewBox="0 0 20 20"
-                      aria-hidden="true"
-                    >
-                      <path fillRule="evenodd" d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span aria-label={`${coin.name} ${isPositive ? 'up' : 'down'} ${Math.abs(coin.change || 0).toFixed(2)} percent in 24 hours`}>
-                      {formatPercent(coin.change)}
-                    </span>
+                    {isPositive ? '+' : ''}{coin.change?.toFixed(2)}%
                   </span>
-                </div>
+                </Link>
               );
             })}
           </div>
 
-          {/* Fear & Greed Index */}
+          {/* Fear & Greed Index - right side */}
           {fearGreed && (
             <div 
-              className="flex items-center gap-2 whitespace-nowrap border-l border-gray-700 pl-6"
+              className="flex items-center gap-2 whitespace-nowrap border-l border-gray-700 pl-4 ml-auto flex-shrink-0"
               aria-label={`Fear and Greed Index: ${fearGreed.value}, ${fearGreed.value_classification}`}
             >
-              <span className="text-gray-400 text-xs uppercase tracking-wide">Fear & Greed</span>
-              <span className={`font-bold ${getFearGreedColor(Number(fearGreed.value))}`}>
+              <span className="text-gray-500 text-xs uppercase tracking-wide font-medium">F&G</span>
+              <span className={`font-bold text-sm ${getFearGreedColor(Number(fearGreed.value))}`}>
                 {fearGreed.value}
               </span>
-              <span className="text-gray-500 text-xs hidden sm:inline">
-                ({fearGreed.value_classification})
+              <span className="text-gray-600 text-xs hidden sm:inline">
+                {fearGreed.value_classification}
               </span>
             </div>
           )}
