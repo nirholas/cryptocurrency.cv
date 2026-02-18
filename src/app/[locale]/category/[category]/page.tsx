@@ -53,6 +53,21 @@ const categoryInfo: Record<string, { title: string; description: string; emoji: 
     description: 'Cryptocurrency mining news, hashrate, and industry updates',
     emoji: '⛏️',
   },
+  geopolitical: {
+    title: 'Geopolitical & Macro',
+    description: 'Central bank decisions, regulations, sanctions, and geopolitical events that move crypto markets',
+    emoji: '🌍',
+  },
+  security: {
+    title: 'Security News',
+    description: 'Smart contract audits, exploits, hacks, and blockchain security research',
+    emoji: '🛡️',
+  },
+  mainstream: {
+    title: 'Mainstream Finance',
+    description: 'Major financial news outlets covering crypto, markets, and economics',
+    emoji: '📰',
+  },
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

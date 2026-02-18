@@ -24,6 +24,10 @@ import {
   Coins,
   Scale,
   Settings,
+  Globe,
+  Shield,
+  Code,
+  Layers,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -52,6 +56,11 @@ export const CATEGORY_ICONS: Record<string, LucideIcon> = {
   regulation: Scale,
   trading: TrendingUp,
   technology: Settings,
+  geopolitical: Globe,
+  security: Shield,
+  developer: Code,
+  layer2: Layers,
+  mainstream: TrendingUp,
   all: TrendingUp,
 };
 

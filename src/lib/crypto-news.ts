@@ -2,21 +2,22 @@
  * Free Crypto News - RSS Feed Aggregator
  * 
  * 100% FREE - no API keys required!
- * Aggregates news from 130+ major English crypto sources across 21 categories:
- * - General: 20 sources (CoinDesk, The Block, Decrypt, CoinTelegraph, Blockworks, etc.)
+ * Aggregates news from 160+ major English crypto sources across 24 categories:
+ * - General: 30 sources (CoinDesk, The Block, Decrypt, CoinTelegraph, Blockworks, DailyCoin, etc.)
  * - DeFi: 12 sources (The Defiant, Bankless, Uniswap, Aave, Compound, etc.)
+ * - Mainstream: 17 sources (Bloomberg, Reuters, Forbes, CNBC, WSJ, NYT, Economist, etc.)
  * - Research: 8 sources (Messari, Paradigm, Delphi Digital, a16z Crypto, etc.)
  * - Institutional: 8 sources (Galaxy Digital, Pantera Capital, Multicoin, etc.)
- * - Mainstream: 7 sources (Bloomberg, Reuters, Forbes, CNBC, Yahoo Finance, etc.)
+ * - Geopolitical: 8 sources (BBC, Reuters, AP, Federal Reserve, SEC, Al Jazeera, etc.)
  * - Layer 2: 7 sources (L2BEAT, Optimism, Arbitrum, Polygon, zkSync, Base, etc.)
  * - ETF/Asset Managers: 7 sources (Grayscale, Bitwise, VanEck, ARK, 21Shares, etc.)
  * - Alt L1: 7 sources (NEAR, Cosmos, Avalanche, Sui, Aptos, Cardano, Polkadot)
- * - Trading: 6 sources (BeInCrypto, AMBCrypto, FXStreet, TradingView, CryptoQuant)
+ * - Trading: 7 sources (BeInCrypto, AMBCrypto, FXStreet, TradingView, DailyFX, etc.)
  * - Security: 6 sources (SlowMist, CertiK, OpenZeppelin, Trail of Bits, samczsun, Immunefi)
  * - Developer: 6 sources (Alchemy, Chainlink, Infura, The Graph, Hardhat, Foundry)
+ * - Bitcoin: 6 sources (Bitcoin Magazine, Bitcoinist, Bitcoin.com, BTC Times, Lightning Labs, Stacker News)
  * - Quant: 5 sources (AQR, Two Sigma, Man Institute, Alpha Architect, QuantStart)
  * - On-Chain: 5 sources (Glassnode, Kaiko, IntoTheBlock, Coin Metrics, Willy Woo)
- * - Bitcoin: 5 sources (Bitcoin Magazine, Bitcoinist, BTC Times, Lightning Labs, Stacker News)
  * - NFT: 4 sources (NFT Now, NFT Evening, NFT Plazas, DappRadar)
  * - Ethereum: 4 sources (Week in Ethereum, Etherscan, Daily Gwei)
  * - Mining: 3 sources (Bitcoin Mining News, Hashrate Index, Compass Mining)
@@ -868,6 +869,163 @@ const RSS_SOURCES = {
     name: 'BNY Mellon Aerial View',
     url: 'https://www.bnymellon.com/us/en/insights/aerial-view-magazine.rss',
     category: 'tradfi',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // ADDITIONAL CRYPTO NEWS (from HQ DeFi Dashboard)
+  // ═══════════════════════════════════════════════════════════════
+  dailycoin: {
+    name: 'DailyCoin',
+    url: 'https://dailycoin.com/feed/',
+    category: 'general',
+  },
+  coinpedia: {
+    name: 'CoinPedia',
+    url: 'https://coinpedia.org/feed/',
+    category: 'general',
+  },
+  thenewscrypto: {
+    name: 'TheNewsCrypto',
+    url: 'https://thenewscrypto.com/feed/',
+    category: 'general',
+  },
+  cryptonewsflash: {
+    name: 'Crypto-News Flash',
+    url: 'https://www.crypto-news-flash.com/feed/',
+    category: 'general',
+  },
+  finance_magnates_crypto: {
+    name: 'Finance Magnates Crypto',
+    url: 'https://www.financemagnates.com/cryptocurrency/feed/',
+    category: 'general',
+  },
+  insidebitcoins: {
+    name: 'InsideBitcoins',
+    url: 'https://insidebitcoins.com/feed',
+    category: 'general',
+  },
+  thecryptobasic: {
+    name: 'TheCryptoBasic',
+    url: 'https://thecryptobasic.com/feed/',
+    category: 'general',
+  },
+  bitcoincom: {
+    name: 'Bitcoin.com News',
+    url: 'https://news.bitcoin.com/feed/',
+    category: 'bitcoin',
+  },
+  coincentral_news: {
+    name: 'CoinCentral',
+    url: 'https://coincentral.com/news/feed/',
+    category: 'general',
+  },
+  cryptonewsz: {
+    name: 'CryptoNewsZ',
+    url: 'https://www.cryptonewsz.com/feed/',
+    category: 'general',
+  },
+  
+  // ═══════════════════════════════════════════════════════════════
+  // MAINSTREAM FINANCE & BUSINESS NEWS
+  // These major outlets heavily cover crypto, macro, and policy
+  // decisions that directly move crypto markets.
+  // ═══════════════════════════════════════════════════════════════
+  wsj_business: {
+    name: 'Wall Street Journal',
+    url: 'https://feeds.a.dj.com/rss/RSSMarketsMain.xml',
+    category: 'mainstream',
+  },
+  nyt_business: {
+    name: 'New York Times Business',
+    url: 'https://rss.nytimes.com/services/xml/rss/nyt/Business.xml',
+    category: 'mainstream',
+  },
+  washingtonpost_biz: {
+    name: 'Washington Post Business',
+    url: 'https://feeds.washingtonpost.com/rss/business',
+    category: 'mainstream',
+  },
+  economist: {
+    name: 'The Economist',
+    url: 'https://www.economist.com/sections/economics/rss.xml',
+    category: 'mainstream',
+  },
+  marketwatch: {
+    name: 'MarketWatch',
+    url: 'https://feeds.marketwatch.com/marketwatch/topstories/',
+    category: 'mainstream',
+  },
+  investopedia: {
+    name: 'Investopedia',
+    url: 'https://www.investopedia.com/feedbuilder/feed/getfeed/?feedName=rss_headline',
+    category: 'mainstream',
+  },
+  seekingalpha: {
+    name: 'Seeking Alpha',
+    url: 'https://seekingalpha.com/market_currents.xml',
+    category: 'mainstream',
+  },
+  dailyfx: {
+    name: 'DailyFX',
+    url: 'https://rss.dailyfx.com/feeds/all',
+    category: 'trading',
+  },
+  nikkei_asia: {
+    name: 'Nikkei Asia',
+    url: 'https://asia.nikkei.com/rss/feed/nar',
+    category: 'mainstream',
+  },
+  economic_times_india: {
+    name: 'Economic Times India Markets',
+    url: 'https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms',
+    category: 'mainstream',
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // MACRO & GEOPOLITICAL (moves crypto markets)
+  // Central bank decisions, regulation, sanctions, and geopolitical
+  // events are top market movers for crypto. These wire services and
+  // policy sources provide the earliest signals.
+  // ═══════════════════════════════════════════════════════════════
+  bbc_world: {
+    name: 'BBC World',
+    url: 'https://feeds.bbci.co.uk/news/world/rss.xml',
+    category: 'geopolitical',
+  },
+  reuters_world: {
+    name: 'Reuters',
+    url: 'https://www.reuters.com/rssFeed/worldNews/',
+    category: 'geopolitical',
+  },
+  ap_news: {
+    name: 'AP News',
+    url: 'https://rsshub.app/apnews/topics/apf-business',
+    category: 'geopolitical',
+  },
+  federal_reserve: {
+    name: 'Federal Reserve',
+    url: 'https://www.federalreserve.gov/feeds/press_all.xml',
+    category: 'geopolitical',
+  },
+  sec_press: {
+    name: 'SEC Press Releases',
+    url: 'https://www.sec.gov/news/pressreleases.rss',
+    category: 'geopolitical',
+  },
+  dw_news: {
+    name: 'DW News',
+    url: 'https://rss.dw.com/xml/rss-en-all',
+    category: 'geopolitical',
+  },
+  cbc_news: {
+    name: 'CBC News',
+    url: 'https://www.cbc.ca/cmlink/1.1244475',
+    category: 'geopolitical',
+  },
+  al_jazeera: {
+    name: 'Al Jazeera',
+    url: 'https://www.aljazeera.com/xml/rss/all.xml',
+    category: 'geopolitical',
   },
 } as const;
 
@@ -1782,6 +1940,9 @@ export async function getNewsByCategory(
     stablecoin: ['stablecoin', 'usdt', 'usdc', 'dai', 'tether', 'circle', 'peg', 'depeg'],
     exchange: ['exchange', 'binance', 'coinbase', 'kraken', 'okx', 'bybit', 'trading', 'listing', 'delist'],
     layer2: ['layer 2', 'l2', 'rollup', 'arbitrum', 'optimism', 'base', 'zksync', 'polygon', 'scaling'],
+    geopolitical: ['geopolitical', 'sanctions', 'central bank', 'federal reserve', 'fed rate', 'interest rate', 'sec', 'cftc', 'policy', 'war', 'conflict', 'tariff', 'g7', 'g20', 'treasury', 'congress', 'eu regulation', 'mica'],
+    security: ['hack', 'exploit', 'vulnerability', 'audit', 'rug pull', 'scam', 'phishing', 'flash loan', 'smart contract bug', 'certik', 'immunefi', 'bounty'],
+    developer: ['developer', 'sdk', 'api', 'framework', 'tooling', 'solidity', 'rust', 'smart contract', 'deploy', 'hardhat', 'foundry', 'alchemy'],
   };
   
   const keywords = categoryKeywords[category.toLowerCase()] || [category.toLowerCase()];
@@ -1875,6 +2036,12 @@ export function getCategories(): {
     gaming: { name: 'Gaming', description: 'Blockchain gaming and metaverse' },
     altl1: { name: 'Alt L1s', description: 'Alternative layer-1 blockchains' },
     stablecoin: { name: 'Stablecoins', description: 'Stablecoin and CBDC news' },
+    geopolitical: { name: 'Geopolitical', description: 'Macro-geopolitical events, central bank policy, and regulation that move crypto markets' },
+    security: { name: 'Security', description: 'Smart contract audits, exploits, and blockchain security' },
+    developer: { name: 'Developer', description: 'Web3 developer tools, infrastructure, and technical updates' },
+    layer2: { name: 'Layer 2', description: 'Layer 2 scaling solutions and rollup ecosystems' },
+    solana: { name: 'Solana', description: 'Solana ecosystem news and updates' },
+    trading: { name: 'Trading', description: 'Market analysis, trading signals, and technical analysis' },
   };
   
   // Count sources per category

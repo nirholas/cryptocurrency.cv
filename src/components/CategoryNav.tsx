@@ -21,6 +21,7 @@ const categories = [
   { slug: 'regulation', label: 'Regulation', icon: '⚖️', color: 'bg-red-100 dark:bg-red-900/30' },
   { slug: 'markets', label: 'Markets', icon: '📈', color: 'bg-blue-100 dark:bg-blue-900/30' },
   { slug: 'analysis', label: 'Analysis', icon: '📊', color: 'bg-cyan-100 dark:bg-cyan-900/30' },
+  { slug: 'geopolitical', label: 'Geopolitical', icon: '🌍', color: 'bg-amber-100 dark:bg-amber-900/30' },
 ];
 
 export default function CategoryNav({ activeCategory = '' }: CategoryNavProps) {

@@ -85,6 +85,15 @@ export const categories: Category[] = [
     color: 'text-slate-600',
     bgColor: 'bg-slate-100',
   },
+  {
+    slug: 'geopolitical',
+    name: 'Geopolitical',
+    icon: '🌍',
+    description: 'Central bank decisions, regulations, sanctions, and geopolitical events that move crypto markets',
+    keywords: ['sanctions', 'central bank', 'federal reserve', 'fed rate', 'interest rate', 'tariff', 'war', 'conflict', 'g7', 'g20', 'treasury', 'geopolitical', 'nato', 'un'],
+    color: 'text-amber-600',
+    bgColor: 'bg-amber-100',
+  },
 ];
 
 export function getCategoryBySlug(slug: string): Category | undefined {

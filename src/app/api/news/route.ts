@@ -15,7 +15,8 @@ const VALID_CATEGORIES = [
   'general', 'bitcoin', 'defi', 'nft', 'research', 'institutional', 
   'etf', 'derivatives', 'onchain', 'fintech', 'macro', 'quant',
   'journalism', 'ethereum', 'asia', 'tradfi', 'mainstream', 'mining',
-  'gaming', 'altl1', 'stablecoin'
+  'gaming', 'altl1', 'stablecoin', 'geopolitical', 'security', 'developer',
+  'layer2', 'solana', 'trading',
 ];
 
 export async function GET(request: NextRequest) {
