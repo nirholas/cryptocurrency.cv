@@ -49,6 +49,7 @@ interface Article {
   title: string;
   link: string;
   description?: string;
+  imageUrl?: string;
   pubDate: string;
   source: string;
   timeAgo: string;
@@ -190,6 +191,19 @@ export default function NewsCard({ article, variant = 'default', showDescription
             )}
           </div>
 
+          {/* Horizontal thumbnail */}
+          {article.imageUrl && (
+            <div className="relative w-24 h-24 rounded-lg overflow-hidden bg-gray-100 dark:bg-slate-700 flex-shrink-0 self-center">
+              <img
+                src={article.imageUrl}
+                alt=""
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                onError={(e) => { (e.target as HTMLImageElement).parentElement!.style.display = 'none'; }}
+              />
+            </div>
+          )}
+
           <svg 
             className="w-5 h-5 text-gray-300 dark:text-slate-600 group-hover:text-brand-500 dark:group-hover:text-amber-400 group-hover:translate-x-1 transition-all flex-shrink-0 self-center"
             fill="none" 
@@ -252,6 +266,18 @@ export default function NewsCard({ article, variant = 'default', showDescription
         href={`/article/${articleSlug}`}
         className="block h-full bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden hover:shadow-xl dark:hover:shadow-2xl hover:border-brand-200 dark:hover:border-amber-500/50 hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
       >
+        {/* Article thumbnail */}
+        {article.imageUrl && (
+          <div className="relative aspect-[16/9] overflow-hidden bg-gray-100 dark:bg-slate-700">
+            <img
+              src={article.imageUrl}
+              alt=""
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+              onError={(e) => { (e.target as HTMLImageElement).parentElement!.style.display = 'none'; }}
+            />
+          </div>
+        )}
         <div className="p-5 h-full flex flex-col">
           {/* Header */}
           <div className="flex items-center justify-between mb-3">
