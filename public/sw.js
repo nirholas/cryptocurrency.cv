@@ -3,7 +3,7 @@
 // Service Worker for Free Crypto News PWA
 // Version: 1.0.0
 
-const CACHE_VERSION = 'v1';
+const CACHE_VERSION = 'v2';
 const STATIC_CACHE = `static-${CACHE_VERSION}`;
 const DYNAMIC_CACHE = `dynamic-${CACHE_VERSION}`;
 const API_CACHE = `api-${CACHE_VERSION}`;
@@ -41,9 +41,9 @@ const CACHE_DURATIONS = {
 
 // Maximum items per cache
 const MAX_CACHE_ITEMS = {
-  api: 50,
-  dynamic: 100,
-  images: 200,
+  api: 200,
+  dynamic: 500,
+  images: 300,
 };
 
 // Service Worker global scope
@@ -112,6 +112,11 @@ self.addEventListener('fetch', (event) => {
   
   // Only handle same-origin requests and GET requests
   if (url.origin !== location.origin || request.method !== 'GET') {
+    return;
+  }
+  
+  // Skip caching for high-frequency low-value API calls
+  if (url.pathname.startsWith('/api/clickbait') || url.pathname.startsWith('/api/analytics')) {
     return;
   }
   
@@ -382,7 +387,9 @@ async function trimCache(cacheName, maxItems) {
     // Remove oldest entries first
     const toDelete = keys.slice(0, keys.length - maxItems);
     await Promise.all(toDelete.map((key) => cache.delete(key)));
-    console.log(`[SW] Trimmed ${toDelete.length} items from ${cacheName}`);
+    if (toDelete.length > 5) {
+      console.log(`[SW] Trimmed ${toDelete.length} items from ${cacheName}`);
+    }
   }
 }
 
