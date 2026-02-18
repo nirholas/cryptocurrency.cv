@@ -6,7 +6,6 @@
 import { getMarketOverview, formatNumber, formatPercent, getFearGreedColor, getFearGreedBgColor } from '@/lib/market-data';
 import Link from 'next/link';
 import Image from 'next/image';
-
 export default async function MarketStats() {
   const market = await getMarketOverview();
   const marketCapChange = market.global.market_cap_change_percentage_24h_usd;
