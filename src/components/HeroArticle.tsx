@@ -13,6 +13,7 @@ interface Article {
   title: string;
   link: string;
   description?: string;
+  imageUrl?: string;
   pubDate: string;
   source: string;
   timeAgo: string;
@@ -152,7 +153,19 @@ export default function HeroArticle({ article, sidebarArticles = [] }: HeroArtic
         href={`/article/${articleSlug}`}
         className="group block"
       >
-        <div className="relative h-full bg-gray-950 rounded-xl overflow-hidden flex flex-col justify-end min-h-[320px] lg:min-h-[420px]">
+        <div className={`relative h-full rounded-xl overflow-hidden flex flex-col justify-end min-h-[320px] lg:min-h-[420px] ${
+          article.imageUrl ? 'bg-gray-950' : 'bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900'
+        }`}>
+          {/* Background image */}
+          {article.imageUrl && (
+            <img 
+              src={article.imageUrl} 
+              alt=""
+              className="absolute inset-0 w-full h-full object-cover"
+              loading="eager"
+              onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+            />
+          )}
           {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/60 to-gray-950/20" />
 
