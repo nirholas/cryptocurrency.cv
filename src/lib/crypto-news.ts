@@ -1035,6 +1035,7 @@ export interface NewsArticle {
   title: string;
   link: string;
   description?: string;
+  imageUrl?: string;
   pubDate: string;
   source: string;
   sourceKey: string;
@@ -1079,6 +1080,38 @@ function decodeHTMLEntities(text: string): string {
 }
 
 /**
+ * Extract the best image URL from an RSS item.
+ * Checks: media:content, media:thumbnail, enclosure, img in description
+ */
+function extractImageUrl(itemXml: string, rawDescription: string): string | null {
+  // Priority 1: media:content (most reliable, used by major RSS feeds)
+  const mediaContent = itemXml.match(/<media:content[^>]+url=["']([^"']+)["']/i);
+  if (mediaContent?.[1]) return mediaContent[1];
+
+  // Priority 2: media:thumbnail
+  const mediaThumbnail = itemXml.match(/<media:thumbnail[^>]+url=["']([^"']+)["']/i);
+  if (mediaThumbnail?.[1]) return mediaThumbnail[1];
+
+  // Priority 3: enclosure with image type
+  const enclosure = itemXml.match(/<enclosure[^>]+url=["']([^"']+)["'][^>]*type=["']image[^"']*/i);
+  if (enclosure?.[1]) return enclosure[1];
+
+  // Priority 4: enclosure without type check (many feeds omit type)
+  const enclosureAny = itemXml.match(/<enclosure[^>]+url=["']([^"']+\.(?:jpg|jpeg|png|webp|gif))[^"']*["']/i);
+  if (enclosureAny?.[1]) return enclosureAny[1];
+
+  // Priority 5: img tag inside description CDATA
+  if (rawDescription) {
+    const imgMatch = rawDescription.match(/<img[^>]+src=["']([^"']+)["']/i);
+    if (imgMatch?.[1] && !imgMatch[1].includes('feeds.feedburner') && !imgMatch[1].includes('pixel') && !imgMatch[1].includes('tracker')) {
+      return imgMatch[1];
+    }
+  }
+
+  return null;
+}
+
+/**
  * Parse RSS XML to extract articles
  */
 function parseRSSFeed(xml: string, sourceKey: string, sourceName: string, category: string): NewsArticle[] {
@@ -1099,9 +1132,13 @@ function parseRSSFeed(xml: string, sourceKey: string, sourceName: string, catego
     const descMatch = itemXml.match(descRegex);
     const pubDateMatch = itemXml.match(pubDateRegex);
     
+    // Extract image from multiple possible locations
+    const rawDesc = descMatch?.[1] || descMatch?.[2] || '';
+    const imageUrl = extractImageUrl(itemXml, rawDesc);
+    
     const title = decodeHTMLEntities((titleMatch?.[1] || titleMatch?.[2] || '').trim());
     const link = (linkMatch?.[1] || linkMatch?.[2] || '').trim();
-    const description = sanitizeDescription(descMatch?.[1] || descMatch?.[2] || '');
+    const description = sanitizeDescription(rawDesc);
     const pubDateStr = pubDateMatch?.[1] || '';
     
     if (title && link) {
@@ -1110,6 +1147,7 @@ function parseRSSFeed(xml: string, sourceKey: string, sourceName: string, catego
         title,
         link,
         description: description || undefined,
+        imageUrl: imageUrl || undefined,
         pubDate: pubDate.toISOString(),
         source: sourceName,
         sourceKey,
@@ -1177,6 +1215,7 @@ const API_SOURCES: Record<string, ApiSource> = {
         title: string;
         url: string;
         body: string;
+        imageurl: string;
         published_on: number;
         source: string;
         categories: string;
@@ -1186,6 +1225,7 @@ const API_SOURCES: Record<string, ApiSource> = {
         title: decodeHTMLEntities(item.title),
         link: item.url,
         description: item.body?.slice(0, 200),
+        imageUrl: item.imageurl || undefined,
         pubDate: new Date(item.published_on * 1000).toISOString(),
         source: item.source || 'CryptoCompare',
         sourceKey: 'cryptocompare',
