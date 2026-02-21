@@ -1577,19 +1577,19 @@ async function getTrendingFallback(): Promise<TrendingCoin[]> {
     );
     if (!response.ok) return [];
     const { data } = await response.json();
-    return (data as Array<{ id: string; name: string; symbol: string; rank: string }>).map(
-      (asset, i) => ({
-        id: asset.id,
-        name: asset.name,
-        symbol: asset.symbol,
-        market_cap_rank: parseInt(asset.rank, 10) || i + 1,
-        thumb: `https://assets.coincap.io/assets/icons/${asset.symbol.toLowerCase()}@2x.png`,
-        small: `https://assets.coincap.io/assets/icons/${asset.symbol.toLowerCase()}@2x.png`,
-        large: `https://assets.coincap.io/assets/icons/${asset.symbol.toLowerCase()}@2x.png`,
-        price_btc: 0,
-        score: i,
-      }),
-    );
+    return (
+      data as Array<{ id: string; name: string; symbol: string; rank: string }>
+    ).map((asset, i) => ({
+      id: asset.id,
+      name: asset.name,
+      symbol: asset.symbol,
+      market_cap_rank: parseInt(asset.rank, 10) || i + 1,
+      thumb: `https://assets.coincap.io/assets/icons/${asset.symbol.toLowerCase()}@2x.png`,
+      small: `https://assets.coincap.io/assets/icons/${asset.symbol.toLowerCase()}@2x.png`,
+      large: `https://assets.coincap.io/assets/icons/${asset.symbol.toLowerCase()}@2x.png`,
+      price_btc: 0,
+      score: i,
+    }));
   } catch {
     return [];
   }
@@ -1631,7 +1631,11 @@ async function getHistoricalPricesFallback(
   coinId: string,
   days: number | "max",
 ): Promise<HistoricalData> {
-  const empty: HistoricalData = { prices: [], market_caps: [], total_volumes: [] };
+  const empty: HistoricalData = {
+    prices: [],
+    market_caps: [],
+    total_volumes: [],
+  };
   try {
     const numDays = days === "max" ? 365 : (days as number);
     const interval = numDays <= 1 ? "h1" : numDays <= 7 ? "h6" : "d1";
@@ -1647,7 +1651,11 @@ async function getHistoricalPricesFallback(
     const prices: [number, number][] = (
       data as Array<{ priceUsd: string; time: number }>
     ).map(({ priceUsd, time }) => [time, parseFloat(priceUsd) || 0]);
-    const result: HistoricalData = { prices, market_caps: [], total_volumes: [] };
+    const result: HistoricalData = {
+      prices,
+      market_caps: [],
+      total_volumes: [],
+    };
     setCache(
       `historical-${coinId}-${days === "max" ? "max" : days}-auto`,
       result,
@@ -1722,8 +1730,15 @@ async function getOHLCBinanceFallback(
 }
 
 /** CoinCap /assets search fallback for searchCoins */
-async function searchCoinsCoinCapFallback(query: string): Promise<SearchResult> {
-  const empty: SearchResult = { coins: [], exchanges: [], categories: [], nfts: [] };
+async function searchCoinsCoinCapFallback(
+  query: string,
+): Promise<SearchResult> {
+  const empty: SearchResult = {
+    coins: [],
+    exchanges: [],
+    categories: [],
+    nfts: [],
+  };
   try {
     const response = await fetchWithTimeout(
       `${COINCAP_BASE}/assets?search=${encodeURIComponent(query)}&limit=10`,
