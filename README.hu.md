@@ -158,3 +158,4 @@ MIT License - lásd a [LICENSE](LICENSE) fájlt a részletekért.
 <p align="center">
   ❤️ -vel készült a kripto közösségnek
 </p>
+
