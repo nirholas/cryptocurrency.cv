@@ -3,13 +3,13 @@
  * Adapted from https://github.com/nirholas/crypto-market-data
  *
  * Integrates multiple free APIs for live market data:
- * - CoinGecko (primary)
- * - CoinPaprika (fallback for coin details, no key needed)
- * - CoinCap (second fallback for coin details, no key needed, any ID)
- * - CryptoCompare (fallback for prices)
- * - Binance (fallback for real-time prices)
- * - DeFiLlama (DeFi TVL data)
- * - Alternative.me (Fear & Greed)
+ * - CoinGecko     (primary — free without key, key optional for higher limits)
+ * - CoinCap       (fallback for prices, trending, history, search — no key, any coin)
+ * - CoinPaprika   (fallback for coin details + global market data — no key)
+ * - Binance       (fallback for OHLC/klines + real-time prices — no key)
+ * - CryptoCompare (fallback for real-time prices — no key on free tier)
+ * - DeFiLlama     (DeFi TVL data — no key)
+ * - Alternative.me (Fear & Greed — no key)
  *
  * @module market-data
  * @description Comprehensive cryptocurrency market data service with caching,
@@ -898,12 +898,7 @@ export async function getSimplePrices(): Promise<SimplePrices> {
     return data;
   } catch (error) {
     console.error("Error fetching simple prices:", error);
-    // Return fallback data
-    return {
-      bitcoin: { usd: 0, usd_24h_change: 0 },
-      ethereum: { usd: 0, usd_24h_change: 0 },
-      solana: { usd: 0, usd_24h_change: 0 },
-    };
+    return await getSimplePricesFallback();
   }
 }
 
@@ -1226,7 +1221,7 @@ export async function getTrending(): Promise<TrendingCoin[]> {
     return trending;
   } catch (error) {
     console.error("Error fetching trending:", error);
-    return [];
+    return await getTrendingFallback();
   }
 }
 
@@ -1252,7 +1247,7 @@ export async function getGlobalMarketData(): Promise<GlobalMarketData | null> {
     return data.data;
   } catch (error) {
     console.error("Error fetching global market data:", error);
-    return null;
+    return await getGlobalMarketDataFallback();
   }
 }
 
@@ -1459,7 +1454,9 @@ async function getCoinDetailsCoinCap(
     );
 
     if (!response.ok) {
-      console.error(`CoinCap fallback failed for ${coinId}: ${response.status}`);
+      console.error(
+        `CoinCap fallback failed for ${coinId}: ${response.status}`,
+      );
       return null;
     }
 
@@ -1517,9 +1514,7 @@ async function getCoinDetailsCoinCap(
         circulating_supply: supply,
         total_supply: supply || null,
         max_supply: maxSupply,
-        fully_diluted_valuation: maxSupply
-          ? { usd: price * maxSupply }
-          : null,
+        fully_diluted_valuation: maxSupply ? { usd: price * maxSupply } : null,
       },
       last_updated: new Date().toISOString(),
     };
@@ -1529,6 +1524,227 @@ async function getCoinDetailsCoinCap(
   } catch (error) {
     console.error("CoinCap fallback error:", error);
     return null;
+  }
+}
+
+// =============================================================================
+// FREE API FALLBACKS — CoinCap, CoinPaprika global, Binance klines
+// All keyless, no registration required
+// =============================================================================
+
+/** CoinCap fallback for getSimplePrices — returns real prices instead of zeros */
+async function getSimplePricesFallback(): Promise<SimplePrices> {
+  const empty: SimplePrices = {
+    bitcoin: { usd: 0, usd_24h_change: 0 },
+    ethereum: { usd: 0, usd_24h_change: 0 },
+    solana: { usd: 0, usd_24h_change: 0 },
+  };
+  try {
+    const response = await fetchWithTimeout(
+      `${COINCAP_BASE}/assets?ids=bitcoin,ethereum,solana`,
+      10000,
+      true,
+    );
+    if (!response.ok) return empty;
+    const { data } = await response.json();
+    const result: SimplePrices = { ...empty };
+    for (const asset of data as Array<{
+      id: string;
+      priceUsd: string;
+      changePercent24Hr: string;
+    }>) {
+      if (asset.id in result) {
+        result[asset.id] = {
+          usd: parseFloat(asset.priceUsd) || 0,
+          usd_24h_change: parseFloat(asset.changePercent24Hr) || 0,
+        };
+      }
+    }
+    setCache("simple-prices", result, CACHE_TTL.prices);
+    return result;
+  } catch {
+    return empty;
+  }
+}
+
+/** CoinCap fallback for getTrending — top-10 by market cap as trending proxy */
+async function getTrendingFallback(): Promise<TrendingCoin[]> {
+  try {
+    const response = await fetchWithTimeout(
+      `${COINCAP_BASE}/assets?limit=10`,
+      10000,
+      true,
+    );
+    if (!response.ok) return [];
+    const { data } = await response.json();
+    return (data as Array<{ id: string; name: string; symbol: string; rank: string }>).map(
+      (asset, i) => ({
+        id: asset.id,
+        name: asset.name,
+        symbol: asset.symbol,
+        market_cap_rank: parseInt(asset.rank, 10) || i + 1,
+        thumb: `https://assets.coincap.io/assets/icons/${asset.symbol.toLowerCase()}@2x.png`,
+        small: `https://assets.coincap.io/assets/icons/${asset.symbol.toLowerCase()}@2x.png`,
+        large: `https://assets.coincap.io/assets/icons/${asset.symbol.toLowerCase()}@2x.png`,
+        price_btc: 0,
+        score: i,
+      }),
+    );
+  } catch {
+    return [];
+  }
+}
+
+/** CoinPaprika /global fallback for getGlobalMarketData */
+async function getGlobalMarketDataFallback(): Promise<GlobalMarketData | null> {
+  try {
+    const response = await fetchWithTimeout(
+      `${COINPAPRIKA_BASE}/global`,
+      10000,
+      true,
+    );
+    if (!response.ok) return null;
+    const d = (await response.json()) as {
+      market_cap_usd?: number;
+      volume_24h_usd?: number;
+      bitcoin_dominance_percentage?: number;
+      cryptocurrencies_number?: number;
+    };
+    const result: GlobalMarketData = {
+      active_cryptocurrencies: d.cryptocurrencies_number || 0,
+      markets: 0,
+      total_market_cap: { usd: d.market_cap_usd || 0 },
+      total_volume: { usd: d.volume_24h_usd || 0 },
+      market_cap_percentage: { btc: d.bitcoin_dominance_percentage || 0 },
+      market_cap_change_percentage_24h_usd: 0,
+      updated_at: Math.floor(Date.now() / 1000),
+    };
+    setCache("global", result, CACHE_TTL.global);
+    return result;
+  } catch {
+    return null;
+  }
+}
+
+/** CoinCap /history fallback for getHistoricalPrices */
+async function getHistoricalPricesFallback(
+  coinId: string,
+  days: number | "max",
+): Promise<HistoricalData> {
+  const empty: HistoricalData = { prices: [], market_caps: [], total_volumes: [] };
+  try {
+    const numDays = days === "max" ? 365 : (days as number);
+    const interval = numDays <= 1 ? "h1" : numDays <= 7 ? "h6" : "d1";
+    const end = Date.now();
+    const start = end - numDays * 24 * 60 * 60 * 1000;
+    const response = await fetchWithTimeout(
+      `${COINCAP_BASE}/assets/${coinId}/history?interval=${interval}&start=${start}&end=${end}`,
+      10000,
+      true,
+    );
+    if (!response.ok) return empty;
+    const { data } = await response.json();
+    const prices: [number, number][] = (
+      data as Array<{ priceUsd: string; time: number }>
+    ).map(({ priceUsd, time }) => [time, parseFloat(priceUsd) || 0]);
+    const result: HistoricalData = { prices, market_caps: [], total_volumes: [] };
+    setCache(
+      `historical-${coinId}-${days === "max" ? "max" : days}-auto`,
+      result,
+      CACHE_TTL.historical_30d,
+    );
+    return result;
+  } catch {
+    return empty;
+  }
+}
+
+/** Binance klines fallback for getOHLC */
+async function getOHLCBinanceFallback(
+  coinId: string,
+  days: number,
+): Promise<OHLCData[]> {
+  const idToSymbol: Record<string, string> = {
+    bitcoin: "BTCUSDT",
+    ethereum: "ETHUSDT",
+    solana: "SOLUSDT",
+    ripple: "XRPUSDT",
+    cardano: "ADAUSDT",
+    dogecoin: "DOGEUSDT",
+    polkadot: "DOTUSDT",
+    "avalanche-2": "AVAXUSDT",
+    chainlink: "LINKUSDT",
+    polygon: "MATICUSDT",
+    "matic-network": "MATICUSDT",
+    litecoin: "LTCUSDT",
+    uniswap: "UNIUSDT",
+    binancecoin: "BNBUSDT",
+    tron: "TRXUSDT",
+    "shiba-inu": "SHIBUSDT",
+    apecoin: "APEUSDT",
+    near: "NEARUSDT",
+    cosmos: "ATOMUSDT",
+    algorand: "ALGOUSDT",
+    stellar: "XLMUSDT",
+    "ethereum-classic": "ETCUSDT",
+    monero: "XMRUSDT",
+    filecoin: "FILUSDT",
+    vechain: "VETUSDT",
+    aave: "AAVEUSDT",
+    maker: "MKRUSDT",
+    "hedera-hashgraph": "HBARUSDT",
+    "internet-computer": "ICPUSDT",
+    "curve-dao-token": "CRVUSDT",
+  };
+  const symbol = idToSymbol[coinId];
+  if (!symbol) return [];
+  try {
+    const interval = days <= 1 ? "1h" : days <= 7 ? "4h" : "1d";
+    const limit = Math.min(days <= 1 ? 24 : days <= 7 ? 42 : days, 500);
+    const response = await fetchWithTimeout(
+      `${BINANCE_BASE}/klines?symbol=${symbol}&interval=${interval}&limit=${limit}`,
+      10000,
+      true,
+    );
+    if (!response.ok) return [];
+    const raw: [number, string, string, string, string][] =
+      await response.json();
+    return raw.map(([time, open, high, low, close]) => ({
+      timestamp: time,
+      open: parseFloat(open),
+      high: parseFloat(high),
+      low: parseFloat(low),
+      close: parseFloat(close),
+    }));
+  } catch {
+    return [];
+  }
+}
+
+/** CoinCap /assets search fallback for searchCoins */
+async function searchCoinsCoinCapFallback(query: string): Promise<SearchResult> {
+  const empty: SearchResult = { coins: [], exchanges: [], categories: [], nfts: [] };
+  try {
+    const response = await fetchWithTimeout(
+      `${COINCAP_BASE}/assets?search=${encodeURIComponent(query)}&limit=10`,
+      10000,
+      true,
+    );
+    if (!response.ok) return empty;
+    const { data } = await response.json();
+    const coins = (
+      data as Array<{ id: string; name: string; symbol: string; rank: string }>
+    ).map((asset) => ({
+      id: asset.id,
+      name: asset.name,
+      symbol: asset.symbol,
+      market_cap_rank: parseInt(asset.rank, 10) || 9999,
+      thumb: `https://assets.coincap.io/assets/icons/${asset.symbol.toLowerCase()}@2x.png`,
+      large: `https://assets.coincap.io/assets/icons/${asset.symbol.toLowerCase()}@2x.png`,
+    }));
+    return { ...empty, coins };
+  } catch {
+    return empty;
   }
 }
 
@@ -1797,7 +2013,7 @@ export async function getHistoricalPrices(
     return data;
   } catch (error) {
     console.error("Error fetching historical prices:", error);
-    return { prices: [], market_caps: [], total_volumes: [] };
+    return await getHistoricalPricesFallback(coinId, days);
   }
 }
 
@@ -1849,7 +2065,7 @@ export async function getOHLC(
     return ohlcData;
   } catch (error) {
     console.error("Error fetching OHLC data:", error);
-    return [];
+    return await getOHLCBinanceFallback(coinId, normalizedDays);
   }
 }
 
@@ -2100,7 +2316,7 @@ export async function searchCoins(query: string): Promise<SearchResult> {
     return data;
   } catch (error) {
     console.error("Error searching coins:", error);
-    return { coins: [], exchanges: [], categories: [], nfts: [] };
+    return await searchCoinsCoinCapFallback(query);
   }
 }
 
