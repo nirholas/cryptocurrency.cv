@@ -83,3 +83,4 @@ MIT License - see LICENSE file.
 - [Free Crypto News](https://cryptocurrency.cv)
 - [API Documentation](https://cryptocurrency.cv/developers)
 - [GitHub Repository](https://github.com/nirholas/free-crypto-news)
+
