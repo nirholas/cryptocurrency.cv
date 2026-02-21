@@ -1,14 +1,14 @@
 /**
  * Market Data Service for Free Crypto News
  * Adapted from https://github.com/nirholas/crypto-market-data
- * 
+ *
  * Integrates multiple free APIs for live market data:
  * - CoinGecko (primary)
  * - CryptoCompare (fallback for prices)
  * - Binance (fallback for real-time prices)
  * - DeFiLlama (DeFi TVL data)
  * - Alternative.me (Fear & Greed)
- * 
+ *
  * @module market-data
  * @description Comprehensive cryptocurrency market data service with caching,
  * rate limiting, fallback sources, and Edge Runtime compatibility.
@@ -21,14 +21,16 @@ import {
   CRYPTOCOMPARE_BASE,
   BINANCE_BASE,
   COINPAPRIKA_BASE,
-} from './constants';
+} from "./constants";
 
 /**
  * Whether we are in a CI/build environment.
  * When true, all external API calls return empty/fallback data immediately
  * to prevent rate limiting during static page generation.
  */
-const IS_BUILD = !!(process.env.VERCEL_ENV === 'production' && process.env.CI) || !!process.env.NEXT_PHASE?.includes('build');
+const IS_BUILD =
+  !!(process.env.VERCEL_ENV === "production" && process.env.CI) ||
+  !!process.env.NEXT_PHASE?.includes("build");
 
 // =============================================================================
 // CACHE TTL CONFIGURATION (in seconds)
@@ -249,7 +251,7 @@ export interface Ticker {
   /** 24h trading volume in base currency */
   volume: number;
   /** Trust score indicator */
-  trust_score: 'green' | 'yellow' | 'red' | null;
+  trust_score: "green" | "yellow" | "red" | null;
   /** Bid-ask spread percentage */
   bid_ask_spread_percentage: number;
   /** Direct trade URL */
@@ -609,21 +611,21 @@ const cache = new Map<string, CacheEntry<unknown>>();
  */
 function getCached<T>(key: string): { data: T; isStale: boolean } | null {
   const cached = cache.get(key) as CacheEntry<T> | undefined;
-  
+
   if (!cached) {
     return null;
   }
-  
+
   const now = Date.now();
   const isExpired = now - cached.timestamp > cached.ttl * 1000;
   const isStale = now - cached.timestamp > cached.staleTimestamp * 1000;
-  
+
   // If completely expired (past stale window), return null
   if (isExpired && now - cached.timestamp > cached.ttl * 2 * 1000) {
     cache.delete(key);
     return null;
   }
-  
+
   return { data: cached.data, isStale };
 }
 
@@ -633,7 +635,11 @@ function getCached<T>(key: string): { data: T; isStale: boolean } | null {
  * @param data - Data to cache
  * @param ttlSeconds - Time to live in seconds
  */
-function setCache<T>(key: string, data: T, ttlSeconds: number = CACHE_TTL.prices): void {
+function setCache<T>(
+  key: string,
+  data: T,
+  ttlSeconds: number = CACHE_TTL.prices,
+): void {
   cache.set(key, {
     data,
     timestamp: Date.now(),
@@ -676,18 +682,18 @@ const MAX_REQUESTS_PER_WINDOW = 50; // Allow more requests since we have fallbac
  */
 function canMakeRequest(): boolean {
   const now = Date.now();
-  
+
   // Check if we're in a retry backoff period
   if (rateLimitState.retryAfter > now) {
     return false;
   }
-  
+
   // Reset window if expired
   if (now - rateLimitState.windowStart > RATE_LIMIT_WINDOW) {
     rateLimitState.requestCount = 0;
     rateLimitState.windowStart = now;
   }
-  
+
   return rateLimitState.requestCount < MAX_REQUESTS_PER_WINDOW;
 }
 
@@ -702,7 +708,9 @@ function recordRequest(): void {
  * Handle rate limit error with exponential backoff
  */
 function handleRateLimitError(retryAfterHeader?: string): void {
-  const retryAfterSeconds = retryAfterHeader ? parseInt(retryAfterHeader, 10) : 60;
+  const retryAfterSeconds = retryAfterHeader
+    ? parseInt(retryAfterHeader, 10)
+    : 60;
   const backoffMs = Math.min(retryAfterSeconds * 1000, 120000); // Max 2 minutes
   rateLimitState.retryAfter = Date.now() + backoffMs;
   console.warn(`Rate limited. Backing off for ${backoffMs / 1000} seconds`);
@@ -719,10 +727,10 @@ export class MarketDataError extends Error {
   constructor(
     message: string,
     public statusCode?: number,
-    public isRateLimited: boolean = false
+    public isRateLimited: boolean = false,
   ) {
     super(message);
-    this.name = 'MarketDataError';
+    this.name = "MarketDataError";
   }
 }
 
@@ -733,37 +741,51 @@ export class MarketDataError extends Error {
  * @param skipRateLimit - Skip internal rate limit check (for fallback APIs)
  * @returns Response object
  */
-async function fetchWithTimeout(url: string, timeout = 10000, skipRateLimit = false): Promise<Response> {
+async function fetchWithTimeout(
+  url: string,
+  timeout = 10000,
+  skipRateLimit = false,
+): Promise<Response> {
   // Check rate limit before making request (only for primary CoinGecko API)
-  if (!skipRateLimit && url.includes('coingecko.com') && !canMakeRequest()) {
-    throw new MarketDataError('Rate limit exceeded. Please try again later.', 429, true);
+  if (!skipRateLimit && url.includes("coingecko.com") && !canMakeRequest()) {
+    throw new MarketDataError(
+      "Rate limit exceeded. Please try again later.",
+      429,
+      true,
+    );
   }
-  
+
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), timeout);
 
   try {
-    if (!skipRateLimit && url.includes('coingecko.com')) {
+    if (!skipRateLimit && url.includes("coingecko.com")) {
       recordRequest();
     }
-    
+
+    // Build headers — include CoinGecko demo API key when available
+    const headers: Record<string, string> = {
+      Accept: "application/json",
+      "User-Agent": "FreeCryptoNews/2.0",
+    };
+    if (url.includes("coingecko.com") && process.env.COINGECKO_API_KEY) {
+      headers["x-cg-demo-api-key"] = process.env.COINGECKO_API_KEY;
+    }
+
     const response = await fetch(url, {
       signal: controller.signal,
-      headers: {
-        'Accept': 'application/json',
-        'User-Agent': 'FreeCryptoNews/2.0',
-      },
+      headers,
       next: { revalidate: 120 }, // Next.js cache for 2 minutes
     });
-    
+
     // Handle rate limiting from API
     if (response.status === 429) {
-      if (url.includes('coingecko.com')) {
-        handleRateLimitError(response.headers.get('retry-after') || undefined);
+      if (url.includes("coingecko.com")) {
+        handleRateLimitError(response.headers.get("retry-after") || undefined);
       }
-      throw new MarketDataError('Rate limited by API', 429, true);
+      throw new MarketDataError("Rate limited by API", 429, true);
     }
-    
+
     return response;
   } finally {
     clearTimeout(timeoutId);
@@ -781,11 +803,11 @@ async function fetchWithCache<T>(
   url: string,
   cacheKey: string,
   ttl: number,
-  fallbackValue: T
+  fallbackValue: T,
 ): Promise<T> {
   // Check cache first
   const cached = getCached<T>(cacheKey);
-  
+
   if (cached) {
     // If data is stale, trigger background refresh
     if (cached.isStale) {
@@ -796,7 +818,7 @@ async function fetchWithCache<T>(
     }
     return cached.data;
   }
-  
+
   // No cache, fetch fresh data
   return fetchAndCache<T>(url, cacheKey, ttl, fallbackValue);
 }
@@ -808,19 +830,19 @@ async function fetchAndCache<T>(
   url: string,
   cacheKey: string,
   ttl: number,
-  fallbackValue?: T
+  fallbackValue?: T,
 ): Promise<T> {
   try {
     const response = await fetchWithTimeout(url);
-    
+
     if (!response.ok) {
       throw new MarketDataError(
         `API request failed: ${response.statusText}`,
-        response.status
+        response.status,
       );
     }
-    
-    const data = await response.json() as T;
+
+    const data = (await response.json()) as T;
     setCache(cacheKey, data, ttl);
     return data;
   } catch (error) {
@@ -829,12 +851,12 @@ async function fetchAndCache<T>(
     if (cached) {
       return cached.data;
     }
-    
+
     // Return fallback value if provided
     if (fallbackValue !== undefined) {
       return fallbackValue;
     }
-    
+
     throw error;
   }
 }
@@ -849,26 +871,30 @@ async function fetchAndCache<T>(
  */
 export async function getSimplePrices(): Promise<SimplePrices> {
   if (IS_BUILD) {
-    return { bitcoin: { usd: 0, usd_24h_change: 0 }, ethereum: { usd: 0, usd_24h_change: 0 }, solana: { usd: 0, usd_24h_change: 0 } };
+    return {
+      bitcoin: { usd: 0, usd_24h_change: 0 },
+      ethereum: { usd: 0, usd_24h_change: 0 },
+      solana: { usd: 0, usd_24h_change: 0 },
+    };
   }
-  const cacheKey = 'simple-prices';
+  const cacheKey = "simple-prices";
   const cached = getCached<SimplePrices>(cacheKey);
   if (cached) return cached.data;
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=usd&include_24hr_change=true`
+      `${COINGECKO_BASE}/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=usd&include_24hr_change=true`,
     );
-    
+
     if (!response.ok) {
-      throw new Error('Failed to fetch prices');
+      throw new Error("Failed to fetch prices");
     }
-    
+
     const data = await response.json();
     setCache(cacheKey, data, CACHE_TTL.prices);
     return data;
   } catch (error) {
-    console.error('Error fetching simple prices:', error);
+    console.error("Error fetching simple prices:", error);
     // Return fallback data
     return {
       bitcoin: { usd: 0, usd_24h_change: 0 },
@@ -886,26 +912,37 @@ export async function getSimplePrices(): Promise<SimplePrices> {
  */
 export async function getPricesForCoins(
   coinIds: string[],
-  vsCurrency = 'usd'
-): Promise<Record<string, { price: number; change_24h: number; last_updated: string }>> {
-  const ids = coinIds.join(',');
+  vsCurrency = "usd",
+): Promise<
+  Record<string, { price: number; change_24h: number; last_updated: string }>
+> {
+  const ids = coinIds.join(",");
   const cacheKey = `prices-${ids}-${vsCurrency}`;
-  const cached = getCached<Record<string, { price: number; change_24h: number; last_updated: string }>>(cacheKey);
+  const cached =
+    getCached<
+      Record<
+        string,
+        { price: number; change_24h: number; last_updated: string }
+      >
+    >(cacheKey);
   if (cached) return cached.data;
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/simple/price?ids=${ids}&vs_currencies=${vsCurrency}&include_24hr_change=true&include_last_updated_at=true`
+      `${COINGECKO_BASE}/simple/price?ids=${ids}&vs_currencies=${vsCurrency}&include_24hr_change=true&include_last_updated_at=true`,
     );
 
     if (!response.ok) {
-      throw new Error('Failed to fetch prices');
+      throw new Error("Failed to fetch prices");
     }
 
     const data = await response.json();
 
     // Transform to consistent format
-    const result: Record<string, { price: number; change_24h: number; last_updated: string }> = {};
+    const result: Record<
+      string,
+      { price: number; change_24h: number; last_updated: string }
+    > = {};
     for (const coinId of coinIds) {
       if (data[coinId]) {
         result[coinId] = {
@@ -921,7 +958,7 @@ export async function getPricesForCoins(
     setCache(cacheKey, result, CACHE_TTL.prices);
     return result;
   } catch (error) {
-    console.error('Error fetching prices for coins:', error);
+    console.error("Error fetching prices for coins:", error);
     // Try Binance fallback for major coins
     return await getPricesFromBinanceFallback(coinIds);
   }
@@ -932,28 +969,33 @@ export async function getPricesForCoins(
  * Only works for coins with USDT pairs on Binance
  */
 async function getPricesFromBinanceFallback(
-  coinIds: string[]
-): Promise<Record<string, { price: number; change_24h: number; last_updated: string }>> {
+  coinIds: string[],
+): Promise<
+  Record<string, { price: number; change_24h: number; last_updated: string }>
+> {
   // Map CoinGecko IDs to Binance symbols
   const idToSymbol: Record<string, string> = {
-    bitcoin: 'BTCUSDT',
-    ethereum: 'ETHUSDT',
-    solana: 'SOLUSDT',
-    ripple: 'XRPUSDT',
-    cardano: 'ADAUSDT',
-    dogecoin: 'DOGEUSDT',
-    polkadot: 'DOTUSDT',
-    avalanche: 'AVAXUSDT',
-    chainlink: 'LINKUSDT',
-    polygon: 'MATICUSDT',
-    uniswap: 'UNIUSDT',
-    litecoin: 'LTCUSDT',
-    'binance-coin': 'BNBUSDT',
-    tron: 'TRXUSDT',
-    shiba: 'SHIBUSDT',
+    bitcoin: "BTCUSDT",
+    ethereum: "ETHUSDT",
+    solana: "SOLUSDT",
+    ripple: "XRPUSDT",
+    cardano: "ADAUSDT",
+    dogecoin: "DOGEUSDT",
+    polkadot: "DOTUSDT",
+    avalanche: "AVAXUSDT",
+    chainlink: "LINKUSDT",
+    polygon: "MATICUSDT",
+    uniswap: "UNIUSDT",
+    litecoin: "LTCUSDT",
+    "binance-coin": "BNBUSDT",
+    tron: "TRXUSDT",
+    shiba: "SHIBUSDT",
   };
 
-  const result: Record<string, { price: number; change_24h: number; last_updated: string }> = {};
+  const result: Record<
+    string,
+    { price: number; change_24h: number; last_updated: string }
+  > = {};
 
   try {
     // Fetch 24hr ticker for all symbols at once
@@ -961,9 +1003,13 @@ async function getPricesFromBinanceFallback(
     if (!response.ok) return {};
 
     const tickers = await response.json();
-    type BinanceTicker = { symbol: string; lastPrice: string; priceChangePercent: string };
+    type BinanceTicker = {
+      symbol: string;
+      lastPrice: string;
+      priceChangePercent: string;
+    };
     const tickerMap = new Map<string, BinanceTicker>(
-      tickers.map((t: BinanceTicker) => [t.symbol, t])
+      tickers.map((t: BinanceTicker) => [t.symbol, t]),
     );
 
     for (const coinId of coinIds) {
@@ -980,7 +1026,7 @@ async function getPricesFromBinanceFallback(
 
     return result;
   } catch (error) {
-    console.error('Binance fallback error:', error);
+    console.error("Binance fallback error:", error);
     return {};
   }
 }
@@ -989,16 +1035,20 @@ async function getPricesFromBinanceFallback(
  * Get real-time price from multiple sources with fallback
  * Uses Binance for real-time, CoinGecko for accuracy
  */
-export async function getRealTimePrice(symbol: string): Promise<{ price: number; source: string } | null> {
+export async function getRealTimePrice(
+  symbol: string,
+): Promise<{ price: number; source: string } | null> {
   const symbolUpper = symbol.toUpperCase();
   const binanceSymbol = `${symbolUpper}USDT`;
-  
+
   // Try Binance first (fastest, most real-time)
   try {
-    const response = await fetchWithTimeout(`${BINANCE_BASE}/ticker/price?symbol=${binanceSymbol}`);
+    const response = await fetchWithTimeout(
+      `${BINANCE_BASE}/ticker/price?symbol=${binanceSymbol}`,
+    );
     if (response.ok) {
       const data = await response.json();
-      return { price: parseFloat(data.price), source: 'binance' };
+      return { price: parseFloat(data.price), source: "binance" };
     }
   } catch {
     // Continue to fallback
@@ -1007,12 +1057,12 @@ export async function getRealTimePrice(symbol: string): Promise<{ price: number;
   // Try CryptoCompare as second option
   try {
     const response = await fetchWithTimeout(
-      `${CRYPTOCOMPARE_BASE}/price?fsym=${symbolUpper}&tsyms=USD`
+      `${CRYPTOCOMPARE_BASE}/price?fsym=${symbolUpper}&tsyms=USD`,
     );
     if (response.ok) {
       const data = await response.json();
       if (data.USD) {
-        return { price: data.USD, source: 'cryptocompare' };
+        return { price: data.USD, source: "cryptocompare" };
       }
     }
   } catch {
@@ -1022,19 +1072,25 @@ export async function getRealTimePrice(symbol: string): Promise<{ price: number;
   // Fall back to CoinGecko
   try {
     const idMap: Record<string, string> = {
-      BTC: 'bitcoin', ETH: 'ethereum', SOL: 'solana',
-      XRP: 'ripple', ADA: 'cardano', DOGE: 'dogecoin',
-      DOT: 'polkadot', AVAX: 'avalanche', LINK: 'chainlink',
+      BTC: "bitcoin",
+      ETH: "ethereum",
+      SOL: "solana",
+      XRP: "ripple",
+      ADA: "cardano",
+      DOGE: "dogecoin",
+      DOT: "polkadot",
+      AVAX: "avalanche",
+      LINK: "chainlink",
     };
     const coinId = idMap[symbolUpper];
     if (coinId) {
       const response = await fetchWithTimeout(
-        `${COINGECKO_BASE}/simple/price?ids=${coinId}&vs_currencies=usd`
+        `${COINGECKO_BASE}/simple/price?ids=${coinId}&vs_currencies=usd`,
       );
       if (response.ok) {
         const data = await response.json();
         if (data[coinId]?.usd) {
-          return { price: data[coinId].usd, source: 'coingecko' };
+          return { price: data[coinId].usd, source: "coingecko" };
         }
       }
     }
@@ -1058,20 +1114,20 @@ export async function getTopCoins(limit = 50): Promise<TokenPrice[]> {
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=${limit}&page=1&sparkline=true&price_change_percentage=7d`
+      `${COINGECKO_BASE}/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=${limit}&page=1&sparkline=true&price_change_percentage=7d`,
     );
-    
+
     if (!response.ok) {
       // Try fallback to CoinPaprika
-      console.warn('CoinGecko failed, trying CoinPaprika fallback...');
+      console.warn("CoinGecko failed, trying CoinPaprika fallback...");
       return await getTopCoinsFallback(limit);
     }
-    
+
     const data = await response.json();
     setCache(cacheKey, data, CACHE_TTL.prices);
     return data;
   } catch (error) {
-    console.error('Error fetching top coins from CoinGecko:', error);
+    console.error("Error fetching top coins from CoinGecko:", error);
     // Try fallback source
     return await getTopCoinsFallback(limit);
   }
@@ -1085,16 +1141,16 @@ export async function getTopCoins(limit = 50): Promise<TokenPrice[]> {
 async function getTopCoinsFallback(limit: number): Promise<TokenPrice[]> {
   try {
     const response = await fetchWithTimeout(
-      `${COINPAPRIKA_BASE}/tickers?limit=${limit}`
+      `${COINPAPRIKA_BASE}/tickers?limit=${limit}`,
     );
-    
+
     if (!response.ok) {
-      console.error('CoinPaprika fallback also failed');
+      console.error("CoinPaprika fallback also failed");
       return [];
     }
-    
+
     const data = await response.json();
-    
+
     // Transform CoinPaprika format to our TokenPrice format
     interface CoinPaprikaCoin {
       id: string;
@@ -1123,9 +1179,12 @@ async function getTopCoinsFallback(limit: number): Promise<TokenPrice[]> {
       market_cap: coin.quotes?.USD?.market_cap || 0,
       market_cap_rank: coin.rank,
       total_volume: coin.quotes?.USD?.volume_24h || 0,
-      price_change_24h: (coin.quotes?.USD?.price || 0) * ((coin.quotes?.USD?.percent_change_24h || 0) / 100),
+      price_change_24h:
+        (coin.quotes?.USD?.price || 0) *
+        ((coin.quotes?.USD?.percent_change_24h || 0) / 100),
       price_change_percentage_24h: coin.quotes?.USD?.percent_change_24h || 0,
-      price_change_percentage_7d_in_currency: coin.quotes?.USD?.percent_change_7d || 0,
+      price_change_percentage_7d_in_currency:
+        coin.quotes?.USD?.percent_change_7d || 0,
       circulating_supply: coin.circulating_supply || 0,
       total_supply: coin.total_supply,
       max_supply: coin.max_supply,
@@ -1134,7 +1193,7 @@ async function getTopCoinsFallback(limit: number): Promise<TokenPrice[]> {
       last_updated: new Date().toISOString(),
     }));
   } catch (error) {
-    console.error('CoinPaprika fallback error:', error);
+    console.error("CoinPaprika fallback error:", error);
     return [];
   }
 }
@@ -1145,23 +1204,25 @@ async function getTopCoinsFallback(limit: number): Promise<TokenPrice[]> {
  */
 export async function getTrending(): Promise<TrendingCoin[]> {
   if (IS_BUILD) return [];
-  const cacheKey = 'trending';
+  const cacheKey = "trending";
   const cached = getCached<TrendingCoin[]>(cacheKey);
   if (cached) return cached.data;
 
   try {
-    const response = await fetchWithTimeout(`${COINGECKO_BASE}/search/trending`);
-    
+    const response = await fetchWithTimeout(
+      `${COINGECKO_BASE}/search/trending`,
+    );
+
     if (!response.ok) {
-      throw new Error('Failed to fetch trending');
+      throw new Error("Failed to fetch trending");
     }
-    
+
     const data = await response.json();
     const trending = data.coins.map((c: { item: TrendingCoin }) => c.item);
     setCache(cacheKey, trending, CACHE_TTL.global);
     return trending;
   } catch (error) {
-    console.error('Error fetching trending:', error);
+    console.error("Error fetching trending:", error);
     return [];
   }
 }
@@ -1172,22 +1233,22 @@ export async function getTrending(): Promise<TrendingCoin[]> {
  */
 export async function getGlobalMarketData(): Promise<GlobalMarketData | null> {
   if (IS_BUILD) return null;
-  const cacheKey = 'global';
+  const cacheKey = "global";
   const cached = getCached<GlobalMarketData>(cacheKey);
   if (cached) return cached.data;
 
   try {
     const response = await fetchWithTimeout(`${COINGECKO_BASE}/global`);
-    
+
     if (!response.ok) {
-      throw new Error('Failed to fetch global data');
+      throw new Error("Failed to fetch global data");
     }
-    
+
     const data = await response.json();
     setCache(cacheKey, data.data, CACHE_TTL.global);
     return data.data;
   } catch (error) {
-    console.error('Error fetching global market data:', error);
+    console.error("Error fetching global market data:", error);
     return null;
   }
 }
@@ -1204,19 +1265,19 @@ export async function getCoinDetails(coinId: string) {
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/coins/${coinId}?localization=false&tickers=false&community_data=false&developer_data=false`
+      `${COINGECKO_BASE}/coins/${coinId}?localization=false&tickers=false&community_data=false&developer_data=false`,
     );
-    
+
     if (!response.ok) {
       console.warn(`CoinGecko failed for ${coinId}, trying fallback...`);
       return await getCoinDetailsFallback(coinId);
     }
-    
+
     const data = await response.json();
     setCache(cacheKey, data, CACHE_TTL.global);
     return data;
   } catch (error) {
-    console.error('Error fetching coin details:', error);
+    console.error("Error fetching coin details:", error);
     // Try fallback source
     return await getCoinDetailsFallback(coinId);
   }
@@ -1227,88 +1288,132 @@ export async function getCoinDetails(coinId: string) {
  * @param coinId - Coin ID (will be mapped to CoinPaprika format)
  * @returns Coin details in CoinGecko-compatible format
  */
-async function getCoinDetailsFallback(coinId: string): Promise<Record<string, unknown> | null> {
+async function getCoinDetailsFallback(
+  coinId: string,
+): Promise<Record<string, unknown> | null> {
   try {
     // CoinPaprika uses different IDs, try common mappings
     const paprikaIdMap: Record<string, string> = {
-      'bitcoin': 'btc-bitcoin',
-      'ethereum': 'eth-ethereum',
-      'solana': 'sol-solana',
-      'ripple': 'xrp-xrp',
-      'cardano': 'ada-cardano',
-      'dogecoin': 'doge-dogecoin',
-      'polkadot': 'dot-polkadot',
-      'avalanche-2': 'avax-avalanche',
-      'chainlink': 'link-chainlink',
-      'polygon': 'matic-polygon',
-      'matic-network': 'matic-polygon',
-      'litecoin': 'ltc-litecoin',
-      'uniswap': 'uni-uniswap',
-      'binancecoin': 'bnb-binance-coin',
-      'tron': 'trx-tron',
-      'shiba-inu': 'shib-shiba-inu',
-      'wrapped-bitcoin': 'wbtc-wrapped-bitcoin',
-      'dai': 'dai-dai',
-      'tether': 'usdt-tether',
-      'usd-coin': 'usdc-usd-coin',
+      bitcoin: "btc-bitcoin",
+      ethereum: "eth-ethereum",
+      solana: "sol-solana",
+      ripple: "xrp-xrp",
+      cardano: "ada-cardano",
+      dogecoin: "doge-dogecoin",
+      polkadot: "dot-polkadot",
+      "avalanche-2": "avax-avalanche",
+      chainlink: "link-chainlink",
+      polygon: "matic-polygon",
+      "matic-network": "matic-polygon",
+      litecoin: "ltc-litecoin",
+      uniswap: "uni-uniswap",
+      binancecoin: "bnb-binance-coin",
+      tron: "trx-tron",
+      "shiba-inu": "shib-shiba-inu",
+      "wrapped-bitcoin": "wbtc-wrapped-bitcoin",
+      dai: "dai-dai",
+      tether: "usdt-tether",
+      "usd-coin": "usdc-usd-coin",
+      // Additional popular coins
+      apecoin: "ape-apecoin",
+      filecoin: "fil-filecoin",
+      "hedera-hashgraph": "hbar-hedera",
+      near: "near-near-protocol",
+      "internet-computer": "icp-internet-computer",
+      algorand: "algo-algorand",
+      cosmos: "atom-cosmos",
+      stellar: "xlm-stellar",
+      vechain: "vet-vechain",
+      "the-sandbox": "sand-the-sandbox",
+      decentraland: "mana-decentraland",
+      aave: "aave-aave",
+      maker: "mkr-maker",
+      compound: "comp-compound",
+      "curve-dao-token": "crv-curve-dao-token",
+      sushi: "sushi-sushiswap",
+      "pancakeswap-token": "cake-pancakeswap",
+      "ethereum-classic": "etc-ethereum-classic",
+      monero: "xmr-monero",
+      zcash: "zec-zcash",
+      iota: "miota-iota",
+      neo: "neo-neo",
+      dash: "dash-dash",
     };
-    
+
     const paprikaId = paprikaIdMap[coinId];
-    
+
     // If no known mapping, don't attempt CoinPaprika (bad IDs always 404)
     if (!paprikaId) {
       return null;
     }
-    
+
     // Fetch coin info and ticker in parallel
     const [coinResponse, tickerResponse] = await Promise.all([
       fetchWithTimeout(`${COINPAPRIKA_BASE}/coins/${paprikaId}`),
       fetchWithTimeout(`${COINPAPRIKA_BASE}/tickers/${paprikaId}`),
     ]);
-    
+
     if (!coinResponse.ok || !tickerResponse.ok) {
       console.error(`CoinPaprika fallback also failed for ${coinId}`);
       return null;
     }
-    
+
     const [coinInfo, tickerInfo] = await Promise.all([
       coinResponse.json(),
       tickerResponse.json(),
     ]);
-    
+
     // Transform to CoinGecko-compatible format
     const quotes = tickerInfo.quotes?.USD || {};
-    
+
     const result = {
       id: coinId,
       symbol: coinInfo.symbol?.toLowerCase() || coinId,
       name: coinInfo.name || coinId,
       image: {
-        large: coinInfo.logo || `https://static.coinpaprika.com/coin/${paprikaId}/logo.png`,
-        small: coinInfo.logo || `https://static.coinpaprika.com/coin/${paprikaId}/logo.png`,
-        thumb: coinInfo.logo || `https://static.coinpaprika.com/coin/${paprikaId}/logo.png`,
+        large:
+          coinInfo.logo ||
+          `https://static.coinpaprika.com/coin/${paprikaId}/logo.png`,
+        small:
+          coinInfo.logo ||
+          `https://static.coinpaprika.com/coin/${paprikaId}/logo.png`,
+        thumb:
+          coinInfo.logo ||
+          `https://static.coinpaprika.com/coin/${paprikaId}/logo.png`,
       },
       market_cap_rank: tickerInfo.rank || null,
       categories: coinInfo.tags?.map((t: { name: string }) => t.name) || [],
-      description: { en: coinInfo.description || '' },
+      description: { en: coinInfo.description || "" },
       links: {
         homepage: coinInfo.links?.website ? [coinInfo.links.website] : [],
-        blockchain_site: coinInfo.links?.explorer ? [coinInfo.links.explorer] : [],
-        twitter_screen_name: coinInfo.links?.twitter?.[0]?.replace('https://twitter.com/', '') || '',
-        subreddit_url: coinInfo.links?.reddit?.[0] || '',
+        blockchain_site: coinInfo.links?.explorer
+          ? [coinInfo.links.explorer]
+          : [],
+        twitter_screen_name:
+          coinInfo.links?.twitter?.[0]?.replace("https://twitter.com/", "") ||
+          "",
+        subreddit_url: coinInfo.links?.reddit?.[0] || "",
       },
-      genesis_date: coinInfo.started_at?.split('T')[0] || null,
+      genesis_date: coinInfo.started_at?.split("T")[0] || null,
       market_data: {
         current_price: { usd: quotes.price || 0 },
         price_change_percentage_24h: quotes.percent_change_24h || 0,
-        price_change_percentage_1h_in_currency: { usd: quotes.percent_change_1h || 0 },
+        price_change_percentage_1h_in_currency: {
+          usd: quotes.percent_change_1h || 0,
+        },
         price_change_percentage_7d: quotes.percent_change_7d || 0,
         price_change_percentage_30d: quotes.percent_change_30d || 0,
         price_change_percentage_1y: quotes.percent_change_1y || 0,
         market_cap: { usd: quotes.market_cap || 0 },
         total_volume: { usd: quotes.volume_24h || 0 },
-        high_24h: { usd: quotes.price * (1 + Math.abs(quotes.percent_change_24h || 0) / 100) },
-        low_24h: { usd: quotes.price * (1 - Math.abs(quotes.percent_change_24h || 0) / 100) },
+        high_24h: {
+          usd:
+            quotes.price * (1 + Math.abs(quotes.percent_change_24h || 0) / 100),
+        },
+        low_24h: {
+          usd:
+            quotes.price * (1 - Math.abs(quotes.percent_change_24h || 0) / 100),
+        },
         ath: { usd: quotes.ath_price || quotes.price },
         ath_date: { usd: quotes.ath_date || new Date().toISOString() },
         ath_change_percentage: { usd: quotes.percent_from_price_ath || 0 },
@@ -1318,12 +1423,12 @@ async function getCoinDetailsFallback(coinId: string): Promise<Record<string, un
       },
       last_updated: tickerInfo.last_updated || new Date().toISOString(),
     };
-    
+
     // Cache the fallback result
     setCache(`coin-${coinId}`, result, CACHE_TTL.global);
     return result;
   } catch (error) {
-    console.error('CoinPaprika fallback error:', error);
+    console.error("CoinPaprika fallback error:", error);
     return null;
   }
 }
@@ -1338,17 +1443,17 @@ async function getCoinDetailsFallback(coinId: string): Promise<Record<string, un
  */
 export async function getFearGreedIndex(): Promise<FearGreedIndex | null> {
   if (IS_BUILD) return null;
-  const cacheKey = 'fear-greed';
+  const cacheKey = "fear-greed";
   const cached = getCached<FearGreedIndex>(cacheKey);
   if (cached) return cached.data;
 
   try {
     const response = await fetchWithTimeout(`${ALTERNATIVE_ME_BASE}/fng/`);
-    
+
     if (!response.ok) {
-      throw new Error('Failed to fetch fear & greed index');
+      throw new Error("Failed to fetch fear & greed index");
     }
-    
+
     const data = await response.json();
     const fng = data.data?.[0];
     if (fng) {
@@ -1356,7 +1461,7 @@ export async function getFearGreedIndex(): Promise<FearGreedIndex | null> {
     }
     return fng || null;
   } catch (error) {
-    console.error('Error fetching fear & greed index:', error);
+    console.error("Error fetching fear & greed index:", error);
     return null;
   }
 }
@@ -1378,22 +1483,25 @@ export async function getTopProtocols(limit = 20): Promise<ProtocolTVL[]> {
 
   try {
     const response = await fetchWithTimeout(`${DEFILLAMA_BASE}/protocols`);
-    
+
     if (!response.ok) {
-      throw new Error('Failed to fetch protocols');
+      throw new Error("Failed to fetch protocols");
     }
-    
+
     const data = await response.json();
     const top = data
       .filter((p: ProtocolTVL) => p.tvl > 0)
       .sort((a: ProtocolTVL, b: ProtocolTVL) => b.tvl - a.tvl)
       .slice(0, limit)
-      .map((p: ProtocolTVL) => ({ ...p, slug: p.slug || p.name.toLowerCase().replace(/\s+/g, '-') }));
-    
+      .map((p: ProtocolTVL) => ({
+        ...p,
+        slug: p.slug || p.name.toLowerCase().replace(/\s+/g, "-"),
+      }));
+
     setCache(cacheKey, top, CACHE_TTL.global);
     return top;
   } catch (error) {
-    console.error('Error fetching protocols:', error);
+    console.error("Error fetching protocols:", error);
     return [];
   }
 }
@@ -1403,52 +1511,57 @@ export async function getTopProtocols(limit = 20): Promise<ProtocolTVL[]> {
  * @param slug - Protocol slug or name
  * @returns Protocol details or null
  */
-export async function getProtocolBySlug(slug: string): Promise<ProtocolTVL | null> {
+export async function getProtocolBySlug(
+  slug: string,
+): Promise<ProtocolTVL | null> {
   const cacheKey = `protocol-${slug}`;
   const cached = getCached<ProtocolTVL>(cacheKey);
   if (cached) return cached.data;
 
   try {
     // DeFiLlama uses protocol name as the endpoint
-    const response = await fetchWithTimeout(`${DEFILLAMA_BASE}/protocol/${slug}`);
-    
+    const response = await fetchWithTimeout(
+      `${DEFILLAMA_BASE}/protocol/${slug}`,
+    );
+
     if (!response.ok) {
       // Try to find in protocols list
       const protocols = await getTopProtocols(100);
       const found = protocols.find(
-        p => p.slug === slug || 
-             p.id === slug || 
-             p.name.toLowerCase().replace(/\s+/g, '-') === slug.toLowerCase()
+        (p) =>
+          p.slug === slug ||
+          p.id === slug ||
+          p.name.toLowerCase().replace(/\s+/g, "-") === slug.toLowerCase(),
       );
       return found || null;
     }
-    
+
     const data = await response.json();
     const protocol: ProtocolTVL = {
       id: data.id || slug,
       name: data.name,
-      symbol: data.symbol || '',
-      slug: data.slug || data.name?.toLowerCase().replace(/\s+/g, '-') || slug,
-      chain: data.chain || (data.chains?.[0] || 'Multi-Chain'),
+      symbol: data.symbol || "",
+      slug: data.slug || data.name?.toLowerCase().replace(/\s+/g, "-") || slug,
+      chain: data.chain || data.chains?.[0] || "Multi-Chain",
       chains: data.chains || [],
       tvl: data.tvl || 0,
       change_1h: data.change_1h || 0,
       change_1d: data.change_1d || 0,
       change_7d: data.change_7d || 0,
-      category: data.category || 'Unknown',
-      logo: data.logo || '',
-      url: data.url || '',
+      category: data.category || "Unknown",
+      logo: data.logo || "",
+      url: data.url || "",
       description: data.description,
       twitter: data.twitter,
       audit_links: data.audit_links,
       mcap: data.mcap,
       fdv: data.fdv,
     };
-    
+
     setCache(cacheKey, protocol, CACHE_TTL.global);
     return protocol;
   } catch (error) {
-    console.error('Error fetching protocol:', error);
+    console.error("Error fetching protocol:", error);
     return null;
   }
 }
@@ -1462,13 +1575,14 @@ export async function getChainBySlug(slug: string): Promise<ChainTVL | null> {
   try {
     const chains = await getTopChains(50);
     const found = chains.find(
-      c => c.gecko_id === slug || 
-           c.name.toLowerCase() === slug.toLowerCase() ||
-           c.name.toLowerCase().replace(/\s+/g, '-') === slug.toLowerCase()
+      (c) =>
+        c.gecko_id === slug ||
+        c.name.toLowerCase() === slug.toLowerCase() ||
+        c.name.toLowerCase().replace(/\s+/g, "-") === slug.toLowerCase(),
     );
     return found || null;
   } catch (error) {
-    console.error('Error fetching chain:', error);
+    console.error("Error fetching chain:", error);
     return null;
   }
 }
@@ -1486,20 +1600,20 @@ export async function getTopChains(limit = 20): Promise<ChainTVL[]> {
 
   try {
     const response = await fetchWithTimeout(`${DEFILLAMA_BASE}/v2/chains`);
-    
+
     if (!response.ok) {
-      throw new Error('Failed to fetch chains');
+      throw new Error("Failed to fetch chains");
     }
-    
+
     const data = await response.json();
     const top = data
       .sort((a: ChainTVL, b: ChainTVL) => (b.tvl || 0) - (a.tvl || 0))
       .slice(0, limit);
-    
+
     setCache(cacheKey, top, CACHE_TTL.global);
     return top;
   } catch (error) {
-    console.error('Error fetching chains:', error);
+    console.error("Error fetching chains:", error);
     return [];
   }
 }
@@ -1553,31 +1667,37 @@ export async function getMarketOverview(): Promise<MarketOverview> {
  */
 export async function getHistoricalPrices(
   coinId: string,
-  days: number | 'max',
-  interval?: 'minutely' | 'hourly' | 'daily'
+  days: number | "max",
+  interval?: "minutely" | "hourly" | "daily",
 ): Promise<HistoricalData> {
-  const daysParam = days === 'max' ? 'max' : days.toString();
-  const intervalParam = interval ? `&interval=${interval}` : '';
-  const cacheKey = `historical-${coinId}-${daysParam}-${interval || 'auto'}`;
-  const cacheTTL = typeof days === 'number' ? getHistoricalCacheTTL(days) : CACHE_TTL.historical_90d;
-  
+  const daysParam = days === "max" ? "max" : days.toString();
+  const intervalParam = interval ? `&interval=${interval}` : "";
+  const cacheKey = `historical-${coinId}-${daysParam}-${interval || "auto"}`;
+  const cacheTTL =
+    typeof days === "number"
+      ? getHistoricalCacheTTL(days)
+      : CACHE_TTL.historical_90d;
+
   const cached = getCached<HistoricalData>(cacheKey);
   if (cached) return cached.data;
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/coins/${coinId}/market_chart?vs_currency=usd&days=${daysParam}${intervalParam}`
+      `${COINGECKO_BASE}/coins/${coinId}/market_chart?vs_currency=usd&days=${daysParam}${intervalParam}`,
     );
-    
+
     if (!response.ok) {
-      throw new MarketDataError('Failed to fetch historical prices', response.status);
+      throw new MarketDataError(
+        "Failed to fetch historical prices",
+        response.status,
+      );
     }
-    
+
     const data: HistoricalData = await response.json();
     setCache(cacheKey, data, cacheTTL);
     return data;
   } catch (error) {
-    console.error('Error fetching historical prices:', error);
+    console.error("Error fetching historical prices:", error);
     return { prices: [], market_caps: [], total_volumes: [] };
   }
 }
@@ -1588,42 +1708,48 @@ export async function getHistoricalPrices(
  * @param days - Number of days (1, 7, 14, 30, 90, 180, 365)
  * @returns Array of OHLC data points
  */
-export async function getOHLC(coinId: string, days: number): Promise<OHLCData[]> {
+export async function getOHLC(
+  coinId: string,
+  days: number,
+): Promise<OHLCData[]> {
   // Validate days parameter (CoinGecko only supports specific values)
   const validDays = [1, 7, 14, 30, 90, 180, 365];
-  const normalizedDays = validDays.reduce((prev, curr) => 
-    Math.abs(curr - days) < Math.abs(prev - days) ? curr : prev
+  const normalizedDays = validDays.reduce((prev, curr) =>
+    Math.abs(curr - days) < Math.abs(prev - days) ? curr : prev,
   );
-  
+
   const cacheKey = `ohlc-${coinId}-${normalizedDays}`;
   const cacheTTL = getHistoricalCacheTTL(normalizedDays);
-  
+
   const cached = getCached<OHLCData[]>(cacheKey);
   if (cached) return cached.data;
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/coins/${coinId}/ohlc?vs_currency=usd&days=${normalizedDays}`
+      `${COINGECKO_BASE}/coins/${coinId}/ohlc?vs_currency=usd&days=${normalizedDays}`,
     );
-    
+
     if (!response.ok) {
-      throw new MarketDataError('Failed to fetch OHLC data', response.status);
+      throw new MarketDataError("Failed to fetch OHLC data", response.status);
     }
-    
+
     // CoinGecko returns [[timestamp, open, high, low, close], ...]
-    const rawData: [number, number, number, number, number][] = await response.json();
-    const ohlcData: OHLCData[] = rawData.map(([timestamp, open, high, low, close]) => ({
-      timestamp,
-      open,
-      high,
-      low,
-      close,
-    }));
-    
+    const rawData: [number, number, number, number, number][] =
+      await response.json();
+    const ohlcData: OHLCData[] = rawData.map(
+      ([timestamp, open, high, low, close]) => ({
+        timestamp,
+        open,
+        high,
+        low,
+        close,
+      }),
+    );
+
     setCache(cacheKey, ohlcData, cacheTTL);
     return ohlcData;
   } catch (error) {
-    console.error('Error fetching OHLC data:', error);
+    console.error("Error fetching OHLC data:", error);
     return [];
   }
 }
@@ -1636,28 +1762,31 @@ export async function getOHLC(coinId: string, days: number): Promise<OHLCData[]>
  */
 export async function getHistoricalPrice(
   coinId: string,
-  date: string
+  date: string,
 ): Promise<HistoricalSnapshot | null> {
   const cacheKey = `historical-snapshot-${coinId}-${date}`;
-  
+
   const cached = getCached<HistoricalSnapshot>(cacheKey);
   if (cached) return cached.data;
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/coins/${coinId}/history?date=${date}&localization=false`
+      `${COINGECKO_BASE}/coins/${coinId}/history?date=${date}&localization=false`,
     );
-    
+
     if (!response.ok) {
-      throw new MarketDataError('Failed to fetch historical price', response.status);
+      throw new MarketDataError(
+        "Failed to fetch historical price",
+        response.status,
+      );
     }
-    
+
     const data: HistoricalSnapshot = await response.json();
     // Historical snapshots are immutable, cache for a long time
     setCache(cacheKey, data, CACHE_TTL.static);
     return data;
   } catch (error) {
-    console.error('Error fetching historical price:', error);
+    console.error("Error fetching historical price:", error);
     return null;
   }
 }
@@ -1674,27 +1803,30 @@ export async function getHistoricalPrice(
  */
 export async function getCoinTickers(
   coinId: string,
-  page: number = 1
+  page: number = 1,
 ): Promise<TickerData> {
   const cacheKey = `tickers-${coinId}-${page}`;
-  
+
   const cached = getCached<TickerData>(cacheKey);
   if (cached) return cached.data;
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/coins/${coinId}/tickers?page=${page}&include_exchange_logo=true&order=volume_desc`
+      `${COINGECKO_BASE}/coins/${coinId}/tickers?page=${page}&include_exchange_logo=true&order=volume_desc`,
     );
-    
+
     if (!response.ok) {
-      throw new MarketDataError('Failed to fetch coin tickers', response.status);
+      throw new MarketDataError(
+        "Failed to fetch coin tickers",
+        response.status,
+      );
     }
-    
+
     const data: TickerData = await response.json();
     setCache(cacheKey, data, CACHE_TTL.tickers);
     return data;
   } catch (error) {
-    console.error('Error fetching coin tickers:', error);
+    console.error("Error fetching coin tickers:", error);
     return { name: coinId, tickers: [] };
   }
 }
@@ -1707,27 +1839,27 @@ export async function getCoinTickers(
  */
 export async function getExchanges(
   perPage: number = 100,
-  page: number = 1
+  page: number = 1,
 ): Promise<Exchange[]> {
   const cacheKey = `exchanges-${perPage}-${page}`;
-  
+
   const cached = getCached<Exchange[]>(cacheKey);
   if (cached) return cached.data;
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/exchanges?per_page=${perPage}&page=${page}`
+      `${COINGECKO_BASE}/exchanges?per_page=${perPage}&page=${page}`,
     );
-    
+
     if (!response.ok) {
-      throw new MarketDataError('Failed to fetch exchanges', response.status);
+      throw new MarketDataError("Failed to fetch exchanges", response.status);
     }
-    
+
     const data: Exchange[] = await response.json();
     setCache(cacheKey, data, CACHE_TTL.static);
     return data;
   } catch (error) {
-    console.error('Error fetching exchanges:', error);
+    console.error("Error fetching exchanges:", error);
     return [];
   }
 }
@@ -1738,27 +1870,30 @@ export async function getExchanges(
  * @returns Detailed exchange information
  */
 export async function getExchangeDetails(
-  exchangeId: string
+  exchangeId: string,
 ): Promise<ExchangeDetails | null> {
   const cacheKey = `exchange-${exchangeId}`;
-  
+
   const cached = getCached<ExchangeDetails>(cacheKey);
   if (cached) return cached.data;
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/exchanges/${exchangeId}`
+      `${COINGECKO_BASE}/exchanges/${exchangeId}`,
     );
-    
+
     if (!response.ok) {
-      throw new MarketDataError('Failed to fetch exchange details', response.status);
+      throw new MarketDataError(
+        "Failed to fetch exchange details",
+        response.status,
+      );
     }
-    
+
     const data: ExchangeDetails = await response.json();
     setCache(cacheKey, data, CACHE_TTL.tickers);
     return data;
   } catch (error) {
-    console.error('Error fetching exchange details:', error);
+    console.error("Error fetching exchange details:", error);
     return null;
   }
 }
@@ -1772,25 +1907,25 @@ export async function getExchangeDetails(
  * @returns Array of categories with market data
  */
 export async function getCategories(): Promise<Category[]> {
-  const cacheKey = 'categories';
-  
+  const cacheKey = "categories";
+
   const cached = getCached<Category[]>(cacheKey);
   if (cached) return cached.data;
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/coins/categories`
+      `${COINGECKO_BASE}/coins/categories`,
     );
-    
+
     if (!response.ok) {
-      throw new MarketDataError('Failed to fetch categories', response.status);
+      throw new MarketDataError("Failed to fetch categories", response.status);
     }
-    
+
     const data: Category[] = await response.json();
     setCache(cacheKey, data, CACHE_TTL.static);
     return data;
   } catch (error) {
-    console.error('Error fetching categories:', error);
+    console.error("Error fetching categories:", error);
     return [];
   }
 }
@@ -1805,27 +1940,30 @@ export async function getCategories(): Promise<Category[]> {
 export async function getCategoryCoins(
   categoryId: string,
   perPage: number = 100,
-  page: number = 1
+  page: number = 1,
 ): Promise<TokenPrice[]> {
   const cacheKey = `category-coins-${categoryId}-${perPage}-${page}`;
-  
+
   const cached = getCached<TokenPrice[]>(cacheKey);
   if (cached) return cached.data;
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/coins/markets?vs_currency=usd&category=${encodeURIComponent(categoryId)}&order=market_cap_desc&per_page=${perPage}&page=${page}&sparkline=false`
+      `${COINGECKO_BASE}/coins/markets?vs_currency=usd&category=${encodeURIComponent(categoryId)}&order=market_cap_desc&per_page=${perPage}&page=${page}&sparkline=false`,
     );
-    
+
     if (!response.ok) {
-      throw new MarketDataError('Failed to fetch category coins', response.status);
+      throw new MarketDataError(
+        "Failed to fetch category coins",
+        response.status,
+      );
     }
-    
+
     const data: TokenPrice[] = await response.json();
     setCache(cacheKey, data, CACHE_TTL.global);
     return data;
   } catch (error) {
-    console.error('Error fetching category coins:', error);
+    console.error("Error fetching category coins:", error);
     return [];
   }
 }
@@ -1843,26 +1981,26 @@ export async function searchCoins(query: string): Promise<SearchResult> {
   if (!query || query.length < 2) {
     return { coins: [], exchanges: [], categories: [], nfts: [] };
   }
-  
+
   const cacheKey = `search-${query.toLowerCase()}`;
-  
+
   const cached = getCached<SearchResult>(cacheKey);
   if (cached) return cached.data;
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/search?query=${encodeURIComponent(query)}`
+      `${COINGECKO_BASE}/search?query=${encodeURIComponent(query)}`,
     );
-    
+
     if (!response.ok) {
-      throw new MarketDataError('Failed to search coins', response.status);
+      throw new MarketDataError("Failed to search coins", response.status);
     }
-    
+
     const data: SearchResult = await response.json();
     setCache(cacheKey, data, CACHE_TTL.search);
     return data;
   } catch (error) {
-    console.error('Error searching coins:', error);
+    console.error("Error searching coins:", error);
     return { coins: [], exchanges: [], categories: [], nfts: [] };
   }
 }
@@ -1876,56 +2014,60 @@ export async function compareCoins(coinIds: string[]): Promise<CompareData> {
   if (coinIds.length === 0) {
     return { coins: [], comparison_date: new Date().toISOString() };
   }
-  
+
   // Limit to 25 coins to avoid API limits
   const limitedIds = coinIds.slice(0, 25);
-  const cacheKey = `compare-${limitedIds.sort().join(',')}`;
-  
+  const cacheKey = `compare-${limitedIds.sort().join(",")}`;
+
   const cached = getCached<CompareData>(cacheKey);
   if (cached) return cached.data;
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/coins/markets?vs_currency=usd&ids=${limitedIds.join(',')}&order=market_cap_desc&per_page=25&page=1&sparkline=false&price_change_percentage=7d,30d`
+      `${COINGECKO_BASE}/coins/markets?vs_currency=usd&ids=${limitedIds.join(",")}&order=market_cap_desc&per_page=25&page=1&sparkline=false&price_change_percentage=7d,30d`,
     );
-    
+
     if (!response.ok) {
-      throw new MarketDataError('Failed to compare coins', response.status);
+      throw new MarketDataError("Failed to compare coins", response.status);
     }
-    
+
     const rawData = await response.json();
-    const coins: CompareCoin[] = rawData.map((coin: Record<string, unknown>) => ({
-      id: coin.id as string,
-      symbol: coin.symbol as string,
-      name: coin.name as string,
-      image: coin.image as string,
-      current_price: coin.current_price as number,
-      market_cap: coin.market_cap as number,
-      market_cap_rank: coin.market_cap_rank as number,
-      total_volume: coin.total_volume as number,
-      price_change_percentage_24h: coin.price_change_percentage_24h as number,
-      price_change_percentage_7d: coin.price_change_percentage_7d_in_currency as number || 0,
-      price_change_percentage_30d: coin.price_change_percentage_30d_in_currency as number || 0,
-      circulating_supply: coin.circulating_supply as number,
-      total_supply: coin.total_supply as number | null,
-      max_supply: coin.max_supply as number | null,
-      ath: coin.ath as number,
-      ath_change_percentage: coin.ath_change_percentage as number,
-      ath_date: coin.ath_date as string,
-      atl: coin.atl as number,
-      atl_change_percentage: coin.atl_change_percentage as number,
-      atl_date: coin.atl_date as string,
-    }));
-    
+    const coins: CompareCoin[] = rawData.map(
+      (coin: Record<string, unknown>) => ({
+        id: coin.id as string,
+        symbol: coin.symbol as string,
+        name: coin.name as string,
+        image: coin.image as string,
+        current_price: coin.current_price as number,
+        market_cap: coin.market_cap as number,
+        market_cap_rank: coin.market_cap_rank as number,
+        total_volume: coin.total_volume as number,
+        price_change_percentage_24h: coin.price_change_percentage_24h as number,
+        price_change_percentage_7d:
+          (coin.price_change_percentage_7d_in_currency as number) || 0,
+        price_change_percentage_30d:
+          (coin.price_change_percentage_30d_in_currency as number) || 0,
+        circulating_supply: coin.circulating_supply as number,
+        total_supply: coin.total_supply as number | null,
+        max_supply: coin.max_supply as number | null,
+        ath: coin.ath as number,
+        ath_change_percentage: coin.ath_change_percentage as number,
+        ath_date: coin.ath_date as string,
+        atl: coin.atl as number,
+        atl_change_percentage: coin.atl_change_percentage as number,
+        atl_date: coin.atl_date as string,
+      }),
+    );
+
     const result: CompareData = {
       coins,
       comparison_date: new Date().toISOString(),
     };
-    
+
     setCache(cacheKey, result, CACHE_TTL.prices);
     return result;
   } catch (error) {
-    console.error('Error comparing coins:', error);
+    console.error("Error comparing coins:", error);
     return { coins: [], comparison_date: new Date().toISOString() };
   }
 }
@@ -1935,25 +2077,23 @@ export async function compareCoins(coinIds: string[]): Promise<CompareData> {
  * @returns Array of all coins with basic info
  */
 export async function getCoinsList(): Promise<CoinListItem[]> {
-  const cacheKey = 'coins-list';
-  
+  const cacheKey = "coins-list";
+
   const cached = getCached<CoinListItem[]>(cacheKey);
   if (cached) return cached.data;
 
   try {
-    const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/coins/list`
-    );
-    
+    const response = await fetchWithTimeout(`${COINGECKO_BASE}/coins/list`);
+
     if (!response.ok) {
-      throw new MarketDataError('Failed to fetch coins list', response.status);
+      throw new MarketDataError("Failed to fetch coins list", response.status);
     }
-    
+
     const data: CoinListItem[] = await response.json();
     setCache(cacheKey, data, CACHE_TTL.static);
     return data;
   } catch (error) {
-    console.error('Error fetching coins list:', error);
+    console.error("Error fetching coins list:", error);
     return [];
   }
 }
@@ -1968,22 +2108,25 @@ export async function getCoinsList(): Promise<CoinListItem[]> {
  * @returns Developer data including commits, forks, stars
  */
 export async function getCoinDeveloperData(
-  coinId: string
+  coinId: string,
 ): Promise<DeveloperData | null> {
   const cacheKey = `developer-${coinId}`;
-  
+
   const cached = getCached<DeveloperData>(cacheKey);
   if (cached) return cached.data;
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/coins/${coinId}?localization=false&tickers=false&market_data=false&community_data=false&developer_data=true&sparkline=false`
+      `${COINGECKO_BASE}/coins/${coinId}?localization=false&tickers=false&market_data=false&community_data=false&developer_data=true&sparkline=false`,
     );
-    
+
     if (!response.ok) {
-      throw new MarketDataError('Failed to fetch developer data', response.status);
+      throw new MarketDataError(
+        "Failed to fetch developer data",
+        response.status,
+      );
     }
-    
+
     const data = await response.json();
     const developerData: DeveloperData = data.developer_data || {
       forks: 0,
@@ -1997,11 +2140,11 @@ export async function getCoinDeveloperData(
       last_4_weeks_commit_activity_series: [],
       code_additions_deletions_4_weeks: { additions: null, deletions: null },
     };
-    
+
     setCache(cacheKey, developerData, CACHE_TTL.social);
     return developerData;
   } catch (error) {
-    console.error('Error fetching developer data:', error);
+    console.error("Error fetching developer data:", error);
     return null;
   }
 }
@@ -2012,22 +2155,25 @@ export async function getCoinDeveloperData(
  * @returns Community data including Twitter, Reddit, Telegram stats
  */
 export async function getCoinCommunityData(
-  coinId: string
+  coinId: string,
 ): Promise<CommunityData | null> {
   const cacheKey = `community-${coinId}`;
-  
+
   const cached = getCached<CommunityData>(cacheKey);
   if (cached) return cached.data;
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/coins/${coinId}?localization=false&tickers=false&market_data=false&community_data=true&developer_data=false&sparkline=false`
+      `${COINGECKO_BASE}/coins/${coinId}?localization=false&tickers=false&market_data=false&community_data=true&developer_data=false&sparkline=false`,
     );
-    
+
     if (!response.ok) {
-      throw new MarketDataError('Failed to fetch community data', response.status);
+      throw new MarketDataError(
+        "Failed to fetch community data",
+        response.status,
+      );
     }
-    
+
     const data = await response.json();
     const communityData: CommunityData = data.community_data || {
       twitter_followers: null,
@@ -2038,11 +2184,11 @@ export async function getCoinCommunityData(
       telegram_channel_user_count: null,
       facebook_likes: null,
     };
-    
+
     setCache(cacheKey, communityData, CACHE_TTL.social);
     return communityData;
   } catch (error) {
-    console.error('Error fetching community data:', error);
+    console.error("Error fetching community data:", error);
     return null;
   }
 }
@@ -2056,25 +2202,28 @@ export async function getCoinCommunityData(
  * @returns Global DeFi market data
  */
 export async function getGlobalDeFiData(): Promise<GlobalDeFi | null> {
-  const cacheKey = 'global-defi';
-  
+  const cacheKey = "global-defi";
+
   const cached = getCached<GlobalDeFi>(cacheKey);
   if (cached) return cached.data;
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/global/decentralized_finance_defi`
+      `${COINGECKO_BASE}/global/decentralized_finance_defi`,
     );
-    
+
     if (!response.ok) {
-      throw new MarketDataError('Failed to fetch global DeFi data', response.status);
+      throw new MarketDataError(
+        "Failed to fetch global DeFi data",
+        response.status,
+      );
     }
-    
+
     const { data }: { data: GlobalDeFi } = await response.json();
     setCache(cacheKey, data, CACHE_TTL.global);
     return data;
   } catch (error) {
-    console.error('Error fetching global DeFi data:', error);
+    console.error("Error fetching global DeFi data:", error);
     return null;
   }
 }
@@ -2088,25 +2237,26 @@ export async function getGlobalDeFiData(): Promise<GlobalDeFi | null> {
  * @returns Array of derivatives tickers
  */
 export async function getDerivativesTickers(): Promise<DerivativeTicker[]> {
-  const cacheKey = 'derivatives-tickers';
-  
+  const cacheKey = "derivatives-tickers";
+
   const cached = getCached<DerivativeTicker[]>(cacheKey);
   if (cached) return cached.data;
 
   try {
-    const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/derivatives`
-    );
-    
+    const response = await fetchWithTimeout(`${COINGECKO_BASE}/derivatives`);
+
     if (!response.ok) {
-      throw new MarketDataError('Failed to fetch derivatives tickers', response.status);
+      throw new MarketDataError(
+        "Failed to fetch derivatives tickers",
+        response.status,
+      );
     }
-    
+
     const data: DerivativeTicker[] = await response.json();
     setCache(cacheKey, data, CACHE_TTL.tickers);
     return data;
   } catch (error) {
-    console.error('Error fetching derivatives tickers:', error);
+    console.error("Error fetching derivatives tickers:", error);
     return [];
   }
 }
@@ -2116,51 +2266,63 @@ export async function getDerivativesTickers(): Promise<DerivativeTicker[]> {
 // =============================================================================
 
 export function formatPrice(price: number | string | null | undefined): string {
-  if (price == null) return '$0.00';
-  const p = typeof price === 'string' ? parseFloat(price) : price;
-  if (typeof p !== 'number' || !isFinite(p)) return '$0.00';
+  if (price == null) return "$0.00";
+  const p = typeof price === "string" ? parseFloat(price) : price;
+  if (typeof p !== "number" || !isFinite(p)) return "$0.00";
   if (p >= 1000) {
-    return '$' + p.toLocaleString('en-US', { maximumFractionDigits: 0 });
+    return "$" + p.toLocaleString("en-US", { maximumFractionDigits: 0 });
   }
   if (p >= 1) {
-    return '$' + p.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    return (
+      "$" +
+      p.toLocaleString("en-US", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      })
+    );
   }
-  return '$' + p.toLocaleString('en-US', { minimumFractionDigits: 4, maximumFractionDigits: 6 });
+  return (
+    "$" +
+    p.toLocaleString("en-US", {
+      minimumFractionDigits: 4,
+      maximumFractionDigits: 6,
+    })
+  );
 }
 
 export function formatNumber(num: number | string | null | undefined): string {
-  if (num == null) return '0';
-  const n = typeof num === 'string' ? parseFloat(num) : num;
-  if (typeof n !== 'number' || !isFinite(n)) return '0';
-  if (n >= 1e12) return (n / 1e12).toFixed(2) + 'T';
-  if (n >= 1e9) return (n / 1e9).toFixed(2) + 'B';
-  if (n >= 1e6) return (n / 1e6).toFixed(2) + 'M';
-  if (n >= 1e3) return (n / 1e3).toFixed(2) + 'K';
+  if (num == null) return "0";
+  const n = typeof num === "string" ? parseFloat(num) : num;
+  if (typeof n !== "number" || !isFinite(n)) return "0";
+  if (n >= 1e12) return (n / 1e12).toFixed(2) + "T";
+  if (n >= 1e9) return (n / 1e9).toFixed(2) + "B";
+  if (n >= 1e6) return (n / 1e6).toFixed(2) + "M";
+  if (n >= 1e3) return (n / 1e3).toFixed(2) + "K";
   return n.toFixed(2);
 }
 
 export function formatPercent(num: number | string | null | undefined): string {
-  if (num == null) return '0.00%';
-  const n = typeof num === 'string' ? parseFloat(num) : num;
-  if (typeof n !== 'number' || !isFinite(n)) return '0.00%';
-  const sign = n >= 0 ? '+' : '';
-  return sign + n.toFixed(2) + '%';
+  if (num == null) return "0.00%";
+  const n = typeof num === "string" ? parseFloat(num) : num;
+  if (typeof n !== "number" || !isFinite(n)) return "0.00%";
+  const sign = n >= 0 ? "+" : "";
+  return sign + n.toFixed(2) + "%";
 }
 
 export function getFearGreedColor(value: number): string {
-  if (value <= 25) return 'text-red-500';
-  if (value <= 45) return 'text-orange-500';
-  if (value <= 55) return 'text-yellow-500';
-  if (value <= 75) return 'text-lime-500';
-  return 'text-green-500';
+  if (value <= 25) return "text-red-500";
+  if (value <= 45) return "text-orange-500";
+  if (value <= 55) return "text-yellow-500";
+  if (value <= 75) return "text-lime-500";
+  return "text-green-500";
 }
 
 export function getFearGreedBgColor(value: number): string {
-  if (value <= 25) return 'bg-red-500';
-  if (value <= 45) return 'bg-orange-500';
-  if (value <= 55) return 'bg-yellow-500';
-  if (value <= 75) return 'bg-lime-500';
-  return 'bg-green-500';
+  if (value <= 25) return "bg-red-500";
+  if (value <= 45) return "bg-orange-500";
+  if (value <= 55) return "bg-yellow-500";
+  if (value <= 75) return "bg-lime-500";
+  return "bg-green-500";
 }
 
 // =============================================================================
