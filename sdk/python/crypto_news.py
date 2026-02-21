@@ -44,6 +44,26 @@ COIN_PAIRS: Dict[str, str] = {
     "ETCUSD":  "Ethereum Classic",
 }
 
+# Graded sentiment scores shared by CryptoNews.get_coin_sentiment and helpers.
+# Maps API sentiment labels → score weight on the −1 … +1 axis.
+_SCORE_MAP: Dict[str, float] = {
+    "very_bullish": +1.0,
+    "bullish":      +0.5,
+    "neutral":       0.0,
+    "bearish":      -0.5,
+    "very_bearish": -1.0,
+}
+# 5-tier signal derived from score value (same vocabulary as the API).
+# Thresholds chosen so +0.5 (avg bullish article) → "bullish" etc.
+_SCORE_SIGNAL_TIERS = [
+    ( 0.5,  "very_bullish"),
+    ( 0.15, "bullish"),
+    (-0.15, "neutral"),
+    (-0.5,  "bearish"),
+    (-999,  "very_bearish"),
+]
+
+
 class CryptoNews:
     """Free Crypto News API client."""
     
@@ -188,13 +208,14 @@ class CryptoNews:
                   "BTCUSD": {
                     "keyword":    "Bitcoin",
                     "articles":   25,
-                    "pos":        64.0,    # % bullish titles
-                    "mid":        20.0,    # % neutral titles
-                    "neg":        16.0,    # % bearish titles
-                    "score":      0.54,    # weighted score −1.0 (bear) → +1.0 (bull)
-                    "signal":     "bullish",
-                    "confidence": 43.2,    # 0–100; penalised by low volume & thin margin
-                    "tradeable":  True,    # False when evidence is too thin to act on
+                    "pos":        64.0,       # % titles classified bullish/very_bullish
+                    "mid":        20.0,       # % titles classified neutral
+                    "neg":        16.0,       # % titles classified bearish/very_bearish
+                    "score":      0.54,       # weighted average: −1.0 (bear) … +1.0 (bull)
+                    "signal":     "bullish",  # 5-tier: very_bullish/bullish/neutral/bearish/very_bearish
+                    "confidence": 43.2,       # 0–100; penalised by low volume & thin margin
+                    "tradeable":  True,       # False when evidence is too thin to act on
+                    "reason":     "",         # non-empty string explaining suppression when tradeable=False
                   },
                   ...
                 }
@@ -219,6 +240,24 @@ class CryptoNews:
         ``bearish=−0.5``, ``very_bearish=−1``) so strong signals outweigh mild
         ones and the result is normalised to the −1 … +1 range.
 
+        Signal derivation
+        -----------------
+        ``signal`` is derived from ``score`` (not raw bucket counts), giving 5
+        tiers that match the API's own vocabulary:
+
+        +--------+---------------+
+        | score  | signal        |
+        +========+===============+
+        |  ≥ 0.5 | very_bullish  |
+        | ≥ 0.15 | bullish       |
+        | > −0.15| neutral       |
+        | > −0.5 | bearish       |
+        | ≤ −0.5 | very_bearish  |
+        +--------+---------------+
+
+        ``reason`` is set to a human-readable string whenever
+        ``tradeable=False``, and is an empty string otherwise.
+
         Example::
 
             news = CryptoNews()
@@ -236,14 +275,6 @@ class CryptoNews:
         if coins is None:
             coins = COIN_PAIRS
 
-        # Graded weights: very_bullish → +1, bullish → +0.5, neutral → 0, etc.
-        _SCORE_MAP: Dict[str, float] = {
-            "very_bullish": +1.0,
-            "bullish":      +0.5,
-            "neutral":       0.0,
-            "bearish":      -0.5,
-            "very_bearish": -1.0,
-        }
         _BULLISH = {"very_bullish", "bullish"}
         _BEARISH = {"very_bearish", "bearish"}
 
@@ -261,6 +292,7 @@ class CryptoNews:
                         "pos": 0.0, "mid": 0.0, "neg": 0.0,
                         "score": 0.0, "signal": "neutral",
                         "confidence": 0.0, "tradeable": False,
+                        "reason": "no articles found",
                     }
                     continue
 
@@ -273,31 +305,43 @@ class CryptoNews:
                 mid_pct = mid * 100 / total
                 neg_pct = neg * 100 / total
 
-                # --- Dominant signal ---
-                pcts = {"bullish": pos_pct, "neutral": mid_pct, "bearish": neg_pct}
-                signal = max(pcts, key=lambda k: pcts[k])
-
-                # --- Weighted score (−1 … +1) ---
+                # --- Weighted score (−1 … +1, module-level _SCORE_MAP) ---
                 raw_score = sum(
                     _SCORE_MAP.get(a.get("sentiment", "neutral"), 0.0)
                     for a in articles
                 )
                 score = round(raw_score / total, 4)
 
+                # --- 5-tier signal derived from score ---
+                # Aligns with the API's own vocabulary; more nuanced than 3-bucket.
+                signal = next(
+                    label for threshold, label in _SCORE_SIGNAL_TIERS
+                    if score >= threshold
+                )
+
                 # --- Confidence weighting ---
                 # 1. Volume weight: 0 → 1 as article count grows toward min_articles
                 volume_weight = min(total / max(min_articles, 1), 1.0)
 
-                # 2. Margin weight: how decisive is the dominant bucket?
-                dominant_pct = pcts[signal]
-                second_pct   = sorted(pcts.values())[-2]          # second-highest
-                margin_weight = max(dominant_pct - second_pct, 0.0) / 100.0
+                # 2. Margin weight: gap between largest and second-largest pct bucket.
+                pct_vals = sorted([pos_pct, mid_pct, neg_pct], reverse=True)
+                margin_weight = max(pct_vals[0] - pct_vals[1], 0.0) / 100.0
 
                 confidence = round(volume_weight * margin_weight * 100, 1)
 
-                # --- Tradeable gate ---
+                # --- Tradeable gate + reason ---
                 # Suppresses signals with thin evidence or a razor-thin margin.
-                tradeable = (total >= min_articles) and (confidence >= min_confidence)
+                reasons: List[str] = []
+                if total < min_articles:
+                    reasons.append(
+                        f"only {total} article{'s' if total != 1 else ''} found (min {min_articles})"
+                    )
+                if confidence < min_confidence:
+                    reasons.append(
+                        f"confidence {confidence:.1f} below threshold {min_confidence:.1f}"
+                    )
+                tradeable = len(reasons) == 0
+                reason = "; ".join(reasons)
 
                 results[pair] = {
                     "keyword":    keyword,
@@ -309,6 +353,7 @@ class CryptoNews:
                     "signal":     signal,
                     "confidence": confidence,
                     "tradeable":  tradeable,
+                    "reason":     reason,
                 }
 
             except Exception as e:
@@ -318,7 +363,7 @@ class CryptoNews:
                     "pos": 0.0, "mid": 0.0, "neg": 0.0,
                     "score": 0.0, "signal": "error",
                     "confidence": 0.0, "tradeable": False,
-                    "error": str(e),
+                    "reason": str(e),
                 }
 
         return results
@@ -390,12 +435,23 @@ if __name__ == "__main__":
     )
     for pair, data in sentiment.items():
         if data.get("articles", 0) == 0:
-            print(f"  {pair:<10} {data['keyword']:<20}  (no articles fetched)")
+            print(f"  {pair:<10} {data['keyword']:<20}  (no articles found)")
             continue
-        arrow = "🟢" if data["signal"] == "bullish" else "🔴" if data["signal"] == "bearish" else "⚪"
+        sig = data["signal"]
+        if "very_bullish" in sig:
+            arrow = "🟢🟢"
+        elif "bullish" in sig:
+            arrow = "🟢  "
+        elif "very_bearish" in sig:
+            arrow = "🔴🔴"
+        elif "bearish" in sig:
+            arrow = "🔴  "
+        else:
+            arrow = "⚪  "
         trade_flag = "✅ YES" if data["tradeable"] else "🚫 NO "
+        reason_str = f"  ({data['reason']})" if data.get("reason") else ""
         print(
-            f"  {pair:<10} {data['keyword']:<20} {arrow} {data['signal']:<8}"
-            f"  {data['pos']:5.1f}%  {data['mid']:5.1f}%  {data['neg']:5.1f}%"
-            f"  {data['score']:+.3f}  {data['confidence']:5.1f}  {data['articles']:4d}   {trade_flag}"
+            f"  {pair:<10} {data['keyword']:<20} {arrow} {sig:<14}"
+            f"  pos={data['pos']:5.1f}%  mid={data['mid']:5.1f}%  neg={data['neg']:5.1f}%"
+            f"  score={data['score']:+.3f}  conf={data['confidence']:5.1f}  n={data['articles']:3d}   {trade_flag}{reason_str}"
         )
