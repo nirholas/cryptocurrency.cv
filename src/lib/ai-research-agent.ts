@@ -159,10 +159,10 @@ Return JSON:
 ${priceContext}${marketContext}
 
 Recent Headlines (${headlines.length} total):
-${headlines.slice(0, 30).map((h, i) => `${i + 1}. ${h}`).join('\n')}
+${headlines.slice(0, 60).map((h, i) => `${i + 1}. ${h}`).join('\n')}
 
 Generate a comprehensive research report on this topic.`,
-    { maxTokens: 3000, temperature: 0.4 }
+    { maxTokens: 4096, temperature: 0.4 }
   );
 
   return {

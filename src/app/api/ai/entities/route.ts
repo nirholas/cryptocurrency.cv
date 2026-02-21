@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { aiComplete, getAIConfigOrNull } from '@/lib/ai-provider';
 
 export const runtime = 'edge';
 
@@ -13,8 +14,6 @@ interface ExtractRequest {
   text: string;
   types?: Entity['type'][];
 }
-
-const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
 // Common crypto entities for pattern matching fallback
 const CRYPTO_PATTERNS = {
@@ -51,7 +50,7 @@ export async function POST(request: NextRequest) {
     // Try AI extraction first, fallback to pattern matching
     let entities: Entity[] = [];
     
-    if (GROQ_API_KEY) {
+    if (getAIConfigOrNull(true)) {
       entities = await extractWithAI(text, types);
     }
     
@@ -89,19 +88,7 @@ async function extractWithAI(text: string, types?: Entity['type'][]): Promise<En
     ? `Focus on these entity types: ${types.join(', ')}.` 
     : '';
 
-  try {
-    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${GROQ_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'llama-3.3-70b-versatile',
-        messages: [
-          {
-            role: 'system',
-            content: `You are an entity extraction system specialized in cryptocurrency and financial news. Extract entities from the text and return them as a JSON array.
+  const systemPrompt = `You are an entity extraction system specialized in cryptocurrency and financial news. Extract entities from the text and return them as a JSON array.
 
 Entity types:
 - person: Names of people (CEOs, founders, regulators, etc.)
@@ -121,24 +108,13 @@ Return ONLY a JSON array with objects containing:
 - confidence: 0.0-1.0 confidence score
 - context: brief context from the text (optional)
 
-Example: [{"type":"person","value":"Gary Gensler","confidence":0.95,"context":"SEC Chair"}]`,
-          },
-          {
-            role: 'user',
-            content: text.slice(0, 4000),
-          },
-        ],
-        max_tokens: 1000,
-        temperature: 0.1,
-      }),
-    });
+Example: [{"type":"person","value":"Gary Gensler","confidence":0.95,"context":"SEC Chair"}]`;
 
-    if (!response.ok) {
-      return [];
-    }
-
-    const data = await response.json();
-    const content = data.choices?.[0]?.message?.content || '';
+  try {
+    const content = await aiComplete(systemPrompt, text.slice(0, 4000), {
+      maxTokens: 1000,
+      temperature: 0.1,
+    }, true /* preferGroq */);
     
     // Parse JSON from response
     const jsonMatch = content.match(/\[[\s\S]*\]/);

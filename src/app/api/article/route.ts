@@ -1,7 +1,5 @@
 import { NextResponse } from 'next/server';
-
-const GROQ_API_KEY = process.env.GROQ_API_KEY;
-const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
+import { aiComplete, getAIConfigOrNull } from '@/lib/ai-provider';
 
 interface ArticleContent {
   url: string;
@@ -12,6 +10,9 @@ interface ArticleContent {
   keyPoints: string[];
   sentiment: 'bullish' | 'bearish' | 'neutral';
   fetchedAt: string;
+  /** Pre-generated translated summaries keyed by locale code (e.g. "zh-CN", "ja").
+   *  Populated by the translate-archive script; empty object when not yet generated. */
+  translations: Record<string, string>;
 }
 
 /**
@@ -75,8 +76,8 @@ async function analyzeWithGroq(content: string, title: string, source: string): 
   keyPoints: string[];
   sentiment: 'bullish' | 'bearish' | 'neutral';
 }> {
-  if (!GROQ_API_KEY) {
-    // Fallback without Groq
+  if (!getAIConfigOrNull(true)) {
+    // Fallback without AI provider
     return {
       summary: content.slice(0, 500) + '...',
       keyPoints: ['Full content extracted from source'],
@@ -84,7 +85,8 @@ async function analyzeWithGroq(content: string, title: string, source: string): 
     };
   }
 
-  const prompt = `You are a crypto news analyst. Analyze this article and provide:
+  const systemPrompt = 'You are a crypto news analyst. Analyze articles and respond only with valid JSON.';
+  const userPrompt = `Analyze this article and provide:
 1. A clear, informative summary (2-3 paragraphs)
 2. 3-5 key points/takeaways as bullet points
 3. Market sentiment: bullish, bearish, or neutral
@@ -103,42 +105,20 @@ Respond in this exact JSON format:
 }`;
 
   try {
-    const response = await fetch(GROQ_API_URL, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${GROQ_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'llama-3.3-70b-versatile',
-        messages: [
-          {
-            role: 'user',
-            content: prompt,
-          },
-        ],
-        temperature: 0.3,
-        max_tokens: 1000,
-        response_format: { type: 'json_object' },
-      }),
-    });
+    const raw = await aiComplete(systemPrompt, userPrompt, {
+      temperature: 0.3,
+      maxTokens: 1000,
+      jsonMode: true,
+    }, true /* preferGroq */);
 
-    if (!response.ok) {
-      const error = await response.text();
-      console.error('Groq API error:', error);
-      throw new Error('Groq API failed');
-    }
-
-    const data = await response.json();
-    const result = JSON.parse(data.choices[0].message.content);
-
+    const result = JSON.parse(raw);
     return {
       summary: result.summary || content.slice(0, 500),
       keyPoints: result.keyPoints || [],
       sentiment: result.sentiment || 'neutral',
     };
   } catch (error) {
-    console.error('Groq analysis error:', error);
+    console.error('AI analysis error:', error);
     // Fallback
     return {
       summary: content.slice(0, 500) + '...',
@@ -177,6 +157,7 @@ export async function GET(request: Request) {
       keyPoints: analysis.keyPoints,
       sentiment: analysis.sentiment,
       fetchedAt: new Date().toISOString(),
+      translations: {}, // Populated offline by scripts/translate-archive.js
     };
 
     return NextResponse.json(articleContent, {

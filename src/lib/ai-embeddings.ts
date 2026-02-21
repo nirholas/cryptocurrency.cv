@@ -6,9 +6,13 @@
  * not configured so the module is always functional.
  */
 
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const EMBEDDING_MODEL = 'text-embedding-3-small';
 const EMBEDDING_DIMENSIONS = 1536;
+
+/** Read at call-time so tests and edge runtimes can set the env var dynamically. */
+function getApiKey(): string | undefined {
+  return process.env.OPENAI_API_KEY;
+}
 
 // --------------------------------------------------------------------------
 // Types
@@ -34,14 +38,14 @@ export interface ScoredDocument {
  * sparse fallback vector when no API key is available.
  */
 export async function generateEmbedding(text: string): Promise<number[]> {
-  if (!OPENAI_API_KEY) {
+  if (!getApiKey()) {
     return sparseEmbedding(text);
   }
 
   const response = await fetch('https://api.openai.com/v1/embeddings', {
     method: 'POST',
     headers: {
-      Authorization: `Bearer ${OPENAI_API_KEY}`,
+      Authorization: `Bearer ${getApiKey()}`,
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
@@ -66,7 +70,7 @@ export async function generateEmbedding(text: string): Promise<number[]> {
 export async function generateEmbeddings(
   texts: string[]
 ): Promise<number[][]> {
-  if (!OPENAI_API_KEY) {
+  if (!getApiKey()) {
     return texts.map(sparseEmbedding);
   }
 
@@ -80,7 +84,7 @@ export async function generateEmbeddings(
     const response = await fetch('https://api.openai.com/v1/embeddings', {
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${OPENAI_API_KEY}`,
+        Authorization: `Bearer ${getApiKey()}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({

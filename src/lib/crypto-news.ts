@@ -1083,12 +1083,25 @@ export interface NewsArticle {
   title: string;
   link: string;
   description?: string;
+  /** Pre-generated translated summaries keyed by locale code, e.g. "zh-CN", "ja" */
+  translations?: Record<string, string>;
   imageUrl?: string;
   pubDate: string;
   source: string;
   sourceKey: string;
   category: string;
   timeAgo: string;
+}
+
+/**
+ * Returns the best available description for an article given a locale.
+ * Prefers a pre-generated translation, then falls back to the original description.
+ */
+export function getLocalizedDescription(
+  article: Pick<NewsArticle, 'description' | 'translations'>,
+  locale: string,
+): string | undefined {
+  return article.translations?.[locale] ?? article.description;
 }
 
 export interface NewsResponse {

@@ -50,6 +50,76 @@ interface Props {
 
 const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || "https://cryptocurrency.cv";
 
+// Map common tickers to CoinGecko IDs for live price lookup
+const TICKER_TO_COINGECKO: Record<string, string> = {
+  BTC: "bitcoin",
+  ETH: "ethereum",
+  SOL: "solana",
+  BNB: "binancecoin",
+  XRP: "ripple",
+  ADA: "cardano",
+  DOGE: "dogecoin",
+  AVAX: "avalanche-2",
+  LINK: "chainlink",
+  DOT: "polkadot",
+  MATIC: "matic-network",
+  UNI: "uniswap",
+  ATOM: "cosmos",
+  LTC: "litecoin",
+  SHIB: "shiba-inu",
+  TON: "the-open-network",
+  SUI: "sui",
+  APT: "aptos",
+  ARB: "arbitrum",
+  OP: "optimism",
+};
+
+/**
+ * Map archive sentiment labels to OG image sentiment keys.
+ */
+function toOgSentiment(
+  label: string | undefined,
+): string {
+  switch (label) {
+    case "very_positive":
+      return "very_bullish";
+    case "positive":
+      return "bullish";
+    case "very_negative":
+      return "very_bearish";
+    case "negative":
+      return "bearish";
+    default:
+      return "neutral";
+  }
+}
+
+/**
+ * Fetch 24-hour price change for the primary ticker from /api/prices.
+ * Returns a formatted string like "BTC +2.3%" or "" on failure.
+ */
+async function fetchPriceChange(ticker: string): Promise<string> {
+  const coinId = TICKER_TO_COINGECKO[ticker.toUpperCase()];
+  if (!coinId) return "";
+  try {
+    const res = await fetch(
+      `${BASE_URL}/api/prices?coins=${coinId}`,
+      { signal: AbortSignal.timeout(2000), next: { revalidate: 120 } },
+    );
+    if (!res.ok) return "";
+    const data = (await res.json()) as Record<
+      string,
+      { usd?: number; usd_24h_change?: number }
+    >;
+    const change = data[coinId]?.usd_24h_change;
+    if (change == null) return "";
+    const sign = change >= 0 ? "+" : "";
+    return `${ticker.toUpperCase()} ${sign}${change.toFixed(1)}%`;
+  } catch {
+    return "";
+  }
+}
+
 // Enable on-demand ISR for articles not pre-rendered
 export const dynamicParams = true;
 
@@ -76,7 +146,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const canonicalUrl = `${BASE_URL}/en/article/${id}`;
 
-  // Generate dynamic OG image URL for viral sharing
+  // ── AI-enriched OG image ─────────────────────────────────────────────────
   const pubDate = article.pub_date || article.first_seen;
   const formattedDate = pubDate
     ? new Date(pubDate).toLocaleDateString("en-US", {
@@ -85,7 +155,32 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         year: "numeric",
       })
     : "";
-  const ogImageUrl = `${BASE_URL}/api/og?title=${encodeURIComponent(article.title)}&source=${encodeURIComponent(article.source)}&date=${encodeURIComponent(formattedDate)}`;
+
+  // Derive sentiment label for the OG image
+  const ogSentiment = toOgSentiment(article.sentiment?.label);
+
+  // Fetch live 24h price change for the primary ticker (best-effort, 2 s timeout)
+  const primaryTicker = article.tickers?.[0] ?? "";
+  const priceChange = primaryTicker
+    ? await fetchPriceChange(primaryTicker)
+    : "";
+
+  // Collect top-3 tags (tickers first, then article tags)
+  const ogTags = [...(article.tickers ?? []), ...(article.tags ?? "")]
+    .filter(Boolean)
+    .slice(0, 3)
+    .join(",");
+
+  const ogParams = new URLSearchParams({
+    title: article.title,
+    source: article.source,
+    date: formattedDate,
+    sentiment: ogSentiment,
+    ...(priceChange && { price_change: priceChange }),
+    ...(ogTags && { tags: ogTags }),
+  });
+  const ogImageUrl = `${BASE_URL}/api/og?${ogParams.toString()}`;
+  // ─────────────────────────────────────────────────────────────────────────
 
   return {
     title: article.title,

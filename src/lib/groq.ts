@@ -13,14 +13,14 @@ import { aiCache, generateCacheKey, withCache } from './cache';
 const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
 const DEFAULT_MODEL = 'llama-3.3-70b-versatile';
 
-// Cache TTLs (in seconds)
+// Cache TTLs (in seconds) — short TTLs since we have unlimited AI credits
 const CACHE_TTL = {
-  summarize: 300,    // 5 minutes
-  sentiment: 300,    // 5 minutes  
-  entities: 600,     // 10 minutes
-  digest: 900,       // 15 minutes
-  narratives: 600,   // 10 minutes
-  default: 180,      // 3 minutes
+  summarize: 60,     // 1 minute
+  sentiment: 60,     // 1 minute
+  entities: 120,     // 2 minutes
+  digest: 120,       // 2 minutes
+  narratives: 120,   // 2 minutes
+  default: 60,       // 1 minute
 };
 
 export interface GroqMessage {

@@ -28,6 +28,10 @@
     {
       "path": "/api/cron/tag-scores",
       "schedule": "0 */6 * * *"
+    },
+    {
+      "path": "/api/cron/enrich-articles",
+      "schedule": "*/5 * * * *"
     }
   ],
   "functions": {
@@ -50,6 +54,9 @@
       "maxDuration": 120
     },
     "src/app/api/cron/tag-scores/route.ts": {
+      "maxDuration": 60
+    },
+    "src/app/api/cron/enrich-articles/route.ts": {
       "maxDuration": 60
     }
   }

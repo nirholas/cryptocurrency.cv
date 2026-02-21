@@ -6,6 +6,7 @@ import { validateQuery } from '@/lib/validation-middleware';
 import { newsQuerySchema } from '@/lib/schemas';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
+import { getBulkEnrichment } from '@/lib/article-enrichment';
 
 export const runtime = 'edge';
 export const revalidate = 60; // 1 minute for fresher content
@@ -32,6 +33,7 @@ export async function GET(request: NextRequest) {
   }
   
   const { limit, source, category, from, to, page, per_page, lang } = validation.data;
+  const sort = request.nextUrl.searchParams.get('sort'); // 'impact' → sort by AI impact score
   
   // Validate language parameter (additional check beyond schema)
   if (lang !== 'en' && !isLanguageSupported(lang)) {
@@ -48,6 +50,26 @@ export async function GET(request: NextRequest) {
     // Translate articles if language is not English
     let articles = data.articles;
     let translatedLang = 'en';
+
+    // Attach AI enrichment (non-blocking — skip silently if KV unavailable)
+    try {
+      const enrichmentMap = await getBulkEnrichment(articles.map(a => a.link));
+      articles = articles.map(a => {
+        const ai = enrichmentMap.get(a.link);
+        return ai ? { ...a, ai } : a;
+      });
+
+      // Optional sort by AI impact score (highest first)
+      if (sort === 'impact') {
+        articles = [...articles].sort((a, b) => {
+          const sa = (a as { ai?: { impactScore?: number } }).ai?.impactScore ?? -1;
+          const sb = (b as { ai?: { impactScore?: number } }).ai?.impactScore ?? -1;
+          return sb - sa;
+        });
+      }
+    } catch {
+      // Enrichment is best-effort — continue without it
+    }
     
     if (lang !== 'en' && articles.length > 0) {
       try {

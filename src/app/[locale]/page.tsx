@@ -31,6 +31,7 @@ import { WhaleActivityFeed } from "@/components/WhaleActivityFeed";
 import { LiveNewsTicker } from "@/components/LiveNewsTicker";
 import { AskAboutThis } from "@/components/AskAboutThis";
 import { AIFlashBrief } from "@/components/AIFlashBrief";
+import { AITopicDigest } from "@/components/AITopicDigest";
 import { TrendingTopicsLive } from "@/components/TrendingTopicsLive";
 import MarketStats from "@/components/MarketStats";
 import { PredictionPoll } from "@/components/PredictionPoll";
@@ -38,6 +39,7 @@ import { NewsletterSignup } from "@/components/sidebar";
 import {
   getHomepageNews,
   getSourceCount,
+  getLocalizedDescription,
   type NewsResponse,
 } from "@/lib/crypto-news";
 import { clusterSimilarArticles } from "@/lib/ai-intelligence";
@@ -117,7 +119,10 @@ export default async function Home({ params }: Props) {
       <WebsiteStructuredData />
       <OrganizationStructuredData />
       <NewsListStructuredData
-        articles={newsData.articles.slice(0, 20)}
+        articles={newsData.articles.slice(0, 20).map(a => ({
+          ...a,
+          description: getLocalizedDescription(a, locale) ?? a.description,
+        }))}
         listName="Latest Crypto News"
       />
 
@@ -321,6 +326,14 @@ export default async function Home({ params }: Props) {
           aria-label="Flash briefing"
         >
           <AIFlashBrief />
+        </section>
+
+        {/* 9b. AI Topic Digest */}
+        <section
+          className="px-4 sm:px-6 lg:px-8 mb-8"
+          aria-label="AI topic digest"
+        >
+          <AITopicDigest />
         </section>
 
         {/* 10. Market Intelligence Signals */}

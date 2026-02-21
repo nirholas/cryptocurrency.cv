@@ -267,7 +267,7 @@ export async function POST(request: NextRequest) {
       }, { status: 400 });
     }
     
-    const mockArticle = {
+    const article = {
       title,
       description: description || '',
       link: '',
@@ -277,8 +277,8 @@ export async function POST(request: NextRequest) {
       category: 'general',
       timeAgo: 'just now'
     } as NewsArticle;
-    
-    const result = findOriginalSources(mockArticle);
+
+    const result = findOriginalSources(article);
     
     return NextResponse.json({
       success: true,

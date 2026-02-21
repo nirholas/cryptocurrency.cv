@@ -8,6 +8,7 @@
 import { MetadataRoute } from 'next';
 import { getAllSlugs, CATEGORIES } from '@/lib/blog';
 import { getAllTags } from '@/lib/tags';
+import { loadTagScoresFromFile } from '@/lib/tagScoring';
 import { SITE_URL } from '@/lib/constants';
 
 // Supported locales

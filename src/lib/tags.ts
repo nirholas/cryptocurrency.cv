@@ -147,7 +147,7 @@ export const TAGS: Record<string, Tag> = {
     icon: '⛏️',
     category: 'topic',
     keywords: ['mining', 'miner', 'hashrate', 'hash rate', 'asic', 'difficulty'],
-    relatedTags: ['bitcoin', 'energy', 'hardware'],
+    relatedTags: ['bitcoin', 'halving'],
     priority: 70,
   },
   'staking': {
@@ -255,7 +255,7 @@ export const TAGS: Record<string, Tag> = {
     icon: '⚖️',
     category: 'topic',
     keywords: ['regulation', 'regulatory', 'compliance', 'law', 'legal', 'legislation', 'policy'],
-    relatedTags: ['sec', 'cftc', 'institutional'],
+    relatedTags: ['sec', 'institutional'],
     priority: 90,
   },
   'sec': {
@@ -309,7 +309,7 @@ export const TAGS: Record<string, Tag> = {
     icon: '🤖',
     category: 'technology',
     keywords: ['ai', 'artificial intelligence', 'machine learning', 'ai token', 'fetch', 'ocean', 'singularity'],
-    relatedTags: ['defi', 'technology'],
+    relatedTags: ['defi'],
     priority: 80,
   },
   'privacy': {
@@ -815,7 +815,7 @@ export const TAGS: Record<string, Tag> = {
     icon: '🌐',
     category: 'topic',
     keywords: ['depin', 'physical infrastructure', 'iot', 'filecoin', 'helium', 'render'],
-    relatedTags: ['ai-crypto', 'web3'],
+    relatedTags: ['ai-crypto'],
     priority: 70,
   },
   'sanctions': {

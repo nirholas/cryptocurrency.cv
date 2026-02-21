@@ -6,7 +6,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations as _getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -19,7 +19,7 @@ import {
   extractTagsFromArticle,
   type Tag 
 } from '@/lib/tags';
-import { fetchNews, type NewsArticle } from '@/lib/crypto-news';
+import { fetchNews, getLocalizedDescription, type NewsArticle } from '@/lib/crypto-news';
 import { BreadcrumbStructuredData } from '@/components/StructuredData';
 import { SITE_URL } from '@/lib/constants';
 
@@ -60,6 +60,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     'crypto news',
     'cryptocurrency news',
   ].join(', ');
+
+  // ── Dynamic OG image ───────────────────────────────────────────────────
+  // Fetch a small batch of articles to compute article count for the tag.
+  let articleCount = '';
+  try {
+    const response = await fetchNews(50);
+    const count = response.articles.filter((article) => {
+      const articleTags = extractTagsFromArticle(article);
+      return articleTags.some((t) => t.slug === tag.slug);
+    }).length;
+    if (count > 0) articleCount = String(count);
+  } catch {
+    // Non-blocking – proceed without count
+  }
+
+  const ogParams = new URLSearchParams({
+    tag: tag.name,
+    ...(articleCount && { count: articleCount }),
+  });
+  const ogImageUrl = `${SITE_URL}/api/og?${ogParams.toString()}`;
+  // ───────────────────────────────────────────────────────────────────────
   
   return {
     title: `${tag.name} Crypto News | Latest ${tag.name} Updates`,
@@ -70,11 +91,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: tag.description,
       type: 'website',
       url: `/tags/${tag.slug}`,
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: `${tag.name} Crypto News`,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${tag.name} Crypto News`,
       description: tag.description,
+      images: [ogImageUrl],
     },
     alternates: {
       canonical: `/tags/${tag.slug}`,
@@ -93,7 +123,8 @@ async function getArticlesForTag(tag: Tag): Promise<NewsArticle[]> {
   });
 }
 
-function ArticleCard({ article }: { article: NewsArticle }) {
+function ArticleCard({ article, locale }: { article: NewsArticle; locale: string }) {
+  const localizedDescription = getLocalizedDescription(article, locale);
   return (
     <article className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-5 hover:shadow-lg hover:border-primary/50 transition-all duration-200">
       <div className="flex items-start justify-between gap-4">
@@ -108,9 +139,9 @@ function ArticleCard({ article }: { article: NewsArticle }) {
               {article.title}
             </h2>
           </a>
-          {article.description && (
+          {localizedDescription && (
             <p className="text-sm text-gray-600 dark:text-slate-400 mt-2 line-clamp-2">
-              {article.description}
+              {localizedDescription}
             </p>
           )}
           <div className="flex items-center gap-3 mt-3 text-xs text-gray-500 dark:text-slate-500">
@@ -172,7 +203,8 @@ function TagInfo({ tag }: { tag: Tag }) {
 }
 
 export default async function TagPage({ params, searchParams }: PageProps) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
+  setRequestLocale(locale);
   const { page } = await searchParams;
   const tag = getTagBySlug(slug);
   
@@ -251,7 +283,7 @@ export default async function TagPage({ params, searchParams }: PageProps) {
               {articles.length > 0 ? (
                 <div className="space-y-4">
                   {articles.map((article, index) => (
-                    <ArticleCard key={`${article.link}-${index}`} article={article} />
+                    <ArticleCard key={`${article.link}-${index}`} article={article} locale={locale} />
                   ))}
                   
                   {/* Pagination */}

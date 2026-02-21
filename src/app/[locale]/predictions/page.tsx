@@ -3,6 +3,7 @@ import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PredictionsDashboard from './PredictionsDashboard';
+import PredictionTracker from '@/components/PredictionTracker';
 
 export const metadata: Metadata = {
   title: 'Price Predictions | Crypto Prediction Market',
@@ -64,6 +65,24 @@ export default async function PredictionsPage({ params }: Props) {
               <strong>4. Score:</strong> Earn points based on accuracy and confidence.
             </div>
           </div>
+        </div>
+
+        {/* AI Prediction Tracker */}
+        <section className="mb-10">
+          <PredictionTracker />
+        </section>
+
+        {/* Divider */}
+        <div className="border-t border-gray-200 dark:border-gray-800 mb-8" />
+
+        {/* User Predictions Leaderboard */}
+        <div className="mb-4">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+            🎱 Community Predictions
+          </h2>
+          <p className="text-gray-600 dark:text-slate-400 text-sm">
+            Make your own crypto price predictions and compete on the leaderboard.
+          </p>
         </div>
 
         <PredictionsDashboard />

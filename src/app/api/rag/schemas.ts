@@ -34,7 +34,7 @@ export const AskRequestSchema = z.object({
   query: z.string().min(1, 'Query is required').max(2000, 'Query too long (max 2000 chars)'),
   options: z.object({
     // Core settings
-    limit: z.number().int().min(1).max(50).default(10).optional(),
+    limit: z.number().int().min(1).max(50).default(25).optional(),
     similarityThreshold: z.number().min(0).max(1).default(0.5).optional(),
 
     // Feature toggles

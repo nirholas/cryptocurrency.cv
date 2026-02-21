@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 interface FearGreedCurrent {
@@ -34,6 +34,18 @@ interface MarketSignalsData {
   signals: TradingSignal[];
   liquidations: LiquidationTotals | null;
   topLiquidation: LiquidationEvent | null;
+}
+
+interface PerSignalExplanation {
+  signal_id: string;
+  explanation: string;
+}
+
+interface NarrativeData {
+  narrative: string;
+  per_signal: PerSignalExplanation[];
+  generated_at: string;
+  model_used: string;
 }
 
 function formatUsd(value: number): string {
@@ -76,10 +88,82 @@ function FearGreedGauge({ value, classification }: { value: number; classificati
   );
 }
 
+function timeSince(isoString: string): string {
+  const diffMs = Date.now() - new Date(isoString).getTime();
+  const mins = Math.floor(diffMs / 60_000);
+  if (mins < 1) return 'just now';
+  if (mins === 1) return '1 minute ago';
+  if (mins < 60) return `${mins} minutes ago`;
+  const hrs = Math.floor(mins / 60);
+  return hrs === 1 ? '1 hour ago' : `${hrs} hours ago`;
+}
+
+function SignalRow({
+  sig,
+  explanation,
+}: {
+  sig: TradingSignal;
+  explanation?: string;
+}) {
+  const cfg = signalConfig[sig.signal] || signalConfig.hold;
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    function onOutside(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    }
+    document.addEventListener('mousedown', onOutside);
+    return () => document.removeEventListener('mousedown', onOutside);
+  }, [open]);
+
+  return (
+    <div
+      ref={ref}
+      className="relative flex items-center justify-between"
+      onMouseEnter={() => explanation && setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <div className="flex items-center gap-2">
+        <span className="font-bold text-sm text-gray-900 dark:text-white">{sig.ticker}</span>
+        <span className={`text-xs px-2 py-0.5 rounded-full font-semibold ${cfg.bg} ${cfg.color}`}>
+          {cfg.label}
+        </span>
+        {explanation && (
+          <button
+            className="text-gray-400 dark:text-slate-500 hover:text-brand-500 transition-colors"
+            onClick={() => setOpen(v => !v)}
+            aria-label={`AI explanation for ${sig.ticker}`}
+            type="button"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5">
+              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clipRule="evenodd" />
+            </svg>
+          </button>
+        )}
+      </div>
+      <span className="text-xs text-gray-500 dark:text-slate-400">{sig.confidence}%</span>
+
+      {open && explanation && (
+        <div className="absolute z-20 bottom-full left-0 mb-2 w-64 max-w-xs rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-600 shadow-xl p-3 text-xs text-gray-700 dark:text-slate-300 leading-relaxed">
+          <span className="inline-flex items-center gap-1 text-brand-500 font-semibold mb-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3 h-3"><path d="M10 2a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 2zM10 15a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 15z" /><path fillRule="evenodd" d="M10 5a5 5 0 100 10A5 5 0 0010 5zm-3 5a3 3 0 116 0 3 3 0 01-6 0z" clipRule="evenodd" /></svg>
+            AI insight
+          </span>
+          <p>{explanation}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function MarketSignals() {
   const [data, setData] = useState<MarketSignalsData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [narrativeData, setNarrativeData] = useState<NarrativeData | null>(null);
+  const [narrativeLoading, setNarrativeLoading] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -107,6 +191,29 @@ export function MarketSignals() {
     }
     fetchData();
   }, []);
+
+  // Fetch AI narrative once signals are available
+  useEffect(() => {
+    if (!data?.signals || data.signals.length === 0) return;
+    let cancelled = false;
+    async function fetchNarrative() {
+      setNarrativeLoading(true);
+      try {
+        const encoded = encodeURIComponent(JSON.stringify(data!.signals));
+        const url = `/api/signals/narrative?signals=${encoded}`;
+        const res = await fetch(url).catch(() => null);
+        if (!res || !res.ok || cancelled) return;
+        const json: NarrativeData = await res.json();
+        if (!cancelled) setNarrativeData(json);
+      } catch {
+        // silently hide
+      } finally {
+        if (!cancelled) setNarrativeLoading(false);
+      }
+    }
+    fetchNarrative();
+    return () => { cancelled = true; };
+  }, [data?.signals]);
 
   if (loading) {
     return (
@@ -159,17 +266,11 @@ export function MarketSignals() {
           {data.signals.length > 0 ? (
             <div className="space-y-3">
               {data.signals.map((sig, i) => {
-                const cfg = signalConfig[sig.signal] || signalConfig.hold;
+                const explanation = narrativeData?.per_signal.find(
+                  p => p.signal_id === sig.ticker
+                )?.explanation;
                 return (
-                  <div key={i} className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="font-bold text-sm text-gray-900 dark:text-white">{sig.ticker}</span>
-                      <span className={`text-xs px-2 py-0.5 rounded-full font-semibold ${cfg.bg} ${cfg.color}`}>
-                        {cfg.label}
-                      </span>
-                    </div>
-                    <span className="text-xs text-gray-500 dark:text-slate-400">{sig.confidence}%</span>
-                  </div>
+                  <SignalRow key={i} sig={sig} explanation={explanation} />
                 );
               })}
             </div>
@@ -210,6 +311,35 @@ export function MarketSignals() {
           )}
         </Link>
       </div>
+
+      {/* AI Narrative */}
+      {narrativeLoading && (
+        <div className="mt-5 rounded-2xl border border-gray-100 dark:border-slate-700 bg-white dark:bg-slate-800 p-5 animate-pulse">
+          <div className="h-4 w-20 bg-gray-200 dark:bg-slate-700 rounded mb-3" />
+          <div className="space-y-2">
+            <div className="h-3 bg-gray-100 dark:bg-slate-700/60 rounded w-full" />
+            <div className="h-3 bg-gray-100 dark:bg-slate-700/60 rounded w-5/6" />
+            <div className="h-3 bg-gray-100 dark:bg-slate-700/60 rounded w-4/6" />
+          </div>
+        </div>
+      )}
+
+      {!narrativeLoading && narrativeData && (
+        <div className="mt-5 rounded-2xl border border-brand-200 dark:border-brand-800/50 bg-brand-50/60 dark:bg-brand-900/10 p-5">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-brand-500 text-white">
+              AI
+            </span>
+            <span className="text-sm font-semibold text-gray-800 dark:text-slate-200">Market Narrative</span>
+            <span className="ml-auto text-xs text-gray-400 dark:text-slate-500">
+              Refreshed {timeSince(narrativeData.generated_at)}
+            </span>
+          </div>
+          <blockquote className="text-sm text-gray-700 dark:text-slate-300 leading-relaxed border-l-2 border-brand-400 dark:border-brand-600 pl-3 italic">
+            {narrativeData.narrative}
+          </blockquote>
+        </div>
+      )}
     </section>
   );
 }

@@ -1,8 +1,14 @@
 # free-crypto-news — Full LLM Reference
 
-> Free, real-time cryptocurrency news API aggregating 130+ sources. No API key required. REST JSON, RSS/Atom, WebSocket, AI analysis, historical archive. Open source (MIT). https://cryptocurrency.cv
+> Free, real-time cryptocurrency news API aggregating 130+ sources. No API key required.
+> REST JSON, RSS/Atom, WebSocket, AI analysis, historical archive, MCP server, ChatGPT plugin.
+> Open source (MIT). https://cryptocurrency.cv
 
-This document is the complete inline reference intended for AI assistants and LLMs. It contains full API documentation, usage examples, response schemas, and integration guides with no external links required.
+This document is the complete inline reference intended for AI assistants and LLMs.
+It contains full API documentation, usage examples, response schemas, and integration guides.
+
+**Note:** A dynamically generated version of this document (with auto-discovered endpoints
+and 500 recent articles) is available at https://cryptocurrency.cv/api/llms-full.txt
 
 ---
 
@@ -15,8 +21,9 @@ This document is the complete inline reference intended for AI assistants and LL
 **Format:** JSON (default), RSS, Atom, plain text where noted
 **License:** MIT — free to use, modify, and redistribute
 
-The project aggregates cryptocurrency news and data from 130+ sources including:
-CoinDesk, The Block, Decrypt, CoinTelegraph, Bitcoin Magazine, Blockworks, The Defiant, BeInCrypto, NewsBTC, CryptoSlate, Messari, Delphi Digital, Bankless, The Defiant, Unchained, Pomp Letters, and 115+ more.
+Aggregates cryptocurrency news from 130+ sources: CoinDesk, The Block, Decrypt,
+CoinTelegraph, Bitcoin Magazine, Blockworks, The Defiant, BeInCrypto, NewsBTC,
+CryptoSlate, Messari, Delphi Digital, Bankless, Unchained, Pomp Letters, and 115+ more.
 
 ---
 
@@ -25,298 +32,696 @@ CoinDesk, The Block, Decrypt, CoinTelegraph, Bitcoin Magazine, Blockworks, The D
 ### GET /api/news
 Returns latest cryptocurrency news from all sources.
 
-**Parameters:**
-- `limit` (integer, 1–100, default 20) — number of articles
-- `source` (string) — filter by source key (e.g., `coindesk`, `decrypt`, `theblock`)
-- `page` (integer, default 1) — pagination
-- `category` (string) — filter by category: `bitcoin`, `defi`, `ethereum`, `altcoin`, `nft`, `regulation`, `general`
-- `lang` (string) — filter by language code (e.g., `en`, `es`, `zh`)
+Params: `limit` (1–100, default 20), `source` (e.g. `coindesk`), `page`,
+`category` (bitcoin|defi|ethereum|altcoin|nft|regulation|general), `lang`
 
-**Example request:**
-```
-GET https://cryptocurrency.cv/api/news?limit=5&source=coindesk
-```
+Example: `GET /api/news?limit=5&source=coindesk&category=bitcoin`
 
-**Example response:**
+Response:
 ```json
 {
-  "articles": [
-    {
-      "id": "coindesk-1234567890",
-      "title": "Bitcoin Hits New All-Time High",
-      "link": "https://coindesk.com/...",
-      "description": "Bitcoin surged past $100k today as institutional demand...",
-      "pubDate": "2026-02-21T10:30:00Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "bitcoin",
-      "timeAgo": "2h ago",
-      "sentiment": "bullish",
-      "tags": ["bitcoin", "price", "ath"]
-    }
-  ],
+  "articles": [{
+    "id": "coindesk-1234",
+    "title": "Bitcoin Hits New ATH",
+    "link": "https://coindesk.com/...",
+    "description": "Bitcoin surged past...",
+    "pubDate": "2026-02-21T10:30:00Z",
+    "source": "CoinDesk",
+    "sourceKey": "coindesk",
+    "category": "bitcoin",
+    "timeAgo": "2h ago",
+    "sentiment": "bullish",
+    "tags": ["bitcoin", "price", "ath"]
+  }],
   "totalCount": 1,
-  "sources": ["coindesk"],
   "fetchedAt": "2026-02-21T12:00:00Z",
   "cached": false
 }
 ```
 
----
-
 ### GET /api/search
-Full-text search across all aggregated news articles.
+Full-text search across all aggregated news.
+Params: `q` (required), `limit`, `from` (ISO date), `to` (ISO date), `source`
+Example: `GET /api/search?q=ethereum+ETF&limit=5`
 
-**Parameters:**
-- `q` (string, required) — comma-separated keywords or phrase
-- `limit` (integer, default 10) — max results
-- `from` (ISO date) — earliest publish date filter
-- `to` (ISO date) — latest publish date filter
-- `source` (string) — filter by source
-
-**Example request:**
-```
-GET https://cryptocurrency.cv/api/search?q=ethereum+ETF&limit=5
-```
-
----
+### GET /api/search/semantic
+Semantic (vector) search over news archive. Params: `q`, `limit`
 
 ### GET /api/bitcoin
-Bitcoin-specific news (Lightning Network, miners, halving, etc.).
-
-**Parameters:** `limit`, `page` (same as /api/news)
-
----
+Bitcoin-specific news. Params: `limit`, `page`
 
 ### GET /api/defi
-DeFi news: yield farming, DEXs, lending protocols, TVL changes, hacks.
-
-**Parameters:** `limit`, `page`
-
----
+DeFi news: yield farming, DEXs, lending protocols, hacks. Params: `limit`, `page`
 
 ### GET /api/breaking
-Breaking news from the last 2 hours.
-
-**Parameters:** `limit` (default 5)
-
----
+Articles from the last 2 hours. Params: `limit` (default 5)
 
 ### GET /api/trending
-Trending topics and keywords across all sources.
-
-**Example response:**
-```json
-{
-  "trending": [
-    { "keyword": "Bitcoin ETF", "count": 47, "change": "+23%", "sentiment": "bullish" },
-    { "keyword": "Ethereum staking", "count": 31, "change": "+8%", "sentiment": "neutral" }
-  ],
-  "generatedAt": "2026-02-21T12:00:00Z"
-}
-```
-
----
+Trending keywords and topics across all sources.
 
 ### GET /api/sources
-All 130+ news sources with status and metadata.
+All 130+ news sources with status, RSS URL, language. Returns `sources[]`, `totalActive`.
 
-**Example response:**
-```json
-{
-  "sources": [
-    {
-      "key": "coindesk",
-      "name": "CoinDesk",
-      "url": "https://coindesk.com",
-      "rss": "https://coindesk.com/arc/outboundfeeds/rss/",
-      "category": "general",
-      "language": "en",
-      "status": "active",
-      "articlesPerDay": 45
-    }
-  ],
-  "totalActive": 127,
-  "totalSources": 134
-}
-```
+### GET /api/news/categories
+List of available news categories with article counts.
+
+### GET /api/news/international
+International / non-English news feed.
+
+### GET /api/narratives
+Currently trending market narratives.
+
+### GET /api/tags
+Tag-based news browsing. Params: `tag`
+
+### GET /api/tags/[slug]
+News articles for a specific tag.
 
 ---
 
 ## AI & Intelligence Endpoints
 
-### GET /api/ai
-AI analysis of cryptocurrency news and content.
-
-**Query parameters (GET):**
-- `action` — `status` (default): returns available actions and AI provider info
-
-**POST /api/ai** — analyze content:
+### POST /api/ai
+AI analysis of article content.
 ```json
 {
-  "action": "summarize" | "sentiment" | "facts" | "factcheck" | "questions" | "categorize" | "translate",
-  "title": "Article title",
-  "content": "Article body text...",
-  "options": {
-    "length": "short" | "medium" | "long",
-    "targetLanguage": "es"
-  }
+  "action": "summarize|sentiment|facts|factcheck|questions|categorize|translate",
+  "title": "Article headline",
+  "content": "Article body...",
+  "options": { "length": "short|medium|long", "targetLanguage": "es" }
 }
 ```
 
----
+### GET /api/ask
+Natural language Q&A about crypto news. Params: `q` (required)
+Example: `GET /api/ask?q=What+happened+to+Bitcoin+this+week`
 
-### GET /api/sentiment
-Market sentiment analysis aggregated from all news sources.
-
-**Parameters:**
-- `asset` (string) — filter by asset: `BTC`, `ETH`, `SOL`, `BNB`, etc.
-- `period` (string) — `1h`, `24h`, `7d`, `30d`
-
-**Example response:**
-```json
-{
-  "overall": "bullish",
-  "score": 0.72,
-  "breakdown": {
-    "bullish": 65,
-    "neutral": 20,
-    "bearish": 15
-  },
-  "assets": {
-    "BTC": { "sentiment": "bullish", "score": 0.81, "articleCount": 142 },
-    "ETH": { "sentiment": "neutral", "score": 0.51, "articleCount": 89 }
-  }
-}
-```
-
----
-
-### GET /api/fear-greed
-Crypto Fear & Greed Index.
-
-**Example response:**
-```json
-{
-  "value": 72,
-  "classification": "Greed",
-  "timestamp": "2026-02-21T00:00:00Z",
-  "previousValue": 68,
-  "change": "+4"
-}
-```
-
----
-
-### GET /api/predictions
-AI-generated market predictions based on news analysis.
-
----
+### GET /api/ai/research
+Deep multi-source research on a topic. Params: `q` (required)
 
 ### GET /api/ai/narratives
 Emerging market narratives detected from news patterns.
 
+### GET /api/ai/brief
+AI-generated short briefing / digest of recent news.
+
+### GET /api/ai/debate
+Bull vs bear debate format for a given topic or asset.
+
+### GET /api/ai/counter
+Counter-argument generation for a given claim or headline.
+
+### GET /api/ai/digest
+Daily AI digest summary.
+
+### GET /api/ai/flash-briefing
+Short AI flash briefing (smart speaker / widget compatible).
+
+### GET /api/ai/correlation
+AI correlation analysis between tokens/narratives.
+
+### GET /api/ai/cross-lingual
+Cross-lingual news comparison for a topic.
+
+### GET /api/ai/entities
+Named-entity extraction from news.
+
+### GET /api/ai/explain
+Plain-English explanation of a crypto concept or headline.
+
+### GET /api/ai/social
+AI summary of social sentiment for an asset.
+
+### GET /api/ai/synthesize
+Synthesise multiple articles into a unified narrative.
+
+### GET /api/ai/oracle
+AI predictions as a news-backed oracle.
+
+### GET /api/ai/portfolio-news
+News filtered and summarised for a given portfolio of assets.
+
+### GET /api/ai/relationships
+Token/entity relationship graph derived from news.
+
+### GET /api/ai/source-quality
+AI credibility scoring for news sources.
+
+### GET /api/ai/blog-generator
+AI-powered crypto blog post generator.
+
+### GET /api/ai/agent
+Autonomous AI agent for multi-step crypto research tasks.
+
+### GET /api/ai/summarize
+Standalone article summarisation endpoint.
+
+### GET /api/ai/summarize/stream
+Streaming article summarisation (SSE).
+
+### GET /api/ai-anchor
+AI news anchor / presenter mode.
+
+### GET /api/summarize
+Summarise any URL or article text.
+
+### GET /api/classify
+Classify news articles by category and topic.
+
+### GET /api/factcheck
+AI fact-checking of crypto news claims. Params: `claim` or article body.
+
+### GET /api/claims
+Claim extraction from news articles.
+
+### GET /api/entities
+Entity extraction across recent news.
+
+### GET /api/relationships
+Entity relationship graph from news.
+
+### GET /api/clickbait
+Clickbait detection for news headlines.
+
+### GET /api/detect/ai-content
+AI-generated content detection for news articles.
+
+### GET /api/citations
+Citation and source verification for claims.
+
+### GET /api/compare
+Compare two assets or topics by news coverage and sentiment.
+
+### GET /api/coverage-gap
+Detect under-covered stories in the crypto news cycle.
+
+### GET /api/translate
+Translate news articles. Params: `text`, `to` (language code)
+
+### GET /api/i18n/translate
+Bulk translation for internationalisation.
+
+### GET /api/extract
+Extract structured data from article content.
+
+### GET /api/news/extract
+Extract news metadata from a URL.
+
+### GET /api/analyze
+General analysis endpoint (multi-mode).
+
 ---
 
-### GET /api/ai/research
-Deep research on a crypto topic (aggregates and synthesizes multiple sources).
+## Predictions
 
-**Parameters:**
-- `q` (string, required) — research question or topic
+### GET /api/predictions
+AI-generated market predictions from news analysis.
 
----
+### GET /api/predictions/history
+Historical AI predictions with outcome tracking.
 
-### GET /api/ask
-Natural language Q&A about crypto news.
-
-**Parameters:**
-- `q` (string, required) — natural language question
-
-**Example:**
-```
-GET https://cryptocurrency.cv/api/ask?q=What+happened+to+Bitcoin+this+week
-```
+### GET /api/predictions/markets
+Prediction market data aggregation.
 
 ---
+
+## RAG (Retrieval-Augmented Generation)
 
 ### GET /api/rag
-Retrieval-Augmented Generation over the news archive.
+Top-level RAG endpoint — status and capabilities.
+
+### GET /api/rag/ask
+RAG-powered natural language Q&A. Params: `q`
+
+### GET /api/rag/search
+Semantic search over archived articles. Params: `q`, `limit`
+
+### GET /api/rag/stream
+Streaming RAG response (SSE). Params: `q`
+
+### GET /api/rag/summary/[crypto]
+AI summary for a specific cryptocurrency using RAG over recent news.
+
+### GET /api/rag/timeline
+Chronological RAG timeline for a topic or asset.
+
+### GET /api/rag/stats
+RAG index statistics (article count, last update, coverage).
+
+### GET /api/rag/metrics
+RAG quality metrics (recall, precision).
+
+### GET /api/rag/similar/[id]
+Articles similar to a given article ID.
+
+### GET /api/rag/batch
+Batch RAG processing for multiple queries.
+
+### GET /api/rag/eval
+RAG evaluation against a test set.
+
+### GET /api/rag/feedback
+Submit feedback on RAG answers.
+
+### GET /api/rag/personalization
+Personalised RAG based on user preferences.
 
 ---
 
 ## Market Data Endpoints
 
-### GET /api/market
-Crypto market overview with prices and news context.
-
-**Parameters:**
-- `coins` (string) — comma-separated coin symbols: `BTC,ETH,SOL`
-
----
-
 ### GET /api/market/coins
 Full coin list with prices, market caps, 24h changes.
 
----
+### GET /api/market/history/[coinId]
+Historical OHLCV for a coin. Params: `days`, `interval`
+
+### GET /api/market/ohlc/[coinId]
+OHLC candle data for a coin.
+
+### GET /api/market/snapshot/[coinId]
+Full market snapshot for a single coin.
+
+### GET /api/market/tickers/[coinId]
+Exchange tickers for a coin.
+
+### GET /api/market/exchanges
+Exchange list with volume and trust score.
+
+### GET /api/market/exchanges/[id]
+Single exchange details.
+
+### GET /api/market/defi
+DeFi protocol stats: TVL, APY, protocol counts.
+
+### GET /api/market/derivatives
+Derivatives market data.
+
+### GET /api/market/orderbook
+Aggregated order book data.
+
+### GET /api/market/categories
+Market categories (Layer 1, DeFi, NFT, etc.) with metrics.
+
+### GET /api/market/categories/[id]
+Coins in a specific market category.
+
+### GET /api/market/compare
+Side-by-side comparison of multiple coins.
+
+### GET /api/market/social/[coinId]
+Social stats for a coin (Twitter followers, Reddit subscribers, etc.)
+
+### GET /api/market/search
+Search coins by name/symbol.
+
+### GET /api/sentiment
+AI-powered sentiment aggregated from news.
+Params: `asset` (BTC|ETH|SOL|...), `period` (1h|24h|7d|30d)
+
+Response:
+```json
+{
+  "overall": "bullish",
+  "score": 0.72,
+  "breakdown": { "bullish": 65, "neutral": 20, "bearish": 15 },
+  "assets": {
+    "BTC": { "sentiment": "bullish", "score": 0.81, "articleCount": 142 }
+  }
+}
+```
+
+### GET /api/fear-greed
+Crypto Fear & Greed index. Returns `value`, `classification`, `timestamp`.
+
+### GET /api/global
+Global market stats: total market cap, BTC dominance, active coins.
 
 ### GET /api/exchange-rates
 Cryptocurrency exchange rates.
 
+### GET /api/ohlc
+OHLC data (generic endpoint).
+
+### GET /api/prices
+Current prices for requested assets. Params: `coins`
+
+### GET /api/gas
+Current gas prices (Ethereum, other chains).
+
+### GET /api/funding
+Futures funding rates.
+
+### GET /api/yields
+DeFi yield rates.
+
+### GET /api/derivatives
+Crypto derivatives overview.
+
+### GET /api/flows
+On-chain fund flows.
+
+### GET /api/unlocks
+Token unlock schedule and upcoming unlocks.
+
+### GET /api/arbitrage
+Cross-exchange arbitrage opportunities.
+
+### GET /api/orderbook
+Aggregated order book.
+
+### GET /api/backtest
+News sentiment backtesting against price data.
+
 ---
 
-### GET /api/global
-Global crypto market statistics (total market cap, dominance, etc.).
+## Social & On-Chain
+
+### GET /api/social
+Social mentions aggregation.
+
+### GET /api/social/x/sentiment
+X (Twitter) sentiment for crypto assets.
+
+### GET /api/social/x/lists
+Curated X lists for crypto topics.
+
+### GET /api/social/trending-narratives
+Trending narratives across social platforms.
+
+### GET /api/social/influencer-score
+Influencer credibility scoring.
+
+### GET /api/social/monitor
+Real-time social monitoring.
+
+### GET /api/social/discord
+Discord community sentiment.
+
+### GET /api/influencers
+Top news and social influencers for crypto.
+
+### GET /api/onchain/events
+On-chain events correlated with news.
+
+### GET /api/onchain/correlate
+Correlation between on-chain metrics and news sentiment.
+
+### GET /api/whale-alerts
+On-chain large-transaction news and alerts.
+
+### GET /api/whale-alerts/context
+AI-generated context for whale transactions.
+
+### GET /api/whales
+Whale wallet activity aggregation.
+
+### GET /api/liquidations
+Liquidation data: long/short liquidations by exchange and asset.
+
+### GET /api/nostr
+Nostr protocol integration: crypto news as Nostr events.
 
 ---
 
-## Feed & Streaming Endpoints
+## Signals & Oracle
 
-### GET /api/rss
-RSS 2.0 feed of latest news.
+### GET /api/signals
+Trading signals derived from news sentiment and on-chain data.
 
-**Parameters:** `limit`, `source`, `category`
+### GET /api/signals/narrative
+Narrative-based trading signals.
 
----
+### GET /api/oracle
+News-backed on-chain oracle data.
 
-### GET /api/atom
-Atom 1.0 feed of latest news.
-
----
-
-### GET /api/sse
-Server-Sent Events stream for real-time news updates.
-
-**Usage (JavaScript):**
-```javascript
-const es = new EventSource('https://cryptocurrency.cv/api/sse');
-es.onmessage = (e) => {
-  const article = JSON.parse(e.data);
-  console.log(article.title);
-};
-```
+### GET /api/oracle/chainlink
+Chainlink-compatible oracle news feed.
 
 ---
 
-## Archive & Historical Endpoints
+## Analytics
+
+### GET /api/analytics/anomalies
+Anomaly detection in news volume and sentiment.
+
+### GET /api/analytics/causality
+Granger causality between news events and price.
+
+### GET /api/analytics/credibility
+Source credibility scoring at scale.
+
+### GET /api/analytics/forensics
+News forensics: manipulation detection, astroturfing signals.
+
+### GET /api/analytics/headlines
+Headline analysis and pattern detection.
+
+### GET /api/analytics/influencers
+Top news influencers by topic.
+
+### GET /api/analytics/news-onchain
+Cross-correlation of news events with on-chain activity.
+
+### GET /api/analytics/gaps
+Gap analysis in news coverage.
+
+### GET /api/analytics/usage
+API usage analytics.
+
+---
+
+## Portfolio
+
+### GET /api/portfolio
+Portfolio news feed. Params: `coins` (comma-separated tickers)
+
+### GET /api/portfolio/holding
+Holdings-weighted news feed.
+
+### GET /api/portfolio/performance
+Portfolio performance vs. news sentiment.
+
+### GET /api/portfolio/tax
+Tax-relevant news and events for a portfolio.
+
+### GET /api/portfolio/tax-report
+Generate a tax report.
+
+---
+
+## Trading
+
+### GET /api/trading/arbitrage
+Cross-exchange arbitrage opportunities.
+
+### GET /api/trading/options
+Options market data.
+
+### GET /api/trading/orderbook
+Order book data.
+
+---
+
+## Archive & Historical
 
 ### GET /api/archive
-Historical news archive by date.
+Historical news by date. Params: `date` (YYYY-MM-DD), `year`, `month`
+Archive covers 2010–present with full metadata and market context.
 
-**Parameters:**
-- `date` (string, YYYY-MM-DD) — specific date
-- `year` (integer) — filter by year (2021–present)
-- `month` (integer) — filter by month
+### GET /api/archive/v2
+Enhanced archive API with richer filtering.
 
-Archive structure: articles go back to 2021 with full metadata and market context snapshots.
+### GET /api/archive/ipfs
+IPFS-pinned archive access.
+
+### GET /api/archive/status
+Archive ingestion status.
+
+Flat file indexes (direct HTTP):
+- `GET /archive/indexes/by-date.json` — date → article IDs
+- `GET /archive/indexes/by-source.json` — source → article IDs
+- `GET /archive/indexes/by-ticker.json` — ticker → article IDs
+
+---
+
+## Regulatory & Academic
+
+### GET /api/regulatory
+Regulatory news and enforcement actions.
+
+### GET /api/academic
+Academic / research articles about crypto.
+
+---
+
+## Community & Distribution
+
+### GET /api/alerts
+Alert management for keyword/asset news triggers.
+
+### GET /api/alerts/[id]
+Single alert details.
+
+### GET /api/digest
+Daily/weekly news digest.
+
+### GET /api/newsletter/subscribe
+Subscribe to the email newsletter.
+
+### GET /api/watchlist
+Watchlist news feed.
+
+### GET /api/origins
+Article origin tracking.
+
+---
+
+## Feeds & Streaming
+
+### GET /api/rss
+RSS 2.0 feed. Params: `limit`, `source`, `category`
+
+### GET /api/atom
+Atom 1.0 feed.
+
+### GET /api/opml
+OPML export of all RSS sources.
+
+### GET /api/sse
+Server-Sent Events real-time stream. Usage: `new EventSource("/api/sse")`
+
+### GET /api/alexa
+Alexa smart home skill integration.
+
+---
+
+## API Metadata
+
+### GET /api/openapi.json
+Machine-readable OpenAPI 3.1 specification.
+
+### GET /api/docs
+API documentation redirect.
+
+### GET /api/health
+API health check. Returns `{ "status": "ok", "uptime": ... }`
+
+### GET /api/graphql
+GraphQL interface for flexible news queries.
+
+### GET /api/v1
+V1 versioned API entry point.
+
+### GET /api/v1/coins
+V1 coin list.
+
+### GET /api/v1/market-data
+V1 market data endpoint.
+
+### GET /api/v1/search
+V1 search endpoint.
+
+### GET /api/v1/trending
+V1 trending endpoint.
+
+### GET /api/v1/defi
+V1 DeFi endpoint.
+
+### GET /api/v1/global
+V1 global market stats.
+
+### GET /api/v1/gas
+V1 gas prices.
+
+### GET /api/v1/exchanges
+V1 exchange list.
+
+### GET /api/v1/export
+V1 data export.
+
+### GET /api/v1/assets
+V1 asset list.
+
+### GET /api/v1/assets/[assetId]/history
+V1 asset price history.
+
+### GET /api/v1/coin/[coinId]
+V1 single coin data.
+
+### GET /api/v1/historical/[coinId]
+V1 historical coin data.
+
+### GET /api/v1/alerts
+V1 alerts.
+
+### GET /api/v1/usage
+V1 usage stats.
+
+---
+
+## Premium Endpoints
+
+Premium endpoints require an API key (header: `X-API-Key`).
+
+- `GET /api/premium/ai/analyze` — deep AI analysis
+- `GET /api/premium/ai/compare` — multi-asset AI comparison
+- `GET /api/premium/ai/sentiment` — premium sentiment with finer granularity
+- `GET /api/premium/ai/signals` — premium trading signals
+- `GET /api/premium/ai/summary` — premium AI summaries
+- `GET /api/premium/alerts/custom` — custom alert rules
+- `GET /api/premium/alerts/whales` — premium whale alerts
+- `GET /api/premium/analytics/screener` — news-based screener
+- `GET /api/premium/api-keys` — API key management
+- `GET /api/premium/defi/protocols` — premium DeFi protocol data
+- `GET /api/premium/export/portfolio` — portfolio data export
+- `GET /api/premium/market/coins` — premium coin data
+- `GET /api/premium/market/history` — premium price history
+- `GET /api/premium/portfolio/analytics` — portfolio analytics
+- `GET /api/premium/screener/advanced` — advanced screener
+- `GET /api/premium/smart-money` — smart money tracking
+- `GET /api/premium/streams/prices` — real-time price streams
+- `GET /api/premium/whales/alerts` — whale alert stream
+- `GET /api/premium/whales/transactions` — whale transaction details
+
+---
+
+## Common Use Cases for AI Assistants
+
+1. **Current crypto news** → `GET /api/breaking` + `GET /api/sentiment`
+2. **Bitcoin news** → `GET /api/bitcoin?limit=10`
+3. **Search a topic** → `GET /api/search?q=defi+hack&limit=10`
+4. **Sentiment check** → `GET /api/sentiment?asset=BTC&period=24h`
+5. **Market overview** → `GET /api/market/coins` + `GET /api/fear-greed`
+6. **Ask a question** → `GET /api/ask?q=What+happened+to+Bitcoin+this+week`
+7. **AI briefing** → `GET /api/ai/brief`
+8. **RAG answer** → `GET /api/rag/ask?q=Why+did+BTC+drop`
+9. **Whale activity** → `GET /api/whale-alerts`
+10. **DeFi research** → `GET /api/ai/research?q=DeFi+TVL+trends`
+11. **Token narratives** → `GET /api/ai/narratives`
+12. **Liquidations** → `GET /api/liquidations`
+
+---
+
+## Response Common Fields
+
+All news endpoints return articles with:
+- `id` — unique article identifier
+- `title` — article headline
+- `link` — canonical URL
+- `description` — article summary (≤ 500 chars)
+- `pubDate` — ISO 8601 publication timestamp
+- `source` / `sourceKey` — human/machine-readable source name
+- `category` — general|bitcoin|defi|ethereum|nft|regulation|altcoin
+- `timeAgo` — human-readable recency ("2h ago")
+- `sentiment` — bullish|bearish|neutral (optional)
+- `tags` — extracted topic tags array
 
 ---
 
 ## Integration Protocols
 
 ### MCP Server (Claude)
-The Model Context Protocol server allows Claude to query real-time crypto news directly.
-
-**Setup in Claude:**
 ```json
 {
   "mcpServers": {
@@ -327,18 +732,12 @@ The Model Context Protocol server allows Claude to query real-time crypto news d
   }
 }
 ```
-
-**Available MCP tools:**
-- `get_latest_news` — fetch latest crypto news
-- `search_news` — search by keyword
-- `get_sentiment` — market sentiment
-- `get_trending` — trending topics
-- `get_bitcoin_news` — Bitcoin-specific news
-- `get_defi_news` — DeFi news
+MCP tools: get_latest_news, search_news, get_sentiment, get_trending,
+get_bitcoin_news, get_defi_news
 
 ### ChatGPT Plugin
-OpenAI plugin manifest available at: `https://cryptocurrency.cv/.well-known/ai-plugin.json`
-OpenAPI spec: `https://cryptocurrency.cv/api/openapi.json`
+Manifest: https://cryptocurrency.cv/.well-known/ai-plugin.json
+OpenAPI spec: https://cryptocurrency.cv/api/openapi.json
 
 ---
 
@@ -347,7 +746,6 @@ OpenAPI spec: `https://cryptocurrency.cv/api/openapi.json`
 ### TypeScript / JavaScript
 ```typescript
 import { CryptoNewsClient } from 'free-crypto-news';
-
 const client = new CryptoNewsClient();
 const news = await client.getLatestNews({ limit: 10 });
 const btcNews = await client.getBitcoinNews();
@@ -357,7 +755,6 @@ const sentiment = await client.getSentiment('BTC');
 ### React Hook
 ```tsx
 import { useCryptoNews } from 'free-crypto-news/react';
-
 function NewsWidget() {
   const { articles, loading } = useCryptoNews({ limit: 10 });
   return <ul>{articles.map(a => <li key={a.id}>{a.title}</li>)}</ul>;
@@ -367,68 +764,18 @@ function NewsWidget() {
 ### Python
 ```python
 from free_crypto_news import CryptoNewsClient
-
 client = CryptoNewsClient()
 news = client.get_latest_news(limit=10)
-btc = client.get_bitcoin_news()
 ```
 
-### cURL (direct API)
+### cURL
 ```bash
-# Latest news
 curl https://cryptocurrency.cv/api/news
-
-# Search
 curl "https://cryptocurrency.cv/api/search?q=bitcoin+ETF&limit=5"
-
-# Sentiment
 curl "https://cryptocurrency.cv/api/sentiment?asset=BTC"
-
-# Fear & Greed
-curl https://cryptocurrency.cv/api/fear-greed
-
-# Breaking news
-curl https://cryptocurrency.cv/api/breaking
+curl "https://cryptocurrency.cv/api/ai/brief"
+curl "https://cryptocurrency.cv/api/rag/ask?q=What+is+DeFi"
 ```
-
----
-
-## Common Use Cases for AI Assistants
-
-1. **"What's happening in crypto right now?"**
-   → `GET /api/breaking` then `GET /api/sentiment`
-
-2. **"What's the latest Bitcoin news?"**
-   → `GET /api/bitcoin?limit=10`
-
-3. **"Search for DeFi hack news"**
-   → `GET /api/search?q=defi+hack&limit=10`
-
-4. **"Is Bitcoin sentiment bullish or bearish?"**
-   → `GET /api/sentiment?asset=BTC`
-
-5. **"What are the trending topics in crypto?"**
-   → `GET /api/trending`
-
-6. **"Get me crypto market overview"**
-   → `GET /api/market` + `GET /api/fear-greed`
-
----
-
-## Response Common Fields
-
-All news endpoints return articles with these fields:
-- `id` (string) — unique article identifier
-- `title` (string) — article headline
-- `link` (string, URL) — canonical article URL
-- `description` (string) — article summary (up to 500 chars)
-- `pubDate` (ISO 8601) — publication timestamp
-- `source` (string) — human-readable source name
-- `sourceKey` (string) — machine-readable source identifier
-- `category` (enum) — `general`, `bitcoin`, `defi`, `ethereum`, `nft`, `regulation`, `altcoin`
-- `timeAgo` (string) — human-readable recency ("2h ago", "just now")
-- `sentiment` (string, optional) — `bullish`, `bearish`, `neutral`
-- `tags` (string[]) — extracted topic tags
 
 ---
 
@@ -437,8 +784,8 @@ All news endpoints return articles with these fields:
 - **GitHub:** https://github.com/nirholas/free-crypto-news
 - **Live site:** https://cryptocurrency.cv
 - **Author:** nirholas (https://github.com/nirholas)
-- **Language:** TypeScript (Next.js 14)
+- **Language:** TypeScript (Next.js)
 - **License:** MIT
 - **Last updated:** February 2026
-- **Version:** See CHANGELOG.md
-- **Contributing:** See CONTRIBUTING.md
+- **Dynamic version:** https://cryptocurrency.cv/api/llms-full.txt
+- **Compact reference:** https://cryptocurrency.cv/llms.txt

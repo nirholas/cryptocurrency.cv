@@ -1,9 +1,13 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 
-export async function generateMetadata(): Promise<Metadata> {
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations();
   return {
     title: t('ai.title', { defaultValue: 'AI Intelligence Hub' }),
@@ -69,7 +73,9 @@ const aiCapabilities = [
   },
 ];
 
-export default async function AIHubPage() {
+export default async function AIHubPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations();
 
   return (

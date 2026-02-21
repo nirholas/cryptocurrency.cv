@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { COINGECKO_BASE, SITE_URL } from '@/lib/constants';
+import { getAIConfigOrNull } from '@/lib/ai-provider';
 
 export const runtime = 'edge';
 
@@ -484,11 +485,15 @@ async function generateResponse(
   context: OracleContext,
   history: OracleRequest['history']
 ): Promise<string> {
-  const GROQ_API_KEY = process.env.GROQ_API_KEY;
-  
-  if (!GROQ_API_KEY) {
+  // Use shared provider config — supports OpenAI, Groq, OpenRouter (OpenAI-compatible)
+  // Anthropic uses a different multi-turn format; fall back gracefully if it's the only option
+  const config = getAIConfigOrNull(true /* preferGroq */);
+
+  if (!config || config.provider === 'anthropic') {
     return generateFallbackResponse(query, context);
   }
+
+  const baseUrl = config.baseUrl ?? 'https://api.openai.com/v1';
 
   const marketContext = formatMarketContext(context.market);
   const newsContext = context.news.length > 0 
@@ -522,14 +527,18 @@ GUIDELINES:
   ];
 
   try {
-    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+    const response = await fetch(`${baseUrl}/chat/completions`, {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${GROQ_API_KEY}`,
+        'Authorization': `Bearer ${config.apiKey}`,
         'Content-Type': 'application/json',
+        ...(config.provider === 'openrouter' && {
+          'HTTP-Referer': process.env.VERCEL_URL ?? 'https://cryptocurrency.cv',
+          'X-Title': 'Crypto News Oracle',
+        }),
       },
       body: JSON.stringify({
-        model: 'llama-3.3-70b-versatile',
+        model: config.model,
         messages,
         max_tokens: 1000,
         temperature: 0.7,
@@ -537,7 +546,7 @@ GUIDELINES:
     });
 
     if (!response.ok) {
-      console.error('Groq API error:', response.status);
+      console.error('AI Oracle error:', response.status);
       return generateFallbackResponse(query, context);
     }
 

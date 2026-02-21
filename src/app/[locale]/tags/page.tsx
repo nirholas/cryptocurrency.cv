@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -102,7 +102,9 @@ function CategorySection({
   );
 }
 
-export default async function TagsPage() {
+export default async function TagsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations();
   
   const assetTags = getTagsByCategory('asset');

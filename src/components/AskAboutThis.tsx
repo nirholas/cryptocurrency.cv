@@ -37,17 +37,13 @@ export function AskAboutThis({ context, contextType, placeholder }: AskAboutThis
     pendingQuestionRef.current = question.trim();
     reset();
     setInput('');
-    start(
-      `/api/ask?stream=true&q=${encodeURIComponent(question.trim())}`,
-    );
+    start(`/api/ask?stream=true&q=${encodeURIComponent(question.trim())}`);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     ask(input);
   };
-
-  const handleFollowUp = (q: string) => ask(q);
 
   const handleClear = () => {
     reset();
@@ -56,26 +52,8 @@ export function AskAboutThis({ context, contextType, placeholder }: AskAboutThis
     inputRef.current?.focus();
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    ask(input);
-  };
-
-  const handleFollowUp = (q: string) => {
-    ask(q);
-  };
-
-  const handleClear = () => {
-    setEntries([]);
-    setRevealedChars({});
-    setError(null);
-    inputRef.current?.focus();
-  };
-
-  const confidenceColor = (c: number) =>
-    c > 0.8 ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400'
-    : c > 0.5 ? 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400'
-    : 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400';
+  const isStreaming = loading || (!!streamText && !done);
+  const showClear = history.length > 0 || !!streamText;
 
   return (
     <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm overflow-hidden">
@@ -103,7 +81,7 @@ export function AskAboutThis({ context, contextType, placeholder }: AskAboutThis
             </span>
           ) : 'Ask'}
         </button>
-        {entries.length > 0 && (
+        {showClear && (
           <button
             type="button"
             onClick={handleClear}
@@ -121,70 +99,42 @@ export function AskAboutThis({ context, contextType, placeholder }: AskAboutThis
         </div>
       )}
 
-      {/* Q&A entries */}
-      {entries.length > 0 && (
-        <div className="divide-y divide-gray-100 dark:divide-slate-700">
-          {entries.map((entry, i) => {
-            const revealed = revealedChars[i] ?? entry.answer.length;
-            const displayedAnswer = entry.answer.slice(0, revealed);
-            const isRevealing = revealed < entry.answer.length;
-
-            return (
-              <div key={i} className={`p-4 ${i > 0 ? 'opacity-70' : ''}`}>
-                {/* Question */}
-                <div className="flex items-start gap-2 mb-2">
-                  <span className="text-xs font-bold text-brand-600 dark:text-amber-400 mt-0.5">Q:</span>
-                  <p className="text-sm font-medium text-gray-900 dark:text-white">{entry.question}</p>
-                </div>
-
-                {/* Answer with type reveal */}
-                <div className="flex items-start gap-2 mb-3">
-                  <span className="text-xs font-bold text-gray-500 dark:text-slate-400 mt-0.5">A:</span>
-                  <p className="text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
-                    {displayedAnswer}
-                    {isRevealing && <span className="animate-pulse">▌</span>}
-                  </p>
-                </div>
-
-                {/* Meta row */}
-                <div className="flex flex-wrap items-center gap-2 mb-2">
-                  {/* Confidence */}
-                  <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold ${confidenceColor(entry.confidence)}`}>
-                    {Math.round(entry.confidence * 100)}% confidence
-                  </span>
-                  {/* Sources */}
-                  {entry.sources.map((src, j) => (
-                    <a
-                      key={j}
-                      href={src.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-slate-600 transition"
-                    >
-                      📎 {src.title}
-                    </a>
-                  ))}
-                </div>
-
-                {/* Follow-up questions */}
-                {i === 0 && entry.followUpQuestions.length > 0 && (
-                  <div className="flex flex-wrap gap-1.5 mt-2">
-                    {entry.followUpQuestions.map((fq, j) => (
-                      <button
-                        key={j}
-                        onClick={() => handleFollowUp(fq)}
-                        disabled={loading}
-                        className="px-2.5 py-1 rounded-lg text-xs bg-gray-50 dark:bg-slate-700 text-gray-600 dark:text-slate-300 hover:bg-gray-100 dark:hover:bg-slate-600 transition border border-gray-200 dark:border-slate-600"
-                      >
-                        {fq}
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
-            );
-          })}
+      {/* Live streaming answer for current question */}
+      {(isStreaming || (done && !!streamText && !history[0])) && (
+        <div className="p-4 border-b border-gray-100 dark:border-slate-700">
+          <div className="flex items-start gap-2 mb-2">
+            <span className="text-xs font-bold text-brand-600 dark:text-amber-400 mt-0.5">Q:</span>
+            <p className="text-sm font-medium text-gray-900 dark:text-white">
+              {pendingQuestionRef.current}
+            </p>
+          </div>
+          <div className="flex items-start gap-2">
+            <span className="text-xs font-bold text-gray-400 dark:text-slate-500 mt-0.5">A:</span>
+            <p className="text-sm text-gray-700 dark:text-slate-300 leading-relaxed whitespace-pre-wrap">
+              {streamText}
+              {loading && <span className="animate-pulse ml-0.5">▌</span>}
+            </p>
+          </div>
         </div>
+      )}
+
+      {/* Archived Q&A history */}
+      {history.length > 0 && (
+        <div className="divide-y divide-gray-100 dark:divide-slate-700">
+          {history.map((entry, i) => (
+            <div key={i} className={`p-4 ${i > 0 ? 'opacity-60' : ''}`}>
+              <div className="flex items-start gap-2 mb-2">
+                <span className="text-xs font-bold text-brand-600 dark:text-amber-400 mt-0.5">Q:</span>
+                <p className="text-sm font-medium text-gray-900 dark:text-white">{entry.question}</p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-xs font-bold text-gray-400 dark:text-slate-500 mt-0.5">A:</span>
+                <p className="text-sm text-gray-700 dark:text-slate-300 leading-relaxed whitespace-pre-wrap">
+                  {entry.answer}
+                </p>
+              </div>
+            </div>
+          ))}        </div>
       )}
     </div>
   );

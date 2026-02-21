@@ -179,6 +179,24 @@ const nextConfig = {
       },
     ];
   },
+  // ================================================================
+  // Rewrites — /llms-full.txt → dynamic API route (static file fallback)
+  // ================================================================
+  async rewrites() {
+    return {
+      // beforeFiles: runs before Next.js checks public/ static files,
+      // so the dynamic API route always wins over public/llms-full.txt.
+      beforeFiles: [
+        {
+          source: '/llms-full.txt',
+          destination: '/api/llms-full.txt',
+        },
+      ],
+      afterFiles: [],
+      fallback: [],
+    };
+  },
+
   // Disable x-powered-by header
   poweredByHeader: false,
   
@@ -211,19 +229,20 @@ const nextConfig = {
     ],
   },
 
+  // Keep heavy server-only packages out of the client bundle (top-level in Next.js 15+)
+  serverExternalPackages: [
+    'pino',
+    'pino-pretty',
+    'sharp',
+    'redis',
+    'sanitize-html',
+    'dompurify',
+  ],
+
   // Experimental features for better performance
   experimental: {
     // Enable optimized loading of CSS
     optimizeCss: true,
-    // Keep heavy server-only packages out of the client bundle
-    serverExternalPackages: [
-      'pino',
-      'pino-pretty',
-      'sharp',
-      'redis',
-      'sanitize-html',
-      'dompurify',
-    ],
     // Client-side router cache: RSC payloads for dynamic routes survive 30 s,
     // static routes survive 3 min — reduces redundant network round-trips on navigation.
     staleTimes: {
@@ -233,12 +252,11 @@ const nextConfig = {
   },
   
   // Reduce bundle size via tree-shakeable per-member imports
+  // Note: recharts is intentionally excluded — its /es6/ subpath is not
+  // resolvable by Turbopack; import directly from 'recharts' instead.
   modularizeImports: {
     'lodash': {
       transform: 'lodash/{{member}}',
-    },
-    'recharts': {
-      transform: 'recharts/es6/{{member}}',
     },
     'lucide-react': {
       transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
@@ -247,4 +265,3 @@ const nextConfig = {
 }
 
 module.exports = withNextIntl(nextConfig)
-

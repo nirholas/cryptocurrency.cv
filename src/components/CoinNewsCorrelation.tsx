@@ -25,6 +25,30 @@ interface CoinNewsCorrelationProps {
   coinSymbol: string;
 }
 
+// ---------------------------------------------------------------------------
+// Onchain correlation types (from /api/onchain/correlate)
+// ---------------------------------------------------------------------------
+
+interface OnchainCorrelationEvent {
+  type: string;
+  coin: string;
+  value: number;
+  timestamp: string;
+  significance: 'low' | 'medium' | 'high';
+}
+
+interface OnchainCorrelationEntry {
+  event: OnchainCorrelationEvent;
+  correlation: string;
+  confidence: number;
+  related_headlines: string[];
+}
+
+interface OnchainCorrelationData {
+  correlations: OnchainCorrelationEntry[];
+  computed_at: string;
+}
+
 function formatTimeSince(dateStr: string): string {
   const diff = Date.now() - new Date(dateStr).getTime();
   const hours = Math.floor(diff / 3600000);
@@ -44,6 +68,9 @@ export function CoinNewsCorrelation({ coinId, coinSymbol }: CoinNewsCorrelationP
   const [data, setData] = useState<CorrelationData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  // Onchain correlation state — fetched independently; degraded gracefully
+  const [onchainData, setOnchainData] = useState<OnchainCorrelationData | null>(null);
 
   const fetchData = useCallback(async () => {
     try {
@@ -86,6 +113,20 @@ export function CoinNewsCorrelation({ coinId, coinSymbol }: CoinNewsCorrelationP
   useEffect(() => {
     fetchData();
   }, [fetchData]);
+
+  // Onchain correlations — global (not coin-specific), best-effort
+  useEffect(() => {
+    let cancelled = false;
+    fetch('/api/onchain/correlate')
+      .then(r => r.ok ? r.json() : null)
+      .then((json: OnchainCorrelationData | null) => {
+        if (!cancelled && json && Array.isArray(json.correlations) && json.correlations.length > 0) {
+          setOnchainData(json);
+        }
+      })
+      .catch(() => { /* silently ignore */ });
+    return () => { cancelled = true; };
+  }, []);
 
   if (loading) {
     return (
@@ -192,6 +233,80 @@ export function CoinNewsCorrelation({ coinId, coinSymbol }: CoinNewsCorrelationP
                     <span>{formatTimeSince(entry.publishedAt)}</span>
                     {entry.source && <span>· {entry.source}</span>}
                   </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* Onchain ↔ News Correlation section — shown only when data is available */}
+      {onchainData && onchainData.correlations.length > 0 && (
+        <div className="px-6 pb-4">
+          <h4 className="text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase mb-3 flex items-center gap-2">
+            <span>⛓️</span> On-Chain Anomalies
+          </h4>
+          <div className="space-y-3">
+            {onchainData.correlations.map((entry, i) => {
+              const conf = entry.confidence;
+              const confColor =
+                conf >= 0.7
+                  ? 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-700'
+                  : conf >= 0.4
+                  ? 'bg-yellow-50 border-yellow-200 dark:bg-yellow-900/20 dark:border-yellow-700'
+                  : 'bg-gray-50 border-gray-200 dark:bg-slate-700/30 dark:border-slate-600';
+              const confBadge =
+                conf >= 0.7
+                  ? 'text-green-700 dark:text-green-400'
+                  : conf >= 0.4
+                  ? 'text-yellow-700 dark:text-yellow-400'
+                  : 'text-gray-500 dark:text-slate-400';
+              const confLabel =
+                conf >= 0.7 ? 'High' : conf >= 0.4 ? 'Med' : 'Low';
+
+              return (
+                <div key={i} className={`rounded-xl border p-3 ${confColor}`}>
+                  {/* Event row */}
+                  <div className="flex items-start justify-between gap-2">
+                    <div className="flex-1 min-w-0">
+                      <span className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-slate-400">
+                        {entry.event.type.replace(/_/g, ' ')} · {entry.event.coin}
+                      </span>
+                      <p className="text-sm font-medium text-gray-900 dark:text-white truncate">
+                        {entry.event.value.toLocaleString()} &nbsp;
+                        <span className="text-xs text-gray-500 dark:text-slate-400 font-normal">
+                          {new Date(entry.event.timestamp).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}
+                        </span>
+                      </p>
+                    </div>
+                    <span className={`text-xs font-bold flex-shrink-0 ${confBadge}`}>
+                      {confLabel} {Math.round(conf * 100)}%
+                    </span>
+                  </div>
+
+                  {/* Visual connector + narrative */}
+                  {entry.correlation && (
+                    <div className="mt-2 flex items-start gap-2">
+                      <div className="flex flex-col items-center flex-shrink-0 mt-1">
+                        <div className="w-px h-3 border-l-2 border-dashed border-gray-300 dark:border-slate-500" />
+                        <span className="text-gray-400 dark:text-slate-500 text-xs leading-none">↓</span>
+                      </div>
+                      <p className="text-xs text-gray-700 dark:text-slate-300 leading-relaxed">
+                        {entry.correlation}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* Related headlines */}
+                  {entry.related_headlines.length > 0 && (
+                    <div className="mt-2 pl-4 border-l-2 border-dashed border-gray-300 dark:border-slate-600 space-y-1">
+                      {entry.related_headlines.slice(0, 3).map((headline, j) => (
+                        <p key={j} className="text-xs text-gray-600 dark:text-slate-400 line-clamp-1">
+                          · {headline}
+                        </p>
+                      ))}
+                    </div>
+                  )}
                 </div>
               );
             })}

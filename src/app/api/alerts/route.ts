@@ -24,6 +24,8 @@ import {
   getAlertEvents,
 } from '@/lib/alerts';
 import type { AlertCondition, AlertChannel } from '@/lib/alert-rules';
+import { getLatestNews } from '@/lib/crypto-news';
+import { callGroq, isGroqConfigured } from '@/lib/groq';
 
 // Use Node.js runtime since alerts.ts uses database.ts which requires fs/path modules
 export const runtime = 'nodejs';
@@ -40,13 +42,53 @@ export async function GET(request: NextRequest) {
       checkKeywordAlerts(),
     ]);
 
+    const allNotifications = [...priceNotifications, ...keywordNotifications];
+
+    // Enrich with AI context when Groq is available and there are notifications
+    let enrichedNotifications: typeof allNotifications = allNotifications;
+    if (isGroqConfigured() && allNotifications.length > 0) {
+      try {
+        const { articles } = await getLatestNews(10);
+        const recentHeadlines = articles.map(a => a.title).join('\n');
+
+        const alertList = allNotifications
+          .map((n, i) => `${i}: [${n.type}] ${n.title} — ${n.message}`)
+          .join('\n');
+
+        const response = await callGroq(
+          [
+            {
+              role: 'system',
+              content: 'You are a crypto market analyst providing brief, actionable context for triggered alerts.',
+            },
+            {
+              role: 'user',
+              content: `These crypto alerts just fired:\n${alertList}\n\nRecent crypto headlines for context:\n${recentHeadlines}\n\nFor each alert, write 2-3 sentences explaining why this alert matters RIGHT NOW given the current news. Be specific and actionable.\n\nReturn ONLY a JSON array (same order as alerts):\n[{ "index": 0, "ai_context": "..." }, ...]`,
+            },
+          ],
+          { maxTokens: 1500, temperature: 0.3, jsonMode: true }
+        );
+
+        const parsed = JSON.parse(response.content.trim());
+        const contexts: Array<{ index: number; ai_context: string }> =
+          Array.isArray(parsed) ? parsed : parsed.alerts || [];
+
+        enrichedNotifications = allNotifications.map((n, i) => {
+          const ctx = contexts.find(c => c.index === i);
+          return ctx ? { ...n, ai_context: ctx.ai_context } : n;
+        });
+      } catch (err) {
+        console.warn('[Alerts] AI context enrichment failed (non-fatal):', err);
+      }
+    }
+
     return NextResponse.json({
       checked: true,
       notifications: {
         price: priceNotifications.length,
         keyword: keywordNotifications.length,
       },
-      results: [...priceNotifications, ...keywordNotifications],
+      results: enrichedNotifications,
     });
   }
 

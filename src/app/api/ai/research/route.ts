@@ -21,7 +21,7 @@ import {
 import { isGroqConfigured } from '@/lib/groq';
 
 export const runtime = 'edge';
-export const revalidate = 300; // 5 minutes
+export const revalidate = 60; // 1 minute — fresh analysis
 
 // Topic patterns
 const TOPIC_PATTERNS: Record<string, RegExp> = {
@@ -57,7 +57,7 @@ export async function GET(request: NextRequest) {
   try {
     // Fetch news and market data in parallel
     const [newsData, priceData] = await Promise.all([
-      getLatestNews(100),
+      getLatestNews(150),
       getTopCoins(50).catch(() => []),
     ]);
 

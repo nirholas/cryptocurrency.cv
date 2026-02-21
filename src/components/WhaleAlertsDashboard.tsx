@@ -68,6 +68,12 @@ export function WhaleAlertsDashboard() {
   const [significanceFilter, setSignificanceFilter] = useState<SignificanceFilter>('all');
   const [liveUpdates, setLiveUpdates] = useState(true);
 
+  // AI context state
+  const [expandedContext, setExpandedContext] = useState<string | null>(null);
+  const [rowContexts, setRowContexts] = useState<
+    Record<string, { text: string; loading: boolean; error: boolean }>
+  >({});
+
   const fetchData = useCallback(async () => {
     try {
       setError(null);
@@ -97,6 +103,58 @@ export function WhaleAlertsDashboard() {
       return () => clearInterval(interval);
     }
   }, [fetchData, liveUpdates]);
+
+  // Map internal transactionType values to the context API type param
+  const toContextType = (
+    t: WhaleTransaction['transactionType']
+  ): string => {
+    switch (t) {
+      case 'exchange_deposit':    return 'exchange_inflow';
+      case 'exchange_withdrawal': return 'exchange_outflow';
+      case 'whale_transfer':      return 'transfer';
+      default:                    return 'transfer';
+    }
+  };
+
+  const fetchContext = async (alert: WhaleTransaction) => {
+    const id = alert.id;
+
+    // Toggle off if already expanded
+    if (expandedContext === id) {
+      setExpandedContext(null);
+      return;
+    }
+
+    setExpandedContext(id);
+
+    // Already loaded
+    if (rowContexts[id]?.text) return;
+
+    setRowContexts((prev) => ({ ...prev, [id]: { text: '', loading: true, error: false } }));
+
+    try {
+      const params = new URLSearchParams({
+        coin: alert.symbol,
+        amount: String(alert.amount),
+        amountUsd: String(alert.amountUsd),
+        type: toContextType(alert.transactionType),
+        ...(alert.from.owner ? { from: alert.from.owner } : {}),
+        ...(alert.to.owner ? { to: alert.to.owner } : {}),
+      });
+      const res = await fetch(`/api/whale-alerts/context?${params}`);
+      if (!res.ok) throw new Error('context fetch failed');
+      const json: { context: string } = await res.json();
+      setRowContexts((prev) => ({
+        ...prev,
+        [id]: { text: json.context, loading: false, error: false },
+      }));
+    } catch {
+      setRowContexts((prev) => ({
+        ...prev,
+        [id]: { text: '', loading: false, error: true },
+      }));
+    }
+  };
 
   // Format helpers
   const formatAddress = (address: string) => {
@@ -417,7 +475,7 @@ export function WhaleAlertsDashboard() {
                       </div>
                     </div>
                   </div>
-                  <div className="text-right flex-shrink-0">
+                  <div className="text-right flex-shrink-0 flex flex-col items-end gap-1">
                     <p className="font-semibold text-gray-900 dark:text-white">
                       {formatValue(alert.amountUsd)}
                     </p>
@@ -436,8 +494,44 @@ export function WhaleAlertsDashboard() {
                     >
                       View TX →
                     </a>
+                    {/* AI context toggle */}
+                    <button
+                      onClick={() => fetchContext(alert)}
+                      title="AI context"
+                      className={`mt-1 w-6 h-6 rounded-full text-xs font-bold border transition-colors flex items-center justify-center ${
+                        expandedContext === alert.id
+                          ? 'bg-cyan-500 border-cyan-500 text-white'
+                          : 'border-gray-300 dark:border-slate-600 text-gray-500 dark:text-slate-400 hover:border-cyan-500 hover:text-cyan-500'
+                      }`}
+                    >
+                      ?
+                    </button>
                   </div>
                 </div>
+
+                {/* AI context expansion panel */}
+                {expandedContext === alert.id && (() => {
+                  const ctx = rowContexts[alert.id];
+                  if (!ctx) return null;
+                  if (ctx.loading) {
+                    return (
+                      <div className="mt-2 flex items-center gap-2 text-sm text-gray-500 dark:text-slate-400">
+                        <svg className="animate-spin h-4 w-4 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
+                        </svg>
+                        Analysing transaction…
+                      </div>
+                    );
+                  }
+                  if (ctx.error || !ctx.text) return null;
+                  return (
+                    <div className="mt-2 px-3 py-2 bg-cyan-50 dark:bg-cyan-900/20 border border-cyan-200 dark:border-cyan-800/40 rounded-lg text-sm text-cyan-900 dark:text-cyan-300 leading-relaxed">
+                      <span className="font-medium text-cyan-600 dark:text-cyan-400 mr-1">🤖 AI:</span>
+                      {ctx.text}
+                    </div>
+                  );
+                })()}
               </div>
             ))
           )}

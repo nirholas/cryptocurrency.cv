@@ -25,7 +25,7 @@ export default function robots(): MetadataRoute.Robots {
       // OpenAI bots
       {
         userAgent: 'GPTBot',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt'],
       },
       {
         userAgent: 'ChatGPT-User',
@@ -34,20 +34,20 @@ export default function robots(): MetadataRoute.Robots {
       // Anthropic bots (Claude)
       {
         userAgent: 'Claude-Web',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt'],
       },
       {
         userAgent: 'ClaudeBot',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt'],
       },
       {
         userAgent: 'anthropic-ai',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt'],
       },
       // xAI bots (Grok)
       {
         userAgent: 'Grok',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt'],
       },
       {
         userAgent: 'xAI-Grok',
@@ -56,7 +56,7 @@ export default function robots(): MetadataRoute.Robots {
       // Google AI bots (Gemini)
       {
         userAgent: 'Google-Extended',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt'],
       },
       // Meta AI
       {
@@ -70,7 +70,7 @@ export default function robots(): MetadataRoute.Robots {
       // Perplexity AI
       {
         userAgent: 'PerplexityBot',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt'],
       },
       // Cohere
       {
@@ -85,7 +85,7 @@ export default function robots(): MetadataRoute.Robots {
       // Mistral AI
       {
         userAgent: 'mistral-crawler',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt'],
       },
       // Amazon AI
       {
@@ -95,7 +95,7 @@ export default function robots(): MetadataRoute.Robots {
       // Apple AI
       {
         userAgent: 'Applebot-Extended',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt'],
       },
       // ByteDance/TikTok AI
       {
@@ -105,12 +105,12 @@ export default function robots(): MetadataRoute.Robots {
       // OpenAI SearchGPT
       {
         userAgent: 'OAI-SearchBot',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt'],
       },
       // Common Crawl (training data)
       {
         userAgent: 'CCBot',
-        allow: ['/api/news', '/api/search', '/api/trending', '/llms.txt', '/llms-full.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt'],
       },
       // Search engines
       {

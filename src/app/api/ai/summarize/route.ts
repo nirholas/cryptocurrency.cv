@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
+import { aiComplete, getAIConfigOrNull } from '@/lib/ai-provider';
 
 export const runtime = 'edge';
 
@@ -9,8 +10,6 @@ interface SummarizeRequest {
   url?: string;
   type: 'sentence' | 'paragraph' | 'bullets';
 }
-
-const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
 export async function POST(request: NextRequest) {
   try {
@@ -80,7 +79,7 @@ async function generateSummary(
   content: string,
   type: 'sentence' | 'paragraph' | 'bullets'
 ): Promise<string> {
-  if (!GROQ_API_KEY) {
+  if (!getAIConfigOrNull(true)) {
     // Fallback: simple extraction
     return extractiveSummary(content, type);
   }
@@ -92,35 +91,16 @@ async function generateSummary(
   };
 
   try {
-    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${GROQ_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'llama-3.3-70b-versatile',
-        messages: [
-          {
-            role: 'system',
-            content: `You are a news summarizer. ${typeInstructions[type]} Focus on facts, not opinions. Write in present tense. Do not add any preamble or explanation - just output the summary.`,
-          },
-          {
-            role: 'user',
-            content: content.slice(0, 6000), // Limit to ~6k chars
-          },
-        ],
-        max_tokens: type === 'sentence' ? 100 : type === 'paragraph' ? 200 : 300,
+    const result = await aiComplete(
+      `You are a news summarizer. ${typeInstructions[type]} Focus on facts, not opinions. Write in present tense. Do not add any preamble or explanation - just output the summary.`,
+      content.slice(0, 6000),
+      {
+        maxTokens: type === 'sentence' ? 100 : type === 'paragraph' ? 200 : 300,
         temperature: 0.3,
-      }),
-    });
-
-    if (!response.ok) {
-      return extractiveSummary(content, type);
-    }
-
-    const data = await response.json();
-    return data.choices?.[0]?.message?.content?.trim() || extractiveSummary(content, type);
+      },
+      true // preferGroq for fast summarisation
+    );
+    return result?.trim() || extractiveSummary(content, type);
   } catch {
     return extractiveSummary(content, type);
   }

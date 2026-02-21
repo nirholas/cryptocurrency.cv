@@ -38,7 +38,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { generateArticleSlug } from '@/lib/archive-v2';
 import { estimateReadingTime } from '@/lib/reading-time';
@@ -50,6 +50,8 @@ interface Article {
   title: string;
   link: string;
   description?: string;
+  /** Pre-generated translated summaries keyed by locale code */
+  translations?: Record<string, string>;
   imageUrl?: string;
   pubDate: string;
   source: string;
@@ -78,9 +80,12 @@ const defaultStyle = { bg: 'bg-gray-600', light: 'bg-gray-50', text: 'text-gray-
 export default function NewsCard({ article, variant = 'default', showDescription = true, priority }: NewsCardProps) {
   const t = useTranslations('news');
   const tCommon = useTranslations('common');
+  const locale = useLocale();
   const articleSlug = generateArticleSlug(article.title, article.pubDate);
   const style = sourceColors[article.source] || defaultStyle;
-  const readingTime = estimateReadingTime(article.title, article.description);
+  // Use pre-generated translation when available, falling back to original description
+  const localizedDescription = article.translations?.[locale] ?? article.description;
+  const readingTime = estimateReadingTime(article.title, localizedDescription);
   
   const { isBookmarked, addBookmark, removeBookmark } = useBookmarks();
   const bookmarked = isBookmarked(article.link);
@@ -186,9 +191,9 @@ export default function NewsCard({ article, variant = 'default', showDescription
             <h3 className="text-base font-semibold text-gray-900 dark:text-white group-hover:text-brand-700 dark:group-hover:text-amber-400 transition-colors line-clamp-2 leading-snug mb-2">
               {article.title}
             </h3>
-            {showDescription && article.description && (
+            {showDescription && localizedDescription && (
               <p className="text-sm text-gray-500 dark:text-slate-400 line-clamp-2">
-                {article.description}
+                {localizedDescription}
               </p>
             )}
           </div>
@@ -296,9 +301,9 @@ export default function NewsCard({ article, variant = 'default', showDescription
           </h3>
 
           {/* Description */}
-          {showDescription && article.description && (
+          {showDescription && localizedDescription && (
             <p className="text-sm text-gray-500 dark:text-slate-400 line-clamp-2 mb-4">
-              {article.description}
+              {localizedDescription}
             </p>
           )}
 
