@@ -30,9 +30,9 @@ mcp_server: "@anthropic-ai/mcp-server-crypto-news"
   <a href="https://github.com/nirholas/free-crypto-news"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs Welcome"></a>
 </p>
 
-> **🤖 AI Agents:** Free, no-auth crypto news API with 200+ sources.
+### **🤖 AI Agents:** Free, no-auth crypto news API with 200+ sources.
 > `curl https://cryptocurrency.cv/api/news` • [LLM Docs](/llms.txt) • [Full API Docs](/llms-full.txt) • [OpenAPI](/api/openapi.json)
-> • MCP: `npx @anthropic-ai/mcp-server-crypto-news`
+### • MCP: `npx @anthropic-ai/mcp-server-crypto-news`
 
 <p align="center">
   <a href="#-quick-start">Quick Start</a> •
