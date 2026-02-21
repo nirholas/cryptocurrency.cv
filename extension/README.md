@@ -86,3 +86,4 @@ Firefox version coming soon. The extension uses Manifest V3 which Firefox now su
 ## License
 
 MIT
+
