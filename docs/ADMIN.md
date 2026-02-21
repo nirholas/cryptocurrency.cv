@@ -377,3 +377,4 @@ const chartData = hourlyData.map(h => ({
 - 📖 [API Documentation](./API.md)
 - 💬 [GitHub Discussions](https://github.com/nirholas/free-crypto-news/discussions)
 - 🐛 [Report Issues](https://github.com/nirholas/free-crypto-news/issues)
+
