@@ -9,6 +9,8 @@ import Posts from '@/components/Posts';
 import { searchNews } from '@/lib/crypto-news';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { BreadcrumbStructuredData } from '@/components/StructuredData';
+import { SITE_URL } from '@/lib/constants';
 
 // Enable on-demand ISR for topics not pre-rendered
 export const dynamicParams = true;
@@ -139,6 +141,11 @@ export default async function TopicPage({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+      <BreadcrumbStructuredData items={[
+        { name: 'Home', url: SITE_URL },
+        { name: 'Topics', url: `${SITE_URL}/topics` },
+        { name: info?.title || topic, url: `${SITE_URL}/topic/${topic}` },
+      ]} />
       <div className="max-w-7xl mx-auto">
         <Header />
         

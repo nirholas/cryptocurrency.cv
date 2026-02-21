@@ -215,12 +215,33 @@ const nextConfig = {
   experimental: {
     // Enable optimized loading of CSS
     optimizeCss: true,
+    // Keep heavy server-only packages out of the client bundle
+    serverExternalPackages: [
+      'pino',
+      'pino-pretty',
+      'sharp',
+      'redis',
+      'sanitize-html',
+      'dompurify',
+    ],
+    // Client-side router cache: RSC payloads for dynamic routes survive 30 s,
+    // static routes survive 3 min — reduces redundant network round-trips on navigation.
+    staleTimes: {
+      dynamic: 30,
+      static: 180,
+    },
   },
   
-  // Reduce bundle size
+  // Reduce bundle size via tree-shakeable per-member imports
   modularizeImports: {
     'lodash': {
       transform: 'lodash/{{member}}',
+    },
+    'recharts': {
+      transform: 'recharts/es6/{{member}}',
+    },
+    'lucide-react': {
+      transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
     },
   },
 }

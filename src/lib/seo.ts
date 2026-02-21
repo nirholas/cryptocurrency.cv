@@ -4,6 +4,7 @@
  */
 
 import type { Metadata } from 'next';
+import { getAlternateLanguages } from '@/components/AlternateLinks';
 
 const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://cryptocurrency.cv';
 
@@ -53,6 +54,7 @@ export function generateSEOMetadata({
     authors: authors.map(name => ({ name })),
     alternates: {
       canonical: url,
+      languages: getAlternateLanguages(path).languages,
     },
     openGraph: {
       title,

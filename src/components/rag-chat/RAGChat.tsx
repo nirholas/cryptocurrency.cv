@@ -288,8 +288,10 @@ export function RAGChat({
           {/* Mobile overlay */}
           {sidebarOpen && (
             <div
+              role="presentation"
               className="fixed inset-0 bg-black/50 z-30 lg:hidden"
               onClick={() => setSidebarOpen(false)}
+              onKeyDown={() => setSidebarOpen(false)}
             />
           )}
 

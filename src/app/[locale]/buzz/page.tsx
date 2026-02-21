@@ -1,18 +1,18 @@
 import type { Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 import { setRequestLocale } from 'next-intl/server';
 import { SocialBuzz } from '@/components/SocialBuzz';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-export const metadata: Metadata = {
-  title: 'Social Buzz | Trending Crypto',
-  description:
-    'See what cryptocurrencies are trending on social media. Track mentions, sentiment, and buzz across Twitter, Reddit, Discord, and Telegram.',
-  openGraph: {
-    title: 'Social Buzz | Trending Crypto',
-    description: 'See what cryptocurrencies are trending on social media.',
-  },
-};
+export function generateMetadata(): Metadata {
+  return generateSEOMetadata({
+    title: 'Social Buzz',
+    description: 'Track cryptocurrencies trending on social media. Monitor mentions, sentiment, and buzz across Twitter, Reddit, Discord, and Telegram.',
+    path: '/buzz',
+    tags: ['crypto social buzz', 'trending crypto', 'social sentiment', 'crypto twitter', 'crypto reddit'],
+  });
+}
 
 type Props = {
   params: Promise<{ locale: string }>;

@@ -165,8 +165,10 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
     <div className="fixed inset-0 z-[60] flex items-start justify-center pt-[15vh]">
       {/* Backdrop */}
       <div 
+        role="presentation"
         className="absolute inset-0 bg-gray-900/70 backdrop-blur-sm"
         onClick={onClose}
+        onKeyDown={onClose}
       />
       
       {/* Palette */}

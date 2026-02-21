@@ -436,11 +436,14 @@ export function InfluencerLeaderboard({
               >
                 {/* Main Row */}
                 <div 
+                  role="button"
+                  tabIndex={0}
                   className="flex items-center gap-4 p-4 cursor-pointer hover:bg-neutral-50 dark:hover:bg-neutral-800/50 transition-colors"
                   onClick={() => {
                     setExpandedId(expandedId === influencer.id ? null : influencer.id);
                     onInfluencerClick?.(influencer);
                   }}
+                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { setExpandedId(expandedId === influencer.id ? null : influencer.id); onInfluencerClick?.(influencer); } }}
                 >
                   {/* Rank */}
                   <div className="w-8 h-8 flex items-center justify-center rounded-full bg-neutral-100 dark:bg-neutral-800 font-bold text-neutral-600 dark:text-neutral-400">
@@ -540,11 +543,14 @@ export function InfluencerLeaderboard({
                             {influencer.topTickers.slice(0, 5).map((ticker) => (
                               <div 
                                 key={ticker.ticker}
+                                role="button"
+                                tabIndex={0}
                                 className="flex items-center justify-between p-2 bg-white dark:bg-neutral-800 rounded cursor-pointer hover:bg-neutral-100 dark:hover:bg-neutral-700"
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   onTickerClick?.(ticker.ticker);
                                 }}
+                                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.stopPropagation(); onTickerClick?.(ticker.ticker); } }}
                               >
                                 <span className="font-medium text-purple-600 dark:text-purple-400">
                                   ${ticker.ticker}

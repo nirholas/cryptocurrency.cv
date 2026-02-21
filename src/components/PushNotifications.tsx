@@ -166,7 +166,7 @@ export function PushNotifications() {
 
       {isOpen && (
         <>
-          <div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} />
+          <div role="presentation" className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} onKeyDown={() => setIsOpen(false)} />
           <div className="absolute right-0 top-full mt-2 w-80 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50 overflow-hidden animate-fadeIn">
             <div className="p-4 border-b border-gray-200 dark:border-gray-700">
               <div className="flex items-center justify-between">

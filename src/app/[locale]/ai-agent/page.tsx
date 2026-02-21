@@ -1,31 +1,18 @@
 import type { Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { AIMarketAgentDashboard } from '@/components/AIMarketAgentDashboard';
 
-export const metadata: Metadata = {
-  title: 'AI Market Agent | Intelligent Crypto Analysis',
-  description:
-    'Revolutionary AI-powered market intelligence that synthesizes news, social sentiment, on-chain data, and derivatives into actionable trading insights.',
-  openGraph: {
-    title: 'AI Market Agent | Intelligent Crypto Analysis',
-    description:
-      'Get real-time market regime detection, trading opportunities, and risk alerts powered by AI.',
-  },
-  keywords: [
-    'ai trading',
-    'market intelligence',
-    'crypto analysis',
-    'trading signals',
-    'market sentiment',
-    'crypto ai',
-    'trading bot',
-    'market regime',
-    'fear greed index',
-    'whale tracking',
-  ],
-};
+export function generateMetadata(): Metadata {
+  return generateSEOMetadata({
+    title: 'AI Market Agent',
+    description: 'AI-powered crypto market intelligence synthesizing news, social sentiment, on-chain data, and derivatives into actionable trading insights.',
+    path: '/ai-agent',
+    tags: ['ai trading', 'market intelligence', 'crypto analysis', 'trading signals', 'market sentiment'],
+  });
+}
 
 type Props = {
   params: Promise<{ locale: string }>;

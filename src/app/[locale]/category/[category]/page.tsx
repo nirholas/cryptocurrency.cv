@@ -9,6 +9,8 @@ import Posts from '@/components/Posts';
 import CategoryNav from '@/components/CategoryNav';
 import { getNewsByCategory } from '@/lib/crypto-news';
 import type { Metadata } from 'next';
+import { BreadcrumbStructuredData } from '@/components/StructuredData';
+import { SITE_URL } from '@/lib/constants';
 
 // Enable on-demand ISR for categories not pre-rendered
 export const dynamicParams = true;
@@ -99,6 +101,11 @@ export default async function CategoryPage({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+      <BreadcrumbStructuredData items={[
+        { name: 'Home', url: SITE_URL },
+        { name: 'News', url: `${SITE_URL}/category` },
+        { name: info.title, url: `${SITE_URL}/category/${category}` },
+      ]} />
       <div className="max-w-7xl mx-auto">
         <Header />
         <CategoryNav activeCategory={category} />

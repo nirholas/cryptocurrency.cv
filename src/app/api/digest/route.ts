@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { promptGroqJson, isGroqConfigured } from '@/lib/groq';
+import { groqNotConfiguredResponse } from '@/app/api/_utils';
 
 export const runtime = 'edge';
 export const revalidate = 300; // 5 minute cache
@@ -48,15 +49,7 @@ export async function GET(request: NextRequest) {
   const period = searchParams.get('period') || '24h'; // 24h, 12h, 6h
   const format = searchParams.get('format') || 'full'; // full, brief, newsletter
 
-  if (!isGroqConfigured()) {
-    return NextResponse.json(
-      { 
-        error: 'AI features not configured',
-        message: 'Set GROQ_API_KEY environment variable. Get a free key at https://console.groq.com/keys',
-      },
-      { status: 503 }
-    );
-  }
+  if (!isGroqConfigured()) return groqNotConfiguredResponse();
 
   try {
     // Fetch articles based on period

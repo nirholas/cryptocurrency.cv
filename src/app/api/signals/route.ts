@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { promptGroqJson, isGroqConfigured } from '@/lib/groq';
+import { groqNotConfiguredResponse } from '@/app/api/_utils';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 
@@ -49,15 +50,7 @@ export async function GET(request: NextRequest) {
   const minConfidence = parseInt(searchParams.get('min_confidence') || '50');
   const ticker = searchParams.get('ticker')?.toUpperCase();
 
-  if (!isGroqConfigured()) {
-    return NextResponse.json(
-      { 
-        error: 'AI features not configured',
-        message: 'Set GROQ_API_KEY environment variable. Get a free key at https://console.groq.com/keys',
-      },
-      { status: 503 }
-    );
-  }
+  if (!isGroqConfigured()) return groqNotConfiguredResponse();
 
   try {
     const data = await getLatestNews(limit);

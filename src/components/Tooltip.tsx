@@ -86,6 +86,7 @@ export function Tooltip({
     <>
       <span
         ref={triggerRef}
+        role="group"
         onMouseEnter={showTooltip}
         onMouseLeave={hideTooltip}
         onFocus={showTooltip}

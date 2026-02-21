@@ -1,18 +1,18 @@
 import type { Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 import { setRequestLocale } from 'next-intl/server';
 import { CorrelationMatrix } from '@/components/CorrelationMatrix';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-export const metadata: Metadata = {
-  title: 'Correlation Matrix | Crypto Asset Correlations',
-  description:
-    'Analyze correlations between cryptocurrencies. See which coins move together and build a diversified portfolio.',
-  openGraph: {
-    title: 'Correlation Matrix | Crypto Asset Correlations',
-    description: 'Analyze correlations between cryptocurrencies.',
-  },
-};
+export function generateMetadata(): Metadata {
+  return generateSEOMetadata({
+    title: 'Correlation Matrix',
+    description: 'Analyze price correlations between cryptocurrencies. See which coins move together to build a diversified portfolio and manage risk.',
+    path: '/correlation',
+    tags: ['crypto correlation', 'portfolio diversification', 'bitcoin correlation', 'asset correlation', 'crypto analysis'],
+  });
+}
 
 type Props = {
   params: Promise<{ locale: string }>;

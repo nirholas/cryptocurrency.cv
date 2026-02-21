@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 import { setRequestLocale } from 'next-intl/server';
 import { DominanceChart } from '@/components/DominanceChart';
 import Header from '@/components/Header';
@@ -13,15 +14,14 @@ interface Coin {
   market_cap: number;
 }
 
-export const metadata: Metadata = {
-  title: 'Market Dominance | Crypto Market Share',
-  description:
-    'Visualize cryptocurrency market dominance. See the market share of Bitcoin, Ethereum, and other top cryptocurrencies.',
-  openGraph: {
-    title: 'Market Dominance | Crypto Market Share',
-    description: 'Visualize cryptocurrency market dominance and market share.',
-  },
-};
+export function generateMetadata(): Metadata {
+  return generateSEOMetadata({
+    title: 'Market Dominance',
+    description: 'Visualize cryptocurrency market dominance and market share. Track Bitcoin dominance, Ethereum, and altcoin market cap percentages in real time.',
+    path: '/dominance',
+    tags: ['bitcoin dominance', 'crypto market share', 'market cap distribution', 'altcoin dominance', 'BTC dominance'],
+  });
+}
 
 async function getCoins(): Promise<Coin[]> {
   const data = await fetchCoinGecko<Coin[]>(

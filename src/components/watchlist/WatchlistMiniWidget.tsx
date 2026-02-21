@@ -90,7 +90,7 @@ export function WatchlistMiniWidget({
             href="/watchlist"
             className="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
           >
-            {t('common.viewAll')} <ChevronRight className="w-4 h-4" />
+            {t('viewAll')} <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
         <div className="space-y-2">
@@ -126,7 +126,7 @@ export function WatchlistMiniWidget({
           href="/watchlist"
           className="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
         >
-          {t('common.viewAll')} <ChevronRight className="w-4 h-4" />
+          {t('viewAll')} <ChevronRight className="w-4 h-4" />
         </Link>
       </div>
 

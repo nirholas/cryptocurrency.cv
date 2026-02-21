@@ -221,7 +221,7 @@ export default function CardsShowcasePage() {
                   }
                   className="w-4 h-4 rounded border-slate-600 bg-slate-800 text-brand-500 focus:ring-brand-500"
                 />
-                {t('common.share')}
+                {t('share')}
               </label>
               <label className="flex items-center gap-2 text-sm text-slate-300 cursor-pointer">
                 <input

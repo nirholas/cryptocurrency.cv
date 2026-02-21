@@ -61,9 +61,35 @@ export const AskRequestSchema = z.object({
 export type AskRequest = z.infer<typeof AskRequestSchema>;
 
 // ═══════════════════════════════════════════════════════════════
-// SEARCH ENDPOINT (POST /api/rag/search)
+// SHARED HELPER: map AskRequest options → UltimateRAGOptions
 // ═══════════════════════════════════════════════════════════════
 
+import type { UltimateRAGOptions } from '@/lib/rag/ultimate-rag-service';
+
+export function buildRagOptions(options: AskRequest['options']): UltimateRAGOptions {
+  return {
+    limit: options?.limit ?? 10,
+    similarityThreshold: options?.similarityThreshold ?? 0.5,
+    useRouting: options?.useRouting ?? true,
+    useHybridSearch: options?.useHybridSearch ?? true,
+    useHyDE: options?.useHyDE ?? true,
+    useQueryDecomposition: options?.useQueryDecomposition ?? false,
+    useAdvancedReranking: options?.useAdvancedReranking ?? true,
+    useConversationMemory: options?.useConversationMemory ?? !!options?.conversationId,
+    useSelfRAG: options?.useSelfRAG ?? false,
+    useContextualCompression: options?.useContextualCompression ?? true,
+    useAttributedAnswers: options?.useAttributedAnswers ?? true,
+    useConfidenceScoring: options?.useConfidenceScoring ?? true,
+    useSuggestedQuestions: options?.useSuggestedQuestions ?? true,
+    useRelatedArticles: options?.useRelatedArticles ?? true,
+    useCaching: options?.useCaching ?? true,
+    useTracing: options?.useTracing ?? true,
+    conversationId: options?.conversationId,
+  };
+}
+
+// ═══════════════════════════════════════════════════════════════
+// SEARCH ENDPOINT (POST /api/rag/search)
 export const SearchRequestSchema = z.object({
   query: z.string().min(1, 'Query is required').max(2000, 'Query too long (max 2000 chars)'),
   topK: z.number().int().min(1).max(100).default(10).optional(),

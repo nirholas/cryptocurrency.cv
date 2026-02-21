@@ -51,7 +51,8 @@ export async function GET() {
     let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 `;
 
     for (const article of recentArticles) {
@@ -83,7 +84,11 @@ export async function GET() {
       <news:title>${escapeXml(article.title)}</news:title>
       ${keywords.length > 0 ? `<news:keywords>${escapeXml(keywords.join(', '))}</news:keywords>` : ''}
     </news:news>
-`;
+${article.imageUrl ? `    <image:image>
+      <image:loc>${escapeXml(article.imageUrl)}</image:loc>
+      <image:title>${escapeXml(article.title)}</image:title>
+    </image:image>
+` : ''}`;
         
         // Add hreflang alternates
         for (const altLocale of locales) {

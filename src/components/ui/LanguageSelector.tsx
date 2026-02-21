@@ -93,7 +93,6 @@ export function LanguageSelector({
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-gray-700 rounded-md bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  autoFocus
                 />
               </div>
             )}
@@ -192,7 +191,6 @@ export function LanguageSelector({
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                     className="w-full px-4 py-3 text-base border border-gray-200 dark:border-gray-700 rounded-lg bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    autoFocus
                   />
                 </div>
               )}

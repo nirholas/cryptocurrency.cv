@@ -1,19 +1,18 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { getAllPostsMeta, getFeaturedPosts, CATEGORIES, type BlogCategory } from '@/lib/blog';
 
-export const metadata: Metadata = {
-  title: 'Crypto Blog | Free Crypto News',
-  description: 'Learn about cryptocurrency, blockchain, DeFi, and trading with our comprehensive guides and analysis. Free educational content for beginners and experts.',
-  keywords: ['crypto blog', 'cryptocurrency guides', 'bitcoin tutorials', 'defi education', 'blockchain learning'],
-  openGraph: {
-    title: 'Crypto Blog | Free Crypto News',
-    description: 'Learn about cryptocurrency, blockchain, DeFi, and trading with our comprehensive guides.',
-    type: 'website',
-  },
-};
+export function generateMetadata(): Metadata {
+  return generateSEOMetadata({
+    title: 'Crypto Blog & Guides',
+    description: 'Cryptocurrency guides, tutorials, and analysis covering Bitcoin, DeFi, blockchain, and trading. Free educational content for all levels.',
+    path: '/blog',
+    tags: ['crypto blog', 'cryptocurrency guides', 'bitcoin tutorials', 'defi education', 'blockchain learning'],
+  });
+}
 
 // Enable static generation
 export const dynamic = 'force-static';

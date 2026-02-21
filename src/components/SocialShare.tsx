@@ -99,8 +99,10 @@ export function SocialShare({ title, url, description }: SocialShareProps) {
       {isOpen && !canShare && (
         <>
           <div
+            role="presentation"
             className="fixed inset-0 z-10"
             onClick={() => setIsOpen(false)}
+            onKeyDown={() => setIsOpen(false)}
           />
           <div className="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-2 z-20 animate-fadeIn">
             {shareLinks.map((link) => (

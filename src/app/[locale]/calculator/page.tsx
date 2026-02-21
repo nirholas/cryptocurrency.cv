@@ -1,18 +1,18 @@
 import type { Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 import { setRequestLocale } from 'next-intl/server';
 import { CryptoCalculator } from '@/components/CryptoCalculator';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-export const metadata: Metadata = {
-  title: 'Crypto Calculator | Convert & Calculate Profits',
-  description:
-    'Convert between cryptocurrencies and calculate your potential profits. Free crypto converter and profit/loss calculator.',
-  openGraph: {
-    title: 'Crypto Calculator | Convert & Calculate Profits',
-    description: 'Convert between cryptocurrencies and calculate your potential profits.',
-  },
-};
+export function generateMetadata(): Metadata {
+  return generateSEOMetadata({
+    title: 'Crypto Calculator',
+    description: 'Convert between cryptocurrencies and calculate profit and loss. Free crypto converter supporting Bitcoin, Ethereum, and hundreds of altcoins.',
+    path: '/calculator',
+    tags: ['crypto calculator', 'crypto converter', 'profit calculator', 'bitcoin converter', 'cryptocurrency calculator'],
+  });
+}
 
 type Props = {
   params: Promise<{ locale: string }>;

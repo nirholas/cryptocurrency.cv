@@ -244,7 +244,7 @@ export function FundingRates({
                 Annual {sortBy === 'annualized' && (sortDir === 'desc' ? '↓' : '↑')}
               </th>
               <th className="px-4 py-3 text-right text-xs font-medium text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">
-                {t('common.next')}
+                {t('next')}
               </th>
               {showOpenInterest && (
                 <th className="px-4 py-3 text-right text-xs font-medium text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">

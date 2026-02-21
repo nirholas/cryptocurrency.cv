@@ -1,5 +1,6 @@
 import '../globals.css';
 import type { Metadata, Viewport } from 'next';
+import { Inter, JetBrains_Mono } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
@@ -20,6 +21,18 @@ import { GlobalSearch } from '@/components/GlobalSearch';
 import { ToastProvider } from '@/components/Toast';
 import { AlternateLinks } from '@/components/AlternateLinks';
 import { locales, isRtlLocale, type Locale } from '@/i18n/config';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono',
+  display: 'swap',
+});
 
 export const viewport: Viewport = {
   themeColor: '#000000',
@@ -198,17 +211,13 @@ export default async function LocaleLayout({ children, params }: Props) {
   const dir = isRtlLocale(locale as Locale) ? 'rtl' : 'ltr';
 
   return (
-    <html lang={locale} dir={dir} suppressHydrationWarning>
+    <html lang={locale} dir={dir} suppressHydrationWarning className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
         {/* Theme Script - prevents flash of wrong theme */}
         <ThemeScript />
         
         {/* Alternate language links for SEO */}
         <AlternateLinks currentLocale={locale} currentPath="" />
-        
-        {/* Preconnect to external resources */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* DNS prefetch for API endpoints */}
         <link rel="dns-prefetch" href="https://api.coingecko.com" />

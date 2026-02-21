@@ -7,6 +7,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Saved Articles - Free Crypto News',
   description: 'Your saved crypto news articles. Read later or share with others.',
+  robots: { index: false, follow: false },
 };
 
 type Props = {

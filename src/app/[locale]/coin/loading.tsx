@@ -1,9 +1,6 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-
-function Skeleton({ className = '' }: { className?: string }) {
-  return <div className={`animate-pulse bg-gray-200 dark:bg-slate-700 rounded ${className}`} />;
-}
+import { Skeleton } from '@/components/Skeletons';
 
 export default function Loading() {
   return (

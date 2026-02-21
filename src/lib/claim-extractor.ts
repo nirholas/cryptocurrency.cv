@@ -4,6 +4,7 @@
  */
 
 import { aiCache, withCache } from './cache';
+import { getAIConfigOrNull, aiComplete } from './ai-provider';
 
 // Claim types
 export type ClaimType = 'fact' | 'opinion' | 'prediction' | 'announcement';
@@ -28,128 +29,11 @@ export interface ClaimExtractionResult {
   conflictingClaims: boolean;   // Any contradictions?
 }
 
-// AI provider configuration
-interface AIConfig {
-  provider: 'openai' | 'anthropic' | 'groq' | 'openrouter';
-  model: string;
-  apiKey: string;
-  baseUrl?: string;
-}
-
-function getAIConfig(): AIConfig | null {
-  if (process.env.GROQ_API_KEY) {
-    return {
-      provider: 'groq',
-      model: process.env.GROQ_MODEL || 'llama-3.3-70b-versatile',
-      apiKey: process.env.GROQ_API_KEY,
-      baseUrl: 'https://api.groq.com/openai/v1',
-    };
-  }
-
-  if (process.env.OPENAI_API_KEY) {
-    return {
-      provider: 'openai',
-      model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
-      apiKey: process.env.OPENAI_API_KEY,
-    };
-  }
-
-  if (process.env.ANTHROPIC_API_KEY) {
-    return {
-      provider: 'anthropic',
-      model: process.env.ANTHROPIC_MODEL || 'claude-3-haiku-20240307',
-      apiKey: process.env.ANTHROPIC_API_KEY,
-    };
-  }
-
-  if (process.env.OPENROUTER_API_KEY) {
-    return {
-      provider: 'openrouter',
-      model: process.env.OPENROUTER_MODEL || 'meta-llama/llama-3-8b-instruct',
-      apiKey: process.env.OPENROUTER_API_KEY,
-      baseUrl: 'https://openrouter.ai/api/v1',
-    };
-  }
-
-  return null;
-}
-
 /**
  * Check if claim extraction is configured
  */
 export function isExtractorConfigured(): boolean {
-  return getAIConfig() !== null;
-}
-
-// Generic AI completion request
-async function aiComplete(
-  systemPrompt: string,
-  userPrompt: string,
-  options?: { maxTokens?: number; temperature?: number }
-): Promise<string> {
-  const config = getAIConfig();
-  if (!config) {
-    throw new Error('No AI provider configured. Set GROQ_API_KEY, OPENAI_API_KEY, ANTHROPIC_API_KEY, or OPENROUTER_API_KEY');
-  }
-
-  const { maxTokens = 2000, temperature = 0.2 } = options || {};
-
-  if (config.provider === 'anthropic') {
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': config.apiKey,
-        'anthropic-version': '2023-06-01',
-      },
-      body: JSON.stringify({
-        model: config.model,
-        max_tokens: maxTokens,
-        system: systemPrompt,
-        messages: [{ role: 'user', content: userPrompt }],
-      }),
-    });
-
-    if (!response.ok) {
-      throw new Error(`Anthropic API error: ${response.status}`);
-    }
-
-    const data = await response.json();
-    return data.content[0].text;
-  }
-
-  // OpenAI-compatible API (OpenAI, Groq, OpenRouter)
-  const baseUrl = config.baseUrl || 'https://api.openai.com/v1';
-
-  const response = await fetch(`${baseUrl}/chat/completions`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${config.apiKey}`,
-      ...(config.provider === 'openrouter' && {
-        'HTTP-Referer': process.env.VERCEL_URL || 'https://cryptocurrency.cv',
-        'X-Title': 'Crypto News Claim Extractor',
-      }),
-    },
-    body: JSON.stringify({
-      model: config.model,
-      messages: [
-        { role: 'system', content: systemPrompt },
-        { role: 'user', content: userPrompt },
-      ],
-      max_tokens: maxTokens,
-      temperature,
-      response_format: { type: 'json_object' },
-    }),
-  });
-
-  if (!response.ok) {
-    const error = await response.text();
-    throw new Error(`AI API error: ${response.status} - ${error}`);
-  }
-
-  const data = await response.json();
-  return data.choices[0].message.content;
+  return getAIConfigOrNull(true) !== null;
 }
 
 const CLAIM_EXTRACTION_PROMPT = `You are a claim extraction specialist for crypto news. Extract all verifiable claims and statements with proper attribution.
@@ -218,7 +102,7 @@ Content: ${content.slice(0, 5000)}
 
 Respond with JSON only.`;
 
-    const response = await aiComplete(CLAIM_EXTRACTION_PROMPT, userPrompt);
+    const response = await aiComplete(CLAIM_EXTRACTION_PROMPT, userPrompt, { maxTokens: 2000, temperature: 0.2, jsonMode: true, title: 'Crypto News Claim Extractor' }, true);
 
     try {
       const parsed = JSON.parse(response);

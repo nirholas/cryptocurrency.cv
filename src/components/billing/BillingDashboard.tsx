@@ -377,7 +377,7 @@ export default function BillingDashboard() {
             onClick={handleRefresh}
             className="px-4 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700"
           >
-            {t('common.refresh')}
+            {t('refresh')}
           </button>
         </div>
       </div>
@@ -655,7 +655,7 @@ export default function BillingDashboard() {
                       borderRadius: '8px',
                     }}
                     labelFormatter={(value) => formatDate(value)}
-                    formatter={(value: number) => [formatNumber(value), 'Requests']}
+                    formatter={((value: number | string | undefined) => [formatNumber(Number(value ?? 0)), 'Requests']) as any}
                   />
                   <Area
                     type="monotone"
@@ -779,7 +779,7 @@ export default function BillingDashboard() {
                       cx="50%"
                       cy="50%"
                       outerRadius={80}
-                      label={({ endpoint }) => endpoint.split('/').pop()}
+                      label={(({ name }: { name?: string }) => String((name ?? '').split('/').pop() ?? '')) as any}
                     >
                       {endpointBreakdown.map((entry, index) => (
                         <Cell
@@ -789,10 +789,10 @@ export default function BillingDashboard() {
                       ))}
                     </Pie>
                     <Tooltip
-                      formatter={(value: number, name: string) => [
-                        formatNumber(value),
-                        name,
-                      ]}
+                      formatter={((value: number | string | undefined, name: string | undefined) => [
+                        formatNumber(Number(value ?? 0)),
+                        name ?? '',
+                      ]) as any}
                     />
                   </PieChart>
                 </ResponsiveContainer>
@@ -818,7 +818,7 @@ export default function BillingDashboard() {
                     tickFormatter={(value) => value.replace('/api/', '')}
                   />
                   <Tooltip
-                    formatter={(value: number) => [`${value}ms`, 'Avg Response']}
+                    formatter={((value: number | string | undefined) => [`${Number(value ?? 0)}ms`, 'Avg Response']) as any}
                   />
                   <Bar dataKey="avgResponseTime" fill="#3B82F6" radius={[0, 4, 4, 0]} />
                 </BarChart>

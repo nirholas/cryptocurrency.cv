@@ -1,17 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getLatestNews, getDefiNews, getBitcoinNews } from '@/lib/crypto-news';
+import { escapeXml, resolveFeed } from '@/app/api/_feed-utils';
 
 export const runtime = 'edge';
 export const revalidate = 300; // 5 minutes
-
-function escapeXml(str: string): string {
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&apos;');
-}
 
 function generateRSS(articles: any[], title: string, description: string, feedUrl: string): string {
   const items = articles.map(article => `
@@ -51,32 +42,8 @@ export async function GET(request: NextRequest) {
   const limit = Math.min(parseInt(searchParams.get('limit') || '20'), 50);
   
   try {
-    let data;
-    let title: string;
-    let description: string;
-    let feedUrl: string;
-    
-    switch (feed) {
-      case 'defi':
-        data = await getDefiNews(limit);
-        title = 'Free Crypto News - DeFi Feed';
-        description = 'DeFi news aggregated from top crypto sources';
-        feedUrl = 'https://cryptocurrency.cv/api/rss?feed=defi';
-        break;
-      case 'bitcoin':
-        data = await getBitcoinNews(limit);
-        title = 'Free Crypto News - Bitcoin Feed';
-        description = 'Bitcoin news aggregated from top crypto sources';
-        feedUrl = 'https://cryptocurrency.cv/api/rss?feed=bitcoin';
-        break;
-      default:
-        data = await getLatestNews(limit);
-        title = 'Free Crypto News - All Sources';
-        description = 'Crypto news aggregated from 130+ top sources - 100% FREE';
-        feedUrl = 'https://cryptocurrency.cv/api/rss';
-    }
-    
-    const rss = generateRSS(data.articles, title, description, feedUrl);
+    const { articles, meta } = await resolveFeed(feed, 'rss', limit);
+    const rss = generateRSS(articles, meta.title, meta.description, meta.feedUrl);
     
     return new NextResponse(rss, {
       headers: {

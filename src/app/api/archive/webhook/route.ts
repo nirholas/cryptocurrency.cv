@@ -28,6 +28,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { getLatestNews, type NewsArticle } from '@/lib/crypto-news';
+import { notifyIndexNow } from '@/lib/indexnow';
 
 export const runtime = 'nodejs';
 export const maxDuration = 60;
@@ -298,6 +299,14 @@ export async function POST(request: NextRequest) {
 
     // Try to commit to GitHub
     const githubResult = await commitToGitHub(articles, today);
+
+    // Notify IndexNow about newly archived articles (best-effort, production only)
+    if (githubResult.success) {
+      const articleUrls = articles.map(
+        a => `https://cryptocurrency.cv/en/article/${a.id}`
+      );
+      notifyIndexNow(articleUrls);
+    }
 
     return NextResponse.json({
       success: true,

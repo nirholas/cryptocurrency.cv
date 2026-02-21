@@ -3,16 +3,7 @@
  * Skeleton states for each card variant
  */
 
-import React from 'react';
-
-function Skeleton({ className = '' }: { className?: string }) {
-  return (
-    <div 
-      className={`animate-pulse bg-gray-200 dark:bg-gray-700 ${className}`}
-      aria-hidden="true"
-    />
-  );
-}
+import { Skeleton } from '@/components/Skeletons';
 
 export function ArticleCardLargeSkeleton() {
   return (

@@ -5,6 +5,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { getPostBySlug, getRelatedPosts, getAllSlugs, CATEGORIES, type BlogCategory } from '@/lib/blog';
 import { sanitizeHTML } from '@/lib/sanitize-dom';
+import { BreadcrumbStructuredData } from '@/components/StructuredData';
+import { SITE_URL } from '@/lib/constants';
 
 // Enable static generation
 export const dynamic = 'force-static';
@@ -106,6 +108,11 @@ export default async function BlogPostPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <BreadcrumbStructuredData items={[
+        { name: 'Home', url: SITE_URL },
+        { name: 'Blog', url: `${SITE_URL}/blog` },
+        { name: post.title, url: `${SITE_URL}/blog/${slug}` },
+      ]} />
       
       <div className="min-h-screen bg-slate-900">
       <Header />

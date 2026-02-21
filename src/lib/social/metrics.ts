@@ -373,7 +373,6 @@ function transformLunarCrushData(data: Record<string, unknown>, symbol: string):
 }
 
 function transformSantimentData(data: Record<string, unknown>, symbol: string): Partial<SocialMetrics> {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const dataObj = data as any;
   const volumeData = (dataObj.data?.getMetric?.timeseriesData as Array<{ value: number }>) || [];
   const sentimentData = (dataObj.data?.sentiment?.timeseriesData as Array<{ value: number }>) || [];

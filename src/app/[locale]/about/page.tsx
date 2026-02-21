@@ -3,20 +3,16 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Link } from '@/i18n/navigation';
 import type { Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'About - Free Crypto News',
-  description: 'Learn about Free Crypto News - 100% free crypto news API aggregating real-time news from 200+ trusted sources. No API keys required.',
-  keywords: ['free crypto news', 'crypto news api', 'about', 'cryptocurrency news aggregator'],
-  openGraph: {
+export function generateMetadata(): Metadata {
+  return generateSEOMetadata({
     title: 'About Free Crypto News',
-    description: 'Learn about the 100% free crypto news API aggregating from 200+ sources. No keys. No limits.',
-    type: 'website',
-  },
-  alternates: {
-    canonical: '/about',
-  },
-};
+    description: 'Free crypto news API aggregating real-time headlines from 200+ trusted sources. No API key required. Open source and community-driven.',
+    path: '/about',
+    tags: ['about', 'crypto news API', 'free API', 'cryptocurrency news aggregator', 'open source'],
+  });
+}
 
 // Featured sources - highlighting key sources from 130+ total
 const sources = [

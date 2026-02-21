@@ -250,7 +250,7 @@ export function SocialBuzz() {
           className="flex items-center gap-1 hover:text-slate-900 dark:hover:text-white"
         >
           <ArrowPathIcon className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
-          {t('common.refresh')}
+          {t('refresh')}
         </button>
       </div>
 

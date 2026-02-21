@@ -313,9 +313,9 @@ export function Screener({ coins }: { coins: Coin[] }) {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
             {/* Market Cap */}
             <div>
-              <label className="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
+              <p className="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
                 Market Cap
-              </label>
+              </p>
               <div className="flex gap-2">
                 <input
                   type="number"
@@ -336,9 +336,9 @@ export function Screener({ coins }: { coins: Coin[] }) {
 
             {/* Volume */}
             <div>
-              <label className="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
+              <p className="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
                 24h Volume
-              </label>
+              </p>
               <div className="flex gap-2">
                 <input
                   type="number"
@@ -359,9 +359,9 @@ export function Screener({ coins }: { coins: Coin[] }) {
 
             {/* 24h Change */}
             <div>
-              <label className="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
+              <p className="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
                 24h Change %
-              </label>
+              </p>
               <div className="flex gap-2">
                 <input
                   type="number"
@@ -382,9 +382,9 @@ export function Screener({ coins }: { coins: Coin[] }) {
 
             {/* Price */}
             <div>
-              <label className="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
+              <p className="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
                 Price ($)
-              </label>
+              </p>
               <div className="flex gap-2">
                 <input
                   type="number"
@@ -405,9 +405,9 @@ export function Screener({ coins }: { coins: Coin[] }) {
 
             {/* ATH Distance */}
             <div>
-              <label className="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
+              <p className="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
                 From ATH %
-              </label>
+              </p>
               <div className="flex gap-2">
                 <input
                   type="number"

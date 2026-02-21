@@ -441,12 +441,15 @@ function EventCard({ event }: { event: RegulatoryEvent }) {
 
   return (
     <div 
+      role="button"
+      tabIndex={0}
       className={`p-4 rounded-lg border ${
         event.isBreaking 
           ? 'border-red-500 bg-red-50 dark:bg-red-900/10' 
           : 'border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800'
       } cursor-pointer hover:shadow-md transition-shadow`}
       onClick={() => setExpanded(!expanded)}
+      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setExpanded(!expanded); }}
     >
       <div className="flex items-start gap-3">
         <span className="text-xl flex-shrink-0">

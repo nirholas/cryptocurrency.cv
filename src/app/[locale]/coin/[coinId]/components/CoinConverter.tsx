@@ -122,7 +122,7 @@ export default function CoinConverter({
               <button
                 onClick={() => handleCopy('coin')}
                 className="p-1 text-gray-500 hover:text-gray-300 transition-colors"
-                title={t('common.copy')}
+                title={t('copy')}
               >
                 {copied === 'coin' ? (
                   <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -174,7 +174,7 @@ export default function CoinConverter({
               <button
                 onClick={() => handleCopy('usd')}
                 className="p-1 text-gray-500 hover:text-gray-300 transition-colors"
-                title={t('common.copy')}
+                title={t('copy')}
               >
                 {copied === 'usd' ? (
                   <svg className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">

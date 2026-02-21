@@ -265,9 +265,9 @@ export function AllocationPieChart({
   className,
   showLabel = true,
 }: PieChartProps) {
-  const renderLabel = ({ name, percent }: { name: string; percent: number }) => {
-    if (percent < 0.05) return null;
-    return `${name} ${(percent * 100).toFixed(0)}%`;
+  const renderLabel = ({ name, percent }: { name?: string; percent?: number }) => {
+    if ((percent ?? 0) < 0.05) return null;
+    return `${name ?? ''} ${((percent ?? 0) * 100).toFixed(0)}%`;
   };
 
   return (

@@ -935,7 +935,7 @@ function APIKeysSection({
                 onClick={() => setShowKeyModal(false)}
                 className="flex-1 px-4 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg font-medium transition-colors"
               >
-                {t('common.cancel')}
+                {t('cancel')}
               </button>
               <button
                 onClick={createApiKey}

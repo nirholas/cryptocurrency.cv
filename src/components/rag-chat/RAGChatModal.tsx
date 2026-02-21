@@ -71,8 +71,10 @@ export function RAGChatModal({ defaultOpen = false, onOpenChange }: RAGChatModal
     <div className="fixed inset-0 z-[100]">
       {/* Backdrop */}
       <div
+        role="presentation"
         className="absolute inset-0 bg-black/70 backdrop-blur-sm animate-in fade-in duration-200"
         onClick={handleClose}
+        onKeyDown={handleClose}
       />
       
       {/* Modal */}

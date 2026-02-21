@@ -1,25 +1,18 @@
 import type { Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import EntitiesDashboard from '@/app/[locale]/entities/EntitiesDashboard';
 
-export const metadata: Metadata = {
-  title: 'Entities | Crypto News Entity Extraction',
-  description:
-    'Track people, companies, protocols, and tickers mentioned in crypto news. Entity relationship mapping.',
-  openGraph: {
-    title: 'Entities | Crypto News Entity Extraction',
-    description: 'Track entities mentioned in crypto news.',
-  },
-  keywords: [
-    'crypto entities',
-    'entity extraction',
-    'crypto people',
-    'crypto companies',
-    'ticker mentions',
-  ],
-};
+export function generateMetadata(): Metadata {
+  return generateSEOMetadata({
+    title: 'Crypto News Entity Tracker',
+    description: 'Track people, companies, protocols, and tickers mentioned in crypto news. AI-powered entity extraction and relationship mapping.',
+    path: '/entities',
+    tags: ['crypto entities', 'entity extraction', 'crypto people', 'crypto companies', 'ticker mentions'],
+  });
+}
 
 type Props = {
   params: Promise<{ locale: string }>;

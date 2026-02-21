@@ -1,6 +1,3 @@
-/* Custom Fonts - Must be at the top */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
-
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
@@ -33,9 +30,9 @@
   --shadow-xl: 0 8px 20px -4px rgb(0 0 0 / 0.2), 0 4px 8px -4px rgb(0 0 0 / 0.1);
   --shadow-2xl: 0 16px 40px -8px rgb(0 0 0 / 0.25);
 
-  /* Professional font stack with monospace for data */
-  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
+  /* Professional font stack with monospace for data — variables injected by next/font/google */
+  --font-sans: var(--font-inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif);
+  --font-mono: var(--font-jetbrains-mono, 'SF Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace);
 }
 
 /* ============================================
@@ -262,7 +259,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -428,7 +425,7 @@ body {
 }
 
 .data-text {
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.01em;
 }

@@ -225,10 +225,11 @@ export function TaxReport() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Tax Year */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label htmlFor="tax-year" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Tax Year
             </label>
             <select
+              id="tax-year"
               value={taxYear}
               onChange={(e) => setTaxYear(e.target.value)}
               className="w-full px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -243,7 +244,7 @@ export function TaxReport() {
 
           {/* Cost Basis Method */}
           <div className="md:col-span-2">
-            <label className="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label htmlFor="cost-basis-method" className="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Cost Basis Method
               <button
                 onClick={() => setShowMethodInfo(!showMethodInfo)}
@@ -253,6 +254,7 @@ export function TaxReport() {
               </button>
             </label>
             <select
+              id="cost-basis-method"
               value={costBasisMethod}
               onChange={(e) => setCostBasisMethod(e.target.value)}
               className="w-full px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"

@@ -263,7 +263,10 @@ function RiskFactorBar({ factor }: { factor: RiskFactor }) {
 function ProtocolCard({ protocol, onClick }: { protocol: ProtocolRanking; onClick: () => void }) {
   return (
     <div 
+      role="button"
+      tabIndex={0}
       onClick={onClick}
+      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') onClick(); }}
       className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4 hover:shadow-lg hover:border-emerald-300 dark:hover:border-emerald-600 transition-all cursor-pointer"
     >
       <div className="flex items-start justify-between mb-3">

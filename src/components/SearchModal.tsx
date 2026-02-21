@@ -505,14 +505,14 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                         className="group inline-flex items-center gap-1.5 px-3 py-1.5 text-sm text-gray-700 dark:text-slate-300 bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 rounded-lg transition-colors"
                       >
                         {search.query}
-                        <span
+                        <button
                           onClick={(e) => removeRecentSearch(search.query, e)}
                           className="opacity-0 group-hover:opacity-100 p-0.5 hover:bg-gray-300 dark:hover:bg-slate-600 rounded transition-all"
                         >
                           <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                           </svg>
-                        </span>
+                        </button>
                       </button>
                     ))}
                   </div>

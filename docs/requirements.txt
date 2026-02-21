@@ -1,5 +1,6 @@
 # MkDocs with Material Theme
-mkdocs>=1.6.0
+# Pin to 1.x — MkDocs 2.0 is incompatible with mkdocs-material
+mkdocs>=1.6.0,<2.0.0
 mkdocs-material>=9.5.0
 
 # Plugins

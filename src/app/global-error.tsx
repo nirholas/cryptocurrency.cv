@@ -10,7 +10,7 @@ export default function GlobalError({
   reset: () => void;
 }) {
   return (
-    <html>
+    <html lang="en">
       <body className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 px-4">
         <ErrorFallback
           error={error}

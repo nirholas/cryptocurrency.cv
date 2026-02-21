@@ -514,6 +514,7 @@ export default function Header() {
             {navItems.map((item) => (
               <div
                 key={item.label}
+                role="group"
                 className="relative"
                 onMouseEnter={() => handleMenuEnter(item.label)}
                 onMouseLeave={handleMenuLeave}

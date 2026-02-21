@@ -2,11 +2,16 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Analytics Dashboard - Free Crypto News',
-  description: 'Advanced analytics for crypto news: headline tracking, anomaly detection, credibility scoring, and more.',
-};
+export function generateMetadata(): Metadata {
+  return generateSEOMetadata({
+    title: 'Crypto News Analytics Dashboard',
+    description: 'Advanced crypto news analytics: headline tracking, anomaly detection, credibility scoring, sentiment analysis, and source bias detection.',
+    path: '/analytics',
+    tags: ['crypto analytics', 'news analysis', 'anomaly detection', 'sentiment analysis', 'credibility scoring'],
+  });
+}
 
 const analyticsFeatures = [
   {

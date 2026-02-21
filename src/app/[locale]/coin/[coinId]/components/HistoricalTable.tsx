@@ -165,7 +165,7 @@ export default function HistoricalTable({
                 Low
               </th>
               <th className="px-4 py-3 text-right text-xs font-medium uppercase tracking-wide text-gray-500">
-                {t('common.close')}
+                {t('close')}
               </th>
               <th className="px-4 py-3 text-right text-xs font-medium uppercase tracking-wide text-gray-500">
                 Change
@@ -285,14 +285,14 @@ export default function HistoricalTable({
               disabled={page === 1}
               className="px-3 py-1.5 bg-gray-700 hover:bg-gray-600 disabled:bg-gray-800 disabled:text-gray-600 text-white text-sm rounded-lg transition-colors"
             >
-              {t('common.previous')}
+              {t('previous')}
             </button>
             <button
               onClick={() => setPage(Math.min(totalPages, page + 1))}
               disabled={page === totalPages}
               className="px-3 py-1.5 bg-gray-700 hover:bg-gray-600 disabled:bg-gray-800 disabled:text-gray-600 text-white text-sm rounded-lg transition-colors"
             >
-              {t('common.next')}
+              {t('next')}
             </button>
           </div>
         </div>

@@ -52,8 +52,10 @@ function SourcePanelComponent({ sources, isOpen, onClose, onSourceClick }: Sourc
     <>
       {/* Backdrop */}
       <div
+        role="presentation"
         className="fixed inset-0 bg-black/40 z-40 lg:hidden"
         onClick={onClose}
+        onKeyDown={onClose}
       />
 
       {/* Panel */}

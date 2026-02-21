@@ -97,7 +97,7 @@ describe('BookmarkButton', () => {
     const parentClickHandler = vi.fn();
     
     render(
-      <div onClick={parentClickHandler}>
+      <div role="presentation" onClick={parentClickHandler} onKeyDown={parentClickHandler}>
         <BookmarkButton article={mockArticle} />
       </div>,
       { wrapper: TestWrapper }

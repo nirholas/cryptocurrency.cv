@@ -522,7 +522,7 @@ export default function CoinPageClient({
                   disabled={isCreatingAlert}
                   className="flex-1 px-4 py-2 bg-gray-700 text-white rounded-lg font-medium hover:bg-gray-600 transition-colors disabled:opacity-50"
                 >
-                  {t('common.cancel')}
+                  {t('cancel')}
                 </button>
                 <button
                   onClick={handleCreateAlert}

@@ -157,7 +157,7 @@ function SettingsPanelComponent({
             <div className="space-y-4">
               {/* Font size */}
               <div>
-                <label className="block text-sm text-white mb-2">Font size</label>
+                <p className="block text-sm text-white mb-2">Font size</p>
                 <div className="flex gap-2">
                   {(['small', 'medium', 'large'] as const).map((size) => (
                     <button
@@ -177,7 +177,7 @@ function SettingsPanelComponent({
 
               {/* Theme */}
               <div>
-                <label className="block text-sm text-white mb-2">Theme</label>
+                <p className="block text-sm text-white mb-2">Theme</p>
                 <div className="flex gap-2">
                   {(['light', 'dark', 'system'] as const).map((theme) => (
                     <button

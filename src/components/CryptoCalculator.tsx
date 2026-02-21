@@ -174,9 +174,9 @@ export function CryptoCalculator({ coins = [] }: CalculatorProps) {
         <div className="flex flex-col md:flex-row items-center gap-4">
           {/* From */}
           <div className="flex-1 w-full">
-            <label className="block text-sm text-gray-500 dark:text-gray-400 mb-1">
+            <p className="block text-sm text-gray-500 dark:text-gray-400 mb-1">
               From
-            </label>
+            </p>
             <div className="flex gap-2">
               <input
                 type="number"
@@ -210,7 +210,7 @@ export function CryptoCalculator({ coins = [] }: CalculatorProps) {
 
           {/* To */}
           <div className="flex-1 w-full">
-            <label className="block text-sm text-gray-500 dark:text-gray-400 mb-1">To</label>
+            <p className="block text-sm text-gray-500 dark:text-gray-400 mb-1">To</p>
             <div className="flex gap-2">
               <input
                 type="text"
@@ -250,10 +250,11 @@ export function CryptoCalculator({ coins = [] }: CalculatorProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
           <div>
-            <label className="block text-sm text-gray-500 dark:text-gray-400 mb-1">
+            <label htmlFor="buy-price" className="block text-sm text-gray-500 dark:text-gray-400 mb-1">
               Buy Price ($)
             </label>
             <input
+              id="buy-price"
               type="number"
               value={buyPrice}
               onChange={(e) => setBuyPrice(e.target.value)}
@@ -262,10 +263,11 @@ export function CryptoCalculator({ coins = [] }: CalculatorProps) {
             />
           </div>
           <div>
-            <label className="block text-sm text-gray-500 dark:text-gray-400 mb-1">
+            <label htmlFor="sell-price" className="block text-sm text-gray-500 dark:text-gray-400 mb-1">
               Sell Price ($)
             </label>
             <input
+              id="sell-price"
               type="number"
               value={sellPrice}
               onChange={(e) => setSellPrice(e.target.value)}
@@ -274,10 +276,11 @@ export function CryptoCalculator({ coins = [] }: CalculatorProps) {
             />
           </div>
           <div>
-            <label className="block text-sm text-gray-500 dark:text-gray-400 mb-1">
+            <label htmlFor="profit-investment" className="block text-sm text-gray-500 dark:text-gray-400 mb-1">
               Investment ($)
             </label>
             <input
+              id="profit-investment"
               type="number"
               value={investment}
               onChange={(e) => setInvestment(e.target.value)}

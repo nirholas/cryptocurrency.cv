@@ -172,7 +172,7 @@ export function CurrencySelector() {
 
       {open && (
         <>
-          <div className="fixed inset-0 z-40" onClick={() => setOpen(false)} />
+          <div role="presentation" className="fixed inset-0 z-40" onClick={() => setOpen(false)} onKeyDown={() => setOpen(false)} />
           <div className="absolute right-0 top-full mt-1 z-50 w-48 bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-lg shadow-lg py-1 max-h-80 overflow-y-auto">
             {CURRENCIES.map((c) => (
               <button

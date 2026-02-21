@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: 'Backtest | News-Based Trading Strategy Testing',
   description:
     'Backtest trading strategies based on crypto news signals. Historical performance analysis.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'Backtest | News-Based Trading Strategy Testing',
     description: 'Test trading strategies against historical news data.',

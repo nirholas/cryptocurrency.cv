@@ -118,12 +118,16 @@ export function PriceAlertModal({
 
   return (
     <div 
+      role="presentation"
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
       onClick={onClose}
+      onKeyDown={onClose}
     >
       <div 
+        role="presentation"
         className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-md w-full overflow-hidden"
         onClick={e => e.stopPropagation()}
+        onKeyDown={e => e.stopPropagation()}
       >
         {/* Header */}
         <div className="px-6 py-4 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between">
@@ -160,9 +164,9 @@ export function PriceAlertModal({
         <form onSubmit={handleSubmit} className="p-6 space-y-5">
           {/* Condition Type */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <p className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Alert me when price
-            </label>
+            </p>
             <div className="grid grid-cols-2 gap-2">
               <button
                 type="button"

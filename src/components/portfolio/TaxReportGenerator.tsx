@@ -509,8 +509,9 @@ export function TaxReportGenerator() {
       <div className="p-6 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/50">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Tax Year</label>
+            <label htmlFor="tax-year-gen" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Tax Year</label>
             <select
+              id="tax-year-gen"
               value={taxYear}
               onChange={(e) => setTaxYear(e.target.value as TaxYear)}
               className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -521,8 +522,9 @@ export function TaxReportGenerator() {
             </select>
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Cost Basis Method</label>
+            <label htmlFor="cost-method-gen" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Cost Basis Method</label>
             <select
+              id="cost-method-gen"
               value={costMethod}
               onChange={(e) => setCostMethod(e.target.value as TaxMethod)}
               className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"

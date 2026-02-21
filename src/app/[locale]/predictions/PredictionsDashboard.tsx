@@ -424,8 +424,9 @@ export default function PredictionsDashboard() {
 
             {/* Reasoning */}
             <div>
-              <label className="block text-sm text-gray-400 mb-2">Reasoning (optional)</label>
+              <label htmlFor="prediction-reasoning" className="block text-sm text-gray-400 mb-2">Reasoning (optional)</label>
               <textarea
+                id="prediction-reasoning"
                 value={reasoning}
                 onChange={(e) => setReasoning(e.target.value)}
                 placeholder="Why do you think this will happen?"

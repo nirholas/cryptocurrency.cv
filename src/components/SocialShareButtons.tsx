@@ -162,7 +162,7 @@ export function SocialShareButtons({
       
       {showLabels && (
         <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">
-          {t('common.share')}
+          {t('share')}
         </span>
       )}
       

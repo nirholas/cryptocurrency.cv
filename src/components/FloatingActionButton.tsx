@@ -60,8 +60,10 @@ export default function FloatingActionButton({
       {/* Backdrop for expanded state */}
       {isExpanded && (
         <div 
+          role="presentation"
           className="fixed inset-0 bg-black/30 z-40 md:hidden"
           onClick={() => setIsExpanded(false)}
+          onKeyDown={() => setIsExpanded(false)}
         />
       )}
 

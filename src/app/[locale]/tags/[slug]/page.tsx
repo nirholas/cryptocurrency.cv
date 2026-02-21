@@ -20,6 +20,8 @@ import {
   type Tag 
 } from '@/lib/tags';
 import { fetchNews, type NewsArticle } from '@/lib/crypto-news';
+import { BreadcrumbStructuredData } from '@/components/StructuredData';
+import { SITE_URL } from '@/lib/constants';
 
 const ARTICLES_PER_PAGE = 20;
 
@@ -193,6 +195,11 @@ export default async function TagPage({ params, searchParams }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+      <BreadcrumbStructuredData items={[
+        { name: 'Home', url: SITE_URL },
+        { name: 'Tags', url: `${SITE_URL}/tags` },
+        { name: tag.name, url: `${SITE_URL}/tags/${slug}` },
+      ]} />
       
       <div className="max-w-7xl mx-auto">
         <Header />

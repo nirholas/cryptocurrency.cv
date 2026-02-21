@@ -167,7 +167,7 @@ export default function BlogAdminPage() {
                           href={`/admin/blog/edit/${post.slug}`}
                           className="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-sm transition"
                         >
-                          {t('common.edit')}
+                          {t('edit')}
                         </Link>
                       </div>
                     </td>

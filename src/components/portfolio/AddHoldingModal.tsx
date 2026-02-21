@@ -120,12 +120,16 @@ export function AddHoldingModal({ isOpen, onClose, prefilledCoin }: AddHoldingMo
 
   return (
     <div
+      role="presentation"
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
       onClick={onClose}
+      onKeyDown={onClose}
     >
       <div
+        role="presentation"
         className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-hidden"
         onClick={e => e.stopPropagation()}
+        onKeyDown={e => e.stopPropagation()}
       >
         {/* Header */}
         <div className="px-6 py-4 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between">
@@ -159,7 +163,6 @@ export function AddHoldingModal({ isOpen, onClose, prefilledCoin }: AddHoldingMo
                 onChange={e => setSearchQuery(e.target.value)}
                 placeholder="Search coins..."
                 className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                autoFocus
               />
             </div>
 
@@ -212,9 +215,9 @@ export function AddHoldingModal({ isOpen, onClose, prefilledCoin }: AddHoldingMo
 
             {/* Transaction Type */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <p className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Transaction Type
-              </label>
+              </p>
               <div className="grid grid-cols-4 gap-2">
                 {(['buy', 'sell', 'transfer_in', 'transfer_out'] as TransactionType[]).map(type => (
                   <button
@@ -237,11 +240,12 @@ export function AddHoldingModal({ isOpen, onClose, prefilledCoin }: AddHoldingMo
 
             {/* Amount */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label htmlFor="holding-amount" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Amount
               </label>
               <div className="relative">
                 <input
+                  id="holding-amount"
                   type="number"
                   value={amount}
                   onChange={e => setAmount(e.target.value)}
@@ -259,12 +263,13 @@ export function AddHoldingModal({ isOpen, onClose, prefilledCoin }: AddHoldingMo
 
             {/* Price per coin */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label htmlFor="holding-price" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Price per Coin
               </label>
               <div className="relative">
                 <DollarSign className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <input
+                  id="holding-price"
                   type="number"
                   value={pricePerCoin}
                   onChange={e => setPricePerCoin(e.target.value)}
@@ -284,12 +289,13 @@ export function AddHoldingModal({ isOpen, onClose, prefilledCoin }: AddHoldingMo
 
             {/* Date */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label htmlFor="holding-date" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Date
               </label>
               <div className="relative">
                 <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <input
+                  id="holding-date"
                   type="date"
                   value={date}
                   onChange={e => setDate(e.target.value)}
@@ -303,12 +309,13 @@ export function AddHoldingModal({ isOpen, onClose, prefilledCoin }: AddHoldingMo
             {/* Optional fields */}
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="holding-exchange" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Exchange (optional)
                 </label>
                 <div className="relative">
                   <Building className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input
+                    id="holding-exchange"
                     type="text"
                     value={exchange}
                     onChange={e => setExchange(e.target.value)}
@@ -318,12 +325,13 @@ export function AddHoldingModal({ isOpen, onClose, prefilledCoin }: AddHoldingMo
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="holding-notes" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Notes (optional)
                 </label>
                 <div className="relative">
                   <FileText className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input
+                    id="holding-notes"
                     type="text"
                     value={notes}
                     onChange={e => setNotes(e.target.value)}

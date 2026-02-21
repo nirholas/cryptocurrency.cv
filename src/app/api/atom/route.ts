@@ -1,17 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getLatestNews, getDefiNews, getBitcoinNews } from '@/lib/crypto-news';
+import { escapeXml, resolveFeed } from '@/app/api/_feed-utils';
 
 export const runtime = 'edge';
 export const revalidate = 300; // 5 minutes
-
-function escapeXml(str: string): string {
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&apos;');
-}
 
 function generateAtom(articles: any[], title: string, subtitle: string, feedUrl: string): string {
   const updated = articles.length > 0 ? new Date(articles[0].pubDate).toISOString() : new Date().toISOString();
@@ -50,32 +41,8 @@ export async function GET(request: NextRequest) {
   const limit = Math.min(parseInt(searchParams.get('limit') || '20'), 50);
   
   try {
-    let data;
-    let title: string;
-    let subtitle: string;
-    let feedUrl: string;
-    
-    switch (feed) {
-      case 'defi':
-        data = await getDefiNews(limit);
-        title = 'Free Crypto News - DeFi Feed';
-        subtitle = 'DeFi news aggregated from top crypto sources';
-        feedUrl = 'https://cryptocurrency.cv/api/atom?feed=defi';
-        break;
-      case 'bitcoin':
-        data = await getBitcoinNews(limit);
-        title = 'Free Crypto News - Bitcoin Feed';
-        subtitle = 'Bitcoin news aggregated from top crypto sources';
-        feedUrl = 'https://cryptocurrency.cv/api/atom?feed=bitcoin';
-        break;
-      default:
-        data = await getLatestNews(limit);
-        title = 'Free Crypto News - All Sources';
-        subtitle = 'Crypto news aggregated from 130+ top sources - 100% FREE';
-        feedUrl = 'https://cryptocurrency.cv/api/atom';
-    }
-    
-    const atom = generateAtom(data.articles, title, subtitle, feedUrl);
+    const { articles, meta } = await resolveFeed(feed, 'atom', limit);
+    const atom = generateAtom(articles, meta.title, meta.description, meta.feedUrl);
     
     return new NextResponse(atom, {
       headers: {

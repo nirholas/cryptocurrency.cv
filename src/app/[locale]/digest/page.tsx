@@ -2,20 +2,16 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Daily Crypto Digest - Free Crypto News',
-  description: 'AI-powered daily crypto news digest. Get the most important cryptocurrency stories summarized and delivered daily. Never miss what matters.',
-  keywords: ['crypto digest', 'daily crypto summary', 'crypto news digest', 'bitcoin digest', 'cryptocurrency daily briefing', 'ai crypto summary'],
-  openGraph: {
-    title: 'Daily Crypto Digest - AI-Powered News Summary',
-    description: 'Get the most important cryptocurrency stories summarized daily by AI. Free.',
-    type: 'website',
-  },
-  alternates: {
-    canonical: '/digest',
-  },
-};
+export function generateMetadata(): Metadata {
+  return generateSEOMetadata({
+    title: 'Daily Crypto Digest',
+    description: 'AI-powered daily crypto news digest. Stay up to date with the most important Bitcoin, Ethereum, and DeFi stories curated each day.',
+    path: '/digest',
+    tags: ['daily crypto digest', 'crypto summary', 'AI news digest', 'bitcoin news', 'crypto newsletter'],
+  });
+}
 
 // Force dynamic rendering to avoid self-referential API call during build
 export const dynamic = 'force-dynamic';

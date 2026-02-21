@@ -1,25 +1,18 @@
 import type { Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ClaimsDashboard from '@/app/[locale]/claims/ClaimsDashboard';
 
-export const metadata: Metadata = {
-  title: 'Claims | Extracted Crypto News Claims',
-  description:
-    'Extract and analyze claims made in crypto news articles. AI-powered claim detection.',
-  openGraph: {
-    title: 'Claims | Extracted Crypto News Claims',
-    description: 'Extract claims from crypto news articles.',
-  },
-  keywords: [
-    'crypto claims',
-    'claim extraction',
-    'news claims',
-    'prediction claims',
-    'AI analysis',
-  ],
-};
+export function generateMetadata(): Metadata {
+  return generateSEOMetadata({
+    title: 'Crypto News Claims',
+    description: 'Extract and analyze claims made in crypto news articles. AI-powered detection of predictions, statements, and verifiable claims from 130+ sources.',
+    path: '/claims',
+    tags: ['crypto claims', 'claim extraction', 'news claims', 'prediction claims', 'AI analysis'],
+  });
+}
 
 type Props = {
   params: Promise<{ locale: string }>;

@@ -100,6 +100,7 @@ function PremiumFeatureCard({ feature, showPreview = true }: PremiumFeatureCardP
 
   return (
     <div 
+      role="group"
       className="relative p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 hover:shadow-lg transition-all group"
       onMouseEnter={loadPreview}
     >

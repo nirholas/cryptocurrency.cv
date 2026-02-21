@@ -92,10 +92,12 @@ export function PortfolioChart({ data, timeframe = '30d' }: PortfolioChartProps)
                 borderRadius: '8px',
                 color: 'white'
               }}
-              formatter={(value: number) => [
-                showChange ? `${value.toFixed(2)}%` : formatValue(value),
+              formatter={((value: number | string | undefined) => [
+                value !== undefined
+                  ? (showChange ? `${Number(value).toFixed(2)}%` : formatValue(value as number))
+                  : '',
                 showChange ? 'Change' : 'Value'
-              ]}
+              ]) as any}
               labelFormatter={(label) => new Date(label).toLocaleDateString()}
             />
             <Area

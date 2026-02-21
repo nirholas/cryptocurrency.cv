@@ -312,7 +312,7 @@ function MessageSearchComponent({ messages, onResultClick, onClose }: MessageSea
         </span>
         <span className="flex items-center gap-1">
           <kbd className="px-1.5 py-0.5 bg-gray-800 rounded text-gray-400">Esc</kbd>
-          <span>{t('common.close')}</span>
+          <span>{t('close')}</span>
         </span>
       </div>
     </div>

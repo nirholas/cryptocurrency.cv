@@ -198,6 +198,7 @@ export function DominanceChart({ coins }: { coins: Coin[] }) {
             {dominanceData.map((item) => (
               <div
                 key={item.symbol}
+                role="group"
                 className="relative"
                 onMouseEnter={() => setHoveredSegment(item.symbol)}
                 onMouseLeave={() => setHoveredSegment(null)}
@@ -230,6 +231,7 @@ export function DominanceChart({ coins }: { coins: Coin[] }) {
           {dominanceData.map((item) => (
             <div
               key={item.symbol}
+              role="group"
               className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors cursor-pointer ${
                 hoveredSegment === item.symbol ? 'bg-gray-100 dark:bg-black' : ''
               }`}

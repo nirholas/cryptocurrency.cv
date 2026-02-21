@@ -454,8 +454,11 @@ function MetricsView({
             {santiment.map((metric) => (
               <div 
                 key={metric.slug}
+                role="button"
+                tabIndex={0}
                 className="p-4 bg-neutral-50 dark:bg-neutral-800/50 rounded-lg cursor-pointer hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
                 onClick={() => onTickerClick?.(metric.ticker)}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') onTickerClick?.(metric.ticker); }}
               >
                 <div className="flex items-center justify-between mb-3">
                   <span className="font-semibold text-neutral-900 dark:text-white">{metric.ticker}</span>

@@ -1,29 +1,18 @@
 import type { Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 import { setRequestLocale } from 'next-intl/server';
 import { ArbitrageDashboard } from '@/components/ArbitrageDashboard';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-export const metadata: Metadata = {
-  title: 'Arbitrage Scanner | Cross-Exchange Price Opportunities',
-  description:
-    'Real-time arbitrage opportunity detection across Binance, Bybit, OKX, Kraken, and more. Find price discrepancies and triangular arbitrage.',
-  openGraph: {
-    title: 'Arbitrage Scanner | Cross-Exchange Price Opportunities',
-    description:
-      'Real-time cross-exchange arbitrage detection with profit calculations.',
-  },
-  keywords: [
-    'crypto arbitrage',
-    'price arbitrage',
-    'cross-exchange trading',
-    'triangular arbitrage',
-    'binance arbitrage',
-    'bybit arbitrage',
-    'price discrepancy',
-    'trading opportunities',
-  ],
-};
+export function generateMetadata(): Metadata {
+  return generateSEOMetadata({
+    title: 'Arbitrage Scanner',
+    description: 'Real-time cross-exchange arbitrage opportunity detection for Bitcoin and altcoins. Find price discrepancies across Binance, Bybit, OKX, Kraken, and more.',
+    path: '/arbitrage',
+    tags: ['crypto arbitrage', 'cross-exchange trading', 'triangular arbitrage', 'price discrepancy', 'trading opportunities'],
+  });
+}
 
 type Props = {
   params: Promise<{ locale: string }>;

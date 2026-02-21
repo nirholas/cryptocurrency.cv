@@ -21,7 +21,9 @@
     "types": [
       "node",
       "react",
-      "react-dom"
+      "react-dom",
+      "@testing-library/jest-dom",
+      "vitest/globals"
     ],
     "plugins": [
       {
@@ -36,6 +38,8 @@
   },
   "include": [
     "next-env.d.ts",
+    "vitest.setup.ts",
+    "vitest.config.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.d.ts",

@@ -261,8 +261,9 @@ export function ArbitrageDashboard() {
 
         {/* Min Profit Filter */}
         <div className="flex items-center gap-2">
-          <label className="text-sm text-gray-600 dark:text-slate-400">Min Profit:</label>
+          <label htmlFor="min-profit-filter" className="text-sm text-gray-600 dark:text-slate-400">Min Profit:</label>
           <select
+            id="min-profit-filter"
             value={minProfit}
             onChange={(e) => {
               setMinProfit(parseFloat(e.target.value));

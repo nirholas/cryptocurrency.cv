@@ -31,6 +31,7 @@ import { CoinNewsCorrelation } from '@/components/CoinNewsCorrelation';
 import { PredictionPoll } from '@/components/PredictionPoll';
 import { AskAboutThis } from '@/components/AskAboutThis';
 import { SITE_URL } from '@/lib/constants';
+import { BreadcrumbStructuredData } from '@/components/StructuredData';
 import { CoinStickyHeader } from '@/components/CoinStickyHeader';
 
 // Enable on-demand ISR for coins not pre-rendered
@@ -292,6 +293,11 @@ export default async function CoinPage({ params, searchParams }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+      <BreadcrumbStructuredData items={[
+        { name: 'Home', url: SITE_URL },
+        { name: 'Markets', url: `${SITE_URL}/markets` },
+        { name: coinData.name, url: `${SITE_URL}/coin/${coinId}` },
+      ]} />
 
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-900 to-gray-950">
         <CoinStickyHeader

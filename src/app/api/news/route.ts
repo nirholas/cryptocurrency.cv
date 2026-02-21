@@ -68,7 +68,7 @@ export async function GET(request: NextRequest) {
     }, startTime);
     
     return jsonResponse(responseData, {
-      cacheControl: 'standard',
+      cacheControl: 'realtime', // matches ISR revalidate=60; s-maxage=60
       etag: true,
       request,
     });

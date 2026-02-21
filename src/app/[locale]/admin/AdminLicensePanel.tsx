@@ -304,7 +304,7 @@ export default function AdminLicensePanel() {
                       {key.usageToday.toLocaleString()}
                     </td>
                     <td className="p-4 text-right">
-                      <button className="text-gray-400 hover:text-white mr-2">{t('common.edit')}</button>
+                      <button className="text-gray-400 hover:text-white mr-2">{t('edit')}</button>
                       <button className="text-red-400 hover:text-red-300">Revoke</button>
                     </td>
                   </tr>

@@ -442,7 +442,6 @@ class RAGLogger {
     this.logs.push(entry);
     
     // Console output in development
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const env = (globalThis as any).process?.env;
     if (env?.NODE_ENV === 'development') {
       const prefix = traceId ? `[${traceId}] ` : '';
