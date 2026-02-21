@@ -1,57 +1,63 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect, useCallback } from 'react';
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
-import { 
-  Star, 
-  Trash2, 
-  Download, 
-  Upload, 
-  GripVertical, 
-  TrendingUp, 
+import React, { useState, useEffect, useCallback } from "react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import {
+  Star,
+  Trash2,
+  Download,
+  Upload,
+  GripVertical,
+  TrendingUp,
   TrendingDown,
   Search,
   X,
   ChevronUp,
   ChevronDown,
-  Bell,
   ExternalLink,
   AlertCircle,
-  RefreshCw
-} from 'lucide-react';
-import { useWatchlist } from '@/components/watchlist/WatchlistProvider';
-import { WatchlistExport } from '@/components/watchlist/WatchlistExport';
-import { useToast } from '@/components/Toast';
-import { TokenPrice, getTopCoins } from '@/lib/market-data';
+  RefreshCw,
+} from "lucide-react";
+import { useWatchlist } from "@/components/watchlist/WatchlistProvider";
+import { PriceAlertButton } from "@/components/PriceAlertButton";
+import { WatchlistExport } from "@/components/watchlist/WatchlistExport";
+import { useToast } from "@/components/Toast";
+import { TokenPrice, getTopCoins } from "@/lib/market-data";
 
-type SortField = 'name' | 'price' | 'change24h' | 'change7d' | 'marketCap' | 'addedAt';
-type SortDirection = 'asc' | 'desc';
+type SortField =
+  | "name"
+  | "price"
+  | "change24h"
+  | "change7d"
+  | "marketCap"
+  | "addedAt";
+type SortDirection = "asc" | "desc";
 
 interface WatchlistTableItem extends TokenPrice {
   addedAt?: string;
 }
 
 export default function WatchlistPage() {
-  const t = useTranslations('watchlist');
-  const tCommon = useTranslations('common');
-  const { 
-    watchlist, 
-    removeFromWatchlist, 
-    reorderWatchlist, 
+  const t = useTranslations("watchlist");
+  const tCommon = useTranslations("common");
+  const {
+    watchlist,
+    removeFromWatchlist,
+    reorderWatchlist,
     clearWatchlist,
-    isLoaded 
+    isLoaded,
   } = useWatchlist();
   const { addToast } = useToast();
-  
+
   const [coins, setCoins] = useState<WatchlistTableItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedCoins, setSelectedCoins] = useState<Set<string>>(new Set());
   const [showExportModal, setShowExportModal] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortField, setSortField] = useState<SortField>('addedAt');
-  const [sortDirection, setSortDirection] = useState<SortDirection>('desc');
+  const [searchQuery, setSearchQuery] = useState("");
+  const [sortField, setSortField] = useState<SortField>("addedAt");
+  const [sortDirection, setSortDirection] = useState<SortDirection>("desc");
   const [draggedItem, setDraggedItem] = useState<string | null>(null);
 
   // Fetch coin data
@@ -66,11 +72,13 @@ export default function WatchlistPage() {
       setError(null);
       // Use getTopCoins and filter by watchlist
       const allCoins = await getTopCoins(250);
-      const watchlistCoins = allCoins.filter(coin => watchlist.includes(coin.id));
+      const watchlistCoins = allCoins.filter((coin) =>
+        watchlist.includes(coin.id),
+      );
       setCoins(watchlistCoins);
     } catch (err) {
-      console.error('Failed to fetch coin data:', err);
-      setError('Failed to load coin data. Please try again.');
+      console.error("Failed to fetch coin data:", err);
+      setError("Failed to load coin data. Please try again.");
     } finally {
       setIsLoading(false);
     }
@@ -85,14 +93,14 @@ export default function WatchlistPage() {
   // Refresh data periodically
   useEffect(() => {
     if (!isLoaded) return;
-    
+
     const interval = setInterval(fetchCoinData, 60000); // Refresh every minute
     return () => clearInterval(interval);
   }, [isLoaded, fetchCoinData]);
 
   // Filter and sort coins
   const filteredCoins = coins
-    .filter(coin => {
+    .filter((coin) => {
       if (!searchQuery) return true;
       const query = searchQuery.toLowerCase();
       return (
@@ -102,38 +110,42 @@ export default function WatchlistPage() {
     })
     .sort((a, b) => {
       let comparison = 0;
-      
+
       switch (sortField) {
-        case 'name':
+        case "name":
           comparison = a.name.localeCompare(b.name);
           break;
-        case 'price':
+        case "price":
           comparison = a.current_price - b.current_price;
           break;
-        case 'change24h':
-          comparison = (a.price_change_percentage_24h || 0) - (b.price_change_percentage_24h || 0);
+        case "change24h":
+          comparison =
+            (a.price_change_percentage_24h || 0) -
+            (b.price_change_percentage_24h || 0);
           break;
-        case 'change7d':
-          comparison = (a.price_change_percentage_7d_in_currency || 0) - (b.price_change_percentage_7d_in_currency || 0);
+        case "change7d":
+          comparison =
+            (a.price_change_percentage_7d_in_currency || 0) -
+            (b.price_change_percentage_7d_in_currency || 0);
           break;
-        case 'marketCap':
+        case "marketCap":
           comparison = a.market_cap - b.market_cap;
           break;
-        case 'addedAt':
+        case "addedAt":
           // Sort by watchlist order (which is addedAt desc)
           comparison = watchlist.indexOf(a.id) - watchlist.indexOf(b.id);
           break;
       }
-      
-      return sortDirection === 'asc' ? comparison : -comparison;
+
+      return sortDirection === "asc" ? comparison : -comparison;
     });
 
   const handleSort = (field: SortField) => {
     if (sortField === field) {
-      setSortDirection(prev => prev === 'asc' ? 'desc' : 'asc');
+      setSortDirection((prev) => (prev === "asc" ? "desc" : "asc"));
     } else {
       setSortField(field);
-      setSortDirection('desc');
+      setSortDirection("desc");
     }
   };
 
@@ -141,7 +153,7 @@ export default function WatchlistPage() {
     if (selectedCoins.size === filteredCoins.length) {
       setSelectedCoins(new Set());
     } else {
-      setSelectedCoins(new Set(filteredCoins.map(c => c.id)));
+      setSelectedCoins(new Set(filteredCoins.map((c) => c.id)));
     }
   };
 
@@ -156,23 +168,23 @@ export default function WatchlistPage() {
   };
 
   const handleBulkRemove = () => {
-    selectedCoins.forEach(coinId => {
+    selectedCoins.forEach((coinId) => {
       removeFromWatchlist(coinId);
     });
     addToast({
-      type: 'success',
-      title: 'Removed from watchlist',
-      message: `${selectedCoins.size} coin${selectedCoins.size !== 1 ? 's' : ''} removed`,
+      type: "success",
+      title: "Removed from watchlist",
+      message: `${selectedCoins.size} coin${selectedCoins.size !== 1 ? "s" : ""} removed`,
     });
     setSelectedCoins(new Set());
   };
 
   const handleClearAll = () => {
-    if (confirm('Are you sure you want to clear your entire watchlist?')) {
+    if (confirm("Are you sure you want to clear your entire watchlist?")) {
       clearWatchlist();
       addToast({
-        type: 'success',
-        title: 'Watchlist cleared',
+        type: "success",
+        title: "Watchlist cleared",
       });
     }
   };
@@ -188,10 +200,10 @@ export default function WatchlistPage() {
       const newOrder = [...watchlist];
       const draggedIndex = newOrder.indexOf(draggedItem);
       const targetIndex = newOrder.indexOf(coinId);
-      
+
       newOrder.splice(draggedIndex, 1);
       newOrder.splice(targetIndex, 0, draggedItem);
-      
+
       reorderWatchlist(newOrder);
     }
   };
@@ -202,7 +214,7 @@ export default function WatchlistPage() {
 
   const SortIcon = ({ field }: { field: SortField }) => {
     if (sortField !== field) return null;
-    return sortDirection === 'asc' ? (
+    return sortDirection === "asc" ? (
       <ChevronUp className="w-4 h-4" />
     ) : (
       <ChevronDown className="w-4 h-4" />
@@ -216,11 +228,16 @@ export default function WatchlistPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex items-center gap-3 mb-8">
             <Star className="w-8 h-8 text-yellow-500" />
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Watchlist</h1>
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+              Watchlist
+            </h1>
           </div>
           <div className="animate-pulse space-y-4">
-            {[1, 2, 3, 4, 5].map(i => (
-              <div key={i} className="h-16 bg-gray-200 dark:bg-gray-800 rounded-lg" />
+            {[1, 2, 3, 4, 5].map((i) => (
+              <div
+                key={i}
+                className="h-16 bg-gray-200 dark:bg-gray-800 rounded-lg"
+              />
             ))}
           </div>
         </div>
@@ -235,18 +252,21 @@ export default function WatchlistPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex items-center gap-3 mb-8">
             <Star className="w-8 h-8 text-yellow-500" />
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Watchlist</h1>
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+              Watchlist
+            </h1>
           </div>
-          
+
           <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-12 text-center">
             <Star className="w-16 h-16 text-gray-300 dark:text-gray-600 mx-auto mb-4" />
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
               Your watchlist is empty
             </h2>
             <p className="text-gray-500 dark:text-gray-400 mb-6 max-w-md mx-auto">
-              Start building your watchlist by adding coins you want to track. Click the star icon on any coin to add it.
+              Start building your watchlist by adding coins you want to track.
+              Click the star icon on any coin to add it.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 href="/markets"
@@ -270,15 +290,17 @@ export default function WatchlistPage() {
                 Popular coins to get started
               </h3>
               <div className="flex flex-wrap justify-center gap-2">
-                {['Bitcoin', 'Ethereum', 'Solana', 'Cardano', 'Polkadot'].map(name => (
-                  <Link
-                    key={name}
-                    href={`/coin/${name.toLowerCase()}`}
-                    className="px-4 py-2 bg-gray-100 dark:bg-gray-700 hover:bg-yellow-100 dark:hover:bg-yellow-500/20 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors"
-                  >
-                    {name}
-                  </Link>
-                ))}
+                {["Bitcoin", "Ethereum", "Solana", "Cardano", "Polkadot"].map(
+                  (name) => (
+                    <Link
+                      key={name}
+                      href={`/coin/${name.toLowerCase()}`}
+                      className="px-4 py-2 bg-gray-100 dark:bg-gray-700 hover:bg-yellow-100 dark:hover:bg-yellow-500/20 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors"
+                    >
+                      {name}
+                    </Link>
+                  ),
+                )}
               </div>
             </div>
           </div>
@@ -287,7 +309,10 @@ export default function WatchlistPage() {
         {/* Export/Import Modal */}
         {showExportModal && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-            <div className="max-w-md w-full" onClick={e => e.stopPropagation()}>
+            <div
+              className="max-w-md w-full"
+              onClick={(e) => e.stopPropagation()}
+            >
               <WatchlistExport onClose={() => setShowExportModal(false)} />
             </div>
           </div>
@@ -304,20 +329,25 @@ export default function WatchlistPage() {
           <div className="flex items-center gap-3">
             <Star className="w-8 h-8 text-yellow-500 fill-yellow-500" />
             <div>
-              <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Watchlist</h1>
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+                Watchlist
+              </h1>
               <p className="text-gray-500 dark:text-gray-400">
-                Tracking {watchlist.length} coin{watchlist.length !== 1 ? 's' : ''}
+                Tracking {watchlist.length} coin
+                {watchlist.length !== 1 ? "s" : ""}
               </p>
             </div>
           </div>
-          
+
           <div className="flex items-center gap-2">
             <button
               onClick={() => fetchCoinData()}
               className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 transition-colors"
               title="Refresh"
             >
-              <RefreshCw className={`w-5 h-5 ${isLoading ? 'animate-spin' : ''}`} />
+              <RefreshCw
+                className={`w-5 h-5 ${isLoading ? "animate-spin" : ""}`}
+              />
             </button>
             <button
               onClick={() => setShowExportModal(true)}
@@ -351,19 +381,19 @@ export default function WatchlistPage() {
               type="text"
               placeholder="Search watchlist..."
               value={searchQuery}
-              onChange={e => setSearchQuery(e.target.value)}
+              onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-10 pr-4 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white placeholder-gray-400"
             />
             {searchQuery && (
               <button
-                onClick={() => setSearchQuery('')}
+                onClick={() => setSearchQuery("")}
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
               >
                 <X className="w-4 h-4" />
               </button>
             )}
           </div>
-          
+
           {selectedCoins.size > 0 && (
             <div className="flex items-center gap-2">
               <span className="text-sm text-gray-500 dark:text-gray-400">
@@ -389,7 +419,10 @@ export default function WatchlistPage() {
                   <th className="px-4 py-4 text-left">
                     <input
                       type="checkbox"
-                      checked={selectedCoins.size === filteredCoins.length && filteredCoins.length > 0}
+                      checked={
+                        selectedCoins.size === filteredCoins.length &&
+                        filteredCoins.length > 0
+                      }
                       onChange={handleSelectAll}
                       className="rounded border-gray-300 dark:border-gray-600 text-blue-600 focus:ring-blue-500"
                     />
@@ -400,7 +433,7 @@ export default function WatchlistPage() {
                   </th>
                   <th className="px-4 py-4 text-left">
                     <button
-                      onClick={() => handleSort('name')}
+                      onClick={() => handleSort("name")}
                       className="flex items-center gap-1 text-sm font-semibold text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
                     >
                       Name <SortIcon field="name" />
@@ -408,7 +441,7 @@ export default function WatchlistPage() {
                   </th>
                   <th className="px-4 py-4 text-right">
                     <button
-                      onClick={() => handleSort('price')}
+                      onClick={() => handleSort("price")}
                       className="flex items-center gap-1 text-sm font-semibold text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 ml-auto"
                     >
                       Price <SortIcon field="price" />
@@ -416,7 +449,7 @@ export default function WatchlistPage() {
                   </th>
                   <th className="px-4 py-4 text-right">
                     <button
-                      onClick={() => handleSort('change24h')}
+                      onClick={() => handleSort("change24h")}
                       className="flex items-center gap-1 text-sm font-semibold text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 ml-auto"
                     >
                       24h <SortIcon field="change24h" />
@@ -424,7 +457,7 @@ export default function WatchlistPage() {
                   </th>
                   <th className="px-4 py-4 text-right hidden md:table-cell">
                     <button
-                      onClick={() => handleSort('change7d')}
+                      onClick={() => handleSort("change7d")}
                       className="flex items-center gap-1 text-sm font-semibold text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 ml-auto"
                     >
                       7d <SortIcon field="change7d" />
@@ -432,7 +465,7 @@ export default function WatchlistPage() {
                   </th>
                   <th className="px-4 py-4 text-right hidden lg:table-cell">
                     <button
-                      onClick={() => handleSort('marketCap')}
+                      onClick={() => handleSort("marketCap")}
                       className="flex items-center gap-1 text-sm font-semibold text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 ml-auto"
                     >
                       Market Cap <SortIcon field="marketCap" />
@@ -448,7 +481,7 @@ export default function WatchlistPage() {
                   <tr
                     key={coin.id}
                     className={`border-b border-gray-100 dark:border-gray-700/50 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors ${
-                      draggedItem === coin.id ? 'opacity-50' : ''
+                      draggedItem === coin.id ? "opacity-50" : ""
                     }`}
                     draggable
                     onDragStart={() => handleDragStart(coin.id)}
@@ -467,12 +500,19 @@ export default function WatchlistPage() {
                       <GripVertical className="w-4 h-4 text-gray-400 cursor-grab active:cursor-grabbing" />
                     </td>
                     <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-400">
-                      {coin.market_cap_rank || '-'}
+                      {coin.market_cap_rank || "-"}
                     </td>
                     <td className="px-4 py-4">
-                      <Link href={`/coin/${coin.id}`} className="flex items-center gap-3 group">
+                      <Link
+                        href={`/coin/${coin.id}`}
+                        className="flex items-center gap-3 group"
+                      >
                         {coin.image ? (
-                          <img src={coin.image} alt={coin.name} className="w-8 h-8 rounded-full" />
+                          <img
+                            src={coin.image}
+                            alt={coin.name}
+                            className="w-8 h-8 rounded-full"
+                          />
                         ) : (
                           <div className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-600" />
                         )}
@@ -487,53 +527,64 @@ export default function WatchlistPage() {
                       </Link>
                     </td>
                     <td className="px-4 py-4 text-right font-medium text-gray-900 dark:text-white">
-                      ${coin.current_price.toLocaleString(undefined, { 
-                        minimumFractionDigits: 2, 
-                        maximumFractionDigits: coin.current_price < 1 ? 6 : 2 
+                      $
+                      {coin.current_price.toLocaleString(undefined, {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: coin.current_price < 1 ? 6 : 2,
                       })}
                     </td>
                     <td className="px-4 py-4 text-right">
-                      <span className={`inline-flex items-center gap-1 font-medium ${
-                        (coin.price_change_percentage_24h || 0) >= 0
-                          ? 'text-green-600 dark:text-green-400'
-                          : 'text-red-600 dark:text-red-400'
-                      }`}>
+                      <span
+                        className={`inline-flex items-center gap-1 font-medium ${
+                          (coin.price_change_percentage_24h || 0) >= 0
+                            ? "text-green-600 dark:text-green-400"
+                            : "text-red-600 dark:text-red-400"
+                        }`}
+                      >
                         {(coin.price_change_percentage_24h || 0) >= 0 ? (
                           <TrendingUp className="w-4 h-4" />
                         ) : (
                           <TrendingDown className="w-4 h-4" />
                         )}
-                        {Math.abs(coin.price_change_percentage_24h || 0).toFixed(2)}%
+                        {Math.abs(
+                          coin.price_change_percentage_24h || 0,
+                        ).toFixed(2)}
+                        %
                       </span>
                     </td>
                     <td className="px-4 py-4 text-right hidden md:table-cell">
-                      <span className={`font-medium ${
-                        (coin.price_change_percentage_7d_in_currency || 0) >= 0
-                          ? 'text-green-600 dark:text-green-400'
-                          : 'text-red-600 dark:text-red-400'
-                      }`}>
-                        {(coin.price_change_percentage_7d_in_currency || 0) >= 0 ? '+' : ''}
-                        {(coin.price_change_percentage_7d_in_currency || 0).toFixed(2)}%
+                      <span
+                        className={`font-medium ${
+                          (coin.price_change_percentage_7d_in_currency || 0) >=
+                          0
+                            ? "text-green-600 dark:text-green-400"
+                            : "text-red-600 dark:text-red-400"
+                        }`}
+                      >
+                        {(coin.price_change_percentage_7d_in_currency || 0) >= 0
+                          ? "+"
+                          : ""}
+                        {(
+                          coin.price_change_percentage_7d_in_currency || 0
+                        ).toFixed(2)}
+                        %
                       </span>
                     </td>
                     <td className="px-4 py-4 text-right hidden lg:table-cell text-gray-600 dark:text-gray-300">
                       ${(coin.market_cap / 1e9).toFixed(2)}B
                     </td>
                     <td className="px-4 py-4 text-right">
-                      <div className="flex items-center justify-end gap-1">
-                        <Link
-                          href={`/coin/${coin.id}#alerts`}
-                          className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                          title="Set alert"
-                        >
-                          <Bell className="w-4 h-4" />
-                        </Link>
+                      <div className="flex items-center justify-end gap-2">
+                        <PriceAlertButton
+                          coinId={coin.id}
+                          currentPrice={coin.current_price ?? 0}
+                        />
                         <button
                           onClick={() => {
                             removeFromWatchlist(coin.id);
                             addToast({
-                              type: 'info',
-                              title: 'Removed from watchlist',
+                              type: "info",
+                              title: "Removed from watchlist",
                               message: coin.name,
                               duration: 3000,
                             });
@@ -577,11 +628,14 @@ export default function WatchlistPage() {
 
         {/* Export/Import Modal */}
         {showExportModal && (
-          <div 
+          <div
             className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
             onClick={() => setShowExportModal(false)}
           >
-            <div className="max-w-md w-full" onClick={e => e.stopPropagation()}>
+            <div
+              className="max-w-md w-full"
+              onClick={(e) => e.stopPropagation()}
+            >
               <WatchlistExport onClose={() => setShowExportModal(false)} />
             </div>
           </div>
