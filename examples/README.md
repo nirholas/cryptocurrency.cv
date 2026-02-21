@@ -766,3 +766,4 @@ Check all endpoints at: `https://cryptocurrency.cv/api/.well-known/x402`
 
 🌐 [Website](https://cryptocurrency.cv) | 📚 [Docs](https://cryptocurrency.cv/docs) | 🐙 [GitHub](https://github.com/nirholas/free-crypto-news)
 
+
