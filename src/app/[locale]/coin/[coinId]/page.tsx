@@ -37,6 +37,8 @@ import { CoinStickyHeader } from '@/components/CoinStickyHeader';
 // Enable on-demand ISR for coins not pre-rendered
 export const dynamicParams = true;
 export const revalidate = 300; // Revalidate coin pages every 5 minutes
+// Allow up to 25 s for the first cold-start render (ISR caches it after that)
+export const maxDuration = 25;
 
 interface Props {
   params: Promise<{ coinId: string; locale: string }>;
@@ -209,6 +211,16 @@ export default async function CoinPage({ params, searchParams }: Props) {
   let communityData: CommunityData | null = null;
   let newsData: { articles: any[] } = { articles: [] };
 
+  // Timeout helper — prevents long-running news fetch from blocking the page render.
+  // searchNews scans all RSS sources and can take 30-60 s on a cold start,
+  // which exceeds production serverless function timeouts and causes 500 errors.
+  function withTimeout<T>(promise: Promise<T>, ms: number, fallback: T): Promise<T> {
+    return Promise.race([
+      promise,
+      new Promise<T>((resolve) => setTimeout(() => resolve(fallback), ms)),
+    ]);
+  }
+
   try {
     [coinData, tickersData, ohlcData, developerData, communityData, newsData] = await Promise.all([
       getCoinDetails(coinId).catch(() => null) as Promise<CoinData | null>,
@@ -216,7 +228,13 @@ export default async function CoinPage({ params, searchParams }: Props) {
       getOHLC(coinId, 30).catch(() => [] as OHLCData[]),
       getCoinDeveloperData(coinId).catch(() => null as DeveloperData | null),
       getCoinCommunityData(coinId).catch(() => null as CommunityData | null),
-      searchNews(meta?.keywords?.join(',') || coinId, 30).catch(() => ({ articles: [] })),
+      // Cap news fetch at 5 s — if RSS sources are slow the page renders without news
+      // rather than timing out the entire server function (which causes the 500 error).
+      withTimeout(
+        searchNews(meta?.keywords?.join(',') || coinId, 30).catch(() => ({ articles: [] })),
+        5000,
+        { articles: [] },
+      ),
     ]);
   } catch {
     // If Promise.all itself throws, gracefully show not-found

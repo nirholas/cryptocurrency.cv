@@ -29,7 +29,7 @@ import {
   type PredictionStatus,
 } from '@/lib/predictions';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 export const revalidate = 60;
 
 const ENDPOINT = '/api/v1/predictions';

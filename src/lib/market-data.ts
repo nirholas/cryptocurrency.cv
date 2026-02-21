@@ -1604,7 +1604,7 @@ async function getCoinDetailsCoinCap(
     // --- Step 1: Direct lookup by CoinGecko ID (works for ~90% of coins) ---
     const directRes = await fetchWithTimeout(
       `${COINCAP_BASE}/assets/${coinId}`,
-      10000,
+      5000, // 5 s — keep total fallback chain under page maxDuration
       true,
     );
 
@@ -1626,7 +1626,7 @@ async function getCoinDetailsCoinCap(
 
     const searchRes = await fetchWithTimeout(
       `${COINCAP_BASE}/assets?search=${encodeURIComponent(searchQuery)}&limit=5`,
-      10000,
+      5000, // 5 s — keep total fallback chain under page maxDuration
       true,
     );
 
