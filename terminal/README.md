@@ -96,3 +96,4 @@ Uses the free [Free Crypto News API](https://cryptocurrency.cv):
 ## License
 
 MIT
+
