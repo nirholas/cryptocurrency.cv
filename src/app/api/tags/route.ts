@@ -12,7 +12,7 @@ import { loadTagScoresFromFile } from '@/lib/tagScoring';
 
 // Node.js runtime required for filesystem access (tag scores)
 export const runtime = 'nodejs';
-export const revalidate = 3600; // Cache for 1 hour
+export const dynamic = 'force-dynamic';
 
 export async function GET(request: NextRequest) {
   try {

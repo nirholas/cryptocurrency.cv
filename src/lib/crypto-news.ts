@@ -12,12 +12,12 @@
  * - Layer 2: 7 sources (L2BEAT, Optimism, Arbitrum, Polygon, zkSync, Base, etc.)
  * - ETF/Asset Managers: 7 sources (Grayscale, Bitwise, VanEck, ARK, 21Shares, etc.)
  * - Alt L1: 7 sources (NEAR, Cosmos, Avalanche, Sui, Aptos, Cardano, Polkadot)
- * - Trading: 7 sources (BeInCrypto, AMBCrypto, FXStreet, TradingView, DailyFX, etc.)
+ * - Trading: 6 sources (BeInCrypto, AMBCrypto, FXStreet, TradingView, etc.)
  * - Security: 6 sources (SlowMist, CertiK, OpenZeppelin, Trail of Bits, samczsun, Immunefi)
  * - Developer: 6 sources (Alchemy, Chainlink, Infura, The Graph, Hardhat, Foundry)
  * - Bitcoin: 6 sources (Bitcoin Magazine, Bitcoinist, Bitcoin.com, BTC Times, Lightning Labs, Stacker News)
  * - Quant: 5 sources (AQR, Two Sigma, Man Institute, Alpha Architect, QuantStart)
- * - On-Chain: 5 sources (Glassnode, Kaiko, IntoTheBlock, Coin Metrics, Willy Woo)
+ * - On-Chain: 4 sources (Glassnode, IntoTheBlock, Coin Metrics, Willy Woo)
  * - NFT: 4 sources (NFT Now, NFT Evening, NFT Plazas, DappRadar)
  * - Ethereum: 4 sources (Week in Ethereum, Etherscan, Daily Gwei)
  * - Mining: 3 sources (Bitcoin Mining News, Hashrate Index, Compass Mining)
@@ -334,11 +334,6 @@ const RSS_SOURCES = {
   defillama_news: {
     name: 'DefiLlama News',
     url: 'https://defillama.com/feed',
-    category: 'defi',
-  },
-  yearn_blog: {
-    name: 'Yearn Finance Blog',
-    url: 'https://blog.yearn.finance/feed',
     category: 'defi',
   },
   uniswap_blog: {
@@ -733,11 +728,6 @@ const RSS_SOURCES = {
   // ═══════════════════════════════════════════════════════════════
   // ON-CHAIN ANALYTICS & DATA PROVIDERS
   // ═══════════════════════════════════════════════════════════════
-  kaiko_research: {
-    name: 'Kaiko Research',
-    url: 'https://blog.kaiko.com/rss/',
-    category: 'onchain',
-  },
   intotheblock: {
     name: 'IntoTheBlock',
     url: 'https://medium.com/feed/intotheblock',
@@ -968,11 +958,6 @@ const RSS_SOURCES = {
     url: 'https://seekingalpha.com/market_currents.xml',
     category: 'mainstream',
   },
-  dailyfx: {
-    name: 'DailyFX',
-    url: 'https://rss.dailyfx.com/feeds/all',
-    category: 'trading',
-  },
   nikkei_asia: {
     name: 'Nikkei Asia',
     url: 'https://asia.nikkei.com/rss/feed/nar',
@@ -1172,6 +1157,14 @@ function extractImageUrl(itemXml: string, rawDescription: string): string | null
 }
 
 /**
+ * Safely parse a date value, falling back to current date if invalid
+ */
+function safeDate(value: string | number): Date {
+  const date = new Date(value);
+  return isNaN(date.getTime()) ? new Date() : date;
+}
+
+/**
  * Parse RSS XML to extract articles
  */
 function parseRSSFeed(xml: string, sourceKey: string, sourceName: string, category: string): NewsArticle[] {
@@ -1202,7 +1195,8 @@ function parseRSSFeed(xml: string, sourceKey: string, sourceName: string, catego
     const pubDateStr = pubDateMatch?.[1] || '';
     
     if (title && link) {
-      const pubDate = pubDateStr ? new Date(pubDateStr) : new Date();
+      const rawDate = pubDateStr ? new Date(pubDateStr) : new Date();
+      const pubDate = isNaN(rawDate.getTime()) ? new Date() : rawDate;
       articles.push({
         title,
         link,
@@ -1286,11 +1280,11 @@ const API_SOURCES: Record<string, ApiSource> = {
         link: item.url,
         description: item.body?.slice(0, 200),
         imageUrl: item.imageurl || undefined,
-        pubDate: new Date(item.published_on * 1000).toISOString(),
+        pubDate: safeDate(item.published_on * 1000).toISOString(),
         source: item.source || 'CryptoCompare',
         sourceKey: 'cryptocompare',
         category: item.categories?.split('|')[0]?.toLowerCase() || 'general',
-        timeAgo: getTimeAgo(new Date(item.published_on * 1000)),
+        timeAgo: getTimeAgo(safeDate(item.published_on * 1000)),
       }));
     },
   },
@@ -1312,11 +1306,11 @@ const API_SOURCES: Record<string, ApiSource> = {
         title: decodeHTMLEntities(`${item.project?.name}: ${item.user_title || 'Update'}`),
         link: `https://www.coingecko.com`,
         description: item.description?.slice(0, 200),
-        pubDate: new Date(item.created_at).toISOString(),
+        pubDate: safeDate(item.created_at).toISOString(),
         source: 'CoinGecko',
         sourceKey: 'coingecko_updates',
         category: 'general',
-        timeAgo: getTimeAgo(new Date(item.created_at)),
+        timeAgo: getTimeAgo(safeDate(item.created_at)),
       }));
     },
   },
@@ -1338,11 +1332,11 @@ const API_SOURCES: Record<string, ApiSource> = {
         title: decodeHTMLEntities(item.name),
         link: item.link || 'https://coinpaprika.com',
         description: item.description?.slice(0, 200),
-        pubDate: new Date(item.date).toISOString(),
+        pubDate: safeDate(item.date).toISOString(),
         source: 'CoinPaprika',
         sourceKey: 'coinpaprika',
         category: 'bitcoin',
-        timeAgo: getTimeAgo(new Date(item.date)),
+        timeAgo: getTimeAgo(safeDate(item.date)),
       }));
     },
   },
@@ -1366,11 +1360,11 @@ const API_SOURCES: Record<string, ApiSource> = {
         title: decodeHTMLEntities(item.title),
         link: item.url,
         description: item.content?.slice(0, 200),
-        pubDate: new Date(item.published_at).toISOString(),
+        pubDate: safeDate(item.published_at).toISOString(),
         source: 'Messari',
         sourceKey: 'messari',
         category: item.tags?.[0]?.name?.toLowerCase() || 'research',
-        timeAgo: getTimeAgo(new Date(item.published_at)),
+        timeAgo: getTimeAgo(safeDate(item.published_at)),
       }));
     },
   },
@@ -1461,11 +1455,11 @@ const API_SOURCES: Record<string, ApiSource> = {
         title: `${emoji} Crypto Fear & Greed Index: ${item.value} (${item.value_classification})`,
         link: 'https://alternative.me/crypto/fear-and-greed-index/',
         description: `The market sentiment is currently "${item.value_classification}" with a score of ${item.value}/100`,
-        pubDate: new Date(parseInt(item.timestamp) * 1000).toISOString(),
+        pubDate: safeDate(parseInt(item.timestamp) * 1000).toISOString(),
         source: 'Alternative.me',
         sourceKey: 'fear_greed',
         category: 'sentiment',
-        timeAgo: getTimeAgo(new Date(parseInt(item.timestamp) * 1000)),
+        timeAgo: getTimeAgo(safeDate(parseInt(item.timestamp) * 1000)),
       }];
     },
   },
@@ -1487,11 +1481,11 @@ const API_SOURCES: Record<string, ApiSource> = {
         title: `₿ Bitcoin Network: ${(stats.hash_rate / 1e18).toFixed(1)} EH/s hashrate, ${stats.n_tx.toLocaleString()} txs today`,
         link: 'https://www.blockchain.com/explorer/charts',
         description: `BTC price: $${stats.market_price_usd.toLocaleString()}`,
-        pubDate: new Date(stats.timestamp).toISOString(),
+        pubDate: safeDate(stats.timestamp).toISOString(),
         source: 'Blockchain.com',
         sourceKey: 'blockchain_stats',
         category: 'bitcoin',
-        timeAgo: getTimeAgo(new Date(stats.timestamp)),
+        timeAgo: getTimeAgo(safeDate(stats.timestamp)),
       }];
     },
   },
@@ -1570,7 +1564,7 @@ const API_SOURCES: Record<string, ApiSource> = {
             title: decodeHTMLEntities(post.title),
             link: post.url.startsWith('http') ? post.url : `https://reddit.com${post.permalink}`,
             description: post.selftext?.slice(0, 200) || `${post.score.toLocaleString()} upvotes · ${post.num_comments} comments`,
-            pubDate: new Date(post.created_utc * 1000).toISOString(),
+            pubDate: safeDate(post.created_utc * 1000).toISOString(),
             source: 'Reddit r/CryptoCurrency',
             sourceKey: 'reddit_crypto',
             category: 'social',
@@ -1599,7 +1593,7 @@ const API_SOURCES: Record<string, ApiSource> = {
             title: decodeHTMLEntities(post.title),
             link: post.url.startsWith('http') ? post.url : `https://reddit.com${post.permalink}`,
             description: post.selftext?.slice(0, 200) || `${post.score.toLocaleString()} upvotes · ${post.num_comments} comments`,
-            pubDate: new Date(post.created_utc * 1000).toISOString(),
+            pubDate: safeDate(post.created_utc * 1000).toISOString(),
             source: 'Reddit r/Bitcoin',
             sourceKey: 'reddit_bitcoin',
             category: 'bitcoin',
@@ -1628,7 +1622,7 @@ const API_SOURCES: Record<string, ApiSource> = {
             title: decodeHTMLEntities(post.title),
             link: post.url.startsWith('http') ? post.url : `https://reddit.com${post.permalink}`,
             description: post.selftext?.slice(0, 200) || `${post.score.toLocaleString()} upvotes · ${post.num_comments} comments`,
-            pubDate: new Date(post.created_utc * 1000).toISOString(),
+            pubDate: safeDate(post.created_utc * 1000).toISOString(),
             source: 'Reddit r/defi',
             sourceKey: 'reddit_defi',
             category: 'defi',
@@ -1657,7 +1651,7 @@ const API_SOURCES: Record<string, ApiSource> = {
             title: decodeHTMLEntities(post.title),
             link: post.url.startsWith('http') ? post.url : `https://reddit.com${post.permalink}`,
             description: post.selftext?.slice(0, 200) || `${post.score.toLocaleString()} upvotes · ${post.num_comments} comments`,
-            pubDate: new Date(post.created_utc * 1000).toISOString(),
+            pubDate: safeDate(post.created_utc * 1000).toISOString(),
             source: 'Reddit r/ethereum',
             sourceKey: 'reddit_ethereum',
             category: 'ethereum',
@@ -1699,7 +1693,7 @@ const API_SOURCES: Record<string, ApiSource> = {
             title: `💰 ${r.name} raises ${amountStr} in ${r.round || 'funding round'}${investors}`,
             link: r.source || 'https://defillama.com/raises',
             description: `${r.category || ''} ${r.sector || ''} · Chains: ${r.chains?.join(', ') || 'N/A'}`.trim(),
-            pubDate: new Date(r.date * 1000).toISOString(),
+            pubDate: safeDate(r.date * 1000).toISOString(),
             source: 'DeFiLlama Raises',
             sourceKey: 'defillama_raises',
             category: 'institutional',
@@ -1726,11 +1720,11 @@ const API_SOURCES: Record<string, ApiSource> = {
         title: decodeHTMLEntities(item.title),
         link: `https://www.binance.com/en/support/announcement/${item.code}`,
         description: `Binance official announcement`,
-        pubDate: new Date(item.releaseDate).toISOString(),
+        pubDate: safeDate(item.releaseDate).toISOString(),
         source: 'Binance',
         sourceKey: 'binance_announcements',
         category: 'general',
-        timeAgo: getTimeAgo(new Date(item.releaseDate)),
+        timeAgo: getTimeAgo(safeDate(item.releaseDate)),
       }));
     },
   },
@@ -1764,7 +1758,7 @@ const API_SOURCES: Record<string, ApiSource> = {
           description: item.summary?.slice(0, 200),
           imageUrl: item.banner_image || undefined,
           pubDate: item.time_published
-            ? new Date(`${item.time_published.slice(0, 4)}-${item.time_published.slice(4, 6)}-${item.time_published.slice(6, 8)}T${item.time_published.slice(9, 11)}:${item.time_published.slice(11, 13)}:${item.time_published.slice(13, 15)}Z`).toISOString()
+            ? safeDate(`${item.time_published.slice(0, 4)}-${item.time_published.slice(4, 6)}-${item.time_published.slice(6, 8)}T${item.time_published.slice(9, 11)}:${item.time_published.slice(11, 13)}:${item.time_published.slice(13, 15)}Z`).toISOString()
             : new Date().toISOString(),
           source: item.source || 'Alpha Vantage',
           sourceKey: 'alpha_vantage',
@@ -1791,11 +1785,11 @@ const API_SOURCES: Record<string, ApiSource> = {
           link: item.url,
           description: item.summary?.slice(0, 200),
           imageUrl: item.image || undefined,
-          pubDate: new Date(item.datetime * 1000).toISOString(),
+          pubDate: safeDate(item.datetime * 1000).toISOString(),
           source: item.source || 'Finnhub',
           sourceKey: 'finnhub',
           category: 'general',
-          timeAgo: getTimeAgo(new Date(item.datetime * 1000)),
+          timeAgo: getTimeAgo(safeDate(item.datetime * 1000)),
         }));
       },
     } as ApiSource,
@@ -1817,11 +1811,11 @@ const API_SOURCES: Record<string, ApiSource> = {
           link: item.url,
           description: item.description?.slice(0, 200),
           imageUrl: item.image_url || undefined,
-          pubDate: new Date(item.published_at).toISOString(),
+          pubDate: safeDate(item.published_at).toISOString(),
           source: item.source || 'MarketAux',
           sourceKey: 'marketaux',
           category: 'general',
-          timeAgo: getTimeAgo(new Date(item.published_at)),
+          timeAgo: getTimeAgo(safeDate(item.published_at)),
         }));
       },
     } as ApiSource,
@@ -1843,11 +1837,11 @@ const API_SOURCES: Record<string, ApiSource> = {
           link: item.url,
           description: item.description?.slice(0, 200),
           imageUrl: item.image || undefined,
-          pubDate: new Date(item.publishedAt).toISOString(),
+          pubDate: safeDate(item.publishedAt).toISOString(),
           source: item.source?.name || 'GNews',
           sourceKey: 'gnews',
           category: 'general',
-          timeAgo: getTimeAgo(new Date(item.publishedAt)),
+          timeAgo: getTimeAgo(safeDate(item.publishedAt)),
         }));
       },
     } as ApiSource,

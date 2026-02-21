@@ -34,9 +34,29 @@ let _hasLoggedInit = false;
 /**
  * HTTP client for communicating with the facilitator service
  * The facilitator handles payment verification and on-chain settlement
+ * 
+ * Lazily initialized to avoid network I/O during Next.js static generation.
  */
-export const facilitatorClient = new HTTPFacilitatorClient({
-  url: FACILITATOR_URL,
+let _facilitatorClient: HTTPFacilitatorClient | null = null;
+
+function getFacilitatorClient(): HTTPFacilitatorClient {
+  if (!_facilitatorClient) {
+    _facilitatorClient = new HTTPFacilitatorClient({
+      url: FACILITATOR_URL,
+    });
+  }
+  return _facilitatorClient;
+}
+
+/** @deprecated Use getFacilitatorClient() for lazy access. Kept for backward-compat. */
+export const facilitatorClient = new Proxy({} as HTTPFacilitatorClient, {
+  get(_, prop) {
+    if (IS_BUILD_TIME) {
+      // Return no-op stubs during build to prevent network calls
+      return typeof prop === 'string' ? () => undefined : undefined;
+    }
+    return (getFacilitatorClient() as unknown as Record<string | symbol, unknown>)[prop];
+  },
 });
 
 // =============================================================================
@@ -54,9 +74,16 @@ export const facilitatorClient = new HTTPFacilitatorClient({
 let _serverInstance: x402ResourceServer | null = null;
 
 /**
- * Get or create the x402 resource server instance
+ * Get or create the x402 resource server instance.
+ * Throws at build time to prevent network I/O during static generation.
  */
 export function getX402Server(): x402ResourceServer {
+  if (IS_BUILD_TIME) {
+    throw new Error(
+      '[x402] Server cannot be initialized at build time. ' +
+      'Ensure x402 is only accessed in request-time code paths.',
+    );
+  }
   if (!_serverInstance) {
     _serverInstance = createX402Server();
   }
@@ -68,7 +95,11 @@ export function getX402Server(): x402ResourceServer {
  * This is called once on first access and cached
  */
 function createX402Server(): x402ResourceServer {
-  const server = new x402ResourceServer(facilitatorClient);
+  if (IS_BUILD_TIME) {
+    throw new Error('[x402] createX402Server must not be called at build time.');
+  }
+
+  const server = new x402ResourceServer(getFacilitatorClient());
   
   // Register EVM payment scheme for current network
   if (isEvmNetwork(CURRENT_NETWORK)) {
@@ -92,9 +123,14 @@ function createX402Server(): x402ResourceServer {
   return server;
 }
 
-// Export lazy singleton (backward compatibility) - avoids initialization during build
+// Export lazy singleton (backward compatibility) - returns no-op stubs during build
 export const x402Server = new Proxy({} as x402ResourceServer, {
   get(_, prop) {
+    if (IS_BUILD_TIME) {
+      // During static generation, return no-op functions / undefined values
+      // so that modules importing x402Server don't crash at build time.
+      return typeof prop === 'string' ? (() => undefined) : undefined;
+    }
     return (getX402Server() as unknown as Record<string | symbol, unknown>)[prop];
   },
 });

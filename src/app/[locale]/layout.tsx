@@ -231,7 +231,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <link rel="apple-touch-startup-image" href="/splash/apple-splash-dark.png" media="(prefers-color-scheme: dark)" />
         <link rel="apple-touch-startup-image" href="/splash/apple-splash-light.png" media="(prefers-color-scheme: light)" />
       </head>
-      <body className="bg-gray-50 dark:bg-slate-900 antialiased min-h-screen text-gray-900 dark:text-slate-100 transition-colors duration-200">
+      <body className="bg-black antialiased min-h-screen text-white transition-colors duration-200">
         {/* Skip Link for Accessibility */}
         <a href="#main-content" className="skip-link">
           Skip to main content
