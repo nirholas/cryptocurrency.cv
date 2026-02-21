@@ -158,3 +158,4 @@ MIT-lisenssi - katso [LICENSE](LICENSE) yksityiskohtia varten.
 <p align="center">
   Tehty ❤️ kryptoyhteisölle
 </p>
+
