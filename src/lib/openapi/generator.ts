@@ -214,6 +214,303 @@ export function generateOpenAPISpec(): OpenAPISpec {
           },
         },
       },
+      '/api/search': {
+        get: {
+          summary: 'Search crypto news',
+          description: 'Full-text search across all aggregated news articles from 130+ sources. Returns articles matching keyword(s).',
+          tags: ['News'],
+          parameters: [
+            {
+              name: 'q',
+              in: 'query',
+              required: true,
+              description: 'Comma-separated keywords or phrase (e.g. "bitcoin ETF,blackrock")',
+              schema: { type: 'string' },
+            },
+            {
+              name: 'limit',
+              in: 'query',
+              description: 'Maximum results to return',
+              schema: { type: 'integer', minimum: 1, maximum: 50, default: 10 },
+            },
+            {
+              name: 'from',
+              in: 'query',
+              description: 'Earliest publish date (ISO 8601)',
+              schema: { type: 'string', format: 'date-time' },
+            },
+            {
+              name: 'to',
+              in: 'query',
+              description: 'Latest publish date (ISO 8601)',
+              schema: { type: 'string', format: 'date-time' },
+            },
+            {
+              name: 'source',
+              in: 'query',
+              description: 'Filter by source key (e.g. coindesk, decrypt)',
+              schema: { type: 'string' },
+            },
+          ],
+          responses: {
+            '200': {
+              description: 'Search results',
+              content: {
+                'application/json': {
+                  schema: {
+                    type: 'object',
+                    properties: {
+                      articles: { type: 'array', items: { $ref: '#/components/schemas/Article' } },
+                      total: { type: 'integer' },
+                      query: { type: 'string' },
+                    },
+                  },
+                },
+              },
+            },
+            '400': { description: 'Missing required parameter q' },
+          },
+        },
+      },
+      '/api/bitcoin': {
+        get: {
+          summary: 'Get Bitcoin news',
+          description: 'Returns news specifically about Bitcoin, Lightning Network, miners, and Bitcoin ETFs.',
+          tags: ['News'],
+          parameters: [
+            { name: 'limit', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 100, default: 20 } },
+            { name: 'page', in: 'query', schema: { type: 'integer', minimum: 1, default: 1 } },
+          ],
+          responses: { '200': { description: 'Bitcoin news articles' } },
+        },
+      },
+      '/api/defi': {
+        get: {
+          summary: 'Get DeFi news',
+          description: 'Returns news about DeFi protocols, yield farming, DEXs, lending, TVL, and hacks.',
+          tags: ['News'],
+          parameters: [
+            { name: 'limit', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 100, default: 20 } },
+            { name: 'page', in: 'query', schema: { type: 'integer', minimum: 1, default: 1 } },
+          ],
+          responses: { '200': { description: 'DeFi news articles' } },
+        },
+      },
+      '/api/sources': {
+        get: {
+          summary: 'List all news sources',
+          description: 'Returns all 130+ aggregated news sources with their status, category, and metadata.',
+          tags: ['News'],
+          responses: {
+            '200': {
+              description: 'List of news sources',
+              content: {
+                'application/json': {
+                  schema: {
+                    type: 'object',
+                    properties: {
+                      sources: {
+                        type: 'array',
+                        items: {
+                          type: 'object',
+                          properties: {
+                            key: { type: 'string' },
+                            name: { type: 'string' },
+                            url: { type: 'string', format: 'uri' },
+                            category: { type: 'string' },
+                            language: { type: 'string' },
+                            status: { type: 'string', enum: ['active', 'degraded', 'unavailable'] },
+                          },
+                        },
+                      },
+                      totalActive: { type: 'integer' },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      '/api/trending': {
+        get: {
+          summary: 'Get trending topics',
+          description: 'Returns the most-mentioned keywords and topics across all crypto news in the last 24 hours.',
+          tags: ['News'],
+          parameters: [
+            { name: 'limit', in: 'query', schema: { type: 'integer', default: 20 } },
+            {
+              name: 'period',
+              in: 'query',
+              description: 'Time window for trend calculation',
+              schema: { type: 'string', enum: ['1h', '6h', '24h', '7d'], default: '24h' },
+            },
+          ],
+          responses: {
+            '200': {
+              description: 'Trending topics with counts and sentiment',
+              content: {
+                'application/json': {
+                  schema: {
+                    type: 'object',
+                    properties: {
+                      trending: {
+                        type: 'array',
+                        items: {
+                          type: 'object',
+                          properties: {
+                            keyword: { type: 'string' },
+                            count: { type: 'integer' },
+                            change: { type: 'string' },
+                            sentiment: { type: 'string', enum: ['bullish', 'bearish', 'neutral'] },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      '/api/sentiment': {
+        get: {
+          summary: 'Market sentiment analysis',
+          description: 'AI-powered sentiment analysis aggregated from all news sources. Returns bullish/bearish/neutral breakdown per asset.',
+          tags: ['Market Data'],
+          parameters: [
+            {
+              name: 'asset',
+              in: 'query',
+              description: 'Crypto asset symbol (e.g. BTC, ETH, SOL). Omit for overall market.',
+              schema: { type: 'string' },
+            },
+            {
+              name: 'period',
+              in: 'query',
+              schema: { type: 'string', enum: ['1h', '24h', '7d', '30d'], default: '24h' },
+            },
+          ],
+          responses: {
+            '200': {
+              description: 'Sentiment breakdown',
+              content: {
+                'application/json': {
+                  schema: {
+                    type: 'object',
+                    properties: {
+                      overall: { type: 'string', enum: ['bullish', 'bearish', 'neutral'] },
+                      score: { type: 'number', minimum: -1, maximum: 1 },
+                      breakdown: {
+                        type: 'object',
+                        properties: {
+                          bullish: { type: 'integer' },
+                          neutral: { type: 'integer' },
+                          bearish: { type: 'integer' },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      '/api/fear-greed': {
+        get: {
+          summary: 'Crypto Fear & Greed Index',
+          description: 'Returns the current Crypto Fear & Greed Index value (0=Extreme Fear, 100=Extreme Greed).',
+          tags: ['Market Data'],
+          responses: {
+            '200': {
+              description: 'Fear & Greed Index',
+              content: {
+                'application/json': {
+                  schema: {
+                    type: 'object',
+                    properties: {
+                      value: { type: 'integer', minimum: 0, maximum: 100 },
+                      classification: { type: 'string', enum: ['Extreme Fear', 'Fear', 'Neutral', 'Greed', 'Extreme Greed'] },
+                      previousValue: { type: 'integer' },
+                      timestamp: { type: 'string', format: 'date-time' },
+                    },
+                  },
+                  example: { value: 72, classification: 'Greed', previousValue: 68, timestamp: '2026-02-21T00:00:00Z' },
+                },
+              },
+            },
+          },
+        },
+      },
+      '/api/rss': {
+        get: {
+          summary: 'RSS 2.0 feed',
+          description: 'Returns latest crypto news as RSS 2.0 XML feed. Compatible with all RSS readers.',
+          tags: ['News'],
+          parameters: [
+            { name: 'limit', in: 'query', schema: { type: 'integer', default: 20 } },
+            { name: 'source', in: 'query', schema: { type: 'string' } },
+            { name: 'category', in: 'query', schema: { type: 'string' } },
+          ],
+          responses: {
+            '200': {
+              description: 'RSS XML feed',
+              content: { 'application/rss+xml': { schema: { type: 'string' } } } as any,
+            },
+          },
+        },
+      },
+      '/api/atom': {
+        get: {
+          summary: 'Atom 1.0 feed',
+          description: 'Returns latest crypto news as Atom 1.0 XML feed.',
+          tags: ['News'],
+          parameters: [
+            { name: 'limit', in: 'query', schema: { type: 'integer', default: 20 } },
+          ],
+          responses: {
+            '200': {
+              description: 'Atom XML feed',
+              content: { 'application/atom+xml': { schema: { type: 'string' } } } as any,
+            },
+          },
+        },
+      },
+      '/api/ask': {
+        get: {
+          summary: 'Ask about crypto news (NLP)',
+          description: 'Natural language Q&A over the crypto news corpus. Ask any question about current crypto events.',
+          tags: ['News'],
+          parameters: [
+            {
+              name: 'q',
+              in: 'query',
+              required: true,
+              description: 'Natural language question (e.g. "What happened to Bitcoin this week?")',
+              schema: { type: 'string' },
+            },
+          ],
+          responses: {
+            '200': {
+              description: 'AI-generated answer with source articles',
+              content: {
+                'application/json': {
+                  schema: {
+                    type: 'object',
+                    properties: {
+                      answer: { type: 'string' },
+                      sources: { type: 'array', items: { $ref: '#/components/schemas/Article' } },
+                      confidence: { type: 'number' },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
       '/api/v1/coins': {
         get: {
           summary: 'List cryptocurrencies',

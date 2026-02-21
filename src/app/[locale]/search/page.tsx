@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { SearchPageContent } from "@/components/SearchPageContent";
 import { SearchFilters } from "@/components/SearchFilters";
 import type { Metadata } from "next";
+import { WebsiteStructuredData, BreadcrumbStructuredData } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "Search - Free Crypto News",
@@ -34,6 +35,13 @@ export default async function SearchPage({ params, searchParams }: Props) {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+      <WebsiteStructuredData />
+      <BreadcrumbStructuredData
+        items={[
+          { name: 'Home', url: 'https://cryptocurrency.cv' },
+          { name: 'Search', url: 'https://cryptocurrency.cv/search' },
+        ]}
+      />
       <div className="max-w-7xl mx-auto">
         <Header />
 

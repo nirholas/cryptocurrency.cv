@@ -1,0 +1,4 @@
+exportMethods(CryptoNews)
+export(CryptoNews)
+importFrom(httr2, request, req_perform, req_headers, req_timeout, resp_body_json)
+importFrom(jsonlite, fromJSON)

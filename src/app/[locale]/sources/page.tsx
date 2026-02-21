@@ -8,6 +8,7 @@ import Footer from '@/components/Footer';
 import { getSources } from '@/lib/crypto-news';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { BreadcrumbStructuredData } from '@/components/StructuredData';
 
 export const metadata: Metadata = {
   title: 'Crypto News Sources | 200+ Trusted Publishers',
@@ -81,6 +82,12 @@ export default async function SourcesPage() {
   
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
+      <BreadcrumbStructuredData
+        items={[
+          { name: 'Home', url: 'https://cryptocurrency.cv' },
+          { name: 'News Sources', url: 'https://cryptocurrency.cv/sources' },
+        ]}
+      />
       <div className="max-w-7xl mx-auto">
         <Header />
         
