@@ -89,12 +89,25 @@ interface SocialIntelligenceData {
 }
 
 interface SocialIntelligenceDashboardProps {
-  initialView?: 'trends' | 'metrics' | 'messages' | 'full';
+  initialView?: 'trends' | 'metrics' | 'messages' | 'narratives' | 'full';
   refreshInterval?: number;
   showHeader?: boolean;
   compact?: boolean;
   maxItems?: number;
   onTickerClick?: (ticker: string) => void;
+}
+
+// Narrative type (mirrors src/lib/narrativeDetector.ts)
+interface NarrativeItem {
+  id: string;
+  label: string;
+  description: string;
+  momentum: 'rising' | 'peaked' | 'fading';
+  coins: string[];
+  article_count: number;
+  first_seen: string;
+  velocity: number;
+  summary?: string;
 }
 
 // =============================================================================
@@ -548,8 +561,110 @@ function MessagesView({
 }
 
 // =============================================================================
+// Trending Narratives View
+// =============================================================================
+
+function MomentumIcon({ momentum }: { momentum: 'rising' | 'peaked' | 'fading' }) {
+  if (momentum === 'rising') return <span className="text-green-500 font-bold text-lg">↑</span>;
+  if (momentum === 'fading') return <span className="text-amber-500 font-bold text-lg">↓</span>;
+  return <span className="text-neutral-400 font-bold text-lg">→</span>;
+}
+
+function NarrativesView({ narratives, loading }: { narratives: NarrativeItem[]; loading: boolean }) {
+  if (loading) {
+    return (
+      <div className="space-y-4">
+        {[1, 2, 3].map((i) => (
+          <div key={i} className="animate-pulse p-4 bg-neutral-50 dark:bg-neutral-800/50 rounded-xl border border-neutral-200 dark:border-neutral-700">
+            <div className="h-5 bg-neutral-200 dark:bg-neutral-700 rounded w-1/3 mb-3" />
+            <div className="h-3 bg-neutral-200 dark:bg-neutral-700 rounded w-2/3 mb-2" />
+            <div className="h-3 bg-neutral-200 dark:bg-neutral-700 rounded w-1/2" />
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  if (narratives.length === 0) {
+    return (
+      <div className="text-center py-8 text-neutral-500 dark:text-neutral-400">
+        <p className="mb-2">No narratives detected yet.</p>
+        <p className="text-sm">Narratives are refreshed every 2 hours.</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-4">
+      {narratives
+        .sort((a, b) => b.velocity - a.velocity)
+        .map((narrative) => {
+          const isRising = narrative.momentum === 'rising';
+          const isFading = narrative.momentum === 'fading';
+          const cardBorder = isRising
+            ? 'border-green-200 dark:border-green-800/50'
+            : isFading
+            ? 'border-amber-200 dark:border-amber-800/50'
+            : 'border-neutral-200 dark:border-neutral-700';
+          const pillBg = isRising
+            ? 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300'
+            : isFading
+            ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300'
+            : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300';
+
+          return (
+            <div
+              key={narrative.id}
+              className={`p-4 bg-neutral-50 dark:bg-neutral-800/50 rounded-xl border ${cardBorder}`}
+            >
+              {/* Header row */}
+              <div className="flex items-center gap-3 mb-2 flex-wrap">
+                <span className={`px-3 py-1 rounded-full text-sm font-semibold ${pillBg}`}>
+                  {narrative.label}
+                </span>
+                <MomentumIcon momentum={narrative.momentum} />
+                <span className="text-xs text-neutral-500 dark:text-neutral-400">
+                  velocity <span className="font-semibold text-neutral-700 dark:text-neutral-300">{narrative.velocity.toFixed(1)}×</span>
+                </span>
+                <span className="text-xs text-neutral-500 dark:text-neutral-400">
+                  {narrative.article_count} article{narrative.article_count !== 1 ? 's' : ''}
+                </span>
+              </div>
+
+              {/* Description */}
+              <p className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">{narrative.description}</p>
+
+              {/* AI Summary */}
+              {narrative.summary && (
+                <p className="text-sm text-neutral-700 dark:text-neutral-200 italic mb-3 border-l-2 border-purple-400 pl-3">
+                  {narrative.summary}
+                </p>
+              )}
+
+              {/* Coins */}
+              {narrative.coins.length > 0 && (
+                <div className="flex gap-1.5 flex-wrap">
+                  {narrative.coins.slice(0, 8).map((coin) => (
+                    <span
+                      key={coin}
+                      className="px-2 py-0.5 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 rounded text-xs font-medium"
+                    >
+                      ${coin}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        })}
+    </div>
+  );
+}
+
+// =============================================================================
 // Main Component
 // =============================================================================
+
 
 export function SocialIntelligenceDashboard({
   initialView = 'trends',
@@ -562,9 +677,32 @@ export function SocialIntelligenceDashboard({
   const [data, setData] = useState<SocialIntelligenceData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [activeView, setActiveView] = useState<'trends' | 'metrics' | 'messages'>(initialView === 'full' ? 'trends' : initialView);
+  const [activeView, setActiveView] = useState<'trends' | 'metrics' | 'messages' | 'narratives'>(
+    (initialView === 'full' ? 'trends' : initialView) as 'trends' | 'metrics' | 'messages' | 'narratives'
+  );
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
   const abortControllerRef = useRef<AbortController | null>(null);
+
+  // Narratives state
+  const [narratives, setNarratives] = useState<NarrativeItem[]>([]);
+  const [narrativesLoading, setNarrativesLoading] = useState(false);
+
+  const fetchNarratives = useCallback(async () => {
+    setNarrativesLoading(true);
+    try {
+      const res = await fetch('/api/social/trending-narratives');
+      if (res.ok) {
+        const json = await res.json();
+        if (Array.isArray(json.narratives)) {
+          setNarratives(json.narratives);
+        }
+      }
+    } catch {
+      // Silent fail — narratives are supplementary
+    } finally {
+      setNarrativesLoading(false);
+    }
+  }, []);
 
   const fetchData = useCallback(async () => {
     // Abort any pending request
@@ -605,6 +743,7 @@ export function SocialIntelligenceDashboard({
 
   useEffect(() => {
     fetchData();
+    fetchNarratives();
     
     const interval = setInterval(fetchData, refreshInterval);
     
@@ -614,7 +753,7 @@ export function SocialIntelligenceDashboard({
         abortControllerRef.current.abort();
       }
     };
-  }, [fetchData, refreshInterval]);
+  }, [fetchData, fetchNarratives, refreshInterval]);
 
   if (loading && !data) {
     return (
@@ -707,6 +846,13 @@ export function SocialIntelligenceDashboard({
           >
             💬 Messages
           </TabButton>
+          <TabButton
+            active={activeView === 'narratives'}
+            onClick={() => { setActiveView('narratives'); if (narratives.length === 0) fetchNarratives(); }}
+            count={narratives.length || undefined}
+          >
+            📡 Narratives
+          </TabButton>
         </div>
       </div>
 
@@ -738,6 +884,13 @@ export function SocialIntelligenceDashboard({
           <MessagesView 
             messages={data?.messages || []}
             onTickerClick={onTickerClick}
+          />
+        )}
+
+        {activeView === 'narratives' && (
+          <NarrativesView
+            narratives={narratives}
+            loading={narrativesLoading}
           />
         )}
       </div>

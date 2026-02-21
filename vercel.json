@@ -6,18 +6,50 @@
       "schedule": "0 * * * *"
     },
     {
+      "path": "/api/cron/digest",
+      "schedule": "0 8 * * *"
+    },
+    {
       "path": "/api/cron/x-sentiment",
       "schedule": "0 0 * * *"
+    },
+    {
+      "path": "/api/cron/coverage-gap",
+      "schedule": "0 */6 * * *"
+    },
+    {
+      "path": "/api/cron/predictions",
+      "schedule": "0 0 * * *"
+    },
+    {
+      "path": "/api/cron/digest",
+      "schedule": "0 8 * * *"
+    },
+    {
+      "path": "/api/cron/tag-scores",
+      "schedule": "0 */6 * * *"
     }
   ],
   "functions": {
     "src/app/api/cron/archive-kv/route.ts": {
       "maxDuration": 60
     },
+    "src/app/api/cron/coverage-gap/route.ts": {
+      "maxDuration": 120
+    },
     "src/app/api/cron/x-sentiment/route.ts": {
       "maxDuration": 300
     },
     "src/app/api/social/x/sentiment/route.ts": {
+      "maxDuration": 60
+    },
+    "src/app/api/cron/predictions/route.ts": {
+      "maxDuration": 120
+    },
+    "src/app/api/cron/digest/route.ts": {
+      "maxDuration": 120
+    },
+    "src/app/api/cron/tag-scores/route.ts": {
       "maxDuration": 60
     }
   }
