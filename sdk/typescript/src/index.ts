@@ -149,7 +149,7 @@ export interface StatsResponse {
 
 export interface AnalyzedArticle extends NewsArticle {
   topics: string[];
-  sentiment: 'bullish' | 'bearish' | 'neutral';
+  sentiment: 'very_bullish' | 'bullish' | 'neutral' | 'bearish' | 'very_bearish';
   sentiment_score: number;
 }
 
@@ -202,6 +202,87 @@ export interface CryptoNewsOptions {
   /** Custom fetch function for environments without native fetch */
   fetch?: typeof fetch;
 }
+
+/**
+ * 5-tier sentiment signal aligned with the API's own vocabulary.
+ * Derived from graded score: very_bullish ≥ 0.5, bullish ≥ 0.15,
+ * neutral > −0.15, bearish > −0.5, very_bearish ≤ −0.5.
+ */
+export type SentimentSignal =
+  | 'very_bullish'
+  | 'bullish'
+  | 'neutral'
+  | 'bearish'
+  | 'very_bearish'
+  | 'error';
+
+/** Per-coin result from getCoinSentiment() */
+export interface CoinSentimentResult {
+  /** Search keyword used for this pair */
+  keyword: string;
+  /** Number of articles analysed */
+  articles: number;
+  /** Percentage of bullish/very_bullish articles */
+  pos: number;
+  /** Percentage of neutral articles */
+  mid: number;
+  /** Percentage of bearish/very_bearish articles */
+  neg: number;
+  /**
+   * Weighted score −1.0 (strongly bearish) … +1.0 (strongly bullish).
+   * very_bullish=+1, bullish=+0.5, neutral=0, bearish=−0.5, very_bearish=−1.
+   */
+  score: number;
+  /** 5-tier signal derived from score */
+  signal: SentimentSignal;
+  /**
+   * Composite confidence 0–100.
+   * confidence = volumeWeight × marginWeight × 100
+   * A single-article signal can never reach the default tradeable threshold.
+   */
+  confidence: number;
+  /**
+   * True only when articles ≥ minArticles AND confidence ≥ minConfidence.
+   * Safe to use as a gate before placing a trade.
+   */
+  tradeable: boolean;
+  /**
+   * Human-readable suppression reason when tradeable=false.
+   * Empty string when tradeable=true.
+   */
+  reason: string;
+  /** Set when the fetch for this coin failed */
+  error?: string;
+}
+
+/** Dict mapping exchange pair symbol → search keyword */
+export type CoinPairs = Record<string, string>;
+
+/**
+ * Default set of 19 trading pairs used by getCoinSentiment().
+ * Inspired by CyberPunkMetalHead/cryptocurrency-news-analysis.
+ */
+export const COIN_PAIRS: CoinPairs = {
+  BTCUSD:   'Bitcoin',
+  ETHUSD:   'Ethereum',
+  LTCUSD:   'Litecoin',
+  XRPUSD:   'Ripple',
+  SOLUSD:   'Solana',
+  BNBUSD:   'Binance',
+  ADAUSD:   'Cardano',
+  AVAXUSD:  'Avalanche',
+  DOTUSD:   'Polkadot',
+  MATICUSD: 'Polygon',
+  DOGEUSD:  'Dogecoin',
+  TRXUSD:   'Tron',
+  XLMUSD:   'Stellar Lumens',
+  XMRUSD:   'Monero',
+  ZECUSD:   'Zcash',
+  BATUSD:   'Basic Attention Token',
+  EOSUSD:   'EOS',
+  NEOUSD:   'NEO',
+  ETCUSD:   'Ethereum Classic',
+};
 
 // ═══════════════════════════════════════════════════════════════
 // CLIENT CLASS
@@ -378,6 +459,145 @@ export class CryptoNews {
     if (feed === 'all') return `${this.baseUrl}/api/rss`;
     return `${this.baseUrl}/api/rss?feed=${feed}`;
   }
+
+  /**
+   * Calculate per-coin sentiment with confidence weighting and trade filtering.
+   *
+   * All coins are fetched **concurrently** (Promise.all), so 19 coins take
+   * ~1 round-trip of wall-clock latency rather than 19 serial requests.
+   *
+   * Confidence formula
+   * ------------------
+   * `confidence = volumeWeight × marginWeight × 100`
+   * - **volumeWeight**: 0→1 as article count reaches `minArticles`. A single
+   *   article can never exceed `1/minArticles` on this axis alone.
+   * - **marginWeight**: normalised %-point gap between the dominant and
+   *   second-highest sentiment bucket. A ~50/50 split → near-zero weight.
+   *
+   * Signal is derived from the graded `score`, not raw bucket counts,
+   * giving 5 tiers: `very_bullish / bullish / neutral / bearish / very_bearish`.
+   *
+   * @param coins       Map of trading pair → search keyword (default: COIN_PAIRS)
+   * @param limit       Max articles per coin (default: 30)
+   * @param minArticles Minimum articles for tradeable=true (default: 5)
+   * @param minConfidence  Minimum confidence score 0–100 for tradeable=true (default: 20)
+   *
+   * @example
+   * ```ts
+   * const news = new CryptoNews();
+   * const report = await news.getCoinSentiment(
+   *   { BTCUSD: 'Bitcoin', ETHUSD: 'Ethereum' },
+   *   30, 5, 20
+   * );
+   * for (const [pair, data] of Object.entries(report)) {
+   *   if (data.tradeable) console.log(`TRADE ${pair}: ${data.signal} conf=${data.confidence.toFixed(1)}`);
+   *   else console.log(`SKIP  ${pair}: ${data.reason}`);
+   * }
+   * ```
+   */
+  async getCoinSentiment(
+    coins: CoinPairs = COIN_PAIRS,
+    limit = 30,
+    minArticles = 5,
+    minConfidence = 20,
+  ): Promise<Record<string, CoinSentimentResult>> {
+    const SCORE_MAP: Record<string, number> = {
+      very_bullish: +1.0,
+      bullish:      +0.5,
+      neutral:       0.0,
+      bearish:      -0.5,
+      very_bearish: -1.0,
+    };
+    const SIGNAL_TIERS: Array<[number, SentimentSignal]> = [
+      [0.5,   'very_bullish'],
+      [0.15,  'bullish'],
+      [-0.15, 'neutral'],
+      [-0.5,  'bearish'],
+      [-999,  'very_bearish'],
+    ];
+    const BULLISH = new Set(['very_bullish', 'bullish']);
+    const BEARISH = new Set(['very_bearish', 'bearish']);
+
+    const entries = Object.entries(coins);
+    const settled = await Promise.allSettled(
+      entries.map(async ([pair, keyword]): Promise<[string, CoinSentimentResult]> => {
+        const data = await this.analyze(limit, keyword);
+        const articles = data.articles;
+        const total = articles.length;
+
+        if (total === 0) {
+          return [pair, {
+            keyword, articles: 0,
+            pos: 0, mid: 0, neg: 0,
+            score: 0, signal: 'neutral',
+            confidence: 0, tradeable: false,
+            reason: 'no articles found',
+          }];
+        }
+
+        const pos = articles.filter(a => BULLISH.has(a.sentiment)).length;
+        const neg = articles.filter(a => BEARISH.has(a.sentiment)).length;
+        const mid = total - pos - neg;
+
+        const posPct = (pos * 100) / total;
+        const midPct = (mid * 100) / total;
+        const negPct = (neg * 100) / total;
+
+        const rawScore = articles.reduce(
+          (sum, a) => sum + (SCORE_MAP[a.sentiment] ?? 0), 0
+        );
+        const score = Math.round((rawScore / total) * 10000) / 10000;
+
+        const signal: SentimentSignal = (
+          SIGNAL_TIERS.find(([t]) => score >= t) ?? [null, 'neutral']
+        )[1] as SentimentSignal;
+
+        const volumeWeight = Math.min(total / Math.max(minArticles, 1), 1.0);
+        const pcts = [posPct, midPct, negPct].sort((a, b) => b - a);
+        const marginWeight = Math.max(pcts[0] - pcts[1], 0) / 100;
+        const confidence = Math.round(volumeWeight * marginWeight * 100 * 10) / 10;
+
+        const reasons: string[] = [];
+        if (total < minArticles)
+          reasons.push(`only ${total} article${total === 1 ? '' : 's'} found (min ${minArticles})`);
+        if (confidence < minConfidence)
+          reasons.push(`confidence ${confidence.toFixed(1)} below threshold ${minConfidence}`);
+
+        return [pair, {
+          keyword,
+          articles: total,
+          pos:        Math.round(posPct * 10) / 10,
+          mid:        Math.round(midPct * 10) / 10,
+          neg:        Math.round(negPct * 10) / 10,
+          score,
+          signal,
+          confidence,
+          tradeable:  reasons.length === 0,
+          reason:     reasons.join('; '),
+        }];
+      })
+    );
+
+    // Preserve original insertion order; map failures to error result.
+    const result: Record<string, CoinSentimentResult> = {};
+    for (let i = 0; i < entries.length; i++) {
+      const [pair, keyword] = entries[i];
+      const outcome = settled[i];
+      if (outcome.status === 'fulfilled') {
+        result[pair] = outcome.value[1];
+      } else {
+        result[pair] = {
+          keyword, articles: 0,
+          pos: 0, mid: 0, neg: 0,
+          score: 0, signal: 'error',
+          confidence: 0, tradeable: false,
+          reason: String(outcome.reason),
+          error: String(outcome.reason),
+        };
+      }
+    }
+    return result;
+  }
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -409,6 +629,24 @@ export async function getBitcoinNews(limit: number = 10): Promise<NewsArticle[]>
 /** Quick function to get breaking news */
 export async function getBreakingNews(limit: number = 5): Promise<NewsArticle[]> {
   return defaultClient.getBreaking(limit);
+}
+
+/**
+ * Quick function to get per-coin sentiment with trade filtering.
+ * Uses the default COIN_PAIRS map.
+ *
+ * @param coins          Map of trading pair → keyword (default: COIN_PAIRS)
+ * @param limit          Max articles per coin (default: 30)
+ * @param minArticles    Min articles for tradeable=true (default: 5)
+ * @param minConfidence  Min confidence 0–100 for tradeable=true (default: 20)
+ */
+export async function getCoinSentiment(
+  coins: CoinPairs = COIN_PAIRS,
+  limit = 30,
+  minArticles = 5,
+  minConfidence = 20,
+): Promise<Record<string, CoinSentimentResult>> {
+  return defaultClient.getCoinSentiment(coins, limit, minArticles, minConfidence);
 }
 
 // Default export

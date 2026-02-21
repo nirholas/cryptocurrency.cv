@@ -19,6 +19,8 @@ import (
 	"io"
 	"net/http"
 	"net/url"
+	"strings"
+	"sync"
 	"time"
 )
 
@@ -341,4 +343,301 @@ func (c *Client) GetOrigins(query string, category string, limit int) (*OriginsR
 		return nil, err
 	}
 	return &resp, nil
+}
+
+// CoinPairs maps trading pair symbols to search keywords.
+// e.g. {"BTCUSD": "Bitcoin", "ETHUSD": "Ethereum"}
+type CoinPairs map[string]string
+
+// DefaultCoinPairs is the default set of 19 trading pairs used by GetCoinSentiment.
+// Inspired by CyberPunkMetalHead/cryptocurrency-news-analysis.
+var DefaultCoinPairs = CoinPairs{
+	"BTCUSD":   "Bitcoin",
+	"ETHUSD":   "Ethereum",
+	"LTCUSD":   "Litecoin",
+	"XRPUSD":   "Ripple",
+	"SOLUSD":   "Solana",
+	"BNBUSD":   "Binance",
+	"ADAUSD":   "Cardano",
+	"AVAXUSD":  "Avalanche",
+	"DOTUSD":   "Polkadot",
+	"MATICUSD": "Polygon",
+	"DOGEUSD":  "Dogecoin",
+	"TRXUSD":   "Tron",
+	"XLMUSD":   "Stellar Lumens",
+	"XMRUSD":   "Monero",
+	"ZECUSD":   "Zcash",
+	"BATUSD":   "Basic Attention Token",
+	"EOSUSD":   "EOS",
+	"NEOUSD":   "NEO",
+	"ETCUSD":   "Ethereum Classic",
+}
+
+// CoinSentimentResult holds the per-coin sentiment output from GetCoinSentiment.
+type CoinSentimentResult struct {
+	// Keyword is the search term used to fetch articles.
+	Keyword string `json:"keyword"`
+	// Articles is the number of articles analysed.
+	Articles int `json:"articles"`
+	// Pos is the percentage of bullish/very_bullish articles.
+	Pos float64 `json:"pos"`
+	// Mid is the percentage of neutral articles.
+	Mid float64 `json:"mid"`
+	// Neg is the percentage of bearish/very_bearish articles.
+	Neg float64 `json:"neg"`
+	// Score is the weighted average: -1.0 (strongly bearish) to +1.0 (strongly bullish).
+	// very_bullish=+1, bullish=+0.5, neutral=0, bearish=-0.5, very_bearish=-1.
+	Score float64 `json:"score"`
+	// Signal is a 5-tier label derived from Score:
+	// very_bullish | bullish | neutral | bearish | very_bearish | error
+	Signal string `json:"signal"`
+	// Confidence is a composite score 0-100:
+	// confidence = volumeWeight * marginWeight * 100.
+	// A single-article signal can never reach the default tradeable threshold.
+	Confidence float64 `json:"confidence"`
+	// Tradeable is true only when Articles >= MinArticles AND Confidence >= MinConfidence.
+	Tradeable bool `json:"tradeable"`
+	// Reason is a human-readable suppression message when Tradeable=false.
+	// Empty when Tradeable=true.
+	Reason string `json:"reason"`
+	// Error is set when the fetch for this coin failed.
+	Error string `json:"error,omitempty"`
+}
+
+// scoreSignal maps a graded score to a 5-tier signal label.
+func scoreSignal(score float64) string {
+	switch {
+	case score >= 0.5:
+		return "very_bullish"
+	case score >= 0.15:
+		return "bullish"
+	case score > -0.15:
+		return "neutral"
+	case score > -0.5:
+		return "bearish"
+	default:
+		return "very_bearish"
+	}
+}
+
+// round rounds f to d decimal places.
+func round(f float64, d int) float64 {
+	p := 1.0
+	for i := 0; i < d; i++ {
+		p *= 10
+	}
+	return float64(int64(f*p+0.5)) / p
+}
+
+// maxFloat returns the larger of two float64 values.
+func maxFloat(a, b float64) float64 {
+	if a > b {
+		return a
+	}
+	return b
+}
+
+// minFloat returns the smaller of two float64 values.
+func minFloat(a, b float64) float64 {
+	if a < b {
+		return a
+	}
+	return b
+}
+
+// sortDesc sorts three float64 values in descending order.
+func sortDesc(a, b, c float64) [3]float64 {
+	if a < b {
+		a, b = b, a
+	}
+	if a < c {
+		a, c = c, a
+	}
+	if b < c {
+		b, c = c, b
+	}
+	return [3]float64{a, b, c}
+}
+
+// GetCoinSentimentOptions configures the behaviour of GetCoinSentiment.
+type GetCoinSentimentOptions struct {
+	// Coins is the map of trading pair → search keyword.
+	// Defaults to DefaultCoinPairs when nil.
+	Coins CoinPairs
+	// Limit is the maximum number of articles to fetch per coin (default 30).
+	Limit int
+	// MinArticles is the minimum number of articles required for Tradeable=true (default 5).
+	// A single bullish headline will NOT produce Tradeable=true.
+	MinArticles int
+	// MinConfidence is the minimum confidence score (0-100) for Tradeable=true (default 20).
+	MinConfidence float64
+	// Workers is the maximum number of concurrent goroutines (default 8).
+	// Set to 1 to disable concurrency.
+	Workers int
+}
+
+// GetCoinSentiment calculates per-coin sentiment with confidence weighting and
+// trade filtering. All coins are fetched concurrently (up to Workers goroutines
+// in parallel), so a 19-coin scan takes approximately ceil(19/workers)
+// round-trips of wall-clock latency rather than 19 serial requests.
+//
+// Confidence formula:
+//
+//	confidence = volumeWeight × marginWeight × 100
+//	  - volumeWeight: 0→1 as article count reaches MinArticles. A single
+//	    article can never exceed 1/MinArticles on this axis alone.
+//	  - marginWeight: normalised %-gap between dominant and second bucket.
+//	    A 50/49 split produces near-zero weight.
+//
+// Signal is derived from a graded score (-1 … +1) giving 5 tiers that match
+// the API's own vocabulary: very_bullish / bullish / neutral / bearish / very_bearish.
+//
+// Example:
+//
+//	report, err := client.GetCoinSentiment(&GetCoinSentimentOptions{
+//	    Coins: CoinPairs{"BTCUSD": "Bitcoin", "ETHUSD": "Ethereum"},
+//	})
+//	for pair, data := range report {
+//	    if data.Tradeable {
+//	        fmt.Printf("TRADE %s: %s conf=%.1f\n", pair, data.Signal, data.Confidence)
+//	    } else {
+//	        fmt.Printf("SKIP  %s: %s\n", pair, data.Reason)
+//	    }
+//	}
+func (c *Client) GetCoinSentiment(opts *GetCoinSentimentOptions) (map[string]*CoinSentimentResult, error) {
+	if opts == nil {
+		opts = &GetCoinSentimentOptions{}
+	}
+	coins := opts.Coins
+	if coins == nil {
+		coins = DefaultCoinPairs
+	}
+	limit := opts.Limit
+	if limit <= 0 {
+		limit = 30
+	}
+	minArticles := opts.MinArticles
+	if minArticles <= 0 {
+		minArticles = 5
+	}
+	minConfidence := opts.MinConfidence
+	if minConfidence <= 0 {
+		minConfidence = 20.0
+	}
+	workers := opts.Workers
+	if workers <= 0 {
+		workers = 8
+	}
+
+	type job struct {
+		pair    string
+		keyword string
+	}
+	type resultEntry struct {
+		pair   string
+		result *CoinSentimentResult
+	}
+
+	// Build ordered job list.
+	jobs := make([]job, 0, len(coins))
+	for pair, kw := range coins {
+		jobs = append(jobs, job{pair, kw})
+	}
+
+	// Score map for the 5 sentiment labels.
+	scoreMap := map[string]float64{
+		"very_bullish": +1.0,
+		"bullish":      +0.5,
+		"neutral":       0.0,
+		"bearish":      -0.5,
+		"very_bearish": -1.0,
+	}
+	bullish := map[string]bool{"very_bullish": true, "bullish": true}
+	bearish := map[string]bool{"very_bearish": true, "bearish": true}
+
+	sem := make(chan struct{}, workers)
+	resultCh := make(chan resultEntry, len(jobs))
+	var wg sync.WaitGroup
+
+	for _, j := range jobs {
+		wg.Add(1)
+		go func(j job) {
+			defer wg.Done()
+			sem <- struct{}{}
+			defer func() { <-sem }()
+
+			res := &CoinSentimentResult{Keyword: j.keyword}
+
+			data, err := c.Analyze(limit, j.keyword, "")
+			if err != nil {
+				res.Signal = "error"
+				res.Error = err.Error()
+				res.Reason = err.Error()
+				resultCh <- resultEntry{j.pair, res}
+				return
+			}
+
+			articles := data.Articles
+			total := len(articles)
+			res.Articles = total
+
+			if total == 0 {
+				res.Signal = "neutral"
+				res.Reason = "no articles found"
+				resultCh <- resultEntry{j.pair, res}
+				return
+			}
+
+			pos, neg := 0, 0
+			rawScore := 0.0
+			for _, a := range articles {
+				if bullish[a.Sentiment] {
+					pos++
+				} else if bearish[a.Sentiment] {
+					neg++
+				}
+				rawScore += scoreMap[a.Sentiment]
+			}
+			mid := total - pos - neg
+
+			f := float64(total)
+			res.Pos = round(float64(pos)*100/f, 1)
+			res.Mid = round(float64(mid)*100/f, 1)
+			res.Neg = round(float64(neg)*100/f, 1)
+			res.Score = round(rawScore/f, 4)
+			res.Signal = scoreSignal(res.Score)
+
+			volumeWeight := minFloat(f/float64(minArticles), 1.0)
+			sorted := sortDesc(res.Pos, res.Mid, res.Neg)
+			marginWeight := maxFloat(sorted[0]-sorted[1], 0) / 100.0
+			res.Confidence = round(volumeWeight*marginWeight*100, 1)
+
+			var reasons []string
+			if total < minArticles {
+				s := "s"
+				if total == 1 {
+					s = ""
+				}
+				reasons = append(reasons,
+					fmt.Sprintf("only %d article%s found (min %d)", total, s, minArticles))
+			}
+			if res.Confidence < minConfidence {
+				reasons = append(reasons,
+					fmt.Sprintf("confidence %.1f below threshold %.1f", res.Confidence, minConfidence))
+			}
+			res.Tradeable = len(reasons) == 0
+			res.Reason = strings.Join(reasons, "; ")
+
+			resultCh <- resultEntry{j.pair, res}
+		}(j)
+	}
+
+	wg.Wait()
+	close(resultCh)
+
+	result := make(map[string]*CoinSentimentResult, len(jobs))
+	for entry := range resultCh {
+		result[entry.pair] = entry.result
+	}
+	return result, nil
 }
