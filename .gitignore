@@ -54,3 +54,7 @@ enrichment-*.json
 *-cache.json
 .url-cache.json
 
+# Generated audit/report files
+*-audit-report.json
+*-audit.json
+
