@@ -1,11 +1,8 @@
 import type { Metadata } from 'next';
-import dynamic from 'next/dynamic';
 import { setRequestLocale } from 'next-intl/server';
-const LiquidationsFeed = dynamic(
-  () => import('@/components/LiquidationsFeed').then(m => ({ default: m.LiquidationsFeed }))
-);
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { LiquidationsFeed } from './LiquidationsFeedClient';
 
 export const metadata: Metadata = {
   title: 'Liquidations | Live Futures Liquidation Feed',

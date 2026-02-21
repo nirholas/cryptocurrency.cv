@@ -1,13 +1,10 @@
 import type { Metadata } from 'next';
-import dynamic from 'next/dynamic';
 import { setRequestLocale } from 'next-intl/server';
-const Screener = dynamic(
-  () => import('@/components/Screener').then(m => ({ default: m.Screener }))
-);
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { fetchCoinGecko } from '@/lib/coingecko';
 import { COINGECKO_BASE } from '@/lib/constants';
+import { Screener } from './ScreenerClient';
 
 interface Coin {
   id: string;

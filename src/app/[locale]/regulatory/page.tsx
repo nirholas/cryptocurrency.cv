@@ -12,11 +12,8 @@
  */
 
 import type { Metadata } from 'next';
-import dynamic from 'next/dynamic';
-const RegulatoryDashboard = dynamic(
-  () => import('@/components/RegulatoryDashboard').then(m => ({ default: m.RegulatoryDashboard }))
-);
 import Link from 'next/link';
+import { RegulatoryDashboard } from './RegulatoryDashboardClient';
 
 export const metadata: Metadata = {
   title: 'Regulatory Intelligence | Crypto Compliance Tracker',

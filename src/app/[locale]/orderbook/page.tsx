@@ -1,11 +1,8 @@
 import type { Metadata } from 'next';
-import dynamic from 'next/dynamic';
 import { setRequestLocale } from 'next-intl/server';
-const OrderBookDashboard = dynamic(
-  () => import('@/components/OrderBookDashboard').then(m => ({ default: m.OrderBookDashboard }))
-);
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { OrderBookDashboard } from './OrderBookDashboardClient';
 
 export const metadata: Metadata = {
   title: 'Order Book | Multi-Exchange Liquidity Aggregator',
