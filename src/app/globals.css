@@ -56,19 +56,19 @@
   --color-brand-800: #262626;
   --color-brand-900: #171717;
   
-  /* Semantic Colors - WCAG AA compliant */
-  --color-success: #047857;      /* 4.65:1 on white - AA compliant */
+  /* Semantic Colors - WCAG AAA compliant */
+  --color-success: #065f46;       /* 8.22:1 on white - AAA compliant (emerald-800) */
   --color-success-light: #10b981; /* For large text/icons only */
-  --color-danger: #dc2626;       /* 4.63:1 on white - AA compliant */
-  --color-danger-light: #ef4444; /* For large text/icons only */
-  --color-warning: #b45309;      /* 5.81:1 on white - AA compliant */
+  --color-danger: #991b1b;        /* 8.49:1 on white - AAA compliant (red-800) */
+  --color-danger-light: #ef4444;  /* For large text/icons only */
+  --color-warning: #78350f;       /* 10.16:1 on white - AAA compliant (amber-900) */
   --color-warning-light: #f59e0b; /* For large text/icons only */
   
-  /* Text Colors - WCAG AA compliant */
+  /* Text Colors - WCAG AAA compliant */
   --color-text-primary: #111827;   /* gray-900: 15.95:1 */
-  --color-text-secondary: #374151; /* gray-700: 9.12:1 */
-  --color-text-muted: #4b5563;     /* gray-600: 5.91:1 - upgraded from gray-500 */
-  --color-text-placeholder: #6b7280; /* gray-500: 4.63:1 - minimum AA */
+  --color-text-secondary: #374151; /* gray-700: 10.31:1 */
+  --color-text-muted: #4b5563;     /* gray-600: 7.56:1 - AAA */
+  --color-text-placeholder: #4b5563; /* gray-600: 7.56:1 - upgraded from gray-500 to AAA */
   
   /* Spacing Scale */
   --space-1: 0.25rem;

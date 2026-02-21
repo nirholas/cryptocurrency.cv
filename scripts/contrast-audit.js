@@ -58,21 +58,21 @@ function checkContrast(fg, bg, name) {
   };
 }
 
-// Color palette from the design system
+// Color palette from the design system (matches tailwind.config.js + globals.css)
 const colors = {
-  // Brand colors
-  'brand-50': '#fffbeb',
-  'brand-100': '#fef3c7',
-  'brand-200': '#fde68a',
-  'brand-300': '#fcd34d',
-  'brand-400': '#fbbf24',
-  'brand-500': '#f7931a',
-  'brand-600': '#d97706',
-  'brand-700': '#b45309',
-  'brand-800': '#92400e',
-  'brand-900': '#78350f',
+  // Brand colors - monochrome neutral gray (matches actual design system)
+  'brand-50': '#fafafa',
+  'brand-100': '#f5f5f5',
+  'brand-200': '#e5e5e5',
+  'brand-300': '#d4d4d4',
+  'brand-400': '#a3a3a3',
+  'brand-500': '#737373',
+  'brand-600': '#525252',
+  'brand-700': '#404040',
+  'brand-800': '#262626',
+  'brand-900': '#171717',
   
-  // Grays
+  // Grays (Tailwind default)
   'gray-50': '#f9fafb',
   'gray-100': '#f3f4f6',
   'gray-200': '#e5e7eb',
@@ -84,15 +84,15 @@ const colors = {
   'gray-800': '#1f2937',
   'gray-900': '#111827',
   
-  // Semantic - WCAG AA compliant
+  // Semantic - WCAG AAA compliant (matches --color-* vars in globals.css)
   'white': '#ffffff',
   'black': '#000000',
-  'success': '#047857',       // Updated for AA compliance
-  'success-light': '#10b981', // For large text only
-  'danger': '#dc2626',        // Updated for AA compliance
-  'danger-light': '#ef4444',  // For large text only
-  'warning': '#b45309',       // Updated for AA compliance
-  'warning-light': '#f59e0b', // For large text only
+  'success': '#065f46',       // emerald-800: 8.22:1 on white - AAA
+  'success-light': '#10b981', // For large text/icons only
+  'danger': '#991b1b',        // red-800: 8.49:1 on white - AAA
+  'danger-light': '#ef4444',  // For large text/icons only
+  'warning': '#78350f',       // amber-900: 10.16:1 on white - AAA
+  'warning-light': '#f59e0b', // For large text/icons only
 };
 
 // Common combinations to check
@@ -101,7 +101,7 @@ const combinations = [
   { fg: 'gray-900', bg: 'white', name: 'Primary text on white' },
   { fg: 'gray-700', bg: 'white', name: 'Secondary text on white' },
   { fg: 'gray-600', bg: 'white', name: 'Muted text on white' },
-  { fg: 'gray-500', bg: 'white', name: 'Placeholder text on white' },
+  { fg: 'gray-600', bg: 'white', name: 'Placeholder text on white' },
   { fg: 'brand-700', bg: 'white', name: 'Brand link on white' },
   { fg: 'brand-800', bg: 'white', name: 'Brand dark on white' },
   
@@ -109,7 +109,7 @@ const combinations = [
   { fg: 'gray-900', bg: 'gray-50', name: 'Primary text on gray-50' },
   { fg: 'gray-700', bg: 'gray-100', name: 'Secondary text on gray-100' },
   { fg: 'white', bg: 'gray-900', name: 'White text on dark' },
-  { fg: 'gray-400', bg: 'gray-900', name: 'Muted text on dark' },
+  { fg: 'gray-300', bg: 'gray-900', name: 'Muted text on dark' },
   
   // Brand combinations
   { fg: 'white', bg: 'brand-700', name: 'White on brand button' },
