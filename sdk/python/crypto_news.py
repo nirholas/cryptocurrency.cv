@@ -16,7 +16,17 @@ Usage:
 import urllib.request
 import urllib.parse
 import json
-from typing import Optional, List, Dict, Any
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from typing import Optional, List, Dict, Any, Tuple
+
+__all__ = [
+    "CryptoNews",
+    "COIN_PAIRS",
+    "get_crypto_news",
+    "search_crypto_news",
+    "get_trending_topics",
+    "get_coin_sentiment",
+]
 
 # Trading-terminal key → search keyword mapping.
 # Left side: exchange pair symbol; right side: keyword used for news search.
@@ -69,19 +79,21 @@ class CryptoNews:
     
     BASE_URL = "https://cryptocurrency.cv"
     
-    def __init__(self, base_url: Optional[str] = None):
+    def __init__(self, base_url: Optional[str] = None, timeout: float = 10.0):
         """
         Initialize the client.
-        
+
         Args:
-            base_url: Optional custom API URL (for self-hosted instances)
+            base_url: Optional custom API URL (for self-hosted instances).
+            timeout:  HTTP request timeout in seconds (default 10).
         """
         self.base_url = base_url or self.BASE_URL
-    
+        self.timeout = timeout
+
     def _request(self, endpoint: str) -> Dict[str, Any]:
-        """Make API request."""
+        """Make API request with timeout."""
         url = f"{self.base_url}{endpoint}"
-        with urllib.request.urlopen(url) as response:
+        with urllib.request.urlopen(url, timeout=self.timeout) as response:
             return json.loads(response.read().decode())
     
     def get_latest(self, limit: int = 10, source: Optional[str] = None) -> List[Dict]:
@@ -180,6 +192,7 @@ class CryptoNews:
         limit: int = 30,
         min_articles: int = 5,
         min_confidence: float = 20.0,
+        workers: int = 8,
     ) -> Dict[str, Dict]:
         """
         Calculate per-coin sentiment with confidence weighting and trade filtering.
@@ -200,6 +213,8 @@ class CryptoNews:
                             bullish headline will NOT produce ``tradeable=True``.
             min_confidence: Minimum confidence score (0–100) for ``tradeable``
                             to be set to ``True`` (default 20.0).
+            workers:        Max parallel HTTP requests (default 8).  Set to 1
+                            to disable concurrency.
 
         Returns:
             Dict keyed by trading pair symbol::
@@ -278,25 +293,22 @@ class CryptoNews:
         _BULLISH = {"very_bullish", "bullish"}
         _BEARISH = {"very_bearish", "bearish"}
 
-        results: Dict[str, Dict] = {}
-
-        for pair, keyword in coins.items():
+        def _fetch_one(pair: str, keyword: str) -> Tuple[str, Dict]:
+            """Fetch and score a single coin; always returns a result dict."""
             try:
                 data = self.analyze(limit=limit, topic=keyword)
                 articles = data.get("articles", [])
                 total = len(articles)
 
                 if total == 0:
-                    results[pair] = {
+                    return pair, {
                         "keyword": keyword, "articles": 0,
                         "pos": 0.0, "mid": 0.0, "neg": 0.0,
                         "score": 0.0, "signal": "neutral",
                         "confidence": 0.0, "tradeable": False,
                         "reason": "no articles found",
                     }
-                    continue
 
-                # --- Count buckets ---
                 pos = sum(1 for a in articles if a.get("sentiment") in _BULLISH)
                 neg = sum(1 for a in articles if a.get("sentiment") in _BEARISH)
                 mid = total - pos - neg
@@ -305,32 +317,22 @@ class CryptoNews:
                 mid_pct = mid * 100 / total
                 neg_pct = neg * 100 / total
 
-                # --- Weighted score (−1 … +1, module-level _SCORE_MAP) ---
                 raw_score = sum(
                     _SCORE_MAP.get(a.get("sentiment", "neutral"), 0.0)
                     for a in articles
                 )
                 score = round(raw_score / total, 4)
 
-                # --- 5-tier signal derived from score ---
-                # Aligns with the API's own vocabulary; more nuanced than 3-bucket.
                 signal = next(
                     label for threshold, label in _SCORE_SIGNAL_TIERS
                     if score >= threshold
                 )
 
-                # --- Confidence weighting ---
-                # 1. Volume weight: 0 → 1 as article count grows toward min_articles
                 volume_weight = min(total / max(min_articles, 1), 1.0)
-
-                # 2. Margin weight: gap between largest and second-largest pct bucket.
                 pct_vals = sorted([pos_pct, mid_pct, neg_pct], reverse=True)
                 margin_weight = max(pct_vals[0] - pct_vals[1], 0.0) / 100.0
-
                 confidence = round(volume_weight * margin_weight * 100, 1)
 
-                # --- Tradeable gate + reason ---
-                # Suppresses signals with thin evidence or a razor-thin margin.
                 reasons: List[str] = []
                 if total < min_articles:
                     reasons.append(
@@ -340,10 +342,8 @@ class CryptoNews:
                     reasons.append(
                         f"confidence {confidence:.1f} below threshold {min_confidence:.1f}"
                     )
-                tradeable = len(reasons) == 0
-                reason = "; ".join(reasons)
 
-                results[pair] = {
+                return pair, {
                     "keyword":    keyword,
                     "articles":   total,
                     "pos":        round(pos_pct, 1),
@@ -352,12 +352,12 @@ class CryptoNews:
                     "score":      score,
                     "signal":     signal,
                     "confidence": confidence,
-                    "tradeable":  tradeable,
-                    "reason":     reason,
+                    "tradeable":  len(reasons) == 0,
+                    "reason":     "; ".join(reasons),
                 }
 
             except Exception as e:
-                results[pair] = {
+                return pair, {
                     "keyword":  keyword,
                     "articles": 0,
                     "pos": 0.0, "mid": 0.0, "neg": 0.0,
@@ -366,7 +366,15 @@ class CryptoNews:
                     "reason": str(e),
                 }
 
-        return results
+        results: Dict[str, Dict] = {}
+        with ThreadPoolExecutor(max_workers=min(workers, len(coins))) as pool:
+            futures = {pool.submit(_fetch_one, pair, kw): pair for pair, kw in coins.items()}
+            for future in as_completed(futures):
+                pair, result = future.result()
+                results[pair] = result
+
+        # Return in original insertion order.
+        return {pair: results[pair] for pair in coins if pair in results}
 
 
 # Convenience functions
@@ -388,6 +396,7 @@ def get_coin_sentiment(
     limit: int = 30,
     min_articles: int = 5,
     min_confidence: float = 20.0,
+    workers: int = 8,
 ) -> Dict[str, Dict]:
     """
     Calculate per-coin sentiment with confidence weighting and trade filtering.
@@ -398,6 +407,7 @@ def get_coin_sentiment(
         limit:          Articles per coin (default 30).
         min_articles:   Minimum articles before a signal is tradeable (default 5).
         min_confidence: Minimum confidence score (0-100) for tradeable=True (default 20).
+        workers:        Max parallel HTTP requests (default 8).
 
     Returns:
         {"BTCUSD": {"pos": 64.0, "mid": 20.0, "neg": 16.0,
@@ -406,6 +416,7 @@ def get_coin_sentiment(
     return CryptoNews().get_coin_sentiment(
         coins=coins, limit=limit,
         min_articles=min_articles, min_confidence=min_confidence,
+        workers=workers,
     )
 
 
