@@ -53,3 +53,4 @@ This extension:
 ## License
 
 MIT
+
