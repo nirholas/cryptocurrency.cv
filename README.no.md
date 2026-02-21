@@ -149,3 +149,4 @@ Bidrag er velkomne! Se [CONTRIBUTING.md](CONTRIBUTING.md).
 ## 📄 Lisens
 
 MIT © [nirholas](https://github.com/nirholas)
+
