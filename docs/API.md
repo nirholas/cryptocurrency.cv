@@ -149,6 +149,110 @@ Complete documentation for the Free Crypto News API. All endpoints are **100% fr
 - [Response Format](#response-format)
 - [Error Handling](#error-handling)
 - [Rate Limits](#rate-limits)
+- [Bitcoin On-Chain APIs](#bitcoin-on-chain-apis)
+  - [GET /api/bitcoin/mempool/fees](#get-apibitcoinmempoolfees)
+  - [GET /api/bitcoin/mempool/blocks](#get-apibitcoinmempoolblocks)
+  - [GET /api/bitcoin/mempool/info](#get-apibitcoinmempoolinfo)
+  - [GET /api/bitcoin/blocks](#get-apibitcoinblocks)
+  - [GET /api/bitcoin/blocks/[hash]](#get-apibitcoinblockshash)
+  - [GET /api/bitcoin/block-height](#get-apibitcoinblock-height)
+  - [GET /api/bitcoin/difficulty](#get-apibitcoindifficulty)
+  - [GET /api/bitcoin/address/[address]](#get-apibitcoinaddressaddress)
+  - [GET /api/bitcoin/tx/[txid]](#get-apibitcointxtxid)
+  - [GET /api/bitcoin/network-stats](#get-apibitcoinnetwork-stats)
+  - [GET /api/bitcoin/stats](#get-apibitcoinstats)
+- [DeFi Yields & Protocol Data](#defi-yields--protocol-data)
+  - [GET /api/defi/yields](#get-apideyields)
+  - [GET /api/defi/yields/[poolId]/chart](#get-apidefiyeldspooidchart)
+  - [GET /api/defi/yields/median](#get-apidefiyeldsmedian)
+  - [GET /api/defi/yields/stablecoins](#get-apidefiyelsdstablecoins)
+  - [GET /api/defi/yields/stats](#get-apideyieldsstats)
+  - [GET /api/defi/yields/chains](#get-apidefiyieldschains)
+  - [GET /api/defi/yields/projects](#get-apidefiyieldsprojects)
+  - [GET /api/defi/yields/search](#get-apidefiyieldssearch)
+  - [GET /api/defi/stablecoins](#get-apidestablecoins)
+  - [GET /api/defi/dex-volumes](#get-apidedex-volumes)
+  - [GET /api/defi/bridges](#get-apidebridges)
+  - [GET /api/defi/summary](#get-apidesummary)
+- [NFT Market APIs](#nft-market-apis)
+  - [GET /api/nft/market](#get-apinftmarket)
+  - [GET /api/nft/collections/trending](#get-apinftcollectionstrending)
+  - [GET /api/nft/collections/search](#get-apinftcollectionssearch)
+  - [GET /api/nft/collections/[slug]](#get-apinftcollectionsslug)
+  - [GET /api/nft/collections/[slug]/stats](#get-apinftcollectionsslugstats)
+  - [GET /api/nft/collections/[slug]/activity](#get-apinftcollectionsslugactivity)
+  - [GET /api/nft/sales/recent](#get-apinftsalesrecent)
+  - [GET /api/nft](#get-apinft)
+- [L2 Scaling APIs](#l2-scaling-apis)
+  - [GET /api/l2](#get-apil2)
+  - [GET /api/l2/projects](#get-apil2projects)
+  - [GET /api/l2/projects/[projectId]](#get-apil2projectsprojectid)
+  - [GET /api/l2/activity](#get-apil2activity)
+  - [GET /api/l2/risk](#get-apil2risk)
+- [Glassnode On-Chain Metrics](#glassnode-on-chain-metrics)
+  - [GET /api/onchain/exchange-flows](#get-apionchainexchange-flows)
+  - [GET /api/onchain/metrics](#get-apionchainmetrics)
+  - [GET /api/onchain/miner-metrics](#get-apionchainminer-metrics)
+  - [GET /api/onchain/lth-metrics](#get-apionchainlth-metrics)
+  - [GET /api/onchain/whale-metrics](#get-apionchainwhale-metrics)
+  - [GET /api/onchain/funding-metrics](#get-apionchainyfunding-metrics)
+  - [GET /api/onchain/health](#get-apionchainhealth)
+- [LunarCrush Social Intelligence](#lunarcrush-social-intelligence)
+  - [GET /api/social/coins](#get-apisocialcoins)
+  - [GET /api/social/coins/[symbol]](#get-apisocialcoinssymbol)
+  - [GET /api/social/coins/[symbol]/feed](#get-apisocialcoinssymbolfeed)
+  - [GET /api/social/influencers](#get-apisocialinfluencers)
+  - [GET /api/social/topics/trending](#get-apisocialtopicstrending)
+  - [GET /api/social/sentiment/market](#get-apisocialsentimentmarket)
+- [The Graph Protocol APIs](#the-graph-protocol-apis)
+  - [GET /api/onchain/uniswap/pools](#get-apionchainuniswappools)
+  - [GET /api/onchain/uniswap/swaps](#get-apionchainuniswapswaps)
+  - [GET /api/onchain/aave/markets](#get-apionchainaavemarkets)
+  - [GET /api/onchain/aave/rates](#get-apionchainaaaverates)
+  - [GET /api/onchain/curve/pools](#get-apionchainurvepools)
+  - [GET /api/onchain/protocol/[protocol]](#get-apionchainprotocolprotocol)
+  - [GET /api/onchain/cross-protocol](#get-apionchainoross-protocol)
+- [Market Data Enhancements](#market-data-enhancements)
+  - [GET /api/market/gainers](#get-apimarketgainers)
+  - [GET /api/market/losers](#get-apimarketlosers)
+  - [GET /api/market/movers](#get-apimarketmovers)
+  - [GET /api/market/dominance](#get-apimarketdominance)
+  - [GET /api/market/heatmap](#get-apimarketheatmap)
+  - [GET /api/market/coins/[coinId]/developer](#get-apimarketcoinscoiniddeveloper)
+  - [GET /api/market/coins/[coinId]/community](#get-apimarketcoinscoinidcommunity)
+  - [GET /api/market/global-defi](#get-apimarketglobal-defi)
+- [CoinPaprika APIs](#coinpaprika-apis)
+  - [GET /api/coinpaprika](#get-apicoinpaprika)
+  - [GET /api/coinpaprika/coins](#get-apicoinpaprikacoins)
+  - [GET /api/coinpaprika/tickers](#get-apicoinpaprikatickers)
+  - [GET /api/coinpaprika/tickers/[coinId]](#get-apicoinpaprikatickerscoinid)
+  - [GET /api/coinpaprika/tickers/[coinId]/ohlcv](#get-apicoinpaprikatickerscoinidohlcv)
+  - [GET /api/coinpaprika/exchanges](#get-apicoinpaprikaexchanges)
+  - [GET /api/coinpaprika/search](#get-apicoinpaprikasearch)
+- [Derivatives Exchange-Specific APIs](#derivatives-exchange-specific-apis)
+  - [GET /api/derivatives/bybit/tickers](#get-apiderivativesbybitrickers)
+  - [GET /api/derivatives/bybit/funding/[symbol]](#get-apiderivativesbybifundingsymbol)
+  - [GET /api/derivatives/bybit/open-interest/[symbol]](#get-apiderivativesbybiopeninterestsymbol)
+  - [GET /api/derivatives/okx/tickers](#get-apiderivativesokxtickers)
+  - [GET /api/derivatives/okx/funding](#get-apiderivativesokxfunding)
+  - [GET /api/derivatives/okx/open-interest](#get-apiderivativesokxopen-interest)
+  - [GET /api/derivatives/dydx/markets](#get-apiderivativesdydxmarkets)
+  - [GET /api/derivatives/aggregated/funding](#get-apiderivativesaggregatedfunding)
+  - [GET /api/derivatives/aggregated/open-interest](#get-apiderivativesaggregatedopen-interest)
+  - [GET /api/derivatives/opportunities](#get-apiderivativesopportunities)
+  - [GET /api/funding/dashboard](#get-apifundingdashboard)
+  - [GET /api/funding/history/[symbol]](#get-apifundinghistorysymbol)
+- [Binance Exchange APIs](#binance-exchange-apis)
+  - [GET /api/binance](#get-apibinance)
+  - [GET /api/binance/prices](#get-apibinanceprices)
+  - [GET /api/binance/prices/[symbol]](#get-apibinancepricessymbol)
+  - [GET /api/binance/tickers](#get-apibinancetickers)
+  - [GET /api/binance/tickers/[symbol]](#get-apibinancetickerssymbol)
+- [Streaming & Real-Time Additions](#streaming--real-time-additions)
+  - [GET /api/prices/stream](#get-apipricesstream)
+  - [GET /api/market/stream](#get-apimarketstream)
+  - [GET /api/alerts/stream](#get-apialertsstream)
+  - [GET /api/news/stream](#get-apinewsstream)
 
 ---
 
@@ -5054,6 +5158,1568 @@ Create new subscription.
 ### POST /api/billing/cancel
 
 Cancel subscription.
+
+---
+
+---
+
+## Bitcoin On-Chain APIs
+
+Real-time Bitcoin network data sourced from [mempool.space](https://mempool.space). All endpoints use Edge runtime with short cache TTLs appropriate for block-level data.
+
+### GET /api/bitcoin/mempool/fees
+
+Recommended fee rates for Bitcoin transaction confirmation.
+
+**Response:**
+
+```json
+{
+  "fastestFee": 45,
+  "halfHourFee": 32,
+  "hourFee": 20,
+  "economyFee": 12,
+  "minimumFee": 5
+}
+```
+
+---
+
+### GET /api/bitcoin/mempool/blocks
+
+Projected next blocks in the mempool with fee range estimates.
+
+**Response:** Array of projected blocks with `blockSize`, `blockVSize`, `nTx`, `totalFees`, `medianFee`, `feeRange`.
+
+---
+
+### GET /api/bitcoin/mempool/info
+
+Current mempool size and fee distribution.
+
+**Response:**
+
+```json
+{
+  "loaded": true,
+  "size": 12450,
+  "bytes": 8234000,
+  "usage": 9200000,
+  "maxmempool": 300000000,
+  "mempoolminfee": 0.00001000,
+  "minrelaytxfee": 0.00001000
+}
+```
+
+---
+
+### GET /api/bitcoin/blocks
+
+Recently confirmed Bitcoin blocks.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `start_height` | integer | latest | Start from this block height |
+
+---
+
+### GET /api/bitcoin/blocks/[hash]
+
+Get a specific Bitcoin block by its hash.
+
+**Example:** `GET /api/bitcoin/blocks/000000000000000000024bead8df69990852c202db0e0097c1a12ea637d7e96d`
+
+**Response:** Full block data including `id`, `height`, `timestamp`, `tx_count`, `size`, `weight`, `merkle_root`, `previousblockhash`, `difficulty`, `nonce`.
+
+---
+
+### GET /api/bitcoin/block-height
+
+Current Bitcoin blockchain tip height.
+
+**Response:**
+
+```json
+{ "blockHeight": 878432 }
+```
+
+---
+
+### GET /api/bitcoin/difficulty
+
+Next difficulty adjustment estimate.
+
+**Response:**
+
+```json
+{
+  "progressPercent": 67.4,
+  "difficultyChange": 2.3,
+  "estimatedRetargetDate": 1708012800,
+  "remainingBlocks": 658,
+  "remainingTime": 384720,
+  "previousRetarget": -1.2,
+  "currentDifficulty": 72006146478567
+}
+```
+
+---
+
+### GET /api/bitcoin/address/[address]
+
+Bitcoin address balance and stats.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `include_txs` | boolean | false | Include transaction history |
+
+**Example:** `GET /api/bitcoin/address/bc1q...?include_txs=true`
+
+---
+
+### GET /api/bitcoin/tx/[txid]
+
+Get a specific Bitcoin transaction by TXID.
+
+**Example:** `GET /api/bitcoin/tx/4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b`
+
+---
+
+### GET /api/bitcoin/network-stats
+
+Full Bitcoin network statistics.
+
+**Response:**
+
+```json
+{
+  "difficulty": 72006146478567,
+  "hashrate": 612000000000000000000,
+  "blockCount": 878432,
+  "totalFees24h": 145000000,
+  "avgTxFee": 8500,
+  "mempoolSize": 12450
+}
+```
+
+---
+
+### GET /api/bitcoin/stats
+
+Bundled Bitcoin dashboard data (price + network + fees in one call).
+
+**Response:**
+
+```json
+{
+  "price": { "usd": 102500, "change24h": 2.3 },
+  "stats": { "hashrate": "612 EH/s", "difficulty": "72.0T", "blockHeight": 878432 },
+  "fees": { "fast": 45, "standard": 32, "slow": 20 }
+}
+```
+
+---
+
+## DeFi Yields & Protocol Data
+
+Yield farming and liquidity pool data from [DeFiLlama](https://defillama.com). Pool data covers 300+ protocols across all major chains.
+
+### GET /api/defi/yields
+
+Top yield farming opportunities.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `limit` | integer | 20 | Number of results (max 100) |
+| `chain` | string | - | Filter by chain (ethereum, arbitrum, etc.) |
+| `project` | string | - | Filter by protocol name |
+| `stable` | boolean | - | Only stablecoin pools |
+| `min_tvl` | number | - | Minimum TVL in USD |
+| `min_apy` | number | - | Minimum APY |
+| `max_apy` | number | - | Maximum APY (filter out unsustainable yields) |
+| `type` | string | top | `top` for filtered, `all` for full list |
+
+**Example:**
+
+```bash
+curl "https://cryptocurrency.cv/api/defi/yields?chain=ethereum&stable=true&min_tvl=1000000"
+```
+
+**Response:**
+
+```json
+{
+  "pools": [
+    {
+      "pool": "0x...",
+      "project": "aave-v3",
+      "symbol": "USDC",
+      "chain": "Ethereum",
+      "tvlUsd": 850000000,
+      "apy": 4.82,
+      "apyBase": 3.1,
+      "apyReward": 1.72,
+      "stablecoin": true
+    }
+  ],
+  "count": 20
+}
+```
+
+---
+
+### GET /api/defi/yields/[poolId]/chart
+
+7-day APY and TVL history for a specific pool.
+
+**Example:** `GET /api/defi/yields/747c1d2a-c668-4682-b9f9-296708a3dd90/chart`
+
+---
+
+### GET /api/defi/yields/median
+
+Median APY by chain — useful for market rate benchmarking.
+
+---
+
+### GET /api/defi/yields/stablecoins
+
+Stablecoin-only yield pools, sorted by APY.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `min_tvl` | number | 1000000 | Minimum pool TVL |
+
+---
+
+### GET /api/defi/yields/stats
+
+Yield statistics aggregated by chain (avg APY, median APY, total TVL, pool count).
+
+---
+
+### GET /api/defi/yields/chains
+
+All chains that have yield pools indexed by DeFiLlama.
+
+---
+
+### GET /api/defi/yields/projects
+
+All DeFi projects/protocols that have yield pools.
+
+---
+
+### GET /api/defi/yields/search
+
+Search yield pools by token symbol, project name, or chain.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `q` | string | Yes | Search query |
+
+---
+
+### GET /api/defi/stablecoins
+
+All tracked stablecoins with peg status, market cap, and chain distribution.
+
+---
+
+### GET /api/defi/dex-volumes
+
+24h and 7d trading volumes across all indexed DEXes.
+
+**Response:**
+
+```json
+{
+  "dexes": [
+    { "name": "Uniswap V3", "volume24h": 1200000000, "volume7d": 7800000000, "chains": ["Ethereum", "Arbitrum"] }
+  ],
+  "totalVolume24h": 8500000000
+}
+```
+
+---
+
+### GET /api/defi/bridges
+
+Cross-chain bridge volume and statistics.
+
+---
+
+### GET /api/defi/summary
+
+Full DeFi market summary in one call.
+
+**Response:**
+
+```json
+{
+  "totalTVL": 95000000000,
+  "change24h": 1.8,
+  "protocolCount": 3200,
+  "chainCount": 85,
+  "topProtocols": [...],
+  "topChains": [...],
+  "totalVolume24h": 12000000000
+}
+```
+
+---
+
+## NFT Market APIs
+
+NFT collection and market data. Aggregates data from OpenSea, Blur, and other marketplaces.
+
+### GET /api/nft
+
+NFT market summary plus top 5 trending collections.
+
+**Response:**
+
+```json
+{
+  "market": { "totalVolume24h": 45000000, "totalSales24h": 12400, "activeCollections": 8200 },
+  "trending": [...]
+}
+```
+
+---
+
+### GET /api/nft/market
+
+Full NFT market overview metrics.
+
+**Response:**
+
+```json
+{
+  "totalVolume24h": 45000000,
+  "totalVolume7d": 280000000,
+  "totalSales24h": 12400,
+  "averageSalePrice": 3629,
+  "activeCollections": 8200,
+  "totalWallets24h": 28000,
+  "topChains": [
+    { "chain": "ethereum", "volume24h": 30000000 },
+    { "chain": "solana", "volume24h": 8000000 }
+  ]
+}
+```
+
+---
+
+### GET /api/nft/collections/trending
+
+Trending NFT collections.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `limit` | integer | 20 | Number of results (max 100) |
+| `chain` | string | - | Filter by chain |
+| `category` | string | - | Filter by category (art, gaming, pfp, etc.) |
+| `sort_by` | string | volume | Sort field |
+
+---
+
+### GET /api/nft/collections/search
+
+Search NFT collections by name.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `q` | string | Yes | Collection name search |
+| `limit` | integer | No | Max results (default 20) |
+
+---
+
+### GET /api/nft/collections/[slug]
+
+Full collection details.
+
+**Example:** `GET /api/nft/collections/boredapeyachtclub`
+
+**Response:** `{ name, slug, description, imageUrl, bannerUrl, floorPrice, totalSupply, totalVolume, totalSales, numOwners, royaltyFee, chain, contractAddress, verified, socialLinks }`
+
+---
+
+### GET /api/nft/collections/[slug]/stats
+
+Real-time collection statistics.
+
+**Response:** `{ floorPrice, floorPriceChange24h, volume24h, volume7d, sales24h, averagePrice24h, marketCap, numOwners, totalSupply, listedCount, uniqueBuyers24h }`
+
+---
+
+### GET /api/nft/collections/[slug]/activity
+
+Recent collection events (sales, listings, transfers, bids).
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `limit` | integer | 50 | Number of events (max 200) |
+| `event_type` | string | all | `sale`, `listing`, `transfer`, `bid` |
+
+---
+
+### GET /api/nft/sales/recent
+
+Most recent NFT sales across all tracked collections.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `limit` | integer | 50 | Number of sales (max 200) |
+
+---
+
+## L2 Scaling APIs
+
+Layer 2 scaling solution data from [L2Beat](https://l2beat.com). Covers TVL, risk assessments, and activity metrics for Optimistic and ZK rollups.
+
+### GET /api/l2
+
+L2 ecosystem summary.
+
+**Response:**
+
+```json
+{
+  "totalTVL": 45000000000,
+  "projectCount": 52,
+  "topProjects": ["Arbitrum", "Optimism", "Base", "zkSync Era", "Linea"],
+  "tpsLeader": "Arbitrum",
+  "totalTPS": 85.4
+}
+```
+
+---
+
+### GET /api/l2/projects
+
+All tracked L2 projects with TVL and risk scores.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `limit` | integer | all | Max results |
+
+**Response:**
+
+```json
+{
+  "projects": [
+    {
+      "id": "arbitrum",
+      "name": "Arbitrum One",
+      "type": "Optimistic Rollup",
+      "tvl": 18000000000,
+      "riskScore": 2,
+      "technology": "Optimistic Rollup",
+      "stage": "Stage 1"
+    }
+  ]
+}
+```
+
+---
+
+### GET /api/l2/projects/[projectId]
+
+Detailed risk assessment for a specific L2.
+
+**Example:** `GET /api/l2/projects/arbitrum`
+
+**Response:** `{ id, name, type, tvl, risks: { stateValidation, dataAvailability, upgradeability, sequencerFailure, proposerFailure }, stage, contracts, permissions }`
+
+---
+
+### GET /api/l2/activity
+
+Transaction count and TPS per L2 over the recent period.
+
+**Response:**
+
+```json
+{
+  "projects": [
+    { "id": "arbitrum", "name": "Arbitrum One", "tps": 14.2, "txCount30d": 36720000 }
+  ],
+  "totalTPS": 85.4,
+  "totalTx30d": 220000000
+}
+```
+
+---
+
+### GET /api/l2/risk
+
+L2 projects sorted by risk score (safest first by default).
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `sort` | string | asc | `asc` = safest first, `desc` = riskiest first |
+| `limit` | integer | 20 | Number of results |
+
+---
+
+## Glassnode On-Chain Metrics
+
+On-chain analytics for BTC and ETH. Requires `GLASSNODE_API_KEY` environment variable — endpoints return `null` data gracefully when key is absent.
+
+### GET /api/onchain/exchange-flows
+
+Net BTC/ETH flows into and out of exchanges (whale accumulation signal).
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `asset` | string | BTC | `BTC` or `ETH` |
+
+**Response:**
+
+```json
+{
+  "asset": "BTC",
+  "netFlow24h": -4250,
+  "inflow24h": 18500,
+  "outflow24h": 22750,
+  "exchangeBalance": 2180000,
+  "trend": "accumulation"
+}
+```
+
+---
+
+### GET /api/onchain/metrics
+
+Core on-chain health metrics.
+
+**Parameters:** `asset` — `BTC` or `ETH` (default `BTC`)
+
+**Response:** `{ nvt, sopr, mvrv, activeAddresses24h, newAddresses24h, transactionCount24h, transferVolume24h }`
+
+---
+
+### GET /api/onchain/miner-metrics
+
+Bitcoin miner revenue, hashrate, and puell multiple.
+
+**Response:**
+
+```json
+{
+  "hashrate": 612000000000000000000,
+  "difficulty": 72006146478567,
+  "minerRevenue24h": 48500000,
+  "blockReward": 3.125,
+  "puellMultiple": 1.42,
+  "thermocapMultiple": 0.0000034
+}
+```
+
+---
+
+### GET /api/onchain/lth-metrics
+
+Long-term holder (LTH) supply and behavior metrics.
+
+**Parameters:** `asset` — `BTC` or `ETH` (default `BTC`)
+
+**Response:** `{ lthSupply, lthSupplyPercent, lthNetPositionChange, coinDaysDestroyed, hodlWaves }`
+
+---
+
+### GET /api/onchain/whale-metrics
+
+Whale wallet activity and concentration metrics.
+
+**Parameters:** `asset` — `BTC` or `ETH` (default `BTC`)
+
+**Response:** `{ addressesOver1k, addressesOver10k, whaleNetFlow24h, top10HoldersPercent, giniCoefficient }`
+
+---
+
+### GET /api/onchain/funding-metrics
+
+On-chain funding rate data (cross-referenced with derivatives).
+
+**Parameters:** `asset` — `BTC` or `ETH` (default `BTC`)
+
+---
+
+### GET /api/onchain/health
+
+Composite on-chain health score (0–100) with signal breakdown.
+
+**Parameters:** `asset` — `BTC` or `ETH` (default `BTC`)
+
+**Response:**
+
+```json
+{
+  "asset": "BTC",
+  "score": 72,
+  "signals": {
+    "mvrv": { "value": 2.1, "signal": "neutral" },
+    "sopr": { "value": 1.02, "signal": "bullish" },
+    "exchangeFlows": { "value": -4250, "signal": "bullish" },
+    "lthAccumulation": { "value": true, "signal": "bullish" }
+  },
+  "summary": "Moderately bullish on-chain conditions with steady accumulation"
+}
+```
+
+---
+
+## LunarCrush Social Intelligence
+
+Social media metrics for cryptocurrencies powered by [LunarCrush](https://lunarcrush.com). Requires `LUNARCRUSH_API_KEY` environment variable.
+
+### GET /api/social/coins
+
+Top coins ranked by social activity, or bulk social metrics.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `limit` | integer | 50 | Top coins to return (max 100) |
+| `symbols` | string | - | Comma-separated symbols for bulk fetch (e.g. `BTC,ETH,SOL`) |
+
+**Example:**
+
+```bash
+curl "https://cryptocurrency.cv/api/social/coins?symbols=BTC,ETH,SOL"
+```
+
+---
+
+### GET /api/social/coins/[symbol]
+
+Social metrics for a specific coin.
+
+**Example:** `GET /api/social/coins/BTC`
+
+**Response:**
+
+```json
+{
+  "symbol": "BTC",
+  "name": "Bitcoin",
+  "socialVolume24h": 245000,
+  "socialEngagement24h": 1850000,
+  "socialDominance": 32.4,
+  "twitterVolume24h": 128000,
+  "redditPosts24h": 3200,
+  "newsVolume24h": 450,
+  "sentimentScore": 68,
+  "galaxyScore": 74.2,
+  "altRank": 1,
+  "priceCorrelation": 0.72
+}
+```
+
+---
+
+### GET /api/social/coins/[symbol]/feed
+
+Recent social posts and news for a specific coin.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `limit` | integer | 50 | Posts to return (max 200) |
+
+---
+
+### GET /api/social/influencers
+
+Top crypto influencers ranked by engagement and reach.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `limit` | integer | 50 | Number of influencers (max 100) |
+
+**Response:**
+
+```json
+{
+  "influencers": [
+    {
+      "id": "12345",
+      "username": "CryptoPerson",
+      "platform": "twitter",
+      "followers": 850000,
+      "engagementRate": 4.2,
+      "influenceScore": 88.5,
+      "topCoins": ["BTC", "ETH"]
+    }
+  ]
+}
+```
+
+---
+
+### GET /api/social/topics/trending
+
+Trending topics across all crypto social media.
+
+**Response:**
+
+```json
+{
+  "topics": [
+    { "topic": "bitcoin etf", "volume24h": 48000, "change24h": 32.1, "sentiment": "bullish" },
+    { "topic": "ethereum merge", "volume24h": 22000, "change24h": -5.2, "sentiment": "neutral" }
+  ]
+}
+```
+
+---
+
+### GET /api/social/sentiment/market
+
+Overall crypto market social sentiment.
+
+**Response:**
+
+```json
+{
+  "overall": "bullish",
+  "bullish": 58,
+  "bearish": 22,
+  "neutral": 20,
+  "topBullish": ["BTC", "SOL", "AVAX"],
+  "topBearish": ["SHIB", "DOGE"],
+  "timestamp": 1708012800000
+}
+```
+
+---
+
+## The Graph Protocol APIs
+
+On-chain DeFi protocol data via [The Graph](https://thegraph.com) subgraphs. Covers Uniswap V3, Aave V3, and Curve Finance.
+
+### GET /api/onchain/uniswap/pools
+
+Top Uniswap V3 liquidity pools.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `limit` | integer | 20 | Number of pools (max 100) |
+| `order_by` | string | totalValueLockedUSD | Sort field |
+| `order_direction` | string | desc | `asc` or `desc` |
+| `min_liquidity` | number | - | Minimum liquidity in USD |
+
+**Response:**
+
+```json
+{
+  "pools": [
+    {
+      "id": "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+      "token0": "USDC",
+      "token1": "WETH",
+      "feeTier": 3000,
+      "tvl": 185000000,
+      "volume24h": 420000000,
+      "feesUSD24h": 1260000,
+      "txCount": 48200
+    }
+  ]
+}
+```
+
+---
+
+### GET /api/onchain/uniswap/swaps
+
+Recent Uniswap V3 swap transactions.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `limit` | integer | 20 | Number of swaps (max 100) |
+| `pool` | string | - | Filter by pool address |
+| `min_usd` | number | - | Minimum swap value in USD |
+
+---
+
+### GET /api/onchain/aave/markets
+
+Aave V3 lending markets overview.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `limit` | integer | 20 | Number of markets (max 100) |
+
+**Response:**
+
+```json
+{
+  "markets": [
+    {
+      "reserve": "USDC",
+      "totalSupply": 2800000000,
+      "totalBorrow": 1900000000,
+      "utilization": 67.8,
+      "supplyAPY": 4.12,
+      "borrowAPY": 5.89,
+      "liquidationThreshold": 0.85
+    }
+  ]
+}
+```
+
+---
+
+### GET /api/onchain/aave/rates
+
+Aave V3 lending and borrowing rates.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `reserve` | string | - | Filter by reserve (e.g. `USDC`, `WETH`) |
+
+---
+
+### GET /api/onchain/curve/pools
+
+Curve Finance liquidity pools.
+
+**Response:** Array of pool objects with `name`, `coins`, `tvl`, `volume24h`, `apy`, `baseApy`, `rewardApy`.
+
+---
+
+### GET /api/onchain/protocol/[protocol]
+
+Aggregated protocol data for a single DeFi protocol.
+
+**Supported protocols:** `uniswap`, `aave`, `curve`
+
+**Example:** `GET /api/onchain/protocol/uniswap`
+
+---
+
+### GET /api/onchain/cross-protocol
+
+Comparative analysis across Uniswap, Aave, and Curve simultaneously.
+
+**Response:**
+
+```json
+{
+  "protocols": {
+    "uniswap": { "tvl": 5800000000, "volume24h": 1200000000 },
+    "aave": { "tvl": 12500000000, "totalBorrows": 8200000000 },
+    "curve": { "tvl": 4200000000, "volume24h": 280000000 }
+  },
+  "insights": ["Aave has highest TVL at $12.5B", "Uniswap leads in 24h volume"],
+  "totalTVL": 22500000000
+}
+```
+
+---
+
+## Market Data Enhancements
+
+Additional market data endpoints extending the base `/api/market/coins` capabilities.
+
+### GET /api/market/gainers
+
+Top gaining coins by price change.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `limit` | integer | 10 | Number of results (max 50) |
+| `timeframe` | string | 24h | `1h`, `24h`, or `7d` |
+
+**Example:**
+
+```bash
+curl "https://cryptocurrency.cv/api/market/gainers?limit=10&timeframe=24h"
+```
+
+**Response:**
+
+```json
+{
+  "gainers": [
+    {
+      "id": "solana",
+      "symbol": "SOL",
+      "name": "Solana",
+      "current_price": 185.4,
+      "price_change_percentage_24h": 12.8,
+      "market_cap": 85000000000,
+      "image": "https://..."
+    }
+  ],
+  "timeframe": "24h",
+  "timestamp": 1708012800000
+}
+```
+
+---
+
+### GET /api/market/losers
+
+Top losing coins by price change.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `limit` | integer | 10 | Number of results (max 50) |
+| `timeframe` | string | 24h | `1h`, `24h`, or `7d` |
+
+---
+
+### GET /api/market/movers
+
+Gainers and losers combined in a single request.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `limit` | integer | 5 | Count of each (max 25 each) |
+| `timeframe` | string | 24h | `1h`, `24h`, or `7d` |
+
+**Response:**
+
+```json
+{
+  "gainers": [...],
+  "losers": [...],
+  "timeframe": "24h",
+  "timestamp": 1708012800000
+}
+```
+
+---
+
+### GET /api/market/dominance
+
+Bitcoin and altcoin market dominance breakdown.
+
+**Response:**
+
+```json
+{
+  "dominance": {
+    "btc": 52.4,
+    "eth": 17.1,
+    "usdt": 4.2,
+    "bnb": 3.1,
+    "sol": 2.8,
+    "others": 20.4
+  },
+  "totalMarketCap": 2850000000000,
+  "timestamp": 1708012800000
+}
+```
+
+---
+
+### GET /api/market/heatmap
+
+Top coins with sparkline data for treemap/heatmap visualization.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `limit` | integer | 100 | Number of coins (max 250) |
+
+**Response:** Array of `{ id, symbol, name, current_price, price_change_percentage_24h, market_cap, sparkline_in_7d: { price: number[] } }`
+
+---
+
+### GET /api/market/coins/[coinId]/developer
+
+GitHub and development activity stats for a coin.
+
+**Example:** `GET /api/market/coins/bitcoin/developer`
+
+**Response:**
+
+```json
+{
+  "forks": 36000,
+  "stars": 78000,
+  "subscribers": 4200,
+  "total_issues": 8400,
+  "closed_issues": 7900,
+  "pull_requests_merged": 12500,
+  "pull_request_contributors": 850,
+  "commit_count_4_weeks": 142,
+  "last_4_weeks_commit_activity_series": [12, 8, 18, 24, ...]
+}
+```
+
+---
+
+### GET /api/market/coins/[coinId]/community
+
+Community and social media stats for a coin.
+
+**Example:** `GET /api/market/coins/ethereum/community`
+
+**Response:**
+
+```json
+{
+  "twitter_followers": 3200000,
+  "reddit_average_posts_48h": 450,
+  "reddit_average_comments_48h": 8200,
+  "reddit_subscribers": 1850000,
+  "telegram_channel_user_count": 42000
+}
+```
+
+---
+
+### GET /api/market/global-defi
+
+Global DeFi market statistics.
+
+**Response:**
+
+```json
+{
+  "defi_market_cap": 142000000000,
+  "eth_market_cap": 420000000000,
+  "defi_to_eth_ratio": 0.338,
+  "trading_volume_24h": 12000000000,
+  "defi_dominance": 4.98,
+  "top_defi_coins": [...]
+}
+```
+
+---
+
+## CoinPaprika APIs
+
+Alternative market data source from [CoinPaprika](https://coinpaprika.com). Provides independent price feeds and market data as a CoinGecko alternative.
+
+### GET /api/coinpaprika
+
+Global crypto market stats from CoinPaprika.
+
+**Response:**
+
+```json
+{
+  "market_cap_usd": 2850000000000,
+  "volume_24h_usd": 125000000000,
+  "bitcoin_dominance_percentage": 52.4,
+  "cryptocurrencies_number": 26800,
+  "market_cap_ath_value": 3010000000000,
+  "volume_24h_ath_value": 185000000000
+}
+```
+
+---
+
+### GET /api/coinpaprika/coins
+
+Full list of all tracked coins with basic info (useful for autocomplete and coin lookups).
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `limit` | integer | all | Max results (up to 500) |
+
+**Response:** Array of `{ id, name, symbol, rank, is_active, is_new, type }`
+
+---
+
+### GET /api/coinpaprika/tickers
+
+Price tickers for all coins with market data.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `quotes` | string | USD | Quote currencies (e.g. `USD,BTC,ETH`) |
+
+---
+
+### GET /api/coinpaprika/tickers/[coinId]
+
+Ticker for a specific coin.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `quotes` | string | USD | Quote currencies |
+
+**Example:** `GET /api/coinpaprika/tickers/btc-bitcoin`
+
+**Response:**
+
+```json
+{
+  "id": "btc-bitcoin",
+  "name": "Bitcoin",
+  "symbol": "BTC",
+  "rank": 1,
+  "quotes": {
+    "USD": {
+      "price": 102500,
+      "volume_24h": 48000000000,
+      "percent_change_24h": 2.3,
+      "market_cap": 2030000000000,
+      "ath_price": 108000,
+      "percent_from_price_ath": -5.1
+    }
+  }
+}
+```
+
+---
+
+### GET /api/coinpaprika/tickers/[coinId]/ohlcv
+
+OHLCV candlestick data.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `quote` | string | usd | Quote currency |
+| `start` | ISO date | - | Start date for historical (triggers historical mode) |
+| `end` | ISO date | - | End date for historical |
+| `limit` | integer | 365 | Candles to return (max 5000) |
+
+When `start` is omitted, returns the latest 7-day OHLCV. When `start` is provided, returns historical OHLCV.
+
+---
+
+### GET /api/coinpaprika/exchanges
+
+All crypto exchanges tracked by CoinPaprika.
+
+**Response:** Array of `{ id, name, active, website, volume_24h_usd, rank, coins, markets, reportedVolume24h }`
+
+---
+
+### GET /api/coinpaprika/search
+
+Search across coins, exchanges, ICOs, people, and tags.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `q` | string | Yes | Search query |
+
+**Response:**
+
+```json
+{
+  "currencies": [...],
+  "icos": [...],
+  "exchanges": [...],
+  "people": [...],
+  "tags": [...]
+}
+```
+
+---
+
+## Derivatives Exchange-Specific APIs
+
+Exchange-specific derivatives data sourced directly from Bybit, OKX, and dYdX APIs.
+
+### GET /api/derivatives/bybit/tickers
+
+Bybit derivatives market tickers.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `category` | string | - | Market category filter |
+
+---
+
+### GET /api/derivatives/bybit/funding/[symbol]
+
+Historical funding rate data for a Bybit perpetual contract.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `limit` | integer | 200 | Number of periods |
+| `start_time` | integer | - | Start timestamp (ms) |
+| `end_time` | integer | - | End timestamp (ms) |
+
+**Example:** `GET /api/derivatives/bybit/funding/BTCUSDT?limit=100`
+
+---
+
+### GET /api/derivatives/bybit/open-interest/[symbol]
+
+Open interest history for a Bybit symbol.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `interval` | string | 1h | Time interval |
+
+---
+
+### GET /api/derivatives/okx/tickers
+
+OKX derivatives tickers.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `type` | string | SWAP | `SWAP` or `FUTURES` |
+
+---
+
+### GET /api/derivatives/okx/funding
+
+Current OKX funding rates for all perpetual swaps.
+
+---
+
+### GET /api/derivatives/okx/open-interest
+
+OKX open interest data.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `type` | string | SWAP | `SWAP` or `FUTURES` |
+
+---
+
+### GET /api/derivatives/dydx/markets
+
+All available dYdX perpetual markets.
+
+---
+
+### GET /api/derivatives/aggregated/funding
+
+Funding rates aggregated across Binance, Bybit, and OKX — the most comprehensive view.
+
+**Response:**
+
+```json
+{
+  "rates": [
+    {
+      "symbol": "BTC",
+      "binance": 0.01,
+      "bybit": 0.0098,
+      "okx": 0.0102,
+      "average": 0.01,
+      "nextFundingTime": 1708027200000
+    }
+  ],
+  "timestamp": 1708012800000
+}
+```
+
+---
+
+### GET /api/derivatives/aggregated/open-interest
+
+Open interest aggregated across all major exchanges.
+
+**Response:**
+
+```json
+{
+  "openInterest": [
+    {
+      "symbol": "BTC",
+      "totalOI": 28500000000,
+      "byExchange": {
+        "binance": 12000000000,
+        "bybit": 8500000000,
+        "okx": 5000000000,
+        "dydx": 3000000000
+      }
+    }
+  ]
+}
+```
+
+---
+
+### GET /api/derivatives/opportunities
+
+Top funding rate arbitrage opportunities across exchanges.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `limit` | integer | 10 | Number of opportunities (max 50) |
+
+**Response:**
+
+```json
+{
+  "opportunities": [
+    {
+      "symbol": "SOL",
+      "rateDiff": 0.085,
+      "exchanges": { "long": "bybit", "short": "okx" },
+      "longRate": -0.02,
+      "shortRate": 0.065,
+      "annualizedReturn": 31.2,
+      "recommendation": "Long SOL on Bybit, Short on OKX"
+    }
+  ]
+}
+```
+
+---
+
+### GET /api/funding/dashboard
+
+Full funding rate dashboard with alerts — ideal for derivatives traders.
+
+**Response:**
+
+```json
+{
+  "dashboard": {
+    "averageFunding": 0.012,
+    "extremeRates": [...],
+    "topPositive": [...],
+    "topNegative": [...]
+  },
+  "alerts": [
+    { "symbol": "BTC", "type": "high_funding", "rate": 0.085, "message": "BTC funding rate exceeds 0.08%" }
+  ]
+}
+```
+
+---
+
+### GET /api/funding/history/[symbol]
+
+Historical funding rates for a specific symbol.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `exchange` | string | - | Filter by exchange |
+| `limit` | integer | 100 | Number of entries (max 1000) |
+| `start` | ISO date | - | Start date |
+| `end` | ISO date | - | End date |
+
+**Example:** `GET /api/funding/history/BTC?exchange=binance&limit=500`
+
+---
+
+## Binance Exchange APIs
+
+Real-time market data directly from Binance REST API. All symbols use Binance format (e.g. `BTCUSDT`).
+
+### GET /api/binance
+
+Quick snapshot of BTC, ETH, and BNB 24hr stats.
+
+**Response:**
+
+```json
+{
+  "symbols": [
+    {
+      "symbol": "BTCUSDT",
+      "lastPrice": "102500.00",
+      "priceChange": "2345.00",
+      "priceChangePercent": "2.34",
+      "volume": "48234.123",
+      "quoteVolume": "4823412300.00",
+      "highPrice": "103200.00",
+      "lowPrice": "99800.00"
+    }
+  ],
+  "timestamp": 1708012800000
+}
+```
+
+---
+
+### GET /api/binance/prices
+
+Spot prices for all or selected Binance symbols.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `symbols` | string | all | Comma-separated symbols (e.g. `BTCUSDT,ETHUSDT`) |
+
+---
+
+### GET /api/binance/prices/[symbol]
+
+Spot price for a single Binance symbol.
+
+**Example:** `GET /api/binance/prices/BTCUSDT`
+
+**Response:**
+
+```json
+{ "symbol": "BTCUSDT", "price": "102500.00" }
+```
+
+---
+
+### GET /api/binance/tickers
+
+24hr price change statistics for all or selected symbols.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `symbols` | string | all | Comma-separated symbols |
+| `limit` | integer | all | Max results (up to 500) |
+
+---
+
+### GET /api/binance/tickers/[symbol]
+
+24hr stats for a single Binance symbol.
+
+**Example:** `GET /api/binance/tickers/ETHUSDT`
+
+**Response:** `{ symbol, priceChange, priceChangePercent, weightedAvgPrice, prevClosePrice, lastPrice, volume, quoteVolume, openTime, closeTime, highPrice, lowPrice, count }`
+
+---
+
+## Streaming & Real-Time Additions
+
+Server-Sent Events (SSE) endpoints for live data streams. Connect once and receive pushed updates. These endpoints do **not** use Edge runtime — use `Cache-Control: no-cache` on the client.
+
+**Client example (JavaScript):**
+
+```javascript
+const es = new EventSource('https://cryptocurrency.cv/api/prices/stream?symbols=BTC,ETH');
+es.onmessage = (event) => {
+  const data = JSON.parse(event.data);
+  console.log(data); // { symbol: 'BTC', price: 102500, change24h: 2.3, timestamp: 1708012800000 }
+};
+```
+
+### GET /api/prices/stream
+
+Live price updates pushed every 5 seconds.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `symbols` | string | BTC,ETH,BNB,SOL,XRP | Comma-separated coin symbols |
+
+**Stream format:**
+
+```
+data: {"symbol":"BTC","price":102500,"change24h":2.3,"timestamp":1708012800000}
+
+data: {"symbol":"ETH","price":3820,"change24h":1.8,"timestamp":1708012800000}
+```
+
+---
+
+### GET /api/market/stream
+
+Market overview updates pushed every 30 seconds.
+
+**Stream format:**
+
+```
+data: {"totalMarketCap":2850000000000,"btcDominance":52.4,"fearGreed":68,"topCoins":[...],"timestamp":1708012800000}
+```
+
+---
+
+### GET /api/alerts/stream
+
+Real-time alert notifications stream.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `session_id` | string | - | Filter alerts for a specific session |
+
+---
+
+### GET /api/news/stream
+
+Live news article stream, pushed as new articles are detected.
+
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `categories` | string | all | Comma-separated category filters |
+| `limit` | integer | 5 | Articles per poll |
+
+**Stream format:**
+
+```
+data: {"title":"Bitcoin Hits New High","source":"CoinDesk","pubDate":"2026-02-21T10:00:00Z","link":"https://..."}
+```
 
 ---
 

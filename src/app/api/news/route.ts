@@ -23,6 +23,7 @@ const VALID_CATEGORIES = [
 export async function GET(request: NextRequest) {
   const logger = createRequestLogger(request);
   const startTime = Date.now();
+  const isFreeTier = request.headers.get('x-free-tier') === '1';
   
   logger.info('Fetching news');
   
@@ -47,28 +48,41 @@ export async function GET(request: NextRequest) {
   try {
     const data = await getLatestNews(limit, source, { from, to, page, perPage: per_page, category });
     
-    // Translate articles if language is not English
+    // Free-tier: cap at 3 articles, strip full content, add upgrade notice
     let articles = data.articles;
+    if (isFreeTier) {
+      articles = articles.slice(0, 3).map(a => ({
+        ...a,
+        content: undefined,
+        summary: (a as { summary?: string }).summary?.slice(0, 120)
+          ? (a as { summary?: string }).summary!.slice(0, 120) + '…'
+          : undefined,
+      }));
+    }
+
+    // Translate articles if language is not English
     let translatedLang = 'en';
 
     // Attach AI enrichment (non-blocking — skip silently if KV unavailable)
-    try {
-      const enrichmentMap = await getBulkEnrichment(articles.map(a => a.link));
-      articles = articles.map(a => {
-        const ai = enrichmentMap.get(a.link);
-        return ai ? { ...a, ai } : a;
-      });
-
-      // Optional sort by AI impact score (highest first)
-      if (sort === 'impact') {
-        articles = [...articles].sort((a, b) => {
-          const sa = (a as { ai?: { impactScore?: number } }).ai?.impactScore ?? -1;
-          const sb = (b as { ai?: { impactScore?: number } }).ai?.impactScore ?? -1;
-          return sb - sa;
+    if (!isFreeTier) {
+      try {
+        const enrichmentMap = await getBulkEnrichment(articles.map(a => a.link));
+        articles = articles.map(a => {
+          const ai = enrichmentMap.get(a.link);
+          return ai ? { ...a, ai } : a;
         });
+
+        // Optional sort by AI impact score (highest first)
+        if (sort === 'impact') {
+          articles = [...articles].sort((a, b) => {
+            const sa = (a as { ai?: { impactScore?: number } }).ai?.impactScore ?? -1;
+            const sb = (b as { ai?: { impactScore?: number } }).ai?.impactScore ?? -1;
+            return sb - sa;
+          });
+        }
+      } catch {
+        // Enrichment is best-effort — continue without it
       }
-    } catch {
-      // Enrichment is best-effort — continue without it
     }
     
     if (lang !== 'en' && articles.length > 0) {
@@ -87,6 +101,7 @@ export async function GET(request: NextRequest) {
       lang: translatedLang,
       availableLanguages: Object.keys(SUPPORTED_LANGUAGES),
       availableCategories: VALID_CATEGORIES,
+      ...(isFreeTier ? { free_tier: true, total: articles.length, upgrade: 'https://cryptocurrency.cv/premium' } : {}),
     }, startTime);
     
     return jsonResponse(responseData, {

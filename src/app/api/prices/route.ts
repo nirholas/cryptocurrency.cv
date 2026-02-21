@@ -10,6 +10,7 @@ import { COINGECKO_BASE } from '@/lib/constants';
 export const revalidate = 120;
 
 export async function GET(request: NextRequest) {
+  const isFreeTier = request.headers.get('x-free-tier') === '1';
   const coins = request.nextUrl.searchParams.get('coins');
 
   if (!coins) {
@@ -23,7 +24,7 @@ export async function GET(request: NextRequest) {
     .split(',')
     .map(c => c.trim().toLowerCase())
     .filter(Boolean)
-    .slice(0, 20); // Limit to 20 coins max
+    .slice(0, isFreeTier ? 3 : 20); // Free tier capped at 3 coins
 
   if (coinIds.length === 0) {
     return NextResponse.json({});
@@ -40,7 +41,9 @@ export async function GET(request: NextRequest) {
     }
 
     const data = await res.json();
-    return NextResponse.json(data, {
+    return NextResponse.json(
+      isFreeTier ? { ...data, free_tier: true, upgrade: 'https://cryptocurrency.cv/premium' } : data,
+      {
       headers: {
         'Cache-Control': 'public, s-maxage=120, stale-while-revalidate=300',
       },
