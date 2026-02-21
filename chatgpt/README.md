@@ -67,3 +67,4 @@ Always format the news nicely with:
 **Historical:**
 - "What crypto news happened last week?"
 - "Find the original source of the SEC news"
+
