@@ -39,9 +39,14 @@ function formatSmallPrice(val: number | undefined | null): string {
 
 function ChangeCell({ value }: { value: number | undefined | null }) {
   if (value == null) return <span className="text-white/30">—</span>;
+  const positive = value >= 0;
   return (
-    <span className="text-white/70">
-      {formatPercent(value)}
+    <span
+      className={`inline-flex items-center gap-0.5 font-medium tabular-nums ${
+        positive ? 'text-emerald-400' : 'text-red-400'
+      }`}
+    >
+      {positive ? '▲' : '▼'} {Math.abs(value).toFixed(2)}%
     </span>
   );
 }
@@ -115,15 +120,15 @@ export default function CoinRow({
       // ── Pinned ──────────────────────────────────────────────────────────
       case 'rank':
         return (
-          <td key="rank" className="p-4 text-white/50 text-sm">
-            {coin.market_cap_rank}
+          <td key="rank" className="p-4 pl-3 text-white/40 text-sm tabular-nums w-12">
+            {coin.market_cap_rank ?? '—'}
           </td>
         );
 
       case 'coin':
         return (
           <td key="coin" className="p-4">
-            <Link href={`/coin/${coin.id}`} className="flex items-center gap-3">
+            <Link href={`/coin/${coin.id}`} className="flex items-center gap-3 group">
               <div className="relative w-8 h-8 flex-shrink-0">
                 {coin.image && (
                   <Image
@@ -135,11 +140,11 @@ export default function CoinRow({
                   />
                 )}
               </div>
-              <div>
-                <span className="font-medium text-white group-hover:text-white/80 transition-colors">
+              <div className="min-w-0">
+                <span className="font-semibold text-white group-hover:text-blue-400 transition-colors truncate block">
                   {coin.name}
                 </span>
-                <span className="text-white/40 text-sm ml-2">
+                <span className="text-white/30 text-xs uppercase tracking-wide">
                   {coin.symbol.toUpperCase()}
                 </span>
               </div>
@@ -150,7 +155,7 @@ export default function CoinRow({
       // ── Price ────────────────────────────────────────────────────────────
       case 'price':
         return (
-          <td key="price" className="p-4 text-right font-medium text-white whitespace-nowrap">
+          <td key="price" className="p-4 text-right font-semibold text-white whitespace-nowrap tabular-nums">
             {formatPrice(coin.current_price)}
           </td>
         );
@@ -292,14 +297,14 @@ export default function CoinRow({
       // ── Market Cap ────────────────────────────────────────────────────────
       case 'market_cap':
         return (
-          <td key="market_cap" className="p-4 text-right text-white/60 whitespace-nowrap">
+          <td key="market_cap" className="p-4 text-right text-white/70 whitespace-nowrap tabular-nums">
             ${formatNumber(coin.market_cap)}
           </td>
         );
 
       case 'fdv':
         return (
-          <td key="fdv" className="p-4 text-right text-white/60 whitespace-nowrap">
+          <td key="fdv" className="p-4 text-right text-white/70 whitespace-nowrap tabular-nums">
             {coin.fully_diluted_valuation
               ? `$${formatNumber(coin.fully_diluted_valuation)}`
               : '—'}
@@ -309,14 +314,14 @@ export default function CoinRow({
       // ── Volume ────────────────────────────────────────────────────────────
       case 'volume_24h':
         return (
-          <td key="volume_24h" className="p-4 text-right text-white/60 whitespace-nowrap">
+          <td key="volume_24h" className="p-4 text-right text-white/70 whitespace-nowrap tabular-nums">
             ${formatNumber(coin.total_volume)}
           </td>
         );
 
       case 'volume_market_cap':
         return (
-          <td key="volume_market_cap" className="p-4 text-right text-white/60 whitespace-nowrap">
+          <td key="volume_market_cap" className="p-4 text-right text-white/50 whitespace-nowrap tabular-nums">
             {volumeMcap != null ? (volumeMcap * 100).toFixed(2) + '%' : '—'}
           </td>
         );
@@ -393,7 +398,7 @@ export default function CoinRow({
   }
 
   return (
-    <tr className="border-b border-white/5 hover:bg-white/5 transition-colors group cursor-pointer">
+    <tr className="border-b border-white/[0.06] hover:bg-white/[0.03] transition-colors group cursor-default">
       {activeColumns.map((colId) => renderCell(colId))}
 
       {/* Watchlist star */}

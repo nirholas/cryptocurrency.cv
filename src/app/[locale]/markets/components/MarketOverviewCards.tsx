@@ -24,16 +24,17 @@ function fmtBig(n: number): string {
   return `$${n.toLocaleString()}`;
 }
 
-function Sparkline({ data }: { data: number[] }) {
+function Sparkline({ data, positive = true }: { data: number[]; positive?: boolean }) {
   if (!data || data.length < 2) return null;
   const min = Math.min(...data);
   const max = Math.max(...data);
   const range = max - min || 1;
   const W = 120; const H = 48;
   const pts = data.map((v, i) => `${(i / (data.length - 1)) * W},${H - ((v - min) / range) * H}`).join(' ');
+  const stroke = positive ? '#34d399' : '#f87171';
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className="w-28 h-12 overflow-visible" preserveAspectRatio="none">
-      <polyline points={pts} fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.4" />
+      <polyline points={pts} fill="none" stroke={stroke} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.7" />
     </svg>
   );
 }
@@ -84,7 +85,7 @@ export default function MarketOverviewCards({ global, fearGreed, trending, coins
                 </div>
               )}
             </div>
-            {mounted && spark.length > 2 && <Sparkline data={spark} />}
+            {mounted && spark.length > 2 && <Sparkline data={spark} positive={mcapChange >= 0} />}
           </div>
         </div>
 
@@ -131,7 +132,7 @@ export default function MarketOverviewCards({ global, fearGreed, trending, coins
               </div>
               <div className="text-right shrink-0 ml-2">
                 {coin.price != null && <p className="text-sm font-semibold text-white">{formatPrice(coin.price)}</p>}
-                {coin.change != null && <p className="text-xs font-medium text-white/60">{(coin.change ?? 0) >= 0 ? '▲' : '▼'} {Math.abs(coin.change ?? 0).toFixed(2)}%</p>}
+                {coin.change != null && <p className={`text-xs font-semibold ${(coin.change ?? 0) >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>{(coin.change ?? 0) >= 0 ? '▲' : '▼'} {Math.abs(coin.change ?? 0).toFixed(2)}%</p>}
               </div>
             </Link>
           ))}
@@ -175,7 +176,7 @@ export default function MarketOverviewCards({ global, fearGreed, trending, coins
                 </div>
                 <div className="text-right shrink-0 ml-2">
                   <p className="text-sm font-semibold text-white">{formatPrice(coin.current_price)}</p>
-                  <p className="text-xs font-semibold text-white/60">▲ {(coin.price_change_percentage_24h ?? 0).toFixed(2)}%</p>
+                  <p className={`text-xs font-semibold ${(coin.price_change_percentage_24h ?? 0) >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>▲ {(coin.price_change_percentage_24h ?? 0).toFixed(2)}%</p>
                 </div>
               </Link>
             ))

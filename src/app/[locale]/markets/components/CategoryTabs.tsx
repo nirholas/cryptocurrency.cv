@@ -11,15 +11,15 @@ import { useCallback, useRef, useEffect, useState } from 'react';
 const CATEGORIES = [
   { id: 'all', name: 'All', icon: '' },
   { id: 'defi', name: 'DeFi', icon: '🏦' },
-  { id: 'layer-1', name: 'Layer 1', icon: '' },
-  { id: 'layer-2', name: 'Layer 2', icon: '' },
+  { id: 'layer-1', name: 'Layer 1', icon: '⛓️' },
+  { id: 'layer-2', name: 'Layer 2', icon: '📦' },
   { id: 'ai', name: 'AI', icon: '🤖' },
-  { id: 'nft', name: 'NFT', icon: '' },
+  { id: 'nft', name: 'NFT', icon: '🖼️' },
   { id: 'gaming', name: 'Gaming', icon: '🎮' },
   { id: 'meme', name: 'Memes', icon: '🐕' },
-  { id: 'exchange', name: 'Exchange', icon: '' },
-  { id: 'stablecoin', name: 'Stablecoins', icon: '' },
-  { id: 'privacy', name: 'Privacy', icon: '' },
+  { id: 'exchange', name: 'Exchange', icon: '💱' },
+  { id: 'stablecoin', name: 'Stablecoins', icon: '💵' },
+  { id: 'privacy', name: 'Privacy', icon: '🔒' },
 ];
 
 interface CategoryTabsProps {

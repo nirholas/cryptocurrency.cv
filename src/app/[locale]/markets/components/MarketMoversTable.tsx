@@ -1,5 +1,6 @@
 /**
- * MarketMoversTable — shared table for gainers, losers, and new listings pages.
+ * MarketMoversTable — pure black & white
+ * Shared table for gainers, losers, and new listings pages.
  */
 
 import Link from 'next/link';
@@ -20,33 +21,33 @@ interface Coin {
 
 interface MarketMoversTableProps {
   coins: Coin[];
-  /** CSS class for the 24h change column (e.g. text-green-600 or text-red-600) */
+  /** CSS class for the 24h change column — ignored, always white */
   changeColorClass?: string;
 }
 
-export default function MarketMoversTable({ coins, changeColorClass }: MarketMoversTableProps) {
+export default function MarketMoversTable({ coins }: MarketMoversTableProps) {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+    <div className="bg-black rounded-xl border border-white/10 overflow-hidden">
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
-            <tr className="bg-gray-50 dark:bg-gray-900/50 border-b border-gray-200 dark:border-gray-700">
-              <th className="text-left text-gray-500 dark:text-gray-400 text-sm font-medium p-4">#</th>
-              <th className="text-left text-gray-500 dark:text-gray-400 text-sm font-medium p-4">Coin</th>
-              <th className="text-right text-gray-500 dark:text-gray-400 text-sm font-medium p-4">Price</th>
-              <th className="text-right text-gray-500 dark:text-gray-400 text-sm font-medium p-4">24h Change</th>
-              <th className="text-right text-gray-500 dark:text-gray-400 text-sm font-medium p-4 hidden md:table-cell">7d Change</th>
-              <th className="text-right text-gray-500 dark:text-gray-400 text-sm font-medium p-4 hidden lg:table-cell">Market Cap</th>
-              <th className="text-right text-gray-500 dark:text-gray-400 text-sm font-medium p-4 hidden lg:table-cell">Volume (24h)</th>
+            <tr className="bg-white/[0.02] border-b border-white/10">
+              <th className="text-left text-white/40 text-sm font-medium p-4">#</th>
+              <th className="text-left text-white/40 text-sm font-medium p-4">Coin</th>
+              <th className="text-right text-white/40 text-sm font-medium p-4">Price</th>
+              <th className="text-right text-white/40 text-sm font-medium p-4">24h Change</th>
+              <th className="text-right text-white/40 text-sm font-medium p-4 hidden md:table-cell">7d Change</th>
+              <th className="text-right text-white/40 text-sm font-medium p-4 hidden lg:table-cell">Market Cap</th>
+              <th className="text-right text-white/40 text-sm font-medium p-4 hidden lg:table-cell">Volume (24h)</th>
             </tr>
           </thead>
           <tbody>
             {coins.map((coin, index) => (
               <tr
                 key={coin.id}
-                className="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
+                className="border-b border-white/5 hover:bg-white/5 transition-colors"
               >
-                <td className="p-4 text-gray-500 dark:text-gray-400">{index + 1}</td>
+                <td className="p-4 text-white/40">{index + 1}</td>
                 <td className="p-4">
                   <Link href={`/coin/${coin.id}`} className="flex items-center gap-3">
                     <div className="relative w-8 h-8">
@@ -61,32 +62,28 @@ export default function MarketMoversTable({ coins, changeColorClass }: MarketMov
                       )}
                     </div>
                     <div>
-                      <span className="font-medium text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">
+                      <span className="font-medium text-white">
                         {coin.name}
                       </span>
-                      <span className="text-gray-500 dark:text-gray-400 text-sm ml-2">
+                      <span className="text-white/40 text-sm ml-2">
                         {coin.symbol.toUpperCase()}
                       </span>
                     </div>
                   </Link>
                 </td>
-                <td className="p-4 text-right font-medium text-gray-900 dark:text-white">
+                <td className="p-4 text-right font-medium text-white">
                   {formatPrice(coin.current_price)}
                 </td>
-                <td className={`p-4 text-right font-semibold ${changeColorClass ?? ((coin.price_change_percentage_24h ?? 0) >= 0 ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400')}`}>
+                <td className="p-4 text-right font-semibold text-white/70">
                   {formatPercent(coin.price_change_percentage_24h)}
                 </td>
-                <td className={`p-4 text-right hidden md:table-cell ${
-                  (coin.price_change_percentage_7d_in_currency ?? 0) >= 0
-                    ? 'text-green-600 dark:text-green-400'
-                    : 'text-red-600 dark:text-red-400'
-                }`}>
+                <td className="p-4 text-right hidden md:table-cell text-white/70">
                   {formatPercent(coin.price_change_percentage_7d_in_currency)}
                 </td>
-                <td className="p-4 text-right text-gray-700 dark:text-gray-300 hidden lg:table-cell">
+                <td className="p-4 text-right text-white/60 hidden lg:table-cell">
                   ${formatNumber(coin.market_cap)}
                 </td>
-                <td className="p-4 text-right text-gray-700 dark:text-gray-300 hidden lg:table-cell">
+                <td className="p-4 text-right text-white/60 hidden lg:table-cell">
                   ${formatNumber(coin.total_volume)}
                 </td>
               </tr>
