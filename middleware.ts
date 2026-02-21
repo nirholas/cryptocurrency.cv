@@ -3,17 +3,19 @@
  *
  * Handles (in order of evaluation):
  *  1. Internationalisation — locale detection and routing for page requests
- *  2. SperaxOS trusted origins — unlimited access, priority headers
+ *  2. Trusted-origin check — Sperax domains bypass x402 and rate limiting
  *  3. Bot detection — blocks known scrapers/crawlers (curl, wget, python-requests, …)
  *  4. Admin route authentication — bearer-token guard
  *  5. Request size validation — rejects oversized bodies
  *  6. Rate limiting — 60 req/hour per IP for free-tier API routes
- *  7. x402 payment gate — /api/premium/* requires USDC micropayment (Base)
+ *  7. x402 payment gate — ALL /api/* routes require USDC micropayment (Base)
+ *     Exceptions: health/cron/webhooks/admin (always free), /api/news and /api/prices
+ *     (rate-limited free tier, returns degraded / limited results)
  *  8. Security + observability headers on all responses
  *
- * SperaxOS trusted origins (UNLIMITED — no rate limit, no bot check):
- *   https://sperax.live  |  https://speraxos.vercel.app
- *   https://beta.sperax.chat  |  https://sperax.chat
+ * Trusted origins (UNLIMITED — no rate limit, no x402):
+ *   Exact:     https://sperax.live  |  https://speraxos.vercel.app
+ *   Wildcard:  *.sperax.chat  |  *.sperax.io  (and their apex domains)
  *
  * @see https://x402.org
  */
@@ -40,8 +42,8 @@ const RECEIVE_ADDRESS =
 
 const NETWORK = (process.env.X402_NETWORK ?? 'eip155:8453') as never;
 
-const premiumRoutes: Record<string, RouteConfig> = {
-  '/api/premium/:path*': {
+const apiRoutes: Record<string, RouteConfig> = {
+  '/api/:path*': {
     accepts: [
       {
         scheme: 'exact',
@@ -50,12 +52,12 @@ const premiumRoutes: Record<string, RouteConfig> = {
         network: NETWORK,
       },
     ],
-    description: 'Free Crypto News Premium API — pay per request in USDC on Base',
+    description: 'Free Crypto News API — pay per request in USDC on Base',
   },
 };
 
 const x402 = paymentProxyFromConfig(
-  premiumRoutes,
+  apiRoutes,
   undefined,
   undefined,
   undefined,
@@ -67,25 +69,37 @@ const x402 = paymentProxyFromConfig(
 // SPERAXOS — trusted origins get UNLIMITED access and priority routing
 // =============================================================================
 
-const SPERAXOS_ORIGINS = new Set([
+// Exact-match origins that bypass x402 and rate limiting entirely
+const TRUSTED_EXACT_ORIGINS = new Set([
   'https://sperax.live',
   'https://www.sperax.live',
   'https://speraxos.vercel.app',
-  'https://beta.sperax.chat',
-  'https://sperax.chat',
-  'https://www.sperax.chat',
   // Additional x402-exempt origins from env: X402_BYPASS_ORIGINS=https://a.com,https://b.com
   ...(process.env.X402_BYPASS_ORIGINS?.split(',').map((s) => s.trim()).filter(Boolean) ?? []),
 ]);
 
+// Apex domains whose subdomains are ALSO trusted: *.sperax.chat and *.sperax.io
+const TRUSTED_WILDCARD_DOMAINS = ['sperax.chat', 'sperax.io'];
+
+function isTrustedOrigin(origin: string): boolean {
+  if (!origin) return false;
+  if (TRUSTED_EXACT_ORIGINS.has(origin)) return true;
+  try {
+    const host = new URL(origin).hostname;
+    return TRUSTED_WILDCARD_DOMAINS.some((d) => host === d || host.endsWith('.' + d));
+  } catch {
+    return false;
+  }
+}
+
 function isSperaxOSRequest(request: NextRequest): boolean {
   const origin = request.headers.get('origin') ?? '';
-  if (origin && SPERAXOS_ORIGINS.has(origin)) return true;
+  if (origin && isTrustedOrigin(origin)) return true;
 
   const referer = request.headers.get('referer') ?? '';
   if (referer) {
     try {
-      if (SPERAXOS_ORIGINS.has(new URL(referer).origin)) return true;
+      if (isTrustedOrigin(new URL(referer).origin)) return true;
     } catch {
       // malformed referer — ignore
     }
@@ -103,28 +117,11 @@ function isSperaxOSRequest(request: NextRequest): boolean {
 // API CONFIGURATION
 // =============================================================================
 
+// Routes that are free but rate-limited and return degraded / limited results.
+// Everything else (not exempt, not free-tier, not a trusted origin) requires x402.
 const FREE_TIER_PATTERNS = [
-  /^\/api\/news/,
-  /^\/api\/breaking/,
-  /^\/api\/sources/,
-  /^\/api\/market\/coins$/,
-  /^\/api\/market\/search/,
-  /^\/api\/market\/coin/,
-  /^\/api\/market\/global/,
-  /^\/api\/market\/trending/,
-  /^\/api\/market\/historical/,
-  /^\/api\/trending/,
-  /^\/api\/fear-greed/,
-  /^\/api\/bitcoin/,
-  /^\/api\/defi$/,
-  /^\/api\/atom/,
-  /^\/api\/rss/,
-  /^\/api\/opml/,
-  /^\/api\/tags/,
-  /^\/api\/search/,
-  /^\/api\/sentiment/,
-  /^\/api\/regulatory/,
-  /^\/api\/archive/,
+  /^\/api\/news($|\/)/, // /api/news — returns max 3 headlines
+  /^\/api\/prices$/,   // /api/prices — returns max 3 coins
 ];
 
 const EXEMPT_PATTERNS = [
@@ -293,9 +290,16 @@ export default async function middleware(request: NextRequest) {
     }
   }
 
-  // x402 payment gate — premium routes require USDC micropayment
-  // SperaxOS trusted origins bypass payment entirely
-  if (pathname.startsWith('/api/premium/') && !speraxos) {
+  // x402 payment gate — ALL /api/* routes require micropayment except:
+  //   • EXEMPT_PATTERNS  (health, cron, webhooks, admin, sse, ws)
+  //   • FREE_TIER_PATTERNS  (/api/news, /api/prices — rate-limited, degraded)
+  //   • Trusted Sperax origins  (bypass entirely)
+  if (
+    pathname.startsWith('/api/') &&
+    !speraxos &&
+    !matchesPattern(pathname, EXEMPT_PATTERNS) &&
+    !matchesPattern(pathname, FREE_TIER_PATTERNS)
+  ) {
     const paymentResponse = await x402(request);
     // NextResponse.next() sets x-middleware-next:1 internally — that means payment verified.
     // Any other response (402, 400, etc.) is returned directly to the client.
@@ -307,7 +311,12 @@ export default async function middleware(request: NextRequest) {
     }
   }
 
-  const res = NextResponse.next();
+  // For free-tier paths, forward X-Free-Tier: 1 so route handlers can degrade results
+  const isFreeTierRequest = !speraxos && matchesPattern(pathname, FREE_TIER_PATTERNS);
+  const requestHeaders = new Headers(request.headers);
+  if (isFreeTierRequest) requestHeaders.set('x-free-tier', '1');
+
+  const res = NextResponse.next({ request: { headers: requestHeaders } });
   Object.entries(headers).forEach(([k, v]) => res.headers.set(k, v));
   res.headers.set('X-Response-Time', `${Date.now() - start}ms`);
   return res;

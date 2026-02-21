@@ -136,7 +136,6 @@ const RSS_SOURCES = {
     name: 'NFT Evening',
     url: 'https://nftevening.com/feed/',
     category: 'nft',
-    disabled: true, // Disabled: skipCache breaks static generation
   },
   
   // ═══════════════════════════════════════════════════════════════
@@ -578,7 +577,7 @@ const RSS_SOURCES = {
     name: 'DappRadar Blog',
     url: 'https://dappradar.com/blog/feed',
     category: 'nft',
-    skipCache: true, // Feed exceeds 2MB Next.js cache limit
+    // Note: Feed exceeds 2MB Next.js cache limit (warning only, not an error)
   },
   
   // ═══════════════════════════════════════════════════════════════
@@ -699,7 +698,7 @@ const RSS_SOURCES = {
     name: 'VanEck Blog',
     url: 'https://www.vaneck.com/us/en/blogs/rss/',
     category: 'etf',
-    skipCache: true, // Feed exceeds 2MB Next.js cache limit (~18MB)
+    // Note: Feed exceeds 2MB Next.js cache limit (warning only, not an error)
   },
   coinshares_research: {
     name: 'CoinShares Research',
@@ -1926,16 +1925,16 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 5000); // 5s timeout
       
-      // Use no-store for large feeds that exceed Next.js 2MB cache limit
+      // force-cache ensures origin server Cache-Control headers (e.g. no-store)
+      // don't break static generation; revalidate: 300 adds ISR on top
       const fetchOptions: RequestInit & { next?: { revalidate: number } } = {
         headers: {
           'Accept': 'application/rss+xml, application/xml, text/xml',
           'User-Agent': 'FreeCryptoNews/1.0 (github.com/nirholas/free-crypto-news)',
         },
         signal: controller.signal,
-        ...('skipCache' in source && 'skipCache' in source && source.skipCache
-          ? { cache: 'no-store' as const }
-          : { next: { revalidate: 300 } }), // 5 min revalidation for normal feeds
+        cache: 'force-cache' as RequestCache,
+        next: { revalidate: 300 }, // 5 min ISR
       };
       const response = await fetch(source.url, fetchOptions);
       
