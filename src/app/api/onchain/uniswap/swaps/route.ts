@@ -16,7 +16,10 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   const minAmountUSD = minUsdParam ? parseFloat(minUsdParam) : undefined;
 
   try {
-    const data = await getUniswapSwaps({ limit, poolAddress, minAmountUSD });
+    let data = await getUniswapSwaps('ethereum', { first: limit, poolId: poolAddress });
+    if (minAmountUSD !== undefined) {
+      data = data.filter((swap) => parseFloat(swap.amountUSD) >= minAmountUSD);
+    }
     return NextResponse.json(data, {
       headers: {
         'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120',
