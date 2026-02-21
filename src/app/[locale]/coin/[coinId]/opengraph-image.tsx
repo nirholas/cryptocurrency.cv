@@ -60,8 +60,9 @@ export default async function Image({ params }: Props) {
               backgroundColor: '#22c55e',
             }}
           />
-          <span style={{ color: '#94a3b8', fontSize: '18px', letterSpacing: '0.15em', textTransform: 'uppercase' }}>
-            Free Crypto News
+          <span style={{ fontSize: '22px', fontWeight: 900, letterSpacing: '-0.04em', textTransform: 'uppercase', display: 'flex' }}>
+            <span style={{ color: '#F7931A' }}>F</span>
+            <span style={{ color: '#94a3b8' }}>CN</span>
           </span>
         </div>
 

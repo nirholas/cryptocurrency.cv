@@ -128,7 +128,7 @@ export default function ColumnCustomizer({
       {/* Trigger button */}
       <button
         onClick={openModal}
-        className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors"
+        className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-white/50 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-colors"
         title="Customize columns"
       >
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -143,25 +143,25 @@ export default function ColumnCustomizer({
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
           {/* Backdrop */}
           <div
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            className="absolute inset-0 bg-black/70 backdrop-blur-sm"
             onClick={closeModal}
           />
 
           {/* Modal panel */}
-          <div className="relative bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 w-full max-w-2xl max-h-[90vh] flex flex-col">
+          <div className="relative bg-black rounded-2xl shadow-2xl border border-white/10 w-full max-w-2xl max-h-[90vh] flex flex-col">
             {/* Header */}
-            <div className="flex items-center justify-between p-5 border-b border-gray-200 dark:border-gray-700">
+            <div className="flex items-center justify-between p-5 border-b border-white/10">
               <div>
-                <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+                <h2 className="text-lg font-semibold text-white">
                   Customize Columns
                 </h2>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5">
+                <p className="text-sm text-white/50 mt-0.5">
                   Add, remove and reorder metrics
                 </p>
               </div>
               <button
                 onClick={closeModal}
-                className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors"
+                className="text-white/40 hover:text-white transition-colors"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -179,7 +179,7 @@ export default function ColumnCustomizer({
                   if (cols.length === 0) return null;
                   return (
                     <div key={group.id}>
-                      <h3 className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2">
+                      <h3 className="text-xs font-semibold text-white/30 uppercase tracking-wider mb-2">
                         {group.label}
                       </h3>
                       <div className="flex flex-wrap gap-2">
@@ -191,8 +191,8 @@ export default function ColumnCustomizer({
                               onClick={() => toggle(col.id)}
                               className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-all ${
                                 active
-                                  ? 'bg-blue-600 dark:bg-blue-500 text-white border-blue-600 dark:border-blue-500'
-                                  : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500'
+                                  ? 'bg-white text-black border-white'
+                                  : 'bg-black text-white/50 border-white/10 hover:border-white/30'
                               }`}
                             >
                               {active && (
@@ -211,8 +211,8 @@ export default function ColumnCustomizer({
 
             {/* Active column ordering */}
             {draft.filter((id) => !COLUMN_MAP.get(id)?.pinned).length > 0 && (
-              <div className="border-t border-gray-200 dark:border-gray-700 px-5 py-4">
-                <h3 className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-3">
+              <div className="border-t border-white/10 px-5 py-4">
+                <h3 className="text-xs font-semibold text-white/30 uppercase tracking-wider mb-3">
                   Active columns — drag to reorder
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -226,12 +226,12 @@ export default function ColumnCustomizer({
                       return (
                         <span
                           key={id}
-                          className="inline-flex items-center gap-1 px-2 py-1 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-lg text-sm text-blue-700 dark:text-blue-300"
+                          className="inline-flex items-center gap-1 px-2 py-1 bg-white/10 border border-white/20 rounded-lg text-sm text-white/70"
                         >
                           <button
                             onClick={() => moveUp(id)}
                             disabled={pos <= pinnedCount}
-                            className="disabled:opacity-30 hover:text-blue-900 dark:hover:text-blue-100"
+                            className="disabled:opacity-30 hover:text-white"
                             title="Move left"
                           >
                             ‹
@@ -240,14 +240,14 @@ export default function ColumnCustomizer({
                           <button
                             onClick={() => moveDown(id)}
                             disabled={pos === draft.length - 1}
-                            className="disabled:opacity-30 hover:text-blue-900 dark:hover:text-blue-100"
+                            className="disabled:opacity-30 hover:text-white"
                             title="Move right"
                           >
                             ›
                           </button>
                           <button
                             onClick={() => toggle(id)}
-                            className="ml-1 hover:text-red-500"
+                            className="ml-1 hover:text-white"
                             title="Remove"
                           >
                             ×
@@ -260,23 +260,23 @@ export default function ColumnCustomizer({
             )}
 
             {/* Footer */}
-            <div className="flex items-center justify-between p-5 border-t border-gray-200 dark:border-gray-700">
+            <div className="flex items-center justify-between p-5 border-t border-white/10">
               <button
                 onClick={reset}
-                className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
+                className="text-sm text-white/40 hover:text-white transition-colors"
               >
                 Reset to defaults
               </button>
               <div className="flex gap-3">
                 <button
                   onClick={closeModal}
-                  className="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                  className="px-4 py-2 text-sm font-medium text-white/50 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-colors"
                 >
                   Cancel
                 </button>
                 <button
                   onClick={apply}
-                  className="px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+                  className="px-4 py-2 text-sm font-medium text-black bg-white hover:bg-white/90 rounded-lg transition-colors"
                 >
                   Apply Changes
                 </button>

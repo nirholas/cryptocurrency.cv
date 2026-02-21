@@ -499,8 +499,12 @@ export default function Header() {
               href="/" 
               className="flex items-center gap-2.5 focus-ring px-1 py-1 -mx-1"
             >
-              <span className="text-lg sm:text-xl font-black tracking-tight text-gray-900 dark:text-white uppercase">
-                Free Crypto News
+              <span
+                className="font-black uppercase leading-none select-none"
+                style={{ letterSpacing: '-0.05em', fontSize: '1.6rem' }}
+              >
+                <span style={{ color: '#F7931A' }}>F</span>
+                <span className="text-gray-900 dark:text-white">CN</span>
               </span>
             </Link>
           </div>

@@ -1,8 +1,8 @@
 'use client';
 
 /**
- * Trending Section Component
- * CoinGecko-style 3-card layout: Market Overview + Trending + Top Gainers/Losers
+ * Trending Section Component — pure black & white
+ * 3-card layout: Market Overview + Trending + Top Gainers/Losers
  */
 
 import { useState, useEffect } from 'react';
@@ -19,7 +19,7 @@ interface TrendingSectionProps {
 }
 
 /** Tiny inline sparkline SVG */
-function MiniSparkline({ prices, positive }: { prices: number[]; positive: boolean }) {
+function MiniSparkline({ prices }: { prices: number[] }) {
   if (!prices || prices.length < 2) return null;
   const min = Math.min(...prices);
   const max = Math.max(...prices);
@@ -30,17 +30,16 @@ function MiniSparkline({ prices, positive }: { prices: number[]; positive: boole
   const pts = prices
     .map((p, i) => `${(i * step).toFixed(1)},${(h - ((p - min) / range) * (h - 4) - 2).toFixed(1)}`)
     .join(' ');
-  const color = positive ? '#10b981' : '#ef4444';
   return (
     <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} className="overflow-visible">
       <defs>
         <linearGradient id="sfGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor={color} stopOpacity="0.2" />
-          <stop offset="100%" stopColor={color} stopOpacity="0" />
+          <stop offset="0%" stopColor="#ffffff" stopOpacity="0.15" />
+          <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
         </linearGradient>
       </defs>
       <polygon fill="url(#sfGrad)" points={`0,${h} ${pts} ${w},${h}`} />
-      <polyline fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" points={pts} />
+      <polyline fill="none" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.4" points={pts} />
     </svg>
   );
 }
@@ -49,30 +48,29 @@ function MiniSparkline({ prices, positive }: { prices: number[]; positive: boole
 function TrendingRow({ coin, rank }: { coin: TrendingCoin; rank: number }) {
   const change = coin.data?.price_change_percentage_24h?.usd;
   const price = coin.data?.price;
-  const positive = (change ?? 0) >= 0;
   return (
     <Link
       href={`/coin/${coin.id}`}
-      className="flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg px-2 py-2 -mx-2 transition-colors group"
+      className="flex items-center justify-between hover:bg-white/5 rounded-lg px-2 py-2 -mx-2 transition-colors group"
     >
       <div className="flex items-center gap-2 min-w-0">
-        <span className="text-xs text-gray-400 w-4 shrink-0">{rank}</span>
+        <span className="text-xs text-white/30 w-4 shrink-0">{rank}</span>
         <div className="relative w-6 h-6 shrink-0">
           {coin.thumb && (
             <Image src={coin.thumb} alt={coin.name} fill className="rounded-full object-cover" unoptimized />
           )}
         </div>
-        <span className="font-medium text-sm text-gray-900 dark:text-white truncate group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+        <span className="font-medium text-sm text-white truncate">
           {coin.symbol?.toUpperCase() || coin.name}
         </span>
       </div>
       <div className="flex items-center gap-2 shrink-0 ml-2">
         {price != null && (
-          <span className="text-xs text-gray-600 dark:text-gray-400">{formatPrice(price)}</span>
+          <span className="text-xs text-white/50">{formatPrice(price)}</span>
         )}
         {change != null && (
-          <span className={`text-xs font-semibold w-[54px] text-right ${positive ? 'text-emerald-600 dark:text-emerald-400' : 'text-red-600 dark:text-red-400'}`}>
-            {positive ? '▲' : '▼'} {Math.abs(change).toFixed(2)}%
+          <span className="text-xs font-semibold w-[54px] text-right text-white/60">
+            {(change ?? 0) >= 0 ? '▲' : '▼'} {Math.abs(change).toFixed(2)}%
           </span>
         )}
       </div>
@@ -83,11 +81,10 @@ function TrendingRow({ coin, rank }: { coin: TrendingCoin; rank: number }) {
 /** Single coin row for gainers/losers */
 function CoinRow({ coin }: { coin: TokenPrice }) {
   const change = coin.price_change_percentage_24h;
-  const positive = (change ?? 0) >= 0;
   return (
     <Link
       href={`/coin/${coin.id}`}
-      className="flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg px-2 py-2 -mx-2 transition-colors group"
+      className="flex items-center justify-between hover:bg-white/5 rounded-lg px-2 py-2 -mx-2 transition-colors group"
     >
       <div className="flex items-center gap-2 min-w-0">
         <div className="relative w-6 h-6 shrink-0">
@@ -96,16 +93,16 @@ function CoinRow({ coin }: { coin: TokenPrice }) {
           )}
         </div>
         <div className="min-w-0">
-          <span className="font-medium text-sm text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+          <span className="font-medium text-sm text-white">
             {coin.symbol?.toUpperCase()}
           </span>
-          <span className="text-xs text-gray-500 dark:text-gray-400 ml-1.5 hidden sm:inline">{coin.name}</span>
+          <span className="text-xs text-white/40 ml-1.5 hidden sm:inline">{coin.name}</span>
         </div>
       </div>
       <div className="flex items-center gap-2 shrink-0 ml-2">
-        <span className="text-xs text-gray-600 dark:text-gray-400">{formatPrice(coin.current_price)}</span>
-        <span className={`text-xs font-semibold w-[58px] text-right ${positive ? 'text-emerald-600 dark:text-emerald-400' : 'text-red-600 dark:text-red-400'}`}>
-          {positive ? '▲' : '▼'} {Math.abs(change ?? 0).toFixed(2)}%
+        <span className="text-xs text-white/50">{formatPrice(coin.current_price)}</span>
+        <span className="text-xs font-semibold w-[58px] text-right text-white/60">
+          {(change ?? 0) >= 0 ? '▲' : '▼'} {Math.abs(change ?? 0).toFixed(2)}%
         </span>
       </div>
     </Link>
@@ -136,21 +133,21 @@ export default function TrendingSection({ trending, coins, global, fearGreed }: 
     <div className="grid md:grid-cols-3 gap-3 mb-6">
 
       {/* ── Card 1: Market Overview ────────────────────────────── */}
-      <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4 hover:shadow-sm transition-shadow">
-        <div className="flex items-center justify-between mb-3 pb-2.5 border-b border-gray-100 dark:border-gray-800">
-          <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">Global Market</span>
-          <Link href="/markets" className="text-xs text-blue-600 dark:text-blue-400 hover:underline font-medium">View chart →</Link>
+      <div className="bg-black rounded-xl border border-white/10 p-4">
+        <div className="flex items-center justify-between mb-3 pb-2.5 border-b border-white/10">
+          <span className="text-sm font-semibold text-white">Global Market</span>
+          <Link href="/markets" className="text-xs text-white/40 hover:text-white transition-colors font-medium">View chart →</Link>
         </div>
 
         <div className="flex items-end justify-between mb-1">
           <div>
-            <p className="text-[11px] text-gray-500 dark:text-gray-400 mb-0.5 uppercase tracking-wide font-medium">Total Market Cap</p>
-            <p className="text-[22px] font-bold text-gray-900 dark:text-white leading-none">
+            <p className="text-[11px] text-white/40 mb-0.5 uppercase tracking-wide font-medium">Total Market Cap</p>
+            <p className="text-[22px] font-bold text-white leading-none">
               {mcap ? `$${formatNumber(mcap)}` : '—'}
             </p>
           </div>
           {mcapChange != null && (
-            <span className={`text-sm font-bold flex items-center gap-0.5 mb-0.5 ${upMarket ? 'text-emerald-600 dark:text-emerald-400' : 'text-red-600 dark:text-red-400'}`}>
+            <span className="text-sm font-bold flex items-center gap-0.5 mb-0.5 text-white/70">
               {upMarket ? '▲' : '▼'} {Math.abs(mcapChange).toFixed(2)}%
             </span>
           )}
@@ -158,53 +155,53 @@ export default function TrendingSection({ trending, coins, global, fearGreed }: 
 
         {mounted && sparkPrices.length > 1 && (
           <div className="mt-1 mb-3">
-            <MiniSparkline prices={sparkPrices} positive={upMarket} />
+            <MiniSparkline prices={sparkPrices} />
           </div>
         )}
 
-        <div className="space-y-2 mt-3 pt-2 border-t border-gray-100 dark:border-gray-800">
+        <div className="space-y-2 mt-3 pt-2 border-t border-white/10">
           <div className="flex items-center justify-between text-xs">
-            <span className="text-gray-500 dark:text-gray-400">24h Volume</span>
-            <span className="font-semibold text-gray-800 dark:text-gray-200">
+            <span className="text-white/40">24h Volume</span>
+            <span className="font-semibold text-white/70">
               {vol ? `$${formatNumber(vol)}` : '—'}
             </span>
           </div>
           {btcDom != null && (
             <div className="flex items-center justify-between text-xs">
-              <span className="text-gray-500 dark:text-gray-400 flex items-center gap-1">₿ BTC Dominance</span>
+              <span className="text-white/40 flex items-center gap-1">₿ BTC Dominance</span>
               <div className="flex items-center gap-1.5">
-                <div className="w-14 h-1.5 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                  <div className="h-full bg-orange-400 rounded-full" style={{ width: `${btcDom}%` }} />
+                <div className="w-14 h-1.5 bg-white/10 rounded-full overflow-hidden">
+                  <div className="h-full bg-white/40 rounded-full" style={{ width: `${btcDom}%` }} />
                 </div>
-                <span className="font-semibold text-gray-800 dark:text-gray-200">{btcDom.toFixed(1)}%</span>
+                <span className="font-semibold text-white/70">{btcDom.toFixed(1)}%</span>
               </div>
             </div>
           )}
           {ethDom != null && (
             <div className="flex items-center justify-between text-xs">
-              <span className="text-gray-500 dark:text-gray-400 flex items-center gap-1">Ξ ETH Dominance</span>
+              <span className="text-white/40 flex items-center gap-1">Ξ ETH Dominance</span>
               <div className="flex items-center gap-1.5">
-                <div className="w-14 h-1.5 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                  <div className="h-full bg-indigo-400 rounded-full" style={{ width: `${ethDom}%` }} />
+                <div className="w-14 h-1.5 bg-white/10 rounded-full overflow-hidden">
+                  <div className="h-full bg-white/40 rounded-full" style={{ width: `${ethDom}%` }} />
                 </div>
-                <span className="font-semibold text-gray-800 dark:text-gray-200">{ethDom.toFixed(1)}%</span>
+                <span className="font-semibold text-white/70">{ethDom.toFixed(1)}%</span>
               </div>
             </div>
           )}
           {mounted && fearVal != null && fearGreed && (
             <div className="flex items-center justify-between text-xs">
-              <span className="text-gray-500 dark:text-gray-400">Fear &amp; Greed</span>
+              <span className="text-white/40">Fear &amp; Greed</span>
               <div className="flex items-center gap-1.5">
-                <div className="w-14 h-1.5 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                <div className="w-14 h-1.5 bg-white/10 rounded-full overflow-hidden">
                   <div
-                    className={`h-full rounded-full ${fearVal <= 25 ? 'bg-red-500' : fearVal <= 45 ? 'bg-orange-400' : fearVal <= 55 ? 'bg-yellow-400' : 'bg-emerald-500'}`}
+                    className="h-full rounded-full bg-white/50"
                     style={{ width: `${fearVal}%` }}
                   />
                 </div>
-                <span className={`font-semibold ${fearVal <= 30 ? 'text-red-600 dark:text-red-400' : fearVal <= 50 ? 'text-orange-500' : 'text-emerald-600 dark:text-emerald-400'}`}>
+                <span className="font-semibold text-white/70">
                   {fearVal}
                 </span>
-                <span className="text-gray-500 dark:text-gray-500 hidden sm:inline">{fearGreed.value_classification}</span>
+                <span className="text-white/40 hidden sm:inline">{fearGreed.value_classification}</span>
               </div>
             </div>
           )}
@@ -212,12 +209,12 @@ export default function TrendingSection({ trending, coins, global, fearGreed }: 
       </div>
 
       {/* ── Card 2: Trending ──────────────────────────────────── */}
-      <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4 hover:shadow-sm transition-shadow">
-        <div className="flex items-center justify-between mb-3 pb-2.5 border-b border-gray-100 dark:border-gray-800">
-          <span className="text-sm font-semibold text-gray-800 dark:text-gray-200 flex items-center gap-1.5">
+      <div className="bg-black rounded-xl border border-white/10 p-4">
+        <div className="flex items-center justify-between mb-3 pb-2.5 border-b border-white/10">
+          <span className="text-sm font-semibold text-white flex items-center gap-1.5">
             🔥 Trending
           </span>
-          <Link href="/markets/trending" className="text-xs text-blue-600 dark:text-blue-400 hover:underline font-medium">View more →</Link>
+          <Link href="/markets/trending" className="text-xs text-white/40 hover:text-white transition-colors font-medium">View more →</Link>
         </div>
         <div className="space-y-0.5">
           {trending.slice(0, 5).map((coin, i) => (
@@ -227,36 +224,36 @@ export default function TrendingSection({ trending, coins, global, fearGreed }: 
       </div>
 
       {/* ── Card 3: Top Gainers + Losers ─────────────────────── */}
-      <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4 hover:shadow-sm transition-shadow">
-        <div className="flex items-center justify-between mb-3 pb-2.5 border-b border-gray-100 dark:border-gray-800">
-          <span className="text-sm font-semibold text-gray-800 dark:text-gray-200 flex items-center gap-1.5">
+      <div className="bg-black rounded-xl border border-white/10 p-4">
+        <div className="flex items-center justify-between mb-3 pb-2.5 border-b border-white/10">
+          <span className="text-sm font-semibold text-white flex items-center gap-1.5">
             🚀 Top Gainers
           </span>
-          <Link href="/markets/gainers" className="text-xs text-blue-600 dark:text-blue-400 hover:underline font-medium">View more →</Link>
+          <Link href="/markets/gainers" className="text-xs text-white/40 hover:text-white transition-colors font-medium">View more →</Link>
         </div>
         <div className="space-y-0.5 mb-2">
           {mounted
             ? topGainers.map(c => <CoinRow key={c.id} coin={c} />)
             : Array.from({ length: 3 }).map((_, i) => (
-                <div key={i} className="h-9 bg-gray-100 dark:bg-gray-800 rounded-lg animate-pulse" />
+                <div key={i} className="h-9 bg-white/5 rounded-lg animate-pulse" />
               ))}
         </div>
 
         <div className="flex items-center gap-2 my-2">
-          <div className="flex-1 h-px bg-gray-100 dark:bg-gray-800" />
-          <span className="text-[11px] text-gray-400 dark:text-gray-500 font-medium flex items-center gap-1">📉 Top Losers</span>
-          <div className="flex-1 h-px bg-gray-100 dark:bg-gray-800" />
+          <div className="flex-1 h-px bg-white/10" />
+          <span className="text-[11px] text-white/30 font-medium flex items-center gap-1">📉 Top Losers</span>
+          <div className="flex-1 h-px bg-white/10" />
         </div>
 
         <div className="space-y-0.5">
           {mounted
             ? topLosers.map(c => <CoinRow key={c.id} coin={c} />)
             : Array.from({ length: 3 }).map((_, i) => (
-                <div key={i} className="h-9 bg-gray-100 dark:bg-gray-800 rounded-lg animate-pulse" />
+                <div key={i} className="h-9 bg-white/5 rounded-lg animate-pulse" />
               ))}
         </div>
-        <div className="mt-2 pt-2 border-t border-gray-100 dark:border-gray-800">
-          <Link href="/markets/losers" className="text-xs text-blue-600 dark:text-blue-400 hover:underline font-medium">View all losers →</Link>
+        <div className="mt-2 pt-2 border-t border-white/10">
+          <Link href="/markets/losers" className="text-xs text-white/40 hover:text-white transition-colors font-medium">View all losers →</Link>
         </div>
       </div>
 

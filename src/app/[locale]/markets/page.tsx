@@ -346,7 +346,7 @@ export default async function MarketsPage({ params: pageParams, searchParams }: 
   const totalMarketCap = global?.total_market_cap?.usd;
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-950">
+    <div className="min-h-screen bg-black">
       <Header />
 
       {/* Global Stats Bar — compact top ticker */}
@@ -359,16 +359,16 @@ export default async function MarketsPage({ params: pageParams, searchParams }: 
 
           {/* Page Header */}
           <div className="mb-5">
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
+            <h1 className="text-2xl md:text-3xl font-bold text-white">
               Cryptocurrency Prices by Market Cap
             </h1>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+            <p className="text-sm text-white/50 mt-1">
               The global cryptocurrency market cap today is{' '}
-              <span className="font-semibold text-gray-700 dark:text-gray-200">
+              <span className="font-semibold text-white/70">
                 ${formatNumber(global?.total_market_cap?.usd)}
               </span>
               , a{' '}
-              <span className={`font-semibold ${(global?.market_cap_change_percentage_24h_usd ?? 0) >= 0 ? 'text-emerald-500' : 'text-red-500'}`}>
+              <span className="font-semibold text-white/70">
                 {formatPercent(global?.market_cap_change_percentage_24h_usd)}
               </span>{' '}
               change in the last 24 hours.
@@ -416,14 +416,14 @@ export default async function MarketsPage({ params: pageParams, searchParams }: 
           </Suspense>
 
           {/* Data Attribution */}
-          <div className="mt-8 text-center text-gray-400 dark:text-gray-500 text-xs">
+          <div className="mt-8 text-center text-white/30 text-xs">
             <p>
               Market data provided by{' '}
               <a
                 href="https://www.coingecko.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 dark:text-blue-400 hover:underline"
+                className="text-white/50 hover:text-white hover:underline transition-colors"
               >
                 CoinGecko
               </a>
@@ -444,30 +444,30 @@ function MarketOverviewSkeleton() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
       <div className="space-y-4">
-        <div className="bg-white dark:bg-gray-800/80 rounded-xl border border-gray-200 dark:border-gray-700/60 p-5 h-28 animate-pulse" />
-        <div className="bg-white dark:bg-gray-800/80 rounded-xl border border-gray-200 dark:border-gray-700/60 p-5 h-28 animate-pulse" />
-        <div className="bg-white dark:bg-gray-800/80 rounded-xl border border-gray-200 dark:border-gray-700/60 p-4 h-24 animate-pulse" />
+        <div className="bg-white/5 rounded-xl border border-white/10 p-5 h-28 animate-pulse" />
+        <div className="bg-white/5 rounded-xl border border-white/10 p-5 h-28 animate-pulse" />
+        <div className="bg-white/5 rounded-xl border border-white/10 p-4 h-24 animate-pulse" />
       </div>
-      <div className="bg-white dark:bg-gray-800/80 rounded-xl border border-gray-200 dark:border-gray-700/60 p-5 animate-pulse">
-        <div className="h-5 w-24 bg-gray-200 dark:bg-gray-700 rounded mb-4" />
+      <div className="bg-white/5 rounded-xl border border-white/10 p-5 animate-pulse">
+        <div className="h-5 w-24 bg-white/10 rounded mb-4" />
         <div className="space-y-4">
           {[1, 2, 3].map((i) => (
             <div key={i} className="flex items-center gap-3">
-              <div className="w-7 h-7 bg-gray-200 dark:bg-gray-700 rounded-full" />
-              <div className="h-4 w-24 bg-gray-200 dark:bg-gray-700 rounded" />
-              <div className="h-4 w-16 bg-gray-200 dark:bg-gray-700 rounded ml-auto" />
+              <div className="w-7 h-7 bg-white/10 rounded-full" />
+              <div className="h-4 w-24 bg-white/10 rounded" />
+              <div className="h-4 w-16 bg-white/10 rounded ml-auto" />
             </div>
           ))}
         </div>
       </div>
-      <div className="bg-white dark:bg-gray-800/80 rounded-xl border border-gray-200 dark:border-gray-700/60 p-5 animate-pulse">
-        <div className="h-5 w-24 bg-gray-200 dark:bg-gray-700 rounded mb-4" />
+      <div className="bg-white/5 rounded-xl border border-white/10 p-5 animate-pulse">
+        <div className="h-5 w-24 bg-white/10 rounded mb-4" />
         <div className="space-y-4">
           {[1, 2, 3].map((i) => (
             <div key={i} className="flex items-center gap-3">
-              <div className="w-7 h-7 bg-gray-200 dark:bg-gray-700 rounded-full" />
-              <div className="h-4 w-24 bg-gray-200 dark:bg-gray-700 rounded" />
-              <div className="h-4 w-16 bg-gray-200 dark:bg-gray-700 rounded ml-auto" />
+              <div className="w-7 h-7 bg-white/10 rounded-full" />
+              <div className="h-4 w-24 bg-white/10 rounded" />
+              <div className="h-4 w-16 bg-white/10 rounded ml-auto" />
             </div>
           ))}
         </div>
@@ -482,7 +482,7 @@ function CategoryTabsSkeleton() {
       {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
         <div
           key={i}
-          className="h-10 w-24 bg-gray-100 dark:bg-gray-700 rounded-full animate-pulse flex-shrink-0"
+          className="h-10 w-24 bg-white/5 rounded-full animate-pulse flex-shrink-0"
         />
       ))}
     </div>
@@ -492,30 +492,30 @@ function CategoryTabsSkeleton() {
 function SearchFiltersSkeleton() {
   return (
     <div className="flex flex-wrap gap-3 mb-4">
-      <div className="h-10 w-64 bg-gray-100 dark:bg-gray-700 rounded-xl animate-pulse" />
-      <div className="h-10 w-32 bg-gray-100 dark:bg-gray-700 rounded-lg animate-pulse" />
-      <div className="h-10 w-32 bg-gray-100 dark:bg-gray-700 rounded-lg animate-pulse" />
-      <div className="h-10 w-32 bg-gray-100 dark:bg-gray-700 rounded-lg animate-pulse" />
+      <div className="h-10 w-64 bg-white/5 rounded-xl animate-pulse" />
+      <div className="h-10 w-32 bg-white/5 rounded-lg animate-pulse" />
+      <div className="h-10 w-32 bg-white/5 rounded-lg animate-pulse" />
+      <div className="h-10 w-32 bg-white/5 rounded-lg animate-pulse" />
     </div>
   );
 }
 
 function TableSkeleton() {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
-      <div className="p-4 border-b border-gray-200 dark:border-gray-700">
-        <div className="h-6 w-48 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+    <div className="bg-black rounded-xl border border-white/10 overflow-hidden">
+      <div className="p-4 border-b border-white/10">
+        <div className="h-6 w-48 bg-white/10 rounded animate-pulse" />
       </div>
-      <div className="divide-y divide-gray-100 dark:divide-gray-800">
+      <div className="divide-y divide-white/5">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
           <div key={i} className="flex items-center gap-4 p-4">
-            <div className="h-4 w-8 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
-            <div className="h-8 w-8 bg-gray-200 dark:bg-gray-700 rounded-full animate-pulse" />
-            <div className="h-4 w-32 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
-            <div className="h-4 w-20 bg-gray-200 dark:bg-gray-700 rounded animate-pulse ml-auto" />
-            <div className="h-4 w-16 bg-gray-200 dark:bg-gray-700 rounded animate-pulse hidden sm:block" />
-            <div className="h-4 w-16 bg-gray-200 dark:bg-gray-700 rounded animate-pulse hidden md:block" />
-            <div className="h-4 w-24 bg-gray-200 dark:bg-gray-700 rounded animate-pulse hidden lg:block" />
+            <div className="h-4 w-8 bg-white/10 rounded animate-pulse" />
+            <div className="h-8 w-8 bg-white/10 rounded-full animate-pulse" />
+            <div className="h-4 w-32 bg-white/10 rounded animate-pulse" />
+            <div className="h-4 w-20 bg-white/10 rounded animate-pulse ml-auto" />
+            <div className="h-4 w-16 bg-white/10 rounded animate-pulse hidden sm:block" />
+            <div className="h-4 w-16 bg-white/10 rounded animate-pulse hidden md:block" />
+            <div className="h-4 w-24 bg-white/10 rounded animate-pulse hidden lg:block" />
           </div>
         ))}
       </div>

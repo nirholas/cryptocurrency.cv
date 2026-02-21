@@ -112,6 +112,24 @@ export interface TrendingCoin {
   large: string;
   price_btc: number;
   score: number;
+  /** Extended price data from CoinGecko API (may not always be present) */
+  data?: {
+    price?: number;
+    price_btc?: string;
+    price_change_percentage_24h?: {
+      usd?: number;
+      btc?: number;
+    };
+    market_cap?: string;
+    market_cap_btc?: string;
+    total_volume?: string;
+    total_volume_btc?: string;
+    sparkline?: string;
+    content?: {
+      title?: string;
+      description?: string;
+    } | null;
+  };
 }
 
 export interface GlobalMarketData {
