@@ -187,7 +187,7 @@ export default async function TopicPage({ params }: Props) {
             <div className="text-center py-12 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700">
               <span className="text-5xl mb-4 block">🔍</span>
               <p className="text-gray-500 dark:text-slate-400 mb-2">No articles found for this topic.</p>
-              <p className="text-sm text-gray-400 dark:text-slate-500">
+              <p className="text-sm text-gray-500 dark:text-slate-400">
                 Try checking back later or browse all news.
               </p>
             </div>

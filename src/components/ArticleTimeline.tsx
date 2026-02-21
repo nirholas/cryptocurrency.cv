@@ -219,7 +219,7 @@ export function ArticleTimeline({ tickers }: ArticleTimelineProps) {
                     </span>
                     {/* Time */}
                     {item.article.pubDate && (
-                      <span className="text-xs text-gray-400 dark:text-slate-500">
+                      <span className="text-xs text-gray-500 dark:text-slate-400">
                         {getTimeAgo(item.article.pubDate)}
                       </span>
                     )}
@@ -239,7 +239,7 @@ export function ArticleTimeline({ tickers }: ArticleTimelineProps) {
                       {item.article.source}
                     </span>
                     {item.sources.length > 1 && (
-                      <span className="text-xs text-gray-400 dark:text-slate-500">
+                      <span className="text-xs text-gray-500 dark:text-slate-400">
                         +{item.sources.length - 1} more source{item.sources.length > 2 ? 's' : ''}
                       </span>
                     )}

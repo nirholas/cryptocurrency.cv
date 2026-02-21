@@ -75,8 +75,8 @@ export default function HeroArticle({ article, sidebarArticles = [] }: HeroArtic
           <h2 className="text-base font-bold text-gray-900 dark:text-white">
             Latest Crypto News
           </h2>
-          <Link href="/read" className="ml-auto text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <Link href="/read" aria-label="View all news" className="ml-auto text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+            <svg className="w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </Link>
@@ -93,18 +93,18 @@ export default function HeroArticle({ article, sidebarArticles = [] }: HeroArtic
             href={`/article/${articleSlug}`}
             className="group block px-5 py-3.5 hover:bg-gray-50 dark:hover:bg-slate-700/40 transition-colors"
           >
-            <div className="text-[11px] text-gray-400 dark:text-slate-500 mb-1.5 tabular-nums">
+            <div className="text-[11px] text-gray-500 dark:text-slate-400 mb-1.5 tabular-nums">
               {formatTime(article.timeAgo)}
             </div>
             <div className="flex items-start gap-2 mb-1">
               <span className={`mt-1.5 w-2 h-2 rounded-full flex-shrink-0 ${sentimentDot[article.sentiment || 'neutral']?.color || 'bg-gray-400'}`} />
-              <span className="text-[10px] font-medium text-gray-400 dark:text-slate-500">{sentimentDot[article.sentiment || 'neutral']?.label || 'Neutral'}</span>
+              <span className="text-[10px] font-medium text-gray-500 dark:text-slate-400">{sentimentDot[article.sentiment || 'neutral']?.label || 'Neutral'}</span>
             </div>
             <h3 className="font-bold text-sm text-gray-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors leading-snug line-clamp-2">
               {article.title}
             </h3>
             {article.description && (
-              <p className="text-xs text-gray-400 dark:text-slate-500 mt-1 line-clamp-2 leading-relaxed">
+              <p className="text-xs text-gray-500 dark:text-slate-400 mt-1 line-clamp-2 leading-relaxed">
                 {article.description}
               </p>
             )}
@@ -121,7 +121,7 @@ export default function HeroArticle({ article, sidebarArticles = [] }: HeroArtic
                 href={`/article/${slug}`}
                 className="group block px-5 py-3 hover:bg-gray-50 dark:hover:bg-slate-700/40 transition-colors"
               >
-                <div className="text-[11px] text-gray-400 dark:text-slate-500 mb-1 tabular-nums">
+                <div className="text-[11px] text-gray-500 dark:text-slate-400 mb-1 tabular-nums">
                   {(() => {
                     try {
                       return new Date(sideArticle.pubDate).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
@@ -130,7 +130,7 @@ export default function HeroArticle({ article, sidebarArticles = [] }: HeroArtic
                 </div>
                 <div className="flex items-start gap-2 mb-1">
                   <span className={`mt-1.5 w-2 h-2 rounded-full flex-shrink-0 ${sentiment.color}`} />
-                  <span className="text-[10px] font-medium text-gray-400 dark:text-slate-500">{sentiment.label}</span>
+                  <span className="text-[10px] font-medium text-gray-500 dark:text-slate-400">{sentiment.label}</span>
                 </div>
                 <h3 className="font-semibold text-sm text-gray-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors leading-snug line-clamp-2">
                   {sideArticle.title}

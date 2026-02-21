@@ -155,7 +155,7 @@ export function WhaleActivityFeed() {
                     <div className="text-xs text-gray-500 dark:text-slate-400">
                       {truncateAddress(tx.from.address)} → {truncateAddress(tx.to.address)}
                     </div>
-                    <div className="text-xs text-gray-400 dark:text-slate-500">{timeAgo(tx.timestamp)}</div>
+                    <div className="text-xs text-gray-500 dark:text-slate-400">{timeAgo(tx.timestamp)}</div>
                   </div>
                 </div>
               </div>

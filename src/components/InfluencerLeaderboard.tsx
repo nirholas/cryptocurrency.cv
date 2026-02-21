@@ -95,7 +95,7 @@ function EmptyState({ message }: { message: string }) {
     <div className="text-center py-12">
       <div className="text-5xl mb-4">📊</div>
       <p className="text-neutral-500 dark:text-neutral-400">{message}</p>
-      <p className="text-sm text-neutral-400 dark:text-neutral-500 mt-2">
+      <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-2">
         Start tracking influencers to see reliability scores.
       </p>
     </div>

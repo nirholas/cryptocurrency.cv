@@ -151,7 +151,7 @@ export default async function DigestPage() {
                         <ul className="space-y-2 text-sm text-gray-600 dark:text-slate-400">
                           {section.articles.map((article, j) => (
                             <li key={j} className="flex items-start gap-2">
-                              <span className="text-gray-400 dark:text-slate-500">•</span>
+                              <span className="text-gray-500 dark:text-slate-400">•</span>
                               {article}
                             </li>
                           ))}

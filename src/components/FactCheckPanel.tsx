@@ -229,7 +229,7 @@ export function FactCheckPanel({ articleUrl, articleTitle, source }: FactCheckPa
         <span className="text-xs text-gray-500 dark:text-slate-400">
           🤖 Powered by AI · {new Date(data.checkedAt).toLocaleTimeString()}
         </span>
-        <span className="text-xs text-gray-400 dark:text-slate-500">
+        <span className="text-xs text-gray-500 dark:text-slate-400">
           Source: {source}
         </span>
       </div>

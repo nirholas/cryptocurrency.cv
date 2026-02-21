@@ -157,7 +157,7 @@ export function ChartSkeleton({ height = 400 }: { height?: number }) {
       <div className="h-full bg-gradient-to-b from-gray-100 to-gray-50 dark:from-slate-800 dark:to-slate-900 rounded-lg flex items-center justify-center">
         <div className="flex flex-col items-center gap-3">
           <div className="w-8 h-8 border-3 border-amber-500 border-t-transparent rounded-full animate-spin" />
-          <span className="text-sm text-gray-400 dark:text-slate-500">Loading chart...</span>
+          <span className="text-sm text-gray-500 dark:text-slate-400">Loading chart...</span>
         </div>
       </div>
     </div>
@@ -312,7 +312,7 @@ export function VolumeChart({ data, height = 80 }: VolumeChartProps) {
     <ResponsiveContainer width="100%" height={height}>
       <BarChart data={chartData} margin={{ top: 0, right: 10, left: 0, bottom: 0 }}>
         <XAxis dataKey="timestamp" tick={false} axisLine={false} tickLine={false} />
-        <YAxis tickFormatter={formatVolume} tick={{ fill: 'currentColor', fontSize: 10 }} className="text-gray-400 dark:text-slate-500" axisLine={false} tickLine={false} width={70} />
+        <YAxis tickFormatter={formatVolume} tick={{ fill: 'currentColor', fontSize: 10 }} className="text-gray-500 dark:text-slate-400" axisLine={false} tickLine={false} width={70} />
         <Bar dataKey="volume" radius={[2, 2, 0, 0]}>
           {chartData.map((entry, index) => (
             <Cell key={index} fill={entry.isUp ? '#10b981' : '#ef4444'} opacity={0.6} />

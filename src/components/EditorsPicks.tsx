@@ -94,7 +94,7 @@ export default function EditorsPicks({ articles }: EditorsPicksProps) {
                   )}
 
                   {/* Source and time */}
-                  <div className="flex items-center gap-2 text-xs text-gray-400 dark:text-slate-500 mt-auto">
+                  <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-slate-400 mt-auto">
                     <span className={`font-semibold ${style.badge}`}>{article.source}</span>
                     <span>·</span>
                     <time dateTime={article.pubDate}>{article.timeAgo}</time>
@@ -126,7 +126,7 @@ export default function EditorsPicks({ articles }: EditorsPicksProps) {
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors line-clamp-2 leading-snug text-[15px] mb-2">
                     {article.title}
                   </h3>
-                  <div className="flex items-center gap-2 text-xs text-gray-400 dark:text-slate-500">
+                  <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-slate-400">
                     <span className={`font-semibold ${style.badge}`}>{article.source}</span>
                     <span>·</span>
                     <time dateTime={article.pubDate}>{article.timeAgo}</time>

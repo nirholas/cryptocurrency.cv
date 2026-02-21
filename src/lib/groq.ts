@@ -111,6 +111,97 @@ export async function callGroq(
 }
 
 /**
+ * Stream a Groq completion as an OpenAI-compatible SSE ReadableStream.
+ * Each chunk emitted is a raw server-sent-events string ready to pipe.
+ *
+ * Format per chunk:  `data: {"token":"..."}\n\n`
+ * Terminal chunk:   `data: [DONE]\n\n`
+ */
+export function callGroqStream(
+  messages: GroqMessage[],
+  options: GroqOptions = {}
+): ReadableStream<string> {
+  const apiKey = process.env.GROQ_API_KEY;
+  if (!apiKey) {
+    throw new Error('GROQ_API_KEY not configured');
+  }
+
+  const {
+    model = DEFAULT_MODEL,
+    temperature = 0.3,
+    maxTokens = 2048,
+  } = options;
+
+  const body = JSON.stringify({
+    model,
+    messages,
+    temperature,
+    max_tokens: maxTokens,
+    stream: true,
+  });
+
+  return new ReadableStream<string>({
+    async start(controller) {
+      let response: Response;
+      try {
+        response = await fetch(GROQ_API_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${apiKey}`,
+          },
+          body,
+        });
+      } catch (err) {
+        controller.error(err);
+        return;
+      }
+
+      if (!response.ok || !response.body) {
+        const msg = await response.text().catch(() => String(response.status));
+        controller.error(new Error(`Groq stream error: ${msg}`));
+        return;
+      }
+
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = '';
+
+      try {
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          buffer += decoder.decode(value, { stream: true });
+          const lines = buffer.split('\n');
+          buffer = lines.pop() ?? '';
+
+          for (const line of lines) {
+            const text = line.trim();
+            if (!text || text === 'data: [DONE]') continue;
+            if (!text.startsWith('data: ')) continue;
+            try {
+              const json = JSON.parse(text.slice(6));
+              const token = json.choices?.[0]?.delta?.content;
+              if (token) {
+                controller.enqueue(`data: ${JSON.stringify({ token })}\n\n`);
+              }
+            } catch {
+              // malformed chunk — skip
+            }
+          }
+        }
+      } finally {
+        reader.releaseLock();
+      }
+
+      controller.enqueue('data: [DONE]\n\n');
+      controller.close();
+    },
+  });
+}
+
+/**
  * Parse JSON from Groq response (handles markdown code blocks)
  */
 export function parseGroqJson<T>(content: string): T {

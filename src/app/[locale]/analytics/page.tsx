@@ -152,7 +152,7 @@ export default function AnalyticsPage() {
                       <p className="text-sm text-gray-600 dark:text-slate-400 mt-1">
                         {feature.description}
                       </p>
-                      <div className="mt-3 text-xs text-gray-400 dark:text-slate-500 font-mono">
+                      <div className="mt-3 text-xs text-gray-500 dark:text-slate-400 font-mono">
                         {feature.api}
                       </div>
                     </div>

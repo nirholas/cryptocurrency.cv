@@ -274,7 +274,7 @@ function TrendsView({
               className="hover:bg-neutral-50 dark:hover:bg-neutral-800/50 transition-colors cursor-pointer"
               onClick={() => onTickerClick?.(trend.ticker)}
             >
-              <td className="py-3 text-neutral-400 dark:text-neutral-500">{index + 1}</td>
+              <td className="py-3 text-neutral-500 dark:text-neutral-400">{index + 1}</td>
               <td className="py-3">
                 <div className="flex items-center gap-2">
                   <span className="font-semibold text-neutral-900 dark:text-white">{trend.ticker}</span>

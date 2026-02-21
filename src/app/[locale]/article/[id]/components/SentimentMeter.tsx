@@ -55,7 +55,7 @@ export default function SentimentMeter({ score, label, confidence }: SentimentMe
           <span className={`text-sm font-semibold ${textColor}`}>
             {displayLabel}
           </span>
-          <span className="text-xs text-gray-400 dark:text-slate-500">
+          <span className="text-xs text-gray-500 dark:text-slate-400">
             ({confidencePct}% confidence)
           </span>
         </div>

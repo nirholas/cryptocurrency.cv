@@ -211,7 +211,7 @@ export function CoinSocialBuzz({ coinId, coinSymbol }: CoinSocialBuzzProps) {
                   </div>
                   <span className="text-xs text-gray-500 dark:text-slate-400">@{inf.handle} · {formatFollowers(inf.followers)}</span>
                 </div>
-                <span className="text-xs text-gray-400 dark:text-slate-500 uppercase">{inf.platform}</span>
+                <span className="text-xs text-gray-500 dark:text-slate-400 uppercase">{inf.platform}</span>
               </div>
             ))}
           </div>
@@ -220,7 +220,7 @@ export function CoinSocialBuzz({ coinId, coinSymbol }: CoinSocialBuzzProps) {
 
       {/* Footer */}
       <div className="px-6 py-3 bg-gray-50 dark:bg-slate-700/30 border-t border-gray-100 dark:border-slate-700">
-        <p className="text-xs text-gray-400 dark:text-slate-500">
+        <p className="text-xs text-gray-500 dark:text-slate-400">
           Social data aggregated from X, Reddit, Telegram. Refreshes every 2 min.
         </p>
       </div>

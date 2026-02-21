@@ -58,7 +58,7 @@ function SentimentBar({ score, label }: { score: number; label: string }) {
           }}
         />
       </div>
-      <div className="flex justify-between text-[10px] text-gray-400 dark:text-slate-500">
+      <div className="flex justify-between text-[10px] text-gray-500 dark:text-slate-400">
         <span>Bearish</span>
         <span>Bullish</span>
       </div>
@@ -238,7 +238,7 @@ export function SentimentContext({ tickers, articleSentiment }: SentimentContext
               label={`${platform.platform} Sentiment`}
             />
             {platform.volume > 0 && (
-              <p className="mt-1 text-[10px] text-gray-400 dark:text-slate-500">
+              <p className="mt-1 text-[10px] text-gray-500 dark:text-slate-400">
                 {platform.volume.toLocaleString()} mentions
               </p>
             )}

@@ -129,7 +129,7 @@ export default async function CategoryPage({ params }: Props) {
           ) : (
             <div className="text-center py-12">
               <p className="text-gray-500 dark:text-slate-400">No articles found in this category.</p>
-              <p className="text-sm text-gray-400 dark:text-slate-500 mt-2">
+              <p className="text-sm text-gray-500 dark:text-slate-400 mt-2">
                 Try checking back later or browse all news.
               </p>
             </div>

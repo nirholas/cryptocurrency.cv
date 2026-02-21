@@ -322,10 +322,10 @@ export function WhaleAlerts({
                     </div>
 
                     <div className="flex items-center gap-2 mt-1">
-                      <span className="text-xs text-neutral-400 dark:text-neutral-500">
+                      <span className="text-xs text-neutral-500 dark:text-neutral-400">
                         {alert.blockchain}
                       </span>
-                      <span className="text-xs text-neutral-400 dark:text-neutral-500">•</span>
+                      <span className="text-xs text-neutral-500 dark:text-neutral-400">•</span>
                       <a
                         href={`https://${alert.blockchain === 'Ethereum' ? 'etherscan.io/tx/' : 'blockchain.com/btc/tx/'}${alert.hash}`}
                         target="_blank"
@@ -339,7 +339,7 @@ export function WhaleAlerts({
                 </div>
 
                 {/* Time */}
-                <div className="text-xs text-neutral-400 dark:text-neutral-500 whitespace-nowrap">
+                <div className="text-xs text-neutral-500 dark:text-neutral-400 whitespace-nowrap">
                   {formatTime(alert.timestamp)}
                 </div>
               </div>

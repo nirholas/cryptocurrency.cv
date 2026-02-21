@@ -10,6 +10,9 @@ out/
 dist/
 build/
 
+# MkDocs generated site
+docs/site/
+
 # Environment
 .env
 .env.local

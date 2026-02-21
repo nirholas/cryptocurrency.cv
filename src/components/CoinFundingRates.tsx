@@ -216,7 +216,7 @@ export function CoinFundingRates({ coinId, coinSymbol }: CoinFundingRatesProps) 
                 <span className={`font-mono text-sm font-medium w-20 text-right ${positive ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
                   {formatRate(rate.rate)}
                 </span>
-                <span className="text-xs text-gray-400 dark:text-slate-500 w-8">{rate.interval}</span>
+                <span className="text-xs text-gray-500 dark:text-slate-400 w-8">{rate.interval}</span>
               </div>
             );
           })}
@@ -229,7 +229,7 @@ export function CoinFundingRates({ coinId, coinSymbol }: CoinFundingRatesProps) 
 
       {/* Footer */}
       <div className="px-6 py-3 bg-gray-50 dark:bg-slate-700/30 border-t border-gray-100 dark:border-slate-700">
-        <p className="text-xs text-gray-400 dark:text-slate-500">
+        <p className="text-xs text-gray-500 dark:text-slate-400">
           Positive rates = longs pay shorts (bullish market). Refreshes every 60s.
         </p>
       </div>

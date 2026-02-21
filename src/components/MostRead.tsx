@@ -90,7 +90,7 @@ export default function MostRead({ articles, maxArticles = 7 }: MostReadProps) {
                     {article.source}
                   </span>
                   <span className="text-gray-300 dark:text-slate-600">·</span>
-                  <time className="text-gray-400 dark:text-slate-500" dateTime={article.pubDate}>
+                  <time className="text-gray-500 dark:text-slate-400" dateTime={article.pubDate}>
                     {formatDate(article.pubDate)}
                   </time>
                 </div>

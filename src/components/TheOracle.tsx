@@ -185,7 +185,7 @@ export function TheOracle() {
                 </div>
               )}
 
-              <p className="text-[10px] text-neutral-400 dark:text-neutral-500 mt-2">
+              <p className="text-[10px] text-neutral-500 dark:text-neutral-400 mt-2">
                 {message.timestamp.toLocaleTimeString()}
               </p>
             </div>

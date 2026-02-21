@@ -117,7 +117,7 @@ export default function ArticleShareCard({ title, url }: ArticleShareCardProps) 
       </button>
 
       {/* Attribution */}
-      <p className="text-[11px] text-gray-400 dark:text-slate-500 mt-3 text-center">
+      <p className="text-[11px] text-gray-500 dark:text-slate-400 mt-3 text-center">
         shared via <span className="font-medium">cryptocurrency.cv</span>
       </p>
     </div>

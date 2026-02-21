@@ -165,6 +165,7 @@ export function Heatmap({ coins }: HeatmapProps) {
           <select
             value={showTop}
             onChange={(e) => setShowTop(Number(e.target.value))}
+            aria-label="Number of coins to display"
             className="px-3 py-2 text-sm border border-gray-300 dark:border-slate-700 rounded-lg bg-white dark:bg-black text-slate-900 dark:text-white"
           >
             <option value={25}>Top 25</option>

@@ -162,7 +162,7 @@ export default async function ChainPage({ params }: Props) {
                         className="flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-slate-700/50 transition"
                       >
                         <div className="flex items-center gap-4">
-                          <span className="text-gray-400 dark:text-slate-500 w-6 text-sm">{index + 1}</span>
+                          <span className="text-gray-500 dark:text-slate-400 w-6 text-sm">{index + 1}</span>
                           {protocol.logo && (
                             <ProtocolImage 
                               src={protocol.logo} 

@@ -201,7 +201,7 @@ export function CoinNewsCorrelation({ coinId, coinSymbol }: CoinNewsCorrelationP
 
       {/* Footer */}
       <div className="px-6 py-3 bg-gray-50 dark:bg-slate-700/30 border-t border-gray-100 dark:border-slate-700">
-        <p className="text-xs text-gray-400 dark:text-slate-500">
+        <p className="text-xs text-gray-500 dark:text-slate-400">
           AI-powered analysis. Correlation ≠ causation. Not financial advice.
         </p>
       </div>

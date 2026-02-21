@@ -376,9 +376,10 @@ export function LiquidationsFeed() {
           </button>
           <button
             onClick={fetchInitialData}
+            aria-label="Refresh liquidations"
             className="p-1.5 text-gray-500 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
           >
-            <ArrowPathIcon className="w-5 h-5" />
+            <ArrowPathIcon className="w-5 h-5" aria-hidden="true" />
           </button>
         </div>
       </div>
@@ -457,6 +458,7 @@ export function LiquidationsFeed() {
         <select
           value={minAmount}
           onChange={(e) => setMinAmount(Number(e.target.value))}
+          aria-label="Minimum liquidation size"
           className="px-3 py-2 text-sm border border-gray-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 text-slate-900 dark:text-white"
         >
           <option value={0}>All sizes</option>

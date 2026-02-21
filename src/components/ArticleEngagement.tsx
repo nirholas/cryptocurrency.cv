@@ -113,7 +113,7 @@ export function ArticleEngagement({ articleId, articleTitle }: ArticleEngagement
           <span className="font-semibold text-gray-900 dark:text-white">
             {dominant.emoji} {dominant.label} ({dominantPct}%)
           </span>
-          <span className="text-gray-400 dark:text-slate-500">· {views.toLocaleString()} views</span>
+          <span className="text-gray-500 dark:text-slate-400">· {views.toLocaleString()} views</span>
         </div>
       )}
 
@@ -128,13 +128,13 @@ export function ArticleEngagement({ articleId, articleTitle }: ArticleEngagement
               myReaction === key
                 ? activeColor
                 : myReaction !== null
-                ? 'border-gray-200 dark:border-slate-600 text-gray-400 dark:text-slate-500 cursor-default'
+                ? 'border-gray-200 dark:border-slate-600 text-gray-500 dark:text-slate-400 cursor-default'
                 : `border-gray-200 dark:border-slate-600 text-gray-700 dark:text-slate-300 ${color} cursor-pointer active:scale-95`
             } ${animating === key ? 'scale-110' : ''}`}
           >
             <span className={animating === key ? 'animate-bounce' : ''}>{emoji}</span>
             <span>{label}</span>
-            <span className="text-xs text-gray-400 dark:text-slate-500 ml-0.5">{reactions[key]}</span>
+            <span className="text-xs text-gray-500 dark:text-slate-400 ml-0.5">{reactions[key]}</span>
           </button>
         ))}
       </div>

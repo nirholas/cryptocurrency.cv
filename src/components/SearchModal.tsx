@@ -450,7 +450,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                 <div className="py-8 text-center">
                   <div className="text-4xl mb-3">🔍</div>
                   <p className="text-gray-500 dark:text-slate-400">No results for "{searchQuery}"</p>
-                  <p className="text-sm text-gray-400 dark:text-slate-500 mt-1">Try different keywords</p>
+                  <p className="text-sm text-gray-500 dark:text-slate-400 mt-1">Try different keywords</p>
                 </div>
               ) : null}
               

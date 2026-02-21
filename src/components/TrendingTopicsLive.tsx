@@ -82,7 +82,7 @@ export function TrendingTopicsLive() {
           <h3 className="text-sm font-semibold text-gray-700 dark:text-slate-300">Trending Topics</h3>
         </div>
         {timeSince && (
-          <span className="text-xs text-gray-400 dark:text-slate-500">Updated {timeSince}</span>
+          <span className="text-xs text-gray-500 dark:text-slate-400">Updated {timeSince}</span>
         )}
       </div>
       <div className="overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-1 px-1">

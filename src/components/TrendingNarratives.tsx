@@ -147,14 +147,14 @@ export function TrendingNarratives() {
                       </span>
                     ))}
                     {narrative.relatedTickers.length > 4 && (
-                      <span className="text-xs text-gray-400 dark:text-slate-500">
+                      <span className="text-xs text-gray-500 dark:text-slate-400">
                         +{narrative.relatedTickers.length - 4}
                       </span>
                     )}
                   </div>
                 )}
 
-                <div className="text-xs text-gray-400 dark:text-slate-500">
+                <div className="text-xs text-gray-500 dark:text-slate-400">
                   {narrative.articles.length} article{narrative.articles.length !== 1 ? 's' : ''}
                 </div>
               </Link>

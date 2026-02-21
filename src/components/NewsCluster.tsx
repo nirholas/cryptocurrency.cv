@@ -71,7 +71,7 @@ export default function NewsCluster({ clusters, maxClusters = 4 }: NewsClusterPr
         <h2 className="text-xl font-bold text-gray-900 dark:text-white">
           Top Stories
         </h2>
-        <span className="text-xs font-medium text-gray-400 dark:text-slate-500 bg-gray-100 dark:bg-slate-800 px-2.5 py-1 rounded-full">
+        <span className="text-xs font-medium text-gray-500 dark:text-slate-400 bg-gray-100 dark:bg-slate-800 px-2.5 py-1 rounded-full">
           Multi-source coverage
         </span>
       </div>
@@ -96,7 +96,7 @@ export default function NewsCluster({ clusters, maxClusters = 4 }: NewsClusterPr
                     {primary.source}
                   </span>
                   <span className="text-gray-300 dark:text-slate-600">·</span>
-                  <time className="text-xs text-gray-400 dark:text-slate-500">{primary.timeAgo || ''}</time>
+                  <time className="text-xs text-gray-500 dark:text-slate-400">{primary.timeAgo || ''}</time>
                 </div>
 
                 <Link href={`/article/${primarySlug}`} className="group block mb-3">
@@ -118,7 +118,7 @@ export default function NewsCluster({ clusters, maxClusters = 4 }: NewsClusterPr
                       <SourceBadge key={a.source + a.link} source={a.source} />
                     ))}
                   </div>
-                  <span className="text-[11px] text-gray-400 dark:text-slate-500">
+                  <span className="text-[11px] text-gray-500 dark:text-slate-400">
                     {cluster.articles.length} sources
                   </span>
                 </div>

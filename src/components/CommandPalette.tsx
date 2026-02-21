@@ -204,7 +204,7 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
           ) : (
             Object.entries(groupedCommands).map(([category, cmds]) => (
               <div key={category} className="mb-2">
-                <div className="px-4 py-2 text-xs font-semibold text-gray-400 dark:text-slate-500 uppercase tracking-wider">
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider">
                   {categoryLabels[category] || category}
                 </div>
                 {cmds.map((cmd) => {
@@ -233,7 +233,7 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
                         )}
                       </div>
                       {cmd.shortcut && (
-                        <kbd className="px-2 py-0.5 text-xs font-medium text-gray-400 dark:text-slate-500 bg-gray-100 dark:bg-slate-800 rounded">
+                        <kbd className="px-2 py-0.5 text-xs font-medium text-gray-500 dark:text-slate-400 bg-gray-100 dark:bg-slate-800 rounded">
                           {cmd.shortcut}
                         </kbd>
                       )}
@@ -263,7 +263,7 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
                 select
               </span>
             </div>
-            <span className="text-gray-400 dark:text-slate-500">
+            <span className="text-gray-500 dark:text-slate-400">
               {flatCommands.length} commands
             </span>
           </div>

@@ -434,7 +434,7 @@ export default async function Home({ params }: Props) {
                     href="/about"
                     className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white text-black rounded-lg text-sm font-semibold hover:bg-gray-100 transition-colors"
                   >
-                    Learn More
+                    Learn more about our free API
                     <svg
                       className="w-4 h-4"
                       fill="none"

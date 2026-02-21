@@ -259,7 +259,7 @@ export default function HeadlinesPage() {
                                   </span>
                                 )}
                                 <span className="text-gray-700 dark:text-slate-300">{change.title}</span>
-                                <span className="text-gray-400 dark:text-slate-500 text-xs ml-auto">
+                                <span className="text-gray-500 dark:text-slate-400 text-xs ml-auto">
                                   {new Date(change.detectedAt).toLocaleTimeString()}
                                 </span>
                               </div>

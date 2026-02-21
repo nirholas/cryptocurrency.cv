@@ -145,7 +145,7 @@ export default function LatestNewsFeed({ articles, maxArticles = 15 }: LatestNew
                   >
                     {/* Time Column */}
                     <div className="flex-shrink-0 w-16 pt-0.5">
-                      <span className="text-xs font-mono text-gray-400 dark:text-slate-500 tabular-nums">
+                      <span className="text-xs font-mono text-gray-500 dark:text-slate-400 tabular-nums">
                         {time}
                       </span>
                     </div>
@@ -160,7 +160,7 @@ export default function LatestNewsFeed({ articles, maxArticles = 15 }: LatestNew
                         <span className={`text-[10px] font-bold uppercase tracking-wider ${config.textColor}`}>
                           {config.label}
                         </span>
-                        <span className="text-xs text-gray-400 dark:text-slate-500 ml-auto">
+                        <span className="text-xs text-gray-500 dark:text-slate-400 ml-auto">
                           {article.source}
                         </span>
                       </div>
@@ -170,7 +170,7 @@ export default function LatestNewsFeed({ articles, maxArticles = 15 }: LatestNew
                       </h4>
 
                       {article.description && (
-                        <p className="text-xs text-gray-400 dark:text-slate-500 line-clamp-2 leading-relaxed">
+                        <p className="text-xs text-gray-500 dark:text-slate-400 line-clamp-2 leading-relaxed">
                           {article.description}
                         </p>
                       )}

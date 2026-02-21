@@ -1,191 +1,383 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://cryptocurrency.cv/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/ADMIN/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/ADMIN/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/AGENTS/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/ADVANCED-FEATURES/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/AI-FEATURES/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/AGENTS/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/API/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/AI-FEATURES/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/ARCHITECTURE/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/API/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/CHANGELOG/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/API.zh-CN/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/COMPONENTS/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/ARCHITECTURE/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/CONTRIBUTING/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/CHANGELOG/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/DATABASE/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/COMPONENTS/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/DEPLOYMENT/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/CONTRIBUTING/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/DEVELOPER-GUIDE/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/DATABASE/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/FEATURES/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/DEPLOYMENT/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/HOOKS/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/DEVELOPER-GUIDE/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/INTERNATIONALIZATION/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/EXAMPLES/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/LIBRARIES/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/FEATURES/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/PREMIUM/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/HOOKS/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/QUICKSTART/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/INTERNATIONALIZATION/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/REALTIME/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/LIBRARIES/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/SCALABILITY/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/PREMIUM/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/SECURITY/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/QUICKSTART/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/SEO/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/RAG-ROADMAP/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/SOURCES/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/RAG/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/TESTING/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/REALTIME/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/USER-GUIDE/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/SCALABILITY/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/WELL-KNOWN/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/SECURITY/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/X402/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/SEO/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/examples/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/SOURCES/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/examples/discord/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/TESTING/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/examples/langchain/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/USER-GUIDE/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/examples/slack/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/WELL-KNOWN/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/examples/telegram/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/X402/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/integrations/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/vercelerror/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/integrations/alfred/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/examples/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/integrations/chatgpt/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/examples/agents/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/integrations/data-apis/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/examples/ai-platforms/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/integrations/extension/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/examples/csharp/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/integrations/mcp/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/examples/discord/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/integrations/raycast/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/examples/kotlin/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/integrations/widgets/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/examples/langchain/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/sdks/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/examples/react/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/sdks/go/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/examples/rust/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/sdks/javascript/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/examples/slack/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/sdks/php/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/examples/swift/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/sdks/python/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/examples/telegram/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/sdks/react/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/integrations/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
     <url>
-         <loc>https://cryptocurrency.cv/sdks/typescript/</loc>
-         <lastmod>2026-02-02</lastmod>
+         <loc>https://docs.cryptocurrency.cv/integrations/alfred/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/integrations/chatgpt/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/integrations/cli/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/integrations/copilot-extension/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/integrations/data-apis/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/integrations/extension/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/integrations/mcp/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/integrations/mobile/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/integrations/postman/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/integrations/raycast/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/integrations/smart-contracts/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/integrations/terminal/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/integrations/web3/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/integrations/widgets/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/prompts/PHASE-4.1-FEEDBACK-LOOP/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/prompts/PHASE-4.2-TIMELINE-GENERATION/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/prompts/PHASE-4.3-PERSONALIZATION/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/prompts/PHASE-5.1-MULTILINGUAL/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/prompts/PHASE-5.2-DISTRIBUTED-PROCESSING/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/prompts/PHASE-5.3-MODEL-FINETUNING/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/prompts/X402-MAINNET-DEPLOYMENT/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/sdks/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/sdks/go/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/sdks/javascript/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/sdks/php/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/sdks/python/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/sdks/react/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/sdks/ruby/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/sdks/rust/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/sdks/typescript/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/tutorials/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/tutorials/ai-features/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/tutorials/ai-sentiment/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/tutorials/analytics-research/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/tutorials/archive-export/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/tutorials/article-extraction/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/tutorials/defi-nft/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/tutorials/international-news/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/tutorials/market-data/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/tutorials/news-basics/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/tutorials/portfolio-watchlist/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/tutorials/premium-features/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/tutorials/realtime-sse/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/tutorials/search-filtering/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/tutorials/social-intelligence/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/tutorials/trading-signals/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/tutorials/user-alerts/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/tutorials/utility-endpoints/</loc>
+         <lastmod>2026-02-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cryptocurrency.cv/tutorials/webhooks-integrations/</loc>
+         <lastmod>2026-02-21</lastmod>
     </url>
 </urlset>

@@ -146,7 +146,7 @@ export function MarketSignals() {
           {data.fearGreed ? (
             <FearGreedGauge value={data.fearGreed.value} classification={data.fearGreed.valueClassification} />
           ) : (
-            <p className="text-sm text-gray-400 dark:text-slate-500">Unavailable</p>
+            <p className="text-sm text-gray-500 dark:text-slate-400">Unavailable</p>
           )}
         </Link>
 
@@ -174,7 +174,7 @@ export function MarketSignals() {
               })}
             </div>
           ) : (
-            <p className="text-sm text-gray-400 dark:text-slate-500">No signals available</p>
+            <p className="text-sm text-gray-500 dark:text-slate-400">No signals available</p>
           )}
         </Link>
 
@@ -206,7 +206,7 @@ export function MarketSignals() {
               )}
             </div>
           ) : (
-            <p className="text-sm text-gray-400 dark:text-slate-500">Unavailable</p>
+            <p className="text-sm text-gray-500 dark:text-slate-400">Unavailable</p>
           )}
         </Link>
       </div>

@@ -1,18 +1,11 @@
 'use client';
 
-import { useState, useRef, useCallback } from 'react';
-
-interface Source {
-  title: string;
-  url: string;
-}
+import { useState, useRef, useEffect } from 'react';
+import { useAIStream } from '@/hooks/useAIStream';
 
 interface QAEntry {
   question: string;
   answer: string;
-  confidence: number;
-  sources: Source[];
-  followUpQuestions: string[];
 }
 
 interface AskAboutThisProps {
@@ -22,71 +15,45 @@ interface AskAboutThisProps {
 }
 
 export function AskAboutThis({ context, contextType, placeholder }: AskAboutThisProps) {
-  const [entries, setEntries] = useState<QAEntry[]>([]);
+  const [history, setHistory] = useState<QAEntry[]>([]);
   const [input, setInput] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const [revealedChars, setRevealedChars] = useState<Record<number, number>>({});
+  const { text: streamText, loading, done, error, start, reset } = useAIStream();
 
-  const typeReveal = useCallback((index: number, text: string) => {
-    let pos = 0;
-    const interval = setInterval(() => {
-      pos += 3; // reveal 3 chars at a time for speed
-      if (pos >= text.length) {
-        pos = text.length;
-        clearInterval(interval);
-      }
-      setRevealedChars(prev => ({ ...prev, [index]: pos }));
-    }, 15);
-    return () => clearInterval(interval);
-  }, []);
-
-  const ask = async (question: string) => {
-    if (!question.trim() || loading) return;
-    setLoading(true);
-    setError(null);
-    setInput('');
-
-    try {
-      const res = await fetch('/api/ask', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question: question.trim(), context, contextType }),
-      });
-
-      if (!res.ok) throw new Error(`API error: ${res.status}`);
-      const data = await res.json();
-
-      const entry: QAEntry = {
-        question: question.trim(),
-        answer: (data.answer as string) || 'No answer available.',
-        confidence: Number(data.confidence || 0),
-        sources: ((data.sources || []) as Record<string, string>[]).map(s => ({
-          title: s.title || 'Source',
-          url: s.url || '#',
-        })),
-        followUpQuestions: ((data.followUpQuestions || data.followUp || []) as string[]).slice(0, 3),
-      };
-
-      const newEntries = [entry, ...entries].slice(0, 3);
-      setEntries(newEntries);
-
-      // Trigger type reveal for the new answer
-      typeReveal(0, entry.answer);
-      // Shift revealed chars for older entries
-      setRevealedChars(prev => {
-        const shifted: Record<number, number> = { 0: 0 };
-        for (const [k, v] of Object.entries(prev)) {
-          shifted[Number(k) + 1] = v;
-        }
-        return shifted;
-      });
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to get answer');
-    } finally {
-      setLoading(false);
+  // When a stream completes, archive the last streamed answer into history
+  const pendingQuestionRef = useRef('');
+  useEffect(() => {
+    if (done && pendingQuestionRef.current && streamText) {
+      setHistory(prev => [
+        { question: pendingQuestionRef.current, answer: streamText },
+        ...prev,
+      ].slice(0, 3));
+      pendingQuestionRef.current = '';
     }
+  }, [done, streamText]);
+
+  const ask = (question: string) => {
+    if (!question.trim() || loading) return;
+    pendingQuestionRef.current = question.trim();
+    reset();
+    setInput('');
+    start(
+      `/api/ask?stream=true&q=${encodeURIComponent(question.trim())}`,
+    );
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    ask(input);
+  };
+
+  const handleFollowUp = (q: string) => ask(q);
+
+  const handleClear = () => {
+    reset();
+    setHistory([]);
+    pendingQuestionRef.current = '';
+    inputRef.current?.focus();
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -172,7 +139,7 @@ export function AskAboutThis({ context, contextType, placeholder }: AskAboutThis
 
                 {/* Answer with type reveal */}
                 <div className="flex items-start gap-2 mb-3">
-                  <span className="text-xs font-bold text-gray-400 dark:text-slate-500 mt-0.5">A:</span>
+                  <span className="text-xs font-bold text-gray-500 dark:text-slate-400 mt-0.5">A:</span>
                   <p className="text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
                     {displayedAnswer}
                     {isRevealing && <span className="animate-pulse">▌</span>}

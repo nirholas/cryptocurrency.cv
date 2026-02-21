@@ -44,15 +44,14 @@ export default async function PriceTicker({ className = '' }: PriceTickerProps) 
           </div>
 
           {/* Scrolling price tickers */}
-          <div className="flex items-center gap-5 overflow-x-auto scrollbar-hide" role="list" aria-label="Current prices">
+          <ul className="flex items-center gap-5 overflow-x-auto scrollbar-hide list-none" aria-label="Current prices">
             {tickerCoins.map((coin) => {
               const isPositive = (coin.change || 0) >= 0;
               return (
+                <li key={coin.symbol}>
                 <Link
-                  key={coin.symbol}
                   href={`/coin/${coin.id}`}
                   className="flex items-center gap-1.5 whitespace-nowrap hover:opacity-80 transition-opacity"
-                  role="listitem"
                 >
                   <span className="text-gray-500 font-semibold">{coin.symbol}USD</span>
                   <span className="font-bold text-white tabular-nums">{formatPrice(coin.price)}</span>
@@ -64,9 +63,10 @@ export default async function PriceTicker({ className = '' }: PriceTickerProps) 
                     {isPositive ? '+' : ''}{coin.change?.toFixed(2)}%
                   </span>
                 </Link>
+                </li>
               );
             })}
-          </div>
+          </ul>
 
           {/* Fear & Greed Index - right side */}
           {fearGreed && (

@@ -91,7 +91,7 @@ export default async function MoversPage() {
                     className="flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-slate-700/50 transition"
                   >
                     <div className="flex items-center gap-3">
-                      <span className="text-gray-400 dark:text-slate-500 text-sm w-6">{index + 1}</span>
+                      <span className="text-gray-500 dark:text-slate-400 text-sm w-6">{index + 1}</span>
                       {coin.image && (
                         <img 
                           src={coin.image} 
@@ -134,7 +134,7 @@ export default async function MoversPage() {
                     className="flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-slate-700/50 transition"
                   >
                     <div className="flex items-center gap-3">
-                      <span className="text-gray-400 dark:text-slate-500 text-sm w-6">{index + 1}</span>
+                      <span className="text-gray-500 dark:text-slate-400 text-sm w-6">{index + 1}</span>
                       {coin.image && (
                         <img 
                           src={coin.image} 

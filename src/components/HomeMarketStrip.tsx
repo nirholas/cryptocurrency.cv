@@ -77,7 +77,7 @@ export default async function HomeMarketStrip() {
           <h2 className="text-xl font-bold text-gray-900 dark:text-white">
             Prices
           </h2>
-          <span className="text-xs text-gray-400 dark:text-slate-500 hidden sm:inline">
+          <span className="text-xs text-gray-500 dark:text-slate-400 hidden sm:inline">
             Explore all 3000+ cryptocurrency prices
           </span>
         </div>
@@ -95,7 +95,7 @@ export default async function HomeMarketStrip() {
       {/* CoinDesk-style ranked table */}
       <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden">
         {/* Table header */}
-        <div className="grid grid-cols-[40px_1fr_100px_90px] sm:grid-cols-[40px_1fr_120px_100px_100px_80px_120px] px-4 py-3 border-b border-gray-100 dark:border-slate-700 text-xs font-semibold text-gray-400 dark:text-slate-500 uppercase tracking-wider">
+        <div className="grid grid-cols-[40px_1fr_100px_90px] sm:grid-cols-[40px_1fr_120px_100px_100px_80px_120px] px-4 py-3 border-b border-gray-100 dark:border-slate-700 text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider">
           <span>#</span>
           <span>Name</span>
           <span className="text-right">Price</span>
@@ -147,7 +147,7 @@ export default async function HomeMarketStrip() {
                     <span className="text-sm font-bold text-gray-900 dark:text-white truncate block group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
                       {coin.name}
                     </span>
-                    <span className="text-xs text-gray-400 dark:text-slate-500 uppercase">
+                    <span className="text-xs text-gray-500 dark:text-slate-400 uppercase">
                       {coin.symbol}
                     </span>
                   </div>
@@ -203,7 +203,7 @@ export default async function HomeMarketStrip() {
         <div className="px-4 py-3 border-t border-gray-100 dark:border-slate-700 bg-gray-50/50 dark:bg-slate-800/50">
           <Link
             href="/markets"
-            className="text-xs font-semibold text-gray-400 dark:text-slate-500 hover:text-gray-700 dark:hover:text-slate-300 transition-colors"
+            className="text-xs font-semibold text-gray-500 dark:text-slate-400 hover:text-gray-700 dark:hover:text-slate-300 transition-colors"
           >
             Need more data? Explore CoinDesk Data API →
           </Link>

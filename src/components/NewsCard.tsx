@@ -144,7 +144,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
           className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
         >
           {priority && (
-            <span className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-100 dark:bg-slate-700 text-gray-400 dark:text-slate-500 font-bold text-sm flex items-center justify-center group-hover:bg-brand-100 dark:group-hover:bg-amber-900/30 group-hover:text-brand-600 dark:group-hover:text-amber-400 transition-colors">
+            <span className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-100 dark:bg-slate-700 text-gray-500 dark:text-slate-400 font-bold text-sm flex items-center justify-center group-hover:bg-brand-100 dark:group-hover:bg-amber-900/30 group-hover:text-brand-600 dark:group-hover:text-amber-400 transition-colors">
               {priority}
             </span>
           )}
@@ -155,7 +155,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
             <h3 className="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-brand-700 dark:group-hover:text-amber-400 transition-colors line-clamp-2 leading-snug">
               {article.title}
             </h3>
-            <time className="text-xs text-gray-400 dark:text-slate-500 mt-1 block" dateTime={article.pubDate}>
+            <time className="text-xs text-gray-500 dark:text-slate-400 mt-1 block" dateTime={article.pubDate}>
               {article.timeAgo}
             </time>
           </div>
@@ -179,7 +179,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
               <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${style.light} ${style.darkLight} ${style.text} ${style.darkText}`}>
                 {article.source}
               </span>
-              <time className="text-xs text-gray-400 dark:text-slate-500" dateTime={article.pubDate}>
+              <time className="text-xs text-gray-500 dark:text-slate-400" dateTime={article.pubDate}>
                 {article.timeAgo}
               </time>
             </div>
@@ -281,7 +281,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
             <span className={`inline-flex items-center text-xs font-bold px-2.5 py-1 rounded-full ring-1 ring-inset ${style.light} ${style.darkLight} ${style.text} ${style.darkText} ${style.border} dark:ring-0`}>
               {article.source}
             </span>
-            <span className="text-xs text-gray-400 dark:text-slate-500 flex items-center gap-1">
+            <span className="text-xs text-gray-500 dark:text-slate-400 flex items-center gap-1">
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
@@ -304,7 +304,7 @@ export default function NewsCard({ article, variant = 'default', showDescription
 
           {/* Footer */}
           <div className="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-slate-700 mt-auto">
-            <time className="text-xs text-gray-400 dark:text-slate-500" dateTime={article.pubDate}>
+            <time className="text-xs text-gray-500 dark:text-slate-400" dateTime={article.pubDate}>
               {article.timeAgo}
             </time>
             <span className="text-brand-600 dark:text-amber-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">

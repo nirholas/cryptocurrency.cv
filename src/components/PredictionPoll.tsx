@@ -155,7 +155,7 @@ export function PredictionPoll({ coinId }: PredictionPollProps) {
                 fallbackVote === 'bullish'
                   ? 'bg-green-500 text-white scale-105'
                   : fallbackVote !== null
-                  ? 'bg-gray-100 dark:bg-slate-700 text-gray-400 dark:text-slate-500'
+                  ? 'bg-gray-100 dark:bg-slate-700 text-gray-500 dark:text-slate-400'
                   : 'bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 hover:bg-green-100 dark:hover:bg-green-900/40'
               }`}
             >
@@ -168,7 +168,7 @@ export function PredictionPoll({ coinId }: PredictionPollProps) {
                 fallbackVote === 'bearish'
                   ? 'bg-red-500 text-white scale-105'
                   : fallbackVote !== null
-                  ? 'bg-gray-100 dark:bg-slate-700 text-gray-400 dark:text-slate-500'
+                  ? 'bg-gray-100 dark:bg-slate-700 text-gray-500 dark:text-slate-400'
                   : 'bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-900/40'
               }`}
             >

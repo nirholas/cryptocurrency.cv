@@ -127,7 +127,7 @@ export default function FeaturedStoryTabs({ articles, maxArticles = 6 }: Feature
                 <span className={`inline-flex items-center text-[11px] font-bold px-2.5 py-1 text-white ${heroColor} uppercase tracking-wider rounded-sm`}>
                   {hero.source}
                 </span>
-                <time className="text-xs text-gray-400 dark:text-slate-500" dateTime={hero.pubDate}>
+                <time className="text-xs text-gray-500 dark:text-slate-400" dateTime={hero.pubDate}>
                   {hero.timeAgo}
                 </time>
               </div>
@@ -168,7 +168,7 @@ export default function FeaturedStoryTabs({ articles, maxArticles = 6 }: Feature
                   className="group flex items-start gap-4 p-5 hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors"
                 >
                   {/* Number */}
-                  <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-gray-100 dark:bg-slate-700 text-gray-400 dark:text-slate-500 font-bold text-sm flex items-center justify-center group-hover:bg-brand-100 dark:group-hover:bg-amber-900/30 group-hover:text-brand-600 dark:group-hover:text-amber-400 transition-colors">
+                  <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-gray-100 dark:bg-slate-700 text-gray-500 dark:text-slate-400 font-bold text-sm flex items-center justify-center group-hover:bg-brand-100 dark:group-hover:bg-amber-900/30 group-hover:text-brand-600 dark:group-hover:text-amber-400 transition-colors">
                     {i + 2}
                   </span>
                   <div className="flex-1 min-w-0">
@@ -178,7 +178,7 @@ export default function FeaturedStoryTabs({ articles, maxArticles = 6 }: Feature
                         {article.source}
                       </span>
                       <span className="text-gray-300 dark:text-slate-600">·</span>
-                      <time className="text-xs text-gray-400 dark:text-slate-500" dateTime={article.pubDate}>
+                      <time className="text-xs text-gray-500 dark:text-slate-400" dateTime={article.pubDate}>
                         {article.timeAgo}
                       </time>
                     </div>

@@ -1,8 +1,10 @@
 import { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { OracleChat } from '@/components/OracleChat';
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'oracle' });
   return { 
@@ -11,7 +13,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default function OraclePage() {
+export default async function OraclePage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <main className="container mx-auto px-4 py-8">
       <OracleChat />
