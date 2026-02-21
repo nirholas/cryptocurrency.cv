@@ -9,12 +9,17 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
+import { createHash } from 'crypto';
+import { schnorr } from '@noble/curves/secp256k1';
+import { bytesToHex } from '@noble/curves/abstract/utils';
+
+export const runtime = 'nodejs';
 
 // Nostr event kinds
 const EVENT_KINDS = {
   TEXT_NOTE: 1,
-  ARTICLE: 30023, // Long-form content
-  NEWS: 30024, // Custom news kind (proposed)
+  ARTICLE: 30023, // Long-form content NIP-23
+  NEWS: 30024,    // Custom news kind (proposed)
 };
 
 // Default relays
@@ -26,6 +31,16 @@ const DEFAULT_RELAYS = [
   'wss://nostr.wine',
 ];
 
+/** The service's Nostr public key (npub or hex). Set NOSTR_PUBKEY in env, or derive from NOSTR_PRIVATE_KEY. */
+const SERVICE_PUBKEY = process.env.NOSTR_PUBKEY || null;
+
+/** Resolve the best available pubkey: explicit env var, or derived from private key. */
+function resolveServicePubkey(): string | null {
+  if (SERVICE_PUBKEY) return SERVICE_PUBKEY;
+  const kp = getNostrKeypair();
+  return kp ? kp.pubkey : null;
+}
+
 interface NostrEvent {
   id: string;
   pubkey: string;
@@ -36,12 +51,15 @@ interface NostrEvent {
   sig: string;
 }
 
-// Store published events (in production, use DB)
+// Session-local published events (persists within one serverless container lifetime)
 const publishedEvents: NostrEvent[] = [];
 
-// Generate Nostr event ID (simplified - in production use proper signing)
-function generateEventId(event: Partial<NostrEvent>): string {
-  const data = JSON.stringify([
+/**
+ * Compute a proper Nostr event ID per NIP-01:
+ * SHA256 of JSON.stringify([0, pubkey, created_at, kind, tags, content])
+ */
+function computeEventId(event: Omit<NostrEvent, 'id' | 'sig'>): string {
+  const serialized = JSON.stringify([
     0,
     event.pubkey,
     event.created_at,
@@ -49,14 +67,32 @@ function generateEventId(event: Partial<NostrEvent>): string {
     event.tags,
     event.content,
   ]);
-  // Simplified hash - in production use proper crypto
-  let hash = 0;
-  for (let i = 0; i < data.length; i++) {
-    const char = data.charCodeAt(i);
-    hash = ((hash << 5) - hash) + char;
-    hash = hash & hash;
+  return createHash('sha256').update(serialized).digest('hex');
+}
+
+/**
+ * Derive the Nostr pubkey (x-only 32-byte hex) from a private key.
+ * Returns null if the private key is invalid or missing.
+ */
+function getNostrKeypair(): { pubkey: string; privkey: string } | null {
+  const privkey = process.env.NOSTR_PRIVATE_KEY;
+  if (!privkey || privkey.length !== 64) return null;
+  try {
+    const pubkeyBytes = schnorr.getPublicKey(privkey);
+    return { pubkey: bytesToHex(pubkeyBytes), privkey };
+  } catch {
+    return null;
   }
-  return Math.abs(hash).toString(16).padStart(64, '0');
+}
+
+/**
+ * Sign a Nostr event with secp256k1 Schnorr (NIP-01).
+ * Returns a fully signed NostrEvent.
+ */
+function signEvent(base: Omit<NostrEvent, 'id' | 'sig'>, privkey: string): NostrEvent {
+  const id = computeEventId(base);
+  const sig = bytesToHex(schnorr.sign(id, privkey));
+  return { ...base, id, sig };
 }
 
 // Format news article for Nostr
@@ -89,25 +125,37 @@ export async function GET(request: NextRequest) {
   
   // Get NIP-05 verification
   if (action === 'nip05') {
+    const pubkey = resolveServicePubkey();
+    if (!pubkey) {
+      return NextResponse.json(
+        { error: 'NOSTR_PUBKEY not configured. Set NOSTR_PUBKEY or NOSTR_PRIVATE_KEY in environment variables.' },
+        { status: 503 }
+      );
+    }
     return NextResponse.json({
       names: {
-        'news': 'pubkey_here', // Would be actual pubkey
-        '_': 'pubkey_here',
+        'news': pubkey,
+        '_': pubkey,
       },
-      relays: {
-        'pubkey_here': DEFAULT_RELAYS,
-      },
+      relays: { [pubkey]: DEFAULT_RELAYS },
     });
   }
   
   // Get feed configuration
   if (action === 'feed') {
+    const pubkey = resolveServicePubkey();
+    if (!pubkey) {
+      return NextResponse.json(
+        { error: 'NOSTR_PUBKEY not configured. Set NOSTR_PUBKEY or NOSTR_PRIVATE_KEY in environment variables.' },
+        { status: 503 }
+      );
+    }
     return NextResponse.json({
       success: true,
       feed: {
         name: 'Free Crypto News',
         description: 'Real-time crypto news from 200+ sources',
-        pubkey: 'npub1...', // Placeholder
+        pubkey,
         relays: DEFAULT_RELAYS,
         tags: ['crypto', 'news', 'bitcoin', 'ethereum', 'defi'],
         kinds: [EVENT_KINDS.TEXT_NOTE, EVENT_KINDS.ARTICLE],
@@ -130,74 +178,90 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { action, articles, privateKey } = body;
+    const { action, articles } = body;
     
     // Publish latest news
     if (action === 'publish') {
+      const keypair = getNostrKeypair();
+      if (!keypair) {
+        return NextResponse.json({
+          success: false,
+          error: 'NOSTR_PRIVATE_KEY not configured or invalid',
+          message: 'Set NOSTR_PRIVATE_KEY to a 64-char hex secp256k1 private key to publish signed Nostr events.',
+          setup: 'Generate a key with: node -e "console.log(require(\'crypto\').randomBytes(32).toString(\'hex\'))"',
+        }, { status: 503 });
+      }
+
       const articlesToPublish = articles || [];
       const events: NostrEvent[] = [];
-      
+
       for (const article of articlesToPublish.slice(0, 10)) {
         const content = formatNewsForNostr(article);
-        
-        const event: NostrEvent = {
-          id: '',
-          pubkey: 'fcn_demo_pubkey_' + Date.now(), // Placeholder
-          created_at: Math.floor(Date.now() / 1000),
-          kind: EVENT_KINDS.TEXT_NOTE,
-          tags: [
-            ['t', 'crypto'],
-            ['t', 'news'],
-            ['t', article.sourceKey || 'bitcoin'],
-            ['source', article.source],
-            ['r', article.link],
-          ],
-          content,
-          sig: 'demo_signature', // Would be proper signature
-        };
-        
-        event.id = generateEventId(event);
+        const created_at = Math.floor(Date.now() / 1000);
+        const tags: string[][] = [
+          ['t', 'crypto'],
+          ['t', 'news'],
+          ['t', article.sourceKey || 'bitcoin'],
+          ['source', article.source],
+          ['r', article.link],
+        ];
+
+        const event = signEvent(
+          { pubkey: keypair.pubkey, created_at, kind: EVENT_KINDS.TEXT_NOTE, tags, content },
+          keypair.privkey
+        );
         events.push(event);
         publishedEvents.push(event);
       }
-      
+
       return NextResponse.json({
         success: true,
         published: events.length,
         events,
         relays: DEFAULT_RELAYS,
-        message: `Published ${events.length} news events to Nostr`,
+        message: `Published ${events.length} Nostr events (Schnorr signed, NIP-01)`,
       });
     }
     
     // Create long-form article (NIP-23)
     if (action === 'article') {
+      const keypair = getNostrKeypair();
+      if (!keypair) {
+        return NextResponse.json({
+          success: false,
+          error: 'NOSTR_PRIVATE_KEY not configured or invalid',
+          message: 'Set NOSTR_PRIVATE_KEY to a 64-char hex secp256k1 private key to publish signed Nostr events.',
+        }, { status: 503 });
+      }
+
       const { title, content, summary, image, tags } = body;
-      
-      const event: NostrEvent = {
-        id: '',
-        pubkey: 'fcn_demo_pubkey_' + Date.now(),
-        created_at: Math.floor(Date.now() / 1000),
-        kind: EVENT_KINDS.ARTICLE,
-        tags: [
-          ['d', `crypto-news-${Date.now()}`],
-          ['title', title],
-          ['summary', summary || ''],
-          ['image', image || ''],
-          ['published_at', Math.floor(Date.now() / 1000).toString()],
-          ...(tags || ['crypto', 'news']).map((t: string) => ['t', t]),
-        ],
-        content,
-        sig: 'demo_signature',
-      };
-      
-      event.id = generateEventId(event);
+      const created_at = Math.floor(Date.now() / 1000);
+      const dTag = `crypto-news-${Date.now()}`;
+      const eventTags: string[][] = [
+        ['d', dTag],
+        ['title', title],
+        ['summary', summary || ''],
+        ['image', image || ''],
+        ['published_at', created_at.toString()],
+        ...(tags || ['crypto', 'news']).map((t: string) => ['t', t]),
+      ];
+
+      const event = signEvent(
+        { pubkey: keypair.pubkey, created_at, kind: EVENT_KINDS.ARTICLE, tags: eventTags, content },
+        keypair.privkey
+      );
       publishedEvents.push(event);
-      
+
+      // NIP-19 naddr: requires bech32 encoding of kind + pubkey + d-tag
+      // Full encoding: use @scure/base + TLV. Providing hex ID for now.
+      const naddr = `${keypair.pubkey}:${EVENT_KINDS.ARTICLE}:${dTag}`;
+
       return NextResponse.json({
         success: true,
         event,
-        naddr: `naddr1...${event.id.slice(0, 8)}`, // Placeholder NIP-19
+        event_id: event.id,
+        naddr,
+        naddr_format: 'pubkey:kind:d-tag (NIP-19 bech32 encoding requires @scure/base)',
       });
     }
     

@@ -316,8 +316,8 @@ export const ApiError = {
  */
 export function withErrorHandler<T extends (...args: any[]) => Promise<NextResponse>>(
   handler: T
-): T {
-  return (async (...args: Parameters<T>) => {
+): (...args: Parameters<T>) => Promise<NextResponse> {
+  return async (...args: Parameters<T>) => {
     try {
       return await handler(...args);
     } catch (error) {
@@ -328,5 +328,5 @@ export function withErrorHandler<T extends (...args: any[]) => Promise<NextRespo
         error instanceof Error ? error.message : String(error)
       );
     }
-  }) as T;
+  };
 }
