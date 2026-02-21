@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import { setRequestLocale } from 'next-intl/server';
-import { OrderBookDashboard } from '@/components/OrderBookDashboard';
+const OrderBookDashboard = dynamic(
+  () => import('@/components/OrderBookDashboard').then(m => ({ default: m.OrderBookDashboard })),
+  { ssr: false }
+);
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 

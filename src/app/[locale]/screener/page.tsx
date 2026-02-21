@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import { setRequestLocale } from 'next-intl/server';
-import { Screener } from '@/components/Screener';
+const Screener = dynamic(
+  () => import('@/components/Screener').then(m => ({ default: m.Screener })),
+  { ssr: false }
+);
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { fetchCoinGecko } from '@/lib/coingecko';

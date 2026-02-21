@@ -1,6 +1,10 @@
 import { Suspense } from 'react';
 import type { Metadata } from 'next';
-import { ProtocolHealthDashboard } from '@/components/ProtocolHealthDashboard';
+import dynamic from 'next/dynamic';
+const ProtocolHealthDashboard = dynamic(
+  () => import('@/components/ProtocolHealthDashboard').then(m => ({ default: m.ProtocolHealthDashboard })),
+  { ssr: false }
+);
 
 // =============================================================================
 // Metadata

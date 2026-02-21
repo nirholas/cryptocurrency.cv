@@ -12,7 +12,11 @@
  */
 
 import type { Metadata } from 'next';
-import { RegulatoryDashboard } from '@/components/RegulatoryDashboard';
+import dynamic from 'next/dynamic';
+const RegulatoryDashboard = dynamic(
+  () => import('@/components/RegulatoryDashboard').then(m => ({ default: m.RegulatoryDashboard })),
+  { ssr: false }
+);
 import Link from 'next/link';
 
 export const metadata: Metadata = {

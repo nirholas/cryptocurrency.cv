@@ -171,7 +171,7 @@ describe('GET /api/news', () => {
         per_page: 20,
         lang: 'en',
       },
-    });
+    } as any);
 
     mockGetLatestNews.mockResolvedValueOnce({
       articles: [makeArticle({ category: 'bitcoin' })],

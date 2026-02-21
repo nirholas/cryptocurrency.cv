@@ -525,6 +525,10 @@ Order book data.
 
 ## Archive & Historical
 
+**Total archived articles:** 24,209  
+**Date range:** 2010-07-31 → 2026-01-11  
+**Last updated:** 2026-02-05
+
 ### GET /api/archive
 Historical news by date. Params: `date` (YYYY-MM-DD), `year`, `month`
 Archive covers 2010–present with full metadata and market context.
@@ -775,6 +779,130 @@ curl "https://cryptocurrency.cv/api/search?q=bitcoin+ETF&limit=5"
 curl "https://cryptocurrency.cv/api/sentiment?asset=BTC"
 curl "https://cryptocurrency.cv/api/ai/brief"
 curl "https://cryptocurrency.cv/api/rag/ask?q=What+is+DeFi"
+```
+
+---
+
+## Valid Source Keys
+
+Use these values with the `?source=` query parameter on any news endpoint.
+Example: `GET /api/news?source=coindesk&limit=10`
+
+ambcrypto, beincrypto, binance, bitcoinist, bitfinex, blockworks, bravenewcoin,
+ccn, chainlink, coinspeaker, coindesk, cointelegraph, cryptobriefing, cryptoglobe,
+cryptopotato, cryptoslate, cryptoninjas, dailyhodl, decrypt, forkast, finbold,
+forbes, medium, newsbtc, pancakeswap, reddit, theblock, trustnodes, twitter,
+utoday, zycrypto
+
+---
+
+## MCP Tool Signatures
+
+The Claude MCP server (`mcp/`) exposes these tools. Each tool maps to a
+REST endpoint. Install via: `npx -y @smithery/cli install cryptocurrency-news`
+
+### get_crypto_news
+Fetch the latest crypto news. Args: category (bitcoin|ethereum|defi|solana|nft|
+altcoin|regulation|exchange|whale|general), limit (1-50, default 10),
+ticker (filter by asset e.g. BTC).
+
+### search_crypto_news
+Full-text search the archive. Args: query (required), limit (1-50), category.
+
+### get_defi_news
+DeFi-specific news feed. Args: limit (1-50, default 10).
+
+### get_bitcoin_news
+Bitcoin-only news. Args: limit (1-50, default 10).
+
+### get_breaking_news
+Latest breaking articles (newest first). Args: limit (1-50, default 5).
+
+### get_market_data
+Current crypto market data (prices, market caps, 24h change).
+Args: coins (comma-separated list, e.g. "bitcoin,ethereum"), currency (default usd).
+
+### get_fear_greed_index
+Crypto Fear & Greed Index. Args: days (number of historical points, default 1).
+
+### get_gas_prices
+Ethereum gas prices (slow/standard/fast in gwei). No args.
+
+### get_regulatory_news
+Regulatory and legal crypto news. Args: limit (1-50, default 10).
+
+### get_whale_alerts
+Large on-chain transactions (whale movements). Args: limit (1-50, default 10),
+min_value_usd (minimum USD value, default 1000000).
+
+### get_funding_rates
+Perpetual futures funding rates. Args: symbols (comma-separated, default "BTC,ETH").
+
+### get_liquidations
+Recent liquidation events. Args: limit (1-50, default 20).
+
+### get_defi_yields
+DeFi protocol yield rates. Args: limit (1-50, default 10), min_apy (minimum APY filter).
+
+### get_ai_market_brief
+AI-generated market summary (sentiment, key themes, recent headlines). No args.
+
+### compare_coins
+Compare two or more coins. Args: coins (comma-separated, required),
+metric (price|volume|market_cap|change, default price).
+
+### get_exchange_flows
+Exchange inflow/outflow data. Args: exchange (optional, e.g. "binance"), limit (default 10).
+
+### get_token_unlocks
+Upcoming token unlock schedules. Args: limit (1-50, default 10).
+
+### get_social_sentiment
+Social-media sentiment for a coin. Args: coin (required, e.g. "bitcoin"), days (default 7).
+
+### get_news_sources
+List all available news sources with metadata. No args.
+
+---
+
+## OpenAPI Schemas
+
+Canonical response shapes for all news endpoints.
+
+### NewsArticle
+```
+title:       string   — Headline text
+link:        string   — Original article URL
+description: string   — Short summary / lede
+pubDate:     string   — ISO 8601 publication date
+source:      string   — Human-readable source name (e.g. "CoinDesk")
+sourceKey:   string   — Machine key (e.g. "coindesk") for ?source= filter
+category:    string   — Enum: general | bitcoin | defi
+timeAgo:     string   — Human-readable relative time (e.g. "2 hours ago")
+```
+
+### NewsResponse
+```
+articles: NewsArticle[]  — Array of article objects
+total:    integer        — Total matches available
+page:     integer        — Current page (1-based)
+limit:    integer        — Page size used
+```
+
+### SourceInfo
+```
+name:        string   — Human-readable source name
+key:         string   — Machine identifier (use with ?source=)
+url:         string   — Source homepage
+category:    string   — Primary content category
+articleCount:integer  — Number of articles in archive
+lastSeen:    string   — ISO date of most recent article
+```
+
+### SourcesResponse
+```
+sources:    SourceInfo[]  — Array of source objects
+total:      integer       — Total number of sources
 ```
 
 ---

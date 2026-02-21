@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
 interface BlogPost {
@@ -48,7 +47,6 @@ export default function BlogAdminPage() {
     ? posts 
     : posts.filter(p => p.category === filter);
 
-  const t = useTranslations('common');
   return (
     <div className="min-h-screen bg-gray-900 text-white p-8">
       <div className="max-w-6xl mx-auto">
@@ -167,7 +165,7 @@ export default function BlogAdminPage() {
                           href={`/admin/blog/edit/${post.slug}`}
                           className="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-sm transition"
                         >
-                          {t('edit')}
+                          Edit
                         </Link>
                       </div>
                     </td>

@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import { setRequestLocale } from 'next-intl/server';
-import { LiquidationsFeed } from '@/components/LiquidationsFeed';
+const LiquidationsFeed = dynamic(
+  () => import('@/components/LiquidationsFeed').then(m => ({ default: m.LiquidationsFeed })),
+  { ssr: false }
+);
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 

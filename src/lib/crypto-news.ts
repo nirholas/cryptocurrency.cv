@@ -1548,6 +1548,311 @@ const API_SOURCES: Record<string, ApiSource> = {
       }];
     },
   },
+
+  // ═══════════════════════════════════════════════════════════════
+  // REDDIT (free, no key needed — public JSON API)
+  // ═══════════════════════════════════════════════════════════════
+  reddit_crypto: {
+    name: 'Reddit r/CryptoCurrency',
+    url: 'https://www.reddit.com/r/CryptoCurrency/hot.json?limit=10',
+    category: 'social',
+    parser: (data: unknown) => {
+      const response = data as { data?: { children?: Array<{ data: {
+        title: string; url: string; selftext: string; score: number;
+        num_comments: number; author: string; created_utc: number; permalink: string;
+      } }> } };
+      if (!response.data?.children) return [];
+      return response.data.children
+        .filter(c => c.data.score > 100)
+        .slice(0, 8)
+        .map(c => {
+          const post = c.data;
+          return {
+            title: decodeHTMLEntities(post.title),
+            link: post.url.startsWith('http') ? post.url : `https://reddit.com${post.permalink}`,
+            description: post.selftext?.slice(0, 200) || `${post.score.toLocaleString()} upvotes · ${post.num_comments} comments`,
+            pubDate: new Date(post.created_utc * 1000).toISOString(),
+            source: 'Reddit r/CryptoCurrency',
+            sourceKey: 'reddit_crypto',
+            category: 'social',
+            timeAgo: getTimeAgo(new Date(post.created_utc * 1000)),
+          };
+        });
+    },
+  },
+
+  reddit_bitcoin: {
+    name: 'Reddit r/Bitcoin',
+    url: 'https://www.reddit.com/r/Bitcoin/hot.json?limit=10',
+    category: 'social',
+    parser: (data: unknown) => {
+      const response = data as { data?: { children?: Array<{ data: {
+        title: string; url: string; selftext: string; score: number;
+        num_comments: number; author: string; created_utc: number; permalink: string;
+      } }> } };
+      if (!response.data?.children) return [];
+      return response.data.children
+        .filter(c => c.data.score > 100)
+        .slice(0, 6)
+        .map(c => {
+          const post = c.data;
+          return {
+            title: decodeHTMLEntities(post.title),
+            link: post.url.startsWith('http') ? post.url : `https://reddit.com${post.permalink}`,
+            description: post.selftext?.slice(0, 200) || `${post.score.toLocaleString()} upvotes · ${post.num_comments} comments`,
+            pubDate: new Date(post.created_utc * 1000).toISOString(),
+            source: 'Reddit r/Bitcoin',
+            sourceKey: 'reddit_bitcoin',
+            category: 'bitcoin',
+            timeAgo: getTimeAgo(new Date(post.created_utc * 1000)),
+          };
+        });
+    },
+  },
+
+  reddit_defi: {
+    name: 'Reddit r/defi',
+    url: 'https://www.reddit.com/r/defi/hot.json?limit=8',
+    category: 'social',
+    parser: (data: unknown) => {
+      const response = data as { data?: { children?: Array<{ data: {
+        title: string; url: string; selftext: string; score: number;
+        num_comments: number; created_utc: number; permalink: string;
+      } }> } };
+      if (!response.data?.children) return [];
+      return response.data.children
+        .filter(c => c.data.score > 50)
+        .slice(0, 5)
+        .map(c => {
+          const post = c.data;
+          return {
+            title: decodeHTMLEntities(post.title),
+            link: post.url.startsWith('http') ? post.url : `https://reddit.com${post.permalink}`,
+            description: post.selftext?.slice(0, 200) || `${post.score.toLocaleString()} upvotes · ${post.num_comments} comments`,
+            pubDate: new Date(post.created_utc * 1000).toISOString(),
+            source: 'Reddit r/defi',
+            sourceKey: 'reddit_defi',
+            category: 'defi',
+            timeAgo: getTimeAgo(new Date(post.created_utc * 1000)),
+          };
+        });
+    },
+  },
+
+  reddit_ethereum: {
+    name: 'Reddit r/ethereum',
+    url: 'https://www.reddit.com/r/ethereum/hot.json?limit=8',
+    category: 'social',
+    parser: (data: unknown) => {
+      const response = data as { data?: { children?: Array<{ data: {
+        title: string; url: string; selftext: string; score: number;
+        num_comments: number; created_utc: number; permalink: string;
+      } }> } };
+      if (!response.data?.children) return [];
+      return response.data.children
+        .filter(c => c.data.score > 50)
+        .slice(0, 5)
+        .map(c => {
+          const post = c.data;
+          return {
+            title: decodeHTMLEntities(post.title),
+            link: post.url.startsWith('http') ? post.url : `https://reddit.com${post.permalink}`,
+            description: post.selftext?.slice(0, 200) || `${post.score.toLocaleString()} upvotes · ${post.num_comments} comments`,
+            pubDate: new Date(post.created_utc * 1000).toISOString(),
+            source: 'Reddit r/ethereum',
+            sourceKey: 'reddit_ethereum',
+            category: 'ethereum',
+            timeAgo: getTimeAgo(new Date(post.created_utc * 1000)),
+          };
+        });
+    },
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // DEFILLAMA RAISES (free, no key needed)
+  // Crypto fundraising rounds — high-signal institutional news
+  // ═══════════════════════════════════════════════════════════════
+  defillama_raises: {
+    name: 'DeFiLlama Raises',
+    url: 'https://api.llama.fi/raises',
+    category: 'institutional',
+    parser: (data: unknown) => {
+      const response = data as { raises?: Array<{
+        name: string;
+        amount: number | null;
+        date: number;
+        round: string;
+        source: string;
+        leadInvestors: string[];
+        chains: string[];
+        category: string;
+        sector: string;
+      }> };
+      if (!response.raises) return [];
+      const cutoff = Date.now() / 1000 - 60 * 60 * 24 * 7; // last 7 days
+      return response.raises
+        .filter(r => r.date > cutoff && r.source)
+        .slice(0, 10)
+        .map(r => {
+          const amountStr = r.amount ? `$${r.amount}M` : 'undisclosed amount';
+          const investors = r.leadInvestors?.length ? ` led by ${r.leadInvestors.slice(0, 2).join(', ')}` : '';
+          return {
+            title: `💰 ${r.name} raises ${amountStr} in ${r.round || 'funding round'}${investors}`,
+            link: r.source || 'https://defillama.com/raises',
+            description: `${r.category || ''} ${r.sector || ''} · Chains: ${r.chains?.join(', ') || 'N/A'}`.trim(),
+            pubDate: new Date(r.date * 1000).toISOString(),
+            source: 'DeFiLlama Raises',
+            sourceKey: 'defillama_raises',
+            category: 'institutional',
+            timeAgo: getTimeAgo(new Date(r.date * 1000)),
+          };
+        });
+    },
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // BINANCE ANNOUNCEMENTS (public endpoint, no key needed)
+  // ═══════════════════════════════════════════════════════════════
+  binance_announcements: {
+    name: 'Binance Announcements',
+    url: 'https://www.binance.com/bapi/composite/v1/public/cms/article/list/query?type=1&pageNo=1&pageSize=10&catalogId=48',
+    category: 'general',
+    parser: (data: unknown) => {
+      const response = data as { data?: { catalogs?: Array<{ articles?: Array<{
+        id: number; code: string; title: string; releaseDate: number;
+      }> }> } };
+      const articles = response.data?.catalogs?.[0]?.articles;
+      if (!articles) return [];
+      return articles.slice(0, 8).map(item => ({
+        title: decodeHTMLEntities(item.title),
+        link: `https://www.binance.com/en/support/announcement/${item.code}`,
+        description: `Binance official announcement`,
+        pubDate: new Date(item.releaseDate).toISOString(),
+        source: 'Binance',
+        sourceKey: 'binance_announcements',
+        category: 'general',
+        timeAgo: getTimeAgo(new Date(item.releaseDate)),
+      }));
+    },
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // KEY-GATED FREE TIER APIS
+  // Sign up for a free key to unlock these sources:
+  //
+  //  ALPHA_VANTAGE_API_KEY → https://www.alphavantage.co/support/#api-key
+  //  FINNHUB_API_KEY       → https://finnhub.io/register
+  //  MARKETAUX_API_KEY     → https://www.marketaux.com/register
+  //  GNEWS_API_KEY         → https://gnews.io/register
+  //
+  // Add these to your .env.local file to activate.
+  // ═══════════════════════════════════════════════════════════════
+  ...(process.env.ALPHA_VANTAGE_API_KEY ? {
+    alpha_vantage: {
+      name: 'Alpha Vantage News',
+      url: `https://www.alphavantage.co/query?function=NEWS_SENTIMENT&topics=blockchain&language=en&sort=LATEST&limit=30&apikey=${process.env.ALPHA_VANTAGE_API_KEY}`,
+      category: 'general',
+      parser: (data: unknown) => {
+        const response = data as { feed?: Array<{
+          title: string; url: string; time_published: string; summary: string;
+          source: string; overall_sentiment_label: string; overall_sentiment_score: number;
+          banner_image?: string;
+        }> };
+        if (!response.feed) return [];
+        return response.feed.slice(0, 20).map(item => ({
+          title: decodeHTMLEntities(item.title),
+          link: item.url,
+          description: item.summary?.slice(0, 200),
+          imageUrl: item.banner_image || undefined,
+          pubDate: item.time_published
+            ? new Date(`${item.time_published.slice(0, 4)}-${item.time_published.slice(4, 6)}-${item.time_published.slice(6, 8)}T${item.time_published.slice(9, 11)}:${item.time_published.slice(11, 13)}:${item.time_published.slice(13, 15)}Z`).toISOString()
+            : new Date().toISOString(),
+          source: item.source || 'Alpha Vantage',
+          sourceKey: 'alpha_vantage',
+          category: item.overall_sentiment_label?.toLowerCase().includes('bull') ? 'markets' : 'general',
+          timeAgo: getTimeAgo(new Date()),
+        }));
+      },
+    } as ApiSource,
+  } : {}),
+
+  ...(process.env.FINNHUB_API_KEY ? {
+    finnhub: {
+      name: 'Finnhub',
+      url: `https://finnhub.io/api/v1/news?category=crypto&token=${process.env.FINNHUB_API_KEY}`,
+      category: 'general',
+      parser: (data: unknown) => {
+        const items = data as Array<{
+          headline: string; url: string; summary: string; source: string;
+          datetime: number; image?: string; category: string;
+        }>;
+        if (!Array.isArray(items)) return [];
+        return items.slice(0, 20).map(item => ({
+          title: decodeHTMLEntities(item.headline),
+          link: item.url,
+          description: item.summary?.slice(0, 200),
+          imageUrl: item.image || undefined,
+          pubDate: new Date(item.datetime * 1000).toISOString(),
+          source: item.source || 'Finnhub',
+          sourceKey: 'finnhub',
+          category: 'general',
+          timeAgo: getTimeAgo(new Date(item.datetime * 1000)),
+        }));
+      },
+    } as ApiSource,
+  } : {}),
+
+  ...(process.env.MARKETAUX_API_KEY ? {
+    marketaux: {
+      name: 'MarketAux',
+      url: `https://api.marketaux.com/v1/news/all?api_token=${process.env.MARKETAUX_API_KEY}&filter_entities=true&language=en&search=crypto+bitcoin+ethereum&limit=25`,
+      category: 'general',
+      parser: (data: unknown) => {
+        const response = data as { data?: Array<{
+          uuid: string; title: string; description: string; url: string;
+          image_url?: string; published_at: string; source: string; sentiment_score?: number;
+        }> };
+        if (!response.data) return [];
+        return response.data.slice(0, 20).map(item => ({
+          title: decodeHTMLEntities(item.title),
+          link: item.url,
+          description: item.description?.slice(0, 200),
+          imageUrl: item.image_url || undefined,
+          pubDate: new Date(item.published_at).toISOString(),
+          source: item.source || 'MarketAux',
+          sourceKey: 'marketaux',
+          category: 'general',
+          timeAgo: getTimeAgo(new Date(item.published_at)),
+        }));
+      },
+    } as ApiSource,
+  } : {}),
+
+  ...(process.env.GNEWS_API_KEY ? {
+    gnews: {
+      name: 'GNews',
+      url: `https://gnews.io/api/v4/search?q=cryptocurrency+OR+bitcoin+OR+ethereum&token=${process.env.GNEWS_API_KEY}&lang=en&max=10&sortby=publishedAt`,
+      category: 'general',
+      parser: (data: unknown) => {
+        const response = data as { articles?: Array<{
+          title: string; description: string; content: string; url: string;
+          image?: string; publishedAt: string; source: { name: string; url: string };
+        }> };
+        if (!response.articles) return [];
+        return response.articles.slice(0, 10).map(item => ({
+          title: decodeHTMLEntities(item.title),
+          link: item.url,
+          description: item.description?.slice(0, 200),
+          imageUrl: item.image || undefined,
+          pubDate: new Date(item.publishedAt).toISOString(),
+          source: item.source?.name || 'GNews',
+          sourceKey: 'gnews',
+          category: 'general',
+          timeAgo: getTimeAgo(new Date(item.publishedAt)),
+        }));
+      },
+    } as ApiSource,
+  } : {}),
 };
 
 /**

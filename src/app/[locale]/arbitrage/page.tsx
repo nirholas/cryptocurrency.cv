@@ -1,7 +1,11 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import { generateSEOMetadata } from '@/lib/seo';
 import { setRequestLocale } from 'next-intl/server';
-import { ArbitrageDashboard } from '@/components/ArbitrageDashboard';
+const ArbitrageDashboard = dynamic(
+  () => import('@/components/ArbitrageDashboard').then(m => ({ default: m.ArbitrageDashboard })),
+  { ssr: false }
+);
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
