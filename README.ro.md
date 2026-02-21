@@ -158,3 +158,4 @@ MIT License - vezi [LICENSE](LICENSE) pentru detalii.
 <p align="center">
   Creat cu ❤️ pentru comunitatea crypto
 </p>
+
