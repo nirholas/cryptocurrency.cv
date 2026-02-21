@@ -7,7 +7,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { PWAProvider } from '@/components/PWAProvider';
-import { InstallPrompt } from '@/components/InstallPrompt';
+
 import { UpdatePrompt } from '@/components/UpdatePrompt';
 import { OfflineIndicator } from '@/components/OfflineIndicator';
 import { BottomNav } from '@/components/BottomNav';
@@ -242,7 +242,6 @@ export default async function LocaleLayout({ children, params }: Props) {
                         <PWAProvider>
                           {children}
                           <GlobalSearch />
-                          <InstallPrompt />
                           <UpdatePrompt />
                           <OfflineIndicator />
                           <BottomNav />
