@@ -28,7 +28,6 @@ import { RelatedArticles } from "@/components/RelatedArticles";
 import {
   ArticleStructuredData,
   BreadcrumbStructuredData,
-  NewsArticleStructuredData,
 } from "@/components/StructuredData";
 import ArticleShareCard from "@/components/ArticleShareCard";
 import { ArticleIntelligenceBadges } from "@/components/ArticleIntelligenceBadges";
@@ -244,13 +243,6 @@ export default async function ArticlePage({ params }: Props) {
       {/* Structured Data for SEO */}
       <ArticleStructuredData article={article} url={articleUrl} />
       <BreadcrumbStructuredData items={breadcrumbs} />
-      <NewsArticleStructuredData
-        title={article.title}
-        description={article.description ?? undefined}
-        url={article.link}
-        publishedAt={article.pub_date || article.first_seen}
-        source={article.source}
-      />
 
       {/* Reading Progress Bar */}
       <ReadingProgress />
