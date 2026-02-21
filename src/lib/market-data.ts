@@ -4,6 +4,8 @@
  *
  * Integrates multiple free APIs for live market data:
  * - CoinGecko (primary)
+ * - CoinPaprika (fallback for coin details, no key needed)
+ * - CoinCap (second fallback for coin details, no key needed, any ID)
  * - CryptoCompare (fallback for prices)
  * - Binance (fallback for real-time prices)
  * - DeFiLlama (DeFi TVL data)
@@ -16,6 +18,7 @@
 
 import {
   COINGECKO_BASE,
+  COINCAP_BASE,
   DEFILLAMA_BASE,
   ALTERNATIVE_ME_BASE,
   CRYPTOCOMPARE_BASE,
@@ -1269,8 +1272,11 @@ export async function getCoinDetails(coinId: string) {
     );
 
     if (!response.ok) {
-      console.warn(`CoinGecko failed for ${coinId}, trying fallback...`);
-      return await getCoinDetailsFallback(coinId);
+      console.warn(`CoinGecko failed for ${coinId}, trying CoinPaprika...`);
+      const paprikaResult = await getCoinDetailsFallback(coinId);
+      if (paprikaResult) return paprikaResult;
+      console.warn(`CoinPaprika failed for ${coinId}, trying CoinCap...`);
+      return await getCoinDetailsCoinCap(coinId);
     }
 
     const data = await response.json();
@@ -1278,8 +1284,10 @@ export async function getCoinDetails(coinId: string) {
     return data;
   } catch (error) {
     console.error("Error fetching coin details:", error);
-    // Try fallback source
-    return await getCoinDetailsFallback(coinId);
+    // Try fallback chain: CoinPaprika → CoinCap
+    const paprikaResult = await getCoinDetailsFallback(coinId);
+    if (paprikaResult) return paprikaResult;
+    return await getCoinDetailsCoinCap(coinId);
   }
 }
 
@@ -1429,6 +1437,97 @@ async function getCoinDetailsFallback(
     return result;
   } catch (error) {
     console.error("CoinPaprika fallback error:", error);
+    return null;
+  }
+}
+
+/**
+ * Fallback: Get coin details from CoinCap API (api.coincap.io)
+ * Completely free, no API key required, accepts CoinGecko-compatible IDs.
+ * Works for any coin — not limited to a pre-built ID map.
+ * @param coinId - Coin ID (CoinCap uses the same IDs as CoinGecko for most coins)
+ * @returns Coin details in CoinGecko-compatible format, or null on failure
+ */
+async function getCoinDetailsCoinCap(
+  coinId: string,
+): Promise<Record<string, unknown> | null> {
+  try {
+    const response = await fetchWithTimeout(
+      `${COINCAP_BASE}/assets/${coinId}`,
+      10000,
+      true, // skip rate-limit tracking — CoinCap has its own generous free tier
+    );
+
+    if (!response.ok) {
+      console.error(`CoinCap fallback failed for ${coinId}: ${response.status}`);
+      return null;
+    }
+
+    const json = await response.json();
+    const d = json.data;
+    if (!d) return null;
+
+    const price = parseFloat(d.priceUsd) || 0;
+    const changePercent24h = parseFloat(d.changePercent24Hr) || 0;
+    const marketCap = parseFloat(d.marketCapUsd) || 0;
+    const volume24h = parseFloat(d.volumeUsd24Hr) || 0;
+    const supply = parseFloat(d.supply) || 0;
+    const maxSupply = d.maxSupply ? parseFloat(d.maxSupply) : null;
+
+    // CoinCap provides a logo CDN at assets.coincap.io
+    const logoUrl = `https://assets.coincap.io/assets/icons/${(d.symbol as string).toLowerCase()}@2x.png`;
+
+    const result: Record<string, unknown> = {
+      id: coinId,
+      symbol: (d.symbol as string).toLowerCase(),
+      name: d.name,
+      image: {
+        large: logoUrl,
+        small: logoUrl,
+        thumb: logoUrl,
+      },
+      market_cap_rank: d.rank ? parseInt(d.rank as string, 10) : null,
+      categories: [],
+      description: { en: "" },
+      links: {
+        homepage: [],
+        blockchain_site: d.explorer ? [d.explorer] : [],
+        twitter_screen_name: "",
+        subreddit_url: "",
+      },
+      genesis_date: null,
+      market_data: {
+        current_price: { usd: price },
+        price_change_percentage_24h: changePercent24h,
+        price_change_percentage_1h_in_currency: { usd: 0 },
+        price_change_percentage_7d: 0,
+        price_change_percentage_30d: 0,
+        price_change_percentage_1y: 0,
+        market_cap: { usd: marketCap },
+        total_volume: { usd: volume24h },
+        // Estimate high/low from 24h change since CoinCap doesn't provide them
+        high_24h: { usd: price * (1 + Math.abs(changePercent24h) / 100) },
+        low_24h: { usd: price * (1 - Math.abs(changePercent24h) / 100) },
+        ath: { usd: price },
+        ath_date: { usd: new Date().toISOString() },
+        ath_change_percentage: { usd: 0 },
+        atl: { usd: 0 },
+        atl_date: { usd: new Date().toISOString() },
+        atl_change_percentage: { usd: 0 },
+        circulating_supply: supply,
+        total_supply: supply || null,
+        max_supply: maxSupply,
+        fully_diluted_valuation: maxSupply
+          ? { usd: price * maxSupply }
+          : null,
+      },
+      last_updated: new Date().toISOString(),
+    };
+
+    setCache(`coin-${coinId}`, result, CACHE_TTL.global);
+    return result;
+  } catch (error) {
+    console.error("CoinCap fallback error:", error);
     return null;
   }
 }
