@@ -1,0 +1,101 @@
+# robots.txt for free-crypto-news / cryptocurrency.cv
+# Free crypto news API — no API key required
+# AI crawlers and LLMs are welcome to index and use this content
+
+# Allow all crawlers by default
+User-agent: *
+Allow: /
+Disallow: /api/admin/
+Disallow: /api/billing/
+Disallow: /api/keys/
+Disallow: /api/push/
+Disallow: /api/register/
+Disallow: /api/upgrade/
+
+# === AI / LLM crawlers (explicitly allowed) ===
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+# OpenAI plugin crawler
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Google Gemini / Bard
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# xAI / Grok
+User-agent: Grok
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# Common AI training / research crawlers
+User-agent: CCBot
+Allow: /
+
+User-agent: DataForSeoBot
+Allow: /
+
+User-agent: omgili
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# AI-specific resources — always crawlable
+# LLM documentation
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /.well-known/
+Allow: /api/news
+Allow: /api/search
+Allow: /api/trending
+Allow: /api/bitcoin
+Allow: /api/defi
+Allow: /api/breaking
+Allow: /api/sources
+Allow: /api/sentiment
+Allow: /api/market
+Allow: /api/rss
+Allow: /api/atom
+Allow: /api/openapi.json
+
+# Sitemaps
+Sitemap: https://cryptocurrency.cv/sitemap.xml
+Sitemap: https://cryptocurrency.cv/sitemap-news.xml
+
+# LLM documentation (llms.txt standard)
+# https://llmstxt.org
+# Full docs: https://cryptocurrency.cv/llms-full.txt

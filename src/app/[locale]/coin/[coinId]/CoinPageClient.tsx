@@ -461,9 +461,9 @@ export default function CoinPageClient({
               
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm text-gray-400 mb-2">
+                  <p className="block text-sm text-gray-400 mb-2">
                     Alert when price goes
-                  </label>
+                  </p>
                   <div className="flex gap-2">
                     <button
                       onClick={() => setAlertDirection('above')}
@@ -489,12 +489,13 @@ export default function CoinPageClient({
                 </div>
                 
                 <div>
-                  <label className="block text-sm text-gray-400 mb-2">
+                  <label htmlFor="alert-price" className="block text-sm text-gray-400 mb-2">
                     Target Price (USD)
                   </label>
                   <div className="relative">
                     <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">$</span>
                     <input
+                      id="alert-price"
                       type="number"
                       step="any"
                       min="0"

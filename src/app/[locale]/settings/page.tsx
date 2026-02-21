@@ -232,9 +232,9 @@ export default function SettingsPage() {
             </h2>
             <div className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <p className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Default Currency
-                </label>
+                </p>
                 <div className="grid grid-cols-5 gap-2">
                   {currencies.map(({ value, label, symbol }) => (
                     <button
@@ -254,9 +254,9 @@ export default function SettingsPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <p className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Price Change Period
-                </label>
+                </p>
                 <div className="grid grid-cols-3 gap-2">
                   {['1h', '24h', '7d'].map(period => (
                     <button
@@ -276,9 +276,9 @@ export default function SettingsPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <p className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Default Chart Type
-                </label>
+                </p>
                 <div className="grid grid-cols-2 gap-2">
                   {[
                     { value: 'line', icon: LineChart, label: 'Line' },
@@ -301,9 +301,9 @@ export default function SettingsPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <p className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Default Time Range
-                </label>
+                </p>
                 <div className="grid grid-cols-4 gap-2">
                   {['24h', '7d', '30d', '90d'].map(range => (
                     <button

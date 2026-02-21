@@ -16,6 +16,7 @@ interface KeyboardShortcutsProps {
 }
 
 function KeyboardShortcutsComponent({ isOpen, onClose }: KeyboardShortcutsProps) {
+  const t = useTranslations('common');
   // Close on Escape
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -24,7 +25,6 @@ function KeyboardShortcutsComponent({ isOpen, onClose }: KeyboardShortcutsProps)
       }
     };
     window.addEventListener('keydown', handleKeyDown);
-    const t = useTranslations('common');
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]);
 

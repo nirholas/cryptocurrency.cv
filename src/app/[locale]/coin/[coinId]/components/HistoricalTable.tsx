@@ -72,7 +72,6 @@ export default function HistoricalTable({
 
   // Calculate daily change
   const getChange = useCallback((data: OHLCData) => {
-    const t = useTranslations('common');
     return ((data.close - data.open) / data.open) * 100;
   }, []);
 
@@ -98,6 +97,7 @@ export default function HistoricalTable({
     URL.revokeObjectURL(url);
   }, [filteredData, coinId, dateRange, getChange]);
 
+  const t = useTranslations('common');
   return (
     <div className="bg-gray-800/50 rounded-2xl border border-gray-700/50 overflow-hidden">
       {/* Header */}

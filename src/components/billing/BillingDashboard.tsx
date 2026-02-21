@@ -165,6 +165,7 @@ export default function BillingDashboard() {
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [inputApiKey, setInputApiKey] = useState('');
   const [showApiKeyInput, setShowApiKeyInput] = useState(false);
+  const t = useTranslations('common');
 
   const fetchBillingData = useCallback(async () => {
     // If no API key, show input form instead of using demo data
@@ -270,7 +271,6 @@ export default function BillingDashboard() {
   };
 
   if (isLoading) {
-    const t = useTranslations('common');
     return (
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="animate-pulse space-y-8">

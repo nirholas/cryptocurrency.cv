@@ -791,6 +791,7 @@ function APIKeysSection({
   setNewKeyName: (name: string) => void;
   createApiKey: () => void;
 }) {
+  const t = useTranslations('common');
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -918,8 +919,9 @@ function APIKeysSection({
             <h3 className="text-xl font-bold text-white mb-4">Create API Key</h3>
             
             <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-300 mb-2">Key Name</label>
+              <label htmlFor="key-name" className="block text-sm font-medium text-gray-300 mb-2">Key Name</label>
               <input
+                id="key-name"
                 type="text"
                 value={newKeyName}
                 onChange={(e) => setNewKeyName(e.target.value)}

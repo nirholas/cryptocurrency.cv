@@ -40,6 +40,7 @@ function ChatMessageComponent({
   const [isEditing, setIsEditing] = useState(false);
   const [editContent, setEditContent] = useState(message.content);
   const editTextareaRef = useRef<HTMLTextAreaElement>(null);
+  const t = useTranslations('common');
 
   // Auto-scroll when streaming
   useEffect(() => {
@@ -161,7 +162,6 @@ function ChatMessageComponent({
 
     const el = contentRef.current;
     el?.addEventListener('click', handleClick);
-    const t = useTranslations('common');
     return () => el?.removeEventListener('click', handleClick);
   }, [message.metadata?.sources, onCitationClick]);
 

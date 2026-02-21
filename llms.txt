@@ -1,10 +1,54 @@
 # free-crypto-news
 
-> Free crypto news API - real-time aggregator for Bitcoin, Ethereum, DeFi, Solana & altcoins. No API key required. RSS/Atom feeds, JSON REST API, historical archive with market context, embeddable widgets, ChatGPT plugin, Claude MCP server, SDKs (Python, TypeScript, Go, React, PHP). AI/LLM ready. Vibe coding friendly. Open source.
+> Free, real-time cryptocurrency news API aggregating 130+ sources. No API key required. REST JSON, RSS/Atom feeds, WebSocket streaming, AI analysis, historical archive, MCP server, ChatGPT plugin. Open source (MIT).
 
-## Links
+free-crypto-news is an open-source project by [nirholas](https://github.com/nirholas) deployed at https://cryptocurrency.cv. It aggregates crypto news from CoinDesk, The Block, Decrypt, CoinTelegraph, Bitcoin Magazine, Blockworks, The Defiant, and 120+ additional sources. All endpoints are free, unauthenticated, and CORS-enabled.
 
-- Repository: https://github.com/nirholas/free-crypto-news
-- Author: https://github.com/nirholas
-- Full documentation: https://raw.githubusercontent.com/nirholas/free-crypto-news/main/llms-full.txt
+## API Endpoints
 
+- [Latest news](https://cryptocurrency.cv/api/news): `GET /api/news` — latest articles from all sources (limit, source, page params)
+- [Search](https://cryptocurrency.cv/api/search): `GET /api/search?q={keywords}` — full-text search across all sources
+- [Bitcoin news](https://cryptocurrency.cv/api/bitcoin): `GET /api/bitcoin` — Bitcoin-specific articles
+- [DeFi news](https://cryptocurrency.cv/api/defi): `GET /api/defi` — DeFi, yield farming, DEX news
+- [Breaking news](https://cryptocurrency.cv/api/breaking): `GET /api/breaking` — articles from last 2 hours
+- [Trending topics](https://cryptocurrency.cv/api/trending): `GET /api/trending` — trending keywords and topics
+- [Sources list](https://cryptocurrency.cv/api/sources): `GET /api/sources` — all 130+ sources with status
+- [Sentiment](https://cryptocurrency.cv/api/sentiment): `GET /api/sentiment` — AI-powered sentiment analysis
+- [Market data](https://cryptocurrency.cv/api/market): `GET /api/market` — prices and market context
+- [Fear & Greed](https://cryptocurrency.cv/api/fear-greed): `GET /api/fear-greed` — crypto fear & greed index
+- [RSS feed](https://cryptocurrency.cv/api/rss): `GET /api/rss` — RSS 2.0 feed of latest news
+- [Atom feed](https://cryptocurrency.cv/api/atom): `GET /api/atom` — Atom feed of latest news
+
+## AI & LLM Features
+
+- [AI analysis](https://cryptocurrency.cv/api/ai): `GET /api/ai` — summarize, sentiment, facts, fact-check, translate articles
+- [Ask](https://cryptocurrency.cv/api/ask): `GET /api/ask?q={question}` — ask natural language questions about crypto news
+- [Narratives](https://cryptocurrency.cv/api/ai/narratives): emerging market narratives detection
+- [Predictions](https://cryptocurrency.cv/api/predictions): AI-generated price and event predictions
+- [Research](https://cryptocurrency.cv/api/ai/research): deep research mode on topics
+- [RAG](https://cryptocurrency.cv/api/rag): retrieval-augmented generation over news archive
+- [MCP server](https://github.com/nirholas/free-crypto-news/tree/main/mcp): Claude MCP server — use crypto news in Claude directly
+- [ChatGPT plugin](https://cryptocurrency.cv/.well-known/ai-plugin.json): OpenAI plugin manifest
+
+## Documentation
+
+- [Full LLM docs](https://cryptocurrency.cv/llms-full.txt): complete inline API reference for LLMs
+- [OpenAPI spec](https://cryptocurrency.cv/api/openapi.json): machine-readable OpenAPI 3.1 specification
+- [API docs](https://cryptocurrency.cv/docs/api): human-readable API documentation
+- [README](https://raw.githubusercontent.com/nirholas/free-crypto-news/main/README.md): full project README with quickstart
+- [Quickstart](https://cryptocurrency.cv/docs/quickstart): 5-minute integration guide
+
+## SDKs & Integrations
+
+- [TypeScript SDK](https://github.com/nirholas/free-crypto-news/tree/main/sdk): official TypeScript/JavaScript SDK
+- [Python SDK](https://github.com/nirholas/free-crypto-news/tree/main/sdk): Python client library
+- [React hooks](https://github.com/nirholas/free-crypto-news/tree/main/sdk): `useCryptoNews()` React hook
+- [CLI tool](https://github.com/nirholas/free-crypto-news/tree/main/cli): command-line interface
+- [Embeddable widget](https://github.com/nirholas/free-crypto-news/tree/main/widget): drop-in HTML widget
+- [VS Code Copilot extension](https://github.com/nirholas/free-crypto-news/tree/main/copilot-extension): GitHub Copilot integration
+
+## Repository
+
+- [GitHub repository](https://github.com/nirholas/free-crypto-news): source code, issues, contributions
+- [CHANGELOG](https://github.com/nirholas/free-crypto-news/blob/main/CHANGELOG.md): version history
+- [License](https://github.com/nirholas/free-crypto-news/blob/main/LICENSE): MIT license

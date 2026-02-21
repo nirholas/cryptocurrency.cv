@@ -230,7 +230,6 @@ export function KeyboardShortcutsProvider({ children }: KeyboardShortcutsProvide
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
-    const t = useTranslations('common');
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [handleKeyDown]);
 
@@ -244,6 +243,7 @@ export function KeyboardShortcutsProvider({ children }: KeyboardShortcutsProvide
 
 // Shortcuts help modal
 function ShortcutsHelp({ onClose }: { onClose: () => void }) {
+  const t = useTranslations('common');
   const shortcuts = [
     { category: 'Navigation', items: [
       { keys: ['j'], description: 'Next article' },

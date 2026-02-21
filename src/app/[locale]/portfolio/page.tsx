@@ -42,6 +42,7 @@ export default function PortfolioPage() {
   const [showAddModal, setShowAddModal] = useState(false);
   const [showImportModal, setShowImportModal] = useState(false);
   const [importText, setImportText] = useState('');
+  const t = useTranslations('common');
 
   // Fetch prices for holdings
   const fetchPrices = useCallback(async () => {
@@ -103,7 +104,6 @@ export default function PortfolioPage() {
   useEffect(() => {
     if (!isLoaded) return;
     const interval = setInterval(fetchPrices, 60000);
-    const t = useTranslations('common');
     return () => clearInterval(interval);
   }, [isLoaded, fetchPrices]);
 

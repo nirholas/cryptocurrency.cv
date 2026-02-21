@@ -240,7 +240,6 @@ export function GasTracker() {
     
     // Refresh every 15 seconds for live gas prices
     const interval = setInterval(() => fetchData(false), 15000);
-    const t = useTranslations('common');
     return () => clearInterval(interval);
   }, [fetchData]);
 
@@ -276,6 +275,7 @@ export function GasTracker() {
 
   if (!gasData) return null;
 
+  const t = useTranslations('common');
   return (
     <div className="space-y-6">
       {/* Header with refresh */}

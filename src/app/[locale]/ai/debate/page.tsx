@@ -102,11 +102,12 @@ export default function DebatePage() {
 
           {/* Topic Input */}
           <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6 mb-6">
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">
+            <label htmlFor="debate-topic" className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">
               Enter a topic to debate
             </label>
             <div className="flex gap-3">
               <input
+                id="debate-topic"
                 type="text"
                 value={topic}
                 onChange={(e) => setTopic(e.target.value)}

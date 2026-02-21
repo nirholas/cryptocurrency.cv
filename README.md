@@ -20,16 +20,14 @@ mcp_server: "@anthropic-ai/mcp-server-crypto-news"
 <p align="center">
   <a href="https://github.com/nirholas/free-crypto-news/stargazers"><img src="https://img.shields.io/github/stars/nirholas/free-crypto-news?style=for-the-badge&logo=github&color=yellow" alt="GitHub Stars"></a>
   <a href="https://github.com/nirholas/free-crypto-news/blob/main/LICENSE"><img src="https://img.shields.io/github/license/nirholas/free-crypto-news?style=for-the-badge&color=blue" alt="License"></a>
-  <a href="https://codecov.io/gh/nirholas/free-crypto-news"><img src="https://img.shields.io/codecov/c/github/nirholas/free-crypto-news?style=for-the-badge&logo=codecov&label=Coverage" alt="Coverage"></a>
   <a href="https://github.com/nirholas/free-crypto-news/issues"><img src="https://img.shields.io/github/issues/nirholas/free-crypto-news?style=for-the-badge&color=orange" alt="Issues"></a>
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@nirholas/crypto-news"><img src="https://img.shields.io/npm/v/@nirholas/crypto-news?style=flat-square&logo=npm&color=red" alt="npm version"></a>
-  <a href="https://www.npmjs.com/package/@nirholas/crypto-news"><img src="https://img.shields.io/npm/dm/@nirholas/crypto-news?style=flat-square&logo=npm" alt="npm downloads"></a>
-  <a href="https://pypi.org/project/free-crypto-news/"><img src="https://img.shields.io/pypi/v/free-crypto-news?style=flat-square&logo=python&color=blue" alt="PyPI version"></a>
-  <a href="https://hub.docker.com/r/nirholas/free-crypto-news"><img src="https://img.shields.io/docker/pulls/nirholas/free-crypto-news?style=flat-square&logo=docker" alt="Docker Pulls"></a>
-  <a href="https://discord.gg/cryptonews"><img src="https://img.shields.io/discord/1234567890?style=flat-square&logo=discord&label=Discord" alt="Discord"></a>
+  <a href="https://github.com/nirholas/free-crypto-news/pkgs/container/free-crypto-news"><img src="https://img.shields.io/badge/container-ghcr.io-blue?style=flat-square&logo=docker" alt="Docker (GHCR)"></a>
+  <a href="https://github.com/nirholas/free-crypto-news/commits/main"><img src="https://img.shields.io/github/last-commit/nirholas/free-crypto-news?style=flat-square" alt="Last Commit"></a>
+  <a href="https://github.com/nirholas/free-crypto-news/graphs/contributors"><img src="https://img.shields.io/github/contributors/nirholas/free-crypto-news?style=flat-square" alt="Contributors"></a>
+  <a href="https://github.com/nirholas/free-crypto-news"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs Welcome"></a>
 </p>
 
 > **🤖 AI Agents:** Free, no-auth crypto news API with 200+ sources. `curl https://cryptocurrency.cv/api/news` • [LLM Docs](/llms.txt) • [Full API Docs](/llms-full.txt) • [OpenAPI](/api/openapi.json) • MCP: `npx @anthropic-ai/mcp-server-crypto-news`

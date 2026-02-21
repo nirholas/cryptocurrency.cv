@@ -494,5 +494,201 @@
   "oracle": {
     "title": "Crypto Oracle",
     "description": "AI-powered cryptocurrency oracle for market insights and predictions"
+  },
+  "header": {
+    "marketData": "Market Data",
+    "topAssets": "Top Assets",
+    "analysis": "Analysis",
+    "exchanges": "Exchanges",
+    "tools": "Tools",
+    "resources": "Resources",
+    "premium": "Premium",
+    "openMainMenu": "Open main menu",
+    "notifications": "Notifications",
+    "userMenu": "User menu"
+  },
+  "mobile": {
+    "news": "News",
+    "markets": "Markets",
+    "portfolio": "Portfolio",
+    "settings": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "notifications": "Notifications",
+    "about": "About",
+    "rateApp": "Rate this app",
+    "shareApp": "Share app",
+    "version": "Version",
+    "selectLanguage": "Select Language",
+    "searchLanguages": "Search languages...",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "systemTheme": "System Theme"
+  },
+  "api": {
+    "errors": {
+      "notFound": "Not found",
+      "badRequest": "Bad request",
+      "unauthorized": "Unauthorized",
+      "forbidden": "Forbidden",
+      "serverError": "Internal server error",
+      "serviceUnavailable": "Service unavailable",
+      "rateLimited": "Rate limit exceeded. Please try again later.",
+      "invalidApiKey": "Invalid API key",
+      "missingParameter": "Missing required parameter: {param}",
+      "invalidParameter": "Invalid parameter: {param}",
+      "strategyNotFound": "Strategy not found",
+      "coinNotFound": "Coin not found",
+      "articleNotFound": "Article not found",
+      "unknownAction": "Unknown action",
+      "timeoutError": "Request timeout"
+    },
+    "success": {
+      "created": "Successfully created",
+      "updated": "Successfully updated",
+      "deleted": "Successfully deleted",
+      "subscribed": "Successfully subscribed",
+      "unsubscribed": "Successfully unsubscribed"
+    }
+  },
+  "websocket": {
+    "connected": "Connected",
+    "disconnected": "Disconnected",
+    "reconnecting": "Reconnecting...",
+    "connectionError": "Connection error",
+    "invalidMessage": "Invalid message format",
+    "subscribed": "Subscribed to {channel}",
+    "unsubscribed": "Unsubscribed from {channel}",
+    "heartbeat": "Connection active"
+  },
+  "widget": {
+    "title": "Crypto Widget",
+    "ticker": "Price Ticker",
+    "carousel": "News Carousel",
+    "chart": "Price Chart",
+    "embed": "Embed Widget",
+    "customize": "Customize",
+    "copyCode": "Copy embed code",
+    "preview": "Preview"
+  },
+  "orderbook": {
+    "title": "Order Book",
+    "bids": "Bids",
+    "asks": "Asks",
+    "spread": "Spread",
+    "depth": "Market Depth",
+    "price": "Price",
+    "amount": "Amount",
+    "total": "Total"
+  },
+  "trading": {
+    "buy": "Buy",
+    "sell": "Sell",
+    "limit": "Limit",
+    "market": "Market",
+    "stopLoss": "Stop Loss",
+    "takeProfit": "Take Profit",
+    "leverage": "Leverage",
+    "position": "Position",
+    "long": "Long",
+    "short": "Short",
+    "openOrders": "Open Orders",
+    "orderHistory": "Order History",
+    "tradeHistory": "Trade History",
+    "cancelOrder": "Cancel Order",
+    "confirmOrder": "Confirm Order"
+  },
+  "backtest": {
+    "title": "Backtest Strategy",
+    "strategy": "Strategy",
+    "period": "Period",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "initialCapital": "Initial Capital",
+    "results": "Results",
+    "totalReturn": "Total Return",
+    "maxDrawdown": "Max Drawdown",
+    "sharpeRatio": "Sharpe Ratio",
+    "winRate": "Win Rate",
+    "trades": "Trades",
+    "runBacktest": "Run Backtest"
+  },
+  "predictions": {
+    "title": "Price Predictions",
+    "priceTarget": "Price Target",
+    "confidence": "Confidence",
+    "timeframe": "Timeframe",
+    "bullish": "Bullish",
+    "bearish": "Bearish",
+    "neutral": "Neutral",
+    "disclaimer": "Predictions are for informational purposes only and not financial advice."
+  },
+  "alerts": {
+    "title": "Price Alerts",
+    "createAlert": "Create Alert",
+    "editAlert": "Edit Alert",
+    "deleteAlert": "Delete Alert",
+    "priceAbove": "Price above",
+    "priceBelow": "Price below",
+    "percentChange": "Percent change",
+    "triggered": "Triggered",
+    "active": "Active",
+    "expired": "Expired"
+  },
+  "regulatory": {
+    "title": "Regulatory News",
+    "jurisdiction": "Jurisdiction",
+    "category": "Category",
+    "impact": "Impact",
+    "enforcement": "Enforcement",
+    "legislation": "Legislation",
+    "guidance": "Guidance"
+  },
+  "research": {
+    "title": "Research",
+    "reports": "Reports",
+    "analysis": "Analysis",
+    "deepDive": "Deep Dive",
+    "tokenomics": "Tokenomics",
+    "fundamentals": "Fundamentals",
+    "technicals": "Technical Analysis"
+  },
+  "nostr": {
+    "title": "Nostr Feed",
+    "connect": "Connect",
+    "publish": "Publish",
+    "relay": "Relay",
+    "profile": "Profile",
+    "following": "Following",
+    "followers": "Followers"
+  },
+  "farcaster": {
+    "title": "Farcaster",
+    "casts": "Casts",
+    "channels": "Channels",
+    "trending": "Trending"
+  },
+  "language": {
+    "selectLanguage": "Select Language",
+    "searchLanguages": "Search languages...",
+    "allLanguages": "All Languages",
+    "regions": {
+      "europe": "Europe",
+      "asia": "Asia",
+      "middleEast": "Middle East",
+      "africa": "Africa",
+      "americas": "Americas",
+      "southAsia": "South Asia",
+      "southeastAsia": "Southeast Asia",
+      "pacificOceania": "Pacific & Oceania",
+      "centralAsia": "Central Asia",
+      "caribbean": "Caribbean",
+      "nordic": "Nordic",
+      "baltics": "Baltics",
+      "balkans": "Balkans",
+      "caucasus": "Caucasus",
+      "other": "Other"
+    },
+    "totalLanguages": "{count} languages available"
   }
 }

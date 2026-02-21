@@ -112,10 +112,11 @@ export default function CounterPage() {
           {/* Input Form */}
           <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6 mb-6">
             <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">
+              <label htmlFor="claim-input" className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">
                 Enter a claim to challenge
               </label>
               <textarea
+                id="claim-input"
                 value={claim}
                 onChange={(e) => setClaim(e.target.value)}
                 placeholder="e.g., Bitcoin will reach $1 million by 2030"
@@ -125,10 +126,11 @@ export default function CounterPage() {
             </div>
 
             <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">
+              <label htmlFor="context-input" className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">
                 Additional context (optional)
               </label>
               <textarea
+                id="context-input"
                 value={context}
                 onChange={(e) => setContext(e.target.value)}
                 placeholder="Add any relevant context, source, or background information..."

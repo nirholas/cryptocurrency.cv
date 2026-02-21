@@ -583,7 +583,7 @@ describe('Enhanced Alert Rules System', () => {
         cooldown: 300,
         enabled: true,
         createdAt: new Date().toISOString(),
-        // No lastTriggered
+        lastTriggered: undefined as string | undefined,
       };
 
       const shouldEvaluate = () => {

@@ -108,6 +108,7 @@ export default function AdminDashboard() {
   const [currentPage, setCurrentPage] = useState(1);
   const [sortBy, setSortBy] = useState('createdAt');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+  const t = useTranslations('common');
 
   const fetchSystemData = useCallback(async () => {
     try {
@@ -191,7 +192,6 @@ export default function AdminDashboard() {
     if (authenticated) {
       fetchAllData();
       const interval = setInterval(fetchAllData, 30000);
-      const t = useTranslations('common');
       return () => clearInterval(interval);
     }
   }, [authenticated, fetchAllData]);

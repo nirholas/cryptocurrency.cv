@@ -197,7 +197,6 @@ export function SocialBuzz() {
     
     // Refresh every 5 minutes
     const interval = setInterval(fetchData, 5 * 60 * 1000);
-    const t = useTranslations('common');
     return () => clearInterval(interval);
   }, [fetchData]);
 
@@ -238,6 +237,7 @@ export function SocialBuzz() {
     );
   }
 
+  const t = useTranslations('common');
   return (
     <div className="space-y-6">
       {/* Last Update */}

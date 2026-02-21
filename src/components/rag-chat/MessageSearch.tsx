@@ -17,7 +17,6 @@ function useDebounce<T>(value: T, delay: number): T {
 
   useEffect(() => {
     const timer = setTimeout(() => setDebouncedValue(value), delay);
-    const t = useTranslations('common');
     return () => clearTimeout(timer);
   }, [value, delay]);
 
@@ -43,6 +42,7 @@ function highlightText(text: string, query: string): string {
 }
 
 function MessageSearchComponent({ messages, onResultClick, onClose }: MessageSearchProps) {
+  const t = useTranslations('common');
   const [query, setQuery] = useState('');
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);

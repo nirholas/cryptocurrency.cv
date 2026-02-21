@@ -154,7 +154,7 @@ export default function CoinConverter({
 
         {/* USD Input */}
         <div className="relative">
-          <label className="block text-xs text-gray-500 mb-1.5">
+          <label htmlFor="usd-amount" className="block text-xs text-gray-500 mb-1.5">
             US Dollar (USD)
           </label>
           <div className="flex items-center bg-gray-900 rounded-xl border border-gray-700 focus-within:border-gray-400/50 transition-colors">
@@ -162,6 +162,7 @@ export default function CoinConverter({
               <span className="text-xl text-gray-400">$</span>
             </div>
             <input
+              id="usd-amount"
               type="text"
               value={usdAmount}
               onChange={(e) => handleUsdChange(e.target.value)}

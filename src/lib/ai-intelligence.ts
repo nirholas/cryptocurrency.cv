@@ -110,16 +110,31 @@ export function clusterSimilarArticles(articles: NewsArticle[], threshold = 0.4)
 }
 
 /**
- * Simple Jaccard similarity for text comparison
+ * Overlap-based similarity for text comparison.
+ * Uses intersection / min(|words1|, |words2|) to measure how much the smaller
+ * document's vocabulary is covered by the larger one. This works better for
+ * short texts (news titles/descriptions) than pure Jaccard similarity.
  */
 function calculateSimilarity(text1: string, text2: string): number {
-  const words1 = new Set(text1.toLowerCase().split(/\s+/).filter(w => w.length > 3));
-  const words2 = new Set(text2.toLowerCase().split(/\s+/).filter(w => w.length > 3));
-  
-  const intersection = new Set([...words1].filter(w => words2.has(w)));
-  const union = new Set([...words1, ...words2]);
-  
-  return intersection.size / union.size;
+  // Strip punctuation, lowercase, split, keep words with length > 3
+  const tokenize = (text: string): Set<string> =>
+    new Set(
+      text
+        .toLowerCase()
+        .replace(/[^a-z0-9\s]/g, ' ')
+        .split(/\s+/)
+        .filter(w => w.length > 3)
+    );
+
+  const words1 = tokenize(text1);
+  const words2 = tokenize(text2);
+
+  if (words1.size === 0 || words2.size === 0) return 0;
+
+  const intersection = [...words1].filter(w => words2.has(w)).length;
+  const minSize = Math.min(words1.size, words2.size);
+
+  return intersection / minSize;
 }
 
 /**

@@ -42,7 +42,7 @@ function getAllKeys(obj: Record<string, unknown>, prefix = ''): string[] {
  * Get value from nested object by dot-notation key
  */
 function getNestedValue(obj: Record<string, unknown>, key: string): unknown {
-  return key.split('.').reduce((o, k) => (o && typeof o === 'object' ? (o as Record<string, unknown>)[k] : undefined), obj);
+  return key.split('.').reduce<unknown>((o, k) => (o && typeof o === 'object' ? (o as Record<string, unknown>)[k] : undefined), obj);
 }
 
 /**

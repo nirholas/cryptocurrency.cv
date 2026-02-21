@@ -320,8 +320,9 @@ export default function PredictionsDashboard() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Asset Selection */}
               <div>
-                <label className="block text-sm text-gray-400 mb-2">Asset</label>
+                <label htmlFor="prediction-asset" className="block text-sm text-gray-400 mb-2">Asset</label>
                 <select
+                  id="prediction-asset"
                   value={asset}
                   onChange={(e) => setAsset(e.target.value)}
                   className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-gray-400"
@@ -337,7 +338,7 @@ export default function PredictionsDashboard() {
 
               {/* Prediction Type */}
               <div>
-                <label className="block text-sm text-gray-400 mb-2">Direction</label>
+                <p className="block text-sm text-gray-400 mb-2">Direction</p>
                 <div className="flex gap-2">
                   <button
                     type="button"
@@ -366,10 +367,11 @@ export default function PredictionsDashboard() {
 
               {/* Target Price */}
               <div>
-                <label className="block text-sm text-gray-400 mb-2">Target Price (USD)</label>
+                <label htmlFor="target-price" className="block text-sm text-gray-400 mb-2">Target Price (USD)</label>
                 <div className="relative">
                   <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">$</span>
                   <input
+                    id="target-price"
                     type="number"
                     step="any"
                     min="0"
@@ -384,8 +386,9 @@ export default function PredictionsDashboard() {
 
               {/* Deadline */}
               <div>
-                <label className="block text-sm text-gray-400 mb-2">Timeframe</label>
+                <label htmlFor="prediction-deadline" className="block text-sm text-gray-400 mb-2">Timeframe</label>
                 <select
+                  id="prediction-deadline"
                   value={deadline}
                   onChange={(e) => setDeadline(e.target.value)}
                   className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-gray-400"
@@ -400,10 +403,11 @@ export default function PredictionsDashboard() {
 
             {/* Confidence Slider */}
             <div>
-              <label className="block text-sm text-gray-400 mb-2">
+              <label htmlFor="confidence-range" className="block text-sm text-gray-400 mb-2">
                 Confidence Level: <span className="text-white font-bold">{confidence}%</span>
               </label>
               <input
+                id="confidence-range"
                 type="range"
                 min="10"
                 max="100"

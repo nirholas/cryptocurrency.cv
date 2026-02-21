@@ -37,11 +37,11 @@ export function FundingRates({
   const [sortBy, setSortBy] = useState<'rate' | 'annualized' | 'volume'>('annualized');
   const [sortDir, setSortDir] = useState<'asc' | 'desc'>('desc');
   const [filter, setFilter] = useState<'all' | 'positive' | 'negative'>('all');
+  const t = useTranslations('common');
 
   useEffect(() => {
     fetchFundingRates();
     const interval = setInterval(fetchFundingRates, 60000); // Update every minute
-    const t = useTranslations('common');
     return () => clearInterval(interval);
   }, []);
 

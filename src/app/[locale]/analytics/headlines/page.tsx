@@ -113,8 +113,9 @@ export default function HeadlinesPage() {
           <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-4 mb-6">
             <div className="flex flex-wrap gap-4 items-center">
               <div className="flex items-center gap-2">
-                <label className="text-sm text-gray-600 dark:text-slate-400">Time range:</label>
+                <label htmlFor="time-range" className="text-sm text-gray-600 dark:text-slate-400">Time range:</label>
                 <select
+                  id="time-range"
                   value={hours}
                   onChange={(e) => setHours(Number(e.target.value))}
                   className="px-3 py-2 rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-gray-900 dark:text-white text-sm"

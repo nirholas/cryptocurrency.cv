@@ -46,6 +46,7 @@ export default function AdminLicensePanel() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'overview' | 'keys' | 'revenue' | 'payments'>('overview');
+  const t = useTranslations('common');
 
   useEffect(() => {
     async function fetchData() {
@@ -82,7 +83,6 @@ export default function AdminLicensePanel() {
     
     // Refresh every 30 seconds
     const interval = setInterval(fetchData, 30000);
-    const t = useTranslations('common');
     return () => clearInterval(interval);
   }, []);
 

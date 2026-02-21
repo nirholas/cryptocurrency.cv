@@ -85,9 +85,9 @@ export default function ChartsPage() {
           <div className="flex flex-col lg:flex-row gap-4">
             {/* Pair Selection */}
             <div className="flex-1">
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <p className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Trading Pair
-              </label>
+              </p>
               <div className="flex flex-wrap gap-2">
                 {POPULAR_PAIRS.map((pair) => (
                   <button
@@ -107,9 +107,9 @@ export default function ChartsPage() {
 
             {/* Interval Selection */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <p className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Interval
-              </label>
+              </p>
               <div className="flex gap-1">
                 {INTERVALS.map((int) => (
                   <button
@@ -129,9 +129,9 @@ export default function ChartsPage() {
 
             {/* Theme Toggle */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <p className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Theme
-              </label>
+              </p>
               <div className="flex gap-1">
                 <button
                   onClick={() => setTheme('light')}
@@ -185,10 +185,10 @@ export default function ChartsPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {POPULAR_PAIRS.slice(0, 4).map((pair) => (
-              <div
+              <button
                 key={pair.symbol}
                 onClick={() => setSelectedPair(pair)}
-                className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-3 cursor-pointer hover:border-blue-500 transition-colors"
+                className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-3 cursor-pointer hover:border-blue-500 transition-colors text-left w-full"
               >
                 <div className="text-sm font-medium text-gray-900 dark:text-white mb-2">
                   {pair.name}
@@ -199,7 +199,7 @@ export default function ChartsPage() {
                   height={180}
                   dateRange="1M"
                 />
-              </div>
+              </button>
             ))}
           </div>
         </div>

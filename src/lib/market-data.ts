@@ -43,26 +43,26 @@ const IS_BUILD =
  * Cache duration settings based on data volatility
  */
 export const CACHE_TTL = {
-  /** Live prices - 2 minutes (was 60s) */
-  prices: 120,
-  /** 24h historical data - 5 minutes */
-  historical_1d: 300,
-  /** Weekly historical data - 20 minutes */
-  historical_7d: 1200,
-  /** Monthly historical data - 1 hour */
-  historical_30d: 3600,
-  /** 90+ day historical data - 4 hours */
-  historical_90d: 14400,
-  /** Exchange/ticker data - 10 minutes */
-  tickers: 600,
-  /** Static data (categories, coin list) - 6 hours */
-  static: 21600,
-  /** Search results - 30 minutes */
-  search: 1800,
-  /** Developer/community data - 6 hours */
-  social: 21600,
-  /** Coin details / global data - 30 minutes (was 10min) */
-  global: 1800,
+  /** Live prices - 30 seconds */
+  prices: 30,
+  /** 24h historical data - 1 minute */
+  historical_1d: 60,
+  /** Weekly historical data - 5 minutes */
+  historical_7d: 300,
+  /** Monthly historical data - 15 minutes */
+  historical_30d: 900,
+  /** 90+ day historical data - 1 hour */
+  historical_90d: 3600,
+  /** Exchange/ticker data - 2 minutes */
+  tickers: 120,
+  /** Static data (categories, coin list) - 1 hour */
+  static: 3600,
+  /** Search results - 5 minutes */
+  search: 300,
+  /** Developer/community data - 30 minutes */
+  social: 1800,
+  /** Coin details / global data - 5 minutes */
+  global: 300,
 };
 
 // =============================================================================

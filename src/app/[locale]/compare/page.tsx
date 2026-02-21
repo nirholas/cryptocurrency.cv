@@ -297,7 +297,6 @@ function ComparePageContent() {
                           onChange={e => setSearchQuery(e.target.value)}
                           placeholder="Search coins..."
                           className="w-full pl-9 pr-4 py-2 rounded-lg border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                          autoFocus
                         />
                       </div>
                     </div>
@@ -602,6 +601,8 @@ function ComparePageContent() {
         <div 
           className="fixed inset-0 z-0"
           onClick={() => setShowCoinSelector(false)}
+          onKeyDown={() => setShowCoinSelector(false)}
+          role="presentation"
         />
       )}
     </div>

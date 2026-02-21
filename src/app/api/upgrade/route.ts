@@ -253,12 +253,11 @@ export async function POST(request: NextRequest) {
       }
 
       // Call facilitator to verify payment signature
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const verifyResult = await facilitatorClient.verify(paymentPayload as any, paymentRequirements as any) as any;
 
       if (verifyResult && 'valid' in verifyResult && verifyResult.valid) {
         paymentValid = true;
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+         
         const vr = verifyResult as any;
         payerAddress = paymentData.payer || vr.payer || 'unknown';
         transactionHash = paymentData.transactionHash || vr.transactionHash || '';
