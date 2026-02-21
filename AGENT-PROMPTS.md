@@ -421,3 +421,4 @@ Agents 1-3 are fully independent — they create new component files and only mo
 | 16 | PredictionPoll | GET/POST /api/predictions | Sidebar, Coin | 5 |
 | 17 | ArticleEngagement | GET/POST /api/views | Article | 5 |
 | 18 | TrendingTopicsLive | GET /api/trending | Homepage | 5 |
+
