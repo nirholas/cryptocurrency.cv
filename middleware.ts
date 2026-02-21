@@ -74,6 +74,8 @@ const SPERAXOS_ORIGINS = new Set([
   'https://beta.sperax.chat',
   'https://sperax.chat',
   'https://www.sperax.chat',
+  // Additional x402-exempt origins from env: X402_BYPASS_ORIGINS=https://a.com,https://b.com
+  ...(process.env.X402_BYPASS_ORIGINS?.split(',').map((s) => s.trim()).filter(Boolean) ?? []),
 ]);
 
 function isSperaxOSRequest(request: NextRequest): boolean {
@@ -292,7 +294,8 @@ export default async function middleware(request: NextRequest) {
   }
 
   // x402 payment gate — premium routes require USDC micropayment
-  if (pathname.startsWith('/api/premium/')) {
+  // SperaxOS trusted origins bypass payment entirely
+  if (pathname.startsWith('/api/premium/') && !speraxos) {
     const paymentResponse = await x402(request);
     // NextResponse.next() sets x-middleware-next:1 internally — that means payment verified.
     // Any other response (402, 400, etc.) is returned directly to the client.

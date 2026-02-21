@@ -29,26 +29,26 @@ describe('ShareButtons', () => {
 
   it('Twitter link includes title and url', () => {
     render(<ShareButtons title={title} url={url} />);
-    const twitterLink = screen.getByRole('link', { name: /twitter/i });
+    const twitterLink = screen.getByTitle('Share on Twitter');
     expect(twitterLink.getAttribute('href')).toContain('twitter.com/intent/tweet');
     expect(twitterLink.getAttribute('href')).toContain(encodeURIComponent(title));
   });
 
   it('LinkedIn link includes encoded url', () => {
     render(<ShareButtons title={title} url={url} />);
-    const linkedinLink = screen.getByRole('link', { name: /linkedin/i });
+    const linkedinLink = screen.getByTitle('Share on LinkedIn');
     expect(linkedinLink.getAttribute('href')).toContain('linkedin.com/sharing');
   });
 
   it('Reddit link includes title', () => {
     render(<ShareButtons title={title} url={url} />);
-    const redditLink = screen.getByRole('link', { name: /reddit/i });
+    const redditLink = screen.getByTitle('Share on Reddit');
     expect(redditLink.getAttribute('href')).toContain('reddit.com/submit');
   });
 
   it('Telegram link includes title and url', () => {
     render(<ShareButtons title={title} url={url} />);
-    const telegramLink = screen.getByRole('link', { name: /telegram/i });
+    const telegramLink = screen.getByTitle('Share on Telegram');
     expect(telegramLink.getAttribute('href')).toContain('t.me/share/url');
   });
 

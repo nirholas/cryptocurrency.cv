@@ -3,6 +3,7 @@
  * Inspired by CoinDesk, The Block, and Google News layouts
  */
 
+import { Suspense } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -46,7 +47,7 @@ import { clusterSimilarArticles } from "@/lib/ai-intelligence";
 import { categories } from "@/lib/categories";
 import { Link } from "@/i18n/navigation";
 
-export const revalidate = 120; // Revalidate every 2 minutes
+export const revalidate = 300; // Revalidate every 5 minutes
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -129,8 +130,10 @@ export default async function Home({ params }: Props) {
       {/* Live News Ticker - SSE powered */}
       <LiveNewsTicker />
 
-      {/* Price Ticker - Full width */}
-      <PriceTicker />
+      {/* Price Ticker - streams independently so the rest of the page isn't blocked */}
+      <Suspense fallback={<div className="h-9 bg-black border-b border-gray-800" aria-hidden="true" />}>
+        <PriceTicker />
+      </Suspense>
 
       {/* Breaking News Banner */}
       <BreakingNewsBanner articles={breakingData.articles} />

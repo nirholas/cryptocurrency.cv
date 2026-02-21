@@ -365,7 +365,7 @@ export default function HomePricesTable({ limit = 20 }: { limit?: number }) {
           ),
         ]);
         if (!coinsRes.ok) throw new Error(`CoinGecko error ${coinsRes.status}`);
-        const raw: any[] = await coinsRes.ok ? coinsRes.json() : Promise.resolve([]);
+        const raw: any[] = await coinsRes.json();
         const btcEth: any = btcEthRes.ok ? await btcEthRes.json() : {};
         const btcUsd: number = btcEth?.bitcoin?.usd || 0;
         const ethUsd: number = btcEth?.ethereum?.usd || 0;
@@ -373,7 +373,7 @@ export default function HomePricesTable({ limit = 20 }: { limit?: number }) {
         // Total market cap for dominance
         let totalMcap = 0;
 
-        const data: CoinData[] = (await raw).map((c: any) => {
+        const data: CoinData[] = raw.map((c: any) => {
           totalMcap += c.market_cap || 0;
           return {
             id: c.id,

@@ -220,8 +220,12 @@ export default async function LocaleLayout({ children, params }: Props) {
         {/* Alternate language links for SEO */}
         <AlternateLinks currentLocale={locale} currentPath="" />
         
-        {/* DNS prefetch for API endpoints */}
+        {/* DNS prefetch + preconnect for faster external resource loading */}
+        <link rel="preconnect" href="https://api.coingecko.com" />
         <link rel="dns-prefetch" href="https://api.coingecko.com" />
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* PWA splash screens for iOS */}
         <link rel="apple-touch-startup-image" href="/splash/apple-splash-dark.png" media="(prefers-color-scheme: dark)" />

@@ -246,8 +246,8 @@ const nextConfig = {
     // Client-side router cache: RSC payloads for dynamic routes survive 30 s,
     // static routes survive 3 min — reduces redundant network round-trips on navigation.
     staleTimes: {
-      dynamic: 30,
-      static: 180,
+      dynamic: 60,
+      static: 300,
     },
   },
   

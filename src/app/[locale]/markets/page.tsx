@@ -81,9 +81,20 @@ const VALID_SORT_FIELDS: SortField[] = [
   'price_change_percentage_1h_in_currency',
   'price_change_percentage_24h',
   'price_change_percentage_7d_in_currency',
+  'price_change_percentage_30d_in_currency',
+  'price_change_percentage_60d_in_currency',
+  'price_change_percentage_90d_in_currency',
+  'price_change_percentage_200d_in_currency',
   'market_cap',
+  'fully_diluted_valuation',
   'total_volume',
   'circulating_supply',
+  'ath',
+  'ath_change_percentage',
+  'atl',
+  'atl_change_percentage',
+  'high_24h',
+  'low_24h',
 ];
 
 interface MarketsPageProps {
@@ -220,6 +231,50 @@ function sortCoins(
         aValue = a.circulating_supply || 0;
         bValue = b.circulating_supply || 0;
         break;
+      case 'price_change_percentage_30d_in_currency':
+        aValue = a.price_change_percentage_30d_in_currency || 0;
+        bValue = b.price_change_percentage_30d_in_currency || 0;
+        break;
+      case 'price_change_percentage_60d_in_currency':
+        aValue = a.price_change_percentage_60d_in_currency || 0;
+        bValue = b.price_change_percentage_60d_in_currency || 0;
+        break;
+      case 'price_change_percentage_90d_in_currency':
+        aValue = a.price_change_percentage_90d_in_currency || 0;
+        bValue = b.price_change_percentage_90d_in_currency || 0;
+        break;
+      case 'price_change_percentage_200d_in_currency':
+        aValue = a.price_change_percentage_200d_in_currency || 0;
+        bValue = b.price_change_percentage_200d_in_currency || 0;
+        break;
+      case 'fully_diluted_valuation':
+        aValue = a.fully_diluted_valuation || 0;
+        bValue = b.fully_diluted_valuation || 0;
+        break;
+      case 'ath':
+        aValue = a.ath || 0;
+        bValue = b.ath || 0;
+        break;
+      case 'ath_change_percentage':
+        aValue = a.ath_change_percentage || 0;
+        bValue = b.ath_change_percentage || 0;
+        break;
+      case 'atl':
+        aValue = (a.atl) || 0;
+        bValue = (b.atl) || 0;
+        break;
+      case 'atl_change_percentage':
+        aValue = (a.atl_change_percentage) || 0;
+        bValue = (b.atl_change_percentage) || 0;
+        break;
+      case 'high_24h':
+        aValue = (a.high_24h) || 0;
+        bValue = (b.high_24h) || 0;
+        break;
+      case 'low_24h':
+        aValue = (a.low_24h) || 0;
+        bValue = (b.low_24h) || 0;
+        break;
       default:
         aValue = a.market_cap_rank || 9999;
         bValue = b.market_cap_rank || 9999;
@@ -277,6 +332,17 @@ export default async function MarketsPage({ params: pageParams, searchParams }: 
   const startIndex = (currentPage - 1) * perPage;
   const paginatedCoins = filteredCoins.slice(startIndex, startIndex + perPage);
 
+  // Extract BTC/ETH context for relative column calculations
+  const btcCoin = allCoins.find((c) => c.id === 'bitcoin');
+  const ethCoin = allCoins.find((c) => c.id === 'ethereum');
+  const btcPrice = btcCoin?.current_price;
+  const ethPrice = ethCoin?.current_price;
+  const btcChange1h = btcCoin?.price_change_percentage_1h_in_currency;
+  const btcChange24h = btcCoin?.price_change_percentage_24h;
+  const ethChange1h = ethCoin?.price_change_percentage_1h_in_currency;
+  const ethChange24h = ethCoin?.price_change_percentage_24h;
+  const totalMarketCap = global?.total_market_cap?.usd;
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
       <div className="max-w-7xl mx-auto">
@@ -324,6 +390,13 @@ export default async function MarketsPage({ params: pageParams, searchParams }: 
               currentSort={sortField}
               currentOrder={sortOrder}
               showWatchlist={true}
+              btcPrice={btcPrice}
+              ethPrice={ethPrice}
+              btcChange1h={btcChange1h}
+              btcChange24h={btcChange24h}
+              ethChange1h={ethChange1h}
+              ethChange24h={ethChange24h}
+              totalMarketCap={totalMarketCap}
             />
           </Suspense>
 

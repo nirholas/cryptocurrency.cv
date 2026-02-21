@@ -1924,7 +1924,7 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
     
     try {
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout
+      const timeoutId = setTimeout(() => controller.abort(), 5000); // 5s timeout
       
       // Use no-store for large feeds that exceed Next.js 2MB cache limit
       const fetchOptions: RequestInit & { next?: { revalidate: number } } = {
