@@ -188,3 +188,4 @@ contract CryptoNewsOracle is ChainlinkClient, ConfirmedOwner {
         require(link.transfer(msg.sender, link.balanceOf(address(this))), "Transfer failed");
     }
 }
+
