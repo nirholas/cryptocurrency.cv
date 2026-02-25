@@ -55,6 +55,9 @@ import type { MarketPrice } from './coingecko.adapter';
 import { coingeckoAdapter } from './coingecko.adapter';
 import { coincapAdapter } from './coincap.adapter';
 import { binanceAdapter } from './binance.adapter';
+import { coinmarketcapAdapter } from './coinmarketcap.adapter';
+import { coinpaprikaAdapter } from './coinpaprika.adapter';
+import { cryptocompareAdapter } from './cryptocompare.adapter';
 
 // =============================================================================
 // TYPES
@@ -75,6 +78,12 @@ export interface MarketPriceChainOptions {
   includeBinance?: boolean;
   /** Whether to include CoinCap adapter. Default: true */
   includeCoinCap?: boolean;
+  /** Whether to include CoinMarketCap adapter (requires API key). Default: true */
+  includeCoinMarketCap?: boolean;
+  /** Whether to include CoinPaprika adapter. Default: true */
+  includeCoinPaprika?: boolean;
+  /** Whether to include CryptoCompare adapter. Default: true */
+  includeCryptoCompare?: boolean;
 }
 
 // =============================================================================
@@ -97,6 +106,9 @@ export function createMarketPriceChain(
     maxDeviation = 0.03,
     includeBinance = true,
     includeCoinCap = true,
+    includeCoinMarketCap = true,
+    includeCoinPaprika = true,
+    includeCryptoCompare = true,
   } = options;
 
   const config: Partial<ProviderChainConfig> = {
@@ -111,12 +123,24 @@ export function createMarketPriceChain(
   // Register adapters in priority order
   chain.addProvider(coingeckoAdapter);
 
+  if (includeCoinMarketCap) {
+    chain.addProvider(coinmarketcapAdapter);
+  }
+
   if (includeCoinCap) {
     chain.addProvider(coincapAdapter);
   }
 
   if (includeBinance) {
     chain.addProvider(binanceAdapter);
+  }
+
+  if (includeCoinPaprika) {
+    chain.addProvider(coinpaprikaAdapter);
+  }
+
+  if (includeCryptoCompare) {
+    chain.addProvider(cryptocompareAdapter);
   }
 
   return chain;

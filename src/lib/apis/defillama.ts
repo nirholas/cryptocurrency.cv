@@ -12,6 +12,7 @@ const BASE_URL = 'https://api.llama.fi';
 const COINS_URL = 'https://coins.llama.fi';
 const YIELDS_URL = 'https://yields.llama.fi';
 const STABLECOINS_URL = 'https://stablecoins.llama.fi';
+const FEES_URL = 'https://fees.llama.fi';
 
 // =============================================================================
 // Types
@@ -461,4 +462,211 @@ export async function searchProtocols(query: string): Promise<Protocol[]> {
     p.slug.toLowerCase().includes(lowerQuery) ||
     p.symbol?.toLowerCase().includes(lowerQuery)
   );
+}
+
+// =============================================================================
+// Fees & Revenue (https://fees.llama.fi)
+// =============================================================================
+
+export interface ProtocolFees {
+  name: string;
+  slug: string;
+  category: string;
+  chains: string[];
+  total24h: number;
+  total7d: number;
+  total30d: number;
+  totalAllTime: number;
+  change_1d: number;
+  change_7d: number;
+  change_1m: number;
+  revenue24h: number;
+  revenue7d: number;
+  revenue30d: number;
+  holdersRevenue24h?: number;
+  /** Percentage of fees that go to token holders. */
+  protocolRevenueShare?: number;
+}
+
+export interface ChainFees {
+  name: string;
+  total24h: number;
+  total7d: number;
+  total30d: number;
+  change_1d: number;
+  change_7d: number;
+}
+
+export interface FeesSummary {
+  totalFees24h: number;
+  totalRevenue24h: number;
+  topByFees: ProtocolFees[];
+  topByRevenue: ProtocolFees[];
+  chainBreakdown: ChainFees[];
+  timestamp: string;
+}
+
+/**
+ * Get protocol fees overview (all protocols).
+ */
+export async function getProtocolFees(): Promise<ProtocolFees[]> {
+  const data = await llamaFetch<{
+    protocols: Array<{
+      name: string;
+      slug: string;
+      category: string;
+      chains: string[];
+      total24h: number;
+      total7d: number;
+      total30d: number;
+      totalAllTime: number;
+      change_1d: number;
+      change_7d: number;
+      change_1m: number;
+      revenue24h?: number;
+      revenue7d?: number;
+      revenue30d?: number;
+      holdersRevenue24h?: number;
+    }>;
+  }>(`${FEES_URL}/overview/fees`);
+
+  if (!data?.protocols) return [];
+
+  return data.protocols.map((p) => ({
+    name: p.name,
+    slug: p.slug || p.name.toLowerCase().replace(/\s+/g, '-'),
+    category: p.category || 'Unknown',
+    chains: p.chains || [],
+    total24h: p.total24h || 0,
+    total7d: p.total7d || 0,
+    total30d: p.total30d || 0,
+    totalAllTime: p.totalAllTime || 0,
+    change_1d: p.change_1d || 0,
+    change_7d: p.change_7d || 0,
+    change_1m: p.change_1m || 0,
+    revenue24h: p.revenue24h || 0,
+    revenue7d: p.revenue7d || 0,
+    revenue30d: p.revenue30d || 0,
+    holdersRevenue24h: p.holdersRevenue24h,
+    protocolRevenueShare:
+      p.total24h > 0 && p.revenue24h
+        ? (p.revenue24h / p.total24h) * 100
+        : undefined,
+  })).sort((a, b) => b.total24h - a.total24h);
+}
+
+/**
+ * Get fees for a specific protocol.
+ */
+export async function getProtocolFeesDetail(protocol: string): Promise<ProtocolFees | null> {
+  const fees = await getProtocolFees();
+  const lowerProto = protocol.toLowerCase();
+  return fees.find(
+    (f) =>
+      f.name.toLowerCase() === lowerProto ||
+      f.slug.toLowerCase() === lowerProto,
+  ) || null;
+}
+
+/**
+ * Get revenue-only overview (what actually accrues to token holders/treasury).
+ */
+export async function getProtocolRevenue(): Promise<ProtocolFees[]> {
+  const data = await llamaFetch<{
+    protocols: Array<{
+      name: string;
+      slug: string;
+      category: string;
+      chains: string[];
+      total24h: number;
+      total7d: number;
+      total30d: number;
+      totalAllTime: number;
+      change_1d: number;
+      change_7d: number;
+      change_1m: number;
+    }>;
+  }>(`${FEES_URL}/overview/fees?dataType=dailyRevenue`);
+
+  if (!data?.protocols) return [];
+
+  return data.protocols.map((p) => ({
+    name: p.name,
+    slug: p.slug || p.name.toLowerCase().replace(/\s+/g, '-'),
+    category: p.category || 'Unknown',
+    chains: p.chains || [],
+    total24h: 0,
+    total7d: 0,
+    total30d: 0,
+    totalAllTime: 0,
+    change_1d: p.change_1d || 0,
+    change_7d: p.change_7d || 0,
+    change_1m: p.change_1m || 0,
+    revenue24h: p.total24h || 0,
+    revenue7d: p.total7d || 0,
+    revenue30d: p.total30d || 0,
+  })).sort((a, b) => b.revenue24h - a.revenue24h);
+}
+
+/**
+ * Get chain-level fees breakdown.
+ */
+export async function getChainFees(): Promise<ChainFees[]> {
+  const data = await llamaFetch<{
+    allChains: string[];
+    totalDataChart?: Array<[number, number]>;
+    totalDataChartBreakdown?: Array<Record<string, Record<string, number>>>;
+    chain?: string;
+    // There is also a per-chain endpoint
+  }>(`${FEES_URL}/overview/fees`);
+
+  // The main endpoint returns a flat protocol list. For chain breakdown,
+  // we aggregate from protocol-level data.
+  const protocols = await getProtocolFees();
+
+  const chainMap = new Map<string, { total24h: number; total7d: number; total30d: number }>();
+  for (const p of protocols) {
+    for (const chain of p.chains) {
+      const existing = chainMap.get(chain) || { total24h: 0, total7d: 0, total30d: 0 };
+      // Distribute evenly across chains if multi-chain
+      const divisor = p.chains.length;
+      existing.total24h += p.total24h / divisor;
+      existing.total7d += p.total7d / divisor;
+      existing.total30d += p.total30d / divisor;
+      chainMap.set(chain, existing);
+    }
+  }
+
+  return Array.from(chainMap.entries())
+    .map(([name, d]) => ({
+      name,
+      total24h: d.total24h,
+      total7d: d.total7d,
+      total30d: d.total30d,
+      change_1d: 0,
+      change_7d: 0,
+    }))
+    .sort((a, b) => b.total24h - a.total24h);
+}
+
+/**
+ * Get comprehensive fees & revenue summary.
+ */
+export async function getFeesSummary(): Promise<FeesSummary> {
+  const [fees, chainFees] = await Promise.all([
+    getProtocolFees(),
+    getChainFees(),
+  ]);
+
+  const totalFees24h = fees.reduce((s, f) => s + f.total24h, 0);
+  const totalRevenue24h = fees.reduce((s, f) => s + f.revenue24h, 0);
+
+  return {
+    totalFees24h,
+    totalRevenue24h,
+    topByFees: fees.slice(0, 20),
+    topByRevenue: [...fees].sort((a, b) => b.revenue24h - a.revenue24h).slice(0, 20),
+    chainBreakdown: chainFees.slice(0, 15),
+    timestamp: new Date().toISOString(),
+  };
 }

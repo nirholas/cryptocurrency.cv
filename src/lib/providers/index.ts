@@ -119,6 +119,7 @@ export { registry, ProviderRegistry } from './registry';
 // PRE-BUILT CHAINS — Ready-to-use provider chains
 // =============================================================================
 
+// Market Prices (CoinGecko → CoinCap → Binance)
 export {
   marketPriceChain,
   marketPriceConsensusChain,
@@ -126,6 +127,92 @@ export {
   type MarketPrice,
   type MarketPriceChainOptions,
 } from './adapters/market-price';
+
+// DEX Pairs (DexScreener → GeckoTerminal)
+export {
+  dexChain,
+  createDexChain,
+  type DexPair,
+  type DexChainOptions,
+} from './adapters/dex';
+
+// Fear & Greed Index
+export {
+  fearGreedChain,
+  fearGreedConsensusChain,
+  createFearGreedChain,
+} from './adapters/fear-greed';
+
+// Funding Rates (Binance → Bybit → OKX)
+export {
+  fundingRateChain,
+  fundingRateFallbackChain,
+  createFundingRateChain,
+} from './adapters/funding-rate';
+
+// Gas Fees (Etherscan → Blocknative)
+export {
+  gasChain,
+  gasConsensusChain,
+  createGasChain,
+} from './adapters/gas';
+
+// TVL (DefiLlama)
+export {
+  tvlChain,
+  createTVLChain,
+} from './adapters/tvl';
+
+// DeFi TVL + Yields (DefiLlama)
+export {
+  defiTvlChain,
+  defiYieldsChain,
+  createDefiTvlChain,
+  createDefiYieldsChain,
+  type ProtocolTvl,
+  type YieldPool,
+} from './adapters/defi';
+
+// Derivatives — Open Interest & Liquidations (Hyperliquid → CoinGlass)
+export {
+  derivativesChain,
+  derivativesConsensusChain,
+  createDerivativesChain,
+  type OpenInterest,
+  type LiquidationSummary,
+} from './adapters/derivatives';
+
+// On-Chain Metrics (Blockchain.info / Mempool.space → Etherscan)
+export {
+  onChainChain,
+  createOnChainChain,
+  type OnChainMetric,
+  type WhaleAlert,
+  type NetworkStats,
+} from './adapters/on-chain';
+
+// Social Metrics (LunarCrush)
+export {
+  socialChain,
+  createSocialChain,
+  type SocialMetric,
+} from './adapters/social';
+
+// Stablecoin Flows (DefiLlama Stablecoins)
+export {
+  stablecoinFlowsChain,
+  createStablecoinFlowsChain,
+  type StablecoinFlow,
+} from './adapters/stablecoin-flows';
+
+// =============================================================================
+// REGISTRY SETUP — Import to wire all chains into global registry
+// =============================================================================
+
+export {
+  listRegisteredCategories,
+  registeredCategories,
+} from './setup';
 
 // =============================================================================
 // ADAPTERS — Individual provider implementations

@@ -456,12 +456,14 @@ export type DataCategory =
   | 'ohlcv'
   | 'tvl'
   | 'defi-yields'
+  | 'dex'
   | 'on-chain'
   | 'mempool'
   | 'gas-fees'
   | 'social-metrics'
   | 'fear-greed'
   | 'liquidations'
+  | 'derivatives'
   | 'whale-alerts'
   | 'stablecoin-flows';
 
