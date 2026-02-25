@@ -16,6 +16,7 @@ import { ProviderChain } from '../../provider-chain';
 import type { GasPrice } from './etherscan.adapter';
 import { etherscanGasAdapter } from './etherscan.adapter';
 import { blocknativeGasAdapter } from './blocknative.adapter';
+import { owlracleAdapter } from './owlracle.adapter';
 
 export type { GasPrice } from './etherscan.adapter';
 
@@ -24,6 +25,7 @@ export interface GasChainOptions {
   cacheTtlSeconds?: number;
   staleWhileError?: boolean;
   includeBlocknative?: boolean;
+  includeOwlracle?: boolean;
 }
 
 export function createGasChain(options: GasChainOptions = {}): ProviderChain<GasPrice> {
@@ -32,6 +34,7 @@ export function createGasChain(options: GasChainOptions = {}): ProviderChain<Gas
     cacheTtlSeconds = 15,
     staleWhileError = true,
     includeBlocknative = true,
+    includeOwlracle = true,
   } = options;
 
   const config: Partial<ProviderChainConfig> = {
@@ -45,6 +48,10 @@ export function createGasChain(options: GasChainOptions = {}): ProviderChain<Gas
 
   if (includeBlocknative) {
     chain.addProvider(blocknativeGasAdapter);
+  }
+
+  if (includeOwlracle) {
+    chain.addProvider(owlracleAdapter as any);  // Multi-chain gas estimates
   }
 
   return chain;

@@ -6,14 +6,14 @@
  */
 
 import type { DataProvider, FetchParams, RateLimitConfig } from '../../types';
-import type { GamingData, GameData } from './types';
+import type { GamingOverview, GameData } from './types';
 
 const FP_BASE = 'https://api.footprint.network/api/v1';
 const FP_API_KEY = process.env.FOOTPRINT_API_KEY ?? '';
 
 const RATE_LIMIT: RateLimitConfig = { maxRequests: 20, windowMs: 60_000 };
 
-export const footprintAdapter: DataProvider<GamingData> = {
+export const footprintAdapter: DataProvider<GamingOverview> = {
   name: 'footprint',
   description: 'Footprint Analytics — on-chain gaming data',
   priority: 2,
@@ -21,7 +21,7 @@ export const footprintAdapter: DataProvider<GamingData> = {
   rateLimit: RATE_LIMIT,
   capabilities: ['gaming-data'],
 
-  async fetch(params: FetchParams): Promise<GamingData> {
+  async fetch(params: FetchParams): Promise<GamingOverview> {
     if (!FP_API_KEY) throw new Error('FOOTPRINT_API_KEY not configured');
 
     const limit = params.limit ?? 25;
@@ -51,13 +51,16 @@ export const footprintAdapter: DataProvider<GamingData> = {
       timestamp: new Date().toISOString(),
     }));
 
+    const byChain: Record<string, number> = {};
+    for (const g of games) {
+      byChain[g.chain] = (byChain[g.chain] ?? 0) + g.dau;
+    }
+
     return {
       totalDau: games.reduce((s, g) => s + g.dau, 0),
-      totalTransactions24h: games.reduce((s, g) => s + g.transactions24h, 0),
       totalVolume24h: games.reduce((s, g) => s + g.volume24h, 0),
-      games: games.slice(0, 25),
-      byChain: [],
-      source: 'footprint',
+      topGames: games.slice(0, 25),
+      byChain,
       timestamp: new Date().toISOString(),
     };
   },
@@ -73,7 +76,7 @@ export const footprintAdapter: DataProvider<GamingData> = {
     } catch { return false; }
   },
 
-  validate(data: GamingData): boolean {
-    return Array.isArray(data.games);
+  validate(data: GamingOverview): boolean {
+    return Array.isArray(data.topGames);
   },
 };

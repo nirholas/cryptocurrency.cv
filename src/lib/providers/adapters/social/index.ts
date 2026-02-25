@@ -18,6 +18,9 @@ import type { SocialMetric } from './types';
 import { lunarcrushAdapter } from './lunarcrush.adapter';
 import { santimentAdapter } from './santiment.adapter';
 import { cryptoPanicAdapter } from './cryptopanic.adapter';
+import { cryptopanicSentimentAdapter } from './cryptopanic-sentiment.adapter';
+import { farcasterAdapter } from './farcaster.adapter';
+import { redditAdapter } from './reddit.adapter';
 
 export type { SocialMetric } from './types';
 
@@ -27,6 +30,8 @@ export interface SocialChainOptions {
   staleWhileError?: boolean;
   includeSantiment?: boolean;
   includeCryptoPanic?: boolean;
+  includeFarcaster?: boolean;
+  includeReddit?: boolean;
 }
 
 export function createSocialChain(
@@ -38,6 +43,8 @@ export function createSocialChain(
     staleWhileError = true,
     includeSantiment = true,
     includeCryptoPanic = true,
+    includeFarcaster = true,
+    includeReddit = true,
   } = options;
 
   const config: Partial<ProviderChainConfig> = { strategy, cacheTtlSeconds, staleWhileError };
@@ -50,6 +57,15 @@ export function createSocialChain(
 
   if (includeCryptoPanic) {
     chain.addProvider(cryptoPanicAdapter);
+    chain.addProvider(cryptopanicSentimentAdapter);
+  }
+
+  if (includeFarcaster) {
+    chain.addProvider(farcasterAdapter);
+  }
+
+  if (includeReddit) {
+    chain.addProvider(redditAdapter);
   }
 
   return chain;

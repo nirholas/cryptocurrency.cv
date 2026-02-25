@@ -27,6 +27,12 @@ import { blockchainAdapter } from './blockchain.adapter';
 import { etherscanAdapter } from './etherscan.adapter';
 import { mempoolSpaceAdapter } from './mempool-space.adapter';
 import { whaleAlertAdapter } from './whale-alert.adapter';
+import { arkhamAdapter } from './arkham.adapter';
+import { glassnodeAdapter } from './glassnode.adapter';
+import { cryptoquantAdapter } from './cryptoquant.adapter';
+import { duneAdapter } from './dune.adapter';
+import { santimentOnChainAdapter } from './santiment.adapter';
+import { etherscanWhalesAdapter } from './etherscan-whales.adapter';
 
 export type { OnChainMetric, WhaleAlert, NetworkStats } from './types';
 
@@ -36,6 +42,10 @@ export interface OnChainChainOptions {
   staleWhileError?: boolean;
   includeEtherscan?: boolean;
   includeMempoolSpace?: boolean;
+  includeGlassnode?: boolean;
+  includeCryptoQuant?: boolean;
+  includeDune?: boolean;
+  includeSantiment?: boolean;
 }
 
 export function createOnChainChain(
@@ -47,6 +57,10 @@ export function createOnChainChain(
     staleWhileError = true,
     includeEtherscan = true,
     includeMempoolSpace = true,
+    includeGlassnode = true,
+    includeCryptoQuant = true,
+    includeDune = true,
+    includeSantiment = true,
   } = options;
 
   const config: Partial<ProviderChainConfig> = { strategy, cacheTtlSeconds, staleWhileError };
@@ -60,6 +74,22 @@ export function createOnChainChain(
 
   if (includeMempoolSpace) {
     chain.addProvider(mempoolSpaceAdapter);
+  }
+
+  if (includeGlassnode) {
+    chain.addProvider(glassnodeAdapter);
+  }
+
+  if (includeCryptoQuant) {
+    chain.addProvider(cryptoquantAdapter);
+  }
+
+  if (includeDune) {
+    chain.addProvider(duneAdapter);
+  }
+
+  if (includeSantiment) {
+    chain.addProvider(santimentOnChainAdapter);
   }
 
   return chain;
@@ -77,6 +107,8 @@ export function createWhaleAlertChain(
   const config: Partial<ProviderChainConfig> = { strategy, cacheTtlSeconds, staleWhileError };
   const chain = new ProviderChain<WhaleAlert[]>('whale-alerts', config);
   chain.addProvider(whaleAlertAdapter);
+  chain.addProvider(arkhamAdapter);
+  chain.addProvider(etherscanWhalesAdapter);
   return chain;
 }
 

@@ -25,6 +25,7 @@ import { ProviderChain } from '../../provider-chain';
 import type { GamingOverview } from './types';
 import { dappradarAdapter } from './dappradar.adapter';
 import { playtoearnAdapter } from './playtoearn.adapter';
+import { footprintAdapter } from './footprint.adapter';
 
 export type { GamingOverview, GameData } from './types';
 
@@ -43,6 +44,8 @@ export interface GamingDataChainOptions {
   includeDappRadar?: boolean;
   /** Whether to include PlayToEarn adapter. Default: true */
   includePlayToEarn?: boolean;
+  /** Whether to include Footprint Analytics adapter. Default: true */
+  includeFootprint?: boolean;
 }
 
 // =============================================================================
@@ -61,6 +64,7 @@ export function createGamingDataChain(
     staleWhileError = true,
     includeDappRadar = true,
     includePlayToEarn = true,
+    includeFootprint = true,
   } = options;
 
   const config: Partial<ProviderChainConfig> = {
@@ -77,6 +81,10 @@ export function createGamingDataChain(
 
   if (includePlayToEarn) {
     chain.addProvider(playtoearnAdapter);
+  }
+
+  if (includeFootprint) {
+    chain.addProvider(footprintAdapter);
   }
 
   return chain;

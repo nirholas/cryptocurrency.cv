@@ -1,0 +1,17 @@
+apiVersion: v2
+name: free-crypto-news
+description: Helm chart for Free Crypto News — real-time crypto news aggregator
+type: application
+version: 1.0.0
+appVersion: "1.0.2"
+keywords:
+  - crypto
+  - news
+  - api
+  - websocket
+home: https://cryptocurrency.cv
+sources:
+  - https://github.com/nicholasgriffintn/free-crypto-news
+maintainers:
+  - name: nirholas
+    email: 22895867+nirholas@users.noreply.github.com

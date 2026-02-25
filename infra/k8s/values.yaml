@@ -1,0 +1,267 @@
+# Default values for free-crypto-news Helm chart
+# Override per environment with values-staging.yaml / values-prod.yaml
+
+# ─── Global ──────────────────────────────────────────────────────────────
+
+replicaCount: 3
+
+image:
+  repository: ghcr.io/nicholasgriffintn/free-crypto-news
+  tag: latest
+  pullPolicy: IfNotPresent
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+# ─── Web (Next.js API) ──────────────────────────────────────────────────
+
+web:
+  enabled: true
+  replicas: 3
+  port: 3000
+
+  resources:
+    requests:
+      cpu: 250m
+      memory: 256Mi
+    limits:
+      cpu: "1"
+      memory: 512Mi
+
+  autoscaling:
+    enabled: true
+    minReplicas: 3
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 70
+    targetMemoryUtilizationPercentage: 80
+
+  podDisruptionBudget:
+    minAvailable: 2
+
+  env:
+    - name: NODE_ENV
+      value: production
+    - name: NEXT_TELEMETRY_DISABLED
+      value: "1"
+    - name: OTEL_SERVICE_NAME
+      value: free-crypto-news-api
+    - name: OTEL_ENABLED
+      value: "true"
+
+  livenessProbe:
+    httpGet:
+      path: /api/health
+      port: 3000
+    initialDelaySeconds: 15
+    periodSeconds: 10
+    failureThreshold: 3
+
+  readinessProbe:
+    httpGet:
+      path: /api/health
+      port: 3000
+    initialDelaySeconds: 5
+    periodSeconds: 5
+    failureThreshold: 3
+
+  nodeSelector: {}
+  tolerations: []
+  affinity:
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+        - weight: 100
+          podAffinityTerm:
+            labelSelector:
+              matchExpressions:
+                - key: app.kubernetes.io/component
+                  operator: In
+                  values:
+                    - web
+            topologyKey: kubernetes.io/hostname
+
+# ─── WebSocket Server ───────────────────────────────────────────────────
+
+websocket:
+  enabled: true
+  replicas: 2
+  port: 3001
+
+  resources:
+    requests:
+      cpu: 200m
+      memory: 256Mi
+    limits:
+      cpu: "1"
+      memory: 512Mi
+
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 8
+    targetCPUUtilizationPercentage: 60
+
+  podDisruptionBudget:
+    minAvailable: 1
+
+  env:
+    - name: WS_MAX_CONNECTIONS
+      value: "25000"
+    - name: WS_PORT
+      value: "3001"
+
+  livenessProbe:
+    httpGet:
+      path: /health
+      port: 3001
+    initialDelaySeconds: 10
+    periodSeconds: 10
+
+  readinessProbe:
+    httpGet:
+      path: /health
+      port: 3001
+    initialDelaySeconds: 5
+    periodSeconds: 5
+
+# ─── Worker (Inngest) ───────────────────────────────────────────────────
+
+worker:
+  enabled: true
+  replicas: 2
+
+  resources:
+    requests:
+      cpu: 200m
+      memory: 256Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
+
+  autoscaling:
+    enabled: false
+
+  env:
+    - name: NODE_ENV
+      value: production
+    - name: OTEL_SERVICE_NAME
+      value: free-crypto-news-worker
+
+# ─── Redis ──────────────────────────────────────────────────────────────
+
+redis:
+  enabled: true
+  architecture: standalone
+  auth:
+    enabled: true
+    existingSecret: fcn-redis-secret
+    existingSecretPasswordKey: redis-password
+
+  master:
+    resources:
+      requests:
+        cpu: 100m
+        memory: 128Mi
+      limits:
+        cpu: 500m
+        memory: 256Mi
+
+    persistence:
+      enabled: true
+      size: 2Gi
+      storageClass: ""
+
+# ─── PostgreSQL ─────────────────────────────────────────────────────────
+
+postgresql:
+  enabled: false  # Use Neon serverless in production
+  # Set to true for self-hosted Postgres
+  auth:
+    existingSecret: fcn-postgres-secret
+    database: cryptonews
+    username: cryptonews
+
+  primary:
+    resources:
+      requests:
+        cpu: 250m
+        memory: 256Mi
+      limits:
+        cpu: "1"
+        memory: 1Gi
+
+    persistence:
+      enabled: true
+      size: 10Gi
+
+  readReplicas:
+    replicaCount: 2
+    resources:
+      requests:
+        cpu: 250m
+        memory: 256Mi
+      limits:
+        cpu: 500m
+        memory: 512Mi
+
+# ─── Ingress ────────────────────────────────────────────────────────────
+
+ingress:
+  enabled: true
+  className: nginx
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/rate-limit: "60"
+    nginx.ingress.kubernetes.io/rate-limit-window: "1m"
+    nginx.ingress.kubernetes.io/proxy-body-size: "1m"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "30"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "30"
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      more_set_headers "X-Content-Type-Options: nosniff";
+      more_set_headers "X-Frame-Options: DENY";
+      more_set_headers "X-XSS-Protection: 1; mode=block";
+      more_set_headers "Referrer-Policy: strict-origin-when-cross-origin";
+
+  hosts:
+    - host: api.cryptocurrency.cv
+      paths:
+        - path: /
+          pathType: Prefix
+          service: web
+        - path: /ws
+          pathType: Prefix
+          service: websocket
+
+  tls:
+    - secretName: fcn-tls
+      hosts:
+        - api.cryptocurrency.cv
+
+# ─── Service Account ────────────────────────────────────────────────────
+
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+
+# ─── Network Policies ───────────────────────────────────────────────────
+
+networkPolicy:
+  enabled: true
+
+# ─── Secrets (reference existing K8s secrets) ────────────────────────────
+
+secrets:
+  existingSecret: fcn-secrets
+  # Expected keys in the secret:
+  #   DATABASE_URL
+  #   REDIS_URL
+  #   INNGEST_EVENT_KEY
+  #   INNGEST_SIGNING_KEY
+  #   COINGECKO_API_KEY
+  #   GEMINI_API_KEY
+  #   GROQ_API_KEY
+  #   ADMIN_TOKEN
+  #   API_KEYS_SECRET
+  #   WEBHOOK_SECRET

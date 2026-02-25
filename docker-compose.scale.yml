@@ -113,17 +113,24 @@ services:
       retries: 5
 
   # ─── WebSocket Server (real-time updates) ─────────────────────────────
+  # ─── WebSocket Server (real-time updates — horizontally scaled) ──────
   websocket:
     build:
       context: .
       dockerfile: Dockerfile.ws
-    container_name: crypto-news-ws
     environment:
       PORT: "8080"
       REDIS_URL: redis://redis:6379
-    ports:
-      - "8080:8080"
+      WS_MAX_CONNECTIONS: "25000"
+    expose:
+      - "8080"
     restart: unless-stopped
+    deploy:
+      replicas: 4
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M
     depends_on:
       redis:
         condition: service_healthy

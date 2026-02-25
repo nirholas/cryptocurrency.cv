@@ -3,7 +3,8 @@
  *
  * Premium API v1 — Stablecoin Analytics
  * Returns stablecoin supply data, market cap, and flow analysis.
- * Powered by DefiLlama.
+ * Uses provider framework (DefiLlama + Glassnode + Artemis + Dune + CryptoQuant)
+ * with circuit breakers, caching, and multi-source fallback.
  * Requires x402 payment or valid API key.
  *
  * Query parameters:
@@ -17,6 +18,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { hybridAuthMiddleware } from '@/lib/x402';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
+import { registry } from '@/lib/providers/registry';
+import type { StablecoinFlow } from '@/lib/providers/adapters/stablecoin-flows';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -55,6 +58,62 @@ export async function GET(request: NextRequest) {
   try {
     logger.info('Fetching stablecoin data', { stablecoinFilter, chainFilter });
 
+    // Layer 1: Provider framework (broadcast across DefiLlama, Glassnode, Artemis, Dune, CryptoQuant)
+    try {
+      const result = await registry.fetch<StablecoinFlow[]>('stablecoin-flows');
+      let stablecoins: StablecoinData[] = result.data.map((f, i) => ({
+        id: i + 1,
+        name: f.name,
+        symbol: f.symbol,
+        pegType: f.pegType,
+        pegMechanism: 'unknown',
+        circulating: f.circulatingUsd,
+        circulatingPrevDay: f.circulatingUsd - f.circulatingChange24h,
+        circulatingPrevWeek: f.circulatingUsd - f.circulatingChange7d,
+        circulatingPrevMonth: f.circulatingUsd,
+        change1d: f.circulatingChange24h !== 0 ? (f.circulatingChange24h / (f.circulatingUsd - f.circulatingChange24h)) * 100 : 0,
+        change7d: f.circulatingChange7d !== 0 ? (f.circulatingChange7d / (f.circulatingUsd - f.circulatingChange7d)) * 100 : 0,
+        change30d: 0,
+        chains: f.chainDistribution.map(c => c.chain),
+        price: f.price,
+        depeg: Math.abs(f.price - 1) > 0.01,
+      }));
+
+      if (stablecoinFilter) {
+        stablecoins = stablecoins.filter((s) => s.symbol === stablecoinFilter);
+      }
+      if (chainFilter) {
+        stablecoins = stablecoins.filter((s) =>
+          s.chains.some((c) => c.toLowerCase() === chainFilter),
+        );
+      }
+
+      stablecoins.sort((a, b) => b.circulating - a.circulating);
+
+      const totalSupply = stablecoins.reduce((s, c) => s + c.circulating, 0);
+      const totalChange1d = stablecoins.reduce((s, c) => s + (c.circulating - c.circulatingPrevDay), 0);
+      const depegged = stablecoins.filter((s) => s.depeg).map((s) => s.symbol);
+
+      return NextResponse.json({
+        count: stablecoins.length,
+        totalSupply: Math.round(totalSupply),
+        netFlow1d: Math.round(totalChange1d),
+        depeggedTokens: depegged,
+        stablecoins: stablecoins.slice(0, 50),
+        source: result.lineage.provider,
+        timestamp: new Date().toISOString(),
+        latencyMs: Date.now() - start,
+      }, {
+        headers: {
+          'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
+          'X-Provider': result.lineage.provider,
+          'X-Confidence': String(result.lineage.confidence),
+          'X-Cache': result.cached ? 'HIT' : 'MISS',
+        },
+      });
+    } catch { /* provider chain miss — fall through to direct fetch */ }
+
+    // Layer 2: Direct DefiLlama fallback (legacy)
     const res = await fetch('https://stablecoins.llama.fi/stablecoins?includePrices=true', {
       headers: { 'User-Agent': 'free-crypto-news/2.0' },
       next: { revalidate: 300 },
@@ -121,6 +180,7 @@ export async function GET(request: NextRequest) {
     }, {
       headers: {
         'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
+        'X-Cache': 'DIRECT',
       },
     });
   } catch (error) {

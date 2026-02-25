@@ -17,6 +17,9 @@ import { ProviderChain } from '../../provider-chain';
 import { binanceFundingAdapter } from './binance-futures.adapter';
 import { bybitFundingAdapter } from './bybit.adapter';
 import { okxFundingAdapter } from './okx.adapter';
+import { dydxFundingAdapter } from './dydx.adapter';
+import { hyperliquidFundingAdapter } from './hyperliquid.adapter';
+import { coinglassFundingAdapter } from './coinglass-funding.adapter';
 import type { FundingRate } from './types';
 
 export type { FundingRate, FundingRateHistory } from './types';
@@ -28,6 +31,9 @@ export interface FundingRateChainOptions {
   includeBinance?: boolean;
   includeBybit?: boolean;
   includeOkx?: boolean;
+  includeDydx?: boolean;
+  includeHyperliquid?: boolean;
+  includeCoinglass?: boolean;
 }
 
 export function createFundingRateChain(
@@ -40,6 +46,9 @@ export function createFundingRateChain(
     includeBinance = true,
     includeBybit = true,
     includeOkx = true,
+    includeDydx = true,
+    includeHyperliquid = true,
+    includeCoinglass = true,
   } = options;
 
   const config: Partial<ProviderChainConfig> = {
@@ -53,6 +62,9 @@ export function createFundingRateChain(
   if (includeBinance) chain.addProvider(binanceFundingAdapter);
   if (includeBybit) chain.addProvider(bybitFundingAdapter);
   if (includeOkx) chain.addProvider(okxFundingAdapter);
+  if (includeDydx) chain.addProvider(dydxFundingAdapter);
+  if (includeHyperliquid) chain.addProvider(hyperliquidFundingAdapter);
+  if (includeCoinglass) chain.addProvider(coinglassFundingAdapter);
 
   return chain;
 }

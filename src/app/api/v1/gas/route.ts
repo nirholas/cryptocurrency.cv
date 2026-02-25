@@ -1,8 +1,10 @@
 /**
  * Premium API v1 - Gas Prices Endpoint
  *
- * Returns current gas prices for major networks
- * Requires x402 payment or valid API key
+ * Returns current gas prices for major networks.
+ * Uses provider framework (Etherscan + Blocknative + Owlracle)
+ * with circuit breakers and caching, falling back to direct API calls.
+ * Requires x402 payment or valid API key.
  *
  * @price $0.001 per request
  */
@@ -11,6 +13,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { hybridAuthMiddleware } from '@/lib/x402';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
+import { registry } from '@/lib/providers/registry';
+import type { GasPrice } from '@/lib/providers/adapters/gas';
 
 const ENDPOINT = '/api/v1/gas';
 
@@ -44,51 +48,83 @@ export async function GET(request: NextRequest) {
 
     const gasData: GasData[] = [];
 
-    // Fetch Ethereum gas from multiple sources
-    const ethGasPromise = fetchEthereumGas();
-    const polygonGasPromise = fetchPolygonGas();
+    // Layer 1: Provider framework for Ethereum gas (fallback between Etherscan + Blocknative + Owlracle)
+    let ethGasFromProvider = false;
+    if (!network || network.toLowerCase() === 'ethereum') {
+      try {
+        const result = await registry.fetch<GasPrice>('gas-fees');
+        const gp = result.data;
+        gasData.push({
+          network: gp.chain || 'ethereum',
+          chainId: gp.chainId || 1,
+          symbol: 'ETH',
+          slow: gp.slow,
+          standard: gp.standard,
+          fast: gp.fast,
+          instant: gp.instant,
+          baseFee: gp.baseFee,
+          unit: gp.unit || 'gwei',
+          source: result.lineage.provider,
+          timestamp: gp.lastUpdated || new Date().toISOString(),
+        });
+        ethGasFromProvider = true;
+      } catch { /* provider chain miss — fall through to direct fetch */ }
+    }
 
-    const [ethGas, polygonGas] = await Promise.all([ethGasPromise, polygonGasPromise]);
+    // Layer 2: Direct fetch fallback for Ethereum gas
+    if (!ethGasFromProvider && (!network || network.toLowerCase() === 'ethereum')) {
+      const ethGas = await fetchEthereumGas();
+      if (ethGas) gasData.push(ethGas);
+    }
 
-    if (ethGas) gasData.push(ethGas);
-    if (polygonGas) gasData.push(polygonGas);
+    // Polygon gas (not yet in provider framework)
+    if (!network || network.toLowerCase() === 'polygon') {
+      const polygonGas = await fetchPolygonGas();
+      if (polygonGas) gasData.push(polygonGas);
+    }
 
     // Add static estimates for other networks
-    gasData.push({
-      network: 'base',
-      chainId: 8453,
-      symbol: 'ETH',
-      slow: 0.001,
-      standard: 0.002,
-      fast: 0.005,
-      unit: 'gwei',
-      source: 'estimate',
-      timestamp: new Date().toISOString(),
-    });
+    if (!network || network.toLowerCase() === 'base') {
+      gasData.push({
+        network: 'base',
+        chainId: 8453,
+        symbol: 'ETH',
+        slow: 0.001,
+        standard: 0.002,
+        fast: 0.005,
+        unit: 'gwei',
+        source: 'estimate',
+        timestamp: new Date().toISOString(),
+      });
+    }
 
-    gasData.push({
-      network: 'arbitrum',
-      chainId: 42161,
-      symbol: 'ETH',
-      slow: 0.01,
-      standard: 0.1,
-      fast: 0.25,
-      unit: 'gwei',
-      source: 'estimate',
-      timestamp: new Date().toISOString(),
-    });
+    if (!network || network.toLowerCase() === 'arbitrum') {
+      gasData.push({
+        network: 'arbitrum',
+        chainId: 42161,
+        symbol: 'ETH',
+        slow: 0.01,
+        standard: 0.1,
+        fast: 0.25,
+        unit: 'gwei',
+        source: 'estimate',
+        timestamp: new Date().toISOString(),
+      });
+    }
 
-    gasData.push({
-      network: 'optimism',
-      chainId: 10,
-      symbol: 'ETH',
-      slow: 0.001,
-      standard: 0.001,
-      fast: 0.002,
-      unit: 'gwei',
-      source: 'estimate',
-      timestamp: new Date().toISOString(),
-    });
+    if (!network || network.toLowerCase() === 'optimism') {
+      gasData.push({
+        network: 'optimism',
+        chainId: 10,
+        symbol: 'ETH',
+        slow: 0.001,
+        standard: 0.001,
+        fast: 0.002,
+        unit: 'gwei',
+        source: 'estimate',
+        timestamp: new Date().toISOString(),
+      });
+    }
 
     // Filter by network if specified
     let filteredData = gasData;
@@ -111,6 +147,7 @@ export async function GET(request: NextRequest) {
       {
         headers: {
           'Cache-Control': 'public, s-maxage=15, stale-while-revalidate=60',
+          'X-Cache': ethGasFromProvider ? 'PROVIDER' : 'DIRECT',
         },
       }
     );

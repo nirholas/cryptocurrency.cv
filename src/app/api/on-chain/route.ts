@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { registry } from '@/lib/providers/registry';
+import type { OnChainMetric } from '@/lib/providers/adapters/on-chain';
 
 export const runtime = 'edge';
 
@@ -11,7 +13,8 @@ const CORS_HEADERS = {
 /**
  * On-Chain Metrics API — Bitcoin & Ethereum network data
  *
- * Aggregates from Blockchain.info, Mempool.space, and Etherscan.
+ * Uses provider framework (Blockchain.info + Etherscan + Mempool.space + Santiment + Dune)
+ * with circuit breakers and caching, falling back to direct API calls.
  *
  * GET /api/on-chain             — all available on-chain metrics
  * GET /api/on-chain?chain=btc   — Bitcoin metrics only
@@ -24,6 +27,50 @@ export async function GET(request: NextRequest) {
     const chain = searchParams.get('chain')?.toLowerCase();
     const metricFilter = searchParams.get('metric')?.toLowerCase();
 
+    // Layer 1: Provider framework (broadcast across Blockchain.info, Etherscan, Mempool.space, Santiment, Dune)
+    try {
+      const result = await registry.fetch<OnChainMetric[]>('on-chain', { chain });
+      let metrics = result.data;
+
+      // Apply chain filter (map shorthand to full name)
+      if (chain) {
+        const chainMap: Record<string, string> = {
+          btc: 'bitcoin', bitcoin: 'bitcoin',
+          eth: 'ethereum', ethereum: 'ethereum',
+        };
+        const fullChain = chainMap[chain] ?? chain;
+        metrics = metrics.filter(m => m.asset.toLowerCase() === fullChain);
+      }
+
+      // Apply metric filter
+      if (metricFilter) {
+        metrics = metrics.filter(m => m.metricId.includes(metricFilter) || m.name.toLowerCase().includes(metricFilter));
+      }
+
+      // Map to legacy response shape
+      const data = metrics.map(m => ({
+        metric: m.metricId,
+        chain: m.asset,
+        value: m.value,
+        unit: m.unit,
+        source: m.source,
+      }));
+
+      return NextResponse.json({
+        count: data.length,
+        data,
+        timestamp: new Date().toISOString(),
+      }, {
+        headers: {
+          ...CORS_HEADERS,
+          'Cache-Control': 'public, s-maxage=30, stale-while-revalidate=60',
+          'X-Provider': result.lineage.provider,
+          'X-Cache': result.cached ? 'HIT' : 'MISS',
+        },
+      });
+    } catch { /* provider chain miss — fall through to direct fetch */ }
+
+    // Layer 2: Direct API fallback (legacy)
     const results: Record<string, unknown>[] = [];
 
     // Bitcoin data (Blockchain.info + Mempool.space)
@@ -107,6 +154,7 @@ export async function GET(request: NextRequest) {
       headers: {
         ...CORS_HEADERS,
         'Cache-Control': 'public, s-maxage=30, stale-while-revalidate=60',
+        'X-Cache': 'DIRECT',
       },
     });
   } catch (error) {

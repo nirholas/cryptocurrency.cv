@@ -14,6 +14,7 @@ import { ProviderChain } from '../../provider-chain';
 import type { OHLCVData } from './types';
 import { binanceOhlcvAdapter } from './binance-ohlcv.adapter';
 import { cryptocompareOhlcvAdapter } from './cryptocompare-ohlcv.adapter';
+import { coingeckoOhlcvAdapter } from './coingecko-ohlcv.adapter';
 
 export type { OHLCVData, OHLCVCandle, CandleInterval } from './types';
 
@@ -39,6 +40,7 @@ export function createOHLCVChain(options: OHLCVChainOptions = {}): ProviderChain
   const chain = new ProviderChain<OHLCVData[]>('ohlcv', config);
   chain.addProvider(binanceOhlcvAdapter);
   chain.addProvider(cryptocompareOhlcvAdapter);
+  chain.addProvider(coingeckoOhlcvAdapter);
   return chain;
 }
 

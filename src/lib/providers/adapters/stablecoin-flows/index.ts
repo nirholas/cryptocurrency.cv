@@ -17,6 +17,7 @@ import { defillamaStablecoinsAdapter } from './defillama-stablecoins.adapter';
 import { glassnodeStablecoinsAdapter } from './glassnode.adapter';
 import { artemisStablecoinsAdapter } from './artemis.adapter';
 import { duneStablecoinsAdapter } from './dune.adapter';
+import { cryptoquantStablesAdapter } from './cryptoquant-stables.adapter';
 
 export type { StablecoinFlow, StablecoinMarketStats } from './types';
 
@@ -41,6 +42,7 @@ export function createStablecoinFlowsChain(
   chain.addProvider(glassnodeStablecoinsAdapter);
   chain.addProvider(artemisStablecoinsAdapter);
   chain.addProvider(duneStablecoinsAdapter);
+  chain.addProvider(cryptoquantStablesAdapter);
   return chain;
 }
 

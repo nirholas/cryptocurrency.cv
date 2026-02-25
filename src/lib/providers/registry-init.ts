@@ -27,6 +27,9 @@ import { orderBookChain } from './adapters/order-book';
 import { stablecoinFlowsChain } from './adapters/stablecoin-flows';
 import { tvlChain } from './adapters/tvl';
 import { defiYieldsChain } from './adapters/defi-yields';
+import { nftMarketChain } from './adapters/nft-market';
+import { gamingDataChain } from './adapters/gaming-data';
+import { macroChain } from './adapters/macro';
 
 // ---------------------------------------------------------------------------
 // Chain map: DataCategory → pre-wired ProviderChain
@@ -48,6 +51,9 @@ const CHAINS: Array<{ category: DataCategory; chain: any; label: string }> = [
   { category: 'stablecoin-flows', chain: stablecoinFlowsChain, label: 'Stablecoin Flows' },
   { category: 'tvl', chain: tvlChain, label: 'TVL' },
   { category: 'defi-yields', chain: defiYieldsChain, label: 'DeFi Yields' },
+  { category: 'nft-market', chain: nftMarketChain, label: 'NFT Market' },
+  { category: 'gaming-data', chain: gamingDataChain, label: 'Gaming Data' },
+  { category: 'macro-data', chain: macroChain, label: 'Macro Data' },
 ];
 
 // ---------------------------------------------------------------------------

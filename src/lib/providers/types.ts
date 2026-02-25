@@ -468,7 +468,17 @@ export type DataCategory =
   | 'stablecoin-flows'
   | 'nft-market'
   | 'gaming-data'
-  | 'macro-data';
+  | 'macro-data'
+  | 'solana-ecosystem'
+  | 'prediction-markets'
+  | 'governance'
+  | 'protocol-revenue'
+  | 'l2-data'
+  | 'mev'
+  | 'bridges'
+  | 'btc-etf'
+  | 'mining'
+  | 'news-aggregate';
 
 /**
  * Registry entry for a provider chain.

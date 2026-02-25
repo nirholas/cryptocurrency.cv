@@ -47,8 +47,15 @@ import { derivativesChain, liquidationsChain } from './adapters/derivatives';
 import { onChainChain, whaleAlertChain } from './adapters/on-chain';
 import { socialChain } from './adapters/social';
 import { stablecoinFlowsChain } from './adapters/stablecoin-flows';
+import { newsChain } from './adapters/news';
 import { ohlcvChain } from './adapters/ohlcv';
 import { orderBookChain } from './adapters/order-book';
+import { nftMarketChain } from './adapters/nft-market';
+import { gamingDataChain } from './adapters/gaming-data';
+import { macroChain } from './adapters/macro';
+import { nftMarketChain } from './adapters/nft-market';
+import { gamingDataChain } from './adapters/gaming-data';
+import { macroChain } from './adapters/macro';
 
 // =============================================================================
 // REGISTER ALL CHAINS
@@ -114,6 +121,11 @@ registry.register('stablecoin-flows', stablecoinFlowsChain, {
   description: 'Stablecoin supply and chain distribution from DefiLlama',
 });
 
+// News (Aggregated crypto news)
+registry.register('news', newsChain, {
+  description: 'Aggregated crypto news from CryptoPanic and NewsData.io',
+});
+
 // OHLCV (Candlestick Data)
 registry.register('ohlcv', ohlcvChain, {
   description: 'Historical candlestick data from Binance and CryptoCompare',
@@ -129,6 +141,21 @@ registry.register('whale-alerts', whaleAlertChain, {
   description: 'Large transaction alerts from Whale Alert API',
 });
 
+// NFT Market (OpenSea → Reservoir → SimpleHash)
+registry.register('nft-market', nftMarketChain, {
+  description: 'NFT market data from OpenSea, Reservoir, and SimpleHash',
+});
+
+// Gaming Data (DappRadar → PlayToEarn → Footprint)
+registry.register('gaming-data', gamingDataChain, {
+  description: 'Blockchain gaming data from DappRadar, PlayToEarn, and Footprint',
+});
+
+// Macro Data (FRED → Alpha Vantage → Twelve Data)
+registry.register('macro-data', macroChain, {
+  description: 'Macroeconomic indicators from FRED, Alpha Vantage, and Twelve Data',
+});
+
 // =============================================================================
 // CONVENIENCE: Export registry for re-import
 // =============================================================================
@@ -136,7 +163,7 @@ registry.register('whale-alerts', whaleAlertChain, {
 export { registry };
 
 /** Number of registered categories */
-export const registeredCategories = 15;
+export const registeredCategories = 16;
 
 /** List all registered categories */
 export function listRegisteredCategories() {
@@ -153,8 +180,12 @@ export function listRegisteredCategories() {
     'on-chain',
     'social-metrics',
     'stablecoin-flows',
+    'news',
     'ohlcv',
     'order-book',
     'whale-alerts',
+    'nft-market',
+    'gaming-data',
+    'macro-data',
   ] as const;
 }

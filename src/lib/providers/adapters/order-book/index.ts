@@ -14,6 +14,9 @@ import { ProviderChain } from '../../provider-chain';
 import type { OrderBookData } from './types';
 import { binanceOrderBookAdapter } from './binance-orderbook.adapter';
 import { coinbaseOrderBookAdapter } from './coinbase-orderbook.adapter';
+import { krakenOrderBookAdapter } from './kraken-orderbook.adapter';
+import { okxOrderBookAdapter } from './okx-orderbook.adapter';
+import { bybitOrderBookAdapter } from './bybit-orderbook.adapter';
 
 export type { OrderBookData, OrderBookLevel } from './types';
 
@@ -22,6 +25,9 @@ export interface OrderBookChainOptions {
   cacheTtlSeconds?: number;
   staleWhileError?: boolean;
   includeCoinbase?: boolean;
+  includeKraken?: boolean;
+  includeOKX?: boolean;
+  includeBybit?: boolean;
 }
 
 export function createOrderBookChain(options: OrderBookChainOptions = {}): ProviderChain<OrderBookData[]> {
@@ -30,6 +36,9 @@ export function createOrderBookChain(options: OrderBookChainOptions = {}): Provi
     cacheTtlSeconds = 5,  // Order books change fast
     staleWhileError = true,
     includeCoinbase = true,
+    includeKraken = true,
+    includeOKX = true,
+    includeBybit = true,
   } = options;
 
   const config: Partial<ProviderChainConfig> = {
@@ -43,6 +52,18 @@ export function createOrderBookChain(options: OrderBookChainOptions = {}): Provi
 
   if (includeCoinbase) {
     chain.addProvider(coinbaseOrderBookAdapter);
+  }
+
+  if (includeKraken) {
+    chain.addProvider(krakenOrderBookAdapter);
+  }
+
+  if (includeOKX) {
+    chain.addProvider(okxOrderBookAdapter);
+  }
+
+  if (includeBybit) {
+    chain.addProvider(bybitOrderBookAdapter);
   }
 
   return chain;

@@ -22,6 +22,22 @@ export { tagScoreRecalculation } from './tag-score-recalculation';
 
 export { enrichArticlesCron, enrichArticleOnEvent } from './enrich-article';
 
+export { derivativesSnapshot } from './derivatives-snapshot';
+
+export { stablecoinSnapshot, gasFeeSnapshot } from './market-data-snapshot';
+
+export {
+  solanaSnapshot,
+  predictionMarketsSnapshot,
+  governanceSnapshot,
+  l2DataSnapshot,
+  mevSnapshot,
+  bridgeSnapshot,
+  btcETFSnapshot,
+  miningSnapshot,
+  protocolRevenueSnapshot,
+} from './data-collection';
+
 /**
  * Flat array of all functions for serve().
  * Import this in the route handler.
@@ -33,6 +49,19 @@ import { coverageGapDetection } from './coverage-gap-detection';
 import { predictions } from './predictions';
 import { tagScoreRecalculation } from './tag-score-recalculation';
 import { enrichArticlesCron, enrichArticleOnEvent } from './enrich-article';
+import { derivativesSnapshot } from './derivatives-snapshot';
+import { stablecoinSnapshot, gasFeeSnapshot } from './market-data-snapshot';
+import {
+  solanaSnapshot,
+  predictionMarketsSnapshot,
+  governanceSnapshot,
+  l2DataSnapshot,
+  mevSnapshot,
+  bridgeSnapshot,
+  btcETFSnapshot,
+  miningSnapshot,
+  protocolRevenueSnapshot,
+} from './data-collection';
 
 export const allFunctions = [
   archiveArticlesCron,
@@ -44,4 +73,16 @@ export const allFunctions = [
   tagScoreRecalculation,
   enrichArticlesCron,
   enrichArticleOnEvent,
+  derivativesSnapshot,
+  stablecoinSnapshot,
+  gasFeeSnapshot,
+  solanaSnapshot,
+  predictionMarketsSnapshot,
+  governanceSnapshot,
+  l2DataSnapshot,
+  mevSnapshot,
+  bridgeSnapshot,
+  btcETFSnapshot,
+  miningSnapshot,
+  protocolRevenueSnapshot,
 ];

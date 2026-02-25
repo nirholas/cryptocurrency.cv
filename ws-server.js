@@ -197,6 +197,78 @@ function startInstanceHeartbeat() {
   }, (INSTANCE_CONN_TTL / 2) * 1000);
 }
 
+// ---------------------------------------------------------------------------
+// Redis-backed connection state (for cross-instance reconnection)
+// ---------------------------------------------------------------------------
+const CONN_STATE_TTL = 300; // 5 min — enough for reconnection window
+
+/** Persist full connection state to Redis so any instance can restore it. */
+async function redisSaveConnectionState(clientId, clientData) {
+  if (!redisPub) return;
+  try {
+    const state = {
+      instanceId: INSTANCE_ID,
+      connectedAt: clientData.connectedAt,
+      lastPingAt: clientData.lastPing,
+      clientIp: clientData.ip,
+      channels: Array.from(clientData.channels || []),
+      subscriptions: clientData.subscription || {},
+      alertSubscriptions: Array.from(clientData.alertSubscriptions || []),
+      streamPrices: !!clientData.streamPrices,
+      streamWhales: !!clientData.streamWhales,
+      streamSentiment: !!clientData.streamSentiment,
+    };
+    await redisPub.set(`ws:conn:${clientId}`, JSON.stringify(state), { EX: CONN_STATE_TTL });
+
+    // Also maintain per-channel membership sets for O(1) lookup
+    for (const ch of state.channels) {
+      await redisPub.sAdd(`ws:channel:${ch}:members`, clientId);
+      await redisPub.expire(`ws:channel:${ch}:members`, CONN_STATE_TTL);
+    }
+  } catch (err) {
+    console.error('[redis] Save connection state error:', err.message);
+  }
+}
+
+/** Load connection state from Redis (for reconnection to a different instance). */
+async function redisLoadConnectionState(clientId) {
+  if (!redisPub) return null;
+  try {
+    const raw = await redisPub.get(`ws:conn:${clientId}`);
+    if (!raw) return null;
+    return JSON.parse(raw);
+  } catch (err) {
+    console.error('[redis] Load connection state error:', err.message);
+    return null;
+  }
+}
+
+/** Remove connection state from Redis on disconnect. */
+async function redisRemoveConnectionState(clientId, clientData) {
+  if (!redisPub) return;
+  try {
+    await redisPub.del(`ws:conn:${clientId}`);
+    // Remove from per-channel membership sets
+    if (clientData) {
+      for (const ch of (clientData.channels || [])) {
+        await redisPub.sRem(`ws:channel:${ch}:members`, clientId).catch(() => {});
+      }
+    }
+  } catch (err) {
+    console.error('[redis] Remove connection state error:', err.message);
+  }
+}
+
+/** Refresh TTL on connection state (called on each ping/pong). */
+async function redisRefreshConnectionTTL(clientId) {
+  if (!redisPub) return;
+  try {
+    await redisPub.expire(`ws:conn:${clientId}`, CONN_STATE_TTL);
+  } catch {
+    // non-critical
+  }
+}
+
 /**
  * Simple leader election via Redis.  One instance acquires a key with a TTL;
  * only the leader runs the polling loops.  Other instances just relay
@@ -571,6 +643,8 @@ wss.on('connection', (ws, req) => {
     console.log(`[${new Date().toISOString()}] Client disconnected: ${clientId} (code: ${code})`);
     const client = clients.get(clientId);
     if (client) {
+      // Keep state in Redis for reconnection window (don't delete — TTL auto-expires)
+      redisSaveConnectionState(clientId, client);
       // Decrement Redis channel counters for all channels this client was in
       for (const ch of client.channels) {
         redisTrackChannelLeave(ch);
@@ -622,6 +696,7 @@ function handleMessage(clientId, message) {
         type: WS_MSG_TYPES.PONG,
         timestamp: new Date().toISOString(),
       }));
+      redisRefreshConnectionTTL(clientId);
       break;
     case WS_MSG_TYPES.SUBSCRIBE_ALERTS:
       handleSubscribeAlerts(clientId, message.payload);
@@ -655,6 +730,7 @@ function handleMessage(clientId, message) {
           timestamp: new Date().toISOString(),
         }));
       }
+      redisSaveConnectionState(clientId, client);
       break;
     }
     case 'stream_whales': {
@@ -666,6 +742,7 @@ function handleMessage(clientId, message) {
       }));
       if (client.streamWhales && !wasEnabled) redisTrackStreamSubscribe('whales');
       if (!client.streamWhales && wasEnabled) redisTrackStreamUnsubscribe('whales');
+      redisSaveConnectionState(clientId, client);
       break;
     }
     case 'stream_sentiment': {
@@ -685,11 +762,87 @@ function handleMessage(clientId, message) {
           timestamp: new Date().toISOString(),
         }));
       }
+      redisSaveConnectionState(clientId, client);
       break;
     }
     default:
+      // Handle reconnection restore: client sends previous clientId to restore state
+      if (message.type === 'restore' && message.payload?.previousClientId) {
+        handleRestore(clientId, message.payload.previousClientId);
+        break;
+      }
       console.log(`Unknown message type: ${message.type}`);
   }
+}
+
+// Handle restore (reconnect to previous session)
+async function handleRestore(clientId, previousClientId) {
+  const client = clients.get(clientId);
+  if (!client) return;
+
+  const state = await redisLoadConnectionState(previousClientId);
+  if (!state) {
+    client.ws.send(JSON.stringify({
+      type: 'restore_failed',
+      payload: { message: 'Previous session not found or expired', previousClientId },
+      timestamp: new Date().toISOString(),
+    }));
+    return;
+  }
+
+  // Restore subscriptions
+  if (state.subscriptions) {
+    client.subscription = {
+      sources: state.subscriptions.sources || [],
+      categories: state.subscriptions.categories || [],
+      keywords: state.subscriptions.keywords || [],
+      coins: state.subscriptions.coins || [],
+    };
+  }
+
+  // Restore channels
+  if (state.channels) {
+    for (const ch of state.channels) {
+      if (CHANNELS[ch]) {
+        client.channels.add(ch);
+        redisTrackChannelJoin(ch);
+      }
+    }
+  }
+
+  // Restore alert subscriptions
+  if (state.alertSubscriptions) {
+    for (const alertId of state.alertSubscriptions) {
+      client.alertSubscriptions.add(alertId);
+    }
+  }
+
+  // Restore stream flags
+  if (state.streamPrices) { client.streamPrices = true; redisTrackStreamSubscribe('prices'); }
+  if (state.streamWhales) { client.streamWhales = true; redisTrackStreamSubscribe('whales'); }
+  if (state.streamSentiment) { client.streamSentiment = true; redisTrackStreamSubscribe('sentiment'); }
+
+  // Clean up old session
+  await redisRemoveConnectionState(previousClientId, null);
+
+  // Save new state
+  redisSaveConnectionState(clientId, client);
+
+  client.ws.send(JSON.stringify({
+    type: 'restored',
+    payload: {
+      previousClientId,
+      subscription: client.subscription,
+      channels: Array.from(client.channels),
+      alertSubscriptions: Array.from(client.alertSubscriptions),
+      streamPrices: client.streamPrices,
+      streamWhales: client.streamWhales,
+      streamSentiment: client.streamSentiment,
+    },
+    timestamp: new Date().toISOString(),
+  }));
+
+  console.log(`[${new Date().toISOString()}] Client ${clientId} restored session from ${previousClientId}`);
 }
 
 // Handle subscribe
@@ -717,6 +870,7 @@ function handleSubscribe(clientId, payload) {
   }));
 
   console.log(`[${new Date().toISOString()}] Client ${clientId} subscribed:`, client.subscription);
+  redisSaveConnectionState(clientId, client);
 }
 
 // Handle unsubscribe
@@ -742,6 +896,7 @@ function handleUnsubscribe(clientId, payload) {
     payload: { subscription: client.subscription },
     timestamp: new Date().toISOString(),
   }));
+  redisSaveConnectionState(clientId, client);
 }
 
 // Handle alert subscription
@@ -765,6 +920,7 @@ function handleSubscribeAlerts(clientId, payload) {
   }));
 
   console.log(`[${new Date().toISOString()}] Client ${clientId} subscribed to alerts:`, Array.from(client.alertSubscriptions));
+  redisSaveConnectionState(clientId, client);
 }
 
 // Handle alert unsubscription
@@ -829,6 +985,7 @@ function handleJoinChannel(clientId, payload) {
   }));
 
   console.log(`[${new Date().toISOString()}] Client ${clientId} joined channel: ${channelId}`);
+  redisSaveConnectionState(clientId, client);
 }
 
 // Handle channel leave
@@ -859,6 +1016,7 @@ function handleLeaveChannel(clientId, payload) {
     },
     timestamp: new Date().toISOString(),
   }));
+  redisSaveConnectionState(clientId, client);
 }
 
 // =============================================================================

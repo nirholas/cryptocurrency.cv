@@ -214,9 +214,10 @@ export {
   type CandleInterval,
 } from './adapters/ohlcv';
 
-// Order Book Depth (Binance)
+// Order Book Depth (Binance → Coinbase → Kraken → OKX → Bybit)
 export {
   orderBookChain,
+  orderBookConsensusChain,
   createOrderBookChain,
   type OrderBookData,
   type OrderBookLevel,
@@ -226,6 +227,33 @@ export {
 export {
   whaleAlertChain,
 } from './adapters/on-chain';
+
+// NFT Market (OpenSea → Reservoir → SimpleHash)
+export {
+  nftMarketChain,
+  createNFTMarketChain,
+} from './adapters/nft-market';
+
+// Gaming Data (DappRadar → PlayToEarn → Footprint)
+export {
+  gamingDataChain,
+  gamingDataConsensusChain,
+  createGamingDataChain,
+  type GamingOverview,
+  type GameData,
+} from './adapters/gaming-data';
+
+// Macro Data (FRED → Alpha Vantage → Twelve Data)
+export {
+  macroChain,
+  createMacroChain,
+} from './adapters/macro';
+
+// Bootstrap
+export {
+  bootstrapProviders,
+  isBootstrapped,
+} from './bootstrap';
 
 // =============================================================================
 // REGISTRY SETUP — Import to wire all chains into global registry
@@ -246,3 +274,13 @@ export { binanceAdapter } from './adapters/market-price/binance.adapter';
 export { coinmarketcapAdapter } from './adapters/market-price/coinmarketcap.adapter';
 export { coinpaprikaAdapter } from './adapters/market-price/coinpaprika.adapter';
 export { cryptocompareAdapter } from './adapters/market-price/cryptocompare.adapter';
+export { coinbaseAdapter } from './adapters/market-price/coinbase.adapter';
+export { krakenAdapter } from './adapters/market-price/kraken.adapter';
+export { kucoinAdapter } from './adapters/market-price/kucoin.adapter';
+export { mexcAdapter } from './adapters/market-price/mexc.adapter';
+export { geminiAdapter } from './adapters/market-price/gemini.adapter';
+export { gateioAdapter } from './adapters/market-price/gate-io.adapter';
+export { messariAdapter } from './adapters/market-price/messari.adapter';
+
+// Exchange — NBBO engine
+export { computeNBBO, nbboSummary, type NBBOResult } from '../exchange/nbbo';

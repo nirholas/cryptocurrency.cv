@@ -1,0 +1,145 @@
+# Prometheus Alert Rules for Free Crypto News
+# Import into Prometheus with `rule_files` config directive
+
+groups:
+  - name: free-crypto-news
+    interval: 30s
+    rules:
+
+      # ── API Availability ──────────────────────────────────────────────
+
+      - alert: HighErrorRate
+        expr: |
+          sum(rate(api_errors_total[5m])) / sum(rate(api_requests_total[5m])) > 0.01
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Error rate > 1% for 5 minutes"
+          description: "Current error rate: {{ $value | humanizePercentage }}"
+          runbook: "https://docs.cryptocurrency.cv/runbooks/high-error-rate"
+
+      - alert: HighLatency
+        expr: |
+          histogram_quantile(0.99, rate(api_latency_bucket[5m])) > 5000
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "p99 latency > 5s for 10 minutes"
+          description: "p99 latency: {{ $value | humanizeDuration }}"
+
+      - alert: HighLatencyCritical
+        expr: |
+          histogram_quantile(0.95, rate(api_latency_bucket[5m])) > 3000
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "p95 latency > 3s for 5 minutes"
+          description: "p95 latency: {{ $value | humanizeDuration }}"
+
+      # ── Provider Health ────────────────────────────────────────────────
+
+      - alert: CircuitBreakerOpen
+        expr: |
+          provider_circuit_breaker_state == 1
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Circuit breaker OPEN for provider {{ $labels.provider }}"
+          description: "Provider {{ $labels.provider }} has been failing — circuit breaker activated"
+
+      - alert: ProviderHighLatency
+        expr: |
+          provider_latency_ms > 10000
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Provider {{ $labels.provider }} latency > 10s"
+
+      - alert: AllProvidersDown
+        expr: |
+          count(provider_circuit_breaker_state == 1) == count(provider_circuit_breaker_state)
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "ALL upstream providers are down"
+          description: "Every provider circuit breaker is open — serving stale cache only"
+
+      # ── Cache ──────────────────────────────────────────────────────────
+
+      - alert: CacheHitRateLow
+        expr: |
+          sum(rate(cache_hits_total{result="hit"}[15m])) / sum(rate(cache_hits_total[15m])) < 0.70
+        for: 15m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Cache hit rate below 70% for 15 minutes"
+          description: "Current hit rate: {{ $value | humanizePercentage }}"
+
+      # ── AI / LLM ──────────────────────────────────────────────────────
+
+      - alert: AIHighTokenUsage
+        expr: |
+          sum(rate(ai_tokens_total[1h])) > 100000
+        for: 30m
+        labels:
+          severity: warning
+        annotations:
+          summary: "AI token consumption > 100K/hour for 30 minutes"
+          description: "Token rate: {{ $value }}/hour — check for runaway AI calls"
+
+      - alert: AIInferenceErrors
+        expr: |
+          sum(rate(ai_errors_total[5m])) > 0.1
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "AI inference errors sustained > 0.1/s for 10 minutes"
+
+      # ── WebSocket ──────────────────────────────────────────────────────
+
+      - alert: WebSocketHighConnections
+        expr: |
+          ws_connections_total > 8000
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "WebSocket connections > 8K (approaching 10K limit)"
+
+      - alert: WebSocketDroppedMessages
+        expr: |
+          rate(ws_messages_dropped_total[5m]) > 10
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "WebSocket dropping > 10 messages/s (backpressure)"
+
+      # ── Infrastructure ─────────────────────────────────────────────────
+
+      - alert: HighMemoryUsage
+        expr: |
+          process_resident_memory_bytes / 1024 / 1024 > 512
+        for: 15m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Process memory > 512MB for 15 minutes (possible leak)"
+
+      - alert: RateLimitExhaustion
+        expr: |
+          sum(rate(rate_limit_blocked_total[5m])) > 100
+        for: 5m
+        labels:
+          severity: info
+        annotations:
+          summary: "Rate limiting blocking > 100 requests/5min"
+          description: "High rate limit blocks — possibly DDoS or scraping"

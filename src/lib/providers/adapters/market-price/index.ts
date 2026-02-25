@@ -58,6 +58,13 @@ import { binanceAdapter } from './binance.adapter';
 import { coinmarketcapAdapter } from './coinmarketcap.adapter';
 import { coinpaprikaAdapter } from './coinpaprika.adapter';
 import { cryptocompareAdapter } from './cryptocompare.adapter';
+import { coinbaseAdapter } from './coinbase.adapter';
+import { krakenAdapter } from './kraken.adapter';
+import { kucoinAdapter } from './kucoin.adapter';
+import { mexcAdapter } from './mexc.adapter';
+import { geminiAdapter } from './gemini.adapter';
+import { gateioAdapter } from './gate-io.adapter';
+import { messariAdapter } from './messari.adapter';
 
 // =============================================================================
 // TYPES
@@ -84,6 +91,20 @@ export interface MarketPriceChainOptions {
   includeCoinPaprika?: boolean;
   /** Whether to include CryptoCompare adapter. Default: true */
   includeCryptoCompare?: boolean;
+  /** Whether to include Coinbase adapter. Default: true */
+  includeCoinbase?: boolean;
+  /** Whether to include Kraken adapter. Default: true */
+  includeKraken?: boolean;
+  /** Whether to include KuCoin adapter. Default: true */
+  includeKuCoin?: boolean;
+  /** Whether to include MEXC adapter. Default: true */
+  includeMEXC?: boolean;
+  /** Whether to include Gemini adapter. Default: true */
+  includeGemini?: boolean;
+  /** Whether to include Gate.io adapter. Default: true */
+  includeGateIO?: boolean;
+  /** Whether to include Messari adapter. Default: true */
+  includeMessari?: boolean;
 }
 
 // =============================================================================
@@ -109,6 +130,13 @@ export function createMarketPriceChain(
     includeCoinMarketCap = true,
     includeCoinPaprika = true,
     includeCryptoCompare = true,
+    includeCoinbase = true,
+    includeKraken = true,
+    includeKuCoin = true,
+    includeMEXC = true,
+    includeGemini = true,
+    includeGateIO = true,
+    includeMessari = true,
   } = options;
 
   const config: Partial<ProviderChainConfig> = {
@@ -141,6 +169,34 @@ export function createMarketPriceChain(
 
   if (includeCryptoCompare) {
     chain.addProvider(cryptocompareAdapter);
+  }
+
+  if (includeCoinbase) {
+    chain.addProvider(coinbaseAdapter);
+  }
+
+  if (includeKraken) {
+    chain.addProvider(krakenAdapter);
+  }
+
+  if (includeKuCoin) {
+    chain.addProvider(kucoinAdapter);
+  }
+
+  if (includeMEXC) {
+    chain.addProvider(mexcAdapter);
+  }
+
+  if (includeGemini) {
+    chain.addProvider(geminiAdapter);
+  }
+
+  if (includeGateIO) {
+    chain.addProvider(gateioAdapter);
+  }
+
+  if (includeMessari) {
+    chain.addProvider(messariAdapter);
   }
 
   return chain;

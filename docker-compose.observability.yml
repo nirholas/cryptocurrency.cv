@@ -1,0 +1,77 @@
+# Docker Compose — Observability Stack
+# Usage: docker compose -f docker-compose.yml -f docker-compose.observability.yml up
+#
+# Adds Prometheus + Grafana + exporters to the base stack.
+
+services:
+  prometheus:
+    image: prom/prometheus:v2.50.0
+    container_name: fcn-prometheus
+    volumes:
+      - ./infra/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./infra/prometheus/alerts.yml:/etc/prometheus/alerts/alerts.yml:ro
+      - prometheus-data:/prometheus
+    ports:
+      - "9090:9090"
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.retention.time=30d"
+      - "--web.enable-lifecycle"
+    restart: unless-stopped
+    networks:
+      - fcn-network
+
+  grafana:
+    image: grafana/grafana:10.3.0
+    container_name: fcn-grafana
+    volumes:
+      - ./infra/grafana/dashboards:/var/lib/grafana/dashboards:ro
+      - ./infra/grafana/provisioning:/etc/grafana/provisioning:ro
+      - grafana-data:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD:-admin}
+      - GF_USERS_ALLOW_SIGN_UP=false
+      - GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH=/var/lib/grafana/dashboards/production.json
+    ports:
+      - "3030:3000"
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+    networks:
+      - fcn-network
+
+  node-exporter:
+    image: prom/node-exporter:v1.7.0
+    container_name: fcn-node-exporter
+    pid: host
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    command:
+      - "--path.procfs=/host/proc"
+      - "--path.sysfs=/host/sys"
+      - "--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)"
+    restart: unless-stopped
+    networks:
+      - fcn-network
+
+  redis-exporter:
+    image: oliver006/redis_exporter:v1.56.0
+    container_name: fcn-redis-exporter
+    environment:
+      - REDIS_ADDR=redis://redis:6379
+    depends_on:
+      - redis
+    restart: unless-stopped
+    networks:
+      - fcn-network
+
+volumes:
+  prometheus-data:
+  grafana-data:
+
+networks:
+  fcn-network:
+    external: true

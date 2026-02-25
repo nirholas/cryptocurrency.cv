@@ -16,6 +16,14 @@ import { ProviderChain } from '../../provider-chain';
 import type { ProtocolTvl, YieldPool } from './types';
 import { defillamaTvlAdapter } from './defillama-tvl.adapter';
 import { defillamaYieldsAdapter } from './defillama-yields.adapter';
+import { l2beatAdapter } from './l2beat.adapter';
+import { aaveAdapter } from './aave.adapter';
+import { lidoAdapter } from './lido.adapter';
+import { theGraphAdapter } from './thegraph.adapter';
+import { tokenTerminalAdapter } from './tokenterminal.adapter';
+import { defiPulseAdapter } from './defi-pulse.adapter';
+import { apyVisionAdapter } from './apy-vision.adapter';
+import { eigenlayerAdapter } from './eigenlayer.adapter';
 
 export type { ProtocolTvl, YieldPool } from './types';
 
@@ -39,6 +47,10 @@ export function createDefiTvlChain(options: DefiTvlChainOptions = {}): ProviderC
   const config: Partial<ProviderChainConfig> = { strategy, cacheTtlSeconds, staleWhileError };
   const chain = new ProviderChain<ProtocolTvl[]>('defi-tvl', config);
   chain.addProvider(defillamaTvlAdapter);
+  chain.addProvider(l2beatAdapter);
+  chain.addProvider(defiPulseAdapter);
+  chain.addProvider(theGraphAdapter as unknown as typeof defillamaTvlAdapter);
+  chain.addProvider(tokenTerminalAdapter as unknown as typeof defillamaTvlAdapter);
   return chain;
 }
 
@@ -64,6 +76,10 @@ export function createDefiYieldsChain(options: DefiYieldsChainOptions = {}): Pro
   const config: Partial<ProviderChainConfig> = { strategy, cacheTtlSeconds, staleWhileError };
   const chain = new ProviderChain<YieldPool[]>('defi-yields', config);
   chain.addProvider(defillamaYieldsAdapter);
+  chain.addProvider(aaveAdapter);
+  chain.addProvider(lidoAdapter);
+  chain.addProvider(apyVisionAdapter);
+  chain.addProvider(eigenlayerAdapter);
   return chain;
 }
 

@@ -16,6 +16,7 @@ import { ProviderChain } from '../../provider-chain';
 import type { FearGreedIndex } from './alternative-me.adapter';
 import { alternativeMeFearGreedAdapter } from './alternative-me.adapter';
 import { coinstatsFearGreedAdapter } from './coinstats.adapter';
+import { compositeFearGreedAdapter } from './composite-fng.adapter';
 
 export type { FearGreedIndex } from './alternative-me.adapter';
 
@@ -43,6 +44,7 @@ export function createFearGreedChain(
   const chain = new ProviderChain<FearGreedIndex>('fear-greed', config);
   chain.addProvider(alternativeMeFearGreedAdapter);
   chain.addProvider(coinstatsFearGreedAdapter);
+  chain.addProvider(compositeFearGreedAdapter);
   return chain;
 }
 

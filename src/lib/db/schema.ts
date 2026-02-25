@@ -12,6 +12,10 @@
  *   provider_health   – health monitor log for provider chains
  *   alerts            – user-defined price / sentiment / event alerts
  *   social_metrics    – social sentiment over time
+ *   derivatives_snapshots – open interest & liquidation snapshots
+ *   stablecoin_snapshots  – stablecoin supply & flow snapshots
+ *   gas_fees_history      – Ethereum gas price history
+ *   news_articles         – provider-sourced news articles (CryptoPanic, NewsData)
  */
 
 import {
@@ -331,5 +335,129 @@ export const socialMetrics = pgTable(
     index('idx_social_source').on(table.source),
     index('idx_social_ts').on(table.timestamp),
     index('idx_social_ticker_ts').on(table.ticker, table.timestamp),
+  ]
+);
+
+// ────────────────────────────────────────────────────────────────────────────
+// derivatives_snapshots — open interest & liquidation historical data
+// ────────────────────────────────────────────────────────────────────────────
+
+export const derivativesSnapshots = pgTable(
+  'derivatives_snapshots',
+  {
+    id: serial('id').primaryKey(),
+    ticker: varchar('ticker', { length: 32 }).notNull(),
+    openInterestUsd: real('open_interest_usd'),
+    openInterestCoin: real('open_interest_coin'),
+    oiChange24h: real('oi_change_24h'),
+    longLiquidationsUsd24h: real('long_liquidations_usd_24h'),
+    shortLiquidationsUsd24h: real('short_liquidations_usd_24h'),
+    liquidationCount24h: integer('liquidation_count_24h'),
+    largestLiquidationUsd: real('largest_liquidation_usd'),
+    fundingRate: real('funding_rate'),
+    markPrice: real('mark_price'),
+    source: varchar('source', { length: 64 }).notNull(),
+    exchangeBreakdown: jsonb('exchange_breakdown').$type<
+      { exchange: string; oiUsd: number; oiCoin: number }[]
+    >(),
+    timestamp: timestamp('timestamp', { withTimezone: true }).notNull(),
+    createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
+  },
+  (table) => [
+    index('idx_derivatives_ticker').on(table.ticker),
+    index('idx_derivatives_ts').on(table.timestamp),
+    index('idx_derivatives_ticker_ts').on(table.ticker, table.timestamp),
+    index('idx_derivatives_source').on(table.source),
+  ]
+);
+
+// ────────────────────────────────────────────────────────────────────────────
+// stablecoin_snapshots — stablecoin supply & flow tracking
+// ────────────────────────────────────────────────────────────────────────────
+
+export const stablecoinSnapshots = pgTable(
+  'stablecoin_snapshots',
+  {
+    id: serial('id').primaryKey(),
+    symbol: varchar('symbol', { length: 32 }).notNull(),
+    name: varchar('name', { length: 128 }).notNull(),
+    pegType: varchar('peg_type', { length: 32 }).default('peggedUSD'),
+    circulatingUsd: real('circulating_usd').notNull(),
+    circulatingChange24h: real('circulating_change_24h'),
+    circulatingChange7d: real('circulating_change_7d'),
+    price: real('price'),
+    rank: integer('rank'),
+    chainDistribution: jsonb('chain_distribution').$type<
+      { chain: string; amount: number }[]
+    >(),
+    source: varchar('source', { length: 64 }).notNull(),
+    timestamp: timestamp('timestamp', { withTimezone: true }).notNull(),
+    createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
+  },
+  (table) => [
+    index('idx_stablecoin_symbol').on(table.symbol),
+    index('idx_stablecoin_ts').on(table.timestamp),
+    index('idx_stablecoin_symbol_ts').on(table.symbol, table.timestamp),
+  ]
+);
+
+// ────────────────────────────────────────────────────────────────────────────
+// gas_fees_history — Ethereum gas price history
+// ────────────────────────────────────────────────────────────────────────────
+
+export const gasFeesHistory = pgTable(
+  'gas_fees_history',
+  {
+    id: serial('id').primaryKey(),
+    chain: varchar('chain', { length: 32 }).notNull().default('ethereum'),
+    baseFeeGwei: real('base_fee_gwei'),
+    priorityFeeGwei: real('priority_fee_gwei'),
+    gasUsedPercent: real('gas_used_percent'),
+    safeLowGwei: real('safe_low_gwei'),
+    standardGwei: real('standard_gwei'),
+    fastGwei: real('fast_gwei'),
+    rapidGwei: real('rapid_gwei'),
+    source: varchar('source', { length: 64 }).notNull(),
+    timestamp: timestamp('timestamp', { withTimezone: true }).notNull(),
+    createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
+  },
+  (table) => [
+    index('idx_gas_chain').on(table.chain),
+    index('idx_gas_ts').on(table.timestamp),
+    index('idx_gas_chain_ts').on(table.chain, table.timestamp),
+  ]
+);
+
+// ────────────────────────────────────────────────────────────────────────────
+// news_articles — provider-sourced news articles (CryptoPanic, NewsData)
+// ────────────────────────────────────────────────────────────────────────────
+
+export const newsArticles = pgTable(
+  'news_articles',
+  {
+    id: varchar('id', { length: 128 }).primaryKey(),
+    title: text('title').notNull(),
+    url: text('url').notNull(),
+    source: varchar('source', { length: 255 }).notNull(),
+    author: varchar('author', { length: 255 }),
+    publishedAt: timestamp('published_at', { withTimezone: true }),
+    description: text('description'),
+    imageUrl: text('image_url'),
+    currencies: text('currencies').array().default(sql`'{}'::text[]`),
+    categories: text('categories').array().default(sql`'{}'::text[]`),
+    sentiment: real('sentiment'),
+    votesPositive: integer('votes_positive').default(0),
+    votesNegative: integer('votes_negative').default(0),
+    votesImportant: integer('votes_important').default(0),
+    kind: varchar('kind', { length: 32 }).default('news'),
+    provider: varchar('provider', { length: 64 }).notNull(),
+    createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
+  },
+  (table) => [
+    index('idx_news_published').on(table.publishedAt),
+    index('idx_news_source').on(table.source),
+    index('idx_news_provider').on(table.provider),
+    index('idx_news_currencies').using('gin', table.currencies),
+    index('idx_news_sentiment').on(table.sentiment),
   ]
 );
