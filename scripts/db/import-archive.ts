@@ -21,7 +21,9 @@ import * as path from 'path';
 // ────────────────────────────────────────────────────────────────────────────
 
 const ARCHIVE_ROOT = path.resolve(__dirname, '../../archive');
-const BATCH_SIZE = 500; // rows per INSERT batch
+const BATCH_SIZE = 50; // rows per INSERT batch (kept small for Neon HTTP driver payload limits)
+
+function sleep(ms: number) { return new Promise(r => setTimeout(r, ms)); }
 
 function log(msg: string) {
   process.stdout.write(`[import] ${msg}\n`);
@@ -132,6 +134,8 @@ async function importArticles() {
       try {
         await db.insert(schema.articles).values(rows).onConflictDoNothing();
         totalInserted += rows.length;
+        if (totalInserted % 500 === 0) log(`    progress: ${totalInserted} rows`);
+        await sleep(50); // throttle to avoid Neon rate limits
       } catch (err) {
         log(`    ⚠ batch error at offset ${i}: ${(err as Error).message}`);
       }

@@ -11,7 +11,23 @@
 
 import { useEffect, useState } from 'react';
 import type { PredictionHistoryResponse, CoinAccuracy } from '@/app/api/predictions/history/route';
-import type { AIPrediction, ScoredResult } from '@/app/api/cron/predictions/route';
+
+/** Prediction and result types (defined locally since cron route may not exist) */
+interface AIPrediction {
+  coin: string;
+  direction: string;
+  confidence: number;
+  currentPrice?: number;
+  predictedPrice24h?: number;
+  predictedPrice7d?: number;
+  [key: string]: unknown;
+}
+
+interface ScoredResult {
+  coin: string;
+  direction_correct: boolean;
+  [key: string]: unknown;
+}
 
 // ---------------------------------------------------------------------------
 // Sparkline SVG
@@ -288,7 +304,7 @@ export default function PredictionTracker() {
             </tr>
           </thead>
           <tbody>
-            {latest.predictions.map(pred => (
+            {latest.predictions.map((pred: AIPrediction) => (
               <PredictionRow
                 key={pred.coin}
                 prediction={pred}

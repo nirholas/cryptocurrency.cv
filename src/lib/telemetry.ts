@@ -122,6 +122,18 @@ export const metrics = {
   wsConnections: noopCounter as Counter,
   /** Rate limit blocks */
   rateLimitBlocks: noopCounter as Counter,
+  /** API errors (5xx) */
+  apiErrors: noopCounter as Counter,
+  /** Provider requests (upstream fetches tracked by provider name) */
+  providerRequests: noopCounter as Counter,
+  /** Provider latency per provider */
+  providerLatency: noopHistogram as Histogram,
+  /** Provider errors */
+  providerErrors: noopCounter as Counter,
+  /** AI token usage */
+  aiTokens: noopCounter as Counter,
+  /** AI inference errors */
+  aiErrors: noopCounter as Counter,
 };
 
 // ---------------------------------------------------------------------------

@@ -138,19 +138,19 @@ registry.register('whale-alerts', whaleAlertChain, {
   description: 'Large transaction alerts from Whale Alert API',
 });
 
-// NFT Market (OpenSea → Reservoir → SimpleHash)
+// NFT Market
 registry.register('nft-market', nftMarketChain, {
   description: 'NFT market data from OpenSea, Reservoir, and SimpleHash',
 });
 
-// Gaming Data (DappRadar → PlayToEarn → Footprint)
+// Gaming Data
 registry.register('gaming-data', gamingDataChain, {
   description: 'Blockchain gaming data from DappRadar, PlayToEarn, and Footprint',
 });
 
-// Macro Data (FRED → Alpha Vantage → Twelve Data)
+// Macro/TradFi Data
 registry.register('macro-data', macroChain, {
-  description: 'Macroeconomic indicators from FRED, Alpha Vantage, and Twelve Data',
+  description: 'Macro economic indicators from FRED, Alpha Vantage, and Twelve Data',
 });
 
 // =============================================================================

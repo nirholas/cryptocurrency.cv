@@ -75,13 +75,10 @@ export const compositeFearGreedAdapter: DataProvider<FearGreedIndex> = {
       value,
       classification,
       timestamp: new Date().toISOString(),
-      previousClose: 0,
-      components: {
-        volatility: Math.round(volScore),
-        momentum: Math.round(momentumScore),
-        dominance: Math.round(domScore),
-        volume: Math.round(volumeScore),
-      },
+      previousClose: null,
+      weekAgo: null,
+      monthAgo: null,
+      lastUpdated: new Date().toISOString(),
       source: 'composite',
     };
   },

@@ -21,7 +21,7 @@ export async function GET(request: Request) {
     const period = searchParams.get('period') || '1d';
 
     const result = await macroChain.fetch({ extra: { period } });
-    let indicators = Array.isArray(result.data) ? result.data : [];
+    let indicators = result.data.indicators ?? [];
 
     // Filter by requested indicators
     if (filterStr) {

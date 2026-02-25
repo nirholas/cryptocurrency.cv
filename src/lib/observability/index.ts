@@ -255,7 +255,7 @@ export async function getHealthStatus(): Promise<HealthStatus> {
   try {
     const start = performance.now();
     const { cache: cacheModule } = await import('@/lib/cache');
-    await cacheModule.set('health:ping', Date.now(), { ex: 10 });
+    await cacheModule.set('health:ping', Date.now(), 10);
     const latency = performance.now() - start;
     checks.push({
       name: 'redis',

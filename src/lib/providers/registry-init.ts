@@ -124,7 +124,7 @@ export async function getProvidersSummary(): Promise<ProviderSummary[]> {
     name: entry.name,
     status: entry.status,
     providerCount: entry.providers,
-    available: entry.available,
+    available: entry.available > 0,
   }));
 }
 

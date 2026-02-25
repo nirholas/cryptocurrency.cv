@@ -73,7 +73,17 @@ export const heliusAdapter: DataProvider<SolanaNetworkStats> = {
   },
 };
 
-async function jsonRpc(method: string, params: unknown[]): Promise<{ result?: Record<string, unknown> }> {
+interface RpcResult {
+  result?: Record<string, unknown>;
+}
+
+interface PerformanceSample {
+  numTransactions?: number;
+  samplePeriodSecs?: number;
+  numSlots?: number;
+}
+
+async function jsonRpc(method: string, params: unknown[]): Promise<RpcResult> {
   const res = await fetch(BASE, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

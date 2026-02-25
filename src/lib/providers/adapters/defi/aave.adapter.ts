@@ -46,7 +46,7 @@ export const aaveAdapter: DataProvider<YieldPool[]> = {
 
     if (!response.ok) {
       // Fallback to DeFi Llama Aave pools
-      return this._fetchFromDefiLlama(limit);
+      return _fetchFromDefiLlama(limit);
     }
 
     const json = await response.json();

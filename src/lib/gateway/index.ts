@@ -179,12 +179,12 @@ export async function createApiKey(req: ApiKeyCreateRequest): Promise<{ key: str
   };
 
   // Store in Redis
-  await cache.set(`apikey:${keyHash}`, record, { ex: 0 });
+  await cache.set(`apikey:${keyHash}`, record, 0);
 
   // Add to key index
   const index = (await cache.get<string[]>(`apikeys:index:${req.ownerId}`)) ?? [];
   index.push(record.id);
-  await cache.set(`apikeys:index:${req.ownerId}`, index, { ex: 0 });
+  await cache.set(`apikeys:index:${req.ownerId}`, index, 0);
 
   return { key, record };
 }
@@ -280,8 +280,8 @@ export async function checkRateLimit(
     }
 
     // Increment counters
-    await cache.set(hourlyKey, hourlyCount + 1, { ex: 3600 });
-    await cache.set(dailyKey, dailyCount + 1, { ex: 86400 });
+    await cache.set(hourlyKey, hourlyCount + 1, 3600);
+    await cache.set(dailyKey, dailyCount + 1, 86400);
 
     return {
       allowed: true,
@@ -317,20 +317,20 @@ export function trackUsage(record: UsageRecord): void {
       // Increment usage counter for the key
       const key = `usage:${record.keyId}:${new Date().toISOString().slice(0, 10)}`;
       const count = (await cache.get<number>(key)) ?? 0;
-      await cache.set(key, count + 1, { ex: 86400 * 7 }); // Keep 7 days
+      await cache.set(key, count + 1, 86400 * 7); // Keep 7 days
 
       // Update last_used_at on the key record
       const keyRecord = await cache.get<ApiKey>(`apikey:${record.keyId}`);
       if (keyRecord) {
         keyRecord.lastUsedAt = record.timestamp;
         keyRecord.usageCount++;
-        await cache.set(`apikey:${keyRecord.keyHash}`, keyRecord, { ex: 0 });
+        await cache.set(`apikey:${keyRecord.keyHash}`, keyRecord, 0);
       }
 
       // Store endpoint-level usage (aggregate)
       const endpointKey = `usage:endpoint:${record.endpoint}:${new Date().toISOString().slice(0, 13)}`;
       const endpointCount = (await cache.get<number>(endpointKey)) ?? 0;
-      await cache.set(endpointKey, endpointCount + 1, { ex: 86400 * 2 });
+      await cache.set(endpointKey, endpointCount + 1, 86400 * 2);
     } catch {
       // Non-critical — don't let tracking failure break anything
     }

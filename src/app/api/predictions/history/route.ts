@@ -9,7 +9,14 @@
 import { NextResponse } from 'next/server';
 import { promises as fs } from 'fs';
 import path from 'path';
-import type { DailyPredictionFile } from '@/app/api/cron/predictions/route';
+
+/** Daily prediction file shape (defined locally since cron route may not exist) */
+interface DailyPredictionFile {
+  date: string;
+  predictions: { coin: string; direction: string; confidence: number; [key: string]: unknown }[];
+  results?: { coin: string; direction_correct: boolean; [key: string]: unknown }[];
+  [key: string]: unknown;
+}
 
 export const revalidate = 3600; // Re-validate every hour
 
@@ -71,13 +78,13 @@ export async function GET() {
 
     // Build per-coin accuracy using scored results
     const coinsSet = new Set<string>();
-    days.forEach(d => d.predictions.forEach(p => coinsSet.add(p.coin)));
+    days.forEach((d: DailyPredictionFile) => d.predictions.forEach((p: { coin: string }) => coinsSet.add(p.coin)));
 
     const accuracy: Record<string, CoinAccuracy> = {};
 
     for (const coin of coinsSet) {
       const sparkline: (boolean | null)[] = days.map(day => {
-        const result = day.results?.find(r => r.coin === coin);
+        const result = day.results?.find((r: { coin: string; direction_correct: boolean }) => r.coin === coin);
         if (!result) return null;
         return result.direction_correct;
       });

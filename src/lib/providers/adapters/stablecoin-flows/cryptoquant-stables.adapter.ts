@@ -48,14 +48,16 @@ export const cryptoquantStablesAdapter: DataProvider<StablecoinFlow[]> = {
         const change = prevSupply !== 0 ? ((supply - prevSupply) / prevSupply) * 100 : 0;
 
         return {
+          id: coin,
           symbol: coin.toUpperCase(),
           name: coin.toUpperCase(),
-          totalSupply: supply,
-          marketCap: supply,
-          supplyChange24h: change,
-          chainBreakdown: [],
-          dominance: 0,
-          source: 'cryptoquant',
+          pegType: 'peggedUSD',
+          circulatingUsd: supply,
+          circulatingChange24h: supply - prevSupply,
+          circulatingChange7d: 0,
+          chainDistribution: [],
+          price: 1.0,
+          rank: 0,
           timestamp: now,
         };
       }),
