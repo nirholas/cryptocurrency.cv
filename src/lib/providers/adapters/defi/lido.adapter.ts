@@ -122,6 +122,6 @@ export const lidoAdapter: DataProvider<YieldPool[]> = {
 
   validate(data: YieldPool[]): boolean {
     if (!Array.isArray(data) || data.length === 0) return false;
-    return data.every(d => typeof d.apy === 'number');
+    return data.every(d => typeof d.totalApy === 'number');
   },
 };

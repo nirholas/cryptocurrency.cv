@@ -48,10 +48,10 @@ export const okxOrderBookAdapter: DataProvider<OrderBookData[]> = {
         const spread = bestAsk - bestBid;
         const midPrice = (bestAsk + bestBid) / 2;
 
-        const bidDepth2Pct = bids.filter(b => b.price >= midPrice * 0.98).reduce((s, b) => s + b.price * b.quantity, 0);
-        const askDepth2Pct = asks.filter(a => a.price <= midPrice * 1.02).reduce((s, a) => s + a.price * a.quantity, 0);
-        const totalBidVol = bids.reduce((s, b) => s + b.quantity, 0);
-        const totalAskVol = asks.reduce((s, a) => s + a.quantity, 0);
+        const bidDepth2Pct = bids.filter((b: { price: number }) => b.price >= midPrice * 0.98).reduce((s: number, b: { price: number; quantity: number }) => s + b.price * b.quantity, 0);
+        const askDepth2Pct = asks.filter((a: { price: number }) => a.price <= midPrice * 1.02).reduce((s: number, a: { price: number; quantity: number }) => s + a.price * a.quantity, 0);
+        const totalBidVol = bids.reduce((s: number, b: { quantity: number }) => s + b.quantity, 0);
+        const totalAskVol = asks.reduce((s: number, a: { quantity: number }) => s + a.quantity, 0);
 
         return {
           symbol: sym.toUpperCase(),

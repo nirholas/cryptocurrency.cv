@@ -186,9 +186,10 @@ export class PostgresSearchEngine implements SearchEngine {
       const db = getDb();
       if (!db) return { ok: false, indexedDocs: 0, latencyMs: 0 };
 
-      const [{ count }] = await db.execute<{ count: number }>(
+      const result = await db.execute<{ count: number }>(
         sql`SELECT count(*)::int as count FROM articles WHERE search_vector IS NOT NULL`
       );
+      const count = (Array.isArray(result) ? result[0]?.count : (result as { rows: { count: number }[] }).rows?.[0]?.count) ?? 0;
       return {
         ok: true,
         indexedDocs: count ?? 0,

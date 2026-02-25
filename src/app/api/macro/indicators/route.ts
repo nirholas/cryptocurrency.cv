@@ -11,6 +11,7 @@
 
 import { NextResponse } from 'next/server';
 import { macroChain } from '@/lib/providers/adapters/macro';
+import type { MacroIndicator } from '@/lib/providers/adapters/macro/types';
 
 export const revalidate = 300;
 
@@ -26,8 +27,8 @@ export async function GET(request: Request) {
     // Filter by requested indicators
     if (filterStr) {
       const requested = filterStr.split(',').map(s => s.trim().toUpperCase());
-      indicators = indicators.filter((ind: Record<string, unknown>) => {
-        const sym = ((ind.symbol as string) || (ind.name as string) || '').toUpperCase();
+      indicators = indicators.filter((ind: MacroIndicator) => {
+        const sym = ((ind as MacroIndicator & { symbol?: string }).symbol || ind.name || '').toUpperCase();
         return requested.some(r => sym.includes(r));
       });
     }

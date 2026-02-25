@@ -128,11 +128,8 @@ async function _fetchFromDefiLlama(limit: number): Promise<YieldPool[]> {
     .slice(0, limit);
 }
 
-// Bind the fallback method
-Object.defineProperty(aaveAdapter, '_fetchFromDefiLlama', {
-  value: _fetchFromDefiLlama,
-  writable: false,
-});
+// Bind the fallback method — exposed for testing
+(aaveAdapter as any)._fetchFromDefiLlama = _fetchFromDefiLlama;
 
 interface AaveReserve {
   symbol?: string;
@@ -156,5 +153,6 @@ interface DefiLlamaPool {
   apy: number;
   apyBase: number;
   apyReward: number;
+  stablecoin?: boolean;
   rewardTokens: string[];
 }

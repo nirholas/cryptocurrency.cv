@@ -45,7 +45,7 @@ export const etherscanWhalesAdapter: DataProvider<WhaleAlert[]> = {
 
     if (!Array.isArray(txs)) throw new Error('Invalid Etherscan response');
 
-    const ethPriceUsd = params.extra?.ethPrice ?? 3000;
+    const ethPriceUsd = Number(params.extra?.ethPrice ?? 3000);
 
     const results: WhaleAlert[] = txs
       .map(tx => {
@@ -60,7 +60,7 @@ export const etherscanWhalesAdapter: DataProvider<WhaleAlert[]> = {
           amount: ethValue,
           from: tx.from ?? '',
           to: tx.to ?? '',
-          type: classifyAddress(tx.from, tx.to),
+          type: classifyAddress(tx.from ?? '', tx.to ?? ''),
           timestamp: tx.timeStamp
             ? new Date(Number(tx.timeStamp) * 1000).toISOString()
             : new Date().toISOString(),

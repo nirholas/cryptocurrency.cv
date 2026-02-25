@@ -283,4 +283,4 @@ export { gateioAdapter } from './adapters/market-price/gate-io.adapter';
 export { messariAdapter } from './adapters/market-price/messari.adapter';
 
 // Exchange — NBBO engine
-export { computeNBBO, nbboSummary, type NBBOResult } from '../exchange/nbbo';
+export { computeNBBO, nbboSummary, type NBBO } from '../exchange/nbbo';

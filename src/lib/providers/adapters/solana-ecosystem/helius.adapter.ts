@@ -37,19 +37,19 @@ export const heliusAdapter: DataProvider<SolanaNetworkStats> = {
       jsonRpc('getSupply', []),
     ]);
 
-    const perfSample = perfRes.result?.[0] ?? {};
-    const epochInfo = epochRes.result ?? {};
+    const perfSample: Record<string, unknown> = perfRes.result?.[0] ?? {};
+    const epochInfo: Record<string, unknown> = epochRes.result ?? {};
     const supply = supplyRes.result?.value ?? {};
 
-    const txCount = perfSample.numTransactions ?? 0;
-    const samplePeriod = perfSample.samplePeriodSecs ?? 60;
+    const txCount = Number(perfSample.numTransactions ?? 0);
+    const samplePeriod = Number(perfSample.samplePeriodSecs ?? 60);
     const tps = samplePeriod > 0 ? txCount / samplePeriod : 0;
-    const slotTimeMs = samplePeriod > 0 ? (samplePeriod * 1000) / (perfSample.numSlots ?? 1) : 400;
+    const slotTimeMs = samplePeriod > 0 ? (samplePeriod * 1000) / Number(perfSample.numSlots ?? 1) : 400;
 
     return {
       tps: Math.round(tps),
-      slot: epochInfo.absoluteSlot ?? 0,
-      epoch: epochInfo.epoch ?? 0,
+      slot: Number(epochInfo.absoluteSlot ?? 0),
+      epoch: Number(epochInfo.epoch ?? 0),
       validatorCount: 0,
       totalStaked: 0,
       slotTimeMs: Math.round(slotTimeMs),
@@ -62,7 +62,7 @@ export const heliusAdapter: DataProvider<SolanaNetworkStats> = {
     if (!API_KEY) return false;
     try {
       const res = await jsonRpc('getHealth', []);
-      return res.result === 'ok';
+      return String(res.result) === 'ok';
     } catch {
       return false;
     }

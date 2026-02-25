@@ -314,14 +314,14 @@ export class PipelineExecutor {
   private async persistRunResult(result: PipelineRunResult): Promise<void> {
     try {
       // Latest run per pipeline
-      await cache.set(`pipeline:latest:${result.pipelineId}`, result, { ex: 86400 * 7 });
+      await cache.set(`pipeline:latest:${result.pipelineId}`, result, 86400 * 7);
 
       // Run history (keep last 50)
       const historyKey = `pipeline:history:${result.pipelineId}`;
       const history = (await cache.get<PipelineRunResult[]>(historyKey)) ?? [];
       history.unshift(result);
       if (history.length > 50) history.length = 50;
-      await cache.set(historyKey, history, { ex: 86400 * 30 });
+      await cache.set(historyKey, history, 86400 * 30);
     } catch {
       // Non-critical
     }
@@ -578,7 +578,7 @@ export const marketDataPipeline: PipelineDefinition = {
         }
 
         try {
-          await cache.set('market:prices:latest', prices, { ex: 120 });
+          await cache.set('market:prices:latest', prices, 120);
           return {
             success: true,
             recordsProcessed: Object.keys(prices).length,
@@ -704,7 +704,7 @@ export const socialSentimentPipeline: PipelineDefinition = {
         };
 
         ctx.data.set('sentimentAggregate', aggregate);
-        await cache.set('sentiment:aggregate', aggregate, { ex: 3600 });
+        await cache.set('sentiment:aggregate', aggregate, 3600);
 
         return {
           success: true,

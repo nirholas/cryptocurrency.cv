@@ -17,16 +17,16 @@ interface AIPrediction {
   coin: string;
   direction: string;
   confidence: number;
-  currentPrice?: number;
-  predictedPrice24h?: number;
-  predictedPrice7d?: number;
-  [key: string]: unknown;
+  current_price: number;
+  predicted_24h: number;
+  predicted_7d: number;
+  reasoning?: string;
+  model?: string;
 }
 
 interface ScoredResult {
   coin: string;
   direction_correct: boolean;
-  [key: string]: unknown;
 }
 
 // ---------------------------------------------------------------------------

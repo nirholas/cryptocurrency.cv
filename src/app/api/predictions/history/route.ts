@@ -11,11 +11,19 @@ import { promises as fs } from 'fs';
 import path from 'path';
 
 /** Daily prediction file shape (defined locally since cron route may not exist) */
-interface DailyPredictionFile {
+export interface DailyPredictionFile {
   date: string;
-  predictions: { coin: string; direction: string; confidence: number; [key: string]: unknown }[];
-  results?: { coin: string; direction_correct: boolean; [key: string]: unknown }[];
-  [key: string]: unknown;
+  predictions: {
+    coin: string;
+    direction: string;
+    confidence: number;
+    current_price: number;
+    predicted_24h: number;
+    predicted_7d: number;
+    reasoning?: string;
+    model?: string;
+  }[];
+  results?: { coin: string; direction_correct: boolean }[];
 }
 
 export const revalidate = 3600; // Re-validate every hour
