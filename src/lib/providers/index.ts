@@ -221,3 +221,6 @@ export {
 export { coingeckoAdapter } from './adapters/market-price/coingecko.adapter';
 export { coincapAdapter } from './adapters/market-price/coincap.adapter';
 export { binanceAdapter } from './adapters/market-price/binance.adapter';
+export { coinmarketcapAdapter } from './adapters/market-price/coinmarketcap.adapter';
+export { coinpaprikaAdapter } from './adapters/market-price/coinpaprika.adapter';
+export { cryptocompareAdapter } from './adapters/market-price/cryptocompare.adapter';

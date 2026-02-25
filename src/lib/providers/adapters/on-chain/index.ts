@@ -5,6 +5,12 @@
  * |-----------------|----------|--------|---------------|--------------------|
  * | Blockchain.info | 1        | 0.50   | 30/min (free) | Bitcoin metrics     |
  * | Etherscan       | 2        | 0.30   | 5/sec (key)   | Ethereum metrics    |
+ * | Mempool.space   | 3        | 0.60   | 60/min (free) | Bitcoin mempool     |
+ *
+ * Whale Alerts:
+ * | Provider         | Priority | Weight | Rate Limit    | Coverage           |
+ * |-----------------|----------|--------|---------------|--------------------|
+ * | Whale Alert     | 1        | 0.70   | 10/min (key)  | All major chains   |
  *
  * Default strategy: `broadcast` (fetch from all, merge results)
  *
@@ -16,9 +22,11 @@
 
 import type { ProviderChainConfig, ResolutionStrategy } from '../../types';
 import { ProviderChain } from '../../provider-chain';
-import type { OnChainMetric } from './types';
+import type { OnChainMetric, WhaleAlert } from './types';
 import { blockchainAdapter } from './blockchain.adapter';
 import { etherscanAdapter } from './etherscan.adapter';
+import { mempoolSpaceAdapter } from './mempool-space.adapter';
+import { whaleAlertAdapter } from './whale-alert.adapter';
 
 export type { OnChainMetric, WhaleAlert, NetworkStats } from './types';
 
@@ -27,6 +35,7 @@ export interface OnChainChainOptions {
   cacheTtlSeconds?: number;
   staleWhileError?: boolean;
   includeEtherscan?: boolean;
+  includeMempoolSpace?: boolean;
 }
 
 export function createOnChainChain(
@@ -37,6 +46,7 @@ export function createOnChainChain(
     cacheTtlSeconds = 60,
     staleWhileError = true,
     includeEtherscan = true,
+    includeMempoolSpace = true,
   } = options;
 
   const config: Partial<ProviderChainConfig> = { strategy, cacheTtlSeconds, staleWhileError };
@@ -48,8 +58,30 @@ export function createOnChainChain(
     chain.addProvider(etherscanAdapter);
   }
 
+  if (includeMempoolSpace) {
+    chain.addProvider(mempoolSpaceAdapter);
+  }
+
+  return chain;
+}
+
+export function createWhaleAlertChain(
+  options: Omit<OnChainChainOptions, 'includeEtherscan' | 'includeMempoolSpace'> = {},
+): ProviderChain<WhaleAlert[]> {
+  const {
+    strategy = 'fallback',
+    cacheTtlSeconds = 60,
+    staleWhileError = true,
+  } = options;
+
+  const config: Partial<ProviderChainConfig> = { strategy, cacheTtlSeconds, staleWhileError };
+  const chain = new ProviderChain<WhaleAlert[]>('whale-alerts', config);
+  chain.addProvider(whaleAlertAdapter);
   return chain;
 }
 
 /** Default on-chain chain (broadcast: fetches from all sources and merges) */
 export const onChainChain = createOnChainChain();
+
+/** Whale alert chain (requires WHALE_ALERT_API_KEY) */
+export const whaleAlertChain = createWhaleAlertChain();
