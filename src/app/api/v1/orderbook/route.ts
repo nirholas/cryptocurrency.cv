@@ -108,7 +108,7 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     logger.error('Order book fetch failed', { error: String(error) });
-    throw new ApiError('Failed to fetch order book', 502, 'ORDERBOOK_FETCH_FAILED');
+    return ApiError.upstream('Order book (Binance)');
   }
 }
 

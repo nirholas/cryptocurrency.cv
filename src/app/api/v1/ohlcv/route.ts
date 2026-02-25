@@ -92,7 +92,7 @@ export async function GET(request: NextRequest) {
         },
       });
     } catch (fallbackError) {
-      throw new ApiError('Failed to fetch OHLCV data from all sources', 502, 'OHLCV_FETCH_FAILED');
+      return ApiError.upstream('OHLCV providers (Binance + CryptoCompare)');
     }
   }
 }

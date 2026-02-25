@@ -125,7 +125,7 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     logger.error('Stablecoin fetch failed', { error: String(error) });
-    throw new ApiError('Failed to fetch stablecoin data', 502, 'STABLECOIN_FETCH_FAILED');
+    return ApiError.upstream('DefiLlama stablecoins');
   }
 }
 

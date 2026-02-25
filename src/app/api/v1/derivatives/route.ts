@@ -132,7 +132,7 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     logger.error('Derivatives fetch failed', { error: String(error) });
-    throw new ApiError('Failed to fetch derivatives data', 502, 'DERIVATIVES_FETCH_FAILED');
+    return ApiError.upstream('Derivatives exchanges');
   }
 }
 
