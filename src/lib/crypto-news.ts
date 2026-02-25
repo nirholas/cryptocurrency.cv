@@ -136,6 +136,7 @@ const RSS_SOURCES = {
     name: 'NFT Evening',
     url: 'https://nftevening.com/feed/',
     category: 'nft',
+    disabled: true, // Disabled: feed exceeds Vercel 2MB cache limit (2.2MB)
   },
   
   // ═══════════════════════════════════════════════════════════════
@@ -291,6 +292,7 @@ const RSS_SOURCES = {
     name: 'Crypto Daily',
     url: 'https://cryptodaily.co.uk/feed',
     category: 'general',
+    disabled: true, // Disabled: feed exceeds Vercel 2MB cache limit (2.4MB)
   },
   blockonomi: {
     name: 'Blockonomi',
@@ -330,6 +332,7 @@ const RSS_SOURCES = {
     name: 'Bankless',
     url: 'https://newsletter.banklesshq.com/feed',
     category: 'defi',
+    disabled: true, // Disabled: SSL certificate alt-name mismatch
   },
   defillama_news: {
     name: 'DefiLlama News',
@@ -572,7 +575,7 @@ const RSS_SOURCES = {
     name: 'DappRadar Blog',
     url: 'https://dappradar.com/blog/feed',
     category: 'nft',
-    // Note: Feed exceeds 2MB Next.js cache limit (warning only, not an error)
+    disabled: true, // Disabled: feed exceeds Vercel 2MB cache limit (3MB)
   },
   
   // ═══════════════════════════════════════════════════════════════
@@ -601,6 +604,7 @@ const RSS_SOURCES = {
     name: 'Cosmos Blog',
     url: 'https://blog.cosmos.network/feed',
     category: 'altl1',
+    disabled: true, // Disabled: SSL unable to verify leaf certificate
   },
   avalanche_blog: {
     name: 'Avalanche Blog',
@@ -626,6 +630,7 @@ const RSS_SOURCES = {
     name: 'Polkadot Blog',
     url: 'https://polkadot.network/blog/feed/',
     category: 'altl1',
+    disabled: true, // Disabled: DNS resolution failure (ENOTFOUND)
   },
   
   // ═══════════════════════════════════════════════════════════════
@@ -693,7 +698,7 @@ const RSS_SOURCES = {
     name: 'VanEck Blog',
     url: 'https://www.vaneck.com/us/en/blogs/rss/',
     category: 'etf',
-    // Note: Feed exceeds 2MB Next.js cache limit (warning only, not an error)
+    disabled: true, // Disabled: feed exceeds Vercel 2MB cache limit (18MB)
   },
   coinshares_research: {
     name: 'CoinShares Research',
@@ -742,6 +747,7 @@ const RSS_SOURCES = {
     name: 'The Tie Research',
     url: 'https://blog.thetie.io/feed/',
     category: 'onchain',
+    disabled: true, // Disabled: SSL certificate alt-name mismatch
   },
   woobull: {
     name: 'Willy Woo (Woobull)',
@@ -843,6 +849,7 @@ const RSS_SOURCES = {
     name: 'Week in Ethereum',
     url: 'https://weekinethereumnews.com/feed/',
     category: 'ethereum',
+    disabled: true, // Disabled: SSL certificate alt-name mismatch (duplicate of weekinethereumnews)
   },
   wu_blockchain: {
     name: 'Wu Blockchain',

@@ -62,14 +62,23 @@ const apiRoutes: Record<string, RouteConfig> = {
 let _x402: ReturnType<typeof paymentProxyFromConfig> | null = null;
 function getX402Proxy() {
   if (!_x402) {
-    _x402 = paymentProxyFromConfig(
-      apiRoutes,
-      undefined,
-      undefined,
-      undefined,
-      undefined,
-      false, // syncFacilitatorOnStart: false — avoids blocking cold starts
-    );
+    try {
+      _x402 = paymentProxyFromConfig(
+        apiRoutes,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        false, // syncFacilitatorOnStart: false — avoids blocking cold starts
+      );
+    } catch (err) {
+      // During build / edge compilation the "exact" EVM scheme is not
+      // registered yet, so the SDK throws RouteConfigurationError.
+      // Return a pass-through that does nothing; real requests will
+      // re-attempt initialization at runtime.
+      console.warn('[x402] Proxy init deferred — scheme not yet available:', (err as Error).message);
+      return (req: NextRequest) => NextResponse.next();
+    }
   }
   return _x402;
 }

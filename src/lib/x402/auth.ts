@@ -19,7 +19,7 @@ import { x402Server } from './server';
 import { createRoutes, getRoutePrice } from './routes';
 import { validateApiKey, checkRateLimit as checkKvRateLimit, type ApiKeyData } from '@/lib/api-keys';
 import { API_TIERS, API_PRICING, PREMIUM_PRICING, type PremiumEndpoint } from './pricing';
-import { PAYMENT_ADDRESS, CURRENT_NETWORK, getAcceptedAssets, IS_PRODUCTION } from './config';
+import { PAYMENT_ADDRESS, CURRENT_NETWORK, getAcceptedAssets, IS_PRODUCTION, IS_BUILD_TIME } from './config';
 
 // =============================================================================
 // TYPE DEFINITIONS
@@ -464,6 +464,14 @@ export function getPaymentMiddleware() {
 export function withX402<
   T extends (request: NextRequest, ...args: unknown[]) => Promise<NextResponse>,
 >(endpoint: PremiumEndpoint, handler: T): T {
+  // Skip wrapping at build time — the @x402/next SDK eagerly validates
+  // route schemes in the constructor, but the "exact" EVM scheme is only
+  // available at request time.  Returning the raw handler avoids the
+  // RouteConfigurationError during `next build`.
+  if (IS_BUILD_TIME) {
+    return handler;
+  }
+
   const config = PREMIUM_PRICING[endpoint];
   if (!config) {
     // Not a premium endpoint, return handler as-is
