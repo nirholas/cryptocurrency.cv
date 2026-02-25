@@ -47,7 +47,7 @@ describe('AnomalyDetector', () => {
     const values = [100, 100.5, 99.5, 100.2, 99.8, 100.1, 99.9, 100.3, 99.7, 100.4];
     let anomalies: ReturnType<typeof det.addValue> = [];
     for (const v of values) {
-      anomalies = det.addValue(v);
+      anomalies = det.addValue(v, 'test-provider');
     }
 
     expect(anomalies).toHaveLength(0);
@@ -58,11 +58,11 @@ describe('AnomalyDetector', () => {
 
     // Feed consistent data to build baseline
     for (let i = 0; i < 10; i++) {
-      det.addValue(100 + (Math.random() - 0.5) * 0.1);
+      det.addValue(100 + (Math.random() - 0.5) * 0.1, 'test');
     }
 
     // Now add an extreme outlier
-    const anomalies = det.addValue(200);
+    const anomalies = det.addValue(200, 'test');
     const zScoreAnomaly = anomalies.find(a => a.type === 'outlier');
     expect(zScoreAnomaly).toBeDefined();
     expect(zScoreAnomaly!.severity).toBeGreaterThan(0);
@@ -73,11 +73,11 @@ describe('AnomalyDetector', () => {
 
     // Stable values
     for (let i = 0; i < 10; i++) {
-      det.addValue(100);
+      det.addValue(100, 'test');
     }
 
     // Add a 50% spike — should trigger spike detection
-    const anomalies = det.addValue(150);
+    const anomalies = det.addValue(150, 'test');
     const spike = anomalies.find(a => a.type === 'spike');
     expect(spike).toBeDefined();
   });
@@ -86,13 +86,13 @@ describe('AnomalyDetector', () => {
     const det = new AnomalyDetector(FAST_CONFIG);
 
     // Add a value
-    det.addValue(100);
+    det.addValue(100, 'test');
 
     // Advance time beyond stale threshold
     vi.advanceTimersByTime(11_000);
 
     // Next value should report staleness
-    const anomalies = det.addValue(100);
+    const anomalies = det.addValue(100, 'test');
     const stale = anomalies.find(a => a.type === 'stale');
     expect(stale).toBeDefined();
   });
@@ -101,25 +101,25 @@ describe('AnomalyDetector', () => {
     const det = new AnomalyDetector(FAST_CONFIG);
 
     // 3% disagreement with 2% threshold → should flag
-    const results = det.checkCrossSource([
-      { provider: 'coingecko', value: 100 },
-      { provider: 'binance', value: 103.1 }, // 3.1% deviation
-      { provider: 'coincap', value: 100.5 },
-    ]);
+    const results = det.checkCrossSource({
+      coingecko: 100,
+      binance: 103.1, // 3.1% deviation
+      coincap: 100.5,
+    });
 
     const mismatch = results.find(a => a.type === 'cross_source_mismatch');
     expect(mismatch).toBeDefined();
-    expect(mismatch!.details).toContain('binance');
+    expect(mismatch!.message).toContain('binance');
   });
 
   it('does not flag cross-source when within threshold', () => {
     const det = new AnomalyDetector(FAST_CONFIG);
 
-    const results = det.checkCrossSource([
-      { provider: 'coingecko', value: 100 },
-      { provider: 'binance', value: 101 }, // 1% — within 2% threshold
-      { provider: 'coincap', value: 100.5 },
-    ]);
+    const results = det.checkCrossSource({
+      coingecko: 100,
+      binance: 101, // 1% — within 2% threshold
+      coincap: 100.5,
+    });
 
     expect(results).toHaveLength(0);
   });
@@ -127,25 +127,29 @@ describe('AnomalyDetector', () => {
   it('getIQROutliers identifies extreme values', () => {
     const det = new AnomalyDetector(FAST_CONFIG);
 
-    // Normal-ish data
+    // Normal-ish data + one outlier
     const data = [10, 11, 12, 13, 14, 15, 16, 17, 18, 100];
-    const outliers = det.getIQROutliers(data);
+    for (const v of data) {
+      det.addValue(v, 'test');
+    }
 
-    expect(outliers).toContain(100);
-    expect(outliers).not.toContain(14);
+    const outliers = det.getIQROutliers();
+    const outlierValues = outliers.filter(o => o.isOutlier).map(o => o.value);
+    expect(outlierValues).toContain(100);
+    expect(outlierValues).not.toContain(14);
   });
 
   it('getStats returns current mean and stddev', () => {
     const det = new AnomalyDetector(FAST_CONFIG);
 
     for (let i = 1; i <= 10; i++) {
-      det.addValue(i * 10); // 10, 20, 30, ..., 100
+      det.addValue(i * 10, 'test'); // 10, 20, 30, ..., 100
     }
 
     const stats = det.getStats();
     expect(stats.mean).toBeCloseTo(55, 0); // mean of 10..100
-    expect(stats.count).toBe(10);
-    expect(stats.stddev).toBeGreaterThan(0);
+    expect(stats.sampleSize).toBe(10);
+    expect(stats.standardDeviation).toBeGreaterThan(0);
   });
 
   it('respects minSampleSize — no z-score anomalies until enough data', () => {
@@ -153,10 +157,10 @@ describe('AnomalyDetector', () => {
 
     // Add only 4 values then an extreme one
     for (let i = 0; i < 4; i++) {
-      det.addValue(100);
+      det.addValue(100, 'test');
     }
 
-    const anomalies = det.addValue(999);
+    const anomalies = det.addValue(999, 'test');
     // Should NOT have z-score anomaly because < minSampleSize
     // But MAY have spike anomaly
     const zScore = anomalies.find(a => a.type === 'outlier');
@@ -166,9 +170,9 @@ describe('AnomalyDetector', () => {
   it('handles single-source cross-source gracefully', () => {
     const det = new AnomalyDetector(FAST_CONFIG);
 
-    const results = det.checkCrossSource([
-      { provider: 'coingecko', value: 100 },
-    ]);
+    const results = det.checkCrossSource({
+      coingecko: 100,
+    });
 
     // Single source = nothing to compare
     expect(results).toHaveLength(0);

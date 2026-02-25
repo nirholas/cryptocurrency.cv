@@ -147,7 +147,7 @@ export async function initTelemetry(): Promise<void> {
   if (process.env.OTEL_ENABLED === 'false') return;
 
   // Skip in Edge runtime (no Node.js APIs)
-  if (typeof globalThis.EdgeRuntime !== 'undefined') return;
+  if (typeof (globalThis as Record<string, unknown>).EdgeRuntime !== 'undefined') return;
 
   // Skip during build
   if (process.env.NEXT_PHASE === 'phase-production-build') return;
@@ -159,11 +159,15 @@ export async function initTelemetry(): Promise<void> {
 
   try {
     // Dynamic imports to avoid bundling OTel in Edge/client builds
+    // @ts-expect-error -- optional peer dependency, loaded dynamically
     const { NodeSDK } = await import('@opentelemetry/sdk-node');
     const { Resource } = await import('@opentelemetry/resources');
     const { ATTR_SERVICE_NAME, ATTR_SERVICE_VERSION } = await import('@opentelemetry/semantic-conventions');
+    // @ts-expect-error -- optional peer dependency, loaded dynamically
     const { OTLPTraceExporter } = await import('@opentelemetry/exporter-trace-otlp-http');
+    // @ts-expect-error -- optional peer dependency, loaded dynamically
     const { OTLPMetricExporter } = await import('@opentelemetry/exporter-metrics-otlp-http');
+    // @ts-expect-error -- optional peer dependency, loaded dynamically
     const { PeriodicExportingMetricReader } = await import('@opentelemetry/sdk-metrics');
     const otelApi = await import('@opentelemetry/api');
 

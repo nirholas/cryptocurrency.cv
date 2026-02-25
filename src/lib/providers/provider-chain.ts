@@ -446,7 +446,7 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
 
     // Collect successful results
     const successes = results
-      .filter((r): r is PromiseFulfilledResult<{ data: T; provider: string; weight: number }> =>
+      .filter((r): r is PromiseFulfilledResult<{ data: Awaited<T>; provider: string; weight: number }> =>
         r.status === 'fulfilled',
       )
       .map(r => r.value);
@@ -560,7 +560,7 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
     );
 
     const successes = results
-      .filter((r): r is PromiseFulfilledResult<{ data: T; provider: string; weight: number }> =>
+      .filter((r): r is PromiseFulfilledResult<{ data: Awaited<T>; provider: string; weight: number }> =>
         r.status === 'fulfilled',
       )
       .map(r => r.value);
@@ -648,7 +648,7 @@ export class ProviderChain<T = unknown> implements ProviderChainInstance<T> {
 
       // Normalize if the provider has a normalizer
       if (provider.normalize) {
-        data = provider.normalize(data);
+        data = provider.normalize(data) as Awaited<T>;
       }
 
       // Validate if the provider has a validator

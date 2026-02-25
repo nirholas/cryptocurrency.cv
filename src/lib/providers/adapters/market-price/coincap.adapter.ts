@@ -12,7 +12,7 @@
  * @module providers/adapters/market-price/coincap
  */
 
-import type { DataProvider, FetchParams, RateLimitConfig } from '../../providers/types';
+import type { DataProvider, FetchParams, RateLimitConfig } from '../../types';
 import type { MarketPrice } from './coingecko.adapter';
 
 // =============================================================================

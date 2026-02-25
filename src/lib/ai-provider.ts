@@ -4,7 +4,7 @@
  * across ai-brief, ai-counter, ai-debate, ai-enhanced, claim-extractor, event-classifier.
  */
 
-export type AIProvider = 'openai' | 'anthropic' | 'groq' | 'openrouter';
+export type AIProvider = 'openai' | 'anthropic' | 'groq' | 'openrouter' | 'gemini';
 
 export interface AIConfig {
   provider: AIProvider;
@@ -51,9 +51,14 @@ export function getAIConfigOrNull(preferGroq = false): AIConfig | null {
       ? { provider: 'openrouter', model: process.env.OPENROUTER_MODEL || 'meta-llama/llama-3.3-70b-instruct', apiKey: process.env.OPENROUTER_API_KEY, baseUrl: 'https://openrouter.ai/api/v1' }
       : null;
 
+  const gemini = (): AIConfig | null =>
+    process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY
+      ? { provider: 'gemini', model: process.env.GEMINI_MODEL || 'gemini-2.5-pro', apiKey: (process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY)! }
+      : null;
+
   const order = preferGroq
-    ? [groq, openai, anthropic, openrouter]
-    : [openai, anthropic, groq, openrouter];
+    ? [groq, openai, anthropic, gemini, openrouter]
+    : [openai, anthropic, gemini, groq, openrouter];
 
   for (const fn of order) {
     const cfg = fn();
@@ -97,9 +102,9 @@ export function aiCompleteStream(
       ? null
       : config.baseUrl || 'https://api.openai.com/v1';
 
-  // Anthropic doesn't share the same streaming format — fall back to a
+  // Anthropic and Gemini don't share the same streaming format — fall back to a
   // buffered single-chunk stream.
-  if (config.provider === 'anthropic' || !baseUrl) {
+  if (config.provider === 'anthropic' || config.provider === 'gemini' || !baseUrl) {
     return new ReadableStream<string>({
       async start(controller) {
         try {
@@ -221,6 +226,23 @@ export async function aiComplete(
 
     const data = await response.json();
     return data.content[0].text;
+  }
+
+  // Google Gemini API
+  if (config.provider === 'gemini') {
+    const { GoogleGenerativeAI } = await import('@google/generative-ai');
+    const genAI = new GoogleGenerativeAI(config.apiKey);
+    const model = genAI.getGenerativeModel({
+      model: config.model,
+      generationConfig: {
+        maxOutputTokens: maxTokens,
+        temperature,
+        ...(jsonMode && { responseMimeType: 'application/json' }),
+      },
+      systemInstruction: systemPrompt,
+    });
+    const result = await model.generateContent(userPrompt);
+    return result.response.text();
   }
 
   // OpenAI-compatible API (OpenAI, Groq, OpenRouter)

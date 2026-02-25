@@ -102,7 +102,6 @@ export function createMarketPriceChain(
   const config: Partial<ProviderChainConfig> = {
     strategy,
     cacheTtlSeconds,
-    staleTtlSeconds,
     maxDeviation,
   };
 

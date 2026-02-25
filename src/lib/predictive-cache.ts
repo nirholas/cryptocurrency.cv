@@ -280,7 +280,7 @@ export class PredictiveCache {
    * Warm static patterns that are always high-traffic.
    */
   private async warmStaticPatterns(): Promise<void> {
-    const staticPatterns = [
+    const staticPatterns: Array<{ path: string; params: Record<string, string> }> = [
       { path: '/api/v1/news', params: {} },
       { path: '/api/prices', params: { coins: 'bitcoin,ethereum,solana' } },
       { path: '/api/global', params: {} },
@@ -413,7 +413,7 @@ export const MARKET_TRIGGERS = {
    */
   priceMove: (coin: string, changePercent: number) => {
     const cache = getPredictiveCache();
-    const warmPaths = [
+    const warmPaths: Array<{ path: string; params: Record<string, string> }> = [
       { path: `/api/v1/news`, params: { q: coin } },
       { path: `/api/prices`, params: { coins: coin } },
       { path: `/api/v1/coins/${coin}`, params: {} },

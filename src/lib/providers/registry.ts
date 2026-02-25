@@ -74,7 +74,7 @@ interface RegistryEntry<T = unknown> {
  * // { 'market-price': 'healthy', 'funding-rates': 'degraded', ... }
  * ```
  */
-class ProviderRegistry {
+export class ProviderRegistry {
   private _entries: Map<DataCategory, RegistryEntry> = new Map();
   private _listeners: ProviderEventListener[] = [];
 

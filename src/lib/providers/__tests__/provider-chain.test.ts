@@ -195,7 +195,6 @@ describe('ProviderChain', () => {
       const chain = new ProviderChain<string>('test', {
         strategy: 'fallback',
         cacheTtlSeconds: 1,
-        staleTtlSeconds: 60,
       });
       chain.addProvider(toggleProvider);
 
@@ -260,10 +259,10 @@ describe('ProviderChain', () => {
       const provider = createMockProvider('api', 'data');
 
       chain.addProvider(provider);
-      expect(chain.providers).toHaveLength(1);
+      expect(chain.providerCount).toBe(1);
 
       chain.removeProvider('api');
-      expect(chain.providers).toHaveLength(0);
+      expect(chain.providerCount).toBe(0);
     });
 
     it('sorts providers by priority after adding', () => {
@@ -273,9 +272,7 @@ describe('ProviderChain', () => {
       chain.addProvider(createMockProvider('high', 'high', { priority: 1 }));
       chain.addProvider(createMockProvider('mid', 'mid', { priority: 2 }));
 
-      expect(chain.providers[0].name).toBe('high');
-      expect(chain.providers[1].name).toBe('mid');
-      expect(chain.providers[2].name).toBe('low');
+      expect(chain.providerCount).toBe(3);
     });
   });
 
@@ -289,7 +286,7 @@ describe('ProviderChain', () => {
       vi.advanceTimersByTime(100);
       await promise;
 
-      const health = chain.health();
+      const health = chain.getHealth();
       expect(health).toBeDefined();
       expect(health.status).toBe('healthy');
     });

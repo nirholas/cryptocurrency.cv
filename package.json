@@ -79,6 +79,7 @@
   "author": "nirholas",
   "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "@heroicons/react": "^2.2.0",
     "@tailwindcss/typography": "^0.5.19",
     "@types/recharts": "^2.0.1",

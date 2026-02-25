@@ -13,7 +13,7 @@
  * @module providers/adapters/market-price/binance
  */
 
-import type { DataProvider, FetchParams, RateLimitConfig } from '../../providers/types';
+import type { DataProvider, FetchParams, RateLimitConfig } from '../../types';
 import type { MarketPrice } from './coingecko.adapter';
 
 // =============================================================================

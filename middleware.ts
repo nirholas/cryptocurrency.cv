@@ -348,6 +348,9 @@ export default async function middleware(request: NextRequest) {
     }
   }
 
+  // Compute once — reused in rate-limiting tier selection AND request-header forwarding below.
+  const apiClient = isApiClient(request);
+
   // Exempt patterns — skip rate limiting / size check
   if (!matchesPattern(pathname, EXEMPT_PATTERNS)) {
     // Size validation
@@ -367,7 +370,6 @@ export default async function middleware(request: NextRequest) {
       headers['X-RateLimit-Limit'] = 'unlimited';
       headers['X-RateLimit-Remaining'] = 'unlimited';
     } else if (matchesPattern(pathname, FREE_TIER_PATTERNS)) {
-      const apiClient = isApiClient(request);
       const tier = apiClient ? 'api' : 'public';
       const rl = await checkRateLimit(`${getClientIp(request)}:${pathname}`, tier);
       headers['X-RateLimit-Limit'] = rl.limit.toString();
@@ -410,7 +412,6 @@ export default async function middleware(request: NextRequest) {
   // Also forward X-API-Client: 1 for programmatic consumers so handlers can optimise
   // their response format (e.g. skip HTML-friendly wrappers, enable bulk fields).
   const isFreeTierRequest = !speraxos && matchesPattern(pathname, FREE_TIER_PATTERNS);
-  const apiClient = isApiClient(request);
   const requestHeaders = new Headers(request.headers);
   if (isFreeTierRequest) requestHeaders.set('x-free-tier', '1');
   if (apiClient) requestHeaders.set('x-api-client', '1');
