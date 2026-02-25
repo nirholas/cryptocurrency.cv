@@ -60,8 +60,9 @@ services:
     container_name: crypto-news-redis
     expose:
       - "6379"
-    ports:
-      - "6379:6379"
+    # Do NOT expose port 6379 to host in production — only internal traffic.
+    # Uncomment the next line for local debugging only:
+    # ports: ["6379:6379"]
     volumes:
       - redis_data:/data
     command: >
@@ -91,6 +92,7 @@ services:
     environment:
       - PORT=8080
       - REDIS_URL=redis://redis:6379
+      - NEWS_API=http://app:3000
     deploy:
       replicas: 2
       resources:

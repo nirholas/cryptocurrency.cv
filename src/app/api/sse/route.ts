@@ -61,10 +61,13 @@ export async function GET(request: NextRequest) {
     }
   };
 
+  // Timer ref hoisted so cancel() can clear it
+  let maxDurationTimer: ReturnType<typeof setTimeout> | null = null;
+
   const stream = new ReadableStream({
     async start(controller) {
       // Auto-disconnect after MAX_CONNECTION_DURATION to prevent zombie connections
-      const maxDurationTimer = setTimeout(() => {
+      maxDurationTimer = setTimeout(() => {
         if (isConnected) {
           const closeEvent = `event: close\ndata: ${JSON.stringify({
             reason: 'max_duration_reached',
@@ -72,6 +75,7 @@ export async function GET(request: NextRequest) {
           })}\n\n`;
           safeEnqueue(controller, encoder.encode(closeEvent));
           isConnected = false;
+          activeConnections = Math.max(0, activeConnections - 1);
           try { controller.close(); } catch { /* already closed */ }
         }
       }, MAX_CONNECTION_DURATION);
@@ -169,6 +173,7 @@ export async function GET(request: NextRequest) {
     },
     cancel() {
       isConnected = false;
+      if (maxDurationTimer) { clearTimeout(maxDurationTimer); maxDurationTimer = null; }
       activeConnections = Math.max(0, activeConnections - 1);
     },
   });
