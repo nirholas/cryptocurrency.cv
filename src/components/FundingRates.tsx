@@ -49,8 +49,8 @@ export function FundingRates({
     try {
       setError(null);
       
-      // Fetch from Binance Futures API (free, no key needed)
-      const response = await fetch('https://fapi.binance.com/fapi/v1/premiumIndex');
+      // Fetch via our server-side proxy to avoid CORS issues with fapi.binance.com
+      const response = await fetch('/api/funding-rates');
       
       if (!response.ok) {
         throw new Error(`Binance API error: ${response.status}`);

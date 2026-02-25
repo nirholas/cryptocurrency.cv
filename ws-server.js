@@ -39,8 +39,15 @@ async function initRedis() {
   }
   try {
     const { createClient } = require('redis');
-    redisPub = createClient({ url });
+    redisPub = createClient({ url, socket: { reconnectStrategy: (retries) => Math.min(retries * 500, 5000) } });
     redisSub = redisPub.duplicate();
+
+    // Reconnection logging
+    for (const client of [redisPub, redisSub]) {
+      client.on('error', (err) => console.error('[redis] Connection error:', err.message));
+      client.on('reconnecting', () => console.log('[redis] Reconnecting...'));
+    }
+
     await redisPub.connect();
     await redisSub.connect();
 
@@ -48,7 +55,7 @@ async function initRedis() {
     await redisSub.subscribe(REDIS_CHANNEL, (raw) => {
       try {
         const { type, payload, timestamp, meta } = JSON.parse(raw);
-        // Ignore messages from this instance
+        // Ignore messages from this instance (already delivered locally)
         if (meta?.instanceId === INSTANCE_ID) return;
         localBroadcastRaw(type, payload, timestamp, meta);
       } catch (e) {
@@ -61,6 +68,43 @@ async function initRedis() {
     console.error('[redis] Init failed, falling back to single-process:', err.message);
     redisPub = null;
     redisSub = null;
+  }
+}
+
+/**
+ * Simple leader election via Redis.  One instance acquires a key with a TTL;
+ * only the leader runs the polling loops.  Other instances just relay
+ * broadcasts received via pub/sub.  Falls back to "everyone polls" when
+ * Redis is unavailable (safe — just duplicated upstream calls).
+ */
+let isLeader = false;
+const LEADER_KEY = 'ws:leader';
+const LEADER_TTL = 30; // seconds — must be shorter than the longest poll interval
+
+async function tryAcquireLeadership() {
+  if (!redisPub) { isLeader = true; return; } // No Redis → single-process, always leader
+  try {
+    const result = await redisPub.set(LEADER_KEY, INSTANCE_ID, { NX: true, EX: LEADER_TTL });
+    isLeader = result === 'OK';
+  } catch {
+    isLeader = true; // Redis down → poll anyway to avoid data blackout
+  }
+}
+
+async function renewOrReacquireLeadership() {
+  if (!redisPub) { isLeader = true; return; }
+  try {
+    const currentLeader = await redisPub.get(LEADER_KEY);
+    if (currentLeader === INSTANCE_ID) {
+      await redisPub.expire(LEADER_KEY, LEADER_TTL);
+      isLeader = true;
+    } else if (!currentLeader) {
+      await tryAcquireLeadership();
+    } else {
+      isLeader = false;
+    }
+  } catch {
+    isLeader = true;
   }
 }
 
@@ -137,6 +181,10 @@ const RATE_LIMIT = {
   subscriptionsMax: 50,
 };
 
+// Connection limits
+const MAX_CONNECTIONS = parseInt(process.env.WS_MAX_CONNECTIONS || '10000', 10);
+const MAX_PAYLOAD = 64 * 1024; // 64 KB max message size from clients
+
 // Client management
 const clients = new Map();
 
@@ -161,7 +209,11 @@ const server = http.createServer((req, res) => {
     res.end(JSON.stringify({
       status: 'ok',
       version: '2.0.0',
+      instanceId: INSTANCE_ID,
+      isLeader,
+      redis: redisPub ? 'connected' : 'unavailable',
       clients: clients.size,
+      maxClients: MAX_CONNECTIONS,
       uptime: process.uptime(),
       features: ['news', 'breaking', 'alerts', 'prices', 'whales', 'sentiment', 'channels'],
     }));
@@ -210,6 +262,7 @@ Endpoints:
 // Create WebSocket server with compression
 const wss = new WebSocket.Server({ 
   server,
+  maxPayload: MAX_PAYLOAD,
   perMessageDeflate: {
     zlibDeflateOptions: { chunkSize: 1024, level: 3 },
     zlibInflateOptions: { chunkSize: 10 * 1024 },
@@ -226,6 +279,12 @@ function generateClientId() {
 
 // Handle new connection
 wss.on('connection', (ws, req) => {
+  // Enforce connection cap
+  if (clients.size >= MAX_CONNECTIONS) {
+    ws.close(1013, 'Server at capacity');
+    return;
+  }
+
   const clientId = generateClientId();
   const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
   
@@ -554,29 +613,44 @@ function handleLeaveChannel(clientId, payload) {
 // =============================================================================
 
 /**
- * Publish a broadcast event. When Redis is available the message is published
- * to the shared channel so *every* WS instance (including this one via the
- * Redis subscriber callback) delivers it to its local clients.
+ * Publish a broadcast event.
  *
- * When Redis is not available, falls back to local-only delivery.
+ * ALWAYS delivers to local clients first (immediate, zero-latency for this
+ * instance's connections).  When Redis is available, also publishes to the
+ * shared channel so OTHER instances deliver to their clients.
+ *
+ * The subscriber callback skips messages from this instance (INSTANCE_ID
+ * match) to prevent double-delivery.
  */
 function publishBroadcast(type, payload, meta = {}) {
   const timestamp = new Date().toISOString();
-  const msg = JSON.stringify({
-    type,
-    payload,
-    timestamp,
-    meta: { ...meta, instanceId: INSTANCE_ID },
-  });
+  const enrichedMeta = { ...meta, instanceId: INSTANCE_ID };
 
+  // 1. Always deliver locally — this instance's clients get it NOW
+  localBroadcastRaw(type, payload, timestamp, enrichedMeta);
+
+  // 2. Publish to Redis so other instances also deliver
   if (redisPub) {
+    const msg = JSON.stringify({ type, payload, timestamp, meta: enrichedMeta });
     redisPub.publish(REDIS_CHANNEL, msg).catch((err) => {
-      console.error('[redis] Publish failed, falling back to local:', err.message);
-      localBroadcastRaw(type, payload, timestamp, meta);
+      console.error('[redis] Publish failed (local delivery already done):', err.message);
     });
-  } else {
-    // No Redis — deliver to local clients only
-    localBroadcastRaw(type, payload, timestamp, meta);
+  }
+}
+
+/**
+ * Safely send a JSON message to a client. Returns false if the send fails
+ * (client disconnected between readyState check and send).
+ */
+function safeSend(client, clientId, data) {
+  if (client.ws.readyState !== WebSocket.OPEN) return false;
+  try {
+    client.ws.send(typeof data === 'string' ? data : JSON.stringify(data));
+    return true;
+  } catch (err) {
+    console.error(`[send] Failed for ${clientId}:`, err.message);
+    clients.delete(clientId);
+    return false;
   }
 }
 
@@ -606,10 +680,8 @@ function localBroadcastRaw(type, payload, timestamp, meta = {}) {
       break;
     default:
       // Generic: send raw to every open socket
-      clients.forEach((client) => {
-        if (client.ws.readyState === WebSocket.OPEN) {
-          client.ws.send(JSON.stringify({ type, payload, timestamp }));
-        }
+      clients.forEach((client, clientId) => {
+        safeSend(client, clientId, { type, payload, timestamp });
       });
   }
 }
@@ -619,15 +691,15 @@ function localBroadcastToChannel(channelId, articles) {
   const channel = CHANNELS[channelId];
   if (!channel) return;
 
-  clients.forEach((client) => {
-    if (client.ws.readyState !== WebSocket.OPEN) return;
-    if (!client.channels.has(channelId)) return;
+  const msg = JSON.stringify({
+    type: WS_MSG_TYPES.TOPIC,
+    payload: { channel: channelId, channelName: channel.name, articles },
+    timestamp: new Date().toISOString(),
+  });
 
-    client.ws.send(JSON.stringify({
-      type: WS_MSG_TYPES.TOPIC,
-      payload: { channel: channelId, channelName: channel.name, articles },
-      timestamp: new Date().toISOString(),
-    }));
+  clients.forEach((client, clientId) => {
+    if (!client.channels.has(channelId)) return;
+    safeSend(client, clientId, msg);
   });
 }
 
@@ -640,9 +712,7 @@ function broadcastToChannel(channelId, articles) {
 function localBroadcastNews(articles, isBreaking = false) {
   const type = isBreaking ? WS_MSG_TYPES.BREAKING : WS_MSG_TYPES.NEWS;
 
-  clients.forEach((client) => {
-    if (client.ws.readyState !== WebSocket.OPEN) return;
-
+  clients.forEach((client, clientId) => {
     const sub = client.subscription;
     const filteredArticles = articles.filter(article => {
       if (sub.sources.length === 0 && sub.categories.length === 0 && sub.keywords.length === 0) {
@@ -664,7 +734,7 @@ function localBroadcastNews(articles, isBreaking = false) {
     });
 
     if (filteredArticles.length > 0) {
-      client.ws.send(JSON.stringify({ type, payload: { articles: filteredArticles }, timestamp: new Date().toISOString() }));
+      safeSend(client, clientId, { type, payload: { articles: filteredArticles }, timestamp: new Date().toISOString() });
     }
   });
 }
@@ -680,22 +750,13 @@ function localBroadcastAlert(alertEvent) {
   let delivered = 0;
   
   clients.forEach((client, clientId) => {
-    if (client.ws.readyState !== WebSocket.OPEN) return;
-    
     const isSubscribed = 
       client.alertSubscriptions.has('*') || 
       client.alertSubscriptions.has(alertEvent.ruleId);
     
     if (isSubscribed) {
-      try {
-        client.ws.send(JSON.stringify({
-          type: WS_MSG_TYPES.ALERT,
-          data: alertEvent,
-          timestamp: new Date().toISOString(),
-        }));
+      if (safeSend(client, clientId, { type: WS_MSG_TYPES.ALERT, data: alertEvent, timestamp: new Date().toISOString() })) {
         delivered++;
-      } catch (error) {
-        console.error(`Failed to send alert to client ${clientId}:`, error.message);
       }
     }
   });
@@ -720,40 +781,40 @@ function broadcastAlerts(alertEvents) {
 
 // Local price broadcast
 function localBroadcastPrices(prices) {
-  clients.forEach((client) => {
-    if (client.ws.readyState !== WebSocket.OPEN) return;
+  const msg = JSON.stringify({
+    type: WS_MSG_TYPES.PRICES,
+    payload: { prices },
+    timestamp: new Date().toISOString(),
+  });
+  clients.forEach((client, clientId) => {
     if (!client.streamPrices) return;
-    client.ws.send(JSON.stringify({
-      type: WS_MSG_TYPES.PRICES,
-      payload: { prices },
-      timestamp: new Date().toISOString(),
-    }));
+    safeSend(client, clientId, msg);
   });
 }
 
 // Local whale broadcast
 function localBroadcastWhales(payload) {
-  clients.forEach((client) => {
-    if (client.ws.readyState !== WebSocket.OPEN) return;
+  const msg = JSON.stringify({
+    type: WS_MSG_TYPES.WHALES,
+    payload,
+    timestamp: new Date().toISOString(),
+  });
+  clients.forEach((client, clientId) => {
     if (!client.streamWhales) return;
-    client.ws.send(JSON.stringify({
-      type: WS_MSG_TYPES.WHALES,
-      payload,
-      timestamp: new Date().toISOString(),
-    }));
+    safeSend(client, clientId, msg);
   });
 }
 
 // Local sentiment broadcast
 function localBroadcastSentiment(payload) {
-  clients.forEach((client) => {
-    if (client.ws.readyState !== WebSocket.OPEN) return;
+  const msg = JSON.stringify({
+    type: WS_MSG_TYPES.SENTIMENT,
+    payload,
+    timestamp: new Date().toISOString(),
+  });
+  clients.forEach((client, clientId) => {
     if (!client.streamSentiment) return;
-    client.ws.send(JSON.stringify({
-      type: WS_MSG_TYPES.SENTIMENT,
-      payload,
-      timestamp: new Date().toISOString(),
-    }));
+    safeSend(client, clientId, msg);
   });
 }
 
@@ -987,28 +1048,29 @@ server.listen(PORT, () => {
   `);
 
   // Initialize Redis pub/sub for horizontal scaling (non-blocking)
-  initRedis().then(() => {
-    console.log(`[${new Date().toISOString()}] Instance ${INSTANCE_ID} ready`);
+  initRedis().then(async () => {
+    await tryAcquireLeadership();
+    console.log(`[${new Date().toISOString()}] Instance ${INSTANCE_ID} ready (leader: ${isLeader})`);
   });
 
-  // Start news polling (30s)
-  setInterval(pollNews, POLL_INTERVAL);
-  pollNews();
+  // Leader heartbeat — renew or acquire leadership every 15s
+  setInterval(renewOrReacquireLeadership, 15000);
 
-  // Start price streaming (10s)
-  setInterval(pollPrices, PRICE_INTERVAL);
-  pollPrices();
+  // Polling loops — only the leader fetches from upstream APIs.
+  // Non-leaders receive data via Redis pub/sub.
+  setInterval(() => { if (isLeader) pollNews(); }, POLL_INTERVAL);
+  setTimeout(() => { if (isLeader) pollNews(); }, 1000); // first poll after 1s startup
 
-  // Start whale alert polling (60s)
-  setInterval(pollWhales, WHALE_INTERVAL);
-  pollWhales();
+  setInterval(() => { if (isLeader) pollPrices(); }, PRICE_INTERVAL);
+  setTimeout(() => { if (isLeader) pollPrices(); }, 1000);
 
-  // Start sentiment polling (5m)
-  setInterval(pollSentiment, SENTIMENT_INTERVAL);
-  pollSentiment();
+  setInterval(() => { if (isLeader) pollWhales(); }, WHALE_INTERVAL);
+  setTimeout(() => { if (isLeader) pollWhales(); }, 1000);
 
-  // Start alert evaluation (30s)
-  setInterval(evaluateAndBroadcastAlerts, ALERT_EVAL_INTERVAL);
+  setInterval(() => { if (isLeader) pollSentiment(); }, SENTIMENT_INTERVAL);
+  setTimeout(() => { if (isLeader) pollSentiment(); }, 1000);
+
+  setInterval(() => { if (isLeader) evaluateAndBroadcastAlerts(); }, ALERT_EVAL_INTERVAL);
   
   // Cleanup stale connections every minute
   setInterval(cleanupStale, 60000);
@@ -1020,8 +1082,9 @@ process.on('SIGTERM', () => {
   wss.clients.forEach((client) => {
     client.close(1001, 'Server shutting down');
   });
-  // Clean up Redis connections
+  // Release leadership and clean up Redis connections
   const cleanup = [];
+  if (redisPub && isLeader) cleanup.push(redisPub.del(LEADER_KEY).catch(() => {}));
   if (redisPub) cleanup.push(redisPub.quit().catch(() => {}));
   if (redisSub) cleanup.push(redisSub.quit().catch(() => {}));
   Promise.allSettled(cleanup).then(() => {

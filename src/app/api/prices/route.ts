@@ -3,17 +3,19 @@
  * GET /api/prices?coins=bitcoin,ethereum,solana
  * Returns { bitcoin: { usd: 50000, usd_24h_change: 1.5 }, ... }
  *
- * Fallback chain:
+ * Fallback chain (never returns an error):
  *   1. Short-lived in-memory cache (60 s)
  *   2. CoinGecko via fetchCoinGecko (which already has CoinCap/CoinPaprika fallbacks)
  *   3. Stale cache (last-known-good, up to 1 hour old)
- *   4. Empty {} — never throw to the caller
+ *   4. Disk fallback (public/fallback/prices.json — survives restarts + deploys)
+ *   5. Emergency hardcoded data (always available)
  */
 
 import { NextRequest, NextResponse } from 'next/server';
 import { fetchCoinGecko } from '@/lib/coingecko';
 import { COINGECKO_BASE } from '@/lib/constants';
 import { staleCache, cache, generateCacheKey } from '@/lib/cache';
+import { getPricesFallback } from '@/lib/fallback';
 
 export const revalidate = 120;
 
@@ -65,6 +67,15 @@ export async function GET(request: NextRequest) {
     cache.set(cacheKey, data as Record<string, unknown>, 60);
     staleCache.set(cacheKey, data as Record<string, unknown>, 3600);
 
+    // Fire-and-forget: persist to disk so fallback survives restarts/deploys
+    try {
+      fetch(new URL('/api/internal/snapshot', request.nextUrl.origin), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-internal-snapshot': '1' },
+        body: JSON.stringify({ type: 'prices', data }),
+      }).catch(() => { /* best-effort */ });
+    } catch { /* ignore */ }
+
     return NextResponse.json(
       isFreeTier ? { ...data as object, free_tier: true, upgrade: 'https://cryptocurrency.cv/premium' } : data,
       {
@@ -89,6 +100,17 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  // 4. Nothing available — graceful empty
-  return NextResponse.json({}, { status: 200 });
+  // 4. Disk fallback → emergency (never returns an error)
+  const fallback = await getPricesFallback(request.nextUrl.origin);
+  const fallbackData = fallback.data;
+  return NextResponse.json(
+    isFreeTier ? { ...fallbackData, free_tier: true, upgrade: 'https://cryptocurrency.cv/premium' } : fallbackData,
+    {
+      headers: {
+        'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120',
+        'X-Stale': '1',
+        'X-Fallback-Level': fallback.level,
+      },
+    },
+  );
 }

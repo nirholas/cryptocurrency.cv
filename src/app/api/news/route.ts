@@ -8,6 +8,7 @@ import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 import { getBulkEnrichment } from '@/lib/article-enrichment';
 import { staleCache, generateCacheKey } from '@/lib/cache';
+import { getNewsFallback } from '@/lib/fallback';
 
 export const runtime = 'edge';
 export const revalidate = 60; // 1 minute for fresher content
@@ -108,6 +109,15 @@ export async function GET(request: NextRequest) {
     // Persist into stale cache so we can serve it when feeds are unreachable
     const staleCacheKey = generateCacheKey('news', { limit, source, category, page, per_page, lang });
     staleCache.set(staleCacheKey, responseData, 3600); // 1 hour stale window
+
+    // Fire-and-forget: persist to disk so fallback survives restarts/deploys
+    try {
+      fetch(new URL('/api/internal/snapshot', request.nextUrl.origin), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-internal-snapshot': '1' },
+        body: JSON.stringify({ type: 'news', data: responseData }),
+      }).catch(() => { /* best-effort */ });
+    } catch { /* ignore */ }
     
     return jsonResponse(responseData, {
       cacheControl: 'realtime', // matches ISR revalidate=60; s-maxage=60
@@ -130,6 +140,12 @@ export async function GET(request: NextRequest) {
       });
     }
 
-    return ApiError.internal('Failed to fetch news', error);
+    // Disk fallback → emergency hardcoded data (never returns an error)
+    logger.info('Stale cache empty — falling back to disk/emergency archive');
+    const fallback = await getNewsFallback(request.nextUrl.origin);
+    return jsonResponse(
+      withTiming({ ...fallback.data, _fallbackLevel: fallback.level }, startTime),
+      { cacheControl: 'realtime', etag: true, request, stale: true },
+    );
   }
 }

@@ -9,6 +9,7 @@
  */
 'use client';
 
+import { useState, useEffect } from 'react';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { generateArticleSlug } from '@/lib/archive-v2';
@@ -91,8 +92,12 @@ function groupByDay(articles: Article[]): { label: string; articles: Article[] }
 }
 
 export default function LatestNewsFeed({ articles, maxArticles = 15 }: LatestNewsFeedProps) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => { setMounted(true); }, []);
+
   const displayArticles = articles.slice(0, maxArticles);
-  const dayGroups = groupByDay(displayArticles);
+  // Defer time-dependent grouping until after hydration to avoid mismatch
+  const dayGroups = mounted ? groupByDay(displayArticles) : [{ label: '', articles: displayArticles }];
 
   const t = useTranslations('common');
   return (
@@ -135,7 +140,7 @@ export default function LatestNewsFeed({ articles, maxArticles = 15 }: LatestNew
                 const sentiment = detectSentiment(article.title);
                 const config = sentimentConfig[sentiment];
                 const slug = generateArticleSlug(article.title, article.pubDate);
-                const time = formatTime(article.pubDate);
+                const time = mounted ? formatTime(article.pubDate) : '';
 
                 return (
                   <Link

@@ -1,131 +1,126 @@
 /**
  * HTTP Connection Pool
  *
- * Provides a shared `fetch` that reuses TCP connections via a keep-alive
- * Agent, preventing socket exhaustion under high concurrency.
+ * Provides a shared `fetch` wrapper that reuses TCP connections via undici's
+ * Agent (the engine behind Node.js's built-in `fetch`).
  *
- * On the Edge runtime (no `http`/`https` modules) this falls back
- * transparently to the global `fetch` which already uses the runtime's
- * built-in connection pool.
+ * Why this matters:
+ *  - Node.js's global `fetch` uses a default undici dispatcher with generic
+ *    defaults (no total-socket cap, no per-origin tuning).  Under high fan-out
+ *    to many upstream APIs (CoinGecko, DeFiLlama, Mempool, Binance, …) the
+ *    defaults risk socket exhaustion and excessive TLS handshakes.
+ *  - This module creates a shared Agent with explicit keep-alive, per-origin
+ *    connection limits, and idle timeouts.
+ *  - On the Edge runtime (Vercel / Cloudflare Workers) the runtime's own pool
+ *    is used — no undici needed.
  *
  * @module lib/http-pool
  */
 
- 
-
 // ---------------------------------------------------------------------------
-// Shared keep-alive agents (Node.js only — lazy-initialised)
+// Edge runtime detection
 // ---------------------------------------------------------------------------
 
-let _httpAgent: InstanceType<typeof import('http').Agent> | undefined;
-let _httpsAgent: InstanceType<typeof import('https').Agent> | undefined;
-
-function getHttpAgent() {
-  if (!_httpAgent) {
-    // Dynamic require so Edge builds don't blow up
-    const http = require('http') as typeof import('http');
-    _httpAgent = new http.Agent({
-      keepAlive: true,
-      keepAliveMsecs: 30_000,
-      maxSockets: 128,       // per host
-      maxTotalSockets: 512,  // across all hosts
-      maxFreeSockets: 64,
-      timeout: 30_000,
-      scheduling: 'lifo',    // reuse the most-recently-freed socket → fewer idle
-    });
+const isEdgeRuntime: boolean = (() => {
+  try {
+    // Vercel Edge sets globalThis.EdgeRuntime = 'edge-runtime'
+    if (typeof (globalThis as Record<string, unknown>).EdgeRuntime === 'string') return true;
+    // Cloudflare Workers have no `process` global
+    if (typeof process === 'undefined') return true;
+    // Bun & Deno have their own pooled fetch
+    if (typeof (globalThis as Record<string, unknown>).Bun !== 'undefined') return true;
+    if (typeof (globalThis as Record<string, unknown>).Deno !== 'undefined') return true;
+  } catch {
+    // In the unlikely case any check throws, assume Node.js
   }
-  return _httpAgent;
-}
-
-function getHttpsAgent() {
-  if (!_httpsAgent) {
-    const https = require('https') as typeof import('https');
-    _httpsAgent = new https.Agent({
-      keepAlive: true,
-      keepAliveMsecs: 30_000,
-      maxSockets: 128,
-      maxTotalSockets: 512,
-      maxFreeSockets: 64,
-      timeout: 30_000,
-      scheduling: 'lifo',
-    });
-  }
-  return _httpsAgent;
-}
+  return false;
+})();
 
 // ---------------------------------------------------------------------------
-// Detect Edge runtime
+// Undici Agent (Node.js only — lazy-initialised)
 // ---------------------------------------------------------------------------
 
-const isEdge =
-  typeof (globalThis as Record<string, unknown>).EdgeRuntime !== 'undefined' ||
-  typeof (globalThis as Record<string, unknown>).__NEXT_DATA__ === 'undefined';
+type UndiciAgent = import('undici').Agent;
+
+let _agent: UndiciAgent | undefined;
+
+function getAgent(): UndiciAgent {
+  if (_agent) return _agent;
+
+   
+  const { Agent } = require('undici') as typeof import('undici');
+
+  _agent = new Agent({
+    keepAliveTimeout: 30_000,      // idle socket TTL
+    keepAliveMaxTimeout: 60_000,   // upper bound after server Keep-Alive hints
+    pipelining: 1,                 // safe default; some upstreams reject pipelining
+    connections: 64,               // max sockets per origin (host:port)
+    connect: { timeout: 10_000 },  // TCP + TLS handshake timeout
+    bodyTimeout: 30_000,           // time to receive full response body
+    headersTimeout: 15_000,        // time to receive response headers
+  });
+
+  return _agent;
+}
 
 // ---------------------------------------------------------------------------
 // pooledFetch — drop-in replacement for global fetch
 // ---------------------------------------------------------------------------
 
 /**
- * A `fetch` wrapper that routes through a shared keep-alive Agent on Node.js.
+ * A `fetch` wrapper that routes through a shared undici Agent on Node.js,
+ * providing connection pooling, keep-alive, and per-origin socket limits.
+ *
  * On Edge runtimes it delegates directly to the global `fetch`.
  *
- * Usage:
  * ```ts
  * import { pooledFetch } from '@/lib/http-pool';
- * const res = await pooledFetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+ * const res = await pooledFetch('https://api.coingecko.com/api/v3/...');
  * ```
  */
 export function pooledFetch(
   input: RequestInfo | URL,
-  init?: RequestInit & { agent?: unknown },
+  init?: RequestInit,
 ): Promise<Response> {
-  // Edge runtime → global fetch already pooled
-  if (isEdge) return fetch(input, init);
-
-  // Node.js → inject the correct keep-alive agent
-  const url = typeof input === 'string' ? input : input instanceof URL ? input.href : (input as Request).url;
-  const agent = url.startsWith('https') ? getHttpsAgent() : getHttpAgent();
+  if (isEdgeRuntime) return fetch(input, init);
 
   return fetch(input, {
     ...init,
-    // Node.js fetch accepts `agent` but the DOM typings don't expose it
-    agent: init?.agent ?? agent,
-     
-  } as any);
+    // `dispatcher` is the undici-native way to specify a connection pool.
+    // Node.js's built-in fetch passes this straight through to undici.
+    // @ts-expect-error -- valid for Node.js fetch (undici) but absent from DOM RequestInit
+    dispatcher: getAgent(),
+  });
 }
 
 // ---------------------------------------------------------------------------
-// Stats (useful for /api/health or monitoring)
+// Stats (useful for /api/health or monitoring dashboards)
 // ---------------------------------------------------------------------------
 
 export interface PoolStats {
   runtime: 'edge' | 'node';
-  http?: { sockets: number; freeSockets: number; requests: number };
-  https?: { sockets: number; freeSockets: number; requests: number };
+  connected: number;
+  free: number;
+  pending: number;
+  running: number;
+  size: number;
 }
 
-/** Return current agent socket stats (Node.js only). */
+/** Return current connection pool statistics. */
 export function getPoolStats(): PoolStats {
-  if (isEdge) return { runtime: 'edge' };
+  if (isEdgeRuntime || !_agent) {
+    return { runtime: isEdgeRuntime ? 'edge' : 'node', connected: 0, free: 0, pending: 0, running: 0, size: 0 };
+  }
 
-  const count = (obj?: Record<string, unknown[]>) =>
-    obj ? Object.values(obj).reduce((n, arr) => n + arr.length, 0) : 0;
-
-  const ha = _httpAgent as unknown as {
-    sockets?: Record<string, unknown[]>;
-    freeSockets?: Record<string, unknown[]>;
-    requests?: Record<string, unknown[]>;
-  } | undefined;
-  const hsa = _httpsAgent as unknown as typeof ha;
-
+  // undici Agent may expose aggregate stats — fall back to zeroes if unavailable
+  const stats = (_agent as unknown as Record<string, Record<string, number>>).stats ?? {};
   return {
     runtime: 'node',
-    http: ha
-      ? { sockets: count(ha.sockets), freeSockets: count(ha.freeSockets), requests: count(ha.requests) }
-      : undefined,
-    https: hsa
-      ? { sockets: count(hsa.sockets), freeSockets: count(hsa.freeSockets), requests: count(hsa.requests) }
-      : undefined,
+    connected: stats.connected ?? 0,
+    free: stats.free ?? 0,
+    pending: stats.pending ?? 0,
+    running: stats.running ?? 0,
+    size: stats.size ?? 0,
   };
 }
 
@@ -133,9 +128,10 @@ export function getPoolStats(): PoolStats {
 // Graceful shutdown helper
 // ---------------------------------------------------------------------------
 
-export function destroyPool(): void {
-  _httpAgent?.destroy();
-  _httpsAgent?.destroy();
-  _httpAgent = undefined;
-  _httpsAgent = undefined;
+/** Close all pooled sockets.  Call on SIGTERM / process exit. */
+export async function destroyPool(): Promise<void> {
+  if (_agent) {
+    await _agent.close();
+    _agent = undefined;
+  }
 }

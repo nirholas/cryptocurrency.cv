@@ -177,6 +177,16 @@ const nextConfig = {
           },
         ],
       },
+      {
+        // Fallback static files — served when all upstreams are down
+        source: '/fallback/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=60, stale-while-revalidate=86400' },
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+          { key: 'Content-Type', value: 'application/json' },
+          { key: 'X-Fallback', value: '1' },
+        ],
+      },
     ];
   },
   // ================================================================

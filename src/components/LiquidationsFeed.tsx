@@ -86,56 +86,35 @@ async function fetchLiquidationsFromCoinalyze(): Promise<Liquidation[]> {
   }
 }
 
-// Alternative: Use Binance Futures API for recent liquidation orders
+// Alternative: Use our server-side API proxy which calls Binance Futures
+// (avoids CORS errors from calling fapi.binance.com directly from browser)
 async function fetchFromBinanceFutures(): Promise<Liquidation[]> {
   try {
-    const symbols = ['BTCUSDT', 'ETHUSDT', 'SOLUSDT'];
-    const liquidations: Liquidation[] = [];
-    
-    for (const symbol of symbols) {
-      const response = await fetch(
-        `https://fapi.binance.com/fapi/v1/allForceOrders?symbol=${symbol}&limit=20`,
-        { cache: 'no-store' }
-      );
-      
-      if (response.ok) {
-        const orders = await response.json();
-        
-        if (Array.isArray(orders)) {
-          orders.forEach((order: { 
-            orderId: number;
-            symbol: string;
-            side: string;
-            origQty: string;
-            price: string;
-            time: number;
-          }) => {
-            const qty = parseFloat(order.origQty);
-            const price = parseFloat(order.price);
-            const usdValue = qty * price;
-            
-            if (usdValue > 1000) { // Only show liquidations > $1000
-              liquidations.push({
-                id: `binance-${order.orderId}`,
-                exchange: 'Binance',
-                symbol: order.symbol.replace('USDT', ''),
-                side: order.side === 'SELL' ? 'long' : 'short',
-                amount: usdValue,
-                price: price,
-                timestamp: order.time,
-              });
-            }
-          });
-        }
-      }
-      
-      // Small delay between requests
-      await new Promise(r => setTimeout(r, 100));
+    const response = await fetch('/api/liquidations', { cache: 'no-store' });
+
+    if (!response.ok) {
+      console.error('Liquidations API error:', response.status);
+      return [];
     }
-    
-    return liquidations.sort((a, b) => b.timestamp - a.timestamp);
+
+    const data = await response.json();
+
+    // The /api/liquidations route returns { recentEvents, bySymbol, totals, ... }
+    if (data.recentEvents && Array.isArray(data.recentEvents)) {
+      return data.recentEvents.map((event: Liquidation) => ({
+        id: event.id,
+        exchange: event.exchange,
+        symbol: event.symbol,
+        side: event.side,
+        amount: event.amount,
+        price: event.price,
+        timestamp: event.timestamp,
+      }));
+    }
+
+    return [];
   } catch (error) {
-    console.error('Failed to fetch from Binance:', error);
+    console.error('Failed to fetch from liquidations API:', error);
     return [];
   }
 }

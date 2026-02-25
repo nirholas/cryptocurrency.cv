@@ -37,8 +37,8 @@ import { CoinStickyHeader } from '@/components/CoinStickyHeader';
 // Enable on-demand ISR for coins not pre-rendered
 export const dynamicParams = true;
 export const revalidate = 300; // Revalidate coin pages every 5 minutes
-// Allow up to 25 s for the first cold-start render (ISR caches it after that)
-export const maxDuration = 25;
+// Allow up to 30 s for the first cold-start render (ISR caches it after that)
+export const maxDuration = 30;
 
 interface Props {
   params: Promise<{ coinId: string; locale: string }>;
@@ -223,16 +223,32 @@ export default async function CoinPage({ params, searchParams }: Props) {
 
   try {
     [coinData, tickersData, ohlcData, developerData, communityData, newsData] = await Promise.all([
-      // Cap the entire 3-API fallback chain at 20 s to stay within maxDuration
+      // Cap the entire 3-API fallback chain at 15 s to stay well within maxDuration
       withTimeout(
         getCoinDetails(coinId).catch(() => null) as Promise<CoinData | null>,
-        20000,
+        15000,
         null,
       ),
-      getCoinTickers(coinId, 1).catch(() => ({ name: coinId, tickers: [] as Ticker[] })),
-      getOHLC(coinId, 30).catch(() => [] as OHLCData[]),
-      getCoinDeveloperData(coinId).catch(() => null as DeveloperData | null),
-      getCoinCommunityData(coinId).catch(() => null as CommunityData | null),
+      withTimeout(
+        getCoinTickers(coinId, 1).catch(() => ({ name: coinId, tickers: [] as Ticker[] })),
+        10000,
+        { name: coinId, tickers: [] as Ticker[] },
+      ),
+      withTimeout(
+        getOHLC(coinId, 30).catch(() => [] as OHLCData[]),
+        10000,
+        [] as OHLCData[],
+      ),
+      withTimeout(
+        getCoinDeveloperData(coinId).catch(() => null as DeveloperData | null),
+        10000,
+        null as DeveloperData | null,
+      ),
+      withTimeout(
+        getCoinCommunityData(coinId).catch(() => null as CommunityData | null),
+        10000,
+        null as CommunityData | null,
+      ),
       // Cap news fetch at 5 s — if RSS sources are slow the page renders without news
       // rather than timing out the entire server function (which causes the 500 error).
       withTimeout(

@@ -142,6 +142,7 @@ const EXEMPT_PATTERNS = [
   /^\/api\/webhooks/,
   /^\/api\/sse/,
   /^\/api\/ws/,
+  /^\/api\/internal/,   // internal snapshot writer — same-origin only
 ];
 
 const MAX_BODY_SIZE = 10 * 1024 * 1024;
