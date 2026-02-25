@@ -16,7 +16,8 @@ export async function GET(req: NextRequest) {
   try {
     const limit = Number(req.nextUrl.searchParams.get('limit') ?? '25');
 
-    const data = await stablecoinFlowsChain.resolve({ limit: 100 });
+    const result = await stablecoinFlowsChain.fetch({ limit: 100 });
+    const data = result.data;
 
     // Aggregate across chains
     const chainMap = new Map<string, number>();

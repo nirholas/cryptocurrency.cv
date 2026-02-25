@@ -18,8 +18,8 @@ export async function GET(
     const { symbol } = await params;
     const upperSymbol = symbol.toUpperCase();
 
-    const data = await stablecoinFlowsChain.resolve({ limit: 100 });
-    const coin = data.find(s => s.symbol.toUpperCase() === upperSymbol);
+    const result = await stablecoinFlowsChain.fetch({ limit: 100 });
+    const coin = result.data.find((s: { symbol: string }) => s.symbol.toUpperCase() === upperSymbol);
 
     if (!coin) {
       return NextResponse.json(

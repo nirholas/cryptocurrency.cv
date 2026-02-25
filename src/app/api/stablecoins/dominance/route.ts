@@ -15,21 +15,22 @@ export async function GET(req: NextRequest) {
   try {
     const limit = Number(req.nextUrl.searchParams.get('limit') ?? '10');
 
-    const data = await stablecoinFlowsChain.resolve({ limit: 100 });
+    const result = await stablecoinFlowsChain.fetch({ limit: 100 });
+    const data = result.data;
 
-    const totalMcap = data.reduce((sum, s) => sum + s.circulatingUsd, 0);
+    const totalMcap = data.reduce((sum: number, s: { circulatingUsd: number }) => sum + s.circulatingUsd, 0);
 
     const dominance = data
-      .sort((a, b) => b.circulatingUsd - a.circulatingUsd)
+      .sort((a: { circulatingUsd: number }, b: { circulatingUsd: number }) => b.circulatingUsd - a.circulatingUsd)
       .slice(0, limit)
-      .map(s => ({
+      .map((s: { symbol: string; name: string; circulatingUsd: number }) => ({
         symbol: s.symbol,
         name: s.name,
         circulatingUsd: s.circulatingUsd,
         dominancePct: totalMcap > 0 ? Math.round((s.circulatingUsd / totalMcap) * 10000) / 100 : 0,
       }));
 
-    const topTotalPct = dominance.reduce((sum, d) => sum + d.dominancePct, 0);
+    const topTotalPct = dominance.reduce((sum: number, d: { dominancePct: number }) => sum + d.dominancePct, 0);
 
     return NextResponse.json(
       {

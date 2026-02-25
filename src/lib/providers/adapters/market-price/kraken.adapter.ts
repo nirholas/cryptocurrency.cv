@@ -82,16 +82,18 @@ export const krakenAdapter: DataProvider<MarketPrice[]> = {
         id: symbol.toLowerCase(),
         symbol: symbol.toUpperCase(),
         name: symbol,
-        current_price: parseFloat(ticker.c[0]) || 0,
-        market_cap: 0,
-        total_volume: parseFloat(ticker.v[1]) * parseFloat(ticker.c[0]) || 0,
-        price_change_24h: parseFloat(ticker.c[0]) - parseFloat(ticker.o) || 0,
-        price_change_percentage_24h:
+        currentPrice: parseFloat(ticker.c[0]) || 0,
+        marketCap: 0,
+        marketCapRank: 0,
+        totalVolume: parseFloat(ticker.v[1]) * parseFloat(ticker.c[0]) || 0,
+        priceChange24h: parseFloat(ticker.c[0]) - parseFloat(ticker.o) || 0,
+        priceChangePercentage24h:
           ((parseFloat(ticker.c[0]) - parseFloat(ticker.o)) / parseFloat(ticker.o)) * 100 || 0,
-        high_24h: parseFloat(ticker.h[1]) || 0,
-        low_24h: parseFloat(ticker.l[1]) || 0,
-        last_updated: now,
-        source: 'kraken',
+        high24h: parseFloat(ticker.h[1]) || 0,
+        low24h: parseFloat(ticker.l[1]) || 0,
+        circulatingSupply: 0,
+        totalSupply: null,
+        lastUpdated: now,
       };
     });
   },
@@ -109,7 +111,7 @@ export const krakenAdapter: DataProvider<MarketPrice[]> = {
 
   validate(data: MarketPrice[]): boolean {
     if (!Array.isArray(data) || data.length === 0) return false;
-    return data.every((d) => typeof d.current_price === 'number' && d.current_price > 0);
+    return data.every((d) => typeof d.currentPrice === 'number' && d.currentPrice > 0);
   },
 };
 

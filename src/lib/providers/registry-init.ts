@@ -30,6 +30,15 @@ import { defiYieldsChain } from './adapters/defi-yields';
 import { nftMarketChain } from './adapters/nft-market';
 import { gamingDataChain } from './adapters/gaming-data';
 import { macroChain } from './adapters/macro';
+import { solanaChain } from './adapters/solana-ecosystem';
+import { predictionMarketsChain } from './adapters/prediction-markets';
+import { governanceChain } from './adapters/governance';
+import { protocolRevenueChain } from './adapters/protocol-revenue';
+import { l2DataChain } from './adapters/l2-data';
+import { mevChain } from './adapters/mev';
+import { bridgesChain } from './adapters/bridges';
+import { btcETFChain } from './adapters/btc-etf';
+import { miningChain } from './adapters/mining';
 
 // ---------------------------------------------------------------------------
 // Chain map: DataCategory → pre-wired ProviderChain
@@ -54,6 +63,15 @@ const CHAINS: Array<{ category: DataCategory; chain: any; label: string }> = [
   { category: 'nft-market', chain: nftMarketChain, label: 'NFT Market' },
   { category: 'gaming-data', chain: gamingDataChain, label: 'Gaming Data' },
   { category: 'macro-data', chain: macroChain, label: 'Macro Data' },
+  { category: 'solana-ecosystem', chain: solanaChain, label: 'Solana Ecosystem' },
+  { category: 'prediction-markets', chain: predictionMarketsChain, label: 'Prediction Markets' },
+  { category: 'governance', chain: governanceChain, label: 'Governance' },
+  { category: 'protocol-revenue', chain: protocolRevenueChain, label: 'Protocol Revenue' },
+  { category: 'l2-data', chain: l2DataChain, label: 'L2 Data' },
+  { category: 'mev', chain: mevChain, label: 'MEV' },
+  { category: 'bridges', chain: bridgesChain, label: 'Bridges' },
+  { category: 'btc-etf', chain: btcETFChain, label: 'BTC ETF Flows' },
+  { category: 'mining', chain: miningChain, label: 'Mining Stats' },
 ];
 
 // ---------------------------------------------------------------------------

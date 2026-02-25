@@ -16,7 +16,8 @@ export async function GET(req: NextRequest) {
   try {
     const limit = Number(req.nextUrl.searchParams.get('limit') ?? '20');
 
-    const data = await stablecoinFlowsChain.resolve({ limit: Math.min(limit, 100) });
+    const result = await stablecoinFlowsChain.fetch({ limit: Math.min(limit, 100) });
+    const data = result.data;
 
     return NextResponse.json(
       {

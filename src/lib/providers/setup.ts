@@ -53,9 +53,6 @@ import { orderBookChain } from './adapters/order-book';
 import { nftMarketChain } from './adapters/nft-market';
 import { gamingDataChain } from './adapters/gaming-data';
 import { macroChain } from './adapters/macro';
-import { nftMarketChain } from './adapters/nft-market';
-import { gamingDataChain } from './adapters/gaming-data';
-import { macroChain } from './adapters/macro';
 
 // =============================================================================
 // REGISTER ALL CHAINS
@@ -122,7 +119,7 @@ registry.register('stablecoin-flows', stablecoinFlowsChain, {
 });
 
 // News (Aggregated crypto news)
-registry.register('news', newsChain, {
+registry.register('news-aggregate', newsChain, {
   description: 'Aggregated crypto news from CryptoPanic and NewsData.io',
 });
 
@@ -163,7 +160,7 @@ registry.register('macro-data', macroChain, {
 export { registry };
 
 /** Number of registered categories */
-export const registeredCategories = 16;
+export const registeredCategories = 19;
 
 /** List all registered categories */
 export function listRegisteredCategories() {
@@ -180,7 +177,7 @@ export function listRegisteredCategories() {
     'on-chain',
     'social-metrics',
     'stablecoin-flows',
-    'news',
+    'news-aggregate',
     'ohlcv',
     'order-book',
     'whale-alerts',

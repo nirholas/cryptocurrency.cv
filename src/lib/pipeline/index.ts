@@ -449,7 +449,6 @@ export const newsIngestionPipeline: PipelineDefinition = {
         const start = performance.now();
         try {
           const { getSearchEngine } = await import('@/lib/search-engine');
-          type SearchDocument = Awaited<ReturnType<typeof import('@/lib/search-engine')>>['SearchDocument'] extends new (...args: unknown[]) => infer T ? T : never;
           const engine = getSearchEngine();
           const articles = (ctx.data.get('enrichedArticles') as Array<{
             id: string; title: string; description: string; source: string;

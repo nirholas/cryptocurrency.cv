@@ -131,7 +131,7 @@ function computeVolumeMomentum(volumes: number[]): number {
   return Math.max(0, Math.min(100, ratio * 50));
 }
 
-function classifyFearGreed(value: number): string {
+function classifyFearGreed(value: number): 'Extreme Fear' | 'Fear' | 'Neutral' | 'Greed' | 'Extreme Greed' {
   if (value <= 20) return 'Extreme Fear';
   if (value <= 40) return 'Fear';
   if (value <= 60) return 'Neutral';

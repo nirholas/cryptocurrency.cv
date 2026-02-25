@@ -42,15 +42,16 @@ export const coingeckoOhlcvAdapter: DataProvider<OHLCVData[]> = {
         return {
           symbol: coinId,
           exchange: 'coingecko',
-          timeframe: days <= 1 ? '30m' : days <= 30 ? '4h' : '4d',
+          interval: (days as number) <= 1 ? '30m' : (days as number) <= 30 ? '4h' : '4d',
           candles: data.map(([t, o, h, l, c]) => ({
-            timestamp: new Date(t).toISOString(),
+            timestamp: t,
             open: o,
             high: h,
             low: l,
             close: c,
             volume: 0,
           })),
+          lastUpdated: new Date().toISOString(),
         };
       }),
     );

@@ -59,15 +59,17 @@ export const kucoinAdapter: DataProvider<MarketPrice[]> = {
         id: base.toLowerCase(),
         symbol: base,
         name: t.symbolName || base,
-        current_price: price,
-        market_cap: 0,
-        total_volume: parseFloat(t.volValue) || 0,
-        price_change_24h: price * changeRate,
-        price_change_percentage_24h: changeRate * 100,
-        high_24h: parseFloat(t.high) || 0,
-        low_24h: parseFloat(t.low) || 0,
-        last_updated: now,
-        source: 'kucoin',
+        currentPrice: price,
+        marketCap: 0,
+        marketCapRank: 0,
+        totalVolume: parseFloat(t.volValue) || 0,
+        priceChange24h: price * changeRate,
+        priceChangePercentage24h: changeRate * 100,
+        high24h: parseFloat(t.high) || 0,
+        low24h: parseFloat(t.low) || 0,
+        circulatingSupply: 0,
+        totalSupply: null,
+        lastUpdated: now,
       };
     });
   },
@@ -83,7 +85,7 @@ export const kucoinAdapter: DataProvider<MarketPrice[]> = {
 
   validate(data: MarketPrice[]): boolean {
     if (!Array.isArray(data) || data.length === 0) return false;
-    return data.every((d) => typeof d.current_price === 'number' && d.current_price > 0);
+    return data.every((d) => typeof d.currentPrice === 'number' && d.currentPrice > 0);
   },
 };
 

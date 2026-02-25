@@ -51,15 +51,17 @@ export const geminiAdapter: DataProvider<MarketPrice[]> = {
           id: symbol.toLowerCase(),
           symbol,
           name: symbol,
-          current_price: price,
-          market_cap: 0,
-          total_volume: parseFloat(ticker.volume?.USD ?? '0') || 0,
-          price_change_24h: price - open,
-          price_change_percentage_24h: open > 0 ? ((price - open) / open) * 100 : 0,
-          high_24h: parseFloat(ticker.high) || 0,
-          low_24h: parseFloat(ticker.low) || 0,
-          last_updated: now,
-          source: 'gemini',
+          currentPrice: price,
+          marketCap: 0,
+          marketCapRank: 0,
+          totalVolume: parseFloat(ticker.volume?.USD ?? '0') || 0,
+          priceChange24h: price - open,
+          priceChangePercentage24h: open > 0 ? ((price - open) / open) * 100 : 0,
+          high24h: parseFloat(ticker.high) || 0,
+          low24h: parseFloat(ticker.low) || 0,
+          circulatingSupply: 0,
+          totalSupply: null,
+          lastUpdated: now,
         };
       }),
     );
@@ -80,7 +82,7 @@ export const geminiAdapter: DataProvider<MarketPrice[]> = {
 
   validate(data: MarketPrice[]): boolean {
     if (!Array.isArray(data) || data.length === 0) return false;
-    return data.every((d) => typeof d.current_price === 'number' && d.current_price > 0);
+    return data.every((d) => typeof d.currentPrice === 'number' && d.currentPrice > 0);
   },
 };
 

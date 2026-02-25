@@ -39,11 +39,11 @@ export const krakenOrderBookAdapter: DataProvider<OrderBookData[]> = {
         if (json.error?.length) throw new Error(json.error.join(', '));
 
         const bookData = Object.values(json.result ?? {})[0] as KrakenBook;
-        const bids = (bookData?.bids ?? []).map(([p, v]: [string, string]) => ({
+        const bids = (bookData?.bids ?? []).map(([p, v]: [string, string, string]) => ({
           price: parseFloat(p),
           quantity: parseFloat(v),
         }));
-        const asks = (bookData?.asks ?? []).map(([p, v]: [string, string]) => ({
+        const asks = (bookData?.asks ?? []).map(([p, v]: [string, string, string]) => ({
           price: parseFloat(p),
           quantity: parseFloat(v),
         }));
@@ -53,14 +53,24 @@ export const krakenOrderBookAdapter: DataProvider<OrderBookData[]> = {
         const spread = bestAsk - bestBid;
         const midPrice = (bestAsk + bestBid) / 2;
 
+        const bidDepth2Pct = bids.filter(b => b.price >= midPrice * 0.98).reduce((s, b) => s + b.price * b.quantity, 0);
+        const askDepth2Pct = asks.filter(a => a.price <= midPrice * 1.02).reduce((s, a) => s + a.price * a.quantity, 0);
+        const totalBidVol = bids.reduce((s, b) => s + b.quantity, 0);
+        const totalAskVol = asks.reduce((s, a) => s + a.quantity, 0);
+
         return {
           symbol: sym.toUpperCase(),
           exchange: 'kraken',
           bids,
           asks,
+          midPrice,
           spread,
-          spreadPercentage: midPrice > 0 ? (spread / midPrice) * 100 : 0,
-          timestamp: now,
+          spreadPercent: midPrice > 0 ? (spread / midPrice) * 100 : 0,
+          bidDepth2Pct,
+          askDepth2Pct,
+          imbalanceRatio: totalAskVol > 0 ? totalBidVol / totalAskVol : 1,
+          timestamp: Date.now(),
+          lastUpdated: now,
         };
       }),
     );

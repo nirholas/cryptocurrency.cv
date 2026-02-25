@@ -64,15 +64,17 @@ export const coinbaseAdapter: DataProvider<MarketPrice[]> = {
           id: symbol.toLowerCase(),
           symbol,
           name: symbol,
-          current_price: price,
-          market_cap: 0,
-          total_volume: parseFloat(ticker.volume) * price || 0,
-          price_change_24h: price - open,
-          price_change_percentage_24h: open > 0 ? ((price - open) / open) * 100 : 0,
-          high_24h: parseFloat(stats.high) || 0,
-          low_24h: parseFloat(stats.low) || 0,
-          last_updated: ticker.time || new Date().toISOString(),
-          source: 'coinbase',
+          currentPrice: price,
+          marketCap: 0,
+          marketCapRank: 0,
+          totalVolume: parseFloat(ticker.volume) * price || 0,
+          priceChange24h: price - open,
+          priceChangePercentage24h: open > 0 ? ((price - open) / open) * 100 : 0,
+          high24h: parseFloat(stats.high) || 0,
+          low24h: parseFloat(stats.low) || 0,
+          circulatingSupply: 0,
+          totalSupply: null,
+          lastUpdated: ticker.time || new Date().toISOString(),
         };
       }),
     );
@@ -95,6 +97,6 @@ export const coinbaseAdapter: DataProvider<MarketPrice[]> = {
 
   validate(data: MarketPrice[]): boolean {
     if (!Array.isArray(data) || data.length === 0) return false;
-    return data.every((d) => typeof d.current_price === 'number' && d.current_price > 0);
+    return data.every((d) => typeof d.currentPrice === 'number' && d.currentPrice > 0);
   },
 };

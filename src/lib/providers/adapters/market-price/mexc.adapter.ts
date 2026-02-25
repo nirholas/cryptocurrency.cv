@@ -49,15 +49,17 @@ export const mexcAdapter: DataProvider<MarketPrice[]> = {
         id: symbol.toLowerCase(),
         symbol,
         name: symbol,
-        current_price: parseFloat(t.lastPrice) || 0,
-        market_cap: 0,
-        total_volume: parseFloat(t.quoteVolume) || 0,
-        price_change_24h: parseFloat(t.priceChange) || 0,
-        price_change_percentage_24h: parseFloat(t.priceChangePercent) || 0,
-        high_24h: parseFloat(t.highPrice) || 0,
-        low_24h: parseFloat(t.lowPrice) || 0,
-        last_updated: now,
-        source: 'mexc',
+        currentPrice: parseFloat(t.lastPrice) || 0,
+        marketCap: 0,
+        marketCapRank: 0,
+        totalVolume: parseFloat(t.quoteVolume) || 0,
+        priceChange24h: parseFloat(t.priceChange) || 0,
+        priceChangePercentage24h: parseFloat(t.priceChangePercent) || 0,
+        high24h: parseFloat(t.highPrice) || 0,
+        low24h: parseFloat(t.lowPrice) || 0,
+        circulatingSupply: 0,
+        totalSupply: null,
+        lastUpdated: now,
       };
     });
   },
@@ -73,7 +75,7 @@ export const mexcAdapter: DataProvider<MarketPrice[]> = {
 
   validate(data: MarketPrice[]): boolean {
     if (!Array.isArray(data) || data.length === 0) return false;
-    return data.every((d) => typeof d.current_price === 'number' && d.current_price > 0);
+    return data.every((d) => typeof d.currentPrice === 'number' && d.currentPrice > 0);
   },
 };
 
