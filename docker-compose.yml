@@ -1,16 +1,48 @@
 version: '3.8'
 
 services:
+  # ── NGINX load balancer ──────────────────────────────────────────
+  # Front door: rate limiting, response caching, request coalescing,
+  # gzip, and round-robin / least-conn fan-out to app replicas.
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: crypto-news-lb
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      app:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost/nginx-health"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+
+  # ── Next.js API / SSR ───────────────────────────────────────────
+  # Scale with: docker compose up --scale app=4
   app:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: crypto-news-api
-    ports:
-      - "3000:3000"
+    # No container_name — allows multiple replicas
+    expose:
+      - "3000"
     environment:
       - NODE_ENV=production
       - PORT=3000
+      - REDIS_URL=redis://redis:6379
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 128M
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/health"]
@@ -18,33 +50,57 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
+    depends_on:
+      redis:
+        condition: service_healthy
 
-  # Redis for caching (optional)
+  # ── Redis (cache + pub/sub backbone) ────────────────────────────
   redis:
     image: redis:7-alpine
     container_name: crypto-news-redis
+    expose:
+      - "6379"
     ports:
       - "6379:6379"
     volumes:
       - redis_data:/data
-    command: redis-server --appendonly yes
+    command: >
+      redis-server
+        --appendonly yes
+        --maxmemory 256mb
+        --maxmemory-policy allkeys-lru
+        --tcp-backlog 511
+        --timeout 0
+        --tcp-keepalive 300
     restart: unless-stopped
-    profiles:
-      - with-cache
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
 
-  # WebSocket server for real-time updates
+  # ── WebSocket server (real-time streaming) ──────────────────────
+  # Scale with: docker compose up --scale websocket=2
   websocket:
     build:
       context: .
       dockerfile: Dockerfile.ws
-    container_name: crypto-news-ws
-    ports:
-      - "8080:8080"
+    # No container_name — allows multiple replicas
+    expose:
+      - "8080"
     environment:
       - PORT=8080
+      - REDIS_URL=redis://redis:6379
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
     restart: unless-stopped
-    profiles:
-      - with-realtime
+    depends_on:
+      redis:
+        condition: service_healthy
 
 volumes:
   redis_data:

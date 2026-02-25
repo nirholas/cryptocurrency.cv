@@ -6,6 +6,8 @@ import { fetchCoinGecko } from '@/lib/coingecko';
 import { COINGECKO_BASE } from '@/lib/constants';
 import { Screener } from './ScreenerClient';
 
+export const dynamic = 'force-dynamic';
+
 interface Coin {
   id: string;
   symbol: string;
@@ -23,8 +25,6 @@ interface Coin {
   circulating_supply: number;
   total_supply: number | null;
 }
-
-export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: 'Crypto Screener | Filter & Discover Coins',

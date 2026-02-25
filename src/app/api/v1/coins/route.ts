@@ -13,6 +13,7 @@ import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 import { validateQuery } from '@/lib/validation-middleware';
 import { v1CoinsQuerySchema } from '@/lib/schemas';
+import { fetchCoinGecko } from '@/lib/coingecko';
 import { COINGECKO_BASE } from '@/lib/constants';
 
 const ENDPOINT = '/api/v1/coins';
@@ -44,19 +45,13 @@ export async function GET(request: NextRequest) {
       url += `&ids=${ids}`;
     }
 
-    const response = await fetch(url, {
-      headers: {
-        Accept: 'application/json',
-        'User-Agent': 'CryptoDataAggregator/1.0',
-      },
-      next: { revalidate: 60 }, // Cache for 1 minute
-    });
+    const response = await fetchCoinGecko<unknown[]>(url, { revalidate: 60 });
 
-    if (!response.ok) {
-      throw new Error(`Upstream API error: ${response.status}`);
+    if (!response) {
+      throw new Error('Upstream API unavailable');
     }
 
-    const data = await response.json();
+    const data = response;
 
     logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
 

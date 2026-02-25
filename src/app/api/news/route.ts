@@ -7,6 +7,7 @@ import { newsQuerySchema } from '@/lib/schemas';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 import { getBulkEnrichment } from '@/lib/article-enrichment';
+import { staleCache, generateCacheKey } from '@/lib/cache';
 
 export const runtime = 'edge';
 export const revalidate = 60; // 1 minute for fresher content
@@ -103,6 +104,10 @@ export async function GET(request: NextRequest) {
       availableCategories: VALID_CATEGORIES,
       ...(isFreeTier ? { free_tier: true, total: articles.length, upgrade: 'https://cryptocurrency.cv/premium' } : {}),
     }, startTime);
+
+    // Persist into stale cache so we can serve it when feeds are unreachable
+    const staleCacheKey = generateCacheKey('news', { limit, source, category, page, per_page, lang });
+    staleCache.set(staleCacheKey, responseData, 3600); // 1 hour stale window
     
     return jsonResponse(responseData, {
       cacheControl: 'realtime', // matches ISR revalidate=60; s-maxage=60
@@ -111,6 +116,20 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     logger.error('Failed to fetch news', error);
+
+    // Stale-on-error: serve last-known-good data so API consumers never see a 500
+    const staleCacheKey = generateCacheKey('news', { limit, source, category, page, per_page, lang });
+    const stale = staleCache.get<Record<string, unknown>>(staleCacheKey);
+    if (stale) {
+      logger.info('Serving stale news data after upstream failure');
+      return jsonResponse(stale, {
+        cacheControl: 'realtime',
+        etag: true,
+        request,
+        stale: true,
+      });
+    }
+
     return ApiError.internal('Failed to fetch news', error);
   }
 }

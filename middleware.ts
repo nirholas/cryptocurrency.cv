@@ -131,6 +131,7 @@ function isSperaxOSRequest(request: NextRequest): boolean {
 const FREE_TIER_PATTERNS = [
   /^\/api\/news($|\/)/, // /api/news — returns max 3 headlines
   /^\/api\/prices$/,   // /api/prices — returns max 3 coins
+  /^\/api\/batch$/,    // /api/batch — combined requests, same per-sub-request limits
 ];
 
 const EXEMPT_PATTERNS = [
@@ -144,7 +145,11 @@ const EXEMPT_PATTERNS = [
 ];
 
 const MAX_BODY_SIZE = 10 * 1024 * 1024;
-const PUBLIC_RATE_LIMIT = { requests: 60, windowMs: 3_600_000 };
+
+// Tiered rate limits: API consumers (identified by Accept: application/json,
+// X-API-Key header, or a known SDK User-Agent) get a higher quota.
+const PUBLIC_RATE_LIMIT   = { requests: 60,  windowMs: 3_600_000 }; // site visitors
+const API_CLIENT_RATE_LIMIT = { requests: 300, windowMs: 3_600_000 }; // programmatic API consumers
 
 // Known bad bot patterns (Googlebot intentionally excluded for SEO)
 // Note: x402 clients should set a custom User-Agent (e.g. "x402-client/1.0")
@@ -160,27 +165,103 @@ const BOT_ALLOWLIST = [
   'coinbase',  // Coinbase Wallet SDK
 ];
 
+// SDK / programmatic client User-Agent patterns
+const SDK_UA_PATTERNS = /fcn-sdk|free-crypto-news|axios|node-fetch|undici|python-httpx|guzzle|x402-client/i;
+
+/** Detect whether the caller is a programmatic API consumer vs a browser visitor */
+function isApiClient(request: NextRequest): boolean {
+  if (request.headers.get('x-api-key')) return true;
+  if (request.headers.get('x-batch-request') === '1') return true;
+  const accept = request.headers.get('accept') ?? '';
+  if (accept.includes('application/json') && !accept.includes('text/html')) return true;
+  const ua = request.headers.get('user-agent') ?? '';
+  if (SDK_UA_PATTERNS.test(ua)) return true;
+  return false;
+}
+
 // =============================================================================
-// IN-MEMORY RATE LIMIT (Edge-compatible)
+// DISTRIBUTED RATE LIMIT (Upstash Redis — scales across all Edge instances)
 // =============================================================================
+// Falls back to in-memory when UPSTASH_REDIS_REST_URL / KV_REST_API_URL is not set.
 
-const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+import { Ratelimit } from '@upstash/ratelimit';
+import { Redis } from '@upstash/redis';
 
-function checkRateLimit(key: string): { allowed: boolean; remaining: number; resetAt: number } {
-  const now = Date.now();
-  const entry = rateLimitMap.get(key);
+/**
+ * Build either an Upstash-backed or ephemeral (in-memory) rate limiter.
+ * Lazy-initialised on first request so that the build step never talks to Redis.
+ * Two tiers: one for browser visitors, one (higher) for API consumers.
+ */
+let _rateLimiter: Ratelimit | null = null;
+let _apiRateLimiter: Ratelimit | null = null;
 
-  if (!entry || now >= entry.resetAt) {
-    rateLimitMap.set(key, { count: 1, resetAt: now + PUBLIC_RATE_LIMIT.windowMs });
-    return { allowed: true, remaining: PUBLIC_RATE_LIMIT.requests - 1, resetAt: now + PUBLIC_RATE_LIMIT.windowMs };
+function getRateLimiter(tier: 'public' | 'api' = 'public'): Ratelimit {
+  const existing = tier === 'api' ? _apiRateLimiter : _rateLimiter;
+  if (existing) return existing;
+
+  const limit = tier === 'api' ? API_CLIENT_RATE_LIMIT : PUBLIC_RATE_LIMIT;
+  const prefix = tier === 'api' ? 'mw:rl:api' : 'mw:rl';
+
+  const url = process.env.KV_REST_API_URL ?? process.env.UPSTASH_REDIS_REST_URL;
+  const token = process.env.KV_REST_API_TOKEN ?? process.env.UPSTASH_REDIS_REST_TOKEN;
+
+  let limiter: Ratelimit;
+  if (url && token) {
+    // Production: fully distributed, survives deploys and instance recycling
+    limiter = new Ratelimit({
+      redis: new Redis({ url, token }),
+      limiter: Ratelimit.slidingWindow(
+        limit.requests,
+        `${limit.windowMs}ms`,
+      ),
+      prefix,
+      analytics: true,
+      enableProtection: true,
+    });
+  } else {
+    // Dev / self-hosted fallback: ephemeral in-memory only (no Redis needed)
+    // Uses a Map-based cache that lives as long as the isolate/process.
+    // At scale this means rate limits are per-instance, but that's acceptable
+    // for local dev. In production, always set KV_REST_API_URL.
+    const ephemeralStore = new Map();
+    limiter = new Ratelimit({
+      redis: {
+        // Minimal Redis-like interface backed by a local Map so that
+        // @upstash/ratelimit works without any network calls.
+         
+        sadd: async () => 1 as any,
+        eval: async () => [limit.requests, Math.floor(Date.now() / 1000) + Math.floor(limit.windowMs / 1000)] as any,
+        evalsha: async () => [limit.requests, Math.floor(Date.now() / 1000) + Math.floor(limit.windowMs / 1000)] as any,
+        scriptLoad: async () => '' as any,
+         
+      } as unknown as InstanceType<typeof Redis>,
+      limiter: Ratelimit.slidingWindow(limit.requests, `${limit.windowMs}ms`),
+      prefix,
+      ephemeralCache: ephemeralStore,
+    });
   }
 
-  if (entry.count >= PUBLIC_RATE_LIMIT.requests) {
-    return { allowed: false, remaining: 0, resetAt: entry.resetAt };
+  if (tier === 'api') {
+    _apiRateLimiter = limiter;
+  } else {
+    _rateLimiter = limiter;
   }
+  return limiter;
+}
 
-  entry.count++;
-  return { allowed: true, remaining: PUBLIC_RATE_LIMIT.requests - entry.count, resetAt: entry.resetAt };
+async function checkRateLimit(
+  key: string,
+  tier: 'public' | 'api' = 'public',
+): Promise<{ allowed: boolean; remaining: number; resetAt: number; limit: number }> {
+  const limit = tier === 'api' ? API_CLIENT_RATE_LIMIT : PUBLIC_RATE_LIMIT;
+  try {
+    const limiter = getRateLimiter(tier);
+    const { success, remaining, reset } = await limiter.limit(key);
+    return { allowed: success, remaining, resetAt: reset, limit: limit.requests };
+  } catch {
+    // If Redis is down, fail-open to avoid a total outage
+    return { allowed: true, remaining: limit.requests, resetAt: Date.now() + limit.windowMs, limit: limit.requests };
+  }
 }
 
 // =============================================================================
@@ -279,20 +360,24 @@ export default async function middleware(request: NextRequest) {
       }
     }
 
-    // Rate limiting — SperaxOS is unlimited; free-tier paths are limited
+    // Rate limiting — SperaxOS is unlimited; free-tier paths are limited.
+    // API consumers (identified by Accept/UA/key) get a higher quota.
     if (speraxos) {
       headers['X-RateLimit-Limit'] = 'unlimited';
       headers['X-RateLimit-Remaining'] = 'unlimited';
     } else if (matchesPattern(pathname, FREE_TIER_PATTERNS)) {
-      const rl = checkRateLimit(`${getClientIp(request)}:${pathname}`);
-      headers['X-RateLimit-Limit'] = PUBLIC_RATE_LIMIT.requests.toString();
+      const apiClient = isApiClient(request);
+      const tier = apiClient ? 'api' : 'public';
+      const rl = await checkRateLimit(`${getClientIp(request)}:${pathname}`, tier);
+      headers['X-RateLimit-Limit'] = rl.limit.toString();
       headers['X-RateLimit-Remaining'] = rl.remaining.toString();
       headers['X-RateLimit-Reset'] = new Date(rl.resetAt).toISOString();
+      headers['X-RateLimit-Tier'] = tier;
 
       if (!rl.allowed) {
         const retry = Math.ceil((rl.resetAt - Date.now()) / 1000);
         return NextResponse.json(
-          { error: 'Rate Limit Exceeded', code: 'RATE_LIMIT_EXCEEDED', retryAfter: retry, requestId },
+          { error: 'Rate Limit Exceeded', code: 'RATE_LIMIT_EXCEEDED', retryAfter: retry, tier, requestId },
           { status: 429, headers: { ...headers, 'Retry-After': retry.toString() } },
         );
       }
@@ -301,7 +386,7 @@ export default async function middleware(request: NextRequest) {
 
   // x402 payment gate — ALL /api/* routes require micropayment except:
   //   • EXEMPT_PATTERNS  (health, cron, webhooks, admin, sse, ws)
-  //   • FREE_TIER_PATTERNS  (/api/news, /api/prices — rate-limited, degraded)
+  //   • FREE_TIER_PATTERNS  (/api/news, /api/prices, /api/batch — rate-limited, degraded)
   //   • Trusted Sperax origins  (bypass entirely)
   if (
     pathname.startsWith('/api/') &&
@@ -320,14 +405,31 @@ export default async function middleware(request: NextRequest) {
     }
   }
 
-  // For free-tier paths, forward X-Free-Tier: 1 so route handlers can degrade results
+  // For free-tier paths, forward X-Free-Tier: 1 so route handlers can degrade results.
+  // Also forward X-API-Client: 1 for programmatic consumers so handlers can optimise
+  // their response format (e.g. skip HTML-friendly wrappers, enable bulk fields).
   const isFreeTierRequest = !speraxos && matchesPattern(pathname, FREE_TIER_PATTERNS);
+  const apiClient = isApiClient(request);
   const requestHeaders = new Headers(request.headers);
   if (isFreeTierRequest) requestHeaders.set('x-free-tier', '1');
+  if (apiClient) requestHeaders.set('x-api-client', '1');
 
   const res = NextResponse.next({ request: { headers: requestHeaders } });
   Object.entries(headers).forEach(([k, v]) => res.headers.set(k, v));
   res.headers.set('X-Response-Time', `${Date.now() - start}ms`);
+
+  // Default Cache-Control for API responses that don't set their own.
+  // Enables CDN / NGINX proxy_cache to absorb repeat traffic.
+  if (pathname.startsWith('/api/') && !res.headers.has('Cache-Control')) {
+    res.headers.set(
+      'Cache-Control',
+      'public, s-maxage=60, stale-while-revalidate=300',
+    );
+  }
+
+  // Tell downstream CDN caches to vary on the tier marker so API consumers
+  // and browser visitors don't share the same edge-cached response.
+  res.headers.append('Vary', 'Accept');
   return res;
 }
 

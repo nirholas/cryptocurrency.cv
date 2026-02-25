@@ -3,6 +3,11 @@
  * 
  * Vercel-compatible alternative to WebSocket.
  * Streams news updates to connected clients.
+ * 
+ * Scalability:
+ *  - Global connection cap prevents edge function exhaustion
+ *  - Per-client backpressure via desiredSize check
+ *  - Auto-disconnect after MAX_CONNECTION_DURATION
  */
 
 import { NextRequest } from 'next/server';
@@ -13,7 +18,21 @@ export const runtime = 'edge';
 // Polling interval in milliseconds
 const POLL_INTERVAL = 30000; // 30 seconds
 
+// --- Connection limits ---
+const MAX_CONCURRENT_SSE = parseInt(process.env.SSE_MAX_CONNECTIONS ?? '500', 10);
+const MAX_CONNECTION_DURATION = 30 * 60 * 1000; // 30 minutes hard cap
+let activeConnections = 0;
+
 export async function GET(request: NextRequest) {
+  // --- Connection cap ---
+  if (activeConnections >= MAX_CONCURRENT_SSE) {
+    return new Response(
+      JSON.stringify({ error: 'Too many SSE connections', code: 'SSE_CAPACITY', retryAfter: 30 }),
+      { status: 503, headers: { 'Content-Type': 'application/json', 'Retry-After': '30' } },
+    );
+  }
+  activeConnections++;
+
   const searchParams = request.nextUrl.searchParams;
   const sources = searchParams.get('sources')?.split(',') || [];
   const categories = searchParams.get('categories')?.split(',') || [];
@@ -44,13 +63,26 @@ export async function GET(request: NextRequest) {
 
   const stream = new ReadableStream({
     async start(controller) {
+      // Auto-disconnect after MAX_CONNECTION_DURATION to prevent zombie connections
+      const maxDurationTimer = setTimeout(() => {
+        if (isConnected) {
+          const closeEvent = `event: close\ndata: ${JSON.stringify({
+            reason: 'max_duration_reached',
+            message: 'Connection closed after 30 minutes. Please reconnect.',
+          })}\n\n`;
+          safeEnqueue(controller, encoder.encode(closeEvent));
+          isConnected = false;
+          try { controller.close(); } catch { /* already closed */ }
+        }
+      }, MAX_CONNECTION_DURATION);
+
       // Send initial connection event
       const connectEvent = `event: connected\ndata: ${JSON.stringify({
         message: 'Connected to SSE stream',
         timestamp: new Date().toISOString(),
         config: { sources, categories, includeBreaking },
       })}\n\n`;
-      if (!safeEnqueue(controller, encoder.encode(connectEvent))) return;
+      if (!safeEnqueue(controller, encoder.encode(connectEvent))) { clearTimeout(maxDurationTimer); return; }
 
       // Polling function
       const pollNews = async () => {
@@ -137,6 +169,7 @@ export async function GET(request: NextRequest) {
     },
     cancel() {
       isConnected = false;
+      activeConnections = Math.max(0, activeConnections - 1);
     },
   });
 

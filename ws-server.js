@@ -26,6 +26,46 @@
 const WebSocket = require('ws');
 const http = require('http');
 
+// Redis pub/sub for horizontal scaling (optional — graceful fallback to single-process)
+let redisPub = null;   // publish instance
+let redisSub = null;   // subscribe instance
+const REDIS_CHANNEL = 'ws:broadcast';
+
+async function initRedis() {
+  const url = process.env.REDIS_URL || process.env.REDIS_PRIVATE_URL;
+  if (!url) {
+    console.log('[redis] No REDIS_URL — running single-process (no cross-instance fan-out)');
+    return;
+  }
+  try {
+    const { createClient } = require('redis');
+    redisPub = createClient({ url });
+    redisSub = redisPub.duplicate();
+    await redisPub.connect();
+    await redisSub.connect();
+
+    // Subscribe to broadcast channel — forward messages to local clients
+    await redisSub.subscribe(REDIS_CHANNEL, (raw) => {
+      try {
+        const { type, payload, timestamp, meta } = JSON.parse(raw);
+        // Ignore messages from this instance
+        if (meta?.instanceId === INSTANCE_ID) return;
+        localBroadcastRaw(type, payload, timestamp, meta);
+      } catch (e) {
+        console.error('[redis] Bad message on channel:', e.message);
+      }
+    });
+
+    console.log('[redis] Pub/Sub connected — cross-instance broadcasting enabled');
+  } catch (err) {
+    console.error('[redis] Init failed, falling back to single-process:', err.message);
+    redisPub = null;
+    redisSub = null;
+  }
+}
+
+const INSTANCE_ID = `ws_${process.pid}_${Date.now().toString(36)}`;
+
 const PORT = process.env.PORT || 8080;
 const POLL_INTERVAL = 30000; // 30 seconds for news
 const PRICE_INTERVAL = 10000; // 10 seconds for prices
@@ -509,8 +549,73 @@ function handleLeaveChannel(clientId, payload) {
   }));
 }
 
-// Broadcast news to channel subscribers
-function broadcastToChannel(channelId, articles) {
+// =============================================================================
+// CROSS-INSTANCE BROADCASTING (Redis pub/sub)
+// =============================================================================
+
+/**
+ * Publish a broadcast event. When Redis is available the message is published
+ * to the shared channel so *every* WS instance (including this one via the
+ * Redis subscriber callback) delivers it to its local clients.
+ *
+ * When Redis is not available, falls back to local-only delivery.
+ */
+function publishBroadcast(type, payload, meta = {}) {
+  const timestamp = new Date().toISOString();
+  const msg = JSON.stringify({
+    type,
+    payload,
+    timestamp,
+    meta: { ...meta, instanceId: INSTANCE_ID },
+  });
+
+  if (redisPub) {
+    redisPub.publish(REDIS_CHANNEL, msg).catch((err) => {
+      console.error('[redis] Publish failed, falling back to local:', err.message);
+      localBroadcastRaw(type, payload, timestamp, meta);
+    });
+  } else {
+    // No Redis — deliver to local clients only
+    localBroadcastRaw(type, payload, timestamp, meta);
+  }
+}
+
+/**
+ * Deliver a broadcast to clients connected to THIS instance only.
+ * Called directly (single-process) or from the Redis subscriber handler.
+ */
+function localBroadcastRaw(type, payload, timestamp, meta = {}) {
+  switch (meta?.broadcastKind) {
+    case 'news':
+      localBroadcastNews(payload.articles, type === WS_MSG_TYPES.BREAKING);
+      break;
+    case 'channel':
+      localBroadcastToChannel(payload.channel, payload.articles);
+      break;
+    case 'prices':
+      localBroadcastPrices(payload.prices);
+      break;
+    case 'whales':
+      localBroadcastWhales(payload);
+      break;
+    case 'sentiment':
+      localBroadcastSentiment(payload);
+      break;
+    case 'alert':
+      localBroadcastAlert(payload);
+      break;
+    default:
+      // Generic: send raw to every open socket
+      clients.forEach((client) => {
+        if (client.ws.readyState === WebSocket.OPEN) {
+          client.ws.send(JSON.stringify({ type, payload, timestamp }));
+        }
+      });
+  }
+}
+
+// Broadcast news to channel subscribers (local only)
+function localBroadcastToChannel(channelId, articles) {
   const channel = CHANNELS[channelId];
   if (!channel) return;
 
@@ -520,69 +625,63 @@ function broadcastToChannel(channelId, articles) {
 
     client.ws.send(JSON.stringify({
       type: WS_MSG_TYPES.TOPIC,
-      payload: {
-        channel: channelId,
-        channelName: channel.name,
-        articles,
-      },
+      payload: { channel: channelId, channelName: channel.name, articles },
       timestamp: new Date().toISOString(),
     }));
   });
 }
 
-// Broadcast news to clients
-function broadcastNews(articles, isBreaking = false) {
+// Public wrappers (these publish through Redis when available)
+function broadcastToChannel(channelId, articles) {
+  publishBroadcast(WS_MSG_TYPES.TOPIC, { channel: channelId, articles }, { broadcastKind: 'channel' });
+}
+
+// Local news broadcast (called from localBroadcastRaw)
+function localBroadcastNews(articles, isBreaking = false) {
   const type = isBreaking ? WS_MSG_TYPES.BREAKING : WS_MSG_TYPES.NEWS;
-  
-  clients.forEach((client, clientId) => {
+
+  clients.forEach((client) => {
     if (client.ws.readyState !== WebSocket.OPEN) return;
 
     const sub = client.subscription;
     const filteredArticles = articles.filter(article => {
-      // If no subscriptions, send everything
       if (sub.sources.length === 0 && sub.categories.length === 0 && sub.keywords.length === 0) {
         return true;
       }
-      
-      // Check source match
       if (sub.sources.length > 0 && sub.sources.includes(article.sourceKey || article.source.toLowerCase())) {
         return true;
       }
-      
-      // Check category match
       if (sub.categories.length > 0 && sub.categories.includes(article.category)) {
         return true;
       }
-      
-      // Check keyword match
       if (sub.keywords.length > 0) {
         const title = article.title.toLowerCase();
         if (sub.keywords.some(kw => title.includes(kw.toLowerCase()))) {
           return true;
         }
       }
-      
       return false;
     });
 
     if (filteredArticles.length > 0) {
-      client.ws.send(JSON.stringify({
-        type,
-        payload: { articles: filteredArticles },
-        timestamp: new Date().toISOString(),
-      }));
+      client.ws.send(JSON.stringify({ type, payload: { articles: filteredArticles }, timestamp: new Date().toISOString() }));
     }
   });
 }
 
-// Broadcast alert to subscribed clients
-function broadcastAlert(alertEvent) {
+// Public wrapper
+function broadcastNews(articles, isBreaking = false) {
+  const type = isBreaking ? WS_MSG_TYPES.BREAKING : WS_MSG_TYPES.NEWS;
+  publishBroadcast(type, { articles }, { broadcastKind: 'news' });
+}
+
+// Local alert broadcast (called from localBroadcastRaw)
+function localBroadcastAlert(alertEvent) {
   let delivered = 0;
   
   clients.forEach((client, clientId) => {
     if (client.ws.readyState !== WebSocket.OPEN) return;
     
-    // Check if client is subscribed to this alert
     const isSubscribed = 
       client.alertSubscriptions.has('*') || 
       client.alertSubscriptions.has(alertEvent.ruleId);
@@ -604,8 +703,12 @@ function broadcastAlert(alertEvent) {
   if (delivered > 0) {
     console.log(`[${new Date().toISOString()}] Alert ${alertEvent.id} delivered to ${delivered} clients`);
   }
-  
   return delivered;
+}
+
+// Public wrapper — publishes through Redis
+function broadcastAlert(alertEvent) {
+  publishBroadcast(WS_MSG_TYPES.ALERT, alertEvent, { broadcastKind: 'alert' });
 }
 
 // Broadcast multiple alerts
@@ -613,6 +716,45 @@ function broadcastAlerts(alertEvents) {
   for (const event of alertEvents) {
     broadcastAlert(event);
   }
+}
+
+// Local price broadcast
+function localBroadcastPrices(prices) {
+  clients.forEach((client) => {
+    if (client.ws.readyState !== WebSocket.OPEN) return;
+    if (!client.streamPrices) return;
+    client.ws.send(JSON.stringify({
+      type: WS_MSG_TYPES.PRICES,
+      payload: { prices },
+      timestamp: new Date().toISOString(),
+    }));
+  });
+}
+
+// Local whale broadcast
+function localBroadcastWhales(payload) {
+  clients.forEach((client) => {
+    if (client.ws.readyState !== WebSocket.OPEN) return;
+    if (!client.streamWhales) return;
+    client.ws.send(JSON.stringify({
+      type: WS_MSG_TYPES.WHALES,
+      payload,
+      timestamp: new Date().toISOString(),
+    }));
+  });
+}
+
+// Local sentiment broadcast
+function localBroadcastSentiment(payload) {
+  clients.forEach((client) => {
+    if (client.ws.readyState !== WebSocket.OPEN) return;
+    if (!client.streamSentiment) return;
+    client.ws.send(JSON.stringify({
+      type: WS_MSG_TYPES.SENTIMENT,
+      payload,
+      timestamp: new Date().toISOString(),
+    }));
+  });
 }
 
 // Get server stats
@@ -732,18 +874,7 @@ async function pollPrices() {
 
     if (data.coins) {
       priceCache = data.coins;
-      
-      // Broadcast to price subscribers
-      clients.forEach((client) => {
-        if (client.ws.readyState !== WebSocket.OPEN) return;
-        if (!client.streamPrices) return;
-
-        client.ws.send(JSON.stringify({
-          type: WS_MSG_TYPES.PRICES,
-          payload: { prices: priceCache },
-          timestamp: new Date().toISOString(),
-        }));
-      });
+      publishBroadcast(WS_MSG_TYPES.PRICES, { prices: priceCache }, { broadcastKind: 'prices' });
     }
   } catch (error) {
     console.error('Price poll error:', error.message);
@@ -760,29 +891,13 @@ async function pollWhales() {
     const data = await response.json();
 
     if (data.alerts && data.alerts.length > 0) {
-      // Check for new whales
       const newWhales = data.alerts.filter(whale => {
         return !whaleCache.some(cached => cached.hash === whale.hash);
       });
 
       if (newWhales.length > 0) {
         whaleCache = data.alerts;
-        
-        // Broadcast to whale subscribers
-        clients.forEach((client) => {
-          if (client.ws.readyState !== WebSocket.OPEN) return;
-          if (!client.streamWhales) return;
-
-          client.ws.send(JSON.stringify({
-            type: WS_MSG_TYPES.WHALES,
-            payload: { 
-              alerts: newWhales,
-              isNew: true,
-            },
-            timestamp: new Date().toISOString(),
-          }));
-        });
-
+        publishBroadcast(WS_MSG_TYPES.WHALES, { alerts: newWhales, isNew: true }, { broadcastKind: 'whales' });
         console.log(`[${new Date().toISOString()}] Broadcast ${newWhales.length} new whale alerts`);
       }
     }
@@ -805,18 +920,7 @@ async function pollSentiment() {
       sentimentCache = data.current;
 
       if (hasChanged) {
-        // Broadcast to sentiment subscribers
-        clients.forEach((client) => {
-          if (client.ws.readyState !== WebSocket.OPEN) return;
-          if (!client.streamSentiment) return;
-
-          client.ws.send(JSON.stringify({
-            type: WS_MSG_TYPES.SENTIMENT,
-            payload: sentimentCache,
-            timestamp: new Date().toISOString(),
-          }));
-        });
-
+        publishBroadcast(WS_MSG_TYPES.SENTIMENT, sentimentCache, { broadcastKind: 'sentiment' });
         console.log(`[${new Date().toISOString()}] Broadcast sentiment update: ${sentimentCache.value} (${sentimentCache.classification})`);
       }
     }
@@ -882,6 +986,11 @@ server.listen(PORT, () => {
 ╚══════════════════════════════════════════════════════════════════╝
   `);
 
+  // Initialize Redis pub/sub for horizontal scaling (non-blocking)
+  initRedis().then(() => {
+    console.log(`[${new Date().toISOString()}] Instance ${INSTANCE_ID} ready`);
+  });
+
   // Start news polling (30s)
   setInterval(pollNews, POLL_INTERVAL);
   pollNews();
@@ -911,8 +1020,14 @@ process.on('SIGTERM', () => {
   wss.clients.forEach((client) => {
     client.close(1001, 'Server shutting down');
   });
-  server.close(() => {
-    process.exit(0);
+  // Clean up Redis connections
+  const cleanup = [];
+  if (redisPub) cleanup.push(redisPub.quit().catch(() => {}));
+  if (redisSub) cleanup.push(redisSub.quit().catch(() => {}));
+  Promise.allSettled(cleanup).then(() => {
+    server.close(() => {
+      process.exit(0);
+    });
   });
 });
 

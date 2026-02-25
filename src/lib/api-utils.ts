@@ -59,37 +59,69 @@ export function jsonResponse<T>(
     cacheControl?: keyof typeof CACHE_CONTROL | string;
     etag?: boolean;
     request?: NextRequest;
+    /** ISO timestamp or Date — sets Last-Modified and enables If-Modified-Since 304s */
+    lastModified?: string | Date;
+    /** If true, response came from stale cache (adds X-Stale: 1 header) */
+    stale?: boolean;
   } = {}
 ): NextResponse {
-  const { status = 200, cacheControl = 'standard', etag = true, request } = options;
+  const { status = 200, cacheControl = 'standard', etag = true, request, lastModified, stale } = options;
   
   // Generate ETag if enabled
   const etagValue = etag ? generateETag(data) : null;
+
+  const cacheControlValue = typeof cacheControl === 'string' && cacheControl in CACHE_CONTROL
+    ? CACHE_CONTROL[cacheControl as keyof typeof CACHE_CONTROL]
+    : cacheControl;
   
-  // Check for 304 Not Modified
+  // Check for 304 Not Modified (ETag)
   if (request && etagValue && checkETagMatch(request, etagValue)) {
     return new NextResponse(null, {
       status: 304,
       headers: {
         'ETag': etagValue,
-        'Cache-Control': typeof cacheControl === 'string' && cacheControl in CACHE_CONTROL
-          ? CACHE_CONTROL[cacheControl as keyof typeof CACHE_CONTROL]
-          : cacheControl,
+        'Cache-Control': cacheControlValue,
       },
     });
+  }
+
+  // Check for 304 Not Modified (If-Modified-Since)
+  if (request && lastModified) {
+    const ifModifiedSince = request.headers.get('if-modified-since');
+    if (ifModifiedSince) {
+      const clientDate = new Date(ifModifiedSince).getTime();
+      const serverDate = lastModified instanceof Date ? lastModified.getTime() : new Date(lastModified).getTime();
+      if (!isNaN(clientDate) && !isNaN(serverDate) && serverDate <= clientDate) {
+        return new NextResponse(null, {
+          status: 304,
+          headers: {
+            'Cache-Control': cacheControlValue,
+            'Last-Modified': new Date(serverDate).toUTCString(),
+          },
+        });
+      }
+    }
   }
   
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*',
-    'Cache-Control': typeof cacheControl === 'string' && cacheControl in CACHE_CONTROL
-      ? CACHE_CONTROL[cacheControl as keyof typeof CACHE_CONTROL]
-      : cacheControl,
-    'Vary': 'Accept-Encoding',
+    'Cache-Control': cacheControlValue,
+    'Vary': 'Accept-Encoding, Accept',
   };
   
   if (etagValue) {
     headers['ETag'] = etagValue;
+  }
+
+  if (lastModified) {
+    headers['Last-Modified'] = lastModified instanceof Date
+      ? lastModified.toUTCString()
+      : new Date(lastModified).toUTCString();
+  }
+
+  if (stale) {
+    headers['X-Stale'] = '1';
   }
   
   return NextResponse.json(data, { status, headers });

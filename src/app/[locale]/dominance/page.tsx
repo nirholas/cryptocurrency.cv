@@ -7,6 +7,8 @@ import Footer from '@/components/Footer';
 import { fetchCoinGecko } from '@/lib/coingecko';
 import { COINGECKO_BASE } from '@/lib/constants';
 
+export const dynamic = 'force-dynamic';
+
 interface Coin {
   id: string;
   symbol: string;

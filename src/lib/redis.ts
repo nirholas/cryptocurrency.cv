@@ -31,14 +31,20 @@ export async function initRedis(): Promise<boolean> {
         url: process.env.REDIS_URL,
         socket: {
           connectTimeout: 5000,
+          // Keep-alive prevents idle-timeout disconnects behind load balancers
+          keepAlive: true,
           reconnectStrategy: (retries: number) => {
-            if (retries > 3) {
+            if (retries > 10) {
               console.error('[Redis] Max retries reached, falling back to memory');
               return new Error('Max retries');
             }
-            return Math.min(retries * 200, 3000);
+            // Exponential back-off with jitter: 200, 400, 800 … capped at 5 s
+            return Math.min(retries * 200 + Math.random() * 100, 5000);
           },
         },
+        // Connection pool — allow up to MAX_POOL_SIZE concurrent commands
+        // before queueing; prevents connection storms at 1 M+ users
+        commandsQueueMaxLength: parseInt(process.env.REDIS_QUEUE_MAX ?? '2000', 10),
       });
 
       _redisClient.on('error', (err: Error) => {

@@ -139,6 +139,13 @@ export const translationCache = new MemoryCache(300); // Translation cache
 export const cache = new MemoryCache(500);          // General purpose cache (for binance.ts, derivatives.ts)
 
 /**
+ * Stale cache — stores "last known good" data with a much longer TTL.
+ * When upstream APIs fail, this cache is checked as a fallback.
+ * Default max size is generous because entries only matter when things break.
+ */
+export const staleCache = new MemoryCache(2000);
+
+/**
  * In-flight promise map for request deduplication.
  * When multiple callers request the same cache key simultaneously (e.g. cold start),
  * they share a single in-flight fetch instead of all firing separate requests.
@@ -148,13 +155,20 @@ const inFlightRequests = new Map<string, Promise<unknown>>();
 /**
  * Cache wrapper for async functions with request deduplication.
  * Concurrent callers for the same key share one fetch instead of duplicating work.
+ *
+ * When `serveStaleOnError` is true (default), a failed fetch will return the
+ * last-known-good value from `staleCache` instead of throwing — so callers
+ * never see an error as long as at least one successful fetch has occurred.
  */
 export async function withCache<T>(
   cache: MemoryCache,
   key: string,
   ttlSeconds: number,
-  fetchFn: () => Promise<T>
+  fetchFn: () => Promise<T>,
+  options?: { serveStaleOnError?: boolean },
 ): Promise<T> {
+  const serveStale = options?.serveStaleOnError ?? true;
+
   // Check cache first
   const cached = cache.get<T>(key);
   if (cached !== null) {
@@ -171,7 +185,19 @@ export async function withCache<T>(
   const fetchPromise = fetchFn()
     .then((data) => {
       cache.set(key, data, ttlSeconds);
+      // Also persist into stale cache with a much longer TTL (1 hour)
+      staleCache.set(key, data, 3600);
       return data;
+    })
+    .catch((err) => {
+      // Stale-on-error: return last-known-good data if available
+      if (serveStale) {
+        const stale = staleCache.get<T>(key);
+        if (stale !== null) {
+          return stale;
+        }
+      }
+      throw err;
     })
     .finally(() => {
       inFlightRequests.delete(key);

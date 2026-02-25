@@ -1,0 +1,142 @@
+##
+## docker-compose.scale.yml
+##
+## Production-ready Docker Compose for 1 M+ users.
+##
+## Usage:
+##   docker compose -f docker-compose.scale.yml up -d --scale app=4
+##
+## This file adds:
+##   • Nginx reverse-proxy with upstream load balancing (round-robin)
+##   • Horizontally scaled app containers (default: 3 replicas)
+##   • Redis 7 with AOF persistence, maxmemory policy, and connection limits
+##   • WebSocket server behind its own upstream group
+##   • Health checks everywhere
+##
+## For Kubernetes, convert with `kompose convert -f docker-compose.scale.yml`.
+##
+
+version: '3.9'
+
+x-app-env: &app-env
+  NODE_ENV: production
+  PORT: "3000"
+  # Redis — point to the compose service
+  REDIS_URL: redis://redis:6379
+  KV_REST_API_URL: ${KV_REST_API_URL:-}
+  KV_REST_API_TOKEN: ${KV_REST_API_TOKEN:-}
+  UPSTASH_REDIS_REST_URL: ${UPSTASH_REDIS_REST_URL:-}
+  UPSTASH_REDIS_REST_TOKEN: ${UPSTASH_REDIS_REST_TOKEN:-}
+  # Sentry (optional)
+  SENTRY_DSN: ${SENTRY_DSN:-}
+  # x402 payment
+  X402_RECEIVE_ADDRESS: ${X402_RECEIVE_ADDRESS:-}
+  # Admin
+  ADMIN_TOKEN: ${ADMIN_TOKEN:-}
+
+services:
+  # ─── Reverse Proxy / Load Balancer ────────────────────────────────────
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: crypto-news-lb
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./infra/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./infra/nginx/certs:/etc/nginx/certs:ro  # mount TLS certs if available
+    depends_on:
+      app:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost/api/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+
+  # ─── Next.js App (horizontally scaled) ────────────────────────────────
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      <<: *app-env
+    deploy:
+      replicas: 3
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 256M
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:3000/api/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  # ─── Redis (hot cache + rate limiting) ────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    container_name: crypto-news-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: >
+      redis-server
+        --appendonly yes
+        --maxmemory 512mb
+        --maxmemory-policy allkeys-lru
+        --maxclients 10000
+        --tcp-keepalive 60
+        --timeout 300
+        --hz 10
+        --save 60 1000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 768M
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  # ─── WebSocket Server (real-time updates) ─────────────────────────────
+  websocket:
+    build:
+      context: .
+      dockerfile: Dockerfile.ws
+    container_name: crypto-news-ws
+    environment:
+      PORT: "8080"
+      REDIS_URL: redis://redis:6379
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:8080/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  redis_data:
+    driver: local
+
+networks:
+  default:
+    name: crypto-news-scale
