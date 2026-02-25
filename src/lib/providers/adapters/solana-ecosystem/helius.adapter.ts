@@ -37,8 +37,8 @@ export const heliusAdapter: DataProvider<SolanaNetworkStats> = {
       jsonRpc('getSupply', []),
     ]);
 
-    const perfSample: Record<string, unknown> = perfRes.result?.[0] ?? {};
-    const epochInfo: Record<string, unknown> = epochRes.result ?? {};
+    const perfSample: Record<string, unknown> = (perfRes.result?.[0] as Record<string, unknown>) ?? {};
+    const epochInfo: Record<string, unknown> = (epochRes.result as Record<string, unknown>) ?? {};
     const supply = supplyRes.result?.value ?? {};
 
     const txCount = Number(perfSample.numTransactions ?? 0);

@@ -192,19 +192,18 @@ export const enrichArticleOnEvent = inngest.createFunction(
         articleId,
         link,
         enriched: true,
-        sentiment: (enrichment as Record<string, unknown>).sentiment ?? null,
+        sentiment: (enrichment as unknown as Record<string, unknown>).sentiment ?? null,
         tags:
-          (enrichment as Record<string, unknown>).tags ??
-          (enrichment as Record<string, unknown>).entities ??
+          (enrichment as unknown as Record<string, unknown>).tags ??
+          (enrichment as unknown as Record<string, unknown>).entities ??
           [],
       };
     });
 
     logger.info('Single article enriched', {
-      articleId,
+      ...result,
       link: link?.slice(0, 80),
       priority,
-      ...result,
     });
 
     return result;

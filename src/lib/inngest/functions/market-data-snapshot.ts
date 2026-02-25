@@ -94,13 +94,13 @@ export const gasFeeSnapshot = inngest.createFunction(
       const result = await gasChain.fetch({});
 
       if (result?.data) {
-        const gas = result.data;
+        const gas = result.data as unknown as Record<string, number>;
         await db.insert(gasFeesHistory).values({
           chain: 'ethereum',
-          safeLowGwei: (gas as Record<string, number>).safeGasPrice ?? null,
-          standardGwei: (gas as Record<string, number>).proposeGasPrice ?? null,
-          fastGwei: (gas as Record<string, number>).fastGasPrice ?? null,
-          baseFeeGwei: (gas as Record<string, number>).suggestBaseFee ?? null,
+          safeLowGwei: gas.safeGasPrice ?? null,
+          standardGwei: gas.proposeGasPrice ?? null,
+          fastGwei: gas.fastGasPrice ?? null,
+          baseFeeGwei: gas.suggestBaseFee ?? null,
           source: 'gas-chain',
           timestamp: now,
         });
