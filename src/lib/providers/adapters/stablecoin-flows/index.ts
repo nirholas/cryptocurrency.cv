@@ -14,6 +14,9 @@ import type { ProviderChainConfig, ResolutionStrategy } from '../../types';
 import { ProviderChain } from '../../provider-chain';
 import type { StablecoinFlow } from './types';
 import { defillamaStablecoinsAdapter } from './defillama-stablecoins.adapter';
+import { glassnodeStablecoinsAdapter } from './glassnode.adapter';
+import { artemisStablecoinsAdapter } from './artemis.adapter';
+import { duneStablecoinsAdapter } from './dune.adapter';
 
 export type { StablecoinFlow, StablecoinMarketStats } from './types';
 
@@ -27,7 +30,7 @@ export function createStablecoinFlowsChain(
   options: StablecoinFlowsChainOptions = {},
 ): ProviderChain<StablecoinFlow[]> {
   const {
-    strategy = 'fallback',
+    strategy = 'broadcast',
     cacheTtlSeconds = 300,
     staleWhileError = true,
   } = options;
@@ -35,6 +38,9 @@ export function createStablecoinFlowsChain(
   const config: Partial<ProviderChainConfig> = { strategy, cacheTtlSeconds, staleWhileError };
   const chain = new ProviderChain<StablecoinFlow[]>('stablecoin-flows', config);
   chain.addProvider(defillamaStablecoinsAdapter);
+  chain.addProvider(glassnodeStablecoinsAdapter);
+  chain.addProvider(artemisStablecoinsAdapter);
+  chain.addProvider(duneStablecoinsAdapter);
   return chain;
 }
 

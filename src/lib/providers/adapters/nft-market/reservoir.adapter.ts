@@ -1,98 +1,179 @@
 /**
- * Reservoir Adapter — Aggregated NFT marketplace data
+ * Reservoir Adapter — Aggregated NFT market data provider
  *
- * Reservoir aggregates listings and sales across OpenSea, Blur, LooksRare, etc.
- * Free API with 120 req/min.
+ * Reservoir is a decentralized NFT order aggregator:
+ * - Aggregates orders across marketplaces (OpenSea, Blur, X2Y2, etc.)
+ * - Superior volume and liquidity data
+ * - Requires API key (free tier available)
+ * - Rate limit: 120 requests/minute
  *
- * @see https://docs.reservoir.tools/reference/overview
  * @module providers/adapters/nft-market/reservoir
  */
 
 import type { DataProvider, FetchParams, RateLimitConfig } from '../../types';
-import type { NFTMarketData, NFTCollection } from './types';
+import type { NFTMarketOverview, NFTCollectionSummary } from './types';
+
+// =============================================================================
+// CONSTANTS
+// =============================================================================
 
 const RESERVOIR_BASE = 'https://api.reservoir.tools';
-const RESERVOIR_API_KEY = process.env.RESERVOIR_API_KEY ?? '';
 
-const RATE_LIMIT: RateLimitConfig = { maxRequests: 120, windowMs: 60_000 };
+const RATE_LIMIT: RateLimitConfig = {
+  maxRequests: 120,
+  windowMs: 60_000,
+};
 
-export const reservoirAdapter: DataProvider<NFTMarketData> = {
+// =============================================================================
+// ADAPTER
+// =============================================================================
+
+/**
+ * Reservoir NFT data provider.
+ *
+ * Priority: 2 (secondary — better aggregated volume data than single marketplace)
+ * Weight: 0.3 (good cross-marketplace aggregation)
+ */
+export const reservoirAdapter: DataProvider<NFTMarketOverview> = {
   name: 'reservoir',
-  description: 'Reservoir Protocol — aggregated NFT marketplace data',
+  description: 'Reservoir API — aggregated NFT data across multiple marketplaces',
   priority: 2,
-  weight: 0.30,
+  weight: 0.3,
   rateLimit: RATE_LIMIT,
   capabilities: ['nft-market'],
 
-  async fetch(params: FetchParams): Promise<NFTMarketData> {
-    const limit = params.limit ?? 20;
+  async fetch(params: FetchParams): Promise<NFTMarketOverview> {
+    const apiKey = process.env.RESERVOIR_API_KEY;
+    if (!apiKey) {
+      throw new Error('RESERVOIR_API_KEY environment variable is required');
+    }
 
-    const headers: Record<string, string> = { Accept: 'application/json' };
-    if (RESERVOIR_API_KEY) headers['x-api-key'] = RESERVOIR_API_KEY;
+    const limit = params.limit ?? 25;
 
-    const url = `${RESERVOIR_BASE}/collections/v7?sortBy=1DayVolume&limit=${Math.min(limit, 50)}`;
-    const res = await fetch(url, { headers, signal: AbortSignal.timeout(10000) });
+    const response = await fetch(
+      `${RESERVOIR_BASE}/collections/v7?sortBy=1DayVolume&limit=${limit}`,
+      {
+        headers: {
+          'x-api-key': apiKey,
+          Accept: 'application/json',
+        },
+        signal: AbortSignal.timeout(10_000),
+      },
+    );
 
-    if (!res.ok) throw new Error(`Reservoir HTTP ${res.status}`);
-    const json = await res.json();
+    if (!response.ok) {
+      throw new Error(`Reservoir API error: ${response.status} ${response.statusText}`);
+    }
 
-     
-    const collections: NFTCollection[] = (json.collections ?? []).map((c: any) => ({
-      slug: c.slug ?? c.id ?? '',
-      name: c.name ?? '',
-      chain: c.chainId === 1 ? 'ethereum' : c.chainId === 137 ? 'polygon' : `chain-${c.chainId ?? 1}`,
-      floorPrice: c.floorAsk?.price?.amount?.native ?? 0,
-      floorPriceCurrency: c.floorAsk?.price?.currency?.symbol ?? 'ETH',
-      volume24h: c.volume?.['1day'] ?? 0,
-      volumeChange24h: c.volumeChange?.['1day'] ?? 0,
-      sales24h: c.salesCount?.['1day'] ?? 0,
-      numOwners: c.ownerCount ?? 0,
-      totalSupply: c.tokenCount ?? 0,
-      marketCap: (c.floorAsk?.price?.amount?.native ?? 0) * (c.tokenCount ?? 0),
-      imageUrl: c.image ?? null,
-      source: 'reservoir',
-      timestamp: new Date().toISOString(),
-    }));
+    const data: ReservoirCollectionsResponse = await response.json();
+    const collections = (data.collections ?? []).map(normalizeCollection);
 
-    const totalVolume24h = collections.reduce((s, c) => s + c.volume24h, 0);
-    const totalSales24h = collections.reduce((s, c) => s + c.sales24h, 0);
+    const totalVolume24h = collections.reduce((sum, c) => sum + c.volume24h, 0);
+    const totalSales24h = collections.reduce((sum, c) => sum + c.salesCount24h, 0);
 
     return {
       totalVolume24h,
+      totalVolumeUsd24h: totalVolume24h,
       totalSales24h,
-      volumeChange24h: 0,
-      activeCollections: collections.length,
-      topCollections: collections.slice(0, 20),
-      byChain: aggregateByChain(collections),
-      source: 'reservoir',
+      uniqueBuyers24h: 0,
+      uniqueSellers24h: 0,
+      topCollections: collections,
       timestamp: new Date().toISOString(),
     };
   },
 
   async healthCheck(): Promise<boolean> {
+    const apiKey = process.env.RESERVOIR_API_KEY;
+    if (!apiKey) return false;
+
     try {
-      const headers: Record<string, string> = {};
-      if (RESERVOIR_API_KEY) headers['x-api-key'] = RESERVOIR_API_KEY;
-      const res = await fetch(`${RESERVOIR_BASE}/collections/v7?limit=1`, {
-        headers,
-        signal: AbortSignal.timeout(5000),
+      const response = await fetch(`${RESERVOIR_BASE}/collections/v7?limit=1`, {
+        headers: { 'x-api-key': apiKey },
+        signal: AbortSignal.timeout(5_000),
       });
-      return res.ok;
-    } catch { return false; }
+      return response.ok;
+    } catch {
+      return false;
+    }
   },
 
-  validate(data: NFTMarketData): boolean {
-    return Array.isArray(data.topCollections);
+  validate(data: NFTMarketOverview): boolean {
+    if (!data || !Array.isArray(data.topCollections)) return false;
+    if (data.topCollections.length === 0) return false;
+    return data.topCollections.every(
+      (c) => typeof c.name === 'string' && c.name.length > 0,
+    );
   },
 };
 
-function aggregateByChain(collections: NFTCollection[]) {
-  const map = new Map<string, { volume24h: number; sales24h: number }>();
-  for (const c of collections) {
-    const entry = map.get(c.chain) ?? { volume24h: 0, sales24h: 0 };
-    entry.volume24h += c.volume24h;
-    entry.sales24h += c.sales24h;
-    map.set(c.chain, entry);
-  }
-  return Array.from(map.entries()).map(([chain, stats]) => ({ chain, ...stats }));
+// =============================================================================
+// INTERNAL — Raw types and normalization
+// =============================================================================
+
+interface ReservoirCollection {
+  id?: string;
+  slug?: string;
+  name?: string;
+  image?: string;
+  floorAsk?: {
+    price?: {
+      amount?: { native?: number; usd?: number };
+      currency?: { symbol?: string };
+    };
+  };
+  volume?: {
+    '1day'?: number;
+    '7day'?: number;
+    '30day'?: number;
+    allTime?: number;
+  };
+  volumeChange?: {
+    '1day'?: number;
+    '7day'?: number;
+  };
+  count?: number;
+  ownerCount?: number;
+  onSaleCount?: number;
+  salesCount?: {
+    '1day'?: number;
+    '7day'?: number;
+  };
+  primaryContract?: string;
+  chainId?: number;
+}
+
+interface ReservoirCollectionsResponse {
+  collections: ReservoirCollection[];
+  continuation?: string;
+}
+
+/** Map chain IDs to chain names */
+const CHAIN_ID_MAP: Record<number, string> = {
+  1: 'ethereum',
+  137: 'polygon',
+  42161: 'arbitrum',
+  10: 'optimism',
+  8453: 'base',
+  56: 'bsc',
+  43114: 'avalanche',
+};
+
+function normalizeCollection(raw: ReservoirCollection): NFTCollectionSummary {
+  const floorNative = raw.floorAsk?.price?.amount?.native ?? 0;
+  const floorUsd = raw.floorAsk?.price?.amount?.usd ?? 0;
+  const chain = raw.chainId ? (CHAIN_ID_MAP[raw.chainId] ?? `chain-${raw.chainId}`) : 'ethereum';
+
+  return {
+    slug: raw.slug ?? raw.id ?? '',
+    name: raw.name ?? '',
+    floorPrice: floorNative,
+    floorPriceUsd: floorUsd,
+    volume24h: raw.volume?.['1day'] ?? 0,
+    volumeChange24h: raw.volumeChange?.['1day'] ?? 0,
+    salesCount24h: raw.salesCount?.['1day'] ?? 0,
+    numOwners: raw.ownerCount ?? 0,
+    totalSupply: raw.count ?? 0,
+    chain,
+    imageUrl: raw.image ?? undefined,
+  };
 }

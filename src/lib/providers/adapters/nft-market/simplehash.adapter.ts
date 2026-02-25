@@ -1,88 +1,171 @@
 /**
- * SimpleHash Adapter — Multi-chain NFT data (ETH, Solana, Polygon, Base)
+ * SimpleHash Adapter — Multi-chain NFT data provider
  *
- * Free tier: 1000 req/day. Covers 80+ chains.
+ * SimpleHash provides the best multi-chain NFT coverage:
+ * - Supports 50+ chains (Ethereum, Polygon, Solana, Bitcoin Ordinals, etc.)
+ * - Comprehensive metadata and ownership data
+ * - Requires API key (free tier: 1,000 requests/day)
+ * - Rate limit: ~0.7 requests/minute (1,000/day)
  *
- * @see https://docs.simplehash.com/reference
  * @module providers/adapters/nft-market/simplehash
  */
 
 import type { DataProvider, FetchParams, RateLimitConfig } from '../../types';
-import type { NFTMarketData, NFTCollection } from './types';
+import type { NFTMarketOverview, NFTCollectionSummary } from './types';
 
-const SH_BASE = 'https://api.simplehash.com/api/v0';
-const SH_API_KEY = process.env.SIMPLEHASH_API_KEY ?? '';
+// =============================================================================
+// CONSTANTS
+// =============================================================================
 
-const RATE_LIMIT: RateLimitConfig = { maxRequests: 10, windowMs: 60_000 };
+const SIMPLEHASH_BASE = 'https://api.simplehash.com/api/v0';
 
-export const simplehashAdapter: DataProvider<NFTMarketData> = {
+const RATE_LIMIT: RateLimitConfig = {
+  maxRequests: 1,
+  windowMs: 86_400, // ~0.7/min → effectively 1 per ~86s (1000/day)
+};
+
+// =============================================================================
+// ADAPTER
+// =============================================================================
+
+/**
+ * SimpleHash NFT data provider.
+ *
+ * Priority: 3 (tertiary — best multi-chain coverage, lower rate limit)
+ * Weight: 0.2 (supplementary — great breadth, lower freshness due to rate limits)
+ */
+export const simplehashAdapter: DataProvider<NFTMarketOverview> = {
   name: 'simplehash',
-  description: 'SimpleHash — multi-chain NFT data (80+ chains)',
+  description: 'SimpleHash API — multi-chain NFT data with 50+ chain support',
   priority: 3,
-  weight: 0.20,
+  weight: 0.2,
   rateLimit: RATE_LIMIT,
   capabilities: ['nft-market'],
 
-  async fetch(params: FetchParams): Promise<NFTMarketData> {
-    if (!SH_API_KEY) throw new Error('SIMPLEHASH_API_KEY not configured');
+  async fetch(params: FetchParams): Promise<NFTMarketOverview> {
+    const apiKey = process.env.SIMPLEHASH_API_KEY;
+    if (!apiKey) {
+      throw new Error('SIMPLEHASH_API_KEY environment variable is required');
+    }
 
-    const limit = params.limit ?? 20;
+    const limit = params.limit ?? 25;
     const chains = params.chain ?? 'ethereum';
+    const timePeriod = params.extra?.timePeriod ?? '24h';
 
-    const url = `${SH_BASE}/nfts/collections/top_v2?chains=${chains}&time_period=24h&limit=${Math.min(limit, 50)}`;
-    const res = await fetch(url, {
-      headers: { 'X-API-KEY': SH_API_KEY, Accept: 'application/json' },
-      signal: AbortSignal.timeout(10000),
-    });
+    const response = await fetch(
+      `${SIMPLEHASH_BASE}/nfts/collections/trending?chains=${chains}&time_period=${timePeriod}&limit=${limit}`,
+      {
+        headers: {
+          'X-API-KEY': apiKey,
+          Accept: 'application/json',
+        },
+        signal: AbortSignal.timeout(10_000),
+      },
+    );
 
-    if (!res.ok) throw new Error(`SimpleHash HTTP ${res.status}`);
-    const json = await res.json();
+    if (!response.ok) {
+      throw new Error(`SimpleHash API error: ${response.status} ${response.statusText}`);
+    }
 
-     
-    const collections: NFTCollection[] = (json.collections ?? []).map((c: any) => ({
-      slug: c.collection_id ?? '',
-      name: c.name ?? '',
-      chain: c.chain ?? chains,
-      floorPrice: c.floor_prices?.[0]?.value_usd_cents ? c.floor_prices[0].value_usd_cents / 100 : 0,
-      floorPriceCurrency: 'USD',
-      volume24h: c.volume_usd_cents_24h ? c.volume_usd_cents_24h / 100 : 0,
-      volumeChange24h: 0,
-      sales24h: c.sales_24h ?? 0,
-      numOwners: c.distinct_owner_count ?? 0,
-      totalSupply: c.total_quantity ?? 0,
-      marketCap: c.market_cap_usd_cents ? c.market_cap_usd_cents / 100 : 0,
-      imageUrl: c.image_url ?? null,
-      source: 'simplehash',
-      timestamp: new Date().toISOString(),
-    }));
+    const data: SimpleHashTrendingResponse = await response.json();
+    const collections = (data.collections ?? []).map(normalizeCollection);
 
-    const totalVolume24h = collections.reduce((s, c) => s + c.volume24h, 0);
-    const totalSales24h = collections.reduce((s, c) => s + c.sales24h, 0);
+    const totalVolume24h = collections.reduce((sum, c) => sum + c.volume24h, 0);
+    const totalSales24h = collections.reduce((sum, c) => sum + c.salesCount24h, 0);
 
     return {
       totalVolume24h,
+      totalVolumeUsd24h: totalVolume24h,
       totalSales24h,
-      volumeChange24h: 0,
-      activeCollections: collections.length,
-      topCollections: collections.slice(0, 20),
-      byChain: [],
-      source: 'simplehash',
+      uniqueBuyers24h: 0,
+      uniqueSellers24h: 0,
+      topCollections: collections,
       timestamp: new Date().toISOString(),
     };
   },
 
   async healthCheck(): Promise<boolean> {
-    if (!SH_API_KEY) return false;
+    const apiKey = process.env.SIMPLEHASH_API_KEY;
+    if (!apiKey) return false;
+
     try {
-      const res = await fetch(`${SH_BASE}/nfts/collections/top_v2?chains=ethereum&limit=1`, {
-        headers: { 'X-API-KEY': SH_API_KEY },
-        signal: AbortSignal.timeout(5000),
-      });
-      return res.ok;
-    } catch { return false; }
+      const response = await fetch(
+        `${SIMPLEHASH_BASE}/nfts/collections/trending?chains=ethereum&limit=1`,
+        {
+          headers: { 'X-API-KEY': apiKey },
+          signal: AbortSignal.timeout(5_000),
+        },
+      );
+      return response.ok;
+    } catch {
+      return false;
+    }
   },
 
-  validate(data: NFTMarketData): boolean {
-    return Array.isArray(data.topCollections);
+  validate(data: NFTMarketOverview): boolean {
+    if (!data || !Array.isArray(data.topCollections)) return false;
+    if (data.topCollections.length === 0) return false;
+    return data.topCollections.every(
+      (c) => typeof c.name === 'string' && c.name.length > 0,
+    );
   },
 };
+
+// =============================================================================
+// INTERNAL — Raw types and normalization
+// =============================================================================
+
+interface SimpleHashCollection {
+  collection_id?: string;
+  name?: string;
+  description?: string;
+  image_url?: string;
+  banner_image_url?: string;
+  external_url?: string;
+  chain?: string;
+  floor_prices?: Array<{
+    marketplace_id?: string;
+    value?: number;
+    payment_token?: {
+      symbol?: string;
+      decimals?: number;
+    };
+    value_usd_cents?: number;
+  }>;
+  top_contracts?: string[];
+  distinct_owner_count?: number;
+  distinct_nft_count?: number;
+  total_quantity?: number;
+  volume?: number;
+  volume_usd_cents?: number;
+  volume_percent_change?: number;
+  transaction_count?: number;
+}
+
+interface SimpleHashTrendingResponse {
+  collections: SimpleHashCollection[];
+  next_cursor?: string;
+  next?: string;
+}
+
+function normalizeCollection(raw: SimpleHashCollection): NFTCollectionSummary {
+  const floorEntry = raw.floor_prices?.[0];
+  const floorPrice = floorEntry?.value ?? 0;
+  const floorPriceUsd = floorEntry?.value_usd_cents
+    ? floorEntry.value_usd_cents / 100
+    : 0;
+
+  return {
+    slug: raw.collection_id ?? '',
+    name: raw.name ?? '',
+    floorPrice,
+    floorPriceUsd,
+    volume24h: raw.volume_usd_cents ? raw.volume_usd_cents / 100 : (raw.volume ?? 0),
+    volumeChange24h: raw.volume_percent_change ?? 0,
+    salesCount24h: raw.transaction_count ?? 0,
+    numOwners: raw.distinct_owner_count ?? 0,
+    totalSupply: raw.distinct_nft_count ?? raw.total_quantity ?? 0,
+    chain: raw.chain ?? 'ethereum',
+    imageUrl: raw.image_url ?? undefined,
+  };
+}

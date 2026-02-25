@@ -11,7 +11,7 @@
 
 import { serve } from 'inngest/next';
 import { inngest } from '@/lib/inngest/client';
-import { allFunctions } from '@/lib/inngest/functions';
+import { allFunctions } from '@/lib/inngest/functions/index';
 
 export const runtime = 'nodejs';
 export const maxDuration = 300; // 5 min — match the longest job (x-sentiment)

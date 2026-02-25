@@ -1,35 +1,28 @@
 /**
- * NFT Market Types — Shared types for NFT data adapters
- *
+ * NFT Market Data Types
  * @module providers/adapters/nft-market/types
  */
 
-/** Individual NFT collection summary */
-export interface NFTCollection {
+export interface NFTCollectionSummary {
   slug: string;
   name: string;
-  chain: string;
   floorPrice: number;
-  floorPriceCurrency: string;
+  floorPriceUsd: number;
   volume24h: number;
   volumeChange24h: number;
-  sales24h: number;
+  salesCount24h: number;
   numOwners: number;
   totalSupply: number;
-  marketCap: number;
-  imageUrl: string | null;
-  source: string;
-  timestamp: string;
+  chain: string;
+  imageUrl?: string;
 }
 
-/** Aggregated NFT market data */
-export interface NFTMarketData {
+export interface NFTMarketOverview {
   totalVolume24h: number;
+  totalVolumeUsd24h: number;
   totalSales24h: number;
-  volumeChange24h: number;
-  activeCollections: number;
-  topCollections: NFTCollection[];
-  byChain: { chain: string; volume24h: number; sales24h: number }[];
-  source: string;
+  uniqueBuyers24h: number;
+  uniqueSellers24h: number;
+  topCollections: NFTCollectionSummary[];
   timestamp: string;
 }

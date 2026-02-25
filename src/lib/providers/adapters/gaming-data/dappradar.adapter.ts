@@ -1,94 +1,162 @@
 /**
- * DappRadar Adapter — Gaming & dApp analytics
+ * DappRadar Adapter — Primary blockchain gaming data provider
  *
- * @see https://dappradar.com/api
+ * DappRadar is the leading dApp analytics platform:
+ * - Tracks 15,000+ dApps across 50+ chains
+ * - Comprehensive gaming metrics (DAU, volume, transactions)
+ * - Requires API key
+ * - Rate limit: 30 requests/minute
+ *
  * @module providers/adapters/gaming-data/dappradar
  */
 
 import type { DataProvider, FetchParams, RateLimitConfig } from '../../types';
-import type { GamingData, GameData } from './types';
+import type { GamingOverview, GameData } from './types';
 
-const DR_BASE = 'https://apis.dappradar.com/v2';
-const DR_API_KEY = process.env.DAPPRADAR_API_KEY ?? '';
+// =============================================================================
+// CONSTANTS
+// =============================================================================
 
-const RATE_LIMIT: RateLimitConfig = { maxRequests: 30, windowMs: 60_000 };
+const DAPPRADAR_BASE = 'https://api.dappradar.com/4tsxo4vuhotaojtl';
 
-export const dappradarAdapter: DataProvider<GamingData> = {
+const RATE_LIMIT: RateLimitConfig = {
+  maxRequests: 30,
+  windowMs: 60_000,
+};
+
+// =============================================================================
+// ADAPTER
+// =============================================================================
+
+/**
+ * DappRadar gaming data provider.
+ *
+ * Priority: 1 (primary — most comprehensive dApp/gaming analytics)
+ * Weight: 0.6 (highest — authoritative gaming metrics)
+ */
+export const dappradarAdapter: DataProvider<GamingOverview> = {
   name: 'dappradar',
-  description: 'DappRadar — blockchain gaming analytics',
+  description: 'DappRadar API — leading dApp analytics with comprehensive gaming metrics (15,000+ dApps)',
   priority: 1,
-  weight: 0.60,
+  weight: 0.6,
   rateLimit: RATE_LIMIT,
   capabilities: ['gaming-data'],
 
-  async fetch(params: FetchParams): Promise<GamingData> {
-    if (!DR_API_KEY) throw new Error('DAPPRADAR_API_KEY not configured');
+  async fetch(params: FetchParams): Promise<GamingOverview> {
+    const apiKey = process.env.DAPPRADAR_API_KEY;
+    if (!apiKey) {
+      throw new Error('DAPPRADAR_API_KEY environment variable is required');
+    }
 
     const limit = params.limit ?? 25;
-    const url = `${DR_BASE}/dapps?category=games&range=24h&sort=users&order=desc&resultsPerPage=${Math.min(limit, 50)}`;
+    const chain = params.chain ?? 'all';
 
-    const res = await fetch(url, {
-      headers: { 'X-BLOBR-KEY': DR_API_KEY, Accept: 'application/json' },
-      signal: AbortSignal.timeout(10000),
-    });
+    const response = await fetch(
+      `${DAPPRADAR_BASE}/dapps?chain=${chain}&category=games&sort=dau&order=desc&resultsPerPage=${limit}`,
+      {
+        headers: {
+          'X-BLOBR-KEY': apiKey,
+          Accept: 'application/json',
+        },
+        signal: AbortSignal.timeout(10_000),
+      },
+    );
 
-    if (!res.ok) throw new Error(`DappRadar HTTP ${res.status}`);
-    const json = await res.json();
+    if (!response.ok) {
+      throw new Error(`DappRadar API error: ${response.status} ${response.statusText}`);
+    }
 
-     
-    const games: GameData[] = (json.results ?? json.dapps ?? []).map((d: any) => ({
-      id: d.dappId?.toString() ?? d.slug ?? '',
-      name: d.name ?? '',
-      chain: d.chains?.[0] ?? d.chain ?? 'unknown',
-      dau: d.statistic?.userActivity ?? d.metrics?.uaw ?? 0,
-      transactions24h: d.statistic?.transactions ?? d.metrics?.transactions ?? 0,
-      volume24h: d.statistic?.volume ?? d.metrics?.volume ?? 0,
-      volumeChange24h: d.statistic?.volumeChangePercentage ?? 0,
-      category: d.category ?? 'game',
-      balance: d.statistic?.balance ?? d.metrics?.balance ?? 0,
-      imageUrl: d.logo ?? d.icon ?? null,
-      source: 'dappradar',
-      timestamp: new Date().toISOString(),
-    }));
+    const data: DappRadarResponse = await response.json();
+    const games = (data.results ?? []).map(normalizeGame);
 
-    const totalDau = games.reduce((s, g) => s + g.dau, 0);
-    const totalTx = games.reduce((s, g) => s + g.transactions24h, 0);
-    const totalVol = games.reduce((s, g) => s + g.volume24h, 0);
+    const totalDau = games.reduce((sum, g) => sum + g.dau, 0);
+    const totalVolume24h = games.reduce((sum, g) => sum + g.volume24h, 0);
+
+    // Aggregate volume by chain
+    const byChain: Record<string, number> = {};
+    for (const game of games) {
+      byChain[game.chain] = (byChain[game.chain] ?? 0) + game.volume24h;
+    }
 
     return {
       totalDau,
-      totalTransactions24h: totalTx,
-      totalVolume24h: totalVol,
-      games: games.slice(0, 25),
-      byChain: aggregateByChain(games),
-      source: 'dappradar',
+      totalVolume24h,
+      topGames: games,
+      byChain,
       timestamp: new Date().toISOString(),
     };
   },
 
   async healthCheck(): Promise<boolean> {
-    if (!DR_API_KEY) return false;
+    const apiKey = process.env.DAPPRADAR_API_KEY;
+    if (!apiKey) return false;
+
     try {
-      const res = await fetch(`${DR_BASE}/dapps?category=games&resultsPerPage=1`, {
-        headers: { 'X-BLOBR-KEY': DR_API_KEY },
-        signal: AbortSignal.timeout(5000),
-      });
-      return res.ok;
-    } catch { return false; }
+      const response = await fetch(
+        `${DAPPRADAR_BASE}/dapps?chain=all&category=games&resultsPerPage=1`,
+        {
+          headers: { 'X-BLOBR-KEY': apiKey },
+          signal: AbortSignal.timeout(5_000),
+        },
+      );
+      return response.ok;
+    } catch {
+      return false;
+    }
   },
 
-  validate(data: GamingData): boolean {
-    return Array.isArray(data.games);
+  validate(data: GamingOverview): boolean {
+    if (!data || !Array.isArray(data.topGames)) return false;
+    if (data.topGames.length === 0) return false;
+    return data.topGames.every(
+      (g) => typeof g.name === 'string' && g.name.length > 0,
+    );
   },
 };
 
-function aggregateByChain(games: GameData[]) {
-  const map = new Map<string, { dau: number; volume24h: number }>();
-  for (const g of games) {
-    const entry = map.get(g.chain) ?? { dau: 0, volume24h: 0 };
-    entry.dau += g.dau;
-    entry.volume24h += g.volume24h;
-    map.set(g.chain, entry);
-  }
-  return Array.from(map.entries()).map(([chain, s]) => ({ chain, ...s }));
+// =============================================================================
+// INTERNAL — Raw types and normalization
+// =============================================================================
+
+interface DappRadarDapp {
+  dappId?: number;
+  name?: string;
+  slug?: string;
+  logo?: string;
+  link?: string;
+  website?: string;
+  chains?: string[];
+  categories?: string[];
+  metrics?: {
+    dau?: number;
+    transactions?: number;
+    volume?: number;
+    balance?: number;
+  };
+}
+
+interface DappRadarResponse {
+  results: DappRadarDapp[];
+  page?: number;
+  pageCount?: number;
+  resultsPerPage?: number;
+  totalResults?: number;
+}
+
+function normalizeGame(raw: DappRadarDapp): GameData {
+  const metrics = raw.metrics ?? {};
+  const chain = raw.chains?.[0] ?? 'unknown';
+  const category = raw.categories?.[0] ?? 'game';
+
+  return {
+    name: raw.name ?? '',
+    slug: raw.slug ?? '',
+    chain,
+    dau: metrics.dau ?? 0,
+    transactions24h: metrics.transactions ?? 0,
+    volume24h: metrics.volume ?? 0,
+    category,
+    balance: metrics.balance ?? 0,
+    timestamp: new Date().toISOString(),
+  };
 }
