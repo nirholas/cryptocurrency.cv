@@ -230,7 +230,7 @@ describe('ProviderChain', () => {
       vi.advanceTimersByTime(100);
       await promise;
 
-      const successEvent = events.find((e: any) => e.type === 'fetch_success');
+      const successEvent = events.find((e: any) => e.type === 'fetch:success');
       expect(successEvent).toBeDefined();
     });
 
@@ -248,7 +248,7 @@ describe('ProviderChain', () => {
       vi.advanceTimersByTime(100);
       await promise.catch(() => {});
 
-      const failEvent = events.find((e: any) => e.type === 'fetch_failure');
+      const failEvent = events.find((e: any) => e.type === 'fetch:failure');
       expect(failEvent).toBeDefined();
     });
   });
@@ -265,7 +265,7 @@ describe('ProviderChain', () => {
       expect(chain.providerCount).toBe(0);
     });
 
-    it('sorts providers by priority after adding', () => {
+    it('sorts providers by priority after adding', async () => {
       const chain = new ProviderChain<string>('test', { strategy: 'fallback' });
 
       chain.addProvider(createMockProvider('low', 'low', { priority: 3 }));
@@ -273,6 +273,12 @@ describe('ProviderChain', () => {
       chain.addProvider(createMockProvider('mid', 'mid', { priority: 2 }));
 
       expect(chain.providerCount).toBe(3);
+
+      // Verify sorting by checking that 'high' (priority 1) is tried first
+      const promise = chain.fetch({});
+      vi.advanceTimersByTime(100);
+      const result = await promise;
+      expect(result.lineage.provider).toBe('high');
     });
   });
 
