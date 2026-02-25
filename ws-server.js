@@ -310,6 +310,14 @@ const RATE_LIMIT = {
 // Connection limits
 const MAX_CONNECTIONS = parseInt(process.env.WS_MAX_CONNECTIONS || '10000', 10);
 const MAX_PAYLOAD = 64 * 1024; // 64 KB max message size from clients
+const MAX_BUFFER_SIZE = 256 * 1024; // 256 KB — backpressure threshold
+
+// Prometheus metrics counters
+const metricsCounters = {
+  messagesSent: 0,
+  messagesReceived: 0,
+  messagesDropped: 0,
+};
 
 // Client management
 const clients = new Map();
@@ -370,6 +378,64 @@ const server = http.createServer(async (req, res) => {
     res.end(JSON.stringify({ prices: priceCache, updatedAt: new Date().toISOString() }));
     return;
   }
+
+  if (req.url === '/metrics') {
+    // Per-channel subscription counts (local)
+    const channelLines = Object.keys(CHANNELS).map(ch => {
+      let count = 0;
+      clients.forEach((client) => { if (client.channels.has(ch)) count++; });
+      return `ws_subscriptions_total{channel="${ch}"} ${count}`;
+    }).join('\n');
+
+    // Per-stream subscriber counts (local)
+    let pricesSubs = 0, whalesSubs = 0, sentimentSubs = 0;
+    clients.forEach((client) => {
+      if (client.streamPrices) pricesSubs++;
+      if (client.streamWhales) whalesSubs++;
+      if (client.streamSentiment) sentimentSubs++;
+    });
+
+    const body = [
+      '# HELP ws_connections_total Current WebSocket connections on this instance',
+      '# TYPE ws_connections_total gauge',
+      `ws_connections_total{instance="${INSTANCE_ID}"} ${clients.size}`,
+      '',
+      '# HELP ws_messages_sent_total Messages sent to clients',
+      '# TYPE ws_messages_sent_total counter',
+      `ws_messages_sent_total ${metricsCounters.messagesSent}`,
+      '',
+      '# HELP ws_messages_received_total Messages received from clients',
+      '# TYPE ws_messages_received_total counter',
+      `ws_messages_received_total ${metricsCounters.messagesReceived}`,
+      '',
+      '# HELP ws_messages_dropped_total Messages dropped due to backpressure',
+      '# TYPE ws_messages_dropped_total counter',
+      `ws_messages_dropped_total ${metricsCounters.messagesDropped}`,
+      '',
+      '# HELP ws_subscriptions_total Active channel subscriptions',
+      '# TYPE ws_subscriptions_total gauge',
+      channelLines,
+      '',
+      '# HELP ws_stream_subscribers Active stream subscribers',
+      '# TYPE ws_stream_subscribers gauge',
+      `ws_stream_subscribers{stream="prices"} ${pricesSubs}`,
+      `ws_stream_subscribers{stream="whales"} ${whalesSubs}`,
+      `ws_stream_subscribers{stream="sentiment"} ${sentimentSubs}`,
+      '',
+      '# HELP ws_uptime_seconds Server uptime',
+      '# TYPE ws_uptime_seconds gauge',
+      `ws_uptime_seconds ${Math.floor(process.uptime())}`,
+      '',
+      '# HELP ws_leader Is this instance the leader',
+      '# TYPE ws_leader gauge',
+      `ws_leader ${isLeader ? 1 : 0}`,
+      '',
+    ].join('\n');
+
+    res.writeHead(200, { 'Content-Type': 'text/plain; version=0.0.4; charset=utf-8' });
+    res.end(body);
+    return;
+  }
   
   res.writeHead(200, { 'Content-Type': 'text/plain' });
   res.end(`Free Crypto News WebSocket Server v3.0
@@ -389,6 +455,7 @@ Endpoints:
   /stats    - Connection statistics
   /channels - Available topic channels
   /prices   - Current price cache
+  /metrics  - Prometheus metrics
 `);
 });
 
@@ -469,6 +536,8 @@ wss.on('connection', (ws, req) => {
   ws.on('message', (data) => {
     const client = clients.get(clientId);
     if (!client) return;
+
+    metricsCounters.messagesReceived++;
 
     // Rate limiting
     const now = Date.now();
@@ -828,8 +897,20 @@ function publishBroadcast(type, payload, meta = {}) {
  */
 function safeSend(client, clientId, data) {
   if (client.ws.readyState !== WebSocket.OPEN) return false;
+
+  // Backpressure: drop non-critical messages when the send buffer is full
+  if (client.ws.bufferedAmount > MAX_BUFFER_SIZE) {
+    const parsed = typeof data === 'string' ? (() => { try { return JSON.parse(data); } catch { return null; } })() : data;
+    const isCritical = parsed && parsed.type === WS_MSG_TYPES.BREAKING;
+    if (!isCritical) {
+      metricsCounters.messagesDropped++;
+      return false;
+    }
+  }
+
   try {
     client.ws.send(typeof data === 'string' ? data : JSON.stringify(data));
+    metricsCounters.messagesSent++;
     return true;
   } catch (err) {
     console.error(`[send] Failed for ${clientId}:`, err.message);
@@ -1242,6 +1323,7 @@ server.listen(PORT, () => {
 ║  Stats:     http://localhost:${PORT}/stats                          ║
 ║  Channels:  http://localhost:${PORT}/channels                       ║
 ║  Prices:    http://localhost:${PORT}/prices                         ║
+║  Metrics:   http://localhost:${PORT}/metrics                        ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║  Features:                                                       ║
 ║    📰 Real-time news streaming                                   ║
@@ -1307,11 +1389,14 @@ async function gracefulShutdown(signal) {
     console.log(`[${new Date().toISOString()}] Leadership released`);
   }
 
-  // 3. Send close frame to all connected clients (code 1001 = going away)
+  // 3. Notify clients to reconnect, then send close frame
   const clientCount = clients.size;
   console.log(`[${new Date().toISOString()}] Draining ${clientCount} connections...`);
   wss.clients.forEach((ws) => {
     try {
+      if (ws.readyState === WebSocket.OPEN) {
+        ws.send(JSON.stringify({ type: 'reconnect', reason: 'server-shutdown' }));
+      }
       ws.close(1001, 'Server shutting down');
     } catch { /* ignore already-closed sockets */ }
   });
