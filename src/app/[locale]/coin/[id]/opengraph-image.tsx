@@ -108,18 +108,18 @@ export default async function Image({ params }: { params: { locale: string; id: 
               style={{
                 width: '48px',
                 height: '48px',
-                background: '#ffffff',
+                background: '#0f172a',
                 borderRadius: '12px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontSize: '24px',
+                border: '2px solid rgba(247,147,26,0.4)',
               }}
             >
-              📰
+              <span style={{ fontSize: '28px', fontWeight: 900, fontFamily: "Georgia,'Times New Roman',serif", color: '#F7931A' }}>N</span>
             </div>
             <span style={{ color: '#f1f5f9', fontSize: '24px', fontWeight: 700 }}>
-              Crypto Vision News
+              Free Crypto News
             </span>
           </div>
 

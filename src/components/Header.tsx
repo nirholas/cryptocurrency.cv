@@ -177,15 +177,9 @@ export default function Header() {
       )}>
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0 group">
-          <span className={cn(
-            "font-bold tracking-tight transition-all duration-200",
-            scrolled ? "text-lg" : "text-xl",
-          )}>
-            <span className="text-[var(--color-accent)] group-hover:opacity-80 transition-opacity">C</span>
-            <span>V</span>
-          </span>
+          <Logo size={scrolled ? "sm" : "md"} showText={false} />
           <span className="hidden sm:block text-[11px] font-medium text-[var(--color-text-tertiary)] border-l border-[var(--color-border)] pl-2 ml-0.5 uppercase tracking-widest">
-            Crypto Vision
+            Free Crypto News
           </span>
         </Link>
 

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 120" width="800" height="120">
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F7931A"/>
+      <stop offset="100%" stop-color="#E8820F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Accent bar — runs from left edge above "FREE CRYPTO" over to the oversized N -->
+  <rect x="18" y="14" width="530" height="4" rx="2" fill="url(#accent)"/>
+
+  <!-- "FREE CRYPTO " in refined serif -->
+  <text x="20" y="80"
+        font-family="'Playfair Display',Georgia,'Times New Roman',serif"
+        font-size="62" font-weight="900" letter-spacing="2" fill="#111111">FREE CRYPTO </text>
+
+  <!-- Oversized "N" — the hero letter bridging the two halves, in Bitcoin orange -->
+  <text x="498" y="80"
+        font-family="'Playfair Display',Georgia,'Times New Roman',serif"
+        font-size="82" font-weight="900" fill="#F7931A">N</text>
+
+  <!-- "EWS" completing the word -->
+  <text x="556" y="80"
+        font-family="'Playfair Display',Georgia,'Times New Roman',serif"
+        font-size="62" font-weight="900" letter-spacing="2" fill="#111111">EWS</text>
+
+  <!-- Accent bar — extends from oversized N rightward -->
+  <rect x="498" y="14" width="284" height="4" rx="2" fill="url(#accent)"/>
+
+  <!-- Thin editorial rule beneath -->
+  <rect x="18" y="96" width="764" height="1.5" fill="#D4D4D4"/>
+
+  <!-- Tagline -->
+  <text x="20" y="113"
+        font-family="'Playfair Display',Georgia,'Times New Roman',serif"
+        font-size="11" font-weight="400" letter-spacing="4" fill="#999999">REAL-TIME CRYPTO INTELLIGENCE</text>
+</svg>

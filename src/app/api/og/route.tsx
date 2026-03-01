@@ -329,7 +329,7 @@ export async function GET(req: NextRequest) {
           }}
         >
           <span style={{ color: '#334155', fontSize: '13px' }}>
-            Crypto Vision News · No API key required
+            Free Crypto News · No API key required
           </span>
         </div>
 
@@ -566,7 +566,7 @@ export async function GET(req: NextRequest) {
             </span>
           </div>
           <span style={{ color: '#334155', fontSize: '13px' }}>
-            Crypto Vision News API · No auth required
+            Free Crypto News API · No auth required
           </span>
         </div>
 

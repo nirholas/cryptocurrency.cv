@@ -596,9 +596,12 @@ Object.entries(API_TIERS).forEach(([tierName, config]) => {
     throw new Error(`FATAL: Tier '${tierName}' is missing id or name field.`);
   }
   
-  // Ensure permissions array exists
-  if (!Array.isArray(config.permissions) || config.permissions.length === 0) {
-    throw new Error(`FATAL: Tier '${tierName}' has invalid or empty permissions array.`);
+  // Ensure permissions array exists (skip for discontinued tiers with no access)
+  if (!Array.isArray(config.permissions)) {
+    throw new Error(`FATAL: Tier '${tierName}' has invalid permissions (not an array).`);
+  }
+  if (config.permissions.length === 0 && config.requestsPerDay > 0) {
+    throw new Error(`FATAL: Tier '${tierName}' has empty permissions array but allows requests.`);
   }
 });
 

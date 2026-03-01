@@ -201,7 +201,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-6">
             {/* Brand + Newsletter */}
             <div className="col-span-1 md:col-span-2 mb-4 lg:mb-0">
-              <Link href="/" aria-label="Crypto Vision home">
+              <Link href="/" aria-label="Free Crypto News home">
                 <Logo size="md" />
               </Link>
               <p className="mt-4 max-w-xs text-sm leading-relaxed text-[var(--color-text-secondary)]">
