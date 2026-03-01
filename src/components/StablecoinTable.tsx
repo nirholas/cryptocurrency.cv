@@ -147,16 +147,16 @@ export default function StablecoinTable({ stablecoins }: { stablecoins: Stableco
   }
 
   return (
-    <div className="overflow-x-auto rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]">
-      <table className="w-full text-sm" aria-label="Stablecoin market data">
+    <div className="overflow-x-auto rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] -webkit-overflow-scrolling-touch">
+      <table className="w-full text-sm min-w-[500px]" aria-label="Stablecoin market data">
         <thead>
           <tr className="border-b border-[var(--color-border)]">
             <SortHeader label="#" sortKey="rank" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} align="left" />
             <SortHeader label="Name" sortKey="name" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} align="left" />
             <SortHeader label="Market Cap" sortKey="marketCap" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} />
-            <SortHeader label="24h Volume" sortKey="volume24h" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} />
+            <SortHeader label="24h Volume" sortKey="volume24h" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} className="hidden sm:table-cell" />
             <SortHeader label="Peg" sortKey="pegDeviation" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} />
-            <SortHeader label="7d Supply Δ" sortKey="supplyChange7d" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} />
+            <SortHeader label="7d Supply Δ" sortKey="supplyChange7d" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} className="hidden md:table-cell" />
           </tr>
         </thead>
         <tbody>
@@ -179,7 +179,7 @@ export default function StablecoinTable({ stablecoins }: { stablecoins: Stableco
                 <td className="px-3 py-3 text-right font-mono text-[var(--color-text-primary)]">
                   {formatLargeNumber(coin.marketCap)}
                 </td>
-                <td className="px-3 py-3 text-right font-mono text-[var(--color-text-secondary)]">
+                <td className="hidden sm:table-cell px-3 py-3 text-right font-mono text-[var(--color-text-secondary)]">
                   {formatLargeNumber(coin.volume24h)}
                 </td>
                 <td className="px-3 py-3 text-right">
@@ -190,7 +190,7 @@ export default function StablecoinTable({ stablecoins }: { stablecoins: Stableco
                     <span className={peg.className}>{peg.icon}</span>
                   </div>
                 </td>
-                <td className="px-3 py-3 text-right">
+                <td className="hidden md:table-cell px-3 py-3 text-right">
                   <span
                     className={cn(
                       "font-mono",

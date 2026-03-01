@@ -739,18 +739,18 @@ export default function PortfolioContent() {
             </div>
           </div>
         </CardHeader>
-        <CardContent className="p-0 overflow-x-auto">
-          <table className="w-full text-sm">
+        <CardContent className="p-0 overflow-x-auto -webkit-overflow-scrolling-touch">
+          <table className="w-full text-sm min-w-[700px]">
             <thead>
               <tr className="border-b border-[var(--color-border)] text-[var(--color-text-secondary)]">
                 <SortHeader label="Coin" sortKey="coin" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} align="left" />
-                <SortHeader label="Amount" sortKey="amount" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} />
-                <SortHeader label="Avg Buy" sortKey="buyPrice" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} />
+                <SortHeader label="Amount" sortKey="amount" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} className="hidden sm:table-cell" />
+                <SortHeader label="Avg Buy" sortKey="buyPrice" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} className="hidden md:table-cell" />
                 <SortHeader label="Price" sortKey="currentPrice" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} />
                 <SortHeader label="Value" sortKey="value" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} />
-                <th className="px-4 py-3 text-right font-medium">Allocation</th>
+                <th className="hidden lg:table-cell px-4 py-3 text-right font-medium">Allocation</th>
                 <SortHeader label="P&L ($)" sortKey="pnlDollar" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} />
-                <SortHeader label="P&L (%)" sortKey="pnlPct" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} />
+                <SortHeader label="P&L (%)" sortKey="pnlPct" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} className="hidden sm:table-cell" />
                 <th className="px-4 py-3 text-right font-medium">Actions</th>
               </tr>
             </thead>

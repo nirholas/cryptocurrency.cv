@@ -141,19 +141,19 @@ export default function L2Table({ l2s }: { l2s: L2Row[] }) {
   }
 
   return (
-    <div className="overflow-x-auto rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]">
-      <table className="w-full text-sm" aria-label="Layer 2 comparison data">
+    <div className="overflow-x-auto rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] -webkit-overflow-scrolling-touch">
+      <table className="w-full text-sm min-w-[600px]" aria-label="Layer 2 comparison data">
         <thead>
           <tr className="border-b border-[var(--color-border)]">
             <SortHeader label="#" sortKey="rank" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} align="left" />
             <SortHeader label="L2 Name" sortKey="name" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} align="left" />
-            <SortHeader label="Type" sortKey="type" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} align="left" />
+            <SortHeader label="Type" sortKey="type" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} align="left" className="hidden sm:table-cell" />
             <SortHeader label="TVL" sortKey="tvl" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} />
-            <th className="px-3 py-3 text-right text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+            <th className="hidden md:table-cell px-3 py-3 text-right text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
               TVL Share
             </th>
-            <SortHeader label="TPS" sortKey="tps" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} />
-            <SortHeader label="Avg Fee" sortKey="averageFee" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} />
+            <SortHeader label="TPS" sortKey="tps" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} className="hidden md:table-cell" />
+            <SortHeader label="Avg Fee" sortKey="averageFee" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} className="hidden lg:table-cell" />
             <SortHeader label="7d Δ" sortKey="change7d" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} />
           </tr>
         </thead>
@@ -179,7 +179,7 @@ export default function L2Table({ l2s }: { l2s: L2Row[] }) {
                     )}
                   </div>
                 </td>
-                <td className="px-3 py-3">
+                <td className="hidden sm:table-cell px-3 py-3">
                   <span className={cn("inline-flex items-center rounded-sm px-2 py-0.5 text-xs font-semibold", getTypeBadgeClass(l2.type))}>
                     {l2.type}
                   </span>
@@ -187,7 +187,7 @@ export default function L2Table({ l2s }: { l2s: L2Row[] }) {
                 <td className="px-3 py-3 text-right font-mono text-[var(--color-text-primary)]">
                   {formatLargeNumber(l2.tvl)}
                 </td>
-                <td className="px-3 py-3">
+                <td className="hidden md:table-cell px-3 py-3">
                   <div className="flex items-center gap-2 justify-end">
                     <div className="w-20 h-2 rounded-full bg-[var(--color-surface-tertiary)] overflow-hidden">
                       <div
@@ -200,10 +200,10 @@ export default function L2Table({ l2s }: { l2s: L2Row[] }) {
                     </span>
                   </div>
                 </td>
-                <td className="px-3 py-3 text-right font-mono text-[var(--color-text-secondary)]">
+                <td className="hidden md:table-cell px-3 py-3 text-right font-mono text-[var(--color-text-secondary)]">
                   {l2.tps > 0 ? l2.tps.toFixed(1) : "—"}
                 </td>
-                <td className="px-3 py-3 text-right font-mono text-[var(--color-text-secondary)]">
+                <td className="hidden lg:table-cell px-3 py-3 text-right font-mono text-[var(--color-text-secondary)]">
                   {l2.averageFee > 0 ? `$${l2.averageFee.toFixed(4)}` : "—"}
                 </td>
                 <td className="px-3 py-3 text-right">

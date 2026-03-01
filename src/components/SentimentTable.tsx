@@ -209,8 +209,8 @@ export default function SentimentTable({ className }: { className?: string }) {
 
   return (
     <Card className={cn("overflow-hidden", className)}>
-      <div className="overflow-x-auto">
-        <table className="w-full text-sm">
+      <div className="overflow-x-auto -webkit-overflow-scrolling-touch">
+        <table className="w-full text-sm min-w-[480px]">
           <thead>
             <tr className="border-b border-[var(--color-border)] text-left text-xs uppercase tracking-wider text-[var(--color-text-tertiary)]">
               <th className="px-4 py-3 font-medium">Coin</th>
@@ -221,13 +221,13 @@ export default function SentimentTable({ className }: { className?: string }) {
                 Sentiment <SortIcon col="score" />
               </th>
               <th
-                className="px-4 py-3 font-medium cursor-pointer select-none hover:text-[var(--color-text-primary)]"
+                className="hidden sm:table-cell px-4 py-3 font-medium cursor-pointer select-none hover:text-[var(--color-text-primary)]"
                 onClick={() => handleSort("socialVolume")}
               >
                 Social Vol <SortIcon col="socialVolume" />
               </th>
               <th
-                className="px-4 py-3 font-medium cursor-pointer select-none hover:text-[var(--color-text-primary)]"
+                className="hidden md:table-cell px-4 py-3 font-medium cursor-pointer select-none hover:text-[var(--color-text-primary)]"
                 onClick={() => handleSort("newsMentions")}
               >
                 News <SortIcon col="newsMentions" />
@@ -238,7 +238,7 @@ export default function SentimentTable({ className }: { className?: string }) {
               >
                 24h Chg <SortIcon col="change24h" />
               </th>
-              <th className="px-4 py-3 font-medium">7d Trend</th>
+              <th className="hidden lg:table-cell px-4 py-3 font-medium">7d Trend</th>
             </tr>
           </thead>
           <tbody>

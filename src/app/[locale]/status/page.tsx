@@ -213,18 +213,22 @@ function StatusRow({
   status,
   responseTime,
   message,
-  icon,
+  icon: Icon,
 }: {
   name: string;
   status: HealthCheck["status"];
   responseTime?: number;
   message?: string;
-  icon?: string;
+  icon?: LucideIcon;
 }) {
   return (
     <div className="px-6 py-4 flex items-center justify-between gap-4">
       <div className="flex items-center gap-3 min-w-0">
-        {icon && <span className="text-lg shrink-0">{icon}</span>}
+        {Icon && (
+          <div className="h-8 w-8 rounded-lg bg-[var(--color-surface-tertiary)] flex items-center justify-center shrink-0">
+            <Icon className="h-4 w-4 text-[var(--color-text-secondary)]" />
+          </div>
+        )}
         <div className="min-w-0">
           <div className="font-medium text-[var(--color-text-primary)]">
             {name}
@@ -272,23 +276,28 @@ function StatusRow({
 function MetricCard({
   label,
   value,
-  icon,
+  icon: Icon,
   subtext,
   trend,
 }: {
   label: string;
   value: string;
-  icon?: string;
+  icon?: LucideIcon;
   subtext?: string;
   trend?: "up" | "down" | "neutral";
 }) {
   return (
-    <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-4 transition-shadow hover:shadow-md">
+    <Card className="transition-shadow hover:shadow-md">
+      <CardContent className="p-4">
       <div className="flex items-center justify-between mb-2">
         <span className="text-xs font-medium uppercase tracking-wider text-[var(--color-text-tertiary)]">
           {label}
         </span>
-        {icon && <span className="text-lg">{icon}</span>}
+        {Icon && (
+          <div className="h-8 w-8 rounded-lg bg-[var(--color-accent)]/10 flex items-center justify-center">
+            <Icon className="h-4 w-4 text-[var(--color-accent)]" />
+          </div>
+        )}
       </div>
       <div className="flex items-baseline gap-2">
         <span className="text-2xl font-bold text-[var(--color-text-primary)]">
@@ -314,7 +323,8 @@ function MetricCard({
           {subtext}
         </div>
       )}
-    </div>
+      </CardContent>
+    </Card>
   );
 }
 
@@ -468,6 +478,13 @@ export default async function StatusPage() {
       <Header />
       <StatusAutoRefresh intervalMs={30000} />
       <main className="container-main py-10">
+        {/* ── Hero Badge ── */}
+        <div className="text-center mb-4 pt-4">
+          <Badge className="mb-4">
+            <Activity className="h-3 w-3 mr-1" /> System Status
+          </Badge>
+        </div>
+
         {/* ── Overall Status Banner ── */}
         <div
           className={cn(
@@ -523,9 +540,11 @@ export default async function StatusPage() {
         </div>
 
         {/* ── 30-Day Uptime Bar ── */}
-        <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] mb-8 p-6">
+        <Card className="mb-8">
+          <CardContent className="p-6">
           <div className="flex items-center justify-between mb-3">
-            <h2 className="font-serif text-lg font-bold text-[var(--color-text-primary)]">
+            <h2 className="font-serif text-lg font-bold text-[var(--color-text-primary)] flex items-center gap-2">
+              <CheckCircle className="h-4 w-4 text-green-500" />
               30-Day Uptime
             </h2>
             <span className="text-sm text-[var(--color-text-tertiary)]">
@@ -552,7 +571,8 @@ export default async function StatusPage() {
               Today
             </span>
           </div>
-        </div>
+          </CardContent>
+        </Card>
 
         {/* ── System Metrics ── */}
         {health && (
@@ -560,26 +580,26 @@ export default async function StatusPage() {
             <MetricCard
               label="Version"
               value={health.version}
-              icon="📦"
+              icon={Cpu}
               subtext="Current deployment"
             />
             <MetricCard
               label="Uptime"
               value={formatUptime(health.uptime)}
-              icon="⏱️"
+              icon={Clock}
               subtext={`${uptimePct}% (30d)`}
               trend="up"
             />
             <MetricCard
               label="Active Sources"
               value={stats?.summary.activeSources.toString() || "-"}
-              icon="📡"
+              icon={Radio}
               subtext={`of ${stats?.summary.totalSources || "-"} total`}
             />
             <MetricCard
               label="Articles (24h)"
               value={stats?.summary.totalArticles.toString() || "-"}
-              icon="📰"
+              icon={Newspaper}
               subtext={`~${stats?.summary.avgArticlesPerHour?.toFixed(0) || "-"}/hour`}
             />
           </div>
@@ -595,7 +615,7 @@ export default async function StatusPage() {
                   ? `${health.checks.api.responseTime}ms`
                   : "-"
               }
-              icon="⚡"
+              icon={Zap}
               subtext={responseTimeLabel(health?.checks.api.responseTime)}
               trend={
                 health?.checks.api.responseTime !== undefined
@@ -612,28 +632,29 @@ export default async function StatusPage() {
                   ? `${health.checks.cache.responseTime}ms`
                   : "-"
               }
-              icon="💾"
+              icon={HardDrive}
               subtext={responseTimeLabel(health?.checks.cache.responseTime)}
             />
             <MetricCard
               label="Avg Articles/Hour"
               value={stats?.summary.avgArticlesPerHour?.toFixed(1) || "-"}
-              icon="📊"
+              icon={BarChart3}
               subtext={stats?.summary.timeRange || "24h window"}
             />
             <MetricCard
               label="Total Sources"
               value={stats?.summary.totalSources?.toString() || "-"}
-              icon="🌐"
+              icon={Globe}
               subtext="All registered feeds"
             />
           </div>
         )}
 
         {/* ── Service Status ── */}
-        <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] mb-8 overflow-hidden">
+        <Card className="mb-8 overflow-hidden">
           <div className="px-6 py-4 border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)] flex items-center justify-between">
-            <h2 className="font-serif text-lg font-bold text-[var(--color-text-primary)]">
+            <h2 className="font-serif text-lg font-bold text-[var(--color-text-primary)] flex items-center gap-2">
+              <Server className="h-4 w-4 text-[var(--color-accent)]" />
               Service Status
             </h2>
             <span className="text-xs text-[var(--color-text-tertiary)]">
@@ -645,20 +666,20 @@ export default async function StatusPage() {
               <>
                 <StatusRow
                   name="API Server"
-                  icon="🖥️"
+                  icon={Server}
                   status={health.checks.api.status}
                   responseTime={health.checks.api.responseTime}
                 />
                 <StatusRow
                   name="Cache (Vercel KV)"
-                  icon="💾"
+                  icon={Database}
                   status={health.checks.cache.status}
                   responseTime={health.checks.cache.responseTime}
                   message={health.checks.cache.message}
                 />
                 <StatusRow
                   name="External APIs"
-                  icon="🔗"
+                  icon={Cloud}
                   status={health.checks.externalAPIs.status}
                   responseTime={health.checks.externalAPIs.responseTime}
                   message={health.checks.externalAPIs.message}
@@ -666,7 +687,7 @@ export default async function StatusPage() {
                 {health.checks.x402Facilitator && (
                   <StatusRow
                     name="x402 Facilitator"
-                    icon="🔐"
+                    icon={Shield}
                     status={health.checks.x402Facilitator.status}
                     responseTime={health.checks.x402Facilitator.responseTime}
                     message={health.checks.x402Facilitator.message}
@@ -675,7 +696,7 @@ export default async function StatusPage() {
               </>
             ) : (
               <div className="px-6 py-12 text-center">
-                <span className="text-3xl mb-3 block">⚠️</span>
+                <AlertTriangle className="h-8 w-8 text-yellow-500 mx-auto mb-3" />
                 <p className="text-[var(--color-text-tertiary)]">
                   Unable to fetch health status
                 </p>
@@ -685,17 +706,16 @@ export default async function StatusPage() {
               </div>
             )}
           </div>
-        </div>
+        </Card>
 
         {/* ── API Endpoints ── */}
-        <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] mb-8 overflow-hidden">
+        <Card className="mb-8 overflow-hidden">
           <div className="px-6 py-4 border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)] flex items-center justify-between">
-            <h2 className="font-serif text-lg font-bold text-[var(--color-text-primary)]">
+            <h2 className="font-serif text-lg font-bold text-[var(--color-text-primary)] flex items-center gap-2">
+              <Wifi className="h-4 w-4 text-[var(--color-accent)]" />
               API Endpoints
             </h2>
-            <span className="text-xs text-[var(--color-text-tertiary)]">
-              REST &amp; Streaming
-            </span>
+            <Badge>REST &amp; Streaming</Badge>
           </div>
           <div className="divide-y divide-[var(--color-border)]">
             {(() => {
@@ -719,28 +739,30 @@ export default async function StatusPage() {
               );
             })()}
           </div>
-        </div>
+        </Card>
 
         <div className="grid md:grid-cols-2 gap-8 mb-8">
           {/* ── Category Distribution ── */}
           {stats && stats.byCategory && stats.byCategory.length > 0 && (
-            <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden">
+            <Card className="overflow-hidden">
               <div className="px-6 py-4 border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
-                <h2 className="font-serif text-lg font-bold text-[var(--color-text-primary)]">
+                <h2 className="font-serif text-lg font-bold text-[var(--color-text-primary)] flex items-center gap-2">
+                  <BarChart3 className="h-4 w-4 text-[var(--color-accent)]" />
                   Articles by Category
                 </h2>
               </div>
               <div className="p-6">
                 <CategoryDistribution categories={stats.byCategory} />
               </div>
-            </div>
+            </Card>
           )}
 
           {/* ── Source Activity (24h) ── */}
           {stats && stats.bySource.length > 0 && (
-            <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden">
+            <Card className="overflow-hidden">
               <div className="px-6 py-4 border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)] flex items-center justify-between">
-                <h2 className="font-serif text-lg font-bold text-[var(--color-text-primary)]">
+                <h2 className="font-serif text-lg font-bold text-[var(--color-text-primary)] flex items-center gap-2">
+                  <TrendingUp className="h-4 w-4 text-[var(--color-accent)]" />
                   Top Sources (24h)
                 </h2>
                 <span className="text-sm text-[var(--color-text-tertiary)]">
@@ -788,46 +810,57 @@ export default async function StatusPage() {
                   </div>
                 ))}
               </div>
-            </div>
+            </Card>
           )}
         </div>
 
         {/* ── Incident & Contact Footer ── */}
-        <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 text-center">
-          <h3 className="font-serif text-base font-bold text-[var(--color-text-primary)] mb-2">
-            Need Help?
-          </h3>
-          <p className="text-sm text-[var(--color-text-tertiary)] mb-4 max-w-lg mx-auto">
-            Report issues, request features, or check for known incidents on
-            GitHub.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            <a
-              href="https://github.com/nirholas/free-crypto-news/issues"
-              className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] text-[var(--color-text-primary)] hover:border-[var(--color-border-hover)] transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              🐛 Report Issue
-            </a>
-            <a
-              href="https://github.com/nirholas/free-crypto-news/discussions"
-              className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] text-[var(--color-text-primary)] hover:border-[var(--color-border-hover)] transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              💬 Discussions
-            </a>
-            <a
-              href="https://github.com/nirholas/free-crypto-news"
-              className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-lg bg-[var(--color-accent)] text-white hover:opacity-90 transition-opacity"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              ⭐ Star on GitHub
-            </a>
-          </div>
-        </div>
+        <Card className="text-center">
+          <CardContent className="p-8">
+            <Headphones className="h-6 w-6 text-[var(--color-accent)] mx-auto mb-3" />
+            <h3 className="font-serif text-lg font-bold text-[var(--color-text-primary)] mb-2">
+              Need Help?
+            </h3>
+            <p className="text-sm text-[var(--color-text-tertiary)] mb-5 max-w-lg mx-auto">
+              Report issues, request features, or check for known incidents on
+              GitHub.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <Button variant="outline" size="sm" asChild>
+                <a
+                  href="https://github.com/nirholas/free-crypto-news/issues"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Bug className="mr-1.5 h-3.5 w-3.5" /> Report Issue
+                </a>
+              </Button>
+              <Button variant="outline" size="sm" asChild>
+                <a
+                  href="https://github.com/nirholas/free-crypto-news/discussions"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MessageSquare className="mr-1.5 h-3.5 w-3.5" /> Discussions
+                </a>
+              </Button>
+              <Button variant="primary" size="sm" asChild>
+                <a
+                  href="https://github.com/nirholas/free-crypto-news"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Star className="mr-1.5 h-3.5 w-3.5" /> Star on GitHub
+                </a>
+              </Button>
+              <Button variant="outline" size="sm" asChild>
+                <Link href="/contact">
+                  Contact Support <ArrowRight className="ml-1 h-3.5 w-3.5" />
+                </Link>
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
       </main>
       <Footer />
     </>

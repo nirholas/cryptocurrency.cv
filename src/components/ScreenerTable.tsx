@@ -367,8 +367,8 @@ export default function ScreenerTable({ coins, className }: ScreenerTableProps) 
       )}
 
       {/* Table */}
-      <div className="overflow-x-auto rounded-lg border border-[var(--color-border)]">
-        <table className="w-full text-sm">
+      <div className="overflow-x-auto rounded-lg border border-[var(--color-border)] -webkit-overflow-scrolling-touch">
+        <table className="w-full text-sm min-w-[600px]">
           <thead>
             <tr className="border-b border-[var(--color-border)] bg-[var(--color-surface)]">
               {activeCols.map((col) => (
